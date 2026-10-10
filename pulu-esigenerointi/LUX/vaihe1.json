@@ -75,7 +75,7 @@
   "kohde": "kohde:hahmotelma-wiltz",
   "kysymys": "Minä vuonna Wiltzin linna valmistui?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Wiltzin linna valmistui vuonna 1727. Se oli [[Wiltzin kreivien]] linna, ja heidän viimeinen kreivinsä kuoli vuonna 1793. Linna toimi myöhemmin yksityisenä [[tyttökouluna]] ja sen jälkeen vanhainkotina. Vuosi 1727, ja minä muistin sen ihan itse.",
+  "vastaus": "Selvä juttu. Wiltzin linna valmistui päärakennuksen osalta noin vuonna 1720 ja puutarhaportaikko vuonna 1727. Se oli [[Wiltzin kreivien]] linna, ja heidän viimeinen kreivinsä lähti linnasta vuonna 1793. Linna toimi myöhemmin yksityisenä [[tyttökouluna]] ja sen jälkeen vanhainkotina. Vuosi 1727, ja minä muistin sen ihan itse.",
   "linkit": [
    "Wiltzin kreivien",
    "tyttökouluna"
@@ -117,14 +117,14 @@
   "kohde": "kohde:hahmotelma-wiltz",
   "kysymys": "Mihin Wiltzin linnaa on käytetty 1800-luvun puolivälistä lähtien?",
   "uusi": true,
-  "vastaus": "Mmm— tämän minä muistan. Wiltzin linna oli yksityinen [[tyttökoulu]] vuosina 1851–1950, ja sen jälkeen siinä toimi [[vanhainkoti]]. Linna valmistui alun perin vuonna 1727 Wiltzin kreivien asuinpaikaksi, ja heidän viimeinen kreivinsä kuoli vuonna 1793. Hyvä, ettei kukaan purkanut sitä muistin varassa.",
+  "vastaus": "Mmm— tämän minä muistan. Wiltzin linna oli yksityinen [[tyttökoulu]] vuosina 1851–1950, ja sen jälkeen siinä toimi [[vanhainkoti]]. Linnan päärakennus valmistui alun perin noin vuonna 1720 ja puutarhaportaikko vuonna 1727 Wiltzin kreivien asuinpaikaksi, ja heidän viimeinen kreivinsä lähti linnasta vuonna 1793. Hyvä, ettei kukaan purkanut sitä muistin varassa.",
   "linkit": [
    "tyttökoulu",
    "vanhainkoti"
   ],
   "jatkot": [
    "Mitä tyttökouluissa opetettiin 1800-luvulla?",
-   "Milloin Wiltzin viimeinen kreivi kuoli?"
+   "Milloin Wiltzin viimeinen kreivi lähti linnasta?"
   ]
  },
  {
@@ -373,7 +373,7 @@
   "kohde": "kohde:hahmotelma-bourscheid",
   "kysymys": "Kuinka monta vartiotornia linnaa ympäröivässä muurissa on?",
   "uusi": false,
-  "vastaus": "Kato, tää on helppo. Linnaa ympäröivässä pyöreässä muurissa on 11 vartiotornia. Muuri kiertää kallion päällä seisovaa linnaa, joka kohoaa noin 150 metriä [[Sûre-joen]] yläpuolelle. Ulkomuuri on vuodelta 1350, ja linnaa on laajennettu useita kertoja sen jälkeenkin, esimerkiksi [[Stolzembourgin]] talolla vuonna 1384. Vähän jäi hengästyttämään tämä laskeminen.",
+  "vastaus": "Kato, tää on helppo. Linnaa ympäröivässä pyöreässä muurissa on 11 vartiotornia. Muuri kiertää kallion päällä seisovaa linnaa, joka kohoaa noin 150 metriä [[Sûre-joen]] yläpuolelle. Ulkomuuri valmistui vuonna 1384, ja linnaa on laajennettu useita kertoja, esimerkiksi [[Stolzembourgin]] talolla. Vähän jäi hengästyttämään tämä laskeminen.",
   "linkit": [
    "Sûre-joen",
    "Stolzembourgin"
@@ -401,10 +401,10 @@
   "kohde": "kohde:hahmotelma-bourscheid",
   "kysymys": "Mistä vuodesta linnan ulkomuuri on peräisin?",
   "uusi": true,
-  "vastaus": "Kas vaan, sepä sattui. Linnan ulkomuuri on vuodelta 1350. Linna itse on vanhempi: se mainitaan ensimmäisen kerran vuonna 1095, ja sitä on laajennettu useita kertoja. [[Stolzembourgin]] talo on vuodelta 1384 ja [[piha]] vuodelta 1477, joten rakentaminen jatkui monta sukupolvea. Ei paha muistilta, vaikka sanon itse.",
+  "vastaus": "Kas vaan, sepä sattui. Linnan ulkomuuri valmistui vuonna 1384. Linna itse on vanhempi: se mainitaan ensimmäisen kerran vuonna 1095, ja sitä on laajennettu useita kertoja. [[Piha]] on vuodelta 1477, ja [[Stolzembourgin]] talo on yksi myöhemmistä laajennuksista, joten rakentaminen jatkui monta sukupolvea. Ei paha muistilta, vaikka sanon itse.",
   "linkit": [
-   "Stolzembourgin",
-   "piha"
+   "Piha",
+   "Stolzembourgin"
   ],
   "jatkot": [
    "Mikä Stolzembourgin talo oli?",
@@ -443,7 +443,7 @@
   "kohde": "kohde:hahmotelma-luxembourg",
   "kysymys": "Kuinka pitkään linnoituksen purkaminen kesti?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Purku kesti kuusitoista vuotta. Se perustui vuoden 1867 [[Lontoon sopimukseen]], joka vaati [[Luxemburgia]] purkamaan kaupungin linnoitukset, ja [[Preussin]] varuskunta vetäytyi. Työ maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita. Kuusitoista vuotta on pitkä aika, ei se mikään viikon remontti ollu.",
+  "vastaus": "Odotas vähän. Purku kesti kuusitoista vuotta. Se perustui vuoden 1867 [[Lontoon sopimukseen]], joka vaati [[Luxemburgia]] purkamaan kaupungin linnoitukset, ja [[Preussin]] varuskunta vetäytyi. Työ maksoi yli 1,5 miljoonaa kultafrangia, ja noin 23 kilometrin kasemattiverkostosta säilyi noin 17 kilometriä. Kuusitoista vuotta on pitkä aika, ei se mikään viikon remontti ollu.",
   "linkit": [
    "Lontoon sopimukseen",
    "Luxemburgia",
@@ -502,7 +502,7 @@
   "kohde": "kohde:hahmotelma-larochette",
   "kysymys": "Millä joella Larochette sijaitsee?",
   "uusi": false,
-  "vastaus": "Ai se, tost minä osaan kertoo. Larochette sijaitsee Valkoisen [[Ernz-joen]] laaksossa [[Keski-Luxemburgissa]]. Kaupunkia hallitsee osittain raunioitunut linna, joka kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella. Luxemburgiksi kaupungin nimi on [[Fiels]]. Hieno paikka, minun mielestäni.",
+  "vastaus": "Ai se, tost minä osaan kertoo. Larochette sijaitsee Valkoisen [[Ernz-joen]] laaksossa [[Keski-Luxemburgissa]]. Kaupunkia hallitsee osittain raunioitunut linna, joka kohoaa hiekkakivikielekkeellä noin 50 metriä joen yläpuolella. Luxemburgiksi kaupungin nimi on [[Fiels]]. Hieno paikka, minun mielestäni.",
   "linkit": [
    "Ernz-joen",
    "Keski-Luxemburgissa",
@@ -545,7 +545,7 @@
   "kohde": "kohde:hahmotelma-larochette",
   "kysymys": "Mitkä kaksi kartanoa Larochetten linnan vieressä on kunnostettu?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Kunnostetut kartanot ovat [[Homburgin kartano]], joka on vuodelta 1350, ja [[Créhangen kartano]] vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat kallionkielekkeellä noin 150 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.",
+  "vastaus": "Hetkinen ny. Kunnostetut kartanot ovat [[Homburgin kartano]], joka on vuodelta 1350, ja [[Créhangen kartano]] vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat hiekkakivikielekkeellä noin 50 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.",
   "linkit": [
    "Homburgin kartano",
    "Créhangen kartano",
@@ -560,7 +560,7 @@
   "kohde": "kohde:hahmotelma-larochette",
   "kysymys": "Miten Larochetten linna tuhoutui 1500-luvun lopulla?",
   "uusi": true,
-  "vastaus": "Ai tota, selvä. Linna tuhoutui [[tulipalossa]] 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen kallionkielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.",
+  "vastaus": "Ai tota, selvä. Linna tuhoutui [[tulipalossa]] 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen hiekkakivikielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.",
   "linkit": [
    "tulipalossa",
    "Larochetten"
@@ -603,14 +603,14 @@
   "kohde": "kohde:hahmotelma-useldange",
   "kysymys": "Kuka osti Useldangen linnan raunion vuonna 1924?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.",
+  "vastaus": "Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kunnantalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.",
   "linkit": [
    "Emma Kuhn",
-   "kaupungintalona",
+   "kunnantalona",
    "Useldangen"
   ],
   "jatkot": [
-   "Millainen Useldangen kaupungintalo on?",
+   "Millainen Useldangen kunnantalo on?",
    "Miksi kuntien hallintoa sijoitetaan vanhoihin linnoihin?"
   ]
  },
@@ -618,14 +618,14 @@
   "kohde": "kohde:hahmotelma-useldange",
   "kysymys": "Mitä Useldangen linnan raunioiden päällä on nykyään?",
   "uusi": true,
-  "vastaus": "Kato, tää on kiva. Palatsin raunioiden päälle on rakennettu moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linnasta on jäljellä rauniot, joista erottuvat ulkomuuri, yksi pyöreistä torneista ja 25 metriä korkea päätorni. Se seisoo pienellä kukkulalla [[Useldangen]] kylän keskustassa [[Länsi-Luxemburgissa]]. Vanhaa ja uutta samalla kukkulalla, sellaista minä katson mielelläni.",
+  "vastaus": "Kato, tää on kiva. Palatsin raunioiden päälle on rakennettu moderni rakennus, joka toimii nykyään [[kunnantalona]]. Linnasta on jäljellä rauniot, joista erottuvat ulkomuuri, yksi pyöreistä torneista ja 25 metriä korkea päätorni. Se seisoo pienellä kukkulalla [[Useldangen]] kylän keskustassa [[Länsi-Luxemburgissa]]. Vanhaa ja uutta samalla kukkulalla, sellaista minä katson mielelläni.",
   "linkit": [
-   "kaupungintalona",
+   "kunnantalona",
    "Useldangen",
    "Länsi-Luxemburgissa"
   ],
   "jatkot": [
-   "Milloin kaupungintalo rakennettiin?",
+   "Milloin kunnantalo rakennettiin?",
    "Mitä muuta Useldangen kylässä on nähtävää?"
   ]
  },
@@ -940,7 +940,7 @@
   "kohde": "kohde:hahmotelma-esch",
   "kysymys": "Milloin alueelta löytyi runsaasti rautamalmia?",
   "uusi": false,
-  "vastaus": "Just niin, tuo on kaupungin käännekohta. Runsaasti rautamalmia löydettiin alueelta 1850-luvulla. Sitä ennen [[Esch-sur-Alzette]] oli pitkään pieni maalaiskylä, mutta kaivosten ja [[terästeollisuuden]] kehittyessä sen väkiluku kymmenkertaistui muutamassa vuosikymmenessä. Teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla, ja vuonna 1911 perustettiin terästehdas [[ARBED]]. Aika hurja nousu kylälle.",
+  "vastaus": "Just niin, tuo on kaupungin käännekohta. Runsaasti rautamalmia löydettiin alueelta 1850-luvulla. Sitä ennen [[Esch-sur-Alzette]] oli pitkään pieni maalaiskylä, mutta kaivosten ja [[terästeollisuuden]] kehittyessä sen väkiluku kasvoi runsaasta 1 500:sta vuonna 1851 yli 16 000:een vuonna 1910. Teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla, ja vuonna 1911 perustettiin terästehdas [[ARBED]]. Aika hurja nousu kylälle.",
   "linkit": [
    "Esch-sur-Alzette",
    "terästeollisuuden",
@@ -1084,11 +1084,10 @@
   "kohde": "kohde:hahmotelma-altmunster",
   "kysymys": "Kuka perusti Altmünsterin luostarin vuonna 1083?",
   "uusi": false,
-  "vastaus": "Kato, tän minä tiedän. Altmünsterin luostarin perusti vuonna 1083 [[Luxemburgin]] kreivi [[Konrad I]], joka tarkoitti sen sukunsa yksityiseksi luostariksi. Hän asetti luostarin apotiksi veljensä [[Rudolfin]]. Luostarin koulusta tuli myöhemmin kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä. Kyllä minä sen vielä muistin.",
+  "vastaus": "Kato, tän minä tiedän. Altmünsterin luostarin perusti vuonna 1083 [[Luxemburgin]] kreivi [[Konrad I]], joka tarkoitti sen sukunsa yksityiseksi luostariksi. Luostarin koulusta tuli myöhemmin Luxemburgin kaupungin opetusmonopoli, ja luostarikirkkoon haudattiin Luxemburgin kreivejä. Kyllä minä sen vielä muistin.",
   "linkit": [
    "Luxemburgin",
-   "Konrad I",
-   "Rudolfin"
+   "Konrad I"
   ],
   "jatkot": [
    "Miksi aatelissuvuilla oli omia yksityisiä luostareita?",
@@ -1151,7 +1150,7 @@
   "kohde": "kohde:hahmotelma-altmunster",
   "kysymys": "Miksi luostareilla oli kouluja keskiajalla?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Keskiajalla [[luostarit]] olivat tärkeitä oppineisuuden keskuksia, koska munkit osasivat lukea ja kirjoittaa ja kopioivat [[käsikirjoituksia]] käsin. Papiston ja kirjureiden kouluttaminen oli luontevaa tehdä siellä, missä kirjat ja opettajat jo olivat. Altmünsterin koulusta tuli Luxemburgin kaupungin ainoa oppilaitos. Minä olisin kyl pysynyt kirjeissä.",
+  "vastaus": "Hyvä kysymys tuo. Keskiajalla [[luostarit]] olivat tärkeitä oppineisuuden keskuksia, koska munkit osasivat lukea ja kirjoittaa ja kopioivat [[käsikirjoituksia]] käsin. Papiston ja kirjureiden kouluttaminen oli luontevaa tehdä siellä, missä kirjat ja opettajat jo olivat. Altmünsterin koululla oli opetusmonopoli Luxemburgin kaupungissa. Minä olisin kyl pysynyt kirjeissä.",
   "linkit": [
    "luostarit",
    "käsikirjoituksia"

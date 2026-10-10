@@ -7,7 +7,7 @@ Kuka omisti linnan 1600-luvulta alkaen?
 
 ### 6.2
 KYSYMYS: Kuinka monta vartiotornia linnaa ympäröivässä muurissa on?
-Kato, tää on helppo. Linnaa ympäröivässä pyöreässä muurissa on 11 vartiotornia. Muuri kiertää kallion päällä seisovaa linnaa, joka kohoaa noin 150 metriä [[Sûre-joen]] yläpuolelle. Ulkomuuri on vuodelta 1350, ja linnaa on laajennettu useita kertoja sen jälkeenkin, esimerkiksi [[Stolzembourgin]] talolla vuonna 1384. Vähän jäi hengästyttämään tämä laskeminen.
+Kato, tää on helppo. Linnaa ympäröivässä pyöreässä muurissa on 11 vartiotornia. Muuri kiertää kallion päällä seisovaa linnaa, joka kohoaa noin 150 metriä [[Sûre-joen]] yläpuolelle. Ulkomuuri valmistui vuonna 1384, ja linnaa on laajennettu useita kertoja, esimerkiksi [[Stolzembourgin]] talolla. Vähän jäi hengästyttämään tämä laskeminen.
 JATKOT:
 Mihin aikaan linnan piha rakennettiin?
 Mikä Sûre on joena?
@@ -21,7 +21,7 @@ Milloin valtio osti linnan?
 
 ### 6.4
 KYSYMYS: Mistä vuodesta linnan ulkomuuri on peräisin?
-Kas vaan, sepä sattui. Linnan ulkomuuri on vuodelta 1350. Linna itse on vanhempi: se mainitaan ensimmäisen kerran vuonna 1095, ja sitä on laajennettu useita kertoja. [[Stolzembourgin]] talo on vuodelta 1384 ja [[piha]] vuodelta 1477, joten rakentaminen jatkui monta sukupolvea. Ei paha muistilta, vaikka sanon itse.
+Kas vaan, sepä sattui. Linnan ulkomuuri valmistui vuonna 1384. Linna itse on vanhempi: se mainitaan ensimmäisen kerran vuonna 1095, ja sitä on laajennettu useita kertoja. [[Piha]] on vuodelta 1477, ja [[Stolzembourgin]] talo on yksi myöhemmistä laajennuksista, joten rakentaminen jatkui monta sukupolvea. Ei paha muistilta, vaikka sanon itse.
 JATKOT:
 Mikä Stolzembourgin talo oli?
 Miksi linnoja laajennettiin useaan kertaan?
@@ -42,7 +42,7 @@ Mikä Kalatori on?
 
 ### 7.2
 KYSYMYS: Kuinka pitkään linnoituksen purkaminen kesti?
-Odotas vähän. Purku kesti kuusitoista vuotta. Se perustui vuoden 1867 [[Lontoon sopimukseen]], joka vaati [[Luxemburgia]] purkamaan kaupungin linnoitukset, ja [[Preussin]] varuskunta vetäytyi. Työ maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita. Kuusitoista vuotta on pitkä aika, ei se mikään viikon remontti ollu.
+Odotas vähän. Purku kesti kuusitoista vuotta. Se perustui vuoden 1867 [[Lontoon sopimukseen]], joka vaati [[Luxemburgia]] purkamaan kaupungin linnoitukset, ja [[Preussin]] varuskunta vetäytyi. Työ maksoi yli 1,5 miljoonaa kultafrangia, ja noin 23 kilometrin kasemattiverkostosta säilyi noin 17 kilometriä. Kuusitoista vuotta on pitkä aika, ei se mikään viikon remontti ollu.
 JATKOT:
 Miksi Lontoon sopimus vaati linnoitusten purkamista?
 Mitä maanalaisista käytävistä on jäljellä?
@@ -70,7 +70,7 @@ Miten Pétrusse-joen laakso näkyy kaupungissa?
 
 ### 8.1
 KYSYMYS: Millä joella Larochette sijaitsee?
-Ai se, tost minä osaan kertoo. Larochette sijaitsee Valkoisen [[Ernz-joen]] laaksossa [[Keski-Luxemburgissa]]. Kaupunkia hallitsee osittain raunioitunut linna, joka kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella. Luxemburgiksi kaupungin nimi on [[Fiels]]. Hieno paikka, minun mielestäni.
+Ai se, tost minä osaan kertoo. Larochette sijaitsee Valkoisen [[Ernz-joen]] laaksossa [[Keski-Luxemburgissa]]. Kaupunkia hallitsee osittain raunioitunut linna, joka kohoaa hiekkakivikielekkeellä noin 50 metriä joen yläpuolella. Luxemburgiksi kaupungin nimi on [[Fiels]]. Hieno paikka, minun mielestäni.
 JATKOT:
 Mitä Larochetten linnasta tiedetään?
 Mikä on Larochetten luxemburginkielinen nimi?
@@ -91,14 +91,14 @@ Mitkä kartanoista on kunnostettu?
 
 ### 8.4
 KYSYMYS: Mitkä kaksi kartanoa Larochetten linnan vieressä on kunnostettu?
-Hetkinen ny. Kunnostetut kartanot ovat [[Homburgin kartano]], joka on vuodelta 1350, ja [[Créhangen kartano]] vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat kallionkielekkeellä noin 150 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.
+Hetkinen ny. Kunnostetut kartanot ovat [[Homburgin kartano]], joka on vuodelta 1350, ja [[Créhangen kartano]] vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat hiekkakivikielekkeellä noin 50 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.
 JATKOT:
 Miksi suku rakennutti useita kartanoita?
 Mitä kunnostus tarkoittaa raunioille?
 
 ### 8.5
 KYSYMYS: Miten Larochetten linna tuhoutui 1500-luvun lopulla?
-Ai tota, selvä. Linna tuhoutui [[tulipalossa]] 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen kallionkielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.
+Ai tota, selvä. Linna tuhoutui [[tulipalossa]] 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen hiekkakivikielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.
 JATKOT:
 Mistä linnan rauniot kertovat nykyään?
 Miten linnoja suojeltiin tulipaloilta?
@@ -119,16 +119,16 @@ Mitä linnan raunioille tapahtui 1900-luvulla?
 
 ### 9.3
 KYSYMYS: Kuka osti Useldangen linnan raunion vuonna 1924?
-Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.
+Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kunnantalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.
 JATKOT:
-Millainen Useldangen kaupungintalo on?
+Millainen Useldangen kunnantalo on?
 Miksi kuntien hallintoa sijoitetaan vanhoihin linnoihin?
 
 ### 9.4
 KYSYMYS: Mitä Useldangen linnan raunioiden päällä on nykyään?
-Kato, tää on kiva. Palatsin raunioiden päälle on rakennettu moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linnasta on jäljellä rauniot, joista erottuvat ulkomuuri, yksi pyöreistä torneista ja 25 metriä korkea päätorni. Se seisoo pienellä kukkulalla [[Useldangen]] kylän keskustassa [[Länsi-Luxemburgissa]]. Vanhaa ja uutta samalla kukkulalla, sellaista minä katson mielelläni.
+Kato, tää on kiva. Palatsin raunioiden päälle on rakennettu moderni rakennus, joka toimii nykyään [[kunnantalona]]. Linnasta on jäljellä rauniot, joista erottuvat ulkomuuri, yksi pyöreistä torneista ja 25 metriä korkea päätorni. Se seisoo pienellä kukkulalla [[Useldangen]] kylän keskustassa [[Länsi-Luxemburgissa]]. Vanhaa ja uutta samalla kukkulalla, sellaista minä katson mielelläni.
 JATKOT:
-Milloin kaupungintalo rakennettiin?
+Milloin kunnantalo rakennettiin?
 Mitä muuta Useldangen kylässä on nähtävää?
 
 ### 9.5
