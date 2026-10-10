@@ -12152,3 +12152,7 @@ Pelin pohja ennen kaupunkia on iPadilla 2,4 Gt (huippu 4,5 Gt) → junaan 175 al
 ## PULU PYSÄYTETTY, PILVIKREDIITTI LOPPU (omistaja 10.10.2026 klo 07.0x) (10.10.2026 klo 07.00)
 
 Omistaja: "pysäytä pulun generointi nykyisten maiden jälkeen, pilvi kreditit loppu". Tämän tilin 250 dollarin pilvikrediitti käytettiin Pulun maihin 9.–10.10. (ämpärissä 18 maata; Sisältökirjurilla HUN, CHE, GBR, UKR ja LVA; pilvessä kesken LTU ja RUS). Uusia maita ei käynnistetä (NOR, SVK, SVN, BIH, BEL, ISL, MLT, LUX ja pienet jäävät), eikä uusia pilvisessioita avata ilman omistajan päätöstä. LTU ja RUS viedään loppuun vain, jos pilvi saa ne valmiiksi; muuten ne jäävät keskeneräisinä odottamaan. Jatko (toisen tilin krediitti tai paikallinen ajo kiintiöstä) vain omistajan päätöksellä.
+
+## TARKENNUS: KESKENERÄISET PULU-MAAT LOPPUUN (omistaja 10.10.2026 klo 07.0x) (10.10.2026 klo 07.02)
+
+Omistaja: "siis tee vain keskeneräiset maat loppuun". Kesken olleet LTU ja RUS tehdään loppuun: pilvessä niin kauan kuin sessiot etenevät, ja jos haara seisoo yli 20 min, Sisältökirjuri jatkaa samaa haaraa paikallisesti PILVIOHJE.md:n mukaan (Sonnet-apulaiset enintään 2). Uusia maita ei käynnistetä. Lisäksi omistaja kysyi "eikö voisi viedä suoraan 174?": TF 173:n lähetysajo oli jo valmis, joten TF 174 käynnistettiin heti odottamatta Applen 173-käsittelyä (seuraava TF heti, kun edellisen lähetysajo on valmis).
