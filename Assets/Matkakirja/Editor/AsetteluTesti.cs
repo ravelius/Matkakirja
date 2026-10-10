@@ -723,6 +723,7 @@ namespace Matkakirja.Editori
             var uudet = NakyvatOhjaimet().Where(e => !ennen.Contains(e)).ToList();
             if (uudet.Count == 0) { Virhe($"{nimi}: ei avautunut (ei uusia näkyviä elementtejä)"); return; }
             int viat = 0, ok = 0, ylivuodot = 0;
+            var naytetyt = new List<(VisualElement E, Rect B)>();
             foreach (var e in uudet)
             {
                 var sv = e.GetFirstAncestorOfType<ScrollView>();
@@ -734,6 +735,7 @@ namespace Matkakirja.Editori
                     if (b.yMax < ikkuna.yMin || b.yMin > ikkuna.yMax) continue;   // vierityksen takana: ei tarkisteta
                     b = Rect.MinMaxRect(b.xMin, Mathf.Max(b.yMin, ikkuna.yMin), b.xMax, Mathf.Min(b.yMax, ikkuna.yMax));
                 }
+                naytetyt.Add((e, Leikkaa(SisaltoLaatikko(e), b)));
                 if (e is TextElement te) Ylivuoto(te, nimi, ref ylivuodot);
                 if (e is Button) e.Query<TextElement>().ForEach(t => { if (t != e && Nakyva(t)) Ylivuoto(t, nimi, ref ylivuodot); });
                 var koko = e.panel.visualTree.layout;
@@ -747,6 +749,7 @@ namespace Matkakirja.Editori
             }
             if (viat > 6) Kirjaa($"-- {nimi}: {viat - 6} muuta vikaa");
             if (ylivuodot > 6) Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: {ylivuodot - 6} muuta");
+            Paallekkain(naytetyt, nimi);
             // Paneelin napit paneelin sisällä (9.10.2026 ajo #12: Äänentasojen väkänen valui paneelin ja ruudun ulkopuolelle).
             var paneeli = NakymanPaneeli(nimi);
             if (paneeli?.panel != null && Nakyvissa(paneeli))
@@ -794,6 +797,43 @@ namespace Matkakirja.Editori
             if (++n > 6) return;
             bool kolme = t.resolvedStyle.textOverflow == TextOverflow.Ellipsis;
             Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: \"{Lyhyt(t)}\" {mita}{(kolme ? " (…-katkaisu)" : "")} [{string.Join(" ", t.GetClasses().Take(2))}]");
+        }
+
+        /// <summary>
+        /// PÄÄLLEKKÄIN (raportti, ei vika; Natiivi-UI 10.10.2026): näkymän uudet näkyvät tekstit ja napit, jotka peittävät toisiaan
+        /// vähintään 2 × 2 pt:n alalta. Tekstistä verrataan kirjainten aluetta (SisaltoLaatikko), napista koko kosketusalaa;
+        /// vanhempi–lapsi-parit ohitetaan. Enintään 6 riviä näkymää kohden.
+        /// </summary>
+        static void Paallekkain(List<(VisualElement E, Rect B)> l, string nimi)
+        {
+            int n = 0;
+            for (int i = 0; i < l.Count; i++)
+                for (int j = i + 1; j < l.Count; j++)
+                {
+                    var (a, ra) = l[i];
+                    var (b, rb) = l[j];
+                    if (a.Contains(b) || b.Contains(a)) continue;
+                    var y = Leikkaa(ra, rb);
+                    if (!(y.width >= 2f && y.height >= 2f)) continue;
+                    if (++n <= 6) Kirjaa($"PÄÄLLEKKÄIN {Koot[kokoNro].Nimi}: {nimi}: \"{Lyhyt(a)}\" {Laatikko(ra)} × \"{Lyhyt(b)}\" {Laatikko(rb)}");
+                }
+            if (n > 6) Kirjaa($"PÄÄLLEKKÄIN {Koot[kokoNro].Nimi}: {nimi}: {n - 6} muuta");
+        }
+
+        /// <summary>Tekstin kirjainten alue maailmassa (-unity-text-align huomioiden); napin ja muun elementin worldBound.</summary>
+        static Rect SisaltoLaatikko(VisualElement e)
+        {
+            if (!(e is TextElement t) || e is Button || string.IsNullOrEmpty(t.text)) return e.worldBound;
+            var cr = t.contentRect;
+            if (!(cr.width >= 1f) || !(cr.height >= 1f)) return e.worldBound;
+            var m = t.MeasureTextSize(t.text, cr.width + 0.5f, VisualElement.MeasureMode.AtMost, 0f, VisualElement.MeasureMode.Undefined);
+            float w = Mathf.Min(cr.width, m.x), h = Mathf.Min(cr.height, m.y);
+            var a = t.resolvedStyle.unityTextAlign;
+            float x = a == TextAnchor.UpperCenter || a == TextAnchor.MiddleCenter || a == TextAnchor.LowerCenter ? cr.x + (cr.width - w) / 2f
+                : a == TextAnchor.UpperRight || a == TextAnchor.MiddleRight || a == TextAnchor.LowerRight ? cr.xMax - w : cr.x;
+            float y = a == TextAnchor.MiddleLeft || a == TextAnchor.MiddleCenter || a == TextAnchor.MiddleRight ? cr.y + (cr.height - h) / 2f
+                : a == TextAnchor.LowerLeft || a == TextAnchor.LowerCenter || a == TextAnchor.LowerRight ? cr.yMax - h : cr.y;
+            return t.LocalToWorld(new Rect(x, y, w, h));
         }
 
         static string Lyhyt(VisualElement e)
