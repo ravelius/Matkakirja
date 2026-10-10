@@ -1839,8 +1839,11 @@ namespace Matkakirja.Natiivi
             esitysAlkaa = true;
             Aloituskaupunki = k.Nimi; AloitusKeskusta = (k.Lat, k.Lon);
             if (Auki) return VaihdaKaupunki(k.Nimi, k.Lat, k.Lon);
-            rek.Valitse(OpasTiedot.Id);
-            return true;
+            // Kaupunkipallo on kaikkien pelaajien karttaelementti: avaus ei riipu linssien kehittäjätilasta (TF:ssä vain koodilla ja
+            // KOKEET-kytkimellä), muuten napautus asetti kaupunkitilan ja jätti oppaan kiinni (omistaja Mac TF 177, LS1 10.10.).
+            bool auki = rek.Valitse(OpasTiedot.Id, ohitaSaatavuus: true) && rek.Auki?.Tiedot.Id == OpasTiedot.Id;
+            if (!auki) KirjaaS($"opas: kaupunkitila {k.Id}: opas ei auennut");
+            return auki;
         }
 
 
