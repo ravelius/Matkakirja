@@ -258,7 +258,7 @@ namespace Matkakirja.Natiivi
                             break;
                         }
                 }
-            kirjaa?.Invoke($"seikkailu: esittely 1499 (vuosileikkaukset, ranta-1499 {ranta} osaa, kävelyosia piiloon {piilo})");
+            kirjaa?.Invoke($"seikkailu: esittely 1499 (vuosileikkaukset, ranta-1499 {ranta} osaa, kävelyosia piiloon {piilo}, mustan korvaus {(Hamara ? "hämärä" : "päivä")} {MustaKorvaus.x:0.###})");
         }
 
         IEnumerator Aja(Transform kamera, Action<string> kirjaa)

@@ -1175,6 +1175,8 @@ namespace Matkakirja.Natiivi
             }
             if (nayttamo == null || pelattavaPala || PelattavaPalaPyydetty || SeikkailuPelaaja.Aktiivinen != null || SeikkailuVene.Aktiivinen != null
                 || SeikkailuHistoria.Kaynnissa) yield break;
+            // PT 10.10. (arkki v46u/v46v): ilman tätä korvaus oli päiväkuvan 0,27, ja hämäräkuvan tumma kallio näkyi koko saarella valkoisena.
+            SeikkailuHistoria.Hamara = DioraamaTunnelma.Hamara(rakennus);
             SeikkailuHistoria.Esittely1499(true, o.Kirjaa);
         }
         static readonly string[] EsittelynKavelyosat = { "ranta-1499", "porttikaytava-T102" };
