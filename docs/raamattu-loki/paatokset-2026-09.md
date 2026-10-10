@@ -12156,3 +12156,7 @@ Omistaja: "pysäytä pulun generointi nykyisten maiden jälkeen, pilvi kreditit 
 ## TARKENNUS: KESKENERÄISET PULU-MAAT LOPPUUN (omistaja 10.10.2026 klo 07.0x) (10.10.2026 klo 07.02)
 
 Omistaja: "siis tee vain keskeneräiset maat loppuun". Kesken olleet LTU ja RUS tehdään loppuun: pilvessä niin kauan kuin sessiot etenevät, ja jos haara seisoo yli 20 min, Sisältökirjuri jatkaa samaa haaraa paikallisesti PILVIOHJE.md:n mukaan (Sonnet-apulaiset enintään 2). Uusia maita ei käynnistetä. Lisäksi omistaja kysyi "eikö voisi viedä suoraan 174?": TF 173:n lähetysajo oli jo valmis, joten TF 174 käynnistettiin heti odottamatta Applen 173-käsittelyä (seuraava TF heti, kun edellisen lähetysajo on valmis).
+
+## PILVISESSIOT KULUTTAVAT VIIKKOSALDOA KREDIITIN JÄLKEEN (omistaja 10.10.2026 klo 07.0x) (10.10.2026 klo 07.03)
+
+Omistaja: "pilvisaldo vain kuluttaa normaalia viikkosaldoa" ja "siis ne jotka on aloitettu". Kun tilin pilvikrediitti on käytetty, pilvisessiot eivät pysähdy vaan kuluttavat tilauksen tavallista viikkosaldoa samoin kuin paikalliset ajot. Siksi aloitetut Pulu-maat (LTU, RUS) jatkuvat pilvessä loppuun, ja uusia pilvisessioita avataan vain omistajan päätöksellä.
