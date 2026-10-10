@@ -243,7 +243,7 @@
   "kohde": "kohde:jajce",
   "kysymys": "Millainen valtakunta Bosnian kuningaskunta oli?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Bosnian kuningaskunta oli keskiaikainen itsenäinen valtakunta, jonka johdossa oli [[Kotromanićin]] suku. Tvrtko I kruunattiin kuninkaaksi vuonna 1377, ja hänen aikanaan valtakunta laajeni suurimpaan ulottuvuuteensa. Pääasiallinen kuninkaanlinnoitus oli [[Bobovac]], jonne oli koottu kruununjalokivet ja kuninkaiden haudat. Ottomaanit valloittivat valtakunnan, ja Bobovac kavallettiin vihollisille vuonna 1463. Samana vuonna viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta. Siitä on onneksi jo yli viisisataa vuotta.",
+  "vastaus": "Joo, tän minä tiedän. Bosnian kuningaskunta oli keskiaikainen itsenäinen valtakunta, jonka johdossa oli [[Kotromanićin]] suku. Tvrtko I kruunattiin kuninkaaksi vuonna 1377, ja hänen aikanaan valtakunta laajeni suurimpaan ulottuvuuteensa. Pääasiallinen kuninkaanlinnoitus oli [[Bobovac]], jonne oli koottu kruununjalokivet ja kuninkaiden haudat. Ottomaanit valloittivat valtakunnan, ja Bobovac antautui toukokuussa 1463. Samana vuonna viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta. Siitä on onneksi jo yli viisisataa vuotta.",
   "linkit": [
    "Kotromanićin",
    "Bobovac"
@@ -566,7 +566,7 @@
   "kohde": "kohde:travnik",
   "kysymys": "Mikä oli Bobovac ja miksi se oli tärkeä?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Bobovac oli keskisessä Bosniassa sijainnut keskiaikainen linnoitus, jota pidetään Bosnian kuninkaiden tärkeimpänä linnoituksena. Sinne oli koottu valtakunnan kruununjalokivet, ja siellä olivat myös kuninkaiden haudat. Linnoitus oli rakennettu turvallisuutta ajatellen, eikä sinne johtanut kunnollista tietä. Se kesti [[ottomaanien]] piirityksiä vuosikymmeniä, kunnes se menetettiin vuonna 1463, samana vuonna kun Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja kuoli. Bobovacin merkitys liittyy [[Tvrtko I:n]] aikaan, jolloin Bosnian kuningaskunta oli suurimmillaan. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Joo, tän minä tiedän. Bobovac oli keskisessä Bosniassa sijainnut keskiaikainen linnoitus, jota pidetään Bosnian kuninkaiden tärkeimpänä linnoituksena. Sinne oli koottu valtakunnan kruununjalokivet, ja siellä olivat myös kuninkaiden haudat. Linnoitus oli rakennettu turvallisuutta ajatellen, eikä sinne johtanut kunnollista tietä. Se kesti [[ottomaanien]] piirityksiä vuosikymmeniä, kunnes se antautui toukokuussa 1463, samana vuonna kun Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja kuoli. Bobovacin merkitys liittyy [[Tvrtko I:n]] aikaan, jolloin Bosnian kuningaskunta oli suurimmillaan. Onpas siit onneksi pitkä aika.",
   "linkit": [
    "ottomaanien",
    "Tvrtko I:n"
@@ -1111,7 +1111,7 @@
   "kohde": "kohde:bobovac",
   "kysymys": "Miksi kuninkaan istuin siirtyi Jajceen?",
   "uusi": false,
-  "vastaus": "No niin. Kuningas [[Stjepan Tomašević]] siirsi istuimensa [[Jajceen]], kun [[osmanien]] painostus kasvoi. Osmanit valtasivat Bobovacin vuonna 1463, ja itsenäinen keskiaikainen Bosnian kuningaskunta päättyi samana vuonna. Onpas siitä onneksi jo pitkä aika.",
+  "vastaus": "No niin. Kuningas [[Stjepan Tomašević]] siirsi istuimensa [[Jajceen]], kun [[osmanien]] painostus kasvoi. Kuningas pakeni Bobovacista Jajceen, ja Bobovac antautui osmaneille toukokuussa 1463, ja itsenäinen keskiaikainen Bosnian kuningaskunta päättyi samana vuonna. Onpas siitä onneksi jo pitkä aika.",
   "linkit": [
    "Stjepan Tomašević",
    "Jajceen",
@@ -1257,7 +1257,7 @@
   "kohde": "kohde:hahmotelma-bobovacin-kuninkaanlinna",
   "kysymys": "Miksi Bobovacin kuninkaanlinna on nykyään raunioina?",
   "uusi": false,
-  "vastaus": "No niin. Lähteiden mukaan [[osmanit]] valtasivat ja hävittivät linnan kolmen päivän piirityksen jälkeen 21.5.1463, kun viimeinen kuningas [[Stjepan Tomašević]] oli juuri paennut [[Jajceen]]. Erään kertomuksen mukaan linna ei kaatunut pelkän piirityksen vuoksi vaan se kavallettiin viholliselle, ja tässä lähteet poikkeavat toisistaan. Tapahtumasta on yli viisisataa vuotta, ja maailma oli silloin toinen: valtakuntien kohtalo ratkesi vielä linnoilla ja piirityksillä. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä. Onneksi ne ovat sentään jääneet.",
+  "vastaus": "No niin. Lähteiden mukaan [[osmanit]] saivat Bobovacin haltuunsa, kun linna antautui toukokuussa 1463 ja viimeinen kuningas [[Stjepan Tomašević]] oli juuri paennut sieltä [[Jajceen]]. Osmanit hävittivät linnan sen jälkeen, ja tarkemmista vaiheista lähteet poikkeavat toisistaan. Tapahtumasta on yli viisisataa vuotta, ja maailma oli silloin toinen: valtakuntien kohtalo ratkesi vielä linnoilla ja piirityksillä. Kivijalat ja muurinpohjat ovat yhä näkyvissä rinteellä. Onneksi ne ovat sentään jääneet.",
   "linkit": [
    "osmanit",
    "Stjepan Tomašević",
@@ -1825,7 +1825,7 @@
   "kohde": "kohde:hahmotelma-prokosko",
   "kysymys": "Mikä eläinlaji tekee Prokoškon järvestä tieteellisesti erityisen?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Prokoškon järven tieteellisesti erityinen eläinlaji on [[bosnialainen alppitriton]], harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Järvi sijaitsee [[Vranican]] vuoristossa noin 1 670 metrin korkeudessa. Ornitologi Othmar Reiser kiinnitti huomion järven eliölajistoon vuonna 1891, ja herpetologi [[Franz Werner]] kuvasi tritonin vuonna 1902. Pienestä liskosta tuli ihan iso nimi.",
+  "vastaus": "Joo, tän minä tiedän. Prokoškon järven tieteellisesti erityinen eläinlaji on [[bosnialainen alppitriton]], harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Järvi sijaitsee [[Vranican]] vuoristossa noin 1 640–1 660 metrin korkeudessa. Ornitologi Othmar Reiser kiinnitti huomion järven eliölajistoon vuonna 1891, ja herpetologi [[Franz Werner]] kuvasi tritonin vuonna 1902. Pienestä liskosta tuli ihan iso nimi.",
   "linkit": [
    "bosnialainen alppitriton",
    "Vranican",
@@ -1855,7 +1855,7 @@
   "kohde": "kohde:hahmotelma-prokosko",
   "kysymys": "Mikä Nadkrstac on ja missä se on suhteessa järveen?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. [[Nadkrstac]] on Vranican vuoriston korkein huippu, ja se ympäröi Prokoškon järveä, joka lepää [[Vranican]] rinteellä Fojnican kunnassa. Järvi on noin 1 670 metrin korkeudessa, joten huippu kohoaa sen yläpuolelle. Huipun tarkkaa korkeutta en ole varma sanomaan, joten jätän sen pois. Vuoristojärvet ovat usein juuri tällaisia: korkealla, kylmän veden ympäröiminä ja vuorten reunustamina. Kyyhkynkin siivet jäävät tuollaisella korkeudella vähän jäykiksi.",
+  "vastaus": "Hetkinen ny. [[Nadkrstac]] on Vranican vuoriston korkein huippu, ja se kohoaa Prokoškon järven juurella; järvi lepää [[Vranican]] rinteellä Fojnican kunnassa. Järvi on noin 1 640–1 660 metrin korkeudessa, joten huippu kohoaa sen yläpuolelle, noin 2 110 metriin. Vuoristojärvet ovat usein juuri tällaisia: korkealla, kylmän veden ympäröiminä ja vuorten reunustamina. Kyyhkynkin siivet jäävät tuollaisella korkeudella vähän jäykiksi.",
   "linkit": [
    "Nadkrstac",
    "Vranican"
@@ -2266,14 +2266,14 @@
   "kohde": "kohde:hahmotelma-ostrozac",
   "kysymys": "Kenelle Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen 1900-luvun alussa?",
   "uusi": false,
-  "vastaus": "Kas vaan, hyvä kysymys tuo. Bihaćin pormestari [[Lothar von Berks]] rakennutti [[Ostrožacin linnan]] uudelleen vuosina 1900–1906 syntymäpäivälahjaksi vaimolleen, joka oli syntyjään habsburgilainen. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa, ja sen juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle [[Babonić]]-aatelissuvulle. Nykyinen satumainen ulkoasu tornikattoineen on peräisin tuosta uudelleenrakennuksesta. Aika kallis syntymäpäivälahja, minä olisin tyytynyt pullaan.",
+  "vastaus": "Kas vaan, hyvä kysymys tuo. Bihaćin piirin johtaja [[Lothar von Berks]] rakennutti [[Ostrožacin linnan]] uudelleen noin vuosina 1900–1902 vaimolleen Isabellalle, joka oli syntyjään Adamović Čepinska. Rakennus rahoitettiin vaimon myötäjäisillä. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa, ja sen juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle [[Babonić]]-aatelissuvulle. Nykyinen satumainen ulkoasu tornikattoineen on peräisin tuosta uudelleenrakennuksesta. Aikamoinen myötäjäislahja, minä olisin tyytynyt pullaan.",
   "linkit": [
    "Lothar von Berks",
    "Ostrožacin linnan",
    "Babonić"
   ],
   "jatkot": [
-   "Mitä Habsburgien valtakunta oli?",
+   "Mikä on myötäjäinen?",
    "Milloin ottomaanit valtasivat linnan?"
   ]
  },
@@ -2281,7 +2281,7 @@
   "kohde": "kohde:hahmotelma-ostrozac",
   "kysymys": "Mikä patsaspuisto linnan pihalla toimii ja mistä kivestä veistokset on tehty?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Linnan pihalla toimii [[Ostrožacin kuvanveistäjäsiirtokunta]], jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä monumentaaliveistosta. Veistokset on tehty bihaciittikivestä, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota kuvataan ainutlaatuiseksi Kaakkois-Euroopassa. Linna sijaitsee [[Cazinin]] liepeillä Luoteis-Bosniassa, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta.",
+  "vastaus": "Joo, tän minä tiedän. Linnan pihalla toimii [[Ostrožacin kuvanveistäjäsiirtokunta]], jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä monumentaaliveistosta. Veistokset on tehty bihaciittikivestä, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota kuvataan ainutlaatuiseksi Kaakkois-Euroopassa. Linna sijaitsee [[Cazinin]] liepeillä Luoteis-Bosniassa, ja sen nykyinen ulkoasu on peräisin noin vuosien 1900–1902 uudelleenrakennuksesta.",
   "linkit": [
    "Ostrožacin kuvanveistäjäsiirtokunta",
    "Cazinin"
@@ -2295,7 +2295,7 @@
   "kohde": "kohde:hahmotelma-ostrozac",
   "kysymys": "Mikä suku omisti Ostrožacin linnan 1200-luvulla?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Ostrožacin linnan juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle [[Babonić]]-aatelissuvulle. Tuon ajan linnasta ei nykyään näy paljon, sillä nykyinen satumainen ulkoasu tornikattoineen on paljon myöhempää perua: Bihaćin pormestari [[Lothar von Berks]] rakennutti linnan uudelleen vuosina 1900–1906. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa. Ihan kunnon sukuhistoriaa, meikäläisetkin ovat olleet vanhaa väkeä.",
+  "vastaus": "Odotas vähän. Ostrožacin linnan juuret ulottuvat 1200-luvulle, jolloin se kuului kroatialaiselle [[Babonić]]-aatelissuvulle. Tuon ajan linnasta ei nykyään näy paljon, sillä nykyinen satumainen ulkoasu tornikattoineen on paljon myöhempää perua: Bihaćin piirin johtaja [[Lothar von Berks]] rakennutti linnan uudelleen noin vuosina 1900–1902. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa. Ihan kunnon sukuhistoriaa, meikäläisetkin ovat olleet vanhaa väkeä.",
   "linkit": [
    "Babonić",
    "Lothar von Berks"
@@ -2309,7 +2309,7 @@
   "kohde": "kohde:hahmotelma-ostrozac",
   "kysymys": "Milloin ottomaanit valtasivat Ostrožacin linnan?",
   "uusi": true,
-  "vastaus": "No niin, tarkkana nyt. Ottomaanit valtasivat Ostrožacin linnan vuonna 1592, siis noin neljäsataa vuotta ennen nykyistä ulkoasua edeltänyttä uudelleenrakennusta, joka tehtiin vuosina 1900–1906. Sitä ennen linna oli kuulunut kroatialaiselle [[Babonić]]-aatelissuvulle, ja sen juuret ulottuvat 1200-luvulle. [[Ostrožacin linna]] sijaitsee Cazinin liepeillä Luoteis-Bosniassa. Ihan hyvä päättely vuosiluvuista.",
+  "vastaus": "No niin, tarkkana nyt. Ottomaanit valtasivat Ostrožacin linnan vuonna 1592, siis noin neljäsataa vuotta ennen nykyistä ulkoasua edeltänyttä uudelleenrakennusta, joka tehtiin noin vuosina 1900–1902. Sitä ennen linna oli kuulunut kroatialaiselle [[Babonić]]-aatelissuvulle, ja sen juuret ulottuvat 1200-luvulle. [[Ostrožacin linna]] sijaitsee Cazinin liepeillä Luoteis-Bosniassa. Ihan hyvä päättely vuosiluvuista.",
   "linkit": [
    "Babonić",
    "Ostrožacin linna"
@@ -2323,7 +2323,7 @@
   "kohde": "kohde:hahmotelma-ostrozac",
   "kysymys": "Kuinka vanha linnan kuvanveistäjäsiirtokunnan perinne on?",
   "uusi": true,
-  "vastaus": "Ai tota. Ostrožacin kuvanveistäjäsiirtokunnan perinne on kestänyt yli viisikymmentä vuotta, ja sen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta. Veistokset ovat linnan pihalla, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota pidetään ainutlaatuisena Kaakkois-Euroopassa. [[Ostrožacin linna]] on Luoteis-Bosniassa [[Cazinin]] liepeillä, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta. Kyllä kivi kestää kyyhkyn pitkää juttua.",
+  "vastaus": "Ai tota. Ostrožacin kuvanveistäjäsiirtokunnan perinne on kestänyt yli viisikymmentä vuotta, ja sen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta. Veistokset ovat linnan pihalla, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota pidetään ainutlaatuisena Kaakkois-Euroopassa. [[Ostrožacin linna]] on Luoteis-Bosniassa [[Cazinin]] liepeillä, ja sen nykyinen ulkoasu on peräisin noin vuosien 1900–1902 uudelleenrakennuksesta. Kyllä kivi kestää kyyhkyn pitkää juttua.",
   "linkit": [
    "Ostrožacin linna",
    "Cazinin"
