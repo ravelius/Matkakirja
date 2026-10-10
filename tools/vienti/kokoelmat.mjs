@@ -30,7 +30,7 @@ import { maarajaRivit, MAARAJOJEN_TOLERANSSI } from './maarajat.mjs';
 import { lueMaakuntarajat, MAAKUNTARAJOJEN_TOLERANSSI } from './maakuntarajat.mjs';
 import { MAAILMANKARTAN_NIMET } from '../../js/packs/maailmankartta-nimet.js';
 import { ratkaiseMedia, sivustoReitit } from './media.mjs';
-import { aaniUrl, horatioAanenKesto, musaPolku } from '../../js/media.js';
+import { aaniUrl, horatioAanenKesto, musaPolku, PEILI_JUURI } from '../../js/media.js';
 import { aikaleimojenOsoite, ratkaiseAnkkurit, AIKALEIMOJEN_VERSIO } from '../../js/luentareaktiot.js';
 import { livianEleidenOsoite } from '../../js/livia-puheeleet-lataus.js';
 import { livianPuheeleenTiedot, livianLuentareaktionTiedot } from '../../js/livia-tilanteet.js';
@@ -816,7 +816,7 @@ function maaKokoelma(ns, hae) {
   const { FOKUS_MAANIMET } = hae('js/packs/fokus-grc.js');
   const { MAA_KATEGORIAT } = hae('js/packs/maa-kategoriat.js');
   const tiedot = MAATIEDOT.maailmankartta ?? {};
-  const { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT } = hae('js/packs/paakaupungit.js');
+  const { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT, PAAKAUPUNKIEN_KUVAT } = hae('js/packs/paakaupungit.js');
   const pisteet = new Map(PAAKAUPUNKIPISTEET.map((p) => [p.maa, p]));
   /*
    * Israel (PT 10.10.2026): Jerusalem on laudan kaupunki ilman maata eikä
@@ -825,9 +825,12 @@ function maaKokoelma(ns, hae) {
    * kanssa. asema kertoo kortille otsikon: "pääkaupunki" tai "hallinnon paikka".
    */
   // HALLINNON_PAIKAT: js/packs/laudan-paakaupungit.js (sama taulu webin maakortille).
-  const paakaupunki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit', asema: 'pääkaupunki' }
+  const linkki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit', asema: 'pääkaupunki' }
     : HALLINNON_PAIKAT[iso] ? { id: HALLINNON_PAIKAT[iso], kokoelma: 'kaupungit', asema: 'hallinnon paikka' }
     : pisteet.has(iso) ? { id: pisteet.get(iso).id, kokoelma: 'paakaupungit', asema: pisteet.get(iso).asema } : null);
+  // Skeema 1.61: kuvat myös linkissä, jotta kortti saa ne samasta paikasta laudan
+  // pääkaupungeille (Pariisi) ja pisteille (Vaduz).
+  const paakaupunki = (iso) => { const l = linkki(iso); return l && { ...l, kuvat: paakaupunkiKuvat(PAAKAUPUNKIEN_KUVAT, iso) }; };
   const rivit = Object.entries(P.map.countryShapes).map(([iso, maa]) => {
     const lippu = maa.lippu ? ratkaiseMedia(maa.lippu, 'lippu-commons') : null;
     const nimet = FOKUS_MAANIMET[iso] ?? {};
@@ -848,7 +851,7 @@ function maaKokoelma(ns, hae) {
       + 'keskitulo {arvo, sija}, tervehdykset [{teksti, kieli, osuus, lippu}]) tai null, maalehti = maalehdet-id, '
       + 'aiheet = maalehden aiheet järjestyksessä. Skeema 1.60: perustiedot (js/packs/paakaupungit.js MAIDEN_PERUSTIEDOT: '
       + 'virallinenNimi, valtiomuoto, vakiluku {arvo, vuosi, lahde, linkki}, pintaAlaKm2, kielet, valuutta, rajanaapurit, '
-      + 'genetiivi, esittely 3–5 lausetta) tai null; paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit", asema: "pääkaupunki" | "hallinnon paikka" } tai null '
+      + 'genetiivi, esittely 3–5 lausetta) tai null; paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit", asema: "pääkaupunki" | "hallinnon paikka", kuvat (1.61) } tai null '
       + '(Israelilla Jerusalem hallinnon paikkana, ei kannanottoa pääkaupunkikiistaan).',
     { maalehti: 'maalehdet' }, rivit);
 }
@@ -862,8 +865,21 @@ function maaKokoelma(ns, hae) {
  * olemassa olevalla karsinnalla; napautus avaa maan kortin perustiedoilla.
  * Vanhat buildit ohittavat tuntemattoman kokoelman.
  */
+/*
+ * Skeema 1.61 (PT 10.10.2026): pääkaupunkien Codex-havainnekuvat ämpärissä
+ * paakaupungit/<ISO3>/<pvm>/ (Sisältökirjurin hyväksymät; tools/tee-paakaupungit.mjs
+ * --kuvat). [{ avain, url, motiivi, kuvateksti, lahde, havainnekuva, leveys, korkeus, sha256 }];
+ * tyhjä lista, jos kuvaa ei ole. Näyttö vain olemassa olevalla kuvapohjalla.
+ */
+function paakaupunkiKuvat(KUVAT, iso) {
+  return (KUVAT?.[iso] ?? []).map((k) => ({
+    avain: k.tiedosto, url: PEILI_JUURI + k.tiedosto, motiivi: k.motiivi, kuvateksti: k.kuvateksti, lahde: k.lahde,
+    havainnekuva: k.havainnekuva, leveys: k.leveys, korkeus: k.korkeus, sha256: k.sha256,
+  }));
+}
+
 function paakaupunkiKokoelma(ns, hae) {
-  const { PAAKAUPUNKIPISTEET } = hae('js/packs/paakaupungit.js');
+  const { PAAKAUPUNKIPISTEET, PAAKAUPUNKIEN_KUVAT } = hae('js/packs/paakaupungit.js');
   const kaupunkiIdt = new Set(ns.MAAILMANKARTTA.cities.map((c) => c.id));
   const rivit = PAAKAUPUNKIPISTEET.map((p) => {
     if (kaupunkiIdt.has(p.id)) throw new Error(`paakaupungit: ${p.id} on laudan kaupunki`);
@@ -873,7 +889,7 @@ function paakaupunkiKokoelma(ns, hae) {
       lat: p.lat, lon: p.lon, lauta: { x: Math.round(lauta.x * 10) / 10, y: Math.round(lauta.y * 10) / 10 },
       tarkeys: 0, pysakki: false, asema: p.asema, wikidata: p.wikidata,
       asukkaat: p.asukkaat?.arvo ?? null, asukkaatVuosi: p.asukkaat?.vuosi ?? null, asukkaatLahde: p.asukkaat?.lahde ?? null,
-      kuvaus: p.kuvaus, tunnusrakennukset: p.tunnusrakennukset,
+      kuvaus: p.kuvaus, tunnusrakennukset: p.tunnusrakennukset, kuvat: paakaupunkiKuvat(PAAKAUPUNKIEN_KUVAT, p.maa),
     };
   });
   return taulukko('js/packs/paakaupungit.js#PAAKAUPUNKIPISTEET (tools/tee-paakaupungit.mjs, Sisältökirjurin faktat)',
@@ -881,7 +897,8 @@ function paakaupunkiKokoelma(ns, hae) {
       + 'maa (ISO3) ja maa2, lat/lon (Wikidata), lauta {x, y} (maailmankartan Miller), tarkeys 0, pysakki false '
       + '(ei reittejä, ei laudan välisääntöä — voi olla toisen kaupungin vieressä), asema ("pääkaupunki" tai '
       + '"hallinnon paikka"), wikidata, asukkaat + asukkaatVuosi + asukkaatLahde, kuvaus, tunnusrakennukset. '
-      + 'Piirto olemassa olevalla kaupunkimerkillä pienimmässä tärkeysluokassa; napautus avaa maan (maat[maa]).',
+      + 'Piirto olemassa olevalla kaupunkimerkillä pienimmässä tärkeysluokassa; napautus avaa maan (maat[maa]). '
+      + 'Skeema 1.61: kuvat [{ avain, url, motiivi, kuvateksti, lahde, havainnekuva, leveys, korkeus, sha256 }] (Codex-havainnekuvat).',
     { maa: 'maat' }, rivit);
 }
 

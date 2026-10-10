@@ -247,8 +247,11 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        ei reittejä; js/packs/paakaupungit.js, tools/tee-paakaupungit.mjs) ja maat.*.perustiedot + maat.*.paakaupunki;
  *        Euroopan minivaltiot AND/LIE/MCO/SMR/VAT maihin ja maarajoihin (omistaja PT:n kautta 10.10.2026). Vanhat
  *        buildit ohittavat uuden kokoelman ja kentät; uudet maat näkyvät kuten muut kaupungittomat maat.
+ *   1.61 paakaupungit.kuvat ja maat.*.paakaupunki.kuvat: Codex-havainnekuvat ämpärissä paakaupungit/<ISO3>/<pvm>/
+ *        ([{ avain, url, motiivi, kuvateksti, havainnekuva, leveys, korkeus, sha256 }], Sisältökirjurin hyväksymät; PT
+ *        10.10.2026); maat.*.paakaupunki.asema; kaikki maat -projektin erät 3–6 (Aasia, Afrikka, Amerikat, Oseania).
  */
-export const SKEEMAVERSIO_TARKKA = '1.60';
+export const SKEEMAVERSIO_TARKKA = '1.61';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

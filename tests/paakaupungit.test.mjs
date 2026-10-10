@@ -7,7 +7,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT } from '../js/packs/paakaupungit.js';
+import { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT, PAAKAUPUNKIEN_KUVAT } from '../js/packs/paakaupungit.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { PAAKAUPUNGIT } from '../tools/vienti/paakaupungit.mjs';
 import { ISO2 } from '../tools/vienti/iso2.mjs';
@@ -111,13 +111,27 @@ test('Oseania: 8 uutta maata rajoineen ja pääkaupunkeineen; kaikilla laudan ma
   assert.ok(Math.abs(maat.KIR.keskus[0] - 11599) < 30, `KIR keskus ${maat.KIR.keskus}`);
   // Kaikki maat -projektin tavoite: jokaisella laudan maalla pääkaupunki joko
   // laudan kaupunkina, kevyenä pisteenä tai Israelin hallinnon paikkana.
-  // Odottaa: Hongkong ja Saint Helena eivät ole valtioita (ei pääkaupunkia).
-  // Islannin, Tunisian ja Sri Lankan laudan kohteet (maata edustava solmu,
-  // Karthago, Colombo) eivät ole pääkaupunkeja (tools/vienti/paakaupungit.mjs),
-  // ja puuttuvien lista 10.10. laski ne laudalla oleviksi — Reykjavík, Tunis ja
-  // Sri Jayawardenepura Kotte tilattu Sisältökirjurilta. Lista saa vain lyhentyä.
-  const ODOTTAA = new Set(['HKG', 'SHN', 'ISL', 'TUN', 'LKA']);
+  // Hongkong ja Saint Helena eivät ole valtioita (ei pääkaupunkia). Islannin,
+  // Tunisian ja Sri Lankan laudan kohteet eivät ole pääkaupunkeja, joten Reykjavík,
+  // Tunis ja Kotte ovat pisteitä (Sisältökirjurin täydennys 10.10.2026).
+  const ODOTTAA = new Set(['HKG', 'SHN']);
   const pisteMaat = new Set(PAAKAUPUNKIPISTEET.map((p) => p.maa));
   const ilman = Object.keys(maat).filter((iso) => !PAAKAUPUNGIT[iso] && !pisteMaat.has(iso) && iso !== 'ISR' && !ODOTTAA.has(iso));
   assert.deepEqual(ilman, [], `maita ilman pääkaupunkia: ${ilman.join(', ')}`);
+});
+
+test('pääkaupunkien kuvat: vain pelin pääkaupungin kuvia, ämpäriavain ja havainnekuva-merkintä (PT 10.10.2026)', () => {
+  const pisteMaat = new Map(PAAKAUPUNKIPISTEET.map((p) => [p.maa, p.id]));
+  for (const [iso, kuvat] of Object.entries(PAAKAUPUNKIEN_KUVAT)) {
+    assert.ok(maat[iso], `${iso}: kuvia maalle, jota ei ole laudalla`);
+    assert.ok(pisteMaat.has(iso) || PAAKAUPUNGIT[iso] || iso === 'ISR', `${iso}: ei pääkaupunkia, johon kuva kuuluisi`);
+    for (const k of kuvat) {
+      assert.match(k.tiedosto, new RegExp(`^paakaupungit/${iso === 'SDS' ? 'SSD' : iso}/\\d{8}/[a-z0-9-]+\\.(png|jpg|webp)$`), k.tiedosto);
+      assert.equal(k.havainnekuva, true, `${k.tiedosto}: havainnekuva-merkintä`);
+      assert.match(k.kuvateksti ?? '', /Havainnekuva\.$/, `${k.tiedosto}: kuvatekstin lopussa "Havainnekuva."`);
+      assert.match(k.sha256 ?? '', /^[0-9a-f]{64}$/);
+    }
+  }
+  // Etelä-Afrikan pääkaupunki pelissä on Kapkaupunki: Pretoria-kuvat eivät kuulu sille.
+  assert.ok(!(PAAKAUPUNKIEN_KUVAT.ZAF ?? []).some((k) => k.tiedosto.includes('pretoria')));
 });
