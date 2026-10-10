@@ -5,6 +5,12 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## PÄIVITYS 12.3x–12.4x (uusi sessio)
+- **Unity 6.3 T7:llä** (12.34): /Volumes/T7 4TB/koodaus/unity63-talteen/6000.3.24f1, symlinkki /Users/Shared/Claude/unity/6000.3.24f1, unity-polku.sh käännetty
+  (varmuuskopio .ennen-unity63-t7-20261010). /Applications/Unity/Hub/Editor/6000.3.24f1 sisältää NYT VAIN K63-kääntäjäketjun (NetCoreRuntime +
+  DotNetSdkRoslyn, 126 Mt; Peli-testit/kaanna.sh, unity-tarkistus.sh, kaanna-editori.sh käyttävät sitä 6.7:ssäkin ja CI:ssä) — ÄLÄ POISTA. Levy 66 → 76 Gi.
+- **JUNA 176 RUNKO = 9bf070143** (51e42e7a6 + Siirtoseppä esittely-vaiheet-v46z 023c37675 + historia-suoja 1210b674e; K454/P453/L1307, tarkista ok).
+
 ## PÄIVITYS 12.4x (ennen nollausta)
 - **Mac TF 176 VALID** (38040911547, sisäinen ryhmä): mac-kaanna.sh 86ef3b3e6 1.1 176 (BUNDLE_ID fi.matkakirja.peli, APPSTORE=1), 1. lataus kaatui
   altool 90276/90334 (Steam Audion phonon.bundle/audioplugin_phonon.bundle ilman CFBundleIdentifieria) → .app korjattu PlistBuddylla, uusinta VALID.
