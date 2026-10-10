@@ -21,6 +21,18 @@ muistiajo Pariisi A/B (vertailu R22/R23: 0,68 / 0,75 Gt) + Olavinlinna + lämpö
 tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten muistitarkka-ipad.sh.
 5) Mac myöhemmin. TF 175 huomenna 6.7:llä, jos muistiajo menee läpi.
 
+## TILA 07.5x (nollaushetki)
+- 6.7-laitekäännös (cb8f87f31) KAATUI 07.37 LuoPalloon: CS0619 GetInstanceID (MuistiTarkka, LaattaTekstuurit; tulleet 173–174:ssä).
+  Korjattu T7-kopiossa: natiiviseppa/unity-67 = 175-runko b7df7c444 mergattu (c3b0ad414) + GetHashCode-korjaus (kärki git logista).
+  Puhtaat testit 6.7-haarassa: L1292/P449/K453. SEURAAVAKSI: unity-tarkistus 6.7:llä (U=/Volumes/T7 4TB/koodaus/Unity/6000.7.0b4,
+  MATKAKIRJA_KIRJASTOT=T7-kopion Library/ScriptAssemblies) → laitekäännös uudelleen (32830f79…/unity67-laite.sh, nice 20) → iPad-muistiajo.
+- Julkaisija: unity-polku.sh valmis; MERGE proton haara julkaisija/unity-polku bd281dcb9260106f82efafc947aaedab702696d1 175/6.7-runkoon
+  ennen TF 175:tä. Tarkista laite-sha.sh/laite-release.sh:n UNITY-rivi (6.7).
+- rsync 6.3-kopiosta T7:lle käynnistettiin ILMAN käännöslukkoa (Julkaisija toivoi lukon) → tarkista lokit/natiiviseppa-unity63-talteen.out;
+  tarvittaessa aja uudelleen lukko varattuna (sovi väli Julkaisijan kanssa).
+- TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
+  pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
+
 ## Junat
 
 | Juna | Master | juna/b13 | Simukäännös | Tila |
