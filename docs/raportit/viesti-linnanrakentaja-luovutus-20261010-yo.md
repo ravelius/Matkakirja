@@ -74,3 +74,20 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
 **6) Riddarholmen:** Karttasepän ohjauskuvat (_tyo/karttaseppa/ohje-riddarholmen/, diff ortho_ohje.diff) – LR antoi OK:n 02.0x; v1 valmis 02.17,
    v2 (tumma tiili, valurautaspiira) ~02.55. Projisoi projisoi_tekseli.py:llä (lisää malli rh: JUURI riddarholmen-v1, GLB glb-v2b lod*, OHJE
    Karttasepän codex-ohje) – Karttaseppä kertoo kumpi tulos.
+
+## TEHTY 10.10. 02.4x–04.0x (nollauksen jälkeen, Linnanrakentaja Opus high)
+
+- **ND:** projisoi_tekseli.py `--kalibroi <json>` (korkeusnormalisointi 2 m, materiaalin mediaani → tavoite, ryhmät, `valoisuus`-tila
+  väärän väriselle tekoälypinnalle, oranssi ovilaatta → tumma puu 70/50/38) ja `--maa-v8` (parvis: lahde/parvis_v8.py → tekstuurit/maa_v8.jpg
+  + maa_parvis_maski.png, OSM-parvis robustiin tasoon, kuoppa (−115,5, −4,8) täytetty). Vienti `export_vertex_color='MATERIAL'` (maan COLOR_0).
+  Versiot: tekoaly-v3-kalib (valokuva: kivi 170/163/141), **tekoaly-v3b** (pelikuva: kivi 189/174/160, PT/LS2 5a71ed10f → omistajalle
+  aamulla), **tekoaly-v3c** (= v3b + parvis v8) LS2:lla 03.5x. Ajo `zsh notre-dame-v1/aja_tekseli_v3.zsh` (O = tekoaly-v3c, kalibrointi_v3.json;
+  v3a-arvot kalibrointi_v3a.json). Auki: parviksen lounaiskulman jyrkkä reuna laiturille (+1,1 → −6,8 m) — LS2:n v3c-tarkistus.
+- **Olavinlinna v46r** (paketti 81f779158a59076d, blender 71874b61aa0074f5, v45e 6dad4410f): harjat Kijlin tornin omalla kivellä
+  (tornit-1499/laatta_kijl_seina.png; torni_uv.py + torni_laatta.py), Kijl 16,5 m, tornien ruskeat tiililaikut harmaaksi (kuori_tornit_harmaa.py).
+  **v46s** (paketti 8b0bdf3bad55c8df, blender da175024726ccfa3, v45e d9ff3b565): **Pyhän Eerikin torni** raunion päälle (kuoresta mitattu
+  −1,45/−18,23, Ø 11,7, harja −0,4 → z 20,0 TULKINTA; kuori_tornit_1499.py UUDET), laatta 140/134/126. Siirtoseppä kytki (esittely-1499
+  2210b802d, juna 175), 8 suunnan arkki Julkaisijan vuorolla ~04.1x–04.3x. Blender-tarkistukset tornit-1499/esikatselu/.
+- **Riddarholmen v3** (riddarholmen-v1/tekoaly-v3-tekseli, portti 0, LS2:lla): Karttasepän v3-pinnat → codex-ohje kopioitu
+  riddarholmen-v1/codex-ohje, `tekoaly_koko.zsh rh v3 - pelkka-kohdistus`, aja_tekseli_v3.zsh, kalibrointi_v3.json (tiili 214/140/98).
+- Karttaseppä: pp ja co OK:ttu (ajossa).
