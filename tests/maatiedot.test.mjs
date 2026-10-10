@@ -80,6 +80,14 @@ const VIELA_ILMAN_TUNNUSLUKUJA = new Set([
 const SIJA = /^\d+\.\/\d+$/;
 
 /*
+ * KEVYT SISÄLTÖ (kaikki maat -projekti, PT 10.10.2026; Natiivi-UI:n pyyntö):
+ * maat ilman maalehteä saavat maakortille vain väkiluvun ja pinta-alan
+ * Sisältökirjurin faktoista. Ei sijoja, demokratiaa, keskituloa eikä
+ * tervehdyksiä — rivissä saa olla vain nämä kaksi kenttää.
+ */
+const KEVYT_RIVI = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT', 'ISR', 'LBN', 'PSE']);
+
+/*
  * Pelin oma maatunnus poikkeaa ISO-koodista vain Etelä-Sudanissa
  * (kartta-aineiston SDS, ISO SSD), ja Our World in Data tuntee vain
  * ISO-koodin. Poikkeus on nimetty tässä, jottei linkkitarkistusta
@@ -108,6 +116,11 @@ test('jokaisella tunnuslukurivillä on pakolliset kentät ja tervehdys', () => {
     for (const kentta of ['vakiluku', 'pintaAla']) {
       assert.equal(typeof rivi[kentta], 'string', `${iso}: ${kentta} puuttuu`);
       assert.ok(rivi[kentta].length > 0, `${iso}: ${kentta} on tyhjä`);
+    }
+    if (KEVYT_RIVI.has(iso)) {
+      assert.deepEqual(Object.keys(rivi).sort(), ['pintaAla', 'vakiluku'], `${iso}: kevyt rivi`);
+      assert.ok(!MAA_KATEGORIAT[iso], `${iso}: maalehdellä on oltava täysi rivi`);
+      continue;
     }
     for (const kentta of ['vakilukuSija', 'pintaAlaSija']) {
       assert.match(rivi[kentta] ?? '', SIJA, `${iso}: ${kentta} väärässä muodossa`);
