@@ -13,6 +13,9 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>Kipinän koko lennossa ja perillä (m), vanan pituus (kopioita) ja viive (s), sykkeen jakso (s), HDR-voimakkuus (yön bloom).</summary>
         const float KokoLento = 0.16f, KokoPerilla = 0.24f, VanaViive = 0.045f, SykeS = 1.2f, Hdr = 2.4f;
+        /// <summary>Vähimmäiskoko suhteessa etäisyyteen kamerasta (simu 11.10. 01.5x: 0,24 m 30 m:n päässä oli ~7 px eikä erottunut):
+        /// lennossa ≈ 4 %, perillä ≈ 5 % kuvan korkeudesta (60° näkökenttä), joten kipinä näkyy yhtä selvänä kaukana ja lähellä.</summary>
+        const float KulmaLento = 0.045f, KulmaPerilla = 0.06f;
         const int Vana = 5;
 
         static Material materiaali; static Texture2D kuvio;
@@ -64,7 +67,9 @@ namespace Matkakirja.Natiivi
                 int taakse = Mathf.Min(historiaN - 1, Mathf.RoundToInt(i * VanaViive / Mathf.Max(1e-3f, dt)));
                 var p = historia[((historiaN - 1 - taakse) % historia.Length + historia.Length) % historia.Length];
                 float osuus = 1f - i / (float)(Vana + 1);
-                float koko = (lennossa ? KokoLento : KokoPerilla * syke) * (i == 0 ? 1f : 0.85f * osuus);
+                float etaisyys = cam != null ? Vector3.Distance(p, cam.transform.position) : 0f;
+                float koko = Mathf.Max(lennossa ? KokoLento : KokoPerilla, etaisyys * (lennossa ? KulmaLento : KulmaPerilla))
+                    * (lennossa ? 1f : syke) * (i == 0 ? 1f : 0.85f * osuus);
                 osat[i].position = p; osat[i].localScale = Vector3.one * koko;
                 if (cam != null) osat[i].rotation = Quaternion.LookRotation(osat[i].position - cam.transform.position);
                 var c = vari * Hdr; c.a = voima * (i == 0 ? 1f : 0.6f * osuus * (lennossa ? 1f : 0f));
