@@ -7,7 +7,7 @@ Miksi kalkkikivi liukenee veteen?
 
 ### 6.2
 KYSYMYS: Mitä kaloja Neretvan vesistössä elää?
-Kato, kalat. Ne kiinnostaa minua lähinnä ylhäältä päin. Neretvan vesistössä elää useita kotoperäisiä kalalajeja, eli lajeja, joita ei tavata muualla. Tunnetuimpia ovat taimenet, kuten marmoritaimen ja Adrianmeren valuma-alueen oma pehmeäsuinen taimen, joka tunnetaan nimellä Salmo obtusirostris. Täydellisestä lajilistasta en ole varma, ja kotoperäisten kalojen tarkka määrä vaihtelee lähteestä riippuen. Niiden runsaus selittyy sillä, että karstialueen joet ovat pitkään olleet toisistaan eristyneitä ja kylmä, puhdas vesi on suosinut erikoistuneita lajeja. Taimenet viihtyvät nimenomaan [[kylmässä]] ja happirikkaassa vedessä, jollaista vuoristojoki tarjoaa. No, ei paha kalatieto linnulta.
+Kato, kalat. Ne kiinnostaa minua lähinnä ylhäältä päin. [[Neretvan]] vesistössä elää useita kotoperäisiä kalalajeja, eli lajeja, joita ei tavata muualla. Tunnetuimpia ovat taimenet, kuten [[marmoritaimen]] ja Adrianmeren valuma-alueen oma pehmeäsuinen taimen, joka tunnetaan nimellä Salmo obtusirostris. Täydellisestä lajilistasta en ole varma, ja kotoperäisten kalojen tarkka määrä vaihtelee lähteestä riippuen. Niiden runsaus selittyy sillä, että karstialueen joet ovat pitkään olleet toisistaan eristyneitä ja kylmä, puhdas vesi on suosinut erikoistuneita lajeja. Taimenet viihtyvät nimenomaan [[kylmässä]] ja happirikkaassa vedessä, jollaista vuoristojoki tarjoaa. No, ei paha kalatieto linnulta.
 JATKOT:
 Mitä tarkoittaa kotoperäinen laji?
 Miksi taimen viihtyy kylmässä vedessä?
@@ -37,14 +37,14 @@ Miksi suistoalueet ovat tärkeitä linnuille?
 
 ### 7.1
 KYSYMYS: Miten aarniometsä eroaa talousmetsästä?
-Selvä juttu. Metsä on metsä, mut tässä on iso ero. Aarniometsä on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. Perućica-aarniometsä on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.
+Selvä juttu. Metsä on metsä, mut tässä on iso ero. [[Aarniometsä]] on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. [[Perućica-aarniometsä]] on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.
 JATKOT:
 Miksi kuollut puu on tärkeä metsälle?
 Kuinka vanhaksi pyökki voi elää?
 
 ### 7.2
 KYSYMYS: Millainen eläin on gemssi?
-Ai tota. Gemssi on minulle vähän kaukainen serkku vuorilta, vaikka ei lintu. Gemssi eli [[gemssi]] on vuoristoissa elävä, vuohen näköinen sorkkaeläin, joka kuuluu vuohiantiloopeihin. Sillä on lyhyet, koukkumaiset sarvet, jotka ovat sekä uroksilla että naarailla, ja talvella turkki on tummempi kuin kesällä. Gemssi liikkuu varmasti jyrkillä rinteillä ja kallioilla ja elää usein laumoina. Euroopassa sitä tavataan Alpeilla ja Balkanin vuorilla, ja Balkanilla elää oma alalajinsa. Ravinnoksi kelpaavat ruohot, yrtit ja lehdet, ja talvella myös havut. Hyvä kysymys tuo, vaikka vuorikiipeily ei oo minun tapani.
+Ai tota. Gemssi on minulle vähän kaukainen serkku vuorilta, vaikka ei lintu. Gemssi eli [[gemssi]] on vuoristoissa elävä, vuohen näköinen sorkkaeläin, joka kuuluu vuohiantiloopeihin. Sillä on lyhyet, koukkumaiset sarvet, jotka ovat sekä uroksilla että naarailla, ja talvella turkki on tummempi kuin kesällä. Gemssi liikkuu varmasti jyrkillä rinteillä ja kallioilla ja elää usein laumoina. Euroopassa sitä tavataan [[Alpeilla]] ja [[Balkanin]] vuorilla, ja Balkanilla elää oma alalajinsa. Ravinnoksi kelpaavat ruohot, yrtit ja lehdet, ja talvella myös havut. Hyvä kysymys tuo, vaikka vuorikiipeily ei oo minun tapani.
 JATKOT:
 Miten gemssi pysyy jyrkillä kallioilla?
 Mitkä muut eläimet elävät Balkanin vuorilla?
@@ -58,7 +58,7 @@ Miten korkeus mitataan vuorilla?
 
 ### 7.4
 KYSYMYS: Millainen lintu maakotka on?
-Kas vaan. Maakotka on kyyhkyn silmin vähän pelottava kollega. Maakotka on suuri petolintu, jonka siipien kärkiväli on usein yli kaksi metriä. Sen höyhenpuku on tummanruskea, ja niskassa on kullanruskea sävy, josta nimi tulee. Se elää vuoristoissa, metsäisillä ja avoimilla alueilla ja metsästää pienempiä nisäkkäitä ja lintuja, ja välillä myös raatoja. Maakotka pesii yleensä korkeille kallioille tai suurille puille ja käyttää pesää usein vuosikausia. Laji on Euroopassa elänyt vuoristoseuduilla vakaammin kuin alankoalueilla, ja sen [[lentoa]] on helppo seurata ilmavirroissa kaarrellessa.
+Kas vaan. Maakotka on kyyhkyn silmin vähän pelottava kollega. [[Maakotka]] on suuri petolintu, jonka siipien kärkiväli on usein yli kaksi metriä. Sen höyhenpuku on tummanruskea, ja niskassa on kullanruskea sävy, josta nimi tulee. Se elää vuoristoissa, metsäisillä ja avoimilla alueilla ja metsästää pienempiä nisäkkäitä ja lintuja, ja välillä myös raatoja. Maakotka pesii yleensä korkeille kallioille tai suurille puille ja käyttää pesää usein vuosikausia. Laji on [[Euroopassa]] elänyt vuoristoseuduilla vakaammin kuin alankoalueilla, ja sen [[lentoa]] on helppo seurata ilmavirroissa kaarrellessa.
 
 Maakotkan lento on aivan eri sarjaa kuin kyyhkyn, ja minä kunnioitan sitä hiljaa ja turvaetäisyydeltä.
 JATKOT:
@@ -67,28 +67,28 @@ Miten muuttohaukka metsästää?
 
 ### 7.5
 KYSYMYS: Mitä karhu tekee talvella?
-Odotas vähän, tästä on kerrottavaa. Talvella karhu vetäytyy talvilepoon, jota kutsutaan usein talviuneksi, vaikka kyseessä ei ole aivan sama asia kuin pienempien eläinten talviuni. Se hakeutuu pesään, joka voi olla kolo, luola tai kuoppa, ja viettää siellä suuren osan talvesta. Syksyllä karhu syö runsaasti ja kerää rasvakerroksen, jonka varassa se elää talven yli. Lepo on kevyttä: ruumiinlämpö laskee vain vähän, ja karhu voi herätä, jos häiriö on suuri. Naaraat synnyttävät poikasensa pesässä talven aikana. Euroopassa [[ruskokarhu]] elää esimerkiksi Balkanin ja Karpaattien metsissä. Hyvä kysymys, vaikka kyyhky ei talviunta tunne.
+Odotas vähän, tästä on kerrottavaa. Talvella karhu vetäytyy talvilepoon, jota kutsutaan usein talviuneksi, vaikka kyseessä ei ole aivan sama asia kuin pienempien eläinten talviuni. Se hakeutuu pesään, joka voi olla kolo, luola tai kuoppa, ja viettää siellä suuren osan talvesta. Syksyllä karhu syö runsaasti ja kerää rasvakerroksen, jonka varassa se elää talven yli. Lepo on kevyttä: ruumiinlämpö laskee vain vähän, ja karhu voi herätä, jos häiriö on suuri. Naaraat synnyttävät poikasensa pesässä talven aikana. Euroopassa [[ruskokarhu]] elää esimerkiksi [[Balkanin]] ja [[Karpaattien]] metsissä. Hyvä kysymys, vaikka kyyhky ei talviunta tunne.
 JATKOT:
 Mitä karhu syö kesällä ja syksyllä?
 Missä muualla Euroopassa ruskokarhu elää?
 
 ### 8.1
 KYSYMYS: Mitä Bosnian kuvernöörin työhön kuului?
-Hetkinen ny. Kuvernööri, siis vezir, kuulostaa tärkeältä, ja se olikin. Bosnian kuvernööri edusti ottomaanien sulttaania maakunnassa. Hänen tehtäviinsä kuuluivat yleensä verojen kantaminen, järjestyksen ylläpito, sotilaallisten joukkojen johtaminen ja yhteydenpito paikallisiin aatelisiin ja hallintovirkamiehiin. Hän myös välitti sulttaanin määräykset eteenpäin ja huolehti maakunnan rajojen turvallisuudesta. Tarkka tehtäväjako vaihteli aikakauden ja kuvernöörin mukaan, ja paikalliset ylimykset pystyivät joskus rajoittamaan hänen valtaansa. Travnikista tuli [[kuvernöörin]] asuinpaikka, ja kaupungissa toimi sen vuoksi myös hallinto ja virkamiehiä. Ei kai pöllö tätä parempaa ois osannut sanoa.
+Hetkinen ny. Kuvernööri, siis vezir, kuulostaa tärkeältä, ja se olikin. Bosnian kuvernööri edusti [[ottomaanien]] sulttaania maakunnassa. Hänen tehtäviinsä kuuluivat yleensä verojen kantaminen, järjestyksen ylläpito, sotilaallisten joukkojen johtaminen ja yhteydenpito paikallisiin aatelisiin ja hallintovirkamiehiin. Hän myös välitti sulttaanin määräykset eteenpäin ja huolehti maakunnan rajojen turvallisuudesta. Tarkka tehtäväjako vaihteli aikakauden ja kuvernöörin mukaan, ja paikalliset ylimykset pystyivät joskus rajoittamaan hänen valtaansa. [[Travnikista]] tuli [[kuvernöörin]] asuinpaikka, ja kaupungissa toimi sen vuoksi myös hallinto ja virkamiehiä. Ei kai pöllö tätä parempaa ois osannut sanoa.
 JATKOT:
 Mikä oli ottomaanien vilajetti?
 Millaista elämä oli ottomaanien ajan kaupungissa?
 
 ### 8.2
 KYSYMYS: Miksi hallinto siirtyi lopulta pois Travnikista?
-No niin, tää on vähän hankala. Siirrosta puhutaan eri lähteissä hieman eri tavoin, joten kerron sen minkä tiedän. Hallintokeskus siirtyi 1800-luvun puolivälissä Sarajevoon, kun ottomaanien keskushallinto uudisti maakuntahallintoa ja pyrki kaventamaan paikallisten ylimysten valtaa. Sarajevo oli Bosnian suurin kaupunki ja tärkeä kauppakeskus, joten se soveltui hallinnon kotipaikaksi paremmin kuin Lašvan laaksossa oleva Travnik. Siirron tarkoista syistä ja yksityiskohdista en ole täysin varma. Travnik säilytti silti merkityksensä paikallisena kaupunkina, ja sen kuvernöörinaikainen perintö näkyy yhä [[vanhassakaupungissa]] ja linnassa. Taisin mennä vähän yli, mut ihan hyvä.
+No niin, tää on vähän hankala. Siirrosta puhutaan eri lähteissä hieman eri tavoin, joten kerron sen minkä tiedän. Hallintokeskus siirtyi 1800-luvun puolivälissä [[Sarajevoon]], kun ottomaanien keskushallinto uudisti maakuntahallintoa ja pyrki kaventamaan paikallisten ylimysten valtaa. Sarajevo oli Bosnian suurin kaupunki ja tärkeä kauppakeskus, joten se soveltui hallinnon kotipaikaksi paremmin kuin [[Lašvan laaksossa]] oleva Travnik. Siirron tarkoista syistä ja yksityiskohdista en ole täysin varma. Travnik säilytti silti merkityksensä paikallisena kaupunkina, ja sen kuvernöörinaikainen perintö näkyy yhä [[vanhassakaupungissa]] ja linnassa. Taisin mennä vähän yli, mut ihan hyvä.
 JATKOT:
 Miten Sarajevosta tuli Bosnian pääkaupunki?
 Mitä Travnikissa on nähtävää nykyään?
 
 ### 8.3
 KYSYMYS: Mikä on karstilähde?
-Tost minä osaan kertoo. Karstilähde on paikka, jossa maan alla virrannut vesi purkautuu pintaan. Kalkkikivialueella sade- ja sulamisvesi liukenee maaperän rakoihin ja luoliin ja kulkeutuu maan alla, kunnes se kohtaa tiiviimmän kerroksen tai ulostulon ja purskahtaa esiin lähteenä. Karstilähteet voivat olla hyvin vuolaita, ja jotkin niistä muodostavat heti suuren joen tai kirkkaan lammen. Vesi on yleensä kylmää ja kirkasta, koska se on kulkenut kiven läpi. Lähteen vesimäärä vaihtelee sateiden ja lumien sulamisen mukaan. Travnikin [[Plava Voda]] on tällainen karstilähde, joka purkautuu vanhankaupungin keskelle. Kyl se on kauniimpaa katsoa kuin selittää.
+Tost minä osaan kertoo. [[Karstilähde]] on paikka, jossa maan alla virrannut vesi purkautuu pintaan. Kalkkikivialueella sade- ja sulamisvesi liukenee maaperän rakoihin ja luoliin ja kulkeutuu maan alla, kunnes se kohtaa tiiviimmän kerroksen tai ulostulon ja purskahtaa esiin lähteenä. Karstilähteet voivat olla hyvin vuolaita, ja jotkin niistä muodostavat heti suuren joen tai kirkkaan lammen. Vesi on yleensä kylmää ja kirkasta, koska se on kulkenut kiven läpi. Lähteen vesimäärä vaihtelee sateiden ja lumien sulamisen mukaan. [[Travnikin]] [[Plava Voda]] on tällainen karstilähde, joka purkautuu vanhankaupungin keskelle. Kyl se on kauniimpaa katsoa kuin selittää.
 JATKOT:
 Miksi karstilähteen vesi on kirkasta?
 Mikä on luolajoki?
@@ -102,7 +102,7 @@ Miten ottomaanit valtasivat Bosnian?
 
 ### 8.5
 KYSYMYS: Mitä Vlašić-vuorella voi tehdä?
-Kato, vuori. Vlašić kohoaa Travnikin yllä, ja katsoin sitä sieltä usein ylhäältä. Vlašić on Keski-Bosnian vuori, joka on suosittu ulkoilualue. Talvella siellä voi hiihtää ja laskea laskettelua, ja kesällä vaeltaa vuoristoniityillä ja nauttia maisemista. Vuori tunnetaan myös laiduntamisesta: sen rinteillä on perinteisesti pidetty lampaita ja valmistettu juustoa, ja alueen juustoa pidetään paikallisena erikoisuutena. Tarkemmat tiedot hiihtokeskuksen laskettelurinteistä en ole varma, joten kannattaa tarkistaa ne ajantasaisesta lähteestä. Vuoren korkeus on noin 1 900 metriä, ja se kuuluu [[Dinaaristen Alppien]] vuoristoon.
+Kato, vuori. [[Vlašić]] kohoaa [[Travnikin]] yllä, ja katsoin sitä sieltä usein ylhäältä. Vlašić on Keski-Bosnian vuori, joka on suosittu ulkoilualue. Talvella siellä voi hiihtää ja laskea laskettelua, ja kesällä vaeltaa vuoristoniityillä ja nauttia maisemista. Vuori tunnetaan myös laiduntamisesta: sen rinteillä on perinteisesti pidetty lampaita ja valmistettu juustoa, ja alueen juustoa pidetään paikallisena erikoisuutena. Tarkemmat tiedot hiihtokeskuksen laskettelurinteistä en ole varma, joten kannattaa tarkistaa ne ajantasaisesta lähteestä. Vuoren korkeus on noin 1 900 metriä, ja se kuuluu [[Dinaaristen Alppien]] vuoristoon.
 
 Vlašićin juustosta tulee ainakin minun mieleeni heti pulla, vaikka juusto ja pulla ovat täysin eri asia.
 JATKOT:
@@ -118,7 +118,7 @@ Mitä Dubrovnikissa on nähtävää?
 
 ### 9.2
 KYSYMYS: Miten kapea käytävä toimii nykyään?
-Joo, tää on käytännön asia. Käytävä on Bosnia ja Hertsegovinan Adrianmeren rannikko, joka katkaisee Kroatian rannikon kahtia, joten Neum on nykyisin kahden valtion rajojen välissä. Matkustajat, jotka kulkevat Kroatian eteläosiin rannikkotietä pitkin, joutuvat ylittämään Bosnian rajan ja sitten palaamaan Kroatiaan. Rajanylitykset tapahtuvat yleensä rajatarkastuksissa, ja Kroatian liityttyä Euroopan unioniin raja on myös EU:n ulkoraja. Rajanylitys vaikuttaa liikenteeseen erityisesti kesällä, jolloin matkailijoita on paljon, ja jonot voivat olla pitkiä. Kroatia on rakentanut [[Pelješacin sillan]] tarjoamaan vaihtoehtoisen yhteyden. Täytyy kyllä sanoa, että tämä on aika monimutkainen käytävä.
+Joo, tää on käytännön asia. Käytävä on Bosnia ja Hertsegovinan [[Adrianmeren]] rannikko, joka katkaisee Kroatian rannikon kahtia, joten [[Neum]] on nykyisin kahden valtion rajojen välissä. Matkustajat, jotka kulkevat Kroatian eteläosiin rannikkotietä pitkin, joutuvat ylittämään Bosnian rajan ja sitten palaamaan Kroatiaan. Rajanylitykset tapahtuvat yleensä rajatarkastuksissa, ja Kroatian liityttyä Euroopan unioniin raja on myös EU:n ulkoraja. Rajanylitys vaikuttaa liikenteeseen erityisesti kesällä, jolloin matkailijoita on paljon, ja jonot voivat olla pitkiä. Kroatia on rakentanut [[Pelješacin sillan]] tarjoamaan vaihtoehtoisen yhteyden. Täytyy kyllä sanoa, että tämä on aika monimutkainen käytävä.
 JATKOT:
 Mikä on Pelješacin silta?
 Miksi Kroatia liittyi Euroopan unioniin?
@@ -148,7 +148,7 @@ Mitä Pelješacilla tuotetaan?
 
 ### 10.1
 KYSYMYS: Kuka oli bani?
-Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin Unkarin ja Kroatian kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. Banja Lukan nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.
+Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin [[Unkarin]] ja [[Kroatian]] kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. [[Banja Lukan]] nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.
 JATKOT:
 Mitä tarkoittaa Bosnian kuningaskunta?
 Mikä oli keskiaikainen Unkarin kuningaskunta?
@@ -164,14 +164,14 @@ Millaisia luostarijuustoja Euroopassa valmistetaan?
 
 ### 10.3
 KYSYMYS: Mikä on Vrbas-joki?
-Kato, joki. Näitä riittää Bosniassa. Vrbas on Bosnia ja Hertsegovinan joki, joka saa alkunsa keskisen maan vuoristosta ja virtaa pohjoiseen kohti Savaa. Joki kulkee kanjonien ja laaksojen läpi ja halkoo myös Banja Lukan kaupungin. Se on suosittu vesiurheilun paikka, ja sen virtauksissa järjestetään koskenlaskua ja melontaa. Joen laaksossa on myös historiallisia linnoituksia ja kyliä, jotka kertovat alueen pitkästä historiasta. Kaupungissa Vrbas on ollut asukkaille tärkeä virkistyspaikka. Joen tarkasta pituudesta en ole varma, joten jätän luvun pois. [[Vrbasin]] vesi on kirkasta ja kylmää, mikä viehättää monia kävijöitä. Tuli taas mietittyä aika paljon.
+Kato, joki. Näitä riittää Bosniassa. Vrbas on Bosnia ja Hertsegovinan joki, joka saa alkunsa keskisen maan vuoristosta ja virtaa pohjoiseen kohti [[Savaa]]. Joki kulkee kanjonien ja laaksojen läpi ja halkoo myös [[Banja Lukan]] kaupungin. Se on suosittu vesiurheilun paikka, ja sen virtauksissa järjestetään koskenlaskua ja melontaa. Joen laaksossa on myös historiallisia linnoituksia ja kyliä, jotka kertovat alueen pitkästä historiasta. Kaupungissa Vrbas on ollut asukkaille tärkeä virkistyspaikka. Joen tarkasta pituudesta en ole varma, joten jätän luvun pois. [[Vrbasin]] vesi on kirkasta ja kylmää, mikä viehättää monia kävijöitä. Tuli taas mietittyä aika paljon.
 JATKOT:
 Mitä Sava-joki on?
 Mitä Banja Lukassa voi tehdä?
 
 ### 10.4
 KYSYMYS: Keitä sefardijuutalaiset ovat?
-No jopas, tähän tarvitaan vakavuutta. Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla eli nykyisessä Espanjassa ja Portugalissa. Heidät karkotettiin Espanjasta vuonna 1492 ja Portugalista pian sen jälkeen, minkä jälkeen monet asettuivat muun muassa Ottomaanien valtakunnan alueelle, myös Bosniaan. Sefardit säilyttivät oman kielensä, ladinon eli judeoespanjan, joka perustuu keskiaikaiseen espanjaan ja sisältää aineksia heprean ja muiden kielten sanastoa. Sefardiyhteisöt vaikuttivat kaupankäyntiin, kulttuuriin ja uskonnolliseen elämään alueilla, joissa he asuivat. Banja Lukaan sefardeja muutti 1800-luvulla. Heidän jälkensä näkyy edelleen [[kulttuuriperinnössä]].
+No jopas, tähän tarvitaan vakavuutta. Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla eli nykyisessä Espanjassa ja Portugalissa. Heidät karkotettiin [[Espanjasta]] vuonna 1492 ja Portugalista pian sen jälkeen, minkä jälkeen monet asettuivat muun muassa Ottomaanien valtakunnan alueelle, myös Bosniaan. Sefardit säilyttivät oman kielensä, [[ladinon]] eli judeoespanjan, joka perustuu keskiaikaiseen espanjaan ja sisältää aineksia heprean ja muiden kielten sanastoa. Sefardiyhteisöt vaikuttivat kaupankäyntiin, kulttuuriin ja uskonnolliseen elämään alueilla, joissa he asuivat. Banja Lukaan sefardeja muutti 1800-luvulla. Heidän jälkensä näkyy edelleen [[kulttuuriperinnössä]].
 
 Lähteet esittävät joitakin yksityiskohtia eri tavoin, joten tarkemmista luvuista en mene takuuseen.
 JATKOT:
@@ -180,7 +180,7 @@ Miksi juutalaiset karkotettiin Espanjasta?
 
 ### 10.5
 KYSYMYS: Keitä trappistit ovat?
-Selvä juttu. Trappistit ovat katolisen kirkon munkkijärjestö, joka syntyi 1600-luvulla kystersiläisluostarien uudistusliikkeenä. Nimi tulee La Trappen luostarista Ranskasta. Trappistit noudattavat Benedictuksen sääntöä, jossa korostuvat rukous, työ ja yksinkertainen elämä. Munkit elävät perinteisesti luostarin sisällä ja tekevät käsityötä, viljelevät maata ja valmistavat tuotteita, kuten juustoa, olutta ja leipää, joilla luostari elättää itsensä. Trappistiolut on nykyään maailmankuuluja, ja tuote voi kantaa trappistimerkintää vain tiettyjen ehtojen täyttyessä. Banja Lukan lähellä on toiminut trappistiluostari, ja [[trappistit]] ovat vaikuttaneet kaupunkiin pysyvästi. Ei se pelkkää munkkeutta ollut, mut ihan hyvin tiivistin.
+Selvä juttu. Trappistit ovat katolisen kirkon munkkijärjestö, joka syntyi 1600-luvulla kystersiläisluostarien uudistusliikkeenä. Nimi tulee [[La Trappen]] luostarista Ranskasta. Trappistit noudattavat Benedictuksen sääntöä, jossa korostuvat rukous, työ ja yksinkertainen elämä. Munkit elävät perinteisesti luostarin sisällä ja tekevät käsityötä, viljelevät maata ja valmistavat tuotteita, kuten juustoa, olutta ja leipää, joilla luostari elättää itsensä. Trappistiolut on nykyään maailmankuuluja, ja tuote voi kantaa trappistimerkintää vain tiettyjen ehtojen täyttyessä. [[Banja Lukan]] lähellä on toiminut trappistiluostari, ja [[trappistit]] ovat vaikuttaneet kaupunkiin pysyvästi. Ei se pelkkää munkkeutta ollut, mut ihan hyvin tiivistin.
 JATKOT:
 Mikä erottaa benediktiinit ja kystersiläiset?
 Miten trappistiolut valmistetaan?

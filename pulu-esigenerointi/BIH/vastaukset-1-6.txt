@@ -21,7 +21,7 @@ Miten vuoristojärvet yleensä syntyvät?
 
 ### 26.4
 KYSYMYS: Miten Prokoškon järvi arvellaan syntyneen?
-Ai tota. Prokoškon järven allas arvellaan syntyneen soraisen maa-aineksen kasautumisesta [[riolitti]]kallion päälle. Kyse on siis uskomuksesta eikä täysin varmasta tiedosta, ja syntytapa kuuluu samaan joukkoon kuin monen muun vuoristojärven synty, jossa maaperä ja kallio muovaavat altaan. Riolitti on tulivuoriperäinen kivilaji, joka on kemialliselta koostumukseltaan lähellä graniittia. Kallio ei päästä vettä helposti lävitseen, mikä auttaa altaan pysymään vedellä täytettynä, mutta tästä en ole aivan varma.
+Ai tota. [[Prokoškon]] järven allas arvellaan syntyneen soraisen maa-aineksen kasautumisesta [[riolitti]]kallion päälle. Kyse on siis uskomuksesta eikä täysin varmasta tiedosta, ja syntytapa kuuluu samaan joukkoon kuin monen muun vuoristojärven synty, jossa maaperä ja kallio muovaavat altaan. Riolitti on tulivuoriperäinen kivilaji, joka on kemialliselta koostumukseltaan lähellä graniittia. Kallio ei päästä vettä helposti lävitseen, mikä auttaa altaan pysymään vedellä täytettynä, mutta tästä en ole aivan varma.
 
 Minusta järvi on kuin yksi iso kuoppa, jonka ylhäältä näkee heti. Maan sisäisistä asioista en kuitenkaan tiedä läheskään yhtä paljon kuin taivaalta näkyvistä.
 JATKOT:
@@ -29,7 +29,7 @@ Mitä riolitti on kivilajina?
 Miten jääkausi on muovannut vuoristojärviä?
 
 ### 26.5
-KYSYMYS: Mitä tarkoittaa, että eläin säilyttää toukkamaisia piirteitä aikuisena?
+KYSYMYS: Mitä on neotenia eli toukkapiirteiden säilyminen aikuisena?
 Selvä juttu. Ilmiötä kutsutaan neotenia, ja siinä eläin kypsyy sukukypsäksi mutta säilyttää toukkavaiheen piirteitä, esimerkiksi ulkoiset kidukset tai vesielämään sopeutuneen ruumiinrakenteen. Tunnetuin esimerkki on [[aksolotli]], mutta myös monet [[vesilisko]]t voivat säilyttää toukkamaisia piirteitä. [[Bosnialaisen alppitritonin]] tapauksessa kyse on Prokoškon järven harvinaisesta alalajista, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tarkkaa selitystä sille, miksi juuri tämä alalaji on kehittynyt näin, en ole varma. No, minä kasvoin aikuiseksi nopeasti.
 JATKOT:
 Mikä ero on liskolla ja salamanterilla?
@@ -116,14 +116,14 @@ Miten roomalaiset valloittivat Balkanin?
 
 ### 29.2
 KYSYMYS: Miksi Kupresilla sataa lunta niin usein?
-No niin, lumi. Kupres on noin 1 120–1 250 metrin korkeudessa sijaitseva ylänkö Länsi-Bosniassa, ja se sijaitsee [[Dinaaristen vuorten]] sydämessä. Korkea sijainti vuoristossa tuo alueelle keskimäärin viisikymmentäviisi lumipäivää vuodessa. Kupreksen ylänkö tunnetaan nykyään myös talviurheilukeskuksistaan. Tarkkoja säätietoja en ole varma lisäämään. Lumi on kyyhkyn vihollinen, mutta ei skiihin kuuluvien.
+No niin, lumi. [[Kupres]] on noin 1 120–1 250 metrin korkeudessa sijaitseva ylänkö Länsi-Bosniassa, ja se sijaitsee [[Dinaaristen vuorten]] sydämessä. Korkea sijainti vuoristossa tuo alueelle keskimäärin viisikymmentäviisi lumipäivää vuodessa. Kupreksen ylänkö tunnetaan nykyään myös talviurheilukeskuksistaan. Tarkkoja säätietoja en ole varma lisäämään. Lumi on kyyhkyn vihollinen, mutta ei skiihin kuuluvien.
 JATKOT:
 Miksi vuoristossa on kylmempää kuin alankoalueilla?
 Missä ylängöllä voi harrastaa talviurheilua?
 
 ### 29.3
 KYSYMYS: Mitä Dinaariset vuoret ovat ja mihin ne ulottuvat?
-Tost minä osaan kertoo. Dinaariset vuoret ovat vuoristo Balkanin länsiosassa, ja ne ulottuvat luoteesta kaakkoon Sloveniasta Albaniaan. Nimi tulee Dinara-vuoresta Kroatiassa. Bosnian ja Hertsegovinan alue kuuluu pitkälti tähän vuoristoon, ja Kupresin ylänkö sijaitsee sen sydämessä. Vuoriston korkeinta huippua en ole varma nimeämään. Siipi väsyy jo ajatuksesta lentää koko matka.
+Tost minä osaan kertoo. [[Dinaariset vuoret]] ovat vuoristo [[Balkanin]] länsiosassa, ja ne ulottuvat luoteesta kaakkoon Sloveniasta Albaniaan. Nimi tulee Dinara-vuoresta Kroatiassa. Bosnian ja Hertsegovinan alue kuuluu pitkälti tähän vuoristoon, ja Kupresin ylänkö sijaitsee sen sydämessä. Vuoriston korkeinta huippua en ole varma nimeämään. Siipi väsyy jo ajatuksesta lentää koko matka.
 JATKOT:
 Mitä muita vuoristoja Balkanilla on?
 Miten vuoristot syntyvät?
@@ -137,7 +137,7 @@ Mikä oli Kroatian kuningaskunta?
 
 ### 29.5
 KYSYMYS: Keitä keltit olivat ja missä he asuivat?
-Ai tota. [[Keltit]] olivat rautakauden kansoja, jotka asuivat laajalla alueella Euroopassa, ja heidän kielensä ovat keltaisia kieliä. Kupresin ylängöllä asui esiroomalaisella kaudella illyrialaisen Dalmatae-heimon rinnalla myös keltit. Tarkkaa määrää tai heidän asuinalueensa rajoja en ole varma sanomaan. Kelttien perintö näkyy nykyään muun muassa kielissä, joita puhutaan Euroopan länsireunalla. Kyyhky on sentään seurannut heitä korkealta.
+Ai tota. [[Keltit]] olivat rautakauden kansoja, jotka asuivat laajalla alueella Euroopassa, ja heidän kielensä ovat keltaisia kieliä. [[Kupresin]] ylängöllä asui esiroomalaisella kaudella illyrialaisen Dalmatae-heimon rinnalla myös keltit. Tarkkaa määrää tai heidän asuinalueensa rajoja en ole varma sanomaan. Kelttien perintö näkyy nykyään muun muassa kielissä, joita puhutaan Euroopan länsireunalla. Kyyhky on sentään seurannut heitä korkealta.
 JATKOT:
 Mitä keltit jättivät jälkeensä?
 Mitä keltin kieliä puhutaan nykyään?
@@ -168,7 +168,7 @@ Miten muinaiset muurit rakennettiin ilman koneita?
 
 ### 30.4
 KYSYMYS: Mitä hellenisoituminen tarkoittaa?
-Selvä juttu. [[Hellenisoituminen]] tarkoittaa sitä, että kreikkalainen kulttuuri, kieli tai tavat leviävät ja vaikuttavat toiseen yhteisöön. Daorsit olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, minkä vuoksi heidän pääkaupunkinsa Daorson hellenisoitui jonkin verran. Kaupankäynti on perinteisesti ollut tapa, jolla kulttuurit kohtaavat ja lainaavat toisiltaan. Tarkkoja esimerkkejä siitä, mitä daorsit kreikkalaisilta ottivat, en ole varma antamaan. Kauppiaat kantoivat tavaran lisäksi tapoja, aivan kuten minä kannan kirjeitä.
+Selvä juttu. [[Hellenisoituminen]] tarkoittaa sitä, että kreikkalainen kulttuuri, kieli tai tavat leviävät ja vaikuttavat toiseen yhteisöön. [[Daorsit]] olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, minkä vuoksi heidän pääkaupunkinsa [[Daorson]] hellenisoitui jonkin verran. Kaupankäynti on perinteisesti ollut tapa, jolla kulttuurit kohtaavat ja lainaavat toisiltaan. Tarkkoja esimerkkejä siitä, mitä daorsit kreikkalaisilta ottivat, en ole varma antamaan. Kauppiaat kantoivat tavaran lisäksi tapoja, aivan kuten minä kannan kirjeitä.
 JATKOT:
 Millaisia kauppareittejä muinaisella Balkanilla oli?
 Mitä hellenistinen aika tarkoittaa?

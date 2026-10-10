@@ -1,6 +1,6 @@
 ### 11.1
 KYSYMYS: Miten luolaeläin tulee toimeen ilman valoa?
-Annas ku mietin. Pimeässä pärjääminen on kyllä taitolaji. Pimeän luolan eläimet ovat sopeutuneet elämään ilman valoa monin tavoin: monilta puuttuu väri, ja silmät ovat surkastuneet pieniksi tai kadonneet kokonaan, koska ne eivät pimeässä auta. Tilalle ovat kehittyneet tarkka tuntoaisti, haju ja veden värähtelyjen aistiminen. Ravintoa luolaan kulkeutuu pääosin ulkoa veden ja lepakoiden mukana, joten monet lajit elävät hitaasti ja tarvitsevat vain vähän energiaa. [[Vjetrenican]] luolasta on löydetty yli kaksisataa lajia, ja osa niistä on tunnettu ainoastaan sieltä. Minä pysyn kyllä mieluummin päivänvalossa.
+Annas ku mietin. Pimeässä pärjääminen on kyllä taitolaji. Pimeän luolan eläimet ovat sopeutuneet elämään ilman valoa monin tavoin: monilta puuttuu väri, ja silmät ovat surkastuneet pieniksi tai kadonneet kokonaan, koska ne eivät pimeässä auta. Tilalle ovat kehittyneet tarkka tuntoaisti, haju ja veden värähtelyjen aistiminen. Ravintoa luolaan kulkeutuu pääosin ulkoa veden ja [[lepakoiden]] mukana, joten monet lajit elävät hitaasti ja tarvitsevat vain vähän energiaa. [[Vjetrenican]] luolasta on löydetty yli kaksisataa lajia, ja osa niistä on tunnettu ainoastaan sieltä. Minä pysyn kyllä mieluummin päivänvalossa.
 JATKOT:
 Miksi osa luolaeläimistä on väriltään valkoisia?
 Mitä luolalepakot syövät?
@@ -81,7 +81,7 @@ Mikä Dinara-vuori on?
 
 ### 13.2
 KYSYMYS: Miksi kaksoishuipuista käytetympi on matalampi?
-Tuota niin. Hyvä huomio. Syytä ei ole kerrottu varmasti, mutta järkeenkäypiä selityksiä on muutama. Bosnia ja Hertsegovinan puolella oleva huippu on helpompi lähestyä tavallisia reittejä pitkin, sillä korkeampi huippu on Montenegron puolella ja sinne pääsy voi edellyttää rajanylitystä tai erillistä lupaa rajavyöhykkeen takia. Lisäksi [[Maglićin]] kaksi huippua ovat vain kaksi metriä toistensa erolla, joten vaellusreitti valitaan useammin helppouden kuin korkeuden mukaan. Tarkkoja syitä en ole varma, joten en vahvista mitään varmasti. Eikä kaksi metriä kyyhkyn silmin paljon ole.
+Tuota niin. Hyvä huomio. Syytä ei ole kerrottu varmasti, mutta järkeenkäypiä selityksiä on muutama. [[Bosnia ja Hertsegovinan]] puolella oleva huippu on helpompi lähestyä tavallisia reittejä pitkin, sillä korkeampi huippu on [[Montenegron]] puolella ja sinne pääsy voi edellyttää rajanylitystä tai erillistä lupaa rajavyöhykkeen takia. Lisäksi [[Maglićin]] kaksi huippua ovat vain kaksi metriä toistensa erolla, joten vaellusreitti valitaan useammin helppouden kuin korkeuden mukaan. Tarkkoja syitä en ole varma, joten en vahvista mitään varmasti. Eikä kaksi metriä kyyhkyn silmin paljon ole.
 JATKOT:
 Tarvitseeko Maglićille nousuun erillisen luvan?
 Millaista on vaellus Bosnian vuoristossa?
@@ -104,7 +104,7 @@ Miksi vuorilla sataa enemmän kuin laaksoissa?
 
 ### 13.5
 KYSYMYS: Miten valtioiden raja kulkee vuoristossa?
-Kas vaan. Rajakysymys. Vuoristossa valtioiden raja seuraa usein luonnollista linjaa, kuten harjannetta tai vedenjakajaa, koska sen on helppo tunnistaa maastossa. Aina näin ei kuitenkaan ole: raja voi perustua historiallisiin sopimuksiin, hallintoalueiden rajoihin tai mittauksiin, jotka on tehty maastoon erikseen rajapyykein. [[Maglić]] on tästä esimerkki, sillä raja kulkee vuoren yli Bosnia ja Hertsegovinan sekä Montenegron välillä, ja korkeampi huippu on Montenegron puolella. Tarkkaa rajalinjaa en ole varma kuvailemaan, joten en ala sitä yksityiskohtaisesti tekemään. Kyyhky ei rajoja kysele.
+Kas vaan. Rajakysymys. Vuoristossa valtioiden raja seuraa usein luonnollista linjaa, kuten harjannetta tai vedenjakajaa, koska sen on helppo tunnistaa maastossa. Aina näin ei kuitenkaan ole: raja voi perustua historiallisiin sopimuksiin, hallintoalueiden rajoihin tai mittauksiin, jotka on tehty maastoon erikseen rajapyykein. [[Maglić]] on tästä esimerkki, sillä raja kulkee vuoren yli [[Bosnia ja Hertsegovinan]] sekä [[Montenegron]] välillä, ja korkeampi huippu on Montenegron puolella. Tarkkaa rajalinjaa en ole varma kuvailemaan, joten en ala sitä yksityiskohtaisesti tekemään. Kyyhky ei rajoja kysele.
 JATKOT:
 Millä merkeillä rajat merkitään maastoon?
 Mitä ovat vedenjakajat?
@@ -162,14 +162,14 @@ Mitä muita puita Balkanin vuorilla kasvaa?
 
 ### 15.3
 KYSYMYS: Miksi karstialueilla on vähän pintavesiä?
-Hyvä kysymys tuo. Karstialueen kallio on liukenevaa kalkkikiveä, johon on vuosisatojen kuluessa muodostunut halkeamia, rakoja ja onkaloita. Sadevesi ja sulamisvesi imeytyvät niiden kautta nopeasti maan alle sen sijaan, että ne virtaisivat pinnalla puroina ja jokina. Vesi kulkee luolissa ja maanalaisissa vesiväylissä ja nousee pintaan lähteinä usein kaukana imeytymiskohdasta. Siksi maisema voi olla kuiva ja kivinen, vaikka sataisi paljon. [[Blidinjen]] ylänkö on tällaista karstia, ja sen järven pinta-ala vaihtelee vuodenajan mukaan. Kuivassa maisemassa tarvitaan siis hyvää suunnistustaitoa.
+Hyvä kysymys tuo. Karstialueen kallio on liukenevaa kalkkikiveä, johon on vuosisatojen kuluessa muodostunut halkeamia, rakoja ja onkaloita. Sadevesi ja sulamisvesi imeytyvät niiden kautta nopeasti maan alle sen sijaan, että ne virtaisivat pinnalla puroina ja jokina. Vesi kulkee luolissa ja maanalaisissa vesiväylissä ja nousee pintaan lähteinä usein kaukana imeytymiskohdasta. Siksi maisema voi olla kuiva ja kivinen, vaikka sataisi paljon. [[Blidinjen]] ylänkö on tällaista [[karstia]], ja sen järven pinta-ala vaihtelee vuodenajan mukaan. Kuivassa maisemassa tarvitaan siis hyvää suunnistustaitoa.
 JATKOT:
 Mitä ovat ponorit eli nielut?
 Mistä karstialueilla saa juomavettä?
 
 ### 15.4
 KYSYMYS: Miten järven pinta-ala voi vaihdella vuodenajan mukaan?
-Selvä juttu. Katotaas. Järven pinta-ala riippuu siitä, kuinka paljon vettä siihen tulee ja kuinka paljon sitä poistuu. Keväällä lumen sulaminen ja sateet täyttävät järven, jolloin se laajenee tasaisilla rannoillaan, ja kuivempana kesänä haihdunta pienentää sitä. Karstialueilla järvet voivat lisäksi tyhjentyä maanalaisten vesiväylien kautta, jolloin vedenpinta laskee nopeasti. [[Blidinjen]] järvi on tällainen: sen pinta-ala vaihtelee kahden ja puolen ja kuuden neliökilometrin välillä. Tarkkaa syytä juuri tälle järvelle en ole varma, mutta periaate on tämä. Kyllä siinä lintu näkee eron jo ilmasta.
+Selvä juttu. Katotaas. Järven pinta-ala riippuu siitä, kuinka paljon vettä siihen tulee ja kuinka paljon sitä poistuu. Keväällä lumen sulaminen ja sateet täyttävät järven, jolloin se laajenee tasaisilla rannoillaan, ja kuivempana kesänä haihdunta pienentää sitä. [[Karstialueilla]] järvet voivat lisäksi tyhjentyä maanalaisten vesiväylien kautta, jolloin vedenpinta laskee nopeasti. [[Blidinjen]] järvi on tällainen: sen pinta-ala vaihtelee kahden ja puolen ja kuuden neliökilometrin välillä. Tarkkaa syytä juuri tälle järvelle en ole varma, mutta periaate on tämä. Kyllä siinä lintu näkee eron jo ilmasta.
 JATKOT:
 Mitä tarkoittaa haihdunta?
 Miten karstijärvet eroavat tavallisista järvistä?

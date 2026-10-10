@@ -30,7 +30,7 @@ Mitä muistomerkki ja museo kertovat vierailijalle?
 
 ### 31.5
 KYSYMYS: Mikä on Kozara Grand Prix?
-Ai se. Kozara Grand Prix on maastopyöräilykilpailu, joka kuuluu kansainvälisen pyöräilyliiton kalenteriin ja jonka reitit kulkevat Kozaran kansallispuiston maastossa Luoteis-Bosniassa. Kilpailu järjestetään vuosittain, ja se on yksi puiston ulkoilutapahtumista Kozara Ultra Trail -maastojuoksun rinnalla. Puisto tunnetaan nykyään ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan. Kyllä siinä polkijoilla riittää tekemistä.
+Ai se. Kozara Grand Prix on maastopyöräilykilpailu, joka kuuluu kansainvälisen pyöräilyliiton kalenteriin ja jonka reitit kulkevat [[Kozaran kansallispuiston]] maastossa Luoteis-Bosniassa. Kilpailu järjestetään vuosittain, ja se on yksi puiston ulkoilutapahtumista [[Kozara Ultra Trail]] -maastojuoksun rinnalla. Puisto tunnetaan nykyään ennen kaikkea luonnostaan ja ulkoilumahdollisuuksistaan. Kyllä siinä polkijoilla riittää tekemistä.
 JATKOT:
 Miten maastopyöräily eroaa tavallisesta maantiepyöräilystä?
 Mikä on ultramaraton ja kuinka pitkä se on?
@@ -44,7 +44,7 @@ Milloin ottomaanit valtasivat linnan?
 
 ### 32.2
 KYSYMYS: Mikä patsaspuisto linnan pihalla toimii ja mistä kivestä veistokset on tehty?
-Joo, tän minä tiedän. Linnan pihalla toimii [[Ostrožacin kuvanveistäjäsiirtokunta]], jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä monumentaaliveistosta. Veistokset on tehty bihaciittikivestä, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota kuvataan ainutlaatuiseksi Kaakkois-Euroopassa. Linna sijaitsee Cazinin liepeillä Luoteis-Bosniassa, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta.
+Joo, tän minä tiedän. Linnan pihalla toimii [[Ostrožacin kuvanveistäjäsiirtokunta]], jonka yli viisikymmentä vuotta kestäneen perinteen aikana on syntynyt yli sata viisikymmentä monumentaaliveistosta. Veistokset on tehty bihaciittikivestä, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota kuvataan ainutlaatuiseksi Kaakkois-Euroopassa. Linna sijaitsee [[Cazinin]] liepeillä Luoteis-Bosniassa, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta.
 JATKOT:
 Miten kiveä veistetään monumentaaliseksi patsaaksi?
 Mitä Cazin on tunnettu?
@@ -65,7 +65,7 @@ Mikä erotti ottomaanien linnoitukset eurooppalaisista linnoista?
 
 ### 32.5
 KYSYMYS: Kuinka vanha linnan kuvanveistäjäsiirtokunnan perinne on?
-Ai tota. Ostrožacin kuvanveistäjäsiirtokunnan perinne on kestänyt yli viisikymmentä vuotta, ja sen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta. Veistokset ovat linnan pihalla, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota pidetään ainutlaatuisena Kaakkois-Euroopassa. [[Ostrožacin linna]] on Luoteis-Bosniassa Cazinin liepeillä, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta. Kyllä kivi kestää kyyhkyn pitkää juttua.
+Ai tota. Ostrožacin kuvanveistäjäsiirtokunnan perinne on kestänyt yli viisikymmentä vuotta, ja sen aikana on syntynyt yli sata viisikymmentä bihaciittikivestä veistettyä monumentaaliveistosta. Veistokset ovat linnan pihalla, ja yhdessä ne muodostavat ulkoilmapatsaspuiston, jota pidetään ainutlaatuisena Kaakkois-Euroopassa. [[Ostrožacin linna]] on Luoteis-Bosniassa [[Cazinin]] liepeillä, ja sen nykyinen ulkoasu on peräisin vuosien 1900–1906 uudelleenrakennuksesta. Kyllä kivi kestää kyyhkyn pitkää juttua.
 JATKOT:
 Miksi kuvanveistäjät kokoontuvat yhteisiin siirtokuntiin?
 Miten ulkoilmapatsaspuistoja hoidetaan talvella?
