@@ -40,6 +40,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Korostus;
         public static string KorostusSelite;
+        /// <summary>Aseman nimi, jonka alarivi KorostusSelite on (KierrosTaulu): selite näkyy vain sen alla. Lähdön valmistelussa
+        /// nykyinen indeksi siirtyy jo seuraavaan (LS1 21.4x, todistus-kompassi-hyppy-180 k02: Louvren alla Notre-Damen alarivi).</summary>
+        public static string KorostusNimi;
         /// <summary>
         /// HISTORIAOSION OTSIKKO (Päätoimittaja 9.10.2026, juna 170; Pelikoodarin lentokerronta historia-v1 "otsikko"): lennon aikana soivan
         /// osion otsikko HistoriaNakyyS sekuntia osion alussa lähtö- ja tuloaseman välissä samalla selitteen pohjalla (asemat eivät suurene);
@@ -50,6 +53,12 @@ namespace Matkakirja.Natiivi
         const float KorostusKoko = 44f;   // KierrosTaulun kohdeotsikon koko (nimi 44 pt)
         const float KorostusVaihto = 0.6f;
         float korostusTaso;
+        /// <summary>
+        /// SELITE KOKO KOHTEEN AJAN (omistaja 10.10.2026 19.0x: "metrokartalla saisi näkyä seliteteksti koko kohteen ajan"): selite
+        /// (KorostusSelite, kohteen alarivi) pysyy nykyisen aseman alla saapumisesta lähtöön asti, vaikka nimen korostus päättyy ~3 s:n
+        /// jälkeen; lähdössä (kohde vaihtuu seuraavaan) se häipyy ja tulee uuden kohteen alle saavuttaessa. Oma taso korostuksesta erillään.
+        /// </summary>
+        float seliteTaso;
         /// <summary>Korostetun nimen koko tällä ruudulla: KorostusKoko, tai pienempi, jos nimi ei mahdu yhdelle riville (SovitaKorostus).</summary>
         float korostusKoko = KorostusKoko;
         /// <summary>Korostetun nimen rivit (1–3): useampi vain, kun nimi ei mahdu yhdelle riville edes väliotsikon koossa.</summary>
@@ -71,6 +80,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Asettelutesti: linjan juuri.</summary>
         public VisualElement TestiJuuri => juuri;
         public int TestiIndeksi = 2;
+        /// <summary>Testi (`ui opasvalikko metro selite <teksti>`): selite nykyisen aseman alla ilman kierrosta.</summary>
+        public string TestiSelite;
         static readonly string[] TestiNimet = { "Eiffel-torni", "Trocadéro", "Riemukaari", "Champs-Élysées", "Place de la Concorde",
             "Louvre", "Notre-Dame de Paris", "Sacré-Cœurin basilika Montmartren kukkulalla" };
 
@@ -94,7 +105,57 @@ namespace Matkakirja.Natiivi
             // Lähtö: seuraava korostuu jo lennon alussa (omistaja 12.3x).
             OpasSovitin.KierrosLahtee += (nyk, seur, kesto) => Kohdista(seur);
             juuri.RegisterCallback<GeometryChangedEvent>(_ => AsetteleViiva());
+            // ASEMAT NAPAUTETTAVIKSI (omistaja 10.10.2026 19.0x: "metrokartan kohteet pitää tehdä klikattaviksi, jotta pelaaja voi
+            // siirtyä kohteiden välillä halutessaan"): koko linja on yksi kosketusala, jota OsumaVara laajentaa joka suuntaan; napautus
+            // valitsee pystysuunnassa lähimmän aseman (asemaväli vähintään VahinRivi), veto (> NapautusRaja pt) ei ole napautus.
+            // Kosketus ei valu pallon kameralle (StopPropagation).
+            osuma = Rakenne.El(null, juuri, PickingMode.Position);
+            osuma.name = OsumaNimi;
+            osuma.style.position = Position.Absolute;
+            // Vasemmalle pisteiden sarakkeen ohi ja päistä ylös ja alas; oikealla nimet ovat jo leveitä (ei naapurinappien päälle).
+            osuma.style.left = -OsumaVara; osuma.style.right = 0; osuma.style.top = -OsumaPaat; osuma.style.bottom = -OsumaPaat;
+            juuri.RegisterCallback<PointerDownEvent>(e => { painallus = e.position; painettu = true; e.StopPropagation(); });
+            juuri.RegisterCallback<PointerMoveEvent>(e => { if (painettu) e.StopPropagation(); });
+            juuri.RegisterCallback<PointerUpEvent>(e =>
+            {
+                if (!painettu) return;
+                painettu = false;
+                e.StopPropagation();
+                if (((Vector2)e.position - (Vector2)painallus).sqrMagnitude <= NapautusRaja * NapautusRaja) Napauta(e.position.y);
+            });
         }
+
+        /// <summary>Kosketusalan laajennus (pt): vasemmalle pisteiden sarakkeen ohi, ensimmäisen ja viimeisen aseman yli ylös ja alas.</summary>
+        const float OsumaVara = 16f, OsumaPaat = 10f;
+        public const string OsumaNimi = "mk-metrolinja-osuma";
+        readonly VisualElement osuma;
+        /// <summary>Asettelutesti: kosketusala.</summary>
+        public Rect TestiOsuma => osuma.worldBound;
+        /// <summary>Sormen liike (pt), jonka sisällä painallus on napautus.</summary>
+        const float NapautusRaja = 12f;
+        Vector3 painallus;
+        bool painettu;
+
+        /// <summary>Napautus paneelin y:ssä: lähin asema; nykyinen ei tee mitään. Testissä vain korostus siirtyy.</summary>
+        void Napauta(float y)
+        {
+            int paras = -1; float etaisyys = float.MaxValue;
+            for (int k = 0; k < asemat.Count; k++)
+            {
+                if (asemat[k].Rivi.resolvedStyle.display == DisplayStyle.None) continue;
+                float d = Mathf.Abs(asemat[k].Paikka.worldBound.center.y - y);
+                if (d < etaisyys) { etaisyys = d; paras = k; }
+            }
+            if (paras < 0 || paras == naytettyIndeksi) return;
+            var nimet = Nimet();
+            string nimi = paras < nimet.Count ? nimet[paras] : "?";
+            if (Testi) { TestiIndeksi = paras; Debug.Log($"MATKAKIRJA opas: metrolinja → asema {paras} {nimi} (testi)"); return; }
+            bool ok = AsemaValittu?.Invoke(paras) ?? false;
+            Debug.Log($"MATKAKIRJA opas: metrolinja → asema {paras} {nimi}: {(ok ? "siirtyy" : "ei siirtoa")}");
+        }
+
+        /// <summary>Aseman valinta (OpasValikko kytkee LS1:n kierroshyppyyn OpasSovitin.KierrosKohteeseen); true = siirto alkoi.</summary>
+        public System.Func<int, bool> AsemaValittu;
 
         IReadOnlyList<string> Nimet()
         {
@@ -152,8 +213,8 @@ namespace Matkakirja.Natiivi
             // Korostettu nimi ja selite vievät lisätilaa (nimen kasvu rivikorkeutena + selitteen rivit): alemmat asemat siirtyvät
             // sen verran alas ja palaavat korostuksen päättyessä. Lisätila ei rajaudu kaistaan, jotta asemat eivät litisty päällekkäin
             // (Päätoimittaja 8.10.: "Orsayn taidemuseo" rivittyi ja selite osui Eiffel-torniin, video 164 41,5 s).
-            if (korostusTaso > 0.001f && selite != null)
-                korkeus += korostusTaso * (RiviKerroin * Mathf.Max(0f, korostusRivit * korostusKoko - Tyylikirja.Koko.Valiotsikko) + Mathf.Max(0f, selite.layout.height));
+            if (korostusTaso > 0.001f) korkeus += korostusTaso * RiviKerroin * Mathf.Max(0f, korostusRivit * korostusKoko - Tyylikirja.Koko.Valiotsikko);
+            if (seliteTaso > 0.001f && selite != null) korkeus += seliteTaso * Mathf.Max(0f, selite.layout.height);
             if (historiaTaso > 0.001f && historia != null) korkeus += historiaTaso * Mathf.Max(0f, historia.layout.height);
             float top = Mathf.Round(Keskita ? yla + (kaista - korkeus) * 0.5f : yla);
             if (juuri.style.top.value.value != top) juuri.style.top = top;
@@ -232,7 +293,12 @@ namespace Matkakirja.Natiivi
             korostusTaso = Mathf.MoveTowards(korostusTaso, korostus ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
             float kt = korostusTaso * korostusTaso * (3f - 2f * korostusTaso);
             if (kohde >= 0 && kohde < n && kt > 0f) (korostusKoko, korostusRivit) = SovitaKorostus(asemat[kohde].Nimi, asemat[kohde].Rivi);
-            PaivitaSelite(korostus, kt);
+            bool seliteNakyy = kohde >= 0 && kohde < n && kohde == naytettyIndeksi && !string.IsNullOrEmpty(KorostusSelite) && !Testi
+                    && (SamaAsema(asemat[kohde].Nimi.text, KorostusNimi) || !asemat.Exists(a => SamaAsema(a.Nimi.text, KorostusNimi)))
+                || Testi && TestiSelite != null && kohde == naytettyIndeksi;
+            seliteTaso = Mathf.MoveTowards(seliteTaso, seliteNakyy ? 1f : 0f, Time.unscaledDeltaTime / KorostusVaihto);
+            if (Testi) seliteTaso = seliteNakyy ? 1f : 0f;   // testi (myös editorin asettelutesti, jossa aika ei kulje): heti
+            PaivitaSelite(seliteNakyy, seliteTaso * seliteTaso * (3f - 2f * seliteTaso));
             PaivitaHistoria();
             for (int k = 0; k < n; k++)
             {
@@ -270,7 +336,11 @@ namespace Matkakirja.Natiivi
             Alareuna = nakyy ? juuri.worldBound.yMax : 0f;
         }
 
-        /// <summary>Selite korostetun aseman nimen alle (sama nimen pohja, apuri-koko, rivittyy); peitto korostustason mukaan.</summary>
+        /// <summary>Sama asema nimen perusteella; jos nimeä ei ole linjalla lainkaan (eri kirjoitusasu), selite näkyy nykyisen alla kuten ennen.</summary>
+        static bool SamaAsema(string asema, string nimi) =>
+            !string.IsNullOrEmpty(asema) && !string.IsNullOrEmpty(nimi) && string.Equals(asema.Trim(), nimi.Trim(), System.StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>Selite nykyisen aseman nimen alle (sama nimen pohja, apuri-koko, rivittyy); peitto selitetason mukaan.</summary>
         void PaivitaSelite(bool korostus, float kt)
         {
             if (selite == null) return;
@@ -279,7 +349,8 @@ namespace Matkakirja.Natiivi
                 seliteAsema = kohde;
                 asemat[kohde].Nimi.parent.Add(selite);
             }
-            if (korostus && selite.text != (KorostusSelite ?? "")) selite.text = KorostusSelite ?? "";
+            string t = Testi ? TestiSelite ?? "" : KorostusSelite ?? "";
+            if (korostus && selite.text != t) selite.text = t;
             var d = kt > 0.001f && !string.IsNullOrEmpty(selite.text) ? DisplayStyle.Flex : DisplayStyle.None;
             if (selite.style.display != d) selite.style.display = d;
             selite.style.opacity = kt;
@@ -318,6 +389,9 @@ namespace Matkakirja.Natiivi
             l.style.fontSize = Tyylikirja.Koko.Apuri + 2f;
             l.style.whiteSpace = WhiteSpace.Normal;
             l.style.textOverflow = TextOverflow.Clip;
+            // Ei kutistu: linjan korkeus luetaan selitteen korkeudesta (Paivita), joten kutistunut selite ei saisi tilaa korostuksen
+            // päätyttyä (selite koko kohteen ajan); pohjan overflow: hidden leikkaisi sen pois.
+            l.style.flexShrink = 0;
             l.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
             l.style.unityTextOutlineWidth = 0.8f;
             l.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
@@ -375,7 +449,9 @@ namespace Matkakirja.Natiivi
         public string Kuvaus()
         {
             var r = juuri.worldBound;
-            return $"metrolinja {(nakyy ? "näkyy" : "piilossa")}, {asemat.Count} asemaa, nykyinen {naytettyIndeksi}, @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}";
+            return $"metrolinja {(nakyy ? "näkyy" : "piilossa")}, {asemat.Count} asemaa, nykyinen {naytettyIndeksi}, @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}"
+                + (selite == null ? "" : $", selite \"{selite.text}\" kohde {kohde} asema {seliteAsema} taso {seliteTaso:0.00} testi {Testi}/{TestiSelite != null} "
+                    + $"{(selite.parent == null ? "irti" : "kiinni")} {selite.resolvedStyle.display} {selite.worldBound.width:0}×{selite.worldBound.height:0}");
         }
     }
 }

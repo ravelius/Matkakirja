@@ -252,5 +252,25 @@ namespace Matkakirja.Linssit.Testit
             var n = LatausLiike.Ohjauspiste(0, 0, 100, 0, -1);
             Oleta.Tosi(n.Y == 0, "negatiivinen riippuma = suora");
         }
+        [Testi] static void VeneenHeijastusHaipyyJaAaltoilee()
+        {
+            // Olavinlinnan latauskuvan vene (PT 20.3x): heijastus täysi vesirajassa, häipyy alaspäin nollaan; aalto 0 vesirajassa, ≤ a.
+            Oleta.Tosi(Math.Abs(LatausLiike.HeijastusPeitto(0, 0.4) - 0.4) < 1e-9 && LatausLiike.HeijastusPeitto(1, 0.4) == 0, "päät");
+            double edellinen = 1;
+            for (double s = 0; s <= 1.0001; s += 0.05)
+            {
+                double q = LatausLiike.HeijastusPeitto(s, 0.4);
+                Oleta.Tosi(q <= edellinen + 1e-12 && q >= 0, $"laskee: {s:F2} → {q:F3}");
+                edellinen = q;
+            }
+            double maks = 0;
+            for (double t = 0; t < 5; t += 1.0 / 30)
+            {
+                Oleta.Tosi(LatausLiike.Aaltosiirto(0, t, 3) == 0, "vesirajassa ei siirtoa");
+                for (double s = 0; s <= 1; s += 0.1) maks = Math.Max(maks, Math.Abs(LatausLiike.Aaltosiirto(s, t, 3)));
+            }
+            Oleta.Tosi(maks <= 3 + 1e-9 && maks > 1, $"amplitudi {maks:F2}");
+            Oleta.Tosi(Math.Abs(LatausLiike.Aaltosiirto(0.5, 1.0, 3) - LatausLiike.Aaltosiirto(0.5, 1.0 + 1.0 / 30, 3)) < 0.5, "sileä 30 fps:llä");
+        }
     }
 }

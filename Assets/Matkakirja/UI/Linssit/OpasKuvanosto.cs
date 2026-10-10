@@ -72,7 +72,15 @@ namespace Matkakirja.Natiivi
             nyt = k; iso = false;
             teksti.text = OpasYksityiskohdat.KortinTeksti(k);
             lahde.text = OpasYksityiskohdat.Tekijarivi(k) ?? "";
-            Kuvat.Hae(k.Url, t =>
+            if (Testikuva != null) { Kiinnita(Testikuva, k, v); return; }
+            Kuvat.Hae(k.Url, t => Kiinnita(t, k, v));
+        }
+
+        /// <summary>Asettelutesti (editori ilman verkkoa): tämä kuva ladatun tilalle.</summary>
+        public static Texture2D Testikuva;
+
+        void Kiinnita(Texture2D t, OpasYksityiskohdat.Kuva k, int v)
+        {
             {
                 if (v != versio || nyt != k) return;
                 if (t == null) { Debug.Log("MATKAKIRJA opas: kuvanosto ei latautunut " + k.Url); Piilota(); return; }
@@ -95,7 +103,7 @@ namespace Matkakirja.Natiivi
                     kortti.style.opacity = este ? 0f : 1f;
                 }).ExecuteLater(16);
                 Debug.Log($"MATKAKIRJA opas: kuvanosto {k.Ankkuri ?? k.Url} ({t.width}×{t.height})");
-            });
+            }
         }
 
         /// <summary>Kuva pois (LS1:n ajoitus tai kohteen vaihto).</summary>
@@ -126,12 +134,29 @@ namespace Matkakirja.Natiivi
 
         void Pieneksi() { if (!iso) return; iso = false; sulkija.style.display = DisplayStyle.None; Asettele(); }
 
+        // LISÄKUVIEN VIEREEN (omistaja 10.10.2026 19.0x: "ne kertomuskuvat voisivat tulla lisäkuvien viereen vasemmalle puolelle. eli
+        // siirretään ne ja pienennetään oleellisesti"): OpasValikko kertoo joka ruudulla kuvanapin koon ja paikan; pieni kuva paperikehyksineen
+        // on napin korkuinen sen vasemmalla puolella (KuvanostoAsettelu.Kulmaan). Ilman tietoa vanha paikka ylänappien alla.
+        float kulmaKoko, kulmaOikea, kulmaAla, kulmaRako;
+        bool kulmaVieressa;
+
+        /// <summary>Kuvanapin (lisäkuvat) koko, oikea ja ala (pt) sekä rako; vieressa = nappi näkyy (muuten kuva sen paikalle).</summary>
+        public void AsetaKulma(float koko, float oikea, float ala, float rako, bool vieressa)
+        {
+            if (koko == kulmaKoko && oikea == kulmaOikea && ala == kulmaAla && rako == kulmaRako && vieressa == kulmaVieressa) return;
+            kulmaKoko = koko; kulmaOikea = oikea; kulmaAla = ala; kulmaRako = rako; kulmaVieressa = vieressa;
+            if (nyt != null && !iso) Asettele();
+        }
+
         void Asettele()
         {
             float w = isa.layout.width, h = isa.layout.height;
             if (float.IsNaN(w) || w <= 0 || float.IsNaN(h) || h <= 0) return;
-            var r = iso ? KuvanostoAsettelu.Iso(w, h, suhde, Kaista) : KuvanostoAsettelu.Pieni(w, h, suhde);
             float pad = Tyylikirja.Vali.Xs;
+            // Kulmassa paperikehys mukaan lukien napin kokoinen: kuva koko − 2 × reunus.
+            var r = iso ? KuvanostoAsettelu.Iso(w, h, suhde, Kaista)
+                : kulmaKoko > 0f ? KuvanostoAsettelu.Kulmaan(w, h, suhde, kulmaKoko - 2 * pad, kulmaOikea + pad, kulmaAla + pad, kulmaRako + 2 * pad, kulmaVieressa)
+                : KuvanostoAsettelu.Pieni(w, h, suhde);
             kortti.style.left = r.X - pad; kortti.style.top = r.Y - pad;
             kortti.style.width = r.Lev + 2 * pad;
             kehys.style.height = r.Kork;

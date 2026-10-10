@@ -191,6 +191,26 @@ namespace Matkakirja.Linssit
         static double Asinh(double x) => Math.Log(x + Math.Sqrt(x * x + 1));
 
         /// <summary>
+        /// VESI (PT 10.10.2026 20.3x, omistajan Olavinlinnan latauskuva: vene kellui ilman heijastusta ja varjoa, "liimattu"): heijastuksen
+        /// peitto syvyydellä s (0 = vesiraja, 1 = heijastuksen alareuna): huippu · (1 − s)^1,6, alaspäin pehmeästi nollaan.
+        /// </summary>
+        public static double HeijastusPeitto(double s, double huippu)
+        {
+            if (!(s > 0)) return Math.Max(0, huippu);
+            return s >= 1 ? 0 : Math.Max(0, huippu) * Math.Pow(1 - s, 1.6);
+        }
+
+        /// <summary>
+        /// Heijastuksen aaltovääristymä: sivusiirto (pt) syvyydellä s (0–1) hetkellä t (s). Vesirajassa 0 (heijastus kiinni kyljessä),
+        /// kasvaa syvyyden mukaan amplitudiin a; aallonpituus syvyyden osuuksina, aallot kulkevat alas jaksolla jaksoS (sileä, ei nykimistä).
+        /// </summary>
+        public static double Aaltosiirto(double s, double t, double a, double aallonpituus = 0.45, double jaksoS = 2.4)
+        {
+            double q = double.IsNaN(s) ? 0 : Math.Max(0, Math.Min(1, s));
+            return a * q * Math.Sin(2 * Math.PI * (q / Math.Max(0.05, aallonpituus) - t / Math.Max(0.1, jaksoS)));
+        }
+
+        /// <summary>
         /// KÖYSI SUMUUN (omistaja 10.10. 17.5x pallovideosta: "köyden pitää jatkua alemmas ja hävitä sumuun, muuten näyttää
         /// irralliselta"): maa-ankkuri jatkettuna korin kiinnityspisteestä maapisteen kautta samaan suuntaan korkeudelle y (y alas).
         /// Jos maapiste on jo y:n alapuolella tai köysi ei laskeudu, maapiste palautetaan sellaisenaan.

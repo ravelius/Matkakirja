@@ -37,6 +37,20 @@ namespace Matkakirja.Linssit.Kierros
             return new Laatikko(w - turvaOikea - Reuna - lev, turvaYla + YlaRaja, lev, kork);
         }
 
+        /// <summary>
+        /// KERTOMUSKUVA LISÄKUVIEN VIEREEN (omistaja 10.10.2026 19.0x Pariisin kierroksesta: "kertomuksen aikana ilmestyvät kuvat voisi
+        /// tulla yhtä pienellä kuin lisäkuvat näkyvät oikeassa alareunassa … lisäkuvien viereen vasemmalle puolelle"): pieni kuva
+        /// lisäkuvien napin korkuisena (koko, pt) ja kuvasuhteen levyisenä (SuhdeMin–SuhdeMax) napin vasemmalle puolelle raon päähän,
+        /// alareunat samassa linjassa. oikea = napin oikea reuna ruudun oikeasta reunasta, ala = napin alareuna ruudun alareunasta.
+        /// vieressa = false: nappi ei näy, joten kuva tulee sen paikalle.
+        /// </summary>
+        public static Laatikko Kulmaan(float w, float h, float suhde, float koko, float oikea, float ala, float rako, bool vieressa = true)
+        {
+            float kork = Math.Max(1f, koko), lev = kork * Suhde(suhde);
+            float x = w - oikea - lev - (vieressa ? koko + rako : 0f);
+            return new Laatikko(x, h - ala - kork, lev, kork);
+        }
+
         /// <summary>Iso kuva keskelle (kuvateksti alle: kaista pt), hieman nykyistä korttia suurempi, korkeus rajattuna.</summary>
         public static Laatikko Iso(float w, float h, float suhde, float kaista = 0f)
         {
