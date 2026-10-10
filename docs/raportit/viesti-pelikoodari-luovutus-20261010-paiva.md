@@ -7,7 +7,7 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
 ## 1. Valmiit tänään (odottavat muita)
 - **Jäätymiskoe**: EI koske peliä/TF:ää; 0/4 toistoa (A–D), aamun 3/3 todennäköisesti coreaudiod-jumi. Raportti
   docs/raportit/jaatymiskoe-20261010.md. Korjaukset proto `pelikoodari/mittaa-aikaraja` **dad7ae249** (pohja a4c6539e5, worktree
-  `wt/proto-pelikoodari-mittaa`): AaniIstunto.TilaAikarajalla + todistusajo.sh jäätymisvahti → Natiivisepälle junaan 176 (lähetetty).
+  `wt/proto-pelikoodari-mittaa`): AaniIstunto.TilaAikarajalla + todistusajo.sh jäätymisvahti → junan 176 rungossa natiiviseppa/juna-176 f88915efb (6.7: L1299/P449/K453, unity 0).
   Proton origin ei ota pushia (haarat paikallisia). Skenaariot ja käynnistimet `proto-3d/tyokalut/pelikoodari-ajot/sk-jaatyminen-{a,b,c,d}.txt`, `jaatyminen-*.pl`.
 - **IP-suola** PR #4335 (Matkakirja, haara pelikoodari-ip-suola e6f4ba6d1, worktree wt/pelikoodari-ip-suola): HMAC-SHA-256(IP_SUOLA, ip),
   8 heksaa; pollo-julkaisu.yml asettaa IP_SUOLA:n GitHubin POLLO_IP_SUOLA:sta. npm test 5422/0. Odottaa Julkaisijaa + secretin luontia.
