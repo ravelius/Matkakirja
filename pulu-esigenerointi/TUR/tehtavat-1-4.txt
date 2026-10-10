@@ -1,0 +1,212 @@
+================ KOHTA 16 (kohde:gelibolu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+- [Tunisia — maalehti / Ruoka: Tahna, joka tuli Amerikasta ja jäi] Harissan kotiseutu on Kap Bonin niemi ja sen päätuotantopaikka Nabeul. Tahnaan tulee paahdettuja punaisia paprikoita, baklouti-paprikaa, valkosipulia, kuminan- ja korianterinsiemeniä, juustokuminaa ja oliiviöljyä, joka kantaa rasvaliukoiset maut. Chilipaprika ei ole Välimeren oma kasvi: se tuli tunisialaiseen keittiöön Kolumbuksen vaihdon myötä, oletettavasti Espanjan miehityksen aikana 1535–1574. Tunisia on nykyään maailman suurin valmiin harissan viejä, ja Unesco otti harissan tiedot, taidot ja tavat aineettoman kulttuuriperinnön luetteloon vuonna 2022.
+
+### 16.1
+KYSYMYS: Mitä karttaan on piirretty Amerikasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Ruoka: Tahna, joka tuli Amerikasta ja jäi] Harissan kotiseutu on Kap Bonin niemi ja sen päätuotantopaikka Nabeul. Tahnaan tulee paahdettuja punaisia paprikoita, baklouti-paprikaa, valkosipulia, kuminan- ja korianterinsiemeniä, juustokuminaa ja oliiviöljyä, joka kantaa rasvaliukoiset maut. Chilipaprika ei ole Välimeren oma kasvi: se tuli tunisialaiseen keittiöön Kolumbuksen vaihdon myötä, oletettavasti Espanjan miehityksen aikana 1535–1574. Tunisia on nykyään maailman suurin valmiin harissan viejä, ja Unesco otti harissan tiedot, taidot ja tavat aineettoman kulttuuriperinnön luetteloon vuonna 2022.
+
+### 16.2
+KYSYMYS: Millainen osmanien laivasto oli 1500-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gelibolu (merenkulku)
+Tietoruudun teksti: Gelibolun satamakaupungissa lapset "tuuditettiin uneen meren ja laivojen kehtolaululla", kirjoitti 1500-luvun historioitsija Ibn Kemal. Täällä syntyi Piri Reis, osmanien laivaston kartantekijä, jonka vuoden 1513 maailmankartta nojasi muun muassa Kolumbuksen sittemmin kadonneeseen karttaan ja jonka merikirja Kitab-ı Bahriye kuvasi rannikot laivureille. Isoisän aikaan kartta makasi unohdettuna Topkapın palatsissa: se löytyi uudelleen vasta 1929 ja on siitä asti ollut Turkille kansallisylpeyden aihe.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:vanin-kissa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Pyhä Elmo 1565 — viimeinen aamu muurilla] 23.6.1565 — Onko tänä aamuna enää mitään puolustettavaa? Pyhän Elmon linnakkeen viimeiset puolustajat, uupuneita ja lähes kaikki haavoittuneita, ovat taistelleet kaksikymmentäkahdeksan päivää Mustafa Pashan tykistöä ja jatkuvia rynnäköitä vastaan pienellä hiekkakivilinnakkeella Sciberras-niemen kärjessä. Torstaina 23. kesäkuuta 1565 osmanijoukot murtautuvat vihdoin sisään, ja suurmestari Jean de Vallette, joka on yöllä lähettänyt viestejä uimarien mukana linnakkeen ja pääkaupungin Birgun välillä, tietää jo, ettei apua ehdi tulla ajoissa. Lähes koko St Elmon noin 1 500 hengen varuskunta kaatuu tai teloitetaan; muutama ritari onnistuu uimaan yli sataman. Osmaanit menettävät piirityksessä vall…
+- [BHR — maalehti / Helmet: Neljä kuukautta merellä] Suuri sukelluskausi alkoi kesäkuussa ja kesti syyskuuhun, koska silloin vesi oli lämmintä ja meri tyyni. Laivat lähtivät Muharraqin kärjestä, ja niiden lähtöä katsottiin Bu Maherin linnakkeelta. Sukeltajalla oli nenässä luinen tai kilpikonnankuoresta tehty puristin, sormissa nahkasuojukset ja kaulassa kori. Jalkaan sidottiin kivi, jotta hän vajoaisi pohjaan nopeasti eikä joutuisi uimaan alas. Veneessä istuva vetäjä piti köydestä kiinni ja nosti sukeltajan pintaan, kun tämä nykäisi. Yhdellä hengityksellä pohjassa vietettiin reilu minuutti, ja sukelluksia tehtiin kymmeniä päivässä.
+
+### 17.1
+KYSYMYS: Miksi kissa oppi uimaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historian hetki: Pyhä Elmo 1565 — viimeinen aamu muurilla] 23.6.1565 — Onko tänä aamuna enää mitään puolustettavaa? Pyhän Elmon linnakkeen viimeiset puolustajat, uupuneita ja lähes kaikki haavoittuneita, ovat taistelleet kaksikymmentäkahdeksan päivää Mustafa Pashan tykistöä ja jatkuvia rynnäköitä vastaan pienellä hiekkakivilinnakkeella Sciberras-niemen kärjessä. Torstaina 23. kesäkuuta 1565 osmanijoukot murtautuvat vihdoin sisään, ja suurmestari Jean de Vallette, joka on yöllä lähettänyt viestejä uimarien mukana linnakkeen ja pääkaupungin Birgun välillä, tietää jo, ettei apua ehdi tulla ajoissa. Lähes koko St Elmon noin 1 500 hengen varuskunta kaatuu tai teloitetaan; muutama ritari onnistuu uimaan yli sataman. Osmaanit menettävät piirityksessä vall…
+- [BHR — maalehti / Helmet: Neljä kuukautta merellä] Suuri sukelluskausi alkoi kesäkuussa ja kesti syyskuuhun, koska silloin vesi oli lämmintä ja meri tyyni. Laivat lähtivät Muharraqin kärjestä, ja niiden lähtöä katsottiin Bu Maherin linnakkeelta. Sukeltajalla oli nenässä luinen tai kilpikonnankuoresta tehty puristin, sormissa nahkasuojukset ja kaulassa kori. Jalkaan sidottiin kivi, jotta hän vajoaisi pohjaan nopeasti eikä joutuisi uimaan alas. Veneessä istuva vetäjä piti köydestä kiinni ja nosti sukeltajan pintaan, kun tämä nykäisi. Yhdellä hengityksellä pohjassa vietettiin reilu minuutti, ja sukelluksia tehtiin kymmeniä päivässä.
+
+### 17.2
+KYSYMYS: Voiko tutkimuskeskuksessa vierailla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanin kissa (eläimet)
+Tietoruudun teksti: Vanjärven seudulla elää oma kissakantansa, jota ei ole jalostettu rotukirjoihin: kookas, liidunvalkoinen Vanin kissa, jonka silmät ovat siniset, meripihkanväriset tai kuuluisimmillaan yksi kumpaakin. Kissa tunnetaan "uivana kissana", sillä sen on nähty uivan Vanjärvessä. Puhtaita yksilöitä laskettiin 1992 enää 92, ja valkoista kantaa on vuodesta 1995 kasvattanut tutkimuskeskus Yüzüncü Yıl -yliopiston kampuksella Vanissa.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:kirkpinar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Urheilu: Ottelu voi kestää viisi päivää] Kriketin arvokkain palkinto on pieni tuhkauurna. Kun Australia voitti Englannin ensi kertaa kotikentällä 1882, lehti julkaisi pilaillen kuolinilmoituksen englantilaisen kriketin kuolemasta ja kertoi ruumiin poltetun. Seuraavalla kiertueella englantilaiset saivat tuhkat sisältävän uurnan, ja siitä tuli The Ashes -sarjan palkinto. Kansainvälinen testiottelu kestää enintään viisi päivää eikä silti aina ratkea. Lounas- ja teetauko ovat sääntöihin kirjattuja: peli keskeytetään teelle.
+
+### 18.1
+KYSYMYS: Miksi painijat öljyävät itsensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+
+### 18.2
+KYSYMYS: Miten ottelu ratkeaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kırkpınar (urheilu)
+Tietoruudun teksti: Edirnen liepeillä on painittu öljypainia joka vuosi vuodesta 1360: Kırkpınar, "neljänkymmenen lähteen" turnaus, pitää Guinnessin ennätystä maailman pisimpään jatkuneena urheilukilpailuna. Pehlivanit eli painijat pukeutuvat vain nahkaisiin polvihousuihin, kıspeteihin, ja valelevat itsensä oliiviöljyllä ennen jokaista ottelua. Kolmipäiväisen turnauksen voittaja kantaa päänpainijan arvoa seuraavaan Kırkpınariin asti. Isoisän matkan aikaan perinne oli jo yli 500 vuotta vanha.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Urheilu: Ottelu voi kestää viisi päivää] Kriketin arvokkain palkinto on pieni tuhkauurna. Kun Australia voitti Englannin ensi kertaa kotikentällä 1882, lehti julkaisi pilaillen kuolinilmoituksen englantilaisen kriketin kuolemasta ja kertoi ruumiin poltetun. Seuraavalla kiertueella englantilaiset saivat tuhkat sisältävän uurnan, ja siitä tuli The Ashes -sarjan palkinto. Kansainvälinen testiottelu kestää enintään viisi päivää eikä silti aina ratkea. Lounas- ja teetauko ovat sääntöihin kirjattuja: peli keskeytetään teelle.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:halikarnassos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Delhi — kohdekartta / Kohdekartta: Humayunin mausoleumi] 1558 Keisarinna rakennutti puolisolleen haudan, jollaista Intiassa ei ollut nähty. Humayunin leski Bega Begum tilasi mausoleumin vuonna 1558 ja valitsi arkkitehdiksi Heratista tuodun Mirak Mirza Ghiyasin, jonka työtä jatkoi hänen poikansa Sayyid Muhammad. Esikuvana oli Timurin hauta Samarkandissa. Se oli Intian niemimaan ensimmäinen puutarhahauta: rakennus istuu charbaghin, neljään yhtä suureen osaan jaetun persialaisen paratiisipuutarhan, keskellä. Punaisen hiekkakiven ja valkoisen marmorin yhdistelmästä tuli Mughal-arkkitehtuurin tunnus, ja sarja huipentui seuraavalla vuosisadalla Agran Taj Mahaliin. Maailmanperintökohde mausoleumista tuli 1993. Rakennus on myös historian näyttämö: tänne …
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+
+### 19.1
+KYSYMYS: Miksi hautaa kutsutaan mausoleumiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Delhi — kohdekartta / Kohdekartta: Humayunin mausoleumi] 1558 Keisarinna rakennutti puolisolleen haudan, jollaista Intiassa ei ollut nähty. Humayunin leski Bega Begum tilasi mausoleumin vuonna 1558 ja valitsi arkkitehdiksi Heratista tuodun Mirak Mirza Ghiyasin, jonka työtä jatkoi hänen poikansa Sayyid Muhammad. Esikuvana oli Timurin hauta Samarkandissa. Se oli Intian niemimaan ensimmäinen puutarhahauta: rakennus istuu charbaghin, neljään yhtä suureen osaan jaetun persialaisen paratiisipuutarhan, keskellä. Punaisen hiekkakiven ja valkoisen marmorin yhdistelmästä tuli Mughal-arkkitehtuurin tunnus, ja sarja huipentui seuraavalla vuosisadalla Agran Taj Mahaliin. Maailmanperintökohde mausoleumista tuli 1993. Rakennus on myös historian näyttämö: tänne …
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+
+### 19.2
+KYSYMYS: Mitä Bodrumin linnasta on nykyään nähtävissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Halikarnassoksen mausoleumi (historia)
+Tietoruudun teksti: Nykyisen Bodrumin paikalla seisoi vuosina 353–351 eaa. rakennettu noin 45-metrinen hauta Karian satraapille Mausolokselle ja hänen sisarelleen ja puolisolleen Artemisia toiselle. Kreikkalaisarkkitehdit Satyros ja Pythios suunnittelivat sen, ja neljä aikansa kuuluisinta kuvanveistäjää koristeli kunkin sivun. Rakennus oli niin ihailtu, että sen nimestä tuli sana mausoleumi. Maanjäristykset kaatoivat sen keskiajalla, ja Pyhän Johanneksen ritarit käyttivät kivet Bodrumin linnaan vuodesta 1494. Isoisäsi matkaa edeltäneellä vuosikymmenellä brittiarkeologi Charles Newton kaivoi paikan esiin: veistokset lastattiin laivaan lokakuussa 1857 ja ovat nyt British Museumissa.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:theodosiuksen-muurit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia] Havannan neljä ja puoli vuosisataa espanjalaisena kaupunkina ovat merirosvojen, kuninkaiden ja laivastojen kirjoittamia. Kaupunki poltettiin, linnoitettiin, vallattiin ja lopulta menetettiin.
+
+### 20.1
+KYSYMYS: Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Historia] Havannan neljä ja puoli vuosisataa espanjalaisena kaupunkina ovat merirosvojen, kuninkaiden ja laivastojen kirjoittamia. Kaupunki poltettiin, linnoitettiin, vallattiin ja lopulta menetettiin.
+
+### 20.2
+KYSYMYS: Kuka vastasi muurien korjaamisesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Theodosiuksen muurit (historia)
+Tietoruudun teksti: Theodosiuksen muurit suojasivat Konstantinopolia mereltä merelle kaupungin länsipuolella. Ensimmäinen vaihe valmistui vuonna 413 keisari Theodosius toisen alaikäisyyden aikana, kun idän prefekti Anthemios johti työtä; vuosien 437 ja 447 maanjäristysten jälkeen eteen rakennettiin toinen, matalampi muuri ja leveä vallihauta. Kokonaisuus oli kolmiportainen: yli kaksikymmentä metriä leveä ja jopa kymmenen metriä syvä hauta, 8,5 metriä korkea ulkomuuri ja sen takana 12 metriä korkea ja 4,5–6 metriä paksu päämuuri, jota vahvisti 96 tornia. Muuraus on kalkkikiveä, jonka läpi kulkee tiiliraitoja: ne sitovat kivikuoren ja laastiytimen yhteen ja auttavat kestämään maanjäristyksiä. Muurit torjuivat avaarien, arabien, rusien ja bulgaarien piiritykset, eikä ottomaanien tykistö kyennyt murtamaan niitä edes vuoden 1453 lähes kaksi kuukautta kestäneessä piirityksessä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

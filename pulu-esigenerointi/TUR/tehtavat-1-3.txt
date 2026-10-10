@@ -1,0 +1,208 @@
+================ KOHTA 11 (kohde:ararat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Elävä tulivuori] Kamerunvuori on tilavuudeltaan suurin tulivuori koko Saharan eteläpuolisessa Afrikassa, ja se purkautuu keskimäärin 10–20 vuoden välein. Isoisän omana aikana vuori oli erityisen levoton: purkauksia tallennettiin vuosina 1865, 1866, 1868 ja 1871 – siis vain kaksi vuotta ennen isoisän 1873 matkaa. Vuoden 1909 purkaus pelotti myöhemmin jopa Saksan siirtomaahallinnon hetkeksi pois Bueasta Doualaan, ja vuoden 1999 purkauksessa laavavirta pysähtyi vain 200 metrin päähän merestä.
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Vuori savannin yllä] Kilimanjaro näkyy kirkkaalla säällä jopa sadan kilometrin päähän, ja sen lumihuippu kohoaa usein pilvikerroksen yläpuolelle niin, että vuori näyttää leijuvan taivaalla. Vuori on 5895 metriä korkea ja nousee ympäröivästä savannista lähes 4900 metriä – enemmän kuin mikään muu yksittäinen tulivuori maailmassa. Akaasiapuiden reunustama tasanko ja lumihuippu samassa maisemassa hämmästyttää yhä matkailijoita, aivan kuten se hämmästytti 1800-luvun eurooppalaisia tutkimusmatkailijoita, jotka pitivät moista näkyä päiväntasaajalla lähes mahdottomana.
+
+### 11.1
+KYSYMYS: Onko vuori yhä tulivuori?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Elävä tulivuori] Kamerunvuori on tilavuudeltaan suurin tulivuori koko Saharan eteläpuolisessa Afrikassa, ja se purkautuu keskimäärin 10–20 vuoden välein. Isoisän omana aikana vuori oli erityisen levoton: purkauksia tallennettiin vuosina 1865, 1866, 1868 ja 1871 – siis vain kaksi vuotta ennen isoisän 1873 matkaa. Vuoden 1909 purkaus pelotti myöhemmin jopa Saksan siirtomaahallinnon hetkeksi pois Bueasta Doualaan, ja vuoden 1999 purkauksessa laavavirta pysähtyi vain 200 metrin päähän merestä.
+- [Kamtšatka — kaupunkilehti / Tulivuoret: Euraasian korkein toimiva tulivuori] Kljutševskaja sopka kohoaa 4 750 metriin: se on niemimaan korkein vuori ja Euraasian korkein toimiva tulivuori. Vuori purkautui kirjatusti ensi kerran 1697, eikä se ole sen jälkeen juuri levännyt. Ensimmäisen tunnetun nousun huipulle tekivät 1788 Daniel Gauss ja kaksi Billingsin retkikunnan miestä. Sen jälkeen huipulle ei kiivetty ennen vuotta 1931, ja tuolta retkikunnalta menehtyi useita miehiä laskeutumismatkalla lentäviin laavapalloihin.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Vuori savannin yllä] Kilimanjaro näkyy kirkkaalla säällä jopa sadan kilometrin päähän, ja sen lumihuippu kohoaa usein pilvikerroksen yläpuolelle niin, että vuori näyttää leijuvan taivaalla. Vuori on 5895 metriä korkea ja nousee ympäröivästä savannista lähes 4900 metriä – enemmän kuin mikään muu yksittäinen tulivuori maailmassa. Akaasiapuiden reunustama tasanko ja lumihuippu samassa maisemassa hämmästyttää yhä matkailijoita, aivan kuten se hämmästytti 1800-luvun eurooppalaisia tutkimusmatkailijoita, jotka pitivät moista näkyä päiväntasaajalla lähes mahdottomana.
+
+### 11.2
+KYSYMYS: Kuinka usein huipulle noustaan nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ararat (luonto · vuori)
+Tietoruudun teksti: Suuri Ararat on Turkin korkein huippu, 5 137 metriä; sen vieressä kohoaa Pieni Ararat, 3 896 metriä. Keskiajalta lähtien Euroopassa vuori on samastettu Raamatun "Araratin vuoriin", joille Nooan arkin kerrotaan laskeutuneen — vaikka kiistanalaista on, tarkoittaako Genesis 8:4 juuri tätä vuorta. Ensimmäinen tunnettu nousu tehtiin 1829: Friedrich Parrot, Khachatur Abovian ja neljä muuta. Turkiksi vuori on Ağrı Dağı, armeniaksi Masis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Ensimmäinen huipulle] Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:vanjarvi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Järvi, jonne sielut tulevat hyvästelemään] Kaupungin eteläpuolella on Bosumtwe, asanteille pyhä järvi. Perinteisen uskomuksen mukaan kuolleiden sielut tulevat sinne jättämään jäähyväiset jumalatar Asase Yalle, ja siksi järvellä saa kalastaa vain puulankuilta — ei veneellä. Vedessä elää kotoperäinen kirjoahven Hemichromis frempongi ja kaksi lähes kotoperäistä tilapiaa. Järvi on 8,6 kilometriä pitkä ja 8,1 leveä, syvimmillään 81 metriä, eikä siitä laske jokea mihinkään: vesi tulee sateesta ja lähtee haihtumalla. Nimen kirjoitusasu vaihtelee lähteestä toiseen, Bosumtwi ja Bosomtwe.
+
+### 12.1
+KYSYMYS: Mistä järven vesi tulee, jos se ei laske mihinkään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Järvi, jonne sielut tulevat hyvästelemään] Kaupungin eteläpuolella on Bosumtwe, asanteille pyhä järvi. Perinteisen uskomuksen mukaan kuolleiden sielut tulevat sinne jättämään jäähyväiset jumalatar Asase Yalle, ja siksi järvellä saa kalastaa vain puulankuilta — ei veneellä. Vedessä elää kotoperäinen kirjoahven Hemichromis frempongi ja kaksi lähes kotoperäistä tilapiaa. Järvi on 8,6 kilometriä pitkä ja 8,1 leveä, syvimmillään 81 metriä, eikä siitä laske jokea mihinkään: vesi tulee sateesta ja lähtee haihtumalla. Nimen kirjoitusasu vaihtelee lähteestä toiseen, Bosumtwi ja Bosomtwe.
+
+### 12.2
+KYSYMYS: Millainen kala inci kefali on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanjärvi (luonto)
+Tietoruudun teksti: Vanjärvi on Turkin suurin järvi ja yksi maailman harvoista yli 3 000 neliökilometrin umpijärvistä: tulivuorenpurkaus tukki sen laskujoen esihistoriallisella ajalla. Vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy talvellakaan. Pohjalta on löydetty jopa 40 metriä korkeita mikrobialiittitorneja, joita sinilevät ovat kasvattaneet. Pitkään järven ainoa tunnettu kala oli inci kefali, helmisalakka.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:mustameri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Hylky joka vaelsi sisämaahan] Rannikon yli tuhannesta hylystä kuuluisin lienee saksalainen rahtilaiva Eduard Bohlen, joka ajoi karille sumussa syyskuussa 1909. Haaksirikon hetkellä laiva makasi vain reilut 500 metriä rannasta, mutta aavikko on sittemmin hivuttautunut kohti merta: nykyään ruostunut hylky lojuu kuivalla hiekalla lähes 400 metrin päässä rantaviivasta, keskellä autiota dyynimaisemaa. Samanlainen kohtalo on odottanut satoja muitakin aluksia, joita sumu, karikot ja Benguela-virran voimakkaat aallot ovat ajaneet karille vuosisatojen ajan. Monista hylyistä on jäljellä enää hajanaisia rautaosia, jotka pilkistävät hiekasta muistutuksena rannikon vaarallisuudesta.
+- [Townsville — kohdekartta / Kohdekartta: Tropiikin museo] 1987— Museo avattiin 1987 Ross Creekin varrelle nimellä Queensland Museum, North Queensland Branch, ja sai 1990 nimen Museum of Tropical Queensland; nykyään se on Queensland Museum Tropics. Uusi, varta vasten rakennettu talo nousi vanhan paikalle, koska yhden hylyn löydöille tarvittiin tila. Se hylky on HMS Pandora, laiva, joka lähetettiin nappaamaan Bountyn kapinalliset ja upposi itse paluumatkalla. Museo hoitaa myös toista hylkypaikkaa: SS Yongalaa, joka lähti Mackaysta 23. maaliskuuta 1911 kello 13.40 kohti Townsvilleä. Pian lähdön jälkeen merkinantoasema sai sähkeen hirmumyrskystä ja nosti liput, mutta Yongala ei nähnyt niitä — ja sille Englannista lähetetty langattoman lennättimen lait…
+
+### 13.1
+KYSYMYS: Kuinka syvälle hapeton kerros ulottuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+### 13.2
+KYSYMYS: Millaisia hylkyjä pohjasta on löytynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on maailman suurin meromiktinen vesialue: pinnalla virtaa kevyt makea vesi ulos Bosporin kautta, pohjalla painuu raskas suolainen vesi sisään, eivätkä kerrokset sekoitu. Siksi yli 90 prosenttia meren syvästä vedestä on hapetonta. Juuri hapettomuus on tehnyt siitä meriarkeologien unelman: puurunkoiset laivanhylyt säilyvät pohjassa käytännössä lahoamatta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Hylky joka vaelsi sisämaahan] Rannikon yli tuhannesta hylystä kuuluisin lienee saksalainen rahtilaiva Eduard Bohlen, joka ajoi karille sumussa syyskuussa 1909. Haaksirikon hetkellä laiva makasi vain reilut 500 metriä rannasta, mutta aavikko on sittemmin hivuttautunut kohti merta: nykyään ruostunut hylky lojuu kuivalla hiekalla lähes 400 metrin päässä rantaviivasta, keskellä autiota dyynimaisemaa. Samanlainen kohtalo on odottanut satoja muitakin aluksia, joita sumu, karikot ja Benguela-virran voimakkaat aallot ovat ajaneet karille vuosisatojen ajan. Monista hylyistä on jäljellä enää hajanaisia rautaosia, jotka pilkistävät hiekasta muistutuksena rannikon vaarallisuudesta.
+- [Townsville — kohdekartta / Kohdekartta: Tropiikin museo] 1987— Museo avattiin 1987 Ross Creekin varrelle nimellä Queensland Museum, North Queensland Branch, ja sai 1990 nimen Museum of Tropical Queensland; nykyään se on Queensland Museum Tropics. Uusi, varta vasten rakennettu talo nousi vanhan paikalle, koska yhden hylyn löydöille tarvittiin tila. Se hylky on HMS Pandora, laiva, joka lähetettiin nappaamaan Bountyn kapinalliset ja upposi itse paluumatkalla. Museo hoitaa myös toista hylkypaikkaa: SS Yongalaa, joka lähti Mackaysta 23. maaliskuuta 1911 kello 13.40 kohti Townsvilleä. Pian lähdön jälkeen merkinantoasema sai sähkeen hirmumyrskystä ja nosti liput, mutta Yongala ei nähnyt niitä — ja sille Englannista lähetetty langattoman lennättimen lait…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:kizilirmak) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uluru — kaupunkilehti / Kivi ja väri: Harmaasta punaiseksi] Jos Ulurun pintaa raaputtaisi tai lohkaisisi palan kiveä sisältä, paljastuisi harmaa kivi — ei punainen. Kallion tuttu ruskeanpunainen väri syntyy vasta aivan pinnassa, kun rautapitoiset mineraalit hapettuvat ilman ja kosteuden vaikutuksesta samalla tavalla kuin rauta ruostuu. Ohut, vain muutaman millimetrin paksuinen hapettunut kerros peittää lähes koko näkyvän kallion. Suojaisissa koloissa ja katosmaisissa onkaloissa, joihin sade ei pääse huuhtomaan pintaa samalla tavalla, kivi säilyttää sen sijaan vaaleamman, harmaanbeigen alkuperäisen sävynsä — ja tällaiset kohdat erottuvat kallion kyljessä selvinä vaaleina laikkuina.
+
+### 14.1
+KYSYMYS: Miksi jokea kutsutaan punaiseksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uluru — kaupunkilehti / Kivi ja väri: Harmaasta punaiseksi] Jos Ulurun pintaa raaputtaisi tai lohkaisisi palan kiveä sisältä, paljastuisi harmaa kivi — ei punainen. Kallion tuttu ruskeanpunainen väri syntyy vasta aivan pinnassa, kun rautapitoiset mineraalit hapettuvat ilman ja kosteuden vaikutuksesta samalla tavalla kuin rauta ruostuu. Ohut, vain muutaman millimetrin paksuinen hapettunut kerros peittää lähes koko näkyvän kallion. Suojaisissa koloissa ja katosmaisissa onkaloissa, joihin sade ei pääse huuhtomaan pintaa samalla tavalla, kivi säilyttää sen sijaan vaaleamman, harmaanbeigen alkuperäisen sävynsä — ja tällaiset kohdat erottuvat kallion kyljessä selvinä vaaleina laikkuina.
+
+### 14.2
+KYSYMYS: Kuka voitti pimennyksen taistelun?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kızılırmak (luonto · joki)
+Tietoruudun teksti: Heettiläisille Maraššantiya oli valtakunnan länsiraja, ja antiikissa Halys erotti Lyydian Persian valtakunnasta. Sen rannalla käytiin 28. toukokuuta 585 eaa. "pimennyksen taistelu": kesken taistelun aurinko pimeni, ja järkyttyneet osapuolet solmivat rauhan siihen paikkaan. Kun Lyydian Kroisos vihdoin ylitti joen 547 eaa. hyökätäkseen Kyyros Suurta vastaan, hän hävisi — ja Persia ulottui Egeanmerelle asti.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:gaziantep) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+### 15.1
+KYSYMYS: Montako taikinakerrosta baklavassa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+### 15.2
+KYSYMYS: Miten pistaasit korjataan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gaziantep (ruoka)
+Tietoruudun teksti: Gaziantep on kuulu baklavastaan: ohuista taikinalevyistä, pähkinöistä ja makeasta liemestä kerrostettu leivonnainen tehdään täällä seudun omista pistaaseista ja tarjotaan usein kaymak-kerman kera. Kaupungin baklavaresepti saapui vuonna 1871 leipurilta, joka oli oppinut taidon Damaskoksessa — kaksi vuotta ennen isoisän matkaa. Vuonna 2013 Antep-baklava sai EU:n suojatun maantieteellisen merkinnän ensimmäisenä turkkilaisena tuotteena.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

@@ -1,0 +1,205 @@
+================ KOHTA 6 (kohde:izmir) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Yliopisto pennyn hinnalla] Lontoon ensimmäisen kahvihuoneen avasi vuonna 1652 Pasqua Rosée, joka oli tullut kaupunkiin kauppiaan palvelijana Smyrnasta. Pennyllä pääsi sisään ja sai kupillisen kahvia, päivän lehdet ja oikeuden osallistua keskusteluun — säätyyn katsomatta. Siksi kahvihuoneita sanottiin pennyn yliopistoiksi. Vuoteen 1708 mennessä niitä oli Cityssä ja Westminsterissä 500–600. Edward Lloyd avasi omansa 1686, ja siellä vaihdetuista laivauutisista kasvoi vakuutustalo Lloyd's.
+- [Izmir — kaupunkilehti / İzmir: Unessa käskettiin muuttaa kukkulalle] Kadifekale seisoo Pagos-vuoren laella 186 metrin korkeudessa, noin kahden kilometrin päässä rantaviivasta. Ensimmäiset tunnetut muurit rakennutti Lysimakhos, yksi Aleksanteri Suuren seuraajista, ja samoihin aikoihin Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, jolle mahtui vain muutama tuhat asukasta. Pausanias kertoo tarinan, jonka mukaan Aleksanteri nukahti metsästysretkellä plataanin alle ja näki unessa kaksi jumalatarta, jotka käskivät perustaa kaupungin juuri sille kukkulalle. Nykyiset muurit ovat keskiajalta.
+
+### 6.1
+KYSYMYS: Milloin Smyrnasta tuli İzmir myös englanniksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Yliopisto pennyn hinnalla] Lontoon ensimmäisen kahvihuoneen avasi vuonna 1652 Pasqua Rosée, joka oli tullut kaupunkiin kauppiaan palvelijana Smyrnasta. Pennyllä pääsi sisään ja sai kupillisen kahvia, päivän lehdet ja oikeuden osallistua keskusteluun — säätyyn katsomatta. Siksi kahvihuoneita sanottiin pennyn yliopistoiksi. Vuoteen 1708 mennessä niitä oli Cityssä ja Westminsterissä 500–600. Edward Lloyd avasi omansa 1686, ja siellä vaihdetuista laivauutisista kasvoi vakuutustalo Lloyd's.
+- [Izmir — kaupunkilehti / İzmir: Unessa käskettiin muuttaa kukkulalle] Kadifekale seisoo Pagos-vuoren laella 186 metrin korkeudessa, noin kahden kilometrin päässä rantaviivasta. Ensimmäiset tunnetut muurit rakennutti Lysimakhos, yksi Aleksanteri Suuren seuraajista, ja samoihin aikoihin Smyrna siirrettiin tänne vanhalta paikaltaan kummulta, jolle mahtui vain muutama tuhat asukasta. Pausanias kertoo tarinan, jonka mukaan Aleksanteri nukahti metsästysretkellä plataanin alle ja näki unessa kaksi jumalatarta, jotka käskivät perustaa kaupungin juuri sille kukkulalle. Nykyiset muurit ovat keskiajalta.
+
+### 6.2
+KYSYMYS: Kulkeeko vuoden 1867 rata vielä Aydınille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Izmir
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: İzmir (kaupungit)
+Tietoruudun teksti: Smyrna oli 1800-luvulla Ottomaanien vilkkain länsisatama ja monikielinen kauppakaupunki: brittien arvion mukaan siellä asui 1865 noin 180 000 ihmistä, joista 80 000 kreikkalaisia. Turkin nykyalueen ensimmäinen rautatie lähti täältä — 130 kilometrin rata Aydınille aloitettiin 1856 ja valmistui 1867. Vuonna 1867 kaupunki sai vihdoin oman vilajettinsa. Isoisän aikaan se oli Istanbulin jälkeen valtakunnan tärkein portti länteen.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:bursa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+
+### 7.1
+KYSYMYS: Kudotaanko Bursassa vielä silkkiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+
+### 7.2
+KYSYMYS: Miksi hovi siirtyi pois Bursasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bursa (kaupungit)
+Tietoruudun teksti: Bursa oli Ottomaanien ensimmäinen pääkaupunki: se vallattiin bysanttilaisilta 1326 ja toimi pääkaupunkina 1335-luvulta 1360-luvulle, kunnes hovi siirtyi Edirneen. Kaupunki oli jo 500-luvulla kuuluisa silkkikankaistaan, ja ottomaaniaikana se jakoi idän silkkiä — myös Ming-Kiinasta — Genovaan ja Firenzeen asti. Yllä kohoaa Uludağ, jota antiikissa kutsuttiin Mysian Olympokseksi.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:konya) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+
+### 8.1
+KYSYMYS: Pyörivätkö dervishit vielä nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+### 8.2
+KYSYMYS: Mitä Rumi itse kirjoitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konya (kaupungit)
+Tietoruudun teksti: Konya oli Rum-seldžukkien sulttaanikunnan pääkaupunki, josta hallittiin lähes koko Anatoliaa. Runoilija ja mystikko Rumi eli täällä loppuelämänsä, ja vuonna 1273 hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivinä dervisheinä. Rumin turkoosikupolinen hauta on yhä kaupungin tärkein nähtävyys. Kaupungin nimi juontaa todennäköisesti heettiläisestä paikannimestä Ikkuwaniya.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Musiikki: Tanssi, joka on rukous] 1273 — Konyassa kuoli vuonna 1273 runoilija Mevlana Celaleddin Rumi. Hänen seuraajansa perustivat mevlevi-veljeskunnan, joka tunnetaan pyörivistä dervisseistä. Sema-seremoniassa dervissi pyörii paikallaan pitkä valkoinen hame levällään. Puku on vertauskuvallinen: korkea huopalakki muistuttaa hautakiveä ja valkoinen hame käärinliinaa. Oikea kämmen käännetään ylös taivasta kohti ja vasen alas maata kohti, ikään kuin saatu annettaisiin eteenpäin. Musiikin johtaa ney, ruokohuilu, jonka ääni on tarkoituksella hengittävä.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:trabzon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+### 9.1
+KYSYMYS: Mistä nimi Trapezous tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+### 9.2
+KYSYMYS: Miten Trapezuntin keisarikunta säilyi niin pitkään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trabzon (kaupungit)
+Tietoruudun teksti: Miletoksesta tulleet kreikkalaiset perustivat kaupungin 756 eaa. Se oli ensimmäinen kreikkalainen kaupunki, jonka Ksenofonin kymmenentuhannen palkkasoturin joukko tavoitti taistellessaan tiensä ulos Persiasta. Neljännen ristiretken jälkeen 1204 siitä tuli Trapezuntin keisarikunnan pääkaupunki — kaikkein pisimpään säilynyt Bysantin seuraajavaltio, joka kaatui vasta 1461, kahdeksan vuotta Konstantinopolin jälkeen. Marco Polo päätti paluumatkansa tähän satamaan.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:gobeklitepe) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Pylväät nostettiin ennen kyliä] 9500 eaa — Kaakkois-Turkissa on kukkula, jonka laelle metsästäjät ja keräilijät pystyttivät jättiläismäisiä kivipylväitä noin 9500 vuotta ennen ajanlaskun alkua. Se on yli kuusituhatta vuotta ennen Egyptin pyramideja. Pylväät ovat T:n muotoisia, korkeimmat noin viisi ja puoli metriä, ja niiden kylkiin on veistetty kettuja, käärmeitä, kurkia ja villisikoja. Rakentajat eivät vielä osanneet polttaa savesta ruukkuja eivätkä viljelleet peltoa. Kukkulaa luultiin pitkään keskiaikaiseksi hautausmaaksi, ja kunnolliset kaivaukset alkoivat vasta vuonna 1995.
+- [Salalah — kohdekartta / Kohdekartta: Al-Baleedin puisto] kaivauksia vuodesta 1952 Al-Baleedin arkeologinen puisto on rannassa kaupungin itälaidalla, ja se on osa Unescon maailmanperintökohdetta nimeltä Suitsukkeen maa. Kohde ei ole yksi paikka vaan neljä: Al-Baleedin lisäksi siihen kuuluvat Khor Rorin satamarauniot, Shisrin karavaanikeidas aavikolla ja Wadi Dawkahin suitsukepuisto. Yhteensä ne kattavat lähes kahdeksansataaviisikymmentä hehtaaria, ja niiden ympärillä on vielä yli tuhannen hehtaarin suojavyöhyke. Kohde kirjattiin luetteloon vuonna 2000 nimellä Suitsuketie ja nimettiin uudelleen vuonna 2005. Puiston läpi kulkee vesi, ja se on koko paikan avain. Khawr al-Balid oli aikanaan lahti, johon laivat pääsivät suoraan mereltä; sen suu kuroutu…
+
+### 10.1
+KYSYMYS: Ketkä pylväät pystyttivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historia: Pylväät nostettiin ennen kyliä] 9500 eaa — Kaakkois-Turkissa on kukkula, jonka laelle metsästäjät ja keräilijät pystyttivät jättiläismäisiä kivipylväitä noin 9500 vuotta ennen ajanlaskun alkua. Se on yli kuusituhatta vuotta ennen Egyptin pyramideja. Pylväät ovat T:n muotoisia, korkeimmat noin viisi ja puoli metriä, ja niiden kylkiin on veistetty kettuja, käärmeitä, kurkia ja villisikoja. Rakentajat eivät vielä osanneet polttaa savesta ruukkuja eivätkä viljelleet peltoa. Kukkulaa luultiin pitkään keskiaikaiseksi hautausmaaksi, ja kunnolliset kaivaukset alkoivat vasta vuonna 1995.
+
+### 10.2
+KYSYMYS: Miksi kaivauksia tehdään niin hitaasti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Göbekli Tepe (historia)
+Tietoruudun teksti: Kukkulan huipulle rakennettiin suuria ympyränmuotoisia rakennelmia T-kirjaimen muotoisine kivipylväineen noin 9500–8000 eaa. — ne ovat maailman vanhimpia tunnettuja megaliitteja, tuhansia vuosia vanhempia kuin savi, kirjoitus tai metalli. Pylväisiin on veistetty villieläimiä sekä ihmismäisiä käsiä ja vaatteita. Kohde huomattiin kartoituksessa 1963, mutta sen merkitys tajuttiin vasta 1994. Vuoteen 2021 mennessä siitä oli kaivettu noin kymmenesosa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salalah — kohdekartta / Kohdekartta: Al-Baleedin puisto] kaivauksia vuodesta 1952 Al-Baleedin arkeologinen puisto on rannassa kaupungin itälaidalla, ja se on osa Unescon maailmanperintökohdetta nimeltä Suitsukkeen maa. Kohde ei ole yksi paikka vaan neljä: Al-Baleedin lisäksi siihen kuuluvat Khor Rorin satamarauniot, Shisrin karavaanikeidas aavikolla ja Wadi Dawkahin suitsukepuisto. Yhteensä ne kattavat lähes kahdeksansataaviisikymmentä hehtaaria, ja niiden ympärillä on vielä yli tuhannen hehtaarin suojavyöhyke. Kohde kirjattiin luetteloon vuonna 2000 nimellä Suitsuketie ja nimettiin uudelleen vuonna 2005. Puiston läpi kulkee vesi, ja se on koko paikan avain. Khawr al-Balid oli aikanaan lahti, johon laivat pääsivät suoraan mereltä; sen suu kuroutu…
+- [Luxor — kaupunkilehti / Historian hetki: Kuninkaiden laakso 1922 — "Näen ihmeellisiä asioita"] 26.11.1922 — Kynttilän liekki lepattaa, kun sitä työnnetään reiästä, jonka Howard Carter on juuri kaivertanut muurattuun oveen. Kuuma ilma virtaa vastaan kammiosta, joka on ollut suljettuna yli kolme tuhatta vuotta. Carterin takana käytävässä seisovat kaivauksen rahoittaja lordi Carnarvon, hänen tyttärensä Evelyn Herbert ja apulainen Arthur Callender. Ensin ei näy mitään; sitten silmät tottuvat, ja pimeydestä nousee kullan hohdetta — eläinhahmoisia vuoteita, vaunuja, patsaita. "Näkyykö mitään?" Carnarvon kysyy. "Näkyy, ihmeellisiä asioita", Carter vastaa. Viikkoa aiemmin, 4. marraskuuta, työmiehet olivat löytäneet kallioon hakatun portaikon ensimmäisen askelman työmiesmajojen alta; Carnarvo…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

@@ -1,0 +1,228 @@
+================ KOHTA 1 (kohde:troija) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Saudi-Arabia — maalehti / Luonto] Saudi-Arabia ei ole pelkkää hiekkaa: pohjoisessa on hiekkakivivuoria, lännessä laavakenttiä ja etelässä juniperimetsiä. Suojelualueille on palautettu eläimiä, jotka olivat jo ehtineet kadota.
+
+### 1.1
+KYSYMYS: Kuinka pitkälle kaivaukset ovat ehtineet nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Saudi-Arabia — maalehti / Luonto] Saudi-Arabia ei ole pelkkää hiekkaa: pohjoisessa on hiekkakivivuoria, lännessä laavakenttiä ja etelässä juniperimetsiä. Suojelualueille on palautettu eläimiä, jotka olivat jo ehtineet kadota.
+
+### 1.2
+KYSYMYS: Mitä Priamoksen aarteelle tapahtui löydön jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Troija (historia)
+Tietoruudun teksti: Kaupungin sijainti oli kadonnut vuosisadoiksi, kunnes englantilaissyntyinen Frank Calvert kaivoi Hisarlıkin kummulla vuodesta 1865 ja tunnisti paikan oikein. Heinrich Schliemann jatkoi siitä: kaivauskaudet 1871–1873 paljastivat yhdeksän päällekkäistä kaupunkia, ja viimeisenä kaivauspäivänä kesäkuussa 1873 hän löysi kullan, jota kutsui Priamoksen aarteeksi. Isoisän matkan aikana Troija oli maailman kuumin kaivaus.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:efesos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+
+### 2.1
+KYSYMYS: Miksi kaupunki lopulta hylättiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+
+### 2.2
+KYSYMYS: Minne temppelin löydöt vietiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Efesos (historia)
+Tietoruudun teksti: Efesos oli antiikin maailman kuuluisin pyhiinvaelluskohde: Artemiin temppeli, yksi seitsemästä ihmeestä, valmistui täällä noin 550 eaa. ja siinä oli yli sata 17-metristä marmoripylvästä. Kaupungin teatteriin mahtui 24 000 katsojaa. Brittiläinen arkkitehti John Turtle Wood etsi kadonnutta temppeliä British Museumin rahoituksella vuodesta 1863 ja löysi sen kivijalan 1869 — kaivaukset olivat vielä käynnissä isoisän matkan aikaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Turkki — maalehti / Historian hetki: Hisarlık 1873 — kulta kaivannon seinämässä] toukokuu 1873 — Kaivannon seinämän juuresta, muurin alta, on tullut esiin kuparinen astia, ja sen sisältä alkaa nousta kultaa: diadeemeja, korvakoruja, nappeja, tuhansia pieniä kultaesineitä sekä hopeaa ja pronssia. Heinrich Schliemann on 51-vuotias, rikastunut kauppias, joka on tullut kummulle todistaakseen, että Homeroksen Troija oli totta, ja hän nimeää löydön saman tien Priamoksen aarteeksi. Oman kertomuksensa mukaan hän lähetti työmiehet tauolle ja kaivoi kullan esiin itse veitsellä, jottei kukaan näkisi; tutkijat ovat sittemmin epäilleet kertomusta, ja ne kaivajat, joiden käsien kautta löydöt kulkivat, jäivät hänen sankaritarinansa ulkopuolelle. Päiväkirjaan hän kirjoitti myös, että v…
+- [Tabriz — kohdekartta / Kohdekartta: Azerbaidžanin museo] 1958 Museo avattiin huhtikuussa 1958 Sinisen moskeijan viereen. Sen piirsi ranskalainen André Godard (1881–1965), joka johti Iranin arkeologista tutkimuslaitosta vuosina 1928–1953 ja uudelleen 1956–1960 ja suunnitteli Teheranin kansallismuseon. Talossa on kolme näyttelysalia, sivupiha, toimistohuoneita ja kirjasto, jossa on yli 2 500 käsin kirjoitettua ja painettua kirjaa historiasta, arkeologiasta, taiteesta ja Iranin kulttuurista. Ensimmäinen sali etenee aikajärjestyksessä: vanhimmat löydöt ovat 5. vuosituhannelta eaa., sitten seuraavat Urartu, akhaimenidien valtakunta ja lopuksi sasanidikausi 224–651 jaa. Toinen sali on kahtia: toisessa päässä islamilaisen ajan arkeologiaa, toisessa koli…
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:kappadokia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Kuvataide: Kaupungit, jotka rakennettiin pahvista] 1948–2015 — Bodys Isek Kingelez työskenteli Kinshasan kansallismuseossa naamioiden entisöijänä, kunnes ryhtyi 1985 päätoimisesti tekemään sitä, mitä kutsui nimellä extrêmes maquettes, äärimmäiset pienoismallit. Materiaalina olivat pahvi, paperi, teippi ja muovinpalat; malleja syntyi yli kolmesataa. Vuodesta 1992 hän rakensi kokonaisia kaupunkeja katuineen, puistoineen ja stadioneineen — ensimmäinen sai nimen hänen kotikylästään Kimbembele-Ihungasta. Tunnetuimmat ovat Ville Fantôme (1996) ja Kin 3ème millénaire (1997). Hänellä ei ollut koskaan taidekauppiasta, mutta New Yorkin MoMA teki hänestä laajan näyttelyn 2018.
+- [Kimberley — kaupunkilehti / Timanttiryntäys] Big Holen ympärillä eli tuhansia kaivosmiehiä, joiden arkeen kuuluivat käsin kaivetut valtaukset, tauteja levittävä ahtaus ja lopulta syvälle maan alle ulottuvat kuilut – tarina, joka jatkui kauan isoisän vierailun jälkeenkin.
+
+### 3.1
+KYSYMYS: Asuuko kallokolotaloissa vielä ihmisiä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+### 3.2
+KYSYMYS: Kuinka syvälle maanalaiset kaupungit ulottuvat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kappadokia (luonto)
+Tietoruudun teksti: Kappadokian maisema syntyi tulivuorista: Erciyesin, Hasanin ja Göllüdağin purkaukset peittivät alueen paksuun tuhkakiveen, jota tuuli ja vesi ovat sitten kuluttaneet miljoonien vuosien ajan "keijunsavupiipuiksi". Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita — ja kokonaisia maanalaisia kaupunkeja, joissa on monikerroksisia puolustusjärjestelmiä: käytäviä sulkevia pyöreitä kivipaasia ja aukkoja katossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Kuvataide: Kaupungit, jotka rakennettiin pahvista] 1948–2015 — Bodys Isek Kingelez työskenteli Kinshasan kansallismuseossa naamioiden entisöijänä, kunnes ryhtyi 1985 päätoimisesti tekemään sitä, mitä kutsui nimellä extrêmes maquettes, äärimmäiset pienoismallit. Materiaalina olivat pahvi, paperi, teippi ja muovinpalat; malleja syntyi yli kolmesataa. Vuodesta 1992 hän rakensi kokonaisia kaupunkeja katuineen, puistoineen ja stadioneineen — ensimmäinen sai nimen hänen kotikylästään Kimbembele-Ihungasta. Tunnetuimmat ovat Ville Fantôme (1996) ja Kin 3ème millénaire (1997). Hänellä ei ollut koskaan taidekauppiasta, mutta New Yorkin MoMA teki hänestä laajan näyttelyn 2018.
+- [Kimberley — kaupunkilehti / Timanttiryntäys] Big Holen ympärillä eli tuhansia kaivosmiehiä, joiden arkeen kuuluivat käsin kaivetut valtaukset, tauteja levittävä ahtaus ja lopulta syvälle maan alle ulottuvat kuilut – tarina, joka jatkui kauan isoisän vierailun jälkeenkin.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:pamukkale) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+- [Ras Hafun — kaupunkilehti / Ras Hafun: Antiikin Opone] Muinaiset kreikkalaiset ja roomalaiset merenkulkijat tunsivat tämän rannikon Oponen kauppakaupunkina. Se mainitaan noin ensimmäisellä vuosisadalla jaa. kirjoitetussa merenkulkuoppaassa Periplus Maris Erythraei, joka luetteloi Egyptistä lähtevien kauppareittien satamat aina Intiaan asti. Oppaan mukaan Oponesta vietiin suuria määriä kanelia ja erityisen hienoa kilpikonnankuorta, ja nykyarkeologit yhdistävät kuvauksen juuri Ras Hafunin niemeen. Kaupunki kukoisti vuosisatoja ennen ajanlaskun alkua ja vielä pitkään sen jälkeenkin, kunnes toiminta hiipui noin 500-luvulla jaa.
+
+### 4.1
+KYSYMYS: Saako terasseilla vielä kävellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Leijonain piha] Palatsin kuuluisimmalla sisäpihalla, siinä missä kaksitoista marmorileijonaa kannattaa suihkulähdettä, on kummassakin päässä pieni paviljonki. Kun isoisäsi seisoi siinä huhtikuussa 1873, itäisen paviljongin päällä oli pyöreä, keramiikkalaatoilla päällystetty kupoli. Se näytti kuuluvan taloon. Se oli neljätoista vuotta vanha. Sen oli nostanut siihen vuonna 1859 arkkitehti Rafael Contreras, jonka isä oli aloittanut palatsin korjaustyöt 1828 ja jonka poika jatkoi niitä hänen jälkeensä — kolme sukupolvea samaa taloa, aina vuoteen 1907 asti. He tekivät työnsä sen ajan opin mukaan: rakennukseen sai lisätä osia, jotta siitä tulisi "kokonainen", vaikkei lisäys vastaisi mitään, mitä siinä oli joskus…
+
+### 4.2
+KYSYMYS: Miksi antiikin kaupunki rakennettiin juuri tähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pamukkale ja Hierapolis (luonto)
+Tietoruudun teksti: Rinteen valkoiset terassit ovat travertiinia: 17 kuumaa lähdettä (35–100 °C) tuo kalsiumkarbonaattia pintaan, hiilidioksidi karkaa, ja kivi saostuu hyllyiksi. Muodostuma on noin 2 700 metriä pitkä, 600 leveä ja 160 korkea. Sen päälle rakennettiin antiikin Hierapolis, jonka pyhin paikka oli Pluton portti — luola, josta nousi tukahduttavaa kaasua, ja jota pidettiin manalan ovena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+- [Ras Hafun — kaupunkilehti / Ras Hafun: Antiikin Opone] Muinaiset kreikkalaiset ja roomalaiset merenkulkijat tunsivat tämän rannikon Oponen kauppakaupunkina. Se mainitaan noin ensimmäisellä vuosisadalla jaa. kirjoitetussa merenkulkuoppaassa Periplus Maris Erythraei, joka luetteloi Egyptistä lähtevien kauppareittien satamat aina Intiaan asti. Oppaan mukaan Oponesta vietiin suuria määriä kanelia ja erityisen hienoa kilpikonnankuorta, ja nykyarkeologit yhdistävät kuvauksen juuri Ras Hafunin niemeen. Kaupunki kukoisti vuosisatoja ennen ajanlaskun alkua ja vielä pitkään sen jälkeenkin, kunnes toiminta hiipui noin 500-luvulla jaa.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:ankara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+- [Ankara — kaupunkilehti / Ankara] Ankarassa on viheralaa 72 neliömetriä asukasta kohti, vaikka keskustaajamassa asuu yli 5,3 miljoonaa ihmistä.
+
+### 5.1
+KYSYMYS: Milloin Ankarasta tuli pääkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kaupunkilehti / Ankara] Ankarassa on viheralaa 72 neliömetriä asukasta kohti, vaikka keskustaajamassa asuu yli 5,3 miljoonaa ihmistä.
+
+### 5.2
+KYSYMYS: Onko Augustuksen kirjoitus yhä luettavissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Ankara
+Maa, jossa pelaaja on: Turkki
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ankara (kaupungit)
+Tietoruudun teksti: Isoisän matkan aikaan Ankara ei ollut pääkaupunki vaan Angoran vilajetin keskus — pääkaupunki oli Istanbul. Kelttiläiset galatalaiset asettuivat kaupunkiin 278 eaa. ja tekivät siitä yhden pääleiristään; keisari Augustus nosti sen 25 eaa. Galatian provinssin pääkaupungiksi, ja hänen tekojensa virallinen luettelo hakattiin marmoriin erään temppelin seiniin. Kaupungin nimi elää yhä angorakanin, angoravuohen ja angorakissan nimissä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
