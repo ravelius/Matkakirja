@@ -1505,6 +1505,371 @@
   ]
  },
  {
+  "kohde": "kohde:hahmotelma-antiikin-serdika",
+  "kysymys": "Miltä Antiikin Serdika näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Serdika oli roomalaisaikana muurien ja tornien ympäröimä provinssikaupunki nykyisen [[Sofian]] paikalla, ja loistoaikanaan siellä oli kivettyjä katuja, julkisia rakennuksia ja kylpylöitä. Kaupungin vetovoimaan kuuluivat alueen lämpimät kivennäislähteet. Se oli niin merkittävä, että [[Konstantinus Suuren]] kerrotaan kutsuneen sitä omaksi Roomakseen. Kaupungin jäänteitä on yhä näkyvillä Sofian keskustassa, esimerkiksi itäportin raunioita metroaseman yhteydessä sekä myöhäisantiikin ajalta peräisin oleva [[Pyhän Yrjön rotunda]]. Suuri osa antiikin kaupungista on kuitenkin edelleen nykykaupungin alla, joten täydellistä kuvaa sen ulkonäöstä ei ole. Kyl se vanha kaupunki siel alla vielä odottaa.",
+  "linkit": [
+   "Sofian",
+   "Konstantinus Suuren",
+   "Pyhän Yrjön rotunda"
+  ],
+  "jatkot": [
+   "Mikä on Pyhän Yrjön rotunda Sofiassa?",
+   "Mitä Sofiassa on nähtävää roomalaiselta ajalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antiikin-serdika",
+  "kysymys": "Miksi Antiikin Serdika katosi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Ihan niin dramaattisesti se ei kuitenkaan kadonnut. Serdika ei oikeastaan kadonnut, vaan sen asema ja ulkoasu muuttuivat. Kaupunki kärsi pahoin, kun [[Attilan]] hunnit tuhosivat sen vuonna 447, mutta [[Justinianus]] rakennutti sen uudelleen, ja asutus jatkui paikalla keskiajalle. Myöhemmin kaupunki sai uuden nimen, ja nykyään se tunnetaan [[Sofiana]], Bulgarian pääkaupunkina. Antiikin kerrokset jäivät rakennusten ja katujen alle, ja ne ovat tulleet esiin vasta arkeologisissa kaivauksissa. Hyvin se selvis, vaikka nimi vaihtui.",
+  "linkit": [
+   "Attilan",
+   "Justinianus",
+   "Sofiana"
+  ],
+  "jatkot": [
+   "Mitä Attilan hunnit tekivät Balkanilla 400-luvulla?",
+   "Millainen keisari Justinianus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antiikin-serdika",
+  "kysymys": "Miksi Konstantinus Suuri piti Serdikaa tärkeänä?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Serdika sijaitsi tärkeällä sotilastiellä, [[Via Militaris]]-tiellä, joka johti [[Tonavan]] rajalta kohti Bysantionia, ja keisarit liikkuivat reittiä paljon. Konstantinuksen kerrotaan oleskelleen kaupungissa ja pohtineen sen tekemistä keskeiseksi, ennen kuin hän valitsi uudeksi pääkaupungiksi [[Konstantinopolin]]. Lausahdus, jonka mukaan Serdika oli hänen Roomansa, on perimätietoa, jonka alkuperää en voi varmistaa. Tuo Rooma-lausahdus kuulostaa kyl keisarilta.",
+  "linkit": [
+   "Via Militaris",
+   "Tonavan",
+   "Konstantinopolin"
+  ],
+  "jatkot": [
+   "Mikä oli Via Militaris ja minne se johti?",
+   "Milloin Konstantinopolista tuli Rooman valtakunnan pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antiikin-serdika",
+  "kysymys": "Mistä Sofia on saanut nimensä?",
+  "uusi": true,
+  "vastaus": "Ai se. Kato, nimi on yllättävän kirkollinen. Sofian nimi tulee kaupungin vanhan [[Pyhän Sofian kirkon]] mukaan, ja sana sofia tarkoittaa kreikaksi viisautta. Nimi vakiintui kaupungin käyttöön vasta keskiajan lopulla. Sitä ennen paikka tunnettiin antiikissa nimellä [[Serdika]] ja slaavilaisella nimellä [[Sredets]]. Viisaus on kyl hyvä nimi kaupungille, pöllökin ois samaa mieltä.",
+  "linkit": [
+   "Pyhän Sofian kirkon",
+   "Serdika",
+   "Sredets"
+  ],
+  "jatkot": [
+   "Mitä Sofiassa on nähtävää?",
+   "Milloin Sofiasta tuli Bulgarian pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antiikin-serdika",
+  "kysymys": "Millaisia ihmisiä Serdikassa asui ennen roomalaisia?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Alueella asui ennen roomalaisten tuloa [[traakialaisia]] heimoja, ja kaupungin nimen uskotaan juontuvan heistä yhden, [[Serdi-heimon]], nimestä. Traakialaiset puhuivat omaa kieltään, joka on sittemmin kadonnut, ja heidät tunnetaan muun muassa ratsumiehinä ja kultaesineistään. Roomalaiset ottivat alueen valtaansa, ja siitä kehittyi provinssikaupunki. Jotkut oli täällä jo ennen kuin ensimmäinen kyyhky laskeutui.",
+  "linkit": [
+   "traakialaisia",
+   "Serdi-heimon"
+  ],
+  "jatkot": [
+   "Mikä oli Thrakia ja missä se sijaitsi?",
+   "Millaisia aarteita traakialaiset jättivät jälkeensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bansko",
+  "kysymys": "Minkä vuorten juurella Bansko sijaitsee?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Bansko sijaitsee [[Pirin-vuorten]] juurella Lounais-Bulgariassa, Nestos-joen laaksossa 925 metrin korkeudessa; joki tunnetaan bulgariaksi nimellä Mesta. Kaupunki on lähellä samannimistä kansallispuistoa, ja [[Pirinin kansallispuisto]] suojelee vuoriston luontoa. Banskosta on tullut tunnettu hiihtokeskus, mutta kesäisin samoja vuoria käytetään vaelluksiin. Ylhäältä katsottuna Pirin on kyl aika upea.",
+  "linkit": [
+   "Pirin-vuorten",
+   "Pirinin kansallispuisto"
+  ],
+  "jatkot": [
+   "Millainen on Pirinin kansallispuisto?",
+   "Mitä Bansko oli ennen matkailukeskukseksi muuttumista?"
+  ],
+  "paikka": {
+   "nimi": "Bansko",
+   "lat": 41.84,
+   "lon": 23.49,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-bansko",
+  "kysymys": "Kuinka monta lämmintä kivennäislähdettä läheisessä Banyan kylässä on?",
+  "uusi": false,
+  "vastaus": "Katotaas. Lähteiden mukaan kylässä on 27 lämpimän kivennäisveden lähdettä. Kylä on nimeltään [[Banya]], ja se sijaitsee noin viiden kilometrin päässä [[Banskosta]] [[Pirin-vuorten]] juurella. Nimi tarkoittaa bulgariaksi kylpyä, ja alue tunnetaan lämpimistä vesistään.\n\nMinä haluaisin lämpimän veden kyljessä banitsaa, sitä suolaista juustopiirakkaa, jota Bulgariassa syödään usein aamiaiseksi. Pullaan se ei laske, mutta kelpaa silti.",
+  "linkit": [
+   "Banya",
+   "Banskosta",
+   "Pirin-vuorten"
+  ],
+  "jatkot": [
+   "Miten lämpimät kivennäislähteet syntyvät?",
+   "Mitä kylpyläkulttuuri tarkoittaa Bulgariassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bansko",
+  "kysymys": "Mikä on Bulgarian korkein vuori?",
+  "uusi": true,
+  "vastaus": "Ai tota, tän minä muistan. Bulgarian korkein vuori on [[Musala]] [[Rila-vuoristossa]], ja sen huippu on noin 2 900 metrin korkeudessa. Se on myös koko Balkanin niemimaan korkein huippu. Pirin-vuorten korkein huippu, [[Vihren]], on melkein yhtä korkea. Metrejä on kyl vaikea laskea ylhäältä.",
+  "linkit": [
+   "Musala",
+   "Rila-vuoristossa",
+   "Vihren"
+  ],
+  "jatkot": [
+   "Mikä on Rila-vuoriston tunnetuin nähtävyys?",
+   "Mitä vuorikiipeilijä voi nähdä Pirinillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bansko",
+  "kysymys": "Mitä eläimiä Pirinin vuoristossa elää?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Eläimet kiinnostaa minua aina. Pirinin vuoristossa elää muun muassa [[ruskeakarhuja]], [[susia]] ja [[gemssejä]], ja kallioisilla rinteillä pesii petolintuja. Vuoriston metsissä kasvaa harvinaisia havupuita, ja ylempänä kukkii vuoristokasveja, joista osa on harvinaisia. Karhua en kyl lähde moikkaamaan.",
+  "linkit": [
+   "ruskeakarhuja",
+   "susia",
+   "gemssejä"
+  ],
+  "jatkot": [
+   "Miksi gemssi pärjää jyrkillä vuorenrinteillä?",
+   "Miten karhut talvehtivat vuoristossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bansko",
+  "kysymys": "Ketkä tunnetut bulgarialaiset ovat syntyneet Banskossa?",
+  "uusi": true,
+  "vastaus": "Kas vaan, ihan kirjallinen kaupunki. Banskossa on syntynyt munkki ja opettaja [[Neofit Rilski]], joka tunnetaan bulgarialaisen koulutuksen kehittäjänä, sekä runoilija [[Nikola Vaptsarov]], jonka teokset kuuluvat bulgarialaisen kirjallisuuden tunnetuimpiin. Kaupunki on siten ollut tärkeä paikka myös Bulgarian kulttuurille, ei vain matkailulle.\n\nRunoilijoita ja munkkeja, siinäpä sopiva seura kirjeitä kantavalle linnulle.",
+  "linkit": [
+   "Neofit Rilski",
+   "Nikola Vaptsarov"
+  ],
+  "jatkot": [
+   "Mitä Neofit Rilski sai aikaan opettajana?",
+   "Millainen oli Bulgarian kansallinen herääminen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pobiti-kamani",
+  "kysymys": "Mitä nimi Pobiti kamani tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Mmm— hyvä kysymys. Pobiti kamani on bulgariaa ja tarkoittaa istutettuja kiviä. Nimi viittaa siihen, että kivipylväät näyttävät pystyyn painetuilta tai maahan lyödyiltä, ikään kuin joku olisi istuttanut ne aavikkomaiseen maastoon. Muodostumaa kutsutaan myös [[Kivimetsäksi]], ja se sijaitsee [[Varnan]] läänin luoteisrajalla Bulgariassa. Istutettuja kiviä, kyl sekin on puutarha.",
+  "linkit": [
+   "Kivimetsäksi",
+   "Varnan"
+  ],
+  "jatkot": [
+   "Mikä on luonnonmuistomerkin merkitys Bulgariassa?",
+   "Millainen on Varna kaupunkina?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pobiti-kamani",
+  "kysymys": "Kuka kuvasi kivipylväät ensimmäisenä vuonna 1829?",
+  "uusi": false,
+  "vastaus": "Odotas vähän, annas ku muistelen. Lähteiden mukaan venäläinen arkeologi ja historioitsija [[Viktor Teplyakov]] kuvasi kivipylväät jo vuonna 1829, ja häntä pidetään usein alueen ensimmäisenä tieteellisenä kuvaajana. Muodostuma sijaitsee [[Varnan]] läänin luoteisrajalla, ja se julistettiin luonnonmuistomerkiksi noin 1930-luvun lopulla. Kivet ehtivät odottaa kuvaajaansa kyl pitkään.",
+  "linkit": [
+   "Viktor Teplyakov",
+   "Varnan"
+  ],
+  "jatkot": [
+   "Missä Dikilitash on ja mitä siellä näkee?",
+   "Mitä luonnonmuistomerkki tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pobiti-kamani",
+  "kysymys": "Miten kivipylväät ovat syntyneet?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tässä on kyse hitaasta geologiasta. Pylväät ovat putkimaisia kertymiä, jotka ovat muodostuneet, kun [[metaania]] sisältäviä nesteitä on noussut maaperän läpi ja sementoinut ympäröivää hiekkaa kiveksi. Kun [[eroosio]] kulutti löyhän hiekan pois, kovemmat pylväät jäivät pystyyn, ja syntyi aavikkomainen maisema. Kaikista yksityiskohdista tutkijat eivät ole täysin yksimielisiä. Kivi on kyl kärsivällinen materiaali.",
+  "linkit": [
+   "metaania",
+   "eroosio"
+  ],
+  "jatkot": [
+   "Mitä eroosio tarkoittaa?",
+   "Miten metaani muodostuu merenpohjassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pobiti-kamani",
+  "kysymys": "Mitä nimi Dikilitash tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se, no sehän on turkkia. Dikilitash on [[turkin kielen]] nimi, jonka voi suomentaa pystytetyksi kiveksi, ja sitä käytetään Pobiti kamanin suurimmasta pylväsryhmästä, jossa on satoja kiviä. Turkkilainen nimi on jäänne ajalta, jolloin alue kuului [[Osmanien valtakunnan]] hallintaan. Kahdella kielellä nimetty, ja molemmilla kivi seisoo paikallaan.",
+  "linkit": [
+   "turkin kielen",
+   "Osmanien valtakunnan"
+  ],
+  "jatkot": [
+   "Mitkä kielet ovat vaikuttaneet Bulgarian paikannimiin?",
+   "Milloin Bulgaria vapautui Osmanien vallasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pobiti-kamani",
+  "kysymys": "Mikä on lähin suuri kaupunki Pobiti kamanin lähellä?",
+  "uusi": true,
+  "vastaus": "Katotaas. Lähin suuri kaupunki on [[Varna]] Mustanmeren rannikolla, Pobiti kamanilta katsottuna itään. Antiikissa kaupunki oli kreikkalaisten perustama siirtokunta nimeltä [[Odessos]], ja nykyään se on tärkeä satama- ja lomakaupunki. Meri näkyy sieltä kyl hyvin ylhäältä.",
+  "linkit": [
+   "Varna",
+   "Odessos"
+  ],
+  "jatkot": [
+   "Mitä nähtävää Varnassa on?",
+   "Millainen on Bulgarian Mustanmeren rannikko?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaliakra",
+  "kysymys": "Mitä nimi Kaliakra tarkoittaa perinteisen käännöksen mukaan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Kaliakra on peräisin bysanttilaisesta kreikasta, ja perinteinen käännös on kaunis niemi. Nimi sopii paikkaan, sillä pystysuorat kalliot laskeutuvat jyrkästi [[Mustanmeren]] rannalle, ja niemen yli kulkee tärkeä lintujen muuttoreitti [[Via Pontica]].\n\nMuuttolinnut tuntevat tämän reitin hyvin. Itse en muuta mihinkään, mutta ymmärrän niitä, jotka lentävät tätä rannikkoa pitkin.",
+  "linkit": [
+   "Mustanmeren",
+   "Via Pontica"
+  ],
+  "jatkot": [
+   "Miten Mustameri eroaa muista meristä?",
+   "Millaiset kalliot Kaliakran niemellä ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaliakra",
+  "kysymys": "Minä vuonna niemen ensimmäinen nykyaikainen majakka rakennettiin?",
+  "uusi": false,
+  "vastaus": "No niin, majakat ovat minulle tuttuja. Lähteiden mukaan ensimmäinen nykyaikainen majakka rakennettiin Kaliakran niemelle vuonna 1866. Sen rakennutti [[Osmanien valtakunnan]] majakkayhtiö, sillä alue kuului tuolloin Osmanien valtakuntaan. Majakka palveli [[Mustanmeren]] laivaliikennettä. Majakat on kyl hyviä maamerkkejä, ylhäältäkin.",
+  "linkit": [
+   "Osmanien valtakunnan",
+   "Mustanmeren"
+  ],
+  "jatkot": [
+   "Miten majakat toimivat?",
+   "Mitä Osmanien valtakunta tarkoitti Balkanilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaliakra",
+  "kysymys": "Mitä lintuja Via Ponticaa pitkin muuttaa?",
+  "uusi": true,
+  "vastaus": "Mmm— lintuja, vihdoinkin tuttua maastoa. Via Ponticaa pitkin muuttaa syksyisin ja keväisin suuria määriä lintuja, muun muassa [[haikaroita]], [[pelikaaneja]] ja eri petolintuja, jotka kiertävät Mustanmeren länsirannikon kautta. Reitti on tärkeä, koska suuret muuttajat välttävät avointa merta ja seuraavat rannikkoa. Kaliakran niemellä voi lisäksi nähdä [[merimetsoja]] ja merellä delfiinejä.\n\nMinusta pelikaanit ovat vähän liian isoja kollegoiksi, mutta sentään lentäjiä.",
+  "linkit": [
+   "haikaroita",
+   "pelikaaneja",
+   "merimetsoja"
+  ],
+  "jatkot": [
+   "Miksi linnut muuttavat syksyllä etelään?",
+   "Miten linnut löytävät muuttoreittinsä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaliakra",
+  "kysymys": "Mikä oli Dobrotitsan despotaatti?",
+  "uusi": true,
+  "vastaus": "Tuota niin, keskiajan sotkuja. Dobrotitsan despotaatti oli keskiajan lopulla [[Dobrudžan]] alueella Mustanmeren rannikolla toiminut ruhtinaskunta, jonka pääkaupunkina Kaliakra toimi. Kaliakran niemellä on yhä sen linnoitusmuurien, vesijohdon ja kylpylän jäänteitä. Alueen nimi Dobrudža on mahdollisesti peräisin Dobrotitsan nimestä, mutta tämä on tutkijoiden esittämä oletus. Myöhemmin alue joutui [[Osmanien valtakunnan]] hallintaan. Kivet muistaa enemmän kuin minä, vaikka suku muistaa paljon.",
+  "linkit": [
+   "Dobrudžan",
+   "Osmanien valtakunnan"
+  ],
+  "jatkot": [
+   "Mikä Dobrudža on ja missä se sijaitsee?",
+   "Millainen oli keskiaikainen Bulgaria?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kaliakra",
+  "kysymys": "Mitä delfiinilajeja Mustallamerellä elää?",
+  "uusi": true,
+  "vastaus": "Ai tota, merellä on omaa väkeään. [[Mustanmeren]] vesissä elää kolme valaslajia: [[pullokuonodelfiini]], tavallinen delfiini ja [[pyöriäinen]]. Pyöriäinen ei ole delfiini vaan pieni hammasvalas, joka kuuluu eri heimoon. Delfiinejä voi havaita Kaliakran edustalla, ja ne seuraavat usein kalaparvia lähellä rannikkoa. Minä pysyn kyl mieluummin ilmassa.",
+  "linkit": [
+   "Mustanmeren",
+   "pullokuonodelfiini",
+   "pyöriäinen"
+  ],
+  "jatkot": [
+   "Miksi pyöriäinen ei ole delfiini?",
+   "Miten pullokuonodelfiinit kommunikoivat keskenään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vratsa-ledenika",
+  "kysymys": "Mitä nimi Ledenika tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: nimi on suoraan sanottu. Ledenika on bulgariaa ja tarkoittaa jäistä, sillä sana led tarkoittaa jäätä. Nimen arvellaan viittaavan siihen, että luolan katossa voi talvella olla runsaasti jääpuikkoja. Luola sijaitsee [[Balkanvuorten]] luoteisosassa, [[Vratsan]] kaupungin lähellä. Jäinen luola kuulostaa kyl kylmältä, talveksi en sinne menis.",
+  "linkit": [
+   "Balkanvuorten",
+   "Vratsan"
+  ],
+  "jatkot": [
+   "Mitä luolan sisällä on nähtävää?",
+   "Miksi talvella voi syntyä jääpuikkoja luolassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vratsa-ledenika",
+  "kysymys": "Minä vuonna luola avattiin matkailijoille?",
+  "uusi": false,
+  "vastaus": "Joo, hetkinen ny. Lähteiden mukaan Ledenikan luola avattiin matkailijoille vuonna 1961. Luola löydettiin noin 1900-luvun alussa. Siinä on useita saleja, joista suurin on nimeltään Suuri temppeli, sekä runsaasti [[stalaktiitteja]] ja [[stalagmiitteja]]. Nykyään siel varmaan riittää kävijöitä.",
+  "linkit": [
+   "stalaktiitteja",
+   "stalagmiitteja"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa karstiluola?",
+   "Mitä muita luolia Bulgariassa on avoinna kävijöille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vratsa-ledenika",
+  "kysymys": "Mikä ero on stalaktiitilla ja stalagmiitilla?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Stalaktiitti roikkuu katosta alaspäin ja stalagmiitti kasvaa lattiasta ylöspäin. Molemmat syntyvät, kun [[kalkkikiven]] läpi valuva vesi tuo mukanaan liuennutta [[kalsiumkarbonaattia]], joka jää tippuessa pisara pisaralta kiinteänä aineena. Kasvu on hyvin hidasta. Jos stalaktiitti ja stalagmiitti kasvavat vastakkain tarpeeksi pitkään, ne voivat yhtyä pylvääksi.\n\nMinä muistan eron englannista: katossa on c ja lattiassa g, kuten sanoissa ceiling ja ground.",
+  "linkit": [
+   "kalkkikiven",
+   "kalsiumkarbonaattia"
+  ],
+  "jatkot": [
+   "Miksi kalkkikivi liukenee veteen?",
+   "Kuinka nopeasti tippukivet kasvavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vratsa-ledenika",
+  "kysymys": "Mistä Balkanin niemimaan nimi tulee?",
+  "uusi": true,
+  "vastaus": "Kas vaan, geografiaa. Balkanin niemimaa on saanut nimensä [[Balkanvuorten]] mukaan, ja sana balkan tarkoittaa turkin kielessä vuorta tai vuoristoa. Nimen laajensi koko niemimaata tarkoittavaksi saksalainen maantieteilijä [[August Zeune]] 1800-luvun alussa, ja hän uskoi virheellisesti, että vuorijono ulottuu niemimaan halki. Vuorenkin nimi saa kokonaisen niemimaan.",
+  "linkit": [
+   "Balkanvuorten",
+   "August Zeune"
+  ],
+  "jatkot": [
+   "Mitkä maat kuuluvat Balkanin niemimaalle?",
+   "Mikä Balkanvuorten korkein huippu on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vratsa-ledenika",
+  "kysymys": "Mitä eläimiä luolissa yleensä elää?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Luolissa elää eläimiä, jotka ovat sopeutuneet pimeään. Tunnetuimpia ovat [[lepakot]], jotka käyttävät luolia päiväpiilona ja talvehtimispaikkana. Pysyvästi pimeässä elävät eläimet ovat usein värittömiä ja sokeita tai lähes sokeita, kuten Euroopan karstiluolissa elävä [[olmi]], vesiluolasalamanteri. Luolissa elää myös erikoistuneita hyönteisiä ja hämähäkkejä. Pimeä ei kyl houkuta minua, mutta lepakoita kunnioitan.",
+  "linkit": [
+   "lepakot",
+   "olmi"
+  ],
+  "jatkot": [
+   "Miksi olmi on sokea?",
+   "Miten lepakot talvehtivat luolissa?"
+  ]
+ },
+ {
   "kohde": "kohde:hahmotelma-trigrad",
   "kysymys": "Mihin luolaan Trigradska-joki syöksyy?",
   "uusi": false,
