@@ -86,3 +86,8 @@ Siirtosepän arkki v46z-176-b (`proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261
   `taidemuseo-runko/lahde/leivo_sali.py` leipoo nyt vain salin geometrian valon (ei kehyksiä eikä patsaita varjostajina). Tarvitaan:
   kehykset (sali_blender.py --esikatselu -geometria) ja patsaat (patsaat/*.glb + patsaat-pakattu.json, veistospaikat sali.json:sta)
   leivontaan varjostajiksi (näkymättömät kameralle, holdout/ei omaa UV1:tä), nurkka-AO valoatlakseen.
+- **ND v5b pelissä** (LS2 4dc824ab5): L 152–153, b/r 0,88 → PT:llä omistajan päätökseen; v47b kytketty (Siirtoseppä c3091ed82), wt v45g poistettu.
+- **NL-sali v2e VALMIS (varjot)**: `_valmiit/taidemuseo-alankomaat-v2e`, ennen/jälkeen e023031a2. leivo_sali.py: --teokset (kehykset pelin
+  ripustuksella, LS1 teokset.json natiivi 691969c66 → lahde/teokset-ls1-691969c66.json) --patsaat (34) --ao 0.6 --ao-voima 0.5; varmuuskopio
+  leivo_sali_ennen_varjot.py; tarkistuskuva taidemuseo-runko/lahde/atlas_kuva.py (ATLAS_LX=900). LS1 kytkee; LS1:n veistokset.json (6) ja
+  m2-v1/v2 ripustus eroavat v2e:n sali.json:sta (kerrottu). Lattiaheijastus = LS1:n ajonaikainen osa.
