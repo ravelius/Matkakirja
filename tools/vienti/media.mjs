@@ -47,7 +47,7 @@ import { KOHTAAMIS_R2_JUURI, kohtaamiskuvat } from '../../js/kohtaamiskuvat-data
 // merkkijonon käynti ei näe — haetaan se datasta tiedostonimellä.
 const KOHTAAMISKANSIO = new Map(kohtaamiskuvat.map((k) => [k.tiedosto, k.kansio ?? null]));
 // Ämpärin avaimen tunnistaa juurikansiosta (js/media.js, peilaa-media.mjs).
-const AMPARIN_KANSIOT = /^(audio|aanet|kuvat|liput|julisteet|kohtaamiset)\//;
+const AMPARIN_KANSIOT = /^(audio|aanet|kuvat|liput|julisteet|kohtaamiset|paakaupungit)\//;
 
 export const PELIN_JUURI = 'https://matkakirja.app/';
 

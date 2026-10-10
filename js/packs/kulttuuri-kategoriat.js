@@ -116274,7 +116274,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Linnake antautuu ilman taistelua',
           teksti:
             'Elokuun 8. päivänä 1782 kolme ranskalaista sotalaivaa ja noin 290 sotilasta komentaja Jean-François de La Pérousen johdolla ilmestyi Hudsoninlahdelle. Fort Prince of Walesin kuvernöörinä tuolloin toiminut Samuel Hearne komensi vain kourallista miehiä eikä nähnyt järkeä puolustautua toivottomia lukuja vastaan: hän antautui ilman yhtään laukausta. Ranskalaiset yrittivät tuhota linnoituksen räjäyttämällä sen muureja, mutta paksu kivi kesti pahimman, ja rauniot seisovat paikallaan yhä tänäänkin. Turkiskaupasta riippuvaiset alkuperäiskansat kärsivät pahiten: kun kauppatavaraa ei enää saapunut, monet joutuivat nälänhätään sinä talvena.',
-          tiedosto: 'Vue du fort prince de Walles dans la baie d’Hudson en 1782.jpg',
+          tiedosto: 'Vue du fort prince de Walles dans la baie d\'Hudson en 1782.jpg',
           lyhyt: '1700-luvun kaiverrus Prince of Wales Fortista talvisessa maisemassa.',
           selite:
             'Vanha kaiverrus näyttää Prince of Wales Fortin talvisena, brittilipun vielä liehuessa muurien yllä ennen linnoituksen antautumista ranskalaisille elokuussa 1782.',
@@ -132174,7 +132174,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Port-de-France niemen kärjessä',
           teksti:
             'Ranska perusti asutuksen Uuden-Kaledonian eteläkärkeen vuonna 1854 ja nimesi sen Port-de-Franceksi. Paikka valittiin suojaisan syvän sataman vuoksi: kaupunkia ympäröivässä suojariutassa on vain kolme kapeaa aukkoa, joista laivat pääsevät turvallisesti niemen rannalle. Vuonna 1866 asutus sai nykyisen nimensä Nouméa, paikallisen kielen mukaan. Ensimmäiset vuodet olivat karuja: makea vesi loppui usein kesken, ja pieni siirtokunta eli pitkään laivojen tuomien muonatoimitusten varassa, ennen kuin ympäröivää maaseutua saatiin viljelyyn asukkaiden ruoaksi.',
-          tiedosto: 'General View of Noumea, by Peace.jpg',
+          tiedosto: 'General View of Nouméa, by Peace.jpg',
           lyhyt: 'Nouméa 1900-luvun taitteessa, kuvattuna korkealta paikalta.',
           selite:
             'Yleisnäkymä Nouméasta ennen vuotta 1906: matala siirtokuntakaupunki levittäytyy rantaviivan mukaisesti kukkuloiden välissä.',
@@ -132217,7 +132217,7 @@ export const KULTTUURI_KATEGORIAT = {
           galleria: [
             {
               otsikko: 'Michelin oma piirros karkotuspaikasta',
-              tiedosto: 'Noumea by Louise Michel.jpg',
+              tiedosto: 'Nouméa by Louise Michel.jpg',
               lyhyt: 'Louise Michel piirsi itse näkymän Nouméasta karkotuksensa aikana 1875.',
               selite: 'Piirros on karkotetun kommunardin oma silminnäkijäkuva Nouméasta, tehty samana aikana kun Michel piti koulua paikallisille lapsille ja tutustui kanakkien kulttuuriin.',
               lahde: 'Louise Michel, Le Monde illustré / Bibliothèque nationale de France, Wikimedia Commons (PD)',

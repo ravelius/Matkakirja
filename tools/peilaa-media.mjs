@@ -207,7 +207,8 @@ function kohteet() {
     .filter((f) => f.endsWith('.js'))
     .map((f) => readFileSync(join(JUURI, kansio, f), 'utf8')).join('\n');
   const paketit = `${lue('js/packs')}\n${lue('js/linssit')}`;
-  const muut = ['js/aani-ehdokkaat.js', 'js/ui.js', 'js/sisaltotaulut.js']
+  // fokusnosto.js: kortin valokuva (NAMA Machine d'Anticythère 1.jpg) on vain siellä.
+  const muut = ['js/aani-ehdokkaat.js', 'js/ui.js', 'js/sisaltotaulut.js', 'js/fokusnosto.js']
     .map((f) => readFileSync(join(JUURI, f), 'utf8')).join('\n');
   const kaikki = `${paketit}\n${muut}`;
   /*
@@ -247,9 +248,16 @@ function kohteet() {
    * JS ei tue takautuvaa katsetta kaikkialla, joten raja luetaan
    * ryhmänä ja hylätään vasta osuman jälkeen.
    */
+  /*
+   * Arvo voi olla seuraavalla rivillä (kulttuuri-kategoriat.js rivittää
+   * pitkät nimet: `tiedosto:⏎ '…'`) ja avain lainausmerkeissä
+   * (maailmankartta.js: `"lippu":"Flag of X.svg"`). Kumpikin jäi
+   * poimimatta: 36 kuvaa ja 65 lippua puuttuivat peilistä
+   * (Julkaisijan peili-404-selvitys 10.10.2026).
+   */
   const poimi = (kentta) => new Set([
-    ...[...koodi.matchAll(new RegExp(`(^|[^\\w])${kentta}: '((?:[^'\\\\]|\\\\.)*)'`, 'gm'))].map((m) => pura(m[2])),
-    ...[...koodi.matchAll(new RegExp(`(^|[^\\w])${kentta}: "((?:[^"\\\\]|\\\\.)*)"`, 'gm'))].map((m) => pura(m[2])),
+    ...[...koodi.matchAll(new RegExp(`(^|[^\\w])"?${kentta}"?\\s*:\\s*'((?:[^'\\\\]|\\\\.)*)'`, 'gm'))].map((m) => pura(m[2])),
+    ...[...koodi.matchAll(new RegExp(`(^|[^\\w])"?${kentta}"?\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"`, 'gm'))].map((m) => pura(m[2])),
   ]);
   // `tiedosto:` tarkoittaa paketeissa Commonsin kuvatiedostoa, mutta
   // sama kentännimi on myös repon omilla äänitiedostoilla
