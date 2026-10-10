@@ -1,0 +1,1014 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Casa de Osambela] 1803–1805 Tontti kuului Santo Domingon luostarille, ja sillä oli seissyt dominikaanien noviisitalo, kunnes vuoden 1746 maanjäristys kaatoi sen. Luostari myi raunioituneen osan espanjalaiselle laivanrakentajalle, pankkiirille ja kauppiaalle Martín de Osambelalle saadakseen omat keskeneräiset työnsä maksetuiksi. Talo valmistui vuosina 1803–1805, ja se on yhä keskustan laajimpia asuintaloja. Kaksi asiaa erottaa sen kaikista muista ajan limalaistaloista. Huoneet on ladottu kadun suuntaisesti eikä syvyyssuunnassa, joten julkisivuun mahtui viisi Ludvig XVI:n tyylistä parveketta ja niiden lisäksi kolme kaidetta. Ja talossa on neljä kerrosta kahden sijaan: ylimpänä on kahdeksankulmainen näköalatorn…
+AIEMPI KYSYMYS: Kuka rakensi Lovechin katetun sillan?
+AIEMPI VASTAUS (Livia):
+Ai tota, hänet minä tunnen. Lovechin katetun sillan rakensi mestarirakentaja Nikola Fichev, jota kutsutaan myös nimellä [[Kolyu Ficheto]]. Hän rakensi sillan [[Osam-joen]] yli vuosina 1872–1874. Silta paloi vuonna 1925 ja rakennettiin uudelleen vuonna 1931.
+
+Katettu silta on ilmeisesti hyvä keksintö, sillä sadepäivänä sinne mahtuu sateensuojaan. Minä olen kuivatellut siipiäni useammankin sillan alla.
+KYSYMYS: Kerro lisää: Osam-joen
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+AIEMPI KYSYMYS: Minä vuonna toisen Bulgarian valtakunnan alku julistettiin Hisaryassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rauhansopimus Bulgarian ja Bysantin välillä allekirjoitettiin Lovechin [[Hisarya-linnoituksessa]] vuonna 1187, ja sen katsotaan merkinneen [[Toisen Bulgarian valtakunnan]] alkua. Tarkasti ottaen Hisaryassa ei julistettu valtakuntaa vaan solmittiin sopimus, jolla [[Bysantti]] käytännössä tunnusti Bulgarian itsenäistymisen; kapina oli alkanut jo 1180-luvun puolivälissä. Kyl vuosiluvut pitää tarkistaa tarkkaan.
+KYSYMYS: Kerro lisää: Hisarya-linnoituksessa
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kukkula, joka paloi kerran] 1393 — Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 osmanit piirittivät linnoitusta kolme kuukautta ja polttivat sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 Bulgarian valtion 1300-vuotisjuhlaan.
+AIEMPI KYSYMYS: Minä vuonna toisen Bulgarian valtakunnan alku julistettiin Hisaryassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rauhansopimus Bulgarian ja Bysantin välillä allekirjoitettiin Lovechin [[Hisarya-linnoituksessa]] vuonna 1187, ja sen katsotaan merkinneen [[Toisen Bulgarian valtakunnan]] alkua. Tarkasti ottaen Hisaryassa ei julistettu valtakuntaa vaan solmittiin sopimus, jolla [[Bysantti]] käytännössä tunnusti Bulgarian itsenäistymisen; kapina oli alkanut jo 1180-luvun puolivälissä. Kyl vuosiluvut pitää tarkistaa tarkkaan.
+KYSYMYS: Kerro lisää: Toisen Bulgarian valtakunnan
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+AIEMPI KYSYMYS: Minä vuonna toisen Bulgarian valtakunnan alku julistettiin Hisaryassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rauhansopimus Bulgarian ja Bysantin välillä allekirjoitettiin Lovechin [[Hisarya-linnoituksessa]] vuonna 1187, ja sen katsotaan merkinneen [[Toisen Bulgarian valtakunnan]] alkua. Tarkasti ottaen Hisaryassa ei julistettu valtakuntaa vaan solmittiin sopimus, jolla [[Bysantti]] käytännössä tunnusti Bulgarian itsenäistymisen; kapina oli alkanut jo 1180-luvun puolivälissä. Kyl vuosiluvut pitää tarkistaa tarkkaan.
+KYSYMYS: Kerro lisää: Bysantti
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Levski] Majatalon isäntä ei sanonut nimeä, mutta minä sanon: Vasil Levski. Bulgarialaiset kutsuvat häntä Vapauden apostoliksi. Hän rakensi koko maahan salaisten vallankumouskomiteoiden verkoston ja suunnitteli kansannousua osmanivaltaa vastaan. Joulukuussa 1872 hänet kaapattiin majatalosta ja tuotiin Sofiaan oikeudenkäyntiin — eikä hän paljastanut yhtäkään toveriaan. Tuomio pantiin täytäntöön 18. helmikuuta 1873, siis samana talvena kuin isoisäsi sulki matkalaukkunsa Lontoossa. Sillä kohdalla seisoo nyt kolmentoista metrin muistomerkki harmaata balkanilaista graniittia. Hautaa ei ole löydetty.
+AIEMPI KYSYMYS: Miksi Lovech liittyy Vasil Levskiin?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kyl kuultu. [[Vasil Levski]] oli bulgarialainen vallankumouksellinen, joka perusti Osmanien vallan aikana [[sisäisen vallankumousjärjestön]]. Lovech oli tämän järjestön toiminnan keskus, ja kaupungin vanhassakaupungissa on Levskille omistettu museo. Levski teloitettiin Sofiassa vuonna 1873, ja hänet muistetaan Bulgariassa kansallisena sankarina. Onneksi siit on pitkä aika.
+KYSYMYS: Kerro lisää: Vasil Levski
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kohdekartta / Kohdekartta: Kansallisarkisto] 1999 Dilin arkistoilla on onneton historia: kaupungin arkistot ovat tuhoutuneet neljä kertaa — 1779, 1890, 1975 ja 1999. Juuri siksi kaupungin oma menneisyys on monelta osin kadonnut, ja juuri siksi kansallisarkisto on olemassa. Nykyinen arkisto perustettiin 1999 kolmen kansainvälisen työntekijän voimin. Heinäkuussa 2000 palkattiin ensimmäiset paikalliset työntekijät keräämään aineistoa, ja samana vuonna perustettiin toimisto sisäisen hallinnon osastolle. Vuonna 2001 kaksi työntekijää kävi puolen vuoden koulutuksen Lissabonin historiallisessa arkistossa, ja saman vuoden aikana arkisto korotettiin kansalliseksi osastoksi. Rakennuksen arkisto sai 2004, ja se oli aiemmin ollut kansainvälisten …
+AIEMPI KYSYMYS: Miksi Lovech liittyy Vasil Levskiin?
+AIEMPI VASTAUS (Livia):
+Joo, hänestä on kyl kuultu. [[Vasil Levski]] oli bulgarialainen vallankumouksellinen, joka perusti Osmanien vallan aikana [[sisäisen vallankumousjärjestön]]. Lovech oli tämän järjestön toiminnan keskus, ja kaupungin vanhassakaupungissa on Levskille omistettu museo. Levski teloitettiin Sofiassa vuonna 1873, ja hänet muistetaan Bulgariassa kansallisena sankarina. Onneksi siit on pitkä aika.
+KYSYMYS: Kerro lisää: sisäisen vallankumousjärjestön
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+AIEMPI KYSYMYS: Mikä heimo asui Lovechin seudulla ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+Ai tota, vanhaa väkeä. Lähteiden mukaan Lovechin seudun ensimmäisiin asukkaisiin kuului [[traakialainen]] meldi-heimo. Heidän pääkaupunkinsa Melta sijaitsi nykyisen [[Varosha]]-kaupunginosan paikalla, ja siksi Lovech lasketaan yhdeksi Bulgarian vanhimmista kaupungeista. Kyl täällä on ollut väkeä pitkään.
+KYSYMYS: Kerro lisää: traakialainen
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+AIEMPI KYSYMYS: Mikä heimo asui Lovechin seudulla ensimmäisenä?
+AIEMPI VASTAUS (Livia):
+Ai tota, vanhaa väkeä. Lähteiden mukaan Lovechin seudun ensimmäisiin asukkaisiin kuului [[traakialainen]] meldi-heimo. Heidän pääkaupunkinsa Melta sijaitsi nykyisen [[Varosha]]-kaupunginosan paikalla, ja siksi Lovech lasketaan yhdeksi Bulgarian vanhimmista kaupungeista. Kyl täällä on ollut väkeä pitkään.
+KYSYMYS: Kerro lisää: Varosha
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Minä vuonna Osman Pasha antautui Plevnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Osman Pasha antautui Plevnassa vuonna 1877, marraskuun lopulla. Antautuminen päätti kaupungin piirityksen, joka oli yksi [[Venäjän ja Turkin sodassa]] 1877–1878 käydyistä ratkaisevista taisteluista, ja [[osmanien]] sotapäällikön antautuminen muutti sodan kulkua. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Venäjän ja Turkin sodassa
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Minä vuonna Osman Pasha antautui Plevnassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Osman Pasha antautui Plevnassa vuonna 1877, marraskuun lopulla. Antautuminen päätti kaupungin piirityksen, joka oli yksi [[Venäjän ja Turkin sodassa]] 1877–1878 käydyistä ratkaisevista taisteluista, ja [[osmanien]] sotapäällikön antautuminen muutti sodan kulkua. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: osmanien
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+AIEMPI KYSYMYS: Missä puistossa Plevenin panoraama on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Plevenin panoraama on Skobelevin puistossa. Samaan puistoon on [[Plevnan piirityksen]] muistoksi rakennettu myös [[ossuaari]] ja [[mausoleumi]] kaatuneille venäläisille ja romanialaisille sotilaille. Puiston yllä on hyvä lentää hiljaa.
+KYSYMYS: Kerro lisää: Plevnan piirityksen
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+AIEMPI KYSYMYS: Missä puistossa Plevenin panoraama on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Plevenin panoraama on Skobelevin puistossa. Samaan puistoon on [[Plevnan piirityksen]] muistoksi rakennettu myös [[ossuaari]] ja [[mausoleumi]] kaatuneille venäläisille ja romanialaisille sotilaille. Puiston yllä on hyvä lentää hiljaa.
+KYSYMYS: Kerro lisää: ossuaari
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+AIEMPI KYSYMYS: Missä puistossa Plevenin panoraama on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Plevenin panoraama on Skobelevin puistossa. Samaan puistoon on [[Plevnan piirityksen]] muistoksi rakennettu myös [[ossuaari]] ja [[mausoleumi]] kaatuneille venäläisille ja romanialaisille sotilaille. Puiston yllä on hyvä lentää hiljaa.
+KYSYMYS: Kerro lisää: mausoleumi
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Levski] Majatalon isäntä ei sanonut nimeä, mutta minä sanon: Vasil Levski. Bulgarialaiset kutsuvat häntä Vapauden apostoliksi. Hän rakensi koko maahan salaisten vallankumouskomiteoiden verkoston ja suunnitteli kansannousua osmanivaltaa vastaan. Joulukuussa 1872 hänet kaapattiin majatalosta ja tuotiin Sofiaan oikeudenkäyntiin — eikä hän paljastanut yhtäkään toveriaan. Tuomio pantiin täytäntöön 18. helmikuuta 1873, siis samana talvena kuin isoisäsi sulki matkalaukkunsa Lontoossa. Sillä kohdalla seisoo nyt kolmentoista metrin muistomerkki harmaata balkanilaista graniittia. Hautaa ei ole löydetty.
+AIEMPI KYSYMYS: Kuka perusti Plevenissä vallankumouskomitean vuonna 1869?
+AIEMPI VASTAUS (Livia):
+Ai tota. Plevenin ensimmäisen vallankumouskomitean perusti vuonna 1869 [[Vasil Levski]]. Komitea kuului hänen kansalliseen verkostoonsa, jonka tavoitteena oli vapauttaa Bulgaria [[osmanien]] vallasta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Vasil Levski
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Kuoro, joka lauloi maan vapaaksi] 1869 — Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja 1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä isänmaallisia lauluja niin sanotussa laulavassa vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Milloin Plevenin ensimmäinen tyttökoulu avattiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Plevenin tyttökoulu avattiin vuonna 1840, ja sitä pidetään Bulgarian ensimmäisenä tyttökouluna. Poikakoulu seurasi vuotta myöhemmin, ja ensimmäinen maallinen koulu oli avattu jo vuonna 1825. [[Osmanien]] vallan aikana Pleven säilytti bulgarialaisen luonteensa, ja koulut olivat osa [[kansallista heräämistä]]. Koulun jälkeen olisi tehnyt hyvää kozunak, sanon vaan.
+KYSYMYS: Kerro lisää: kansallista heräämistä
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Mongolian kansallismuseo] nykyinen rakennus 1971 Kokoelmien kerääminen alkoi vuonna 1924, ja alkuvaiheessa aineistoa toivat venäläiset tutkijat Pjotr Kozlov, V. I. Lisovski ja A. D. Simukov sekä yhdysvaltalainen Roy Chapman Andrews. Sosialistisella kaudella historia, kansatiede, luonnonhistoria ja paleontologia olivat kaikki samassa talossa, vuonna 1956 valmistuneessa valtion keskusmuseossa. Nykyinen rakennus pystytettiin 1971 vallankumouksen museoksi, ja huhtikuussa 2008 se sai nimekseen Mongolian kansallismuseo. Museo on maan suurin, ja sen kokoelmissa on yli 57 000 esinettä esihistoriasta 1900-luvun loppuun. Esillä olevat kymmenen salia kulkevat järjestyksessä: esihistoria, aika ennen Mongoli-imperiumia, imperium…
+- [Moskova — kohdekartta / Kohdekartta: Perlovin teetalo] Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, puuvillaa, posliinia ja teetä. Matka kesti tavallisesti kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun itseensä. Sitä sekoitusta myydään nykyäänkin n…
+AIEMPI KYSYMYS: Miksi Plevnan piiritys oli tärkeä Venäjän ja Turkin sodassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Plevnan piiritys oli yksi sodan ratkaisevista taisteluista. Kaupunkia piirittivät [[venäläiset]] ja [[romanialaiset]] joukot, ja piiritys päättyi marraskuun lopulla 1877, kun [[Osman Pasha]] antautui. Piiritys kesti kuukausia, ja se jätti jälkensä sekä kaupunkiin että sotaan. Nykyään siellä on rauhallista, ja hyvä niin.
+KYSYMYS: Kerro lisää: venäläiset
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+AIEMPI KYSYMYS: Miksi Plevnan piiritys oli tärkeä Venäjän ja Turkin sodassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Plevnan piiritys oli yksi sodan ratkaisevista taisteluista. Kaupunkia piirittivät [[venäläiset]] ja [[romanialaiset]] joukot, ja piiritys päättyi marraskuun lopulla 1877, kun [[Osman Pasha]] antautui. Piiritys kesti kuukausia, ja se jätti jälkensä sekä kaupunkiin että sotaan. Nykyään siellä on rauhallista, ja hyvä niin.
+KYSYMYS: Kerro lisää: romanialaiset
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darfur — kaupunkilehti / Darfur: Khedivi Ismail Pasha ja idän uhka] Egyptin khedivi Ismail Pasha, joka hallitsi vuosina 1863–1879, pyrki laajentamaan valtaansa Niilin yläjuoksulle ja Sudaniin asti tavoitellen sekä kauppareittejä että arvovaltaa Euroopan silmissä. Hänen aikanaan Egyptin armeijaa nykyaikaistettiin eurooppalaisten upseerien avulla, ja katseet kääntyivät myös länteen, kohti riippumatonta Darfurin sulttaanikuntaa. Kun rajaseudun heimoriita levisi sodaksi vuonna 1873, khedivi näki tilaisuuden: hän liittoutui vaikutusvaltaisen kauppias Zubayr Rahma Mansurin kanssa ja lähetti tämän joukot valtaamaan Darfurin – hanke, joka isoisän matkavuonna oli vasta alkamassa.
+- [Bahr el Ghazal — kaupunkilehti / Bahr el Ghazal: Baker-pasha ja orjakaupan tukahduttaminen] Khediivi Ismail nimitti brittiläisen tutkimusmatkailijan Samuel Bakerin huhtikuussa 1869 vasta perustetun Ekvatorian provinssin kenraalikuvernööriksi pashan arvolla: tehtävänä oli ulottaa Egyptin valta Gondokoron eteläpuolelle ja tukahduttaa orjakauppa Ylä-Niilin ja Bahr el Ghazalin alueella. Baker johti noin 1 700 egyptiläisen sotilaan joukkoa — moni heistä oli vapautettu vankilasta armeijaan — höyrylaivoineen ja purjealuksineen. Huhtikuussa 1870 hänen partionsa pysäytti orjaveneen ja vapautti siitä 150 orjaa, yhden harvoista konkreettisista voitoista taistelussa, jota paikalliset kauppiasruhtinaat vastustivat aseellisesti joka käänteessä.
+AIEMPI KYSYMYS: Miksi Plevnan piiritys oli tärkeä Venäjän ja Turkin sodassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Plevnan piiritys oli yksi sodan ratkaisevista taisteluista. Kaupunkia piirittivät [[venäläiset]] ja [[romanialaiset]] joukot, ja piiritys päättyi marraskuun lopulla 1877, kun [[Osman Pasha]] antautui. Piiritys kesti kuukausia, ja se jätti jälkensä sekä kaupunkiin että sotaan. Nykyään siellä on rauhallista, ja hyvä niin.
+KYSYMYS: Kerro lisää: Osman Pasha
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+AIEMPI KYSYMYS: Minä vuonna Nikopolin ristiretken taistelu käytiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuosi 1396. Taistelu käytiin vuonna 1396, ja sitä pidetään keskiajan viimeisenä suurena ristiretkenä. Unkarin kuningas [[Sigismundin]] johtama kristillinen Euroopan armeija kärsi tappion [[Bayezid I:n]] joukoille, ja [[ottomaanien]] asema Balkanilla vahvistui. Onpas siit jo yli kuusisataa vuotta.
+KYSYMYS: Kerro lisää: Sigismundin
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+AIEMPI KYSYMYS: Minä vuonna Nikopolin ristiretken taistelu käytiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuosi 1396. Taistelu käytiin vuonna 1396, ja sitä pidetään keskiajan viimeisenä suurena ristiretkenä. Unkarin kuningas [[Sigismundin]] johtama kristillinen Euroopan armeija kärsi tappion [[Bayezid I:n]] joukoille, ja [[ottomaanien]] asema Balkanilla vahvistui. Onpas siit jo yli kuusisataa vuotta.
+KYSYMYS: Kerro lisää: Bayezid I:n
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+AIEMPI KYSYMYS: Minä vuonna Nikopolin ristiretken taistelu käytiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuosi 1396. Taistelu käytiin vuonna 1396, ja sitä pidetään keskiajan viimeisenä suurena ristiretkenä. Unkarin kuningas [[Sigismundin]] johtama kristillinen Euroopan armeija kärsi tappion [[Bayezid I:n]] joukoille, ja [[ottomaanien]] asema Balkanilla vahvistui. Onpas siit jo yli kuusisataa vuotta.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+AIEMPI KYSYMYS: Kuka oli Bulgarian viimeinen tsaari, joka puolusti Nikopolia?
+AIEMPI VASTAUS (Livia):
+Ai se. Nikopolin linnoitusta puolusti [[Ivan Shishman]], Toisen Bulgarian valtakunnan viimeinen tsaari. Hän piti linnoitusta, kunnes [[ottomaanit]] valtasivat sen noin vuonna 1395. Ei paha kyyhkyn muistille.
+KYSYMYS: Kerro lisää: Ivan Shishman
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: Punainen linna] 1500-luku Linna seisoo vanhankaupungin kaakkoisnurkassa omalla kalliollaan. Pohja on epäsäännöllinen nelikulmio, jonka sivut ovat 115, 90, 130 ja 140 metriä, ja pinta-alaa on noin 13 000 neliömetriä; muurien sisällä on useita rakennuksia ja pihoja. Kaivauksissa on löytynyt roomalaisajan jäänteitä, joten paikka voi olla yhtä vanha kuin foinikialaisten Oea. Nykyiset rakenteet ovat pääosin 1500-luvulta. Aragonian kuningaskunta valtasi Tripolin vuonna 1510, ja vuodesta 1530 linnaa pitivät johanniittaritarit, kunnes ottomaanit ajoivat heidät pois 1551. Linnan kerrotaan saaneen punamullan värinsä juuri silloin, ja siitä tulee sen nimi. Ensimmäinen ottomaanien käskynhaltija Murad Agha muutti linna…
+- [Tripoli — kohdekartta / Kohdekartta: Darghutin moskeija] n. 1560 Ottomaanit valtasivat Tripolin vuonna 1551 johanniittaritareilta, ja ensimmäinen käskynhaltija Darghut korjasi ja rakensi kaupungin linnoitukset uudelleen. Vanhakaupunki sai silloin sen viisikulmaisen muodon, joka sillä on yhä. Noin vuonna 1560 Darghut rakennutti muurien sisään oman moskeijansa ja valitsi paikaksi ritarien kirkon tontin. Perimätieto kertoo, ettei kirkkorakennusta purettu vaan se otettiin uuden rakennuksen sisään. Darghut kaatui vuonna 1565 Maltan suuressa piirityksessä. Hänen ruumiinsa tuotiin Tripoliin ja haudattiin tähän moskeijaan, ja haudat ovat yhä toisen mihrabin vieressä. Iskander Pasha teetti 1600-luvun alussa muutoksia: minareetti muotoiltiin uudelleen vuon…
+AIEMPI KYSYMYS: Kuka oli Bulgarian viimeinen tsaari, joka puolusti Nikopolia?
+AIEMPI VASTAUS (Livia):
+Ai se. Nikopolin linnoitusta puolusti [[Ivan Shishman]], Toisen Bulgarian valtakunnan viimeinen tsaari. Hän piti linnoitusta, kunnes [[ottomaanit]] valtasivat sen noin vuonna 1395. Ei paha kyyhkyn muistille.
+KYSYMYS: Kerro lisää: ottomaanit
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mitä nimi Nicopolis tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nicopolis tarkoittaa voiton kaupunkia. Nikopol sijaitsee [[Tonavan]] oikealla rannalla jyrkkien liitukallioiden juurella, ja [[roomalaiset]] rakensivat paikalle 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää. Kaunis nimi, ja kalliot ovat vielä kauniimmat ylhäältä.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+AIEMPI KYSYMYS: Mitä nimi Nicopolis tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nicopolis tarkoittaa voiton kaupunkia. Nikopol sijaitsee [[Tonavan]] oikealla rannalla jyrkkien liitukallioiden juurella, ja [[roomalaiset]] rakensivat paikalle 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää. Kaunis nimi, ja kalliot ovat vielä kauniimmat ylhäältä.
+KYSYMYS: Kerro lisää: roomalaiset
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+AIEMPI KYSYMYS: Minkä joen rannalla Nikopol sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Nikopol sijaitsee [[Tonavan]] oikealla rannalla Pohjois-Bulgariassa, neljä kilometriä alavirtaan [[Osamin]] yhtymäkohdasta. Tonava muodostaa suuren osan Bulgarian pohjoisrajasta, ja vastarannalla on [[Romania]]. Tonavan yläpuolella on kyyhkyllä aina hyvä tuuli.
+KYSYMYS: Kerro lisää: Osamin
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Minkä joen rannalla Nikopol sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Nikopol sijaitsee [[Tonavan]] oikealla rannalla Pohjois-Bulgariassa, neljä kilometriä alavirtaan [[Osamin]] yhtymäkohdasta. Tonava muodostaa suuren osan Bulgarian pohjoisrajasta, ja vastarannalla on [[Romania]]. Tonavan yläpuolella on kyyhkyllä aina hyvä tuuli.
+KYSYMYS: Kerro lisää: Romania
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+AIEMPI KYSYMYS: Miten Nikopolin asema muuttui osmanien aikana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi. Myöhemmin, 1600–1700-luvuilla, [[Pleven]] ohitti sen alueen keskuksena, ja [[venäläiset]] valtasivat kaupungin vuonna 1877 [[Venäjän ja Turkin sodan]] aikana. Kaupunkien suosio kulkee kuin tuuli, ylhäältä sen näkee.
+KYSYMYS: Kerro lisää: Pleven
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Mongolian kansallismuseo] nykyinen rakennus 1971 Kokoelmien kerääminen alkoi vuonna 1924, ja alkuvaiheessa aineistoa toivat venäläiset tutkijat Pjotr Kozlov, V. I. Lisovski ja A. D. Simukov sekä yhdysvaltalainen Roy Chapman Andrews. Sosialistisella kaudella historia, kansatiede, luonnonhistoria ja paleontologia olivat kaikki samassa talossa, vuonna 1956 valmistuneessa valtion keskusmuseossa. Nykyinen rakennus pystytettiin 1971 vallankumouksen museoksi, ja huhtikuussa 2008 se sai nimekseen Mongolian kansallismuseo. Museo on maan suurin, ja sen kokoelmissa on yli 57 000 esinettä esihistoriasta 1900-luvun loppuun. Esillä olevat kymmenen salia kulkevat järjestyksessä: esihistoria, aika ennen Mongoli-imperiumia, imperium…
+- [Moskova — kohdekartta / Kohdekartta: Perlovin teetalo] Se samovaarin tee oli matkustanut kauemmin kuin isoisäsi. Venäjän tee tuli Kiinasta maitse, ja koko kauppa kulki yhden ainoan pisteen läpi: Kyahtan, joka perustettiin 1727 aivan rajalle. Kiinan puolelle rakennettiin heti oma kauppakylänsä Maimaitsheng, ja kaksi kaupunkia seisoivat nokakkain muurirajan yli. Vuoden 1762 jälkeen siellä ei juuri käytetty rahaa vaan vaihdettiin tavaraa tavaraan: venäläiset toivat turkiksia, kankaita ja vuotia, kiinalaiset silkkiä, puuvillaa, posliinia ja teetä. Matka kesti tavallisesti kuudestatoista kahdeksaantoista kuukauteen, ja juuri siitä syntyi maku: tee nukkui yönsä karavaanin nuotioiden vieressä ja imi savun itseensä. Sitä sekoitusta myydään nykyäänkin n…
+AIEMPI KYSYMYS: Miten Nikopolin asema muuttui osmanien aikana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi. Myöhemmin, 1600–1700-luvuilla, [[Pleven]] ohitti sen alueen keskuksena, ja [[venäläiset]] valtasivat kaupungin vuonna 1877 [[Venäjän ja Turkin sodan]] aikana. Kaupunkien suosio kulkee kuin tuuli, ylhäältä sen näkee.
+KYSYMYS: Kerro lisää: venäläiset
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Miten Nikopolin asema muuttui osmanien aikana?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi. Myöhemmin, 1600–1700-luvuilla, [[Pleven]] ohitti sen alueen keskuksena, ja [[venäläiset]] valtasivat kaupungin vuonna 1877 [[Venäjän ja Turkin sodan]] aikana. Kaupunkien suosio kulkee kuin tuuli, ylhäältä sen näkee.
+KYSYMYS: Kerro lisää: Venäjän ja Turkin sodan
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+AIEMPI KYSYMYS: Minkä kuninkaantyttären legendan mukaan Baba Vida on nimetty?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hyvä tarina. Legendan mukaan linnoituksen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi, ja nimi Baba Vida tarkoittaa mummo Vidaa. Linnoitus sijaitsee [[Vidinissä]] [[Tonavan]] rannalla, ja sen rakentamisen kerrotaan alkaneen 900-luvulla muinaisen roomalaisen [[Bononian]] linnakkeen paikalla. Mummo Vida ansaitsi kozunakin, vähintään.
+KYSYMYS: Kerro lisää: Vidinissä
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Minkä kuninkaantyttären legendan mukaan Baba Vida on nimetty?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hyvä tarina. Legendan mukaan linnoituksen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi, ja nimi Baba Vida tarkoittaa mummo Vidaa. Linnoitus sijaitsee [[Vidinissä]] [[Tonavan]] rannalla, ja sen rakentamisen kerrotaan alkaneen 900-luvulla muinaisen roomalaisen [[Bononian]] linnakkeen paikalla. Mummo Vida ansaitsi kozunakin, vähintään.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+AIEMPI KYSYMYS: Minkä kuninkaantyttären legendan mukaan Baba Vida on nimetty?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämä on hyvä tarina. Legendan mukaan linnoituksen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi, ja nimi Baba Vida tarkoittaa mummo Vidaa. Linnoitus sijaitsee [[Vidinissä]] [[Tonavan]] rannalla, ja sen rakentamisen kerrotaan alkaneen 900-luvulla muinaisen roomalaisen [[Bononian]] linnakkeen paikalla. Mummo Vida ansaitsi kozunakin, vähintään.
+KYSYMYS: Kerro lisää: Bononian
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+AIEMPI KYSYMYS: Kuinka pitkän piirityksen linnoitus kesti Basileios II:n aikana?
+AIEMPI VASTAUS (Livia):
+No niin. Piiritys kesti kahdeksan kuukautta, ja sitä johti Bysantin keisari Basileios II. Lähteet kertovat lopputuloksesta eri tavoin: toisten mukaan linnoitus kesti piirityksen, toisten mukaan [[Vidinin]] linnoitus lopulta antautui ja päätyi [[Bysantin]] hallintaan. Kahdeksan kuukautta ilman pullaa, minä en kestäisi päivääkään.
+KYSYMYS: Kerro lisää: Vidinin
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Kuinka pitkän piirityksen linnoitus kesti Basileios II:n aikana?
+AIEMPI VASTAUS (Livia):
+No niin. Piiritys kesti kahdeksan kuukautta, ja sitä johti Bysantin keisari Basileios II. Lähteet kertovat lopputuloksesta eri tavoin: toisten mukaan linnoitus kesti piirityksen, toisten mukaan [[Vidinin]] linnoitus lopulta antautui ja päätyi [[Bysantin]] hallintaan. Kahdeksan kuukautta ilman pullaa, minä en kestäisi päivääkään.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+AIEMPI KYSYMYS: Kuka oli tsaari Ivan Stratsimir?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ivan Stratsimir oli 1300-luvun jälkipuoliskon tsaari, jonka pääkaupunkina toimi Vidin. Hänen hallituskautensa ajoitetaan yleensä vuosiin 1356–1396, ja hänen aikanaan [[Vidinin tsaarikunnan]] keskus oli [[Baba Vidan]] linnoituksen suojissa. Pääkaupunki linnassa, ja kuitenkin minä asun kaiteella.
+KYSYMYS: Kerro lisää: Vidinin tsaarikunnan
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+AIEMPI KYSYMYS: Kuka oli tsaari Ivan Stratsimir?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ivan Stratsimir oli 1300-luvun jälkipuoliskon tsaari, jonka pääkaupunkina toimi Vidin. Hänen hallituskautensa ajoitetaan yleensä vuosiin 1356–1396, ja hänen aikanaan [[Vidinin tsaarikunnan]] keskus oli [[Baba Vidan]] linnoituksen suojissa. Pääkaupunki linnassa, ja kuitenkin minä asun kaiteella.
+KYSYMYS: Kerro lisää: Baba Vidan
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Minä vuonna Stara Zagorasta löydettiin neoliittiset asuinrakennukset?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuosi 1968. Silloin kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia asuinrakennuksia, jotka ovat yksi Euroopan parhaiten säilyneistä ja rikkaimmista löydöistään laatuaan. Ne on muutettu museoksi, ja kaupunki sijaitsee [[Ylä-Traakian]] tasangolla lähellä [[Plovdivia]]. Vanhin kotini on kyllä paljon nuorempi.
+KYSYMYS: Kerro lisää: Ylä-Traakian
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Minä vuonna Stara Zagorasta löydettiin neoliittiset asuinrakennukset?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: vuosi 1968. Silloin kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia asuinrakennuksia, jotka ovat yksi Euroopan parhaiten säilyneistä ja rikkaimmista löydöistään laatuaan. Ne on muutettu museoksi, ja kaupunki sijaitsee [[Ylä-Traakian]] tasangolla lähellä [[Plovdivia]]. Vanhin kotini on kyllä paljon nuorempi.
+KYSYMYS: Kerro lisää: Plovdivia
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Millä nimellä roomalaiset kutsuivat kaupunkia?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaupunki tunnettiin nimellä [[Ulpia Augusta Traiana]], ja nimi viittaa keisari [[Trajanuksen]] sukunimeen. Rooman aikana kaupunki oli merkittävämpi kuin [[Philippopolis]], nykyinen Plovdiv. Pitkä nimi, mut lyhyt lento.
+KYSYMYS: Kerro lisää: Ulpia Augusta Traiana
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Millä nimellä roomalaiset kutsuivat kaupunkia?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaupunki tunnettiin nimellä [[Ulpia Augusta Traiana]], ja nimi viittaa keisari [[Trajanuksen]] sukunimeen. Rooman aikana kaupunki oli merkittävämpi kuin [[Philippopolis]], nykyinen Plovdiv. Pitkä nimi, mut lyhyt lento.
+KYSYMYS: Kerro lisää: Trajanuksen
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Millä nimellä roomalaiset kutsuivat kaupunkia?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kaupunki tunnettiin nimellä [[Ulpia Augusta Traiana]], ja nimi viittaa keisari [[Trajanuksen]] sukunimeen. Rooman aikana kaupunki oli merkittävämpi kuin [[Philippopolis]], nykyinen Plovdiv. Pitkä nimi, mut lyhyt lento.
+KYSYMYS: Kerro lisää: Philippopolis
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+AIEMPI KYSYMYS: Missä päin Bulgariaa Stara Zagora sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Stara Zagora sijaitsee [[Ylä-Traakian]] tasangolla lähellä [[Kazanlakia]], [[Plovdivia]] ja [[Slivenia]]. Se on Bulgarian viidenneksi suurin kaupunki. Kolmen kaupungin kupeessa, ihan hyvä kaiteen paikka.
+KYSYMYS: Kerro lisää: Kazanlakia
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Missä päin Bulgariaa Stara Zagora sijaitsee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Stara Zagora sijaitsee [[Ylä-Traakian]] tasangolla lähellä [[Kazanlakia]], [[Plovdivia]] ja [[Slivenia]]. Se on Bulgarian viidenneksi suurin kaupunki. Kolmen kaupungin kupeessa, ihan hyvä kaiteen paikka.
+KYSYMYS: Kerro lisää: Slivenia
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Mistä Stara Zagoran nimi tulee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Nykyinen nimi on peräisin turkkilaisesta nimestä [[Eski Zagra]], vanha Zagra, joka vahvistettiin vuonna 1871. Bulgarian kielen sana stara tarkoittaa niin ikään vanhaa. Roomalaisaikana kaupunki tunnettiin nimellä [[Ulpia Augusta Traiana]]. Vanha kaupunki, uusi nimi, ja minä muistan molemmat.
+KYSYMYS: Kerro lisää: Eski Zagra
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Historia: Luola, jota kukaan ei uskonut] 1879 — Kun Marcelino Sanz de Sautuola vuonna 1879 kaivoi Altamiran luolassa Kantabriassa, hänen kahdeksanvuotias tyttärensä María kyllästyi ja lähti kierrelemään lyhty kädessä. Hän katsoi ylös ja huusi: "Katso, isä, härkiä!" Katossa oli parikymmentä biisonia punaisella ja mustalla, ja isä ymmärsi ne jääkautisiksi. Tiedemiehet pitivät häntä väärentäjänä kaksikymmentä vuotta — maalaukset olivat heidän mielestään aivan liian taitavia kivikauden ihmiselle. Sautuola kuoli ennen kuin hänet uskottiin. Maalaukset ovat noin 15 000 vuotta vanhoja.
+AIEMPI KYSYMYS: Mitä neoliittinen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Neoliittinen tarkoittaa [[uuden kivikauden]] aikaa, jolloin ihmiset siirtyivät metsästyksestä ja keräilystä [[maanviljelyyn]] ja karjanhoitoon ja asettuivat pysyviin asuinpaikkoihin. Kaudelle ovat tyypillisiä myös savenvalanta ja hiotut kivityökalut. [[Stara Zagoran]] asuinrakennukset ovat peräisin 6. vuosituhannen puolivälistä eaa. Maanviljely oli kyyhkyn kannalta hyvä keksintö, jyviä riitti.
+KYSYMYS: Kerro lisää: uuden kivikauden
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Mitä neoliittinen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Neoliittinen tarkoittaa [[uuden kivikauden]] aikaa, jolloin ihmiset siirtyivät metsästyksestä ja keräilystä [[maanviljelyyn]] ja karjanhoitoon ja asettuivat pysyviin asuinpaikkoihin. Kaudelle ovat tyypillisiä myös savenvalanta ja hiotut kivityökalut. [[Stara Zagoran]] asuinrakennukset ovat peräisin 6. vuosituhannen puolivälistä eaa. Maanviljely oli kyyhkyn kannalta hyvä keksintö, jyviä riitti.
+KYSYMYS: Kerro lisää: maanviljelyyn
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+AIEMPI KYSYMYS: Mitä neoliittinen tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— Neoliittinen tarkoittaa [[uuden kivikauden]] aikaa, jolloin ihmiset siirtyivät metsästyksestä ja keräilystä [[maanviljelyyn]] ja karjanhoitoon ja asettuivat pysyviin asuinpaikkoihin. Kaudelle ovat tyypillisiä myös savenvalanta ja hiotut kivityökalut. [[Stara Zagoran]] asuinrakennukset ovat peräisin 6. vuosituhannen puolivälistä eaa. Maanviljely oli kyyhkyn kannalta hyvä keksintö, jyviä riitti.
+KYSYMYS: Kerro lisää: Stara Zagoran
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Millä nimellä kaupunkia kutsuttiin antiikissa?
+AIEMPI VASTAUS (Livia):
+No jopas. Antiikissa kaupunki tunnettiin nimellä [[Pautalia]], ja Rooman aikana se oli Dacia Mediterranean kolmanneksi suurin kaupunki. Sitä ennen paikalla oli traakialainen asutus, joka oli tunnettu [[Asklepioksen]] pyhäköstä. Latinaa lukenut kyyhky ilahtuu, kun nimi on tuttu.
+KYSYMYS: Kerro lisää: Pautalia
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Millä nimellä kaupunkia kutsuttiin antiikissa?
+AIEMPI VASTAUS (Livia):
+No jopas. Antiikissa kaupunki tunnettiin nimellä [[Pautalia]], ja Rooman aikana se oli Dacia Mediterranean kolmanneksi suurin kaupunki. Sitä ennen paikalla oli traakialainen asutus, joka oli tunnettu [[Asklepioksen]] pyhäköstä. Latinaa lukenut kyyhky ilahtuu, kun nimi on tuttu.
+KYSYMYS: Kerro lisää: Asklepioksen
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Kuinka monta kivennäislähdettä kaupungissa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyustendilissä on yli 40 kivennäislähdettä. Kaupunki on kansallinen kylpyläkaupunki 600 metrin korkeudessa [[Osogovon]] vuoren juurella, ja se tunnetaan [[balneologian]] ja hedelmänviljelyn keskuksena. Kuumat lähteet, kyyhkykin tykkäisi kylvystä.
+KYSYMYS: Kerro lisää: Osogovon
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Kuinka monta kivennäislähdettä kaupungissa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kyustendilissä on yli 40 kivennäislähdettä. Kaupunki on kansallinen kylpyläkaupunki 600 metrin korkeudessa [[Osogovon]] vuoren juurella, ja se tunnetaan [[balneologian]] ja hedelmänviljelyn keskuksena. Kuumat lähteet, kyyhkykin tykkäisi kylvystä.
+KYSYMYS: Kerro lisää: balneologian
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Albania — maalehti / Historian hetki: Vlorë 1912 — lippu, joka ommeltiin yöllä] 28.11.1912 — Neula pistää kangasta vielä muutama tunti ennen kuin lippu nousee salkoon. Marigo Posio istuu yönsä ompelemassa punaista kangasta ja mustaa kaksipäistä kotkaa, koska lippu, jonka Ismail Qemali oli ensin lainannut, vaadittiin takaisin viime hetkellä. Perjantaina 28. marraskuuta 1912 vanha diplomaatti Qemali seisoo Vlorën satamakaupungin vaatimattomassa talossa, joka toimii samalla sairaalana, ja lukee ääneen julistuksen: Albania on itsenäinen, viiden vuosisadan osmanivallan jälkeen. Balkanin sodat ovat ajaneet Ottomaanien valtakunnan ahtaalle, ja albaanijohtajat ovat kokoontuneet Vlorëen nopeasti, ennen kuin naapurimaat ehtivät jakaa alueen keskenään: Serbian, Montenegron ja Kre…
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+AIEMPI KYSYMYS: Missä päin Bulgariaa Kyustendil sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyustendil sijaitsee Bulgarian äärilännessä Kyustendilin laakson eteläosassa, lähellä [[Serbian]] ja [[Pohjois-Makedonian]] rajoja. Matkaa [[Sofiasta]] lounaaseen on noin 90 kilometriä. Rajaseudulla kyyhky tuntee olonsa kotoisaksi.
+KYSYMYS: Kerro lisää: Serbian
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Ruoka: Tikveš, Makedonian viinilaakso] yli 2 500 vuotta — Kavadarcin ja Negotinon ympärillä levittäytyvä Tikvešin tasanko on Pohjois-Makedonian tunnetuin viinialue. Seudulla kerrotaan viiniä valmistetun yli 2 500 vuotta, ja lämmin, kuiva ilmasto sopii rypäleille. Paikallisia punaviinilajikkeita ovat vranec ja kratošija, ja valkoisista tunnetaan smederevka. Viinitarhat ulottuvat Vardar-joen laaksosta kumpuileville rinteille, ja syksyllä sadonkorjuu täyttää tilojen pihat. Kavadarcin kaupunki on alueen keskus, ja monet viinitilat ottavat vieraita vastaan.
+AIEMPI KYSYMYS: Missä päin Bulgariaa Kyustendil sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyustendil sijaitsee Bulgarian äärilännessä Kyustendilin laakson eteläosassa, lähellä [[Serbian]] ja [[Pohjois-Makedonian]] rajoja. Matkaa [[Sofiasta]] lounaaseen on noin 90 kilometriä. Rajaseudulla kyyhky tuntee olonsa kotoisaksi.
+KYSYMYS: Kerro lisää: Pohjois-Makedonian
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+- [Istanbul — kaupunkilehti / Istanbul: Medusa kannattelee pylvästä ylösalaisin] Hagia Sofiasta 150 metrin päässä laskeutuu 52 porrasta maan alle. Siellä on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama vesisäiliö: 336 yhdeksänmetristä pylvästä. Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla ranskalainen matkaaja ihmetteli, miksi talojen lattioissa on reikiä, joista lasketaan ämpäri — ja joistakin nousee kaloja. Kahden pylvään jalustaksi on pantu kivi, johon on veistetty Medusan kasvot: toinen kyljellään, toinen ylösalaisin. Varmaa syytä ei tiedetä. Tarina kertoo, että pää käännettiin, jottei kivettävä katse osuisi keneenkään; tutkijoiden mukaan kivet ovat roomalaisajan rakennuksesta otettua kierrätyskiveä.
+AIEMPI KYSYMYS: Missä päin Bulgariaa Kyustendil sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyustendil sijaitsee Bulgarian äärilännessä Kyustendilin laakson eteläosassa, lähellä [[Serbian]] ja [[Pohjois-Makedonian]] rajoja. Matkaa [[Sofiasta]] lounaaseen on noin 90 kilometriä. Rajaseudulla kyyhky tuntee olonsa kotoisaksi.
+KYSYMYS: Kerro lisää: Sofiasta
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Millaisia roomalaisaikaisia löytöjä Kyustendilista on tehty?
+AIEMPI VASTAUS (Livia):
+Mmm— Roomalaisen [[Pautalian]] linnoitus oli yli 29 hehtaarin kokoinen. Alueelta on löydetty kylpylöitä, [[basilikoja]] ja [[lattiamosaiikkeja]], jotka kertovat kaupungin merkityksestä Rooman aikana. Roomalaiset osasivat kyllä kylpeä, sen tiedän suvun perimätietona.
+KYSYMYS: Kerro lisää: Pautalian
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Millaisia roomalaisaikaisia löytöjä Kyustendilista on tehty?
+AIEMPI VASTAUS (Livia):
+Mmm— Roomalaisen [[Pautalian]] linnoitus oli yli 29 hehtaarin kokoinen. Alueelta on löydetty kylpylöitä, [[basilikoja]] ja [[lattiamosaiikkeja]], jotka kertovat kaupungin merkityksestä Rooman aikana. Roomalaiset osasivat kyllä kylpeä, sen tiedän suvun perimätietona.
+KYSYMYS: Kerro lisää: basilikoja
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+AIEMPI KYSYMYS: Millaisia roomalaisaikaisia löytöjä Kyustendilista on tehty?
+AIEMPI VASTAUS (Livia):
+Mmm— Roomalaisen [[Pautalian]] linnoitus oli yli 29 hehtaarin kokoinen. Alueelta on löydetty kylpylöitä, [[basilikoja]] ja [[lattiamosaiikkeja]], jotka kertovat kaupungin merkityksestä Rooman aikana. Roomalaiset osasivat kyllä kylpeä, sen tiedän suvun perimätietona.
+KYSYMYS: Kerro lisää: lattiamosaiikkeja
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Bulgaria — maalehti / Menovinkit] Bulgariassa moni museo on skannattu kolmiulotteiseksi, joten kirkon holviin ja arkeologian saliin pääsee kotoa käsin. Verkossa on myös vanhoja valokuvia, traakialaisten kultaa ja suoria kameroita lintujen pesillä.
+- [Bulgaria — maalehti / Kalliot ja kruunut] Bulgarian historia näkyy kalliossa ja kummulla: tuhat vuotta vanha ratsastajakuva, tsaarien poltettu linna, traakialaisten kuningashauta mäen sisällä ja katedraali, joka nousi vasta vapauden jälkeen.
+AIEMPI KYSYMYS: Mitä Kyustendilin seudulla tiedetään ennen roomalaisia?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Paikalle perustettiin [[traakialaisten]] asutus noin 400- tai 500-luvulla eaa., ja se oli tunnettu [[Asklepioksen]] pyhäköstä. Asklepios oli parantamisen jumala, mikä sopii hyvin yhteen seudun kivennäislähteiden kanssa. Jumalat parantavat, mutta pulla auttaa myös.
+KYSYMYS: Kerro lisää: traakialaisten
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+AIEMPI KYSYMYS: Minä vuonna Rusen ja Varnan yhdistävä rautatie otettiin käyttöön?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rusen ja Varnan välinen rautatie avattiin 1860-luvun puolivälissä, lähteiden mukaan vuonna 1866 tai 1867, eikä tarkasta vuodesta ole täyttä yksimielisyyttä. Rata yhdisti Tonavan jokisataman Mustanmeren rannikkoon, ja se rakennettiin Osmanien valtakunnan aikana. Sitä pidetään yleisesti yhtenä ensimmäisistä rautateistä Bulgarian alueella, ja se sai aikaan sen, että [[Varnan]] satamasta ja [[Tonavan]] varresta tuli yhteinen kauppareitti. Kyyhky olis silti ollut perillä nopeammin.
+KYSYMYS: Kerro lisää: Varnan
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Minä vuonna Rusen ja Varnan yhdistävä rautatie otettiin käyttöön?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rusen ja Varnan välinen rautatie avattiin 1860-luvun puolivälissä, lähteiden mukaan vuonna 1866 tai 1867, eikä tarkasta vuodesta ole täyttä yksimielisyyttä. Rata yhdisti Tonavan jokisataman Mustanmeren rannikkoon, ja se rakennettiin Osmanien valtakunnan aikana. Sitä pidetään yleisesti yhtenä ensimmäisistä rautateistä Bulgarian alueella, ja se sai aikaan sen, että [[Varnan]] satamasta ja [[Tonavan]] varresta tuli yhteinen kauppareitti. Kyyhky olis silti ollut perillä nopeammin.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+AIEMPI KYSYMYS: Mikä on Rusen lempinimi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rusen lempinimi on Pikku-Wien. Nimi viittaa kaupungin 1800- ja 1900-luvuilla rakennettuun uusbarokki- ja uusrokokoo-arkkitehtuuriin, joka muistuttaa Itävallan pääkaupungin [[Wienin]] tyyliä. Kaupunki kasvoi [[Tonavan]] kauppareitin varrella, ja rakennusten tyyli kertoo yhteyksistä Keski-Eurooppaan. Hyvät katot, sanoo kyyhky.
+KYSYMYS: Kerro lisää: Wienin
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Mikä silta yhdistää Rusen Romanian puolelle?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Rusen ja Romanian Giurgiun välillä kulkee Ystävyyden silta, joka ylittää [[Tonavan]] ja palvelee sekä rautatie- että maantieliikennettä. Silta on yksi Bulgarian ja [[Romanian]] välisen rajan tärkeistä ylityspaikoista, ja yhdessä jokisataman kanssa se selittää, miksi suuri osa Bulgarian ulkomaankaupasta kulkee Rusen kautta. Siltaa minä en tarvitse, siivet riittävät.
+KYSYMYS: Kerro lisää: Romanian
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+AIEMPI KYSYMYS: Mikä oli Tuna-vilajet?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tuna-vilajet eli Tonavan maakunta oli Osmanien valtakunnan hallintoalue, jonka keskuksena toimi Rusçuk eli nykyinen Ruse. Maakunta perustettiin 1800-luvun puolivälin tienoilla osana valtakunnan hallinnon uudistamista, ja se ulottui laajalti Tonavan eteläpuolisille alueille: Varnasta ja Tulceasta aina [[Sofiaan]] ja [[Nišiin]] asti. Hallintokeskuksena Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista. Raja on sittemmin siirtynyt moneen kertaan, mut kyyhky lentää yli.
+KYSYMYS: Kerro lisää: Sofiaan
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Persepolis — kohdekartta / Kohdekartta: Apadana] Dareios I aloitti, Xerxes I sai valmiiksi Apadana on Dareios I:n rakennuttama ja terassin suurin rakennus, ja se seisoo alustan länsilaidalla. Suurkuningas käytti sitä virallisiin vastaanottoihin. Sana apadana ei ole erisnimi vaan rakennustyypin nimi: se tarkoittaa kivistä pylvässalia, jollaisessa hallitsija otti vieraita vastaan. Sana jäi elämään kauas alkuperäisestä — arabian sana fadan ja armenian aparan-kʿ tarkoittavat molemmat palatsia ja ovat samaa juurta. Kattoa kannatti seitsemänkymmentäkaksi pylvästä, ja jokainen niistä oli kaksikymmentäneljä metriä korkea. Vuoden 330 eKr. jälkeen pylväitä alettiin purkaa rakennusaineeksi lähiseudun kyliin, ja 1900-luvun alussa niistä oli pystyssä …
+- [Suva — kaupunkilehti / Suva: Laiva, joka toi 61 000 uutta asukasta] Höyrylaiva Leonidas laski ankkurin Levukassa 14. toukokuuta 1879 ja purki 498 intialaista sopimustyöläistä — ensimmäiset niistä yli 61 000:sta, jotka saapuivat seuraavien 37 vuoden aikana viljelemään sokeriruokoa. Sopimus, jota kutsuttiin girmitiksi englannin sanasta agreement, sitoi työntekijän viideksi vuodeksi kerrallaan, ja valtaosa jäi Fidžiin sopimuskauden päätyttyä. Järjestelmä lakkautettiin virallisesti 1920. Sen perintö elää: vuoden 2017 väestönlaskennassa indofidžiläisiä oli 289 237 eli 32,7 prosenttia koko maan väestöstä.
+AIEMPI KYSYMYS: Mikä oli Tuna-vilajet?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Tuna-vilajet eli Tonavan maakunta oli Osmanien valtakunnan hallintoalue, jonka keskuksena toimi Rusçuk eli nykyinen Ruse. Maakunta perustettiin 1800-luvun puolivälin tienoilla osana valtakunnan hallinnon uudistamista, ja se ulottui laajalti Tonavan eteläpuolisille alueille: Varnasta ja Tulceasta aina [[Sofiaan]] ja [[Nišiin]] asti. Hallintokeskuksena Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista. Raja on sittemmin siirtynyt moneen kertaan, mut kyyhky lentää yli.
+KYSYMYS: Kerro lisää: Nišiin
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+AIEMPI KYSYMYS: Mitä maita Tonava virtaa läpi matkallaan Mustallemerelle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän reitin minä olen lentänyt. Tonava saa alkunsa Saksassa ja virtaa [[Itävallan]], Slovakian, [[Unkarin]], Kroatian, Serbian, [[Romanian]], Bulgarian ja Moldovan kautta Ukrainaan, jossa se laskee Mustaanmereen. Bulgarian osuudella joki toimii pitkälti Romanian ja Bulgarian rajana, ja siksi Rusen kaltaiset kaupungit ovat olleet tärkeitä jokisatamia. Ja tämän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mitä maita Tonava virtaa läpi matkallaan Mustallemerelle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän reitin minä olen lentänyt. Tonava saa alkunsa Saksassa ja virtaa [[Itävallan]], Slovakian, [[Unkarin]], Kroatian, Serbian, [[Romanian]], Bulgarian ja Moldovan kautta Ukrainaan, jossa se laskee Mustaanmereen. Bulgarian osuudella joki toimii pitkälti Romanian ja Bulgarian rajana, ja siksi Rusen kaltaiset kaupungit ovat olleet tärkeitä jokisatamia. Ja tämän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mitä Svishtovin vanha nimi Sveshtniy tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi johtuu vanhasta bulgarian sanasta svesht, joka tarkoittaa kynttilää. Selitys liittyy siihen, että kaupungissa oli [[Tonavan]] rannalla majakka, joka ohjasi laivoja. Kaupungin länsimainen nimi Sistova tunnetaan vuoden 1791 rauhansopimuksesta, joka päätti [[Itävallan]] ja Osmanien valtakunnan välisen sodan. Majakka on kyllä lentäjälle kätevä.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+AIEMPI KYSYMYS: Mitä Svishtovin vanha nimi Sveshtniy tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi johtuu vanhasta bulgarian sanasta svesht, joka tarkoittaa kynttilää. Selitys liittyy siihen, että kaupungissa oli [[Tonavan]] rannalla majakka, joka ohjasi laivoja. Kaupungin länsimainen nimi Sistova tunnetaan vuoden 1791 rauhansopimuksesta, joka päätti [[Itävallan]] ja Osmanien valtakunnan välisen sodan. Majakka on kyllä lentäjälle kätevä.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Minä vuonna Sistovan rauha solmittiin?
+AIEMPI VASTAUS (Livia):
+No niin. Sistovan rauha solmittiin vuonna 1791. Sopimus päätti Habsburgien [[Itävallan]] ja Osmanien valtakunnan välisen sodan, ja sen mukaan Itävalta palautti valtaamiaan alueita, muun muassa [[Belgradin]] kaupungin, osmaneille. Rauhan nimi tulee Svishtovin vanhasta eurooppalaisesta nimestä Sistova, jossa neuvottelut käytiin. Hiljainen neuvottelukaupunki, tuumii kyyhky.
+KYSYMYS: Kerro lisää: Belgradin
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+AIEMPI KYSYMYS: Mikä oli Novae roomalaisaikana?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Novae oli roomalainen sotilasleiri ja siirtokunta [[Tonavan]] rannalla, nykyisen Svishtovin kohdalla, osa Rooman valtakunnan pohjoista rajaa eli limesiä. Keisari Vespasianus lähetti paikalle [[legioona I Italican]] noin vuonna 70, ja leirin ympärille kasvoi siviiliasutus. Novae kuului niihin rajalinnoituksiin, joiden varassa Rooman valtakunta puolusti Tonavan linjaa. Sukuni on kantanut kirjeitä sellaisillekin leireille.
+KYSYMYS: Kerro lisää: legioona I Italican
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mitä Venäjän ja Turkin sota 1877–1878 muutti Bulgariassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Venäjän ja Osmanien valtakunnan välinen sota 1877–1878 johti Bulgarian vapautumiseen osmanivallasta. [[Venäjän]] armeija ylitti Tonavan Svishtovin kohdalla kesällä 1877, ja kaupungista tuli ensimmäinen vapautettu kaupunki. Sodan jälkeen [[Berliinin kongressissa]] vuonna 1878 muodostettiin autonominen Bulgarian ruhtinaskunta, joka oli Osmanien yliherruuden alainen. Täysi itsenäisyys tuli myöhemmin. Onpas siitä pitkä aika, eikä silti unohdu.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Mitä Venäjän ja Turkin sota 1877–1878 muutti Bulgariassa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Venäjän ja Osmanien valtakunnan välinen sota 1877–1878 johti Bulgarian vapautumiseen osmanivallasta. [[Venäjän]] armeija ylitti Tonavan Svishtovin kohdalla kesällä 1877, ja kaupungista tuli ensimmäinen vapautettu kaupunki. Sodan jälkeen [[Berliinin kongressissa]] vuonna 1878 muodostettiin autonominen Bulgarian ruhtinaskunta, joka oli Osmanien yliherruuden alainen. Täysi itsenäisyys tuli myöhemmin. Onpas siitä pitkä aika, eikä silti unohdu.
+KYSYMYS: Kerro lisää: Berliinin kongressissa
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+- [Romania — maalehti / Ruoka: Puuro, joka tuli laivalla] 1700-luku — Mämäligä on maissijauhosta keitetty puuro, joka korvasi Romaniassa vanhemmat hirssipuurot vähitellen: maissi levisi Amerikasta Tonavan varren maihin 1600-luvulla, ja ensimmäiset maininnat maissipuurosta ovat Transilvaniasta vuodelta 1718 ja Valakiasta vuodelta 1723. Tonavan laakso sopi maissille erinomaisesti, ja puurosta tuli 1700-luvulla maaseudun perusruokaa: se oli halpaa, täyttävää ja pysyi syötävänä myös huonoina satovuosina. Mämäligä keitetään paksuksi massaksi ja käännetään lautaselle kuin kakku, ja perinteisesti kyljestä leikataan siivuja langalla. Sitä syödään juuston ja smetanan kanssa tai lisäkkeenä lihalle ja kaalikääryleille.
+AIEMPI KYSYMYS: Mikä kaupunki on Svishtovin vastapäätä Tonavan toisella puolella?
+AIEMPI VASTAUS (Livia):
+Katotaas. Svishtovin vastarannalla Tonavan toisella puolella on Zimnicea, kaupunki [[Romaniassa]]. Joki toimii tässä kohdassa Bulgarian ja Romanian rajana, ja molemmat kaupungit ovat olleet jokiliikenteen ja kaupan solmukohtia. Venäjän armeija ylitti [[Tonavan]] näiden kaupunkien välillä kesällä 1877. Vastaranta näkyy ylhäältä hyvin, mut ei kyyhky sitä rajaksi huomaa.
+KYSYMYS: Kerro lisää: Romaniassa
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+AIEMPI KYSYMYS: Mikä on Bulgarian pienin kaupunki?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bulgarian pienin kaupunki on Melnik, jossa asukkaita on alle neljäsataa. Se on säilyttänyt kaupunkiasemansa historiallisista syistä, ja koko kaupunki on arkkitehtuurisuojelualue. Sen yllä kohoavat [[Melnikin hiekkapyramidit]], ja kaupunki sijaitsee [[Pirin-vuorten]] lounaisosassa Lounais-Bulgariassa. Pienempi kuin moni kylä, mut kaupunki se on.
+KYSYMYS: Kerro lisää: Melnikin hiekkapyramidit
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+AIEMPI KYSYMYS: Mikä on Bulgarian pienin kaupunki?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bulgarian pienin kaupunki on Melnik, jossa asukkaita on alle neljäsataa. Se on säilyttänyt kaupunkiasemansa historiallisista syistä, ja koko kaupunki on arkkitehtuurisuojelualue. Sen yllä kohoavat [[Melnikin hiekkapyramidit]], ja kaupunki sijaitsee [[Pirin-vuorten]] lounaisosassa Lounais-Bulgariassa. Pienempi kuin moni kylä, mut kaupunki se on.
+KYSYMYS: Kerro lisää: Pirin-vuorten
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+AIEMPI KYSYMYS: Minkä sanan mukaan Melnik on nimetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Melnikin nimi tulee sanasta mel, joka tarkoittaa valkoista savea. [[Slaavit]] nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan, sillä seudun vaaleat kalliot ja savikerrokset ovat kaupungin tunnusmerkki. Nimi viittaa siis suoraan maisemaan, jota [[hiekkapyramidit]] hallitsevat. Valkoista savea, jaa-a, pullataikinaa en sentään sano.
+KYSYMYS: Kerro lisää: Slaavit
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Hiekka joka on täynnä pieneliöitä] nykyään — Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+AIEMPI KYSYMYS: Minkä sanan mukaan Melnik on nimetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Melnikin nimi tulee sanasta mel, joka tarkoittaa valkoista savea. [[Slaavit]] nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan, sillä seudun vaaleat kalliot ja savikerrokset ovat kaupungin tunnusmerkki. Nimi viittaa siis suoraan maisemaan, jota [[hiekkapyramidit]] hallitsevat. Valkoista savea, jaa-a, pullataikinaa en sentään sano.
+KYSYMYS: Kerro lisää: hiekkapyramidit
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Norfolk — kaupunkilehti / Selviytyjät: Phillip Islandin hibiskus — kaksi pensasta koko maailmassa] Norfolkin eteläpuolella kohoava pieni Phillip Island oli vielä 1850-luvulla lähes täysin paljas: 1790-luvulta lähtien saarelle päästetyt siat, vuohet ja kanit olivat syöneet kasvillisuuden loppuun ja jättäneet jäljelle vain punertavan, eroosion kalvaman kallioperän. Eläimet hävitettiin vasta 1980-luvun lopulla, minkä jälkeen saari on vihertynyt uudelleen. Yksi harvinaisimmista selviytyjistä on Phillip Islandin hibiskus, jonka koko luonnonvarainen kanta koostuu edelleen vain kahdesta pensaasta samalla kalliolla — laji kasvaa nykyisin varmuuden vuoksi myös Norfolkin kasvitieteellisessä puutarhassa.
+- [Sahara — kaupunkilehti / Sahara: Sammuneet tulivuoret keskellä aavikkoa] Keskellä Algerian aavikkoa kohoaa Ahaggarin eli Hoggarin vuoristo, jonka huippu Tahat nousee 2 908 metriin – Algerian korkein kohta. Osa jyrkistä huipuista, kuten Ilamen, on sammuneiden tulivuorten eroosion paljastamia syöttökanavia, ja peruskallio on lähes kaksi miljardia vuotta vanhaa. Yöt ovat vuoristossa kylmiä, toisinaan pakkasen puolella, vaikka ympäröivä aavikko hehkuu päivällä kuumuudesta. Alue on vuosisatoja ollut Kel Ahaggar -tuaregien kotiseutua ja yksi Saharan harvoista paikoista, joissa erikoistunut linnusto on säilynyt muuttuvassa ilmastossa.
+AIEMPI KYSYMYS: Mitä hiekkapyramidit ovat ja miten ne ovat syntyneet?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Melnikin hiekkapyramidit ovat korkeita, kapeita hiekka- ja savikivimuodostelmia, jotka ovat syntyneet vähitellen veden ja tuulen aiheuttaman [[eroosion]] muovaamina. Pehmeämpi aines on kulunut pois nopeammin kuin kovempi, ja jäljelle on jäänyt jyrkkiä pylväitä ja harjanteita kaupungin ympärille. Muodostelmat sijaitsevat [[Pirin-vuorten]] eteläpuolella, ja ne antavat Melnikille sen helposti tunnistettavan maiseman. Ylhäältä ne näyttävät aika komeilta.
+KYSYMYS: Kerro lisää: eroosion
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+AIEMPI KYSYMYS: Millaista viiniä Melnikin seudulla tehdään?
+AIEMPI VASTAUS (Livia):
+Mmm— viiniä. Melnikin seutu on tunnettu viininviljelystä, ja kaupungin vauraus perustui 1600- ja 1700-luvuilla tupakan lisäksi viiniin, jota vietiin ulkomaille lähinnä [[Englantiin]] ja [[Itävaltaan]]. Seudun tunnetuimpana rypälelajikkeena pidetään paikallista lajiketta shiroka melnishka loza, josta valmistetaan punaviiniä. En ole aivan varma kaikista yksityiskohdista, mutta viininviljelyn pitkä perinne on varmaa. Minä pidän enemmän siemenistä.
+KYSYMYS: Kerro lisää: Englantiin

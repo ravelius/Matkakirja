@@ -1,0 +1,1060 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Milloin Filibestä tuli taas Plovdiv?
+AIEMPI VASTAUS (Livia):
+Ai tota. Annas ku mietin. Kaupungin osmanilainen nimi oli Filibe, mutta bulgarialaiset ovat kutsuneet sitä omalla kielellään nimellä Plovdiv. Vuoden 1878 jälkeen Plovdivista tuli [[Itä-Rumelian]] autonomisen maakunnan pääkaupunki, jonka [[Berliinin kongressin]] päätös oli luonut, ja maakunta yhdistyi Bulgariaan syyskuussa 1885. Tarkkaa päivää, jolloin osmanien nimi jäi pois virallisesta käytöstä, en ole varma. Nimet muuttuu kyl nopeammin kuin kyyhky ehtii perässä.
+KYSYMYS: Kerro lisää: Itä-Rumelian
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Berliinin karhu] Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on turkkurien kiltakirjeessä, ja siinä lukee "olen Berliinin porvarien sinetti". Vitsi on siinä, ettei karhulla todennäköisesti ole kaupungin nimen kanssa mitään tekemistä: tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on slaavilaista perua sanasta berl, suo, ja karhu on kansanetymologiaa — puhuva vaakuna. Kaupunki otti asian silti kirjaimellisesti. 17. elokuuta 1939 se sai neljä elävää karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään tiiliseen tarhaan vallihautoineen. Sinne muutti karhusukupolvi toisensa jälkeen: Nante ja Jette, joka synnytti 33 pentua ja jonk…
+AIEMPI KYSYMYS: Milloin Filibestä tuli taas Plovdiv?
+AIEMPI VASTAUS (Livia):
+Ai tota. Annas ku mietin. Kaupungin osmanilainen nimi oli Filibe, mutta bulgarialaiset ovat kutsuneet sitä omalla kielellään nimellä Plovdiv. Vuoden 1878 jälkeen Plovdivista tuli [[Itä-Rumelian]] autonomisen maakunnan pääkaupunki, jonka [[Berliinin kongressin]] päätös oli luonut, ja maakunta yhdistyi Bulgariaan syyskuussa 1885. Tarkkaa päivää, jolloin osmanien nimi jäi pois virallisesta käytöstä, en ole varma. Nimet muuttuu kyl nopeammin kuin kyyhky ehtii perässä.
+KYSYMYS: Kerro lisää: Berliinin kongressin
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Mitä bulgarialaisen kirkon elpyminen tarkoitti?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Kirkkoasia oli aikanaan iso poliittinen kysymys. Vuonna 1870 osmanien sulttaani hyväksyi bulgarialaisen [[eksarkaatin]] perustamisen, ja sen myötä bulgarialaiset saivat oman kirkkonsa, joka oli erillinen [[Konstantinopolin patriarkaatista]]. Aiemmin bulgarialaisen väestön kirkko oli ollut kreikkalaisvoittoisen patriarkaatin alainen, ja jumalanpalveluksissa sekä koulutuksessa käytettiin usein kreikkaa. Uusi kirkko vahvisti bulgarian kielen ja oman koulutuksen asemaa, joten sillä oli suuri merkitys [[Bulgarian kansallisen herätyksen]] kannalta, vaikka valtio oli yhä osa osmanivaltaa. Pienellä paperilla voi muuttaa paljon, sen minä tiedän.
+KYSYMYS: Kerro lisää: eksarkaatin
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Mitä bulgarialaisen kirkon elpyminen tarkoitti?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Kirkkoasia oli aikanaan iso poliittinen kysymys. Vuonna 1870 osmanien sulttaani hyväksyi bulgarialaisen [[eksarkaatin]] perustamisen, ja sen myötä bulgarialaiset saivat oman kirkkonsa, joka oli erillinen [[Konstantinopolin patriarkaatista]]. Aiemmin bulgarialaisen väestön kirkko oli ollut kreikkalaisvoittoisen patriarkaatin alainen, ja jumalanpalveluksissa sekä koulutuksessa käytettiin usein kreikkaa. Uusi kirkko vahvisti bulgarian kielen ja oman koulutuksen asemaa, joten sillä oli suuri merkitys [[Bulgarian kansallisen herätyksen]] kannalta, vaikka valtio oli yhä osa osmanivaltaa. Pienellä paperilla voi muuttaa paljon, sen minä tiedän.
+KYSYMYS: Kerro lisää: Konstantinopolin patriarkaatista
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Perinne, jonka Unesco otti suojaansa] Unesco lisäsi Latvian, Viron ja Liettuan yhteiset laulu- ja tanssijuhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloonsa vuonna 2003 — tunnustuksena siitä, että perinne on säilyttänyt kolmen maan kansanmusiikkia elävänä sukupolvesta toiseen kirjoitetun nuotin ja suullisen opetuksen yhdistelmällä. Kolmen Baltian maan juhlat kehittyivät toisistaan erillään 1800-luvun kansallisen herätyksen aikana, mutta niitä yhdistää sama perusidea: tavalliset ihmiset, ei ammattilaiset, laulavat yhdessä isoina joukkoina oman kielensä ja kulttuurinsa kunniaksi.
+AIEMPI KYSYMYS: Mitä bulgarialaisen kirkon elpyminen tarkoitti?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Kirkkoasia oli aikanaan iso poliittinen kysymys. Vuonna 1870 osmanien sulttaani hyväksyi bulgarialaisen [[eksarkaatin]] perustamisen, ja sen myötä bulgarialaiset saivat oman kirkkonsa, joka oli erillinen [[Konstantinopolin patriarkaatista]]. Aiemmin bulgarialaisen väestön kirkko oli ollut kreikkalaisvoittoisen patriarkaatin alainen, ja jumalanpalveluksissa sekä koulutuksessa käytettiin usein kreikkaa. Uusi kirkko vahvisti bulgarian kielen ja oman koulutuksen asemaa, joten sillä oli suuri merkitys [[Bulgarian kansallisen herätyksen]] kannalta, vaikka valtio oli yhä osa osmanivaltaa. Pienellä paperilla voi muuttaa paljon, sen minä tiedän.
+KYSYMYS: Kerro lisää: Bulgarian kansallisen herätyksen
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Mitä roomalaisia jäänteitä Plovdivissa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täältä katolta ne näkyy vielä hyvin. Plovdivin antiikin aikainen nimi oli [[Philippopolis]], ja perimätiedon mukaan sen perusti Makedonian kuningas [[Filippos II]]. Roomalaisaikana kaupunki oli tärkeä, ja siitä on säilynyt muun muassa [[roomalainen teatteri]] vanhankaupungin kukkulan rinteellä, jota käytetään yhä esityksiin. Kaupungin keskustan alta on löytynyt myös roomalaisen stadionin osia. Teatterin ajoitus on lähteiden mukaan noin 100-luvulle.
+
+Minä olen katsonut teatteria ylhäältä päin, ja katsomo on edelleen kunnossa. Kyyhkyjä sinne mahtuisi vaikka kuinka, mut ei kukaan ole koskaan kysynyt.
+KYSYMYS: Kerro lisää: Philippopolis
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Mitä roomalaisia jäänteitä Plovdivissa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täältä katolta ne näkyy vielä hyvin. Plovdivin antiikin aikainen nimi oli [[Philippopolis]], ja perimätiedon mukaan sen perusti Makedonian kuningas [[Filippos II]]. Roomalaisaikana kaupunki oli tärkeä, ja siitä on säilynyt muun muassa [[roomalainen teatteri]] vanhankaupungin kukkulan rinteellä, jota käytetään yhä esityksiin. Kaupungin keskustan alta on löytynyt myös roomalaisen stadionin osia. Teatterin ajoitus on lähteiden mukaan noin 100-luvulle.
+
+Minä olen katsonut teatteria ylhäältä päin, ja katsomo on edelleen kunnossa. Kyyhkyjä sinne mahtuisi vaikka kuinka, mut ei kukaan ole koskaan kysynyt.
+KYSYMYS: Kerro lisää: Filippos II
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Ljubljana — kaupunkilehti / Historia: Emona: roomalainen kaupunki nykyisen keskustan alla] Ennen Ljubljanaa täällä oli Emona. Roomalaiset rakensivat linnavuoren juurelle sotilasleirin jo ennen ajanlaskun alkua, ja muurein varustettu kaupunki perustettiin vuoden 14 tienoilla. Siellä asui viidestä kuuteen tuhatta ihmistä, enimmäkseen kauppiaita ja käsityöläisiä. Katuverkko oli roomalaiseen tapaan ristikko, jonka keskellä oli tori. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja, ja Jože Plečnik kunnosti muurin jäänteet puistoksi.
+AIEMPI KYSYMYS: Mitä roomalaisia jäänteitä Plovdivissa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Täältä katolta ne näkyy vielä hyvin. Plovdivin antiikin aikainen nimi oli [[Philippopolis]], ja perimätiedon mukaan sen perusti Makedonian kuningas [[Filippos II]]. Roomalaisaikana kaupunki oli tärkeä, ja siitä on säilynyt muun muassa [[roomalainen teatteri]] vanhankaupungin kukkulan rinteellä, jota käytetään yhä esityksiin. Kaupungin keskustan alta on löytynyt myös roomalaisen stadionin osia. Teatterin ajoitus on lähteiden mukaan noin 100-luvulle.
+
+Minä olen katsonut teatteria ylhäältä päin, ja katsomo on edelleen kunnossa. Kyyhkyjä sinne mahtuisi vaikka kuinka, mut ei kukaan ole koskaan kysynyt.
+KYSYMYS: Kerro lisää: roomalainen teatteri
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Mitä Bulgarian kansallinen herätys oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost on pitkä tarina. Bulgarian kansallinen herätys tarkoitti 1700-luvulta alkanutta ja 1800-luvulla voimistunutta aikaa, jolloin bulgarialaiset alkoivat vahvistaa omaa kieltään, koulujaan, kirjallisuuttaan ja kirkkoaan [[osmanivallan]] alla. Alkuna pidetään usein munkki [[Paisi Hilendarskin]] vuonna 1762 valmistunutta historiateosta, joka muistutti bulgarialaisia heidän keskiaikaisesta valtakunnastaan. Herätykseen kuuluivat bulgarian kielellä opettavat koulut, painotuotteet ja lopulta kirkollinen erillisyys vuonna 1870. Plovdivin vanhassa kaupungissa on yhä herätysajan kauppiastaloja. Kirjeestäkin on moni asia lähtenyt liikkeelle, kyl minä sen tiedän.
+KYSYMYS: Kerro lisää: osmanivallan
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Mitä Bulgarian kansallinen herätys oli?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost on pitkä tarina. Bulgarian kansallinen herätys tarkoitti 1700-luvulta alkanutta ja 1800-luvulla voimistunutta aikaa, jolloin bulgarialaiset alkoivat vahvistaa omaa kieltään, koulujaan, kirjallisuuttaan ja kirkkoaan [[osmanivallan]] alla. Alkuna pidetään usein munkki [[Paisi Hilendarskin]] vuonna 1762 valmistunutta historiateosta, joka muistutti bulgarialaisia heidän keskiaikaisesta valtakunnastaan. Herätykseen kuuluivat bulgarian kielellä opettavat koulut, painotuotteet ja lopulta kirkollinen erillisyys vuonna 1870. Plovdivin vanhassa kaupungissa on yhä herätysajan kauppiastaloja. Kirjeestäkin on moni asia lähtenyt liikkeelle, kyl minä sen tiedän.
+KYSYMYS: Kerro lisää: Paisi Hilendarskin
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Miten Plovdivin sijainti on vaikuttanut sen historiaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sijainti on kyl tärkeä asia. Plovdiv sijaitsee [[Maritsa-joen]] laaksossa Etelä-Bulgariassa, kaupungin keskellä kohoavien kukkuloiden ympärillä. Paikka on ollut asuttu pitkään, koska joen tasainen laakso on sopinut viljelylle ja koska kaupungin kautta kulki roomalaisaikana [[Via Militaris]] -tie Euroopan sisäosista kohti [[Konstantinopolia]]. Kukkulat tarjosivat puolustettavia paikkoja ja laakso kulkuyhteydet. Hyvä paikka on hyvä paikka, se näkyy ylhäältäkin.
+KYSYMYS: Kerro lisää: Maritsa-joen
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Miten Plovdivin sijainti on vaikuttanut sen historiaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sijainti on kyl tärkeä asia. Plovdiv sijaitsee [[Maritsa-joen]] laaksossa Etelä-Bulgariassa, kaupungin keskellä kohoavien kukkuloiden ympärillä. Paikka on ollut asuttu pitkään, koska joen tasainen laakso on sopinut viljelylle ja koska kaupungin kautta kulki roomalaisaikana [[Via Militaris]] -tie Euroopan sisäosista kohti [[Konstantinopolia]]. Kukkulat tarjosivat puolustettavia paikkoja ja laakso kulkuyhteydet. Hyvä paikka on hyvä paikka, se näkyy ylhäältäkin.
+KYSYMYS: Kerro lisää: Via Militaris
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+AIEMPI KYSYMYS: Miten Plovdivin sijainti on vaikuttanut sen historiaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sijainti on kyl tärkeä asia. Plovdiv sijaitsee [[Maritsa-joen]] laaksossa Etelä-Bulgariassa, kaupungin keskellä kohoavien kukkuloiden ympärillä. Paikka on ollut asuttu pitkään, koska joen tasainen laakso on sopinut viljelylle ja koska kaupungin kautta kulki roomalaisaikana [[Via Militaris]] -tie Euroopan sisäosista kohti [[Konstantinopolia]]. Kukkulat tarjosivat puolustettavia paikkoja ja laakso kulkuyhteydet. Hyvä paikka on hyvä paikka, se näkyy ylhäältäkin.
+KYSYMYS: Kerro lisää: Konstantinopolia
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+AIEMPI KYSYMYS: Keitä kultaa kantaneet ihmiset olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Heidän nimeään ei tunneta, sillä kirjoitustaitoa ei vielä ollut. Tutkijat puhuvat [[Varnan kulttuurista]], joka oli kuparikauden maanviljelijöiden ja karjanhoitajien yhteisö Mustanmeren rannikolla noin 4600–4200 eaa. Haudoista päätellen yhteisössä oli selvä asemaero: osa vainajista sai mukaansa runsaasti kultaa ja kuparia, osa hyvin vähän tai ei lainkaan. [[Varnan nekropolista]] löydetty kulta kertoo, että yhteisöllä oli taitavia metallinkäsittelijöitä, ja [[kuparikauden]] kauppayhteydet ulottuivat kauas. Nimettömiä mutta kultaa ne jätti, kyl minä sen arvostan.
+KYSYMYS: Kerro lisää: Varnan kulttuurista
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+AIEMPI KYSYMYS: Keitä kultaa kantaneet ihmiset olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Heidän nimeään ei tunneta, sillä kirjoitustaitoa ei vielä ollut. Tutkijat puhuvat [[Varnan kulttuurista]], joka oli kuparikauden maanviljelijöiden ja karjanhoitajien yhteisö Mustanmeren rannikolla noin 4600–4200 eaa. Haudoista päätellen yhteisössä oli selvä asemaero: osa vainajista sai mukaansa runsaasti kultaa ja kuparia, osa hyvin vähän tai ei lainkaan. [[Varnan nekropolista]] löydetty kulta kertoo, että yhteisöllä oli taitavia metallinkäsittelijöitä, ja [[kuparikauden]] kauppayhteydet ulottuivat kauas. Nimettömiä mutta kultaa ne jätti, kyl minä sen arvostan.
+KYSYMYS: Kerro lisää: Varnan nekropolista
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Keitä kultaa kantaneet ihmiset olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Heidän nimeään ei tunneta, sillä kirjoitustaitoa ei vielä ollut. Tutkijat puhuvat [[Varnan kulttuurista]], joka oli kuparikauden maanviljelijöiden ja karjanhoitajien yhteisö Mustanmeren rannikolla noin 4600–4200 eaa. Haudoista päätellen yhteisössä oli selvä asemaero: osa vainajista sai mukaansa runsaasti kultaa ja kuparia, osa hyvin vähän tai ei lainkaan. [[Varnan nekropolista]] löydetty kulta kertoo, että yhteisöllä oli taitavia metallinkäsittelijöitä, ja [[kuparikauden]] kauppayhteydet ulottuivat kauas. Nimettömiä mutta kultaa ne jätti, kyl minä sen arvostan.
+KYSYMYS: Kerro lisää: kuparikauden
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Mistä Varnan kulta oli peräisin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän minä en osaa vastata varmasti. Lähdettä ei tiedetä varmasti, enkä aio arvata. Kulta on voinut tulla [[Balkanin]] alueelta, esimerkiksi jokien hiekasta huuhtomalla tai vuoristojen esiintymistä, mutta tarkkaa alkuperää ei ole osoitettu yksiselitteisesti. Varnan haudat kertovat kuitenkin kaukaisista yhteyksistä: tutkijoiden mukaan niistä on löytynyt esimerkiksi [[Spondylus-simpukoista]] tehtyjä koruja, jotka ovat peräisin Välimeren alueelta. Joskus on kyl rehellistä myöntää, ettei tiedä.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+AIEMPI KYSYMYS: Mistä Varnan kulta oli peräisin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tähän minä en osaa vastata varmasti. Lähdettä ei tiedetä varmasti, enkä aio arvata. Kulta on voinut tulla [[Balkanin]] alueelta, esimerkiksi jokien hiekasta huuhtomalla tai vuoristojen esiintymistä, mutta tarkkaa alkuperää ei ole osoitettu yksiselitteisesti. Varnan haudat kertovat kuitenkin kaukaisista yhteyksistä: tutkijoiden mukaan niistä on löytynyt esimerkiksi [[Spondylus-simpukoista]] tehtyjä koruja, jotka ovat peräisin Välimeren alueelta. Joskus on kyl rehellistä myöntää, ettei tiedä.
+KYSYMYS: Kerro lisää: Spondylus-simpukoista
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+AIEMPI KYSYMYS: Kuka perusti antiikin Odessoksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi on vanha, ja niin on kaupunkikin. Lähteiden mukaan kreikkalaiset siirtolaiset perustivat Odessoksen 500-luvulla eaa., ja heidän uskotaan tulleen Vähän-Aasian Miletoksesta. Paikalla oli tätä ennen [[trakialaisten]] asutusta. Kaupunki kuului myöhemmin [[Rooman valtakuntaan]] ja jatkoi tärkeänä satamana [[Mustanmeren]] länsirannalla. Satama on kyl pysynyt, nimi ei.
+KYSYMYS: Kerro lisää: trakialaisten
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Härännahan kokoinen valtakunta] Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti "uutta kaupunkia". Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+AIEMPI KYSYMYS: Kuka perusti antiikin Odessoksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi on vanha, ja niin on kaupunkikin. Lähteiden mukaan kreikkalaiset siirtolaiset perustivat Odessoksen 500-luvulla eaa., ja heidän uskotaan tulleen Vähän-Aasian Miletoksesta. Paikalla oli tätä ennen [[trakialaisten]] asutusta. Kaupunki kuului myöhemmin [[Rooman valtakuntaan]] ja jatkoi tärkeänä satamana [[Mustanmeren]] länsirannalla. Satama on kyl pysynyt, nimi ei.
+KYSYMYS: Kerro lisää: Rooman valtakuntaan
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Salaatti lipun väreissä] 1956 — Shopska-salaatti syntyi 1950-luvulla, kun valtion matkailuyhtiö Balkantourist kehitti Mustanmeren rannikon Družban lomakylän ravintolassa uuden annoksen ulkomaisille turisteille. Kokit valitsivat ainekset tarkoituksella niin, että lautanen näyttää Bulgarian lipulta: valkoinen raastettu sirene-juusto, vihreä kurkku ja paprika, ja punainen tomaatti. Salaatti sai nimensä läntisen Bulgarian shop-alueen asukkaista, vaikka resepti keksittiin rantahotellissa eikä vuorikylässä. Monista samaan aikaan luoduista matkailuruoista shopska on ainoa, joka jäi elämään — siitä tuli koko maan tunnetuin ruokalaji.
+AIEMPI KYSYMYS: Kuka perusti antiikin Odessoksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Nimi on vanha, ja niin on kaupunkikin. Lähteiden mukaan kreikkalaiset siirtolaiset perustivat Odessoksen 500-luvulla eaa., ja heidän uskotaan tulleen Vähän-Aasian Miletoksesta. Paikalla oli tätä ennen [[trakialaisten]] asutusta. Kaupunki kuului myöhemmin [[Rooman valtakuntaan]] ja jatkoi tärkeänä satamana [[Mustanmeren]] länsirannalla. Satama on kyl pysynyt, nimi ei.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Collegium Maius] 1400-luvun loppu Jagellonin yliopiston vanhin rakennus Collegium Maius sai nykyisen goottilaisen ilmeensä 1400-luvun lopulla, vaikka talo on osittain jo 1300-luvulta. Kuningas Władysław Jagiełło osti rakennuksen yliopiston käyttöön rahoilla, jotka olivat jääneet hänen edesmenneeltä puolisoltaan kuningatar Jadwigalta. Sisäpihaa kiertävät kivikaaret, ja pihan keskellä on kaivo vuodelta 1517. Talossa opiskeli 1490-luvulla nuori Mikael Kopernikus, josta tuli myöhemmin tähtitieteilijä, joka osoitti Maan kiertävän Aurinkoa eikä toisin päin. Nykyään rakennuksessa toimii yliopiston museo. Aarrekammiossa säilytetään muun muassa vanha Jagellonin maapallo, jossa näkyy jo äskettäin löydetty Amerikka, s…
+AIEMPI KYSYMYS: Mitä Varnan taistelussa vuonna 1444 tapahtui?
+AIEMPI VASTAUS (Livia):
+Ai se. Varnan taistelu käytiin marraskuussa 1444. Unkarin ja Puolan kuningas [[Władysław III]] johti ristiretkeläisarmeijaa, jonka päällikköinä toimi myös unkarilainen [[János Hunyadi]]. Osmanien sulttaani Murad II voitti taistelun, ja kuningas kuoli siinä. Tuolloin Bulgaria kuului jo osmanivaltaan, ja taistelun tulos vahvisti osmanien asemaa Balkanilla. Siitä on kulunut yli viisisataa vuotta, ja rajat ja valtiot ovat sittemmin muuttuneet moneen kertaan. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Władysław III
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Mitä Varnan taistelussa vuonna 1444 tapahtui?
+AIEMPI VASTAUS (Livia):
+Ai se. Varnan taistelu käytiin marraskuussa 1444. Unkarin ja Puolan kuningas [[Władysław III]] johti ristiretkeläisarmeijaa, jonka päällikköinä toimi myös unkarilainen [[János Hunyadi]]. Osmanien sulttaani Murad II voitti taistelun, ja kuningas kuoli siinä. Tuolloin Bulgaria kuului jo osmanivaltaan, ja taistelun tulos vahvisti osmanien asemaa Balkanilla. Siitä on kulunut yli viisisataa vuotta, ja rajat ja valtiot ovat sittemmin muuttuneet moneen kertaan. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: János Hunyadi
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+AIEMPI KYSYMYS: Mikä on Kultaiset hiekat Varnan lähellä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kultaiset hiekat eli [[Zlatni Pjasaci]] on rantalomakohde Varnan pohjoispuolella [[Mustanmeren]] rannikolla. Se tunnetaan pitkästä hiekkarannastaan ja hotelleistaan, ja lähellä on samanniminen luonnonpuisto, jonka metsä ulottuu lähelle rantaa. Kohde on suosittu erityisesti kesäisin, kun rannikon ilma on lämpimintä. Hiekkaa riittää, kunhan joku toisi pullaa.
+KYSYMYS: Kerro lisää: Zlatni Pjasaci
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kukkula, joka paloi kerran] 1393 — Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 osmanit piirittivät linnoitusta kolme kuukautta ja polttivat sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 Bulgarian valtion 1300-vuotisjuhlaan.
+AIEMPI KYSYMYS: Miksi kansalliskokous kokoontui juuri täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Siihen on varmaan symbolinen syy. Veliko Tarnovo valittiin kokouspaikaksi todennäköisesti siksi, että se oli [[Toisen Bulgarian valtakunnan]] pääkaupunki 1185–1393, joten kansalliskokous liitti uuden valtion keskiaikaiseen perintöön. Huhtikuussa 1879 kokoontunut kokous hyväksyi maan ensimmäisen perustuslain, jota kutsutaan [[Tarnovon perustuslaiksi]]. Vanha pääkaupunki sai ny vielä yhden isomman hetken.
+KYSYMYS: Kerro lisää: Toisen Bulgarian valtakunnan
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kukkula, joka paloi kerran] 1393 — Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 osmanit piirittivät linnoitusta kolme kuukautta ja polttivat sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 Bulgarian valtion 1300-vuotisjuhlaan.
+AIEMPI KYSYMYS: Miksi kansalliskokous kokoontui juuri täällä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Siihen on varmaan symbolinen syy. Veliko Tarnovo valittiin kokouspaikaksi todennäköisesti siksi, että se oli [[Toisen Bulgarian valtakunnan]] pääkaupunki 1185–1393, joten kansalliskokous liitti uuden valtion keskiaikaiseen perintöön. Huhtikuussa 1879 kokoontunut kokous hyväksyi maan ensimmäisen perustuslain, jota kutsutaan [[Tarnovon perustuslaiksi]]. Vanha pääkaupunki sai ny vielä yhden isomman hetken.
+KYSYMYS: Kerro lisää: Tarnovon perustuslaiksi
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+AIEMPI KYSYMYS: Millainen kaupunki Veliko Tarnovo on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veliko Tarnovo on nykyään yliopistokaupunki ja matkailukohde Bulgarian pohjoisosassa. Kaupungin talot nousevat portaittain jyrkille rinteille [[Jantra]]-joen mutkittelevan laakson ympärillä, ja kukkulalla kohoavat [[Tsarevetsin]] linnoituksen kunnostetut rauniot. Kaupungissa toimii [[Pyhien Kyrilloksen ja Metodiuksen yliopisto]], joten opiskelijoita näkyy katukuvassa. Kaunis kaupunki, ylhäältä vielä kauniimpi, kyl minä sen sanon.
+KYSYMYS: Kerro lisää: Jantra
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kukkula, joka paloi kerran] 1393 — Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 osmanit piirittivät linnoitusta kolme kuukautta ja polttivat sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 Bulgarian valtion 1300-vuotisjuhlaan.
+AIEMPI KYSYMYS: Millainen kaupunki Veliko Tarnovo on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veliko Tarnovo on nykyään yliopistokaupunki ja matkailukohde Bulgarian pohjoisosassa. Kaupungin talot nousevat portaittain jyrkille rinteille [[Jantra]]-joen mutkittelevan laakson ympärillä, ja kukkulalla kohoavat [[Tsarevetsin]] linnoituksen kunnostetut rauniot. Kaupungissa toimii [[Pyhien Kyrilloksen ja Metodiuksen yliopisto]], joten opiskelijoita näkyy katukuvassa. Kaunis kaupunki, ylhäältä vielä kauniimpi, kyl minä sen sanon.
+KYSYMYS: Kerro lisää: Tsarevetsin
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+AIEMPI KYSYMYS: Millainen kaupunki Veliko Tarnovo on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veliko Tarnovo on nykyään yliopistokaupunki ja matkailukohde Bulgarian pohjoisosassa. Kaupungin talot nousevat portaittain jyrkille rinteille [[Jantra]]-joen mutkittelevan laakson ympärillä, ja kukkulalla kohoavat [[Tsarevetsin]] linnoituksen kunnostetut rauniot. Kaupungissa toimii [[Pyhien Kyrilloksen ja Metodiuksen yliopisto]], joten opiskelijoita näkyy katukuvassa. Kaunis kaupunki, ylhäältä vielä kauniimpi, kyl minä sen sanon.
+KYSYMYS: Kerro lisää: Pyhien Kyrilloksen ja Metodiuksen yliopisto
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä oli Toinen Bulgarian valtakunta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä riittää kerrottavaa. Toinen Bulgarian valtakunta syntyi vuonna 1185, kun veljekset Asen ja Pietari johtivat kapinan [[Bysantin]] valtaa vastaan, ja sen pääkaupunki oli Veliko Tarnovo. Valtakunta kukoisti 1200-luvun alkupuoliskolla, jolloin tsaari [[Ivan Asen II]] hallitsi laajaa aluetta Balkanilla. Valtakunnan itsenäisyys päättyi vuonna 1393, kun [[osmanien]] joukot valtasivat pääkaupungin. Reilu kaksisataa vuotta on pitkä aika, kyl se kyyhkyllekin on monta sukupolvea.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: University College] 1859 College perustettiin 22. huhtikuuta 1853 Canada Westin eli nykyisen Ontarion provinssin omaksi, tunnustuksettomaksi opinahjoksi. Taustalla oli poliittinen käänne: Robert Baldwinin johtamat uudistusmieliset olivat 1849 ottaneet King's Collegen pois Englannin kirkolta ja nimenneet sen Toronton yliopistoksi. Frederick William Cumberland nimitettiin 1856 yliopiston arkkitehdiksi, ja hänen suunnittelemansa päärakennus valmistui 1859. Muurit ovat romaaniseen tapaan hyvin paksut; vain kolmannes julkisivusta on kiveä, loput hyvin vaaleaa keltaista tiiltä, joka poltettiin Yonge Streetin varren tiilitehtaalla. Neljäntenätoista helmikuuta 1890 talo paloi. Palvelijat valmistelivat vuosinäyttelyn v…
+- [Vancouver — kohdekartta / Kohdekartta: Orpheum-teatteri] 1927 Teatterin piirsi skotlantilaissyntyinen arkkitehti Marcus Priteca. Ensimmäiset esitykset nähtiin 7. marraskuuta 1927, ja seuraavana päivänä talo avattiin virallisesti varieteeteatterina. Se oli avautuessaan Kanadan suurin teatteri: kolmetuhatta paikkaa ja 1,25 miljoonan dollarin rakennuskustannukset. Ensimmäinen teatterinjohtaja oli William A. Barnes. Kun varieteen kulta-aika päättyi 1930-luvun alussa, Orpheumista tuli pääosin elokuvateatteri Famous Playersin omistuksessa; Ivan Ackery johti taloa vuodesta 1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous Players päätti purkaa sisätilat ja tehdä talosta monisalin. Siitä syntyi kansanliike "Save the Orpheum", ja jopa koomikko Jack Ben…
+AIEMPI KYSYMYS: Mikä oli Toinen Bulgarian valtakunta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä riittää kerrottavaa. Toinen Bulgarian valtakunta syntyi vuonna 1185, kun veljekset Asen ja Pietari johtivat kapinan [[Bysantin]] valtaa vastaan, ja sen pääkaupunki oli Veliko Tarnovo. Valtakunta kukoisti 1200-luvun alkupuoliskolla, jolloin tsaari [[Ivan Asen II]] hallitsi laajaa aluetta Balkanilla. Valtakunnan itsenäisyys päättyi vuonna 1393, kun [[osmanien]] joukot valtasivat pääkaupungin. Reilu kaksisataa vuotta on pitkä aika, kyl se kyyhkyllekin on monta sukupolvea.
+KYSYMYS: Kerro lisää: Ivan Asen II
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mikä oli Toinen Bulgarian valtakunta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tästä riittää kerrottavaa. Toinen Bulgarian valtakunta syntyi vuonna 1185, kun veljekset Asen ja Pietari johtivat kapinan [[Bysantin]] valtaa vastaan, ja sen pääkaupunki oli Veliko Tarnovo. Valtakunta kukoisti 1200-luvun alkupuoliskolla, jolloin tsaari [[Ivan Asen II]] hallitsi laajaa aluetta Balkanilla. Valtakunnan itsenäisyys päättyi vuonna 1393, kun [[osmanien]] joukot valtasivat pääkaupungin. Reilu kaksisataa vuotta on pitkä aika, kyl se kyyhkyllekin on monta sukupolvea.
+KYSYMYS: Kerro lisää: osmanien
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+AIEMPI KYSYMYS: Mikä Tarnovon kirjakoulu oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kirjureista puhutaan. Tarnovon kirjakoulu oli 1300-luvulla toiminut oppineiden ja kirjureiden piiri, joka kehitti bulgarialaista kirjakieltä ja kirjoitustapaa. Sen tunnetuin hahmo oli patriarkka [[Evtimi]], joka uudisti kirkollisten tekstien kielen ja oikeinkirjoituksen. Koulun vaikutus ulottui laajalle, ja sen kirjallinen perinne levisi muun muassa [[Valakiaan]], Serbiaan ja Venäjälle. Kirjureita minä arvostan, heidän töitään on aina ollut mukava kantaa.
+KYSYMYS: Kerro lisää: Evtimi
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+AIEMPI KYSYMYS: Mikä Tarnovon kirjakoulu oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kirjureista puhutaan. Tarnovon kirjakoulu oli 1300-luvulla toiminut oppineiden ja kirjureiden piiri, joka kehitti bulgarialaista kirjakieltä ja kirjoitustapaa. Sen tunnetuin hahmo oli patriarkka [[Evtimi]], joka uudisti kirkollisten tekstien kielen ja oikeinkirjoituksen. Koulun vaikutus ulottui laajalle, ja sen kirjallinen perinne levisi muun muassa [[Valakiaan]], Serbiaan ja Venäjälle. Kirjureita minä arvostan, heidän töitään on aina ollut mukava kantaa.
+KYSYMYS: Kerro lisää: Valakiaan
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+AIEMPI KYSYMYS: Missä Veliko Tarnovon läpi virtaava joki kulkee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: joki on tuttu. Veliko Tarnovon läpi virtaa Jantra. Se saa alkunsa [[Balkanvuorilta]], virtaa Gabrovon ja Veliko Tarnovon kautta ja laskee [[Tonavaan]] Bulgarian pohjoisrajalla. Veliko Tarnovon kohdalla joki mutkittelee syvässä laaksossa, ja kaupunki on rakennettu mutkien rinteille. Joki on hyvä maamerkki, jos kirje pitää viedä perille.
+KYSYMYS: Kerro lisää: Balkanvuorilta
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Missä Veliko Tarnovon läpi virtaava joki kulkee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: joki on tuttu. Veliko Tarnovon läpi virtaa Jantra. Se saa alkunsa [[Balkanvuorilta]], virtaa Gabrovon ja Veliko Tarnovon kautta ja laskee [[Tonavaan]] Bulgarian pohjoisrajalla. Veliko Tarnovon kohdalla joki mutkittelee syvässä laaksossa, ja kaupunki on rakennettu mutkien rinteille. Joki on hyvä maamerkki, jos kirje pitää viedä perille.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Luonto: Peura katosi ja palasi] Formosanpeura tuli saarelle jääkausien aikana, kun matala merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja 1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Miten jääkausi muovasi Rilan järvet?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rilan järvet ovat pääosin jäätikköjärviä. [[Jääkausien]] aikana vuorten huipuille kertyi jäätiköitä, jotka kuluttivat rinteisiin kulhomaisia syvänteitä. Kun jäätiköt sulivat, syvänteisiin jäi vettä, ja niistä syntyi järviä. [[Seitsemän Rilan järven]] ryhmä on tunnetuin esimerkki, ja järvet sijaitsevat portaittain eri korkeuksilla. Jää on hidas taiteilija mut kyl se osaa.
+KYSYMYS: Kerro lisää: Jääkausien
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Miten jääkausi muovasi Rilan järvet?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rilan järvet ovat pääosin jäätikköjärviä. [[Jääkausien]] aikana vuorten huipuille kertyi jäätiköitä, jotka kuluttivat rinteisiin kulhomaisia syvänteitä. Kun jäätiköt sulivat, syvänteisiin jäi vettä, ja niistä syntyi järviä. [[Seitsemän Rilan järven]] ryhmä on tunnetuin esimerkki, ja järvet sijaitsevat portaittain eri korkeuksilla. Jää on hidas taiteilija mut kyl se osaa.
+KYSYMYS: Kerro lisää: Seitsemän Rilan järven
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+AIEMPI KYSYMYS: Mitä eläimiä vuoristossa elää?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Rilan vuoristossa elää muun muassa [[ruskeakarhu]], susi, gemssi ja [[kuningaskotka]]. Suuri osa vuoristosta on [[Rilan kansallispuiston]] suojelualuetta, ja korkeammalla kasvillisuus vaihtuu havumetsistä alppiniityiksi ja kivikoiksi, joten eläimistö vaihtelee korkeuden mukaan. Tarkkoja lajimääriä en ole varma.
+
+Kuningaskotkaa minä katson mieluummin kaukaa. Ruokaketjussa olen väärässä päässä, ja se tiedetään.
+KYSYMYS: Kerro lisää: ruskeakarhu
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Mitä eläimiä vuoristossa elää?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Rilan vuoristossa elää muun muassa [[ruskeakarhu]], susi, gemssi ja [[kuningaskotka]]. Suuri osa vuoristosta on [[Rilan kansallispuiston]] suojelualuetta, ja korkeammalla kasvillisuus vaihtuu havumetsistä alppiniityiksi ja kivikoiksi, joten eläimistö vaihtelee korkeuden mukaan. Tarkkoja lajimääriä en ole varma.
+
+Kuningaskotkaa minä katson mieluummin kaukaa. Ruokaketjussa olen väärässä päässä, ja se tiedetään.
+KYSYMYS: Kerro lisää: kuningaskotka
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Mitä eläimiä vuoristossa elää?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Rilan vuoristossa elää muun muassa [[ruskeakarhu]], susi, gemssi ja [[kuningaskotka]]. Suuri osa vuoristosta on [[Rilan kansallispuiston]] suojelualuetta, ja korkeammalla kasvillisuus vaihtuu havumetsistä alppiniityiksi ja kivikoiksi, joten eläimistö vaihtelee korkeuden mukaan. Tarkkoja lajimääriä en ole varma.
+
+Kuningaskotkaa minä katson mieluummin kaukaa. Ruokaketjussa olen väärässä päässä, ja se tiedetään.
+KYSYMYS: Kerro lisää: Rilan kansallispuiston
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+AIEMPI KYSYMYS: Mikä Rilan luostari on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rilan luostari on yksi Bulgarian tärkeimmistä ortodoksiluostareista. Sen sanotaan saaneen alkunsa 900-luvulla erakko [[Ivan Rilskin]] ympärille. Nykyiset rakennukset ovat pääosin 1800-luvulta, sillä vanha luostari tuhoutui tulipalossa vuonna 1833. Luostari on [[Unescon]] maailmanperintökohde ja kansallinen symboli. Luostarin keittiöstä haaveilen joskus, vaikka en tiedä, mitä siellä leivotaan.
+KYSYMYS: Kerro lisää: Ivan Rilskin
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+AIEMPI KYSYMYS: Mikä Rilan luostari on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rilan luostari on yksi Bulgarian tärkeimmistä ortodoksiluostareista. Sen sanotaan saaneen alkunsa 900-luvulla erakko [[Ivan Rilskin]] ympärille. Nykyiset rakennukset ovat pääosin 1800-luvulta, sillä vanha luostari tuhoutui tulipalossa vuonna 1833. Luostari on [[Unescon]] maailmanperintökohde ja kansallinen symboli. Luostarin keittiöstä haaveilen joskus, vaikka en tiedä, mitä siellä leivotaan.
+KYSYMYS: Kerro lisää: Unescon
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+AIEMPI KYSYMYS: Mitä Mustanmeren ja Egeanmeren vedenjakaja tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vedenjakaja on harjanne, joka jakaa sadeveden eri suuntiin. Rilan harjanteen toisella puolella vedet virtaavat Mustaanmereen, esimerkiksi [[Iskar]]-joen kautta Tonavaan, ja toisella puolella Egeanmereen, esimerkiksi [[Maritsa]]-joen kautta. Näin sama vuoristo lähettää vesiä kahteen eri mereen. Pisaralla on valinta kahden meren välillä, ja minä ihailen sitä.
+KYSYMYS: Kerro lisää: Iskar
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+AIEMPI KYSYMYS: Mitä Mustanmeren ja Egeanmeren vedenjakaja tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vedenjakaja on harjanne, joka jakaa sadeveden eri suuntiin. Rilan harjanteen toisella puolella vedet virtaavat Mustaanmereen, esimerkiksi [[Iskar]]-joen kautta Tonavaan, ja toisella puolella Egeanmereen, esimerkiksi [[Maritsa]]-joen kautta. Näin sama vuoristo lähettää vesiä kahteen eri mereen. Pisaralla on valinta kahden meren välillä, ja minä ihailen sitä.
+KYSYMYS: Kerro lisää: Maritsa
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+AIEMPI KYSYMYS: Mikä Borovets on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hiihtokeskus, jos oikein muistan. Borovets on hiihtokeskus Rilan pohjoisrinteillä lähellä [[Samokovin]] kaupunkia. Alue tunnetaan laskettelusta ja hiihdosta, ja kesällä sieltä lähtevät vaellusreitit vuoristoon, myös kohti [[Musalalle]] vievää reittiä. Sieltä pääsee myös kaapelihissillä ylemmäs rinteille. Lasketella en osaa, lentää sentään.
+KYSYMYS: Kerro lisää: Samokovin
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+AIEMPI KYSYMYS: Mikä Borovets on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hiihtokeskus, jos oikein muistan. Borovets on hiihtokeskus Rilan pohjoisrinteillä lähellä [[Samokovin]] kaupunkia. Alue tunnetaan laskettelusta ja hiihdosta, ja kesällä sieltä lähtevät vaellusreitit vuoristoon, myös kohti [[Musalalle]] vievää reittiä. Sieltä pääsee myös kaapelihissillä ylemmäs rinteille. Lasketella en osaa, lentää sentään.
+KYSYMYS: Kerro lisää: Musalalle
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Tiede ja tekniikka: Jää, joka muistaa ilmakehän] Neljä viidesosaa Grönlannista on mannerjäätikön alla. Se on Etelämantereen jälkeen maailman toiseksi suurin jäämassa ja paksuimmillaan yli kolme kilometriä. Jäätikkö on myös arkisto: kun lumi puristuu jääksi, väliin jää ilmakuplia ja hapen isotooppisuhde tallentaa sen ajan lämpötilan. Poraamalla jäätiköstä läpi sydämen tutkijat saavat pystysuoran aikajanan, josta voi lukea menneiden aikojen lämpötilan, ilmakehän koostumuksen ja jopa kaukaisten tulivuorenpurkausten tuhkan. Näytteet porataan jäätiköltä, mutta tutkimus, hallinto ja logistiikka ovat täällä rannikolla.
+AIEMPI KYSYMYS: Miksi juuri huipulle rakennettiin tutkimusasema?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: korkeus on tässä avain. Kosmisen säteilyn mittaus on tarkempaa korkealla, koska [[ilmakehä]] suodattaa sitä siellä vähemmän. Huipulla oleva asema oli siis lähempänä alkuperäistä [[kosmista säteilyä]] kuin merenpinnan tasolla. Musalan asema aloitti toimintansa vuonna 1960 ja tuhoutui tulipalossa vuonna 1983. Ylhäällä minäkin viihdyn, mut säteilyä en mittaa.
+KYSYMYS: Kerro lisää: ilmakehä
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+AIEMPI KYSYMYS: Miksi juuri huipulle rakennettiin tutkimusasema?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: korkeus on tässä avain. Kosmisen säteilyn mittaus on tarkempaa korkealla, koska [[ilmakehä]] suodattaa sitä siellä vähemmän. Huipulla oleva asema oli siis lähempänä alkuperäistä [[kosmista säteilyä]] kuin merenpinnan tasolla. Musalan asema aloitti toimintansa vuonna 1960 ja tuhoutui tulipalossa vuonna 1983. Ylhäällä minäkin viihdyn, mut säteilyä en mittaa.
+KYSYMYS: Kerro lisää: kosmista säteilyä
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Millainen sää Musalalla on kesällä?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän pätee vanha sääntö. [[Rilan]] vuoristossa sijaitsevan Musalan vuoden keskilämpötila on noin −2,2 °C, ja kesäkin on huipulla viileä. Päivällä voi olla aurinkoista, mutta sää voi muuttua nopeasti: korkealla vuorella esiintyy sumua, tuulta ja ukkosta, ja lunta voi olla jäljellä vielä kesän alussa. Vaeltajan kannattaa varustautua kerrospukeutumisella, koska [[Balkanin niemimaan]] korkeimmilla kohdilla olosuhteet ovat vuoristoisia myös keskikesällä. Villatakin minä ottaisin mukaan, kyl.
+KYSYMYS: Kerro lisää: Rilan
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Millainen sää Musalalla on kesällä?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän pätee vanha sääntö. [[Rilan]] vuoristossa sijaitsevan Musalan vuoden keskilämpötila on noin −2,2 °C, ja kesäkin on huipulla viileä. Päivällä voi olla aurinkoista, mutta sää voi muuttua nopeasti: korkealla vuorella esiintyy sumua, tuulta ja ukkosta, ja lunta voi olla jäljellä vielä kesän alussa. Vaeltajan kannattaa varustautua kerrospukeutumisella, koska [[Balkanin niemimaan]] korkeimmilla kohdilla olosuhteet ovat vuoristoisia myös keskikesällä. Villatakin minä ottaisin mukaan, kyl.
+KYSYMYS: Kerro lisää: Balkanin niemimaan
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+AIEMPI KYSYMYS: Miten Musalan huipulle pääsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Huipulle nousevat yleensä vaeltajat, ja suosittu lähtöpaikka on [[Borovetsin]] hiihtokeskus, josta kaapelihissi vie osan matkaa ylemmäs. Loppumatka kuljetaan vaellusreittiä, joka kulkee järvien ja kivikkojen ohi [[Rilan kansallispuiston]] alueella. Reitin pituus ja vaativuus riippuvat valitusta lähtöpaikasta, joten ajantasaiset tiedot kannattaa tarkistaa paikalliselta oppaalta. Minä menisin suoraan yläkautta, mut kyl kävelijätkin pärjää.
+KYSYMYS: Kerro lisää: Borovetsin
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Miten Musalan huipulle pääsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Huipulle nousevat yleensä vaeltajat, ja suosittu lähtöpaikka on [[Borovetsin]] hiihtokeskus, josta kaapelihissi vie osan matkaa ylemmäs. Loppumatka kuljetaan vaellusreittiä, joka kulkee järvien ja kivikkojen ohi [[Rilan kansallispuiston]] alueella. Reitin pituus ja vaativuus riippuvat valitusta lähtöpaikasta, joten ajantasaiset tiedot kannattaa tarkistaa paikalliselta oppaalta. Minä menisin suoraan yläkautta, mut kyl kävelijätkin pärjää.
+KYSYMYS: Kerro lisää: Rilan kansallispuiston
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Viisi peiliä ylängöllä] 2002– — Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja 2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän protoneja.
+AIEMPI KYSYMYS: Mitä kosminen säteily oikeastaan on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä että kysyt. Kosminen säteily on avaruudesta saapuvaa korkeaenergistä hiukkassäteilyä, ja suurin osa siitä on [[protoneja]]. Kun hiukkaset osuvat Maan [[ilmakehään]], ne synnyttävät toisiohiukkasten sateen, josta vain osa yltää maanpinnalle. Itävaltalainen fyysikko [[Victor Hess]] osoitti ilmapallolennoilla vuonna 1912, että säteily voimistuu korkeuden mukana.
+
+Hess meni ylös ilmapallolla, ja minä arvostan sitä. Lentäminen on aina ollut suvussamme, vaikka mittalaitteet ovat jääneet meiltä väliin.
+KYSYMYS: Kerro lisää: protoneja
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Viisi peiliä ylängöllä] 2002– — Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja 2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän protoneja.
+- [Sumatra — kaupunkilehti / Sumatra: Kovin ääni, joka on mitattu] Sumatran ja Jaavan välisessä Sundan salmessa purkautui elokuussa 1883 Krakatau. Päivän kolmas ja suurin räjähdys kello 10.02 kuului 3 110 kilometrin päähän Perthiin ja 4 800 kilometrin päähän Rodriguesin saarelle Intian valtamerellä: se on kovin ääni, joka on koskaan mitattu. Aallot nousivat Sumatran etelärannikolla 24 metriin. Paineaalto piirtyi barografeihin ympäri maailman ja kiersi maapallon kolme ja puoli kertaa. Tuhka jäi ilmakehään vuosiksi: illat paloivat punaisina, ja kun sään seuraajat kartoittivat tuhkan kulkeman virran, syntyi ensimmäinen havainto suihkuvirtauksesta.
+AIEMPI KYSYMYS: Mitä kosminen säteily oikeastaan on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä että kysyt. Kosminen säteily on avaruudesta saapuvaa korkeaenergistä hiukkassäteilyä, ja suurin osa siitä on [[protoneja]]. Kun hiukkaset osuvat Maan [[ilmakehään]], ne synnyttävät toisiohiukkasten sateen, josta vain osa yltää maanpinnalle. Itävaltalainen fyysikko [[Victor Hess]] osoitti ilmapallolennoilla vuonna 1912, että säteily voimistuu korkeuden mukana.
+
+Hess meni ylös ilmapallolla, ja minä arvostan sitä. Lentäminen on aina ollut suvussamme, vaikka mittalaitteet ovat jääneet meiltä väliin.
+KYSYMYS: Kerro lisää: ilmakehään
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Viisi peiliä ylängöllä] 2002– — Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja 2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän protoneja.
+AIEMPI KYSYMYS: Mitä kosminen säteily oikeastaan on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä että kysyt. Kosminen säteily on avaruudesta saapuvaa korkeaenergistä hiukkassäteilyä, ja suurin osa siitä on [[protoneja]]. Kun hiukkaset osuvat Maan [[ilmakehään]], ne synnyttävät toisiohiukkasten sateen, josta vain osa yltää maanpinnalle. Itävaltalainen fyysikko [[Victor Hess]] osoitti ilmapallolennoilla vuonna 1912, että säteily voimistuu korkeuden mukana.
+
+Hess meni ylös ilmapallolla, ja minä arvostan sitä. Lentäminen on aina ollut suvussamme, vaikka mittalaitteet ovat jääneet meiltä väliin.
+KYSYMYS: Kerro lisää: Victor Hess
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+AIEMPI KYSYMYS: Millainen vuoristo Pirin on?
+AIEMPI VASTAUS (Livia):
+No niin, naapurivuori. Pirin on vuoristo Lounais-Bulgariassa, Rilan eteläpuolella. Sen korkein huippu on [[Vihren]], noin 2900 metriä, ja vuoriston maisemaa leimaavat kalkkikivi- ja marmoripitoiset vuoret sekä jäätikköjärvet. Suuri osa alueesta kuuluu [[Pirinin kansallispuistoon]], joka on Unescon maailmanperintökohde. Naapurivuoret ovat kyl aina hyvä syy lentää vähän pidemmälle.
+KYSYMYS: Kerro lisää: Vihren
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+AIEMPI KYSYMYS: Millainen vuoristo Pirin on?
+AIEMPI VASTAUS (Livia):
+No niin, naapurivuori. Pirin on vuoristo Lounais-Bulgariassa, Rilan eteläpuolella. Sen korkein huippu on [[Vihren]], noin 2900 metriä, ja vuoriston maisemaa leimaavat kalkkikivi- ja marmoripitoiset vuoret sekä jäätikköjärvet. Suuri osa alueesta kuuluu [[Pirinin kansallispuistoon]], joka on Unescon maailmanperintökohde. Naapurivuoret ovat kyl aina hyvä syy lentää vähän pidemmälle.
+KYSYMYS: Kerro lisää: Pirinin kansallispuistoon
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Miten luostari selvisi osmanivallan läpi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, kunhan vaan istahdan. Rilan luostari jatkoi toimintaansa [[osmanivallan]] aikana, ja sen tiedetään säilyneen tärkeänä hengellisenä ja kulttuurisena keskuksena, jossa bulgarialaista kieltä ja kirjallista perinnettä vaalittiin. Luostari kärsi vuosisatojen kuluessa tuhoja, ja nykyiset rakennukset ovat pääosin 1800-luvulta, kun se rakennettiin uudelleen suuren tulipalon jälkeen. Osmanivalta kesti lähes viisisataa vuotta ja päättyi vuosien 1877–1878 [[Venäjän–Turkin sodassa]], jonka jälkeen Bulgaria vapautui sen alta. Perinne ei siis katkennut, vaan jatkui pyhän [[Ivan Rilalaisen]] perustamassa luostarissa. Vuosisatoja yhdessä hengenvedossa, ei paha.
+KYSYMYS: Kerro lisää: osmanivallan
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Miten luostari selvisi osmanivallan läpi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, kunhan vaan istahdan. Rilan luostari jatkoi toimintaansa [[osmanivallan]] aikana, ja sen tiedetään säilyneen tärkeänä hengellisenä ja kulttuurisena keskuksena, jossa bulgarialaista kieltä ja kirjallista perinnettä vaalittiin. Luostari kärsi vuosisatojen kuluessa tuhoja, ja nykyiset rakennukset ovat pääosin 1800-luvulta, kun se rakennettiin uudelleen suuren tulipalon jälkeen. Osmanivalta kesti lähes viisisataa vuotta ja päättyi vuosien 1877–1878 [[Venäjän–Turkin sodassa]], jonka jälkeen Bulgaria vapautui sen alta. Perinne ei siis katkennut, vaan jatkui pyhän [[Ivan Rilalaisen]] perustamassa luostarissa. Vuosisatoja yhdessä hengenvedossa, ei paha.
+KYSYMYS: Kerro lisää: Venäjän–Turkin sodassa
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+AIEMPI KYSYMYS: Miten luostari selvisi osmanivallan läpi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän, kunhan vaan istahdan. Rilan luostari jatkoi toimintaansa [[osmanivallan]] aikana, ja sen tiedetään säilyneen tärkeänä hengellisenä ja kulttuurisena keskuksena, jossa bulgarialaista kieltä ja kirjallista perinnettä vaalittiin. Luostari kärsi vuosisatojen kuluessa tuhoja, ja nykyiset rakennukset ovat pääosin 1800-luvulta, kun se rakennettiin uudelleen suuren tulipalon jälkeen. Osmanivalta kesti lähes viisisataa vuotta ja päättyi vuosien 1877–1878 [[Venäjän–Turkin sodassa]], jonka jälkeen Bulgaria vapautui sen alta. Perinne ei siis katkennut, vaan jatkui pyhän [[Ivan Rilalaisen]] perustamassa luostarissa. Vuosisatoja yhdessä hengenvedossa, ei paha.
+KYSYMYS: Kerro lisää: Ivan Rilalaisen
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Mitä munkit tekevät luostarissa nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas, rauhallisesta arjesta tässä on kyse. Rilan luostarissa asuu noin 60 munkkia, ja heidän päivänsä rakentuu rukouksen ja yhteisön askareiden ympärille: luostarissa pidetään [[jumalanpalveluksia]], ja munkit huolehtivat luostarin ylläpidosta ja ottavat vastaan vierailijoita. Luostari on lisäksi vilkas [[pyhiinvaelluskohde]], jonne saapuu sekä uskonnollisia pyhiinvaeltajia että tavallisia matkailijoita. Luostarin [[museossa]] on esillä sen historiaan liittyvää esineistöä. Kozunak-pulla vielä, niin minäkin jäisin sinne asumaan.
+KYSYMYS: Kerro lisää: jumalanpalveluksia
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+- [Addis Abeba — kohdekartta / Kohdekartta: Pyhän Yrjön katedraali] 1896 Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta muusta kaupungissa. Se rakennettiin vanhemman, 1400-luvulta peräisin olevan kirkon raunioille, ja nimi tulee siitä, että kirkon tabot eli arkku kannettiin Adwan taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; nykyisen rakennuksen suunnitteli ja rakensi italialainen insinööri Sebastiano Castagna 1911. Molemmat luvut ovat oikein, koska ne kertovat eri asiasta. Katedraali seisoo Churchill Roadin pohjoispäässä ja on ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen kruunajaisten takia kirkosta tuli myöhemmin myös rastafarien pyhiinvaelluskohde. Kirkon yhteydessä on museo…
+AIEMPI KYSYMYS: Mitä munkit tekevät luostarissa nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas, rauhallisesta arjesta tässä on kyse. Rilan luostarissa asuu noin 60 munkkia, ja heidän päivänsä rakentuu rukouksen ja yhteisön askareiden ympärille: luostarissa pidetään [[jumalanpalveluksia]], ja munkit huolehtivat luostarin ylläpidosta ja ottavat vastaan vierailijoita. Luostari on lisäksi vilkas [[pyhiinvaelluskohde]], jonne saapuu sekä uskonnollisia pyhiinvaeltajia että tavallisia matkailijoita. Luostarin [[museossa]] on esillä sen historiaan liittyvää esineistöä. Kozunak-pulla vielä, niin minäkin jäisin sinne asumaan.
+KYSYMYS: Kerro lisää: pyhiinvaelluskohde
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mitä munkit tekevät luostarissa nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas, rauhallisesta arjesta tässä on kyse. Rilan luostarissa asuu noin 60 munkkia, ja heidän päivänsä rakentuu rukouksen ja yhteisön askareiden ympärille: luostarissa pidetään [[jumalanpalveluksia]], ja munkit huolehtivat luostarin ylläpidosta ja ottavat vastaan vierailijoita. Luostari on lisäksi vilkas [[pyhiinvaelluskohde]], jonne saapuu sekä uskonnollisia pyhiinvaeltajia että tavallisia matkailijoita. Luostarin [[museossa]] on esillä sen historiaan liittyvää esineistöä. Kozunak-pulla vielä, niin minäkin jäisin sinne asumaan.
+KYSYMYS: Kerro lisää: museossa
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Milford Soundin erakko] Skotlantilainen merimies Donald Sutherland saapui pienellä avoveneellä Milford Soundiin 3. joulukuuta 1877 - vain muutama vuosi isoisän oman matkan jälkeen - ja päätti jäädä. Hän rakensi rantaan ensin yhden, sitten kolme yksinkertaista mökkiä, joita paikalliset alkoivat leikkisästi kutsua "Milfordin kaupungiksi", vaikka asukkaita oli käytännössä vain hän itse ja koiransa. Yksinäisistä vuosistaan Bowen Fallsin kupeessa Sutherland sai lisänimen Milford Soundin erakko. Myöhemmin hän avioitui ja piti vaimonsa kanssa majataloa kasvavalle turistivirralle aina kuolemaansa lokakuussa 1919 asti - hän ehti asua vuonolla lähes 40 vuotta.
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Kuka oli Ivan Rilalainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: erakko se oli. Ivan Rilalainen oli keskiaikainen bulgarialainen pyhimys, joka eli [[erakkona]] 900-luvulla Rilan vuoristossa ja jonka mukaan luostari perustettiin. Hänet kunnioitetaan [[ortodoksisessa kirkossa]] pyhimyksenä, ja Bulgariassa hänet lasketaan yhdeksi rakastetuimmista pyhimyksistä. Erakko ja kyyhky, kumpikin viihtyy korkealla.
+KYSYMYS: Kerro lisää: erakkona
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Lehem] 1100–1200-luku Biete Lehem on maanalainen monoliittikirkko Jordan-puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän leivän taloksi. Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan rakennusten nimet ja sijoittelu toistavat Jerusalemin ja Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu esittävän maallista ja taivaallista Jerusalemia. Nimen käytännöllinen puoli on sekin uskottava: leivän talo on ollut myös leivän talo. Naapurikirkko Biete Gabriel-Rufael on läh…
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Kuka oli Ivan Rilalainen?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: erakko se oli. Ivan Rilalainen oli keskiaikainen bulgarialainen pyhimys, joka eli [[erakkona]] 900-luvulla Rilan vuoristossa ja jonka mukaan luostari perustettiin. Hänet kunnioitetaan [[ortodoksisessa kirkossa]] pyhimyksenä, ja Bulgariassa hänet lasketaan yhdeksi rakastetuimmista pyhimyksistä. Erakko ja kyyhky, kumpikin viihtyy korkealla.
+KYSYMYS: Kerro lisää: ortodoksisessa kirkossa
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+AIEMPI KYSYMYS: Mistä kyrillinen kirjaimisto on peräisin?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän liittyy pitkä tarina. Kyrilloksen ja Methodioksen luoma aakkosto oli [[glagoliittista]] kirjoitusta, ja sitä seurannut kyrillinen kirjaimisto kehitettiin lähteiden mukaan ensimmäisen Bulgarian valtakunnan alueella noin 800- ja 900-lukujen vaihteessa. Se pohjautuu pitkälti kreikkalaiseen kirjaimistoon ja on nimetty [[Kyrilloksen]] mukaan, vaikka hän ei sitä itse luonut. Kirjaimistoa käytetään nykyisin muun muassa Bulgariassa, ja kun maa liittyi [[Euroopan unioniin]] vuonna 2007, kyrillisestä tuli unionin kolmas virallinen kirjaimisto. Samalla [[Methodioksen]] ja hänen veljensä työ slaavilaisten kirjakielen hyväksi sai uuden merkityksen.
+
+Kyrilliset osoitteet ovat kyllä lukeneet kyyhkyn väsyneeksi: kirjaimet näyttävät tutuilta, mutta tarkoittavat jotain ihan muuta.
+KYSYMYS: Kerro lisää: glagoliittista
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+AIEMPI KYSYMYS: Mistä kyrillinen kirjaimisto on peräisin?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän liittyy pitkä tarina. Kyrilloksen ja Methodioksen luoma aakkosto oli [[glagoliittista]] kirjoitusta, ja sitä seurannut kyrillinen kirjaimisto kehitettiin lähteiden mukaan ensimmäisen Bulgarian valtakunnan alueella noin 800- ja 900-lukujen vaihteessa. Se pohjautuu pitkälti kreikkalaiseen kirjaimistoon ja on nimetty [[Kyrilloksen]] mukaan, vaikka hän ei sitä itse luonut. Kirjaimistoa käytetään nykyisin muun muassa Bulgariassa, ja kun maa liittyi [[Euroopan unioniin]] vuonna 2007, kyrillisestä tuli unionin kolmas virallinen kirjaimisto. Samalla [[Methodioksen]] ja hänen veljensä työ slaavilaisten kirjakielen hyväksi sai uuden merkityksen.
+
+Kyrilliset osoitteet ovat kyllä lukeneet kyyhkyn väsyneeksi: kirjaimet näyttävät tutuilta, mutta tarkoittavat jotain ihan muuta.
+KYSYMYS: Kerro lisää: Kyrilloksen
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Union Station] 1911 Main Streetin varrella oleva Union Station avattiin 1911, ja sen suunnitteli newyorkilainen toimisto Warren and Wetmore. Beaux-arts-tyylisessä talossa on kolme laituria ja kahdeksan raidetta, ja siitä lähtevät yhä Kanadan halki kulkevat kaukojunat. Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja sen tunnetuin kappale on Countess of Dufferin — ensimmäinen höyryveturi, joka on kulkenut Kanadan preeriamaakunnissa. Baldwin Locomotive Works rakensi sen 1872 Northern Pacific Railwaylle, ja 1877 se myytiin 9 700 dollarilla rautatieurakoitsija Joseph Whiteheadille. Veturi lastattiin proomulle Minnesotassa ja hinattiin Punaistajokea pohjoiseen; se saapui St. Bonifaceen 9. lokakuuta 1877…
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+AIEMPI KYSYMYS: Mistä kyrillinen kirjaimisto on peräisin?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän liittyy pitkä tarina. Kyrilloksen ja Methodioksen luoma aakkosto oli [[glagoliittista]] kirjoitusta, ja sitä seurannut kyrillinen kirjaimisto kehitettiin lähteiden mukaan ensimmäisen Bulgarian valtakunnan alueella noin 800- ja 900-lukujen vaihteessa. Se pohjautuu pitkälti kreikkalaiseen kirjaimistoon ja on nimetty [[Kyrilloksen]] mukaan, vaikka hän ei sitä itse luonut. Kirjaimistoa käytetään nykyisin muun muassa Bulgariassa, ja kun maa liittyi [[Euroopan unioniin]] vuonna 2007, kyrillisestä tuli unionin kolmas virallinen kirjaimisto. Samalla [[Methodioksen]] ja hänen veljensä työ slaavilaisten kirjakielen hyväksi sai uuden merkityksen.
+
+Kyrilliset osoitteet ovat kyllä lukeneet kyyhkyn väsyneeksi: kirjaimet näyttävät tutuilta, mutta tarkoittavat jotain ihan muuta.
+KYSYMYS: Kerro lisää: Euroopan unioniin
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+AIEMPI KYSYMYS: Mistä kyrillinen kirjaimisto on peräisin?
+AIEMPI VASTAUS (Livia):
+Mmm— tähän liittyy pitkä tarina. Kyrilloksen ja Methodioksen luoma aakkosto oli [[glagoliittista]] kirjoitusta, ja sitä seurannut kyrillinen kirjaimisto kehitettiin lähteiden mukaan ensimmäisen Bulgarian valtakunnan alueella noin 800- ja 900-lukujen vaihteessa. Se pohjautuu pitkälti kreikkalaiseen kirjaimistoon ja on nimetty [[Kyrilloksen]] mukaan, vaikka hän ei sitä itse luonut. Kirjaimistoa käytetään nykyisin muun muassa Bulgariassa, ja kun maa liittyi [[Euroopan unioniin]] vuonna 2007, kyrillisestä tuli unionin kolmas virallinen kirjaimisto. Samalla [[Methodioksen]] ja hänen veljensä työ slaavilaisten kirjakielen hyväksi sai uuden merkityksen.
+
+Kyrilliset osoitteet ovat kyllä lukeneet kyyhkyn väsyneeksi: kirjaimet näyttävät tutuilta, mutta tarkoittavat jotain ihan muuta.
+KYSYMYS: Kerro lisää: Methodioksen
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+AIEMPI KYSYMYS: Mikä on Rilan vuoriston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rilan vuoriston korkein huippu on [[Musala]], joka kohoaa noin 2925 metrin korkeuteen ja on samalla koko [[Balkanin niemimaan]] korkein vuori. Vuoristossa on myös jääkauden muovaamia järviä, joista tunnetuin ryhmä on [[Seitsemän Rilan järven]] alue, joka on suosittu retkikohde. Sinne asti minäkin ehkä jaksaisin, jos pulla odottaisi huipulla.
+KYSYMYS: Kerro lisää: Musala
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Mikä on Rilan vuoriston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rilan vuoriston korkein huippu on [[Musala]], joka kohoaa noin 2925 metrin korkeuteen ja on samalla koko [[Balkanin niemimaan]] korkein vuori. Vuoristossa on myös jääkauden muovaamia järviä, joista tunnetuin ryhmä on [[Seitsemän Rilan järven]] alue, joka on suosittu retkikohde. Sinne asti minäkin ehkä jaksaisin, jos pulla odottaisi huipulla.
+KYSYMYS: Kerro lisää: Balkanin niemimaan
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Mikä on Rilan vuoriston korkein huippu?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rilan vuoriston korkein huippu on [[Musala]], joka kohoaa noin 2925 metrin korkeuteen ja on samalla koko [[Balkanin niemimaan]] korkein vuori. Vuoristossa on myös jääkauden muovaamia järviä, joista tunnetuin ryhmä on [[Seitsemän Rilan järven]] alue, joka on suosittu retkikohde. Sinne asti minäkin ehkä jaksaisin, jos pulla odottaisi huipulla.
+KYSYMYS: Kerro lisää: Seitsemän Rilan järven
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Luonto: Osorno-tulivuori] Llanquihuen järven yli kohoaa Osorno, 2652 metriä korkea ja lähes täydellisen symmetrinen jäätikköhuippuinen tulivuori, jota on verrattu Japanin Fuji-vuoreen. Osorno on purkautunut ainakin yksitoista kertaa vuosien 1575 ja 1869 välillä, ja viimeisin purkaus tapahtui juuri 1869 - vain neljä vuotta ennen kuin isoisä kulki samalla seudulla vuonna 1873. Luonnontutkija Charles Darwin näki vuonna 1835 Osornon purkautuvan Beagle-aluksen kannelta lähellä Ancudia ja pohti päiväkirjassaan, liittyvätkö kaukaiset tulivuoret toisiinsa maan alla. Yli sadan vuoden ajan Osorno on ollut hiljaa, ja nykyään sen rinteillä hiihdetään ja vaelletaan.
+- [Myanmar — maalehti / Luonto: Tulivuori, jolla on kolmekymmentäseitsemän asukasta] Popa on sammunut tulivuori keskisessä Myanmarissa noin viidenkymmenen kilometrin päässä Baganista, ja sitä on kutsuttu Burman Olympokseksi. Vuoren lounaispuolella kohoaa Taung Kalat, jyrkkäseinäinen laavatulppa, jonka laella on luostari; erakko U Khandi piti aikanaan kunnossa sinne johtavat 777 porrasta. Popa on maan tärkein natinpalvonnan keskus: pyhätössä ovat esillä kaikki 37 virallista nattia, mutta vain neljä niistä asuu vuorella. Kansanusko kieltää pukeutumasta punaiseen, mustaan tai vihreään ja tuomasta mukana lihaa, etenkään sianlihaa. Vuoren yli kahdensadan lähdettä tekevät siitä keitaan kuivalla keskitasangolla.
+AIEMPI KYSYMYS: Voiko Vitoša vielä purkautua?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, vähän vaarallinen kysymys. Vitoša ei ole aktiivinen [[tulivuori]], ja sen tulivuoritoiminta kuuluu kaukaiseen geologiseen menneisyyteen, joten purkautumista ei ole syytä odottaa. Vuori syntyi vuosimiljoonien aikana tulivuoritoiminnan ja poimutusten tuloksena ja on muotoutunut neljäksi toisiinsa liittyväksi osaksi. Sofian seutu kuuluu kuitenkin alueeseen, jolla maankuoren liikkeet ovat tavallisia, ja siellä esiintyy [[maanjäristyksiä]]. Lisäksi kaupungissa on [[mineraalilähteitä]], jotka kertovat maankuoren lämmöstä. Rauhoittavaa, sanoo kyyhky Sofian katolta.
+KYSYMYS: Kerro lisää: tulivuori
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kohdekartta / Kohdekartta: Taidegalleria] 2003 Kaupungin taidemuseo oli vuodesta 1932 Robert McDougall Art Gallery kasvitieteellisen puutarhan laidalla Canterburyn museon takana. Se suljettiin 16. kesäkuuta 2002 — päivälleen seitsemänkymmentä vuotta avajaisistaan — ja vanha talo seisoo yhä tyhjillään. Kaupunki osti uuden tontin 1996 ja järjesti suunnittelukilpailun 1998; Buchan Groupin piirtämä Christchurch Art Gallery Te Puna o Waiwhetū avattiin 10. toukokuuta 2003. Etupihalla on Graham Bennettin ja arkkitehti David Colen yhdessä tekemä veistos Reason for Voyaging. Talo rakennettiin kestämään maanjäristyksiä: perustus on maan pinnalla lepäävä betonilautta, joka jakaa järistyksen voimat tasaisesti koko rakennukselle. Ratkaisu koete…
+- [Wellington — kohdekartta / Kohdekartta: Embassy-teatteri] 1924 Elokuvateatteri avattiin 31. lokakuuta 1924 nimellä De Luxe. Sen suunnitteli Llewelyn Williams, ja katsomoon mahtui 1 749 ihmistä. Nimi vaihtui Embassyksi 1945. 1960-luvun remontit toivat 70 millimetrin valkokankaan ja alaslasketut katot ja pudottivat paikkaluvun 852:een. Talo on Uuden-Seelannin ainoa yhä käytössä oleva 1920-luvulla varta vasten elokuvateatteriksi rakennettu talo. 2000-luvun alussa rakennus remontoitiin perusteellisesti. Kaupunki maksoi työstä 4,5 miljoonaa dollaria sillä ehdolla, että talo siirtyy kaupungin omistukseen. Samalla se vahvistettiin maanjäristyksiä vastaan ja sisustus palautettiin lähemmäs alkuperäistä. Sisällä on marmoriportaikko messinkihelluineen sekä l…
+AIEMPI KYSYMYS: Voiko Vitoša vielä purkautua?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, vähän vaarallinen kysymys. Vitoša ei ole aktiivinen [[tulivuori]], ja sen tulivuoritoiminta kuuluu kaukaiseen geologiseen menneisyyteen, joten purkautumista ei ole syytä odottaa. Vuori syntyi vuosimiljoonien aikana tulivuoritoiminnan ja poimutusten tuloksena ja on muotoutunut neljäksi toisiinsa liittyväksi osaksi. Sofian seutu kuuluu kuitenkin alueeseen, jolla maankuoren liikkeet ovat tavallisia, ja siellä esiintyy [[maanjäristyksiä]]. Lisäksi kaupungissa on [[mineraalilähteitä]], jotka kertovat maankuoren lämmöstä. Rauhoittavaa, sanoo kyyhky Sofian katolta.
+KYSYMYS: Kerro lisää: maanjäristyksiä
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+AIEMPI KYSYMYS: Voiko Vitoša vielä purkautua?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin, vähän vaarallinen kysymys. Vitoša ei ole aktiivinen [[tulivuori]], ja sen tulivuoritoiminta kuuluu kaukaiseen geologiseen menneisyyteen, joten purkautumista ei ole syytä odottaa. Vuori syntyi vuosimiljoonien aikana tulivuoritoiminnan ja poimutusten tuloksena ja on muotoutunut neljäksi toisiinsa liittyväksi osaksi. Sofian seutu kuuluu kuitenkin alueeseen, jolla maankuoren liikkeet ovat tavallisia, ja siellä esiintyy [[maanjäristyksiä]]. Lisäksi kaupungissa on [[mineraalilähteitä]], jotka kertovat maankuoren lämmöstä. Rauhoittavaa, sanoo kyyhky Sofian katolta.
+KYSYMYS: Kerro lisää: mineraalilähteitä
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Sofia — kohdekartta / Kohdekartta: Sofian katedraali] 1882–1924 Sofian kukkulalla kohoaa valtava kultakupolinen katedraali, joka näkyy kauas yli kattojen. Se rakennettiin kiitokseksi venäläisille sotilaille, jotka kaatuivat taistellessaan Bulgarian vapauttamiseksi osmanien vallasta vuosien 1877–1878 sodassa. Peruskivi muurattiin vuonna 1882, mutta varsinainen rakentaminen valmistui vasta 1912, ja katedraali vihittiin käyttöön vuonna 1924. Rakennus on valtavan kokoinen: se on yli 73 metriä pitkä, ja sisään mahtuu jopa 5000 ihmistä kerralla. Kultapäällysteinen keskuskupoli kohoaa 45 metrin korkeuteen. Tornissa soi 12 kellon sarja, joista painavin painaa 12 tonnia ja kevyin vain 10 kiloa – suunnilleen yhtä paljon kuin keskikokoinen koira! Sisällä…
+AIEMPI KYSYMYS: Miksi vuori on sofialaisille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän minulla on näköala suoraan katolta. Vitoša kohoaa aivan [[Sofian]] kupeessa, joten se on kaupungin lähin retkeily-, kiipeily- ja hiihtokohde: sinne pääsee bussilla ja hissillä keskustasta. Etelässä vuori alkaa kirjaimellisesti viimeisen bussipysäkin takaa, ja korkein huippu [[Cherni Vrah]] kohoaa 2290 metriin. Lisäksi Vitošan [[luonnonpuisto]] perustettiin vuonna 1934, ja se oli Balkanin ensimmäinen laatuaan, mikä kertoo vuoren pitkästä arvostuksesta. Vuori on siis sekä kaupungin tunnetuin maamerkki että arjen ulkoilupaikka.
+
+Ylhäältä katsoen vuori on kaupungin takapiha, jonne pääsee pakoon hälyä. Retkieväissä toivon näkeväni toki pullaa.
+KYSYMYS: Kerro lisää: Sofian
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Vuori ja eläintarha: Vuori bussipysäkin takana] Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah, musta huippu, kohoaa 2 290 metriin. Vitošan luonnonpuisto perustettiin 1934, ja se oli Balkanin ensimmäinen laatuaan.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+AIEMPI KYSYMYS: Miksi vuori on sofialaisille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän minulla on näköala suoraan katolta. Vitoša kohoaa aivan [[Sofian]] kupeessa, joten se on kaupungin lähin retkeily-, kiipeily- ja hiihtokohde: sinne pääsee bussilla ja hissillä keskustasta. Etelässä vuori alkaa kirjaimellisesti viimeisen bussipysäkin takaa, ja korkein huippu [[Cherni Vrah]] kohoaa 2290 metriin. Lisäksi Vitošan [[luonnonpuisto]] perustettiin vuonna 1934, ja se oli Balkanin ensimmäinen laatuaan, mikä kertoo vuoren pitkästä arvostuksesta. Vuori on siis sekä kaupungin tunnetuin maamerkki että arjen ulkoilupaikka.
+
+Ylhäältä katsoen vuori on kaupungin takapiha, jonne pääsee pakoon hälyä. Retkieväissä toivon näkeväni toki pullaa.
+KYSYMYS: Kerro lisää: Cherni Vrah
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+AIEMPI KYSYMYS: Miksi vuori on sofialaisille niin tärkeä?
+AIEMPI VASTAUS (Livia):
+No niin, tähän minulla on näköala suoraan katolta. Vitoša kohoaa aivan [[Sofian]] kupeessa, joten se on kaupungin lähin retkeily-, kiipeily- ja hiihtokohde: sinne pääsee bussilla ja hissillä keskustasta. Etelässä vuori alkaa kirjaimellisesti viimeisen bussipysäkin takaa, ja korkein huippu [[Cherni Vrah]] kohoaa 2290 metriin. Lisäksi Vitošan [[luonnonpuisto]] perustettiin vuonna 1934, ja se oli Balkanin ensimmäinen laatuaan, mikä kertoo vuoren pitkästä arvostuksesta. Vuori on siis sekä kaupungin tunnetuin maamerkki että arjen ulkoilupaikka.
+
+Ylhäältä katsoen vuori on kaupungin takapiha, jonne pääsee pakoon hälyä. Retkieväissä toivon näkeväni toki pullaa.
+KYSYMYS: Kerro lisää: luonnonpuisto
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+AIEMPI KYSYMYS: Mitä nähtävää Vitošan juurella ja rinteillä on?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nähtävää riittää. Vitošan juurella sijaitsee [[Bojanan kirkko]], joka kuuluu Unescon maailmanperintökohteisiin ja tunnetaan 1200-luvun seinämaalauksistaan. Rinteillä tunnettu nähtävyys on [[Kultaiset sillat]] -niminen kivijoki, laaja lohkareiden täyttämä rinne, joka on suosittu retkikohde. Kivijoki näyttää siivin katsottuna jokseenkin oudolta.
+KYSYMYS: Kerro lisää: Bojanan kirkko

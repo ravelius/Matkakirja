@@ -1,0 +1,1024 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trigradin rotko (luonto · vuori)
+Tietoruudun teksti: Trigradin rotko on Rodopien pystysuorien marmorikallioiden kanjoni Smolyanin läänissä, yhdessä Bulgarian eteläisimmistä lääneistä. Rotko sulkee sisäänsä Trigradska-joen, joka syöksyy Paholaisen kurkku -luolaan ja tulee 530 metrin päästä esiin suurena karstilähteenä. Länsiseinä on 300 metriä ja itäseinä 300–350 metriä korkea, ja seinien väli kapenee pohjoisosassa alun 300 metristä noin 100 metriin. Rotko on 1,2 kilometrin päässä Trigradin kylästä 1 450 metrin korkeudessa, ja se on yksi vain kolmesta maailman joen pelkkään marmoriin kaivamasta rotkosta; suojelualueena se on ollut 1960-luvun alusta ja matkailukäytössä vuodesta 1977.
+AIEMPI KYSYMYS: Milloin Trigradin rotko suojeltiin ja avattiin matkailijoille?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tosiaan päivämäärä, jonka muistan. Rotko on ollut suojelualueena 1960-luvun alusta, ja matkailukäytössä se on ollut vuodesta 1977. Se sijaitsee noin 1,2 kilometrin päässä [[Trigradin]] kylästä 1 450 metrin korkeudessa [[Smolyanin]] läänissä. Suojelu on siis ollut voimassa jo pitkään ennen kuin kävijät pääsivät alueelle. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: Smolyanin
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+- [Yangon — kaupunkilehti / Historia: Hienoin majatalo Suezista itään] Strand-hotelli avattiin jokirannassa vuonna 1901. Rakennuttaja oli brittiläinen liikemies John Darwood, mutta pian talo siirtyi Sarkiesin veljeksille, joiden hotelleja olivat myös Raffles Singaporessa ja Eastern & Oriental Penangissa. Strandia mainostettiin hienoimpana majatalona Suezista itään, ja se oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista. Se ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on enemmän siirtomaa-ajan rakennuksia kuin missään muualla Kaakkois-Aasiassa, ja niistä noin kaksisataa merkittävintä liitettiin vuonna 1996 suojeltujen luetteloon.
+AIEMPI KYSYMYS: Kuinka suuri Strandzhan luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuo on iso alue. [[Strandzhan luonnonpuisto]] kattaa 1 161 neliökilometriä, ja se on Bulgarian suurin suojelualue. Puisto sijaitsee maan äärimmäisessä kaakkoiskulmassa [[Turkin]] rajalla, ja [[metsät]] peittävät noin 80 prosenttia sen alasta. Puisto perustettiin 25. tammikuuta 1995. Pitkä vastaus oli, mutta lukuja riitti.
+KYSYMYS: Kerro lisää: Strandzhan luonnonpuisto
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riad — kohdekartta / Kohdekartta: Imam Turkin suurmoskeija] Turki bin Abdullah otti Riadin 1824 ja teki siitä toisen Saudi-valtion pääkaupungin. Suurmoskeija rakennettiin hänen aikanaan vuosina 1826–1830, hallintopalatsi Qasr al-Hukmin viereen. Turki surmattiin vuonna 1834 perjantairukouksesta lähtiessään, ja moskeija kantaa yhä hänen nimeään. Nykyinen moskeija on vuodelta 1992, ja se avattiin tammikuussa 1993. Samoihin vuosiin osui koko Qasr al-Hukmin korttelin uudistus, jonka työt kestivät 1983–1992. Sisätilaa on 16 800 neliömetriä ja rukoilijoita mahtuu 17 000; se on yksi maan suurimmista moskeijoista. Ulkoseinät ja sisätilan yläosa ovat ruskeaa riadilaista kalkkikiveä, alaosa valkoista marmoria. Miesten ja naisten kirjastot ovat kumpikin 325 nel…
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Kuinka suuri Strandzhan luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuo on iso alue. [[Strandzhan luonnonpuisto]] kattaa 1 161 neliökilometriä, ja se on Bulgarian suurin suojelualue. Puisto sijaitsee maan äärimmäisessä kaakkoiskulmassa [[Turkin]] rajalla, ja [[metsät]] peittävät noin 80 prosenttia sen alasta. Puisto perustettiin 25. tammikuuta 1995. Pitkä vastaus oli, mutta lukuja riitti.
+KYSYMYS: Kerro lisää: Turkin
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chile — maalehti / Historia: Kuusituhatta saksalaista ja poltetut metsät] 1850–1875 — Valtio houkutteli eteläisiin metsiin siirtolaisia, ja vuosina 1850–1875 Valdivian, Osornon ja Llanquihuen seudulle asettui noin kuusituhatta saksalaista. Osa oli lähtenyt Euroopasta vuosien 1848–49 vallankumousten jälkeen. Suunnitelman esitti Bernhard Eunom Philippi, ja Vicente Pérez Rosales toi 1852 perheet Llanquihue-järven rannoille. Maa raivattiin tulella: vuoden 1863 kuivuutta hyväksi käyttäen poltettiin alercemetsät Puerto Varasin ja Puerto Monttin väliltä. Isoisän matkavuonna muutto oli yhä kesken.
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Kuinka suuri Strandzhan luonnonpuisto on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tuo on iso alue. [[Strandzhan luonnonpuisto]] kattaa 1 161 neliökilometriä, ja se on Bulgarian suurin suojelualue. Puisto sijaitsee maan äärimmäisessä kaakkoiskulmassa [[Turkin]] rajalla, ja [[metsät]] peittävät noin 80 prosenttia sen alasta. Puisto perustettiin 25. tammikuuta 1995. Pitkä vastaus oli, mutta lukuja riitti.
+KYSYMYS: Kerro lisää: metsät
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+- [Yangon — kaupunkilehti / Historia: Hienoin majatalo Suezista itään] Strand-hotelli avattiin jokirannassa vuonna 1901. Rakennuttaja oli brittiläinen liikemies John Darwood, mutta pian talo siirtyi Sarkiesin veljeksille, joiden hotelleja olivat myös Raffles Singaporessa ja Eastern & Oriental Penangissa. Strandia mainostettiin hienoimpana majatalona Suezista itään, ja se oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista. Se ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on enemmän siirtomaa-ajan rakennuksia kuin missään muualla Kaakkois-Aasiassa, ja niistä noin kaksisataa merkittävintä liitettiin vuonna 1996 suojeltujen luetteloon.
+AIEMPI KYSYMYS: Millä tavalla nestinarstvo-perinnettä harjoitetaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tähän vastaan mielelläni. Nestinarstvo on [[Strandzhan]] alueen perinne, jossa tanssitaan paljain jaloin hehkuvilla hiilillä. Sitä pidetään pakanallisen menneisyyden jäänteenä, ja perinne on liitetty paikallisiin kristillisiin juhliin. Tarkemmat rituaalit ja niiden merkitys vaihtelevat lähteiden mukaan, enkä ole niistä kaikesta varma. Tanssijoita kutsutaan [[nestinareiksi]]. Hiilille ei minun jalkani kyllä menisi.
+KYSYMYS: Kerro lisää: Strandzhan
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+AIEMPI KYSYMYS: Millä tavalla nestinarstvo-perinnettä harjoitetaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tähän vastaan mielelläni. Nestinarstvo on [[Strandzhan]] alueen perinne, jossa tanssitaan paljain jaloin hehkuvilla hiilillä. Sitä pidetään pakanallisen menneisyyden jäänteenä, ja perinne on liitetty paikallisiin kristillisiin juhliin. Tarkemmat rituaalit ja niiden merkitys vaihtelevat lähteiden mukaan, enkä ole niistä kaikesta varma. Tanssijoita kutsutaan [[nestinareiksi]]. Hiilille ei minun jalkani kyllä menisi.
+KYSYMYS: Kerro lisää: nestinareiksi
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Piiritanssi jonka italialainen piirsi] 1810 — Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa länsimaiseen korvaan kompastelevalta, vaikka tanssijalle rytmi on itsestäänselvä nopeiden ja hitaiden askelten vuorotteluna. Italialainen Luigi Mayer luonnosteli bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset julkaistiin kaiverruksina kirjassa vasta 1810, vuosia taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja kyläjuhlissa, ja jokainen osaa ainakin muutaman perusaskeleen.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Milloin Strandzhan luonnonpuisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Strandzhan luonnonpuisto]] perustettiin 25. tammikuuta 1995. Tarkoituksena oli suojella eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Puisto sijaitsee [[Bulgarian]] kaakkoiskulmassa Turkin rajalla, ja se on maan suurin suojelualue. Vanhin sen luonnonsuojelualueista, Silkosia, on perustettu jo vuonna 1933.
+
+Minä olen lentänyt monen rajan yli, eikä yksikään metsä ole kysynyt passia. Mut kyllä näissä kaakon metsissä on rauhaa, minkä kyyhkykin huomaa.
+KYSYMYS: Kerro lisää: Bulgarian
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+AIEMPI KYSYMYS: Mikä on Unescon biosfäärialue?
+AIEMPI VASTAUS (Livia):
+Mmm, ai se. [[Unescon]] biosfäärialue on alue, jolla yritetään yhdistää luonnon suojelu ja ihmisten kestävä elinkeino ja kulttuuri. Verkosto kuuluu Unescon ihmisen ja biosfäärin ohjelmaan, ja alueilla tutkitaan, miten luonnonvaroja voi käyttää niin, että ne säilyvät. Alue jaetaan tavallisesti ydinalueeseen, puskurivyöhykkeeseen ja yhteistyövyöhykkeeseen. [[Uzunbodzhak]] kuuluu tähän verkostoon Strandzhan alueella. Kyllä tästä riittäisi vielä juttua.
+KYSYMYS: Kerro lisää: Unescon
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+AIEMPI KYSYMYS: Mikä on Unescon biosfäärialue?
+AIEMPI VASTAUS (Livia):
+Mmm, ai se. [[Unescon]] biosfäärialue on alue, jolla yritetään yhdistää luonnon suojelu ja ihmisten kestävä elinkeino ja kulttuuri. Verkosto kuuluu Unescon ihmisen ja biosfäärin ohjelmaan, ja alueilla tutkitaan, miten luonnonvaroja voi käyttää niin, että ne säilyvät. Alue jaetaan tavallisesti ydinalueeseen, puskurivyöhykkeeseen ja yhteistyövyöhykkeeseen. [[Uzunbodzhak]] kuuluu tähän verkostoon Strandzhan alueella. Kyllä tästä riittäisi vielä juttua.
+KYSYMYS: Kerro lisää: Uzunbodzhak
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+- [Yangon — kaupunkilehti / Historia: Hienoin majatalo Suezista itään] Strand-hotelli avattiin jokirannassa vuonna 1901. Rakennuttaja oli brittiläinen liikemies John Darwood, mutta pian talo siirtyi Sarkiesin veljeksille, joiden hotelleja olivat myös Raffles Singaporessa ja Eastern & Oriental Penangissa. Strandia mainostettiin hienoimpana majatalona Suezista itään, ja se oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista. Se ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on enemmän siirtomaa-ajan rakennuksia kuin missään muualla Kaakkois-Aasiassa, ja niistä noin kaksisataa merkittävintä liitettiin vuonna 1996 suojeltujen luetteloon.
+AIEMPI KYSYMYS: Mikä Silkosia on ja milloin se perustettiin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Silkosia on [[Strandzhan luonnonpuiston]] vanhin luonnonsuojelualue, ja se perustettiin vuonna 1933. Luonnonsuojelualue on tiukempi suojelun muoto kuin tavallinen luonnonpuisto, ja siellä luonnon annetaan kehittyä mahdollisimman häiriöttä. Alue kuuluu [[Bulgarian]] suojelualueiden vanhimpaan kerrokseen. Ihan pitkältä ajalta tämäkin tieto tuli.
+KYSYMYS: Kerro lisää: Strandzhan luonnonpuiston
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+AIEMPI KYSYMYS: Mikä on Rodopien korkein huippu Smolyanin lähellä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Korkein huippu on Golyam Perelik, joka on 2 191 metriä korkea ja kohoaa [[Keski-Rodopeilla]] [[Smolyanin]] juurella. Smolyan sijaitsee Tšernan ja Byalan jokien kapeassa laaksossa, ja lähellä ovat hiihtokeskukset [[Pamporovo]] ja [[Chepelare]]. Huippu on siis vuoriston korkein piste. Ylhäältä katsoen se on oikein kelpo kumpare.
+KYSYMYS: Kerro lisää: Keski-Rodopeilla
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+AIEMPI KYSYMYS: Mikä on Rodopien korkein huippu Smolyanin lähellä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Korkein huippu on Golyam Perelik, joka on 2 191 metriä korkea ja kohoaa [[Keski-Rodopeilla]] [[Smolyanin]] juurella. Smolyan sijaitsee Tšernan ja Byalan jokien kapeassa laaksossa, ja lähellä ovat hiihtokeskukset [[Pamporovo]] ja [[Chepelare]]. Huippu on siis vuoriston korkein piste. Ylhäältä katsoen se on oikein kelpo kumpare.
+KYSYMYS: Kerro lisää: Smolyanin
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+AIEMPI KYSYMYS: Mikä on Rodopien korkein huippu Smolyanin lähellä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Korkein huippu on Golyam Perelik, joka on 2 191 metriä korkea ja kohoaa [[Keski-Rodopeilla]] [[Smolyanin]] juurella. Smolyan sijaitsee Tšernan ja Byalan jokien kapeassa laaksossa, ja lähellä ovat hiihtokeskukset [[Pamporovo]] ja [[Chepelare]]. Huippu on siis vuoriston korkein piste. Ylhäältä katsoen se on oikein kelpo kumpare.
+KYSYMYS: Kerro lisää: Pamporovo
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+AIEMPI KYSYMYS: Mikä on Rodopien korkein huippu Smolyanin lähellä?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Korkein huippu on Golyam Perelik, joka on 2 191 metriä korkea ja kohoaa [[Keski-Rodopeilla]] [[Smolyanin]] juurella. Smolyan sijaitsee Tšernan ja Byalan jokien kapeassa laaksossa, ja lähellä ovat hiihtokeskukset [[Pamporovo]] ja [[Chepelare]]. Huippu on siis vuoriston korkein piste. Ylhäältä katsoen se on oikein kelpo kumpare.
+KYSYMYS: Kerro lisää: Chepelare
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Millä nimellä Smolyania kutsuttiin Osmanien aikana?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaupunki nimettiin [[Osmanien]] aikana Pashmakliksi, ja se on nykyisin [[Rodopien]] kaupunki. Kaupunki oli viisisataa vuotta Osmanien vallan alla, ja vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen Smolyan muodostui vasta vuonna 1960, kun kolme kylää yhdistyi. Nimi on siis vaihtunut moneen kertaan, ja kaupunkikin on rakentunut useammasta osasta.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+AIEMPI KYSYMYS: Millä nimellä Smolyania kutsuttiin Osmanien aikana?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaupunki nimettiin [[Osmanien]] aikana Pashmakliksi, ja se on nykyisin [[Rodopien]] kaupunki. Kaupunki oli viisisataa vuotta Osmanien vallan alla, ja vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen Smolyan muodostui vasta vuonna 1960, kun kolme kylää yhdistyi. Nimi on siis vaihtunut moneen kertaan, ja kaupunkikin on rakentunut useammasta osasta.
+KYSYMYS: Kerro lisää: Rodopien
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mistä Smolyanin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla. Heimon nimi on säilynyt kaupungin nimessä vuosisatojen yli, vaikka seutu kuului keskiajalla [[Bysantin]] ja [[Bulgarian]] valtakunnille ja joutui sen jälkeen [[Osmanien]] alaisuuteen. Nimi on siis vanha ja kertoo alueen varhaisesta slaavilaisasutuksesta.
+
+Minä lentäisin mieluummin heimon nimestä toiseen kuin yrittäisin kirjoittaa sen kyrillisin kirjaimin. Mut onneksi se on helppo muistaa.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Piiritanssi jonka italialainen piirsi] 1810 — Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa länsimaiseen korvaan kompastelevalta, vaikka tanssijalle rytmi on itsestäänselvä nopeiden ja hitaiden askelten vuorotteluna. Italialainen Luigi Mayer luonnosteli bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset julkaistiin kaiverruksina kirjassa vasta 1810, vuosia taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja kyläjuhlissa, ja jokainen osaa ainakin muutaman perusaskeleen.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mistä Smolyanin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla. Heimon nimi on säilynyt kaupungin nimessä vuosisatojen yli, vaikka seutu kuului keskiajalla [[Bysantin]] ja [[Bulgarian]] valtakunnille ja joutui sen jälkeen [[Osmanien]] alaisuuteen. Nimi on siis vanha ja kertoo alueen varhaisesta slaavilaisasutuksesta.
+
+Minä lentäisin mieluummin heimon nimestä toiseen kuin yrittäisin kirjoittaa sen kyrillisin kirjaimin. Mut onneksi se on helppo muistaa.
+KYSYMYS: Kerro lisää: Bulgarian
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mikä on vilajetti ja sandžakki Osmanien hallinnossa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vilajetti oli [[Osmanien valtakunnan]] suurin hallinnollinen alue 1800-luvun puolivälin uudistusten jälkeen, ja se jaettiin pienempiin sandžakkeihin. Sandžakki oli siis vilajetin alainen hallintoalue. Esimerkiksi [[Smolyan]] kuului vuosina 1867–1912 Edirnen vilajetin Gümülcinen sandžakiin. Järjestelmä muuttui useaan otteeseen, joten tarkat rajat riippuvat vuosiluvusta. Onpas ollut byrokraattista väkeä.
+KYSYMYS: Kerro lisää: Osmanien valtakunnan
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+AIEMPI KYSYMYS: Mikä on vilajetti ja sandžakki Osmanien hallinnossa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vilajetti oli [[Osmanien valtakunnan]] suurin hallinnollinen alue 1800-luvun puolivälin uudistusten jälkeen, ja se jaettiin pienempiin sandžakkeihin. Sandžakki oli siis vilajetin alainen hallintoalue. Esimerkiksi [[Smolyan]] kuului vuosina 1867–1912 Edirnen vilajetin Gümülcinen sandžakiin. Järjestelmä muuttui useaan otteeseen, joten tarkat rajat riippuvat vuosiluvusta. Onpas ollut byrokraattista väkeä.
+KYSYMYS: Kerro lisää: Smolyan
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Minkä huipun rinteellä Berkovitsa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Berkovitsa sijaitsee [[Berkovska Stara Planinan]] Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa. Korkeutta kaupungilla on 405 metriä. Kaupunki on hiihtokeskus Luoteis-Bulgariassa Montanan läänissä, lähellä Varshetsin kaupunkia. Kom on siis kaupungin taustalla kohoava vuori, ja lähellä on [[Varshetsin]] kaupunki.
+KYSYMYS: Kerro lisää: Berkovska Stara Planinan
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Minkä huipun rinteellä Berkovitsa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Berkovitsa sijaitsee [[Berkovska Stara Planinan]] Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa. Korkeutta kaupungilla on 405 metriä. Kaupunki on hiihtokeskus Luoteis-Bulgariassa Montanan läänissä, lähellä Varshetsin kaupunkia. Kom on siis kaupungin taustalla kohoava vuori, ja lähellä on [[Varshetsin]] kaupunki.
+KYSYMYS: Kerro lisää: Varshetsin
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Minä vuonna kaupunki mainitaan ensi kerran Osmanien asiakirjoissa?
+AIEMPI VASTAUS (Livia):
+Just niin, vuosiluku on 1488. [[Berkovitsa]] mainitaan ensi kerran [[Osmanien]] asiakirjoissa vuonna 1488. Tämä ei tarkoita, että asutus olisi syntynyt vasta silloin: kaupungin länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Ensimmäinen maininta kertoo siis vain, milloin kaupunki ilmestyi näihin asiakirjoihin. Vanhoja kiviä riittää.
+KYSYMYS: Kerro lisää: Berkovitsa
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Minä vuonna kaupunki mainitaan ensi kerran Osmanien asiakirjoissa?
+AIEMPI VASTAUS (Livia):
+Just niin, vuosiluku on 1488. [[Berkovitsa]] mainitaan ensi kerran [[Osmanien]] asiakirjoissa vuonna 1488. Tämä ei tarkoita, että asutus olisi syntynyt vasta silloin: kaupungin länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Ensimmäinen maininta kertoo siis vain, milloin kaupunki ilmestyi näihin asiakirjoihin. Vanhoja kiviä riittää.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mikä oli Chiprovtsin kapina vuonna 1688?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Chiprovtsin kapina]] oli kapina Osmanien valtaa vastaan Luoteis-Bulgariassa vuonna 1688. Kapinan taustalla oli aikakauden suuri sota Osmanien valtakunnan ja eurooppalaisten valtojen välillä. Kapina kukistettiin, ja Chiprovtsin seutu kärsi vakavasti. Tapahtuma on jäänyt osaksi Bulgarian historiaa, ja seutu kuului [[Berkovitsan]] ympäristön tapahtumiin. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Chiprovtsin kapina
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Mikä oli Chiprovtsin kapina vuonna 1688?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Chiprovtsin kapina]] oli kapina Osmanien valtaa vastaan Luoteis-Bulgariassa vuonna 1688. Kapinan taustalla oli aikakauden suuri sota Osmanien valtakunnan ja eurooppalaisten valtojen välillä. Kapina kukistettiin, ja Chiprovtsin seutu kärsi vakavasti. Tapahtuma on jäänyt osaksi Bulgarian historiaa, ja seutu kuului [[Berkovitsan]] ympäristön tapahtumiin. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Berkovitsan
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Levski] Majatalon isäntä ei sanonut nimeä, mutta minä sanon: Vasil Levski. Bulgarialaiset kutsuvat häntä Vapauden apostoliksi. Hän rakensi koko maahan salaisten vallankumouskomiteoiden verkoston ja suunnitteli kansannousua osmanivaltaa vastaan. Joulukuussa 1872 hänet kaapattiin majatalosta ja tuotiin Sofiaan oikeudenkäyntiin — eikä hän paljastanut yhtäkään toveriaan. Tuomio pantiin täytäntöön 18. helmikuuta 1873, siis samana talvena kuin isoisäsi sulki matkalaukkunsa Lontoossa. Sillä kohdalla seisoo nyt kolmentoista metrin muistomerkki harmaata balkanilaista graniittia. Hautaa ei ole löydetty.
+AIEMPI KYSYMYS: Kuka oli Vasil Levski?
+AIEMPI VASTAUS (Livia):
+Ai niin, hänestä. [[Vasil Levski]] oli bulgarialainen vallankumouksellinen, jota kutsutaan usein Bulgarian vapauttajaksi. Hän työskenteli kansallisen vapautusliikkeen puolesta ja perusti paikallisia vallankumouskomiteoita eri puolille maata. Elokuun 1872 lopussa hän vieraili [[Berkovitsassa]] Mito Ankovin kanssa. Hänet teloitettiin Sofiassa helmikuussa 1873, joten hän on yksi Bulgarian tunnetuimpia kansallishahmoja. Aika on siitä kulunut jo yli sata vuotta, ja hänen muistonsa elää yhä.
+KYSYMYS: Kerro lisää: Vasil Levski
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Kuka oli Vasil Levski?
+AIEMPI VASTAUS (Livia):
+Ai niin, hänestä. [[Vasil Levski]] oli bulgarialainen vallankumouksellinen, jota kutsutaan usein Bulgarian vapauttajaksi. Hän työskenteli kansallisen vapautusliikkeen puolesta ja perusti paikallisia vallankumouskomiteoita eri puolille maata. Elokuun 1872 lopussa hän vieraili [[Berkovitsassa]] Mito Ankovin kanssa. Hänet teloitettiin Sofiassa helmikuussa 1873, joten hän on yksi Bulgarian tunnetuimpia kansallishahmoja. Aika on siitä kulunut jo yli sata vuotta, ja hänen muistonsa elää yhä.
+KYSYMYS: Kerro lisää: Berkovitsassa
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Mitä nimi Stara Planina tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Stara Planina tarkoittaa bulgariaksi vanhaa vuorta tai vanhaa vuoristoa. Nimi viittaa [[Balkanvuoriston]] bulgarialaiseen nimeen, ja se kulkee halki Bulgarian itä–länsisuunnassa. [[Berkovska Stara Planina]] on tämän vuoriston läntinen osa, jonka rinteellä Berkovitsa sijaitsee. Nimi on siis kirjaimellinen kuvaus.
+
+Minusta on kaunista, että vuori on yksinkertaisesti vanha. Siihen verrattuna minä olen vasta nuori kyyhky.
+KYSYMYS: Kerro lisää: Balkanvuoriston
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+AIEMPI KYSYMYS: Mitä nimi Stara Planina tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Stara Planina tarkoittaa bulgariaksi vanhaa vuorta tai vanhaa vuoristoa. Nimi viittaa [[Balkanvuoriston]] bulgarialaiseen nimeen, ja se kulkee halki Bulgarian itä–länsisuunnassa. [[Berkovska Stara Planina]] on tämän vuoriston läntinen osa, jonka rinteellä Berkovitsa sijaitsee. Nimi on siis kirjaimellinen kuvaus.
+
+Minusta on kaunista, että vuori on yksinkertaisesti vanha. Siihen verrattuna minä olen vasta nuori kyyhky.
+KYSYMYS: Kerro lisää: Berkovska Stara Planina
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+AIEMPI KYSYMYS: Minkä kaupungin kanssa Sozopol kilpaili kaupankäynnissä antiikissa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sozopolin kauppakilpailija oli Mesembria, nykyinen [[Nesebar]]. Kaupungit olivat molemmat kreikkalaisia siirtokuntia [[Mustanmeren]] länsirannalla, ja ne kilpailivat kaupasta ja merenkulusta. Sozopol oli antiikissa nimeltään Apollonia, ja siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista. Sen historia on siis pitkä. Mukava, kun kilpailua riittää vielä tänäkin päivänä.
+KYSYMYS: Kerro lisää: Nesebar
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Pöydän perinteet: Salaatti lipun väreissä] 1956 — Shopska-salaatti syntyi 1950-luvulla, kun valtion matkailuyhtiö Balkantourist kehitti Mustanmeren rannikon Družban lomakylän ravintolassa uuden annoksen ulkomaisille turisteille. Kokit valitsivat ainekset tarkoituksella niin, että lautanen näyttää Bulgarian lipulta: valkoinen raastettu sirene-juusto, vihreä kurkku ja paprika, ja punainen tomaatti. Salaatti sai nimensä läntisen Bulgarian shop-alueen asukkaista, vaikka resepti keksittiin rantahotellissa eikä vuorikylässä. Monista samaan aikaan luoduista matkailuruoista shopska on ainoa, joka jäi elämään — siitä tuli koko maan tunnetuin ruokalaji.
+AIEMPI KYSYMYS: Minkä kaupungin kanssa Sozopol kilpaili kaupankäynnissä antiikissa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Sozopolin kauppakilpailija oli Mesembria, nykyinen [[Nesebar]]. Kaupungit olivat molemmat kreikkalaisia siirtokuntia [[Mustanmeren]] länsirannalla, ja ne kilpailivat kaupasta ja merenkulusta. Sozopol oli antiikissa nimeltään Apollonia, ja siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista. Sen historia on siis pitkä. Mukava, kun kilpailua riittää vielä tänäkin päivänä.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Bolšoi-teatteri] 1825 Moskovan Bolšoi-teatteri, jonka nimi tarkoittaa venäjäksi "suurta teatteria", avasi ovensa vuonna 1825. Sen suunnitteli arkkitehti Joseph Bové, ja rakennuksen pylväikön yläpuolella nelivaljakkoa ajaa jumala Apollo pronssisessa vaunussa - patsaan teki kuvanveistäjä Pjotr Klodt. Teatterin historiaan mahtuu useita paloja. Edellinen, vielä vanhempi teatteri tuhoutui tulipalossa jo vuonna 1805, ja tulipalo iski uuteenkin rakennukseen vuonna 1853. Arkkitehti Alberto Cavos suunnitteli katsomon uudelleen, ja siitä lähtien salissa on loistanut tuttu punainen ja kultainen väritys. Nykyisin saliin mahtuu noin 1740 katsojaa. Bolšoi-teatterissa on nähty monta merkittävää ensi-iltaa - muun muassa Tš…
+AIEMPI KYSYMYS: Minä vuonna roomalaiset valtasivat ja ryöstivät Sozopolin?
+AIEMPI VASTAUS (Livia):
+Joo, vuosi on muistissa. Roomalaislegioonat valtasivat ja ryöstivät kaupungin vuonna 72 eaa. Lucullus vei [[Apollon patsaan]] [[Roomaan]]. Silloin kaupunki oli vielä Apollonia, ja se oli ollut yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista. Tapahtuma oli kaupungille raskas, mutta kaupunki on säilynyt tähän päivään asti. Onneksi siitä on kulunut jo yli kaksi tuhatta vuotta.
+KYSYMYS: Kerro lisää: Apollon patsaan
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Kaikki tiet veivät Roomaan] 312 eaa. — Via Appia avattiin vuonna 312 ennen ajanlaskua, ja sen basalttikivet ovat yhä paikoillaan Rooman eteläpuolella. Valtakunta rakensi teitä yli 80 000 kilometriä — niin suoria, että moni Euroopan moottoritie kulkee nykyään samaa linjaa. Tiet tehtiin sotajoukoille, mutta niitä pitkin kulkivat myös kauppiaat, kirjeet ja ajatukset: sanonta "kaikki tiet vievät Roomaan" oli aikanaan aivan kirjaimellinen väite. Pinjojen reunustamalla Via Appialla voi kävellä saman kiveyksen päällä kuin roomalaiset kaksi vuosituhatta sitten.
+AIEMPI KYSYMYS: Minä vuonna roomalaiset valtasivat ja ryöstivät Sozopolin?
+AIEMPI VASTAUS (Livia):
+Joo, vuosi on muistissa. Roomalaislegioonat valtasivat ja ryöstivät kaupungin vuonna 72 eaa. Lucullus vei [[Apollon patsaan]] [[Roomaan]]. Silloin kaupunki oli vielä Apollonia, ja se oli ollut yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista. Tapahtuma oli kaupungille raskas, mutta kaupunki on säilynyt tähän päivään asti. Onneksi siitä on kulunut jo yli kaksi tuhatta vuotta.
+KYSYMYS: Kerro lisää: Roomaan
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+AIEMPI KYSYMYS: Miksi kreikkalaiset perustivat siirtokuntia Mustanmeren rannoille?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kreikkalaiset perustivat siirtokuntia [[Mustanmeren]] rannoille 700- ja 600-luvuilta eaa. lähtien, ja syitä oli useita: viljelymaan puute kotiseuduilla, kaupan mahdollisuudet sekä raaka-aineiden ja viljan saanti. Siirtokunnat olivat usein itsenäisiä kaupunkeja, jotka pitivät silti yhteyden emäkaupunkiinsa. Sozopol perustettiin 600-luvulla eaa. [[Miletoksen]] siirtolaisten toimesta. Siirtokunnat muokkasivat koko seudun kauppaa ja kulttuuria. Kyllä tämä kysymys vei hetken.
+KYSYMYS: Kerro lisää: Miletoksen
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Ljubljana — kaupunkilehti / Historia: Emona: roomalainen kaupunki nykyisen keskustan alla] Ennen Ljubljanaa täällä oli Emona. Roomalaiset rakensivat linnavuoren juurelle sotilasleirin jo ennen ajanlaskun alkua, ja muurein varustettu kaupunki perustettiin vuoden 14 tienoilla. Siellä asui viidestä kuuteen tuhatta ihmistä, enimmäkseen kauppiaita ja käsityöläisiä. Katuverkko oli roomalaiseen tapaan ristikko, jonka keskellä oli tori. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja, ja Jože Plečnik kunnosti muurin jäänteet puistoksi.
+AIEMPI KYSYMYS: Kuka oli Lucullus, joka vei Apollon patsaan Roomaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lucullus oli [[roomalainen]] sotapäällikkö ja poliitikko. Lucullus-suvun jäsenet toimivat roomalaisjoukkojen johdossa Mustanmeren seudulla sodassa kuningas Mithridatesta vastaan. Lähteissä Apollonian valtaus liitetään sekä Lucius Lucullukseen että hänen veljeensä Marcus Lucullukseen, joten en ole varma, kumman nimissä valtaus tehtiin. [[Apollon patsas]] vietiin Roomaan, ja kaupunki menetti yhden tärkeimmistä aarteistaan.
+
+Minä olen nähnyt monta kaupunkia ryöstettynä, mutta patsaan vieminen toiseen maahan on silti ihan erityisen ikävä historia. Sellaiset tarinat eivät unohdu.
+KYSYMYS: Kerro lisää: roomalainen
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+AIEMPI KYSYMYS: Kuka oli Lucullus, joka vei Apollon patsaan Roomaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lucullus oli [[roomalainen]] sotapäällikkö ja poliitikko. Lucullus-suvun jäsenet toimivat roomalaisjoukkojen johdossa Mustanmeren seudulla sodassa kuningas Mithridatesta vastaan. Lähteissä Apollonian valtaus liitetään sekä Lucius Lucullukseen että hänen veljeensä Marcus Lucullukseen, joten en ole varma, kumman nimissä valtaus tehtiin. [[Apollon patsas]] vietiin Roomaan, ja kaupunki menetti yhden tärkeimmistä aarteistaan.
+
+Minä olen nähnyt monta kaupunkia ryöstettynä, mutta patsaan vieminen toiseen maahan on silti ihan erityisen ikävä historia. Sellaiset tarinat eivät unohdu.
+KYSYMYS: Kerro lisää: Apollon patsas
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+AIEMPI KYSYMYS: Millainen kaupunki Burgas on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Burgas on yksi Bulgarian merkittävistä satamakaupungeista [[Mustanmeren]] rannalla, ja se sijaitsee noin 35 kilometriä Sozopolista pohjoiseen. Kaupunki toimii alueen tärkeänä liikenne- ja kauppakeskuksena. [[Sozopol]] on sen eteläpuolella oleva vanha merenrantakaupunki, jossa on muinaisia kreikkalaisjuuria. Satamakaupungit ovat kyyhkyn mieleen, koska meri näyttää niistä kauniilta.
+KYSYMYS: Kerro lisää: Sozopol
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Minä vuonna huhtikuun kansannousun ensimmäinen laukaus ammuttiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ensimmäinen laukaus [[Osmanien]] valtaa vastaan ammuttiin [[Koprivshtitsan]] sillalla huhtikuussa 1876, ja se käynnisti huhtikuun kansannousun. Bulgaria kuului silloin vielä Osmanien valtakuntaan, ja kansannousun tukahduttaminen herätti laajaa huomiota muualla Euroopassa. Autonominen [[Bulgarian ruhtinaskunta]] syntyi vuonna 1878, ja itse silta oli rakennettu jo vuonna 1813. Onneksi siit on nyt noin 150 vuotta.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+AIEMPI KYSYMYS: Minä vuonna huhtikuun kansannousun ensimmäinen laukaus ammuttiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ensimmäinen laukaus [[Osmanien]] valtaa vastaan ammuttiin [[Koprivshtitsan]] sillalla huhtikuussa 1876, ja se käynnisti huhtikuun kansannousun. Bulgaria kuului silloin vielä Osmanien valtakuntaan, ja kansannousun tukahduttaminen herätti laajaa huomiota muualla Euroopassa. Autonominen [[Bulgarian ruhtinaskunta]] syntyi vuonna 1878, ja itse silta oli rakennettu jo vuonna 1813. Onneksi siit on nyt noin 150 vuotta.
+KYSYMYS: Kerro lisää: Koprivshtitsan
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Piiritanssi jonka italialainen piirsi] 1810 — Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa länsimaiseen korvaan kompastelevalta, vaikka tanssijalle rytmi on itsestäänselvä nopeiden ja hitaiden askelten vuorotteluna. Italialainen Luigi Mayer luonnosteli bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset julkaistiin kaiverruksina kirjassa vasta 1810, vuosia taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja kyläjuhlissa, ja jokainen osaa ainakin muutaman perusaskeleen.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Minä vuonna huhtikuun kansannousun ensimmäinen laukaus ammuttiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ensimmäinen laukaus [[Osmanien]] valtaa vastaan ammuttiin [[Koprivshtitsan]] sillalla huhtikuussa 1876, ja se käynnisti huhtikuun kansannousun. Bulgaria kuului silloin vielä Osmanien valtakuntaan, ja kansannousun tukahduttaminen herätti laajaa huomiota muualla Euroopassa. Autonominen [[Bulgarian ruhtinaskunta]] syntyi vuonna 1878, ja itse silta oli rakennettu jo vuonna 1813. Onneksi siit on nyt noin 150 vuotta.
+KYSYMYS: Kerro lisää: Bulgarian ruhtinaskunta
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+AIEMPI KYSYMYS: Mitä bulgarian sana kopriva tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, sehän on helppo. Bulgarian sana kopriva tarkoittaa nokkosta. Siitä juontuu [[Koprivshtitsan]] kaupungin nimi, ja sama sana tunnetaan myös muissa [[slaavilaisissa kielissä]]: venäjäksi nokkonen on крапива, joka muistuttaa selvästi bulgarian muotoa. Kyl se nimi jää kivasti mieleen.
+KYSYMYS: Kerro lisää: slaavilaisissa kielissä
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Perinne, jonka Unesco otti suojaansa] Unesco lisäsi Latvian, Viron ja Liettuan yhteiset laulu- ja tanssijuhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloonsa vuonna 2003 — tunnustuksena siitä, että perinne on säilyttänyt kolmen maan kansanmusiikkia elävänä sukupolvesta toiseen kirjoitetun nuotin ja suullisen opetuksen yhdistelmällä. Kolmen Baltian maan juhlat kehittyivät toisistaan erillään 1800-luvun kansallisen herätyksen aikana, mutta niitä yhdistää sama perusidea: tavalliset ihmiset, ei ammattilaiset, laulavat yhdessä isoina joukkoina oman kielensä ja kulttuurinsa kunniaksi.
+AIEMPI KYSYMYS: Mitä Oslekovin talossa on nykyään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Oslekovin talossa toimii nykyään etnografinen museo. Talo rakennettiin vuosina 1853–1856, ja se on yksi [[Koprivshtitsan]] lukuisista [[Bulgarian kansallisen herätyksen]] ajan rakennuksista. Suuri osa kaupungin vanhoista taloista on kunnostettu alkuperäiseen asuunsa, ja etnografinen museo esittelee perinteistä kansanelämää, kuten asumista ja pukeutumista.
+
+Kaikki ikkunalaudat ovat minusta kiinnostavia, ja bulgarialaisella ikkunalaudalla odotan aina kozunakia. Se on pulla, ja hyvä sellainen.
+KYSYMYS: Kerro lisää: Bulgarian kansallisen herätyksen
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+AIEMPI KYSYMYS: Kuinka korkealla Koprivshtitsa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Koprivshtitsa sijaitsee [[Sredna Goran]] vuoristossa noin tuhannen metrin korkeudessa Topolnitsa-joen varrella. Kaupunki on noin sadan kilometrin päässä [[Sofiasta]] itään. Sredna Gora on Balkanvuorten eteläpuolella kulkeva vuorijono, joten ympäristö on vuoristoista ja kesäisin tasankoa viileämpää. Kyl ylhäältä näkee kauas.
+KYSYMYS: Kerro lisää: Sredna Goran
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+- [Istanbul — kaupunkilehti / Istanbul: Medusa kannattelee pylvästä ylösalaisin] Hagia Sofiasta 150 metrin päässä laskeutuu 52 porrasta maan alle. Siellä on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama vesisäiliö: 336 yhdeksänmetristä pylvästä. Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla ranskalainen matkaaja ihmetteli, miksi talojen lattioissa on reikiä, joista lasketaan ämpäri — ja joistakin nousee kaloja. Kahden pylvään jalustaksi on pantu kivi, johon on veistetty Medusan kasvot: toinen kyljellään, toinen ylösalaisin. Varmaa syytä ei tiedetä. Tarina kertoo, että pää käännettiin, jottei kivettävä katse osuisi keneenkään; tutkijoiden mukaan kivet ovat roomalaisajan rakennuksesta otettua kierrätyskiveä.
+AIEMPI KYSYMYS: Kuinka korkealla Koprivshtitsa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Koprivshtitsa sijaitsee [[Sredna Goran]] vuoristossa noin tuhannen metrin korkeudessa Topolnitsa-joen varrella. Kaupunki on noin sadan kilometrin päässä [[Sofiasta]] itään. Sredna Gora on Balkanvuorten eteläpuolella kulkeva vuorijono, joten ympäristö on vuoristoista ja kesäisin tasankoa viileämpää. Kyl ylhäältä näkee kauas.
+KYSYMYS: Kerro lisää: Sofiasta
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+AIEMPI KYSYMYS: Milloin Koprivshtitsassa järjestetään kansanperinnefestivaali?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Bulgarian kansallinen kansanperinnefestivaali järjestetään [[Koprivshtitsassa]] noin viiden vuoden välein, ja se on pidetty siellä vuodesta 1965 lähtien. Festivaalilla esiintyy [[kansanmusiikin]], laulun ja tanssin harrastajia eri puolilta Bulgariaa. Seuraavan festivaalin ajankohta kannattaa tarkistaa ajantasaisesta lähteestä, sillä en ole varma siitä. Viisi vuotta on kyyhkylle pitkä aika pysyä paikoillaan.
+KYSYMYS: Kerro lisää: Koprivshtitsassa
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Milloin Koprivshtitsassa järjestetään kansanperinnefestivaali?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Bulgarian kansallinen kansanperinnefestivaali järjestetään [[Koprivshtitsassa]] noin viiden vuoden välein, ja se on pidetty siellä vuodesta 1965 lähtien. Festivaalilla esiintyy [[kansanmusiikin]], laulun ja tanssin harrastajia eri puolilta Bulgariaa. Seuraavan festivaalin ajankohta kannattaa tarkistaa ajantasaisesta lähteestä, sillä en ole varma siitä. Viisi vuotta on kyyhkylle pitkä aika pysyä paikoillaan.
+KYSYMYS: Kerro lisää: kansanmusiikin
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Minkä kahden kaupungin välillä Shipkan sola kulkee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Shipkan sola yhdistää [[Gabrovon]] ja [[Kazanlakin]] kaupungit. Se kulkee [[Balkanvuorten]] läpi noin 1 150 metrin korkeudessa ja on samalla Stara Zagoran ja Gabrovon läänien raja. Kartalla se on kyl yllättävän selkee kohta.
+KYSYMYS: Kerro lisää: Gabrovon
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+AIEMPI KYSYMYS: Minkä kahden kaupungin välillä Shipkan sola kulkee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Shipkan sola yhdistää [[Gabrovon]] ja [[Kazanlakin]] kaupungit. Se kulkee [[Balkanvuorten]] läpi noin 1 150 metrin korkeudessa ja on samalla Stara Zagoran ja Gabrovon läänien raja. Kartalla se on kyl yllättävän selkee kohta.
+KYSYMYS: Kerro lisää: Kazanlakin
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Minkä kahden kaupungin välillä Shipkan sola kulkee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Shipkan sola yhdistää [[Gabrovon]] ja [[Kazanlakin]] kaupungit. Se kulkee [[Balkanvuorten]] läpi noin 1 150 metrin korkeudessa ja on samalla Stara Zagoran ja Gabrovon läänien raja. Kartalla se on kyl yllättävän selkee kohta.
+KYSYMYS: Kerro lisää: Balkanvuorten
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Minä vuonna Shipkan muistomerkki avattiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Shipkan muistomerkki avattiin vuonna 1934. Sen suunnittelivat arkkitehti [[Atanas Donkov]] ja kuvanveistäjä [[Aleksandar Andreev]], ja se muistuttaa solalla vuosina 1877–1878 käydyistä taisteluista. Onpas se seissy siinä pitkään.
+KYSYMYS: Kerro lisää: Atanas Donkov
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Minä vuonna Shipkan muistomerkki avattiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Shipkan muistomerkki avattiin vuonna 1934. Sen suunnittelivat arkkitehti [[Atanas Donkov]] ja kuvanveistäjä [[Aleksandar Andreev]], ja se muistuttaa solalla vuosina 1877–1878 käydyistä taisteluista. Onpas se seissy siinä pitkään.
+KYSYMYS: Kerro lisää: Aleksandar Andreev
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Kuinka korkea Shipkan muistomerkki on?
+AIEMPI VASTAUS (Livia):
+No niin. Shipkan muistomerkki on 31,5 metriä korkea kivitorni. Sen sisäänkäynnin yllä on kahdeksan metriä pitkä [[pronssileijona]]. Muistomerkki avattiin vuonna 1934, ja se sijaitsee solan tuntumassa [[Balkanvuorilla]]. Kyl tuo on komea torni.
+KYSYMYS: Kerro lisää: pronssileijona
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Kuinka korkea Shipkan muistomerkki on?
+AIEMPI VASTAUS (Livia):
+No niin. Shipkan muistomerkki on 31,5 metriä korkea kivitorni. Sen sisäänkäynnin yllä on kahdeksan metriä pitkä [[pronssileijona]]. Muistomerkki avattiin vuonna 1934, ja se sijaitsee solan tuntumassa [[Balkanvuorilla]]. Kyl tuo on komea torni.
+KYSYMYS: Kerro lisää: Balkanvuorilla
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Missä vuoristossa Shipkan sola sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— tuon minä tiedän. Shipkan sola sijaitsee [[Balkanvuorilla]] Keski-Bulgariassa noin 1 150 metrin korkeudessa. Balkanvuoret on pitkä vuorijono, joka kulkee Bulgarian halki lännestä itään, ja koko [[Balkanin niemimaa]] on nimetty niiden mukaan. Sola kuuluu [[Bulgarkan luonnonpuistoon]]. Ylhäältä nuo vuoret näyttää ihan vihreeltä selältä.
+KYSYMYS: Kerro lisää: Balkanin niemimaa
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+AIEMPI KYSYMYS: Missä vuoristossa Shipkan sola sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— tuon minä tiedän. Shipkan sola sijaitsee [[Balkanvuorilla]] Keski-Bulgariassa noin 1 150 metrin korkeudessa. Balkanvuoret on pitkä vuorijono, joka kulkee Bulgarian halki lännestä itään, ja koko [[Balkanin niemimaa]] on nimetty niiden mukaan. Sola kuuluu [[Bulgarkan luonnonpuistoon]]. Ylhäältä nuo vuoret näyttää ihan vihreeltä selältä.
+KYSYMYS: Kerro lisää: Bulgarkan luonnonpuistoon
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Ketkä taistelivat Shipkan solalla vuosina 1877–1878?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Shipkan taisteluissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat [[Osmanien]] valtakuntaa vastaan. Taistelut kuuluivat [[Venäjän–Turkin sotaan]], jonka jälkeen vuonna 1878 syntyi autonominen [[Bulgarian ruhtinaskunta]]. Sola oli tärkeä, koska se oli yksi reitti Balkanvuorten yli. Onneksi siit on jo kauan.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+AIEMPI KYSYMYS: Ketkä taistelivat Shipkan solalla vuosina 1877–1878?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Shipkan taisteluissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat [[Osmanien]] valtakuntaa vastaan. Taistelut kuuluivat [[Venäjän–Turkin sotaan]], jonka jälkeen vuonna 1878 syntyi autonominen [[Bulgarian ruhtinaskunta]]. Sola oli tärkeä, koska se oli yksi reitti Balkanvuorten yli. Onneksi siit on jo kauan.
+KYSYMYS: Kerro lisää: Venäjän–Turkin sotaan
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Piiritanssi jonka italialainen piirsi] 1810 — Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa länsimaiseen korvaan kompastelevalta, vaikka tanssijalle rytmi on itsestäänselvä nopeiden ja hitaiden askelten vuorotteluna. Italialainen Luigi Mayer luonnosteli bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset julkaistiin kaiverruksina kirjassa vasta 1810, vuosia taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja kyläjuhlissa, ja jokainen osaa ainakin muutaman perusaskeleen.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Ketkä taistelivat Shipkan solalla vuosina 1877–1878?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Shipkan taisteluissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat [[Osmanien]] valtakuntaa vastaan. Taistelut kuuluivat [[Venäjän–Turkin sotaan]], jonka jälkeen vuonna 1878 syntyi autonominen [[Bulgarian ruhtinaskunta]]. Sola oli tärkeä, koska se oli yksi reitti Balkanvuorten yli. Onneksi siit on jo kauan.
+KYSYMYS: Kerro lisää: Bulgarian ruhtinaskunta
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+AIEMPI KYSYMYS: Minkä kaupungin lähellä Perperikon sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Perperikon sijaitsee noin 15 kilometriä [[Kardzhalin]] kaupungista koilliseen [[Itä-Rodopeilla]]. Se on muinainen traakialainen kaupunki kalliokukkulalla, joka kohoaa noin 470 metrin korkeuteen. Kardzhalissa on varmasti myös oma pullansa.
+KYSYMYS: Kerro lisää: Kardzhalin
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+AIEMPI KYSYMYS: Minkä kaupungin lähellä Perperikon sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Perperikon sijaitsee noin 15 kilometriä [[Kardzhalin]] kaupungista koilliseen [[Itä-Rodopeilla]]. Se on muinainen traakialainen kaupunki kalliokukkulalla, joka kohoaa noin 470 metrin korkeuteen. Kardzhalissa on varmasti myös oma pullansa.
+KYSYMYS: Kerro lisää: Itä-Rodopeilla
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: El Badin palatsi] 1578 El Badi tarkoittaa verratonta, ja se on yksi Jumalan yhdeksästäkymmenestäyhdeksästä nimestä. Sulttaani Ahmad al-Mansur tilasi palatsin muutama kuukausi valtaannousunsa jälkeen 1578, ja rahat tulivat todennäköisesti Portugalin maksamista lunnaista sekä sokerikaupasta, jossa Marokko oli tuolloin merkittävä viejä. Palatsi ei ollut asunto vaan vastaanottotila, jossa vaikutettiin Espanjan, Englannin ja osmanien lähettiläisiin. Rakennusaineet haettiin kaukaa: marmoripylväät Italiasta sekä kalkki ja kipsi Timbuktusta. Työväkeä tuotiin useilta seuduilta, Euroopasta asti, ja työmaan viereen syntyi oma markkinapaikka. Al-Mansur järjesti työläisilleen jopa lastenhoitoa, jottei työ keskeytyisi. Va…
+- [Izmir — kohdekartta / Kohdekartta: Salepçioğlun moskeija] 1905 Rukoussali on pohjaltaan neliö, ja sen päällä lepää yksi kupoli. Siirtymä neliöstä ympyrään on tehty pendentiiveillä eli kolmiomaisilla kaarevilla pinnoilla salin kulmissa. Kupolin sisäpinta on veistoskoristeltu, ja värit ovat punainen, vihreä ja ruskea. Pääkupolin lisäksi rakennuksessa on kolme pienempää kupolia sisäänkäynnin puolella. Ulkoseinät on verhottu vihreällä marmorilla ja kivellä, ja saliin tulee valoa kahdesta ikkunarivistä, alemmasta ja ylemmästä. Ikkunoiden edessä on valkoiset rautaparvekkeet. Minareetti ei liity rakennukseen kiinni. Se seisoo koillispuolella omalla kivijalustallaan, runko on pyöreä ja parvekkeita on yksi. Muoto on poikkeuksellisen hoikka. Minareetti on k…
+AIEMPI KYSYMYS: Mikä oli Perperikonin saarnatuolin löydön erityisyys?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Viisas Pöllö tietäisi tän paremmin, mut hän parantelee siipeään. [[Saarnatuoli]] löytyi huipulta vuonna 2005, ja sen arvellaan olevan ensimmäinen Bulgariasta löydetty. Se on peräisin 300-luvun lopulta tai 400-luvun alusta, jolloin [[kristinuskon]] asema oli vahvistumassa Euroopassa. Ensimmäisyys on kuitenkin arvio eikä varma tieto. Kyl minä sen päässäni pidin.
+KYSYMYS: Kerro lisää: Saarnatuoli
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+- [Port Vila — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] nykyaika Cathédrale du Sacré-Cœur on Port Vilan moderni katolinen katedraali ja Port Vilan hiippakunnan istuin. Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: ranska on englannin ja bislaman ohella yksi Vanuatun virallisista kielistä. Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa väestöstä; katolinen kirkko ja Melanesian kirkko ovat kumpikin noin viidentoista prosentin kokoisia. Kirkkokuntien jako kertoo saarten lähetyshistoriasta: lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, ja presbyteerit menestyivät erityisesti eteläisillä saarilla. Ni-vanuatu…
+AIEMPI KYSYMYS: Mikä oli Perperikonin saarnatuolin löydön erityisyys?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Viisas Pöllö tietäisi tän paremmin, mut hän parantelee siipeään. [[Saarnatuoli]] löytyi huipulta vuonna 2005, ja sen arvellaan olevan ensimmäinen Bulgariasta löydetty. Se on peräisin 300-luvun lopulta tai 400-luvun alusta, jolloin [[kristinuskon]] asema oli vahvistumassa Euroopassa. Ensimmäisyys on kuitenkin arvio eikä varma tieto. Kyl minä sen päässäni pidin.
+KYSYMYS: Kerro lisää: kristinuskon
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+AIEMPI KYSYMYS: Mitä Perperikonissa on kaivettu esiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perperikonissa on kaivettu esiin monikerroksinen palatsi ja kukkulan ympäri rakennettu linnoitus, jonka muurit ovat paksimmillaan noin 2,8 metriä. Arkeologi [[Nikolay Ovcharov]] aloitti kaivaukset vuonna 2000. Lisäksi kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin [[varhaiselta rautakaudelta]].
+
+Kuvittele, miten paljon kiveä joku on aikoinaan raahannut ylös kukkulalle. Minä kantaisin mieluummin kirjeitä.
+KYSYMYS: Kerro lisää: Nikolay Ovcharov
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi: Jäljet jotka näkyvät vain hetken] Gantheaume Pointin liuskekivessä säilyneet dinosaurusten jalanjäljet ovat peräisin varhaiselta liitukaudelta, noin 130 miljoonan vuoden takaa, jolloin alue oli jokisuiston peittämä rantatasanko eikä lainkaan merta. Jäljet löydettiin uudelleen 1960-luvulla, mutta ne paljastuvat edelleen vain muutaman kerran vuodessa, kun vuorovesi vetäytyy poikkeuksellisen alas ja paljastaa noin 30 metrin päässä rannasta piilevän kivilaatan. Jälkien joukossa on tunnistettu useiden eri dinosauruslajien painaumia, mukaan lukien yksi harvoista tunnetuista sauropodin eli pitkäkaulaisen jättiläisen jäljistä koko maailmassa.
+AIEMPI KYSYMYS: Mitä Perperikonissa on kaivettu esiin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Perperikonissa on kaivettu esiin monikerroksinen palatsi ja kukkulan ympäri rakennettu linnoitus, jonka muurit ovat paksimmillaan noin 2,8 metriä. Arkeologi [[Nikolay Ovcharov]] aloitti kaivaukset vuonna 2000. Lisäksi kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin [[varhaiselta rautakaudelta]].
+
+Kuvittele, miten paljon kiveä joku on aikoinaan raahannut ylös kukkulalle. Minä kantaisin mieluummin kirjeitä.
+KYSYMYS: Kerro lisää: varhaiselta rautakaudelta
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+AIEMPI KYSYMYS: Kuinka kauan Perperikonin kalliokukkulalla on asuttu?
+AIEMPI VASTAUS (Livia):
+Ai se. Annas ku mietin. Perperikonin kukkulalla on lähteiden mukaan ollut ihmistoimintaa jo noin vuodesta 5000 eaa., eli yli seitsemän tuhatta vuotta. Paikalla oli myöhemmin [[traakialainen]] kaupunki, jonka arvellaan olleen pyhä paikka, ja [[keskiajalla]] kukkulalle rakennettiin linnoitus. Tarkkoja vuosia ajanjaksojen rajoille ei ole syytä esittää, sillä kaivaukset tuottavat jatkuvasti uutta tietoa. Kyl kivi muistaa enemmän kuin kyyhky.
+KYSYMYS: Kerro lisää: traakialainen
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuinka kauan Perperikonin kalliokukkulalla on asuttu?
+AIEMPI VASTAUS (Livia):
+Ai se. Annas ku mietin. Perperikonin kukkulalla on lähteiden mukaan ollut ihmistoimintaa jo noin vuodesta 5000 eaa., eli yli seitsemän tuhatta vuotta. Paikalla oli myöhemmin [[traakialainen]] kaupunki, jonka arvellaan olleen pyhä paikka, ja [[keskiajalla]] kukkulalle rakennettiin linnoitus. Tarkkoja vuosia ajanjaksojen rajoille ei ole syytä esittää, sillä kaivaukset tuottavat jatkuvasti uutta tietoa. Kyl kivi muistaa enemmän kuin kyyhky.
+KYSYMYS: Kerro lisää: keskiajalla
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+AIEMPI KYSYMYS: Keitä traakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Traakialaiset]] olivat muinainen kansa, joka asui [[Balkanin niemimaan]] itäosissa nykyisen Bulgarian alueella ja sen naapurialueilla. Heillä oli rikas kulttuuri, josta tunnetaan etenkin kultaesineet ja hautakummut. Antiikin kreikkalaiset sijoittivat [[Orfeuksen]] taruston Traakiaan. Ylhäältä ne hautakummut erottuu hyvin.
+KYSYMYS: Kerro lisää: Traakialaiset
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Keitä traakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Traakialaiset]] olivat muinainen kansa, joka asui [[Balkanin niemimaan]] itäosissa nykyisen Bulgarian alueella ja sen naapurialueilla. Heillä oli rikas kulttuuri, josta tunnetaan etenkin kultaesineet ja hautakummut. Antiikin kreikkalaiset sijoittivat [[Orfeuksen]] taruston Traakiaan. Ylhäältä ne hautakummut erottuu hyvin.
+KYSYMYS: Kerro lisää: Balkanin niemimaan
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+AIEMPI KYSYMYS: Keitä traakialaiset olivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Traakialaiset]] olivat muinainen kansa, joka asui [[Balkanin niemimaan]] itäosissa nykyisen Bulgarian alueella ja sen naapurialueilla. Heillä oli rikas kulttuuri, josta tunnetaan etenkin kultaesineet ja hautakummut. Antiikin kreikkalaiset sijoittivat [[Orfeuksen]] taruston Traakiaan. Ylhäältä ne hautakummut erottuu hyvin.
+KYSYMYS: Kerro lisää: Orfeuksen
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+AIEMPI KYSYMYS: Minä vuonna Bachkovon luostari perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Bachkovon luostari perustettiin vuonna 1083. Sen perusti georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö [[Gregory Pakourianos]]. Luostari sijaitsee [[Chepelare-joen]] rannalla Etelä-Bulgariassa, ja se on tunnettu georgialaisen, [[Bysantin]] ja bulgarialaisen kulttuurin yhdistelmästä. Melkein tuhat vuotta, ja minä muistin sen heti.
+KYSYMYS: Kerro lisää: Gregory Pakourianos
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+AIEMPI KYSYMYS: Minä vuonna Bachkovon luostari perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Bachkovon luostari perustettiin vuonna 1083. Sen perusti georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö [[Gregory Pakourianos]]. Luostari sijaitsee [[Chepelare-joen]] rannalla Etelä-Bulgariassa, ja se on tunnettu georgialaisen, [[Bysantin]] ja bulgarialaisen kulttuurin yhdistelmästä. Melkein tuhat vuotta, ja minä muistin sen heti.
+KYSYMYS: Kerro lisää: Chepelare-joen
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Minä vuonna Bachkovon luostari perustettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Bachkovon luostari perustettiin vuonna 1083. Sen perusti georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö [[Gregory Pakourianos]]. Luostari sijaitsee [[Chepelare-joen]] rannalla Etelä-Bulgariassa, ja se on tunnettu georgialaisen, [[Bysantin]] ja bulgarialaisen kulttuurin yhdistelmästä. Melkein tuhat vuotta, ja minä muistin sen heti.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+AIEMPI KYSYMYS: Mikä on ainoa luostarin alkuperäinen rakennus?
+AIEMPI VASTAUS (Livia):
+Ai se. Luostarin ainoa alkuperäinen rakennus on [[luuhuone]], joka sijaitsee noin 300 metrin päässä nykyisestä luostarista. Muut rakennukset ovat myöhempää perua: luostari ryöstettiin ja tuhottiin, ja se kunnostettiin 1400-luvun lopulla. [[Neitsyt Marian kirkko]] valmistui vuonna 1604. Vanhoja kiviä, ja ne ovat kestäneet.
+KYSYMYS: Kerro lisää: luuhuone
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [São Luís — kaupunkilehti / São Luís: Voiton Neitsyt tuomiokirkossa] Tuomiokirkon rakentaminen alkoi jo 1619, ja se vihittiin käyttöön 1622 – siis vain muutama vuosi sen jälkeen, kun portugalilaiset olivat karkottaneet ranskalaiset saarelta. Kirkko sai nimen Nossa Senhora da Vitória, Voiton Neitsyt, Guaxenduban taistelun kunniaksi: portugalilaisten vuonna 1615 käymä voitto kiihdytti ranskalaisten lopullista häätöä Maranhãosta. Nykyinen vaalean keltainen julkisivu kellotorneineen syntyi myöhemmin, kun kirkkoa laajennettiin 1700-luvun lopulla klassismin hengessä – lopputulos on portugalilaisen siirtomaabarokin ja uusklassismin yhdistelmä keskellä Praça Dom Pedro II:ta.
+AIEMPI KYSYMYS: Mikä on ainoa luostarin alkuperäinen rakennus?
+AIEMPI VASTAUS (Livia):
+Ai se. Luostarin ainoa alkuperäinen rakennus on [[luuhuone]], joka sijaitsee noin 300 metrin päässä nykyisestä luostarista. Muut rakennukset ovat myöhempää perua: luostari ryöstettiin ja tuhottiin, ja se kunnostettiin 1400-luvun lopulla. [[Neitsyt Marian kirkko]] valmistui vuonna 1604. Vanhoja kiviä, ja ne ovat kestäneet.
+KYSYMYS: Kerro lisää: Neitsyt Marian kirkko
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+AIEMPI KYSYMYS: Miksi Bachkovon luostarilla on yhteys Georgiaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä tiedän. Luostarin perustaja [[Gregory Pakourianos]] oli georgialaista syntyperää, mutta hän palveli Bysantin valtakuntaa sotapäällikkönä. Siksi luostarista tuli yksi georgialaisista luostarikeskuksista Georgian ulkopuolella. Luostari tunnetaan georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä, ja tsaari [[Ivan Aleksandar]] tuki sitä Toisen Bulgarian valtakunnan aikana. Kolme kulttuuria samassa paikassa, kyl se on kuin hyvä pulla.
+KYSYMYS: Kerro lisää: Ivan Aleksandar
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+AIEMPI KYSYMYS: Missä Bachkovon luostari sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bachkovon luostari sijaitsee Etelä-Bulgariassa [[Chepelare-joen]] oikealla rannalla [[Rodopeilla]]. Se on noin 10 kilometrin päässä [[Asenovgradista]] etelään ja noin 189 kilometrin päässä [[Sofiasta]]. Kyl se löytyy kartalta, kun tietää mistä katsoo.
+KYSYMYS: Kerro lisää: Rodopeilla
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+AIEMPI KYSYMYS: Missä Bachkovon luostari sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bachkovon luostari sijaitsee Etelä-Bulgariassa [[Chepelare-joen]] oikealla rannalla [[Rodopeilla]]. Se on noin 10 kilometrin päässä [[Asenovgradista]] etelään ja noin 189 kilometrin päässä [[Sofiasta]]. Kyl se löytyy kartalta, kun tietää mistä katsoo.
+KYSYMYS: Kerro lisää: Asenovgradista
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+- [Istanbul — kaupunkilehti / Istanbul: Medusa kannattelee pylvästä ylösalaisin] Hagia Sofiasta 150 metrin päässä laskeutuu 52 porrasta maan alle. Siellä on Yerebatan, keisari Justinianuksen 500-luvulla rakennuttama vesisäiliö: 336 yhdeksänmetristä pylvästä. Kaupunki unohti sen vuosisadoiksi. Vasta 1500-luvulla ranskalainen matkaaja ihmetteli, miksi talojen lattioissa on reikiä, joista lasketaan ämpäri — ja joistakin nousee kaloja. Kahden pylvään jalustaksi on pantu kivi, johon on veistetty Medusan kasvot: toinen kyljellään, toinen ylösalaisin. Varmaa syytä ei tiedetä. Tarina kertoo, että pää käännettiin, jottei kivettävä katse osuisi keneenkään; tutkijoiden mukaan kivet ovat roomalaisajan rakennuksesta otettua kierrätyskiveä.
+AIEMPI KYSYMYS: Missä Bachkovon luostari sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bachkovon luostari sijaitsee Etelä-Bulgariassa [[Chepelare-joen]] oikealla rannalla [[Rodopeilla]]. Se on noin 10 kilometrin päässä [[Asenovgradista]] etelään ja noin 189 kilometrin päässä [[Sofiasta]]. Kyl se löytyy kartalta, kun tietää mistä katsoo.
+KYSYMYS: Kerro lisää: Sofiasta
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+AIEMPI KYSYMYS: Kuka rakensi Lovechin katetun sillan?
+AIEMPI VASTAUS (Livia):
+Ai tota, hänet minä tunnen. Lovechin katetun sillan rakensi mestarirakentaja Nikola Fichev, jota kutsutaan myös nimellä [[Kolyu Ficheto]]. Hän rakensi sillan [[Osam-joen]] yli vuosina 1872–1874. Silta paloi vuonna 1925 ja rakennettiin uudelleen vuonna 1931.
+
+Katettu silta on ilmeisesti hyvä keksintö, sillä sadepäivänä sinne mahtuu sateensuojaan. Minä olen kuivatellut siipiäni useammankin sillan alla.
+KYSYMYS: Kerro lisää: Kolyu Ficheto
