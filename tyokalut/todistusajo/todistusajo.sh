@@ -16,6 +16,7 @@
 # Käyttö (simuvuoro Julkaisijalta ensin: SIMULAATTORI NYT, vain luvan UDID):
 #   todistusajo.sh --era <nimi> --udid <UDID> --app <polku.app> --sha <käännöksen SHA> --skenaario <tiedosto>
 #                  [--haara <commit, jonka pitää sisältyä käännökseen>] [--laite iphone|ipad] [--jata-paalle] [--nyt]
+#                  [--doc <Documents-tiedosto>=<sisältö> …]
 #                  [--peli "odota-tila Aloitus 40;uusi-peli 5 marseille;odota-tila Kartta 40"]
 #
 # Skenaario (yksi rivi = yksi askel, # kommentti):
@@ -43,11 +44,12 @@ TYOKALUT=${0:A:h}
 BID=app.matkakirja.proto3d
 PROTO=/Users/Shared/Claude/proto-3d/Matkakirja-proto
 ERA= UDID= APP= SHA= SKEN= HAARA= LAITE=iphone JATA= NYT= SALLI_VANHA= PELI="odota-tila Aloitus 40;uusi-peli 5 marseille;odota-tila Kartta 40"
+typeset -a DOCS=()
 while (( $# )); do
   case $1 in
     --era) ERA=$2; shift 2 ;; --udid) UDID=$2; shift 2 ;; --app) APP=$2; shift 2 ;; --sha) SHA=$2; shift 2 ;;
     --skenaario) SKEN=$2; shift 2 ;; --haara) HAARA=$2; shift 2 ;; --laite) LAITE=$2; shift 2 ;;
-    --jata-paalle) JATA=1; shift ;; --nyt) NYT=1; shift ;; --salli-vanha-mykistys) SALLI_VANHA=1; shift ;; --peli) PELI=$2; shift 2 ;;
+    --jata-paalle) JATA=1; shift ;; --nyt) NYT=1; shift ;; --salli-vanha-mykistys) SALLI_VANHA=1; shift ;; --peli) PELI=$2; shift 2 ;; --doc) DOCS+=("$2"); shift 2 ;;
     *) echo "tuntematon valitsin $1"; exit 2 ;;
   esac
 done
@@ -103,6 +105,8 @@ D="$(xcrun simctl get_app_container $UDID $BID data)/Documents"; mkdir -p "$D"
 printf 'hiljaa\n' > "$D/komento.txt"
 print -l -- ${(s:;:)PELI} > "$D/peli-komento.txt"
 rm -f "$D"/{linssi,ui}-komento.txt "$D"/ui-puu*.json(N)
+# --doc nimi=sisältö (LS1 10.10.: simun muistiraja, esim. kaupunki-sse-kerroin.txt=4.25 kuten pienen muistin iPad)
+for d in $DOCS; do print -r -- "${d#*=}" > "$D/${d%%=*}"; kirjaa "Documents/${d%%=*} = ${d#*=}"; done
 : > $LOKI
 xcrun simctl launch --terminate-running-process --stdout=$LOKI --stderr=$VLOKI $UDID $BID >/dev/null || { kirjaa "käynnistys epäonnistui"; exit 5; }
 
@@ -161,6 +165,7 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       if [[ $sana == linssi && $loput == linssi* ]]; then sleep 2; m=$(mykistys) || keskeyta_aani "linssin jälkeen: $m"; fi ;;
     ui) VIIM=$(rivit); kirjoita ui-komento.txt "ui $loput"; kirjaa "→ ui $loput" ;;
     komento) VIIM=$(rivit); kirjoita komento.txt "$loput" ;;
+    doc) print -r -- "${loput#*=}" > "$D/${loput%%=*}"; kirjaa "→ Documents/${loput%%=*} = ${loput#*=}" ;;   # doc <nimi>=<sisältö> (kesken ajon, esim. kaupunki-kuva-asetukset.txt=yolamput 0)
     odota) sleep $loput ;;
     tap|veto|polku)
       VIIM=$(rivit)
@@ -276,6 +281,18 @@ VERTAA
       rm -f "$D/$nimi.wav" "$D/$nimi-natiivi.wav"; kirjoita linssi-komento.txt "kaappaa $s $nimi"
       for i in {1..$(( (s + 20) * 2 ))}; do [[ -s "$D/$nimi.wav" ]] && break; sleep 0.5; done; sleep 1
       # Natiivikaappaus (MatkakirjaSilmukat) valmistuu omassa tahdissaan: odota sen valmis-riviä, ennen kuin kopioidaan.
+      for i in {1..20}; do cat $L/konsoli-*.log 2>/dev/null | grep -a -q "natiivikaappaus valmis: .*$nimi-natiivi.wav" && break; sleep 0.5; done
+      cp "$D/$nimi.wav" "$D/$nimi-natiivi.wav" $L/aani/ 2>/dev/null
+      [[ -s $L/aani/$nimi.wav ]] || tulos 5 PUUTE "kaappausta $nimi.wav ei syntynyt" ;;
+    aani-alku)
+      # aani-alku <s> <nimi>: kaappaus käyntiin EI-BLOKKAAVANA (LS1 10.10.: `aani` odottaa tiedostoa, jolloin kaappauksen aikaiset
+      # komennot, esim. vuosi-linssin kuukaudet, menivät vasta sen jälkeen). aani-loppu <nimi> odottaa ja kopioi.
+      s=${loput%% *}; nimi=${loput#* }
+      rm -f "$D/$nimi.wav" "$D/$nimi-natiivi.wav"; kirjoita linssi-komento.txt "kaappaa $s $nimi"
+      kirjaa "kaappaus alkoi: $nimi ($s s, ei-blokkaava)" ;;
+    aani-loppu)
+      nimi=$loput
+      for i in {1..120}; do [[ -s "$D/$nimi.wav" ]] && break; sleep 0.5; done; sleep 1
       for i in {1..20}; do cat $L/konsoli-*.log 2>/dev/null | grep -a -q "natiivikaappaus valmis: .*$nimi-natiivi.wav" && break; sleep 0.5; done
       cp "$D/$nimi.wav" "$D/$nimi-natiivi.wav" $L/aani/ 2>/dev/null
       [[ -s $L/aani/$nimi.wav ]] || tulos 5 PUUTE "kaappausta $nimi.wav ei syntynyt" ;;
