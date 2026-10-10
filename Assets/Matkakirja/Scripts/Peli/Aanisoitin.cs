@@ -277,6 +277,8 @@ namespace Matkakirja.Natiivi
             public int AlkuNayte, Vuoro;
             /// <summary>Äänimikserin tunnus (maisema/&lt;tiedosto&gt;), rekisteröity ensimmäisellä tasolla; null = ei vielä.</summary>
             public string MikseriId;
+            /// <summary>Latausraidan äänekkyyskerroin osoitteelle KerroinUrl (LatausraidanKerroin, välimuisti).</summary>
+            public string KerroinUrl; public double LatausKerroin = 1;
         }
 
         sealed class Latausvirhe { public long Http; public bool Verkko, Aika, Purku; }
@@ -561,9 +563,23 @@ namespace Matkakirja.Natiivi
             // Linssin taustaääni (LinssiTaustat) on myös Maisema-kanavalla, mutta sillä on linssin oma tunnus ja kerroin (LS2) → ohi.
             if (l.Kanava == Kanava.Maisema && taso > 0 && !string.IsNullOrEmpty(l.Url) && !OnLinssiTausta(l.Url)) taso *= MaisemaKerroin(l);
             // Latausmusiikki ohittaa kuuntelijan tason (ignoreListenerVolume): kuuntelijan perustaso ilman latausruudun vaimennusta.
-            if (l.Kanava == Kanava.Lataus) taso *= AaniVaimennus.Perustaso;
+            if (l.Kanava == Kanava.Lataus)
+            {
+                if (l.KerroinUrl != l.Url) { l.KerroinUrl = l.Url; l.LatausKerroin = LatausraidanKerroin(l.Url); }
+                taso *= AaniVaimennus.Perustaso * l.LatausKerroin;
+            }
             if (l.Komp != null) { l.A.volume = 1f; l.Komp.Taso = (float)taso; }
             else l.A.volume = (float)Math.Min(1.0, taso);
+        }
+
+        /// <summary>Pallon latausraidan äänekkyyskorjaus (AaniTaulut.Latausraidat, osoitteen mukaan), muilla 1.</summary>
+        static double LatausraidanKerroin(string url)
+        {
+            var t = Instanssi?.Taulut;
+            if (t == null || string.IsNullOrEmpty(url)) return 1;
+            foreach (var r in t.Latausraidat.Values)
+                if (AaniOsoite.Url(t.MusaPolku(r.Tunnus)) == url) return r.Kerroin;
+            return 1;
         }
 
         static float Taso(Lahde l) => l.Komp != null ? l.Komp.Taso : l.A != null ? l.A.volume : 0f;

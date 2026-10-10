@@ -625,12 +625,15 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>
-        /// Kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
+        /// Pallon latausraita (AaniTaulut.Latausraidat), muuten kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
         /// kaupunkikappaleet tulevat) on kartan alueraita samalla valinnalla (Musiikkivalitsin.Alueraita). Puuttuvat ohi.
         /// </summary>
         string KaupunginPolku(string kaupunki)
         {
             if (string.IsNullOrEmpty(kaupunki)) return null;
+            // Pallon oma latausraita (AaniTaulut.Latausraidat) ensin; jos se puuttuu (404), kaupungin kappale tai alueraita.
+            string oma = t.Latausraidat.TryGetValue(kaupunki, out var lr) ? t.MusaPolku(lr.Tunnus) : null;
+            if (oma != null && !latausPuuttuvat.Contains(AaniOsoite.Url(oma))) return oma;
             var maa = t.Maa(kaupunki);
             var ketju = valitsin.Ketju(null, kaupunki, maa);
             var alue = valitsin.Alueraita(kaupunki, maa);
