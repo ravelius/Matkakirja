@@ -722,7 +722,7 @@ namespace Matkakirja.Editori
         {
             var uudet = NakyvatOhjaimet().Where(e => !ennen.Contains(e)).ToList();
             if (uudet.Count == 0) { Virhe($"{nimi}: ei avautunut (ei uusia näkyviä elementtejä)"); return; }
-            int viat = 0, ok = 0;
+            int viat = 0, ok = 0, ylivuodot = 0;
             foreach (var e in uudet)
             {
                 var sv = e.GetFirstAncestorOfType<ScrollView>();
@@ -734,6 +734,8 @@ namespace Matkakirja.Editori
                     if (b.yMax < ikkuna.yMin || b.yMin > ikkuna.yMax) continue;   // vierityksen takana: ei tarkisteta
                     b = Rect.MinMaxRect(b.xMin, Mathf.Max(b.yMin, ikkuna.yMin), b.xMax, Mathf.Min(b.yMax, ikkuna.yMax));
                 }
+                if (e is TextElement te) Ylivuoto(te, nimi, ref ylivuodot);
+                if (e is Button) e.Query<TextElement>().ForEach(t => { if (t != e && Nakyva(t)) Ylivuoto(t, nimi, ref ylivuodot); });
                 var koko = e.panel.visualTree.layout;
                 var turva = RuudunTurva(koko);
                 const float Vara = 0.5f;
@@ -744,6 +746,7 @@ namespace Matkakirja.Editori
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
             if (viat > 6) Kirjaa($"-- {nimi}: {viat - 6} muuta vikaa");
+            if (ylivuodot > 6) Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: {ylivuodot - 6} muuta");
             // Paneelin napit paneelin sisällä (9.10.2026 ajo #12: Äänentasojen väkänen valui paneelin ja ruudun ulkopuolelle).
             var paneeli = NakymanPaneeli(nimi);
             if (paneeli?.panel != null && Nakyvissa(paneeli))
@@ -758,6 +761,36 @@ namespace Matkakirja.Editori
                 });
             }
             Kirjaa($"{(viat == 0 ? "OK" : "--")} {nimi}: {ok} elementtiä turva-alueella, {uudet.Count} uutta");
+        }
+
+        /// <summary>
+        /// YLIVUOTO (raportti, ei vika; Päätoimittaja 10.10.2026): teksti ei mahdu laatikkoonsa. Rivittämätön teksti: luonnollinen
+        /// leveys > sisältöleveys (katkeaa tai valuu yli); rivittyvä: korkeus sisältöleveydellä > sisältökorkeus (kiinteä korkeus
+        /// leikkaa rivejä). text-overflow: ellipsis kirjataan erikseen (…-katkaisu on tarkoituksellinen, mutta teksti silti vajaa).
+        /// Enintään 6 riviä näkymää kohden.
+        /// </summary>
+        static void Ylivuoto(TextElement t, string nimi, ref int n)
+        {
+            if (string.IsNullOrWhiteSpace(t.text)) return;
+            var cr = t.contentRect;
+            if (!(cr.width >= 1f) || !(cr.height >= 1f)) return;
+            bool rivittyy = t.resolvedStyle.whiteSpace == WhiteSpace.Normal || t.resolvedStyle.whiteSpace == WhiteSpace.PreWrap;
+            string mita;
+            if (!rivittyy)
+            {
+                var m = t.MeasureTextSize(t.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined);
+                if (m.x <= cr.width + 1f) return;
+                mita = $"leveys {m.x:0} > {cr.width:0}";
+            }
+            else
+            {
+                var m = t.MeasureTextSize(t.text, cr.width, VisualElement.MeasureMode.Exactly, 0f, VisualElement.MeasureMode.Undefined);
+                if (m.y <= cr.height + 1f) return;
+                mita = $"korkeus {m.y:0} > {cr.height:0}";
+            }
+            if (++n > 6) return;
+            bool kolme = t.resolvedStyle.textOverflow == TextOverflow.Ellipsis;
+            Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: \"{Lyhyt(t)}\" {mita}{(kolme ? " (…-katkaisu)" : "")} [{string.Join(" ", t.GetClasses().Take(2))}]");
         }
 
         static string Lyhyt(VisualElement e)
