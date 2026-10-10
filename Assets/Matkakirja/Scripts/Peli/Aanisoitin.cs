@@ -36,7 +36,8 @@
 // LATAUSMUSIIKKI (omistaja 10.10.2026; AaniTila.Lataus): Lataus-kanavan lähteet ohittavat kuuntelijan tason
 // (ignoreListenerVolume), koska kuumailmapallon latausruutu vaimentaa muut äänet kuuntelijan tasolla (AaniVaimennus); taso
 // kerrotaan kuuntelijan perustasolla (AaniVaimennus.Perustaso), joten testien "hiljaa" ja äänikaappaus koskevat sitäkin.
-// Koukut: Latausmusiikki(url, voima), LatausmusiikkiKaupunki(kaupunki) ja LatausmusiikkiOhi(avautui).
+// Koukut: Latausmusiikki(url, konteksti, tunnus), LatausmusiikkiKaupunki(kaupunki) ja LatausmusiikkiOhi(avautui). Taso on
+// kohdenäkymän mikserin musiikkitaso (MusiikkiTaso), luettu latauksen alussa eikä nykyisestä kontekstista.
 //
 // TAUSTALLE (§2.8): OnApplicationPause(true) → kaikki soivat Pause() ja rampit jäädytetään, sitten
 // AaniTila.TaustalleSiirto(true). Paluussa kone kertoo, mitkä jatkavat (UnPause) ja mitkä loppuvat.
@@ -172,13 +173,36 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// LATAUSMUSIIKKI (omistaja 10.10.2026: "pelien ja linssien (jotka vaativat latausruudun) latausruudulla voisi kuulua
-        /// musiikkia"): latausruutu aukeaa raidalla url (silmukka, taso voima × musiikkiväylä). Näkymä kutsuu latauksen alussa ja
-        /// LatausmusiikkiOhi lopussa; sama raita uudelleen ei ala alusta.
+        /// musiikkia"): latausruutu aukeaa raidalla url (silmukka) kohdenäkymän konteksti mikserin musiikkitasolla (äänen tunnus =
+        /// sen oma kerroin, kuten linnan loppumusiikilla). Näkymä kutsuu latauksen alussa ja LatausmusiikkiOhi lopussa; sama raita
+        /// uudelleen ei ala alusta.
         /// </summary>
-        public static void Latausmusiikki(string url, double voima) => Instanssi?.Tila.Lataus(url, voima);
+        public static void Latausmusiikki(string url, string konteksti, string tunnus = null)
+        {
+            latausKonteksti = konteksti; latausTunnus = tunnus;
+            Instanssi?.Tila.Lataus(url, MusiikkiTaso(konteksti, tunnus));
+        }
 
-        /// <summary>Kuumailmapallon latausruutu: kaupungin oma kappale tai alueraita; jatkuu kierroksella kartan tasolla (AaniTila.LatausKaupunki).</summary>
-        public static void LatausmusiikkiKaupunki(string kaupunki) => Instanssi?.Tila.LatausKaupunki(kaupunki);
+        /// <summary>Kuumailmapallon latausruutu: kaupungin oma kappale tai alueraita pallon mikseritasolla; jatkuu kierroksella kartan
+        /// tasolla (AaniTila.LatausKaupunki).</summary>
+        public static void LatausmusiikkiKaupunki(string kaupunki)
+        {
+            latausKonteksti = "pallo"; latausTunnus = null;
+            Instanssi?.Tila.LatausKaupunki(kaupunki, MusiikkiTaso(latausKonteksti, null));
+        }
+
+        static string latausKonteksti, latausTunnus;
+
+        /// <summary>
+        /// Musiikin taso kontekstissa ilman liu'un käyrää: ryhmän perustaso × ryhmän kerroin × äänen kerroin (0–1), sama kaava kuin
+        /// linnan loppumusiikilla (SeikkailuAanet.Taso). Konteksti eksplisiittisesti: Aanimikseri.Nyt vaihtuu kesken latausruudun
+        /// (simu 10.10. 20.57: linnan musiikki ×1,49 tuli voimaan nimiruudun puolivälissä → hyppy 0,34 → 0,94).
+        /// </summary>
+        public static double MusiikkiTaso(string konteksti, string tunnus)
+        {
+            var m = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
+            return Math.Min(1.0, m.Ryhma(konteksti, "musiikki") * (string.IsNullOrEmpty(tunnus) ? 1f : m.AaniKerroin(konteksti, tunnus)));
+        }
 
         /// <summary>Latausruutu sulkeutuu: avautui = näkymä aukesi (ristihäivytys), muuten ohitus tai poistuminen (nopea häivytys).</summary>
         public static void LatausmusiikkiOhi(bool avautui) => Instanssi?.Tila.LatausOhi(avautui);
@@ -377,6 +401,7 @@ namespace Matkakirja.Natiivi
                 bool p = Asetukset.Paalla(Kytkin.Musiikki);
                 if (p != Tila.Musiikki) Tila.MusiikkiPaalle(p);
                 Tila.AsetaLiuku(Musiikkitaso.Asetuksesta(Asetukset.Taso(Voima.Musiikki)));
+                if (latausKonteksti != null && Tila.LatausAuki) Tila.AsetaLatausTaso(MusiikkiTaso(latausKonteksti, latausTunnus));
             }
             if (kaikki || nimi == nameof(Voima.Tausta)) Tila.AsetaTausta(Asetukset.Taso(Voima.Tausta));
         }

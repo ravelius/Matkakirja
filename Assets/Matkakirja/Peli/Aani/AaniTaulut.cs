@@ -90,12 +90,6 @@ namespace Matkakirja.Peli
         public static int LatausRistiMs => Asetus.Kokonais("aanet.LatausRistiMs", 3000);
         /// <summary>Ohitus tai poistuminen kesken latauksen: nopea häivytys (sama kuin linssin taustaäänen lasku).</summary>
         public static int LatausPoisMs => Asetus.Kokonais("aanet.LatausPoisMs", 600);
-        /// <summary>
-        /// Latausmusiikin voima (Olavinlinna ja kuumailmapallo, Päätoimittaja 20.2x: sama taso): oletusliu'ulla (35 → MusiikinKerroin
-        /// 0,58) 0,6 × 0,58 ≈ 0,35 = sama taso kuin loppumusiikki linnassa (SeikkailuLoppumusiikki: mikserin musiikki 0,35); liuku
-        /// skaalaa kuten muuta musiikkia.
-        /// </summary>
-        public static double LatausVoima => Asetus.Luku("aanet.LatausVoima", 0.6);
     }
 
     /// <summary>Siirtymä- tai linssiraita (siirtymamusiikki.js RAIDAT).</summary>
