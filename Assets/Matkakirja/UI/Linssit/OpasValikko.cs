@@ -713,6 +713,7 @@ namespace Matkakirja.Natiivi
             // että ei jää mustia palkkeja"): ruudun koon muuttuessa näkyvä kuva sovitetaan heti peittäväksi uuteen kokoon, ja jos
             // rajaus vaihtuu (puhelin / iPad pysty / vaaka), uusi rajaus haetaan muistiin ja vaihdetaan valmistuessa; ion-logo uuteen paikkaan.
             siirtyma.RegisterCallback<GeometryChangedEvent>(e => { if (e.oldRect.size != e.newRect.size) Kierretty(); });
+            siirtymaTeksti.RegisterCallback<GeometryChangedEvent>(_ => RajaaKoysiTekstiin());
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -954,7 +955,10 @@ namespace Matkakirja.Natiivi
         static readonly float[] PalloSauma = { 0.73f, 0.73f, 0.69f };
         /// <summary>Köyden loppu saumasta alaspäin (taustan osuus) ja häivytyksen alku maapisteen yläpuolella: köysi kulkee usvan
         /// läpi tummaan alaosaan ja on poissa ennen kaupungin nimeä (iPhone ja iPad pysty ~0,83, vaaka ~0,79).</summary>
-        const float PalloKoysiSumuun = 0.06f, PalloKoysiHaivyYlla = 0.03f;
+        const float PalloKoysiSumuun = 0.06f, PalloKoysiHaivyYlla = 0.03f, PalloKoysiTekstiVali = 0.02f, PalloKoysiHaivyMin = 0.08f;
+        Latauskuva.Koysi palloAnkkuri;
+        Vector2 palloHaivy;
+        Rect palloAla;
         Latauskuva palloKerrokset;
         readonly Texture2D[] palloKerrosKuvat = new Texture2D[3];
         int palloKerrosRajaus = -1, palloKerrosKerta;
@@ -990,9 +994,10 @@ namespace Matkakirja.Natiivi
             // KÖYSI SUMUUN (omistaja 10.10. 17.5x: "köyden pitää jatkua alemmas ja hävitä sumuun, muuten näyttää irralliselta"):
             // ankkuri samaan suuntaan saumasta PalloKoysiSumuun alemmas (tumma alaosa), häivytys maapisteen yläpuolelta loppuun.
             var jatke = Matkakirja.Linssit.LatausLiike.Jatke(p.Ankkuri.x, p.Ankkuri.y, p.Maa.x, p.Maa.y, PalloSauma[r] + PalloKoysiSumuun);
-            var ankkuri = Latauskuva.Koysi.Ankkuri(new Vector2((float)jatke.X, (float)jatke.Y), 0, p.Ankkuri);
-            ankkuri.HaivyAlku = p.Maa.y - PalloKoysiHaivyYlla; ankkuri.HaivyLoppu = (float)jatke.Y;
-            koydet.Add(ankkuri);
+            palloAnkkuri = Latauskuva.Koysi.Ankkuri(new Vector2((float)jatke.X, (float)jatke.Y), 0, p.Ankkuri);
+            palloHaivy = new Vector2(p.Maa.y - PalloKoysiHaivyYlla, (float)jatke.Y);
+            RajaaKoysiTekstiin();
+            koydet.Add(palloAnkkuri);
             palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
             {
                 // TUULI (omistaja 10.10. 16.5x: "pallo pitää liikkua selkeästi tuulessa heiluen"): sama puuskainen tuuli, pallo ±2,5° ja
@@ -1030,7 +1035,25 @@ namespace Matkakirja.Natiivi
             var koko = siirtyma.parent?.worldBound.size ?? Vector2.one;
             float w = Mathf.Max(koko.x, 1f), h = Mathf.Max(koko.y, 1f);
             var (x, y, kw, kh) = Matkakirja.Linssit.LatausLiike.Peita(w, h, t.width / (double)Mathf.Max(1, t.height), w > h * 1.5f ? VaakaKuvanAlku : -1);
-            palloKerrokset.Sovita(new Rect((float)x, (float)y, (float)kw, (float)kh));
+            palloAla = new Rect((float)x, (float)y, (float)kw, (float)kh);
+            palloKerrokset.Sovita(palloAla);
+            RajaaKoysiTekstiin();
+        }
+
+        /// <summary>
+        /// Köysi on poissa ennen kaupungin nimeä: iPhonen vaakarajauksessa (kuvasta näkyy vain kaista) nimi osuu kuvan sumuvyöhykkeen
+        /// yläosaan, jolloin köyden häivytys päättyy nimen yläpuolelle (vähintään PalloKoysiHaivyMin pitkänä). Muissa rajauksissa
+        /// köysi häipyy ennen nimeä jo PalloPisteiden mukaan.
+        /// </summary>
+        void RajaaKoysiTekstiin()
+        {
+            if (palloAnkkuri == null) return;
+            float loppu = palloHaivy.y;
+            var tb = siirtymaTeksti.worldBound;
+            if (palloAla.height > 0f && tb.height > 0f && !float.IsNaN(tb.yMin))
+                loppu = Mathf.Min(loppu, (tb.yMin - siirtyma.worldBound.yMin - palloAla.y) / palloAla.height - PalloKoysiTekstiVali);
+            palloAnkkuri.HaivyLoppu = loppu;
+            palloAnkkuri.HaivyAlku = Mathf.Min(palloHaivy.x, loppu - PalloKoysiHaivyMin);
         }
 
         void PiilotaPalloKerrokset()
@@ -1038,6 +1061,7 @@ namespace Matkakirja.Natiivi
             palloKerrosKerta++;
             palloKerrosRajaus = -1;
             palloKerroksetNakyy = false;
+            palloAnkkuri = null;
             palloKerrokset?.Nayta(false);
             palloKerrokset?.Aseta(null);
             siirtymaKuva.style.visibility = StyleKeyword.Null;
