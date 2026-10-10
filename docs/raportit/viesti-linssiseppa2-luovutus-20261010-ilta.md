@@ -14,9 +14,11 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    arkki kaappaukset/linssiseppa2-179-20261010/peking-179-ilmakeha.jpg → PT. Vallihauta 27/47/60 (ennen 17/38/35, oikea 54/80/68):
    ilmakehä sinistää. PT päättää oman vesivärikertoimen tarpeesta.
 
-4. **PEKING VALMIS PT:LLE** 19.15: vesikerroin 2c2305012 (PT kuittasi junaan 180) + LR:n v4-katot (paketti _tyo/linssiseppa2/peking4/ktx,
-   portti 0, vienti pyydetty Julkaisijalta); käännös 405d56e3c; arkki kaappaukset/linssiseppa2-180-20261010/peking-omistajalle.jpg
-   (peli iPad | iPhone | S2). Pelissä vallihauta 50/81/69 (orto 54/80/68), katot 163/137/98 (161/130/101).
+4. **PEKINGIN PUUT** (PT 19.2x, ennen omistajaa): proto linssiseppa2/kaupunki-puut **243aa94ef** (2c2305012 päällä; KaupunkiPuut +
+   KaupunkiPuu.shader + Ydin KaupunkiPuuData, CesiumKaupunki kytkentä, asetukset puut/puukirkkaus; unity 0, L 1347). Peili
+   _tyo/linssiseppa2/puut-peili (puut-peking, puukortit Olavinlinnan v44, maa-peking DTM). KÄÄNNÖS JA SIMU VASTA KUN KIIRE OHI (PT):
+   skriptit-20261009/kaanna-puut.zsh → aja-pekingpuut.zsh (PUUT-peili, kulmat pko) → arkit-pekingomistaja.py:n malli → PT. Punerrus
+   raportoitu PT:lle (vihreä puuttuu, ilmakehä sinistää). Peking v4 -kattojen vienti odottaa PT:n päätöstä (v6k15, muisti).
 5. **ND v5d -PARI** kun LR toimittaa (v5c peruttu: säleet ja pyörteet). Malli vuoro-nd5b.sh + arkit-nd5b.py, tekijärivi käsin.
 6. **"JOS MAA LAKKAISI PYÖRIMÄSTÄ"** prototyyppi proto linssiseppa2/maa-ei-pyori **b2583090f** (NUI a51a8955d päällä; MeriTasapaino
    Karttasepän taulukolla A 11 004,5 m, MaaEiPyoriKuori + MaaEiPyori.shader + MaaEiPyoriSovitin, komennot maa nopeus|peili|tila;
