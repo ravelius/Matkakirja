@@ -637,6 +637,7 @@ const MODULES = [
   'js/kaiutinmittari.js',
   // Puhetagien näyttösiivous (tuonniton): lukija ja pollo tuovat sen.
   'js/puhetagit.js',
+  'js/ikaraja.js',
   'js/lukija.js',
   /*
    * Viisas Pöllö ENNEN ui.js:ää: ui.js tuo polloAnkkurin ja polloSuljen
