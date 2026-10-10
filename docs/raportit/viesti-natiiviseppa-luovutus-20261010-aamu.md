@@ -37,6 +37,15 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
+## TILA 11.2x
+- TF 175 HYLÄTTY (ITMS-90208: UnityRuntime.framework MinimumOSVersion 15.0 < 17.0). Sama sisältö 86ef3b3e6 lähtee buildinumerolla 176
+  Julkaisijan PlistBuddy-pikakorjauksella (PR #4338). Juna 176:n runko lähtee buildinumerolla **177** ("1.1 (177)").
+- Pysyvä korjaus juna-176:een **e9c29facd**: Rakennus.cs PostProcessBuild(198) KehystenMinimiOs (Frameworks/*.framework MinimumOSVersion ≥
+  PlayerSettings.iOS.targetOSVersionString). Todennettu IosLaite-viennillä T7-kopiossa: 15.0 → 17.0. Embed säilyy (UnityRuntimen PrivacyInfo:
+  SystemBootTime/DiskSpace/UserDefaults puuttuvat UnityFrameworkin manifestista).
+- Juna 176 runko nyt **e9c29facd** = 57187899e (+ LS2 vesi-v7, Pelikoodari mittaa-aikaraja dad7ae249) + korjaus.
+- Huom: T7-kopion (unity-67) build-uudelleensarjallistetut muutokset (9 tdstoa) hylättiin testin alussa (git checkout -- .).
+
 ## TILA 10.4x — TAIDEMUSEO: MUISTI JA LATAUS (PT 09.5x, omistaja "tärkeämpi projekti"; suunnitelma HYVÄKSYTTY 10.0x)
 - Proton haara **natiiviseppa/museo-muisti 1fcf35532** (wt /Users/Shared/Claude/wt/proto-natiiviseppa-museo; rebasettu LS1:n
   linssiseppa/taidemuseo-176 be85d99de:n päälle; LS1 mergesi sen omaan kärkeensä 283c052cb). unity 0, Linssit 1316/1316.
