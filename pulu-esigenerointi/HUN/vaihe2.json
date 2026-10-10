@@ -4367,10 +4367,10 @@
   "kohde": "kohde:hahmotelma-sarospatak",
   "kasite": "Frans II Rákóczi",
   "kysymys": "Kerro lisää: Frans II Rákóczi",
-  "vastaus": "Frans II Rákóczi oli Transilvanian ruhtinas, joka johti vuosina 1703-1711 vapaussotaa [[Habsburgeja]] vastaan. Hän teki vuosina 1704-1711 [[Kassasta]] pääasemansa. Sota päättyi vuonna 1711 [[Szatmárin rauhaan]]. Hän kuoli maanpaossa Tekirdağissa vuonna 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Kassan Pyhän Elisabetin tuomiokirkkoon.",
+  "vastaus": "Frans II Rákóczi oli Transilvanian ruhtinas, joka johti vuosina 1703-1711 vapaussotaa [[Habsburgeja]] vastaan. [[Kassa]] liittyi sodan aikana kapinallisten puolelle. Sota päättyi vuonna 1711 [[Szatmárin rauhaan]]. Hän kuoli maanpaossa Tekirdağissa vuonna 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Kassan Pyhän Elisabetin tuomiokirkkoon.",
   "linkit": [
    "Habsburgeja",
-   "Kassasta",
+   "Kassa",
    "Szatmárin rauhaan"
   ],
   "jatkot": [
@@ -5358,11 +5358,11 @@
   "kohde": "kohde:hahmotelma-sumeg",
   "kasite": "Ferenc II Rákóczin",
   "kysymys": "Kerro lisää: Ferenc II Rákóczin",
-  "vastaus": "Ferenc II Rákóczi oli [[Transilvanian]] ruhtinas ja unkarilaisten kansallissankari, joka johti vapaussotaa [[Habsburgien]] valtaa vastaan vuosina 1703–1711. Hän käytti [[Košicea]], unkariksi Kassaa, pääasemanaan vuosina 1704–1711. Sodan päätyttyä hän joutui maanpakoon ja kuoli lopulta Tekirdağissa vuonna 1735. Hänen jäänteensä siirrettiin 29. lokakuuta 1906 Košicen [[Pyhän Elisabetin tuomiokirkkoon]], jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.",
+  "vastaus": "Ferenc II Rákóczi oli [[Transilvanian]] ruhtinas ja unkarilaisten kansallissankari, joka johti vapaussotaa [[Habsburgien]] valtaa vastaan vuosina 1703–1711. Kapinalliset saivat sodan aikana haltuunsa myös [[Košicen]] kaupungin, unkariksi Kassan. Sodan päätyttyä hän joutui maanpakoon ja kuoli lopulta Tekirdağissa vuonna 1735. Hänen jäänteensä siirrettiin 29. lokakuuta 1906 Košicen [[Pyhän Elisabetin tuomiokirkkoon]], jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.",
   "linkit": [
    "Transilvanian",
    "Habsburgien",
-   "Košicea",
+   "Košicen",
    "Pyhän Elisabetin tuomiokirkkoon"
   ],
   "jatkot": [
@@ -6262,8 +6262,9 @@
   "kohde": "kohde:hahmotelma-mezokovesd",
   "kasite": "Mezőkövesdin",
   "kysymys": "Kerro lisää: Mezőkövesdin",
-  "vastaus": "Kas vaan. Turkkilaiset eli osmanit miehittivät Mezőkövesdin vuonna 1544, kun suuri osa Unkarista oli jo joutunut osmanien haltuun tai heidän vaikutuspiiriinsä. Unkarin kuningaskunta oli jakautunut kolmeen osaan: Habsburgien hallitsemaan Unkariin, osmanien hallitsemaan keskiosaan ja [[Transilvanian]] ruhtinaskuntaan. Kaupunki tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Sotatoimet kuormittivat rajaseutujen asukkaita raskaasti. Siitä on nyt yli neljäsataa vuotta, ja kaupunki on rakentunut uudelleen. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Kas vaan. Turkkilaiset eli osmanit miehittivät Mezőkövesdin vuonna 1544, kun suuri osa Unkarista oli jo joutunut osmanien haltuun tai heidän vaikutuspiiriinsä. Unkarin kuningaskunta oli jakautunut kolmeen osaan: [[Habsburgien]] hallitsemaan Unkariin, osmanien hallitsemaan keskiosaan ja [[Transilvanian]] ruhtinaskuntaan. Kaupunki tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Sotatoimet kuormittivat rajaseutujen asukkaita raskaasti. Siitä on nyt yli neljäsataa vuotta, ja kaupunki on rakentunut uudelleen. Onneksi siitä on jo pitkä aika.",
   "linkit": [
+   "Habsburgien",
    "Transilvanian"
   ],
   "jatkot": [
@@ -6547,8 +6548,9 @@
   "kohde": "kohde:hahmotelma-gyula",
   "kasite": "osmanien",
   "kysymys": "Kerro lisää: osmanien",
-  "vastaus": "Kas vaan. Osmanit olivat Anatoliasta kasvanut valtakunta, jota johtivat sulttaanit, ja 1500-luvulla se ulottui syvälle Unkariin. Vuonna 1566 sulttaani [[Suleiman Suuri]] johti sotaretkeä Unkariin, ja samana kesänä osmanien joukot piirittivät myös Gyulan linnan. Lähteiden mukaan piiritys kesti noin kaksi kuukautta ennen kuin puolustajat antautuivat. Osmanien valta Unkarissa jatkui sen jälkeen vielä pitkään, mutta se päättyi lopulta 1600-luvun lopussa, ja Gyula siirtyi uusien hallitsijoiden alaisuuteen. Siitä on kulunut yli neljäsataa vuotta, ja linna seisoo yhä. Onneksi se on nyt rauhallinen paikka.",
+  "vastaus": "Kas vaan. Osmanit olivat Anatoliasta kasvanut valtakunta, jota johtivat sulttaanit, ja 1500-luvulla se ulottui syvälle [[Unkariin]]. Vuonna 1566 sulttaani [[Suleiman Suuri]] johti sotaretkeä Unkariin, ja samana kesänä osmanien joukot piirittivät myös Gyulan linnan. Lähteiden mukaan piiritys kesti noin kaksi kuukautta ennen kuin puolustajat antautuivat. Osmanien valta Unkarissa jatkui sen jälkeen vielä pitkään, mutta se päättyi lopulta 1600-luvun lopussa, ja Gyula siirtyi uusien hallitsijoiden alaisuuteen. Siitä on kulunut yli neljäsataa vuotta, ja linna seisoo yhä. Onneksi se on nyt rauhallinen paikka.",
   "linkit": [
+   "Unkariin",
    "Suleiman Suuri"
   ],
   "jatkot": [
@@ -6726,8 +6728,9 @@
   "kohde": "kohde:hahmotelma-opusztaszer",
   "kasite": "Ópusztaszerin",
   "kysymys": "Kerro lisää: Ópusztaszerin",
-  "vastaus": "Katotaas. Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, joka kuvaa unkarilaisten maahantuloa Karpaattien altaalle vuonna 895. Panoraama on ollut pysyvästi esillä vuodesta 1995. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa. Perimätiedon mukaan seudulla pidettiin unkarilaisten heimojen ensimmäinen yhteinen kokous, mutta siitä en ole aivan varma. Alue on [[ulkoilmamuseo]], jossa historiaan voi astua sisään. Pitkä kävely, ja minä lensin.",
+  "vastaus": "Katotaas. Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo [[Csongrádin]] läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, joka kuvaa unkarilaisten maahantuloa Karpaattien altaalle vuonna 895. Panoraama on ollut pysyvästi esillä vuodesta 1995. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa. Perimätiedon mukaan seudulla pidettiin unkarilaisten heimojen ensimmäinen yhteinen kokous, mutta siitä en ole aivan varma. Alue on [[ulkoilmamuseo]], jossa historiaan voi astua sisään. Pitkä kävely, ja minä lensin.",
   "linkit": [
+   "Csongrádin",
    "ulkoilmamuseo"
   ],
   "jatkot": [
