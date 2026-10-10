@@ -44,6 +44,12 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   tapahtuman (~0,75 m). Kertoja: kertoja/<Teos.Id>.mp3 (Rijks objnr, esim. SK-C-5). Lähetä LS1:lle manifesti, niin hän kytkee.
   Vanha kohta:ytkentäkohdat LS1:n kanssa (MuseoSovitin): kysy LS1:ltä, mihin salin silmukka, askeleet ja sorina sekä teoskohtainen kertoja kytketään.
 
+## 2c. PT 11.0x
+- Kertojan luenta: omistaja "Ei vielä" → museo ensin ilman kertojaa, ei testiottoa. Ääntämisohjeet (Sisältökirjuri) liitetty LUENTASUUNNITELMA.md:hen.
+- #4337 Julkaisijalle vihreänä; PULU_PUUTTUVA_KURATOITU pysyy pois. Webin ikäkysely kysytty PT:ltä (ehdotus <dialog class="dialog"> -pohja).
+- Museon Soundly-haku ILLALLA näytön ollessa vapaa → käsittely → manifesti LS1:lle.
+- ISS-erä 1 valmis valintaan: huiput korjattu (RAJA=0.75, kasittele.py), ääniportti 40/0.
+
 ## 3. Odottaa
 - Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
   ~12 h; käynnistä uudelleen samalla kaavalla, jos token puuttuu yhä.
