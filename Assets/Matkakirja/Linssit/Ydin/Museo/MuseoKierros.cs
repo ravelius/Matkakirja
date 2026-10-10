@@ -19,10 +19,10 @@ namespace Matkakirja.Linssit.Museo
 {
     public enum MuseoVaihe { Siirtyy, Pysahtyy, Vapaa, Valmis }
 
-    public readonly struct Asento
+    public readonly struct MuseoAsento
     {
         public readonly V3 P, Katse;
-        public Asento(V3 p, V3 katse) { P = p; Katse = katse; }
+        public MuseoAsento(V3 p, V3 katse) { P = p; Katse = katse; }
         public V3 Suunta { get { var d = Katse - P; double l = d.Pituus; return l < 1e-9 ? new V3(0, 0, -1) : d * (1 / l); } }
         public override string ToString() => $"{P} → {Katse}";
     }
@@ -39,7 +39,7 @@ namespace Matkakirja.Linssit.Museo
         public bool Tauolla { get; private set; }
         /// <summary>Pysähdys, jolle ollaan menossa tai jossa ollaan (indeksi Pysahdykset-listaan).</summary>
         public int Kohta { get; private set; }
-        public Asento Nykyinen { get; private set; }
+        public MuseoAsento Nykyinen { get; private set; }
         public double VaiheenAika { get; private set; }
         public double VaiheenKesto { get; private set; }
         /// <summary>Kasvaa joka vaihteessa (UI päivittää otsikon).</summary>
@@ -47,16 +47,16 @@ namespace Matkakirja.Linssit.Museo
 
         List<V3> polku = new List<V3>();
         List<double> polunMatka = new List<double>();
-        Asento lahto;
+        MuseoAsento lahto;
         double yaw, pitch;
 
         public MuseoKierros(Sali s)
         {
             sali = s;
             for (int i = 0; i < s.Reitti.Count; i++)
-                if (s.Reitti[i].Kohde != null && s.Reitti[i].PysahdysS > 0) Pysahdykset.Add(i);
+                if (s.Reitti[i].Kohde != null && s.Reitti[i].PysahdysS > 0 && s.HaeRipustus(s.Reitti[i].Kohde) != null) Pysahdykset.Add(i);   // ripustamaton paikka tai veistos = kulkupiste
             var alku = s.Reitti.Count > 0 ? s.Reitti[0] : new Reittipiste { P = new V3(0, SilmaY, 0), Katse = new V3(0, SilmaY, -5) };
-            Nykyinen = new Asento(alku.P, alku.Katse);
+            Nykyinen = new MuseoAsento(alku.P, alku.Katse);
             Kohta = 0;
             AloitaSiirtyma(0, 0);
         }
@@ -88,7 +88,7 @@ namespace Matkakirja.Linssit.Museo
             Versio++;
         }
 
-        static double KaantoS(Asento a, Reittipiste b)
+        static double KaantoS(MuseoAsento a, Reittipiste b)
         {
             var d1 = a.Suunta; var d2 = b.Katse - b.P; double l = d2.Pituus; if (l < 1e-9) return 0;
             double c = Math.Max(-1, Math.Min(1, (d1.X * d2.X + d1.Z * d2.Z) / (l * Math.Sqrt(d1.X * d1.X + d1.Z * d1.Z + 1e-12))));
@@ -150,10 +150,10 @@ namespace Matkakirja.Linssit.Museo
                 if ((eteen - p).Pituus < 0.2) eteen = kohde.Katse; else eteen = new V3(eteen.X, SilmaY, eteen.Z) + (eteen - p) * 2;
                 var paat = V3.Lerp(lahto.Katse, kohde.Katse, e);
                 double w = L > 3 ? Math.Sin(Math.PI * e) * 0.85 : 0;
-                Nykyinen = new Asento(p, V3.Lerp(paat, eteen, w));
+                Nykyinen = new MuseoAsento(p, V3.Lerp(paat, eteen, w));
                 if (VaiheenAika >= VaiheenKesto)
                 {
-                    Nykyinen = new Asento(kohde.P, kohde.Katse);
+                    Nykyinen = new MuseoAsento(kohde.P, kohde.Katse);
                     Vaihe = MuseoVaihe.Pysahtyy; VaiheenAika = 0; VaiheenKesto = Math.Max(PysahdysMinS, kohde.PysahdysS); Versio++;
                 }
             }
@@ -179,7 +179,7 @@ namespace Matkakirja.Linssit.Museo
             var d = Nykyinen.Suunta;
             yaw = Math.Atan2(d.X, -d.Z) * 180 / Math.PI;
             pitch = Math.Asin(Math.Max(-1, Math.Min(1, d.Y))) * 180 / Math.PI;
-            Nykyinen = new Asento(new V3(Nykyinen.P.X, SilmaY, Nykyinen.P.Z), Nykyinen.P + d);
+            Nykyinen = new MuseoAsento(new V3(Nykyinen.P.X, SilmaY, Nykyinen.P.Z), Nykyinen.P + d);
             Vaihe = MuseoVaihe.Vapaa; Tauolla = false; VaiheenAika = 0; Versio++;
         }
 
@@ -215,7 +215,7 @@ namespace Matkakirja.Linssit.Museo
             var px = new V3(p.X + siirto.X, p.Y, p.Z); if (Sallittu(px)) p = px;
             var pz = new V3(p.X, p.Y, p.Z + siirto.Z); if (Sallittu(pz)) p = pz;
             var suunta = new V3(Math.Sin(yr) * Math.Cos(pr), Math.Sin(pr), -Math.Cos(yr) * Math.Cos(pr));
-            Nykyinen = new Asento(p, p + suunta);
+            Nykyinen = new MuseoAsento(p, p + suunta);
         }
 
         /// <summary>Kävijän paikka sallittu: osan sisällä seinävaran päässä tai aukon käytävässä.</summary>

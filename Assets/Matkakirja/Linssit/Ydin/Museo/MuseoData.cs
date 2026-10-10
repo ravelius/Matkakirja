@@ -53,6 +53,14 @@ namespace Matkakirja.Linssit.Museo
         public double LeveysCm { get { double m = 0; foreach (var p in Pisteet) m = Math.Max(m, p.X); return m; } }
     }
 
+    /// <summary>Tekstitaulu ilman tekstiä (liite C2.4 kohta 8): pieni vaalea laatta teoksen vieressä; napautus avaa kortin.</summary>
+    public sealed class Tekstitaulu
+    {
+        public string Id, Teospaikka;
+        public V3 Keskipiste, Normaali;
+        public double Leveys, Korkeus;
+    }
+
     public sealed class Reittipiste
     {
         public V3 P, Katse;
@@ -90,6 +98,9 @@ namespace Matkakirja.Linssit.Museo
         public readonly Dictionary<string, (double R, double G, double B, double Karheus, double Metalli)> KehysMateriaalit =
             new Dictionary<string, (double, double, double, double, double)>(StringComparer.Ordinal);
         public readonly List<Reittipiste> Reitti = new List<Reittipiste>();
+        public readonly List<Tekstitaulu> Tekstitaulut = new List<Tekstitaulu>();
+        /// <summary>Veistospaikkojen tunnukset (sali.json "veistospaikat"; veistokset GLB:inä myöhemmin, nyt reitin kulkupisteitä).</summary>
+        public readonly HashSet<string> Veistospaikat = new HashSet<string>(StringComparer.Ordinal);
         public readonly List<Teos> Teokset = new List<Teos>();
         public readonly List<Ripustus> Ripustukset = new List<Ripustus>();
 
@@ -181,6 +192,20 @@ namespace Matkakirja.Linssit.Museo
                     }
                     s.Kehykset[kv.Key] = k;
                 }
+            foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "veistospaikat")))
+                if (MiniJson.Teksti(MiniJson.Objekti(o), "id") is string vid) s.Veistospaikat.Add(vid);
+            foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "tekstitaulut")))
+            {
+                var d = MiniJson.Objekti(o);
+                var koko = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "koko_m"));
+                s.Tekstitaulut.Add(new Tekstitaulu
+                {
+                    Id = MiniJson.Teksti(d, "id"), Teospaikka = MiniJson.Teksti(d, "teospaikka"),
+                    Keskipiste = Vektori(MiniJson.Kentta(d, "keskipiste")), Normaali = Vektori(MiniJson.Kentta(d, "normaali")),
+                    Leveys = koko.Count > 0 ? Convert.ToDouble(koko[0], CultureInfo.InvariantCulture) : 0.16,
+                    Korkeus = koko.Count > 1 ? Convert.ToDouble(koko[1], CultureInfo.InvariantCulture) : 0.16,
+                });
+            }
             foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "reitti")))
             {
                 var d = MiniJson.Objekti(o);

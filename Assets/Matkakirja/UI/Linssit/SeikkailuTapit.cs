@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         public static bool Kosketaan => vasen?.Kosketaan == true || oikea?.Kosketaan == true;
         /// <summary>Testi `ui seikkailutapit on|off|auto`: näkyvyys ilman SeikkailuPelaajaa.</summary>
         public static bool? TestiNakyy;
+        /// <summary>Taidemuseon vapaa kulku (Linssiseppä 10.10.): samat tapit museossa (MuseoSovitin asettaa; vasen = liike, veto = katse).</summary>
+        public static System.Func<bool> MuseoKavely;
 
         static OpasTapit.Tappi vasen, oikea;
         static SeikkailuTapit viimeisin;
@@ -306,7 +308,7 @@ namespace Matkakirja.Natiivi
             LuePuluNappain();
             bool oikeaNyt = nakyy && OikeaTappi;
             if (oikeaNyt != oikeaNakyy) { oikeaNakyy = oikeaNyt; oikea.Nayta(oikeaNyt); }
-            bool nayta = TestiNakyy ?? PelaajaAktiivinen();
+            bool nayta = TestiNakyy ?? (PelaajaAktiivinen() || MuseoKavely?.Invoke() == true);
             if (nayta == nakyy) return;
             nakyy = nayta;
             if (!nayta) PoistaTietokerros();   // seikkailu päättyi: tietokerroksen tarjous pois

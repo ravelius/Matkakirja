@@ -129,6 +129,7 @@ namespace Matkakirja.Natiivi
         DioraamaSovitin poikki;
         KierrosSovitin lontoo;
         OpasSovitin opas;
+        MuseoSovitin museo;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -274,6 +275,8 @@ namespace Matkakirja.Natiivi
             rekisteri.Lisaa(lontoo = new KierrosSovitin(this, k, Matkakirja.Linssit.Kierros.LontooReitti.Kierros));
             // Elävä opas (Linssiseppä 5.10.2026, omistaja 17.5x): vain natiivi, kehittäjätilassa.
             rekisteri.Lisaa(opas = new OpasSovitin(this, k));
+            // Taidemuseo (Linssiseppä 10.10.2026, PT 09.5x, omistaja "se on tärkeämpi projekti"): Alankomaiden sali, kehittäjätilassa.
+            rekisteri.Lisaa(museo = new MuseoSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -2281,6 +2284,8 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "aanimaisema" && osat.Length > 1 && osat[1] == "kello") Kirjaa(KaupunkiAanimaisemaSoitin.TestiKello(osat.Length > 2 && int.TryParse(osat[2], out int kl) ? kl : 3));
                 else if (osat[0] == "poikki")
                     poikki.Komento(osat);
+                else if (osat[0] == "museo")
+                    museo.Komento(osat);
                 else if (osat[0] == "ajattelija")
                     ajattelijat.Komento(osat);
                 else if (osat[0] == "tila")

@@ -26,6 +26,11 @@
     64,
     74
    ],
+   "kalkki_valkoinen": [
+    222,
+    216,
+    204
+   ],
    "paneeli_kerma": [
     226,
     218,
@@ -191,20 +196,20 @@
   },
   {
    "id": "aula",
-   "nimi": "Aula",
+   "nimi": "Veistosaula",
    "tyyppi": "aula",
    "laatikko": {
     "x": [
-     -3.0,
-     3.0
+     -5.0,
+     5.0
     ],
     "z": [
-     4.4,
+     8.4,
      0.4
     ],
     "y": [
      0.0,
-     4.5
+     6.0
     ]
    },
    "katto": {
@@ -224,7 +229,7 @@
     "ev100": 6.6,
     "kelvin": 3200,
     "paivanvalo": 0.0,
-    "huom": "sisäänkäynti; kamera aloittaa täältä (origo = aulan ja m1:n välinen ovi)"
+    "huom": "sisäänkäynti ja Rijksin veistokset (origo = aulan ja m1:n välinen ovi)"
    }
   },
   {
@@ -640,6 +645,46 @@
     "paivanvalo": 0.35,
     "huom": "Yövartio tumma ja suuri: 180 lx (CCI: tummat jopa 150–200)"
    }
+  },
+  {
+   "id": "leiden",
+   "nimi": "Leidenin antiikkisiipi (RMO)",
+   "tyyppi": "veistossiipi",
+   "laatikko": {
+    "x": [
+     8.6,
+     20.6
+    ],
+    "z": [
+     -71.8,
+     -91.8
+    ],
+    "y": [
+     0.0,
+     6.5
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "kattoikkuna": [
+     4.0,
+     14.0
+    ]
+   },
+   "seina": {
+    "materiaali": "kalkki_valkoinen",
+    "sokkeli": 0.2,
+    "paneeli": 0.0,
+    "lista": 0.4
+   },
+   "lattia": "kivi_marmori_ruutu",
+   "valo": {
+    "lx": 200,
+    "ev100": 7.3,
+    "kelvin": 4000,
+    "paivanvalo": 0.5,
+    "huom": "antiikin kivi kestää valoa: 200 lx, viileämpi päivänvalo"
+   }
   }
  ],
  "aukot": [
@@ -809,6 +854,19 @@
    "keskipiste": 0.0,
    "leveys": 5.4,
    "korkeus": 7.6,
+   "kaari": true,
+   "syvyys": 0.6
+  },
+  {
+   "id": "ovi-yv-leiden",
+   "osat": [
+    "yv",
+    "leiden"
+   ],
+   "seina": "+x",
+   "keskipiste": -81.8,
+   "leveys": 3.0,
+   "korkeus": 4.2,
    "kaari": true,
    "syvyys": 0.6
   }
@@ -4187,7 +4245,7 @@
    "p": [
     0.0,
     1.6,
-    3.6
+    7.8
    ],
    "katse": [
     0.0,
@@ -4378,14 +4436,1331 @@
    ],
    "pysahdys_s": 12,
    "kohde": "yv-yovartio"
+  },
+  {
+   "p": [
+    14.6,
+    1.6,
+    -73.8
+   ],
+   "katse": [
+    14.6,
+    1.4,
+    -91.8
+   ],
+   "pysahdys_s": 6,
+   "kohde": "leiden-v1"
+  }
+ ],
+ "veistospaikat": [
+  {
+   "id": "aula-v1",
+   "osa": "aula",
+   "jalusta": {
+    "keskipiste_ala": [
+     -3.2,
+     0.0,
+     6.2
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    -3.2,
+    1.0,
+    6.2
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      -0.906,
+      5.7,
+      4.594
+     ],
+     "suunta": [
+      -0.513,
+      -0.78,
+      0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    },
+    {
+     "paikka": [
+      -0.906,
+      5.7,
+      7.806
+     ],
+     "suunta": [
+      -0.513,
+      -0.78,
+      -0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    }
+   ],
+   "teos_ehdotus": "Hendrick de Keyser (1)",
+   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+  },
+  {
+   "id": "aula-v2",
+   "osa": "aula",
+   "jalusta": {
+    "keskipiste_ala": [
+     3.2,
+     0.0,
+     6.2
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    3.2,
+    1.0,
+    6.2
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      0.906,
+      5.7,
+      7.806
+     ],
+     "suunta": [
+      0.513,
+      -0.78,
+      -0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    },
+    {
+     "paikka": [
+      0.906,
+      5.7,
+      4.594
+     ],
+     "suunta": [
+      0.513,
+      -0.78,
+      0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    }
+   ],
+   "teos_ehdotus": "Hendrick de Keyser (2)",
+   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+  },
+  {
+   "id": "aula-v3",
+   "osa": "aula",
+   "jalusta": {
+    "keskipiste_ala": [
+     -3.2,
+     0.0,
+     2.6
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    -3.2,
+    1.0,
+    2.6
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      -0.906,
+      5.7,
+      0.994
+     ],
+     "suunta": [
+      -0.513,
+      -0.78,
+      0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    },
+    {
+     "paikka": [
+      -0.906,
+      5.7,
+      4.206
+     ],
+     "suunta": [
+      -0.513,
+      -0.78,
+      -0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    }
+   ],
+   "teos_ehdotus": "Rombout Verhulst",
+   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+  },
+  {
+   "id": "aula-v4",
+   "osa": "aula",
+   "jalusta": {
+    "keskipiste_ala": [
+     3.2,
+     0.0,
+     2.6
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    3.2,
+    1.0,
+    2.6
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      0.906,
+      5.7,
+      4.206
+     ],
+     "suunta": [
+      0.513,
+      -0.78,
+      -0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    },
+    {
+     "paikka": [
+      0.906,
+      5.7,
+      0.994
+     ],
+     "suunta": [
+      0.513,
+      -0.78,
+      0.359
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    }
+   ],
+   "teos_ehdotus": "François Dieussart",
+   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+  },
+  {
+   "id": "kg-v1",
+   "osa": "kg",
+   "jalusta": {
+    "keskipiste_ala": [
+     -3.0,
+     0.0,
+     -71.6
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    -3.0,
+    1.0,
+    -71.6
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      -1.394,
+      5.7,
+      -69.306
+     ],
+     "suunta": [
+      -0.359,
+      -0.78,
+      -0.513
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3500
+    },
+    {
+     "paikka": [
+      -4.606,
+      5.7,
+      -69.306
+     ],
+     "suunta": [
+      0.359,
+      -0.78,
+      -0.513
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3500
+    }
+   ],
+   "teos_ehdotus": "Jean-Antoine Houdon",
+   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+  },
+  {
+   "id": "kg-v2",
+   "osa": "kg",
+   "jalusta": {
+    "keskipiste_ala": [
+     3.0,
+     0.0,
+     -71.6
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    3.0,
+    1.0,
+    -71.6
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      4.606,
+      5.7,
+      -69.306
+     ],
+     "suunta": [
+      -0.359,
+      -0.78,
+      -0.513
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3500
+    },
+    {
+     "paikka": [
+      1.394,
+      5.7,
+      -69.306
+     ],
+     "suunta": [
+      0.359,
+      -0.78,
+      -0.513
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3500
+    }
+   ],
+   "teos_ehdotus": "Étienne-Maurice Falconet",
+   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+  },
+  {
+   "id": "yv-v1",
+   "osa": "yv",
+   "jalusta": {
+    "keskipiste_ala": [
+     -6.0,
+     0.0,
+     -75.4
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    -6.0,
+    1.0,
+    -75.4
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    0.447,
+    0.0,
+    -0.894
+   ],
+   "valot": [
+    {
+     "paikka": [
+      -6.411,
+      5.7,
+      -78.17
+     ],
+     "suunta": [
+      0.092,
+      -0.78,
+      0.619
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3300
+    },
+    {
+     "paikka": [
+      -3.538,
+      5.7,
+      -76.733
+     ],
+     "suunta": [
+      -0.55,
+      -0.78,
+      0.298
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3300
+    }
+   ],
+   "teos_ehdotus": "oma mallinnus (Rijksin CC0-kuvista)",
+   "lahde": "oma malli"
+  },
+  {
+   "id": "yv-v2",
+   "osa": "yv",
+   "jalusta": {
+    "keskipiste_ala": [
+     6.0,
+     0.0,
+     -75.4
+    ],
+    "koko": [
+     0.8,
+     1.0,
+     0.8
+    ]
+   },
+   "paikka": [
+    6.0,
+    1.0,
+    -75.4
+   ],
+   "max_koko": [
+    1.2,
+    2.2,
+    1.2
+   ],
+   "katse": [
+    -0.447,
+    0.0,
+    -0.894
+   ],
+   "valot": [
+    {
+     "paikka": [
+      3.538,
+      5.7,
+      -76.733
+     ],
+     "suunta": [
+      0.55,
+      -0.78,
+      0.298
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3300
+    },
+    {
+     "paikka": [
+      6.411,
+      5.7,
+      -78.17
+     ],
+     "suunta": [
+      -0.092,
+      -0.78,
+      0.619
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3300
+    }
+   ],
+   "teos_ehdotus": "oma mallinnus (Rijksin CC0-kuvista)",
+   "lahde": "oma malli"
+  },
+  {
+   "id": "leiden-v1",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.2,
+     0.0,
+     -74.0
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    11.2,
+    0.9,
+    -74.0
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -75.606
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -72.394
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-o1",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.0,
+     0.0,
+     -74.0
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    18.0,
+    0.9,
+    -74.0
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -72.394
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -75.606
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-v2",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.2,
+     0.0,
+     -77.1
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    11.2,
+    0.9,
+    -77.1
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -78.706
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -75.494
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-o2",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.0,
+     0.0,
+     -77.1
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    18.0,
+    0.9,
+    -77.1
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -75.494
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -78.706
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-v3",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.2,
+     0.0,
+     -80.2
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    11.2,
+    0.9,
+    -80.2
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -81.806
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -78.594
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-o3",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.0,
+     0.0,
+     -80.2
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    18.0,
+    0.9,
+    -80.2
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -78.594
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -81.806
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-v4",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.2,
+     0.0,
+     -83.3
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    11.2,
+    0.9,
+    -83.3
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -84.906
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -81.694
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-o4",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.0,
+     0.0,
+     -83.3
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    18.0,
+    0.9,
+    -83.3
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -81.694
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -84.906
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-v5",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.2,
+     0.0,
+     -86.4
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    11.2,
+    0.9,
+    -86.4
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -88.006
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -84.794
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-o5",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.0,
+     0.0,
+     -86.4
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    18.0,
+    0.9,
+    -86.4
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -84.794
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -88.006
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-v6",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.2,
+     0.0,
+     -89.5
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    11.2,
+    0.9,
+    -89.5
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -91.106
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.494,
+      5.3,
+      -87.894
+     ],
+     "suunta": [
+      -0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+  },
+  {
+   "id": "leiden-o6",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.0,
+     0.0,
+     -89.5
+    ],
+    "koko": [
+     0.6,
+     0.9,
+     0.6
+    ]
+   },
+   "paikka": [
+    18.0,
+    0.9,
+    -89.5
+   ],
+   "max_koko": [
+    0.8,
+    1.9,
+    0.8
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -87.894
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      -0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.706,
+      5.3,
+      -91.106
+     ],
+     "suunta": [
+      0.525,
+      -0.768,
+      0.368
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "RMO Leiden, antiikki",
+   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
   }
  ],
  "yhteenveto": {
-  "osia": 14,
-  "aukkoja": 13,
+  "osia": 15,
+  "aukkoja": 14,
   "teospaikkoja": 54,
   "grafiikka": 5,
   "tekstitauluja": 54,
-  "reittipisteita": 14
+  "reittipisteita": 15,
+  "veistospaikkoja": 20
  }
 }
