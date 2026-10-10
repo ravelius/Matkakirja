@@ -1,0 +1,206 @@
+================ KOHTA 21 (kohde:hahmotelma-praded) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Prado-museo] 1819 Arkkitehti Juan de Villanueva suunnitteli rakennuksen jo vuonna 1785 kuningas Kaarle III:n tilauksesta luonnontieteiden museoksi. Suunnitelmat viivästyivät sotien takia, ja lopulta kuningas Ferdinand VII päätti tehdä siitä taidemuseon. Prado avasi ovensa marraskuussa 1819. Museossa on maailman hienoimpia maalauksia: Velázquezin Las Meninas, Boschin Maallisten ilojen puutarha ja Goyan synkät niin kutsutut mustat maalaukset. Goya on museon eniten esillä oleva taiteilija. Kokoelmiin kuuluu nykyään noin 7 600 maalausta ja tuhansia piirustuksia ja veistoksia. Rakennusta laajennettiin maan alle 2007, ja vuonna 2023 museossa kävi yli 3,3 miljoonaa kävijää.
+- [Kolkata — kohdekartta / Kohdekartta: Intian museo] perustettu 1814, nykyinen rakennus 1875 Museon juuret ovat Aasialaisessa seurassa, jonka William Jones perusti 1784. Ajatus kokoelmien näyttämisestä yleisölle esitettiin 1796, ja 2. helmikuuta 1814 tanskalainen kasvitieteilijä Nathaniel Wallich kirjoitti seuran neuvostolle ehdotuksen museosta, joka kokoaisi yhteen hänen omat ja seuran kokoelmansa. Hän tarjoutui hoitajaksi ilman palkkaa ja esitti viittä osastoa: arkeologia, kansatiede, tekniikka, geologia ja eläintiede. Neuvosto suostui, ja museo perustettiin. Ensimmäinen museolaki säädettiin 1866 ja peruskivi laskettiin 1867. Nykyinen rakennus Chowringheellä valmistui 1875 W. L. Granvillen piirustusten mukaan, ja siihen liitettiin uusia sii…
+
+### 21.1
+KYSYMYS: Mikä oli Pradědin huipun ensimmäinen rakennus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Prado-museo] 1819 Arkkitehti Juan de Villanueva suunnitteli rakennuksen jo vuonna 1785 kuningas Kaarle III:n tilauksesta luonnontieteiden museoksi. Suunnitelmat viivästyivät sotien takia, ja lopulta kuningas Ferdinand VII päätti tehdä siitä taidemuseon. Prado avasi ovensa marraskuussa 1819. Museossa on maailman hienoimpia maalauksia: Velázquezin Las Meninas, Boschin Maallisten ilojen puutarha ja Goyan synkät niin kutsutut mustat maalaukset. Goya on museon eniten esillä oleva taiteilija. Kokoelmiin kuuluu nykyään noin 7 600 maalausta ja tuhansia piirustuksia ja veistoksia. Rakennusta laajennettiin maan alle 2007, ja vuonna 2023 museossa kävi yli 3,3 miljoonaa kävijää.
+- [Kolkata — kohdekartta / Kohdekartta: Intian museo] perustettu 1814, nykyinen rakennus 1875 Museon juuret ovat Aasialaisessa seurassa, jonka William Jones perusti 1784. Ajatus kokoelmien näyttämisestä yleisölle esitettiin 1796, ja 2. helmikuuta 1814 tanskalainen kasvitieteilijä Nathaniel Wallich kirjoitti seuran neuvostolle ehdotuksen museosta, joka kokoaisi yhteen hänen omat ja seuran kokoelmansa. Hän tarjoutui hoitajaksi ilman palkkaa ja esitti viittä osastoa: arkeologia, kansatiede, tekniikka, geologia ja eläintiede. Neuvosto suostui, ja museo perustettiin. Ensimmäinen museolaki säädettiin 1866 ja peruskivi laskettiin 1867. Nykyinen rakennus Chowringheellä valmistui 1875 W. L. Granvillen piirustusten mukaan, ja siihen liitettiin uusia sii…
+
+### 21.2
+KYSYMYS: Mitä keskiajalla uskottiin Petrovy kameny -kivien asukkaista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-hranice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+- [Viktorian putoukset — kaupunkilehti / Sumun synnyttämä sademetsä: Sademetsä jota sade ei koskaan jätä] Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi "jylisevä savu". Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.
+
+### 22.1
+KYSYMYS: Miksi Hranicen syvänteen koko syvyyttä ei tiedetä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+
+### 22.2
+KYSYMYS: Mikä eläin yöpyy syvänteen kuivissa luolissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+- [Viktorian putoukset — kaupunkilehti / Sumun synnyttämä sademetsä: Sademetsä jota sade ei koskaan jätä] Viktorian putouksen reunalla kasvaa kapea mutta tiheä sademetsäkaistale, joka elää täysin putouksen oman sumun varassa: vettä tippuu puiden lehdille joka ikinen päivä ympäri vuoden, vaikka koko ympäröivä seutu kuuluu kuivaan savanniin. Putouksesta nouseva sumupilvi voi runsasvetisenä tulva-aikana maalis–toukokuussa kohota jopa 400 metrin korkeuteen ja näkyä kirkkaalla säällä kymmenien kilometrien päähän — juuri tästä näystä syntyi paikallinen nimi "jylisevä savu". Sumumetsässä kasvaa muun muassa palmuja, saniaisia ja mahonkipuita, joita ei tapaa missään muualla seudun kuivissa metsissä.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-machovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Vaunun malli on nimetty kuningattaren mukaan] Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi hantouriksi. Malli on englantilainen victoria: nelipyöräinen avovaunu, jossa on edessä korotettu ajajan istuin ja sen takana kahden matkustajan penkki taitettavan kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin Englantiin vuonna 1869 ja nimettiin kuningatar Victorian mukaan, minkä jälkeen siitä tuli muotiajoneuvo puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja pyörien päällä on leveät kaarevat lokasuojat, jotka suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja Levantissa hantour on vuokra-ajoneuvo.
+- [Sevilla — kaupunkilehti / Historia: Palatsi, jonka seinät puhuvat kahta kieltä] Kastilian kuningas Pedro I rakennutti 1360-luvulla Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366 — todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä "Sultan Don Bidru". Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen Muhammad V, Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua Alhambraa.
+
+### 23.1
+KYSYMYS: Kuka kuningas määräsi lammen perustettavaksi vuonna 1366?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Palatsi, jonka seinät puhuvat kahta kieltä] Kastilian kuningas Pedro I rakennutti 1360-luvulla Alcázariin uuden mudéjar-tyylisen palatsin. Julkisivun latinankielinen kirjoitus antaa vuoden 1364 ja Suurlähettiläiden salin arabiankielinen kirjoitus vuoden 1366 — todennäköiset aloitus- ja valmistumisvuodet. Pohjakerroksen arabiankieliset tekstit kutsuvat kristittyä kuningasta nimellä "Sultan Don Bidru". Työhön lähetti todennäköisesti käsityöläisiä Pedron liittolainen Muhammad V, Granadan nasridihallitsija, ja lopputulos muistuttaa läheisesti samaan aikaan rakennettua Alhambraa.
+
+### 23.2
+KYSYMYS: Minkä runoilijan mukaan järvi on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Vaunun malli on nimetty kuningattaren mukaan] Luxorissa ajetaan hevosvaunuilla, joita sanotaan arabiaksi hantouriksi. Malli on englantilainen victoria: nelipyöräinen avovaunu, jossa on edessä korotettu ajajan istuin ja sen takana kahden matkustajan penkki taitettavan kuomun alla. Vaunu kehitettiin Ranskassa, tuotiin Englantiin vuonna 1869 ja nimettiin kuningatar Victorian mukaan, minkä jälkeen siitä tuli muotiajoneuvo puistoajeluille. Kyytiin noustaan matalalta askelmalta, ja pyörien päällä on leveät kaarevat lokasuojat, jotka suojaavat matkustajia mudalta ja roiskeilta. Egyptissä ja Levantissa hantour on vuokra-ajoneuvo.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-lipno) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+### 24.1
+KYSYMYS: Mikä joki on padottu Lipnon tekojärveksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+### 24.2
+KYSYMYS: Miksi Lipnon voimala päätettiin rakentaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-podyji) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Appalakit: Joki joka on vanhempi kuin vuoret ympärillään] New River kiemurtelee syvässä kanjonissa Appalakkien poikki ja tunnetaan yhtenä maailman vanhimmista joista: sen uskotaan uurtaneen uomaansa jo kauan ennen kuin ympärillä kohoavat vuoret olivat edes olemassa, vaikka tarkka ikä on geologien kesken kiistanalainen. Poikkeuksellista joelle on myös suunta – se virtaa etelästä pohjoiseen, vastoin useimpien itärannikon jokien tavanomaista reittiä. Nykyään kanjonin yli kaartuu teräksinen New River Gorge -silta, jonka kaaren alla joki näkyy kapeana nauhana syvällä metsäisten rinteiden välissä.
+
+### 25.1
+KYSYMYS: Minkä maan kansallispuiston kanssa Podyjí muodostaa kansainvälisen puiston?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+### 25.2
+KYSYMYS: Mikä joki virtaa puiston läpi syvässä laaksossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Appalakit: Joki joka on vanhempi kuin vuoret ympärillään] New River kiemurtelee syvässä kanjonissa Appalakkien poikki ja tunnetaan yhtenä maailman vanhimmista joista: sen uskotaan uurtaneen uomaansa jo kauan ennen kuin ympärillä kohoavat vuoret olivat edes olemassa, vaikka tarkka ikä on geologien kesken kiistanalainen. Poikkeuksellista joelle on myös suunta – se virtaa etelästä pohjoiseen, vastoin useimpien itärannikon jokien tavanomaista reittiä. Nykyään kanjonin yli kaartuu teräksinen New River Gorge -silta, jonka kaaren alla joki näkyy kapeana nauhana syvällä metsäisten rinteiden välissä.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

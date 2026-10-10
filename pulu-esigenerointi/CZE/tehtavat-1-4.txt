@@ -1,0 +1,218 @@
+================ KOHTA 16 (kohde:boubin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kaupunkilehti / Luonto: Rinne joka rauhoitettiin 1871] Mount Elizan jarrahmetsä oli siirtokunnan ensimmäinen vientitavara: viisi tonnia puuta kaadettiin rinteeltä 1835. Hakkuu jatkui 1871 asti, jolloin maanmittaaja Malcolm Fraser sai kuvernööri Frederick Weldin varaamaan 432 eekkeriä julkiseksi puistoksi. Alue laajeni 1890 ja uudestaan 1897, kun John Forrest kasvatti sen 1 017 eekkeriin. Puiston nimi oli Perth Park, ja King’s Parkiksi se muutettiin vasta 1901. Noongareille kukkula oli jo kauan ennen sitä Mooro Katta, Kaarta Gar-up ja Kaarta Koomba.
+- [Hobart — kaupunkilehti / Luonto: Vuori jolla on kaksi nimeä] Alueen alkuperäiskansan kielessä vuori on kunanyi; muistiin on kirjattu myös nimet ungyhaletta ja poorawetter. Eurooppalaiset kokeilivat vuorotellen nimiä Skiddaw ja Table Mountain, kunnes se nimettiin 1832 Wellingtonin herttuan mukaan. Charles Darwin kiipesi huipulle helmikuussa 1836 ja kutsui eukalyptusmetsää jaloksi; kosteissa rotkoissa hän näki puusaniaisen, joka oli vähintään kuusi metriä korkea ja jonka lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna 2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount Wellington oli ensimmäisiä.
+- [Pakistan — maalehti / Luonto: Vuori, jolla ei ollut nimeä] K2 on 8 611 metriä korkea ja maailman toiseksi korkein vuori. Se kohoaa Karakoramissa Pakistanin ja Kiinan rajalla, ja kaikki tärkeimmät nousureitit sekä perusleiri ovat Pakistanin puolella. Nimi on mittausmerkintä: Thomas Montgomerie luonnosteli vuonna 1856 kaksi huippua 210 kilometrin päästä ja merkitsi ne K1 ja K2. K1 osoittautui paikallisesti Masherbrumiksi, mutta K2:lla ei tuntunut olevan nimeä — sitä ei näy kylistä. Ensimmäisinä huipulla olivat italialaiset Lino Lacedelli ja Achille Compagnoni vuonna 1954. Talvella se noustiin vasta tammikuussa 2021.
+
+### 16.1
+KYSYMYS: Milloin metsä rauhoitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kaupunkilehti / Luonto: Rinne joka rauhoitettiin 1871] Mount Elizan jarrahmetsä oli siirtokunnan ensimmäinen vientitavara: viisi tonnia puuta kaadettiin rinteeltä 1835. Hakkuu jatkui 1871 asti, jolloin maanmittaaja Malcolm Fraser sai kuvernööri Frederick Weldin varaamaan 432 eekkeriä julkiseksi puistoksi. Alue laajeni 1890 ja uudestaan 1897, kun John Forrest kasvatti sen 1 017 eekkeriin. Puiston nimi oli Perth Park, ja King’s Parkiksi se muutettiin vasta 1901. Noongareille kukkula oli jo kauan ennen sitä Mooro Katta, Kaarta Gar-up ja Kaarta Koomba.
+
+### 16.2
+KYSYMYS: Kuinka korkea vuori on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kaupunkilehti / Luonto: Vuori jolla on kaksi nimeä] Alueen alkuperäiskansan kielessä vuori on kunanyi; muistiin on kirjattu myös nimet ungyhaletta ja poorawetter. Eurooppalaiset kokeilivat vuorotellen nimiä Skiddaw ja Table Mountain, kunnes se nimettiin 1832 Wellingtonin herttuan mukaan. Charles Darwin kiipesi huipulle helmikuussa 1836 ja kutsui eukalyptusmetsää jaloksi; kosteissa rotkoissa hän näki puusaniaisen, joka oli vähintään kuusi metriä korkea ja jonka lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna 2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount Wellington oli ensimmäisiä.
+- [Pakistan — maalehti / Luonto: Vuori, jolla ei ollut nimeä] K2 on 8 611 metriä korkea ja maailman toiseksi korkein vuori. Se kohoaa Karakoramissa Pakistanin ja Kiinan rajalla, ja kaikki tärkeimmät nousureitit sekä perusleiri ovat Pakistanin puolella. Nimi on mittausmerkintä: Thomas Montgomerie luonnosteli vuonna 1856 kaksi huippua 210 kilometrin päästä ja merkitsi ne K1 ja K2. K1 osoittautui paikallisesti Masherbrumiksi, mutta K2:lla ei tuntunut olevan nimeä — sitä ei näy kylistä. Ensimmäisinä huipulla olivat italialaiset Lino Lacedelli ja Achille Compagnoni vuonna 1954. Talvella se noustiin vasta tammikuussa 2021.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:lednice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Puisto, jota sen suunnittelija ei saanut valmiiksi] Montrealilaiset olivat halunneet puistoa Mont Royalille jo vuodesta 1857, mutta kaupunki sitoutui ostamaan maan vasta 1868. Puiston suunnitteli maisema-arkkitehti Frederick Law Olmsted, joka halusi korostaa vuoren muotoja kasvillisuudella: tiheää alarinteillä, harvenevaa ylöspäin, jotta vuori näyttäisi todellista korkeammalta. Puisto avattiin juhlallisesti 24. toukokuuta 1876, mutta 1870-luvun puolivälin lama söi rahoituksen kesken kaiken. Ajotie rakennettiin hätäisesti alkuperäisestä suunnitelmasta piittaamatta, eikä kasvillisuusvalintoja toteutettu koskaan.
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+
+### 17.1
+KYSYMYS: Kuka suunnitteli koko maiseman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Puisto, jota sen suunnittelija ei saanut valmiiksi] Montrealilaiset olivat halunneet puistoa Mont Royalille jo vuodesta 1857, mutta kaupunki sitoutui ostamaan maan vasta 1868. Puiston suunnitteli maisema-arkkitehti Frederick Law Olmsted, joka halusi korostaa vuoren muotoja kasvillisuudella: tiheää alarinteillä, harvenevaa ylöspäin, jotta vuori näyttäisi todellista korkeammalta. Puisto avattiin juhlallisesti 24. toukokuuta 1876, mutta 1870-luvun puolivälin lama söi rahoituksen kesken kaiken. Ajotie rakennettiin hätäisesti alkuperäisestä suunnitelmasta piittaamatta, eikä kasvillisuusvalintoja toteutettu koskaan.
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+
+### 17.2
+KYSYMYS: Mikä yhdistää linnoja toisiinsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+- [Jordania — maalehti / Rauniot] Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, joita seisoo yhä pystyssä keskellä maisemaa.
+- [Belgia — maalehti / Historia] Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat menettäneet tulessa.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-josefov-asanace) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+### 18.1
+KYSYMYS: Miltä Josefov ennen asanacea näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+### 18.2
+KYSYMYS: Miksi Josefov ennen asanacea katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-bohemian-paradise) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+- [Kongo — maalehti / Kuvataide: Kaupungit, jotka rakennettiin pahvista] 1948–2015 — Bodys Isek Kingelez työskenteli Kinshasan kansallismuseossa naamioiden entisöijänä, kunnes ryhtyi 1985 päätoimisesti tekemään sitä, mitä kutsui nimellä extrêmes maquettes, äärimmäiset pienoismallit. Materiaalina olivat pahvi, paperi, teippi ja muovinpalat; malleja syntyi yli kolmesataa. Vuodesta 1992 hän rakensi kokonaisia kaupunkeja katuineen, puistoineen ja stadioneineen — ensimmäinen sai nimen hänen kotikylästään Kimbembele-Ihungasta. Tunnetuimmat ovat Ville Fantôme (1996) ja Kin 3ème millénaire (1997). Hänellä ei ollut koskaan taidekauppiasta, mutta New Yorkin MoMA teki hänestä laajan näyttelyn 2018.
+
+### 19.1
+KYSYMYS: Mikä on Böömin paratiisin korkein kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+
+### 19.2
+KYSYMYS: Mistä kivestä monet alueen kaupungit on rakennettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Kuvataide: Kaupungit, jotka rakennettiin pahvista] 1948–2015 — Bodys Isek Kingelez työskenteli Kinshasan kansallismuseossa naamioiden entisöijänä, kunnes ryhtyi 1985 päätoimisesti tekemään sitä, mitä kutsui nimellä extrêmes maquettes, äärimmäiset pienoismallit. Materiaalina olivat pahvi, paperi, teippi ja muovinpalat; malleja syntyi yli kolmesataa. Vuodesta 1992 hän rakensi kokonaisia kaupunkeja katuineen, puistoineen ja stadioneineen — ensimmäinen sai nimen hänen kotikylästään Kimbembele-Ihungasta. Tunnetuimmat ovat Ville Fantôme (1996) ja Kin 3ème millénaire (1997). Hänellä ei ollut koskaan taidekauppiasta, mutta New Yorkin MoMA teki hänestä laajan näyttelyn 2018.
+- [Košice — kohdekartta / Kohdekartta: Hlavná-katu] keskiaika Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. 1700-luvun kartoissa se on Platea principalis. Isoisän aikaan kadun nimi on saksaksi Haupt Gasse ja unkariksi Fő utcza. Slovakiksi käännetty nimi Hlavná ulica otettiin käyttöön vasta, kun kaupunki siirtyi Tšekkoslovakialle. Myöhemmin nimi vaihtui politiikan mukana: 1933 kadusta tuli kenraali Štefánikin katu, ja vuodesta 1949 se oli 41 vuotta Leninin katu. Vanha nimi palautettiin 1. heinäkuuta 1990. Vuonna 1984 Hlavnásta tuli koko Tšekkoslova…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-adrspach) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+
+### 20.1
+KYSYMYS: Kuka runoilija vieraili kalliokaupungissa vuonna 1790?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+
+### 20.2
+KYSYMYS: Mikä lintu pesii Adršpachin kallioilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

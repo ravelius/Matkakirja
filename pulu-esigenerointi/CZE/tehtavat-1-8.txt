@@ -1,0 +1,204 @@
+================ KOHTA 36 (kohde:hahmotelma-marianske-lazne) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+
+### 36.1
+KYSYMYS: Kuka lääkäri osoitti Mariánské Lázněn lähteiden parantavat ominaisuudet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+
+### 36.2
+KYSYMYS: Minkä runon Goethe nimesi kaupungin mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-telc) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+
+### 37.1
+KYSYMYS: Kuka rakennutti Telčin linnan renessanssityyliin 1500-luvun puolivälissä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+
+### 37.2
+KYSYMYS: Minkä tyylisiä Telčin torin talot ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kaupunkilehti / Dili: Torin tetum lähti tästä kaupungista] Tetum levisi Timorin keski- ja itäosiin kontaktikielenä jo 1400-luvulla mahtavan Wehalin kuningaskunnan aikana. Portugalilaiset asettuivat aluksi saaren länsiosaan, jossa puhuttiin dawania, ja vasta kun pääkaupunki siirtyi 1769 Diliin, he alkoivat edistää tetumia siirtomaansa yhteisenä kielenä. Timor oli yksi harvoista Portugalin siirtomaista, joissa yleiskieleksi tuli paikallinen kieli eikä portugalin muunnos, ja syy oli hallintotavassa: portugalilaiset hallitsivat epäsuorasti paikallisten kuninkaiden kautta. Dilissä syntyi oma muotonsa, Tetun Prasa eli torin tetum — nimi tulee portugalin torista, praça. Se on kieliopiltaan yksinkertaisempi ja täynnä portugalilaisia lainasanoja, ja Ethnolo…
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-trebic) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+### 38.1
+KYSYMYS: Mikä luostari perustettiin Třebíčiin vuonna 1101?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+### 38.2
+KYSYMYS: Mikä on Pyhän Procopiuksen basilikan ruusuikkunan erikoisuus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-zdar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Kirjallisuus: Se, joka hallitsee sanat, hallitsee valtakunnan] Ohabolana ovat sananlaskuja, ja suurimmassa julkaistussa kokoelmassa niitä on yli 6 500. Sanamuoto säilyy muuttumattomana, vaikka puhekielen kielioppi ympärillä muuttuisi, koska sananlaskun korjaaminen olisi piittaamattomuutta esivanhempia kohtaan. "Moite on kuin tuuli: se tuntuu mutta ei näy." "Älä ole niin rakastunut, ettet huomaa sateen tulevan." Kabary on seremoniallinen puhemuoto, jossa sananlasku on vahvin kortti, ja vanha kokoelma sanoo hallitsemisoikeuden joskus ratkenneen kaunopuheisuudella. Vastapuolen virhe osoitetaan hienovaraisesti: suora arvostelu on merkki taidon puutteesta.
+- [Perth — kohdekartta / Kohdekartta: St George'n katedraali] 1879–1888 Anglikaaninen katedraali seisoo St Georges Terracella sen kirkon vieressä, jonka se korvasi. Aivan lähellä oli ollut myös Perthin ensimmäinen kirkko, jonka Frederick Irwin rakensi joulukuussa 1829, muutama kuukausi kaupungin perustamisen jälkeen. Nykyisen katedraalin piirsi sydneyläinen Edmund Blacket, ja se rakennettiin vuosina 1879–1888. Aineet ovat paikallisia: tiili tehtiin lähellä, kalkkikivi tuotiin Rottnestin saarelta ja puu on länsiaustralialaista jarrahia. Runkohuoneen puuholvia kannattavat vasarapalkit, ja länsipäätyä hallitsee ruusuikkuna. Katto oli alun perin liuskekiveä, mutta se vuoti, ja 1950-luvulla tilalle pantiin tiili. Tiilet olivat liian raskaita ja notkistivat…
+
+### 39.1
+KYSYMYS: Kuka arkkitehti suunnitteli Vihreän vuoren pyhiinvaelluskirkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+
+### 39.2
+KYSYMYS: Mikä luku hallitsee kirkon suunnitelmaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Kirjallisuus: Se, joka hallitsee sanat, hallitsee valtakunnan] Ohabolana ovat sananlaskuja, ja suurimmassa julkaistussa kokoelmassa niitä on yli 6 500. Sanamuoto säilyy muuttumattomana, vaikka puhekielen kielioppi ympärillä muuttuisi, koska sananlaskun korjaaminen olisi piittaamattomuutta esivanhempia kohtaan. "Moite on kuin tuuli: se tuntuu mutta ei näy." "Älä ole niin rakastunut, ettet huomaa sateen tulevan." Kabary on seremoniallinen puhemuoto, jossa sananlasku on vahvin kortti, ja vanha kokoelma sanoo hallitsemisoikeuden joskus ratkenneen kaunopuheisuudella. Vastapuolen virhe osoitetaan hienovaraisesti: suora arvostelu on merkki taidon puutteesta.
+- [Perth — kohdekartta / Kohdekartta: St George'n katedraali] 1879–1888 Anglikaaninen katedraali seisoo St Georges Terracella sen kirkon vieressä, jonka se korvasi. Aivan lähellä oli ollut myös Perthin ensimmäinen kirkko, jonka Frederick Irwin rakensi joulukuussa 1829, muutama kuukausi kaupungin perustamisen jälkeen. Nykyisen katedraalin piirsi sydneyläinen Edmund Blacket, ja se rakennettiin vuosina 1879–1888. Aineet ovat paikallisia: tiili tehtiin lähellä, kalkkikivi tuotiin Rottnestin saarelta ja puu on länsiaustralialaista jarrahia. Runkohuoneen puuholvia kannattavat vasarapalkit, ja länsipäätyä hallitsee ruusuikkuna. Katto oli alun perin liuskekiveä, mutta se vuoti, ja 1950-luvulla tilalle pantiin tiili. Tiilet olivat liian raskaita ja notkistivat…
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-zatec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+
+### 40.1
+KYSYMYS: Minkä kasvin viljelyperinteestä Žatec on kuuluisa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+
+### 40.2
+KYSYMYS: Mikä on kaupungin saksankielinen nimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

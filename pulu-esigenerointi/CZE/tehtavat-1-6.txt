@@ -1,0 +1,192 @@
+================ KOHTA 26 (kohde:hahmotelma-lysa-hora) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+
+### 26.1
+KYSYMYS: Mitä nimi Lysá hora tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+
+### 26.2
+KYSYMYS: Miksi vuoren nimi viittaa kaljuuteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-slavkov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Riemukaari] 1806–1836 Keisari Napoleon käski rakentaa valtavan riemukaaren vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa. Kaari on lähes 50 metriä korkea, ja sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön nimet. Napoleon ei koskaan nähnyt valmista kaarta, sillä se saatiin valmiiksi vasta vuonna 1836. Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi kaikista sodissa kadonneista. Haudalla palaa ikuinen liekki, joka sytytetään uudelleen joka ilta. Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä aukko on vain reilut 14 metriä leveä.
+- [Kumasi — kaupunkilehti / Kumasi: Liitto, jonka jakkara sitoi yhteen] Anokye ei ollut vain tietäjä vaan poliitikko. Hän muutti löyhän asantiliiton kansalliseksi liitoksi vuonna 1695, nimesi Kumasin pääkaupungiksi yhdessä Osei Tutun kanssa, perusti liittoon otettujen valtioiden päälliköistä valtioneuvoston ja järjesti armeijan uudelleen. Sota ylivaltaa pitänyttä Denkyiraa vastaan ratkesi Feyiasen taistelussa 1701, ja saaliiksi tuli hollantilaisten Elminan linnan vuokrakirja. Se avasi tien rannikolle: valtakunnan talous nojasi kultaan, maataloustuotteisiin, käsityöhön, pohjoisen karavaanikauppaan ja orjakauppaan. Sodan jälkeen liittolaiset tunnustivat Kumasin liiton keskukseksi ja Osei Tutun asantehenenä.
+
+### 27.1
+KYSYMYS: Ketkä joukot Napoleon löi Austerlitzin taistelussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Riemukaari] 1806–1836 Keisari Napoleon käski rakentaa valtavan riemukaaren vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa. Kaari on lähes 50 metriä korkea, ja sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön nimet. Napoleon ei koskaan nähnyt valmista kaarta, sillä se saatiin valmiiksi vasta vuonna 1836. Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi kaikista sodissa kadonneista. Haudalla palaa ikuinen liekki, joka sytytetään uudelleen joka ilta. Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä aukko on vain reilut 14 metriä leveä.
+
+### 27.2
+KYSYMYS: Minkä kukkulan Napoleon luovutti houkutellakseen liittolaiset?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Kumasi: Liitto, jonka jakkara sitoi yhteen] Anokye ei ollut vain tietäjä vaan poliitikko. Hän muutti löyhän asantiliiton kansalliseksi liitoksi vuonna 1695, nimesi Kumasin pääkaupungiksi yhdessä Osei Tutun kanssa, perusti liittoon otettujen valtioiden päälliköistä valtioneuvoston ja järjesti armeijan uudelleen. Sota ylivaltaa pitänyttä Denkyiraa vastaan ratkesi Feyiasen taistelussa 1701, ja saaliiksi tuli hollantilaisten Elminan linnan vuokrakirja. Se avasi tien rannikolle: valtakunnan talous nojasi kultaan, maataloustuotteisiin, käsityöhön, pohjoisen karavaanikauppaan ja orjakauppaan. Sodan jälkeen liittolaiset tunnustivat Kumasin liiton keskukseksi ja Osei Tutun asantehenenä.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-pernstejn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+### 28.1
+KYSYMYS: Miksi Pernštejniä kutsutaan marmorilinnaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+### 28.2
+KYSYMYS: Mitä saksankielinen nimi Bärenstein tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-kromeriz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Flatiron Building] 1901–1902 Kolmion muotoinen tontti Broadwayn ja Viidennen Avenuen risteyksessä oli 1857 lähtien Amos Enon omistuksessa: hän osti koko korttelin 32 000 dollarilla ja rakensi vinosti vastapäätä Fifth Avenue -hotellin. Tontilla olleen asuintalon pohjoisseinä jäi paljaaksi, ja Eno vuokrasi sen mainostajille. The New York Times pystytti siihen sähkölampuista tehdyn kyltin, kaupungin ensimmäisen. Myöhemmin seinälle pingotettiin kangas, jolle heijastettiin taikalyhdyllä mainoksia ja uutisia; vaalipäivinä Madison Squarelle kokoontui kymmeniä tuhansia ihmisiä odottamaan tuloksia. Enon kuoltua 1899 tontti myytiin, ja toukokuussa 1901 sen osti rakennusyhtiö Fullerin toimitusjohtaja Harry S. Black yhti…
+- [Vancouver — kohdekartta / Kohdekartta: Orpheum-teatteri] 1927 Teatterin piirsi skotlantilaissyntyinen arkkitehti Marcus Priteca. Ensimmäiset esitykset nähtiin 7. marraskuuta 1927, ja seuraavana päivänä talo avattiin virallisesti varieteeteatterina. Se oli avautuessaan Kanadan suurin teatteri: kolmetuhatta paikkaa ja 1,25 miljoonan dollarin rakennuskustannukset. Ensimmäinen teatterinjohtaja oli William A. Barnes. Kun varieteen kulta-aika päättyi 1930-luvun alussa, Orpheumista tuli pääosin elokuvateatteri Famous Playersin omistuksessa; Ivan Ackery johti taloa vuodesta 1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous Players päätti purkaa sisätilat ja tehdä talosta monisalin. Siitä syntyi kansanliike "Save the Orpheum", ja jopa koomikko Jack Ben…
+
+### 29.1
+KYSYMYS: Kenen omistuksessa Kroměříž oli keskiajalta lähtien?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Flatiron Building] 1901–1902 Kolmion muotoinen tontti Broadwayn ja Viidennen Avenuen risteyksessä oli 1857 lähtien Amos Enon omistuksessa: hän osti koko korttelin 32 000 dollarilla ja rakensi vinosti vastapäätä Fifth Avenue -hotellin. Tontilla olleen asuintalon pohjoisseinä jäi paljaaksi, ja Eno vuokrasi sen mainostajille. The New York Times pystytti siihen sähkölampuista tehdyn kyltin, kaupungin ensimmäisen. Myöhemmin seinälle pingotettiin kangas, jolle heijastettiin taikalyhdyllä mainoksia ja uutisia; vaalipäivinä Madison Squarelle kokoontui kymmeniä tuhansia ihmisiä odottamaan tuloksia. Enon kuoltua 1899 tontti myytiin, ja toukokuussa 1901 sen osti rakennusyhtiö Fullerin toimitusjohtaja Harry S. Black yhti…
+- [Vancouver — kohdekartta / Kohdekartta: Orpheum-teatteri] 1927 Teatterin piirsi skotlantilaissyntyinen arkkitehti Marcus Priteca. Ensimmäiset esitykset nähtiin 7. marraskuuta 1927, ja seuraavana päivänä talo avattiin virallisesti varieteeteatterina. Se oli avautuessaan Kanadan suurin teatteri: kolmetuhatta paikkaa ja 1,25 miljoonan dollarin rakennuskustannukset. Ensimmäinen teatterinjohtaja oli William A. Barnes. Kun varieteen kulta-aika päättyi 1930-luvun alussa, Orpheumista tuli pääosin elokuvateatteri Famous Playersin omistuksessa; Ivan Ackery johti taloa vuodesta 1935 eläkkeelle jäämiseensä 1969. Vuonna 1973 Famous Players päätti purkaa sisätilat ja tehdä talosta monisalin. Siitä syntyi kansanliike "Save the Orpheum", ja jopa koomikko Jack Ben…
+
+### 29.2
+KYSYMYS: Mikä Kroměřížin kohde on Unescon maailmanperintöä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-krivoklat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+### 30.1
+KYSYMYS: Kuka suku omisti Křivoklátin linnan 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+### 30.2
+KYSYMYS: Mihin linna muutettiin, kun se alkoi rappeutua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

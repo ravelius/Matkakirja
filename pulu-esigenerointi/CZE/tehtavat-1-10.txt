@@ -1,0 +1,104 @@
+================ KOHTA 46 (kohde:hahmotelma-rabi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+### 46.1
+KYSYMYS: Miten Jan Žižka menetti näkönsä kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+### 46.2
+KYSYMYS: Mikä teki Rabín linnasta Tšekin suurimman linnaraunion?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (nosto:karlstejn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Aarrekammion uurna on umpinaista kiveä] Al-Khazneh louhittiin 100-luvun alussa jKr. kuningas Aretas IV:n aikana hautamonumentiksi ja kryptaksi. Julkisivu on 37 metriä korkea ja 24 leveä, ja se lainaa muotonsa Aleksandrian hellenistiseltä arkkitehtuurilta: huipulla on neljä kotkaa, ylätasolla tanssivia amatsoneja kaksoiskirvein ja oviaukon vieressä Kastorin ja Polluksin patsaat. Nimi tarkoittaa aarrekammiota, ja se syntyi tarinasta, jonka mukaan toisen kerroksen koristeuurnassa olisi faaraon aarre. Uurna on täyttä hiekkakiveä, mutta siinä näkyy yhä luodinjälkiä niiltä, jotka uskoivat tarinan.
+- [Afganistan — maalehti / Musiikki: Piiri, joka kiihtyy tuntikausia] Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin lähes kolmentuhannen vuoden takaa.
+
+### 47.1
+KYSYMYS: Mitä valtakunnanregaliat olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+### 47.2
+KYSYMYS: Miksi keisari rakensi aarrekammion linnan kauas kaupungista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Aarrekammion uurna on umpinaista kiveä] Al-Khazneh louhittiin 100-luvun alussa jKr. kuningas Aretas IV:n aikana hautamonumentiksi ja kryptaksi. Julkisivu on 37 metriä korkea ja 24 leveä, ja se lainaa muotonsa Aleksandrian hellenistiseltä arkkitehtuurilta: huipulla on neljä kotkaa, ylätasolla tanssivia amatsoneja kaksoiskirvein ja oviaukon vieressä Kastorin ja Polluksin patsaat. Nimi tarkoittaa aarrekammiota, ja se syntyi tarinasta, jonka mukaan toisen kerroksen koristeuurnassa olisi faaraon aarre. Uurna on täyttä hiekkakiveä, mutta siinä näkyy yhä luodinjälkiä niiltä, jotka uskoivat tarinan.
+
+### 47.3
+KYSYMYS: Miten keskiaikaista linnaa piiritettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Musiikki: Piiri, joka kiihtyy tuntikausia] Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin lähes kolmentuhannen vuoden takaa.
+- [Sarajevo — kohdekartta / Kohdekartta: Sarajevon katedraali] 1884–1889 Sarajevon suurin katolinen kirkko, Pyhän Sydämen katedraali, kohoaa kahdella tornillaan keskustan sydämessä. Rakennustyöt alkoivat vuonna 1884, ja kirkko vihittiin käyttöön jo viiden vuoden kuluttua, vuonna 1889. Arkkitehti Josip Vancaš otti mallia kaukaisesta Ranskan Dijonista, Notre-Damen kirkosta, ja niin Sarajevoon syntyi oma pieni sisarrakennus sille. Katedraalin kaksi tornia kohoavat yli 43 metrin korkeuteen, ja koko rakennus on lähes 42 metriä pitkä. Sen suippokaariset ikkunat ja pyöreät tornit ovat niin tunnettuja, että ne on kuvattu Sarajevon kaupungin vaakunassa ja koko kantonin lipussa — katedraali on siis virallisesti osa kaupungin tunnusta. 1990-luvun alussa Sarajevoa…
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI

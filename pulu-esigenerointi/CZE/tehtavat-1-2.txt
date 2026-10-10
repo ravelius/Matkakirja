@@ -1,0 +1,276 @@
+================ KOHTA 6 (kohde:plzensky-prazdroj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+
+### 6.1
+KYSYMYS: Miksi kaksi kolmasosaa maailman oluesta on vaaleaa lageria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+
+### 6.2
+KYSYMYS: Mitä nimi Urquell tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:mendelin-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+- [Pietari — kohdekartta / Kohdekartta: Mendelejev 1869] Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvuudesta atom…
+
+### 7.1
+KYSYMYS: Mitä Mendel tarkoitti sanoilla vallitseva ja väistyvä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+- [Pietari — kohdekartta / Kohdekartta: Mendelejev 1869] Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvuudesta atom…
+
+### 7.2
+KYSYMYS: Miksi työn merkitys ymmärrettiin vasta vuosikymmeniä myöhemmin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:litomysl) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Litomyšl (sana)
+Tietoruudun teksti: Litomyšl on noin 10 000 asukkaan kaupunki Loučná-joen varrella Svitavyn ylängöllä Itä-Böömissä. Nimi tulee henkilönnimestä Litomysl ja tarkoittaa Litomyslin linnaa.
+
+Ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas Slavníkin kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän Böömistä Määriin johtavan kauppatien varrella. Kuningas Ottokar II korotti sen kaupungiksi 1259. Sen jälkeen kaupunkia omistivat vuorollaan useat aatelissuvut, ja Pernštejnit rakensivat linnan vuosina 1568–1581. Vuodesta 1344 vuoteen 1474 kaupunki oli myös oman hiippakuntansa istuin.
+
+Kaupungin kirjallinen maine syntyi toisaalta. Uskonpuhdistusta edeltänyt Veljesseurakunta on kirjattu Litomyšliin jo 1490, ja Kostkan suvun suojeluksessa se kukoisti — ja perusti kaupunkiin kirjapainon. Nykyään Litomyšl tunnetaan linnastaan, joka on maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Historia: Vallanvaihdoksia ja ensimmäinen kirjapaino] Osmanien valta Mekassa alkoi vuonna 1517, kun kaupungin sharif Barakat bin Muhammad tunnusti sulttaanin ylivallan mutta säilytti laajan itsehallinnon. Vuonna 1803 ensimmäinen saudivaltio valtasi kaupungin ja piti sitä kymmenen vuotta. Osmanit antoivat takaisinvaltauksen Egyptin varakuninkaalle Muhammad Ali Pashalle, joka onnistui siinä vuonna 1813. Loppuvuosisata oli hallintoa ja uudistuksia: vuonna 1872 Hidžazista tuli vilajetti ja Mekasta sen keskus, ja vuonna 1885 vali Osman Nuri Pasha toi kaupunkiin ensimmäisen kirjapainon. Samana vuonna väkiluvuksi arvioitiin neljäkymmentäviisi tuhatta.
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+
+### 8.1
+KYSYMYS: Ketkä perustivat kaupunkiin kirjapainon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Litomyšl (sana)
+Tietoruudun teksti: Litomyšl on noin 10 000 asukkaan kaupunki Loučná-joen varrella Svitavyn ylängöllä Itä-Böömissä. Nimi tulee henkilönnimestä Litomysl ja tarkoittaa Litomyslin linnaa.
+
+Ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas Slavníkin kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän Böömistä Määriin johtavan kauppatien varrella. Kuningas Ottokar II korotti sen kaupungiksi 1259. Sen jälkeen kaupunkia omistivat vuorollaan useat aatelissuvut, ja Pernštejnit rakensivat linnan vuosina 1568–1581. Vuodesta 1344 vuoteen 1474 kaupunki oli myös oman hiippakuntansa istuin.
+
+Kaupungin kirjallinen maine syntyi toisaalta. Uskonpuhdistusta edeltänyt Veljesseurakunta on kirjattu Litomyšliin jo 1490, ja Kostkan suvun suojeluksessa se kukoisti — ja perusti kaupunkiin kirjapainon. Nykyään Litomyšl tunnetaan linnastaan, joka on maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Historia: Vallanvaihdoksia ja ensimmäinen kirjapaino] Osmanien valta Mekassa alkoi vuonna 1517, kun kaupungin sharif Barakat bin Muhammad tunnusti sulttaanin ylivallan mutta säilytti laajan itsehallinnon. Vuonna 1803 ensimmäinen saudivaltio valtasi kaupungin ja piti sitä kymmenen vuotta. Osmanit antoivat takaisinvaltauksen Egyptin varakuninkaalle Muhammad Ali Pashalle, joka onnistui siinä vuonna 1813. Loppuvuosisata oli hallintoa ja uudistuksia: vuonna 1872 Hidžazista tuli vilajetti ja Mekasta sen keskus, ja vuonna 1885 vali Osman Nuri Pasha toi kaupunkiin ensimmäisen kirjapainon. Samana vuonna väkiluvuksi arvioitiin neljäkymmentäviisi tuhatta.
+
+### 8.2
+KYSYMYS: Mistä kaupungin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Litomyšl (sana)
+Tietoruudun teksti: Litomyšl on noin 10 000 asukkaan kaupunki Loučná-joen varrella Svitavyn ylängöllä Itä-Böömissä. Nimi tulee henkilönnimestä Litomysl ja tarkoittaa Litomyslin linnaa.
+
+Ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas Slavníkin kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän Böömistä Määriin johtavan kauppatien varrella. Kuningas Ottokar II korotti sen kaupungiksi 1259. Sen jälkeen kaupunkia omistivat vuorollaan useat aatelissuvut, ja Pernštejnit rakensivat linnan vuosina 1568–1581. Vuodesta 1344 vuoteen 1474 kaupunki oli myös oman hiippakuntansa istuin.
+
+Kaupungin kirjallinen maine syntyi toisaalta. Uskonpuhdistusta edeltänyt Veljesseurakunta on kirjattu Litomyšliin jo 1490, ja Kostkan suvun suojeluksessa se kukoisti — ja perusti kaupunkiin kirjapainon. Nykyään Litomyšl tunnetaan linnastaan, joka on maailmanperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:konesprezna-draha) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hevosrautatie (tekniikka)
+Tietoruudun teksti: České Budějovicesta Linziin ja edelleen Gmundeniin kulkenut hevosrautatie oli Manner-Euroopan toinen yleiselle liikenteelle avattu rautatie — ensimmäinen oli Saint-Étiennen ja Andrézieux’n välinen rata. Se avattiin vaiheittain vuosina 1827–1836, ja sen päätehtävä oli kuljettaa suolaa Ylä-Itävallan Salzkammergutista Böömiin.
+
+Suolakauppa alueiden välillä oli vanhaa perua: sitä oli kannettu selässä ja kuljetettu hevosilla kapeita vuoripolkuja jo pronssikaudelta lähtien. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia ja teillä liikkui noin 350 ajoneuvoa päivässä. České Budějovicen varastolta suola jatkoi edullista vesireittiä Vltavaa ja Elbeä pitkin Prahaan ja sen ohi.
+
+Höyry syrjäytti hevoset vaiheittain. Linzin ja Gmundenin väli muutettiin höyrykäyttöiseksi 1855–1856, mutta vuoristoisella Linzin ja České Budějovicen välillä se ei onnistunut: kaarteet olivat liian tiukkoja j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Tunturi: Ennen porolla kuljetettiin kaikki] Ennen moottorikelkkoja poro oli Lapin kulkuneuvo: se veti ahkiota, kapeaa venemäistä rekeä, joka liukui hangella tavaroiden ja ihmisten kanssa. Karavaanissa porot kulkivat jonossa toisiinsa sidottuina, ja päivämatka oli kymmeniä kilometrejä. Kuvan piirsi Gunnar Berndtson vuonna 1894 — samaan aikaan kun isoisä kirjoitti omaa päiväkirjaansa. Nykyään ahkiota vedetään kelkalla, mutta poroajot ovat yhä laji: kilpaa ajetaan jäällä suksilla perässä.
+- [Alice Springs — kaupunkilehti / Alice Springs: Kamelit tulivat ennen rataa ja jäivät sen jälkeen] Sisämaan kuljetukset hoidettiin brittiaikana kamelikaravaaneilla, joita ajoivat Brittiläisen Intian luoteisen rajaseudun pataani-heimoista tulleet siirtolaiset; paikallisesti heitä kutsuttiin afgaaneiksi, ja heidän tukikohtansa oli Hergott Springs, nykyinen Marree. Moni kameliajaja muutti Alice Springsiin 1929, kun rata vihdoin ylsi kaupunkiin. He asuivat sillä korttelilla, jolla kaupunginvaltuusto nyt on, ja kuljettivat tavaraa radan päästä pohjoisen karjatiloille ja asutuksille. Kamelit jäivät maahan, kun auto tuli: vuonna 2008 villiintyneitä yksikyttyräisiä kameleja arvioitiin olevan yli miljoona, ja kanta voi kaksinkertaistua kahdeksassa tai kymmenessä vuodessa. Pohjoisterritoriossa ne …
+
+### 9.1
+KYSYMYS: Mitä rataa pitkin kuljetettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hevosrautatie (tekniikka)
+Tietoruudun teksti: České Budějovicesta Linziin ja edelleen Gmundeniin kulkenut hevosrautatie oli Manner-Euroopan toinen yleiselle liikenteelle avattu rautatie — ensimmäinen oli Saint-Étiennen ja Andrézieux’n välinen rata. Se avattiin vaiheittain vuosina 1827–1836, ja sen päätehtävä oli kuljettaa suolaa Ylä-Itävallan Salzkammergutista Böömiin.
+
+Suolakauppa alueiden välillä oli vanhaa perua: sitä oli kannettu selässä ja kuljetettu hevosilla kapeita vuoripolkuja jo pronssikaudelta lähtien. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia ja teillä liikkui noin 350 ajoneuvoa päivässä. České Budějovicen varastolta suola jatkoi edullista vesireittiä Vltavaa ja Elbeä pitkin Prahaan ja sen ohi.
+
+Höyry syrjäytti hevoset vaiheittain. Linzin ja Gmundenin väli muutettiin höyrykäyttöiseksi 1855–1856, mutta vuoristoisella Linzin ja České Budějovicen välillä se ei onnistunut: kaarteet olivat liian tiukkoja j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rovaniemi — kaupunkilehti / Tunturi: Ennen porolla kuljetettiin kaikki] Ennen moottorikelkkoja poro oli Lapin kulkuneuvo: se veti ahkiota, kapeaa venemäistä rekeä, joka liukui hangella tavaroiden ja ihmisten kanssa. Karavaanissa porot kulkivat jonossa toisiinsa sidottuina, ja päivämatka oli kymmeniä kilometrejä. Kuvan piirsi Gunnar Berndtson vuonna 1894 — samaan aikaan kun isoisä kirjoitti omaa päiväkirjaansa. Nykyään ahkiota vedetään kelkalla, mutta poroajot ovat yhä laji: kilpaa ajetaan jäällä suksilla perässä.
+- [Alice Springs — kaupunkilehti / Alice Springs: Kamelit tulivat ennen rataa ja jäivät sen jälkeen] Sisämaan kuljetukset hoidettiin brittiaikana kamelikaravaaneilla, joita ajoivat Brittiläisen Intian luoteisen rajaseudun pataani-heimoista tulleet siirtolaiset; paikallisesti heitä kutsuttiin afgaaneiksi, ja heidän tukikohtansa oli Hergott Springs, nykyinen Marree. Moni kameliajaja muutti Alice Springsiin 1929, kun rata vihdoin ylsi kaupunkiin. He asuivat sillä korttelilla, jolla kaupunginvaltuusto nyt on, ja kuljettivat tavaraa radan päästä pohjoisen karjatiloille ja asutuksille. Kamelit jäivät maahan, kun auto tuli: vuonna 2008 villiintyneitä yksikyttyräisiä kameleja arvioitiin olevan yli miljoona, ja kanta voi kaksinkertaistua kahdeksassa tai kymmenessä vuodessa. Pohjoisterritoriossa ne …
+
+### 9.2
+KYSYMYS: Miksi hevosista ei voitu luopua koko matkalla kerralla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hevosrautatie (tekniikka)
+Tietoruudun teksti: České Budějovicesta Linziin ja edelleen Gmundeniin kulkenut hevosrautatie oli Manner-Euroopan toinen yleiselle liikenteelle avattu rautatie — ensimmäinen oli Saint-Étiennen ja Andrézieux’n välinen rata. Se avattiin vaiheittain vuosina 1827–1836, ja sen päätehtävä oli kuljettaa suolaa Ylä-Itävallan Salzkammergutista Böömiin.
+
+Suolakauppa alueiden välillä oli vanhaa perua: sitä oli kannettu selässä ja kuljetettu hevosilla kapeita vuoripolkuja jo pronssikaudelta lähtien. 1700-luvun lopulla vuotuinen kuljetusmäärä oli 17 000 tonnia ja teillä liikkui noin 350 ajoneuvoa päivässä. České Budějovicen varastolta suola jatkoi edullista vesireittiä Vltavaa ja Elbeä pitkin Prahaan ja sen ohi.
+
+Höyry syrjäytti hevoset vaiheittain. Linzin ja Gmundenin väli muutettiin höyrykäyttöiseksi 1855–1856, mutta vuoristoisella Linzin ja České Budějovicen välillä se ei onnistunut: kaarteet olivat liian tiukkoja j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Impressionistit] Kun sinä kävelit Pariisissa, ranskalaista taide-elämää hallitsi yhä Salon: sen valitsematta jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 — kaksi kuukautta isoisäsi käynnin jälkeen — Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot, Degas ja joukko muita perustivat oman yhdistyksen esittääkseen työnsä itse, ja jäseneksi liittyvän piti luopua Salonista kokonaan. Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, soleil levant ja otsikoi juttunsa "Impressionistien näyttely". Pilkkanimi…
+- [Addis Abeba — kohdekartta / Kohdekartta: Menelik II:n koulu] 1908 Etiopian ensimmäinen moderni koulu perustettiin lokakuussa 1908 keisari Menelik II:n käskystä. Opetusta ohjasi egyptiläinen kasvattaja Hana Salib koptiopettajien kanssa, ja rakennuksen suunnittelivat kreikkalaiset insinöörit ja arkkitehdit. Aikajana merkitsee koulun perustamisvuodeksi 1906; se on vuosi, jona Menelik antoi julistuksen, joka teki modernista koulutuksesta luvallista. Aluksi oppilaita oli parikymmentä ja pian noin sata, enimmäkseen aatelisten poikia. Osa aatelisista ei halunnut luopua perinteisestä opetuksesta ja lähetti kouluun palvelijoidensa tai sukulaistensa lapsia — ja kannusti silti oppineita viemään maata eteenpäin. Menelik kohtasi vastustusta myös kirkon suunnalta,…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:jablonec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jablonec nad Nisou (kauppa)
+Tietoruudun teksti: Jablonec nad Nisou on noin 46 000 asukkaan kaupunki Liberecin alueella Lužická Nisa -joen varrella, Jizeravuorten ympäröimässä altaassa. Kylä perustettiin 1300-luvulla, mutta kaupungiksi se tuli vasta 1866.
+
+Kaupunki on 1700-luvulta lähtien tunnettu lasistaan ja muotikoruistaan — erityisesti bijou-koruista. Historiallinen keskusta on hyvin säilynyt ja suojeltu kaupunkimuistomerkkivyöhykkeenä, ja sen arkkitehtonisesti arvokkain rakennus on uusi kaupungintalo.
+
+Nimi Jablonec on tšekkiä ja tarkoittaa pientä omenapuuta: kylä perustettiin paikkaan, jossa kasvoi omenapuu. Saksankieliset uudisasukkaat muokkasivat nimen 1500-luvulla muotoon Gablonz. Vuonna 1904 nimeen liitettiin kummallakin kielellä lisäys "Nisan varrella".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+- [Tanger — kaupunkilehti / Tanger: 1873: koko Marokon lähetystöt] Isoisän matkavuonna Tanger oli pieni kaupunki isolla tehtävällä. 1700-luvulta lähtien se toimi Marokon diplomaattisena pääkaupunkina, ja 1870-luvulla täällä olivat kaikkien vieraiden valtojen lähetystöt ja konsulit — ja silti ulkomaisia asukkaita oli vain noin nelisensataa runsaan kahdenkymmenentuhannen joukossa. Ranska oli pommittanut kaupunkia 6. elokuuta 1844, ja englantilaiset insinöörit korjasivat vauriot myöhemmin. Italialainen vallankumouksellinen Giuseppe Garibaldi asui täällä maanpaossa vuodesta 1849. Sulttaaniksi julistettiin 16. syyskuuta 1873 Hassan I, joka hallitsi kuolemaansa asti 1894.
+
+### 10.1
+KYSYMYS: Mistä kaupunki on tunnettu 1700-luvulta lähtien?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jablonec nad Nisou (kauppa)
+Tietoruudun teksti: Jablonec nad Nisou on noin 46 000 asukkaan kaupunki Liberecin alueella Lužická Nisa -joen varrella, Jizeravuorten ympäröimässä altaassa. Kylä perustettiin 1300-luvulla, mutta kaupungiksi se tuli vasta 1866.
+
+Kaupunki on 1700-luvulta lähtien tunnettu lasistaan ja muotikoruistaan — erityisesti bijou-koruista. Historiallinen keskusta on hyvin säilynyt ja suojeltu kaupunkimuistomerkkivyöhykkeenä, ja sen arkkitehtonisesti arvokkain rakennus on uusi kaupungintalo.
+
+Nimi Jablonec on tšekkiä ja tarkoittaa pientä omenapuuta: kylä perustettiin paikkaan, jossa kasvoi omenapuu. Saksankieliset uudisasukkaat muokkasivat nimen 1500-luvulla muotoon Gablonz. Vuonna 1904 nimeen liitettiin kummallakin kielellä lisäys "Nisan varrella".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: 1873: koko Marokon lähetystöt] Isoisän matkavuonna Tanger oli pieni kaupunki isolla tehtävällä. 1700-luvulta lähtien se toimi Marokon diplomaattisena pääkaupunkina, ja 1870-luvulla täällä olivat kaikkien vieraiden valtojen lähetystöt ja konsulit — ja silti ulkomaisia asukkaita oli vain noin nelisensataa runsaan kahdenkymmenentuhannen joukossa. Ranska oli pommittanut kaupunkia 6. elokuuta 1844, ja englantilaiset insinöörit korjasivat vauriot myöhemmin. Italialainen vallankumouksellinen Giuseppe Garibaldi asui täällä maanpaossa vuodesta 1849. Sulttaaniksi julistettiin 16. syyskuuta 1873 Hassan I, joka hallitsi kuolemaansa asti 1894.
+- [Hanoi — kohdekartta / Kohdekartta: Ngọc Sơnin temppeli] 1700–1800-luku Temppeli on saarella Hoàn Kiếm -järven pohjoisosassa, ja sinne johtaa rannalta punaiseksi maalattu Thê Húc -silta, jonka nimi kääntyy runollisesti aamuauringon orreksi. Rakennusaika on Wikipedian sisällä riidanalainen: järveä käsittelevä artikkeli sanoo temppelin olevan 1700-luvulta, temppelin oma artikkeli 1800-luvun alusta. Varma vuosiluku on 1864, jolloin kirjailija ja virkamies Nguyễn Văn Siêu teetti temppelissä laajan korjauksen — yhdeksän vuotta ennen kuin ranskalaiset saapuivat kaupunkiin. Temppelissä kunnioitetaan useaa hahmoa kerralla. Alun perin se oli omistettu kolmelle viisaalle, Wenchang Dijunille, Guan Yulle ja Lü Dongbinille; myöhemmin joukkoon liitettiin Trần …
+
+### 10.2
+KYSYMYS: Mitä kaupungin nimi tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jablonec nad Nisou (kauppa)
+Tietoruudun teksti: Jablonec nad Nisou on noin 46 000 asukkaan kaupunki Liberecin alueella Lužická Nisa -joen varrella, Jizeravuorten ympäröimässä altaassa. Kylä perustettiin 1300-luvulla, mutta kaupungiksi se tuli vasta 1866.
+
+Kaupunki on 1700-luvulta lähtien tunnettu lasistaan ja muotikoruistaan — erityisesti bijou-koruista. Historiallinen keskusta on hyvin säilynyt ja suojeltu kaupunkimuistomerkkivyöhykkeenä, ja sen arkkitehtonisesti arvokkain rakennus on uusi kaupungintalo.
+
+Nimi Jablonec on tšekkiä ja tarkoittaa pientä omenapuuta: kylä perustettiin paikkaan, jossa kasvoi omenapuu. Saksankieliset uudisasukkaat muokkasivat nimen 1500-luvulla muotoon Gablonz. Vuonna 1904 nimeen liitettiin kummallakin kielellä lisäys "Nisan varrella".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

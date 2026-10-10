@@ -1,0 +1,194 @@
+================ KOHTA 31 (kohde:hahmotelma-cheb) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+
+### 31.1
+KYSYMYS: Kuka sotapäällikkö murhattiin Chebissä 24. helmikuuta 1634?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+
+### 31.2
+KYSYMYS: Millä nimellä Chebiä kutsuttiin saksaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-kuks) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+### 32.1
+KYSYMYS: Kuka kuvanveistäjä koristi Kuksin sairaalan ja kirkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+### 32.2
+KYSYMYS: Mitkä ovat Braunin kuuluisimmat veistokset Kuksissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-koniggratz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Urheilu: Maalille vahingossa kuusivuotiaana] 1998 — Dominik Hašek vietiin isänsä kanssa viisivuotiaiden jääkiekkokokeisiin, mutta koska hän oli pitkä ja yhdeksänvuotiailta puuttui maalivahti, hänet pantiin heidän kanssaan jäälle. Kuusitoistavuotiaana hän oli nuorin ammattilaisliigassa pelannut jääkiekkoilija. Naganon olympialaisissa 1998 Hašek torjui Tšekin joukkueen olympiavoittoon, ja se on yhä maan jääkiekon ainoa olympiakulta. Hänen tyyliään sanottiin räpiköinniksi: hän heittäytyi jäähän ja torjui millä tahansa ruumiinosalla. Hänen torjuntaprosenttinsa on NHL:n kaikkien aikojen paras.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 33.1
+KYSYMYS: Kuka voitti Königgrätzin taistelun vuonna 1866?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+### 33.2
+KYSYMYS: Millä toisella nimellä taistelua kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Urheilu: Maalille vahingossa kuusivuotiaana] 1998 — Dominik Hašek vietiin isänsä kanssa viisivuotiaiden jääkiekkokokeisiin, mutta koska hän oli pitkä ja yhdeksänvuotiailta puuttui maalivahti, hänet pantiin heidän kanssaan jäälle. Kuusitoistavuotiaana hän oli nuorin ammattilaisliigassa pelannut jääkiekkoilija. Naganon olympialaisissa 1998 Hašek torjui Tšekin joukkueen olympiavoittoon, ja se on yhä maan jääkiekon ainoa olympiakulta. Hänen tyyliään sanottiin räpiköinniksi: hän heittäytyi jäähän ja torjui millä tahansa ruumiinosalla. Hänen torjuntaprosenttinsa on NHL:n kaikkien aikojen paras.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-zvikov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Vanhankaupungin tori] n. 1280-luku (jälleenrakennettu 1948–1953) Vanhankaupungin tori syntyi jo 1200-luvun lopulla, samaan aikaan kun koko Varsova perustettiin. Se oli kaupungin sydän aina 1700-luvulle asti: torilla kokoontuivat kauppiaat ja ammattikuntien mestarit, ja keskellä seisoi raatihuone, joka rakennettiin jo ennen vuotta 1429. Torin neljä sivua on nimetty 1700-luvun puolalaisten valtiomiesten mukaan, ja torin keskellä seisoo pronssinen Varsovan merenneito - kaupungin tunnuskuva, joka on vahtinut toria vuodesta 1855 lähtien. Varsovan kansannousun jälkeen syksyllä 1944 saksalaiset joukot räjäyttivät koko torin maan tasalle. Se rakennettiin huolella uudelleen vuosina 1948–1953 täsmälleen entisen näköiseksi…
+
+### 34.1
+KYSYMYS: Minkä jokien yhtymäkohdan yllä Zvíkovin linna seisoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+
+### 34.2
+KYSYMYS: Kuinka kauan hussiitit piirittivät linnaa vuonna 1429?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Vanhankaupungin tori] n. 1280-luku (jälleenrakennettu 1948–1953) Vanhankaupungin tori syntyi jo 1200-luvun lopulla, samaan aikaan kun koko Varsova perustettiin. Se oli kaupungin sydän aina 1700-luvulle asti: torilla kokoontuivat kauppiaat ja ammattikuntien mestarit, ja keskellä seisoi raatihuone, joka rakennettiin jo ennen vuotta 1429. Torin neljä sivua on nimetty 1700-luvun puolalaisten valtiomiesten mukaan, ja torin keskellä seisoo pronssinen Varsovan merenneito - kaupungin tunnuskuva, joka on vahtinut toria vuodesta 1855 lähtien. Varsovan kansannousun jälkeen syksyllä 1944 saksalaiset joukot räjäyttivät koko torin maan tasalle. Se rakennettiin huolella uudelleen vuosina 1948–1953 täsmälleen entisen näköiseksi…
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-karlovy-vary) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Ruoka: Riisi ei ole ruokalaji vaan ateria] Ateria on vary ja sen seuralainen laoka. Riisiä on monta tapaa: vary maina keitetään kuivaksi, vary sosoa vetiseksi puuroksi aamiaiseksi tai sairaalle, ja sen kanssa syödään kitozaa, savustettuja sebun lihasuikaleita. Vary amin'anana on puuroa lihan ja silputun lehtivihanneksen kanssa; famadihanassa eli luiden kääntämisen juhlassa tarjotaan vary be menaka, "riisi, jossa on paljon rasvaa". Paahdettuna ja jauhettuna riisi on lango, joka kestää matkan. Yleisin juoma syntyy kattilan pohjasta: ranon'ampango on kuumaa vettä paahtuneen riisikuoren päällä. Kuivassa etelässä riisin korvaa maniokki, maissi tai hapatettu sebunmaito.
+
+### 35.1
+KYSYMYS: Kuka keisari perusti Karlovy Varyn?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+### 35.2
+KYSYMYS: Mitä kaupungin nimi Karlovy Vary tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Ruoka: Riisi ei ole ruokalaji vaan ateria] Ateria on vary ja sen seuralainen laoka. Riisiä on monta tapaa: vary maina keitetään kuivaksi, vary sosoa vetiseksi puuroksi aamiaiseksi tai sairaalle, ja sen kanssa syödään kitozaa, savustettuja sebun lihasuikaleita. Vary amin'anana on puuroa lihan ja silputun lehtivihanneksen kanssa; famadihanassa eli luiden kääntämisen juhlassa tarjotaan vary be menaka, "riisi, jossa on paljon rasvaa". Paahdettuna ja jauhettuna riisi on lango, joka kestää matkan. Yleisin juoma syntyy kattilan pohjasta: ranon'ampango on kuumaa vettä paahtuneen riisikuoren päällä. Kuivassa etelässä riisin korvaa maniokki, maissi tai hapatettu sebunmaito.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

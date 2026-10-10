@@ -1,0 +1,203 @@
+================ KOHTA 41 (kohde:hahmotelma-lostice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Keksinnöt: Pappi rakensi sääkoneen pellolle] 1754 — Prokop Diviš oli pappi Příměticen kylässä ja uskoi, että ukkosen voi estää imemällä sähkön pois pilvistä. Kesäkuun 15. päivänä 1754 hän pystytti pellolleen nelikymmenmetrisen tangon, jonka päähän hän kiinnitti peltilaatikoita ja yli 400 metallipiikkiä. Raskaat ketjut johtivat rakennelman maahan, ja juuri siksi siitä tuli yksi maailman ensimmäisistä maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset syyttivät konetta sateen puutteesta ja purkivat sen.
+
+### 41.1
+KYSYMYS: Minkä juuston valmistuksesta Loštice on tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Keksinnöt: Pappi rakensi sääkoneen pellolle] 1754 — Prokop Diviš oli pappi Příměticen kylässä ja uskoi, että ukkosen voi estää imemällä sähkön pois pilvistä. Kesäkuun 15. päivänä 1754 hän pystytti pellolleen nelikymmenmetrisen tangon, jonka päähän hän kiinnitti peltilaatikoita ja yli 400 metallipiikkiä. Raskaat ketjut johtivat rakennelman maahan, ja juuri siksi siitä tuli yksi maailman ensimmäisistä maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset syyttivät konetta sateen puutteesta ja purkivat sen.
+
+### 41.2
+KYSYMYS: Minkä joen varrella Loštice sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Keksinnöt: Pappi rakensi sääkoneen pellolle] 1754 — Prokop Diviš oli pappi Příměticen kylässä ja uskoi, että ukkosen voi estää imemällä sähkön pois pilvistä. Kesäkuun 15. päivänä 1754 hän pystytti pellolleen nelikymmenmetrisen tangon, jonka päähän hän kiinnitti peltilaatikoita ja yli 400 metallipiikkiä. Raskaat ketjut johtivat rakennelman maahan, ja juuri siksi siitä tuli yksi maailman ensimmäisistä maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset syyttivät konetta sateen puutteesta ja purkivat sen.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-stramberk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+### 42.1
+KYSYMYS: Minkä makeisen valmistuksesta Štramberk on tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+### 42.2
+KYSYMYS: Mikä on Štramberkin tunnetuin torni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-mlada-boleslav) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+- [Kano — kaupunkilehti / Kauppa ja käsityö: Tori, jonka kuningas perusti] Muhammad Rumfa perusti Kurmin torin 1400-luvulla; lähdeteoksen nimi ajoittaa alun vuoteen 1463. Tori rakennettiin Jakaran kaupunginosaan kaupan ja varastoinnin keskukseksi, kun alueellinen ja Saharan yli kulkeva kauppa kasvoivat. Kanossa oli tuolloin jo toimiva teollisuus: kudontaa, kankaanvärjäystä, nahkatyötä ja savenvalantaa. Se veti kiertäviä kauppiaita Länsi-Sudanista, Tripolista ja Ghadamesista. Tori oli nelikulmio, jonka bambukojut muodostivat epäsäännöllisiä katuja; eri kortteleissa myytiin eri tavaraa, ja karjakauppa oli läntisimmässä laidassa. Lähde toteaa myös, että tori toimi aikanaan merkittävänä orjatorina.
+
+### 43.1
+KYSYMYS: Kuka kaupungin perusti ja mistä sen nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+- [Kano — kaupunkilehti / Kauppa ja käsityö: Tori, jonka kuningas perusti] Muhammad Rumfa perusti Kurmin torin 1400-luvulla; lähdeteoksen nimi ajoittaa alun vuoteen 1463. Tori rakennettiin Jakaran kaupunginosaan kaupan ja varastoinnin keskukseksi, kun alueellinen ja Saharan yli kulkeva kauppa kasvoivat. Kanossa oli tuolloin jo toimiva teollisuus: kudontaa, kankaanvärjäystä, nahkatyötä ja savenvalantaa. Se veti kiertäviä kauppiaita Länsi-Sudanista, Tripolista ja Ghadamesista. Tori oli nelikulmio, jonka bambukojut muodostivat epäsäännöllisiä katuja; eri kortteleissa myytiin eri tavaraa, ja karjakauppa oli läntisimmässä laidassa. Lähde toteaa myös, että tori toimi aikanaan merkittävänä orjatorina.
+
+### 43.2
+KYSYMYS: Mikä yhtiö osti Laurin & Klementin vuonna 1925?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Klementinum] Isoisäsi kirjaa ilmanpuntarin lukemat, koska hän ei luota muistiin. Prahassa on talo, joka on tehnyt saman kauemmin kuin yksikään suku. Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina, vaurioitui hussilaissodissa 1420 ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston, jollaista harvassa kaupungissa on. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Vuonna 1791 siellä …
+- [Praha — kaupunkilehti / Tiede: Sääkirja, joka alkoi 1775] Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Pisin yhtäjaksoinen työ on kuitenkin tehty tornissa: Böömin vanhin säänmittaus alkoi Klementinumissa vuonna 1775, ja se jatkuu yhä.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-pribram) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+
+### 44.1
+KYSYMYS: Minkä metallin louhinta teki Příbramista Habsburgien monarkian tuottoisimman kaivoskaupungin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+
+### 44.2
+KYSYMYS: Mikä pyhiinvaelluskohde kohoaa Příbramin yllä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-kamenicky-senov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Maailman korkein purjehduskelpoinen järvi] Titicaca kohoaa Andeilla 3 812 metrin korkeuteen ja on maailman korkein järvi, jolla kulkee säännöllistä laivaliikennettä suurilla aluksilla – pienempiä lampia toki löytyy vieläkin ylempää. Vettä on 8 372 neliökilometrin alalla, ja järvi jakautuu kapean Tiquina-salmen kohdalla kahteen altaaseen: pohjoiseen suureen ja eteläiseen pienempään. Rajaviiva Perun ja Bolivian välillä kulkee keskeltä järveä, joten kumpikin maa pitää sitä osittain omanaan. Syvimmillään vesi ulottuu lähes 280 metrin syvyyteen, mutta suurin osa altaasta on matalampaa ja lämpenee auringossa hitaasti ohuen ilman takia.
+- [Alice Springs — kohdekartta / Kohdekartta: Australian naisten museo] 1993 Australian naisten museo, aiemmalta nimeltään National Pioneer Women’s Hall of Fame, kertoo naisten paikasta Australian historiassa. Sen perusti 1993 Molly Clark Old Andadon karjatilalta. Vuoteen 2001 mennessä ensimmäiset tilat kävivät ahtaiksi, ja museolle tarjottiin uudeksi paikaksi suojeltua vanhaa vankilaa kaupungin perintökorttelissa. Museo avattiin uudessa paikassaan 2007, ja avaajana oli naisasioista vastaava ministeri Marion Scrymgour, ensimmäinen Pohjoisterritorion parlamenttiin valittu alkuperäiskansaan kuuluva nainen. Nimi muutettiin Australian naisten museoksi 2019, ja seuraavana vuonna aloitettiin piha-alueen kunnostus ja uusien näyttelyiden suunnittelu. Pysyviä näyttelyit…
+
+### 45.1
+KYSYMYS: Milloin Kamenický Šenovin lasinvalmistajat mainitaan ensimmäisen kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+
+### 45.2
+KYSYMYS: Mikä kaupungin koulu on maailman vanhin omalla alallaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Maailman korkein purjehduskelpoinen järvi] Titicaca kohoaa Andeilla 3 812 metrin korkeuteen ja on maailman korkein järvi, jolla kulkee säännöllistä laivaliikennettä suurilla aluksilla – pienempiä lampia toki löytyy vieläkin ylempää. Vettä on 8 372 neliökilometrin alalla, ja järvi jakautuu kapean Tiquina-salmen kohdalla kahteen altaaseen: pohjoiseen suureen ja eteläiseen pienempään. Rajaviiva Perun ja Bolivian välillä kulkee keskeltä järveä, joten kumpikin maa pitää sitä osittain omanaan. Syvimmillään vesi ulottuu lähes 280 metrin syvyyteen, mutta suurin osa altaasta on matalampaa ja lämpenee auringossa hitaasti ohuen ilman takia.
+- [Alice Springs — kohdekartta / Kohdekartta: Australian naisten museo] 1993 Australian naisten museo, aiemmalta nimeltään National Pioneer Women’s Hall of Fame, kertoo naisten paikasta Australian historiassa. Sen perusti 1993 Molly Clark Old Andadon karjatilalta. Vuoteen 2001 mennessä ensimmäiset tilat kävivät ahtaiksi, ja museolle tarjottiin uudeksi paikaksi suojeltua vanhaa vankilaa kaupungin perintökorttelissa. Museo avattiin uudessa paikassaan 2007, ja avaajana oli naisasioista vastaava ministeri Marion Scrymgour, ensimmäinen Pohjoisterritorion parlamenttiin valittu alkuperäiskansaan kuuluva nainen. Nimi muutettiin Australian naisten museoksi 2019, ja seuraavana vuonna aloitettiin piha-alueen kunnostus ja uusien näyttelyiden suunnittelu. Pysyviä näyttelyit…
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

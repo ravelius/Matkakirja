@@ -1,0 +1,244 @@
+================ KOHTA 1 (kohde:snezka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Urheilu: Kaksi miestä huipulla, yksi kysymys] 1953–1955 — Tenzing Norgay oli ollut Everestillä kuudesti ennen vuotta 1953: kolmesti brittien pohjoisilla retkillä 1930-luvulla ja 1952 sveitsiläisten mukana, jolloin hän ja Raymond Lambert nousivat 8 595 metriin. Toukokuun 29. päivänä 1953 hän ja Edmund Hillary seisoivat huipulla ja viipyivät siellä vartin. Toimittajat kysyivät kaksi vuotta samaa: kumpi astui ensin? Retkikunnan johtaja John Hunt vastasi, että he nousivat yhdessä. Vasta omaelämäkerrassaan 1955 Tenzing kertoi, että Hillary astui ensin — köyttä oli heidän välillään pari metriä.
+- [Dubai — kaupunkilehti / Rakennukset: Torni, jonka huipulla paastotaan pidempään] Burj Khalifa valmistui vuonna 2010, ja se on 828 metriä korkea — yli puolitoista kertaa aiempaa ennätystä korkeampi. Kerroksia on 163. Torni on niin korkea, että sen huipulla aurinko laskee pari minuuttia myöhemmin kuin katutasossa. Ramadanin aikana se otettiin huomioon virallisesti: ylimmissä kerroksissa paastotaan hetken pidempään kuin alhaalla. Rakennuksen muoto kapenee portaittain, jotta tuuli ei saisi siitä otetta.
+- [Kamerun — kaupunkilehti / Kamerun: Kaksi miestä huipulla] Marraskuussa 1861 brittiläinen tutkimusmatkailija Richard Burton nousi Kamerunvuoren huipulle yhdessä saksalaisen kasvitieteilijä Gustav Mannin kanssa – ensimmäisinä tunnettuina eurooppalaisina koskaan. Mann keräsi matkalla satoja kasvinäytteitä Kew'n kasvitieteelliselle puutarhalle Lontooseen, ja vuorella yhä virtaava lähde on nimetty hänen mukaansa Mann's Springiksi. Nousu tapahtui vain 12 vuotta ennen kuin isoisä itse saapui samoille rannoille matkapäiväkirjaansa täyttämään.
+
+### 1.1
+KYSYMYS: Miksi vuorella on kaksi nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Kaksi miestä huipulla] Marraskuussa 1861 brittiläinen tutkimusmatkailija Richard Burton nousi Kamerunvuoren huipulle yhdessä saksalaisen kasvitieteilijä Gustav Mannin kanssa – ensimmäisinä tunnettuina eurooppalaisina koskaan. Mann keräsi matkalla satoja kasvinäytteitä Kew'n kasvitieteelliselle puutarhalle Lontooseen, ja vuorella yhä virtaava lähde on nimetty hänen mukaansa Mann's Springiksi. Nousu tapahtui vain 12 vuotta ennen kuin isoisä itse saapui samoille rannoille matkapäiväkirjaansa täyttämään.
+
+### 1.2
+KYSYMYS: Mitä huipulla on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Urheilu: Kaksi miestä huipulla, yksi kysymys] 1953–1955 — Tenzing Norgay oli ollut Everestillä kuudesti ennen vuotta 1953: kolmesti brittien pohjoisilla retkillä 1930-luvulla ja 1952 sveitsiläisten mukana, jolloin hän ja Raymond Lambert nousivat 8 595 metriin. Toukokuun 29. päivänä 1953 hän ja Edmund Hillary seisoivat huipulla ja viipyivät siellä vartin. Toimittajat kysyivät kaksi vuotta samaa: kumpi astui ensin? Retkikunnan johtaja John Hunt vastasi, että he nousivat yhdessä. Vasta omaelämäkerrassaan 1955 Tenzing kertoi, että Hillary astui ensin — köyttä oli heidän välillään pari metriä.
+- [Dubai — kaupunkilehti / Rakennukset: Torni, jonka huipulla paastotaan pidempään] Burj Khalifa valmistui vuonna 2010, ja se on 828 metriä korkea — yli puolitoista kertaa aiempaa ennätystä korkeampi. Kerroksia on 163. Torni on niin korkea, että sen huipulla aurinko laskee pari minuuttia myöhemmin kuin katutasossa. Ramadanin aikana se otettiin huomioon virallisesti: ylimmissä kerroksissa paastotaan hetken pidempään kuin alhaalla. Rakennuksen muoto kapenee portaittain, jotta tuuli ei saisi siitä otetta.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:labe) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+- [Iso-Britannia — maalehti / Luonto: Markkinat jäätyneellä joella] 1814 — Ennen Thames jäätyi. Vuosien 1400 ja 1831 välillä joki jähmettyi Lontoon kohdalla 24 talvena, ja jäälle nousi telttakylä: keilapelejä, veneenmuotoisia keinuja ja painokoneita, jotka myivät muistoksi jäällä painettuja säkeitä. Viimeiset markkinat alkoivat 1. helmikuuta 1814 ja kestivät neljä päivää, ja norsu talutettiin joen yli Blackfriarsin sillan alapuolelta. Sitten purettiin vanha Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+
+### 2.1
+KYSYMYS: Missä Elben lähde tarkalleen on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+
+### 2.2
+KYSYMYS: Miksi joella on kaksi nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+- [Iso-Britannia — maalehti / Luonto: Markkinat jäätyneellä joella] 1814 — Ennen Thames jäätyi. Vuosien 1400 ja 1831 välillä joki jähmettyi Lontoon kohdalla 24 talvena, ja jäälle nousi telttakylä: keilapelejä, veneenmuotoisia keinuja ja painokoneita, jotka myivät muistoksi jäällä painettuja säkeitä. Viimeiset markkinat alkoivat 1. helmikuuta 1814 ja kestivät neljä päivää, ja norsu talutettiin joen yli Blackfriarsin sillan alapuolelta. Sitten purettiin vanha Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:vltava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Tampere: Koski, joka putoaa kahdeksantoista metriä] Tampere on rakennettu kapealle kannakselle kahden järven väliin. Näsijärvi on pohjoisessa ja Pyhäjärvi etelässä, ja niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero purkautuu keskustan halki juoksevana Tammerkoskena, ja juuri sen partaalle kaupunki syntyi. Koski oli ensimmäinen voimalaitos: vesipyörät ja myöhemmin turbiinit pyörittivät tehdassaleja aivan rannassa, ja myöhemmin sama vesi tuotti sähkön. Tammerkoski on nykyään yksi Suomen kansallismaisemista, ja sen rantoja pitkin kävellään tehtaalta toiselle.
+
+### 3.1
+KYSYMYS: Miksi Vltavaa sanotaan kansallisjoeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+### 3.2
+KYSYMYS: Mikä oli Pyhän Johanneksen koski?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tampere — kaupunkilehti / Tampere: Koski, joka putoaa kahdeksantoista metriä] Tampere on rakennettu kapealle kannakselle kahden järven väliin. Näsijärvi on pohjoisessa ja Pyhäjärvi etelässä, ja niiden pinnoilla on kahdeksantoista metriä korkeuseroa. Ero purkautuu keskustan halki juoksevana Tammerkoskena, ja juuri sen partaalle kaupunki syntyi. Koski oli ensimmäinen voimalaitos: vesipyörät ja myöhemmin turbiinit pyörittivät tehdassaleja aivan rannassa, ja myöhemmin sama vesi tuotti sähkön. Tammerkoski on nykyään yksi Suomen kansallismaisemista, ja sen rantoja pitkin kävellään tehtaalta toiselle.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:kutna-hora) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Kaksikymmentätuhatta asukasta keskellä aavikkoa] Nabatealaiset olivat arabialainen kansa, joka asettui näille vuorille ja teki Petrasta kuningaskuntansa pääkaupungin. Rikkaus tuli siitä, että he hallitsivat suitsuke- ja mausteteitä eteläisestä Arabiasta Välimerelle. Kukoistuskaudellaan 100-luvulla jKr. kaupungissa arvioidaan asuneen noin kaksikymmentätuhatta ihmistä, ja samalta ajalta on myös Al-Khazneh. Kokoluokan näkee teatterista: se louhittiin rinteeseen niin, että katsomosta näkyi mahdollisimman monta hautaa, ja siihen mahtui arviolta 8 500 katsojaa. Rakennustyössä leikattiin useiden vanhempien hautojen läpi. Rooma liitti kuningaskunnan valtakuntaansa vuonna 106 jKr.
+- [Tunisia — maalehti / Historia: Provinssi, joka ruokki miljoonakaupungin] 146 eaa.–200-luku — Rooman Afrikka-provinssi perustettiin 146 eaa. kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan rannikon. Hallintopääkaupungiksi tuli Utica, joka oli sodassa asettunut Rooman puolelle. Provinssia sanottiin valtakunnan viljakomeroksi: se ruokki Rooman väestön kahdeksan kuukautta vuodesta, ja loput neljä tulivat Egyptistä. Yhden arvion mukaan Luoteis-Afrikka tuotti miljoona tonnia viljaa vuodessa, ja siitä neljännes lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy nousi viljan rinnalle, ja rikkaus näkyi kaupunkien määrässä.
+
+### 4.1
+KYSYMYS: Mistä kaupungin rikkaus tuli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Petra: Kaksikymmentätuhatta asukasta keskellä aavikkoa] Nabatealaiset olivat arabialainen kansa, joka asettui näille vuorille ja teki Petrasta kuningaskuntansa pääkaupungin. Rikkaus tuli siitä, että he hallitsivat suitsuke- ja mausteteitä eteläisestä Arabiasta Välimerelle. Kukoistuskaudellaan 100-luvulla jKr. kaupungissa arvioidaan asuneen noin kaksikymmentätuhatta ihmistä, ja samalta ajalta on myös Al-Khazneh. Kokoluokan näkee teatterista: se louhittiin rinteeseen niin, että katsomosta näkyi mahdollisimman monta hautaa, ja siihen mahtui arviolta 8 500 katsojaa. Rakennustyössä leikattiin useiden vanhempien hautojen läpi. Rooma liitti kuningaskunnan valtakuntaansa vuonna 106 jKr.
+- [Tunisia — maalehti / Historia: Provinssi, joka ruokki miljoonakaupungin] 146 eaa.–200-luku — Rooman Afrikka-provinssi perustettiin 146 eaa. kolmannen puunilaissodan jälkeen, ja se kattoi suunnilleen nykyisen Tunisian, Koillis-Algerian ja Länsi-Libyan rannikon. Hallintopääkaupungiksi tuli Utica, joka oli sodassa asettunut Rooman puolelle. Provinssia sanottiin valtakunnan viljakomeroksi: se ruokki Rooman väestön kahdeksan kuukautta vuodesta, ja loput neljä tulivat Egyptistä. Yhden arvion mukaan Luoteis-Afrikka tuotti miljoona tonnia viljaa vuodessa, ja siitä neljännes lähti vientiin. Toisella vuosisadalla eaa. oliiviöljy nousi viljan rinnalle, ja rikkaus näkyi kaupunkien määrässä.
+
+### 4.2
+KYSYMYS: Mitä nimi Kutná Hora tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:cesky-krumlov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 5.1
+KYSYMYS: Mistä kaupungin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Historia: Nimi, joka palasi] Kaupungin nimi tulee Mumbadevistä, koli-kalastajien suojelusjumalattaresta, ja marathin sanasta aai eli äiti. Portugalilainen kirjoittaja Gaspar Correia merkitsi vuoden 1512 jälkeen muistiin muodon Bombaim, ja 1500- ja 1600-luvun asiakirjoissa nimi esiintyy toistakymmentä kertaa eri asussa. Englantilaiset muokkasivat portugalilaisen nimen muotoon Bombay, ja siitä syntyi sitkeä selitys, jonka mukaan se tarkoittaisi hyvää lahtea. Ranskalainen matkaaja Louis Rousselet, joka kävi kaupungissa 1863 ja 1868, kirjoitti 1877 sen olevan väärä: jumalattarella on saarella oma temppelinsä. Englanninkielinen virallinen nimi vaihdettiin Mumbaiksi marraskuussa 1995.
+- [Iquitos — kaupunkilehti / Iquitos: Yhdeksän lähetysasemaa ja yksi nimi] 1730—1767 — Kaupungin nimi tulee kansasta, jota espanjalaiset kutsuivat iquitoiksi. He asuivat Pastazan, Tigren, Nanayn ja Curarayn varsilla ja siirtyivät myöhemmin Amazonin ja Itayan seudulle. Vuosina 1638—1769 kansat koottiin jesuiittojen lähetysasemille, ja noin 130 vuoden aikana siellä työskenteli 161 lähetyssaarnaajaa: 63 kreolia, 43 espanjalaista, 32 saksalaista ja hollantilaista, 20 italialaista ja kolme muuta. Isä José Bahamonde käytti 37 vuotta yhdeksän Iquitos-aseman perustamiseen; niistä yksi oli San Pablo de los Napeanos vuodelta 1757. Kaarle III karkotti jesuiitat 20. elokuuta 1767, ja asemista jäi jäljelle kourallinen kauppakyliä.
+
+### 5.2
+KYSYMYS: Miksi nimen eteen lisättiin sana Český?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
