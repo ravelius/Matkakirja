@@ -1,0 +1,216 @@
+================ KOHTA 1 (kohde:belgradin-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Sademetsä ja joet] Santarémin ympärillä sademetsä, joet ja valkoiset hiekkarannat kietoutuvat yhteen: lähellä uivat vaaleanpunaiset jokidelfiinit ja tulvametsän vesi kätkee sekä perhosia että muinaisia asuinjälkiä.
+- [Kreeta — kaupunkilehti / Historia: Linnoitus, joka kesti kaksikymmentäyksi vuotta] Venetsialaiset rakensivat Koulesin linnoituksen Heraklionin sataman suulle 1500-luvulla puolustamaan kaupunkia ottomaaneja vastaan. Se osoittautui tarpeelliseksi: kun ottomaanit hyökkäsivät Kreetalle 1645, Heraklionin piiritys venyi lopulta kaksikymmentäyksi vuotta pitkäksi — pisimmäksi piiritykseksi tunnetussa historiassa. Kaupunki antautui vasta 1669, kun molemmat osapuolet olivat menettäneet kymmeniätuhansia sotilaita. Koulesin paksut muurit ja sen edustalle kaiverretut Pyhän Markuksen leijonat ovat tallella yhä, ja linnoitus on nykyään Heraklionin tunnetuin maamerkki satamassa.
+- [Suakin — kaupunkilehti / Suakin: Khediivi Ismailin satama] Ottomaanit hallitsivat Suakinia vuodesta 1555 lähtien, mutta kaupunki oli 1800-luvun alussa raunioitunut niin pahoin, että sveitsiläinen matkustaja Johann Ludwig Burckhardt kuvasi kahden kolmasosan taloista olevan asumiskelvottomia. Vuonna 1865 Egyptin khediivi Ismail sai kaupungin tiukempaan hallintaansa ja käynnisti sen elvytyksen: uusia taloja, myllyjä, moskeijoita ja sairaaloita rakennettiin. Isoisän matkavuonna 1873 Suakin oli siis osa Ismailin nykyaikaistuvaa Egyptiä, samaa valtakuntaa, joka oli neljä vuotta aiemmin avannut Suezin kanavan ja laajentanut valtaansa syvälle Sudaniin.
+
+### 1.1
+KYSYMYS: Missä joet kohtaavat linnoituksen juurella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Sademetsä ja joet] Santarémin ympärillä sademetsä, joet ja valkoiset hiekkarannat kietoutuvat yhteen: lähellä uivat vaaleanpunaiset jokidelfiinit ja tulvametsän vesi kätkee sekä perhosia että muinaisia asuinjälkiä.
+
+### 1.2
+KYSYMYS: Kuinka kauan ottomaanit hallitsivat linnoitusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belgradin linnoitus (Kalemegdan) (historia)
+Tietoruudun teksti: Belgradin linnoitus eli Kalemegdan kohoaa 125,5 metriä korkealla harjanteella, jonka juurella Sava yhtyy Tonaviin. Alue on noin 66 hehtaarin laajuinen, ja siihen kuuluu Suuri ja Pieni Kalemegdanin puisto. Ottomaanit valloittivat linnoituksen vuonna 1521, ja se pysyi heidän hallinnassaan vuoteen 1867. Vuonna 1979 se sai Serbiassa erityisen tärkeän kulttuurimonumentin aseman. Nykyään linnoituksen alue on kaupunkilaisten suosima puisto.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Historia: Linnoitus, joka kesti kaksikymmentäyksi vuotta] Venetsialaiset rakensivat Koulesin linnoituksen Heraklionin sataman suulle 1500-luvulla puolustamaan kaupunkia ottomaaneja vastaan. Se osoittautui tarpeelliseksi: kun ottomaanit hyökkäsivät Kreetalle 1645, Heraklionin piiritys venyi lopulta kaksikymmentäyksi vuotta pitkäksi — pisimmäksi piiritykseksi tunnetussa historiassa. Kaupunki antautui vasta 1669, kun molemmat osapuolet olivat menettäneet kymmeniätuhansia sotilaita. Koulesin paksut muurit ja sen edustalle kaiverretut Pyhän Markuksen leijonat ovat tallella yhä, ja linnoitus on nykyään Heraklionin tunnetuin maamerkki satamassa.
+- [Suakin — kaupunkilehti / Suakin: Khediivi Ismailin satama] Ottomaanit hallitsivat Suakinia vuodesta 1555 lähtien, mutta kaupunki oli 1800-luvun alussa raunioitunut niin pahoin, että sveitsiläinen matkustaja Johann Ludwig Burckhardt kuvasi kahden kolmasosan taloista olevan asumiskelvottomia. Vuonna 1865 Egyptin khediivi Ismail sai kaupungin tiukempaan hallintaansa ja käynnisti sen elvytyksen: uusia taloja, myllyjä, moskeijoita ja sairaaloita rakennettiin. Isoisän matkavuonna 1873 Suakin oli siis osa Ismailin nykyaikaistuvaa Egyptiä, samaa valtakuntaa, joka oli neljä vuotta aiemmin avannut Suezin kanavan ja laajentanut valtaansa syvälle Sudaniin.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:studenican-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+- [Saudi-Arabia — maalehti / Meri: Kiveä, jossa on reikiä] Farasanin saaret eivät ole hiekkasärkkiä vaan kiveä, ja se kivi on syntynyt vanhasta korallista. Riutta kasvoi aikoinaan meren pinnan tasalle, ja sitten maa kohosi hitaasti ylös niin että riutta jäi kuivalle. Kalkkikivessä näkyy yhä korallien reikäinen rakenne, ja kivelle on ikävä astua paljain jaloin. Rantavesi on matalaa pitkälle ulos, ja siellä, missä pohja on suojassa aalloilta, kasvaa mangrovea: matalaa metsää suolavedessä.
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 2.1
+KYSYMYS: Millaista kiveä luostarin julkisivuissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Meri: Kiveä, jossa on reikiä] Farasanin saaret eivät ole hiekkasärkkiä vaan kiveä, ja se kivi on syntynyt vanhasta korallista. Riutta kasvoi aikoinaan meren pinnan tasalle, ja sitten maa kohosi hitaasti ylös niin että riutta jäi kuivalle. Kalkkikivessä näkyy yhä korallien reikäinen rakenne, ja kivelle on ikävä astua paljain jaloin. Rantavesi on matalaa pitkälle ulos, ja siellä, missä pohja on suojassa aalloilta, kasvaa mangrovea: matalaa metsää suolavedessä.
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 2.2
+KYSYMYS: Kuka perusti Studenican luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Studenican luostari (kulttuuri)
+Tietoruudun teksti: Studenican luostari sijaitsee Keski-Serbiassa Kraljevon lähellä, ja Stefan Nemanja perusti sen 1100-luvun lopulla; ensimmäinen rakennusvaihe valmistui kevääksi 1196. Pääkirkko, Neitsyt Marian temppeli, on kupolillinen yksilaivainen basilika, jonka julkisivut ovat valkoista marmoria, ja tyylissä yhdistyvät romaaninen ja bysanttilainen rakennustaide. Seinillä on bysanttilaisia freskoja vuosilta 1208–1209, muun muassa tunnettu ristiinnaulitsemiskuva. Luostarin perustaja Nemanja on haudattu sinne. Studenica on ollut Unescon maailmanperintökohde vuodesta 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:djavolja-varos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Luxor: Moskeija seisoo temppelin pylväiden päällä] Luxorin temppelistä se osa, joka on Ramses II:n pihaa, muutettiin vuonna 395 kirkoksi ja vuonna 640 moskeijaksi. Nykyinen rakennus on 1200-luvulta ajjubidisulttaani as-Salih Ayyubin ajalta, ja se seisoo suoraan muinaisten pylväiden päällä: temppelin päälle oli kertynyt keskiajalta lähtien asutusta ja sen jätettä niin paljon, että syntyi 14,5–15 metriä korkea keinotekoinen kukkula. Gaston Maspero alkoi kaivaa sitä pois vuoden 1884 jälkeen, mutta moskeijaa ei purettu. Kupolin alla on sheikki Yusuf Abu al-Haggagin (1150–1245) hauta, ja savitiilisiä minareetteja on kaksi. Moulid-juhlassa suvun jäsenet kantavat veneitä temppelin ympäri kolmen päivän ajan.
+- [Ahaggar — kaupunkilehti / Ahaggar: Kalliokaiverrukset kertovat vihreästä Saharasta] Ahaggarin kallioihin on kaiverrettu tuhansia vuosia vanhoja kuvia ja kuvioita, jotka todistavat alueen olleen joskus aivan toisenlainen kuin nykyinen kuiva aavikko. Vanhimmat kaiverrukset ajoittuvat noin 6000 vuoden taakse ajalle, jolloin Sahara oli vihreä ja sinne mahtui järviä, jokia ja laiduntavia karjalaumoja. Tikemtinen kaltaisilla kaiverruspaikoilla Atakorin alueella kivipintoihin on piirretty sekä eläinhahmoja että abstrakteja spiraali- ja verkkokuvioita, joiden tarkkaa merkitystä ei enää tunneta. Kaiverrukset ovat säilyneet, koska Saharan kuivuus on suojellut niitä vuosituhansien ajan sateen ja kasvillisuuden aiheuttamalta kulumiselta.
+
+### 3.1
+KYSYMYS: Mikä suojaa pylväitä kulumiselta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ahaggar — kaupunkilehti / Ahaggar: Kalliokaiverrukset kertovat vihreästä Saharasta] Ahaggarin kallioihin on kaiverrettu tuhansia vuosia vanhoja kuvia ja kuvioita, jotka todistavat alueen olleen joskus aivan toisenlainen kuin nykyinen kuiva aavikko. Vanhimmat kaiverrukset ajoittuvat noin 6000 vuoden taakse ajalle, jolloin Sahara oli vihreä ja sinne mahtui järviä, jokia ja laiduntavia karjalaumoja. Tikemtinen kaltaisilla kaiverruspaikoilla Atakorin alueella kivipintoihin on piirretty sekä eläinhahmoja että abstrakteja spiraali- ja verkkokuvioita, joiden tarkkaa merkitystä ei enää tunneta. Kaiverrukset ovat säilyneet, koska Saharan kuivuus on suojellut niitä vuosituhansien ajan sateen ja kasvillisuuden aiheuttamalta kulumiselta.
+
+### 3.2
+KYSYMYS: Mihin kansantarina selittää pylväiden synnyn?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Đavolja varoš (Pirunkaupunki) (luonto · vuori)
+Tietoruudun teksti: Đavolja varoš eli Pirunkaupunki sijaitsee Radan-vuorella Kuršumlijan kunnassa Toplican piirikunnassa, noin 700 metrin korkeudessa. Alueella on noin 202 maapylvästä, jotka ovat 2–15 metriä korkeita ja tyveltä 4–6 metriä leveitä. Ne ovat syntyneet tulivuoritoiminnan leimaamalla alueella eroosion kuluttaessa maaperää, ja useimpien pylväiden päällä on andesiittinen kansi, joka suojaa niitä kulumiselta. Nimeen liittyvän kansantarinan mukaan häävieraat muuttuivat kiveksi. Alueella on kaksi kivennäisrikasta lähdettä, ja valtio on suojellut kohdetta vuodesta 1959.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kaupunkilehti / Luxor: Moskeija seisoo temppelin pylväiden päällä] Luxorin temppelistä se osa, joka on Ramses II:n pihaa, muutettiin vuonna 395 kirkoksi ja vuonna 640 moskeijaksi. Nykyinen rakennus on 1200-luvulta ajjubidisulttaani as-Salih Ayyubin ajalta, ja se seisoo suoraan muinaisten pylväiden päällä: temppelin päälle oli kertynyt keskiajalta lähtien asutusta ja sen jätettä niin paljon, että syntyi 14,5–15 metriä korkea keinotekoinen kukkula. Gaston Maspero alkoi kaivaa sitä pois vuoden 1884 jälkeen, mutta moskeijaa ei purettu. Kupolin alla on sheikki Yusuf Abu al-Haggagin (1150–1245) hauta, ja savitiilisiä minareetteja on kaksi. Moulid-juhlassa suvun jäsenet kantavat veneitä temppelin ympäri kolmen päivän ajan.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:golubacin-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Dar Si Said] 1900 Dar Si Said rakennettiin 1894–1900 aivan Bahian palatsin pohjoispuolelle. Rakennuttaja Si Sa'id ibn Musa oli veljensä Ba Ahmadin sotaministeri, ja koristeaiheet ovat samat kuin veljen palatsissa — mutta talo on rakennettu useaan kerrokseen ja sen pohja on aivan toisenlainen. Ylimmässä kerroksessa on suuri vastaanottosali, ja pihalla riad-puutarha, jonka keskellä seisoo maalatusta puusta tehty paviljonki. Protektoraatin aikana vuoden 1914 jälkeen talo toimi Marrakechin aluejohdon toimipaikkana, ja noin 1930 siitä tehtiin marokkolaisen taiteen ja puutyön museo. Vuonna 1957, itsenäistymisen jälkeen, rakennus jaettiin museon ja käsityöviraston kesken. Kunnostuksen jälkeen museo avattiin 20…
+- [Kuwait — kaupunkilehti / Arki: Hai kulkee katsojan yläpuolelta] Salmiyan rannalla oleva Tieteen keskus avattiin vuonna 2000. Tontti on 80 000 neliömetriä ja rakennus 18 000, ja talossa on kolme osaa: akvaario, tiedenäyttely ja IMAX-teatteri. Akvaariossa elää yli sata eläinlajia, ja suuren kaarevan ikkunan takaa hait näkyvät alhaaltapäin. Ulkona on satama, jossa seisoo vanhoja puulaivoja. Niistä tunnetuin on Fateh Al-Khayr, 226 tonnin boum, joka rakennettiin Kuwaitissa 1938 ja myytiin 1952 iranilaiselle kapteenille. Merihistorioitsija Yacoub al-Hijji löysi sen 1994, ja kahden vuoden kunnostuksen jälkeen se on ainoa jäljellä oleva kuwaitilainen purjelaiva öljyä edeltävältä ajalta.
+
+### 4.1
+KYSYMYS: Kuinka monta tornia Golubacin linnoituksessa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+### 4.2
+KYSYMYS: Milloin linnoitus avattiin kunnostuksen jälkeen yleisölle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Golubacin linnoitus (historia)
+Tietoruudun teksti: Golubacin linnoitus kohoaa Serbian puolella Tonavan rannalla noin neljä kilometriä alavirtaan Golubacin kaupungista, Rautaportin rotkon suulla. Kivilinnoitus rakennettiin 1300-luvulla, ja se jakautuu kolmeen vaiheittain rakennettuun osaan, joissa on kaikkiaan kymmenen tornia. Linnaa hallitsivat vuorotellen eri vallat: vuosina 1403–1427 se oli serbien despootti Stefan Lazarevićin hallussa. Vuosina 2014–2019 toteutettiin mittava kunnostus, ja linnoitus avattiin kokonaan yleisölle huhtikuussa 2019.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Dar Si Said] 1900 Dar Si Said rakennettiin 1894–1900 aivan Bahian palatsin pohjoispuolelle. Rakennuttaja Si Sa'id ibn Musa oli veljensä Ba Ahmadin sotaministeri, ja koristeaiheet ovat samat kuin veljen palatsissa — mutta talo on rakennettu useaan kerrokseen ja sen pohja on aivan toisenlainen. Ylimmässä kerroksessa on suuri vastaanottosali, ja pihalla riad-puutarha, jonka keskellä seisoo maalatusta puusta tehty paviljonki. Protektoraatin aikana vuoden 1914 jälkeen talo toimi Marrakechin aluejohdon toimipaikkana, ja noin 1930 siitä tehtiin marokkolaisen taiteen ja puutyön museo. Vuonna 1957, itsenäistymisen jälkeen, rakennus jaettiin museon ja käsityöviraston kesken. Kunnostuksen jälkeen museo avattiin 20…
+- [Kuwait — kaupunkilehti / Arki: Hai kulkee katsojan yläpuolelta] Salmiyan rannalla oleva Tieteen keskus avattiin vuonna 2000. Tontti on 80 000 neliömetriä ja rakennus 18 000, ja talossa on kolme osaa: akvaario, tiedenäyttely ja IMAX-teatteri. Akvaariossa elää yli sata eläinlajia, ja suuren kaarevan ikkunan takaa hait näkyvät alhaaltapäin. Ulkona on satama, jossa seisoo vanhoja puulaivoja. Niistä tunnetuin on Fateh Al-Khayr, 226 tonnin boum, joka rakennettiin Kuwaitissa 1938 ja myytiin 1952 iranilaiselle kapteenille. Merihistorioitsija Yacoub al-Hijji löysi sen 1994, ja kahden vuoden kunnostuksen jälkeen se on ainoa jäljellä oleva kuwaitilainen purjelaiva öljyä edeltävältä ajalta.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:gamzigrad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+### 5.1
+KYSYMYS: Kuka rakennutti Felix Romulianan ja miksi se sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+### 5.2
+KYSYMYS: Mitä Magura-kukkulalla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gamzigrad (historia)
+Tietoruudun teksti: Gamzigrad eli Felix Romuliana on myöhäisantiikin palatsikompleksi Zaječarin lähellä Serbiassa. Keisari Galerius aloitti sen rakennuttamisen vuonna 298 voitettuaan Sassanidien valtakunnan, ja paikka nimettiin hänen äitinsä Romulan mukaan. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja porteista on löytynyt Dionysosta ja Medusaa esittäviä mosaiikkeja. Läheisellä Magura-kukkulalla on kaksi mausoleumia, joihin Romula ja Galerius haudattiin. Alue hylättiin 600-luvun alussa slaavien saapuessa; kaivaukset alkoivat 1953, ja Unescon maailmanperintökohde se on vuodesta 2007.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

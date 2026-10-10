@@ -1,0 +1,178 @@
+================ KOHTA 6 (kohde:petrovaradinin-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+- [Sansibar — kaupunkilehti / Sansibar: Vuosi 1873 ja joulukuun peruskivi] Malindin satama Sansibarin kaupungissa oli Swahilirannikon pääsatama Lähi-idän orjakaupalle, ja 1800-luvun puolivälissä sen kautta kulki jopa viisikymmentätuhatta ihmistä vuodessa. Ratkaisu tuli vasta 1873: konsuli Sir John Kirk uhkasi sulttaani Barghashia koko saaren saarrolla, ja Barghash allekirjoitti vastentahtoisesti sopimuksen, joka lakkautti orjakaupan, sulki kaikki orjatorit ja suojeli vapautettuja sulttaanin alueilla. Saman vuoden jouluna laskettiin suurimman orjatorin paikalle anglikaanisen kirkon peruskivi. Kirkko avattiin jouluna 1879, ja alttarin sanotaan olevan täsmälleen siinä, missä torin ruoskimispaalu oli.
+
+### 6.1
+KYSYMYS: Milloin linnoituksen peruskivi laskettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kaupunkilehti / Sansibar: Vuosi 1873 ja joulukuun peruskivi] Malindin satama Sansibarin kaupungissa oli Swahilirannikon pääsatama Lähi-idän orjakaupalle, ja 1800-luvun puolivälissä sen kautta kulki jopa viisikymmentätuhatta ihmistä vuodessa. Ratkaisu tuli vasta 1873: konsuli Sir John Kirk uhkasi sulttaani Barghashia koko saaren saarrolla, ja Barghash allekirjoitti vastentahtoisesti sopimuksen, joka lakkautti orjakaupan, sulki kaikki orjatorit ja suojeli vapautettuja sulttaanin alueilla. Saman vuoden jouluna laskettiin suurimman orjatorin paikalle anglikaanisen kirkon peruskivi. Kirkko avattiin jouluna 1879, ja alttarin sanotaan olevan täsmälleen siinä, missä torin ruoskimispaalu oli.
+
+### 6.2
+KYSYMYS: Miksi kellotornin viisarit ovat päinvastoin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Petrovaradinin linnoitus (historia)
+Tietoruudun teksti: Petrovaradinin linnoitus kohoaa Tonavan oikealla rannalla Novi Sadin Petrovaradinin kaupunginosassa. Sen peruskivi laskettiin 18. lokakuuta 1692, pääasialliset rakennustyöt tehtiin vuosina 1753–1776 ja linnoitus valmistui 1780. Alla on säilynyt yli 16 kilometriä maanalaisia käytäviä, ja nelikerroksinen vastamiinajärjestelmä valmistui 1776. Kellotornin viisarit ovat päinvastoin: pieni viisari näyttää minuutit ja suuri tunnit, jotta Tonavan kalastajat näkisivät ajan kauas. Nykyään linnoitus on suojeltu kulttuuriperintökohde, ja siellä järjestetään kesäisin Exit-musiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kello, joka käy väärinpäin] 1692–1780 — Kun Habsburgit valtasivat Petrovaradinin osmaneilta, keisari Leopold I käski 1692 rakentaa vanhan linnoituksen tilalle täysin uuden. Työmaa venyi 88 vuoteen ja viiden hallitsijan ajalle, ja suunnittelun uskotaan nojanneen ranskalaisen Vaubanin tähtimalliin. Tuloksena oli niin vahva pesäke, että sitä alettiin kutsua Tonavan Gibraltariksi. Linnoituksen kellotornissa iso viisari näyttää tunnit ja pieni minuutit, päinvastoin kuin tavallisesti – näin kaukaa joelta tulevat laivurit erottivat kellonajan helpommin. Lämpötilaherkkä koneisto käy kesällä edellä ja talvella jäljessä, minkä vuoksi paikalliset kutsuvat sitä Humalaiseksi kelloksi.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:sarganin-kahdeksikko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie: Rata raivattiin käsin sademetsän läpi] Radan rakentaminen tarkoitti kilometri kilometriltä etenevää raivausta: ensin kaadettiin puut, sitten kaivettiin ratapenger lapioin, ja lopuksi kiskot ja pölkyt asetettiin paikoilleen. Kuumuus, kosteus ja hyttyspilvet tekivät työstä hidasta ja vaarallista, ja moni urakoitsija joutui vaihtamaan työvoimansa useita kertoja sairastumisten vuoksi. Kumin maailmanmarkkinahinta oli tuolloin niin korkea, että hanke kannatti yrittää uudestaan, vaikka aiemmat yritykset olivat epäonnistuneet. Rata valmistui juuri ajoissa: kumin hinta romahti pian, kun Kaakkois-Aasian viljelmät valtasivat markkinat, eikä siitä tullut niin kannattava kuin toivottiin.
+- [Kenia — maalehti / Historia: Rata, jota parlamentti sanoi hulluudeksi] 1896–1901 — Joulukuussa 1890 Lontoon ulkoministeriö ehdotti valtiovarainhallinnolle rautatietä Mombasasta Ugandaan, jotta orjakuljetukset sisämaasta rannikolle katkeaisivat. Työ alkoi Mombasasta 1896 ja päättyi Kisumuun Viktorianjärven rannalle 1901. Rata sai nimensä määränpäänsä mukaan, vaikka kaikki 1 060 kilometriä olivat nykyisen Kenian puolella. Intiasta tuotiin 200 000 kiskonpätkää ja 1,2 miljoonaa ratapölkkyä, ja Karachista värvättiin yli 30 000 työmiestä, enimmäkseen Punjabista ja Gujaratista. Britannian parlamentissa hanketta sanottiin jättimäiseksi hulluudeksi, ja pilkkanimi Lunatic Line jäi elämään.
+
+### 7.1
+KYSYMYS: Minkä muotoinen rata on ja miksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Velho — kaupunkilehti / Perkeleen rautatie: Rata raivattiin käsin sademetsän läpi] Radan rakentaminen tarkoitti kilometri kilometriltä etenevää raivausta: ensin kaadettiin puut, sitten kaivettiin ratapenger lapioin, ja lopuksi kiskot ja pölkyt asetettiin paikoilleen. Kuumuus, kosteus ja hyttyspilvet tekivät työstä hidasta ja vaarallista, ja moni urakoitsija joutui vaihtamaan työvoimansa useita kertoja sairastumisten vuoksi. Kumin maailmanmarkkinahinta oli tuolloin niin korkea, että hanke kannatti yrittää uudestaan, vaikka aiemmat yritykset olivat epäonnistuneet. Rata valmistui juuri ajoissa: kumin hinta romahti pian, kun Kaakkois-Aasian viljelmät valtasivat markkinat, eikä siitä tullut niin kannattava kuin toivottiin.
+- [Kenia — maalehti / Historia: Rata, jota parlamentti sanoi hulluudeksi] 1896–1901 — Joulukuussa 1890 Lontoon ulkoministeriö ehdotti valtiovarainhallinnolle rautatietä Mombasasta Ugandaan, jotta orjakuljetukset sisämaasta rannikolle katkeaisivat. Työ alkoi Mombasasta 1896 ja päättyi Kisumuun Viktorianjärven rannalle 1901. Rata sai nimensä määränpäänsä mukaan, vaikka kaikki 1 060 kilometriä olivat nykyisen Kenian puolella. Intiasta tuotiin 200 000 kiskonpätkää ja 1,2 miljoonaa ratapölkkyä, ja Karachista värvättiin yli 30 000 työmiestä, enimmäkseen Punjabista ja Gujaratista. Britannian parlamentissa hanketta sanottiin jättimäiseksi hulluudeksi, ja pilkkanimi Lunatic Line jäi elämään.
+
+### 7.2
+KYSYMYS: Kuinka leveä raide on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Šarganin kahdeksikko (tekniikka)
+Tietoruudun teksti: Šarganin kahdeksikko on kapearaiteinen museorautatie, joka kulkee Mokra Goran kylästä Šargan Vitasin asemalle. Rakennustyöt alkoivat ensimmäisen maailmansodan aikana ja jatkuivat 1. maaliskuuta 1921; ensimmäinen juna saapui Vardišteen 25. tammikuuta 1925. Raideleveys on 760 millimetriä, pääreitin pituus 15,44 kilometriä, ja matkalla on 22 tunnelia ja viisi suurta siltaa. Rata kiertyy kahdeksikon muotoon ja voittaa 300 metrin korkeuseron, mikä näkyy parhaiten Krstin asemalta. Museorata avattiin uudelleen 1. syyskuuta 2003.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Historia: Yksi manner, monta parlamenttia ja kolme raideleveyttä] 1873 — Isoisän matkan aikaan Australia on nimi, jonka alla on kuusi erillistä siirtokuntaa: New South Wales, Victoria, Queensland, Etelä-Australia, Länsi-Australia ja Tasmania, kukin omine parlamentteineen ja lakeineen. Rautateistä ei päästy yksimielisyyteen. New South Wales vaihtoi raideleveyttä kesken suunnittelun, Victoria rakensi jo valitsemallaan leveällä raiteella ja Queensland otti 1865 käyttöön kapean. Ongelma näkyi vasta kun radat kohtasivat: Melbournen ja Sydneyn linjat yhtyivät Alburyssa 1883, ja siitä eteenpäin matkustajat vaihtoivat junaa rajalla. Yhtenäinen normaaliraide valmistui 1995.
+- [Luxor — kaupunkilehti / Arki ja kulkeminen: Kaksi rataverkkoa, sama raideleveys] Luxorin ympärillä on kaksi erillistä kapearaiteista rataverkkoa. Suurempi on länsirannalla Kurnassa ja pienempi itärannalla kaupungin eteläisillä laitamilla, ja molemmissa raideleveys on kaksi jalkaa eli 610 millimetriä. Valtion pääradan kiskoväli on 1 435 millimetriä. Radat on rakennettu yhtä kuormaa varten: niillä ajetaan sokeriruokoa pelloilta tehtaille. Moni luxorilainen työskentelee maataloudessa, ja seudun tärkein viljelykasvi on juuri se. Valtion rata saapui Luxoriin vuonna 1898, kun linjaa oli jatkettu Qenasta etelään.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:manasijan-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Manasijan luostari (kulttuuri)
+Tietoruudun teksti: Manasijan luostari sijaitsee Despotovacin lähellä Serbiassa. Despootti Stefan Lazarević rakennutti sen vuosina 1406–1418, ja kirkko vihittiin käyttöön helluntaina 1418. Luostaria ympäröi vahva muuri, jossa on 11 tornia; suurin niistä on kirkon pohjoispuolella oleva despootin torni. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes on säilynyt: ottomaanien aikana poistettu lyijykatto päästi veden seinille. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Grand Café 1895 — miten seinä voi liikkua?] 28.12.1895 — Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja si…
+- [Caracas — kohdekartta / Kohdekartta: Ensimmäisten kirjainten talo] 1790-luku Talo on kahden vierekkäisen asuintalon, numeroiden 29 ja 31, yhteensulautuma: asukkaiden lapset menivät keskenään naimisiin, ja seinä avattiin. Simón Rodríguez sai opettajanpätevyytensä 1791 ja alkoi pitää talossa koulua. Tilat olivat ahtaat ja varat vähissä — vuonna 1793 Rodríguezin luokassa oli 114 oppilasta, ja poissaolot olivat vaikea ongelma. Yksi noista oppilaista oli Simón Bolívar. Koulu oli ensimmäinen monista, joita Rodríguez yritti pyörittää omien periaatteidensa mukaan: lapsen pitää saada kysellä, koulun pitää opettaa myös työtaitoja, opetuksen pitää olla kaikille yhteistä ja kasvattaa yhteisöllisiä eikä itsekkäitä arvoja. Samaa hän yritti myöhemmin Bogotássa ja Chuquis…
+
+### 8.1
+KYSYMYS: Kuka rakennutti Manasijan luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Manasijan luostari (kulttuuri)
+Tietoruudun teksti: Manasijan luostari sijaitsee Despotovacin lähellä Serbiassa. Despootti Stefan Lazarević rakennutti sen vuosina 1406–1418, ja kirkko vihittiin käyttöön helluntaina 1418. Luostaria ympäröi vahva muuri, jossa on 11 tornia; suurin niistä on kirkon pohjoispuolella oleva despootin torni. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes on säilynyt: ottomaanien aikana poistettu lyijykatto päästi veden seinille. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979.
+
+### 8.2
+KYSYMYS: Kuinka paljon seinämaalauksista on säilynyt?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Manasijan luostari (kulttuuri)
+Tietoruudun teksti: Manasijan luostari sijaitsee Despotovacin lähellä Serbiassa. Despootti Stefan Lazarević rakennutti sen vuosina 1406–1418, ja kirkko vihittiin käyttöön helluntaina 1418. Luostaria ympäröi vahva muuri, jossa on 11 tornia; suurin niistä on kirkon pohjoispuolella oleva despootin torni. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes on säilynyt: ottomaanien aikana poistettu lyijykatto päästi veden seinille. Kohde julistettiin poikkeuksellisen tärkeäksi kulttuurimonumentiksi 1979.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Grand Café 1895 — miten seinä voi liikkua?] 28.12.1895 — Miten seinä voi liikkua? Grand Cafén kellarisalissa Boulevard des Capucines'illa, Pariisissa, on 28. joulukuuta 1895, ja muutama kymmenen ihmistä on maksanut frangin nähdäkseen jotakin, jota mainoksessa kutsutaan Cinématographeksi. Valkokankaalla Lumièren tehtaan portti Lyonissa aukeaa, ja työläiset kävelevät ulos, naiset hameissaan, pyörä, koira. Kuva on 46 sekuntia pitkä. Kymmenen filmiä kestää yhteensä noin kaksikymmentä minuuttia, ja niiden joukossa on puutarhuri, joka kastelee itsensä letkulla — ensimmäinen elokuvavitsi. Auguste ja Louis Lumière ovat valokuvalevytehtailijoita Lyonista; heidän laitteensa, patentoitu helmikuussa 1895, sekä kuvaa, kopioi että heijastaa, ja si…
+- [Caracas — kohdekartta / Kohdekartta: Ensimmäisten kirjainten talo] 1790-luku Talo on kahden vierekkäisen asuintalon, numeroiden 29 ja 31, yhteensulautuma: asukkaiden lapset menivät keskenään naimisiin, ja seinä avattiin. Simón Rodríguez sai opettajanpätevyytensä 1791 ja alkoi pitää talossa koulua. Tilat olivat ahtaat ja varat vähissä — vuonna 1793 Rodríguezin luokassa oli 114 oppilasta, ja poissaolot olivat vaikea ongelma. Yksi noista oppilaista oli Simón Bolívar. Koulu oli ensimmäinen monista, joita Rodríguez yritti pyörittää omien periaatteidensa mukaan: lapsen pitää saada kysellä, koulun pitää opettaa myös työtaitoja, opetuksen pitää olla kaikille yhteistä ja kasvattaa yhteisöllisiä eikä itsekkäitä arvoja. Samaa hän yritti myöhemmin Bogotássa ja Chuquis…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-smederevon-linnoitus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smederevon linnoitus (historia)
+Tietoruudun teksti: Despootti Đurađ Branković rakennutti Smederevon linnoituksen Tonavan rannalle uudeksi pääkaupungikseen 1420-luvun lopulla; laajempi 25 tornin ulkomuuri valmistui vasta 1440-luvulla. Toisen maailmansodan aikana saksalaisten sinne varastoima ammus ja polttoaine räjähti 5.6.1941, tappaen tuhansia ja tuhoten suuren osan linnoituksesta. Muurit ja tornit seisovat yhä, osin sortuneina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Linnoitus, joka pelastui mutta ei pelastanut] 1456–1459 — Heinäkuussa 1456 sulttaani Mehmed II piiritti Nándorfehérvárin linnoitusta, nykyistä Belgradia. Serbian despootti Đurađ Branković, 79-vuotias, saattoi vain katsoa vierestä: hänen oma 9 000 miehen armeijansa oli murskattu lähistöllä jo kolme viikkoa aiemmin, 18. kesäkuuta. Piirityksen mursivat lopulta János Hunyadin joukot ja talonpoikaisristiretkeläiset 22. heinäkuuta. Branković kuoli joulukuussa samana vuonna omassa Smederevon linnassaan. Voitto jäi lyhytaikaiseksi: kolme vuotta myöhemmin, 1459, Smederevo itse – Serbian viimeinen pääkaupunki – antautui sulttaanille, ja maa katosi kartalta vuosisadoiksi.
+
+### 9.1
+KYSYMYS: Miltä Smederevon linnoitus näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smederevon linnoitus (historia)
+Tietoruudun teksti: Despootti Đurađ Branković rakennutti Smederevon linnoituksen Tonavan rannalle uudeksi pääkaupungikseen 1420-luvun lopulla; laajempi 25 tornin ulkomuuri valmistui vasta 1440-luvulla. Toisen maailmansodan aikana saksalaisten sinne varastoima ammus ja polttoaine räjähti 5.6.1941, tappaen tuhansia ja tuhoten suuren osan linnoituksesta. Muurit ja tornit seisovat yhä, osin sortuneina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Linnoitus, joka pelastui mutta ei pelastanut] 1456–1459 — Heinäkuussa 1456 sulttaani Mehmed II piiritti Nándorfehérvárin linnoitusta, nykyistä Belgradia. Serbian despootti Đurađ Branković, 79-vuotias, saattoi vain katsoa vierestä: hänen oma 9 000 miehen armeijansa oli murskattu lähistöllä jo kolme viikkoa aiemmin, 18. kesäkuuta. Piirityksen mursivat lopulta János Hunyadin joukot ja talonpoikaisristiretkeläiset 22. heinäkuuta. Branković kuoli joulukuussa samana vuonna omassa Smederevon linnassaan. Voitto jäi lyhytaikaiseksi: kolme vuotta myöhemmin, 1459, Smederevo itse – Serbian viimeinen pääkaupunki – antautui sulttaanille, ja maa katosi kartalta vuosisadoiksi.
+
+### 9.2
+KYSYMYS: Miksi Smederevon linnoitus on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smederevon linnoitus (historia)
+Tietoruudun teksti: Despootti Đurađ Branković rakennutti Smederevon linnoituksen Tonavan rannalle uudeksi pääkaupungikseen 1420-luvun lopulla; laajempi 25 tornin ulkomuuri valmistui vasta 1440-luvulla. Toisen maailmansodan aikana saksalaisten sinne varastoima ammus ja polttoaine räjähti 5.6.1941, tappaen tuhansia ja tuhoten suuren osan linnoituksesta. Muurit ja tornit seisovat yhä, osin sortuneina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Linnoitus, joka pelastui mutta ei pelastanut] 1456–1459 — Heinäkuussa 1456 sulttaani Mehmed II piiritti Nándorfehérvárin linnoitusta, nykyistä Belgradia. Serbian despootti Đurađ Branković, 79-vuotias, saattoi vain katsoa vierestä: hänen oma 9 000 miehen armeijansa oli murskattu lähistöllä jo kolme viikkoa aiemmin, 18. kesäkuuta. Piirityksen mursivat lopulta János Hunyadin joukot ja talonpoikaisristiretkeläiset 22. heinäkuuta. Branković kuoli joulukuussa samana vuonna omassa Smederevon linnassaan. Voitto jäi lyhytaikaiseksi: kolme vuotta myöhemmin, 1459, Smederevo itse – Serbian viimeinen pääkaupunki – antautui sulttaanille, ja maa katosi kartalta vuosisadoiksi.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
