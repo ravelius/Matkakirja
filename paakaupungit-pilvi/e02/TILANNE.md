@@ -6,7 +6,7 @@ Alku: 2026-10-10T21:59:24Z. Agenttien kulutus: kirjataan kahden ensimmäisen kau
 |---|---|---|---|---|---|---|---|
 | bern | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 4, EPÄVARMA 12) | | | |
 | vaduz | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 9, EPÄVARMA 8) | ✓ | ✓ 0 virhettä, 1 varoitus | 5 kohdetta, lähteissä vain 5 koordinaatilla |
-| monaco | ✓ | ✓ | ✓ | | | | |
+| monaco | ✓ | ✓ | ✓ | ✓ (VÄÄRIN 10, EPÄVARMA 20) | | | |
 | andorralavella | ✓ | ✓ | | | | | |
 | sanmarino | ✓ | | | | | | |
 | reykjavik | ✓ | | | | | | |
