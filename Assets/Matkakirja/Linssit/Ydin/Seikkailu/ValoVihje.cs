@@ -36,6 +36,9 @@ namespace Matkakirja.Linssit.Seikkailu
             aika = 0; alku = Kirkkaus; laskuAlku = -1;
         }
 
+        /// <summary>Vihje pois heti (uuden vihjeen kipinä lentää, Pelikoodari 11.10. A4); seuraava Aloita nousee nollasta.</summary>
+        public void Lopeta() { Taso = 0; Kirkkaus = 0; laskuAlku = -1; }
+
         /// <summary>Kehys: pelaajan etäisyys kohteeseen (m). Palauttaa, onko vihje yhä näkyvissä.</summary>
         public bool Paivita(double dt, double pelaajaKohteeseenM)
         {

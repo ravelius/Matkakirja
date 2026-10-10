@@ -18,6 +18,7 @@ namespace Matkakirja.Natiivi
         readonly LaituriVihje laituri = new LaituriVihje();
         readonly ValoVihje valo = new ValoVihje();
         Light kimallus;
+        SeikkailuVihjeKipina kipina;
         /// <summary>Kimalluksen perusvoimakkuus ja kantama (ValoVihje.Kirkkaus 1 = liekin hehku, SeikkailuValot.Hehku).</summary>
         const float KimallusVoima = 1.6f, KimallusKantama = 2.2f, KimallusNosto = 0.35f;
         Action<string> kirjaa;
@@ -72,6 +73,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kimalluksen valo seuraa ValoVihjeen kirkkautta; pelaajan etäisyys kohteeseen sammuttaa tason 3 sykkeen.</summary>
         void Kimallus(SeikkailuPelaaja p)
         {
+            // Lennossa (A4): pistevalo kulkee kipinän mukana ja valaisee seiniä matkalla; perillä ValoVihjeen kirkkaus kuten ennen.
+            if (kipina != null && kimallus != null) { kimallus.transform.position = kipina.Paikka; if (!valo.Kaynnissa) { kimallus.intensity = KimallusVoima * 0.6f; return; } }
             if (!valo.Kaynnissa && (kimallus == null || kimallus.intensity <= 0f)) return;
             var q = valo.Kohde; var pp = p.transform.position;
             float etaisyys = new Vector2(pp.x - (float)q.X, pp.z + (float)q.Z).magnitude;   // Kohde glTF-kehyksessä (z etelä)
@@ -149,12 +152,26 @@ namespace Matkakirja.Natiivi
             if (kohde == null) { kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}): ei kohdetta"); return; }
             var q = kohde.Value; var d = SeikkailuKavely.Data;
             var savy = ValoVihje.SavyOsassa(d != null ? Askelaani.Osa(d, q.x, q.y, -q.z) : null, q.y);
-            valo.Aloita(taso, (q.x, q.y, -q.z), savy);
             var (r, g, b) = ValoVihje.Vari(savy); var vari = new Color((float)r, (float)g, (float)b);
             if (kimallus == null) kimallus = SeikkailuValot.Hehku(transform, Vector3.zero, vari, 0f, KimallusKantama, true, DioraamaNayttamo.Kerros);
             if (kimallus != null) { kimallus.transform.position = q + Vector3.up * KimallusNosto; kimallus.color = vari; kimallus.intensity = 0f; }
-            SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", q + Vector3.up * KimallusNosto, taso == 1 ? 0.25f : 0.35f);   // oma hento ääni (Pelikoodari), vara löytöääni
-            kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}) → {q} ({savy})");
+            // A4 (Laitetestaaja TF 180 a6: vihje ei näkynyt ruudulla): valokipinä katseen edestä kohteeseen (myös näkymän ulkopuolelle;
+            // taso 1 lentää vain silloin), perillä vihjeen valo ja selvä suunnallinen ääni kohteesta. Ei tekstiä eikä hahmoa (omistaja 8.10.).
+            var piste = q + Vector3.up * KimallusNosto;
+            bool lenna = VihjeLento.Lentaa(taso, SeikkailuVihjeKipina.Nakyvissa(piste));
+            var alku = (lenna ? SeikkailuVihjeKipina.Lahto() : null) ?? piste;
+            if (kipina != null) Destroy(kipina.gameObject);
+            kipina = SeikkailuVihjeKipina.Lenna(transform, alku, piste, vari, lenna, DioraamaNayttamo.Kerros);
+            kipina.Voima = () => valo.Kaynnissa ? (float)(valo.Kirkkaus / ValoVihje.Huippu[valo.Taso]) : 0f;
+            int t = taso; var sv = savy;
+            if (lenna)
+            {
+                valo.Lopeta();   // edellinen valo pois lennon ajaksi; uusi alkaa perillä
+                SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", alku, 0.3f);   // lähtö katseen edestä
+                kipina.Perilla += () => { valo.Aloita(t, (q.x, q.y, -q.z), sv); SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", piste, t == 1 ? 0.45f : 0.6f); };
+            }
+            else { valo.Aloita(t, (q.x, q.y, -q.z), sv); SeikkailuAanet.SoitaTaiVara("vihje-kimallus", "hopea-kilahdus", piste, t == 1 ? 0.45f : 0.6f); }
+            kirjaa?.Invoke($"seikkailu: vihje {taso} ({syy}) → {q} ({savy}{(lenna ? ", kipinä lentää" : "")})");
         }
 
         /// <summary>Vihjeen kohde (pelattavuusmalli 5, huoneet 2–5): kappelissa käsikirjoituksen järjestys, muualla seuraava ovi tai heitettävä.</summary>
