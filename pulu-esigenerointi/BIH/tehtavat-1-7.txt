@@ -50,7 +50,7 @@ PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
 - [NCL — maalehti / Kuvataide: Veistetty vartija kulttuurikeskuksessa] nykyään — Jean-Marie Tjibaoun kulttuurikeskuksen näyttelyissä ja ulkoalueilla seisoo useita puuveistoksia, joita kutsutaan usein toteemeiksi, vaikka termi ei ole täysin osuva kanakikulttuurille: veistokset ovat pikemminkin esi-isien tai suojelevien henkien kuvia kuin klaanitunnuksia länsimaisessa mielessä. Nykykanakiveistäjät jatkavat perinnettä yhdistäen perinteisiä aiheita — kasvoja, käsiä, eläinhahmoja — uusiin materiaaleihin ja mittakaavoihin. Keskus toimii sekä museona että työpajana, jossa nuoret taiteilijat oppivat veistämistä vanhemmilta mestareilta, ja monet keskuksessa esillä olevista teoksista on tehty juuri tätä tarkoitusta varten.
 
 ### 32.1
-KYSYMYS: Kenelle Bihaćin pormestari Lothar von Berks rakennutti linnan uudelleen 1900-luvun alussa?
+KYSYMYS: Kenelle Bihaćin piirin johtaja Lothar von Berks rakennutti linnan uudelleen 1900-luvun alussa?
 KONTEKSTI:
 Lauta: Maailmankartta
 Näkymä: kartta
