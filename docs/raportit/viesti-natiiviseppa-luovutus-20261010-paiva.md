@@ -5,6 +5,19 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## PÄIVITYS 12.4x (ennen nollausta)
+- **Mac TF 176 VALID** (38040911547, sisäinen ryhmä): mac-kaanna.sh 86ef3b3e6 1.1 176 (BUNDLE_ID fi.matkakirja.peli, APPSTORE=1), 1. lataus kaatui
+  altool 90276/90334 (Steam Audion phonon.bundle/audioplugin_phonon.bundle ilman CFBundleIdentifieria) → .app korjattu PlistBuddylla, uusinta VALID.
+  Pysyvä korjaus junassa 176: **c7db5ba3e** Rakennus.MacOS → MacPlugariTunnisteet. Mac-minimit: kaikki ≤ LSMinimumSystemVersion 12.0, paitsi oma
+  MatkakirjaMacSyote.bundle minos 13.0 (sama kuin hyväksytyssä 172:ssa; korjaa jos Apple valittaa). → Kohta 1 alla (Mac TF 176) on TEHTY.
+- **JUNA 176 (build 177) runko = 51e42e7a6**: a2c246164 + NUI heksavarit da28d281f, fonttikoot-cs 1ed61ecec, kehittaja-pallot c74736f7c; Pelikoodari
+  kartta-vain-kaupunki d6a8e0139 + 80ab967fa; LS1 maa-dtm-175-u67 29be895b8 (korvaa 08baea921); Mac-korjaus c7db5ba3e. L1301/P453/K454, unity 0, tarkista ok.
+  Lisää muistia: KYLLÄ (DTM + pilvet + vesiväri) → muistiajo ennen lukitusta. **Lukitus ODOTTAA omistajan TF 176 -palautteen 6.7-regressiokorjauksia
+  (PT 12.2x, NUI johtaa)**: latauskuvan liike + Poistu-nappi, pelin alun lennon kohteet irti pallosta, Ateenan saapumispaperin yläreuna,
+  kehittäjänäkymän kaupunkivalinta kartalta. Auta NUI:ta kamera/syöte-osissa (oma 6.7-tuonti 931920957 muutti vain GetInstanceID → GetHashCode ja
+  diagnostiikan projektiomatriisin; EnhancedTouch-suojaus 68f860e85 tyhjä vain ilman PalloKiertoa). Museohaarojen mergen jälkeen: pohjavahti.py --kirjaa (NUI).
+- Museo: patsaat (101 tdstoa) ja teokset (5344) ämpärissä (Julkaisija 11.43). MuseoVeistokset yhä kytkemättä; iPad-muistiajo museossa tekemättä.
+
 ## ENSIMMÄISEKSI (PT 11.3x)
 1. **Mac TF 176** (PT: seuraavan session ensimmäinen tehtävä, ellei käynnistetty): kysy PT:ltä/Julkaisijalta tarkka muoto (buildinumerot:
    hylätty 175 → sisältö 86ef3b3e6 lähti numerolla 176 Julkaisijan PlistBuddy-korjauksella PR #4338; juna 176:n runko lähtee numerolla 177).
