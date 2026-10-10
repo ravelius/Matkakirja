@@ -171,7 +171,7 @@ Miten Tonavaa on käytetty kulkuväylänä?
 
 ### 5.4
 KYSYMYS: Mikä on barokki ja mistä sen tunnistaa rakennuksista?
-Ai tota. Barokki on rakennus- ja taidetyyli, joka syntyi Italiassa 1600-luvun alussa ja levisi laajasti Euroopassa 1600- ja 1700-luvuilla. Rakennuksissa sen tunnistaa kaarevista linjoista, runsaasta koristelusta, näyttävistä portaikoista ja julkisivuista sekä valon ja varjon vaihtelusta. Tyyli oli suosittu kirkoissa ja hovien palatseissa, ja se ilmaisi vallan ja uskon loistoa. Unkarissa monet kaupungit uusittiin barokkityyliin ottomaanien ajan jälkeen, esimerkiksi Győr. Runsaus sopii kyl pulliinkin.
+Ai tota. Barokki on rakennus- ja taidetyyli, joka syntyi Italiassa 1600-luvun alussa ja levisi laajasti Euroopassa 1600- ja 1700-luvuilla. Rakennuksissa sen tunnistaa kaarevista linjoista, runsaasta koristelusta, näyttävistä portaikoista ja julkisivuista sekä valon ja varjon vaihtelusta. Tyyli oli suosittu kirkoissa ja hovien palatseissa, ja se ilmaisi vallan ja uskon loistoa. Unkarissa monet kaupungit uusittiin barokkityyliin [[ottomaanien]] ajan jälkeen, esimerkiksi [[Győr]]. Runsaus sopii kyl pulliinkin.
 JATKOT:
 Miten barokki eroaa renessanssista rakennustaiteessa?
 Mikä on rokokoo ja miten se liittyy barokkiin?

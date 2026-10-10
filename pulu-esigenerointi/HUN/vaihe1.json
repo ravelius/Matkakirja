@@ -352,8 +352,11 @@
   "kohde": "kohde:gyor",
   "kysymys": "Mikä on barokki ja mistä sen tunnistaa rakennuksista?",
   "uusi": true,
-  "vastaus": "Ai tota. Barokki on rakennus- ja taidetyyli, joka syntyi Italiassa 1600-luvun alussa ja levisi laajasti Euroopassa 1600- ja 1700-luvuilla. Rakennuksissa sen tunnistaa kaarevista linjoista, runsaasta koristelusta, näyttävistä portaikoista ja julkisivuista sekä valon ja varjon vaihtelusta. Tyyli oli suosittu kirkoissa ja hovien palatseissa, ja se ilmaisi vallan ja uskon loistoa. Unkarissa monet kaupungit uusittiin barokkityyliin ottomaanien ajan jälkeen, esimerkiksi Győr. Runsaus sopii kyl pulliinkin.",
-  "linkit": [],
+  "vastaus": "Ai tota. Barokki on rakennus- ja taidetyyli, joka syntyi Italiassa 1600-luvun alussa ja levisi laajasti Euroopassa 1600- ja 1700-luvuilla. Rakennuksissa sen tunnistaa kaarevista linjoista, runsaasta koristelusta, näyttävistä portaikoista ja julkisivuista sekä valon ja varjon vaihtelusta. Tyyli oli suosittu kirkoissa ja hovien palatseissa, ja se ilmaisi vallan ja uskon loistoa. Unkarissa monet kaupungit uusittiin barokkityyliin [[ottomaanien]] ajan jälkeen, esimerkiksi [[Győr]]. Runsaus sopii kyl pulliinkin.",
+  "linkit": [
+   "ottomaanien",
+   "Győr"
+  ],
   "jatkot": [
    "Miten barokki eroaa renessanssista rakennustaiteessa?",
    "Mikä on rokokoo ja miten se liittyy barokkiin?"
@@ -666,9 +669,10 @@
   "kohde": "kohde:tisza",
   "kysymys": "Miksi jokea haluttiin oikaista?",
   "uusi": false,
-  "vastaus": "Ai tota. Ennen 1800-lukua [[Tisza]] mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Tulvat haittasivat viljelyä ja asumista, joten jokea haluttiin säännöstellä. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt, joissa yli sata mutkaa katkaistiin oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla maisema muuttui paljon. Tässä oli aika paljon työtä, enkä ole nähnyt kuin lopputuloksen.",
+  "vastaus": "Ai tota. Ennen 1800-lukua [[Tisza]] mutkitteli niin loivasti, että [[kevättulvat]] levittivät veden kymmenien kilometrien levyisiksi soiksi. Tulvat haittasivat viljelyä ja asumista, joten jokea haluttiin säännöstellä. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt, joissa yli sata mutkaa katkaistiin oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla maisema muuttui paljon. Tässä oli aika paljon työtä, enkä ole nähnyt kuin lopputuloksen.",
   "linkit": [
-   "Tisza"
+   "Tisza",
+   "kevättulvat"
   ],
   "jatkot": [
    "Mitä tapahtui soiden luonnolle?",
@@ -1149,8 +1153,9 @@
   "kohde": "kohde:aggtelek",
   "kysymys": "Mitä eroa on stalaktiitilla ja stalagmiitilla?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Stalaktiitti roikkuu luolan katosta alaspäin, ja se kasvaa, kun kalkkipitoinen vesi valuu sitä pitkin ja jättää kalkkia pisaran päähän. Stalagmiitti taas kasvaa lattialta ylöspäin siihen kohtaan, johon pisarat putoavat. Stalagmiitti on yleensä paksumpi ja tylpempi, stalaktiitti ohuempi ja usein terävä. Kun ne kasvavat yhteen, syntyy [[tippukivipatsas]]. Muistisääntönä toimii, että stalaktiitti on kiinni katossa ja stalagmiitti nousee maasta. Hyvä muistisääntö, sanon minä.",
+  "vastaus": "Hetkinen ny. Stalaktiitti roikkuu luolan katosta alaspäin, ja se kasvaa, kun [[kalkkipitoinen vesi]] valuu sitä pitkin ja jättää kalkkia pisaran päähän. Stalagmiitti taas kasvaa lattialta ylöspäin siihen kohtaan, johon pisarat putoavat. Stalagmiitti on yleensä paksumpi ja tylpempi, stalaktiitti ohuempi ja usein terävä. Kun ne kasvavat yhteen, syntyy [[tippukivipatsas]]. Muistisääntönä toimii, että stalaktiitti on kiinni katossa ja stalagmiitti nousee maasta. Hyvä muistisääntö, sanon minä.",
   "linkit": [
+   "kalkkipitoinen vesi",
    "tippukivipatsas"
   ],
   "jatkot": [
@@ -1176,8 +1181,9 @@
   "kohde": "kohde:holloko",
   "kysymys": "Keitä palócit ovat?",
   "uusi": false,
-  "vastaus": "Ai tota, hyvä kysymys. Palócit ovat unkarilaisten kansanryhmä, joka asuu Pohjois-Unkarissa ja jota luonnehtivat oma murre sekä vahva kansanperinne. Heidät tunnetaan kansanpuvuistaan, käsitöistään ja omista tavoistaan, ja heidän kulttuurinsa on säilynyt vahvana esimerkiksi [[Hollókőn]] kaltaisissa kylissä. Alkuperästä on esitetty useita teorioita, enkä ole varma, mikä niistä on vakiintunein. Heistä puhuttaessa ei pidä yleistää, sillä paikalliset tavat vaihtelevat kylästä toiseen. Ylhäältä katsottuna ne kukkulat ovat kyllä kauniita.",
+  "vastaus": "Ai tota, hyvä kysymys. Palócit ovat unkarilaisten kansanryhmä, joka asuu [[Pohjois-Unkarissa]] ja jota luonnehtivat oma murre sekä vahva kansanperinne. Heidät tunnetaan kansanpuvuistaan, käsitöistään ja omista tavoistaan, ja heidän kulttuurinsa on säilynyt vahvana esimerkiksi [[Hollókőn]] kaltaisissa kylissä. Alkuperästä on esitetty useita teorioita, enkä ole varma, mikä niistä on vakiintunein. Heistä puhuttaessa ei pidä yleistää, sillä paikalliset tavat vaihtelevat kylästä toiseen. Ylhäältä katsottuna ne kukkulat ovat kyllä kauniita.",
   "linkit": [
+   "Pohjois-Unkarissa",
    "Hollókőn"
   ],
   "jatkot": [
@@ -1219,8 +1225,9 @@
   "kohde": "kohde:holloko",
   "kysymys": "Millainen rakennus on savitalo?",
   "uusi": true,
-  "vastaus": "Tuota niin, katsotaas. Savitalo on rakennus, jonka seinät on tehty savesta, yleensä sekoitettuna olkeen tai muuhun kuituun, ja kuivatettu ilmassa. Paksut savisetinät pitävät sisälämpötilan tasaisempana kuin kevyet seinät, ja materiaali on edullista ja paikallista. Hollókőn taloissa seinät on kalkittu valkoisiksi, ja kalkkikerros suojaa savipintaa ja pitää talon vaaleana. Katto on perinteisesti tehty [[olkikatoksi]], ja parveke on puinen. Rakennustapa on vanha ja levinnyt monelle alueelle Euroopassa. Siinä talossa olisi mukava istua sateella.",
+  "vastaus": "Tuota niin, katsotaas. Savitalo on rakennus, jonka seinät on tehty savesta, yleensä sekoitettuna olkeen tai muuhun kuituun, ja kuivatettu ilmassa. Paksut savisetinät pitävät sisälämpötilan tasaisempana kuin kevyet seinät, ja materiaali on edullista ja paikallista. [[Hollókőn]] taloissa seinät on kalkittu valkoisiksi, ja kalkkikerros suojaa savipintaa ja pitää talon vaaleana. Katto on perinteisesti tehty [[olkikatoksi]], ja parveke on puinen. Rakennustapa on vanha ja levinnyt monelle alueelle Euroopassa. Siinä talossa olisi mukava istua sateella.",
   "linkit": [
+   "Hollókőn",
    "olkikatoksi"
   ],
   "jatkot": [
@@ -1261,9 +1268,10 @@
   "kohde": "kohde:hahmotelma-budan-matyas-palatsi",
   "kysymys": "Miksi Budan Mátyás-palatsi katosi?",
   "uusi": false,
-  "vastaus": "Mmm— tämä on raskas aihe. Palatsi tuhoutui vuoden 1686 piirityksessä, kun kristittyjen valtojen joukot valtasivat Budan takaisin [[ottomaanien]] vallasta ja raskas tykistö vaurioitti linnaa pahoin. Rauniot purettiin vuonna 1715, ja paikalle rakennettiin myöhemmin uusi palatsi. Tapahtuma oli aikansa sodankäyntiä, jossa kaupunkeja ja linnoja valloitettiin piirittämällä, ja kaupunki kuului tuolloin vielä eri valtapiiriin kuin nykyisin. Siitä on onneksi jo yli kolmesataa vuotta.",
+  "vastaus": "Mmm— tämä on raskas aihe. Palatsi tuhoutui vuoden 1686 piirityksessä, kun kristittyjen valtojen joukot valtasivat Budan takaisin [[ottomaanien]] vallasta ja raskas [[tykistö]] vaurioitti linnaa pahoin. Rauniot purettiin vuonna 1715, ja paikalle rakennettiin myöhemmin uusi palatsi. Tapahtuma oli aikansa sodankäyntiä, jossa kaupunkeja ja linnoja valloitettiin piirittämällä, ja kaupunki kuului tuolloin vielä eri valtapiiriin kuin nykyisin. Siitä on onneksi jo yli kolmesataa vuotta.",
   "linkit": [
-   "ottomaanien"
+   "ottomaanien",
+   "tykistö"
   ],
   "jatkot": [
    "Mitä Buda oli ennen vuotta 1686?",
@@ -1333,9 +1341,10 @@
   "kohde": "kohde:hahmotelma-heviz",
   "kysymys": "Kuinka usein Hévízin järven vesi vaihtuu kokonaan?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Hévízin järven vesi vaihtuu kokonaan noin kolmen ja puolen vuorokauden välein. Syynä on voimakas virtaus: vesi nousee kahdesta [[lähteestä]] 38 metrin syvyisessä luolassa, ja päälähde antaa noin 90 prosenttia vedestä. Päälähteen vesi on 41-asteista, ja järven lämpötila on kesällä 33–35 ja talvella 22 astetta. Tämän ansiosta järvi pysyy puhtaana ja lämpimänä ympäri vuoden, ja talvella pinnalle voi nousta sumua. Ihan hyvä kierto, ei jää vesi seisomaan.",
+  "vastaus": "Selvä juttu. Hévízin järven vesi vaihtuu kokonaan noin kolmen ja puolen vuorokauden välein. Syynä on voimakas virtaus: vesi nousee kahdesta [[lähteestä]] 38 metrin syvyisessä [[luolassa]], ja päälähde antaa noin 90 prosenttia vedestä. Päälähteen vesi on 41-asteista, ja järven lämpötila on kesällä 33–35 ja talvella 22 astetta. Tämän ansiosta järvi pysyy puhtaana ja lämpimänä ympäri vuoden, ja talvella pinnalle voi nousta sumua. Ihan hyvä kierto, ei jää vesi seisomaan.",
   "linkit": [
-   "lähteestä"
+   "lähteestä",
+   "luolassa"
   ],
   "jatkot": [
    "Miksi järvi ei jäädy talvella?",
@@ -1445,9 +1454,10 @@
   "kohde": "kohde:hahmotelma-velence",
   "kysymys": "Mikä on Székesfehérvár?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Székesfehérvár on kaupunki Unkarissa, [[Fejérin]] läänin keskus, ja se sijaitsee Budapestin länsipuolella Velencei-tón lähellä. Kaupunki on keskiajalla ollut tärkeä: siellä kruunattiin ja haudattiin Unkarin kuninkaita, joten sitä pidetään historiallisesti merkittävänä. Kaupunki on myös nykyään elävä alueellinen keskus. Tarkkoja asukas- ja vuosilukuja en ole varma, joten jätän ne pois. Kuninkaiden kaupunki, kuulostaa kyyhkyn mieleen.",
+  "vastaus": "Joo, tän minä tiedän. Székesfehérvár on kaupunki Unkarissa, [[Fejérin]] läänin keskus, ja se sijaitsee Budapestin länsipuolella [[Velencei-tón]] lähellä. Kaupunki on keskiajalla ollut tärkeä: siellä kruunattiin ja haudattiin Unkarin kuninkaita, joten sitä pidetään historiallisesti merkittävänä. Kaupunki on myös nykyään elävä alueellinen keskus. Tarkkoja asukas- ja vuosilukuja en ole varma, joten jätän ne pois. Kuninkaiden kaupunki, kuulostaa kyyhkyn mieleen.",
   "linkit": [
-   "Fejérin"
+   "Fejérin",
+   "Velencei-tón"
   ],
   "jatkot": [
    "Miksi kuninkaita kruunattiin juuri siellä?",
@@ -1759,9 +1769,10 @@
   "kohde": "kohde:hahmotelma-esztergom",
   "kysymys": "Mitä osmanit tekivät Esztergomin kirkolle vuonna 1543?",
   "uusi": false,
-  "vastaus": "Tuota niin. Vuonna 1543 osmanit valtasivat Esztergomin, purkivat kirkon kuorin ja käyttivät loppua [[moskeijana]]. Siitä on yli neljäsataa vuotta, ja tuolloin kaupunkien valtaukset ja rajojen siirtymiset olivat osa ajan sotia. Nykyisen katedraalin peruskivi laskettiin vasta vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Tuota niin. Vuonna 1543 osmanit valtasivat Esztergomin, purkivat kirkon kuorin ja käyttivät loppua [[moskeijana]]. Siitä on yli neljäsataa vuotta, ja tuolloin kaupunkien valtaukset ja rajojen siirtymiset olivat osa ajan sotia. Nykyisen [[katedraalin]] peruskivi laskettiin vasta vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856. Onpas siit onneksi pitkä aika.",
   "linkit": [
-   "moskeijana"
+   "moskeijana",
+   "katedraalin"
   ],
   "jatkot": [
    "Miten osmanien valtakausi vaikutti Unkariin?",
@@ -2026,12 +2037,15 @@
   "kohde": "kohde:hahmotelma-sopron",
   "kysymys": "Millä nimellä Soprónia kutsuttiin roomalaisaikana?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Roomalaisaikana paikalla oli kaupunki nimeltä [[Scarbantia]]. Sen [[foorumin]] paikalla on nykyään Soprónin pääaukio, joten kaupungin vanha ydin on pysynyt samalla seudulla. Sopron sijaitsee Itävallan rajalla lähellä Neusiedlinjärveä.\n\nSuku on vanhaa roomalaista, joten Scarbantia kuulostaa melkein sukulaiselta.JATKOT:\nMikä oli foorumi roomalaisessa kaupungissa?\nMitä muuta roomalaisajalta on jäljellä Unkarin alueella?",
+  "vastaus": "Joo, tän minä tiedän. Roomalaisaikana paikalla oli kaupunki nimeltä [[Scarbantia]]. Sen [[foorumin]] paikalla on nykyään Soprónin pääaukio, joten kaupungin vanha ydin on pysynyt samalla seudulla. Sopron sijaitsee Itävallan rajalla lähellä Neusiedlinjärveä.\n\nSuku on vanhaa roomalaista, joten Scarbantia kuulostaa melkein sukulaiselta.",
   "linkit": [
    "Scarbantia",
    "foorumin"
   ],
-  "jatkot": []
+  "jatkot": [
+   "Mikä oli foorumi roomalaisessa kaupungissa?",
+   "Mitä muuta roomalaisajalta on jäljellä Unkarin alueella?"
+  ]
  },
  {
   "kohde": "kohde:hahmotelma-sopron",
@@ -2138,8 +2152,9 @@
   "kohde": "kohde:hahmotelma-jak",
   "kysymys": "Missä päin Unkaria Ják sijaitsee?",
   "uusi": true,
-  "vastaus": "Ai tota. Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön kirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se tunnetaan veistoksistaan. Kylä kuuluu siis [[Vasin läänin]] alueeseen. Rajan yli lentäminen on kyl kyyhkyltä helppo temppu.",
+  "vastaus": "Ai tota. Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän [[Pyhän Yrjön]] kirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se tunnetaan veistoksistaan. Kylä kuuluu siis [[Vasin läänin]] alueeseen. Rajan yli lentäminen on kyl kyyhkyltä helppo temppu.",
   "linkit": [
+   "Pyhän Yrjön",
    "Vasin läänin"
   ],
   "jatkot": [
@@ -2936,9 +2951,10 @@
   "kohde": "kohde:hahmotelma-opusztaszer",
   "kysymys": "Missä päin Unkaria Ópusztaszer sijaitsee?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Ópusztaszer sijaitsee Unkarin eteläosassa Csongrádin läänissä Suurella Unkarin tasangolla, [[Szegedin]] kaupungin pohjoispuolella. Alue tunnetaan kansallisesta perintöpuistostaan, joka on Unkarin historian ulkoilmamuseo ja perustettiin vuonna 1982. Tunnetuin nähtävyys on Feszty-panoraama. Kartalta se löytyy kyl helpommin kuin ylhäältä, koska tasanko näyttää joka paikasta samalta.",
+  "vastaus": "Annas ku mietin. Ópusztaszer sijaitsee Unkarin eteläosassa Csongrádin läänissä Suurella Unkarin tasangolla, [[Szegedin]] kaupungin pohjoispuolella. Alue tunnetaan kansallisesta perintöpuistostaan, joka on Unkarin historian ulkoilmamuseo ja perustettiin vuonna 1982. Tunnetuin nähtävyys on [[Feszty-panoraama]]. Kartalta se löytyy kyl helpommin kuin ylhäältä, koska tasanko näyttää joka paikasta samalta.",
   "linkit": [
-   "Szegedin"
+   "Szegedin",
+   "Feszty-panoraama"
   ],
   "jatkot": [
    "Mikä on Szeged tunnettu?",
@@ -3091,8 +3107,9 @@
   "kohde": "kohde:hahmotelma-visegrad-palota",
   "kysymys": "Missä Visegrád sijaitsee suhteessa Budapestiin?",
   "uusi": true,
-  "vastaus": "Tost minä osaan kertoo. Visegrád sijaitsee Tonavan rannalla Budapestista pohjoiseen, noin neljäkymmentä kilometriä kaupungista. Se on pieni kaupunki, joka oli keskiajalla Unkarin kuningasten asuinpaikka. Kuninkaallinen palatsi seisoi joen rannalla, ja korkealla rinteellä on [[linnoitus]]. Matkaa Budapestista on lyhyt, joten kyyhkynä minä olen perillä ennen kuin ehdin kunnolla lähteä.",
+  "vastaus": "Tost minä osaan kertoo. Visegrád sijaitsee [[Tonavan]] rannalla Budapestista pohjoiseen, noin neljäkymmentä kilometriä kaupungista. Se on pieni kaupunki, joka oli keskiajalla Unkarin kuningasten asuinpaikka. Kuninkaallinen palatsi seisoi joen rannalla, ja korkealla rinteellä on [[linnoitus]]. Matkaa Budapestista on lyhyt, joten kyyhkynä minä olen perillä ennen kuin ehdin kunnolla lähteä.",
   "linkit": [
+   "Tonavan",
    "linnoitus"
   ],
   "jatkot": [

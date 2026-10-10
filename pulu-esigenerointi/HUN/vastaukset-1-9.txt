@@ -60,7 +60,7 @@ Miten suuri maalaus siirretään ja säilytetään museossa?
 
 ### 42.4
 KYSYMYS: Missä päin Unkaria Ópusztaszer sijaitsee?
-Annas ku mietin. Ópusztaszer sijaitsee Unkarin eteläosassa Csongrádin läänissä Suurella Unkarin tasangolla, [[Szegedin]] kaupungin pohjoispuolella. Alue tunnetaan kansallisesta perintöpuistostaan, joka on Unkarin historian ulkoilmamuseo ja perustettiin vuonna 1982. Tunnetuin nähtävyys on Feszty-panoraama. Kartalta se löytyy kyl helpommin kuin ylhäältä, koska tasanko näyttää joka paikasta samalta.
+Annas ku mietin. Ópusztaszer sijaitsee Unkarin eteläosassa Csongrádin läänissä Suurella Unkarin tasangolla, [[Szegedin]] kaupungin pohjoispuolella. Alue tunnetaan kansallisesta perintöpuistostaan, joka on Unkarin historian ulkoilmamuseo ja perustettiin vuonna 1982. Tunnetuin nähtävyys on [[Feszty-panoraama]]. Kartalta se löytyy kyl helpommin kuin ylhäältä, koska tasanko näyttää joka paikasta samalta.
 JATKOT:
 Mikä on Szeged tunnettu?
 Miten Tisza-joki virtaa Szegedin kautta?
@@ -134,7 +134,7 @@ Mihin Tonava laskee ja mistä se alkaa?
 
 ### 44.4
 KYSYMYS: Missä Visegrád sijaitsee suhteessa Budapestiin?
-Tost minä osaan kertoo. Visegrád sijaitsee Tonavan rannalla Budapestista pohjoiseen, noin neljäkymmentä kilometriä kaupungista. Se on pieni kaupunki, joka oli keskiajalla Unkarin kuningasten asuinpaikka. Kuninkaallinen palatsi seisoi joen rannalla, ja korkealla rinteellä on [[linnoitus]]. Matkaa Budapestista on lyhyt, joten kyyhkynä minä olen perillä ennen kuin ehdin kunnolla lähteä.
+Tost minä osaan kertoo. Visegrád sijaitsee [[Tonavan]] rannalla Budapestista pohjoiseen, noin neljäkymmentä kilometriä kaupungista. Se on pieni kaupunki, joka oli keskiajalla Unkarin kuningasten asuinpaikka. Kuninkaallinen palatsi seisoi joen rannalla, ja korkealla rinteellä on [[linnoitus]]. Matkaa Budapestista on lyhyt, joten kyyhkynä minä olen perillä ennen kuin ehdin kunnolla lähteä.
 JATKOT:
 Miksi Visegrád oli keskiajalla kuninkaiden asuinpaikka?
 Miten Budapestista pääsee Visegrádiin?

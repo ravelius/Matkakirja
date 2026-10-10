@@ -146,7 +146,7 @@ Mitä muuta Budapestin kauppahallissa myydään?
 
 ### 10.1
 KYSYMYS: Miksi jokea haluttiin oikaista?
-Ai tota. Ennen 1800-lukua [[Tisza]] mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Tulvat haittasivat viljelyä ja asumista, joten jokea haluttiin säännöstellä. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt, joissa yli sata mutkaa katkaistiin oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla maisema muuttui paljon. Tässä oli aika paljon työtä, enkä ole nähnyt kuin lopputuloksen.
+Ai tota. Ennen 1800-lukua [[Tisza]] mutkitteli niin loivasti, että [[kevättulvat]] levittivät veden kymmenien kilometrien levyisiksi soiksi. Tulvat haittasivat viljelyä ja asumista, joten jokea haluttiin säännöstellä. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt, joissa yli sata mutkaa katkaistiin oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla maisema muuttui paljon. Tässä oli aika paljon työtä, enkä ole nähnyt kuin lopputuloksen.
 JATKOT:
 Mitä tapahtui soiden luonnolle?
 Mitkä ovat tulvasuojelun keinot?
