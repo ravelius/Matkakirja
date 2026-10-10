@@ -1,0 +1,197 @@
+================ KOHTA 26 (kohde:hahmotelma-loch-lomond) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loch Lomond (luonto · järvi)
+Tietoruudun teksti: Loch Lomond on Skotlannin suurin järvi pinta-alaltaan ja sijaitsee Ylämaiden reunavyöhykkeellä, joka erottaa perinteisesti Skotlannin Ala- ja Ylämaat toisistaan. Järvi on noin 36 kilometriä pitkä ja yhdestä kahdeksaan kilometriä leveä, ja sen syvin kohta pohjoisosassa yltää lähes 190 metriin. Alueella on asuttu jo noin 5 000 vuotta, ja järvessä on useita keinotekoisia asumussaaria eli krannogeja; roomalaiset rakensivat lähistölle myös puolustuslinnoituksen 1. vuosisadalla. Järvi tunnetaan laajalti kansanlaulusta "The Bonnie Banks o' Loch Lomond", ja sen rannalla kohoava Ben Lomond on Skotlannin eteläisin Munro-huippu.
+
+### 26.1
+KYSYMYS: Mikä kansanlaulu on tehnyt Loch Lomondista tunnetun ympäri maailmaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loch Lomond (luonto · järvi)
+Tietoruudun teksti: Loch Lomond on Skotlannin suurin järvi pinta-alaltaan ja sijaitsee Ylämaiden reunavyöhykkeellä, joka erottaa perinteisesti Skotlannin Ala- ja Ylämaat toisistaan. Järvi on noin 36 kilometriä pitkä ja yhdestä kahdeksaan kilometriä leveä, ja sen syvin kohta pohjoisosassa yltää lähes 190 metriin. Alueella on asuttu jo noin 5 000 vuotta, ja järvessä on useita keinotekoisia asumussaaria eli krannogeja; roomalaiset rakensivat lähistölle myös puolustuslinnoituksen 1. vuosisadalla. Järvi tunnetaan laajalti kansanlaulusta "The Bonnie Banks o' Loch Lomond", ja sen rannalla kohoava Ben Lomond on Skotlannin eteläisin Munro-huippu.
+
+### 26.2
+KYSYMYS: Mitä krannogit ovat, ja kuinka kauan alueella on asuttu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loch Lomond (luonto · järvi)
+Tietoruudun teksti: Loch Lomond on Skotlannin suurin järvi pinta-alaltaan ja sijaitsee Ylämaiden reunavyöhykkeellä, joka erottaa perinteisesti Skotlannin Ala- ja Ylämaat toisistaan. Järvi on noin 36 kilometriä pitkä ja yhdestä kahdeksaan kilometriä leveä, ja sen syvin kohta pohjoisosassa yltää lähes 190 metriin. Alueella on asuttu jo noin 5 000 vuotta, ja järvessä on useita keinotekoisia asumussaaria eli krannogeja; roomalaiset rakensivat lähistölle myös puolustuslinnoituksen 1. vuosisadalla. Järvi tunnetaan laajalti kansanlaulusta "The Bonnie Banks o' Loch Lomond", ja sen rannalla kohoava Ben Lomond on Skotlannin eteläisin Munro-huippu.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-caernarfon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Caernarfonin linna (historia)
+Tietoruudun teksti: Caernarfonin linna on Pohjois-Walesissa Gwyneddissä sijaitseva keskiaikainen linnoitus, jonka Englannin kuningas Edvard I aloitti rakentaa kivestä vuonna 1283 aiemman multa- ja pihalinnan paikalle. Linna ja sen ympärille perustettu kaupunki toimivat Pohjois-Walesin hallinnollisena keskuksena, minkä vuoksi linnoitus rakennettiin poikkeuksellisen suureksi ja sen muurit muistuttavat tietoisesti Konstantinopolin muureja – lähistöllä sijaitsi myös roomalainen Segontiumin linnake. Rakentaminen ja kaupunginmuurit maksoivat 20 000–25 000 puntaa ja kestivät vuoteen 1330 asti, mutta osa sisätiloista jäi silti koskaan valmistumatta. Linna rapistui vuosisatojen saatossa, ja valtio aloitti sen korjaukset vasta 1800-luvulla; Walesin prinssin virallinen kruunajaistilaisuus, investituura, pidettiin linnassa ensimmäistä kertaa vasta vuonna 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kaupunkilehti / Alcatrazin saari: Isoisän vuonna: linnakkeesta tuli vankila] Armeijan insinöörit linnoittivat saarta 1853–1859 Zealous B. Towerin johdolla, ja sisällissodan alkaessa 1861 muureilla oli 85 tykkiä, vuoteen 1866 mennessä 105. Tykkejä ei koskaan laukaistu vihollista kohti, mutta kylmä vesi ja voimakkaat virtaukset tekivät saaresta hyvän vankilan: rikoksiin syyllistyneitä sotilaita pidettiin siellä jo 1859, ja 1868 saari nimettiin virallisesti armeijan pitkäaikaisvankilaksi. Vuosina 1870–1876 armeija yritti tasoittaa koko saaren, ja majuri George Mendell pani vangit ja muulit kaatamaan louhetta lahteen; nykyinen paraatikenttä on keskeneräisen työn jälki. Kesäkuun 5. päivänä 1873 saarelle tuotiin ensimmäinen alkuperäiskansan vanki, paiute Tom, ja vuoteen 1…
+
+### 27.1
+KYSYMYS: Kuka aloitti Caernarfonin linnan rakentamisen kivestä, ja minä vuonna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Caernarfonin linna (historia)
+Tietoruudun teksti: Caernarfonin linna on Pohjois-Walesissa Gwyneddissä sijaitseva keskiaikainen linnoitus, jonka Englannin kuningas Edvard I aloitti rakentaa kivestä vuonna 1283 aiemman multa- ja pihalinnan paikalle. Linna ja sen ympärille perustettu kaupunki toimivat Pohjois-Walesin hallinnollisena keskuksena, minkä vuoksi linnoitus rakennettiin poikkeuksellisen suureksi ja sen muurit muistuttavat tietoisesti Konstantinopolin muureja – lähistöllä sijaitsi myös roomalainen Segontiumin linnake. Rakentaminen ja kaupunginmuurit maksoivat 20 000–25 000 puntaa ja kestivät vuoteen 1330 asti, mutta osa sisätiloista jäi silti koskaan valmistumatta. Linna rapistui vuosisatojen saatossa, ja valtio aloitti sen korjaukset vasta 1800-luvulla; Walesin prinssin virallinen kruunajaistilaisuus, investituura, pidettiin linnassa ensimmäistä kertaa vasta vuonna 1911.
+
+### 27.2
+KYSYMYS: Mitä roomalaista linnaketta linna muistuttaa tietoisesti muureillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Caernarfonin linna (historia)
+Tietoruudun teksti: Caernarfonin linna on Pohjois-Walesissa Gwyneddissä sijaitseva keskiaikainen linnoitus, jonka Englannin kuningas Edvard I aloitti rakentaa kivestä vuonna 1283 aiemman multa- ja pihalinnan paikalle. Linna ja sen ympärille perustettu kaupunki toimivat Pohjois-Walesin hallinnollisena keskuksena, minkä vuoksi linnoitus rakennettiin poikkeuksellisen suureksi ja sen muurit muistuttavat tietoisesti Konstantinopolin muureja – lähistöllä sijaitsi myös roomalainen Segontiumin linnake. Rakentaminen ja kaupunginmuurit maksoivat 20 000–25 000 puntaa ja kestivät vuoteen 1330 asti, mutta osa sisätiloista jäi silti koskaan valmistumatta. Linna rapistui vuosisatojen saatossa, ja valtio aloitti sen korjaukset vasta 1800-luvulla; Walesin prinssin virallinen kruunajaistilaisuus, investituura, pidettiin linnassa ensimmäistä kertaa vasta vuonna 1911.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kaupunkilehti / Alcatrazin saari: Isoisän vuonna: linnakkeesta tuli vankila] Armeijan insinöörit linnoittivat saarta 1853–1859 Zealous B. Towerin johdolla, ja sisällissodan alkaessa 1861 muureilla oli 85 tykkiä, vuoteen 1866 mennessä 105. Tykkejä ei koskaan laukaistu vihollista kohti, mutta kylmä vesi ja voimakkaat virtaukset tekivät saaresta hyvän vankilan: rikoksiin syyllistyneitä sotilaita pidettiin siellä jo 1859, ja 1868 saari nimettiin virallisesti armeijan pitkäaikaisvankilaksi. Vuosina 1870–1876 armeija yritti tasoittaa koko saaren, ja majuri George Mendell pani vangit ja muulit kaatamaan louhetta lahteen; nykyinen paraatikenttä on keskeneräisen työn jälki. Kesäkuun 5. päivänä 1873 saarelle tuotiin ensimmäinen alkuperäiskansan vanki, paiute Tom, ja vuoteen 1…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-dover-strait) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Doverin liiduvuoret (meri)
+Tietoruudun teksti: Doverin liiduvuoret ovat Englannin kaakkoisrannikon liitukalliot, jotka kohoavat parhaimmillaan noin 110 metrin korkeuteen ja ulottuvat noin 13 kilometrin matkalle Doverin kaupungin molemmin puolin. Kalliot syntyivät liitukauden loppupuolella, kun mikroskooppisten levien kuorien jäänteet kerrostuivat meren pohjaan hitaasti, noin puoli millimetriä vuodessa, muodostaen lopulta satoja metrejä paksun liitukerroksen. Doverin salmi on kohta, jossa Britannia on lähimpänä Manner-Eurooppaa – vain noin 32 kilometrin päässä – ja selkeällä säällä kalliot näkyvät Ranskan rannikolle asti. Kalliot ovat toimineet luonnollisena puolustusmuurina vuosisatojen ajan, ja jo Julius Caesar mainitsi niiden vaikuttavan ulkonäön hyökätessään Britanniaan vuonna 55 eaa.
+
+### 28.1
+KYSYMYS: Kuinka korkeita Doverin liiduvuoret parhaimmillaan ovat, ja mistä ne ovat syntyneet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Doverin liiduvuoret (meri)
+Tietoruudun teksti: Doverin liiduvuoret ovat Englannin kaakkoisrannikon liitukalliot, jotka kohoavat parhaimmillaan noin 110 metrin korkeuteen ja ulottuvat noin 13 kilometrin matkalle Doverin kaupungin molemmin puolin. Kalliot syntyivät liitukauden loppupuolella, kun mikroskooppisten levien kuorien jäänteet kerrostuivat meren pohjaan hitaasti, noin puoli millimetriä vuodessa, muodostaen lopulta satoja metrejä paksun liitukerroksen. Doverin salmi on kohta, jossa Britannia on lähimpänä Manner-Eurooppaa – vain noin 32 kilometrin päässä – ja selkeällä säällä kalliot näkyvät Ranskan rannikolle asti. Kalliot ovat toimineet luonnollisena puolustusmuurina vuosisatojen ajan, ja jo Julius Caesar mainitsi niiden vaikuttavan ulkonäön hyökätessään Britanniaan vuonna 55 eaa.
+
+### 28.2
+KYSYMYS: Kuka mainitsi liiduvuoret jo antiikin aikana, ja milloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Doverin liiduvuoret (meri)
+Tietoruudun teksti: Doverin liiduvuoret ovat Englannin kaakkoisrannikon liitukalliot, jotka kohoavat parhaimmillaan noin 110 metrin korkeuteen ja ulottuvat noin 13 kilometrin matkalle Doverin kaupungin molemmin puolin. Kalliot syntyivät liitukauden loppupuolella, kun mikroskooppisten levien kuorien jäänteet kerrostuivat meren pohjaan hitaasti, noin puoli millimetriä vuodessa, muodostaen lopulta satoja metrejä paksun liitukerroksen. Doverin salmi on kohta, jossa Britannia on lähimpänä Manner-Eurooppaa – vain noin 32 kilometrin päässä – ja selkeällä säällä kalliot näkyvät Ranskan rannikolle asti. Kalliot ovat toimineet luonnollisena puolustusmuurina vuosisatojen ajan, ja jo Julius Caesar mainitsi niiden vaikuttavan ulkonäön hyökätessään Britanniaan vuonna 55 eaa.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-york-minster) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yorkin tuomiokirkko (historia)
+Tietoruudun teksti: Yorkin tuomiokirkko eli York Minster on Yorkin arkkipiispan istuinkirkko ja yksi Pohjois-Euroopan suurimmista goottilaisista katedraaleista. Ensimmäinen kirkko paikalla oli hätäisesti rakennettu puinen kappeli vuodelta 627, jossa kastettiin Northumbrian kuningas Edwin, ja Edwin aloitti pian tätä suuremman kivikirkon rakentamisen, joka valmistui 637. Nykyinen, valtaosin vuosina 1220–1472 rakennettu kirkko koostuu useista eri goottilaisista tyylivaiheista, ja se on säilyttänyt suurimman osan keskiaikaisista lasimaalauksistaan – itäikkuna on maailman laajin yhtenäinen keskiaikainen lasimaalaus. Pohjoisen poikkilaivan Viisi sisarta -ikkuna koostuu viidestä yli 16 metrin korkuisesta harmaasävyisestä lasi-ikkunasta ja on toinen kirkon tunnetuista nähtävyyksistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Linnoituksessa oli vain seitsemän vankia] 1789 — Bastilji oli keskiaikainen linnoitus, jota kuningas käytti vankilana. Kun väkijoukko valtasi sen 14. heinäkuuta 1789, sisällä oli seitsemän vankia — ei yhtään kuuluisaa. Merkitys ei ollutkaan vangeissa vaan siinä, mitä rakennus edusti: kuningas saattoi sulkea kenet tahansa sinne ilman oikeudenkäyntiä. Linnoitus purettiin heti, ja päivästä tuli Ranskan kansallispäivä, jota vietetään yhä joka vuosi.
+
+### 29.1
+KYSYMYS: Kenet kastettiin ensimmäisessä, vuonna 627 rakennetussa puukirkossa Yorkissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yorkin tuomiokirkko (historia)
+Tietoruudun teksti: Yorkin tuomiokirkko eli York Minster on Yorkin arkkipiispan istuinkirkko ja yksi Pohjois-Euroopan suurimmista goottilaisista katedraaleista. Ensimmäinen kirkko paikalla oli hätäisesti rakennettu puinen kappeli vuodelta 627, jossa kastettiin Northumbrian kuningas Edwin, ja Edwin aloitti pian tätä suuremman kivikirkon rakentamisen, joka valmistui 637. Nykyinen, valtaosin vuosina 1220–1472 rakennettu kirkko koostuu useista eri goottilaisista tyylivaiheista, ja se on säilyttänyt suurimman osan keskiaikaisista lasimaalauksistaan – itäikkuna on maailman laajin yhtenäinen keskiaikainen lasimaalaus. Pohjoisen poikkilaivan Viisi sisarta -ikkuna koostuu viidestä yli 16 metrin korkuisesta harmaasävyisestä lasi-ikkunasta ja on toinen kirkon tunnetuista nähtävyyksistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ranska — maalehti / Historia: Linnoituksessa oli vain seitsemän vankia] 1789 — Bastilji oli keskiaikainen linnoitus, jota kuningas käytti vankilana. Kun väkijoukko valtasi sen 14. heinäkuuta 1789, sisällä oli seitsemän vankia — ei yhtään kuuluisaa. Merkitys ei ollutkaan vangeissa vaan siinä, mitä rakennus edusti: kuningas saattoi sulkea kenet tahansa sinne ilman oikeudenkäyntiä. Linnoitus purettiin heti, ja päivästä tuli Ranskan kansallispäivä, jota vietetään yhä joka vuosi.
+
+### 29.2
+KYSYMYS: Mikä on itäikkunan erikoisuus maailman mittakaavassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Yorkin tuomiokirkko (historia)
+Tietoruudun teksti: Yorkin tuomiokirkko eli York Minster on Yorkin arkkipiispan istuinkirkko ja yksi Pohjois-Euroopan suurimmista goottilaisista katedraaleista. Ensimmäinen kirkko paikalla oli hätäisesti rakennettu puinen kappeli vuodelta 627, jossa kastettiin Northumbrian kuningas Edwin, ja Edwin aloitti pian tätä suuremman kivikirkon rakentamisen, joka valmistui 637. Nykyinen, valtaosin vuosina 1220–1472 rakennettu kirkko koostuu useista eri goottilaisista tyylivaiheista, ja se on säilyttänyt suurimman osan keskiaikaisista lasimaalauksistaan – itäikkuna on maailman laajin yhtenäinen keskiaikainen lasimaalaus. Pohjoisen poikkilaivan Viisi sisarta -ikkuna koostuu viidestä yli 16 metrin korkuisesta harmaasävyisestä lasi-ikkunasta ja on toinen kirkon tunnetuista nähtävyyksistä.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-edinburgh-castle) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edinburghin linna (historia)
+Tietoruudun teksti: Edinburghin linna seisoo Castle Rockilla, sammuneen tulivuoren kivisydämellä, jota on asutettu jo rautakaudelta lähtien; kuninkaallinen linna paikalla on ollut Malcolm III:n ajoista 1000-luvulta. Linna on toiminut vuosisatojen mittaan kuninkaallisena asuinpaikkana, asevarikkona, aarrekammiona, vankilana ja rahapajana, ja tutkimusten mukaan sitä on piiritetty 26 kertaa yli tuhatvuotisen historiansa aikana. Vanhin säilynyt rakennus on 1100-luvun alun Pyhän Margareetan kappeli, joka on samalla koko Edinburghin vanhin rakennus. Vuodesta 1861 lähtien linnasta on ammuttu joka päivä, sunnuntaita ja muutamaa juhlapäivää lukuun ottamatta, kello yhdeltä niin kutsuttu Yhden Aikaan -tykinlaukaus, joka alun perin auttoi Leithin sataman laivoja tarkistamaan kellonsa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+- [Iso-Britannia — maalehti / Kirjallisuus: Hän keksi sanat, joita ei ollut] William Shakespeare kirjoitti noin 38 näytelmää, ja kun sopivaa sanaa ei ollut, hän teki sen itse. Englannin kieleen jäi häneltä satoja ilmauksia — muun muassa sanat lonely, bedroom ja eyeball ovat ensi kertaa kirjattu hänen teksteistään. Globe-teatterissa halvin lippu maksoi pennin, ja sen ostaneet seisoivat avoimen katon alla näyttämön edessä; heitä kutsuttiin groundlingeiksi. Teatteri paloi 1613, kun näytelmän tykinlaukaus sytytti olkikaton. Nykyinen Globe on 1997 valmistunut jäljennös muutaman sadan metrin päässä alkuperäisestä.
+
+### 30.1
+KYSYMYS: Mikä on Edinburghin linnan ja koko kaupungin vanhin säilynyt rakennus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edinburghin linna (historia)
+Tietoruudun teksti: Edinburghin linna seisoo Castle Rockilla, sammuneen tulivuoren kivisydämellä, jota on asutettu jo rautakaudelta lähtien; kuninkaallinen linna paikalla on ollut Malcolm III:n ajoista 1000-luvulta. Linna on toiminut vuosisatojen mittaan kuninkaallisena asuinpaikkana, asevarikkona, aarrekammiona, vankilana ja rahapajana, ja tutkimusten mukaan sitä on piiritetty 26 kertaa yli tuhatvuotisen historiansa aikana. Vanhin säilynyt rakennus on 1100-luvun alun Pyhän Margareetan kappeli, joka on samalla koko Edinburghin vanhin rakennus. Vuodesta 1861 lähtien linnasta on ammuttu joka päivä, sunnuntaita ja muutamaa juhlapäivää lukuun ottamatta, kello yhdeltä niin kutsuttu Yhden Aikaan -tykinlaukaus, joka alun perin auttoi Leithin sataman laivoja tarkistamaan kellonsa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+
+### 30.2
+KYSYMYS: Mitä varten Yhden Aikaan -tykinlaukaus alun perin ammuttiin, ja mistä vuodesta lähtien?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Edinburghin linna (historia)
+Tietoruudun teksti: Edinburghin linna seisoo Castle Rockilla, sammuneen tulivuoren kivisydämellä, jota on asutettu jo rautakaudelta lähtien; kuninkaallinen linna paikalla on ollut Malcolm III:n ajoista 1000-luvulta. Linna on toiminut vuosisatojen mittaan kuninkaallisena asuinpaikkana, asevarikkona, aarrekammiona, vankilana ja rahapajana, ja tutkimusten mukaan sitä on piiritetty 26 kertaa yli tuhatvuotisen historiansa aikana. Vanhin säilynyt rakennus on 1100-luvun alun Pyhän Margareetan kappeli, joka on samalla koko Edinburghin vanhin rakennus. Vuodesta 1861 lähtien linnasta on ammuttu joka päivä, sunnuntaita ja muutamaa juhlapäivää lukuun ottamatta, kello yhdeltä niin kutsuttu Yhden Aikaan -tykinlaukaus, joka alun perin auttoi Leithin sataman laivoja tarkistamaan kellonsa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kirjallisuus: Hän keksi sanat, joita ei ollut] William Shakespeare kirjoitti noin 38 näytelmää, ja kun sopivaa sanaa ei ollut, hän teki sen itse. Englannin kieleen jäi häneltä satoja ilmauksia — muun muassa sanat lonely, bedroom ja eyeball ovat ensi kertaa kirjattu hänen teksteistään. Globe-teatterissa halvin lippu maksoi pennin, ja sen ostaneet seisoivat avoimen katon alla näyttämön edessä; heitä kutsuttiin groundlingeiksi. Teatteri paloi 1613, kun näytelmän tykinlaukaus sytytti olkikaton. Nykyinen Globe on 1997 valmistunut jäljennös muutaman sadan metrin päässä alkuperäisestä.
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

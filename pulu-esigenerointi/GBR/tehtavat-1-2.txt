@@ -1,0 +1,265 @@
+================ KOHTA 6 (kohde:thames) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thames (luonto · joki)
+Tietoruudun teksti: Thames virtaa Etelä-Englannin halki ja Lontoon läpi, ja sen pituus on 346 kilometriä. Se on Englannin pisin kokonaan maan sisällä virtaava joki ja koko Yhdistyneen kuningaskunnan toiseksi pisin Severnin jälkeen. Osalla matkaa jokea kutsutaan yhä vanhalla nimellä Isis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [Hobart — kohdekartta / Kohdekartta: Parlamenttitalo] 1840 Tasmanian parlamenttitaloa ei rakennettu parlamentille vaan tullille. John Lee Archer piirsi sen 1830 siirtomaa-ajan georgiaaniseen tyyliin. Tontti oli ollut ensin tori ja 1820-luvulla puutavarapiha, ja se varattiin 1832 tullitalolle, koska se oli lähellä Sullivans Coven laitureita — talo oli silloin nykyistä lähempänä vesirajaa. Hunajankeltainen hiekkakivi louhittiin 1832–1840 Queens Domainilta ja Salamanca Placelta, ja lohkareita varten rakennettiin pieni rautatie. Työ alkoi 5. tammikuuta 1835 enimmäkseen vankityönä, ja tullin väki muutti sisään 1. syyskuuta 1840. Vuonna 1825 perustettu lakiasäätävä neuvosto kokoontui aluksi vanhan kuvernöörintalon viereisessä huoneessa. Tullitalon t…
+
+### 6.1
+KYSYMYS: Miksi jokea kutsutaan paikoin Isisiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thames (luonto · joki)
+Tietoruudun teksti: Thames virtaa Etelä-Englannin halki ja Lontoon läpi, ja sen pituus on 346 kilometriä. Se on Englannin pisin kokonaan maan sisällä virtaava joki ja koko Yhdistyneen kuningaskunnan toiseksi pisin Severnin jälkeen. Osalla matkaa jokea kutsutaan yhä vanhalla nimellä Isis.
+
+### 6.2
+KYSYMYS: Mikä joki on Yhdistyneen kuningaskunnan pisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thames (luonto · joki)
+Tietoruudun teksti: Thames virtaa Etelä-Englannin halki ja Lontoon läpi, ja sen pituus on 346 kilometriä. Se on Englannin pisin kokonaan maan sisällä virtaava joki ja koko Yhdistyneen kuningaskunnan toiseksi pisin Severnin jälkeen. Osalla matkaa jokea kutsutaan yhä vanhalla nimellä Isis.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Kuninkaanpalatsi] 1815–1909 Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa vastaan vieraita ja järjestää suuret vastaanotot. Asunto se ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin palatsin mailla. Sen suuressa salissa keisari Kaarle V luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, mutta helmikuun 1731 tulipalo tuhosi palatsin lähes kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin pääsee tutustumaan. Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan toinen pääkaupunki. Kuningas Vilhelm I…
+- [Hobart — kohdekartta / Kohdekartta: Parlamenttitalo] 1840 Tasmanian parlamenttitaloa ei rakennettu parlamentille vaan tullille. John Lee Archer piirsi sen 1830 siirtomaa-ajan georgiaaniseen tyyliin. Tontti oli ollut ensin tori ja 1820-luvulla puutavarapiha, ja se varattiin 1832 tullitalolle, koska se oli lähellä Sullivans Coven laitureita — talo oli silloin nykyistä lähempänä vesirajaa. Hunajankeltainen hiekkakivi louhittiin 1832–1840 Queens Domainilta ja Salamanca Placelta, ja lohkareita varten rakennettiin pieni rautatie. Työ alkoi 5. tammikuuta 1835 enimmäkseen vankityönä, ja tullin väki muutti sisään 1. syyskuuta 1840. Vuonna 1825 perustettu lakiasäätävä neuvosto kokoontui aluksi vanhan kuvernöörintalon viereisessä huoneessa. Tullitalon t…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:stonehenge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oman — maalehti / Luonto: Altaat pysyvät täynnä ympäri vuoden] Wadi Bani Khalid on Hajar-vuoriston laakso, jonka pohjalla on altaita, jotka eivät kuivu edes kesällä. Se on Omanissa harvinaista: useimmissa laaksoissa vesi juoksee vain sateen jälkeen. Täällä vesi tulee lähteistä kallion sisältä, joten se ei ole sateen varassa. Altaiden ympärillä kasvaa taatelipalmuja, ja rinteillä on kyliä, joiden pellot kastellaan samasta vedestä kanavia pitkin. Laakson yläpäässä on Muqalin luola, jonne kavutaan kapeaa polkua; sisällä on pimeää ja viileää, ja katosta tippuu vettä.
+- [Espanja — maalehti / Historia: Vesijohto ilman laastia] 1. vuosisata — Segovian akvedukti nousee kaupungin halki kahdessa kaarikerroksessa 28 metrin korkeuteen, ja sen 20 000 graniittilohkoa on ladottu paikoilleen ILMAN LAASTIA: kivet pysyvät pystyssä pelkällä painolla ja tarkalla muodolla. Roomalaiset rakensivat sen ensimmäisellä vuosisadalla tuomaan vettä 17 kilometrin päästä vuorilta. Vettä se toi 1900-luvulle asti — eli lähes kaksituhatta vuotta. Suurin uhka ei ollut aika vaan autojen pakokaasu, joka alkoi syödä kiveä 1970-luvulla; nyt liikenne on ohjattu muualle.
+
+### 7.1
+KYSYMYS: Miten kivet pysyvät päällekkäin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oman — maalehti / Luonto: Altaat pysyvät täynnä ympäri vuoden] Wadi Bani Khalid on Hajar-vuoriston laakso, jonka pohjalla on altaita, jotka eivät kuivu edes kesällä. Se on Omanissa harvinaista: useimmissa laaksoissa vesi juoksee vain sateen jälkeen. Täällä vesi tulee lähteistä kallion sisältä, joten se ei ole sateen varassa. Altaiden ympärillä kasvaa taatelipalmuja, ja rinteillä on kyliä, joiden pellot kastellaan samasta vedestä kanavia pitkin. Laakson yläpäässä on Muqalin luola, jonne kavutaan kapeaa polkua; sisällä on pimeää ja viileää, ja katosta tippuu vettä.
+- [Espanja — maalehti / Historia: Vesijohto ilman laastia] 1. vuosisata — Segovian akvedukti nousee kaupungin halki kahdessa kaarikerroksessa 28 metrin korkeuteen, ja sen 20 000 graniittilohkoa on ladottu paikoilleen ILMAN LAASTIA: kivet pysyvät pystyssä pelkällä painolla ja tarkalla muodolla. Roomalaiset rakensivat sen ensimmäisellä vuosisadalla tuomaan vettä 17 kilometrin päästä vuorilta. Vettä se toi 1900-luvulle asti — eli lähes kaksituhatta vuotta. Suurin uhka ei ollut aika vaan autojen pakokaasu, joka alkoi syödä kiveä 1970-luvulla; nyt liikenne on ohjattu muualle.
+
+### 7.2
+KYSYMYS: Mihin suuntaan monumentti on suunnattu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+- [Samarkand — kohdekartta / Kohdekartta: Bibi-Khanymin moskeija] 1399–1404 Moskeija oli valmistuessaan yksi islamilaisen maailman suurimmista. Ulkomuurien rajaama alue on 167 metriä pitkä ja 109 metriä leveä, ja se on suunnattu koilliseen–lounaaseen rukoussuunnan mukaan. Sisäänkäynnin portaali on 35 metriä korkea, ja pihan vastakkaisella puolella kohoaa noin 40 metrin korkuinen kupoli. Kupolit rakennettiin kaksinkertaisina: sisäkupoli mitoitettiin salin mittasuhteiden mukaan ja ulkokupoli näkyvyyden mukaan, ja niiden väliin jäi tyhjä tila. Piha oli tarkoitettu kaupungin koko miespuoliselle väestölle yhtä aikaa. Timur antoi moskeijalle vaimonsa Saray Mulk Khanumin nimen, vaikka rakennuttaja oli tosiasiassa vaimo itse. Palatessaan sotaretkeltä vuonna 1404 …
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hadrianuksen-muuri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Historia: Kivet kiskottiin 250 kilometrin päästä] n. 2500 eaa. — Stonehengen suurimmat kivet painavat 25 tonnia, mutta hämmästyttävimpiä ovat pienemmät siniset kivet: ne louhittiin Walesin Preselivuorilta, noin 250 kilometrin päästä. Kukaan ei tiedä varmasti, miten ne siirrettiin — pyörää ei vielä ollut. Kehä on rakennettu niin, että keskikesän auringonnousu osuu täsmälleen sisäänkäynnin akselille, joten se toimii jättimäisenä kalenterina. Rakentamiseen meni yli tuhat vuotta ja monta sukupolvea: ne jotka aloittivat, eivät nähneet sitä valmiina.
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+
+### 8.1
+KYSYMYS: Mihin muurin kivet päätyivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Historia: Kivet kiskottiin 250 kilometrin päästä] n. 2500 eaa. — Stonehengen suurimmat kivet painavat 25 tonnia, mutta hämmästyttävimpiä ovat pienemmät siniset kivet: ne louhittiin Walesin Preselivuorilta, noin 250 kilometrin päästä. Kukaan ei tiedä varmasti, miten ne siirrettiin — pyörää ei vielä ollut. Kehä on rakennettu niin, että keskikesän auringonnousu osuu täsmälleen sisäänkäynnin akselille, joten se toimii jättimäisenä kalenterina. Rakentamiseen meni yli tuhat vuotta ja monta sukupolvea: ne jotka aloittivat, eivät nähneet sitä valmiina.
+
+### 8.2
+KYSYMYS: Onko muuri Skotlannin raja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+- [Edinburgh — kohdekartta / Kohdekartta: St Gilesin katedraali] 1385–1500 St Gilesin kirkko on seisonut Edinburghin Kuninkaankadun eli Royal Milen varrella jo satoja vuosia — nykyinen goottilainen kivikirkko rakennettiin pääosin 1300–1500-luvuilla. Tunnetuin piirre on kruunun muotoinen torni 1460-luvulta, jossa on poikkeuksellisesti kahdeksan tukipilaria. Vuonna 1559 kirkon saarnastuoliin nousi uskonpuhdistaja John Knox, joka teki kirkosta protestanttisen pääkirkon. Legendan mukaan vuonna 1637 markkinakauppias Jenny Geddes suuttui uudesta rukouskirjasta niin, että heitti jakkaransa saarnaajaa kohti — teko, joka sytytti mellakan koko kaupunkiin. Vuosina 1909–1911 kirkkoon rakennettiin upea Thistle-kappeli Skotlannin ritarikuntaa varten. Nykyään kirkossa …
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:skara-brae) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Tiede: Kartta, joka paljasti pumpun] Elokuun lopulla 1854 Sohossa puhkesi koleraepidemia, joka tappoi 616 ihmistä. Lääkäri John Snow ei uskonut taudin leviävän pahasta hajusta, vaan kiersi ovelta ovelle ja merkitsi jokaisen kuolleen mustana palkkina sen talon kohdalle, jossa tämä oli asunut. Palkit kasautuivat yhden ainoan vesipumpun ympärille Broad Streetillä; pumpun kahva irrotettiin 8. syyskuuta, ja myöhemmin selvisi, että kaivon reunasta oli vajaa metri vuotavaan likakaivoon.
+
+### 9.1
+KYSYMYS: Mikä paljasti kylän vuonna 1850?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Tiede: Kartta, joka paljasti pumpun] Elokuun lopulla 1854 Sohossa puhkesi koleraepidemia, joka tappoi 616 ihmistä. Lääkäri John Snow ei uskonut taudin leviävän pahasta hajusta, vaan kiersi ovelta ovelle ja merkitsi jokaisen kuolleen mustana palkkina sen talon kohdalle, jossa tämä oli asunut. Palkit kasautuivat yhden ainoan vesipumpun ympärille Broad Streetillä; pumpun kahva irrotettiin 8. syyskuuta, ja myöhemmin selvisi, että kaivon reunasta oli vajaa metri vuotavaan likakaivoon.
+
+### 9.2
+KYSYMYS: Mitä nimi Skara Brae tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:ironbridge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Ha’penny-silta] 1816 Ha'penny-silta on Dublinin tunnetuimpia maamerkkejä. Se valmistui toukokuussa 1816 Liffey-joen yli, ja se valettiin kokonaan raudasta Englannissa — malmi oli kaivettu Irlannin Leitrimin kreivikunnasta. Silta on 43 metriä pitkä ja vain reilut kolme ja puoli metriä leveä. Silta sai lempinimensä tulliltaan. Ennen siltaa joen yli kuljettiin lautoilla, ja lauttoja pyörittänyt William Walsh sai luvan periä sillan käyttäjiltä puolen pennyn eli "ha'pennyn" maksun peräti 100 vuoden ajan, kunnes se lopulta poistettiin vuonna 1919. Sillan virallinen nimi oli aluksi Wellingtonin silta, mutta dublinilaiset kutsuvat sitä yhä Ha'penny-sillaksi. Vuosina 2012–2013 sillasta jouduttiin poistamaan tuhansi…
+
+### 10.1
+KYSYMYS: Miksi silta tehtiin raudasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Ha’penny-silta] 1816 Ha'penny-silta on Dublinin tunnetuimpia maamerkkejä. Se valmistui toukokuussa 1816 Liffey-joen yli, ja se valettiin kokonaan raudasta Englannissa — malmi oli kaivettu Irlannin Leitrimin kreivikunnasta. Silta on 43 metriä pitkä ja vain reilut kolme ja puoli metriä leveä. Silta sai lempinimensä tulliltaan. Ennen siltaa joen yli kuljettiin lautoilla, ja lauttoja pyörittänyt William Walsh sai luvan periä sillan käyttäjiltä puolen pennyn eli "ha'pennyn" maksun peräti 100 vuoden ajan, kunnes se lopulta poistettiin vuonna 1919. Sillan virallinen nimi oli aluksi Wellingtonin silta, mutta dublinilaiset kutsuvat sitä yhä Ha'penny-sillaksi. Vuosina 2012–2013 sillasta jouduttiin poistamaan tuhansi…
+
+### 10.2
+KYSYMYS: Kuka vastasi sillan rautatyöstä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

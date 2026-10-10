@@ -1,0 +1,220 @@
+================ KOHTA 11 (kohde:bathin-roomalaiset-kylpylat) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Arki ja tavat: Vesi tulee lämpimänä maasta] Sofian alla on 49 kivennäis- ja lämpölähdettä. Keskustan lähde antaa vettä 110 litraa sekunnissa, ja sen päälle valmistui vuonna 1913 suuri kylpylä, jonka pienimmissä altaissa vesi oli 37- ja 46-asteista. Kylpylä suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo. Seinustalla on silti yhä julkisia hanoja, joista tulee lämmintä lähdevettä — niiden luona seisoo joka päivä ihmisiä pullot ja kanisterit mukanaan.
+- [Budapest — kaupunkilehti / Budapest: Shakkia lämpimässä altaassa] Budapestin alla on toistasataa lämmintä lähdettä, ja kaupunki on rakentanut niiden päälle kylpylöitä ottomaanien ajoista asti. Széchenyin kylpylä avattiin vuonna 1913, ja sen vesi nousee maasta 74- ja 77-asteisena; altaisiin se jäähdytetään. Ulkoaltaassa on betonisia pöytiä, joiden ääreen pelaajat asettuvat lautoineen: he seisovat vedessä vyötäröä myöten ja siirtävät nappuloita märin sormin. Vakiopelaajat tulevat paikalle myös talvella, kun altaan pinnasta nousee höyryä.
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+
+### 11.1
+KYSYMYS: Mistä kylpylän vesi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Arki ja tavat: Vesi tulee lämpimänä maasta] Sofian alla on 49 kivennäis- ja lämpölähdettä. Keskustan lähde antaa vettä 110 litraa sekunnissa, ja sen päälle valmistui vuonna 1913 suuri kylpylä, jonka pienimmissä altaissa vesi oli 37- ja 46-asteista. Kylpylä suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo. Seinustalla on silti yhä julkisia hanoja, joista tulee lämmintä lähdevettä — niiden luona seisoo joka päivä ihmisiä pullot ja kanisterit mukanaan.
+
+### 11.2
+KYSYMYS: Miksi altaisiin ei saa mennä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Shakkia lämpimässä altaassa] Budapestin alla on toistasataa lämmintä lähdettä, ja kaupunki on rakentanut niiden päälle kylpylöitä ottomaanien ajoista asti. Széchenyin kylpylä avattiin vuonna 1913, ja sen vesi nousee maasta 74- ja 77-asteisena; altaisiin se jäähdytetään. Ulkoaltaassa on betonisia pöytiä, joiden ääreen pelaajat asettuvat lautoineen: he seisovat vedessä vyötäröä myöten ja siirtävät nappuloita märin sormin. Vakiopelaajat tulevat paikalle myös talvella, kun altaan pinnasta nousee höyryä.
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:jurassic-coast-durdle-door) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Portti, jonka meri kaivoi] Kahdeksantoista kilometriä pohjoiseen rannikolla seisoo La Portada, portti: luonnon kaari, joka on 43 metriä korkea, 23 metriä leveä ja 70 metriä pitkä. Jalusta on mustaa andesiittia, ja sen ympärille on kerrostunut merisedimenttikiveä, kellastuvaa hiekkakiveä ja kuorifossiileja, joiden ikä on 35—2 miljoonaa vuotta; kaiken on muovannut meren kulutus. Ympärillä on samalla tavoin syntyneitä jyrkänteitä, korkeimmillaan 52 metriä. Kaari on ollut luonnonmuistomerkki 5. lokakuuta 1990 alkaen, ja suojelualue on 31,27 hehtaaria. Vuosina 2003—2008 kohde oli suljettuna jyrkänteen sortuman takia, ja vuodesta 2010 pääsy rannalle on kielletty kasviston ja eläimistön suojelemiseksi.
+
+### 12.1
+KYSYMYS: Miten meri on muovannut kallioon valtavan kaaren?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kaupunkilehti / Sumu ja aavikko: Portti, jonka meri kaivoi] Kahdeksantoista kilometriä pohjoiseen rannikolla seisoo La Portada, portti: luonnon kaari, joka on 43 metriä korkea, 23 metriä leveä ja 70 metriä pitkä. Jalusta on mustaa andesiittia, ja sen ympärille on kerrostunut merisedimenttikiveä, kellastuvaa hiekkakiveä ja kuorifossiileja, joiden ikä on 35—2 miljoonaa vuotta; kaiken on muovannut meren kulutus. Ympärillä on samalla tavoin syntyneitä jyrkänteitä, korkeimmillaan 52 metriä. Kaari on ollut luonnonmuistomerkki 5. lokakuuta 1990 alkaen, ja suojelualue on 31,27 hehtaaria. Vuosina 2003—2008 kohde oli suljettuna jyrkänteen sortuman takia, ja vuodesta 2010 pääsy rannalle on kielletty kasviston ja eläimistön suojelemiseksi.
+
+### 12.2
+KYSYMYS: Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:canterburyn-katedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kohdekartta / Kohdekartta: St Maryn katedraali] 1866 Katolisen arkkihiippakunnan pääkirkon juuret ovat vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen pappi Philip Conolly rakensi nykyisen paikan lähelle väliaikaisen puukappelin. Varsinaisen katedraalin peruskivi laskettiin 1860. Piirustukset teki William Wardell, Augustus Puginin oppilas, ja kirkko vihittiin 1866 uusgoottilaisena. Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja katedraali purettiin lopulta lähes kokonaan. Se rakennettiin uudelleen Wardellin alkuperäisiin suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja työstä vastasi hobartilainen Henry Hunter — sama arkkitehti, joka oli voittanut Tasmanian museon suunnittelukilpailun. Hunter laski uuden peruskive…
+- [Xi’an — kohdekartta / Kohdekartta: Xi’anin rautatieasema] avattu 1935 Asema avattiin kesäkuussa 1935 Longhai-radan varteen aivan muurikaupungin pohjoispuolelle, ja se oli pitkään koko seudun pääasema. Se on Xinchengin kaupunginosassa, osoitteessa Huanchengin pohjoinen tie 44. Vuonna 2011 avattiin Xi’anin pohjoinen asema kaupungin laidalle, ja nopeat junat siirtyivät sinne. Vanhalle asemalle jäi kaikki muu: yöpikajunat, pikajunat ja hitaat vuorot. Suorat junat vievät täältä muun muassa Pekingiin, Zhengzhouhun, Lanzhouhun, Baojiin ja Hua Shanin juurelle. Aseman koosta Wikipedia antaa kaksi eri lukua. Xi’an-artikkelin mukaan asema-alue on 597 000 neliömetriä, siinä on kuusi matkustajalaituria ja yksitoista raidetta, ja sen kautta kulkee 112 vuoroa ja…
+
+### 13.1
+KYSYMYS: Mitä katedraalin luoteisessa poikkilaivassa tapahtui joulukuussa 1170?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kohdekartta / Kohdekartta: St Maryn katedraali] 1866 Katolisen arkkihiippakunnan pääkirkon juuret ovat vuodessa 1822, jolloin Tasmanian ensimmäinen vakinainen pappi Philip Conolly rakensi nykyisen paikan lähelle väliaikaisen puukappelin. Varsinaisen katedraalin peruskivi laskettiin 1860. Piirustukset teki William Wardell, Augustus Puginin oppilas, ja kirkko vihittiin 1866 uusgoottilaisena. Rakennusvirheet aiheuttivat rakenteellisia ongelmia, ja katedraali purettiin lopulta lähes kokonaan. Se rakennettiin uudelleen Wardellin alkuperäisiin suunnitelmiin pohjautuvan uuden piirustuksen mukaan, ja työstä vastasi hobartilainen Henry Hunter — sama arkkitehti, joka oli voittanut Tasmanian museon suunnittelukilpailun. Hunter laski uuden peruskive…
+
+### 13.2
+KYSYMYS: Kuka perusti Canterburyn katedraalin vuonna 597?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kohdekartta / Kohdekartta: Xi’anin rautatieasema] avattu 1935 Asema avattiin kesäkuussa 1935 Longhai-radan varteen aivan muurikaupungin pohjoispuolelle, ja se oli pitkään koko seudun pääasema. Se on Xinchengin kaupunginosassa, osoitteessa Huanchengin pohjoinen tie 44. Vuonna 2011 avattiin Xi’anin pohjoinen asema kaupungin laidalle, ja nopeat junat siirtyivät sinne. Vanhalle asemalle jäi kaikki muu: yöpikajunat, pikajunat ja hitaat vuorot. Suorat junat vievät täältä muun muassa Pekingiin, Zhengzhouhun, Lanzhouhun, Baojiin ja Hua Shanin juurelle. Aseman koosta Wikipedia antaa kaksi eri lukua. Xi’an-artikkelin mukaan asema-alue on 597 000 neliömetriä, siinä on kuusi matkustajalaituria ja yksitoista raidetta, ja sen kautta kulkee 112 vuoroa ja…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-giants-causeway) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giant's Causeway (luonto · vuori)
+Tietoruudun teksti: Giant's Causeway on noin 40 000 toisiinsa lomittuvan bazalttipylvään muodostama alue Pohjois-Irlannin Antrimin kreivikunnassa, lähellä Bushmillsin kylää. Pylväät syntyivät noin 50–60 miljoonaa vuotta sitten, kun sula laava jäähtyi ja halkeili säännöllisiksi, enimmäkseen kuusikulmaisiksi pylväiksi; korkeimmat niistä nousevat noin 12 metriin. Kansantarun mukaan pylväät ovat jättiläinen Fionn mac Cumhaillin rakentaman padon jäännös, ja nimi juontuu tästä tarinasta. UNESCO otti alueen maailmanperintöluetteloon vuonna 1986, ja se on nykyään yksi Pohjois-Irlannin suosituimmista nähtävyyksistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+
+### 14.1
+KYSYMYS: Mistä geologisesta ilmiöstä Giant's Causewayn kuusikulmaiset pylväät syntyivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giant's Causeway (luonto · vuori)
+Tietoruudun teksti: Giant's Causeway on noin 40 000 toisiinsa lomittuvan bazalttipylvään muodostama alue Pohjois-Irlannin Antrimin kreivikunnassa, lähellä Bushmillsin kylää. Pylväät syntyivät noin 50–60 miljoonaa vuotta sitten, kun sula laava jäähtyi ja halkeili säännöllisiksi, enimmäkseen kuusikulmaisiksi pylväiksi; korkeimmat niistä nousevat noin 12 metriin. Kansantarun mukaan pylväät ovat jättiläinen Fionn mac Cumhaillin rakentaman padon jäännös, ja nimi juontuu tästä tarinasta. UNESCO otti alueen maailmanperintöluetteloon vuonna 1986, ja se on nykyään yksi Pohjois-Irlannin suosituimmista nähtävyyksistä.
+
+### 14.2
+KYSYMYS: Mitä kansantarun mukaan jättiläinen Fionn mac Cumhaill rakensi pylväistä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Giant's Causeway (luonto · vuori)
+Tietoruudun teksti: Giant's Causeway on noin 40 000 toisiinsa lomittuvan bazalttipylvään muodostama alue Pohjois-Irlannin Antrimin kreivikunnassa, lähellä Bushmillsin kylää. Pylväät syntyivät noin 50–60 miljoonaa vuotta sitten, kun sula laava jäähtyi ja halkeili säännöllisiksi, enimmäkseen kuusikulmaisiksi pylväiksi; korkeimmat niistä nousevat noin 12 metriin. Kansantarun mukaan pylväät ovat jättiläinen Fionn mac Cumhaillin rakentaman padon jäännös, ja nimi juontuu tästä tarinasta. UNESCO otti alueen maailmanperintöluetteloon vuonna 1986, ja se on nykyään yksi Pohjois-Irlannin suosituimmista nähtävyyksistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Pylväät, jotka laava latoi] 60 milj. vuotta sitten — Pohjois-Irlannin rannikolla on noin 40 000 kivipylvästä, jotka nousevat merestä kuin ladotut askelmat. Ne syntyivät, kun paksu laavakerros jäähtyi hyvin hitaasti. Jäähtyessään laava kutistui ja halkeili, ja halkeamat etsivät lyhimmän reitin — siksi useimmista pylväistä tuli kuusikulmaisia. Osassa on kuitenkin neljä, viisi, seitsemän tai kahdeksan sivua. Vanha tarina selittää saman toisin: jättiläinen Fionn mac Cumhaill rakensi kivitien Skotlantiin päästäkseen tappelemaan toisen jättiläisen kanssa.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-windermere) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Windermere (luonto · järvi)
+Tietoruudun teksti: Windermere on Cumbriassa sijaitseva nauhajärvi ja Englannin suurin järvi pituudeltaan, pinta-alaltaan ja tilavuudeltaan, vaikka se jää selvästi Skotlannin suurimpia järviä pienemmäksi. Järvi on noin 18 kilometriä pitkä ja enimmillään reilun kilometrin levyinen, ja sen syvin kohta on 64 metriä. Vedet laskevat Leven-jokea pitkin Morecamben lahteen. Järvestä tuli suosittu matkailukohde, kun Kendalin ja Windermeren rautatiehaara avattiin vuonna 1847, ja se toi Lake Districtin ensi kertaa laajan yleisön ulottuville.
+
+### 15.1
+KYSYMYS: Mikä rautatiehaara teki Windermerestä suositun matkailukohteen 1840-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Windermere (luonto · järvi)
+Tietoruudun teksti: Windermere on Cumbriassa sijaitseva nauhajärvi ja Englannin suurin järvi pituudeltaan, pinta-alaltaan ja tilavuudeltaan, vaikka se jää selvästi Skotlannin suurimpia järviä pienemmäksi. Järvi on noin 18 kilometriä pitkä ja enimmillään reilun kilometrin levyinen, ja sen syvin kohta on 64 metriä. Vedet laskevat Leven-jokea pitkin Morecamben lahteen. Järvestä tuli suosittu matkailukohde, kun Kendalin ja Windermeren rautatiehaara avattiin vuonna 1847, ja se toi Lake Districtin ensi kertaa laajan yleisön ulottuville.
+
+### 15.2
+KYSYMYS: Mihin jokeen ja lahteen Windermeren vedet laskevat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Windermere (luonto · järvi)
+Tietoruudun teksti: Windermere on Cumbriassa sijaitseva nauhajärvi ja Englannin suurin järvi pituudeltaan, pinta-alaltaan ja tilavuudeltaan, vaikka se jää selvästi Skotlannin suurimpia järviä pienemmäksi. Järvi on noin 18 kilometriä pitkä ja enimmillään reilun kilometrin levyinen, ja sen syvin kohta on 64 metriä. Vedet laskevat Leven-jokea pitkin Morecamben lahteen. Järvestä tuli suosittu matkailukohde, kun Kendalin ja Windermeren rautatiehaara avattiin vuonna 1847, ja se toi Lake Districtin ensi kertaa laajan yleisön ulottuville.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

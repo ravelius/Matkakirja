@@ -1,0 +1,193 @@
+================ KOHTA 1 (kohde:crystal-palace) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Crystal Palace (tekniikka)
+Tietoruudun teksti: Crystal Palace oli valuraudasta ja tasolasista tehty rakennus, joka pystytettiin Hyde Parkiin vuoden 1851 suurta maailmannäyttelyä varten. Puutarhuri Joseph Paxtonin suunnittelema halli oli 564 metriä pitkä ja sisältä 39 metriä korkea, ja sen 293 000 lasiruutua saatiin paikoilleen 39 viikossa. Seinät ja katto olivat läpinäkyvät, joten sisällä ei tarvittu lamppuja lainkaan. Näyttelyn jälkeen rakennus purettiin ja koottiin uudelleen Sydenham Hillille Etelä-Lontooseen, missä se avattiin kesäkuussa 1854 entistä suurempana: 490 metriä pitkänä ja tynnyriholvikattoisena. Siellä se palveli konserttitalona ja näyttelyhallina kahdeksankymmentä vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Mumbai: Riemuportti, jolle ei rakennettu tietä] Kuningas Yrjö V ja kuningatar Mary nousivat maihin Apollo Bunderissa 2. joulukuuta 1911, ja heitä varten paikalle pystytettiin pahvinen malli — oikeaa muistomerkkiä ei ollut alettu rakentaa. Peruskivi laskettiin 31. maaliskuuta 1913, George Wittetin lopullinen suunnitelma hyväksyttiin elokuussa 1914, ja rantaa piti täyttää ja meriseinää rakentaa vuosina 1915–1919 ennen kuin keltaisesta basaltista voitiin muurata kaksikymmentäkuusi metriä korkea kaari. Portti valmistui 1924 ja avattiin yleisölle joulukuun neljäntenä päivänä. Rahat loppuivat kesken, eikä sille johtavaa juhlakatua koskaan rakennettu: portti seisoo siksi vinossa kulmassa katuun nähden.
+- [Iso-Britannia — maalehti / Historia: Kirkko, josta tuli puutarha] Vuoden 1666 suurpalo tuhosi Cityssä 87 seurakuntakirkkoa. St Dunstan-in-the-East selvisi vaurioituneena, se paikattiin, ja Christopher Wren lisäsi siihen tornin, jonka neulanterävä huippu lepää neljän kaaren varassa. Kirkkosali rakennettiin vielä kertaalleen uudelleen 1817–1821, mutta Wrenin torni jäi paikalleen. Vuoden 1941 pommituksissa kirkkoon osui täysosuma: pystyyn jäivät torni sekä pohjois- ja eteläseinä. Uutta kirkkoa ei rakennettu, vaan kaupunki päätti 1967 jättää rauniot paikalleen ja istuttaa niiden sisään puutarhan, joka avattiin 1971. Nyt ikkuna-aukoista työntyy puita ja köynnöksiä, ja entisen keskilaivan kohdalla lorisee matala suihkulähde.
+
+### 1.1
+KYSYMYS: Miten näin suuri lasirakennus saatiin pystyyn 39 viikossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Crystal Palace (tekniikka)
+Tietoruudun teksti: Crystal Palace oli valuraudasta ja tasolasista tehty rakennus, joka pystytettiin Hyde Parkiin vuoden 1851 suurta maailmannäyttelyä varten. Puutarhuri Joseph Paxtonin suunnittelema halli oli 564 metriä pitkä ja sisältä 39 metriä korkea, ja sen 293 000 lasiruutua saatiin paikoilleen 39 viikossa. Seinät ja katto olivat läpinäkyvät, joten sisällä ei tarvittu lamppuja lainkaan. Näyttelyn jälkeen rakennus purettiin ja koottiin uudelleen Sydenham Hillille Etelä-Lontooseen, missä se avattiin kesäkuussa 1854 entistä suurempana: 490 metriä pitkänä ja tynnyriholvikattoisena. Siellä se palveli konserttitalona ja näyttelyhallina kahdeksankymmentä vuotta.
+
+### 1.2
+KYSYMYS: Miksi rakennusta ei koskaan rakennettu uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Crystal Palace (tekniikka)
+Tietoruudun teksti: Crystal Palace oli valuraudasta ja tasolasista tehty rakennus, joka pystytettiin Hyde Parkiin vuoden 1851 suurta maailmannäyttelyä varten. Puutarhuri Joseph Paxtonin suunnittelema halli oli 564 metriä pitkä ja sisältä 39 metriä korkea, ja sen 293 000 lasiruutua saatiin paikoilleen 39 viikossa. Seinät ja katto olivat läpinäkyvät, joten sisällä ei tarvittu lamppuja lainkaan. Näyttelyn jälkeen rakennus purettiin ja koottiin uudelleen Sydenham Hillille Etelä-Lontooseen, missä se avattiin kesäkuussa 1854 entistä suurempana: 490 metriä pitkänä ja tynnyriholvikattoisena. Siellä se palveli konserttitalona ja näyttelyhallina kahdeksankymmentä vuotta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kaupunkilehti / Mumbai: Riemuportti, jolle ei rakennettu tietä] Kuningas Yrjö V ja kuningatar Mary nousivat maihin Apollo Bunderissa 2. joulukuuta 1911, ja heitä varten paikalle pystytettiin pahvinen malli — oikeaa muistomerkkiä ei ollut alettu rakentaa. Peruskivi laskettiin 31. maaliskuuta 1913, George Wittetin lopullinen suunnitelma hyväksyttiin elokuussa 1914, ja rantaa piti täyttää ja meriseinää rakentaa vuosina 1915–1919 ennen kuin keltaisesta basaltista voitiin muurata kaksikymmentäkuusi metriä korkea kaari. Portti valmistui 1924 ja avattiin yleisölle joulukuun neljäntenä päivänä. Rahat loppuivat kesken, eikä sille johtavaa juhlakatua koskaan rakennettu: portti seisoo siksi vinossa kulmassa katuun nähden.
+- [Iso-Britannia — maalehti / Historia: Kirkko, josta tuli puutarha] Vuoden 1666 suurpalo tuhosi Cityssä 87 seurakuntakirkkoa. St Dunstan-in-the-East selvisi vaurioituneena, se paikattiin, ja Christopher Wren lisäsi siihen tornin, jonka neulanterävä huippu lepää neljän kaaren varassa. Kirkkosali rakennettiin vielä kertaalleen uudelleen 1817–1821, mutta Wrenin torni jäi paikalleen. Vuoden 1941 pommituksissa kirkkoon osui täysosuma: pystyyn jäivät torni sekä pohjois- ja eteläseinä. Uutta kirkkoa ei rakennettu, vaan kaupunki päätti 1967 jättää rauniot paikalleen ja istuttaa niiden sisään puutarhan, joka avattiin 1971. Nyt ikkuna-aukoista työntyy puita ja köynnöksiä, ja entisen keskilaivan kohdalla lorisee matala suihkulähde.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:bennevis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ben Nevis (luonto · vuori)
+Tietoruudun teksti: Ben Nevis on Skotlannin, Yhdistyneen kuningaskunnan ja koko Brittein saarten korkein vuori: huippu on 1 345 metriä merenpinnasta, eikä mihinkään suuntaan ole 739 kilometriin korkeampaa maata. Huippu itsessään on kivinen tasanne, felsenmeer, ja pohjoisseinämän seitsemänsataametriset kalliot ovat Skotlannin tärkein jääkiipeilypaikka. Vuorella on juostu kilpaa vuodesta 1898.
+
+### 2.1
+KYSYMYS: Mikä on felsenmeer?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ben Nevis (luonto · vuori)
+Tietoruudun teksti: Ben Nevis on Skotlannin, Yhdistyneen kuningaskunnan ja koko Brittein saarten korkein vuori: huippu on 1 345 metriä merenpinnasta, eikä mihinkään suuntaan ole 739 kilometriin korkeampaa maata. Huippu itsessään on kivinen tasanne, felsenmeer, ja pohjoisseinämän seitsemänsataametriset kalliot ovat Skotlannin tärkein jääkiipeilypaikka. Vuorella on juostu kilpaa vuodesta 1898.
+
+### 2.2
+KYSYMYS: Millainen on Ben Neviksen pohjoisseinämä talvella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ben Nevis (luonto · vuori)
+Tietoruudun teksti: Ben Nevis on Skotlannin, Yhdistyneen kuningaskunnan ja koko Brittein saarten korkein vuori: huippu on 1 345 metriä merenpinnasta, eikä mihinkään suuntaan ole 739 kilometriin korkeampaa maata. Huippu itsessään on kivinen tasanne, felsenmeer, ja pohjoisseinämän seitsemänsataametriset kalliot ovat Skotlannin tärkein jääkiipeilypaikka. Vuorella on juostu kilpaa vuodesta 1898.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:snowdon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snowdon (luonto · vuori)
+Tietoruudun teksti: Snowdon eli kymrinkielisellä nimellään Yr Wyddfa kohoaa 1 085 metriin ja on Walesin korkein vuori sekä Brittein saarten korkein Skotlannin ylämaiden eteläpuolella. Kalliot syntyivät tulivuorenpurkauksissa ordovikikaudella, ja jäätiköt veistivät niistä pyramidihuipun ja terävät harjanteet eli arêtet Crib Gochin ja Y Lliweddin. Vuorta on kutsuttu Yhdistyneen kuningaskunnan vilkkaimmaksi: vuonna 2022 sen nousi 543 541 kävelijää.
+
+### 3.1
+KYSYMYS: Mitä nimi Yr Wyddfa tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snowdon (luonto · vuori)
+Tietoruudun teksti: Snowdon eli kymrinkielisellä nimellään Yr Wyddfa kohoaa 1 085 metriin ja on Walesin korkein vuori sekä Brittein saarten korkein Skotlannin ylämaiden eteläpuolella. Kalliot syntyivät tulivuorenpurkauksissa ordovikikaudella, ja jäätiköt veistivät niistä pyramidihuipun ja terävät harjanteet eli arêtet Crib Gochin ja Y Lliweddin. Vuorta on kutsuttu Yhdistyneen kuningaskunnan vilkkaimmaksi: vuonna 2022 sen nousi 543 541 kävelijää.
+
+### 3.2
+KYSYMYS: Miten jäätiköt muotoilivat Snowdonin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Snowdon (luonto · vuori)
+Tietoruudun teksti: Snowdon eli kymrinkielisellä nimellään Yr Wyddfa kohoaa 1 085 metriin ja on Walesin korkein vuori sekä Brittein saarten korkein Skotlannin ylämaiden eteläpuolella. Kalliot syntyivät tulivuorenpurkauksissa ordovikikaudella, ja jäätiköt veistivät niistä pyramidihuipun ja terävät harjanteet eli arêtet Crib Gochin ja Y Lliweddin. Vuorta on kutsuttu Yhdistyneen kuningaskunnan vilkkaimmaksi: vuonna 2022 sen nousi 543 541 kävelijää.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:pohjanmeri~3) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä ja leveyttä 580, ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Meren pohja joka nousi ilmaan] Nullarbor ei ole aina ollut aavikkoa: kalkkikivi, jonka päällä nyt kävellään, kertyi meren pohjaan kerroksittain miljoonien vuosien aikana, kun matala meri peitti alueen. Mioseenikaudella, noin 14 miljoonaa vuotta sitten, merenpohja alkoi kohota, ja vesi vetäytyi paljastaen laakean, lähes täysin tasaisen kalkkikivilevyn. Nykyään tasanko kattaa noin 197 000 neliökilometriä – Maan suurin yhtenäinen kalkkikiviesiintymä, noin 1 100 kilometriä leveä Etelä- ja Länsi-Australian rajan molemmin puolin. Avaruudesta katsottuna tasanko erottuu ympäröivästä punaisesta aavikosta vaaleampana, lähes puuttomana kaistaleena rannikkoa myöten.
+
+### 4.1
+KYSYMYS: Miksi Pohjanmeri on niin matala?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä ja leveyttä 580, ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Meren pohja joka nousi ilmaan] Nullarbor ei ole aina ollut aavikkoa: kalkkikivi, jonka päällä nyt kävellään, kertyi meren pohjaan kerroksittain miljoonien vuosien aikana, kun matala meri peitti alueen. Mioseenikaudella, noin 14 miljoonaa vuotta sitten, merenpohja alkoi kohota, ja vesi vetäytyi paljastaen laakean, lähes täysin tasaisen kalkkikivilevyn. Nykyään tasanko kattaa noin 197 000 neliökilometriä – Maan suurin yhtenäinen kalkkikiviesiintymä, noin 1 100 kilometriä leveä Etelä- ja Länsi-Australian rajan molemmin puolin. Avaruudesta katsottuna tasanko erottuu ympäröivästä punaisesta aavikosta vaaleampana, lähes puuttomana kaistaleena rannikkoa myöten.
+- [Iso-Britannia — maalehti / Soittajat: Öljytynnyri, joka soittaa melodian] 1900-luku — Steel pan taotaan kahdensadan litran peltitynnyristä: pohja lyödään kupiksi ja siihen taotaan soikeita kenttiä, joista jokainen soi omaa säveltään. Mitä isompi soikio, sitä matalampi ääni, ja korkeimpaan tenoripanniin mahtuu noin kolmekymmentä säveltä. Soitin syntyi Trinidadissa, ja Lontoossa se nähtiin ensi kerran vuoden 1951 Festival of Britainissa. Notting Hillin karnevaalia edeltävässä Panorama-kisassa soittaa nykyään noin tuhat ihmistä, kaikki ulkomuistista.
+
+### 4.2
+KYSYMYS: Milloin Pohjanmereltä löydettiin öljy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä ja leveyttä 580, ja pinta-alaa 570 000 neliökilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:irlanninmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+### 5.1
+KYSYMYS: Mikä Mansaari on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+### 5.2
+KYSYMYS: Miksi merta kutsutaan joskus Manxinmereksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Irlanninmeri (meri)
+Tietoruudun teksti: Irlanninmeri on 46 007 neliökilometrin vesialue, joka erottaa Irlannin saaren Isosta-Britanniasta. Etelässä se yhtyy Kelttienmereen Yrjönkanaalin kautta ja pohjoisessa Skotlannin länsipuolisiin sisämeriin Pohjoiskanaalin kautta. Sen suurin saari on Anglesey Pohjois-Walesissa ja toiseksi suurin Mansaari.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

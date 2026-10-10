@@ -1,0 +1,113 @@
+================ KOHTA 41 (nosto:tate-modernin-turbiinihalli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Seiso oikealla, kävele vasemmalla] Metron liukuportaissa on yksi rautainen sääntö: seisojat oikealle, kiirehtijät vasemmalle. Tapa syntyi vahingossa. Ensimmäiset liukuportaat avattiin Earl's Courtin asemalla vuonna 1911, ja niiden yläpäässä vino väliseinä ohjasi matkustajat ulos vasemmalta puolelta, joten seisojan kannatti pysyä oikealla. Vuonna 2015 Holbornissa kokeiltiin, että kaikki seisoisivat molemmin puolin. Portaisiin mahtui lähes kolmanneksen enemmän väkeä, mutta heti kun valvojat lähtivät, lontoolaiset palasivat entiseen.
+
+### 41.1
+KYSYMYS: Miltä sadan miljoonan siemenen päällä käveleminen tuntui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Seiso oikealla, kävele vasemmalla] Metron liukuportaissa on yksi rautainen sääntö: seisojat oikealle, kiirehtijät vasemmalle. Tapa syntyi vahingossa. Ensimmäiset liukuportaat avattiin Earl's Courtin asemalla vuonna 1911, ja niiden yläpäässä vino väliseinä ohjasi matkustajat ulos vasemmalta puolelta, joten seisojan kannatti pysyä oikealla. Vuonna 2015 Holbornissa kokeiltiin, että kaikki seisoisivat molemmin puolin. Portaisiin mahtui lähes kolmanneksen enemmän väkeä, mutta heti kun valvojat lähtivät, lontoolaiset palasivat entiseen.
+
+### 41.2
+KYSYMYS: Miksi voimalaa ei purettu vaan siitä tehtiin museo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 41.3
+KYSYMYS: Miten yhtä teosta varten löydetään 1 600 käsityöläistä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (nosto:orbitin-liukumaki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Olympia-teatteri] 1926 Olympia-teatterin suunnitteli John Eberson, ja se avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. Eberson oli erikoistunut niin sanottuun ilmapiiriteatteriin: sali on rakennettu näyttämään espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. Floridassa on jäljellä enää neljä tällaista salia. Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja B. B. King. Elokuussa 1956 Elvis Presley esiintyi talossa viisitoista kertaa loppuunmyydylle salille. 1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin purettavaksi parkkipaikaksi. Liikemies Maurice Gusman osti talon…
+
+### 42.1
+KYSYMYS: Miksi olympialaisille haluttiin oma maamerkki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Olympia-teatteri] 1926 Olympia-teatterin suunnitteli John Eberson, ja se avattiin 18. helmikuuta 1926 mykkäelokuvateatterina. Eberson oli erikoistunut niin sanottuun ilmapiiriteatteriin: sali on rakennettu näyttämään espanjalaiselta puutarhalta, jonka yllä on tähtitaivas. Floridassa on jäljellä enää neljä tällaista salia. Ohjelmisto seurasi aikaa. Kun äänielokuva ja vaudeville yleistyivät, lavalla nähtiin Marx-veljekset ja Gypsy Rose Lee; 1950- ja 1960-luvuilla Etta James, Della Reese ja B. B. King. Elokuussa 1956 Elvis Presley esiintyi talossa viisitoista kertaa loppuunmyydylle salille. 1960-luvun lopulla käyttö hiipui ja teatteria kaavailtiin purettavaksi parkkipaikaksi. Liikemies Maurice Gusman osti talon…
+
+### 42.2
+KYSYMYS: Millaista alas laskeutuminen kaksitoista kertaa kiertyvässä putkessa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 42.3
+KYSYMYS: Mitä teräsvyyhdille tehdään kisojen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI

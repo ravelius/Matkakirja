@@ -1,0 +1,301 @@
+================ KOHTA 31 (nosto:sutton-hoo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi laivan, josta ei ollut jäljellä yhtään lautaa
+Tietoruudun teksti: Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne ja sai Ipswichin museon kautta avukseen Basil Brownin, itseoppineen arkeologin. Pretty tarjosi hänelle asunnon ja kolmenkymmenen shillingin viikkopalkan ja ehdotti, että hän aloittaisi suurimmasta kummusta. Brown aloitti kolmesta pienemmästä, jotka oli jo tyhjennetty, ja palasi vasta seuraavana kesänä siihen suureen.
+
+Kummun alta paljastui laiva, josta ei ollut jäljellä yhtään lautaa. Puu oli lahonnut kokonaan, mutta se oli värjännyt hiekan, ja lähes kaikki rautaniitit olivat omilla paikoillaan — muoto oli mitattavissa vaikka aine oli poissa. Alus oli 27 metriä pitkä ja 4,4 metriä leveä, yhdeksän lankkua kummallakin kyljellä, kaksikymmentäkuusi kaarta ja airopaikat noin neljällekymmenelle soutajalle. Keskellä ollut hautakammio oli täynnä: kultaa ja jalokiviä, sere…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Puu jonka juurella siirtokunta julistettiin] Kuvernööri John Hindmarsh luki siirtokunnan perustamisjulistuksen 28. joulukuuta 1836 kumipuun juurella nykyisessä Glenelg Northissa. Paikka on kaurnaksi Patha Yukuna, ja puu — todennäköisesti punakumipuu — oli kaurnoille merkittävä jo ennen siirtomaa-aikaa. Puu oli kuollut viimeistään 1907, ja sen lahonnut pinta valettiin betoniin 1963. Julistuspäivää vietetään yhä vuosittain samalla paikalla, ja kuvernööri lukee Hindmarshin alkuperäisen puheen ääneen. Vuonna 2025 tilaisuutta edelsi ensimmäistä kertaa alkuperäiskansan yön yli kestänyt leiri ja seremoniallinen tuli.
+- [Kiina — maalehti / Historia: Savisotilaat tehtiin osista] 210 eaa. — Kiinan ensimmäinen keisari Qin Shi Huang haudattiin vuosina 210–209 eaa., ja hänen hautansa lähelle upotettiin maahan savesta poltettu saattue. Kolmesta kuopasta on arvioitu löytyvän yli 8 000 hahmoa, 130 vaunua ja yli 600 hevosta. Hahmot valmistettiin osista kuin tehtaassa: vartalot muotista, kädet ja päät erikseen, ja vasta viimeistelyssä jokaiselle kasvolle tehtiin oma ilme. Paikallinen maanviljelijä osui kaivoa kaivaessaan ensimmäisiin palasiin vuonna 1974. Muutkin kuin sotilaat ovat päässeet esiin: virkamiehiä, akrobaatteja ja soittajia.
+
+### 31.1
+KYSYMYS: Miten laiva voi säilyä, jos puu on lahonnut kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi laivan, josta ei ollut jäljellä yhtään lautaa
+Tietoruudun teksti: Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne ja sai Ipswichin museon kautta avukseen Basil Brownin, itseoppineen arkeologin. Pretty tarjosi hänelle asunnon ja kolmenkymmenen shillingin viikkopalkan ja ehdotti, että hän aloittaisi suurimmasta kummusta. Brown aloitti kolmesta pienemmästä, jotka oli jo tyhjennetty, ja palasi vasta seuraavana kesänä siihen suureen.
+
+Kummun alta paljastui laiva, josta ei ollut jäljellä yhtään lautaa. Puu oli lahonnut kokonaan, mutta se oli värjännyt hiekan, ja lähes kaikki rautaniitit olivat omilla paikoillaan — muoto oli mitattavissa vaikka aine oli poissa. Alus oli 27 metriä pitkä ja 4,4 metriä leveä, yhdeksän lankkua kummallakin kyljellä, kaksikymmentäkuusi kaarta ja airopaikat noin neljällekymmenelle soutajalle. Keskellä ollut hautakammio oli täynnä: kultaa ja jalokiviä, sere…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Historia: Puu jonka juurella siirtokunta julistettiin] Kuvernööri John Hindmarsh luki siirtokunnan perustamisjulistuksen 28. joulukuuta 1836 kumipuun juurella nykyisessä Glenelg Northissa. Paikka on kaurnaksi Patha Yukuna, ja puu — todennäköisesti punakumipuu — oli kaurnoille merkittävä jo ennen siirtomaa-aikaa. Puu oli kuollut viimeistään 1907, ja sen lahonnut pinta valettiin betoniin 1963. Julistuspäivää vietetään yhä vuosittain samalla paikalla, ja kuvernööri lukee Hindmarshin alkuperäisen puheen ääneen. Vuonna 2025 tilaisuutta edelsi ensimmäistä kertaa alkuperäiskansan yön yli kestänyt leiri ja seremoniallinen tuli.
+
+### 31.2
+KYSYMYS: Ketä Sutton Hoon laivahautaan haudattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi laivan, josta ei ollut jäljellä yhtään lautaa
+Tietoruudun teksti: Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne ja sai Ipswichin museon kautta avukseen Basil Brownin, itseoppineen arkeologin. Pretty tarjosi hänelle asunnon ja kolmenkymmenen shillingin viikkopalkan ja ehdotti, että hän aloittaisi suurimmasta kummusta. Brown aloitti kolmesta pienemmästä, jotka oli jo tyhjennetty, ja palasi vasta seuraavana kesänä siihen suureen.
+
+Kummun alta paljastui laiva, josta ei ollut jäljellä yhtään lautaa. Puu oli lahonnut kokonaan, mutta se oli värjännyt hiekan, ja lähes kaikki rautaniitit olivat omilla paikoillaan — muoto oli mitattavissa vaikka aine oli poissa. Alus oli 27 metriä pitkä ja 4,4 metriä leveä, yhdeksän lankkua kummallakin kyljellä, kaksikymmentäkuusi kaarta ja airopaikat noin neljällekymmenelle soutajalle. Keskellä ollut hautakammio oli täynnä: kultaa ja jalokiviä, sere…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 31.3
+KYSYMYS: Kuka Britanniassa omistaa maasta löytyvän aarteen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Itseoppinut kaivaja 30 shillingin viikkopalkalla löysi laivan, josta ei ollut jäljellä yhtään lautaa
+Tietoruudun teksti: Suffolkin Woodbridgen lähellä on kumpuja, joita kukaan ei ollut avannut. Maanomistaja Edith Pretty päätti 1937 kaivauttaa ne ja sai Ipswichin museon kautta avukseen Basil Brownin, itseoppineen arkeologin. Pretty tarjosi hänelle asunnon ja kolmenkymmenen shillingin viikkopalkan ja ehdotti, että hän aloittaisi suurimmasta kummusta. Brown aloitti kolmesta pienemmästä, jotka oli jo tyhjennetty, ja palasi vasta seuraavana kesänä siihen suureen.
+
+Kummun alta paljastui laiva, josta ei ollut jäljellä yhtään lautaa. Puu oli lahonnut kokonaan, mutta se oli värjännyt hiekan, ja lähes kaikki rautaniitit olivat omilla paikoillaan — muoto oli mitattavissa vaikka aine oli poissa. Alus oli 27 metriä pitkä ja 4,4 metriä leveä, yhdeksän lankkua kummallakin kyljellä, kaksikymmentäkuusi kaarta ja airopaikat noin neljällekymmenelle soutajalle. Keskellä ollut hautakammio oli täynnä: kultaa ja jalokiviä, sere…
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Savisotilaat tehtiin osista] 210 eaa. — Kiinan ensimmäinen keisari Qin Shi Huang haudattiin vuosina 210–209 eaa., ja hänen hautansa lähelle upotettiin maahan savesta poltettu saattue. Kolmesta kuopasta on arvioitu löytyvän yli 8 000 hahmoa, 130 vaunua ja yli 600 hevosta. Hahmot valmistettiin osista kuin tehtaassa: vartalot muotista, kädet ja päät erikseen, ja vasta viimeistelyssä jokaiselle kasvolle tehtiin oma ilme. Paikallinen maanviljelijä osui kaivoa kaivaessaan ensimmäisiin palasiin vuonna 1974. Muutkin kuin sotilaat ovat päässeet esiin: virkamiehiä, akrobaatteja ja soittajia.
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:st-paulin-katedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St Paulin katedraali (historia)
+Tietoruudun teksti: Ludgate Hillin laella on ollut Paavalille omistettu kirkko vuodesta 604, ja nykyinen katedraali on paikan viides. Sitä edeltänyt keskiaikainen St Paul aloitettiin vuoden 1087 tulipalon jälkeen, vihittiin 1240 ja valmistui vasta 1300-luvun puolivälissä — silloin se oli maailman pisimpiä kirkkoja, 178 metriä, ja sen puinen torninhuippu kohosi perinteisen mitan mukaan noin 149 metriin. Kirkon pääkäytävä oli lontoolaisille kauppapaikka ja juorujen vaihtopaikka, jolla oli oma nimikin: Paul's walk. Huippu syttyi palamaan 4. kesäkuuta 1561 ja romahti kirkkosalin katon läpi; aikalaisen uutislehtinen kertoi syyksi salamaniskun, eikä huippua rakennettu takaisin. Lontoon suuri palo tuhosi kirkon 1666, ja paikalle nousi Christopher Wrenin kupolikirkko, joka valmistui 1710 ja seisoo siellä yhä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Historia: Basaari, joka ei noussut takaisin] Mogulien Kabulin ylpeys oli Char Chatta, katettu basaari, jonka rakennutti 1600-luvulla Ali Mardan Khan, Shah Jahanin aikainen maaherra. Se oli yli kaksisataa metriä pitkä ja koostui neljästä holvikäytävästä, joiden seinät oli päällystetty peileillä koristellulla stukolla ja kalkittu liuoksella, johon oli sekoitettu kiillehiutaleita, jotta ne kimaltaisivat. Vuonna 1839 britit asettivat Shah Shuja Durranin takaisin valtaan; 1841 kansannousussa surmattiin brittiläinen asuinvirkamies, ja seuraavana vuonna perääntyminen Jalalabadiin päättyi katastrofiin. Britit palasivat 1842 ja purkivat basaarin kostotoimena ennen lähtöään. Sitä ei rakennettu uudelleen.
+- [Wellington — kaupunkilehti / Luonto: Aita, joka toi linnut takaisin kaupunkiin] Vuonna 1999 avattu Zealandia, silloiselta nimeltään Karori Wildlife Sanctuary, oli maailman ensimmäinen kokonaan aidattu kaupunkilajisuoja: 225 hehtaaria entistä vedenottoaluetta ympäröitiin aidalla, jonka on määrä pitää ulkona rotat, possut ja kärpät sekä muut ihmisen tuomat nisäkkäät. Uuden-Seelannin alkuperäislajit eivät ole kohdanneet niitä evoluutiossaan. Kokeilu onnistui niin hyvin, että tui ja kaka ovat levinneet takaisin ympäröiviin kaupunginosiin, ja vastaavia aitauksia on rakennettu ympäri Uutta-Seelantia.
+
+### 32.1
+KYSYMYS: Miksi torninhuippua ei rakennettu takaisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St Paulin katedraali (historia)
+Tietoruudun teksti: Ludgate Hillin laella on ollut Paavalille omistettu kirkko vuodesta 604, ja nykyinen katedraali on paikan viides. Sitä edeltänyt keskiaikainen St Paul aloitettiin vuoden 1087 tulipalon jälkeen, vihittiin 1240 ja valmistui vasta 1300-luvun puolivälissä — silloin se oli maailman pisimpiä kirkkoja, 178 metriä, ja sen puinen torninhuippu kohosi perinteisen mitan mukaan noin 149 metriin. Kirkon pääkäytävä oli lontoolaisille kauppapaikka ja juorujen vaihtopaikka, jolla oli oma nimikin: Paul's walk. Huippu syttyi palamaan 4. kesäkuuta 1561 ja romahti kirkkosalin katon läpi; aikalaisen uutislehtinen kertoi syyksi salamaniskun, eikä huippua rakennettu takaisin. Lontoon suuri palo tuhosi kirkon 1666, ja paikalle nousi Christopher Wrenin kupolikirkko, joka valmistui 1710 ja seisoo siellä yhä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kaupunkilehti / Historia: Basaari, joka ei noussut takaisin] Mogulien Kabulin ylpeys oli Char Chatta, katettu basaari, jonka rakennutti 1600-luvulla Ali Mardan Khan, Shah Jahanin aikainen maaherra. Se oli yli kaksisataa metriä pitkä ja koostui neljästä holvikäytävästä, joiden seinät oli päällystetty peileillä koristellulla stukolla ja kalkittu liuoksella, johon oli sekoitettu kiillehiutaleita, jotta ne kimaltaisivat. Vuonna 1839 britit asettivat Shah Shuja Durranin takaisin valtaan; 1841 kansannousussa surmattiin brittiläinen asuinvirkamies, ja seuraavana vuonna perääntyminen Jalalabadiin päättyi katastrofiin. Britit palasivat 1842 ja purkivat basaarin kostotoimena ennen lähtöään. Sitä ei rakennettu uudelleen.
+- [Wellington — kaupunkilehti / Luonto: Aita, joka toi linnut takaisin kaupunkiin] Vuonna 1999 avattu Zealandia, silloiselta nimeltään Karori Wildlife Sanctuary, oli maailman ensimmäinen kokonaan aidattu kaupunkilajisuoja: 225 hehtaaria entistä vedenottoaluetta ympäröitiin aidalla, jonka on määrä pitää ulkona rotat, possut ja kärpät sekä muut ihmisen tuomat nisäkkäät. Uuden-Seelannin alkuperäislajit eivät ole kohdanneet niitä evoluutiossaan. Kokeilu onnistui niin hyvin, että tui ja kaka ovat levinneet takaisin ympäröiviin kaupunginosiin, ja vastaavia aitauksia on rakennettu ympäri Uutta-Seelantia.
+
+### 32.2
+KYSYMYS: Mitä kirkon sisällä tehtiin muuta kuin rukoiltiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St Paulin katedraali (historia)
+Tietoruudun teksti: Ludgate Hillin laella on ollut Paavalille omistettu kirkko vuodesta 604, ja nykyinen katedraali on paikan viides. Sitä edeltänyt keskiaikainen St Paul aloitettiin vuoden 1087 tulipalon jälkeen, vihittiin 1240 ja valmistui vasta 1300-luvun puolivälissä — silloin se oli maailman pisimpiä kirkkoja, 178 metriä, ja sen puinen torninhuippu kohosi perinteisen mitan mukaan noin 149 metriin. Kirkon pääkäytävä oli lontoolaisille kauppapaikka ja juorujen vaihtopaikka, jolla oli oma nimikin: Paul's walk. Huippu syttyi palamaan 4. kesäkuuta 1561 ja romahti kirkkosalin katon läpi; aikalaisen uutislehtinen kertoi syyksi salamaniskun, eikä huippua rakennettu takaisin. Lontoon suuri palo tuhosi kirkon 1666, ja paikalle nousi Christopher Wrenin kupolikirkko, joka valmistui 1710 ja seisoo siellä yhä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:vanha-london-bridge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha London Bridge (tekniikka)
+Tietoruudun teksti: Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria ja yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja alusta asti, koska niiden vuokrat maksoivat sillan kunnossapidon — 1300-luvun lopulla niitä oli 140, ja 1600-luvulla lähes kaikissa oli neljä tai viisi kerrosta. Jokainen talo oli myös kauppa, ja silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Historia: Kaksi tuntia sillalla, kolme maata kartalle] 1819 — Simón Bolívarin armeija ylitti Andit Páramo de Pisban kautta heinäkuussa 1819 — marssi vei miehiltä voimat, mutta yllätti espanjalaiset. Vargasin suolla voitettiin niukasti 25. heinäkuuta, ja 7. elokuuta 1819 Boyacán sillalla ratkaistiin koko sota kahdessa tunnissa. Varakuningas Juan de Sámano pakeni pääkaupungista. Angosturan kongressi julisti samana vuonna Suur-Kolumbian, joka perustettiin Cúcutan perustuslailla 1821 ja hajosi 1831; siihen kuuluivat nykyiset Kolumbia, Ecuador, Panama ja Venezuela.
+- [Bryssel — kaupunkilehti / Bryssel: Pieni poika, jolla on tuhat asua] Manneken Pis on vain 55,5 senttiä korkea pronssipatsas: alaston poika, joka virtsaa suihkulähteen altaaseen. Kaivo mainitaan jo 1400-luvun puolivälin asiakirjassa, ja nykyisen patsaan veisti brabantilainen kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Poika saa päälleen vaatteita useita kertoja viikossa: pukukokoelmassa on noin tuhat asua, ja niille avattiin oma museo vuonna 2017. Kadun kulmassa seisova patsas on kopio vuodelta 1965, sillä alkuperäinen on Brysselin kaupunginmuseossa.
+- [Yhdysvallat — maalehti / Luonto ja kansallispuistot: Yksikätinen mies soutaa tuntemattomaan] 1869 — Kanjonin nimi hopin kielellä on Öngtupqa, ja pueblokansat ovat pitäneet sitä pyhänä paikkana ja tehneet sinne pyhiinvaelluksia vuosisatoja. Toukokuun 24. päivänä 1869 John Wesley Powell — joka oli menettänyt oikean kätensä sisällissodassa — lähti Green Riveristä yhdeksän miehen ja neljän soutuveneen kanssa alas Coloradojokea. Kesäkuun 7. päivänä koski vei yhden veneen ja kolmasosan muonasta, ja loppumatka soudettiin nälkäannoksilla. Kanjoni, jonka he kartoittivat, on 446 kilometriä pitkä, enimmillään 29 kilometriä leveä ja yli kilometrin syvä.
+
+### 33.1
+KYSYMYS: Millaista oli asua sillalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha London Bridge (tekniikka)
+Tietoruudun teksti: Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria ja yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja alusta asti, koska niiden vuokrat maksoivat sillan kunnossapidon — 1300-luvun lopulla niitä oli 140, ja 1600-luvulla lähes kaikissa oli neljä tai viisi kerrosta. Jokainen talo oli myös kauppa, ja silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Historia: Kaksi tuntia sillalla, kolme maata kartalle] 1819 — Simón Bolívarin armeija ylitti Andit Páramo de Pisban kautta heinäkuussa 1819 — marssi vei miehiltä voimat, mutta yllätti espanjalaiset. Vargasin suolla voitettiin niukasti 25. heinäkuuta, ja 7. elokuuta 1819 Boyacán sillalla ratkaistiin koko sota kahdessa tunnissa. Varakuningas Juan de Sámano pakeni pääkaupungista. Angosturan kongressi julisti samana vuonna Suur-Kolumbian, joka perustettiin Cúcutan perustuslailla 1821 ja hajosi 1831; siihen kuuluivat nykyiset Kolumbia, Ecuador, Panama ja Venezuela.
+- [Bryssel — kaupunkilehti / Bryssel: Pieni poika, jolla on tuhat asua] Manneken Pis on vain 55,5 senttiä korkea pronssipatsas: alaston poika, joka virtsaa suihkulähteen altaaseen. Kaivo mainitaan jo 1400-luvun puolivälin asiakirjassa, ja nykyisen patsaan veisti brabantilainen kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Poika saa päälleen vaatteita useita kertoja viikossa: pukukokoelmassa on noin tuhat asua, ja niille avattiin oma museo vuonna 2017. Kadun kulmassa seisova patsas on kopio vuodelta 1965, sillä alkuperäinen on Brysselin kaupunginmuseossa.
+
+### 33.2
+KYSYMYS: Miksi sillan alitse oli vaarallista soutaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha London Bridge (tekniikka)
+Tietoruudun teksti: Thamesin ylitse rakennettiin 1176 alkaen kivisilta, joka valmistui 1209. Sen aloitti pappi Peter de Colechurch, ja lopputulos oli noin 282 metriä pitkä: yhdeksäntoista pilaria ja yhdeksäntoista kaarta sekä nostosilta. Sillalla oli taloja alusta asti, koska niiden vuokrat maksoivat sillan kunnossapidon — 1300-luvun lopulla niitä oli 140, ja 1600-luvulla lähes kaikissa oli neljä tai viisi kerrosta. Jokainen talo oli myös kauppa, ja silta oli yksi Lontoon tärkeimmistä ostoskaduista. Vuosina 1577–1579 nostosillan torni korvattiin Nonsuch Housella, kaksoistalolla, joka oli aikanaan Lontoon toinen klassisin julkisivu. Talot purettiin 1758–1761 ja koko silta 1831.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yhdysvallat — maalehti / Luonto ja kansallispuistot: Yksikätinen mies soutaa tuntemattomaan] 1869 — Kanjonin nimi hopin kielellä on Öngtupqa, ja pueblokansat ovat pitäneet sitä pyhänä paikkana ja tehneet sinne pyhiinvaelluksia vuosisatoja. Toukokuun 24. päivänä 1869 John Wesley Powell — joka oli menettänyt oikean kätensä sisällissodassa — lähti Green Riveristä yhdeksän miehen ja neljän soutuveneen kanssa alas Coloradojokea. Kesäkuun 7. päivänä koski vei yhden veneen ja kolmasosan muonasta, ja loppumatka soudettiin nälkäannoksilla. Kanjoni, jonka he kartoittivat, on 446 kilometriä pitkä, enimmillään 29 kilometriä leveä ja yli kilometrin syvä.
+- [Sveitsi — maalehti / Vuoret: Juna kulkee vuoren alitse] 2016 — Gotthardin pohjatunneli avattiin 1. kesäkuuta 2016, ja se on 57 kilometriä pitkä — maailman pitkin rautatietunneli. Louhinta kesti seitsemäntoista vuotta, ja paksimmillaan kalliota on tunnelin päällä yli kaksi kilometriä. Vanha rata kiipesi vuoren rinteitä mutkitellen, mutta pohjatunneli menee suoraan ja lähes vaakasuoraan, joten junat kulkevat siellä nopeammin kuin ennen vuoren yli. Kiveä louhittiin niin paljon, että siitä olisi saanut viisi Kheopsin pyramidia.
+- [Lontoo — kaupunkilehti / Historian hetki] Rotherhithen kuilussa 36 miestä kaivoi 1820-luvulla valurautaisen kilven lokeroista savea Thamesin alla, ja uteliaat maksoivat shillingin nähdäkseen, miten joen alitse mennään.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (nosto:lontoon-metro-1863) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron tunnelissa savusi höyryveturi
+Tietoruudun teksti: Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Lontoo: Metron tunnelissa savusi höyryveturi] Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+- [Kimberley — kaupunkilehti / Timanttiryntäys: Syvemmälle maan alle] Kun avolouhoksen seinät alkoivat sortua ja pintavaltaukset kävivät vaarallisiksi, De Beers siirtyi kaivamaan timantteja maan alle pystykuiluja pitkin. 1890-luvulla yhtiön kaivosmiehet työskentelivät jo 900 jalan eli lähes 275 metrin syvyydessä, missä hissikorit ja kiskoilla kulkevat malmivaunut korvasivat vanhat köysi- ja korikuljetukset. Myöhemmin maanalaiset käytävät ulottuivat yli tuhannen metrin syvyyteen asti, kauas alkuperäisen Colesbergin kummun alle. Pinnalta katsottuna kaivos näytti yhä samalta valtavalta kuopalta, mutta sen todellinen laajuus jatkui näkymättömissä moninkertaisesti syvemmälle kuin kukaan pystyi kuopan reunalta arvioimaan.
+
+### 34.1
+KYSYMYS: Miksi rataa lähdettiin ylipäätään kaivamaan maan alle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron tunnelissa savusi höyryveturi
+Tietoruudun teksti: Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kimberley — kaupunkilehti / Timanttiryntäys: Syvemmälle maan alle] Kun avolouhoksen seinät alkoivat sortua ja pintavaltaukset kävivät vaarallisiksi, De Beers siirtyi kaivamaan timantteja maan alle pystykuiluja pitkin. 1890-luvulla yhtiön kaivosmiehet työskentelivät jo 900 jalan eli lähes 275 metrin syvyydessä, missä hissikorit ja kiskoilla kulkevat malmivaunut korvasivat vanhat köysi- ja korikuljetukset. Myöhemmin maanalaiset käytävät ulottuivat yli tuhannen metrin syvyyteen asti, kauas alkuperäisen Colesbergin kummun alle. Pinnalta katsottuna kaivos näytti yhä samalta valtavalta kuopalta, mutta sen todellinen laajuus jatkui näkymättömissä moninkertaisesti syvemmälle kuin kukaan pystyi kuopan reunalta arvioimaan.
+
+### 34.2
+KYSYMYS: Millaista matkustaminen oli puuvaunussa kaasulyhtyjen valossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron tunnelissa savusi höyryveturi
+Tietoruudun teksti: Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 34.3
+KYSYMYS: Miten savu saatiin pois tunnelista ennen sähköveturia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Metron tunnelissa savusi höyryveturi
+Tietoruudun teksti: Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Lontoo: Metron tunnelissa savusi höyryveturi] Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä pronssilaatta, jonka London Transport pystytti sadan vuoden kunniaksi vuonna 1963.
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (nosto:exchange-alleyn-kupla) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Palmas — kaupunkilehti / Marylandin oma tasavalta: John Brown Russwurm, kuvernööri joka uskoi siirtokuntaan] John Brown Russwurm oli vuonna 1826 ensimmäinen afroamerikkalainen, joka valmistui yhdysvaltalaisesta korkeakoulusta, ja vuotta myöhemmin hän oli perustamassa Freedom’s Journalia, ensimmäistä mustien omistamaa sanomalehteä Yhdysvalloissa. Pettyneenä orjuuden vastustajien hitaisiin voittoihin hän muutti itse Liberiaan vuonna 1829 ja nousi vuonna 1836 Marylandin siirtokunnan kuvernööriksi Kap Palmasissa. Viisitoista vuotta kestäneen kautensa aikana hän kannusti maanviljelyä ja kauppaa, ja siirtokunnan väkiluku kasvoi lähelle tuhatta asukasta neljine kirkkoineen ja kuutena kouluineen ennen hänen kuolemaansa virassaan vuonna 1851.
+- [Bergen — kohdekartta / Kohdekartta: Pyhän Yrjänän kirkko] 1706 Bergenin spitaalisairaala mainitaan asiakirjoissa jo 1411, ja sitä pitivät silloin Nonneseterin luostarin nunnat. Sairaalan kappeli palveli aluksi vain potilaita, mutta siitä tuli lopulta oma seurakuntansa Årstadin puolelle, ja sen papit hoitivat myös läheisen kaupunginvankilan, vaivaistalon ja leskikodin. Kirkko paloi sairaalan mukana 1640 ja uudelleen vuoden 1702 suurpalossa; nykyinen vihreä puinen ristikirkko on rakennettu sen jälkeen myöhäisbarokin tapaan, ja nykyasunsa se sai vuosien 1789–90 muutostöissä. Istumapaikkoja on 125. Lääkäri Gerhard Henrik Armauer Hansen palasi Bergeniin 1868 tutkimaan spitaalia Lungegårdin sairaalaan alan tunnetun asiantuntijan Daniel Cornelius Daniels…
+
+### 35.1
+KYSYMYS: Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kap Palmas — kaupunkilehti / Marylandin oma tasavalta: John Brown Russwurm, kuvernööri joka uskoi siirtokuntaan] John Brown Russwurm oli vuonna 1826 ensimmäinen afroamerikkalainen, joka valmistui yhdysvaltalaisesta korkeakoulusta, ja vuotta myöhemmin hän oli perustamassa Freedom’s Journalia, ensimmäistä mustien omistamaa sanomalehteä Yhdysvalloissa. Pettyneenä orjuuden vastustajien hitaisiin voittoihin hän muutti itse Liberiaan vuonna 1829 ja nousi vuonna 1836 Marylandin siirtokunnan kuvernööriksi Kap Palmasissa. Viisitoista vuotta kestäneen kautensa aikana hän kannusti maanviljelyä ja kauppaa, ja siirtokunnan väkiluku kasvoi lähelle tuhatta asukasta neljine kirkkoineen ja kuutena kouluineen ennen hänen kuolemaansa virassaan vuonna 1851.
+
+### 35.2
+KYSYMYS: Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+### 35.3
+KYSYMYS: Mitä kujan kahviloissa tapahtui, kun kurssi kääntyi laskuun?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Pyhän Yrjänän kirkko] 1706 Bergenin spitaalisairaala mainitaan asiakirjoissa jo 1411, ja sitä pitivät silloin Nonneseterin luostarin nunnat. Sairaalan kappeli palveli aluksi vain potilaita, mutta siitä tuli lopulta oma seurakuntansa Årstadin puolelle, ja sen papit hoitivat myös läheisen kaupunginvankilan, vaivaistalon ja leskikodin. Kirkko paloi sairaalan mukana 1640 ja uudelleen vuoden 1702 suurpalossa; nykyinen vihreä puinen ristikirkko on rakennettu sen jälkeen myöhäisbarokin tapaan, ja nykyasunsa se sai vuosien 1789–90 muutostöissä. Istumapaikkoja on 125. Lääkäri Gerhard Henrik Armauer Hansen palasi Bergeniin 1868 tutkimaan spitaalia Lungegårdin sairaalaan alan tunnetun asiantuntijan Daniel Cornelius Daniels…
+- [Tanger — kaupunkilehti / Tanger: Myötäjäisiksi annettu kaupunki] Portugalilaiset epäonnistuivat kolmesti ja ottivat Tangerin lopulta ilman taistelua 28. elokuuta 1471, kun varuskunta pakeni. Kahdensadan vuoden kuluttua kaupunki vaihtoi taas omistajaa ilman laukaustakaan: se luovutettiin 1661 Englannin Kaarle II:lle osana Katariina Braganzalaisen myötäjäisiä, ja englantilaiset ottivat sen haltuunsa tammikuussa 1662. Kaarle kutsui saalistaan kruunun korvaamattomaksi jalokiveksi. Satamaan rakennettiin aallonmurtaja, joka ylsi 1436 jalkaan ja maksoi 340 000 puntaa. Moulay Ismailin piiritys 1678–1680 ei murtanut kaupunkia, mutta parlamentti kyllästyi laskuun: lähtevät joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. helmikuuta 1684.
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

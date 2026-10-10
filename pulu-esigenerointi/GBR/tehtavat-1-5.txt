@@ -1,0 +1,200 @@
+================ KOHTA 21 (kohde:hahmotelma-afternoon-tea) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iltapäivätee (ruoka)
+Tietoruudun teksti: Iltapäivätee eli afternoon tea on ateria, jossa teetä nautitaan kakkujen, sconien ja voileipien kera puolenpäivän ja illallisen välissä. Tapaa pidetään usein herttuatar Anna Russellin, Bedfordin herttuattaren, keksintönä 1830- tai 1840-luvulta: hänen kerrotaan tilanneen huoneeseensa teetä ja pientä purtavaa, koska aristokraattinen illallinen tarjoiltiin vasta kello puoli kahdeksan tai kahdeksan ja iltapäivä tuntui pitkältä ilman ruokaa. Anna Russell toimi kuningatar Viktorian hovineitona, mikä auttoi tavan leviämisessä yläluokan piireissä. Tapa levisi 1860- ja 1870-luvuilla myös keskiluokkaan, ja juuri tähän aikaan iltapäivätee vakiintui osaksi brittiläistä arkea sellaisena kuin se tunnetaan nykyään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Hieno tee on matala tee] Iltapäivätee sai alkunsa nälästä. Yläluokan päivällistä syötiin 1800-luvulla vasta puoli kahdeksan jälkeen, ja Bedfordin herttuatar Anna Russell alkoi noin vuonna 1840 pyytää väliaikaan teetä ja pikkupurtavaa. Tapa levisi seurapiireihin, ja sitä sanotaan myös matalaksi teeksi, koska se juotiin salongin matalien sivupöytien ääressä. Korkea tee eli high tea ei siis ole hienompi vaan päinvastoin: se on työväen kunnon iltaruoka, joka syötiin viiden ja seitsemän välillä korkean ruokapöydän ääressä.
+
+### 21.1
+KYSYMYS: Kenen sanotaan keksineen iltapäiväteen tavan, ja miksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iltapäivätee (ruoka)
+Tietoruudun teksti: Iltapäivätee eli afternoon tea on ateria, jossa teetä nautitaan kakkujen, sconien ja voileipien kera puolenpäivän ja illallisen välissä. Tapaa pidetään usein herttuatar Anna Russellin, Bedfordin herttuattaren, keksintönä 1830- tai 1840-luvulta: hänen kerrotaan tilanneen huoneeseensa teetä ja pientä purtavaa, koska aristokraattinen illallinen tarjoiltiin vasta kello puoli kahdeksan tai kahdeksan ja iltapäivä tuntui pitkältä ilman ruokaa. Anna Russell toimi kuningatar Viktorian hovineitona, mikä auttoi tavan leviämisessä yläluokan piireissä. Tapa levisi 1860- ja 1870-luvuilla myös keskiluokkaan, ja juuri tähän aikaan iltapäivätee vakiintui osaksi brittiläistä arkea sellaisena kuin se tunnetaan nykyään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Hieno tee on matala tee] Iltapäivätee sai alkunsa nälästä. Yläluokan päivällistä syötiin 1800-luvulla vasta puoli kahdeksan jälkeen, ja Bedfordin herttuatar Anna Russell alkoi noin vuonna 1840 pyytää väliaikaan teetä ja pikkupurtavaa. Tapa levisi seurapiireihin, ja sitä sanotaan myös matalaksi teeksi, koska se juotiin salongin matalien sivupöytien ääressä. Korkea tee eli high tea ei siis ole hienompi vaan päinvastoin: se on työväen kunnon iltaruoka, joka syötiin viiden ja seitsemän välillä korkean ruokapöydän ääressä.
+
+### 21.2
+KYSYMYS: Mihin yhteiskuntaluokkaan iltapäivätee levisi 1860–1870-luvuilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Iltapäivätee (ruoka)
+Tietoruudun teksti: Iltapäivätee eli afternoon tea on ateria, jossa teetä nautitaan kakkujen, sconien ja voileipien kera puolenpäivän ja illallisen välissä. Tapaa pidetään usein herttuatar Anna Russellin, Bedfordin herttuattaren, keksintönä 1830- tai 1840-luvulta: hänen kerrotaan tilanneen huoneeseensa teetä ja pientä purtavaa, koska aristokraattinen illallinen tarjoiltiin vasta kello puoli kahdeksan tai kahdeksan ja iltapäivä tuntui pitkältä ilman ruokaa. Anna Russell toimi kuningatar Viktorian hovineitona, mikä auttoi tavan leviämisessä yläluokan piireissä. Tapa levisi 1860- ja 1870-luvuilla myös keskiluokkaan, ja juuri tähän aikaan iltapäivätee vakiintui osaksi brittiläistä arkea sellaisena kuin se tunnetaan nykyään.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-haggis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Haggis (ruoka)
+Tietoruudun teksti: Haggis on skotlantilainen makkarapata, joka valmistetaan lampaan sisäelimistä, sipulista, kaurasuurimoista, munuaisrasvasta ja mausteista sekoitettuna lihalientä, ja perinteisesti se kypsennetään eläimen omassa mahalaukussa. Ensimmäiset kirjatut reseptit ovat 1400-luvulta Englannista, mutta nykyisenkaltainen resepti vakiintui Skotlannissa, ja siitä tuli maan kansallisruoka erityisesti runoilija Robert Burnsin vuonna 1786 kirjoittaman runon Address to a Haggis ansiosta. Burns syntyi Ayrshiren Allowayssa savi- ja olkikattoisessa mökissä, joka on nykyään osa Robert Burns Birthplace Museumia. Haggista tarjoillaan perinteisesti neeps and tatties -lantun ja perunasoseen sekä viskiryypyn kanssa, varsinkin tammikuisissa Burns Supper -illallisissa, joita vietetään joka vuosi runoilijan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Haggis, lanttu ja peruna] 1786 — Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja mausteista tehty makkara, joka keitetään perinteisesti lampaan mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi joka 25. tammikuuta istutaan Burns-illalliselle: makkara kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.
+
+### 22.1
+KYSYMYS: Minkä runon ansiosta haggiksesta tuli Skotlannin kansallisruoka?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Haggis (ruoka)
+Tietoruudun teksti: Haggis on skotlantilainen makkarapata, joka valmistetaan lampaan sisäelimistä, sipulista, kaurasuurimoista, munuaisrasvasta ja mausteista sekoitettuna lihalientä, ja perinteisesti se kypsennetään eläimen omassa mahalaukussa. Ensimmäiset kirjatut reseptit ovat 1400-luvulta Englannista, mutta nykyisenkaltainen resepti vakiintui Skotlannissa, ja siitä tuli maan kansallisruoka erityisesti runoilija Robert Burnsin vuonna 1786 kirjoittaman runon Address to a Haggis ansiosta. Burns syntyi Ayrshiren Allowayssa savi- ja olkikattoisessa mökissä, joka on nykyään osa Robert Burns Birthplace Museumia. Haggista tarjoillaan perinteisesti neeps and tatties -lantun ja perunasoseen sekä viskiryypyn kanssa, varsinkin tammikuisissa Burns Supper -illallisissa, joita vietetään joka vuosi runoilijan kunniaksi.
+
+### 22.2
+KYSYMYS: Missä Robert Burns syntyi, ja mikä paikka se on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Haggis (ruoka)
+Tietoruudun teksti: Haggis on skotlantilainen makkarapata, joka valmistetaan lampaan sisäelimistä, sipulista, kaurasuurimoista, munuaisrasvasta ja mausteista sekoitettuna lihalientä, ja perinteisesti se kypsennetään eläimen omassa mahalaukussa. Ensimmäiset kirjatut reseptit ovat 1400-luvulta Englannista, mutta nykyisenkaltainen resepti vakiintui Skotlannissa, ja siitä tuli maan kansallisruoka erityisesti runoilija Robert Burnsin vuonna 1786 kirjoittaman runon Address to a Haggis ansiosta. Burns syntyi Ayrshiren Allowayssa savi- ja olkikattoisessa mökissä, joka on nykyään osa Robert Burns Birthplace Museumia. Haggista tarjoillaan perinteisesti neeps and tatties -lantun ja perunasoseen sekä viskiryypyn kanssa, varsinkin tammikuisissa Burns Supper -illallisissa, joita vietetään joka vuosi runoilijan kunniaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Haggis, lanttu ja peruna] 1786 — Haggis on lampaan sisäelimistä, kaurasuurimoista, sipulista ja mausteista tehty makkara, joka keitetään perinteisesti lampaan mahassa. Se syödään lantun ja perunan kanssa. Runoilija Robert Burns kirjoitti haggisille oman runon vuonna 1786, ja siksi joka 25. tammikuuta istutaan Burns-illalliselle: makkara kannetaan pöytään säkkipillin soidessa, runo luetaan ääneen ja puukko työnnetään makkaraan juuri oikeassa kohdassa runoa.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-stockton-darlington) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stockton ja Darlingtonin rautatie (tekniikka)
+Tietoruudun teksti: Stockton ja Darlingtonin rautatie oli maailman ensimmäinen yleinen rautatie, jolla käytettiin höyryvetureita, ja se avattiin virallisesti 27. syyskuuta 1825 Koillis-Englannissa. Linja yhdisti Shildonin lähellä sijainneet hiilikaivokset Darlingtoniin ja Stocktoniin, ja hiilen kuljetus laivoihin muuttui nopeasti tuottoisaksi liiketoiminnaksi. Avajaisjunaa veti George ja Robert Stephensonin rakentama veturi Locomotion No. 1:n, joka oli tilattu vuonna 1824 hintaan 550 puntaa; se oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Rautatien avaamisen 50-vuotisjuhlaa vietettiin vuonna 1875, ja avajaiset vahvistivat höyryrautateiden tehokkuuden koko maailmalle.
+
+### 23.1
+KYSYMYS: Minä päivänä Stockton ja Darlingtonin rautatie avattiin, ja mikä veturi veti avajaisjunaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stockton ja Darlingtonin rautatie (tekniikka)
+Tietoruudun teksti: Stockton ja Darlingtonin rautatie oli maailman ensimmäinen yleinen rautatie, jolla käytettiin höyryvetureita, ja se avattiin virallisesti 27. syyskuuta 1825 Koillis-Englannissa. Linja yhdisti Shildonin lähellä sijainneet hiilikaivokset Darlingtoniin ja Stocktoniin, ja hiilen kuljetus laivoihin muuttui nopeasti tuottoisaksi liiketoiminnaksi. Avajaisjunaa veti George ja Robert Stephensonin rakentama veturi Locomotion No. 1:n, joka oli tilattu vuonna 1824 hintaan 550 puntaa; se oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Rautatien avaamisen 50-vuotisjuhlaa vietettiin vuonna 1875, ja avajaiset vahvistivat höyryrautateiden tehokkuuden koko maailmalle.
+
+### 23.2
+KYSYMYS: Mitä hiilelle tapahtui, kun se saatiin kuljetettua rautateitse satamaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stockton ja Darlingtonin rautatie (tekniikka)
+Tietoruudun teksti: Stockton ja Darlingtonin rautatie oli maailman ensimmäinen yleinen rautatie, jolla käytettiin höyryvetureita, ja se avattiin virallisesti 27. syyskuuta 1825 Koillis-Englannissa. Linja yhdisti Shildonin lähellä sijainneet hiilikaivokset Darlingtoniin ja Stocktoniin, ja hiilen kuljetus laivoihin muuttui nopeasti tuottoisaksi liiketoiminnaksi. Avajaisjunaa veti George ja Robert Stephensonin rakentama veturi Locomotion No. 1:n, joka oli tilattu vuonna 1824 hintaan 550 puntaa; se oli ensimmäinen höyryveturi, joka veti matkustajajunaa yleisellä rautatiellä. Rautatien avaamisen 50-vuotisjuhlaa vietettiin vuonna 1875, ja avajaiset vahvistivat höyryrautateiden tehokkuuden koko maailmalle.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-watt-soho) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sohon manufaktuuri (tekniikka)
+Tietoruudun teksti: Sohon manufaktuuri oli Birminghamin Sohossa toiminut tehdas, joka oli teollisen vallankumouksen alkuaikoina edelläkävijä liukuhihnamaisessa sarjatuotannossa. Matthew Boulton ja hänen liikekumppaninsa vuokrasivat tontin 1760-luvun alussa, ja uusi tehdasrakennus valmistui 1766; siellä valmistettiin muun muassa nappeja, solkia ja japannilaistyylisiä koriste-esineitä sekä myöhemmin hopeaesineitä. Vuonna 1782 tehtaaseen asennettiin ensimmäinen James Wattin suunnittelema höyrykone, jossa oli niin kutsuttu aurinko- ja planeettavaihde, ja paikalla toimi myös maailman ensimmäinen höyryvoimalla käyvä rahapaja. Boulton ja Watt kehittivät tehtaalla yhdessä höyrykoneen, joka mullisti teollisuuden voimanlähteet, mutta itse manufaktuurirakennus purettiin jo vuonna 1853.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Novosibirsk — kaupunkilehti / Historia: Yksi jänne jäi seisomaan rannalle] Sillan suunnitteli professori Nikolai Beleljubski, ja se rakennettiin vuosina 1893–1897. Siinä oli yhdeksän jännettä — seitsemän viidenkymmenen ja kaksi kymmenen sylen mittaista — ja pituutta 372,5 syltä eli noin 795 metriä. Kannattimina olivat puoliparaboliset ristikot, joiden teräsosat painoivat yhteensä 4 423 tonnia ja valmistettiin Uralilla Votkinskin tehtaalla. Vuonna 1896 silta koekuormitettiin ajamalla sen yli neljällä veturilla, ja 31. maaliskuuta 1897 se avattiin liikenteelle. Vanhan sillan liikenne loppui 1991 ja purkaminen alkoi 2000. Yksi jänteistä säästettiin museoesineeksi rantapuistoon, jonka nimi on Gorodskoje natšalo.
+
+### 24.1
+KYSYMYS: Ketkä kaksi miestä kehittivät Sohon manufaktuurilla mullistavan höyrykoneen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sohon manufaktuuri (tekniikka)
+Tietoruudun teksti: Sohon manufaktuuri oli Birminghamin Sohossa toiminut tehdas, joka oli teollisen vallankumouksen alkuaikoina edelläkävijä liukuhihnamaisessa sarjatuotannossa. Matthew Boulton ja hänen liikekumppaninsa vuokrasivat tontin 1760-luvun alussa, ja uusi tehdasrakennus valmistui 1766; siellä valmistettiin muun muassa nappeja, solkia ja japannilaistyylisiä koriste-esineitä sekä myöhemmin hopeaesineitä. Vuonna 1782 tehtaaseen asennettiin ensimmäinen James Wattin suunnittelema höyrykone, jossa oli niin kutsuttu aurinko- ja planeettavaihde, ja paikalla toimi myös maailman ensimmäinen höyryvoimalla käyvä rahapaja. Boulton ja Watt kehittivät tehtaalla yhdessä höyrykoneen, joka mullisti teollisuuden voimanlähteet, mutta itse manufaktuurirakennus purettiin jo vuonna 1853.
+
+### 24.2
+KYSYMYS: Mitä tehtaalla valmistettiin höyrykoneiden lisäksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sohon manufaktuuri (tekniikka)
+Tietoruudun teksti: Sohon manufaktuuri oli Birminghamin Sohossa toiminut tehdas, joka oli teollisen vallankumouksen alkuaikoina edelläkävijä liukuhihnamaisessa sarjatuotannossa. Matthew Boulton ja hänen liikekumppaninsa vuokrasivat tontin 1760-luvun alussa, ja uusi tehdasrakennus valmistui 1766; siellä valmistettiin muun muassa nappeja, solkia ja japannilaistyylisiä koriste-esineitä sekä myöhemmin hopeaesineitä. Vuonna 1782 tehtaaseen asennettiin ensimmäinen James Wattin suunnittelema höyrykone, jossa oli niin kutsuttu aurinko- ja planeettavaihde, ja paikalla toimi myös maailman ensimmäinen höyryvoimalla käyvä rahapaja. Boulton ja Watt kehittivät tehtaalla yhdessä höyrykoneen, joka mullisti teollisuuden voimanlähteet, mutta itse manufaktuurirakennus purettiin jo vuonna 1853.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Novosibirsk — kaupunkilehti / Historia: Yksi jänne jäi seisomaan rannalle] Sillan suunnitteli professori Nikolai Beleljubski, ja se rakennettiin vuosina 1893–1897. Siinä oli yhdeksän jännettä — seitsemän viidenkymmenen ja kaksi kymmenen sylen mittaista — ja pituutta 372,5 syltä eli noin 795 metriä. Kannattimina olivat puoliparaboliset ristikot, joiden teräsosat painoivat yhteensä 4 423 tonnia ja valmistettiin Uralilla Votkinskin tehtaalla. Vuonna 1896 silta koekuormitettiin ajamalla sen yli neljällä veturilla, ja 31. maaliskuuta 1897 se avattiin liikenteelle. Vanhan sillan liikenne loppui 1991 ja purkaminen alkoi 2000. Yksi jänteistä säästettiin museoesineeksi rantapuistoon, jonka nimi on Gorodskoje natšalo.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-isle-of-skye) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cuillin, Skye (luonto · saari)
+Tietoruudun teksti: Cuillin on Skyen saarella sijaitseva jylhien, kivisten vuorten jono, joka jakautuu tummempaan Mustaan Cuilliniin ja itäisempään, pyöreämpään Punaiseen Cuilliniin. Mustan Cuillinin huiput koostuvat karkeasta gabrosta, joka tarjoaa kiipeilijöille erinomaisen pidon, kun taas Punainen Cuillin on graniittia ja siksi loivempaa ja kasvipeitteisempää. Vuoriston korkein huippu, ja samalla koko Skyen korkein kohta, on Sgùrr Alasdair, 992 metriä merenpinnasta, ja pääharjanne kaartuu noin 14 kilometrin matkalla Loch Coruiskin ympärillä. Cuillinin jylhä kauneus on tehnyt siitä yhden Skotlannin tunnetuimmista maisemista, ja se on nimetty kansalliseksi maisema-alueeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / Riutat, kalliot ja sademetsä: Cabo Brancon punainen kalliojyrkänne] Kaupungin eteläreunalla meri on kaivertanut lähes 40 metriä korkean kalliojyrkänteen, jonka punaruskeat kerrostumat kuuluvat niin sanottuun Barreiras-muodostumaan – hiekka- ja savikivikerroksiin, jotka ovat huuhtoutuneet mantereen vanhoista kivilajeista miljoonien vuosien aikana. Kerrostumat ovat pehmeitä ja sortuvat helposti, joten jyrkänne syö itseään taaksepäin: rantaan on aseteltu suuria lohkareita hidastamaan sortumia ja suojaamaan rannan tuntumassa kulkevaa tietä. Jyrkänteen päällä kohoaa Oscar Niemeyerin suunnittelema valkoinen tiedekeskus, ja sen tuntumassa sijaitsee koko Amerikan mantereen itäisin kärki, josta avautuu näkymä turkoosiin mereen.
+
+### 25.1
+KYSYMYS: Mistä kivilajeista Musta ja Punainen Cuillin koostuvat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cuillin, Skye (luonto · saari)
+Tietoruudun teksti: Cuillin on Skyen saarella sijaitseva jylhien, kivisten vuorten jono, joka jakautuu tummempaan Mustaan Cuilliniin ja itäisempään, pyöreämpään Punaiseen Cuilliniin. Mustan Cuillinin huiput koostuvat karkeasta gabrosta, joka tarjoaa kiipeilijöille erinomaisen pidon, kun taas Punainen Cuillin on graniittia ja siksi loivempaa ja kasvipeitteisempää. Vuoriston korkein huippu, ja samalla koko Skyen korkein kohta, on Sgùrr Alasdair, 992 metriä merenpinnasta, ja pääharjanne kaartuu noin 14 kilometrin matkalla Loch Coruiskin ympärillä. Cuillinin jylhä kauneus on tehnyt siitä yhden Skotlannin tunnetuimmista maisemista, ja se on nimetty kansalliseksi maisema-alueeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [João Pessoa — kaupunkilehti / Riutat, kalliot ja sademetsä: Cabo Brancon punainen kalliojyrkänne] Kaupungin eteläreunalla meri on kaivertanut lähes 40 metriä korkean kalliojyrkänteen, jonka punaruskeat kerrostumat kuuluvat niin sanottuun Barreiras-muodostumaan – hiekka- ja savikivikerroksiin, jotka ovat huuhtoutuneet mantereen vanhoista kivilajeista miljoonien vuosien aikana. Kerrostumat ovat pehmeitä ja sortuvat helposti, joten jyrkänne syö itseään taaksepäin: rantaan on aseteltu suuria lohkareita hidastamaan sortumia ja suojaamaan rannan tuntumassa kulkevaa tietä. Jyrkänteen päällä kohoaa Oscar Niemeyerin suunnittelema valkoinen tiedekeskus, ja sen tuntumassa sijaitsee koko Amerikan mantereen itäisin kärki, josta avautuu näkymä turkoosiin mereen.
+
+### 25.2
+KYSYMYS: Mikä on Cuillinin ja koko Skyen korkein huippu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cuillin, Skye (luonto · saari)
+Tietoruudun teksti: Cuillin on Skyen saarella sijaitseva jylhien, kivisten vuorten jono, joka jakautuu tummempaan Mustaan Cuilliniin ja itäisempään, pyöreämpään Punaiseen Cuilliniin. Mustan Cuillinin huiput koostuvat karkeasta gabrosta, joka tarjoaa kiipeilijöille erinomaisen pidon, kun taas Punainen Cuillin on graniittia ja siksi loivempaa ja kasvipeitteisempää. Vuoriston korkein huippu, ja samalla koko Skyen korkein kohta, on Sgùrr Alasdair, 992 metriä merenpinnasta, ja pääharjanne kaartuu noin 14 kilometrin matkalla Loch Coruiskin ympärillä. Cuillinin jylhä kauneus on tehnyt siitä yhden Skotlannin tunnetuimmista maisemista, ja se on nimetty kansalliseksi maisema-alueeksi.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

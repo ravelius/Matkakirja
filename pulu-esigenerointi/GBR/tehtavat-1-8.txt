@@ -1,0 +1,319 @@
+================ KOHTA 36 (nosto:canaletto-lontoossa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+- [Bolivia — maalehti / Kuvataide: Enkelit, joilla on musketti ja pitsikaulus] 1700-luku — Calamarcan kirkossa La Pazin departementissa on kaksi enkelisarjaa 1700-luvun alkupuolelta. Tekijä tunnetaan Calamarcan mestarina, ja hänen nimensä oli José López de los Ríos. Ensimmäisen sarjan enkelit ovat ángeles arcabuceros, hovipukuisia sotilaita tuliase kädessä, ja jokaisen nimi on kirjoitettu maalauksen alareunaan; ne ovat koko tyylilajin tunnetuimmat esimerkit. Toisen sarjan enkelit ovat androgyynejä: viitta liehuu, jalassa ovat roomalaiset sotilassaappaat ja kädessä esine, joka kertoo, kuka Palermon seitsemästä arkkienkelistä on kyseessä.
+
+### 36.1
+KYSYMYS: Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+
+### 36.2
+KYSYMYS: Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bolivia — maalehti / Kuvataide: Enkelit, joilla on musketti ja pitsikaulus] 1700-luku — Calamarcan kirkossa La Pazin departementissa on kaksi enkelisarjaa 1700-luvun alkupuolelta. Tekijä tunnetaan Calamarcan mestarina, ja hänen nimensä oli José López de los Ríos. Ensimmäisen sarjan enkelit ovat ángeles arcabuceros, hovipukuisia sotilaita tuliase kädessä, ja jokaisen nimi on kirjoitettu maalauksen alareunaan; ne ovat koko tyylilajin tunnetuimmat esimerkit. Toisen sarjan enkelit ovat androgyynejä: viitta liehuu, jalassa ovat roomalaiset sotilassaappaat ja kädessä esine, joka kertoo, kuka Palermon seitsemästä arkkienkelistä on kyseessä.
+
+### 36.3
+KYSYMYS: Miten venetsialaisen katse erosi lontoolaisten omasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (nosto:the-george-pubi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Dickensin pubi] The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+- [Darwin — kohdekartta / Kohdekartta: Star-teatteri] 1929 Star oli Darwinin ensimmäinen varta vasten rakennettu elokuvateatteri, ja sen rakensi 1920-luvulla darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali oli osittain ulkoilmateatteri: katto ulottui vain takarivien ja parven yli, ja Snell oli käynyt opiskelemassa kattorakennetta Englannissa. Näyttämö oli pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden tieltä, ja lattia valettiin betonista rullaluistelua ja tansseja varten. Paikkoja oli 860. Talo avattiin 14. syyskuuta 1929 elokuvalla The Cat and the Canary. Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja työväki ja aboriginaalit istuivat alakerrassa; aboriginaalit tarvitsivat lisäksi suojeluviranomaisen luvan rikko…
+
+### 37.1
+KYSYMYS: Miltä näytelmän katsominen majatalon parvelta tuntui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Star-teatteri] 1929 Star oli Darwinin ensimmäinen varta vasten rakennettu elokuvateatteri, ja sen rakensi 1920-luvulla darwinilaisen Harold Snellin yhtiö Snell and Gordon. Sali oli osittain ulkoilmateatteri: katto ulottui vain takarivien ja parven yli, ja Snell oli käynyt opiskelemassa kattorakennetta Englannissa. Näyttämö oli pyörien päällä, jotta sen sai siirtää nyrkkeilyotteluiden tieltä, ja lattia valettiin betonista rullaluistelua ja tansseja varten. Paikkoja oli 860. Talo avattiin 14. syyskuuta 1929 elokuvalla The Cat and the Canary. Sali oli jaettu. Parvi kuului kaupungin hienostolle, ja työväki ja aboriginaalit istuivat alakerrassa; aboriginaalit tarvitsivat lisäksi suojeluviranomaisen luvan rikko…
+
+### 37.2
+KYSYMYS: Miksi juuri The George säilyi, kun muut parvekemajatalot katosivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: Prince of Walesin museo] peruskivi 1905, avattu 1922 Vuonna 1904 joukko kaupungin vaikuttajia päätti pystyttää museon Walesin prinssin — tulevan kuningas Yrjö V:n — vierailun muistoksi. Peruskiven laski prinssi itse 11. marraskuuta 1905, ja laitos sai nimen Prince of Wales Museum of Western India. Rahat tulivat vierailun muistorahastosta sekä hallinnon, kaupungin ja yksityisten lahjoituksista; museo perustettiin lailla 1909. Rakennuksen suunnitteli George Wittet, sama arkkitehti kuin Gateway of Indian. Tyyli on indosaraseeninen: keskellä on valkosinisin laatoin katettu kupoli, jonka esikuva on Golcondan linnassa, ja sisällä holvikaaret Bijapurin Gol Gumbazin mukaan. Sisätiloissa on 1700-luvun maratalaistalon pylväi…
+
+### 37.3
+KYSYMYS: Mitä Pikku Dorrit kertoo pubista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Dickensin pubi] The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (nosto:abbey-roadin-suojatie) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+
+### 38.1
+KYSYMYS: Miksi juuri tästä suojatiestä tuli maailman kuuluisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+
+### 38.2
+KYSYMYS: Millaista kadulla on, kun turistit jonottavat ylitystä ja autot odottavat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+
+### 38.3
+KYSYMYS: Mitä taustan studiossa äänitetään nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (nosto:leake-streetin-tunneli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+- [Uruguay — maalehti / Kuvataide: Kaupungin ääni väripintoina] 1890–1929 — Rafael Barradas lähti Montevideosta Eurooppaan 1913 ja päätyi Espanjaan, jossa hän kehitti oman suuntansa: vibracionismo. Ajatuksena oli maalata se, miltä kaupunki tuntuu kerralla — raitiovaunun kolina, mainoskyltti, ohikulkijan hattu ja kellotaulu samassa kuvassa päällekkäisinä väripintoina. Barradas kuvitti kirjoja ja suunnitteli lavasteita, ja hänen ateljeessaan kävivät espanjalaiset runoilijat. Hän palasi Montevideoon sairaana ja kuoli 38-vuotiaana, mutta ehti vaikuttaa kokonaiseen sukupolveen.
+
+### 39.1
+KYSYMYS: Miksi juuri tässä tunnelissa maalaaminen sallittiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+
+### 39.2
+KYSYMYS: Miltä tuntuu maalata teos, joka voi kadota samana iltana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uruguay — maalehti / Kuvataide: Kaupungin ääni väripintoina] 1890–1929 — Rafael Barradas lähti Montevideosta Eurooppaan 1913 ja päätyi Espanjaan, jossa hän kehitti oman suuntansa: vibracionismo. Ajatuksena oli maalata se, miltä kaupunki tuntuu kerralla — raitiovaunun kolina, mainoskyltti, ohikulkijan hattu ja kellotaulu samassa kuvassa päällekkäisinä väripintoina. Barradas kuvitti kirjoja ja suunnitteli lavasteita, ja hänen ateljeessaan kävivät espanjalaiset runoilijat. Hän palasi Montevideoon sairaana ja kuoli 38-vuotiaana, mutta ehti vaikuttaa kokonaiseen sukupolveen.
+
+### 39.3
+KYSYMYS: Mikä Cans Festival oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (nosto:neljas-jalusta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Neljäs jalusta] Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+- [Hobart — kaupunkilehti / Luonto: Vuori jolla on kaksi nimeä] Alueen alkuperäiskansan kielessä vuori on kunanyi; muistiin on kirjattu myös nimet ungyhaletta ja poorawetter. Eurooppalaiset kokeilivat vuorotellen nimiä Skiddaw ja Table Mountain, kunnes se nimettiin 1832 Wellingtonin herttuan mukaan. Charles Darwin kiipesi huipulle helmikuussa 1836 ja kutsui eukalyptusmetsää jaloksi; kosteissa rotkoissa hän näki puusaniaisen, joka oli vähintään kuusi metriä korkea ja jonka lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna 2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount Wellington oli ensimmäisiä.
+
+### 40.1
+KYSYMYS: Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kaupunkilehti / Luonto: Vuori jolla on kaksi nimeä] Alueen alkuperäiskansan kielessä vuori on kunanyi; muistiin on kirjattu myös nimet ungyhaletta ja poorawetter. Eurooppalaiset kokeilivat vuorotellen nimiä Skiddaw ja Table Mountain, kunnes se nimettiin 1832 Wellingtonin herttuan mukaan. Charles Darwin kiipesi huipulle helmikuussa 1836 ja kutsui eukalyptusmetsää jaloksi; kosteissa rotkoissa hän näki puusaniaisen, joka oli vähintään kuusi metriä korkea ja jonka lehvät tekivät varjon "kuin yön ensimmäisellä tunnilla". Vuonna 2013 Tasmania otti käyttöön kaksoisnimet, ja kunanyi / Mount Wellington oli ensimmäisiä.
+
+### 40.2
+KYSYMYS: Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Neljäs jalusta] Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+
+### 40.3
+KYSYMYS: Kuka valitsee jalustan seuraavan teoksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Inatsisartut] 1979 Inatsisartut tarkoittaa niitä, jotka tekevät lain. Se on Grönlannin yksikamarinen parlamentti, ja se aloitti 1. toukokuuta 1979 maaneuvoston seuraajana — samana päivänä, jona Godthåb sai takaisin nimen Nuuk. Rakennus on omalla luodollaan keskustan reunassa. Parlamentissa on 31 jäsentä, jotka valitaan neljäksi vuodeksi suhteellisella vaalitavalla. Se valitsee pääministerin, joka puolestaan nimittää hallituksen Naalakkersuisutin jäsenet parlamentin hyväksynnällä. Parlamentti voi erottaa hallituksen tai yksittäisen ministerin epäluottamusäänestyksellä, ja pääministeri voi hajottaa parlamentin ennenaikaisilla vaaleilla. Puhemiehistöön kuuluu puhemies ja neljä varapuhemiestä, jotka kaikki v…
+- [Doha — kaupunkilehti / Ruoka: Torin halutuin kala vaihtaa sukupuolta] Hamour on Persianlahden nimi meriahvenille, ja se on Dohan kalatorin halutuin kala. Myynnissä olevat yksilöt ovat useimmiten nuoria ja pilkukkaita: ostaja valitsee kalan laatikosta, ja se punnitaan ja perataan siinä samassa. Täysikasvuinen hamour voi kasvaa 120 senttimetriä pitkäksi ja painaa viisitoista kiloa. Laji aloittaa elämänsä usein naaraana ja vaihtaa koiraaksi vasta noin 67 senttimetrin mitassa ja seitsemän ja puolen vuoden iässä. Kutuaika osuu lahdella maaliskuun ja kesäkuun väliin, ja pyynti on ollut niin kovaa, että isot yksilöt ovat käyneet harvinaisiksi.
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

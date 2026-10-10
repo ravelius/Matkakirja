@@ -1,0 +1,204 @@
+================ KOHTA 16 (kohde:hahmotelma-geevor-tin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geevorin tinakaivos (tekniikka)
+Tietoruudun teksti: Geevorin tinakaivos sijaitsee Cornwallin länsiosassa Pendeenin ja Trewellardin kylien välissä, alueella jossa tinaa ja kuparia on louhittu 1700-luvun lopulta lähtien. Alkujaan Wheal an Giveriksi kutsuttua kaivosta työstettiin 1800-luvulla nimillä East ja North Levant Mine, ja 1880-luvulla siellä työskenteli parhaimmillaan lähes 180 louhijaa ennen kuin North Levant suljettiin vuonna 1891. Nykyinen Geevor Tin Mines -yhtiö perustettiin vasta 1911, ja kaivos toimi aina vuoteen 1990 asti, jolloin se oli yksi viimeisistä toimivista tinakaivoksista Cornwallissa. Alue on nykyään museo ja osa Cornwallin ja Länsi-Devonin kaivosmaiseman maailmanperintökohdetta.
+
+### 16.1
+KYSYMYS: Millä nimillä Geevorin aluetta louhittiin ennen nykyistä kaivosyhtiötä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geevorin tinakaivos (tekniikka)
+Tietoruudun teksti: Geevorin tinakaivos sijaitsee Cornwallin länsiosassa Pendeenin ja Trewellardin kylien välissä, alueella jossa tinaa ja kuparia on louhittu 1700-luvun lopulta lähtien. Alkujaan Wheal an Giveriksi kutsuttua kaivosta työstettiin 1800-luvulla nimillä East ja North Levant Mine, ja 1880-luvulla siellä työskenteli parhaimmillaan lähes 180 louhijaa ennen kuin North Levant suljettiin vuonna 1891. Nykyinen Geevor Tin Mines -yhtiö perustettiin vasta 1911, ja kaivos toimi aina vuoteen 1990 asti, jolloin se oli yksi viimeisistä toimivista tinakaivoksista Cornwallissa. Alue on nykyään museo ja osa Cornwallin ja Länsi-Devonin kaivosmaiseman maailmanperintökohdetta.
+
+### 16.2
+KYSYMYS: Mihin maailmanperintökohteeseen Geevorin kaivos kuuluu nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geevorin tinakaivos (tekniikka)
+Tietoruudun teksti: Geevorin tinakaivos sijaitsee Cornwallin länsiosassa Pendeenin ja Trewellardin kylien välissä, alueella jossa tinaa ja kuparia on louhittu 1700-luvun lopulta lähtien. Alkujaan Wheal an Giveriksi kutsuttua kaivosta työstettiin 1800-luvulla nimillä East ja North Levant Mine, ja 1880-luvulla siellä työskenteli parhaimmillaan lähes 180 louhijaa ennen kuin North Levant suljettiin vuonna 1891. Nykyinen Geevor Tin Mines -yhtiö perustettiin vasta 1911, ja kaivos toimi aina vuoteen 1990 asti, jolloin se oli yksi viimeisistä toimivista tinakaivoksista Cornwallissa. Alue on nykyään museo ja osa Cornwallin ja Länsi-Devonin kaivosmaiseman maailmanperintökohdetta.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-quarry-bank-mill) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quarry Bank Mill (tekniikka)
+Tietoruudun teksti: Quarry Bank Mill on Cheshiren Stylissä sijaitseva puuvillatehdas, yksi Britannian parhaiten säilyneistä teollisen vallankumouksen ajan tekstiilitehtaista. Samuel Greg perusti tehtaan vuonna 1784 Bollin-joen rannalle hyödyntäen joen vesivoimaa, ja hänen eläköityessään 1832 laitoksesta oli tullut maan suurin puuvillanjalostamo. Greg rakensi tehtaan ympärille myös työläisilleen kokonaisen kylän, Styal Estaten, ja vaimonsa Hannah Lightbodyn ansiosta perhe suhtautui työntekijöihin tavanomaista huolehtivammin tarjoten muun muassa terveydenhoitoa. Työpäivät olivat silti pitkiä, noin 72 tuntia viikossa, kunnes uusi laki lyhensi työaikaa vuonna 1847.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kaupunkilehti / Vancouver: Tukeista kontteihin] Hastings Millin lankut lähtivät maailmalle purjelaivoilla, ja samasta lahdesta kulkee nykyään noin 141 miljoonaa tonnia rahtia ja 3,5 miljoonaa konttia vuodessa. Vancouverin satama on Kanadan suurin ja tonnimäärällä mitattuna Pohjois-Amerikan neljänneksi suurin, ja se käy kauppaa yli 170 talouden kanssa. Satamaa hallinnoi Vancouver Fraser Port Authority, joka syntyi 2008 kolmen erillisen satamaviranomaisen yhdistyessä; laitureita on 57 ja suuria terminaaleja 27, ja satama-alue ulottuu 350 kilometrin matkalle rannikkoa. Liikenne suuntautuu erityisesti Tyynenmeren yli Aasiaan.
+
+### 17.1
+KYSYMYS: Kuka perusti Quarry Bank Millin ja minä vuonna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quarry Bank Mill (tekniikka)
+Tietoruudun teksti: Quarry Bank Mill on Cheshiren Stylissä sijaitseva puuvillatehdas, yksi Britannian parhaiten säilyneistä teollisen vallankumouksen ajan tekstiilitehtaista. Samuel Greg perusti tehtaan vuonna 1784 Bollin-joen rannalle hyödyntäen joen vesivoimaa, ja hänen eläköityessään 1832 laitoksesta oli tullut maan suurin puuvillanjalostamo. Greg rakensi tehtaan ympärille myös työläisilleen kokonaisen kylän, Styal Estaten, ja vaimonsa Hannah Lightbodyn ansiosta perhe suhtautui työntekijöihin tavanomaista huolehtivammin tarjoten muun muassa terveydenhoitoa. Työpäivät olivat silti pitkiä, noin 72 tuntia viikossa, kunnes uusi laki lyhensi työaikaa vuonna 1847.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kaupunkilehti / Vancouver: Tukeista kontteihin] Hastings Millin lankut lähtivät maailmalle purjelaivoilla, ja samasta lahdesta kulkee nykyään noin 141 miljoonaa tonnia rahtia ja 3,5 miljoonaa konttia vuodessa. Vancouverin satama on Kanadan suurin ja tonnimäärällä mitattuna Pohjois-Amerikan neljänneksi suurin, ja se käy kauppaa yli 170 talouden kanssa. Satamaa hallinnoi Vancouver Fraser Port Authority, joka syntyi 2008 kolmen erillisen satamaviranomaisen yhdistyessä; laitureita on 57 ja suuria terminaaleja 27, ja satama-alue ulottuu 350 kilometrin matkalle rannikkoa. Liikenne suuntautuu erityisesti Tyynenmeren yli Aasiaan.
+
+### 17.2
+KYSYMYS: Mikä laki lyhensi tehtaan työntekijöiden työaikaa vuonna 1847?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Quarry Bank Mill (tekniikka)
+Tietoruudun teksti: Quarry Bank Mill on Cheshiren Stylissä sijaitseva puuvillatehdas, yksi Britannian parhaiten säilyneistä teollisen vallankumouksen ajan tekstiilitehtaista. Samuel Greg perusti tehtaan vuonna 1784 Bollin-joen rannalle hyödyntäen joen vesivoimaa, ja hänen eläköityessään 1832 laitoksesta oli tullut maan suurin puuvillanjalostamo. Greg rakensi tehtaan ympärille myös työläisilleen kokonaisen kylän, Styal Estaten, ja vaimonsa Hannah Lightbodyn ansiosta perhe suhtautui työntekijöihin tavanomaista huolehtivammin tarjoten muun muassa terveydenhoitoa. Työpäivät olivat silti pitkiä, noin 72 tuntia viikossa, kunnes uusi laki lyhensi työaikaa vuonna 1847.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-liverpool-docks) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albert Dock, Liverpool (merenkulku)
+Tietoruudun teksti: Albert Dock on Liverpoolin satama- ja varastorakennusten kokonaisuus, jonka suunnittelivat Jesse Hartley ja Philip Hardwick ja joka avattiin vuonna 1846. Se oli ensimmäinen rakennus Isossa-Britanniassa, joka tehtiin valuraudasta, tiilestä ja kivestä ilman puuta kantavissa rakenteissa, minkä ansiosta siitä tuli maailman ensimmäinen paloturvallinen varastojärjestelmä. Laivat purettiin ja lastattiin suoraan varastoihin, mikä oli aikanaan vallankumouksellista, ja kaksi vuotta avaamisen jälkeen telakalle asennettiin maailman ensimmäiset hydrauliset nosturit. Suojaisen mutta silti turvallisen rakenteensa ansiosta telakka oli suosittu varasto arvokkaalle rahdille, kuten konjakille, puuvillalle, tealle, silkille, tupakalle, norsunluulle ja sokerille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: David Sassoonin kirjasto] 1867–1870 Alku on vuodessa 1847, jolloin rahapajan ja telakan eurooppalaiset työntekijät perustivat Mechanics’ Institutionin antamaan aikuisille teknistä opetusta ja pitämään luentoja. Aluksi toimittiin vuokratiloissa. Bagdadista muuttaneen juutalaisen kauppiassuvun päämies David Sassoon rahoitti laitokselle oman talon, ja ajatus kaupungin keskelle sijoitettavasta kirjastosta tuli hänen pojaltaan Albert Sassoonilta. Nimeksi tuli David Sassoon Library and Reading Room. Talo rakennettiin 1867–1870 arkkitehtien J. Campbellin ja G. E. Goslingin piirustusten mukaan, ja se maksoi 125 000 rupiaa: Sassoon lahjoitti 60 000 ja loput maksoi Bombayn presidenssin hallinto. Kivi on keltaista Maladin kive…
+
+### 18.1
+KYSYMYS: Mistä materiaaleista Albert Dock rakennettiin, ja miksi se teki siitä poikkeuksellisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albert Dock, Liverpool (merenkulku)
+Tietoruudun teksti: Albert Dock on Liverpoolin satama- ja varastorakennusten kokonaisuus, jonka suunnittelivat Jesse Hartley ja Philip Hardwick ja joka avattiin vuonna 1846. Se oli ensimmäinen rakennus Isossa-Britanniassa, joka tehtiin valuraudasta, tiilestä ja kivestä ilman puuta kantavissa rakenteissa, minkä ansiosta siitä tuli maailman ensimmäinen paloturvallinen varastojärjestelmä. Laivat purettiin ja lastattiin suoraan varastoihin, mikä oli aikanaan vallankumouksellista, ja kaksi vuotta avaamisen jälkeen telakalle asennettiin maailman ensimmäiset hydrauliset nosturit. Suojaisen mutta silti turvallisen rakenteensa ansiosta telakka oli suosittu varasto arvokkaalle rahdille, kuten konjakille, puuvillalle, tealle, silkille, tupakalle, norsunluulle ja sokerille.
+
+### 18.2
+KYSYMYS: Millaista rahtia telakan varastoissa säilytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Albert Dock, Liverpool (merenkulku)
+Tietoruudun teksti: Albert Dock on Liverpoolin satama- ja varastorakennusten kokonaisuus, jonka suunnittelivat Jesse Hartley ja Philip Hardwick ja joka avattiin vuonna 1846. Se oli ensimmäinen rakennus Isossa-Britanniassa, joka tehtiin valuraudasta, tiilestä ja kivestä ilman puuta kantavissa rakenteissa, minkä ansiosta siitä tuli maailman ensimmäinen paloturvallinen varastojärjestelmä. Laivat purettiin ja lastattiin suoraan varastoihin, mikä oli aikanaan vallankumouksellista, ja kaksi vuotta avaamisen jälkeen telakalle asennettiin maailman ensimmäiset hydrauliset nosturit. Suojaisen mutta silti turvallisen rakenteensa ansiosta telakka oli suosittu varasto arvokkaalle rahdille, kuten konjakille, puuvillalle, tealle, silkille, tupakalle, norsunluulle ja sokerille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mumbai — kohdekartta / Kohdekartta: David Sassoonin kirjasto] 1867–1870 Alku on vuodessa 1847, jolloin rahapajan ja telakan eurooppalaiset työntekijät perustivat Mechanics’ Institutionin antamaan aikuisille teknistä opetusta ja pitämään luentoja. Aluksi toimittiin vuokratiloissa. Bagdadista muuttaneen juutalaisen kauppiassuvun päämies David Sassoon rahoitti laitokselle oman talon, ja ajatus kaupungin keskelle sijoitettavasta kirjastosta tuli hänen pojaltaan Albert Sassoonilta. Nimeksi tuli David Sassoon Library and Reading Room. Talo rakennettiin 1867–1870 arkkitehtien J. Campbellin ja G. E. Goslingin piirustusten mukaan, ja se maksoi 125 000 rupiaa: Sassoon lahjoitti 60 000 ja loput maksoi Bombayn presidenssin hallinto. Kivi on keltaista Maladin kive…
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-oxford) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Radcliffe Camera, Oxford (kulttuuri)
+Tietoruudun teksti: Radcliffe Camera on Oxfordin yliopiston pyöreä kirjastorakennus, jonka James Gibbs suunnitteli barokkityyliin ja joka valmistui vuosina 1737–1749. Rakennus rahoitettiin lääkäri John Radcliffen jäämistöstä: hän testamenttasi kuollessaan 1714 40 000 puntaa kirjaston rakentamiseen, mutta kirjasto ehti valmistua vasta 35 vuotta myöhemmin. Pyöreä muoto ja sijainti Oxfordin keskellä, Vanhan Bodleian-kirjaston ja Pyhän Marian kirkon välissä, ovat tehneet siitä yliopiston tunnetuimman maamerkin. Nykyään rakennus toimii Bodleian-kirjaston lukusalina eikä ole avoinna yleisölle, ja sinne pääsee maanalaista tunnelia pitkin varsinaisesta kirjastosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tokio — kaupunkilehti / Tokio: Kadun nimessä on joko karkki tai Amerikka] Uenon aseman kyljessä kulkee Ameya-yokochō, ulkoilmatori, jonka pinta-ala on runsaat 15 000 neliömetriä. Se alkaa Yodobashi Cameran talon takaa ja seuraa Yamanote-radan vartta etelään Komuron taloon asti. Liikkeitä on yli 250, ja ne myyvät ruokaa, vaatteita ja kaikkea muuta. Nimestä on kaksi selitystä. Toisen mukaan takana on sana ameya, karkkikauppa: sokerista oli sodan jälkeen pulaa, ja kadulla oli makeiskauppa toisensa vieressä. Toisen mukaan sana on Amerika, sillä kadulla myytiin Yhdysvaltain armeijan ylijäämätavaraa. Lyhenne ameyoko sopii kumpaankin.
+
+### 19.1
+KYSYMYS: Kenen jäämistöstä Radcliffe Cameran rakentaminen rahoitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Radcliffe Camera, Oxford (kulttuuri)
+Tietoruudun teksti: Radcliffe Camera on Oxfordin yliopiston pyöreä kirjastorakennus, jonka James Gibbs suunnitteli barokkityyliin ja joka valmistui vuosina 1737–1749. Rakennus rahoitettiin lääkäri John Radcliffen jäämistöstä: hän testamenttasi kuollessaan 1714 40 000 puntaa kirjaston rakentamiseen, mutta kirjasto ehti valmistua vasta 35 vuotta myöhemmin. Pyöreä muoto ja sijainti Oxfordin keskellä, Vanhan Bodleian-kirjaston ja Pyhän Marian kirkon välissä, ovat tehneet siitä yliopiston tunnetuimman maamerkin. Nykyään rakennus toimii Bodleian-kirjaston lukusalina eikä ole avoinna yleisölle, ja sinne pääsee maanalaista tunnelia pitkin varsinaisesta kirjastosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tokio — kaupunkilehti / Tokio: Kadun nimessä on joko karkki tai Amerikka] Uenon aseman kyljessä kulkee Ameya-yokochō, ulkoilmatori, jonka pinta-ala on runsaat 15 000 neliömetriä. Se alkaa Yodobashi Cameran talon takaa ja seuraa Yamanote-radan vartta etelään Komuron taloon asti. Liikkeitä on yli 250, ja ne myyvät ruokaa, vaatteita ja kaikkea muuta. Nimestä on kaksi selitystä. Toisen mukaan takana on sana ameya, karkkikauppa: sokerista oli sodan jälkeen pulaa, ja kadulla oli makeiskauppa toisensa vieressä. Toisen mukaan sana on Amerika, sillä kadulla myytiin Yhdysvaltain armeijan ylijäämätavaraa. Lyhenne ameyoko sopii kumpaankin.
+
+### 19.2
+KYSYMYS: Mihin rakennukseen Radcliffe Camera on yhteydessä maanalaisen tunnelin kautta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Radcliffe Camera, Oxford (kulttuuri)
+Tietoruudun teksti: Radcliffe Camera on Oxfordin yliopiston pyöreä kirjastorakennus, jonka James Gibbs suunnitteli barokkityyliin ja joka valmistui vuosina 1737–1749. Rakennus rahoitettiin lääkäri John Radcliffen jäämistöstä: hän testamenttasi kuollessaan 1714 40 000 puntaa kirjaston rakentamiseen, mutta kirjasto ehti valmistua vasta 35 vuotta myöhemmin. Pyöreä muoto ja sijainti Oxfordin keskellä, Vanhan Bodleian-kirjaston ja Pyhän Marian kirkon välissä, ovat tehneet siitä yliopiston tunnetuimman maamerkin. Nykyään rakennus toimii Bodleian-kirjaston lukusalina eikä ole avoinna yleisölle, ja sinne pääsee maanalaista tunnelia pitkin varsinaisesta kirjastosta.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-fish-and-chips) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fish and chips (ruoka)
+Tietoruudun teksti: Fish and chips eli paistettu kala ja ranskalaiset on Britannian tunnetuin pikaruoka, joka syntyi 1800-luvun Englannissa. Paistetun kalan perinteen toivat maahan Alankomaista muuttaneet portugalilais- ja espanjalaistaustaiset juutalaiset jo 1500-luvulta lähtien, ja Charles Dickens mainitsee "paistetun kalan varastot" Oliver Twist -romaanissaan 1838. Ensimmäiset varsinaiset fish and chips -kaupat avattiin 1860-luvulla: Lontoossa Joseph Malinin kauppa ja Lancashiren Mossleyssä John Leesin kauppa mainitaan usein varhaisimpina. Annos yleistyi nopeasti työväenluokan ruokana, kun höyrytroolarit toivat tuoretta kalaa Pohjanmereltä ja rautatiet kuljettivat sen nopeasti satamista teollisuuskaupunkeihin; vuoteen 1910 mennessä kauppoja oli jo yli 25 000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Kalaa ja ranskalaisia sanomalehdestä] Fish and chips syntyi kahdesta erillisestä ideasta, jotka löysivät toisensa 1860-luvun Lontoossa: juutalaiset maahanmuuttajat olivat tuoneet tavan uppopaistaa kalaa taikinassa, ja pohjoisen tehdaskaupungeissa paistettiin perunaa. Yhdessä niistä tuli työväen ruokaa, jota myytiin kadulla käärittynä vanhaan sanomalehteen — halpaa, kuumaa ja täyttävää. Toisessa maailmansodassa fish and chips oli yksi harvoista ruoista, joita ei säännöstelty: hallitus katsoi sen pitävän mielialaa yllä.
+- [Libya — maalehti / Ruoka: Keitto, tonnikala ja kolme maustesekoitusta] Arkiruoan runko on yksinkertainen. Shorba on lampaan- ja vihanneskeitto, jossa on minttua ja tomaattisosetta; fasoulia on papupata tomaattikastikkeessa; bureek on rapea täytetty käännös, ja ejja perunasta, tomaatista ja yrteistä tehty munakas, joka tarjoillaan paastonajan iltapöydässä pannulla paistetun ftat-leivän kanssa. Säilyketonnikala on koululounaiden perusta ja maan edullisinta proteiinia. Maku tulee mausteista: harissasta, jossa on chiliä, valkosipulia ja kuminaa, sekä sekoituksista bzarr ja bokharat, joissa on korianteria, kurkumaa, inkivääriä, neilikkaa, muskottia ja kanelia. Ramadanin juoma on kuivatusta aprikoosista sekoitettu qamar al-din.
+- [Saksa — maalehti / Arki ja kadut: Currywurst keksittiin kadunkulmassa] 1949 — Herta Heuwer piti kioskia Charlottenburgissa Kantstraßen ja Kaiser-Friedrich-Straßen kulmassa. Hän kertoi sekoittaneensa 4. syyskuuta 1949 tomaatista ja mausteista kastikkeen, kaataneensa sen paistetun makkaran päälle ja ripotelleensa vielä currya pinnalle. Ainekset hän oli saanut brittisotilailta. Kastikkeen hän rekisteröi 1959 nimellä Chillup — chilistä ja ketsupista. Kulmassa on nykyään hänen muistolaattansa.
+
+### 20.1
+KYSYMYS: Ketkä toivat paistetun kalan perinteen Englantiin, ja milloin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fish and chips (ruoka)
+Tietoruudun teksti: Fish and chips eli paistettu kala ja ranskalaiset on Britannian tunnetuin pikaruoka, joka syntyi 1800-luvun Englannissa. Paistetun kalan perinteen toivat maahan Alankomaista muuttaneet portugalilais- ja espanjalaistaustaiset juutalaiset jo 1500-luvulta lähtien, ja Charles Dickens mainitsee "paistetun kalan varastot" Oliver Twist -romaanissaan 1838. Ensimmäiset varsinaiset fish and chips -kaupat avattiin 1860-luvulla: Lontoossa Joseph Malinin kauppa ja Lancashiren Mossleyssä John Leesin kauppa mainitaan usein varhaisimpina. Annos yleistyi nopeasti työväenluokan ruokana, kun höyrytroolarit toivat tuoretta kalaa Pohjanmereltä ja rautatiet kuljettivat sen nopeasti satamista teollisuuskaupunkeihin; vuoteen 1910 mennessä kauppoja oli jo yli 25 000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Ruoka: Keitto, tonnikala ja kolme maustesekoitusta] Arkiruoan runko on yksinkertainen. Shorba on lampaan- ja vihanneskeitto, jossa on minttua ja tomaattisosetta; fasoulia on papupata tomaattikastikkeessa; bureek on rapea täytetty käännös, ja ejja perunasta, tomaatista ja yrteistä tehty munakas, joka tarjoillaan paastonajan iltapöydässä pannulla paistetun ftat-leivän kanssa. Säilyketonnikala on koululounaiden perusta ja maan edullisinta proteiinia. Maku tulee mausteista: harissasta, jossa on chiliä, valkosipulia ja kuminaa, sekä sekoituksista bzarr ja bokharat, joissa on korianteria, kurkumaa, inkivääriä, neilikkaa, muskottia ja kanelia. Ramadanin juoma on kuivatusta aprikoosista sekoitettu qamar al-din.
+- [Saksa — maalehti / Arki ja kadut: Currywurst keksittiin kadunkulmassa] 1949 — Herta Heuwer piti kioskia Charlottenburgissa Kantstraßen ja Kaiser-Friedrich-Straßen kulmassa. Hän kertoi sekoittaneensa 4. syyskuuta 1949 tomaatista ja mausteista kastikkeen, kaataneensa sen paistetun makkaran päälle ja ripotelleensa vielä currya pinnalle. Ainekset hän oli saanut brittisotilailta. Kastikkeen hän rekisteröi 1959 nimellä Chillup — chilistä ja ketsupista. Kulmassa on nykyään hänen muistolaattansa.
+
+### 20.2
+KYSYMYS: Mitkä kaksi kauppaa mainitaan usein varhaisimpina fish and chips -kauppoina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fish and chips (ruoka)
+Tietoruudun teksti: Fish and chips eli paistettu kala ja ranskalaiset on Britannian tunnetuin pikaruoka, joka syntyi 1800-luvun Englannissa. Paistetun kalan perinteen toivat maahan Alankomaista muuttaneet portugalilais- ja espanjalaistaustaiset juutalaiset jo 1500-luvulta lähtien, ja Charles Dickens mainitsee "paistetun kalan varastot" Oliver Twist -romaanissaan 1838. Ensimmäiset varsinaiset fish and chips -kaupat avattiin 1860-luvulla: Lontoossa Joseph Malinin kauppa ja Lancashiren Mossleyssä John Leesin kauppa mainitaan usein varhaisimpina. Annos yleistyi nopeasti työväenluokan ruokana, kun höyrytroolarit toivat tuoretta kalaa Pohjanmereltä ja rautatiet kuljettivat sen nopeasti satamista teollisuuskaupunkeihin; vuoteen 1910 mennessä kauppoja oli jo yli 25 000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Ruoka: Kalaa ja ranskalaisia sanomalehdestä] Fish and chips syntyi kahdesta erillisestä ideasta, jotka löysivät toisensa 1860-luvun Lontoossa: juutalaiset maahanmuuttajat olivat tuoneet tavan uppopaistaa kalaa taikinassa, ja pohjoisen tehdaskaupungeissa paistettiin perunaa. Yhdessä niistä tuli työväen ruokaa, jota myytiin kadulla käärittynä vanhaan sanomalehteen — halpaa, kuumaa ja täyttävää. Toisessa maailmansodassa fish and chips oli yksi harvoista ruoista, joita ei säännöstelty: hallitus katsoi sen pitävän mielialaa yllä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
