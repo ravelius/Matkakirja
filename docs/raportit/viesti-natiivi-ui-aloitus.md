@@ -11,7 +11,6 @@ tarvittaessa (DEF_IOS + ;MATKAKIRJA_APPSTORE kopiossa unity-tarkistus.sh:sta). E
 savuja eikä toistoajoja. Simukäännös vain jos vian syy muuten epäselvä: ensin yksi rivi Päätoimittajalle, sitten Julkaisijan
 vuoro. Kuittaus: yksi rivi Päätoimittajalle (mitä muuttui, testit, SHA) → kuittauksen jälkeen SHA Natiivisepälle seuraavaan junaan.
 
-Tila 10.10. klo 11.1x (nollaus, PT:n 50 %:n raja): runko natiiviseppa/juna-176 ea16f95a4 (Unity 6.7), uudet haarat sen päälle.
-Junassa 176: pohjavahti-varit, ylapalkki-uiruutu, ikakysely (kuratoitu live). ODOTTAA: museo-esittely-176 adec86179 (PT kuittaa LS1:n
-kuva-arkista) ja linssipalkki-turva-176 25f28c53b (linna-osan uusinta Julkaisijan jonossa, tulos PT:lle). Pidossa: ei muuta.
+Tila 10.10. klo 11.5x (nollaus 47 %): runko natiiviseppa/juna-176 ea16f95a4 (Unity 6.7). ODOTTAA: museo-huonelukija-176 fb12f25b8
+(LS1:n uusi kuva-arkki → PT), fonttikoot-cs-176 1ed61ecec (PT). SEURAAVA: ikäraja Asetuksista PT:n linjalla (luovutus, oma osio).
 UI-POHJAT: vain olemassa olevat pohjat; puuttuva → Päätoimittaja.

@@ -1,4 +1,4 @@
-# Natiivi-UI: luovutus 10.10.2026 klo 11.5x (konteksti ~45 %, PT:n nollausraja 50 %)
+# Natiivi-UI: luovutus 10.10.2026 klo 11.5x (konteksti 47 %, PT:n nollausraja 50 %)
 
 Työtila: proto-worktree /Users/Shared/Claude/wt/proto-natiivi-ui-olavpeli (haarat natiivi-ui/<aihe>), web-checkout
 /Users/Shared/Claude/Matkakirja-natiivi-ui (haara natiivi-ui-luovutus-20261005, vain raportit). Muistio: natiivi-ui-tila-20261009.md.
@@ -27,14 +27,23 @@ Testit 6.7:llä: P449 / L1299 (LS1:n museohaaralla L1319) / K453. Editorikoodi: 
 
 ## Odottaa
 
-- **museo-esittely-176 adec86179** (LS1:n linssiseppa/taidemuseo-176 1200f364e:n päällä): MuseoTaulun esittelykortti (KORTTI: kapiteeli
-  taiteilija · vuosi, otsikko, alkuperäinen nimi, tekniikka/mitat, kuvateksti, lähde · lisenssi + Havainnekuva; KortinLukija, Esittele-nappi
-  aloittaa luennan; ohinapautus + Esc; KAPEA alareunaan ≤ 45 %, muuten Pohja.Sivukortti yläpalkin alta) ja huone (tiivis huonekortti = nimi
-  Nimikyltti 3 s + häivytys; teksti vain napautuksesta: kyltti tai Esittele ilman teosta → MuseoSovitin.HuoneKortti). PT kuittaa LS1:n
-  kuva-arkista (kombo 81f012fdc Julkaisijalla). Kuittauksen jälkeen SHA Natiivisepälle yhdessä LS1:n haaran kanssa.
-- **museo-huonelukija-176 b1b47d229** = adec86179 + huonekortin kaiutin (KortinLukija). PT kuittaa museon kanssa.
-- PT:n linja odottaa: (2) ikärajan muutos Asetuksista samalla ikäkortilla, (3) UI-C#:n inline-fonttikoot Tyylikirja.Koko-vakioiksi
-  + pohjavahdin C#-fonttilaskuri.
+- **museo-huonelukija-176 fb12f25b8** (⊇ museo-esittely adec86179 + huonekortin kaiutin + kuva-arkkikorjaus; LS1:n linssiseppa/taidemuseo-176
+  1200f364e:n päällä). Kuva-arkkivika 11.4x korjattu: OHJAUSNAPPI-ryhmän pohjatyylin top venytti museon nappirivin koko korkeudelle
+  (napit keskellä, kortin tila negatiivinen) → ryhma.style.top = auto, kortin tila nappirivin yläreunasta (H − ryhma.layout.yMin + m).
+  LS1 tekee kombon + kuva-arkin (iPad + puhelin pysty: 01b kyltti, 03 esittely, 03h huonekortti, 08b Yövartio). PT kuittaa arkista →
+  SHA Natiivisepälle yhdessä LS1:n haaran kanssa. KATSO ARKKI ITSE ennen PT:tä (kortti nappirivin yläpuolella, ei päällekkäisyyksiä).
+- **fonttikoot-cs-176 1ed61ecec** (juna-176 ea16f95a4:n päällä): 10 täsmäävää kokoa Tyylikirja.Koko-vakioiksi + pohjavahtiin C#-fonttilaskuri
+  räikkänä (katto 31 / 12 tiedostoa). PT:n kuittaus odottaa. JÄRJESTYS: jos museo merget tämän jälkeen, MuseoTaulussa on 1 numerokoko (19;
+  34 on jo Koko.Nimio) → MuseoTaulu katoksi fontti 1 (pohjavahti.py --kirjaa mergen jälkeen, PT:n tieto) — kerro Natiivisepälle.
+
+## SEURAAVA ERÄ (PT:n linja 11.5x, aloittamatta): ikäraja Asetuksista
+
+- "Ei nyt" (vastaamatta): peli EI kysy uudelleen itse ("kysyy kerran" säilyy) → muuta Ikaraja: eiNyt pysyväksi (PlayerPrefs, esim. arvo "?"
+  = kysytty, ei vastattu → Kuratoitu = true, Kysytty = true). Nyt toteutus kysyy seuraavalla käynnistyksellä — se on PT:n linjan vastainen.
+- Asetuksiin rivi (olemassa oleva Asetukset/Aanentasot-rivipohja), josta SAMA ikäkortti avautuu: vastaamaton voi vastata myöhemmin.
+- Kun vastaus on annettu, Asetuksista voi vaihtaa vain tiukempaan suuntaan (aikuinen → alle 18), ei alle 18 → aikuinen; rivi näyttää tilan.
+- Kehityskomento nollaukseen testejä varten (ui ikaraja nollaa on jo; varmista, että se poistaa myös "?"-tilan).
+- Asettelutestiin Asetukset-rivi tarvittaessa; tarkista.sh + 3 testiä → SHA PT:lle.
 
 ## Huomiot
 
@@ -44,7 +53,7 @@ Testit 6.7:llä: P449 / L1299 (LS1:n museohaaralla L1319) / K453. Editorikoodi: 
 
 ## PIDOSSA / seuraavaksi
 
-Ei PT:n antamaa jonoa linna-ajon jälkeen; oma suositus olemassa olevilla pohjilla PT:lle. Sessiot: PT local_593b89a1-2514-4d74-b956-2a73db862382,
+Jono: museon arkki → ikäraja Asetuksista (yllä) → oma suositus olemassa olevilla pohjilla PT:lle. Sessiot: PT local_593b89a1-2514-4d74-b956-2a73db862382,
 Natiiviseppä local_bf20055b-…, Julkaisija local_22b29f10-…, LS1 local_45a869de-4d6b-4ed6-a6c9-30fd8442587e, Pelikoodari local_97810d35-a79c-484b-8573-660a4c40eaa6.
 
 ## Omat ajot
