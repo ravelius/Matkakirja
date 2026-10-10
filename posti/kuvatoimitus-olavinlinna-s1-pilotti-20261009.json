@@ -1,0 +1,45 @@
+{
+  "task": "olavinlinna-s1-pilotti-20261009",
+  "taskNumber": 59,
+  "imageCount": 1,
+  "requestedImages": 1,
+  "generationCalls": 1,
+  "generationLimit": 1,
+  "assets": [
+    {
+      "id": "olavinlinna-s1",
+      "file": "olavinlinna_s1_codex_v1.png",
+      "r2Key": "julisteet/omat-mallit-pinnat/20261009/olavinlinna_s1_codex_v1.png",
+      "url": "https://media.matkakirja.app/julisteet/omat-mallit-pinnat/20261009/olavinlinna_s1_codex_v1.png?t=0e895064169b8fd3",
+      "canonicalUrl": "https://media.matkakirja.app/julisteet/omat-mallit-pinnat/20261009/olavinlinna_s1_codex_v1.png",
+      "bytes": 13818672,
+      "sha256": "0e895064169b8fd308fda0da8e625226f45033456e7da46b59ea4c05eca66ad4",
+      "dimensions": [
+        3697,
+        3411
+      ],
+      "mode": "RGB",
+      "metadataLabel": "Havainnekuva. Tekoälyllä tuotettu, ei valokuva.",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "visualObservations": "",
+      "limitations": [],
+      "hardVisualConstraintsObservedPass": false,
+      "fableReceipt": false,
+      "editorAcceptance": false,
+      "gameIntegrated": false,
+      "published": false
+    }
+  ],
+  "omittedItems": [],
+  "allR2ReadbacksByteExact": true,
+  "allContentConstraintsPassed": false,
+  "publicImageDataOnly": true,
+  "deliveryPacketScope": "Public image URLs, file properties, captions and observable quality limitations; private local records retained in workspace",
+  "fableReceipt": false,
+  "editorAcceptance": false,
+  "gameIntegrated": false,
+  "published": false
+}
