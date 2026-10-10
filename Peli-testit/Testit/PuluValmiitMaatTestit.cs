@@ -40,6 +40,9 @@ namespace Matkakirja.Peli.Testit
             "kohde:hahmotelma-strbske-pleso / jozef szentiványiin",                                  // SVK (linkit perusmuodossa)
             "kohde:hahmotelma-turnhout / pellavakauppa",                                             // BEL (ei linkkiä missään vastauksessa)
             "kohde:dettifoss / urriðafossin",                                                        // ISL (linkki vain kohteen jorsa vastauksessa)
+            "kohde:sutjeska / perućica-aarniometsä",                                                 // BIH (linkki muodossa [[Perućican]])
+            "kohde:travnik / dinaaristen alppien",                                                   // BIH (linkki vain Neretvan kohteissa)
+            "kohde:hahmotelma-altmunster / rudolfin",                                                // LUX (ei linkkiä missään vastauksessa)
         };
 
         static void Maa(string maa, int kohtia, int kysymyksia, int lisaa)
