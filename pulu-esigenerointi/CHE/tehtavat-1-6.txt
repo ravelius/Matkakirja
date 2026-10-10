@@ -1,0 +1,174 @@
+================ KOHTA 26 (kohde:hahmotelma-porte-neuve) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+### 26.1
+KYSYMYS: Miltä Geneven Porte Neuve näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+### 26.2
+KYSYMYS: Miksi Geneven Porte Neuve katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneven Porte Neuve (historia)
+Tietoruudun teksti: Porte Neuve rakennettiin 1740-luvulla Geneven läntiseksi pääportiksi. Kaupungin linnoitusvyöhyke purettiin 1850-luvulla laajenemisen tieltä, ja portti purettiin vuonna 1853. Sen paikalla on nykyinen Place Neuve.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-grand-hotel-schreiber-rigi-kulm) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+
+### 27.1
+KYSYMYS: Miltä Rigi Kulmin Grand Hotel Schreiber näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+
+### 27.2
+KYSYMYS: Miksi Rigi Kulmin Grand Hotel Schreiber katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rigi Kulmin Grand Hotel Schreiber (historia)
+Tietoruudun teksti: Arkkitehti Horace Édouard Davinet suunnitteli Rigi Kulmin huipulle komean suurhotellin, joka avattiin 1875 Euroopan ensimmäisen vuoristorautatien (Vitznau–Rigi, päätepiste valmistui 1873) päätepisteeseen. Hotellista tuli 1800-luvun lopun yläluokan suosima auringonnousukohde, kunnes se purettiin kokonaan ja korvattiin vaatimattomammalla hospiisityylisellä rakennuksella.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-geneve) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+### 28.1
+KYSYMYS: Miksi Geneveä kutsutaan rauhan pääkaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+### 28.2
+KYSYMYS: Mitä Genevessä sovittiin vuonna 1864?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geneve (kaupungit)
+Tietoruudun teksti: Geneve sijaitsee Sveitsin lounaiskulmassa siinä kohdassa, jossa Rhône-joki virtaa ulos Genevenjärvestä, ja on ranskankielisen Romandian väkirikkain kaupunki. Roomalaiset valtasivat sen allobrogien rajakaupunkina vuonna 121 eaa., ja keskiajalla siitä kasvoi itsehallinnollinen piispankaupunki. Genevestä on tullut kansainvälisen diplomatian keskus: Henry Dunantin perustaman Punaisen Ristin toiminta alkoi juuri täällä, ja vuonna 1864 allekirjoitettiin ensimmäinen Geneven sopimus sodan haavoittuneiden suojelemiseksi. Myöhemmin, ensimmäisen maailmansodan jälkeen, Genevestä tulee myös Kansainliiton kotikaupunki.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-lavaux) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+
+### 29.1
+KYSYMYS: Ketkä raivasivat Lavaux'n ensimmäiset viinipenkereet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+
+### 29.2
+KYSYMYS: Mikä rypälelajike on alueen tärkein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lavaux'n viinitarhat (ruoka)
+Tietoruudun teksti: Lavaux on viinitarhojen alue Genevenjärven pohjoisrannalla Vaudin kantonissa, ja sen kivetyt penkereet kiertyvät noin 30 kilometrin matkalla järven yllä. Penkereiden raivaaminen alkoi jo 1000-luvulla benediktiini- ja sistersiläismunkkien toimesta, joten viininviljelyllä on takanaan jo lähes 800 vuotta historiaa. Alueen tärkein rypälelajike on chasselas, joka antaa nimensä myös monille paikallisille valkoviineille. Penkereiltä avautuu näkymä järven yli Savoijin vuorille, ja kylät kuten Saint-Saphorin ja Epesses ovat pysyneet lähes muuttumattomina satojen vuosien ajan.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-cern) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+
+### 30.1
+KYSYMYS: Missä CERN sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+
+### 30.2
+KYSYMYS: Mikä maailmanlaajuinen keksintö syntyi CERNin tarpeesta jakaa tietoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: CERN (tekniikka)
+Tietoruudun teksti: CERN eli Euroopan hiukkasfysiikan tutkimuskeskus toimii Meyrinissä, Geneven länsipuolella aivan Ranskan rajalla. Se on maailman suurin hiukkasfysiikan laboratorio, ja sen ydin on Large Hadron Collider, valtava maan alle louhittu rengasmainen hiukkaskiihdytin. CERNin tutkijat tarvitsivat 1980-luvun lopulla keinon jakaa tietoa eri puolilla maailmaa oleville kollegoilleen, ja tästä tarpeesta syntyi World Wide Web. Keskus perustettiin vuonna 1954 kahdentoista Länsi-Euroopan valtion sopimuksella.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

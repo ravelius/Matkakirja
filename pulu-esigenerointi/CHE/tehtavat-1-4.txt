@@ -1,0 +1,236 @@
+================ KOHTA 16 (kohde:reininputous) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Uinti putouksen partaalla] Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil's Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.
+- [Caracas — kaupunkilehti / Luonto: Lentäjä joka etsi kultaa ja löysi putouksen] Guayanan ylängöllä kohoaa Auyán-tepui, pöytävuori, jonka nimi tarkoittaa pemonien kielellä jumalten taloa. Sen reunalta vesi putoaa 979 metriä, josta 807 metriä yhtäjaksoisesti – lähes yhdeksäntoista kertaa Niagaran putouksen korkeus. Paikalliset tunsivat putouksen kauan, mutta ulkomaailma sai siitä tiedon vasta 16. marraskuuta 1933, kun yhdysvaltalainen lentäjä Jimmie Angel lensi sen yli kultamalmia etsiessään; putous nimettiin hänen mukaansa Angelin putoukseksi. Tarkka korkeus mitattiin vasta 13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth Robertsonin rahoittamalla retkikunnalla.
+
+### 16.1
+KYSYMYS: Kuinka paljon virtaama vaihtelee vuoden mittaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sepik — kaupunkilehti / Sepik: Kylä joka seisoo vedessä] Sepikin alajuoksulla joki ei koskaan muodosta suistoa vaan hajoaa laajaksi, paikoin 70 kilometriä leveäksi tulva-alueeksi, jonka halki mutkittelee noin 1 500 hylättyä jokimutkaa. Kylät, kuten tässä näkyvä Kambaramba, on siksi rakennettu paalujen varaan veden päälle: talot, kirkot ja koulut lepäävät puupilarien varassa aivan kuin laiturit. Aluetta on kutsuttu Aasian ja Tyynenmeren laajimmaksi koskemattomaksi makean veden kosteikoksi. Vedenpinta vaihtelee sadekauden mukaan niin paljon, että moni kylä joutuu ajan mittaan pystyttämään rakennuksensa uudelleen.
+- [Astana — kohdekartta / Kohdekartta: Khan Shatyr] 2006–2010 Rakennuksen suunnitteli Foster and Partners ja rakenteet insinööritoimisto Buro Happold; työn teki turkkilainen Sembol, ja hinnaksi kerrotaan 400 miljoonaa dollaria. Työmaa alkoi joulukuussa 2006, keskusmasto pystytettiin joulukuussa 2008 ja talo avattiin 5. heinäkuuta 2010. Pinta-alasta Wikipedia antaa kaksi lukua, infoboksin 100 000 ja leipätekstin 140 000 neliömetriä. Katteena ei ole lasi vaan ETFE-kalvotyynyt, jotka riippuvat keskusmastosta lähtevässä vaijeriverkossa. Kalvo päästää auringonvalon läpi, ja sen ansiosta katon alla kasvaa puita. Sisälämpötila pidetään pääosassa 15 ja 30 asteen välillä ja myymälöissä 19 ja 24 asteen välillä, vaikka ulkoilma vaihtelee vuoden mittaan…
+
+### 16.2
+KYSYMYS: Miksi putouksen keskellä oleva kallio ei kulu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Reininputous (luonto · joki)
+Tietoruudun teksti: Reininputous on Ylä-Reinin vesiputous Sveitsissä ja Euroopan voimakkain. Se on Schaffhausenin ja Zürichin kantonien rajalla Neuhausen am Rheinfallin ja Laufen-Uhwiesenin välissä, noin kolme kilometriä Schaffhausenin kaupungista etelään ja aivan Saksan rajan tuntumassa.
+
+Putous on 150 metriä leveä ja 23 metriä korkea. Talvikuukausina keskimääräinen virtaama on 250 kuutiometriä sekunnissa ja kesällä 600. Suurin koskaan mitattu oli 1 250 kuutiometriä sekunnissa vuonna 1965 ja pienin 95 kuutiometriä vuonna 1921. Sveitsin korkein putous ei ole tämä vaan Mürrenbachin putous, 417 metriä.
+
+Putous syntyi viime jääkaudella noin 14 000–17 000 vuotta sitten, kun kulutusta kestävät kivilajit kavensivat uomaa. Joen reitti on vaihtunut monta kertaa: vielä noin 132 000 vuotta sitten Rein virtasi Schaffhausenista länteen Klettgaun laaksoon, ja vanha uoma täyttyi soralla. Würm-jäätiköitymisen aikana joki…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktorian putoukset — kaupunkilehti / Viktorian putoukset: Uinti putouksen partaalla] Livingstone-saaren kupeessa, aivan putouksen reunalla, muodostuu kuivan kauden aikana syyskuusta joulukuuhun luonnollinen kivialtaanpohja nimeltä Devil's Pool eli "paholaisen allas". Veden alla oleva kivikynnys pidättää uimarit paikoillaan juuri ennen kuin vesi syöksyy 108 metriä alaspäin rotkoon, joten rohkeat matkailijat voivat paikallisen oppaan varmistamana kellua altaassa ja kurkistaa suoraan putouksen yli. Isoisälle tällainen matka-allas olisi ollut tuntematon: siitä kerrottiin laajemmin vasta 1900-luvun lopulla, kun putouksista tuli suosittu matkailukohde.
+- [Caracas — kaupunkilehti / Luonto: Lentäjä joka etsi kultaa ja löysi putouksen] Guayanan ylängöllä kohoaa Auyán-tepui, pöytävuori, jonka nimi tarkoittaa pemonien kielellä jumalten taloa. Sen reunalta vesi putoaa 979 metriä, josta 807 metriä yhtäjaksoisesti – lähes yhdeksäntoista kertaa Niagaran putouksen korkeus. Paikalliset tunsivat putouksen kauan, mutta ulkomaailma sai siitä tiedon vasta 16. marraskuuta 1933, kun yhdysvaltalainen lentäjä Jimmie Angel lensi sen yli kultamalmia etsiessään; putous nimettiin hänen mukaansa Angelin putoukseksi. Tarkka korkeus mitattiin vasta 13. toukokuuta 1949 yhdysvaltalaisen toimittajan Ruth Robertsonin rahoittamalla retkikunnalla.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:augusta-raurica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Augusta Raurica (historia)
+Tietoruudun teksti: Augusta Raurica on roomalaisen kaupungin raunioalue Augstin ja Kaiseraugstin kohdalla Sveitsissä. Lähteen mukaan kaupunki perustettiin noin vuonna 44 eaa. Lucius Munatius Plancuksen toimesta, ja menestyksen huippuaikana 200-luvulla asukkaita arvioidaan olleen noin 20 000. Teatterissa oli 8000–10 000 paikkaa, ja sitä kuvataan Alppien pohjoispuolen suurimmaksi roomalaiseksi teatteriksi. Linnoituksen alueelta löytyi vuosina 1961–1962 Kaiseraugstin hopea-aarre. Alueella on roomalaismuseo, rekonstruoitu roomalaistalo ja ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [New Orleans — kohdekartta / Kohdekartta: Saenger-teatteri] 1927 Teatteri avattiin 4. helmikuuta 1927. Salissa oli neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät tuhannet ihmiset kulkueeseen Canal Streetille. Kallein lippu maksoi 65 senttiä, ja samalla lipulla näki mykkäelokuvan ja näytelmän sekä kuuli talon oman orkesterin. Saenger oli veljesten Julian ja Abe Saengerin teatteriketjun lippulaiva, ja se on niitä harvoja ketjun elokuvapalatseja, jotka ovat yhä pystyssä. Arkkitehti Emile Weil suunnitteli sisätilan atmosfääriteatteriksi, joka jäljittelee italialaista barokkipihaa. Kattoon asennettiin 150 lamppua tähtikuvioiden muotoon, ja erikoistehostekoneet heijastivat sisälle liikkuvia p…
+
+### 17.1
+KYSYMYS: Kuinka monta paikkaa teatterissa oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Augusta Raurica (historia)
+Tietoruudun teksti: Augusta Raurica on roomalaisen kaupungin raunioalue Augstin ja Kaiseraugstin kohdalla Sveitsissä. Lähteen mukaan kaupunki perustettiin noin vuonna 44 eaa. Lucius Munatius Plancuksen toimesta, ja menestyksen huippuaikana 200-luvulla asukkaita arvioidaan olleen noin 20 000. Teatterissa oli 8000–10 000 paikkaa, ja sitä kuvataan Alppien pohjoispuolen suurimmaksi roomalaiseksi teatteriksi. Linnoituksen alueelta löytyi vuosina 1961–1962 Kaiseraugstin hopea-aarre. Alueella on roomalaismuseo, rekonstruoitu roomalaistalo ja ulkoilmamuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kohdekartta / Kohdekartta: His Majesty's -teatteri] 1904 Teatteri rakennettiin kultavuosien rahalla. Perthin väkiluku kasvoi 1890-luvun kultalöytöjen jälkeen nopeasti, ja paikallispoliitikko Thomas Molloy tilasi arkkitehti William G. Wolfilta teatterin ja hotellin yhdistelmän Hay Streetin ja King Streetin kulmaan. Nimi annettiin juuri kruunatun Edvard VII:n kunniaksi. Urakan voitti Friederich Liebe, joka oli aiemmin rakentanut Bulgarian parlamenttitalon Sofiaan ja tehnyt työtä Budapestin oopperatalossa. Tontin alla virtasi maanalainen puro, ja perustusten kestävyydestä esitettiin julkisesti epäilyjä kesken rakennustyön. Liebe suunnitteli ojat veden ohjaamiseksi ja jatkoi, mutta kun lasku tuli, Molloy kieltäytyi maksamasta ylimääräisiä 17 000…
+- [New Orleans — kohdekartta / Kohdekartta: Saenger-teatteri] 1927 Teatteri avattiin 4. helmikuuta 1927. Salissa oli neljätuhatta paikkaa, rakentaminen kesti kolme vuotta ja maksoi 2,5 miljoonaa dollaria, ja avajaiset keräsivät tuhannet ihmiset kulkueeseen Canal Streetille. Kallein lippu maksoi 65 senttiä, ja samalla lipulla näki mykkäelokuvan ja näytelmän sekä kuuli talon oman orkesterin. Saenger oli veljesten Julian ja Abe Saengerin teatteriketjun lippulaiva, ja se on niitä harvoja ketjun elokuvapalatseja, jotka ovat yhä pystyssä. Arkkitehti Emile Weil suunnitteli sisätilan atmosfääriteatteriksi, joka jäljittelee italialaista barokkipihaa. Kattoon asennettiin 150 lamppua tähtikuvioiden muotoon, ja erikoistehostekoneet heijastivat sisälle liikkuvia p…
+
+### 17.2
+KYSYMYS: Mikä löytyi Kaiseraugstista vuosina 1961–1962?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Augusta Raurica (historia)
+Tietoruudun teksti: Augusta Raurica on roomalaisen kaupungin raunioalue Augstin ja Kaiseraugstin kohdalla Sveitsissä. Lähteen mukaan kaupunki perustettiin noin vuonna 44 eaa. Lucius Munatius Plancuksen toimesta, ja menestyksen huippuaikana 200-luvulla asukkaita arvioidaan olleen noin 20 000. Teatterissa oli 8000–10 000 paikkaa, ja sitä kuvataan Alppien pohjoispuolen suurimmaksi roomalaiseksi teatteriksi. Linnoituksen alueelta löytyi vuosina 1961–1962 Kaiseraugstin hopea-aarre. Alueella on roomalaismuseo, rekonstruoitu roomalaistalo ja ulkoilmamuseo.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:habsburgin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Habsburgin linna (historia)
+Tietoruudun teksti: Habsburgin linna kohoaa Aargaun kantonissa Aare-joen lähellä, ja siitä sai alkunsa Habsburgien hallitsijasuvun nimi. Linnan rakennutti noin vuonna 1020 kreivi Radbot yhdessä Strasbourgin piispa Wernerin kanssa. Radbotin pojanpoika Otto II alkoi käyttää arvonimessään lisäystä "von Habsburg", ja Rudolf I siirsi suvun valtakeskuksen Itävaltaan vuonna 1276. Linna pysyi suvun omistuksessa vuoteen 1415, jolloin Aargau joutui sveitsiläiselle valaliitolle; nykyään sen omistaa Aargaun kantoni. Länsiosa on kunnostettu ja siellä toimii ravintola sekä pieni näyttely, kun itäosat ovat raunioina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ahaggar — kaupunkilehti / Huivin ja teltan kansa: Nainen omistaa teltan] Tuareg-yhteisössä valta ja omaisuus kulkevat usein naisten kautta: teltta ja sen sisältö kuuluvat perinteisesti avioituneelle naiselle, ei hänen miehelleen, ja avioerossa mies poistuu teltasta vaimon jäädessä kotiinsa. Myös yhteisön johtajan eli amgharin asema periytyy äidinpuoleisesti: seuraaja on usein hallitsijan sisaren poika, ei oma poika. Naiset huolehtivat perinteisesti karjasta ja kaivoilta haetusta vedestä, jotka ovat aavikon elämän kannalta yhtä tärkeitä kuin miesten hoitamat kamelikaravaanit. Tällaista äitilinjaan nojaavaa yhteiskuntaa kutsutaan matrilineaariseksi, ja se erottaa tuaregit naapurikulttuureistaan.
+- [Marseille — kohdekartta / Kohdekartta: Saint-Victorin kirkko] 415 Munkki ja teologi Johannes Cassianus perusti luostarin Marseilleen vuonna 415 tultuaan Egyptin erakkoluostareista — se on yksi Ranskan vanhimmista luostareista. Kirkon alla olevissa kryptoissa on jäljellä muinaiskreikkalainen kivilouhos, josta tuli myöhemmin hautapaikka. Saraseenit hyökkäsivät ja hävittivät luostarin kahdesti, vuosina 838 ja 923, mutta munkit palasivat 977. Vuonna 1020 apotti Isarn aloitti ison rakennusurakan, ja kirkosta tehtiin samalla myös linnoitus — siksi siinä on yhä paksut harjakivimuurit. Vuonna 1365 paavi Urbanus V — joka oli aiemmin ollut tämän saman luostarin apotti — palasi Marseilleen ja vihki kirkon alttarin.
+
+### 18.1
+KYSYMYS: Kuka rakennutti linnan noin vuonna 1020?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Habsburgin linna (historia)
+Tietoruudun teksti: Habsburgin linna kohoaa Aargaun kantonissa Aare-joen lähellä, ja siitä sai alkunsa Habsburgien hallitsijasuvun nimi. Linnan rakennutti noin vuonna 1020 kreivi Radbot yhdessä Strasbourgin piispa Wernerin kanssa. Radbotin pojanpoika Otto II alkoi käyttää arvonimessään lisäystä "von Habsburg", ja Rudolf I siirsi suvun valtakeskuksen Itävaltaan vuonna 1276. Linna pysyi suvun omistuksessa vuoteen 1415, jolloin Aargau joutui sveitsiläiselle valaliitolle; nykyään sen omistaa Aargaun kantoni. Länsiosa on kunnostettu ja siellä toimii ravintola sekä pieni näyttely, kun itäosat ovat raunioina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kohdekartta / Kohdekartta: Saint-Victorin kirkko] 415 Munkki ja teologi Johannes Cassianus perusti luostarin Marseilleen vuonna 415 tultuaan Egyptin erakkoluostareista — se on yksi Ranskan vanhimmista luostareista. Kirkon alla olevissa kryptoissa on jäljellä muinaiskreikkalainen kivilouhos, josta tuli myöhemmin hautapaikka. Saraseenit hyökkäsivät ja hävittivät luostarin kahdesti, vuosina 838 ja 923, mutta munkit palasivat 977. Vuonna 1020 apotti Isarn aloitti ison rakennusurakan, ja kirkosta tehtiin samalla myös linnoitus — siksi siinä on yhä paksut harjakivimuurit. Vuonna 1365 paavi Urbanus V — joka oli aiemmin ollut tämän saman luostarin apotti — palasi Marseilleen ja vihki kirkon alttarin.
+
+### 18.2
+KYSYMYS: Kuka omistaa linnan nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Habsburgin linna (historia)
+Tietoruudun teksti: Habsburgin linna kohoaa Aargaun kantonissa Aare-joen lähellä, ja siitä sai alkunsa Habsburgien hallitsijasuvun nimi. Linnan rakennutti noin vuonna 1020 kreivi Radbot yhdessä Strasbourgin piispa Wernerin kanssa. Radbotin pojanpoika Otto II alkoi käyttää arvonimessään lisäystä "von Habsburg", ja Rudolf I siirsi suvun valtakeskuksen Itävaltaan vuonna 1276. Linna pysyi suvun omistuksessa vuoteen 1415, jolloin Aargau joutui sveitsiläiselle valaliitolle; nykyään sen omistaa Aargaun kantoni. Länsiosa on kunnostettu ja siellä toimii ravintola sekä pieni näyttely, kun itäosat ovat raunioina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ahaggar — kaupunkilehti / Huivin ja teltan kansa: Nainen omistaa teltan] Tuareg-yhteisössä valta ja omaisuus kulkevat usein naisten kautta: teltta ja sen sisältö kuuluvat perinteisesti avioituneelle naiselle, ei hänen miehelleen, ja avioerossa mies poistuu teltasta vaimon jäädessä kotiinsa. Myös yhteisön johtajan eli amgharin asema periytyy äidinpuoleisesti: seuraaja on usein hallitsijan sisaren poika, ei oma poika. Naiset huolehtivat perinteisesti karjasta ja kaivoilta haetusta vedestä, jotka ovat aavikon elämän kannalta yhtä tärkeitä kuin miesten hoitamat kamelikaravaanit. Tällaista äitilinjaan nojaavaa yhteiskuntaa kutsutaan matrilineaariseksi, ja se erottaa tuaregit naapurikulttuureistaan.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:saint-ursanne) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Ursanne (kulttuuri)
+Tietoruudun teksti: Saint-Ursanne on keskiaikainen pikkukaupunki Jurassa, Doubs-joen mutkassa ennen joen virtaamista Ranskaan. Nimi viittaa 600-luvun munkki Ursicinukseen, joka perusti paikalle luostarin. Vuodesta 2009 kaupunki on kuulunut Clos du Doubsin kuntaan. Vanhassa kaupungissa on romaaninen luostarikirkko, kollegiaattikirkko, keskiaikaisia taloja, erakkomaja ja 1700-luvun silta. Kaupunki on saanut YK:n matkailujärjestö UNWTO:n tunnustuksen yhtenä maailman parhaista matkailukylistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+- [Masqat — kaupunkilehti / Arki: Astia kiertää kädestä käteen] Suitsuke poltetaan astiassa, jonka nimi on mabkhara tai majmar. Pohjalle pannaan hehkuvaa puuhiiltä ja hiilten päälle muutama jyvä lubania eli suitsuketta; savu nousee suoraan huoneeseen, eikä liekkiä tarvita. Astiat tehdään Dhofarissa savesta, ja niitä on muotoiltu ja maalattu etenkin kolmessa kaupungissa: Salalahissa, Mirbatissa ja Taqahissa. Muoto vaihtelee nelikulmaisesta lieriöön ja veneeseen. Vieraiden tullessa astia kiertää kädestä käteen, ja jokainen ohjaa savua vaatteidensa alle ja hiuksiinsa. Illan päätteeksi sama kierros on kohtelias merkki siitä, että vierailu on ohi.
+
+### 19.1
+KYSYMYS: Kenen mukaan kaupunki on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Ursanne (kulttuuri)
+Tietoruudun teksti: Saint-Ursanne on keskiaikainen pikkukaupunki Jurassa, Doubs-joen mutkassa ennen joen virtaamista Ranskaan. Nimi viittaa 600-luvun munkki Ursicinukseen, joka perusti paikalle luostarin. Vuodesta 2009 kaupunki on kuulunut Clos du Doubsin kuntaan. Vanhassa kaupungissa on romaaninen luostarikirkko, kollegiaattikirkko, keskiaikaisia taloja, erakkomaja ja 1700-luvun silta. Kaupunki on saanut YK:n matkailujärjestö UNWTO:n tunnustuksen yhtenä maailman parhaista matkailukylistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Historia: Kenen maalle kaupunki rakennettiin] Melbourne seisoo kahden Kulinin kansan mailla. Wurundjerit ovat jokilaakson väkeä, boonwurrungit eli bunurongit suolaisen veden väkeä, joiden alue ulottuu lahden rannoilta Western Portille ja Morningtonin niemimaalle. Siirtomaakartat eivät kansojen rajaa tunteneet. Kesäkuussa 2021 kansojen omat järjestöt — Wurundjeri Woi Wurrung Cultural Heritage Aboriginal Corporation vuodelta 1985 ja Bunurong Land Council Aboriginal Corporation — sopivat rajan uudesta linjasta: se kulkee kaupungin halki lännestä itään, keskusta ja Richmond wurundjerien puolella, Albert Park ja St Kilda bunurongien. Kaikki eivät pidä linjaa oikeana, ja kiistaa käydään yhä.
+
+### 19.2
+KYSYMYS: Mikä joki kiertää kaupunkia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Saint-Ursanne (kulttuuri)
+Tietoruudun teksti: Saint-Ursanne on keskiaikainen pikkukaupunki Jurassa, Doubs-joen mutkassa ennen joen virtaamista Ranskaan. Nimi viittaa 600-luvun munkki Ursicinukseen, joka perusti paikalle luostarin. Vuodesta 2009 kaupunki on kuulunut Clos du Doubsin kuntaan. Vanhassa kaupungissa on romaaninen luostarikirkko, kollegiaattikirkko, keskiaikaisia taloja, erakkomaja ja 1700-luvun silta. Kaupunki on saanut YK:n matkailujärjestö UNWTO:n tunnustuksen yhtenä maailman parhaista matkailukylistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Masqat — kaupunkilehti / Arki: Astia kiertää kädestä käteen] Suitsuke poltetaan astiassa, jonka nimi on mabkhara tai majmar. Pohjalle pannaan hehkuvaa puuhiiltä ja hiilten päälle muutama jyvä lubania eli suitsuketta; savu nousee suoraan huoneeseen, eikä liekkiä tarvita. Astiat tehdään Dhofarissa savesta, ja niitä on muotoiltu ja maalattu etenkin kolmessa kaupungissa: Salalahissa, Mirbatissa ja Taqahissa. Muoto vaihtelee nelikulmaisesta lieriöön ja veneeseen. Vieraiden tullessa astia kiertää kädestä käteen, ja jokainen ohjaa savua vaatteidensa alle ja hiuksiinsa. Illan päätteeksi sama kierros on kohtelias merkki siitä, että vierailu on ohi.
+- [Turkki — maalehti / Käsityö: Solmu kiertää kaksi lankaa] 1200-luvulta — Turkkilainen matto solmitaan pystyyn pingotettujen loimilankojen ympärille. Solmu on kaksinkertainen: lanka kiertää kahden loimen ympäri ja tulee ulos niiden välistä. Persialainen solmu kiertää vain yhtä loimea, joten turkkilainen solmu on tukevampi mutta karkeampi. Solmuja lasketaan neliödesimetreittäin, ja tiheässä matossa niitä on useita tuhansia. Iso matto vie kutojalta kuukausia. Kilim on eri asia: siinä ei ole solmuja lainkaan, vaan kuvio syntyy pelkästä kudonnasta, eikä kilimissä siksi ole nukkaa.
+- [Itävalta — maalehti / Historia: Rata, joka kiertää vuoren kaksin verroin pidemmäksi] 1854 — Semmeringin rata avattiin vuonna 1854, ja se oli Euroopan ensimmäinen normaaliraiteinen vuoristorautatie. Carl von Ghega johdatti kiskot Gloggnitzista Mürzzuschlagiin vuoren yli. Linnuntietä päätepisteiden väli on 21 kilometriä, mutta rataa on 42, koska nousu piti kiertää loivaksi. Ylin kohta on 898 metrissä. Matkalla on 14 tunnelia, 16 viaduktia ja yli sata holvattua kivisiltaa. Moni piti hanketta mahdottomana, koska kukaan ei tiennyt, jaksaisiko veturi nousta niin jyrkkää.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:solothurnin-katedraali) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solothurnin Pyhän Ursuksen katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Ursuksen katedraali on uusklassinen kirkko Solothurnin vanhassakaupungissa Aare-joen rannalla. Rakennustyöt alkoivat vuonna 1763, ja Lausannen piispa Joseph Niklaus von Montenach vihki kirkon 26. syyskuuta 1773. Suunnittelijana toimi asconalainen Gaetano Matteo Pisoni, ja hänen veljenpoikansa Paolo Antonio Pisoni otti työn johdon vuonna 1772. Länsijulkisivulle johtavan monumentaalisen portaikon reunustavat Mooseksen ja Gideonin patsaat roomalaistyylisten suihkukaivojen päällä. Kirkko on edelleen toimiva katedraali ja Sveitsin kansallisesti merkittävä kulttuuriperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Vanha katedraali Antiga Sé] 1761–1770 Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta noin 1761, ja työtä johti todennäköisesti portugalilainen arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 julkisivu vielä keskeneräisenä, ja sisustuksen kullatun rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira Pinto, aikansa parhaita veistäjiä kaupungissa. Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen talot otettiin käyttöön: kuningatar Maria I majoitettiin konventtiin ja viereisestä kirkosta tehtiin ensin kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João VI julistettiin kuni…
+
+### 20.1
+KYSYMYS: Milloin katedraali vihittiin käyttöön?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solothurnin Pyhän Ursuksen katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Ursuksen katedraali on uusklassinen kirkko Solothurnin vanhassakaupungissa Aare-joen rannalla. Rakennustyöt alkoivat vuonna 1763, ja Lausannen piispa Joseph Niklaus von Montenach vihki kirkon 26. syyskuuta 1773. Suunnittelijana toimi asconalainen Gaetano Matteo Pisoni, ja hänen veljenpoikansa Paolo Antonio Pisoni otti työn johdon vuonna 1772. Länsijulkisivulle johtavan monumentaalisen portaikon reunustavat Mooseksen ja Gideonin patsaat roomalaistyylisten suihkukaivojen päällä. Kirkko on edelleen toimiva katedraali ja Sveitsin kansallisesti merkittävä kulttuuriperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Vanha katedraali Antiga Sé] 1761–1770 Karmeliitat tulivat Rioon 1590 ja asettuivat pieneen kappeliin lahden rannalle. Nykyinen kirkko alkoi nousta noin 1761, ja työtä johti todennäköisesti portugalilainen arkkitehti Manuel Alves Setúbal. Kirkko vihittiin 1770 julkisivu vielä keskeneräisenä, ja sisustuksen kullatun rokokoopuuveiston teki vuoden 1785 jälkeen Inácio Ferreira Pinto, aikansa parhaita veistäjiä kaupungissa. Vuonna 1808 Portugalin hovi saapui Rioon, ja karmeliittojen talot otettiin käyttöön: kuningatar Maria I majoitettiin konventtiin ja viereisestä kirkosta tehtiin ensin kuninkaallinen kappeli ja pian kaupungin katedraali. Siellä pidettiin Maria I:n hautajaiset 1816 ja Te Deum, kun João VI julistettiin kuni…
+
+### 20.2
+KYSYMYS: Keiden patsaat reunustavat portaikkoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solothurnin Pyhän Ursuksen katedraali (kulttuuri)
+Tietoruudun teksti: Pyhän Ursuksen katedraali on uusklassinen kirkko Solothurnin vanhassakaupungissa Aare-joen rannalla. Rakennustyöt alkoivat vuonna 1763, ja Lausannen piispa Joseph Niklaus von Montenach vihki kirkon 26. syyskuuta 1773. Suunnittelijana toimi asconalainen Gaetano Matteo Pisoni, ja hänen veljenpoikansa Paolo Antonio Pisoni otti työn johdon vuonna 1772. Länsijulkisivulle johtavan monumentaalisen portaikon reunustavat Mooseksen ja Gideonin patsaat roomalaistyylisten suihkukaivojen päällä. Kirkko on edelleen toimiva katedraali ja Sveitsin kansallisesti merkittävä kulttuuriperintökohde.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

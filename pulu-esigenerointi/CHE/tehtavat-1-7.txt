@@ -1,0 +1,191 @@
+================ KOHTA 31 (kohde:hahmotelma-fribourg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+
+### 31.1
+KYSYMYS: Kuka perusti Fribourgin ja minä vuonna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+
+### 31.2
+KYSYMYS: Mistä kahdesta sanasta kaupungin saksankielinen nimi Freiburg muodostuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fribourg (kulttuuri)
+Tietoruudun teksti: Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta sivulta, ja nimi tulee saksan sanoista "vapaa" ja "linnoitus". Kaupunki siirtyi Kyburgin suvulle herttuakunnan sammuessa 1218 ja myytiin Habsburgeille 1277, ja jo 1300-luvulla se oli tunnettu kangas- ja nahkatuotannostaan ympäri Keski-Eurooppaa. Vanhakaupunki on säilynyt yhtenä Sveitsin parhaiten säilyneistä, ja sen kaduilla kuulee vieläkin sekä ranskaa että saksaa.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-zurich) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Professori, joka opetti turbiinit] 1903 — Aurel Stodola syntyi 1859 Liptovin seudulla ja valmistui vuonna 1876 Košicen reaalikoulusta, kuten kaupungin muistolaatta kertoo. Hän opiskeli Zürichin polyteknillisessä koulussa ja toimi siellä professorina vuodesta 1892 eläkkeelle jäämiseen 1929 asti. Hänen kirjansa Die Dampfturbine ilmestyi 1903, ja se käsitteli lämpöoppia, virtauksia ja värähtelyjä höyryturbiineissa. Stodola perusti Zürichiin energianmuunnoksen laboratorion ja piti ystävällistä yhteyttä Albert Einsteiniin. Sveitsin kansalaisuuden hän sai 1905.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+
+### 32.1
+KYSYMYS: Mikä oli Zürichin roomalaisaikainen nimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Professori, joka opetti turbiinit] 1903 — Aurel Stodola syntyi 1859 Liptovin seudulla ja valmistui vuonna 1876 Košicen reaalikoulusta, kuten kaupungin muistolaatta kertoo. Hän opiskeli Zürichin polyteknillisessä koulussa ja toimi siellä professorina vuodesta 1892 eläkkeelle jäämiseen 1929 asti. Hänen kirjansa Die Dampfturbine ilmestyi 1903, ja se käsitteli lämpöoppia, virtauksia ja värähtelyjä höyryturbiineissa. Stodola perusti Zürichiin energianmuunnoksen laboratorion ja piti ystävällistä yhteyttä Albert Einsteiniin. Sveitsin kansalaisuuden hän sai 1905.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+
+### 32.2
+KYSYMYS: Kuka johti Zürichin uskonpuhdistusta 1500-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zürich (kaupungit)
+Tietoruudun teksti: Zürich on Sveitsin suurin kaupunki ja Zürichin kantonin pääkaupunki, Zürichinjärven luoteiskärjessä. Roomalaiset perustivat paikalle tulliaseman nimeltä Turicum, ja keskiajalla kaupunki sai valtakunnanvälittömyyden erioikeuden Pyhän saksalais-roomalaisen keisarikunnan alaisuudessa. Vuonna 1519 Zürichistä tuli Huldrych Zwinglin johdolla yksi protestanttisen uskonpuhdistuksen tärkeimmistä keskuksista Euroopassa. Kaupungin halki virtaava Limmat-joki laskee Zürichinjärvestä, ja sen rannoilla sijaitsee torneineen vanhakaupunki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-basel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 33.1
+KYSYMYS: Mitä väriainetta Alexander Clavel alkoi valmistaa Baselissa vuonna 1859?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+
+### 33.2
+KYSYMYS: Kenelle Clavel myi tehtaansa juuri ennen kuolemaansa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Basel (tekniikka)
+Tietoruudun teksti: Basel on Sveitsin kolmanneksi suurin kaupunki Reinin varrella, ja siitä kasvaa 1900-luvulla maan kemian- ja lääketeollisuuden keskus. Perusta on jo olemassa: silkinvärjääjä Alexander Clavel alkoi vuonna 1859 valmistaa Baselissa synteettistä fuksiini-väriainetta silkkinauhateollisuudelle, yhtenä ensimmäisistä koko Sveitsissä. Väriaineen valmistuksessa syntyneet arseenihuurut ajoivat tehtaan kaupungin laidalle Klybeckin Reininrantaan vuonna 1864. Vain viikkoja sitten, alkuvuodesta 1873, Clavel myi tehtaansa kemisti Robert Bindschedlerille ja liikemies Albert Buschille — kauppa, josta kasvaa vuosikymmenten kuluessa kemianjätti Ciba.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-emmental) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+
+### 34.1
+KYSYMYS: Mistä kahdesta joesta Emmental-laakso koostuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+
+### 34.2
+KYSYMYS: Kuka kuvasi emmentalilaista talonpoikaiselämää kirjoissaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emmental (ruoka)
+Tietoruudun teksti: Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on levinnyt maailmalle sveitsiläisen juuston esikuvana. Pappi ja kirjailija Jeremias Gotthelf kuvasi 1800-luvun alkupuolella emmentalilaista talonpoikaiselämää romaaneissaan, ja hänen teoksensa tekivät laakson tunnetuksi kaukana kotikantonin ulkopuolella. Perinteiset emmentalilaiset maatalot tunnistaa niiden jyrkistä, lähes maahan asti ulottuvista kattokaarista.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-lugano) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+
+### 35.1
+KYSYMYS: Minkä kahden mahtisuvun kanssa Lugano kiisteli ennen liittymistään Sveitsiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+
+### 35.2
+KYSYMYS: Minä vuonna Ticinon kantoni perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lugano (kulttuuri)
+Tietoruudun teksti: Lugano on Ticinon kantonin suurin kaupunki ja italiankielisen Sveitsin merkittävin keskus, Luganonjärven rannalla. Se mainitaan markkinapaikkana jo vuodesta 984, ja Comon ja Milanon ruhtinaat kiistelivät siitä vuosisatoja ennen kuin kaupunki liittyi vanhaan Sveitsin valaliittoon vuonna 1513. Ticinon kantoni perustettiin vasta vuonna 1803, ja Lugano sai oman poliittisen kunnallishallintonsa samana vuonna. Kaupungin ympärillä kohoavat jyrkät vuoret, muun muassa San Salvatore, ja katujen kieli on italia, vaikka Sveitsi muuten on saksan- ja ranskankielinen.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

@@ -1,0 +1,201 @@
+================ KOHTA 1 (kohde:dufourspitze) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dufourspitze (luonto · vuori)
+Tietoruudun teksti: Dufourspitze on 4 634 metriä korkea ja Alppien sekä Länsi-Euroopan toiseksi korkein vuori heti Mont Blancin jälkeen. Se on Monte Rosa -massiivin korkein huippu Pennialpeilla ja kokonaan Sveitsin puolella, ja se on nimetty maanmittari Guillaume-Henri Dufourin mukaan. Massiivissa on useita muitakin yli neljäntuhannen metrin huippuja, ja se on vedenjakaja Rhônen ja Pon vesistöjen välillä.
+
+### 1.1
+KYSYMYS: Kuka Guillaume-Henri Dufour oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dufourspitze (luonto · vuori)
+Tietoruudun teksti: Dufourspitze on 4 634 metriä korkea ja Alppien sekä Länsi-Euroopan toiseksi korkein vuori heti Mont Blancin jälkeen. Se on Monte Rosa -massiivin korkein huippu Pennialpeilla ja kokonaan Sveitsin puolella, ja se on nimetty maanmittari Guillaume-Henri Dufourin mukaan. Massiivissa on useita muitakin yli neljäntuhannen metrin huippuja, ja se on vedenjakaja Rhônen ja Pon vesistöjen välillä.
+
+### 1.2
+KYSYMYS: Kuinka monta neljäntuhannen metrin huippua Monte Rosassa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dufourspitze (luonto · vuori)
+Tietoruudun teksti: Dufourspitze on 4 634 metriä korkea ja Alppien sekä Länsi-Euroopan toiseksi korkein vuori heti Mont Blancin jälkeen. Se on Monte Rosa -massiivin korkein huippu Pennialpeilla ja kokonaan Sveitsin puolella, ja se on nimetty maanmittari Guillaume-Henri Dufourin mukaan. Massiivissa on useita muitakin yli neljäntuhannen metrin huippuja, ja se on vedenjakaja Rhônen ja Pon vesistöjen välillä.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:matterhorn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matterhorn (luonto · vuori)
+Tietoruudun teksti: Matterhorn seisoo Sveitsin ja Italian rajalla päävedenjakajalla, ja sen 4 478 metrin huippu on lähes symmetrinen pyramidi Pennialpeilla Monte Rosan alueella. Sitä on kutsuttu vuorten vuoreksi ja Sveitsin sekä koko Alppien tunnukseksi. Sitä on myös kuvattu maailman kauneimmaksi vuoreksi ja väitetty maailman valokuvatuimmaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Menovinkit] Sveitsi on pieni maa, mutta sen verkkoon mahtuu paljon: 3 049 keskiaikaista kirjaa, viisi petatavua hiukkasfysiikkaa, 3,5 miljoonaa vanhaa valokuvaa, 10 000 kelloa ja Matterhorn sellaisena kuin se juuri nyt näyttää.
+
+### 2.1
+KYSYMYS: Kuka nousi Matterhornille ensimmäisenä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matterhorn (luonto · vuori)
+Tietoruudun teksti: Matterhorn seisoo Sveitsin ja Italian rajalla päävedenjakajalla, ja sen 4 478 metrin huippu on lähes symmetrinen pyramidi Pennialpeilla Monte Rosan alueella. Sitä on kutsuttu vuorten vuoreksi ja Sveitsin sekä koko Alppien tunnukseksi. Sitä on myös kuvattu maailman kauneimmaksi vuoreksi ja väitetty maailman valokuvatuimmaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Menovinkit] Sveitsi on pieni maa, mutta sen verkkoon mahtuu paljon: 3 049 keskiaikaista kirjaa, viisi petatavua hiukkasfysiikkaa, 3,5 miljoonaa vanhaa valokuvaa, 10 000 kelloa ja Matterhorn sellaisena kuin se juuri nyt näyttää.
+
+### 2.2
+KYSYMYS: Miksi Matterhorn on niin tarkan pyramidin muotoinen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matterhorn (luonto · vuori)
+Tietoruudun teksti: Matterhorn seisoo Sveitsin ja Italian rajalla päävedenjakajalla, ja sen 4 478 metrin huippu on lähes symmetrinen pyramidi Pennialpeilla Monte Rosan alueella. Sitä on kutsuttu vuorten vuoreksi ja Sveitsin sekä koko Alppien tunnukseksi. Sitä on myös kuvattu maailman kauneimmaksi vuoreksi ja väitetty maailman valokuvatuimmaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Menovinkit] Sveitsi on pieni maa, mutta sen verkkoon mahtuu paljon: 3 049 keskiaikaista kirjaa, viisi petatavua hiukkasfysiikkaa, 3,5 miljoonaa vanhaa valokuvaa, 10 000 kelloa ja Matterhorn sellaisena kuin se juuri nyt näyttää.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:jungfrau) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jungfrau (luonto · vuori)
+Tietoruudun teksti: Jungfrau kohoaa 4 158 metriin ja on yksi Bernin Alppien päähuipuista Bernin ja Valais'n kantonien välissä, puolimatkassa Interlakenista Fieschiin. Yhdessä Eigerin ja Mönchin kanssa se muodostaa valtavan vuorimuurin, joka kohoaa Bernin Oberlandin ja Sveitsin ylätasangon yllä. Muuri on Sveitsin Alppien tunnistettavimpia näkyjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Asema louhittiin vuoren sisään] 1912 — Jungfraujochin rautatieasema on Euroopan korkein: se on 3 454 metrin korkeudessa, eikä sinne noustu rakentamalla vaan louhimalla. Rata kulkee seitsemän kilometriä tunnelia Eigerin ja Mönchin vuorten sisällä, ja työ kesti kuusitoista vuotta — asema avattiin 1912. Matkalla on pysäkkejä, joilla juna seisahtuu ja matkustajat katsovat jäätikölle vuoreen hakatuista ikkunoista. Ylhäällä ilma on ohutta, ja portaat tuntuvat raskaammilta kuin alhaalla.
+
+### 3.1
+KYSYMYS: Mitkä ovat Eiger ja Mönch?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jungfrau (luonto · vuori)
+Tietoruudun teksti: Jungfrau kohoaa 4 158 metriin ja on yksi Bernin Alppien päähuipuista Bernin ja Valais'n kantonien välissä, puolimatkassa Interlakenista Fieschiin. Yhdessä Eigerin ja Mönchin kanssa se muodostaa valtavan vuorimuurin, joka kohoaa Bernin Oberlandin ja Sveitsin ylätasangon yllä. Muuri on Sveitsin Alppien tunnistettavimpia näkyjä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Asema louhittiin vuoren sisään] 1912 — Jungfraujochin rautatieasema on Euroopan korkein: se on 3 454 metrin korkeudessa, eikä sinne noustu rakentamalla vaan louhimalla. Rata kulkee seitsemän kilometriä tunnelia Eigerin ja Mönchin vuorten sisällä, ja työ kesti kuusitoista vuotta — asema avattiin 1912. Matkalla on pysäkkejä, joilla juna seisahtuu ja matkustajat katsovat jäätikölle vuoreen hakatuista ikkunoista. Ylhäällä ilma on ohutta, ja portaat tuntuvat raskaammilta kuin alhaalla.
+
+### 3.2
+KYSYMYS: Miten Jungfraulle päästään nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jungfrau (luonto · vuori)
+Tietoruudun teksti: Jungfrau kohoaa 4 158 metriin ja on yksi Bernin Alppien päähuipuista Bernin ja Valais'n kantonien välissä, puolimatkassa Interlakenista Fieschiin. Yhdessä Eigerin ja Mönchin kanssa se muodostaa valtavan vuorimuurin, joka kohoaa Bernin Oberlandin ja Sveitsin ylätasangon yllä. Muuri on Sveitsin Alppien tunnistettavimpia näkyjä.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:rein) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein on yksi Euroopan suurista joista, ja se alkaa Graubündenin kantonista Kaakkois-Sveitsin Alpeilta. Se muodostaa osan Sveitsin ja Liechtensteinin sekä Sveitsin ja Itävallan rajasta, ja Bodenjärvestä alaspäin osan Sveitsin ja Saksan rajasta. Sieltä se jatkaa Ranskan ja Saksan rajaa, kääntyy pohjoiseen Saksan halki ja laskee lopulta Alankomaissa Pohjanmereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+
+### 4.1
+KYSYMYS: Missä Reinin varsinainen lähde on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein on yksi Euroopan suurista joista, ja se alkaa Graubündenin kantonista Kaakkois-Sveitsin Alpeilta. Se muodostaa osan Sveitsin ja Liechtensteinin sekä Sveitsin ja Itävallan rajasta, ja Bodenjärvestä alaspäin osan Sveitsin ja Saksan rajasta. Sieltä se jatkaa Ranskan ja Saksan rajaa, kääntyy pohjoiseen Saksan halki ja laskee lopulta Alankomaissa Pohjanmereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Marseille: Hymni sai nimensä matkalla] Rouget de Lisle sävelsi laulun Strasbourgissa yhden yön aikana 25.–26. huhtikuuta 1792, ja se sai nimekseen Reinin armeijan sotalaulu. Nuotti kulkeutui etelään, ja Marseillen vapaaehtoiset ottivat sen marssilaulukseen. Kun he saapuivat Pariisiin 30. heinäkuuta 1792, he lauloivat sitä koko matkan, ja pariisilaiset alkoivat sanoa sitä marseillelaisten lauluksi. Nimi jäi, vaikka kaupungilla ei ollut sävelmän synnyn kanssa mitään tekemistä.
+- [Saksa — maalehti / Kirjapaino] Reinin rannan kauppakaupungissa latojat asettivat 1450-luvulla kirjaimen kerrallaan peilikuvaksi riveille, ja ensimmäinen painettu Raamattu syntyi — velaksi, jonka rahoittaja peri pajan mukana.
+
+### 4.2
+KYSYMYS: Kuinka monen maan rajaa Rein muodostaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rein (luonto · joki)
+Tietoruudun teksti: Rein on yksi Euroopan suurista joista, ja se alkaa Graubündenin kantonista Kaakkois-Sveitsin Alpeilta. Se muodostaa osan Sveitsin ja Liechtensteinin sekä Sveitsin ja Itävallan rajasta, ja Bodenjärvestä alaspäin osan Sveitsin ja Saksan rajasta. Sieltä se jatkaa Ranskan ja Saksan rajaa, kääntyy pohjoiseen Saksan halki ja laskee lopulta Alankomaissa Pohjanmereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:rhone) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta Sveitsin Valais'n kantonista, virtaa Genevenjärven läpi ja jatkaa siitä Kaakkois-Ranskaan ja Välimereen. Sveitsin puolella se kulkee koko Valais'n laakson pituudelta. Arles'n kohdalla lähellä suistoa se jakautuu Suureksi ja Pieneksi Rhôneksi.
+
+### 5.1
+KYSYMYS: Mikä Rhône-jäätikkö on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta Sveitsin Valais'n kantonista, virtaa Genevenjärven läpi ja jatkaa siitä Kaakkois-Ranskaan ja Välimereen. Sveitsin puolella se kulkee koko Valais'n laakson pituudelta. Arles'n kohdalla lähellä suistoa se jakautuu Suureksi ja Pieneksi Rhôneksi.
+
+### 5.2
+KYSYMYS: Miksi Genevenjärvi on niin kirkas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rhône (luonto · joki)
+Tietoruudun teksti: Rhône saa alkunsa Alpeilta Sveitsin Valais'n kantonista, virtaa Genevenjärven läpi ja jatkaa siitä Kaakkois-Ranskaan ja Välimereen. Sveitsin puolella se kulkee koko Valais'n laakson pituudelta. Arles'n kohdalla lähellä suistoa se jakautuu Suureksi ja Pieneksi Rhôneksi.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

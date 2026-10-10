@@ -1,0 +1,272 @@
+================ KOHTA 11 (kohde:zytglogge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+- [Košice — kohdekartta / Kohdekartta: Urbanin torni] 1500-luku Urbanin torni on tuomiokirkon renessanssiajan kellotorni, joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 suuri Urbanin kello, joka sai nimensä viininviljelijöiden suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja Franciscus Illenfeld. Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin 1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on roomalaisajalta 300-luvulta. Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. Sirpaleista koottu k…
+
+### 11.1
+KYSYMYS: Mistä torni sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+- [Košice — kohdekartta / Kohdekartta: Urbanin torni] 1500-luku Urbanin torni on tuomiokirkon renessanssiajan kellotorni, joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 suuri Urbanin kello, joka sai nimensä viininviljelijöiden suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja Franciscus Illenfeld. Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin 1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on roomalaisajalta 300-luvulta. Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. Sirpaleista koottu k…
+
+### 11.2
+KYSYMYS: Mihin tornia käytettiin ennen kelloa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zytglogge (tekniikka)
+Tietoruudun teksti: Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.
+
+Torni rakennettiin noin 1218–1220 Bernin läntisten linnoitusten porttitorniksi, ja se oli silloin vain kuusitoista metriä korkea. Kun kaupunki kasvoi ja muurit siirtyivät kauemmas noin 1270–1275, tornia korotettiin seitsemällä metrillä, jotta se yhä näkisi talojen yli. Kun länsipuolustus laajeni jälleen 1344–1346, tornista tehtiin naisvankila.
+
+Vuoden 1405 suurpalossa torni paloi sisältä kokonaan. Vankisellit jätettiin pois, ja portin ylle asennettiin 1400-luvun alussa kello, luultavasti jo yksinkertainen astronominen kello ja soittokoneisto. Juuri tämä kello ja samana vuonna valettu suuri kirkonkello antoivat tornille nimen: Zytglogge tarkoittaa Bernin murteella aikakelloa. 1400-l…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Xi’an — kaupunkilehti / Xi’an: Kello aamulla, rumpu illalla] Keskustassa seisoo kaksi Ming-ajan tornia kolmensadan metrin päässä toisistaan. Rumpitorni valmistui 1380 ja Kellotorni 1384, ja vuosisatojen ajan ne pitivät yhdessä kaupungin kelloa: kellot soivat aamun, rummut illan. Kellotorni ei ole aina ollut nykyisellä paikallaan. Se pystytettiin kilometrin verran lännemmäksi, siihen kohtaan, joka oli silloin tarkalleen pohjois- ja eteläportin välissä; kun kaupunki laajeni Ming-kaudella itään, koko torni siirrettiin vuonna 1582 nykyiseen neljän pääkadun risteykseen. Paikallaan ei ole enää tornin vanha kellokaan: vuonna 711 valettu Jingyun-kello vietiin 1953 Steelametsän museoon, jossa se on yhä esillä.
+- [Pariisi — kohdekartta / Kohdekartta: Eiffel-torni] 1889 Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna 1889, insinööri Gustave Eiffelin toimisto pystytti Champ de Mars -puistoon noin 300 metriä korkean rautatornin vain reilussa kahdessa vuodessa. Torniin käytettiin 18 038 metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko rakennustyön aikana sattui vain yksi kuolemantapaus. Moni pariisilainen taiteilija vihasi tornia aluksi: kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti vetoomuksen, jossa torni tuomittiin rumaksi ja hyödyttömäksi. Kirjailija Guy de Maupassant väitti syövänsä lounasta tornin ravintolassa joka päivä juuri siksi, että se oli ainoa paikka Pariisissa, josta tornia ei näkynyt. Torni oli tarkoitus purkaa jo …
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:la-chaux-de-fonds) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kaupunkilehti / Alkuperäiskansat: Kansa joka elää yhä Rio Negron varrella] Baré-kansaan kuului Amazonasin osavaltiossa 11 472 ihmistä vuonna 2014 ja Venezuelassa runsaat 5 000. Kotiseutuja ovat Xié-joki ja Rio Negron yläjuoksu, ja elanto tulee maanviljelystä, metsästyksestä, kalastuksesta ja piassava-kuidun keruusta. Kylät ovat hirsitaloja puhtaan hiekkakentän ympärillä, ja suurimmissa on kappeli, koulu ja joskus terveysasema. Alkuperäistä baré-kieltä osasi 2012 enää kaksi ihmistä; yhteiskielenä on nheengatu, jota karmeliitat levittivät siirtomaa-aikana. Cumati-putouksen alapuolella yhteisöt ovat protestanttisia ja yläpuolella katolisia, ja molemmissa parantajina toimivat yhä šamaanit.
+- [Aden — kohdekartta / Kohdekartta: Craterin tori] nykyinen katukuva 1800-luvun lopulta Craterin kaupallinen ydin on kraatterin pohjan ruudukossa, ja se on kartan tihein kohta. Katujen säännöllisyys ei ole sattumaa: kaupunki suunniteltiin uudelleen sen jälkeen, kun britit ottivat Adenin haltuunsa vuonna 1839 ja tekivät siitä vapaakauppasataman vuonna 1850. Sitä ennen paikka oli kutistunut kylän kokoiseksi: vuonna 1800 Adenissa asui noin 600 ihmistä arabeja, somaleja, juutalaisia ja intialaisia, ruokokattoisissa majoissa vanhempien raunioiden keskellä. Rasulidien aikaan asukkaita oli ollut noin kahdeksankymmentätuhatta. Kasvu näkyy katukuvassa. Torin ympärillä on kaksikerroksisia rakennuksia, joiden alakerrassa kiertää holvikaarikäytävä ja y…
+
+### 12.1
+KYSYMYS: Miksi kaupunki elää kellosepäntyöstä eikä maanviljelystä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kaupunkilehti / Alkuperäiskansat: Kansa joka elää yhä Rio Negron varrella] Baré-kansaan kuului Amazonasin osavaltiossa 11 472 ihmistä vuonna 2014 ja Venezuelassa runsaat 5 000. Kotiseutuja ovat Xié-joki ja Rio Negron yläjuoksu, ja elanto tulee maanviljelystä, metsästyksestä, kalastuksesta ja piassava-kuidun keruusta. Kylät ovat hirsitaloja puhtaan hiekkakentän ympärillä, ja suurimmissa on kappeli, koulu ja joskus terveysasema. Alkuperäistä baré-kieltä osasi 2012 enää kaksi ihmistä; yhteiskielenä on nheengatu, jota karmeliitat levittivät siirtomaa-aikana. Cumati-putouksen alapuolella yhteisöt ovat protestanttisia ja yläpuolella katolisia, ja molemmissa parantajina toimivat yhä šamaanit.
+
+### 12.2
+KYSYMYS: Miksi kadut kulkevat suorassa ruudukossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: La Chaux-de-Fonds (kauppa)
+Tietoruudun teksti: La Chaux-de-Fonds on kaupunki Neuchâtelin kantonissa Juravuorilla 992 metrin korkeudessa, muutaman kilometrin päässä Ranskan rajasta. Se perustettiin 1656, ja sen kasvu ja vauraus ovat kiinni kellonvalmistuksessa: kaupunki on Watch Valley -alueen tärkein kellosepänteollisuuden keskus.
+
+Syy on maaperässä. Korkeus ja veden puute — kallioperä on huokoista hiekkakiveä — tekevät maasta huonoa viljelyyn, ja kaupunki jäi elämään kellojen valmistuksesta ja viennistä. Kaavoitus ja rakennukset noudattavat kellosepän työn vaatimaa järjestystä: asuintalot ja verstaat lomittuvat rinnakkaisiksi nauhoiksi.
+
+Vuoden 1794 tulipalo tuhosi osan kaupungista, ja se rakennettiin uudelleen ruudukkokaavan mukaan — ainutlaatuisesti Sveitsin kaupunkien joukossa. Vain itäisin osa säästyi palolta, ja siellä kadut ovat yhä kapeita ja mutkaisia. Kaupungissa syntyivät muun muassa arkkitehti Le Corbusier, kirjailija Bl…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kohdekartta / Kohdekartta: Craterin tori] nykyinen katukuva 1800-luvun lopulta Craterin kaupallinen ydin on kraatterin pohjan ruudukossa, ja se on kartan tihein kohta. Katujen säännöllisyys ei ole sattumaa: kaupunki suunniteltiin uudelleen sen jälkeen, kun britit ottivat Adenin haltuunsa vuonna 1839 ja tekivät siitä vapaakauppasataman vuonna 1850. Sitä ennen paikka oli kutistunut kylän kokoiseksi: vuonna 1800 Adenissa asui noin 600 ihmistä arabeja, somaleja, juutalaisia ja intialaisia, ruokokattoisissa majoissa vanhempien raunioiden keskellä. Rasulidien aikaan asukkaita oli ollut noin kahdeksankymmentätuhatta. Kasvu näkyy katukuvassa. Torin ympärillä on kaksikerroksisia rakennuksia, joiden alakerrassa kiertää holvikaarikäytävä ja y…
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:gruyeres) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+- [Sveitsi — maalehti / Ruoka: Kansallisruoka, joka piti keksiä] 1950-luku — Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä maksaa laulun.
+
+### 13.1
+KYSYMYS: Mistä gruyère-juusto sai nimensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+- [Sveitsi — maalehti / Ruoka: Kansallisruoka, joka piti keksiä] 1950-luku — Juustofondue oli 1900-luvun alussa tuttu vain muutamassa laaksossa. Sveitsin juustoliitto teki siitä kansallisruoan mainoskampanjalla, ja armeijan keittokirja levitti reseptin koko maahan 1950-luvulla. Tunnetuin sekoitus on moitié-moitié: puolet gruyèrea, puolet vacherinia. Pataan pudonnut leipä maksaa laulun.
+
+### 13.2
+KYSYMYS: Kuinka suuri osa pitäjän maasta on alppilaidunta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gruyères (ruoka)
+Tietoruudun teksti: Gruyères on pikkukaupunki Gruyèren piirikunnassa Fribourgin kantonissa. Keskiaikainen kaupunki seisoo 82 metriä korkean kukkulan laella Saanen laakson ja Gruyèren järven yllä, ja se on antanut nimensä gruyère-juustolle.
+
+Kaupunki on 810 metrin korkeudessa, 4,5 kilometriä piirikunnan pääkaupungista Bullesta kaakkoon. Kukkula nousee yksinään Alppien pohjoispuolella, Moléson-vuoren juurella, siinä kohdassa jossa Saane jättää Fribourgin alpit.
+
+Pitäjän maasta 40,5 prosenttia on maatalouskäytössä ja puolet metsää. Maatalousmaasta vain 4,6 prosenttia on peltoa: 12,9 prosenttia on laidunta ja 22,9 prosenttia alppilaidunta. Juuri se suhde kertoo, mihin seudun elanto perustuu.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:rutli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+### 14.1
+KYSYMYS: Miksi niitystä tuli kansallinen symboli vasta 1700-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+### 14.2
+KYSYMYS: Mitä Rütlillä tapahtui heinäkuussa 1940?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rütlin niitty (historia)
+Tietoruudun teksti: Rütli on vuoristoniitty Luzernin järven rannalla Seelisbergin kunnassa Urin kantonissa. Perinteisessä sveitsiläisessä historiankirjoituksessa se on Rütlischwurin paikka: valan, joka merkitsee alkuperäisen Sveitsin valaliiton syntyä. Niittyä pidetään kansallisena muistomerkkinä, ja sinne pääsee vain veneellä järveltä tai jalan Seelisbergistä.
+
+Symboliksi paikka nousi vasta 1700-luvun alussa kansallisromantiikan myötä. 1780-luvulla ehdotettiin vapaudenmuistomerkin pystyttämistä, mutta hanke ei toteutunut, ja Helvetian tasavallan aikana Rütlistä tuli konservatiivisten toisinajattelijoiden pyhiinvaelluskohde. Vuonna 1804 Friedrich Schiller julkaisi Wilhelm Tellin, joka dramatisoi Rütlin valan, ja 1820 Johann Krauer ja Franz Joseph Greith tekivät isänmaallisen Rütlilied-laulun.
+
+Vuonna 1859 niityn osti yleishyödyllinen seura Schweizerische Gemeinnützige Gesellschaft, koska paikalle aiottiin …
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:landwasserin-viadukti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Luonto: Saaret, jotka ilmestyvät ja katoavat] 1969–2022 — Maapallon pohjoisimpana maana pidettiin pitkään Kap Morris Jesupia, kunnes kanadalaisryhmä mittasi 1969 Kaffeklubben-saaren ja totesi sen yltävän 750 metriä pohjoisemmaksi. Sen jälkeen kilpailu on ollut vilkas. Vuonna 1978 löytyi Oodaaq, joka nähtiin varmuudella viimeksi 1979, ja 2003 tutkija Dennis Schmitt löysi 35 metriä pitkän kivikasan, jolle annettiin epävirallinen nimi 83-42. Vuoden 2022 syvyysmittaus osoitti, ettei se ollutkaan kiinni merenpohjassa vaan kiviainesta merijään päällä. Kaffeklubben on siis yhä kiistaton ykkönen.
+- [Yhdysvallat — maalehti / Musiikki: Kirja, joka pysäytti katoavat laulut] 1867 — Spirituaalit syntyivät orjuutettujen ihmisten suullisena perinteenä, jossa afrikkalaiset lauluperinteet, työlaulut ja Raamatun kertomukset sekoittuivat. Vuonna 1867 ilmestyi Slave Songs of the United States, 136 laulun kokoelma ja ensimmäinen painettu kirja afroamerikkalaista musiikkia. Sen kokosivat William Francis Allen, Lucy McKim Garrison ja Charles Pickard Ware kuuntelemalla gullah-kansan laulua Etelä-Carolinan Saint Helenan saarella. Laulujen kaksoismerkitys oli avoin salaisuus: "Go Down, Moses" kertoi Egyptistä mutta tarkoitti vapautta, ja monet orjanomistajat kielsivät sen.
+
+### 15.1
+KYSYMYS: Miksi kaarre on niin jyrkkä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+
+### 15.2
+KYSYMYS: Mihin junat katoavat heti sillan jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Landwasserin viadukti (tekniikka)
+Tietoruudun teksti: Landwasserin viadukti on yksiraiteinen, kaartuva kalkkikivisilta Landwasser-joen yli Schmittenin ja Filisurin välillä Graubündenin kantonissa. Sen suunnitteli Alexander Acatos, ja Müller & Zeerleder rakensi sen vuosina 1901–1902 Rhätische Bahnille, joka omistaa ja liikennöi siltaa yhä. Silta on maailmanperintöluetteloon kuuluvan Albula-radan tunnusrakennelma: korkeutta on 65 metriä ja pituutta noin 140.
+
+Silmiinpistävin piirre on jyrkkä kaarre, jonka säde on sata metriä — pienin koko radalla. Kantavia kaaria on kuusi, kukin kaksikymmentä metriä leveä, ja ne lepäävät viiden korkean pilarin varassa; yhtäkään kaarta ei ole nostettu korkeaksi, vaan ne ovat tarkoituksella laakeita. Muurausta on noin 9 200 kuutiometriä, ja saumat on tehty dolomiittisella kalkkikivellä. Radan kaltevuus sillalla on kaksi prosenttia.
+
+Silta on osa Albula-radan osuutta Tiefencastelin ja Filisurin välillä, 63 kilo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Luonto: Saaret, jotka ilmestyvät ja katoavat] 1969–2022 — Maapallon pohjoisimpana maana pidettiin pitkään Kap Morris Jesupia, kunnes kanadalaisryhmä mittasi 1969 Kaffeklubben-saaren ja totesi sen yltävän 750 metriä pohjoisemmaksi. Sen jälkeen kilpailu on ollut vilkas. Vuonna 1978 löytyi Oodaaq, joka nähtiin varmuudella viimeksi 1979, ja 2003 tutkija Dennis Schmitt löysi 35 metriä pitkän kivikasan, jolle annettiin epävirallinen nimi 83-42. Vuoden 2022 syvyysmittaus osoitti, ettei se ollutkaan kiinni merenpohjassa vaan kiviainesta merijään päällä. Kaffeklubben on siis yhä kiistaton ykkönen.
+- [Yhdysvallat — maalehti / Musiikki: Kirja, joka pysäytti katoavat laulut] 1867 — Spirituaalit syntyivät orjuutettujen ihmisten suullisena perinteenä, jossa afrikkalaiset lauluperinteet, työlaulut ja Raamatun kertomukset sekoittuivat. Vuonna 1867 ilmestyi Slave Songs of the United States, 136 laulun kokoelma ja ensimmäinen painettu kirja afroamerikkalaista musiikkia. Sen kokosivat William Francis Allen, Lucy McKim Garrison ja Charles Pickard Ware kuuntelemalla gullah-kansan laulua Etelä-Carolinan Saint Helenan saarella. Laulujen kaksoismerkitys oli avoin salaisuus: "Go Down, Moses" kertoi Egyptistä mutta tarkoitti vapautta, ja monet orjanomistajat kielsivät sen.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

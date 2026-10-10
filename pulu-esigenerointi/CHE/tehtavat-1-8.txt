@@ -1,0 +1,212 @@
+================ KOHTA 36 (kohde:hahmotelma-st-moritz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Musiikki: Viulu, jonka kielet ovat hevosen jouhia] Morin khuur on kaksikielinen jousisoitin, jonka kaikukoppa on puolisuunnikkaan muotoinen ja jonka lavan yläpäähän on veistetty hevosen pää. Kielet punottiin jouhista: paksumpaan, urospuoliseksi kutsuttuun kieleen otettiin 130 jouhta oriin hännästä ja ohuempaan, naaraspuoliseen 105 tamman hännästä. Jousta pidetään alakautta, ja siksi soittaja voi kiristää jouhia sormillaan kesken vedon ja säätää sävyä. Tarun mukaan paimen Namjil sai lentävän hevosen, jonka siivet leikattiin kateudesta poikki; hevonen kuoli, ja paimen teki sen nahasta ja jouhista soittimen surullisia laulujaan varten.
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+
+### 36.1
+KYSYMYS: Minkä vedon Caspar Badrutt löi brittivieraidensa kanssa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Musiikki: Viulu, jonka kielet ovat hevosen jouhia] Morin khuur on kaksikielinen jousisoitin, jonka kaikukoppa on puolisuunnikkaan muotoinen ja jonka lavan yläpäähän on veistetty hevosen pää. Kielet punottiin jouhista: paksumpaan, urospuoliseksi kutsuttuun kieleen otettiin 130 jouhta oriin hännästä ja ohuempaan, naaraspuoliseen 105 tamman hännästä. Jousta pidetään alakautta, ja siksi soittaja voi kiristää jouhia sormillaan kesken vedon ja säätää sävyä. Tarun mukaan paimen Namjil sai lentävän hevosen, jonka siivet leikattiin kateudesta poikki; hevonen kuoli, ja paimen teki sen nahasta ja jouhista soittimen surullisia laulujaan varten.
+- [Saksa — maalehti / Luonto: Liitukalliot hehkuvat valkoisina] Rügenin saaren itärannalla metsä päättyy äkkiä sadan metrin valkoiseen pudotukseen. Liitukalliot ovat muinaisen meren pohjaa: liitu on syntynyt miljardien pikkuruisten levänkuorien kerrostumista kymmenien miljoonien vuosien aikana, ja kallioista löytää yhä fossiileja. Korkein kohta on 118-metrinen Königsstuhl, Kuninkaanistuin. Taidemaalari Caspar David Friedrich maalasi kalliot 1818, ja taulusta tuli niin kuuluisa, että sitä pidetään Saksan romantiikan tunnuskuvana.
+
+### 36.2
+KYSYMYS: Mihin vuosisataan St. Moritzin lähteille tehdyt pyhiinvaellukset juontavat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: St. Moritz (urheilu)
+Tietoruudun teksti: St. Moritz on korkealla Ylä-Engadinissa sijaitseva kylpyläkylä, lähes 1 800 metrin korkeudessa Graubündenin kantonissa. Sen mineraalilähteille on tehty pyhiinvaelluksia jo keskiajalta asti, ja 1500-luvulla myös lääkäri Paracelsus vietti siellä aikaa. Talvimatkailu koko Alpeilla sai alkunsa juuri täältä syyskuussa 1864, kun hotelli-isäntä Caspar Badrutt löi vetoa neljän brittiläisen kesävieraansa kanssa: jos he eivät pitäisi kylästä talvella, hän maksaisi heidän matkakulunsa, mutta jos pitäisivät, he saisivat jäädä hänen vierainaan niin pitkäksi aikaa kuin halusivat. Vieraat ihastuivat, ja St. Moritzista tuli Alppien ensimmäinen talvikohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Bali: Nuori Hollanti] Neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – oli lähtenyt Amsterdamista huhtikuussa 1595 etsimään suoraa merireittiä mausteiden lähteille. Matka oli täynnä onnettomuuksia, mutta helmikuussa 1597 laivueen komentaja Cornelis de Houtman saapui Balille ja tapasi saaren kuninkaan. Houtman ihastui näkemäänsä niin, että hän kutsui saarta leikillään "Nuoreksi Hollanniksi". Elokuussa 1597 laivue jatkoi matkaa mukanaan pippuria, muskottia ja maceta, mutta ensikosketus oli tehty: se avasi tien hollantilaiselle mausteikaupalle ja lopulta koko Itä-Intian siirtomaavallalle.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-scuol) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+
+### 37.1
+KYSYMYS: Mikä kieli on Scuolin virallinen kieli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+
+### 37.2
+KYSYMYS: Milloin Scuolin parantavia lähteitä alettiin käyttää laajemmin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Scuol (sana)
+Tietoruudun teksti: Scuol on kylä Ala-Engadinissa Graubündenin kantonissa, ja sen virallinen kieli on retoromaani eli romantsi, latinasta polveutuva kieli, jota puhutaan enää tässä yhdessä sveitsiläiskantonissa. Kylän parantavia lähteitä on käytetty laajemmin vasta 1860-luvulta lähtien, ja kylpylämatkailu on juuri alkamassa. Romantsin kielelle on 1800-luvun puolivälissä syntynyt elvytysliike: vuonna 1860 kieli otettiin opetusaineeksi opettajaseminaariin, ja vuonna 1863 tehtiin ensimmäinen yritys perustaa yhteinen yhdistys kaikille romantsinkielisille alueille. Kieli jakautuu viiteen murteeseen, joiden puhujat eivät aina ymmärrä toisiaan, ja Scuolin ympäristössä puhuttua muotoa kutsutaan valladeriksi.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-aletsch) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+
+### 38.1
+KYSYMYS: Kuinka monesta pienemmästä jäätiköstä Aletschin jäätikkö syntyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+
+### 38.2
+KYSYMYS: Mikä joki saa alkunsa Aletschin jäätiköltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aletschin jäätikkö (luonto · vuori)
+Tietoruudun teksti: Aletschin jäätikkö on Alppien suurin jäätikkö, noin 23 kilometriä pitkä ja lähes 82 neliökilometrin laajuinen, Berner Alpeilla Valais'n kantonissa. Se syntyy neljän pienemmän jäätikön yhtyessä Konkordiaplatzilla, jossa jää on paksuimmillaan yli 900 metriä, ja jatkaa sieltä kohti Rhônen laaksoa antaen alkunsa Massa-joelle. Jäätikköä reunustavat Alppien korkeimmat huiput, muun muassa Jungfrau ja Mönch pohjoisessa sekä Aletschhorn lännessä. Jäätikkö on jo vetäytymässä: vuodesta 1870 se on lyhentynyt yli kolme kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-grande-dixence) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Kulttuurikeskus] 1897 Talon tilasi kaupunki kahteen tarkoitukseen kerralla: siitä tuli sekä Chicagon pääkirjasto että sisällissodan pohjoisen veteraanijärjestön Grand Army of the Republicin kokoushuone ja muistosali. Järjestö lahjoitti tontin, bostonilainen toimisto Shepley, Rutan and Coolidge piirsi rakennuksen 1892, ja se valmistui 1897 lähes kahdella miljoonalla dollarilla. Seinät ovat metrin paksuista muurausta ja verhoiltu Bedfordin sinisellä kalkkikivellä graniittijalustan päälle. Sisällä on kaksi lasikupolia, kummankin siiven päällä yksi. Pohjoissiiven veteraanisalin pyöreässä osassa on yhdeksän metrin korkuiset vaaleanpunaiset marmoriseinät ja Healy and Millet -verstaan tekemä lasikupoli. Eteläsiive…
+- [Yellowknife — kohdekartta / Kohdekartta: Hirsikoulu] 1938 Kaupungin ensimmäinen koulurakennus on pieni 1930-luvun puolivälin hirsimökki. Sen rakensi paikallinen kultakaivosyhtiö aivan muuhun tarkoitukseen, mutta 1938 väkiluku oli kasvanut niin, että koulu oli pakko saada — ja mökki otettiin siihen käyttöön. Koulua varten perustettiin Yellowknife Education District No. 1, ja sen koululautakunta oli koko territorion ensimmäinen demokraattisesti valittu hallintoelin. Oppilaita oli kaksikymmentä, ja siltikin tila oli niin ahdas, että opetus jouduttiin pitämään kahdessa vuorossa. Tunteja keskeyttivät ohi kulkevat kaivosmiehet, jotka jäivät katsomaan sisään tai luulivat taloa baariksi. Kahden vuoden kuluttua koulupiiri muutti isompiin tiloihin, ja …
+
+### 39.1
+KYSYMYS: Missä kantonissa Grande Dixence sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+
+### 39.2
+KYSYMYS: Mihin tarkoitukseen pato rakennetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grande Dixence -pato (tekniikka)
+Tietoruudun teksti: Grande Dixence on Sveitsin ja koko Euroopan korkein pato, 285 metriä korkea betoninen painovoimapato Val d'Hérémencen perukoilla Valais'n kantonissa. Se patoaa Dixence-joen Lac des Dix -tekojärveksi ja syöttää vettä neljälle voimalaitokselle, jotka riittävät sadoille tuhansille kotitalouksille. Pato ja sen tekojärvi rakennetaan vasta 1900-luvun puolivälissä, kun sodanjälkeinen teollisuus tarvitsee yhä enemmän sähköä; vuoteen 1873 mennessä laakso on yhä koskematon vuoristolaakso. Ensimmäinen, paljon pienempi Dixencen pato valmistuu vasta 1935, ja nykyinen jättipato vasta 1961.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Kulttuurikeskus] 1897 Talon tilasi kaupunki kahteen tarkoitukseen kerralla: siitä tuli sekä Chicagon pääkirjasto että sisällissodan pohjoisen veteraanijärjestön Grand Army of the Republicin kokoushuone ja muistosali. Järjestö lahjoitti tontin, bostonilainen toimisto Shepley, Rutan and Coolidge piirsi rakennuksen 1892, ja se valmistui 1897 lähes kahdella miljoonalla dollarilla. Seinät ovat metrin paksuista muurausta ja verhoiltu Bedfordin sinisellä kalkkikivellä graniittijalustan päälle. Sisällä on kaksi lasikupolia, kummankin siiven päällä yksi. Pohjoissiiven veteraanisalin pyöreässä osassa on yhdeksän metrin korkuiset vaaleanpunaiset marmoriseinät ja Healy and Millet -verstaan tekemä lasikupoli. Eteläsiive…
+- [Yellowknife — kohdekartta / Kohdekartta: Hirsikoulu] 1938 Kaupungin ensimmäinen koulurakennus on pieni 1930-luvun puolivälin hirsimökki. Sen rakensi paikallinen kultakaivosyhtiö aivan muuhun tarkoitukseen, mutta 1938 väkiluku oli kasvanut niin, että koulu oli pakko saada — ja mökki otettiin siihen käyttöön. Koulua varten perustettiin Yellowknife Education District No. 1, ja sen koululautakunta oli koko territorion ensimmäinen demokraattisesti valittu hallintoelin. Oppilaita oli kaksikymmentä, ja siltikin tila oli niin ahdas, että opetus jouduttiin pitämään kahdessa vuorossa. Tunteja keskeyttivät ohi kulkevat kaivosmiehet, jotka jäivät katsomaan sisään tai luulivat taloa baariksi. Kahden vuoden kuluttua koulupiiri muutti isompiin tiloihin, ja …
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-vevey) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Musiikki: Naiset, joiden laulu saattoi ratkaista riidan] Länsi-Sudanissa on hakamat: arvostettuja naisia, joiden ase on runo. He ylistävät tai pilkkaavat oman heimonsa miehiä, ja heidän sanansa painaa niin paljon, että rauhantyötä tekevät järjestöt ovat pyytäneet heitä käyttämään vaikutusvaltaansa sovitteluun ja ympäristöasioihin. Etnomusikologi Roxane Connick Carlisle kuvasi 1960-luvun kenttätyössään zaghawa-kansan naislaulajia: vapaa rytmi, laskeva melodia oktaavin sisällä ja ennen kaikkea merkitsevä teksti. Naisten omaa musiikkia ovat myös dalooka-rummun tahdittamat aghani al-banat eli tyttöjen laulut.
+- [Sveitsi — maalehti / Ruoka: Kone, joka teki suklaasta sileää] 1879 — Suklaa oli 1800-luvulla karkeaa ja rakeista. Vevey­läinen Daniel Peter keksi 1875 sekoittaa siihen maitojauhetta, ja neljä vuotta myöhemmin bernissä työskennellyt Rodolphe Lindt jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi. Maanantaina massa oli muuttunut: se oli sileää ja suli suussa. Menetelmää sanotaan konssaukseksi, ja hyvää suklaata sekoitetaan yhä tunteja. Sveitsiläiset syövät suklaata enemmän henkeä kohti kuin minkään muun maan asukkaat.
+
+### 40.1
+KYSYMYS: Minkä ongelman Daniel Peter yritti ratkaista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Musiikki: Naiset, joiden laulu saattoi ratkaista riidan] Länsi-Sudanissa on hakamat: arvostettuja naisia, joiden ase on runo. He ylistävät tai pilkkaavat oman heimonsa miehiä, ja heidän sanansa painaa niin paljon, että rauhantyötä tekevät järjestöt ovat pyytäneet heitä käyttämään vaikutusvaltaansa sovitteluun ja ympäristöasioihin. Etnomusikologi Roxane Connick Carlisle kuvasi 1960-luvun kenttätyössään zaghawa-kansan naislaulajia: vapaa rytmi, laskeva melodia oktaavin sisällä ja ennen kaikkea merkitsevä teksti. Naisten omaa musiikkia ovat myös dalooka-rummun tahdittamat aghani al-banat eli tyttöjen laulut.
+
+### 40.2
+KYSYMYS: Mitä Henri Nestlé myi Veveystä käsin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vevey (ruoka)
+Tietoruudun teksti: Vevey on pieni kaupunki Genevenjärven rannalla, ja siitä on tullut sveitsiläisen elintarviketeollisuuden syntysija. Henri Nestlé alkoi vuonna 1867 myydä Veveystä käsin kehittämäänsä äidinmaidonkorviketta, jonka reseptin hän oli keksinyt pelastaakseen kylän vauvoja. Samoihin aikoihin paikallinen makeistehtailija Daniel Peter yritti keksiä tavan valmistaa maitosuklaata, mutta maidon vedestä ei tahtonut päästä eroon ilman että suklaa homehtui. Nestlé neuvoi Peteriä, ja ratkaisu löytyi vasta vuosia myöhemmin, minkä jälkeen Peter yhdisti yrityksensä Nestlén kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Ruoka: Kone, joka teki suklaasta sileää] 1879 — Suklaa oli 1800-luvulla karkeaa ja rakeista. Vevey­läinen Daniel Peter keksi 1875 sekoittaa siihen maitojauhetta, ja neljä vuotta myöhemmin bernissä työskennellyt Rodolphe Lindt jätti sekoituskoneensa vahingossa käymään koko viikonlopuksi. Maanantaina massa oli muuttunut: se oli sileää ja suli suussa. Menetelmää sanotaan konssaukseksi, ja hyvää suklaata sekoitetaan yhä tunteja. Sveitsiläiset syövät suklaata enemmän henkeä kohti kuin minkään muun maan asukkaat.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

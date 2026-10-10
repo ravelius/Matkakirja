@@ -1,0 +1,274 @@
+================ KOHTA 6 (kohde:kapellbrucke) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapellbrücke (kulttuuri)
+Tietoruudun teksti: Kapellbrücke on katettu puinen kävelysilta, joka ylittää Reussin vinottain keskellä Luzernia. Nimensä se on saanut viereisestä Pyhän Pietarin kappelista. Silta rakennettiin noin vuonna 1365 osaksi kaupungin linnoituksia: se yhdisti vanhankaupungin oikealla rannalla uuteen kaupunkiin vasemmalla ja suojasi kaupunkia järven suunnasta tulevalta hyökkäykseltä. Alun perin se oli yli 270 metriä pitkä; lyhennysten ja rantatäyttöjen jälkeen pituus on 204,7 metriä.
+
+Siltakokonaisuuteen kuuluu kahdeksankulmainen, maasta mitattuna 34,5 metriä korkea Wasserturm eli vesitorni — torni, joka seisoo vedessä. Se on noin kolmekymmentä vuotta siltaa vanhempi, ja sitä on vuosisatojen mittaan käytetty vankilana, kidutuskammiona ja myöhemmin kaupungin arkistona ja rahastona.
+
+Sillan sisäkatossa on kolmion muotoisia maalauksia 1600-luvulta. Luzern on siinä ainutlaatuinen: kaupungin kolmessa puisessa kävelysill…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kohdekartta / Kohdekartta: Vijećnica] 1892–1896 Vijećnica on Sarajevon komea kaupungintalo, jonka tšekkiläinen arkkitehti Karel Pařík suunnitteli maurilaistyyliin — se muistuttaa enemmän Espanjan ja Pohjois-Afrikan islamilaista arkkitehtuuria kuin tavallista eurooppalaista virastotaloa. Rakennus valmistui vuosina 1892–1894 ja avattiin juhlallisesti vuonna 1896. Vuonna 1949 rakennuksesta tehtiin kansallis- ja yliopistokirjasto, jonka hyllyillä oli parhaimmillaan 1,5 miljoonaa kirjaa. Elokuussa 1992, Sarajevon piirityksen aikana, rakennus tuhoutui pommituksessa lähes kokonaan, ja liekit veivät mukanaan satoja ainutlaatuisia vanhoja käsikirjoituksia. Vijećnica rakennettiin uudelleen vuosina 1996–2013, ja se avattiin jälleen yleisö…
+
+### 6.1
+KYSYMYS: Miksi sillan kolmiokehykset ovat ainutlaatuisia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapellbrücke (kulttuuri)
+Tietoruudun teksti: Kapellbrücke on katettu puinen kävelysilta, joka ylittää Reussin vinottain keskellä Luzernia. Nimensä se on saanut viereisestä Pyhän Pietarin kappelista. Silta rakennettiin noin vuonna 1365 osaksi kaupungin linnoituksia: se yhdisti vanhankaupungin oikealla rannalla uuteen kaupunkiin vasemmalla ja suojasi kaupunkia järven suunnasta tulevalta hyökkäykseltä. Alun perin se oli yli 270 metriä pitkä; lyhennysten ja rantatäyttöjen jälkeen pituus on 204,7 metriä.
+
+Siltakokonaisuuteen kuuluu kahdeksankulmainen, maasta mitattuna 34,5 metriä korkea Wasserturm eli vesitorni — torni, joka seisoo vedessä. Se on noin kolmekymmentä vuotta siltaa vanhempi, ja sitä on vuosisatojen mittaan käytetty vankilana, kidutuskammiona ja myöhemmin kaupungin arkistona ja rahastona.
+
+Sillan sisäkatossa on kolmion muotoisia maalauksia 1600-luvulta. Luzern on siinä ainutlaatuinen: kaupungin kolmessa puisessa kävelysill…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kohdekartta / Kohdekartta: Vijećnica] 1892–1896 Vijećnica on Sarajevon komea kaupungintalo, jonka tšekkiläinen arkkitehti Karel Pařík suunnitteli maurilaistyyliin — se muistuttaa enemmän Espanjan ja Pohjois-Afrikan islamilaista arkkitehtuuria kuin tavallista eurooppalaista virastotaloa. Rakennus valmistui vuosina 1892–1894 ja avattiin juhlallisesti vuonna 1896. Vuonna 1949 rakennuksesta tehtiin kansallis- ja yliopistokirjasto, jonka hyllyillä oli parhaimmillaan 1,5 miljoonaa kirjaa. Elokuussa 1992, Sarajevon piirityksen aikana, rakennus tuhoutui pommituksessa lähes kokonaan, ja liekit veivät mukanaan satoja ainutlaatuisia vanhoja käsikirjoituksia. Vijećnica rakennettiin uudelleen vuosina 1996–2013, ja se avattiin jälleen yleisö…
+
+### 6.2
+KYSYMYS: Mihin Wasserturmia on käytetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kapellbrücke (kulttuuri)
+Tietoruudun teksti: Kapellbrücke on katettu puinen kävelysilta, joka ylittää Reussin vinottain keskellä Luzernia. Nimensä se on saanut viereisestä Pyhän Pietarin kappelista. Silta rakennettiin noin vuonna 1365 osaksi kaupungin linnoituksia: se yhdisti vanhankaupungin oikealla rannalla uuteen kaupunkiin vasemmalla ja suojasi kaupunkia järven suunnasta tulevalta hyökkäykseltä. Alun perin se oli yli 270 metriä pitkä; lyhennysten ja rantatäyttöjen jälkeen pituus on 204,7 metriä.
+
+Siltakokonaisuuteen kuuluu kahdeksankulmainen, maasta mitattuna 34,5 metriä korkea Wasserturm eli vesitorni — torni, joka seisoo vedessä. Se on noin kolmekymmentä vuotta siltaa vanhempi, ja sitä on vuosisatojen mittaan käytetty vankilana, kidutuskammiona ja myöhemmin kaupungin arkistona ja rahastona.
+
+Sillan sisäkatossa on kolmion muotoisia maalauksia 1600-luvulta. Luzern on siinä ainutlaatuinen: kaupungin kolmessa puisessa kävelysill…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:stiftsbibliothek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stiftsbibliothek (sana)
+Tietoruudun teksti: St. Gallenin luostarikirjasto on yksi maailman vanhimmista luostarikirjastoista. Sen perusti Pyhä Othmar, luostarin perustaja. Kun luostari paloi vuonna 937, kirjasto säilyi ehjänä. Nykyinen kirjastosali rakennettiin vuosina 1758–1767 arkkitehti Peter Thumbin rokokoopiirustusten mukaan. Oven yllä lukee kreikaksi ΨΥΧΗΣ ΙΑΤΡΕΙΟΝ, "sielun parantola" — kirjoitus on lainattu Ramses II:n kirjaston kaiverruksesta.
+
+Kokoelma on Sveitsin vanhin: lähes 160 000 nidettä, joista 1 650 on inkunaabelia eli ennen vuotta 1500 painettua kirjaa, ja 2 100 käsikirjoitusta 700-luvulta 1400-luvulle. Käsikirjoitukset ovat lasikaapeissa, ja jokaisen kaapin päällä on veistetty kerubi, joka kertoo katseella mitä hyllyssä on: tähtitieteen kaapin kerubi tähyilee kirjoja kaukoputkella.
+
+Talossa on kaksi kuuluisaa vierasta. Nibelungenliedin käsikirjoitus B säilytetään täällä, ja kirjastossa asuu myös muumio, Shep-en-…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+- [Venetsia — kaupunkilehti / Historian hetki: Padova 1610 — neljä valopistettä Jupiterin vieressä] tammikuu 1610 — Tammikuun 7. päivän iltana 1610 Galileo Galilei suuntaa itse rakentamansa, noin kaksikymmentä kertaa suurentavan kaukoputken Jupiteriin ja näkee planeetan vieressä kolme pientä valopistettä suorassa rivissä. Hän pitää niitä tähtinä. Seuraavana iltana ne ovat vaihtaneet paikkaa, ja 13. tammikuuta niitä on neljä. Ilta illan jälkeen hän piirtää pisteiden asemat muistiin, apulainen kirjaa ja kynttilä hyytyy tammikuun kylmässä, kunnes selitys ei enää voi olla muu: pisteet kiertävät Jupiteria. Se on ensimmäinen kerta, kun jonkin nähdään kiertävän muuta kuin Maata — ja Ptolemaioksen maailma, jossa kaikki kiertää Maata, saa ensimmäisen näkyvän kolhunsa. Galilei on 45-vuotias matemat…
+
+### 7.1
+KYSYMYS: Mitä oven yllä oleva kreikankielinen kirjoitus tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stiftsbibliothek (sana)
+Tietoruudun teksti: St. Gallenin luostarikirjasto on yksi maailman vanhimmista luostarikirjastoista. Sen perusti Pyhä Othmar, luostarin perustaja. Kun luostari paloi vuonna 937, kirjasto säilyi ehjänä. Nykyinen kirjastosali rakennettiin vuosina 1758–1767 arkkitehti Peter Thumbin rokokoopiirustusten mukaan. Oven yllä lukee kreikaksi ΨΥΧΗΣ ΙΑΤΡΕΙΟΝ, "sielun parantola" — kirjoitus on lainattu Ramses II:n kirjaston kaiverruksesta.
+
+Kokoelma on Sveitsin vanhin: lähes 160 000 nidettä, joista 1 650 on inkunaabelia eli ennen vuotta 1500 painettua kirjaa, ja 2 100 käsikirjoitusta 700-luvulta 1400-luvulle. Käsikirjoitukset ovat lasikaapeissa, ja jokaisen kaapin päällä on veistetty kerubi, joka kertoo katseella mitä hyllyssä on: tähtitieteen kaapin kerubi tähyilee kirjoja kaukoputkella.
+
+Talossa on kaksi kuuluisaa vierasta. Nibelungenliedin käsikirjoitus B säilytetään täällä, ja kirjastossa asuu myös muumio, Shep-en-…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+- [Afganistan — maalehti / Kuvataide: Turkoosi, joka tulee aavikkokasvista] Istalif on kylä Kabulista pohjoiseen Shomalin tasangon yllä, ja sen nimi saattaa juontua kreikan sanasta staphile, rypäleterttu. Kylän savenvalajat ovat tunnettuja turkoosista ja tummanvihreästä lasitteestaan, jonka väri saadaan ishkar-kasvista Balkhin aavikolta. Suullinen perinne johtaa mestarien eli ustadien sukupolvet Bukharasta tulleeseen sufipyhimykseen Sayyid Mir Kulaliin, joka olisi asettunut seudulle yli neljäsataa vuotta sitten. Työ periytyy yhä isältä pojalle saman perheen sisällä. Charles Masson kirjasi 1830-luvulla seudun sanonnan: joka ei ole nähnyt Istalifia, ei ole nähnyt mitään.
+- [Sisilia — kaupunkilehti / Rauniot: Temppeli säilyi, koska siitä tuli kirkko] Agrigenton temppelilaakso on kreikkalaisten 400-luvulla ennen ajanlaskua rakentama rivi temppeleitä harjanteella meren yllä. Parhaiten säilynyt on Concordian temppeli, ja syy on käytännöllinen: 500-luvulla se muutettiin kirkoksi, jolloin pylväiden välit muurattiin umpeen ja rakennusta hoidettiin. Muut temppelit jäivät raunioiksi ja niiden kiviä vietiin muualle. Alue on Unescon maailmanperintökohde ja yksi Kreikan ulkopuolella olevista suurimmista kreikkalaisista kokonaisuuksista.
+
+### 7.2
+KYSYMYS: Mistä näkee, mitä kirjakaapissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stiftsbibliothek (sana)
+Tietoruudun teksti: St. Gallenin luostarikirjasto on yksi maailman vanhimmista luostarikirjastoista. Sen perusti Pyhä Othmar, luostarin perustaja. Kun luostari paloi vuonna 937, kirjasto säilyi ehjänä. Nykyinen kirjastosali rakennettiin vuosina 1758–1767 arkkitehti Peter Thumbin rokokoopiirustusten mukaan. Oven yllä lukee kreikaksi ΨΥΧΗΣ ΙΑΤΡΕΙΟΝ, "sielun parantola" — kirjoitus on lainattu Ramses II:n kirjaston kaiverruksesta.
+
+Kokoelma on Sveitsin vanhin: lähes 160 000 nidettä, joista 1 650 on inkunaabelia eli ennen vuotta 1500 painettua kirjaa, ja 2 100 käsikirjoitusta 700-luvulta 1400-luvulle. Käsikirjoitukset ovat lasikaapeissa, ja jokaisen kaapin päällä on veistetty kerubi, joka kertoo katseella mitä hyllyssä on: tähtitieteen kaapin kerubi tähyilee kirjoja kaukoputkella.
+
+Talossa on kaksi kuuluisaa vierasta. Nibelungenliedin käsikirjoitus B säilytetään täällä, ja kirjastossa asuu myös muumio, Shep-en-…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Historian hetki: Padova 1610 — neljä valopistettä Jupiterin vieressä] tammikuu 1610 — Tammikuun 7. päivän iltana 1610 Galileo Galilei suuntaa itse rakentamansa, noin kaksikymmentä kertaa suurentavan kaukoputken Jupiteriin ja näkee planeetan vieressä kolme pientä valopistettä suorassa rivissä. Hän pitää niitä tähtinä. Seuraavana iltana ne ovat vaihtaneet paikkaa, ja 13. tammikuuta niitä on neljä. Ilta illan jälkeen hän piirtää pisteiden asemat muistiin, apulainen kirjaa ja kynttilä hyytyy tammikuun kylmässä, kunnes selitys ei enää voi olla muu: pisteet kiertävät Jupiteria. Se on ensimmäinen kerta, kun jonkin nähdään kiertävän muuta kuin Maata — ja Ptolemaioksen maailma, jossa kaikki kiertää Maata, saa ensimmäisen näkyvän kolhunsa. Galilei on 45-vuotias matemat…
+- [Dublin — kohdekartta / Kohdekartta: Kellsin kirja] Se kirja, jota isoisäsi katseli, tehtiin noin vuonna 800 kolumbalaisessa luostarissa — Ionan saarella, Kellsissä tai osittain molemmissa, siitä kiistellään yhä. Siinä on 340 lehteä vasikannahkaa ja kymmenen kokosivun kuvaa. Vuonna 1007 Ulsterin annaaleihin kirjattiin, että "Columkillen suuri evankeliumikirja, läntisen maailman päämuistoesine" varastettiin yöllä kivikirkon läntisestä sakaristosta — ja syy sanotaan merkinnässä suoraan: sen taotun kotelon tähden. Kirja löytyi muutamaa kuukautta myöhemmin turpeen alta. Kotelo oli poissa, kulta ja jalokivet sen mukana, ja noin kolmekymmentä lehteä puuttuu yhä — ne saattoivat repeytyä irti, kun kirja kiskottiin kansistaan. Varkaat veivät siis sen…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:chillon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Rust en Vreugd] 1778 Rust en Vreugd tarkoittaa lepoa ja iloa. Se on 1700-luvun kaupunkitalo Buitenkant Streetin varrella, ja sitä pidetään yhtenä Kapkaupungin hienoimmista säilyneistä kaupunkiasunnoista. Talon veistetty rokokoo-ovi ja sen yläpuolinen parveke ovat esimerkki siitä tyylistä, jota Kapissa rakennettiin, kun hollantilainen, saksalainen, ranskalainen ja indonesialainen perinne kohtasivat. Kapkaupungissa on maailman suurin Cape Dutch -tyylisten rakennusten tiheys. Tyyli näkyy selvimmin Constantiassa, keskustan vanhoissa hallintorakennuksissa ja Long Streetin varrella. Rust en Vreugd on kaupunkitalon versio samasta tyylistä: yhtä leveä sali, symmetrinen julkisivu ja koristeltu pääsisäänkäynti, mutt…
+- [Varanasi — kaupunkilehti / Varanasi: Suuri polttopaikka] Manikarnika on Varanasin tärkein polttohautausghat, ja hindulaisen perinteen mukaan täällä poltettu saavuttaa moksan eli vapautuu syntymän ja kuoleman kierteestä. Ghat on kaupungin vanhimpia — sitä mainitaan jo Gupta-kauden kirjoituksissa — mutta nykyinen kivinen rantalaituri rakennettiin vasta vuonna 1302, ja sitä on sen jälkeen korjattu ainakin kolme kertaa. Nimi tulee legendasta, jonka mukaan jumalatar Satin korvakoru putosi juuri tähän kohtaan: mani-karnika tarkoittaa korvakorun helmeä. Laiturin viereiset korotetut alustat on varattu kuolinvuosipäivien muistorituaaleille.
+
+### 8.1
+KYSYMYS: Miksi linna rakennettiin juuri tähän kohtaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kohdekartta / Kohdekartta: Rust en Vreugd] 1778 Rust en Vreugd tarkoittaa lepoa ja iloa. Se on 1700-luvun kaupunkitalo Buitenkant Streetin varrella, ja sitä pidetään yhtenä Kapkaupungin hienoimmista säilyneistä kaupunkiasunnoista. Talon veistetty rokokoo-ovi ja sen yläpuolinen parveke ovat esimerkki siitä tyylistä, jota Kapissa rakennettiin, kun hollantilainen, saksalainen, ranskalainen ja indonesialainen perinne kohtasivat. Kapkaupungissa on maailman suurin Cape Dutch -tyylisten rakennusten tiheys. Tyyli näkyy selvimmin Constantiassa, keskustan vanhoissa hallintorakennuksissa ja Long Streetin varrella. Rust en Vreugd on kaupunkitalon versio samasta tyylistä: yhtä leveä sali, symmetrinen julkisivu ja koristeltu pääsisäänkäynti, mutt…
+- [Varanasi — kaupunkilehti / Varanasi: Suuri polttopaikka] Manikarnika on Varanasin tärkein polttohautausghat, ja hindulaisen perinteen mukaan täällä poltettu saavuttaa moksan eli vapautuu syntymän ja kuoleman kierteestä. Ghat on kaupungin vanhimpia — sitä mainitaan jo Gupta-kauden kirjoituksissa — mutta nykyinen kivinen rantalaituri rakennettiin vasta vuonna 1302, ja sitä on sen jälkeen korjattu ainakin kolme kertaa. Nimi tulee legendasta, jonka mukaan jumalatar Satin korvakoru putosi juuri tähän kohtaan: mani-karnika tarkoittaa korvakorun helmeä. Laiturin viereiset korotetut alustat on varattu kuolinvuosipäivien muistorituaaleille.
+
+### 8.2
+KYSYMYS: Mitä nimi Chillon tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chillonin linna (historia)
+Tietoruudun teksti: Chillonin linna seisoo pienellä jyrkkäreunaisella kalkkikivisaarella Genevenjärvessä, Montreux’n ja Villeneuven välisellä kapealla rannalla. Sveitsiläisen kansatieteilijän Albert Samuel Gatschet’n mukaan nimi tulee valdolaismurteen sanasta, joka tarkoittaa litteää kiveä tai lavaa: vuodesta 1195 tunnettu Castrum Quilonis olisi siis "kalliolavalle rakennettu linna".
+
+Paikka on valittu tarkasti. Linna vartioi kulkua Vaud’n rivieran — reitin pohjoiseen Saksaan ja Ranskaan — ja Rhônen laakson välillä, joka on nopea tie Italiaan. Varuskunta pystyi siis valvomaan Italian-tietä sekä sotilaallisesti että kaupallisesti ja perimään tullia ohikulkijoilta.
+
+Neliömäinen päätorni rakennettiin saarelle 1000-luvulla valvomaan Burgundista Suuren Pyhän Bernhardin solaan johtavaa tietä. Vuoden 1150 asiakirja osoittaa linnan kuuluneen Savoijin suvulle, ja 1100-luvun puolivälistä se oli Savoijin kreivien kes…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:gotthardin-tunneli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki] Gotthardin rautatietunnelin pohjois- ja eteläpuolen louhijat kohtasivat syvällä kalliossa 29. helmikuuta 1880 — insinööri Louis Favre ei elänyt näkemään sitä.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+
+### 9.1
+KYSYMYS: Miksi Louis Favre ei nähnyt tunnelin valmistuvan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki] Gotthardin rautatietunnelin pohjois- ja eteläpuolen louhijat kohtasivat syvällä kalliossa 29. helmikuuta 1880 — insinööri Louis Favre ei elänyt näkemään sitä.
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+
+### 9.2
+KYSYMYS: Mikä uusi keksintö otettiin täällä ensi kertaa suureen käyttöön?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gotthardin tunneli (tekniikka)
+Tietoruudun teksti: Gotthardin tunneli on viisitoista kilometriä pitkä rautatietunneli, joka yhdistää Göschenenin ja Airolon Saint-Gotthardin vuorimassiivin läpi. Se oli ensimmäinen tunneli massiivin läpi ja kiersi vanhan Gotthardin solan. Kun se avattiin 1882, se oli maailman pisin tunneli.
+
+Varsinainen louhinta alkoi vuonna 1871 ja kesti kymmenen vuotta. Tunnelia kaivettiin molemmista päistä yhtä aikaa, mikä vaati tarkkaa maanmittausta. Työmaa oli ensimmäinen paikka, jossa vasta 1867 patentoitua dynamiittia käytettiin suuressa mitassa, ja urakoitsija Louis Favre ajoi läpi myös koneellisten poravaunujen käytön. Energia siirrettiin työmaalle paineilmana genevalaisen insinööri Colladonin ehdotuksesta, ja kalliopintaa jäähdytettiin vesisuihkuilla.
+
+Hinta oli kova. Yhdessä ainoassa onnettomuudessa kuoli noin 200 työmiestä, suurin osa paineilmaveturien alle; muita kuoli kivivyöryissä ja räjähdyksissä. Selvinne…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+- [Montevideo — kohdekartta / Kohdekartta: Keskusasema] 1897 Vanha Montevideon asema paloi 1891, ja Central Uruguay Railway aloitti uuden rakentamisen sen jälkeen. Peruskivi laskettiin 27. elokuuta 1893, ja asema avattiin matkustajille 15. heinäkuuta 1897. Sen suunnitteli italialainen insinööri ja arkkitehti Luigi Andreoni, ja se nousi Aguadan kaupunginosaan hieman vanhankaupungin ulkopuolelle. Asema kasvoi vielä valmistumisensa jälkeen. Vuonna 1912 sen raiteet yhdistettiin satamaterminaaliin, kun sataman työt olivat valmistuneet, ja bulevardin puolella merta täytettiin maaksi niin, että raiteet ulottuivat lähes Guatemala-kadulle asti. Rio Negro -kadun lipunmyynti siirrettiin suureen keskushalliin. Valtio antoi asemalle 1955 nimen José Artigasin…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:grand-st-bernard) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+### 10.1
+KYSYMYS: Miksi juuri nämä koirat kelpasivat pelastustyöhön?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+### 10.2
+KYSYMYS: Onko konjakkitynnyri koiran kaulassa totta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suuren Pyhän Bernhardin hospitaali (eläimet)
+Tietoruudun teksti: Suuren Pyhän Bernhardin hospitaali on matkalaisten majatalo Suuren Pyhän Bernhardin solassa 2 469 metrin korkeudessa Pennialpeilla, muutaman sadan metrin päässä Italian rajasta. Sitä on hoitanut sama sääntökuntaisten kanonikkien yhteisö perustamisesta asti.
+
+Ensimmäinen hospitaali rakennettiin 800-luvulla Bourg-Saint-Pierreen, mutta saraseenien ryöstöretket tuhosivat sen 900-luvun puolivälissä. Noin vuonna 1050 Aostan arkkidiakoni Bernhard Menthonilainen näki solassa jatkuvasti kauhistuneita ja hädänalaisia matkalaisia ja päätti tehdä lopun alueen rosvoudesta. Niin syntyi hospitaali, joka sai myöhemmin hänen nimensä.
+
+Bernhardilaiset koirat jalostettiin juuri täällä, todennäköisesti Valais’n perheiden lahjoittamista koirista 1660- ja 1670-luvuilla; ensimmäinen varma maininta rodusta on vuodelta 1709. Alun perin ne olivat vahtikoiria ja vasta myöhemmin pelastuskoiria: ne olivat kyllin va…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

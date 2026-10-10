@@ -1,0 +1,205 @@
+================ KOHTA 21 (kohde:titlis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Titlis (luonto · vuori)
+Tietoruudun teksti: Titlis on 3 238 metriä korkea vuori Uri-Alpeilla Obwaldenin ja Bernin kantonien rajalla. Ensimmäinen nousu tehtiin vuonna 1739, kun Ignaz Hess, J. E. Waser ja kaksi muuta engelbergiläistä kiipesivät huipulle. Nykyään Engelbergistä (996 m) pääsee kolmella osuudella köysiradalla Klein Titlisille (3 028 m), ja yhdellä osuudella kulkee pyörivä Rotair-hytti. Rata vihittiin käyttöön maaliskuussa 1967, ja Titlis Cliff Walk -riippusilta avattiin joulukuussa 2012. Pohjoisrinteellä on Titlis-jäätikkö ja etelärinteellä Wenden-jäätikkö.
+
+### 21.1
+KYSYMYS: Kuinka korkea Titlis on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Titlis (luonto · vuori)
+Tietoruudun teksti: Titlis on 3 238 metriä korkea vuori Uri-Alpeilla Obwaldenin ja Bernin kantonien rajalla. Ensimmäinen nousu tehtiin vuonna 1739, kun Ignaz Hess, J. E. Waser ja kaksi muuta engelbergiläistä kiipesivät huipulle. Nykyään Engelbergistä (996 m) pääsee kolmella osuudella köysiradalla Klein Titlisille (3 028 m), ja yhdellä osuudella kulkee pyörivä Rotair-hytti. Rata vihittiin käyttöön maaliskuussa 1967, ja Titlis Cliff Walk -riippusilta avattiin joulukuussa 2012. Pohjoisrinteellä on Titlis-jäätikkö ja etelärinteellä Wenden-jäätikkö.
+
+### 21.2
+KYSYMYS: Milloin köysirata Klein Titlisille avattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Titlis (luonto · vuori)
+Tietoruudun teksti: Titlis on 3 238 metriä korkea vuori Uri-Alpeilla Obwaldenin ja Bernin kantonien rajalla. Ensimmäinen nousu tehtiin vuonna 1739, kun Ignaz Hess, J. E. Waser ja kaksi muuta engelbergiläistä kiipesivät huipulle. Nykyään Engelbergistä (996 m) pääsee kolmella osuudella köysiradalla Klein Titlisille (3 028 m), ja yhdellä osuudella kulkee pyörivä Rotair-hytti. Rata vihittiin käyttöön maaliskuussa 1967, ja Titlis Cliff Walk -riippusilta avattiin joulukuussa 2012. Pohjoisrinteellä on Titlis-jäätikkö ja etelärinteellä Wenden-jäätikkö.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:arenenberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Arenenbergin linna (historia)
+Tietoruudun teksti: Arenenbergin linna seisoo Thurgaun kantonissa Salensteinin kunnassa Bodenjärven Untersee-osan rannalla. Rakennuksen alkuperä on 1500-luvun alussa, ja sen tunnetaan rakentaneen Konstanzin pormestari Sebastian Geissberg. Vuonna 1817 Hortense de Beauharnais osti tilan, muutti sinne 1818 ja piti siellä pariisilaistyylisiä salonkeja. Hänen poikansa Louis Napoléon, tuleva Napoleon III, vietti paikalla nuoruuttaan ja sai Sveitsin kansalaisuuden. Nykyään linnassa toimii Napoleon-museo, ja kohde on Sveitsin kansallisesti merkittävä kulttuuriperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Rosenborgin linna] 1606–1633 Rosenborgin linna alkoi huvilana kaupungin ulkopuolella. Christian IV osti vuonna 1606 joukon tontteja silloisen Nørrevoldin takaa: sinne mahtui hänen lystilinnansa lisäksi puutarha ja kyökkimaa, joka ruokki hovia. Rakennus lähti liikkeelle vaatimattomana erakkomajana, mutta se laajeni 28 vuoden aikana neljässä vaiheessa ja seisoi 1633 valmiina sellaisena kuin se on yhä: hollantilaista renessanssia, punatiiltä ja hiekkakiveä, tornit patinoituneen vihreinä. Linna oli kuninkaan lempipaikka, ja se näkyi loppuun asti. Kuolemansairaana Frederiksborgissa Christian IV käski kuljettaa itsensä reellä Rosenborgiin päättääkseen päivänsä siellä. Hän kuoli linnassa helmikuussa 1648. Kuninkaanl…
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+
+### 22.1
+KYSYMYS: Kuka osti tilan vuonna 1817?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Arenenbergin linna (historia)
+Tietoruudun teksti: Arenenbergin linna seisoo Thurgaun kantonissa Salensteinin kunnassa Bodenjärven Untersee-osan rannalla. Rakennuksen alkuperä on 1500-luvun alussa, ja sen tunnetaan rakentaneen Konstanzin pormestari Sebastian Geissberg. Vuonna 1817 Hortense de Beauharnais osti tilan, muutti sinne 1818 ja piti siellä pariisilaistyylisiä salonkeja. Hänen poikansa Louis Napoléon, tuleva Napoleon III, vietti paikalla nuoruuttaan ja sai Sveitsin kansalaisuuden. Nykyään linnassa toimii Napoleon-museo, ja kohde on Sveitsin kansallisesti merkittävä kulttuuriperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Ghirardelli Square] 1852–1964 Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi suklaantekijän ammatin Romanengon liikkeessä Genovassa. Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, jossa hän piti makeiskauppaa ja alkoi käyttää nimensä espanjalaista muotoa Domingo. Vuonna 1849 hän lähti Kaliforniaan entisen naapurinsa James Lickin kehotuksesta — Lick oli vienyt San Franciscoon vuotta aiemmin 600 naulaa suklaata — ja avasi ensimmäisen kauppansa kaivosleiriin myydäkseen makeisia kullankaivajille. Vuoden 1851 tulipalo tuhosi hänen San Franciscon liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin kaupan. Ghirardelli aloitti alusta ja perusti 1852 yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin su…
+- [Liberia — maalehti / Kuvataide: Peitto, jota ommeltiin 25 vuotta] 1892 — Martha Ann Ricks syntyi orjaksi Tennesseessä noin 1817. Hänen isänsä George Erskine osti perheensä vapaaksi, ja 13-vuotias tytär muutti 1830 Clay-Ashlandiin. Perhe viljeli maata ja kasvatti kalkkunoita, ankkoja ja lampaita; 1858 Ricks voitti palkinnon tekemistään silkkisukista. Kaksikymmentäviisi vuotta hän ompeli tilkkutyötä, jonka aiheena on Liberian kahvipuu: valkealle satiinille yli kolmesataa vihreää lehteä, punaiset marjat ja keskellä elämänpuun runko. Lähettiläs Edward Blyden järjesti 76-vuotiaalle audienssin, ja Ricks luovutti työnsä kuningatar Victorialle Windsorin linnassa 16. heinäkuuta 1892. Peitto on kadoksissa.
+
+### 22.2
+KYSYMYS: Mitä linnassa on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Arenenbergin linna (historia)
+Tietoruudun teksti: Arenenbergin linna seisoo Thurgaun kantonissa Salensteinin kunnassa Bodenjärven Untersee-osan rannalla. Rakennuksen alkuperä on 1500-luvun alussa, ja sen tunnetaan rakentaneen Konstanzin pormestari Sebastian Geissberg. Vuonna 1817 Hortense de Beauharnais osti tilan, muutti sinne 1818 ja piti siellä pariisilaistyylisiä salonkeja. Hänen poikansa Louis Napoléon, tuleva Napoleon III, vietti paikalla nuoruuttaan ja sai Sveitsin kansalaisuuden. Nykyään linnassa toimii Napoleon-museo, ja kohde on Sveitsin kansallisesti merkittävä kulttuuriperintökohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Rosenborgin linna] 1606–1633 Rosenborgin linna alkoi huvilana kaupungin ulkopuolella. Christian IV osti vuonna 1606 joukon tontteja silloisen Nørrevoldin takaa: sinne mahtui hänen lystilinnansa lisäksi puutarha ja kyökkimaa, joka ruokki hovia. Rakennus lähti liikkeelle vaatimattomana erakkomajana, mutta se laajeni 28 vuoden aikana neljässä vaiheessa ja seisoi 1633 valmiina sellaisena kuin se on yhä: hollantilaista renessanssia, punatiiltä ja hiekkakiveä, tornit patinoituneen vihreinä. Linna oli kuninkaan lempipaikka, ja se näkyi loppuun asti. Kuolemansairaana Frederiksborgissa Christian IV käski kuljettaa itsensä reellä Rosenborgiin päättääkseen päivänsä siellä. Hän kuoli linnassa helmikuussa 1648. Kuninkaanl…
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:ebenalp-wildkirchli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebenalp ja Wildkirchli (luonto · vuori)
+Tietoruudun teksti: Ebenalp on Appenzellin Alpeilla, Sveitsin Appenzell Innerrhodenin kantonissa sijaitseva 1 640 metrin huippu, Alpstein-vuoriston pohjoisin. Wasserauenista sinne kulkee köysirata, joka on toiminut vuodesta 1955. Jyrkänteen alla on Wildkirchlin luolasto, jonka Altarhöhle-luolasta on löytynyt piikivityökaluja neandertalinihmisen ajalta, noin 40 000 vuoden takaa. Vuonna 1658 pappi Paulus Ulmann perusti alaluolaan kappelin ja yläluolaan erakkomajan, ja luolat toimivat pyhiinvaelluskohteena erakon kuolemaan 1851 asti. Nyt kalliolla on Äscherin vuorimajatalo.
+
+### 23.1
+KYSYMYS: Milloin Ebenalpin köysirata avattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebenalp ja Wildkirchli (luonto · vuori)
+Tietoruudun teksti: Ebenalp on Appenzellin Alpeilla, Sveitsin Appenzell Innerrhodenin kantonissa sijaitseva 1 640 metrin huippu, Alpstein-vuoriston pohjoisin. Wasserauenista sinne kulkee köysirata, joka on toiminut vuodesta 1955. Jyrkänteen alla on Wildkirchlin luolasto, jonka Altarhöhle-luolasta on löytynyt piikivityökaluja neandertalinihmisen ajalta, noin 40 000 vuoden takaa. Vuonna 1658 pappi Paulus Ulmann perusti alaluolaan kappelin ja yläluolaan erakkomajan, ja luolat toimivat pyhiinvaelluskohteena erakon kuolemaan 1851 asti. Nyt kalliolla on Äscherin vuorimajatalo.
+
+### 23.2
+KYSYMYS: Kuka perusti erakkomajan Wildkirchlin yläluolaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebenalp ja Wildkirchli (luonto · vuori)
+Tietoruudun teksti: Ebenalp on Appenzellin Alpeilla, Sveitsin Appenzell Innerrhodenin kantonissa sijaitseva 1 640 metrin huippu, Alpstein-vuoriston pohjoisin. Wasserauenista sinne kulkee köysirata, joka on toiminut vuodesta 1955. Jyrkänteen alla on Wildkirchlin luolasto, jonka Altarhöhle-luolasta on löytynyt piikivityökaluja neandertalinihmisen ajalta, noin 40 000 vuoden takaa. Vuonna 1658 pappi Paulus Ulmann perusti alaluolaan kappelin ja yläluolaan erakkomajan, ja luolat toimivat pyhiinvaelluskohteena erakon kuolemaan 1851 asti. Nyt kalliolla on Äscherin vuorimajatalo.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:stanserhorn) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Luonto: Vuori on nukkunut vuodesta 1707] Fuji on kerrostulivuori ja Japanin korkein vuori, 3 776 metriä. Se purkautui viimeksi vuosina 1707–1708 eikä ole sen jälkeen liikahtanut. Kartio on poikkeuksellisen tasainen joka suunnasta katsottuna, ja lunta on huipulla noin viisi kuukautta vuodessa. Tokioon on matkaa noin sata kilometriä, ja selkeällä säällä vuori näkyy kaupunkiin asti. Fuji on yksi Japanin kolmesta pyhästä vuoresta Tate-vuoren ja Haku-vuoren rinnalla. Maailmanperintöluetteloon se otettiin vuonna 2013 kulttuurikohteena, koska se on ollut vuosisatoja pyhiinvaelluksen määränpää.
+
+### 24.1
+KYSYMYS: Minä vuonna CabriO-köysirata avattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+
+### 24.2
+KYSYMYS: Kuinka monta järveä huipulta näkyy selkeällä säällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stanserhorn (luonto · vuori)
+Tietoruudun teksti: Stanserhorn on Nidwaldenin kantonissa Sveitsissä kohoava, 1 898 metriä korkea huippu. Huipulle nousi vuosina 1891–1893 rakennettu kolmiosainen sähkökäyttöinen köysirautatie. Nykyään huipulle pääsee myös CabriO-köysiradalla, joka avattiin 29. kesäkuuta 2012 ja jonka kaksikerroksisessa hytissä on avoin yläkansi. Hytti vie 60 matkustajaa, ja Kältistä huipulle matka kestää kuusi minuuttia. Huipulla on pyörivä ravintola vuodelta 2001 ja näköalataso vuodelta 2003. Selkeällä säällä maisemassa erottuu kymmenen järveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Luonto: Vuori on nukkunut vuodesta 1707] Fuji on kerrostulivuori ja Japanin korkein vuori, 3 776 metriä. Se purkautui viimeksi vuosina 1707–1708 eikä ole sen jälkeen liikahtanut. Kartio on poikkeuksellisen tasainen joka suunnasta katsottuna, ja lunta on huipulla noin viisi kuukautta vuodessa. Tokioon on matkaa noin sata kilometriä, ja selkeällä säällä vuori näkyy kaupunkiin asti. Fuji on yksi Japanin kolmesta pyhästä vuoresta Tate-vuoren ja Haku-vuoren rinnalla. Maailmanperintöluetteloon se otettiin vuonna 2013 kulttuurikohteena, koska se on ollut vuosisatoja pyhiinvaelluksen määränpää.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-christoffelturm) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+- [Sveitsi — maalehti / Historian hetki] Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta ja muutti fysiikan.
+
+### 25.1
+KYSYMYS: Miltä Bernin Christoffelturm näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+
+### 25.2
+KYSYMYS: Miksi Bernin Christoffelturm katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bernin Christoffelturm (historia)
+Tietoruudun teksti: Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Bern 1905 — patenttipino ja valonsäde] 1905 — Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elättää Mileva-vaimon ja pienen Hans Albertin. Iltaisin hän palaa kysymykseen, jota on kantanut teini-ikäisestä asti: miltä valo näyttäisi, jos sen voisi ajaa kiinni? Ajatella ääneen hän voi harvojen kanssa: ystävän ja työtoverin Michele Besson kanssa kotimatkalla, ja iltaisin muutaman tuttavan kesken, jotka kutsuvat itseään pilaillen Olympia-akatemiaksi. Virastoon hän päätyi siksi, ettei yksikään haettu opettajanpaikka auennut. Vuonna 1905 Einstein lä…
+- [Sveitsi — maalehti / Ruoka: Peruna paistetaan pannun kokoiseksi kakuksi] Aamiaisella — Rösti tehdään raastetusta perunasta, joka painetaan pannulle kakuksi ja paistetaan voissa kummaltakin puolelta rapeaksi. Alun perin se oli Bernin seudun maanviljelijöiden aamiaista, ja sitä syötiin ennen töihin lähtöä. Ruoka on niin tunnusomainen, että saksan- ja ranskankielisen Sveitsin välistä rajaa sanotaan leikillään Röstigrabeniksi, röstihaudaksi: sen molemmin puolin äänestetään eri tavalla ja puhutaan eri kieltä, ja perunakakku jäi rajan nimeksi.
+- [Sveitsi — maalehti / Historian hetki] Bernin patenttivirastossa istui vuonna 1905 kolmannen luokan tekninen asiantuntija, joka kirjoitti samana vuonna neljä tutkimusta ja muutti fysiikan.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
