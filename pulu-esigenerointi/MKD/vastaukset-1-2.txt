@@ -7,7 +7,7 @@ Mitä pronssikausi tarkoittaa?
 
 ### 6.2
 KYSYMYS: Miksi observatoriotulkinta on kiistanalainen?
-Joo, tän minä tiedän. Tää on hyvä kysymys. Osa asiantuntijoista pitää kohdetta pronssikautisena aurinko-observatoriona, jossa kahden tasanteen kallioon tehdyt merkit ja tähtäyspisteet osoittavat taivaan tapahtumiin. Toisten mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla pelkkää sattumaa: kun merkkejä on riittävästi, jokin niistä osuu aina johonkin. Asiaa ei siis ole ratkaistu, ja molemmat kannat ovat tutkijoiden piirissä vakiintuneita. Kyyhky pysyy kuivin jaloin molempien kantojen välissä.
+Joo, tän minä tiedän. Tää on hyvä kysymys. Osa asiantuntijoista pitää [[Kokinon]] kohdetta pronssikautisena [[aurinko-observatoriona]], jossa kahden tasanteen kallioon tehdyt merkit ja tähtäyspisteet osoittavat taivaan tapahtumiin. Toisten mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla pelkkää sattumaa: kun merkkejä on riittävästi, jokin niistä osuu aina johonkin. Asiaa ei siis ole ratkaistu, ja molemmat kannat ovat tutkijoiden piirissä vakiintuneita. Kyyhky pysyy kuivin jaloin molempien kantojen välissä.
 JATKOT:
 Mihin muinaista aurinko-observatoriota voitiin käyttää?
 Miten korkealla Kokino sijaitsee?
@@ -30,7 +30,7 @@ Miten aurinko-observatorio toimii?
 
 ### 6.5
 KYSYMYS: Mihin muinaista aurinko-observatoriota voitiin käyttää?
-Annas ku mietin. Hyvä kysymys tuo. Muinaista aurinko-observatoriota voitiin käyttää auringon nousu- ja laskupaikkojen seuraamiseen horisontissa, jolloin tärkeät hetket kuten päivänseisaukset ja tasausten ajankohdat saatiin merkittyä. Sen avulla seurattiin vuodenkiertoa ja ajoitettiin kalenteria, esimerkiksi maanviljelyn ja juhlien kannalta tärkeitä hetkiä. Kokinon kohdalla tämä on tulkinta, jota ei ole varmistettu, sillä [[Kokinon]] merkkien tarkoitus on tutkijoiden kesken kiistanalainen. Ja minä kun luulin, että kalenteri oli keksitty meitä kyyhkyjä varten.
+Annas ku mietin. Hyvä kysymys tuo. Muinaista aurinko-observatoriota voitiin käyttää auringon nousu- ja laskupaikkojen seuraamiseen horisontissa, jolloin tärkeät hetket kuten [[päivänseisaukset]] ja tasausten ajankohdat saatiin merkittyä. Sen avulla seurattiin vuodenkiertoa ja ajoitettiin kalenteria, esimerkiksi maanviljelyn ja juhlien kannalta tärkeitä hetkiä. Kokinon kohdalla tämä on tulkinta, jota ei ole varmistettu, sillä [[Kokinon]] merkkien tarkoitus on tutkijoiden kesken kiistanalainen. Ja minä kun luulin, että kalenteri oli keksitty meitä kyyhkyjä varten.
 JATKOT:
 Mitä päivänseisaus tarkoittaa?
 Miksi vuodenkierron seuraaminen oli muinaisille ihmisille tärkeää?
@@ -44,14 +44,14 @@ Mikä joki virtaa Skopjen halki?
 
 ### 7.2
 KYSYMYS: Miksi Skopjen vanha rautatieasema on nykyään raunioina?
-Kääk. Tää on raskas aihe. Skopjeen iski maanjäristys 26.7.1963 kello 5.17. Se tappoi yli tuhat ihmistä ja tuhosi suuren osan kaupungista, ja aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus on säilytetty muistona, ja nykyään siinä toimii kaupunginmuseo. Tapahtumasta on kulunut yli kuusikymmentä vuotta, ja kaupunki on rakennettu sen jälkeen uudelleen. Onpas siit onneksi pitkä aika.
+Kääk. Tää on raskas aihe. [[Skopjeen]] iski [[maanjäristys]] 26.7.1963 kello 5.17. Se tappoi yli tuhat ihmistä ja tuhosi suuren osan kaupungista, ja aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus on säilytetty muistona, ja nykyään siinä toimii kaupunginmuseo. Tapahtumasta on kulunut yli kuusikymmentä vuotta, ja kaupunki on rakennettu sen jälkeen uudelleen. Onpas siit onneksi pitkä aika.
 JATKOT:
 Miten Skopjea jälleenrakennettiin maanjäristyksen jälkeen?
 Mikä joki virtaa Skopjen halki?
 
 ### 7.3
 KYSYMYS: Miten Skopjea jälleenrakennettiin maanjäristyksen jälkeen?
-Mmm— tää on iso aihe. Joo, katotaas. Vuoden 1963 maanjäristyksen jälkeen Skopjen jälleenrakennus oli suuri kansainvälinen hanke: apua ja asiantuntemusta tuli useista maista, ja kaupunkia suunniteltiin uudelleen. Lähteiden mukaan hankkeessa oli mukana japanilainen arkkitehti Kenzo Tange, mutta en ole varma hänen osuutensa tarkoista yksityiskohdista. Kaupungin ilme muuttui voimakkaasti, ja sen vanha keskusta jäi osittain muistoksi tuhosta. Tarkemmat vuosiluvut jätän sanomatta, koska en ole niistä varma.
+Mmm— tää on iso aihe. Joo, katotaas. Vuoden 1963 [[maanjäristyksen]] jälkeen [[Skopjen]] jälleenrakennus oli suuri kansainvälinen hanke: apua ja asiantuntemusta tuli useista maista, ja kaupunkia suunniteltiin uudelleen. Lähteiden mukaan hankkeessa oli mukana japanilainen arkkitehti Kenzo Tange, mutta en ole varma hänen osuutensa tarkoista yksityiskohdista. Kaupungin ilme muuttui voimakkaasti, ja sen vanha keskusta jäi osittain muistoksi tuhosta. Tarkemmat vuosiluvut jätän sanomatta, koska en ole niistä varma.
 JATKOT:
 Mikä on Skopje 2014 -hanke?
 Mikä joki virtaa Skopjen halki?

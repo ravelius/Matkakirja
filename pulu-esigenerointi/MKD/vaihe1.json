@@ -1,0 +1,502 @@
+[
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kysymys": "Kuinka vanha Ohridinjärvi on?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven arvioidaan syntyneen 3–5 miljoonaa vuotta sitten, ja se on yksi Euroopan vanhimmista ja syvimmistä järvistä. Sen vesi tulee osin maanalaisten kanavien kautta [[Prespajärveltä]], ja järvessä elää [[endeemisiä]] lajeja, joita ei tavata muualla maailmassa. Melkoinen ikä, vaikka suku on vanhaa sekin.",
+  "linkit": [
+   "Prespajärveltä",
+   "endeemisiä"
+  ],
+  "jatkot": [
+   "Mitä endeeminen laji tarkoittaa?",
+   "Kuinka syvä Ohridinjärvi on enimmillään?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kysymys": "Kuinka monta endeemistä lajia järvessä elää?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tää on helppo. Ohridinjärvessä elää yli 200 [[endeemistä]] lajia, eli lajia, joita ei tavata muualla maailmassa. Järvi on myös [[Unescon]] maailmanperintökohde, ja sen suurin syvyys on 288 metriä. Yli kaksisataa, enkä ole yhtäkään tavannut.",
+  "linkit": [
+   "endeemistä",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Miksi järvissä kehittyy omia lajeja?",
+   "Miten Unescon maailmanperintökohteet valitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kysymys": "Mistä Ohridinjärven vesi tulee?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tää on kyl hyvä kysymys. Ohridinjärven vesi tulee osin maanalaisten [[karstikanavien]] kautta [[Prespajärveltä]]. Vesi kulkee siis osittain maan alla, näkymättömiä väyliä pitkin. Minä pysyn mieluummin pinnalla.",
+  "linkit": [
+   "karstikanavien",
+   "Prespajärveltä"
+  ],
+  "jatkot": [
+   "Mikä on karstialue?",
+   "Kuinka syvä Ohridinjärvi on enimmillään?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kysymys": "Mitkä kaupungit sijaitsevat Ohridinjärven rannalla?",
+  "uusi": true,
+  "vastaus": "No niin, tän tiedän. Ohridinjärven rannalla sijaitsevat Pohjois-Makedonian puolella [[Ohrid]] ja [[Struga]] sekä Albanian puolella [[Pogradec]]. Järvi on kahden maan rajalla, ja Pohjois-Makedonian osuus on 69 prosenttia pinta-alasta. Kolme kaupunkia, kaksi maata ja yksi kyyhky, joka ei välitä rajoista.",
+  "linkit": [
+   "Ohrid",
+   "Struga",
+   "Pogradec"
+  ],
+  "jatkot": [
+   "Miksi Ohrid oli tärkeä slaavilaisen kirjallisuuden keskus?",
+   "Milloin Albanian puoli liitettiin Unescon perintöluetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:ohridinjarvi",
+  "kysymys": "Milloin Ohridinjärvi liitettiin Unescon maailmanperintöluetteloon?",
+  "uusi": true,
+  "vastaus": "Ai se, muistan. Joo, tää oli iso juttu. [[Unesco]] merkitsi järven [[maailmanperintökohteeksi]] vuonna 1979 yhdessä Ohridin vanhankaupungin kanssa. Albanian puoli liitettiin kohteeseen vuonna 2019, joten nykyään suojelu kattaa järven molemmat rannat. Melkein viiskyt vuotta, ei paha.",
+  "linkit": [
+   "Unesco",
+   "maailmanperintökohteeksi"
+  ],
+  "jatkot": [
+   "Mitä maailmanperintökohde tarkoittaa?",
+   "Mitä Ohridin vanhassakaupungissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kysymys": "Mikä Matkan kanjonin luola oli mukana 77 luonnonihmeen ehdokkaan joukossa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tän minä tiedän. [[Vrelo-luola]] Treskan oikealla rannalla oli mukana New7Wonders of Nature -kilpailun 77 ehdokkaan joukossa. Sen uskotaan olevan yksi Euroopan syvimmistä luolista, ja se sijaitsee [[Treskan]] varrella. Kuuluisa luola, ja minä en mene sinne.",
+  "linkit": [
+   "Vrelo-luola",
+   "Treskan"
+  ],
+  "jatkot": [
+   "Mikä on Euroopan syvin luola?",
+   "Mitä New7Wonders-kilpailu oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kysymys": "Kuinka vanha on kanjonin Pyhän Andreaksen luostari?",
+  "uusi": false,
+  "vastaus": "Katotaas. Tää menee vuosiluvuilla. Pyhän Andreaksen luostari perustettiin noin vuonna 1388, joten se on yli kuusisataa vuotta vanha. Rinteillä on yhteensä kolme [[luostaria]], ja kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa. Vanhempi kuin kaikki minun pesäni.",
+  "linkit": [
+   "luostaria",
+   "Skopjen"
+  ],
+  "jatkot": [
+   "Mikä on luostari ja keitä siellä asuu?",
+   "Miten kanjoni muodostuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kysymys": "Mitä Matkan kanjonissa voi tehdä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Katotaas. Matkan kanjonilla vaelletaan ja melotaan, ja kanjonin läpi virtaa [[Treska-joki]]. Alueella on myös kymmenen [[luolaa]] sekä kolme luostaria rinteillä. Minä pysyn kyl ilmassa, melominen on teidän hommanne.",
+  "linkit": [
+   "Treska-joki",
+   "luolaa"
+  ],
+  "jatkot": [
+   "Miten jokikanjoni muodostuu?",
+   "Miten luolat syntyvät kalkkikiveen?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kysymys": "Kuinka pitkiä Matkan kanjonin luolat ovat?",
+  "uusi": true,
+  "vastaus": "Ai tota. Hyvä kysymys. Kanjonissa on kymmenen [[luolaa]], joiden pituus vaihtelee 20 metristä 176 metriin. Treskan oikealla rannalla sijaitsevan [[Vrelo-luolan]] uskotaan olevan yksi Euroopan syvimmistä luolista. Minä en kyl luolissa viihdy, siellä ei kanna kirjepostia.",
+  "linkit": [
+   "luolaa",
+   "Vrelo-luolan"
+  ],
+  "jatkot": [
+   "Miten luolat syntyvät?",
+   "Mikä on Euroopan syvin luola?"
+  ]
+ },
+ {
+  "kohde": "kohde:matkan-kanjoni",
+  "kysymys": "Mikä joki virtaa Matkan kanjonin läpi?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Matkan kanjonin läpi virtaa [[Treska-joki]]. Kanjoni sijaitsee [[Skopjen]] länsipuolella Pohjois-Makedoniassa, ja jokea pitkin melotaan. Lyhyt vastaus, ihan harvinaista.",
+  "linkit": [
+   "Treska-joki",
+   "Skopjen"
+  ],
+  "jatkot": [
+   "Mikä kaupunki on Pohjois-Makedonian pääkaupunki?",
+   "Mihin Treska-joki laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kysymys": "Missä joet Erigon ja Axios kohtaavat?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Joet [[Erigon]] eli Crna ja [[Axios]] eli Vardar yhtyvät Stobin kohdalla Pohjois-Makedoniassa, [[Gradskon]] lähellä. Kohta on antiikin kaupungin raunioiden luona. Kaksi jokea, yksi kyyhky, ei hätää.",
+  "linkit": [
+   "Erigon",
+   "Axios",
+   "Gradskon"
+  ],
+  "jatkot": [
+   "Mihin Vardar-joki laskee?",
+   "Mikä on Pohjois-Makedonian pisin joki?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kysymys": "Minkä uskonnon rakennuksen tilalle Stobin basilika rakennettiin?",
+  "uusi": false,
+  "vastaus": "Sepä sattui. Tän minä tiedän. Stobin kristillinen [[basilika]] rakennettiin [[synagogan]] eli juutalaisen palvontarakennuksen tilalle. Se kertoo kaupungin monikulttuurisuudesta. Eipä sekään pieni muutos ollu.",
+  "linkit": [
+   "basilika",
+   "synagogan"
+  ],
+  "jatkot": [
+   "Mikä on synagoga ja mihin sitä käytetään?",
+   "Mitä basilika-sana tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kysymys": "Minkä aseman Stobi sai Rooman valtakunnassa vuonna 69 eaa.?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Hyvä kysymys tuo. Stobi sai vuonna 69 eaa. [[Rooman]] valtakunnassa [[municipiumin]] aseman. Myöhemmin se oli [[Macedonia Salutaris]] -provinssin pääkaupunki. Arvonimiä riitti roomalaisilla kyl.",
+  "linkit": [
+   "Rooman",
+   "municipiumin",
+   "Macedonia Salutaris"
+  ],
+  "jatkot": [
+   "Mitä municipium tarkoitti?",
+   "Mikä oli Rooman valtakunnan provinssi?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kysymys": "Mitä Stobille tapahtui vuonna 518?",
+  "uusi": true,
+  "vastaus": "Hetkinen. Vuonna 518 Stobia koetteli [[maanjäristys]]. Sitä ennen kaupunkia oli koetellut [[ostrogoottien]] ryöstö vuonna 479, ja 500-luvulla sitä koettelivat vielä hyökkäykset. Tapahtumat ovat noin puolentoista tuhannen vuoden takaa, ja nykyään paikka on arkeologinen kohde. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "maanjäristys",
+   "ostrogoottien"
+  ],
+  "jatkot": [
+   "Miten maanjäristyksiä mitataan?",
+   "Keitä ostrogootit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:stobi",
+  "kysymys": "Missä setelissä Stobin riikinkukkomosaiikki on kuvattuna?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Joo, muistan tän. Stobin [[piispanbasilikan]] [[riikinkukkomosaiikki]] on kuvattu Pohjois-Makedonian 10 [[denarin]] setelissä. Denari on maan rahayksikkö. Riikinkukko on siis rahassa, kyyhky ei.",
+  "linkit": [
+   "piispanbasilikan",
+   "riikinkukkomosaiikki",
+   "denarin"
+  ],
+  "jatkot": [
+   "Mikä on mosaiikki ja miten sellainen tehdään?",
+   "Mitä riikinkukko symboloi kristinuskossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kysymys": "Kuka perusti Herakleia Lynkestiksen?",
+  "uusi": false,
+  "vastaus": "Ai se. Tän minä tiedän. Herakleia Lynkestiksen perusti Makedonian kuningas [[Filippos II]] 300-luvun eaa. puolivälissä. Kaupunki nimettiin [[Heraklesin]] mukaan, ja se sijaitsee noin kaksi kilometriä [[Bitolan]] keskustasta etelään. Kuninkaat perustivat, kyyhkyt kantoivat kirjeet.",
+  "linkit": [
+   "Filippos II",
+   "Heraklesin",
+   "Bitolan"
+  ],
+  "jatkot": [
+   "Kuka oli Filippos II:n poika?",
+   "Mikä on Bitola nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kysymys": "Minkä antiikin tien varrella kaupunki sijaitsi?",
+  "uusi": false,
+  "vastaus": "Nyt muistan. Roomalaisaikana kaupunki menestyi [[Via Egnatian]] varrella, joka yhdisti [[Bysantionin]] ja [[Adrianmeren]] rannikon. Tie oli tärkeä kulkureitti halki Balkanin. Minä lensin kyl suoremmin.",
+  "linkit": [
+   "Via Egnatian",
+   "Bysantionin",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Millaisia roomalaiset tiet olivat?",
+   "Mikä kaupunki Bysantion on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kysymys": "Mistä Herakleia Lynkestiksen nimi tulee?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Hyvä kysymys tuo. Kaupunki nimettiin [[Heraklesin]] mukaan. Sen perusti Makedonian kuningas [[Filippos II]] 300-luvun eaa. puolivälissä, ja se sijaitsee noin kaksi kilometriä [[Bitolan]] keskustasta etelään. Sankarin nimi kantaa kyl vielä.",
+  "linkit": [
+   "Heraklesin",
+   "Filippos II",
+   "Bitolan"
+  ],
+  "jatkot": [
+   "Kuka Herakles oli kreikkalaisessa tarustossa?",
+   "Kuka oli Filippos II:n poika?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kysymys": "Mitä nähtävää Herakleia Lynkestiksen kohteessa on?",
+  "uusi": true,
+  "vastaus": "Mmm— kato. Kohteessa on [[teatteri]] sekä pieni ja suuri [[basilika]]. Suuren basilikan narteksin [[lattiamosaiikki]] on 500-luvulta. Kyllä minä istuisin mieluusti teatterin kaiteella.",
+  "linkit": [
+   "teatteri",
+   "basilika",
+   "lattiamosaiikki"
+  ],
+  "jatkot": [
+   "Mikä on narteksi kirkossa?",
+   "Miten antiikin teatteri toimi?"
+  ]
+ },
+ {
+  "kohde": "kohde:herakleia-lynkestis",
+  "kysymys": "Miksi Herakleia Lynkestis autioitui?",
+  "uusi": true,
+  "vastaus": "Hetkinen. Kaupunki autioitui vähitellen vuoden 518 [[maanjäristyksen]] ja noin vuoden 585 [[slaavien]] hyökkäysten jälkeen. Sitä ennen se oli menestynyt roomalaisaikana Via Egnatian varrella. Tapahtumat ovat puolentoista tuhannen vuoden takaa, ja paikka on sittemmin muuttunut arkeologiseksi kohteeksi. Hiljainen paikka nykyään, ja hyvä niin.",
+  "linkit": [
+   "maanjäristyksen",
+   "slaavien"
+  ],
+  "jatkot": [
+   "Keitä slaavit olivat ja mistä he tulivat?",
+   "Mikä on Bitolan kaupunki nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kysymys": "Kuinka syvä Mavrovon järvi on enimmillään?",
+  "uusi": false,
+  "vastaus": "No niin, helppo. Mavrovon järvi on syvimmillään 50 metriä. Se on [[tekojärvi]], joka on pisimmillään noin 10 kilometriä ja jonka pinta-ala on 1 370 hehtaaria. Pohjoisessa kohoavat [[Šar-vuoret]]. Ihan sopiva syvyys kyyhkylle, joka ei uimaan mene.",
+  "linkit": [
+   "tekojärvi",
+   "Šar-vuoret"
+  ],
+  "jatkot": [
+   "Miten tekojärvi rakennetaan?",
+   "Mikä on Euroopan syvin järvi?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kysymys": "Mikä kirkko on järvessä puoliksi veden peitossa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kirkko on [[Pyhän Nikolain kirkko]], rannan tunnetuin nähtävyys. Se seisoo tekojärvessä vain puoliksi veden peitossa, ja alue kuuluu [[Mavrovon kansallispuistoon]]. Kirkolla jalat kasteena, kuin minulla lätäkössä.",
+  "linkit": [
+   "Pyhän Nikolain kirkko",
+   "Mavrovon kansallispuistoon"
+  ],
+  "jatkot": [
+   "Miten tekojärvi syntyy?",
+   "Mitä kansallispuisto tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kysymys": "Onko Mavrovon järvi luonnonjärvi vai tekojärvi?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Mavrovon järvi on [[tekojärvi]] Pohjois-Makedonian länsiosassa, alle sadan kilometrin päässä [[Skopjesta]]. Sen pinta-ala on 1 370 hehtaaria, ja alue on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Ihmisen tekemä järvi, ja silti kaunis.",
+  "linkit": [
+   "tekojärvi",
+   "Skopjesta",
+   "Mavrovon kansallispuistoon"
+  ],
+  "jatkot": [
+   "Miten tekojärvi rakennetaan?",
+   "Mitä kansallispuisto tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kysymys": "Mitkä vuoret ympäröivät Mavrovon järveä?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Pohjoisessa kohoavat [[Šar-vuoret]] ja etelässä [[Bistran vuoret]], joiden huiput ylittävät 2 500 metriä. Siellä yläilmoissa minä viihtyisin.",
+  "linkit": [
+   "Šar-vuoret",
+   "Bistran vuoret"
+  ],
+  "jatkot": [
+   "Mikä on Euroopan korkein vuori?",
+   "Miten vuoristot syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:mavrovon-jarvi",
+  "kysymys": "Mitä kesällä voi tehdä Mavrovon järvellä?",
+  "uusi": true,
+  "vastaus": "Ai niin, kesä. Kesällä Mavrovon järvellä uidaan, soudetaan ja kalastetaan [[taimenia]]. Järvi sijaitsee alueella, joka on kuulunut [[Mavrovon kansallispuistoon]] vuodesta 1952. Kesällä kaipaisin kyl pullaa laiturille.",
+  "linkit": [
+   "taimenia",
+   "Mavrovon kansallispuistoon"
+  ],
+  "jatkot": [
+   "Millainen kala taimen on?",
+   "Mitä kansallispuistossa saa tehdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kysymys": "Miltä ajalta Kokinon löydöt ovat?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Annas ku katson ylhäältä. Kokinon löydöt ulottuvat 1800-luvulta eaa. aina 600-luvulle eaa., joten ne kattavat yli tuhat vuotta. Kohde sijaitsee [[Tatićev Kamen]] -huipulla [[Pohjois-Makedoniassa]], ja sitä on tulkittu [[pronssikautiseksi]] aurinko-observatorioksi. Tulkinta on kuitenkin kiistanalainen. Tuhat vuotta on pitkä aika, mut kallio vaan seisoo.",
+  "linkit": [
+   "Tatićev Kamen",
+   "Pohjois-Makedoniassa",
+   "pronssikautiseksi"
+  ],
+  "jatkot": [
+   "Miksi observatoriotulkinta on kiistanalainen?",
+   "Mitä pronssikausi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kysymys": "Miksi observatoriotulkinta on kiistanalainen?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Tää on hyvä kysymys. Osa asiantuntijoista pitää [[Kokinon]] kohdetta pronssikautisena [[aurinko-observatoriona]], jossa kahden tasanteen kallioon tehdyt merkit ja tähtäyspisteet osoittavat taivaan tapahtumiin. Toisten mukaan tähtäyspisteitä ja merkkejä on niin paljon, että suuntaukset voivat olla pelkkää sattumaa: kun merkkejä on riittävästi, jokin niistä osuu aina johonkin. Asiaa ei siis ole ratkaistu, ja molemmat kannat ovat tutkijoiden piirissä vakiintuneita. Kyyhky pysyy kuivin jaloin molempien kantojen välissä.",
+  "linkit": [
+   "Kokinon",
+   "aurinko-observatoriona"
+  ],
+  "jatkot": [
+   "Mihin muinaista aurinko-observatoriota voitiin käyttää?",
+   "Miten korkealla Kokino sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kysymys": "Miten korkealla Kokino sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kato, tää on helppo. Siivin tän mittaa nopeasti. Kokino sijaitsee noin 1 010–1 030 metrin korkeudessa [[Tatićev Kamen]] -huipulla, noin 30 kilometrin päässä [[Kumanovosta]]. Kohde on jaettu kahteen tasanteeseen, ja alemmalla tasanteella on neljä kiviistuinta. Ylhäältä katsoen se on ihan mukava lepopaikka.",
+  "linkit": [
+   "Tatićev Kamen",
+   "Kumanovosta"
+  ],
+  "jatkot": [
+   "Mikä on pronssikausi?",
+   "Mihin muinaista aurinko-observatoriota voitiin käyttää?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kysymys": "Mitä pronssikausi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai tota. Tost minä osaan kertoo. Pronssikausi on esihistorian ajanjakso, jolloin työkalut ja aseet tehtiin pääosin pronssista, joka on kuparin ja tinan seos. Ajanjakson ajoitus vaihtelee alueittain: Euroopassa se sijoittuu karkeasti kolmannelta vuosituhannelta eaa. rautakauden alkuun, ja Balkanilla sen loppuvaiheet osuvat ensimmäisen vuosituhannen eaa. alkuun. [[Kokinon]] löydöt kuuluvat tähän aikaan, ja sama aikakausi tunnetaan myös [[Euroopan]] muista kalliokohteista ja hautakumpuista.\n\nSuku on kantanut viestejä metalliaikojen halki, ja pronssi on minusta aina vaikuttanut jotenkin liian painavalta lentämiseen. Rautakausi tuli sitten ja otti pronssin paikan, eikä kukaan kysynyt pullaa kummallakaan.",
+  "linkit": [
+   "Kokinon",
+   "Euroopan"
+  ],
+  "jatkot": [
+   "Mikä erottaa pronssikauden rautakaudesta?",
+   "Miten aurinko-observatorio toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:kokinon-observatorio",
+  "kysymys": "Mihin muinaista aurinko-observatoriota voitiin käyttää?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Hyvä kysymys tuo. Muinaista aurinko-observatoriota voitiin käyttää auringon nousu- ja laskupaikkojen seuraamiseen horisontissa, jolloin tärkeät hetket kuten [[päivänseisaukset]] ja tasausten ajankohdat saatiin merkittyä. Sen avulla seurattiin vuodenkiertoa ja ajoitettiin kalenteria, esimerkiksi maanviljelyn ja juhlien kannalta tärkeitä hetkiä. Kokinon kohdalla tämä on tulkinta, jota ei ole varmistettu, sillä [[Kokinon]] merkkien tarkoitus on tutkijoiden kesken kiistanalainen. Ja minä kun luulin, että kalenteri oli keksitty meitä kyyhkyjä varten.",
+  "linkit": [
+   "päivänseisaukset",
+   "Kokinon"
+  ],
+  "jatkot": [
+   "Mitä päivänseisaus tarkoittaa?",
+   "Miksi vuodenkierron seuraaminen oli muinaisille ihmisille tärkeää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kysymys": "Miltä Skopjen vanha rautatieasema näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Kato, katotaas. Tän aseman minä tunnen ylhäältä päin. Skopjen keskusasema oli 1900-luvun puolivälissä yksi [[Jugoslavian]] vilkkaimmista rautatieasemista. Se oli tyylikäs kivirakennus, jossa oli kellotorni. Rakennus kuului kaupungin tärkeimpiin paikkoihin, kunnes [[Skopjen maanjäristys]] vuonna 1963 muutti kaupungin ilmeen. Nykyään osittain sortunut rakennus toimii kaupunginmuseona. Onpas siinä kellotorni, jonka vierestä olis ollut mukava lähteä matkaan.",
+  "linkit": [
+   "Jugoslavian",
+   "Skopjen maanjäristys"
+  ],
+  "jatkot": [
+   "Miksi Skopjen vanha rautatieasema on nykyään raunioina?",
+   "Mikä joki virtaa Skopjen halki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kysymys": "Miksi Skopjen vanha rautatieasema on nykyään raunioina?",
+  "uusi": false,
+  "vastaus": "Kääk. Tää on raskas aihe. [[Skopjeen]] iski [[maanjäristys]] 26.7.1963 kello 5.17. Se tappoi yli tuhat ihmistä ja tuhosi suuren osan kaupungista, ja aseman kello pysähtyi täsmälleen järistyksen hetkeen. Osittain sortunut rakennus on säilytetty muistona, ja nykyään siinä toimii kaupunginmuseo. Tapahtumasta on kulunut yli kuusikymmentä vuotta, ja kaupunki on rakennettu sen jälkeen uudelleen. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Skopjeen",
+   "maanjäristys"
+  ],
+  "jatkot": [
+   "Miten Skopjea jälleenrakennettiin maanjäristyksen jälkeen?",
+   "Mikä joki virtaa Skopjen halki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kysymys": "Miten Skopjea jälleenrakennettiin maanjäristyksen jälkeen?",
+  "uusi": true,
+  "vastaus": "Mmm— tää on iso aihe. Joo, katotaas. Vuoden 1963 [[maanjäristyksen]] jälkeen [[Skopjen]] jälleenrakennus oli suuri kansainvälinen hanke: apua ja asiantuntemusta tuli useista maista, ja kaupunkia suunniteltiin uudelleen. Lähteiden mukaan hankkeessa oli mukana japanilainen arkkitehti Kenzo Tange, mutta en ole varma hänen osuutensa tarkoista yksityiskohdista. Kaupungin ilme muuttui voimakkaasti, ja sen vanha keskusta jäi osittain muistoksi tuhosta. Tarkemmat vuosiluvut jätän sanomatta, koska en ole niistä varma.",
+  "linkit": [
+   "maanjäristyksen",
+   "Skopjen"
+  ],
+  "jatkot": [
+   "Mikä on Skopje 2014 -hanke?",
+   "Mikä joki virtaa Skopjen halki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kysymys": "Mikä on Prespan sopimus?",
+  "uusi": true,
+  "vastaus": "Ai se. Tost minä tiedän kyl jotain. Prespan sopimus on vuonna 2018 tehty sopimus, joka ratkaisi yli 20 vuotta kestäneen nimikiistan Kreikan ja Pohjois-Makedonian välillä. Kreikka piti Makedonia-nimen käyttöä oman historiansa omimisena, ja sopimuksella maan nimeksi vahvistettiin [[Pohjois-Makedonia]]. Kiistan taustalla oli muun muassa [[Aleksanteri Suuren]] nimen käyttö, joka näkyi myös Skopjen pääaukion patsaan nimessä: virallisesti se on vain Ratsastava soturi.\n\nKyyhkyn silmin nimikiista on outo juttu, koska taivaalla ei ole rajoja, vaikka kaikki muuten kulkee vanhojen reittien mukaan. Kreikan puolella täällä on varmasti oma pullansa, en vaan tiedä sen nimee.",
+  "linkit": [
+   "Pohjois-Makedonia",
+   "Aleksanteri Suuren"
+  ],
+  "jatkot": [
+   "Mikä on Skopje 2014 -hanke?",
+   "Milloin Pohjois-Makedonia itsenäistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skopjen-vanha-rautatieasema",
+  "kysymys": "Mikä joki virtaa Skopjen halki?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Joo, tää on helppo. Skopjen halki virtaa [[Vardar]]-joki. Roomalaiset perustivat sen mutkaan Scupin kaupungin, josta kasvoi tärkeä uskonnollinen ja kaupallinen keskus. Vuonna 518 maanjäristys tuhosi Scupin lähes kokonaan, ja uusi linnoitus, [[Kale]], rakennettiin läheiselle kukkulalle osin raunioituneen kaupungin kivistä. Joki on siis nähnyt kaupungin kahdesti hajoavan. Hyvä joki, vaikkei se kyyhkyjen reitti olekaan.",
+  "linkit": [
+   "Vardar",
+   "Kale"
+  ],
+  "jatkot": [
+   "Mikä on Skopjen Kalen linnoitus?",
+   "Milloin Skopjessa tapahtui toinen suuri maanjäristys?"
+  ]
+ }
+]
