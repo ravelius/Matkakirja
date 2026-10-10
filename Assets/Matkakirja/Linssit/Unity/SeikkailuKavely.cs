@@ -84,7 +84,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kuoren leikkaukset päälle/pois (kävelytila).</summary>
-        public const int LeikkauksiaMax = 32;
+        public const int LeikkauksiaMax = 48;   // LR v46y: aina-leikkauksia nyky 17, 1499 14, kappeli 13 (32 jäi rajalle); DioraamaKuori.shader samat 48
         static bool leikkauksetPaalla; static string leikkausOsa;
 
         /// <summary>Kuoren leikkaukset kävelytilassa (enintään LeikkauksiaMax; 7.10. datassa 40, ennen otettiin vain 8 ensimmäistä,

@@ -885,9 +885,9 @@
  {
   "nimi": "portaikko:ylapaa",
   "paikka": [
-   -12.25,
+   -12.475,
    13.4,
-   -20.056
+   -19.666
   ],
   "raja": false,
   "huom": "voudin hehku näkyy portaikossa; 7.10. 20.3x raja poistettu (huone 6 reitti)",
@@ -905,36 +905,36 @@
  {
   "nimi": "reitti:vouti-laskeutuminen-2",
   "paikka": [
-   -12.25,
+   -12.475,
    13.4,
-   -20.056
+   -19.666
   ],
   "osa": "kappeli-kavely"
  },
  {
   "nimi": "reitti:vouti-laskeutuminen-3",
   "paikka": [
-   -16.277,
+   -16.214,
    11.5,
-   -20.839
+   -20.393
   ],
   "osa": "kappeli-kavely"
  },
  {
   "nimi": "reitti:vouti-laskeutuminen-4",
   "paikka": [
-   -17.031,
+   -16.914,
    11.5,
-   -20.685
+   -20.251
   ],
   "osa": "kappeli-kavely"
  },
  {
   "nimi": "reitti:vouti-laskeutuminen-5",
   "paikka": [
-   -20.856,
+   -20.466,
    9.6,
-   -17.75
+   -17.525
   ],
   "osa": "kappeli-kavely"
  },
@@ -3087,9 +3087,9 @@
  {
   "nimi": "reitti:pelaaja-23",
   "paikka": [
-   -20.423,
+   -20.033,
    9.6,
-   -17.5
+   -17.275
   ],
   "osa": "kappeli-kavely",
   "huom": "kaariportaiden alapää"
@@ -3097,9 +3097,9 @@
  {
   "nimi": "reitti:pelaaja-24",
   "paikka": [
-   -19.235,
+   -18.961,
    10.55,
-   -19.598
+   -19.241
   ],
   "osa": "kappeli-kavely",
   "huom": "kaariportaat"
@@ -3107,9 +3107,9 @@
  {
   "nimi": "reitti:pelaaja-25",
   "paikka": [
-   -17.031,
+   -16.915,
    11.5,
-   -20.685
+   -20.251
   ],
   "osa": "kappeli-kavely",
   "huom": "kaariportaiden tasanne"
@@ -3117,9 +3117,9 @@
  {
   "nimi": "reitti:pelaaja-26",
   "paikka": [
-   -16.277,
+   -16.214,
    11.5,
-   -20.839
+   -20.393
   ],
   "osa": "kappeli-kavely",
   "huom": "kaariportaiden tasanne"
@@ -3127,9 +3127,9 @@
  {
   "nimi": "reitti:pelaaja-27",
   "paikka": [
-   -14.198,
+   -14.284,
    12.45,
-   -20.784
+   -20.343
   ],
   "osa": "kappeli-kavely",
   "huom": "kaariportaat"
@@ -3137,9 +3137,9 @@
  {
   "nimi": "reitti:pelaaja-28",
   "paikka": [
-   -12.25,
+   -12.475,
    13.4,
-   -20.056
+   -19.666
   ],
   "osa": "kappeli-kavely",
   "huom": "kaariportaiden yläpää"
