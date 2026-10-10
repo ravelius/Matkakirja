@@ -45,6 +45,9 @@ namespace Matkakirja.Natiivi
         const float KoysiPuoliLeveys = 0.006f;
         /// <summary>A/B (komento `opas kori 0|1`); kaupunkitilassa oletuksena päällä tässä kokeessa.</summary>
         public static bool Paalla = true;
+        /// <summary>Kaupunki-intro piilottaa korin nykyajan otoksista (OpasSovitin.Intro) erillään A/B-kytkimestä: intron loppu
+        /// ei palauta Paalla-arvoa, joten kesken intron annettu `opas kori 0` pitää (PT 10.10.).</summary>
+        public static bool IntroPiilossa;
         /// <summary>Katseen nosto korista (°, KoriKatseVeto): kori ja köydet kääntyvät saman verran alas, eli pysyvät kehyksen asennossa.</summary>
         public static float KatseYlos;
         /// <summary>Kompassin merkki (OpasSovitin): suunta seuraavaan kohteeseen (°, 0 = pohjoinen, myötäpäivään), null = ei kohdetta.</summary>
@@ -133,7 +136,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka kehys oppaasta: kaytossa = kaupunkitila ja näkymä auki.</summary>
         public void Kayta(bool paalla, Camera kamera)
         {
-            paalla &= Paalla && kamera != null;
+            paalla &= Paalla && !IntroPiilossa && kamera != null;
             if (paalla && (perus != kamera || overlay == null || koosteessa != KaupunkiKooste.Kaytossa)) Luo(kamera);
             if (paalla && overlay != null && rt != null) { VarmistaKohde(); Itsetarkistus(); }   // ruudun koko (kierto) ennen piirtoa
             if (paalla == kaytossa) return;

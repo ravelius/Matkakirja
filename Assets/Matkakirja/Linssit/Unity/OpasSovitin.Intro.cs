@@ -141,7 +141,7 @@ namespace Matkakirja.Natiivi
             }
 
             // Kori pois nykyajan otoksista (KaupunkiIntro.KoriPalaa); palautetaan aina (IntroPurku).
-            if (introKoriEnnen == null) { introKoriEnnen = PalloKori.Paalla; PalloKori.Paalla = false; }
+            PalloKori.IntroPiilossa = true;
             int otos = -1;
             bool nytKasitelty = false, c5Lukittu = false, c5 = false;
             while (true)
@@ -174,7 +174,7 @@ namespace Matkakirja.Natiivi
                     if (t < KaupunkiIntro.NytRiviS + 1) { NytRivi.Nayta(kk.Nimi, kk.Lat, kk.Lon, kaupunkiId); o.Kirjaa($"opas: intro {kaupunkiId} nyt-rivi {t:F2} s"); }
                 }
                 bool c5Nyt = c5Lukittu ? c5 : introKuvat[5] != null;
-                if (introKoriEnnen != null && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
+                if (PalloKori.IntroPiilossa && c5Lukittu && t >= KaupunkiIntro.KoriPalaa(c5)) KoriTakaisin();
                 var tila = KaupunkiIntro.Tila(t, n => introKuvat[n] != null, c5Nyt);
                 if (!KaupunkiIntro.EiffelEsilataus(t)) introEsilataus = null;
                 introKamera = tila.Laji == IntroLaji.Eiffel && introEiffel ? KaupunkiIntro.EiffelKulma(KaupunkiIntro.EiffelOsuus(t), eMaa) : (Kuvakulma?)null;
@@ -229,9 +229,8 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Pallon korin tila ennen introa (null = ei piilotettu).</summary>
-        bool? introKoriEnnen;
-        void KoriTakaisin() { if (introKoriEnnen is bool k) { PalloKori.Paalla = k; introKoriEnnen = null; } }
+        /// <summary>Intron korin piilotus pois (A/B-kytkin PalloKori.Paalla ennallaan: kesken intron annettu `opas kori 0` pitää).</summary>
+        void KoriTakaisin() => PalloKori.IntroPiilossa = false;
 
         /// <summary>Intro päättyi (soitettu = kuvat ja tahti ajettiin; muuten opastus jää avaukseen kuten ennen).</summary>
         void IntroLoppuu(int versio, bool soitettu, string syy)
