@@ -654,7 +654,7 @@ namespace Matkakirja.Natiivi
         Latauspalkki siirtymaPalkki;
         IVisualElementScheduledItem siirtymaKierros;
 
-        VisualElement siirtymaIon, avausIon;
+        VisualElement siirtymaIon, avausIon, poistuRivi;
 
         // Koko ruutu (simu 6.10.: turva-alueen ulkopuolelle jäi kartta ja krediitit), kuten DioraamaTaulun nimiruutu.
         void RakennaSiirtyma(VisualElement kerrosJuuri)
@@ -690,9 +690,16 @@ namespace Matkakirja.Natiivi
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtymaTeksti);
             siirtymaNimi.pickingMode = PickingMode.Ignore; siirtymaNimi.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(siirtymaNimi, Kirjasin.Lcd);
             siirtymaPalkki = new Latauspalkki(siirtymaTeksti);
-            // POISTU (omistaja TF 176, PT 12.2x: "lisää latausruutuun POISTU-nappi … kuten Myllyn Poistu"): sama nappirivi ja nappi kuin
+            // POISTU (omistaja TF 176, PT 12.2x: "lisää latausruutuun POISTU-nappi … kuten Myllyn Poistu"): sama nappi kuin
             // Myllyssä; sulkee linssin, jolloin siirtymäkierros purkaa ruudun (SiirtymaPeru) ja lataus keskeytyy, ja peli palaa kartalle.
-            var poistuRivi = Rakenne.El("mk-kortti__napit", siirtymaTeksti, PickingMode.Ignore);
+            // Omistaja 10.10. 22.4x: "nappi on liian lähellä latauspalkkia. siirrä nappi oik. reunaan ja laita himmeämmälle" →
+            // OHJAUSNAPPI-pohjan ryhmä oikeaan alakulmaan turva-alueen sisään (ion-logon riville, AsetaSiirtymaIon) ja ryhmän
+            // lepotila (himmeä 0,55 kuten TAPPI). Tumma latausruutu: KORTTI-pohjan tumma variantti (vaalea reunus ja teksti) kuten
+            // museon Poistu; läpinäkyvän toimintonapin muste-teksti ei erottunut tummasta ruudusta (omistaja 22.4x).
+            poistuRivi = Rakenne.El("mk-ohjausryhma", siirtyma, PickingMode.Ignore);
+            poistuRivi.AddToClassList("mk-ohjausryhma--lepo");
+            poistuRivi.AddToClassList("mk-kortti-kehys--tumma");
+            poistuRivi.style.top = StyleKeyword.Auto;
             Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
             {
                 Debug.Log("MATKAKIRJA opas: siirtymä — Poistu");
@@ -768,6 +775,10 @@ namespace Matkakirja.Natiivi
             var sa = UiRuutu.Turva;
             float vali = Mathf.Max(sa.xMin, sa.yMin) * sk + KrediititTiivis.TyhjaSivuPt;
             AsetaIon(siirtymaIon, vali, vali);
+            // Poistu oikeaan alakulmaan samalle riville: alareuna kuten logon, oikea reuna turva-alueen sisään reunan lähelle
+            // (simu 22.52: logon 44 pt:n sivuväli toi napin iPhonella 16 pt:n päähän latauspalkista).
+            float oikea = (Screen.width - sa.xMax) * sk + KrediititTiivis.TyhjaSivuPt;
+            poistuRivi.style.right = oikea; poistuRivi.style.bottom = vali;
             Debug.Log($"MATKAKIRJA opas: siirtymän ion-logo {vali:0} pt vasemmasta ja alhaalta (paneeli {pw:0}, turva {sa.xMin:0}/{sa.yMin:0} px)");
         }
 

@@ -101,7 +101,10 @@ namespace Matkakirja.Natiivi
                         var t = o.GetType();
                         var linkki = t.GetProperty("link", L)?.GetValue(o) as string;
                         if (linkki == null || !linkki.Contains("cesium.com")) continue;
-                        if (t.GetProperty("imageId", L)?.GetValue(o) is int id && id >= 0 && id < kuvat.Count) return kuvat[id] as Texture;
+                        // Cesium lisää kuvalistaan ensin 1×1-paikkakuvan (CesiumCreditSystem.LoadImage) ja vaihtaa sen oikeaan, kun lataus
+                        // valmistuu; paikkakuva piirtyi latausruudulle valkoisena neliönä (omistaja 10.10. 22.4x). Vain ladattu logo kelpaa.
+                        if (t.GetProperty("imageId", L)?.GetValue(o) is int id && id >= 0 && id < kuvat.Count)
+                            return kuvat[id] is Texture kuva && kuva != null && kuva.width > 1 && kuva.height > 1 ? kuva : null;
                     }
                 }
             }
