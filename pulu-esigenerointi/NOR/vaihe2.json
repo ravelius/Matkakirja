@@ -4726,5 +4726,913 @@
    "Miten Juutinrauman silta rakennettiin?",
    "Miten Kattegatin vesi eroaa Itämeren vedestä?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lindesnes",
+  "kasite": "Itämerelle",
+  "kysymys": "Kerro lisää: Itämerelle",
+  "vastaus": "Itämeri on Pohjois-Euroopassa sijaitseva sisämeri, jota ympäröivät muun muassa Ruotsi, Suomi, Viro, Latvia, Liettua, Puola, Saksa ja Tanska. Se on verrattain matala ja yhteydessä valtamereen vain kapeiden [[Tanskan salmien]] kautta, minkä vuoksi veden vaihtuvuus on hidasta. Jokien tuoma makea vesi laimentaa sen suolaisuutta, ja siksi Itämeren vesi on [[murtovettä]], jonka suolapitoisuus on selvästi alhaisempi kuin [[Pohjanmeren]]. Meri on ollut tärkeä kulkuväylä ja kauppareitti jo keskiajalta lähtien.",
+  "linkit": [
+   "Tanskan salmien",
+   "murtovettä",
+   "Pohjanmeren"
+  ],
+  "jatkot": [
+   "Kuinka syvä Itämeri on?",
+   "Mitkä kaupungit olivat tärkeitä Itämeren kaupassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "Rondanella",
+  "kysymys": "Kerro lisää: Rondanella",
+  "vastaus": "Rondane on vuoristoalue Itä-Norjassa, ja se sijaitsee lähellä Dovrefjelliä. Alue on suojeltu kansallispuistona, ja siellä on useita yli 2 000 metriin kohoavia huippuja, joista korkein on yli 2 100 metrin korkuinen [[Rondeslottet]]. Rondanella elää yksi Norjan viimeisistä alkuperäisistä [[villipeurakannoista]], ja yhdessä Dovrefjellin kanssa alue muodostaa tämän kannan ydinalueen. Puuton, avara tunturimaisema tekee alueesta suositun vaellus- ja retkikohteen.",
+  "linkit": [
+   "Rondeslottet",
+   "villipeurakannoista"
+  ],
+  "jatkot": [
+   "Miten villipeura eroaa kotieläinporosta?",
+   "Mitä kansallispuisto tarkoittaa Norjassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "Fennoskandiassa",
+  "kysymys": "Kerro lisää: Fennoskandiassa",
+  "vastaus": "Fennoskandia on Pohjois-Euroopan alue, johon kuuluvat Skandinavian niemimaa, Suomi, Karjala ja Kuolan niemimaa. Nimi viittaa suomalaisiin ja skandinaaveihin. Alueen perustana on [[Fennoskandian kilpi]], yksi Euroopan vanhimmista kallioperäalueista, jonka kivilajit ovat monin paikoin miljardien vuosien ikäisiä. Alueen maisemaa ovat muovanneet [[jääkausien]] jäätiköt, jotka kaivoivat laaksoja ja hioivat kallioita.",
+  "linkit": [
+   "Fennoskandian kilpi",
+   "jääkausien"
+  ],
+  "jatkot": [
+   "Mitä Fennoskandian kilpi tarkoittaa?",
+   "Mitkä maat kuuluvat Skandinaviaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "kotieläinporojen",
+  "kysymys": "Kerro lisää: kotieläinporojen",
+  "vastaus": "Poro on peuralaji, jota on pidetty kotieläimenä Fennoskandian pohjoisosissa vuosisatojen ajan. Kotieläinporot ja villipeurat kuuluvat samaan lajiin, joten ne voivat risteytyä, ja siksi alkuperäiset villipeurakannat ovat Norjassa harvinaisia. Norjassa [[poronhoito]] on pääosin [[saamelaisten]] harjoittama elinkeino, ja porot siirtyvät vuodenaikojen mukaan laitumelta toiselle. Porot kulkevat suurimman osan vuodesta vapaina, mutta jokaisella on omistaja, joka tunnistetaan [[korvamerkistä]].",
+  "linkit": [
+   "poronhoito",
+   "saamelaisten",
+   "korvamerkistä"
+  ],
+  "jatkot": [
+   "Miten poronhoito on muuttunut ajan myötä?",
+   "Mistä villipeuran ja poron eron tunnistaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden",
+  "vastaus": "Jääkausi on pitkä, kylmä jakso maapallon historiassa, jonka aikana mannerjäätiköt peittävät laajoja alueita. Pohjois-Euroopassa viimeisin jääkausi päättyi noin 11 700 vuotta sitten, ja Fennoskandia oli sitä ennen jään peitossa. Jäätiköt muovasivat maisemaa: ne kaivoivat laaksoja ja loivat Norjan [[vuonot]], ja sulaessaan ne jättivät jälkeensä harjuja ja moreenia. Kylmän kauden Euroopassa elivät kylmään sopeutuneet eläimet, kuten [[myskihärät]] ja [[mammutit]].",
+  "linkit": [
+   "vuonot",
+   "myskihärät",
+   "mammutit"
+  ],
+  "jatkot": [
+   "Miksi Skandinavia kohoaa edelleen jääkauden jälkeen?",
+   "Miten jäätikkö muovaa maisemaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "lampaiden",
+  "kysymys": "Kerro lisää: lampaiden",
+  "vastaus": "Lammas on kesytetty märehtijä, jota on pidetty kotieläimenä tuhansien vuosien ajan lihan, maidon ja [[villan]] vuoksi. Myskihärkä ei ole lampaan esivanhempi, mutta se kuuluu samaan laajaan sukulaisryhmään, johon kuuluvat lampaat ja vuohet, ja siksi niiden ruoansulatuksessa ja rakenteessa on yhtäläisyyksiä. Norjassa lampaita laidunnetaan kesäisin [[vuoristolaitumilla]], ja villa on ollut tärkeä materiaali pohjoisen vaatetuksessa. Lampaan villa muodostuu hienosta aluskarvasta ja karkeammista peitinkarvoista.",
+  "linkit": [
+   "villan",
+   "vuoristolaitumilla"
+  ],
+  "jatkot": [
+   "Mikä tekee myskihärän aluskarvasta niin lämpimän?",
+   "Milloin lammas kesytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "vuohien",
+  "kysymys": "Kerro lisää: vuohien",
+  "vastaus": "Vuohi on lampaan tavoin kesytetty [[märehtijöihin]] kuuluva eläin, jota on pidetty kotieläimenä tuhansia vuosia. Se tuottaa maitoa, lihaa ja karvaa, ja se tulee toimeen niukallakin laitumella, joten se sopii vuoristoisille seuduille. Norjassa vuohenmaidosta valmistetaan ruskeaa juustoa nimeltä [[gjetost]], jolla on makea, karamellimainen maku. Myskihärkä ei ole varsinainen vuohi, mutta se kuuluu samaan laajaan sukulaisryhmään.",
+  "linkit": [
+   "märehtijöihin",
+   "gjetost"
+  ],
+  "jatkot": [
+   "Miten ruskea juusto valmistetaan?",
+   "Missä Euroopan vuoristoseuduilla vuohia pidetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "alusvilla",
+  "kysymys": "Kerro lisää: alusvilla",
+  "vastaus": "Alusvilla on eläimen karvapeitteen pehmeä ja tiheä sisäkerros, joka sijaitsee karkeampien [[peitinkarvojen]] alla. Myskihärällä alusvilla on erityisen hieno ja paksu, ja se toimii tehokkaana eristyskerroksena arktisessa pakkasessa. Eläin luovuttaa villan keväisin karvanvaihdon yhteydessä, ja irronnutta villaa voidaan kerätä talteen. Sen lämpöeristyksen sanotaan olevan moninkertainen [[lampaanvillaan]] verrattuna, minkä vuoksi sitä arvostetaan lämpimien vaatteiden raaka-aineena.",
+  "linkit": [
+   "peitinkarvojen",
+   "lampaanvillaan"
+  ],
+  "jatkot": [
+   "Miten myskihärkä selviää arktisessa talvessa?",
+   "Mihin myskihärän villaa käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "ahmoja",
+  "kysymys": "Kerro lisää: ahmoja",
+  "vastaus": "Ahma on suurin maalla elävä [[näätäeläin]], ja sen ulkonäkö muistuttaa pientä, tanakkaa karhua. Se painaa tavallisesti noin kymmenestä kahteenkymmeneen kiloon, ja leveät tassut auttavat sitä liikkumaan hangella. Ahma elää Fennoskandian pohjoisosien tuntureilla ja [[taigalla]], ja se on sitkeä saalistaja, joka pystyy kaatamaan myös suuria eläimiä, kuten [[poroja]]. Norjassa ahma on harvinainen.",
+  "linkit": [
+   "näätäeläin",
+   "taigalla",
+   "poroja"
+  ],
+  "jatkot": [
+   "Mitä ahma syö talvella?",
+   "Miksi ahma on harvinainen Norjassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "maakotkia",
+  "kysymys": "Kerro lisää: maakotkia",
+  "vastaus": "Maakotka on suuri petolintu, jonka [[siipiväli]] on noin kaksi metriä tai hieman enemmän. Se rakentaa massiivisen pesän kalliolle tai suureen puuhun ja palaa usein samalle pesäpaikalle vuodesta toiseen. Maakotka saalistaa muun muassa jäniksiä ja [[riekkoja]], ja tarvittaessa se hyödyntää myös [[raatoja]]. Laji elää laajalti pohjoisella pallonpuoliskolla, ja Euroopassa sitä tavataan erityisesti vuoristoissa ja Fennoskandian pohjoisosissa, kuten Dovrefjellillä.",
+  "linkit": [
+   "siipiväli",
+   "riekkoja",
+   "raatoja"
+  ],
+  "jatkot": [
+   "Miten maakotka saalistaa?",
+   "Miksi maakotka rakentaa pesänsä kalliolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "tunturihaukkoja",
+  "kysymys": "Kerro lisää: tunturihaukkoja",
+  "vastaus": "Tunturihaukka on suurin haukkalaji maailmassa, ja se pesii pohjoisilla tuntureilla ja [[tundralla]]. Sen höyhenpuku vaihtelee valkoisesta tummanharmaaseen, ja valkoisimmat yksilöt elävät kaukaisimmassa pohjoisessa. Laji saalistaa ennen kaikkea [[riekkoja]] ja [[kiirunoita]], ja se lentää nopeasti matalalla maanpinnan lähellä. Fennoskandiassa kanta on pieni.",
+  "linkit": [
+   "tundralla",
+   "riekkoja",
+   "kiirunoita"
+  ],
+  "jatkot": [
+   "Miten haukka eroaa kotkasta?",
+   "Missä muualla tunturihaukka pesii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "näätäeläimiin",
+  "kysymys": "Kerro lisää: näätäeläimiin",
+  "vastaus": "Näätäeläimet ovat petoeläinten heimo, johon kuuluvat muun muassa [[näätä]], [[saukko]], [[mäyrä]], [[kärppä]] ja ahma. Niille on tyypillistä pitkä, notkea vartalo ja lyhyet jalat, ja monet lajit käyttävät hajurauhasten eritettä reviirinsä merkitsemiseen. Useimmat ovat yksineläjiä ja tehokkaita saalistajia. Ahma on heimon suurin maalla elävä laji, ja sen sitkeys ja voima ovat tehneet siitä pohjoisen tunnetuimpia petoja.",
+  "linkit": [
+   "näätä",
+   "saukko",
+   "mäyrä",
+   "kärppä"
+  ],
+  "jatkot": [
+   "Miten saukko eroaa näädästä?",
+   "Mikä on pienin näätäeläin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "Dovrefjellin",
+  "kysymys": "Kerro lisää: Dovrefjellin",
+  "vastaus": "Dovrefjell on vuoristoalue Keski-Norjassa, ja suuri osa siitä kuuluu vuonna 2002 perustettuun Dovrefjell–Sunndalsfjellan kansallispuistoon. Alueen korkein huippu on 2 286 metriä korkea [[Snøhetta]]. Dovrefjell tunnetaan myös eläimistöstään: siellä elää alkuperäinen villipeurakanta sekä [[myskihärkiä]], jotka tuotiin alueelle vuonna 1947. Vuoristo on esiintynyt myös kirjallisuudessa, sillä [[Henrik Ibsenin]] näytelmän Peer Gynt päähenkilö kohtaa Dovrevuoren kuninkaan, ja näytelmään [[Edvard Grieg]] sävelsi tunnetun musiikin.",
+  "linkit": [
+   "Snøhetta",
+   "myskihärkiä",
+   "Henrik Ibsenin",
+   "Edvard Grieg"
+  ],
+  "jatkot": [
+   "Mitä musiikkia Grieg sävelsi Peer Gynt -näytelmään?",
+   "Mitä eläimiä Dovrefjellillä tapaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "raatoja",
+  "kysymys": "Kerro lisää: raatoja",
+  "vastaus": "Raadolla tarkoitetaan kuolleen eläimen ruumista. Sitä hyödyntävät [[raadonsyöjät]], joita ovat esimerkiksi [[korpit]], [[kotkat]] ja ahma, ja ne ovat tärkeä osa luonnon kiertokulkua. Raadonsyöjät poistavat ruumiita ympäristöstä ja palauttavat niiden sisältämät ravinteet takaisin ekosysteemiin, mikä vähentää myös tautien leviämistä. Pohjoisessa raatoja on tarjolla erityisesti talvella, kun muuta ravintoa on niukasti, ja Etelä-Euroopan vuoristoissa raadoilla elää myös [[korppikotkia]].",
+  "linkit": [
+   "raadonsyöjät",
+   "korpit",
+   "kotkat",
+   "korppikotkia"
+  ],
+  "jatkot": [
+   "Miksi raadonsyöjät ovat tärkeitä luonnolle?",
+   "Missä Euroopassa korppikotkia elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "tunturikettu",
+  "kysymys": "Kerro lisää: tunturikettu",
+  "vastaus": "Tunturikettu eli naali on pieni, tanakka kettulaji, joka elää pohjoisilla tuntureilla ja [[tundralla]]. Sen turkki vaihtaa väriä vuodenaikojen mukaan: talvella se on valkoinen tai sinertävänharmaa ja kesällä ruskeahko. Tärkeintä ravintoa ovat [[sopulit]], ja kannan koko vaihtelee niiden runsauden mukaan. Fennoskandiassa laji on erittäin uhanalainen, ja sen kantaa on pyritty elvyttämään.",
+  "linkit": [
+   "tundralla",
+   "sopulit"
+  ],
+  "jatkot": [
+   "Miksi tunturikettu on uhanalainen Fennoskandiassa?",
+   "Miten tunturikettu selviää talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dovrefjell",
+  "kasite": "Dovrefjellillä",
+  "kysymys": "Kerro lisää: Dovrefjellillä",
+  "vastaus": "Dovrefjellillä elää poikkeuksellisen monipuolinen tunturieläimistö. Alueella tavataan [[ahmoja]], [[maakotkia]] ja tunturihaukkoja, ja siellä elää yksi viimeisistä alkuperäisistä villipeurakannoista. Lisäksi alueelle tuotiin vuonna 1947 [[myskihärkiä]], jotka muodostavat nykyään Euroopan ainoan pysyvän myskihärkäkannan. Kansallispuisto suojelee alueen luontoa, ja sen korkein huippu on Snøhetta, jonka korkeus on 2 286 metriä. Tunturikettu eli naali oli alueella yleinen vielä noin sata vuotta sitten, mutta katosi sieltä noin vuonna 1990.",
+  "linkit": [
+   "ahmoja",
+   "maakotkia",
+   "myskihärkiä"
+  ],
+  "jatkot": [
+   "Voiko Dovrefjellillä nähdä myskihärkiä turvallisesti?",
+   "Miten kansallispuistot suojelevat eläimiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Olav Engelbrektsson",
+  "kysymys": "Kerro lisää: Olav Engelbrektsson",
+  "vastaus": "Olav Engelbrektsson oli Norjan viimeinen katolinen [[Nidarosin]] arkkipiispa, ja hän johti Norjan kirkkoa 1520- ja 1530-luvuilla. Hän rakennutti Steinvikholmin linnan vuosina 1525–1532 ja pyrki sen avulla turvaamaan kirkon ja oman asemansa Tanskan kuninkaita Fredrik I:tä ja Kristian III:a vastaan. Kun [[uskonpuhdistus]] kukisti hänen valtansa huhtikuussa 1537, hän pakeni maanpakoon [[Alankomaihin]], jossa hän kuoli seuraavana vuonna. Hänen mukanaan päättyi katolisen kirkon asema Norjassa.",
+  "linkit": [
+   "Nidarosin",
+   "uskonpuhdistus",
+   "Alankomaihin"
+  ],
+  "jatkot": [
+   "Mikä oli Nidarosin arkkipiispan tehtävä?",
+   "Miksi Engelbrektsson vastusti uskonpuhdistusta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Trondheimsfjordissa",
+  "kysymys": "Kerro lisää: Trondheimsfjordissa",
+  "vastaus": "Trondheimsfjord on yli sadan kilometrin pituinen vuono Keski-Norjassa. Sen perukassa sijaitsee [[Trondheim]], ja sen rannoilla on viljavaa maata, joka on tehnyt alueesta pitkään tärkeän asutus- ja valtakeskuksen. Vuono kuuluu [[Trøndelagin]] alueeseen, ja sen rannoilla ja saarilla on useita historiallisia kohteita, kuten Steinvikholmin linna. Norjan [[vuonot]] ovat syntyneet jäätiköiden kaivamista laaksoista, joihin meri on tulvinut jääkauden päätyttyä.",
+  "linkit": [
+   "Trondheim",
+   "Trøndelagin",
+   "vuonot"
+  ],
+  "jatkot": [
+   "Miten vuonot syntyvät?",
+   "Mikä on Trondheimin merkitys Norjan historiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Tanskan",
+  "kysymys": "Kerro lisää: Tanskan",
+  "vastaus": "Tanska on Pohjoismaa ja kuningaskunta, jonka pääkaupunki on [[Kööpenhamina]]. Keskiajan lopulta vuoteen 1814 Norja kuului Tanskan kanssa samaan kuningaskuntaan, ja Tanskan kuninkaat hallitsivat maata. Kuningas [[Kristian III]] vei läpi uskonpuhdistuksen, ja Norjassa sen voitto vuonna 1537 päätti Olav Engelbrektssonin vallan. Tanskan vallan alla oli pitkään myös [[Islanti]], jolle Kristian IX toi uuden perustuslain vuonna 1874.",
+  "linkit": [
+   "Kööpenhamina",
+   "Kristian III",
+   "Islanti"
+  ],
+  "jatkot": [
+   "Miten Norja pääsi irti Tanskan vallasta?",
+   "Mitä Kielin rauha vuonna 1814 tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Alankomaihin",
+  "kysymys": "Kerro lisää: Alankomaihin",
+  "vastaus": "Alankomaat on Luoteis-Euroopassa sijaitseva maa, jonka rannikko rajoittuu [[Pohjanmeren]] rannikkoon. Suuri osa maasta on matalaa, ja huomattava osa on merenpinnan tasolla tai sen alapuolella, joten maata on saatu lisää patojen ja [[polderien]] avulla. Maa tunnetaan kanavistaan, kauppaperinteestään ja tulppaaneista: tulppaani tuotiin Alankomaihin 1500-luvulla Osmanien valtakunnasta, ja vuoden 1637 [[tulppaanimania]] on yksi tunnetuimmista esimerkeistä talouskuplista.",
+  "linkit": [
+   "Pohjanmeren",
+   "polderien",
+   "tulppaanimania"
+  ],
+  "jatkot": [
+   "Mitä polderit ovat?",
+   "Mitä tulppaanimanian aikana tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "muinaismuistoyhdistys",
+  "kysymys": "Kerro lisää: muinaismuistoyhdistys",
+  "vastaus": "Muinaismuistoyhdistys on kansalaisjärjestö, jonka tehtävänä on suojella, tutkia ja hoitaa historiallisia rakennuksia, raunioita ja muita vanhoja kohteita. Norjassa tällainen järjestö on [[Fortidsminneforeningen]], joka on perustettu 1800-luvulla. Yhdistykset toimivat usein vapaaehtoisvoimin ja keräävät varoja kohteiden kunnossapitoon. Rauniolinna kuten Steinvikholm vaatii jatkuvaa hoitoa, koska sää, pakkanen ja kasvillisuus vahingoittavat muureja. Muinaismuistojen suojelu on osa laajempaa [[kulttuuriperinnön]] vaalimista.",
+  "linkit": [
+   "Fortidsminneforeningen",
+   "kulttuuriperinnön"
+  ],
+  "jatkot": [
+   "Miksi raunioita on tärkeää suojella?",
+   "Miten rauniolinnoja kunnostetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "ooppera",
+  "kysymys": "Kerro lisää: ooppera",
+  "vastaus": "Ooppera on musiikkiteatterin muoto, jossa näytelmän tarina kerrotaan laulamalla [[orkesterin]] säestyksellä. Se syntyi Italiassa noin vuonna 1600 [[Firenzessä]], ja sieltä se levisi nopeasti ympäri Eurooppaa. Oopperassa yhdistyvät laulu, musiikki, näyttämökuva ja puvustus, ja laulajat jaetaan usein äänialansa mukaan esimerkiksi sopraanoihin ja tenoreihin. Steinvikholmin linnan saarella järjestetään joka elokuu ooppera arkkipiispan tarinasta, jolloin rauniot toimivat näyttämönä.",
+  "linkit": [
+   "orkesterin",
+   "Firenzessä"
+  ],
+  "jatkot": [
+   "Miten ooppera eroaa musikaalista?",
+   "Ketkä ovat tunnetuimpia oopperasäveltäjiä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Trondheimissa",
+  "kysymys": "Kerro lisää: Trondheimissa",
+  "vastaus": "Trondheim on Keski-Norjan suurin kaupunki, ja se sijaitsee [[Trondheimsfjordin]] rannalla. Perimätiedon mukaan kuningas [[Olav Tryggvason]] perusti kaupungin noin vuonna 997, ja keskiajalla sen nimi oli Nidaros. Kaupungin keskeisin nähtävyys on [[Nidarosin tuomiokirkko]], joka on rakennettu pyhän Olavin haudan yhteyteen, ja sinne suuntautui keskiajalla pyhiinvaelluksia. Nykyisin Trondheim on myös yliopistokaupunki.",
+  "linkit": [
+   "Trondheimsfjordin",
+   "Olav Tryggvason",
+   "Nidarosin tuomiokirkko"
+  ],
+  "jatkot": [
+   "Miksi Trondheimin keskiaikainen nimi oli Nidaros?",
+   "Mitä Trondheimissa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "pyhän Olavin",
+  "kysymys": "Kerro lisää: pyhän Olavin",
+  "vastaus": "Pyhä Olav eli Olav II Haraldsson oli Norjan kuningas 1010-luvun lopulta 1020-luvun loppuun saakka ja kristinuskon vahva edistäjä. Hän kaatui [[Stiklestadin]] taistelussa vuonna 1030 ja hänet tunnustettiin pyhimykseksi pian kuolemansa jälkeen. Hänen hautansa yhteyteen rakennettu [[Nidarosin tuomiokirkko]] kehittyi yhdeksi Pohjolan tärkeimmistä pyhiinvaelluskohteista, ja Olavista tuli Norjan ikuiseksi kuninkaaksi kutsuttu kansallispyhimys. Olavin päivää vietetään 29. heinäkuuta. Hänen toimintansa liittyi vahvasti [[kristinuskon]] vakiinnuttamiseen Norjassa.",
+  "linkit": [
+   "Stiklestadin",
+   "Nidarosin tuomiokirkko",
+   "kristinuskon"
+  ],
+  "jatkot": [
+   "Mitä Stiklestadin taistelussa tapahtui?",
+   "Milloin Norja kristillistyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Stiklestadin",
+  "kysymys": "Kerro lisää: Stiklestadin",
+  "vastaus": "Stiklestad on paikka Verdalin kunnassa Trøndelagissa, ja siellä käytiin vuonna 1030 taistelu, jossa kuningas Olav Haraldsson kaatui. Olavin vastustajia tuki Tanskan kuningas [[Knut Suuri]]. Taistelun jälkeen Olavista tuli pyhimys, ja paikasta tuli tärkeä muistopaikka. Nykyisin Stiklestadissa on kulttuurikeskus, ja kuninkaan kuolinpäivää muistetaan [[Olsok]]-juhlassa 29. heinäkuuta, jonka aikoihin järjestetään myös pyhän Olavin elämää esittävä juhlanäytelmä. Paikka sijaitsee [[Verdalin]] kunnassa.",
+  "linkit": [
+   "Knut Suuri",
+   "Olsok",
+   "Verdalin"
+  ],
+  "jatkot": [
+   "Kuka oli Knut Suuri?",
+   "Mitä Olsok-juhlassa tehdään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Kielin rauhassa",
+  "kysymys": "Kerro lisää: Kielin rauhassa",
+  "vastaus": "Kielin rauha oli [[Napoleonin sotien]] päätteeksi tammikuussa 1814 tehty rauhansopimus, jossa Tanska luovutti Norjan Ruotsin kuninkaalle. Norja oli ollut Tanskan kuninkaan alaisuudessa vuosisatoja, ja sopimus sivuutti norjalaisten omat toiveet. Norjalaiset reagoivat julistautumalla itsenäisiksi: [[Eidsvollin]] kansalliskokous hyväksyi perustuslain 17. toukokuuta 1814, ja päivä on yhä Norjan kansallispäivä. Ruotsi pakotti Norjan kuitenkin liittoon, ja syntyi [[Ruotsin ja Norjan unioni]], joka päättyi vuonna 1905.",
+  "linkit": [
+   "Napoleonin sotien",
+   "Eidsvollin",
+   "Ruotsin ja Norjan unioni"
+  ],
+  "jatkot": [
+   "Miksi Norjan kansallispäivä on 17. toukokuuta?",
+   "Miten Ruotsin ja Norjan unioni purkautui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "Ruotsin",
+  "kysymys": "Kerro lisää: Ruotsin",
+  "vastaus": "Ruotsi on Norjan itäinen naapuri ja Pohjoismaiden väkirikkain valtio, jonka pääkaupunki on [[Tukholma]]. Vuoden 1814 jälkeen Norja ja Ruotsi olivat unionissa saman kuninkaan alaisina, ja unioni päättyi vuonna 1905. Unionin aikana molempien maiden lippujen kantoon lisättiin vuonna 1844 yhteinen [[unionimerkki]], jonka kansa nimesi sildesalaten eli [[silakkasalaatti]]. Kauppalipun kannosta merkki poistui vuoden 1899 lopussa.",
+  "linkit": [
+   "Tukholma",
+   "unionimerkki",
+   "silakkasalaatti"
+  ],
+  "jatkot": [
+   "Miksi Ruotsin ja Norjan unioni purettiin vuonna 1905?",
+   "Mistä Norjan lipun värit ovat peräisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "luterilaisuuteen",
+  "kysymys": "Kerro lisää: luterilaisuuteen",
+  "vastaus": "Luterilaisuus on kristinuskon suuntaus, joka perustuu saksalaisen teologin [[Martti Lutherin]] oppeihin. Se sai alkunsa 1500-luvun alussa, kun Luther esitti kritiikkiä kirkon käytännöistä, ja siitä tuli uskonpuhdistuksen keskeinen suuntaus. Luterilaisuudessa korostetaan, että ihminen pelastuu yksin uskosta ja että [[Raamattu]] on uskon ylin auktoriteetti. Luther käänsi Raamatun saksaksi, ja jumalanpalvelukset siirtyivät latinasta kansankielille. Pohjoismaihin luterilaisuus levisi 1500-luvulla kuninkaiden tuella, ja Tanska-Norjassa se vahvistui 1530-luvulla.",
+  "linkit": [
+   "Martti Lutherin",
+   "Raamattu"
+  ],
+  "jatkot": [
+   "Mitkä olivat Lutherin 95 teesin pääkohdat?",
+   "Miten luterilaisuus levisi Suomeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "luostarit",
+  "kysymys": "Kerro lisää: luostarit",
+  "vastaus": "Luostari on munkkien tai nunnien yhteisö, joka asuu yhdessä, rukoilee säännöllisesti ja noudattaa yhteistä sääntöä. Keskiajalla luostarit olivat paitsi hengellisiä keskuksia myös oppineisuuden, sairaanhoidon ja maanviljelyn tukipisteitä. Norjan merkittäviin luostareihin kuului Bergenissä sijainnut [[Munkelivin luostari]], jonka kuningas Øystein I perusti noin vuonna 1110 benediktiiniluostariksi ja jonka 1420-luvulla otti haltuunsa [[birgittalaisjärjestö]]. Maan päällä siitä ei näy nykyään mitään. Uskonpuhdistus johti luostarien sulkemiseen Pohjoismaissa, ja kuninkaat ottivat niiden omaisuuden haltuunsa.",
+  "linkit": [
+   "Munkelivin luostari",
+   "birgittalaisjärjestö"
+  ],
+  "jatkot": [
+   "Keitä birgittalaiset olivat?",
+   "Mitä luostareiden rakennuksille tapahtui sulkemisen jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-steinvikholm",
+  "kasite": "arkkipiispan",
+  "kysymys": "Kerro lisää: arkkipiispan",
+  "vastaus": "Arkkipiispa on kirkon piispa, jolla on korkeampi asema kuin muilla piispoilla, ja hän johtaa yleensä kokonaista kirkkoprovinssia tai koko kirkkoa. Katolisessa kirkossa arkkipiispa johtaa suurempaa hiippakuntaa ja toimii alueensa muiden [[piispojen]] johtohahmona. Keskiajalla Norjan kirkko kuului [[Nidarosin]] arkkipiispan alaisuuteen, ja arkkipiispan istuin oli Nidarosin tuomiokirkossa. Luterilaisissa kirkoissa arkkipiispa voi olla kirkon johtaja, kuten Ruotsissa, jossa arkkipiispa toimii [[Uppsalassa]].",
+  "linkit": [
+   "piispojen",
+   "Nidarosin",
+   "Uppsalassa"
+  ],
+  "jatkot": [
+   "Mitä eroa on piispalla ja arkkipiispalla?",
+   "Kuka johtaa Suomen evankelis-luterilaista kirkkoa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "Sunnivan",
+  "kysymys": "Kerro lisää: Sunnivan",
+  "vastaus": "Sunniva on legendan mukaan irlantilainen kuninkaantytär, joka pakeni pakkoavioliittoa laivalla ja haaksirikkoutui [[Seljan]] saarelle Norjan länsirannikolla. Perimätiedon mukaan hän kuoli saarella luolassa, jossa hän ja hänen seuralaisensa piileskelivät vainoojiaan. Myöhemmin Sunnivasta tuli Länsi-Norjan ja [[Bergenin]] suojeluspyhimys, ja hänen pyhäinjäännöstensä ympärille kehittyi [[pyhiinvaelluskohde]].",
+  "linkit": [
+   "Seljan",
+   "Bergenin",
+   "pyhiinvaelluskohde"
+  ],
+  "jatkot": [
+   "Miksi Selja oli tärkeä pyhiinvaelluskohde?",
+   "Mitä pyhimyslegendat ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "pyhäinjäännösten",
+  "kysymys": "Kerro lisää: pyhäinjäännösten",
+  "vastaus": "Pyhäinjäännökset eli reliikit ovat pyhimyksen ruumiinosia tai hänen omistamiaan esineitä, joita kunnioitettiin keskiajalla erityisen suuresti. Ne säilytettiin usein koristeellisissa [[relikvaarioissa]] kirkoissa ja luostareissa, ja niiden uskottiin tuovan suojaa ja parantumista. Pyhäinjäännökset houkuttelivat [[pyhiinvaeltajia]], ja pyhiinvaelluskohteet saivat niistä sekä arvovaltaa että tuloja. Norjassa keskeisiä olivat pyhän Olavin pyhäinjäännökset [[Nidarosissa]], ja Seljalla pyhiinvaellus liittyi Sunnivaan.",
+  "linkit": [
+   "relikvaarioissa",
+   "pyhiinvaeltajia",
+   "Nidarosissa"
+  ],
+  "jatkot": [
+   "Mikä on relikvaario?",
+   "Mitä uskonpuhdistus ajatteli pyhäinjäännöksistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "benediktiiniluostari",
+  "kysymys": "Kerro lisää: benediktiiniluostari",
+  "vastaus": "Benediktiiniluostari on luostari, jonka yhteisö noudattaa pyhän [[Benedictus Nursialaisen]] sääntöä. Benedictus eli Italiassa 500-luvulla ja perusti 500-luvun alkupuolella [[Monte Cassinon]] luostarin. Hänen sääntönsä ohjasi luostarielämää rukouksen, työn ja opiskelun rytmillä, ja se levisi laajasti kaikkialle Eurooppaan. Seljan saarelle benediktiiniluostari perustettiin noin vuonna 1100.",
+  "linkit": [
+   "Benedictus Nursialaisen",
+   "Monte Cassinon"
+  ],
+  "jatkot": [
+   "Mitä Monte Cassinon luostarille tapahtui sodassa?",
+   "Mitkä muut luostarijärjestöt syntyivät benediktiinien jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "tulipalo",
+  "kysymys": "Kerro lisää: tulipalo",
+  "vastaus": "Tulipalo oli keskiajalla yksi suurimmista uhista, sillä [[puurakennukset]] olivat yleisiä ja valo ja lämpö tuotettiin avotulella. Seljan luostarin tuhoisa palo vuonna 1305 koetteli yhteisöä, mutta en ole varma palon syystä tai laajuudesta. Myös Bergenin satamakortteli [[Bryggen]] on palanut useita kertoja ja rakennettu uudelleen. Kivirakenteet kestivät tulta puuta paremmin, minkä vuoksi tärkeät rakennukset pyrittiin keskiajalla tekemään kivestä.",
+  "linkit": [
+   "puurakennukset",
+   "Bryggen"
+  ],
+  "jatkot": [
+   "Mikä on Bryggen Bergenissä?",
+   "Miten keskiajan kaupungit suojautuivat tulipaloilta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "mustan surman",
+  "kysymys": "Kerro lisää: mustan surman",
+  "vastaus": "Musta surma oli 1300-luvun puolivälissä Euroopassa raivonnut [[ruttopandemia]], jonka aiheuttaa [[Yersinia pestis]] -bakteeri. Se levisi kauppareittejä pitkin Eurooppaan 1340-luvun lopulla ja saapui Norjaan vuonna 1349. Tauti tappoi merkittävän osan väestöstä: Euroopassa kuolleiden osuudeksi arvioidaan usein noin kolmannes tai enemmän, mutta arviot vaihtelevat. Seuraukset olivat syvät: maatiloja autioitui, työvoimasta tuli niukkaa ja luostareiden asema heikkeni.",
+  "linkit": [
+   "ruttopandemia",
+   "Yersinia pestis"
+  ],
+  "jatkot": [
+   "Miten rutto levisi Euroopassa?",
+   "Miten musta surma muutti yhteiskuntaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "Bergenin hiippakunnalle",
+  "kysymys": "Kerro lisää: Bergenin hiippakunnalle",
+  "vastaus": "Hiippakunta on [[piispan]] johtama kirkollinen alue, ja Bergenin hiippakunta kattoi keskiajalla Länsi-Norjaa. Piispan istuin oli Bergenissä, ja hiippakunta omisti maita ja tiloja, joiden tuotto tuki kirkon toimintaa. Kun piispa Finnboge siirsi [[Seljan luostarin]] maaomaisuuden hiippakunnalle 1400-luvun jälkipuoliskolla, luostarin taloudellinen perusta siirtyi hiippakunnalle. Nykyisessä Norjan kirkossa vastaava alue on [[Bjørgvinin]] hiippakunta.",
+  "linkit": [
+   "piispan",
+   "Seljan luostarin",
+   "Bjørgvinin"
+  ],
+  "jatkot": [
+   "Miten hiippakunta eroaa seurakunnasta?",
+   "Milloin Bergen perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "Trondheimin",
+  "kysymys": "Kerro lisää: Trondheimin",
+  "vastaus": "Trondheim on Keski-Norjan kaupunki, jonka keskiaikainen nimi oli Nidaros, eli suunnilleen Nid-joen suu. Nimi viittaa [[Nidelva]]-jokeen, joka laskee [[Trondheimsfjordiin]] kaupungin kohdalla. Kaupunki oli keskiajalla Norjan kirkollinen keskus: [[arkkipiispan]] istuin ja pyhän Olavin hautapaikka tekivät siitä pyhiinvaelluskohteen, joka veti vaeltajia kauas. Bergenin ja Nidarosin välinen rannikkoreitti kulki halki pitkän ja vuoristoisen rannikon, ja merireitti oli usein nopein kulkutapa.",
+  "linkit": [
+   "Nidelva",
+   "Trondheimsfjordiin",
+   "arkkipiispan"
+  ],
+  "jatkot": [
+   "Miten pyhiinvaeltajat matkasivat Nidarosiin?",
+   "Mikä on Nidelva?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "pyhiinvaeltajille",
+  "kysymys": "Kerro lisää: pyhiinvaeltajille",
+  "vastaus": "Pyhiinvaeltaja on ihminen, joka matkustaa uskonnollisesta syystä pyhäksi katsottuun paikkaan. Keskiajan Euroopassa tunnetuimpia määränpäitä olivat Rooma ja [[Santiago de Compostela]]. Pohjolassa suosittu päämäärä oli pyhän Olavin hauta Nidarosissa, johon johti useita reittejä. Nykyisin tunnettu on Oslosta Trondheimiin kulkeva [[Pilegrimsleden]], eli Olavin tie, jonka pituus on noin 640 kilometriä.",
+  "linkit": [
+   "Santiago de Compostela",
+   "Pilegrimsleden"
+  ],
+  "jatkot": [
+   "Mitä Olavin tie tarkoittaa nykyään?",
+   "Miten pyhiinvaellus keskiajalla tehtiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "kivirauniot",
+  "kysymys": "Kerro lisää: kivirauniot",
+  "vastaus": "Kivirauniot ovat rakennusten jäännöksiä, jotka ovat säilyneet kivestä tehtyjen seinien ansiosta, vaikka katot, lattiat ja muut puuosat ovat tuhoutuneet. Kivi kestää säätä ja aikaa paremmin kuin puu, mutta rakennuksia purettiin usein kivilähteeksi uusille taloille. Seljan saarella näin ei käynyt, koska saarelle ei asetuttu asumaan luostarin päättymisen jälkeen, ja siksi [[Seljan luostarin]] raunioista on edelleen paljon jäljellä. Saarelle pääsee veneellä [[Seljen]] kylästä.",
+  "linkit": [
+   "Seljan luostarin",
+   "Seljen"
+  ],
+  "jatkot": [
+   "Miten arkeologit tutkivat luostarirauniota?",
+   "Millaisia muita luostarirauniota Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "benediktiiniluostarin",
+  "kysymys": "Kerro lisää: benediktiiniluostarin",
+  "vastaus": "Benediktiiniluostarin arki noudatti sääntöä, jossa rukous, työ ja lepo vuorottelivat. Päivän rytmin määräsivät yhteiset [[tuntirukoukset]], ja niiden välillä munkit viljelivät maata, hoitivat sairaita, opiskelivat ja kopioivat kirjoja. Luostaria johti [[apotti]], jonka sana oli yhteisön sisällä ratkaiseva. Bergenissä sijainnut [[Munkelivin luostari]], jonka kuningas Øystein I perusti noin vuonna 1110, oli benediktiiniluostari, joka omistettiin arkkienkeli Mikaelille.",
+  "linkit": [
+   "tuntirukoukset",
+   "apotti",
+   "Munkelivin luostari"
+  ],
+  "jatkot": [
+   "Mitä tuntirukoukset olivat?",
+   "Mitä apotti tekee luostarissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "Benedictuksen",
+  "kysymys": "Kerro lisää: Benedictuksen",
+  "vastaus": "Benedictus Nursialainen eli Italiassa 500-luvulla. Hän syntyi [[Nursiassa]] Keski-Italiassa ja perusti luostareita, joista tunnetuin on [[Monte Cassino]]. Hänen sääntönsä, [[Benedictuksen sääntö]], kokosi luostarielämän ohjeet: rukous, työ, kuuliaisuus apotille ja vieraanvaraisuus. Benedictus julistettiin Euroopan suojeluspyhimykseksi vuonna 1964.",
+  "linkit": [
+   "Nursiassa",
+   "Monte Cassino",
+   "Benedictuksen sääntö"
+  ],
+  "jatkot": [
+   "Miksi Benedictus on Euroopan suojeluspyhimys?",
+   "Mitä Benedictuksen säännössä sanotaan työstä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "ora et labora",
+  "kysymys": "Kerro lisää: ora et labora",
+  "vastaus": "Ora et labora on latinaa ja tarkoittaa \"rukoile ja tee työtä\". Lause tiivistää benediktiiniläisen luostarielämän periaatteen, jossa päivä jaetaan rukoukseen, työhön ja lepoon. Sanontaa yhdistetään [[Benedictuksen sääntöön]], vaikka sääntö ei sisällä sitä sanasta sanaan, vaan se on myöhempi tiivistys. Käytännössä munkit rukoilivat yhteisissä [[tuntirukouksissa]] ja tekivät työtä pelloilla, kirjoituspöydän ääressä tai sairaita hoitaen. Sanonta tunnetaan edelleen benediktiinien mottona.",
+  "linkit": [
+   "Benedictuksen sääntöön",
+   "tuntirukouksissa"
+  ],
+  "jatkot": [
+   "Miksi luostarit käyttivät latinaa?",
+   "Miten munkit kopioivat kirjoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-selje",
+  "kasite": "käsikirjoituksia",
+  "kysymys": "Kerro lisää: käsikirjoituksia",
+  "vastaus": "Käsikirjoituksilla tarkoitetaan ennen kirjapainotaitoa käsin kirjoitettuja kirjoja. Niitä kopioitiin keskiajalla luostarien kirjoitussaleissa, ja kirjoittaja käytti mustetta ja sulkakynää [[pergamentille]], eli käsitellylle eläimennahalle. Alkukirjaimia ja reunoja koristeltiin usein väreillä ja kullalla, ja näitä kuvituksia kutsutaan [[illuminaatioiksi]]. Yhden kirjan valmistaminen saattoi viedä kuukausia, joten kirjat olivat harvinaisia ja arvokkaita. Kun [[Johannes Gutenberg]] kehitti Euroopassa kirjapainotaidon 1400-luvun puolivälissä, kirjojen valmistus nopeutui.",
+  "linkit": [
+   "pergamentille",
+   "illuminaatioiksi",
+   "Johannes Gutenberg"
+  ],
+  "jatkot": [
+   "Miten kirjapaino muutti kirjojen valmistusta?",
+   "Miten pergamentti valmistettiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Roald Amundsen",
+  "kysymys": "Kerro lisää: Roald Amundsen",
+  "vastaus": "Roald Amundsen syntyi 16. heinäkuuta 1872 Borgessa Etelä-Norjassa laivanvarustajien ja kapteenien sukuun. Äiti toivoi hänestä lääkäriä, mutta äidin kuoltua hän jätti yliopiston ja lähti merille. Amundsen toimi perämiehenä belgialaisella etelämannerretkellä 1897–1899 ja johti sen jälkeen retkikuntaa, joka purjehti pienellä [[Gjøa]]-aluksella Luoteisväylän läpi vuosina 1903–1906. Etelänavalle hän saapui 14. joulukuuta 1911 [[Fram]]-laivalla tehdyn retkikunnan kanssa. Hän katosi vuonna 1928 pelastuslennolla.",
+  "linkit": [
+   "Gjøa",
+   "Fram"
+  ],
+  "jatkot": [
+   "Miten Amundsen valmistautui etelänavan retkelle?",
+   "Miten Amundsen katosi vuonna 1928?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "koiravaljakoiden",
+  "kysymys": "Kerro lisää: koiravaljakoiden",
+  "vastaus": "Koiravaljakko on kelkkaa vetävä koiraryhmä, ja Amundsen käytti sellaisia etelänavan retkellään. Koirat kestivät kovan pakkasen, vetivät raskasta kuormaa ja söivät samaa ruokaa kuin miehet. Retkikunnan suunnitelmaan kuului, että osa koirista lopetettiin matkan edetessä muiden koirien ruoaksi, kun kuorma kevenisi. Britti [[Robert Scott]] käytti koirien lisäksi [[poneja]] ja moottorikelkkoja, ja hänen retkikuntansa eteni hitaammin.",
+  "linkit": [
+   "Robert Scott",
+   "poneja"
+  ],
+  "jatkot": [
+   "Millaisia koirarotuja napaseuduilla käytetään?",
+   "Miksi Scottin retkikunnan paluumatka päättyi huonosti?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Robert Scott",
+  "kysymys": "Kerro lisää: Robert Scott",
+  "vastaus": "Robert Falcon Scott oli brittiläinen laivaston upseeri ja napatutkija. Hän johti kahta etelämannerretkeä: ensimmäinen, [[Discovery]]-retki, tehtiin 1900-luvun alussa, ja toinen, [[Terra Nova]] -retkikunta, vuosina 1910–1913. Terra Nova -retkikunta saavutti etelänavan 17. tammikuuta 1912, 34 päivää Amundsenin jälkeen, ja löysi sieltä norjalaisten lipun ja jättämän kirjeen. Scott ja neljä muuta napaporukan jäsentä menehtyivät paluumatkalla.",
+  "linkit": [
+   "Discovery",
+   "Terra Nova"
+  ],
+  "jatkot": [
+   "Mitä Terra Nova -retkikunta tutki Etelämantereella?",
+   "Mitä Scottin päiväkirjat kertovat?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Norjan lipun",
+  "kysymys": "Kerro lisää: Norjan lipun",
+  "vastaus": "Norjan nykyinen lippu on punainen, ja siinä on sinisellä reunustettu valkoinen pohjoismainen risti. Sen suunnitteli suurkäräjien jäsen [[Fredrik Meltzer]] vuonna 1821, ja hän perusteli punaista, valkoista ja sinistä sillä, että ne merkitsivät silloin vapautta ja olivat Ranskan, Alankomaiden, Amerikan ja Englannin lipuissa. Kuningas hyväksyi mallin siviilikäyttöön kuninkaallisella päätöksellä heinäkuussa 1821. Lipulla sai kuitenkin purjehtia vain pohjoisilla vesillä: Kapp Finisterren eteläpuolella oli käytettävä unionin yhteistä kauppalippua. Vuonna 1844 lippujen kantoon lisättiin yhteinen [[unionimerkki]], jota kansa kutsui nimellä sildesalaten eli silakkasalaatti.",
+  "linkit": [
+   "Fredrik Meltzer",
+   "unionimerkki"
+  ],
+  "jatkot": [
+   "Mitä Pohjoismaiden lippujen ristit tarkoittavat?",
+   "Miksi unionin yhteinen kauppalippu oli tarpeen?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Haakon VII:lle",
+  "kysymys": "Kerro lisää: Haakon VII:lle",
+  "vastaus": "Haakon VII oli Norjan kuningas vuosina 1905–1957. Hän syntyi Tanskan prinssinä nimeltä Carl ja valittiin Norjan kuninkaaksi sen jälkeen, kun Norja oli purkanut unionin Ruotsin kanssa vuonna 1905. Valintaa tuki [[kansanäänestys]], ja hän otti nimekseen Haakon vanhojen norjalaiskuninkaiden mukaan. Toisen maailmansodan aikana hän pakeni miehityksen alta [[Britanniaan]] ja toimi norjalaisten vastarinnan symbolina.",
+  "linkit": [
+   "kansanäänestys",
+   "Britanniaan"
+  ],
+  "jatkot": [
+   "Miten Norja itsenäistyi vuonna 1905?",
+   "Mitä Norjassa tapahtui toisen maailmansodan aikana?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Tromssasta",
+  "kysymys": "Kerro lisää: Tromssasta",
+  "vastaus": "Tromssa on Pohjois-Norjan merkittävä kaupunki [[napapiirin]] pohjoispuolella. Kaupungin [[Tromssan tuomiokirkko]] valmistui vuonna 1861, ja se on kokonaan puusta rakennettu ainoa Norjan luterilainen tuomiokirkko. Kaupungin [[Polaarimuseo]] toimii vuonna 1837 rakennetussa laiturimakasiinissa ja kertoo, miten Tromssasta tuli 1800-luvun puolivälissä pohjoisen jäämeren pyynnin keskus. Kaupunki on ollut myös lähtöpaikka napaseutujen retkille, ja muun muassa Nansenin ja Amundsenin matkat saivat alkunsa sen satamasta.",
+  "linkit": [
+   "napapiirin",
+   "Tromssan tuomiokirkko",
+   "Polaarimuseo"
+  ],
+  "jatkot": [
+   "Miksi Tromssassa nähdään revontulia?",
+   "Millainen on Tromssan tuomiokirkko?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Umberto Nobile",
+  "kysymys": "Kerro lisää: Umberto Nobile",
+  "vastaus": "Umberto Nobile oli italialainen ilmalaivainsinööri ja kenraali. Hän suunnitteli ja ohjasi [[Norge]]-ilmalaivan, jolla Roald Amundsen ja amerikkalainen Lincoln Ellsworth lensivät pohjoisnavan yli toukokuussa 1926 Svalbardilta Alaskaan. Vuonna 1928 Nobile johti toista ilmalaivaa, [[Italia]]-ilmalaivaa, joka syöksyi jäälle pohjoisnavalta palatessa. Haaksirikkoutuneiden pelastamiseksi järjestettiin laaja pelastusoperaatio, johon osallistui myös Amundsen, joka katosi etsintälennolla.",
+  "linkit": [
+   "Norge",
+   "Italia"
+  ],
+  "jatkot": [
+   "Miksi Italia-ilmalaiva syöksyi jäälle?",
+   "Miten ilmalaiva eroaa lentokoneesta?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Colin Archer",
+  "kysymys": "Kerro lisää: Colin Archer",
+  "vastaus": "Colin Archer oli norjalainen laivanrakentaja, joka syntyi vuonna 1832 [[Larvikissa]] skotlantilaiseen sukuun. Hän on tunnetuin kahdesta asiasta: polaarilaiva [[Framin]] rakentamisesta vuonna 1892 sekä [[pelastusveneistä]], jotka on nimetty hänen mukaansa ja jotka tehtiin Norjan rannikon myrskyisiin oloihin. Framin pyöreä runko ja viisto kylki nostivat laivan jään päälle sen sijaan, että jää olisi litistänyt sen. Colin Archer -tyyppisiä aluksia on säilytetty museoaluksina ja harrastuspurjehduksessa.",
+  "linkit": [
+   "Larvikissa",
+   "Framin",
+   "pelastusveneistä"
+  ],
+  "jatkot": [
+   "Millaisia Colin Archer -pelastusveneet olivat?",
+   "Missä Fram-laivaa voi nykyään nähdä?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "tuulimylly",
+  "kysymys": "Kerro lisää: tuulimylly",
+  "vastaus": "Tuulimylly on laite, joka muuntaa tuulen liike-energian pyörimisliikkeeksi lapojen avulla. Perinteisesti tuulimyllyillä jauhettiin viljaa ja pumpattiin vettä, ja Euroopassa niitä on käytetty keskiajalta lähtien. Framin tuulimyllyllä pyöritettiin [[generaattoria]], joka tuotti sähköä aluksen valoihin, mikä oli käytännöllinen ratkaisu jäiden keskellä, jossa huoltoa ei ollut tarjolla. Nykyaikaiset [[tuulivoimalat]] perustuvat samaan periaatteeseen.",
+  "linkit": [
+   "generaattoria",
+   "tuulivoimalat"
+  ],
+  "jatkot": [
+   "Miten tuulivoimala tuottaa sähköä?",
+   "Miten Fram-laivan miehistö selvisi jäiden keskellä?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Fridtjof Nansen",
+  "kysymys": "Kerro lisää: Fridtjof Nansen",
+  "vastaus": "Fridtjof Nansen oli norjalainen tutkimusmatkailija, eläintieteilijä, diplomaatti ja humanitaarinen toimija. Hän johti Fram-retkikuntaa 1893–1896, jonka aikana laiva ajelehti jään mukana Jäämerellä, ja vuonna 1895 hän yritti hiihtäen päästä pohjoisnavalle yhdessä [[Hjalmar Johansenin]] kanssa. Myöhemmin Nansen toimi Kansainliiton pakolaisasioiden korkeana edustajana, ja hänen mukaansa nimetty [[Nansen-passi]] antoi kodittomille pakolaisille matka-asiakirjan. Hän sai [[Nobelin rauhanpalkinnon]] vuonna 1922.",
+  "linkit": [
+   "Hjalmar Johansenin",
+   "Nansen-passi",
+   "Nobelin rauhanpalkinnon"
+  ],
+  "jatkot": [
+   "Miten Nansen auttoi pakolaisia ja nälänhädän uhreja?",
+   "Miten Fram-retkikunta ajelehti jäässä?"
+  ]
+ },
+ {
+  "kohde": "nosto:amundsen",
+  "kasite": "Svalbardilta",
+  "kysymys": "Kerro lisää: Svalbardilta",
+  "vastaus": "Svalbard eli Huippuvuoret on Norjalle kuuluva saaristo kaukana pohjoisessa Jäämerellä, ja sen suurin saari on Spitsbergen. Norjan suvereniteetti perustuu vuonna 1920 tehtyyn [[Huippuvuorten sopimukseen]], joka tuli voimaan 1925 ja joka antaa useiden maiden kansalaisille oikeuden harjoittaa siellä taloudellista toimintaa. Pääasutuskeskus on [[Longyearbyen]], jonka lähellä sijaitsee maailmanlaajuinen [[Svalbardin siemenholvi]]. Amundsenin ja Nobilen Norge-ilmalaiva lähti toukokuussa 1926 liikkeelle [[Ny-Ålesundista]].",
+  "linkit": [
+   "Huippuvuorten sopimukseen",
+   "Longyearbyen",
+   "Svalbardin siemenholvi",
+   "Ny-Ålesundista"
+  ],
+  "jatkot": [
+   "Mitä Huippuvuorten sopimus tarkoittaa?",
+   "Mitä siemenholvi Huippuvuorilla säilyttää?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Ekofiskin",
+  "kysymys": "Kerro lisää: Ekofiskin",
+  "vastaus": "Ekofisk on Norjan Pohjanmeren-sektorin öljy- ja kaasukenttä, noin 320 kilometriä Stavangerista lounaaseen. Sen öljyesiintymä varmistui joulun alla 1969 koeporausten jälkeen, ja tuotanto alkoi vuonna 1971. Aluksi öljy ladattiin suoraan tankkereihin, mutta sittemmin kentälle on rakennettu laaja alustojen ja laitosten joukko, joka palvelee myös naapurikenttiä. Öljyä kuljetetaan [[Norpipe]]-putkea pitkin Englantiin [[Teessiden]] jalostamolle. Löytö muutti Norjan taloutta ja loi pohjan maan [[öljyrahastolle]].",
+  "linkit": [
+   "Norpipe",
+   "Teessiden",
+   "öljyrahastolle"
+  ],
+  "jatkot": [
+   "Miten öljyä porataan merenpohjasta?",
+   "Mikä on Stavangerin merkitys öljyteollisuudelle?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Norjan",
+  "kysymys": "Kerro lisää: Norjan",
+  "vastaus": "Norja on Skandinavian niemimaan länsiosassa sijaitseva kuningaskunta, jonka pääkaupunki on [[Oslo]]. Maan rannikkoa leimaavat syvät [[vuonot]] ja lukemattomat saaret, ja sen pohjoisosa ulottuu napapiirin pohjoispuolelle. Norja oli keskiajan lopulta vuoteen 1814 Tanskan kanssa yhteisessä kuningaskunnassa ja sen jälkeen unionissa Ruotsin kanssa, ja täysin itsenäiseksi se tuli vuonna 1905. Vielä 1960-luvulla maa oli Euroopan köyhempiä, mutta [[Ekofiskin]] öljylöytö muutti tilanteen.",
+  "linkit": [
+   "Oslo",
+   "vuonot",
+   "Ekofiskin"
+  ],
+  "jatkot": [
+   "Miten Norja itsenäistyi?",
+   "Mitkä ovat Norjan tärkeimmät vientialat?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Norja",
+  "kysymys": "Kerro lisää: Norja",
+  "vastaus": "Norjan talous on perustunut perinteisesti kalastukseen, merenkulkuun ja metsätalouteen, mutta öljy- ja kaasuvarat [[Pohjanmerellä]] muuttivat maan 1970-luvulta lähtien nopeasti varakkaaksi. Öljytulot ohjattiin valtion rahastoon sen sijaan, että ne olisi käytetty suoraan, ja rahastosta kasvoi maailman suurin valtiollinen sijoitusrahasto. Silti kalastus ja kalanviljely ovat edelleen tärkeitä, ja [[lohenviljely]] on merkittävä vientiala. Norja joutuu pohtimaan, mitä tehdä öljyn loputtua, ja uusiutuva energia, erityisesti [[vesivoima]], tuottaa jo suuren osan sähköstä.",
+  "linkit": [
+   "Pohjanmerellä",
+   "lohenviljely",
+   "vesivoima"
+  ],
+  "jatkot": [
+   "Miksi Norjassa on paljon vesivoimaa?",
+   "Mitä Norja vie ulkomaille?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Rahasto",
+  "kysymys": "Kerro lisää: Rahasto",
+  "vastaus": "Norjan öljyrahasto on valtion omistama sijoitusrahasto, johon siirretään öljy- ja kaasutoiminnan tuloja. Virallisesti se on nimeltään valtion eläkerahasto ulkomaat, ja sitä hallinnoi Norjan keskuspankki [[Norges Bank]]. Rahaston pääomaa ei käytetä suoraan, vaan valtion budjettiin voidaan ottaa vain sovittu pieni osuus, nykyisin noin kolme prosenttia rahaston arvosta vuodessa. Rahasto sijoittaa ulkomaille [[osakkeisiin]], joukkolainoihin ja kiinteistöihin, joten se omistaa pieniä osuuksia tuhansista yrityksistä ympäri maailmaa.",
+  "linkit": [
+   "Norges Bank",
+   "osakkeisiin"
+  ],
+  "jatkot": [
+   "Millä perusteilla rahasto jättää yhtiöitä pois?",
+   "Miksi rahasto sijoittaa vain ulkomaille?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Norpipe",
+  "kysymys": "Kerro lisää: Norpipe",
+  "vastaus": "Norpipe on merenpohjaan laskettu putkijärjestelmä, jolla Ekofiskin kentältä siirretään öljyä Englantiin [[Teessiden]] jalostamolle. Se otettiin käyttöön 1970-luvun puolivälissä. Putki kulkee Pohjanmeren poikki, koska Norjan rannikon edustalla on syvä [[Norjan syvänne]], jonka vuoksi putkea ei voitu kätevästi vetää suoraan Norjan mantereelle. Norpipen osana on myös kaasuputki Saksaan.",
+  "linkit": [
+   "Teessiden",
+   "Norjan syvänne"
+  ],
+  "jatkot": [
+   "Miksi Norjan syvänne on niin syvä?",
+   "Mihin Norjan kaasu päätyy?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Teessiden",
+  "kysymys": "Kerro lisää: Teessiden",
+  "vastaus": "Teesside on teollisuusalue Koillis-Englannissa [[Tees-joen]] suulla, lähellä [[Middlesbroughin]] kaupunkia. Alue on tunnettu [[kemianteollisuudesta]], öljynjalostuksesta ja satamatoiminnasta, ja 1800-luvulla siellä kehittyi myös vahva rauta- ja terästeollisuus. Ekofiskin kentältä tuleva öljy päätyy putkea pitkin Teessiden jalostamolle, jossa raakaöljy erotellaan tuotteiksi.",
+  "linkit": [
+   "Tees-joen",
+   "Middlesbroughin",
+   "kemianteollisuudesta"
+  ],
+  "jatkot": [
+   "Miksi teollisuutta rakennettiin jokisuille?",
+   "Mitä jalostamolla tapahtuu?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "raakaöljy",
+  "kysymys": "Kerro lisää: raakaöljy",
+  "vastaus": "Raakaöljy on maaperästä tai merenpohjasta pumpattavaa jalostamatonta öljyä, joka koostuu pääosin [[hiilivedyistä]]. Sen väri vaihtelee ruskeasta mustaan, ja koostumus vaihtelee kentittäin: osa öljystä on kevyttä ja juoksevaa, osa raskasta ja paksua, ja osa sisältää runsaasti rikkiä. Pohjanmeren öljylaaduista tunnetuin hintaviite on [[Brent-raakaöljy]], jonka hintaa seurataan maailmalla. Raakaöljyä ei käytetä sellaisenaan, vaan se jalostetaan polttoaineiksi, muoveiksi ja muiksi tuotteiksi.",
+  "linkit": [
+   "hiilivedyistä",
+   "Brent-raakaöljy"
+  ],
+  "jatkot": [
+   "Miksi raakaöljyn hinta vaihtelee?",
+   "Mitä ovat kevyt ja raskas raakaöljy?"
+  ]
+ },
+ {
+  "kohde": "nosto:ekofisk",
+  "kasite": "Pohjanmereltä",
+  "kysymys": "Kerro lisää: Pohjanmereltä",
+  "vastaus": "Pohjanmeri on Atlantin reunameri, jota ympäröivät Britannia, Norja, Tanska, Saksa, Alankomaat, Belgia ja Ranska. Se on verrattain matala, mutta Norjan rannikon edustalla on syvä [[Norjan syvänne]], jonka syvyys on yli 700 metriä. Meri on ollut tärkeä kalastus- ja kauppareitti, ja sen [[silli]]- ja turskasaaliit ovat ruokkineet rannikkoseutuja. Pohjanmerellä on myös runsaasti öljyä ja kaasua, ja lisäksi sinne rakennetaan merituulivoimaa. [[Skagerrak]] yhdistää Pohjanmeren Itämereen.",
+  "linkit": [
+   "Norjan syvänne",
+   "silli",
+   "Skagerrak"
+  ],
+  "jatkot": [
+   "Miksi Pohjanmerellä on paljon öljyä?",
+   "Mitä kalastus Pohjanmerellä on historiassa merkinnyt?"
+  ]
  }
 ]
