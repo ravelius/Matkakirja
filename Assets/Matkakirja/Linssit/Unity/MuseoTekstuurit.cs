@@ -111,8 +111,10 @@ namespace Matkakirja.Natiivi
             }
             if (pyramidit.ContainsKey(id)) yield return Hae(Url(id) + "seina.astcm", b => data = b);
             haussa.Remove(id);
-            var kuva = data != null ? DioraamaAstc.Lue(data, "Museo seinä " + id, out string syy, TextureWrapMode.Clamp, budjetti.SeinaOhita) : null;
-            if (kuva == null) { puuttuu.Add(id); Kirjaa?.Invoke($"museo: {id} ei pakettia ({(pyramidit.ContainsKey(id) ? "seina.astcm" : "teos.json")} {Url(id)}), paikkakuva jää"); EiPakettia?.Invoke(id); yield break; }
+            string syy = data == null ? "lataus" : null;
+            // iOS-simulaattorin GPU ei tue ASTC:tä (DioraamaAstc.AstcTuettu) → syy "laite ei tue", JPEG-vara (EiPakettia) kuten suunniteltu.
+            var kuva = data != null ? DioraamaAstc.Lue(data, "Museo seinä " + id, out syy, TextureWrapMode.Clamp, budjetti.SeinaOhita) : null;
+            if (kuva == null) { puuttuu.Add(id); Kirjaa?.Invoke($"museo: {id} ei pakettia ({(pyramidit.ContainsKey(id) ? "seina.astcm" : "teos.json")} {Url(id)}: {syy ?? "-"}), paikkakuva jää"); EiPakettia?.Invoke(id); yield break; }
             seinat[id] = kuva; seinaJarjestys.Add(id);
             Kirjaa?.Invoke($"museo: {id} seinätaso {kuva.width}×{kuva.height} ASTC");
             SeinaTavut += MuseoMuisti.AstcTavut(kuva.width, kuva.height);
