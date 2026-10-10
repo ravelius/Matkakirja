@@ -180,7 +180,10 @@ Lisäksi:
   yöksi). Kuvatyyli: käyttöliittymän kuvakkeet (matkalaukun varustekuvat
   `assets/varusteet/`, kartan nähtävyysminiatyyrit) nykyisen akvarellisarjan
   tyyliin, kaikki muut havainnekuvat fotorealistisina (Raamattu, KUVAT —
-  TYYLI JA TUOTANTO).
+  TYYLI JA TUOTANTO). Havainnekuviin ei tule tekijänoikeudella suojattuja
+  teoksia (veistokset, installaatiot, muistomerkit ja valaistukset, joiden
+  tekijän kuolemasta on alle 70 vuotta); jätä sellainen kohde pois ja mainitse
+  se kuittauksessa (Raamattu, SUOJATUT TEOKSET HAVAINNEKUVISSA).
 
 ## Git-käytännöt
 
