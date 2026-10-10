@@ -45,7 +45,7 @@ Skenaario skenaariot/vaiheet-v46z-176.txt (odottaa automaattista käynnistystä;
 `siirtoseppa/historia-kamera` 04915cace (rungon 2900f8e39 päällä; 596f74c82 + 04915cace): linnan sulkeminen kesken esittelyhistorian
 → tuhottu kamera päättää SeikkailuHistoria.Aja-silmukan, siivous finallyssä (Siivoa) myös poikkeuksessa (ajossa = null, KameraVapaa,
 VainVuosileikkaukset, MustaKorvaus). Ennen: NullReferenceException → Kaynnissa jäi true → 1210b674e:n suoja ohitti kaikki myöhemmät historiat.
-unity-tarkistus 0, Linssit 1307/1307. SHA Natiivisepällä; todennus Natiivisepän muistiajossa (linna kiinni t≈60 s → seuraava historia alkaa).
+unity-tarkistus 0, Linssit 1307/1307. Natiiviseppä: rungossa 3bb291169 (K454, P456, L1307, tarkista ok); todennus Natiivisepän muistiajossa (linna kiinni t≈60 s → seuraava historia alkaa).
 
 ## AUKI / MUILLE
 
