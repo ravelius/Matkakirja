@@ -247,11 +247,13 @@ namespace Matkakirja.Natiivi
         static readonly int IdAurinko = Shader.PropertyToID("_ElavaAurinko"), IdAurinkoVari = Shader.PropertyToID("_ElavaAurinkoVari"),
             IdYla = Shader.PropertyToID("_ElavaTaivasYla"), IdAla = Shader.PropertyToID("_ElavaTaivasAla");
 
-        void AsetaValo()
+        /// <summary>Kaupunkikohteiden valo globaaleiksi (ElavaKohde, KaupunkiPuu); t = paikallinen ENU-kehys (itä, ylös, pohjoinen).
+        /// KaupunkiPuut kutsuu itse, kun elävä kaupunki on pois.</summary>
+        public static void AsetaValo(Transform t)
         {
             double[] C(Color c) => new double[] { c.r, c.g, c.b };
             var k = KoriValaistus.Laske(KaupunkiKuva.KoriAurinkoKorkeus, KaupunkiKuva.KoriAtsimuutti, C(KaupunkiKuva.KoriLaki), C(KaupunkiKuva.KoriHorisontti), KaupunkiKuva.Saa.Harmaus);
-            var s = transform.TransformDirection(new Vector3((float)k.AurinkoX, (float)k.AurinkoY, (float)k.AurinkoZ)).normalized;
+            var s = t.TransformDirection(new Vector3((float)k.AurinkoX, (float)k.AurinkoY, (float)k.AurinkoZ)).normalized;
             Shader.SetGlobalVector(IdAurinko, s);
             Shader.SetGlobalVector(IdAurinkoVari, new Vector4((float)k.AurinkoVari[0], (float)k.AurinkoVari[1], (float)k.AurinkoVari[2], 0));
             Shader.SetGlobalVector(IdYla, new Vector4((float)k.TaivasYla[0], (float)k.TaivasYla[1], (float)k.TaivasYla[2], 0));
@@ -331,7 +333,7 @@ namespace Matkakirja.Natiivi
         {
             if (kamera == null || !kamera.isActiveAndEnabled) kamera = Camera.main;
             float dt = Time.deltaTime, t = Time.time;
-            AsetaValo();
+            AsetaValo(transform);
             VeneAanet.Paivita();
             Vector3 c = kamera != null ? transform.InverseTransformPoint(kamera.transform.position) : Vector3.zero;
             RakennaKatu();

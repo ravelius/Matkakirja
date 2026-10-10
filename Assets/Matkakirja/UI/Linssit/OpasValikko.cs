@@ -1932,6 +1932,9 @@ namespace Matkakirja.Natiivi
                     // Elävän kaupungin aineistot (LS1 8.10.2026: ElavaKaupunki.Krediitti, esim. OSM ODbL ja ESA WorldCover; null = ei riviä).
                     string elava = ElavaKrediitti();
                     if (!string.IsNullOrWhiteSpace(elava)) Kirjasimet.Aseta(Rakenne.Teksti(elava.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
+                    // Kaupunkipuut (LS1 10.10.2026, juna 181: OSM ODbL + Meta & WRI Canopy Height Maps CC BY 4.0; null = ei riviä).
+                    string puut = KaupunkiPuut.Krediitti;
+                    if (!string.IsNullOrWhiteSpace(puut)) Kirjasimet.Aseta(Rakenne.Teksti(puut.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);
                     // Oma vesipinta (LS2: OSM, ESA WorldCover) kartan ruudulta tänne (omistaja 9.10. 09.5x: ruudulla vain © OpenStreetMap).
                     string vesi = KaupunkiVesi.KrediittiNyt;
                     if (!string.IsNullOrWhiteSpace(vesi)) Kirjasimet.Aseta(Rakenne.Teksti(vesi.Trim(), "mk-linssivalikko__lahde", Kohde), Kirjasin.Moderni);

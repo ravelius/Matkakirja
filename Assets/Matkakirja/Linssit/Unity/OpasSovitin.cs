@@ -2715,6 +2715,18 @@ namespace Matkakirja.Natiivi
             string id = KorkeusId(lat, lon);
             return id != null && (maaMallit.ContainsKey(id) || maaPuuttuu.Contains(id)) && !double.IsNaN(OmaMaa(lat, lon));
         }
+        /// <summary>Onko maanpinnan malli (DTM) muistissa (KaupunkiPuut: tila).</summary>
+        public static bool MaanpintaLadattu(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && maaMallit.ContainsKey(id);
+        }
+        /// <summary>Pelkkä maanpinta (DTM) ilman DSM-varaa; NaN mallin ulkopuolella (KaupunkiPuut: DSM:ssä puu on latvassa).</summary>
+        public static double OmaMaanpintaDtm(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && maaMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
+        }
         /// <summary>Maa kohteen ympäriltä: pienin pinta keskeltä ja 8 pisteestä 70 m:n kehältä (tornin huippu ei ole maa; Eiffel).</summary>
         public static double OmaMaaKehalla(double lat, double lon)
         {
