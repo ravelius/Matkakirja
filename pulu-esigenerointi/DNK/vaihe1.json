@@ -133,8 +133,10 @@
   "kohde": "kohde:pohjanmeri~2",
   "kysymys": "Kuinka syvä Pohjanmeri on?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Sitä en ole itse mitannut. Pohjanmeri on Euroopan mannerjalustalla, ja suuri osa siitä on matalaa: etenkin eteläosassa vesi on vain kymmeniä metrejä syvää. Pohjoisessa syvyys kasvaa, ja Norjan rannikon edustalla on Norjanrauma, jonka syvin kohta on noin seitsemänsataa metriä; tarkasta luvusta en ole varma. Keskisyvyys on kuitenkin vain noin sata metriä, joten meri on valtameriin verrattuna hyvin matala. Siksi [[Pohjanmeri]] myös myrskyää nopeasti, kun aallot törmäävät pohjaan. Syvyys on siis suhteellista, ja minä pysyn mieluummin pinnalla.",
+  "vastaus": "Hyvä kysymys tuo. Sitä en ole itse mitannut. Pohjanmeri on Euroopan mannerjalustalla, ja suuri osa siitä on matalaa: etenkin eteläosassa vesi on vain kymmeniä metrejä syvää. Pohjoisessa syvyys kasvaa, ja [[Norjan]] rannikon edustalla on [[Norjanrauma]], jonka syvin kohta on noin seitsemänsataa metriä; tarkasta luvusta en ole varma. Keskisyvyys on kuitenkin vain noin sata metriä, joten meri on valtameriin verrattuna hyvin matala. Siksi [[Pohjanmeri]] myös myrskyää nopeasti, kun aallot törmäävät pohjaan. Syvyys on siis suhteellista, ja minä pysyn mieluummin pinnalla.",
   "linkit": [
+   "Norjan",
+   "Norjanrauma",
    "Pohjanmeri"
   ],
   "jatkot": [
@@ -450,9 +452,11 @@
   "kohde": "kohde:ribe",
   "kysymys": "Mikä Burchardin tulva oli?",
   "uusi": false,
-  "vastaus": "Odotas vähän. Tämä on raskaampi aihe. Burchardin tulva oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja Riben kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.\nOnpas siitä onneksi pitkä aika.",
+  "vastaus": "Odotas vähän. Tämä on raskaampi aihe. [[Burchardin tulva]] oli [[Pohjanmeren]] rannikon tuhoisa myrskytulva vuonna 1634, ja [[Riben]] kaupungille se oli tuhoisin tulva. Tapahtuma sai nimensä pyhän Burchardin päivän mukaan, jonka aikoihin se iski; tarkasta päivämäärästä en ole varma. Siitä on noin neljäsataa vuotta, ja rannikkoa suojellaan nykyään padoin ja penkereitä. Tarkemmista vahingoista en ole varma, enkä halua arvailla.\nOnpas siitä onneksi pitkä aika.",
   "linkit": [
-   "Pohjanmeren"
+   "Burchardin tulva",
+   "Pohjanmeren",
+   "Riben"
   ],
   "jatkot": [
    "Miten Tanskan länsirannikkoa suojellaan tulvilta?",
@@ -511,9 +515,11 @@
   "kohde": "kohde:skagen",
   "kysymys": "Mikä hautasi vanhan kirkon?",
   "uusi": false,
-  "vastaus": "Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.",
+  "vastaus": "Ai se. Kuulostaa kamalalta, mutta hiekka on hidas vihollinen. Kirkon hautasi lentohiekka. [[Pyhän Laurentiuksen kirkko]] rakennettiin kylän laitaan 1300-luvun lopulla, ja [[lentohiekka]] peitti sen ajan mittaan. Tilalle rakennettiin uusi [[Skagenin]] kirkko vuonna 1841. Ihmiset siis jättivät vanhan paikkansa ja siirtyivät uuteen. Ihan vain hiekkaa, ja silti kokonainen kirkko.",
   "linkit": [
-   "lentohiekka"
+   "Pyhän Laurentiuksen kirkko",
+   "lentohiekka",
+   "Skagenin"
   ],
   "jatkot": [
    "Mikä on Råbjerg Mile?",
@@ -539,9 +545,11 @@
   "kohde": "kohde:skagen",
   "kysymys": "Milloin Skagenin nykyinen satama avattiin?",
   "uusi": true,
-  "vastaus": "Kas vaan, hyvä kysymys tuo. Nykyinen satama avattiin 20. marraskuuta 1907. Sitä ennen matkailu oli alkanut kasvaa, kun [[kapearaiteinen rautatie]] avattiin 1890. Skagenin asema on Tanskan pohjoisin rautatieasema, ja satama on maan tärkein kalasatama. Aikaa on kulunut yli sata vuotta, ja laiturilla sen kyllä huomaa. Vähän väsyttää tämä päivämäärien muistelu.",
+  "vastaus": "Kas vaan, hyvä kysymys tuo. Nykyinen satama avattiin 20. marraskuuta 1907. Sitä ennen matkailu oli alkanut kasvaa, kun [[kapearaiteinen rautatie]] avattiin 1890. [[Skagenin]] asema on [[Tanskan]] pohjoisin rautatieasema, ja satama on maan tärkein kalasatama. Aikaa on kulunut yli sata vuotta, ja laiturilla sen kyllä huomaa. Vähän väsyttää tämä päivämäärien muistelu.",
   "linkit": [
-   "kapearaiteinen rautatie"
+   "kapearaiteinen rautatie",
+   "Skagenin",
+   "Tanskan"
   ],
   "jatkot": [
    "Miten Skagenin kalastus on muuttunut?",
@@ -580,9 +588,11 @@
   "kohde": "kohde:frederiksborgin-linna",
   "kysymys": "Kuka maksoi linnan kunnostuksen tulipalon jälkeen?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Kunnostusta ei rahoittanut yksi mies yksin. Vuonna 1859 tulipalo tuhosi linnan, ja se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta. Huoneistot kunnostettiin täysin yleisön tuen sekä panimomies [[J. C. Jacobsenin]] rahojen turvin. Linna avattiin yleisölle kansallishistoriallisena museona vuonna 1882. Ja tän kaiken minä kannoin päässäni.",
+  "vastaus": "Joo, tän minä tiedän. Kunnostusta ei rahoittanut yksi mies yksin. Vuonna 1859 tulipalo tuhosi linnan, ja se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta. Huoneistot kunnostettiin täysin yleisön tuen sekä panimomies [[J. C. Jacobsenin]] rahojen turvin. Linna avattiin yleisölle kansallishistoriallisena museona vuonna 1882. Linna on [[Hillerødissä]], ja Jacobsen perusti [[Carlsbergin]] panimon. Ja tän kaiken minä kannoin päässäni.",
   "linkit": [
-   "J. C. Jacobsenin"
+   "J. C. Jacobsenin",
+   "Hillerødissä",
+   "Carlsbergin"
   ],
   "jatkot": [
    "Mitä linnan kappelista tiedetään?",
@@ -621,8 +631,10 @@
   "kohde": "kohde:frederiksborgin-linna",
   "kysymys": "Miten linna on rakennettu järveen?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Linna on kuin ylhäältä katsottuna taiteilijan piirros. Frederiksborgin linna seisoo kolmella pikkusaarella linnajärvessä. Kuningas Christian IV rakennutti sen asunnokseen 1600-luvun alussa, ja sitä pidetään yhtenä Skandinavian merkittävimmistä renessanssiasunnoista. Linnan vieressä on laaja [[barokkityylinen puutarha]]. Vesi tekee linnasta sekä kauniin että hyvin suojatun.",
+  "vastaus": "Hyvä kysymys tuo. Linna on kuin ylhäältä katsottuna taiteilijan piirros. [[Frederiksborgin linna]] seisoo kolmella pikkusaarella linnajärvessä. Kuningas [[Christian IV]] rakennutti sen asunnokseen 1600-luvun alussa, ja sitä pidetään yhtenä Skandinavian merkittävimmistä renessanssiasunnoista. Linnan vieressä on laaja [[barokkityylinen puutarha]]. Vesi tekee linnasta sekä kauniin että hyvin suojatun.",
   "linkit": [
+   "Frederiksborgin linna",
+   "Christian IV",
    "barokkityylinen puutarha"
   ],
   "jatkot": [
@@ -683,9 +695,11 @@
   "kohde": "kohde:storebaeltin-silta",
   "kysymys": "Kuinka pitkä Storebæltin yhteys on?",
   "uusi": true,
-  "vastaus": "Katotaas. Pituus on helppo sanoa. Yhteys on kahdeksantoista kilometriä pitkä kokonaisuus. [[Riippusillan]] päävälin pituus on 1,6 kilometriä, ja se on yksi maailman pisimmistä riippusilloista. Yhdessä Öresundin ja Pikkubeltin siltojen kanssa yhteys mahdollistaa ajamisen Manner-Euroopasta Ruotsiin Tanskan kautta. Lukuja oli enemmän kuin odotin.",
+  "vastaus": "Katotaas. Pituus on helppo sanoa. Yhteys on kahdeksantoista kilometriä pitkä kokonaisuus. [[Riippusillan]] päävälin pituus on 1,6 kilometriä, ja se on yksi maailman pisimmistä riippusilloista. Yhdessä [[Öresundin]] ja [[Pikkubeltin]] siltojen kanssa yhteys mahdollistaa ajamisen Manner-Euroopasta Ruotsiin Tanskan kautta. Lukuja oli enemmän kuin odotin.",
   "linkit": [
-   "Riippusillan"
+   "Riippusillan",
+   "Öresundin",
+   "Pikkubeltin"
   ],
   "jatkot": [
    "Miten riippusilta eroaa palkkisillasta?",
@@ -696,8 +710,9 @@
   "kohde": "kohde:storebaeltin-silta",
   "kysymys": "Milloin Storebæltin yhteys valmistui?",
   "uusi": true,
-  "vastaus": "Nyt muistan: tässä oli pitkä odotus. Tanskan hallitus päätti rakentaa yhteyden vuonna 1986. Junaliikenne alkoi vuonna 1997 ja autoliikenne vuonna 1998. Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta: ensimmäiset siltaluonnokset ovat 1850-luvulta ja [[valtionrautateiden]] suunnitelma vuodelta 1934. Viisikymmentä vuotta väittelyä, ja silti lopulta syntyi silta.",
+  "vastaus": "Nyt muistan: tässä oli pitkä odotus. [[Tanskan]] hallitus päätti rakentaa yhteyden vuonna 1986. Junaliikenne alkoi vuonna 1997 ja autoliikenne vuonna 1998. Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta: ensimmäiset siltaluonnokset ovat 1850-luvulta ja [[valtionrautateiden]] suunnitelma vuodelta 1934. Viisikymmentä vuotta väittelyä, ja silti lopulta syntyi silta.",
   "linkit": [
+   "Tanskan",
    "valtionrautateiden"
   ],
   "jatkot": [
@@ -709,9 +724,12 @@
   "kohde": "kohde:storebaeltin-silta",
   "kysymys": "Mitä Öresundin silta yhdistää?",
   "uusi": true,
-  "vastaus": "Tuota niin, tämä on osa isompaa kokonaisuutta. Öresundin silta yhdistää Tanskan ja Ruotsin: Kööpenhaminan seudun ja [[Malmön]] välillä sillä ylitetään salmi. Yhdessä Storebæltin ja Pikkubeltin siltojen kanssa se tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta. Reitti kulkee siis yli kolmen salmen. Kolme salmea, ja kyyhkylle ne kaikki ovat vain samaa merta.",
+  "vastaus": "Tuota niin, tämä on osa isompaa kokonaisuutta. [[Öresundin]] silta yhdistää Tanskan ja Ruotsin: [[Kööpenhaminan]] seudun ja [[Malmön]] välillä sillä ylitetään salmi. Yhdessä [[Storebæltin]] ja Pikkubeltin siltojen kanssa se tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta. Reitti kulkee siis yli kolmen salmen. Kolme salmea, ja kyyhkylle ne kaikki ovat vain samaa merta.",
   "linkit": [
-   "Malmön"
+   "Öresundin",
+   "Kööpenhaminan",
+   "Malmön",
+   "Storebæltin"
   ],
   "jatkot": [
    "Milloin Öresundin silta avattiin?",
@@ -737,9 +755,11 @@
   "kohde": "kohde:tollundin-mies",
   "kysymys": "Mitä suo säilytti ja mitä se liuotti?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Tää on se kohta, jossa suo on oikeasti erikoinen. Suon hapan ja hapeton vesi liuotti suuren osan luustosta, mutta säilytti [[pehmytkudokset]] kuten sydämen, keuhkot ja maksan. Syy on se, että happamuus liuottaa luun kalkkia, kun taas hapen puute estää useimpia bakteereja hajottamasta ihoa ja sisäelimiä. Myös kasvonpiirteet säilyivät poikkeuksellisen hyvin, ja juuri siksi löytö on tutkijoille niin arvokas. Ei paha kyyhkyltä, vaikka itse sanonkin.",
+  "vastaus": "Hetkinen ny. Tää on se kohta, jossa suo on oikeasti erikoinen. Suon hapan ja hapeton vesi liuotti suuren osan luustosta, mutta säilytti [[pehmytkudokset]] kuten sydämen, keuhkot ja maksan. Syy on se, että happamuus liuottaa luun kalkkia, kun taas hapen puute estää useimpia bakteereja hajottamasta ihoa ja sisäelimiä. Myös kasvonpiirteet säilyivät poikkeuksellisen hyvin, ja juuri siksi löytö on tutkijoille niin arvokas. Kyse on [[Tollundin miehestä]], joka löytyi [[Silkeborgin]] läheltä. Ei paha kyyhkyltä, vaikka itse sanonkin.",
   "linkit": [
-   "pehmytkudokset"
+   "pehmytkudokset",
+   "Tollundin miehestä",
+   "Silkeborgin"
   ],
   "jatkot": [
    "Miksi suohon hautautuneet löydöt säilyvät niin hyvin?",
@@ -750,8 +770,11 @@
   "kohde": "kohde:tollundin-mies",
   "kysymys": "Missä Tollundin miestä säilytetään nykyään?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Tän minä muistan. Tollundin miestä on esitelty Silkeborgin museossa, joka sijaitsee lähellä löytöpaikkaa. Esillä on ainakin hänen päänsä, joka on säilynyt poikkeuksellisen hyvin; en ole varma siitä, kuinka suuri osa ruumiista on alkuperäistä ja kuinka suuri osa jäljennöstä. Kannattaa tarkistaa museon omilta sivuilta, mitä siellä on kulloinkin nähtävillä. Pitkä matka kyyhkyltäkin, jos sinne lentäisi.",
-  "linkit": [],
+  "vastaus": "Annas ku mietin. Tän minä muistan. [[Tollundin miestä]] on esitelty [[Silkeborgin]] museossa, joka sijaitsee lähellä löytöpaikkaa. Esillä on ainakin hänen päänsä, joka on säilynyt poikkeuksellisen hyvin; en ole varma siitä, kuinka suuri osa ruumiista on alkuperäistä ja kuinka suuri osa jäljennöstä. Kannattaa tarkistaa museon omilta sivuilta, mitä siellä on kulloinkin nähtävillä. Pitkä matka kyyhkyltäkin, jos sinne lentäisi.",
+  "linkit": [
+   "Tollundin miestä",
+   "Silkeborgin"
+  ],
   "jatkot": [
    "Mitä muita suomiehiä Tanskasta on löydetty?",
    "Miten ihmisen pää säilötään museota varten?"
@@ -761,9 +784,11 @@
   "kohde": "kohde:tollundin-mies",
   "kysymys": "Mitä miehellä oli yllään, kun hänet löydettiin?",
   "uusi": true,
-  "vastaus": "No niin, tämä on hyvä kysymys. Lähteiden mukaan Tollundin miehellä oli päässään nahkainen lakki ja vyötäröllä vyö, mutta muuta vaatetusta ei löydetty; en ole täysin varma kaikista yksityiskohdista. Kaulassa oli tiukalle punottu nahkasilmukka, jonka perusteella kuolinsyyksi on todettu [[hirttäminen]]. Oliko kyseessä uhri vai rangaistus, ei tiedetä, sillä todisteet eivät riitä kumpaankaan selitykseen. Onpa siitä jo todella pitkä aika.",
+  "vastaus": "No niin, tämä on hyvä kysymys. Lähteiden mukaan [[Tollundin miehellä]] oli päässään nahkainen lakki ja vyötäröllä vyö, mutta muuta vaatetusta ei löydetty; en ole täysin varma kaikista yksityiskohdista. Kaulassa oli tiukalle punottu nahkasilmukka, jonka perusteella kuolinsyyksi on todettu [[hirttäminen]]. Oliko kyseessä uhri vai rangaistus, ei tiedetä, sillä todisteet eivät riitä kumpaankaan selitykseen. Hänet ajoitetaan [[rautakauteen]]. Onpa siitä jo todella pitkä aika.",
   "linkit": [
-   "hirttäminen"
+   "Tollundin miehellä",
+   "hirttäminen",
+   "rautakauteen"
   ],
   "jatkot": [
    "Millaisia vaatteita rautakauden ihmiset yleensä käyttivät?",
@@ -818,8 +843,10 @@
   "kohde": "kohde:egeskov",
   "kysymys": "Mikä on vesilinna ja miksi vesi suojasi?",
   "uusi": true,
-  "vastaus": "Kas vaan. Tästä minä pidän. Vesilinna on linna, jota ympäröi vesi, esimerkiksi järvi tai vallihauta, ja Egeskov nousi pieneen järveen, jonka suurin syvyys on viisi metriä. Vesi esti hyökkääjiä pääsemästä suoraan muureille, ja alun perin linnaan pääsi vain nostosillan kautta. Näin puolustajat saattoivat sulkea ainoan kulkureitin, ja piiritys vaikeutui. Egeskov on Tanskan parhaiten säilynyt renessanssin [[vesilinna]]. Hyvä paikka olisi ollut kyyhkyslinnakin.",
+  "vastaus": "Kas vaan. Tästä minä pidän. Vesilinna on linna, jota ympäröi vesi, esimerkiksi järvi tai vallihauta, ja [[Egeskov]] nousi pieneen järveen, jonka suurin syvyys on viisi metriä. Vesi esti hyökkääjiä pääsemästä suoraan muureille, ja alun perin linnaan pääsi vain nostosillan kautta. Näin puolustajat saattoivat sulkea ainoan kulkureitin, ja piiritys vaikeutui. Egeskov on [[Tanskan]] parhaiten säilynyt renessanssin [[vesilinna]]. Hyvä paikka olisi ollut kyyhkyslinnakin.",
   "linkit": [
+   "Egeskov",
+   "Tanskan",
    "vesilinna"
   ],
   "jatkot": [
@@ -845,9 +872,11 @@
   "kohde": "kohde:egeskov",
   "kysymys": "Mikä erottaa renessanssilinnan keskiaikaisesta linnasta?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Mietin hetken. Keskiaikainen linna rakennettiin ennen kaikkea puolustukseen, kun taas [[renessanssilinna]] alkoi muistuttaa enemmän asuinpaikkaa: ikkunat olivat suurempia, koristelu runsaampaa ja rakennus mukavampi. Egeskov on mielenkiintoinen välimuoto, koska siinä on vielä selvästi puolustuspiirteitä, kuten nostosilta, tykkiaukot ja nuoliraot. Tarkka raja tyylien välillä ei ole selvä, ja tutkijat jakavat aikakaudet eri tavoin. Eiköhän tästä vastauksesta löydy jotain myös arkkitehdille.",
+  "vastaus": "Odotas vähän. Mietin hetken. Keskiaikainen linna rakennettiin ennen kaikkea puolustukseen, kun taas [[renessanssilinna]] alkoi muistuttaa enemmän asuinpaikkaa: ikkunat olivat suurempia, koristelu runsaampaa ja rakennus mukavampi. [[Egeskov]] on mielenkiintoinen välimuoto, koska siinä on vielä selvästi puolustuspiirteitä, kuten [[nostosilta]], tykkiaukot ja nuoliraot. Tarkka raja tyylien välillä ei ole selvä, ja tutkijat jakavat aikakaudet eri tavoin. Eiköhän tästä vastauksesta löydy jotain myös arkkitehdille.",
   "linkit": [
-   "renessanssilinna"
+   "renessanssilinna",
+   "Egeskov",
+   "nostosilta"
   ],
   "jatkot": [
    "Mikä on renessanssi?",
@@ -873,8 +902,10 @@
   "kohde": "kohde:mons-klint",
   "kysymys": "Milloin kalliot pääsivät maailmanperintöluetteloon?",
   "uusi": false,
-  "vastaus": "Hetkinen. Møns Klint ei ole Unescon maailmanperintökohde, vaikka se on suojeltu luonnonsuojelualueena. Samalla Itämeren ja Tanskan liituseudulla oleva [[Stevns Klint]] on muistini mukaan hyväksytty maailmanperintöluetteloon vuonna 2014, mutta tarkista tämä varmuuden vuoksi. Møns Klintin kalliot ja niiden viereinen puistoalue ovat joka tapauksessa luonnonsuojelualueena, joten niiden suojelu ei ole jäänyt vain suunnitelmaksi. Näin se meni.",
+  "vastaus": "Hetkinen. [[Møns Klint]] ei ole Unescon maailmanperintökohde, vaikka se on suojeltu luonnonsuojelualueena. Samalla [[Itämeren]] ja Tanskan liituseudulla oleva [[Stevns Klint]] on muistini mukaan hyväksytty maailmanperintöluetteloon vuonna 2014, mutta tarkista tämä varmuuden vuoksi. Møns Klintin kalliot ja niiden viereinen puistoalue ovat joka tapauksessa luonnonsuojelualueena, joten niiden suojelu ei ole jäänyt vain suunnitelmaksi. Näin se meni.",
   "linkit": [
+   "Møns Klint",
+   "Itämeren",
    "Stevns Klint"
   ],
   "jatkot": [
@@ -900,9 +931,11 @@
   "kohde": "kohde:mons-klint",
   "kysymys": "Mitä GeoCenter Møns Klint on?",
   "uusi": true,
-  "vastaus": "No niin. Tämän tiedän ihan hyvin. [[GeoCenter Møns Klint]] on kallionreunan tuntumaan rakennettu vierailukeskus, joka avattiin 29. toukokuuta 2007. Sen piirsi kansainvälisen suunnittelukilpailun voittanut arkkitehtitoimisto PLH Architects, ja kuningatar Margrethe avasi sen. Keskuksen tarkka sisältö on minulle hieman epäselvä, mutta se keskittyy muistaakseni alueen luontoon ja kallioiden syntyyn. Jyrkänteen reunalla on helppo unohtaa ajan kuluminen.",
+  "vastaus": "No niin. Tämän tiedän ihan hyvin. [[GeoCenter Møns Klint]] on kallionreunan tuntumaan rakennettu vierailukeskus, joka avattiin 29. toukokuuta 2007. Sen piirsi kansainvälisen suunnittelukilpailun voittanut arkkitehtitoimisto [[PLH Architects]], ja kuningatar [[Margrethe]] avasi sen. Keskuksen tarkka sisältö on minulle hieman epäselvä, mutta se keskittyy muistaakseni alueen luontoon ja kallioiden syntyyn. Jyrkänteen reunalla on helppo unohtaa ajan kuluminen.",
   "linkit": [
-   "GeoCenter Møns Klint"
+   "GeoCenter Møns Klint",
+   "PLH Architects",
+   "Margrethe"
   ],
   "jatkot": [
    "Millainen arkkitehtitoimisto PLH Architects on?",
@@ -913,8 +946,10 @@
   "kohde": "kohde:mons-klint",
   "kysymys": "Millaisia reittejä alueella on kävijöille?",
   "uusi": true,
-  "vastaus": "Mmm— tämä on käytännöllinen kysymys. Alueella on selvästi merkityt reitit kävelijöille, ratsastajille ja pyöräilijöille. Jyrkänteen harjaa myötäilevältä polulta pääsee useassa kohdassa portaita alas rantaan, joten kallioita voi katsoa sekä ylhäältä että alhaalta. Jyrkänteen takana on lisäksi metsää, laitumia ja lampia, ja alue on suojeltu [[luonnonsuojelualueena]]. Rannalle kannattaa mennä varovasti, koska kalliot ovat jyrkkiä. Itse otan reitin mieluummin siivin.",
+  "vastaus": "Mmm— tämä on käytännöllinen kysymys. Kyse on [[Møns Klintin]] kalliorannasta [[Mønin]] saarella. Alueella on selvästi merkityt reitit kävelijöille, ratsastajille ja pyöräilijöille. Jyrkänteen harjaa myötäilevältä polulta pääsee useassa kohdassa portaita alas rantaan, joten kallioita voi katsoa sekä ylhäältä että alhaalta. Jyrkänteen takana on lisäksi metsää, laitumia ja lampia, ja alue on suojeltu [[luonnonsuojelualueena]]. Rannalle kannattaa mennä varovasti, koska kalliot ovat jyrkkiä. Itse otan reitin mieluummin siivin.",
   "linkit": [
+   "Møns Klintin",
+   "Mønin",
    "luonnonsuojelualueena"
   ],
   "jatkot": [
@@ -955,8 +990,12 @@
   "kohde": "kohde:lindholm-hoje",
   "kysymys": "Miksi Limfjordin ylityskohta oli tärkeä?",
   "uusi": true,
-  "vastaus": "Tuota niin, tämä on hyvä kysymys. Limfjord on Jyllannin poikki kulkeva vesireitti, ja viikinkiaikana salmen yli pääsi vain Lindholm Højen kohdalta tai paljon lännempää Aggersundista, koska rantoja reunusti suo. Siksi kylä sijaitsi tärkeässä paikassa, jossa matkaajat ja kauppa kulkivat. Ylityskohta teki asuinpaikasta luontevan kohtaamispaikan. Hyvä paikka olisi ollut kyyhkyllekin levähtää.",
-  "linkit": [],
+  "vastaus": "Tuota niin, tämä on hyvä kysymys. [[Limfjord]] on Jyllannin poikki kulkeva vesireitti, ja viikinkiaikana salmen yli pääsi vain [[Lindholm Højen]] kohdalta tai paljon lännempää [[Aggersundista]], koska rantoja reunusti suo. Siksi kylä sijaitsi tärkeässä paikassa, jossa matkaajat ja kauppa kulkivat. Ylityskohta teki asuinpaikasta luontevan kohtaamispaikan. Hyvä paikka olisi ollut kyyhkyllekin levähtää.",
+  "linkit": [
+   "Limfjord",
+   "Lindholm Højen",
+   "Aggersundista"
+  ],
   "jatkot": [
    "Millainen vesireitti Limfjord on nykyään?",
    "Missä Aggersund on?"
@@ -980,8 +1019,10 @@
   "kohde": "kohde:lindholm-hoje",
   "kysymys": "Mitä kaivaukset ovat paljastaneet kylän arjesta?",
   "uusi": true,
-  "vastaus": "Ai tota. Hetki. Ensimmäinen suuri kaivaus alkoi 1952, ja se kattoi lopulta 589 hautaa noin seitsemästäsadasta; pieniä kaivauksia oli tehty jo 1889. Hautojen lisäksi paikalta on löytynyt jälkiä asutuksesta, ja tutkijoiden mukaan siellä oli oikea kylä, ei pelkkä hautausmaa. Tarkat yksityiskohdat talojen rakenteista ja elinkeinoista en muista varmasti, joten jätän ne väliin. Kiviä oli kuitenkin viety vuosisatojen ajan, ja 1800-luvulla niitä rikottiin tienrakennukseen, joten [[hautakivet]] eivät ole säilyneet täysin ehjinä. Tästäkin tuli kunnon kysymys kyyhkylle.",
+  "vastaus": "Ai tota. Hetki. Kyse on [[Lindholm Højen]] hautakentästä [[Jyllannissa]]. Ensimmäinen suuri kaivaus alkoi 1952, ja se kattoi lopulta 589 hautaa noin seitsemästäsadasta; pieniä kaivauksia oli tehty jo 1889. Hautojen lisäksi paikalta on löytynyt jälkiä asutuksesta, ja tutkijoiden mukaan siellä oli oikea kylä, ei pelkkä hautausmaa. Tarkat yksityiskohdat talojen rakenteista ja elinkeinoista en muista varmasti, joten jätän ne väliin. Kiviä oli kuitenkin viety vuosisatojen ajan, ja 1800-luvulla niitä rikottiin tienrakennukseen, joten [[hautakivet]] eivät ole säilyneet täysin ehjinä. Tästäkin tuli kunnon kysymys kyyhkylle.",
   "linkit": [
+   "Lindholm Højen",
+   "Jyllannissa",
    "hautakivet"
   ],
   "jatkot": [
@@ -1007,9 +1048,11 @@
   "kohde": "kohde:billund",
   "kysymys": "Miksi pikkukylään rakennettiin lentokenttä?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Vuonna 1961 Christiansen rakennutti [[Billundin lentokentän]] alun, jotta leluja saisi maailmalle. Yhtiö oli kasvanut kylässä Jyllannissa, ja kuljetusyhteys oli tärkeä, kun tuotteita vietiin kaukaisiin maihin. Pikkukylän lentokenttä kertoo yrityksen kunnianhimosta. Alun perin kenttä oli pieni, ja siitä on sittemmin kasvanut oikea lentoasema. Ei tämä kyyhkyltä jäänyt huomaamatta.",
+  "vastaus": "Hyvä kysymys tuo. Vuonna 1961 Christiansen rakennutti [[Billundin lentokentän]] alun, jotta leluja saisi maailmalle. [[Lego]]-yhtiö oli kasvanut kylässä [[Jyllannissa]], ja kuljetusyhteys oli tärkeä, kun tuotteita vietiin kaukaisiin maihin. Pikkukylän lentokenttä kertoo yrityksen kunnianhimosta. Alun perin kenttä oli pieni, ja siitä on sittemmin kasvanut oikea lentoasema. Ei tämä kyyhkyltä jäänyt huomaamatta.",
   "linkit": [
-   "Billundin lentokentän"
+   "Billundin lentokentän",
+   "Lego",
+   "Jyllannissa"
   ],
   "jatkot": [
    "Mikä on Billundin lentokentän nykyinen asema?",
@@ -1034,8 +1077,9 @@
   "kohde": "kohde:billund",
   "kysymys": "Miksi vanhat ja uudet palikat sopivat yhteen?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Nykyinen muovipalikka patentoitiin 1958, ja sen salaisuus on palikan sisällä olevat putket, jotka pitävät osat kiinni juuri sopivalla voimalla. Mitat ovat pysyneet samoina, joten vuonna 1958 tehty palikka sopii yhä tänään ostettuun. Tästä syystä [[palikkajärjestelmä]] on pysynyt yhteensopivana vuosikymmeniä. Kuudesta samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa erilaista yhdistelmää. Ei paha, vaikka en itse osaa rakentaa.",
+  "vastaus": "Selvä juttu. Nykyinen [[Lego]]-muovipalikka patentoitiin 1958, ja sen salaisuus on palikan sisällä olevat putket, jotka pitävät osat kiinni juuri sopivalla voimalla. Mitat ovat pysyneet samoina, joten vuonna 1958 tehty palikka sopii yhä tänään ostettuun. Tästä syystä [[palikkajärjestelmä]] on pysynyt yhteensopivana vuosikymmeniä. Kuudesta samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa erilaista yhdistelmää. Ei paha, vaikka en itse osaa rakentaa.",
   "linkit": [
+   "Lego",
    "palikkajärjestelmä"
   ],
   "jatkot": [
@@ -1047,9 +1091,11 @@
   "kohde": "kohde:billund",
   "kysymys": "Kuka omistaa Legon nykyään?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Yhtiö on pysynyt perheen omistuksessa, ja vuodesta 1995 sitä on hallinnoinut sijoitusyhtiö [[Kirkbi]]. Perustaja oli puuseppä Ole Kirk Christiansen, ja yritys siirtyi hänen jälkeensä suvun seuraaville polville. Tarkkaa omistusrakennetta tai nykyisiä omistuosuuksia en ole varma, joten ne kannattaa tarkistaa ajantasaisesta lähteestä. Perheyhtiö on kuitenkin aika harvinainen näin suurena. Hyvä, että joku pitää palikat kasassa.",
+  "vastaus": "Annas ku mietin. [[Lego]]-yhtiö on pysynyt perheen omistuksessa, ja vuodesta 1995 sitä on hallinnoinut sijoitusyhtiö [[Kirkbi]]. Perustaja oli puuseppä [[Ole Kirk Christiansen]], ja yritys siirtyi hänen jälkeensä suvun seuraaville polville. Tarkkaa omistusrakennetta tai nykyisiä omistuosuuksia en ole varma, joten ne kannattaa tarkistaa ajantasaisesta lähteestä. Perheyhtiö on kuitenkin aika harvinainen näin suurena. Hyvä, että joku pitää palikat kasassa.",
   "linkit": [
-   "Kirkbi"
+   "Lego",
+   "Kirkbi",
+   "Ole Kirk Christiansen"
   ],
   "jatkot": [
    "Mikä on perheyhtiö?",
@@ -1231,9 +1277,10 @@
   "kohde": "kohde:hahmotelma-rubjerg-knude",
   "kysymys": "Miten majakan valo erottuu muista rannikon valoista?",
   "uusi": true,
-  "vastaus": "Mmm— Jokaisella majakalla on oma tunnuksensa, jonka avulla merenkulkija tunnistaa sen kartasta: valon väri, välähdysten määrä ja niiden väliin jäävä aika muodostavat ominaisen kuvion. Näin esimerkiksi [[Pohjanmeren]] rannikolla voi päätellä, minkä majakan valon edessä ollaan, vaikka maamerkkiä ei näkisi. Rubjerg Knuden oman valokuvion tarkkaa kuvausta en ole varma, joten jätän sen kertomatta. Yöllä se on kyllä parempi opas kuin yksikään kyyhky.",
+  "vastaus": "Mmm— Jokaisella majakalla on oma tunnuksensa, jonka avulla merenkulkija tunnistaa sen kartasta: valon väri, välähdysten määrä ja niiden väliin jäävä aika muodostavat ominaisen kuvion. Näin esimerkiksi [[Pohjanmeren]] rannikolla voi päätellä, minkä majakan valon edessä ollaan, vaikka maamerkkiä ei näkisi. [[Rubjerg Knuden]] oman valokuvion tarkkaa kuvausta en ole varma, joten jätän sen kertomatta. Yöllä se on kyllä parempi opas kuin yksikään kyyhky.",
   "linkit": [
-   "Pohjanmeren"
+   "Pohjanmeren",
+   "Rubjerg Knuden"
   ],
   "jatkot": [
    "Miksi majakoita on rakennettu kallioille?",
@@ -1460,8 +1507,12 @@
   "kohde": "kohde:hahmotelma-thy",
   "kysymys": "Millainen maisema Thyn rannikolla on?",
   "uusi": true,
-  "vastaus": "Katotaas. Thyn rannikkoa hallitsevat tuuliset rannat, dyynit ja nummet sekä istutetut havumetsät. Dyynit ovat hiekkaharjuja, joita tuuli muovaa jatkuvasti, ja nummet ovat avoimia, matalakasvuisia maita. Havumetsät ovat ihmisen istuttamia: niillä pyrittiin pysäyttämään liikkuva hiekka. Kokonaisuus on karu ja tuulinen mutta avara. Siellä ei kyl pysty seisomaan paikallaan ilman että tukka lähtee.",
-  "linkit": [],
+  "vastaus": "Katotaas. [[Thyn]] rannikkoa hallitsevat tuuliset rannat, [[dyynit]] ja [[nummet]] sekä istutetut havumetsät. Dyynit ovat hiekkaharjuja, joita tuuli muovaa jatkuvasti, ja nummet ovat avoimia, matalakasvuisia maita. Havumetsät ovat ihmisen istuttamia: niillä pyrittiin pysäyttämään liikkuva hiekka. Kokonaisuus on karu ja tuulinen mutta avara. Siellä ei kyl pysty seisomaan paikallaan ilman että tukka lähtee.",
+  "linkit": [
+   "Thyn",
+   "dyynit",
+   "nummet"
+  ],
   "jatkot": [
    "Miksi liikkuva hiekka oli ongelma asukkaille?",
    "Mitä lintuja Tanskan länsirannikolla tavataan?"
@@ -1485,9 +1536,11 @@
   "kohde": "kohde:hahmotelma-mols-bjerge",
   "kysymys": "Miksi Molsin maasto on niin kumpuilevaa ja monimuotoista?",
   "uusi": false,
-  "vastaus": "Odotas vähän. [[Mols Bjerge]] on Djurslandin niemimaalla Keski-Jyllannissa, ja sen kumpuileva, monimuotoinen maasto syntyi viime jääkauden lopulla. Kukkulat nousevat enimmillään 137 metriin. Alueen monimuotoisuus näkyy myös luonnossa, sillä sieltä on löydetty yli puolet Tanskan luonnonvaraisista kasvilajeista. Tarkemmasta jäätikön toiminnasta en ole varma. Nopea vastaus, mutta kyl tässä jäätä riitti.",
+  "vastaus": "Odotas vähän. [[Mols Bjerge]] on [[Djurslandin]] niemimaalla Keski-Jyllannissa, ja sen kumpuileva, monimuotoinen maasto syntyi viime [[jääkauden]] lopulla. Kukkulat nousevat enimmillään 137 metriin. Alueen monimuotoisuus näkyy myös luonnossa, sillä sieltä on löydetty yli puolet Tanskan luonnonvaraisista kasvilajeista. Tarkemmasta jäätikön toiminnasta en ole varma. Nopea vastaus, mutta kyl tässä jäätä riitti.",
   "linkit": [
-   "Mols Bjerge"
+   "Mols Bjerge",
+   "Djurslandin",
+   "jääkauden"
   ],
   "jatkot": [
    "Milloin viimeinen jääkausi päättyi Pohjois-Euroopassa?",
@@ -1526,9 +1579,11 @@
   "kohde": "kohde:hahmotelma-mols-bjerge",
   "kysymys": "Mikä on Ørnbjerg Møllen erikoisuus?",
   "uusi": true,
-  "vastaus": "Kas vaan. [[Ørnbjerg Mølle]] on Molsin kansallispuiston ainoa toimiva vesimylly. Nykyiset rakennukset ovat vuodelta 1833, mutta paikalla on ollut mylly jo 1500-luvulta. Vesimylly saa voimansa virtaavasta vedestä, joka pyörittää myllyn rattaita. Mols Bjerge on muutenkin alue, jossa menneisyys näkyy maisemassa. Jauhoista tulee mieleen pulla, ja siitä minä en nyt aio vaieta.",
+  "vastaus": "Kas vaan. [[Ørnbjerg Mølle]] on Molsin kansallispuiston ainoa toimiva [[vesimylly]]. Nykyiset rakennukset ovat vuodelta 1833, mutta paikalla on ollut mylly jo 1500-luvulta. Vesimylly saa voimansa virtaavasta vedestä, joka pyörittää myllyn rattaita. [[Mols Bjerge]] on muutenkin alue, jossa menneisyys näkyy maisemassa. Jauhoista tulee mieleen pulla, ja siitä minä en nyt aio vaieta.",
   "linkit": [
-   "Ørnbjerg Mølle"
+   "Ørnbjerg Mølle",
+   "vesimylly",
+   "Mols Bjerge"
   ],
   "jatkot": [
    "Miten vesimylly eroaa tuulimyllystä?",
@@ -1595,9 +1650,11 @@
   "kohde": "kohde:hahmotelma-himmelbjerget",
   "kysymys": "Mitä kuningas Frederik VII teki Tanskan hyväksi?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. [[Frederik VII]] antoi Tanskalle sen ensimmäisen perustuslain vuonna 1849, ja siksi Himmelbjergetin huipulle rakennettiin vuonna 1875 punatiilinen torni hänen kunniakseen. Perustuslaki muutti maan hallintotapaa, sillä se rajasi vallankäyttöä ja loi pohjan kansanedustukselle. Kuninkaan tarkemmista vaiheista en ole varma. Ei paha muistisuoritus kyyhkyltä.",
+  "vastaus": "Hetkinen ny. [[Frederik VII]] antoi Tanskalle sen ensimmäisen [[perustuslain]] vuonna 1849, ja siksi [[Himmelbjergetin]] huipulle rakennettiin vuonna 1875 punatiilinen torni hänen kunniakseen. Perustuslaki muutti maan hallintotapaa, sillä se rajasi vallankäyttöä ja loi pohjan kansanedustukselle. Kuninkaan tarkemmista vaiheista en ole varma. Ei paha muistisuoritus kyyhkyltä.",
   "linkit": [
-   "Frederik VII"
+   "Frederik VII",
+   "perustuslain",
+   "Himmelbjergetin"
   ],
   "jatkot": [
    "Mitä perustuslaki tarkoittaa?",
@@ -1622,9 +1679,10 @@
   "kohde": "kohde:hahmotelma-laeso",
   "kysymys": "Miksi Læsøn suolateollisuus lopulta loppui?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. [[Læsø]] tunnettiin keskiajalla suolateollisuudestaan. Suolan lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Metsän häviäminen vei siis teollisuuden perustan, ja ihmisten oli etsittävä uusia tapoja asua saarella. Siitä jäi viisaus kantoon, kuten sanotaan.",
+  "vastaus": "Annas ku mietin. [[Læsø]] tunnettiin keskiajalla suolateollisuudestaan. Suolan lopullinen keittäminen tehtiin sadoissa [[suolauuneissa]], jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Metsän häviäminen vei siis teollisuuden perustan, ja ihmisten oli etsittävä uusia tapoja asua saarella. Siitä jäi viisaus kantoon, kuten sanotaan.",
   "linkit": [
-   "Læsø"
+   "Læsø",
+   "suolauuneissa"
   ],
   "jatkot": [
    "Miten suola saatiin Læsøllä pohjavedestä?",
@@ -1635,8 +1693,9 @@
   "kohde": "kohde:hahmotelma-laeso",
   "kysymys": "Miksi saaren talojen katot tehtiin merikasveista?",
   "uusi": false,
-  "vastaus": "Nyt muistan: kattomateriaalin puutteen vuoksi Læsøn taloja alettiin 1600-luvulta lähtien peittää [[meriajokkaalla]]. Saari oli menettänyt metsänsä suolanvalmistuksen takia, joten puuta ja muuta tavallista kattomateriaalia ei ollut saatavilla. Meriajokas on merenpohjassa kasvava kasvi, jota rannalle ajautui runsaasti. Yksityiskohtia kattojen rakentamisesta en ole varma. Katto kasvista, kyl se kuulostaa kyyhkyn mielestä mukavalta.",
+  "vastaus": "Nyt muistan: kattomateriaalin puutteen vuoksi [[Læsøn]] taloja alettiin 1600-luvulta lähtien peittää [[meriajokkaalla]]. Saari oli menettänyt metsänsä suolanvalmistuksen takia, joten puuta ja muuta tavallista kattomateriaalia ei ollut saatavilla. Meriajokas on merenpohjassa kasvava kasvi, jota rannalle ajautui runsaasti. Yksityiskohtia kattojen rakentamisesta en ole varma. Katto kasvista, kyl se kuulostaa kyyhkyn mielestä mukavalta.",
   "linkit": [
+   "Læsøn",
    "meriajokkaalla"
   ],
   "jatkot": [
@@ -1662,8 +1721,9 @@
   "kohde": "kohde:hahmotelma-laeso",
   "kysymys": "Miten suola saatiin Læsøllä pohjavedestä?",
   "uusi": true,
-  "vastaus": "No jopas. Læsøn pohjavesi voi olla yli 15-prosenttisen suolaista, mikä on huomattavan väkevää. Kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa [[suolauuneissa]], jotka kuluttivat valtavasti puuta. Prosessi perustui siis auringon ja lämmön yhdistelmään. Tarkempia keittomenetelmiä en ole varma. Suolaa tuli, ja kyyhkyn sulat meinasivat kuivua.",
+  "vastaus": "No jopas. [[Læsøn]] pohjavesi voi olla yli 15-prosenttisen suolaista, mikä on huomattavan väkevää. Kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa [[suolauuneissa]], jotka kuluttivat valtavasti puuta. Prosessi perustui siis auringon ja lämmön yhdistelmään. Tarkempia keittomenetelmiä en ole varma. Suolaa tuli, ja kyyhkyn sulat meinasivat kuivua.",
   "linkit": [
+   "Læsøn",
    "suolauuneissa"
   ],
   "jatkot": [
@@ -1695,9 +1755,10 @@
   "kohde": "kohde:hahmotelma-bornholm",
   "kysymys": "Miksi Bornholmia kutsutaan sekä aurinkosaareksi että kalliosaareksi?",
   "uusi": false,
-  "vastaus": "Selvä juttu. [[Bornholmia]] sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia. Saaren kallioperä on pääosin graniittia, ja pohjoisessa jyrkät kalliomuodostelmat erottavat sen muun Tanskan loivasta kumpumaastosta. Lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saari on siis sekä valoisa että kivinen. Aurinkoa ja kiveä, kunhan ei ole pilvistä.",
+  "vastaus": "Selvä juttu. [[Bornholmia]] sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia. Saaren kallioperä on pääosin [[graniittia]], ja pohjoisessa jyrkät kalliomuodostelmat erottavat sen muun Tanskan loivasta kumpumaastosta. Lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saari on siis sekä valoisa että kivinen. Aurinkoa ja kiveä, kunhan ei ole pilvistä.",
   "linkit": [
-   "Bornholmia"
+   "Bornholmia",
+   "graniittia"
   ],
   "jatkot": [
    "Millaisia kasveja Bornholmilla viljellään?",
@@ -1708,8 +1769,9 @@
   "kohde": "kohde:hahmotelma-bornholm",
   "kysymys": "Mitä saarella tapahtui vuonna 1658 ja miten se palasi Tanskalle?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Vuonna 1658 Bornholm luovutettiin Ruotsille, mutta saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja, ja sitä ovat hallinneet Tanskan lisäksi Ruotsi ja [[Lyypekki]]. Kapinan yksityiskohdista en ole varma. Valtiot vaihtuivat, mutta saari pysyi paikoillaan.",
+  "vastaus": "Selvä juttu. Vuonna 1658 [[Bornholm]] luovutettiin Ruotsille, mutta saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja, ja sitä ovat hallinneet Tanskan lisäksi Ruotsi ja [[Lyypekki]]. Kapinan yksityiskohdista en ole varma. Valtiot vaihtuivat, mutta saari pysyi paikoillaan.",
   "linkit": [
+   "Bornholm",
    "Lyypekki"
   ],
   "jatkot": [
@@ -1721,9 +1783,10 @@
   "kohde": "kohde:hahmotelma-bornholm",
   "kysymys": "Mikä on Hammershus ja missä se sijaitsee?",
   "uusi": true,
-  "vastaus": "Kas vaan. [[Hammershus]] on linnanraunio Bornholmin luoteiskärjessä, ja sitä pidetään yhtenä Pohjois-Euroopan suurimmista keskiaikaisista linnoituksista. Linnoitus liittyy saaren pitkään strategiseen historiaan, jonka aikana saarta ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki. Linnan rakentamisvuosista en ole varma, joten jätän ne mainitsematta. Raunio on suurikin, ja siitä näkee kauas.",
+  "vastaus": "Kas vaan. [[Hammershus]] on linnanraunio [[Bornholmin]] luoteiskärjessä, ja sitä pidetään yhtenä Pohjois-Euroopan suurimmista keskiaikaisista linnoituksista. Linnoitus liittyy saaren pitkään strategiseen historiaan, jonka aikana saarta ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki. Linnan rakentamisvuosista en ole varma, joten jätän ne mainitsematta. Raunio on suurikin, ja siitä näkee kauas.",
   "linkit": [
-   "Hammershus"
+   "Hammershus",
+   "Bornholmin"
   ],
   "jatkot": [
    "Miksi linnoja rakennettiin saarten rannoille?",
@@ -1748,9 +1811,11 @@
   "kohde": "kohde:hahmotelma-bornholm",
   "kysymys": "Missä Bornholm sijaitsee Itämerellä?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. [[Bornholm]] on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Se on siis erillään Tanskan päämaasta ja lähempänä muita maita kuin Kööpenhaminaa. Saaren sijainti on selittänyt sen strategista merkitystä vuosisatojen ajan. Minä löydän sen aina, vaikka sää olisi mikä.",
+  "vastaus": "Hyvä kysymys tuo. [[Bornholm]] on tanskalainen saari [[Itämerellä]], muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Se on siis erillään Tanskan päämaasta ja lähempänä muita maita kuin [[Kööpenhaminaa]]. Saaren sijainti on selittänyt sen strategista merkitystä vuosisatojen ajan. Minä löydän sen aina, vaikka sää olisi mikä.",
   "linkit": [
-   "Bornholm"
+   "Bornholm",
+   "Itämerellä",
+   "Kööpenhaminaa"
   ],
   "jatkot": [
    "Mitä Itämeri on ja mitkä maat sitä ympäröivät?",
@@ -1887,9 +1952,11 @@
   "kohde": "kohde:hahmotelma-koldinghus",
   "kysymys": "Mitä Koldinghusissa voi nähdä nykyään?",
   "uusi": true,
-  "vastaus": "No jopas. Nykyään [[Koldinghus]] on restauroitu linna ja museo. Laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin Europa Nostra -palkinnolla. Linnassa on yhä esillä Jättiläistornin jäännöksenä Herkuleen patsas. Vuoden 1808 palon jälkeen raunioksi jääneen linnan päärakennukset on siis saatu jälleen käyttöön. Pullakahvilan olemassaolosta en ole varma, mutta toivoa sopii.",
+  "vastaus": "No jopas. Nykyään [[Koldinghus]] on restauroitu linna ja museo. Laaja kunnostus kesti vuodesta 1976 vuoteen 1993, ja se palkittiin [[Europa Nostra]] -palkinnolla. Linnassa on yhä esillä Jättiläistornin jäännöksenä [[Herkuleen]] patsas. Vuoden 1808 palon jälkeen raunioksi jääneen linnan päärakennukset on siis saatu jälleen käyttöön. Pullakahvilan olemassaolosta en ole varma, mutta toivoa sopii.",
   "linkit": [
-   "Koldinghus"
+   "Koldinghus",
+   "Europa Nostra",
+   "Herkuleen"
   ],
   "jatkot": [
    "Miksi Koldinghusin kunnostus kesti niin kauan?",
@@ -1962,9 +2029,10 @@
   "kohde": "kohde:hahmotelma-dybbol",
   "kysymys": "Mikä on Dybbølin mylly?",
   "uusi": true,
-  "vastaus": "Tuota niin. [[Dybbølin]] mylly on Tanskan kansallissymboli, ja se liittyy läheisesti vuoden 1864 taisteluun. Alue on nykyään suojeltu muistomerkki- ja museoalue. Tarkkoja yksityiskohtia myllyn historiasta en ole varma kertomaan, joten ne kannattaa tarkistaa museon tiedoista. Muistomerkkialue on tärkeä paikka Tanskan historiassa. Myllyssä ei kai pullaa leivota, harmi.",
+  "vastaus": "Tuota niin. [[Dybbølin]] mylly on [[Tanskan]] kansallissymboli, ja se liittyy läheisesti vuoden 1864 taisteluun. Alue on nykyään suojeltu muistomerkki- ja museoalue. Tarkkoja yksityiskohtia myllyn historiasta en ole varma kertomaan, joten ne kannattaa tarkistaa museon tiedoista. Muistomerkkialue on tärkeä paikka Tanskan historiassa. Myllyssä ei kai pullaa leivota, harmi.",
   "linkit": [
-   "Dybbølin"
+   "Dybbølin",
+   "Tanskan"
   ],
   "jatkot": [
    "Millainen museoalue Dybbølissa on?",
@@ -2009,8 +2077,9 @@
   "kohde": "kohde:hahmotelma-viborg",
   "kysymys": "Mitä keskiaikaiselle kirkolle tapahtui vuoden 1726 jälkeen, ennen kuin se purettiin?",
   "uusi": false,
-  "vastaus": "Katotaas. Vuoden 1726 tulipalon jälkeen jäljelle jäivät vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Sen jälkeen rakennus purettiin ja korvattiin tiilestä rakennetulla uudella kirkolla, joka vihittiin käyttöön 1876. [[Viborgin]] tuomiokirkon kohtalo on siis ollut vaihteleva. Viljavarastona, voi sentään, kyllä kyyhkynen siitä tykkäisi.",
+  "vastaus": "Katotaas. Vuoden 1726 tulipalon jälkeen jäljelle jäivät vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa [[viljavarastona]]. Sen jälkeen rakennus purettiin ja korvattiin tiilestä rakennetulla uudella kirkolla, joka vihittiin käyttöön 1876. [[Viborgin]] tuomiokirkon kohtalo on siis ollut vaihteleva. Viljavarastona, voi sentään, kyllä kyyhkynen siitä tykkäisi.",
   "linkit": [
+   "viljavarastona",
    "Viborgin"
   ],
   "jatkot": [
@@ -2022,8 +2091,9 @@
   "kohde": "kohde:hahmotelma-viborg",
   "kysymys": "Mikä on Viborgin tuomiokirkon vanhin osa?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Viborgin tuomiokirkon vanhin osa on krypta. Nykyinen kirkko on 1800-luvun työ, mutta kryptan juuret ovat keskiaikaisessa katedraalissa, jonka rakentaminen aloitettiin noin vuonna 1130. Kaupungissa on ollut [[piispanistuin]] vuodesta 1065. Kryptan tarkkaa ikää en ole varma, mutta se on osa vanhaa rakennusta. Alhaalla on siis vanhinta, ylhäällä uutta, aika hyvä jako.",
+  "vastaus": "Selvä juttu. [[Viborgin]] tuomiokirkon vanhin osa on krypta. Nykyinen kirkko on 1800-luvun työ, mutta kryptan juuret ovat keskiaikaisessa katedraalissa, jonka rakentaminen aloitettiin noin vuonna 1130. Kaupungissa on ollut [[piispanistuin]] vuodesta 1065. Kryptan tarkkaa ikää en ole varma, mutta se on osa vanhaa rakennusta. Alhaalla on siis vanhinta, ylhäällä uutta, aika hyvä jako.",
   "linkit": [
+   "Viborgin",
    "piispanistuin"
   ],
   "jatkot": [
@@ -2085,9 +2155,10 @@
   "kohde": "kohde:hahmotelma-lejre",
   "kysymys": "Miksi Lejren asutusta pidetään pikemmin kauppa- ja uskontokeskuksena kuin sotilastukikohtana?",
   "uusi": false,
-  "vastaus": "Tuota niin. Syynä on se, että aseita löytyi vähän. Siksi [[Lejren]] asutus näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta. Asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä, ajoittuu noin vuosien 550 ja 1000 välille. Johtopäätös perustuu arkeologiseen löytöaineistoon, mutta tulkinnat voivat muuttua uusien kaivausten myötä. Ei sotaa, enemmän markkinoita, ihan mukava.",
+  "vastaus": "Tuota niin. Syynä on se, että aseita löytyi vähän. Siksi [[Lejren]] asutus näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin [[sotilastukikohta]]. Asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä, ajoittuu noin vuosien 550 ja 1000 välille. Johtopäätös perustuu arkeologiseen löytöaineistoon, mutta tulkinnat voivat muuttua uusien kaivausten myötä. Ei sotaa, enemmän markkinoita, ihan mukava.",
   "linkit": [
-   "Lejren"
+   "Lejren",
+   "sotilastukikohta"
   ],
   "jatkot": [
    "Millaisia käsityötaitoja viikinkiaikana oli?",
@@ -2173,7 +2244,7 @@
  },
  {
   "kohde": "kohde:hahmotelma-ringsted",
-  "kysymys": "Mikä on benediktiiniläisluostari ja millaista elämää munkit siellä elivät?",
+  "kysymys": "Mikä on benediktiiniläisluostari?",
   "uusi": true,
   "vastaus": "Mmm— hyvä kysymys tuo. Benediktiiniläisluostari on munkkiyhteisö, jonka elämä perustuu [[Benedictus Nursialaisen]] laatimaan sääntöön. Munkit asuivat yhdessä, rukoilivat päivän tietyin hetkin ja tekivät työtä, ja luostareissa harjoitettiin myös opintoja ja kirjojen jäljentämistä. Keskiajalla luostarit olivat tärkeitä oppineisuuden ja hoivan keskuksia eri puolilla [[Euroopan]] kristittyä maailmaa. Ja tän kaiken minä kannoin päässäni.",
   "linkit": [
@@ -2231,9 +2302,10 @@
   "kohde": "kohde:hahmotelma-ladby",
   "kysymys": "Millaisia hautalahjoja viikinkipäällikön mukana oli, ja mitä ne kertovat hänestä?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Haudasta löytyi runsaasti hautalahjoja, sekä esineitä että eläimiä, ja eläimiin kuului muun muassa koira, jonka valjaiden kullattu pronssilenkki auttoi ajoittamaan haudan 900-luvun alkuun. Laivan kokoon nähden ja lahjojen runsaudesta päätellen vainaja oli vauras ja arvostettu henkilö, luultavasti päällikkö, mutta hänen nimensä tai asemansa tarkemmin en tiedä. Hautalahjat kertovat myös siitä, että viikingit ajattelivat vainajan tarvitsevan omaisuutta ja seuraa matkallaan. Nykyään [[Ladbyn]] laivahauta on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo. Onpas siit ollu pitkä aika.",
+  "vastaus": "Annas ku mietin. Haudasta löytyi runsaasti hautalahjoja, sekä esineitä että eläimiä, ja eläimiin kuului muun muassa koira, jonka valjaiden kullattu pronssilenkki auttoi ajoittamaan haudan 900-luvun alkuun. Laivan kokoon nähden ja lahjojen runsaudesta päätellen vainaja oli vauras ja arvostettu henkilö, luultavasti päällikkö, mutta hänen nimensä tai asemansa tarkemmin en tiedä. Hautalahjat kertovat myös siitä, että viikingit ajattelivat vainajan tarvitsevan omaisuutta ja seuraa matkallaan. Nykyään [[Ladbyn]] laivahauta on säilytetty löytöpaikallaan, jossa toimii [[viikinkimuseo]]. Onpas siit ollu pitkä aika.",
   "linkit": [
-   "Ladbyn"
+   "Ladbyn",
+   "viikinkimuseo"
   ],
   "jatkot": [
    "Mitä viikingit uskoivat kuoleman jälkeisestä elämästä?",
@@ -2244,9 +2316,10 @@
   "kohde": "kohde:hahmotelma-ladby",
   "kysymys": "Mitä viikingit uskoivat kuoleman jälkeisestä elämästä?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Viikingit uskoivat, että vainaja jatkoi olemassaoloaan jossakin kuoleman jälkeen, ja siksi hautaan laitettiin tavaroita ja joskus eläimiä. Myytit puhuvat useista paikoista, joihin vainajat saattoivat päätyä, kuten [[Valhallasta]], mutta uskomukset vaihtelivat alueittain ja ajasta toiseen, eikä niistä ole yhtä yhtenäistä oppia. Suuri osa tiedosta tulee myöhemmistä kirjallisista lähteistä ja arkeologisista löydöistä, joten kaikkeen ei voi olla varma. Hautatavatkin vaihtelivat, ja laivahauta oli vain yksi niistä.",
+  "vastaus": "Selvä juttu. Viikingit uskoivat, että vainaja jatkoi olemassaoloaan jossakin kuoleman jälkeen, ja siksi hautaan laitettiin tavaroita ja joskus eläimiä. Myytit puhuvat useista paikoista, joihin vainajat saattoivat päätyä, kuten [[Valhallasta]], mutta uskomukset vaihtelivat alueittain ja ajasta toiseen, eikä niistä ole yhtä yhtenäistä oppia. Suuri osa tiedosta tulee myöhemmistä kirjallisista lähteistä ja arkeologisista löydöistä, joten kaikkeen ei voi olla varma. Hautatavatkin vaihtelivat, ja [[laivahauta]] oli vain yksi niistä.",
   "linkit": [
-   "Valhallasta"
+   "Valhallasta",
+   "laivahauta"
   ],
   "jatkot": [
    "Mikä Valhalla oli viikinkien uskossa?",
@@ -2285,9 +2358,10 @@
   "kohde": "kohde:hahmotelma-christiansfeld",
   "kysymys": "Miksi Christiansfeld on Unescon maailmanperintökohde?",
   "uusi": false,
-  "vastaus": "Kas vaan. [[Christiansfeld]] on Unescon maailmanperintökohde, koska se on parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta. Kaupungin perustivat herrnhutilaiset vuonna 1773, ja suurin osa siitä rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille. Talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kohde sai maailmanperintöaseman vuonna 2015. Kyl tää kaupunki on kauniin järjestyksessä.",
+  "vastaus": "Kas vaan. [[Christiansfeld]] on Unescon maailmanperintökohde, koska se on parhaiten säilynyt esimerkki [[herrnhutilaisten]] kaupunkisuunnittelusta. Kaupungin perustivat herrnhutilaiset vuonna 1773, ja suurin osa siitä rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille. Talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kohde sai maailmanperintöaseman vuonna 2015. Kyl tää kaupunki on kauniin järjestyksessä.",
   "linkit": [
-   "Christiansfeld"
+   "Christiansfeld",
+   "herrnhutilaisten"
   ],
   "jatkot": [
    "Keitä herrnhutilaiset olivat?",
@@ -2312,8 +2386,10 @@
   "kohde": "kohde:hahmotelma-christiansfeld",
   "kysymys": "Keitä herrnhutilaiset olivat ja mihin he uskoivat?",
   "uusi": true,
-  "vastaus": "Tuota niin. Herrnhutilaiset eli moravialaiset olivat kristillinen yhteisö, joka sai nimensä saksalaisesta Herrnhutin kylästä. Heidän uskonsa korosti henkilökohtaista hurskautta ja yhteisöllisyyttä, ja heillä oli tapana elää tiiviissä yhteisöissä, joissa asuttiin ja rukoiltiin yhdessä. Yhteisö tunnettiin myös lähetystyöstään. [[Christiansfeldin]] kaupunki rakennettiin heidän ihanteidensa mukaan järjestäytyneeksi ja vaatimattomaksi, ja talot olivat usein kuoroittain jaettuja leskille sekä naimattomille. Tarkkoja oppeja en ole varma, joten niistä kannattaa lukea lisää.",
+  "vastaus": "Tuota niin. Herrnhutilaiset eli [[moravialaiset]] olivat kristillinen yhteisö, joka sai nimensä saksalaisesta [[Herrnhutin]] kylästä. Heidän uskonsa korosti henkilökohtaista hurskautta ja yhteisöllisyyttä, ja heillä oli tapana elää tiiviissä yhteisöissä, joissa asuttiin ja rukoiltiin yhdessä. Yhteisö tunnettiin myös lähetystyöstään. [[Christiansfeldin]] kaupunki rakennettiin heidän ihanteidensa mukaan järjestäytyneeksi ja vaatimattomaksi, ja talot olivat usein kuoroittain jaettuja leskille sekä naimattomille. Tarkkoja oppeja en ole varma, joten niistä kannattaa lukea lisää.",
   "linkit": [
+   "moravialaiset",
+   "Herrnhutin",
    "Christiansfeldin"
   ],
   "jatkot": [
@@ -2339,8 +2415,9 @@
   "kohde": "kohde:hahmotelma-christiansfeld",
   "kysymys": "Miksi seutu siirtyi Preussille vuonna 1864 ja palasi Tanskaan 1920?",
   "uusi": true,
-  "vastaus": "Just niin, hyvä kysymys. Christiansfeld liitettiin Preussille vuonna 1864, kun Tanska hävisi sodan Preussille ja Itävallalle, ja alue siirtyi sen mukana. Takaisin Tanskaan seutu palasi vasta vuonna 1920 ensimmäisen maailmansodan jälkeen, kun rajaa muutettiin kansanäänestysten perusteella. Tarkat yksityiskohdat en ole varma, mutta [[Etelä-Jylland]] on tunnettu rajaseutu. Raja on sen jälkeen pysynyt samoilla main. Onpas siit pitkä aika.",
+  "vastaus": "Just niin, hyvä kysymys. Christiansfeld liitettiin [[Preussille]] vuonna 1864, kun Tanska hävisi sodan Preussille ja Itävallalle, ja alue siirtyi sen mukana. Takaisin Tanskaan seutu palasi vasta vuonna 1920 ensimmäisen maailmansodan jälkeen, kun rajaa muutettiin kansanäänestysten perusteella. Tarkat yksityiskohdat en ole varma, mutta [[Etelä-Jylland]] on tunnettu rajaseutu. Raja on sen jälkeen pysynyt samoilla main. Onpas siit pitkä aika.",
   "linkit": [
+   "Preussille",
    "Etelä-Jylland"
   ],
   "jatkot": [
@@ -2368,8 +2445,9 @@
   "kohde": "kohde:hahmotelma-kalundborg",
   "kysymys": "Mikä on teollinen symbioosi, ja miten se sai alkunsa Kalundborgissa?",
   "uusi": false,
-  "vastaus": "Joo, tän minä tiedän. Teollinen symbioosi tarkoittaa sitä, että yritykset vaihtavat keskenään vettä, energiaa ja sivutuotteita, jolloin yhden yrityksen jäte tai ylijäämä on toiselle raaka-aine. [[Kalundborgissa]] yritykset ovat tehneet näin jo 1960-luvun alusta lähtien, ja kaupunki on siksi tunnettu esimerkki ilmiöstä. Tarkkaa alkuhetkeä tai ensimmäistä sopimusta en ole varma. Tavoitteena on säästää luonnonvaroja ja vähentää jätettä. Kyl se on fiksua, kun ei heitetä hukkaan.",
+  "vastaus": "Joo, tän minä tiedän. [[Teollinen symbioosi]] tarkoittaa sitä, että yritykset vaihtavat keskenään vettä, energiaa ja sivutuotteita, jolloin yhden yrityksen jäte tai ylijäämä on toiselle raaka-aine. [[Kalundborgissa]] yritykset ovat tehneet näin jo 1960-luvun alusta lähtien, ja kaupunki on siksi tunnettu esimerkki ilmiöstä. Tarkkaa alkuhetkeä tai ensimmäistä sopimusta en ole varma. Tavoitteena on säästää luonnonvaroja ja vähentää jätettä. Kyl se on fiksua, kun ei heitetä hukkaan.",
   "linkit": [
+   "Teollinen symbioosi",
    "Kalundborgissa"
   ],
   "jatkot": [
@@ -2396,8 +2474,9 @@
   "kohde": "kohde:hahmotelma-kalundborg",
   "kysymys": "Millainen on vuono ja miten se syntyy?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Vuono on pitkä ja kapea merenlahti, joka ulottuu syvälle maan sisään. Monet pohjoiset vuonot syntyivät jääkausina, kun jäätiköt kaivoivat laaksoja, joihin meri sitten nousi. Tanskassa vuonoja syntyi myös jään ja sulamisvesien muovaamiin kuoppiin ja uomiin, ja [[Kalundborgin]] vuono on yksi niistä. Tarkkaa syntyhistoriaa Kalundborgin vuonolle en ole varma. Vuonon pohjukassa sijaitseva luonnonsatama houkutteli asukkaita jo vuonna 1170. Ylhäältä ne näyttää aina kauniilta.",
+  "vastaus": "Hyvä kysymys tuo. Vuono on pitkä ja kapea merenlahti, joka ulottuu syvälle maan sisään. Monet pohjoiset vuonot syntyivät [[jääkausina]], kun jäätiköt kaivoivat laaksoja, joihin meri sitten nousi. Tanskassa vuonoja syntyi myös jään ja sulamisvesien muovaamiin kuoppiin ja uomiin, ja [[Kalundborgin]] vuono on yksi niistä. Tarkkaa syntyhistoriaa Kalundborgin vuonolle en ole varma. Vuonon pohjukassa sijaitseva luonnonsatama houkutteli asukkaita jo vuonna 1170. Ylhäältä ne näyttää aina kauniilta.",
   "linkit": [
+   "jääkausina",
    "Kalundborgin"
   ],
   "jatkot": [
@@ -2465,9 +2544,10 @@
   "kohde": "kohde:hahmotelma-odense",
   "kysymys": "Miten rautatie muutti kaupunkeja 1800-luvulla?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Rautatie nopeutti matkustamista ja tavaroiden kuljetusta, ja se muutti monien kaupunkien kehitystä 1800-luvulla. Kaupungit, joiden kautta rata kulki, saattoivat kasvaa nopeasti, koska ihmiset, tavarat ja raaka-aineet liikkuivat helpommin. [[Odensessa]] rautatie rakennettiin Fynin poikki vuonna 1865, ja kaupungista tuli yksi Tanskan suurimmista rautatiesolmuista. Rautatiet tekivät myös aikataulut ja ajan mittaamisen tärkeämmiksi. Hyvä kuljetus tarkoittaa usein kasvua, mutta seurauksia oli monenlaisia, eikä ne olleet kaikille yhtä myönteisiä.\n\nMinä olin vuosisatoja ainoa nopea postinkuljettaja. Sitten tuli veturi, eikä kukaan edes kysynyt minun mielipidettäni.",
+  "vastaus": "Hetkinen ny. Rautatie nopeutti matkustamista ja tavaroiden kuljetusta, ja se muutti monien kaupunkien kehitystä 1800-luvulla. Kaupungit, joiden kautta rata kulki, saattoivat kasvaa nopeasti, koska ihmiset, tavarat ja raaka-aineet liikkuivat helpommin. [[Odensessa]] rautatie rakennettiin [[Fynin]] poikki vuonna 1865, ja kaupungista tuli yksi Tanskan suurimmista rautatiesolmuista. Rautatiet tekivät myös aikataulut ja ajan mittaamisen tärkeämmiksi. Hyvä kuljetus tarkoittaa usein kasvua, mutta seurauksia oli monenlaisia, eikä ne olleet kaikille yhtä myönteisiä.\n\nMinä olin vuosisatoja ainoa nopea postinkuljettaja. Sitten tuli veturi, eikä kukaan edes kysynyt minun mielipidettäni.",
   "linkit": [
-   "Odensessa"
+   "Odensessa",
+   "Fynin"
   ],
   "jatkot": [
    "Mikä on rautatiesolmu?",
@@ -2521,8 +2601,9 @@
   "kohde": "kohde:hahmotelma-horsens",
   "kysymys": "Mikä Horsensin valtionvankila oli ja mitä siellä on nykyään?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Horsensin [[valtionvankila]] toimi kaupungissa vuosina 1853–2006. Nykyään rakennuksissa on vankila- ja rikosmuseo, jossa vankilan sekä rikollisuuden historiaa esitellään yleisölle. Kaupungin menneisyyteen kuuluu siis niin teollisuutta kuin rangaistusjärjestelmääkin.\n\nMinä olen aina pitänyt vankilan kattoja hyvinä tarkkailupaikkoina, mutta yöksi en sinne jäisi. Museona se on onneksi paljon mukavampi paikka.",
+  "vastaus": "Hetkinen ny. [[Horsensin]] [[valtionvankila]] toimi kaupungissa vuosina 1853–2006. Nykyään rakennuksissa on vankila- ja rikosmuseo, jossa vankilan sekä rikollisuuden historiaa esitellään yleisölle. Kaupungin menneisyyteen kuuluu siis niin teollisuutta kuin rangaistusjärjestelmääkin.\n\nMinä olen aina pitänyt vankilan kattoja hyvinä tarkkailupaikkoina, mutta yöksi en sinne jäisi. Museona se on onneksi paljon mukavampi paikka.",
   "linkit": [
+   "Horsensin",
    "valtionvankila"
   ],
   "jatkot": [
@@ -2534,9 +2615,10 @@
   "kohde": "kohde:hahmotelma-horsens",
   "kysymys": "Kuka Vitus Bering oli ja mistä hänet tunnetaan?",
   "uusi": true,
-  "vastaus": "Kas vaan. [[Vitus Bering]] syntyi Horsensissa ja palveli Venäjän laivaston kapteenina. Hänet tunnetaan 1700-luvun tutkimusmatkoista, jotka suuntautuivat Venäjän itäisille rannikoille ja pohjoiselle Tyynellemerelle. Beringinsalmi on nimetty hänen mukaansa. Pieni kaupunki, iso kartta.",
+  "vastaus": "Kas vaan. [[Vitus Bering]] syntyi [[Horsensissa]] ja palveli Venäjän laivaston kapteenina. Hänet tunnetaan 1700-luvun tutkimusmatkoista, jotka suuntautuivat Venäjän itäisille rannikoille ja pohjoiselle Tyynellemerelle. Beringinsalmi on nimetty hänen mukaansa. Pieni kaupunki, iso kartta.",
   "linkit": [
-   "Vitus Bering"
+   "Vitus Bering",
+   "Horsensissa"
   ],
   "jatkot": [
    "Miksi tanskalainen palveli Venäjän laivastossa?",
@@ -2774,9 +2856,10 @@
   "kohde": "kohde:hahmotelma-esbjerg",
   "kysymys": "Miksi Tanska rakensi kokonaan uuden sataman lähes tyhjälle rannikolle vuonna 1868?",
   "uusi": false,
-  "vastaus": "Selvä juttu. [[Altona]] oli ollut Tanskan tärkein Pohjanmeren satama, mutta se joutui Saksan hallintaan Toisen Schleswigin sodan jälkeen vuonna 1864. Tanska menetti näin keskeisen länsisatamansa, ja sen tilalle päätettiin rakentaa uusi satama Jyllannin länsirannikolle, jossa oli ennestään vain muutama maatila. Satamaa rakennettiin kuninkaallisen asetuksen nojalla vuodesta 1868 vuoteen 1874. Onneksi siitä on jo pitkä aika.",
+  "vastaus": "Selvä juttu. [[Altona]] oli ollut Tanskan tärkein Pohjanmeren satama, mutta se joutui Saksan hallintaan Toisen Schleswigin sodan jälkeen vuonna 1864. Tanska menetti näin keskeisen länsisatamansa, ja sen tilalle päätettiin rakentaa uusi satama [[Jyllannin]] länsirannikolle, jossa oli ennestään vain muutama maatila. Satamaa rakennettiin kuninkaallisen asetuksen nojalla vuodesta 1868 vuoteen 1874. Onneksi siitä on jo pitkä aika.",
   "linkit": [
-   "Altona"
+   "Altona",
+   "Jyllannin"
   ],
   "jatkot": [
    "Mikä Altona on nykyään?",
@@ -2802,8 +2885,10 @@
   "kohde": "kohde:hahmotelma-esbjerg",
   "kysymys": "Mikä Toinen Schleswigin sota oli ja ketkä taistelivat?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Toinen Schleswigin sota käytiin vuonna 1864 Tanskan sekä Preussin ja Itävallan välillä [[Schleswigin]] ja Holsteinin herttuakunnista. Tanska hävisi sodan ja menetti herttuakunnat, joihin myös Altona kuului. Sota muutti pysyvästi Tanskan rajoja ja pienensi maata, ja sen seuraukset vaikuttivat Tanskan talouteen ja satamarakenteeseen. Vuosiluvut ja tapahtumat ovat nykyään historiankirjoissa, ja siitä on jo yli sata vuotta.",
+  "vastaus": "Odotas vähän. Toinen Schleswigin sota käytiin vuonna 1864 Tanskan sekä [[Preussin]] ja [[Itävallan]] välillä [[Schleswigin]] ja Holsteinin herttuakunnista. Tanska hävisi sodan ja menetti herttuakunnat, joihin myös Altona kuului. Sota muutti pysyvästi Tanskan rajoja ja pienensi maata, ja sen seuraukset vaikuttivat Tanskan talouteen ja satamarakenteeseen. Vuosiluvut ja tapahtumat ovat nykyään historiankirjoissa, ja siitä on jo yli sata vuotta.",
   "linkit": [
+   "Preussin",
+   "Itävallan",
    "Schleswigin"
   ],
   "jatkot": [
@@ -2829,9 +2914,10 @@
   "kohde": "kohde:hahmotelma-esbjerg",
   "kysymys": "Mikä on ruutukaava ja miksi sitä käytetään kaupungeissa?",
   "uusi": true,
-  "vastaus": "Katotaas. [[Ruutukaava]] on kaupunkisuunnittelutapa, jossa kadut kulkevat suorina ja risteävät suorassa kulmassa muodostaen ruutuja. Se on helppo suunnitella uudelle paikalle, ja kortteleiden tontit on helppo mitata ja jakaa. Siksi sitä on käytetty paljon uusissa kaupungeissa, kuten Esbjergissä, joka perustettiin lähes tyhjälle paikalle. Ruudukko tekee liikkumisesta ja rakentamisesta selkeää.\n\nYlhäältä ruudukko on helpoin lukea, jos minulta kysytään. Vanhan kaupungin mutkat sen sijaan hukuttavat kyyhkyn helposti.",
+  "vastaus": "Katotaas. [[Ruutukaava]] on kaupunkisuunnittelutapa, jossa kadut kulkevat suorina ja risteävät suorassa kulmassa muodostaen ruutuja. Se on helppo suunnitella uudelle paikalle, ja kortteleiden tontit on helppo mitata ja jakaa. Siksi sitä on käytetty paljon uusissa kaupungeissa, kuten [[Esbjergissä]], joka perustettiin lähes tyhjälle paikalle. Ruudukko tekee liikkumisesta ja rakentamisesta selkeää.\n\nYlhäältä ruudukko on helpoin lukea, jos minulta kysytään. Vanhan kaupungin mutkat sen sijaan hukuttavat kyyhkyn helposti.",
   "linkit": [
-   "Ruutukaava"
+   "Ruutukaava",
+   "Esbjergissä"
   ],
   "jatkot": [
    "Mitkä muut Euroopan kaupungit on rakennettu ruutukaavaan?",
@@ -2872,8 +2958,9 @@
   "kohde": "kohde:hahmotelma-samso",
   "kysymys": "Miksi Samsøn keskiaikaisista linnoista on jäljellä vain kumpuja?",
   "uusi": true,
-  "vastaus": "Ai tota. Tost en ole ihan varma. Samsølle rakennettiin keskiajalla viisi linnoitusta, joista on jäljellä vain [[linnakumpuja]]. Monet Pohjolan varhaisista linnoista tehtiin maavalleista ja puurakenteista, ja kun puu lahosi tai rakennukset purettiin, maaperään jäi vain kohoumia. En ole varma, oliko juuri näillä viidellä linnalla tällainen rakenne tai mitä niille tarkalleen tapahtui, joten tämä on yleinen selitys eikä varma tieto. Kumpu on kuitenkin kumpu, ja kyl ne ylhäältä näkyvät.",
+  "vastaus": "Ai tota. Tost en ole ihan varma. [[Samsølle]] rakennettiin keskiajalla viisi linnoitusta, joista on jäljellä vain [[linnakumpuja]]. Monet Pohjolan varhaisista linnoista tehtiin maavalleista ja puurakenteista, ja kun puu lahosi tai rakennukset purettiin, maaperään jäi vain kohoumia. En ole varma, oliko juuri näillä viidellä linnalla tällainen rakenne tai mitä niille tarkalleen tapahtui, joten tämä on yleinen selitys eikä varma tieto. Kumpu on kuitenkin kumpu, ja kyl ne ylhäältä näkyvät.",
   "linkit": [
+   "Samsølle",
    "linnakumpuja"
   ],
   "jatkot": [
@@ -2969,8 +3056,9 @@
   "kohde": "kohde:hahmotelma-maribo",
   "kysymys": "Missä Lolland sijaitsee ja miten sinne pääsee?",
   "uusi": true,
-  "vastaus": "Mmm— Lollandin minä olen nähnyt katolta. Lolland on Tanskan saari Itämeren rannalla Själlandin eteläpuolella, ja sen itäpuolella on sisarsaari Falster. Saarilta on lyhyt matka Saksan Fehmarnin saarelle, ja Fehmarnsbeltin yli on rakenteilla tunneli, mutta valmistumisajasta en ole varma, koska tietoni voi olla vanhentunutta. Lollandiin pääsee tieyhteyksiä pitkin Själlandilta Falsterin kautta. Maribo on saaren keskellä sijaitseva hallintokaupunki, ja kaupungin [[järvet]] ovat tunnettuja. Tää on ihan oikeaa maaseutua.",
+  "vastaus": "Mmm— Lollandin minä olen nähnyt katolta. Lolland on Tanskan saari Itämeren rannalla Själlandin eteläpuolella, ja sen itäpuolella on sisarsaari [[Falster]]. Saarilta on lyhyt matka Saksan Fehmarnin saarelle, ja Fehmarnsbeltin yli on rakenteilla tunneli, mutta valmistumisajasta en ole varma, koska tietoni voi olla vanhentunutta. Lollandiin pääsee tieyhteyksiä pitkin Själlandilta Falsterin kautta. Maribo on saaren keskellä sijaitseva hallintokaupunki, ja kaupungin [[järvet]] ovat tunnettuja. Tää on ihan oikeaa maaseutua.",
   "linkit": [
+   "Falster",
    "järvet"
   ],
   "jatkot": [
@@ -3010,8 +3098,11 @@
   "kohde": "kohde:hahmotelma-ebeltoft",
   "kysymys": "Mikä Fregatten Jylland on?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Fregatten Jylland on puinen purjesotalaiva, joka on nykyään museona Ebeltoftissa. Se on yksi maailman pisimmistä säilyneistä puisista sotalaivoista. Laiva on 1800-luvun puolivälin tienoilta, mahdollisesti 1860-luvulta, mutta tarkkaa vuotta en ole varma. Aikansa fregatti oli sotalaivatyyppi, jolla oli purjeiden lisäksi sekä tykkejä että kone. Laiva on hyvä muistutus siitä, miten pitkälle puusta voi rakentaa. Merellä se on melkein kyyhkyn ainoa kilpailija.",
-  "linkit": [],
+  "vastaus": "Joo, tän minä tiedän. [[Fregatten Jylland]] on puinen purjesotalaiva, joka on nykyään museona [[Ebeltoftissa]]. Se on yksi maailman pisimmistä säilyneistä puisista sotalaivoista. Laiva on 1800-luvun puolivälin tienoilta, mahdollisesti 1860-luvulta, mutta tarkkaa vuotta en ole varma. Aikansa fregatti oli sotalaivatyyppi, jolla oli purjeiden lisäksi sekä tykkejä että kone. Laiva on hyvä muistutus siitä, miten pitkälle puusta voi rakentaa. Merellä se on melkein kyyhkyn ainoa kilpailija.",
+  "linkit": [
+   "Fregatten Jylland",
+   "Ebeltoftissa"
+  ],
   "jatkot": [
    "Mitä fregatti tarkoittaa laivatyyppinä?",
    "Miten puinen laiva säilytetään museossa?"
@@ -3021,9 +3112,10 @@
   "kohde": "kohde:hahmotelma-ebeltoft",
   "kysymys": "Mitä ristikkotalo tarkoittaa ja miten sellainen rakennetaan?",
   "uusi": true,
-  "vastaus": "Kato, tää on rakennuspuolen juttu. [[Ristikkotalo]] on talo, jonka runko tehdään puupalkeista. Palkit muodostavat näkyvän ristikon, ja välit täytetään esimerkiksi savella, saviseoksella tai tiilellä ja rapataan. Runko kantaa rakennuksen painon, ja täyte vain tiivistää seinän. Tämä rakennustapa on ollut yleinen monin paikoin Euroopassa, ja Tanskassa tällaisia taloja on säilynyt monissa vanhoissa kaupungeissa, myös Ebeltoftissa. Rakennustapa kestää hyvin, kun rungon puuta huolletaan.\n\nRistikkotalot näyttävät ylhäältä melkein piirretyiltä. Kyl minä aina yritän laskea niistä ruutuja, vaikka ne eivät pysy paikoillaan niin kuin minä toivon.",
+  "vastaus": "Kato, tää on rakennuspuolen juttu. [[Ristikkotalo]] on talo, jonka runko tehdään puupalkeista. Palkit muodostavat näkyvän ristikon, ja välit täytetään esimerkiksi savella, saviseoksella tai tiilellä ja rapataan. Runko kantaa rakennuksen painon, ja täyte vain tiivistää seinän. Tämä rakennustapa on ollut yleinen monin paikoin Euroopassa, ja Tanskassa tällaisia taloja on säilynyt monissa vanhoissa kaupungeissa, myös [[Ebeltoftissa]]. Rakennustapa kestää hyvin, kun rungon puuta huolletaan.\n\nRistikkotalot näyttävät ylhäältä melkein piirretyiltä. Kyl minä aina yritän laskea niistä ruutuja, vaikka ne eivät pysy paikoillaan niin kuin minä toivon.",
   "linkit": [
-   "Ristikkotalo"
+   "Ristikkotalo",
+   "Ebeltoftissa"
   ],
   "jatkot": [
    "Miksi Euroopassa rakennettiin puutaloja?",
@@ -3048,9 +3140,10 @@
   "kohde": "kohde:hahmotelma-tonder",
   "kysymys": "Miksi kaupunki liitettiin Tanskaan, vaikka useimmat asukkaat äänestivät Saksan puolesta?",
   "uusi": false,
-  "vastaus": "Annas ku mietin. Tää on pitkä juttu, ja sovitaan että sävy pysyy rauhallisena. Ennen vuotta 1864 [[Tønder]] kuului Schleswigin herttuakuntaan, ja ensimmäisen maailmansodan jälkeen rajaa ratkaistiin kansanäänestyksillä vuonna 1920. Käsitykseni mukaan äänestys järjestettiin alueittain eikä kaupunki kerrallaan: pohjoinen äänestysalue äänesti enemmistöllä Tanskan puolesta, ja koko alue liitettiin Tanskaan, vaikka Tønderin kaupungissa noin 76 prosenttia äänesti Saksan puolesta. Tanskalaiset pitivät rajaa oikeudenmukaisena, kun taas moni saksalaismielinen piti tulosta kaupungin kannalta kohtuuttomana, ja molemmat kannat ovat vakiintuneita. Raja on pysynyt sen jälkeen paikallaan, ja alueella on molempia kieliä ja kulttuureja. Siitä on onneksi jo pitkä aika.",
+  "vastaus": "Annas ku mietin. Tää on pitkä juttu, ja sovitaan että sävy pysyy rauhallisena. Ennen vuotta 1864 [[Tønder]] kuului [[Schleswigin]] herttuakuntaan, ja ensimmäisen maailmansodan jälkeen rajaa ratkaistiin kansanäänestyksillä vuonna 1920. Käsitykseni mukaan äänestys järjestettiin alueittain eikä kaupunki kerrallaan: pohjoinen äänestysalue äänesti enemmistöllä Tanskan puolesta, ja koko alue liitettiin Tanskaan, vaikka Tønderin kaupungissa noin 76 prosenttia äänesti Saksan puolesta. Tanskalaiset pitivät rajaa oikeudenmukaisena, kun taas moni saksalaismielinen piti tulosta kaupungin kannalta kohtuuttomana, ja molemmat kannat ovat vakiintuneita. Raja on pysynyt sen jälkeen paikallaan, ja alueella on molempia kieliä ja kulttuureja. Siitä on onneksi jo pitkä aika.",
   "linkit": [
-   "Tønder"
+   "Tønder",
+   "Schleswigin"
   ],
   "jatkot": [
    "Miten Schleswigin raja on vaikuttanut alueen ihmisiin?",
@@ -3061,8 +3154,9 @@
   "kohde": "kohde:hahmotelma-tonder",
   "kysymys": "Miten pitsiteollisuus sai pienen kauppakaupungin kasvamaan nopeasti 1600- ja 1700-luvuilla?",
   "uusi": false,
-  "vastaus": "Nyt muistan: Tønder on pitsikaupunki. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Tønderin pitsi oli luultavasti nyplättyä [[pitsiä]], jossa lanka kierretään puolakeloilla kuvioksi, mutta en ole aivan varma tekniikasta. Kauppiaat ostivat pitsiä alueen työntekijöiltä ja myivät sitä kauas, ja kysyntä toi rahaa, työtä ja uusia taloja. Pitsi oli tuohon aikaan arvostettu koriste-esine, jota käytettiin esimerkiksi kauluksissa ja hihansuissa. Pienikin kaupunki voi siis kasvaa langasta, kun on tarpeeksi kärsivällisiä käsiä.",
+  "vastaus": "Nyt muistan: [[Tønder]] on pitsikaupunki. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Tønderin pitsi oli luultavasti nyplättyä [[pitsiä]], jossa lanka kierretään puolakeloilla kuvioksi, mutta en ole aivan varma tekniikasta. Kauppiaat ostivat pitsiä alueen työntekijöiltä ja myivät sitä kauas, ja kysyntä toi rahaa, työtä ja uusia taloja. Pitsi oli tuohon aikaan arvostettu koriste-esine, jota käytettiin esimerkiksi kauluksissa ja hihansuissa. Pienikin kaupunki voi siis kasvaa langasta, kun on tarpeeksi kärsivällisiä käsiä.",
   "linkit": [
+   "Tønder",
    "pitsiä"
   ],
   "jatkot": [
@@ -3074,8 +3168,11 @@
   "kohde": "kohde:hahmotelma-tonder",
   "kysymys": "Mitä tapahtui Schleswigin herttuakunnalle vuoden 1864 sodassa?",
   "uusi": true,
-  "vastaus": "Kääk. Tää on raskas aihe. Tanska kävi vuonna 1864 sotaa Preussia ja Itävaltaa vastaan, ja se hävisi. Rauhassa Tanska menetti Schleswigin ja Holsteinin herttuakunnat sekä Lauenburgin, ja Schleswig siirtyi aluksi Preussin ja Itävallan hallintaan ja myöhemmin Preussille. Tønder kuului siksi Saksan puolelle aina vuoteen 1920 asti. Sodan jälkeinen rajanveto on yksi Tanskan nykyhistorian suurista muutoksista, ja sen jäljet näkyvät alueen kielessä ja muistamisessa yhä. Siitä on onneksi pitkä aika.",
-  "linkit": [],
+  "vastaus": "Kääk. Tää on raskas aihe. Tanska kävi vuonna 1864 sotaa Preussia ja Itävaltaa vastaan, ja se hävisi. Rauhassa Tanska menetti [[Schleswigin]] ja [[Holsteinin]] herttuakunnat sekä Lauenburgin, ja Schleswig siirtyi aluksi Preussin ja Itävallan hallintaan ja myöhemmin Preussille. Tønder kuului siksi Saksan puolelle aina vuoteen 1920 asti. Sodan jälkeinen rajanveto on yksi Tanskan nykyhistorian suurista muutoksista, ja sen jäljet näkyvät alueen kielessä ja muistamisessa yhä. Siitä on onneksi pitkä aika.",
+  "linkit": [
+   "Schleswigin",
+   "Holsteinin"
+  ],
   "jatkot": [
    "Miksi Preussi ja Tanska kiistelivät Schleswigistä?",
    "Miten vuoden 1920 raja eroaa vuoden 1864 rajasta?"
@@ -3099,8 +3196,9 @@
   "kohde": "kohde:hahmotelma-tonder",
   "kysymys": "Miksi Tanskan Vattimeren rannikolle rakennetaan penkereitä?",
   "uusi": true,
-  "vastaus": "Tuota niin. Vattimeren rannikko on matalaa, ja merenpinta voi nousta myrskyjen aikana yllättävän korkealle. Penkereet eli [[padot]] ja valleilla suojatut alueet pitävät meriveden loitolla maatalousmaasta ja asutuksesta, ja niiden taakse jäävää maata on voitu käyttää laiduntamiseen ja viljelyyn. Tønderin seudulla rannikon maisemaa on muokattu tällaisilla rakenteilla, ja 1550-luvulla länsipuolelle rakennetut penkereet katkaisivat kaupungin suoran yhteyden mereen. En ole varma, miten pitkälle koko alueen penkereet ulottuvat ajallisesti, mutta ilmiö on tunnettu Pohjanmeren rannikolla. Ihmisen tekemä rannikko on ylhäältä kyllä komeaa.",
+  "vastaus": "Tuota niin. [[Vattimeren]] rannikko on matalaa, ja merenpinta voi nousta myrskyjen aikana yllättävän korkealle. Penkereet eli [[padot]] ja valleilla suojatut alueet pitävät meriveden loitolla maatalousmaasta ja asutuksesta, ja niiden taakse jäävää maata on voitu käyttää laiduntamiseen ja viljelyyn. Tønderin seudulla rannikon maisemaa on muokattu tällaisilla rakenteilla, ja 1550-luvulla länsipuolelle rakennetut penkereet katkaisivat kaupungin suoran yhteyden mereen. En ole varma, miten pitkälle koko alueen penkereet ulottuvat ajallisesti, mutta ilmiö on tunnettu Pohjanmeren rannikolla. Ihmisen tekemä rannikko on ylhäältä kyllä komeaa.",
   "linkit": [
+   "Vattimeren",
    "padot"
   ],
   "jatkot": [
@@ -3127,8 +3225,9 @@
   "kohde": "kohde:hahmotelma-nyborg",
   "kysymys": "Mitä Tanskan ensimmäinen perustuslaki vuonna 1282 oikeastaan tarkoitti kuninkaan vallalle?",
   "uusi": false,
-  "vastaus": "No jopas. Isoon kysymykseen vastaan varovasti. Kuningas Eerik V Klipping allekirjoitti vuonna 1282 asiakirjan, jota kutsutaan usein Tanskan ensimmäiseksi perustuslaiksi, vaikka se poikkesi nykyisestä perustuslaista paljon. Muistaakseni siinä kuningas sitoutui noudattamaan tiettyjä rajoja vallankäytössään: hän lupasi kutsua [[Danehofin]] koolle säännöllisesti ja kunnioittaa lakia esimerkiksi vangitsemisissa. Näin kuninkaan valtaa rajoitettiin sopimuksella ylimystön kanssa, mutta tarkkoja ehtoja en ole varma. Asiakirja on silti tärkeä esimerkki siitä, miten hallitsijan valtaa alettiin sitoa sääntöihin. Onpas vaikeaa ottaa kantaa tällaiseen.",
+  "vastaus": "No jopas. Isoon kysymykseen vastaan varovasti. Kuningas [[Eerik V Klipping]] allekirjoitti vuonna 1282 asiakirjan, jota kutsutaan usein Tanskan ensimmäiseksi perustuslaiksi, vaikka se poikkesi nykyisestä perustuslaista paljon. Muistaakseni siinä kuningas sitoutui noudattamaan tiettyjä rajoja vallankäytössään: hän lupasi kutsua [[Danehofin]] koolle säännöllisesti ja kunnioittaa lakia esimerkiksi vangitsemisissa. Näin kuninkaan valtaa rajoitettiin sopimuksella ylimystön kanssa, mutta tarkkoja ehtoja en ole varma. Asiakirja on silti tärkeä esimerkki siitä, miten hallitsijan valtaa alettiin sitoa sääntöihin. Onpas vaikeaa ottaa kantaa tällaiseen.",
   "linkit": [
+   "Eerik V Klipping",
    "Danehofin"
   ],
   "jatkot": [
@@ -3140,8 +3239,9 @@
   "kohde": "kohde:hahmotelma-nyborg",
   "kysymys": "Miksi keskiaikaisilla linnoilla oli vallihaudat?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Vallihauta oli linnan puolustuksen ensimmäinen este. Se piti hyökkääjät loitolla muurista, vaikeutti piirityskoneiden ja tikkaiden tuomista lähelle seinää ja esti tunnelien kaivamisen muurin alle. Vesihauta oli erityisen tehokas, koska sen yli pääsi yleensä vain nostosillan kautta. [[Nyborgin linna]] oli perustamisaikanaan, noin vuonna 1170, vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Linnan vallihauta kertoo, että linnan tärkein tehtävä oli suojella sen asukkaita ja valtaa. Hauskaa kyllä, kyyhky ei hautoja tarvitse.",
+  "vastaus": "Selvä juttu. [[Vallihauta]] oli linnan puolustuksen ensimmäinen este. Se piti hyökkääjät loitolla muurista, vaikeutti piirityskoneiden ja tikkaiden tuomista lähelle seinää ja esti tunnelien kaivamisen muurin alle. Vesihauta oli erityisen tehokas, koska sen yli pääsi yleensä vain nostosillan kautta. [[Nyborgin linna]] oli perustamisaikanaan, noin vuonna 1170, vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Linnan vallihauta kertoo, että linnan tärkein tehtävä oli suojella sen asukkaita ja valtaa. Hauskaa kyllä, kyyhky ei hautoja tarvitse.",
   "linkit": [
+   "Vallihauta",
    "Nyborgin linna"
   ],
   "jatkot": [
@@ -3167,8 +3267,12 @@
   "kohde": "kohde:hahmotelma-nyborg",
   "kysymys": "Miten Fyn on yhdistetty Jyllantiin ja Själlandiin?",
   "uusi": true,
-  "vastaus": "Kas vaan. Nyborg on oikea paikka tähän kysymykseen. Fyn on Tanskan saari Jyllannin ja Själlandin välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.",
-  "linkit": [],
+  "vastaus": "Kas vaan. Nyborg on oikea paikka tähän kysymykseen. [[Fyn]] on Tanskan saari [[Jyllannin]] ja [[Själlandin]] välissä, ja se on yhdistetty muihin osiin siltojen avulla. Suuren Beltin yli kulkee Fynin ja Själlandin välillä yhteys, joka valmistui 1990-luvun lopulla, ja Nyborg on sen Fynin puoleisessa päässä. Fynin ja Jyllannin välillä on Pienen Beltin sillat. Silloin ennen siltoja yhteys hoidettiin laivoilla ja lautoilla, ja talvella jää vaikeutti kulkua. Nyt autolla pääsee sujuvasti, ja minä lennän yhä omin siivin. Tarkat valmistumisvuodet en ole kaikkien siltojen osalta varma.",
+  "linkit": [
+   "Fyn",
+   "Jyllannin",
+   "Själlandin"
+  ],
   "jatkot": [
    "Miten pitkä silta voidaan rakentaa meren yli?",
    "Mikä on Fynin suurin kaupunki?"
@@ -3192,8 +3296,9 @@
   "kohde": "nosto:trelleborg",
   "kysymys": "Miksi samanlaisia linnoituksia rakennettiin useita?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Hyvä kysymys tuo. Samanlaisia linnoituksia rakennettiin eri puolille Tanskaa, ja niiden samankaltaisuus osoittaa, että ne suunniteltiin yhdessä paikassa ja mitattiin maastoon tarkasti. Se viittaa keskitettyyn johtoon: joku käski, joku mittasi ja joku maksoi. Tutkijat pitävät linnoituksia yleisesti kuninkaan vallan ja hallinnon tukikohtina, mutta niiden tarkasta käytöstä ei vallitse täyttä yksimielisyyttä, enkä ole itsekään varma kaikista yksityiskohdista. Yhteinen mitta kertoo joka tapauksessa järjestäytyneestä valtakunnasta. [[Unesco]] otti linnoitukset maailmanperintöluetteloon vuonna 2023. Ja tän minä sain sanottua ilman yhtään sivupolkua.",
+  "vastaus": "Hetkinen ny. Hyvä kysymys tuo. Samanlaisia linnoituksia rakennettiin eri puolille [[Tanskaa]], ja niiden samankaltaisuus osoittaa, että ne suunniteltiin yhdessä paikassa ja mitattiin maastoon tarkasti. Se viittaa keskitettyyn johtoon: joku käski, joku mittasi ja joku maksoi. Tutkijat pitävät linnoituksia yleisesti kuninkaan vallan ja hallinnon tukikohtina, mutta niiden tarkasta käytöstä ei vallitse täyttä yksimielisyyttä, enkä ole itsekään varma kaikista yksityiskohdista. Yhteinen mitta kertoo joka tapauksessa järjestäytyneestä valtakunnasta. [[Unesco]] otti linnoitukset maailmanperintöluetteloon vuonna 2023. Ja tän minä sain sanottua ilman yhtään sivupolkua.",
   "linkit": [
+   "Tanskaa",
    "Unesco"
   ],
   "jatkot": [
