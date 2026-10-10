@@ -63,6 +63,24 @@ namespace Matkakirja.Editori
 
         const string Avain = "Matkakirja.AsetteluTesti.";
 
+        /// <summary>
+        /// Osa (Natiiviseppä 10.10.2026: kaksi ajoa omilla lukkovarauksilla, kumpikin 6 min:n rajalla): "pallo" = pallo ja kartta
+        /// (Kysy … ISS-taulu ja kartan näkymät), "linna" = linna ja linssit (LinnanNakymat, linnan HUD, löytö, kortisto),
+        /// tyhjä = kaikki. Ympäristömuuttuja säilyy domain reloadin yli (tyokalut/ui-asettelutesti.sh asettaa).
+        /// </summary>
+        public const string OsaMuuttuja = "MATKAKIRJA_ASETTELU_OSA";
+        static string Osa => Environment.GetEnvironmentVariable(OsaMuuttuja) ?? "";
+        static string OsaNimi => Osa.Length > 0 ? "osa " + Osa : "kaikki osat";
+
+        static readonly HashSet<string> LinnanNakymat = new HashSet<string>
+        {
+            "linnan valikko", "linnan huoneet", "linnan äänet", "linnan lähteet", "keksinnöt", "aikajanan valikko", "ihmisen matka",
+            "ihmisen matkan valikko", "radio", "maan kyltti", "linssin selite", "ajattelijat", "ISS-ohjaamo", "karttavalikko",
+            "astronautin kuva", "minipulun kortti",
+        };
+
+        static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
+
         public static void Aja()
         {
             rivit.Clear(); virheita = 0; kokoNro = 0; vaihe = Vaihe.Aloita;
@@ -120,6 +138,7 @@ namespace Matkakirja.Editori
                     EditorUtility.UnloadUnusedAssetsImmediate();
                     GC.Collect();
                     Environment.SetEnvironmentVariable(UiRuutu.TestiMuuttuja, Koot[kokoNro].Arvo);
+                    if (kokoNro == 0) Kirjaa("-- " + OsaNimi);
                     if (kokoNro == 0) Kirjaa("-- leikkausrajaus " + (ShouldClip != null ? "käytössä" : "EI käytössä (ShouldClip puuttuu)"));
                     Kirjaa($"== {Koot[kokoNro].Nimi} ({Koot[kokoNro].Arvo})");
                     EditorApplication.EnterPlaymode();
@@ -127,7 +146,12 @@ namespace Matkakirja.Editori
                     break;
                 case Vaihe.OdotaPelia:
                     // Pelin oma käynnistys (UiNakymat ym.) ehtii ensimmäisiin ruutuihin; odotetaan, että UiKerros on olemassa.
-                    if (EditorApplication.isPlaying && UiKerros.Olemassa && kehyksia > 30) Siirry(Vaihe.Kysy);
+                    if (EditorApplication.isPlaying && UiKerros.Olemassa && kehyksia > 30)
+                    {
+                        // Linnan osa alkaa suoraan isoista näkymistä (vain LinnanNakymat), sitten linnan HUD.
+                        nakymaNro = 0;
+                        Siirry(Osa == "linna" ? Vaihe.Nakyma : Vaihe.Kysy);
+                    }
                     else if (Kulunut > 120) { Virhe("Play-tila ei käynnistynyt 120 s:ssa"); Siirry(Vaihe.Lopeta); }
                     break;
                 case Vaihe.Kysy:
@@ -276,7 +300,8 @@ namespace Matkakirja.Editori
                 }
                 case Vaihe.Nakyma:
                     // Isot näkymät yksi kerrallaan: ennen avausta näkyvät napit talteen, avauksen jälkeen uudet tarkistetaan.
-                    if (nakymaNro >= Nakymat.Length) { Siirry(Vaihe.Linna); break; }
+                    while (nakymaNro < Nakymat.Length && !OsaanKuuluu(Nakymat[nakymaNro].Nimi)) nakymaNro++;
+                    if (nakymaNro >= Nakymat.Length) { Siirry(Osa == "pallo" ? Vaihe.Lopeta : Vaihe.Linna); break; }
                     if (kehyksia < 10) return;
                     ennen = NakyvatOhjaimet();
                     try { Nakymat[nakymaNro].Avaa(); Siirry(Vaihe.OdotaNakyma); }
@@ -580,7 +605,36 @@ namespace Matkakirja.Editori
             // avautuvat ilman linssin sovitinta, aineisto paketista (puuttuessa Kuvanakyma.Esimerkki).
             ("astronautin kuva", () => Linssi("kuva"), SuljeKuva, 3.0),
             ("minipulun kortti", () => Linssi("kuva pulu"), SuljeKuva, 3.0),
+            // Kartan näkymät (Natiivi-UI 10.10.2026) kuten `ui kortti firenze` ja `ui pilleri linssit|aarteet`. Karttaselite
+            // (MaakuntaKartta: aina maakuntalappu) ja oman kaupungin kortti (samat elementit kuin edellisellä kortilla) eivät
+            // tuottaneet tyhjässä kohtauksessa uusia näkyviä elementtejä (ajo 10.10. 04.50, aikaraja): ei listalla.
+            ("kaupunkikortti", () => Kaupunkikortti(), () => UiNakymat.Hae().Kaupunkikortti.Sulje(), 1.0),
+            ("pillerin linssit", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("linssit", -1); },
+                () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
+            ("pillerin aarteet", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("aarteet", -1); },
+                () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
+            // Saapumisen näkymät (Natiivi-UI 10.10.2026) kuten `ui saapumiskortti`, `ui traileri firenze` ja `ui luento ateena`
+            // (ääneton testikomento: fokusmerkintä ja luentakuvat).
+            ("saapumiskortti", () => UiNakymat.Hae().Saapumiskortti.Nayta("ATEENA · PÄIVÄ 1/80", () => { }, () => { }),
+                () => UiNakymat.Hae().Saapumiskortti.Peru(), 1.5),
+            // Trailerin kuvat tulevat kaupungin lehdestä (UiSisalto.LataaLehti; Firenzen lehti on jo ladattu kaupunkilehdessä);
+            // ilman kuvia traileri ei ala (ajo 05.43: Ateena).
+            ("traileri", () =>
+                {
+                    UiSisalto.LataaLehti("firenze");
+                    UiKerros.Hae().Juuri(UiKerros.Valikot).schedule.Execute(() => UiNakymat.Hae().Traileri.Nayta("firenze", null, () => { })).StartingIn(800);
+                }, () => UiNakymat.Hae().Traileri.Ohita(), 2.5),
+            ("luento", () => UiNakymat.Hae().Saapuminen.Alkoi("ateena", pakota: true),
+                () => { var u = UiNakymat.Hae(); u.Saapuminen.Loppui("ateena"); u.Matkakirja.Piilota(); SuljeKaikki(); }, 3.0),
         };
+
+        static void Kaupunkikortti() =>
+            UiNakymat.Hae().Kaupunkikortti.Nayta("firenze", null, new KaupunkiToiminnot
+            {
+                LueLehti = () => { },
+                Liiku = () => { },
+                Sulje = () => { },
+            });
 
         static void SuljeKuva()
         {
@@ -603,12 +657,17 @@ namespace Matkakirja.Editori
         {
             linna ??= new LinnaValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
             OpasValikko.Hae().Nayta(false);
-            bool naytetty = linna.Juuri.resolvedStyle.display != DisplayStyle.None && linna.Juuri.panel != null;
             linna.Nayta(true);
-            // Valikko sijoittuu ☰:n alle sen worldBoundista: juuri näytetyllä ☰:llä ei ole vielä asettelua (laitteella pelaaja
-            // näkee ☰:n ennen napautusta), joten avaus seuraavassa ruudussa.
-            if (naytetty) linna.Komento(mita);
-            else linna.Juuri.schedule.Execute(() => linna.Komento(mita)).StartingIn(200);
+            // Valikko sijoittuu ☰:n alle sen worldBoundista: avaus vasta, kun ☰:llä on asettelu (laitteella pelaaja näkee ☰:n ennen
+            // napautusta). Kiinteä 200 ms ei riittänyt osan linna ensimmäisessä näkymässä (ajo 06.44 iPad pysty: valikko kulmassa).
+            AvaaKunAseteltu(mita, 0);
+        }
+
+        static void AvaaKunAseteltu(string mita, int yritys)
+        {
+            var nappi = linna.TestiAvainnapit().First(n => n.Nimi == "linnan ☰").E;
+            if ((nappi != null && nappi.worldBound.width >= 1f && nappi.worldBound.height >= 1f) || yritys >= 30) linna.Komento(mita);
+            else linna.Juuri.schedule.Execute(() => AvaaKunAseteltu(mita, yritys + 1)).StartingIn(100);
         }
 
         static void SuljeLinna() { linna?.Komento("sulje"); linna?.Nayta(false); }
@@ -668,7 +727,8 @@ namespace Matkakirja.Editori
         {
             var uudet = NakyvatOhjaimet().Where(e => !ennen.Contains(e)).ToList();
             if (uudet.Count == 0) { Virhe($"{nimi}: ei avautunut (ei uusia näkyviä elementtejä)"); return; }
-            int viat = 0, ok = 0;
+            int viat = 0, ok = 0, ylivuodot = 0;
+            var naytetyt = new List<(VisualElement E, Rect B)>();
             foreach (var e in uudet)
             {
                 var sv = e.GetFirstAncestorOfType<ScrollView>();
@@ -680,6 +740,9 @@ namespace Matkakirja.Editori
                     if (b.yMax < ikkuna.yMin || b.yMin > ikkuna.yMax) continue;   // vierityksen takana: ei tarkisteta
                     b = Rect.MinMaxRect(b.xMin, Mathf.Max(b.yMin, ikkuna.yMin), b.xMax, Mathf.Min(b.yMax, ikkuna.yMax));
                 }
+                naytetyt.Add((e, Leikkaa(SisaltoLaatikko(e), b)));
+                if (e is TextElement te) Ylivuoto(te, nimi, ref ylivuodot);
+                if (e is Button) e.Query<TextElement>().ForEach(t => { if (t != e && Nakyva(t)) Ylivuoto(t, nimi, ref ylivuodot); });
                 var koko = e.panel.visualTree.layout;
                 var turva = RuudunTurva(koko);
                 const float Vara = 0.5f;
@@ -690,6 +753,8 @@ namespace Matkakirja.Editori
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
             if (viat > 6) Kirjaa($"-- {nimi}: {viat - 6} muuta vikaa");
+            if (ylivuodot > 6) Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: {ylivuodot - 6} muuta");
+            Paallekkain(naytetyt, nimi);
             // Paneelin napit paneelin sisällä (9.10.2026 ajo #12: Äänentasojen väkänen valui paneelin ja ruudun ulkopuolelle).
             var paneeli = NakymanPaneeli(nimi);
             if (paneeli?.panel != null && Nakyvissa(paneeli))
@@ -706,9 +771,122 @@ namespace Matkakirja.Editori
             Kirjaa($"{(viat == 0 ? "OK" : "--")} {nimi}: {ok} elementtiä turva-alueella, {uudet.Count} uutta");
         }
 
+        /// <summary>
+        /// YLIVUOTO (raportti, ei vika; Päätoimittaja 10.10.2026): teksti ei mahdu laatikkoonsa. Rivittämätön teksti: luonnollinen
+        /// leveys > sisältöleveys (katkeaa tai valuu yli); rivittyvä: korkeus sisältöleveydellä > sisältökorkeus (kiinteä korkeus
+        /// leikkaa rivejä). text-overflow: ellipsis kirjataan erikseen (…-katkaisu on tarkoituksellinen, mutta teksti silti vajaa).
+        /// Enintään 6 riviä näkymää kohden.
+        /// </summary>
+        static void Ylivuoto(TextElement t, string nimi, ref int n)
+        {
+            if (string.IsNullOrWhiteSpace(t.text)) return;
+            var cr = t.contentRect;
+            if (!(cr.width >= 1f) || !(cr.height >= 1f)) return;
+            bool rivittyy = t.resolvedStyle.whiteSpace == WhiteSpace.Normal || t.resolvedStyle.whiteSpace == WhiteSpace.PreWrap;
+            string mita;
+            if (!rivittyy)
+            {
+                var m = t.MeasureTextSize(t.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined);
+                if (m.x <= cr.width + 1f) return;
+                mita = $"leveys {m.x:0} > {cr.width:0}";
+            }
+            else
+            {
+                // Yhdelle riville mahtuva ohi: tasan sisältöleveydellä mitattu yksirivinen rivittyi kahdeksi (ajo 06.05: korkeus 2×).
+                var yksi = t.MeasureTextSize(t.text, 0f, VisualElement.MeasureMode.Undefined, 0f, VisualElement.MeasureMode.Undefined);
+                if (yksi.x <= cr.width + 1f) return;
+                var m = t.MeasureTextSize(t.text, cr.width + 0.5f, VisualElement.MeasureMode.Exactly, 0f, VisualElement.MeasureMode.Undefined);
+                if (m.y <= cr.height + 1f) return;
+                mita = $"korkeus {m.y:0} > {cr.height:0}";
+            }
+            if (++n > 6) return;
+            bool kolme = t.resolvedStyle.textOverflow == TextOverflow.Ellipsis;
+            Kirjaa($"YLIVUOTO {Koot[kokoNro].Nimi}: {nimi}: \"{Lyhyt(t)}\" {mita}{(kolme ? " (…-katkaisu)" : "")} [{string.Join(" ", t.GetClasses().Take(2))}]");
+        }
+
+        /// <summary>
+        /// PÄÄLLEKKÄIN (raportti, ei vika; Natiivi-UI 10.10.2026): näkymän uudet näkyvät tekstit ja napit, jotka peittävät toisiaan
+        /// vähintään 4 × 6 pt:n alalta (anfangi saa ulottua muutaman pisteen kappaleen yli). Tekstistä verrataan kirjainten aluetta
+        /// (SisaltoLaatikko), napista koko kosketusalaa; vanhempi–lapsi-parit ohitetaan, samoin parit, joissa ylempi on peittävän
+        /// kortin tai paneelin sisällä (aloituskortti pelilaudan päällä: alempi ei näy). Enintään 6 riviä näkymää kohden.
+        /// </summary>
+        static void Paallekkain(List<(VisualElement E, Rect B)> l, string nimi)
+        {
+            int n = 0;
+            for (int i = 0; i < l.Count; i++)
+                for (int j = i + 1; j < l.Count; j++)
+                {
+                    var (a, ra) = l[i];
+                    var (b, rb) = l[j];
+                    if (a.Contains(b) || b.Contains(a)) continue;
+                    var y = Leikkaa(ra, rb);
+                    if (!(y.width >= 4f && y.height >= 6f)) continue;
+                    if (Peitetty(a, b, y)) continue;
+                    if (++n <= 6) Kirjaa($"PÄÄLLEKKÄIN {Koot[kokoNro].Nimi}: {nimi}: \"{Lyhyt(a)}\" {Laatikko(ra)} × \"{Lyhyt(b)}\" {Laatikko(rb)}");
+                }
+            if (n > 6) Kirjaa($"PÄÄLLEKKÄIN {Koot[kokoNro].Nimi}: {nimi}: {n - 6} muuta");
+        }
+
+        /// <summary>
+        /// Alempi ei näy: piirtojärjestyksessä ylemmän haarassa (yhteiseen esivanhempaan asti, eri kerroksissa juureen asti) on
+        /// läpinäkymätön säiliö (tausta-alfa ≥ 0,9 tai taustakuva), joka peittää päällekkäisen alueen. Ylempi itse ja napit eivät
+        /// laske (nappi tekstin päällä on vika, kortti laudan päällä ei).
+        /// </summary>
+        static bool Peitetty(VisualElement a, VisualElement b, Rect alue)
+        {
+            VisualElement ylempi;
+            VisualElement yhteinen = null;
+            for (var p = a.parent; p != null && yhteinen == null; p = p.parent) if (p.Contains(b)) yhteinen = p;
+            if (yhteinen != null)
+            {
+                VisualElement ca = a, cb = b;
+                while (ca.parent != yhteinen) ca = ca.parent;
+                while (cb.parent != yhteinen) cb = cb.parent;
+                ylempi = yhteinen.IndexOf(cb) > yhteinen.IndexOf(ca) ? b : a;
+            }
+            else ylempi = Kerros(b) > Kerros(a) ? b : a;
+            for (var p = ylempi.parent; p != null && p != yhteinen; p = p.parent)
+            {
+                if (p is Button) continue;
+                var st = p.resolvedStyle;
+                bool peittava = st.backgroundColor.a >= 0.9f || st.backgroundImage.texture != null || st.backgroundImage.sprite != null
+                    || st.backgroundImage.renderTexture != null || st.backgroundImage.vectorImage != null;
+                if (!peittava) continue;
+                var pb = p.worldBound;
+                if (pb.xMin <= alue.xMin + 0.5f && pb.yMin <= alue.yMin + 0.5f && pb.xMax >= alue.xMax - 0.5f && pb.yMax >= alue.yMax - 0.5f) return true;
+            }
+            return false;
+        }
+
+        static int Kerros(VisualElement e)
+        {
+            var juuri = e.panel?.visualTree;
+            foreach (var (k, j) in UiKerros.Hae().Juuret) if (j.panel?.visualTree == juuri) return k;
+            return 0;
+        }
+
+        /// <summary>Tekstin kirjainten alue maailmassa (-unity-text-align huomioiden); napin ja muun elementin worldBound.</summary>
+        static Rect SisaltoLaatikko(VisualElement e)
+        {
+            if (!(e is TextElement t) || e is Button || string.IsNullOrEmpty(t.text)) return e.worldBound;
+            var cr = t.contentRect;
+            if (!(cr.width >= 1f) || !(cr.height >= 1f)) return e.worldBound;
+            var m = t.MeasureTextSize(t.text, cr.width + 0.5f, VisualElement.MeasureMode.AtMost, 0f, VisualElement.MeasureMode.Undefined);
+            float w = Mathf.Min(cr.width, m.x), h = Mathf.Min(cr.height, m.y);
+            var a = t.resolvedStyle.unityTextAlign;
+            float x = a == TextAnchor.UpperCenter || a == TextAnchor.MiddleCenter || a == TextAnchor.LowerCenter ? cr.x + (cr.width - w) / 2f
+                : a == TextAnchor.UpperRight || a == TextAnchor.MiddleRight || a == TextAnchor.LowerRight ? cr.xMax - w : cr.x;
+            float y = a == TextAnchor.MiddleLeft || a == TextAnchor.MiddleCenter || a == TextAnchor.MiddleRight ? cr.y + (cr.height - h) / 2f
+                : a == TextAnchor.LowerLeft || a == TextAnchor.LowerCenter || a == TextAnchor.LowerRight ? cr.yMax - h : cr.y;
+            return t.LocalToWorld(new Rect(x, y, w, h));
+        }
+
         static string Lyhyt(VisualElement e)
         {
-            string t = e is TextElement te ? te.text : e.Q<TextElement>()?.text ?? e.tooltip ?? e.GetClasses().FirstOrDefault() ?? "-";
+            string t = e is TextElement te ? te.text : e.Q<TextElement>()?.text;
+            // Kuvakenappi ilman tekstiä: VoiceOver-nimi (tooltip) tai oma luokka.
+            if (string.IsNullOrWhiteSpace(t)) t = !string.IsNullOrEmpty(e.tooltip) ? "⟨" + e.tooltip + "⟩"
+                : "." + (e.GetClasses().FirstOrDefault(c => c.StartsWith("mk-")) ?? e.GetClasses().FirstOrDefault() ?? "-");
             t = (t ?? "-").Replace("\n", " ");
             return t.Length > 30 ? t.Substring(0, 30) + "…" : t;
         }
@@ -830,7 +1008,7 @@ namespace Matkakirja.Editori
             Environment.SetEnvironmentVariable(UiRuutu.TestiMuuttuja, null);
             EditorSettings.enterPlayModeOptionsEnabled = SessionState.GetBool(Avain + "optio", false);
             SessionState.EraseBool(Avain + "kaynnissa");
-            Kirjaa(virheita == 0 ? "ASETTELUTESTI LÄPI" : $"ASETTELUTESTI {virheita} VIKAA");
+            Kirjaa(virheita == 0 ? $"ASETTELUTESTI LÄPI ({OsaNimi})" : $"ASETTELUTESTI {virheita} VIKAA ({OsaNimi})");
             Directory.CreateDirectory("tulokset");
             File.WriteAllLines("tulokset/asettelutesti.txt", rivit);
             EditorApplication.Exit(virheita == 0 ? 0 : 1);

@@ -314,7 +314,10 @@ namespace Matkakirja.Natiivi
                         case "terava": Terava = v; KaupunkiTerava.Aseta(v); break;
                         case "yovalot": KaupunkiYovalot.Kaytossa = v != 0; break;
                         case "yolamput": KaupunkiYovalot.OsmLamput = v != 0; break;
+                        case "yoikkunadata": KaupunkiYovalot.IkkunaData = v != 0; break;
+                        case "yoikkunakerroin": KaupunkiYovalot.IkkunaKerroin = v; break;
                         case "yoalueet": KaupunkiYovalot.AlueVoima = v; break;
+                        case "yomaamerkit": KaupunkiYovalot.MaamerkkiVoima = v; break;   // julkisivuvalot (kuvapari: 0 = pois, 1,5 = oletus)
                         case "yohehku": KaupunkiYovalot.Hehku = v; break;
                         case "yopisteet": KaupunkiYovalot.Pisteet = v; break;
                         case "yosolu": KaupunkiYovalot.SoluM = v; break;

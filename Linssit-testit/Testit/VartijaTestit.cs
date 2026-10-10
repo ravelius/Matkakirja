@@ -191,5 +191,28 @@ namespace Matkakirja.Linssit.Testit
             var r = new Vartija(Reitti) { Profiili = VartijaProfiili.Renki };
             Oleta.Sama(0.0, r.NakoVoima(new VartijanSyote { PelaajaZ = 2, NakolinjaVapaa = true, Valoisuus = 1 }));
         }
+
+        /// <summary>PT 10.10. (juna 175, kaappaus syke2): kokin 20 s:n hälytys vaihtui Paluuseen ja syke rauhoittui, vaikka kokki näki yhä.
+        /// Nopea syke pysyy koko havainnon ajan ja palaa rauhalliseen vasta SykeSekoitus.PitoS:n (3 s) jälkeen.</summary>
+        [Testi] static void SykePysyyNopeanaHavainnonAjan()
+        {
+            var v = new Vartija(Reitti, yaw: 0) { Profiili = VartijaProfiili.Kokki }; double x = 0, z = 0, pito = 0, alku = -1;
+            VartijanSyote Nakyy(double vx, double vz) => new VartijanSyote { PelaajaX = 0, PelaajaZ = 2, NakolinjaVapaa = true, Valoisuus = 1 };
+            bool halytysPaattyi = false;
+            for (double t = 0; t < 40; t += 1 / 30.0)
+            {
+                Aja(v, ref x, ref z, Nakyy, 1 / 30.0);
+                if (v.Tila != VartijanTila.Halytys && alku >= 0) halytysPaattyi = true;
+                pito = SykeSekoitus.Pito(pito, v.Tila == VartijanTila.Halytys, v.Nakee, 1 / 30.0);
+                if (pito > 0 && alku < 0) alku = t;
+                if (alku >= 0) Oleta.Tosi(pito > 0, $"nopea katkesi {t:F1} s:n kohdalla ({v.Tila}), vaikka kokki näkee");
+            }
+            Oleta.Tosi(alku >= 0 && alku < 5, $"hälytys alkoi ({alku:F1} s)");
+            Oleta.Tosi(halytysPaattyi, "testi kattaa kokin hälytyksen päättymisen (20 s) havainnon aikana");
+            // Ei hälytystä eikä havaintoa: nopea vielä 2,9 s, rauhallinen 3 s:n jälkeen; pelkkä havainto ei käynnistä nopeaa.
+            pito = SykeSekoitus.Pito(pito, false, false, 2.9); Oleta.Tosi(pito > 0, "3 s:n viive");
+            pito = SykeSekoitus.Pito(pito, false, false, 0.2); Oleta.Sama(0.0, pito);
+            Oleta.Sama(0.0, SykeSekoitus.Pito(0, false, true, 0.1));
+        }
     }
 }

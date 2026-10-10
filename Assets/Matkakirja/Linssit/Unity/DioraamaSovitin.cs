@@ -260,7 +260,10 @@ namespace Matkakirja.Natiivi
             Vaihtui?.Invoke(linssi);
             LukitseVaaka(true);
 
-            if (PelattavaPalaPyydetty && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
+            // Kiinnitetty paketti myös esittelyyn (PT 10.10., juna 175: vanhoja appeja ei rikota): Olavinlinna avautuu PelattavaPala.Hashin
+            // paketista eikä uusin.json:sta, kun kehittäjä ei ole asettanut omaa osoitinta ("poikki osoitin <hash>" voittaa).
+            bool kiinnitaEsittely = RakennusId == Oletusrakennus && DioraamaLevyvalimuisti.TestiOsoitin == null && !peiliPaalla;
+            if ((PelattavaPalaPyydetty || kiinnitaEsittely) && DioraamaLevyvalimuisti.TestiOsoitin != PelattavaPalaHash)
             {
                 // Ennen latausta: pala-paketti osoittimeksi; jo ladattu tuotantorakennus unohdetaan (ladataan uudelleen alla).
                 if (peiliPaalla) AsetaPeili("pois");
@@ -1000,7 +1003,7 @@ namespace Matkakirja.Natiivi
         {
             var ennen = SeikkailuRepliikit.Aktiivinen;
             var r = SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
-            if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v1/manifest.json");
+            if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v2/manifest.json");   // v2 (Pelikoodari 10.10.): tyrma-vesipoika-1 huippu −2,3 dBTP, muut samat
         }
 
         bool alkuValittu, historiaPyydetty;
