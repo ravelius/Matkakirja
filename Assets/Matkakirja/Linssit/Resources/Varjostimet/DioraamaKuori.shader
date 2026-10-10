@@ -64,12 +64,12 @@ Shader "Matkakirja/Linssit/DioraamaKuori"
             float4 _DioraamaLeikkausMin, _DioraamaLeikkausMax, _DioraamaLeikkausKamera;
             // Historiamoottorin kävelytila (SeikkailuKavely, Linnanrakentajan osat.json leikkaukset): enintään 8 kierrettyä särmiötä
             // glTF-koordinaateissa (z etelä = −Unity z): xyz keskipiste, w kierto y-akselin ympäri (rad); Koko.xyz = puolikoko.
-            float4 _KavelyLeikkaus[32], _KavelyLeikkausKoko[32];   // 7.10.: 8 → 16, 8.10.: 32 (vuoden 1499 linna: 11 + 3 aina leikattua; SeikkailuKavely valitsee)
+            float4 _KavelyLeikkaus[48], _KavelyLeikkausKoko[48];   // 7.10.: 8 → 16, 8.10.: 32, 10.10.: 48 (LR v46y) (vuoden 1499 linna: 11 + 3 aina leikattua; SeikkailuKavely valitsee)
             float _KavelyLeikkausN;
             bool KavelyLeikattu(float3 pU)
             {
                 float3 p = float3(pU.x, pU.y, -pU.z);
-                for (int k = 0; k < 32; k++)
+                for (int k = 0; k < 48; k++)
                 {
                     if (k >= (int)_KavelyLeikkausN) break;
                     float3 d = p - _KavelyLeikkaus[k].xyz;

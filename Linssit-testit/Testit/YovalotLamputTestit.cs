@@ -66,6 +66,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s.Contains("TextureFormat.R8, false, true") && s.Contains("ikkunat.Apply(false, true)"), "R8 ilman mippejä ja CPU-kopiota (2,36 Mt)");
         }
 
+        [Testi] static void MaanpintaElavalleKaupungille()
+        {
+            // PT 10.10. (juna 175): autot, raitiovaunut ja kyyhkyt maanpinnalle (DTM), DSM varalla; vain lähiosa (muisti).
+            string e = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "ElavaKaupunki.cs"));
+            string o = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "OpasSovitin.cs"));
+            Oleta.Tosi(e.Contains("Maa(double x, double z) => Korkeus(x, z, OpasSovitin.OmaMaanpinta)") && e.Contains("KatuLiikenne.Lue(katuJson, Maa, autoRaja, 20261009, Pinta)") && e.Contains("OpasSovitin.OmaMaanpinta(p.Paikka.Lat") && e.Contains("MaanpintaValmis(lat0, lon0)"), "katuliikenne ja kyyhkyt maanpinnalla, katu vasta kun maanpinta ratkennut");
+            Oleta.Tosi(o.Contains("MiniJson.Teksti(d, \"osa\") == \"lahi\"") && o.Contains("return OmaMaa(lat, lon);"), "vain lähiosa, DSM varalla");
+        }
+
         [Testi] static void VarjostinJaTunnistus()
         {
             string s = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Varjostimet", "KaupunkiYovalot.shader"));

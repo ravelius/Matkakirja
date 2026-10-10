@@ -103,6 +103,17 @@ namespace Matkakirja.Natiivi
             return r;
         }
 
+        /// <summary>
+        /// Ilmoita ongelmasta ilman reaktioriviä (Pulu-chatin tekoälymerkintä, Raamattu ALLE 18 KURATOITU): sama virheilmoituslomake
+        /// ja POST /laheta kuin peukku alas → Virhe tiedoissa, kohdeavaimena chat:&lt;paikka&gt;, ohjeteksti tekoälyn vastauksille.
+        /// </summary>
+        public static void IlmoitaOngelmasta(string tunniste, string otsikko)
+        {
+            if (string.IsNullOrEmpty(tunniste)) return;
+            PuraJono();
+            new ReaktioRivi(tunniste, otsikko ?? "", null).AvaaVirheikkuna("ui.reaktiot.chat-mika-vaarin", "ui.reaktiot.chat-esimerkki");
+        }
+
         /// <summary>Web piirraOtsikonReaktio: pieni rivi väliotsikon päähän.</summary>
         public static ReaktioRivi PiirraOtsikolle(VisualElement otsikkorivi, string sivunAvain, string otsikko) =>
             Piirra(otsikkorivi, OtsikkoAvain(sivunAvain, otsikko), otsikko, "mk-reaktiot--otsikko");
@@ -505,16 +516,16 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Virheilmoitus: tekstikenttä, "Lähetä Livialle" / "Peru" (web avaaVirheikkuna).</summary>
-        public void AvaaVirheikkuna()
+        public void AvaaVirheikkuna(string ohjeAvain = "ui.reaktiot.mika-vaarin", string esimerkkiAvain = "ui.reaktiot.esimerkki")
         {
             TextField kentta = null;
             Minipopup m = null;
             m = Minipopup.Avaa(otsikko.Length > 0 ? Kieli.T("ui.reaktiot.virheilmoitus-otsikolla", otsikko) : Kieli.T("ui.reaktiot.virheilmoitus"), s =>
             {
-                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.reaktiot.mika-vaarin"), "mk-reaktio__ohje", s), Kirjasin.Luku);
+                Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T(ohjeAvain), "mk-reaktio__ohje", s), Kirjasin.Luku);
                 kentta = new TextField { multiline = true, maxLength = Reaktiot.TekstinKatto };
                 kentta.AddToClassList("mk-reaktio__kentta");
-                kentta.textEdition.placeholder = Kieli.T("ui.reaktiot.esimerkki");
+                kentta.textEdition.placeholder = Kieli.T(esimerkkiAvain);
                 kentta.tooltip = Kieli.T("ui.reaktiot.virheen-kuvaus");
                 Kirjasimet.Aseta(kentta, Kirjasin.Luku);
                 s.Add(kentta);

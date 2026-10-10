@@ -1068,7 +1068,7 @@ namespace Matkakirja.Natiivi
                 const int W = 480, H = 140;
                 puu = Uusi("radio-puu", W, H);
                 var px = new Color[W * H];
-                Color v1 = Kuviot.Vari("#8f5f2f"), v2 = Kuviot.Vari("#6b4423"), v3 = Kuviot.Vari("#33200f");
+                Color v1 = Kuviot.Vari("#8f5f2f"), v2 = (Color)Tyylikirja.Erikois.Radiopaletti11, v3 = Kuviot.Vari("#33200f");
                 var syyKohina = new float[W];
                 var sat = new System.Random(1873);
                 for (int x = 0; x < W; x++) syyKohina[x] = (float)sat.NextDouble();

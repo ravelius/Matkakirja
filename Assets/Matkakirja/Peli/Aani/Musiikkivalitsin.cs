@@ -56,6 +56,8 @@ namespace Matkakirja.Peli
             }
             if (!string.IsNullOrEmpty(paikka) && t.Paikkaraidat.TryGetValue(paikka, out var pt)) Lisaa(t.MusaPolku(pt));
             if (!string.IsNullOrEmpty(paikka) && t.Kaupunkiraidat.Contains(paikka)) Lisaa(t.MusaPolku("musa-kaupunki-" + paikka));
+            // Kartalla vain kaupungin oma kappale (AaniTaulut.KarttaVainKaupunki, omistaja 10.10.2026).
+            if (t.KarttaVainKaupunki) return polut;
             var alue = Alue(paikka, maa);
             if (alue != null && t.Alueraidat.Contains(alue)) Lisaa(t.MusaPolku("musa-kaupunki-" + alue));
             // Maanosaraita alueraidan varareittinä (vaihe 2): kuuluu, kun alueraitaa ei ole tai se puuttuu (404).

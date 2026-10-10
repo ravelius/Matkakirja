@@ -82,6 +82,8 @@ namespace Matkakirja.Natiivi
         {
             var rt = PuluRealtime.Hae();
             if (rt.Kaynnissa) { rt.Lopeta(); return; }
+            // Ikäraja ennen live-tekoälyä (Raamattu ALLE 18 KURATOITU): kortti kerran, sitten sama painallus jatkuu.
+            if (Ikaraja.KysyEnsin(Vaihda)) return;
             lopetaSanelu?.Invoke();
             kayttajaKupla = puluKupla = null;
             rt.Aloita(konteksti?.Invoke() ?? "");

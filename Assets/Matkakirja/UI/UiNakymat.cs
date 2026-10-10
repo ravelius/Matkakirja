@@ -288,6 +288,17 @@ namespace Matkakirja.Natiivi
             var muut = v.LisaNappirivi(a);
             v.LisaNappi(muut, Kieli.T("ui.nakymat.offline-kartat"), Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
             v.LisaNappi(muut, Kieli.T("ui.pulu.ehdota-sisaltoa"), Ikonit.Kyna, Valikko.Ehdota);
+            // IKÄRAJA (PT 10.10. 11.5x): tila rivillä, sama ikäkortti; vastaamaton voi vastata myöhemmin, vastauksen jälkeen vain
+            // tiukempaan suuntaan (Ikaraja.AvaaAsetuksista). Olemassa oleva valikkonapin pohja (toiminto) omalla rivillään.
+            var ika = v.LisaNappi(v.LisaNappirivi(a), Kieli.T("ui.ikaraja.rivi", Ikaraja.TilaTeksti), Ikonit.Viiva["passi"], Ikaraja.AvaaAsetuksista);
+            void IkaTila()
+            {
+                string t = Kieli.T("ui.ikaraja.rivi", Ikaraja.TilaTeksti);
+                ika.tooltip = t;
+                var l = UnityEngine.UIElements.UQueryExtensions.Q<UnityEngine.UIElements.Label>(ika, className: "mk-valikkonappi__nimi");
+                if (l != null) l.text = t;
+            }
+            Ikaraja.Muuttui += IkaTila;
 #if !MATKAKIRJA_APPSTORE
             var kehittaja = v.LisaNappirivi(a);
             v.LisaKytkin(kehittaja, "Kehittäjä", Ikonit.Ratas, () => Asetukset.Kehittaja, () => { v.Sulje(); Valikko.AvaaKehittajakoodi(); });   // kieli: ei (kehittäjäkoodin kytkin, #if !MATKAKIRJA_APPSTORE)
@@ -447,7 +458,7 @@ namespace Matkakirja.Natiivi
             Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
             Wiki = new WikiIkkuna(kerros); // kaikkien edellisten päälle (sama kerros, myöhemmin; avaus tuo eteen)
-            Saapumiskortti = new Saapumiskortti(kerros, () => Tilarivi.Alareuna); // karttaruudun päälle, myös lennon kaistaleen
+            Saapumiskortti = new Saapumiskortti(kerros); // koko ruudun päälle yläreunaa myöten (omistaja TF 176)
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             LiputIso.Lataa();   // isojen lippujen luettelo (terävyys 9.10.2026)
             KuvatIso.Lataa();   // suurennoksen 2048 px kuvien luettelo (terävyys 9.10.2026)

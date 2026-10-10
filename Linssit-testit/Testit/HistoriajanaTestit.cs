@@ -305,5 +305,64 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(9, rivi);
             Oleta.Tosi(loppu <= h.Kesto - 2, $"viimeinen rivi päättyy ennen loppua ({loppu:F1} / {h.Kesto:F1})");
         }
+
+        /// <summary>Esittelyn vaiheet (omistaja 10.10. 07.1x, juna 176): ~50 s kivilinnasta nykyasuun ilman kertojaa, avainsanat tarkistetuista
+        /// teksteistä, bastionit ja Paksu bastioni kasvavat näkyvästi, nykyasu lopussa, kivilinna nousee alusta (ei tyhjää alkua).</summary>
+        [Testi] static void EsittelynVaiheet()
+        {
+            var h = Historiajana.Esittely;
+            Oleta.Tosi(h.Kesto >= 80 && h.Kesto <= 95, $"kesto {h.Kesto:F0} s");
+            // Kertojan rivit (Pelikoodari vaihe-esittely-v2) mahtuvat ennen seuraavaa riviä: KertojaViiveS + kesto ≤ seuraavan rivin alku.
+            var kestot = new Dictionary<string, double> { ["esi-saimaa"] = 16.64, ["esi-1323"] = 15.12, ["vaihe-1475"] = 11.62, ["vaihe-nyky"] = 6.14 };
+            double edLoppu = 0;
+            for (int i = 0; i < h.Vaiheet.Count; i++)
+            {
+                var v = h.Vaiheet[i]; if (!v.Kertoja) continue;
+                Oleta.Tosi(h.VaiheenAlku(i) + 0.3 >= edLoppu, $"{v.KertojaAvain} ei ala edellisen päälle ({h.VaiheenAlku(i):F1} < {edLoppu:F1})");
+                edLoppu = h.VaiheenAlku(i) + Historiajana.KertojaViiveS + kestot[v.KertojaAvain];
+            }
+            Oleta.Tosi(edLoppu <= h.Kesto, $"viimeinen rivi päättyy ennen loppua ({edLoppu:F1} / {h.Kesto:F1})");
+            Oleta.Sama("esittely", h.Nimi);
+            foreach (var v in h.Vaiheet)
+            {
+                string ka = v.Kertoja ? v.KertojaAvain : null;   // omistajan luvalla vain 4 riviä (10.10. 07.3x)
+                Oleta.Tosi(!v.Kertoja || v.KertojaAvain != null, $"{v.Vuosi}: ei historian kertojariviä esittelyssä");
+                Oleta.Tosi(ka == null || Array.IndexOf(new[] { "esi-saimaa", "esi-1323", "vaihe-1475", "vaihe-nyky" }, ka) >= 0, $"{v.Vuosi}: kertoja {ka}");
+                if (v.Avain != null) Oleta.Tosi(!string.IsNullOrEmpty(v.VuosiTeksti) && !string.IsNullOrEmpty(v.Sanat), $"{v.Avain}: tarkistettu teksti");
+            }
+            int i1475 = 0; while (h.Vaiheet[i1475].Vuosi < 1475) i1475++;
+            Oleta.Tosi(Math.Abs(h.RakennusValmisT - Historiajana.RakennusS - h.VaiheenAlku(i1475)) < 1e-9, "kivilinna nousee puuvarustuksen kohtauksessa RakennusS:ssä");
+            for (int i = 0; i < i1475; i++)
+            {
+                double a = h.VaiheenAlku(i), b = a + h.Vaiheet[i].KestoS - 0.6;
+                Oleta.Tosi(!h.LinnaNakyyT(b) && h.MaaNakyy(b), $"esihistoria {h.Vaiheet[i].Avain}: tyhjä saari, ei linnaa");
+                Oleta.Tosi(h.Vuosi(b) - h.Vuosi(a + 0.1) <= 1000, $"esihistoria {h.Vaiheet[i].Avain}: vuosi pysyy aikakaudessa");
+            }
+            Oleta.Tosi(h.Vuosi(h.VaiheenAlku(i1475 - 1) + 1) is >= 1323 and < 1400, "1323 näkyy vuotena");
+            Oleta.Tosi(h.Vuosi(h.Kesto - 0.01) >= 1976, "lopussa nykyasu");
+            int rivit = 0; foreach (var v in h.Vaiheet) if (v.Kertoja && v.KertojaAvain != null) rivit++;
+            Oleta.Sama(4, rivit);
+            double Kesto(HistoriaOsa o) { double a = -1, b = -1; for (double t = 0; t < h.Kesto; t += 0.05) { double k = Historiajana.Kasvu(h.Vuosi(t), o); if (k > 0 && a < 0) a = t; if (k >= 1 && b < 0) b = t; } return b - a; }
+            Oleta.Tosi(Kesto(Historiajana.Osa("b1499-paksu-bastioni")) >= 1.0, $"Paksu bastioni kasvaa näkyvästi ({Kesto(Historiajana.Osa("b1499-paksu-bastioni")):F1} s)");
+            for (double t = 0, ed = double.MinValue; t < h.Kesto; t += 0.1) { double y = h.Vuosi(t); Oleta.Tosi(y >= ed - 1e-9, "vuosi ei palaa taaksepäin"); ed = y; }
+        }
+
+        /// <summary>Esittely jatkaa saapumiskaaren loppuasennosta: AsentoSijainnista on Kameraliike.AsentoSijainnin käänteinen, ja kamerakäyrä
+        /// alkaa annetusta asennosta (AsetaAlku + atsimuuttisiirto).</summary>
+        [Testi] static void EsittelyJatkaaKamerasta()
+        {
+            var keski = new V3(3, 1, -4);
+            foreach (var (a, k, e) in new[] { (0.0, 20.0, 80.0), (135.0, 35.0, 120.0), (300.0, 10.0, 60.0) })
+            {
+                var (sij, _) = Kameraliike.AsentoSijainti(new Asento(keski, a, k, e, 50, 0));
+                var (a2, k2, e2) = Historiajana.AsentoSijainnista(sij, keski);
+                Oleta.Tosi(Math.Abs(a2 - a) < 1e-6 && Math.Abs(k2 - k) < 1e-6 && Math.Abs(e2 - e) < 1e-6, $"käänteinen ({a2:F2}, {k2:F2}, {e2:F2})");
+            }
+            var h = new Historiajana(new[] { new HistoriaVaihe(1477, 5, 20, 2.0) { Atsimuutti = 25 } }, 1480) { AlkuAtsimuutti = 0 };
+            h.AsetaAlku(18, 2.5);
+            var p = h.Kamera(0, keski, 40, 210);
+            Oleta.Tosi(Math.Abs(p.Atsimuutti - 210) < 1e-9 && Math.Abs(p.Korkeus - 18) < 1e-9 && Math.Abs(p.Etaisyys - 100) < 1e-9, "alku = kameran asento");
+            Oleta.Tosi(Math.Abs(h.Kamera(5, keski, 40, 210).Atsimuutti - 235) < 1e-9, "kierto suhteellinen");
+        }
     }
 }

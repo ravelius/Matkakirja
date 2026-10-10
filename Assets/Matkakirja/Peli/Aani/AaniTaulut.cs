@@ -150,6 +150,13 @@ namespace Matkakirja.Peli
         public string Lauta = "maailmankartta";
         public string MusiikinPaate = "-lyria";
         public string Pohjaraita = "musa-pohja";
+        /// <summary>
+        /// KARTALLA VAIN KAUPUNGIN OMA KAPPALE (omistaja 10.10.2026, PT 11.1x; web kaupunkimusiikki.js KARTTA_VAIN_KAUPUNKI):
+        /// kartalta pois alueraidat, maanosaraidat, pohjavire, saapumistunnukset ja matkan siirtymäraidat; muualla kartalla
+        /// kuuluu vain äänimaisema. Pariisin kaupunkijakso säilyy (tausta ilman omaa raitaa = hiljaisuus, ei pohjavirettä).
+        /// Tilaraidat, aiheet ja linssien raidat eivät muutu. false = vanha ketju (alue → maanosa → pohja).
+        /// </summary>
+        public bool KarttaVainKaupunki = true;
         /// <summary>TILARAIDAT prioriteettijärjestyksessä (nimi, tunnus).</summary>
         public List<(string Nimi, string Tunnus)> Tilaraidat = new List<(string, string)>();
         /// <summary>

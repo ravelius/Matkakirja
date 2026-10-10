@@ -217,6 +217,8 @@ namespace Matkakirja.Natiivi
             float lev = kerros.Juuri(kerrosNro).layout.width;
             float k = lev > 1f && !float.IsNaN(lev) ? Screen.width / lev : 1f;   // pikseliä pisteessä
             nahdyt.Clear();
+            // EnhancedTouch on päällä vain PalloKierron aikana (6.7: ilman sitä activeTouches heittää joka ruudussa, esim. asettelutestin kohtaus).
+            if (!UnityEngine.InputSystem.EnhancedTouch.EnhancedTouchSupport.enabled) { if (kasittelySormi >= 0) LopetaKasittely(); sormet.Clear(); return; }
             foreach (var t in Kosketus.activeTouches)
             {
                 int id = t.touchId;

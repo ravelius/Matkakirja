@@ -106,6 +106,29 @@ rm -f "$D"/{linssi,ui}-komento.txt "$D"/ui-puu*.json(N)
 : > $LOKI
 xcrun simctl launch --terminate-running-process --stdout=$LOKI --stderr=$VLOKI $UDID $BID >/dev/null || { kirjaa "käynnistys epäonnistui"; exit 5; }
 
+# JÄÄTYMISVAHTI (Pelikoodari 10.10.2026, PT 10.3x): aamun ajoissa appi jäätyi testikomennon äänipalvelinkutsuun ilman
+# kaatumista (ei .ips:ää, loki vain loppui), eikä syytä nähty. Kun uusimpaan konsolilokiin on tullut pelin rivejä ja se on ollut
+# hiljaa 10 s (peli kirjaa kehysajat 5 s:n välein), otetaan sovelluksesta 5 s:n pinonäyte (sample) kerran hiljaisuutta kohden.
+jaatymisvahti() {
+  local loki m pid n=0 viim=""
+  while [[ -f $L/.vahti ]]; do
+    loki=$(ls -t $L/konsoli-stdout*.log 2>/dev/null | head -1)
+    if [[ -n $loki ]] && grep -a -q MATKAKIRJA $loki; then
+      m=$(stat -f %m $loki)
+      if (( $(date +%s) - m >= 10 )) && [[ $m != $viim ]]; then
+        pid=$(pgrep -f "$UDID/data/Containers/Bundle/Application/.*/${APP:t}/" | head -1)
+        if [[ -n $pid ]]; then
+          n=$(( n + 1 )); viim=$m
+          sample $pid 5 -file $L/pinonayte-$n.txt >/dev/null 2>&1
+          tulos 3 PUUTE "konsoli hiljaa $(( $(date +%s) - m )) s (jäätyminen?): pinonäyte pinonayte-$n.txt"
+        fi
+      fi
+    fi
+    sleep 2
+  done
+}
+touch $L/.vahti; jaatymisvahti & VAHTI_PID=$!; trap 'rm -f $L/.vahti' EXIT   # keskeytyskin pysäyttää vahdin
+
 rivit() { wc -l < $LOKI | tr -d ' '; }
 odota_rivi() {  # odota_rivi <regex> <s> <alkurivi> → 0 löytyi
   local i; for i in {1..$(( $2 * 4 ))}; do tail -n +$(( $3 + 1 )) $LOKI | grep -a -q -E -- "$1" && return 0; sleep 0.25; done; return 1
@@ -303,6 +326,7 @@ VERTAA
     *) kirjaa "tuntematon skenaariorivi: $rivi" ;;
   esac
 done < $SKEN
+rm -f $L/.vahti; wait $VAHTI_PID 2>/dev/null   # jäätymisvahti pois ennen sovelluksen sulkemista
 
 # --- 3 poikkeukset ---
 sleep 2

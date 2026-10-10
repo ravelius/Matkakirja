@@ -1368,7 +1368,7 @@ namespace Matkakirja.Natiivi
                 if (r.width <= 0 || r.height <= 0) return;
                 var p = mgc.painter2D;
                 p.lineWidth = 1f;
-                p.strokeColor = new Color(70 / 255f, 51 / 255f, 31 / 255f, 0.16f);
+                p.strokeColor = Tyylikirja.Kehys.MapInk16;
                 for (int i = 1; i < 4; i++)
                 {
                     float x = r.xMin + r.width * i / 4f;

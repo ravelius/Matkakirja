@@ -275,7 +275,8 @@ namespace Matkakirja.Natiivi
                         case "aluskerros": CesiumKaupunki.AluskerrosPakotettu = v != 0; break;
                         case "sininenhetki": KaupunkiIlmakeha.SininenHetki = v; break;
                         case "pilvet": KaupunkiIlmakeha.PilvetPakotettu = v != 0; break;   // LS2: pallon pilvikerros (kohta 6a), oletus kehityskaupungeissa
-                        case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; break;
+                        case "pilvipohja": KaupunkiIlmakeha.PilviKorkeusM = v; KaupunkiIlmakeha.PilviAsetettu = true; break;
+                        case "pilvi-ilmasto": KaupunkiIlmakeha.PilviIlmasto = v != 0; break;   // LS2 10.10.: METAR-pohja ja -paksuus kaupungeittain
                         case "kuuro": Matkakirja.Linssit.Kierros.KaupunkiKuuro.KasinVoima = v; break;   // LS2 9.10.: kuvapari (LS1:n kuurot automaattisesti)
                         case "markyys": Matkakirja.Linssit.Kierros.KaupunkiKuuro.AsetaMarkyys(v); break;
                         case "kaukoutu": KaupunkiIlmakeha.KaukoUtu = v; break;
@@ -283,8 +284,10 @@ namespace Matkakirja.Natiivi
                         case "kaukoutumitattu": KaupunkiIlmakeha.KaukoUtuMitattu = v; break;
                         case "apvoimamitattu": KaupunkiIlmakeha.ApVoimaMitattu = v; break;
                         case "aamusumu": KaupunkiIlmakeha.Aamusumu = v; break;
-                        case "pilvipaksuus": KaupunkiIlmakeha.PilviPaksuusM = v; break;
+                        case "pilvipaksuus": KaupunkiIlmakeha.PilviPaksuusM = v; KaupunkiIlmakeha.PilviAsetettu = true; break;
                         case "vesi": KaupunkiVesi.Pakotettu = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
+                        case "vesivari": KaupunkiVesi.Vari = v != 0; break;   // LS2 10.10.: mitattu veden väri (Sentinel-2)
+                        case "vesivarikerroin": KaupunkiVesi.VariKerroin = v; break;
                         case "vesinosto": KaupunkiVesi.NostoM = v; KaupunkiVesi.NostoAsetettu = true; break;
                         case "sumualku": AlkuKerroin = v; break;
                         case "sumuloppu": LoppuKerroin = v; break;
@@ -307,6 +310,8 @@ namespace Matkakirja.Natiivi
                         case "omavalo": CesiumOmatMallit.OmaValo = v != 0; break;   // LS2 9.10.: omien mallien valo (seuraava avaus)
                         case "omavalotus": CesiumOmatMallit.Valotus = v; break;
                         case "omavarjot": OmatVarjot.Paalla = v != 0; break;   // LS2 9.10.: omien mallien aurinkovarjot
+                        case "omaleivottu": KaupunkiIlmakeha.OmaLeivottu = v != 0; break;   // LS2 10.10.: omien mallien aurinko leivotusta suunnasta
+                        case "omaatsimuutti": KaupunkiIlmakeha.OmaAtsimuuttiPakotettu = v; break;
                         case "omavarjomatka": OmatVarjot.MatkaAsetettu = v; break;
                         case "omajulkisivu": CesiumOmatMallit.Julkisivu = v; break;
                         case "omahehku": CesiumOmatMallit.Hehku = v; break;

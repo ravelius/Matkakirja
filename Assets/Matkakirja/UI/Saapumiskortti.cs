@@ -12,8 +12,9 @@
 // #46331f, kirjasin --font-type (American Typewriter), palsta min(30rem, 100 % − 2rem), arkin sisennys 1,5rem.
 // Arkki: --paper #efdcb4 ja --paper-noise (140 × 140, tavallinen sekoitus). Arkki nielee napautukset.
 // Webissä arkki peittää vain karttaruudun (mapPane), ei yläpalkkia (mitattu 393 × 852: MATKAKIRJA-palkki ja
-// napit näkyvät arkin yllä), joten natiivissa arkki alkaa yläpalkin alareunasta. Yläpalkki palaa lennon
-// piilosta, kun lento päättyy (UiNakymat.LentoPiilo, LennonVaihe.Perilla).
+// napit näkyvät arkin yllä). OMISTAJA TF 176 (10.10.2026, PT 12.2x): "ATEENA · PÄIVÄ 1/80" -paperin yllä näkyi ~120 pt:n
+// kaistale karttaa (nimiöt, nosto, haku ja ☰) → natiivissa arkki peittää koko ruudun yläreunaa myöten (Traileri-kerros on
+// yläpalkin ja nostojen yllä).
 using System;
 using System.Text.RegularExpressions;
 using UnityEngine;
@@ -36,7 +37,6 @@ namespace Matkakirja.Natiivi
         };
 
         readonly VisualElement arkki;
-        readonly Func<float> ylapalkinAlareuna;
         readonly Label teksti;
         readonly System.Random arpa = new System.Random();
         IVisualElementScheduledItem ajo;
@@ -47,9 +47,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Viimeksi kirjoitettu teksti (testikomento).</summary>
         public string Teksti { get; private set; }
 
-        public Saapumiskortti(UiKerros kerros, Func<float> ylapalkinAlareuna)
+        public Saapumiskortti(UiKerros kerros)
         {
-            this.ylapalkinAlareuna = ylapalkinAlareuna;
             arkki = Rakenne.El("mk-saapumiskortti", kerros.Juuri(UiKerros.Traileri));
             Kuviot.AsetaVerho(arkki);
             arkki.style.display = DisplayStyle.None;
@@ -71,7 +70,7 @@ namespace Matkakirja.Natiivi
             Auki = true;
             Teksti = rivi;
             arkki.BringToFront();
-            arkki.style.top = ylapalkinAlareuna?.Invoke() ?? 0f;
+            arkki.style.top = 0f;   // koko ruutu yläreunaa myöten (omistaja TF 176)
             arkki.style.display = DisplayStyle.Flex;
             arkki.style.transitionDuration = new StyleList<TimeValue>(new System.Collections.Generic.List<TimeValue> { new TimeValue(SisaanMs, TimeUnit.Millisecond) });
             arkki.style.opacity = 0f;

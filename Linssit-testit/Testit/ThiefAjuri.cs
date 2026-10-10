@@ -12,6 +12,11 @@ namespace Matkakirja.Linssit.Testit
     {
         const double Dt = Huonesimulaatio.Dt, MaxOdotus = 42, LaajaOdotus = 65, OdotusAskel = 0.5, Jalkeen = 0.5, PiiloSade = 5, PukeutuminenS = 2;
         static int loppuK;
+        // Rauhallinen ylitys (PT 10.10. 10.1x, v46z): pisteestä 69 lähdetään vasta, kun kukaan ei epäile (Huonesimulaatio.Vaara), ja ylitys
+        // keskeytyy, jos joku alkaa epäillä. Syy: v46z:n kappeli-kavely alkaa y 8,6:sta (v46w 8,2), joten portaat-vartija tulee portailta
+        // pelaajan osaan kirkkotorni-portaat jo y 8,5:ssä, näkee pisteessä 69 odottavan pelaajan ja etsii; vaaran aikana osarajan ylitys 69 → 70
+        // ei tee tarkistuspistettä (peli toimii oikein), jolloin kiinni 70 palaisi Tott-kammioon eikä komeroon. Joukossa kohdeindeksit: 69 = reitti:pelaaja-70.
+        static readonly HashSet<int> RauhallinenYlitys = new HashSet<int> { 69 };
 
         sealed class Suunnitelma { public KavelyMerkki Piilo, Esine; public (double X, double Y, double Z) Kohde; public double Odotus; public bool Hiipii; public Huonesimulaatio Tulos; public double Aika; }
 
@@ -32,9 +37,10 @@ namespace Matkakirja.Linssit.Testit
         }
 
         /// <summary>Liikkuu kohteeseen; tarkka = keskeytä heti, jos joku epäilee.</summary>
-        static bool Kulje(Huonesimulaatio w, (double X, double Y, double Z) q, bool hiipii, bool tarkka, int kiinni0)
+        static bool Kulje(Huonesimulaatio w, (double X, double Y, double Z) q, bool hiipii, bool tarkka, int kiinni0, bool rauha = false)
         {
-            for (int i = 0; i < 6000; i++) { if (w.Askel(q, hiipii)) return true; if (tarkka && !Turvallinen(w, kiinni0)) return false; }
+            if (rauha && w.Vaara()) return false;
+            for (int i = 0; i < 6000; i++) { if (w.Askel(q, hiipii)) return true; if (tarkka && !Turvallinen(w, kiinni0) || rauha && w.Vaara()) return false; }
             return false;
         }
 
@@ -48,7 +54,7 @@ namespace Matkakirja.Linssit.Testit
         static List<Suunnitelma> Ehdokkaat(Huonesimulaatio w, int k, bool laaja = false)
         {
             double maxOdotus = laaja ? LaajaOdotus : MaxOdotus;
-            var q = Huonesimulaatio.Reitti[k]; var ulos = new List<Suunnitelma>(); int k0 = w.Kiinni;
+            var q = Huonesimulaatio.Reitti[k]; var ulos = new List<Suunnitelma>(); int k0 = w.Kiinni; bool rauha = RauhallinenYlitys.Contains(k);
             var piilot = new List<KavelyMerkki> { null };
             foreach (var m in Huonesimulaatio.Data.Lajia("piilo"))
                 if (m.Y > Math.Min(w.PY, q.Y) - 1.5 && m.Y < Math.Max(w.PY, q.Y) + 1.5 && (Huonesimulaatio.Etaisyys2(m.X, m.Z, w.PX, w.PZ) < PiiloSade || Huonesimulaatio.Etaisyys2(m.X, m.Z, q.X, q.Z) < PiiloSade)) piilot.Add(m);
@@ -91,7 +97,7 @@ namespace Matkakirja.Linssit.Testit
                         {
                             if (odotus - viime < (laaja ? viime * 0.5 + 1.5 : 1.5)) { if (!OdotaS(pohja, OdotusAskel, odottaaHiipien, true, k0)) break; continue; }
                             var koe = pohja.Kopioi(); koe.Seuraava = k;
-                            if (Kulje(koe, q, hiipii, true, k0))
+                            if (Kulje(koe, q, hiipii, true, k0, rauha))
                             {
                                 bool naamio = koe.Naamio; koe.Toiminnot();
                                 bool puki = koe.Naamio && !naamio;   // pukeutuminen 2 s seisten (pelattavuusmalli 8.2 huone 6)

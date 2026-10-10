@@ -31,7 +31,10 @@ namespace Matkakirja.Natiivi
         bool lopeta;
 
         /// <param name="vaiheJuuri">Paketin blender-kansio (LR v45y: blender/vaiheet/vaiheet.json); null = ei vaihemalleja.</param>
-        public static void Aloita(Transform kamera, Action valmis = null, Action<string> kirjaa = null, string vaiheJuuri = null, Func<string, string> url = null)
+        /// <param name="jana">Aikajana (oletus Historiajana.Olavinlinna; esittely: Historiajana.Esittely).</param>
+        /// <param name="jatkaKamerasta">Kamerakäyrä alkaa kameran nykyisestä asennosta (esittely saapumiskaaren jälkeen, ei hyppyä).</param>
+        public static void Aloita(Transform kamera, Action valmis = null, Action<string> kirjaa = null, string vaiheJuuri = null, Func<string, string> url = null,
+            Historiajana jana = null, bool jatkaKamerasta = false)
         {
             if (kamera == null) { valmis?.Invoke(); return; }
             Lopeta();
@@ -42,7 +45,7 @@ namespace Matkakirja.Natiivi
             ajossa.vaiheetKesken = vaiheJuuri != null && nayttamo != null;
             if (ajossa.vaiheetKesken)
                 ajossa.StartCoroutine(SeikkailuVaiheet.Lataa(vaiheJuuri, url ?? (s => s), nayttamo.transform, kirjaa, v => { if (ajossa != null && !ajossa.lopeta) { ajossa.vaiheet = v; ajossa.vaiheetKesken = false; } else v.Tuhoa(); }));
-            ajossa.StartCoroutine(ajossa.Aja(kamera, kirjaa));
+            ajossa.StartCoroutine(ajossa.Aja(kamera, kirjaa, jana ?? Historiajana.Olavinlinna, jatkaKamerasta));
         }
 
         SeikkailuVaiheet vaiheet;
@@ -57,16 +60,18 @@ namespace Matkakirja.Natiivi
         /// <summary>Historian kertoja puhuu (loppumusiikin väistö).</summary>
         public static bool KertojaSoi => ajossa != null && ajossa.kertoja != null && ajossa.kertoja.isPlaying;
 
-        static string KertojaUrl(HistoriaVaihe v)
+        string KertojaUrl(HistoriaVaihe v)
         {
-            if (v?.Avain == null) return null;
-            string sha = Kieli.T("olavinlinna.historia." + v.Avain + ".kertoja.aani");   // puuttuva → avain itse (≠ 32 merkkiä)
+            string avain = v?.KertojaAvain ?? v?.Avain;
+            if (avain == null) return null;
+            if (jana?.KertojaJuuri != null) return jana.KertojaJuuri + avain + ".mp3";   // esittely: Pelikoodarin vaihe-esittely-v2
+            string sha = Kieli.T("olavinlinna.historia." + avain + ".kertoja.aani");   // puuttuva → avain itse (≠ 32 merkkiä)
             return sha.Length == 32 ? PuluChat.Palvelin + "/opas/aani/" + sha + ".mp3" : null;
         }
 
         IEnumerator HaeKertoja(int i, HistoriaVaihe v)
         {
-            if (!kertojaHaettu.Add(i)) yield break;
+            if (v == null || !v.Kertoja || !kertojaHaettu.Add(i)) yield break;   // esittely: ei kertojaa (ei turhia hakuja)
             string url = KertojaUrl(v); if (url == null) yield break;
             using var q = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
             ((DownloadHandlerAudioClip)q.downloadHandler).compressed = true;
@@ -217,27 +222,43 @@ namespace Matkakirja.Natiivi
 
         public static void Lopeta() { if (ajossa != null) ajossa.lopeta = true; }
 
-        IEnumerator Aja(Transform kamera, Action<string> kirjaa)
+        Historiajana jana;
+
+        IEnumerator Aja(Transform kamera, Action<string> kirjaa, Historiajana h, bool jatkaKamerasta)
         {
-            var h = Historiajana.Olavinlinna;
+            jana = h;
             var cam = kamera.GetComponent<Camera>();
             float alkuFov = cam != null ? cam.fieldOfView : 60f;
             bool kameraVapaa = DioraamaSovitin.KameraVapaa;
             DioraamaSovitin.KameraVapaa = true;
             bool kasvu = SeikkailuKavely.LeikkauksetPaalla;
             var keski = new Matkakirja.Linssit.Dioraama.V3(SeikkailuNousu.LinnaKeskiUnity.x, SeikkailuNousu.LinnaKeskiUnity.y, -SeikkailuNousu.LinnaKeskiUnity.z);
-            kirjaa?.Invoke($"seikkailu: historia alkaa ({h.Kesto:F0} s, {h.Vaiheet.Count} vaihetta, kasvu {(kasvu ? "leikkauksin" : "ei kävelydataa")}{(Historiajana.Lukittu ? "" : ", vuodet alustavia")})");
+            double siirto = AlkuAtsimuutti;
+            if (jatkaKamerasta)
+            {
+                var p = kamera.position;
+                var (az, kor, et) = Historiajana.AsentoSijainnista(new Matkakirja.Linssit.Dioraama.V3(p.x, p.y, -p.z), keski);
+                h.AsetaAlku(Math.Max(8, Math.Min(40, kor)), Math.Max(1.4, Math.Min(3.5, et / Math.Max(1, SeikkailuNousu.LinnaSade))));
+                siirto = az - h.AlkuAtsimuutti;
+            }
+            kirjaa?.Invoke($"seikkailu: historia alkaa ({h.Nimi}, {h.Kesto:F0} s, {h.Vaiheet.Count} vaihetta, kasvu {(kasvu ? "leikkauksin" : "ei kävelydataa")}{(Historiajana.Lukittu ? "" : ", vuodet alustavia")})");
             yield return HaeKertoja(0, h.Vaiheet[0]);   // ensimmäinen rivi ennen alkua (puuttuva → heti eteenpäin)
             // Vaihemallit valmiiksi ennen alkua (tyhjä saari näkyy heti, linna ei katoa tyhjään veteen); enintään 10 s.
             for (float odotus = 0; vaiheetKesken && odotus < 10f && !lopeta; odotus += Time.unscaledDeltaTime) yield return null;
             float alku = Time.unscaledTime;
             int vaihe = -1; double seurLoki = 0;
             HistoriaVaihe nakyva = null;
+            // Linna suljettu kesken historian (Natiiviseppä 10.10., iPad-muistiajo 177: kamera tuhottu → NullReferenceException
+            // kamera.positionissa, siivous jäi ajamatta ja ajossa päälle → Kaynnissa aina true, KameraVapaa ja VainVuosileikkaukset päällä):
+            // tuhottu kamera päättää silmukan, ja siivous ajetaan finallyssä myös poikkeuksessa.
+            try
+            {
             while (!lopeta)
             {
+                if (kamera == null) { kirjaa?.Invoke("seikkailu: historia: kamera tuhottu (linna suljettu), lopetetaan"); break; }
                 double t = Time.unscaledTime - alku;
                 if (t >= h.Kesto) break;
-                var (sij, kohde) = Kameraliike.AsentoSijainti(h.Kamera(t, keski, SeikkailuNousu.LinnaSade, AlkuAtsimuutti));
+                var (sij, kohde) = Kameraliike.AsentoSijainti(h.Kamera(t, keski, SeikkailuNousu.LinnaSade, siirto));
                 var s = DioraamaNayttamo.UnityPiste(sij);
                 kamera.position = s;
                 var suunta = DioraamaNayttamo.UnityPiste(kohde) - s;
@@ -287,6 +308,16 @@ namespace Matkakirja.Natiivi
                 if (kb != null && kb.escapeKey.wasPressedThisFrame) break;
                 yield return null;
             }
+            }
+            finally { Siivoa(kirjaa, kameraVapaa, kasvu, cam, alkuFov, alku); }
+        }
+
+        /// <summary>Historian loppusiivous (myös poikkeuksessa ja tuhotulla kameralla): jokainen vaihe erikseen, jotta ajossa nollautuu,
+        /// KameraVapaa palautuu ja valmis kutsutaan aina.</summary>
+        void Siivoa(Action<string> kirjaa, bool kameraVapaa, bool kasvu, Camera cam, float alkuFov, float alku)
+        {
+            try
+            {
             Avainsana = null;
             LinnaNakyviin(true);
             ValotLoppuun();   // historia päättyy: ei jätetä valoja himmeiksi (objekti tuhotaan)
@@ -299,12 +330,19 @@ namespace Matkakirja.Natiivi
             tasaisetRannat.Clear();
             if (kasvu) { SeikkailuKavely.AsetaHistoriaLeikkaukset(null); SeikkailuKavely.AsetaKasvu(null); }
             if (cam != null) cam.fieldOfView = alkuFov;
-            DioraamaSovitin.KameraVapaa = kameraVapaa;
-            kirjaa?.Invoke($"seikkailu: historia päättyi ({Time.unscaledTime - alku:F1} s)");
-            ajossa = null;
-            var v = valmis;
-            Destroy(gameObject);
-            v?.Invoke();
+            }
+            catch (Exception e) { Debug.LogException(e); }
+            finally
+            {
+                SeikkailuKavely.VainVuosileikkaukset = false;
+                Shader.SetGlobalVector(IdMustaKorvaus, Vector4.zero);
+                DioraamaSovitin.KameraVapaa = kameraVapaa;
+                kirjaa?.Invoke($"seikkailu: historia päättyi ({Time.unscaledTime - alku:F1} s)");
+                if (ajossa == this) ajossa = null;
+                var v = valmis; valmis = null;
+                Destroy(gameObject);
+                v?.Invoke();
+            }
         }
     }
 }

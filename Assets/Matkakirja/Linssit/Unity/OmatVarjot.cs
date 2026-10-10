@@ -1,5 +1,5 @@
 // OMIEN MALLIEN AURINKOVARJOT (LS2 9.10.2026; PT: "toimivat aurinkovarjot poistaisivat litteyden kaikista omista malleista").
-// Kaupunkinäkymän oma suuntavalo _IlmAurinko-suunnassa (kaupungin aurinko, ei kartan kameraa seuraavaa valoa) kaupungin kerroksessa
+// Kaupunkinäkymän oma suuntavalo _OmaAurinko-suunnassa (kaupungin aurinko laattojen leivotulla atsimuutilla, LS2 10.10., ei kartan kameraa seuraavaa valoa) kaupungin kerroksessa
 // ja vain sitä valaisemassa; muilta suuntavaloilta (kartan "Valo") kaupungin kerros pois cullingMaskista, väri ja voima kirkkaimmasta.
 // JUURISYY (KOE google-tyyli c166e6799, raportti docs/raportit/varjot-juurisyy-20261009.md): PalloKierron kaukotaso "etäisyys + maapallon
 // halkaisija" (12 757 km, lähi 50 m) romahdutti URP:n kaskadit lähitason kokoisiksi (säde 29 m) → ei varjoja. Varjojen ajaksi kaupunki-
@@ -24,13 +24,13 @@ namespace Matkakirja.Linssit
         static readonly List<(Light valo, int maski)> rajatut = new List<(Light, int)>();
         static Transform juuri; static bool kytketty;
         static Camera kaukoKamera; static float kaukoAlku = -1f, kaukoAsetettu = -1f;
-        static readonly int IdIlmAurinko = Shader.PropertyToID("_IlmAurinko");
+        static readonly int IdOmaAurinko = Shader.PropertyToID("_OmaAurinko");
 
         /// <summary>Joka kehys (CesiumOmatMallit.Kamera): omien mallien juuri ja onko malleja.</summary>
         public static void Paivita(Transform mallienJuuri, bool malleja, System.Action<string> kirjaa)
         {
             juuri = mallienJuuri;
-            Vector4 a = Shader.GetGlobalVector(IdIlmAurinko);
+            Vector4 a = Shader.GetGlobalVector(IdOmaAurinko);
             if (!Paalla || !malleja || juuri == null || a.y <= 0.02f) { Pois(); return; }   // yöllä ei suoraa aurinkoa
             int kerros = juuri.gameObject.layer, bitti = 1 << kerros;
             if (aurinko == null)

@@ -640,6 +640,13 @@ namespace Matkakirja.Natiivi
         /// <summary>UI rauhassa (Ruudunpaivitys.UiRauhassa): piilotettu UI tai ei muutosta RauhaS-aikaan.</summary>
         public bool Rauhassa() => !nakyvissa || Time.unscaledTime - viimeMuutos >= RauhaS;
 
+        /// <summary>
+        /// Käsin ajettu hidas UI-liike (Latauskuva 33 ms): muutos kirjataan itse, jotta Ruudunpaivitys pysyy LEPO-tilassa (30 fps, piirto
+        /// joka kehys) eikä harvenna piirtoa PAIKALLAAN-väliin. Omistaja TF 176 (6.7): pallo ei liikkunut, vaikka rotate/translate
+        /// päivittyi — pelkkä muunnos ei välttämättä merkitse paneelia likaiseksi (IPanel.isDirty).
+        /// </summary>
+        public void MerkitseMuutos() => viimeMuutos = Time.unscaledTime;
+
         void TransitioAlkoi(TransitionRunEvent e)
         {
             transitioita++;

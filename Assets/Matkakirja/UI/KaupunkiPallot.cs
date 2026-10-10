@@ -182,12 +182,14 @@ namespace Matkakirja.Natiivi
             foreach (var p in pallot)
             {
                 bool oma = KaupunkiPalloMitat.Nakyy(PallonMaa(p), maa, kaikki);
+                // Maailmanäkymässä muiden maiden pallot paljon pienempinä (omistaja 10.10. 11.5x); kohdemaan pallot ennallaan.
+                float pk = KaupunkiPalloMitat.KokoMaassa(koko, PallonMaa(p), maa, kaikki);
                 p.Peitto = ErikoisnostoMitat.Haivytys(p.Peitto, oma, Time.unscaledDeltaTime, kesto);
                 // Karttapiste ruudulle; false = pallon takana tai ruudun ulkopuolella. Muu maa: piilossa, kun häivytys on ohi.
                 if (p.Peitto <= 0f || !kierto.RuutuPiste(p.Lat, p.Lon, out var r)) { Nayta(p, false); continue; }
                 var q = juuri.WorldToLocal(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y)));
-                if (!KaupunkiPalloMitat.Ruutupaikka(q.x, q.y, koko, W, H, out float x, out float y)) { Nayta(p, false); continue; }
-                if (!p.PuoliPaatetty && p == lahin && KaupunkiPalloMitat.Oikealle(q.x, q.y, kk.x, kk.y, koko) is bool oikea)
+                if (!KaupunkiPalloMitat.Ruutupaikka(q.x, q.y, pk, W, H, out float x, out float y)) { Nayta(p, false); continue; }
+                if (!p.PuoliPaatetty && p == lahin && KaupunkiPalloMitat.Oikealle(q.x, q.y, kk.x, kk.y, pk) is bool oikea)
                 {
                     p.PuoliPaatetty = true;
                     if (oikea != p.Oikea) { p.Oikea = oikea; ((PalloNappi)p.Nappi).Oikea = oikea; p.Kuva.style.scale = new Scale(new Vector3(oikea ? -1f : 1f, 1f, 1f)); }
@@ -195,8 +197,8 @@ namespace Matkakirja.Natiivi
                 }
                 p.Nappi.style.left = x;
                 p.Nappi.style.top = y;
-                p.Nappi.style.width = koko;
-                p.Nappi.style.height = koko;
+                p.Nappi.style.width = pk;
+                p.Nappi.style.height = pk;
                 p.Nappi.style.opacity = p.Peitto;
                 p.Nappi.pickingMode = oma ? PickingMode.Position : PickingMode.Ignore;   // pois häivyttyvää ei napauteta
                 Nayta(p, true);
