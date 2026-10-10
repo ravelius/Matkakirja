@@ -12176,3 +12176,7 @@ Sisältökirjurin faktapohja (olavinlinna-esihistoria-faktapohja-20261010.md, #4
 ## JUNA 175 KUITTAUKSET, KARTIOKATOT JA PULU 24 (PT 10.10.2026 klo 07.3x) (10.10.2026 klo 07.45)
 
 Kuitattu 175: Siirtoseppä esittely-1499 19028f893 (esittely nykyasussa v46w c6aac9f0680488a6; valkoinen kallio oli 1499-asun koodivirhe ja poistui; syke pysyy nopeana kokin nähdessä + 3 s, −18,2 LUFS / −1,8 dBTP) ja Pelikoodari pulu-maat-23 078f8e8a4 (23 maata, tavu tavulta = pilvihaarat). Nykyasun tornien kartiokatot puuttuvat, koska v46-paketin kuori on 1499-asussa → LR tekee nykyasun kuoren kartioineen (~08.30, pohjana v46p:n tornit ja v46v:n seinät) ja esihistorian 4 mallia (kalliomaalaus, kota + nuotio, kaksi venettä, kaskisavu) samaan pakettiin; Siirtoseppä vaihtaa kiinnityksen ennen 175:n lukitusta. Pulu: HUN, CHE, GBR, UKR, LVA ja LTU viety (24 maata), RUS valmis pilvessä f693cfad7 → Sisältökirjurin pistokoe.
+
+## TF 175 TÄNÄÄN 6.7-VAIHDON JÄLKEEN (omistaja 10.10.2026 klo 07.4x) (10.10.2026 klo 07.46)
+
+Omistaja heti Unity 6.7 -päätöksen perään: "ja julkaise uusi juna kun muutokset tehty" → juna 175 lähtee TestFlightiin tänään heti, kun 175-runko on siirretty 6.7:ään (päivän kolmas TF omistajan pyynnöstä; TF-raja 2/pv väistyy, Raamattu KÄÄNNÖKSET HARVEMMIN "ellen itse toisin pyydä"). Ehdot: automaattiset testit 6.7:llä, käännös ja iPad Pro 13:n Release-muistiajo läpi (MUISTIAJO ENNEN TESTFLIGHTIÄ; moottorin vaihto on renderöintimuutos). Juna = lukitushetken kuitatut; LR:n nykyasun kartiokuori mukaan vain, jos ehtii.
