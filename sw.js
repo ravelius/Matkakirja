@@ -310,6 +310,8 @@ const SHELL = [
   // Avaruuden tähdet ja pöly (7.9.2026): kertomusesityksen musta alku.
   './js/pallolauta/tahdet.js',
   './js/pallolauta/nimet.js',
+  // Pääkaupunkipisteet pallolle (PT 10.10.2026, suositus A).
+  './js/pallolauta/paakaupunkipisteet.js',
   // Saman aiheen nostot yhdeksi merkiksi ja viuhka napautuksesta
   // (PAATOKSET 27): nostot.js:n oma alimoduuli, samaa polkua kuin muu
   // pallolauta eikä yhden tiedoston niputuksessa.

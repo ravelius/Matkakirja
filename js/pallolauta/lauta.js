@@ -142,6 +142,7 @@ import {
 import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
+import { paakaupunkipisteet } from './paakaupunkipisteet.js';
 import { luoLinssit } from './linssit.js';
 import { glLuokat, glNimiotKaytossa, luoNimiokerrosGL, rasteroiTeksti } from '../pallonimiot-gl.js';
 import { luoGlNimiosovitin } from './glnimiot-sovitin.js';
@@ -2083,6 +2084,13 @@ export async function avaaPallolauta(ui) {
   /** Laudan kaupunki tunnuksella (lähtövalinnan kohteet, ks. aloitusKohteet). */
   const packKaupunki = new Map((pack?.cities ?? []).map((c) => [c.id, c]));
   /*
+   * PÄÄKAUPUNKIPISTEET (js/pallolauta/paakaupunkipisteet.js): laudan ulkopuoliset
+   * kevyet pisteet kerran. Ne kulkevat samassa piste- ja nimijoukossa kuin laudan
+   * kaupungit (`kaupungit`, nimet `lisakaupungit`), mutta pelikaupungin toiminnot
+   * ohittavat ne (`k.pk`): ei liuskaa, ei siirtoa, napautus avaa maalehden.
+   */
+  const paakaupungit = pack?.id === PALLO_LAUTA ? paakaupunkipisteet(PALLO_LAUTA, new Set(packKaupunki.keys())) : [];
+  /*
    * MAAN NIMISET KAUPUNGIT (Islanti, Luxemburg …) kerran laudan
    * datasta: niille kaupunkijäsenyys on pelkkä etäisyys, ei nimitesti
    * (js/pallolauta/kaupunkiliuska.js onMaanNiminenKaupunki).
@@ -2190,7 +2198,7 @@ export async function avaaPallolauta(ui) {
   const peliUudestaan = () => { const l = glSovitin?.viimeisetPeli(); if (l) merkit.aseta('peli', l, { haivyta: false }); };
   if (glSovitin) pelinJako = (lista) => glSovitin.peli(lista, peliUudestaan);
   const nimet = luoNimet({
-    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin,
+    ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack, glSovitin, lisakaupungit: paakaupungit,
   });
   /*
    * ══ RUUDUN KALUSTEET OVAT LISTAN KOVIA ESTEITÄ ══════════════════
@@ -2305,7 +2313,7 @@ export async function avaaPallolauta(ui) {
      * ripustuvan tyhjaan. Tasta kerros saa kaupungin pisteen: se
      * laskee kaupungin sisaiset nostot (kohta 3) ja ripustaa liuskan.
      */
-    laudanKaupungit: () => kaupungit.map((k) => ({
+    laudanKaupungit: () => kaupungit.filter((k) => !k.pk).map((k) => ({
       // Pallon kaupungin nimikentta on `n` (js/pallo.js pallonKaupungit).
       id: k.id, nimi: k.n, lat: k.lat, lng: k.lon,
       maanNimi: maanNimisetKaupungit.has(k.id),
@@ -2736,6 +2744,7 @@ export async function avaaPallolauta(ui) {
     if (avain === rajausAvain) return rajausJoukko;
     const joukko = new Set();
     for (const id of Object.keys(taulu)) if (taulu[id] === iso) joukko.add(id);
+    for (const k of paakaupungit) if (k.maa === iso) joukko.add(k.id);
     if (oma) joukko.add(oma);
     for (const id of kohdeIdt) joukko.add(id);
     rajausAvain = avain;
@@ -2766,7 +2775,7 @@ export async function avaaPallolauta(ui) {
    * pelaajalla, mutta ne pelin kaupungit, joita pelaaja ei nyt näe, piirretään himmeinä pisteinä (peitto 40 %, sama
    * koko, ei nimeä) ja niiden napautus on maailmatilan hyppy. Lennolla ja lähtövalinnassa ei himmeitä.
    */
-  const himmeaPiste = (k) => kehittajanPelaajanakyma() && !ui.katselu && !lento && !aloitusNakyvat()
+  const himmeaPiste = (k) => !k.pk && kehittajanPelaajanakyma() && !ui.katselu && !lento && !aloitusNakyvat()
     && !pisteNakyy(k);
 
   /**
@@ -2816,6 +2825,13 @@ export async function avaaPallolauta(ui) {
      * jossa drawTargets piirtää radiotilassa vain radion napit.
      */
     if (ui.radioPaalla?.()) return false;
+    // Pääkaupunkipiste ei ole pelikaupunki: napautus avaa maan maalehden (ks. paakaupunkipisteet.js).
+    if (k.pk) {
+      if (ui.game.phase === 'pickstart') return false;
+      heraa();
+      ui.avaaMaalehti?.(k.maa);
+      return true;
+    }
     const city = laudanKaupunki(k);
     if (!city) return false;
     // Himmeä kohdekaupunki (pelaajan näkymä): napautus on maailmatilan hyppy, kamera seuraa teleporttihaarassa.
@@ -5188,11 +5204,11 @@ export async function avaaPallolauta(ui) {
     // Kaupungit kerran; käyntitieto päivitetään SAMOIHIN olioihin, jotta
     // Globe.gl siirtää värin tweenillä eikä luo 261 pistettä uudestaan.
     if (!kaupungit.length) {
-      kaupungit = pallonKaupungit(pack, kaydyt);
+      kaupungit = [...pallonKaupungit(pack, kaydyt), ...paakaupungit];
       kaupunkiId.clear();
       for (const k of kaupungit) kaupunkiId.set(k.id, k);
     } else {
-      for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
+      for (const k of kaupungit) if (!k.pk) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
     /*
