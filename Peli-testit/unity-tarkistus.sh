@@ -19,14 +19,17 @@
 # Poistumiskoodi = virheiden määrä (0 = kaikki kääntyy).
 set -e
 cd "$(dirname "$0")"
-U=/Applications/Unity/Hub/Editor/6000.3.24f1
+# Editori ja versiomääritteet projektin ProjectVersion.txt:n mukaan (Julkaisija 10.10.2026, omistaja: 6.7 päälinjaksi).
+U=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh --hakemisto "$(git rev-parse --show-toplevel)") || exit 2
+UVER_DEF=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh --maaritteet "$(git rev-parse --show-toplevel)") || exit 2
 S=$U/Unity.app/Contents/Resources/Scripting
-DN=$S/NetCoreRuntime/dotnet
-CSC="$S/DotNetSdkRoslyn/csc.dll"
+K63=/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/Resources/Scripting   # kääntäjäketju 6.3:sta (6.7:ssä eri rakenne)
+DN=$K63/NetCoreRuntime/dotnet
+CSC="$K63/DotNetSdkRoslyn/csc.dll"
 NS=$S/NetStandard
 IOS_MODUULIT=$U/PlaybackEngines/iOSSupport/Variations/il2cpp/Managed
 EDITORI_MODUULIT=$S/Managed/UnityEngine
-KIRJASTOT=${MATKAKIRJA_KIRJASTOT:-/Users/Shared/Claude/proto-3d/Matkakirja-proto/Library/ScriptAssemblies}
+KIRJASTOT=${MATKAKIRJA_KIRJASTOT:-$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh --kirjastot "$(git rev-parse --show-toplevel)")}   # saman Unity-version Library (6.7: CS0433 6.3-Librarylla)
 ASSETS=../Assets/Matkakirja
 ULOS=rakennus/unity
 VAROITUKSET=0
@@ -60,7 +63,7 @@ done
 
 YHTEISET="-nologo -noconfig -nostdlib -target:library -langversion:9.0 -nullable:disable -deterministic -utf8output
   -nowarn:0169,0649,0282,1701,1702"
-DEF_YHT="UNITY_6000_3_24;UNITY_6000_3;UNITY_6000;UNITY_5_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2023_1_OR_NEWER;UNITY_6000_0_OR_NEWER;UNITY_6000_1_OR_NEWER;UNITY_6000_2_OR_NEWER;UNITY_6000_3_OR_NEWER;ENABLE_INPUT_SYSTEM;ENABLE_UNITYWEBREQUEST;NET_STANDARD_2_0;NET_STANDARD_2_1;NET_STANDARD;NETSTANDARD;NETSTANDARD2_1;CSHARP_7_3_OR_NEWER;UNITY_IOS;UNITY_IPHONE;PLATFORM_IOS"
+DEF_YHT="$UVER_DEF;ENABLE_INPUT_SYSTEM;ENABLE_UNITYWEBREQUEST;NET_STANDARD_2_0;NET_STANDARD_2_1;NET_STANDARD;NETSTANDARD;NETSTANDARD2_1;CSHARP_7_3_OR_NEWER;UNITY_IOS;UNITY_IPHONE;PLATFORM_IOS"
 
 VIRHEITA=0
 kaanna() { # nimi loki csc-argumentit…

@@ -2,7 +2,8 @@
 # Prototyypin komentorivi. Käyttö: ./aja.sh luo | sim | xcode-sim | asenna-sim <UDID> | kaikki <UDID>
 set -e
 cd "$(dirname "$0")"
-UNITY="/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/MacOS/Unity"
+# Editori ja versiomääritteet projektin ProjectVersion.txt:n mukaan (Julkaisija 10.10.2026, omistaja: 6.7 päälinjaksi).
+UNITY=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh .) || exit 2
 mkdir -p tulokset
 case "$1" in
   luo)

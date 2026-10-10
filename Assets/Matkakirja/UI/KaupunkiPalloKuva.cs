@@ -121,8 +121,8 @@ namespace Matkakirja.Natiivi
             if (d != null) { d.renderPostProcessing = false; d.renderShadows = false; d.requiresDepthTexture = false; d.requiresColorTexture = false; }
             // Ei riisuta toisen kaupunkipallon (värillinen / kipsi) eikä päiden kameroilta (TF 167 -regressio 9.10.2026: kipsikamera
             // vei värillisen kameran kerroksen → Pariisin ja Tukholman pallo tyhjä).
-            AjattelijaPaat.OmatKamerat.Lisaa(kamera.GetInstanceID());
-            foreach (var c in Camera.allCameras) c.cullingMask = AjattelijaPaat.OmatKamerat.Maski(c.GetInstanceID(), c.cullingMask, AjattelijaPaat.Kerros);
+            AjattelijaPaat.OmatKamerat.Lisaa(kamera.GetHashCode());
+            foreach (var c in Camera.allCameras) c.cullingMask = AjattelijaPaat.OmatKamerat.Maski(c.GetHashCode(), c.cullingMask, AjattelijaPaat.Kerros);
             // Valo kuten päillä: ylhäältä ja edestä (kameran koordinaateissa x 0, y cos 58°, z sin 58°).
             float kor = 58f * Mathf.Deg2Rad;
             var valo = kg.transform.TransformDirection(new Vector3(0.35f, Mathf.Cos(kor), -Mathf.Sin(kor))).normalized;

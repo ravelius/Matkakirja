@@ -2672,7 +2672,7 @@
 
 .mk-karuselli__nimi {
     padding: 4px 6px 6px 6px;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli); /* oli 11 px (asteikon ulkopuolella, 10.10.2026) */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2751,7 +2751,7 @@
     position: absolute;
     bottom: 41px;
     translate: -50% 0;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli); /* oli 11 px (asteikon ulkopuolella, 10.10.2026) */
     letter-spacing: 6.36px; /* web 0.7px */
     white-space: nowrap;
     color: var(--tk-tumma-muste);
@@ -3179,7 +3179,7 @@
    viritetty kirkkaampana ja lihavana. */
 .mk-radiomerkki__nimi {
     position: absolute;
-    font-size: 11px;
+    font-size: var(--tk-koko-kapiteeli); /* oli 11 px (asteikon ulkopuolella, 10.10.2026) */
     color: var(--tk-kuulto-kulta-72);
     text-shadow: 0 1px 2px rgba(10, 6, 2, 0.9); /* väripoikkeus: text-shadow: varjon väri shorthandissa (var() text-shadow-arvossa testaamatta natiivissa) (Päätoimittaja 8.10.2026) */
     white-space: nowrap;

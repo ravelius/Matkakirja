@@ -15,7 +15,8 @@
 //    SatamaM → mono-3D-silmukka, enintään SuihkujaEnintaan kerrallaan, häivytys SuihkuHaivytysS kuten suihkulähteillä.
 //  KAHVILAT: kamera alle KorkeusRajaM ja kahviloita ≥ KahvilaVahintaan alle KahvilaSadeM:n → tausta kahvila-baari (baareja enemmistö
 //    tai kello ≥ BaariTunti tai < 4) tai kahvila-rauhallinen; taso tiheydestä ja korkeudesta. Maitovaahdotin lähimmästä cafésta
-//    alle MaitoM (3D), väli MaitoValiMinS–MaitoValiMaxS.
+//    alle MaitoM (3D), väli MaitoValiMinS–MaitoValiMaxS; astiat (kaupunki-pisteet-v1) samasta cafésta alle AstiaM, väli
+//    AstiaValiMinS–AstiaValiMaxS (oma Random: muut sekvenssit ennallaan).
 //  TORI: aukio (tori = 1 tai ala > ToriAlaM2) tai ulkotori (halli k = 0, marketplace) alle ToriM → tori-ulko etäisyyden mukaan;
 //    −6 dB, kun IHMISET soittaa sorinaa (ei päällekkäin liian kovaa).
 //  HALLIT: katettu halli alle HalliM ja kamera alle HalliKorkeusM → kauppahalli (marketplace) tai kauppakeskus (mall), −12 dB.
@@ -37,7 +38,8 @@ namespace Matkakirja.Linssit.Elava
         public const double SuihkuM = 120, SuihkuTaysiM = 15, SuihkuHiljaM = 170, SuihkuHaivytysS = 1.0;
         public const double SatamaM = 120, SatamaTaysiM = 20, SatamaHiljaM = 170;
         public const int SuihkujaEnintaan = 2, KahvilaVahintaan = 3;
-        public const double KahvilaSadeM = 80, KahvilaTaysiKorkeusM = 20, KahvilaHiljaKorkeusM = 80, BaariTunti = 18, MaitoM = 100, MaitoTaysiM = 15, MaitoValiMinS = 120, MaitoValiMaxS = 240;
+        public const double KahvilaSadeM = 80, KahvilaTaysiKorkeusM = 20, KahvilaHiljaKorkeusM = 80, BaariTunti = 18, MaitoM = 100, MaitoTaysiM = 15, MaitoValiMinS = 120, MaitoValiMaxS = 240,
+            AstiaM = 40, AstiaTaysiM = 8, AstiaValiMinS = 25, AstiaValiMaxS = 70;
         public const double ToriM = 120, ToriAlaM2 = 2000, ToriTaysiM = 40, ToriHiljaM = 160;
         public const double HalliM = 60, HalliKorkeusM = 80, HalliTaysiM = 25, HalliHiljaM = 100;
         public const double TaustaLiukuS = 2.5;
@@ -69,9 +71,10 @@ namespace Matkakirja.Linssit.Elava
         public double LahinKirkkoM = double.NaN, LahinToriM = double.NaN, LahinHalliM = double.NaN, KorkeusM = double.NaN;
         public int KahviloitaLahella, BaarejaLahella;
 
-        readonly Random rnd; readonly int siemen;
+        readonly Random rnd, rndAstia; readonly int siemen;
         HakuRuudukko kirkkoR, suihkuR, kahvilaR, toriR, halliR, laituriR;
-        double seuraavaKello = double.NaN, tasaKello = double.NaN, seuraavaMaito = double.NaN, nytS;
+        double seuraavaKello = double.NaN, tasaKello = double.NaN, seuraavaMaito = double.NaN, seuraavaAstia = double.NaN, nytS;
+        string edAstia;
         int edTunti = -1; string edKello;
         readonly Queue<(double T, int N, double X, double Z, string Tunnus)> lyonnit = new Queue<(double, int, double, double, string)>();
         /// <summary>Viimeisin tuntilyönti: kirkko, kello ja väli (diagnoosi).</summary>
@@ -81,7 +84,7 @@ namespace Matkakirja.Linssit.Elava
         readonly Dictionary<int, Suihku> suihkut = new Dictionary<int, Suihku>(), satamat = new Dictionary<int, Suihku>();
         readonly double[] tavoite = new double[TaustaTunnukset.Length];
 
-        public KaupunkiAanet(int siemen) { this.siemen = siemen; rnd = new Random(siemen); }
+        public KaupunkiAanet(int siemen) { this.siemen = siemen; rnd = new Random(siemen); rndAstia = new Random(siemen + 7); }
 
         /// <summary>Pisteet elävän kaupungin paketista: "kirkot" [{x, z}], "suihkulahteet" [{x, z}], "kahvilat" [{x, z, l}],
         /// "hallit" [{x, z, k, t}], "aukiot" [{x, z, ala, tori}] ja vesiliikenteen "reitit" (laiturit). Puuttuvat kentät ohitetaan.</summary>
@@ -145,8 +148,8 @@ namespace Matkakirja.Linssit.Elava
         public const double LyontiSoiS = 9.5;
         public static double LyontienJalkeenS(int tunti, double vali = 3.0) => (Lyonteja(tunti) - 1) * vali + LyontiSoiS;
 
-        /// <summary>Testi- ja kuuntelukomento: seuraava kirkonkello tai maitovaahdotin heti, kun ehdot täyttyvät.</summary>
-        public void Pakota(string mita) { if (mita == "kello") seuraavaKello = double.NegativeInfinity; else if (mita == "maito") seuraavaMaito = double.NegativeInfinity; }
+        /// <summary>Testi- ja kuuntelukomento: seuraava kirkonkello, maitovaahdotin tai astia heti, kun ehdot täyttyvät.</summary>
+        public void Pakota(string mita) { if (mita == "kello") seuraavaKello = double.NegativeInfinity; else if (mita == "maito") seuraavaMaito = double.NegativeInfinity; else if (mita == "astia") seuraavaAstia = double.NegativeInfinity; }
 
         /// <summary>Joka kehys: kamera paketin ENU:ssa (vaaka), korkeus maasta (NaN = ei tiedossa → vain häivytykset), paikallinen
         /// tunti 0–24 (NaN = ei kelloa → ei tasatunnin kelloja), soiko IHMISTEN sorina juuri nyt.</summary>
@@ -236,6 +239,16 @@ namespace Matkakirja.Linssit.Elava
                         seuraavaMaito = nyt + MaitoValiMinS + (MaitoValiMaxS - MaitoValiMinS) * rnd.NextDouble();
                         Kerrat.Add(new Kerta { Tunnus = PalloKaupunkiAanet.Maitovaahdotin, X = Kahvilat[cafe].X, Y = 1.2, Z = Kahvilat[cafe].Z, EtaisyysM = d3,
                             Taso = PalloKaupunkiAanet.MaitoTaso * PalloElavaAanet.Etaisyystaso(d3, MaitoTaysiM, MaitoM) });
+                    }
+                    // Astiat (kaupunki-pisteet-v1, Pelikoodari 10.10.): maitovaahdottimen rinnalla useammin ja lähempää; oma Random, joten
+                    // kellojen ja maitovaahdottimen sekvenssit eivät muutu.
+                    if (double.IsNaN(seuraavaAstia)) seuraavaAstia = nyt + 10 + 30 * rndAstia.NextDouble();
+                    if (d3 < AstiaM && nyt >= seuraavaAstia)
+                    {
+                        seuraavaAstia = nyt + AstiaValiMinS + (AstiaValiMaxS - AstiaValiMinS) * rndAstia.NextDouble();
+                        edAstia = ElavaValinta.Vaihtoehto(PalloKaupunkiAanet.KahvilaAstiat, rndAstia, edAstia);
+                        Kerrat.Add(new Kerta { Tunnus = edAstia, X = Kahvilat[cafe].X, Y = 1.0, Z = Kahvilat[cafe].Z, EtaisyysM = d3,
+                            Taso = PalloKaupunkiAanet.AstiaTaso * PalloElavaAanet.Etaisyystaso(d3, AstiaTaysiM, AstiaM) });
                     }
                 }
             }

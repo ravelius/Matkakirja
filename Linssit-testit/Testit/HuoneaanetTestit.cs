@@ -30,5 +30,20 @@ namespace Matkakirja.Linssit.Testit
             var d = KavelyData.Lue("{\"osat\":{\"kirkkotorni-portaat\":{\"tila\":\"kierreportaat\"}}}", "{\"merkit\":[]}");
             Oleta.Sama("kierreportaat", d.AaniTila("kirkkotorni-portaat", new[] { "kierreportaat", "kappeli" }));
         }
+
+        /// <summary>Syke hälytyksessä (SykeSekoitus, PT 10.10.): pehmeä ristihäivytys 1,5 s, tasateho, paluu rauhalliseen, puhe −6 dB.</summary>
+        [Testi] static void SykeRistihaivyttyyNopeaan()
+        {
+            double o = 0;
+            o = SykeSekoitus.Osuus(o, true, 0.75); Oleta.Tosi(Math.Abs(o - 0.5) < 1e-9, "puolessa välissä 0,75 s:n jälkeen");
+            var (r, n, sr, sn) = SykeSekoitus.Tasot(100, o, false);
+            double v = 0.55 + 0.35 * 0.6;
+            Oleta.Tosi(Math.Abs(r * r + n * n - v * v) < 1e-9, "tasateho: r² + n² = v²");
+            Oleta.Tosi(Math.Abs(sr - 100 / 70.0) < 1e-9 && Math.Abs(sn - 1.0) < 1e-9, "sävelkorkeus kummankin omasta tahdista");
+            o = SykeSekoitus.Osuus(o, true, 5); Oleta.Sama(1.0, o);
+            o = SykeSekoitus.Osuus(o, false, 1.5); Oleta.Sama(0.0, o);
+            var (rp, _, _, _) = SykeSekoitus.Tasot(70, 0, true);
+            Oleta.Tosi(Math.Abs(20 * Math.Log10(rp / 0.55) + 6.02) < 0.01, "puheen aikana −6 dB");
+        }
     }
 }

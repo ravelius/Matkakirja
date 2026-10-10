@@ -319,6 +319,9 @@ namespace Matkakirja.Linssit.Dioraama
             new HistoriaOsa("b1499-kellobastioni", 1745, 6),
             new HistoriaOsa("pako-kellobastioni", 1745, 6),
             new HistoriaOsa("b1499-ponttonisilta", 1965, 6),
+            // Paksu bastioni (LR v46t 10.10.: 1790-luvulta, korvasi 1560-luvun Paksun tornin, joka räjähti 1791; vuosi LR:n, tarkistettava
+            // Sisältökirjurilla): b1499-paksu-bastioni ja -pohjoinen.
+            new HistoriaOsa("b1499-paksu-bastioni", 1791, 6),
         };
 
         /// <summary>Linnan historia, noin 3 min. Avainsanat (vuosiluku + muutama sana) Sisältökirjurin tarkistetuista teksteistä
@@ -347,8 +350,10 @@ namespace Matkakirja.Linssit.Dioraama
         public static readonly Historiajana K2Lyhyt = new Historiajana(new[]
         {
             new HistoriaVaihe(1499, 1.0, 0, 0),
-            new HistoriaVaihe(1743, 4.5, 0, 0),
-            new HistoriaVaihe(1758, 1.0, 0, 0),
+            new HistoriaVaihe(1743, 3.0, 0, 0),
+            new HistoriaVaihe(1758, 0.5, 0, 0),
+            new HistoriaVaihe(1788, 1.5, 0, 0),   // Paksu bastioni 1791 (LR v46t) kasvaa näkyvästi
+            new HistoriaVaihe(1800, 0.5, 0, 0),
             new HistoriaVaihe(1963, 1.5, 0, 0),
         }, 1973);
     }

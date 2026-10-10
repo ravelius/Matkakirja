@@ -157,7 +157,7 @@ namespace Matkakirja.Linssit.Elava
         public readonly HashSet<int> IsoVesi = new HashSet<int>();
         /// <summary>Onko klippi saatavilla (Unity: ladattu); null = kaikki. Suodattaa sarjan, tyhjä → alkuperäinen.</summary>
         public Predicate<string> Saatavilla;
-        public static readonly string[] PyoranKellot = Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello),
+        public static readonly string[] PyoranKellot = Yhdista(Yhdista(PalloElavaAanet.PyoranKello, PalloSoundlyAanet.PyoraKello), PalloKaupunkiAanet.PyoranKelloPisteet),   // + kaupunki-pisteet-v1 (Pelikoodari 10.10.)
             Torvet = Yhdista(PalloElavaAanet.LaivanTorvi, PalloSoundlyAanet.TorviLautta), TorvetIso = Yhdista(Torvet, PalloSoundlyAanet.TorviIso);
         static string[] Yhdista(string[] a, string[] b) { var c = new string[a.Length + b.Length]; a.CopyTo(c, 0); b.CopyTo(c, a.Length); return c; }
         readonly Random rnd;
@@ -175,6 +175,11 @@ namespace Matkakirja.Linssit.Elava
         };
 
         public IhmisAanet(int siemen) { rnd = new Random(siemen); }
+
+        string pakko;
+        /// <summary>Kuuntelu (opas kaupunkiaanet pyora, Pelikoodari 10.10.): seuraava tapahtuma on kaupunki-pisteet-v1:n pyörän kello
+        /// lähimmältä kadulta heti, kun kamera on matalalla.</summary>
+        public void Pakota(string mita) { if (mita == "pyora") pakko = mita; }
 
         /// <summary>Paikat elävän kaupungin paketista: "aukiot" [{x, z, ala, tori}], "kadut" (pisteet KatuValiM:n välein) ja
         /// vesiliikenteen "reitit" (edestakaisten reittien päät = laiturit). Puuttuvat kentät ohitetaan.</summary>
@@ -244,6 +249,11 @@ namespace Matkakirja.Linssit.Elava
             nytS = nyt;
             if (double.IsNaN(seuraava)) { seuraava = nyt + 20 + 40 * rnd.NextDouble(); soittajaSeuraava = nyt + SoittajaMinS + (SoittajaMaxS - SoittajaMinS) * rnd.NextDouble(); }
             if (double.IsNaN(korkeusMaasta) || korkeusMaasta > KorkeusRajaM || Paikat.Count == 0) return null;
+            if (pakko != null)
+            {
+                var t = Valitse(new[] { (PalloKaupunkiAanet.PyoranKelloPisteet, new[] { Paikka.Katu }, 1.0, KelloTaso) }, kx, kz, korkeusMaasta);
+                if (t != null) { pakko = null; return t; }
+            }
             if (nyt >= soittajaSeuraava)
             {
                 var t = Valitse(new[] { (PalloElavaAanet.Katusoittaja, new[] { Paikka.Tori }, 1.0, SoittajaTaso) }, kx, kz, korkeusMaasta);

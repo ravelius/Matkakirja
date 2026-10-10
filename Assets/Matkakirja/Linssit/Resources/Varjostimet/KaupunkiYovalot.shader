@@ -50,6 +50,9 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             TEXTURE2D(_Vedet); SAMPLER(sampler_Vedet);
             float4 _VesiAlue;               // x = keskipisteen lat, y = lon, z = sivu (m), w = heijastuksen voima (0 = ei maskia)
             float4 _Vedet_TexelSize;        // v12: 1/N, 1/N, N, N
+            TEXTURE2D(_Ikkunat);            // v13 ikkunat (R8: ylänelikko osuus 0–15, alanelikko värilämpö 0–15; sama ruudukko kuin vesimaski)
+            float4 _Ikkunat_TexelSize;
+            float4 _IkkunaData;             // x = 1 käytössä, y = osuuden kerroin (palavien osuus = datan osuus × y × illan osuus)
             float4 _LamppuParam;            // v12 OSM-lamput vesimaskissa (G lamppu, B paikka solussa, A alue): x = 1 käytössä, y = alueiden voima
             float4 _KameraP;                // kamera paikallisessa ENU:ssa (m)
             float4 _Maamerkit[8];           // xyz = maapiste paikallisessa ENU:ssa, w = säde (m); w = 0 tyhjä
@@ -298,11 +301,25 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float2 w = float2(dot(p.xz, t) / 3.2, p.y / 3.0);
                     float2 wi = floor(w), wf = frac(w);
                     float3 h = Hash32(wi + 17.0);
-                    float palaa = step(h.x, bm * _IkkunaParam.y * osI);
+                    // v13 (Karttasepän OSM-rakennukset, PT 10.10.): rakennuksen oma palavien ikkunoiden osuus ja värilämpö (asunnot lämpimiä,
+                    // toimistot kylmempiä ja himmeämpiä, kirkot tummia); maskin ulkopuolella Black Marble kuten ennen.
+                    float osuusD = -1.0, ktD = 0.0;
+                    if (_IkkunaData.x > 0.5 && _VesiAlue.w > 0.0)
+                    {
+                        float2 iu = VesiUv(p);
+                        if (all(iu > 0.0) && all(iu < 1.0))
+                        {
+                            uint ib = (uint)round(LOAD_TEXTURE2D_LOD(_Ikkunat, int2(iu * _Ikkunat_TexelSize.zw), 0).r * 255.0);
+                            osuusD = (float)(ib >> 4) / 15.0 * _IkkunaData.y; ktD = (float)(ib & 15u) / 15.0;
+                        }
+                    }
+                    float tiheys = osuusD >= 0.0 ? osuusD : bm * _IkkunaParam.y;
+                    float palaa = step(h.x, tiheys * osI);
                     float ikkuna = step(0.28, wf.x) * step(wf.x, 0.72) * step(0.3, wf.y) * step(wf.y, 0.82);
                     float terava = saturate(2.0 - jalanjalki * 2.0 / 1.2);       // ikkuna (~1,2 m) yli puolen pikselin
-                    float keski = bm * _IkkunaParam.y * osI * 0.23;                   // kaukana: palavien osuus × ikkunan ala
-                    float3 iv = lerp(float3(1.0, 0.72, 0.42), float3(1.0, 0.88, 0.70), h.y);
+                    float keski = tiheys * osI * 0.23;                   // kaukana: palavien osuus × ikkunan ala
+                    float3 iv = osuusD >= 0.0 ? lerp(float3(1.0, 0.66, 0.36), float3(0.86, 0.92, 1.0), ktD) * (0.94 + 0.12 * h.y)   // 2000–6500 K
+                                              : lerp(float3(1.0, 0.72, 0.42), float3(1.0, 0.88, 0.70), h.y);
                     // VALOMAINOKSET (v7, Päätoimittaja 9.10. iltavalot): harva palava ikkuna värillisenä neonina, joka välkkyy hitaasti.
                     float neon = step(h.z, 0.035) * palaa * _ValoParam.x;
                     float3 nv = h.y < 0.33 ? float3(1.0, 0.2, 0.55) : (h.y < 0.66 ? float3(0.2, 0.85, 1.0) : float3(1.0, 0.35, 0.15));

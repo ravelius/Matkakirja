@@ -104,8 +104,8 @@ namespace Matkakirja.Natiivi
             p.Vali.Create(); p.Varjo.Create();
             p.VarjoMat = new Material(varjoVarjostin) { name = "AjattelijaVarjo:" + a.Tunnus };
             // Kerros riisutaan vain muilta kuin oman kerroksen kuvakameroilta (KerrosKamerat; TF 167 -regressio 9.10.2026).
-            OmatKamerat.Lisaa(k.GetInstanceID());
-            foreach (var c in Camera.allCameras) c.cullingMask = OmatKamerat.Maski(c.GetInstanceID(), c.cullingMask, Kerros);
+            OmatKamerat.Lisaa(k.GetHashCode());
+            foreach (var c in Camera.allCameras) c.cullingMask = OmatKamerat.Maski(c.GetHashCode(), c.cullingMask, Kerros);
             ajaja.StartCoroutine(Lataa(p));
             return p;
         }

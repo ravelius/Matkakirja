@@ -665,6 +665,7 @@ namespace Matkakirja.Natiivi
                     {
                         int kahva = pooli.Soita(t.Tunnus, (float)t.Taso, (float)t.Savel, new Vector3((float)t.X, (float)m + 1.5f, (float)t.Z), null, vaisto);
                         if (System.Array.IndexOf(PalloElavaAanet.Sorina, t.Tunnus) >= 0) sorinaKahva = kahva;   // tori-ulko −6 dB sorinan ajan
+                        if (System.Array.IndexOf(PalloKaupunkiAanet.PyoranKelloPisteet, t.Tunnus) >= 0) Debug.Log($"MATKAKIRJA kaupunki: kaupunkiääni {t.Tunnus} {t.EtaisyysM:F0} m, taso {t.Taso:F2}");
                     }
                 }
             }
@@ -811,7 +812,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kuuntelu: seuraava kirkonkello tai maitovaahdotin heti, kun ehdot täyttyvät (kamera matalalla, kirkko/café lähellä).</summary>
-        public static void PakotaKaupunkiAani(string mita) => Nykyinen?.kaupunkiAanet?.Pakota(mita);
+        public static void PakotaKaupunkiAani(string mita) { Nykyinen?.kaupunkiAanet?.Pakota(mita); Nykyinen?.ihmiset?.Pakota(mita); }   // pyora: IhmisAanet
 
         void OhiEhdokkaat(ReittiLiike l, List<Transform> tt, bool raitio, Vector3 c, Vector3 kv, int avain)
         {

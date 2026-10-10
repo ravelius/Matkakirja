@@ -47,7 +47,7 @@ namespace Matkakirja.Natiivi
                 var invVP = cam.camera.cameraToWorldMatrix * P.inverse;
                 bool ok = Kelpaa(invVP);
                 if (!ok) { invVP = (P * cam.camera.worldToCameraMatrix).inverse; }
-                matriisiTila = $"invVP {(Kelpaa(invVP) ? "ok" : "VIRHE")} (osista {(ok ? "ok" : "virhe")}, P det {P.determinant:G3}, URP:n P det {cam.GetGPUProjectionMatrix(0).determinant:G3}, near {cam.camera.nearClipPlane:G3} far {cam.camera.farClipPlane:G3})";
+                matriisiTila = $"invVP {(Kelpaa(invVP) ? "ok" : "VIRHE")} (osista {(ok ? "ok" : "virhe")}, P det {P.determinant:G3}, URP:n P det {GL.GetGPUProjectionMatrix(cam.GetProjectionMatrix(0), true).determinant:G3}, near {cam.camera.nearClipPlane:G3} far {cam.camera.farClipPlane:G3})";
                 materiaali.SetMatrix(IdInvVP, invVP);
                 materiaali.SetVector(IdKamera, cam.camera.transform.position);
                 var kuvaus = rg.GetTextureDesc(res.activeColorTexture);

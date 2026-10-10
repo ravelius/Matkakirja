@@ -18,7 +18,8 @@ namespace Matkakirja.Linssit.Testit
             var m = PalloKaupunkiAanet.Lue("{\"versio\":1,\"aanet\":[{\"tunnus\":\"kirkonkello-01\",\"aani\":\"kirkonkello-01.mp3\",\"silmukka\":false,\"kesto_s\":8.0,\"LUFS\":-23.0,\"ryhma\":\"maisema\"}," +
                 "{\"tunnus\":\"kahvila-maitovaahdotin\",\"aani\":\"kahvila-maitovaahdotin.mp3\",\"silmukka\":false,\"kesto_s\":6.22,\"ryhma\":\"tehosteet\"}," +
                 "{\"tunnus\":\"tori-ulko\",\"aani\":\"tori-ulko.mp3\",\"silmukka\":true,\"kesto_s\":60},{\"tunnus\":\"\",\"aani\":\"x.mp3\"}]}");
-            Oleta.Sama(4, m.Aanet.Count, "tyhjä tunnus ohitetaan, satama-vesi liitetään");
+            Oleta.Sama(4 + 9, m.Aanet.Count, "tyhjä tunnus ohitetaan, satama-vesi ja kaupunki-pisteet-v1:n 9 liitetään");
+            Oleta.Sama("https://media.matkakirja.app/aanet/kaupunki-pisteet-v1/pyoran-kello-02.mp3", m.Aanet["pisteet-pyoran-kello-02"].Osoite, "pisteäänen oma tunnus, tiedosto pankista");
             Oleta.Sama("https://media.matkakirja.app/aanet/sonniss-aanet-v4/satama-vesi.mp3", m.Aanet[PalloKaupunkiAanet.SatamaVesi].Osoite, "erillinen ääni omasta juuresta");
             Oleta.Tosi(m.Aanet[PalloKaupunkiAanet.SatamaVesi].Silmukka, "satama-vesi silmukka");
             Oleta.Sama("x.mp3", PalloKaupunkiAanet.Lue("{\"aanet\":[{\"tunnus\":\"satama-vesi\",\"aani\":\"x.mp3\"}]}").Aanet[PalloKaupunkiAanet.SatamaVesi].Polku, "manifestin rivi voittaa");
@@ -26,11 +27,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(PalloKaupunkiAanet.Juuri + "tori-ulko.mp3", m.Aanet["tori-ulko"].Osoite);
             Oleta.Sama("tehosteet", m.Aanet["kahvila-maitovaahdotin"].Ryhma);
             var kaikki = new HashSet<string>(PalloKaupunkiAanet.Tunnukset());
-            Oleta.Sama(17, kaikki.Count, "manifestin 17 ääntä − vaki-sisatila-sorina + satama-vesi");
+            Oleta.Sama(17 + 9, kaikki.Count, "manifestin 17 ääntä − vaki-sisatila-sorina + satama-vesi + kaupunki-pisteet-v1 (6 astiaa, 3 pyörän kelloa)");
             Oleta.Tosi(!kaikki.Contains(PalloKaupunkiAanet.SisatilaSorina), "sisätilan sorina ei ladata");
             foreach (var t in kaikki)
             {
-                Oleta.Sama(t == PalloKaupunkiAanet.Maitovaahdotin ? "tehosteet" : "maisema", PalloKaupunkiAanet.MikseriAani(t).Ryhma, t);
+                Oleta.Sama(t == PalloKaupunkiAanet.Maitovaahdotin || System.Array.IndexOf(PalloKaupunkiAanet.KahvilaAstiat, t) >= 0 ? "tehosteet" : "maisema", PalloKaupunkiAanet.MikseriAani(t).Ryhma, t);
                 Oleta.Sama(((string)null, (string)null), PalloElavaAanet.MikseriAani(t), "ei päällekkäin v2:n kanssa: " + t);
             }
             var v2 = new HashSet<string>(); foreach (var a in PalloElavaAanet.Mikseri) v2.Add(a.Id);
@@ -42,8 +43,8 @@ namespace Matkakirja.Linssit.Testit
             var mk = new Aanimikseri();
             foreach (var a in PalloKaupunkiAanet.Mikseri) mk.Rekisteroi("pallo", a.Ryhma, a.Id, a.Nimi, a.Klipit);
             Oleta.Tosi(mk.Rekisteroity("kirkonkello-05") && mk.Rekisteroity("vene-ohi-03") && mk.Rekisteroity("elava.tori-ulko"), "klipit ja tunnukset äänivahdille");
-            Oleta.Sama(1, mk.AanetRyhmassa("pallo", "tehosteet").Count);
-            Oleta.Sama(9, mk.AanetRyhmassa("pallo", "maisema").Count);
+            Oleta.Sama(2, mk.AanetRyhmassa("pallo", "tehosteet").Count);
+            Oleta.Sama(9 + 1, mk.AanetRyhmassa("pallo", "maisema").Count, "+ pyörän kello (lisä)");
             Oleta.Tosi(Math.Abs(PalloKaupunkiAanet.HalliTaso / 0.5 - 0.2512) < 1e-3 && Math.Abs(PalloKaupunkiAanet.ToriSorinaKerroin - 0.5012) < 1e-3, "−12 dB ja −6 dB");
         }
 
@@ -233,6 +234,39 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 1; i < ajat.Count; i++) Oleta.Tosi(ajat[i] - ajat[i - 1] >= KaupunkiAanet.MaitoValiMinS - 1e-6 && ajat[i] - ajat[i - 1] <= KaupunkiAanet.MaitoValiMaxS + Dt, "väli 2–4 min");
             var b = Kahvilat(6, 6);
             for (double t = 0; t < 1200; t += Dt) { b.Paivita(t, Dt, 0, 0, 20, 12, false); foreach (var k in b.Kerrat) Oleta.Tosi(k.Tunnus != PalloKaupunkiAanet.Maitovaahdotin, "baarista ei maitovaahdotinta"); }
+        }
+
+        // Kahvilan astiat (kaupunki-pisteet-v1, Pelikoodari 10.10.): lähimmästä cafésta alle 40 m, väli 25–70 s, ei samaa peräkkäin;
+        // kauempaa (52 m) ei astioita, mutta maitovaahdotin soi kuten ennen.
+        [Testi] static void KahvilanAstiatLahelta()
+        {
+            var a = Kahvilat(0, 6); var ajat = new List<double>(); string ed = null;
+            for (double t = 0; t < 3600; t += Dt)
+            {
+                a.Paivita(t, Dt, 20, 0, 10, 12, false);
+                foreach (var k in a.Kerrat)
+                {
+                    if (Array.IndexOf(PalloKaupunkiAanet.KahvilaAstiat, k.Tunnus) < 0) continue;
+                    ajat.Add(t);
+                    Oleta.Tosi(k.EtaisyysM < KaupunkiAanet.AstiaM && k.Taso > 0 && k.Taso <= PalloKaupunkiAanet.AstiaTaso + 1e-9, $"astia lähellä ({k.EtaisyysM:F0} m)");
+                    Oleta.Tosi(k.Tunnus != ed, "ei samaa astiaa peräkkäin"); ed = k.Tunnus;
+                }
+            }
+            Oleta.Tosi(ajat.Count >= 45 && ajat.Count <= 150, $"tunnissa {ajat.Count} astiaääntä");
+            for (int i = 1; i < ajat.Count; i++) Oleta.Tosi(ajat[i] - ajat[i - 1] >= KaupunkiAanet.AstiaValiMinS - 1e-6, "väli ≥ 25 s");
+            var kaukana = Kahvilat(3, 6); int astioita = 0, maitoja = 0;
+            for (double t = 0; t < 1800; t += Dt)
+            {
+                kaukana.Paivita(t, Dt, 0, 0, 20, 12, false);
+                foreach (var k in kaukana.Kerrat) { if (Array.IndexOf(PalloKaupunkiAanet.KahvilaAstiat, k.Tunnus) >= 0) astioita++; if (k.Tunnus == PalloKaupunkiAanet.Maitovaahdotin) maitoja++; }
+            }
+            Oleta.Sama(0, astioita, "52 m:n päästä ei astioita");
+            Oleta.Tosi(maitoja >= 6, "maitovaahdotin ennallaan");
+            Oleta.Tosi(Array.IndexOf(Matkakirja.Linssit.Elava.IhmisAanet.PyoranKellot, PalloKaupunkiAanet.PyoranKelloPisteet[2]) >= 0, "pisteiden pyörän kellot IhmisAanetin sarjassa");
+            var ih = Matkakirja.Linssit.Elava.IhmisAanet.Lue("{\"kadut\":[{\"p\":[[0,0],[100,0]]}]}", 3);
+            ih.Paivita(0, 50, 5, 10); ih.Pakota("pyora");
+            var pk = ih.Paivita(1, 50, 5, 10);
+            Oleta.Tosi(pk != null && Array.IndexOf(PalloKaupunkiAanet.PyoranKelloPisteet, pk.Tunnus) >= 0, "pakotettu pyörän kello pisteistä: " + pk?.Tunnus);
         }
 
         [Testi] static void ToriHiljeneeSorinanAikanaJaHallit()

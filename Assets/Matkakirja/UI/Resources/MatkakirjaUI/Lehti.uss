@@ -846,7 +846,7 @@
 
 .mk-lehti__selausaihe {
     max-width: 114px;
-    font-size: 10.56px;
+    font-size: var(--tk-koko-kapiteeli); /* oli 10,56 px (asteikon ulkopuolella, 10.10.2026) */
     letter-spacing: 11.82px; /* web 1.248px */
     color: var(--sea-ink);
     overflow: hidden;
@@ -1791,6 +1791,12 @@
  * (−16…+16) ei osu kuvaan. Puhelimessa kortti 90 % leveydestä → reunaan jää ≥ 19 pt, nuoli mahtuu ruudulle. */
 .mk-nahtavyys__nuoli--vasen {
     left: -20px;
+}
+
+/* OHJAUSNAPPI-pohjan vasen marginaali (--tk-vali-s) ohitti nuolen marginaalin: ‹ oli 8 pt sisempänä leipätekstin päällä
+ * (asettelutesti 10.10.2026, iPhone vaaka). Tarkempi valitsin palauttaa puoliksi reunan yli -sijainnin. */
+.mk-nahtavyys__nuoli.mk-ohjausnappi {
+    margin: -20px 0 0 0;
 }
 
 .mk-nahtavyys__nuoli--oikea {
@@ -2799,7 +2805,7 @@
 }
 
 .mk-lehti__osio-juttunappi .mk-nappi__teksti {
-    font-size: 13.2px;
+    font-size: var(--tk-koko-apuri); /* oli 13,2 px (asteikon ulkopuolella, 10.10.2026) */
     color: var(--tk-himmennys-tumma);
     white-space: nowrap;
     text-overflow: ellipsis;

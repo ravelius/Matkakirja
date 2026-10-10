@@ -35,5 +35,13 @@ namespace Matkakirja.Linssit.Testit
             foreach (var m in d.Lajia("rekvisiitta")) if (m.Seina) seinia++;
             Oleta.Tosi(seinia >= 4, $"seinäesineitä {seinia} (kuvakudos, lippu, vaakuna, raapustukset)");
         }
+
+        /// <summary>Esittely nykyasun paketista, pala ja historia 1499-paketista (omistaja 10.10.): eri hashit, 16 heksamerkkiä.</summary>
+        [Testi] static void EsittelyOmastaPaketista()
+        {
+            foreach (var h in new[] { PelattavaPala.Hash, PelattavaPala.EsittelyHash })
+                Oleta.Tosi(h.Length == 16 && System.Text.RegularExpressions.Regex.IsMatch(h, "^[0-9a-f]{16}$"), $"hash {h}");
+            Oleta.Tosi(PelattavaPala.EsittelyHash != PelattavaPala.Hash, "esittely eri paketista kuin pala");
+        }
     }
 }
