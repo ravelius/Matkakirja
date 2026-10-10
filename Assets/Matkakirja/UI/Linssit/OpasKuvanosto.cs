@@ -156,7 +156,7 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(w) || w <= 0 || float.IsNaN(h) || h <= 0) return;
             float pad = Tyylikirja.Vali.Xs;
             // Kulmassa paperikehys mukaan lukien napin kokoinen: kuva koko − 2 × reunus.
-            var r = iso ? KuvanostoAsettelu.Iso(w, h, suhde, Kaista)
+            var r = iso ? KuvanostoAsettelu.Iso(w, h, suhde, Kaista, puhelin: !UiKerros.Tabletti)
                 : kulmaKoko > 0f ? KuvanostoAsettelu.Kulmaan(w, h, suhde, kulmaKoko - 2 * pad, kulmaOikea + pad, kulmaAla + pad, kulmaRako + 2 * pad, kulmaVieressa)
                 : KuvanostoAsettelu.Pieni(w, h, suhde);
             kortti.style.left = r.X - pad; kortti.style.top = r.Y - pad;
