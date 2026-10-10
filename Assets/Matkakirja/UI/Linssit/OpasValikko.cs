@@ -952,6 +952,9 @@ namespace Matkakirja.Natiivi
         /// kohta, jossa stillin köysi häipyy usvaan (stillistä mitattu: iPhone 0,35/0,705, iPad pysty 0,41/0,705, vaaka 0,44/0,65).
         /// </summary>
         static readonly float[] PalloSauma = { 0.73f, 0.73f, 0.69f };
+        /// <summary>Köyden loppu saumasta alaspäin (taustan osuus) ja häivytyksen alku maapisteen yläpuolella: köysi kulkee usvan
+        /// läpi tummaan alaosaan ja on poissa ennen kaupungin nimeä (iPhone ja iPad pysty ~0,83, vaaka ~0,79).</summary>
+        const float PalloKoysiSumuun = 0.06f, PalloKoysiHaivyYlla = 0.03f;
         Latauskuva palloKerrokset;
         readonly Texture2D[] palloKerrosKuvat = new Texture2D[3];
         int palloKerrosRajaus = -1, palloKerrosKerta;
@@ -984,7 +987,12 @@ namespace Matkakirja.Natiivi
             var koydet = new List<Latauskuva.Koysi>();
             for (int i = 0; i < 4; i++)
                 koydet.Add(new Latauskuva.Koysi { KiintoKerros = 0, Kiinto = p.Kori[i], Kerros = 1, Kiinnitys = p.Kupu[i], LeveysPt = 1f, Riippuma = 0.02f });
-            koydet.Add(Latauskuva.Koysi.Ankkuri(p.Maa, 0, p.Ankkuri));
+            // KÖYSI SUMUUN (omistaja 10.10. 17.5x: "köyden pitää jatkua alemmas ja hävitä sumuun, muuten näyttää irralliselta"):
+            // ankkuri samaan suuntaan saumasta PalloKoysiSumuun alemmas (tumma alaosa), häivytys maapisteen yläpuolelta loppuun.
+            var jatke = Matkakirja.Linssit.LatausLiike.Jatke(p.Ankkuri.x, p.Ankkuri.y, p.Maa.x, p.Maa.y, PalloSauma[r] + PalloKoysiSumuun);
+            var ankkuri = Latauskuva.Koysi.Ankkuri(new Vector2((float)jatke.X, (float)jatke.Y), 0, p.Ankkuri);
+            ankkuri.HaivyAlku = p.Maa.y - PalloKoysiHaivyYlla; ankkuri.HaivyLoppu = (float)jatke.Y;
+            koydet.Add(ankkuri);
             palloKerrokset.Aseta(palloKerrosKuvat[0], new[]
             {
                 // TUULI (omistaja 10.10. 16.5x: "pallo pitää liikkua selkeästi tuulessa heiluen"): sama puuskainen tuuli, pallo ±2,5° ja
