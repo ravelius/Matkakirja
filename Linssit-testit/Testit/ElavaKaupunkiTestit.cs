@@ -169,6 +169,32 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(KatuLiikenne.Piilossa(k.Autot, piilo), "päässä piilossa");
         }
 
+        // TIEN KORKEUS (PT 10.10., juna 175): maanpinta (DTM) puiden alla, pinta (DSM) silloilla. Profiilit Pariisin aineistosta
+        // (kadut-20261010 ei vielä käytössä): Boulevard Saint-Germainin plataanit (pinta 99 m, maa 78 m) ja Pont Saint-Michel
+        // (pinta 79,9 m, maa 70,8 m = Seine).
+        [Testi] static void TienKorkeusPuutJaSillat()
+        {
+            var matka = new List<double> { 0, 30, 60, 90, 120, 150, 180 };
+            // Puut: pinta piikkinä, maa tasainen → maa.
+            var p = KatuLiikenne.TieKorkeus(new List<double> { 78.0, 78.1, 78.1, 78.3, 78.6, 78.8, 79.0 }, new List<double> { 78.0, 93.3, 99.1, 93.9, 78.6, 78.8, 79.0 }, matka);
+            Oleta.Tosi(Math.Abs(p[2] - 78.1) < 1e-9 && Math.Abs(p[1] - 78.1) < 1e-9 && Math.Abs(p[3] - 78.3) < 1e-9, $"puiden alla maassa {p[1]:F1} {p[2]:F1} {p[3]:F1}");
+            // Silta: maa kuopassa (joki), pinta jatkaa tietä → pinta.
+            var s = KatuLiikenne.TieKorkeus(new List<double> { 79.8, 70.9, 70.8, 72.5, 79.0, 79.0, 79.0 }, new List<double> { 79.8, 79.8, 79.9, 79.3, 78.9, 79.0, 79.0 }, matka);
+            Oleta.Tosi(Math.Abs(s[1] - 79.8) < 1e-9 && Math.Abs(s[2] - 79.9) < 1e-9 && Math.Abs(s[3] - 79.3) < 1e-9, $"sillalla kannella {s[1]:F1} {s[2]:F1} {s[3]:F1}");
+            // Lyhty sillalla: kumpikin kaukana jatkeesta → jatke.
+            var l = KatuLiikenne.TieKorkeus(new List<double> { 79.0, 70.0, 79.0 }, new List<double> { 79.0, 86.0, 79.0 }, new List<double> { 0, 30, 60 });
+            Oleta.Tosi(Math.Abs(l[1] - 79.0) < 1e-9, $"lyhty sillalla {l[1]:F1}");
+            // Ei pintaa (NaN) tai sama → ennallaan; ei varmaa kärkeä → maa.
+            var n = KatuLiikenne.TieKorkeus(new List<double> { 50, double.NaN, 51 }, new List<double> { double.NaN, 60, 51 }, new List<double> { 0, 10, 20 });
+            Oleta.Tosi(n[0] == 50 && double.IsNaN(n[1]) && n[2] == 51, "puuttuvat ennallaan");
+            var e = KatuLiikenne.TieKorkeus(new List<double> { 50, 50 }, new List<double> { 70, 40 }, new List<double> { 0, 10 });
+            Oleta.Tosi(e[0] == 50 && e[1] == 50, "ei vertailukohtaa → maa");
+            // Pariisin paketti: pinta 20 m maan yläpuolella kaikkialla (ei varmaa kärkeä) → autot maassa, pinta mukana ei kaada.
+            var json = System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-pariisi.json");
+            var k = KatuLiikenne.Lue(json, (x, z) => 35.0, 200, 5, (x, z) => 55.0);
+            foreach (var a in k.Autot.Kulkijat) Oleta.Tosi(Math.Abs(a.Y - 35) < 1e-9, $"maassa {a.Y:F1}");
+        }
+
         static string TukholmaJson() => System.IO.File.ReadAllText("../Assets/Matkakirja/Linssit/Resources/Elava/elava-tukholma.json");
 
         // TUKHOLMAN VESILIIKENNE (8.10.): määräraja pitää, veneet vesipinnan korkeudella (oma aineisto), pysyvät reiteillä, parvet.
