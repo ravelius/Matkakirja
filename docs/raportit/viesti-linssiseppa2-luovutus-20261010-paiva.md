@@ -6,6 +6,16 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`. Tarkistukset 6.7: `MAT
 ./Linssit-testit/unity-tarkistus.sh` + `./Linssit-testit/kaanna.sh`. Simu vain Julkaisijan SIMULAATTORI NYT -vuorolla (A26BC7D0, 173pbr2-appi
 `lokit/linssiseppa2-app-173pbr2`), ilmoita "simu vapaa".
 
+## TILA 11.4x (uusi sessio)
+- 1 VALMIS: ND v3h pelissä 141/147/143 (oikea 148/151/145). Vientipaketti `_valmiit/omat-mallit-vienti-20261010l` = v6k8 (v6k6 + ND v3h + Eiffel
+  v1d; LR korvasi v1c:n), --kuiva ok, osoitin uusin-4 → v6k8 odottaa PT:n kuittausta. Arkit efa3ebc69 (nd-parvis-v3h*, eiffel-v1d). Mittaus
+  `skriptit-20261009/mittaa-parvis.py`. Eiffelin tasainen maalaatta huomautettu PT:lle ja LR:lle.
+- 3 KUPOLA: katselmuksen korjaus 47bb15d55 (GI-ominaisuus aktiivinen vain overlayn piirrossa; muuten zero GI -passi mustaa peruskameran
+  Lit-ympäristövalon). unity 0, testit 1306/1306. Käännöspyyntö PT:n kuittauksella.
+- 2 PEKING: `_tyo/linssiseppa2/peking1/` = LR v2b + maa-primitiivi (skriptit peking-maa.py, peking-esikatselu.py), tileset/ ja ktx/ (portti 0,
+  GPU kaikki tasot 407 Mt), vesi/ (index-v6 + Karttasepän verkko). ESTE: kaupunkitila avaa vain Pöllön sallitut-listan kaupungit → kysytty
+  PT:ltä Peking Pöllön kokeilulistaan (Giza-otsake). Kadut (KaupunkiTiet lat/lon -muoto ≠ kadut-peking ENU) ja yövalot/ikkunat vaativat koodia.
+
 ## PT:N JONO (11.3x, sitova järjestys)
 1) **ND v3h**: aukion sävy pelikuvassa oikean ilmakuvan mukaiseksi viileäksi harmaaksi (oikea ~145/149/144; v3g pelissä 197/185/169 → tekstuuri
    ~112/116/116, KALIBROI mittaamalla pelikuvasta, ks. KESKEN 1). Vienti v3h + Eiffel v1c YHDESSÄ paketissa (pohja v6k6: ND v3h + eiffel v1c
