@@ -1,407 +1,1487 @@
 {
  "lahde": "media.matkakirja.app .eleet.json + mp3, tarkistettu js/livia-puheeleet-lataus.js tarkistaLivianPilottiData",
  "yksikko": "ms äänen alusta",
- "haettu": "2026-09-23",
+ "haettu": "2026-10-10",
  "kaupungit": {
   "alpit": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
    "tekstiSha256": "5c15ee5104983529668e0cc23184ee38474e767e21e2bc61726f3acbf102b513",
    "tila": "ok",
    "aani": {
-    "tavut": 219054,
-    "sha256": "36279c5fdd25de333a039e6fd53231e41ad6a47c6b5168e965f5b2ac6c306e6d"
+    "tavut": 304735,
+    "sha256": "61b8e15edbce5bf227994b1cdc1852936a545058d98652f341e82a42e97715ca"
    },
    "eleet": [
     {
      "id": "alpit.livia.c1",
-     "alku": 799,
-     "loppu": 4299
+     "alku": 860,
+     "loppu": 3880
     },
     {
      "id": "alpit.livia.c2",
-     "alku": 4299,
-     "loppu": 7899
+     "alku": 3880,
+     "loppu": 7040
     },
     {
      "id": "alpit.livia.c3",
-     "alku": 7899,
-     "loppu": 11880
+     "alku": 7040,
+     "loppu": 10560
     },
     {
      "id": "alpit.livia.c4",
-     "alku": 11880,
-     "loppu": 13460
+     "alku": 10560,
+     "loppu": 12300
     }
    ]
   },
   "amsterdam": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 431376,
+    "sha256": "b788530f4fe78a661a962097d24c0aa52d6d58c69b1eb0e78d941b40b5e1b526"
+   },
+   "eleet": [
+    {
+     "id": "amsterdam.livia.c1",
+     "alku": 2060,
+     "loppu": 4019
+    },
+    {
+     "id": "amsterdam.livia.c2",
+     "alku": 4019,
+     "loppu": 6480
+    },
+    {
+     "id": "amsterdam.livia.c3",
+     "alku": 6480,
+     "loppu": 11380
+    },
+    {
+     "id": "amsterdam.livia.c4",
+     "alku": 11380,
+     "loppu": 15400
+    },
+    {
+     "id": "amsterdam.livia.c5",
+     "alku": 15400,
+     "loppu": 17660
+    }
+   ]
   },
   "ateena": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "c33e5126d8a0723dc73c4b431302409973fb982d8cabd4a0f6afdcc2c791a566",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 351128,
+    "sha256": "0699992c19ba203974298287587a54f5d220d8124c56dff8ad7ed404db49e004"
+   },
+   "eleet": [
+    {
+     "id": "ateena.livia.c1",
+     "alku": 200,
+     "loppu": 4019
+    },
+    {
+     "id": "ateena.livia.c2",
+     "alku": 4019,
+     "loppu": 7700
+    },
+    {
+     "id": "ateena.livia.c3",
+     "alku": 7700,
+     "loppu": 9960
+    },
+    {
+     "id": "ateena.livia.c4",
+     "alku": 9960,
+     "loppu": 12100
+    },
+    {
+     "id": "ateena.livia.c5",
+     "alku": 12100,
+     "loppu": 14320
+    }
+   ]
   },
   "barcelona": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "86bcd4a76baf446479e921e67825efb01865c0ce975ce8b701d73673d66a4f31",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 260849,
+    "sha256": "549df6f372ed91faebabfa055ffacc52e0748c62dda27d3d8fee9f9526343bbf"
+   },
+   "eleet": [
+    {
+     "id": "barcelona.livia.c1",
+     "alku": 840,
+     "loppu": 4300
+    },
+    {
+     "id": "barcelona.livia.c2",
+     "alku": 4300,
+     "loppu": 6760
+    },
+    {
+     "id": "barcelona.livia.c3",
+     "alku": 6760,
+     "loppu": 9240
+    },
+    {
+     "id": "barcelona.livia.c4",
+     "alku": 9240,
+     "loppu": 10440
+    }
+   ]
   },
   "bergen": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "7201aaa2bd48165faf357260db7ed3902e9f6385ca7535b8d70b4083856c43f1",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 416330,
+    "sha256": "1f40aa053099989ad4a95efe13fa932afda8d7b0df4f156e66a6216a44ef898f"
+   },
+   "eleet": [
+    {
+     "id": "bergen.livia.c1",
+     "alku": 800,
+     "loppu": 3840
+    },
+    {
+     "id": "bergen.livia.c2",
+     "alku": 3840,
+     "loppu": 6340
+    },
+    {
+     "id": "bergen.livia.c3",
+     "alku": 6340,
+     "loppu": 10800
+    },
+    {
+     "id": "bergen.livia.c4",
+     "alku": 10800,
+     "loppu": 15160
+    },
+    {
+     "id": "bergen.livia.c5",
+     "alku": 15160,
+     "loppu": 16980
+    }
+   ]
   },
   "berliini": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "0672699880869cba078b643ba78abda55fe3e3c34d95022b283a650ef264418f",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 454573,
+    "sha256": "df29297e96e2dcaffeabdeb51001650c4221e8111afbf0726b84759cd7d5213e"
+   },
+   "eleet": [
+    {
+     "id": "berliini.livia.c1",
+     "alku": 2080,
+     "loppu": 5640
+    },
+    {
+     "id": "berliini.livia.c2",
+     "alku": 5640,
+     "loppu": 7780
+    },
+    {
+     "id": "berliini.livia.c3",
+     "alku": 7780,
+     "loppu": 11480
+    },
+    {
+     "id": "berliini.livia.c4",
+     "alku": 11480,
+     "loppu": 14800
+    },
+    {
+     "id": "berliini.livia.c5",
+     "alku": 14800,
+     "loppu": 16840
+    },
+    {
+     "id": "berliini.livia.c6",
+     "alku": 16840,
+     "loppu": 18580
+    }
+   ]
   },
   "budapest": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "d6cc78fd2a1fd884d28cf2aa3fe75bd5199d6faf07567b68506e636c4316d0cc",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 433884,
+    "sha256": "bbe0c7698c7c548cfb2ee1a86b1e80239edff14a4f9ee9f7db4bbefd2ff9ee93"
+   },
+   "eleet": [
+    {
+     "id": "budapest.livia.c1",
+     "alku": 60,
+     "loppu": 4380
+    },
+    {
+     "id": "budapest.livia.c2",
+     "alku": 4380,
+     "loppu": 6700
+    },
+    {
+     "id": "budapest.livia.c3",
+     "alku": 6700,
+     "loppu": 11380
+    },
+    {
+     "id": "budapest.livia.c4",
+     "alku": 11380,
+     "loppu": 15780
+    },
+    {
+     "id": "budapest.livia.c5",
+     "alku": 15780,
+     "loppu": 17840
+    }
+   ]
   },
   "bukarest": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "130666b9dd63aeb3413a7e1c190dbb14840b57a14d91c992e9ff1a3ade979d53",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 435765,
+    "sha256": "0290954e8874620fef1ba25fa0dc457a96937d0c8c02d984394ecc9d0f5bb1ea"
+   },
+   "eleet": [
+    {
+     "id": "bukarest.livia.c1",
+     "alku": 2180,
+     "loppu": 6580
+    },
+    {
+     "id": "bukarest.livia.c2",
+     "alku": 6580,
+     "loppu": 9640
+    },
+    {
+     "id": "bukarest.livia.c3",
+     "alku": 9640,
+     "loppu": 14760
+    },
+    {
+     "id": "bukarest.livia.c4",
+     "alku": 14760,
+     "loppu": 16660
+    },
+    {
+     "id": "bukarest.livia.c5",
+     "alku": 16660,
+     "loppu": 17880
+    }
+   ]
   },
   "dublin": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "35b090c4334a2ed02ef719637ad22bde613a9dbb87251d680b163db36f74dc06",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 343605,
+    "sha256": "74e2739a2155e039da191fbc4163c6b326028db9ce83eb6880ee27d6420fc72c"
+   },
+   "eleet": [
+    {
+     "id": "dublin.livia.c1",
+     "alku": 1360,
+     "loppu": 4280
+    },
+    {
+     "id": "dublin.livia.c2",
+     "alku": 4280,
+     "loppu": 7920
+    },
+    {
+     "id": "dublin.livia.c3",
+     "alku": 7920,
+     "loppu": 10380
+    },
+    {
+     "id": "dublin.livia.c4",
+     "alku": 10380,
+     "loppu": 12520
+    },
+    {
+     "id": "dublin.livia.c5",
+     "alku": 12520,
+     "loppu": 14080
+    }
+   ]
   },
   "dubrovnik": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "32a90229e5393d73156d85eeca82f974991ed033232392fc7bc4a42d180cc383",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 475889,
+    "sha256": "8cda33b86a218dbec74568d7d077ecf814aa289b4d10fbf2115c47c3370f58c8"
+   },
+   "eleet": [
+    {
+     "id": "dubrovnik.livia.c1",
+     "alku": 180,
+     "loppu": 4360
+    },
+    {
+     "id": "dubrovnik.livia.c2",
+     "alku": 4360,
+     "loppu": 9800
+    },
+    {
+     "id": "dubrovnik.livia.c3",
+     "alku": 9800,
+     "loppu": 12440
+    },
+    {
+     "id": "dubrovnik.livia.c4",
+     "alku": 12440,
+     "loppu": 14280
+    },
+    {
+     "id": "dubrovnik.livia.c5",
+     "alku": 14280,
+     "loppu": 19500
+    }
+   ]
   },
   "edinburgh": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "00f398aa358ab3a3b9cdff7e56a98ce805af258e9534d27e095717abbacb9cbd",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 343605,
+    "sha256": "409e91ff0ca0d165259f06b381fd6915c5c36ebeef6f6e1b2447183aaf72e3ad"
+   },
+   "eleet": [
+    {
+     "id": "edinburgh.livia.c1",
+     "alku": 2920,
+     "loppu": 6560
+    },
+    {
+     "id": "edinburgh.livia.c2",
+     "alku": 6560,
+     "loppu": 9400
+    },
+    {
+     "id": "edinburgh.livia.c3",
+     "alku": 9400,
+     "loppu": 12120
+    },
+    {
+     "id": "edinburgh.livia.c4",
+     "alku": 12120,
+     "loppu": 13940
+    }
+   ]
   },
   "firenze": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "b97b96dadf2d9e86a559720544c1de512d26e216d89d7b2ab3dc9c81de5759a5",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 302854,
+    "sha256": "ebf3a5afb71ee8754ed3c9301ff74e1cd7a18c86c22a7965adceb66cb1522ee9"
+   },
+   "eleet": [
+    {
+     "id": "firenze.livia.c1",
+     "alku": 1500,
+     "loppu": 5060
+    },
+    {
+     "id": "firenze.livia.c2",
+     "alku": 5060,
+     "loppu": 7700
+    },
+    {
+     "id": "firenze.livia.c3",
+     "alku": 7700,
+     "loppu": 11240
+    },
+    {
+     "id": "firenze.livia.c4",
+     "alku": 11240,
+     "loppu": 12400
+    }
+   ]
   },
   "granada": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "f3eb2032bfd6b943b42380d5a688f79bd839b9e5676b4874fd8f9b11986b80f9",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 360532,
+    "sha256": "5a762ba292925d12d7b17774ffffbbc33d21c45433f741512fe3f6efe6a1fec0"
+   },
+   "eleet": [
+    {
+     "id": "granada.livia.c1",
+     "alku": 2900,
+     "loppu": 7860
+    },
+    {
+     "id": "granada.livia.c2",
+     "alku": 7860,
+     "loppu": 10440
+    },
+    {
+     "id": "granada.livia.c3",
+     "alku": 10440,
+     "loppu": 13180
+    },
+    {
+     "id": "granada.livia.c4",
+     "alku": 13180,
+     "loppu": 14740
+    }
+   ]
   },
   "helsinki": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "d68ad288732dd8d07d18f6c5af42193b514d27119c021c72a99e69f232d127fd",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 280284,
+    "sha256": "1fb2eb3800f1cad1a3f2d298c0453973536b92c5445e1a2e4464eb2981b1ab51"
+   },
+   "eleet": [
+    {
+     "id": "helsinki.livia.c1",
+     "alku": 900,
+     "loppu": 3960
+    },
+    {
+     "id": "helsinki.livia.c2",
+     "alku": 3960,
+     "loppu": 6840
+    },
+    {
+     "id": "helsinki.livia.c3",
+     "alku": 6840,
+     "loppu": 9540
+    },
+    {
+     "id": "helsinki.livia.c4",
+     "alku": 9540,
+     "loppu": 11260
+    }
+   ]
   },
   "islanti": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
    "tekstiSha256": "edd43d46ddaa90ae568f83eb023e0e33679a03ee709c09de8fd6b146610ce336",
    "tila": "ok",
    "aani": {
-    "tavut": 194395,
-    "sha256": "c38b5bc0c4cb76799dc4f8620f9085f83daebdd37e1cd28e519ba1b66757b4fc"
+    "tavut": 291569,
+    "sha256": "11895376404f99a2e188d94c5655f88e4a38ffeb7d71ba439a7c0fd01d49fcf7"
    },
    "eleet": [
     {
      "id": "islanti.livia.c1",
-     "alku": 1139,
-     "loppu": 5480
+     "alku": 1180,
+     "loppu": 5620
     },
     {
      "id": "islanti.livia.c2",
-     "alku": 5480,
-     "loppu": 11259
+     "alku": 5620,
+     "loppu": 10980
     },
     {
      "id": "islanti.livia.c3",
-     "alku": 11259,
-     "loppu": 11899
+     "alku": 10980,
+     "loppu": 11740
     }
    ]
   },
   "istanbul": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "c46ed911758a0312a122a2055e142db9fa4843cb6fcf05b1bdc754f4965dd7f0",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 275896,
+    "sha256": "8e536b177c3f93ca0f06b3d70cbda170c97e8f685e7b3d3f5bdbe6e1a4f4b8cb"
+   },
+   "eleet": [
+    {
+     "id": "istanbul.livia.c1",
+     "alku": 120,
+     "loppu": 2340
+    },
+    {
+     "id": "istanbul.livia.c2",
+     "alku": 2340,
+     "loppu": 3860
+    },
+    {
+     "id": "istanbul.livia.c3",
+     "alku": 3860,
+     "loppu": 6780
+    },
+    {
+     "id": "istanbul.livia.c4",
+     "alku": 6780,
+     "loppu": 9240
+    },
+    {
+     "id": "istanbul.livia.c5",
+     "alku": 9240,
+     "loppu": 11180
+    }
+   ]
   },
   "kiova": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "eb7113d19dad7c97283de63e76305bc2435d92661d88c8fb59e8382b4f01b15d",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 270253,
+    "sha256": "276361845f65953e217ed5c6a97afaa5008da29050f99b5990e842da18fde919"
+   },
+   "eleet": [
+    {
+     "id": "kiova.livia.c1",
+     "alku": 80,
+     "loppu": 3860
+    },
+    {
+     "id": "kiova.livia.c2",
+     "alku": 3860,
+     "loppu": 7240
+    },
+    {
+     "id": "kiova.livia.c3",
+     "alku": 7240,
+     "loppu": 9560
+    },
+    {
+     "id": "kiova.livia.c4",
+     "alku": 9560,
+     "loppu": 10900
+    }
+   ]
   },
   "kobenhavn": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "02bd604bbf98070922f388083278dbca5b2e52f33c62437e31ec9f69f9214efd",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 475889,
+    "sha256": "d35bed215a2726e2a4d2b0690baedc1e585299bda4367fbbc0448621b045de78"
+   },
+   "eleet": [
+    {
+     "id": "kobenhavn.livia.c1",
+     "alku": 1720,
+     "loppu": 5080
+    },
+    {
+     "id": "kobenhavn.livia.c2",
+     "alku": 5080,
+     "loppu": 8400
+    },
+    {
+     "id": "kobenhavn.livia.c3",
+     "alku": 8400,
+     "loppu": 11760
+    },
+    {
+     "id": "kobenhavn.livia.c4",
+     "alku": 11760,
+     "loppu": 16320
+    },
+    {
+     "id": "kobenhavn.livia.c5",
+     "alku": 16320,
+     "loppu": 19420
+    }
+   ]
   },
   "krakova": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "9b2e251741e6b126e01a208f4768fe11196a34921ec8274db3e7b247eaf4223b",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 391252,
+    "sha256": "6d306c0742d1b247e7a1e85bdfd3dbe374eac8f69935375869470b0b99a3160d"
+   },
+   "eleet": [
+    {
+     "id": "krakova.livia.c1",
+     "alku": 3700,
+     "loppu": 7200
+    },
+    {
+     "id": "krakova.livia.c2",
+     "alku": 7200,
+     "loppu": 10240
+    },
+    {
+     "id": "krakova.livia.c3",
+     "alku": 10240,
+     "loppu": 13620
+    },
+    {
+     "id": "krakova.livia.c4",
+     "alku": 13620,
+     "loppu": 16000
+    }
+   ]
   },
   "kreeta": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "f0b494c79ae96104d506d79da1e8564efa0de7da9a57ca377c0db7fbae6a10bd",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 329812,
+    "sha256": "2e75f2cc23f2004c8707c8a213b1edab843c4294390c4531cca7686c7ddcbb61"
+   },
+   "eleet": [
+    {
+     "id": "kreeta.livia.c1",
+     "alku": 2140,
+     "loppu": 4940
+    },
+    {
+     "id": "kreeta.livia.c2",
+     "alku": 4940,
+     "loppu": 7440
+    },
+    {
+     "id": "kreeta.livia.c3",
+     "alku": 7440,
+     "loppu": 10840
+    },
+    {
+     "id": "kreeta.livia.c4",
+     "alku": 10840,
+     "loppu": 13460
+    }
+   ]
   },
   "lappi": {
    "revision": "eu-hl-e4-20260913-r1-approved1",
    "tekstiSha256": "d4169d3f922d8e34e53b0e95ace9c87ee09b6b5b2327d3ecfb9a26079bde770b",
    "tila": "ok",
    "aani": {
-    "tavut": 238280,
-    "sha256": "ecd90862dd6fb7a7f0ef43deece72e8b5485e747dd5b891f8ad141b751555432"
+    "tavut": 327932,
+    "sha256": "4a134ba7633564d79eaa28fd9651063ba509f237c4fa320dde686597020f98d3"
    },
    "eleet": [
     {
      "id": "lappi.livia.c1",
-     "alku": 1220,
-     "loppu": 4039
+     "alku": 1360,
+     "loppu": 3480
     },
     {
      "id": "lappi.livia.c2",
-     "alku": 4039,
-     "loppu": 6599
+     "alku": 3480,
+     "loppu": 6020
     },
     {
      "id": "lappi.livia.c3",
-     "alku": 6599,
-     "loppu": 9939
+     "alku": 6020,
+     "loppu": 8760
     },
     {
      "id": "lappi.livia.c4",
-     "alku": 9939,
-     "loppu": 13359
+     "alku": 8760,
+     "loppu": 11900
     },
     {
      "id": "lappi.livia.c5",
-     "alku": 13359,
-     "loppu": 14639
+     "alku": 11900,
+     "loppu": 13320
     }
    ]
   },
   "lissabon": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "9782fc69503a840b0330a49eb4625376b2d9f957d238693316b8ca2b06949951",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 358652,
+    "sha256": "3ce412adf3a406631f950603ab328a2a19695364c067a2c44bb18706f216269b"
+   },
+   "eleet": [
+    {
+     "id": "lissabon.livia.c1",
+     "alku": 1280,
+     "loppu": 5080
+    },
+    {
+     "id": "lissabon.livia.c2",
+     "alku": 5080,
+     "loppu": 6800
+    },
+    {
+     "id": "lissabon.livia.c3",
+     "alku": 6800,
+     "loppu": 10160
+    },
+    {
+     "id": "lissabon.livia.c4",
+     "alku": 10160,
+     "loppu": 12840
+    },
+    {
+     "id": "lissabon.livia.c5",
+     "alku": 12840,
+     "loppu": 14660
+    }
+   ]
   },
   "lontoo": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "2a22c0329b0ccafe38385c0b8a11856666e4acbd7ea928775656a3f7786c5331",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 282165,
+    "sha256": "192b966ca43d6385216cdb6af4b1ac892e884ef0ef1de47bf3bc7fd2da4e987b"
+   },
+   "eleet": [
+    {
+     "id": "lontoo.livia.c1",
+     "alku": 180,
+     "loppu": 5720
+    },
+    {
+     "id": "lontoo.livia.c2",
+     "alku": 5720,
+     "loppu": 7960
+    },
+    {
+     "id": "lontoo.livia.c3",
+     "alku": 7960,
+     "loppu": 10640
+    },
+    {
+     "id": "lontoo.livia.c4",
+     "alku": 10640,
+     "loppu": 11480
+    }
+   ]
   },
   "madrid": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "8292b6b023add9c9b17b6c523c71ac99d679c396b073f9a2516a42c8e3384548",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 376206,
+    "sha256": "0bf2fcffa11b6411ddea5c12ff1d4ccf6fa5c4e199e904b99152f57579c35932"
+   },
+   "eleet": [
+    {
+     "id": "madrid.livia.c1",
+     "alku": 180,
+     "loppu": 3080
+    },
+    {
+     "id": "madrid.livia.c2",
+     "alku": 3080,
+     "loppu": 6520
+    },
+    {
+     "id": "madrid.livia.c3",
+     "alku": 6520,
+     "loppu": 9280
+    },
+    {
+     "id": "madrid.livia.c4",
+     "alku": 9280,
+     "loppu": 13700
+    },
+    {
+     "id": "madrid.livia.c5",
+     "alku": 13700,
+     "loppu": 15420
+    }
+   ]
   },
   "marseille": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "3ad8556ac1e68f70bec57537b64b79afeb8c649660ce65fbb41e11677affd5a3",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 335455,
+    "sha256": "f5f446e1552d1fd77aa58c946df0c0d02baa579eea3d2fa0cb9a15ace94e9096"
+   },
+   "eleet": [
+    {
+     "id": "marseille.livia.c1",
+     "alku": 200,
+     "loppu": 4120
+    },
+    {
+     "id": "marseille.livia.c2",
+     "alku": 4120,
+     "loppu": 7000
+    },
+    {
+     "id": "marseille.livia.c3",
+     "alku": 7000,
+     "loppu": 8680
+    },
+    {
+     "id": "marseille.livia.c4",
+     "alku": 8680,
+     "loppu": 11320
+    },
+    {
+     "id": "marseille.livia.c5",
+     "alku": 11320,
+     "loppu": 13560
+    }
+   ]
   },
   "moskova": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "b2895f9682e66e68545c2d5711ba96cbdcd8519da16b7f4ff955cbf6bd184921",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 274015,
+    "sha256": "f51e6373b553f3d1ced5d3a60e9132e7df9aaf18dde3418c9923fc228c0c8208"
+   },
+   "eleet": [
+    {
+     "id": "moskova.livia.c1",
+     "alku": 1240,
+     "loppu": 5880
+    },
+    {
+     "id": "moskova.livia.c2",
+     "alku": 5880,
+     "loppu": 9620
+    },
+    {
+     "id": "moskova.livia.c3",
+     "alku": 9620,
+     "loppu": 10980
+    }
+   ]
   },
   "odessa": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "3566a97eceb729b0c15949ddbb4559c71c79250aa44d4d1565f93f6a49630ba7",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 320408,
+    "sha256": "75e2b66788b32834ea576cb4be303e7865631c41131fe026403948e0f311ee06"
+   },
+   "eleet": [
+    {
+     "id": "odessa.livia.c1",
+     "alku": 1640,
+     "loppu": 4360
+    },
+    {
+     "id": "odessa.livia.c2",
+     "alku": 4360,
+     "loppu": 7440
+    },
+    {
+     "id": "odessa.livia.c3",
+     "alku": 7440,
+     "loppu": 9720
+    },
+    {
+     "id": "odessa.livia.c4",
+     "alku": 9720,
+     "loppu": 11560
+    },
+    {
+     "id": "odessa.livia.c5",
+     "alku": 11560,
+     "loppu": 13160
+    }
+   ]
   },
   "oslo": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "07da5beed55c35f042c6ed836e2e970cd221ad1b3d8a194fd72cc87971febf40",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 329812,
+    "sha256": "e879af607b97fb628fbf8bae3cdc0ce0190afb063230e44179efe5d29698bbec"
+   },
+   "eleet": [
+    {
+     "id": "oslo.livia.c1",
+     "alku": 1340,
+     "loppu": 5000
+    },
+    {
+     "id": "oslo.livia.c2",
+     "alku": 5000,
+     "loppu": 8460
+    },
+    {
+     "id": "oslo.livia.c3",
+     "alku": 8460,
+     "loppu": 11500
+    },
+    {
+     "id": "oslo.livia.c4",
+     "alku": 11500,
+     "loppu": 13340
+    }
+   ]
   },
   "pariisi": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "3b524abb834d06e629bef36e5d672a0c118e71cbee05b7ae24099d0df7171230",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 487174,
+    "sha256": "6e6f3f14c155f887fcb2034a0540fe0216fabd87d9063cde5a3064846017e344"
+   },
+   "eleet": [
+    {
+     "id": "pariisi.livia.c1",
+     "alku": 140,
+     "loppu": 4280
+    },
+    {
+     "id": "pariisi.livia.c2",
+     "alku": 4280,
+     "loppu": 7720
+    },
+    {
+     "id": "pariisi.livia.c3",
+     "alku": 7720,
+     "loppu": 13400
+    },
+    {
+     "id": "pariisi.livia.c4",
+     "alku": 13400,
+     "loppu": 17820
+    },
+    {
+     "id": "pariisi.livia.c5",
+     "alku": 17820,
+     "loppu": 19960
+    }
+   ]
   },
   "pietari": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "1878a0603c8ef59d490d6f852cf6ede523a59aae5c8057b38083d21d2deeb65b",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 239533,
+    "sha256": "476db65ec693b733a80d058a1803da61ab54908cfd1f56c176e60e5037abab18"
+   },
+   "eleet": [
+    {
+     "id": "pietari.livia.c1",
+     "alku": 2300,
+     "loppu": 6520
+    },
+    {
+     "id": "pietari.livia.c2",
+     "alku": 6520,
+     "loppu": 8300
+    },
+    {
+     "id": "pietari.livia.c3",
+     "alku": 8300,
+     "loppu": 9720
+    }
+   ]
   },
   "praha": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "ddeeef8a4b8ae574d2872df4f3fbd9c5127a10de0290e90a46d982eaac36bf62",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 302854,
+    "sha256": "9b54aa9efc71048f508f9cee7f533a74e3b1bfe0c3330757593a9f928a487ff4"
+   },
+   "eleet": [
+    {
+     "id": "praha.livia.c1",
+     "alku": 100,
+     "loppu": 5800
+    },
+    {
+     "id": "praha.livia.c2",
+     "alku": 5800,
+     "loppu": 9780
+    },
+    {
+     "id": "praha.livia.c3",
+     "alku": 9780,
+     "loppu": 11460
+    },
+    {
+     "id": "praha.livia.c4",
+     "alku": 11460,
+     "loppu": 12340
+    }
+   ]
   },
   "riika": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "3561bb8d37ed7db9b0b7ac524247c670177ad00b8a1298d1ed604872aefd93e0",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 275896,
+    "sha256": "c9f0618e11d5ce68d5ca3f6f30c640780161c480a632c6267dbbf8f6871a40a8"
+   },
+   "eleet": [
+    {
+     "id": "riika.livia.c1",
+     "alku": 1580,
+     "loppu": 5560
+    },
+    {
+     "id": "riika.livia.c2",
+     "alku": 5560,
+     "loppu": 9120
+    },
+    {
+     "id": "riika.livia.c3",
+     "alku": 9120,
+     "loppu": 11260
+    }
+   ]
   },
   "rooma": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "720c7925c99a9c9977292a86530a419f73ce372d816df17c78606cfafcdcc6c0",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 353009,
+    "sha256": "a8c6487f96802e310c07bc737bee6830fa2e2b24e2e556f1876545a13d632ec8"
+   },
+   "eleet": [
+    {
+     "id": "rooma.livia.c1",
+     "alku": 140,
+     "loppu": 2900
+    },
+    {
+     "id": "rooma.livia.c2",
+     "alku": 2900,
+     "loppu": 6140
+    },
+    {
+     "id": "rooma.livia.c3",
+     "alku": 6140,
+     "loppu": 11400
+    },
+    {
+     "id": "rooma.livia.c4",
+     "alku": 11400,
+     "loppu": 14440
+    }
+   ]
   },
   "sarajevo": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "145fb8120049fc081ddd36ebe98f44369868e89bac35068d2981a3e14ce6da9d",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 287808,
+    "sha256": "2a98de057840e7ab8ba9f6a16414ef508472003ceefeaac3d033a3d915a96b7d"
+   },
+   "eleet": [
+    {
+     "id": "sarajevo.livia.c1",
+     "alku": 100,
+     "loppu": 5300
+    },
+    {
+     "id": "sarajevo.livia.c2",
+     "alku": 5300,
+     "loppu": 7540
+    },
+    {
+     "id": "sarajevo.livia.c3",
+     "alku": 7540,
+     "loppu": 10280
+    },
+    {
+     "id": "sarajevo.livia.c4",
+     "alku": 10280,
+     "loppu": 11780
+    }
+   ]
   },
   "sevilla": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "0fd228327bdfa562bce8aa7c51199dadcd17f0502e34abd7c39a6615bbb97fee",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 268372,
+    "sha256": "4656b7af0d9c2fe1f544e15c83f23c62d940d82b8d3ce488f06a24fe87a4a249"
+   },
+   "eleet": [
+    {
+     "id": "sevilla.livia.c1",
+     "alku": 180,
+     "loppu": 4160
+    },
+    {
+     "id": "sevilla.livia.c2",
+     "alku": 4160,
+     "loppu": 7960
+    },
+    {
+     "id": "sevilla.livia.c3",
+     "alku": 7960,
+     "loppu": 10000
+    },
+    {
+     "id": "sevilla.livia.c4",
+     "alku": 10000,
+     "loppu": 10960
+    }
+   ]
   },
   "sisilia": {
    "revision": "eu-hl-europe-20260913-r2-approved1",
    "tekstiSha256": "ac331a83b4fcc669811a2f1c0ef75edbb32769cf76081771e675eb968783cd52",
    "tila": "ok",
    "aani": {
-    "tavut": 194395,
-    "sha256": "dde3d26ee4e027c1a14360bda340f7a10d7d12927cf49acbe051ea1ad081ac7f"
+    "tavut": 272134,
+    "sha256": "28efcc12e4e35b52584281133c4b2d02eb88d0d7c663d27de35d4e89c5e60c74"
    },
    "eleet": [
     {
      "id": "sisilia.livia.c1",
-     "alku": 2240,
-     "loppu": 5440
+     "alku": 2100,
+     "loppu": 4520
     },
     {
      "id": "sisilia.livia.c2",
-     "alku": 5440,
-     "loppu": 9179
+     "alku": 4520,
+     "loppu": 7880
     },
     {
      "id": "sisilia.livia.c3",
-     "alku": 9179,
-     "loppu": 10800
+     "alku": 7880,
+     "loppu": 9640
     },
     {
      "id": "sisilia.livia.c4",
-     "alku": 10800,
-     "loppu": 11859
+     "alku": 9640,
+     "loppu": 10960
     }
    ]
   },
   "sofia": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "a2d6d6ffb6ccabd33da64e053acdce5b63479109e4b8de0433ad57671f067f14",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 272134,
+    "sha256": "277fa136ae925fa8f49e5ccdfbb62a9def1fbba8e4ec72b664e349724dfaf51e"
+   },
+   "eleet": [
+    {
+     "id": "sofia.livia.c1",
+     "alku": 260,
+     "loppu": 6080
+    },
+    {
+     "id": "sofia.livia.c2",
+     "alku": 6080,
+     "loppu": 8520
+    },
+    {
+     "id": "sofia.livia.c3",
+     "alku": 8520,
+     "loppu": 11060
+    }
+   ]
   },
   "tallinna": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "ac627c3f69360a941f6f97e5e31339da90560c1da3906a5ab8ee97605b9023bf",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 293450,
+    "sha256": "821091a401a1c9af02c0d87431d519c537808fd9a5274bd0f93c9b919942d964"
+   },
+   "eleet": [
+    {
+     "id": "tallinna.livia.c1",
+     "alku": 240,
+     "loppu": 3220
+    },
+    {
+     "id": "tallinna.livia.c2",
+     "alku": 3220,
+     "loppu": 6760
+    },
+    {
+     "id": "tallinna.livia.c3",
+     "alku": 6760,
+     "loppu": 9700
+    },
+    {
+     "id": "tallinna.livia.c4",
+     "alku": 9700,
+     "loppu": 12020
+    }
+   ]
   },
   "tampere": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "683df4b873f6770c4a87ccd9fe6eaf51ab7befd7a02194873f8ac6e3f2c50367",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 333574,
+    "sha256": "bdd6eb70e9fad5e74df59e45440f380d3046a550e174978640690ca154bab08f"
+   },
+   "eleet": [
+    {
+     "id": "tampere.livia.c1",
+     "alku": 1860,
+     "loppu": 6200
+    },
+    {
+     "id": "tampere.livia.c2",
+     "alku": 6200,
+     "loppu": 8300
+    },
+    {
+     "id": "tampere.livia.c3",
+     "alku": 8300,
+     "loppu": 11200
+    },
+    {
+     "id": "tampere.livia.c4",
+     "alku": 11200,
+     "loppu": 13540
+    }
+   ]
   },
   "tromssa": {
    "revision": "eu-hl-e4-20260913-r1-approved1",
    "tekstiSha256": "c17f172e0270f1272e2fc001bf0742fef5ee88b1c104b03a4d03a78e59e08b22",
    "tila": "ok",
    "aani": {
-    "tavut": 252491,
-    "sha256": "7e333565bdc57fd228287c5ad7f5d62fcaef9f978474a5971fb4b420bfbde10f"
+    "tavut": 311004,
+    "sha256": "c42b277c1500337f44d77dd3fded5cce4d87ce8151f5ce9e07aedba161a77f18"
    },
    "eleet": [
     {
      "id": "tromssa.livia.c1",
-     "alku": 1000,
-     "loppu": 2500
+     "alku": 860,
+     "loppu": 2140
     },
     {
      "id": "tromssa.livia.c2",
-     "alku": 2500,
-     "loppu": 8359
+     "alku": 2140,
+     "loppu": 7220
     },
     {
      "id": "tromssa.livia.c3",
-     "alku": 8359,
-     "loppu": 10840
+     "alku": 7220,
+     "loppu": 8660
     },
     {
      "id": "tromssa.livia.c4",
-     "alku": 10840,
-     "loppu": 13880
+     "alku": 8660,
+     "loppu": 11000
     },
     {
      "id": "tromssa.livia.c5",
-     "alku": 13880,
-     "loppu": 15559
+     "alku": 11000,
+     "loppu": 12700
     }
    ]
   },
   "tukholma": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "5a2b34fec2b51b9916e9dc1d81dacad3b3d892d61f91535aa5f00186987ede22",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 479651,
+    "sha256": "ea26cffe1d24cbe607c2ee6eb0fc2ce97109c3c9393e88c73044cdbfd57883b1"
+   },
+   "eleet": [
+    {
+     "id": "tukholma.livia.c1",
+     "alku": 1480,
+     "loppu": 5600
+    },
+    {
+     "id": "tukholma.livia.c2",
+     "alku": 5600,
+     "loppu": 9480
+    },
+    {
+     "id": "tukholma.livia.c3",
+     "alku": 9480,
+     "loppu": 12500
+    },
+    {
+     "id": "tukholma.livia.c4",
+     "alku": 12500,
+     "loppu": 17780
+    },
+    {
+     "id": "tukholma.livia.c5",
+     "alku": 17780,
+     "loppu": 19760
+    }
+   ]
   },
   "varsova": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "6107f701ffea15bd593cd6f1ad33568d5e68e7e6da274c85edde186191484de5",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 353009,
+    "sha256": "5cad39819e407250894249de95a2d901e9d2fd65640f14a0ed70e674665b55ee"
+   },
+   "eleet": [
+    {
+     "id": "varsova.livia.c1",
+     "alku": 1480,
+     "loppu": 4980
+    },
+    {
+     "id": "varsova.livia.c2",
+     "alku": 4980,
+     "loppu": 9880
+    },
+    {
+     "id": "varsova.livia.c3",
+     "alku": 9880,
+     "loppu": 12700
+    },
+    {
+     "id": "varsova.livia.c4",
+     "alku": 12700,
+     "loppu": 14440
+    }
+   ]
   },
   "venetsia": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "2cbd024d573c4a3aee0900a057d2260ad0056570cbae2f1239cbf44410cf0601",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 396895,
+    "sha256": "9467b749ffccc1040f54ee57267b54d9e4997cfcc43d6f5906645ff74acffe53"
+   },
+   "eleet": [
+    {
+     "id": "venetsia.livia.c1",
+     "alku": 180,
+     "loppu": 3460
+    },
+    {
+     "id": "venetsia.livia.c2",
+     "alku": 3460,
+     "loppu": 6260
+    },
+    {
+     "id": "venetsia.livia.c3",
+     "alku": 6260,
+     "loppu": 8800
+    },
+    {
+     "id": "venetsia.livia.c4",
+     "alku": 8800,
+     "loppu": 11720
+    },
+    {
+     "id": "venetsia.livia.c5",
+     "alku": 11720,
+     "loppu": 14640
+    },
+    {
+     "id": "venetsia.livia.c6",
+     "alku": 14640,
+     "loppu": 16300
+    }
+   ]
   },
   "vilna": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "9bc924a83e9c9aa9f7ce84c5fc1d60aa5ac79771e3a19adb236ea80015c52b7e",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 351128,
+    "sha256": "9ba1858a4496d41a9755c5e2d1b4912dc5f87d873adf91d57750a5d33a972f8e"
+   },
+   "eleet": [
+    {
+     "id": "vilna.livia.c1",
+     "alku": 1800,
+     "loppu": 6540
+    },
+    {
+     "id": "vilna.livia.c2",
+     "alku": 6540,
+     "loppu": 9960
+    },
+    {
+     "id": "vilna.livia.c3",
+     "alku": 9960,
+     "loppu": 11700
+    },
+    {
+     "id": "vilna.livia.c4",
+     "alku": 11700,
+     "loppu": 13060
+    },
+    {
+     "id": "vilna.livia.c5",
+     "alku": 13060,
+     "loppu": 14420
+    }
+   ]
   },
   "wien": {
    "revision": "eu-hl-europe-20260914-r2-approved",
    "tekstiSha256": "99deb3d702990d1fec29d2e2b4c02cac6b8bdde0f03435dfcd26bc9fa077c03b",
-   "tila": "puuttuu",
-   "http": 404
+   "tila": "ok",
+   "aani": {
+    "tavut": 306616,
+    "sha256": "0b54e1e90862e3e88a66922f92102c4d7f2a00121f1f996216526676445d7fe5"
+   },
+   "eleet": [
+    {
+     "id": "wien.livia.c1",
+     "alku": 180,
+     "loppu": 6180
+    },
+    {
+     "id": "wien.livia.c2",
+     "alku": 6180,
+     "loppu": 8600
+    },
+    {
+     "id": "wien.livia.c3",
+     "alku": 8600,
+     "loppu": 10960
+    },
+    {
+     "id": "wien.livia.c4",
+     "alku": 10960,
+     "loppu": 12460
+    }
+   ]
   }
  }
 }
