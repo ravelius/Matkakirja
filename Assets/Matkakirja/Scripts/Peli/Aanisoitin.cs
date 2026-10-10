@@ -681,6 +681,8 @@ namespace Matkakirja.Natiivi
             {
                 esitysLokiUrl = null;
                 Debug.Log($"MATKAKIRJA ui saapuminen: musiikki alkaa {Time.unscaledTime:0.000} (dsp {AudioSettings.dspTime:0.000}, nousu {l.NousuMs} ms)");
+                if (esitysTasoloki != null) StopCoroutine(esitysTasoloki);
+                esitysTasoloki = StartCoroutine(EsitysTasoloki(l, esitysPuheAika > 0 ? esitysPuheAika : Time.unscaledTime));
             }
         }
 
@@ -692,6 +694,42 @@ namespace Matkakirja.Natiivi
         string esitysLokiUrl;
         string esitysViiveKaupunki;
         float esitysViiveAika;
+        /// <summary>Saapumispuheen kuuluva alku (unscaledTime, esilämmitys mukana); 0 = ei puhetta. QA-tasolokin nollakohta.</summary>
+        float esitysPuheAika;
+        Coroutine esitysTasoloki;
+        public const float TasolokiS = 12f, TasolokiVali = 0.25f;
+
+        /// <summary>
+        /// QA (PT 11.10., simu d81fbd209: musiikki ei kuulunut trailerin puheen alla): esityksen nopean taso 0,25 s välein 12 s ajan,
+        /// t = sekunteja puheen alusta. lahde = AudioSource.volume (Aanisoittimen ramppi), tavoite = AaniTilan toive ja kerroin =
+        /// tavoite / (perustaso × liukukerroin), eli 0,8 = esityksen väistö, 0,25 = tavallinen puheväistö, 1 = täysi.
+        /// </summary>
+        IEnumerator EsitysTasoloki(Lahde l, float t0)
+        {
+            var ic = CultureInfo.InvariantCulture;
+            float loppu = Time.unscaledTime + TasolokiS;
+            while (Time.unscaledTime < loppu)
+            {
+                var a = l.A;
+                if (l.Vapautettu || a == null || Tila == null)
+                {
+                    Debug.Log($"MATKAKIRJA ui saapuminen: musiikki taso t={(Time.unscaledTime - t0).ToString("0.00", ic)} lähde vapautettu");
+                    break;
+                }
+                var w = Tila.Toive(Kanava.Pohja);
+                double perus = AaniVakiot.MusiikinPerustaso * Tila.MusiikinKerroin;
+                double tavoite = w.Url == l.Url ? w.Tavoite : double.NaN;
+                Debug.Log("MATKAKIRJA ui saapuminen: musiikki taso"
+                    + $" t={(Time.unscaledTime - t0).ToString("0.00", ic)} lahde={a.volume.ToString("0.0000", ic)}"
+                    + $" tavoite={tavoite.ToString("0.0000", ic)} kerroin={(perus > 0 ? tavoite / perus : double.NaN).ToString("0.00", ic)}"
+                    + $" aika={a.time.ToString("0.00", ic)} soi={a.isPlaying} puhujia={Tila.Puhujia}"
+                    + $" pyydetty={Tila.Pyydetty.ToString("0.00", ic)} voimassa={Tila.Voimassa.ToString("0.00", ic)}"
+                    + $" syyt={(Tila.Hiljennykset.Count > 0 ? string.Join(",", Tila.Hiljennykset) : "-")} jakso={Tila.Jakso ?? "-"}"
+                    + $" esitys={Tila.EsitysKaupunki ?? "-"} ramppi={l.Taso.Kaynnissa} soiLahde={l.Soi}");
+                yield return new WaitForSecondsRealtime(TasolokiVali);
+            }
+            esitysTasoloki = null;
+        }
 
         /// <summary>
         /// Saapumistraileri: isoisän saapumispuhe alkoi soida (Puhe.Puhuu, sama ruutu kuin puheen Play) tai traileri alkoi ilman
@@ -702,6 +740,7 @@ namespace Matkakirja.Natiivi
         {
             var s = Instanssi;
             if (s == null || s.Tila == null || kaupunki == null) return;
+            s.esitysPuheAika = Time.unscaledTime + Mathf.Max(0f, viiveS);
             if (viiveS > 0f) { s.esitysViiveKaupunki = kaupunki; s.esitysViiveAika = Time.unscaledTime + viiveS; return; }
             s.AloitaEsitysMusiikki(kaupunki);
         }
@@ -712,6 +751,7 @@ namespace Matkakirja.Natiivi
             var s = Instanssi;
             if (s == null || s.Tila == null || s.Tila.OdottaaPuhetta == null) return;
             if (s.esitysViiveKaupunki != null) { s.AloitaEsitysMusiikki(s.esitysViiveKaupunki); return; } // puhe jo alkamassa
+            s.esitysPuheAika = 0f; // ilman puhetta: tasolokin nollakohta = musiikin alku
             s.esitysLokiUrl = AaniOsoite.Url(s.Tila.JaksonNopea(s.Tila.OdottaaPuhetta));
             Debug.Log($"MATKAKIRJA aani: saapumisesityksen nopea {s.Tila.OdottaaPuhetta} ilman puhetta (odotus pois)");
             s.Tila.JaksonOdotusPois(kaupunki);

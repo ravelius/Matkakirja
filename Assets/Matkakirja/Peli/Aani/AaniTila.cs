@@ -212,6 +212,8 @@ namespace Matkakirja.Peli
         public Toive Toive(Kanava k) => toiveet[(int)k];
         public double Voimassa => Vaisto.Voimassa(pyydetty, hiljennykset);
         public double Pyydetty => pyydetty;
+        /// <summary>Puhujien laskuri (kertoja, Pulu, dioraaman repliikki); QA-loki.</summary>
+        public int Puhujia => puhujia;
         public IReadOnlyList<string> Hiljennykset => hiljennykset;
         public double MusiikinKerroin => Musiikkitaso.Kerroin(Liuku);
 
@@ -951,9 +953,13 @@ namespace Matkakirja.Peli
         double PohjaTaso(double kerroin) =>
             AaniVakiot.MusiikinPerustaso * (introPito ? 1 : EsityksenKerroin(kerroin)) * MusiikinKerroin * (AvausKaynnissa ? AaniVakiot.AvauksenMusiikki : 1);
 
-        /// <summary>Saapumisesityksen nopea puheen alla: puheväistö EsitysVaistoPuhe (hiljennykset ennallaan); muuten kerroin sellaisenaan.</summary>
+        /// <summary>
+        /// Saapumisesityksen nopea puheen alla: aina EsitysVaistoPuhe (hiljennykset ennallaan, 0,45), ei koskaan tavallista 0,25:tä.
+        /// Ehto ei vaadi pyydetty == VaistoPuhe (liukulukuvertailu ja muu pyyntö, esim. toinen puhuja tai näyte, pudottaisivat
+        /// esityksen 0,25:een); muuten kerroin sellaisenaan.
+        /// </summary>
         double EsityksenKerroin(double kerroin) =>
-            esitysSoi && jaksoVaihe == 0 && puhujia > 0 && pyydetty == AaniVakiot.VaistoPuhe
+            esitysSoi && jaksoVaihe == 0 && puhujia > 0
                 ? Math.Max(kerroin, Vaisto.Voimassa(AaniVakiot.EsitysVaistoPuhe, hiljennykset)) : kerroin;
 
         double VisaTaso(double kerroin) =>

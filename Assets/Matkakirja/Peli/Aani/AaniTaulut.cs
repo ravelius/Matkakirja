@@ -33,8 +33,12 @@ namespace Matkakirja.Peli
         public static int PohjaVaihtoMs => Asetus.Kokonais("aanet.PohjaVaihtoMs", 1500);
         /// <summary>Saapumisesityksen nopea kappale alkaa isoisän saapumispuheen kanssa (omistaja KIIRE TF 180): nousu ≤ 0,15 s.</summary>
         public static int EsitysNousuMs => Asetus.Kokonais("aanet.EsitysNousuMs", 150);
-        /// <summary>Saapumisesityksen nopean väistö puheen alla (tavallinen puheväistö 0,25 tuntui alkavan vasta puheen jälkeen).</summary>
-        public static double EsitysVaistoPuhe => Asetus.Luku("aanet.EsitysVaistoPuhe", 0.6);
+        /// <summary>
+        /// Saapumisesityksen nopean väistö puheen alla (tavallinen puheväistö 0,25 tuntui alkavan vasta puheen jälkeen). 0,8 (PT 11.10.,
+        /// simu d81fbd209): 0,6:lla puheen tauossa kaappaus −56 dB, koska nopean alku on hiljainen (tiedoston RMS 0–4 s −24…−36 dB);
+        /// vaatimus ≥ −40 dB (perustaso kaappauksessa ~−37 dB, 0,8 → ~−39 dB).
+        /// </summary>
+        public static double EsitysVaistoPuhe => Asetus.Luku("aanet.EsitysVaistoPuhe", 0.8);
 
         // --- visamusiikki (MUSIIKKI_VOIMA = perustaso × 1,3) ---
         public static double VisanKerroin => Asetus.Luku("aanet.VisanKerroin", 1.3);

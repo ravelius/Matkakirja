@@ -359,5 +359,80 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("c,a", string.Join(",", pois), "molemmat vanhenivat");
             Oleta.Sama(0, e.Maara);
         }
+
+        // --- ESITYKSEN VÄISTÖ (PT 11.10., simu d81fbd209: musiikki ei kuulunut trailerin puheen alla) ----------------------------
+
+        /// <summary>Pohjan tavoite suhteessa täyteen tasoon (perustaso × liukukerroin): 1 = täysi, EsitysVaistoPuhe, 0,25 = tavallinen.</summary>
+        static double Kerroin(AaniTila s) => s.Toive(Kanava.Pohja).Tavoite / (AaniVakiot.MusiikinPerustaso * s.MusiikinKerroin);
+        static void EsitysTasolla(AaniTila s, string missa)
+        {
+            var w = s.Toive(Kanava.Pohja);
+            Oleta.Tosi(!w.Tauko && Soi(s, "musa-kaupunki-pariisi-nopea"), missa + ": nopea soi: " + Pohja(s));
+            Oleta.Tosi(System.Math.Abs(Kerroin(s) - AaniVakiot.EsitysVaistoPuhe) < 1e-9, $"{missa}: kerroin {Kerroin(s):0.000}, odotettu {AaniVakiot.EsitysVaistoPuhe}");
+        }
+
+        [Testi] static void EsitysVaistoOnPuheenAllaVahintaanKahdeksanKymmenesta()
+        {
+            Oleta.Tosi(AaniVakiot.EsitysVaistoPuhe >= 0.8, "PT: puheen tauossa ≥ −40 dB (perustaso ~−37 dB) → ≥ 0,8");
+            Oleta.Tosi(AaniVakiot.VaistoPuhe < AaniVakiot.EsitysVaistoPuhe, "kevyempi kuin tavallinen");
+        }
+
+        [Testi] static void EsitysVaistoPuheEnsinKutenSimulla()
+        {
+            // Simun järjestys: Puhe.Puhuu → ensin Aanikoukut.Puhe (Tila.Puhe(true)), sitten trailerin kuuntelija (JaksonNopeaAlkaa).
+            var s = Esitys();
+            s.Paikka("lontoo", "kaupunki");
+            s.Paikka("pariisi", "kaupunki");
+            s.Puhe(true);
+            s.JaksonNopeaAlkaa("pariisi");
+            EsitysTasolla(s, "alusta");
+            Oleta.Sama(AaniVakiot.EsitysNousuMs, s.Toive(Kanava.Pohja).KestoMs, "nousu suoraan esitystasolle");
+            // Toinen puhuja (Pulu, repliikki) ja sen loppu kesken puheen: ei koskaan 0,25:een.
+            s.Puhe(true);
+            EsitysTasolla(s, "toinen puhuja");
+            s.Puhe(false);
+            EsitysTasolla(s, "toinen puhuja loppui");
+            s.AsetaLiuku(80);
+            EsitysTasolla(s, "liuku muuttui");
+            s.Puhe(false);
+            Oleta.Tosi(System.Math.Abs(Kerroin(s) - 1) < 1e-9, $"puhe loppui: täysi ({Kerroin(s):0.000})");
+            s.Puhe(true); // uusi puhe (esim. seuraava klippi) esityksen aikana
+            EsitysTasolla(s, "uusi puhe");
+        }
+
+        [Testi] static void EsitysVaistoMusiikkiEnsin()
+        {
+            // Käänteinen järjestys (kuuntelija ennen koukkua tai puhe alkaa vasta musiikin jälkeen): täysi → esitystaso, ei 0,25:tä.
+            var s = Esitys();
+            s.Paikka("pariisi", "kaupunki");
+            s.JaksonNopeaAlkaa("pariisi");
+            Oleta.Tosi(System.Math.Abs(Kerroin(s) - 1) < 1e-9, "ilman puhetta täysi");
+            s.Puhe(true);
+            EsitysTasolla(s, "puhe alkoi");
+            Oleta.Sama(AaniVakiot.VaistoLiukuMs, s.Toive(Kanava.Pohja).KestoMs);
+            // Maitse: puhe ennen paikkaa → nopea alkaa paikan vaihtuessa suoraan esitystasolle.
+            var m = Esitys();
+            m.Paikka("lontoo", "kaupunki");
+            m.Puhe(true);
+            m.JaksonNopeaAlkaa("pariisi");
+            m.Paikka("pariisi", "kaupunki");
+            EsitysTasolla(m, "maitse");
+            Oleta.Sama(AaniVakiot.EsitysNousuMs, m.Toive(Kanava.Pohja).KestoMs);
+        }
+
+        [Testi] static void EsitysVaistoNayteEiPudotaTavalliseen()
+        {
+            var s = Esitys();
+            s.Paikka("pariisi", "kaupunki");
+            s.Puhe(true);
+            s.JaksonNopeaAlkaa("pariisi");
+            s.Nayte(true); // muu väistöpyyntö puheen aikana
+            EsitysTasolla(s, "näyte");
+            s.Nayte(false); // web: pyydetty = viimeisin kirjoitus (1) → täysi, ei koskaan alle esitystason
+            Oleta.Tosi(Kerroin(s) >= AaniVakiot.EsitysVaistoPuhe - 1e-9, "näyte loppui: " + Kerroin(s));
+            // Hiljennys rajaa kuten ennen: min(esitys, 0,45).
+            s.Hiljennys("testi", true); // ei tilaraitaa: vain hiljennys
+            Oleta.Tosi(System.Math.Abs(Kerroin(s) - System.Math.Min(AaniVakiot.EsitysVaistoPuhe, AaniVakiot.VaistoHiljennys)) < 1e-9, "hiljennys: " + Kerroin(s));
+        }
     }
 }
