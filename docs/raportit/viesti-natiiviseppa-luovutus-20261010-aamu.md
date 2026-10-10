@@ -37,6 +37,20 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
+## TILA 10.4x — TAIDEMUSEO: MUISTI JA LATAUS (PT 09.5x, omistaja "tärkeämpi projekti"; suunnitelma HYVÄKSYTTY 10.0x)
+- Proton haara **natiiviseppa/museo-muisti 1fcf35532** (wt /Users/Shared/Claude/wt/proto-natiiviseppa-museo; rebasettu LS1:n
+  linssiseppa/taidemuseo-176 be85d99de:n päälle; LS1 mergesi sen omaan kärkeensä 283c052cb). unity 0, Linssit 1316/1316.
+  - Ydin/Museo/MuseoRuudut.cs (Linssit.Museo): TeosPyramidi, RuutuValinta, RuutuVarasto (LRU), MuseoBudjetti (≤ 160 Mt/sali), MuseoEsilataus; 10 testiä.
+  - Unity/MuseoTekstuurit.cs: seinätaso → teosmateriaali, ruudut omina nelikulmioina kankaan edessä materiaalin kopiolla (MuseoValaistu
+    valaisee maailman paikasta → ei varjostinmuutosta), ≤ 2 GPU-siirtoa/kehys, MUISTIHÄTÄ PieniMuistihata, levyvälimuisti.
+  - tyokalut/teos_astc.py: lähde → seina.astcm + yks/<z>/<x>_<y>.astc + teos.json (TextureConverter 6×6 Highest).
+- Skeema sovittu: Sisältökirjurin teokset.v2.json (id = Rijks objnr, id_lahde = slugi, kuva = {paketti "astc-v1/<id>/", px, lahde,
+  seina_lahde}, polut suhteessa media…/taidemuseo/<maa>/). LS1 tekee datapuolen (MaaJuuri, Teos.Paketti/Px, Kuvapaikka.Paketti/Px) →
+  SHA tulossa → MINÄ: MuseoTekstuurit url = MaaJuuri + kp.Paketti, pyramidi px:stä, teos.json vain jos px puuttuu.
+- 20 teoksen ASTC-erä valmis 10.36 (639 Mt, 5344 tdstoa) → _valmiit/taidemuseo-alankomaat-astc-v1-vienti-20261010; Julkaisijalle vientipyyntö
+  (vie-paketti.sh tarvitsee *.astc|*.astcm-tyypin). SEURAAVAKSI: iPad-muistiajo Muistijuna-kaavalla (Release, iPad Pro 13, min vapaa + jetsamit).
+- Jonossa: TF 175:n jälkeen Unity 6.3 T7:lle (tyojonot.md); T7-editori poistetaan vasta Julkaisijan luvalla TF 175:n jälkeen.
+
 ## TILA 09.0x
 - PT 08.5x pyysi varautumaan uudelleenlukitukseen (esittelyn valkoiset kivet), 09.0x PERUI: kivet jo 6.3:ssa, ei regressio → BUILD 175
   86ef3b3e6 pysyy (Julkaisija → TF; muutosloki tiivistetty PT:llä 245 merkkiin).
