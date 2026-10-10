@@ -2,6 +2,8 @@
 // (olavin linnassa voi soittaa sen lopetusmusiikin toistaiseksi)"; Päätoimittajan täsmennys): AaniTilan Lataus-kanava.
 // Nousu latauksen alussa, ristihäivytys näkymän avautuessa, nopea häivytys ohitettaessa tai poistuttaessa, ja musiikkiväylä
 // (liuku 0, Musiikki-kytkin) koskee sitä kuten muuta musiikkia. Linssin pito ja väistö eivät koske latausmusiikkia.
+// Päätoimittaja 10.10. 20.2x: pallossa varalla kartan alueraita, sama taso kuin Olavinlinnassa, ja kierroksen alkaessa raita
+// laskee tasorampilla kartan tasolle (~3 s) katkeamatta; muu raita kierroksella = ristihäivytys.
 using System;
 
 namespace Matkakirja.Peli.Testit
@@ -13,7 +15,7 @@ namespace Matkakirja.Peli.Testit
         static AaniTila Uusi()
         {
             var t = AaniTaulut.Oletus();
-            t.Maat["pariisi"] = "FRA"; t.Maat["wien"] = "AUT";
+            t.Maat["pariisi"] = "FRA"; t.Maat["wien"] = "AUT"; t.Maat["ateena"] = "GRC"; t.Maat["belgrad"] = "SRB";
             var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
             tila.Paikka("pariisi", "kaupunki");
             tila.LinssiPito(true, 200); // latausruutu on linssin sisällä (pallo, linna): pohja ja maisema pidossa
@@ -36,7 +38,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(w.Url != null && w.Url.Contains("/musa-kaupunki-pariisi-"), "kaupungin oma kappale kuten kartalla: " + w.Url);
             Oleta.Tosi(w.Uusi && w.Silmukka && !w.Tauko, "uusi soitin silmukkana");
             Oleta.Sama(AaniVakiot.LatausNousuMs, w.KestoMs ?? -1, "pehmeä nousu");
-            Lahella(AaniVakiot.MusiikinPerustaso * tila.MusiikinKerroin, w.Tavoite, "kartan pohjaraidan taso");
+            Lahella(AaniVakiot.LatausVoima * tila.MusiikinKerroin, w.Tavoite, "latausmusiikin taso");
             Oleta.Sama(null, tila.Toive(Kanava.Pohja).Url, "pohja pysyy linssipidossa");
             Oleta.Tosi(tila.LatausAuki, "latausruutu auki");
             // Sama kaupunki uudelleen (kierto, kuvan saapuminen): ei ala alusta eikä rampin kesto muutu.
@@ -46,11 +48,13 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void RistihaivytysNakymanAvautuessa()
         {
+            // Olavinlinna: lopetusmusiikki ristiin linnan omiin ääniin (ei jatku näkymässä).
             var tila = Uusi();
-            tila.LatausKaupunki("pariisi");
+            tila.Lataus(Loppu, AaniVakiot.LatausVoima);
             tila.LatausOhi(avautui: true);
             Oleta.Sama(null, L(tila).Url, "latausmusiikki pois");
             Oleta.Sama(AaniVakiot.LatausRistiMs, L(tila).PoisMs ?? -1, "ristihäivytys näkymän omaan ääneen");
+            Oleta.Sama(3000, AaniVakiot.LatausRistiMs, "~3 s");
             Oleta.Tosi(!tila.LatausAuki, "latausruutu kiinni");
             tila.LatausOhi(avautui: true);
             Oleta.Sama(null, L(tila).PoisMs, "toinen sulku ei tee mitään");
@@ -59,7 +63,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void OhitusJaPoistuminenHaivyttaa()
         {
             var tila = Uusi();
-            tila.Lataus(Loppu, AaniVakiot.LatausLinnaVoima);
+            tila.Lataus(Loppu, AaniVakiot.LatausVoima);
             tila.LatausOhi(avautui: false);
             Oleta.Sama(null, L(tila).Url, "pois");
             Oleta.Sama(AaniVakiot.LatausPoisMs, L(tila).PoisMs ?? -1, "nopea häivytys");
@@ -70,14 +74,14 @@ namespace Matkakirja.Peli.Testit
         {
             var tila = Uusi();
             tila.AsetaLiuku(0);
-            tila.Lataus(Loppu, AaniVakiot.LatausLinnaVoima);
+            tila.Lataus(Loppu, AaniVakiot.LatausVoima);
             Oleta.Sama(null, L(tila).Url, "liuku 0: ei soi");
             Oleta.Tosi(tila.LatausAuki, "latausruutu silti auki");
             tila.AsetaLiuku(35);
             Oleta.Sama(Loppu, L(tila).Url, "liuku ylös latauksen aikana: soi");
             Oleta.Tosi(L(tila).Uusi, "alkaa");
             tila.AsetaLiuku(60);
-            Lahella(AaniVakiot.LatausLinnaVoima * Musiikkitaso.Kerroin(60), L(tila).Tavoite, "seuraa liukua");
+            Lahella(AaniVakiot.LatausVoima * Musiikkitaso.Kerroin(60), L(tila).Tavoite, "seuraa liukua");
             Oleta.Sama(AaniVakiot.SaadinMs, L(tila).KestoMs ?? -1, "säätimen ramppi");
             tila.AsetaLiuku(0);
             Oleta.Sama(null, L(tila).Url, "liuku 0 kesken latauksen: pois");
@@ -95,14 +99,14 @@ namespace Matkakirja.Peli.Testit
         {
             // Oletusliuku 35 → sama taso kuin loppumusiikki linnassa (mikserin musiikki 0,35).
             var tila = Uusi();
-            tila.Lataus(Loppu, AaniVakiot.LatausLinnaVoima);
+            tila.Lataus(Loppu, AaniVakiot.LatausVoima);
             Lahella(0.35, L(tila).Tavoite, "≈ 0,35", 0.005);
         }
 
         [Testi] static void PitoJaVaistoEivatKosketa()
         {
             var tila = Uusi();
-            tila.Lataus(Loppu, AaniVakiot.LatausLinnaVoima);
+            tila.Lataus(Loppu, AaniVakiot.LatausVoima);
             var taso = L(tila).Tavoite;
             tila.Puhe(true);
             Lahella(taso, L(tila).Tavoite, "puheen väistö ei koske");
@@ -113,19 +117,111 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(Loppu, L(tila).Url, "linssin pito ei katkaise");
         }
 
-        [Testi] static void KaupunkiIlmanOmaaKappalettaHiljaa()
+        [Testi] static void KaupunkiIlmanOmaaKappalettaAlueraita()
         {
+            // VARARAITA (Päätoimittaja 20.2x): kartan alueraita samalla valinnalla (Musiikkivalitsin.Alueraita).
             var tila = Uusi();
             tila.LatausKaupunki("wien");
-            Oleta.Sama(null, L(tila).Url, "Wien: ei omaa kappaletta kuten kartalla (KarttaVainKaupunki)");
-            Oleta.Tosi(tila.LatausAuki, "latausruutu auki");
+            Oleta.Tosi(L(tila).Url != null && L(tila).Url.Contains("/musa-kaupunki-keski-eurooppa-"), "Wien: Keski-Euroopan alueraita: " + L(tila).Url);
+            var v = new Musiikkivalitsin(AaniTaulut.Oletus());
+            Oleta.Sama(AaniOsoite.Url(v.Alueraita("wien", "AUT")), L(tila).Url, "sama valinta kuin kartan ketjussa");
+            Oleta.Tosi(tila.KaupunginKappale("ateena").Contains("/musa-kaupunki-ateena-"), "oma kappale voittaa alueraidan");
+            var s = Uusi();
+            s.LatausKaupunki("belgrad");
+            Oleta.Sama(null, L(s).Url, "Belgrad (SRB): ei omaa eikä alueraitaa → hiljaa");
+            Oleta.Tosi(s.LatausAuki, "latausruutu auki");
+        }
+
+        [Testi] static void PallonTasoSamaKuinLinnan()
+        {
+            var pallo = Uusi();
+            pallo.LatausKaupunki("pariisi");
+            var linna = Uusi();
+            linna.Lataus(Loppu, AaniVakiot.LatausVoima);
+            Lahella(L(linna).Tavoite, L(pallo).Tavoite, "sama taso");
+            pallo.AsetaLiuku(70); linna.AsetaLiuku(70);
+            Lahella(L(linna).Tavoite, L(pallo).Tavoite, "sama Musiikki-liu'un kerroin");
+        }
+
+        [Testi] static void SiirtymaKierrokseenTasoramppi()
+        {
+            var tila = Uusi();
+            tila.LatausKaupunki("pariisi");
+            var url = L(tila).Url;
+            double alku = L(tila).Tavoite;
+            tila.LatausOhi(avautui: true);
+            var w = L(tila);
+            Oleta.Sama(url, w.Url, "sama raita jatkuu: ei katkea");
+            Oleta.Tosi(!w.Uusi && w.PoisMs == null, "ei ristihäivytystä samaan raitaan");
+            Oleta.Sama(AaniVakiot.LatausRistiMs, w.KestoMs ?? -1, "tasoramppi ~3 s");
+            double kartta = AaniVakiot.MusiikinPerustaso * tila.MusiikinKerroin;
+            Lahella(kartta, w.Tavoite, "kartan taso");
+            Oleta.Tosi(!w.Silmukka && tila.LatausJatkuu, "kierroksella kerran läpi");
+            // Ei hyppyä: soittimen lineaarinen ramppi 30 fps:llä, jokainen askel ≤ kokonaispudotus / 90.
+            var r = new Tasoramppi(alku);
+            r.Aloita(w.Tavoite, w.KestoMs.Value);
+            double edellinen = alku, suurin = 0;
+            for (int i = 0; i < 120; i++) { r.Askel(1 / 30.0); suurin = Math.Max(suurin, edellinen - r.Arvo); edellinen = r.Arvo; }
+            Lahella(kartta, r.Arvo, "perillä");
+            Oleta.Tosi(suurin <= (alku - kartta) / 90 + 1e-9, "ei äkillistä pudotusta: " + suurin);
+            // Raita soi loppuun: kartta ei soita samaa heti uudelleen.
+            tila.LatausLoppui();
+            Oleta.Sama(null, L(tila).Url, "loppui");
+            Oleta.Tosi(!tila.LatausJatkuu, "jatko ohi");
+        }
+
+        [Testi] static void KierroksellaMuuRaitaRistiin()
+        {
+            // Pariisin intro aloittaa nopean pohjalle jo latauksen aikana: kierroksen alussa latausraita ristiin pois ~3 s:ssa.
+            var tila = Uusi();
+            tila.LatausKaupunki("pariisi");
+            tila.JaksonIntroAlusta("pariisi");
+            Oleta.Tosi(tila.Toive(Kanava.Pohja).Url?.Contains("pariisi-nopea") == true, "intron nopea soi: " + tila.Toive(Kanava.Pohja).Url);
+            tila.LatausOhi(avautui: true);
+            Oleta.Sama(null, L(tila).Url, "latausraita pois");
+            Oleta.Sama(AaniVakiot.LatausRistiMs, L(tila).PoisMs ?? -1, "ristihäivytys ~3 s");
+            // Jatkuvan raidan aikana pohjan uusi muu raita ristiin.
+            var s = Uusi();
+            s.LatausKaupunki("pariisi");
+            s.LatausOhi(true);
+            s.JaksonIntroAlusta("pariisi");
+            Oleta.Sama(null, L(s).Url, "intro kierroksella: latausraita pois");
+            Oleta.Sama(AaniVakiot.LatausRistiMs, L(s).PoisMs ?? -1, "ristiin");
+        }
+
+        [Testi] static void KartalleSamaRaitaJatkuu()
+        {
+            var t = AaniTaulut.Oletus();
+            t.Maat["ateena"] = "GRC";
+            var tila = new AaniTila(t, new Satunnainen(1).Seuraava);
+            tila.Paikka("ateena", "satama");
+            tila.LinssiPito(true, 200);
+            tila.LatausKaupunki("ateena");
+            var url = L(tila).Url;
+            tila.LatausOhi(true);
+            tila.LinssiPito(false);
+            Oleta.Sama(url, L(tila).Url, "kierroksen raita jatkuu kartalla");
+            Oleta.Sama(null, tila.Toive(Kanava.Pohja).Url, "pohja ei aloita samaa alusta");
+            tila.LatausLoppui();
+            tila.Paikka("ateena", "satama");
+            Oleta.Sama(null, tila.Toive(Kanava.Pohja).Url, "kerran läpi: ei heti uudelleen");
+            // Linssi sulkeutuu toiseen kaupunkiin: kartan raita alkaa ja kierroksen raita ristiin pois.
+            var s = new AaniTila(t, new Satunnainen(1).Seuraava);
+            s.Paikka("ateena", "satama");
+            s.LinssiPito(true, 200);
+            s.LatausKaupunki("pariisi");
+            s.LatausOhi(true);
+            s.LinssiPito(false);
+            Oleta.Tosi(s.Toive(Kanava.Pohja).Url?.Contains("ateena") == true, "Ateenan oma alkaa");
+            Oleta.Sama(null, L(s).Url, "Pariisin raita pois");
+            Oleta.Sama(AaniVakiot.LatausRistiMs, L(s).PoisMs ?? -1, "ristiin ~3 s");
         }
 
         [Testi] static void RaidanVaihtoRistiin()
         {
             var tila = Uusi();
             tila.LatausKaupunki("pariisi");
-            tila.Lataus(Loppu, AaniVakiot.LatausLinnaVoima);
+            tila.Lataus(Loppu, AaniVakiot.LatausVoima);
             Oleta.Sama(Loppu, L(tila).Url, "uusi raita");
             Oleta.Tosi(L(tila).Uusi, "uusi soitin");
             Oleta.Sama(AaniVakiot.LatausRistiMs, L(tila).PoisMs ?? -1, "edellinen ristiin");

@@ -177,7 +177,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static void Latausmusiikki(string url, double voima) => Instanssi?.Tila.Lataus(url, voima);
 
-        /// <summary>Kuumailmapallon latausruutu: kaupungin oma kappale kuten kartalla (AaniTila.LatausKaupunki).</summary>
+        /// <summary>Kuumailmapallon latausruutu: kaupungin oma kappale tai alueraita; jatkuu kierroksella kartan tasolla (AaniTila.LatausKaupunki).</summary>
         public static void LatausmusiikkiKaupunki(string kaupunki) => Instanssi?.Tila.LatausKaupunki(kaupunki);
 
         /// <summary>Latausruutu sulkeutuu: avautui = näkymä aukesi (ristihäivytys), muuten ohitus tai poistuminen (nopea häivytys).</summary>
@@ -465,6 +465,12 @@ namespace Matkakirja.Natiivi
             nyk.Tavoite = w.Tavoite;
             nyk.Alku = w.Alku;
             nyk.Silmukka = w.Silmukka;
+            // Latausraita jatkuu kierroksella kerran läpi (AaniTila.LatausOhi): silmukka pois soivasta lähteestä, uusi lataus palauttaa.
+            if (k == Kanava.Lataus && nyk.Kaynnistetty && nyk.A != null && nyk.A.loop != w.Silmukka)
+            {
+                nyk.A.loop = w.Silmukka;
+                if (w.Silmukka) nyk.LoppuIlmoitettu = false;
+            }
             nyk.Kerran = w.Kerran;
             nyk.Tauko = w.Tauko;
             if (w.KestoMs.HasValue)
@@ -770,6 +776,11 @@ namespace Matkakirja.Natiivi
                 {
                     l.LoppuIlmoitettu = true;
                     Tee(() => Tila.PohjaLoppui());
+                }
+                else if (l.Kanava == Kanava.Lataus && !a.loop && !a.isPlaying && !l.LoppuIlmoitettu)
+                {
+                    l.LoppuIlmoitettu = true;
+                    Tee(() => Tila.LatausLoppui());
                 }
             }
             if (teot != null) foreach (var t in teot) { try { t(); } catch (Exception e) { Debug.LogException(e); } }

@@ -578,7 +578,7 @@ namespace Matkakirja.Natiivi
                     AsetaLinnaKuva();
                     // LATAUSMUSIIKKI (omistaja 10.10.2026: "olavin linnassa voi soittaa sen lopetusmusiikin toistaiseksi"): pelin
                     // lopetusmusiikki (SeikkailuLoppumusiikki.Url) latausruudun ajan; vain latauskuvallinen linna saa musiikin.
-                    Aanisoitin.Latausmusiikki(SeikkailuLoppumusiikki.Url, Matkakirja.Peli.AaniVakiot.LatausLinnaVoima);
+                    Aanisoitin.Latausmusiikki(SeikkailuLoppumusiikki.Url, Matkakirja.Peli.AaniVakiot.LatausVoima);
                 }
             }
             if (odotus)
