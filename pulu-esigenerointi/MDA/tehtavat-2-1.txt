@@ -1,0 +1,802 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+AIEMPI KYSYMYS: Kuka rakennutti linnoituksen ensimmäisen, puisen version?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Ensimmäisen, puisen linnakkeen rakennutti vuonna 1499 Moldovan hallitsija [[Tapani Suuri]], ja sen tarkoituksena oli suojata [[Dnestr]]-joen kahlaamoa. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
+KYSYMYS: Kerro lisää: Tapani Suuri
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Kuka rakennutti linnoituksen ensimmäisen, puisen version?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Ensimmäisen, puisen linnakkeen rakennutti vuonna 1499 Moldovan hallitsija [[Tapani Suuri]], ja sen tarkoituksena oli suojata [[Dnestr]]-joen kahlaamoa. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
+KYSYMYS: Kerro lisää: Dnestr
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+AIEMPI KYSYMYS: Kuka rakennutti linnoituksen ensimmäisen, puisen version?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Ensimmäisen, puisen linnakkeen rakennutti vuonna 1499 Moldovan hallitsija [[Tapani Suuri]], ja sen tarkoituksena oli suojata [[Dnestr]]-joen kahlaamoa. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
+KYSYMYS: Kerro lisää: Petru Rareș
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Jänissaari 1703 — kuusi bastionia suohon] 27.5.1703 — Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, mihin kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi viikkoa aiemmin venäläiset valtasivat ylempänä Nevalla ruotsalaisten Nyenskansin linnoituksen. Suuri Pohjan sota on käynnissä, ja Ruotsin laivasto voi ilmestyä Suomenlahdelle milloin tahansa; siksi linnake pitää saada saarelle jokisuuhun ennen talvea, ensin maasta ja puusta. Kivi tulee myöhemmin, Domenico Trezzinin piirustuksin vuodesta 1706. Sotilaille ja pakkotyöhön käsketyille talonpojille paikka on suo, jossa on hyttysiä ja…
+- [Jakarta — kaupunkilehti / Historia: Kaksi bastionia kahdestakymmenestäkolmesta] Batavian muurissa oli 1600- ja 1700-luvulla kaksikymmentäkolme bastionia, ja niistä on jäljellä kaksi: Zeeburg ja Culemborg. Muurinpätkä seisoo yhä merenkulkumuseon edessä. Museona ovat VOC:n varastot, jotka rakennettiin Ciliwungin länsirannalle vuosina 1652–1771 ja joissa säilytettiin muskottia, pippuria, kahvia, teetä ja kangasta ennen laivausta. Culemborgin bastionin raunioille rakennettiin 1839 satamavartiotorni Menara Syahbandar, joka viestitti laivoille Batavian redillä. Torni menetti osan tehtävästään, kun uusi Tanjung Priokin satama avattiin 1886.
+AIEMPI KYSYMYS: Kuinka monta bastionia kivilinnoituksessa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän laskin heti. Kivilinnoituksessa on viisi [[bastionia]], jotka sijaitsevat tasaisin välein ympyrän muotoisen [[Sorokan linnoituksen]] muurilla. Toisen lähteen mukaan niistä neljä on pyöreää ja yksi on suorakulmainen porttitorni. Lyhyt vastaus, mutta kyl sekin kuuluu kyyhkyn virkaan.
+KYSYMYS: Kerro lisää: bastionia
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+AIEMPI KYSYMYS: Kuinka monta bastionia kivilinnoituksessa on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän laskin heti. Kivilinnoituksessa on viisi [[bastionia]], jotka sijaitsevat tasaisin välein ympyrän muotoisen [[Sorokan linnoituksen]] muurilla. Toisen lähteen mukaan niistä neljä on pyöreää ja yksi on suorakulmainen porttitorni. Lyhyt vastaus, mutta kyl sekin kuuluu kyyhkyn virkaan.
+KYSYMYS: Kerro lisää: Sorokan linnoituksen
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+AIEMPI KYSYMYS: Kuka rakennutti Sorokan linnoituksen kivisen version?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kivilinnoituksen rakennutti Moldovan hallitsija [[Petru Rareș]], ja rakennustyö ajoitetaan vuosiin 1543–1546. Työn tekivät [[Transilvaniasta]] kutsutut muurarit, ja heidän johtajansa oli mestari Iacob. Kivet kantoi varmaan joku muu kuin kyyhky.
+KYSYMYS: Kerro lisää: Transilvaniasta
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+AIEMPI KYSYMYS: Mitä varten linnoitus alun perin rakennettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tost minä osaan kertoo. Linnoitus rakennettiin suojaamaan [[Dnestr]]-joen kahlaamoa, jonka kautta joen yli pääsi kulkemaan. Toisen lähteen mukaan puinen linnake pysäytti [[tataarien]] ratsujoukkoja. Kivilinnoituksen tornien alimmat kerrokset oli tarkoitettu tykeille. Kahlaamo kuulostaa rauhalliselta, mut ilmeisesti ei ollut.
+KYSYMYS: Kerro lisää: tataarien
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorokan linnoitus (historia)
+Tietoruudun teksti: Sorokan linnoitus on Moldovan Dnestr-joen rannalla sijaitseva pyöreä linnake, jonka alkuperäisen puisen varustuksen Tapani Suuri rakennutti vuonna 1499 suojaamaan joen kahlaamoa. Kivilinnoituksen Petru Rareș rakennutti vuosina 1543–1546, ja siinä on viisi bastionia tasaisin välein. Halkaisijaltaan linnoitus on noin 30 metriä, muurit ovat kolme metriä paksut ja tornit nelikerroksisia, joista alimmat kerrokset oli tarkoitettu tykeille. Restaurointi on valmis, ja linnoitus on Moldovan kansallisesti merkittävä historiallinen ja arkkitehtoninen muistomerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+AIEMPI KYSYMYS: Kuka jätti nimensä linnoituksen seinään?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kivityön tehneiden muurarien johtajana oli mestari [[Iacob]], joka jätti seinään kaiverruksen: tämän linnan rakensi Iacob. Muurarit oli kutsuttu [[Transilvaniasta]], ja näin rakentajan nimi on säilynyt, vaikka työn tilaaja tunnetaan paremmin. Hänellä on nimi seinässä, minulla vain rengas jalassa.
+KYSYMYS: Kerro lisää: Iacob
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Kuinka pitkä on viinikellarin tunnelien verkosto?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: Wikipedian mukaan [[Mileștii Micin]] käytäväverkosto on noin 250 kilometriä pitkä ja siitä on käytössä 120 kilometriä, kun taas toisen lähteen mukaan käytäviä on louhittu noin 200 kilometriä. Pulloja kellareissa on lähes kaksi miljoonaa, ja kokoelma on kirjattu [[Guinnessin ennätyskirjaan]]. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.
+KYSYMYS: Kerro lisää: Mileștii Micin
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+- [Dublin — kohdekartta / Kohdekartta: Guinness-panimo] 1759 Guinnessin panimo Dublinissa on yksi maailman kuuluisimmista oluttehtaista. Sen perusti Arthur Guinness vuonna 1759, kun hän allekirjoitti St. James's Gate -panimon tontista vuokrasopimuksen, joka on voimassa peräti 9000 vuotta! Panimo valmistaa tummaa stout-olutta vain neljästä aineesta: vedestä, ohrasta, humalasta ja hiivasta. Nykyinen vierailukeskus Guinness Storehouse avautui yleisölle vuonna 2000 rakennuksessa, joka valmistui jo vuonna 1902 panimon käymistehtaaksi. Sen keskellä kohoaa lasinen aula, joka on muotoiltu valtavan olutlasin näköiseksi — rakennus on peräti seitsemän kerrosta korkea. Ylimmässä kerroksessa sijaitsee Gravity Bar, josta näkee kauas Dublinin ylle. Vuoteen 202…
+AIEMPI KYSYMYS: Kuinka pitkä on viinikellarin tunnelien verkosto?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: Wikipedian mukaan [[Mileștii Micin]] käytäväverkosto on noin 250 kilometriä pitkä ja siitä on käytössä 120 kilometriä, kun taas toisen lähteen mukaan käytäviä on louhittu noin 200 kilometriä. Pulloja kellareissa on lähes kaksi miljoonaa, ja kokoelma on kirjattu [[Guinnessin ennätyskirjaan]]. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.
+KYSYMYS: Kerro lisää: Guinnessin ennätyskirjaan
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+- [Moldova — maalehti / Ruoka: Purcarin tila ja Negru de Purcari] vuodesta 1827 — Purcarin kylä on Ștefan Vodăn piirikunnassa Moldovan kaakkoisosassa. Vuonna 1827 Venäjän keisari Nikolai I antoi asetuksen, jolla Purcarin tila sai Bessarabian ensimmäisen erikoistuneen viinitilan aseman. Tila sai tunnustusta Pariisin maailmannäyttelyssä 1878. Sen tunnetuin viini on Negru de Purcari, jossa on 70 prosenttia cabernet sauvignonia, 25 prosenttia saperavia ja 5 prosenttia rară neagrăa. Tuotanto seisoi Neuvostoliiton hajoamisen jälkeen kymmenen vuotta ja käynnistyi uudelleen 2003; nyt tilalla on yli 260 hehtaaria viinitarhoja.
+AIEMPI KYSYMYS: Miten viinit kerrotaan säilyneen, kun ne käskettiin tuhota?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kerrotun mukaan [[Neuvostoliiton]] aikana kellarin työntekijät tekivät salaoven, jonka taakse viinit kätkettiin, kun ne oli määrätty tuhottaviksi. Kyse on kuitenkin kertomuksesta, eikä sen yksityiskohdista ole varmaa tietoa. Viinit säilytettiin [[Mileștii Micin]] maanalaisissa käytävissä. Minä pitäisin salaovista.
+KYSYMYS: Kerro lisää: Neuvostoliiton
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Kuinka kaukana viinikellari on Chișinăusta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Mileștii Mici]] sijaitsee noin 18 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]], Ialovenin piirikunnassa. Etäisyys on siis lyhyt, ja kellarille pääsee kaupungista helposti. Lintuna se on lyhyt lenkki.
+KYSYMYS: Kerro lisää: Mileștii Mici
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+AIEMPI KYSYMYS: Kuinka kaukana viinikellari on Chișinăusta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Mileștii Mici]] sijaitsee noin 18 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]], Ialovenin piirikunnassa. Etäisyys on siis lyhyt, ja kellarille pääsee kaupungista helposti. Lintuna se on lyhyt lenkki.
+KYSYMYS: Kerro lisää: Chișinăusta
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Mistä kellarin käytävät on alun perin louhittu?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä tiedän. Käytävät on louhittu hylätystä [[kalkkikivilouhoksesta]] 1900-luvun puolivälin jälkeen, 1950-luvulta alkaen. Louhoksen tyhjä tila sopi viinin säilytykseen, koska maan alla lämpötila pysyy tasaisena ympäri vuoden. [[Mileștii Mici]] on näin syntynyt vanhasta louhoksesta. Louhos vaihtui viiniksi, kyl se on ihan hyvä vaihtokauppa.
+KYSYMYS: Kerro lisää: kalkkikivilouhoksesta
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Mikä viinikellari sijaitsee Mileștii Micin naapurissa?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo vie vähän synkemmälle puolelle. Naapurissa on [[Cricova]], jonka luolastossa on noin 120 kilometriä käytäviä. Kerrotun mukaan puna-armeija takavarikoi Berliinin valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, jotka muistuttavat sodan ajasta. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Cricova
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mileștii Mici (ruoka)
+Tietoruudun teksti: Mileștii Mici on viinikellari Ialovenin piirikunnassa Moldovassa, noin 18 kilometrin päässä pääkaupungista Chișinăusta. Maanalainen käytäväverkosto on Wikipedian mukaan 250 kilometriä pitkä, mutta siitä on käytössä vain 120 kilometriä. Guinnessin ennätyskirja kirjasi kellareihin kaksi miljoonaa pulloa maailman suurimmaksi viinikokoelmaksi. Neuvostoaikana työntekijöiden kerrotaan tehneen salaoven, jonka taakse viinit kätkettiin, kun ne määrättiin tuhottaviksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Mikä viinikellari sijaitsee Mileștii Micin naapurissa?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo vie vähän synkemmälle puolelle. Naapurissa on [[Cricova]], jonka luolastossa on noin 120 kilometriä käytäviä. Kerrotun mukaan puna-armeija takavarikoi Berliinin valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, jotka muistuttavat sodan ajasta. Onpas siit jo pitkä aika.
+KYSYMYS: Kerro lisää: Hermann Göringin
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Kuinka pitkä on Cricovan tunneliverkosto?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Alueen tunneleista on louhittu [[kalkkikiveä]] jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Siinä on kyl käytävää kyyhkyllekin.
+KYSYMYS: Kerro lisää: Cricovan
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Kuinka pitkä on Cricovan tunneliverkosto?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Alueen tunneleista on louhittu [[kalkkikiveä]] jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Siinä on kyl käytävää kyyhkyllekin.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+AIEMPI KYSYMYS: Minkä lämpötilan kellarit pitävät ympäri vuoden?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: lämpötila on tässä helppo. [[Cricovan]] kellareissa lämpötila pysyy ympäri vuoden noin 12 asteessa. Toisen lähteen mukaan tasainen lämpötila on 12–14 astetta, joten tarkka luku vaihtelee hieman lähteestä riippuen. [[Kalkkikiviluolan]] viileys ja tasaisuus ovat viinille eduksi. Minulle tuo on vähän viileä, mutta pulla pysyisi siellä tuoreena.
+KYSYMYS: Kerro lisää: Kalkkikiviluolan
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Mitä Cricovan tunnelien kadunnimet kertovat?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Cricovan]] tunneleiden kadunnimet kertovat, minkä lajin pulloja kussakin käytävässä varastoidaan. Puolet tunneleista on varattu viinin säilytykseen, joten nimet auttavat löytämään oikeat pullot suuressa kellarikaupungissa. Kadunnimet ovat siis eräänlainen [[viinikartta]]. Kyyhky hukkuisi sinne ilman karttaa.
+KYSYMYS: Kerro lisää: viinikartta
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+AIEMPI KYSYMYS: Millä menetelmällä Cricovassa tehdään kuohuviiniä?
+AIEMPI VASTAUS (Livia):
+Ai se, tän muistan. [[Cricovassa]] kuohuviiniä tehdään yhä [[samppanjamenetelmällä]], jossa viinin toinen käyminen tapahtuu pullossa. Kokoelmaan kuuluu myös viiniä vuodelta 1902. Menetelmä on saanut nimensä Ranskan [[Champagnen]] alueelta. Kuplat kuulostavat kyl aika hienoilta.
+KYSYMYS: Kerro lisää: Cricovassa
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+AIEMPI KYSYMYS: Millä menetelmällä Cricovassa tehdään kuohuviiniä?
+AIEMPI VASTAUS (Livia):
+Ai se, tän muistan. [[Cricovassa]] kuohuviiniä tehdään yhä [[samppanjamenetelmällä]], jossa viinin toinen käyminen tapahtuu pullossa. Kokoelmaan kuuluu myös viiniä vuodelta 1902. Menetelmä on saanut nimensä Ranskan [[Champagnen]] alueelta. Kuplat kuulostavat kyl aika hienoilta.
+KYSYMYS: Kerro lisää: samppanjamenetelmällä
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle] elokuu 1888 — Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave…
+AIEMPI KYSYMYS: Millä menetelmällä Cricovassa tehdään kuohuviiniä?
+AIEMPI VASTAUS (Livia):
+Ai se, tän muistan. [[Cricovassa]] kuohuviiniä tehdään yhä [[samppanjamenetelmällä]], jossa viinin toinen käyminen tapahtuu pullossa. Kokoelmaan kuuluu myös viiniä vuodelta 1902. Menetelmä on saanut nimensä Ranskan [[Champagnen]] alueelta. Kuplat kuulostavat kyl aika hienoilta.
+KYSYMYS: Kerro lisää: Champagnen
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Kuinka kaukana Cricova on Chișinăusta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]]. Matka on siis lyhyt, ja kaupungin lähellä sijaitseva kellari on helppo tavoittaa. Tänne minä lentäisin vaikka vain katsomaan.
+KYSYMYS: Kerro lisää: Cricova
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cricovan viinikellarit (ruoka)
+Tietoruudun teksti: Cricova on viinitehdas ja maanalainen kellarikaupunki Moldovassa, noin 15 kilometrin päässä Chișinăusta. Kalkkikiveä on louhittu alueen tunneleista jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Nykyään käytäviä on noin 120 kilometriä, ja lämpötila pysyy ympäri vuoden noin 12 asteessa. Puolet tunneleista on varattu viinin säilytykseen, ja katujen nimet kertovat, minkä lajin pulloja kussakin varastoidaan. Kokoelmaan kuuluu viiniä vuodelta 1902, ja kuohuviiniä tehdään yhä samppanjamenetelmällä.
+AIEMPI KYSYMYS: Kuinka kaukana Cricova on Chișinăusta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]]. Matka on siis lyhyt, ja kaupungin lähellä sijaitseva kellari on helppo tavoittaa. Tänne minä lentäisin vaikka vain katsomaan.
+KYSYMYS: Kerro lisää: Chișinăusta
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Țipovan luolaluostari (kulttuuri)
+Tietoruudun teksti: Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.
+AIEMPI KYSYMYS: Kuinka monta luolaa Țipovan luostariin kuuluu?
+AIEMPI VASTAUS (Livia):
+No jopas. Lähteen mukaan [[Țipovan]] luostariin kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostari on kaiverrettu [[Dnestr]]-joen jyrkän rantakallion kalkkikiveen, ja sen rakentaminen ajoitetaan lähteen mukaan 900–1100-luvuille. Luolia riittää kyl yöpymiseenkin.
+KYSYMYS: Kerro lisää: Țipovan
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Țipovan luolaluostari (kulttuuri)
+Tietoruudun teksti: Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Kuinka monta luolaa Țipovan luostariin kuuluu?
+AIEMPI VASTAUS (Livia):
+No jopas. Lähteen mukaan [[Țipovan]] luostariin kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostari on kaiverrettu [[Dnestr]]-joen jyrkän rantakallion kalkkikiveen, ja sen rakentaminen ajoitetaan lähteen mukaan 900–1100-luvuille. Luolia riittää kyl yöpymiseenkin.
+KYSYMYS: Kerro lisää: Dnestr
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Țipovan luolaluostari (kulttuuri)
+Tietoruudun teksti: Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.
+AIEMPI KYSYMYS: Kuinka suuri Țipovan suojelualue on?
+AIEMPI VASTAUS (Livia):
+Mmm— tän minä muistan. [[Țipovan]] suojelualue kattaa 430 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa. Rotkolaaksossa on useita putouksia, joiden korkeus on 10–16 metriä. Alue on siis paljon muutakin kuin luostari, ja sen luontoa suojellaan. Pitkä lista lukuja, mut kyl ne mahtuivat päähän.
+KYSYMYS: Kerro lisää: jokiterasseja
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Țipovan luolaluostari (kulttuuri)
+Tietoruudun teksti: Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.
+AIEMPI KYSYMYS: Milloin Țipovan luostari kaiverrettiin kallioon?
+AIEMPI VASTAUS (Livia):
+Katotaas. Lähteen mukaan [[Țipovan]] luostari rakennettiin 900–1100-luvuilla suureen [[kalkkikivikallioon]] kaiverrettuna. Tarkasta ajoituksesta en ole varma, joten väli kannattaa ymmärtää suuntaa antavaksi. Luostari on yhä nähtävissä Dnestrin rantakalliolla. Aika vanha pesäpaikka.
+KYSYMYS: Kerro lisää: kalkkikivikallioon
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Țipovan luolaluostari (kulttuuri)
+Tietoruudun teksti: Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Historia: Luostari joka kasvoi kalliosta] 1665–1671 — Korkealle Ostroškan kallioseinämään on veistetty luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti 1665 Hertsegovinan metropoliitta Vasilije, joka valitsi paikan osin suojaksi eteneviä osmaneja vastaan – samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi, kahteen luolaan louhittu kirkko koristeltiin freskoin, ja Vasilije johti laajennustyötä kuolemaansa 1671 asti, minkä jälkeen hänet julistettiin pyhäksi. Ostrog on nykyään Balkanin vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista.
+AIEMPI KYSYMYS: Miksi luostareita rakennettiin kallioihin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kallioon kaiverrettu luostari tarjoaa suojaa sekä rauhaa, ja jyrkkä kallio on myös vaikea saavuttaa. Esimerkiksi Montenegron [[Ostrogin luostari]] perustettiin vuonna 1665 kallioseinämään, ja paikka valittiin osin suojaksi etenevää [[Osmanien valtakuntaa]] vastaan. [[Țipovan]] luostarin syistä en ole varma. Kyl kyyhkykin tykkää korkeista kallioista.
+KYSYMYS: Kerro lisää: Ostrogin luostari
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Țipovan luolaluostari (kulttuuri)
+Tietoruudun teksti: Țipovan luostari sijaitsee Rezinan piirissä Dnestrin (moldovaksi Nistru) jyrkällä rantakalliolla. Lähteen mukaan luostari rakennettiin 900–1100-luvuilla suureen kalkkikivikallioon kaiverrettuna, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Kiinnostava yksityiskohta on ympäristö: Țipovan suojelualue kattaa 430 hehtaaria jokiterasseja ja puron rotkolaaksoa, jossa on useita 10–16 metrin putouksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Miksi luostareita rakennettiin kallioihin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kallioon kaiverrettu luostari tarjoaa suojaa sekä rauhaa, ja jyrkkä kallio on myös vaikea saavuttaa. Esimerkiksi Montenegron [[Ostrogin luostari]] perustettiin vuonna 1665 kallioseinämään, ja paikka valittiin osin suojaksi etenevää [[Osmanien valtakuntaa]] vastaan. [[Țipovan]] luostarin syistä en ole varma. Kyl kyyhkykin tykkää korkeista kallioista.
+KYSYMYS: Kerro lisää: Osmanien valtakuntaa
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Căprianan luostari (kulttuuri)
+Tietoruudun teksti: Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.
+AIEMPI KYSYMYS: Minä vuonna Căprianan luostari sai ensimmäisen merkittävän maininnan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Căprianan]] luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun [[Aleksanteri Hyvä]] myönsi sille kuninkaallisen aseman. Luostari sijaitsee Strășenin piirissä Moldovassa metsäisellä alueella. Vuosiluvun muistin ihan itse.
+KYSYMYS: Kerro lisää: Căprianan
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Căprianan luostari (kulttuuri)
+Tietoruudun teksti: Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Minä vuonna Căprianan luostari sai ensimmäisen merkittävän maininnan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Căprianan]] luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun [[Aleksanteri Hyvä]] myönsi sille kuninkaallisen aseman. Luostari sijaitsee Strășenin piirissä Moldovassa metsäisellä alueella. Vuosiluvun muistin ihan itse.
+KYSYMYS: Kerro lisää: Aleksanteri Hyvä
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Căprianan luostari (kulttuuri)
+Tietoruudun teksti: Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause 'Hinc itur ad astra' tarkoittaa 'täältä tie vie tähtiin', ja se sopii hyvin paikkaa…
+AIEMPI KYSYMYS: Milloin luostarin kivinen pääkirkko rakennettiin?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 [[Stefan Suuren]] aikana. Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Viisi vuotta rakentaa, ei paha.
+KYSYMYS: Kerro lisää: Stefan Suuren
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Căprianan luostari (kulttuuri)
+Tietoruudun teksti: Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.
+AIEMPI KYSYMYS: Kuka on haudattu Neitsyt Marian kuolonuneen kirkkoon?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä muistan. Neitsyt Marian kuolonuneen kirkkoon on haudattu metropoliitta [[Gavril Bănulescu-Bodoni]]. Kirkko on [[Căprianan]] luostarin pääkirkko, ja hänen hautansa tekee siitä merkittävän myös kirkkohistorian kannalta. Hänestä en osaa kertoa enempää kuin sen mitä tiedän, ja se on vähän.
+KYSYMYS: Kerro lisää: Gavril Bănulescu-Bodoni
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Căprianan luostari (kulttuuri)
+Tietoruudun teksti: Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.
+AIEMPI KYSYMYS: Mitä muita rakennuksia luostarialueella on?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Luostarialueella on pääkirkon lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Pääkirkko on [[Neitsyt Marian kuolonuneen kirkko]], joka on rakennettu 1490-luvulla. [[Căprianan]] luostarialue on siis kasvanut vuosisatojen kuluessa. Kyl sinne mahtuu monta kattoa kyyhkyn levähtää.
+KYSYMYS: Kerro lisää: Neitsyt Marian kuolonuneen kirkko
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Căprianan luostari (kulttuuri)
+Tietoruudun teksti: Căprianan luostari sijaitsee Strășenin piirissä Moldovassa, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Luostari sai ensimmäisen merkittävän maininnan vuonna 1429, kun Aleksanteri Hyvä myönsi sille kuninkaallisen aseman. Sen nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 Stefan Suuren aikana moldavialaiseen tyyliin. Lisäksi alueella on 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Neitsyt Marian kuolonuneen kirkossa on metropoliitta Gavril Bănulescu-Bodonin hauta.
+AIEMPI KYSYMYS: Missä päin Moldovaa Căprianan luostari sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Căprianan]] luostari sijaitsee Moldovassa [[Strășenin]] piirissä, metsäisellä alueella, jota kutsuttiin aiemmin nimellä Codrii Lăpușnei. Alue on siis metsien peittämää seutua eikä aavaa tasankoa. En ole varma tarkasta etäisyydestä pääkaupunkiin, joten sen jätän sanomatta. Metsässä on kyl hyvä piilopaikka pullalle.
+KYSYMYS: Kerro lisää: Strășenin
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+AIEMPI KYSYMYS: Kuka rakennutti Castel Mimin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Castel Mimin rakennutti [[Constantin Mimi]], bessarabialainen valtiomies ja viininviljelijä. Rakennus kohosi 1800-luvun lopulla [[Bulboacan]] kylään [[Moldovassa]], ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Paikka oli viinitila, jonka kellarissa viiniä säilytettiin tynnyreissä. Nimi pysyi onneksi mielessä.
+KYSYMYS: Kerro lisää: Constantin Mimi
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+AIEMPI KYSYMYS: Kuka rakennutti Castel Mimin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Castel Mimin rakennutti [[Constantin Mimi]], bessarabialainen valtiomies ja viininviljelijä. Rakennus kohosi 1800-luvun lopulla [[Bulboacan]] kylään [[Moldovassa]], ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Paikka oli viinitila, jonka kellarissa viiniä säilytettiin tynnyreissä. Nimi pysyi onneksi mielessä.
+KYSYMYS: Kerro lisää: Bulboacan
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Maissipuuro, jota leikataan langalla] 1500-luvulta — Mămăligă on keltaisesta maissijauhosta keitetty puuro, jota syödään Moldovassa, Romaniassa, Unkarissa ja Ukrainassa. Ennen kuin maissi levisi Eurooppaan 1500-luvulla, samaa ruokaa tehtiin hirssijauhosta. Perinteisesti vesi, suola ja jauho keitetään valurautaisessa padassa, ja leipää korvaavasta paksusta puurosta viipaleet leikataan ompelulangalla veitsen sijaan. Lautasella seurana on usein tochitură, omassa rasvassaan haudutettu sianliha, sekä paistettu kananmuna ja suolainen lampaanjuusto. Nälkävuosina 1600- ja 1700-luvuilla puuro auttoi torjumaan nälänhätää.
+AIEMPI KYSYMYS: Kuka rakennutti Castel Mimin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Castel Mimin rakennutti [[Constantin Mimi]], bessarabialainen valtiomies ja viininviljelijä. Rakennus kohosi 1800-luvun lopulla [[Bulboacan]] kylään [[Moldovassa]], ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Paikka oli viinitila, jonka kellarissa viiniä säilytettiin tynnyreissä. Nimi pysyi onneksi mielessä.
+KYSYMYS: Kerro lisää: Moldovassa
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+AIEMPI KYSYMYS: Minä vuonna Castel Mimin kunnostus valmistui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016. Sen jälkeen [[Castel Mimi]] on toiminut matkailukohteena, vaikka rakennus itse on peräisin 1900-luvun alusta, joidenkin lähteiden mukaan jo vuodelta 1893. Alun perin se oli [[viinitila]], joka sijaitsee [[Moldovassa]] Anenii Noin piirissä. Hyvä remontti vie aikansa, sen tietää jokainen katto.
+KYSYMYS: Kerro lisää: Castel Mimi
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Minä vuonna Castel Mimin kunnostus valmistui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016. Sen jälkeen [[Castel Mimi]] on toiminut matkailukohteena, vaikka rakennus itse on peräisin 1900-luvun alusta, joidenkin lähteiden mukaan jo vuodelta 1893. Alun perin se oli [[viinitila]], joka sijaitsee [[Moldovassa]] Anenii Noin piirissä. Hyvä remontti vie aikansa, sen tietää jokainen katto.
+KYSYMYS: Kerro lisää: viinitila
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Christiansborgin linna] 1907–1928 Christiansborgin linna seisoo Slotsholmenin saarella paikalla, jossa piispa Absalon rakensi Kööpenhaminan ensimmäisen linnan jo vuonna 1167. Sen jälkeen paikalle on noussut linna toisensa perään - kahdesti aiempi rakennus on tuhoutunut kokonaan tulipalossa, vuosina 1794 ja 1884. Nykyinen, jo kolmas Christiansborg valmistui vuosina 1907–1928. Se on rakennettu uusbarokkityyliin raudoitetusta betonista, ja sen torni kohoaa 106 metrin korkeuteen - se on Kööpenhaminan korkein rakennus. Christiansborg on maailmanlaajuisestikin harvinainen: se on ainoa rakennus, jossa toimivat samaan aikaan kaikki kolme valtiovallan haaraa - Tanskan parlamentti, pääministerin toimisto ja korkein oikeus. …
+- [Montevideo — kaupunkilehti / Musiikki: Tango joka syntyi konditoriassa] Gerardo Matos Rodríguez sävelsi tangonsa La Cumparsita 1917 ja soitti sen ensimmäisen kerran Confitería La Giraldassa, montevideolaisessa konditoriassa Plaza Independencian laidalla. Kymmenisen vuotta myöhemmin samalle tontille valmistui Palacio Salvo: 27-kerroksinen, antenneineen 105 metriä korkea rakennus, joka oli valmistuessaan 1928 maailman korkein raudoitetusta betonista tehty talo ja hetken myös Latinalaisen Amerikan korkein. Nykyään palatsissa toimii tangomuseo, joka kertoo kappaleen ja uruguaylaisen tangon vaiheet.
+AIEMPI KYSYMYS: Mistä materiaalista Castel Mimin runko sanotaan tehdyn?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Castel Mimin kaksikerroksisen rungon sanotaan tehdyn [[raudoitetusta betonista]], mikä oli rakennuksen aikaan vielä uutta. Ulkoasu on uusklassinen, ja esikuvat olivat ranskalaisia rakennuksia. Kyseessä on [[Constantin Mimin]] rakennuttama viinitila, jonka työ valmistui noin vuosina 1900–1901. Kyl minä tän jaksan muistaa.
+KYSYMYS: Kerro lisää: raudoitetusta betonista
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+AIEMPI KYSYMYS: Mistä materiaalista Castel Mimin runko sanotaan tehdyn?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Castel Mimin kaksikerroksisen rungon sanotaan tehdyn [[raudoitetusta betonista]], mikä oli rakennuksen aikaan vielä uutta. Ulkoasu on uusklassinen, ja esikuvat olivat ranskalaisia rakennuksia. Kyseessä on [[Constantin Mimin]] rakennuttama viinitila, jonka työ valmistui noin vuosina 1900–1901. Kyl minä tän jaksan muistaa.
+KYSYMYS: Kerro lisää: Constantin Mimin
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+AIEMPI KYSYMYS: Paljonko viiniä Castel Mimin kellarissa oli tynnyreissä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kellarissa oli tynnyreissä noin 300 000 litraa [[viiniä]], mikä kertoo [[viinitilan]] mittakaavasta. Luku on arvio, ei tarkka mitta. Tila kuului valtiomies ja viininviljelijä [[Constantin Mimille]], joka toimi Bessarabiassa.
+
+Kolmesataatuhatta litraa on minusta järkyttävän paljon, ja minä en edes juo viiniä. Ikkunalaudalla riittäisi kyllä yksi kunnon pulla.
+KYSYMYS: Kerro lisää: viiniä
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Purcarin tila ja Negru de Purcari] vuodesta 1827 — Purcarin kylä on Ștefan Vodăn piirikunnassa Moldovan kaakkoisosassa. Vuonna 1827 Venäjän keisari Nikolai I antoi asetuksen, jolla Purcarin tila sai Bessarabian ensimmäisen erikoistuneen viinitilan aseman. Tila sai tunnustusta Pariisin maailmannäyttelyssä 1878. Sen tunnetuin viini on Negru de Purcari, jossa on 70 prosenttia cabernet sauvignonia, 25 prosenttia saperavia ja 5 prosenttia rară neagrăa. Tuotanto seisoi Neuvostoliiton hajoamisen jälkeen kymmenen vuotta ja käynnistyi uudelleen 2003; nyt tilalla on yli 260 hehtaaria viinitarhoja.
+- [Moldova — maalehti / Ruoka] Moldovan pöydässä maissipuuro, käärityt piirakat ja kukkuloiden viinit kuuluvat yhteen. Neljä nostoa kulkee valurautapadan ääreltä lautaselle, ja sieltä viinitilan linnamaisen rakennuksen kautta viinitarhojen rinteille.
+AIEMPI KYSYMYS: Paljonko viiniä Castel Mimin kellarissa oli tynnyreissä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kellarissa oli tynnyreissä noin 300 000 litraa [[viiniä]], mikä kertoo [[viinitilan]] mittakaavasta. Luku on arvio, ei tarkka mitta. Tila kuului valtiomies ja viininviljelijä [[Constantin Mimille]], joka toimi Bessarabiassa.
+
+Kolmesataatuhatta litraa on minusta järkyttävän paljon, ja minä en edes juo viiniä. Ikkunalaudalla riittäisi kyllä yksi kunnon pulla.
+KYSYMYS: Kerro lisää: viinitilan
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+AIEMPI KYSYMYS: Paljonko viiniä Castel Mimin kellarissa oli tynnyreissä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kellarissa oli tynnyreissä noin 300 000 litraa [[viiniä]], mikä kertoo [[viinitilan]] mittakaavasta. Luku on arvio, ei tarkka mitta. Tila kuului valtiomies ja viininviljelijä [[Constantin Mimille]], joka toimi Bessarabiassa.
+
+Kolmesataatuhatta litraa on minusta järkyttävän paljon, ja minä en edes juo viiniä. Ikkunalaudalla riittäisi kyllä yksi kunnon pulla.
+KYSYMYS: Kerro lisää: Constantin Mimille
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Castel Mimi (ruoka)
+Tietoruudun teksti: Castel Mimi on viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä Constantin Mimi rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901 (jotkin lähteet mainitsevat jo 1893). Ranskalaisista esikuvista ammentavan uusklassisen kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi 2011 ja valmistui syyskuussa 2016; nyt paikka toimii matkailukohteena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Santo Domingon aukio] 1590 Kolme korttelia katedraalista pohjoiseen on aukio ja sen kirkko, ja kirkko on kaikki mitä on jäljellä yhdestä Uuden Espanjan ensimmäisistä luostareista. Dominikaanit saapuivat 1526 ja muuttivat Guerreron suvun lahjoittamiin taloihin — samalle tontille, jolle myöhemmin rakennettiin inkvisition palatsi. Talojen tilalle tuli kirkko, asuintilat ja vankila. Paikan ensimmäinen kirkko vihittiin 1590, ja Filip II rahoitti sen ympärille luostarin, jossa oli neljä sisäpihaa, sali, ruokala, kirjasto ja sairastupa. Huono rakennustyö, pehmeä maa ja maanjäristykset pakottivat rakentamaan uudelleen. Nykyinen kirkko luetaan tyylinsä perusteella Pedro de Arrietan työksi. Julkisivu on verhoiltu tezontle…
+- [Havanna — kohdekartta / Kohdekartta: Plaza de Armas] 1520-luku Kun espanjalaiset perustivat kaupungin 1519, tapaan kuului varata heti tilaa julkiselle aukiolle. Plaza de Armas syntyi 1520-luvun alussa vanhankaupungin ensimmäiseksi aukioksi, ja se oli sotilaiden ja hallinnon paikka — nimi tarkoittaa aseiden aukiota. 1580-luvulle tultaessa se oli otettu kokonaan sotilaskäyttöön. Vuonna 1896 aukiota kuvattiin neljäksi ceibapuiden varjostamaksi puistoksi, joiden keskellä seisoi Ferdinand VII:n marmoripatsas. Aukion itälaidalla on kuvernöörien palatsi. Kuvernööri Felipe de Fondesviela, markiisi de la Torre, esitti kaupunginvaltuustolle 28. tammikuuta 1773, että vanha pääkirkko puretaan ja tilalle rakennetaan palatsi. Työ alkoi 1776 kuubalaisen ins…
+AIEMPI KYSYMYS: Millainen tyyli Castel Mimin rakennuksella on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Castel Mimi on tyyliltään [[uusklassinen]] ja kaksikerroksinen, ja sen esikuvina sanotaan olleen ranskalaiset rakennukset. Se sijaitsee [[Bulboacan]] kylässä Anenii Noin piirissä [[Moldovassa]], ja nykyisin se toimii matkailukohteena. Ylhäältä päin sekin näyttää komealta.
+KYSYMYS: Kerro lisää: uusklassinen
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+AIEMPI KYSYMYS: Miltä Orheiul Vechi näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, keskiaikainen kaupunki sekä [[Kultaisen ordan]] asutusta. Lisäksi kallioon louhittiin 1400-luvulla [[luolaluostareita]], joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.
+KYSYMYS: Kerro lisää: kalkkikivijyrkänteellä
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+AIEMPI KYSYMYS: Miltä Orheiul Vechi näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, keskiaikainen kaupunki sekä [[Kultaisen ordan]] asutusta. Lisäksi kallioon louhittiin 1400-luvulla [[luolaluostareita]], joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.
+KYSYMYS: Kerro lisää: Răutin
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+AIEMPI KYSYMYS: Miltä Orheiul Vechi näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, keskiaikainen kaupunki sekä [[Kultaisen ordan]] asutusta. Lisäksi kallioon louhittiin 1400-luvulla [[luolaluostareita]], joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.
+KYSYMYS: Kerro lisää: geto-daakialainen
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+AIEMPI KYSYMYS: Miltä Orheiul Vechi näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, keskiaikainen kaupunki sekä [[Kultaisen ordan]] asutusta. Lisäksi kallioon louhittiin 1400-luvulla [[luolaluostareita]], joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.
+KYSYMYS: Kerro lisää: Kultaisen ordan
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+AIEMPI KYSYMYS: Miltä Orheiul Vechi näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tarkkaa kuvaa on vaikea antaa, enkä ole varma yksityiskohdista, koska rakennuksia ei ole säilynyt paljon. Alue kohoaa [[kalkkikivijyrkänteellä]] [[Răutin]] joen mutkassa, ja siinä on ollut [[geto-daakialainen]] linnoitus, keskiaikainen kaupunki sekä [[Kultaisen ordan]] asutusta. Lisäksi kallioon louhittiin 1400-luvulla [[luolaluostareita]], joten maisema oli jyrkänteen reunalla yhtä aikaa kaupunki, linnoitus ja luostari. Ylhäältä se mutka näyttää varmasti kauniilta.
+KYSYMYS: Kerro lisää: luolaluostareita
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+AIEMPI KYSYMYS: Miksi Orheiul Vechi on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+Kääk, vakava kysymys. Osa kaupungista hylättiin vuosisatojen kuluessa, eikä alue ole sen jälkeen ollut entisenlainen asutuskeskus. En ole varma yksittäisestä syystä, koska siihen vaikutti luultavasti monta asiaa. Tiedetään, että munkit vetäytyivät 1400-luvulla [[luolaluostareihin]] turvaan [[Krimin tataarien]] ryöstöretkiltä, ja alueella on ollut asutusta jo [[Kultaisen ordan]] aikana. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: luolaluostareihin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+AIEMPI KYSYMYS: Miksi Orheiul Vechi on nykyään raunioina?
+AIEMPI VASTAUS (Livia):
+Kääk, vakava kysymys. Osa kaupungista hylättiin vuosisatojen kuluessa, eikä alue ole sen jälkeen ollut entisenlainen asutuskeskus. En ole varma yksittäisestä syystä, koska siihen vaikutti luultavasti monta asiaa. Tiedetään, että munkit vetäytyivät 1400-luvulla [[luolaluostareihin]] turvaan [[Krimin tataarien]] ryöstöretkiltä, ja alueella on ollut asutusta jo [[Kultaisen ordan]] aikana. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Krimin tataarien
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Keitä olivat Krimin tataarit?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Krimin tataarit]] ovat turkkilaista kieltä puhuva kansa, jonka historia liittyy [[Krimin]] niemimaahan. Keskiajan lopulla ja uuden ajan alussa Krimin khaanikunta teki ryöstöretkiä Itä-Euroopan alueille, Moldovan ympäristö mukaan lukien, ja juuri siksi Orheiul Vechin munkit vetäytyivät kallioluostareihin. Tarkat ajankohdat ja laajuus vaihtelevat lähteittäin. Vanhoja aikoja, onneksi.
+KYSYMYS: Kerro lisää: Krimin tataarit
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Görkingin viinit päätyivät kalkkiluolaan] 1950-luvulta — Mileștii Micin hylätystä kalkkikivilouhoksesta louhittiin 1900-luvun puolivälin jälkeen 200 kilometriä käytäviä, joissa lepää lähes kaksi miljoonaa pulloa viiniä - Guinnessin ennätyskirjan mukaan maailman suurin viinikokoelma. Naapurissa Cricovan 120 kilometrin luolastoon kätkeytyy synkempi tarina: kun puna-armeija valtasi Berliinin 1945, se takavarikoi natsijohtaja Hermann Göringin yksityisen viinikellarin. Osa saaliista kulki Moskovan ja Krimin kautta lopulta Cricovaan, jossa 129 pulloa on yhä esillä sotahistorian todistajina 12-14 asteisessa, tasaisessa kalkkikiviluolassa.
+AIEMPI KYSYMYS: Keitä olivat Krimin tataarit?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Krimin tataarit]] ovat turkkilaista kieltä puhuva kansa, jonka historia liittyy [[Krimin]] niemimaahan. Keskiajan lopulla ja uuden ajan alussa Krimin khaanikunta teki ryöstöretkiä Itä-Euroopan alueille, Moldovan ympäristö mukaan lukien, ja juuri siksi Orheiul Vechin munkit vetäytyivät kallioluostareihin. Tarkat ajankohdat ja laajuus vaihtelevat lähteittäin. Vanhoja aikoja, onneksi.
+KYSYMYS: Kerro lisää: Krimin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+AIEMPI KYSYMYS: Mikä oli Kultainen ordu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kultainen ordu]] oli Mongolien valtakunnan läntinen osa, joka muodostui 1200-luvulla ja hallitsi laajoja alueita Itä-Euroopassa. Sen aikaista asutusta on ollut myös [[Orheiul Vechin]] alueella, jossa keskiaikainen kaupunki kehittyi [[Răutin]] joen mutkaan. Tarkat rajat ja ajat vaihtelevat lähteittäin.
+
+Mongolien postilaitos oli muuten aikansa verkko, ja sen ratsastavat viestinviejät olivat ehkä kaukaista sukua minun ammatilleni. Ei pulua, mutta kuitenkin.
+KYSYMYS: Kerro lisää: Kultainen ordu
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+AIEMPI KYSYMYS: Mikä oli Kultainen ordu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kultainen ordu]] oli Mongolien valtakunnan läntinen osa, joka muodostui 1200-luvulla ja hallitsi laajoja alueita Itä-Euroopassa. Sen aikaista asutusta on ollut myös [[Orheiul Vechin]] alueella, jossa keskiaikainen kaupunki kehittyi [[Răutin]] joen mutkaan. Tarkat rajat ja ajat vaihtelevat lähteittäin.
+
+Mongolien postilaitos oli muuten aikansa verkko, ja sen ratsastavat viestinviejät olivat ehkä kaukaista sukua minun ammatilleni. Ei pulua, mutta kuitenkin.
+KYSYMYS: Kerro lisää: Orheiul Vechin
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+AIEMPI KYSYMYS: Keitä olivat geto-daakialaiset?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Getit]] ja [[daakit]] olivat antiikin aikana nykyisen Romanian ja Moldovan seudulla eläneitä, toisilleen läheisiä kansoja, jotka luetaan traakialaisten kansojen piiriin, ja nimitys geto-daakialainen yhdistää ne. Tutkijat ovat eri mieltä siitä, kuinka läheisiä he olivat keskenään. [[Orheiul Vechin]] linnoitus kuuluu alueen varhaisimpaan kerrostumaan. Ja minä luulin, että suku oli vanha.
+KYSYMYS: Kerro lisää: Getit
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orheiul Vechi (historia)
+Tietoruudun teksti: Orheiul Vechi ("Vanha Orhei") on kalkkikivijyrkänteelle Răutin joen mutkaan kerrostunut muinaismuistoalue: geto-daakialainen linnoitus, keskiaikainen Moldovan kaupunki, Kultaisen ordan asutus ja 1400-luvulla kallioon louhitut luolaluostarit, joihin munkit vetäytyivät turvaan Krimin tataarien ryöstöretkiltä. Osa kaupungista hylättiin vuosisatojen kuluessa.
+AIEMPI KYSYMYS: Keitä olivat geto-daakialaiset?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Getit]] ja [[daakit]] olivat antiikin aikana nykyisen Romanian ja Moldovan seudulla eläneitä, toisilleen läheisiä kansoja, jotka luetaan traakialaisten kansojen piiriin, ja nimitys geto-daakialainen yhdistää ne. Tutkijat ovat eri mieltä siitä, kuinka läheisiä he olivat keskenään. [[Orheiul Vechin]] linnoitus kuuluu alueen varhaisimpaan kerrostumaan. Ja minä luulin, että suku oli vanha.
+KYSYMYS: Kerro lisää: daakit

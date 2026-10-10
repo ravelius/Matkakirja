@@ -1,0 +1,368 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "Tapani Suuri",
+  "kysymys": "Kerro lisää: Tapani Suuri"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "Dnestr",
+  "kysymys": "Kerro lisää: Dnestr"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "Petru Rareș",
+  "kysymys": "Kerro lisää: Petru Rareș"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "bastionia",
+  "kysymys": "Kerro lisää: bastionia"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "Sorokan linnoituksen",
+  "kysymys": "Kerro lisää: Sorokan linnoituksen"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "Transilvaniasta",
+  "kysymys": "Kerro lisää: Transilvaniasta"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "tataarien",
+  "kysymys": "Kerro lisää: tataarien"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:sorokan-linnoitus",
+  "kasite": "Iacob",
+  "kysymys": "Kerro lisää: Iacob"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Mileștii Micin",
+  "kysymys": "Kerro lisää: Mileștii Micin"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Guinnessin ennätyskirjaan",
+  "kysymys": "Kerro lisää: Guinnessin ennätyskirjaan"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Neuvostoliiton",
+  "kysymys": "Kerro lisää: Neuvostoliiton"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Mileștii Mici",
+  "kysymys": "Kerro lisää: Mileștii Mici"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Chișinăusta",
+  "kysymys": "Kerro lisää: Chișinăusta"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "kalkkikivilouhoksesta",
+  "kysymys": "Kerro lisää: kalkkikivilouhoksesta"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Cricova",
+  "kysymys": "Kerro lisää: Cricova"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:milestii-mici",
+  "kasite": "Hermann Göringin",
+  "kysymys": "Kerro lisää: Hermann Göringin"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "Cricovan",
+  "kysymys": "Kerro lisää: Cricovan"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "kalkkikiveä",
+  "kysymys": "Kerro lisää: kalkkikiveä"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "Kalkkikiviluolan",
+  "kysymys": "Kerro lisää: Kalkkikiviluolan"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "viinikartta",
+  "kysymys": "Kerro lisää: viinikartta"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "Cricovassa",
+  "kysymys": "Kerro lisää: Cricovassa"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "samppanjamenetelmällä",
+  "kysymys": "Kerro lisää: samppanjamenetelmällä"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "Champagnen",
+  "kysymys": "Kerro lisää: Champagnen"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "Cricova",
+  "kysymys": "Kerro lisää: Cricova"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:cricovan-viinikellarit",
+  "kasite": "Chișinăusta",
+  "kysymys": "Kerro lisää: Chișinăusta"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:tipovan-luostari",
+  "kasite": "Țipovan",
+  "kysymys": "Kerro lisää: Țipovan"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:tipovan-luostari",
+  "kasite": "Dnestr",
+  "kysymys": "Kerro lisää: Dnestr"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:tipovan-luostari",
+  "kasite": "jokiterasseja",
+  "kysymys": "Kerro lisää: jokiterasseja"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:tipovan-luostari",
+  "kasite": "kalkkikivikallioon",
+  "kysymys": "Kerro lisää: kalkkikivikallioon"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:tipovan-luostari",
+  "kasite": "Ostrogin luostari",
+  "kysymys": "Kerro lisää: Ostrogin luostari"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:tipovan-luostari",
+  "kasite": "Osmanien valtakuntaa",
+  "kysymys": "Kerro lisää: Osmanien valtakuntaa"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:caprianan-luostari",
+  "kasite": "Căprianan",
+  "kysymys": "Kerro lisää: Căprianan"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:caprianan-luostari",
+  "kasite": "Aleksanteri Hyvä",
+  "kysymys": "Kerro lisää: Aleksanteri Hyvä"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:caprianan-luostari",
+  "kasite": "Stefan Suuren",
+  "kysymys": "Kerro lisää: Stefan Suuren"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:caprianan-luostari",
+  "kasite": "Gavril Bănulescu-Bodoni",
+  "kysymys": "Kerro lisää: Gavril Bănulescu-Bodoni"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:caprianan-luostari",
+  "kasite": "Neitsyt Marian kuolonuneen kirkko",
+  "kysymys": "Kerro lisää: Neitsyt Marian kuolonuneen kirkko"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:caprianan-luostari",
+  "kasite": "Strășenin",
+  "kysymys": "Kerro lisää: Strășenin"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "Constantin Mimi",
+  "kysymys": "Kerro lisää: Constantin Mimi"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "Bulboacan",
+  "kysymys": "Kerro lisää: Bulboacan"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "Moldovassa",
+  "kysymys": "Kerro lisää: Moldovassa"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "Castel Mimi",
+  "kysymys": "Kerro lisää: Castel Mimi"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "viinitila",
+  "kysymys": "Kerro lisää: viinitila"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "raudoitetusta betonista",
+  "kysymys": "Kerro lisää: raudoitetusta betonista"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "Constantin Mimin",
+  "kysymys": "Kerro lisää: Constantin Mimin"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "viiniä",
+  "kysymys": "Kerro lisää: viiniä"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "viinitilan",
+  "kysymys": "Kerro lisää: viinitilan"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "Constantin Mimille",
+  "kysymys": "Kerro lisää: Constantin Mimille"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:castel-mimi",
+  "kasite": "uusklassinen",
+  "kysymys": "Kerro lisää: uusklassinen"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "kalkkikivijyrkänteellä",
+  "kysymys": "Kerro lisää: kalkkikivijyrkänteellä"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Răutin",
+  "kysymys": "Kerro lisää: Răutin"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "geto-daakialainen",
+  "kysymys": "Kerro lisää: geto-daakialainen"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Kultaisen ordan",
+  "kysymys": "Kerro lisää: Kultaisen ordan"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "luolaluostareita",
+  "kysymys": "Kerro lisää: luolaluostareita"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "luolaluostareihin",
+  "kysymys": "Kerro lisää: luolaluostareihin"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Krimin tataarien",
+  "kysymys": "Kerro lisää: Krimin tataarien"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Krimin tataarit",
+  "kysymys": "Kerro lisää: Krimin tataarit"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Krimin",
+  "kysymys": "Kerro lisää: Krimin"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Kultainen ordu",
+  "kysymys": "Kerro lisää: Kultainen ordu"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Orheiul Vechin",
+  "kysymys": "Kerro lisää: Orheiul Vechin"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "Getit",
+  "kysymys": "Kerro lisää: Getit"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:hahmotelma-orheiul-vechi",
+  "kasite": "daakit",
+  "kysymys": "Kerro lisää: daakit"
+ }
+]
