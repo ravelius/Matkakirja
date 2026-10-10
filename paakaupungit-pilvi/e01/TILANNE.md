@@ -12,4 +12,4 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | podgorica | ✓ | | | | | | |
 | chisinau | ✓ | | | | | | kysymykset ja yksi kohde ohuita |
 | minsk | ✓ | | | | | | kohde 3 ohut (5 faktaa), Gorki 7 |
-| bratislava | | | | | | | |
+| bratislava | ✓ | | | | | | faktapohjassa viimeistelemättömiä kohtia (kysymys 5, osio 4) |
