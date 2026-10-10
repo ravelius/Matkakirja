@@ -3,7 +3,7 @@
   "kohde": "kohde:belgradin-linnoitus",
   "kysymys": "Missä joet kohtaavat linnoituksen juurella?",
   "uusi": false,
-  "vastaus": "Kas vaan, tost minä osaan kertoa. [[Sava]] yhtyy [[Tonaviin]] linnoituksen harjanteen juurella, ja linnoitus kohoaa tuolta harjanteelta noin 125,5 metrin korkeudelle. Joet kohtaavat siis suoraan [[Kalemegdanin]] alapuolella, joten linnoitus hallitsee maisemaa kumpaankin jokeen päin. Alueeseen kuuluvat myös Suuri ja Pieni Kalemegdanin puisto. Hyvä paikka pesälle, jos kyyhkyltä kysytään.",
+  "vastaus": "Kas vaan, tost minä osaan kertoa. [[Sava]] yhtyy [[Tonaviin]] linnoituksen harjanteen juurella, ja linnoitus kohoaa tuolta korkealta harjanteelta jokien yläpuolelle. Joet kohtaavat siis suoraan [[Kalemegdanin]] alapuolella, joten linnoitus hallitsee maisemaa kumpaankin jokeen päin. Alueeseen kuuluvat myös Suuri ja Pieni Kalemegdanin puisto. Hyvä paikka pesälle, jos kyyhkyltä kysytään.",
   "linkit": [
    "Sava",
    "Tonaviin",
@@ -241,7 +241,7 @@
   "kohde": "kohde:golubacin-linnoitus",
   "kysymys": "Milloin linnoitus avattiin kunnostuksen jälkeen yleisölle?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Kunnostus tehtiin vuosina 2014–2019, ja [[Golubacin linnoitus]] avattiin kokonaan yleisölle huhtikuussa 2019. Kivilinnoitus rakennettiin 1300-luvulla [[Tonavan]] rannalle, ja siinä on kymmenen tornia. Vuosina 1403–1427 sen omisti serbien despootti [[Stefan Lazarević]]. Viisi vuotta kunnostusta, kyl siinä pesä ehtisi tehdä.",
+  "vastaus": "Selvä juttu. Kunnostus tehtiin vuosina 2014-2019, ja [[Golubacin linnoitus]] avattiin juhlallisesti yleisölle maaliskuun lopussa 2019. Kivilinnoitus rakennettiin 1300-luvulla [[Tonavan]] rannalle, ja siinä on kymmenen tornia. Vuosina 1403–1427 sen omisti serbien despootti [[Stefan Lazarević]]. Viisi vuotta kunnostusta, kyl siinä pesä ehtisi tehdä.",
   "linkit": [
    "Golubacin linnoitus",
    "Tonavan",
@@ -299,7 +299,7 @@
   "kohde": "kohde:gamzigrad",
   "kysymys": "Kuka rakennutti Felix Romulianan ja miksi se sai nimensä?",
   "uusi": false,
-  "vastaus": "Hmm, joo, tän minä muistan. Felix Romulianan rakennutti keisari [[Galerius]], joka aloitti rakentamisen vuonna 298 voitettuaan Sassanidien valtakunnan. Paikka nimettiin hänen äitinsä Romulan mukaan, ja nimessä oleva Felix tarkoittaa onnekasta. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja kompleksi sijaitsee [[Zaječarin]] lähellä Serbiassa. Galerius hallitsi Rooman valtakunnan itäosaa [[tetrarkian]] aikana. Tuollainen lahja äidille, ja minä en ole edes hankkinut kirjettä.",
+  "vastaus": "Hmm, joo, tän minä muistan. Felix Romulianan rakennutti keisari [[Galerius]], joka aloitti rakentamisen noin vuonna 298 voitettuaan Sassanidien valtakunnan. Paikka nimettiin hänen äitinsä Romulan mukaan, ja nimessä oleva Felix tarkoittaa onnekasta. Muurien sisällä oli kaksi palatsia, kaksi temppeliä ja kylpylä, ja kompleksi sijaitsee [[Zaječarin]] lähellä Serbiassa. Galerius hallitsi Rooman valtakunnan itäosaa [[tetrarkian]] aikana. Tuollainen lahja äidille, ja minä en ole edes hankkinut kirjettä.",
   "linkit": [
    "Galerius",
    "Zaječarin",
@@ -538,7 +538,7 @@
   "kohde": "kohde:manasijan-luostari",
   "kysymys": "Kuinka paljon seinämaalauksista on säilynyt?",
   "uusi": false,
-  "vastaus": "Katotaas. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes niistä on säilynyt. Syynä oli [[ottomaanien]] aikana poistettu [[lyijykaton]] puuttuminen, sillä katon poistuttua vesi pääsi seinille ja vahingoitti maalauksia. Säilynyt osa on silti arvokas osa luostarin perintöä. Kyl minäkin tiedän, mitä vesi tekee, kun katto vuotaa.",
+  "vastaus": "Katotaas. Kirkon seinille maalattiin alun perin noin 2 000 neliömetriä maalauksia, mutta niistä on säilynyt vain noin kolmannes. Syynä oli [[ottomaanien]] aikana poistettu [[lyijykaton]] puuttuminen, sillä katon poistuttua vesi pääsi seinille ja vahingoitti maalauksia. Säilynyt osa on silti arvokas osa luostarin perintöä. Kyl minäkin tiedän, mitä vesi tekee, kun katto vuotaa.",
   "linkit": [
    "ottomaanien",
    "lyijykaton"
@@ -594,7 +594,7 @@
   "kohde": "kohde:hahmotelma-smederevon-linnoitus",
   "kysymys": "Miltä Smederevon linnoitus näytti loistoaikanaan?",
   "uusi": false,
-  "vastaus": "Just niin, kaunis paikka. Despootti [[Đurađ Branković]] rakennutti linnoituksen [[Tonavan]] rannalle uudeksi pääkaupungikseen 1420-luvun lopulla, ja laajempi ulkomuuri, jossa oli 25 tornia, valmistui 1440-luvulla. Loistoaikanaan se oli siis massiivinen, tornein varustettu muurilinnoitus joen rannalla. Tarkempia yksityiskohtia ulkonäöstä en ole varma. Se olisi ollut komea näky ylhäältä.",
+  "vastaus": "Just niin, kaunis paikka. Despootti [[Đurađ Branković]] rakennutti linnoituksen [[Tonavan]] rannalle uudeksi pääkaupungikseen vuodesta 1428; sisälinnoitus valmistui 1430 ja laajempi Suuri kaupunki 1439, ja koko linnoituksessa on 25 tornia. Loistoaikanaan se oli siis massiivinen, tornein varustettu muurilinnoitus joen rannalla. Tarkempia yksityiskohtia ulkonäöstä en ole varma. Se olisi ollut komea näky ylhäältä.",
   "linkit": [
    "Đurađ Branković",
    "Tonavan"
@@ -608,7 +608,7 @@
   "kohde": "kohde:hahmotelma-smederevon-linnoitus",
   "kysymys": "Miksi Smederevon linnoitus on nykyään raunioina?",
   "uusi": false,
-  "vastaus": "Tää on synkkä juttu. [[Toisen maailmansodan]] aikana saksalaiset varastoivat linnoitukseen ammuksia ja polttoainetta, ja varasto räjähti 5. kesäkuuta 1941. Räjähdys tappoi tuhansia ihmisiä ja tuhosi suuren osan linnoituksesta. Tapahtuma sattui keväällä 1941 alkaneen miehityksen aikaan, kun [[Jugoslavia]] oli joutunut sodan keskelle ja Serbia oli vieraan vallan alla. Muurit ja tornit seisovat yhä, osin sortuneina. Onpas siitä onneksi pitkä aika.",
+  "vastaus": "Tää on synkkä juttu. [[Toisen maailmansodan]] aikana saksalaiset varastoivat linnoitukseen ammuksia ja polttoainetta, ja varasto räjähti 5. kesäkuuta 1941. Räjähdys tappoi satoja, arvioiden mukaan jopa 2 500 ihmistä, tuhosi suuren osan kaupungista ja vaurioitti linnoituksen torneja ja muuria. Tapahtuma sattui keväällä 1941 alkaneen miehityksen aikaan, kun [[Jugoslavia]] oli joutunut sodan keskelle ja Serbia oli vieraan vallan alla. Muurit ja tornit seisovat yhä, osin sortuneina. Onpas siitä onneksi pitkä aika.",
   "linkit": [
    "Toisen maailmansodan",
    "Jugoslavia"
@@ -622,7 +622,7 @@
   "kohde": "kohde:hahmotelma-smederevon-linnoitus",
   "kysymys": "Kuka oli Đurađ Branković?",
   "uusi": true,
-  "vastaus": "No jopas. Hän oli Serbian despootti, joka rakennutti Smederevon uudeksi pääkaupungikseen 1420-luvun lopulla. Hän oli 79-vuotias vuonna 1456, kun sulttaani [[Mehmed II]] piiritti Nándorfehérvárin eli nykyisen Belgradin linnoitusta, ja piirityksen mursivat lopulta [[János Hunyadin]] joukot ja talonpoikaisristiretkeläiset heinäkuussa. Branković kuoli joulukuussa 1456 Smederevon linnassa. Kolme vuotta myöhemmin, 1459, [[Smederevo]] antautui sulttaanille. Pitkä elämä, ja levoton loppu.",
+  "vastaus": "No jopas. Hän oli Serbian despootti, joka rakennutti Smederevon uudeksi pääkaupungikseen vuodesta 1428. Hän oli 79-vuotias vuonna 1456, kun sulttaani [[Mehmed II]] piiritti Nándorfehérvárin eli nykyisen Belgradin linnoitusta, ja piirityksen mursivat lopulta [[János Hunyadin]] joukot ja talonpoikaisristiretkeläiset heinäkuussa. Branković kuoli joulukuussa 1456 Smederevon linnassa. Kolme vuotta myöhemmin, 1459, [[Smederevo]] antautui sulttaanille. Pitkä elämä, ja levoton loppu.",
   "linkit": [
    "Mehmed II",
    "János Hunyadin",
@@ -657,7 +657,7 @@
   "kohde": "kohde:hahmotelma-smederevon-linnoitus",
   "kysymys": "Miksi pääkaupunki rakennettiin juuri Tonavan rannalle?",
   "uusi": true,
-  "vastaus": "Ai se. Joki oli aikakaudella tärkeä liikenne- ja kauppareitti, ja vesi antoi linnoitukselle suojaa useilta suunnilta. [[Đurađ Branković]] rakennutti [[Smederevon]] uudeksi pääkaupungikseen 1420-luvun lopulla, ja sijainti joen rannalla sopi sekä hallintoon että puolustukseen. Tarkkoja syitä valinnalle en ole varma. Joki on kyyhkyllekin hyvä suuntamerkki, sitä pitkin löytää perille.",
+  "vastaus": "Ai se. Joki oli aikakaudella tärkeä liikenne- ja kauppareitti, ja vesi antoi linnoitukselle suojaa useilta suunnilta. [[Đurađ Branković]] rakennutti [[Smederevon]] uudeksi pääkaupungikseen vuodesta 1428, ja sijainti joen rannalla sopi sekä hallintoon että puolustukseen. Tarkkoja syitä valinnalle en ole varma. Joki on kyyhkyllekin hyvä suuntamerkki, sitä pitkin löytää perille.",
   "linkit": [
    "Đurađ Branković",
    "Smederevon"

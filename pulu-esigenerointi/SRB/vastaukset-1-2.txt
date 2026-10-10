@@ -77,7 +77,7 @@ Mitä helluntai tarkoittaa ortodoksisessa kirkossa?
 
 ### 8.2
 KYSYMYS: Kuinka paljon seinämaalauksista on säilynyt?
-Katotaas. Kirkon seinille maalattiin vuoden 1413 jälkeen noin 2 000 neliömetriä maalauksia, mutta vain neljännes niistä on säilynyt. Syynä oli [[ottomaanien]] aikana poistettu [[lyijykaton]] puuttuminen, sillä katon poistuttua vesi pääsi seinille ja vahingoitti maalauksia. Säilynyt osa on silti arvokas osa luostarin perintöä. Kyl minäkin tiedän, mitä vesi tekee, kun katto vuotaa.
+Katotaas. Kirkon seinille maalattiin alun perin noin 2 000 neliömetriä maalauksia, mutta niistä on säilynyt vain noin kolmannes. Syynä oli [[ottomaanien]] aikana poistettu [[lyijykaton]] puuttuminen, sillä katon poistuttua vesi pääsi seinille ja vahingoitti maalauksia. Säilynyt osa on silti arvokas osa luostarin perintöä. Kyl minäkin tiedän, mitä vesi tekee, kun katto vuotaa.
 JATKOT:
 Miten freskot maalataan?
 Miten keskiaikaisia seinämaalauksia restauroidaan?
@@ -105,21 +105,21 @@ Millaista elämä luostarissa on?
 
 ### 9.1
 KYSYMYS: Miltä Smederevon linnoitus näytti loistoaikanaan?
-Just niin, kaunis paikka. Despootti [[Đurađ Branković]] rakennutti linnoituksen [[Tonavan]] rannalle uudeksi pääkaupungikseen 1420-luvun lopulla, ja laajempi ulkomuuri, jossa oli 25 tornia, valmistui 1440-luvulla. Loistoaikanaan se oli siis massiivinen, tornein varustettu muurilinnoitus joen rannalla. Tarkempia yksityiskohtia ulkonäöstä en ole varma. Se olisi ollut komea näky ylhäältä.
+Just niin, kaunis paikka. Despootti [[Đurađ Branković]] rakennutti linnoituksen [[Tonavan]] rannalle uudeksi pääkaupungikseen vuodesta 1428; sisälinnoitus valmistui 1430 ja laajempi Suuri kaupunki 1439, ja koko linnoituksessa on 25 tornia. Loistoaikanaan se oli siis massiivinen, tornein varustettu muurilinnoitus joen rannalla. Tarkempia yksityiskohtia ulkonäöstä en ole varma. Se olisi ollut komea näky ylhäältä.
 JATKOT:
 Miksi Branković siirsi pääkaupunkinsa Smederevoon?
 Millaisia keskiaikaisia linnoituksia Tonavan varrella on?
 
 ### 9.2
 KYSYMYS: Miksi Smederevon linnoitus on nykyään raunioina?
-Tää on synkkä juttu. [[Toisen maailmansodan]] aikana saksalaiset varastoivat linnoitukseen ammuksia ja polttoainetta, ja varasto räjähti 5. kesäkuuta 1941. Räjähdys tappoi tuhansia ihmisiä ja tuhosi suuren osan linnoituksesta. Tapahtuma sattui keväällä 1941 alkaneen miehityksen aikaan, kun [[Jugoslavia]] oli joutunut sodan keskelle ja Serbia oli vieraan vallan alla. Muurit ja tornit seisovat yhä, osin sortuneina. Onpas siitä onneksi pitkä aika.
+Tää on synkkä juttu. [[Toisen maailmansodan]] aikana saksalaiset varastoivat linnoitukseen ammuksia ja polttoainetta, ja varasto räjähti 5. kesäkuuta 1941. Räjähdys tappoi satoja, arvioiden mukaan jopa 2 500 ihmistä, tuhosi suuren osan kaupungista ja vaurioitti linnoituksen torneja ja muuria. Tapahtuma sattui keväällä 1941 alkaneen miehityksen aikaan, kun [[Jugoslavia]] oli joutunut sodan keskelle ja Serbia oli vieraan vallan alla. Muurit ja tornit seisovat yhä, osin sortuneina. Onpas siitä onneksi pitkä aika.
 JATKOT:
 Miten Smederevon linnoitusta on kunnostettu räjähdyksen jälkeen?
 Miten Jugoslavia jaettiin miehittäjien kesken vuonna 1941?
 
 ### 9.3
 KYSYMYS: Kuka oli Đurađ Branković?
-No jopas. Hän oli Serbian despootti, joka rakennutti Smederevon uudeksi pääkaupungikseen 1420-luvun lopulla. Hän oli 79-vuotias vuonna 1456, kun sulttaani [[Mehmed II]] piiritti Nándorfehérvárin eli nykyisen Belgradin linnoitusta, ja piirityksen mursivat lopulta [[János Hunyadin]] joukot ja talonpoikaisristiretkeläiset heinäkuussa. Branković kuoli joulukuussa 1456 Smederevon linnassa. Kolme vuotta myöhemmin, 1459, [[Smederevo]] antautui sulttaanille. Pitkä elämä, ja levoton loppu.
+No jopas. Hän oli Serbian despootti, joka rakennutti Smederevon uudeksi pääkaupungikseen vuodesta 1428. Hän oli 79-vuotias vuonna 1456, kun sulttaani [[Mehmed II]] piiritti Nándorfehérvárin eli nykyisen Belgradin linnoitusta, ja piirityksen mursivat lopulta [[János Hunyadin]] joukot ja talonpoikaisristiretkeläiset heinäkuussa. Branković kuoli joulukuussa 1456 Smederevon linnassa. Kolme vuotta myöhemmin, 1459, [[Smederevo]] antautui sulttaanille. Pitkä elämä, ja levoton loppu.
 JATKOT:
 Mikä merkitys Belgradin piirityksellä 1456 oli Euroopalle?
 Kuka oli János Hunyadi?
@@ -134,7 +134,7 @@ PAIKKA: Smederevo | 44.66 | 20.93 | kaupunki
 
 ### 9.5
 KYSYMYS: Miksi pääkaupunki rakennettiin juuri Tonavan rannalle?
-Ai se. Joki oli aikakaudella tärkeä liikenne- ja kauppareitti, ja vesi antoi linnoitukselle suojaa useilta suunnilta. [[Đurađ Branković]] rakennutti [[Smederevon]] uudeksi pääkaupungikseen 1420-luvun lopulla, ja sijainti joen rannalla sopi sekä hallintoon että puolustukseen. Tarkkoja syitä valinnalle en ole varma. Joki on kyyhkyllekin hyvä suuntamerkki, sitä pitkin löytää perille.
+Ai se. Joki oli aikakaudella tärkeä liikenne- ja kauppareitti, ja vesi antoi linnoitukselle suojaa useilta suunnilta. [[Đurađ Branković]] rakennutti [[Smederevon]] uudeksi pääkaupungikseen vuodesta 1428, ja sijainti joen rannalla sopi sekä hallintoon että puolustukseen. Tarkkoja syitä valinnalle en ole varma. Joki on kyyhkyllekin hyvä suuntamerkki, sitä pitkin löytää perille.
 JATKOT:
 Miten jokia käytettiin kauppareitteinä keskiajalla?
 Mitä maita Tonava virtaa läpi?
