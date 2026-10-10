@@ -1,0 +1,193 @@
+================ KOHTA 16 (kohde:hahmotelma-trnava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+### 16.1
+KYSYMYS: Millä lempinimellä Trnavaa kutsutaan monien kirkkojensa vuoksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+### 16.2
+KYSYMYS: Minä vuosina Trnavan jesuiittayliopisto toimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trnava (historia)
+Tietoruudun teksti: Trnava, unkariksi Nagyszombat ja saksaksi Tyrnau, on Länsi-Slovakian kaupunki 47 kilometriä Bratislavasta koilliseen Trnávka-joen varrella. Se on roomalaiskatolisen arkkipiispan istuin (1541–1820 ja uudelleen vuodesta 1977), ja monien muurien sisällä olevien kirkkojensa vuoksi sitä on kutsuttu Pieneksi Roomaksi eli Slovakian Roomaksi. Vuonna 1238 Trnavasta tuli ensimmäinen nykyisen Slovakian alueen kaupunki, jolle kuningas myönsi kaupunkioikeudet. Arkkipiispa Péter Pázmány perusti Trnavaan jesuiittayliopiston (1635–1777), joka oli tuolloin Unkarin kuningaskunnan ainoa yliopisto ja josta tuli slovakialaisen sivistyksen ja kirjallisuuden keskus; 1700-luvun lopulta kaupungista tuli myös slovakialaisen kansallisen herätyksen keskus.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-zvolen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+### 17.1
+KYSYMYS: Kuka rakennutti Zvolenin linnan metsästysasunnokseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+### 17.2
+KYSYMYS: Mikä on Pustý hrad?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvolenin linna (historia)
+Tietoruudun teksti: Zvolenin linna on keskiaikainen linna Zvolenin keskustan lähellä olevalla kukkulalla Keski-Slovakiassa. Alueen alkuperäinen keskus oli Slatina- ja Hron-jokien yhtymäkohdan yläpuolella kalliolla 1100-luvun linnassa, jota nykyään kutsutaan nimellä Pustý hrad eli autio linna; vaikean saavutettavuutensa vuoksi hallintokeskus siirrettiin uudelle linnalle, jonka Ludvig Suuri rakennutti metsästysasunnokseen. Gotiikkaa, jonka esikuvana olivat 1300-luvun italialaiset linnat, rakennettiin vuosina 1360–1382, ja tuleva kuningatar Maria Anjoulainen ja keisari Sigismund viettivät siellä häänsä vuonna 1385; renessanssiuudistus tehtiin 1548 ja viimeinen suuri uudistus vuonna 1784, jolloin kappeli muutettiin barokkityyliseksi. Nykyään linnassa on Slovakian kansallisgallerian alueosasto, jossa on vanhojen eurooppalaisten mestarien teoksia, muun muassa Rubensilta ja Veronesen.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-smolenice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Linna, joka paloi raunioksi] 1811 — Maria Teresian aikana Bratislavan linnasta tehtiin hieno kuninkaallinen residenssi, ja sen vesijohdon rakennutti keksijä Wolfgang von Kempelen. Myöhemmin linna muutettiin sotilaiden asunnoksi, ja 28. toukokuuta 1811 varusväen huolimattomuus sytytti sen palamaan. Rakennus seisoi raunioina yli 140 vuotta, kunnes tutkimukset alkoivat 1953 ja restaurointi 1957. Linnan kulmatorneista suurin, Kruunutorni, piti 1500-luvun puolivälistä lähes kahden vuosisadan ajan sisällään Unkarin kruununjalokiviä.
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+
+### 18.1
+KYSYMYS: Minä vuonna kreivi János Pálffy peri Smolenicen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+### 18.2
+KYSYMYS: Minkä linnan mallin mukaan uusi linna rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolenicen linna (historia)
+Tietoruudun teksti: Smolenicen linna on linna Pienten Karpaattien itärinteellä Smolenicen kaupungin lähellä Slovakiassa. Se rakennettiin 1400-luvulla, mutta se tuhoutui Rákóczin vapaussodan ja Napoleonin sotien aikana. Vuonna 1777 kreivi János Pálffy peri Smolenicen, mutta ei asunut linnassa sen huonon kunnon ja rahapulan vuoksi. Linna rakennettiin uudelleen vasta 1900-luvulla kreivi József Pálffyn käskystä; arkkitehti Jozef Hubert suunnitteli uuden linnan Wienin lähellä olevan Kreuzensteinin linnan mallin mukaan, ja päärakennus on tehty raudoitetusta betonista. Vuodesta 1953 linna on ollut Slovakian tiedeakatemian omaisuutta, ja nykyään se toimii kongressikeskuksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Linna, joka paloi raunioksi] 1811 — Maria Teresian aikana Bratislavan linnasta tehtiin hieno kuninkaallinen residenssi, ja sen vesijohdon rakennutti keksijä Wolfgang von Kempelen. Myöhemmin linna muutettiin sotilaiden asunnoksi, ja 28. toukokuuta 1811 varusväen huolimattomuus sytytti sen palamaan. Rakennus seisoi raunioina yli 140 vuotta, kunnes tutkimukset alkoivat 1953 ja restaurointi 1957. Linnan kulmatorneista suurin, Kruunutorni, piti 1500-luvun puolivälistä lähes kahden vuosisadan ajan sisällään Unkarin kruununjalokiviä.
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-stara-lubovna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+### 19.1
+KYSYMYS: Minä vuonna Ľubovňan linna mainitaan ensi kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+### 19.2
+KYSYMYS: Minä vuonna Spišin kaupunkien pantti päättyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stará Ľubovňa (historia)
+Tietoruudun teksti: Stará Ľubovňa on noin 16 000 asukkaan kaupunki Koillis-Slovakiassa Poprad-joen varrella 15 kilometriä Puolan rajalta ja 30 kilometriä Korkeista Tatroista itään. Se on yksi Spišin vanhimmista kaupungeista; ensimmäinen maininta on vuodelta 1292, linna mainitaan vuonna 1311, ja Ludvig Suuri myönsi asutukselle kaupunkioikeudet vuonna 1342. Vuonna 1412 Sigismund Luxemburgilainen antoi Ľubovňan ja 15 muuta Spišin kaupunkia pantiksi Puolan kuninkaalle Władysław II:lle; panttaus, jonka piti kestää vain lyhyen aikaa, kesti lopulta 360 vuotta ja päättyi vasta vuoden 1772 Puolan ensimmäisen jaon yhteydessä. Panttaus oli itse asiassa kaupungeille eduksi, koska ne eivät joutuneet alistumaan komitaatille tai aatelistolle ja olivat neutraalissa asemassa Puolan ja Unkarin välisissä levottomuuksissa.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-vlkolinec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+- [Monterrey — kaupunkilehti / Vuoret, luolat ja kuiva joki: Kotkien töyhtö] Cerro de Chipinque nousee 2 229 metriin kolmen kunnan rajalla ja on kaupungin toinen tunnusvuori. Nimen arvellaan tulevan nahuatlin sanasta chichipinqui, pieni sade, tai alkuperäiskansan päällikön nimestä. Ekologinen puisto on ollut olemassa vuodesta 1992, se on avoinna joka päivä kello kuudesta kahteenkymmeneen, ja siellä työskentelee 22 metsänvartijaa. Alue on 1 625 hehtaaria, mutta yleisölle on avoinna vain noin kolmesataa; korkein huippu on nimeltään Copete de las Aguillas, kotkien töyhtö. Metsä on mäntyä ja tammea, ja siellä elää mustakarhuja, kojootteja, nasuja ja valkohäntäpeuroja.
+
+### 20.1
+KYSYMYS: Mistä sanasta kylän nimen arvellaan tulevan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Vuoret, luolat ja kuiva joki: Kotkien töyhtö] Cerro de Chipinque nousee 2 229 metriin kolmen kunnan rajalla ja on kaupungin toinen tunnusvuori. Nimen arvellaan tulevan nahuatlin sanasta chichipinqui, pieni sade, tai alkuperäiskansan päällikön nimestä. Ekologinen puisto on ollut olemassa vuodesta 1992, se on avoinna joka päivä kello kuudesta kahteenkymmeneen, ja siellä työskentelee 22 metsänvartijaa. Alue on 1 625 hehtaaria, mutta yleisölle on avoinna vain noin kolmesataa; korkein huippu on nimeltään Copete de las Aguillas, kotkien töyhtö. Metsä on mäntyä ja tammea, ja siellä elää mustakarhuja, kojootteja, nasuja ja valkohäntäpeuroja.
+- [Pakistan — maalehti / Kuvataide: Huivi painetaan puupalikoilla] Ajrak on sindhiläinen huivi, jonka kuvio painetaan kankaaseen kaiverretuilla puupalikoilla. Sanan arvellaan tulevan persian sanasta ajar, tiili, ja pienennyspäätteestä. Värit ovat kasvi- ja mineraalivärejä, ja indigo on niistä tärkein. Kuviokokonaisuuksilla on omat nimensä — mohar, kakar, chaanp — ja mestaruus mitataan pisteistä: kahden viivan välissä kulkevien pisterivien on oltava täsmälleen samankokoisia. Ajrak annetaan vieraalle kunnianosoituksena sindhiläisen lakin kanssa, ja vuonna 2025 Sindh otti ajrak-kuvion myös autojen rekisterikilpiin.
+
+### 20.2
+KYSYMYS: Kuinka monta hirsitaloa kylässä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vlkolínec (kulttuuri)
+Tietoruudun teksti: Vlkolínec on Ružomberokin kaupungin hallintoon kuuluva kylä Slovakiassa, vaikka se oli historiallisesti erillinen kylä. Ensimmäinen kirjallinen maininta on vuodelta 1376, ja vuoden 1882 jälkeen siitä tuli osa Ružomberokia; nimi tulee luultavasti sanasta vlk eli susi. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on yksi Slovakian kymmenestä kansanrakennuskohteesta, koska se on koskematon ja monipuolinen esimerkki Pohjoisten Karpaattien kansanomaisesta maalaisarkkitehtuurista. Kylässä on yli 45 hirsitaloa, joissa kussakin on kaksi tai kolme huonetta, sekä 1700-luvun puinen kellotorni ja barokkikappeli; talot 16 ja 17 on muutettu kansanmuseoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Rakennukset: Kylä, jossa aika pysähtyi] 1376 — Vlkolínec Ružomberokin lähellä mainitaan ensimmäisen kerran vuonna 1376, ja sen nimi tulee luultavasti sanasta vlk eli susi. Kylässä on yli 45 hirsitaloa, joissa jokaisessa on kaksi tai kolme huonetta, sekä 1700-luvulta peräisin oleva puinen kellotorni ja barokkikappeli. Talot numero 16 ja 17 on muutettu kansanelämän museoksi, jossa on arjen ja työn esineitä. Kylä on ollut Unescon maailmanperintökohde vuodesta 1993 ja on Pohjois-Karpaattien kansanarkkitehtuurin ehjimpiä esimerkkejä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

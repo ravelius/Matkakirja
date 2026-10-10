@@ -1,0 +1,200 @@
+================ KOHTA 1 (kohde:hahmotelma-vydrica-zuckermandel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vydrica–Zuckermandel (historia)
+Tietoruudun teksti: Vydrica ja Zuckermandel muodostivat 1300-luvulta lähtien Bratislavan linnanmäen ja Tonavan välisen kaupunginosan. Kommunistihallinto purki lähes koko alueen vuosina 1967–1974 Uuden sillan liikenneväylien tieltä.
+
+### 1.1
+KYSYMYS: Miltä Vydrica–Zuckermandel näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vydrica–Zuckermandel (historia)
+Tietoruudun teksti: Vydrica ja Zuckermandel muodostivat 1300-luvulta lähtien Bratislavan linnanmäen ja Tonavan välisen kaupunginosan. Kommunistihallinto purki lähes koko alueen vuosina 1967–1974 Uuden sillan liikenneväylien tieltä.
+
+### 1.2
+KYSYMYS: Miksi Vydrica–Zuckermandel katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vydrica–Zuckermandel (historia)
+Tietoruudun teksti: Vydrica ja Zuckermandel muodostivat 1300-luvulta lähtien Bratislavan linnanmäen ja Tonavan välisen kaupunginosan. Kommunistihallinto purki lähes koko alueen vuosina 1967–1974 Uuden sillan liikenneväylien tieltä.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:hahmotelma-tatranska-lomnica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tatranská Lomnica (luonto · vuori)
+Tietoruudun teksti: Tatranská Lomnica on osa Vysoké Tatryn kaupunkia Pohjois-Slovakiassa Tatrojen juurella; kaupunki syntyi vasta vuonna 1990, ja se on joukko aiemmin erillisiä kyliä, Slovakian Korkeiden Tatrojen tärkeimpiä matkailukeskuksia, joita yhdistää Tatrojen rautatie. Lomnický štít, Lomnican huippu, on Korkeiden Tatrojen toiseksi korkein huippu 2 634 metrillä Gerlachovský štítin jälkeen, ja se on yksi vierailluimmista; sinne pääsee köysiradalla Tatranská Lomnicasta vuodesta 1940. Englantilainen matkailija Robert Townson nousi huipulle oppaan kanssa 16. elokuuta 1793, mikä on ensimmäinen kirjattu nousu, ja ensimmäinen talvinousu tehtiin vuonna 1891. Köysiradan päätepisteessä on ympärivuotisesti miehitetty aurinkoobservatorio ja sääasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+
+### 2.1
+KYSYMYS: Kuka nousi ensimmäisenä kirjatusti Lomnický štítille vuonna 1793?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tatranská Lomnica (luonto · vuori)
+Tietoruudun teksti: Tatranská Lomnica on osa Vysoké Tatryn kaupunkia Pohjois-Slovakiassa Tatrojen juurella; kaupunki syntyi vasta vuonna 1990, ja se on joukko aiemmin erillisiä kyliä, Slovakian Korkeiden Tatrojen tärkeimpiä matkailukeskuksia, joita yhdistää Tatrojen rautatie. Lomnický štít, Lomnican huippu, on Korkeiden Tatrojen toiseksi korkein huippu 2 634 metrillä Gerlachovský štítin jälkeen, ja se on yksi vierailluimmista; sinne pääsee köysiradalla Tatranská Lomnicasta vuodesta 1940. Englantilainen matkailija Robert Townson nousi huipulle oppaan kanssa 16. elokuuta 1793, mikä on ensimmäinen kirjattu nousu, ja ensimmäinen talvinousu tehtiin vuonna 1891. Köysiradan päätepisteessä on ympärivuotisesti miehitetty aurinkoobservatorio ja sääasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+
+### 2.2
+KYSYMYS: Kuinka korkea Lomnický štít on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tatranská Lomnica (luonto · vuori)
+Tietoruudun teksti: Tatranská Lomnica on osa Vysoké Tatryn kaupunkia Pohjois-Slovakiassa Tatrojen juurella; kaupunki syntyi vasta vuonna 1990, ja se on joukko aiemmin erillisiä kyliä, Slovakian Korkeiden Tatrojen tärkeimpiä matkailukeskuksia, joita yhdistää Tatrojen rautatie. Lomnický štít, Lomnican huippu, on Korkeiden Tatrojen toiseksi korkein huippu 2 634 metrillä Gerlachovský štítin jälkeen, ja se on yksi vierailluimmista; sinne pääsee köysiradalla Tatranská Lomnicasta vuodesta 1940. Englantilainen matkailija Robert Townson nousi huipulle oppaan kanssa 16. elokuuta 1793, mikä on ensimmäinen kirjattu nousu, ja ensimmäinen talvinousu tehtiin vuonna 1891. Köysiradan päätepisteessä on ympärivuotisesti miehitetty aurinkoobservatorio ja sääasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:hahmotelma-dobsinska-jaaluola) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobšinská jääluola (luonto · vuori)
+Tietoruudun teksti: Dobšinská jääluola, slovakiaksi Dobšinská ľadová jaskyňa, on jääluola Slovakiassa Dobšinán kaivoskaupungin lähellä Slovenský rajin alueella. Sen löysi 15. kesäkuuta 1870 kuninkaallinen kaivosinsinööri Jenő Ruffinyi yhdessä Gustáv Langin ja Andrej Megan kanssa, vaikka paimenet ja metsästäjät olivat tunteneet sisäänkäynnin kauan nimellä Studená diera eli kylmä reikä. Luola avattiin yleisölle vuotta löydön jälkeen, ja vuonna 1887 siitä tuli Euroopan ensimmäinen sähkövalaistu luola. Jäätä on paksuimmillaan 26,5 metriä ja sen määräksi arvioitiin 125 000 kuutiometriä, minkä vuoksi luola on maailman tärkeimpiä jääluolia; vuodesta 2000 se on ollut Unescon maailmanperintökohde osana Aggtelekin ja Slovakian karstin luolia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Jääluola, jonka jää on 26 metriä paksua] 1870 — Dobšinská jääluola Slovakian paratiisin kansallispuistossa löydettiin 15. kesäkuuta 1870, kun kaivosinsinööri Jenő Ruffinyi laskeutui sinne. Paimenet ja metsästäjät olivat tunteneet aukon ammoin nimellä Kylmä reikä. Luola avattiin yleisölle vuotta myöhemmin, ja 1887 se oli Euroopan ensimmäinen sähkövalaistu luola. Pohjoiseen avautuva käytävä viettää alaspäin, joten kylmä ilma valuu talvella sisään ja luola jäätyy. Keskilämpötila on vuoden ympäri lähellä nollaa, ja jäätä on paikoin jopa 26,5 metriä.
+
+### 3.1
+KYSYMYS: Kuka löysi Dobšinská jääluolan 15. kesäkuuta 1870?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobšinská jääluola (luonto · vuori)
+Tietoruudun teksti: Dobšinská jääluola, slovakiaksi Dobšinská ľadová jaskyňa, on jääluola Slovakiassa Dobšinán kaivoskaupungin lähellä Slovenský rajin alueella. Sen löysi 15. kesäkuuta 1870 kuninkaallinen kaivosinsinööri Jenő Ruffinyi yhdessä Gustáv Langin ja Andrej Megan kanssa, vaikka paimenet ja metsästäjät olivat tunteneet sisäänkäynnin kauan nimellä Studená diera eli kylmä reikä. Luola avattiin yleisölle vuotta löydön jälkeen, ja vuonna 1887 siitä tuli Euroopan ensimmäinen sähkövalaistu luola. Jäätä on paksuimmillaan 26,5 metriä ja sen määräksi arvioitiin 125 000 kuutiometriä, minkä vuoksi luola on maailman tärkeimpiä jääluolia; vuodesta 2000 se on ollut Unescon maailmanperintökohde osana Aggtelekin ja Slovakian karstin luolia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Jääluola, jonka jää on 26 metriä paksua] 1870 — Dobšinská jääluola Slovakian paratiisin kansallispuistossa löydettiin 15. kesäkuuta 1870, kun kaivosinsinööri Jenő Ruffinyi laskeutui sinne. Paimenet ja metsästäjät olivat tunteneet aukon ammoin nimellä Kylmä reikä. Luola avattiin yleisölle vuotta myöhemmin, ja 1887 se oli Euroopan ensimmäinen sähkövalaistu luola. Pohjoiseen avautuva käytävä viettää alaspäin, joten kylmä ilma valuu talvella sisään ja luola jäätyy. Keskilämpötila on vuoden ympäri lähellä nollaa, ja jäätä on paikoin jopa 26,5 metriä.
+
+### 3.2
+KYSYMYS: Millä nimellä paimenet tunsivat luolan sisäänkäynnin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobšinská jääluola (luonto · vuori)
+Tietoruudun teksti: Dobšinská jääluola, slovakiaksi Dobšinská ľadová jaskyňa, on jääluola Slovakiassa Dobšinán kaivoskaupungin lähellä Slovenský rajin alueella. Sen löysi 15. kesäkuuta 1870 kuninkaallinen kaivosinsinööri Jenő Ruffinyi yhdessä Gustáv Langin ja Andrej Megan kanssa, vaikka paimenet ja metsästäjät olivat tunteneet sisäänkäynnin kauan nimellä Studená diera eli kylmä reikä. Luola avattiin yleisölle vuotta löydön jälkeen, ja vuonna 1887 siitä tuli Euroopan ensimmäinen sähkövalaistu luola. Jäätä on paksuimmillaan 26,5 metriä ja sen määräksi arvioitiin 125 000 kuutiometriä, minkä vuoksi luola on maailman tärkeimpiä jääluolia; vuodesta 2000 se on ollut Unescon maailmanperintökohde osana Aggtelekin ja Slovakian karstin luolia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Jääluola, jonka jää on 26 metriä paksua] 1870 — Dobšinská jääluola Slovakian paratiisin kansallispuistossa löydettiin 15. kesäkuuta 1870, kun kaivosinsinööri Jenő Ruffinyi laskeutui sinne. Paimenet ja metsästäjät olivat tunteneet aukon ammoin nimellä Kylmä reikä. Luola avattiin yleisölle vuotta myöhemmin, ja 1887 se oli Euroopan ensimmäinen sähkövalaistu luola. Pohjoiseen avautuva käytävä viettää alaspäin, joten kylmä ilma valuu talvella sisään ja luola jäätyy. Keskilämpötila on vuoden ympäri lähellä nollaa, ja jäätä on paikoin jopa 26,5 metriä.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:hahmotelma-ochtinska) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ochtinská aragoniittiluola (luonto · vuori)
+Tietoruudun teksti: Ochtinská aragoniittiluola on ainutlaatuinen aragoniittiluola Etelä-Slovakiassa lähellä Rožňavaa. Vaikka se on vain 300 metriä pitkä, se on kuuluisa harvinaisista aragoniittimuodostelmistaan, ja se on osa Unescon Aggtelekin ja Slovakian karstin luolia. Luola sijaitsee 642 metrin korkeudessa, ja sen lämpötila pysyy 7,2–7,8 asteessa; vakaa mikroilmasto ja hitaasti tippuva, rautaa, mangaania ja magnesiumia sisältävä vesi mahdollistavat koristeellisten muodostelmien synnyn, ja vanhimmat niistä ovat 120 000–130 000 vuotta vanhoja. Pääkohteessa, Linnunradan salissa, valkoiset aragoniittihaarukat ja -kasaumat hohtavat kuin Linnunradan tähdet; luola löydettiin vuonna 1954 ja avattiin yleisölle 1972.
+
+### 4.1
+KYSYMYS: Minä vuonna Ochtinská aragoniittiluola löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ochtinská aragoniittiluola (luonto · vuori)
+Tietoruudun teksti: Ochtinská aragoniittiluola on ainutlaatuinen aragoniittiluola Etelä-Slovakiassa lähellä Rožňavaa. Vaikka se on vain 300 metriä pitkä, se on kuuluisa harvinaisista aragoniittimuodostelmistaan, ja se on osa Unescon Aggtelekin ja Slovakian karstin luolia. Luola sijaitsee 642 metrin korkeudessa, ja sen lämpötila pysyy 7,2–7,8 asteessa; vakaa mikroilmasto ja hitaasti tippuva, rautaa, mangaania ja magnesiumia sisältävä vesi mahdollistavat koristeellisten muodostelmien synnyn, ja vanhimmat niistä ovat 120 000–130 000 vuotta vanhoja. Pääkohteessa, Linnunradan salissa, valkoiset aragoniittihaarukat ja -kasaumat hohtavat kuin Linnunradan tähdet; luola löydettiin vuonna 1954 ja avattiin yleisölle 1972.
+
+### 4.2
+KYSYMYS: Minkä salin aragoniitit hohtavat kuin tähdet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ochtinská aragoniittiluola (luonto · vuori)
+Tietoruudun teksti: Ochtinská aragoniittiluola on ainutlaatuinen aragoniittiluola Etelä-Slovakiassa lähellä Rožňavaa. Vaikka se on vain 300 metriä pitkä, se on kuuluisa harvinaisista aragoniittimuodostelmistaan, ja se on osa Unescon Aggtelekin ja Slovakian karstin luolia. Luola sijaitsee 642 metrin korkeudessa, ja sen lämpötila pysyy 7,2–7,8 asteessa; vakaa mikroilmasto ja hitaasti tippuva, rautaa, mangaania ja magnesiumia sisältävä vesi mahdollistavat koristeellisten muodostelmien synnyn, ja vanhimmat niistä ovat 120 000–130 000 vuotta vanhoja. Pääkohteessa, Linnunradan salissa, valkoiset aragoniittihaarukat ja -kasaumat hohtavat kuin Linnunradan tähdet; luola löydettiin vuonna 1954 ja avattiin yleisölle 1972.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hahmotelma-poloniny) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poloninyn kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Poloninyn kansallispuisto on kansallispuisto Koillis-Slovakiassa Puolan ja Ukrainan rajoilla Bukovské vrchyn vuoristossa, joka kuuluu Itäisiin Karpaatteihin. Puisto perustettiin 1. lokakuuta 1997, ja sen suojelualue on 298 neliökilometriä; se on maan itäisin ja harvimmin asuttu alue. Metsät peittävät noin 80 prosenttia alueesta, ja Slovakian tiheimmät vanhat metsät ovat täällä; vuoriharjanteen niityt, joita itäslovakian murteissa kutsutaan poloninoiksi, antavat puistolle nimen. Havešovan, Stužican ja Rožokin alkuperäiset pyökkimetsät ovat Unescon maailmanperintökohde vuodesta 2007, ja vuonna 2004 alueelle palautettiin pieni visenttilauma.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Luonto: Gaselli palautettiin suojelualueelle] Arabiangaselli eli reem on pienikokoinen antilooppi, jonka sarvet ovat ohuet ja turkki hyvin vaalea. Vaalea väri heijastaa auringonvaloa ja auttaa kestämään kuumuutta, ja eläin tulee toimeen vähällä vedellä: suuren osan nesteestään se saa kasveista. Metsästys vei kannan lähes olemattomiin. Nyt gaselleja on palautettu Kuningas Salmanin suojelualueelle maan pohjoisosaan, joka on pinta-alaltaan yksi maailman laajimmista. Alueella liikkuu vartijoita, ja laidunkasvillisuutta on istutettu takaisin.
+- [Cairns — kaupunkilehti / Riutta ja sademetsä: Sademetsä palautettiin asukkailleen] Idän kuku yalanjit hakivat oikeutta esi-isiensä maahan yli neljännesvuosisadan. Ensimmäinen maaoikeusvaade jätettiin toukokuussa 1995, ja huhtikuussa 2007 heidät tunnustettiin viidellätoista maankäyttösopimuksella yli 230 000 hehtaarin perinteisiksi omistajiksi Mossmanin ja Cooktownin välillä. Syyskuun lopussa 2021 Queenslandin osavaltion hallitus luovutti heille runsaat 160 000 hehtaaria maata, mukaan lukien Daintreen kansallispuisto. Kaksi lähdeartikkelia antavat sopimukselle eri päivän ja hieman eri hehtaariluvun, joten tarkkaa lukua ei tässä väitetä. Aluetta hoidetaan nyt yhdessä Queenslandin puistoviranomaisen kanssa.
+
+### 5.1
+KYSYMYS: Minä vuonna Poloninyn kansallispuisto perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poloninyn kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Poloninyn kansallispuisto on kansallispuisto Koillis-Slovakiassa Puolan ja Ukrainan rajoilla Bukovské vrchyn vuoristossa, joka kuuluu Itäisiin Karpaatteihin. Puisto perustettiin 1. lokakuuta 1997, ja sen suojelualue on 298 neliökilometriä; se on maan itäisin ja harvimmin asuttu alue. Metsät peittävät noin 80 prosenttia alueesta, ja Slovakian tiheimmät vanhat metsät ovat täällä; vuoriharjanteen niityt, joita itäslovakian murteissa kutsutaan poloninoiksi, antavat puistolle nimen. Havešovan, Stužican ja Rožokin alkuperäiset pyökkimetsät ovat Unescon maailmanperintökohde vuodesta 2007, ja vuonna 2004 alueelle palautettiin pieni visenttilauma.
+
+### 5.2
+KYSYMYS: Minkä eläimen pieni lauma palautettiin alueelle vuonna 2004?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poloninyn kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Poloninyn kansallispuisto on kansallispuisto Koillis-Slovakiassa Puolan ja Ukrainan rajoilla Bukovské vrchyn vuoristossa, joka kuuluu Itäisiin Karpaatteihin. Puisto perustettiin 1. lokakuuta 1997, ja sen suojelualue on 298 neliökilometriä; se on maan itäisin ja harvimmin asuttu alue. Metsät peittävät noin 80 prosenttia alueesta, ja Slovakian tiheimmät vanhat metsät ovat täällä; vuoriharjanteen niityt, joita itäslovakian murteissa kutsutaan poloninoiksi, antavat puistolle nimen. Havešovan, Stužican ja Rožokin alkuperäiset pyökkimetsät ovat Unescon maailmanperintökohde vuodesta 2007, ja vuonna 2004 alueelle palautettiin pieni visenttilauma.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Luonto: Gaselli palautettiin suojelualueelle] Arabiangaselli eli reem on pienikokoinen antilooppi, jonka sarvet ovat ohuet ja turkki hyvin vaalea. Vaalea väri heijastaa auringonvaloa ja auttaa kestämään kuumuutta, ja eläin tulee toimeen vähällä vedellä: suuren osan nesteestään se saa kasveista. Metsästys vei kannan lähes olemattomiin. Nyt gaselleja on palautettu Kuningas Salmanin suojelualueelle maan pohjoisosaan, joka on pinta-alaltaan yksi maailman laajimmista. Alueella liikkuu vartijoita, ja laidunkasvillisuutta on istutettu takaisin.
+- [Cairns — kaupunkilehti / Riutta ja sademetsä: Sademetsä palautettiin asukkailleen] Idän kuku yalanjit hakivat oikeutta esi-isiensä maahan yli neljännesvuosisadan. Ensimmäinen maaoikeusvaade jätettiin toukokuussa 1995, ja huhtikuussa 2007 heidät tunnustettiin viidellätoista maankäyttösopimuksella yli 230 000 hehtaarin perinteisiksi omistajiksi Mossmanin ja Cooktownin välillä. Syyskuun lopussa 2021 Queenslandin osavaltion hallitus luovutti heille runsaat 160 000 hehtaaria maata, mukaan lukien Daintreen kansallispuisto. Kaksi lähdeartikkelia antavat sopimukselle eri päivän ja hieman eri hehtaariluvun, joten tarkkaa lukua ei tässä väitetä. Aluetta hoidetaan nyt yhdessä Queenslandin puistoviranomaisen kanssa.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

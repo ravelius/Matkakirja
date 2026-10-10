@@ -1,0 +1,125 @@
+================ KOHTA 31 (kohde:hahmotelma-strbske-pleso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štrbské Pleso (luonto · järvi)
+Tietoruudun teksti: Štrbské Pleso on hiihto-, matkailu- ja terveyskylpyläkeskus Korkeilla Tatroilla, rakennettu samannimisen jääkauden muovaaman järven rannalle; asukkaita on noin 200. Rautatie saapui Popradiin Tatrojen juurelle vuonna 1871, minkä jälkeen aatelismies Jozef Szentiványi rakensi vuonna 1872 metsästysmajan järven rannalle Štrban kylältä vuokraamalleen maalle ja avasi paikan matkailijoille jo seuraavana vuonna. Szentiványi salli vuoristoiluseura Karpaattien liiton rakentaa oman Joosef-majansa lähelle vuonna 1875, ja lisääntyvät majoitustilat tekivät paikasta suositun; hammasratasrata pääradalle valmistui 1896 ja ensimmäinen hiihtokoulu perustettiin 1899. Valtio osti keskuksen vuonna 1901, ja viereen syntyi 1900-luvun alussa myös pieni tekojärvi Nové Štrbské pleso, kun arkkitehti Karol Móry patosi Mlynica-puron.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Pappi, joka lähetti viestejä ilmassa] 1905 — Jozef Murgaš syntyi 1864 Tajovin kylässä, opiskeli papiksi ja maalasi kirkkoihin alttaritauluja. Vuonna 1896 hän muutti Yhdysvaltoihin Wilkes-Barren slovakkiseurakuntaan, rakensi laboratorion ja alkoi tutkia langatonta lennätintä. Ensimmäiset kaksi patenttia hän sai 1904. Vuonna 1905 viesti kulki Wilkes-Barresta Scrantoniin, noin 32 kilometrin matkan. Pisteet ja viivat hän erotti toisistaan äänenkorkeudella: pisteet korkealla ja viivat matalalla sävelellä. Laboratoriossa kävi vieraana myös presidentti Theodore Roosevelt.
+
+### 31.1
+KYSYMYS: Minä vuonna Jozef Szentiványi avasi metsästysmajansa matkailijoille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štrbské Pleso (luonto · järvi)
+Tietoruudun teksti: Štrbské Pleso on hiihto-, matkailu- ja terveyskylpyläkeskus Korkeilla Tatroilla, rakennettu samannimisen jääkauden muovaaman järven rannalle; asukkaita on noin 200. Rautatie saapui Popradiin Tatrojen juurelle vuonna 1871, minkä jälkeen aatelismies Jozef Szentiványi rakensi vuonna 1872 metsästysmajan järven rannalle Štrban kylältä vuokraamalleen maalle ja avasi paikan matkailijoille jo seuraavana vuonna. Szentiványi salli vuoristoiluseura Karpaattien liiton rakentaa oman Joosef-majansa lähelle vuonna 1875, ja lisääntyvät majoitustilat tekivät paikasta suositun; hammasratasrata pääradalle valmistui 1896 ja ensimmäinen hiihtokoulu perustettiin 1899. Valtio osti keskuksen vuonna 1901, ja viereen syntyi 1900-luvun alussa myös pieni tekojärvi Nové Štrbské pleso, kun arkkitehti Karol Móry patosi Mlynica-puron.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Pappi, joka lähetti viestejä ilmassa] 1905 — Jozef Murgaš syntyi 1864 Tajovin kylässä, opiskeli papiksi ja maalasi kirkkoihin alttaritauluja. Vuonna 1896 hän muutti Yhdysvaltoihin Wilkes-Barren slovakkiseurakuntaan, rakensi laboratorion ja alkoi tutkia langatonta lennätintä. Ensimmäiset kaksi patenttia hän sai 1904. Vuonna 1905 viesti kulki Wilkes-Barresta Scrantoniin, noin 32 kilometrin matkan. Pisteet ja viivat hän erotti toisistaan äänenkorkeudella: pisteet korkealla ja viivat matalalla sävelellä. Laboratoriossa kävi vieraana myös presidentti Theodore Roosevelt.
+
+### 31.2
+KYSYMYS: Minkä vuoristoiluseuran maja rakennettiin Štrbské pleson rannalle vuonna 1875?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štrbské Pleso (luonto · järvi)
+Tietoruudun teksti: Štrbské Pleso on hiihto-, matkailu- ja terveyskylpyläkeskus Korkeilla Tatroilla, rakennettu samannimisen jääkauden muovaaman järven rannalle; asukkaita on noin 200. Rautatie saapui Popradiin Tatrojen juurelle vuonna 1871, minkä jälkeen aatelismies Jozef Szentiványi rakensi vuonna 1872 metsästysmajan järven rannalle Štrban kylältä vuokraamalleen maalle ja avasi paikan matkailijoille jo seuraavana vuonna. Szentiványi salli vuoristoiluseura Karpaattien liiton rakentaa oman Joosef-majansa lähelle vuonna 1875, ja lisääntyvät majoitustilat tekivät paikasta suositun; hammasratasrata pääradalle valmistui 1896 ja ensimmäinen hiihtokoulu perustettiin 1899. Valtio osti keskuksen vuonna 1901, ja viereen syntyi 1900-luvun alussa myös pieni tekojärvi Nové Štrbské pleso, kun arkkitehti Karol Móry patosi Mlynica-puron.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-modra) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Modra (kulttuuri)
+Tietoruudun teksti: Modra on kaupunki Pienten Karpaattien juurella nykyisellä Bratislavan alueella, yksi seudun tärkeimmistä viinikeskuksista ja tunnettu erityisesti sinivalkoisesta savitavarastaan. Ensimmäinen maininta kaupungista on vuodelta 1158, jolloin se kuului Nitran piispalle; mongolien hyökkäyksen 1241 jälkeen saksalaiset siirtolaiset asuttivat sen uudelleen, ja ensimmäinen viinitarhamaininta on vuodelta 1321. Kaupunki sai kaupunkioikeudet 1361 ja vapaan kuninkaallisen kaupungin aseman 1607; savenvalajien ja muiden käsityöläisten keskuksena Modra on toiminut 1600-luvulta lähtien, mutta varsinainen majolikan keramiikkakoulu, josta habaanien taidolla syntyi niin kutsuttu slovakialainen keramiikka, perustetaan vasta 1883. Runoilija ja poliitikko Ľudovít Štúr vietti elämänsä viimeiset vuodet Modrassa ja kuoli siellä vuonna 1856; hänen hautansa on kaupungin hautausmaalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Perinne, jonka Unesco otti suojaansa] Unesco lisäsi Latvian, Viron ja Liettuan yhteiset laulu- ja tanssijuhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloonsa vuonna 2003 — tunnustuksena siitä, että perinne on säilyttänyt kolmen maan kansanmusiikkia elävänä sukupolvesta toiseen kirjoitetun nuotin ja suullisen opetuksen yhdistelmällä. Kolmen Baltian maan juhlat kehittyivät toisistaan erillään 1800-luvun kansallisen herätyksen aikana, mutta niitä yhdistää sama perusidea: tavalliset ihmiset, ei ammattilaiset, laulavat yhdessä isoina joukkoina oman kielensä ja kulttuurinsa kunniaksi.
+
+### 32.1
+KYSYMYS: Minä vuonna Modra sai vapaan kuninkaallisen kaupungin aseman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Modra (kulttuuri)
+Tietoruudun teksti: Modra on kaupunki Pienten Karpaattien juurella nykyisellä Bratislavan alueella, yksi seudun tärkeimmistä viinikeskuksista ja tunnettu erityisesti sinivalkoisesta savitavarastaan. Ensimmäinen maininta kaupungista on vuodelta 1158, jolloin se kuului Nitran piispalle; mongolien hyökkäyksen 1241 jälkeen saksalaiset siirtolaiset asuttivat sen uudelleen, ja ensimmäinen viinitarhamaininta on vuodelta 1321. Kaupunki sai kaupunkioikeudet 1361 ja vapaan kuninkaallisen kaupungin aseman 1607; savenvalajien ja muiden käsityöläisten keskuksena Modra on toiminut 1600-luvulta lähtien, mutta varsinainen majolikan keramiikkakoulu, josta habaanien taidolla syntyi niin kutsuttu slovakialainen keramiikka, perustetaan vasta 1883. Runoilija ja poliitikko Ľudovít Štúr vietti elämänsä viimeiset vuodet Modrassa ja kuoli siellä vuonna 1856; hänen hautansa on kaupungin hautausmaalla.
+
+### 32.2
+KYSYMYS: Kuka slovakialaisen kansallisen herätyksen johtohahmo kuoli Modrassa vuonna 1856?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Modra (kulttuuri)
+Tietoruudun teksti: Modra on kaupunki Pienten Karpaattien juurella nykyisellä Bratislavan alueella, yksi seudun tärkeimmistä viinikeskuksista ja tunnettu erityisesti sinivalkoisesta savitavarastaan. Ensimmäinen maininta kaupungista on vuodelta 1158, jolloin se kuului Nitran piispalle; mongolien hyökkäyksen 1241 jälkeen saksalaiset siirtolaiset asuttivat sen uudelleen, ja ensimmäinen viinitarhamaininta on vuodelta 1321. Kaupunki sai kaupunkioikeudet 1361 ja vapaan kuninkaallisen kaupungin aseman 1607; savenvalajien ja muiden käsityöläisten keskuksena Modra on toiminut 1600-luvulta lähtien, mutta varsinainen majolikan keramiikkakoulu, josta habaanien taidolla syntyi niin kutsuttu slovakialainen keramiikka, perustetaan vasta 1883. Runoilija ja poliitikko Ľudovít Štúr vietti elämänsä viimeiset vuodet Modrassa ja kuoli siellä vuonna 1856; hänen hautansa on kaupungin hautausmaalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Perinne, jonka Unesco otti suojaansa] Unesco lisäsi Latvian, Viron ja Liettuan yhteiset laulu- ja tanssijuhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloonsa vuonna 2003 — tunnustuksena siitä, että perinne on säilyttänyt kolmen maan kansanmusiikkia elävänä sukupolvesta toiseen kirjoitetun nuotin ja suullisen opetuksen yhdistelmällä. Kolmen Baltian maan juhlat kehittyivät toisistaan erillään 1800-luvun kansallisen herätyksen aikana, mutta niitä yhdistää sama perusidea: tavalliset ihmiset, ei ammattilaiset, laulavat yhdessä isoina joukkoina oman kielensä ja kulttuurinsa kunniaksi.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-tokaj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (Slovakian puoli) (ruoka)
+Tietoruudun teksti: Tokajin viinialue ulottuu Koillis-Unkarista Kaakkois-Slovakiaan, ja sen 28 kylän alueella on yhteensä noin 11 150 hehtaaria luokiteltua viinitarha-alaa; Unesco julisti sen maailmanperintökohteeksi vuonna 2002. Alue on maailman vanhimman makean, jalohomeen kypsyttämän Tokaji aszú -viinin syntysija, ja kuningas Béla IV kutsui alueelle muun muassa valloonisia ja italialaisia siirtolaisia, jotka toivat mukanaan furmint-rypäleen; italialaiset asettuivat muun muassa Baran kylään. Kuninkaallinen asetus rajasi alueen suljetuksi viinialueeksi vuonna 1737, mitä pidetään maailman varhaisimpana alkuperänimitysten suojajärjestelmänä, ja Ranskan Ludvig XIV kutsui Tokajia saatuaan siitä pulloja Ferenc II Rákóczilta vuonna 1703 "kuninkaiden viiniksi, viinien kuninkaaksi". Trianonin rauhansopimus jakoi alueen Unkarin ja silloisen Tšekkoslovakian kesken 1920, jolloin nykyiselle Slovakian puolelle jäi sei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+
+### 33.1
+KYSYMYS: Minä vuonna kuninkaallinen asetus rajasi Tokajin suljetuksi viinialueeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (Slovakian puoli) (ruoka)
+Tietoruudun teksti: Tokajin viinialue ulottuu Koillis-Unkarista Kaakkois-Slovakiaan, ja sen 28 kylän alueella on yhteensä noin 11 150 hehtaaria luokiteltua viinitarha-alaa; Unesco julisti sen maailmanperintökohteeksi vuonna 2002. Alue on maailman vanhimman makean, jalohomeen kypsyttämän Tokaji aszú -viinin syntysija, ja kuningas Béla IV kutsui alueelle muun muassa valloonisia ja italialaisia siirtolaisia, jotka toivat mukanaan furmint-rypäleen; italialaiset asettuivat muun muassa Baran kylään. Kuninkaallinen asetus rajasi alueen suljetuksi viinialueeksi vuonna 1737, mitä pidetään maailman varhaisimpana alkuperänimitysten suojajärjestelmänä, ja Ranskan Ludvig XIV kutsui Tokajia saatuaan siitä pulloja Ferenc II Rákóczilta vuonna 1703 "kuninkaiden viiniksi, viinien kuninkaaksi". Trianonin rauhansopimus jakoi alueen Unkarin ja silloisen Tšekkoslovakian kesken 1920, jolloin nykyiselle Slovakian puolelle jäi sei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+
+### 33.2
+KYSYMYS: Mikä rypäletuhooja hävitti suuren osan Tokajin viinitarhoista vuonna 1885?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (Slovakian puoli) (ruoka)
+Tietoruudun teksti: Tokajin viinialue ulottuu Koillis-Unkarista Kaakkois-Slovakiaan, ja sen 28 kylän alueella on yhteensä noin 11 150 hehtaaria luokiteltua viinitarha-alaa; Unesco julisti sen maailmanperintökohteeksi vuonna 2002. Alue on maailman vanhimman makean, jalohomeen kypsyttämän Tokaji aszú -viinin syntysija, ja kuningas Béla IV kutsui alueelle muun muassa valloonisia ja italialaisia siirtolaisia, jotka toivat mukanaan furmint-rypäleen; italialaiset asettuivat muun muassa Baran kylään. Kuninkaallinen asetus rajasi alueen suljetuksi viinialueeksi vuonna 1737, mitä pidetään maailman varhaisimpana alkuperänimitysten suojajärjestelmänä, ja Ranskan Ludvig XIV kutsui Tokajia saatuaan siitä pulloja Ferenc II Rákóczilta vuonna 1703 "kuninkaiden viiniksi, viinien kuninkaaksi". Trianonin rauhansopimus jakoi alueen Unkarin ja silloisen Tšekkoslovakian kesken 1920, jolloin nykyiselle Slovakian puolelle jäi sei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI

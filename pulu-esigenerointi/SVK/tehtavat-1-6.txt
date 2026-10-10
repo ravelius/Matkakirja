@@ -1,0 +1,192 @@
+================ KOHTA 26 (kohde:hahmotelma-topolcianky) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Topoľčianky (historia)
+Tietoruudun teksti: Topoľčianky on kylä ja kunta Zlaté Moravcen piirissä Länsi-Keski-Slovakiassa; sen ensimmäinen maininta on vuodelta 1293. Kylässä on ainutlaatuinen euroopanbiisonin eli visentin suojelualue: 1930-luvulle mennessä visenttejä oli jäljellä vain pieni joukko Puolassa, vuonna 1958 perustetulla alueella oli 150 eläintä, ja vuonna 2004 pieniä ryhmiä alettiin vapauttaa Poloninyn kansallispuistoon. Kylässä on myös renessanssilinna, jossa Tšekkoslovakian ensimmäinen presidentti Tomáš Garrigue Masaryk lomaili joka kesä vuosina 1923–1933. Linnan eteläsiipi, joka uusittiin 1800-luvun alussa, on Slovakian puhtain esimerkki uusklassisesta arkkitehtuurista, ja sitä ympäröi vaikuttava maisemapuutarha.
+
+### 26.1
+KYSYMYS: Mitä eläintä varten Topoľčiankyssa on suojelualue?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Topoľčianky (historia)
+Tietoruudun teksti: Topoľčianky on kylä ja kunta Zlaté Moravcen piirissä Länsi-Keski-Slovakiassa; sen ensimmäinen maininta on vuodelta 1293. Kylässä on ainutlaatuinen euroopanbiisonin eli visentin suojelualue: 1930-luvulle mennessä visenttejä oli jäljellä vain pieni joukko Puolassa, vuonna 1958 perustetulla alueella oli 150 eläintä, ja vuonna 2004 pieniä ryhmiä alettiin vapauttaa Poloninyn kansallispuistoon. Kylässä on myös renessanssilinna, jossa Tšekkoslovakian ensimmäinen presidentti Tomáš Garrigue Masaryk lomaili joka kesä vuosina 1923–1933. Linnan eteläsiipi, joka uusittiin 1800-luvun alussa, on Slovakian puhtain esimerkki uusklassisesta arkkitehtuurista, ja sitä ympäröi vaikuttava maisemapuutarha.
+
+### 26.2
+KYSYMYS: Kuka Tšekkoslovakian presidentti lomaili linnassa 1923–1933?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Topoľčianky (historia)
+Tietoruudun teksti: Topoľčianky on kylä ja kunta Zlaté Moravcen piirissä Länsi-Keski-Slovakiassa; sen ensimmäinen maininta on vuodelta 1293. Kylässä on ainutlaatuinen euroopanbiisonin eli visentin suojelualue: 1930-luvulle mennessä visenttejä oli jäljellä vain pieni joukko Puolassa, vuonna 1958 perustetulla alueella oli 150 eläintä, ja vuonna 2004 pieniä ryhmiä alettiin vapauttaa Poloninyn kansallispuistoon. Kylässä on myös renessanssilinna, jossa Tšekkoslovakian ensimmäinen presidentti Tomáš Garrigue Masaryk lomaili joka kesä vuosina 1923–1933. Linnan eteläsiipi, joka uusittiin 1800-luvun alussa, on Slovakian puhtain esimerkki uusklassisesta arkkitehtuurista, ja sitä ympäröi vaikuttava maisemapuutarha.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-martin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Martin (kulttuuri)
+Tietoruudun teksti: Martin on Pohjois-Slovakian kaupunki Turiec-joen varrella Malá Fatran ja Veľká Fatran vuorten välissä lähellä Žilinaa; asukkaita on noin 54 000. Ensimmäinen maininta on vuodelta 1284 nimellä Vila Sancti Martini, ja 1700-luvulla siitä tuli Turócin komitaatin keskus. 1800-luvulla kaupungista tuli slovakialaisen kulttuurin tärkein keskus: sinne perustettiin useita kulttuurilaitoksia, muun muassa Matica slovenská ja Slovakian kansallismuseo, ja suurin osa slovakialaisen kansallisen emansipaation poliittisesta toiminnasta järjestettiin sieltä. Kaupunki teollistui samaan aikaan: ensimmäiset kirjapainot perustettiin vuonna 1869 ja huonekalutehdas Tatra nábytok vuonna 1890. Nykyään Martinissa sijaitsevat Slovakian kansalliskirjasto ja Matica slovenská.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Martin piirsi Tukholman ennen valokuvaa] Elias Martin oppi ammattinsa Lontoossa, jossa hän asui kaksitoista vuotta ja opetteli akvatinnan — tekniikan, jolla kuparilevystä saa vesivärimäisen sävyn. Kotiin palattuaan 1780 hän kääntyi kaupunkiin, jota kukaan ei ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne ovat tarkin näkymä Tukholmaan ennen valokuvaa.
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Slovakia — maalehti / Rakennukset: Kruunajaiskulkueen viimeinen portti] n. 1300 — Mikaelin portti on ainoa säilynyt Bratislavan keskiaikaisista kaupunginporteista, ja sen historia ulottuu 1200-luvun loppuun. Vuosina 1563–1830 Unkarin 19 kuningasta kulki kruunajaiskulkueessa tornin kautta, ennen kuin kruunaus tapahtui Pyhän Martinin katedraalissa. Nykyisen muotonsa torni sai 1753–1758 barokkikunnostuksessa, jolloin sen huipulle asetettiin 51 metrin korkeuteen Pyhän Mikaelin ja lohikäärmeen patsas. Portin edessä oleva tiilisilta vuodelta 1727 on kaupungin vanhin silta.
+
+### 27.1
+KYSYMYS: Minä vuonna Martinin ensimmäiset kirjapainot perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Martin (kulttuuri)
+Tietoruudun teksti: Martin on Pohjois-Slovakian kaupunki Turiec-joen varrella Malá Fatran ja Veľká Fatran vuorten välissä lähellä Žilinaa; asukkaita on noin 54 000. Ensimmäinen maininta on vuodelta 1284 nimellä Vila Sancti Martini, ja 1700-luvulla siitä tuli Turócin komitaatin keskus. 1800-luvulla kaupungista tuli slovakialaisen kulttuurin tärkein keskus: sinne perustettiin useita kulttuurilaitoksia, muun muassa Matica slovenská ja Slovakian kansallismuseo, ja suurin osa slovakialaisen kansallisen emansipaation poliittisesta toiminnasta järjestettiin sieltä. Kaupunki teollistui samaan aikaan: ensimmäiset kirjapainot perustettiin vuonna 1869 ja huonekalutehdas Tatra nábytok vuonna 1890. Nykyään Martinissa sijaitsevat Slovakian kansalliskirjasto ja Matica slovenská.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Slovakia — maalehti / Rakennukset: Kruunajaiskulkueen viimeinen portti] n. 1300 — Mikaelin portti on ainoa säilynyt Bratislavan keskiaikaisista kaupunginporteista, ja sen historia ulottuu 1200-luvun loppuun. Vuosina 1563–1830 Unkarin 19 kuningasta kulki kruunajaiskulkueessa tornin kautta, ennen kuin kruunaus tapahtui Pyhän Martinin katedraalissa. Nykyisen muotonsa torni sai 1753–1758 barokkikunnostuksessa, jolloin sen huipulle asetettiin 51 metrin korkeuteen Pyhän Mikaelin ja lohikäärmeen patsas. Portin edessä oleva tiilisilta vuodelta 1727 on kaupungin vanhin silta.
+
+### 27.2
+KYSYMYS: Minkä kahden vuoriston välissä Martin sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Martin (kulttuuri)
+Tietoruudun teksti: Martin on Pohjois-Slovakian kaupunki Turiec-joen varrella Malá Fatran ja Veľká Fatran vuorten välissä lähellä Žilinaa; asukkaita on noin 54 000. Ensimmäinen maininta on vuodelta 1284 nimellä Vila Sancti Martini, ja 1700-luvulla siitä tuli Turócin komitaatin keskus. 1800-luvulla kaupungista tuli slovakialaisen kulttuurin tärkein keskus: sinne perustettiin useita kulttuurilaitoksia, muun muassa Matica slovenská ja Slovakian kansallismuseo, ja suurin osa slovakialaisen kansallisen emansipaation poliittisesta toiminnasta järjestettiin sieltä. Kaupunki teollistui samaan aikaan: ensimmäiset kirjapainot perustettiin vuonna 1869 ja huonekalutehdas Tatra nábytok vuonna 1890. Nykyään Martinissa sijaitsevat Slovakian kansalliskirjasto ja Matica slovenská.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Martin piirsi Tukholman ennen valokuvaa] Elias Martin oppi ammattinsa Lontoossa, jossa hän asui kaksitoista vuotta ja opetteli akvatinnan — tekniikan, jolla kuparilevystä saa vesivärimäisen sävyn. Kotiin palattuaan 1780 hän kääntyi kaupunkiin, jota kukaan ei ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne ovat tarkin näkymä Tukholmaan ennen valokuvaa.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-devin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devínin linna (historia)
+Tietoruudun teksti: Devínin linna kohoaa jyrkällä kalliolla Bratislavan laidalla kohdassa, jossa Morava-joki laskee Tonavaan ja muodostaa samalla rajan Itävallan ja Slovakian välillä. Paikkaa on asutettu jo kivikaudelta lähtien, ja kalliolta on kaivettu esiin 100-luvulla jaa. rakennetun roomalaisen tornin jäännökset, mikä kertoo paikan strategisesta merkityksestä Tonavan kauppareittien vartiopaikkana jo roomalaisrajan aikaan. Linna saatetaan mainita kirjallisissa lähteissä jo vuodelta 864, jolloin Itä-Frankin kuningas Ludvig Saksalainen piiritti Määrin ruhtinas Rastislavia täällä, joskin tulkinta on tutkijoiden kesken kiistanalainen. Keskiajalla paikalle rakennettu linna toimi Unkarin kuningaskunnan raja- ja puolustuslinnana Moravan yli kulkevalla reitillä. Napoleonin joukot räjäyttivät linnan vuonna 1809 Pressburgin piirityksen jälkeen vetäytyessään alueelta, minkä jälkeen jäljelle jäivät vain louhikkoise…
+
+### 28.1
+KYSYMYS: Minä vuonna Napoleonin joukot räjäyttivät Devínin linnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devínin linna (historia)
+Tietoruudun teksti: Devínin linna kohoaa jyrkällä kalliolla Bratislavan laidalla kohdassa, jossa Morava-joki laskee Tonavaan ja muodostaa samalla rajan Itävallan ja Slovakian välillä. Paikkaa on asutettu jo kivikaudelta lähtien, ja kalliolta on kaivettu esiin 100-luvulla jaa. rakennetun roomalaisen tornin jäännökset, mikä kertoo paikan strategisesta merkityksestä Tonavan kauppareittien vartiopaikkana jo roomalaisrajan aikaan. Linna saatetaan mainita kirjallisissa lähteissä jo vuodelta 864, jolloin Itä-Frankin kuningas Ludvig Saksalainen piiritti Määrin ruhtinas Rastislavia täällä, joskin tulkinta on tutkijoiden kesken kiistanalainen. Keskiajalla paikalle rakennettu linna toimi Unkarin kuningaskunnan raja- ja puolustuslinnana Moravan yli kulkevalla reitillä. Napoleonin joukot räjäyttivät linnan vuonna 1809 Pressburgin piirityksen jälkeen vetäytyessään alueelta, minkä jälkeen jäljelle jäivät vain louhikkoise…
+
+### 28.2
+KYSYMYS: Minkä kahden joen yhtymäkohdassa Devínin linna sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Devínin linna (historia)
+Tietoruudun teksti: Devínin linna kohoaa jyrkällä kalliolla Bratislavan laidalla kohdassa, jossa Morava-joki laskee Tonavaan ja muodostaa samalla rajan Itävallan ja Slovakian välillä. Paikkaa on asutettu jo kivikaudelta lähtien, ja kalliolta on kaivettu esiin 100-luvulla jaa. rakennetun roomalaisen tornin jäännökset, mikä kertoo paikan strategisesta merkityksestä Tonavan kauppareittien vartiopaikkana jo roomalaisrajan aikaan. Linna saatetaan mainita kirjallisissa lähteissä jo vuodelta 864, jolloin Itä-Frankin kuningas Ludvig Saksalainen piiritti Määrin ruhtinas Rastislavia täällä, joskin tulkinta on tutkijoiden kesken kiistanalainen. Keskiajalla paikalle rakennettu linna toimi Unkarin kuningaskunnan raja- ja puolustuslinnana Moravan yli kulkevalla reitillä. Napoleonin joukot räjäyttivät linnan vuonna 1809 Pressburgin piirityksen jälkeen vetäytyessään alueelta, minkä jälkeen jäljelle jäivät vain louhikkoise…
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-cachtice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čachtice-n linna (historia)
+Tietoruudun teksti: Čachticen linna kohoaa jyrkällä kalliolla Pieni-Karpaattien pohjoisreunalla, ja Hont-Pázmány-suvun Casimir rakennutti sen 1200-luvun puolivälissä vartiolinnaksi Määrin-tielle. Linna laajeni vuosisatojen kuluessa romaanisesta goottilaiseksi ja sai 1600-luvulla renessanssiaikaisia lisärakennuksia. Linna ja sitä ympäröivät kylät olivat Nádasdyn suvun häälahja kreivitär Erzsébet Báthorylle, kun tämä avioitui Ferenc Nádasdyn kanssa vuonna 1575, ja linnasta tuli hänen kotinsa. 1610-luvun taitteessa satojen todistajien kertomukset syyttivät häntä kymmenien palvelustyttöjen kidutuksesta ja murhasta; tammikuun 1611 oikeudenkäynneissä hänen neljä apuriaan tuomittiin ja teloitettiin, mutta aatelisena Báthorya itseään ei koskaan virallisesti asetettu syytteeseen, vaan hänet suljettiin linnaan tiukkaan vartiointiin kuolemaansa elokuussa 1614 asti. Rákóczin kapinalliset valtasivat linnan 1708, ja se …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Houtman Abrolhosin haaksirikko: Sankarit Vasikkasaarella] Cornelisz oli aiemmin lähettänyt noin 20 sotilaan ryhmän Wiebbe Hayesin johdolla naapurisaarelle, jota nykyisin kutsutaan West Wallabiksi, siinä uskossa että miehet kuolisivat janoon vailla vettä. Miehet löysivätkin makeaa vettä ja onnistuivat rakentamaan kalkkikivestä ja korallilohkareista matalan puolustusmuurin. Kun Hayes sai tietää saarilla tapahtuneista murhista, hänen ryhmänsä torjui menestyksekkäästi useita Corneliszin miesten hyökkäyksiä alkeellisin asein. Muurin ja siihen liittyvän kaivon jäänteet ovat säilyneet tähän päivään asti, ja niitä pidetään Australian vanhimpana tunnettuna eurooppalaisten rakentamana rakennelmana.
+
+### 29.1
+KYSYMYS: Minä vuonna Čachticen linna tuhoutui suurelta osin tulipalossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čachtice-n linna (historia)
+Tietoruudun teksti: Čachticen linna kohoaa jyrkällä kalliolla Pieni-Karpaattien pohjoisreunalla, ja Hont-Pázmány-suvun Casimir rakennutti sen 1200-luvun puolivälissä vartiolinnaksi Määrin-tielle. Linna laajeni vuosisatojen kuluessa romaanisesta goottilaiseksi ja sai 1600-luvulla renessanssiaikaisia lisärakennuksia. Linna ja sitä ympäröivät kylät olivat Nádasdyn suvun häälahja kreivitär Erzsébet Báthorylle, kun tämä avioitui Ferenc Nádasdyn kanssa vuonna 1575, ja linnasta tuli hänen kotinsa. 1610-luvun taitteessa satojen todistajien kertomukset syyttivät häntä kymmenien palvelustyttöjen kidutuksesta ja murhasta; tammikuun 1611 oikeudenkäynneissä hänen neljä apuriaan tuomittiin ja teloitettiin, mutta aatelisena Báthorya itseään ei koskaan virallisesti asetettu syytteeseen, vaan hänet suljettiin linnaan tiukkaan vartiointiin kuolemaansa elokuussa 1614 asti. Rákóczin kapinalliset valtasivat linnan 1708, ja se …
+
+### 29.2
+KYSYMYS: Kuka kreivitär asui Čachticen linnassa ja jota syytettiin palvelustyttöjen murhista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čachtice-n linna (historia)
+Tietoruudun teksti: Čachticen linna kohoaa jyrkällä kalliolla Pieni-Karpaattien pohjoisreunalla, ja Hont-Pázmány-suvun Casimir rakennutti sen 1200-luvun puolivälissä vartiolinnaksi Määrin-tielle. Linna laajeni vuosisatojen kuluessa romaanisesta goottilaiseksi ja sai 1600-luvulla renessanssiaikaisia lisärakennuksia. Linna ja sitä ympäröivät kylät olivat Nádasdyn suvun häälahja kreivitär Erzsébet Báthorylle, kun tämä avioitui Ferenc Nádasdyn kanssa vuonna 1575, ja linnasta tuli hänen kotinsa. 1610-luvun taitteessa satojen todistajien kertomukset syyttivät häntä kymmenien palvelustyttöjen kidutuksesta ja murhasta; tammikuun 1611 oikeudenkäynneissä hänen neljä apuriaan tuomittiin ja teloitettiin, mutta aatelisena Báthorya itseään ei koskaan virallisesti asetettu syytteeseen, vaan hänet suljettiin linnaan tiukkaan vartiointiin kuolemaansa elokuussa 1614 asti. Rákóczin kapinalliset valtasivat linnan 1708, ja se …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Houtman Abrolhosin haaksirikko: Sankarit Vasikkasaarella] Cornelisz oli aiemmin lähettänyt noin 20 sotilaan ryhmän Wiebbe Hayesin johdolla naapurisaarelle, jota nykyisin kutsutaan West Wallabiksi, siinä uskossa että miehet kuolisivat janoon vailla vettä. Miehet löysivätkin makeaa vettä ja onnistuivat rakentamaan kalkkikivestä ja korallilohkareista matalan puolustusmuurin. Kun Hayes sai tietää saarilla tapahtuneista murhista, hänen ryhmänsä torjui menestyksekkäästi useita Corneliszin miesten hyökkäyksiä alkeellisin asein. Muurin ja siihen liittyvän kaivon jäänteet ovat säilyneet tähän päivään asti, ja niitä pidetään Australian vanhimpana tunnettuna eurooppalaisten rakentamana rakennelmana.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-krasna-horka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krásna Hôrka (historia)
+Tietoruudun teksti: Krásna Hôrka on linna kalkkikivikukkulalla Krásnohorské Podhradien kylän yläpuolella Rožňavan lähellä Itä-Slovakiassa. Unkarilaiset Ákos-veljekset rakensivat linnan 1200-luvulla kaupparteille, joka kulki Transilvaniasta Košicen kautta Spišiin ja nykyiseen Puolaan; ensimmäinen kirjallinen maininta on vuodelta 1333. Ákos-suku, joka myöhemmin otti nimen Bebek, hallitsi linnaa 1200-luvun puolivälistä vuoteen 1566 (Mariássy-suvun lyhyttä väliaikaista haltuunottoa lukuun ottamatta), ja vuonna 1578 linna siirtyi Andrássyn suvulle, joka omisti sen aina vuoteen 1918 asti. Linnasta on tehty unkarilainen kansanballadi "Krasznahorka büszke vára", jota soitetaan perinteisesti tárogató-puhaltimella.
+
+### 30.1
+KYSYMYS: Minä vuonna Krásna Hôrka mainitaan kirjallisissa lähteissä ensimmäisen kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krásna Hôrka (historia)
+Tietoruudun teksti: Krásna Hôrka on linna kalkkikivikukkulalla Krásnohorské Podhradien kylän yläpuolella Rožňavan lähellä Itä-Slovakiassa. Unkarilaiset Ákos-veljekset rakensivat linnan 1200-luvulla kaupparteille, joka kulki Transilvaniasta Košicen kautta Spišiin ja nykyiseen Puolaan; ensimmäinen kirjallinen maininta on vuodelta 1333. Ákos-suku, joka myöhemmin otti nimen Bebek, hallitsi linnaa 1200-luvun puolivälistä vuoteen 1566 (Mariássy-suvun lyhyttä väliaikaista haltuunottoa lukuun ottamatta), ja vuonna 1578 linna siirtyi Andrássyn suvulle, joka omisti sen aina vuoteen 1918 asti. Linnasta on tehty unkarilainen kansanballadi "Krasznahorka büszke vára", jota soitetaan perinteisesti tárogató-puhaltimella.
+
+### 30.2
+KYSYMYS: Mikä sytytti linnan tuhoisan tulipalon vuonna 2012?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krásna Hôrka (historia)
+Tietoruudun teksti: Krásna Hôrka on linna kalkkikivikukkulalla Krásnohorské Podhradien kylän yläpuolella Rožňavan lähellä Itä-Slovakiassa. Unkarilaiset Ákos-veljekset rakensivat linnan 1200-luvulla kaupparteille, joka kulki Transilvaniasta Košicen kautta Spišiin ja nykyiseen Puolaan; ensimmäinen kirjallinen maininta on vuodelta 1333. Ákos-suku, joka myöhemmin otti nimen Bebek, hallitsi linnaa 1200-luvun puolivälistä vuoteen 1566 (Mariássy-suvun lyhyttä väliaikaista haltuunottoa lukuun ottamatta), ja vuonna 1578 linna siirtyi Andrássyn suvulle, joka omisti sen aina vuoteen 1918 asti. Linnasta on tehty unkarilainen kansanballadi "Krasznahorka büszke vára", jota soitetaan perinteisesti tárogató-puhaltimella.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

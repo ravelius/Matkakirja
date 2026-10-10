@@ -1,0 +1,201 @@
+================ KOHTA 21 (kohde:hahmotelma-cicmany) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+
+### 21.1
+KYSYMYS: Mitä slovakian sana čičman tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+
+### 21.2
+KYSYMYS: Minä vuonna kylä kunnostettiin suuren tulipalon jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Čičmany (kulttuuri)
+Tietoruudun teksti: Čičmany on kylä ja kunta Žilinan läänissä Pohjois-Slovakiassa, ja sen kansanarkkitehtuurialue perustettiin vuonna 1977. Nimi tulee slovakian sanasta čičman, joka tarkoittaa melua pitävää puunkaatajaa. Ensimmäinen säilynyt maininta kylästä on vuodelta 1272, ja vielä 1900-luvun puoliväliin asti kylä oli lampaankasvatuksen keskus. Vuoden 1921 suuren tulipalon jälkeen kylä kunnostettiin alkuperäiseen asuunsa valtion runsaiden avustusten turvin. Kylässä on säilynyt puisia taloja, joissa on harjakatot, parvekkeet ja piikikkäät tai suorat seinäkoristeet; erityisen kiinnostavia ovat talojen ulkoseiniin maalatut valkoiset kuviot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-terchova) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+### 22.1
+KYSYMYS: Kuka on Terchován kuuluisin poika?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+### 22.2
+KYSYMYS: Minä vuonna Terchován musiikki merkittiin Unescon luetteloon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Terchová (kulttuuri)
+Tietoruudun teksti: Terchová on suuri kylä ja kunta (4 073 asukasta) Malá Fatran vuorilla Žilinan alueella Pohjois-Slovakiassa, noin 25 kilometriä Žilinasta itään. Kylä perustettiin vuonna 1580, mutta seutu oli asuttu jo aiemmin; alun perin se oli valakkien asutus, joka muuttui vähitellen maanviljelysasutukseksi. Kylä on kuuluisin siitä, että se on Juraj Jánošíkin, jota kutsutaan slovakialaiseksi Robin Hoodiksi, syntymäpaikka ja kasvupaikka. 1800-luvulla useat kuivuudet ja taudit autioittivat kylää, kun monet muuttivat Yhdysvaltoihin, Kanadaan ja Argentiinaan. Terchován musiikki on merkitty Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2013.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-liptovsky-mikulas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+
+### 23.1
+KYSYMYS: Minä vuonna ensimmäinen slovakialainen teatteri perustettiin Liptovský Mikulášiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+### 23.2
+KYSYMYS: Kuka julkaisi täällä vuonna 1848 Slovakian kansan vaatimukset?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Liptovský Mikuláš (kulttuuri)
+Tietoruudun teksti: Liptovský Mikuláš on kaupunki Pohjois-Slovakiassa Váh-joen varrella Liptovin altaassa Matalien Tatrojen ja Tatrojen lähellä; se tunnetaan kiltojen ja kulttuurin kaupunkina. Kaupunki mainitaan ensi kerran kuningas Ladislaus IV:n asiakirjassa vuonna 1286, ja Pyhän Nikolauksen kirkko vuodelta 1299 on sen vanhin rakennus. Käsityöläiset perustivat kiltoja, joista vanhin oli suutarien kilta vuonna 1508, ja vuonna 1677 kaupungista tuli Liptovin komitaatin hallintokeskus. Legendaarinen slovakialainen Robin Hood, Juraj Jánošík, tuomittiin ja teloitettiin täällä vuonna 1713. 1800-luvulla kaupunki oli yksi slovakialaisen kansallisen liikkeen keskuksista: ensimmäinen slovakialainen teatteri perustettiin siellä vuonna 1830, ja Ľudovít Štúr julkaisi täällä vuonna 1848 asiakirjan Slovakian kansan vaatimukset.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Ruoka: Kellarit, jotka pelastivat viinit] n. 1500-luku — Slovakian Tokajin viinialue on pieni: vain noin 908 hehtaaria seitsemässä kylässä Trebišovin seudulla aivan Unkarin rajan tuntumassa. Alueen kellarit ovat suurimmaksi osaksi peräisin siltä ajalta, jolloin seutu oli yli 170 vuotta turkkilaisten vallan alla. Ne rakennettiin piilopaikoiksi, joihin ihmiset ja omaisuus saatiin turvaan ryöstäjiltä. Tokajin olosuhteet suosivat rypäleitä, joista saadaan luonnostaan makeita viinejä. Slovakiassa tämä on kuudesta viinialueesta pienin. Sekä unkarilaiset että slovakialaiset tuottajat saavat käyttää Tokaj-nimeä: EU:n tuomioistuimet hylkäsivät Unkarin valituksen vuonna 2013.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-piestany) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piešťany (kulttuuri)
+Tietoruudun teksti: Piešťany, unkariksi Pöstyén ja saksaksi Pistyan, on Länsi-Slovakian kylpyläkaupunki, Slovakian suurin ja tunnetuin, ja siellä on noin 28 000 asukasta. Lämpölähteet, jotka eivät jäätyneet talvella, houkuttelivat ihmisiä alueelle jo esihistoriallisina aikoina, ja läheisestä Moravanyn kylästä on löydetty mammutinhampaasta tehty hedelmällisyyttä esittävä Moravanyn Venus. Parantavat lähteet olivat suosittuja jo keskiajalla, ja niissä vieraili muun muassa kuningas Matthias Corvinus. Erdődyn suku omisti alueen vuosina 1720–1848 ja kylpylän vuoteen 1940; se rakensi ensimmäiset kylpylärakennukset vuonna 1778, ja vuonna 1820 ne laajennettiin uusklassiseen tyyliin nimellä Napoleon-kylpylä. Kylpylä käyttää sulfaatti-karbonaattivettä ja joen sivu-uomasta louhittua rikkipitoista mutaa, ja sen vieraisiin on kuulunut Ludwig van Beethoven.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kohdekartta / Kohdekartta: Whitehorsen lentoasema] 1920 alkaen Keväällä 1920 kaupungin yläpuolisella rinteellä olevaa puutavaratonttia raivattiin kiitoradaksi, koska Yhdysvaltain armeijan Black Wolf Squadron oli tulossa neljällä de Havilland DH-4 -koneella. Sama kaistale palveli 1920-luvun lopulla kaivosyhtiötä ja Yukon Airways and Exploration Companya. Kenttää laajennettiin 1940–1941, ja 1942 se siirtyi Kanadan ilmavoimille osana Luoteista porrasreittiä, jota pitkin koneita siirrettiin pohjoisen kautta. Sotilastukikohta suljettiin 1968, ja kenttä palasi siviilikäyttöön. Kenttä nimettiin 15. joulukuuta 2008 Erik Nielsenin mukaan, joka edusti Yukonia pitkään Kanadan parlamentissa. Se on osa Kanadan kansallista lentoasemajärjestelmää ja Yukon…
+- [Caracas — kohdekartta / Kohdekartta: Quinta de Anauco] 1797 Juan Javier Mijares de Solórzano y Pacheco osti joulukuussa 1796 maapalan sadallakahdellakymmenelläviidellä pesolla juuri tätä tarkoitusta varten, ja talo valmistui seuraavana vuonna. Sitä kutsuttiin aluksi yksinkertaisesti Solórzanon taloksi. Se kesti vuoden 1812 maanjäristyksen ja pysyi rakentajan pojan omistuksessa vuoteen 1821, jolloin poika pakeni äitinsä kanssa Curaçaolle tasavaltalaisarmeijan voitettua Carabobon taistelun. Talo siirtyi valtiolle. Se vuokrattiin 1825 Pedro Zarazalle, joka kuoli seitsemän päivää myöhemmin, ja sen jälkeen Francisco Rodríguez del Toro e Ibarralle, neljännelle Toron markiisille ja itsenäisyyssodan divisioonankenraalille. Simón Bolívar yöpyi markiisin…
+
+### 24.1
+KYSYMYS: Minkä suvun omistuksessa kylpylä oli vuoteen 1940?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piešťany (kulttuuri)
+Tietoruudun teksti: Piešťany, unkariksi Pöstyén ja saksaksi Pistyan, on Länsi-Slovakian kylpyläkaupunki, Slovakian suurin ja tunnetuin, ja siellä on noin 28 000 asukasta. Lämpölähteet, jotka eivät jäätyneet talvella, houkuttelivat ihmisiä alueelle jo esihistoriallisina aikoina, ja läheisestä Moravanyn kylästä on löydetty mammutinhampaasta tehty hedelmällisyyttä esittävä Moravanyn Venus. Parantavat lähteet olivat suosittuja jo keskiajalla, ja niissä vieraili muun muassa kuningas Matthias Corvinus. Erdődyn suku omisti alueen vuosina 1720–1848 ja kylpylän vuoteen 1940; se rakensi ensimmäiset kylpylärakennukset vuonna 1778, ja vuonna 1820 ne laajennettiin uusklassiseen tyyliin nimellä Napoleon-kylpylä. Kylpylä käyttää sulfaatti-karbonaattivettä ja joen sivu-uomasta louhittua rikkipitoista mutaa, ja sen vieraisiin on kuulunut Ludwig van Beethoven.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Whitehorse — kohdekartta / Kohdekartta: Whitehorsen lentoasema] 1920 alkaen Keväällä 1920 kaupungin yläpuolisella rinteellä olevaa puutavaratonttia raivattiin kiitoradaksi, koska Yhdysvaltain armeijan Black Wolf Squadron oli tulossa neljällä de Havilland DH-4 -koneella. Sama kaistale palveli 1920-luvun lopulla kaivosyhtiötä ja Yukon Airways and Exploration Companya. Kenttää laajennettiin 1940–1941, ja 1942 se siirtyi Kanadan ilmavoimille osana Luoteista porrasreittiä, jota pitkin koneita siirrettiin pohjoisen kautta. Sotilastukikohta suljettiin 1968, ja kenttä palasi siviilikäyttöön. Kenttä nimettiin 15. joulukuuta 2008 Erik Nielsenin mukaan, joka edusti Yukonia pitkään Kanadan parlamentissa. Se on osa Kanadan kansallista lentoasemajärjestelmää ja Yukon…
+- [Caracas — kohdekartta / Kohdekartta: Quinta de Anauco] 1797 Juan Javier Mijares de Solórzano y Pacheco osti joulukuussa 1796 maapalan sadallakahdellakymmenelläviidellä pesolla juuri tätä tarkoitusta varten, ja talo valmistui seuraavana vuonna. Sitä kutsuttiin aluksi yksinkertaisesti Solórzanon taloksi. Se kesti vuoden 1812 maanjäristyksen ja pysyi rakentajan pojan omistuksessa vuoteen 1821, jolloin poika pakeni äitinsä kanssa Curaçaolle tasavaltalaisarmeijan voitettua Carabobon taistelun. Talo siirtyi valtiolle. Se vuokrattiin 1825 Pedro Zarazalle, joka kuoli seitsemän päivää myöhemmin, ja sen jälkeen Francisco Rodríguez del Toro e Ibarralle, neljännelle Toron markiisille ja itsenäisyyssodan divisioonankenraalille. Simón Bolívar yöpyi markiisin…
+
+### 24.2
+KYSYMYS: Mistä kylpylä käyttää parantavaa mutaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Piešťany (kulttuuri)
+Tietoruudun teksti: Piešťany, unkariksi Pöstyén ja saksaksi Pistyan, on Länsi-Slovakian kylpyläkaupunki, Slovakian suurin ja tunnetuin, ja siellä on noin 28 000 asukasta. Lämpölähteet, jotka eivät jäätyneet talvella, houkuttelivat ihmisiä alueelle jo esihistoriallisina aikoina, ja läheisestä Moravanyn kylästä on löydetty mammutinhampaasta tehty hedelmällisyyttä esittävä Moravanyn Venus. Parantavat lähteet olivat suosittuja jo keskiajalla, ja niissä vieraili muun muassa kuningas Matthias Corvinus. Erdődyn suku omisti alueen vuosina 1720–1848 ja kylpylän vuoteen 1940; se rakensi ensimmäiset kylpylärakennukset vuonna 1778, ja vuonna 1820 ne laajennettiin uusklassiseen tyyliin nimellä Napoleon-kylpylä. Kylpylä käyttää sulfaatti-karbonaattivettä ja joen sivu-uomasta louhittua rikkipitoista mutaa, ja sen vieraisiin on kuulunut Ludwig van Beethoven.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-skalica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skalica (ruoka)
+Tietoruudun teksti: Skalica, unkariksi Szakolca, on Skalican piirin suurin kaupunki Länsi-Slovakian Záhorien alueella lähellä Tšekin rajaa; asukkaita on noin 15 000. Asutus kehittyi kolmion muotoisen aukion ympärille, mikä oli keskiajalla harvinaista, ja kuningas Ludvig I myönsi kaupunkioikeudet vuonna 1372. Kaupungissa tehdään suosittua trdelník-leivonnaista, jota myydään nykyään kaikkialla Slovakiassa ja Tšekissä ja jonka alkuperä on Transilvaniassa; leivonnainen on epätavallisen muotoinen, hellanpiipun näköinen. Yksi Slovakian vanhimmista rakennuksista on Skalican romaaninen Pyhän Yrjön rotunda, joka on rakennettu viimeistään 1100-luvulla ja johon lisättiin barokkikupoli 1600-luvulla.
+
+### 25.1
+KYSYMYS: Minkä muotoisen aukion ympärille Skalican asutus kehittyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skalica (ruoka)
+Tietoruudun teksti: Skalica, unkariksi Szakolca, on Skalican piirin suurin kaupunki Länsi-Slovakian Záhorien alueella lähellä Tšekin rajaa; asukkaita on noin 15 000. Asutus kehittyi kolmion muotoisen aukion ympärille, mikä oli keskiajalla harvinaista, ja kuningas Ludvig I myönsi kaupunkioikeudet vuonna 1372. Kaupungissa tehdään suosittua trdelník-leivonnaista, jota myydään nykyään kaikkialla Slovakiassa ja Tšekissä ja jonka alkuperä on Transilvaniassa; leivonnainen on epätavallisen muotoinen, hellanpiipun näköinen. Yksi Slovakian vanhimmista rakennuksista on Skalican romaaninen Pyhän Yrjön rotunda, joka on rakennettu viimeistään 1100-luvulla ja johon lisättiin barokkikupoli 1600-luvulla.
+
+### 25.2
+KYSYMYS: Mikä on Skalican romaaninen rotunda?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skalica (ruoka)
+Tietoruudun teksti: Skalica, unkariksi Szakolca, on Skalican piirin suurin kaupunki Länsi-Slovakian Záhorien alueella lähellä Tšekin rajaa; asukkaita on noin 15 000. Asutus kehittyi kolmion muotoisen aukion ympärille, mikä oli keskiajalla harvinaista, ja kuningas Ludvig I myönsi kaupunkioikeudet vuonna 1372. Kaupungissa tehdään suosittua trdelník-leivonnaista, jota myydään nykyään kaikkialla Slovakiassa ja Tšekissä ja jonka alkuperä on Transilvaniassa; leivonnainen on epätavallisen muotoinen, hellanpiipun näköinen. Yksi Slovakian vanhimmista rakennuksista on Skalican romaaninen Pyhän Yrjön rotunda, joka on rakennettu viimeistään 1100-luvulla ja johon lisättiin barokkikupoli 1600-luvulla.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

@@ -1,0 +1,215 @@
+================ KOHTA 11 (kohde:hahmotelma-orava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Elokuva: Ensimmäinen elokuva kuvattiin Seinen rannalla] 1955 — Senegalilaisen elokuvan ensimmäinen teos on Paulin Soumanou Vieyran lyhytelokuva Afrique-sur-Seine vuodelta 1955, joka kuvattiin Pariisissa. Vieyra jatkoi lyhytelokuvilla, jotka kertoivat Moskovasta, Nigeristä ja siirtomaiden itsenäistymisestä; vuoden 1960 dokumentti seurasi Kamerunin, Togon, Kongon ja Madagaskarin itsenäistymistä. Varsinaisesti elokuva-ala lähti käyntiin vasta Senegalin itsenäistyttyä 1960. Maasta tuli nopeasti afrikkalaisen elokuvan keskuksia, ja sen kulta-aika kesti 1960-luvulta 1980-luvun alkuun.
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+
+### 11.1
+KYSYMYS: Kuinka korkea linnan kallio on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+
+### 11.2
+KYSYMYS: Minkä elokuvan kohtauksia linnassa kuvattiin vuonna 1922?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oravan linna (historia)
+Tietoruudun teksti: Oravan linna, slovakiaksi Oravský hrad, on korkealla kalliolla Orava-joen yllä Oravský Podzámokin kylässä. Linna rakennettiin Unkarin kuningaskunnassa; vanhimmat osat ovat 1200-luvulta ja uusimmat 1600-luvun alusta. Se nousee kalkkikivisen, 112 metriä korkean kalliokielekkeen päällä, jota ympäröivät Orava-joki ja sen sivupuro Račová; ensimmäinen kirjallinen maininta on vuodelta 1267, ja vuonna 1370 linnasta tuli Árvan komitaatin keskus. Kaivosmagnaatti Thurzo-suku uudisti linnaa laajasti 1500-luvun puolivälistä alkaen, ja nykyisen muotonsa se sai vuoteen 1611 mennessä. Vuonna 1800 linna paloi eikä sitä sen jälkeen käytetty asuntona; siellä kuvattiin vuonna 1922 monia Nosferatu-elokuvan kohtauksia, joissa se esittää kreivi Orlokin linnaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Senegal — maalehti / Elokuva: Ensimmäinen elokuva kuvattiin Seinen rannalla] 1955 — Senegalilaisen elokuvan ensimmäinen teos on Paulin Soumanou Vieyran lyhytelokuva Afrique-sur-Seine vuodelta 1955, joka kuvattiin Pariisissa. Vieyra jatkoi lyhytelokuvilla, jotka kertoivat Moskovasta, Nigeristä ja siirtomaiden itsenäistymisestä; vuoden 1960 dokumentti seurasi Kamerunin, Togon, Kongon ja Madagaskarin itsenäistymistä. Varsinaisesti elokuva-ala lähti käyntiin vasta Senegalin itsenäistyttyä 1960. Maasta tuli nopeasti afrikkalaisen elokuvan keskuksia, ja sen kulta-aika kesti 1960-luvulta 1980-luvun alkuun.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hahmotelma-trencin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 12.1
+KYSYMYS: Minä vuonna roomalaiset kaivertivat kirjoituksen Trenčínin linnan alla olevaan kallioon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+
+### 12.2
+KYSYMYS: Millä nimellä kirjoitus mainitsee paikan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trenčín (historia)
+Tietoruudun teksti: Trenčín on Länsi-Slovakian kaupunki Váh-joen laaksossa lähellä Tšekin rajaa, noin 95 kilometriä Bratislavasta; siellä on yli 55 000 asukasta. Kaupungin yllä kalliolla kohoaa keskiaikainen Trenčínin linna. Kaupunki tunnetaan kalliokirjoituksesta linnan alla: roomalaiset kaivertivat vuonna 179 Marcomannisotien aikana kallioon kirjoituksen, joka mainitsee paikan nimellä Laugaricio ja joka oli pitkään Keski-Euroopan pohjoisin tunnettu todiste roomalaisten sotilaiden läsnäolosta. Vuonna 1017 Unkarin Tapani I valloitti alueen, joka pysyi osana Unkaria vuoteen 1918, ja 1000-luvun lopulla linnasta tuli Trencsénin komitaatin hallinnollinen keskus. Linna kesti yhtenä harvoista kivilinnoista vuoden 1241 mongolien hyökkäyksen, ja vuonna 1335 kaupungissa allekirjoitettiin Böömin, Unkarin ja Puolan Trentschinin sopimus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hahmotelma-bratislava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 13.1
+KYSYMYS: Kuinka monta kuningasta ja kuningatarta kruunattiin Pyhän Martinin tuomiokirkossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+
+### 13.2
+KYSYMYS: Minä vuonna kaupungin ensimmäinen pysyvä Tonavan silta valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bratislava (Pozsony) (historia)
+Tietoruudun teksti: Bratislava, unkariksi Pozsony ja saksaksi Pressburg, on Slovakian nykyinen pääkaupunki, Tonavan varrella lounaisessa Slovakiassa Pienten Karpaattien juurella. Se on Wienin vieressä: kaupungit ovat vain 50 kilometrin päässä toisistaan, mikä tekee niistä Euroopan lähimmät pääkaupungit. Vuosina 1536–1783 kaupunki oli Unkarin kuningaskunnan kruunajaispaikka, lainsäädäntökeskus ja pääkaupunki, ja Pyhän Martinin tuomiokirkossa kruunattiin yksitoista kuningasta ja kahdeksan kuningatarta; useimmat Unkarin valtiopäivät pidettiin siellä 1600-luvulta uudistuskauteen asti. 1800-luvun teollistumisen aikana kaupunkiin rakennettiin Unkarin kuningaskunnan ensimmäinen hevosrautatie Pressburgista Szentgyörgyyn (1840), höyryveturirata Wieniin vuonna 1848 ja Pestiin 1850, mutta kaupungin ensimmäinen pysyvä silta Tonavan yli, Starý most, valmistui vasta vuonna 1891. Kaupungin yllä kohoaa linna tasanteella 8…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-bardejov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka vaihtoi hallitsijaa kerran] Ranska hallitsi siirtokuntaa vuoteen 1760, jolloin Montreal antautui brittihyökkäykselle Seitsenvuotisen sodan aikana ja siirtomaa siirtyi Britannialle. Kaupunkioikeudet Montreal sai vasta 1832, mutta kasvu oli nopeaa: Lachine-kanava 1825 ja myöhemmin Victoria-silta tekivät siitä laiva- ja rautatieliikenteen solmukohdan. Vuoteen 1860 mennessä se oli Brittiläisen Pohjois-Amerikan suurin kaupunki, joka hallitsi muun Kanadan taloutta ja kulttuuria. Vuoden 1871 väestönlaskennassa asukkaita oli 130 022.
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 14.1
+KYSYMYS: Kuinka moni kilta hallitsi kaupungin taloutta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka vaihtoi hallitsijaa kerran] Ranska hallitsi siirtokuntaa vuoteen 1760, jolloin Montreal antautui brittihyökkäykselle Seitsenvuotisen sodan aikana ja siirtomaa siirtyi Britannialle. Kaupunkioikeudet Montreal sai vasta 1832, mutta kasvu oli nopeaa: Lachine-kanava 1825 ja myöhemmin Victoria-silta tekivät siitä laiva- ja rautatieliikenteen solmukohdan. Vuoteen 1860 mennessä se oli Brittiläisen Pohjois-Amerikan suurin kaupunki, joka hallitsi muun Kanadan taloutta ja kulttuuria. Vuoden 1871 väestönlaskennassa asukkaita oli 130 022.
+
+### 14.2
+KYSYMYS: Minä vuonna kaupunki sai kuninkaallisen kaupungin aseman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bardejov (historia)
+Tietoruudun teksti: Bardejov, unkariksi Bártfa ja saksaksi Bartfeld, on kaupunki Koillis-Slovakiassa Šarišin alueella Topľa-joen tulvatasanteella Beskydien kukkuloilla. Sen täysin ehjänä säilynyt keskiaikainen keskusta sisältää lukuisia kulttuurimuistomerkkejä, ja kaupunki on Unescon maailmanperintökohde. Ensimmäinen kirjallinen maininta on 1240-luvulta, jolloin Pyhän Egidiuksen basilika oli jo rakennettu; vuonna 1376 kaupunki sai kuninkaallisen kaupungin aseman. Vahvasti linnoitettu kaupunki oli 1300-luvulla Puolan-kaupan keskus, ja yli 50 kiltaa hallitsi sen vilkasta taloutta. Lokakuussa 1410 Bardejovin taistelussa Puolan kuningas Władysław II Jagiełło voitti Unkarin ja Kroatian kuninkaan Sigismundin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Panama — kohdekartta / Kohdekartta: Presidentinlinna] 1673 Presidentinlinna on Casco Viejon vanhimpia rakennuksia. Sen rakentaminen aloitettiin 1673 Panaman kuninkaallisen audiencian tuomarin Luis de Lozada y Quiñónezin käskystä, heti kun uusi kaupunki oli perustettu Morganin tuhon jälkeen. Talo oli alusta asti hallintokäytössä ja toimi 1700-luvulla muun muassa tullina ja kirjanpitokonttorina. Vuonna 1756 rakennus paloi lähes kokonaan. Sen jälkeen se oli vuorollaan tullivarasto 1821, poikien opettajaseminaari 1872–1875, hallintotalo ja Panaman kansallispankki. Vuonna 1875 se nimettiin virallisesti presidentinlinnaksi. Nykyisen ilmeensä talo sai 1922, kun presidentti Belisario Porras teetti arkkitehti Leonardo Villanueva Meyerillä perusteellise…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-nitra) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+
+### 15.1
+KYSYMYS: Minkä vuoren juurella Nitra sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+
+### 15.2
+KYSYMYS: Minkä ruhtinaskunnan keskus Nitra oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nitra (historia)
+Tietoruudun teksti: Nitra, unkariksi Nyitra, on Lounais-Slovakian kaupunki Zobor-vuoren juurella Nitra-joen laaksossa noin 90 kilometriä Bratislavasta koilliseen; asukkaita on noin 78 000. Se on yksi Slovakian vanhimmista kaupungeista ja oli historiallisesti merkittävän Nitran ruhtinaskunnan keskus; ensimmäinen maininta on 800-luvulta. Kaupunki on Slovakian maatalouden pääkaupunki pitkän viljelyperinteensä, edullisen ilmastonsa ja maantieteellisen sijaintinsa ansiosta. Nähtävyyksiin kuuluvat Nitran linna, vanhakaupunki ja Zobor-kukkula sekä linnan Pyhän Emmeramin tuomiokirkko; kaupungin vanhin kirkko, Pyhän Tapanin kirkko, on rakennettu 1000–1100-luvulla, vaikka sen perusta on 800-luvulta.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

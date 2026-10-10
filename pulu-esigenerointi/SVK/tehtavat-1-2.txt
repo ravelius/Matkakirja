@@ -1,0 +1,206 @@
+================ KOHTA 6 (kohde:hahmotelma-zemplinska-sirava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zemplínska šírava (luonto · järvi)
+Tietoruudun teksti: Zemplínska šírava, jota kutsutaan joskus Slovakian mereksi, on tekojärvi Itä-Slovakiassa lähellä Michalovcen kaupunkia. Nimi muistuttaa historiallisesta Zemplínin seudusta. Pato rakennettiin vuosina 1961–1965, ja järven pinta-ala on 33 neliökilometriä, keskisyvyys 9,5 metriä ja suurin syvyys 14 metriä. Vesi virtaa Laborec-jokeen, joka laskee Bodrogiin; alue on ensisijaisesti virkistyskäytössä, ja järvi tuottaa myös jäähdytysvettä Vojanyn voimalaitokselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kaupunkilehti / Yellowknife: Kaksi kansaa saman järven rannalla] Yellowknives oli 1800-luvun alkupuolella alueen suurin ja vaikutusvaltaisin heimo. Naapurina pohjoisella rannalla eli tłı̨chǫ, ja kansat olivat vanhoja vastustajia. 1830-luvulta raportoitiin konfliktista, jonka jälkeen Yellowknives joko hajaantui järven eteläpuolelle tai sekoittui tłı̨chǫihin — lähde sanoo suoraan, että mielipiteet vaihtelevat. Vuonna 1899 päällikkö Snuff allekirjoitti Treaty 8:n. Sekoittumisen jäljiltä syntyi myös wíílíídeh, murre jota puhutaan Dettahissa ja Ndilǫssa. Ndilǫ rakennettiin 1950-luvun puolivälissä Latham Islandin kärkeen.
+- [Viktoria Nyanza — kaupunkilehti / Viktoria Nyanza: Speke näkee unelmansa järven] Elokuussa 1858 nuori englantilaisupseeri John Hanning Speke saapui yksin suuren sisäjärven rannalle nykyisen Tansanian puolella, sillä hänen matkatoverinsa Richard Burton oli sairastunut eikä jaksanut jatkaa mukana. Speke nimesi järven kuningatar Viktorian mukaan ja vakuuttui heti, ilman minkäänlaisia mittauksia, että hän oli löytänyt kauan etsityn Niilin lähteen. Burton piti väitettä älyttömän hätiköitynä, ja miesten ystävyys mureni riidaksi, joka jatkui vuosikausia ja päättyi lopulta julkiseen kiistelyyn Lontoon tiedeseuroissa. Isoisän matkaan asti, vuoteen 1873, kysymys järven ja Niilin yhteydestä oli yhä osin auki.
+
+### 6.1
+KYSYMYS: Minä vuosina Zemplínska šíravan pato rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zemplínska šírava (luonto · järvi)
+Tietoruudun teksti: Zemplínska šírava, jota kutsutaan joskus Slovakian mereksi, on tekojärvi Itä-Slovakiassa lähellä Michalovcen kaupunkia. Nimi muistuttaa historiallisesta Zemplínin seudusta. Pato rakennettiin vuosina 1961–1965, ja järven pinta-ala on 33 neliökilometriä, keskisyvyys 9,5 metriä ja suurin syvyys 14 metriä. Vesi virtaa Laborec-jokeen, joka laskee Bodrogiin; alue on ensisijaisesti virkistyskäytössä, ja järvi tuottaa myös jäähdytysvettä Vojanyn voimalaitokselle.
+
+### 6.2
+KYSYMYS: Kuinka suuri järven pinta-ala on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zemplínska šírava (luonto · järvi)
+Tietoruudun teksti: Zemplínska šírava, jota kutsutaan joskus Slovakian mereksi, on tekojärvi Itä-Slovakiassa lähellä Michalovcen kaupunkia. Nimi muistuttaa historiallisesta Zemplínin seudusta. Pato rakennettiin vuosina 1961–1965, ja järven pinta-ala on 33 neliökilometriä, keskisyvyys 9,5 metriä ja suurin syvyys 14 metriä. Vesi virtaa Laborec-jokeen, joka laskee Bodrogiin; alue on ensisijaisesti virkistyskäytössä, ja järvi tuottaa myös jäähdytysvettä Vojanyn voimalaitokselle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yellowknife — kaupunkilehti / Yellowknife: Kaksi kansaa saman järven rannalla] Yellowknives oli 1800-luvun alkupuolella alueen suurin ja vaikutusvaltaisin heimo. Naapurina pohjoisella rannalla eli tłı̨chǫ, ja kansat olivat vanhoja vastustajia. 1830-luvulta raportoitiin konfliktista, jonka jälkeen Yellowknives joko hajaantui järven eteläpuolelle tai sekoittui tłı̨chǫihin — lähde sanoo suoraan, että mielipiteet vaihtelevat. Vuonna 1899 päällikkö Snuff allekirjoitti Treaty 8:n. Sekoittumisen jäljiltä syntyi myös wíílíídeh, murre jota puhutaan Dettahissa ja Ndilǫssa. Ndilǫ rakennettiin 1950-luvun puolivälissä Latham Islandin kärkeen.
+- [Viktoria Nyanza — kaupunkilehti / Viktoria Nyanza: Speke näkee unelmansa järven] Elokuussa 1858 nuori englantilaisupseeri John Hanning Speke saapui yksin suuren sisäjärven rannalle nykyisen Tansanian puolella, sillä hänen matkatoverinsa Richard Burton oli sairastunut eikä jaksanut jatkaa mukana. Speke nimesi järven kuningatar Viktorian mukaan ja vakuuttui heti, ilman minkäänlaisia mittauksia, että hän oli löytänyt kauan etsityn Niilin lähteen. Burton piti väitettä älyttömän hätiköitynä, ja miesten ystävyys mureni riidaksi, joka jatkui vuosikausia ja päättyi lopulta julkiseen kiistelyyn Lontoon tiedeseuroissa. Isoisän matkaan asti, vuoteen 1873, kysymys järven ja Niilin yhteydestä oli yhä osin auki.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-spis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spišin linna (historia)
+Tietoruudun teksti: Spišin linnan rauniot Itä-Slovakiassa muodostavat yhden Slovakian kuudesta suurimmasta linnakohteesta. Linna sijaitsee travertiinikukkulalla Spišské Podhradien kaupungin ja Žehran kylän yläpuolella, ja Unescon maailmanperintöluetteloon se hyväksyttiin vuonna 1993 yhdessä Spišská Kapitulan ja Žehran kanssa. Linnan rakentaminen alkoi 1100-luvun alussa, vanhin kirjallinen maininta on vuodelta 1120, ja aluksi se oli Unkarin kuningaskunnan pohjoinen rajalinnake, josta tuli vuosisadoiksi Szepesin komitaatin poliittinen ja hallinnollinen keskus. Csáky-suku hylkäsi linnan 1700-luvun alussa liian epämukavana, ja vuonna 1780 se tuhoutui tulipalossa, jonka syytä ei tiedetä; sen jälkeen se on rappeutunut ja vasta 1900-luvun jälkipuoliskolla sitä on osittain jälleenrakennettu. Linnaa hallinnoi Levočassa toimiva Spišin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 7.1
+KYSYMYS: Minä vuonna Spišin linna tuhoutui tulipalossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spišin linna (historia)
+Tietoruudun teksti: Spišin linnan rauniot Itä-Slovakiassa muodostavat yhden Slovakian kuudesta suurimmasta linnakohteesta. Linna sijaitsee travertiinikukkulalla Spišské Podhradien kaupungin ja Žehran kylän yläpuolella, ja Unescon maailmanperintöluetteloon se hyväksyttiin vuonna 1993 yhdessä Spišská Kapitulan ja Žehran kanssa. Linnan rakentaminen alkoi 1100-luvun alussa, vanhin kirjallinen maininta on vuodelta 1120, ja aluksi se oli Unkarin kuningaskunnan pohjoinen rajalinnake, josta tuli vuosisadoiksi Szepesin komitaatin poliittinen ja hallinnollinen keskus. Csáky-suku hylkäsi linnan 1700-luvun alussa liian epämukavana, ja vuonna 1780 se tuhoutui tulipalossa, jonka syytä ei tiedetä; sen jälkeen se on rappeutunut ja vasta 1900-luvun jälkipuoliskolla sitä on osittain jälleenrakennettu. Linnaa hallinnoi Levočassa toimiva Spišin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 7.2
+KYSYMYS: Minä vuonna linna hyväksyttiin Unescon maailmanperintöluetteloon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spišin linna (historia)
+Tietoruudun teksti: Spišin linnan rauniot Itä-Slovakiassa muodostavat yhden Slovakian kuudesta suurimmasta linnakohteesta. Linna sijaitsee travertiinikukkulalla Spišské Podhradien kaupungin ja Žehran kylän yläpuolella, ja Unescon maailmanperintöluetteloon se hyväksyttiin vuonna 1993 yhdessä Spišská Kapitulan ja Žehran kanssa. Linnan rakentaminen alkoi 1100-luvun alussa, vanhin kirjallinen maininta on vuodelta 1120, ja aluksi se oli Unkarin kuningaskunnan pohjoinen rajalinnake, josta tuli vuosisadoiksi Szepesin komitaatin poliittinen ja hallinnollinen keskus. Csáky-suku hylkäsi linnan 1700-luvun alussa liian epämukavana, ja vuonna 1780 se tuhoutui tulipalossa, jonka syytä ei tiedetä; sen jälkeen se on rappeutunut ja vasta 1900-luvun jälkipuoliskolla sitä on osittain jälleenrakennettu. Linnaa hallinnoi Levočassa toimiva Spišin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-banska-stiavnica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+
+### 8.1
+KYSYMYS: Minä vuonna kaupungissa käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kaupunki hopeavuoren päällä] 1735 — Banská Štiavnica kasvoi hopean ja kullan varaan: vuonna 1782 se oli Unkarin kuningaskunnan kolmanneksi suurin kaupunki Bratislavan ja Debrecenin jälkeen. Kun kaivokset tulvivat, 1400–1700-luvuilla rakennettiin kuusikymmentä tekojärveä eli tajchya, jotka yhdistettiin yli sadan kilometrin kanavaverkolla. Kaupungissa toimi vuonna 1735 perustettu kaivoskoulu, josta tuli myöhemmin kaivosakatemia, jota on kutsuttu maailman ensimmäiseksi teknilliseksi yliopistoksi. Jo 1627 täällä käytettiin ruutia kaivoksessa yhtenä maailman ensimmäisistä.
+
+### 8.2
+KYSYMYS: Millä nimellä vesialtaiden ja kanavien järjestelmää kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banská Štiavnica (tekniikka)
+Tietoruudun teksti: Banská Štiavnica on kaupunki Keski-Slovakiassa muinaisen tulivuoren romahtamisen synnyttämän valtavan kalderan keskellä, ja sen asukasluku on alle 10 000. Se oli tärkeä keskiaikainen kaivoskeskus, jonka kohtalo oli sidoksissa runsaisiin hopeamalmivaroihin, ja se sai kuninkaallisen kaupungin aseman vuonna 1238. Vuonna 1627 siellä käytettiin ruutia kaivoksessa yhtenä ensimmäisistä maailmassa, ja 1700-luvulla paikalliset tutkijat rakensivat tulvivien kaivosten kuivattamiseksi kehittyneen tajchy-nimisen vesialtaiden ja kanavien järjestelmän. Vuonna 1735 perustettu kaivoskoulu, Unkarin kuningaskunnan ensimmäinen, muutettiin vuodesta 1763 kaivosakatemiaksi, ja vuonna 1848 siitä tuli kaivos- ja metsäakatemia, jota kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi. Kaupunki ja sen ympäristö julistettiin Unescon maailmanperintökohteeksi 11. joulukuuta 1993.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-kremnica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+### 9.1
+KYSYMYS: Minä vuonna Kremnica sai kuninkaalliset kaupunkioikeudet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+### 9.2
+KYSYMYS: Mitä Kremnican dukaatit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremnica (kauppa)
+Tietoruudun teksti: Kremnica on noin 5 300 asukkaan kaupunki Keski-Slovakiassa, jonka hyvin säilynyt keskiaikainen keskusta on rakennettu tärkeiden kultakaivosten yläpuolelle. Kaupungissa on maailman vanhin yhä toimiva rahapaja. Kremnica sai kuninkaalliset kaupunkioikeutensa vuonna 1328 kuningas Kaarle I:ltä, ja rahapaja oli jo silloin toiminnassa; vuodesta 1335 se löi kultaflorineja ja myöhemmin kuuluisia Kremnican dukaatteja, jotka olivat kansainvälinen maksuväline niiden tasaisen kultapuhtauden ansiosta. Rahapajan tuoman vaurauden vuoksi kaupunki sai lempinimen Kultainen Kremnica, ja 1400-luvulla se oli Unkarin kuningaskunnan toiseksi tärkein kaupunki.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hahmotelma-bojnice) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kaupunkilehti / Dunedin: Uusi Edinburgh maailman toisella laidalla] Skotlannin vapaakirkon maallikkojärjestö perusti Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja piirsi komean, romanttisen katuverkon, jonka rakentajat sitten taistelivat läpi mäkisen maaston. Maallisena johtajana toimi Napoleonin sotien veteraani William Cargill ja hengellisenä pastori Thomas Burns, runoilija Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä kaupunkiin oli muuttanut noin 12 000 skottia, monet teollistuneelta Lowlandsin alueelta.
+- [Teheran — kohdekartta / Kohdekartta: Dar al-Fonun] 1851 Naser al-Din Shahin suurvisiiri Amir Kabir perusti Dar al-Fonunin vuonna 1851. Se oli Iranin ensimmäinen moderni korkeakoulu: polytekninen oppilaitos, jossa ylimystön nuoret koulutettiin lääketieteeseen, kirurgiaan, farmasiaan, matematiikkaan ja geologiaan. Opettajat olivat pääosin itävaltalaisia, ja heidät värväsi Wienistä Daʼud Khan; joukko saapui Teheraniin marraskuussa 1851. Myöhemmin opetettiin myös tykistöä, mineralogiaa, ranskaa ja musiikkia. Itävaltalaiset eivät osanneet persiaa, joten aluksi opetettiin tulkin välityksellä. Lääketieteen opettaja Jakob Eduard Polak luennoi ranskaksi, opetteli persian puolessa vuodessa ja jatkoi sillä; hän opetti täällä vuoteen 1860. Osa opettaji…
+
+### 10.1
+KYSYMYS: Minä vuonna Bojnicen linna mainitaan ensi kerran?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+
+### 10.2
+KYSYMYS: Minkä sukuun kuulunut kreivi toteutti romanttisen jälleenrakennuksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bojnicen linna (historia)
+Tietoruudun teksti: Bojnicen linna on keskiaikainen linna Bojnicen kaupungissa Slovakiassa: romaaninen linna, jossa on säilynyt goottilaisia ja renessanssin osia, ja se rakennettiin 1100-luvulla. Se mainitaan ensi kerran vuonna 1113, ja aluksi se oli puulinnake, joka korvattiin vähitellen kivellä. Kuningas Matthias Corvinus antoi sen vuonna 1489 avioton poikansa Johnin haltuun; Thurzo-suku muutti sen renessanssilinnaksi vuodesta 1528, ja vuodesta 1646 omistajina olivat Pálffyt. Kreivi János Ferenc Pálffy toteutti vuosina 1888–1910 kokonaisen romanttisen jälleenrakennuksen ja loi nykyisen, Loiren laakson linnoja jäljittelevän ulkoasun. Nykyään linna on yksi Slovakian vierailluimmista, ja sitä on käytetty fantasia- ja satuelokuvien kuvauspaikkana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kaupunkilehti / Dunedin: Uusi Edinburgh maailman toisella laidalla] Skotlannin vapaakirkon maallikkojärjestö perusti Dunedinin 1848 Otago Harbourin perukkaan, ja nimi on gaelia: Dùn Èideann on Edinburgh. Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä emokaupunkia ja piirsi komean, romanttisen katuverkon, jonka rakentajat sitten taistelivat läpi mäkisen maaston. Maallisena johtajana toimi Napoleonin sotien veteraani William Cargill ja hengellisenä pastori Thomas Burns, runoilija Robert Burnsin veljenpoika. 1850-luvun loppuun mennessä kaupunkiin oli muuttanut noin 12 000 skottia, monet teollistuneelta Lowlandsin alueelta.
+- [Teheran — kohdekartta / Kohdekartta: Dar al-Fonun] 1851 Naser al-Din Shahin suurvisiiri Amir Kabir perusti Dar al-Fonunin vuonna 1851. Se oli Iranin ensimmäinen moderni korkeakoulu: polytekninen oppilaitos, jossa ylimystön nuoret koulutettiin lääketieteeseen, kirurgiaan, farmasiaan, matematiikkaan ja geologiaan. Opettajat olivat pääosin itävaltalaisia, ja heidät värväsi Wienistä Daʼud Khan; joukko saapui Teheraniin marraskuussa 1851. Myöhemmin opetettiin myös tykistöä, mineralogiaa, ranskaa ja musiikkia. Itävaltalaiset eivät osanneet persiaa, joten aluksi opetettiin tulkin välityksellä. Lääketieteen opettaja Jakob Eduard Polak luennoi ranskaksi, opetteli persian puolessa vuodessa ja jatkoi sillä; hän opetti täällä vuoteen 1860. Osa opettaji…
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
