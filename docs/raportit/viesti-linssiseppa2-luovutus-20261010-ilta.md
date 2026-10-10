@@ -14,12 +14,15 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    arkki kaappaukset/linssiseppa2-179-20261010/peking-179-ilmakeha.jpg → PT. Vallihauta 27/47/60 (ennen 17/38/35, oikea 54/80/68):
    ilmakehä sinistää. PT päättää oman vesivärikertoimen tarpeesta.
 
-4. **PEKINGIN VESIKERROIN** (PT 18.4x) VALMIS: proto linssiseppa2/peking-vesikerroin **2c2305012** (L 1345, unity 0; VesiVari.Korjaus,
-   kalibrointi lokit/linssiseppa2-pkv-k{1,2.5,5}, mittaa-pekingvesi.py). Katot (+28 % R) LR:lle ja PT:lle. Käännös + simu pyydetty →
-   omistajan Peking-kuvasarja yleis + lähi + vallihauta, sarakkeet peli | S2-orto (orto.jpg, krediitti Copernicus Sentinel 2024) → PT.
-5. **"JOS MAA LAKKAISI PYÖRIMÄSTÄ"** (PT 18.5x, omistaja): pääkartan linssi, minä piirto, Natiivi-UI UI + Ydin/MaanPyoriminen.cs
-   (id "maa-ei-pyori", Pyorimisnopeus 0–2, Muuttui). Merenpinta s(φ) = C(f) − A(1−f²)cos²φ, A ≈ 11,0 km, C(f) tilavuudesta ETOPO 3′:llä
-   (tarkistus: 0 % → päiväntasaaja −4,17 km, navat +6,85 km, raja 38,0°). Ensin prototyyppikuvat 100/50/0/150 % iPad + iPhone → PT.
+4. **PEKING VALMIS PT:LLE** 19.15: vesikerroin 2c2305012 (PT kuittasi junaan 180) + LR:n v4-katot (paketti _tyo/linssiseppa2/peking4/ktx,
+   portti 0, vienti pyydetty Julkaisijalta); käännös 405d56e3c; arkki kaappaukset/linssiseppa2-180-20261010/peking-omistajalle.jpg
+   (peli iPad | iPhone | S2). Pelissä vallihauta 50/81/69 (orto 54/80/68), katot 163/137/98 (161/130/101).
+5. **ND v5d -PARI** kun LR toimittaa (v5c peruttu: säleet ja pyörteet). Malli vuoro-nd5b.sh + arkit-nd5b.py, tekijärivi käsin.
+6. **"JOS MAA LAKKAISI PYÖRIMÄSTÄ"** prototyyppi proto linssiseppa2/maa-ei-pyori **b2583090f** (NUI a51a8955d päällä; MeriTasapaino
+   Karttasepän taulukolla A 11 004,5 m, MaaEiPyoriKuori + MaaEiPyori.shader + MaaEiPyoriSovitin, komennot maa nopeus|peili|tila;
+   unity 0, L 1350). Aineisto Karttasepän (_tyo/karttaseppa/pyoriminen-20261010; gzip peiliin _tyo/linssiseppa2/maa-ei-pyori/peili/).
+   Käännös + simu pyydetty: maa-ei-pyori/kaanna-maa.zsh, sitten aja-maa.zsh <SHA> (sk-maa-ipad/-puhelin: 100/50/0/150 %, Atlantti +
+   Tyynimeri) → arkki PT:lle. Vertaa vesirajaa KS:n vesimaski-f***-4096.png. Muisti: korkeus R16 16 Mt + BMNG 43 Mt.
 
 ## TÄNÄÄN VALMISTA (iltapäivä–ilta)
 - Junaan 179 (PT kuittasi, SHA:t Natiivisepälle): ilmakeha-kaikkialla d3885f6d1 (omistaja 16.4x), peking-vesivari efc88563c
