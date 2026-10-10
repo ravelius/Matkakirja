@@ -148,8 +148,8 @@ namespace Matkakirja.Linssit.Elava
         public const double LyontiSoiS = 9.5;
         public static double LyontienJalkeenS(int tunti, double vali = 3.0) => (Lyonteja(tunti) - 1) * vali + LyontiSoiS;
 
-        /// <summary>Testi- ja kuuntelukomento: seuraava kirkonkello tai maitovaahdotin heti, kun ehdot täyttyvät.</summary>
-        public void Pakota(string mita) { if (mita == "kello") seuraavaKello = double.NegativeInfinity; else if (mita == "maito") seuraavaMaito = double.NegativeInfinity; }
+        /// <summary>Testi- ja kuuntelukomento: seuraava kirkonkello, maitovaahdotin tai astia heti, kun ehdot täyttyvät.</summary>
+        public void Pakota(string mita) { if (mita == "kello") seuraavaKello = double.NegativeInfinity; else if (mita == "maito") seuraavaMaito = double.NegativeInfinity; else if (mita == "astia") seuraavaAstia = double.NegativeInfinity; }
 
         /// <summary>Joka kehys: kamera paketin ENU:ssa (vaaka), korkeus maasta (NaN = ei tiedossa → vain häivytykset), paikallinen
         /// tunti 0–24 (NaN = ei kelloa → ei tasatunnin kelloja), soiko IHMISTEN sorina juuri nyt.</summary>
