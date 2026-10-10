@@ -130,7 +130,10 @@ namespace Matkakirja.Natiivi
             foreach (var (mid, mh, mk) in y.Mallit)
             {
                 string mp = taso == DioraamaUlkokuori.Laatu.Kevyt || puhelin ? (mk ?? mh) : (mh ?? mk);
-                if (!string.IsNullOrEmpty(mp)) osat.Add(LataaMalli("malli:" + mid, mp, null, url, kirjaa, oma, null, taso));
+                // LR v47c: oma hämäräkuva (kuva_hamara/_astc) hämärässä; muuten glb:n päiväkuva ja _HamaraKerroin (MalliHamara).
+                bool omaHamara = DioraamaValot.TunnelmaTaivas < 0.99f && y.MallitHamara.TryGetValue(mid, out var mhk) && (mhk.Jpg ?? mhk.Astc) != null;
+                var hk = omaHamara ? y.MallitHamara[mid] : default;
+                if (!string.IsNullOrEmpty(mp)) osat.Add(LataaMalli("malli:" + mid, mp, omaHamara ? hk.Jpg : null, url, kirjaa, oma, null, taso, astc: omaHamara ? hk.Astc : null, omaHamara: omaHamara));
             }
             if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) osat.Add(LataaPuut(y, taso, url, kirjaa, oma));
             osat.Add(DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta));   // Linssiseppä 2, 1.10.
@@ -483,7 +486,7 @@ namespace Matkakirja.Natiivi
 
         IEnumerator LataaMalli(string nimi, string polku, string kuvaPolku, Func<string, string> url, Action<string> kirjaa, int oma,
             MaastoKerrokset splat = null, DioraamaUlkokuori.Laatu taso = DioraamaUlkokuori.Laatu.Kevyt, List<UnityEngine.Object> kohteet = null,
-            string astc = null)
+            string astc = null, bool omaHamara = false)
         {
             byte[] tavut = null;
             float alku = Time.realtimeSinceStartup;
@@ -564,7 +567,7 @@ namespace Matkakirja.Natiivi
             var mat = new Material(varjostin) { name = "Ymparisto:" + nimi };
             if (kuva != null) mat.SetTexture(IdKuva, kuva);
             // Lisämallien (rantakivet, vene) kuva on päivänvalossa: hämärässä himmennys (DioraamaMaasto _HamaraKerroin).
-            if (nimi.StartsWith("malli:", StringComparison.Ordinal)) mat.SetFloat(IdHamaraKerroin, MalliHamara);
+            if (nimi.StartsWith("malli:", StringComparison.Ordinal) && !omaHamara) mat.SetFloat(IdHamaraKerroin, MalliHamara);
             luodut.Add(mat);
             kohteet?.Add(mat);
             int kolmiot = 0;

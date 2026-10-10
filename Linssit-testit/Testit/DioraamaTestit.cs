@@ -1222,13 +1222,16 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void YmparistonMallit()
         {
             var r = DioraamaData.Lue(KeittioFixture.Replace("\"yleiskamera\": {", "\"ymparisto\": {\"huippu\": \"m.glb\", \"mallit\": [{\"id\": \"vene\", \"huippu\": \"v.glb\", \"kevyt\": \"vk.glb\"}, " +
-                "{\"id\": \"laituri2\", \"huippu\": \"l.glb\"}, {\"id\": \"tynnyri\", \"kevyt\": \"t.glb\", \"maailmaan\": false}], " +
+                "{\"id\": \"laituri2\", \"huippu\": \"l.glb\", \"kuva_hamara\": \"l-h.jpg\", \"kuva_hamara_astc\": \"l-h.astcm\"}, {\"id\": \"tynnyri\", \"kevyt\": \"t.glb\", \"maailmaan\": false}], " +
                 "\"rantakivet\": {\"huippu\": \"r.glb\", \"kevyt\": \"rk.glb\"}},\n  \"yleiskamera\": {"));
             // Vene ja maailmaan:false ovat rekvisiittaa (ei piirretä maailman origoon), muut ja rantakivet maailmaan.
             Oleta.Sama(2, r.Ymparisto.Mallit.Count);
             Oleta.Tosi(r.Ymparisto.Mallit[0] == ("laituri2", "l.glb", null) && r.Ymparisto.Mallit[1] == ("rantakivet", "r.glb", "rk.glb"), "mallit ja rantakivet");
             Oleta.Sama(2, r.Ymparisto.Rekvisiitta.Count);
             Oleta.Tosi(r.Ymparisto.Rekvisiitta[0] == ("vene", "v.glb", "vk.glb") && r.Ymparisto.Rekvisiitta[1] == ("tynnyri", null, "t.glb"), "rekvisiitta");
+            // LR v47c: lisämallin hämäräkuva id:n mukaan (vain kentän saaneet).
+            Oleta.Sama(1, r.Ymparisto.MallitHamara.Count);
+            Oleta.Tosi(r.Ymparisto.MallitHamara["laituri2"] == ("l-h.jpg", "l-h.astcm"), "hämäräkuva");
         }
 
         // Historiamoottori: pelaajahahmo (Linnanrakentaja v44c pelaaja { glb, leikkeet, liikkeet }).
