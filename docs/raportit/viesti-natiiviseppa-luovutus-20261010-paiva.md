@@ -5,6 +5,12 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 13.4x — JUNA 177 LUKITTU
+- **BUILD 177 = 3d0c8c4a74ee7abbe2c4b492c43e49973f2fe4c2** (proton master; juna/b13 3bb291169 = 2900f8e39 + Siirtoseppä historia-kamera 04915cace;
+  puu identtinen; L1307/P456/K454, unity 0). Omistaja 13.3x: ilman LS1:n KIIRE 2:ta (kohdemerkit + kaupunkivalinta → seuraava juna). Simukäännöstä ei
+  ajettu (TF heti). Peilattu natiivi-backup peili/proto/{master,juna/b13}. SHA Julkaisijalle, muutosloki (302 merkkiä) PT:lle 13.4x.
+- Seuraavaksi: TF 177 iOS + Mac (Julkaisija), LS1 KIIRE 2 → juna 178, taidemuseo (KÄRKI 3), linnan sulun laitetodennus 178:n muistiajossa.
+
 ## TILA 13.2x
 - **JUNA 176 RUNKO = 2900f8e39** (9bf070143 + NUI saapumisarkki 72cbff04b, latauskuva bf820d7fa, ikaraja 4b36cb4ca + LS1 pallo-esittely d8808a222 (WIP-otsikko);
   K454/P456/L1307, tarkista ok). ODOTTAA: Siirtosepän historia-NRE-korjaus + LS1 KIIRE 2 (pallon kohdemerkit + kehittäjänäkymän kaupunkivalinta) → lukitus → TF iOS + Mac.
