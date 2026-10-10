@@ -112,3 +112,12 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
   takaisin + kohdistus + kuori_projisoi.py (kuten s1–s5) → v46u.
 - **ND v3d** (`tekoaly-v3d`, `aja_tekseli_v3d.zsh`, MAA_V8=maa_v8b.jpg, parvis_v8.py 168,160,150 226): parviksen sävy Googlen ympäristöön;
   EI vientiä ennen omistajan kyllä-vastausta (PT). LS2 tekee parin.
+
+## TEHTY 04.5x–05.2x
+
+- **Eiffel-torni v1** (PT hyväksyi 04.5x; `_valmiit/eiffel-v1`: lahde/hae.py, lahde/eiffel.py, eiffel_kuva.py, LAHTEET.md, leikkaus_latlon.json):
+  proseduraalinen ristikko, YKSI mesh + YKSI materiaali per LOD (COLOR_0), lod0 102 k / lod1 28 k / lod2 0,5 k, portti 0. LS2 teki testipaketin;
+  Natiiviseppä kuittaa kolmiot. PT:n ehdot: ennen/jälkeen-pari pysähdyksestä 14 (kamera tornista ~879 m suuntaan 67°, kallistus 64°), ei
+  yövalaistusta, osoitinta ei vaihdeta ennen omistajan korttia. Väri arvio (106/86/70 → 128/106/86) → säätö LS2:n pelikuvasta.
+- **Olavinlinna v46u** (atlas-v46u/: aja_v46u.zsh, aja_v46u_s5.zsh, kokoa_v46u.zsh): s5 v3b + s7–s10 kuoreen; kuori_savytys.py `--neutraali`,
+  min-kulma 0,6; s11 pois. HUOM aja_tornit.zsh lähtee v46p-talteen-atlaksesta → aja v46u-skriptit sen jälkeen.
