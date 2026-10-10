@@ -1079,5 +1079,359 @@
    "Miten pääjäätikkö hioo laaksoa syvemmäksi?",
    "Mikä on vuonon ja järven ero?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-naeroyfjord",
+  "kysymys": "Miksi Nærøyvuono on joskus jäätynyt talvisin niin pahasti, ettei sillä ole voinut liikennöidä?",
+  "uusi": false,
+  "vastaus": "Katotaas. Nærøyvuono on kapea ja jyrkkien rinteiden suojaama, joten aallokko ei pääse rikkomaan muodostuvaa jäätä, ja vuonoon laskeva [[Nærøydalselva]] tuo mukanaan makeaa vettä, joka jäätyy merivettä helpommin. Kun pakkanen on poikkeuksellisen kova, jää voi siksi levitä nopeasti koko vuonon poikki. Näin kävi esimerkiksi [[1920-luvulla]] ja vuonna 1962, jolloin laivaliikenne jouduttiin ohjaamaan jäänreunaa pitkin. Makean veden osuudesta juuri tässä vuonossa en ole aivan varma, mutta yleisesti se on tavallinen syy vuonojen jäätymiseen. Brr, ei olis tehnyt mieli lentää sen yli.",
+  "linkit": [
+   "Nærøydalselva",
+   "1920-luvulla"
+  ],
+  "jatkot": [
+   "Mikä Gudvangen on ja millainen kylä se on?",
+   "Miten vuonot ovat syntyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-naeroyfjord",
+  "kysymys": "Mihin isompaan vuonoon Nærøyvuono ja sen kautta Aurlandsvuono lopulta liittyvät?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Nærøyvuono haarautuu Aurlandsvuonosta, ja Aurlandsvuono puolestaan haarautuu [[Sognevuonosta]], joka on Länsi-Norjan pitkä pääväylä. Kapeat sivuhaarat lähtevät siitä kuin oksat rungosta, ja Nærøyvuono on niistä yksi: vain noin 17 kilometriä pitkä, mutta rinteiltään erittäin jyrkkä. Vuonna 2005 se liitettiin yhdessä Geirangervuonon kanssa Unescon maailmanperintölistalle [[Länsi-Norjan vuonoina]]. Ihan kuin kolme sisäkkäistä kirjekuorta, ja minä tiedän, mistä puhun.",
+  "linkit": [
+   "Sognevuonosta",
+   "Länsi-Norjan vuonoina"
+  ],
+  "jatkot": [
+   "Mikä Sognevuono on ja kuinka pitkä se on?",
+   "Mitä Geirangervuonosta tiedetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-naeroyfjord",
+  "kysymys": "Mitä vuono tarkoittaa ja miten vuonot syntyvät?",
+  "uusi": true,
+  "vastaus": "No niin, tämän minä tiedän ylhäältä katsottuna. Vuono on pitkä, kapea ja jyrkkäreunainen [[merenlahti]], joka syntyy, kun [[jäätiköt]] kuluttavat [[jääkausien]] aikana laaksoja syvälle kallioperään. Kun jää suli ja merenpinta nousi, meri tulvi laaksoon ja täytti sen. Siksi vuonojen seinämät ovat jyrkät ja vesi voi olla syvää jo lähellä rantaa. Nærøyvuonon rinteet nousevat lähes suoraan vedestä yli 1 700 metrin korkeuteen. Aikamoinen urakka jäälle, minä väsyn jo pitkästä lauseesta.",
+  "linkit": [
+   "merenlahti",
+   "jäätiköt",
+   "jääkausien"
+  ],
+  "jatkot": [
+   "Milloin viimeinen jääkausi päättyi?",
+   "Missä muualla Euroopassa on vuonoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-naeroyfjord",
+  "kysymys": "Mitä Unescon maailmanperintölista on ja miten kohde pääsee sinne?",
+  "uusi": true,
+  "vastaus": "Ai tota. Maailmanperintölista on [[Unescon]] ylläpitämä luettelo kohteista, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo, ja ne voivat olla kulttuuri- tai luontokohteita tai molempia. Kohteen ehdottaa yleensä sen oma valtio, asiantuntijaelimet arvioivat ehdotuksen ja lopullisen päätöksen tekee kansainvälinen maailmanperintökomitea. Nærøyvuono liitettiin listalle vuonna 2005 yhdessä Geirangervuonon kanssa [[Länsi-Norjan vuonoina]].\n\nMinun sukuni ei ole listalla, vaikka se on kantanut kirjeitä Caesarille asti. Kyllä se vähän kirpaisee.",
+  "linkit": [
+   "Unescon",
+   "Länsi-Norjan vuonoina"
+  ],
+  "jatkot": [
+   "Mitä muita Norjan kohteita on maailmanperintölistalla?",
+   "Mitä Unesco tekee muuten kuin ylläpitää listaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-naeroyfjord",
+  "kysymys": "Miten Norjassa kuljetaan vuonojen yli ja ohi?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Jyrkkä maasto tekee teiden rakentamisesta Länsi-Norjassa vaativaa, ja vuonoja ylitetäänkin monin tavoin: [[lautat]] kulkevat vuonon poikki, sillat yhdistävät rantoja ja [[tunnelit]] viedään suoraan vuorten läpi. Paikoin lautta on edelleen käytännöllisin yhteys, ja vuonoristeilyt ovat kasvattaneet laivaliikenteen merkitystä myös matkailussa. Minä lensin suoraan, kiitos vain.",
+  "linkit": [
+   "lautat",
+   "tunnelit"
+  ],
+  "jatkot": [
+   "Miksi Norjassa tehdään niin paljon tunneleita?",
+   "Millaisia vuonoristeilyjä Norjassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lofoten",
+  "kysymys": "Miksi Lofoottien turska kuivataan telineillä ilman suolaa toisin kuin Kristiansundin klippfisk?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Lofoottien turska voidaan kuivattaa suolaamatta, koska talvinen ilma on viileää ja raikasta: lämpötila pysyy noin nollan tienoilla, jolloin kala kuivuu telineillä eikä pilaannu. Näin syntyy [[tørrfisk]], jota kuivataan useita kuukausia ja joka säilyy sen jälkeen pitkään. Klippfisk puolestaan suolataan ensin ja kuivataan vasta sen jälkeen, joten sen valmistus ei ole riippuvainen samalla tavalla kylmästä ilmasta. Miksi juuri Kristiansundissa valittiin tämä tapa, en ole varma, mutta suolattua kalaa on perinteisesti viety muun muassa [[Portugaliin]]. Kuivattu kala ei oo minun lempparini, pulla voittaa.",
+  "linkit": [
+   "tørrfisk",
+   "Portugaliin"
+  ],
+  "jatkot": [
+   "Miten tørrfisk valmistetaan ruoaksi?",
+   "Mihin maihin norjalaista kuivakalaa viedään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lofoten",
+  "kysymys": "Mikä Vágar oli, ja miksi sitä pidetään merkittävänä löytönä Pohjois-Norjan historiassa?",
+  "uusi": false,
+  "vastaus": "Kas vaan, pieni historiatehtävä. Vágar oli kauppapaikka nykyisen [[Kabelvågin]] tienoilla, ja lähteiden mukaan sitä pidetään Pohjois-Norjan ensimmäisenä tunnettuna kaupunkimaisena asutuksena. Se toimi jo [[viikinkiajalla]], ja sen merkitys on siinä, että se osoittaa pohjoisessa olleen vilkasta kaupankäyntiä ja pysyvää asutusta jo hyvin varhain. Lofoottien talous on myöhemminkin nojannut kalastukseen, ja kala on ollut keskeinen kauppatavara. Aarteelta kuulostaa, mutta kauppapaikka se vain oli.",
+  "linkit": [
+   "Kabelvågin",
+   "viikinkiajalla"
+  ],
+  "jatkot": [
+   "Mitä kauppatavaroita viikingit kuljettivat?",
+   "Millaista elämä viikinkiajalla oli pohjoisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lofoten",
+  "kysymys": "Mistä revontulet syntyvät ja milloin niitä näkee Lofooteilla?",
+  "uusi": true,
+  "vastaus": "Mmm— tämän minä olen nähnyt monta kertaa ylhäältä. Revontulet syntyvät, kun Auringosta tuleva [[aurinkotuuli]] kuljettaa varautuneita hiukkasia kohti Maata ja Maan [[magneettikenttä]] ohjaa ne napa-alueille. Siellä hiukkaset törmäävät ilmakehän happi- ja typpiatomeihin, jotka alkavat hohtaa, yleisimmin vihreänä. Lofooteilla niitä näkee parhaiten pimeinä ja selkeinä iltoina, karkeasti syksystä kevääseen, kun taivas on riittävän tumma. Minä katsoin ne mieluummin lämpimästä pesästä.",
+  "linkit": [
+   "aurinkotuuli",
+   "magneettikenttä"
+  ],
+  "jatkot": [
+   "Miksi revontulet ovat useimmiten vihreitä?",
+   "Missä muualla Euroopassa revontulia näkee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lofoten",
+  "kysymys": "Mitä ilves on ja missä sitä tavataan Euroopassa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Ilves on keskikokoinen luonnonvarainen kissaeläin, jolla on lyhyt häntä ja korvien päissä tupsut. Se elää yksinään ja metsästää pääasiassa hämärässä, ja sen elinympäristöä ovat laajat metsät. Euroopassa ilvestä tavataan Pohjoismaissa ja [[Skandinavian]] metsissä sekä [[Karpaateilla]], ja paikoin se on palautettu myös Alpeille. Lofoottien nimen on arveltu viittaavan ilveksen jalkaan, mutta nimen alkuperä on kiistanalainen. Minä pysyn ilveksestä kaukana, kiitos.",
+  "linkit": [
+   "Skandinavian",
+   "Karpaateilla"
+  ],
+  "jatkot": [
+   "Millainen eläin kontti on ja missä sitä tavataan?",
+   "Miten ilves eroaa kotikissasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lofoten",
+  "kysymys": "Miksi Pohjois-Norjassa on talvella kaamos ja kesällä yötön yö?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Maapallon [[akselin kallistuma]] on noin 23,5 astetta, ja siksi [[napapiirin]] pohjoispuolella Aurinko ei talvipäivänseisauksen aikoihin nouse horisontin yläpuolelle ja kesäpäivänseisauksen aikoihin se ei laske. Lofootit sijaitsevat napapiirin pohjoispuolella, joten pimein aika osuu joulu- ja tammikuulle ja valoisin kesä- ja heinäkuulle. Kaamoksessakaan ei ole täysin pimeää, sillä taivaalla on usein hämärää valoa. Minä nukun pimeän yli, kyyhkyjen etuoikeus.",
+  "linkit": [
+   "akselin kallistuma",
+   "napapiirin"
+  ],
+  "jatkot": [
+   "Mitä keskiyön aurinko on?",
+   "Miten ihmiset pärjäävät kaamoksessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saamelaiset",
+  "kysymys": "Mikä oli Altan kiista, ja miten se johti saamelaiskäräjien perustamiseen?",
+  "uusi": false,
+  "vastaus": "No jopas. Altan kiista oli 1970–80-lukujen kiista, jossa saamelaiset vastustivat voimalaitospadon rakentamista, joka olisi jättänyt [[Mázen]] kylän alueen tulvan alle. Kiistaan liittyi mielenosoituksia ja laajaa julkista keskustelua, ja pato rakennettiin lopulta, mutta kiista herätti koko Norjan pohtimaan saamelaisten oikeuksia. Sen jälkeen saamelaisten asema vahvistui, ja Norjan saamelaiskäräjät eli [[Sámediggi]] perustettiin vuonna 1989, kun kuningas [[Olav V]] avasi sen ensimmäisen istunnon [[Karasjoessa]]. Pitkä tie se oli.",
+  "linkit": [
+   "Mázen",
+   "Sámediggi",
+   "Olav V",
+   "Karasjoessa"
+  ],
+  "jatkot": [
+   "Mitä Sámediggi tekee nykyään?",
+   "Mitä saamenkieliä Pohjoismaissa puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saamelaiset",
+  "kysymys": "Miksi poronhoito on yhä laissa varattu vain saamelaisille monilla alueilla?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tässä säännöt vaihtelevat. Poronhoito on saamelaisille keskeinen osa kulttuuria, kieltä ja elinkeinoa, ja yksinoikeudella pyritään suojaamaan tätä jatkuvuutta sekä rajallisia laidunmaita. [[Norjassa]] ja [[Ruotsissa]] oikeus on rajattu saamelaisille, kun taas [[Suomessa]] poronhoito ei ole laissa varattu yksinomaan saamelaisille. Tarkat säännöt vaihtelevat maittain ja alueittain, eikä niitä kannata yleistää koko Sápmin alueelle. Porot näyttävät ylhäältä pieniltä liikkuvilta pisteiltä.",
+  "linkit": [
+   "Norjassa",
+   "Ruotsissa",
+   "Suomessa"
+  ],
+  "jatkot": [
+   "Miten poronhoito on muuttunut viime vuosikymmeninä?",
+   "Mitä tarkoittaa puolipaimentolaisuus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saamelaiset",
+  "kysymys": "Mikä on gákti ja mitä sen koristeet kertovat?",
+  "uusi": true,
+  "vastaus": "Ai se. Gákti on saamelaisten perinteinen puku, jota käytetään juhlissa ja monin paikoin myös arjessa. Sen värit, nauhat ja koristeet vaihtelevat alueittain, ja usein ne kertovat pukijan kotiseudusta ja suvusta, mutta kuvio ei ole yksiselitteinen viesti kaikkialla. Puku on tehty osin ulkona vietettyyn elämään sopivaksi, ja saamelaisalueella [[Sápmin]] eri osissa on omat tapansa, ja puvun yhteydessä käytetään usein [[poronnahkaa]].\n\nMinun höyhenpukuni on aika yksivärinen verrattuna. Mutta toimii: harmaa sopii joka torille.",
+  "linkit": [
+   "Sápmin",
+   "poronnahkaa"
+  ],
+  "jatkot": [
+   "Mitä joiku on?",
+   "Mitä saamelaiset käsityöt ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saamelaiset",
+  "kysymys": "Mitä tarkoittaa, että saamelaiset ovat alkuperäiskansa?",
+  "uusi": true,
+  "vastaus": "Just niin, tärkeä kysymys. Alkuperäiskansalla tarkoitetaan kansaa, joka on asunut alueellaan ennen nykyisten valtiorajojen syntymistä ja joka on säilyttänyt oman kulttuurinsa, kielensä ja yhteisönsä. Saamelaiset asuvat perinteisesti Sápmin alueella usean valtion alueella, ja heidän asemaansa suojaavat muun muassa [[ILO:n]] alkuperäiskansasopimus ja kansalliset lait. Norjassa saamelaisten oma edustuselin on [[Sámediggi]]. Onpas tämä tärkeä aihe.",
+  "linkit": [
+   "ILO:n",
+   "Sámediggi"
+  ],
+  "jatkot": [
+   "Mitä ILO eli Kansainvälinen työjärjestö tekee?",
+   "Miten saamelaisten kieliä suojellaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-saamelaiset",
+  "kysymys": "Mitä tarkoittaa sana Sápmi?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tämän minä tiedän. Sápmi tarkoittaa saamelaisten kotiseutua ja pohjoissaamessa myös saamelaisia itseään ja heidän yhteisöään. Alue ulottuu Norjan, Ruotsin ja Suomen pohjoisosiin sekä Venäjän [[Kuolan niemimaalle]], eikä sitä ole rajattu valtioiden rajoilla. Saamelaisten kansallispäivää vietetään 6. helmikuuta, ja päivän lähteiden mukaan muistutetaan vuonna 1917 [[Trondheimissa]] pidetystä saamelaisten kokouksesta. Tämä kasvaa pian kunnon esitelmäksi.",
+  "linkit": [
+   "Kuolan niemimaalle",
+   "Trondheimissa"
+  ],
+  "jatkot": [
+   "Mitä pohjoissaame on ja kuka sitä puhuu?",
+   "Miten saamelaisten lippu syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gokstad",
+  "kysymys": "Kuka johti Gokstadin laivan kaivauksen, ja mihin yhdistykseen hän kuului?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kaivauksen johti Nicolay Nicolaysen, joka oli Muinaismuistoyhdistyksen eli norjalaisten muinaismuistojen suojelemiseen perustetun yhdistyksen puheenjohtaja. Laivan keulan olivat ensin löytäneet sattumalta tilan omistajan pojat [[Sandefjordin]] Sandarissa vuonna 1880, ja varsinainen kaivaus tehtiin samana vuonna. Nykyään laiva on esillä Oslon [[viikinkilaivamuseossa]]. Pojat löysivät keulan sattumalta, minä olen löytänyt vain leivänmuruja.",
+  "linkit": [
+   "Sandefjordin",
+   "viikinkilaivamuseossa"
+  ],
+  "jatkot": [
+   "Mitä muuta Gokstadin hautakummusta löytyi?",
+   "Mikä viikinkiaika oli ja milloin se alkoi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gokstad",
+  "kysymys": "Mihin kolmeen tarkoitukseen Gokstadin laivaa käytettiin?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: laivaa käytettiin sotaan, kauppaan sekä ihmisten ja tavaran kuljetukseen. Se oli [[viikinkiajan]] pitkälaiva, 23,8 metriä pitkä ja 5,1 metriä leveä, ja sitä ohjattiin perässä olevalla [[sivuperäsimellä]]. Laiva on rakennettu tammesta limisaumaisesti, mikä teki rungosta kevyen ja joustavan. Kolme tehtävää yhdelle laivalle, minulla on yksi: lentää kirje perille.",
+  "linkit": [
+   "viikinkiajan",
+   "sivuperäsimellä"
+  ],
+  "jatkot": [
+   "Miten viikinkilaivan purjeet toimivat?",
+   "Kuinka monta miestä laivassa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gokstad",
+  "kysymys": "Mitä limisaumarakenne tarkoittaa viikinkilaivassa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Limisaumarakenteessa rungon laudat limittyvät toistensa päälle ja kiinnitetään yhteen [[niiteillä]], jolloin runko muodostuu kerroksittain. Rakenne tekee rungosta kevyen ja joustavan, ja se kestää aallokossa kuormitusta paremmin kuin jäykkä rakenne. [[Gokstadin laiva]] on rakennettu juuri tällä tavalla, tammesta. Saipa selitettyä, vähän tuli hiki.",
+  "linkit": [
+   "niiteillä",
+   "Gokstadin laiva"
+  ],
+  "jatkot": [
+   "Millä työkaluilla viikingit rakensivat laivojaan?",
+   "Miksi laivoihin käytettiin tammea?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gokstad",
+  "kysymys": "Mitä muita viikinkilaivoja Norjasta on löydetty hautakummuista?",
+  "uusi": true,
+  "vastaus": "Katotaas. Tunnetuimpia ovat [[Osebergin]] laiva, joka löytyi vuonna 1904, sekä [[Tunen]] laiva. Viikinkiajalla vaikutusvaltaisia ihmisiä haudattiin joskus laivaan tai laivan viereen, ja siksi laivoja on säilynyt hautakumpuihin. Gokstadin laiva on yksi näistä, ja kaikkia näitä laivoja voi nykyään tutustua Oslon museossa, joskin tarkka tilanne kannattaa tarkistaa museon omilta sivuilta. En ole aivan varma, kuinka monta laivaa kaikkiaan on löydetty, joten jätän luvun pois. Ihan kunnon laivasto, mutta ei yhtään kyyhkylaivaa.",
+  "linkit": [
+   "Osebergin",
+   "Tunen"
+  ],
+  "jatkot": [
+   "Miksi viikingit haudattiin laivoihin?",
+   "Millainen Osebergin laiva on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-gokstad",
+  "kysymys": "Miten viikinkien pitkälaivat navigoivat ilman kompassia?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on lintujen aluetta. Viikingit seurasivat rannikon maamerkkejä, Auringon ja tähtien asentoa sekä merenkulun kokemusta, kuten tuulen ja aallokon suuntaa. [[Saagojen]] mukaan he käyttivät apunaan myös lintuja: [[Islannin]] löytäjänä tunnetun Flókin kerrotaan vapauttaneen korppeja, ja linnun lentosuunta paljasti maan suunnan. Kuinka tarkasti tämä pitää paikkansa, on historiantutkijoiden keskuudessa avoin kysymys. Linnut osaavat asiansa, sanon minä.",
+  "linkit": [
+   "Saagojen",
+   "Islannin"
+  ],
+  "jatkot": [
+   "Mitä saagat ovat ja kuka ne kirjoitti?",
+   "Miten Islanti asutettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-borgund",
+  "kysymys": "Miksi Borgundin sauvakirkon räystäillä on lohikäärmeenpäitä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Borgundin sauvakirkon räystäillä on neljä veistettyä lohikäärmeenpäätä, joiden on arveltu karkottavan pahoja henkiä. Ne muistuttavat samalla [[viikinkilaivojen]] keulakoristeita: kristillinen kirkko sai koristeekseen vanhemman uskon hahmot. Kirkko sijaitsee [[Lærdalissa]] ja rakennettiin noin vuosina 1180–1250.\n\nMinun sukuni kyyhkyt ovat aina pitäneet kattoharjoja hyvinä levähdyspaikkoina, mutta lohikäärmeen päälle en laskeutuisi. Varmuuden vuoksi.",
+  "linkit": [
+   "viikinkilaivojen",
+   "Lærdalissa"
+  ],
+  "jatkot": [
+   "Mitä sauvakirkko tarkoittaa?",
+   "Miksi viikinkien laivoissa oli eläinkoristeita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-borgund",
+  "kysymys": "Mitä kirkolle tapahtui vuonna 1868, ja miksi se silti säilyi purkamatta?",
+  "uusi": false,
+  "vastaus": "Mmm— tämä on onnellinen tarina. Vuonna 1868 Borgundin kylän seurakunnan käyttöön valmistui viereen uusi kirkko, ja vanhan sauvakirkon kirkolliset tehtävät siirrettiin sinne, jolloin vanha kirkko muutettiin museoksi. Se säilyi, koska [[Muinaismuistoyhdistys]] osti kirkon vuonna 1877, ja arkkitehti [[Christian Christie]] johti 1870-luvun alun kunnostuksen, jossa myöhemmät lisäykset poistettiin ja kirkko palautettiin lähemmäs keskiaikaista asuaan. Keskiajalla sauvakirkkoja oli yli tuhat, mutta nykyään niitä on jäljellä alle kolmekymmentä. Hyvä, ettei kukaan purkanut: tuolla katolla on lintujen hyvä istua.",
+  "linkit": [
+   "Muinaismuistoyhdistys",
+   "Christian Christie"
+  ],
+  "jatkot": [
+   "Mitä Muinaismuistoyhdistys nykyään tekee?",
+   "Miksi niin monet sauvakirkot ovat kadonneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-borgund",
+  "kysymys": "Miksi sauvakirkot on tervattu mustiksi?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tämä on kaunis kysymys. Sauvakirkon puu suojataan tervaamalla, ja siitä tulee sen musta väri. Terva torjuu kosteutta ja hidastaa puun lahoamista, ja perinteinen terva valmistetaan [[männystä]]. Lisäksi sauvakirkon seinälaudat seisovat pystyssä maata koskematta, mikä suojaa puuta kosteudelta entisestään. Pinnan tervaus on tehty [[tervalla]] vuosisatojen ajan. Tervan tuoksu ei ole pullan veroinen, mutta kirkko kiittää.",
+  "linkit": [
+   "männystä",
+   "tervalla"
+  ],
+  "jatkot": [
+   "Miten terva valmistetaan männystä?",
+   "Miksi puu lahoaa kosteassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-borgund",
+  "kysymys": "Miten sauvakirkon rakenne eroaa tavallisesta hirsikirkosta?",
+  "uusi": true,
+  "vastaus": "Ai tota. Sauvakirkko on rakennettu [[pystytolppien]] varaan, ja sen seinälaudat seisovat pystyssä, kun taas hirsikirkon seinät muodostuvat vaakasuoraan päällekkäin asetetuista hirsistä. Pystyrakenne kantaa kirkon painon, ja seinät ovat enemmän kuoria kuin kantavia rakenteita. Borgundin kirkon vieressä on yhä erillinen sauvarakenteinen [[kellotapuli]], jolla on oma rakenteensa. Lintu rakentaa pesän oksista, mutta tämä on kyllä eri sarjaa.",
+  "linkit": [
+   "pystytolppien",
+   "kellotapuli"
+  ],
+  "jatkot": [
+   "Miten hirsikirkko rakennetaan?",
+   "Mitä kellotapuli on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-borgund",
+  "kysymys": "Miksi keskiajalla rakennettiin Norjaan paljon puukirkkoja?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Norjassa oli runsaasti metsää, ja puu oli helppo ja edullinen rakennusmateriaali, kun taas kivirakentaminen vaati enemmän työvoimaa ja taitoa. [[Kristinuskon]] levitessä maahan keskiajalla tarvittiin paljon seurakuntakirkkoja, ja puusta rakennettiin paljon: keskiajalla sauvakirkkoja oli yli tuhat. Kivikirkot jäivät pääosin harvempien paikkojen erityiskohteiksi. [[Keskiajalla]] rakennetuista kirkoista on säilynyt vain murto-osa, ja Borgundin kirkko kuuluu niihin. Metsää riitti, ja minulle riittää pesäpaikkoja.",
+  "linkit": [
+   "Kristinuskon",
+   "Keskiajalla"
+  ],
+  "jatkot": [
+   "Milloin kristinusko levisi Norjaan?",
+   "Miksi puukirkot paloivat helposti?"
+  ]
  }
 ]
