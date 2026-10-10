@@ -85,10 +85,12 @@ namespace Matkakirja.Natiivi
             var a = vedet != null ? VesiVari.Hae(variJson, kohde, vedet[0], kausi) : null;
             var b = vedet != null ? VesiVari.Hae(variJson, kohde, vedet[1], kausi) : null;
             if (a == null || b == null) { Shader.SetGlobalFloat(IdVariVoima, 0f); Debug.Log($"MATKAKIRJA kaupunki: veden väri {kohde}/{kausi}: ei mittausta, _Syva"); return; }
-            Vector4 S(VesiVari.Vesi w) => new Vector4((float)w.SR, (float)w.SG, (float)w.SB, 0) * VariKerroin;
-            Vector4 M(VesiVari.Vesi w) => new Vector4((float)w.MR, (float)w.MG, (float)w.MB, 0) * VariKerroin;
-            Shader.SetGlobalVector(IdSyva0, S(a.Value)); Shader.SetGlobalVector(IdMatala0, M(a.Value));
-            Shader.SetGlobalVector(IdSyva1, S(b.Value)); Shader.SetGlobalVector(IdMatala1, M(b.Value));
+            // Kaupungin kanavakorjaus (Ydin VesiVari.Korjaus; Peking: ilmakehän kanssa S2-ortokuvan sävyyn), muualla 1.
+            Vector4 K(int vesi) { var k = VesiVari.Korjaus(kohde, vesi); return new Vector4((float)k.R, (float)k.G, (float)k.B, 0) * VariKerroin; }
+            Vector4 S(VesiVari.Vesi w, int vesi) => Vector4.Scale(new Vector4((float)w.SR, (float)w.SG, (float)w.SB, 0), K(vesi));
+            Vector4 M(VesiVari.Vesi w, int vesi) => Vector4.Scale(new Vector4((float)w.MR, (float)w.MG, (float)w.MB, 0), K(vesi));
+            Shader.SetGlobalVector(IdSyva0, S(a.Value, 0)); Shader.SetGlobalVector(IdMatala0, M(a.Value, 0));
+            Shader.SetGlobalVector(IdSyva1, S(b.Value, 1)); Shader.SetGlobalVector(IdMatala1, M(b.Value, 1));
             Shader.SetGlobalFloat(IdVariVoima, 1f);
             Debug.Log($"MATKAKIRJA kaupunki: veden väri {kohde}/{kausi} ×{VariKerroin:F2}: {vedet[0]} {a.Value}; {vedet[1]} {b.Value}");
         }
