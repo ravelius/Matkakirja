@@ -3521,5 +3521,1199 @@
    "Mihin Inhulets laskee?",
    "Miten Saksahan-joki liittyy Kryvyi Rihiin?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kryvyi-rih",
+  "kasite": "rautamalmiesiintymän",
+  "kysymys": "Kerro lisää: rautamalmiesiintymän",
+  "vastaus": "Kryvyi Rihin rautamalmiesiintymä on pitkä ja kapea malmivyöhyke Keski-Ukrainassa, ja se on kaupungin kasvun perusta. Malmi on suurelta osin rautakvartsiittia, jota esiintyy alueen hyvin vanhassa kallioperässä, joka kuuluu geologisesti [[Ukrainan kilpeen]]. Teollinen louhinta alkoi 1880-luvulla, kun ulkomainen pääoma löysi esiintymän, ja sen ympärille nousi kaivoksia ja asutusta. Malmia on louhittu sekä avolouhoksista että maanalaisista kaivoksista, ja sitä on jalostettu paikallisissa tehtaissa. Neuvostoaikana alueelle rakennettiin vuonna 1934 [[Kryvorizhstal]]-tehdas. Esiintymän suunta selittää myös sen, miksi kaupunki on venynyt pitkäksi nauhaksi, ja [[rautakvartsiittia]] louhitaan alueella yhä.",
+  "linkit": [
+   "Ukrainan kilpeen",
+   "Kryvorizhstal",
+   "rautakvartsiittia"
+  ],
+  "jatkot": [
+   "Mitä Ukrainan kilpi on?",
+   "Miten rautakvartsiitti on syntynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kryvyi-rih",
+  "kasite": "masuunissa",
+  "kysymys": "Kerro lisää: masuunissa",
+  "vastaus": "Masuuni on korkea, pystysuora sulatusuuni, jonka yläosaan syötetään vuorotellen rautamalmia, koksia ja kalkkikiveä. Alaosaan puhalletaan kuumennettua ilmaa, jolloin koksi palaa ja muodostaa [[hiilimonoksidia]], joka pelkistää malmin rautaoksidit metalliseksi raudaksi. Kalkkikivi sitoo malmin epäpuhtaudet [[kuonaksi]], joka kelluu sulan raudan päällä. Uunin pohjalta valutetaan erikseen sula [[raakarauta]] ja kuona. Masuuni toimii yhtäjaksoisesti, ja sitä ladataan ylhäältä ja tyhjennetään alhaalta jatkuvasti, kunnes uuni on vuorattava uudelleen.",
+  "linkit": [
+   "hiilimonoksidia",
+   "kuonaksi",
+   "raakarauta"
+  ],
+  "jatkot": [
+   "Miksi masuuniin puhalletaan kuumaa ilmaa?",
+   "Mihin kuonaa käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kryvyi-rih",
+  "kasite": "koksin",
+  "kysymys": "Kerro lisää: koksin",
+  "vastaus": "Koksi on kivihiilestä valmistettu kiinteä, huokoinen ja lähes puhdas hiilipolttoaine. Sitä tehdään kuumentamalla [[kivihiiltä]] ilmatiiviissä uunissa eli koksaamossa, jolloin haihtuvat aineet poistuvat ja jäljelle jää kova hiilirunko. Koksi kestää masuunissa ylempien kerrosten painon murtumatta, joten kaasu pääsee kulkemaan kuorman läpi. Masuunissa koksi toimii sekä polttoaineena että [[hiilimonoksidin]] lähteenä, ja hiilimonoksidi pelkistää rautamalmia. Koksaamoiden sivutuotteena saadaan kaasua ja tervaa, joita on käytetty kemianteollisuudessa.",
+  "linkit": [
+   "kivihiiltä",
+   "hiilimonoksidin"
+  ],
+  "jatkot": [
+   "Mitä koksaamon sivutuotteilla tehdään?",
+   "Miksi hiiltä ei käytetä masuunissa sellaisenaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kryvyi-rih",
+  "kasite": "raskasta teollisuutta",
+  "kysymys": "Kerro lisää: raskasta teollisuutta",
+  "vastaus": "Raskaalla teollisuudella tarkoitetaan teollisuudenhaaroja, joissa raaka-aineet ja tuotteet ovat painavia ja tuotanto vaatii paljon pääomaa, energiaa ja suuria laitoksia. Tyypillisiä aloja ovat metallurgia, kaivostoiminta, koneenrakennus ja telakat. [[Neuvostoliitossa]] [[viisivuotissuunnitelmat]] painottivat raskasta teollisuutta kevyen teollisuuden ja kulutustavaroiden kustannuksella, ja tämä näkyi Ukrainassa erityisesti [[Donbassin]] hiilialueella ja Kryvyi Rihin malmialueella. Valtion tavoitteena oli rakentaa nopeasti teräksen, koneiden ja energian tuotantokapasiteettia. Seuraukset ovat näkyneet myöhemmin muun muassa ympäristökuormituksena teollisuuskaupungeissa.",
+  "linkit": [
+   "Neuvostoliitossa",
+   "viisivuotissuunnitelmat",
+   "Donbassin"
+  ],
+  "jatkot": [
+   "Mitä kevyt teollisuus tarkoittaa?",
+   "Mitä haittaa raskas teollisuus on aiheuttanut ympäristölle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kryvyi-rih",
+  "kasite": "rautateiden",
+  "kysymys": "Kerro lisää: rautateiden",
+  "vastaus": "Rautatiet mullistivat 1800-luvulla liikenteen, kaupan ja teollisuuden, koska ne kuljettivat raskasta tavaraa ja ihmisiä nopeasti ja ympäri vuoden. Ensimmäisenä höyryvetoisena yleisenä rautatienä pidetään yleensä [[Stocktonin ja Darlingtonin]] rataa Englannissa vuodelta 1825, ja [[Liverpoolin ja Manchesterin]] välinen rata avattiin 1830. Radoilla liikennöivät [[höyryveturit]], ja rakentaminen vaati valtavasti rautaa ja terästä kiskoihin, vetureihin, vaunuihin ja siltoihin, mikä kasvatti malmin kysyntää. Rautatiet yhdistivät myös kaivosalueet satamiin ja tehtaisiin, joten ne avasivat uusia esiintymiä hyödynnettäviksi.",
+  "linkit": [
+   "Stocktonin ja Darlingtonin",
+   "Liverpoolin ja Manchesterin",
+   "höyryveturit"
+  ],
+  "jatkot": [
+   "Miten höyryveturi toimii?",
+   "Milloin Suomeen rakennettiin ensimmäinen rautatie?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kryvyi-rih",
+  "kasite": "Bessemerin",
+  "kysymys": "Kerro lisää: Bessemerin",
+  "vastaus": "Bessemerin menetelmä on englantilaisen Henry Bessemerin 1850-luvulla kehittämä tapa valmistaa terästä nopeasti ja edullisesti. Sulan [[raakaraudan]] läpi puhalletaan ilmaa kippaavassa [[konvertterissa]], jolloin hiili ja muut epäpuhtaudet palavat pois ja palamislämpö pitää metallin sulana. Aiemmin terästä oli voitu valmistaa vain pieniä määriä ja kalliisti, joten menetelmä teki siitä massatuotteen kiskoihin, siltoihin ja koneisiin. Alkuperäinen menetelmä ei sopinut fosforipitoisille malmeille, ja ongelman ratkaisi 1870-luvun lopulla niin sanottu [[Thomas-menetelmä]].",
+  "linkit": [
+   "raakaraudan",
+   "konvertterissa",
+   "Thomas-menetelmä"
+  ],
+  "jatkot": [
+   "Miten Thomas-menetelmä ratkaisi fosforiongelman?",
+   "Mikä on Siemens-Martin-menetelmä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Dneprin",
+  "kysymys": "Kerro lisää: Dneprin",
+  "vastaus": "Dnepr on yksi Euroopan suurimmista joista, ja sen pituus on noin 2 200 kilometriä. Se saa alkunsa Venäjän länsiosasta, virtaa [[Valko-Venäjän]] kautta Ukrainaan ja laskee Mustallemerelle. Ukrainassa joki halkaisee maan etelään, ja sen varrella ovat muun muassa [[Kiova]] ja Kremenchuk. Neuvostoaikana jokeen rakennettiin vesivoimaloiden ketju, joka muutti sen osittain tekojärvien sarjaksi. Joki on ollut vuosisatojen ajan tärkeä kauppa- ja kulkureitti, ja jo [[Kiovan Rusin]] aikana sitä pitkin kuljettiin kohti Konstantinopolia.",
+  "linkit": [
+   "Valko-Venäjän",
+   "Kiova",
+   "Kiovan Rusin"
+  ],
+  "jatkot": [
+   "Mikä oli reitti varjageista kreikkalaisiin?",
+   "Millaisia vesivoimaloita Dneprillä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Volgan",
+  "kysymys": "Kerro lisää: Volgan",
+  "vastaus": "Volga on Euroopan pisin joki, ja sen pituus on noin 3 500 kilometriä. Se saa alkunsa Valdain ylängöltä Venäjän länsiosasta, virtaa kaakkoon ja laskee Kaspianmereen Astrakhanin lähellä. Joen varrella ovat muun muassa [[Nižni Novgorod]], [[Kazan]], Samara ja [[Volgograd]]. Volga on ollut keskeinen kauppareitti ja Venäjän valtion kasvun selkäranka, ja sen yli rakennettiin 1900-luvulla runsaasti siltoja ja patoja. Myös Kremenchukin tehdas, josta myöhemmin tuli KrAZ, valmisti aluksi siltoja Volgan ja muiden jokien ylitykseen.",
+  "linkit": [
+   "Nižni Novgorod",
+   "Kazan",
+   "Volgograd"
+  ],
+  "jatkot": [
+   "Miksi Volga laskee Kaspianmereen eikä valtamereen?",
+   "Mitä tekojärviä Volgalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Guillaume Le Vasseur de Beauplan",
+  "kysymys": "Kerro lisää: Guillaume Le Vasseur de Beauplan",
+  "vastaus": "Guillaume Le Vasseur de Beauplan oli ranskalainen sotilasinsinööri ja kartografi, joka työskenteli 1600-luvun alkupuoliskolla Puola-Liettuan palveluksessa. Hän suunnitteli linnoituksia Dneprin seudulle, muun muassa [[Kodakin]] linnoituksen vuonna 1635, ja kartoitti Ukrainan aroalueita. Hänen teoksensa Ukrainan kuvauksesta, ranskaksi Description d'Ukraine, ilmestyi vuonna 1651, ja sitä pidetään tärkeänä lähteenä alueen maantieteestä, [[kasakoiden]] elämästä ja tataarien uhasta. Teos sisälsi myös karttoja, joita käytettiin Euroopassa pitkään. Beauplanin työ yhdisti sotilaallisen tarpeen ja tieteellisen havainnoinnin [[Puola-Liettuan]] itäisillä rajamailla.",
+  "linkit": [
+   "Kodakin",
+   "kasakoiden",
+   "Puola-Liettuan"
+  ],
+  "jatkot": [
+   "Missä Kodakin linnoitus sijaitsi?",
+   "Keitä kasakat olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Kremenchukiin",
+  "kysymys": "Kerro lisää: Kremenchukiin",
+  "vastaus": "Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Kaupungin historia alkaa pienestä linnoituksesta, jonka ranskalainen insinööri rakennutti vuonna 1635, ja samana vuonna se sai [[Magdeburgin oikeudet]]. Myöhemmin kaupunki toimi hetken [[Novorossijan kuvernementin]] pääkaupunkina Venäjän vallan alla. Nykyisin sen tunnetuin yritys on [[KrAZ]], joka perustettiin vuonna 1945 siltarakennustehtaaksi ja muutettiin vuonna 1958 raskaiden maastokuorma-autojen valmistajaksi. Kaupunki on ollut vuosisatojen ajan tärkeä paikka Dneprin liikenteessä.",
+  "linkit": [
+   "Magdeburgin oikeudet",
+   "Novorossijan kuvernementin",
+   "KrAZ"
+  ],
+  "jatkot": [
+   "Mihin KrAZ-kuorma-autoja käytetään?",
+   "Mikä on Novorossija?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Magdeburgin oikeudet",
+  "kysymys": "Kerro lisää: Magdeburgin oikeudet",
+  "vastaus": "Magdeburgin oikeudet olivat saksalainen kaupunkioikeuden malli, joka sai nimensä Magdeburgin kaupungista nykyisessä Saksassa. Se antoi kaupungille yleensä oikeuden valita oma raati, pitää omaa tuomioistuinta ja harjoittaa kauppaa erioikeuksin, ja se vapautti porvarit ruhtinaan tai aatelisen tuomiovallasta. Malli levisi keskiajalla Puolaan, Liettuaan ja nykyisen Ukrainan alueelle: [[Lviv]] sai oikeudet vuonna 1356, ja [[Kiova]] sai ne lähteiden mukaan 1400-luvun lopulla. Yksityiskohdat vaihtelivat paikkakunnittain, ja kaupungit saattoivat saada oikeudet hallitsijan erillisellä privilegiolla, kuten Kremenchuk vuonna 1635. Joissakin kaupungeissa malli säilyi käytössä vielä 1800-luvun alkuun.",
+  "linkit": [
+   "Lviv",
+   "Kiova"
+  ],
+  "jatkot": [
+   "Milloin Magdeburgin oikeudet kumottiin Ukrainassa?",
+   "Mikä oli kaupunginraadin tehtävä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Poltavan alueella",
+  "kysymys": "Kerro lisää: Poltavan alueella",
+  "vastaus": "Poltavan alue on hallinnollinen alue Keski-Ukrainassa Dneprin ja sen sivujokien varrella, ja sen keskus on Poltavan kaupunki. Alue on tunnettu hedelmällisestä maaperästään ja maataloudestaan, mutta myös teollisuudesta, johon kuuluu Kremenchukin ajoneuvoteollisuus. Seutu tunnetaan historiassa myös [[Poltavan taistelusta]] vuonna 1709, jossa [[Pietari Suuren]] johtama Venäjän armeija voitti Ruotsin kuninkaan [[Kaarle XII:n]] joukot. Taistelu käänsi Pohjan sodan suunnan ja loi pohjan Venäjän nousulle Itämeren alueen suurvallaksi, ja Kaarle pakeni Osmanien valtakuntaan.",
+  "linkit": [
+   "Poltavan taistelusta",
+   "Pietari Suuren",
+   "Kaarle XII:n"
+  ],
+  "jatkot": [
+   "Miksi Kaarle XII pakeni Osmanien valtakuntaan?",
+   "Mikä Pohjan sota oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Keski-Eurooppaan",
+  "kysymys": "Kerro lisää: Keski-Eurooppaan",
+  "vastaus": "Keski-Eurooppa on Euroopan keskiosa, jonka rajaus vaihtelee lähteittäin. Siihen luetaan yleensä muun muassa Saksa, Itävalta, Sveitsi, Tšekki, Slovakia, Puola ja Unkari, usein myös Slovenia ja Liechtenstein. Alue kuului keskiajalla pääosin [[Pyhän saksalais-roomalaisen keisarikunnan]] ja Unkarin kuningaskunnan piiriin, ja sieltä levisivät itään kaupunkien oikeuskäytännöt, kuten [[Magdeburgin oikeudet]], sekä saksalaiset uudisasukkaat. Kaupungit, kuten Praha, Krakova ja Wien, kasvoivat kaupan ja yliopistojen keskuksiksi. Raja Keski- ja Itä-Euroopan välillä on historiallisesti ollut joustava, ja Länsi-Ukrainan kaupungit ovat kuuluneet eri aikoina eri valtapiireihin.",
+  "linkit": [
+   "Pyhän saksalais-roomalaisen keisarikunnan",
+   "Magdeburgin oikeudet"
+  ],
+  "jatkot": [
+   "Mikä erottaa Keski-Euroopan Itä-Euroopasta?",
+   "Mikä Pyhä saksalais-roomalainen keisarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Kremenchuk",
+  "kysymys": "Kerro lisää: Kremenchuk",
+  "vastaus": "Kremenchuk on Dneprin rannalla sijaitseva kaupunki Poltavan alueella, ja se tunnetaan nykyisin raskaasta ajoneuvoteollisuudesta. Tehdas, joka tunnetaan nimellä [[KrAZ]], perustettiin vuonna 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja pian sen autoja vietiin kymmeniin maihin. Kaupungin historia on kuitenkin paljon vanhempi: ranskalainen insinööri [[Guillaume Le Vasseur de Beauplan]] rakensi sinne pienen linnoituksen vuonna 1635, ja kaupunki sai samana vuonna [[Magdeburgin oikeudet]]. Myöhemmin Kremenchuk toimi hetken Novorossijan kuvernementin pääkaupunkina.",
+  "linkit": [
+   "KrAZ",
+   "Guillaume Le Vasseur de Beauplan",
+   "Magdeburgin oikeudet"
+  ],
+  "jatkot": [
+   "Miten Kremenchuk kehittyi neuvostoaikana?",
+   "Mikä on Kremenchukin rooli Dneprin liikenteessä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Novorossijan kuvernementti",
+  "kysymys": "Kerro lisää: Novorossijan kuvernementti",
+  "vastaus": "Novorossijan eli Uuden Venäjän kuvernementti oli Venäjän keisarikunnan hallintoalue Mustanmeren pohjoispuolella. Se perustettiin [[Katariina Suuren]] aikana 1700-luvun jälkipuoliskolla, lähteiden mukaan vuonna 1764, alueelle, jota Venäjä oli hankkinut ja asuttanut etelärajansa suojaksi. Kenraalikuvernöörinä toimi myöhemmin [[Grigori Potjomkin]], jonka aikana Venäjä laajensi hallintaansa myös Krimille ja Mustanmeren rannikolle. Kremenchuk oli aluksi lyhyen aikaa hallinnollinen keskus. Alueelle perustettiin uusia kaupunkeja, kuten [[Odessa]] ja Mykolaiv, ja sinne muutti asukkaita eri puolilta Eurooppaa. Kuvernementin rajat ja nimet muuttuivat usein, ja se yhdistettiin ja jaettiin uudelleen 1800-luvulla.",
+  "linkit": [
+   "Katariina Suuren",
+   "Grigori Potjomkin",
+   "Odessa"
+  ],
+  "jatkot": [
+   "Miksi Venäjä asutti Mustanmeren pohjoisrannikkoa?",
+   "Kuka oli Grigori Potjomkin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kremenchuk",
+  "kasite": "Venäjän keisarikunnan",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnan",
+  "vastaus": "Venäjän keisarikunta syntyi vuonna 1721, kun [[Pietari Suuri]] otti keisarin arvonimen Pohjan sodan päättäneen [[Uudenkaupungin rauhan]] jälkeen. Pääkaupunkina oli Pietari, ja valtio laajeni 1700- ja 1800-luvuilla länteen, etelään ja itään. Länsiosia saatiin muun muassa Puolan jaoissa, ja Suomi liitettiin siihen suuriruhtinaskuntana vuonna 1809. Suuri osa nykyisen Ukrainan alueesta kuului keisarikuntaan, mutta Länsi-Ukraina, kuten Lviv ja Uzhhorod, kuului Habsburgien alaisuuteen. Keisarikunta päättyi vuonna 1917, kun [[Nikolai II]] luopui vallasta helmikuun vallankumouksen jälkeen.",
+  "linkit": [
+   "Pietari Suuri",
+   "Uudenkaupungin rauhan",
+   "Nikolai II"
+  ],
+  "jatkot": [
+   "Miksi Suomi kuului Venäjän keisarikuntaan?",
+   "Miten helmikuun vallankumous eteni vuonna 1917?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "Kovelin keihäänkärki",
+  "kysymys": "Kerro lisää: Kovelin keihäänkärki",
+  "vastaus": "Kovelin keihäänkärki on rautainen keihäänkärki, joka löytyi vuonna 1858 Kovelin läheltä. Siinä on tiettävästi hopeakoristein tehty [[riimukirjoituksen]] muodostama teksti, joka on luettu sanana tilarids; sen merkityksestä on esitetty useita tulkintoja, eikä niistä ole yksimielisyyttä. Ajoitus on arviolta 200-luvulta jKr., ja kieli tulkitaan yleensä [[goottien]] tai muuten itägermaaniseksi. Esine liittyy germaanisten kansojen aikaan nykyisen Ukrainan ja Puolan alueella, ja löytö tehtiin [[Volynissa]]. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta siitä on säilynyt jäljennöksiä ja kuvauksia, joiden varassa tutkimus on jatkunut.",
+  "linkit": [
+   "riimukirjoituksen",
+   "goottien",
+   "Volynissa"
+  ],
+  "jatkot": [
+   "Miten riimut luettiin ja tulkittiin?",
+   "Mitä muita riimukirjoituksia Itä-Euroopasta on löytynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "Kovelista",
+  "kysymys": "Kerro lisää: Kovelista",
+  "vastaus": "Kovel on rautatiekaupunki Luoteis-Ukrainan [[Volynin]] alueella, ja sen merkitys perustuu sijaintiin liikenteen solmukohdassa. Kaupungin kautta kulkee ratoja eri suuntiin, ja Chełmin ja Kovelin välinen rata on rakennettu sekä eurooppalaiselle 1435 millimetrin että venäläiselle 1520 millimetrin raideleveydelle. Kaupungin läheltä löytyi vuonna 1858 myös [[Kovelin keihäänkärki]], jonka riimukirjoitus on herättänyt tutkijoiden kiinnostusta. Alue on kuulunut vuosisatojen kuluessa [[Liettuan suuriruhtinaskunnalle]], Puola-Liettualle ja Venäjän keisarikunnalle, ja 1900-luvulla se joutui sotien kohteeksi.",
+  "linkit": [
+   "Volynin",
+   "Kovelin keihäänkärki",
+   "Liettuan suuriruhtinaskunnalle"
+  ],
+  "jatkot": [
+   "Miksi Ukrainassa on eri raideleveys kuin Puolassa?",
+   "Miten junat vaihtavat raideleveyttä rajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "toinen maailmansota",
+  "kysymys": "Kerro lisää: toinen maailmansota",
+  "vastaus": "Toinen maailmansota kesti vuosina 1939–1945, ja se alkoi Saksan hyökkäyksellä Puolaan syyskuussa 1939. [[Molotov–Ribbentrop-sopimus]] oli jakanut Itä-Euroopan vaikutuspiirit Saksan ja Neuvostoliiton välillä, ja Neuvostoliitto miehitti Puolan itäosat, mukaan lukien Volynian ja Kovelin seudun. Kesäkuussa 1941 Saksa hyökkäsi Neuvostoliittoon ([[Operaatio Barbarossa]]), ja Länsi-Ukraina joutui saksalaismiehitykseen. Neuvostojoukot valtasivat alueen takaisin vuonna 1944. Sota tuhosi suuria osia Ukrainan kaupungeista ja väestöstä, ja Euroopan juutalaisten joukkomurhassa, [[holokaustissa]], tuhoutuivat myös alueen vanhat juutalaisyhteisöt.",
+  "linkit": [
+   "Molotov–Ribbentrop-sopimus",
+   "Operaatio Barbarossa",
+   "holokaustissa"
+  ],
+  "jatkot": [
+   "Mitä Molotov–Ribbentrop-sopimus sisälsi?",
+   "Miten sota vaikutti Ukrainan väestöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "Kovelin",
+  "kysymys": "Kerro lisää: Kovelin",
+  "vastaus": "Kovel on Volynin alueen kaupunki lähellä Puolan rajaa, ja sen asema on tehnyt siitä tärkeän rautatiesolmun. Kaupungin kautta kulkevat radat yhdistävät Ukrainan Puolaan ja Euroopan rataverkkoon, ja [[Chełmin]] suuntaan kulkeva rata on rakennettu kahdelle eri raideleveydelle. Kaupungin lähellä löytyi vuonna 1858 [[Kovelin keihäänkärki]], jonka riimuteksti tunnetaan tutkijoiden keskuudessa. Alueen historiaan kuuluu vaihtuvia valtioita: Liettuan suuriruhtinaskunta, [[Puola-Liettua]], Venäjän keisarikunta ja 1900-luvulla Puola ja Neuvostoliitto.",
+  "linkit": [
+   "Chełmin",
+   "Kovelin keihäänkärki",
+   "Puola-Liettua"
+  ],
+  "jatkot": [
+   "Miksi Kovel on tärkeä rautatiesolmu?",
+   "Missä Chełm sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan",
+  "vastaus": "Eurooppa on maanosa, jonka itäraja Aasiaan päin kulkee tavallisesti [[Uralvuoriston]] kautta, joten myös [[Ukraina]] kuuluu kokonaan Eurooppaan. Ukraina on pinta-alaltaan suurin kokonaan Euroopassa sijaitseva valtio. Rautateiden kannalta Eurooppa on jakautunut kahtia: Länsi- ja Keski-Euroopassa on yleisesti käytössä 1435 millimetrin normaaliraideleveys, kun taas Ukrainassa, Venäjällä ja monissa muissa entisissä Neuvostoliiton maissa käytetään 1520 millimetrin raideleveyttä. Suomen verkossa raideleveys on hieman erilainen, 1524 millimetriä. Siksi junat joko vaihtavat akselistoa rajalla tai tavara siirretään toisiin vaunuihin.",
+  "linkit": [
+   "Uralvuoriston",
+   "Ukraina"
+  ],
+  "jatkot": [
+   "Miksi Venäjällä on leveämpi raideleveys kuin Euroopassa?",
+   "Missä muualla Euroopassa on poikkeava raideleveys?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "Chełmin",
+  "kysymys": "Kerro lisää: Chełmin",
+  "vastaus": "Chełm on kaupunki Itä-Puolassa [[Lubelin vojevodakunnassa]], lähellä Ukrainan rajaa. Kaupunki on keskiaikaista alkuperää, ja 1200-luvulla ruhtinas [[Daniel Galitsialainen]] teki siitä lähteiden mukaan yhden keskuksistaan. Kaupungin alla on laaja liitukaivosten tunneliverkosto, joka tunnetaan nimellä [[Chełmin liitutunnelit]] ja toimii nykyisin matkailukohteena. Chełmistä Kovelin suuntaan kulkeva rata ylittää rajan ja yhdistää Puolan ja Ukrainan rataverkot, ja se on rakennettu sekä eurooppalaiselle että venäläiselle raideleveydelle.",
+  "linkit": [
+   "Lubelin vojevodakunnassa",
+   "Daniel Galitsialainen",
+   "Chełmin liitutunnelit"
+  ],
+  "jatkot": [
+   "Millaiset ovat Chełmin liitutunnelit?",
+   "Kuka oli Daniel Galitsialainen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kovel",
+  "kasite": "Gootit",
+  "kysymys": "Kerro lisää: Gootit",
+  "vastaus": "Gootit olivat itägermaaninen kansa, jonka alkuperä liitetään Itämeren eteläpuolelle, nykyisen Puolan alueelle, ja joka siirtyi ensimmäisinä vuosisatoina jKr. kohti Mustaamerta. Tutkijat yhdistävät heidät varovasti Mustanmeren pohjoispuolen arkeologisiin kulttuureihin. Kansa jakautui myöhemmin kahteen pääryhmään, [[visigootteihin]] ja [[ostrogootteihin]]. Hunnien hyökkäys 370-luvulla pakotti monet gootit liikkeelle, ja Alarikin johtamat visigootit valtasivat Rooman vuonna 410. Gootit saivat kristillisen raamatunkäännöksen piispa [[Wulfilan]] työn kautta 300-luvulla, ja se on tärkein säilynyt lähde goottilaisen kielen tuntemukseen. Gootin kieli on sittemmin kuollut sukupuuttoon.",
+  "linkit": [
+   "visigootteihin",
+   "ostrogootteihin",
+   "Wulfilan"
+  ],
+  "jatkot": [
+   "Mitä goottilaisesta kielestä tiedetään?",
+   "Miten visigootit ja ostrogootit erosivat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Uzhhorod",
+  "kysymys": "Kerro lisää: Uzhhorod",
+  "vastaus": "Uzhhorod on Zakarpattian alueen hallinnollinen keskus Länsi-Ukrainassa, aivan Slovakian rajan tuntumassa Karpaattien juurella. Se sijaitsee Uzh-joen varrella, ja kaupungin unkarilainen nimi on Ungvár. Historiansa aikana kaupunki on kuulunut Unkarin kuningaskuntaan ja [[Itävalta-Unkariin]], sitten [[Tšekkoslovakiaan]], vuosina 1938–1944 jälleen Unkariin ja sodan jälkeen Neuvostoliittoon, ja vuodesta 1991 itsenäiseen Ukrainaan. Kaupungin vanhimpiin rakennuksiin kuuluu [[Uzhhorodin linna]], joka on keskiaikaista alkuperää ja toimii nykyisin museona.",
+  "linkit": [
+   "Itävalta-Unkariin",
+   "Tšekkoslovakiaan",
+   "Uzhhorodin linna"
+  ],
+  "jatkot": [
+   "Miten Karpatalja päätyi Neuvostoliittoon?",
+   "Millainen on Uzhhorodin linna?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Unkarin kuningaskuntaan",
+  "kysymys": "Kerro lisää: Unkarin kuningaskuntaan",
+  "vastaus": "Unkarin kuningaskunta syntyi noin vuonna 1000, kun [[Tapani I]] kruunattiin ensimmäiseksi kuninkaaksi. Se oli keskiajalla merkittävä Keski-Euroopan valtio, jonka alueeseen kuuluivat nykyisen Unkarin lisäksi muun muassa Slovakia ja Karpatalja. Vuoden 1526 [[Mohácsin taistelun]] jälkeen kuningaskunta jakautui: osa joutui Osmanien valtakunnalle ja osa Habsburgeille, ja osmanien hallinta päättyi vähitellen 1600-luvun lopulta alkaen. Vuonna 1867 Unkari oli yksi Itävalta-Unkarin kahdesta osasta. Kuningaskunta päättyi vuonna 1918, ja [[Trianonin sopimus]] pienensi Unkarin alueen noin kahteen kolmasosaan entisestä.",
+  "linkit": [
+   "Tapani I",
+   "Mohácsin taistelun",
+   "Trianonin sopimus"
+  ],
+  "jatkot": [
+   "Mitä Trianonin sopimus muutti Unkarissa?",
+   "Kuka oli kuningas Tapani I?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Itävalta-Unkari",
+  "kysymys": "Kerro lisää: Itävalta-Unkari",
+  "vastaus": "Itävalta-Unkari oli vuosina 1867–1918 olemassa ollut kaksoismonarkia, jossa Itävallan keisarina ja Unkarin kuninkaana hallitsi sama hallitsija, pitkään [[Frans Joosef I]]. Valtiolla oli kaksi hallitusta, [[Wienin]] ja [[Budapestin]] johdolla, ja yhteisiä asioita olivat ulkopolitiikka, puolustus ja niihin liittyvä rahoitus. Valtakunnan asukkaat olivat monikansallisia: saksalaisia, unkarilaisia, tšekkejä, puolalaisia, ukrainalaisia, kroaatteja ja muita. Sen hajoamiseen vaikuttivat kansallisuusliikkeet ja [[ensimmäisen maailmansodan]] tappio vuonna 1918.",
+  "linkit": [
+   "Frans Joosef I",
+   "Wienin",
+   "Budapestin",
+   "ensimmäisen maailmansodan"
+  ],
+  "jatkot": [
+   "Mitkä kansat asuivat Itävalta-Unkarissa?",
+   "Mitä Itävalta-Unkarin jälkeen tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Ung-läänin",
+  "kysymys": "Kerro lisää: Ung-läänin",
+  "vastaus": "Ung-lääni oli Unkarin kuningaskunnan hallinnollinen alue, ja Ungvár eli nykyinen Uzhhorod oli sen keskus. Unkarilaisessa hallintojärjestelmässä tällainen alue oli nimeltään vármegye, suomeksi yleensä [[komitaatti]], ja läänin nimi tuli [[Uzh-joen]] unkarilaisesta nimestä Ung. Lääni sijaitsi Karpaattien juurella nykyisen Ukrainan ja Slovakian rajaseudulla. Ensimmäisen maailmansodan jälkeen Unkarin rajat vedettiin uudelleen, ja läänin alue siirtyi pääosin [[Tšekkoslovakialle]].",
+  "linkit": [
+   "komitaatti",
+   "Uzh-joen",
+   "Tšekkoslovakialle"
+  ],
+  "jatkot": [
+   "Mitä komitaatti tarkoittaa hallinnossa?",
+   "Miksi Karpatalja siirtyi Tšekkoslovakialle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Itämerelle",
+  "kysymys": "Kerro lisää: Itämerelle",
+  "vastaus": "Itämeri on Pohjois-Euroopassa sijaitseva murtovesiallas, jonka suolapitoisuus on selvästi valtamerten vettä pienempi. Se yhtyy [[Pohjanmereen]] [[Tanskan salmien]] kautta, ja vedenvaihto on hidasta, minkä takia meri on herkkä ympäristömuutoksille. Meren keskisyvyys on vain noin viisikymmentäviisi metriä. Rannikkovaltioita on yhdeksän: Suomi, Ruotsi, Tanska, Saksa, Puola, Venäjä, Viro, Latvia ja Liettua. Sen suuria lahtia ovat [[Suomenlahti]], Pohjanlahti ja Riianlahti.",
+  "linkit": [
+   "Pohjanmereen",
+   "Tanskan salmien",
+   "Suomenlahti"
+  ],
+  "jatkot": [
+   "Miksi Itämeren vesi on murtovettä?",
+   "Mitä ympäristöongelmia Itämerellä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Aadrianmerelle",
+  "kysymys": "Kerro lisää: Aadrianmerelle",
+  "vastaus": "Aadrianmeri eli Adrianmeri on [[Välimeren]] osa Italian niemimaan ja Balkanin niemimaan välissä. Sen rannikoilla ovat Italia, Slovenia, Kroatia, Bosnia ja Hertsegovina, Montenegro ja Albania. Meren pohjoispäässä on [[Venetsian]] laguuni, ja Kroatian itärannikko on runsassaarinen ja kallioinen, kuuluisana kaupunkinaan [[Dubrovnik]]. Etelässä meri yhtyy Otrantosalmen kautta Joonianmereen. Adrianmerellä on ollut keskeinen rooli kauppareittinä antiikista lähtien, ja Venetsian tasavalta hallitsi sen kauppaa pitkään.",
+  "linkit": [
+   "Välimeren",
+   "Venetsian",
+   "Dubrovnik"
+  ],
+  "jatkot": [
+   "Mikä oli Venetsian tasavalta?",
+   "Millaisia saaria Kroatian rannikolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Mustallemerelle",
+  "kysymys": "Kerro lisää: Mustallemerelle",
+  "vastaus": "Musta meri on Euroopan ja Vähän-Aasian välissä sijaitseva sisämeri, joka yhtyy [[Bosporin]] salmen kautta Marmaranmereen ja edelleen Välimereen. Sen rannikkovaltioita ovat Ukraina, Venäjä, Georgia, Turkki, Bulgaria ja Romania. Mereen laskevat muun muassa [[Tonava]], Dnepr, Dnestr ja Etelä-Bug, joten sen vesi on suolapitoisuudeltaan matalampaa kuin valtamerillä. Syvimmillään meri on yli kaksi kilometriä syvä, ja syvissä osissa on hapeton kerros, jossa ei elä korkeampaa eläimistöä. Ukrainan tärkeä satamakaupunki on [[Odessa]], josta viljaa on viety vuosisatoja.",
+  "linkit": [
+   "Bosporin",
+   "Tonava",
+   "Odessa"
+  ],
+  "jatkot": [
+   "Miksi Mustanmeren syvä vesi on hapetonta?",
+   "Miten Bosporin salmi on vaikuttanut kauppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Gesta Hungarorum",
+  "kysymys": "Kerro lisää: Gesta Hungarorum",
+  "vastaus": "Gesta Hungarorum eli unkarilaisten teot on latinankielinen kronikka, jonka kirjoittaja tunnetaan vain nimellä Anonymus ja kuninkaan notaarina, jonka nimen alkukirjain oli P. Teos kertoo [[Árpádin]] johtamien unkarilaisten heimojen tulosta [[Karpaattien altaalle]] ja alueen valtaamisesta 800-luvun lopulla. Kronikka kirjoitettiin kuitenkin vasta noin vuonna 1200 eli lähes kolmesataa vuotta tapahtumien jälkeen, joten sen historiallinen luotettavuus on kiistanalainen, ja tutkijat ovat erimielisiä myös ajoituksesta ja siitä, kumman kuningas Bélan aikana teos syntyi. Anonymusta esittää [[Miklós Ligetin]] vuonna 1903 tekemä pronssipatsas Budapestissa, jonka kasvot on jätetty tarkoituksella hupun varjoon.",
+  "linkit": [
+   "Árpádin",
+   "Karpaattien altaalle",
+   "Miklós Ligetin"
+  ],
+  "jatkot": [
+   "Mitä Árpádin suku merkitsi Unkarille?",
+   "Miksi Anonymuksen henkilöllisyys on tuntematon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Uzhhorodin",
+  "kysymys": "Kerro lisää: Uzhhorodin",
+  "vastaus": "Uzhhorod on Zakarpattian alueen keskus Länsi-Ukrainassa, ja se sijaitsee Uzh-joen varrella Karpaattien juurella aivan Slovakian rajan tuntumassa. Kaupungin keskeisiin nähtävyyksiin kuuluu [[Uzhhorodin linna]], jonka kappelissa solmittiin vuonna 1646 [[Uzhhorodin unioni]], joka yhdisti osan alueen ortodokseista Rooman kirkkoon ja on pohjana seudun kreikkalaiskatoliselle kirkolle. Kaupunkiin on kerääntynyt vuosisatojen mittaan monikulttuurinen perintö: unkarilaista, slovakialaista, ukrainalaista ja juutalaista. Rajanylityspaikka Slovakiaan on tärkeä liikenneyhteys.",
+  "linkit": [
+   "Uzhhorodin linna",
+   "Uzhhorodin unioni"
+  ],
+  "jatkot": [
+   "Mikä on Uzhhorodin unioni?",
+   "Miten Uzhhorod eroaa muista Ukrainan kaupungeista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-uzhhorod",
+  "kasite": "Unkarin kuningaskunnan",
+  "kysymys": "Kerro lisää: Unkarin kuningaskunnan",
+  "vastaus": "Unkarin kuningaskunta oli keskiajalta vuoteen 1918 ulottunut valtio, jonka kuninkaat kruunattiin [[Pyhän Tapanin kruunulla]], jota pidetään yhä Unkarin kansallisena symbolina. Kruunajaiskaupunkina toimi aluksi Székesfehérvár, ja 1500-luvun puolivälistä 1800-luvun alkupuolelle Pozsony eli nykyinen [[Bratislava]]. Kuningaskuntaan kuuluivat Unkarin ydinalueen lisäksi pitkään Slovakia, Karpatalja ja [[Kroatia]], joka nautti kuitenkin omaa autonomiaa. Habsburg-suvun kuninkaiden aikana Unkarilla oli oma valtiopäivä ja lainsäädäntö, ja vuoden 1867 jälkeen se oli yksi Itävalta-Unkarin kahdesta osasta.",
+  "linkit": [
+   "Pyhän Tapanin kruunulla",
+   "Bratislava",
+   "Kroatia"
+  ],
+  "jatkot": [
+   "Mikä on Pyhän Tapanin kruunu?",
+   "Miksi Pozsony oli kruunajaiskaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chernihiv",
+  "kasite": "Vapahtajan katedraali",
+  "kysymys": "Kerro lisää: Vapahtajan katedraali",
+  "vastaus": "Tšernihivin Vapahtajan katedraali eli Kirkastumisen katedraali on kaupungin vanhin säilynyt kirkko ja yksi harvoista [[Kiovan Rusin]] ajalta säilyneistä rakennuksista. Sen rakennutti 1000-luvun alkupuolella ruhtinas [[Mstislav Vladimirovitš]], ja se valmistui hänen kuolemansa aikoihin; tarkat vuosiluvut vaihtelevat lähteittäin. Kirkko oli ruhtinaskunnan keskuskirkko ja ruhtinaiden hautapaikka, ja sen rakennustapa on bysanttilaisvaikutteinen. Kaupungissa on säilynyt myös muita keskiaikaisia kirkkoja, kuten [[Boriksen ja Glebin katedraali]].",
+  "linkit": [
+   "Kiovan Rusin",
+   "Mstislav Vladimirovitš",
+   "Boriksen ja Glebin katedraali"
+  ],
+  "jatkot": [
+   "Millainen on bysanttilainen kirkkoarkkitehtuuri?",
+   "Kuka oli ruhtinas Mstislav Vladimirovitš?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chernihiv",
+  "kasite": "Rusin",
+  "kysymys": "Kerro lisää: Rusin",
+  "vastaus": "Rus oli keskiajalla itäslaavilaisten heimojen ja ruhtinaskuntien muodostama valtio, jonka keskus oli [[Kiova]] ja jonka ruhtinaat polveutuivat [[Rurikin]] suvusta. [[Alkukronikan]] mukaan Rurik kutsuttiin hallitsemaan Novgorodiin vuonna 862 ja hänen seuraajansa Oleg valtasi Kiovan vuonna 882; kronikka on kuitenkin kirjoitettu myöhemmin, joten ajoituksiin kannattaa suhtautua varauksella. Nimen Rus alkuperästä kiistellään: yksi vakiintunut selitys yhdistää sen skandinaaviseen sanaan, josta myös suomen Ruotsi periytyy, toinen painottaa slaavilaista alkuperää. Rusin kristillistyminen tapahtui 980-luvun lopulla ruhtinas Vladimirin aikana, ja valtio hajosi 1100–1200-luvuilla useiksi ruhtinaskunniksi.",
+  "linkit": [
+   "Kiova",
+   "Rurikin",
+   "Alkukronikan"
+  ],
+  "jatkot": [
+   "Mistä Rus-nimi on peräisin?",
+   "Mitä Alkukronikka kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chernihiv",
+  "kasite": "Hromada-liike",
+  "kysymys": "Kerro lisää: Hromada-liike",
+  "vastaus": "Hromada eli yhteisö oli 1860-luvulla Venäjän keisarikunnan ukrainalaisalueilla syntynyt liike, jonka jäsenet olivat pääosin sivistyneistöä ja opiskelijoita. Liike järjesti sunnuntaikouluja, julkaisi ukrainankielisiä tekstejä ja keräsi kansanperinnettä. Sen innoittajana oli runoilija [[Taras Ševtšenko]], jonka runous oli ukrainalaisen kansallistunteen kulmakivi. Venäjän viranomaiset rajoittivat ukrainan kielen käyttöä: [[Valujevin sirkulaari]] vuonna 1863 rajoitti ukrainankielistä painotuotantoa ja [[Emsin ukaasi]] vuonna 1876 kielsi sitä entistä laajemmin.",
+  "linkit": [
+   "Taras Ševtšenko",
+   "Valujevin sirkulaari",
+   "Emsin ukaasi"
+  ],
+  "jatkot": [
+   "Kuka oli Taras Ševtšenko?",
+   "Mitä Emsin ukaasi kielsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chernihiv",
+  "kasite": "Venäjän keisarikunnan",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnan",
+  "vastaus": "Venäjän keisarikuntaan kuului 1800-luvulla suurin osa nykyisen Ukrainan alueesta: Kiova, Tšernihiv, Poltava, Odessa ja koko Dneprin itäpuoli sekä [[Puolan jaoissa]] saatu länsiosa, kuten Volynia ja Podolia. Länsi-Ukrainan Galitsia ja Karpatalja kuuluivat sen sijaan Habsburgien Itävalta-Unkariin. Keisarikunnassa maaorjuus poistettiin vuonna 1861 [[Aleksanteri II:n]] uudistuksilla, ja Ukrainan arot ja satamat kehittyivät viljan ja metallin vientialueiksi. Ukrainan kielen käyttöä rajoitettiin kuitenkin viranomaisten toimesta, ja ukrainalainen kansallinen herääminen jatkui muun muassa [[Hromada-liikkeen]] kautta.",
+  "linkit": [
+   "Puolan jaoissa",
+   "Aleksanteri II:n",
+   "Hromada-liikkeen"
+  ],
+  "jatkot": [
+   "Miten maaorjuuden poisto vaikutti talonpoikiin?",
+   "Mikä oli Odessan rooli viljakaupassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chernihiv",
+  "kasite": "Kiovan Rusiin",
+  "kysymys": "Kerro lisää: Kiovan Rusiin",
+  "vastaus": "Kiovan Rus kasvoi 900- ja 1000-luvuilla Dneprin varteen, ja sen keskus oli Kiova. Ruhtinas [[Vladimir Suuri]] kastoi Rusin kristinuskoon vuonna 988, ja hänen poikansa [[Jaroslav Viisas]] vahvisti valtiota 1000-luvun alkupuoliskolla: hänen aikanaan Kiovaan rakennettiin kultainen portti sekä [[Pyhän Sofian katedraali]], joka on yhä kaupungin tärkeimpiä kirkkoja. Kiovan Rusin ruhtinaat olivat sukua Euroopan hallitsijasuvuille, ja valtiolla oli laajoja kauppayhteyksiä Bysanttiin ja Pohjolaan. Kaupungin hallinta heikkeni, kun ruhtinaat alkoivat kilpailla keskenään, ja mongolien hyökkäys vuonna 1240 päätti sen vallan.",
+  "linkit": [
+   "Vladimir Suuri",
+   "Jaroslav Viisas",
+   "Pyhän Sofian katedraali"
+  ],
+  "jatkot": [
+   "Miksi Kiova oli Rusin keskus?",
+   "Mitä Pyhän Sofian katedraalissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chernihiv",
+  "kasite": "Tšernihiv",
+  "kysymys": "Kerro lisää: Tšernihiv",
+  "vastaus": "Tšernihiv on Pohjois-Ukrainan kaupunki Desna-joen varrella, ja se oli jo 800-luvulla [[siiveriläisten]] heimon keskus. Kaupungista tuli Kiovan Rusin toiseksi tärkein kaupunki ja 1000–1200-luvuilla oman ruhtinaskunnan ja piispanistuimen keskus. Siellä on säilynyt useita keskiaikaisia kirkkoja, joista vanhin on [[Vapahtajan katedraali]]. Myöhemmin kaupunki kuului Puolalle ja sitten [[kasakkahetmanaatin]] alueelle, ja vuonna 1782 siitä tuli oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa. Kaupunki on kulttuurihistoriallisesti merkittävä, koska siinä yhdistyvät keskiaikainen rakennusperintö ja varhaismodernin ajan kasakkakulttuuri.",
+  "linkit": [
+   "siiveriläisten",
+   "Vapahtajan katedraali",
+   "kasakkahetmanaatin"
+  ],
+  "jatkot": [
+   "Mikä oli Tšernihivin ruhtinaskunta?",
+   "Keitä kasakat olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "Počajivin luostari",
+  "kysymys": "Kerro lisää: Počajivin luostari",
+  "vastaus": "Počajivin luostari on yksi Ukrainan tärkeimmistä pyhiinvaelluskohteista, ja se sijaitsee kukkulalla Ternopilin alueella noin kahdeksantoista kilometrin päässä [[Kremenetsin]] kaupungista. Luostarin ytimessä on 1700-luvun lopulla valmistunut barokkityylinen [[Pyhän Nukkumisen katedraali]], jonka kultaiset kupolit näkyvät kauas tasangolle. Luostari on ollut vuosisatojen ajan kristillinen keskus, ja sen kirkkokunta on vaihdellut: se oli ortodoksinen vuoteen 1720, sitten [[basilialaisten]] johtama kreikkalaiskatolinen vuoteen 1831 ja sen jälkeen jälleen ortodoksinen. Perimätiedon mukaan kallion halkeamassa näkyy Jumalansynnyttäjän jalanjälki, mikä on tehnyt paikasta erityisen pyhän.",
+  "linkit": [
+   "Kremenetsin",
+   "Pyhän Nukkumisen katedraali",
+   "basilialaisten"
+  ],
+  "jatkot": [
+   "Mikä Kremenets on?",
+   "Keitä basilialaiset ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "ortodoksiseksi",
+  "kysymys": "Kerro lisää: ortodoksiseksi",
+  "vastaus": "Ortodoksinen kirkko on itäinen kristillinen kirkko, joka erkani Rooman johtamasta länsimaisesta kirkosta vuoden 1054 [[suuren skisman]] seurauksena. Sen jumalanpalvelukset ovat ikonien, laulun ja liturgian täyttämiä, ja pappi saa yleensä olla naimisissa. Ortodoksisuudessa ei ole yhtä johtajaa vastaavaa paavia, vaan kirkot ovat itsenäisiä ja kunnioittavat [[Konstantinopolin ekumeenisen patriarkaatin]] kunniajohtajuutta. Ukrainassa kirkollinen tilanne on ollut monimutkainen: Ukrainan ortodoksinen kirkko sai itsenäisyyden eli [[autokefalian]] Konstantinopolilta tammikuussa 2019, ja kirkkojen asema on muuttunut viime vuosina.",
+  "linkit": [
+   "suuren skisman",
+   "Konstantinopolin ekumeenisen patriarkaatin",
+   "autokefalian"
+  ],
+  "jatkot": [
+   "Mitä vuoden 1054 skisma tarkoitti?",
+   "Mikä on ortodoksisen liturgian rakenne?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "Venäjän keisarikunnan",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnan",
+  "vastaus": "Vuonna 1873 Počajivin alue kuului [[Venäjän keisarikunnan]] Volynian kuvernementtiin, jonka keskus oli [[Žytomyr]]. Alue oli aiemmin kuulunut Puola-Liettualle, ja se liitettiin Venäjään 1790-luvulla [[Puolan jaoissa]]. Kuvernementti oli rajaseutua, jossa asui puolalaisia, ukrainalaisia ja juutalaisia, ja siellä sijaitsivat sekä ortodoksiset että katoliset kirkot. Venäjän keisarikunnan hallinto pyrki vahvistamaan ortodoksisuuden asemaa, mikä näkyi myös luostareiden kohtaloissa. Počajivin luostari sai tänä aikana yhä enemmän pyhiinvaeltajia.",
+  "linkit": [
+   "Venäjän keisarikunnan",
+   "Žytomyr",
+   "Puolan jaoissa"
+  ],
+  "jatkot": [
+   "Mikä Žytomyr on?",
+   "Mitä Puolan jaot tarkoittivat Volynialle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "Puola-Liettualle",
+  "kysymys": "Kerro lisää: Puola-Liettualle",
+  "vastaus": "Puola-Liettua oli Puolan kuningaskunnan ja Liettuan suuriruhtinaskunnan muodostama valtio, joka syntyi [[Lublinin unionissa]] vuonna 1569. Sitä kutsuttiin myös Kahden kansan tasavallaksi, ja kuningas valittiin vaaleilla. Aateliston edustuslaitos, [[Sejm]], oli keskeinen päätöksentekijä, ja järjestelmään kuului myös liberum veto, jonka mukaan yksikin edustaja saattoi pysäyttää päätöksenteon. Valtio oli laaja ja monikulttuurinen: sen alueeseen kuuluivat nykyisen Puolan ja Liettuan lisäksi suuri osa Valko-Venäjää ja Ukrainaa. Sisäiset ongelmat ja naapurivaltioiden painostus johtivat Puolan jakoihin 1700-luvun lopulla, ja valtio lakkasi vuonna 1795.",
+  "linkit": [
+   "Lublinin unionissa",
+   "Sejm"
+  ],
+  "jatkot": [
+   "Mitä liberum veto tarkoitti?",
+   "Miksi Puola-Liettua hajosi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "Ternopilin alueella",
+  "kysymys": "Kerro lisää: Ternopilin alueella",
+  "vastaus": "Ternopilin alue sijaitsee Länsi-Ukrainassa, ja sen keskus on Ternopilin kaupunki, jonka perusti vuonna 1540 puolalainen sotilas ja aatelismies Jan Amor Tarnowski. Alue kuuluu historialliseen Galitsiaan ja Podoliaan, ja sen halki virtaa [[Seret-joki]]. Alueella on useita linnoja ja luostareita, muun muassa [[Zbarazhin linna]] sekä Počajivin luostari. Kremenets, jonka lähellä Počajiv sijaitsee, on historiallinen kaupunki, jota ympäröivät mäet. Seutu on ollut vuosisatoja rajamaata, jossa ovat kohdanneet katolinen, ortodoksinen ja juutalainen kulttuuri.",
+  "linkit": [
+   "Seret-joki",
+   "Zbarazhin linna"
+  ],
+  "jatkot": [
+   "Millainen on Zbarazhin linna?",
+   "Missä Seret-joki virtaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "Ukrainassa",
+  "kysymys": "Kerro lisää: Ukrainassa",
+  "vastaus": "Ukraina on Itä-Euroopan valtio, jonka pinta-ala on suurin kokonaan Euroopassa sijaitsevista valtioista. Sen pääkaupunki on [[Kiova]], ja se itsenäistyi Neuvostoliiton hajotessa vuonna 1991. Maan rajanaapureita ovat Puola, Slovakia, Unkari, Romania, Moldova, Valko-Venäjä ja Venäjä, ja etelässä on Musta meri sekä Azovinmeri. Maisemaa hallitsevat laajat arot ja mustamultaiset pellot, mutta lännessä kohoavat [[Karpaattien]] vuoret. Maan halki virtaa [[Dnepr]], jonka varrella sijaitsevat Kiova ja monet muut tärkeät kaupungit. Maassa on pitkä ja monikerroksinen historia Kiovan Rusista nykypäivään.",
+  "linkit": [
+   "Kiova",
+   "Karpaattien",
+   "Dnepr"
+  ],
+  "jatkot": [
+   "Mitä luonnonalueita Ukrainassa on?",
+   "Miten ukrainan kieli eroaa venäjästä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "Kreikkalaiskatolinen kirkko",
+  "kysymys": "Kerro lisää: Kreikkalaiskatolinen kirkko",
+  "vastaus": "Kreikkalaiskatolinen kirkko on itäisen kirkon liturgiaa ja perinteitä noudattava kirkko, joka on yhteydessä Rooman paaviin. Ukrainassa sen synty liittyy [[Brestin unioniin]] vuonna 1596, jossa osa ortodoksisen kirkon piispoista liittyi Rooman yhteyteen säilyttäen oman liturgiansa ja tapansa. Kirkon keskus on Länsi-Ukrainassa, erityisesti Lvivissä, jossa sijaitsee [[Pyhän Yrjön katedraali]]. Neuvostoliitto kielsi kirkon vuonna 1946 ja pakotti sen yhdistymään ortodoksiseen kirkkoon, ja se toimi maan alla, kunnes se sai laillisen aseman uudelleen 1980-luvun lopulla. Tunnettu johtohahmo oli metropoliitta [[Andrei Šeptytskyi]].",
+  "linkit": [
+   "Brestin unioniin",
+   "Pyhän Yrjön katedraali",
+   "Andrei Šeptytskyi"
+  ],
+  "jatkot": [
+   "Mikä oli Brestin unioni?",
+   "Kuka oli Andrei Šeptytskyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pochayiv",
+  "kasite": "paaviin",
+  "kysymys": "Kerro lisää: paaviin",
+  "vastaus": "Paavi on Rooman piispa ja katolisen kirkon johtaja, ja hänen asuinpaikkansa on [[Vatikaanin]] kaupunkivaltio. Katolisen perinteen mukaan paavi on apostoli [[Pietarin]] seuraaja. Kreikkalaiskatoliset kirkot, kuten Ukrainan kreikkalaiskatolinen kirkko, tunnustavat paavin ylimmäksi johtajaksi, mutta säilyttävät itäisen riituksensa ja omat tapansa. Ortodoksinen kirkko ei tunnusta paavin ylivaltaa. Paavit ovat vierailleet myös Ukrainassa: [[Johannes Paavali II]] kävi maassa kesäkuussa 2001, ja hän vieraili Kiovassa ja Lvivissä.",
+  "linkit": [
+   "Vatikaanin",
+   "Pietarin",
+   "Johannes Paavali II"
+  ],
+  "jatkot": [
+   "Miksi ortodoksinen kirkko ei tunnusta paavia?",
+   "Mikä on Vatikaanin kaupunkivaltio?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "hasidismin",
+  "kysymys": "Kerro lisää: hasidismin",
+  "vastaus": "Hasidismi on 1700-luvulla Podoliassa ja sen lähialueilla syntynyt juutalaisuuden hengellinen liike, jonka perustajana pidetään Baal Shem Tovia. Se korosti rukouksen, ilon ja Jumalan läsnäolon kokemista arjessa oppineisuuden rinnalla, ja se hyödynsi juutalaisen mystiikan eli [[kabbalan]] ajatuksia. Liikkeen johtajaksi tuli Baal Shem Tovin jälkeen oppilas [[Dov Ber Mezritšiläinen]], jonka aikana hasidismi levisi laajalle Itä-Eurooppaan. Osa oppineista vastusti liikettä, ja sen tunnetuimpiin vastustajiin kuului [[Vilnan Gaon]]. Hasidismi on säilynyt elävänä, ja sen eri ryhmät vierailevat edelleen Ukrainassa pyhinä pitämissään paikoissa, esimerkiksi [[Umanissa]].",
+  "linkit": [
+   "kabbalan",
+   "Dov Ber Mezritšiläinen",
+   "Vilnan Gaon",
+   "Umanissa"
+  ],
+  "jatkot": [
+   "Kuka oli Vilnan Gaon?",
+   "Miksi Uman on hasidien pyhiinvaelluskohde?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Medzhybižissä",
+  "kysymys": "Kerro lisää: Medzhybižissä",
+  "vastaus": "Medzhybiž on Khmelnytskyin alueella Podoliassa sijaitseva pieni kaupunki Etelä-Bugin ja Buzhok-joen yhtymäkohdassa. Sen linnoitus nousi 1500-luvulla puolalaissuvun käsiin, ja siitä tuli yksi seudun vahvimmista puolustuspaikoista tataarien ja osmanien hyökkäyksiä vastaan, myöhemmin [[Czartoryskien]] suvun omistuksessa. Kaupunki on merkittävä juutalaisen historian paikka, sillä [[hasidismin]] perustaja Baal Shem Tov asui siellä vuosina 1742–1760. Kaupungin juutalainen yhteisö oli vuosisatojen ajan huomattava osa asukkaista, ja pyhiinvaeltajat vierailevat yhä Baal Shem Tovin haudalla. Joenmutka tarjosi linnoitukselle luonnollisen suojan, ja [[Etelä-Bugin]] ja Buzhokin rannoilla on edelleen näkyvissä muureja.",
+  "linkit": [
+   "Czartoryskien",
+   "hasidismin",
+   "Etelä-Bugin"
+  ],
+  "jatkot": [
+   "Miten juutalaiset elivät Podoliassa 1700-luvulla?",
+   "Keitä Czartoryskit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Medzhybižin",
+  "kysymys": "Kerro lisää: Medzhybižin",
+  "vastaus": "Medzhybižin linnoitus kohoaa niemekkeellä Etelä-Bugin ja Buzhok-joen yhtymäkohdassa Länsi-Ukrainan Podoliassa. Ensimmäinen linnoitus mainitaan [[Kiovan Rusin]] kronikoissa vuonna 1146, ja nykyinen kivilinna rakennettiin 1500-luvulla puolalaisten [[Sieniawskien]] ja myöhemmin [[Czartoryskien]] hallinnassa. Sitä pidettiin yhtenä alueen vahvimmista linnoituksista, ja se suojasi seutua osmanien ja [[Krimin tataarien]] hyökkäyksiltä. Puolan jaon jälkeen vuonna 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omistuksessa vuoteen 1830 saakka.",
+  "linkit": [
+   "Kiovan Rusin",
+   "Sieniawskien",
+   "Czartoryskien",
+   "Krimin tataarien"
+  ],
+  "jatkot": [
+   "Keitä Krimin tataarit olivat?",
+   "Milloin Puolan toinen jako tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Baal Shem Tovin",
+  "kysymys": "Kerro lisää: Baal Shem Tovin",
+  "vastaus": "Baal Shem Tov, oikealta nimeltään Israel ben Eliezer, oli 1700-luvun juutalainen mystikko ja parantaja, jota pidetään hasidismin perustajana. Nimi tarkoittaa suunnilleen hyvän nimen mestaria, ja hänestä käytetään myös lyhennettä Besht. Hän asui [[Medzhybižissä]] vuodesta 1742 kuolemaansa vuonna 1760. Hänen opetuksensa korosti rukousta ilolla, Jumalan läsnäoloa kaikessa ja tavallisten ihmisten arvoa, ja se nojasi [[kabbalan]] perinteeseen. Hänen jälkeensä liikkeen johtajaksi nousi oppilas [[Dov Ber Mezritšiläinen]]. Baal Shem Tovista on säilynyt paljon kertomuksia, joista suuri osa on legendaa, joten historiallisen henkilön ja perimätiedon erottaminen on vaikeaa.",
+  "linkit": [
+   "Medzhybižissä",
+   "kabbalan",
+   "Dov Ber Mezritšiläinen"
+  ],
+  "jatkot": [
+   "Miten Baal Shem Tovin kertomukset ovat säilyneet?",
+   "Mikä on kabbala?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Baal Shem Tovia",
+  "kysymys": "Kerro lisää: Baal Shem Tovia",
+  "vastaus": "Nimitys baal shem tarkoitti perinteisesti miestä, joka tunsi pyhiä nimiä ja käytti niitä parantamiseen ja suojeluun, ja tähän asemaan Israel ben Eliezer nousi. Hän toimi opettajana ja parantajana Podolian juutalaisten keskuudessa ja asettui lopulta [[Medzhybižiin]]. Hänen ympärilleen kerääntyi oppilaspiiri, joka levitti hänen opetuksiaan [[hasidismin]] nimellä. Opetuksen ydin oli, että tavallisen ihmisen vilpitön rukous voi olla yhtä arvokas kuin oppineen tutkiskelu. Hänen hautansa vanhalla juutalaisella hautausmaalla on yhä pyhiinvaelluskohde, ja liikkeen perintö on elänyt [[Podolian]] ulkopuolellakin.",
+  "linkit": [
+   "Medzhybižiin",
+   "hasidismin",
+   "Podolian"
+  ],
+  "jatkot": [
+   "Mitä baal shem tarkoitti ammattina?",
+   "Miten hasidismi levisi Ukrainan ulkopuolelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "zaddikien",
+  "kysymys": "Kerro lisää: zaddikien",
+  "vastaus": "Zaddik tarkoittaa heprean kielessä vanhurskasta, ja hasidismissa sillä tarkoitetaan yhteisön hengellistä johtajaa, jota kutsutaan myös [[rebbeksi]]. Hasidit uskovat zaddikin olevan erityisen lähellä Jumalaa, ja hänen neuvonsa, siunauksensa ja rukouksensa ovat yhteisölle tärkeitä. Johtajan asema periytyi usein suvussa tai oppilaalle, ja tästä syntyivät hasidiset dynastiat, joita nimetään yleensä johtajan kotikaupungin mukaan, kuten [[Belzin]] hasidit Länsi-Ukrainassa. Jokainen ryhmä noudattaa omia tapojaan, mutta yhteistä on korostus iloon, rukoukseen ja yhteisöllisyyteen, jonka [[Baal Shem Tov]] aloitti. Zaddikin hauta on usein pyhiinvaelluskohde.",
+  "linkit": [
+   "rebbeksi",
+   "Belzin",
+   "Baal Shem Tov"
+  ],
+  "jatkot": [
+   "Mikä erottaa hasidiryhmät toisistaan?",
+   "Mitä rebbe tekee yhteisössä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Kiova",
+  "kysymys": "Kerro lisää: Kiova",
+  "vastaus": "Kiova on Ukrainan pääkaupunki, ja se sijaitsee Dneprin rinteillä. Perimätiedon mukaan sen perustivat veljekset Kyi, Shchek ja Khoriv sekä sisar Lybid. Kaupunki oli [[Kiovan Rusin]] keskus, ja ruhtinas Jaroslav Viisas rakennutti 1000-luvulla muurien pääportin, [[Kultaisen portin]]. Pyhän Sofian katedraali ja [[Kiovan luolaluostari]] kuuluvat Unescon maailmanperintökohteisiin. Mongolit valtasivat kaupungin vuonna 1240. Nykyaikana Kiovassa on myös erikoisuuksia: [[Arsenalnan]] metroasema on noin 105 metrin syvyydessä, ja jokirinteellä seisoo 62 metriä korkea teräksinen naispatsas Äiti-Isänmaa.",
+  "linkit": [
+   "Kiovan Rusin",
+   "Kultaisen portin",
+   "Kiovan luolaluostari",
+   "Arsenalnan"
+  ],
+  "jatkot": [
+   "Kuka oli Jaroslav Viisas?",
+   "Miksi Arsenalnan asema on niin syvällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Vladimir Suuri",
+  "kysymys": "Kerro lisää: Vladimir Suuri",
+  "vastaus": "Vladimir Suuri hallitsi Kiovan Rusia noin vuodesta 980 vuoteen 1015. Hänen tunnetuin tekonsa oli Rusin kristillistäminen: hän lupasi Bysantin keisari [[Basileios II:lle]] sotilasapua ja sai vastineeksi mahdollisuuden naida keisarin sisaren Annan, ehtona kaste. Vladimir kastettiin Krimin [[Khersonesoksessa]] ja kaatoi palattuaan Kiovaan pakanallisten jumalien patsaat; ylijumala [[Perunin]] kuva upotettiin Dneprin aaltoihin. Kiovan asukkaat kastettiin joukolla joessa vuonna 988. Ortodoksinen kirkko pitää häntä pyhimyksenä, ja hänen nimeään kantavat lukuisat kaupungit, kuten Volodymyr Volynian alueella.",
+  "linkit": [
+   "Basileios II:lle",
+   "Khersonesoksessa",
+   "Perunin"
+  ],
+  "jatkot": [
+   "Miksi Vladimir valitsi bysanttilaisen kristinuskon?",
+   "Mitä Peruni oli slaavien uskonnossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Dnestrin",
+  "kysymys": "Kerro lisää: Dnestrin",
+  "vastaus": "Dnestr on noin 1 350 kilometriä pitkä joki, joka saa alkunsa Ukrainan [[Karpaateilta]], virtaa Podolian halki ja muodostaa pitkän matkan Ukrainan ja [[Moldovan]] välisen rajan, ennen kuin laskee Mustaanmereen Odessan lähellä. Joen kanjonimaiset rantajyrkänteet ovat Podoliassa tyypillinen maisema. Moldovan puolella Dnestrin rannalla on [[Sorokan linnoitus]], jonka puinen edeltäjä pystytettiin vuonna 1499 ja jonka kivinen versio rakennettiin 1500-luvulla. Linnoitus suojasi tärkeää kahlaamoa tataarien ratsujoukoilta.",
+  "linkit": [
+   "Karpaateilta",
+   "Moldovan",
+   "Sorokan linnoitus"
+  ],
+  "jatkot": [
+   "Millainen on Dnestrin kanjoni?",
+   "Mitä Sorokan linnoitus suojasi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kasite": "Etelä-Bugin",
+  "kysymys": "Kerro lisää: Etelä-Bugin",
+  "vastaus": "Etelä-Bug on 806 kilometriä pitkä joki, jonka valuma-alue on lähes 64 000 neliökilometriä. Se saa alkunsa Volynian–Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon halki arojen Bugin lahteen Mustallemerelle. Joen varrella ovat [[Hmelnytskyi]], [[Vinnytsia]] ja [[Mykolaiv]], jossa joki saa vastaansa Inhul-joen ja laajenee suistoksi, joka yhtyy Dneprin suiston kanssa meren rannalla. Alajuoksulla joki virtaa graniittisen kallioperän halki, ja siellä on koskia ja kallioita. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta sittemmin raja siirtyi kauas etelään.",
+  "linkit": [
+   "Hmelnytskyi",
+   "Vinnytsia",
+   "Mykolaiv"
+  ],
+  "jatkot": [
+   "Missä Etelä-Bugin suisto sijaitsee?",
+   "Millaisia koskia Etelä-Bugissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Volodymyrin",
+  "kysymys": "Kerro lisää: Volodymyrin",
+  "vastaus": "Volodymyr, jota on kutsuttu myös nimellä Volodymyr-Volynskyi, on Volynin alueen vanha kaupunki Luoteis-Ukrainassa lähellä Puolan rajaa. Perimätiedon mukaan se on nimetty [[Vladimir Suuren]] mukaan, ja se mainitaan kronikoissa jo 900-luvun lopulla. Siitä tuli Volynian ruhtinaskunnan keskus ja piispanistuin. Kaupungissa on säilynyt keskiaikainen [[Uspenskin katedraali]], jonka rakennuttamisesta 1100-luvulla on tietoja ja jota pidetään seudun vanhimpiin kuuluvana kirkkona. Myöhemmin kaupunki toimi [[Galitsia-Volhynian kuningaskunnan]] pääkaupunkina muiden kaupunkien ohella. Latinankielinen nimi Lodomeria antoi nimensä Habsburgien kuningaskunnalle.",
+  "linkit": [
+   "Vladimir Suuren",
+   "Uspenskin katedraali",
+   "Galitsia-Volhynian kuningaskunnan"
+  ],
+  "jatkot": [
+   "Milloin Volodymyr mainitaan ensimmäisen kerran?",
+   "Mikä Uspenskin katedraali on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien",
+  "vastaus": "Habsburgit olivat eurooppalainen hallitsijasuku, jonka nimi tulee Habichtsburgin eli Haukkalinnan linnasta nykyisessä Sveitsissä. Suvun valta kasvoi, kun [[Rudolf I]] valittiin Saksan kuninkaaksi vuonna 1273, ja myöhemmin suku hallitsi Itävaltaa, Unkaria, Böömiä ja suuria osia Eurooppaa. Tunnetuimpia hallitsijoita oli [[Maria Teresia]], jonka aikana Wienin Schönbrunnin palatsi sai nykyisen asunsa. Suvun keisarillisena asuinpaikkana toimi [[Hofburg]], jossa pidettiin Wienin kongressi vuosina 1814–1815. Habsburgien valta päättyi vuonna 1918, kun viimeinen keisari Kaarle I luopui hallitsijan tehtävistä ensimmäisen maailmansodan jälkeen.",
+  "linkit": [
+   "Rudolf I",
+   "Maria Teresia",
+   "Hofburg"
+  ],
+  "jatkot": [
+   "Miksi Habsburgit hallitsivat niin laajaa aluetta?",
+   "Mitä Wienin kongressissa päätettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Venäjän keisarikuntaan",
+  "kysymys": "Kerro lisää: Venäjän keisarikuntaan",
+  "vastaus": "Volodymyr liitettiin Venäjän keisarikuntaan Puolan jakojen yhteydessä 1790-luvulla, ja siitä tuli Volynian kuvernementin kaupunki. Kuvernementin hallinnollinen keskus oli [[Žytomyr]], eikä Volodymyr ollut sen tärkein kaupunki. Raja Habsburgien [[Galitsian]] kanssa kulki lähellä, ja kaupungin nimi Lodomeria eli rajan toisella puolella Itävalta-Unkarin kruununmaan nimessä. Venäjän keisarikunnassa Volodymyr oli rajaseudun pieni kaupunki, jossa asui puolalaisia, ukrainalaisia ja juutalaisia. [[Puolan jaoissa]] tapahtuneet rajamuutokset ovat näin jättäneet jäljen kaupungin nimeen ja historiaan.",
+  "linkit": [
+   "Žytomyr",
+   "Galitsian",
+   "Puolan jaoissa"
+  ],
+  "jatkot": [
+   "Mikä oli Galitsian ja Lodomerian kuningaskunta?",
+   "Missä Žytomyr sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Itävalta-Unkarin",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin",
+  "vastaus": "Itävalta-Unkarin ukrainalaisalueita olivat Itä-Galitsia, jonka keskus oli Lviv, [[Bukovinan]] pohjoisosa sekä Karpatalja, joka kuului Unkarin puolelle. Ukrainalaisia kutsuttiin Habsburgien alueilla yleensä [[ruteeneiksi]], ja heidän asemansa oli suhteellisen hyvä verrattuna Venäjän keisarikuntaan: ukrainan kielellä sai julkaista ja opettaa, ja kansallinen liike pääsi kehittymään. Länsi-Ukrainan kreikkalaiskatolinen kirkko oli ruteenien kansallisen identiteetin keskeinen tukija. Lviv oli [[Galitsian ja Lodomerian kuningaskunnan]] pääkaupunki, ja se toimi alueen koulutus- ja kulttuurikeskuksena.",
+  "linkit": [
+   "Bukovinan",
+   "ruteeneiksi",
+   "Galitsian ja Lodomerian kuningaskunnan"
+  ],
+  "jatkot": [
+   "Missä Bukovina sijaitsi?",
+   "Keitä ruteenit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Kiovan Rusin",
+  "kysymys": "Kerro lisää: Kiovan Rusin",
+  "vastaus": "Kiovan Rus ei kadonnut hetkessä. Jo 1100-luvulla ruhtinaskunnat itsenäistyivät ja kilpailivat keskenään, ja Kiovan arvovalta heikkeni. Pohjoisessa vahvistuivat [[Novgorodin]] ja [[Vladimir-Suzdalin]] ruhtinaskunnat, lännessä Galitsian ja Volynian ruhtinaskunnat, jotka yhdistyivät [[Galitsia-Volhynian kuningaskunnaksi]]. Mongolien hyökkäys 1200-luvun puolivälissä, jossa Kiova vallattiin vuonna 1240, päätti Rusin ajan. Rusin perintöä pitävät omanaan ukrainalaiset, venäläiset ja valkovenäläiset, ja perintö on ollut myös poliittisen kiistelyn aihe.",
+  "linkit": [
+   "Novgorodin",
+   "Vladimir-Suzdalin",
+   "Galitsia-Volhynian kuningaskunnaksi"
+  ],
+  "jatkot": [
+   "Milloin mongolit hyökkäsivät Kiovaan?",
+   "Miten Novgorod kehittyi Rusin jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Volodymyr",
+  "kysymys": "Kerro lisää: Volodymyr",
+  "vastaus": "Volodymyr on Luoteis-Ukrainan Volynin kaupunki, joka oli keskiajalla Volynian ruhtinaskunnan pääkaupunki ja piispanistuin. Kaupungin lähellä sijaitsee [[Zymnen luostari]], jota pidetään Volynian vanhimpana ortodoksiluostarina. Myöhemmin Volodymyr kuului [[Liettuan suuriruhtinaskuntaan]] ja [[Puola-Liettuaan]], ja 1790-luvulla se siirtyi Puolan jaoissa Venäjälle. Vuosina 1920–1939 kaupunki oli osa toista Puolan tasavaltaa, ja sen jälkeen Neuvostoliiton ja lopulta itsenäisen Ukrainan osa. Volodymyrin nimi eli Lodomeria on säilynyt Habsburgien historiallisessa Galitsian ja Lodomerian kuningaskunnassa.",
+  "linkit": [
+   "Zymnen luostari",
+   "Liettuan suuriruhtinaskuntaan",
+   "Puola-Liettuaan"
+  ],
+  "jatkot": [
+   "Miksi Zymnen luostari on tärkeä?",
+   "Mikä on Volynian kuvernementti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Puolan",
+  "kysymys": "Kerro lisää: Puolan",
+  "vastaus": "Puola syntyi keskiajalla Piast-suvun hallitsemaksi kuningaskunnaksi, ja ensimmäisenä historiallisena hallitsijana pidetään [[Mieszko I:tä]], joka kastettiin vuonna 966. Vuonna 1385 solmittu liitto Liettuan suuriruhtinaskunnan kanssa toi valtaan [[Jagiellonien]] suvun, ja [[Lublinin unioni]] vuonna 1569 yhdisti maat Puola-Liettuaksi. Puolan valtakunta oli pitkään yksi Euroopan suurimmista, mutta se jaettiin Venäjän, Preussin ja Itävallan kesken vuosina 1772–1795. Itsenäisyys palautui vuonna 1918. Galitsian alue liitettiin Puolaan 1300-luvulla Kasimir III Suuren aikana, mistä alkoi pitkä yhteinen historia Ukrainan kanssa.",
+  "linkit": [
+   "Mieszko I:tä",
+   "Jagiellonien",
+   "Lublinin unioni"
+  ],
+  "jatkot": [
+   "Mitä Lublinin unioni oli?",
+   "Kuka oli Mieszko I?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Liettuan",
+  "kysymys": "Kerro lisää: Liettuan",
+  "vastaus": "Liettua oli keskiajalla Euroopan viimeisiä pakanallisia valtioita, ja Liettuan suuriruhtinaskunta kasvoi 1300-luvulla itään ja etelään. Tärkeä hallitsija oli [[Gediminas]], jonka aikana Vilna tuli pääkaupungiksi, ja hänen jälkeläisensä laajensivat valtakuntaa Kiovan Rusin entisille alueille, myös Ukrainan puolelle. Liettuan suuriruhtinas [[Vytautas]] voitti yhdessä Puolan kanssa Saksalaisen ritarikunnan Grunwaldin taistelussa vuonna 1410. Liettua kristillistyi 1380-luvun lopulla. Vuonna 1569 se yhdistettiin Puolan kanssa, ja Liettuan suuriruhtinaskunta oli osa Puola-Liettuaa, kunnes se jaettiin 1700-luvun lopulla.",
+  "linkit": [
+   "Gediminas",
+   "Vytautas"
+  ],
+  "jatkot": [
+   "Mikä oli Grunwaldin taistelu?",
+   "Miksi Liettua kristillistyi vasta 1380-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Volodymyrista",
+  "kysymys": "Kerro lisää: Volodymyrista",
+  "vastaus": "Volodymyr on yksi Ukrainan vanhimmista kaupungeista, ja sen historia ulottuu Kiovan Rusin aikaan. Keskiajalla se oli Volynian ruhtinaskunnan keskus, ja [[Daniel Galitsialainen]] liitti Volynian ja Galitsian yhteen valtioksi. Kaupungin latinankielinen nimi Lodomeria antoi nimensä Habsburgien Galitsian ja Lodomerian kuningaskunnalle, vaikka itse kaupunki kuului Venäjän keisarikuntaan. [[Zymnen luostari]] sijaitsee viiden kilometrin päässä etelässä. Kaupunki oli ruhtinaskuntien ja kuningaskuntien rajalla, minkä takia sen asema ja kuuluvuus muuttuivat usein, mutta nimi on säilynyt.",
+  "linkit": [
+   "Daniel Galitsialainen",
+   "Zymnen luostari"
+  ],
+  "jatkot": [
+   "Kuka oli Daniel Galitsialainen?",
+   "Miksi Lodomeria-nimeä käytettiin Galitsiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Volynian",
+  "kysymys": "Kerro lisää: Volynian",
+  "vastaus": "Volynia on historiallinen alue Luoteis-Ukrainassa, ja siihen kuuluvat nykyisin Volynin alueen lisäksi osia muista alueista. Alueen kaupunkeja ovat [[Lutsk]] ja Volodymyr, ja Lutskissa kohoaa keskiaikainen [[Lutskin linna]], jonka rakennuttamisen liitetään Liettuan ruhtinas Lubartasiin. Alue oli keskiajalla oma ruhtinaskuntansa, myöhemmin osa Liettuan suuriruhtinaskuntaa ja Puola-Liettuaa, ja sen jälkeen Venäjän keisarikuntaa ja Puolan toista tasavaltaa. Pohjoisosassa on metsäistä ja soista [[Polesien]] seutua, joka erottaa Volynian Valko-Venäjästä.",
+  "linkit": [
+   "Lutsk",
+   "Lutskin linna",
+   "Polesien"
+  ],
+  "jatkot": [
+   "Mikä on Polesie?",
+   "Millainen on Lutskin linna?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kasite": "Venäjän",
+  "kysymys": "Kerro lisää: Venäjän",
+  "vastaus": "Venäjä syntyi [[Moskovan ruhtinaskunnasta]], josta tuli 1500-luvulla tsaarikunta ja vuonna 1721 [[Venäjän keisarikunta]]. Neuvostoliitto oli vuosina 1922–1991 Venäjän johtama liittovaltio, ja nykyinen Venäjän federaatio on pinta-alaltaan maailman suurin valtio. Puolan jaoissa Venäjä sai laajoja alueita nykyisen Valko-Venäjän, Liettuan ja Ukrainan alueelta, ja [[Katariina Suuren]] aikana Venäjä laajeni myös Mustanmeren rannikolle. Venäjän ja Ukrainan historia kietoutuu yhteen Kiovan Rusin kautta, mutta valtioiden käsitykset tämän perinnön omistajuudesta eroavat.",
+  "linkit": [
+   "Moskovan ruhtinaskunnasta",
+   "Venäjän keisarikunta",
+   "Katariina Suuren"
+  ],
+  "jatkot": [
+   "Millainen oli Katariina Suuren ulkopolitiikka?",
+   "Milloin Neuvostoliitto hajosi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Etelä-Bug",
+  "kysymys": "Kerro lisää: Etelä-Bug",
+  "vastaus": "Etelä-Bug on joki Länsi- ja Etelä-Ukrainassa, ja sen pituus on 806 kilometriä. Joen valuma-alue on lähes 64 000 neliökilometriä, ja se laskee Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat Hmelnytskyin, Vinnytsian ja [[Mykolaivin]] kaupungit. Mykolaivin kohdalla [[Inhul-joki]] liittyy siihen, ja kaupunki on yksi Ukrainan tärkeistä laivanrakennuskeskuksista. Etelä-Bugia ei pidä sekoittaa Länsi-Bugiin, joka virtaa Puolan, Ukrainan ja Valko-Venäjän rajaseudulla ja laskee Narewin kautta Veikseliin. Etelä-Bugin rannoilla on suojeltuja luontoalueita, joilla kasvaa aro- ja kalliokasvillisuutta.",
+  "linkit": [
+   "Mykolaivin",
+   "Inhul-joki"
+  ],
+  "jatkot": [
+   "Missä Mykolaiv sijaitsee?",
+   "Mikä on Inhul-joki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Mustallemerelle",
+  "kysymys": "Kerro lisää: Mustallemerelle",
+  "vastaus": "Musta meri on Ukrainalle tärkeä merireitti, sillä sen pohjoisrannikolla sijaitsevat [[Odessa]], Mykolaiv ja muut satamat. Mereen laskevat [[Tonava]], Dnepr, Dnestr ja Etelä-Bug, jotka tuovat siihen makeaa vettä. Meri yhtyy [[Bosporin]] kautta Marmaranmereen ja edelleen Välimereen, joten sen satamista on pääsy maailmanmerille. Odessa perustettiin vuonna 1794 uuden Venäjän tärkeäksi satamaksi, ja siitä tuli viljakaupan keskus. Mustallamerellä on myös hapeton syvä kerros, jonka alapuolella ei elä korkeampaa eläimistöä.",
+  "linkit": [
+   "Odessa",
+   "Tonava",
+   "Bosporin"
+  ],
+  "jatkot": [
+   "Milloin Odessa perustettiin?",
+   "Miten Tonavan suisto syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Mykolaivin",
+  "kysymys": "Kerro lisää: Mykolaivin",
+  "vastaus": "Mykolaiv on Etelä-Ukrainan satamakaupunki Etelä-Bugin ja Inhul-joen yhtymäkohdassa. Se perustettiin vuonna 1789 laivatelakaksi, ja perustamisen taustalla oli [[Grigori Potjomkin]], jonka johdolla Venäjä rakensi Mustanmeren laivastoa. Kaupunki kehittyi laivanrakennuksen, kaupan ja teollisuuden keskukseksi, ja sen telakat rakensivat aluksia [[Mustanmeren laivaston]] tarpeisiin. Etelä-Bugin suisto tarjoaa sille yhteyden Mustallemerelle, mutta alajuoksun matalat vedet ovat vaatineet väylien ylläpitoa. Kaupunki on ollut viime vuosina Venäjän hyökkäyssodan kohteena.",
+  "linkit": [
+   "Grigori Potjomkin",
+   "Mustanmeren laivaston"
+  ],
+  "jatkot": [
+   "Kuka oli Grigori Potjomkin?",
+   "Mikä on Inhul-joki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Venäjän",
+  "kysymys": "Kerro lisää: Venäjän",
+  "vastaus": "Etelä-Bug oli 1700-luvun lopulla Venäjän ja Osmanien valtakunnan välinen rajajoki. Vuoden 1774 [[Küçük Kaynarcan rauhan]] jälkeen Venäjä sai laajan pääsyn Mustallemerelle ja raja kulki Etelä-Bugin tienoilla, ja vuoden 1792 [[Jassyn rauha]] siirsi rajan Dnestrille. Seutu asutettiin uusilla kaupungeilla, kuten [[Odessalla]] vuonna 1794, ja siitä tuli osa Venäjän keisarikunnan etelärajaa. Joki menetti sen jälkeen rajajoen asemansa, ja sen varrella kehittyi viljanviljelyä, satamia ja teollisuutta.",
+  "linkit": [
+   "Küçük Kaynarcan rauhan",
+   "Jassyn rauha",
+   "Odessalla"
+  ],
+  "jatkot": [
+   "Mitä Küçük Kaynarcan rauha sisälsi?",
+   "Milloin Odessa perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Mustaamerta",
+  "kysymys": "Kerro lisää: Mustaamerta",
+  "vastaus": "Musta meri on ollut vuosituhansia tärkeä kauppa- ja kulkureitti. Kreikkalaiset perustivat sen rannikolle kauppakaupunkeja jo antiikin aikana, kuten [[Olbian]] Etelä-Bugin ja Dneprin suiston läheisyyteen. Keskiajalla Mustanmeren kauppaa hallitsi aluksi Bysantti ja sen jälkeen italialaiset kauppakaupungit, erityisesti [[Genova]]. 1400-luvun lopulta alkaen [[Ottomaanit]] valvoivat suurta osaa rannikosta, kunnes Venäjä vahvisti asemaansa 1700-luvun lopulla. Nykyisin meri on tärkeä Ukrainan viljan ja metallin viennin väylä, ja Bosporin kautta kulkee vilkasta laivaliikennettä.",
+  "linkit": [
+   "Olbian",
+   "Genova",
+   "Ottomaanit"
+  ],
+  "jatkot": [
+   "Mikä oli Olbian kaupunki?",
+   "Miten Genova hallitsi Mustanmeren kauppaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "mustamultaa",
+  "kysymys": "Kerro lisää: mustamultaa",
+  "vastaus": "Mustamulta eli tšernozem on syvä, humusrikas ja tumma maaperä, joka syntyi arojen ruohokasvillisuuden ja viileähkön ilmaston vaikutuksesta vuosituhansien kuluessa. Sen runsas [[humus]] ja hyvä vedenpidätyskyky tekevät siitä erittäin viljavaa, ja se on yksi maailman parhaista viljelymaista. Mustamultaa esiintyy laajasti Ukrainassa, Etelä-Venäjällä sekä Unkarin ja Romanian tasangoilla. Venäläinen maatieteilijä [[Vasili Dokutšajev]] tutki sitä 1800-luvulla ja julkaisi aiheesta teoksen vuonna 1883. Mustamulta on tehnyt Ukrainasta merkittävän viljantuottajan, ja vilja viedään [[Odessan]] ja muiden Mustanmeren satamien kautta.",
+  "linkit": [
+   "humus",
+   "Vasili Dokutšajev",
+   "Odessan"
+  ],
+  "jatkot": [
+   "Miksi mustamulta on hedelmällistä?",
+   "Mitä Dokutšajev tutki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Etelä-Bugin",
+  "kysymys": "Kerro lisää: Etelä-Bugin",
+  "vastaus": "Etelä-Bug virtaa Podolian ylängöltä kaakkoon, ja sen alajuoksulla Mykolaivin alueella joki halkoo [[Ukrainan kilven]] graniittista kallioperää. Joen rannoilla on kallioita, koskia ja rotkoja, joista tunnetuin lienee [[Aktoven kanjoni]], ja lähteiden mukaan seutu on suosittu retkeily- ja melontakohde. Aroalueella joki on tärkeä vedenlähde sekä asutukselle että viljelylle. Joen ympäristössä on myös suojeltuja luontoalueita, joilla säilyy luonnontilaista arokasvillisuutta. [[Mykolaivin]] kohdalla joki levenee suistoksi.",
+  "linkit": [
+   "Ukrainan kilven",
+   "Aktoven kanjoni",
+   "Mykolaivin"
+  ],
+  "jatkot": [
+   "Millainen on Aktoven kanjoni?",
+   "Mikä on Ukrainan kilpi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Narewin",
+  "kysymys": "Kerro lisää: Narewin",
+  "vastaus": "Narew on joki Koillis-Puolassa, ja se on Veikselin sivujoki. Se laskee [[Länsi-Bugiin]] Varsovan pohjoispuolella, ja yhdistynyt joki virtaa sitten Veikseliin. Puolan puolella Narewin pituus on noin 450 kilometriä. Joen keskijuoksulla sijaitsee [[Narwian kansallispuisto]], jossa joki jakautuu lukuisiksi haaroiksi ja muodostaa soisen, kosteikkoisen maiseman. Joen alajuoksulla Varsovan lähellä on [[Zegrzen]] tekojärvi.",
+  "linkit": [
+   "Länsi-Bugiin",
+   "Narwian kansallispuisto",
+   "Zegrzen"
+  ],
+  "jatkot": [
+   "Missä Narew yhtyy Länsi-Bugiin?",
+   "Mikä on Narwian kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Veikseliin",
+  "kysymys": "Kerro lisää: Veikseliin",
+  "vastaus": "Veikseli on Puolan pisin joki, ja sen pituus on noin 1 050 kilometriä. Se saa alkunsa Etelä-Puolan Beskideiltä, virtaa [[Krakovan]] ja [[Varsovan]] kautta pohjoiseen ja laskee [[Gdańskin]] lähellä Itämereen. Joen varrella ovat myös Toruń ja Płock. Veikseli on ollut vuosisatojen ajan Puolan tärkein vesireitti, jota pitkin on kuljetettu viljaa ja puuta Itämeren satamiin. Joen valuma-alue kattaa suurimman osan Puolasta, ja siihen yhtyvät muun muassa Narew ja Länsi-Bug.",
+  "linkit": [
+   "Krakovan",
+   "Varsovan",
+   "Gdańskin"
+  ],
+  "jatkot": [
+   "Mitä kaupunkeja Veikselin varrella on?",
+   "Miksi Veikseli on Puolalle tärkeä joki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "Mustaanmereen",
+  "kysymys": "Kerro lisää: Mustaanmereen",
+  "vastaus": "Musta meri on suolapitoisuudeltaan matalampi kuin valtameret, koska siihen laskee suuria jokia. Se yhtyy Bosporin salmen kautta [[Marmaranmeren]] ja [[Dardanellien]] kautta Välimereen, ja pohjoisessa se on yhteydessä [[Azovinmeren]] kanssa Kertšinsalmen kautta. Mereen laskevat muun muassa Tonava, Dnepr ja [[Dnestr]]. Syvissä osissa ei ole happea, joten meri on poikkeuksellinen ekosysteemi. Rannikon eläimistöön kuuluvat delfiinit, ja sen satamat ovat ratkaisevia Itä-Euroopan kauppareiteille.",
+  "linkit": [
+   "Marmaranmeren",
+   "Dardanellien",
+   "Azovinmeren",
+   "Dnestr"
+  ],
+  "jatkot": [
+   "Mikä on Bosporin salmi?",
+   "Miksi Mustanmeren syvä vesi on hapetonta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kasite": "vedenjakajat",
+  "kysymys": "Kerro lisää: vedenjakajat",
+  "vastaus": "Vedenjakaja on korkeampi maastonkohta tai harjanne, joka erottaa toisistaan kaksi valuma-aluetta, jolloin sadevesi virtaa eri suuntiin. Vedenjakajia on eri kokoisia: pieni kumpu voi erottaa kaksi puroa, ja suuri vuoristo voi erottaa kokonaisia meriä. Suomessa tunnettu esimerkki on [[Maanselkä]], joka erottaa Itämereen ja Jäämereen virtaavat vedet. Ukrainassa ja sen lähialueilla vedenjakaja kulkee muun muassa Itämeren ja Mustanmeren valuma-alueiden välillä, jolloin osa joista laskee [[Itämereen]] ja osa [[Mustaanmereen]].",
+  "linkit": [
+   "Maanselkä",
+   "Itämereen",
+   "Mustaanmereen"
+  ],
+  "jatkot": [
+   "Mikä on Maanselkä?",
+   "Mitkä ovat Euroopan suuret vedenjakajat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-askania-nova",
+  "kasite": "Friedrich Falz-Fein",
+  "kysymys": "Kerro lisää: Friedrich Falz-Fein",
+  "vastaus": "Friedrich Falz-Fein oli Askanija-Novan luonnonsuojelualueen perustaja. Hän syntyi vuonna 1863 ja oli siten vuonna 1873 vasta kymmenvuotias. Perhe oli saksalaista alkuperää olevaa sukua, joka omisti laajoja maa-alueita Etelä-Ukrainan arolla. Falz-Fein perusti sinne vuonna 1898 luonnonsuojelualueen, jonne kerättiin eläimiä ja kasveja eri puolilta maailmaa; alueen nimen kerrotaan viittaavan [[Anhaltin]] ruhtinassukuun, jonka maita seutu oli aiemmin. Alueelle tuotiin myös [[Przewalskinhevosten]] ja muiden arojen sorkkaeläinten kantoja, ja [[Askanija-Nova]] tunnetaan edelleen eläintarhastaan ja koskemattomasta arostaan.",
+  "linkit": [
+   "Anhaltin",
+   "Przewalskinhevosten",
+   "Askanija-Nova"
+  ],
+  "jatkot": [
+   "Mikä on Przewalskinhevonen?",
+   "Miten Askanija-Novan eläintarha toimii?"
+  ]
  }
 ]
