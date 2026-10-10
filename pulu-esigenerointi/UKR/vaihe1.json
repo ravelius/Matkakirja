@@ -2151,5 +2151,369 @@
    "Miten Volynian alue jakautuu nykyään?",
    "Mitä muuta Volynian historiasta on hyvä tietää?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kysymys": "Kuka oli Baal Shem Tov?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Baal Shem Tov, oikealta nimeltään Israel ben Eliezer, oli 1700-luvun juutalainen mystikko ja parantaja, jota pidetään [[hasidismin]] perustajana. Hän asui [[Medzhybižissä]] vuodesta 1742 kuolemaansa vuoteen 1760 asti, ja hänen hautansa kaupungin vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Nimi Baal Shem Tov tarkoittaa suunnilleen \"hyvän nimen mestaria\". Ja tän kaiken minä muistin ilman muistiinpanoja.",
+  "linkit": [
+   "hasidismin",
+   "Medzhybižissä"
+  ],
+  "jatkot": [
+   "Mitä hasidismi tarkoittaa?",
+   "Miksi hauta on pyhiinvaelluskohde?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kysymys": "Missä hänen hautansa sijaitsee?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Hänen hautansa sijaitsee [[Medzhybižin]] kaupungin vanhalla juutalaisella hautausmaalla Länsi-Ukrainan Podoliassa, Etelä-Bug- ja Buzhok-jokien yhtymäkohdan tienoilla. Paikka on edelleen hasidijuutalaisten pyhiinvaelluskohde, jonne tullaan rukoilemaan [[Baal Shem Tovin]] haudalle.\n\nMinä katson sellaisia paikkoja mieluummin katolta kuin lähietäisyydeltä, koska hiljaisuus kantaa ylös asti. Pyhiinvaeltajia en ole ikinä kuljettanut, mutta heidän kirjeitään kyllä.",
+  "linkit": [
+   "Medzhybižin",
+   "Baal Shem Tovin"
+  ],
+  "jatkot": [
+   "Milloin Baal Shem Tov eli?",
+   "Mikä on Medzhybižin linnoituksen historia?"
+  ],
+  "paikka": {
+   "nimi": "Medzhybiž",
+   "lat": 49.44,
+   "lon": 27.41,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kysymys": "Mikä on hasidismi?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Hasidismi on juutalaisuuden hengellinen liike, joka syntyi 1700-luvulla Itä-Euroopassa, ja sen perustajana pidetään [[Baal Shem Tovia]]. Liike korosti Jumalan palvelemista ilon, rukouksen ja yhteisön kautta oppineisuuden rinnalla, ja yhteisöt ryhmittyivät johtajiensa, [[zaddikien]], ympärille. Podolian seudulla liike levisi nopeasti, ja se on säilynyt elävänä tähän päivään. Voi sentään, tuli melkein saarna.",
+  "linkit": [
+   "Baal Shem Tovia",
+   "zaddikien"
+  ],
+  "jatkot": [
+   "Mikä on zaddik hasidismissa?",
+   "Missä päin Eurooppaa hasidismi levisi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kysymys": "Mikä oli Kiovan Rus?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Kiovan Rus oli keskiajan itäslaavilainen ruhtinaskuntien liitto, jonka keskuksena oli [[Kiova]] ja jonka valtaa piti käsissään Rurikin suku. Ruhtinas [[Vladimir Suuri]] käännytti alueen kristinuskoon noin 980-luvun lopulla, ja Kiovan Rusin perintöä pitävät omanaan sekä ukrainalaiset että venäläiset ja valkovenäläiset. Valtio hajosi 1200-luvulla, kun mongolien hyökkäys ja ruhtinaiden keskinäiset riidat heikensivät sitä. Medzhybižin ensimmäinen linnoitus mainitaan vuonna 1146 juuri sen ajan kronikoissa. Oli siinä taas ajanjaksoa mahdutettavaksi yhteen vastaukseen.",
+  "linkit": [
+   "Kiova",
+   "Vladimir Suuri"
+  ],
+  "jatkot": [
+   "Mitä Kiovan Rusin hajoamisen jälkeen tapahtui?",
+   "Millainen oli Vladimir Suuren kaste?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-medzhybizh",
+  "kysymys": "Mikä on Podolia?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on hyvä. Podolia on historiallinen alue Länsi- ja Lounais-Ukrainassa, suunnilleen [[Dnestrin]] ja [[Etelä-Bugin]] välissä. Se on laaja ylänkö, jonka maaperä on hedelmällistä mustamultaa, ja alue on ollut vuosisatojen ajan viljelyseutua ja rajamaata. Aluetta ovat hallinneet muun muassa Puola ja myöhemmin Venäjän keisarikunta. En ole varma, mihin kaikkiin rajoihin nykyiset kartat sen vetävät. Kyllä ylhäältä näyttää kaikki yhtä pellolta.",
+  "linkit": [
+   "Dnestrin",
+   "Etelä-Bugin"
+  ],
+  "jatkot": [
+   "Mikä on mustamulta?",
+   "Miten Podolia kuului Puolalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kysymys": "Mistä nimestä Itävalta-Unkarin \"Lodomerian kuningaskunta\" on peräisin?",
+  "uusi": false,
+  "vastaus": "Ai se. Nimi Lodomeria on peräisin [[Volodymyrin]] keskiaikaisesta latinankielisestä nimestä, ja se annettiin nimen toiseksi osaksi Galitsian ja Lodomerian kuningaskunnalle, joka oli [[Habsburgien]] monarkian kruununmaa. Lähteiden mukaan nimi perustui keskiajan unkarilaisten kuninkaiden vaatimukseen Halytsin ja Volhynian alueista. Itse kaupunki ei kuitenkaan koskaan kuulunut tähän kuningaskuntaan, vaan se jäi Venäjän keisarikunnan puolelle. Hauska nimi kyllä, ja sen oppii nyt sentään kerralla.",
+  "linkit": [
+   "Volodymyrin",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Mikä oli Galitsian ja Lodomerian kuningaskunta?",
+   "Miksi Habsburgit käyttivät unkarilaisten kuninkaiden vaatimusta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kysymys": "Kuuluiko Volodymyrin kaupunki itse tähän kuningaskuntaan?",
+  "uusi": false,
+  "vastaus": "Jaa-a, tästä tulee vähän hassu vastaus. Ei kuulunut: Volodymyr jäi rajan väärälle puolelle ja kuului [[Venäjän keisarikuntaan]], vaikka sen keskiaikainen nimi Lodomeria antoi nimensä [[Itävalta-Unkarin]] kuningaskunnalle. Näin kaupungin nimi eli rajan toisella puolella naapurimaakunnan virallisessa nimessä, vaikka kaupunki itse oli toisen valtakunnan alamaisia.\n\nRaja jakoi siis nimen ja kaupungin eri puolille, ja kyyhky kyllä ylittäisi sellaisen ilman passia. Silti se on ihan oikeasti outo yksityiskohta.",
+  "linkit": [
+   "Venäjän keisarikuntaan",
+   "Itävalta-Unkarin"
+  ],
+  "jatkot": [
+   "Mitä Puolan jaot olivat?",
+   "Mikä on Zymnen luostari?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kysymys": "Mikä oli Galitsia-Volhynian kuningaskunta?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Galitsia-Volhynian kuningaskunta oli keskiajan slaavilainen valtio nykyisen Länsi-Ukrainan alueella, ja se syntyi 1200-luvulla [[Kiovan Rusin]] heikennyttyä. Sen muodostivat Galitsian ja Volynian ruhtinaskunnat, ja [[Volodymyr]] oli yksi sen pääkaupungeista. Valtio hajosi 1300-luvulla, ja sen alueet joutuivat pääosin [[Puolan]] ja [[Liettuan]] hallintaan. Tarkkoja vuosilukuja en uskalla tähän kirjoittaa, kun en ole niistä aivan varma. Hurja määrä historiaa yhdessä kuningaskunnassa.",
+  "linkit": [
+   "Kiovan Rusin",
+   "Volodymyr",
+   "Puolan",
+   "Liettuan"
+  ],
+  "jatkot": [
+   "Mitä tapahtui Galitsian alueelle Puolan hallinnassa?",
+   "Millainen kaupunki Volodymyr oli keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kysymys": "Mikä Zymnen luostari on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Zymnen luostari sijaitsee noin viiden kilometrin päässä [[Volodymyrista]] etelään, ja sitä pidetään [[Volynian]] vanhimpana ortodoksiluostarina. Luostari kuuluu itäiseen kristinuskoon, ja se on vuosisatojen ajan ollut alueen hengellinen keskus. Tarkkaa perustamisvuotta en ole varma, joten jätän sen mainitsematta. Pyhiä paikkoja katsoo mielellään ylhäältä, kun siellä on rauhallista.",
+  "linkit": [
+   "Volodymyrista",
+   "Volynian"
+  ],
+  "jatkot": [
+   "Mitä ortodoksinen kirkko tarkoittaa?",
+   "Mikä on Volynia historiallisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-volodymyr-volynskyi",
+  "kysymys": "Mitä Puolan jaot olivat?",
+  "uusi": true,
+  "vastaus": "Tuota niin, iso aihe. Puolan jaoissa Venäjä, Preussi ja Habsburgien Itävalta jakoivat Puolan–Liettuan valtion alueita kolmessa vaiheessa vuosina 1772, 1793 ja 1795. Viimeisen jaon jälkeen itsenäistä Puolan valtiota ei enää ollut Euroopan kartalla, ja alueet kuuluivat jaon voittajille aina ensimmäiseen maailmansotaan asti. [[Volodymyrin]] seutu päätyi [[Venäjän]] puolelle ja Galitsia [[Habsburgien]] puolelle. Aika paljon valtioita yhdessä vastauksessa.",
+  "linkit": [
+   "Volodymyrin",
+   "Venäjän",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Milloin Puola itsenäistyi uudelleen?",
+   "Miksi Puolan–Liettuan valtio heikkeni?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kysymys": "Mikä on Ukrainan pisin kokonaan maan sisällä virtaava joki?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kyseessä on [[Etelä-Bug]], jonka pituus on lähteiden mukaan 806 kilometriä. Joki saa alkunsa Volynian–Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen [[Mustallemerelle]]. Sen varrella ovat muun muassa Hmelnytskyin, Vinnytsian ja [[Mykolaivin]] kaupungit. Dnepr on pidempi, mutta se virtaa useamman maan kautta. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Etelä-Bug",
+   "Mustallemerelle",
+   "Mykolaivin"
+  ],
+  "jatkot": [
+   "Missä Dnepr virtaa?",
+   "Mitä Mykolaivissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kysymys": "Minkä kahden valtakunnan rajana Etelä-Bug toimi 1700-luvulla?",
+  "uusi": false,
+  "vastaus": "Katotaas. Etelä-Bug oli 1700-luvun lopulla rajajoki Venäjän ja Osmanien valtakunnan välillä. Venäjän ja Osmanien välisten sotien jälkeen raja siirtyi vähitellen kauas etelään, ja 1800-luvun puolivälissä joki virtasi jo kokonaan [[Venäjän]] sisällä. Raja kulki siis siinä, missä nykyään on Ukrainan sisäisiä arolaajuuksia kohti [[Mustaamerta]]. Joen varren seutu oli siis aikoinaan melkoista rajamaata.",
+  "linkit": [
+   "Venäjän",
+   "Mustaamerta"
+  ],
+  "jatkot": [
+   "Mitkä sodat siirsivät rajaa kohti etelää?",
+   "Mikä on Musta meri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kysymys": "Mikä on aro luontotyyppinä?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Aro on lähes puuton ruohoalue, jossa ilmasto on liian kuiva metsälle mutta riittävän kosteaa ruohoille; kesät ovat kuumia ja talvet kylmiä. Ukrainan eteläosassa aroa on paljon, ja sen maaperä on usein ravinteikasta [[mustamultaa]], joka on tehnyt alueesta tärkeää viljelyseutua. Alue on myös tunnettu [[Etelä-Bugin]] kaltaisista joista, jotka halkovat sen kohti merta. Aron laajuutta ei oikein ymmärrä ennen kuin lentää sen yli.",
+  "linkit": [
+   "mustamultaa",
+   "Etelä-Bugin"
+  ],
+  "jatkot": [
+   "Mikä on mustamulta?",
+   "Mitä kasveja ja eläimiä arolla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kysymys": "Mikä ero on Etelä-Bugilla ja Länsi-Bugilla?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kyseessä ovat kaksi eri jokea: Etelä-Bug virtaa Ukrainassa kaakkoon ja laskee Bugin lahteen Mustallemerelle, kun taas Länsi-Bug kulkee Puolan, Ukrainan ja Valko-Venäjän rajaseuduilla ja päätyy [[Narewin]] kautta [[Veikseliin]]. Joet eivät siis kohtaa, vaikka nimi on sama ja ne alkavat samoilta seuduilta. Sekaannusvaara on todellinen, eikä nimiä pidä sotkea [[Mustaanmereen]] laskevaan toiseen.\n\nMinä tiedän tämän, koska kyyhkyn pitää tietää, mihin jokeen laskeutuu. Pari kertaa on mennyt sekaisin, mutta ei sanota sitä ääneen.",
+  "linkit": [
+   "Narewin",
+   "Veikseliin",
+   "Mustaanmereen"
+  ],
+  "jatkot": [
+   "Mistä Länsi-Bug saa alkunsa?",
+   "Mihin Veikselin joki laskee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-etela-bug",
+  "kysymys": "Mitä valuma-alue tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Niin, niin. Valuma-alue tarkoittaa aluetta, jolta sade- ja sulamisvedet virtaavat tiettyyn jokeen tai järveen. Sitä rajaavat maaston korkeat kohdat eli [[vedenjakajat]], ja kaikki niiden sisäpuolelle tuleva vesi päätyy samaan vesistöön. [[Etelä-Bugin]] valuma-alue on lähes 64 000 neliökilometriä, joten se on todella laaja. Pienessäkin joessa on yllättävän monta puroa takana.",
+  "linkit": [
+   "vedenjakajat",
+   "Etelä-Bugin"
+  ],
+  "jatkot": [
+   "Mikä on vedenjakaja?",
+   "Mitkä joet laskevat Mustaanmereen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-askania-nova",
+  "kysymys": "Minä vuonna Askanija-Novan luonnonsuojelualue perustettiin?",
+  "uusi": false,
+  "vastaus": "No jopas. Askanija-Novan luonnonsuojelualue perustettiin vuonna 1898, ja sen perustaja oli [[Friedrich Falz-Fein]]. Alue sijaitsee Etelä-Ukrainan kuivalla [[Taurian arolla]], ja siellä on eläintarha, koskematonta aroa ja kasvitieteellinen puutarha. Nykyään se kuuluu myös [[Unescon]] biosfäärialueiden verkostoon.\n\nUkrainan pulla on pampuški, ja minusta aron laidunmaiden äärellä sellainen kuuluisi aina evääksi. Kyllä, tiedän, tämä ei kuulunut kysymykseen.",
+  "linkit": [
+   "Friedrich Falz-Fein",
+   "Taurian arolla",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Millainen mies Friedrich Falz-Fein oli?",
+   "Mitä eläimiä Askanija-Novassa elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-askania-nova",
+  "kysymys": "Kuinka vanha Friedrich Falz-Fein oli isoisän matkan aikaan 1873?",
+  "uusi": false,
+  "vastaus": "Ai tota. Friedrich Falz-Fein oli vuonna 1873 kymmenvuotias poika, joten hän oli vasta lapsi, kun [[Askanija-Novan]] seudulla ei vielä ollut luonnonsuojelualuetta. Alueen hän perusti vasta vuonna 1898, kun oli jo aikuinen, ja se sijaitsee [[Taurian arolla]]. Saksalaissiirtokunta järjestäytyi kylänä vuonna 1890. Kymmenvuotiaan unelmat voivat siis kasvaa isoksi, vaikka se vie vuosikymmeniä.",
+  "linkit": [
+   "Askanija-Novan",
+   "Taurian arolla"
+  ],
+  "jatkot": [
+   "Milloin Falz-Fein perusti Askanija-Novan alueen?",
+   "Millainen oli saksalaissiirtokunta Askanija-Novassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-askania-nova",
+  "kysymys": "Mikä Przewalskinhevonen on?",
+  "uusi": true,
+  "vastaus": "Katsotaas. Przewalskinhevonen on pieni ja tanakka hevonen, jolla on tiheä harja ja joka on alun perin kotoisin Keski-Aasian aroilta. [[Askanija-Novan]] [[luonnonsuojelualueella]] sitä pidetään harvinaisena laiduntajana arolla. Tutkijat ovat keskustelleet siitä, onko se aidosti koskaan kesyttämätön vai kesytettyjen hevosten jälkeläinen, ja tässä en ole varma uusimmasta tilanteesta. Hevosille olen aina kuulunut vähän kaukainen sukulainen.",
+  "linkit": [
+   "Askanija-Novan",
+   "luonnonsuojelualueella"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä Askanija-Novassa on muuten?",
+   "Mikä on Askanija-Novan eläintarha?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-askania-nova",
+  "kysymys": "Mikä on Unescon ihminen ja biosfääri -ohjelma?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Unescon ihminen ja biosfääri -ohjelma eli MAB on 1970-luvulla käynnistetty ohjelma, jossa tutkitaan ja edistetään sitä, miten ihminen ja luonto voivat elää yhdessä kestävästi. Ohjelmaan kuuluvilla [[biosfäärialueilla]] on yleensä suojeltu ydinalue, sitä ympäröivä puskurivyöhyke ja ihmisten asuttama siirtymävyöhyke. [[Askanija-Nova]] on yksi Ukrainan alueista, jotka kuuluvat ohjelmaan. Tämä oli pitkä nimi pienelle kyyhkyselle.",
+  "linkit": [
+   "biosfäärialueilla",
+   "Askanija-Nova"
+  ],
+  "jatkot": [
+   "Mitä muuta Unesco tekee luonnon suojelemiseksi?",
+   "Mikä on biosfäärialue?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-askania-nova",
+  "kysymys": "Miksi Etelä-Ukrainassa asui saksalaisia siirtolaisia?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Venäjän keisarikunta houkutteli 1700-luvun lopulta ja 1800-luvun alkupuolella ulkomaalaisia, muun muassa saksalaisia, asuttamaan äskettäin valtaamaansa [[Mustanmeren]] pohjoispuolista arovyöhykettä. Siirtolaiset saivat maata ja tiettyjä etuoikeuksia, ja heistä tuli viljelijöitä ja karjankasvattajia. [[Venäjän keisarikunnan]] kyläyhteisöissä asui näin paljon eri kansoja, ja Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vuonna 1890.\n\nTämä on sellaista, minkä kuulin kerran vanhalta posteljoonilta. Ukrainassa heiltä olisi varmasti jäänyt joku pulla, mutta nimeä en uskalla arvata.",
+  "linkit": [
+   "Mustanmeren",
+   "Venäjän keisarikunnan"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa mustanmerensaksalaiset?",
+   "Milloin Venäjä valtasi Mustanmeren pohjoisrannan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-synevyr",
+  "kysymys": "Mistä kahdesta nimestä järven nimi Synevyr on muodostettu?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Kansantarun mukaan järven nimi Synevyr on muodostettu kahdesta nimestä: kreivin tyttären Synin ja hänen rakastamansa paimenpoika Vyrin nimistä. Tarinan mukaan järvi syntyi Synin kyynelistä, kun Vyr surmattiin isän käskystä. Järven keskellä on pieni saari, jota kutsutaan [[Merensilmäksi]], ja järvi sijaitsee [[Karpaattien]] ylängöllä.\n\nTuo on aika surullinen tarina, ja niitä kyyhky kuulee yllättävän usein. Todellinen selitys on kuitenkin geologinen, ja siihen palaan mielelläni, jos haluat.",
+  "linkit": [
+   "Merensilmäksi",
+   "Karpaattien"
+  ],
+  "jatkot": [
+   "Miten Synevyr oikeasti syntyi?",
+   "Mikä on Merensilmä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-synevyr",
+  "kysymys": "Mikä sai järven syntymään noin 10 000 vuotta sitten?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Lähteiden mukaan [[Synevyr]] syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti [[hiekkakiveä]] vuorenrinteeltä ja patosi kapean laakson. Syntynyt luonnonpato on huokoinen, joten vesi valuu yhä sen läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järvi sijaitsee Ozerna-vuoren juurella 980 metrin korkeudessa. Maanjäristyksiä en ole itse kokenut, onneksi.",
+  "linkit": [
+   "Synevyr",
+   "hiekkakiveä"
+  ],
+  "jatkot": [
+   "Millainen on Synevyrin kansallispuisto?",
+   "Mikä on Synevyrin Merensilmä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-synevyr",
+  "kysymys": "Mikä on Karpaatit?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Karpaatit ovat Keski- ja Itä-Euroopan vuoristo, joka kaartuu laajana jousena usean maan halki, muun muassa [[Slovakian]], Puolan, Ukrainan ja [[Romanian]] alueilla. Ukrainan Karpaateilla on muun muassa [[Synevyrin]] kaltaisia vuoristojärviä, ja alue on tunnettu metsistään ja perinteisestä paimenkulttuuristaan. Tarkkaa pituutta en uskalla sanoa, kun lähteet antavat vähän eri lukuja. Vuoria on kiva katsoa ylhäältä, mutta niiden yli lentäminen väsyttää.",
+  "linkit": [
+   "Slovakian",
+   "Romanian",
+   "Synevyrin"
+  ],
+  "jatkot": [
+   "Mikä on Karpaattien korkein huippu?",
+   "Millainen on Ukrainan Karpaattien paimenkulttuuri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-synevyr",
+  "kysymys": "Mikä alue Zakarpattia on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Zakarpattia eli Transkarpatia on Ukrainan länsiosassa, Karpaattien takana, ja se rajoittuu Slovakiaan, Unkariin, Romaniaan ja Puolaan. Alueen historia on ollut vaihteleva: 1900-luvulla se kuului vuorotellen useisiin valtioihin, muun muassa [[Unkarin]] ja [[Tšekkoslovakian]] alaisuuteen, ja liitettiin sodan jälkeen [[Neuvostoliittoon]]. Siellä sijaitsee myös Synevyr-järvi.\n\nYksityiskohdista en ole täysin varma, mutta suuri linja on tämä. Rajaseutu on kyyhkyn kannalta mukavaa, kun voi vilkaista kolmeen maahan samalla reissulla.",
+  "linkit": [
+   "Unkarin",
+   "Tšekkoslovakian",
+   "Neuvostoliittoon"
+  ],
+  "jatkot": [
+   "Mitä kieliä Zakarpattiassa puhutaan?",
+   "Mikä on Synevyrin kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-synevyr",
+  "kysymys": "Mitä kansallispuisto tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Kansallispuisto on luonnonsuojelualue, jonka tarkoituksena on suojella luontoa ja samalla antaa ihmisille mahdollisuus tutustua siihen. Rajoitukset ja säännöt vaihtelevat maittain. [[Synevyrin]] järven ympäristö julistettiin kansallispuistoksi vuonna 1989, ja järvi valittiin vuonna 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä. Alue sijaitsee [[Karpaattien]] rinteillä. Retkeilijän kannattaa muistaa ottaa eväät mukaan, minä en saa.",
+  "linkit": [
+   "Synevyrin",
+   "Karpaattien"
+  ],
+  "jatkot": [
+   "Mitä kansallispuistossa saa tehdä?",
+   "Mitkä ovat Ukrainan muut luonnonihmeet?"
+  ]
  }
 ]
