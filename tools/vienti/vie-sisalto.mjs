@@ -243,8 +243,12 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *   1.59 asetukset: kokoelmat/asetukset.json, natiivin Asetus.cs, Pelikoodari 5.10.2026
  *        (tavallinen objekti { skeema, versio, aanet, pelit, tekstit, kamera, osoitteet }, ei { alkiot });
  *        manifest.asetukset { tiedosto, sha256, tavuja }; lähde data/asetukset.json.
+ *   1.60 paakaupungit: kokoelmat/paakaupungit.json — pääkaupungit, jotka eivät ole laudan pysäkkejä (kevyt piste,
+ *        ei reittejä; js/packs/paakaupungit.js, tools/tee-paakaupungit.mjs) ja maat.*.perustiedot + maat.*.paakaupunki;
+ *        Euroopan minivaltiot AND/LIE/MCO/SMR/VAT maihin ja maarajoihin (omistaja PT:n kautta 10.10.2026). Vanhat
+ *        buildit ohittavat uuden kokoelman ja kentät; uudet maat näkyvät kuten muut kaupungittomat maat.
  */
-export const SKEEMAVERSIO_TARKKA = '1.59';
+export const SKEEMAVERSIO_TARKKA = '1.60';
 
 /*
  * Moduulit, joiden pikkukuva-kentät viedään ämpäriosoitteina (skeema 1.49). Muu moduulisisältö on sellaisenaan;

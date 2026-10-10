@@ -16,6 +16,10 @@ import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 
 export const MAARAJOJEN_TOLERANSSI = 0.05;
+/** Euroopan minivaltiot (sama joukko kuin tools/generoi-maapolygonit.mjs MINIVALTIOT). */
+const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT']);
+const laajuus = (r) => Math.max(Math.max(...r.map(([x]) => x)) - Math.min(...r.map(([x]) => x)),
+  Math.max(...r.map(([, y]) => y)) - Math.min(...r.map(([, y]) => y)));
 const asteet = ({ x, y }) => laudaltaAsteiksi('maailmankartta', x, y);
 
 function etaisyys([px, py], [ax, ay], [bx, by]) {
@@ -56,8 +60,12 @@ const laatikko = (renkaat) => {
 export function maarajaRivit(polku) {
   const data = JSON.parse(readFileSync(polku, 'utf8'));
   return Object.keys(data.maat).sort().map((iso) => {
+    // Minivaltiot (10.10.2026): 0,05°:n harvennus litistäisi Vatikaanin ja
+    // Monacon alle neljän pisteen ja ne putoaisivat; niille toleranssi
+    // kymmenesosa renkaan koosta. Muut maat ennallaan.
+    const tol = (r) => (MINIVALTIOT.has(iso) ? Math.min(MAARAJOJEN_TOLERANSSI, laajuus(r) / 10) : MAARAJOJEN_TOLERANSSI);
     const kaikki = maanRenkaatAsteina(data, iso, asteet)
-      .map((r) => harvenna(r).map(([lon, lat]) => [pyorista(lon), pyorista(lat)]))
+      .map((r) => harvenna(r, tol(r)).map(([lon, lat]) => [pyorista(lon), pyorista(lat)]))
       .filter((r) => r.length >= 4);
     // Skeema 1.34 (Fable 24.9.2026): web piirtää pallon maat nyt Natural Earth 10m
     // -aineistosta (#3078, Huippuvuoret Norjalle), joten rajausta ei enää tehdä:

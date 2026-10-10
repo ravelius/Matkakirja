@@ -19,7 +19,7 @@
  *     Mapit näkyvät samoina $-merkintöinä kuin raakakerroksessa.
  */
 import { sarjallista } from './sarjallista.mjs';
-import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
+import { laudaltaAsteiksi, projisoiLaudalle } from '../../js/fokusmitat.js';
 import { ISO2 } from './iso2.mjs';
 import { POISTETUT_SAANNOT, AVAUSLUENTOJEN_TEKSTIT } from './lahteet.mjs';
 import { PAAKAUPUNGIT } from './paakaupungit.mjs';
@@ -815,6 +815,10 @@ function maaKokoelma(ns, hae) {
   const { FOKUS_MAANIMET } = hae('js/packs/fokus-grc.js');
   const { MAA_KATEGORIAT } = hae('js/packs/maa-kategoriat.js');
   const tiedot = MAATIEDOT.maailmankartta ?? {};
+  const { PAAKAUPUNKIPISTEET, MAIDEN_PERUSTIEDOT } = hae('js/packs/paakaupungit.js');
+  const pisteet = new Map(PAAKAUPUNKIPISTEET.map((p) => [p.maa, p]));
+  const paakaupunki = (iso) => (PAAKAUPUNGIT[iso] ? { id: PAAKAUPUNGIT[iso], kokoelma: 'kaupungit' }
+    : pisteet.has(iso) ? { id: pisteet.get(iso).id, kokoelma: 'paakaupungit' } : null);
   const rivit = Object.entries(P.map.countryShapes).map(([iso, maa]) => {
     const lippu = maa.lippu ? ratkaiseMedia(maa.lippu, 'lippu-commons') : null;
     const nimet = FOKUS_MAANIMET[iso] ?? {};
@@ -825,14 +829,50 @@ function maaKokoelma(ns, hae) {
       tiedot: tiedot[iso] ?? null,
       maalehti: Object.hasOwn(MAA_KATEGORIAT, iso) ? iso : null,
       aiheet: (MAA_KATEGORIAT[iso] ?? []).map((a) => ({ id: a.id, nimi: a.nimi })),
+      perustiedot: MAIDEN_PERUSTIEDOT[iso] ?? null,
+      paakaupunki: paakaupunki(iso),
     };
   });
   return taulukko(`${LAUTA}#MAAILMANKARTTA.map.countryShapes + MAATIEDOT + FOKUS_MAANIMET`,
     'Laudan maat kartuschaa varten (id = ISO3): nimi, lippu (Commons) ja lippuUrl, paikallinen nimi ja valtiomuoto '
       + '1873 (FOKUS_MAANIMET, ei kaikilla), tiedot = MAATIEDOT (vakiluku, pintaAla, sijat, demokratia {arvo, sija}, '
       + 'keskitulo {arvo, sija}, tervehdykset [{teksti, kieli, osuus, lippu}]) tai null, maalehti = maalehdet-id, '
-      + 'aiheet = maalehden aiheet järjestyksessä.',
+      + 'aiheet = maalehden aiheet järjestyksessä. Skeema 1.60: perustiedot (js/packs/paakaupungit.js MAIDEN_PERUSTIEDOT: '
+      + 'virallinenNimi, valtiomuoto, vakiluku {arvo, vuosi, lahde, linkki}, pintaAlaKm2, kielet, valuutta, rajanaapurit, '
+      + 'genetiivi, esittely 3–5 lausetta) tai null; paakaupunki { id, kokoelma: "kaupungit" | "paakaupungit" } tai null.',
     { maalehti: 'maalehdet' }, rivit);
+}
+
+/*
+ * Skeema 1.60 (omistaja 10.10.2026 PT:n kautta: kaikkiin maihin pääkaupunki ja
+ * perustiedot; PT:n päätös suositus A): pääkaupungit, jotka EIVÄT ole laudan
+ * pysäkkejä, kevyinä pisteinä. Ei reittejä eikä laudan välisääntöä — Vatikaani
+ * on Rooman sisällä, Bratislava Wienin vieressä oikeilla paikoillaan.
+ * Piirto olemassa olevalla kaupunkimerkillä tärkeysluokassa 0 ja nimien
+ * olemassa olevalla karsinnalla; napautus avaa maan kortin perustiedoilla.
+ * Vanhat buildit ohittavat tuntemattoman kokoelman.
+ */
+function paakaupunkiKokoelma(ns, hae) {
+  const { PAAKAUPUNKIPISTEET } = hae('js/packs/paakaupungit.js');
+  const kaupunkiIdt = new Set(ns.MAAILMANKARTTA.cities.map((c) => c.id));
+  const rivit = PAAKAUPUNKIPISTEET.map((p) => {
+    if (kaupunkiIdt.has(p.id)) throw new Error(`paakaupungit: ${p.id} on laudan kaupunki`);
+    const lauta = projisoiLaudalle('maailmankartta', p.lon, p.lat);
+    return {
+      id: p.id, nimi: p.nimi, nimiAlkukieli: p.nimiAlkukieli, maa: p.maa, maa2: ISO2[p.maa] ?? null,
+      lat: p.lat, lon: p.lon, lauta: { x: Math.round(lauta.x * 10) / 10, y: Math.round(lauta.y * 10) / 10 },
+      tarkeys: 0, pysakki: false, asema: p.asema, wikidata: p.wikidata,
+      asukkaat: p.asukkaat?.arvo ?? null, asukkaatVuosi: p.asukkaat?.vuosi ?? null, asukkaatLahde: p.asukkaat?.lahde ?? null,
+      kuvaus: p.kuvaus, tunnusrakennukset: p.tunnusrakennukset,
+    };
+  });
+  return taulukko('js/packs/paakaupungit.js#PAAKAUPUNKIPISTEET (tools/tee-paakaupungit.mjs, Sisältökirjurin faktat)',
+    'Pääkaupungit, jotka eivät ole laudan pysäkkejä (id ei ole kaupungit-kokoelmassa): id, nimi, nimiAlkukieli, '
+      + 'maa (ISO3) ja maa2, lat/lon (Wikidata), lauta {x, y} (maailmankartan Miller), tarkeys 0, pysakki false '
+      + '(ei reittejä, ei laudan välisääntöä — voi olla toisen kaupungin vieressä), asema ("pääkaupunki" tai '
+      + '"hallinnon paikka"), wikidata, asukkaat + asukkaatVuosi + asukkaatLahde, kuvaus, tunnusrakennukset. '
+      + 'Piirto olemassa olevalla kaupunkimerkillä pienimmässä tärkeysluokassa; napautus avaa maan (maat[maa]).',
+    { maa: 'maat' }, rivit);
 }
 
 /*
@@ -969,6 +1009,7 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
     livianpuhe: livianPuheKokoelma(hae),
     livianrepliikit: livianRepliikkiKokoelma(hae, kaupunkiIdt),
     maat: maaKokoelma(ns, hae),
+    paakaupungit: paakaupunkiKokoelma(ns, hae),
     karttamerkit: karttamerkkiKokoelma(),
     // Natiivisepän tarve 23.9.2026 ilta: sumu (PaljastaMaa) ja maatila.
     maastonimet: maastonimiKokoelma(),

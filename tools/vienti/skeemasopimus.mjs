@@ -41,6 +41,8 @@ const VAKIOAVAIMET = new Set(['$skeema', 'nimi', 'lahde', 'kuvaus', 'viittaukset
 export const VAATIMUKSET = {
   // Pelikoodari 5.10.2026: natiivin asetukset (kokoelmat/asetukset.json, tavallinen objekti, ei kokoelma).
   '1.59': ['manifest.asetukset'],
+  // Karttaseppä 10.10.2026: pääkaupunkipisteet ja maiden perustiedot (kaikki maat -projekti).
+  '1.60': ['kokoelma:paakaupungit', 'maat.perustiedot', 'maat.paakaupunki'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

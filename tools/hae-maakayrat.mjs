@@ -414,7 +414,10 @@ for (const mittari of MITTARIT) {
     osumia += 1;
   }
   console.log(`${String(tiedot.size).padStart(4)} maata lähteessä — pyydetyistä ${osumia}/${Object.keys(maat).length}`);
-  if (osumia < Object.keys(maat).length / 2) {
+  // Vartija on koko maailman ajoa varten: --maat-osajoukossa (esim. minivaltiot
+  // 10.10.2026, joilta Maailmanpankin CO₂ puuttuu) vajaa sarja on odotettu, ja
+  // sarjaksi() jättää puuttuvan mittarin pois maalta.
+  if (!maatArg && osumia < Object.keys(maat).length / 2) {
     throw new Error(`${mittari.koodi} osui alle puoleen maista (${osumia}) — sarja on `
       + 'todennäköisesti tyhjentynyt tai tunnus vaihtunut. Ei kirjoiteta vajaata tiedostoa.');
   }
@@ -468,6 +471,17 @@ const mittarit = {
   ...Object.fromEntries(MITTARIT.map(({ avain, nimi, yksikko }) => [avain, { nimi, yksikko }])),
 };
 
+/*
+ * --maat LISÄÄ, EI KORVAA (10.10.2026: minivaltioiden ajo kirjoitti koko
+ * tiedoston uudelleen viidellä maalla). Osajoukossa vanhat maat, meta ja
+ * mittarit säilyvät tavulleen; vain pyydettyjen maiden rivit vaihtuvat.
+ */
+if (maatArg) {
+  const vanha = JSON.parse(readFileSync(join(JUURI, 'assets/data/maakayrat.json'), 'utf8'));
+  for (const [iso, rivi] of Object.entries(vanha.maat)) if (!maat[iso]) maat[iso] = rivi;
+  Object.keys(meta).forEach((k) => delete meta[k]); Object.assign(meta, vanha.meta);
+  Object.keys(mittarit).forEach((k) => delete mittarit[k]); Object.assign(mittarit, vanha.mittarit);
+}
 // Yksi maa per rivi, jotta git-erot pysyvät luettavina.
 const maarivit = Object.keys(maat).sort()
   .map((iso) => `    ${JSON.stringify(iso)}: ${JSON.stringify(maat[iso])}`)
