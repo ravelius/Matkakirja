@@ -235,7 +235,8 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       + 'nimio = kartan nimiö (null = web ei näytä nimeä), paikka = paikan nimi, aina täytetty (paikkaLahde: data = noston tai kortin oma paikka, alue = napa-alue, kaupunki = kaupunkijäsenyyden kaupunki, maa = maan nimi), '
       + 'lat/lon = noston oma paikka (kohdekartan piste, jos nosto on kohdekartalla, muuten laudan datapiste asteina), ladottu = '
       + '{ lat, lon } webin ladonnan jälkeen (kasaus ja erottelu; null kun ei pallolla ladottu, tai kun piirtopiste karkasi yli '
-      + `${KARKAAVA_KM} km tai toiseen maahan: silloin myös ankkuri ja nimio null, PT 10.10.2026), `
+      + `${KARKAAVA_KM} km tai toiseen maahan: silloin myös ankkuri ja nimio null, PT 10.10.2026; nimio null myös, kun sama `
+      + `nimiö on jo alle ${KAKSOISNIMI_KM} km:n päässä samassa maassa), `
       + 'ankkuri = { lat, lon } webin lukittu ankkuri (skeema 1.39; js/packs/nostoankkurit-<iso>.js, web piirtää merkin '
       + 'tähän; null = maalla ei lukittua ankkuria ja web levittää merkit ruudulla ladotusta pisteestä), puoli = nimiön '
       + 'kylki poltetusta väistöstä (oikea, vasen, yla, ala; null = web kokeilee oikea ensin), maa (ISO3), tunnus = pelin '
@@ -307,6 +308,37 @@ export function rajaaKarkaavatNimet(valot, maarajaAlkiot) {
     v.ankkuri = null; v.ladottu = null; v.nimio = null;
   }
   return maara;
+}
+
+/*
+ * KAKSOISNIMI (PT 10.10.2026, Karttasepän tarkistus v656 B2): sama nimiö kahdesti pääkartalla alle
+ * KAKSOISNIMI_KM:n päässä samassa maassa (kohde + täky-, maalehti- tai syvennysnosto, esim. Toruń, Newgrange).
+ * Nimi jää yhdelle: fokuskohde ennen nostoa, sitten pienempi taso (tärkeämpi), sitten rivijärjestys; muilta
+ * nimio = null (merkki ja kortti säilyvät). Etäisyys noston omista pisteistä: sama paikka, vaikka ladonta olisi jo
+ * erottanut merkit (natiivi näyttäisi saman nimen kahdesti vierekkäin).
+ */
+export const KAKSOISNIMI_KM = 2;
+
+/** Piilottaa toistuvat nimiöt (ks. KAKSOISNIMI); palauttaa piilotettujen määrän. */
+export function piilotaKaksoisnimet(valot) {
+  const ryhmat = new Map();
+  valot.forEach((v, i) => {
+    if (!v.paakartalla || !v.nimio) return;
+    const avain = `${v.maa}|${v.nimio}`;
+    if (!ryhmat.has(avain)) ryhmat.set(avain, []);
+    ryhmat.get(avain).push([v, i]);
+  });
+  const ensin = ([a, i], [b, j]) => ((a.lahde === 'fokuskohde' ? 0 : 1) - (b.lahde === 'fokuskohde' ? 0 : 1))
+    || ((a.taso ?? 2) - (b.taso ?? 2)) || (i - j);
+  let piilotettu = 0;
+  for (const ryhma of ryhmat.values()) {
+    if (ryhma.length < 2) continue;
+    const pidetyt = [];
+    for (const [v] of ryhma.sort(ensin)) {
+      if (pidetyt.some((p) => etaisyysKm(p, v) < KAKSOISNIMI_KM)) { v.nimio = null; piilotettu += 1; } else pidetyt.push(v);
+    }
+  }
+  return piilotettu;
 }
 
 /*

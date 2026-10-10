@@ -44,3 +44,13 @@ test('rajaaKarkaavatNimet nollaa paikat ja nimiön, kortin nimi säilyy', () => 
   assert.deepEqual([v[0].ankkuri, v[0].ladottu, v[0].nimio, v[0].nimi], [null, null, null, 'Kohde X']);
   assert.equal(v[1].nimio, 'X', 'kunnossa oleva ennallaan');
 });
+
+test('kaksoisnimi: nimi jää fokuskohteelle, sitten pienemmälle tasolle; kaukana oleva saa pitää', async () => {
+  const { piilotaKaksoisnimet, KAKSOISNIMI_KM } = await import('../tools/vienti/karttavalot.mjs');
+  assert.equal(KAKSOISNIMI_KM, 2);
+  const r = (id, lahde, taso, lon, yli = {}) => ({ id, maa: 'POL', nimio: 'Toruń', paakartalla: true, lahde, taso, lat: 53, lon, ankkuri: null, ladottu: null, ...yli });
+  const v = [r('nosto:torun', 'takynosto', 1, 18.6), r('kohde:torun', 'fokuskohde', 2, 18.601), r('kohde:kauka', 'fokuskohde', 2, 19.5),
+    r('kohde:ei-paa', 'fokuskohde', 1, 18.6, { paakartalla: false })];
+  assert.equal(piilotaKaksoisnimet(v), 1);
+  assert.deepEqual(v.map((x) => x.nimio), [null, 'Toruń', 'Toruń', 'Toruń']);
+});
