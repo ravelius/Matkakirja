@@ -1,0 +1,484 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "andorralavella",
+ "maa": "AND",
+ "era": "e02",
+ "kaupunki": {
+  "id": "andorralavella",
+  "name": "Andorra la Vella",
+  "wiki": "Andorra la Vella",
+  "ambience": "vuoristo",
+  "pallo": {
+   "lat": 42.507,
+   "lon": 1.522
+  }
+ },
+ "artikkeli": {
+  "intro": "Andorra la Vella on Andorran pääkaupunki ja suurin asutuskeskus, ja siellä asui 31.12.2025 Andorran tilastotoimiston mukaan 24 836 ihmistä. Kaupunki sijaitsee Pyreneiden kapeassa laaksossa noin 1 023 metrin korkeudessa, ja lähteen mukaan se on Euroopan korkeimmalla sijaitseva pääkaupunki. Nimi tarkoittaa Andorran kaupunkia erotukseksi koko ruhtinaskunnasta. Kaupunki kasvoi kahden vuoristopuron, Valira del Norden ja Valira de l'Orientin, yhtymäkohtaan, ja ne muodostavat yhdessä **Gran Valiran**.\n\nVanhassa keskustassa seisoo **Casa de la Vall**, 1500-luvun lopulla rakennettu talo, jossa maan parlamentti kokoontui vuodesta 1702 vuoteen 2011. Lähellä on romaaninen Sant Esteven kirkko, ja kaupungin laidalla Santa Coloman kirkko, jota lähde pitää Andorran vanhimpana. Maan hallinnon juuret ulottuvat vuoden 1278 sopimukseen, jossa Foix'n kreivi ja Urgellin piispa jakoivat vallan. Isoisän matkavuonna 1873 kaupunki oli jo olemassa, mutta lähteet eivät kerro, miltä se silloin näytti. Kaupungin elinkeinoja ovat kauppa, matkailu ja pankit, ja virallinen kieli on katalaani.",
+  "teksti": "Andorran historia alkaa asiakirjoista, joissa laaksot liitetään Urgellin kreiviin ja sittemmin Urgellin hiippakuntaan. Vuoden 1278 sopimus jakoi suvereniteetin Foix'n kreivin ja Urgellin piispan kesken, ja maaneuvosto, nykyisen parlamentin edeltäjä, perustettiin 1419. Vuonna 1866 neuvostoa uudistettiin, ja uudistus loi perustaa myöhemmille tunnuksille ja perustuslaille.\n\nKaupungin ympärillä maisema nousee jyrkästi. Gran Valira virtaa laakson pohjalla, ja Andorran kaakkoisosassa on Madriu-Perafita-Claror, maan ainoa Unescon maailmanperintökohde. Romaanisia kirkkoja ja siltoja on Andorrassa lähteen mukaan yhteensä kymmeniä, ja niiden joukossa ovat Sant Esteve ja Pont de la Margineda.\n\nNykyään kaupunki on kaupan ja matkailun keskus. Talvella läheisille rinteille tullaan hiihtämään, ja ruoka on pääosin katalaanista: tyypillisiä ruokia ovat esimerkiksi escudella, trinxat ja mató. Kaupunki on myös lähtöpaikka vaelluksille, sillä laakson polut johtavat vuorille."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä vuoriston laaksossa Andorra la Vella sijaitsee?",
+   "options": [
+    "Pyreneiden",
+    "Alppien",
+    "Apenniinien",
+    "Karpaattien"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Vuoristo erottaa kaksi suurta Länsi-Euroopan maata toisistaan.",
+   "fact": "Andorra la Vella on Itäisillä Pyreneillä, kahden vuoristopuron yhtymäkohdassa kapeassa laaksossa.",
+   "source": "https://en.wikipedia.org/wiki/Andorra_la_Vella"
+  },
+  {
+   "q": "Mikä on Andorran virallinen kieli?",
+   "options": [
+    "Katalaani",
+    "Espanja",
+    "Ranska",
+    "Portugali"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Kieltä puhutaan myös Barcelonassa.",
+   "fact": "Katalaani on virallinen kieli, vaikka maassa puhutaan myös espanjaa, portugalia ja ranskaa.",
+   "source": "https://en.wikipedia.org/wiki/Andorra"
+  },
+  {
+   "q": "Mikä rakennus toimi Andorran parlamenttitalona vuodesta 1702 vuoteen 2011?",
+   "options": [
+    "Casa de la Vall",
+    "Sant Esteven kirkko",
+    "Caldean kylpylä",
+    "Santa Coloman kirkko"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Talon rakensi alun perin eräs suku kartanoksi.",
+   "fact": "Busquetsin suvun kartanoksi rakentama talo siirtyi yleiskokoukselle 1700-luvun alussa.",
+   "source": "https://en.wikipedia.org/wiki/Casa_de_la_Vall"
+  },
+  {
+   "q": "Kuka johti uudistusryhmää Andorran neuvostossa vuonna 1866?",
+   "options": [
+    "Guillem d'Areny-Plandolit",
+    "Antoni Fiter i Rossell",
+    "Josep Puig i Cadafalch",
+    "Simeó de Guinda"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Hän toimi syndicina eli neuvoston puheenjohtajana.",
+   "fact": "Uudistus korvasi aatelisvaltaisen oligarkian ja vahvistettiin molempien ruhtinaskumppaneiden hyväksynnällä.",
+   "source": "https://en.wikipedia.org/wiki/Andorra"
+  },
+  {
+   "q": "Mikä laakso on Andorran ensimmäinen Unescon maailmanperintökohde?",
+   "options": [
+    "Madriun laakso",
+    "Inclesin laakso",
+    "Ordinon laakso",
+    "Arinsalin laakso"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Kohde on jäätikön muovaama laakso maan kaakkoisosassa.",
+   "fact": "Laakso hyväksyttiin maailmanperintölistalle 2004, ja siellä on vain kaksi pientä asutusta.",
+   "source": "https://en.wikipedia.org/wiki/Madriu-Perafita-Claror_Valley"
+  }
+ ],
+ "tiedot": [
+  "Andorra la Vella on 1 023 metrin korkeudessa, ja lähteen mukaan se on Euroopan korkeimmalla sijaitseva pääkaupunki.",
+  "Casa de la Vall on kuvattu Andorran yhden euron kolikossa, ja sen kaapissa on lukko jokaiselle seurakunnalle.",
+  "Santa Coloman kirkon 1100-luvun seinämaalaukset olivat Berliinissä vuoteen 2007, ennen paluuta Andorraan."
+ ],
+ "valokuva": {
+  "tiedosto": "Casa de la Vall. 1580. Andorra 149.jpg",
+  "vuosi": "2010-luku",
+  "lahde": "Luis Miguel Bugallo Sánchez (Lmbuga), Commons (CC BY-SA 3.0)",
+  "lyhyt": "Casa de la Vall oli Andorran parlamentin paikka vuoteen 2011.",
+  "selite": "Casa de la Vall rakennettiin Busquetsin suvun kartanoksi, ja talon vaakunassa on vuosiluku 1580. Andorran yleiskokous osti sen 1700-luvun alussa, ja se toimi parlamenttitalona vuoteen 2011."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Andorra la Vella",
+   "johdanto": "Andorra la Vella nousee Pyreneiden laaksossa kahden vuoristopuron yhtymäkohdassa, lähteen mukaan Euroopan korkeimmalla sijaitsevana pääkaupunkina. Vanhan keskustan kivikatujen varrella seisovat romaaniset kirkot ja Casa de la Vall, joka toimi maan parlamenttitalona yli kolmesataa vuotta.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Andorra la Vella - view2.jpg",
+     "selite": "Andorra la Vella on rakennettu Pyreneiden kapeaan laaksoon.",
+     "lahde": "Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "Andorra la Vella - view.jpg",
+     "selite": "Andorra la Vella on Andorran pääkaupunki ja suurin asutuskeskus.",
+     "lahde": "Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "Andorra la Vella - river.jpg",
+     "selite": "Gran Valira virtaa Andorran pääkaupungin läpi ja laskee lopulta Segreen.",
+     "lahde": "Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Talo kalliolla, jossa parlamentti kokoontui",
+     "teksti": "Casa de la Vall kohoaa kalliolla Andorra la Vellan vanhassa keskustassa. Busquetsin suku rakennutti sen kartanoksi ja puolustustorniksi, ja pääoven yläpuolisessa vaakunassa on vuosiluku 1580. Andorran yleiskokous osti talon 1700-luvun alussa, ja parlamentti kokoontui siellä vuodesta 1702 vuoteen 2011. Sisällä oli oikeussali, neuvostosali ja pyhälle Ermengolille omistettu kappeli. Kulmassa on kyyhkyslän muotoinen torni, ja pihassa seisoo creu de terme, kiviristi pylvään päällä.",
+     "tiedosto": "Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 04.JPG",
+     "selite": "Casa de la Vall oli Andorran parlamentin kokouspaikka vuoteen 2011.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Casa de la Vall"
+    },
+    {
+     "otsikko": "Andorran vanhin kirkko ja matkustaneet seinämaalaukset",
+     "teksti": "Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko. Se on omistettu Sensin Columballe, Andorran suojeluspyhimykselle. Kirkon runkohuone on 700- tai 800-luvulta ja kellotorni 1100-luvulta. Seinät on tehty kiilleliuskeesta ja graniitista, ja tornin ikkunakehyksissä on travertiinista veistettyjä päitä. Kirkon 1100-luvun seinämaalaukset irrotettiin 1933, ja ne olivat Berliinissä vuoteen 2007. Nykyisin ne ovat Andorran valtion näyttelyhallissa. Kirkko on esillä joissakin Andorran euro-kolikoissa.",
+     "tiedosto": "Iglesia de Santa Coloma de Andorra, Santa Coloma, Andorra, 2013-12-30, DD 04.JPG",
+     "selite": "Santa Coloman kirkon runkohuone on 700- tai 800-luvulta ja kellotorni 1100-luvulta.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Church of Santa Coloma d'Andorra"
+    },
+    {
+     "otsikko": "Kaupunki kahden joen risteyksessä",
+     "teksti": "Andorra la Vella sijaitsee kahden vuoristopuron, Valira del Norden ja Valira de l'Orientin, yhtymäkohdassa. Joet yhtyvät Escaldes–Engordanyssä Gran Valiraksi, joka on lähteen mukaan Andorran suurin joki. Gran Valira virtaa pääkaupungin läpi ja poistuu maasta etelässä Espanjan rajan tuntumassa. Espanjan puolella La Seu d'Urgellissa se laskee Segre-jokeen, joka on Ebron sivujoki. Andorran väestö on keskittynyt pääosin laaksojen pohjille, joissa myös kaupunki on.",
+     "tiedosto": "Río Valira, Santa Coloma, Andorra, 2013-12-30, DD 04.JPG",
+     "selite": "Valira del Nord ja Valira de l'Orient yhtyvät Escaldes–Engordanyssä Gran Valiraksi.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Gran Valira"
+    },
+    {
+     "otsikko": "Laakso, johon ei johda tietä",
+     "teksti": "Madriu-Perafita-Claror on jäätikön muovaama laakso Andorran kaakkoisosassa. Sen pinta-ala on 42,47 km², noin 9 % maan alasta. Laakso on lähteen mukaan Andorran ensimmäinen ja toistaiseksi ainoa Unescon maailmanperintökohde, ja se hyväksyttiin listalle 2004. Laaksoon pääsee vain jalkapolkuja pitkin, eikä tietä ole suunnitteilla. Kahdessa pienessä asutuksessa, Entremesaigüesissa ja Ramiossa, on yhteensä 12 taloa. Madriu-joen rannalla sulatettiin rautaa paikallisesta malmista, kunnes ahjo hylättiin 1790.",
+     "tiedosto": "Vall del Madriu-Perafita-Claror - 52.jpg",
+     "selite": "Madriu-Perafita-Claror kattaa noin 9 % Andorran pinta-alasta, ja sinne johtavat vain polut.",
+     "lahde": "Ferran Llorens, Wikimedia Commons (CC BY-SA 2.0)",
+     "wiki": "Madriu-Perafita-Claror Valley"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Iglesia de San Esteve, Andorra la Vieja, Andorra, 2013-12-30, DD 03.JPG",
+     "selite": "Sant Esteven kirkko seisoo Plaça del Príncep Benllochilla Andorra la Vellassa.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    "kappale": "Andorra la Vella on Pyreneiden laaksossa noin tuhannen metrin korkeudessa. Vanhan keskustan Casa de la Vall ja Sant Esteven kirkko ovat lähellä toisiaan. Santa Coloman kirkko ja Pont de la Margineda sijaitsevat muutaman kilometrin päässä kaupungin laidalla. Kaupungissa ei ole lentokenttää eikä rautatieasemaa, joten matka tehdään maanteitse. Virallinen kieli on katalaani, ja maksuväline on euro. Laaksojen ympärillä on vaelluspolkuja ja hiihtorinteitä.",
+    "artikkeli": {
+     "nimi": "Matkailijan Andorra la Vella",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa Pyreneiden vuoret nousevat joka suunnalla ja romaaniset kirkot odottavat kivisten katujen varrella.",
+     "nosto": "Andorra la Vellaan ei ole lentokenttää eikä rautatietä, mutta bussit ja maantiet tuovat sinne Espanjasta ja Ranskasta. Vanhan keskustan nähtävyydet ovat lähellä toisiaan.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Andorrassa ei ole kiinteäsiipisille koneille lentokenttää. Lähin lentoasema on Andorra–La Seu d'Urgell (LEU) Espanjassa, noin 24 km kaupungista etelään. Kansainvälisistä lentoasemista Toulouse-Blagnac on noin 195 km ja Barcelona-El Prat noin 198 km päässä, ja molempiin on lähteen mukaan bussiyhteydet. Kaupungissa ei ole rautatieasemaa, ja lähin asema on Andorre-L'Hospitalet noin 10 km itään. Pääväyliä ovat CG-1 Espanjan rajalle ja CG-2 Ranskan rajalle.",
+       "kuva": {
+        "tiedosto": "Ligne 4 Transports Publics Andorre 06-20.jpg",
+        "selite": "Bussiliikenne kattaa Andorran kaupunkialueet.",
+        "lahde": "Snoopy 31, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Vanha kaupunki ja Casa de la Vall",
+       "teksti": "Vanha kaupunki on kivikatuinen, ja sen kohteita ovat Casa de la Vall ja Sant Esteven kirkko. Casa de la Vall toimi parlamenttitalona vuosina 1702-2011, ja Sant Esteve on rakennettu 1000-1100-luvuilla. Kohteet ovat lähellä toisiaan, joten ne ehtii nähdä jalan. Santa Coloma on erillinen kylä kaupungin lounaispuolella, noin 3 km keskustasta.",
+       "kuva": {
+        "tiedosto": "Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 06.JPG",
+        "selite": "Casa de la Vall kuuluu Andorra la Vellan vanhan keskustan tunnetuimpiin nähtävyyksiin.",
+        "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Romaaniset kirkot ja sillat",
+       "teksti": "Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko, ja sen kellotorni on 1100-luvulta. Pont de la Margineda on keskiaikainen silta, joka rakennettiin 1300-1400-luvulla Gran Valiran yli. Sillan seinät ovat graniittia, ja kaarikivet on tehty pimssistä keveyden vuoksi. Santa Coloman seinämaalaukset ovat nykyisin Andorran valtion näyttelyhallissa.",
+       "kuva": {
+        "tiedosto": "Pont de la Margineda (Santa Coloma) - 26.JPG",
+        "selite": "Sillan seinät ovat graniittia, ja kaarikivet on tehty pimssistä keveyden vuoksi.",
+        "lahde": "Cherubino, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Andorran ruoka on pääosin katalaanista, mutta mukana on ranskalaisia ja italialaisia vaikutteita. Keittiö on muotoutunut vuoristolaaksojen mukaan ja muistuttaa Cerdanyan ja Alt Urgellin ruokaa. Tyypillisiä ruokia ovat escudella, paahdettu lammas pähkinöillä, ankka talvipäärynällä, Andorran jokitaimen, trinxat ja mató. Jälkiruoaksi tarjotaan massegada-kakkua, ja juomina ovat glögi ja olut.",
+       "kuva": {
+        "tiedosto": "Escudella catalana plato de cuchara con carne, verduras y pasta.jpg",
+        "selite": "Escudella kuuluu Andorran tyypillisiin ruokiin.",
+        "lahde": "Juan Emilio Prades Bel, Wikimedia Commons (CC BY 4.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Hiihtokausi kestää yleensä marraskuun lopusta huhtikuun alkuun sään mukaan. Kesällä hiihtohissit kulkevat osittain näköalapaikoille, kuten Tristaina-näköalapaikalle. Suuntaa-antavien kuukausikeskiarvojen mukaan kylmin kuukausi on tammikuu, noin 1 °C, ja lämpimin heinäkuu, noin 20 °C. Korkeuden vuoksi lämpötilat ovat matalat verrattuna alankoihin.",
+       "kuva": {
+        "tiedosto": "Aliga slope in El Tarter (1).jpg",
+        "selite": "Andorran hiihtokausi kestää yleensä marraskuun lopusta huhtikuun alkuun.",
+        "lahde": "Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Casa de la Vall ja vanha kaupunki",
+        "tahdet": 3,
+        "selite": "Parlamenttitalo kalliolla ja kivikadut kaupungin ytimessä."
+       },
+       {
+        "mita": "Sant Esteven kirkko",
+        "tahdet": 2,
+        "selite": "Romaaninen apsis ja 1100-luvun alttaritaulu."
+       },
+       {
+        "mita": "Santa Coloman kirkko",
+        "tahdet": 3,
+        "selite": "Lähteen mukaan Andorran vanhin kirkko, tornin ikkunoissa veistettyjä päitä."
+       },
+       {
+        "mita": "Pont de la Margineda",
+        "tahdet": 2,
+        "selite": "Keskiaikainen kivisilta Gran Valiran yllä."
+       },
+       {
+        "mita": "Madriu-Perafita-Claror",
+        "tahdet": 3,
+        "selite": "Unescon maailmanperintökohde, jonka polut sopivat vaelluksille."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Lentokenttää ei ole",
+        "teksti": "Lähin lentoasema on Espanjan puolella, ja rautatieasemaa ei ole kaupungissa."
+       },
+       {
+        "otsikko": "Euro käy",
+        "teksti": "Maksuväline on euro, vaikka maa ei kuulu EU:hun; sillä on tulliliitto EU:n kanssa."
+       },
+       {
+        "otsikko": "Kieli",
+        "teksti": "Virallinen kieli on katalaani, ja myös espanjaa, portugalia ja ranskaa puhutaan."
+       },
+       {
+        "otsikko": "Madriun laaksoon vain jalan",
+        "teksti": "Laaksoon ei johda tietä, ja hiihtokausi riippuu säästä."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "historia",
+   "nimi": "Kaksi ruhtinasta, yksi laakso",
+   "johdanto": "Andorra sai muotonsa vuoden 1278 sopimuksessa, jossa kaksi hallitsijaa jakoi vallan. Sivu kertoo, miten maaneuvosto kasvoi ja mitä muuttui vuoden 1866 uudistuksessa.",
+   "tehtava": {
+    "kysymys": "Kuinka monesta jäsenestä Andorran vuonna 1866 uudistettu neuvosto koostui?",
+    "vaihtoehdot": [
+     "24 jäsenestä",
+     "12 jäsenestä",
+     "40 jäsenestä",
+     "60 jäsenestä"
+    ],
+    "oikea": 0,
+    "fakta": "Neuvoston uudistuksessa jäseniä oli 24, ja heidät valittiin vaalilla, jossa äänioikeus oli perheenpäillä."
+   },
+   "nostot": [
+    {
+     "otsikko": "Sopimus, jossa vallan jakoi kaksi",
+     "teksti": "Perimätiedon mukaan Kaarle Suuri antoi Andorran asukkaille erioikeuskirjan, mutta tätä ei ole todennettu. 800-luvulla Kaarle Kaljupää nimesi lähteen mukaan Urgellin kreivin Andorran yliherraksi, ja myöhemmin maat siirtyivät Urgellin hiippakunnalle. 1200-luvulla Foix'n kreivi peri Caboetin herran oikeudet, mikä aiheutti kiistan kreivin ja piispan välillä. Kiista ratkaistiin vuonna 1278 sopimuksella, pariatgella: suvereniteetti jaettiin Foix'n kreivin ja La Seu d'Urgellin piispan kesken. Lähteen mukaan Andorran rajat ovat pysyneet samoina vuodesta 1278.",
+     "tiedosto": "Carte dite du Dépôt des Fortifications. Echelle 1 - 500 000 e. - Feuille XIV NO Andorre - Barcelone - Prudent, Ferdinand - btv1b105678400.jpg",
+     "selite": "Pyreneiden ruhtinaskunta Andorra sai muotonsa vuoden 1278 sopimuksessa.",
+     "lahde": "Prudent, Ferdinand (1835-1915). Fonction indéterminée, Wikimedia Commons (PD)",
+     "wiki": "History of Andorra"
+    },
+    {
+     "otsikko": "Neuvosto ja talo, jossa se kokoontui",
+     "teksti": "Maaneuvosto, Andorran parlamentin edeltäjä, perustettiin 1419, kun ruhtinaskumppanit hyväksyivät johtavien sukujen vaatimuksen valitusta elimestä. Casa de la Vall rakennettiin 1500-luvun lopulla Busquetsin suvun kartanoksi, ja siitä tuli myöhemmin parlamentin, tuomioistuimen ja vankilan koti. Andorran oikeuksia kirjattiin teoksiin kuten Llibre de Privilegis (1674) ja Manual Digest (1748). Manual Digest kuuluu asiakirjoihin, joita säilytetään talon seitsemän avaimen kaapissa.",
+     "tiedosto": "Interior Casa de la Vall 01.jpg",
+     "selite": "Andorran parlamentti kokoontui Casa de la Vallissa yli kolmesataa vuotta.",
+     "lahde": "Jordi Gili, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Casa de la Vall"
+    },
+    {
+     "otsikko": "Uudistus vuodelta 1866",
+     "teksti": "Napoleonin aikana ruhtinaskumppanuus palautettiin, ja 1812-1814 Andorra liitettiin Ranskaan. Keisarillinen asetus palautti sen itsenäisyyden 1814. Vuonna 1866 syndic Guillem d'Areny-Plandolit johti uudistusryhmää 24-jäsenisessä Council Generalissa. Jäsenet valittiin vaalilla, jossa äänioikeus oli perheenpäillä, ja neuvosto korvasi aatelisvaltaisen oligarkian. Nova Reforma vahvistettiin molempien ruhtinaskumppaneiden hyväksynnällä, ja se loi perustan mm. kolmivärilipulle. Palvelutalous alkoi rakentaa hotelleja, kylpylöitä, teitä ja lennätinlinjoja.",
+     "tiedosto": "Relevo e escudo. Casa de la Vall. Andorra 151.jpg",
+     "selite": "Casa de la Vallin seinässä on kiveen veistetty vaakuna; talo oli maan hallinnon keskus.",
+     "lahde": "Luis Miguel Bugallo Sánchez (Lmbuga), Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Andorra"
+    },
+    {
+     "otsikko": "Ooppera, joka vei laaksot Eurooppaan",
+     "teksti": "Fromental Halévyn ooppera Le val d'Andorre sai ensi-iltansa vuonna 1848 ja menestyi Euroopassa. Lähteen mukaan romanttinen teos toi esiin laaksojen kansallista tietoisuutta, ja sen juoni sijoittuu Pyreneiden sodan aikaan. Andorran omaa kulttuuria leimaa romaaninen taide, joka kukoisti 800-1300-luvuilla. Lähteen mukaan maassa on yhteensä neljäkymmentä romaanista kirkkoa sekä siltoja, linnoituksia ja kartanoita samalta ajalta. Niistä korostuvat Sant Esteve sekä Margineda- ja Escalls-sillat.",
+     "tiedosto": "Interior of Sant Esteve church in Andorra.JPG",
+     "selite": "Sant Esteven kirkko Andorra la Vellassa on romaaninen, 1000-1100-luvulla rakennettu kirkko.",
+     "lahde": "Jordiferrer, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Andorra"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Kartan ydin on Gran Valiran laakso, jossa vanha keskusta, Santa Coloma ja Pont de la Margineda ovat rinnakkain. Mukana on myös Escaldesin kylpylä ja Madriun maailmanperintölaakso idässä.",
+  "rajat": {
+   "pohjoinen": 42.5144,
+   "etela": 42.4815,
+   "lansi": 1.4882,
+   "ita": 1.5993
+  },
+  "kohteet": [
+   {
+    "nimi": "Casa de la Vall",
+    "lat": 42.50667,
+    "lon": 1.52056
+   },
+   {
+    "nimi": "Sant Esteven kirkko",
+    "lat": 42.5072,
+    "lon": 1.5217
+   },
+   {
+    "nimi": "Santa Coloman kirkko",
+    "lat": 42.4942,
+    "lon": 1.4976
+   },
+   {
+    "nimi": "Pont de la Margineda",
+    "lat": 42.48417,
+    "lon": 1.49192
+   },
+   {
+    "nimi": "Caldea",
+    "lat": 42.5117,
+    "lon": 1.5368
+   },
+   {
+    "nimi": "Madriu-Perafita-Claror",
+    "tyyppi": "luonto",
+    "lat": 42.49472,
+    "lon": 1.59556
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Casa de la Vall": {
+   "aika": "1500-luvun loppu",
+   "teksti": "Casa de la Vall on historiallinen talo Andorra la Vellan vanhassa keskustassa, ja se toimi Andorran parlamentin, General Councilin, paikkana vuoteen 2011. Busquetsin suku rakennutti sen kartanoksi ja puolustustorniksi 1500-luvun lopulla, ja pääoven yläpuolisessa vaakunassa on vuosiluku 1580. Talo seisoo kalliolla, josta avautuu näkymä Valira-joen laaksoon.\n\nAndorran yleiskokous osti talon 1700-luvun alussa ja kokoontui siellä vuodesta 1702. Sisällä on oikeussali, neuvostosali ja pyhälle Ermengolille omistettu kappeli sekä seitsemän avaimen kaappi, jossa on lukko jokaiselle Andorran seurakunnalle. Kulmassa on kyyhkyslän muotoinen torni, ja pihassa on creu de terme.\n\nIsoisän matkavuonna 1873 talo oli ollut parlamentin käytössä noin 170 vuotta. Peruskorjauksessa 1960-luvulla ulkorappaus poistettiin ja taloon lisättiin torni. Talo on kuvattu Andorran yhden euron kolikossa.",
+   "kuvat": [
+    {
+     "tiedosto": "Casa de la Vall, Andorra la Vieja, Andorra, 2013-12-30, DD 01.JPG",
+     "selite": "Casa de la Vallin kulmassa on kyyhkyslän muotoinen torni.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Sant Esteven kirkko": {
+   "aika": "1000-1100-luku",
+   "teksti": "Sant Esteven kirkko on roomalaiskatolinen kirkko, joka seisoo Plaça del Príncep Benllochilla Andorra la Vellassa. Se rakennettiin 1000-1100-luvuilla romaanisessa tyylissä. Kirkko on säilyttänyt alkuperäisen puoliympyrän muotoisen apsiksensa, joka on lähteen mukaan ruhtinaskunnan suurin, sekä 1100-luvun alttaritaulun.\n\nKirkko oli olemassa jo isoisän matkavuonna 1873, mutta sitä on muutettu sen jälkeen. Arkkitehti Josep Puig i Cadafalch muotoili kellotornin ja sivusisäänkäynnin uudelleen 1940-luvulla, ja 1960-luvulla kirkkoon rakennettiin uusi nave.\n\nKirkossa oli freskoja, jotka poistettiin pääosin 1900-luvun alussa; osa niistä on nykyisin Museu Nacional d'Art de Catalunyassa Barcelonassa ja osa Espai Columbassa. Sisällä on kaksi barokkialttaritaulua, joiden aiheet ovat Johannes Kastaja ja pyhä Lucia. Kirkko kuuluu Andorran kulttuuriperintörekisteriin.",
+   "kuvat": [
+    {
+     "tiedosto": "Iglesia de San Esteve, Andorra la Vieja, Andorra, 2013-12-30, DD 02.JPG",
+     "selite": "Sant Esteven kirkko kuuluu Andorran kulttuuriperintörekisteriin.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Santa Coloman kirkko": {
+   "aika": "700- tai 800-luku",
+   "teksti": "Santa Coloman kirkko on lähteen mukaan Andorran vanhin kirkko. Se sijaitsee Santa Coloman kylässä Andorra la Vellan seurakunnassa ja on omistettu Sensin Columballe, Andorran suojeluspyhimykselle. Runkohuone on rakennettu 700- tai 800-luvulla ja kellotorni 1100-luvulla.\n\nSeinät on tehty kiilleliuskeesta ja graniitista kalkkilaastilla, ja tornin ikkunakehyksissä on travertiinista veistettyjä päitä. Kirkossa oli 1100-luvun seinämaalauksia, jotka irrotettiin pääosin 1933. Ne olivat Berliinissä vuoteen 2007, ja nykyisin ne ovat Andorran valtion näyttelyhallissa.\n\nKirkko oli olemassa jo 1873. Sitä on kunnostettu muun muassa 1740-1749, 1930-luvulla Cèsar Martinellin johdolla ja 1970-luvulla. Kirkko on esillä joissakin Andorran euro-kolikoissa.",
+   "kuvat": [
+    {
+     "tiedosto": "Iglesia de Santa Coloma de Andorra, Santa Coloma, Andorra, 2013-12-30, DD 05.JPG",
+     "selite": "Santa Coloma on omistettu Andorran suojeluspyhimykselle Sensin Columballe.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Pont de la Margineda": {
+   "aika": "1300-1400-luku",
+   "teksti": "Pont de la Margineda on keskiaikainen kivisilta Santa Coloman kylässä Andorra la Vellan seurakunnassa. Lähteen mukaan se on rakennettu 1300-1400-luvulla, ja se ylittää Gran Valiran. Silta on noin 3,5 km:n päässä vanhasta keskustasta, ja Gran Valira muodostuu kahden vuoristopuron yhtymästä Escaldes–Engordanyssä.\n\nSillan seinät ovat graniittia, ja kaarikivet on tehty pimssistä keveyden vuoksi. Silta kuuluu Andorran kulttuuriperintörekisteriin. Andorran romaanisen taiteen kohteiden joukossa mainitaan Margineda- ja Escalls-sillat.\n\nIsoisän matkavuonna 1873 silta oli seissyt jo satoja vuosia. Lähteet eivät kerro sen myöhemmästä rakennushistoriasta.",
+   "kuvat": [
+    {
+     "tiedosto": "Puente de la Margineda, Santa Coloma, Andorra, 2013-12-30, DD 05.JPG",
+     "selite": "Pont de la Margineda ylittää Gran Valiran Santa Coloman kylässä.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Caldea": {
+   "aika": "1994",
+   "teksti": "Caldea on kylpyläkeskus Escaldes–Engordanyssä, joka sijaitsee Andorra la Vellan vieressä ja kuuluu samaan kaupunkialueeseen. Se valmistui 1994, ja rakennuksessa on 18 kerrosta. Lähteen mukaan Caldea on yksi Euroopan suurimmista kylpylöistä ja Andorran korkein rakennus, 80 metriä korkea.\n\nEscaldes-Engordany erotettiin omaksi kunnakseen 1978, ja Caldea kuuluu sen alueeseen. Andorran palvelutalous alkoi 1800-luvun uudistusten jälkeen rakentaa hotelleja, kylpylöitä, teitä ja lennätinlinjoja, ja kylpylät ovat kuuluneet maan matkailuun siitä lähtien.\n\nIsoisän matkavuonna 1873 Caldeaa ei vielä ollut, sillä rakennus valmistui vasta 1994. Kylpyläkeskus on kaupunkialueen nykyaikaisia rakennuksia vastapainona vanhan keskustan romaanisille kirkoille.",
+   "kuvat": [
+    {
+     "tiedosto": "Caldea 20231205 122111.jpg",
+     "selite": "Caldea on Escaldes–Engordanyssä sijaitseva kylpyläkeskus, joka valmistui 1994.",
+     "lahde": "FrankAndProust, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Madriu-Perafita-Claror": {
+   "aika": "maailmanperintö 2004",
+   "teksti": "Madriu-Perafita-Claror on jäätikön muovaama laakso Andorran kaakkoisosassa. Se on kulttuurimaisema, jossa on asumuksia, peltoterasseja, polkuja ja rautatyön jäänteitä yli 700 vuoden ajalta. Unesco hyväksyi laakson maailmanperintökohteeksi 2004, ja pieni laajennus tehtiin 2006.\n\nLaaksossa on kaksi asutusta, Entremesaigües ja Ramio, joissa on yhteensä 12 taloa. Vain noin 1 % laaksosta on yksityisomistuksessa. Kesäisin laiduntivat lampaat, lehmät ja hevoset, ja paimenet asuivat turvekattoisissa kivimajoissa. Laaksoon pääsee vain jalkapolkuja pitkin, ja läpi kulkevat GR 7, GR 11 ja GRP-kierros.\n\nMadriu-joen rannalla sulatettiin rautaa paikallisesta malmista, ja ahjo hylättiin 1790. Metsiä hoidettiin hiilen tekoon 1800-luvulle asti. Laakso on osittain Andorra la Vellan kunnan alueella.",
+   "kuvat": [
+    {
+     "tiedosto": "Vall del Madriu-Perafita-Claror - 49.jpg",
+     "selite": "Madriu-Perafita-Claror on Unescon maailmanperintökohde vuodesta 2004.",
+     "lahde": "Ferran Llorens, Wikimedia Commons (CC BY-SA 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 42.51,
+  "lon": 1.52,
+  "keskilampo": [
+   1.2,
+   3,
+   5.1,
+   8.3,
+   13.6,
+   14.9,
+   19.7,
+   18.7,
+   15,
+   9.7,
+   7.4,
+   2.2
+  ],
+  "sade": [
+   79,
+   13,
+   89,
+   72,
+   89,
+   139,
+   82,
+   61,
+   93,
+   88,
+   52,
+   46
+  ],
+  "luonnehdinta": "Nämä kuukausiluvut ovat suuntaa-antavia. Kylmin kuukausi on tammikuu, jolloin keskilämpötila on noin 1 °C, ja lämpimin heinäkuu, noin 20 °C. Sadetta kertyy kuukaudessa noin 13-139 mm, ja kuukausien väliset erot ovat suuria."
+ },
+ "ehdotukset": {
+  "lentoasema": "Andorra–La Seu d'Urgell (LEU)",
+  "huomiot": [
+   "Pont de la Margineda on silta, ei rakennus: tyypiksi jätetty oletus (rakennus). Päätoimittaja vahvistaa, kelpaako silta kohteeksi.",
+   "Madriu-Perafita-Claror on noin 6 km vanhasta ytimestä ja Santa Coloma noin 3 km; kartan rajaus on leveä (noin 8 km). Vaihtoehto: jättää Madriu pois, jolloin itä on 1.5410.",
+   "Caldea on Escaldes-Engordanyn kunnassa, ei Andorra la Vellan kunnassa.",
+   "Nosto Halévyn oopperasta käyttää Sant Esteven sisätilakuvaa, koska kelvollista oopperakuvaa ei löytynyt; vaihtoehto PD-muotokuva Halévysta (kasvolähikuva).",
+   "Ennen-nyt-paria ei ole: isoisän aikaista PD-vedosta ei löytynyt.",
+   "Nosto T1 -karttalehden Artist-kenttä on Commonsissa sekava; lähderivi on kentän sanatarkka sisältö.",
+   "Säädata (saa.json) on epäilyttävä (helmikuun sade 13 mm, kesäkuun 139 mm, kesäkuun keskilämpö 14,9 ja heinäkuun 19,7 °C); luonnehdinta kirjoitettu varovasti suuntaa-antavana.",
+   "Valokuvan vuosi on arvio (kuvan tarkkaa ottovuotta ei ole faktapohjassa)."
+  ]
+ }
+}
