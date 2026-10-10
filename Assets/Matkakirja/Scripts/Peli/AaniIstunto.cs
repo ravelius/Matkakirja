@@ -129,9 +129,21 @@ namespace Matkakirja.Natiivi
             try { return MatkakirjaAani_Tila(); }
             catch (Exception e) { return "ei luettavissa: " + e.Message; }
         }
+
+        /// <summary>
+        /// Istunnon tila testikomennolle (aani mittaa) taustasäikeessä aikarajalla (Pelikoodari 10.10.2026, PT 10.3x): aamun
+        /// simulaattoriajoissa appi jäätyi pääsäikeen AVAudioSession-lukuun, kun isäntäkoneen äänipalvelin (coreaudiod) oli jumissa.
+        /// Aikarajan ylittyessä palautetaan selitys, ja jumiin jäänyt taustasäie ei pysäytä peliä.
+        /// </summary>
+        public static string TilaAikarajalla(int ms = 500)
+        {
+            var t = System.Threading.Tasks.Task.Run(() => Tila());
+            return t.Wait(ms) ? t.Result : $"ei vastausta {ms} ms:ssa (äänipalvelin jumissa?)";
+        }
 #else
         public static void Aseta(string syy) { }
         public static string Tila() => "ei iOS";
+        public static string TilaAikarajalla(int ms = 500) => Tila();
         public static string Vaihda(string luokka) => "ei iOS";
         public static bool Bluetooth() => BluetoothTesti;
         static void Vahti() { }
