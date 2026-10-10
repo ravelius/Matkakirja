@@ -129,10 +129,19 @@ export const JALJEN_PYYHKAISY = 0.06;
  * Sofia on jo pelissä mutta EI ole aloituskohde: sinne kävellään
  * Ateenasta, kuten tarina menee.
  */
-export const ETUSIVUN_KOHTEET = new Set([
-  'ateena', 'newyork', 'kairo', 'rio', 'mumbai', 'peking', 'sydney',
-  'moskova', 'tokio', 'singapore', 'kapkaupunki', 'sanfrancisco', 'tanger',
-  'istanbul',
+/*
+ * VAIN EUROOPPA ALKULENNOSSA (omistaja 10.10.2026 PT:n kautta): kohteina
+ * Ateena, Moskova, Istanbul ja uusi TUKHOLMA. Muiden maanosien yksitoista
+ * kohdetta ovat TAUOLLA (ETUSIVUN_KOHTEET_TAUOLLA), eivät poistettuja:
+ * palautus on siirto takaisin tähän joukkoon. Laudan data (start,
+ * aloitus) pysyy ennallaan, koska mantereiden väliset lennot ja aarteiden
+ * jako nojaavat siihen; natiivi saa joukon kaupungit-kokoelman
+ * lahtokohde-kentästä (tools/vienti/kokoelmat.mjs).
+ */
+export const ETUSIVUN_KOHTEET = new Set(['ateena', 'moskova', 'istanbul', 'tukholma']);
+export const ETUSIVUN_KOHTEET_TAUOLLA = new Set([
+  'newyork', 'kairo', 'rio', 'mumbai', 'peking', 'sydney',
+  'tokio', 'singapore', 'kapkaupunki', 'sanfrancisco', 'tanger',
 ]);
 /*
  * MITKÄ KAUPUNGIT NÄKYVÄT ALOITUSKARTALLA LAINKAAN.

@@ -4,7 +4,7 @@
   "title": "Matkakirja-vienti: kaupungit-kokoelman alkio",
   "description": "Pelilaudan kaupunki. Natiivin 3D-proton ensimmäinen tarve (3D-selvittäjä 23.9.2026): id, nimi, lat, lon ja maa ISO2-koodina; tyyppi, lentokentta, aloitus ja tarkeys (skeema 1.2) nimien harvennukseen. data = laudan raakaolio, johon natiivi ei nojaa.",
   "type": "object",
-  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "tyyppi", "tarkeys", "lauta", "korkeus", "asukkaat", "asukkaatVuosi", "asukkaatAlue", "asukkaatLahde", "data"],
+  "required": ["id", "nimi", "maa", "maa2", "manner", "lat", "lon", "sijaintiLahde", "saari", "lentokentta", "aloitus", "lahtokohde", "tyyppi", "tarkeys", "lauta", "korkeus", "asukkaat", "asukkaatVuosi", "asukkaatAlue", "asukkaatLahde", "data"],
   "properties": {
     "id": { "type": "string", "pattern": "^[a-z0-9]+$" },
     "nimi": { "type": "string" },
@@ -16,6 +16,7 @@
     "sijaintiLahde": { "enum": ["pallopiste", "laudalta-laskettu"] },
     "saari": { "type": "boolean" },
     "lentokentta": { "type": "boolean" },
+    "lahtokohde": { "type": "boolean", "description": "Skeema 1.62: alkulennon valittava kohde (js/ui-apurit.js ETUSIVUN_KOHTEET); aloitus jää pelisäännöille." },
     "aloitus": { "type": "boolean" },
     "tyyppi": { "type": ["string", "null"], "description": "laudan ambience (kaupunki, satama, erämaa…)" },
     "tarkeys": { "type": "integer", "minimum": 0, "maximum": 3, "description": "nimiöiden harvennus: 3 = pääkaupunki (tools/vienti/paakaupungit.mjs) tai aloituskaupunki, 2 = lentokenttä tai vähintään 6 reittiä, 1 = vähintään 4 reittiä, 0 = muut (skeema 1.2)" },
