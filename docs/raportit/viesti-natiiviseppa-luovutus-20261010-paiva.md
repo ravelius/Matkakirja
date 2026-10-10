@@ -5,6 +5,15 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 18.3x — BUILD 179 LUKITTU (TF Applelle), JUNA 180 ALKAA
+- **BUILD 179 = 75fcc2b1b938024696affccf4bdad48ceee22de1** (master; juna/b13 45b93a2e0 = juna-179 c9b1aa726 + LS1 pariisi-esittely a6771263c; L1344/P456/K461,
+  unity 0; käännöspalvelu 8ab2e947c 18.09, vahti 18.28). Taidemuseo mukana (LS1 museo-kombo 691969c66 sis. museo-muisti) → muistiajo 179 Release e97fa2eaf:
+  Pariisi 0,75/0,74, Olavinlinna 0,72, museo 2,85 Gt, ei jetsameja. Muutosloki julkaisija-tyokalut/muutosloki-179.txt (PT kuittasi). Mac 179 KÄÄNNETTY 18.23
+  → kopio lokit/natiiviseppa-mac-tf-179-75fcc2b1. Simu-.app lokit/juna-1.1.179-75fcc2b1 (LS2:n Peking-pari). SHA + Mac Julkaisijalle.
+- kopioi-juna-app.sh korjattu: etsii ensin käännöspalvelun Products-.appin (simulaattorit T7:llä, vanhat SIMS-UDID:t eivät osu).
+- **JUNA 180** (BUILD 179:n päälle): jonossa NUI köysikorjaus (natiivi-ui/pallo-koysi-sumuun-179, SHA odottaa kuittausta). Worktree j175 (haarat juna-178/179 lähteneet).
+- Worktreet nyt: j175, T7 unity67 (museo poistettu, museo-muisti masterissa).
+
 ## TILA 16.2x — BUILD 178 LUKITTU, JUNA 179 KOOTAAN
 - **BUILD 178 = 9e10d4d33e165b59ba534772c64a2a9d951f9236** (proton master; juna/b13 dbd56ba32, puu identtinen; L1309/P456/K460, unity 0; käännöspalvelu
   KÄÄNNETTY 911df91bf 16.11). Omistaja 16.0x: julkaise, taidemuseo seuraavaan junaan. Muistiajo 177 pätee. Muutosloki (PT kuittasi 16.1x)
