@@ -1,5 +1,5 @@
 // VEDEN INDEKSI JA TASOT (Linssiseppä 2, 9.10.2026; Karttaseppä index-v5, Natiivisepän ehdot): indeksit haetaan uusimmasta alkaen
-// (v6 → v5 → v4 → v3 → v2 → index; uusi versio omalla nimellä, vanhat buildit lukevat vanhaa; v6 = Karttasepän Strömmen–Norrström-aluenosto 10.10., muoto kuten v5). v5:n kohdekohtainen "tarkkuudet" valitsee
+// (v7 → v6 → v5 → v4 → v3 → v2 → index; uusi versio omalla nimellä, vanhat buildit lukevat vanhaa; v6 = Karttasepän Strömmen–Norrström-aluenosto 10.10., v7 = v6 + Blasieholmen/Nybroviken 3,0 m (LS2:n valinta v7b) ja palojen vesistötunniste "vesi" (ei vielä luettu), muoto kuten v5). v5:n kohdekohtainen "tarkkuudet" valitsee
 // tasot: 48m mukana → kolmas taso kauko2 KaukoM–KaukoM2 (Tukholman saaristo 20–40 km), muuten 16 m jatkuu KaukoM2:een (Pariisi);
 // ilman kenttää (v4 ja vanhemmat) kuten ennen: 6 m ja 16 m KaukoM:ään.
 using System;
@@ -8,7 +8,7 @@ namespace Matkakirja.Linssit.Ilmakeha
 {
     public static class VesiIndeksi
     {
-        public static readonly string[] Nimet = { "index-v6.json", "index-v5.json", "index-v4.json", "index-v3.json", "index-v2.json", "index.json" };
+        public static readonly string[] Nimet = { "index-v7.json", "index-v6.json", "index-v5.json", "index-v4.json", "index-v3.json", "index-v2.json", "index.json" };
         public const float KaukoM = 20000f, KaukoM2 = 40000f;
 
         /// <summary>Ensimmäinen saatavilla oleva indeksi (hae palauttaa null, jos tiedostoa ei ole); KaupunkiVesi käy Nimet samassa järjestyksessä.</summary>
