@@ -437,7 +437,7 @@ Miten suistot toimivat veden suodattimina?
 Mitä valuma-alue tarkoittaa?
 
 ### 394
-Angara on Baikalin ainoa laskujoki, ja se lähtee järvestä noin 70 kilometrin päässä Irkutskista. Joki virtaa pohjoiseen ja yhtyy lopulta Jeniseihin. Sen varrelle on rakennettu useita [[vesivoimalaitoksia]] ja niihin liittyviä [[patoallasta]], jotka tuottavat sähköä Siperian teollisuudelle. Joen nimi on käytössä myös historiallisessa kontekstissa: Angara oli vuonna 1900 käyttöön otettu jäänmurtajalaiva, joka tilattiin englantilaiselta [[Newcastlen]] telakalta ja jonka tehtävä oli liikennöidä Baikalin yli, kun Transsiperian rata oli järven kohdalla poikki. Laiva kuljetti matkustajia ja tavaraa, mutta ei junia.
+Angara on Baikalin ainoa laskujoki, ja se lähtee järvestä noin 70 kilometrin päässä Irkutskista. Joki virtaa pohjoiseen ja yhtyy lopulta Jeniseihin. Sen varrelle on rakennettu useita [[vesivoimalaitoksia]] ja niihin liittyviä [[patoallasta]], jotka tuottavat sähköä Siperian teollisuudelle. Joen nimi on käytössä myös historiassa: Angara oli vuonna 1900 käyttöön otettu jäänmurtajalaiva, joka tilattiin englantilaiselta [[Newcastlen]] telakalta ja jonka tehtävä oli liikennöidä Baikalin yli, kun Transsiperian rata oli järven kohdalla poikki. Laiva kuljetti matkustajia ja tavaraa, mutta ei junia.
 JATKOT:
 Miten jäänmurtajat toimivat?
 Miten vesivoimala tuottaa sähköä?

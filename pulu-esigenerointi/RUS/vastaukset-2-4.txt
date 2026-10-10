@@ -83,7 +83,7 @@ Miksi kremli rakennettiin?
 Miten Oka eroaa Volgasta?
 
 ### 255
-[[Nižni Novgorodin kremli]] on punatiilinen linnoitus, joka rakennettiin 1500-luvun alkupuolella suojaamaan kaupunkia. Se kohoaa korkealla Volgan ja Okan yhtymäkohdan yläpuolella, ja sen muureja kiertävät lukuisat tornit. Sana kremli tarkoittaa venäläisen kaupungin linnoitettua ydintä, ja sellaisia on monessa kaupungissa Moskovan lisäksi. Nykyisin kremlin alueella toimivat muun muassa hallinnolliset toimistot ja museo.
+[[Nižni Novgorodin kremli]] on punatiilinen linnoitus, joka rakennettiin 1500-luvun alkupuolella suojaamaan kaupunkia. Se kohoaa korkealla [[Volgan]] ja Okan yhtymäkohdan yläpuolella, ja sen muureja kiertävät lukuisat tornit. Sana kremli tarkoittaa venäläisen kaupungin linnoitettua ydintä, ja sellaisia on monessa kaupungissa Moskovan lisäksi. Nykyisin kremlin alueella toimivat muun muassa hallinnolliset toimistot ja museo.
 JATKOT:
 Mitä muita kremlejä Venäjällä on?
 Miten Moskovan kremli eroaa muista?
@@ -215,7 +215,7 @@ Millainen on Sighișoaran vanha kaupunki?
 Keitä transilvanian saksalaiset olivat?
 
 ### 277
-[[Wernher von Braun]] oli saksalainen rakettiinsinööri, joka syntyi vuonna 1912. Hän johti toisen maailmansodan aikana Peenemünden tutkimuskeskuksessa V-2-ohjuksen kehitystä, ja sen tuotannossa käytettiin pakkotyövoimaa, mikä on osa hänen perintönsä synkkää puolta. Sodan jälkeen hän siirtyi Yhdysvaltoihin ja johti myöhemmin Saturn V -kantoraketin kehittämistä. Hän kuoli vuonna 1977. Historiankirjoitus arvioi hänen toimintaansa sekä ansiokkaan insinöörityön että eettisten kysymysten kautta.
+[[Wernher von Braun]] oli saksalainen rakettiinsinööri, joka syntyi vuonna 1912. Hän johti toisen maailmansodan aikana [[Peenemünden]] tutkimuskeskuksessa V-2-ohjuksen kehitystä, ja sen tuotannossa käytettiin pakkotyövoimaa, mikä on osa hänen perintönsä synkkää puolta. Sodan jälkeen hän siirtyi Yhdysvaltoihin ja johti myöhemmin [[Saturn V]] -kantoraketin kehittämistä. Hän kuoli vuonna 1977. Historiankirjoitus arvioi hänen toimintaansa sekä ansiokkaan insinöörityön että eettisten kysymysten kautta.
 JATKOT:
 Mikä Peenemünde oli?
 Miten V-2 liittyy avaruusohjelmiin?
@@ -251,7 +251,7 @@ Miksi beluga on uhanalainen?
 Miten sampi eroaa muista kaloista?
 
 ### 283
-[[Ossetra]] eli venäjänsampi on arvostettu kaviaarilajike, jonka mäti on pienempää kuin belugan ja väriltään harmaan tai ruskeankullanharmaan sävyistä. Se saadaan Kaspianmeren ja Mustanmeren sammista, ja maun sanotaan olevan pähkinäinen, vaikka makukuvaukset vaihtelevat. Mädin laatu riippuu kalan iästä ja käsittelystä. Kuten muidenkin sampien, myös sen luonnonkannat ovat uhanalaisia, ja kauppaa rajoitetaan.
+[[Ossetra]] eli venäjänsampi on arvostettu kaviaarilajike, jonka mäti on pienempää kuin belugan ja väriltään harmaan tai ruskeankullanharmaan sävyistä. Se saadaan [[Kaspianmeren]] ja Mustanmeren sammista, ja maun sanotaan olevan pähkinäinen, vaikka makukuvaukset vaihtelevat. Mädin laatu riippuu kalan iästä ja käsittelystä. Kuten muidenkin sampien, myös sen luonnonkannat ovat uhanalaisia, ja kauppaa rajoitetaan.
 JATKOT:
 Mistä ossetra eroaa belugasta?
 Miten kaviaari suolataan?
@@ -275,7 +275,7 @@ Millainen on Uspenskin katedraali?
 Miten Ivan Julma valloitti Astrahanin?
 
 ### 287
-[[Belugan]] mätiä pidetään kaviaarin arvostetuimpana lajikkeena. Mätijyvät ovat suuria ja väriltään vaaleanharmaasta tummanharmaaseen, ja ne ovat herkkiä. Beluga kasvaa hitaasti ja tulee sukukypsäksi vasta monen vuoden iässä, joten mädin saaminen vie vuosia. Laji elää Kaspianmerellä ja Mustallamerellä, ja se on erittäin uhanalainen, joten luonnonmädin kauppaa rajoitetaan voimakkaasti.
+[[Belugan]] mätiä pidetään kaviaarin arvostetuimpana lajikkeena. Mätijyvät ovat suuria ja väriltään vaaleanharmaasta tummanharmaaseen, ja ne ovat herkkiä. Beluga kasvaa hitaasti ja tulee sukukypsäksi vasta monen vuoden iässä, joten mädin saaminen vie vuosia. Laji elää [[Kaspianmerellä]] ja Mustallamerellä, ja se on erittäin uhanalainen, joten luonnonmädin kauppaa rajoitetaan voimakkaasti.
 JATKOT:
 Miksi mätijyvät ovat niin herkkiä?
 Miten viljellyn kaviaarin saa ilman kalan tappamista?
@@ -383,7 +383,7 @@ Milloin maaorjuus lakkautettiin ja miksi?
 Millainen Trigorskoje on?
 
 ### 305
-[[Mihailovskoje]] kuuluu laajaan Puškinin muistomuseoalueeseen Pihkovan alueella, johon kuuluvat myös lähellä sijaitsevat Trigorskoje ja Petrovskoje sekä Pyhävuorten luostari, jonne Puškin on haudattu. Alue on säilyttänyt maaseutumaiseman, jossa runoilija kirjoitti: puistoja, järviä ja niittyjä. Museossa esitellään hänen elämäänsä ja karkotusvuosia, ja alueella järjestetään kesäisin runoperinteeseen liittyviä tapahtumia. Kartano on yksi Venäjän tunnetuimmista kirjallisuuspyhiinvaelluskohteista.
+[[Mihailovskoje]] kuuluu laajaan Puškinin muistomuseoalueeseen [[Pihkovan]] alueella, johon kuuluvat myös lähellä sijaitsevat Trigorskoje ja Petrovskoje sekä Pyhävuorten luostari, jonne Puškin on haudattu. Alue on säilyttänyt maaseutumaiseman, jossa runoilija kirjoitti: puistoja, järviä ja niittyjä. Museossa esitellään hänen elämäänsä ja karkotusvuosia, ja alueella järjestetään kesäisin runoperinteeseen liittyviä tapahtumia. Kartano on yksi Venäjän tunnetuimmista kirjallisuuspyhiinvaelluskohteista.
 JATKOT:
 Mitä muuta museoalueella on nähtävää?
 Miksi Puškin on haudattu luostariin?
