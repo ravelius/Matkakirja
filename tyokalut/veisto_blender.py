@@ -47,9 +47,21 @@ def perusvari(mat):
         if nd.type == 'BSDF_PRINCIPLED':
             l = nd.inputs['Base Color'].links
             if l and l[0].from_node.type == 'TEX_IMAGE': return l[0].from_node.image
+    # KHR_materials_unlit (Sketchfabin "shadeless": emissio + läpinäkyvyys sekoitettuna): ensimmäinen kuvasolmu.
+    for nd in mat.node_tree.nodes:
+        if nd.type == 'TEX_IMAGE' and nd.image: return nd.image
+    return None
+
+def pohjavari(mat):
+    """Tekstuurittoman materiaalin väri (lineaarinen RGB), jotta peli voi asettaa sen _Pohja-väriksi."""
+    if not mat or not mat.use_nodes: return None
+    for nd in mat.node_tree.nodes:
+        if nd.type == 'BSDF_PRINCIPLED' and not nd.inputs['Base Color'].links:
+            return [round(x, 4) for x in nd.inputs['Base Color'].default_value[:3]]
     return None
 
 kuvat = {perusvari(s.material) for s in ob.material_slots} - {None}
+vari = next((v for v in (pohjavari(s.material) for s in ob.material_slots) if v), None)
 uv = ob.data.uv_layers
 if len(kuvat) == 1 and len(ob.material_slots) == 1 and len(uv) >= 1:
     kuva = next(iter(kuvat))
@@ -59,24 +71,43 @@ if len(kuvat) == 1 and len(ob.material_slots) == 1 and len(uv) >= 1:
     kuva.filepath_raw = os.path.join(ulos, 'vari.png'); kuva.file_format = 'PNG'; kuva.save()
     tapa = 'skaalattu'
 elif kuvat:
-    # Uusi UV (smart project) + leivonta DIFFUSE color, ei valoa.
+    # Uusi UV (smart project) + leivonta yhteen atlakseen (alla).
     vanha = uv.active.name if uv.active else None
     uusi = uv.new(name='atlas'); uv.active = uusi
-    bpy.ops.object.mode_set(mode='EDIT'); bpy.ops.mesh.select_all(action='SELECT')
-    bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0.003)
-    bpy.ops.object.mode_set(mode='OBJECT')
+    # Atlas-UV = materiaalin alkuperäinen UV omaan ruutuunsa (n materiaalia → ⌈√n⌉² ruudukko). Smart project pilkkoi harvennetun
+    # skannin tuhansiksi pikkusaariksi (Houdon 10.10.: tekstuuri lähes tyhjä), alkuperäinen kartoitus säilyttää tarkkuuden.
+    sarakkeita = math.ceil(math.sqrt(len(ob.material_slots)))
+    vanha_l = uv[vanha].data if vanha else None
+    for f in ob.data.polygons:
+        cx, cy = f.material_index % sarakkeita, f.material_index // sarakkeita
+        for li in f.loop_indices:
+            u0, v0 = vanha_l[li].uv if vanha_l else (0.5, 0.5)
+            u0 = min(max(u0, 0.0), 1.0); v0 = min(max(v0, 0.0), 1.0)
+            k = 1.0 / sarakkeita; reuna = 0.004
+            uusi.data[li].uv = ((cx + reuna + u0 * (1 - 2 * reuna)) * k, (sarakkeita - 1 - cy + reuna + v0 * (1 - 2 * reuna)) * k)
     kuva = bpy.data.images.new('vari', KOKO, KOKO)
+    # Leivonta EMIT-passilla: jokaisen materiaalin väri (kuva tai pohjaväri) suoraan emissioksi → toimii sekä Principled- että
+    # unlit-materiaaleille (DIFFUSE-passi antoi unlit-materiaaleista mustaa, Keyser 10.10.).
     for s_ in ob.material_slots:
-        if not s_.material or not s_.material.use_nodes: continue
-        nd = s_.material.node_tree.nodes.new('ShaderNodeTexImage'); nd.image = kuva
-        s_.material.node_tree.nodes.active = nd
-        for uvn in s_.material.node_tree.nodes:
-            if uvn.type == 'UVMAP' and vanha: uvn.uv_map = vanha
-    # Leivonnan lähde-UV = vanha (materiaalien kuvasolmut käyttävät aktiivista renderöinti-UV:ta).
-    if vanha: uv[vanha].active_render = True
+        m = s_.material
+        if not m: continue
+        m.use_nodes = True
+        nt = m.node_tree
+        lahdekuva = perusvari(m)
+        vari0 = pohjavari(m) or [0.8, 0.8, 0.8]
+        for nd in list(nt.nodes): nt.nodes.remove(nd)
+        out = nt.nodes.new('ShaderNodeOutputMaterial'); em = nt.nodes.new('ShaderNodeEmission')
+        nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
+        if lahdekuva:
+            tk = nt.nodes.new('ShaderNodeTexImage'); tk.image = lahdekuva
+            if vanha:
+                uvn = nt.nodes.new('ShaderNodeUVMap'); uvn.uv_map = vanha; nt.links.new(uvn.outputs['UV'], tk.inputs['Vector'])
+            nt.links.new(tk.outputs['Color'], em.inputs['Color'])
+        else:
+            em.inputs['Color'].default_value = (*vari0, 1)
+        kohde = nt.nodes.new('ShaderNodeTexImage'); kohde.image = kuva; nt.nodes.active = kohde
     bpy.context.scene.render.engine = 'CYCLES'; bpy.context.scene.cycles.samples = 1
-    bpy.context.scene.render.bake.use_pass_direct = False; bpy.context.scene.render.bake.use_pass_indirect = False
-    bpy.ops.object.bake(type='DIFFUSE', pass_filter={'COLOR'}, margin=4, uv_layer='atlas')
+    bpy.ops.object.bake(type='EMIT', margin=4, uv_layer='atlas')
     if vanha: uv.remove(uv[vanha])
     uusi.active_render = True
     kuva.filepath_raw = os.path.join(ulos, 'vari.png'); kuva.file_format = 'PNG'; kuva.save()
@@ -98,7 +129,7 @@ for i in range(len(ob.material_slots)): ob.active_material_index = 0; bpy.ops.ob
 bpy.ops.export_scene.gltf(filepath=os.path.join(ulos, 'malli.glb'), export_format='GLB', use_selection=False,
     export_materials='NONE', export_draco_mesh_compression_enable=False, export_texcoords=True, export_normals=True,
     export_yup=True, export_apply=True)
-tieto = {'kolmioita': len(ob.data.polygons), 'alkuperaisia': alkuperaisia, 'tekstuuri': tapa, 'tekstuurikoko': KOKO,
+tieto = {'kolmioita': len(ob.data.polygons), 'alkuperaisia': alkuperaisia, 'tekstuuri': tapa, 'pohjavari': vari if tapa == 'ei tekstuuria' else None, 'tekstuurikoko': KOKO,
          'kerroin': round(kerroin, 6), 'mitat_m': [round(mx.x - mn.x, 4), round(mx.z - mn.z, 4), round(mx.y - mn.y, 4)]}   # leveys, korkeus, syvyys (Y ylös)
 json.dump(tieto, open(os.path.join(ulos, 'veisto.json'), 'w'), ensure_ascii=False, indent=1)
 print('VEISTO', json.dumps(tieto, ensure_ascii=False))
