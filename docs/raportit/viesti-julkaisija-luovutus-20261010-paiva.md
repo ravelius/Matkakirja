@@ -3,7 +3,22 @@
 Juokseva loki: `/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt` (tail -80). Pitolista: `julkaisija-tyokalut/pidossa.txt`.
 NOLLAUSRAJA 50 % (omistaja 08.3x, Raamattu #4327): kirjoita luovutus, kun konteksti ylittää 50 % (`get_usage`).
 
-## 0. PÄIVITYS 12.4x (lue ensin)
+## 0. PÄIVITYS 12.35 (tilinvaihto, lue ensin)
+
+- **Tila 12.35:** käännöslukko VAPAA, lukkojono tyhjä. Simussa LS2 A26BC7D0 (~12.45 asti; muistivahti 16 käynnissä,
+  pid 15443). Simujono: LS2 → **LS1 museo2** (`simuvuoro-museo2.zsh e325c3bb7`, iPad 00CF62C2 + iPhone T7-UDID BD64C8E4,
+  ~15 min, vahdit 16) → muut. Vanha vahti 8362879F (Siirtoseppä, simu jo alhaalla) jäi pyörimään, harmiton.
+- **Roolit tietävät paluusta** (12.33 viesti PT:lle, Natiivisepälle, NUI:lle, LS1:lle, LS2:lle, Siirtosepälle, Pelikoodarille,
+  Sisältökirjurille). Natiiviseppää pyydetty lähettämään BUILD 177:n täysi SHA + muutosloki PT:n kautta lukituksen jälkeen.
+- **ETUSIJA vuoroissa:** NUI:n ja LS1:n TF 176 -korjaukset → Natiivisepän muistiajo (muistiajo-177.txt) → muut.
+- **TF 177 (juna 176) -resepti, iOS + Mac heti Natiivisepän lukituksen jälkeen:**
+  1. `muutosloki-api.sh 177 "<PT:n hyväksymä teksti>"` → muutosloki-merge-SHA.
+  2. `tf-kaynnista.sh 177 <BUILD 177 täysi SHA> <muutosloki-merge-SHA>` (tf177-ei-ulkoista on jo luotu → vain sisäinen).
+  3. Mac: Natiiviseppä ajaa `mac-kaanna.sh <SHA> 1.1 177` (phonon-bundlejen pysyvä korjaus Rakennus.MacOS:issa junassa 177) →
+     `gh workflow run proto3d-mac-testflight.yml --ref main -f build=177 -f lataa=true -f sisainen_ryhma=true`.
+  4. "TestFlightissa" PT:lle vasta Applen VALIDin jälkeen (molemmat alustat erikseen).
+
+## 0b. PÄIVITYS 12.4x
 
 - **TF 176 VALMIS molemmilla alustoilla:** iOS (VALID, sisäinen 11.24) ja **Mac TF 176** ajo 38040911547 (VALID, sisäinen).
   Mac-uusinta tarvittiin: Steam Audion PlugIns/phonon.bundle + audioplugin_phonon.bundle ilman CFBundleIdentifieriä (altool
