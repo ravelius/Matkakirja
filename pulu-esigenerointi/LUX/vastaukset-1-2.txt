@@ -1,6 +1,6 @@
 ### 6.1
 KYSYMYS: Kuinka korkealla Sûre-joen yläpuolella Bourscheidin linna on?
-Hetkinen ny, tän minä muistan. Bourscheidin linna kohoaa noin 150 metriä Sûre-joen yläpuolelle Luxemburgin koillisosassa. Sen paikalla on jäänteitä [[roomalaisen ajan]] rakennelmista, ja linnaa ympäröi pyöreä muuri. Linna mainitaan ensimmäisen kerran vuonna 1095, vaikka se näyttää rakennetun jo noin vuonna 1000 aiempien perustusten päälle. Korkeita paikkoja minä arvostan.
+Hetkinen ny, tän minä muistan. Bourscheidin linna kohoaa noin 150 metriä [[Sûre-joen]] yläpuolelle [[Luxemburgin]] koillisosassa. Sen paikalla on jäänteitä [[roomalaisen ajan]] rakennelmista, ja linnaa ympäröi pyöreä muuri. Linna mainitaan ensimmäisen kerran vuonna 1095, vaikka se näyttää rakennetun jo noin vuonna 1000 aiempien perustusten päälle. Korkeita paikkoja minä arvostan.
 JATKOT:
 Kuinka monta vartiotornia linnaa ympäröivässä muurissa on?
 Kuka omisti linnan 1600-luvulta alkaen?
@@ -21,14 +21,14 @@ Milloin valtio osti linnan?
 
 ### 6.4
 KYSYMYS: Mistä vuodesta linnan ulkomuuri on peräisin?
-Kas vaan, sepä sattui. Linnan ulkomuuri on vuodelta 1350. Linna itse on vanhempi: se mainitaan ensimmäisen kerran vuonna 1095, ja sitä on laajennettu useita kertoja. Stolzembourgin talo on vuodelta 1384 ja piha vuodelta 1477, joten rakentaminen jatkui monta sukupolvea. Ei paha muistilta, vaikka sanon itse.
+Kas vaan, sepä sattui. Linnan ulkomuuri on vuodelta 1350. Linna itse on vanhempi: se mainitaan ensimmäisen kerran vuonna 1095, ja sitä on laajennettu useita kertoja. [[Stolzembourgin]] talo on vuodelta 1384 ja [[piha]] vuodelta 1477, joten rakentaminen jatkui monta sukupolvea. Ei paha muistilta, vaikka sanon itse.
 JATKOT:
 Mikä Stolzembourgin talo oli?
 Miksi linnoja laajennettiin useaan kertaan?
 
 ### 6.5
 KYSYMYS: Mitä linnan paikalla oli ennen keskiaikaista linnaa?
-Ai tota, hyvä kysymys tuo. Keskiaikaisen linnan paikalla on jäänteitä [[roomalaisen ajan]] rakennelmista, joten alue on ollut käytössä jo sitä ennen. Linna näyttää rakennetun noin vuonna 1000 aiempien perustusten päälle, ja se mainitaan ensimmäisen kerran vuonna 1095. Tarkemmin roomalaisista rakennelmista en ole varma, joten en lähde arvailemaan. Roomalaisia suku on aina arvostanut.
+Ai tota, hyvä kysymys tuo. [[Keskiaikaisen linnan]] paikalla on jäänteitä [[roomalaisen ajan]] rakennelmista, joten alue on ollut käytössä jo sitä ennen. Linna näyttää rakennetun noin vuonna 1000 aiempien perustusten päälle, ja se mainitaan ensimmäisen kerran vuonna 1095. Tarkemmin roomalaisista rakennelmista en ole varma, joten en lähde arvailemaan. Roomalaisia suku on aina arvostanut.
 JATKOT:
 Millaisia roomalaisia jäänteitä Luxemburgista on löydetty?
 Miten linnoja rakennettiin keskiajalla kallioille?
@@ -42,7 +42,7 @@ Mikä Kalatori on?
 
 ### 7.2
 KYSYMYS: Kuinka pitkään linnoituksen purkaminen kesti?
-Odotas vähän. Purku kesti kuusitoista vuotta. Se perustui vuoden 1867 [[Lontoon sopimukseen]], joka vaati Luxemburgia purkamaan kaupungin linnoitukset, ja Preussin varuskunta vetäytyi. Työ maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita. Kuusitoista vuotta on pitkä aika, ei se mikään viikon remontti ollu.
+Odotas vähän. Purku kesti kuusitoista vuotta. Se perustui vuoden 1867 [[Lontoon sopimukseen]], joka vaati [[Luxemburgia]] purkamaan kaupungin linnoitukset, ja [[Preussin]] varuskunta vetäytyi. Työ maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita. Kuusitoista vuotta on pitkä aika, ei se mikään viikon remontti ollu.
 JATKOT:
 Miksi Lontoon sopimus vaati linnoitusten purkamista?
 Mitä maanalaisista käytävistä on jäljellä?
@@ -56,119 +56,119 @@ Kuka Lazare Carnot oli?
 
 ### 7.4
 KYSYMYS: Kuka oli Lazare Carnot, joka ylisti Luxemburgin linnoitusta?
-Hmm, annas ku mietin. Lazare Carnot oli ranskalainen sotilasinsinööri. Hän kutsui Luxemburgin kaupungin linnoitusta maailman parhaaksi linnoitukseksi Gibraltaria lukuun ottamatta, ja tämän lausunnon vuoksi kaupunki sai lempinimen [[Pohjoisen Gibraltar]]. Muista vaiheistaan hänestä en ole aivan varma, joten pysyn tässä. Insinööri kehuu linnoitusta, kyyhky kehuu kaiteita.
+Hmm, annas ku mietin. Lazare Carnot oli ranskalainen sotilasinsinööri. Hän kutsui [[Luxemburgin]] kaupungin linnoitusta maailman parhaaksi linnoitukseksi [[Gibraltaria]] lukuun ottamatta, ja tämän lausunnon vuoksi kaupunki sai lempinimen [[Pohjoisen Gibraltar]]. Muista vaiheistaan hänestä en ole aivan varma, joten pysyn tässä. Insinööri kehuu linnoitusta, kyyhky kehuu kaiteita.
 JATKOT:
 Mikä Gibraltar on ja missä se sijaitsee?
 Miten linnoituksia suunniteltiin ennen vanhaan?
 
 ### 7.5
 KYSYMYS: Kuinka syviä rotkoja joet ovat kaivaneet Luxemburgin kaupunkiin?
-No niin, katsotaas. Joet ovat kaivaneet kaupunkiin noin 70 metriä syviä rotkoja, joita ylittävät monet sillat. Yksi tunnetuimmista on [[Adolphe-silta]]. Rotkot kuuluvat Alzette- ja Pétrusse-jokien laaksoihin, joiden yhtymäkohdassa kaupunki sijaitsee. Siltoja on paljon, mutta siivillä minä pääsen ylitse nopeammin.
+No niin, katsotaas. Joet ovat kaivaneet kaupunkiin noin 70 metriä syviä rotkoja, joita ylittävät monet sillat. Yksi tunnetuimmista on [[Adolphe-silta]]. Rotkot kuuluvat [[Alzette-]] ja [[Pétrusse-jokien]] laaksoihin, joiden yhtymäkohdassa kaupunki sijaitsee. Siltoja on paljon, mutta siivillä minä pääsen ylitse nopeammin.
 JATKOT:
 Milloin Adolphe-silta rakennettiin?
 Miten Pétrusse-joen laakso näkyy kaupungissa?
 
 ### 8.1
 KYSYMYS: Millä joella Larochette sijaitsee?
-Ai se, tost minä osaan kertoo. Larochette sijaitsee Valkoisen [[Ernz-joen]] laaksossa Keski-Luxemburgissa. Kaupunkia hallitsee osittain raunioitunut linna, joka kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella. Luxemburgiksi kaupungin nimi on Fiels. Hieno paikka, minun mielestäni.
+Ai se, tost minä osaan kertoo. Larochette sijaitsee Valkoisen [[Ernz-joen]] laaksossa [[Keski-Luxemburgissa]]. Kaupunkia hallitsee osittain raunioitunut linna, joka kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella. Luxemburgiksi kaupungin nimi on [[Fiels]]. Hieno paikka, minun mielestäni.
 JATKOT:
 Mitä Larochetten linnasta tiedetään?
 Mikä on Larochetten luxemburginkielinen nimi?
 
 ### 8.2
 KYSYMYS: Millä alalla Larochette oli teollinen keskus 1700-luvun lopulta 1930-luvulle?
-Kas vaan. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus. Kankaita kudottiin siis Larochetten laaksossa yli puolentoista vuosisadan ajan. Linnan kaivosta kerrotaan lisäksi legendoja, joten kaupungissa kiinnostavaa riittää muuhunkin kuin teollisuuteen. Kudontaa en ole itse kokeillut, mutta lankaa olen kantanut.
+Kas vaan. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus. Kankaita kudottiin siis [[Larochetten]] laaksossa yli puolentoista vuosisadan ajan. [[Linnan kaivosta]] kerrotaan lisäksi legendoja, joten kaupungissa kiinnostavaa riittää muuhunkin kuin teollisuuteen. Kudontaa en ole itse kokeillut, mutta lankaa olen kantanut.
 JATKOT:
 Mitä legendoja linnan kaivosta kerrotaan?
 Miten kutomoteollisuus muutti pienen kaupungin elämää?
 
 ### 8.3
 KYSYMYS: Keitä Larochetten herrat olivat Luxemburgin kreiveille?
-Joo, tän minä tiedän. Larochetten herrat olivat Luxemburgin kreivien lippumiehiä, ja he rakennuttivat linnan. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa. Linnan varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, joten suvulla on pitkä historia. Lippumiehen työ kuulostaa vähän kyyhkyn työltä.
+Joo, tän minä tiedän. Larochetten herrat olivat [[Luxemburgin kreivien]] [[lippumiehiä]], ja he rakennuttivat linnan. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa. Linnan varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, joten suvulla on pitkä historia. Lippumiehen työ kuulostaa vähän kyyhkyn työltä.
 JATKOT:
 Mitä lippumiehet tekivät keskiajalla?
 Mitkä kartanoista on kunnostettu?
 
 ### 8.4
 KYSYMYS: Mitkä kaksi kartanoa Larochetten linnan vieressä on kunnostettu?
-Hetkinen ny. Kunnostetut kartanot ovat Homburgin kartano, joka on vuodelta 1350, ja Créhangen kartano vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat kallionkielekkeellä noin 150 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.
+Hetkinen ny. Kunnostetut kartanot ovat [[Homburgin kartano]], joka on vuodelta 1350, ja [[Créhangen kartano]] vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat kallionkielekkeellä noin 150 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.
 JATKOT:
 Miksi suku rakennutti useita kartanoita?
 Mitä kunnostus tarkoittaa raunioille?
 
 ### 8.5
 KYSYMYS: Miten Larochetten linna tuhoutui 1500-luvun lopulla?
-Ai tota, selvä. Linna tuhoutui tulipalossa 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen kallionkielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.
+Ai tota, selvä. Linna tuhoutui [[tulipalossa]] 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen kallionkielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.
 JATKOT:
 Mistä linnan rauniot kertovat nykyään?
 Miten linnoja suojeltiin tulipaloilta?
 
 ### 9.1
 KYSYMYS: Kuinka korkea Useldangen linnan päätorni on?
-Katotaas. Useldangen linnan päätorni on 25 metriä korkea, ja se kohoaa linnan keskellä. Linna on keskiaikainen, pääosin raunioitunut linna Länsi-Luxemburgissa, pienellä kukkulalla kylän keskustassa [[Attert-joen]] yllä. Ulkomuuri ja yksi pyöreistä torneista antavat hyvän kuvan siitä, millainen linna on aikoinaan ollut. Sellaiselle tornille minä laskeutuisin mielelläni.
+Katotaas. Useldangen linnan päätorni on 25 metriä korkea, ja se kohoaa linnan keskellä. Linna on keskiaikainen, pääosin raunioitunut linna [[Länsi-Luxemburgissa]], pienellä kukkulalla kylän keskustassa [[Attert-joen]] yllä. Ulkomuuri ja yksi [[pyöreistä torneista]] antavat hyvän kuvan siitä, millainen linna on aikoinaan ollut. Sellaiselle tornille minä laskeutuisin mielelläni.
 JATKOT:
 Milloin Useldangen herrakunta perustettiin?
 Mitä linnan palatsin paikalla on nykyään?
 
 ### 9.2
 KYSYMYS: Minä vuonna linnan kappeli tuhoutui?
-Nyt muistan. Kappeli tuhoutui vuonna 1903. Linna ja sen kappeli olivat vaurioituneet pahoin jo aiemmin [[Burgundin ja Ranskan]] välisen sodan seurauksena, ja linna rappeutui. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion. Tarkkoja päiviä en tiedä, mutta vuosiluvusta olen varma.
+Nyt muistan. Kappeli tuhoutui vuonna 1903. Linna ja sen kappeli olivat vaurioituneet pahoin jo aiemmin [[Burgundin ja Ranskan]] välisen sodan seurauksena, ja linna rappeutui. Vuonna 1924 Yhdysvalloista palannut [[Emma Kuhn]] osti raunion. Tarkkoja päiviä en tiedä, mutta vuosiluvusta olen varma.
 JATKOT:
 Mikä oli Burgundin ja Ranskan välinen sota?
 Mitä linnan raunioille tapahtui 1900-luvulla?
 
 ### 9.3
 KYSYMYS: Kuka osti Useldangen linnan raunion vuonna 1924?
-Odotas vähän. Raunion osti vuonna 1924 Emma Kuhn, joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään kaupungintalona. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.
+Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.
 JATKOT:
 Millainen Useldangen kaupungintalo on?
 Miksi kuntien hallintoa sijoitetaan vanhoihin linnoihin?
 
 ### 9.4
 KYSYMYS: Mitä Useldangen linnan raunioiden päällä on nykyään?
-Kato, tää on kiva. Palatsin raunioiden päälle on rakennettu moderni rakennus, joka toimii nykyään kaupungintalona. Linnasta on jäljellä rauniot, joista erottuvat ulkomuuri, yksi pyöreistä torneista ja 25 metriä korkea päätorni. Se seisoo pienellä kukkulalla [[Useldangen]] kylän keskustassa Länsi-Luxemburgissa. Vanhaa ja uutta samalla kukkulalla, sellaista minä katson mielelläni.
+Kato, tää on kiva. Palatsin raunioiden päälle on rakennettu moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linnasta on jäljellä rauniot, joista erottuvat ulkomuuri, yksi pyöreistä torneista ja 25 metriä korkea päätorni. Se seisoo pienellä kukkulalla [[Useldangen]] kylän keskustassa [[Länsi-Luxemburgissa]]. Vanhaa ja uutta samalla kukkulalla, sellaista minä katson mielelläni.
 JATKOT:
 Milloin kaupungintalo rakennettiin?
 Mitä muuta Useldangen kylässä on nähtävää?
 
 ### 9.5
 KYSYMYS: Minkä joen yllä Useldangen linna seisoo?
-Selvä juttu. Linna seisoo Attert-joen yllä, pienellä kukkulalla kylän keskustassa Länsi-Luxemburgissa. Se on keskiaikainen, pääosin raunioitunut linna, ja sen näyttää olevan 1100-luvulta, jolloin [[Useldangen herrakunta]] perustettiin. Joen ja kukkulan yhdistelmä on keskiaikaisille linnoille tyypillinen. Joet ovat kyyhkyn parhaita suunnistuspisteitä.
+Selvä juttu. Linna seisoo [[Attert-joen]] yllä, pienellä kukkulalla kylän keskustassa [[Länsi-Luxemburgissa]]. Se on keskiaikainen, pääosin raunioitunut linna, ja sen näyttää olevan 1100-luvulta, jolloin [[Useldangen herrakunta]] perustettiin. Joen ja kukkulan yhdistelmä on keskiaikaisille linnoille tyypillinen. Joet ovat kyyhkyn parhaita suunnistuspisteitä.
 JATKOT:
 Miten Attert-joki kulkee Luxemburgin halki?
 Mikä herrakunta oli keskiajalla?
 
 ### 10.1
 KYSYMYS: Minä vuonna Schengenin sopimus allekirjoitettiin?
-No niin, tän minä tiedän. Schengenin sopimus allekirjoitettiin vuonna 1985, kesäkuun 14. päivänä. Allekirjoitus tapahtui jokilaiva Princesse Marie-Astridilla, joka oli ankkurissa [[Moselilla]] Schengenin viinikylän kohdalla. Sopimus koski rajatarkastusten asteittaista poistamista. Hyvä muisti kyyhkyllä, vaikka sanonkin itse.
+No niin, tän minä tiedän. Schengenin sopimus allekirjoitettiin vuonna 1985, kesäkuun 14. päivänä. Allekirjoitus tapahtui jokilaiva [[Princesse Marie-Astridilla]], joka oli ankkurissa [[Moselilla]] [[Schengenin]] viinikylän kohdalla. Sopimus koski rajatarkastusten asteittaista poistamista. Hyvä muisti kyyhkyllä, vaikka sanonkin itse.
 JATKOT:
 Mitkä maat allekirjoittivat sopimuksen?
 Missä laiva on nykyään?
 
 ### 10.2
 KYSYMYS: Minkä kolmen maan rajat kohtaavat kunnan alueella?
-Kas vaan, sepä sattui. Kunnan rajalla kohtaavat Luxemburgin, Ranskan ja Saksan rajat. Schengen on viininviljelykylä [[Moselin]] länsirannalla Kaakkois-Luxemburgissa, ja kolmenkohta on aivan kunnan rajalla. Siellä rajat kohtaavat joen varrella, ja Schengenin sopimuskin allekirjoitettiin juuri tällä seudulla. Kolme maata yhdessä pisteessä, minä vain lennän niiden yli.
+Kas vaan, sepä sattui. Kunnan rajalla kohtaavat Luxemburgin, Ranskan ja Saksan rajat. [[Schengen]] on viininviljelykylä [[Moselin]] länsirannalla [[Kaakkois-Luxemburgissa]], ja kolmenkohta on aivan kunnan rajalla. Siellä rajat kohtaavat joen varrella, ja Schengenin sopimuskin allekirjoitettiin juuri tällä seudulla. Kolme maata yhdessä pisteessä, minä vain lennän niiden yli.
 JATKOT:
 Mikä on kolmenkohta ja miksi se on tärkeä?
 Millaista viiniä Moselin laaksossa viljellään?
 
 ### 10.3
 KYSYMYS: Millä aluksella Schengenin sopimus allekirjoitettiin?
-Joo, tän tiedän. Sopimus allekirjoitettiin jokilaiva Princesse Marie-Astridilla, joka oli ankkurissa Moselilla Schengenin kohdalla. Laiva myytiin vuonna 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Samalla kylässä on myös [[Euroopan museo]], joka avattiin vuonna 2010. Laiva vaihtoi maata, mutta pääsi lopulta takaisin, ymmärrän sen kaipuun.
+Joo, tän tiedän. Sopimus allekirjoitettiin jokilaiva [[Princesse Marie-Astridilla]], joka oli ankkurissa [[Moselilla]] Schengenin kohdalla. Laiva myytiin vuonna 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Samalla kylässä on myös [[Euroopan museo]], joka avattiin vuonna 2010. Laiva vaihtoi maata, mutta pääsi lopulta takaisin, ymmärrän sen kaipuun.
 JATKOT:
 Mitä Euroopan museossa esitellään?
 Miksi laiva myytiin Saksaan?
 
 ### 10.4
 KYSYMYS: Mitkä maat allekirjoittivat Schengenin sopimuksen vuonna 1985?
-Hetkinen ny. Sopimuksen allekirjoittivat Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat. Se allekirjoitettiin kesäkuun 14. päivänä 1985 laivalla Moselilla, ja sopimus koski rajatarkastusten asteittaista poistamista. Nykyisin [[Schengen-alueeseen]] kuuluu 29 Euroopan maata. Viisi maata aluksi, nykyään 29, sehän on melkein kuin pulupari joka löysi parven.
+Hetkinen ny. Sopimuksen allekirjoittivat Belgian, Ranskan, Luxemburgin, Alankomaiden ja [[Länsi-Saksan]] edustajat. Se allekirjoitettiin kesäkuun 14. päivänä 1985 laivalla [[Moselilla]], ja sopimus koski rajatarkastusten asteittaista poistamista. Nykyisin [[Schengen-alueeseen]] kuuluu 29 Euroopan maata. Viisi maata aluksi, nykyään 29, sehän on melkein kuin pulupari joka löysi parven.
 JATKOT:
 Mitkä maat kuuluvat Schengen-alueeseen nykyään?
 Mitä rajatarkastusten poistaminen on muuttanut arjessa?
 
 ### 10.5
 KYSYMYS: Montako Euroopan maata kuuluu nykyisin Schengen-alueeseen?
-Ai tota, hyvä kysymys tuo. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata. Alue sai alkunsa vuoden 1985 sopimuksesta, jonka viiden maan edustajat allekirjoittivat Schengenin viinikylän kohdalla Moselilla. Kylässä on nykyään myös [[Euroopan museo]], joka esittelee Schengenin sopimusten historiaa. Luku on kasvanut kovasti, minä en ole ehtinyt laskea kaikkia.
+Ai tota, hyvä kysymys tuo. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata. Alue sai alkunsa vuoden 1985 sopimuksesta, jonka viiden maan edustajat allekirjoittivat [[Schengenin]] viinikylän kohdalla [[Moselilla]]. Kylässä on nykyään myös [[Euroopan museo]], joka esittelee Schengenin sopimusten historiaa. Luku on kasvanut kovasti, minä en ole ehtinyt laskea kaikkia.
 JATKOT:
 Mitkä viisi maata olivat mukana alussa?
 Mitä Euroopan museossa voi nähdä?
