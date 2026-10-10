@@ -71,7 +71,7 @@ namespace Matkakirja.Linssit.Testit
             // PT 10.10. (juna 175): autot, raitiovaunut ja kyyhkyt maanpinnalle (DTM), DSM varalla; vain lähiosa (muisti).
             string e = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "ElavaKaupunki.cs"));
             string o = File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Unity", "OpasSovitin.cs"));
-            Oleta.Tosi(e.Contains("OpasSovitin.OmaMaanpinta(lat0 + (z + dz)") && e.Contains("OpasSovitin.OmaMaanpinta(p.Paikka.Lat") && e.Contains("MaanpintaValmis(lat0, lon0)"), "katuliikenne ja kyyhkyt maanpinnalla, katu vasta kun maanpinta ratkennut");
+            Oleta.Tosi(e.Contains("Maa(double x, double z) => Korkeus(x, z, OpasSovitin.OmaMaanpinta)") && e.Contains("KatuLiikenne.Lue(katuJson, Maa, autoRaja, 20261009, Pinta)") && e.Contains("OpasSovitin.OmaMaanpinta(p.Paikka.Lat") && e.Contains("MaanpintaValmis(lat0, lon0)"), "katuliikenne ja kyyhkyt maanpinnalla, katu vasta kun maanpinta ratkennut");
             Oleta.Tosi(o.Contains("MiniJson.Teksti(d, \"osa\") == \"lahi\"") && o.Contains("return OmaMaa(lat, lon);"), "vain lähiosa, DSM varalla");
         }
 
