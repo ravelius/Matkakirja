@@ -1,0 +1,221 @@
+================ KOHTA 16 (kohde:hahmotelma-dinant) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinant (kulttuuri)
+Tietoruudun teksti: Dinant on Maas-joen varrella Ardenneilla Namurin maakunnassa sijaitseva kaupunki. Se on kasvanut jyrkän kalliojyrkänteen ja joen väliin, joten sen asutus on venynyt pitkäksi ja kapeaksi pohjois-eteläsuuntaiseksi kaistaksi. Kaupungin tunnusmerkki on Notre Damen kollegiaattikirkko, joka rakennettiin uudelleen goottilaiseen tyyliin sen jälkeen, kun kalliosta pudonneet lohkareet tuhosivat vanhan romaanisen kirkon vuonna 1227; kirkon yläpuolella kalliolla kohoaa 1000-luvulta peräisin oleva linnoitettu kaupunginlinnake. Perinteisiä elinkeinoja ovat messinkiesineiden valmistus sekä kalkkikiven louhinta, ja kaupungin kuuluisiin asukkaisiin kuuluu saksofonin keksinyt Adolphe Sax, jonka talossa on pieni museo. Dinantin couque on Euroopan kovin keksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Keksinnöt: Dinantin haamulapsi ja hänen soittimensa] 1846 — Adolphe Sax syntyi Dinantissa vuonna 1814. Tarinan mukaan hän selvisi lapsena niin monesta hengenvaarallisesta tapaturmasta, että häntä kutsuttiin Dinantin haamulapseksi. Hän kasvoi isänsä soitinverstaassa Brysselissä, muutti vuonna 1842 Pariisiin ja patentoi saksofonin 28. kesäkuuta 1846. Soitin yhdisti puupuhaltimen taipuisuuden ja vaskisoittimen voiman. Keksinnöstä huolimatta Sax ajautui konkurssiin kolme kertaa ja kuoli Pariisissa vuonna 1894 köyhänä.
+
+### 16.1
+KYSYMYS: Minkä soittimen keksijä Adolphe Sax oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinant (kulttuuri)
+Tietoruudun teksti: Dinant on Maas-joen varrella Ardenneilla Namurin maakunnassa sijaitseva kaupunki. Se on kasvanut jyrkän kalliojyrkänteen ja joen väliin, joten sen asutus on venynyt pitkäksi ja kapeaksi pohjois-eteläsuuntaiseksi kaistaksi. Kaupungin tunnusmerkki on Notre Damen kollegiaattikirkko, joka rakennettiin uudelleen goottilaiseen tyyliin sen jälkeen, kun kalliosta pudonneet lohkareet tuhosivat vanhan romaanisen kirkon vuonna 1227; kirkon yläpuolella kalliolla kohoaa 1000-luvulta peräisin oleva linnoitettu kaupunginlinnake. Perinteisiä elinkeinoja ovat messinkiesineiden valmistus sekä kalkkikiven louhinta, ja kaupungin kuuluisiin asukkaisiin kuuluu saksofonin keksinyt Adolphe Sax, jonka talossa on pieni museo. Dinantin couque on Euroopan kovin keksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Keksinnöt: Dinantin haamulapsi ja hänen soittimensa] 1846 — Adolphe Sax syntyi Dinantissa vuonna 1814. Tarinan mukaan hän selvisi lapsena niin monesta hengenvaarallisesta tapaturmasta, että häntä kutsuttiin Dinantin haamulapseksi. Hän kasvoi isänsä soitinverstaassa Brysselissä, muutti vuonna 1842 Pariisiin ja patentoi saksofonin 28. kesäkuuta 1846. Soitin yhdisti puupuhaltimen taipuisuuden ja vaskisoittimen voiman. Keksinnöstä huolimatta Sax ajautui konkurssiin kolme kertaa ja kuoli Pariisissa vuonna 1894 köyhänä.
+
+### 16.2
+KYSYMYS: Miksi Dinant on pitkä ja kapea kaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dinant (kulttuuri)
+Tietoruudun teksti: Dinant on Maas-joen varrella Ardenneilla Namurin maakunnassa sijaitseva kaupunki. Se on kasvanut jyrkän kalliojyrkänteen ja joen väliin, joten sen asutus on venynyt pitkäksi ja kapeaksi pohjois-eteläsuuntaiseksi kaistaksi. Kaupungin tunnusmerkki on Notre Damen kollegiaattikirkko, joka rakennettiin uudelleen goottilaiseen tyyliin sen jälkeen, kun kalliosta pudonneet lohkareet tuhosivat vanhan romaanisen kirkon vuonna 1227; kirkon yläpuolella kalliolla kohoaa 1000-luvulta peräisin oleva linnoitettu kaupunginlinnake. Perinteisiä elinkeinoja ovat messinkiesineiden valmistus sekä kalkkikiven louhinta, ja kaupungin kuuluisiin asukkaisiin kuuluu saksofonin keksinyt Adolphe Sax, jonka talossa on pieni museo. Dinantin couque on Euroopan kovin keksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Keksinnöt: Dinantin haamulapsi ja hänen soittimensa] 1846 — Adolphe Sax syntyi Dinantissa vuonna 1814. Tarinan mukaan hän selvisi lapsena niin monesta hengenvaarallisesta tapaturmasta, että häntä kutsuttiin Dinantin haamulapseksi. Hän kasvoi isänsä soitinverstaassa Brysselissä, muutti vuonna 1842 Pariisiin ja patentoi saksofonin 28. kesäkuuta 1846. Soitin yhdisti puupuhaltimen taipuisuuden ja vaskisoittimen voiman. Keksinnöstä huolimatta Sax ajautui konkurssiin kolme kertaa ja kuoli Pariisissa vuonna 1894 köyhänä.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-spa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spa (kulttuuri)
+Tietoruudun teksti: Spa on kaupunki Wallonian Liègen maakunnassa Ardenneilla, ja sen nimestä on tullut yleisnimi kylpylälle eli paikalle, jonka kivennäisvesillä uskotaan olevan parantavia vaikutuksia. Kaupunki on tunnettu kivennäislähteistään ja maailmalle viedystä Spa-mineraalivedestä; sen ympäristössä on yli 300 kylmää kivennäislähdettä. Paikka tunnettiin jo roomalaisaikana nimellä Aquae Spadanae, ja Plinius vanhempi kertoi seudun kuplivasta lähteestä. Kaupungissa on ollut kasinoja 1700-luvulta lähtien, ja 1800-luvulla siitä kasvoi muodikas lomakohde, jossa Leopold II:n aikana rakennettiin muun muassa Thermal Baths -kylpylä vuonna 1868. Vuonna 2021 Spa liitettiin osaksi Unescon maailmanperintökohdetta Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Somalia — maalehti / Ruoka: Federaatio on riisiä ja spagettia samalla lautasella] Spagetti eli baasto jäi Somaliaan italialaisilta, mutta se syödään paksun lihamuhennoksen kanssa eikä pastakastikkeessa. Ravintolassa voi tilata annoksen, jonka nimi on federaatio: soikealle vadille tulee yhtä suuri kasa riisiä ja yhtä suuri kasa spagettia vierekkäin, päälle haudutettua lihaa ja kasviksia, viereen salaattia ja halutessa banaani. Nimen arvellaan tulevan kahden ruokalajin liitosta ja annoksen koosta. Kotona sitä tehdään harvoin — kukapa keittäisi samalle aterialle sekä riisin että pastan.
+- [Dubai — kohdekartta / Kohdekartta: Dhow-satama] Khor Dubai ei ole joki vaan Persianlahden suolainen lahti, joka työntyy noin 14 kilometriä sisämaahan. Leveyttä on 200–1200 metriä ja syvyyttä keskimäärin 6,5–7 metriä. Deiran puoleiseen laituriin kiinnittyy puisia dhow-aluksia kahden ja kolmen rivissä, ja lasti odottaa laiturilla taivasalla laatikkopinoina. Lahden kautta kulkee yhä yli 13 000 alusta vuodessa. Dhow on eurooppalaisten antama yleisnimi Intian valtameren pitkärunkoisille purjealuksille. Suurimmissa on noin kolmenkymmenen hengen miehistö, pienimmissä tusinan verran. Osa purjehtii yhä monsuunin mukana: etelään Itä-Afrikkaan talvella tai alkukeväästä taatelilastissa, takaisin Arabiaan myöhään keväällä mangrovepuutavaraa kyydissä.…
+
+### 17.1
+KYSYMYS: Mikä oli Spa-kaupungin roomalainen nimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spa (kulttuuri)
+Tietoruudun teksti: Spa on kaupunki Wallonian Liègen maakunnassa Ardenneilla, ja sen nimestä on tullut yleisnimi kylpylälle eli paikalle, jonka kivennäisvesillä uskotaan olevan parantavia vaikutuksia. Kaupunki on tunnettu kivennäislähteistään ja maailmalle viedystä Spa-mineraalivedestä; sen ympäristössä on yli 300 kylmää kivennäislähdettä. Paikka tunnettiin jo roomalaisaikana nimellä Aquae Spadanae, ja Plinius vanhempi kertoi seudun kuplivasta lähteestä. Kaupungissa on ollut kasinoja 1700-luvulta lähtien, ja 1800-luvulla siitä kasvoi muodikas lomakohde, jossa Leopold II:n aikana rakennettiin muun muassa Thermal Baths -kylpylä vuonna 1868. Vuonna 2021 Spa liitettiin osaksi Unescon maailmanperintökohdetta Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Somalia — maalehti / Ruoka: Federaatio on riisiä ja spagettia samalla lautasella] Spagetti eli baasto jäi Somaliaan italialaisilta, mutta se syödään paksun lihamuhennoksen kanssa eikä pastakastikkeessa. Ravintolassa voi tilata annoksen, jonka nimi on federaatio: soikealle vadille tulee yhtä suuri kasa riisiä ja yhtä suuri kasa spagettia vierekkäin, päälle haudutettua lihaa ja kasviksia, viereen salaattia ja halutessa banaani. Nimen arvellaan tulevan kahden ruokalajin liitosta ja annoksen koosta. Kotona sitä tehdään harvoin — kukapa keittäisi samalle aterialle sekä riisin että pastan.
+
+### 17.2
+KYSYMYS: Mikä yleisnimi on saanut alkunsa Spa-kaupungin nimestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Spa (kulttuuri)
+Tietoruudun teksti: Spa on kaupunki Wallonian Liègen maakunnassa Ardenneilla, ja sen nimestä on tullut yleisnimi kylpylälle eli paikalle, jonka kivennäisvesillä uskotaan olevan parantavia vaikutuksia. Kaupunki on tunnettu kivennäislähteistään ja maailmalle viedystä Spa-mineraalivedestä; sen ympäristössä on yli 300 kylmää kivennäislähdettä. Paikka tunnettiin jo roomalaisaikana nimellä Aquae Spadanae, ja Plinius vanhempi kertoi seudun kuplivasta lähteestä. Kaupungissa on ollut kasinoja 1700-luvulta lähtien, ja 1800-luvulla siitä kasvoi muodikas lomakohde, jossa Leopold II:n aikana rakennettiin muun muassa Thermal Baths -kylpylä vuonna 1868. Vuonna 2021 Spa liitettiin osaksi Unescon maailmanperintökohdetta Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Dhow-satama] Khor Dubai ei ole joki vaan Persianlahden suolainen lahti, joka työntyy noin 14 kilometriä sisämaahan. Leveyttä on 200–1200 metriä ja syvyyttä keskimäärin 6,5–7 metriä. Deiran puoleiseen laituriin kiinnittyy puisia dhow-aluksia kahden ja kolmen rivissä, ja lasti odottaa laiturilla taivasalla laatikkopinoina. Lahden kautta kulkee yhä yli 13 000 alusta vuodessa. Dhow on eurooppalaisten antama yleisnimi Intian valtameren pitkärunkoisille purjealuksille. Suurimmissa on noin kolmenkymmenen hengen miehistö, pienimmissä tusinan verran. Osa purjehtii yhä monsuunin mukana: etelään Itä-Afrikkaan talvella tai alkukeväästä taatelilastissa, takaisin Arabiaan myöhään keväällä mangrovepuutavaraa kyydissä.…
+- [Hongkong — maalehti / Ruoka: Paahdettua lihaa joka neljäs päivä] Siu mei on yleisnimi lihoille, jotka paahdetaan vartaissa avotulella tai suuressa puulämmitteisessä grilliuunissa ja sivellään ennen paistoa omalla kastikkeellaan — jokaisella lihalla on eri kastike. Keskiverto hongkongilainen syö siu meitä joka neljäs päivä. Suosituin on char siu eli grillattu porsas, toisena rapeakuorinen siu yuk ja kolmantena paahdettu hanhi; joukkoon luetaan myös keitetty valkoinen kana, vaikka sitä ei paahdeta lainkaan. Uunit ovat niin isoja, ettei ruokaa tehdä kotona: se ostetaan liikkeestä valkoisen riisin päälle, useimmiten mukaan.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-brugge-belfry) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bruggen Belfry (kulttuuri)
+Tietoruudun teksti: Bruggen Belfry eli Belfort on keskiaikainen kellotorni Bruggen keskustassa ja yksi kaupungin tunnetuimmista symboleista. Torni lisättiin Markt-torille noin vuonna 1240, kun Brugge oli tärkeä flaamilaisen verkateollisuuden keskus, ja siinä säilytettiin aarteita ja kaupungin arkistoa; se toimi myös tähystyspaikkana tulipalojen ja muiden vaarojen havaitsemiseksi. Vuoden 1280 tulipalossa kaupungin arkisto tuhoutui, ja tornin yläosa rakennettiin suurelta osin uudelleen. Kahdeksankulmainen yläosa lisättiin vuosina 1483–1487, mutta salama poltti sen huipun vuonna 1493 ja tulipalo vuonna 1741, joten torni jäi 83 metriä korkeaksi ennen 102 metrin korkeutensa sijaan. Nykyään sen huipulle johtaa 366 askelmaa, ja se kallistuu 87 senttimetriä itään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Historia: Torni, joka on palanut kolmesti] n. 1240 — Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni kallistuu itään 87 senttiä.
+- [Belgia — maalehti / Rakennukset: Rautakide suurennettuna 165 miljardia kertaa] 1958 — Atomium rakennettiin Brysselin vuoden 1958 maailmannäyttelyn keskipisteeksi. Insinööri André Waterkeyn ja arkkitehdit André ja Jean Polak suunnittelivat sen kunnianosoitukseksi tieteen edistykselle. Yhdeksän 18 metrin läpimittaista teräspalloa muodostavat rakenteen, joka esittää rautakiteen alkeiskoppia suurennettuna 165 miljardia kertaa. Torni on 102 metriä korkea, ja putkissa kulkevat portaat, liukuportaat ja hissi vievät kuuteen kävijöille avoimeen palloon. Nimi yhdistää sanat atomi ja alumiini, sillä pallot peitettiin alun perin alumiinilla.
+
+### 18.1
+KYSYMYS: Mitä Bruggen kellotornissa säilytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bruggen Belfry (kulttuuri)
+Tietoruudun teksti: Bruggen Belfry eli Belfort on keskiaikainen kellotorni Bruggen keskustassa ja yksi kaupungin tunnetuimmista symboleista. Torni lisättiin Markt-torille noin vuonna 1240, kun Brugge oli tärkeä flaamilaisen verkateollisuuden keskus, ja siinä säilytettiin aarteita ja kaupungin arkistoa; se toimi myös tähystyspaikkana tulipalojen ja muiden vaarojen havaitsemiseksi. Vuoden 1280 tulipalossa kaupungin arkisto tuhoutui, ja tornin yläosa rakennettiin suurelta osin uudelleen. Kahdeksankulmainen yläosa lisättiin vuosina 1483–1487, mutta salama poltti sen huipun vuonna 1493 ja tulipalo vuonna 1741, joten torni jäi 83 metriä korkeaksi ennen 102 metrin korkeutensa sijaan. Nykyään sen huipulle johtaa 366 askelmaa, ja se kallistuu 87 senttimetriä itään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Historia: Torni, joka on palanut kolmesti] n. 1240 — Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni kallistuu itään 87 senttiä.
+
+### 18.2
+KYSYMYS: Miksi torni on nykyään 83 metriä eikä 102 metriä korkea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bruggen Belfry (kulttuuri)
+Tietoruudun teksti: Bruggen Belfry eli Belfort on keskiaikainen kellotorni Bruggen keskustassa ja yksi kaupungin tunnetuimmista symboleista. Torni lisättiin Markt-torille noin vuonna 1240, kun Brugge oli tärkeä flaamilaisen verkateollisuuden keskus, ja siinä säilytettiin aarteita ja kaupungin arkistoa; se toimi myös tähystyspaikkana tulipalojen ja muiden vaarojen havaitsemiseksi. Vuoden 1280 tulipalossa kaupungin arkisto tuhoutui, ja tornin yläosa rakennettiin suurelta osin uudelleen. Kahdeksankulmainen yläosa lisättiin vuosina 1483–1487, mutta salama poltti sen huipun vuonna 1493 ja tulipalo vuonna 1741, joten torni jäi 83 metriä korkeaksi ennen 102 metrin korkeutensa sijaan. Nykyään sen huipulle johtaa 366 askelmaa, ja se kallistuu 87 senttimetriä itään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Historia: Torni, joka on palanut kolmesti] n. 1240 — Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni kallistuu itään 87 senttiä.
+- [Belgia — maalehti / Rakennukset: Rautakide suurennettuna 165 miljardia kertaa] 1958 — Atomium rakennettiin Brysselin vuoden 1958 maailmannäyttelyn keskipisteeksi. Insinööri André Waterkeyn ja arkkitehdit André ja Jean Polak suunnittelivat sen kunnianosoitukseksi tieteen edistykselle. Yhdeksän 18 metrin läpimittaista teräspalloa muodostavat rakenteen, joka esittää rautakiteen alkeiskoppia suurennettuna 165 miljardia kertaa. Torni on 102 metriä korkea, ja putkissa kulkevat portaat, liukuportaat ja hissi vievät kuuteen kävijöille avoimeen palloon. Nimi yhdistää sanat atomi ja alumiini, sillä pallot peitettiin alun perin alumiinilla.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-tervuren) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tervurenin Afrikka-museo (kulttuuri)
+Tietoruudun teksti: Royal Museum for Central Africa eli AfricaMuseum on Tervurenissa Flaamilaisessa Brabantissa aivan Brysselin ulkopuolella sijaitseva etnografinen ja luonnonhistoriallinen museo. Se rakennettiin alun perin esittelemään kuningas Leopold II:n Kongon vapaavaltiota vuoden 1897 maailmannäyttelyssä. Näyttelyn puistoon rakennettiin väliaikainen ihmistarha, afrikkalaisen kylän jäljitelmä, jossa asui näyttelyn ajan 60 kongolaista; seitsemän heistä kuoli pakkomajoituksensa aikana Belgiassa. Vuonna 1898 perustettu pysyvä Kongon museo toimi siirtomaapropagandan levittäjänä ja Belgian siirtomaatoiminnan tukena. Vuodesta 1960 museon painopiste on siirtynyt etnografiaan ja antropologiaan, ja vuosina 2013–2018 tehty uudistus korjasi myös näyttelyn vähäistä kriittisyyttä siirtomaahistoriaa kohtaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Luonto: Höyhen, jota kukaan ei tunnistanut] Yhdysvaltalainen lintutieteilijä James Chapin etsi Kongossa okapia ja huomasi paikallisissa päähineissä pitkiä punaruskeita höyheniä, joita hän ei osannut yhdistää mihinkään tuntemaansa lintuun. Vuonna 1934 hän kävi Tervurenin museossa Belgiassa ja näki kaksi täytettyä lintua, joiden kyltissä luki intialainen riikinkukko — ne olivat samaa tuntematonta lajia. Vuoteen 1955 mennessä hän oli saanut käsiinsä seitsemän yksilöä. Kongonriikinkukko on Afropavo-suvun ainoa laji ja maan kansallislintu; koiras on 64–70 senttiä pitkä, sinivihreä ja punakaulainen, ja sen päälaella törröttää valkoisia karvamaisia höyheniä.
+
+### 19.1
+KYSYMYS: Mitä varten Tervurenin museorakennus alun perin rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tervurenin Afrikka-museo (kulttuuri)
+Tietoruudun teksti: Royal Museum for Central Africa eli AfricaMuseum on Tervurenissa Flaamilaisessa Brabantissa aivan Brysselin ulkopuolella sijaitseva etnografinen ja luonnonhistoriallinen museo. Se rakennettiin alun perin esittelemään kuningas Leopold II:n Kongon vapaavaltiota vuoden 1897 maailmannäyttelyssä. Näyttelyn puistoon rakennettiin väliaikainen ihmistarha, afrikkalaisen kylän jäljitelmä, jossa asui näyttelyn ajan 60 kongolaista; seitsemän heistä kuoli pakkomajoituksensa aikana Belgiassa. Vuonna 1898 perustettu pysyvä Kongon museo toimi siirtomaapropagandan levittäjänä ja Belgian siirtomaatoiminnan tukena. Vuodesta 1960 museon painopiste on siirtynyt etnografiaan ja antropologiaan, ja vuosina 2013–2018 tehty uudistus korjasi myös näyttelyn vähäistä kriittisyyttä siirtomaahistoriaa kohtaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Luonto: Höyhen, jota kukaan ei tunnistanut] Yhdysvaltalainen lintutieteilijä James Chapin etsi Kongossa okapia ja huomasi paikallisissa päähineissä pitkiä punaruskeita höyheniä, joita hän ei osannut yhdistää mihinkään tuntemaansa lintuun. Vuonna 1934 hän kävi Tervurenin museossa Belgiassa ja näki kaksi täytettyä lintua, joiden kyltissä luki intialainen riikinkukko — ne olivat samaa tuntematonta lajia. Vuoteen 1955 mennessä hän oli saanut käsiinsä seitsemän yksilöä. Kongonriikinkukko on Afropavo-suvun ainoa laji ja maan kansallislintu; koiras on 64–70 senttiä pitkä, sinivihreä ja punakaulainen, ja sen päälaella törröttää valkoisia karvamaisia höyheniä.
+
+### 19.2
+KYSYMYS: Mitä tapahtui näyttelyn puistossa asuneelle 60 kongolaiselle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tervurenin Afrikka-museo (kulttuuri)
+Tietoruudun teksti: Royal Museum for Central Africa eli AfricaMuseum on Tervurenissa Flaamilaisessa Brabantissa aivan Brysselin ulkopuolella sijaitseva etnografinen ja luonnonhistoriallinen museo. Se rakennettiin alun perin esittelemään kuningas Leopold II:n Kongon vapaavaltiota vuoden 1897 maailmannäyttelyssä. Näyttelyn puistoon rakennettiin väliaikainen ihmistarha, afrikkalaisen kylän jäljitelmä, jossa asui näyttelyn ajan 60 kongolaista; seitsemän heistä kuoli pakkomajoituksensa aikana Belgiassa. Vuonna 1898 perustettu pysyvä Kongon museo toimi siirtomaapropagandan levittäjänä ja Belgian siirtomaatoiminnan tukena. Vuodesta 1960 museon painopiste on siirtynyt etnografiaan ja antropologiaan, ja vuosina 2013–2018 tehty uudistus korjasi myös näyttelyn vähäistä kriittisyyttä siirtomaahistoriaa kohtaan.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-durbuy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Durbuy (kulttuuri)
+Tietoruudun teksti: Durbuy on kaupunki Wallonian Belgian Luxemburgin maakunnassa Ourthe-joen varrella, ja kunnassa asui vuonna 2018 noin 11 400 ihmistä. Keskiajalla se oli tärkeä kaupan ja teollisuuden keskus, ja Luxemburgin kreivi ja Böömin kuningas Juhana korotti sen kaupungiksi vuonna 1331. Nykyinen linna on rakennettu vuonna 1880, ja siellä asuu Urselin suku. Durbuy mainostaa itseään kaupallisista syistä maailman pienimpänä kaupunkina, vaikka Belgian virallisesti pienin kaupunki on vuodesta 2006 lähtien Mesen. Nykyään kaupungin pääelinkeinoja ovat matkailu ja virkistys.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Rakennukset: Talo, jonka portaikko sai valoa lasikatosta] 1893 — Victor Horta suunnitteli Hôtel Tasselin tiedemies Emile Tasselille, ja talo valmistui vuosina 1892-1893. Sitä pidetään yhtenä ensimmäisistä jugendtyylin rakennuksista. Horta hylkäsi perinteisen belgialaisen kaupunkitalon pohjan: katupuolen ja puutarhan puolen tavalliset rakennukset yhdistettiin teräsrunkoisella ja lasikattoisella osalla, jossa ovat portaat ja tasanteet. Lasikatto tuo luonnonvaloa talon keskelle. Horta suunnitteli myös entisen Waucquezin kangasvaraston vuonna 1906, ja nykyään siinä toimii Belgian sarjakuvakeskus.
+- [Belgia — maalehti / Ruoka: Vohveli sai Amerikassa uuden nimen] 1964 — Belgiassa vohveleita on monta lajia, ja tunnetuimpia ovat Brysselin ja Liègen vohvelit. Belgialainen vohveli on kevyttaikinainen ja syvätaskuinen, ja sen taikina kohotettiin alun perin hiivalla. Yhdysvalloissa vohveli tuli tutuksi vuoden 1964 New Yorkin maailmannäyttelyssä, jossa brysseliläinen Maurice Vermersch myi sitä kermavaahdolla ja mansikoilla. Hän nimesi vohvelin Bel-Gem-vohveliksi, koska monet amerikkalaiset eivät osanneet sanoa, että Bryssel on Belgian pääkaupunki.
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+
+### 20.1
+KYSYMYS: Minkä tittelin Durbuy mainostaa itselleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Durbuy (kulttuuri)
+Tietoruudun teksti: Durbuy on kaupunki Wallonian Belgian Luxemburgin maakunnassa Ourthe-joen varrella, ja kunnassa asui vuonna 2018 noin 11 400 ihmistä. Keskiajalla se oli tärkeä kaupan ja teollisuuden keskus, ja Luxemburgin kreivi ja Böömin kuningas Juhana korotti sen kaupungiksi vuonna 1331. Nykyinen linna on rakennettu vuonna 1880, ja siellä asuu Urselin suku. Durbuy mainostaa itseään kaupallisista syistä maailman pienimpänä kaupunkina, vaikka Belgian virallisesti pienin kaupunki on vuodesta 2006 lähtien Mesen. Nykyään kaupungin pääelinkeinoja ovat matkailu ja virkistys.
+
+### 20.2
+KYSYMYS: Mikä on Belgian virallisesti pienin kaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Durbuy (kulttuuri)
+Tietoruudun teksti: Durbuy on kaupunki Wallonian Belgian Luxemburgin maakunnassa Ourthe-joen varrella, ja kunnassa asui vuonna 2018 noin 11 400 ihmistä. Keskiajalla se oli tärkeä kaupan ja teollisuuden keskus, ja Luxemburgin kreivi ja Böömin kuningas Juhana korotti sen kaupungiksi vuonna 1331. Nykyinen linna on rakennettu vuonna 1880, ja siellä asuu Urselin suku. Durbuy mainostaa itseään kaupallisista syistä maailman pienimpänä kaupunkina, vaikka Belgian virallisesti pienin kaupunki on vuodesta 2006 lähtien Mesen. Nykyään kaupungin pääelinkeinoja ovat matkailu ja virkistys.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Rakennukset: Talo, jonka portaikko sai valoa lasikatosta] 1893 — Victor Horta suunnitteli Hôtel Tasselin tiedemies Emile Tasselille, ja talo valmistui vuosina 1892-1893. Sitä pidetään yhtenä ensimmäisistä jugendtyylin rakennuksista. Horta hylkäsi perinteisen belgialaisen kaupunkitalon pohjan: katupuolen ja puutarhan puolen tavalliset rakennukset yhdistettiin teräsrunkoisella ja lasikattoisella osalla, jossa ovat portaat ja tasanteet. Lasikatto tuo luonnonvaloa talon keskelle. Horta suunnitteli myös entisen Waucquezin kangasvaraston vuonna 1906, ja nykyään siinä toimii Belgian sarjakuvakeskus.
+- [Belgia — maalehti / Ruoka: Vohveli sai Amerikassa uuden nimen] 1964 — Belgiassa vohveleita on monta lajia, ja tunnetuimpia ovat Brysselin ja Liègen vohvelit. Belgialainen vohveli on kevyttaikinainen ja syvätaskuinen, ja sen taikina kohotettiin alun perin hiivalla. Yhdysvalloissa vohveli tuli tutuksi vuoden 1964 New Yorkin maailmannäyttelyssä, jossa brysseliläinen Maurice Vermersch myi sitä kermavaahdolla ja mansikoilla. Hän nimesi vohvelin Bel-Gem-vohveliksi, koska monet amerikkalaiset eivät osanneet sanoa, että Bryssel on Belgian pääkaupunki.
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

@@ -1,0 +1,208 @@
+================ KOHTA 1 (kohde:hahmotelma-high-fens) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hautes Fagnes (luonto · vuori)
+Tietoruudun teksti: Hautes Fagnes eli saksaksi Hohes Venn on ylänköaluetta Liègen maakunnassa Itä-Belgiassa ja Saksan puolella Ardennien ja Eifelin välissä. Se on Belgian suurin luonnonsuojelualue: se julistettiin suojelluksi vuonna 1957, ja sen pinta-ala on noin 45 neliökilometriä. Alue on täynnä yli 10 000 vuotta vanhoja rahkasoita, jotka saavat kosteutensa vain sadevedestä. Alueen korkein kohta, 694 metriä korkea Signal de Botrange, on samalla koko Belgian korkein kohta, ja sinne rakennettu torni nostaa katselupisteen 700 metriin. Kevään pesimäaikana osa suojelualueesta on suljettu uhanalaisen teeren vuoksi, ja kesällä metsäalueilla on tulipalovaara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+
+### 1.1
+KYSYMYS: Mikä Hautes Fagnesin kohta on koko Belgian korkein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hautes Fagnes (luonto · vuori)
+Tietoruudun teksti: Hautes Fagnes eli saksaksi Hohes Venn on ylänköaluetta Liègen maakunnassa Itä-Belgiassa ja Saksan puolella Ardennien ja Eifelin välissä. Se on Belgian suurin luonnonsuojelualue: se julistettiin suojelluksi vuonna 1957, ja sen pinta-ala on noin 45 neliökilometriä. Alue on täynnä yli 10 000 vuotta vanhoja rahkasoita, jotka saavat kosteutensa vain sadevedestä. Alueen korkein kohta, 694 metriä korkea Signal de Botrange, on samalla koko Belgian korkein kohta, ja sinne rakennettu torni nostaa katselupisteen 700 metriin. Kevään pesimäaikana osa suojelualueesta on suljettu uhanalaisen teeren vuoksi, ja kesällä metsäalueilla on tulipalovaara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+
+### 1.2
+KYSYMYS: Mistä vedestä alueen rahkasuot saavat kosteutensa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hautes Fagnes (luonto · vuori)
+Tietoruudun teksti: Hautes Fagnes eli saksaksi Hohes Venn on ylänköaluetta Liègen maakunnassa Itä-Belgiassa ja Saksan puolella Ardennien ja Eifelin välissä. Se on Belgian suurin luonnonsuojelualue: se julistettiin suojelluksi vuonna 1957, ja sen pinta-ala on noin 45 neliökilometriä. Alue on täynnä yli 10 000 vuotta vanhoja rahkasoita, jotka saavat kosteutensa vain sadevedestä. Alueen korkein kohta, 694 metriä korkea Signal de Botrange, on samalla koko Belgian korkein kohta, ja sinne rakennettu torni nostaa katselupisteen 700 metriin. Kevään pesimäaikana osa suojelualueesta on suljettu uhanalaisen teeren vuoksi, ja kesällä metsäalueilla on tulipalovaara.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Suo, joka on yli 10 000 vuotta vanha] nykyään — Itä-Belgian Hautes Fagnes on maan suurin luonnonsuojelualue, 4 500 hehtaaria ylänköä Ardennien ja Eifelin välissä. Se ei ole tavallista suota, sillä nevat saavat kosteutensa vain sateesta, ja turvekerrokset ovat yli 10 000 vuotta vanhoja. Alueella on Belgian korkein kohta, Signal de Botrange, joka nousee 694 metrin korkeuteen. Ylängön kosteikot suojeltiin vuonna 1957, ja Euroopan neuvosto myönsi alueelle suojelun kunniakirjan vuonna 1966.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:hahmotelma-semois) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Semois (luonto · joki)
+Tietoruudun teksti: Semois on 210 kilometriä pitkä joki, joka virtaa Ardennien ylängöiltä Belgiassa ja Ranskassa kohti Maasia; se on Maasin oikea sivujoki. Joen lähde on Arlonissa Belgian Luxemburgin maakunnassa lähellä Luxemburgin rajaa, ja se virtaa länteen. Bohan-sur-Semois'n kylän jälkeen joki menee Ranskaan, missä se muodostaa noin kaksi kilometriä Belgian ja Ranskan rajaa, ja laskee Maasiin Monthermén kohdalla. Suuri osa joen varresta kuuluu Semoisin laakson kansallispuistoon. Alueella kasvatettu tupakkalaji on saanut nimensä joesta.
+
+### 2.1
+KYSYMYS: Mihin jokeen Semois laskee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Semois (luonto · joki)
+Tietoruudun teksti: Semois on 210 kilometriä pitkä joki, joka virtaa Ardennien ylängöiltä Belgiassa ja Ranskassa kohti Maasia; se on Maasin oikea sivujoki. Joen lähde on Arlonissa Belgian Luxemburgin maakunnassa lähellä Luxemburgin rajaa, ja se virtaa länteen. Bohan-sur-Semois'n kylän jälkeen joki menee Ranskaan, missä se muodostaa noin kaksi kilometriä Belgian ja Ranskan rajaa, ja laskee Maasiin Monthermén kohdalla. Suuri osa joen varresta kuuluu Semoisin laakson kansallispuistoon. Alueella kasvatettu tupakkalaji on saanut nimensä joesta.
+
+### 2.2
+KYSYMYS: Minkä kasvin lajike on saanut nimensä Semois-joesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Semois (luonto · joki)
+Tietoruudun teksti: Semois on 210 kilometriä pitkä joki, joka virtaa Ardennien ylängöiltä Belgiassa ja Ranskassa kohti Maasia; se on Maasin oikea sivujoki. Joen lähde on Arlonissa Belgian Luxemburgin maakunnassa lähellä Luxemburgin rajaa, ja se virtaa länteen. Bohan-sur-Semois'n kylän jälkeen joki menee Ranskaan, missä se muodostaa noin kaksi kilometriä Belgian ja Ranskan rajaa, ja laskee Maasiin Monthermén kohdalla. Suuri osa joen varresta kuuluu Semoisin laakson kansallispuistoon. Alueella kasvatettu tupakkalaji on saanut nimensä joesta.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:hahmotelma-han-sur-lesse) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Han-sur-Lessen luolat (luonto · joki)
+Tietoruudun teksti: Han-sur-Lesse on noin tuhannen asukkaan kylä Namurin maakunnassa Wallonian Belgiassa, ja se kuuluu Rochefortin kuntaan. Kylä on kuuluisa Grottes de Han-sur-Lesse -luolakompleksista, jonka Lesse-joki on uurtanut kukkulan alle. Turistit pääsevät luolille raitiotiellä, joka on säilynyt jäänteenä maan seutuvaunuverkosta; metrin raideleveyden linja avattiin vuonna 1906. Kylä taantui ruttojen, epidemioiden ja Ranskan ja Espanjan sotien vuoksi, ja vuonna 1766 siellä oli vain 62 asukasta. Sen Pyhän Hubertuksen kirkko rakennettiin uudelleen vuonna 1905 uusgoottilaiseen tyyliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Joki katoaa kukkulan alle] nykyään — Lesse-joki mutkittelee Ardenneilla rauhallisena, mutta Han-sur-Lessen luona se putoaa yhtäkkiä sortumakuoppaan nimeltä Belvaux'n kuilu. Sieltä vesi virtaa yli kilometrin matkan kalkkikivikukkulan sisällä ja on kaivertanut sinne luolaston. Luolissa on aina noin 13 astetta ja ilma on kosteaa. Suurin sali, Salle du Dôme, on noin 150 metriä leveä. Kävijät ajavat luolille vanhalla vicinal-raitiovaunulla, ja opastettu kierros kestää tunnista puoleentoista.
+
+### 3.1
+KYSYMYS: Mikä joki on uurtanut Han-sur-Lessen luolakompleksin kukkulan alle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Han-sur-Lessen luolat (luonto · joki)
+Tietoruudun teksti: Han-sur-Lesse on noin tuhannen asukkaan kylä Namurin maakunnassa Wallonian Belgiassa, ja se kuuluu Rochefortin kuntaan. Kylä on kuuluisa Grottes de Han-sur-Lesse -luolakompleksista, jonka Lesse-joki on uurtanut kukkulan alle. Turistit pääsevät luolille raitiotiellä, joka on säilynyt jäänteenä maan seutuvaunuverkosta; metrin raideleveyden linja avattiin vuonna 1906. Kylä taantui ruttojen, epidemioiden ja Ranskan ja Espanjan sotien vuoksi, ja vuonna 1766 siellä oli vain 62 asukasta. Sen Pyhän Hubertuksen kirkko rakennettiin uudelleen vuonna 1905 uusgoottilaiseen tyyliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Joki katoaa kukkulan alle] nykyään — Lesse-joki mutkittelee Ardenneilla rauhallisena, mutta Han-sur-Lessen luona se putoaa yhtäkkiä sortumakuoppaan nimeltä Belvaux'n kuilu. Sieltä vesi virtaa yli kilometrin matkan kalkkikivikukkulan sisällä ja on kaivertanut sinne luolaston. Luolissa on aina noin 13 astetta ja ilma on kosteaa. Suurin sali, Salle du Dôme, on noin 150 metriä leveä. Kävijät ajavat luolille vanhalla vicinal-raitiovaunulla, ja opastettu kierros kestää tunnista puoleentoista.
+
+### 3.2
+KYSYMYS: Millä kulkuneuvolla turistit pääsevät luolille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Han-sur-Lessen luolat (luonto · joki)
+Tietoruudun teksti: Han-sur-Lesse on noin tuhannen asukkaan kylä Namurin maakunnassa Wallonian Belgiassa, ja se kuuluu Rochefortin kuntaan. Kylä on kuuluisa Grottes de Han-sur-Lesse -luolakompleksista, jonka Lesse-joki on uurtanut kukkulan alle. Turistit pääsevät luolille raitiotiellä, joka on säilynyt jäänteenä maan seutuvaunuverkosta; metrin raideleveyden linja avattiin vuonna 1906. Kylä taantui ruttojen, epidemioiden ja Ranskan ja Espanjan sotien vuoksi, ja vuonna 1766 siellä oli vain 62 asukasta. Sen Pyhän Hubertuksen kirkko rakennettiin uudelleen vuonna 1905 uusgoottilaiseen tyyliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Joki katoaa kukkulan alle] nykyään — Lesse-joki mutkittelee Ardenneilla rauhallisena, mutta Han-sur-Lessen luona se putoaa yhtäkkiä sortumakuoppaan nimeltä Belvaux'n kuilu. Sieltä vesi virtaa yli kilometrin matkan kalkkikivikukkulan sisällä ja on kaivertanut sinne luolaston. Luolissa on aina noin 13 astetta ja ilma on kosteaa. Suurin sali, Salle du Dôme, on noin 150 metriä leveä. Kävijät ajavat luolille vanhalla vicinal-raitiovaunulla, ja opastettu kierros kestää tunnista puoleentoista.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:hahmotelma-zwin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zwin (meri)
+Tietoruudun teksti: Zwin on Pohjanmeren rannikon luonnonsuojelualue Belgian ja Alankomaiden rajalla, entisen vuorovesisalmen suuosa. Salmi syntyi vuonna 1134, kun myrsky puhkaisi Flanderin rannikon ja loi noin 15 kilometriä sisämaahan ulottuvan väylän; sen ansiosta Brugge sai yhteyden mereen ja nousi Euroopan merkittävimpiin keskiajan satamakaupunkeihin. Väylä alkoi kuitenkin liettyä 1200-luvun lopulta, ja noin vuodesta 1500 se oli käyttökelvoton ja katkaisi Bruggen sataman merestä. Nykyinen suojelualue perustettiin vuonna 1952; se tunnetaan suolaa sietävästä kasvillisuudestaan ja lintuharrastajien suosikkina, ja se on yksi harvoista paikoista Belgiassa, jossa pesii kattohaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Myrsky avasi Bruggelle tien merelle] 1134 — Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.
+- [Belgia — maalehti / Historia: Torni, joka on palanut kolmesti] n. 1240 — Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni kallistuu itään 87 senttiä.
+
+### 4.1
+KYSYMYS: Mikä sai Bruggen nousemaan Euroopan merkittäviin satamakaupunkeihin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zwin (meri)
+Tietoruudun teksti: Zwin on Pohjanmeren rannikon luonnonsuojelualue Belgian ja Alankomaiden rajalla, entisen vuorovesisalmen suuosa. Salmi syntyi vuonna 1134, kun myrsky puhkaisi Flanderin rannikon ja loi noin 15 kilometriä sisämaahan ulottuvan väylän; sen ansiosta Brugge sai yhteyden mereen ja nousi Euroopan merkittävimpiin keskiajan satamakaupunkeihin. Väylä alkoi kuitenkin liettyä 1200-luvun lopulta, ja noin vuodesta 1500 se oli käyttökelvoton ja katkaisi Bruggen sataman merestä. Nykyinen suojelualue perustettiin vuonna 1952; se tunnetaan suolaa sietävästä kasvillisuudestaan ja lintuharrastajien suosikkina, ja se on yksi harvoista paikoista Belgiassa, jossa pesii kattohaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Historia: Torni, joka on palanut kolmesti] n. 1240 — Bruggen kellotorni nousi Torille noin vuonna 1240, kun kaupunki rikastui flanderilaisella kankaalla. Tornissa säilytettiin kaupungin arkistoja ja aarteita, ja vartijat tähyilivät sieltä tulipaloja. Tuli tuhosi arkistot vuonna 1280, ja salama poltti puisen huipun 1493. Kun seuraavakin puuhuippu paloi vuonna 1741, sitä ei enää rakennettu, ja torni lyheni 102 metristä nykyiseen 83 metriin. Huipulle johtaa 366 porrasta, ja torni kallistuu itään 87 senttiä.
+
+### 4.2
+KYSYMYS: Miksi Zwin-väylä muuttui käyttökelvottomaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zwin (meri)
+Tietoruudun teksti: Zwin on Pohjanmeren rannikon luonnonsuojelualue Belgian ja Alankomaiden rajalla, entisen vuorovesisalmen suuosa. Salmi syntyi vuonna 1134, kun myrsky puhkaisi Flanderin rannikon ja loi noin 15 kilometriä sisämaahan ulottuvan väylän; sen ansiosta Brugge sai yhteyden mereen ja nousi Euroopan merkittävimpiin keskiajan satamakaupunkeihin. Väylä alkoi kuitenkin liettyä 1200-luvun lopulta, ja noin vuodesta 1500 se oli käyttökelvoton ja katkaisi Bruggen sataman merestä. Nykyinen suojelualue perustettiin vuonna 1952; se tunnetaan suolaa sietävästä kasvillisuudestaan ja lintuharrastajien suosikkina, ja se on yksi harvoista paikoista Belgiassa, jossa pesii kattohaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Myrsky avasi Bruggelle tien merelle] 1134 — Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hahmotelma-hoge-kempen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoge Kempen (kulttuuri)
+Tietoruudun teksti: Hoge Kempen on Flanderin ensimmäinen kansallispuisto, ja se avattiin 29. maaliskuuta 2006. Se sijaitsee Limburgin itäosassa Genkin ja Maasin laakson välissä, kattaa 67 neliökilometriä ja on enimmäkseen nummea ja mäntymetsää. Alue on ylänköä, joka toimii Maasin ja Demer-joen vedenjakajana; sitä peittävät Maasin jääkaudella Ardenneilta tuoma kivimurske ja merituulten kuljettama hiekka. Puistossa syntyi 1990-luvulla nykyisin laajalle levinnyt solmupisteisiin numeroitu pyöräilyreittiverkosto, jonka suunnitteli Hugo Bollen. Puisto on ehdolla Unescon maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Bahr el Ghazal: Jur-joki ja Waun kaupunki] Yksi Bahr el Ghazalin vesistön tärkeimmistä sivujoista on Jur-joki, jonka rannalle syntyi alueen suurin asutuskeskus, nykyinen Wau. Samuel Bakerin ja hänen seuraajiensa aikaan 1870-luvulla joen varsi oli täynnä kauppiaiden zaribaa eli piikkipensasaitauksia, joihin norsunluuta ja muita kauppatavaroita koottiin ennen kuljetusta pohjoiseen kohti Niiliä. Jur virtaa edelleen samaa reittiä kohti Bahr el Ghazalia ja lopulta Valkoista Niiliä, ja sen rannat ovat yhä paikallisten tärkein vesilähde: samalla joella, jonka varrella orjakauppiaiden aitaukset kerran seisoivat, pestään nykyään pyykkiä ja kastellaan peltoja.
+
+### 5.1
+KYSYMYS: Minkä kahden vesistön vedenjakajalla Hoge Kempenin ylänkö sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoge Kempen (kulttuuri)
+Tietoruudun teksti: Hoge Kempen on Flanderin ensimmäinen kansallispuisto, ja se avattiin 29. maaliskuuta 2006. Se sijaitsee Limburgin itäosassa Genkin ja Maasin laakson välissä, kattaa 67 neliökilometriä ja on enimmäkseen nummea ja mäntymetsää. Alue on ylänköä, joka toimii Maasin ja Demer-joen vedenjakajana; sitä peittävät Maasin jääkaudella Ardenneilta tuoma kivimurske ja merituulten kuljettama hiekka. Puistossa syntyi 1990-luvulla nykyisin laajalle levinnyt solmupisteisiin numeroitu pyöräilyreittiverkosto, jonka suunnitteli Hugo Bollen. Puisto on ehdolla Unescon maailmanperintökohteeksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Bahr el Ghazal: Jur-joki ja Waun kaupunki] Yksi Bahr el Ghazalin vesistön tärkeimmistä sivujoista on Jur-joki, jonka rannalle syntyi alueen suurin asutuskeskus, nykyinen Wau. Samuel Bakerin ja hänen seuraajiensa aikaan 1870-luvulla joen varsi oli täynnä kauppiaiden zaribaa eli piikkipensasaitauksia, joihin norsunluuta ja muita kauppatavaroita koottiin ennen kuljetusta pohjoiseen kohti Niiliä. Jur virtaa edelleen samaa reittiä kohti Bahr el Ghazalia ja lopulta Valkoista Niiliä, ja sen rannat ovat yhä paikallisten tärkein vesilähde: samalla joella, jonka varrella orjakauppiaiden aitaukset kerran seisoivat, pestään nykyään pyykkiä ja kastellaan peltoja.
+
+### 5.2
+KYSYMYS: Minkä pyöräilyverkoston idea syntyi Hoge Kempenin alueella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoge Kempen (kulttuuri)
+Tietoruudun teksti: Hoge Kempen on Flanderin ensimmäinen kansallispuisto, ja se avattiin 29. maaliskuuta 2006. Se sijaitsee Limburgin itäosassa Genkin ja Maasin laakson välissä, kattaa 67 neliökilometriä ja on enimmäkseen nummea ja mäntymetsää. Alue on ylänköä, joka toimii Maasin ja Demer-joen vedenjakajana; sitä peittävät Maasin jääkaudella Ardenneilta tuoma kivimurske ja merituulten kuljettama hiekka. Puistossa syntyi 1990-luvulla nykyisin laajalle levinnyt solmupisteisiin numeroitu pyöräilyreittiverkosto, jonka suunnitteli Hugo Bollen. Puisto on ehdolla Unescon maailmanperintökohteeksi.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

@@ -1,0 +1,201 @@
+================ KOHTA 26 (kohde:hahmotelma-turnhout) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turnhout (kauppa)
+Tietoruudun teksti: Turnhout on Antwerpenin maakunnan kaupunki Flanderissa, jossa asui vuonna 2021 noin 46 000 ihmistä. Se tunnetaan pelikorttiteollisuudestaan, ja siellä sijaitsee maailman suurimman pelikorttien valmistajan Cartamundin pääkonttori. Kaupunki syntyi kahden tärkeän kauppareitin risteykseen Brabantin herttuoiden metsästyslinnan suojaan, ja se sai vapaakaupungin oikeudet noin vuonna 1212. Myöhäiskeskiajalla se oli tunnettu vuodevaatteiden kutomisesta ja pellavakaupasta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla, joiden perustajina pidetään Pieter Corbeelsia ja Philippus Jacobus Brepolsia. Kanava kaivettiin vuonna 1846 ja rautatie rakennettiin vuonna 1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Dar Si Said] 1900 Dar Si Said rakennettiin 1894–1900 aivan Bahian palatsin pohjoispuolelle. Rakennuttaja Si Sa'id ibn Musa oli veljensä Ba Ahmadin sotaministeri, ja koristeaiheet ovat samat kuin veljen palatsissa — mutta talo on rakennettu useaan kerrokseen ja sen pohja on aivan toisenlainen. Ylimmässä kerroksessa on suuri vastaanottosali, ja pihalla riad-puutarha, jonka keskellä seisoo maalatusta puusta tehty paviljonki. Protektoraatin aikana vuoden 1914 jälkeen talo toimi Marrakechin aluejohdon toimipaikkana, ja noin 1930 siitä tehtiin marokkolaisen taiteen ja puutyön museo. Vuonna 1957, itsenäistymisen jälkeen, rakennus jaettiin museon ja käsityöviraston kesken. Kunnostuksen jälkeen museo avattiin 20…
+
+### 26.1
+KYSYMYS: Minkä tuotteen teollisuudesta Turnhout on tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turnhout (kauppa)
+Tietoruudun teksti: Turnhout on Antwerpenin maakunnan kaupunki Flanderissa, jossa asui vuonna 2021 noin 46 000 ihmistä. Se tunnetaan pelikorttiteollisuudestaan, ja siellä sijaitsee maailman suurimman pelikorttien valmistajan Cartamundin pääkonttori. Kaupunki syntyi kahden tärkeän kauppareitin risteykseen Brabantin herttuoiden metsästyslinnan suojaan, ja se sai vapaakaupungin oikeudet noin vuonna 1212. Myöhäiskeskiajalla se oli tunnettu vuodevaatteiden kutomisesta ja pellavakaupasta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla, joiden perustajina pidetään Pieter Corbeelsia ja Philippus Jacobus Brepolsia. Kanava kaivettiin vuonna 1846 ja rautatie rakennettiin vuonna 1855.
+
+### 26.2
+KYSYMYS: Mikä teollisuus korvasi vuodevaatteiden kudonnan 1800-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Turnhout (kauppa)
+Tietoruudun teksti: Turnhout on Antwerpenin maakunnan kaupunki Flanderissa, jossa asui vuonna 2021 noin 46 000 ihmistä. Se tunnetaan pelikorttiteollisuudestaan, ja siellä sijaitsee maailman suurimman pelikorttien valmistajan Cartamundin pääkonttori. Kaupunki syntyi kahden tärkeän kauppareitin risteykseen Brabantin herttuoiden metsästyslinnan suojaan, ja se sai vapaakaupungin oikeudet noin vuonna 1212. Myöhäiskeskiajalla se oli tunnettu vuodevaatteiden kutomisesta ja pellavakaupasta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla, joiden perustajina pidetään Pieter Corbeelsia ja Philippus Jacobus Brepolsia. Kanava kaivettiin vuonna 1846 ja rautatie rakennettiin vuonna 1855.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marrakech — kohdekartta / Kohdekartta: Dar Si Said] 1900 Dar Si Said rakennettiin 1894–1900 aivan Bahian palatsin pohjoispuolelle. Rakennuttaja Si Sa'id ibn Musa oli veljensä Ba Ahmadin sotaministeri, ja koristeaiheet ovat samat kuin veljen palatsissa — mutta talo on rakennettu useaan kerrokseen ja sen pohja on aivan toisenlainen. Ylimmässä kerroksessa on suuri vastaanottosali, ja pihalla riad-puutarha, jonka keskellä seisoo maalatusta puusta tehty paviljonki. Protektoraatin aikana vuoden 1914 jälkeen talo toimi Marrakechin aluejohdon toimipaikkana, ja noin 1930 siitä tehtiin marokkolaisen taiteen ja puutyön museo. Vuonna 1957, itsenäistymisen jälkeen, rakennus jaettiin museon ja käsityöviraston kesken. Kunnostuksen jälkeen museo avattiin 20…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-coudenberg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Coudenbergin palatsi (historia)
+Tietoruudun teksti: Coudenbergin kukkulalle Brysseliin nousi keskiajalla Brabantin herttuoiden päälinna, josta kasvoi vuosisatojen kuluessa Burgundin herttaiden ja myöhemmin Habsburgien hallitsijoiden komea palatsi. Palatsin suuressa salissa keisari Kaarle V luopui valtaistuimestaan poikansa Filip II:n hyväksi vuonna 1555. Yöllä 3.2.1731 keittiöstä syttynyt tulipalo levisi pakkasessa hallitsemattomasti, sillä sammutusvettä ei saatu ajoissa paikalle, ja koko palatsi tuhoutui. Rauniot jäivät vuosikymmeniksi paikoilleen, kunnes ne päätettiin 1770-luvulla haudata uuden, uusklassisen Place Royale -aukion ja Kuninkaankadun alle vuosina 1775–1782. Maan alle säilyneet kellarit ja salit kaivettiin esiin 1900-luvun lopulla, ja ne avattiin yleisölle Coudenbergin museona, jonne kulku on nykyisin BELvue-museon kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+- [Santa Cruz — kohdekartta / Kohdekartta: San Lorenzon katedraali] 1770 ja 1838 Aukion laidalla oleva katedraali on kaupungin pääkirkko. Ensimmäisen kirkon rakensi mercedaarimunkki Diego de Porres varakuningas Francisco Álvarez de Toledon aikaan. Vuonna 1770 piispa Ramón de Herbosos rakennutti kirkon uudestaan ja antoi työn ylisakastinhoitaja Antonio Lombardolle. Nykyinen rakennus on kolmas. Marsalkka Andrés de Santa Cruzin aikaan 1838 vanha temppeli korvattiin uudella eklektisellä kirkolla, jonka suunnitteli ranskalainen arkkitehti Felipe Bertrés. Kirkon tunnetuin piirre ovat sen puuholvit ja niitä peittävä maalauskoristelu. Pääalttarilla on säilynyt osa alkuperäisestä hopeaverhoilusta, joka tuotiin Moxosin San Pedron lähetysasemalta; samasta paikasta on …
+
+### 27.1
+KYSYMYS: Minä vuonna tulipalo tuhosi koko palatsin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Coudenbergin palatsi (historia)
+Tietoruudun teksti: Coudenbergin kukkulalle Brysseliin nousi keskiajalla Brabantin herttuoiden päälinna, josta kasvoi vuosisatojen kuluessa Burgundin herttaiden ja myöhemmin Habsburgien hallitsijoiden komea palatsi. Palatsin suuressa salissa keisari Kaarle V luopui valtaistuimestaan poikansa Filip II:n hyväksi vuonna 1555. Yöllä 3.2.1731 keittiöstä syttynyt tulipalo levisi pakkasessa hallitsemattomasti, sillä sammutusvettä ei saatu ajoissa paikalle, ja koko palatsi tuhoutui. Rauniot jäivät vuosikymmeniksi paikoilleen, kunnes ne päätettiin 1770-luvulla haudata uuden, uusklassisen Place Royale -aukion ja Kuninkaankadun alle vuosina 1775–1782. Maan alle säilyneet kellarit ja salit kaivettiin esiin 1900-luvun lopulla, ja ne avattiin yleisölle Coudenbergin museona, jonne kulku on nykyisin BELvue-museon kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+
+### 27.2
+KYSYMYS: Minkä aukion alle rauniot haudattiin 1770-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Coudenbergin palatsi (historia)
+Tietoruudun teksti: Coudenbergin kukkulalle Brysseliin nousi keskiajalla Brabantin herttuoiden päälinna, josta kasvoi vuosisatojen kuluessa Burgundin herttaiden ja myöhemmin Habsburgien hallitsijoiden komea palatsi. Palatsin suuressa salissa keisari Kaarle V luopui valtaistuimestaan poikansa Filip II:n hyväksi vuonna 1555. Yöllä 3.2.1731 keittiöstä syttynyt tulipalo levisi pakkasessa hallitsemattomasti, sillä sammutusvettä ei saatu ajoissa paikalle, ja koko palatsi tuhoutui. Rauniot jäivät vuosikymmeniksi paikoilleen, kunnes ne päätettiin 1770-luvulla haudata uuden, uusklassisen Place Royale -aukion ja Kuninkaankadun alle vuosina 1775–1782. Maan alle säilyneet kellarit ja salit kaivettiin esiin 1900-luvun lopulla, ja ne avattiin yleisölle Coudenbergin museona, jonne kulku on nykyisin BELvue-museon kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Cruz — kohdekartta / Kohdekartta: San Lorenzon katedraali] 1770 ja 1838 Aukion laidalla oleva katedraali on kaupungin pääkirkko. Ensimmäisen kirkon rakensi mercedaarimunkki Diego de Porres varakuningas Francisco Álvarez de Toledon aikaan. Vuonna 1770 piispa Ramón de Herbosos rakennutti kirkon uudestaan ja antoi työn ylisakastinhoitaja Antonio Lombardolle. Nykyinen rakennus on kolmas. Marsalkka Andrés de Santa Cruzin aikaan 1838 vanha temppeli korvattiin uudella eklektisellä kirkolla, jonka suunnitteli ranskalainen arkkitehti Felipe Bertrés. Kirkon tunnetuin piirre ovat sen puuholvit ja niitä peittävä maalauskoristelu. Pääalttarilla on säilynyt osa alkuperäisestä hopeaverhoilusta, joka tuotiin Moxosin San Pedron lähetysasemalta; samasta paikasta on …
+- [Perth — kohdekartta / Kohdekartta: Swan Bells] 2000 Barrack Squaren kupari- ja lasitornissa riippuu kahdeksantoista kelloa, ja kaksitoista niistä on Lontoosta. Ne olivat St Martin-in-the-Fieldsin kirkon kellot Trafalgar Squarella, ja niiden historia ulottuu 1300-luvulle. Elisabet I käski valaa ne uudelleen 1500-luvulla, ja Gloucesterin Rudhallin suku valoi ne jälleen vuosina 1725–1770. Kun kellot piti 1870 valaa taas, ne viritettiinkin ja kunnostettiin. Ne ovat harvinaisia kuninkaallisia kelloja ja tiettävästi ainoa sarja, joka on koskaan lähtenyt Englannista. Kellot lahjoitettiin Länsi-Australialle Australian 200-vuotisjuhlan 1988 yhteydessä paikallisen kellonsoittajan ja liikemiehen Laith Reynoldsin aloitteesta. Kuusi muuta kelloa val…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-antwerpen-beurs) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antwerpenin pörssitalo (kauppa)
+Tietoruudun teksti: Antwerpenin pörssitalo eli Handelsbeurs on maailman ensimmäinen tätä tarkoitusta varten rakennettu kauppapörssi: alkuperäinen rakennus valmistui vuonna 1531 katettujen pylväskäytävien ympäröimäksi sisäpihaksi, ja sen mallia kopioitiin muun muassa Lontoon myöhempään Royal Exchangeen. Antwerpenin kauppa hiipui Espanjan vallan ja Amsterdamin nousun myötä 1500-luvun lopulla, ja rakennus toimi sen jälkeen vuosisatoja muun muassa piirustusakatemiana. Elokuun 2. päivänä 1858 tulipalo tuhosi koko rakennuksen, minkä jälkeen kaupunki järjesti arkkitehtikilpailun uudisrakennuksesta; voittajaksi valittu Joseph Schadde sai työn valmiiksi vuonna 1872. Uusi, uusgoottilainen pörssitalo hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa, ja se palveli kauppiaita ja pörssinvälittäjiä aina vuoteen 1997 asti, jolloin Antwerpenin pörssi sulautui Brysselin pörssiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Rakennukset: Asema, joka korvasi puisen alkuperäisen] 1905 — Antwerpenin ensimmäinen asema oli puinen, ja sen rata Brysselistä Mechelenin kautta avattiin 3. kesäkuuta 1836. Nykyisen kivisen asemarakennuksen suunnitteli arkkitehti Louis Delacenserie, ja se rakennettiin vuosina 1895-1905. Vuoteen 2007 asti asema oli päätepysäkki, ja 23. maaliskuuta 2007 sen alle avattiin läpikulkutunneli. Odotussalin yllä kohoaa suuri kupoli. Antwerpen-Centraal on yksi Belgian neljästä suurnopeusjunien asemasta.
+- [Kolkata — kohdekartta / Kohdekartta: Nakhodan moskeija] 1926–1935 Burrabazarin kauppakortteleiden keskellä, Zakaria Streetin ja Rabindra Saranin kulmassa, on kaupungin päämoskeija. Paikalla oli ennen vuotta 1854 kaksi pienempää moskeijaa. Kauppias Haji Zakariah, joka kuului Kutchista muuttaneeseen memon-yhteisöön ja omisti laivoja, osti niiden välissä olevan tontin ja kustansi tilalle yhden suuren rakennuksen. Nimi tulee persian sanasta nakhoda, merenkulkija — se viittaa rakennuttajan laivanvarustamoon. Uudisrakennuksen vuosiluvusta Wikipedia antaa kaksi tietoa: artikkelin tietolaatikko sanoo valmistumisvuodeksi 1926, leipäteksti taas kertoo työn alkaneen 1926 ja päättyneen 1935. Kustannus oli puolitoista miljoonaa rupiaa, ja urakan teki brittil…
+
+### 28.1
+KYSYMYS: Minä vuonna Antwerpenin ensimmäinen pörssitalo valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antwerpenin pörssitalo (kauppa)
+Tietoruudun teksti: Antwerpenin pörssitalo eli Handelsbeurs on maailman ensimmäinen tätä tarkoitusta varten rakennettu kauppapörssi: alkuperäinen rakennus valmistui vuonna 1531 katettujen pylväskäytävien ympäröimäksi sisäpihaksi, ja sen mallia kopioitiin muun muassa Lontoon myöhempään Royal Exchangeen. Antwerpenin kauppa hiipui Espanjan vallan ja Amsterdamin nousun myötä 1500-luvun lopulla, ja rakennus toimi sen jälkeen vuosisatoja muun muassa piirustusakatemiana. Elokuun 2. päivänä 1858 tulipalo tuhosi koko rakennuksen, minkä jälkeen kaupunki järjesti arkkitehtikilpailun uudisrakennuksesta; voittajaksi valittu Joseph Schadde sai työn valmiiksi vuonna 1872. Uusi, uusgoottilainen pörssitalo hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa, ja se palveli kauppiaita ja pörssinvälittäjiä aina vuoteen 1997 asti, jolloin Antwerpenin pörssi sulautui Brysselin pörssiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Rakennukset: Asema, joka korvasi puisen alkuperäisen] 1905 — Antwerpenin ensimmäinen asema oli puinen, ja sen rata Brysselistä Mechelenin kautta avattiin 3. kesäkuuta 1836. Nykyisen kivisen asemarakennuksen suunnitteli arkkitehti Louis Delacenserie, ja se rakennettiin vuosina 1895-1905. Vuoteen 2007 asti asema oli päätepysäkki, ja 23. maaliskuuta 2007 sen alle avattiin läpikulkutunneli. Odotussalin yllä kohoaa suuri kupoli. Antwerpen-Centraal on yksi Belgian neljästä suurnopeusjunien asemasta.
+
+### 28.2
+KYSYMYS: Kuka arkkitehti suunnitteli nykyisen pörssitalon uudisrakennuksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antwerpenin pörssitalo (kauppa)
+Tietoruudun teksti: Antwerpenin pörssitalo eli Handelsbeurs on maailman ensimmäinen tätä tarkoitusta varten rakennettu kauppapörssi: alkuperäinen rakennus valmistui vuonna 1531 katettujen pylväskäytävien ympäröimäksi sisäpihaksi, ja sen mallia kopioitiin muun muassa Lontoon myöhempään Royal Exchangeen. Antwerpenin kauppa hiipui Espanjan vallan ja Amsterdamin nousun myötä 1500-luvun lopulla, ja rakennus toimi sen jälkeen vuosisatoja muun muassa piirustusakatemiana. Elokuun 2. päivänä 1858 tulipalo tuhosi koko rakennuksen, minkä jälkeen kaupunki järjesti arkkitehtikilpailun uudisrakennuksesta; voittajaksi valittu Joseph Schadde sai työn valmiiksi vuonna 1872. Uusi, uusgoottilainen pörssitalo hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa, ja se palveli kauppiaita ja pörssinvälittäjiä aina vuoteen 1997 asti, jolloin Antwerpenin pörssi sulautui Brysselin pörssiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolkata — kohdekartta / Kohdekartta: Nakhodan moskeija] 1926–1935 Burrabazarin kauppakortteleiden keskellä, Zakaria Streetin ja Rabindra Saranin kulmassa, on kaupungin päämoskeija. Paikalla oli ennen vuotta 1854 kaksi pienempää moskeijaa. Kauppias Haji Zakariah, joka kuului Kutchista muuttaneeseen memon-yhteisöön ja omisti laivoja, osti niiden välissä olevan tontin ja kustansi tilalle yhden suuren rakennuksen. Nimi tulee persian sanasta nakhoda, merenkulkija — se viittaa rakennuttajan laivanvarustamoon. Uudisrakennuksen vuosiluvusta Wikipedia antaa kaksi tietoa: artikkelin tietolaatikko sanoo valmistumisvuodeksi 1926, leipäteksti taas kertoo työn alkaneen 1926 ja päättyneen 1935. Kustannus oli puolitoista miljoonaa rupiaa, ja urakan teki brittil…
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-hasselt-jenever) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hasselt (ruoka)
+Tietoruudun teksti: Hasselt on Belgian Limburgin maakunnan pääkaupunki, ja se on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan; kaupunki vältti vuoden 1601 valmistus- ja myyntikiellon, ja 1670-luvulla siellä majailleet hollantilaissotilaat toivat mukanaan makuja, joiden vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Teollistumisen myötä halpa, sokerijuurikasmelassista tislattu jenever levisi työväestön keskuuteen, ja 1800-luvun lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. Kaupungin vanhin säilynyt tislaamo perustettiin entiselle nunnaluostarin maatilalle vuonna 1803, ja omistajaperhe Stellingwerff antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo.
+
+### 29.1
+KYSYMYS: Minkä vuosikymmenen kiellon Hasselt vältti jenever-viinan valmistukselta ja myynniltä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hasselt (ruoka)
+Tietoruudun teksti: Hasselt on Belgian Limburgin maakunnan pääkaupunki, ja se on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan; kaupunki vältti vuoden 1601 valmistus- ja myyntikiellon, ja 1670-luvulla siellä majailleet hollantilaissotilaat toivat mukanaan makuja, joiden vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Teollistumisen myötä halpa, sokerijuurikasmelassista tislattu jenever levisi työväestön keskuuteen, ja 1800-luvun lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. Kaupungin vanhin säilynyt tislaamo perustettiin entiselle nunnaluostarin maatilalle vuonna 1803, ja omistajaperhe Stellingwerff antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo.
+
+### 29.2
+KYSYMYS: Minkä maan sotilaat toivat 1670-luvulla makuja hasseltilaiseen jeneveriin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hasselt (ruoka)
+Tietoruudun teksti: Hasselt on Belgian Limburgin maakunnan pääkaupunki, ja se on profiloitunut jenever-viinan tislauksen keskukseksi vuosisatojen ajan; kaupunki vältti vuoden 1601 valmistus- ja myyntikiellon, ja 1670-luvulla siellä majailleet hollantilaissotilaat toivat mukanaan makuja, joiden vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Teollistumisen myötä halpa, sokerijuurikasmelassista tislattu jenever levisi työväestön keskuuteen, ja 1800-luvun lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. Kaupungin vanhin säilynyt tislaamo perustettiin entiselle nunnaluostarin maatilalle vuonna 1803, ja omistajaperhe Stellingwerff antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-oostende) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostende (merenkulku)
+Tietoruudun teksti: Oostende on Belgian rannikon suurin kaupunki ja tärkeä satama Pohjanmerellä; sen asukasluku on nykyisin noin 72 000. Kaupunki oli alun perin vaatimaton kalastajakylä, joka sai markkinaoikeudet 1200-luvulla, mutta sen merkitys kasvoi 1700-luvulla, kun Hollanti sulki Antwerpenin meriyhteyden ja Oostendesta tuli Belgian tärkein vaihtoehtoinen satama. Rautatie Brysseliin valmistui vuonna 1838 ja lauttayhteys Doveriin avattiin vuonna 1846, mikä teki kaupungista Englannin-liikenteen kauttakulkusataman. Kuningas Leopold I ja hänen poikansa Leopold II viettivät mielellään lomiaan Oostendessa, ja heidän suosionsa houkutteli aatelistoa rakentamaan kaupunkiin muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat, minkä ansiosta Oostendea alettiin kutsua Belgian merikylpylöiden kuningattareksi.
+
+### 30.1
+KYSYMYS: Minä vuonna lauttayhteys Oostendesta Doveriin avattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostende (merenkulku)
+Tietoruudun teksti: Oostende on Belgian rannikon suurin kaupunki ja tärkeä satama Pohjanmerellä; sen asukasluku on nykyisin noin 72 000. Kaupunki oli alun perin vaatimaton kalastajakylä, joka sai markkinaoikeudet 1200-luvulla, mutta sen merkitys kasvoi 1700-luvulla, kun Hollanti sulki Antwerpenin meriyhteyden ja Oostendesta tuli Belgian tärkein vaihtoehtoinen satama. Rautatie Brysseliin valmistui vuonna 1838 ja lauttayhteys Doveriin avattiin vuonna 1846, mikä teki kaupungista Englannin-liikenteen kauttakulkusataman. Kuningas Leopold I ja hänen poikansa Leopold II viettivät mielellään lomiaan Oostendessa, ja heidän suosionsa houkutteli aatelistoa rakentamaan kaupunkiin muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat, minkä ansiosta Oostendea alettiin kutsua Belgian merikylpylöiden kuningattareksi.
+
+### 30.2
+KYSYMYS: Ketkä kaksi Belgian kuningasta suosivat Oostendea lomapaikkanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oostende (merenkulku)
+Tietoruudun teksti: Oostende on Belgian rannikon suurin kaupunki ja tärkeä satama Pohjanmerellä; sen asukasluku on nykyisin noin 72 000. Kaupunki oli alun perin vaatimaton kalastajakylä, joka sai markkinaoikeudet 1200-luvulla, mutta sen merkitys kasvoi 1700-luvulla, kun Hollanti sulki Antwerpenin meriyhteyden ja Oostendesta tuli Belgian tärkein vaihtoehtoinen satama. Rautatie Brysseliin valmistui vuonna 1838 ja lauttayhteys Doveriin avattiin vuonna 1846, mikä teki kaupungista Englannin-liikenteen kauttakulkusataman. Kuningas Leopold I ja hänen poikansa Leopold II viettivät mielellään lomiaan Oostendessa, ja heidän suosionsa houkutteli aatelistoa rakentamaan kaupunkiin muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat, minkä ansiosta Oostendea alettiin kutsua Belgian merikylpylöiden kuningattareksi.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

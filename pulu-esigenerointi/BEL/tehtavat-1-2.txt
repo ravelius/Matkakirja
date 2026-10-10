@@ -1,0 +1,200 @@
+================ KOHTA 6 (kohde:hahmotelma-kalmthout) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmthoutse Heide (kulttuuri)
+Tietoruudun teksti: De Zoom–Kalmthoutse Heide on Belgian ja Alankomaiden rajalla sijaitseva rajat ylittävä puisto, joka kattaa noin 37,5 neliökilometriä. Se syntyi kahden aiemman puiston, Belgian Kalmthoutse Heiden ja Alankomaiden De Zoomin, yhdistämisestä, ja suuri osa siitä on nummea. Alue oli alun perin Keski-Euroopalle tyypillistä lehtimetsää, mutta vuosisatainen karjan ja lampaiden laiduntaminen, keskiajan turvekasten poisto ja soiden ojittaminen turpeen saamiseksi tekivät siitä nummen. Belgian puoli julistettiin maisemansuojelualueeksi jo vuonna 1941, ja koko rajapuisto perustettiin vuonna 2001.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Metsä, joka värjäytyy siniseksi] keväisin — Hallen kaupungin lähellä sijaitseva Hallerbos on 552 hehtaarin metsä, joka tunnetaan sinisestä kevätmatostaan. Muutaman viikon ajan keväällä metsänpohjaa peittävät siniset hyasintit, ja se houkuttelee runsaasti kävijöitä. Metsä oli ennen osa muinaista Silva Carbonaria -metsää yhdessä Soignesin metsän kanssa, ja vielä vuonna 1777 ne yhdisti kapea metsäkaista. Ensimmäisen maailmansodan aikana suurin osa vanhoista puista kaadettiin, ja metsä istutettiin uudelleen vuosina 1930-1950.
+
+### 6.1
+KYSYMYS: Millainen metsä alueella oli alun perin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmthoutse Heide (kulttuuri)
+Tietoruudun teksti: De Zoom–Kalmthoutse Heide on Belgian ja Alankomaiden rajalla sijaitseva rajat ylittävä puisto, joka kattaa noin 37,5 neliökilometriä. Se syntyi kahden aiemman puiston, Belgian Kalmthoutse Heiden ja Alankomaiden De Zoomin, yhdistämisestä, ja suuri osa siitä on nummea. Alue oli alun perin Keski-Euroopalle tyypillistä lehtimetsää, mutta vuosisatainen karjan ja lampaiden laiduntaminen, keskiajan turvekasten poisto ja soiden ojittaminen turpeen saamiseksi tekivät siitä nummen. Belgian puoli julistettiin maisemansuojelualueeksi jo vuonna 1941, ja koko rajapuisto perustettiin vuonna 2001.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Metsä, joka värjäytyy siniseksi] keväisin — Hallen kaupungin lähellä sijaitseva Hallerbos on 552 hehtaarin metsä, joka tunnetaan sinisestä kevätmatostaan. Muutaman viikon ajan keväällä metsänpohjaa peittävät siniset hyasintit, ja se houkuttelee runsaasti kävijöitä. Metsä oli ennen osa muinaista Silva Carbonaria -metsää yhdessä Soignesin metsän kanssa, ja vielä vuonna 1777 ne yhdisti kapea metsäkaista. Ensimmäisen maailmansodan aikana suurin osa vanhoista puista kaadettiin, ja metsä istutettiin uudelleen vuosina 1930-1950.
+
+### 6.2
+KYSYMYS: Mikä maankäyttö muutti maiseman nummeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalmthoutse Heide (kulttuuri)
+Tietoruudun teksti: De Zoom–Kalmthoutse Heide on Belgian ja Alankomaiden rajalla sijaitseva rajat ylittävä puisto, joka kattaa noin 37,5 neliökilometriä. Se syntyi kahden aiemman puiston, Belgian Kalmthoutse Heiden ja Alankomaiden De Zoomin, yhdistämisestä, ja suuri osa siitä on nummea. Alue oli alun perin Keski-Euroopalle tyypillistä lehtimetsää, mutta vuosisatainen karjan ja lampaiden laiduntaminen, keskiajan turvekasten poisto ja soiden ojittaminen turpeen saamiseksi tekivät siitä nummen. Belgian puoli julistettiin maisemansuojelualueeksi jo vuonna 1941, ja koko rajapuisto perustettiin vuonna 2001.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-lions-mound) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Waterloon leijonakumpu (historia)
+Tietoruudun teksti: Leijonakumpu on suuri keinotekoinen kukkula Braine-l'Alleudin kunnassa Belgiassa. Alankomaiden kuningas Vilhelm I määräsi sen rakennettavaksi vuonna 1820, ja se valmistui vuonna 1826. Kumpu muistuttaa Waterloon taistelukentän kohdasta, jossa kuninkaan vanhemman pojan, Vilhelm Oranialaisen, arvellaan haavoittuneen 18. kesäkuuta 1815, sekä kaksi päivää aiemmin käydystä Quatre Brasin taistelusta. Insinööri Vifquain halusi sen olevan liittoutuneiden voiton symboli eikä yhden ihmisen ylistys. Kumpuun johtaa 226 askelmaa, ja huipulla leijonapatsaan ympärillä on näköalapaikka taistelutantereelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Nabi Yunusin kumpu] assyrialainen asevarasto, moskeija 1365 Nabi Yunusin kumpu on Niniven toinen kumpu, kilometrin verran Kuyunjikista etelään Khosr-joen toisella puolella. Sanheribin tekstien perusteella sitä on pidetty Niniven asevarastona, ja kummun alla on Asarhaddonin ja Assurbanipalin palatsi. Vuoden 1990 kaivauksissa paljastui monumentaalinen sisäänkäynti: suuria kaiverrettuja orthostaatteja ja härkämiespatsaita, joista osa oli jäänyt kesken. Kummun päällä oli pitkään kristillinen luostari. Vuonna 1349 idän kirkon jäsenet kaivoivat siellä esiin patriarkka Hnanisho I:n jäännökset. Historioitsija Amr, joka näki ruumiin omin silmin, kertoi sen olleen plataanipuisessa arkussa hämmästyttävän hyvin säilynyt, …
+- [Jemen — maalehti / Historia: Kumpu on vanhojen talojen tekemä] Vanha Marib on savitiilikylä kummun päällä, mutta kumpu ei ole luonnon tekemä. Savitiilitalo kestää muutaman sukupolven, ja kun se sortuu, seuraava rakennetaan raunion päälle. Kun tämä toistuu riittävän monta kertaa, maanpinta nousee talojen mukana. Kummun sisään on hautautunut Saban valtakunnan pääkaupunki eli sama paikka, josta patoa aikanaan hallinnoitiin. Kylä tyhjeni 1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät paikoilleen ilman kattoja.
+
+### 7.1
+KYSYMYS: Kuka määräsi Leijonakumpu rakennettavaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Waterloon leijonakumpu (historia)
+Tietoruudun teksti: Leijonakumpu on suuri keinotekoinen kukkula Braine-l'Alleudin kunnassa Belgiassa. Alankomaiden kuningas Vilhelm I määräsi sen rakennettavaksi vuonna 1820, ja se valmistui vuonna 1826. Kumpu muistuttaa Waterloon taistelukentän kohdasta, jossa kuninkaan vanhemman pojan, Vilhelm Oranialaisen, arvellaan haavoittuneen 18. kesäkuuta 1815, sekä kaksi päivää aiemmin käydystä Quatre Brasin taistelusta. Insinööri Vifquain halusi sen olevan liittoutuneiden voiton symboli eikä yhden ihmisen ylistys. Kumpuun johtaa 226 askelmaa, ja huipulla leijonapatsaan ympärillä on näköalapaikka taistelutantereelle.
+
+### 7.2
+KYSYMYS: Miksi kumpu rakennettiin juuri tähän paikkaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Waterloon leijonakumpu (historia)
+Tietoruudun teksti: Leijonakumpu on suuri keinotekoinen kukkula Braine-l'Alleudin kunnassa Belgiassa. Alankomaiden kuningas Vilhelm I määräsi sen rakennettavaksi vuonna 1820, ja se valmistui vuonna 1826. Kumpu muistuttaa Waterloon taistelukentän kohdasta, jossa kuninkaan vanhemman pojan, Vilhelm Oranialaisen, arvellaan haavoittuneen 18. kesäkuuta 1815, sekä kaksi päivää aiemmin käydystä Quatre Brasin taistelusta. Insinööri Vifquain halusi sen olevan liittoutuneiden voiton symboli eikä yhden ihmisen ylistys. Kumpuun johtaa 226 askelmaa, ja huipulla leijonapatsaan ympärillä on näköalapaikka taistelutantereelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Nabi Yunusin kumpu] assyrialainen asevarasto, moskeija 1365 Nabi Yunusin kumpu on Niniven toinen kumpu, kilometrin verran Kuyunjikista etelään Khosr-joen toisella puolella. Sanheribin tekstien perusteella sitä on pidetty Niniven asevarastona, ja kummun alla on Asarhaddonin ja Assurbanipalin palatsi. Vuoden 1990 kaivauksissa paljastui monumentaalinen sisäänkäynti: suuria kaiverrettuja orthostaatteja ja härkämiespatsaita, joista osa oli jäänyt kesken. Kummun päällä oli pitkään kristillinen luostari. Vuonna 1349 idän kirkon jäsenet kaivoivat siellä esiin patriarkka Hnanisho I:n jäännökset. Historioitsija Amr, joka näki ruumiin omin silmin, kertoi sen olleen plataanipuisessa arkussa hämmästyttävän hyvin säilynyt, …
+- [Jemen — maalehti / Historia: Kumpu on vanhojen talojen tekemä] Vanha Marib on savitiilikylä kummun päällä, mutta kumpu ei ole luonnon tekemä. Savitiilitalo kestää muutaman sukupolven, ja kun se sortuu, seuraava rakennetaan raunion päälle. Kun tämä toistuu riittävän monta kertaa, maanpinta nousee talojen mukana. Kummun sisään on hautautunut Saban valtakunnan pääkaupunki eli sama paikka, josta patoa aikanaan hallinnoitiin. Kylä tyhjeni 1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät paikoilleen ilman kattoja.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-menin-gate) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Menin Gate (historia)
+Tietoruudun teksti: Menin Gate on Ypresin itäisessä uloskäynnissä oleva sotamuistomerkki, joka on omistettu ensimmäisessä maailmansodassa Ypresin kaarrossa kaatuneille brittiläisille ja Kansainyhteisön sotilaille, joiden hautoja ei tunneta. Sir Reginald Blomfieldin suunnittelema muistomerkki paljastettiin 24. heinäkuuta 1927. Portti on saanut nimensä siitä, että sen läpi lähtevä tie johti Meneniin. Muistomerkin kunniasalin kivitauluissa on 54 395 kaatuneen nimeä, jotka eivät ole koskaan tulleet tunnistetuiksi. Joka ilta kello 20 torvensoittajat sulkevat portin läpi kulkevan tien ja soittavat Last Post -merkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Satama, joka jäi kukkulan alle] 1299–1398 — Malaijien kronikan mukaan palembanginlainen ruhtinas Sang Nila Utama nousi maihin Temasekin saarelle vuonna 1299, näki punaruumiisen ja mustapäisen eläimen katoavan viidakkoon, sai kuulla sen olevan leijona ja antoi kaupungille nimen Singapura, leijonakaupunki. Kiinalainen kauppias Wang Dayuan kävi saarella 1330-luvulla ja kuvasi kaksi asutusta: kukkulan lähteen luona olevan Ban Zun ja salmen suulla olevan Long Ya Menin. Vaihdossa kulki punakultaa, puuvillapainokankaita, sinistä satiinia, lakkapuuta ja sarvinokkalintujen nokkakypäriä. Seitsemänkymmenen aluksen siamilainen laivasto piiritti muurattua kaupunkia kuukauden saamatta sitä.
+
+### 8.1
+KYSYMYS: Keitä Menin Gate muistaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Menin Gate (historia)
+Tietoruudun teksti: Menin Gate on Ypresin itäisessä uloskäynnissä oleva sotamuistomerkki, joka on omistettu ensimmäisessä maailmansodassa Ypresin kaarrossa kaatuneille brittiläisille ja Kansainyhteisön sotilaille, joiden hautoja ei tunneta. Sir Reginald Blomfieldin suunnittelema muistomerkki paljastettiin 24. heinäkuuta 1927. Portti on saanut nimensä siitä, että sen läpi lähtevä tie johti Meneniin. Muistomerkin kunniasalin kivitauluissa on 54 395 kaatuneen nimeä, jotka eivät ole koskaan tulleet tunnistetuiksi. Joka ilta kello 20 torvensoittajat sulkevat portin läpi kulkevan tien ja soittavat Last Post -merkin.
+
+### 8.2
+KYSYMYS: Miksi portti sai nimekseen Menin Gate?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Menin Gate (historia)
+Tietoruudun teksti: Menin Gate on Ypresin itäisessä uloskäynnissä oleva sotamuistomerkki, joka on omistettu ensimmäisessä maailmansodassa Ypresin kaarrossa kaatuneille brittiläisille ja Kansainyhteisön sotilaille, joiden hautoja ei tunneta. Sir Reginald Blomfieldin suunnittelema muistomerkki paljastettiin 24. heinäkuuta 1927. Portti on saanut nimensä siitä, että sen läpi lähtevä tie johti Meneniin. Muistomerkin kunniasalin kivitauluissa on 54 395 kaatuneen nimeä, jotka eivät ole koskaan tulleet tunnistetuiksi. Joka ilta kello 20 torvensoittajat sulkevat portin läpi kulkevan tien ja soittavat Last Post -merkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Satama, joka jäi kukkulan alle] 1299–1398 — Malaijien kronikan mukaan palembanginlainen ruhtinas Sang Nila Utama nousi maihin Temasekin saarelle vuonna 1299, näki punaruumiisen ja mustapäisen eläimen katoavan viidakkoon, sai kuulla sen olevan leijona ja antoi kaupungille nimen Singapura, leijonakaupunki. Kiinalainen kauppias Wang Dayuan kävi saarella 1330-luvulla ja kuvasi kaksi asutusta: kukkulan lähteen luona olevan Ban Zun ja salmen suulla olevan Long Ya Menin. Vaihdossa kulki punakultaa, puuvillapainokankaita, sinistä satiinia, lakkapuuta ja sarvinokkalintujen nokkakypäriä. Seitsemänkymmenen aluksen siamilainen laivasto piiritti muurattua kaupunkia kuukauden saamatta sitä.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-bastogne) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastognen tähtimuistomerkki (historia)
+Tietoruudun teksti: Bastognen lähellä Belgian Luxemburgin maakunnassa oleva muistomerkki, aiemmin Mardasson-muistomerkiksi kutsuttu, kunnioittaa Ardennien taistelussa haavoittuneita ja kaatuneita amerikkalaissotilaita. Se on suunniteltu viisisakaraisen amerikkalaisen tähden muotoon, ja belgialainen arkkitehti Georges Dedoyard antoi sille 12 metrin korkeuden ja 31 metrin sivut. Sisäseinille on kaiverrettu kymmenen kivitekstiä taistelusta, ja reunuksessa on Yhdysvaltain 48 osavaltion nimet. Ensimmäinen askel otettiin 4. heinäkuuta 1946, kun presidentti Trumanille lahjoitettiin maata paikalta, ja muistomerkki vihittiin 16. heinäkuuta 1950. Sen alla oleva krypta on tarkoitettu protestanttisiin, katolisiin ja juutalaisiin jumalanpalveluksiin.
+
+### 9.1
+KYSYMYS: Minkä muotoinen Bastognen muistomerkki on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastognen tähtimuistomerkki (historia)
+Tietoruudun teksti: Bastognen lähellä Belgian Luxemburgin maakunnassa oleva muistomerkki, aiemmin Mardasson-muistomerkiksi kutsuttu, kunnioittaa Ardennien taistelussa haavoittuneita ja kaatuneita amerikkalaissotilaita. Se on suunniteltu viisisakaraisen amerikkalaisen tähden muotoon, ja belgialainen arkkitehti Georges Dedoyard antoi sille 12 metrin korkeuden ja 31 metrin sivut. Sisäseinille on kaiverrettu kymmenen kivitekstiä taistelusta, ja reunuksessa on Yhdysvaltain 48 osavaltion nimet. Ensimmäinen askel otettiin 4. heinäkuuta 1946, kun presidentti Trumanille lahjoitettiin maata paikalta, ja muistomerkki vihittiin 16. heinäkuuta 1950. Sen alla oleva krypta on tarkoitettu protestanttisiin, katolisiin ja juutalaisiin jumalanpalveluksiin.
+
+### 9.2
+KYSYMYS: Ketä Bastognen lähellä oleva muistomerkki kunnioittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bastognen tähtimuistomerkki (historia)
+Tietoruudun teksti: Bastognen lähellä Belgian Luxemburgin maakunnassa oleva muistomerkki, aiemmin Mardasson-muistomerkiksi kutsuttu, kunnioittaa Ardennien taistelussa haavoittuneita ja kaatuneita amerikkalaissotilaita. Se on suunniteltu viisisakaraisen amerikkalaisen tähden muotoon, ja belgialainen arkkitehti Georges Dedoyard antoi sille 12 metrin korkeuden ja 31 metrin sivut. Sisäseinille on kaiverrettu kymmenen kivitekstiä taistelusta, ja reunuksessa on Yhdysvaltain 48 osavaltion nimet. Ensimmäinen askel otettiin 4. heinäkuuta 1946, kun presidentti Trumanille lahjoitettiin maata paikalta, ja muistomerkki vihittiin 16. heinäkuuta 1950. Sen alla oleva krypta on tarkoitettu protestanttisiin, katolisiin ja juutalaisiin jumalanpalveluksiin.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hahmotelma-bouillon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bouillonin linna (historia)
+Tietoruudun teksti: Bouillonin linna on keskiaikainen linna Wallonian Belgian Luxemburgin maakunnassa Bouillonin kaupungissa. Se mainitaan ensimmäisen kerran vuonna 988, mutta samalla paikalla oli linna paljon aiemminkin. Linna kohoaa kallioisella kielekkeellä Semois-joen jyrkässä mutkassa. Vuonna 1082 linna periytyi Bouillonin Gotfridille, joka myi sen Liègen piispa Otbertille rahoittaakseen ensimmäisen ristiretken. Ranskan Ludvig XIV:n sotilasarkkitehti Vauban varusti sen raskaalle tykistölle 1600-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Kaksisataatuhatta kulkijaa] Ennen vuotta 1810 Cumberlandin solan läpi arvioidaan vaeltaneen 200 000–300 000 eurooppalaista uudisasukasta matkalla kohti Kentuckyn ja Ohionjokilaakson uusia asuinsijoja. Aikakauden reittikartta paljastaa, miten Erämaantie yhtyi solan tuntumassa Suureen laaksotiehen, joka jatkui aina Philadelphiaan asti – näin syntyi yhtenäinen kulkuväylä itärannikolta Kentuckyn erämaahan asti. Suurin osa kulkijoista matkasi jalan tai hevosen selässä, sillä polku oli pitkään liian kapea ja kivikkoinen raskaalle rahtiliikenteelle.
+
+### 10.1
+KYSYMYS: Miksi Bouillonin Gotfrid myi linnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bouillonin linna (historia)
+Tietoruudun teksti: Bouillonin linna on keskiaikainen linna Wallonian Belgian Luxemburgin maakunnassa Bouillonin kaupungissa. Se mainitaan ensimmäisen kerran vuonna 988, mutta samalla paikalla oli linna paljon aiemminkin. Linna kohoaa kallioisella kielekkeellä Semois-joen jyrkässä mutkassa. Vuonna 1082 linna periytyi Bouillonin Gotfridille, joka myi sen Liègen piispa Otbertille rahoittaakseen ensimmäisen ristiretken. Ranskan Ludvig XIV:n sotilasarkkitehti Vauban varusti sen raskaalle tykistölle 1600-luvun lopulla.
+
+### 10.2
+KYSYMYS: Kuka varusti linnan raskaalle tykistölle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bouillonin linna (historia)
+Tietoruudun teksti: Bouillonin linna on keskiaikainen linna Wallonian Belgian Luxemburgin maakunnassa Bouillonin kaupungissa. Se mainitaan ensimmäisen kerran vuonna 988, mutta samalla paikalla oli linna paljon aiemminkin. Linna kohoaa kallioisella kielekkeellä Semois-joen jyrkässä mutkassa. Vuonna 1082 linna periytyi Bouillonin Gotfridille, joka myi sen Liègen piispa Otbertille rahoittaakseen ensimmäisen ristiretken. Ranskan Ludvig XIV:n sotilasarkkitehti Vauban varusti sen raskaalle tykistölle 1600-luvun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Kaksisataatuhatta kulkijaa] Ennen vuotta 1810 Cumberlandin solan läpi arvioidaan vaeltaneen 200 000–300 000 eurooppalaista uudisasukasta matkalla kohti Kentuckyn ja Ohionjokilaakson uusia asuinsijoja. Aikakauden reittikartta paljastaa, miten Erämaantie yhtyi solan tuntumassa Suureen laaksotiehen, joka jatkui aina Philadelphiaan asti – näin syntyi yhtenäinen kulkuväylä itärannikolta Kentuckyn erämaahan asti. Suurin osa kulkijoista matkasi jalan tai hevosen selässä, sillä polku oli pitkään liian kapea ja kivikkoinen raskaalle rahtiliikenteelle.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

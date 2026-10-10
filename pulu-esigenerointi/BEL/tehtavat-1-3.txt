@@ -1,0 +1,215 @@
+================ KOHTA 11 (kohde:hahmotelma-tournai) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tournain tuomiokirkko (historia)
+Tietoruudun teksti: Tournain Neitsyt Marian tuomiokirkko on roomalaiskatolinen tuomiokirkko Tournain kaupungissa. Se on ollut Wallonian merkittävä perintökohde vuodesta 1936 ja Unescon maailmanperintökohde vuodesta 2000. Kirkon rakentaminen alkoi 1100-luvulla, ja se yhdistää kolmen rakennuskauden tyylit: raskaan ja ankaran romaanisen laivan, siirtymävaiheen poikkilaivat ja täysin kehittyneen goottilaisen kuorin. Erottuvin osa on poikkilaivan viiden kellotornin ryhmä; sitä reunustavat tornit nousevat 83 metriin. Goottilainen kuori rakennettiin vuosina 1242–1255 Amiensin katedraalin esikuvan mukaan, ja renessanssin lehterin on tehnyt flaamilainen kuvanveistäjä Cornelis Floris vuonna 1573.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Rakennukset: Talo joka kasvoi kuvernööri kerrallaan] 1845– — Government House alkoi rakentua vuonna 1845 kuvernööri Richard Moodyn suunnitelmien mukaan, ja sen keskiosan kivirakennus on saarten vanhimpia. Ensimmäinen kuvernööri muutti taloon vasta 1859, ja sen jälkeen lähes jokainen seuraaja lisäsi taloon oman siipensä tai huoneensa, minkä ansiosta rakennus on nykyään omaperäinen sekoitus eri vuosikymmenten tyylejä. Talo on yhä sekä kuvernöörin koti että työpaikka, ja sen puutarha on yksi harvoista suojaisista paikoista, joissa Falklandin tuulissa voi kasvattaa muutakin kuin heinää. Napaseudun tutkimusmatkailija Ernest Shackleton majoittui talossa käydessään Stanleyssa 1916.
+- [New Orleans — kohdekartta / Kohdekartta: Gallier House] 1857–1860 Talo on arkkitehdin oma koti. James Gallier Jr. (1827–1868) aloitti sen rakentamisen Royal Streetille 1857 ja muutti sisään vaimonsa ja lastensa kanssa 1860. Isä oli luovuttanut toimistonsa pojalleen 1849, ja nuoremman Gallierin toimisto piirsi kaupunkiin muun muassa Ranskalaisen oopperatalon 1859 — se paloi 1919. Gallier Jr. kuoli neljänkymmenen vuoden iässä kotonaan, eikä kuolintodistukseen merkitty syytä. Rakennus yhdistää tyylejä: julkisivun stukki on italialaisvaikutteinen ja suojaa pehmeää paikallista tiiltä tuulelta ja vedeltä, mutta pääsisäänkäynti on klassinen. Suurin osa Ranskan Korttelin valuraudasta tilattiin kuvastosta, mutta tämän talon portin Gallier suunnitteli its…
+
+### 11.1
+KYSYMYS: Kuinka monta kellotornia Tournain tuomiokirkon poikkilaivassa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tournain tuomiokirkko (historia)
+Tietoruudun teksti: Tournain Neitsyt Marian tuomiokirkko on roomalaiskatolinen tuomiokirkko Tournain kaupungissa. Se on ollut Wallonian merkittävä perintökohde vuodesta 1936 ja Unescon maailmanperintökohde vuodesta 2000. Kirkon rakentaminen alkoi 1100-luvulla, ja se yhdistää kolmen rakennuskauden tyylit: raskaan ja ankaran romaanisen laivan, siirtymävaiheen poikkilaivat ja täysin kehittyneen goottilaisen kuorin. Erottuvin osa on poikkilaivan viiden kellotornin ryhmä; sitä reunustavat tornit nousevat 83 metriin. Goottilainen kuori rakennettiin vuosina 1242–1255 Amiensin katedraalin esikuvan mukaan, ja renessanssin lehterin on tehnyt flaamilainen kuvanveistäjä Cornelis Floris vuonna 1573.
+
+### 11.2
+KYSYMYS: Minkä kolmen rakennuskauden tyylejä kirkossa yhdistyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tournain tuomiokirkko (historia)
+Tietoruudun teksti: Tournain Neitsyt Marian tuomiokirkko on roomalaiskatolinen tuomiokirkko Tournain kaupungissa. Se on ollut Wallonian merkittävä perintökohde vuodesta 1936 ja Unescon maailmanperintökohde vuodesta 2000. Kirkon rakentaminen alkoi 1100-luvulla, ja se yhdistää kolmen rakennuskauden tyylit: raskaan ja ankaran romaanisen laivan, siirtymävaiheen poikkilaivat ja täysin kehittyneen goottilaisen kuorin. Erottuvin osa on poikkilaivan viiden kellotornin ryhmä; sitä reunustavat tornit nousevat 83 metriin. Goottilainen kuori rakennettiin vuosina 1242–1255 Amiensin katedraalin esikuvan mukaan, ja renessanssin lehterin on tehnyt flaamilainen kuvanveistäjä Cornelis Floris vuonna 1573.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Rakennukset: Talo joka kasvoi kuvernööri kerrallaan] 1845– — Government House alkoi rakentua vuonna 1845 kuvernööri Richard Moodyn suunnitelmien mukaan, ja sen keskiosan kivirakennus on saarten vanhimpia. Ensimmäinen kuvernööri muutti taloon vasta 1859, ja sen jälkeen lähes jokainen seuraaja lisäsi taloon oman siipensä tai huoneensa, minkä ansiosta rakennus on nykyään omaperäinen sekoitus eri vuosikymmenten tyylejä. Talo on yhä sekä kuvernöörin koti että työpaikka, ja sen puutarha on yksi harvoista suojaisista paikoista, joissa Falklandin tuulissa voi kasvattaa muutakin kuin heinää. Napaseudun tutkimusmatkailija Ernest Shackleton majoittui talossa käydessään Stanleyssa 1916.
+- [New Orleans — kohdekartta / Kohdekartta: Gallier House] 1857–1860 Talo on arkkitehdin oma koti. James Gallier Jr. (1827–1868) aloitti sen rakentamisen Royal Streetille 1857 ja muutti sisään vaimonsa ja lastensa kanssa 1860. Isä oli luovuttanut toimistonsa pojalleen 1849, ja nuoremman Gallierin toimisto piirsi kaupunkiin muun muassa Ranskalaisen oopperatalon 1859 — se paloi 1919. Gallier Jr. kuoli neljänkymmenen vuoden iässä kotonaan, eikä kuolintodistukseen merkitty syytä. Rakennus yhdistää tyylejä: julkisivun stukki on italialaisvaikutteinen ja suojaa pehmeää paikallista tiiltä tuulelta ja vedeltä, mutta pääsisäänkäynti on klassinen. Suurin osa Ranskan Korttelin valuraudasta tilattiin kuvastosta, mutta tämän talon portin Gallier suunnitteli its…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hahmotelma-eben-emael) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ében-Émaelin linnake (historia)
+Tietoruudun teksti: Ében-Émaelin linnake on toimeton belgialainen linnoitus Liègen ja Maastrichtin välissä Belgian ja Alankomaiden rajalla lähellä Albert-kanavaa. Se rakennettiin vuosina 1931–1935, ja sitä pidettiin läpipääsemättömänä ja aikansa maailman suurimpana. Saksalaiset purjelentokoneilla laskeutuneet joukot, yhteensä 85 miestä, ottivat sen haltuunsa 10.–11. toukokuuta 1940. Se oli ensimmäinen strateginen ilmalaskuoperaatio, joka on koskaan yritetty sotahistoriassa, ja se avasi saksalaisille tien Belgiaan ilman linnakkeen tulitusta. Nykyään linnake on säilytetty museona, ja sinne voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Käärmejumala joka ei koskaan pure] Temple des Pythons on Ouidah'n vodun-uskonnon näkyvin pyhäkkö: sen sisäpihalla asuu kymmeniä kesyjä kuninkaanpythonia, jotka saavat liikkua vapaasti eivätkä ne ole ihmiselle vaarallisia. Käärmeen symboliikka juontuu jumala Dagbesta, jota pidetään tasapainon ja hedelmällisyyden ruumiillistumana. Legendan mukaan pythonit pelastivat kaupungin perustajakuninkaan hänen paetessaan vihollista 1700-luvun alussa, minkä jälkeen käärmeistä tuli koko yhteisölle pyhiä eläimiä. Temppeli sijaitsee vain parinsadan metrin päässä katolisesta basilikasta, ja monet ouidahlaiset harjoittavat molempia uskontoja rinnakkain.
+- [Belgia — maalehti / Historia] Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat menettäneet tulessa.
+
+### 12.1
+KYSYMYS: Millä tavoin saksalaiset ottivat Ében-Émaelin linnakkeen toukokuussa 1940?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ében-Émaelin linnake (historia)
+Tietoruudun teksti: Ében-Émaelin linnake on toimeton belgialainen linnoitus Liègen ja Maastrichtin välissä Belgian ja Alankomaiden rajalla lähellä Albert-kanavaa. Se rakennettiin vuosina 1931–1935, ja sitä pidettiin läpipääsemättömänä ja aikansa maailman suurimpana. Saksalaiset purjelentokoneilla laskeutuneet joukot, yhteensä 85 miestä, ottivat sen haltuunsa 10.–11. toukokuuta 1940. Se oli ensimmäinen strateginen ilmalaskuoperaatio, joka on koskaan yritetty sotahistoriassa, ja se avasi saksalaisille tien Belgiaan ilman linnakkeen tulitusta. Nykyään linnake on säilytetty museona, ja sinne voi tutustua.
+
+### 12.2
+KYSYMYS: Minkä kanavan varrella linnake sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ében-Émaelin linnake (historia)
+Tietoruudun teksti: Ében-Émaelin linnake on toimeton belgialainen linnoitus Liègen ja Maastrichtin välissä Belgian ja Alankomaiden rajalla lähellä Albert-kanavaa. Se rakennettiin vuosina 1931–1935, ja sitä pidettiin läpipääsemättömänä ja aikansa maailman suurimpana. Saksalaiset purjelentokoneilla laskeutuneet joukot, yhteensä 85 miestä, ottivat sen haltuunsa 10.–11. toukokuuta 1940. Se oli ensimmäinen strateginen ilmalaskuoperaatio, joka on koskaan yritetty sotahistoriassa, ja se avasi saksalaisille tien Belgiaan ilman linnakkeen tulitusta. Nykyään linnake on säilytetty museona, ja sinne voi tutustua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan linna] 1971–1984 (alkuperäinen linna 1300-luvulta) Varsovan linna on seisonut Wisła-joen rannalla jo 1300-luvulta lähtien, aluksi vaatimattomana Mazovian herttuoiden linnana. 1600-luvun alussa kuningas Zygmunt III Vaasa siirsi hovinsa Krakovasta Varsovaan ja rakennutti linnasta komean barokkilinnan, jota kruunaa 60 metriä korkea Sigismundin torni. Linnan sisällä sijaitsee sali, jossa hyväksyttiin Euroopan ensimmäinen kirjoitettu perustuslaki vuonna 1791. Kuninkaallisissa asunnoissa riippuu maalauksia mestari Canaletolta, ja linnan kappelissa säilytetään jopa sotasankari Tadeusz Kościuszkon sydäntä. Toinen maailmansota tuhosi linnan lähes kokonaan - ensin pommeissa syksyllä 1939, sitten saksalaiste…
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Käärmejumala joka ei koskaan pure] Temple des Pythons on Ouidah'n vodun-uskonnon näkyvin pyhäkkö: sen sisäpihalla asuu kymmeniä kesyjä kuninkaanpythonia, jotka saavat liikkua vapaasti eivätkä ne ole ihmiselle vaarallisia. Käärmeen symboliikka juontuu jumala Dagbesta, jota pidetään tasapainon ja hedelmällisyyden ruumiillistumana. Legendan mukaan pythonit pelastivat kaupungin perustajakuninkaan hänen paetessaan vihollista 1700-luvun alussa, minkä jälkeen käärmeistä tuli koko yhteisölle pyhiä eläimiä. Temppeli sijaitsee vain parinsadan metrin päässä katolisesta basilikasta, ja monet ouidahlaiset harjoittavat molempia uskontoja rinnakkain.
+- [Belgia — maalehti / Historia] Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat menettäneet tulessa.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hahmotelma-kortrijk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kultaisten kannusten taistelu (historia)
+Tietoruudun teksti: Kultaisten kannusten taistelu eli Kortrijkin taistelu käytiin 11. heinäkuuta 1302 Ranskan kuninkaan armeijan ja kapinallisen Flanderin kreivikunnan joukkojen välillä Kortrijkin lähellä, ja flaamilaiset voittivat yllättäen. Taustalla oli flaamilaiskaupunkien kansannousu ranskalaista valtaa vastaan toukokuussa 1302. Ranskalaisen ratsuväen rynnäköt eivät murtaneet flaamilaisten kaupunkimiliisin jalkaväen keihäsmuodostelmaa, ja ranskalaiset aateliset kärsivät raskaita tappioita. Taistelun nimi tulee noin 500 kannusparista, jotka saatiin saaliiksi ranskalaisilta ratsumiehiltä. Ranska voitti sodan, mutta taistelusta tuli tärkeä kulttuurinen tukipiste flaamilaisliikkeelle 1800- ja 1900-luvuilla, ja sen päivämäärä valittiin Flanderin yhteisön viralliseksi juhlapäiväksi vuonna 1973.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Keksinnöt: Kartta, jossa suora viiva on purjehdusreitti] 1569 — Flaamilainen Gerardus Mercator julkaisi vuonna 1569 maailmankartan, jonka projektiossa vakiosuuntaa kulkeva laiva piirtyi suorana viivana. Kartta painettiin kahdeksantoista arkille kuparilaatoista, jotka Mercator kaiversi itse, ja koottuna se on 202 senttiä leveä ja 124 senttiä korkea. Siinä on yli viisi tuhatta sanaa tekstiä. Mercator matkusti vain vähän, ja tietonsa hän keräsi yli tuhannen kirjan kirjastostaan sekä kirjeenvaihdostaan. Hänen keksimänsä projektio on yhä merikorttien perusta.
+
+### 13.1
+KYSYMYS: Mikä taistelulle antoi nimen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kultaisten kannusten taistelu (historia)
+Tietoruudun teksti: Kultaisten kannusten taistelu eli Kortrijkin taistelu käytiin 11. heinäkuuta 1302 Ranskan kuninkaan armeijan ja kapinallisen Flanderin kreivikunnan joukkojen välillä Kortrijkin lähellä, ja flaamilaiset voittivat yllättäen. Taustalla oli flaamilaiskaupunkien kansannousu ranskalaista valtaa vastaan toukokuussa 1302. Ranskalaisen ratsuväen rynnäköt eivät murtaneet flaamilaisten kaupunkimiliisin jalkaväen keihäsmuodostelmaa, ja ranskalaiset aateliset kärsivät raskaita tappioita. Taistelun nimi tulee noin 500 kannusparista, jotka saatiin saaliiksi ranskalaisilta ratsumiehiltä. Ranska voitti sodan, mutta taistelusta tuli tärkeä kulttuurinen tukipiste flaamilaisliikkeelle 1800- ja 1900-luvuilla, ja sen päivämäärä valittiin Flanderin yhteisön viralliseksi juhlapäiväksi vuonna 1973.
+
+### 13.2
+KYSYMYS: Millä tavoin flaamilainen jalkaväki voitti ranskalaisen ratsuväen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kultaisten kannusten taistelu (historia)
+Tietoruudun teksti: Kultaisten kannusten taistelu eli Kortrijkin taistelu käytiin 11. heinäkuuta 1302 Ranskan kuninkaan armeijan ja kapinallisen Flanderin kreivikunnan joukkojen välillä Kortrijkin lähellä, ja flaamilaiset voittivat yllättäen. Taustalla oli flaamilaiskaupunkien kansannousu ranskalaista valtaa vastaan toukokuussa 1302. Ranskalaisen ratsuväen rynnäköt eivät murtaneet flaamilaisten kaupunkimiliisin jalkaväen keihäsmuodostelmaa, ja ranskalaiset aateliset kärsivät raskaita tappioita. Taistelun nimi tulee noin 500 kannusparista, jotka saatiin saaliiksi ranskalaisilta ratsumiehiltä. Ranska voitti sodan, mutta taistelusta tuli tärkeä kulttuurinen tukipiste flaamilaisliikkeelle 1800- ja 1900-luvuilla, ja sen päivämäärä valittiin Flanderin yhteisön viralliseksi juhlapäiväksi vuonna 1973.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Keksinnöt: Kartta, jossa suora viiva on purjehdusreitti] 1569 — Flaamilainen Gerardus Mercator julkaisi vuonna 1569 maailmankartan, jonka projektiossa vakiosuuntaa kulkeva laiva piirtyi suorana viivana. Kartta painettiin kahdeksantoista arkille kuparilaatoista, jotka Mercator kaiversi itse, ja koottuna se on 202 senttiä leveä ja 124 senttiä korkea. Siinä on yli viisi tuhatta sanaa tekstiä. Mercator matkusti vain vähän, ja tietonsa hän keräsi yli tuhannen kirjan kirjastostaan sekä kirjeenvaihdostaan. Hänen keksimänsä projektio on yhä merikorttien perusta.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-orval) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvalin luostari (ruoka)
+Tietoruudun teksti: Orvalin luostari on sistersiläisluostari Gaumen alueella Belgian Luxemburgin maakunnassa Florenvillen kunnassa; se perustettiin vuonna 1132, kun Champagnen Trois-Fontainesin luostarin sistersiläismunkit saapuivat paikalle. Ranskalaiset joukot polttivat luostarin kokonaan maan tasalle vuonna 1793 vallankumouksen aikana kostoksi siitä, että se oli majoittanut itävaltalaisia joukkoja. Maa ja rauniot ostettiin vuonna 1887, ja ne lahjoitettiin sistersiläisille vuonna 1926, jolloin luostarielämä pääsi jatkumaan ja rakennukset nousivat uudelleen. Keskiaikainen perinne oluen panemisesta elvytettiin vuonna 1931 rahoittamaan jälleenrakennusta. Nykyään luostari on tunnettu trappistiolut Orvalista ja erityisestä juustosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Ruoka: Olut, joka pääsi Unescon listalle] nykyään — Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+- [San Francisco — kohdekartta / Kohdekartta: Ghirardelli Square] 1852–1964 Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi suklaantekijän ammatin Romanengon liikkeessä Genovassa. Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, jossa hän piti makeiskauppaa ja alkoi käyttää nimensä espanjalaista muotoa Domingo. Vuonna 1849 hän lähti Kaliforniaan entisen naapurinsa James Lickin kehotuksesta — Lick oli vienyt San Franciscoon vuotta aiemmin 600 naulaa suklaata — ja avasi ensimmäisen kauppansa kaivosleiriin myydäkseen makeisia kullankaivajille. Vuoden 1851 tulipalo tuhosi hänen San Franciscon liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin kaupan. Ghirardelli aloitti alusta ja perusti 1852 yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin su…
+
+### 14.1
+KYSYMYS: Mikä tuhosi Orvalin luostarin vuonna 1793?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvalin luostari (ruoka)
+Tietoruudun teksti: Orvalin luostari on sistersiläisluostari Gaumen alueella Belgian Luxemburgin maakunnassa Florenvillen kunnassa; se perustettiin vuonna 1132, kun Champagnen Trois-Fontainesin luostarin sistersiläismunkit saapuivat paikalle. Ranskalaiset joukot polttivat luostarin kokonaan maan tasalle vuonna 1793 vallankumouksen aikana kostoksi siitä, että se oli majoittanut itävaltalaisia joukkoja. Maa ja rauniot ostettiin vuonna 1887, ja ne lahjoitettiin sistersiläisille vuonna 1926, jolloin luostarielämä pääsi jatkumaan ja rakennukset nousivat uudelleen. Keskiaikainen perinne oluen panemisesta elvytettiin vuonna 1931 rahoittamaan jälleenrakennusta. Nykyään luostari on tunnettu trappistiolut Orvalista ja erityisestä juustosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Ruoka: Olut, joka pääsi Unescon listalle] nykyään — Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+
+### 14.2
+KYSYMYS: Mitä luostari valmistaa myyntiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Orvalin luostari (ruoka)
+Tietoruudun teksti: Orvalin luostari on sistersiläisluostari Gaumen alueella Belgian Luxemburgin maakunnassa Florenvillen kunnassa; se perustettiin vuonna 1132, kun Champagnen Trois-Fontainesin luostarin sistersiläismunkit saapuivat paikalle. Ranskalaiset joukot polttivat luostarin kokonaan maan tasalle vuonna 1793 vallankumouksen aikana kostoksi siitä, että se oli majoittanut itävaltalaisia joukkoja. Maa ja rauniot ostettiin vuonna 1887, ja ne lahjoitettiin sistersiläisille vuonna 1926, jolloin luostarielämä pääsi jatkumaan ja rakennukset nousivat uudelleen. Keskiaikainen perinne oluen panemisesta elvytettiin vuonna 1931 rahoittamaan jälleenrakennusta. Nykyään luostari on tunnettu trappistiolut Orvalista ja erityisestä juustosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Ghirardelli Square] 1852–1964 Domenico Ghirardelli syntyi 1817 Rapallossa ja oppi suklaantekijän ammatin Romanengon liikkeessä Genovassa. Parikymppisenä hän muutti Uruguayhin ja sieltä Limaan, jossa hän piti makeiskauppaa ja alkoi käyttää nimensä espanjalaista muotoa Domingo. Vuonna 1849 hän lähti Kaliforniaan entisen naapurinsa James Lickin kehotuksesta — Lick oli vienyt San Franciscoon vuotta aiemmin 600 naulaa suklaata — ja avasi ensimmäisen kauppansa kaivosleiriin myydäkseen makeisia kullankaivajille. Vuoden 1851 tulipalo tuhosi hänen San Franciscon liikkeensä ja muutamaa päivää myöhemmin myös Stocktonin kaupan. Ghirardelli aloitti alusta ja perusti 1852 yhtiönsä, joka on Yhdysvaltain kolmanneksi vanhin su…
+- [Bergen — kohdekartta / Kohdekartta: Kaupunginkirjasto] 1872 Keskiajalla Bergen ja Trondheim olivat Norjan kirjallisuuden keskuksia, ja kirjat olivat luostareissa ja kirkoissa. Bergenin Mariakirkenillä oli suuri kirjakokoelma, joka oli avoinna kaikille, ja kun kirkkoherra David Schønfeldt lahjoitti sille 1766 ison erän kirjoja ja rahaa, kokoelmalle voitiin rakentaa oma talo. Se oli auki kaksi tuntia päivässä, ja siitä nykyinen kirjasto polveutuu. Kirkon kokoelma luovutettiin kaupunginkirjastolle 1876, ja siellä se säilyi runsaan vuosisadan ennen siirtoaan yliopiston kirjastoon. Vuonna 1869 yliopistonkirjastonhoitaja Paul Botten-Hansen pani myyntiin oman kokoelmansa, kaksitoistatuhatta nidettä. Sitä varten perustettiin yhdistys, joka osti kokoelm…
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-chimay) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chimay (ruoka)
+Tietoruudun teksti: Chimay on kaupunki ja kunta Hainautin maakunnassa Walloniassa, ja siellä asui vuonna 2006 noin 9 800 ihmistä. Kaupunki on Oise-joen lähde, ja nykyinen kunta muodostettiin vuonna 1977 neljästätoista kunnasta. Kaupungissa sijaitsevan Scourmontin trappistiluostarin munkit pitävät Chimayn panimoa, ja Chimayn trappistioluet ja juustot ovat kansainvälisesti tunnettuja. Nähtävyyksiin kuuluvat Chimayn ruhtinaiden linna, Virellesin järvi ja Oisen lähde. Kaupungissa on perinteisesti ajettu vuotuisia kilpa-ajoja katuradalla, ja sitä on ajettu Grand Prix -luokissa 1920-luvulta 1960-luvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Ruoka: Olut, joka pääsi Unescon listalle] nykyään — Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+
+### 15.1
+KYSYMYS: Minkä joen lähde on Chimayssa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chimay (ruoka)
+Tietoruudun teksti: Chimay on kaupunki ja kunta Hainautin maakunnassa Walloniassa, ja siellä asui vuonna 2006 noin 9 800 ihmistä. Kaupunki on Oise-joen lähde, ja nykyinen kunta muodostettiin vuonna 1977 neljästätoista kunnasta. Kaupungissa sijaitsevan Scourmontin trappistiluostarin munkit pitävät Chimayn panimoa, ja Chimayn trappistioluet ja juustot ovat kansainvälisesti tunnettuja. Nähtävyyksiin kuuluvat Chimayn ruhtinaiden linna, Virellesin järvi ja Oisen lähde. Kaupungissa on perinteisesti ajettu vuotuisia kilpa-ajoja katuradalla, ja sitä on ajettu Grand Prix -luokissa 1920-luvulta 1960-luvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Ruoka: Olut, joka pääsi Unescon listalle] nykyään — Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+
+### 15.2
+KYSYMYS: Mitä tuotteita Scourmontin luostarin munkit valmistavat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chimay (ruoka)
+Tietoruudun teksti: Chimay on kaupunki ja kunta Hainautin maakunnassa Walloniassa, ja siellä asui vuonna 2006 noin 9 800 ihmistä. Kaupunki on Oise-joen lähde, ja nykyinen kunta muodostettiin vuonna 1977 neljästätoista kunnasta. Kaupungissa sijaitsevan Scourmontin trappistiluostarin munkit pitävät Chimayn panimoa, ja Chimayn trappistioluet ja juustot ovat kansainvälisesti tunnettuja. Nähtävyyksiin kuuluvat Chimayn ruhtinaiden linna, Virellesin järvi ja Oisen lähde. Kaupungissa on perinteisesti ajettu vuotuisia kilpa-ajoja katuradalla, ja sitä on ajettu Grand Prix -luokissa 1920-luvulta 1960-luvulle.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

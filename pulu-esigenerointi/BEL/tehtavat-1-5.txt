@@ -1,0 +1,186 @@
+================ KOHTA 21 (kohde:hahmotelma-oudenaarde) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudenaarde (kulttuuri)
+Tietoruudun teksti: Oudenaarde on kaupunki Itä-Flanderin maakunnassa Belgiassa Scheldt-joen varrella. 1400-luvulta 1700-luvulle ja erityisesti 1500-luvulla se oli tunnettu kuvakudosten tuotantokeskuksena. Keskiajalla kaupunki tuki uskollisesti Flanderin kreivejä, ja se rakennutti itselleen vuosina 1526–1537 goottilaistyylisen kaupungintalon. Vuonna 1582 kaupunki antautui Alexander Farnesen pitkän piirityksen jälkeen, minkä seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat, eikä entinen loisto koskaan palannut. Kaupungintalo ja sen kellotorni ovat Unescon maailmanperintökohde vuodesta 1999, ja talossa on Oudenaarden kuvakudosten kokoelma.
+
+### 21.1
+KYSYMYS: Minkä tuotteen valmistuskeskuksena Oudenaarde oli tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudenaarde (kulttuuri)
+Tietoruudun teksti: Oudenaarde on kaupunki Itä-Flanderin maakunnassa Belgiassa Scheldt-joen varrella. 1400-luvulta 1700-luvulle ja erityisesti 1500-luvulla se oli tunnettu kuvakudosten tuotantokeskuksena. Keskiajalla kaupunki tuki uskollisesti Flanderin kreivejä, ja se rakennutti itselleen vuosina 1526–1537 goottilaistyylisen kaupungintalon. Vuonna 1582 kaupunki antautui Alexander Farnesen pitkän piirityksen jälkeen, minkä seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat, eikä entinen loisto koskaan palannut. Kaupungintalo ja sen kellotorni ovat Unescon maailmanperintökohde vuodesta 1999, ja talossa on Oudenaarden kuvakudosten kokoelma.
+
+### 21.2
+KYSYMYS: Milloin Oudenaarden kaupungintalo rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Oudenaarde (kulttuuri)
+Tietoruudun teksti: Oudenaarde on kaupunki Itä-Flanderin maakunnassa Belgiassa Scheldt-joen varrella. 1400-luvulta 1700-luvulle ja erityisesti 1500-luvulla se oli tunnettu kuvakudosten tuotantokeskuksena. Keskiajalla kaupunki tuki uskollisesti Flanderin kreivejä, ja se rakennutti itselleen vuosina 1526–1537 goottilaistyylisen kaupungintalon. Vuonna 1582 kaupunki antautui Alexander Farnesen pitkän piirityksen jälkeen, minkä seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat, eikä entinen loisto koskaan palannut. Kaupungintalo ja sen kellotorni ovat Unescon maailmanperintökohde vuodesta 1999, ja talossa on Oudenaarden kuvakudosten kokoelma.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-canal-du-centre) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Centren laivanostimet (tekniikka)
+Tietoruudun teksti: Canal du Centre on 20,9 kilometriä pitkä kanava Walloniassa, joka yhdistää Maasin ja Scheldtin vesistöt. Thieun ja Houdeng-Gœgnies'n välillä kanava nousee 66 metriä 6 790 metrin matkalla, mikä oli liian jyrkkä nousu sulkuportaille; siksi osuudella on neljä hydraulista laivanostinta vuosilta 1888–1917, jotka ovat nykyään Unescon maailmanperintökohde. Ne suunnitteli brittiläisen Clark, Stansfield & Clarkin insinööri Edwin Clark, joka ehdotti ratkaisua Belgian yleisten töiden ministeriölle vuonna 1879. Ensimmäisen laivanostimen avasi kuningas Leopold II 4. kesäkuuta 1888; kolme muuta valmistuivat vasta vuonna 1917, koska kanavan taloudellista tarvetta kyseenalaistettiin ja ensimmäinen maailmansota alkoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+
+### 22.1
+KYSYMYS: Miksi Thieun ja Houdeng-Gœgnies'n välillä ei voitu käyttää sulkuja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Centren laivanostimet (tekniikka)
+Tietoruudun teksti: Canal du Centre on 20,9 kilometriä pitkä kanava Walloniassa, joka yhdistää Maasin ja Scheldtin vesistöt. Thieun ja Houdeng-Gœgnies'n välillä kanava nousee 66 metriä 6 790 metrin matkalla, mikä oli liian jyrkkä nousu sulkuportaille; siksi osuudella on neljä hydraulista laivanostinta vuosilta 1888–1917, jotka ovat nykyään Unescon maailmanperintökohde. Ne suunnitteli brittiläisen Clark, Stansfield & Clarkin insinööri Edwin Clark, joka ehdotti ratkaisua Belgian yleisten töiden ministeriölle vuonna 1879. Ensimmäisen laivanostimen avasi kuningas Leopold II 4. kesäkuuta 1888; kolme muuta valmistuivat vasta vuonna 1917, koska kanavan taloudellista tarvetta kyseenalaistettiin ja ensimmäinen maailmansota alkoi.
+
+### 22.2
+KYSYMYS: Kuka suunnitteli laivanostimet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canal du Centren laivanostimet (tekniikka)
+Tietoruudun teksti: Canal du Centre on 20,9 kilometriä pitkä kanava Walloniassa, joka yhdistää Maasin ja Scheldtin vesistöt. Thieun ja Houdeng-Gœgnies'n välillä kanava nousee 66 metriä 6 790 metrin matkalla, mikä oli liian jyrkkä nousu sulkuportaille; siksi osuudella on neljä hydraulista laivanostinta vuosilta 1888–1917, jotka ovat nykyään Unescon maailmanperintökohde. Ne suunnitteli brittiläisen Clark, Stansfield & Clarkin insinööri Edwin Clark, joka ehdotti ratkaisua Belgian yleisten töiden ministeriölle vuonna 1879. Ensimmäisen laivanostimen avasi kuningas Leopold II 4. kesäkuuta 1888; kolme muuta valmistuivat vasta vuonna 1917, koska kanavan taloudellista tarvetta kyseenalaistettiin ja ensimmäinen maailmansota alkoi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kaupunkilehti / Historian hetki: Kristiania 1893 — laiva, jonka jää nostaa] 24.6.1893 — Milloin isä tulee takaisin? Sitä ei laiturilla osaa sanoa kukaan. 31-vuotias Fridtjof Nansen jättää rantaan Eva-vaimonsa ja muutaman kuukauden ikäisen Liv-tyttärensä eikä lupaa paluupäivää. Rantakadut ovat mustanaan väkeä, linnoitukselta ammutaan kunnialaukaukset, ja vuonolle liukuu alus, joka näyttää väärin rakennetulta. Fram on matala ja pyöreäpohjainen: Colin Archer suunnitteli sen niin, ettei jäällä ole mistään otetta, vaan ahtojää nostaa laivan ylös eikä murskaa sitä. Runko on kolmea puukerrosta paksu — kuudestakymmenestä seitsemäänkymmeneen senttiä, keulassa runsaan metrin — ja päällystetty greenheart-puulla. Kannella on kolmetoista miestä, ja suunnitelma on se, jota moni …
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-grand-hornu) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grand-Hornu (tekniikka)
+Tietoruudun teksti: Grand-Hornu on vanha hiilikaivoskompleksi ja työläiskylä Hornussa Boussun kunnassa Monsin lähellä Belgiassa. Henri De Gorge rakensi sen vuosina 1810–1830, ja sitä pidetään ainutlaatuisena esimerkkinä toiminnallisesta kaupunkisuunnittelusta. Nykyään sen omistaa Hainautin maakunta, joka järjestää rakennuksissa vaihtuvia näyttelyitä. Grand-Hornu on yksi neljästä Wallonian teollisuuskohteesta, jotka Unesco merkitsi maailmanperintöluetteloon vuonna 2012.
+
+### 23.1
+KYSYMYS: Kuka rakensi Grand-Hornun hiilikaivoskompleksin ja työläiskylän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grand-Hornu (tekniikka)
+Tietoruudun teksti: Grand-Hornu on vanha hiilikaivoskompleksi ja työläiskylä Hornussa Boussun kunnassa Monsin lähellä Belgiassa. Henri De Gorge rakensi sen vuosina 1810–1830, ja sitä pidetään ainutlaatuisena esimerkkinä toiminnallisesta kaupunkisuunnittelusta. Nykyään sen omistaa Hainautin maakunta, joka järjestää rakennuksissa vaihtuvia näyttelyitä. Grand-Hornu on yksi neljästä Wallonian teollisuuskohteesta, jotka Unesco merkitsi maailmanperintöluetteloon vuonna 2012.
+
+### 23.2
+KYSYMYS: Mitä Grand-Hornun rakennuksissa on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grand-Hornu (tekniikka)
+Tietoruudun teksti: Grand-Hornu on vanha hiilikaivoskompleksi ja työläiskylä Hornussa Boussun kunnassa Monsin lähellä Belgiassa. Henri De Gorge rakensi sen vuosina 1810–1830, ja sitä pidetään ainutlaatuisena esimerkkinä toiminnallisesta kaupunkisuunnittelusta. Nykyään sen omistaa Hainautin maakunta, joka järjestää rakennuksissa vaihtuvia näyttelyitä. Grand-Hornu on yksi neljästä Wallonian teollisuuskohteesta, jotka Unesco merkitsi maailmanperintöluetteloon vuonna 2012.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-bois-du-cazier) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bois du Cazier (tekniikka)
+Tietoruudun teksti: Bois du Cazier oli hiilikaivos Marcinellessa lähellä Charleroita, ja se on nykyään säilytetty teollisuusperintökohteena. Kaivoksen toimintalupa myönnettiin kuninkaallisella asetuksella vuonna 1822, ja vuonna 1955 siellä työskenteli 779 ihmistä, joista monet olivat siirtolaistyöläisiä Italiasta. Tunnetuin tapahtuma on 8. elokuuta 1956 sattunut kaivosonnettomuus: hissikoneisto käynnistettiin ennen kuin kaivosvaunu oli kokonaan lastattu, sähkökaapelit repesivät ja kuiluun syttyi tulipalo, jonka savu ja hiilimonoksidi tappoi maan alle jääneet. Onnettomuudessa kuoli 262 työntekijää 12 eri kansallisuudesta, ja vain 13 selvisi, joten se on Belgian pahin kaivosonnettomuus. Sen jälkeen italialaisten siirtolaisuus Belgiaan loppui ja kaivosturvallisuussäännöt uusittiin kaikkialla Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Bayfront Park] 1925 Bayfront Park on 32 eekkerin eli runsaan kolmentoista hehtaarin puisto keskustan reunalla Biscayne Bayn rannassa. Sitä alettiin rakentaa 1924 Warren Henry Manningin suunnitelmien mukaan, ja se avattiin maaliskuussa 1925. Puisto sai uuden muodon vuodesta 1980 alkaen, kun japanilais-amerikkalainen taiteilija ja maisema-arkkitehti Isamu Noguchi suunnitteli sen uudelleen. Hänen käsialaansa on myös puiston tunnetuin teos: Challengerin muistomerkki, sadan jalan korkuinen kaksoiskierteeksi kierretty teräsveistos, joka vihittiin 28. tammikuuta 1988 kaksi vuotta avaruussukkulan onnettomuuden jälkeen. Jalustan graniittilaattaan on kaiverrettu runo ja miehistön nimet. Puistossa on amfiteatteri ja…
+
+### 24.1
+KYSYMYS: Mitä Bois du Cazierin kaivoksessa tapahtui 8. elokuuta 1956?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bois du Cazier (tekniikka)
+Tietoruudun teksti: Bois du Cazier oli hiilikaivos Marcinellessa lähellä Charleroita, ja se on nykyään säilytetty teollisuusperintökohteena. Kaivoksen toimintalupa myönnettiin kuninkaallisella asetuksella vuonna 1822, ja vuonna 1955 siellä työskenteli 779 ihmistä, joista monet olivat siirtolaistyöläisiä Italiasta. Tunnetuin tapahtuma on 8. elokuuta 1956 sattunut kaivosonnettomuus: hissikoneisto käynnistettiin ennen kuin kaivosvaunu oli kokonaan lastattu, sähkökaapelit repesivät ja kuiluun syttyi tulipalo, jonka savu ja hiilimonoksidi tappoi maan alle jääneet. Onnettomuudessa kuoli 262 työntekijää 12 eri kansallisuudesta, ja vain 13 selvisi, joten se on Belgian pahin kaivosonnettomuus. Sen jälkeen italialaisten siirtolaisuus Belgiaan loppui ja kaivosturvallisuussäännöt uusittiin kaikkialla Euroopassa.
+
+### 24.2
+KYSYMYS: Mitä onnettomuuden jälkeen muuttui Euroopassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bois du Cazier (tekniikka)
+Tietoruudun teksti: Bois du Cazier oli hiilikaivos Marcinellessa lähellä Charleroita, ja se on nykyään säilytetty teollisuusperintökohteena. Kaivoksen toimintalupa myönnettiin kuninkaallisella asetuksella vuonna 1822, ja vuonna 1955 siellä työskenteli 779 ihmistä, joista monet olivat siirtolaistyöläisiä Italiasta. Tunnetuin tapahtuma on 8. elokuuta 1956 sattunut kaivosonnettomuus: hissikoneisto käynnistettiin ennen kuin kaivosvaunu oli kokonaan lastattu, sähkökaapelit repesivät ja kuiluun syttyi tulipalo, jonka savu ja hiilimonoksidi tappoi maan alle jääneet. Onnettomuudessa kuoli 262 työntekijää 12 eri kansallisuudesta, ja vain 13 selvisi, joten se on Belgian pahin kaivosonnettomuus. Sen jälkeen italialaisten siirtolaisuus Belgiaan loppui ja kaivosturvallisuussäännöt uusittiin kaikkialla Euroopassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kohdekartta / Kohdekartta: Bayfront Park] 1925 Bayfront Park on 32 eekkerin eli runsaan kolmentoista hehtaarin puisto keskustan reunalla Biscayne Bayn rannassa. Sitä alettiin rakentaa 1924 Warren Henry Manningin suunnitelmien mukaan, ja se avattiin maaliskuussa 1925. Puisto sai uuden muodon vuodesta 1980 alkaen, kun japanilais-amerikkalainen taiteilija ja maisema-arkkitehti Isamu Noguchi suunnitteli sen uudelleen. Hänen käsialaansa on myös puiston tunnetuin teos: Challengerin muistomerkki, sadan jalan korkuinen kaksoiskierteeksi kierretty teräsveistos, joka vihittiin 28. tammikuuta 1988 kaksi vuotta avaruussukkulan onnettomuuden jälkeen. Jalustan graniittilaattaan on kaiverrettu runo ja miehistön nimet. Puistossa on amfiteatteri ja…
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-seraing) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seraingin terästehdas (tekniikka)
+Tietoruudun teksti: Seraing on kaupunki Liègen maakunnassa Walloniassa, ja se kuuluu Liègen noin 600 000 asukkaan kaupunkialueeseen. Ensimmäinen maininta on vuodelta 956, kun Saran-nimisen omistajan karolingiaikainen maatila lahjoitettiin Sint-Truidenin luostarille. Ensimmäiset rautatehtaat perustettiin Seraingiin vuonna 1809. John Cockerill ja hänen veljensä James mullistivat teräsalan käyttämällä masuuneja ja koksia perinteisen puuhiilen sijaan, ja näiden keksintöjen pohjalta perustettiin John Cockerill & Cie Seraingiin vuonna 1817. Kaupungin nähtävyyksiin kuuluu Val Saint Lambertin kristallitehtaan alue, jossa on vanha Val-Saint-Lambertin luostari.
+
+### 25.1
+KYSYMYS: Kuka perusti Seraingiin yhtiön vuonna 1817?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seraingin terästehdas (tekniikka)
+Tietoruudun teksti: Seraing on kaupunki Liègen maakunnassa Walloniassa, ja se kuuluu Liègen noin 600 000 asukkaan kaupunkialueeseen. Ensimmäinen maininta on vuodelta 956, kun Saran-nimisen omistajan karolingiaikainen maatila lahjoitettiin Sint-Truidenin luostarille. Ensimmäiset rautatehtaat perustettiin Seraingiin vuonna 1809. John Cockerill ja hänen veljensä James mullistivat teräsalan käyttämällä masuuneja ja koksia perinteisen puuhiilen sijaan, ja näiden keksintöjen pohjalta perustettiin John Cockerill & Cie Seraingiin vuonna 1817. Kaupungin nähtävyyksiin kuuluu Val Saint Lambertin kristallitehtaan alue, jossa on vanha Val-Saint-Lambertin luostari.
+
+### 25.2
+KYSYMYS: Mitä polttoainetta koksi korvasi Cockerillin masuuneissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Seraingin terästehdas (tekniikka)
+Tietoruudun teksti: Seraing on kaupunki Liègen maakunnassa Walloniassa, ja se kuuluu Liègen noin 600 000 asukkaan kaupunkialueeseen. Ensimmäinen maininta on vuodelta 956, kun Saran-nimisen omistajan karolingiaikainen maatila lahjoitettiin Sint-Truidenin luostarille. Ensimmäiset rautatehtaat perustettiin Seraingiin vuonna 1809. John Cockerill ja hänen veljensä James mullistivat teräsalan käyttämällä masuuneja ja koksia perinteisen puuhiilen sijaan, ja näiden keksintöjen pohjalta perustettiin John Cockerill & Cie Seraingiin vuonna 1817. Kaupungin nähtävyyksiin kuuluu Val Saint Lambertin kristallitehtaan alue, jossa on vanha Val-Saint-Lambertin luostari.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

@@ -1,0 +1,40 @@
+================ KOHTA 31 (kohde:hahmotelma-geraardsbergen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geraardsbergen (kulttuuri)
+Tietoruudun teksti: Geraardsbergen on yksi Belgian vanhimmista kaupungeista: se sai kaupunkioikeudet jo vuonna 1068, mikä on yksi Länsi-Euroopan varhaisimmista. Kaupungin Oudenberg-kukkulalla on juhlittu Krakelingen- ja Tonnekensbrand-juhlaa ainakin vuodesta 1393, jolloin vanhin säilynyt kaupungin tilikirja mainitsee jo Tonnekensbrandin kulut; perinne yhdistää esikristillisiä aineksia, kuten tulen, leivän ja kalan, kristillisiin. Juhlassa dekaani, pormestari ja kaupunginvaltuutetut juovat siemauksen viiniä elävän kalan kanssa nelisataa vuotta vanhasta hopeamaljasta, ja kukkulan huipulta heitetään yleisölle noin 10 000 rinkilänmuotoista krakelinkia. Illalla poltetaan olkinukke karkottamaan talvea, ja tuli kannetaan soihtuina alas kaupungin torille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+
+### 31.1
+KYSYMYS: Miltä vuodelta on peräisin vanhin säilynyt maininta Tonnekensbrand-juhlan menoista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geraardsbergen (kulttuuri)
+Tietoruudun teksti: Geraardsbergen on yksi Belgian vanhimmista kaupungeista: se sai kaupunkioikeudet jo vuonna 1068, mikä on yksi Länsi-Euroopan varhaisimmista. Kaupungin Oudenberg-kukkulalla on juhlittu Krakelingen- ja Tonnekensbrand-juhlaa ainakin vuodesta 1393, jolloin vanhin säilynyt kaupungin tilikirja mainitsee jo Tonnekensbrandin kulut; perinne yhdistää esikristillisiä aineksia, kuten tulen, leivän ja kalan, kristillisiin. Juhlassa dekaani, pormestari ja kaupunginvaltuutetut juovat siemauksen viiniä elävän kalan kanssa nelisataa vuotta vanhasta hopeamaljasta, ja kukkulan huipulta heitetään yleisölle noin 10 000 rinkilänmuotoista krakelinkia. Illalla poltetaan olkinukke karkottamaan talvea, ja tuli kannetaan soihtuina alas kaupungin torille.
+
+### 31.2
+KYSYMYS: Mistä esineestä dekaani, pormestari ja valtuutetut juovat viiniä elävän kalan kanssa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Geraardsbergen (kulttuuri)
+Tietoruudun teksti: Geraardsbergen on yksi Belgian vanhimmista kaupungeista: se sai kaupunkioikeudet jo vuonna 1068, mikä on yksi Länsi-Euroopan varhaisimmista. Kaupungin Oudenberg-kukkulalla on juhlittu Krakelingen- ja Tonnekensbrand-juhlaa ainakin vuodesta 1393, jolloin vanhin säilynyt kaupungin tilikirja mainitsee jo Tonnekensbrandin kulut; perinne yhdistää esikristillisiä aineksia, kuten tulen, leivän ja kalan, kristillisiin. Juhlassa dekaani, pormestari ja kaupunginvaltuutetut juovat siemauksen viiniä elävän kalan kanssa nelisataa vuotta vanhasta hopeamaljasta, ja kukkulan huipulta heitetään yleisölle noin 10 000 rinkilänmuotoista krakelinkia. Illalla poltetaan olkinukke karkottamaan talvea, ja tuli kannetaan soihtuina alas kaupungin torille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
