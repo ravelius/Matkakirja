@@ -3,7 +3,7 @@
   "kohde": "kohde:kotorinlahti",
   "kasite": "Verigen salmessa",
   "kysymys": "Kerro lisää: Verigen salmessa",
-  "vastaus": "Verigen salmi on Kotorinlahden kapein kohta, jossa lahden leveys kutistuu vain 0,3 kilometriin. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, joten salmi on sen mittakaavassa hyvin ahdas. Lahden rannoilla sijaitsevat muun muassa [[Kotor]], [[Perast]] ja [[Tivat]], ja lahden alue on kuulunut [[Unescon]] maailmanperintökohteisiin vuodesta 1979.",
+  "vastaus": "Verigen salmi on Kotorinlahden kapein kohta, jossa lahti kutistuu noin 340 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, joten salmi on sen mittakaavassa hyvin ahdas. Lahden rannoilla sijaitsevat muun muassa [[Kotor]], [[Perast]] ja [[Tivat]], ja lahden alue on kuulunut [[Unescon]] maailmanperintökohteisiin vuodesta 1979.",
   "linkit": [
    "Kotor",
    "Perast",
@@ -457,9 +457,8 @@
   "kohde": "kohde:taran-kanjoni",
   "kasite": "Taran kanjonin",
   "kysymys": "Kerro lisää: Taran kanjonin",
-  "vastaus": "Taran kanjoni on Tara-joen muovaama kanjoni Montenegrossa, ja se on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka laskee [[Drinaan]]. Kanjoni kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Kanjonin ylittää [[Đurđevića Taran silta]], joka rakennettiin vuosina 1937–1940.",
+  "vastaus": "Taran kanjoni on Tara-joen muovaama kanjoni Montenegrossa. Tara on noin 145 kilometriä pitkä joki, joka virtaa Montenegrossa ja osin Bosnia-Hertsegovinan rajalla ja muodostaa yhdessä Pivan kanssa Drinan. Kanjoni on syvimmillään noin 1 300 metriä ja kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Kanjonin ylittää [[Đurđevića Taran silta]], joka rakennettiin vuosina 1937–1940.",
   "linkit": [
-   "Drinaan",
    "Durmitorin kansallispuiston",
    "Đurđevića Taran silta"
   ],
@@ -502,7 +501,7 @@
   "kohde": "kohde:biogradska-gora",
   "kasite": "Biogradskojärvi",
   "kysymys": "Kerro lisää: Biogradskojärvi",
-  "vastaus": "Biogradskojärvi sijaitsee metsän keskellä Biogradska Goran kansallispuistossa, ja sen mainitaan olevan puiston suurin jääkausijärvi. Puiston viisi muuta jääkausijärveä sijaitsevat 1 820 metrin korkeudessa. Ympäröivä [[aarniometsä]] on osa puiston 16 neliökilometrin metsäaluetta, jossa kasvaa yli viisisataa vuotta vanhoja puita. Puisto on osa [[Bjelasican]] vuoristoa, ja se julistettiin kansallispuistoksi vuonna 1952.",
+  "vastaus": "Biogradskojärvi sijaitsee metsän keskellä Biogradska Goran kansallispuistossa, ja sen mainitaan olevan puiston suurin jääkausijärvi. Ympäröivä [[aarniometsä]] on osa puiston 16 neliökilometrin metsäaluetta, jonka vanhimmat puut ovat noin viisisataavuotiaita. Puisto on osa [[Bjelasican]] vuoristoa, ja se julistettiin kansallispuistoksi vuonna 1952.",
   "linkit": [
    "aarniometsä",
    "Bjelasican"
@@ -516,9 +515,8 @@
   "kohde": "kohde:biogradska-gora",
   "kasite": "Taran",
   "kysymys": "Kerro lisää: Taran",
-  "vastaus": "Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]]. Sen kanjoni on syvimmillään noin 1 300 metriä, ja se kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Biogradska Gora sijaitsee Taran ja [[Limin]] jokien välissä. Joen ylittää [[Đurđevića Taran silta]], joka rakennettiin vuosina 1937–1940.",
+  "vastaus": "Tara on noin 145 kilometriä pitkä joki, joka virtaa Montenegrossa ja osin Bosnia-Hertsegovinan rajalla ja muodostaa yhdessä Pivan kanssa Drinan. Kanjoni on syvimmillään noin 1 300 metriä ja kuuluu [[Durmitorin kansallispuiston]] Unescon maailmanperintökohteeseen. Biogradska Gora sijaitsee Taran ja [[Limin]] jokien välissä. Joen ylittää [[Đurđevića Taran silta]], joka rakennettiin vuosina 1937–1940.",
   "linkit": [
-   "Drinaan",
    "Durmitorin kansallispuiston",
    "Limin",
    "Đurđevića Taran silta"
@@ -562,7 +560,7 @@
   "kohde": "kohde:biogradska-gora",
   "kasite": "aarniometsää",
   "kysymys": "Kerro lisää: aarniometsää",
-  "vastaus": "Aarniometsällä tarkoitetaan metsää, jota ihmistoiminta ei ole olennaisesti muuttanut. Siinä on usein hyvin vanhoja puita ja runsaasti [[lahopuuta]], ja se on monille eliölajeille tärkeä elinympäristö. Biogradska Goran kansallispuistossa aarniometsää on 16 neliökilometriä, ja puut ovat yli viisisataa vuotta vanhoja. Metsän keskellä on [[Biogradskojärvi]], ja puisto sijaitsee [[Bjelasican]] vuoristossa.",
+  "vastaus": "Aarniometsällä tarkoitetaan metsää, jota ihmistoiminta ei ole olennaisesti muuttanut. Siinä on usein hyvin vanhoja puita ja runsaasti [[lahopuuta]], ja se on monille eliölajeille tärkeä elinympäristö. Biogradska Goran kansallispuistossa aarniometsää on 16 neliökilometriä, ja vanhimmat puut ovat noin viisisataavuotiaita. Metsän keskellä on [[Biogradskojärvi]], ja puisto sijaitsee [[Bjelasican]] vuoristossa.",
   "linkit": [
    "lahopuuta",
    "Biogradskojärvi",
@@ -592,7 +590,7 @@
   "kohde": "kohde:stari-bar",
   "kasite": "Barista",
   "kysymys": "Kerro lisää: Barista",
-  "vastaus": "Bar on Montenegron rannikolla Adrianmeren äärellä sijaitseva kaupunki, jota sanotaan myös uudeksi Bariksi erotukseksi [[Stari Barin]] raunioista. Stari Bar on noin kolmen kilometrin päässä rannikolla sijaitsevasta uudesta Barista, vuoren rinteellä 184 metrin korkeudessa. Uusi Bar toimii satamakaupunkina, ja [[Adrianmeren]] rannikko on sen elinkeinojen perusta. Kaupungin tarkoista asukasluvuista en ole varma, joten niitä ei esitetä.",
+  "vastaus": "Bar on Montenegron rannikolla Adrianmeren äärellä sijaitseva kaupunki, jota sanotaan myös uudeksi Bariksi erotukseksi [[Stari Barin]] raunioista. Stari Bar seisoo Londža-kukkulan rinteellä Rumija-vuoren juurella, muutaman kilometrin päässä rannikolla sijaitsevasta uudesta Barista. Uusi Bar toimii satamakaupunkina, ja [[Adrianmeren]] rannikko on sen elinkeinojen perusta. Kaupungin tarkoista asukasluvuista en ole varma, joten niitä ei esitetä.",
   "linkit": [
    "Stari Barin",
    "Adrianmeren"
@@ -739,7 +737,7 @@
   "kohde": "kohde:plavjarvi",
   "kasite": "Lim-jokeen",
   "kysymys": "Kerro lisää: Lim-jokeen",
-  "vastaus": "Lim on joki, johon Plavjärven vesi virtaa. Lim kuuluu [[Drinan]] vesistöön, ja Drina laskee [[Sava-jokeen]], joka puolestaan yhtyy Tonavaan Belgradissa. Tonava laskee lopulta [[Mustaanmereen]], joten Plavjärven vesi päätyy pitkän matkan jälkeen sinne asti. Plavjärven pohjassa on lukuisia lähteitä, joista vesi pulppuaa maasta.",
+  "vastaus": "Lim on joki, johon Plavjärven vesi virtaa. Lim kuuluu [[Drinan]] vesistöön, ja Drina laskee [[Sava-jokeen]], joka puolestaan yhtyy Tonavaan Belgradissa. Tonava laskee lopulta [[Mustaanmereen]], joten Plavjärven vesi päätyy pitkän matkan jälkeen sinne asti. Plavjärven alueella on lukuisia lähteitä, joista vesi pulppuaa maasta.",
   "linkit": [
    "Drinan",
    "Sava-jokeen",
@@ -785,7 +783,7 @@
   "kohde": "kohde:plavjarvi",
   "kasite": "Kalkkikivi",
   "kysymys": "Kerro lisää: Kalkkikivi",
-  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Sade- ja pohjavesi liuottaa sitä hitaasti, jolloin syntyy rakoja, luolia ja maanalaisia vesireittejä. [[Plavjärven]] pohjassa on kalkkikiviluolia ja lukuisia lähteitä. Slovakiassa [[Domican luola]] on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen vuonna 1995. Luolan käytävät on muovannut maanalainen Styx-joki.",
+  "vastaus": "Kalkkikivi on sedimenttikivilaji, joka koostuu pääosin kalsiumkarbonaatista. Sade- ja pohjavesi liuottaa sitä hitaasti, jolloin syntyy rakoja, luolia ja maanalaisia vesireittejä. [[Plavjärven]] alueella on kalkkikiviluolia ja lukuisia lähteitä. Slovakiassa [[Domican luola]] on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen vuonna 1995. Luolan käytävät on muovannut maanalainen Styx-joki.",
   "linkit": [
    "Plavjärven",
    "Domican luola"
@@ -844,7 +842,7 @@
   "kohde": "kohde:plavjarvi",
   "kasite": "kalkkikiviluolia",
   "kysymys": "Kerro lisää: kalkkikiviluolia",
-  "vastaus": "Plavjärven pohjassa on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Luolat syntyvät, kun lievästi hapan sade- ja pohjavesi liuottaa [[kalkkikiveä]] hitaasti vuosituhansien kuluessa. Järvi on matala, ja sen keskisyvyys on noin yhdeksän metriä. Vesi virtaa pois [[Lim-jokeen]], ja järvi sijaitsee [[Prokletijen]] ja Visitor-vuoriston välissä.",
+  "vastaus": "Plavjärven alueella on kalkkikiviluolia sekä lukuisia lähteitä, joista vesi pulppuaa maasta. Luolat syntyvät, kun lievästi hapan sade- ja pohjavesi liuottaa [[kalkkikiveä]] hitaasti vuosituhansien kuluessa. Järvi on matala, ja sen suurin syvyys on noin yhdeksän metriä. Vesi virtaa pois [[Lim-jokeen]], ja järvi sijaitsee [[Prokletijen]] ja Visitor-vuoriston välissä.",
   "linkit": [
    "kalkkikiveä",
    "Lim-jokeen",
@@ -932,9 +930,9 @@
   "kohde": "kohde:lovcen-njegosin-mausoleumi",
   "kasite": "Montenegron",
   "kysymys": "Kerro lisää: Montenegron",
-  "vastaus": "Montenegro oli 1800-luvulla ruhtinaspiispojen hallitsema vuoristomaa, ja yksi heistä oli runoilija Njegoš. Vuoden 1878 [[Berliinin kongressi]] tunnusti Montenegron itsenäisyyden ja laajensi sen aluetta. Ensimmäisen maailmansodan jälkeen Montenegro oli osa [[Jugoslavian]] valtiota, ja se itsenäistyi uudelleen vuonna 2006. Nykyään pääkaupunki on [[Podgorica]].",
+  "vastaus": "Montenegro oli 1800-luvulla ruhtinaspiispojen hallitsema vuoristomaa, ja yksi heistä oli runoilija Njegoš. Montenegron itsenäisyys sai [[Berliinin kongressissa]] 1878 kansainvälisen vahvistuksen, ja maan alue kasvoi huomattavasti. Ensimmäisen maailmansodan jälkeen Montenegro oli osa [[Jugoslavian]] valtiota, ja se itsenäistyi uudelleen vuonna 2006. Nykyään pääkaupunki on [[Podgorica]].",
   "linkit": [
-   "Berliinin kongressi",
+   "Berliinin kongressissa",
    "Jugoslavian",
    "Podgorica"
   ],
@@ -1050,7 +1048,7 @@
   "kohde": "kohde:hahmotelma-zabljak-crnojevica",
   "kasite": "Berliinin kongressissa",
   "kysymys": "Kerro lisää: Berliinin kongressissa",
-  "vastaus": "Berliinin kongressi oli vuonna 1878 pidetty suurvaltojen kokous, jossa ratkaistiin Balkanin rajat Venäjän ja Osmanien valtakunnan sodan jälkeen. Kongressia johti [[Otto von Bismarck]]. Kongressissa Serbian, Montenegron ja [[Romanian]] itsenäisyys tunnustettiin, ja Montenegron alue kasvoi. Itävalta-Unkari sai oikeuden miehittää [[Bosnian ja Hertsegovinan]] alueen. Žabljak Crnojevićin alue palasi Montenegron hallintaan, noin 400 vuotta osmanien valtauksen jälkeen.",
+  "vastaus": "Berliinin kongressi oli vuonna 1878 pidetty suurvaltojen kokous, jossa ratkaistiin Balkanin rajat Venäjän ja Osmanien valtakunnan sodan jälkeen. Kongressia johti [[Otto von Bismarck]]. Kongressissa Serbian ja [[Romanian]] itsenäisyys tunnustettiin; Montenegron itsenäisyys sai kansainvälisen vahvistuksen, ja maan alue kasvoi huomattavasti. Itävalta-Unkari sai oikeuden miehittää [[Bosnian ja Hertsegovinan]] alueen. Žabljak Crnojevićin alue palasi Montenegron hallintaan, noin 400 vuotta osmanien valtauksen jälkeen.",
   "linkit": [
    "Otto von Bismarck",
    "Romanian",
@@ -1065,7 +1063,7 @@
   "kohde": "kohde:hahmotelma-zabljak-crnojevica",
   "kasite": "Montenegron",
   "kysymys": "Kerro lisää: Montenegron",
-  "vastaus": "Montenegro tarkoittaa suunnilleen mustaa vuorta, ja paikallinen nimi on [[Crna Gora]]. Maan alue kehittyi osaksi Zetan ruhtinaskuntaa, jota hallitsivat [[Crnojevićit]], ja Skadarjärven ranta menetti asemansa osmanien edetessä. Keskus siirtyi vuoristoon [[Cetinjeen]], josta tuli maan historiallinen keskus. Vuonna 1878 Montenegro sai itsenäisyytensä tunnustettua, ja nykyinen itsenäinen valtio on ollut olemassa vuodesta 2006.",
+  "vastaus": "Montenegro tarkoittaa suunnilleen mustaa vuorta, ja paikallinen nimi on [[Crna Gora]]. Maan alue kehittyi osaksi Zetan ruhtinaskuntaa, jota hallitsivat [[Crnojevićit]], ja Skadarjärven ranta menetti asemansa osmanien edetessä. Keskus siirtyi vuoristoon [[Cetinjeen]], josta tuli maan historiallinen keskus. Montenegron itsenäisyys sai vuonna 1878 kansainvälisen vahvistuksen, ja nykyinen itsenäinen valtio on ollut olemassa vuodesta 2006.",
   "linkit": [
    "Crna Gora",
    "Crnojevićit",

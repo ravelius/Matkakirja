@@ -1,6 +1,6 @@
 ### 1.1
 KYSYMYS: Kuinka kapea Kotorinlahti on kapeimmillaan?
-Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] vain 0,3 kilometrin eli 300 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.
+Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] noin 340 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.
 JATKOT:
 Mitkä vuoristot reunustavat lahtea?
 Kuinka korkealle Kotorin linnoitusmuurit nousevat?
@@ -23,7 +23,7 @@ Mistä Kotorin muurit ovat peräisin?
 
 ### 1.4
 KYSYMYS: Kuinka syvä Kotorinlahti on suurimmillaan?
-Katotaas. Kotorinlahden suurin syvyys on 60 metriä. Lahti on noin 28 kilometriä pitkä, sen ranta-alue kiertää yli 107 kilometriä, ja kapeimmillaan [[Verigen salmessa]] levyä on vain 0,3 kilometriä. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Sukeltaminen jää muille, minä pysyn pinnan yläpuolella.
+Katotaas. Kotorinlahden suurin syvyys on 60 metriä. Lahti on noin 28 kilometriä pitkä, sen ranta-alue kiertää yli 107 kilometriä, ja kapeimmillaan se kutistuu [[Verigen salmessa]] noin 340 metrin levyiseksi. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Sukeltaminen jää muille, minä pysyn pinnan yläpuolella.
 JATKOT:
 Mikä Verigen salmi on?
 Mitkä saarekkeet ovat Perastin edustalla?
@@ -40,7 +40,7 @@ KYSYMYS: Kuka perusti luostarin kallioon?
 Selvä juttu. Luostarin perusti Hertsegovinan metropoliitta [[Vasilije Jovanović]], josta tuli myöhemmin [[Ostrogin pyhä Basileios]]; hän kuoli luostarissa vuonna 1671. Paikan hän valitsi osin suojaksi eteneviä [[osmaneja]] vastaan, ja samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Kallioon asti, jonne minä pääsen siivillä.
 JATKOT:
 Milloin luostari rakennettiin uudelleen?
-Kuinka paljon kävijöitä luostarilla on vuosittain?
+Miksi Ostrog on pyhiinvaelluskohde?
 
 ### 2.2
 KYSYMYS: Mikä säilyi vuoden 1923 palosta?
@@ -51,7 +51,7 @@ Kuinka pitkä pyhiinvaeltajien reitti on?
 
 ### 2.3
 KYSYMYS: Kuinka pitkän matkan pyhiinvaeltajat kulkevat alaluostarilta?
-Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on nykyään [[Balkanin]] vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.
+Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on yksi [[Balkanin]] ja Serbian ortodoksisen kirkon vierailluimmista pyhiinvaelluskohteista: sinne saapuu kävijöitä kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.
 JATKOT:
 Miksi luostari on rakennettu kallioon?
 Kuka Ostrogin pyhä Basileios oli?
@@ -70,11 +70,11 @@ KYSYMYS: Missä Ostrogin pyhän Basileioksen pyhäinjäännökset ovat?
 Nyt muistan: ne lepäävät luostarin [[luolakirkossa]]. Ostrogin pyhä Basileios eli Vasilije oli [[Hertsegovinan metropoliitta]], joka kuoli luostarissa vuonna 1671 ja julistettiin pyhäksi. Rauhallinen paikka.
 JATKOT:
 Miksi luostari rakennettiin kallioon?
-Kuinka monta kävijää luostarilla käy vuosittain?
+Miksi Ostrog on pyhiinvaelluskohde?
 
 ### 3.1
 KYSYMYS: Kuinka syvä Taran kanjoni on syvimmillään?
-No jopas. Taran kanjoni on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]], ja kanjoni kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.
+No jopas. Tara on noin 145 kilometriä pitkä joki, joka virtaa Montenegrossa ja osin Bosnia-Hertsegovinan rajalla ja muodostaa yhdessä Pivan kanssa Drinan. Kanjoni on syvimmillään noin 1 300 metriä ja kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.
 
 Kolmetoistasataa metriä alas on sellainen korkeus, että minäkin pidän siivistä tiukasti kiinni.
 JATKOT:
@@ -113,14 +113,14 @@ Kuinka korkealla joen yläpuolella silta on?
 
 ### 4.1
 KYSYMYS: Kuinka vanhoja aarniometsän puut ovat?
-Hyvä kysymys tuo. Kansallispuiston aarniometsässä kasvaa yli viisisataa vuotta vanhoja puita. Aarniometsää on puistossa 16 neliökilometriä, ja koko puiston pinta-ala on 54 neliökilometriä; puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa, ja metsän keskellä on [[Biogradskojärvi]]. Viisisataa vuotta on pitkä aika, vaikka meidän suku muistaa Caesarinkin.
+Hyvä kysymys tuo. Puiston pinta-ala on noin 54-57 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jonka vanhimmat puut ovat noin viisisataavuotiaita. Puisto sijaitsee [[Bjelasican]] vuoristossa [[Taran]] ja [[Limin]] jokien välissä, ja sen suurin jääkausijärvi on [[Biogradskojärvi]]. Viisisataa vuotta on pitkä aika, vaikka meidän suku muistaa Caesarinkin.
 JATKOT:
 Mikä on aarniometsä?
 Mitkä ovat puiston jääkausijärvet?
 
 ### 4.2
 KYSYMYS: Mikä on puiston suurin jääkausijärvi?
-Kas vaan. Puiston suurin jääkausijärvi on [[Biogradskojärvi]], joka sijaitsee aarniometsän keskellä. Viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa, ja koko puisto kuuluu [[Bjelasican]] vuoristoon.
+Kas vaan. Puisto sijaitsee [[Bjelasican]] vuoristossa Taran ja Limin jokien välissä, ja sen suurin jääkausijärvi on [[Biogradskojärvi]].
 
 Järvi keskellä vanhaa metsää on ylhäältä katsottuna kuin peili, ja minä varon katsomasta siihen liian kauan, koska pulu ei aina erota omaa kuvaansa naapurista.
 JATKOT:
@@ -143,14 +143,14 @@ Kuinka suuri puisto on?
 
 ### 4.5
 KYSYMYS: Kuinka suuri Biogradska Goran kansallispuisto on?
-No niin, tässä luvut. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on [[aarniometsää]]. Puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa. Lukuja riittää tällä kertaa, ja minä pidän niistä.
+No niin, tässä luvut. Puiston pinta-ala on noin 54-57 neliökilometriä, ja siitä 16 neliökilometriä on [[aarniometsää]], jonka vanhimmat puut ovat noin viisisataavuotiaita. Puisto sijaitsee [[Bjelasican]] vuoristossa Taran ja Limin jokien välissä, ja sen suurin jääkausijärvi on Biogradskojärvi. Lukuja riittää tällä kertaa, ja minä pidän niistä.
 JATKOT:
 Kuinka vanhoja puita puistossa on?
 Mikä on puiston suurin järvi?
 
 ### 5.1
-KYSYMYS: Kuinka korkealla Stari Bar sijaitsee?
-Katotaas. Stari Bar seisoo vuoren rinteellä 184 metrin korkeudessa, noin kolmen kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.
+KYSYMYS: Missä Stari Bar sijaitsee?
+Katotaas. Stari Bar seisoo Londža-kukkulan rinteellä Rumija-vuoren juurella, muutaman kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.
 JATKOT:
 Kenelle Stari Bar kuului varhaisella keskiajalla?
 Milloin Stari Bar tuhoutui?
@@ -160,7 +160,7 @@ KYSYMYS: Mikä rakennelma kunnostettiin, minkä jälkeen ihmiset ovat alkaneet p
 Ai se. Kunnostettu rakennelma on osmanniajan [[akvedukti]], ja sen kunnostuksen jälkeen ihmiset ovat alkaneet palata alueelle. Kaupunki tuhoutui pitkälti vuosien 1877–1878 piirityksessä, ja vuoden 1979 [[maanjäristys]] vaurioitti raunioita uudelleen. Hyvä, että paikka herää henkiin.
 JATKOT:
 Milloin Stari Bar tuhoutui?
-Kuinka korkealla Stari Bar on?
+Missä Stari Bar sijaitsee?
 
 ### 5.3
 KYSYMYS: Kuka liitti Stari Barin valtaansa noin vuonna 1040?

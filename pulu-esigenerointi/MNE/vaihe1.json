@@ -3,7 +3,7 @@
   "kohde": "kohde:kotorinlahti",
   "kysymys": "Kuinka kapea Kotorinlahti on kapeimmillaan?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] vain 0,3 kilometrin eli 300 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.",
+  "vastaus": "Hetkinen ny. Kapeimmillaan Kotorinlahti kutistuu [[Verigen salmessa]] noin 340 metrin levyiseksi. Koko lahti on noin 28 kilometriä pitkä ja syvimmillään 60 metriä, ja sen rannoilla sijaitsevat muun muassa [[Kotor]] ja [[Perast]]. Kapea kohta, mut kyyhky mahtuu siitä.",
   "linkit": [
    "Verigen salmessa",
    "Kotor",
@@ -50,7 +50,7 @@
   "kohde": "kohde:kotorinlahti",
   "kysymys": "Kuinka syvä Kotorinlahti on suurimmillaan?",
   "uusi": true,
-  "vastaus": "Katotaas. Kotorinlahden suurin syvyys on 60 metriä. Lahti on noin 28 kilometriä pitkä, sen ranta-alue kiertää yli 107 kilometriä, ja kapeimmillaan [[Verigen salmessa]] levyä on vain 0,3 kilometriä. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Sukeltaminen jää muille, minä pysyn pinnan yläpuolella.",
+  "vastaus": "Katotaas. Kotorinlahden suurin syvyys on 60 metriä. Lahti on noin 28 kilometriä pitkä, sen ranta-alue kiertää yli 107 kilometriä, ja kapeimmillaan se kutistuu [[Verigen salmessa]] noin 340 metrin levyiseksi. Alue on [[Unescon]] maailmanperintökohde vuodesta 1979. Sukeltaminen jää muille, minä pysyn pinnan yläpuolella.",
   "linkit": [
    "Verigen salmessa",
    "Unescon"
@@ -87,7 +87,7 @@
   ],
   "jatkot": [
    "Milloin luostari rakennettiin uudelleen?",
-   "Kuinka paljon kävijöitä luostarilla on vuosittain?"
+   "Miksi Ostrog on pyhiinvaelluskohde?"
   ]
  },
  {
@@ -108,7 +108,7 @@
   "kohde": "kohde:ostrogin-luostari",
   "kysymys": "Kuinka pitkän matkan pyhiinvaeltajat kulkevat alaluostarilta?",
   "uusi": true,
-  "vastaus": "Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on nykyään [[Balkanin]] vierailluin pyhiinvaelluskohde: sinne saapuu vuosittain yli miljoona kävijää kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.",
+  "vastaus": "Kato, minä lentäisin sen. Pyhiinvaeltajat kulkevat perinteisesti [[alaluostarilta]] [[yläluostarille]] noin kolme kilometriä, ja monet tekevät sen paljain jaloin. Ostrog on yksi [[Balkanin]] ja Serbian ortodoksisen kirkon vierailluimmista pyhiinvaelluskohteista: sinne saapuu kävijöitä kaikista uskonnoista. Minä kunnioitan kyllä jokaista, joka kulkee sen omin jaloin.",
   "linkit": [
    "alaluostarilta",
    "yläluostarille",
@@ -145,16 +145,15 @@
   ],
   "jatkot": [
    "Miksi luostari rakennettiin kallioon?",
-   "Kuinka monta kävijää luostarilla käy vuosittain?"
+   "Miksi Ostrog on pyhiinvaelluskohde?"
   ]
  },
  {
   "kohde": "kohde:taran-kanjoni",
   "kysymys": "Kuinka syvä Taran kanjoni on syvimmillään?",
   "uusi": false,
-  "vastaus": "No jopas. Taran kanjoni on syvimmillään noin 1 300 metriä. Tara on 146 kilometriä pitkä joki, joka virtaa Montenegrossa ja liittyy [[Drinaan]], ja kanjoni kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.\n\nKolmetoistasataa metriä alas on sellainen korkeus, että minäkin pidän siivistä tiukasti kiinni.",
+  "vastaus": "No jopas. Tara on noin 145 kilometriä pitkä joki, joka virtaa Montenegrossa ja osin Bosnia-Hertsegovinan rajalla ja muodostaa yhdessä Pivan kanssa Drinan. Kanjoni on syvimmillään noin 1 300 metriä ja kuuluu [[Durmitorin kansallispuiston]] [[Unescon]] maailmanperintökohteeseen.\n\nKolmetoistasataa metriä alas on sellainen korkeus, että minäkin pidän siivistä tiukasti kiinni.",
   "linkit": [
-   "Drinaan",
    "Durmitorin kansallispuiston",
    "Unescon"
   ],
@@ -223,9 +222,11 @@
   "kohde": "kohde:biogradska-gora",
   "kysymys": "Kuinka vanhoja aarniometsän puut ovat?",
   "uusi": false,
-  "vastaus": "Hyvä kysymys tuo. Kansallispuiston aarniometsässä kasvaa yli viisisataa vuotta vanhoja puita. Aarniometsää on puistossa 16 neliökilometriä, ja koko puiston pinta-ala on 54 neliökilometriä; puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa, ja metsän keskellä on [[Biogradskojärvi]]. Viisisataa vuotta on pitkä aika, vaikka meidän suku muistaa Caesarinkin.",
+  "vastaus": "Hyvä kysymys tuo. Puiston pinta-ala on noin 54-57 neliökilometriä, ja siitä 16 neliökilometriä on aarniometsää, jonka vanhimmat puut ovat noin viisisataavuotiaita. Puisto sijaitsee [[Bjelasican]] vuoristossa [[Taran]] ja [[Limin]] jokien välissä, ja sen suurin jääkausijärvi on [[Biogradskojärvi]]. Viisisataa vuotta on pitkä aika, vaikka meidän suku muistaa Caesarinkin.",
   "linkit": [
    "Bjelasican",
+   "Taran",
+   "Limin",
    "Biogradskojärvi"
   ],
   "jatkot": [
@@ -237,10 +238,10 @@
   "kohde": "kohde:biogradska-gora",
   "kysymys": "Mikä on puiston suurin jääkausijärvi?",
   "uusi": false,
-  "vastaus": "Kas vaan. Puiston suurin jääkausijärvi on [[Biogradskojärvi]], joka sijaitsee aarniometsän keskellä. Viisi muuta jääkausijärveä sijaitsee 1 820 metrin korkeudessa, ja koko puisto kuuluu [[Bjelasican]] vuoristoon.\n\nJärvi keskellä vanhaa metsää on ylhäältä katsottuna kuin peili, ja minä varon katsomasta siihen liian kauan, koska pulu ei aina erota omaa kuvaansa naapurista.",
+  "vastaus": "Kas vaan. Puisto sijaitsee [[Bjelasican]] vuoristossa Taran ja Limin jokien välissä, ja sen suurin jääkausijärvi on [[Biogradskojärvi]].\n\nJärvi keskellä vanhaa metsää on ylhäältä katsottuna kuin peili, ja minä varon katsomasta siihen liian kauan, koska pulu ei aina erota omaa kuvaansa naapurista.",
   "linkit": [
-   "Biogradskojärvi",
-   "Bjelasican"
+   "Bjelasican",
+   "Biogradskojärvi"
   ],
   "jatkot": [
    "Millä korkeudella muut jääkausijärvet ovat?",
@@ -280,7 +281,7 @@
   "kohde": "kohde:biogradska-gora",
   "kysymys": "Kuinka suuri Biogradska Goran kansallispuisto on?",
   "uusi": true,
-  "vastaus": "No niin, tässä luvut. Puiston pinta-ala on 54 neliökilometriä, ja siitä 16 neliökilometriä on [[aarniometsää]]. Puisto sijaitsee Montenegron keskiosassa [[Bjelasican]] vuoristossa. Lukuja riittää tällä kertaa, ja minä pidän niistä.",
+  "vastaus": "No niin, tässä luvut. Puiston pinta-ala on noin 54-57 neliökilometriä, ja siitä 16 neliökilometriä on [[aarniometsää]], jonka vanhimmat puut ovat noin viisisataavuotiaita. Puisto sijaitsee [[Bjelasican]] vuoristossa Taran ja Limin jokien välissä, ja sen suurin jääkausijärvi on Biogradskojärvi. Lukuja riittää tällä kertaa, ja minä pidän niistä.",
   "linkit": [
    "aarniometsää",
    "Bjelasican"
@@ -294,7 +295,7 @@
   "kohde": "kohde:stari-bar",
   "kysymys": "Kuinka korkealla Stari Bar sijaitsee?",
   "uusi": false,
-  "vastaus": "Katotaas. Stari Bar seisoo vuoren rinteellä 184 metrin korkeudessa, noin kolmen kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.",
+  "vastaus": "Katotaas. Stari Bar seisoo Londža-kukkulan rinteellä Rumija-vuoren juurella, muutaman kilometrin päässä [[Adrianmeren]] rannikolla sijaitsevasta uudesta [[Barista]]. Se on raunioitunut keskiaikainen kaupunki, joka kuului varhaisella keskiajalla [[Bysantille]]. Hyvä paikka katolle, sanoisin.",
   "linkit": [
    "Adrianmeren",
    "Barista",
@@ -316,7 +317,7 @@
   ],
   "jatkot": [
    "Milloin Stari Bar tuhoutui?",
-   "Kuinka korkealla Stari Bar on?"
+   "Missä Stari Bar sijaitsee?"
   ]
  },
  {
@@ -380,7 +381,7 @@
   "kohde": "kohde:plavjarvi",
   "kysymys": "Mihin jokeen Plavjärven vesi virtaa?",
   "uusi": false,
-  "vastaus": "Hetkinen ny. Plavjärven vesi virtaa pois [[Lim-jokeen]]. Lim kuuluu [[Drina-joen]] vesistöön ja sitä kautta lopulta [[Tonavan]] vesistöalueeseen, joten järven lähdevesi päätyy pitkän matkan jälkeen Mustaanmereen. Järven pohjassa on lukuisia lähteitä, joista vesi pulppuaa maasta, ja Lim vie ylimääräisen veden pois. Vesi löytää kyllä tiensä, ei siihen tarvita kyyhkyä.",
+  "vastaus": "Hetkinen ny. Plavjärven vesi virtaa pois [[Lim-jokeen]]. Lim kuuluu [[Drina-joen]] vesistöön ja sitä kautta lopulta [[Tonavan]] vesistöalueeseen, joten järven lähdevesi päätyy pitkän matkan jälkeen Mustaanmereen. Järven alueella on lukuisia lähteitä, joista vesi pulppuaa maasta, ja Lim vie ylimääräisen veden pois. Vesi löytää kyllä tiensä, ei siihen tarvita kyyhkyä.",
   "linkit": [
    "Lim-jokeen",
    "Drina-joen",
@@ -395,7 +396,7 @@
   "kohde": "kohde:plavjarvi",
   "kysymys": "Miten kalkkikiviluolat syntyvät?",
   "uusi": true,
-  "vastaus": "Ai tota. Hyvä kysymys tuo. [[Kalkkikivi]] on kivilaji, joka liukenee hitaasti hieman happamaan sadeveteen ja pohjaveteen. Vesi laajentaa kallion halkeamia vuosisatojen ja vuosituhansien kuluessa ensin kapeiksi käytäviksi ja lopulta luoliksi, ja ilmiötä kutsutaan [[karstiutumiseksi]]. Samasta syystä kalkkikivialueilla on usein lähteitä ja maanalaisia vesireittejä, ja Plavjärven pohjassa on juuri tällaisia luolia ja lähteitä.\n\nLuolat ovat siivekkäälle vähän epäilyttäviä paikkoja, koska sinne ei näe ylhäältä, vaikka minä muuten olen aika hyvä löytämään reittejä.",
+  "vastaus": "Ai tota. Hyvä kysymys tuo. [[Kalkkikivi]] on kivilaji, joka liukenee hitaasti hieman happamaan sadeveteen ja pohjaveteen. Vesi laajentaa kallion halkeamia vuosisatojen ja vuosituhansien kuluessa ensin kapeiksi käytäviksi ja lopulta luoliksi, ja ilmiötä kutsutaan [[karstiutumiseksi]]. Samasta syystä kalkkikivialueilla on usein lähteitä ja maanalaisia vesireittejä, ja Plavjärven alueella on juuri tällaisia luolia ja lähteitä.\n\nLuolat ovat siivekkäälle vähän epäilyttäviä paikkoja, koska sinne ei näe ylhäältä, vaikka minä muuten olen aika hyvä löytämään reittejä.",
   "linkit": [
    "Kalkkikivi",
    "karstiutumiseksi"
@@ -424,7 +425,7 @@
   "kohde": "kohde:plavjarvi",
   "kysymys": "Kuinka syvä Plavjärvi on?",
   "uusi": true,
-  "vastaus": "Katotaas. Plavjärvi on hyvin matala järvi: sen keskisyvyys on vain noin yhdeksän metriä. Järven pinta-ala on noin kaksi neliökilometriä, pituus noin 2,2 kilometriä, ja pohjassa on [[kalkkikiviluolia]] sekä lukuisia lähteitä. Suurimman syvyyden tarkkaa lukua en ole varma, joten sitä en esitä. Vesi virtaa pois [[Lim-jokeen]]. Yhdeksän metriä, se on vähemmän kuin moni torni.",
+  "vastaus": "Katotaas. Plavjärvi on hyvin matala järvi: sen suurin syvyys on vain noin yhdeksän metriä. Järven pinta-ala on noin kaksi neliökilometriä, pituus noin 2,2 kilometriä, ja alueella on [[kalkkikiviluolia]] sekä lukuisia lähteitä. Vesi virtaa pois [[Lim-jokeen]]. Yhdeksän metriä, se on vähemmän kuin moni torni.",
   "linkit": [
    "kalkkikiviluolia",
    "Lim-jokeen"
@@ -579,7 +580,7 @@
   "kohde": "kohde:hahmotelma-zabljak-crnojevica",
   "kysymys": "Mitä Montenegro sai vuoden 1878 kongressissa?",
   "uusi": true,
-  "vastaus": "Ai se. Berliinissä vuonna 1878 pidetyssä [[Berliinin kongressissa]] suurvallat sopivat Balkanin rajoista Venäjän ja Osmanien valtakunnan sodan jälkeen, ja kongressia johti [[Otto von Bismarck]]. Montenegro sai itsenäisyytensä tunnustettua ja alueensa kasvoi, ja Žabljak Crnojevićin alue palasi sen hallintaan. Päätöksen jälkeen Montenegro oli ensimmäistä kertaa vuosisatoihin virallisesti itsenäinen valtio. Pitkä päivä kongressilla, mutta ei kyyhkyn pöydässä.",
+  "vastaus": "Ai se. Berliinissä vuonna 1878 pidetyssä [[Berliinin kongressissa]] suurvallat sopivat Balkanin rajoista Venäjän ja Osmanien valtakunnan sodan jälkeen, ja kongressia johti [[Otto von Bismarck]]. Montenegron itsenäisyys sai Berliinin kongressissa 1878 kansainvälisen vahvistuksen, ja maan alue kasvoi huomattavasti; Žabljak Crnojevićin alue palasi sen hallintaan. Pitkä päivä kongressilla, mutta ei kyyhkyn pöydässä.",
   "linkit": [
    "Berliinin kongressissa",
    "Otto von Bismarck"
