@@ -221,7 +221,13 @@
     "materiaali": "paneeli_kerma",
     "sokkeli": 0.18,
     "paneeli": 0.0,
-    "lista": 0.35
+    "lista": 0.35,
+    "pilasterit": {
+     "jako": 2.4,
+     "leveys": 0.5,
+     "ulko": 0.08,
+     "materiaali": "kivi_hiekka"
+    }
    },
    "lattia": "kivi_marmori_ruutu",
    "valo": {
@@ -230,6 +236,46 @@
     "kelvin": 3200,
     "paivanvalo": 0.0,
     "huom": "sisäänkäynti ja Rijksin veistokset (origo = aulan ja m1:n välinen ovi)"
+   }
+  },
+  {
+   "id": "graf",
+   "nimi": "Grafiikka- ja valokuvakabinetti",
+   "tyyppi": "kabinetti",
+   "laatikko": {
+    "x": [
+     -11.4,
+     -5.4
+    ],
+    "z": [
+     7.4,
+     1.4
+    ],
+    "y": [
+     0.0,
+     4.6
+    ]
+   },
+   "katto": {
+    "tyyppi": "tasainen",
+    "stukko": true,
+    "kattokruunu": false,
+    "kattoikkuna": null
+   },
+   "seina": {
+    "materiaali": "rijks_harmaa",
+    "sokkeli": 0.18,
+    "paneeli": 0.95,
+    "lista": 0.3,
+    "paneelimateriaali": "paneeli_kerma"
+   },
+   "lattia": "parketti_kalanruoto",
+   "valo": {
+    "lx": 50,
+    "ev100": 5.6,
+    "kelvin": 3000,
+    "paivanvalo": 0.0,
+    "huom": "paperi ja valokuvat: 50 lx"
    }
   },
   {
@@ -675,7 +721,13 @@
     "materiaali": "kalkki_valkoinen",
     "sokkeli": 0.2,
     "paneeli": 0.0,
-    "lista": 0.4
+    "lista": 0.4,
+    "pilasterit": {
+     "jako": 3.0,
+     "leveys": 0.6,
+     "ulko": 0.1,
+     "materiaali": "kivi_hiekka"
+    }
    },
    "lattia": "kivi_marmori_ruutu",
    "valo": {
@@ -698,6 +750,19 @@
    "keskipiste": 0.0,
    "leveys": 1.8,
    "korkeus": 3.1,
+   "kaari": false,
+   "syvyys": 0.4
+  },
+  {
+   "id": "ovi-aula-graf",
+   "osat": [
+    "aula",
+    "graf"
+   ],
+   "seina": "-x",
+   "keskipiste": 4.4,
+   "leveys": 1.6,
+   "korkeus": 3.0,
    "kaari": false,
    "syvyys": 0.4
   },
@@ -872,6 +937,366 @@
   }
  ],
  "teospaikat": [
+  {
+   "id": "graf-kartta1",
+   "osa": "graf",
+   "seina": "-x",
+   "keskipiste": [
+    -11.4,
+    1.75,
+    4.4
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "max_leveys": 1.7,
+   "max_korkeus": 1.5,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -9.899,
+     4.35,
+     4.4
+    ],
+    "suunta": [
+     -0.5,
+     -0.866,
+     0.0
+    ],
+    "puolikulma_aste": 22.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "uva-amsterdam-kartta-1625",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-e1",
+   "osa": "graf",
+   "seina": "+z",
+   "keskipiste": [
+    -10.2,
+    1.5,
+    7.4
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 0.7,
+   "max_korkeus": 0.6,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -10.2,
+     4.35,
+     5.755
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 8.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-P-OB-832",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-e2",
+   "osa": "graf",
+   "seina": "+z",
+   "keskipiste": [
+    -9.0,
+    1.5,
+    7.4
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 0.7,
+   "max_korkeus": 0.6,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -9.0,
+     4.35,
+     5.755
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 8.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-F-AB12278-A",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-e3",
+   "osa": "graf",
+   "seina": "+z",
+   "keskipiste": [
+    -7.8,
+    1.5,
+    7.4
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 0.7,
+   "max_korkeus": 0.6,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -7.8,
+     4.35,
+     5.755
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 8.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-F-AB12278-Z",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-e4",
+   "osa": "graf",
+   "seina": "+z",
+   "keskipiste": [
+    -6.6,
+    1.5,
+    7.4
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "max_leveys": 0.7,
+   "max_korkeus": 0.6,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -6.6,
+     4.35,
+     5.755
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     0.5
+    ],
+    "puolikulma_aste": 8.8,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-P-OB-849",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-p1",
+   "osa": "graf",
+   "seina": "-z",
+   "keskipiste": [
+    -10.0,
+    1.5,
+    1.4
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 0.85,
+   "max_korkeus": 0.7,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -10.0,
+     4.35,
+     3.045
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 10.4,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-F-00-565",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-p2",
+   "osa": "graf",
+   "seina": "-z",
+   "keskipiste": [
+    -8.4,
+    1.5,
+    1.4
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 0.85,
+   "max_korkeus": 0.7,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -8.4,
+     4.35,
+     3.045
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 10.4,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-F-K89497",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
+  {
+   "id": "graf-p3",
+   "osa": "graf",
+   "seina": "-z",
+   "keskipiste": [
+    -6.8,
+    1.5,
+    1.4
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "max_leveys": 0.85,
+   "max_korkeus": 0.7,
+   "sopii": "grafiikka",
+   "kehysprofiili": "grafiikka",
+   "valokeila": {
+    "paikka": [
+     -6.8,
+     4.35,
+     3.045
+    ],
+    "suunta": [
+     0.0,
+     -0.866,
+     -0.5
+    ],
+    "puolikulma_aste": 10.4,
+    "reunahaive": 0.35,
+    "lx": 50,
+    "kelvin": 3000
+   },
+   "teos_ehdotus": "RP-F-K89483",
+   "paspis": {
+    "leveys_cm": 7,
+    "vari": [
+     236,
+     230,
+     214
+    ],
+    "lasi": true
+   }
+  },
   {
    "id": "m1-v1",
    "osa": "m1",
@@ -1212,7 +1637,7 @@
     "lx": 50,
     "kelvin": 3200
    },
-   "teos_ehdotus": "RP-P-OB-578",
+   "teos_ehdotus": "RP-P-OB-550",
    "paspis": {
     "leveys_cm": 7,
     "vari": [
@@ -1329,7 +1754,7 @@
     "lx": 50,
     "kelvin": 3200
    },
-   "teos_ehdotus": "RP-P-OB-6",
+   "teos_ehdotus": "RP-P-1961-1117",
    "paspis": {
     "leveys_cm": 7,
     "vari": [
@@ -1374,7 +1799,7 @@
     "lx": 50,
     "kelvin": 3200
    },
-   "teos_ehdotus": null,
+   "teos_ehdotus": "RP-P-OB-810",
    "paspis": {
     "leveys_cm": 7,
     "vari": [
@@ -2863,6 +3288,166 @@
   }
  ],
  "tekstitaulut": [
+  {
+   "id": "taulu-graf-kartta1",
+   "teospaikka": "graf-kartta1",
+   "keskipiste": [
+    -11.39,
+    1.45,
+    5.6
+   ],
+   "normaali": [
+    1,
+    0,
+    0
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-e1",
+   "teospaikka": "graf-e1",
+   "keskipiste": [
+    -9.5,
+    1.45,
+    7.39
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-e2",
+   "teospaikka": "graf-e2",
+   "keskipiste": [
+    -8.3,
+    1.45,
+    7.39
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-e3",
+   "teospaikka": "graf-e3",
+   "keskipiste": [
+    -7.1,
+    1.45,
+    7.39
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-e4",
+   "teospaikka": "graf-e4",
+   "keskipiste": [
+    -5.9,
+    1.45,
+    7.39
+   ],
+   "normaali": [
+    0,
+    0,
+    -1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-p1",
+   "teospaikka": "graf-p1",
+   "keskipiste": [
+    -10.775,
+    1.45,
+    1.41
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-p2",
+   "teospaikka": "graf-p2",
+   "keskipiste": [
+    -7.625,
+    1.45,
+    1.41
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
+  {
+   "id": "taulu-graf-p3",
+   "teospaikka": "graf-p3",
+   "keskipiste": [
+    -7.575,
+    1.45,
+    1.41
+   ],
+   "normaali": [
+    0,
+    0,
+    1
+   ],
+   "koko_m": [
+    0.16,
+    0.11
+   ],
+   "muoto": "suorakaide",
+   "symboli": "numero"
+  },
   {
    "id": "taulu-m1-v1",
    "teospaikka": "m1-v1",
@@ -4458,25 +5043,25 @@
    "osa": "aula",
    "jalusta": {
     "keskipiste_ala": [
-     -3.2,
+     -4.35,
      0.0,
      6.2
     ],
     "koko": [
-     0.8,
-     1.0,
-     0.8
+     0.46,
+     0.3,
+     0.76
     ]
    },
    "paikka": [
-    -3.2,
-    1.0,
+    -4.35,
+    0.3,
     6.2
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    0.59,
+    1.15,
+    0.27
    ],
    "katse": [
     1.0,
@@ -4486,14 +5071,14 @@
    "valot": [
     {
      "paikka": [
-      -0.906,
-      5.7,
+      -2.056,
+      3.95,
       4.594
      ],
      "suunta": [
-      -0.513,
-      -0.78,
-      0.359
+      -0.557,
+      -0.733,
+      0.39
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -4501,47 +5086,66 @@
     },
     {
      "paikka": [
-      -0.906,
-      5.7,
+      -2.056,
+      3.95,
       7.806
      ],
      "suunta": [
-      -0.513,
-      -0.78,
-      -0.359
+      -0.557,
+      -0.733,
+      -0.39
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 3200
     }
    ],
-   "teos_ehdotus": "Hendrick de Keyser (1)",
-   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+   "teos_ehdotus": "Bust of a Man - Rijksmuseum",
+   "lahde": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-keyser-mies",
+    "glb": [
+     "patsaat/rijks-ccby-keyser-mies-lod0.glb",
+     "patsaat/rijks-ccby-keyser-mies-lod1.glb"
+    ],
+    "mitat_m": [
+     0.561,
+     1.091,
+     0.26
+    ],
+    "etu": "+Z",
+    "nimi": "Bust of a Man - Rijksmuseum",
+    "krediitti": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/bust-of-a-man-rijksmuseum-bbb4099a2a9946c29f362d12f5a0f0ae",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "aula-v2",
    "osa": "aula",
    "jalusta": {
     "keskipiste_ala": [
-     3.2,
+     4.35,
      0.0,
      6.2
     ],
     "koko": [
-     0.8,
+     0.5,
      1.0,
-     0.8
+     0.71
     ]
    },
    "paikka": [
-    3.2,
+    4.35,
     1.0,
     6.2
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    0.54,
+    0.54,
+    0.31
    ],
    "katse": [
     -1.0,
@@ -4551,14 +5155,14 @@
    "valot": [
     {
      "paikka": [
-      0.906,
-      5.7,
+      2.056,
+      4.04,
       7.806
      ],
      "suunta": [
-      0.513,
-      -0.78,
-      -0.359
+      0.585,
+      -0.7,
+      -0.41
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -4566,64 +5170,83 @@
     },
     {
      "paikka": [
-      0.906,
-      5.7,
+      2.056,
+      4.04,
       4.594
      ],
      "suunta": [
-      0.513,
-      -0.78,
-      0.359
+      0.585,
+      -0.7,
+      0.41
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 3200
     }
    ],
-   "teos_ehdotus": "Hendrick de Keyser (2)",
-   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+   "teos_ehdotus": "Portrait of Baron Willem van Liere, Rijksmuseum",
+   "lahde": "3D-skannaus: Thomas Flynn (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-verhulst-van-liere",
+    "glb": [
+     "patsaat/rijks-ccby-verhulst-van-liere-lod0.glb",
+     "patsaat/rijks-ccby-verhulst-van-liere-lod1.glb"
+    ],
+    "mitat_m": [
+     0.51,
+     0.51,
+     0.299
+    ],
+    "etu": "+Z",
+    "nimi": "Portrait of Baron Willem van Liere, Rijksmuseum",
+    "krediitti": "3D-skannaus: Thomas Flynn (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/portrait-of-baron-willem-van-liere-rijksmuseum-b94c34276a824ed2ba9a434106d568a6",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "aula-v3",
    "osa": "aula",
    "jalusta": {
     "keskipiste_ala": [
-     -3.2,
+     -1.6,
      0.0,
-     2.6
+     5.6
     ],
     "koko": [
-     0.8,
+     0.85,
      1.0,
-     0.8
+     0.64
     ]
    },
    "paikka": [
-    -3.2,
+    -1.6,
     1.0,
-    2.6
+    5.6
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    0.68,
+    0.75,
+    0.46
    ],
    "katse": [
-    1.0,
+    0.33,
     0.0,
-    0.0
+    0.944
    ],
    "valot": [
     {
      "paikka": [
-      -0.906,
-      5.7,
-      0.994
+      0.674,
+      4.25,
+      7.234
      ],
      "suunta": [
-      -0.513,
-      -0.78,
-      0.359
+      -0.57,
+      -0.712,
+      -0.41
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -4631,64 +5254,167 @@
     },
     {
      "paikka": [
-      -0.906,
-      5.7,
-      4.206
+      -2.358,
+      4.25,
+      8.295
      ],
      "suunta": [
-      -0.513,
-      -0.78,
-      -0.359
+      0.19,
+      -0.712,
+      -0.676
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 3200
     }
    ],
-   "teos_ehdotus": "Rombout Verhulst",
-   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+   "teos_ehdotus": "Portrait of Pieter Spiering - Rijksmuseum",
+   "lahde": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-dieussart-spiering",
+    "glb": [
+     "patsaat/rijks-ccby-dieussart-spiering-lod0.glb",
+     "patsaat/rijks-ccby-dieussart-spiering-lod1.glb"
+    ],
+    "mitat_m": [
+     0.65,
+     0.711,
+     0.435
+    ],
+    "etu": "+Z",
+    "nimi": "Portrait of Pieter Spiering - Rijksmuseum",
+    "krediitti": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/portrait-of-pieter-spiering-rijksmuseum-913cc495565c4dc2aeec0bbc6a64ada9",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "aula-v4",
    "osa": "aula",
    "jalusta": {
     "keskipiste_ala": [
-     3.2,
+     1.6,
+     0.0,
+     5.6
+    ],
+    "koko": [
+     0.45,
+     1.0,
+     0.45
+    ]
+   },
+   "paikka": [
+    1.6,
+    1.0,
+    5.6
+   ],
+   "max_koko": [
+    0.27,
+    0.72,
+    0.23
+   ],
+   "katse": [
+    -0.33,
+    0.0,
+    0.944
+   ],
+   "valot": [
+    {
+     "paikka": [
+      2.358,
+      4.22,
+      8.295
+     ],
+     "suunta": [
+      -0.191,
+      -0.71,
+      -0.678
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    },
+    {
+     "paikka": [
+      -0.674,
+      4.22,
+      7.234
+     ],
+     "suunta": [
+      0.572,
+      -0.71,
+      -0.411
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 3200
+    }
+   ],
+   "teos_ehdotus": "Mary with Christ Child 1424 Île-de-France",
+   "lahde": "3D-skannaus: Kees Veling (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-maria-lapsi-alabasteri",
+    "glb": [
+     "patsaat/rijks-ccby-maria-lapsi-alabasteri-lod0.glb",
+     "patsaat/rijks-ccby-maria-lapsi-alabasteri-lod1.glb"
+    ],
+    "mitat_m": [
+     0.254,
+     0.69,
+     0.22
+    ],
+    "etu": "+Z",
+    "nimi": "Mary with Christ Child 1424 Île-de-France",
+    "krediitti": "3D-skannaus: Kees Veling (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/mary-with-christ-child-1424-ile-de-france-3d687c12542f48d0b3ac3fac839005b1",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "aula-v5",
+   "osa": "aula",
+   "jalusta": {
+    "keskipiste_ala": [
+     -1.6,
      0.0,
      2.6
     ],
     "koko": [
-     0.8,
-     1.0,
-     0.8
+     0.93,
+     0.85,
+     0.84
     ]
    },
    "paikka": [
-    3.2,
-    1.0,
+    -1.6,
+    0.85,
     2.6
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    0.77,
+    1.11,
+    0.67
    ],
    "katse": [
-    -1.0,
+    0.33,
     0.0,
-    0.0
+    0.944
    ],
    "valot": [
     {
      "paikka": [
-      0.906,
-      5.7,
-      4.206
+      0.674,
+      4.46,
+      4.234
      ],
      "suunta": [
-      0.513,
-      -0.78,
-      -0.359
+      -0.554,
+      -0.731,
+      -0.398
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -4696,152 +5422,125 @@
     },
     {
      "paikka": [
-      0.906,
-      5.7,
-      0.994
+      -2.358,
+      4.46,
+      5.295
      ],
      "suunta": [
-      0.513,
-      -0.78,
-      0.359
+      0.185,
+      -0.731,
+      -0.657
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 3200
     }
    ],
-   "teos_ehdotus": "François Dieussart",
-   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+   "teos_ehdotus": "Pierre André de Suffren - Rijksmuseum",
+   "lahde": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-houdon-suffren",
+    "glb": [
+     "patsaat/rijks-ccby-houdon-suffren-lod0.glb",
+     "patsaat/rijks-ccby-houdon-suffren-lod1.glb"
+    ],
+    "mitat_m": [
+     0.73,
+     1.055,
+     0.639
+    ],
+    "etu": "+Z",
+    "nimi": "Pierre André de Suffren - Rijksmuseum",
+    "krediitti": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/pierre-andre-de-suffren-rijksmuseum-acbc73ef3bd44f9c81140e0492d677db",
+    "mittakaava_arvio": false
+   }
   },
   {
-   "id": "kg-v1",
-   "osa": "kg",
+   "id": "aula-v6",
+   "osa": "aula",
    "jalusta": {
     "keskipiste_ala": [
-     -3.0,
+     1.6,
      0.0,
-     -71.6
+     2.6
     ],
     "koko": [
-     0.8,
-     1.0,
-     0.8
+     0.68,
+     0.95,
+     0.83
     ]
    },
    "paikka": [
-    -3.0,
-    1.0,
-    -71.6
+    1.6,
+    0.95,
+    2.6
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    0.5,
+    0.92,
+    0.66
    ],
    "katse": [
+    -0.33,
     0.0,
-    0.0,
-    1.0
+    0.944
    ],
    "valot": [
     {
      "paikka": [
-      -1.394,
-      5.7,
-      -69.306
+      2.358,
+      4.37,
+      5.295
      ],
      "suunta": [
-      -0.359,
-      -0.78,
-      -0.513
+      -0.188,
+      -0.721,
+      -0.667
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
-     "kelvin": 3500
+     "kelvin": 3200
     },
     {
      "paikka": [
-      -4.606,
-      5.7,
-      -69.306
+      -0.674,
+      4.37,
+      4.234
      ],
      "suunta": [
-      0.359,
-      -0.78,
-      -0.513
+      0.563,
+      -0.721,
+      -0.404
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
-     "kelvin": 3500
+     "kelvin": 3200
     }
    ],
-   "teos_ehdotus": "Jean-Antoine Houdon",
-   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
-  },
-  {
-   "id": "kg-v2",
-   "osa": "kg",
-   "jalusta": {
-    "keskipiste_ala": [
-     3.0,
-     0.0,
-     -71.6
+   "teos_ehdotus": "Seated Cupid - Rijksmuseum",
+   "lahde": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-falconet-cupido",
+    "glb": [
+     "patsaat/rijks-ccby-falconet-cupido-lod0.glb",
+     "patsaat/rijks-ccby-falconet-cupido-lod1.glb"
     ],
-    "koko": [
-     0.8,
-     1.0,
-     0.8
-    ]
-   },
-   "paikka": [
-    3.0,
-    1.0,
-    -71.6
-   ],
-   "max_koko": [
-    1.2,
-    2.2,
-    1.2
-   ],
-   "katse": [
-    0.0,
-    0.0,
-    1.0
-   ],
-   "valot": [
-    {
-     "paikka": [
-      4.606,
-      5.7,
-      -69.306
-     ],
-     "suunta": [
-      -0.359,
-      -0.78,
-      -0.513
-     ],
-     "puolikulma_aste": 22.0,
-     "lx": 200,
-     "kelvin": 3500
-    },
-    {
-     "paikka": [
-      1.394,
-      5.7,
-      -69.306
-     ],
-     "suunta": [
-      0.359,
-      -0.78,
-      -0.513
-     ],
-     "puolikulma_aste": 22.0,
-     "lx": 200,
-     "kelvin": 3500
-    }
-   ],
-   "teos_ehdotus": "Étienne-Maurice Falconet",
-   "lahde": "Rijksmuseumin veistos, kävijän 3D-skannaus CC BY (Sketchfab; tekijä mainitaan)"
+    "mitat_m": [
+     0.475,
+     0.873,
+     0.628
+    ],
+    "etu": "+Z",
+    "nimi": "Seated Cupid - Rijksmuseum",
+    "krediitti": "3D-skannaus: Moshe Caine (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/seated-cupid-rijksmuseum-921f91e7667b44759c5a92d27622c904",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "yv-v1",
@@ -4853,20 +5552,20 @@
      -75.4
     ],
     "koko": [
-     0.8,
-     1.0,
-     0.8
+     1.19,
+     0.3,
+     0.91
     ]
    },
    "paikka": [
     -6.0,
-    1.0,
+    0.3,
     -75.4
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    1.04,
+    2.05,
+    0.75
    ],
    "katse": [
     0.447,
@@ -4877,13 +5576,13 @@
     {
      "paikka": [
       -6.411,
-      5.7,
+      4.85,
       -78.17
      ],
      "suunta": [
-      0.092,
-      -0.78,
-      0.619
+      0.093,
+      -0.774,
+      0.626
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -4892,21 +5591,40 @@
     {
      "paikka": [
       -3.538,
-      5.7,
+      4.85,
       -76.733
      ],
      "suunta": [
-      -0.55,
-      -0.78,
-      0.298
+      -0.557,
+      -0.774,
+      0.302
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 3300
     }
    ],
-   "teos_ehdotus": "oma mallinnus (Rijksin CC0-kuvista)",
-   "lahde": "oma malli"
+   "teos_ehdotus": "Figurehead from the frigate Prins van Oranje",
+   "lahde": "3D-skannaus: Thomas Flynn (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-keulakuva-prins-van-oranje",
+    "glb": [
+     "patsaat/rijks-ccby-keulakuva-prins-van-oranje-lod0.glb",
+     "patsaat/rijks-ccby-keulakuva-prins-van-oranje-lod1.glb"
+    ],
+    "mitat_m": [
+     0.992,
+     1.95,
+     0.71
+    ],
+    "etu": "+Z",
+    "nimi": "Figurehead from the frigate Prins van Oranje",
+    "krediitti": "3D-skannaus: Thomas Flynn (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/figurehead-from-the-frigate-prins-van-oranje-ce3c7efafe6841f9ab6a550e4aab4acd",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "yv-v2",
@@ -4918,20 +5636,20 @@
      -75.4
     ],
     "koko": [
-     0.8,
-     1.0,
-     0.8
+     0.72,
+     0.95,
+     0.45
     ]
    },
    "paikka": [
     6.0,
-    1.0,
+    0.95,
     -75.4
    ],
    "max_koko": [
-    1.2,
-    2.2,
-    1.2
+    0.55,
+    0.11,
+    0.22
    ],
    "katse": [
     -0.447,
@@ -4942,13 +5660,13 @@
     {
      "paikka": [
       3.538,
-      5.7,
+      3.56,
       -76.733
      ],
      "suunta": [
-      0.55,
-      -0.78,
-      0.298
+      0.65,
+      -0.673,
+      0.352
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -4957,46 +5675,74 @@
     {
      "paikka": [
       6.411,
-      5.7,
+      3.56,
       -78.17
      ],
      "suunta": [
-      -0.092,
-      -0.78,
-      0.619
+      -0.108,
+      -0.673,
+      0.731
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 3300
     }
    ],
-   "teos_ehdotus": "oma mallinnus (Rijksin CC0-kuvista)",
-   "lahde": "oma malli"
+   "teos_ehdotus": "William of Orange, lying in state - Rijksmuseum",
+   "lahde": "3D-skannaus: Zoilo (CC BY 4.0), Rijksmuseum",
+   "teos": {
+    "id": "rijks-ccby-keyser-oranian-vilhelm",
+    "glb": [
+     "patsaat/rijks-ccby-keyser-oranian-vilhelm-lod0.glb",
+     "patsaat/rijks-ccby-keyser-oranian-vilhelm-lod1.glb"
+    ],
+    "mitat_m": [
+     0.524,
+     0.105,
+     0.214
+    ],
+    "etu": "+Z",
+    "nimi": "William of Orange, lying in state - Rijksmuseum",
+    "krediitti": "3D-skannaus: Zoilo (CC BY 4.0), Rijksmuseum",
+    "lisenssi": "CC Attribution",
+    "lisenssi_url": "http://creativecommons.org/licenses/by/4.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/william-of-orange-lying-in-state-rijksmuseum-7345dc5b428849a28fc5695bad86a290",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.72,
+     0.35,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
   },
   {
    "id": "leiden-v1",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     11.2,
+     11.0,
      0.0,
-     -74.0
+     -73.6
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     1.46,
+     0.25,
+     1.18
     ]
    },
    "paikka": [
-    11.2,
-    0.9,
-    -74.0
+    11.0,
+    0.25,
+    -73.6
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    1.03,
+    1.66,
+    1.32
    ],
    "katse": [
     1.0,
@@ -5006,14 +5752,14 @@
    "valot": [
     {
      "paikka": [
-      13.494,
-      5.3,
-      -75.606
+      13.294,
+      4.41,
+      -75.206
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      0.368
+      -0.535,
+      -0.757,
+      0.375
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5021,47 +5767,66 @@
     },
     {
      "paikka": [
-      13.494,
-      5.3,
-      -72.394
+      13.294,
+      4.41,
+      -71.994
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      -0.368
+      -0.535,
+      -0.757,
+      -0.375
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Beeld van Maya en Merit",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-beeld-van-maya-en-merit",
+    "glb": [
+     "patsaat/rmo-beeld-van-maya-en-merit-lod0.glb",
+     "patsaat/rmo-beeld-van-maya-en-merit-lod1.glb"
+    ],
+    "mitat_m": [
+     0.982,
+     1.58,
+     1.257
+    ],
+    "etu": "+Z",
+    "nimi": "Beeld van Maya en Merit",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/beeld-van-maya-en-merit-f2d7a014141841d99f16ccb4cc404326",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-o1",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     18.0,
+     18.2,
      0.0,
-     -74.0
+     -73.6
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.75,
+     0.55,
+     0.97
     ]
    },
    "paikka": [
-    18.0,
-    0.9,
-    -74.0
+    18.2,
+    0.55,
+    -73.6
    ],
    "max_koko": [
     0.8,
-    1.9,
-    0.8
+    1.25,
+    0.58
    ],
    "katse": [
     -1.0,
@@ -5071,14 +5836,14 @@
    "valot": [
     {
      "paikka": [
-      15.706,
-      5.3,
-      -72.394
+      15.906,
+      4.3,
+      -71.994
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      -0.368
+      0.553,
+      -0.738,
+      -0.387
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5086,47 +5851,66 @@
     },
     {
      "paikka": [
-      15.706,
-      5.3,
-      -75.606
+      15.906,
+      4.3,
+      -75.206
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      0.368
+      0.553,
+      -0.738,
+      0.387
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Altaar uit Vechten",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-altaar-uit-vechten",
+    "glb": [
+     "patsaat/rmo-altaar-uit-vechten-lod0.glb",
+     "patsaat/rmo-altaar-uit-vechten-lod1.glb"
+    ],
+    "mitat_m": [
+     0.765,
+     1.19,
+     0.553
+    ],
+    "etu": "+Z",
+    "nimi": "Altaar uit Vechten",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/altaar-uit-vechten-0f106d4226f0458bb29c8fc5d7ed5111",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-v2",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     11.2,
+     11.0,
      0.0,
-     -77.1
+     -76.33
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.45,
+     1.3,
+     0.45
     ]
    },
    "paikka": [
-    11.2,
-    0.9,
-    -77.1
+    11.0,
+    1.3,
+    -76.33
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.19,
+    0.28,
+    0.11
    ],
    "katse": [
     1.0,
@@ -5136,14 +5920,14 @@
    "valot": [
     {
      "paikka": [
-      13.494,
-      5.3,
-      -78.706
+      13.294,
+      4.08,
+      -77.936
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      0.368
+      -0.597,
+      -0.684,
+      0.418
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5151,47 +5935,66 @@
     },
     {
      "paikka": [
-      13.494,
-      5.3,
-      -75.494
+      13.294,
+      4.08,
+      -74.724
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      -0.368
+      -0.597,
+      -0.684,
+      -0.418
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Beeld van een heerser of prins",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-beeld-van-een-heerser-of-prins",
+    "glb": [
+     "patsaat/rmo-beeld-van-een-heerser-of-prins-lod0.glb",
+     "patsaat/rmo-beeld-van-een-heerser-of-prins-lod1.glb"
+    ],
+    "mitat_m": [
+     0.183,
+     0.27,
+     0.107
+    ],
+    "etu": "+Z",
+    "nimi": "Beeld van een heerser of prins",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/beeld-van-een-heerser-of-prins-02ba2904e94748d1bdb40a89e88ce880",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-o2",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     18.0,
+     18.2,
      0.0,
-     -77.1
+     -76.33
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.45,
+     1.3,
+     0.49
     ]
    },
    "paikka": [
-    18.0,
-    0.9,
-    -77.1
+    18.2,
+    1.3,
+    -76.33
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.31,
+    0.43,
+    0.24
    ],
    "katse": [
     -1.0,
@@ -5201,14 +6004,14 @@
    "valot": [
     {
      "paikka": [
-      15.706,
-      5.3,
-      -75.494
+      15.906,
+      4.23,
+      -74.724
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      -0.368
+      0.59,
+      -0.693,
+      -0.413
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5216,47 +6019,66 @@
     },
     {
      "paikka": [
-      15.706,
-      5.3,
-      -78.706
+      15.906,
+      4.23,
+      -77.936
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      0.368
+      0.59,
+      -0.693,
+      0.413
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Germanicus",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-germanicus",
+    "glb": [
+     "patsaat/rmo-germanicus-lod0.glb",
+     "patsaat/rmo-germanicus-lod1.glb"
+    ],
+    "mitat_m": [
+     0.291,
+     0.405,
+     0.233
+    ],
+    "etu": "+Z",
+    "nimi": "Germanicus",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/germanicus-6aea3a466ce444b4b4798c37d502648c",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-v3",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     11.2,
+     11.0,
      0.0,
-     -80.2
+     -79.06
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.71,
+     0.55,
+     0.53
     ]
    },
    "paikka": [
-    11.2,
-    0.9,
-    -80.2
+    11.0,
+    0.55,
+    -79.06
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.35,
+    0.84,
+    0.53
    ],
    "katse": [
     1.0,
@@ -5266,14 +6088,14 @@
    "valot": [
     {
      "paikka": [
-      13.494,
-      5.3,
-      -81.806
+      13.294,
+      3.89,
+      -80.666
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      0.368
+      -0.571,
+      -0.717,
+      0.4
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5281,47 +6103,66 @@
     },
     {
      "paikka": [
-      13.494,
-      5.3,
-      -78.594
+      13.294,
+      3.89,
+      -77.454
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      -0.368
+      -0.571,
+      -0.717,
+      -0.4
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Beeld van Raia en Ptah",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-beeld-van-raia-en-ptah",
+    "glb": [
+     "patsaat/rmo-beeld-van-raia-en-ptah-lod0.glb",
+     "patsaat/rmo-beeld-van-raia-en-ptah-lod1.glb"
+    ],
+    "mitat_m": [
+     0.329,
+     0.8,
+     0.506
+    ],
+    "etu": "+Z",
+    "nimi": "Beeld van Raia en Ptah",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/beeld-van-raia-en-ptah-6b9f8d953c0548c7a30043ee2087845d",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-o3",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     18.0,
+     18.2,
      0.0,
-     -80.2
+     -79.06
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.48,
+     1.0,
+     0.45
     ]
    },
    "paikka": [
-    18.0,
-    0.9,
-    -80.2
+    18.2,
+    1.0,
+    -79.06
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.26,
+    0.79,
+    0.29
    ],
    "katse": [
     -1.0,
@@ -5331,14 +6172,14 @@
    "valot": [
     {
      "paikka": [
-      15.706,
-      5.3,
-      -78.594
+      15.906,
+      4.29,
+      -77.454
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      -0.368
+      0.574,
+      -0.714,
+      -0.402
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5346,112 +6187,66 @@
     },
     {
      "paikka": [
-      15.706,
-      5.3,
-      -81.806
+      15.906,
+      4.29,
+      -80.666
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      0.368
+      0.574,
+      -0.714,
+      0.402
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
-  },
-  {
-   "id": "leiden-v4",
-   "osa": "leiden",
-   "jalusta": {
-    "keskipiste_ala": [
-     11.2,
-     0.0,
-     -83.3
+   "teos_ehdotus": "Hecate Triformis",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-hecate-triformis",
+    "glb": [
+     "patsaat/rmo-hecate-triformis-lod0.glb",
+     "patsaat/rmo-hecate-triformis-lod1.glb"
     ],
-    "koko": [
-     0.6,
-     0.9,
-     0.6
-    ]
-   },
-   "paikka": [
-    11.2,
-    0.9,
-    -83.3
-   ],
-   "max_koko": [
-    0.8,
-    1.9,
-    0.8
-   ],
-   "katse": [
-    1.0,
-    0.0,
-    0.0
-   ],
-   "valot": [
-    {
-     "paikka": [
-      13.494,
-      5.3,
-      -84.906
-     ],
-     "suunta": [
-      -0.525,
-      -0.768,
-      0.368
-     ],
-     "puolikulma_aste": 22.0,
-     "lx": 200,
-     "kelvin": 4000
-    },
-    {
-     "paikka": [
-      13.494,
-      5.3,
-      -81.694
-     ],
-     "suunta": [
-      -0.525,
-      -0.768,
-      -0.368
-     ],
-     "puolikulma_aste": 22.0,
-     "lx": 200,
-     "kelvin": 4000
-    }
-   ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+    "mitat_m": [
+     0.247,
+     0.755,
+     0.275
+    ],
+    "etu": "+Z",
+    "nimi": "Hecate Triformis",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/hecate-triformis-f0f37da4c26344f382276498dfa878a7",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-o4",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     18.0,
+     18.2,
      0.0,
-     -83.3
+     -81.79
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.45,
+     1.3,
+     0.45
     ]
    },
    "paikka": [
-    18.0,
-    0.9,
-    -83.3
+    18.2,
+    1.3,
+    -81.79
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.24,
+    0.38,
+    0.27
    ],
    "katse": [
     -1.0,
@@ -5461,14 +6256,14 @@
    "valot": [
     {
      "paikka": [
-      15.706,
-      5.3,
-      -81.694
+      15.906,
+      4.18,
+      -80.184
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      -0.368
+      0.593,
+      -0.69,
+      -0.415
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5476,47 +6271,66 @@
     },
     {
      "paikka": [
-      15.706,
-      5.3,
-      -84.906
+      15.906,
+      4.18,
+      -83.396
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      0.368
+      0.593,
+      -0.69,
+      0.415
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Julius Caesar?",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-julius-caesar",
+    "glb": [
+     "patsaat/rmo-julius-caesar-lod0.glb",
+     "patsaat/rmo-julius-caesar-lod1.glb"
+    ],
+    "mitat_m": [
+     0.226,
+     0.36,
+     0.254
+    ],
+    "etu": "+Z",
+    "nimi": "Julius Caesar?",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/julius-caesar-bc68d05694af4688ab800461a3f6ef96",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-v5",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     11.2,
+     11.0,
      0.0,
-     -86.4
+     -84.52
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.49,
+     1.3,
+     0.47
     ]
    },
    "paikka": [
-    11.2,
-    0.9,
-    -86.4
+    11.0,
+    1.3,
+    -84.52
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.29,
+    0.44,
+    0.31
    ],
    "katse": [
     1.0,
@@ -5526,14 +6340,14 @@
    "valot": [
     {
      "paikka": [
-      13.494,
-      5.3,
-      -88.006
+      13.294,
+      4.24,
+      -86.126
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      0.368
+      -0.59,
+      -0.694,
+      0.413
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5541,47 +6355,66 @@
     },
     {
      "paikka": [
-      13.494,
-      5.3,
-      -84.794
+      13.294,
+      4.24,
+      -82.914
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      -0.368
+      -0.59,
+      -0.694,
+      -0.413
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Pyramidion van Ptahemwia",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-pyramidion-van-ptahemwia",
+    "glb": [
+     "patsaat/rmo-pyramidion-van-ptahemwia-lod0.glb",
+     "patsaat/rmo-pyramidion-van-ptahemwia-lod1.glb"
+    ],
+    "mitat_m": [
+     0.272,
+     0.42,
+     0.291
+    ],
+    "etu": "+Z",
+    "nimi": "Pyramidion van Ptahemwia",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/pyramidion-van-ptahemwia-f92ca6a968634540aab7960012b6b059",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-o5",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     18.0,
+     18.2,
      0.0,
-     -86.4
+     -84.52
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.45,
+     1.3,
+     0.48
     ]
    },
    "paikka": [
-    18.0,
-    0.9,
-    -86.4
+    18.2,
+    1.3,
+    -84.52
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.3,
+    0.36,
+    0.17
    ],
    "katse": [
     -1.0,
@@ -5591,14 +6424,14 @@
    "valot": [
     {
      "paikka": [
-      15.706,
-      5.3,
-      -84.794
+      15.906,
+      4.16,
+      -82.914
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      -0.368
+      0.594,
+      -0.689,
+      -0.416
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5606,47 +6439,66 @@
     },
     {
      "paikka": [
-      15.706,
-      5.3,
-      -88.006
+      15.906,
+      4.16,
+      -86.126
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      0.368
+      0.594,
+      -0.689,
+      0.416
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Faustina",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-faustina",
+    "glb": [
+     "patsaat/rmo-faustina-lod0.glb",
+     "patsaat/rmo-faustina-lod1.glb"
+    ],
+    "mitat_m": [
+     0.281,
+     0.34,
+     0.162
+    ],
+    "etu": "+Z",
+    "nimi": "Faustina",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/faustina-8154fd1ab9d14ebbbc64af23c2667103",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-v6",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     11.2,
+     11.0,
      0.0,
-     -89.5
+     -87.25
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.97,
+     0.25,
+     0.72
     ]
    },
    "paikka": [
-    11.2,
-    0.9,
-    -89.5
+    11.0,
+    0.25,
+    -87.25
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.55,
+    1.32,
+    0.81
    ],
    "katse": [
     1.0,
@@ -5656,14 +6508,14 @@
    "valot": [
     {
      "paikka": [
-      13.494,
-      5.3,
-      -91.106
+      13.294,
+      4.07,
+      -88.856
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      0.368
+      -0.55,
+      -0.741,
+      0.385
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5671,47 +6523,66 @@
     },
     {
      "paikka": [
-      13.494,
-      5.3,
-      -87.894
+      13.294,
+      4.07,
+      -85.644
      ],
      "suunta": [
-      -0.525,
-      -0.768,
-      -0.368
+      -0.55,
+      -0.741,
+      -0.385
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Beeld van Tjairy en Hathor",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-beeld-van-tjairy-en-hathor",
+    "glb": [
+     "patsaat/rmo-beeld-van-tjairy-en-hathor-lod0.glb",
+     "patsaat/rmo-beeld-van-tjairy-en-hathor-lod1.glb"
+    ],
+    "mitat_m": [
+     0.52,
+     1.26,
+     0.767
+    ],
+    "etu": "+Z",
+    "nimi": "Beeld van Tjairy en Hathor",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/beeld-van-tjairy-en-hathor-734bbbc58413454887e10ecb4f56878a",
+    "mittakaava_arvio": false
+   }
   },
   {
    "id": "leiden-o6",
    "osa": "leiden",
    "jalusta": {
     "keskipiste_ala": [
-     18.0,
+     18.2,
      0.0,
-     -89.5
+     -87.25
     ],
     "koko": [
-     0.6,
-     0.9,
-     0.6
+     0.45,
+     1.3,
+     0.45
     ]
    },
    "paikka": [
-    18.0,
-    0.9,
-    -89.5
+    18.2,
+    1.3,
+    -87.25
    ],
    "max_koko": [
-    0.8,
-    1.9,
-    0.8
+    0.2,
+    0.29,
+    0.24
    ],
    "katse": [
     -1.0,
@@ -5721,14 +6592,14 @@
    "valot": [
     {
      "paikka": [
-      15.706,
-      5.3,
-      -87.894
+      15.906,
+      4.09,
+      -85.644
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      -0.368
+      0.597,
+      -0.685,
+      -0.418
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
@@ -5736,31 +6607,1382 @@
     },
     {
      "paikka": [
-      15.706,
-      5.3,
-      -91.106
+      15.906,
+      4.09,
+      -88.856
      ],
      "suunta": [
-      0.525,
-      -0.768,
-      0.368
+      0.597,
+      -0.685,
+      0.418
      ],
      "puolikulma_aste": 22.0,
      "lx": 200,
      "kelvin": 4000
     }
    ],
-   "teos_ehdotus": "RMO Leiden, antiikki",
-   "lahde": "Rijksmuseum van Oudheden, Sketchfab CC0"
+   "teos_ehdotus": "Keizer Licinius",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-keizer-licinius",
+    "glb": [
+     "patsaat/rmo-keizer-licinius-lod0.glb",
+     "patsaat/rmo-keizer-licinius-lod1.glb"
+    ],
+    "mitat_m": [
+     0.188,
+     0.28,
+     0.233
+    ],
+    "etu": "+Z",
+    "nimi": "Keizer Licinius",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/keizer-licinius-0d2a0430f2384249ab57f3196f8c34fb",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-v7",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     11.0,
+     0.0,
+     -89.98
+    ],
+    "koko": [
+     0.45,
+     1.0,
+     0.45
+    ]
+   },
+   "paikka": [
+    11.0,
+    1.0,
+    -89.98
+   ],
+   "max_koko": [
+    0.21,
+    0.58,
+    0.17
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      13.294,
+      4.08,
+      -91.586
+     ],
+     "suunta": [
+      -0.583,
+      -0.702,
+      0.408
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.294,
+      4.08,
+      -88.374
+     ],
+     "suunta": [
+      -0.583,
+      -0.702,
+      -0.408
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Kouros van Cyprus",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-kouros-van-cyprus",
+    "glb": [
+     "patsaat/rmo-kouros-van-cyprus-lod0.glb",
+     "patsaat/rmo-kouros-van-cyprus-lod1.glb"
+    ],
+    "mitat_m": [
+     0.203,
+     0.552,
+     0.162
+    ],
+    "etu": "+Z",
+    "nimi": "Kouros van Cyprus",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/kouros-van-cyprus-87a3a9876b9a4579a0a121d2a11ab779",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-o7",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     18.2,
+     0.0,
+     -89.98
+    ],
+    "koko": [
+     0.49,
+     0.55,
+     0.49
+    ]
+   },
+   "paikka": [
+    18.2,
+    0.55,
+    -89.98
+   ],
+   "max_koko": [
+    0.31,
+    0.96,
+    0.31
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.906,
+      4.01,
+      -88.374
+     ],
+     "suunta": [
+      0.566,
+      -0.723,
+      -0.396
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      15.906,
+      4.01,
+      -91.586
+     ],
+     "suunta": [
+      0.566,
+      -0.723,
+      0.396
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Stadhoudersvaas",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-stadhoudersvaas",
+    "glb": [
+     "patsaat/rmo-stadhoudersvaas-lod0.glb",
+     "patsaat/rmo-stadhoudersvaas-lod1.glb"
+    ],
+    "mitat_m": [
+     0.295,
+     0.915,
+     0.293
+    ],
+    "etu": "+Z",
+    "nimi": "Stadhoudersvaas",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/stadhoudersvaas-a08b7a4c44f14553bf8f5992873bc2ae",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-p1",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     12.8,
+     0.0,
+     -90.9
+    ],
+    "koko": [
+     1.03,
+     0.2,
+     0.5
+    ]
+   },
+   "paikka": [
+    12.8,
+    0.2,
+    -90.9
+   ],
+   "max_koko": [
+    0.87,
+    1.11,
+    0.31
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      14.406,
+      3.81,
+      -88.606
+     ],
+     "suunta": [
+      -0.391,
+      -0.731,
+      -0.559
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      11.194,
+      3.81,
+      -88.606
+     ],
+     "suunta": [
+      0.391,
+      -0.731,
+      -0.559
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Grafsteen uit Valens uit Vechten",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-grafsteen-uit-valens-uit-vechten",
+    "glb": [
+     "patsaat/rmo-grafsteen-uit-valens-uit-vechten-lod0.glb",
+     "patsaat/rmo-grafsteen-uit-valens-uit-vechten-lod1.glb"
+    ],
+    "mitat_m": [
+     0.83,
+     1.06,
+     0.298
+    ],
+    "etu": "+Z",
+    "nimi": "Grafsteen uit Valens uit Vechten",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/grafsteen-uit-valens-uit-vechten-387df22f048740c696ee1b9f227466f7",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-p2",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     16.4,
+     0.0,
+     -90.9
+    ],
+    "koko": [
+     1.26,
+     0.2,
+     0.45
+    ]
+   },
+   "paikka": [
+    16.4,
+    0.2,
+    -90.9
+   ],
+   "max_koko": [
+    1.12,
+    1.51,
+    0.18
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      18.006,
+      4.21,
+      -88.606
+     ],
+     "suunta": [
+      -0.379,
+      -0.75,
+      -0.541
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      14.794,
+      4.21,
+      -88.606
+     ],
+     "suunta": [
+      0.379,
+      -0.75,
+      -0.541
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Grafsteen van Gumattius uit Dodewaard",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-grafsteen-van-gumattius-uit-dodewaard",
+    "glb": [
+     "patsaat/rmo-grafsteen-van-gumattius-uit-dodewaard-lod0.glb",
+     "patsaat/rmo-grafsteen-van-gumattius-uit-dodewaard-lod1.glb"
+    ],
+    "mitat_m": [
+     1.064,
+     1.44,
+     0.168
+    ],
+    "etu": "+Z",
+    "nimi": "Grafsteen van Gumattius uit Dodewaard",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/grafsteen-van-gumattius-uit-dodewaard-393410cdb6404797a2e9853ea85558bb",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-e1",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     12.2,
+     0.0,
+     -72.7
+    ],
+    "koko": [
+     0.74,
+     1.0,
+     0.45
+    ]
+   },
+   "paikka": [
+    12.2,
+    1.0,
+    -72.7
+   ],
+   "max_koko": [
+    0.57,
+    0.56,
+    0.11
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      10.594,
+      4.06,
+      -74.994
+     ],
+     "suunta": [
+      0.409,
+      -0.701,
+      0.584
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      13.806,
+      4.06,
+      -74.994
+     ],
+     "suunta": [
+      -0.409,
+      -0.701,
+      0.584
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Asclepius en Hygieia",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-asclepius-en-hygieia",
+    "glb": [
+     "patsaat/rmo-asclepius-en-hygieia-lod0.glb",
+     "patsaat/rmo-asclepius-en-hygieia-lod1.glb"
+    ],
+    "mitat_m": [
+     0.543,
+     0.535,
+     0.107
+    ],
+    "etu": "+Z",
+    "nimi": "Asclepius en Hygieia",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/asclepius-en-hygieia-a06c3fe4915641cb93a3b78e2122f0b4",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-e2",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     14.6,
+     0.0,
+     -72.7
+    ],
+    "koko": [
+     0.86,
+     0.55,
+     0.58
+    ]
+   },
+   "paikka": [
+    14.6,
+    0.55,
+    -72.7
+   ],
+   "max_koko": [
+    0.7,
+    1.0,
+    0.4
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      12.994,
+      4.05,
+      -74.994
+     ],
+     "suunta": [
+      0.395,
+      -0.725,
+      0.564
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      16.206,
+      4.05,
+      -74.994
+     ],
+     "suunta": [
+      -0.395,
+      -0.725,
+      0.564
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Nehalennia altaar uit Domburg",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-nehalennia-altaar-uit-domburg",
+    "glb": [
+     "patsaat/rmo-nehalennia-altaar-uit-domburg-lod0.glb",
+     "patsaat/rmo-nehalennia-altaar-uit-domburg-lod1.glb"
+    ],
+    "mitat_m": [
+     0.665,
+     0.955,
+     0.379
+    ],
+    "etu": "+Z",
+    "nimi": "Nehalennia altaar uit Domburg",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/nehalennia-altaar-uit-domburg-72054cae6aa447849168b309a69da570",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-e3",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     17.0,
+     0.0,
+     -72.7
+    ],
+    "koko": [
+     0.6,
+     1.0,
+     0.45
+    ]
+   },
+   "paikka": [
+    17.0,
+    1.0,
+    -72.7
+   ],
+   "max_koko": [
+    0.42,
+    0.55,
+    0.26
+   ],
+   "katse": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      15.394,
+      4.05,
+      -74.994
+     ],
+     "suunta": [
+      0.409,
+      -0.7,
+      0.585
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      18.606,
+      4.05,
+      -74.994
+     ],
+     "suunta": [
+      -0.409,
+      -0.7,
+      0.585
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Palmyreens grafreliëf van een man",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-palmyreens-grafreli-f-van-een-man",
+    "glb": [
+     "patsaat/rmo-palmyreens-grafreli-f-van-een-man-lod0.glb",
+     "patsaat/rmo-palmyreens-grafreli-f-van-een-man-lod1.glb"
+    ],
+    "mitat_m": [
+     0.401,
+     0.52,
+     0.251
+    ],
+    "etu": "+Z",
+    "nimi": "Palmyreens grafreliëf van een man",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/palmyreens-grafrelief-van-een-man-3cbab6a0e6754c1e93c85eae04981489",
+    "mittakaava_arvio": false
+   }
+  },
+  {
+   "id": "leiden-vit1",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     14.1,
+     0.0,
+     -76.4
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.45
+    ]
+   },
+   "paikka": [
+    14.1,
+    0.95,
+    -76.4
+   ],
+   "max_koko": [
+    0.08,
+    0.18,
+    0.1
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      11.806,
+      3.63,
+      -74.794
+     ],
+     "suunta": [
+      0.602,
+      -0.678,
+      -0.422
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      11.806,
+      3.63,
+      -78.006
+     ],
+     "suunta": [
+      0.602,
+      -0.678,
+      0.422
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Beeldje van de oud-Egyptische godin Neith",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-beeldje-van-de-oud-egyptische-godin-neit",
+    "glb": [
+     "patsaat/rmo-beeldje-van-de-oud-egyptische-godin-neit-lod0.glb",
+     "patsaat/rmo-beeldje-van-de-oud-egyptische-godin-neit-lod1.glb"
+    ],
+    "mitat_m": [
+     0.079,
+     0.175,
+     0.095
+    ],
+    "etu": "+Z",
+    "nimi": "Beeldje van de oud-Egyptische godin Neith",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/beeldje-van-de-oud-egyptische-godin-neith-3e6e4ea4f25b4df6bd90e99878398234",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.42,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit2",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     15.1,
+     0.0,
+     -76.4
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.45
+    ]
+   },
+   "paikka": [
+    15.1,
+    0.95,
+    -76.4
+   ],
+   "max_koko": [
+    0.08,
+    0.19,
+    0.05
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      17.394,
+      3.64,
+      -78.006
+     ],
+     "suunta": [
+      -0.602,
+      -0.678,
+      0.421
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      17.394,
+      3.64,
+      -74.794
+     ],
+     "suunta": [
+      -0.602,
+      -0.678,
+      -0.421
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Beeldje van een moedergodin uit Valkenburg",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-beeldje-van-een-moedergodin-uit-valkenbu",
+    "glb": [
+     "patsaat/rmo-beeldje-van-een-moedergodin-uit-valkenbu-lod0.glb",
+     "patsaat/rmo-beeldje-van-een-moedergodin-uit-valkenbu-lod1.glb"
+    ],
+    "mitat_m": [
+     0.075,
+     0.185,
+     0.052
+    ],
+    "etu": "+Z",
+    "nimi": "Beeldje van een moedergodin uit Valkenburg",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/beeldje-van-een-moedergodin-uit-valkenburg-d7d745237dd7464cbf065216542018e4",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.43,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit3",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     14.1,
+     0.0,
+     -80.0
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.45
+    ]
+   },
+   "paikka": [
+    14.1,
+    0.95,
+    -80.0
+   ],
+   "max_koko": [
+    0.07,
+    0.14,
+    0.03
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      11.806,
+      3.59,
+      -78.394
+     ],
+     "suunta": [
+      0.604,
+      -0.675,
+      -0.423
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      11.806,
+      3.59,
+      -81.606
+     ],
+     "suunta": [
+      0.604,
+      -0.675,
+      0.423
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Figurine van een vrouw met kind",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-figurine-van-een-vrouw-met-kind",
+    "glb": [
+     "patsaat/rmo-figurine-van-een-vrouw-met-kind-lod0.glb",
+     "patsaat/rmo-figurine-van-een-vrouw-met-kind-lod1.glb"
+    ],
+    "mitat_m": [
+     0.065,
+     0.135,
+     0.03
+    ],
+    "etu": "+Z",
+    "nimi": "Figurine van een vrouw met kind",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/figurine-van-een-vrouw-met-kind-4c0c73b76d644ebb923e19480ca1e0c4",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.39,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit4",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     15.1,
+     0.0,
+     -80.0
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.45
+    ]
+   },
+   "paikka": [
+    15.1,
+    0.95,
+    -80.0
+   ],
+   "max_koko": [
+    0.05,
+    0.13,
+    0.05
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      17.394,
+      3.58,
+      -81.606
+     ],
+     "suunta": [
+      -0.605,
+      -0.675,
+      0.423
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      17.394,
+      3.58,
+      -78.394
+     ],
+     "suunta": [
+      -0.605,
+      -0.675,
+      -0.423
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Mannetje van Willemstad",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-mannetje-van-willemstad",
+    "glb": [
+     "patsaat/rmo-mannetje-van-willemstad-lod0.glb",
+     "patsaat/rmo-mannetje-van-willemstad-lod1.glb"
+    ],
+    "mitat_m": [
+     0.051,
+     0.124,
+     0.043
+    ],
+    "etu": "+Z",
+    "nimi": "Mannetje van Willemstad",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/mannetje-van-willemstad-5241eb438d0f4dd08667aeb2230a2409",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.37,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit5",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     14.1,
+     0.0,
+     -83.6
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.45
+    ]
+   },
+   "paikka": [
+    14.1,
+    0.95,
+    -83.6
+   ],
+   "max_koko": [
+    0.07,
+    0.06,
+    0.02
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      11.806,
+      3.51,
+      -81.994
+     ],
+     "suunta": [
+      0.608,
+      -0.67,
+      -0.426
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      11.806,
+      3.51,
+      -85.206
+     ],
+     "suunta": [
+      0.608,
+      -0.67,
+      0.426
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Romeins houten speelgoedpaardje uit Valkenburg",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-romeins-houten-speelgoedpaardje-uit-valk",
+    "glb": [
+     "patsaat/rmo-romeins-houten-speelgoedpaardje-uit-valk-lod0.glb",
+     "patsaat/rmo-romeins-houten-speelgoedpaardje-uit-valk-lod1.glb"
+    ],
+    "mitat_m": [
+     0.067,
+     0.056,
+     0.023
+    ],
+    "etu": "+Z",
+    "nimi": "Romeins houten speelgoedpaardje uit Valkenburg",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/romeins-houten-speelgoedpaardje-uit-valkenburg-052370a42949479183c452a67297931e",
+    "mittakaava_arvio": true
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.31,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit6",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     15.1,
+     0.0,
+     -83.6
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.5
+    ]
+   },
+   "paikka": [
+    15.1,
+    0.95,
+    -83.6
+   ],
+   "max_koko": [
+    0.32,
+    0.23,
+    0.04
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      17.394,
+      3.68,
+      -85.206
+     ],
+     "suunta": [
+      -0.6,
+      -0.681,
+      0.42
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      17.394,
+      3.68,
+      -81.994
+     ],
+     "suunta": [
+      -0.6,
+      -0.681,
+      -0.42
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Gemma Constantiniana",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-gemma-constantiniana",
+    "glb": [
+     "patsaat/rmo-gemma-constantiniana-lod0.glb",
+     "patsaat/rmo-gemma-constantiniana-lod1.glb"
+    ],
+    "mitat_m": [
+     0.304,
+     0.22,
+     0.035
+    ],
+    "etu": "+Z",
+    "nimi": "Gemma Constantiniana",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/gemma-constantiniana-a4a7fc990ca5430bad25d17f8ccab232",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.47,
+     0.5
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit7",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     14.1,
+     0.0,
+     -87.2
+    ],
+    "koko": [
+     0.75,
+     0.95,
+     0.76
+    ]
+   },
+   "paikka": [
+    14.1,
+    0.95,
+    -87.2
+   ],
+   "max_koko": [
+    0.59,
+    0.14,
+    0.57
+   ],
+   "katse": [
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      11.806,
+      3.59,
+      -85.594
+     ],
+     "suunta": [
+      0.604,
+      -0.675,
+      -0.423
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      11.806,
+      3.59,
+      -88.806
+     ],
+     "suunta": [
+      0.604,
+      -0.675,
+      0.423
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Offertafel van Defdji",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-offertafel-van-defdji",
+    "glb": [
+     "patsaat/rmo-offertafel-van-defdji-lod0.glb",
+     "patsaat/rmo-offertafel-van-defdji-lod1.glb"
+    ],
+    "mitat_m": [
+     0.564,
+     0.13,
+     0.547
+    ],
+    "etu": "+Z",
+    "nimi": "Offertafel van Defdji",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/offertafel-van-defdji-580f4c7aebaf4de885b4d184cdcb87b2",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.75,
+     0.38,
+     0.76
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
+  },
+  {
+   "id": "leiden-vit8",
+   "osa": "leiden",
+   "jalusta": {
+    "keskipiste_ala": [
+     15.1,
+     0.0,
+     -87.2
+    ],
+    "koko": [
+     0.45,
+     0.95,
+     0.45
+    ]
+   },
+   "paikka": [
+    15.1,
+    0.95,
+    -87.2
+   ],
+   "max_koko": [
+    0.2,
+    0.35,
+    0.2
+   ],
+   "katse": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "valot": [
+    {
+     "paikka": [
+      17.394,
+      3.8,
+      -88.806
+     ],
+     "suunta": [
+      -0.594,
+      -0.688,
+      0.416
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    },
+    {
+     "paikka": [
+      17.394,
+      3.8,
+      -85.594
+     ],
+     "suunta": [
+      -0.594,
+      -0.688,
+      -0.416
+     ],
+     "puolikulma_aste": 22.0,
+     "lx": 200,
+     "kelvin": 4000
+    }
+   ],
+   "teos_ehdotus": "Eros pelike",
+   "lahde": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+   "teos": {
+    "id": "rmo-eros-pelike",
+    "glb": [
+     "patsaat/rmo-eros-pelike-lod0.glb",
+     "patsaat/rmo-eros-pelike-lod1.glb"
+    ],
+    "mitat_m": [
+     0.193,
+     0.335,
+     0.193
+    ],
+    "etu": "+Z",
+    "nimi": "Eros pelike",
+    "krediitti": "3D-skannaus: The National Museum of Antiquities (CC0), Rijksmuseum van Oudheden, Leiden",
+    "lisenssi": "CC0 Public Domain",
+    "lisenssi_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+    "lahde_url": "https://sketchfab.com/3d-models/eros-pelike-3b81be98b310473f952931088a7b1930",
+    "mittakaava_arvio": false
+   },
+   "vitriini": {
+    "koko": [
+     0.45,
+     0.58,
+     0.45
+    ],
+    "lasi": true,
+    "kehys": "messinki"
+   }
   }
  ],
  "yhteenveto": {
-  "osia": 15,
-  "aukkoja": 14,
-  "teospaikkoja": 54,
-  "grafiikka": 5,
-  "tekstitauluja": 54,
+  "osia": 16,
+  "aukkoja": 15,
+  "teospaikkoja": 62,
+  "grafiikka": 13,
+  "tekstitauluja": 62,
   "reittipisteita": 15,
-  "veistospaikkoja": 20
+  "veistospaikkoja": 34
  }
 }

@@ -69,7 +69,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var s = Alankomaat();
             s.LueHuoneet(File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Museo", "alankomaat", "huoneet.json")));
-            Oleta.Tosi(s.Huoneet.Count == 8, $"8 huonetta: {s.Huoneet.Count}");
+            Oleta.Tosi(s.Huoneet.Count == 9, $"9 huonetta: {s.Huoneet.Count}");
             foreach (var o in s.Osat)
                 Oleta.Tosi(s.Huoneet.FindAll(h => h.Osat.Contains(o.Id)).Count == 1, $"osa {o.Id} yhdessä huoneessa");
             foreach (var h in s.Huoneet)
@@ -121,15 +121,15 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void Jalustat()
         {
             var s = Alankomaat();
-            Oleta.Tosi(s.Jalustat.Count == 20 && s.Jalustat.Count == s.Veistospaikat.Count, $"20 veistospaikkaa: {s.Jalustat.Count}");
+            Oleta.Tosi(s.Jalustat.Count == 34 && s.Jalustat.Count == s.Veistospaikat.Count, $"34 veistospaikkaa (LR v2f): {s.Jalustat.Count}");
             foreach (var j in s.Jalustat)
             {
                 Oleta.Tosi(s.HaeOsa(j.Osa)?.Sisalla(j.Paikka) == true, $"{j.Id} osassa {j.Osa}");
-                Oleta.Tosi(Math.Abs(j.AlaKeski.Y) < 1e-6 && Math.Abs(j.Paikka.Y - j.Koko.Y) < 1e-6 && j.MaxKoko.Y > 1, $"{j.Id}: jalusta lattialla, veistos sen päällä");
+                Oleta.Tosi(Math.Abs(j.AlaKeski.Y) < 1e-6 && Math.Abs(j.Paikka.Y - j.Koko.Y) < 1e-6 && j.MaxKoko.Y > 0.02, $"{j.Id}: jalusta lattialla, veistos sen päällä (v2f: koko patsaan mukaan, vitriineissä pieniä)");
                 Oleta.Tosi(j.Valot.Count >= 1 && j.Valot.TrueForAll(v => v.Paikka.Y > j.Paikka.Y + 2 && v.Lx > 0), $"{j.Id}: keilat ylhäältä");
             }
             int n = s.LueVeistokset(File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Museo", "alankomaat", "veistokset.json")));
-            Oleta.Tosi(n == 6 && s.HaeJalusta("aula-v4").Veistos == "rijks-ccby-dieussart-spiering" && s.HaeJalusta("leiden-v1").Veistos == null, $"sijoitus: {n}");
+            Oleta.Tosi(n == 34 && s.HaeJalusta("aula-v4").Veistos == "rijks-ccby-maria-lapsi-alabasteri" && s.HaeJalusta("leiden-v1").Veistos == "rmo-beeld-van-maya-en-merit", $"sijoitus: {n}");
         }
 
         [Testi] static void HalliJaAukot()

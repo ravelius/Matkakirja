@@ -1,12 +1,12 @@
 # TAIDEMUSEON SALI → ÄMPÄRIPAKETTI (Linssiseppä 10.10.2026, PT 11.2x). Linnanrakentajan valmis sali (_valmiit/taidemuseo-<maa>-v1)
-# → <ulos>/sali-v1/, jonka MuseoRakennus.LataaSali lukee polusta <maan juuri>sali-v1/:
+# → <ulos>/sali-<versio>/, jonka MuseoRakennus.LataaSali lukee polusta <maan juuri>MuseoRakennus.SaliKansio (nyt sali-v2 = LR:n v2f):
 #   sali-lod{0,1}.glb                 sellaisenaan (TEXCOORD_0 toisto, TEXCOORD_1 valoatlas; upotetut kuvat vain simulaattorin varana)
 #   valot/sali-lod{0,1}-4x4.astcm     LR:n valoatlas sellaisenaan (E / 1200 lx, sRGB)
 #   valot/sali-lod{0,1}.jpg           sama JPEG:nä iOS-simulaattorille (ei ASTC:tä; tekstuurit silloin glb:n upotetuista JPEG:istä)
 #   tekstuurit/<materiaali>.astcm     LR:n tekstuurit/<nimi>.jpg → ASTC 6×6 + mipit (teos_astc.pakkaa, rivit alhaalta ylös, sRGB)
 #   LAHTEET.md                        LR:n lähdeluettelo + tämän paketin rivit
 # Tekstuuri tehdään jokaiselle glb-materiaalille, jolla on baseColorTexture ja samanniminen tekstuurit/<nimi>.jpg.
-# Käyttö: python3 -I museo_sali_paketti.py <LR:n kansio> <ulos>
+# Käyttö: python3 -I museo_sali_paketti.py <LR:n kansio> <ulos> [versio, oletus v2]
 import json, os, shutil, struct, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from PIL import Image
@@ -21,8 +21,9 @@ def materiaalit(glb):
 
 
 def main():
-    if len(sys.argv) < 3: sys.exit('käyttö: museo_sali_paketti.py <LR:n kansio> <ulos>')
-    lr, ulos = sys.argv[1], os.path.join(sys.argv[2], 'sali-v1')
+    if len(sys.argv) < 3: sys.exit('käyttö: museo_sali_paketti.py <LR:n kansio> <ulos> [versio, oletus v2]')
+    versio = sys.argv[3] if len(sys.argv) > 3 else 'v2'
+    lr, ulos = sys.argv[1], os.path.join(sys.argv[2], 'sali-' + versio)
     for k in ('', 'valot', 'tekstuurit'): os.makedirs(os.path.join(ulos, k), exist_ok=True)
     nimet = set()
     for lod in (0, 1):
@@ -41,11 +42,11 @@ def main():
         print(f'{nimi}: {kuva.size[0]}×{kuva.size[1]} → {len(data) / 1e6:.2f} Mt', flush=True)
     with open(os.path.join(ulos, 'LAHTEET.md'), 'w', encoding='utf-8') as f:
         f.write(open(os.path.join(lr, 'LAHTEET.md'), encoding='utf-8').read().rstrip() + '\n\n')
-        f.write('## Ämpäripaketti sali-v1 (Linssiseppä, tyokalut/museo_sali_paketti.py)\n\n'
+        f.write(f'## Ämpäripaketti sali-{versio} (Linssiseppä, tyokalut/museo_sali_paketti.py)\n\n'
                 '- sali-lod{0,1}.glb ja valot/*.astcm: Linnanrakentajan tiedostot sellaisenaan (oma työ).\n'
                 '- tekstuurit/*.astcm: LR:n tekstuurit/*.jpg ASTC 6×6 -pakattuina (oma työ / Poly Haven CC0, ks. LR:n tekstuurit/LAHTEET.md).\n')
     koko = sum(os.path.getsize(os.path.join(d, x)) for d, _, xs in os.walk(ulos) for x in xs)
-    print(f'sali-v1: {len(nimet) - len(puuttuu)} tekstuuria, puuttuu {puuttuu or "-"}, yhteensä {koko / 1e6:.1f} Mt → {ulos}')
+    print(f'sali-{versio}: {len(nimet) - len(puuttuu)} tekstuuria, puuttuu {puuttuu or "-"}, yhteensä {koko / 1e6:.1f} Mt → {ulos}')
 
 
 if __name__ == '__main__':

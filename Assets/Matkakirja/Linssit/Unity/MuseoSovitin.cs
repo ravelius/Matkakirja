@@ -42,7 +42,7 @@ namespace Matkakirja.Natiivi
         public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/";
         /// <summary>ASTC-seinätaso ja yksityiskohtaruudut (MuseoTekstuurit); false = vain JPEG-seinäkuvat ("museo astc pois").</summary>
         public static bool Astc = true;
-        /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + "sali-v1/"); false = väliaikaishalli ("museo sali halli").</summary>
+        /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + MuseoRakennus.SaliKansio); false = väliaikaishalli ("museo sali halli").</summary>
         public static bool SaliGlb = true;
         /// <summary>Sali-GLB:n taso: 0 = 13 k kolmiota + atlas 4096² (22 Mt), 1 = 7,8 k + 2048² (5,6 Mt); −1 = laitteen muistin mukaan.</summary>
         public static int SaliLod = -1;
