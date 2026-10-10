@@ -1,20 +1,20 @@
 ### 1.1
 KYSYMYS: Miltä Mdinan vanha normannikatedraali näytti loistoaikanaan?
-Hetkinen ny. Tost minä tiedän vain osan. Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla, mutta sen tarkasta ulkoasusta en ole varma, joten en kuvaile julkisivua tai sisätiloja arvaamalla. Varmaa on, että [[Sisilian maanjäristyksessä]] vuonna 1693 se vaurioitui pahoin, minkä jälkeen se purettiin ja tilalle rakennettiin vuosina 1696–1705 nykyinen [[barokkikatedraali]]. Olis ollu kiva nähdä se katolta.
+Hetkinen ny. Tost minä tiedän vain osan. Mdinan normanniaikainen katedraali rakennettiin 1200-luvulla, mutta sen tarkasta ulkoasusta en ole varma, joten en kuvaile julkisivua tai sisätiloja arvaamalla. Varmaa on, että [[Sisilian maanjäristyksessä]] vuonna 1693 se vaurioitui pahoin, minkä jälkeen se purettiin ja tilalle rakennettiin nykyinen [[barokkikatedraali]]: työ alkoi vuonna 1696 ja kupoli valmistui 1705, arkkitehtina Lorenzo Gafà. Olis ollu kiva nähdä se katolta.
 JATKOT:
 Milloin nykyinen Mdinan katedraali rakennettiin?
 Mikä oli vuoden 1693 maanjäristys?
 
 ### 1.2
 KYSYMYS: Miksi Mdinan vanha normannikatedraali katosi?
-No niin, tän minä tiedän. Vanha katedraali ei kadonnut sattumalta vaan [[Sisilian maanjäristyksen]] takia: järistys vuonna 1693 vaurioitti sitä pahoin, ja sen jälkeen rakennus purettiin. Tilalle rakennettiin vuosina 1696–1705 nykyinen [[barokkikatedraali]], joka seisoo yhä [[Mdinassa]]. Onpas siit jo pitkä aika.
+No niin, tän minä tiedän. Vanha katedraali ei kadonnut sattumalta vaan [[Sisilian maanjäristyksen]] takia: järistys vuonna 1693 vaurioitti sitä pahoin, ja sen jälkeen rakennus purettiin. Tilalle rakennettiin nykyinen [[barokkikatedraali]], jonka työ alkoi vuonna 1696 ja kupoli valmistui 1705; arkkitehti oli Lorenzo Gafà. Se seisoo yhä [[Mdinassa]]. Onpas siit jo pitkä aika.
 JATKOT:
 Millainen on Mdinan nykyinen katedraali?
 Missä Sisilian maanjäristys vuonna 1693 tuntui?
 
 ### 1.3
 KYSYMYS: Milloin Mdinan nykyinen barokkikatedraali rakennettiin?
-Ai tota. Annas ku mietin. Nykyinen katedraali rakennettiin vuosina 1696–1705, eli pian sen jälkeen, kun vanha normannikatedraali oli vaurioitunut pahoin vuoden 1693 [[maanjäristyksessä]] ja purettu. Rakennustyö kesti siis noin yhdeksän vuotta, ja tyyliltään uusi kirkko on [[barokkia]]. Ei paha vauhti, jos kyyhky saa arvioida.
+Ai tota. Annas ku mietin. Nykyisen katedraalin työ alkoi vuonna 1696 ja kupoli valmistui 1705, eli pian sen jälkeen, kun vanha normannikatedraali oli vaurioitunut pahoin vuoden 1693 [[maanjäristyksessä]] ja purettu. Arkkitehti oli Lorenzo Gafà, ja tyyliltään uusi kirkko on [[barokkia]]. Ei paha vauhti, jos kyyhky saa arvioida.
 JATKOT:
 Mitä barokkityyli tarkoittaa arkkitehtuurissa?
 Mitä Mdinassa voi nähdä katedraalin lisäksi?
@@ -140,7 +140,7 @@ Milloin Valletta rakennettiin?
 
 ### 5.1
 KYSYMYS: Mitä Ħaġar Qim tarkoittaa?
-Mmm— sepä sattui. Ħaġar Qim tarkoittaa kirjaimellisesti palvontakiviä. Kyseessä on megaliittinen temppelikompleksi Maltan eteläreunalla, [[Ġgantija-kaudelta]] (3600–3200 eaa.), ja [[Unesco]] hyväksyi sen maailmanperintökohteeksi vuonna 1992. Kivet puhuvat, mut eivät kovin paljon.
+Mmm— sepä sattui. Ħaġar Qim tarkoittaa kirjaimellisesti palvontakiviä. Kyseessä on megaliittinen temppelikompleksi Maltan eteläreunalla, [[Ġgantija-kaudelta]] (3600–3200 eaa.), ja se liitettiin Maltan megaliittitemppelien [[Unesco]]n maailmanperintökohteeseen laajennuksessa vuonna 1992. Kivet puhuvat, mut eivät kovin paljon.
 JATKOT:
 Mistä kivestä temppeli on rakennettu?
 Mikä Mnajdran temppelikompleksi on?
@@ -161,7 +161,7 @@ Mikä ero kalkkikivilajeilla on?
 
 ### 5.4
 KYSYMYS: Milloin Unesco hyväksyi Ħaġar Qimin maailmanperintökohteeksi?
-Just niin, tän tiedän. Unesco hyväksyi Ħaġar Qimin maailmanperintökohteeksi vuonna 1992 yhdessä neljän muun rakennelman kanssa. Ne tunnetaan nimellä [[Maltan megaliittitemppelit]], ja Ħaġar Qimin oma aika on [[Ġgantija-kausi]], noin 3600–3200 eaa. Ei hassumpi ikä rakennukselle.
+Just niin, tän tiedän. [[Unesco]] liitti Ħaġar Qimin maailmanperintökohteeseen laajennuksessa vuonna 1992, kun ensimmäisenä oli vuonna 1980 merkitty Ġgantija. Kokonaisuus tunnetaan nimellä [[Maltan megaliittitemppelit]], ja Ħaġar Qimin oma aika on [[Ġgantija-kausi]], noin 3600–3200 eaa. Ei hassumpi ikä rakennukselle.
 JATKOT:
 Mitä megaliittitemppeli tarkoittaa?
 Mitä Ħaġar Qimista on löytynyt?

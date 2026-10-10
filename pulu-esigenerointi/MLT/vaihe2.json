@@ -18,7 +18,7 @@
   "kohde": "kohde:hahmotelma-mdinan-vanha-katedraali",
   "kasite": "barokkikatedraali",
   "kysymys": "Kerro lisää: barokkikatedraali",
-  "vastaus": "Mdinan nykyinen katedraali on omistettu [[Pyhälle Paavalille]], ja sen suunnitteli perimätiedon ja lähteiden mukaan arkkitehti [[Lorenzo Gafà]]. Rakennus edustaa Maltan myöhäisbarokkia: kupoli, runsas koristelu ja rakennuksen asema kaupungin korkeimmalla kohdalla tekevät siitä Mdinan tunnetuimman maamerkin. Rakennus seisoo samalla paikalla, jolla vanha normannikatedraali aiemmin sijaitsi, mutta en ole aivan varma kaikista rakennusvaiheen yksityiskohdista.",
+  "vastaus": "Mdinan nykyinen katedraali on omistettu [[Pyhälle Paavalille]], ja sen suunnitteli arkkitehti [[Lorenzo Gafà]], ja työ alkoi vuonna 1696 ja kupoli valmistui 1705. Rakennus edustaa Maltan myöhäisbarokkia: kupoli, runsas koristelu ja rakennuksen asema kaupungin korkeimmalla kohdalla tekevät siitä Mdinan tunnetuimman maamerkin. Rakennus seisoo samalla paikalla, jolla vanha normannikatedraali aiemmin sijaitsi, mutta en ole aivan varma kaikista rakennusvaiheen yksityiskohdista.",
   "linkit": [
    "Pyhälle Paavalille",
    "Lorenzo Gafà"
@@ -771,7 +771,7 @@
   "kohde": "kohde:hahmotelma-ggantija",
   "kasite": "maailmanperintöluetteloon",
   "kysymys": "Kerro lisää: maailmanperintöluetteloon",
-  "vastaus": "Maailmanperintöluettelossa on yli tuhat kohdetta, ja ne jaetaan kulttuuri-, luonto- ja sekakohteisiin. Kulttuurikohteet voivat olla yksittäisiä rakennuksia, kaupunkeja tai alueita, ja luontokohteet esimerkiksi kansallispuistoja. Maltalta luettelossa ovat [[Vallettan]] vanhakaupunki, Ġgantijan ja muut megaliittitemppelit sekä [[Ħal Saflienin]] hypogeum, ja ne kaikki hyväksyttiin 1980-luvun alussa tai vuonna 1992. En ole varma kaikkien kohteiden tarkoista vuosista.",
+  "vastaus": "Maailmanperintöluettelossa on yli tuhat kohdetta, ja ne jaetaan kulttuuri-, luonto- ja sekakohteisiin. Kulttuurikohteet voivat olla yksittäisiä rakennuksia, kaupunkeja tai alueita, ja luontokohteet esimerkiksi kansallispuistoja. Maltalta luettelossa ovat [[Vallettan]] vanhakaupunki, Ġgantijan ja muut megaliittitemppelit sekä [[Ħal Saflienin]] hypogeum, ja Valletta sekä Ġgantija merkittiin luetteloon vuonna 1980 ja Ħaġar Qim laajennuksessa vuonna 1992. En ole varma kaikkien kohteiden tarkoista vuosista.",
   "linkit": [
    "Vallettan",
    "Ħal Saflienin"
@@ -1800,7 +1800,7 @@
   "kohde": "kohde:hahmotelma-fort-manoel",
   "kasite": "Johanniittaritarikunnan",
   "kysymys": "Kerro lisää: Johanniittaritarikunnan",
-  "vastaus": "[[Johanniittaritarikunta]] rakennutti Maltalle laajan linnoitusjärjestelmän, johon kuuluu myös [[Fort Manoel]]. Linnoitus nousi 1700-luvulla Manoel-saarelle suurmestari António Manoel de Vilhenan aikana, ja sekä saari että linnoitus on nimetty hänen mukaansa. Se on tähtimäinen linnoitus, joka hallitsee [[Marsamxettin]] satamaa ja Slieman ankkuripaikkaa. Ritarikunnan valta Maltalla päättyi Ranskan miehitykseen, minkä jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti. Tarkan vuoden, jolloin ranskalaiset saapuivat, en ole varma, mutta se oli 1700-luvun lopulla.",
+  "vastaus": "[[Johanniittaritarikunta]] rakennutti Maltalle laajan linnoitusjärjestelmän, johon kuuluu myös [[Fort Manoel]]. Linnoitus nousi 1700-luvulla Manoel-saarelle suurmestari António Manoel de Vilhenan aikana, ja sekä saari että linnoitus on nimetty hänen mukaansa. Se on tähtimäinen linnoitus, joka hallitsee [[Marsamxettin]] satamaa ja Slieman ankkuripaikkaa. Ritarikunnan valta Maltalla päättyi Ranskan miehitykseen, minkä jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan 1900-luvun puoliväliin asti. Tarkan vuoden, jolloin ranskalaiset saapuivat, en ole varma, mutta se oli 1700-luvun lopulla.",
   "linkit": [
    "Johanniittaritarikunta",
    "Fort Manoel",
@@ -1845,7 +1845,7 @@
   "kohde": "kohde:hahmotelma-fort-manoel",
   "kasite": "Manoel-saarella",
   "kysymys": "Kerro lisää: Manoel-saarella",
-  "vastaus": "[[Manoel-saari]] sijaitsee [[Marsamxettin]] satamassa Gżiran edustalla. Saarella on tähtimäinen [[Fort Manoel]], jonka Johanniittaritarikunta rakensi 1700-luvulla suurmestari António Manoel de Vilhenan aikana. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan vuoteen 1964 asti. Lähteiden mukaan saarella oli aiemmin myös karanteeniasema, mutta ajankohdasta en ole varma.",
+  "vastaus": "[[Manoel-saari]] sijaitsee [[Marsamxettin]] satamassa Gżiran edustalla. Saarella on tähtimäinen [[Fort Manoel]], jonka Johanniittaritarikunta rakensi 1700-luvulla suurmestari António Manoel de Vilhenan aikana. Linnoitus hallitsee Marsamxettin satamaa ja Slieman ankkuripaikkaa. Ranskalaismiehityksen jälkeen britit ottivat linnoituksen käyttöönsä vuonna 1800 ja pitivät sitä varuskuntanaan 1900-luvun puoliväliin asti. Lähteiden mukaan saarella oli aiemmin myös karanteeniasema, mutta ajankohdasta en ole varma.",
   "linkit": [
    "Manoel-saari",
    "Marsamxettin",
@@ -2770,7 +2770,7 @@
   "kohde": "kohde:hahmotelma-blue-grotto",
   "kasite": "Filfla",
   "kysymys": "Kerro lisää: Filfla",
-  "vastaus": "Filfla on pieni asumaton saari Maltan etelärannikon edustalla. Sitä käytettiin 1900-luvulla ammuntaharjoitusten maalina, lähteiden mukaan 1970-luvun alkuun asti, minkä jälkeen se on suojeltu. Nykyisin saarella pesii merilintuja, esimerkiksi [[välimerenliiroja]] ja [[myrskylintuja]], ja siellä elää myös oma Filfolan seinäliskon alalajinsa. Saarelle ei ole vapaata pääsyä, jotta pesintä ei häiriinny.",
+  "vastaus": "Filfla on pieni asumaton saari Maltan etelärannikon edustalla. Sitä käytettiin 1900-luvulla ammuntaharjoitusten maalina, ja harjoitukset päättyivät vuonna 1971, minkä jälkeen se on suojeltu. Nykyisin saarella pesii merilintuja, esimerkiksi [[välimerenliiroja]] ja [[myrskylintuja]], ja siellä elää myös oma Filfolan seinäliskon alalajinsa. Saarelle pääsee vain luvalla, jotta pesintä ei häiriinny.",
   "linkit": [
    "välimerenliiroja",
    "myrskylintuja"
@@ -3556,7 +3556,7 @@
   "kohde": "kohde:hahmotelma-fort-chambray",
   "kasite": "Fort Chambrayn",
   "kysymys": "Kerro lisää: Fort Chambrayn",
-  "vastaus": "Fort Chambray on bastionilinnoitus [[Għajnsielemin]] kunnan alueella Gozolla, ja johanniittaritarit rakensivat sen 1700-luvun puolivälissä Ras it-Tafalin niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Sen oli tarkoitus olla ydinlinnake uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina, mutta suunnitelma ei koskaan toteutunut kokonaan. Vuonna 1798 ranskalaismiehityksen aikana linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään linnoitusta kunnostetaan ja siihen rakennetaan majoitustiloja. Nimen alkuperää en ole varma, mutta se viittaa todennäköisesti ritarikunnan ranskalaiseen jäseneen.",
+  "vastaus": "Fort Chambray on bastionilinnoitus [[Għajnsielemin]] kunnan alueella Gozolla, ja johanniittaritarit rakensivat sen 1700-luvun puolivälissä Ras it-Tafalin niemelle Mġarrin sataman ja Xatt l-Aħmarin välille. Sen oli tarkoitus olla ydinlinnake uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina, mutta suunnitelma ei koskaan toteutunut kokonaan. Ranskalaiset valtasivat linnoituksen kesäkuussa 1798, ja se vapautui gozolaisten kapinassa syksyllä 1798. Myöhemmin siitä tehtiin sotilassairaala ja vuosina 1934–1983 siviilimielisairaala. Nykyään linnoitusta kunnostetaan ja siihen rakennetaan majoitustiloja. Nimen alkuperää en ole varma, mutta se viittaa todennäköisesti ritarikunnan ranskalaiseen jäseneen.",
   "linkit": [
    "Għajnsielemin",
    "Cittadellan"
@@ -3644,7 +3644,7 @@
   "kohde": "kohde:hahmotelma-fort-chambray",
   "kasite": "Fort Chambray",
   "kysymys": "Kerro lisää: Fort Chambray",
-  "vastaus": "Fort Chambray on bastionilinnoitus Gozon kaakkoisosassa, [[Għajnsielemin]] kunnan alueella. Johanniittaritarit rakensivat sen 1700-luvun puolivälissä Ras it-Tafalin niemelle, ja se sijaitsee [[Mġarrin]] sataman ja Xatt l-Aħmarin välillä. Linnoituksen oli määrä olla ydinlinnake uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina, mutta suunnitelma jäi kesken. Ranskalaismiehityksen aikana vuonna 1798 linnoitus näki taisteluita, ja myöhemmin siitä tehtiin sotilassairaala ja mielisairaala. Nykyään sitä kunnostetaan ja siihen rakennetaan majoitustiloja.",
+  "vastaus": "Fort Chambray on bastionilinnoitus Gozon kaakkoisosassa, [[Għajnsielemin]] kunnan alueella. Johanniittaritarit rakensivat sen 1700-luvun puolivälissä Ras it-Tafalin niemelle, ja se sijaitsee [[Mġarrin]] sataman ja Xatt l-Aħmarin välillä. Linnoituksen oli määrä olla ydinlinnake uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina, mutta suunnitelma jäi kesken. Ranskalaiset valtasivat linnoituksen kesäkuussa 1798, ja se vapautui gozolaisten kapinassa syksyllä 1798. Myöhemmin siitä tehtiin sotilassairaala ja vuosina 1934–1983 siviilimielisairaala. Nykyään sitä kunnostetaan ja siihen rakennetaan majoitustiloja.",
   "linkit": [
    "Għajnsielemin",
    "Mġarrin",
