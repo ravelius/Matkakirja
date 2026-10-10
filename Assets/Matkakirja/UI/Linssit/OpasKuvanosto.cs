@@ -73,7 +73,7 @@ namespace Matkakirja.Natiivi
             teksti.text = OpasYksityiskohdat.KortinTeksti(k);
             // Kuvateksti ei näy suurena (omistaja TF 180, 11.10. 00.0x: "ota kuva teksti pois kun kuvat avataan isommiksi"); tekijärivi
             // (CC-nimeäminen) jää. Havainnekuvan merkintä kokonaan tekijäriville, koska kuvatekstin "Havainnekuva." ei enää näy.
-            lahde.text = k.Havainnekuva ? "Havainnekuva · tekoälyllä tuotettu" : OpasYksityiskohdat.Tekijarivi(k) ?? "";
+            lahde.text = OpasYksityiskohdat.Tekijarivi(k, ilmanKuvatekstia: true) ?? "";
             if (Testikuva != null) { Kiinnita(Testikuva, k, v); return; }
             Kuvat.Hae(k.Url, t => Kiinnita(t, k, v));
         }

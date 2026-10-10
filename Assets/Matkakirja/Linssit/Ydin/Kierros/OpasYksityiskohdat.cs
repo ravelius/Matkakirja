@@ -52,15 +52,16 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public static string KortinTeksti(Kuva k) => string.IsNullOrWhiteSpace(k?.Kuvateksti) ? "" : k.Kuvateksti.Trim();
 
-        /// <summary>Kortin alarivi: "Kuva: tekijä, lisenssi"; havainnekuvassa "Havainnekuva" (ja tekijä, jos annettu).</summary>
-        public static string Tekijarivi(Kuva k)
+        /// <summary>Kortin alarivi: "Kuva: tekijä, lisenssi"; havainnekuvassa "Havainnekuva" (ja tekijä, jos annettu).
+        /// ilmanKuvatekstia: kuvateksti ei näy (suuri kuvanosto, omistaja TF 180), joten havainnekuvan merkintä kokonaan tähän riviin.</summary>
+        public static string Tekijarivi(Kuva k, bool ilmanKuvatekstia = false)
         {
             if (k == null) return "";
             string tekija = string.IsNullOrWhiteSpace(k.Tekija) ? "" : k.Tekija.Trim();
             string lisenssi = string.IsNullOrWhiteSpace(k.Lisenssi) ? "" : k.Lisenssi.Trim();
             // Havainnekuva (Sisältökirjuri: kuvateksti päättyy "Havainnekuva.", tekijä Codex): merkintä kerran, ei tekijää.
             if (k.Havainnekuva)
-                return (k.Kuvateksti ?? "").IndexOf("havainnekuva", StringComparison.OrdinalIgnoreCase) >= 0
+                return !ilmanKuvatekstia && (k.Kuvateksti ?? "").IndexOf("havainnekuva", StringComparison.OrdinalIgnoreCase) >= 0
                     ? "Tekoälyllä tuotettu, ei valokuva" : "Havainnekuva · tekoälyllä tuotettu";
             if (tekija.Length == 0) return "";
             return lisenssi.Length > 0 ? $"Kuva: {tekija}, {lisenssi}" : $"Kuva: {tekija}";
