@@ -5,11 +5,15 @@
 //
 //   KORTTI-pohja, modaali (kuten Vahvistus): kapiteeli, otsikko, leipä (tekoälymerkintä ja mitä tallennetaan),
 //   Lomake.Valinta (syntymävuosi), napit Ei nyt (TOIMINTO) ja Jatka (kulta, vasta kun vuosi on valittu).
-//   Ei nyt = tuntematon ikä: kuratoitu tämän käynnistyksen ajan, kysytään uudestaan seuraavalla käynnistyksellä.
+//   Ei nyt = tuntematon ikä: kuratoitu, ja peli ei kysy uudelleen itse ("kysyy kerran"; arvo "?" säilyy, PT 10.10. 11.5x).
 //   Aikuinen vain varmasti: syntymävuodesta laskettu pienin mahdollinen ikä ≥ 18 (vuosi − syntymävuosi − 1).
-// Testikomento: ui ikaraja kysy | aikuinen | kuratoitu | nollaa (UiKomennot).
+// ASETUKSET (PT 10.10. 11.5x): Asetukset-näkymän Ikäraja-rivi (UiNakymat.RakennaAsetusnakyma, valikkonapin pohja) näyttää tilan
+// ja avaa SAMAN kortin: vastaamaton voi vastata myöhemmin; vastauksen jälkeen vain tiukempaan suuntaan (aikuinen → alle 18),
+// alle 18 on lukittu (rivi kertoo sen tilarivillä). Säännöt Peli/IkarajaSaanto.cs (testit IkarajaTestit).
+// Testikomento: ui ikaraja kysy | asetukset | aikuinen | kuratoitu | nollaa | sulje (UiKomennot).
 using System;
 using System.Collections.Generic;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -17,25 +21,17 @@ namespace Matkakirja.Natiivi
 {
     public static class Ikaraja
     {
-        /// <summary>PlayerPrefs: "1" = aikuinen, "0" = alle 18; puuttuu = ei kysytty.</summary>
+        /// <summary>PlayerPrefs: "1" = aikuinen, "0" = alle 18, "?" = kysytty, ei vastattu; puuttuu = ei kysytty.</summary>
         public const string Avain = "matkakirja-aikuinen";
-        public const int Taysi = 18, Vanhin = 1920;
+        public const int Taysi = IkarajaSaanto.Taysi, Vanhin = 1920;
 
-        static bool eiNyt;
         static VisualElement himmennys;
         static DropdownField vuosi;
         static Button jatka;
         static readonly List<Action> odottavat = new List<Action>();
 
         /// <summary>Aikuinen (true), alle 18 (false) tai ei tiedossa (null).</summary>
-        public static bool? Aikuinen
-        {
-            get
-            {
-                string a = PlayerPrefs.GetString(Avain, "");
-                return a == "1" ? true : a == "0" ? false : (bool?)null;
-            }
-        }
+        public static bool? Aikuinen => IkarajaSaanto.Lue(PlayerPrefs.GetString(Avain, ""));
 
         /// <summary>Kuratoitu live: alle 18 tai tuntematon ikä (Raamattu). Worker-pyyntö lukee tämän.</summary>
         public static bool Kuratoitu => Aikuinen != true;
@@ -44,8 +40,11 @@ namespace Matkakirja.Natiivi
         public const string Otsake = "x-matkakirja-aikuinen";
         public static string OtsakeArvo => Kuratoitu ? "0" : "1";
 
-        /// <summary>Kysytty tällä käynnistyksellä tai aiemmin (vastaus tallessa).</summary>
-        public static bool Kysytty => eiNyt || Aikuinen.HasValue;
+        /// <summary>Kysytty kerran (vastaus tai Ei nyt tallessa): peli ei kysy enää itse.</summary>
+        public static bool Kysytty => IkarajaSaanto.Kysytty(PlayerPrefs.GetString(Avain, ""));
+
+        /// <summary>Asetukset-rivin tila: aikuinen, alle 18 tai ei vastattu.</summary>
+        public static string TilaTeksti => Kieli.T(Aikuinen == true ? "ui.ikaraja.tila.aikuinen" : Aikuinen == false ? "ui.ikaraja.tila.alle-18" : "ui.ikaraja.tila.ei-vastattu");
 
         /// <summary>Tila muuttui (vastaus tai nollaus).</summary>
         public static event Action Muuttui;
@@ -65,22 +64,33 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Aikuinen jos pienin mahdollinen ikä tänä vuonna on vähintään 18 (syntymäpäivä voi olla vielä edessä).</summary>
-        public static bool OnAikuinen(int syntymavuosi, int nyt) => nyt - syntymavuosi - 1 >= Taysi;
+        public static bool OnAikuinen(int syntymavuosi, int nyt) => IkarajaSaanto.OnAikuinen(syntymavuosi, nyt);
+
+        /// <summary>
+        /// Asetukset-rivi: sama kortti, kun tilaa voi vielä vaihtaa (ei vastattu tai aikuinen); alle 18 on lukittu → tilarivin viesti.
+        /// </summary>
+        public static void AvaaAsetuksista()
+        {
+            if (!IkarajaSaanto.VoiVaihtaa(Aikuinen))
+            {
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Tilarivi.Viesti(Kieli.T("ui.ikaraja.lukittu"));
+                return;
+            }
+            Nayta();
+        }
 
         public static void Tallenna(bool aikuinen)
         {
-            PlayerPrefs.SetString(Avain, aikuinen ? "1" : "0");
+            PlayerPrefs.SetString(Avain, aikuinen ? IkarajaSaanto.ArvoAikuinen : IkarajaSaanto.ArvoAlle18);
             PlayerPrefs.Save();
-            eiNyt = false;
             Debug.Log("MATKAKIRJA ikaraja: " + (aikuinen ? "aikuinen" : "alle 18 (kuratoitu)"));
             Muuttui?.Invoke();
         }
 
         public static void Nollaa()
         {
-            PlayerPrefs.DeleteKey(Avain);
+            PlayerPrefs.DeleteKey(Avain);   // myös "?" (ei vastattu): kysytään taas seuraavalla live-kysymyksellä
             PlayerPrefs.Save();
-            eiNyt = false;
             Muuttui?.Invoke();
         }
 
@@ -102,15 +112,26 @@ namespace Matkakirja.Natiivi
             vuosi.RegisterValueChangedCallback(_ => jatka?.SetEnabled(vuosi.index > 0));
             Kirjasimet.Aseta(Rakenne.Teksti(Kieli.T("ui.ikaraja.tallennus"), "mk-kortti__teksti", kortti.Sisus), Tyylikirja.Kirjain.Apuri);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            Rakenne.Nappi(Kieli.T("ui.ikaraja.ei-nyt"), "mk-nappi--toiminto", () => { eiNyt = true; Debug.Log("MATKAKIRJA ikaraja: ei nyt (kuratoitu)"); Muuttui?.Invoke(); Sulje(); }, napit);
+            Rakenne.Nappi(Kieli.T("ui.ikaraja.ei-nyt"), "mk-nappi--toiminto", () => { EiNyt(); Sulje(); }, napit);
             jatka = Rakenne.Nappi(Kieli.T("ui.ikaraja.jatka"), "mk-nappi--kulta", () =>
             {
                 if (vuosi.index <= 0) return;
-                Tallenna(OnAikuinen(nyt - (vuosi.index - 1), nyt));
+                // Vain tiukempaan suuntaan: alle 18 ei muutu aikuiseksi (IkarajaSaanto.Uusi).
+                Tallenna(IkarajaSaanto.Uusi(Aikuinen, OnAikuinen(nyt - (vuosi.index - 1), nyt)));
                 Sulje();
             }, napit);
             Kirjasimet.Aseta(napit, Kirjasin.Kone);
             Kirjasimet.Aseta(jatka, Kirjasin.KoneLihava);
+        }
+
+        /// <summary>Ei nyt: vastaamaton tila talteen ("?", kuratoitu, ei kysytä uudelleen); annettu vastaus säilyy ennallaan.</summary>
+        static void EiNyt()
+        {
+            if (Aikuinen.HasValue) return;
+            PlayerPrefs.SetString(Avain, IkarajaSaanto.ArvoEiVastattu);
+            PlayerPrefs.Save();
+            Debug.Log("MATKAKIRJA ikaraja: ei nyt (kuratoitu, ei kysytä uudelleen)");
+            Muuttui?.Invoke();
         }
 
         static void Nayta()
@@ -138,12 +159,13 @@ namespace Matkakirja.Natiivi
         {
             switch (komento)
             {
-                case "kysy": eiNyt = false; Nayta(); return "ikäkysely auki";
+                case "kysy": Nayta(); return "ikäkysely auki";
+                case "asetukset": AvaaAsetuksista(); return Auki ? "ikäkysely auki (Asetukset)" : "ikäraja lukittu (alle 18)";
                 case "aikuinen": Tallenna(true); return "aikuinen";
                 case "kuratoitu": Tallenna(false); return "alle 18 (kuratoitu)";
                 case "nollaa": Nollaa(); return "nollattu (kysytään seuraavalla live-kysymyksellä)";
                 case "sulje": Sulje(); return "ikäkysely kiinni";
-                default: return $"ikaraja: {(Aikuinen == true ? "aikuinen" : Aikuinen == false ? "alle 18" : eiNyt ? "ei nyt" : "ei kysytty")}, kuratoitu {Kuratoitu}";
+                default: return $"ikaraja: {(Aikuinen == true ? "aikuinen" : Aikuinen == false ? "alle 18" : Kysytty ? "ei vastattu" : "ei kysytty")}, kuratoitu {Kuratoitu}";
             }
         }
     }
