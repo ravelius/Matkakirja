@@ -1569,6 +1569,7 @@ namespace Matkakirja.Natiivi
             };
             r.SetRequestHeader("Content-Type", "application/json");
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            r.SetRequestHeader(Ikaraja.Otsake, Ikaraja.OtsakeArvo);   // kuratoitu live (Raamattu ALLE 18 KURATOITU)
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             // Kehittäjäkoodi (web x-pollo-kehittaja): omistajan laitteella ohittaa päivärajan, jonka web ja natiivi
             // samasta verkosta jakavat. Vain Keychainista (Asetukset.PolloKoodi), ei koskaan koodissa eikä lokissa;

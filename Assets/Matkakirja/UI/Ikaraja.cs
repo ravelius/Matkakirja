@@ -40,6 +40,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuratoitu live: alle 18 tai tuntematon ikä (Raamattu). Worker-pyyntö lukee tämän.</summary>
         public static bool Kuratoitu => Aikuinen != true;
 
+        /// <summary>Workerin otsake (Pelikoodari 10.10.): 1 = aikuinen, 0 = kuratoitu (alle 18 tai tuntematon); puuttuu = kuratoitu.</summary>
+        public const string Otsake = "x-matkakirja-aikuinen";
+        public static string OtsakeArvo => Kuratoitu ? "0" : "1";
+
         /// <summary>Kysytty tällä käynnistyksellä tai aiemmin (vastaus tallessa).</summary>
         public static bool Kysytty => eiNyt || Aikuinen.HasValue;
 
