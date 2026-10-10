@@ -6,7 +6,7 @@
  "kaupunki": {
   "id": "monaco",
   "name": "Monaco",
-  "wiki": "Monaco-Ville",
+  "wiki": "Principality of Monaco",
   "ambience": "satama",
   "pallo": {
    "lat": 43.731,
@@ -505,6 +505,7 @@
    "Jardin Exotique on ollut suljettuna vuodesta 2020; avaustilanne lokakuussa 2026 tuntematon. Teksteissä ei väitetä aukioloa, oppaan hyvä tietää -rivi kehottaa tarkistamaan.",
    "Tekstien kasinosuhde: Joseph Jagger -tapausta ei yhdistetä isoisän matkavuoteen, koska lähteet ajoittavat sen eri tavoin. Salle Garnier ja kasino ovat noin 70 m päässä toisistaan; kartalla numeroympyrät voivat peittyä, jolloin Salle Garnier pois.",
    "Port Hercule on merkitty tyypillä aukio (vesialue), koska mallissa ei ole sopivampaa.",
+   "kaupunki.wiki: \"Monaco (kaupunki)\" ei löytynyt Wikipediasta; käytössä \"Principality of Monaco\" (en-uudelleenohjaus, tarkistin hyväksyy). Päätoimittaja: vahvista avain tai ehdota toista.",
    "um.fi:n matkustustiedote ei ollut luettavissa (403); oppaassa ei viranomaisviittausta eikä turvallisuusväitteitä. Wikidatan P625 antoi 429, joten koordinaatit ovat Wikipedia-artikkelien.",
    "Menton/Roquebrunen osuus (95 % / 80 %) on lähteissä ristiriitainen; teksteissä vain 'pieni osa entisestä alueesta'.",
    "Salle Garnier -kuvan lähderivi on CC BY 2.0 (kuvat.md); tarkistin saattaa vaatia versiota."
