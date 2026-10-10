@@ -4,6 +4,9 @@
   "Assets/Matkakirja/UI/Aloitusnakyma.cs": {
    "vari": 2
   },
+  "Assets/Matkakirja/UI/Galleriat.cs": {
+   "fontti": 1
+  },
   "Assets/Matkakirja/UI/KohdekarttaNakyma.cs": {
    "vari": 1
   },
@@ -26,28 +29,38 @@
    "vari": 3
   },
   "Assets/Matkakirja/UI/Linssit/AikajanaNakyma.cs": {
+   "fontti": 1,
    "vari": 6
   },
   "Assets/Matkakirja/UI/Linssit/AvaruuskavelyNakyma.cs": {
+   "fontti": 1,
    "vari": 1
   },
   "Assets/Matkakirja/UI/Linssit/Avaruussumu.cs": {
    "vari": 1
   },
   "Assets/Matkakirja/UI/Linssit/DioraamaTaulu.cs": {
+   "fontti": 11,
    "vari": 7
   },
   "Assets/Matkakirja/UI/Linssit/IhmisenTutkimusNakyma.cs": {
    "vari": 2
   },
   "Assets/Matkakirja/UI/Linssit/IssKytkinpoyta.cs": {
+   "fontti": 3,
    "vari": 1
   },
   "Assets/Matkakirja/UI/Linssit/IssKyytiNakyma.cs": {
    "vari": 9
   },
+  "Assets/Matkakirja/UI/Linssit/IssOhjaamo.cs": {
+   "fontti": 2
+  },
   "Assets/Matkakirja/UI/Linssit/Keksijakaruselli.cs": {
    "vari": 1
+  },
+  "Assets/Matkakirja/UI/Linssit/KierrosTaulu.cs": {
+   "fontti": 4
   },
   "Assets/Matkakirja/UI/Linssit/Maakayrakuva.cs": {
    "vari": 2
@@ -56,12 +69,17 @@
    "vari": 2
   },
   "Assets/Matkakirja/UI/Linssit/MikseriPaneeli.cs": {
+   "fontti": 3,
    "vari": 6
+  },
+  "Assets/Matkakirja/UI/Linssit/OpasMetrolinja.cs": {
+   "fontti": 1
   },
   "Assets/Matkakirja/UI/Linssit/Pistenaytto.cs": {
    "vari": 7
   },
   "Assets/Matkakirja/UI/Linssit/RadioNakyma.cs": {
+   "fontti": 1,
    "vari": 3
   },
   "Assets/Matkakirja/UI/Linssit/Tiedeliitenakyma.cs": {
@@ -267,6 +285,12 @@
   },
   "Assets/Matkakirja/UI/Saavutettavuus.cs": {
    "vari": 2
+  },
+  "Assets/Matkakirja/UI/UiKomennot.cs": {
+   "fontti": 1
+  },
+  "Assets/Matkakirja/UI/Ylapalkki.cs": {
+   "fontti": 2
   }
  }
 }

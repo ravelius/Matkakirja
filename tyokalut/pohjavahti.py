@@ -8,6 +8,8 @@
 #   - väri, jonka deklaraation perässä on /* väripoikkeus: syy */, on hyväksytty poikkeus (Päätoimittaja 8.10.2026);
 #     samoin fonttikoko, jonka perässä on /* fonttipoikkeus: syy */
 #   - C# (Assets/Matkakirja/UI): uudet värivakiot (new Color(…), new Color32(…), ColorUtility) muualla kuin Tyylikirja.cs:ssä
+#   - C#: numeroilla annetut fonttikoot (style.fontSize = 13 tai lauseke, jossa on numero; Päätoimittaja 10.10.2026 räikkänä:
+#     nykyinen määrä on katto) — käytä Tyylikirja.Koko-vakioita
 #   python3 tyokalut/pohjavahti.py            tarkista (exit 1, jos jokin tiedosto ylittää lähtötasonsa)
 #   python3 tyokalut/pohjavahti.py --kirjaa   kirjoita lähtötaso (vain omistajan päätöksellä: uusi poikkeus tai siirron jälkeen)
 import json, os, re, sys, glob
@@ -17,6 +19,8 @@ VARI = re.compile(r'#[0-9a-fA-F]{3,8}\b|rgba?\(')
 FONTTI = re.compile(r'font-size:\s*[\d.]+px')
 SIIRTYMA = re.compile(r'transition-duration:\s*([^;]+);')
 CSVARI = re.compile(r'new Color(32)?\(|ColorUtility\.')
+CSFONTTI = re.compile(r'fontSize\s*=\s*([^;]+);')
+NUMERO = re.compile(r'(?<![\w.])\d')
 
 def kesto_yli(arvo):
     for osa in arvo.split(','):
@@ -42,7 +46,8 @@ def laske():
         if p.endswith('Tyylikirja.cs'): continue
         s = re.sub(r'//[^\n]*', '', open(p, encoding='utf-8').read())
         n = len(CSVARI.findall(s))
-        if n: t[p] = {'vari': n}
+        f = sum(1 for lauseke in CSFONTTI.findall(s) if NUMERO.search(lauseke))
+        if n or f: t[p] = {k: x for k, x in (('vari', n), ('fontti', f)) if x}
     return t
 
 def main():
