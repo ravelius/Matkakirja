@@ -559,8 +559,9 @@ namespace Matkakirja.Editori
             ("vapaa lento", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("mika"); o.Komento("vapaalento"); },
                 () => { var o = OpasValikko.Hae(); o.Komento("mika pois"); o.Komento("vapaalento pois"); o.Komento("sulje"); }, 0.6),
             // Pulu (Natiivi-UI 10.10.2026): kuplapino suoraan PuluKuplat.Lisaa:lla (Sano piilottaa tekstit oletuksena), lyhyt ja
-            // pitkä kupla pinoon ilman ääntä; matkakirjan merkintä kuten `ui matkakirja tanger` + `auki`; Pulun chat linssissä
-            // (Minipulun kortti) kuten `ui chat teema lasi`.
+            // pitkä kupla pinoon ilman ääntä; matkakirjan merkintä kuten `ui matkakirja tanger` + `auki`; Pulun chat linssitilassa
+            // pelin omalla polulla (oppaan Näytä teksti, ankkuri sirurivi tai ☰: `ui opasvalikko teksti`). Ruudun reunaan
+            // keksitty ankkuri (ajo 10.10. 03.18) vei paneelin iPhonen vaakatilassa turva-alueen yli: ei pelin polku.
             ("Pulun kuplat", () =>
                 {
                     var p = UiNakymat.Hae().Pulu;
@@ -573,12 +574,8 @@ namespace Matkakirja.Editori
                     var u = UiNakymat.Hae();
                     u.Saapuminen.Testi("tanger", "", t => { Kirjaa("-- matkakirja: " + t); u.Matkakirja.Avaa(); });
                 }, () => { UiNakymat.Hae().Matkakirja.Piilota(); SuljeKaikki(); }, 3.0),
-            ("Pulun chat linssissä", () =>
-                {
-                    var juuri = UiKerros.Hae().Juuri(UiKerros.Valikot);
-                    UiNakymat.Hae().Chat.AvaaLinssissa(() => juuri == null ? default : new Rect(juuri.layout.width - 80, juuri.layout.height - 120, 60, 60),
-                        "testi", new List<string> { "Mitä tässä näkyy?", "Kuka rakensi tämän?" }, "lasi");
-                }, () => { UiNakymat.Hae().Chat.Sulje(); SuljeKaikki(); }, 1.0),
+            ("oppaan teksti", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("teksti"); },
+                () => { UiNakymat.Hae().Chat.Sulje(); OpasValikko.Hae().Komento("sulje"); SuljeKaikki(); }, 1.0),
         };
 
         const string PuluLyhyt = "Minä olen Livia. Kirjekyyhky, en mikään pulu.";
