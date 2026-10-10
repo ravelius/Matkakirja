@@ -63,6 +63,24 @@ namespace Matkakirja.Editori
 
         const string Avain = "Matkakirja.AsetteluTesti.";
 
+        /// <summary>
+        /// Osa (Natiiviseppä 10.10.2026: kaksi ajoa omilla lukkovarauksilla, kumpikin 6 min:n rajalla): "pallo" = pallo ja kartta
+        /// (Kysy … ISS-taulu ja kartan näkymät), "linna" = linna ja linssit (LinnanNakymat, linnan HUD, löytö, kortisto),
+        /// tyhjä = kaikki. Ympäristömuuttuja säilyy domain reloadin yli (tyokalut/ui-asettelutesti.sh asettaa).
+        /// </summary>
+        public const string OsaMuuttuja = "MATKAKIRJA_ASETTELU_OSA";
+        static string Osa => Environment.GetEnvironmentVariable(OsaMuuttuja) ?? "";
+        static string OsaNimi => Osa.Length > 0 ? "osa " + Osa : "kaikki osat";
+
+        static readonly HashSet<string> LinnanNakymat = new HashSet<string>
+        {
+            "linnan valikko", "linnan huoneet", "linnan äänet", "linnan lähteet", "keksinnöt", "aikajanan valikko", "ihmisen matka",
+            "ihmisen matkan valikko", "radio", "maan kyltti", "linssin selite", "ajattelijat", "ISS-ohjaamo", "karttavalikko",
+            "astronautin kuva", "minipulun kortti",
+        };
+
+        static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
+
         public static void Aja()
         {
             rivit.Clear(); virheita = 0; kokoNro = 0; vaihe = Vaihe.Aloita;
@@ -120,6 +138,7 @@ namespace Matkakirja.Editori
                     EditorUtility.UnloadUnusedAssetsImmediate();
                     GC.Collect();
                     Environment.SetEnvironmentVariable(UiRuutu.TestiMuuttuja, Koot[kokoNro].Arvo);
+                    if (kokoNro == 0) Kirjaa("-- " + OsaNimi);
                     if (kokoNro == 0) Kirjaa("-- leikkausrajaus " + (ShouldClip != null ? "käytössä" : "EI käytössä (ShouldClip puuttuu)"));
                     Kirjaa($"== {Koot[kokoNro].Nimi} ({Koot[kokoNro].Arvo})");
                     EditorApplication.EnterPlaymode();
@@ -127,7 +146,12 @@ namespace Matkakirja.Editori
                     break;
                 case Vaihe.OdotaPelia:
                     // Pelin oma käynnistys (UiNakymat ym.) ehtii ensimmäisiin ruutuihin; odotetaan, että UiKerros on olemassa.
-                    if (EditorApplication.isPlaying && UiKerros.Olemassa && kehyksia > 30) Siirry(Vaihe.Kysy);
+                    if (EditorApplication.isPlaying && UiKerros.Olemassa && kehyksia > 30)
+                    {
+                        // Linnan osa alkaa suoraan isoista näkymistä (vain LinnanNakymat), sitten linnan HUD.
+                        nakymaNro = 0;
+                        Siirry(Osa == "linna" ? Vaihe.Nakyma : Vaihe.Kysy);
+                    }
                     else if (Kulunut > 120) { Virhe("Play-tila ei käynnistynyt 120 s:ssa"); Siirry(Vaihe.Lopeta); }
                     break;
                 case Vaihe.Kysy:
@@ -276,7 +300,8 @@ namespace Matkakirja.Editori
                 }
                 case Vaihe.Nakyma:
                     // Isot näkymät yksi kerrallaan: ennen avausta näkyvät napit talteen, avauksen jälkeen uudet tarkistetaan.
-                    if (nakymaNro >= Nakymat.Length) { Siirry(Vaihe.Linna); break; }
+                    while (nakymaNro < Nakymat.Length && !OsaanKuuluu(Nakymat[nakymaNro].Nimi)) nakymaNro++;
+                    if (nakymaNro >= Nakymat.Length) { Siirry(Osa == "pallo" ? Vaihe.Lopeta : Vaihe.Linna); break; }
                     if (kehyksia < 10) return;
                     ennen = NakyvatOhjaimet();
                     try { Nakymat[nakymaNro].Avaa(); Siirry(Vaihe.OdotaNakyma); }
@@ -846,7 +871,7 @@ namespace Matkakirja.Editori
             Environment.SetEnvironmentVariable(UiRuutu.TestiMuuttuja, null);
             EditorSettings.enterPlayModeOptionsEnabled = SessionState.GetBool(Avain + "optio", false);
             SessionState.EraseBool(Avain + "kaynnissa");
-            Kirjaa(virheita == 0 ? "ASETTELUTESTI LÄPI" : $"ASETTELUTESTI {virheita} VIKAA");
+            Kirjaa(virheita == 0 ? $"ASETTELUTESTI LÄPI ({OsaNimi})" : $"ASETTELUTESTI {virheita} VIKAA ({OsaNimi})");
             Directory.CreateDirectory("tulokset");
             File.WriteAllLines("tulokset/asettelutesti.txt", rivit);
             EditorApplication.Exit(virheita == 0 ? 0 : 1);
