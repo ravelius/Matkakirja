@@ -38,6 +38,10 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **RH v3 (03.2x):** `rh-v3.py`: julkisivut v2 + katot ja kupolit katot_v2:n patinalla + spiira spiira_v2:sta (värinsiirto luokan 7 ja z:n mukaan). LR projisoi tekselitasolla, ja glb:t ovat LS2:lla. LR:n havainto: tiili tuli tummaksi (84/48/46 vs valokuvan 234/173/124), joten pidä sävyt lähempänä valokuvaa.
+- **PARIISI (04.3x):** ortho_ohje-kopioon lisätty mallit pp (Préfecture) ja co (vain obeliski), `codex-ohje-pp/` ja `codex-ohje-co/` (co tekoaly-pala 64 px/m). **pp v1** valmis (LR hyväksyi sävyt). **co v2** suositeltu (v1 oli pinkki ja sileä; v2: reunat 0,45/0,5, tile 0,15, kultainen pyramidion). LR projisoi.
+- **VESI ALUENOSTO (03.1x, PT + LS2 e15f16e18):** `_tyo/karttaseppa/vesi-aluenosto-20261010/` (index-v6, tukholma5-*): Norrström yhteensä 2,0 m, Strömmen 1,5 m, smoothstep 120 m. LS2:n haara vesi-v6-174 c94c7c1b1 lukee v6:n. Kuvapari LS2:lta, ja vienti Julkaisijalle kuittauksen jälkeen (paketti tehdään silloin, LAHTEET pohjana v5).
+
 - **RIDDARHOLMEN (PT 01.xx: B, LR:n OK):** ohjauskuvat `proto-3d/_tyo/karttaseppa/ohje-riddarholmen/` (ortho_ohje.py-kopio + malli rh, `ortho_ohje.diff`; merkinnät ja syötteet LR:n työkaluilla muuttamattomina). Tekoälypinnat `tulokset/rh_<näkymä>_v1/v2.png`. **v2 suositeltu** (tumma tiili). Spiira otetaan spiira_v2:sta ja katot sekä kupolit katot_v2:sta, koska julkisivuissa ne jäivät väärän värisiksi. Projisoinnin rh-tapaus (projisoi_tekseli.py, tekoaly_koko.zsh) on LR:llä. Valmis 02.50, /free tehty.
 - **Olavinlinnan 5 pahinta kohtaa + 225°:n punatiili:** odottaa LR:n syötteitä (LR tekee ne v46p:n jälkeen). Ajo samalla `aja-olavinlinna.py`-linjalla.
 
