@@ -846,6 +846,13 @@ namespace Matkakirja.Editori
                 if (b.xMin >= turva.xMin - Vara && b.xMax <= turva.xMax + Vara && b.yMin >= turva.yMin - Vara && b.yMax <= turva.yMax + Vara) { ok++; continue; }
                 // iPhone pystyssä oppaan ☀ ja ☰ Islandin vierellä tarkoituksella (TarkistaNapit, EiIslandilla).
                 if (Koot[kokoNro].Nimi == "iphone-pysty" && OpasValikko.Hae().TestiAvainnapit().Any(n => n.E == e && (n.Nimi == "☰" || n.Nimi == "☀/☾"))) { ok++; continue; }
+                // iPhone pystyssä linssin saaririvi (aikajana, keksinnöt, ihmisen matka; omistajan löydös 74, 25.9.2026, AikajanaNakyma.
+                // AsetaSaaririvi): nimi ja Tauko/☰ Islandin vierellä tarkoituksella kuten Ylapalkki. Vika vain Islandin päällä tai ruudun ulkona.
+                if (Koot[kokoNro].Nimi == "iphone-pysty" && Saaririvilla(e))
+                {
+                    var island = new Rect(koko.width * 0.5f - 63f, 0f, 126f, 48f);
+                    if (!b.Overlaps(island) && b.xMin >= 0f && b.yMin >= 0f && b.xMax <= koko.width) { ok++; continue; }
+                }
                 if (++viat <= 6)
                     Virhe($"{nimi}: {(e is Button ? "nappi" : "teksti")} \"{Lyhyt(e)}\" {Laatikko(b)} ei ole kokonaan turva-alueella {Laatikko(turva)}");
             }
@@ -1022,6 +1029,12 @@ namespace Matkakirja.Editori
         }
 
         // --- apurit ---------------------------------------------------------------------------------------------------
+
+        static bool Saaririvilla(VisualElement e)
+        {
+            for (var p = e; p != null; p = p.parent) if (p.ClassListContains("mk-aikajana-ylarivi--saari")) return true;
+            return false;
+        }
 
         /// <summary>Dynamic Island (iPhone 17 Pro): 126 pt leveä keskellä, yläreunasta 48 pt (OpasValikko.IslandLeveysPt).</summary>
         static void EiIslandilla(VisualElement e, VisualElement juuri, string nimi)
