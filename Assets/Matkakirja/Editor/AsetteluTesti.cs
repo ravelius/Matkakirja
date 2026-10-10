@@ -110,6 +110,12 @@ namespace Matkakirja.Editori
             }
         }
 
+        static void PiirraUudelleen(VisualElement e)
+        {
+            e.MarkDirtyRepaint();
+            foreach (var c in e.Children()) PiirraUudelleen(c);
+        }
+
         static void TallennaKuva(string nimi)
         {
             var dokut = Dokumentit();
@@ -120,6 +126,7 @@ namespace Matkakirja.Editori
             var pikselit = Enumerable.Repeat(tausta, w * h).ToArray();
             var luku = new Texture2D(w, h, TextureFormat.RGBA32, false, true);
             var ennen = RenderTexture.active;
+            int piirtyneet = 0;
             foreach (var d in dokut)
             {
                 var rt = d.panelSettings.targetTexture;
@@ -128,6 +135,7 @@ namespace Matkakirja.Editori
                 luku.ReadPixels(new Rect(0, 0, w, h), 0, 0, false);
                 luku.Apply(false);
                 var lahde = luku.GetPixels();
+                if (lahde.Any(c => c.a > 0f)) piirtyneet++;
                 // UITK piirtää esikerrotulla alfalla: tulos = lähde + kohde × (1 − alfa).
                 for (int i = 0; i < pikselit.Length; i++)
                 {
@@ -147,7 +155,7 @@ namespace Matkakirja.Editori
             File.WriteAllBytes(tiedosto, kuva.EncodeToPNG());
             UnityEngine.Object.DestroyImmediate(luku);
             UnityEngine.Object.DestroyImmediate(kuva);
-            Kirjaa($"-- kuva {tiedosto}");
+            Kirjaa($"-- kuva {tiedosto} (kerroksia {dokut.Count}, piirtyneitä {piirtyneet})");
         }
 
         static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
@@ -393,8 +401,9 @@ namespace Matkakirja.Editori
                 }
                 case Vaihe.Kuvaa:
                 {
-                    // Kerrokset piirtyvät tyhjennettyinä uudelleen (TyhjennaKerrokset), sitten kuva ja näkymä kiinni.
-                    if (kehyksia < 4) return;
+                    // Kerrokset piirtyvät tyhjennettyinä uudelleen (TyhjennaKerrokset), sitten kuva ja näkymä kiinni. Uudelleenpiirto
+                    // pakotetaan joka ruutu: muuttumaton paneeli vain tyhjensi tekstuurin (ajo 07.24: iPhone pysty ok, muut tyhjiä).
+                    if (kehyksia < 8) { foreach (var d in Dokumentit()) PiirraUudelleen(d.rootVisualElement); return; }
                     var n = Nakymat[nakymaNro];
                     try { TallennaKuva(n.Nimi); } catch (Exception e) { Kirjaa($"-- kuva {n.Nimi}: {e.GetType().Name}: {e.Message}"); }
                     try { n.Sulje(); } catch (Exception e) { Virhe($"{n.Nimi}: sulku kaatui {e.Message}"); }
