@@ -147,6 +147,8 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Action> napit = new Dictionary<string, Action>();
 
         public bool Auki { get; private set; }
+        /// <summary>Asettelutesti: lukunäkymän kortti.</summary>
+        public VisualElement TestiKortti => kortti;
 
         // MAAKUNTA NOSTOKORTTINA (omistaja 6.10. 13.0x, Päätoimittaja: vaihtoehto b): maakunta avautuu tähän korttiin valolla
         // "maakunta:ISO:tunnus". Pienenä kuva, koko ensimmäinen kappale nostotekstin koossa ja LISÄÄ; suurena samat napit kuin

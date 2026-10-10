@@ -408,8 +408,9 @@ namespace Matkakirja.Natiivi
             float korkeus = isa != null ? isa.resolvedStyle.height : float.NaN;
             float ylaR = valikko.resolvedStyle.top;
             if (float.IsNaN(korkeus) || korkeus <= 0 || float.IsNaN(ylaR)) { valikko.schedule.Execute(SovitaKorkeus).StartingIn(16); return; }
-            float sk = Screen.height > 0 ? korkeus / Screen.height : 1f;
-            float vapaa = korkeus - ylaR - Screen.safeArea.yMin * sk - 8f;
+            // UiRuutu = Screen laitteella; asettelutestissä testikoko (kuten OpasValikko).
+            float sk = UiRuutu.Korkeus > 0 ? korkeus / UiRuutu.Korkeus : 1f;
+            float vapaa = korkeus - ylaR - UiRuutu.Turva.yMin * sk - 8f;
             valikko.style.maxHeight = Mathf.Max(120f, vapaa);
             if (nakyma != Nakyma.Huoneet || huoneRivit == null) return;
             int rivit = huoneRivit.contentContainer.childCount;

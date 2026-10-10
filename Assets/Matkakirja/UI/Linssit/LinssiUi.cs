@@ -324,6 +324,21 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA ui linssit: pelielementit {Auki?.Tiedot?.Id ?? "-"}: portti {portti}, vertailu {vertailu}, radio {radio}, linssi {paalla}, {(ok ? "ok" : "uudelleen")}");
         }
 
+#if UNITY_EDITOR
+        /// <summary>Asettelutesti (vain editori): karttalinssi "auki" ilman rekisteriä (karttavalikko); null = kiinni.</summary>
+        public void TestiKarttalinssi(string id) => Vaihtui(id == null ? null : new TestiLinssi(id));
+
+        sealed class TestiLinssi : Matkakirja.Linssit.ILinssi
+        {
+            public TestiLinssi(string id) => Tiedot = new LinssiTiedot { Id = id };
+            public LinssiTiedot Tiedot { get; }
+            public bool Auki => true;
+            public void Avaa(Matkakirja.Linssit.ILinssiYmparisto ymparisto) { }
+            public void Paivita() { }
+            public void Sulje() { }
+        }
+#endif
+
         void Vaihtui(ILinssi linssi)
         {
             // Vaihtui voi tulla LinssiOhjaimen komennoista; UI:ta muutetaan vain pääsäikeessä,
