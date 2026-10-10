@@ -55,3 +55,8 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
   Muutoslokin luonnos: scratchpad muutosloki-180-luonnos.txt.
 - JONOSSA VIE 180:n jälkeen (PT 21.0x): akku- ja lämpömittaus iPad Pro 13:lla TF 180:llä, 15 min (kartta / Pariisin pallo / Olavinlinna, 5 min kukin).
   Mitataan thermalState, akun %, fps sekä CPU- ja GPU-aika, ja tehdään säästöehdotus vaikutusarvioineen. Akkulokia ei vielä ole. Ei muutoksia ennen PT:n kuittausta.
+
+## TILA 10.10. 21.59
+- Juna 180 = 6b75dc11b (+ LS1 f65ed2a39, Siirtoseppä d71ce2d4a ⊃ 0f1d24980, NUI yhdistetty-180 71409749e, Pelikoodari latausmusiikki a9cef25b5). L1354/P470/K461, unity 0, tarkista ok.
+  Muistiajo kuitattu (PT 21.3x); pääkaupunkikuvat Kuvat-LRU:ssa (200/300 Mt) → ei ajoa. Lukitus odottaa PT:n lupaa (Siirtosepän v47d-kytkentä, NUI:n iPhone-Pulu).
+- JUNA 181 -jono: LS1 pariisi-kippi-180-l2 eca61364a (kipin linjaus 2, PT kuittasi 22.0x).
