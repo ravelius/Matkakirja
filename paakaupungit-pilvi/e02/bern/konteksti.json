@@ -1,0 +1,196 @@
+{
+ "id": "bern",
+ "era": "e02",
+ "nimi": "Bern",
+ "nimiAlkukieli": "Bern (saksa); Berne (ranska); Berna (italia, retoromaani)",
+ "maa": "CHE",
+ "maanNimi": "Sveitsi",
+ "asema": "pääkaupunki",
+ "lat": 46.948,
+ "lon": 7.447,
+ "wikidata": "Q70",
+ "kevytSisalto": {
+  "kuvaus": "Bern on Sveitsin liittovaltion hallituksen ja parlamentin kotipaikka, jota kutsutaan liittokaupungiksi (Bundesstadt), sillä maan perustuslaki ei nimeä virallista pääkaupunkia. Keskiaikainen vanhakaupunki sijaitsee Aare-joen mutkan ympäröimällä niemekkeellä, ja se kuuluu Unescon maailmanperintökohteisiin. Bern valittiin liittovaltion hallituksen asemapaikaksi vuonna 1848.",
+  "tunnusrakennukset": [
+   "Bundeshaus (liittopalatsi)",
+   "Zytglogge (kelloportti)",
+   "Bernin tuomiokirkko (Berner Münster)",
+   "Bärenpark (karhupuisto)"
+  ],
+  "asukkaat": {
+   "arvo": 146867,
+   "vuosi": "2025 (31.12.2025)",
+   "lahde": "Statistik Stadt Bern: Wohnbevölkerung 2025, tiedote 27.1.2026",
+   "linkki": "https://www.bern.ch/themen/stadt-recht-und-politik/bern-in-zahlen/publikationen/2026-2030/download-2026-2030/2026-01-27-bev-2025-mm.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Sveitsi on sisämaavaltio Keski-Euroopassa, jonka alueeseen kuuluvat Alpit, Jura-vuoristo ja Mittelland-tasanko. Maa on liittovaltio, jossa on 26 kantonia ja neljä kansallista kieltä: saksa, ranska, italia ja retoromaani. Sveitsi ei ole EU:n eikä Naton jäsen, mutta osallistuu EU:n sisämarkkinoihin ja Schengen-alueeseen kahdenvälisten sopimusten kautta. Erityispiirteitä ovat suora demokratia, jossa kansa äänestää usein kansanäänestyksissä, sekä pitkä puolueettomuuden perinne.",
+  "genetiivi": "Sveitsin",
+  "kielet": [
+   {
+    "kieli": "saksa",
+    "asema": "virallinen ja kansallinen"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "virallinen ja kansallinen"
+   },
+   {
+    "kieli": "italia",
+    "asema": "virallinen ja kansallinen"
+   },
+   {
+    "kieli": "retoromaani",
+    "asema": "kansallinen; virallinen kieli suhteessa retoromaanikielisiin"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Sveitsin frangi",
+   "koodi": "CHF"
+  }
+ },
+ "maalehti": [
+  {
+   "id": "vuoret",
+   "nimi": "Vuoret",
+   "nostot": [
+    "Juna kulkee vuoren alitse",
+    "Jäätikkö, joka virtaa kuin joki",
+    "Asema louhittiin vuoren sisään"
+   ]
+  },
+  {
+   "id": "keksinnot",
+   "nimi": "Keksinnöt",
+   "nostot": [
+    "Takiainen koiran turkissa",
+    "Veitsi, jossa on kaikki",
+    "Kuorimaveitsi frangin hinnalla"
+   ]
+  },
+  {
+   "id": "ruoka",
+   "nimi": "Ruoka",
+   "nostot": [
+    "Peruna paistetaan pannun kokoiseksi kakuksi",
+    "Lehmät tulevat alas kukissa",
+    "Kone, joka teki suklaasta sileää",
+    "Kansallisruoka, joka piti keksiä"
+   ]
+  },
+  {
+   "id": "hetki-einstein-patenttitoimisto-1905",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Bern 1905 — patenttipino ja valonsäde"
+   ]
+  },
+  {
+   "id": "hetki-gotthardin-lapimurto-1880",
+   "nimi": "Historian hetki",
+   "nostot": [
+    "Gotthard 1880 — valokuva kulkee kalliossa"
+   ]
+  },
+  {
+   "id": "menovinkit",
+   "nimi": "Menovinkit",
+   "nostot": []
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "alpit",
+   "nimi": "Alpit",
+   "km": 60,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Alpit",
+     "nostot": [
+      "Torvi, joka puhuu laaksosta toiseen",
+      "Vuoren kanssa opitaan elämään",
+      "Vuori hehkuu punaisena auringon laskiessa"
+     ]
+    },
+    {
+     "id": "luonto",
+     "nimi": "Luonto",
+     "nostot": [
+      "Nukkuu puolet vuodesta",
+      "Lintu, joka syö luita",
+      "Jää vetäytyy ylöspäin"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Historia",
+     "nostot": [
+      "Kenraali, joka vei norsut vuorten yli",
+      "Voitto, joka päättyi neljään hautaan",
+      "Munkit, jotka kasvattivat pelastuskoiria",
+      "Tie, jonka kenraali rakennutti tykkejä varten"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:zytglogge",
+   "nimi": "Zytglogge",
+   "lahde": "fokuskohde",
+   "laji": "tekniikka",
+   "km": 0,
+   "teksti": "Zytglogge on keskiaikainen torni Bernin vanhassakaupungissa ja kaupungin vanhin muistomerkki. Kahdeksansadan vuoden aikana se on ollut vartiotorni, vankila, kellotorni, kaupunkielämän keskus ja muistomerkki.\n\nTorni rakennettiin noin 1218–1…"
+  },
+  {
+   "id": "hetki:einstein-patenttitoimisto-1905",
+   "nimi": "Bern 1905",
+   "lahde": "historianHetket",
+   "laji": "hetki",
+   "km": 0,
+   "teksti": "Pöydän kulmalla kasvaa pino patenttihakemuksia, ja jokainen uusi tulokas työntää fysiikan muistiinpanot laatikon pohjalle. Bernin patenttiviraston kolmannen luokan tekninen asiantuntija Albert Einstein on 26-vuotias, ja hänen palkkansa elä…"
+  },
+  {
+   "id": "kohde:hahmotelma-christoffelturm",
+   "nimi": "Bernin Christoffelturm",
+   "lahde": "fokuskohde",
+   "laji": "historia",
+   "km": 1,
+   "teksti": "Christoffelturm rakennettiin vuosina 1344–1346 Bernin kolmannen kaupunginmuurin portiksi. Kaupunginvaltuusto päätti vain neljän äänen erolla purkaa tornin rautatieaseman tieltä. Purku alkoi vuonna 1865."
+  },
+  {
+   "id": "kohde:hahmotelma-emmental",
+   "nimi": "Emmental",
+   "lahde": "fokuskohde",
+   "laji": "ruoka",
+   "km": 24,
+   "teksti": "Emmental on kukkulainen laakso Bernin kantonissa, Emme- ja Ilfis-jokien varrella, ja sen tärkeimmät kylät ovat Burgdorf ja Langnau. Seutu elää pääasiassa maidontuotannosta, ja juuri täältä on kotoisin reikäinen Emmentaler-juusto, joka on l…"
+  },
+  {
+   "id": "kohde:hahmotelma-fribourg",
+   "nimi": "Fribourg",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 28,
+   "teksti": "Fribourg, saksaksi Freiburg im Üechtland, sijaitsee Sarine-joen mutkassa kielirajalla saksankielisen ja ranskankielisen Sveitsin välissä. Zähringenin herttua Berthold IV perusti kaupungin vuonna 1157 kalliolle, jota joki suojaa kolmelta si…"
+  },
+  {
+   "id": "kohde:solothurnin-katedraali",
+   "nimi": "Solothurnin Pyhän Ursuksen katedraali",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 30,
+   "teksti": "Pyhän Ursuksen katedraali on uusklassinen kirkko Solothurnin vanhassakaupungissa Aare-joen rannalla. Rakennustyöt alkoivat vuonna 1763, ja Lausannen piispa Joseph Niklaus von Montenach vihki kirkon 26. syyskuuta 1773. Suunnittelijana toimi…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Bern",
+  "maanAvain": "Sveitsi",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

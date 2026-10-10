@@ -1,0 +1,135 @@
+{
+ "id": "reykjavik",
+ "era": "e02",
+ "nimi": "Reykjavík",
+ "nimiAlkukieli": "Reykjavík",
+ "maa": "ISL",
+ "maanNimi": "Islanti",
+ "asema": "pääkaupunki",
+ "lat": 64.1466,
+ "lon": -21.9426,
+ "wikidata": "Q1764",
+ "kevytSisalto": {
+  "kuvaus": "Reykjavík on Islannin pääkaupunki ja maan suurin kaupunki, joka sijaitsee lounaisrannikolla Faxaflói-lahden äärellä. Perimätiedon mukaan asutus alkoi 870-luvulla, ja kaupungin vanhassa keskustassa on edelleen matalia puu- ja aaltopeltitaloja. Maan hallinto, kulttuuri ja talous keskittyvät suurelta osin Reykjavíkiin ja sen ympäristöön.",
+  "tunnusrakennukset": [
+   "Dómkirkjan (Reykjavíkin tuomiokirkko, 1790-luvulta)",
+   "Alþingishúsið (Alþingin talo, 1880-luvulta)",
+   "Hallgrímskirkja (ei kuvamotiivina: suojattu)",
+   "Harpa-konserttitalo (ei kuvamotiivina: suojattu)"
+  ],
+  "asukkaat": {
+   "arvo": 139804,
+   "vuosi": 2026,
+   "lahde": "Hagstofa Íslands (Islannin tilastovirasto), väestötiedote 12.3.2026, väkiluku 1.1.2026: Reykjavíkin kaupunki oli väkirikkain kunta",
+   "linkki": "https://old.statice.is/publications/news-archive/inhabitants/population-1-january-2026/"
+  }
+ },
+ "maanPerustiedot": null,
+ "maalehti": [
+  {
+   "id": "luonto",
+   "nimi": "Luonto",
+   "nostot": [
+    "Vesi purskahtaa muutaman minuutin välein",
+    "Saari, joka nousi merestä",
+    "Kylä puolusti itseään paloletkuilla"
+   ]
+  },
+  {
+   "id": "elaimet",
+   "nimi": "Eläimet",
+   "nostot": [
+    "Hevonen, joka kulkee viittä tahtia",
+    "Lapset pelastavat eksyneet linnut",
+    "Ainoa, joka oli täällä ensin"
+   ]
+  },
+  {
+   "id": "arki",
+   "nimi": "Arki",
+   "nostot": [
+    "Uimala on kylän olohuone",
+    "Syksyllä koko kylä lähtee vuorille",
+    "Talon seinät kasvoivat ruohoa"
+   ]
+  },
+  {
+   "id": "historia",
+   "nimi": "Historia",
+   "nostot": [
+    "Yksi mies ratkaisi koko maan uskonnon yhdessä yössä",
+    "Piispa joka taisteli uskontoaan vastaan ja hävisi",
+    "Kuningas toi perustuslain vuosi isoisän jälkeen",
+    "Sota jota käytiin verkonleikkureilla, ei ammuksilla",
+    "Kansa kolisteli pankit pois vallasta kattiloilla"
+   ]
+  },
+  {
+   "id": "menovinkit",
+   "nimi": "Menovinkit",
+   "nostot": []
+  }
+ ],
+ "lahiKaupungit": [
+  {
+   "id": "islanti",
+   "nimi": "Islanti",
+   "km": 6,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Islanti",
+     "nostot": [
+      "Käräjät kahden mantereen välissä",
+      "Kieli, joka ei liikkunut",
+      "Björk ja pieni maa, joka soi"
+     ]
+    },
+    {
+     "id": "kirjat",
+     "nimi": "Kirjat",
+     "nostot": [
+      "Joulun kirjatulva",
+      "Käsikirjoitukset tuotiin takaisin laivalla",
+      "Pieni maa sai Nobelin"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Historia",
+     "nostot": [
+      "Mies, joka heitti pylväät mereen ja seurasi niitä",
+      "Parlamentti kalliorotkossa taivasalla",
+      "Päätös, joka vaihtoi uskonnon ilman sotaa",
+      "Vuori, jota Eurooppa piti helvetin porttina"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:hahmotelma-reykjavik",
+   "nimi": "Reykjavík",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 0,
+   "teksti": "Reykjavík on Islannin pääkaupunki ja suurin kaupunki, Faxaflóin lahden rannalla saaren lounaisosassa. Landnámabókin mukaan Ingólfur Arnarson perusti täällä ensimmäisen pysyvän asutuksen noin vuonna 874, kun hänen orjansa löysivät merestä h…"
+  },
+  {
+   "id": "skandaali:koirapaivien-kuningas",
+   "nimi": "Koirapäiväkuningas",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 0,
+   "teksti": "Jørgen Jørgensen oli tanskalainen laivuri, joka oli menettänyt aluksensa Admiral Juelin brittien käsiin ja eli Englannissa sotavankina ehdonalaisessa. Kesällä 1809 hän lähti tulkiksi saippuakauppias Samuel Phelpsin kauppamatkalle Islantiin…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Reykjavík",
+  "maanAvain": "Islanti",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

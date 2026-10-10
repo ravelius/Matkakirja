@@ -1,0 +1,103 @@
+{
+ "id": "andorralavella",
+ "era": "e02",
+ "nimi": "Andorra la Vella",
+ "nimiAlkukieli": "Andorra la Vella",
+ "maa": "AND",
+ "maanNimi": "Andorra",
+ "asema": "pääkaupunki",
+ "lat": 42.507,
+ "lon": 1.522,
+ "wikidata": "Q1863",
+ "kevytSisalto": {
+  "kuvaus": "Andorra la Vella on Pyreneiden laaksossa noin kilometrin korkeudessa sijaitseva Andorran pääkaupunki ja suurin asutuskeskus. Sitä pidetään Euroopan korkeimmalla sijaitsevana pääkaupunkina. Kaupungin talous perustuu kauppaan, matkailuun ja pankkitoimintaan, ja vanhassa keskustassa on maan historiallinen parlamenttitalo.",
+  "tunnusrakennukset": [
+   "Casa de la Vall (historiallinen parlamenttitalo)",
+   "Sant Esteven kirkko (Església de Sant Esteve)",
+   "Santa Coloman kirkko (Església de Santa Coloma)"
+  ],
+  "asukkaat": {
+   "arvo": 24836,
+   "vuosi": 2025,
+   "lahde": "Andorran tilastotoimisto, väestöarvio ja seurakuntatilasto 31.12.2025 (Andorra la Vellan seurakunta; erillinen Escaldes-Engordanyn seurakunta ei sisälly)",
+   "linkki": "https://www.estadistica.ad/portal/apps/sites/#/estadistica-en/pages/estadistiques-i-dades-detall?Idioma=en&N2=605&N3=606&DV=798"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Andorra on Pyreneiden vuoristossa Ranskan ja Espanjan välissä sijaitseva pieni sisämaavaltio. Sen erikoisuus on kaksoisruhtinaskunta: valtionpäinä ovat yhdessä Urgellin piispa ja Ranskan presidentti. Maa elää pääosin matkailusta, hiihtokeskuksista ja kaupasta, ja se on tunnettu alhaisesta verotuksesta. Virallinen kieli on katalaani, ja maan pääkaupunki on Euroopan korkeimmalla sijaitsevia.",
+  "genetiivi": "Andorran",
+  "kielet": [
+   {
+    "kieli": "katalaani",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "espanja",
+    "asema": "muu"
+   },
+   {
+    "kieli": "portugali",
+    "asema": "muu"
+   },
+   {
+    "kieli": "ranska",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "euro",
+   "koodi": "EUR"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "barcelona",
+   "nimi": "Barcelona",
+   "km": 135,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Barcelona",
+     "nostot": [
+      "Ihmistornin huipulla on lapsi",
+      "Joka kulmasta leikattiin pala pois"
+     ]
+    },
+    {
+     "id": "talot",
+     "nimi": "Talot",
+     "nostot": [
+      "Talon katolla nukkuu lohikäärme",
+      "Konserttisali, jossa ei sytytetä valoja"
+     ]
+    },
+    {
+     "id": "castellit",
+     "nimi": "Castellit",
+     "nostot": [
+      "Torni, joka on tehty ihmisistä",
+      "Satojen ihmisten kannattama paino",
+      "Kaupungintalon aukio täyttyy syyskuussa"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Sagrada Família",
+    "Casa Batlló",
+    "Arc de Triomf",
+    "Musiikkipalatsi",
+    "Boquerian kauppahalli",
+    "Font de Canaletes",
+    "Roviran aukio"
+   ]
+  }
+ ],
+ "lahiNostot": [],
+ "wiki": {
+  "ehdotus": "Andorra la Vella",
+  "maanAvain": "Andorra",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

@@ -1,0 +1,119 @@
+{
+ "id": "sanmarino",
+ "era": "e02",
+ "nimi": "San Marino",
+ "nimiAlkukieli": "Città di San Marino",
+ "maa": "SMR",
+ "maanNimi": "San Marino",
+ "asema": "pääkaupunki",
+ "lat": 43.935,
+ "lon": 12.447,
+ "wikidata": "Q1848",
+ "kevytSisalto": {
+  "kuvaus": "Città di San Marino on San Marinon tasavallan pääkaupunki Monte Titanon rinteellä. Perimätiedon mukaan Marinus-niminen kivenhakkaaja perusti yhteisön vuonna 301 paetessaan Rooman vainoja, ja tasavaltaa pidetään yhtenä maailman vanhimmista. Kaupungin historiallinen keskusta ja Titano-vuori kuuluvat UNESCOn maailmanperintöön vuodesta 2008.",
+  "tunnusrakennukset": [
+   "Kolme tornia (Guaita, Cesta ja Montale)",
+   "Palazzo Pubblico (julkinen palatsi)",
+   "San Marinon basilika (Basilica di San Marino)",
+   "Piazza della Libertà (Vapauden aukio)"
+  ],
+  "asukkaat": {
+   "arvo": 4158,
+   "vuosi": 2025,
+   "lahde": "San Marinon tilastotoimisto (Ufficio Informatica, Tecnologia, Dati e Statistica), Supplemento al Bollettino di Statistica 2025, taulu 1.11: Città di San Marinon kunnan (castello) asukkaat 31.12.2025",
+   "linkki": "https://www.statistica.sm/pub2/StatisticaSM/dam/jcr:8c8d58b8-903e-4fcd-a59b-22314f7f1621/Supplemento_2025.pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "San Marino on Italian ympäröimä pieni valtio Apenniinien vuoristossa lähellä Adrianmerta. Perimätiedon mukaan se perustettiin vuonna 301, ja sitä pidetään yhtenä maailman vanhimmista yhä toimivista tasavalloista. Valtionpäinä on kaksi kapteeniregenttiä, jotka valitaan kuudeksi kuukaudeksi kerrallaan. Maa elää matkailusta, ja sen historiallinen keskusta on UNESCOn maailmanperintökohde.",
+  "genetiivi": "San Marinon",
+  "kielet": [
+   {
+    "kieli": "italia",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "romagnolo (San Marinon murre)",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "euro",
+   "koodi": "EUR"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "firenze",
+   "nimi": "Firenze",
+   "km": 97,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Firenze",
+     "nostot": [
+      "Aukko, joka oli auki sata vuotta",
+      "Raha, joka kelpasi kaikkialla",
+      "Pihvi, jota ei kysytä kypsäksi"
+     ]
+    },
+    {
+     "id": "kuvataide",
+     "nimi": "Kuvataide",
+     "nostot": [
+      "Jumalatar simpukan päällä",
+      "Jättiläinen muutti sisälle",
+      "Ruhtinaan oma käytävä"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Historia",
+     "nostot": [
+      "Munkki, joka näki tulevan tuhon",
+      "Sama tori, päinvastainen tuli",
+      "Laatta, joka merkitsee paikan"
+     ]
+    }
+   ],
+   "kohdekartta": [
+    "Duomo",
+    "Palazzo Vecchio",
+    "Uffizi",
+    "Ponte Vecchio",
+    "Santa Croce",
+    "Bobolin puutarha",
+    "Galleria dell'Accademia",
+    "Santa Maria Novella",
+    "Bargello",
+    "Poggin terassi",
+    "Porcellino"
+   ]
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "skandaali:cagliostro-san-leo",
+   "nimi": "Cagliostro",
+   "lahde": "skandaalit",
+   "laji": "skandaali",
+   "km": 10,
+   "teksti": "Giuseppe Balsamo syntyi Palermossa 1743, karkasi luostarikoulusta ja oli seitsemäntoista, kun hän sai kultaseppä Maranon uskomaan, että oliivilehdon alla oli aarre ja että sen paikan saisi selville seremonialla, johon tarvittiin kuusikymme…"
+  },
+  {
+   "id": "kohde:hahmotelma-urbino",
+   "nimi": "Urbino",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 28,
+   "teksti": "Urbino on kaupunki Marchen alueella Pesaron lounaispuolella, ja se on maailmanperintökohde, joka tunnetaan itsenäisestä renessanssin kulttuuristaan, erityisesti herttua Federico da Montefeltron (herttuana 1444–1482) holhouksesta. Korkealle…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "San Marino (kaupunki)",
+  "maanAvain": "San Marino",
+  "varattuNimi": true
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

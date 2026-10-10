@@ -1,0 +1,67 @@
+{
+ "id": "monaco",
+ "era": "e02",
+ "nimi": "Monaco",
+ "nimiAlkukieli": "Monaco (Monaco-Ville vanhakaupunki; Monte-Carlo kaupunginosa)",
+ "maa": "MCO",
+ "maanNimi": "Monaco",
+ "asema": "pääkaupunki",
+ "lat": 43.731,
+ "lon": 7.42,
+ "wikidata": "Q55115",
+ "kevytSisalto": {
+  "kuvaus": "Monaco on Välimeren rannalla Ranskan ympäröimä kaupunkivaltio, jossa pääkaupunki ja koko valtio ovat käytännössä sama alue. Vanha kaupunki ja ruhtinaan palatsi sijaitsevat kalliolla, ja Grimaldin suku on hallinnut linnoitusta vuodesta 1297. Valtio tunnetaan ruhtinassuvusta, Monte-Carlon kasinosta ja merentutkimukseen keskittyvästä valtamerimuseosta.",
+  "tunnusrakennukset": [
+   "Ruhtinaanlinna (Palais Princier)",
+   "Monacon katedraali (Cathédrale Notre-Dame-Immaculée)",
+   "Valtamerimuseo (Musée océanographique)",
+   "Monte-Carlon kasino (Casino de Monte-Carlo)"
+  ],
+  "asukkaat": {
+   "arvo": 38857,
+   "vuosi": 2025,
+   "lahde": "IMSEE, vuoden 2025 väestönlaskenta (koko kaupunkivaltion luku, koska valtio ja kaupunki ovat sama alue)",
+   "linkki": "https://imsee.mc/thematiques/population/recensement-de-la-population"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Monaco on Ranskan Rivieralla Välimeren rannalla sijaitseva kaupunkivaltio, joka on maailman toiseksi pienin itsenäinen valtio. Ruhtinas Grimaldin suku on hallinnut aluetta jo 1200-luvun lopulta. Pieni alue on erittäin tiheästi asuttu, ja se tunnetaan Monte-Carlon kasinosta, Formula 1 -kisasta ja siitä, ettei asukkailta peritä tuloveroa. Valtio rakentaa uutta maata myös merestä täyttämällä.",
+  "genetiivi": "Monacon",
+  "kielet": [
+   {
+    "kieli": "ranska",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "monégasque (monacolainen kieli)",
+    "asema": "kansallinen"
+   },
+   {
+    "kieli": "italia",
+    "asema": "muu"
+   }
+  ],
+  "valuutta": {
+   "nimi": "euro",
+   "koodi": "EUR"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [],
+ "lahiNostot": [
+  {
+   "id": "kohde:nakyva-kaupunki-nizza",
+   "nimi": "Nizza",
+   "lahde": "fokuskohde",
+   "laji": "kaupunki",
+   "km": 13,
+   "teksti": null
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Monaco (kaupunki)",
+  "maanAvain": "Monaco",
+  "varattuNimi": true
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

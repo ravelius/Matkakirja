@@ -1,0 +1,108 @@
+{
+ "id": "vaduz",
+ "era": "e02",
+ "nimi": "Vaduz",
+ "nimiAlkukieli": "Vaduz",
+ "maa": "LIE",
+ "maanNimi": "Liechtenstein",
+ "asema": "pääkaupunki",
+ "lat": 47.141,
+ "lon": 9.522,
+ "wikidata": "Q1844",
+ "kevytSisalto": {
+  "kuvaus": "Vaduz on Liechtensteinin pääkaupunki Reinin laaksossa, jyrkän rinteen juurella. Kaupungin yllä kohoava linna on ruhtinassuvun asuinpaikka, ja keskustassa sijaitsevat maapäivät, hallitus ja useita museoita. Kaupunki on pieni, mutta se toimii pienen ruhtinaskunnan poliittisena ja kulttuurisena keskuksena.",
+  "tunnusrakennukset": [
+   "Vaduzin linna (Schloss Vaduz)",
+   "Pyhän Florinin katedraali (Kathedrale St. Florin)",
+   "Liechtensteinin taidemuseo (Kunstmuseum Liechtenstein)",
+   "Maapäivätalo (Landtagsgebäude)"
+  ],
+  "asukkaat": {
+   "arvo": 6109,
+   "vuosi": 2025,
+   "lahde": "Amt für Statistik Liechtenstein, vakinainen väestö 31.12.2025 (ennakkotieto, julkaistu 18.3.2026), Vaduzin kunta (Gemeinde); kaikkien 11 kunnan summa 41 237 täsmää AS:n maan lukuun. Edellinen lopullinen luku: 5 826 (31.12.2023, Liechtenstein in Zahlen 2025)",
+   "linkki": "https://www.statistikportal.li/de/publikation/bevoelkerungsstand-vorlaeufige-ergebnisse-31-dezember-2025/2025/02/v-1/p42384/pdf"
+  }
+ },
+ "maanPerustiedot": {
+  "esittely": "Liechtenstein on Reinin laaksossa Sveitsin ja Itävallan välissä sijaitseva Euroopan neljänneksi pienin valtio. Maata hallitsee ruhtinassuku, jolla on perustuslain mukaan vahva asema, ja kansalaiset voivat äänestää monista asioista kansanäänestyksissä. Rahana on Sveitsin frangi, ja maalla on tiivis talousliitto Sveitsin kanssa. Teollisuus ja rahoituspalvelut ovat taloudelle tärkeitä.",
+  "genetiivi": "Liechtensteinin",
+  "kielet": [
+   {
+    "kieli": "saksa",
+    "asema": "virallinen"
+   },
+   {
+    "kieli": "alemanninen saksa (paikallinen murre)",
+    "asema": "kansallinen"
+   }
+  ],
+  "valuutta": {
+   "nimi": "Sveitsin frangi",
+   "koodi": "CHF"
+  }
+ },
+ "maalehti": null,
+ "lahiKaupungit": [
+  {
+   "id": "alpit",
+   "nimi": "Alpit",
+   "km": 134,
+   "lehti": [
+    {
+     "id": "kaupunki",
+     "nimi": "Alpit",
+     "nostot": [
+      "Torvi, joka puhuu laaksosta toiseen",
+      "Vuoren kanssa opitaan elämään",
+      "Vuori hehkuu punaisena auringon laskiessa"
+     ]
+    },
+    {
+     "id": "luonto",
+     "nimi": "Luonto",
+     "nostot": [
+      "Nukkuu puolet vuodesta",
+      "Lintu, joka syö luita",
+      "Jää vetäytyy ylöspäin"
+     ]
+    },
+    {
+     "id": "historia",
+     "nimi": "Historia",
+     "nostot": [
+      "Kenraali, joka vei norsut vuorten yli",
+      "Voitto, joka päättyi neljään hautaan",
+      "Munkit, jotka kasvattivat pelastuskoiria",
+      "Tie, jonka kenraali rakennutti tykkejä varten"
+     ]
+    }
+   ],
+   "kohdekartta": []
+  }
+ ],
+ "lahiNostot": [
+  {
+   "id": "kohde:ebenalp-wildkirchli",
+   "nimi": "Ebenalp ja Wildkirchli",
+   "lahde": "fokuskohde",
+   "laji": "vuori",
+   "km": 18,
+   "teksti": "Ebenalp on Appenzellin Alpeilla, Sveitsin Appenzell Innerrhodenin kantonissa sijaitseva 1 640 metrin huippu, Alpstein-vuoriston pohjoisin. Wasserauenista sinne kulkee köysirata, joka on toiminut vuodesta 1955. Jyrkänteen alla on Wildkirchl…"
+  },
+  {
+   "id": "kohde:hahmotelma-bregenzerwald",
+   "nimi": "Bregenzerwald",
+   "lahde": "fokuskohde",
+   "laji": "kulttuuri",
+   "km": 30,
+   "teksti": "Bregenzerwald on yksi Vorarlbergin osavaltion pääalueista Itävallassa, ja se kuuluu Pohjoisiin kalkkialppeihin. Se on Bregenzer Ach -joen valuma-alue, ja siellä asuu noin 31 400 ihmistä. Alue rajoittuu lännessä Bodenjärven seutuun Reinin l…"
+  }
+ ],
+ "wiki": {
+  "ehdotus": "Vaduz",
+  "maanAvain": "Liechtenstein",
+  "varattuNimi": false
+ },
+ "huom": "Tämä on pelin NYKYINEN aineisto: älä toista samoja tarinoita, kuvia tai nostoja. Kevyen pisteen kuvaus ja tunnusrakennukset ovat Sisältökirjurin tarkistamia; ristiriita lähteen kanssa kirjataan faktapohjaan ja RAPORTTI.md:hen."
+}

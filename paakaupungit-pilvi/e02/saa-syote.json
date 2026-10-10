@@ -1,0 +1,32 @@
+[
+ {
+  "id": "bern",
+  "lat": 46.95,
+  "lon": 7.45
+ },
+ {
+  "id": "vaduz",
+  "lat": 47.14,
+  "lon": 9.52
+ },
+ {
+  "id": "monaco",
+  "lat": 43.73,
+  "lon": 7.42
+ },
+ {
+  "id": "andorralavella",
+  "lat": 42.51,
+  "lon": 1.52
+ },
+ {
+  "id": "sanmarino",
+  "lat": 43.94,
+  "lon": 12.45
+ },
+ {
+  "id": "reykjavik",
+  "lat": 64.15,
+  "lon": -21.94
+ }
+]
