@@ -28,6 +28,15 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
 ## Junaan 181
 - **saumaton-pakattu-180 ec837bba5**: pakattuna ladatun klipin GetData-lokispämmi pois (laiva.lautta/moottorivene). PT: juna 181.
 
+## PÄIVITYS 21.4x (nollaus PT:n käskystä)
+- **f65ed2a39 KUITATTU junaan 180** (PT 21.4x, kuittaus Natiivisepälle). **Linjaus 2 (99459eca5) → juna 181**: jatka -l2:sta
+  (kaatuvat kohdat alla).
+- **Kompassi + kierroshyppy TODENNETTU** NUI:n yhdistetyllä 6c9d434df:llä simulla 00CF62C2 (Julkaisijan NYT 21.37, SIMU VAPAA
+  21.42): kompassi korin vasemmalla reunalla, keinuu korin mukana; `opas hyppy 5` → 1 → 5 Riemukaari → kierros jatkuu. 0 poikkeusta.
+  Todistus: proto-3d/lokit/todistus-kompassi-hyppy-180-20261010-2138/ (skenaario linssiseppa-ajot/sk-kompassi-hyppy-yhdistetty-180.txt,
+  simuvuoro-kompassi-hyppy.zsh). Löydös NUI:lle (PT välitti): metrolinjalla Louvren nimen alla Notre-Damen alaotsikko.
+- Ansa: todistusajon kuvien merkintäkaista peittää kompassin (vasen alakulma) → katso kuvat/raaka/.
+
 ## KESKEN: pariisi-kippi-180 (juna 180, PT:n KIPPIKORJAUKSET)
 - 50204e0f2: kompassi korin solmun lapsena vasemmalla nahkareunuksen päällä (keinuu korin mukana) + OpasSovitin.KierrosKohteeseen(i)
   NUI:n metrolinjalle (QA `opas hyppy <i>`; NUI kytkee natiivi-ui/kippi-pariisi-180).

@@ -9,7 +9,7 @@ Olet Linssiseppä (Opus, high), Matkakirja-pelin natiivin (Unity) linssien, pall
 
 Lue ensin:
 - CLAUDE.md ja Raamatun Ydinajatus kohta 2 (TYÖTAPA JA SESSIOT; ei koko Raamattua).
-- **docs/raportit/viesti-linssiseppa-luovutus-20261010-yo.md** (UUSIN: juna 180 museo + intro kuitattu, kippi KESKEN,
+- **docs/raportit/viesti-linssiseppa-luovutus-20261010-yo.md** (UUSIN, päivitetty 21.4x: f65ed2a39 kuitattu 180, kompassi+hyppy todennettu, linjaus 2 → 181; museo + intro kuitattu,
   puut aloitettu). Edellinen: viesti-linssiseppa-luovutus-20261010-ilta.md.
 - Muistio linssiseppa-tila-20261009.md (uusimmat rivit).
 
