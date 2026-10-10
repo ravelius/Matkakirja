@@ -1,0 +1,32 @@
+# Pelikoodarin luovutus 10.10.2026 klo 10.4x (nollausraja 50 %)
+
+Lue ensin CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-pelikoodari-aloitus.md (säännöt ennallaan).
+Natiiviseppä: ccd send_message local_bf20055b-d582-4812-ba2b-b59c37a5e7b8. Julkaisija local_22b29f10-7af8-43fc-a974-1d666f716c97,
+PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-47c5-a597-8a18d56874e1.
+
+## 1. Valmiit tänään (odottavat muita)
+- **Jäätymiskoe**: EI koske peliä/TF:ää; 0/4 toistoa (A–D), aamun 3/3 todennäköisesti coreaudiod-jumi. Raportti
+  docs/raportit/jaatymiskoe-20261010.md. Korjaukset proto `pelikoodari/mittaa-aikaraja` **dad7ae249** (pohja a4c6539e5, worktree
+  `wt/proto-pelikoodari-mittaa`): AaniIstunto.TilaAikarajalla + todistusajo.sh jäätymisvahti → Natiivisepälle junaan 176 (lähetetty).
+  Proton origin ei ota pushia (haarat paikallisia). Skenaariot ja käynnistimet `proto-3d/tyokalut/pelikoodari-ajot/sk-jaatyminen-{a,b,c,d}.txt`, `jaatyminen-*.pl`.
+- **IP-suola** PR #4335 (Matkakirja, haara pelikoodari-ip-suola e6f4ba6d1, worktree wt/pelikoodari-ip-suola): HMAC-SHA-256(IP_SUOLA, ip),
+  8 heksaa; pollo-julkaisu.yml asettaa IP_SUOLA:n GitHubin POLLO_IP_SUOLA:sta. npm test 5422/0. Odottaa Julkaisijaa + secretin luontia.
+- **Kertoja v2** seikkailu/olavinlinna/vaihe-esittely-v2 ämpärissä (Siirtosepälle 176: kestot 16,64/15,12/11,62/6,14 s).
+- **Musiikkilista** docs/raportit/musiikit-pelissa-20261010.md (PT merkitsi äänisivulle). Äänisivun lisäraidat _tyo/aanisivu-20261010/.
+- **ISS-äänierä 1** `proto-3d/_tyo/aanisivu-iss-20261010/` (40 ääntä: 18 NASA PD + 22 Soundly Pro; kuuntelu/ −16, peli/ −23,
+  ääniportti 0 hylättyä; EHDOTUS.md, LAHTEET.md, raidat.tsv, kasittele.py). PT vie äänisivulle; omistajan kuuntelun jälkeen vienti
+  uusiin polkuihin aanet/iss-v1/ (SHA256SUMS viimeisenä) ja kytkentä (CupolaAani, OhjaamonAanet, KavelyAanet). Huom: iss-tarranauha
+  peli-TP −0,8 dBTP → hiljennä ennen vientiä. Soundly-lähteet NAS soundly/eraiss1 (tyolista.tsv iss1-rivit, tehty.txt).
+
+## 2. Odottaa
+- Freesound-lataaja käynnistetty uudelleen 09.46 (perl setsid, aja-originaalit.zsh), odottaa ~/.freesound-tokenia (OAuth). Aikakatkaisu
+  ~12 h; käynnistä uudelleen samalla kaavalla, jos token puuttuu yhä.
+- Kuratoitu live PIDOSSA (aamun luovutus kohta 4); IP-suola tehty sitä ennen.
+- Siivous mergen jälkeen: wt/proto-pelikoodari-pisteet, wt/proto-pelikoodari-pulu, wt/proto-pelikoodari-mittaa (git -C proto worktree remove),
+  wt/pelikoodari-ip-suola (tools/uusi-worktree.sh --poista).
+
+## 3. Opit
+- loudnorm putoaa dynaamiseen tilaan, kun huippuvara ei riitä, ja jättää tason alle; stereon mittaus + mono-tallennus = −3 dB.
+  Käytä mono-PCM → mitattu LUFS → vahvistus + alimiter (kasittele.py).
+- Soundly-haku tuo sokeasti N ensimmäistä: tarkista nimet ennen käsittelyä (rautatieasemat "space station interior" -haulla).
+- Jäätymisessä ota pinonäyte (`sample <pid>`), ei arvailua; simulaattorin appi on Macin prosessi.
