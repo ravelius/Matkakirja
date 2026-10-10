@@ -52,3 +52,19 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 
 1) Eiffel v1:n LS2-korjaukset (kohta 6) → LS2:n uusi pari. 2) Préfecture/RH/Concorde-arkit (kohta 6). 3) Kaupungintalon pelikuva
 (LS2:n seuraaja) → kalibrointi → omistajan kortti PT:n kautta; LS1:n julkisivuvalo, kun malli on pelissä. 4) Siirtosepän arkin löydökset.
+
+## TEHTY 09.0x–09.1x (nollauksen jälkeen)
+
+- **Eiffel v1b** (`_valmiit/eiffel-v1`, LAHTEET.md v1b-osio; v1 = glb-v1/, portti-v1/): maa + leikkaus 180 → 130 m (RMAA 65, vain tornin alle),
+  maa asfaltti 64/64/72, torni RUSKEA 80/58/44 → 100/76/58, LASI 60/55/54 (ei sinisiä tasoja), KIVI 112/106/98. Portti 0, sha256 lod0/1/2
+  6038b4986ff0dc26 / 7820285784e0028d / 048f788fc3027fa8. LS2 paketoi (v6hk3-eif1b) → pari + RGB-mittaus simuvuorolla ~09.45 jälkeen.
+- **Préfecture v1b** (`_valmiit/prefektuuri-v1`, LAHTEET.md v1b; v1 = glb-v1/, tekstuurit-v1/, tekoaly-v1-tekseli-v1/): kalibrointi_v1b.json
+  (aja_tekseli_v1.zsh oletus; KAL=kalibrointi_v1.json = v1): liuske 92/95/102, kalkkikivi 173/160/146; sininen kaista = matalat katokset z 4,5 m
+  (liuske, tekoälykuvan sininen) → uusi `projisoi_tekseli.py --kalibroi` -avain "sininen" (kyll, z_max suhteessa helman pohjaan z0, materiaalit);
+  pinnat.py: asfaltti 86, jalkakäytävä 134/131/125 → prefektuuri.py uudelleen (geometria sama). Portti 0, lod0/1/2 5bd4a33cdc58c90b /
+  b343e447c5d9efe9 / 7725b1ebf0445a7a. LS2 paketoi (v6hk3-nd3c-pp1b) → pari samalla vuorolla.
+- RH v3b ja Concorde v2: LS2:n arkeissa kunnossa, ei muutoksia.
+- Olavinlinnan veden väri: kysytty Siirtosepältä, kytkeekö hän (ehdotus: hän kytkee LS2:n vesivarjostimen kaavalla, minä vien vain tarvittaessa).
+
+## Seuraavaksi
+1) LS2:n parit Eiffel v1b + Préfecture v1b → säätö mittausten mukaan → PT. 2) Kaupungintalon pelikuva (LS2) → kalibrointi. 3) Siirtosepän arkki + vesivastaus.
