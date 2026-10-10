@@ -59,6 +59,20 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(null, L(tila).Url, "latausmusiikki pois");
             Oleta.Sama(AaniVakiot.LatausRistiMs, L(tila).PoisMs ?? -1, "ristihäivytys näkymän omaan ääneen");
             Oleta.Sama(3000, AaniVakiot.LatausRistiMs, "~3 s");
+            Oleta.Tosi(L(tila).PoisDesibeli, "ristihäivytys desibeleissä (PT 21.5x)");
+            // Häivytys 0,52 → 0 (linnan taso): 100 ms:n askel ≤ 1 dB lattiaan (−30 dB) asti, lopussa nolla.
+            var r = new Tasoramppi(0.52);
+            r.Aloita(0, AaniVakiot.LatausRistiMs, true);
+            double edellinen = 0.52, suurin = 0;
+            for (int i = 0; i < 29; i++)
+            {
+                for (int j = 0; j < 3; j++) r.Askel(1 / 30.0);
+                suurin = Math.Max(suurin, 20 * Math.Log10(edellinen / r.Arvo)); edellinen = r.Arvo;
+            }
+            Oleta.Tosi(suurin <= 1.0 + 1e-9, $"100 ms:n askel ≤ 1 dB: {suurin:0.00} dB");
+            Oleta.Tosi(20 * Math.Log10(0.52 / r.Arvo) <= Tasoramppi.HaivytysLattiaDb + 1e-9, "lattiassa ennen loppua");
+            for (int j = 0; j < 6; j++) r.Askel(1 / 30.0);
+            Oleta.Sama(0.0, r.Arvo, "lopussa nolla");
             Oleta.Tosi(!tila.LatausAuki, "latausruutu kiinni");
             tila.LatausOhi(avautui: true);
             Oleta.Sama(null, L(tila).PoisMs, "toinen sulku ei tee mitään");
@@ -71,6 +85,7 @@ namespace Matkakirja.Peli.Testit
             tila.LatausOhi(avautui: false);
             Oleta.Sama(null, L(tila).Url, "pois");
             Oleta.Sama(AaniVakiot.LatausPoisMs, L(tila).PoisMs ?? -1, "nopea häivytys");
+            Oleta.Tosi(!L(tila).PoisDesibeli, "ohitus lineaarinen");
             Oleta.Tosi(AaniVakiot.LatausPoisMs < AaniVakiot.LatausRistiMs, "ohitus nopeampi kuin ristihäivytys");
         }
 

@@ -6,6 +6,8 @@
 //                tauko ei hyppää rampin loppuun (§2.5: "ramppi alkaa ensimmäisestä ruudusta").
 //                Desibeliramppi (latausmusiikin jatko, PT 10.10. 21.0x: "≤ 1 dB:n askel"): tasainen dB:nä,
 //                kun alku ja kohde > 0 (lineaarinen 0,35 → 0,02 / 3 s pudotti viimeisellä 100 ms:lla ~4 dB).
+//                Häivytys nollaan desibeleissä (linnan ristihäivytys, PT 21.5x): tasaisesti HaivytysLattiaDb alas
+//                ja lopussa nollaan (3 s:ssa 1 dB / 100 ms; −30 dB jää näkymän omien äänien alle).
 //   Silmukka     maiseman kierroksen vaihtohetki (duration − 2,6 s, §2.6).
 //   Aanilataus   levyvälimuistin nimi (sama kaava kuin Natiivi-UI:n Aanet.Levy ämpärin osoitteille),
 //                striimausraja (> 3 Mt, §5.2) ja latausvirheen luokitus (§2.7).
@@ -20,11 +22,14 @@ namespace Matkakirja.Peli
     {
         /// <summary>Yhden ruudun suurin aika-askel: 2 s:n jumi etenee rampissa vain tämän verran.</summary>
         public const double MaksimiAskelS = 0.1;
+        /// <summary>Desibelihäivytys nollaan: tasainen pudotus näin monta dB alkutasosta, sitten nolla rampin lopussa.</summary>
+        public const double HaivytysLattiaDb = 30;
 
         public double Arvo { get; private set; }
         public double Kohde { get; private set; }
         double jaljellaS;
         bool desibeli;
+        double lattia;
 
         public Tasoramppi(double arvo = 0) { Arvo = Kohde = arvo; }
 
@@ -34,6 +39,7 @@ namespace Matkakirja.Peli
         public void Aloita(double kohde, double kestoMs, bool desibeli = false)
         {
             this.desibeli = desibeli;
+            lattia = Arvo * Math.Pow(10, -HaivytysLattiaDb / 20);
             if (double.IsNaN(kohde) || double.IsInfinity(kohde)) kohde = 0;
             Kohde = Math.Max(0, kohde);
             if (kestoMs <= 0 || double.IsNaN(kestoMs)) { Arvo = Kohde; jaljellaS = 0; return; }
@@ -50,7 +56,8 @@ namespace Matkakirja.Peli
             if (!(dt > 0)) return true;
             dt = Math.Min(dt, MaksimiAskelS);
             if (dt >= jaljellaS - 1e-9) { Arvo = Kohde; jaljellaS = 0; return false; }
-            if (desibeli && Arvo > 0 && Kohde > 0) Arvo *= Math.Pow(Kohde / Arvo, dt / jaljellaS);
+            double kohti = Kohde > 0 ? Kohde : lattia;
+            if (desibeli && Arvo > 0 && kohti > 0) Arvo *= Math.Pow(kohti / Arvo, dt / jaljellaS);
             else Arvo += (Kohde - Arvo) * (dt / jaljellaS);
             jaljellaS -= dt;
             return true;

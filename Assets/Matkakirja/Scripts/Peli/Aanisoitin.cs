@@ -477,7 +477,7 @@ namespace Matkakirja.Natiivi
             if (nyk != null && (w.Uusi || w.Url == null))
             {
                 nykyiset[(int)k] = null;
-                Poista(nyk, w.PoisMs ?? 0);
+                Poista(nyk, w.PoisMs ?? 0, w.PoisDesibeli);
                 nyk = null;
             }
             if (w.Url == null) return;
@@ -602,11 +602,11 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Häivytys nollaan ja vapautus (0 tai soimaton = heti).</summary>
-        void Poista(Lahde l, int ms)
+        void Poista(Lahde l, int ms, bool desibeli = false)
         {
             l.Poistuva = true;
             if (!l.Soi || ms <= 0) { Vapauta(l); return; }
-            l.Taso.Aloita(0, ms);
+            l.Taso.Aloita(0, ms, desibeli);
         }
 
         void Vapauta(Lahde l)
