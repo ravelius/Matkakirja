@@ -209,3 +209,7 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   ortokuvasta teksturoidulla pinnalla — JO TOTEUTUU: ND:n parvis (IGN 2018 -orto) maa −4 % (v4b-ks), Eiffelin maa −1 %. Préfecturen (−19 %) ja
   KL:n (−27 %) maa EI ole ortokuvasta (synteettinen asfaltti/jalkakäytävä, KL Copernicus 2 m) → ero on mallissa, ei renderissä. Kerrottu PT:lle.
   Tauon jälkeen järjestys: ND v4c → LS2 (Eiffel v2 peruttu 12.3x).
+- (13.0x) **Sisältökirjurin patsasmitat VALMIIT:** _tyo/sisaltokirjuri/taidemuseo-alankomaat-20261010/patsaat/mitat.json + MITAT-LUEMINUT.md
+  (täydet 11, vain korkeus 24 → yht. 24 korkeutta, 11 ilman mittoja; Rijks: Spiering/Falconet/Houdon sisältävät jalustan, keulakuva 140 ilman
+  jalustaa, Keyserin rintakuva 72,5 ilman tammisokkelia 38,5 → skannauksessa sokkeli mukana: korkeus_m 1,11). Tauon jälkeen: patsaat-taulu.json
+  korkeus_m näistä (jalustan sisältävissä skannattu osa tarkistettava kuvasta), arvio=false → patsaat_pakkaa.py → alankomaat.py → nl_tuotanto.

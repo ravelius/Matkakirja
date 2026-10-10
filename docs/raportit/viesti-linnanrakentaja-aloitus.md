@@ -8,7 +8,11 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (10.10. 12.5x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` osiot "PEKING" ja
+1. **NYT (10.10. 13.0x, TAUKO kunnes PT ilmoittaa: bugikorjausjuna 176/177 + tilinvaihto):** lue luovutuksen
+   `viesti-linnanrakentaja-luovutus-20261010-paiva.md` loppuosio "TAUKO 12.5x — TILA" ja sen jatkorivit. Kesken: palatsi-viipaleen NYKY-vienti
+   (1499 valmis, PALA cf16ad94ef3c76bc), NL-sali v2 (valmis, arkki PT:lle; patsaiden mitat tulleet → uudelleenpakkaus), ND v4c ja Pekingin portti
+   (PT 12.4x). Eiffel v2 PERUTTU (omistaja 12.3x). Ei taustaajoja käynnissä.
+1x. **(vanha) 10.10. 12.5x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` osiot "PEKING" ja
    "SEURAAVAN SESSION JÄRJESTYS (nollaus 12.5x, PT 11.4x)" ja toimi sen järjestyksessä: 1) ND v4b -pari (sävy oikeaan maailmaan),
    2) vertailuportin suunnitelma PT:lle (vertaa_orto.py valmis), 3) Siirtosepän palatsi-viipale, 4) Eiffel v2, 5) NL-sali v2, 6) Peking-pari.
 1y. **(vanha) 10.10. 10.1x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-paiva.md` KOKONAAN ja toimi lopun kohdan
