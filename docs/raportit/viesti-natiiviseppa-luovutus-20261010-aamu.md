@@ -5,6 +5,22 @@ selvittaja-3d-luovutus), proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-pro
 (yön juurisyy ja TILA-rivit 03.5x / 05.0x). Viestit PT:lle ja Julkaisijalle varakanavalla mcp__ccd_session_mgmt__send_message:
 PT local_593b89a1-2514-4d74-b956-2a73db862382, Julkaisija local_22b29f10-7af8-43fc-a974-1d666f716c97.
 
+## HETI (omistaja 07.4x PT:n kautta: "vaihda heti 6.7. versioon" → Unity 6000.7.0b4 PÄÄLINJAKSI)
+PT:n järjestys: 1) paluu talteen ✔ tagit `unity63-viimeinen` (c47bded2c = BUILD 174) ja `unity63-viimeinen-175` (b7df7c444); 6.3-käännöskopio
+→ T7 /Volumes/T7 4TB/koodaus/unity63-talteen/ (rsync käynnissä 07.5x, loki lokit/natiiviseppa-unity63-talteen.out); 6.3-editori jää.
+2) 175-runko 6.7:ään: T7-kopio natiiviseppa/unity-67 = cb8f87f31 (6.7-korjaukset 931920957: GetGPUProjectionMatrix, GetInstanceID →
+GetHashCode (Object.GetHashCode = instanssi-id, kelpaa), URP 17.7.0, Cesium 1.25.1 ennallaan; uudelleensarjallistus 7bab4da79; + juna 174).
+Seuraavaksi: merge natiiviseppa/juna-175 (b7df7c444 tai uudempi) unity-67:ään → siitä uusi pääkehityshaara (PT nimeää; esim. juna-175 =
+unity-67 + 175). ProjectVersion 6000.7.0b4. Editoripolku: Unity 6.7 on T7:llä /Volumes/T7 4TB/koodaus/Unity/6000.7.0b4/ → Julkaisija hoitaa
+putken (proto-kaanna.sh UNITY=, juna-ajo, CI, aja.sh, unity-tarkistus.sh R=… ja MATKAKIRJA_KIRJASTOT=6.7-Library).
+3) Testit 6.7:llä: Linssit/Peli/Kartta-kaanna.sh käyttävät 6.3:n dotnetia (puhdas C#, ok); unity-tarkistus vaatii 6.7:n Library/ScriptAssemblies
+(MATKAKIRJA_KIRJASTOT="/Volumes/T7 4TB/koodaus/proto-natiiviseppa-unity67/Library/ScriptAssemblies") ja 6.7:n moduulipolut (U=…).
+Simukäännös 6.7:llä → BUILD-viesti kaikille rooleille (rebase-SHA, tarkistukset 6.7:llä, ei uusia GetInstanceID-kutsuja).
+4) iPad: 6.3-vertailu jää pois. 6.7-laitekäännös (174-koodi) käynnissä nice 20 (B-app → lokit/natiiviseppa-app-ab67-laite) → Release-
+muistiajo Pariisi A/B (vertailu R22/R23: 0,68 / 0,75 Gt) + Olavinlinna + lämpö; jetsam tai < 0,5 Gt → stop + rivi PT:lle. Asennus: ipad.sh
+tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten muistitarkka-ipad.sh.
+5) Mac myöhemmin. TF 175 huomenna 6.7:llä, jos muistiajo menee läpi.
+
 ## Junat
 
 | Juna | Master | juna/b13 | Simukäännös | Tila |
