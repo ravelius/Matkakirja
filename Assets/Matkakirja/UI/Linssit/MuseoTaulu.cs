@@ -161,11 +161,25 @@ namespace Matkakirja.Natiivi
             Nappaimisto.Rekisteroi("museo-huone", 60, () => MuseoSovitin.HuoneKorttiAuki, null, null, () => MuseoSovitin.HuoneKortti(false));
 
             MuseoSovitin.Vaihtui += Paivita;
-            kerros.JokaRuutu += () => { if (auki) AsetteleKortti(); };
+            kerros.JokaRuutu += () => { if (auki) { AsetteleKortti(); AsetteleNimi(); } };
         }
 
         void AsetaKuva(RenderTexture kuva) =>
             nakyma.style.backgroundImage = kuva != null ? new StyleBackground(Background.FromRenderTexture(kuva)) : new StyleBackground(StyleKeyword.None);
+
+        /// <summary>
+        /// Kapea pystyruutu (puhelin; PT 10.10. museo2: Yövartion nimi vei kolme riviä ja alarivi osui kehyksen päälle): nimikyltin
+        /// otsikko tyylikirjan Otsikko-koossa, jolloin pisimmätkin nimet (Staalmeesters, 56 merkkiä) mahtuvat kahdelle riville
+        /// Poistun vasemmalle puolelle; leveämmällä Nimiö kuten ennen.
+        /// </summary>
+        void AsetteleNimi()
+        {
+            float w = otsikko.parent != null ? otsikko.parent.resolvedStyle.width : 0;
+            if (!(w > 0)) return;
+            float koko = w < KapeaLeveys ? Tyylikirja.Koko.Otsikko : Tyylikirja.Koko.Nimio;
+            if (nimi.resolvedStyle.fontSize != koko) nimi.style.fontSize = koko;
+        }
+        const float KapeaLeveys = 520f;
 
         void AsetteleKortti()
         {
