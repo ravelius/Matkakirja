@@ -3,7 +3,21 @@
 Juokseva loki: `/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt` (tail -80). Pitolista: `julkaisija-tyokalut/pidossa.txt`.
 NOLLAUSRAJA 50 % (omistaja 08.3x, Raamattu #4327): kirjoita luovutus, kun konteksti ylittää 50 % (`get_usage`).
 
-## 0. PÄIVITYS 12.35 (tilinvaihto, lue ensin)
+## 0. PÄIVITYS 14.00 (TF 177 VALMIS, tilinvaihto – lue ensin)
+
+- **TF 177 (juna 176) TestFlightissa iOS + Mac, sisäisillä:** BUILD 177 = 3d0c8c4a74ee7abbe2c4b492c43e49973f2fe4c2
+  (juna/b13 3bb291169). iOS TF 38045859955 → VALID id de01f563 (sisäinen 38046677422, 13.58). Mac 38045904847 → VALID
+  id 9283cd4f (13.54). Ulkoinen ohitettu (tf177-ei-ulkoista). Muutosloki #4345 67705386b (Natiivisepän 4 riviä proosaksi
+  validaattorin 3 lauseen / 280 merkin rajaan; teksti julkaisija-tyokalut/muutosloki-177-proosa.txt). muistiajo-177.txt OK 0.57.
+- **#4346 MERGED 6eba562f1:** iOS-sisäinen tarkistus löysi ensin Mac-buildin samalla numerolla → työnkulut antavat nyt
+  `--alusta IOS` (Mac jo MAC_OS). Jatkossa: jos iOS- ja Mac-build samalla numerolla, tarkista VALID-id:t eri.
+- **TAUKO (omistaja 12.5x):** vain bugikorjaustyöt, kunnes tilinvaihto on tehty. Pidossa (pidossa.txt): #4344 (Karttaseppä),
+  LS1 museo2-simu, LS1 Mac-toisto, LS2 Pekingin vesikuvat. LS1:n KIIRE 2 (iPadin kohdemerkit) → seuraava juna tilinvaihdon jälkeen;
+  LS1:n johtolanka: TF 176:sta puuttuu 68f860e85 (EnhancedTouch-suojaus), TF 177:ssä on → vika voi olla jo korjattu.
+- **Jono 14.00:** LS1 diag-käännös pallomerkit-176-ilman-et (~4 min) → simu iPad11 BDB4E6B6 (~5 min, vahti 16 pid 68105).
+  Muuten lukko ja simut vapaat. LS1 pyytää lukon Julkaisijalta myös diagnoosikäännöksiin (sovittu).
+
+## 0a. PÄIVITYS 12.35
 
 - **Tila 12.35:** käännöslukko VAPAA, lukkojono tyhjä. Simussa LS2 A26BC7D0 (~12.45 asti; muistivahti 16 käynnissä,
   pid 15443). Simujono: LS2 → **LS1 museo2** (`simuvuoro-museo2.zsh e325c3bb7`, iPad 00CF62C2 + iPhone T7-UDID BD64C8E4,
