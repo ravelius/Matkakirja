@@ -68,3 +68,11 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 
 ## Seuraavaksi
 1) LS2:n parit Eiffel v1b + Préfecture v1b → säätö mittausten mukaan → PT. 2) Kaupungintalon pelikuva (LS2) → kalibrointi. 3) Siirtosepän arkki + vesivastaus.
+
+## TEHTY 09.1x–09.4x: v46z (PT kiireellinen 176)
+- Komero (−20,7, 8,1, −11,1; kirkkotorni-portaiden lattia 8,05) vaihteli kirkkotorni-portaat ↔ kappeli-kavely: Askelaani.Osa = pienin laatikko,
+  pystyvara 1 m, kappeli-kavelyn rajat.min y 9,2 → kynnys 8,2. Korjaus: alaraja = alin kävelypinta 9,6 (kavely.py RAJAT_ALA; v44/kavely/osat.json
+  paikattu, nyky_kavely.zsh ajettu; vanha osat.json `olavinlinna-kavely-v1/v46y-talteen/`).
+- **PALA 1499 4e464f44e51710f8** (blender c6005f962ea35714, v45e b51e47c0c), **NYKY b4cd41abc499dbde** (blender 1cebd2b3fbfa7978, v45e 161c104de).
+  Hashit Siirtosepälle ja PT:lle. n1790-leikkaukset nykyssä ranta-1499:n leikkauksissa (Siirtoseppä kysyi). Siirtoseppä kytkee vesivärin itse.
+- Siirtosepän arkki: v46w:n vaaleat rantakivet hämärässä liian kirkkaat (ei kiire) → seuraava Olavinlinna-erä.
