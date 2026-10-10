@@ -14,17 +14,15 @@ skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`, arkit `docs/raportit/k
    arkki kaappaukset/linssiseppa2-179-20261010/peking-179-ilmakeha.jpg → PT. Vallihauta 27/47/60 (ennen 17/38/35, oikea 54/80/68):
    ilmakehä sinistää. PT päättää oman vesivärikertoimen tarpeesta.
 
-4. **PEKINGIN PUUT** (PT 19.2x, ennen omistajaa): proto linssiseppa2/kaupunki-puut **243aa94ef** (2c2305012 päällä; KaupunkiPuut +
-   KaupunkiPuu.shader + Ydin KaupunkiPuuData, CesiumKaupunki kytkentä, asetukset puut/puukirkkaus; unity 0, L 1347). Peili
-   _tyo/linssiseppa2/puut-peili (puut-peking, puukortit Olavinlinnan v44, maa-peking DTM). KÄÄNNÖS JA SIMU VASTA KUN KIIRE OHI (PT):
-   skriptit-20261009/kaanna-puut.zsh → aja-pekingpuut.zsh (PUUT-peili, kulmat pko) → arkit-pekingomistaja.py:n malli → PT. Punerrus
-   raportoitu PT:lle (vihreä puuttuu, ilmakehä sinistää). Peking v4 -kattojen vienti odottaa PT:n päätöstä (v6k15, muisti).
-5. **ND v5d -PARI** kun LR toimittaa (v5c peruttu: säleet ja pyörteet). Malli vuoro-nd5b.sh + arkit-nd5b.py, tekijärivi käsin.
-6. **"JOS MAA LAKKAISI PYÖRIMÄSTÄ"** prototyyppi proto linssiseppa2/maa-ei-pyori **b2583090f** (NUI a51a8955d päällä; MeriTasapaino
-   Karttasepän taulukolla A 11 004,5 m, MaaEiPyoriKuori + MaaEiPyori.shader + MaaEiPyoriSovitin, komennot maa nopeus|peili|tila;
-   unity 0, L 1350). Aineisto Karttasepän (_tyo/karttaseppa/pyoriminen-20261010; gzip peiliin _tyo/linssiseppa2/maa-ei-pyori/peili/).
-   Käännös + simu pyydetty: maa-ei-pyori/kaanna-maa.zsh, sitten aja-maa.zsh <SHA> (sk-maa-ipad/-puhelin: 100/50/0/150 %, Atlantti +
-   Tyynimeri) → arkki PT:lle. Vertaa vesirajaa KS:n vesimaski-f***-4096.png. Muisti: korkeus R16 16 Mt + BMNG 43 Mt.
+4. **SIMUKETJU ODOTTAA JULKAISIJAN JATKA-RIVIÄ** (Siirtosepän KIIRE 20.10): `skriptit-20261009/jatka-nd-maa.zsh` (perl setsid) =
+   ND v5d -pari (nd3/v6k16 = v6k14 + LR:n v5d, KTX2, portti 0; aja-nd5d.zsh, arkit-nd5d.py → nd-v5d-edesta-ylha.jpg) ja sitten
+   pyörimislinssi k2 käännöksellä def917449 (= linssiseppa2/maa-ei-pyori 8cb2928fe: PT 20.0x sedimentti, korkokuva 35×, turkoosi,
+   heijastus pois, NUI:n yläpalkki a9a528145; sk-maa-*: 100/50/0/150/200 % + Eurooppa 0 % + Tyynimeri; maa-ei-pyori/arkki-maa.py
+   lisää 200 + Eurooppa-rivit) → molemmat PT:lle. Lopuksi "SIMU VAPAA" Julkaisijalle.
+5. **PEKING KIERROS 3** (PT 20.1x, ND:n ja pyörimisen jälkeen): puut ×1,4 + kaikki 67 000 (kaupunki-puut **c8dde7a17**, 39 Mt GPU), LR:n
+   v5 (LOD2-katot + kultakatto R ×0,88 G ×0,85; syy punaiseen: LOD2:sta puuttuvat katot, mittaa-katot-lod.py) → paketoi kuten
+   paketoi-peking4.zsh (peking5) + vienti-v6k15.py-malli → käännös c8dde7a17 → aja-pekingpuut.zsh (OMAT → peking5) → arkki → PT.
+   Valmista jo: v6k15 (Peking v4) viety, osoitin ennallaan; puudatan vienti _valmiit/puut-vienti-20261010b odottaa PT:n kuittausta.
 
 ## TÄNÄÄN VALMISTA (iltapäivä–ilta)
 - Junaan 179 (PT kuittasi, SHA:t Natiivisepälle): ilmakeha-kaikkialla d3885f6d1 (omistaja 16.4x), peking-vesivari efc88563c
