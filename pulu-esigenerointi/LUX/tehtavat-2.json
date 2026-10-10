@@ -1,0 +1,938 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Éislek",
+  "kysymys": "Kerro lisää: Éislek"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Clervaux",
+  "kysymys": "Kerro lisää: Clervaux"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "mustarastasta",
+  "kysymys": "Kerro lisää: mustarastasta"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Clervaux’n linnan",
+  "kysymys": "Kerro lisää: Clervaux’n linnan"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Sponheimin",
+  "kysymys": "Kerro lisää: Sponheimin"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Edward Steichenin",
+  "kysymys": "Kerro lisää: Edward Steichenin"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Ihmisen perhe",
+  "kysymys": "Kerro lisää: Ihmisen perhe"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Edward Steichen",
+  "kysymys": "Kerro lisää: Edward Steichen"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "benediktiiniluostari",
+  "kysymys": "Kerro lisää: benediktiiniluostari"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Clervaux’hun",
+  "kysymys": "Kerro lisää: Clervaux’hun"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Ranskasta",
+  "kysymys": "Kerro lisää: Ranskasta"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:hahmotelma-clervaux",
+  "kasite": "Luxemburgissa",
+  "kysymys": "Kerro lisää: Luxemburgissa"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "Wiltzin kreivien",
+  "kysymys": "Kerro lisää: Wiltzin kreivien"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "tyttökouluna",
+  "kysymys": "Kerro lisää: tyttökouluna"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "nahkateollisuus",
+  "kysymys": "Kerro lisää: nahkateollisuus"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "IDÉAL-parkitsemo",
+  "kysymys": "Kerro lisää: IDÉAL-parkitsemo"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "kelttiläisestä",
+  "kysymys": "Kerro lisää: kelttiläisestä"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "Wiltz-joen",
+  "kysymys": "Kerro lisää: Wiltz-joen"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "tyttökoulu",
+  "kysymys": "Kerro lisää: tyttökoulu"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "vanhainkoti",
+  "kysymys": "Kerro lisää: vanhainkoti"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "kaupunkioikeudet",
+  "kysymys": "Kerro lisää: kaupunkioikeudet"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "Wiltzin kreivit",
+  "kysymys": "Kerro lisää: Wiltzin kreivit"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:hahmotelma-wiltz",
+  "kasite": "Luxemburgin",
+  "kysymys": "Kerro lisää: Luxemburgin"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "Vilhelm I",
+  "kysymys": "Kerro lisää: Vilhelm I"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "Wenzel Coster",
+  "kysymys": "Kerro lisää: Wenzel Coster"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "Victor Hugo",
+  "kysymys": "Kerro lisää: Victor Hugo"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "prinssi Henrik",
+  "kysymys": "Kerro lisää: prinssi Henrik"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "romaaniseen tyyliin",
+  "kysymys": "Kerro lisää: romaaniseen tyyliin"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "goottilaisia",
+  "kysymys": "Kerro lisää: goottilaisia"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "Nassaun kartano",
+  "kysymys": "Kerro lisää: Nassaun kartano"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "Our-joen",
+  "kysymys": "Kerro lisää: Our-joen"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "kallionkielekkeellä",
+  "kysymys": "Kerro lisää: kallionkielekkeellä"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:hahmotelma-vianden",
+  "kasite": "suurherttua Jean",
+  "kysymys": "Kerro lisää: suurherttua Jean"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "romaaninen basilika",
+  "kysymys": "Kerro lisää: romaaninen basilika"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "hyppelykulkue",
+  "kysymys": "Kerro lisää: hyppelykulkue"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "helluntaitiistaina",
+  "kysymys": "Kerro lisää: helluntaitiistaina"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "UNESCO",
+  "kysymys": "Kerro lisää: UNESCO"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "posliinitehtaaksi",
+  "kysymys": "Kerro lisää: posliinitehtaaksi"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "barokkityyliin",
+  "kysymys": "Kerro lisää: barokkityyliin"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "rautatie",
+  "kysymys": "Kerro lisää: rautatie"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "pyhiinvaeltajat",
+  "kysymys": "Kerro lisää: pyhiinvaeltajat"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "irlantilaista jigiä",
+  "kysymys": "Kerro lisää: irlantilaista jigiä"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "Echternachin",
+  "kysymys": "Kerro lisää: Echternachin"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:hahmotelma-echternach",
+  "kasite": "luolien",
+  "kysymys": "Kerro lisää: luolien"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "kansallismuistomerkiksi",
+  "kysymys": "Kerro lisää: kansallismuistomerkiksi"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "Henri Even",
+  "kysymys": "Kerro lisää: Henri Even"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "louhoksena",
+  "kysymys": "Kerro lisää: louhoksena"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "Müllerthalin",
+  "kysymys": "Kerro lisää: Müllerthalin"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "Johann Baron von Beck",
+  "kysymys": "Kerro lisää: Johann Baron von Beck"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "nelikulmaisena linnakkeena",
+  "kysymys": "Kerro lisää: nelikulmaisena linnakkeena"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:hahmotelma-beaufort",
+  "kasite": "Wauthier de Wiltz et Beaufort",
+  "kysymys": "Kerro lisää: Wauthier de Wiltz et Beaufort"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "Sûre-joen",
+  "kysymys": "Kerro lisää: Sûre-joen"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "Luxemburgin",
+  "kysymys": "Kerro lisää: Luxemburgin"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "roomalaisen ajan",
+  "kysymys": "Kerro lisää: roomalaisen ajan"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "Stolzembourgin",
+  "kysymys": "Kerro lisää: Stolzembourgin"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "Metternichin",
+  "kysymys": "Kerro lisää: Metternichin"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "Ranskan vallankumous",
+  "kysymys": "Kerro lisää: Ranskan vallankumous"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "piha",
+  "kysymys": "Kerro lisää: piha"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:hahmotelma-bourscheid",
+  "kasite": "Keskiaikaisen linnan",
+  "kysymys": "Kerro lisää: Keskiaikaisen linnan"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Bock-kalliolle",
+  "kysymys": "Kerro lisää: Bock-kalliolle"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Kalatorin",
+  "kysymys": "Kerro lisää: Kalatorin"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Lontoon sopimukseen",
+  "kysymys": "Kerro lisää: Lontoon sopimukseen"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Luxemburgia",
+  "kysymys": "Kerro lisää: Luxemburgia"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Preussin",
+  "kysymys": "Kerro lisää: Preussin"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Lazare Carnot",
+  "kysymys": "Kerro lisää: Lazare Carnot"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Alzette-",
+  "kysymys": "Kerro lisää: Alzette-"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Luxemburgin",
+  "kysymys": "Kerro lisää: Luxemburgin"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Gibraltaria",
+  "kysymys": "Kerro lisää: Gibraltaria"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Pohjoisen Gibraltar",
+  "kysymys": "Kerro lisää: Pohjoisen Gibraltar"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Adolphe-silta",
+  "kysymys": "Kerro lisää: Adolphe-silta"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:hahmotelma-luxembourg",
+  "kasite": "Pétrusse-jokien",
+  "kysymys": "Kerro lisää: Pétrusse-jokien"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Ernz-joen",
+  "kysymys": "Kerro lisää: Ernz-joen"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Keski-Luxemburgissa",
+  "kysymys": "Kerro lisää: Keski-Luxemburgissa"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Fiels",
+  "kysymys": "Kerro lisää: Fiels"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Larochetten",
+  "kysymys": "Kerro lisää: Larochetten"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Linnan kaivosta",
+  "kysymys": "Kerro lisää: Linnan kaivosta"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Luxemburgin kreivien",
+  "kysymys": "Kerro lisää: Luxemburgin kreivien"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "lippumiehiä",
+  "kysymys": "Kerro lisää: lippumiehiä"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Homburgin kartano",
+  "kysymys": "Kerro lisää: Homburgin kartano"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Créhangen kartano",
+  "kysymys": "Kerro lisää: Créhangen kartano"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "Larochetten linnan",
+  "kysymys": "Kerro lisää: Larochetten linnan"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:hahmotelma-larochette",
+  "kasite": "tulipalossa",
+  "kysymys": "Kerro lisää: tulipalossa"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "Länsi-Luxemburgissa",
+  "kysymys": "Kerro lisää: Länsi-Luxemburgissa"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "Attert-joen",
+  "kysymys": "Kerro lisää: Attert-joen"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "pyöreistä torneista",
+  "kysymys": "Kerro lisää: pyöreistä torneista"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "Burgundin ja Ranskan",
+  "kysymys": "Kerro lisää: Burgundin ja Ranskan"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "Emma Kuhn",
+  "kysymys": "Kerro lisää: Emma Kuhn"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "kaupungintalona",
+  "kysymys": "Kerro lisää: kaupungintalona"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "Useldangen",
+  "kysymys": "Kerro lisää: Useldangen"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:hahmotelma-useldange",
+  "kasite": "Useldangen herrakunta",
+  "kysymys": "Kerro lisää: Useldangen herrakunta"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Princesse Marie-Astridilla",
+  "kysymys": "Kerro lisää: Princesse Marie-Astridilla"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Moselilla",
+  "kysymys": "Kerro lisää: Moselilla"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Schengenin",
+  "kysymys": "Kerro lisää: Schengenin"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Schengen",
+  "kysymys": "Kerro lisää: Schengen"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Moselin",
+  "kysymys": "Kerro lisää: Moselin"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Kaakkois-Luxemburgissa",
+  "kysymys": "Kerro lisää: Kaakkois-Luxemburgissa"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Euroopan museo",
+  "kysymys": "Kerro lisää: Euroopan museo"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Länsi-Saksan",
+  "kysymys": "Kerro lisää: Länsi-Saksan"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:hahmotelma-schengen",
+  "kasite": "Schengen-alueeseen",
+  "kysymys": "Kerro lisää: Schengen-alueeseen"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "Kaarle Suuri",
+  "kysymys": "Kerro lisää: Kaarle Suuri"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "sakseja",
+  "kysymys": "Kerro lisää: sakseja"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "Sauer-joen",
+  "kysymys": "Kerro lisää: Sauer-joen"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "Juhana Sokea",
+  "kysymys": "Kerro lisää: Juhana Sokea"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "Böömin",
+  "kysymys": "Kerro lisää: Böömin"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "ranskalaiset",
+  "kysymys": "Kerro lisää: ranskalaiset"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "roomalainen huvila",
+  "kysymys": "Kerro lisää: roomalainen huvila"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "Rooman valtakuntaan",
+  "kysymys": "Kerro lisää: Rooman valtakuntaan"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "kaupunginmuurien",
+  "kysymys": "Kerro lisää: kaupunginmuurien"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:hahmotelma-diekirch",
+  "kasite": "olut",
+  "kysymys": "Kerro lisää: olut"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "Moselin",
+  "kysymys": "Kerro lisää: Moselin"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "viininviljely",
+  "kysymys": "Kerro lisää: viininviljely"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "kanavoinnin",
+  "kysymys": "Kerro lisää: kanavoinnin"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "Ludvig XIV:n",
+  "kysymys": "Kerro lisää: Ludvig XIV:n"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "Pyhän Nikolauksen portti",
+  "kysymys": "Kerro lisää: Pyhän Nikolauksen portti"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "Remacumin",
+  "kysymys": "Kerro lisää: Remacumin"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "Vilhelm II",
+  "kysymys": "Kerro lisää: Vilhelm II"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:hahmotelma-remich",
+  "kasite": "Vilhelm III",
+  "kysymys": "Kerro lisää: Vilhelm III"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "Moselin",
+  "kysymys": "Kerro lisää: Moselin"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "Saksan",
+  "kysymys": "Kerro lisää: Saksan"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "viininviljelyalueella",
+  "kysymys": "Kerro lisää: viininviljelyalueella"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "Frantz Seimetz",
+  "kysymys": "Kerro lisää: Frantz Seimetz"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "Grevenmacherin",
+  "kysymys": "Kerro lisää: Grevenmacherin"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "Impressionismi",
+  "kysymys": "Kerro lisää: Impressionismi"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:hahmotelma-grevenmacher",
+  "kasite": "Luxemburgin",
+  "kysymys": "Kerro lisää: Luxemburgin"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Esch-sur-Alzette",
+  "kysymys": "Kerro lisää: Esch-sur-Alzette"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "terästeollisuuden",
+  "kysymys": "Kerro lisää: terästeollisuuden"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "ARBED",
+  "kysymys": "Kerro lisää: ARBED"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Rockhal",
+  "kysymys": "Kerro lisää: Rockhal"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "ARBEDille",
+  "kysymys": "Kerro lisää: ARBEDille"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Honorius II:lle",
+  "kysymys": "Kerro lisää: Honorius II:lle"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Alzette-joen",
+  "kysymys": "Kerro lisää: Alzette-joen"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Euroopan kulttuuripääkaupungiksi",
+  "kysymys": "Kerro lisää: Euroopan kulttuuripääkaupungiksi"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Belvalin",
+  "kysymys": "Kerro lisää: Belvalin"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Jean Monnet",
+  "kysymys": "Kerro lisää: Jean Monnet"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:hahmotelma-esch",
+  "kasite": "Euroopan yhdentymisen",
+  "kysymys": "Kerro lisää: Euroopan yhdentymisen"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "Charles Eydt",
+  "kysymys": "Kerro lisää: Charles Eydt"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "lämpövettä",
+  "kysymys": "Kerro lisää: lämpövettä"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "Alsacen",
+  "kysymys": "Kerro lisää: Alsacen"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "Lorrainen",
+  "kysymys": "Kerro lisää: Lorrainen"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "Ranskan ja Saksan sotaan",
+  "kysymys": "Kerro lisää: Ranskan ja Saksan sotaan"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "J.-P. Ledure",
+  "kysymys": "Kerro lisää: J.-P. Ledure"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "kasino",
+  "kysymys": "Kerro lisää: kasino"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "ranskalaisvieraita",
+  "kysymys": "Kerro lisää: ranskalaisvieraita"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:hahmotelma-mondorf",
+  "kasite": "Mondorf-les-Bains",
+  "kysymys": "Kerro lisää: Mondorf-les-Bains"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Luxemburgin",
+  "kysymys": "Kerro lisää: Luxemburgin"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Konrad I",
+  "kysymys": "Kerro lisää: Konrad I"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Rudolfin",
+  "kysymys": "Kerro lisää: Rudolfin"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Trieriin",
+  "kysymys": "Kerro lisää: Trieriin"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Frans I",
+  "kysymys": "Kerro lisää: Frans I"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Neumünsterin",
+  "kysymys": "Kerro lisää: Neumünsterin"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Ranskan",
+  "kysymys": "Kerro lisää: Ranskan"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Kaarle IV",
+  "kysymys": "Kerro lisää: Kaarle IV"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Böömin",
+  "kysymys": "Kerro lisää: Böömin"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "Henrik IV",
+  "kysymys": "Kerro lisää: Henrik IV"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "luostarit",
+  "kysymys": "Kerro lisää: luostarit"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:hahmotelma-altmunster",
+  "kasite": "käsikirjoituksia",
+  "kysymys": "Kerro lisää: käsikirjoituksia"
+ }
+]

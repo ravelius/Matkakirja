@@ -1,0 +1,1066 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larochette (historia)
+Tietoruudun teksti: Larochette, luxemburgiksi Fiels, on kaupunki Keski-Luxemburgissa Valkoisen Ernz-joen laaksossa, ja sitä hallitsee osittain raunioitunut Larochetten linna. Linna, jonka varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella; sen rakennuttivat Larochetten herrat, Luxemburgin kreivien lippumiehet. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa, joista Homburgin kartano (1350) ja Créhangen kartano (1385) on kunnostettu; linna tuhoutui tulipalossa 1500-luvun lopulla. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus, ja linnan kaivosta kerrotaan legendoja.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+AIEMPI KYSYMYS: Mitkä kaksi kartanoa Larochetten linnan vieressä on kunnostettu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kunnostetut kartanot ovat [[Homburgin kartano]], joka on vuodelta 1350, ja [[Créhangen kartano]] vuodelta 1385. Ne ovat kaksi viidestä erillisestä kartanosta, jotka rakennettiin [[Larochetten linnan]] viereen suvun laajennuttua. Linnan rauniot kohoavat kallionkielekkeellä noin 150 metriä joen yläpuolella. Kartanot kuulostavat hyviltä paikoilta pysähtyä lepäämään.
+KYSYMYS: Kerro lisää: Larochetten linnan
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larochette (historia)
+Tietoruudun teksti: Larochette, luxemburgiksi Fiels, on kaupunki Keski-Luxemburgissa Valkoisen Ernz-joen laaksossa, ja sitä hallitsee osittain raunioitunut Larochetten linna. Linna, jonka varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella; sen rakennuttivat Larochetten herrat, Luxemburgin kreivien lippumiehet. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa, joista Homburgin kartano (1350) ja Créhangen kartano (1385) on kunnostettu; linna tuhoutui tulipalossa 1500-luvun lopulla. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus, ja linnan kaivosta kerrotaan legendoja.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kaupunkilehti / Tiede ja kivi: Tulipalo tuhosi kirjaston ja säilytti sen] Vuonna 1993 Petran bysanttilaisesta kirkosta löytyi noin 140 papyruskääröä, Jordanian suurin muinaisten asiakirjojen kokoelma. Kääröt ovat kreikankielisiä ja 500-luvulta, ja ne säilyivät samasta syystä kuin Herculaneumin papyrukset: ne hiiltyivät tulipalossa. Suurin osa vaurioitui lukukelvottomaksi, mutta muutamista kymmenistä saa yhä selvää. Ne kertovat kirkon diakonin Theodoroksen varakkaan suvun arjesta — avioliitoista, perinnöistä ja maakaupoista. Kirkko rakennettiin 400-luvun jälkipuoliskolla, ja se paloi 600-luvun alussa. Sivulaivojen mosaiikeissa on vuodenaikoja, eläimiä, ihmisiä, saviastioita ja kasveja.
+AIEMPI KYSYMYS: Miten Larochetten linna tuhoutui 1500-luvun lopulla?
+AIEMPI VASTAUS (Livia):
+Ai tota, selvä. Linna tuhoutui [[tulipalossa]] 1500-luvun lopulla, ja siitä asti se on ollut osittain raunioina. Tarkempia yksityiskohtia palosta en ole varma. Rauniot kohoavat edelleen kallionkielekkeellä joen yllä, ja ne hallitsevat [[Larochetten]] kaupunkia. Tuli on kyyhkyn pahin vihollinen, ei siitä sen enempää.
+KYSYMYS: Kerro lisää: tulipalossa
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Järvi, joka rakennettiin] 1955–1958 — Luxemburgissa ei ole luonnostaan suuria järviä, joten maan suurin järvi rakennettiin. Juomavesi alkoi loppua 1940-luvun lopulla, ja Sûre-joen laaksoon nousi 47 metriä korkea holvipato vuosina 1955–1958. Järvi peittää enimmillään 3,8 neliökilometriä ja on jopa 43 metriä syvä. Laaksosta piti siirtää myllyjen ja tilojen asukkaat, ja sukeltajat voivat yhä käydä raunioilla noin 30 metrin syvyydessä. Vuonna 2007 noin 80 prosenttia väestöstä sai järven vettä.
+AIEMPI KYSYMYS: Kuinka korkea Useldangen linnan päätorni on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Useldangen linnan päätorni on 25 metriä korkea, ja se kohoaa linnan keskellä. Linna on keskiaikainen, pääosin raunioitunut linna [[Länsi-Luxemburgissa]], pienellä kukkulalla kylän keskustassa [[Attert-joen]] yllä. Ulkomuuri ja yksi [[pyöreistä torneista]] antavat hyvän kuvan siitä, millainen linna on aikoinaan ollut. Sellaiselle tornille minä laskeutuisin mielelläni.
+KYSYMYS: Kerro lisää: Länsi-Luxemburgissa
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+AIEMPI KYSYMYS: Kuinka korkea Useldangen linnan päätorni on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Useldangen linnan päätorni on 25 metriä korkea, ja se kohoaa linnan keskellä. Linna on keskiaikainen, pääosin raunioitunut linna [[Länsi-Luxemburgissa]], pienellä kukkulalla kylän keskustassa [[Attert-joen]] yllä. Ulkomuuri ja yksi [[pyöreistä torneista]] antavat hyvän kuvan siitä, millainen linna on aikoinaan ollut. Sellaiselle tornille minä laskeutuisin mielelläni.
+KYSYMYS: Kerro lisää: Attert-joen
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Bahr el Ghazal: Ilmakuva suosta ja pyöreistä kylistä] Bahr el Ghazal laskee lopulta Sudd-suohon, joka tulva-aikaan kasvaa yli 130 000 neliökilometrin laajuiseksi ja nielee haihdunnassaan noin 55 prosenttia siihen virtaavasta vedestä — yksi syy, miksi Niilin lähteiden etsijät joutuivat vuosisatojen ajan kiertämään sen maitse. Jo keisari Neron lähettämät roomalaissotilaat pysähtyivät suohon vuonna 61 jaa. eivätkä päässeet sitä pidemmälle Afrikan sisäosiin. Sveitsiläisen lento-uranuurtajan Walter Mittelholzerin vuosien 1929–1930 Kilimanjaro-lennolla otettu ilmakuva paljastaa, miltä seudun asutus näyttää ylhäältä: pyöreät majat ja karjatarhat ryhmittyvät ympyröiksi joen mutkan ja lammikon tuntumaan.
+AIEMPI KYSYMYS: Kuinka korkea Useldangen linnan päätorni on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Useldangen linnan päätorni on 25 metriä korkea, ja se kohoaa linnan keskellä. Linna on keskiaikainen, pääosin raunioitunut linna [[Länsi-Luxemburgissa]], pienellä kukkulalla kylän keskustassa [[Attert-joen]] yllä. Ulkomuuri ja yksi [[pyöreistä torneista]] antavat hyvän kuvan siitä, millainen linna on aikoinaan ollut. Sellaiselle tornille minä laskeutuisin mielelläni.
+KYSYMYS: Kerro lisää: pyöreistä torneista
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+AIEMPI KYSYMYS: Minä vuonna linnan kappeli tuhoutui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Kappeli tuhoutui vuonna 1903. Linna ja sen kappeli olivat vaurioituneet pahoin jo aiemmin [[Burgundin ja Ranskan]] välisen sodan seurauksena, ja linna rappeutui. Vuonna 1924 Yhdysvalloista palannut [[Emma Kuhn]] osti raunion. Tarkkoja päiviä en tiedä, mutta vuosiluvusta olen varma.
+KYSYMYS: Kerro lisää: Burgundin ja Ranskan
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+AIEMPI KYSYMYS: Minä vuonna linnan kappeli tuhoutui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Kappeli tuhoutui vuonna 1903. Linna ja sen kappeli olivat vaurioituneet pahoin jo aiemmin [[Burgundin ja Ranskan]] välisen sodan seurauksena, ja linna rappeutui. Vuonna 1924 Yhdysvalloista palannut [[Emma Kuhn]] osti raunion. Tarkkoja päiviä en tiedä, mutta vuosiluvusta olen varma.
+KYSYMYS: Kerro lisää: Emma Kuhn
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+AIEMPI KYSYMYS: Kuka osti Useldangen linnan raunion vuonna 1924?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.
+KYSYMYS: Kerro lisää: kaupungintalona
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+AIEMPI KYSYMYS: Kuka osti Useldangen linnan raunion vuonna 1924?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Raunion osti vuonna 1924 [[Emma Kuhn]], joka oli palannut Yhdysvalloista. Linnan palatsin raunioiden päälle rakennettiin hänen jälkeensä moderni rakennus, joka toimii nykyään [[kaupungintalona]]. Linna on [[Useldangen]] kylän keskustassa, ja sen päätorni on 25 metriä korkea. Joku sentään osti rauniot, eikä ne jääneet tuuliajolle.
+KYSYMYS: Kerro lisää: Useldangen
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+AIEMPI KYSYMYS: Minkä joen yllä Useldangen linna seisoo?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linna seisoo [[Attert-joen]] yllä, pienellä kukkulalla kylän keskustassa [[Länsi-Luxemburgissa]]. Se on keskiaikainen, pääosin raunioitunut linna, ja sen näyttää olevan 1100-luvulta, jolloin [[Useldangen herrakunta]] perustettiin. Joen ja kukkulan yhdistelmä on keskiaikaisille linnoille tyypillinen. Joet ovat kyyhkyn parhaita suunnistuspisteitä.
+KYSYMYS: Kerro lisää: Useldangen herrakunta
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Minä vuonna Schengenin sopimus allekirjoitettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Schengenin sopimus allekirjoitettiin vuonna 1985, kesäkuun 14. päivänä. Allekirjoitus tapahtui jokilaiva [[Princesse Marie-Astridilla]], joka oli ankkurissa [[Moselilla]] [[Schengenin]] viinikylän kohdalla. Sopimus koski rajatarkastusten asteittaista poistamista. Hyvä muisti kyyhkyllä, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Princesse Marie-Astridilla
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Minä vuonna Schengenin sopimus allekirjoitettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Schengenin sopimus allekirjoitettiin vuonna 1985, kesäkuun 14. päivänä. Allekirjoitus tapahtui jokilaiva [[Princesse Marie-Astridilla]], joka oli ankkurissa [[Moselilla]] [[Schengenin]] viinikylän kohdalla. Sopimus koski rajatarkastusten asteittaista poistamista. Hyvä muisti kyyhkyllä, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Moselilla
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Minä vuonna Schengenin sopimus allekirjoitettiin?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Schengenin sopimus allekirjoitettiin vuonna 1985, kesäkuun 14. päivänä. Allekirjoitus tapahtui jokilaiva [[Princesse Marie-Astridilla]], joka oli ankkurissa [[Moselilla]] [[Schengenin]] viinikylän kohdalla. Sopimus koski rajatarkastusten asteittaista poistamista. Hyvä muisti kyyhkyllä, vaikka sanonkin itse.
+KYSYMYS: Kerro lisää: Schengenin
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Minkä kolmen maan rajat kohtaavat kunnan alueella?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä sattui. Kunnan rajalla kohtaavat Luxemburgin, Ranskan ja Saksan rajat. [[Schengen]] on viininviljelykylä [[Moselin]] länsirannalla [[Kaakkois-Luxemburgissa]], ja kolmenkohta on aivan kunnan rajalla. Siellä rajat kohtaavat joen varrella, ja Schengenin sopimuskin allekirjoitettiin juuri tällä seudulla. Kolme maata yhdessä pisteessä, minä vain lennän niiden yli.
+KYSYMYS: Kerro lisää: Schengen
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Minkä kolmen maan rajat kohtaavat kunnan alueella?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä sattui. Kunnan rajalla kohtaavat Luxemburgin, Ranskan ja Saksan rajat. [[Schengen]] on viininviljelykylä [[Moselin]] länsirannalla [[Kaakkois-Luxemburgissa]], ja kolmenkohta on aivan kunnan rajalla. Siellä rajat kohtaavat joen varrella, ja Schengenin sopimuskin allekirjoitettiin juuri tällä seudulla. Kolme maata yhdessä pisteessä, minä vain lennän niiden yli.
+KYSYMYS: Kerro lisää: Moselin
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Järvi, joka rakennettiin] 1955–1958 — Luxemburgissa ei ole luonnostaan suuria järviä, joten maan suurin järvi rakennettiin. Juomavesi alkoi loppua 1940-luvun lopulla, ja Sûre-joen laaksoon nousi 47 metriä korkea holvipato vuosina 1955–1958. Järvi peittää enimmillään 3,8 neliökilometriä ja on jopa 43 metriä syvä. Laaksosta piti siirtää myllyjen ja tilojen asukkaat, ja sukeltajat voivat yhä käydä raunioilla noin 30 metrin syvyydessä. Vuonna 2007 noin 80 prosenttia väestöstä sai järven vettä.
+- [Luxemburg — kaupunkilehti / Eurooppa] Seitsemästä EU:n toimielimestä viisi toimii ainakin osittain Luxemburgissa — enemmän kuin missään muussa kaupungissa. Kaikki alkoi 1952, kun kuusi maata ei päässyt sopuun, minne uusi hiili- ja teräsyhteisö sijoitetaan.
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kaupunkilehti / Luxemburg] Kaupunki seisoo kalliolla, jonka Alzette- ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — niin vahvalla linnoituksella, että sitä kutsuttiin Pohjoisen Gibraltariksi.
+AIEMPI KYSYMYS: Minkä kolmen maan rajat kohtaavat kunnan alueella?
+AIEMPI VASTAUS (Livia):
+Kas vaan, sepä sattui. Kunnan rajalla kohtaavat Luxemburgin, Ranskan ja Saksan rajat. [[Schengen]] on viininviljelykylä [[Moselin]] länsirannalla [[Kaakkois-Luxemburgissa]], ja kolmenkohta on aivan kunnan rajalla. Siellä rajat kohtaavat joen varrella, ja Schengenin sopimuskin allekirjoitettiin juuri tällä seudulla. Kolme maata yhdessä pisteessä, minä vain lennän niiden yli.
+KYSYMYS: Kerro lisää: Kaakkois-Luxemburgissa
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Millä aluksella Schengenin sopimus allekirjoitettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän tiedän. Sopimus allekirjoitettiin jokilaiva [[Princesse Marie-Astridilla]], joka oli ankkurissa [[Moselilla]] Schengenin kohdalla. Laiva myytiin vuonna 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Samalla kylässä on myös [[Euroopan museo]], joka avattiin vuonna 2010. Laiva vaihtoi maata, mutta pääsi lopulta takaisin, ymmärrän sen kaipuun.
+KYSYMYS: Kerro lisää: Euroopan museo
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Clausenin poika, joka ehdotti yhteistä Eurooppaa] Robert Schuman syntyi 29. kesäkuuta 1886 Luxemburgin Clausenissa, talossa, jota hänen vanhempansa vuokrasivat rue Jules Wilhelmin varrelta. Isä oli kotoisin Lotaringiasta ja äiti luxemburgilainen; poika puhui äidinkielenään luxemburgia ja kävi koulua Luxemburgin Athénée-lyseossa. Ranskan ulkoministerinä hän ehdotti 9. toukokuuta 1950, että Ranskan ja Länsi-Saksan hiili ja teräs asetetaan yhteisen viranomaisen alle, jotta sota maiden välillä kävisi aineellisesti mahdottomaksi. Päivää juhlitaan nykyään EU:ssa Eurooppa-päivänä. Valtio osti syntymätalon 1985, ja Euroopan parlamentti on kunnostanut sen.
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Mitkä maat allekirjoittivat Schengenin sopimuksen vuonna 1985?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sopimuksen allekirjoittivat Belgian, Ranskan, Luxemburgin, Alankomaiden ja [[Länsi-Saksan]] edustajat. Se allekirjoitettiin kesäkuun 14. päivänä 1985 laivalla [[Moselilla]], ja sopimus koski rajatarkastusten asteittaista poistamista. Nykyisin [[Schengen-alueeseen]] kuuluu 29 Euroopan maata. Viisi maata aluksi, nykyään 29, sehän on melkein kuin pulupari joka löysi parven.
+KYSYMYS: Kerro lisää: Länsi-Saksan
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Mitkä maat allekirjoittivat Schengenin sopimuksen vuonna 1985?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Sopimuksen allekirjoittivat Belgian, Ranskan, Luxemburgin, Alankomaiden ja [[Länsi-Saksan]] edustajat. Se allekirjoitettiin kesäkuun 14. päivänä 1985 laivalla [[Moselilla]], ja sopimus koski rajatarkastusten asteittaista poistamista. Nykyisin [[Schengen-alueeseen]] kuuluu 29 Euroopan maata. Viisi maata aluksi, nykyään 29, sehän on melkein kuin pulupari joka löysi parven.
+KYSYMYS: Kerro lisää: Schengen-alueeseen
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mitä nimi Diekirch tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Nimi tulee sanoista Diet-Kirch, jotka tarkoittavat kansan kirkkoa. Tarinan mukaan [[Kaarle Suuri]] asutti alueelle [[sakseja]] 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. Kaupunki sijaitsee Koillis-Luxemburgissa [[Sauer-joen]] rannalla. Ihan nätti nimi, sanoisin.
+KYSYMYS: Kerro lisää: Kaarle Suuri
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+AIEMPI KYSYMYS: Mitä nimi Diekirch tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Nimi tulee sanoista Diet-Kirch, jotka tarkoittavat kansan kirkkoa. Tarinan mukaan [[Kaarle Suuri]] asutti alueelle [[sakseja]] 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. Kaupunki sijaitsee Koillis-Luxemburgissa [[Sauer-joen]] rannalla. Ihan nätti nimi, sanoisin.
+KYSYMYS: Kerro lisää: sakseja
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+AIEMPI KYSYMYS: Mitä nimi Diekirch tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys tuo. Nimi tulee sanoista Diet-Kirch, jotka tarkoittavat kansan kirkkoa. Tarinan mukaan [[Kaarle Suuri]] asutti alueelle [[sakseja]] 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. Kaupunki sijaitsee Koillis-Luxemburgissa [[Sauer-joen]] rannalla. Ihan nätti nimi, sanoisin.
+KYSYMYS: Kerro lisää: Sauer-joen
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sokea laulaja kantoi kansan muistia] 1441 — Puolalaisessa kronikassa mainitaan jo vuonna 1441 hovissa soittanut bandura, luuttumainen kielisoitin, jossa oli aluksi vain 5–12 kieltä. Soitinta soittivat usein sokeat kiertelevät muusikot, kobzarit, jotka lauloivat dumeiksi kutsuttuja kertovia balladeja kasakoiden taisteluista ja sankareista – he olivat kansan elävä historiankirja aikana, jolloin harva osasi lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen 1930-luvulla vangitsemalla ja karkottamalla soittajia Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu hevosensa vierellä bandura sylissään.
+AIEMPI KYSYMYS: Kuka linnoitti kaupungin 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaupungin linnoitti 1300-luvulla [[Juhana Sokea]], joka oli [[Böömin]] kuningas ja Luxemburgin kreivi. Hän ympäröi kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin [[ranskalaiset]] purkivat muurit ja korvasivat ne puuistutuksilla. Puuistutukset näyttävät ylhäältä ainakin kauniimmilta.
+KYSYMYS: Kerro lisää: Juhana Sokea
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Klementinum] Isoisäsi kirjaa ilmanpuntarin lukemat, koska hän ei luota muistiin. Prahassa on talo, joka on tehnyt saman kauemmin kuin yksikään suku. Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina, vaurioitui hussilaissodissa 1420 ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston, jollaista harvassa kaupungissa on. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Vuonna 1791 siellä …
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Kuka linnoitti kaupungin 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaupungin linnoitti 1300-luvulla [[Juhana Sokea]], joka oli [[Böömin]] kuningas ja Luxemburgin kreivi. Hän ympäröi kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin [[ranskalaiset]] purkivat muurit ja korvasivat ne puuistutuksilla. Puuistutukset näyttävät ylhäältä ainakin kauniimmilta.
+KYSYMYS: Kerro lisää: Böömin
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — maalehti / Kirjallisuus: Painokone, jonka ranskalaiset ehtivät ensin] 1794–1934 — Afrikan ensimmäinen moderni painokone tuotiin Freetowniin 1794, mutta ranskalainen hyökkäysosasto tuhosi sen ennen kuin sillä ehdittiin painaa riviäkään. Seuraava saatiin käyntiin 1800, ja siitä syntyivät lehdet Sierra Leone Advertiser ja Royal Gazette. 1860-luvulla Freetownista tuli afrikkalaisen journalismin keskus, jonne tuli toimittajia ympäri mannerta ja kauempaakin: New Eran perusti länsi-intialainen William Drake. Lehdet kirjoittivat rasismista, siirtomaavallasta ja afrikkalaisten oikeuksista. Vuonna 1934 perustettiin Länsi-Afrikan ensimmäinen englanninkielinen radiopalvelu.
+- [Tansania — maalehti / Ruoka: Munakas, jonka sisällä on ranskalaiset] Chipsi mayai tarkoittaa kirjaimellisesti ranskalaisia ja munia: kuumaan pannuun kaadetaan munaseos suoraan paistuvien perunoiden päälle, ja munakas leikataan sektoreiksi kuin piirakka. Se on tavallinen aamiainen etenkin maaseudulla. Muuta aamupalaa ovat chai eli maustettu tee maidolla, chapati, maandazi — hiukan makea uppopaistettu leivonnainen — ja vitumbua, riisijauhosta paistetut pienet pyöryläiset. Välipalapöydässä ovat kashata eli kookospatukka, sambusa ja mkate wa kumimina, sansibarilainen riisileipä.
+AIEMPI KYSYMYS: Kuka linnoitti kaupungin 1300-luvulla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kaupungin linnoitti 1300-luvulla [[Juhana Sokea]], joka oli [[Böömin]] kuningas ja Luxemburgin kreivi. Hän ympäröi kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin [[ranskalaiset]] purkivat muurit ja korvasivat ne puuistutuksilla. Puuistutukset näyttävät ylhäältä ainakin kauniimmilta.
+KYSYMYS: Kerro lisää: ranskalaiset
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Tiede: Teslan huvila Krunska-kadulla] 1952 — Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa -rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa kultaisessa pallossa.
+AIEMPI KYSYMYS: Milloin roomalainen huvila Diekirchissä hylättiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: huvila hylättiin 400-luvun alussa. Kyseessä oli suuri [[roomalainen huvila]], ja kaivauksissa on lisäksi todettu, että kaupungin Pyhän Laurentiuksen kirkko on alun perin roomalainen rakennus. Alue kuului siis aikanaan [[Rooman valtakuntaan]], ja jäljet ovat säilyneet maan alla ja maan päällä. Kyl roomalaiset osasivat rakentaa kestävästi.
+KYSYMYS: Kerro lisää: roomalainen huvila
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Härännahan kokoinen valtakunta] Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti "uutta kaupunkia". Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+AIEMPI KYSYMYS: Milloin roomalainen huvila Diekirchissä hylättiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: huvila hylättiin 400-luvun alussa. Kyseessä oli suuri [[roomalainen huvila]], ja kaivauksissa on lisäksi todettu, että kaupungin Pyhän Laurentiuksen kirkko on alun perin roomalainen rakennus. Alue kuului siis aikanaan [[Rooman valtakuntaan]], ja jäljet ovat säilyneet maan alla ja maan päällä. Kyl roomalaiset osasivat rakentaa kestävästi.
+KYSYMYS: Kerro lisää: Rooman valtakuntaan
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+AIEMPI KYSYMYS: Mitä Diekirchin muureille tapahtui 1800-luvun alussa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ranskalaiset purkivat muurit 1800-luvun alussa ja korvasivat ne puuistutuksilla. Muurin ja vallihaudan oli rakennuttanut 1300-luvulla [[Juhana Sokea]], ja kaupunki oli säilynyt jokseenkin linnoitettuna aina tuohon asti. Monissa Euroopan kaupungeissa vanhojen [[kaupunginmuurien]] paikalle on syntynyt viheralueita tai kiertokatuja. Muurit menivät, mut puut jäivät.
+KYSYMYS: Kerro lisää: kaupunginmuurien
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Ruoka: Kahvi sytytetään, olut pannaan jäätiköstä] Grönlanninkahvi tarjotaan bordeaux-lasissa: kuumaa kahvia, viskiä, Kahlúaa ja Grand Marnieria, päälle kermavaahtoa, ja seos sytytetään palamaan ennen juomista. Panimoilla on oma temppunsa. Greenland Brewhouse Narsaqissa alkoi tehdä olutta jäätiköstä otetusta, noin kahdentuhannen vuoden ikäisestä jäästä, ja jäätikkövedellä panevat myös Godthaab Bryghus Nuukissa ja Icefiord Bryghus Ilulissatissa, joka maustaa oluensa variksenmarjalla ja väinönputkella. Vuoteen 1954 asti alkoholin myyntiä rajoitettiin ankarasti, ja siltä ajalta on jäänyt tapa panna itse.
+- [Bryssel — kaupunkilehti / Ruoka ja juoma: Olut, jonka panee käymään Sennen laakson ilma] Lambic on olutta, jota on valmistettu Brysselin lounaispuolella 1200-luvulta lähtien. Sen käyminen ei perustu viljeltyyn hiivaan vaan Sennen laaksossa eläviin villihiivoihin ja bakteereihin: vierre jäähdytetään yön yli matalassa avoimessa altaassa, jossa ilma tuo mikrobit mukanaan. Siksi olutta tehdään vain viileinä kuukausina, lokakuusta toukokuuhun. Sekoittamalla yksivuotista ja 2–3-vuotiasta lambicia saadaan gueuze, joka käy pullossa uudelleen ja kuohuu niin, että sitä kutsutaan Brysselin samppanjaksi.
+- [Belgia — maalehti / Ruoka: Olut, joka pääsi Unescon listalle] nykyään — Belgiassa valmistetaan yli 1600 erilaista olutta, ja joukossa on erikoisuus nimeltä trappistiolut. Aito trappisti valmistetaan luostarin muurien sisällä munkkien valvonnassa ja panimon tuotto käytetään luostarin ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi luostaria, esimerkiksi Chimay, Orval ja Westmalle. Vuonna 2016 Unesco nosti belgialaisen olutkulttuurin ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Millainen panimo Diekirchissä on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Diekirchissä on kansallisesti merkittävä panimo, joka kantaa kaupungin nimeä. Tarkemmista vaiheista, kuten perustamisvuodesta tai tuotteista, en ole varma, joten jätän ne kertomatta. Kaupunki sijaitsee [[Sauer-joen]] rannalla, ja [[olut]] on Luxemburgissa vakiintunut osa ruokakulttuuria. Panimosta kyl kuuluu maistamaan.
+KYSYMYS: Kerro lisää: olut
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Minä vuonna Remichiin rakennettiin ensimmäinen silta Moselin yli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Remichiin rakennettiin ensimmäinen silta Moselin yli vuonna 1866. Kaupunki sijaitsee [[Moselin]] vasemmalla rannalla Kaakkois-Luxemburgissa, ja laaksossa [[viininviljely]] hallitsee. Kun Mosel kanavoitiin vuonna 1964, laivat ovat voineet kulkea joella ympäri vuoden, ja [[kanavoinnin]] jälkeen joki on ollut tärkeä kulkureitti. Kyl joki näyttää ylhäältä hienolta.
+KYSYMYS: Kerro lisää: Moselin
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+AIEMPI KYSYMYS: Minä vuonna Remichiin rakennettiin ensimmäinen silta Moselin yli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Remichiin rakennettiin ensimmäinen silta Moselin yli vuonna 1866. Kaupunki sijaitsee [[Moselin]] vasemmalla rannalla Kaakkois-Luxemburgissa, ja laaksossa [[viininviljely]] hallitsee. Kun Mosel kanavoitiin vuonna 1964, laivat ovat voineet kulkea joella ympäri vuoden, ja [[kanavoinnin]] jälkeen joki on ollut tärkeä kulkureitti. Kyl joki näyttää ylhäältä hienolta.
+KYSYMYS: Kerro lisää: viininviljely
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+AIEMPI KYSYMYS: Minä vuonna Remichiin rakennettiin ensimmäinen silta Moselin yli?
+AIEMPI VASTAUS (Livia):
+Katotaas. Remichiin rakennettiin ensimmäinen silta Moselin yli vuonna 1866. Kaupunki sijaitsee [[Moselin]] vasemmalla rannalla Kaakkois-Luxemburgissa, ja laaksossa [[viininviljely]] hallitsee. Kun Mosel kanavoitiin vuonna 1964, laivat ovat voineet kulkea joella ympäri vuoden, ja [[kanavoinnin]] jälkeen joki on ollut tärkeä kulkureitti. Kyl joki näyttää ylhäältä hienolta.
+KYSYMYS: Kerro lisää: kanavoinnin
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+AIEMPI KYSYMYS: Kuka purki kaupungin linnoitukset vuonna 1687?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Remichin linnoitukset purki vuonna 1687 [[Ludvig XIV:n]] armeija. Keskiaikaisten linnoitusten jäännöksiä, kuten [[Pyhän Nikolauksen portti]], on kuitenkin yhä näkyvissä. Kaupunki kehittyi roomalaisen [[Remacumin]] asutuksesta, joten sen juuret ovat huomattavasti vanhemmat kuin linnoitukset. Portti kesti, vaikka muuri ei.
+KYSYMYS: Kerro lisää: Ludvig XIV:n
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+AIEMPI KYSYMYS: Kuka purki kaupungin linnoitukset vuonna 1687?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Remichin linnoitukset purki vuonna 1687 [[Ludvig XIV:n]] armeija. Keskiaikaisten linnoitusten jäännöksiä, kuten [[Pyhän Nikolauksen portti]], on kuitenkin yhä näkyvissä. Kaupunki kehittyi roomalaisen [[Remacumin]] asutuksesta, joten sen juuret ovat huomattavasti vanhemmat kuin linnoitukset. Portti kesti, vaikka muuri ei.
+KYSYMYS: Kerro lisää: Pyhän Nikolauksen portti
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+AIEMPI KYSYMYS: Kuka purki kaupungin linnoitukset vuonna 1687?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Remichin linnoitukset purki vuonna 1687 [[Ludvig XIV:n]] armeija. Keskiaikaisten linnoitusten jäännöksiä, kuten [[Pyhän Nikolauksen portti]], on kuitenkin yhä näkyvissä. Kaupunki kehittyi roomalaisen [[Remacumin]] asutuksesta, joten sen juuret ovat huomattavasti vanhemmat kuin linnoitukset. Portti kesti, vaikka muuri ei.
+KYSYMYS: Kerro lisää: Remacumin
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+AIEMPI KYSYMYS: Ketkä kuninkaat vierailivat Remichissä 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Remichissä vieraili vuonna 1844 kuningas [[Vilhelm II]], ja hänen poikansa [[Vilhelm III]] vieraili kaupungissa vuonna 1855. Molemmat olivat Alankomaiden kuninkaita ja samalla Luxemburgin suurherttuoita. Vierailut osoittavat, että pieni joenvarsikaupunki oli ajan hallitsijoiden tiedossa. Kuninkaille on ilmeisesti maistunut Moselin ilma.
+KYSYMYS: Kerro lisää: Vilhelm II
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+- [New York — kohdekartta / Kohdekartta: Trinity Church] 1839–1846 Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui 1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, jossa George Washington kävi jumalanpalveluksessa virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, kun talven 1838–1839 lumet olivat heikentäneet sen rakenteita. Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin helatorstaina 1. toukokuuta 1846. Torni ristiineen y…
+AIEMPI KYSYMYS: Ketkä kuninkaat vierailivat Remichissä 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Remichissä vieraili vuonna 1844 kuningas [[Vilhelm II]], ja hänen poikansa [[Vilhelm III]] vieraili kaupungissa vuonna 1855. Molemmat olivat Alankomaiden kuninkaita ja samalla Luxemburgin suurherttuoita. Vierailut osoittavat, että pieni joenvarsikaupunki oli ajan hallitsijoiden tiedossa. Kuninkaille on ilmeisesti maistunut Moselin ilma.
+KYSYMYS: Kerro lisää: Vilhelm III
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Ruoka: Viinitarhat kahden maan rajalla] nykyään — Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty kokonaan luxemburgilaisista rypäleistä.
+- [Luxemburg — maalehti / Ruoka: Rapeat perunaletut] nykyään — Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös nimellä Cancoillotte.
+AIEMPI KYSYMYS: Minkä joen rannalla Grevenmacher sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tuo on helppo. Grevenmacher sijaitsee [[Moselin]] vasemmalla rannalla Itä-Luxemburgissa lähellä [[Saksan]] rajaa. Kaupunki on [[viininviljelyalueella]], ja siellä asuu 5 276 ihmistä vuoden 2025 lukujen mukaan. Lyhyt vastaus, mut hyvä.
+KYSYMYS: Kerro lisää: Moselin
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Minkä joen rannalla Grevenmacher sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tuo on helppo. Grevenmacher sijaitsee [[Moselin]] vasemmalla rannalla Itä-Luxemburgissa lähellä [[Saksan]] rajaa. Kaupunki on [[viininviljelyalueella]], ja siellä asuu 5 276 ihmistä vuoden 2025 lukujen mukaan. Lyhyt vastaus, mut hyvä.
+KYSYMYS: Kerro lisää: Saksan
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Minkä joen rannalla Grevenmacher sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kato, tuo on helppo. Grevenmacher sijaitsee [[Moselin]] vasemmalla rannalla Itä-Luxemburgissa lähellä [[Saksan]] rajaa. Kaupunki on [[viininviljelyalueella]], ja siellä asuu 5 276 ihmistä vuoden 2025 lukujen mukaan. Lyhyt vastaus, mut hyvä.
+KYSYMYS: Kerro lisää: viininviljelyalueella
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+AIEMPI KYSYMYS: Minkä nimen mukaan kantoni on nimetty?
+AIEMPI VASTAUS (Livia):
+No niin, helppo juttu. Grevenmacherin kantoni on nimetty kaupungin mukaan, ja samanniminen piiri oli olemassa vuoteen 2015 asti. Kaupunki sijaitsee [[Moselin]] rannalla, ja sen tunnettuihin henkilöihin kuuluu impressionistimaalari [[Frantz Seimetz]]. Nimi tuli siis suoraan kaupungilta, ei sen kummempaa.
+KYSYMYS: Kerro lisää: Frantz Seimetz
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+AIEMPI KYSYMYS: Kuka Frantz Seimetz oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: hänet tunnetaan impressionistimaalarina. Frantz Seimetz (1858–1934) kuuluu [[Grevenmacherin]] tunnettuihin henkilöihin. Hänen teoksistaan ja elämänvaiheistaan en ole varma, joten en lähde arvailemaan. [[Impressionismi]] oli 1800-luvun jälkipuoliskolla syntynyt suuntaus, jossa valo ja hetken tunnelma ovat tärkeitä. Taiteilijoista kyl riittäisi kerrottavaa.
+KYSYMYS: Kerro lisää: Grevenmacherin
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+AIEMPI KYSYMYS: Kuka Frantz Seimetz oli?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: hänet tunnetaan impressionistimaalarina. Frantz Seimetz (1858–1934) kuuluu [[Grevenmacherin]] tunnettuihin henkilöihin. Hänen teoksistaan ja elämänvaiheistaan en ole varma, joten en lähde arvailemaan. [[Impressionismi]] oli 1800-luvun jälkipuoliskolla syntynyt suuntaus, jossa valo ja hetken tunnelma ovat tärkeitä. Taiteilijoista kyl riittäisi kerrottavaa.
+KYSYMYS: Kerro lisää: Impressionismi
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Kuinka paljon asukkaita Grevenmacherissa on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Grevenmacherin kunnassa on 5 276 asukasta vuoden 2025 lukujen mukaan. Kaupunki on [[Moselin]] vasemmalla rannalla Itä-Luxemburgissa, joten se on [[Luxemburgin]] mittakaavassa pieni mutta tunnettu viininviljelykaupunki. Pieni kaupunki, mut vastaus oli iso.
+KYSYMYS: Kerro lisää: Luxemburgin
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Kylä joen mutkassa] nykyään — Esch-sur-Sûren vanha keskusta on ahtautunut Sûre-joen jyrkän mutkan sisään, kapealle maankielekkeelle. Kielekkeen päällä seisoo 900-luvulle juontuva linna. Kaupungissa asui vuonna 2025 vain 415 ihmistä. Heti sen yläpuolella joki on padottu järveksi, joka ulottuu kymmenen kilometriä laaksoon. Se oli pitkään maan toiseksi pienin kunta pinta-alaltaan, kunnes kaksi naapurikuntaa liitettiin siihen 2011. Nimen loppuosa erottaa paikan Esch-sur-Alzettesta, joka on maan toiseksi suurin kaupunki 45 kilometriä etelämpänä.
+- [Luxemburg — maalehti / Arki: Lause kaupungintalon päädyssä] 1859 — Esch-sur-Alzetten kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat kaupungin vaakunaa, ja alla lukee vanhalla kirjoitusasulla Mir wölle bleiwe wat mer sin, Haluamme pysyä sellaisina kuin olemme. Lause on maan tunnuslause, ja se on peräisin Michel Lentzin runosta De Feierwon, jonka hän kirjoitti 1859 kaupungin rautatien vihkiäisiin. Luxemburgin kieltä puhuu noin 400 000 ihmistä. Sen vanhin tunnettu teksti on 1300-luvun alun Codex Mariendalensis.
+AIEMPI KYSYMYS: Milloin alueelta löytyi runsaasti rautamalmia?
+AIEMPI VASTAUS (Livia):
+Just niin, tuo on kaupungin käännekohta. Runsaasti rautamalmia löydettiin alueelta 1850-luvulla. Sitä ennen [[Esch-sur-Alzette]] oli pitkään pieni maalaiskylä, mutta kaivosten ja [[terästeollisuuden]] kehittyessä sen väkiluku kymmenkertaistui muutamassa vuosikymmenessä. Teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla, ja vuonna 1911 perustettiin terästehdas [[ARBED]]. Aika hurja nousu kylälle.
+KYSYMYS: Kerro lisää: Esch-sur-Alzette
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+AIEMPI KYSYMYS: Milloin alueelta löytyi runsaasti rautamalmia?
+AIEMPI VASTAUS (Livia):
+Just niin, tuo on kaupungin käännekohta. Runsaasti rautamalmia löydettiin alueelta 1850-luvulla. Sitä ennen [[Esch-sur-Alzette]] oli pitkään pieni maalaiskylä, mutta kaivosten ja [[terästeollisuuden]] kehittyessä sen väkiluku kymmenkertaistui muutamassa vuosikymmenessä. Teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla, ja vuonna 1911 perustettiin terästehdas [[ARBED]]. Aika hurja nousu kylälle.
+KYSYMYS: Kerro lisää: terästeollisuuden
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Milloin alueelta löytyi runsaasti rautamalmia?
+AIEMPI VASTAUS (Livia):
+Just niin, tuo on kaupungin käännekohta. Runsaasti rautamalmia löydettiin alueelta 1850-luvulla. Sitä ennen [[Esch-sur-Alzette]] oli pitkään pieni maalaiskylä, mutta kaivosten ja [[terästeollisuuden]] kehittyessä sen väkiluku kymmenkertaistui muutamassa vuosikymmenessä. Teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla, ja vuonna 1911 perustettiin terästehdas [[ARBED]]. Aika hurja nousu kylälle.
+KYSYMYS: Kerro lisää: ARBED
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Minä vuonna Belvalin viimeinen masuuni lopetti toimintansa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän tiedän. Belvalin viimeinen masuuni sammui vuonna 1997, heinäkuussa. Vapautuneelle alueelle on noussut yliopistoa, arkistoja ja konserttisali [[Rockhal]]. Masuunit A ja B sytytettiin vuosina 1965 ja 1970, ja tehdas kuului [[ARBEDille]], joka syntyi vuonna 1911 kolmen terästehtaan yhdistyessä. Masuunien paikalla soi nykyään musiikki, kyl se on mukavampaa.
+KYSYMYS: Kerro lisää: Rockhal
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Minä vuonna Belvalin viimeinen masuuni lopetti toimintansa?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän tiedän. Belvalin viimeinen masuuni sammui vuonna 1997, heinäkuussa. Vapautuneelle alueelle on noussut yliopistoa, arkistoja ja konserttisali [[Rockhal]]. Masuunit A ja B sytytettiin vuosina 1965 ja 1970, ja tehdas kuului [[ARBEDille]], joka syntyi vuonna 1911 kolmen terästehtaan yhdistyessä. Masuunien paikalla soi nykyään musiikki, kyl se on mukavampaa.
+KYSYMYS: Kerro lisää: ARBEDille
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+AIEMPI KYSYMYS: Milloin Esch-sur-Alzette mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Ai se. Esch mainitaan ensi kerran 12. huhtikuuta 1128 paavi [[Honorius II:lle]] osoitetussa viestissä. Pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaupunki sijaitsee maan lounaisosassa Ranskan rajalla [[Alzette-joen]] laaksossa. Yli yhdeksänsataa vuotta kirjoitettua historiaa, mikä on lintuperspektiivistä melkoinen pätkä.
+KYSYMYS: Kerro lisää: Honorius II:lle
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Kylä joen mutkassa] nykyään — Esch-sur-Sûren vanha keskusta on ahtautunut Sûre-joen jyrkän mutkan sisään, kapealle maankielekkeelle. Kielekkeen päällä seisoo 900-luvulle juontuva linna. Kaupungissa asui vuonna 2025 vain 415 ihmistä. Heti sen yläpuolella joki on padottu järveksi, joka ulottuu kymmenen kilometriä laaksoon. Se oli pitkään maan toiseksi pienin kunta pinta-alaltaan, kunnes kaksi naapurikuntaa liitettiin siihen 2011. Nimen loppuosa erottaa paikan Esch-sur-Alzettesta, joka on maan toiseksi suurin kaupunki 45 kilometriä etelämpänä.
+- [Luxemburg — maalehti / Arki: Kaupunki kallion alla] nykyään — Grund on Luxemburgin kaupungin kaupunginosa, joka lepää Alzette-joen rannalla vanhan kaupungin alapuolella laaksossa. Sinne pääsee kävellen tai hissillä, joka laskeutuu kallion läpi. Asukkaita on vain 983, ja heistä 43,74 prosenttia on luxemburgilaisia (vuoden 2025 lopussa). Illalla Grund herää eloon, sillä se on suosittua yöelämän aluetta. Täällä toimii myös Mosconi, yhden Michelin-tähden ravintola, joka erikoistuu pastaan. Yläpuolella kohoavat vanhan linnoituksen kalliot ja muurit.
+AIEMPI KYSYMYS: Milloin Esch-sur-Alzette mainitaan ensi kerran?
+AIEMPI VASTAUS (Livia):
+Ai se. Esch mainitaan ensi kerran 12. huhtikuuta 1128 paavi [[Honorius II:lle]] osoitetussa viestissä. Pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaupunki sijaitsee maan lounaisosassa Ranskan rajalla [[Alzette-joen]] laaksossa. Yli yhdeksänsataa vuotta kirjoitettua historiaa, mikä on lintuperspektiivistä melkoinen pätkä.
+KYSYMYS: Kerro lisää: Alzette-joen
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Mikä titteli Eschillä oli vuonna 2022?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Esch valittiin vuoden 2022 [[Euroopan kulttuuripääkaupungiksi]]. Kaupunki on Luxemburgin toiseksi väkirikkain, ja sen menneisyys on teollinen: [[Belvalin]] vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Vanha rautakaupunki sai siis kulttuurin tittelin. Ei paha kyyhkyltä, kun muistin kaiken.
+KYSYMYS: Kerro lisää: Euroopan kulttuuripääkaupungiksi
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Mikä titteli Eschillä oli vuonna 2022?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Esch valittiin vuoden 2022 [[Euroopan kulttuuripääkaupungiksi]]. Kaupunki on Luxemburgin toiseksi väkirikkain, ja sen menneisyys on teollinen: [[Belvalin]] vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Vanha rautakaupunki sai siis kulttuurin tittelin. Ei paha kyyhkyltä, kun muistin kaiken.
+KYSYMYS: Kerro lisää: Belvalin
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+AIEMPI KYSYMYS: Mitä Jean Monnet teki Belvalissa 1953?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Jean Monnet]] käynnisti Belvalissa 30. huhtikuuta 1953 teräsvalun, jota lähteiden mukaan pidetään ensimmäisenä eurooppalaisena. Belvalin tehdas kuului [[ARBEDille]], ja masuunit sytytettiin vuosina 1965 ja 1970. Viimeinen masuuni sammui heinäkuussa 1997. Monnet tunnetaan [[Euroopan yhdentymisen]] keskeisenä vaikuttajana, ja teräs oli tämän työn tärkeä aihe. Tuli tuossa kuumaa asiaa.
+KYSYMYS: Kerro lisää: Jean Monnet
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä Jean Monnet teki Belvalissa 1953?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Jean Monnet]] käynnisti Belvalissa 30. huhtikuuta 1953 teräsvalun, jota lähteiden mukaan pidetään ensimmäisenä eurooppalaisena. Belvalin tehdas kuului [[ARBEDille]], ja masuunit sytytettiin vuosina 1965 ja 1970. Viimeinen masuuni sammui heinäkuussa 1997. Monnet tunnetaan [[Euroopan yhdentymisen]] keskeisenä vaikuttajana, ja teräs oli tämän työn tärkeä aihe. Tuli tuossa kuumaa asiaa.
+KYSYMYS: Kerro lisää: Euroopan yhdentymisen
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+AIEMPI KYSYMYS: Minä vuonna Mondorfin kylpylä vihittiin käyttöön?
+AIEMPI VASTAUS (Livia):
+Ai tota. Mondorfin kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Sen rakensi arkkitehti [[Charles Eydt]], ja kylpylän perusti paikallinen notaari J.-P. Ledure, kun suolaa etsittäessä porattu kaivo oli tuottanut [[lämpövettä]]. Vesi ei kelvannut suolan valmistukseen runsaan rautapitoisuutensa vuoksi, mutta siitä tuli kylpylän perusta. Hyvä, että virhe kääntyi voitoksi.
+KYSYMYS: Kerro lisää: Charles Eydt
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+AIEMPI KYSYMYS: Minä vuonna Mondorfin kylpylä vihittiin käyttöön?
+AIEMPI VASTAUS (Livia):
+Ai tota. Mondorfin kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Sen rakensi arkkitehti [[Charles Eydt]], ja kylpylän perusti paikallinen notaari J.-P. Ledure, kun suolaa etsittäessä porattu kaivo oli tuottanut [[lämpövettä]]. Vesi ei kelvannut suolan valmistukseen runsaan rautapitoisuutensa vuoksi, mutta siitä tuli kylpylän perusta. Hyvä, että virhe kääntyi voitoksi.
+KYSYMYS: Kerro lisää: lämpövettä
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+AIEMPI KYSYMYS: Miksi ranskalaisvieraiden virta katkesi vuonna 1871?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ranskalaisvieraiden virta katkesi, koska saksalaiset miehittivät vuonna 1871 [[Alsacen]] ja [[Lorrainen]]. Muutos liittyi [[Ranskan ja Saksan sotaan]], ja Mondorfin kylpylä taantui vuosikymmeniä. Tilanne parani vasta, kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Alsacen
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+AIEMPI KYSYMYS: Miksi ranskalaisvieraiden virta katkesi vuonna 1871?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ranskalaisvieraiden virta katkesi, koska saksalaiset miehittivät vuonna 1871 [[Alsacen]] ja [[Lorrainen]]. Muutos liittyi [[Ranskan ja Saksan sotaan]], ja Mondorfin kylpylä taantui vuosikymmeniä. Tilanne parani vasta, kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Lorrainen
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Historia: Tanssiaiset, jotka keskeytyivät sotaan] Kesäkuun 15. päivän iltana 1815 Richmondin herttuatar järjesti Brysselissä tanssiaiset, joita on sanottu historian kuuluisimmiksi. Illan mittaan Wellingtonin herttualle saapui viestejä: Napoleonin joukot olivat ylittäneet rajan. Wellington käski upseerinsa rykmenttiensä luo, ja osa heistä lähti kohti Quatre Brasia vielä juhla-asussaan. Tanssisali oli entinen vaunuvaja, jossa skottilaiset Gordon Highlanders tanssivat reeliä. Tanssiaisista on tullut taiteilijoiden ja kirjailijoiden suosima aihe.
+- [Sydney — kohdekartta / Kohdekartta: Anzac-muistomerkki] 1930–1934 Varainkeruu aloitettiin 25. huhtikuuta 1916, vuosi Gallipolin maihinnousun jälkeen. Suunnittelukilpailu julistettiin 13. heinäkuuta 1929, ja siihen saivat osallistua vain australialaiset arkkitehdit; rakennuksen hinnaksi määrättiin enintään 75 000 puntaa, ja tiloihin piti mahtua myös veteraanijärjestöjen toimistot. Ehdotuksia tuli 117, ja voittajaksi julkistettiin helmikuussa 1930 Bruce Dellit. Rakennusaineet vaadittiin australialaisiksi ja työntekijöiksi otettiin ensisijaisesti rintamalta palanneita. Kilpailun voitettuaan Dellit pyysi veistokset kuvanveistäjä Rayner Hoffilta, joka oli itse palvellut länsirintamalla. Hoff kahdeksan apulaisensa kanssa teki 1931–1934 kuusitoista ist…
+AIEMPI KYSYMYS: Miksi ranskalaisvieraiden virta katkesi vuonna 1871?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ranskalaisvieraiden virta katkesi, koska saksalaiset miehittivät vuonna 1871 [[Alsacen]] ja [[Lorrainen]]. Muutos liittyi [[Ranskan ja Saksan sotaan]], ja Mondorfin kylpylä taantui vuosikymmeniä. Tilanne parani vasta, kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ranskan ja Saksan sotaan
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+AIEMPI KYSYMYS: Miten Mondorfin lämpövesi löydettiin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin. Vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari [[J.-P. Ledure]] perusti kylpylän. Arkkitehti [[Charles Eydt]] rakensi kylpylälaitoksen, joka vihittiin käyttöön vuonna 1847. Suola jäi löytymättä, mut kylpylä löytyi.
+KYSYMYS: Kerro lisää: J.-P. Ledure
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Valtionteatteri] 1899 Teatteri seisoo keskiaikaisen raatihuoneen paikalla. Raatihuone oli jäänyt tyhjäksi jo 1500-luvulla, ja 1756 siihen avattiin kahvila, josta tuli kaupungin seuraelämän keskus. Ensimmäinen teatteritalo otettiin käyttöön 1788: klassistinen rakennus, jonka katsomoon mahtui 500 ihmistä. Isoisä näkee vuonna 1873 juuri tämän vanhan teatterin. Aluksi siellä esitettiin vain saksaksi, mutta vuodesta 1816 vuorotellen unkariksi ja saksaksi. Samassa talossa toimivat myös kahvila, tanssisali ja vuodesta 1828 kasino. Rakennus suljettiin 1894 turvallisuussyistä. Nykyinen uusbarokkinen teatteri rakennettiin Adolf Langin suunnitelmien mukaan, ja se avattiin juhlallisesti 28. syyskuuta 1899. Näyttämö on …
+AIEMPI KYSYMYS: Minkälainen kaupunki Mondorf-les-Bains on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on pieni mutta persoonallinen paikka. Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa [[kasino]]. Kunnassa on noin 5 000 asukasta. Kylpylän menestys toi 1800-luvulla kylään ylellisiä hotelleja ja rikkaita [[ranskalaisvieraita]]. Kylpyläkaupungin tunnelma on varmasti rauhallinen, ainakin ylhäältä katsoen.
+KYSYMYS: Kerro lisää: kasino
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Kaupunki jonka Ranska perusti] São Luís syntyi syyskuussa 1612, kun ranskalainen upseeri Daniel de la Touche, Sieur de la Ravardière, pystytti saarelle Fort Saint-Louis’n ja nimesi paikan kuningas Ludvig XIII:n mukaan. Ranskalaiset haaveilivat mantereen kokoisesta Ranskan Ekvaattorista, mutta unelma jäi lyhyeksi: portugalilaiset karkottivat heidät jo 1615, ja hollantilaiset hallitsivat kaupunkia vielä vuosina 1641–1644. Kun isoisä saapui satamaan 1873, hän astui ainoaan Brasilian osavaltion pääkaupunkiin, jonka Ranska on koskaan perustanut – kadunkulmien ranskalainen, hollantilainen ja portugalilainen kerrostuma näkyy yhä kivikaduilla ja vanhoissa kauppahuoneissa.
+AIEMPI KYSYMYS: Minkälainen kaupunki Mondorf-les-Bains on?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on pieni mutta persoonallinen paikka. Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa [[kasino]]. Kunnassa on noin 5 000 asukasta. Kylpylän menestys toi 1800-luvulla kylään ylellisiä hotelleja ja rikkaita [[ranskalaisvieraita]]. Kylpyläkaupungin tunnelma on varmasti rauhallinen, ainakin ylhäältä katsoen.
+KYSYMYS: Kerro lisää: ranskalaisvieraita
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+AIEMPI KYSYMYS: Milloin valtio otti Mondorfin laitokset haltuunsa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valtio otti laitokset haltuunsa 21. huhtikuuta 1886. Sitä ennen kylpylä oli taantunut vuosikymmeniä, sillä ranskalaisvieraiden virta oli katkennut vuonna 1871, kun saksalaiset miehittivät [[Alsacen]] ja [[Lorrainen]]. Valtion otteen jälkeen tilanne parani. [[Mondorf-les-Bains]] on yhä tunnettu kylpyläkaupunki. Hyvin meni tuokin, vaikka vei aikansa.
+KYSYMYS: Kerro lisää: Mondorf-les-Bains
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Ruoka: Savustettua sikaa ja härkäpapuja] nykyään — Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini tai olut.
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Kuka perusti Altmünsterin luostarin vuonna 1083?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Altmünsterin luostarin perusti vuonna 1083 [[Luxemburgin]] kreivi [[Konrad I]], joka tarkoitti sen sukunsa yksityiseksi luostariksi. Hän asetti luostarin apotiksi veljensä [[Rudolfin]]. Luostarin koulusta tuli myöhemmin kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä. Kyllä minä sen vielä muistin.
+KYSYMYS: Kerro lisää: Luxemburgin
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Tiede: Ensimmäinen tietokone syntyi kotona] Berliiniläinen rakennusinsinööri Konrad Zuse kyllästyi laskemaan samoja kaavoja käsin ja alkoi rakentaa laskukonetta vanhempiensa olohuoneeseen. Vuonna 1941 valmistunut Z3 oli maailman ensimmäinen ohjelmoitava tietokone: se luki ohjelmansa rei'itetyltä filminauhalta ja laski 2 600 releen naksuessa. Kone tuhoutui pommituksessa 1943, eikä maailma huomannut koko keksintöä ennen kuin vuosia myöhemmin. Zuse rakensi koneensa uudelleen — ja jäljennös naksuttaa nykyään museossa Münchenissä.
+AIEMPI KYSYMYS: Kuka perusti Altmünsterin luostarin vuonna 1083?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Altmünsterin luostarin perusti vuonna 1083 [[Luxemburgin]] kreivi [[Konrad I]], joka tarkoitti sen sukunsa yksityiseksi luostariksi. Hän asetti luostarin apotiksi veljensä [[Rudolfin]]. Luostarin koulusta tuli myöhemmin kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä. Kyllä minä sen vielä muistin.
+KYSYMYS: Kerro lisää: Konrad I
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+AIEMPI KYSYMYS: Kuka perusti Altmünsterin luostarin vuonna 1083?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Altmünsterin luostarin perusti vuonna 1083 [[Luxemburgin]] kreivi [[Konrad I]], joka tarkoitti sen sukunsa yksityiseksi luostariksi. Hän asetti luostarin apotiksi veljensä [[Rudolfin]]. Luostarin koulusta tuli myöhemmin kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä. Kyllä minä sen vielä muistin.
+KYSYMYS: Kerro lisää: Rudolfin
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+AIEMPI KYSYMYS: Minne apotti Johannes Harder vei luostarin arvoesineet ennen tuhoa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Apotti Johannes Harder vei arvoesineet turvaan [[Trieriin]] ennen luostarin tuhoa. Taustalla oli [[Frans I]], jonka joukot valtasivat Luxemburgin kaupungin 11. syyskuuta 1543; luostari tuhottiin todennäköisesti pian sen jälkeen, mutta tarkkaa tuhopäivää tai tuhoajia ei tunneta. Munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, [[Neumünsterin]], Grundin kaupunginosaan. Ei sillä apotilla ollu aikaa pitkään miettiä.
+KYSYMYS: Kerro lisää: Trieriin
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+AIEMPI KYSYMYS: Minne apotti Johannes Harder vei luostarin arvoesineet ennen tuhoa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Apotti Johannes Harder vei arvoesineet turvaan [[Trieriin]] ennen luostarin tuhoa. Taustalla oli [[Frans I]], jonka joukot valtasivat Luxemburgin kaupungin 11. syyskuuta 1543; luostari tuhottiin todennäköisesti pian sen jälkeen, mutta tarkkaa tuhopäivää tai tuhoajia ei tunneta. Munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, [[Neumünsterin]], Grundin kaupunginosaan. Ei sillä apotilla ollu aikaa pitkään miettiä.
+KYSYMYS: Kerro lisää: Frans I
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+AIEMPI KYSYMYS: Minne apotti Johannes Harder vei luostarin arvoesineet ennen tuhoa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Apotti Johannes Harder vei arvoesineet turvaan [[Trieriin]] ennen luostarin tuhoa. Taustalla oli [[Frans I]], jonka joukot valtasivat Luxemburgin kaupungin 11. syyskuuta 1543; luostari tuhottiin todennäköisesti pian sen jälkeen, mutta tarkkaa tuhopäivää tai tuhoajia ei tunneta. Munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, [[Neumünsterin]], Grundin kaupunginosaan. Ei sillä apotilla ollu aikaa pitkään miettiä.
+KYSYMYS: Kerro lisää: Neumünsterin
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+AIEMPI KYSYMYS: Miksi Altmünsterin luostari tuhottiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Varmaa syytä ei tunneta. [[Ranskan]] kuningas [[Frans I]] valtasi [[Luxemburgin]] kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen. Tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti ehti viedä arvoesineet Trieriin, ja munkit perustivat vuonna 1606 uuden luostarin, [[Neumünsterin]]. Vanhalta paikalta on jäljellä enää yksi pyöreä torni. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ranskan
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka oli Jean Sokea, jonka Kaarle IV hautautti luostariin?
+AIEMPI VASTAUS (Livia):
+Ai se. Jean Sokea oli Luxemburgin kreivi ja [[Kaarle IV]]:n isä, ja hän oli myös [[Böömin]] kuningas. Kaarle hautautti isänsä Altmünsterin luostarikirkkoon ja toi näin takaisin vanhan tavan: sinne oli haudattu Luxemburgin kreivejä aina [[Henrik IV]]:n aikaan asti. Hänen elämänvaiheistaan en ole kaikilta osin varma, joten en lisää tähän tarkempia vuosilukuja. Kyl ne kuninkaat tykkäsi sukunsa muistaa.
+KYSYMYS: Kerro lisää: Kaarle IV
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Klementinum] Isoisäsi kirjaa ilmanpuntarin lukemat, koska hän ei luota muistiin. Prahassa on talo, joka on tehnyt saman kauemmin kuin yksikään suku. Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina, vaurioitui hussilaissodissa 1420 ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston, jollaista harvassa kaupungissa on. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Vuonna 1791 siellä …
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Kuka oli Jean Sokea, jonka Kaarle IV hautautti luostariin?
+AIEMPI VASTAUS (Livia):
+Ai se. Jean Sokea oli Luxemburgin kreivi ja [[Kaarle IV]]:n isä, ja hän oli myös [[Böömin]] kuningas. Kaarle hautautti isänsä Altmünsterin luostarikirkkoon ja toi näin takaisin vanhan tavan: sinne oli haudattu Luxemburgin kreivejä aina [[Henrik IV]]:n aikaan asti. Hänen elämänvaiheistaan en ole kaikilta osin varma, joten en lisää tähän tarkempia vuosilukuja. Kyl ne kuninkaat tykkäsi sukunsa muistaa.
+KYSYMYS: Kerro lisää: Böömin
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+AIEMPI KYSYMYS: Kuka oli Jean Sokea, jonka Kaarle IV hautautti luostariin?
+AIEMPI VASTAUS (Livia):
+Ai se. Jean Sokea oli Luxemburgin kreivi ja [[Kaarle IV]]:n isä, ja hän oli myös [[Böömin]] kuningas. Kaarle hautautti isänsä Altmünsterin luostarikirkkoon ja toi näin takaisin vanhan tavan: sinne oli haudattu Luxemburgin kreivejä aina [[Henrik IV]]:n aikaan asti. Hänen elämänvaiheistaan en ole kaikilta osin varma, joten en lisää tähän tarkempia vuosilukuja. Kyl ne kuninkaat tykkäsi sukunsa muistaa.
+KYSYMYS: Kerro lisää: Henrik IV
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Peking — kohdekartta / Kohdekartta: Yonghe-temppeli] 1694, luostariksi 1744 Rakennus alkoi prinssin kotina. Kangxi-keisari antoi sen 1702 neljännelle pojalleen Yinzhenille, ja tämän tuleva seuraaja, Qianlong-keisari, syntyi talon itäsiivessä 1711. Kun Yinzhen nousi valtaistuimelle Yongzheng-keisarina, talosta tuli Harmonian ja rauhan palatsi — ja keisarin arvon merkiksi sen turkoosit tiilikatot vaihdettiin keltaisiin, jotka oli varattu vain keisarille. Vuonna 1744 Qianlong muutti palatsin tiibetinbuddhalaiseksi luostariksi. Siitä tuli Qing-kauden merkittävin buddhalainen temppeli, jonka rakennuksissa kiinalainen ja tiibetiläinen tyyli kulkevat rinnakkain ja jonne muutti munkkeja Mongoliasta ja Tiibetistä asti. Kuuluisin aarre on Kymmenentuhan…
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Miksi luostareilla oli kouluja keskiajalla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Keskiajalla [[luostarit]] olivat tärkeitä oppineisuuden keskuksia, koska munkit osasivat lukea ja kirjoittaa ja kopioivat [[käsikirjoituksia]] käsin. Papiston ja kirjureiden kouluttaminen oli luontevaa tehdä siellä, missä kirjat ja opettajat jo olivat. Altmünsterin koulusta tuli Luxemburgin kaupungin ainoa oppilaitos. Minä olisin kyl pysynyt kirjeissä.
+KYSYMYS: Kerro lisää: luostarit
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+- [Lhasa — kohdekartta / Kohdekartta: Jokhang-temppeli] 600-luvun puoliväli, laajennettu 1610 Jokhang on nelikerroksinen ja peittää kaksi ja puoli hehtaaria. Katot on päällystetty kullatuilla pronssitiilillä, ja harjoilla seisovat kultaiset kauriit opinkehrän kummallakin puolella, voitonliput ja kalahahmot. Pohjakaava on intialaisen vihara-luostarin mallia, ja siihen on myöhemmin sekoittunut nepalilaista ja Tang-kauden kiinalaista rakennustapaa. Ovenpielet, pylväät ja huiput ovat 600- ja 700-luvun newar-työtä Kathmandun laaksosta, ja kattopalkkien on radiohiiliajoituksella todettu olevan alkuperäisiä. Sisällä kierretään ympyrää: uloimmalla kehällä on rivi suuria rukousmyllyjä, ja sen sisäpuolella on päähalli kappeleineen. Päähallissa on puolitoi…
+AIEMPI KYSYMYS: Miksi luostareilla oli kouluja keskiajalla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Keskiajalla [[luostarit]] olivat tärkeitä oppineisuuden keskuksia, koska munkit osasivat lukea ja kirjoittaa ja kopioivat [[käsikirjoituksia]] käsin. Papiston ja kirjureiden kouluttaminen oli luontevaa tehdä siellä, missä kirjat ja opettajat jo olivat. Altmünsterin koulusta tuli Luxemburgin kaupungin ainoa oppilaitos. Minä olisin kyl pysynyt kirjeissä.
+KYSYMYS: Kerro lisää: käsikirjoituksia
