@@ -4927,8 +4927,9 @@
   "kohde": "kohde:hahmotelma-valmiera",
   "kasite": "maapäiviä",
   "kysymys": "Kerro lisää: maapäiviä",
-  "vastaus": "Maapäivät olivat Liivinmaan säätyjen yhteisiä kokouksia, joissa edustettuina olivat Livonian ritarikunta, hiippakunnat, vasallit eli maaherrat ja kaupungit. Niissä päätettiin esimerkiksi puolustuksesta, veroista ja lainsäädännön asioista. Kokouspaikkoja olivat muun muassa [[Valkassa]] ja Valmiera. Maapäiville osallistuivat siten sekä maallinen että kirkollinen valta, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. Maapäivät toimivat, kunnes Liivinmaan ritarikunnan valta hajosi 1500-luvun puolivälin jälkeen. Tarkkoja päivämääriä ja päätöksiä en ole varma.",
+  "vastaus": "Maapäivät olivat Liivinmaan säätyjen yhteisiä kokouksia, joissa edustettuina olivat [[Livonian ritarikunta]], hiippakunnat, vasallit eli maaherrat ja kaupungit. Niissä päätettiin esimerkiksi puolustuksesta, veroista ja lainsäädännön asioista. Kokouspaikkoja olivat muun muassa [[Valkassa]] ja Valmiera. Maapäiville osallistuivat siten sekä maallinen että kirkollinen valta, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. Maapäivät toimivat, kunnes Liivinmaan ritarikunnan valta hajosi 1500-luvun puolivälin jälkeen. Tarkkoja päivämääriä ja päätöksiä en ole varma.",
   "linkit": [
+   "Livonian ritarikunta",
    "Valkassa"
   ],
   "jatkot": [
@@ -4968,8 +4969,9 @@
   "kohde": "kohde:hahmotelma-valmiera",
   "kasite": "Valmieran",
   "kysymys": "Kerro lisää: Valmieran",
-  "vastaus": "Valmiera on Vidzemen toiseksi suurin kaupunki, ja se sijaitsee [[Gauja-joen]] molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat paikalle linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Se kuului Hansaliittoon 1300-luvulta 1500-luvulle, ja kaupungissa pidettiin tuona aikana useita maapäiviä. Ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899. Nykyään Valmiera on teollisuuskaupunki, jonka tärkeitä aloja ovat elintarvike- ja lasikuituteollisuus. Kaupungin saksankielinen nimi on Wolmar.",
+  "vastaus": "Valmiera on [[Vidzemen]] toiseksi suurin kaupunki, ja se sijaitsee [[Gauja-joen]] molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat paikalle linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Se kuului Hansaliittoon 1300-luvulta 1500-luvulle, ja kaupungissa pidettiin tuona aikana useita maapäiviä. Ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899. Nykyään Valmiera on teollisuuskaupunki, jonka tärkeitä aloja ovat elintarvike- ja lasikuituteollisuus. Kaupungin saksankielinen nimi on Wolmar.",
   "linkit": [
+   "Vidzemen",
    "Gauja-joen"
   ],
   "jatkot": [
@@ -5221,7 +5223,7 @@
    "Karjalanpiirakka"
   ],
   "jatkot": [
-   "Mitä eroa on suojatulla alkuperänimityksellä ja maantieteellisellä merkinnällä?",
+   "Mitä eroa on alkuperänimityksellä ja maantieteellisellä merkinnällä?",
    "Miten tuote saa EU:n suojan?"
   ]
  },
@@ -5259,9 +5261,10 @@
   "kohde": "kohde:hahmotelma-carnikava",
   "kasite": "Carnikavassa",
   "kysymys": "Kerro lisää: Carnikavassa",
-  "vastaus": "Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän erikoisuus on grillattu [[nahkiainen]], joka on myös alueen vaakunassa. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita. Tarkkaa asukasmäärää en ole varma.",
+  "vastaus": "Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän erikoisuus on grillattu [[nahkiainen]], ja sen suojasta vastaa [[EU:n suojattu maantieteellinen merkintä]], joka on myös alueen vaakunassa. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita. Tarkkaa asukasmäärää en ole varma.",
   "linkit": [
-   "nahkiainen"
+   "nahkiainen",
+   "EU:n suojattu maantieteellinen merkintä"
   ],
   "jatkot": [
    "Miten Carnikavan kalastajakylä kehittyi?",
@@ -5272,8 +5275,11 @@
   "kohde": "kohde:hahmotelma-carnikava",
   "kasite": "Suojattu maantieteellinen merkintä",
   "kysymys": "Kerro lisää: Suojattu maantieteellinen merkintä",
-  "vastaus": "Suojattu maantieteellinen merkintä on EU:n laatujärjestelmän merkintä, joka kertoo, että tuotteen nimi liittyy tiettyyn alueeseen. Tuotteen tuotannon, jalostuksen tai valmistuksen vähintään yhden vaiheen täytyy tapahtua kyseisellä alueella, ja tuotteen maineen tai ominaisuuksien täytyy liittyä alueeseen. Tuottajat hakevat merkintää kansallisen viranomaisen kautta, ja Euroopan komissio rekisteröi sen. Merkinnän saaneita tuotteita ovat esimerkiksi Nürnbergin paistetut makkarat sekä Carnikavan nahkiainen. Merkintä auttaa kuluttajia tunnistamaan aitoja tuotteita ja suojaa nimeä väärinkäytöltä. Tarkkoja hakuvaatimuksia ei kannata arvailla, ja ne kannattaa tarkistaa viranomaisilta.",
-  "linkit": [],
+  "vastaus": "Suojattu maantieteellinen merkintä on EU:n laatujärjestelmän merkintä, joka kertoo, että tuotteen nimi liittyy tiettyyn alueeseen. Tuotteen tuotannon, jalostuksen tai valmistuksen vähintään yhden vaiheen täytyy tapahtua kyseisellä alueella, ja tuotteen maineen tai ominaisuuksien täytyy liittyä alueeseen. Tuottajat hakevat merkintää kansallisen viranomaisen kautta, ja Euroopan komissio rekisteröi sen. Merkinnän saaneita tuotteita ovat esimerkiksi [[Nürnbergin paistetut makkarat]] sekä [[Carnikavan nahkiainen]]. Merkintä auttaa kuluttajia tunnistamaan aitoja tuotteita ja suojaa nimeä väärinkäytöltä. Tarkkoja hakuvaatimuksia ei kannata arvailla, ja ne kannattaa tarkistaa viranomaisilta.",
+  "linkit": [
+   "Nürnbergin paistetut makkarat",
+   "Carnikavan nahkiainen"
+  ],
   "jatkot": [
    "Mitä eroa on PGI- ja PDO-merkinnällä?",
    "Mitä tuotteita Suomesta on suojattu?"
@@ -5386,8 +5392,11 @@
   "kohde": "kohde:hahmotelma-ainazi",
   "kasite": "Heinaste",
   "kysymys": "Kerro lisää: Heinaste",
-  "vastaus": "Heinaste on Ainažin virolainen nimi. Ainaži sijaitsee Riianlahden rannalla heti Viron rajan eteläpuolella, joten kaksi nimeä kertoo seudun kahdesta kansasta. Vanhan liiviläisen kalastajakylän paikalla kasvanut kaupunki liittyi vahvasti merenkulkuun, ja sen merikoulussa opiskeli sekä virolaisia että latvialaisia nuoria. Nimen alkuperästä en ole varma, enkä halua arvata. Rajaseutu on historiassa ollut monikielistä, ja paikannimet ovat usein kulkeneet kielestä toiseen.",
-  "linkit": [],
+  "vastaus": "Heinaste on Ainažin virolainen nimi. Ainaži sijaitsee Riianlahden rannalla heti Viron rajan eteläpuolella, joten kaksi nimeä kertoo seudun kahdesta kansasta. Vanhan [[liiviläisen]] kalastajakylän paikalla kasvanut [[Ainaži]] liittyi vahvasti merenkulkuun, ja sen merikoulussa opiskeli sekä virolaisia että latvialaisia nuoria. Nimen alkuperästä en ole varma, enkä halua arvata. Rajaseutu on historiassa ollut monikielistä, ja paikannimet ovat usein kulkeneet kielestä toiseen.",
+  "linkit": [
+   "liiviläisen",
+   "Ainaži"
+  ],
   "jatkot": [
    "Millainen on Latvian ja Viron raja?",
    "Miksi paikoilla voi olla kaksi nimeä?"
@@ -5540,9 +5549,10 @@
   "kohde": "kohde:hahmotelma-pape",
   "kasite": "Papen järvi",
   "kysymys": "Kerro lisää: Papen järvi",
-  "vastaus": "Papen järvi on matala, laguunityyppinen rannikkojärvi Latvian lounaisosassa. Laguunityyppinen tarkoittaa, että järvi sijaitsee lähellä merta ja on erottunut siitä hiekkaisella kannaksella. Järveä ympäröivät suot, soistuneet metsät ja dyynit, ja kokonaisuus on tärkeä suojelukohde. Alue kuuluu [[Papen luonnonpuistoon]], joka perustettiin vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja. Joka syksy alueella levähtää noin 50 000 lintua. Järven tarkkaa pinta-alaa ja syvyyttä en ole varma, joten jätän ne mainitsematta.",
+  "vastaus": "Papen järvi on matala, laguunityyppinen rannikkojärvi Latvian lounaisosassa. Laguunityyppinen tarkoittaa, että järvi sijaitsee lähellä merta ja on erottunut siitä hiekkaisella kannaksella. Järveä ympäröivät suot, soistuneet metsät ja dyynit, ja kokonaisuus on tärkeä suojelukohde. Alue kuuluu [[Papen luonnonpuistoon]], joka perustettiin vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja järvi on [[Itämeren]] rannikon tärkeä levähdyspaikka. Joka syksy alueella levähtää noin 50 000 lintua. Järven tarkkaa pinta-alaa ja syvyyttä en ole varma, joten jätän ne mainitsematta.",
   "linkit": [
-   "Papen luonnonpuistoon"
+   "Papen luonnonpuistoon",
+   "Itämeren"
   ],
   "jatkot": [
    "Mikä tekee laguunista erityisen elinympäristön?",
@@ -5721,6 +5731,169 @@
   "jatkot": [
    "Mikä Semgallia on?",
    "Miten herttuakunta päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "Restaurointia",
+  "kysymys": "Kerro lisää: Restaurointia",
+  "vastaus": "Restaurointi tarkoittaa vanhan rakennuksen tai muun kulttuuriperintökohteen korjaamista niin, että sen alkuperäinen ulkoasu ja rakenteet säilyvät mahdollisimman hyvin. Periaatteena on tehdä vain tarpeellinen, dokumentoida työ ja käyttää mahdollisuuksien mukaan sopivia perinteisiä materiaaleja. Restaurointi eroaa rekonstruktiosta, jossa tuhoutunut rakennus rakennetaan uudelleen, ja konservoinnista, jossa keskitytään rappeutumisen pysäyttämiseen. Kansainvälisiä periaatteita on koottu esimerkiksi [[Venetsian peruskirjaan]]. [[Bauskan linnan]] rauniot ovat olleet osittain restauroitavina 1990-luvulta alkaen, ja kunnostettu palatsiosa toimii museona. Tarkkoja työvaiheita en ole varma.",
+  "linkit": [
+   "Venetsian peruskirjaan",
+   "Bauskan linnan"
+  ],
+  "jatkot": [
+   "Mitä eroa on restauroinnilla ja rekonstruktiolla?",
+   "Mikä on Venetsian peruskirja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "balttilaisiin heimoihin",
+  "kysymys": "Kerro lisää: balttilaisiin heimoihin",
+  "vastaus": "Balttilaiset heimot kuuluivat indoeurooppalaisten kansojen balttilaiseen haaraan. Nykyisistä kielistä [[latvian kieli]] ja [[liettuan kieli]] ovat balttilaisia, ja niiden lisäksi on kuollut sukupuuttoon useita balttilaisia kieliä, kuten [[vanha preussi]], kuurin ja semgallin kielet. Keskiajalla balttilaisia heimoja olivat esimerkiksi preussilaiset, kuurilaiset, semgallit, selonialaiset, latgalit ja liettualaiset. Liiviläiset eivät ole balttilaisia vaan itämerensuomalainen kansa. Ristiretkien aikana monet balttilaiset heimot joutuivat vieraan vallan alle ja sulautuivat myöhempiin kansoihin. Tarkkoja vuosilukuja en ole varma.",
+  "linkit": [
+   "latvian kieli",
+   "liettuan kieli",
+   "vanha preussi"
+  ],
+  "jatkot": [
+   "Miksi liettua ja latvia ovat sukulaiskieliä?",
+   "Mitä vanhalle preussille tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "Zemgale",
+  "kysymys": "Kerro lisää: Zemgale",
+  "vastaus": "Zemgale eli Semgallia on Latvian keski- ja eteläosan historiallinen alue, jonka nimi tarkoittaa alankoa. Alueella on tasaista ja viljavaa maata, ja siellä sijaitsevat muun muassa [[Jelgava]] ja Bauska. Alue on saanut nimensä semgalleista, jotka asuivat seudulla linnavuorineen. Semgallien johtajista tunnetaan [[Nameisis]], joka johti vastarintaa ristiretkeläisiä vastaan 1200-luvun lopulla. Myöhemmin alue kuului Kuurinmaan ja Semgallian herttuakuntaan, jonka ajan perintöä on esimerkiksi [[Rundalen palatsi]]. Tarkkoja päivämääriä en ole varma.",
+  "linkit": [
+   "Jelgava",
+   "Nameisis",
+   "Rundalen palatsi"
+  ],
+  "jatkot": [
+   "Kuka Nameisis oli?",
+   "Mitä Jelgavassa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "Firenzessä",
+  "kysymys": "Kerro lisää: Firenzessä",
+  "vastaus": "Firenze on Toscanan pääkaupunki Italiassa ja renessanssin tärkeä syntykaupunki 1400-luvulla. Kaupungin vaurauden perusta oli kauppa ja pankkitoiminta, ja vaikutusvaltaista [[Medici-sukua]] pidetään taiteen ja oppineisuuden suurena tukijana. Firenzessä työskentelivät muun muassa arkkitehti [[Brunelleschi]], jonka suunnittelema kupoli kruunaa [[Santa Maria del Fiore]] -tuomiokirkon, sekä taidemaalari [[Botticelli]]. Botticellin Venus nousee merestä syntyi 1480-luvun Firenzessä Medici-suvun tilauksesta. Tarkkoja valmistumisvuosia kaikille rakennuksille en ole varma.",
+  "linkit": [
+   "Medici-sukua",
+   "Brunelleschi",
+   "Santa Maria del Fiore",
+   "Botticelli"
+  ],
+  "jatkot": [
+   "Miten Medici-suku nousi valtaan?",
+   "Miten Brunelleschi rakensi tuomiokirkon kupolin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "antiikin",
+  "kysymys": "Kerro lisää: antiikin",
+  "vastaus": "Antiikki tarkoittaa Euroopan historiassa muinaisen Kreikan ja Rooman aikaa. Kreikassa kaupunkivaltiot, kuten Ateena, kehittivät muun muassa demokratiaa, filosofiaa ja teatteria. Ateenan [[agora]] oli kaupungin kauppa- ja kokouspaikka jo 500-luvulta eaa., ja sen laidalla seisoo yhä [[Hefaistoksen temppeli]], yksi parhaiten säilyneistä antiikin temppeleistä. Rooma laajensi valtaansa kautta Välimeren, ja [[Rooman valtakunta]] vaikutti kieleen, lakiin ja rakentamiseen. Antiikin ajan loppua pidetään tavallisesti Länsi-Rooman hajoamisena, mutta tarkka ajoitus vaihtelee lähteestä riippuen.",
+  "linkit": [
+   "agora",
+   "Hefaistoksen temppeli",
+   "Rooman valtakunta"
+  ],
+  "jatkot": [
+   "Miten Rooman valtakunta syntyi?",
+   "Mitä antiikin kreikkalaiset keksivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "gotiikan",
+  "kysymys": "Kerro lisää: gotiikan",
+  "vastaus": "Gotiikka on keskiajan arkkitehtuurin ja taiteen tyylisuunta, joka syntyi Ranskassa 1100-luvulla ja levisi laajalle Eurooppaan. Sen tunnuspiirteitä ovat [[suippokaaret]], ristikaarelliset holvit, tukikaaret ja suuret ikkunat, jotka päästävät valoa sisään. Rakennukset kohoavat korkealle, ja ne on suunniteltu kohottamaan katseen kohti taivasta. Itämeren alueella yleinen muoto on [[tiiligotiikka]], jossa rakennukset muurattiin tiilestä. Riian tuomiokirkossa näkyy varhaista goottia. Renessanssi syrjäytti gotiikan, mutta sen perintö näkyy yhä monien Euroopan kaupunkien keskiaikaisessa ilmeessä. Tarkkoja vuosilukuja en ole varma.",
+  "linkit": [
+   "suippokaaret",
+   "tiiligotiikka"
+  ],
+  "jatkot": [
+   "Mitä tiiligotiikka tarkoittaa?",
+   "Mitä eroa on gotiikalla ja renessanssilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "Väinäjoen",
+  "kysymys": "Kerro lisää: Väinäjoen",
+  "vastaus": "Väinäjoki on latviaksi Daugava, joka saa alkunsa Venäjältä, virtaa Valko-Venäjän kautta Latviaan ja laskee Riianlahteen Riian kohdalla. Joen pituus on noin tuhat kilometriä, mutta tarkasta luvusta lähteet vaihtelevat. Joen varrella sijaitsevat muun muassa [[Daugavpils]] ja Riika. Väinäjoki on ollut keskiajalta lähtien tärkeä kauppareitti, ja sen suulle perustettiin vuonna 1201 Riika. Jokeen on rakennettu vesivoimaloita, joista yksi on [[Pļaviņasin vesivoimala]], jonka valmistuminen vuonna 1966 jätti Koknesen linnanrauniot veden alle. Tarkkoja virtaama- ja pituuslukuja en ole varma.",
+  "linkit": [
+   "Daugavpils",
+   "Pļaviņasin vesivoimala"
+  ],
+  "jatkot": [
+   "Mikä Daugavpils on?",
+   "Miksi Väinäjoki oli tärkeä kauppareitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bauska",
+  "kasite": "Hansaliittoon",
+  "kysymys": "Kerro lisää: Hansaliittoon",
+  "vastaus": "Hansaliitto oli keskiajan kauppiaiden liitto, joka kasvoi parhaimmillaan lähes kahdensadan kaupungin verkostoksi Lontoosta Novgorodiin. Sitä johdettiin [[Lyypekistä]], ja sillä oli omat lait sekä omat kauppatalot vieraissa satamissa. Hansan tunnusomaisin alus oli [[koggi]], pyöreämahainen puualus, joka kuljetti muun muassa suolaa, silliä, viljaa ja kankaita. Kun hallitsija kiusasi kauppiaita, liitto saattoi julistaa maan kauppasaartoon, ja Tanskan vastaisen sodan päättänyt [[Stralsundin rauha]] oli sen voitto. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä nykyäänkin.",
+  "linkit": [
+   "Lyypekistä",
+   "koggi",
+   "Stralsundin rauha"
+  ],
+  "jatkot": [
+   "Mikä koggi oli?",
+   "Mitä kauppasaarto tarkoitti Hansalle?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kasite": "Lohi",
+  "kysymys": "Kerro lisää: Lohi",
+  "vastaus": "Lohi eli [[Atlantin lohi]] on vaelluskala, joka syntyy joessa, kasvaa merellä ja palaa kutemaan syntymäjokeensa. Nuoret lohet vaeltavat jokea pitkin mereen, ja aikuiset palaavat takaisin vuosien jälkeen. Kala löytää reittinsä pitkälti hajuaistin avulla. Nousun aikana lohi voi joutua ylittämään koskia ja patoja, ja padot ovat monin paikoin vaikeuttaneet sen kutua [[Itämeren]] jokivesistöissä. Kuldīgan putouksella kalat yrittävät kutuaikaan ylittää kynnyksen, ja nykyään pyydetään enimmäkseen [[vimpaa]], kutuaikana rajoituksin. Lohikantojen tarkasta tilasta en ole varma.",
+  "linkit": [
+   "Atlantin lohi",
+   "Itämeren",
+   "vimpaa"
+  ],
+  "jatkot": [
+   "Miten lohi löytää takaisin syntymäjokeensa?",
+   "Miksi padot haittaavat lohen nousua?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kasite": "Venta-joen",
+  "kysymys": "Kerro lisää: Venta-joen",
+  "vastaus": "Venta on joki, joka virtaa Liettuasta Latvian Kuurinmaan halki Itämereen ja laskee mereen [[Ventspilsin]] kohdalla. Joen varrella sijaitsee [[Kuldīga]], jossa se valuu kallioportaan yli koko leveydeltään [[Ventas rumba]] -putouksena. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu mittaustavasta: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin 250 metriä. Putouksen korkeus on kaksi metriä. Joen pituudesta ja virtaamasta en ole varma, joten jätän ne pois.",
+  "linkit": [
+   "Ventspilsin",
+   "Kuldīga",
+   "Ventas rumba"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Kuldīga on?",
+   "Miksi Ventspils on tärkeä satama?"
+  ]
+ },
+ {
+  "kohde": "nosto:ventas-rumba",
+  "kasite": "Ventas rumba",
+  "kysymys": "Kerro lisää: Ventas rumba",
+  "vastaus": "Ventas rumba on Kuldīgassa Venta-joessa sijaitseva matala mutta hyvin leveä putous, jonka korkeus on noin kaksi metriä. Joki valuu kallioportaan yli koko leveydeltään, ja putousta sanotaan Euroopan leveimmäksi, vaikka lähteet antavat leveydelle eri lukuja riippuen siitä, mitä mitataan. Kutuaikaan kalat yrittävät hypätä kynnyksen yli, ja [[Kuldīga]] tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. [[Herttua Jaakobin]] ajalta kerrotaan, että putouksen juurelle asetettiin suuria pajukoreja, joihin ylittämättä jäänyt kala putosi. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen [[vimpaa]], kutuaikana rajoituksin.",
+  "linkit": [
+   "Kuldīga",
+   "Herttua Jaakobin",
+   "vimpaa"
+  ],
+  "jatkot": [
+   "Miksi vimpaa pyydetään kutuaikana rajoituksin?",
+   "Mitä Kuldīgassa voi nähdä putouksen lisäksi?"
   ]
  },
  {
