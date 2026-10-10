@@ -6,15 +6,22 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`. Tarkistukset 6.7: `MAT
 ./Linssit-testit/unity-tarkistus.sh` + `./Linssit-testit/kaanna.sh`. Simu vain Julkaisijan SIMULAATTORI NYT -vuorolla (A26BC7D0, 173pbr2-appi
 `lokit/linssiseppa2-app-173pbr2`), ilmoita "simu vapaa".
 
-## TILA 11.4x (uusi sessio)
-- 1 VALMIS: ND v3h pelissä 141/147/143 (oikea 148/151/145). Vientipaketti `_valmiit/omat-mallit-vienti-20261010l` = v6k8 (v6k6 + ND v3h + Eiffel
-  v1d; LR korvasi v1c:n), --kuiva ok, osoitin uusin-4 → v6k8 odottaa PT:n kuittausta. Arkit efa3ebc69 (nd-parvis-v3h*, eiffel-v1d). Mittaus
-  `skriptit-20261009/mittaa-parvis.py`. Eiffelin tasainen maalaatta huomautettu PT:lle ja LR:lle.
-- 3 KUPOLA: katselmuksen korjaus 47bb15d55 (GI-ominaisuus aktiivinen vain overlayn piirrossa; muuten zero GI -passi mustaa peruskameran
-  Lit-ympäristövalon). unity 0, testit 1306/1306. Käännöspyyntö PT:n kuittauksella.
-- 2 PEKING: `_tyo/linssiseppa2/peking1/` = LR v2b + maa-primitiivi (skriptit peking-maa.py, peking-esikatselu.py), tileset/ ja ktx/ (portti 0,
-  GPU kaikki tasot 407 Mt), vesi/ (index-v6 + Karttasepän verkko). ESTE: kaupunkitila avaa vain Pöllön sallitut-listan kaupungit → kysytty
-  PT:ltä Peking Pöllön kokeilulistaan (Giza-otsake). Kadut (KaupunkiTiet lat/lon -muoto ≠ kadut-peking ENU) ja yövalot/ikkunat vaativat koodia.
+## TILA 12.5x (uusi sessio aloittaa tästä)
+VALMIS: v6k9 (v6k6 + ND v3h) VIETY, uusin-4 → v6k9 11.45. Arkit 1eacff13e (docs/raportit/kaappaukset/linssiseppa2-176-20261010/):
+nd-edesta-v3h.jpg, peking-v1-vs-google.jpg, iss-kupola-tila-koe.jpg (PT:lle 12.4x, vastaus odottaa). Skriptit proto-3d/_tyo/linssiseppa2/skriptit-20261009/
+(mittaa-parvis.py = parvis + lyijykatto; arkit-*.py; vuoro-*.sh; ajo-cupola-tila.sh; kuvat-utu.sh:ssa KOMENNOT="a;b").
+KESKEN / SEURAAVA SIMUVUORO (Julkaisijalta, A26BC7D0):
+1) Peking uudelleen vedellä (peking1/vesi: index-v2/index/v5/v6 kopiot; 173pbr2 luki vain v2) → vuoro-peking1.sh.
+2) ATEENA (PT 12.2x, omistajan TF 176 -havainto: tumma sinivihreä nauha horisontissa): vuoro-ateena-67.sh = sama kulma 173pbr2 | 0e9893a11 (6.7)
+   → yksi rivi PT:lle: yleinen 6.7-regressio (junaan 177) vai vain Ateena. Koodista: aluskerros (CesiumKaupunki TarkistaReiat) käyttää fogColor/
+   Taivas (vaalea), ei selitä tummaa nauhaa; epäily Googlen kaukolaattojen reuna/helmat tai meri ilman ilmakehää (ilmakehä vain kehityskaupungeissa).
+3) KUPOLA (haara linssiseppa2/cupola3d-koe bae9b1731, .app lokit/linssiseppa2-app-cupola-bae9b17 = 0e9893a11): 3D-huone rikki simussa (vääristyneet
+   kolmiot myös GI/SSR pois; konsoli "Cubemap array textures are not supported"). PT päättää korjaus vai koe pois. Muistimittaus: ps-haku ei löydä
+   T7-polkua (Devices/$UDID → Sarja/$UDID) → korjaa fp() ajo-cupola-tila.sh:ssa.
+4) ND v4b (LR) EI vientiin (PT): odota LR:n v4c → paketti nd3k-paketti.sh POHJA=nd3/v6k9 → pari oikeaa ilmakuvaa vasten (mittaa-parvis.py).
+5) Eiffel v2 (LR 12.3x, _valmiit/eiffel-v1/glb) → pari Google | v2 vain PT:n luvalla (kysytty). KTX2-alfamipit tarkistettava.
+LÖYDÖS (PT:lle viety): uudessa käännöksessä (TAA) `opas kori 0` ei aina piilota koria → käytä KOMENNOT="opas ajallinen pois;opas kori 0".
+Taustalla ei ajoja. Kupolan kameratesti `opas kamera-vapaa 1` (bae9b1731, PalloKierto.VapaaKuvakulma) vain kuvaukseen.
 
 ## PT:N JONO (11.3x, sitova järjestys)
 1) **ND v3h**: aukion sävy pelikuvassa oikean ilmakuvan mukaiseksi viileäksi harmaaksi (oikea ~145/149/144; v3g pelissä 197/185/169 → tekstuuri
