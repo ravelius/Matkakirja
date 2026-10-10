@@ -74,3 +74,7 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - Kaava: scratchpad d669b7e8…/{lukitse180-a.sh, lukitse180-b.sh, build180-viesti.txt}.
 - SEURAAVAKSI: akku- ja lämpömittaus TF 180:llä (PT 21.0x); juna 181 -jono: LS1 eca61364a, Pelikoodari 04d98a0b9, laiturin rantakivimalli (LR).
   Proto-worktree proto-natiiviseppa-tyokalut voidaan poistaa (todistusajo-kuittaus nyt masterissa) — grep viittaukset ensin.
+
+## TILA 10.10. 23.22
+- iOS TF 180: Julkaisija käynnisti 23.1x (ajo 38082932130). Mac 180 KÄÄNNETTY 04c2af36 23.22 (fi.matkakirja.peli 1.1 (180)), kopio lokit/natiiviseppa-mac-tf-180-04c2af36,
+  Julkaisija käynnistää Mac TF:n. Simu-.app lokit/juna-1.1.180-04c2af36 (vahti 23.14). TF 180 valmis → rivi PT:lle, sitten akku- ja lämpömittaus.
