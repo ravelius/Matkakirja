@@ -113,6 +113,10 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   luokittele.suorakaiteet), muut parametrit_pohjasta; GloBFP ohitetaan KK:n sisällä. ANSA: pinnat.py:n tavukuvan pixels on sRGB-koodattua.
   Seuraavaksi: puut, maamerkit Sisältökirjurin mitoilla (pylväiköt), LS2:n Eiffel-maa (~115/110/104 himmeä) ja Kaupungintalo (lyhty + 3 kruunua,
   tornin vaakatanko pois, ikkunat epäsäännöllisemmiksi, tiili ~110/60/50, sisäpiha) — LS2 10.10. parit docs/raportit/kaappaukset/linssiseppa2-176-20261010/.
+- (11.5x) TEHTY: Peking v1c (puut.py: ~16 000 puuta OSM-puista, metsistä, puistoista + kukkulat, katupuut; aukio avoin, puut.AUKIOT),
+  portti 0 virhettä, LS2:lle; Eiffel v1d (maa 95/91/87, LS2: v1c pelissä 125/117/102); Kaupungintalo v2 (tornin kruunu: lyhty + kruunut,
+  epäsäännölliset ikkunat, tiili 112/58/48, piha 158/154/146; aja_tekseli_v2.zsh) LS2:lle. LS2 nollattiin 11.4x: seuraava LS2 kuvaa Pekingin ensin
+  (PT:n järjestys), vaakatanko-tieto tulee silloin. Seuraavaksi: maamerkit Sisältökirjurin mitoilla (_tyo/sisaltokirjuri/peking-mitat-20261010/).
 
 ## SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)
 1) **PEKING** (omistaja 09.3x: koekaupunki ~2 × 2 km: Kielletty kaupunki, Jingshan, Beihai, Tian'anmen, hutongit; poikkeus ei avaa muuta
