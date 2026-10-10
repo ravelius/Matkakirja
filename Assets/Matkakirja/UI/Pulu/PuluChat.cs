@@ -398,7 +398,10 @@ namespace Matkakirja.Natiivi
             st.left = pVasen;
             st.right = StyleKeyword.Auto;
             st.width = Mathf.Max(0f, pOikea - pVasen);
-            st.bottom = h - pAla;
+            // Pinnattuna ankkuri yläreunaan (asettelutesti 9.10.2026 23.11, Päätoimittaja): alareunasta ankkuroitu sisällön mittainen
+            // chat jäi varauksen pohjalle (iPhone pysty y 521 ennen ja jälkeen pinnauksen).
+            if (ylhaalla && !sivulla) { st.top = pYla; st.bottom = StyleKeyword.Auto; }
+            else { st.top = StyleKeyword.Null; st.bottom = h - pAla; }
             st.minHeight = 0f;
             st.maxHeight = korkeus;
             AsetaKorkeus();
