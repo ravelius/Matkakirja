@@ -169,3 +169,10 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - Kaupungintalo v2 LS2:lla (vaakatanko-tieto tulee LS2:lta, jos näkyy yhä).
 - (12.5x) Sisältökirjuri: ND:n oikeat vertailukuvat maasta automaattivertailuun _tyo/sisaltokirjuri/vertailu/nd/ (kuvat/ 6 × 1920 px, kuvat.json: tekijä, lisenssi, aika, kamerapaikka, suunta; LUEMINUT.md); muut kohteet perässä → vertaa_orto.py:n rinnalle julkisivuvertailu (kamera kuvat.jsonin paikasta).
 - (12.5x) PT: EIFFEL v1d HYLÄTTY vientiin (Googlen torni parempi 250/600/880 m:stä; v1d tumma ja litteä, harmaa 130 m:n laatta näkyy) → Eiffel v2 vertailu oikeaan -säännöllä: maa ortokuvasta kuten ND:n parvis, tornin väri ja ristikon yksityiskohta oikeista kuvista vähintään Googlen tasolle, muuten Googlen torni jää. Järjestys: ND v4b → (Eiffel v2 ennen NL-sali v2:ta vain jos nopea) → NL-sali v2. ND:n edestä-vertailu: käytä Sisältökirjurin kuvia (älä hae itse).
+
+## (11.5x–12.0x) VERTAILUPORTTI ajettu kaikille, suunnitelma PT:lle
+- Kääre `kaupunkipinnat-v1/lahde/vertailuportti.zsh <kohde> <lod0.glb> <ulos>`: --python-exit-code 2 + tulos-json-tarkistus (ANSA: Blender palautti 0
+  Python-virheessäkin → portti olisi päästänyt läpi). ANSA 2: viedyt v6k*-GLB:t ovat KTX2 (KHR_texture_basisu) → aja lähde-GLB:llä ennen KTX2:ta.
+- Tulokset `kaupunkipinnat-v1/vertailu-portti/<kohde>.{json,png,log}`: KL v6j maa −27 % sävy +20, katot +17 % (Copernicus 2 m, vain sisäinen);
+  Préfecture v1b maa −19, katot −24, ulokkeet −40 %; Eiffel v1d katot −42, ulokkeet −49 %; ND v4b katot −29, ulokkeet −45 %. Kohdistus täsmää kaikissa.
+- Peking: S2 10 m → vain jalanjälki/maa (ei ajettu, laattoja 24).
