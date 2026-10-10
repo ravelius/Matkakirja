@@ -78,9 +78,9 @@
   },
   "ranta-1499": {
    "kolmiot": {
-    "nakyva": 9375,
-    "-tormays": 8461,
-    "-kavely": 5054
+    "nakyva": 15168,
+    "-tormays": 14207,
+    "-kavely": 8682
    },
    "merkit": [
     "leikkaus:vain-1499-b"
@@ -233,18 +233,50 @@
      "vuodesta": null,
      "historia_vuosi": 1745,
      "huom": "Kellobastioni: rakennusvuosi ei tiedossa, olemassa 1751 (Venäjän aika, #4249)"
+    },
+    {
+     "nimi": "b1499-paksu-bastioni",
+     "keskipiste": [
+      65.0,
+      1.25,
+      8.25
+     ],
+     "koko": [
+      33.0,
+      21.5,
+      24.5
+     ],
+     "kierto_y": 0.0,
+     "vuodesta": 1791,
+     "huom": "Paksu bastioni 1790-l. Paksun tornin (1560-l., räjähti 1791) tilalle (faktapohja r. 305); TULKINTA vuosi"
+    },
+    {
+     "nimi": "b1499-paksu-bastioni-pohjoinen",
+     "keskipiste": [
+      63.0,
+      1.25,
+      -8.25
+     ],
+     "koko": [
+      20.0,
+      21.5,
+      8.5
+     ],
+     "kierto_y": 0.0,
+     "vuodesta": 1791,
+     "huom": "Paksu bastioni (pohjoisosa), kuten yllä"
     }
    ],
    "varmuus": "V kerrokset, A porras",
    "rajat": {
     "min": [
      -98.48,
-     -7.5,
+     -7.68,
      -58.0
     ],
     "max": [
      98.0,
-     -0.61,
+     1.21,
      66.0
     ]
    },
@@ -254,7 +286,7 @@
    ],
    "portaalit": [],
    "kamera_rajat": {
-    "katto_y": -0.86
+    "katto_y": 0.96
    },
    "tiedostot": {
     "nakyva": "ranta-1499.glb",
@@ -262,7 +294,7 @@
     "kavely": "ranta-1499-kavely.glb"
    },
    "muistiarvio": {
-    "kolmiot_nakyva": 9375,
+    "kolmiot_nakyva": 15168,
     "tekstuurit_mt": 0,
     "huom": "pinnat rakennuksen pinta-materiaaleista"
    },
