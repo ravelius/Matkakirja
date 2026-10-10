@@ -37,6 +37,14 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - TF 175 TÄNÄÄN 6.7:llä (omistaja): ehdot testit 6.7 + käännös + iPad Release-muistiajo läpi; muutosloki 175 (maininta Unity 6.7:stä
   pelaajan kielellä) PT:lle; LR:n kartiokuori vain jos ehtii.
 
+## TILA 08.0x (PT:n käsky 07.5x: 175/6.7 → TF tänään)
+- 175/6.7-RUNKO natiiviseppa/juna-175 = **b5c57ee2a** (ff unity-67:stä; = cc0cbf9a4 + unity-polku bd281dcb9 + pulu-maat-25 c191dd31d +
+  kaupunki-pisteet d02226c68). Testit 6.7:llä L1293/P449/K453, unity-tarkistus 0 (ios, ios-sim, editori), ei GetInstanceID-kutsuja.
+  6.7-unity-tarkistus: scratchpad 53856a0f…/ut67-*.sh (U ja kirjastot välilyönnittömän symlinkin kautta — "T7 4TB" rikkoo -r-argumentit;
+  csc/dotnet 6.3:sta, 6.7:ssä ei NetCoreRuntimea; defines UNITY_6000_7*).
+- Simukäännösvuoro pyydetty Julkaisijalta 08.0x (+ laitekäännös Release iPad-muistiajoon). Siirtoseppä v46x-kiinnitys ei vielä tullut.
+- LR Stadshuset v1 kuitattu teknisesti (ASTC-ehto, juna 176 aikaisintaan). 6.3-rsync päättyi 07.44 ShaderCache-virheisiin (Julkaisijalle).
+
 ## Junat
 
 | Juna | Master | juna/b13 | Simukäännös | Tila |
