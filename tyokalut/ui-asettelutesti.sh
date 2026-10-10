@@ -63,6 +63,8 @@ cd $KOPIO || vika "kopio puuttuu: $KOPIO"
   echo "pohja $(git rev-parse --short HEAD)"
 } >> $LOKI 2>&1
 rm -f tulokset/asettelutesti.txt
+# Editori yhdistelmän ProjectVersion.txt:n mukaan (Julkaisija 10.10.2026, omistaja: 6.7 päälinjaksi, 6.3 paluuta varten).
+UNITY=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh .) || vika "editori"
 UNITY_BURST_DISABLE_COMPILATION=1 nice -n 10 "$UNITY" -batchmode -projectPath . -executeMethod Matkakirja.Editori.AsetteluTesti.Aja \
   -logFile tulokset/asettelutesti-unity.log &
 upid=$!

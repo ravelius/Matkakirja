@@ -5,7 +5,9 @@
 # Käyttö: tyokalut/unity-vahti.sh <lokitiedosto> <unityn argumentit...>
 # Paluukoodi 0 = onnistui, 3 = jumi (tapettu), muu = Unityn oma virhe.
 LOKI="$1"; shift
-UNITY="/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/MacOS/Unity"
+# Editori -projectPath-kansion ProjectVersion.txt:n mukaan (Julkaisija 10.10.2026, omistaja: 6.7 päälinjaksi, 6.3 paluuta varten).
+PROJ=.; for ((i = 1; i < $#; i++)); do [[ ${@[i]} == -projectPath ]] && PROJ=${@[i+1]}; done
+UNITY=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh "$PROJ") || { echo "unity-vahti: editoria ei löydy ($PROJ)" >&2; exit 4; }
 RAUHA=${RAUHA:-180}
 JUMIT=/Users/Shared/Claude/proto-3d/lokit
 rm -f "$LOKI"
