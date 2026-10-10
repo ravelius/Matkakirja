@@ -900,7 +900,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Web ALOITUSVALINNAN_ANKKURIT: Lontoo ja Ateena mahtuvat kuvaan kapeallakin ruudulla.</summary>
         static readonly string[] Ankkurit = { "lontoo", "ateena" };
         const string Lahto = "lontoo";
-        static readonly Color Huomio = new Color32(0xea, 0xb8, 0x4e, 0xff);
+        static readonly Color Huomio = Tyylikirja.Kehys.Kulta;
         const string PisteEtuliite = "aloitus:";
 
         KaupunkiMerkit valintaMerkit;
