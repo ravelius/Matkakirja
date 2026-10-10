@@ -1,0 +1,196 @@
+================ KOHTA 16 (kohde:hahmotelma-sniardwy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Śniardwy (luonto · järvi)
+Tietoruudun teksti: Śniardwy on Masurian järviylängöllä Varmian-Masurian maakunnassa sijaitseva järvi. Sen pinta-ala on 113,8 neliökilometriä, joten se on Puolan suurin järvi; se oli myös Preussin ja Saksan suurin, kun Varmia-Masuria kuului Saksalle Itä-Preussin eteläosana. Järvi on 22,1 kilometriä pitkä, 13,4 kilometriä leveä ja enimmillään 23 metriä syvä, ja siinä on kahdeksan saarta. Se syntyi jäätikön vetäytyessä ja sulavista jäävuorista tulleiden tulvavesien valuessa pois. Järveä ympäröi Masurian kanavien järjestelmä sulkuineen.
+
+### 16.1
+KYSYMYS: Minkä maan suurin järvi Śniardwy on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Śniardwy (luonto · järvi)
+Tietoruudun teksti: Śniardwy on Masurian järviylängöllä Varmian-Masurian maakunnassa sijaitseva järvi. Sen pinta-ala on 113,8 neliökilometriä, joten se on Puolan suurin järvi; se oli myös Preussin ja Saksan suurin, kun Varmia-Masuria kuului Saksalle Itä-Preussin eteläosana. Järvi on 22,1 kilometriä pitkä, 13,4 kilometriä leveä ja enimmillään 23 metriä syvä, ja siinä on kahdeksan saarta. Se syntyi jäätikön vetäytyessä ja sulavista jäävuorista tulleiden tulvavesien valuessa pois. Järveä ympäröi Masurian kanavien järjestelmä sulkuineen.
+
+### 16.2
+KYSYMYS: Mikä alue oli osa Saksaa, kun Śniardwy oli Preussin suurin järvi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Śniardwy (luonto · järvi)
+Tietoruudun teksti: Śniardwy on Masurian järviylängöllä Varmian-Masurian maakunnassa sijaitseva järvi. Sen pinta-ala on 113,8 neliökilometriä, joten se on Puolan suurin järvi; se oli myös Preussin ja Saksan suurin, kun Varmia-Masuria kuului Saksalle Itä-Preussin eteläosana. Järvi on 22,1 kilometriä pitkä, 13,4 kilometriä leveä ja enimmillään 23 metriä syvä, ja siinä on kahdeksan saarta. Se syntyi jäätikön vetäytyessä ja sulavista jäävuorista tulleiden tulvavesien valuessa pois. Järveä ympäröi Masurian kanavien järjestelmä sulkuineen.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-slowinski) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Słowińskin dyynit (meri)
+Tietoruudun teksti: Słowińskin kansallispuisto sijaitsee Pommerin maakunnassa Pohjois-Puolassa Itämeren rannikolla Łeban ja Rowyn välissä. Se perustettiin vuonna 1967, ja Unesco nimesi sen biosfäärialueeksi vuonna 1977. Alue oli ennen Itämeren lahti, jonka meri erotti avomerestä hiekkadyyneillä. Aallot ja tuuli kuljettavat hiekkaa sisämaahan, joten dyynit liikkuvat hitaasti 3–10 metriä vuodessa; jotkin ovat jopa 30 metriä korkeita, ja liikkuvia dyynejä pidetään koko Euroopan mittakaavassa luonnon erikoisuutena. Puiston nimi tulee slovinsseista, läntisslaavilaisesta kansasta, joka asui Łeba-järven suoperäisellä alueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+- [Varsova — kaupunkilehti / Historia: Kaupunki, joka tuhottiin rangaistukseksi] Elokuussa 1944 Varsovan asukkaat nousivat kapinaan saksalaismiehittäjää vastaan. Kapina kesti kuusikymmentäkolme päivää ennen kuin se murskattiin, ja taisteluissa kuoli noin kaksisataatuhatta siviiliä. Kapinan jälkeen saksalaisjoukot saivat käskyn tuhota kaupunki talo talolta rangaistukseksi — yli 85 prosenttia vanhastakaupungista raunioitui. Kuvassa on Vanhan kaupungintorin rauniot vuodelta 1945, valokuvaaja Leonard Sempolińskin ottamana pian sodan päätyttyä.
+
+### 17.1
+KYSYMYS: Kuinka nopeasti Słowińskin liikkuvat dyynit etenevät vuodessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Słowińskin dyynit (meri)
+Tietoruudun teksti: Słowińskin kansallispuisto sijaitsee Pommerin maakunnassa Pohjois-Puolassa Itämeren rannikolla Łeban ja Rowyn välissä. Se perustettiin vuonna 1967, ja Unesco nimesi sen biosfäärialueeksi vuonna 1977. Alue oli ennen Itämeren lahti, jonka meri erotti avomerestä hiekkadyyneillä. Aallot ja tuuli kuljettavat hiekkaa sisämaahan, joten dyynit liikkuvat hitaasti 3–10 metriä vuodessa; jotkin ovat jopa 30 metriä korkeita, ja liikkuvia dyynejä pidetään koko Euroopan mittakaavassa luonnon erikoisuutena. Puiston nimi tulee slovinsseista, läntisslaavilaisesta kansasta, joka asui Łeba-järven suoperäisellä alueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+- [Varsova — kaupunkilehti / Historia: Kaupunki, joka tuhottiin rangaistukseksi] Elokuussa 1944 Varsovan asukkaat nousivat kapinaan saksalaismiehittäjää vastaan. Kapina kesti kuusikymmentäkolme päivää ennen kuin se murskattiin, ja taisteluissa kuoli noin kaksisataatuhatta siviiliä. Kapinan jälkeen saksalaisjoukot saivat käskyn tuhota kaupunki talo talolta rangaistukseksi — yli 85 prosenttia vanhastakaupungista raunioitui. Kuvassa on Vanhan kaupungintorin rauniot vuodelta 1945, valokuvaaja Leonard Sempolińskin ottamana pian sodan päätyttyä.
+
+### 17.2
+KYSYMYS: Ketkä slovinssit olivat, joiden mukaan puisto on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Słowińskin dyynit (meri)
+Tietoruudun teksti: Słowińskin kansallispuisto sijaitsee Pommerin maakunnassa Pohjois-Puolassa Itämeren rannikolla Łeban ja Rowyn välissä. Se perustettiin vuonna 1967, ja Unesco nimesi sen biosfäärialueeksi vuonna 1977. Alue oli ennen Itämeren lahti, jonka meri erotti avomerestä hiekkadyyneillä. Aallot ja tuuli kuljettavat hiekkaa sisämaahan, joten dyynit liikkuvat hitaasti 3–10 metriä vuodessa; jotkin ovat jopa 30 metriä korkeita, ja liikkuvia dyynejä pidetään koko Euroopan mittakaavassa luonnon erikoisuutena. Puiston nimi tulee slovinsseista, läntisslaavilaisesta kansasta, joka asui Łeba-järven suoperäisellä alueella.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-wolin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wolinin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Wolinin kansallispuisto on yksi Puolan 23 kansallispuistosta, ja se sijaitsee Wolinin saarella maan luoteisimmassa kulmassa Länsi-Pommerin maakunnassa. Se perustettiin 3. maaliskuuta 1960, ja sen pinta-ala on 109 neliökilometriä. Puiston päämaja on Międzyzdrojen kaupungissa. Puistossa on monipuolinen kasvisto ja eläimistö, ja sen nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran merenrantajyrkänteet sekä visenttien suojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Exmouth — kaupunkilehti / Exmouth: Maailmanperintöä vuodesta 2011] Vuonna 2011 Ningaloo Coast liitettiin Unescon maailmanperintöluetteloon ainoana paikkana Australiassa, jossa mannerta reunustava koralliriutta ja sen takana kohoava karstivuoristo suojellaan yhtenä kokonaisuutena. Suojelualue kattaa yli 700 000 hehtaaria merta ja rannikkoa, mukaan lukien Cape Rangen kansallispuisto ja ulompana meressä sijaitsevat Muiron-saaret. Päätös tuli vasta reilut kaksikymmentä vuotta sen jälkeen, kun riutan ympärille perustettiin ensimmäinen suojelualue vuonna 1987 — silloin moni piti seutua liian syrjäisenä varsinaiseksi matkailukohteeksi.
+- [St. Helena — kaupunkilehti / St. Helena: Lankalintu, jota ei löydy muualta] St. Helenan lankalintu eli saarikurmitsa on pieni ruskehtava kahlaaja, joka elää vain tällä yhdellä saarella koko maailmassa – se on saaren ainoa jäljellä oleva endeeminen maalintu ja samalla sen kansallissymboli. Lintu pesii avoimilla ruohoalueilla suoraan maahan ja on erittäin uhanalainen: yksilöitä on jäljellä vain muutama sata. Isoisän aikaan 1870-luvulla lankalintuja oli huomattavasti enemmän, ennen kuin laidunmaiden raivaus ja vieraslajit kutistivat niiden elinaluetta rajusti. Nykyään lintua suojellaan tarkasti, ja se koristaa myös saaren vaakunaa.
+
+### 18.1
+KYSYMYS: Missä kaupungissa Wolinin kansallispuiston päämaja on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wolinin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Wolinin kansallispuisto on yksi Puolan 23 kansallispuistosta, ja se sijaitsee Wolinin saarella maan luoteisimmassa kulmassa Länsi-Pommerin maakunnassa. Se perustettiin 3. maaliskuuta 1960, ja sen pinta-ala on 109 neliökilometriä. Puiston päämaja on Międzyzdrojen kaupungissa. Puistossa on monipuolinen kasvisto ja eläimistö, ja sen nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran merenrantajyrkänteet sekä visenttien suojelualue.
+
+### 18.2
+KYSYMYS: Mitä eläimiä puistossa suojellaan erityisesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wolinin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Wolinin kansallispuisto on yksi Puolan 23 kansallispuistosta, ja se sijaitsee Wolinin saarella maan luoteisimmassa kulmassa Länsi-Pommerin maakunnassa. Se perustettiin 3. maaliskuuta 1960, ja sen pinta-ala on 109 neliökilometriä. Puiston päämaja on Międzyzdrojen kaupungissa. Puistossa on monipuolinen kasvisto ja eläimistö, ja sen nähtävyyksiin kuuluvat Gosańin ja Kawczan Góran merenrantajyrkänteet sekä visenttien suojelualue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Exmouth — kaupunkilehti / Exmouth: Maailmanperintöä vuodesta 2011] Vuonna 2011 Ningaloo Coast liitettiin Unescon maailmanperintöluetteloon ainoana paikkana Australiassa, jossa mannerta reunustava koralliriutta ja sen takana kohoava karstivuoristo suojellaan yhtenä kokonaisuutena. Suojelualue kattaa yli 700 000 hehtaaria merta ja rannikkoa, mukaan lukien Cape Rangen kansallispuisto ja ulompana meressä sijaitsevat Muiron-saaret. Päätös tuli vasta reilut kaksikymmentä vuotta sen jälkeen, kun riutan ympärille perustettiin ensimmäinen suojelualue vuonna 1987 — silloin moni piti seutua liian syrjäisenä varsinaiseksi matkailukohteeksi.
+- [St. Helena — kaupunkilehti / St. Helena: Lankalintu, jota ei löydy muualta] St. Helenan lankalintu eli saarikurmitsa on pieni ruskehtava kahlaaja, joka elää vain tällä yhdellä saarella koko maailmassa – se on saaren ainoa jäljellä oleva endeeminen maalintu ja samalla sen kansallissymboli. Lintu pesii avoimilla ruohoalueilla suoraan maahan ja on erittäin uhanalainen: yksilöitä on jäljellä vain muutama sata. Isoisän aikaan 1870-luvulla lankalintuja oli huomattavasti enemmän, ennen kuin laidunmaiden raivaus ja vieraslajit kutistivat niiden elinaluetta rajusti. Nykyään lintua suojellaan tarkasti, ja se koristaa myös saaren vaakunaa.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-tarnica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnica (luonto · vuori)
+Tietoruudun teksti: Tarnica on Bieszczadyn vuoriston huippu Etelä-Puolassa, ja sen korkeus on 1 346 metriä. Se on yksi Puolan kruununhuipuista. Huippu kohoaa noin 500 metriä Wołosatka-laakson yläpuolelle, ja sen erottaa naapureistaan erottuva muoto. Vuorella on kaksi erillistä huippua, 1 339 ja 1 346 metriä; eteläosa on jyrkkä kalliomuuri ja toinen puoli loivempia kivikenttiä. Eurooppalainen E8-vaellusreitti kulkee Tarnican kautta.
+
+### 19.1
+KYSYMYS: Kuinka monta erillistä huippua Tarnicalla on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnica (luonto · vuori)
+Tietoruudun teksti: Tarnica on Bieszczadyn vuoriston huippu Etelä-Puolassa, ja sen korkeus on 1 346 metriä. Se on yksi Puolan kruununhuipuista. Huippu kohoaa noin 500 metriä Wołosatka-laakson yläpuolelle, ja sen erottaa naapureistaan erottuva muoto. Vuorella on kaksi erillistä huippua, 1 339 ja 1 346 metriä; eteläosa on jyrkkä kalliomuuri ja toinen puoli loivempia kivikenttiä. Eurooppalainen E8-vaellusreitti kulkee Tarnican kautta.
+
+### 19.2
+KYSYMYS: Minkä laakson yläpuolelle Tarnica kohoaa noin 500 metriä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnica (luonto · vuori)
+Tietoruudun teksti: Tarnica on Bieszczadyn vuoriston huippu Etelä-Puolassa, ja sen korkeus on 1 346 metriä. Se on yksi Puolan kruununhuipuista. Huippu kohoaa noin 500 metriä Wołosatka-laakson yläpuolelle, ja sen erottaa naapureistaan erottuva muoto. Vuorella on kaksi erillistä huippua, 1 339 ja 1 346 metriä; eteläosa on jyrkkä kalliomuuri ja toinen puoli loivempia kivikenttiä. Eurooppalainen E8-vaellusreitti kulkee Tarnican kautta.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-dunajec-gorge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dunajecin rotko (luonto · joki)
+Tietoruudun teksti: Dunajecin rotko kulkee Pieninien vuorten läpi Etelä-Puolassa ja Pohjois-Slovakiassa, missä Dunajec-joki on maiden välinen rajajoki. Rotko tekee seitsemän mutkaa, ja sitä ympäröivät kalliot nousevat lähes koko matkan noin 300 metrin korkeuteen. Sitä kuvataan geologisesti ja luonnonoloiltaan poikkeuksellisen kiinnostavaksi alueeksi, jossa ihmisen vaikutus on ollut vähäinen, ja se on Puolan Unescon ehdokaslistalla. Rotko kuuluu Pieninien kansallispuistoon, ja kalkki- ja dolomiittikerrokset ylläpitävät sen omaleimaista Karpaattien lajeista koostuvaa kasvi- ja eläinkuntaa. Pieninien goralit ovat järjestäneet puisilla lautoilla tehtäviä retkiä päivittäin 1800-luvun alusta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Vedet: Rotkossa kuljetaan vastavirtaan vedessä] Kuolleeseenmereen laskee idästä rotko, jonka pohjalla virtaa vettä ympäri vuoden. Wadi Mujibin suojelualue perustettiin vuonna 1987, ja Unesco nimesi sen biosfäärialueeksi 2011. Rotkon kapeinta kohtaa sanotaan Siqiksi, ja siellä retki tehdään vastavirtaan vedessä kahlaten: seinämät nousevat molemmin puolin lähes pystyinä, eikä kuivaa polkua ole. Jokea ruokkii seitsemän sivupuroa, ja valuma-alueen korkeusero on yli tuhat seitsemänsataa metriä — ylängöltä alas neljänsadan metrin syvyyteen merenpinnan alapuolelle.
+
+### 20.1
+KYSYMYS: Millä tavalla vieraita on kuljetettu Dunajecin rotkossa 1800-luvun alusta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dunajecin rotko (luonto · joki)
+Tietoruudun teksti: Dunajecin rotko kulkee Pieninien vuorten läpi Etelä-Puolassa ja Pohjois-Slovakiassa, missä Dunajec-joki on maiden välinen rajajoki. Rotko tekee seitsemän mutkaa, ja sitä ympäröivät kalliot nousevat lähes koko matkan noin 300 metrin korkeuteen. Sitä kuvataan geologisesti ja luonnonoloiltaan poikkeuksellisen kiinnostavaksi alueeksi, jossa ihmisen vaikutus on ollut vähäinen, ja se on Puolan Unescon ehdokaslistalla. Rotko kuuluu Pieninien kansallispuistoon, ja kalkki- ja dolomiittikerrokset ylläpitävät sen omaleimaista Karpaattien lajeista koostuvaa kasvi- ja eläinkuntaa. Pieninien goralit ovat järjestäneet puisilla lautoilla tehtäviä retkiä päivittäin 1800-luvun alusta lähtien.
+
+### 20.2
+KYSYMYS: Kuinka monta mutkaa rotkossa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dunajecin rotko (luonto · joki)
+Tietoruudun teksti: Dunajecin rotko kulkee Pieninien vuorten läpi Etelä-Puolassa ja Pohjois-Slovakiassa, missä Dunajec-joki on maiden välinen rajajoki. Rotko tekee seitsemän mutkaa, ja sitä ympäröivät kalliot nousevat lähes koko matkan noin 300 metrin korkeuteen. Sitä kuvataan geologisesti ja luonnonoloiltaan poikkeuksellisen kiinnostavaksi alueeksi, jossa ihmisen vaikutus on ollut vähäinen, ja se on Puolan Unescon ehdokaslistalla. Rotko kuuluu Pieninien kansallispuistoon, ja kalkki- ja dolomiittikerrokset ylläpitävät sen omaleimaista Karpaattien lajeista koostuvaa kasvi- ja eläinkuntaa. Pieninien goralit ovat järjestäneet puisilla lautoilla tehtäviä retkiä päivittäin 1800-luvun alusta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jordania — maalehti / Vedet: Rotkossa kuljetaan vastavirtaan vedessä] Kuolleeseenmereen laskee idästä rotko, jonka pohjalla virtaa vettä ympäri vuoden. Wadi Mujibin suojelualue perustettiin vuonna 1987, ja Unesco nimesi sen biosfäärialueeksi 2011. Rotkon kapeinta kohtaa sanotaan Siqiksi, ja siellä retki tehdään vastavirtaan vedessä kahlaten: seinämät nousevat molemmin puolin lähes pystyinä, eikä kuivaa polkua ole. Jokea ruokkii seitsemän sivupuroa, ja valuma-alueen korkeusero on yli tuhat seitsemänsataa metriä — ylängöltä alas neljänsadan metrin syvyyteen merenpinnan alapuolelle.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

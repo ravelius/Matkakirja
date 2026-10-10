@@ -1,0 +1,193 @@
+================ KOHTA 21 (kohde:hahmotelma-szczeliniec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szczeliniec Wielki (luonto · vuori)
+Tietoruudun teksti: Szczeliniec Wielki eli saksaksi Große Heuscheuer on Pöytävuorten korkein huippu Lounais-Puolassa, Pöytävuorten kansallispuistossa lähellä Tšekin rajaa. Se on yksi Sudeettien tunnetuimmista hiekkakivisistä pöytävuorista. Huipputasanne on halkeamien, käytävien ja kalliolabyrinttien pilkkoma hiekkakivimassiivi, ja sen korkein kohta on kivi nimeltä Fotel Pradziada eli Isoisoisän nojatuoli. Puolankielinen nimi tulkitaan suureksi halkeamaksi vuoreksi. Huipulle pääsee Karłówista noin 680 kiviaskelman portaita pitkin, ja vuoren matkailu liittyy Kłodzkon seudun 1700-luvun lopun matkailuun.
+
+### 21.1
+KYSYMYS: Mikä on Szczeliniec Wielkin korkein kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szczeliniec Wielki (luonto · vuori)
+Tietoruudun teksti: Szczeliniec Wielki eli saksaksi Große Heuscheuer on Pöytävuorten korkein huippu Lounais-Puolassa, Pöytävuorten kansallispuistossa lähellä Tšekin rajaa. Se on yksi Sudeettien tunnetuimmista hiekkakivisistä pöytävuorista. Huipputasanne on halkeamien, käytävien ja kalliolabyrinttien pilkkoma hiekkakivimassiivi, ja sen korkein kohta on kivi nimeltä Fotel Pradziada eli Isoisoisän nojatuoli. Puolankielinen nimi tulkitaan suureksi halkeamaksi vuoreksi. Huipulle pääsee Karłówista noin 680 kiviaskelman portaita pitkin, ja vuoren matkailu liittyy Kłodzkon seudun 1700-luvun lopun matkailuun.
+
+### 21.2
+KYSYMYS: Mitä puolankielinen nimi Szczeliniec tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szczeliniec Wielki (luonto · vuori)
+Tietoruudun teksti: Szczeliniec Wielki eli saksaksi Große Heuscheuer on Pöytävuorten korkein huippu Lounais-Puolassa, Pöytävuorten kansallispuistossa lähellä Tšekin rajaa. Se on yksi Sudeettien tunnetuimmista hiekkakivisistä pöytävuorista. Huipputasanne on halkeamien, käytävien ja kalliolabyrinttien pilkkoma hiekkakivimassiivi, ja sen korkein kohta on kivi nimeltä Fotel Pradziada eli Isoisoisän nojatuoli. Puolankielinen nimi tulkitaan suureksi halkeamaksi vuoreksi. Huipulle pääsee Karłówista noin 680 kiviaskelman portaita pitkin, ja vuoren matkailu liittyy Kłodzkon seudun 1700-luvun lopun matkailuun.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-grunwald) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grunwaldin taistelu (historia)
+Tietoruudun teksti: Grunwaldin taistelu, jota kutsutaan myös ensimmäiseksi Tannenbergin taisteluksi, käytiin 15. heinäkuuta 1410 Puolan, Liettuan ja Saksalaisen ritarikunnan sodassa. Puolan kruunun ja Liettuan suuriruhtinaskunnan liittouma, jota johtivat kuningas Władysław II Jagiełło ja suuriruhtinas Vytautas, löi ratkaisevasti ritarikunnan suurmestari Ulrich von Jungingenin joukot. Suurin osa ritarikunnan johtajista kaatui tai joutui vangiksi. Ritarikunta kesti silti Malborkin linnan piirityksen ja selvisi Thornin rauhassa 1411 pienin aluemenetyksin, mutta se ei koskaan toipunut entiselleen. Taistelu oli yksi keskiajan suurimmista, ja siitä on tullut Puolassa ja Liettuassa kansallisen ylpeyden ja vastarinnan symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+
+### 22.1
+KYSYMYS: Ketkä liittolaiset voittivat Grunwaldin taistelun 15. heinäkuuta 1410?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grunwaldin taistelu (historia)
+Tietoruudun teksti: Grunwaldin taistelu, jota kutsutaan myös ensimmäiseksi Tannenbergin taisteluksi, käytiin 15. heinäkuuta 1410 Puolan, Liettuan ja Saksalaisen ritarikunnan sodassa. Puolan kruunun ja Liettuan suuriruhtinaskunnan liittouma, jota johtivat kuningas Władysław II Jagiełło ja suuriruhtinas Vytautas, löi ratkaisevasti ritarikunnan suurmestari Ulrich von Jungingenin joukot. Suurin osa ritarikunnan johtajista kaatui tai joutui vangiksi. Ritarikunta kesti silti Malborkin linnan piirityksen ja selvisi Thornin rauhassa 1411 pienin aluemenetyksin, mutta se ei koskaan toipunut entiselleen. Taistelu oli yksi keskiajan suurimmista, ja siitä on tullut Puolassa ja Liettuassa kansallisen ylpeyden ja vastarinnan symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Varsovan kansallismuseo] 1938 (perustettu 1862) Varsovan kansallismuseo perustettiin jo vuonna 1862 taidemuseona, ja se sai nykyisen nimensä vuonna 1916. Nykyinen suuri rakennus Jerusalimin puistokadun varrella valmistui vasta vuonna 1938, arkkitehti Tadeusz Tolwińskin suunnittelemana. Kokoelmiin kuuluu yli 830 000 esinettä muinaisajalta nykypäivään. Erikoisuutena on Euroopan suurin nubialaisen kristillisen taiteen kokoelma, joka on tuotu aikoinaan Sudanista. Museon seinillä riippuu myös Jan Matejkon jättimäinen maalaus Grunwaldin taistelu vuodelta 1878 - se on lähes 10 metriä leveä, yksi Puolan suurimmista tauluista. Nykyään museossa käy vuosittain yli 1,5 miljoonaa vierailijaa, ja se kuuluu maailman käydyimpien t…
+
+### 22.2
+KYSYMYS: Millä toisella nimellä taistelua kutsutaan saksaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grunwaldin taistelu (historia)
+Tietoruudun teksti: Grunwaldin taistelu, jota kutsutaan myös ensimmäiseksi Tannenbergin taisteluksi, käytiin 15. heinäkuuta 1410 Puolan, Liettuan ja Saksalaisen ritarikunnan sodassa. Puolan kruunun ja Liettuan suuriruhtinaskunnan liittouma, jota johtivat kuningas Władysław II Jagiełło ja suuriruhtinas Vytautas, löi ratkaisevasti ritarikunnan suurmestari Ulrich von Jungingenin joukot. Suurin osa ritarikunnan johtajista kaatui tai joutui vangiksi. Ritarikunta kesti silti Malborkin linnan piirityksen ja selvisi Thornin rauhassa 1411 pienin aluemenetyksin, mutta se ei koskaan toipunut entiselleen. Taistelu oli yksi keskiajan suurimmista, ja siitä on tullut Puolassa ja Liettuassa kansallisen ylpeyden ja vastarinnan symboli.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-frombork) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Frombork (historia)
+Tietoruudun teksti: Frombork eli saksaksi Frauenburg on noin 2 300 asukkaan kaupunki Veikselinlahden rannalla Pohjois-Puolassa Warmian alueella, ja sitä sanotaan Warmian jalokiveksi. Se mainitaan ensimmäisen kerran 1200-luvun asiakirjassa, ja se on yksi Warmian vanhimmista ja historiallisesti tärkeimmistä kaupungeista. Tähtitieteilijä Nikolaus Kopernikus asui siellä 1500-luvun alussa ja teki kaupungissa useita havaintojaan. Kaupungin 1300-luvun tuomiokirkko vaurioitui pahoin toisessa maailmansodassa mutta rakennettiin uudelleen, ja siellä on Kopernikuksen hauta. Kaupungissa toimii Kopernikus-museo planetaarioineen, ja joka kesä järjestetään kansainvälinen urkumusiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Mies joka pysäytti Auringon ja liikutti Maata] 1543 — Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen paikasta maailmankaikkeudessa.
+
+### 23.1
+KYSYMYS: Kuka tähtitieteilijä asui Fromborkissa 1500-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Frombork (historia)
+Tietoruudun teksti: Frombork eli saksaksi Frauenburg on noin 2 300 asukkaan kaupunki Veikselinlahden rannalla Pohjois-Puolassa Warmian alueella, ja sitä sanotaan Warmian jalokiveksi. Se mainitaan ensimmäisen kerran 1200-luvun asiakirjassa, ja se on yksi Warmian vanhimmista ja historiallisesti tärkeimmistä kaupungeista. Tähtitieteilijä Nikolaus Kopernikus asui siellä 1500-luvun alussa ja teki kaupungissa useita havaintojaan. Kaupungin 1300-luvun tuomiokirkko vaurioitui pahoin toisessa maailmansodassa mutta rakennettiin uudelleen, ja siellä on Kopernikuksen hauta. Kaupungissa toimii Kopernikus-museo planetaarioineen, ja joka kesä järjestetään kansainvälinen urkumusiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Mies joka pysäytti Auringon ja liikutti Maata] 1543 — Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen paikasta maailmankaikkeudessa.
+
+### 23.2
+KYSYMYS: Millä nimellä Frombork tunnetaan saksaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Frombork (historia)
+Tietoruudun teksti: Frombork eli saksaksi Frauenburg on noin 2 300 asukkaan kaupunki Veikselinlahden rannalla Pohjois-Puolassa Warmian alueella, ja sitä sanotaan Warmian jalokiveksi. Se mainitaan ensimmäisen kerran 1200-luvun asiakirjassa, ja se on yksi Warmian vanhimmista ja historiallisesti tärkeimmistä kaupungeista. Tähtitieteilijä Nikolaus Kopernikus asui siellä 1500-luvun alussa ja teki kaupungissa useita havaintojaan. Kaupungin 1300-luvun tuomiokirkko vaurioitui pahoin toisessa maailmansodassa mutta rakennettiin uudelleen, ja siellä on Kopernikuksen hauta. Kaupungissa toimii Kopernikus-museo planetaarioineen, ja joka kesä järjestetään kansainvälinen urkumusiikkifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Mies joka pysäytti Auringon ja liikutti Maata] 1543 — Nikolaus Kopernikus opiskeli Krakovan yliopistossa ja työskenteli myöhemmin katolisena kirkonmiehenä Fromborkissa, mutta hänen elämäntyönsä oli tähtitiede. Vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen De revolutionibus orbium coelestium, jossa hän esitti Auringon eikä Maan olevan aurinkokunnan keskipiste. Ajatus ei ollut aivan uusi — antiikin kreikkalainen Aristarkhos Samoslainen oli esittänyt samankaltaisen mallin jo lähes kaksi vuosituhatta aiemmin — mutta Kopernikuksen teos käynnisti tieteellisen vallankumouksen, joka muutti lopullisesti käsityksen ihmisen paikasta maailmankaikkeudessa.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-biskupin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskupin (historia)
+Tietoruudun teksti: Biskupin on arkeologinen kohde ja elävä malli pronssikauden lopun linnoitetusta asutuksesta Pohjois-Keski-Puolassa, ja se toimii myös arkeologisena ulkoilmamuseona. Kun se löydettiin, sitä luultiin varhaiseksi länsislaavilaiseksi asutukseksi, mutta arkeologit vahvistivat sen kuuluneen Lusatian kulttuurin Biskupin-ryhmään 700-luvulta eaa. Asutus rakennettiin soiselle niemelle järveen ja järjestettiin suorakaiteen muotoiseen ruudukkoon, jossa oli yksitoista katua. Sitä ympäröi korkea puinen paaluaita, joka nojasi tammirunkojen muodostamaan multatäytteiseen vallirakenteeseen. Paikan löysi vuonna 1933 koulunopettaja Walenty Szwajcer oppilaineen, ja kaivaukset alkoivat seuraavana vuonna.
+
+### 24.1
+KYSYMYS: Kuinka monta katua Biskupinin asutuksessa oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskupin (historia)
+Tietoruudun teksti: Biskupin on arkeologinen kohde ja elävä malli pronssikauden lopun linnoitetusta asutuksesta Pohjois-Keski-Puolassa, ja se toimii myös arkeologisena ulkoilmamuseona. Kun se löydettiin, sitä luultiin varhaiseksi länsislaavilaiseksi asutukseksi, mutta arkeologit vahvistivat sen kuuluneen Lusatian kulttuurin Biskupin-ryhmään 700-luvulta eaa. Asutus rakennettiin soiselle niemelle järveen ja järjestettiin suorakaiteen muotoiseen ruudukkoon, jossa oli yksitoista katua. Sitä ympäröi korkea puinen paaluaita, joka nojasi tammirunkojen muodostamaan multatäytteiseen vallirakenteeseen. Paikan löysi vuonna 1933 koulunopettaja Walenty Szwajcer oppilaineen, ja kaivaukset alkoivat seuraavana vuonna.
+
+### 24.2
+KYSYMYS: Minkä kulttuurin asukkaat rakensivat Biskupinin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biskupin (historia)
+Tietoruudun teksti: Biskupin on arkeologinen kohde ja elävä malli pronssikauden lopun linnoitetusta asutuksesta Pohjois-Keski-Puolassa, ja se toimii myös arkeologisena ulkoilmamuseona. Kun se löydettiin, sitä luultiin varhaiseksi länsislaavilaiseksi asutukseksi, mutta arkeologit vahvistivat sen kuuluneen Lusatian kulttuurin Biskupin-ryhmään 700-luvulta eaa. Asutus rakennettiin soiselle niemelle järveen ja järjestettiin suorakaiteen muotoiseen ruudukkoon, jossa oli yksitoista katua. Sitä ympäröi korkea puinen paaluaita, joka nojasi tammirunkojen muodostamaan multatäytteiseen vallirakenteeseen. Paikan löysi vuonna 1933 koulunopettaja Walenty Szwajcer oppilaineen, ja kaivaukset alkoivat seuraavana vuonna.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-legnica) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Legnican taistelu (historia)
+Tietoruudun teksti: Legnican taistelu, jota kutsutaan myös Liegnitzin tai Wahlstattin taisteluksi, käytiin 9. huhtikuuta 1241 Legnickie Polen kylässä noin kymmenen kilometriä Legnicasta kaakkoon Sleesian ruhtinaskunnassa. Sleesian herttua Henrik II Hurskaan johtamat puolalaiset ja määriläiset, joita tukivat feodaaliaateli ja muutamat paavin lähettämät ritarikuntien ritarit, yrittivät pysäyttää mongolien hyökkäyksen Puolaan. Mongolit käyttivät nopeaa ratsuväkeä ja jousiampujia ja pitkää sarjaa tekaistuja perääntymisiä. Yleisen historiallisen käsityksen mukaan taistelu oli murskaava tappio puolalaisille ja määriläisille, ja Długoszin mukaan Henrik kuoli taistelussa. Se käytiin kaksi päivää ennen mongolien voittoa unkarilaisista Mohin taistelussa.
+
+### 25.1
+KYSYMYS: Ketä vastaan Henrik II Hurskas taisteli Legnican luona 9. huhtikuuta 1241?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Legnican taistelu (historia)
+Tietoruudun teksti: Legnican taistelu, jota kutsutaan myös Liegnitzin tai Wahlstattin taisteluksi, käytiin 9. huhtikuuta 1241 Legnickie Polen kylässä noin kymmenen kilometriä Legnicasta kaakkoon Sleesian ruhtinaskunnassa. Sleesian herttua Henrik II Hurskaan johtamat puolalaiset ja määriläiset, joita tukivat feodaaliaateli ja muutamat paavin lähettämät ritarikuntien ritarit, yrittivät pysäyttää mongolien hyökkäyksen Puolaan. Mongolit käyttivät nopeaa ratsuväkeä ja jousiampujia ja pitkää sarjaa tekaistuja perääntymisiä. Yleisen historiallisen käsityksen mukaan taistelu oli murskaava tappio puolalaisille ja määriläisille, ja Długoszin mukaan Henrik kuoli taistelussa. Se käytiin kaksi päivää ennen mongolien voittoa unkarilaisista Mohin taistelussa.
+
+### 25.2
+KYSYMYS: Millä taktiikalla mongolit voittivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Legnican taistelu (historia)
+Tietoruudun teksti: Legnican taistelu, jota kutsutaan myös Liegnitzin tai Wahlstattin taisteluksi, käytiin 9. huhtikuuta 1241 Legnickie Polen kylässä noin kymmenen kilometriä Legnicasta kaakkoon Sleesian ruhtinaskunnassa. Sleesian herttua Henrik II Hurskaan johtamat puolalaiset ja määriläiset, joita tukivat feodaaliaateli ja muutamat paavin lähettämät ritarikuntien ritarit, yrittivät pysäyttää mongolien hyökkäyksen Puolaan. Mongolit käyttivät nopeaa ratsuväkeä ja jousiampujia ja pitkää sarjaa tekaistuja perääntymisiä. Yleisen historiallisen käsityksen mukaan taistelu oli murskaava tappio puolalaisille ja määriläisille, ja Długoszin mukaan Henrik kuoli taistelussa. Se käytiin kaksi päivää ennen mongolien voittoa unkarilaisista Mohin taistelussa.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

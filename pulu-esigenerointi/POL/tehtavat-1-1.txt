@@ -1,0 +1,219 @@
+================ KOHTA 1 (kohde:rysy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rysy (luonto · vuori)
+Tietoruudun teksti: Rysy on Korkeiden Tatrojen harjanteella Puolan ja Slovakian rajalla. Sillä on kolme huippua: keskimmäinen 2 501 metriä, luoteinen 2 500 ja kaakkoinen 2 473. Luoteinen huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun; kaksi muuta ovat Slovakian puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+- [Puola — maalehti / Ruoka: Metsästäjän pata joka paranee odottaessa] nykyään — Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta laajalle koko Puolan–Liettuan unionin alueelle.
+
+### 1.1
+KYSYMYS: Miksi Rysyllä on kolme huippua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rysy (luonto · vuori)
+Tietoruudun teksti: Rysy on Korkeiden Tatrojen harjanteella Puolan ja Slovakian rajalla. Sillä on kolme huippua: keskimmäinen 2 501 metriä, luoteinen 2 500 ja kaakkoinen 2 473. Luoteinen huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun; kaksi muuta ovat Slovakian puolella.
+
+### 1.2
+KYSYMYS: Mikä on Puolan vuorten kruunu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rysy (luonto · vuori)
+Tietoruudun teksti: Rysy on Korkeiden Tatrojen harjanteella Puolan ja Slovakian rajalla. Sillä on kolme huippua: keskimmäinen 2 501 metriä, luoteinen 2 500 ja kaakkoinen 2 473. Luoteinen huippu on Puolan korkein piste ja kuuluu Puolan vuorten kruunuun; kaksi muuta ovat Slovakian puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Historia: Suolakaivos jossa on kirkko maan alla] 13. vuosisata — Wieliczkan suolakaivos Krakovan lähellä on kaivettu 1200-luvulta lähtien, ja suolaa louhittiin siellä yhtäjaksoisesti aina vuoteen 1996 asti — yksi maailman vanhimmista toimivista kaivoksista. Kaivos ulottuu 327 metrin syvyyteen ja yli 287 kilometrin käytäväverkostoon. Vuosisatojen aikana kaivosmiehet veistivät suolasta patsaita, kappeleita ja jopa kokonaisia kirkkosaleja kattokruunuineen — kaikki, myös valaisimet, on veistetty tai puhallettu suolasta. Nykyään kaivos on Unescon maailmanperintökohde ja yksi Puolan suosituimmista nähtävyyksistä.
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+- [Puola — maalehti / Ruoka: Metsästäjän pata joka paranee odottaessa] nykyään — Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta laajalle koko Puolan–Liettuan unionin alueelle.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:sniezka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Śnieżka (luonto · vuori)
+Tietoruudun teksti: Śnieżka eli tšekiksi Sněžka on Puolan ja Tšekin rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Rajan toisella puolella sama huippu on Tšekin korkein piste.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Kaksi miestä huipulla] Marraskuussa 1861 brittiläinen tutkimusmatkailija Richard Burton nousi Kamerunvuoren huipulle yhdessä saksalaisen kasvitieteilijä Gustav Mannin kanssa – ensimmäisinä tunnettuina eurooppalaisina koskaan. Mann keräsi matkalla satoja kasvinäytteitä Kew'n kasvitieteelliselle puutarhalle Lontooseen, ja vuorella yhä virtaava lähde on nimetty hänen mukaansa Mann's Springiksi. Nousu tapahtui vain 12 vuotta ennen kuin isoisä itse saapui samoille rannoille matkapäiväkirjaansa täyttämään.
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+
+### 2.1
+KYSYMYS: Miksi vuorella on kaksi nimeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Śnieżka (luonto · vuori)
+Tietoruudun teksti: Śnieżka eli tšekiksi Sněžka on Puolan ja Tšekin rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Rajan toisella puolella sama huippu on Tšekin korkein piste.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Kaksi miestä huipulla] Marraskuussa 1861 brittiläinen tutkimusmatkailija Richard Burton nousi Kamerunvuoren huipulle yhdessä saksalaisen kasvitieteilijä Gustav Mannin kanssa – ensimmäisinä tunnettuina eurooppalaisina koskaan. Mann keräsi matkalla satoja kasvinäytteitä Kew'n kasvitieteelliselle puutarhalle Lontooseen, ja vuorella yhä virtaava lähde on nimetty hänen mukaansa Mann's Springiksi. Nousu tapahtui vain 12 vuotta ennen kuin isoisä itse saapui samoille rannoille matkapäiväkirjaansa täyttämään.
+
+### 2.2
+KYSYMYS: Mitkä ovat Jättiläisvuoret?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Śnieżka (luonto · vuori)
+Tietoruudun teksti: Śnieżka eli tšekiksi Sněžka on Puolan ja Tšekin rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Rajan toisella puolella sama huippu on Tšekin korkein piste.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:itameri~6) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Puolan rannalla on Gdańskinlahti, ja siihen laskee Veiksel, yksi meren suurista joista. Etelärannikon meripihka on ollut kauppatavaraa 1100-luvulta asti, ja Gdańskin, Gdynian ja Szczecinin telakat ovat meren suurimmat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 3.1
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Puolan rannalla on Gdańskinlahti, ja siihen laskee Veiksel, yksi meren suurista joista. Etelärannikon meripihka on ollut kauppatavaraa 1100-luvulta asti, ja Gdańskin, Gdynian ja Szczecinin telakat ovat meren suurimmat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 3.2
+KYSYMYS: Miksi Itämerellä ei ole vuorovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Puolan rannalla on Gdańskinlahti, ja siihen laskee Veiksel, yksi meren suurista joista. Etelärannikon meripihka on ollut kauppatavaraa 1100-luvulta asti, ja Gdańskin, Gdynian ja Szczecinin telakat ovat meren suurimmat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Historia: Laiva jonka kapteenin nimi jäi kartalle] HMS Basilisk laskettiin vesille Woolwichissa elokuussa 1848, ja se oli ensimmäisen luokan siipiratassluuppi: kaksisylinterinen höyrykone pyöritti laivan kylkien rattaita, ja purjeet olivat parkin takila. Laiva palveli Krimin sodan aikana Itämerellä 1854–1855 ja siirtyi sitten Pohjois-Amerikan, Kiinan ja Japanin asemille. Maaliskuussa 1871 se komennettiin Australian asemalle kapteeni John Moresbyn johtoon, ja siitä alkoivat Uuden-Guinean rannikon merenmittaukset. Myöhemmin Basiliskia käytettiin pakkotyövoiman kuljetuksia vastaan Tyynellämerellä. Laiva palasi Englantiin 1874 ja purettiin romuksi Chathamissa 1882.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:veiksel) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veiksel (luonto · joki)
+Tietoruudun teksti: Veiksel vaihtoi suunsa kahdesti puolessa vuosisadassa. Vuonna 1840 jääpato nosti tulvan, joka mursi hiekan läpi uuden uoman mereen muutaman kilometrin päähän Danzigista itään; sitä alettiin kutsua Rohkeaksi Veikseliksi, ja vanha uoma menetti virtansa ja jäi Kuolleeksi Veikseliksi. Kun tulvat silti jatkuivat, Preussin hallitus kaivoi vuosina 1889—1895 kaksitoista kilometriä kaupungista itään suoran keinouoman, jotta joki huuhtoisi jäälauttansa suoraan Itämereen ennen kuin ne ehtivät padota. Se on nykyään joen pääsuu — ja se ohittaa Gdańskin kokonaan. Veiksel on Puolan pisin joki ja pisin Itämereen laskeva joki, 1 047 kilometriä, ja se kulkee sekä Krakovan että Varsovan halki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+
+### 4.1
+KYSYMYS: Miksi Veikselin suu siirrettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veiksel (luonto · joki)
+Tietoruudun teksti: Veiksel vaihtoi suunsa kahdesti puolessa vuosisadassa. Vuonna 1840 jääpato nosti tulvan, joka mursi hiekan läpi uuden uoman mereen muutaman kilometrin päähän Danzigista itään; sitä alettiin kutsua Rohkeaksi Veikseliksi, ja vanha uoma menetti virtansa ja jäi Kuolleeksi Veikseliksi. Kun tulvat silti jatkuivat, Preussin hallitus kaivoi vuosina 1889—1895 kaksitoista kilometriä kaupungista itään suoran keinouoman, jotta joki huuhtoisi jäälauttansa suoraan Itämereen ennen kuin ne ehtivät padota. Se on nykyään joen pääsuu — ja se ohittaa Gdańskin kokonaan. Veiksel on Puolan pisin joki ja pisin Itämereen laskeva joki, 1 047 kilometriä, ja se kulkee sekä Krakovan että Varsovan halki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+
+### 4.2
+KYSYMYS: Miksi Krakova ja Varsova ovat molemmat Veikselin varrella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veiksel (luonto · joki)
+Tietoruudun teksti: Veiksel vaihtoi suunsa kahdesti puolessa vuosisadassa. Vuonna 1840 jääpato nosti tulvan, joka mursi hiekan läpi uuden uoman mereen muutaman kilometrin päähän Danzigista itään; sitä alettiin kutsua Rohkeaksi Veikseliksi, ja vanha uoma menetti virtansa ja jäi Kuolleeksi Veikseliksi. Kun tulvat silti jatkuivat, Preussin hallitus kaivoi vuosina 1889—1895 kaksitoista kilometriä kaupungista itään suoran keinouoman, jotta joki huuhtoisi jäälauttansa suoraan Itämereen ennen kuin ne ehtivät padota. Se on nykyään joen pääsuu — ja se ohittaa Gdańskin kokonaan. Veiksel on Puolan pisin joki ja pisin Itämereen laskeva joki, 1 047 kilometriä, ja se kulkee sekä Krakovan että Varsovan halki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:odra) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odra (luonto · joki)
+Tietoruudun teksti: Odra eli saksaksi Oder on Puolan toiseksi pisin joki ja rajojensa sisällä kolmanneksi pisin Veikselin ja sen suurimman sivujoen Wartan jälkeen. Se nousee Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki, ja siitä 187 kilometriä on Puolan ja Saksan rajaa osana Oder–Neisse-linjan rajaa. Lopulta se laskee Szczecinin laguuniin ja kolmena haarana Itämeren Pommerinlahteen.
+
+### 5.1
+KYSYMYS: Mikä Oder–Neisse-linja on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odra (luonto · joki)
+Tietoruudun teksti: Odra eli saksaksi Oder on Puolan toiseksi pisin joki ja rajojensa sisällä kolmanneksi pisin Veikselin ja sen suurimman sivujoen Wartan jälkeen. Se nousee Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki, ja siitä 187 kilometriä on Puolan ja Saksan rajaa osana Oder–Neisse-linjan rajaa. Lopulta se laskee Szczecinin laguuniin ja kolmena haarana Itämeren Pommerinlahteen.
+
+### 5.2
+KYSYMYS: Mikä on Odran suurin sivujoki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odra (luonto · joki)
+Tietoruudun teksti: Odra eli saksaksi Oder on Puolan toiseksi pisin joki ja rajojensa sisällä kolmanneksi pisin Veikselin ja sen suurimman sivujoen Wartan jälkeen. Se nousee Tšekistä ja virtaa 742 kilometriä Länsi-Puolan halki, ja siitä 187 kilometriä on Puolan ja Saksan rajaa osana Oder–Neisse-linjan rajaa. Lopulta se laskee Szczecinin laguuniin ja kolmena haarana Itämeren Pommerinlahteen.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

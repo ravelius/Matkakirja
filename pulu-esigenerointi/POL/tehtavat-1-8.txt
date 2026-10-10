@@ -1,0 +1,211 @@
+================ KOHTA 36 (kohde:hahmotelma-pszczyna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Vancouverin taidegalleria] 1911 Talo ei ole alun perin museo vaan oikeustalo. Francis Rattenbury voitti sen suunnittelukilpailun 1905, rakennustyöt alkoivat 1906, ja provinssin oikeustalo avattiin 1911. Sisällä oli kahdeksantoista oikeussalia. Talossa on joonialaiset pylväät, keskellä kupoli ja juhlalliset pylväiköt, ja marmori tuotiin Alaskasta, Tennesseestä ja Vermontista. Thomas Hooperin piirtämä sivusiipi lisättiin länsipuolelle 1912. Oikeuslaitos muutti pois 1979, ja talo julistettiin kansalliseksi historialliseksi kohteeksi 1980. Vanhan sisäänkäynnin molemmin puolin makaa graniittinen leijona. Kivet tuotiin Nelson Islandilta, ja leijonat asetettiin paikoilleen 1910. Neljäntenä marraskuuta 1942 kaksi dynamiittir…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+
+### 36.1
+KYSYMYS: Kuka ranskalainen arkkitehti johti palatsin uudistusta 1870-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Vancouverin taidegalleria] 1911 Talo ei ole alun perin museo vaan oikeustalo. Francis Rattenbury voitti sen suunnittelukilpailun 1905, rakennustyöt alkoivat 1906, ja provinssin oikeustalo avattiin 1911. Sisällä oli kahdeksantoista oikeussalia. Talossa on joonialaiset pylväät, keskellä kupoli ja juhlalliset pylväiköt, ja marmori tuotiin Alaskasta, Tennesseestä ja Vermontista. Thomas Hooperin piirtämä sivusiipi lisättiin länsipuolelle 1912. Oikeuslaitos muutti pois 1979, ja talo julistettiin kansalliseksi historialliseksi kohteeksi 1980. Vanhan sisäänkäynnin molemmin puolin makaa graniittinen leijona. Kivet tuotiin Nelson Islandilta, ja leijonat asetettiin paikoilleen 1910. Neljäntenä marraskuuta 1942 kaksi dynamiittir…
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+
+### 36.2
+KYSYMYS: Mikä säveltäjä vieraili palatsissa 1705?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pszczynan linna (kulttuuri)
+Tietoruudun teksti: Pszczynan linna on klassististyylinen palatsi Pszczynan kaupungissa Etelä-Puolassa. Se rakennettiin linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin, ja 1600-luvulla se rakennettiin uudelleen renessanssityyliin; 1700- ja 1800-luvuilla sen ulkoasua muutettiin osittain barokki-klassistiseksi. Linna oli Piast-herttuoiden, sitten saksalaisen von Promnitz -suvun 1500-luvun puolivälistä 1700-luvun puoliväliin ja myöhemmin von Pless -suvun asuinpaikka. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan, ja vuosina 1870–1876 ranskalainen arkkitehti Gabriel-Hippolyte Destailleur johti palatsin uudistusta. Vuonna 1705 säveltäjä Georg Philipp Telemann oli Promnitzin kapellimestarina ja vietti palatsissa paljon aikaa tutustuen puolalaiseen ja määriläiseen kansanmusiikkiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [St. John’s — kohdekartta / Kohdekartta: Fort William] 1698–1881 Cavendish Squaren ja Duckworth Streetin kulmassa on tukimuurissa laatta, ja se on kaikki mitä linnakkeesta on jäljellä. Fort William rakennettiin 1698 ja valmistui 1700: tiilipintaiset vallit, pomminkestävät rintavarustukset, ruutikellarit ja kunnon kasarmit. Se oli Newfoundlandin brittivaruskunnan alkuperäinen esikunta. Sataman itäpäässä oli toinen linnake, Fort George, ja niiden välillä kulki maanalainen käytävä; Narrowsin eteläpuolella oli kolmas varustus, jota sanottiin Linnaksi. Linnake nousi vasta katastrofin jälkeen. Ranskalaiset olivat tuhonneet kaupungin 1696, ja kun tuhannenviidensadan miehen apujoukko saapui seuraavana kesänä, se löysi autiot rauniot; talven aikana kolm…
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-lodz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Kuvataide: Kangas kudotaan banaanin kuidusta] Etelä-Cotabatossa Sebu-järven rannoilla t'boli-naiset kutovat t'nalak-kangasta abakabanaanin kuidusta. Kuviota ei piirretä vaan nähdään unessa: kutoja saa sen Fu Dalulta, abakan haltijalta, eikä samaa kuviota siksi voi monistaa tehtaassa. Langat sidotaan ja värjätään ikat-tekniikalla jo ennen kutomista, ja kangas syntyy vyötärölle kiinnitetyillä kangaspuilla. Työhön osallistuu koko yhteisö: miehet valitsevat varret, irrottavat kuidut ja kuivaavat ne auringossa. Kutojia sanotaan unikutojiksi.
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+
+### 37.1
+KYSYMYS: Kenen Valkoisessa tehtaassa Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Kuvataide: Kangas kudotaan banaanin kuidusta] Etelä-Cotabatossa Sebu-järven rannoilla t'boli-naiset kutovat t'nalak-kangasta abakabanaanin kuidusta. Kuviota ei piirretä vaan nähdään unessa: kutoja saa sen Fu Dalulta, abakan haltijalta, eikä samaa kuviota siksi voi monistaa tehtaassa. Langat sidotaan ja värjätään ikat-tekniikalla jo ennen kutomista, ja kangas syntyy vyötärölle kiinnitetyillä kangaspuilla. Työhön osallistuu koko yhteisö: miehet valitsevat varret, irrottavat kuidut ja kuivaavat ne auringossa. Kutojia sanotaan unikutojiksi.
+
+### 37.2
+KYSYMYS: Kuka rakennutti kaksitoista tehdasta ja eklektisen palatsin vuosina 1872–1892?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łódź (kauppa)
+Tietoruudun teksti: Łódź on Keski-Puolan entinen teollisuuskeskus, joka on nykyään maan neljänneksi suurin kaupunki ja jossa asuu noin 640 000 ihmistä. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin, minkä ansiosta kaupunki saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta; Puolan ensimmäinen höyrykäyttöinen kangaspuu oli aloittanut toimintansa Ludwik Geyerin Valkoisessa tehtaassa jo vuonna 1839. Rautatiet, kuten vuonna 1865 avattu Łódźin ja Koluszkin yhteys, vauhdittivat teollisuutta edelleen. Kaupungin rakennukset ja laitokset syntyivät teollisuusmagnaattien, erityisesti Karl Wilhelm Scheiblerin ja Izrael Poznańskin, rahoilla, ja Poznański rakensi vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden, johon kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Voimakkaimman teollistumisen vuosina 1870–1890 kaupungis…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+- [Porto Alegre — kohdekartta / Kohdekartta: Dores-kirkko] 1807–1904 Dores-kirkko on Porto Alegren vanhin pystyssä oleva katolinen kirkko, ja se rakennettiin lähes sadassa vuodessa. Veljeskunta päätti kirkosta 1. toukokuuta 1806, peruskivi laskettiin 1807 ja kuningattaren lupa saatiin 1809. Kuorin seinät sortuivat 1810. Vuonna 1813 kappeli vihittiin, mutta työ pysähtyi taas Farroupilha-kapinan ajaksi, ja vuoteen 1846 asti rakennus oli käytännössä pelkkä kuori, jonka eteen oli pystytetty vaja kirkkosaliksi. Vasta kun Caxiasin kreivi lahjoitti neljä contoa réistä, sivuseinien perustukset päästiin tekemään. Seinät nousivat 1857, ja João do Couto e Silva teki katon, holvin ja julkisivun. Kirkko vihittiin 10. toukokuuta 1868. Edessä oleva monumentaalipo…
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-bochnia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bochnian suolakaivos (tekniikka)
+Tietoruudun teksti: Bochnian suolakaivos on yksi maailman vanhimmista suolakaivoksista ja Puolan vanhin kaupallinen yritys. Se perustettiin vuonna 1248, kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla, ja siitä tuli osa kuninkaallista Krakovan suolayhtiötä (Żupy krakowskie). Kaivos lopetti suolan tuotannon vuonna 1990 mutta säilyi matkailukohteena, ja se kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, jossa suurin säilynyt kammio on muutettu sanatorioksi. Kaivoksen kappelin läpi kulkevat junaraiteet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: San Ildefonson kollegio] 1588 Jesuiitat saapuivat Meksikoon 1572, ja kun Keski-Meksikon lähetystyö oli enimmäkseen tehty, he ryhtyivät perustamaan kouluja. Niistä tärkein oli San Ildefonso, joka perustettiin 1588. Vuonna 1618 se yhdistettiin lähes raunioituneeseen San Pedro y San Pablon kollegioon ja sai kuninkaallisen sinetin Filip III:lta. Kollegio ei ollut korkeakoulu nykyisessä mielessä vaan asuntola ja koulu: nuorukaiset asuivat ja opiskelivat täällä mutta olivat samalla kirjoilla kuninkaallisessa ja paavillisessa yliopistossa. Talo kasvoi koulun mukana. Laajennus aloitettiin 1712 ja saatiin valmiiksi 1749; vanhempaa osaa kutsutaan siitä lähtien nimellä Colegio Grande ja uutta nimellä Colegio Chico, ja San Ild…
+- [Hobart — kohdekartta / Kohdekartta: Tasmanian museo] 1848 Museon perusti 1846 Tasmanian kuninkaallinen seura, Englannin ulkopuolen vanhin kuninkaallinen seura, ja virallisesti se syntyi 1848. Aiempia yrityksiä oli ollut kolme, ja pisimmälle pääsi käsityöläisten opisto, joka sai 1838 hallitukselta luvan rakentaa museohuoneen tullitaloon. Tullitalo otettiin myöhemmin lakiasäätävän neuvoston käyttöön ja siitä tuli parlamenttitalo — kuninkaallinen seura perusti museon parlamentin valiokuntahuoneessa, mahdollisesti samassa huoneessa. Kokoelma muutti 1852 Harrington Streetille, jossa salin vuokra oli 60 puntaa vuodessa. Vuonna 1854 kävijöitä oli ensi kerran yli tuhat, ja 1855 Lady Franklinin museo myi kalusteensa ja kokoelmansa seuralle. Vuonna 186…
+
+### 38.1
+KYSYMYS: Milloin Bochnian suolakaivos perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bochnian suolakaivos (tekniikka)
+Tietoruudun teksti: Bochnian suolakaivos on yksi maailman vanhimmista suolakaivoksista ja Puolan vanhin kaupallinen yritys. Se perustettiin vuonna 1248, kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla, ja siitä tuli osa kuninkaallista Krakovan suolayhtiötä (Żupy krakowskie). Kaivos lopetti suolan tuotannon vuonna 1990 mutta säilyi matkailukohteena, ja se kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, jossa suurin säilynyt kammio on muutettu sanatorioksi. Kaivoksen kappelin läpi kulkevat junaraiteet.
+
+### 38.2
+KYSYMYS: Minkä kuninkaallisen yhtiön osaksi kaivos tuli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bochnian suolakaivos (tekniikka)
+Tietoruudun teksti: Bochnian suolakaivos on yksi maailman vanhimmista suolakaivoksista ja Puolan vanhin kaupallinen yritys. Se perustettiin vuonna 1248, kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla, ja siitä tuli osa kuninkaallista Krakovan suolayhtiötä (Żupy krakowskie). Kaivos lopetti suolan tuotannon vuonna 1990 mutta säilyi matkailukohteena, ja se kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, jossa suurin säilynyt kammio on muutettu sanatorioksi. Kaivoksen kappelin läpi kulkevat junaraiteet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: San Ildefonson kollegio] 1588 Jesuiitat saapuivat Meksikoon 1572, ja kun Keski-Meksikon lähetystyö oli enimmäkseen tehty, he ryhtyivät perustamaan kouluja. Niistä tärkein oli San Ildefonso, joka perustettiin 1588. Vuonna 1618 se yhdistettiin lähes raunioituneeseen San Pedro y San Pablon kollegioon ja sai kuninkaallisen sinetin Filip III:lta. Kollegio ei ollut korkeakoulu nykyisessä mielessä vaan asuntola ja koulu: nuorukaiset asuivat ja opiskelivat täällä mutta olivat samalla kirjoilla kuninkaallisessa ja paavillisessa yliopistossa. Talo kasvoi koulun mukana. Laajennus aloitettiin 1712 ja saatiin valmiiksi 1749; vanhempaa osaa kutsutaan siitä lähtien nimellä Colegio Grande ja uutta nimellä Colegio Chico, ja San Ild…
+- [Hobart — kohdekartta / Kohdekartta: Tasmanian museo] 1848 Museon perusti 1846 Tasmanian kuninkaallinen seura, Englannin ulkopuolen vanhin kuninkaallinen seura, ja virallisesti se syntyi 1848. Aiempia yrityksiä oli ollut kolme, ja pisimmälle pääsi käsityöläisten opisto, joka sai 1838 hallitukselta luvan rakentaa museohuoneen tullitaloon. Tullitalo otettiin myöhemmin lakiasäätävän neuvoston käyttöön ja siitä tuli parlamenttitalo — kuninkaallinen seura perusti museon parlamentin valiokuntahuoneessa, mahdollisesti samassa huoneessa. Kokoelma muutti 1852 Harrington Streetille, jossa salin vuokra oli 60 puntaa vuodessa. Vuonna 1854 kävijöitä oli ensi kerran yli tuhat, ja 1855 Lady Franklinin museo myi kalusteensa ja kokoelmansa seuralle. Vuonna 186…
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-tarnowskie-gory) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+
+### 39.1
+KYSYMYS: Mitä sana góry tarkoitti vanhassa puolassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+
+### 39.2
+KYSYMYS: Mistä kylästä Tarnowskie Górin nimen alkuosa tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tarnowskie Górin hopeakaivos (tekniikka)
+Tietoruudun teksti: Tarnowskie Góry on Sleesian kaupunki Etelä-Puolassa Katowicen lähellä, ja siellä sijaitsee Unescon maailmanperintökohde, Tarnowskie Górin historiallinen hopeakaivos. Kaupungin nimi tulee Tarnowice-kylästä ja sanasta góry, joka vanhassa puolassa tarkoitti kaivoksia. Vuonna 1788 Walesista tuotiin Newcomenin ilmakehäkone tyhjentämään maanalaisia vesiä, mikä sytytti teollisen vallankumouksen paikalla; lopulta käytössä oli kahdeksan höyrykonetta. Vuonna 1803 kaupungissa perustettiin yksi maailman ensimmäisistä kaivoskouluista. Hopeamalmin lähde ehtyi 1900-luvun alussa, ja louhinta loppui kokonaan.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-boleslawiec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sepik — kaupunkilehti / Sepik: Arkea joen rannalla] Sepikin varren kylät rakennetaan yleensä tulva-alueen paaluille, ja suuri osa arjesta tapahtuu silti rannalla: pyykinpesu, kalastus, kanoottien korjaus ja lasten leikit. Tässä kuvassa kyläläiset kokoontuvat rantaan aivan tavallisena päivänä – näky joka on toistunut sukupolvesta toiseen jo kauan ennen kuin kukaan eurooppalainen näki jokea. Ravinto tulee pääosin sagopalmun ydinjauhosta ja joen kalasta, ei pelloilta, sillä tulva-alue soveltuu huonosti viljelyyn. Joen varren sadan kylän asukkaat puhuvat kymmeniä eri kieliä, vaikka asuvat vain muutaman kanoottimatkan päässä toisistaan.
+
+### 40.1
+KYSYMYS: Millä saksankielisellä nimellä Bolesławiecin keramiikkaa kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+
+### 40.2
+KYSYMYS: Mikä Bolesławiecin ympäristössä soveltuu savenvalantaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bolesławiec (kauppa)
+Tietoruudun teksti: Bolesławiec on historiallinen kaupunki Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa; se perustettiin 1200-luvulla ja on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan Bunzlauer-keramiikaksi, ja se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan; se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. Alueen savi soveltuu hyvin savenvalantaan: astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Napoleon vieraili kaupungissa kuusi kertaa Napoleonin sotien aikana, ja Venäjän kenraalifeldmarsalkka Kutuzov kuoli siellä 28. huhtikuuta 1813.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sepik — kaupunkilehti / Sepik: Arkea joen rannalla] Sepikin varren kylät rakennetaan yleensä tulva-alueen paaluille, ja suuri osa arjesta tapahtuu silti rannalla: pyykinpesu, kalastus, kanoottien korjaus ja lasten leikit. Tässä kuvassa kyläläiset kokoontuvat rantaan aivan tavallisena päivänä – näky joka on toistunut sukupolvesta toiseen jo kauan ennen kuin kukaan eurooppalainen näki jokea. Ravinto tulee pääosin sagopalmun ydinjauhosta ja joen kalasta, ei pelloilta, sillä tulva-alue soveltuu huonosti viljelyyn. Joen varren sadan kylän asukkaat puhuvat kymmeniä eri kieliä, vaikka asuvat vain muutaman kanoottimatkan päässä toisistaan.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

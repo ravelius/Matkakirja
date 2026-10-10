@@ -1,0 +1,285 @@
+================ KOHTA 41 (kohde:hahmotelma-torun-zamek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino: Mainz 1454 — sivu syntyy metallista] 1454 — Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin ja peilikuvana; sivu on valmis vasta, kun rivejä on neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita arkk…
+
+### 41.1
+KYSYMYS: Minkä ritarikunnan linna Toruńin rauniot olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+### 41.2
+KYSYMYS: Miksi kaupunkilaiset purkivat linnan vuonna 1454?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toruńin ristiritarien linna (historia)
+Tietoruudun teksti: Toruńin linna oli Saksalaisen ritarikunnan 1200-luvun puolivälissä perustama linnoitus, yksi ritarikunnan ensimmäisistä Kulmanmaalla, ja se toimi alkujaan ritarikunnan komentajan asuinpaikkana ja tukikohtana pakanallisten preussilaisten alistamiseen sekä ritarikunnan oman valtion synnyssä. Toruńin porvarit nousivat kapinaan ritarikunnan sortoa vastaan, ja helmikuussa 1454 pieni saksalaisvarusväki antautui ja sai poistua; kaupunki ryösti linnan ja päätti sen jälkeen purkaa sen kokonaan, ettei ritarikunta voisi vallata sitä takaisin. Tapahtuma käynnisti kolmentoista vuoden sodan (1454–1466). Linnasta on jäljellä lähinnä käymälätorni (dansker) puron yllä ja kellariholveja; rauniot kaivettiin osin esiin ja avattiin museona 1966, ja ne ovat nykyään osa Toruńin vanhankaupungin maailmanperintöaluetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino: Mainz 1454 — sivu syntyy metallista] 1454 — Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin ja peilikuvana; sivu on valmis vasta, kun rivejä on neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita arkk…
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-ogrodzieniec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosambik — kaupunkilehti / Orjakauppa ja unohdettu pääkaupunki: Piirustus vuodelta 1655] Tämä vuonna 1655 piirretty akvarellikartta näyttää São Sebastiãon linnoituksen kolmiomaisen pohjapiirustuksen ja edustan, jossa purjelaivat ankkuroivat syvässä kanavassa saaren ja mantereen välissä. Vahva linnoitus teki saaresta niin turvallisen sataman, että siitä tuli jo 1500-luvun alussa koko Portugalin Itä-Afrikan hallintokeskus. Isoisän matkavuonna 1873 saari oli yhä sama pääkaupunki kuin kartanpiirtäjän aikana kaksi vuosisataa aiemmin: tärkeät päätökset tehtiin edelleen tällä kapealla koralliriutalla, ennen kuin pääkaupunki siirrettiin mantereelle vasta vuonna 1898.
+
+### 42.1
+KYSYMYS: Minkä reitin varrella Ogrodzieńcin linna on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+### 42.2
+KYSYMYS: Mikä joukko poltti linnan osittain 1655?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ogrodzieńcin linna (historia)
+Tietoruudun teksti: Ogrodzieńcin linna kohoaa Puolan Jura-ylängön korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä, ja se on osa "Kotkanpesät"-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ensimmäinen puinen linnake paikalla tuhoutui mongolien hyökkäyksessä 1241, ja 1300-luvun puolivälissä kallioiden väliin rakennettiin uusi goottilainen linna, joka laajeni myöhemmin renessanssilinnaksi 1500-luvulla Boner-suvun aikana. Ruotsalaiset joukot polttivat linnaa osittain 1655 Ruotsin miehityksen aikana, ja vuonna 1702 Kaarle XII:n sotajoukot polttivat yli puolet linnasta uudelleen Isossa Pohjan sodassa; sen jälkeen linnaa ei enää koskaan korjattu, ja se jäi vähitellen raunioiksi ja rakennusaineksen lähteeksi lähialueen asukkaille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosambik — kaupunkilehti / Orjakauppa ja unohdettu pääkaupunki: Piirustus vuodelta 1655] Tämä vuonna 1655 piirretty akvarellikartta näyttää São Sebastiãon linnoituksen kolmiomaisen pohjapiirustuksen ja edustan, jossa purjelaivat ankkuroivat syvässä kanavassa saaren ja mantereen välissä. Vahva linnoitus teki saaresta niin turvallisen sataman, että siitä tuli jo 1500-luvun alussa koko Portugalin Itä-Afrikan hallintokeskus. Isoisän matkavuonna 1873 saari oli yhä sama pääkaupunki kuin kartanpiirtäjän aikana kaksi vuosisataa aiemmin: tärkeät päätökset tehtiin edelleen tällä kapealla koralliriutalla, ennen kuin pääkaupunki siirrettiin mantereelle vasta vuonna 1898.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (nosto:wieliczka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pakistan — maalehti / Luonto: Puolet suolasta jätetään pylväiksi] Khewran suolakaivos Punjabin Suolavuoristossa on maailman toiseksi suurin. Tarinan mukaan esiintymä löytyi vuonna 326 eaa., kun Aleksanteri Suuren armeijan hevoset alkoivat nuolla kiviä. Kauppa alkoi mughalien aikana, ja brittien kaivosinsinööri H. Warth avasi pääkäytävän 1872. Louhinta tehdään kammio ja pylväs -menetelmällä: vain puolet suolasta otetaan ja loput jätetään kannattelemaan kattoa. Kerroksia on yhdeksäntoista, joista yksitoista maan alla, käytävää noin 40 kilometriä ja lämpötila pysyy 18–20 asteessa. Suolatiilistä on muurattu kaivokseen moskeija.
+- [Mount Rushmore — kaupunkilehti / Mount Rushmore: Jefferson jouduttiin räjäyttämään pois] Thomas Jeffersonin kasvot alettiin veistää alun perin Washingtonin oikealle puolelle, ja työtä jatkettiin siinä kohtaa lähes kaksi vuotta. Vuonna 1934 kävi kuitenkin ilmi, että kallio oli liian haljennutta veistettäväksi loppuun asti: koko keskeneräinen Jefferson jouduttiin räjäyttämään pois vuoren kyljestä. Uusi Jefferson aloitettiin Washingtonin vasemmalle puolelle, missä hänen kasvonsa lopulta valmistuivat vuonna 1936 — paikalla, jossa ne yhä näkyvät.
+- [Filippiinit — maalehti / Luonto: Kartio, jonka sade veistää] Mayon on maan aktiivisin tulivuori: purkauksia on kirjattu yli viisikymmentä viidensadan vuoden ajalta. Kartio tunnetaan tasaisuudestaan, ja muoto syntyy tasapainosta — purkaus kasaa tuhkaa rinteille, sade ja virtaava vesi kuluttavat sitä pois. Ylärinne on jyrkkä, alaosa lähes tasainen, ja huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin 1938 maan ensimmäiseksi kansallispuistoksi.
+
+### 43.1
+KYSYMYS: Miksi suolasta kannatti kaivaa vuori tyhjäksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pakistan — maalehti / Luonto: Puolet suolasta jätetään pylväiksi] Khewran suolakaivos Punjabin Suolavuoristossa on maailman toiseksi suurin. Tarinan mukaan esiintymä löytyi vuonna 326 eaa., kun Aleksanteri Suuren armeijan hevoset alkoivat nuolla kiviä. Kauppa alkoi mughalien aikana, ja brittien kaivosinsinööri H. Warth avasi pääkäytävän 1872. Louhinta tehdään kammio ja pylväs -menetelmällä: vain puolet suolasta otetaan ja loput jätetään kannattelemaan kattoa. Kerroksia on yhdeksäntoista, joista yksitoista maan alla, käytävää noin 40 kilometriä ja lämpötila pysyy 18–20 asteessa. Suolatiilistä on muurattu kaivokseen moskeija.
+
+### 43.2
+KYSYMYS: Miten kappelin voi veistää siitä, mikä louhitaan pois?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Rushmore — kaupunkilehti / Mount Rushmore: Jefferson jouduttiin räjäyttämään pois] Thomas Jeffersonin kasvot alettiin veistää alun perin Washingtonin oikealle puolelle, ja työtä jatkettiin siinä kohtaa lähes kaksi vuotta. Vuonna 1934 kävi kuitenkin ilmi, että kallio oli liian haljennutta veistettäväksi loppuun asti: koko keskeneräinen Jefferson jouduttiin räjäyttämään pois vuoren kyljestä. Uusi Jefferson aloitettiin Washingtonin vasemmalle puolelle, missä hänen kasvonsa lopulta valmistuivat vuonna 1936 — paikalla, jossa ne yhä näkyvät.
+- [Filippiinit — maalehti / Luonto: Kartio, jonka sade veistää] Mayon on maan aktiivisin tulivuori: purkauksia on kirjattu yli viisikymmentä viidensadan vuoden ajalta. Kartio tunnetaan tasaisuudestaan, ja muoto syntyy tasapainosta — purkaus kasaa tuhkaa rinteille, sade ja virtaava vesi kuluttavat sitä pois. Ylärinne on jyrkkä, alaosa lähes tasainen, ja huippukraatteri on noin 250 metriä leveä. Vuori kohoaa 2 463 metriin aivan Albayn lahden takaa. Ympäröivä alue nimettiin 1938 maan ensimmäiseksi kansallispuistoksi.
+- [Sisilia — kaupunkilehti / Kuvataide: Kappeli, jossa kolme kulttuuria kohtaa] Kuningas Roger II aloitti Palatinan kappelin rakentamisen 1132 osaksi Palermon kuninkaanlinnaa. Hän toi Bysantista mosaiikkitaiteilijat kuvaamaan seinät ja katon kultaisiksi Raamatun kertomuksiksi, mutta antoi arabialaisten puuseppien veistää katon muqarnas-tekniikalla — samalla tyylillä kuin islamilaisen maailman moskeijoissa. Lopputulos on ainutlaatuinen: yhden pienen huoneen sisällä yhdistyvät normannien läntinen arkkitehtuuri, bysanttilainen kuvataide ja arabialainen koristeveistos, kaikki saman hallitsijan tilaamina samaan aikaan.
+
+### 43.3
+KYSYMYS: Mitä kaivokselle tapahtuu, kun sen tavara loppuu kaupasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä louhittiin pois
+Tietoruudun teksti: Runsaan kymmenen kilometrin päässä Krakovasta on kaivos, jota on kaivettu 1200-luvulta lähtien — ja jo sitä ennen paikalla otettiin talteen maasta nousevaa suolavettä ja keitettiin siitä suolaa. Vanhin asiakirja on vuodelta 1044. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja Kasimir III Suuri antoi sille etuoikeuksia, otti kaivosmiehet suojelukseensa ja perusti kaivoksen viereen sairaalan vuonna 1363. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi — osaksi siksi, että naapurimetsien puu meni kaivoksen tukirakenteisiin ja tulot olivat sen mukaiset. Juuri tämä suola kulki Krakovan kangashallin läpi maailmalle. Se ei muuten ole valkoista: suolakivi on eri sävyistä harmaata ja muistuttaa enemmän kiillottamatonta graniittia kuin sitä, mitä pöydällä on.
+
+Isoisäsi kävi maan päällä juuri silloin, kun kaivos oli parhaimmillaan: vuoteen 1871 mennessä sitä pidettiin yhtenä maailman …
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Maustesuuk] Al Ras, Deira Maustesuuk tunnetaan myös nimellä Old Souk. Se on Deirassa Al Rasin alueella Baniyas Streetillä, aivan kultasuukin kyljessä ja kivenheiton päässä Old Soukin abra-laiturista — vene tuo ostajat Bur Dubain puolelta suoraan sen eteen. Suuk on kapeiden kujien verkosto, jonka varrella on sekä avoimia kojuja että katettuja liikkeitä. Tavara on esillä kujalle asti: suitsuketta, shishatupakkaa sekä arabialaisen ja eteläaasialaisen keittiön yrttejä ja mausteita. Mausteiden lomassa myydään myös kankaita, teetä, mattoja ja taloustavaraa. Hinta ei ole kyltissä vaan neuvottelussa — valtaosa kaupasta käydään tinkimällä. Suuk elää nykyään enemmän matkailusta kuin ruokakaupasta. Mausteliikkeid…
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (nosto:torun-piparkakut) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+- [Afganistan — maalehti / Ruoka: Maailman kallein mauste kasvaa Heratissa] 2012–2019 — Sahrami on painonsa mukaan maailman kallein mauste, ja Afganistanissa se kasvaa ennen kaikkea Heratin maakunnassa. Maa on sahramin ja kashmirvillan kolmanneksi suurin tuottaja maailmassa. Kansainvälinen maku- ja laatuinstituutti valitsi afganistanilaisen sahramin maailman parhaaksi kahdeksana vuotena peräkkäin 2012–2019, ja vuonna 2019 sato oli ennätykset rikkovat 19 469 kiloa. Kilo maksaa maan sisällä 634–1 147 dollaria. Keittiössä sahrami menee palawin riisiin, kastikkeeseen tai koristeisiin, ja narenj palawissa se saa parikseen appelsiininkuoren.
+
+### 44.1
+KYSYMYS: Miksi mausteleivonnasta tuli juuri yhden kaupungin ammatti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Ruoka: Maailman kallein mauste kasvaa Heratissa] 2012–2019 — Sahrami on painonsa mukaan maailman kallein mauste, ja Afganistanissa se kasvaa ennen kaikkea Heratin maakunnassa. Maa on sahramin ja kashmirvillan kolmanneksi suurin tuottaja maailmassa. Kansainvälinen maku- ja laatuinstituutti valitsi afganistanilaisen sahramin maailman parhaaksi kahdeksana vuotena peräkkäin 2012–2019, ja vuonna 2019 sato oli ennätykset rikkovat 19 469 kiloa. Kilo maksaa maan sisällä 634–1 147 dollaria. Keittiössä sahrami menee palawin riisiin, kastikkeeseen tai koristeisiin, ja narenj palawissa se saa parikseen appelsiininkuoren.
+- [Chile — maalehti / Ruoka: Mauste, joka savustetaan puunuotiolla] Merkén on mapudungunin mezkeñ. Se tehdään cacho de cabra -paprikasta, joka kuivataan ensin auringossa, savustetaan puunuotiolla, ripustetaan vielä kuivumaan ja vasta sitten jauhetaan. Merkén natural on pelkkää chiliä ja suolaa; merkén especial saa mukaan paahdettua korianterinsiementä, suhteessa noin 70 prosenttia chiliä, 20 suolaa ja 10 korianteria. Mausteen kotiseutu on Araucanía, mutta 2000-luvulta lähtien se on levinnyt koko maan keittiöön ja sieltä ammattikokkien käyttöön.
+
+### 44.2
+KYSYMYS: Miten resepti pidetään salassa kokonaisen kaupungin kokoisena?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+
+### 44.3
+KYSYMYS: Mitä leivontamuotti kertoo siitä, kenelle leivottiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Piparkakku, jonka reseptiä kaksi kaupunkia vahti toisiltaan kaksisataa vuotta
+Tietoruudun teksti: Veikselin varrella Krakovasta alavirtaan on kaupunki, jonka ammatti on piparkakku. Työ laajeni siellä 1200-luvulta lähtien, ja syy oli sijainti: hyvä maaperä antoi vehnän, lähikylät hunajan, ja mausteet tulivat kaukaa — pääosin Intiasta Mustanmeren ja Lvivin kautta tai meritse Gdańskin satamaan. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Maine levisi nopeasti, ja se johti asetelmaan, joka kuulostaa nykyaikaiselta: Toruń ja Nürnberg varjelivat reseptejään toisiltaan niin kauan, että lopulta ne tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä.
+
+Sitten se melkein loppui. 1700- ja 1800-luvulla käsityö hiipui, ja vuonna 1825 koko kaupungissa oli jäljellä kolme leipuria. Mitä seurasi, oli tehdas: G…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (nosto:wroclawin-kaapiot) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Historia: Upseeri, joka vaihtoi hahmoa matkalla] Richard Francis Burton oli brittiupseeri, joka oli palvellut seitsemän vuotta Intiassa ja tunsi tavat. Vuonna 1853 hän lähti Mekkaan valepuvussa ja vaihtoi hahmoa matkalla: ensin persialainen mirza, sitten sunnisheikki, lääkäri, taikuri ja dervissi. Huhtikuussa hän oli Aleksandriassa, toukokuussa Kairossa, 27. heinäkuuta Medinassa ja 11. syyskuuta Mekassa. Koraanikotelossa hän kantoi kelloa, kompassia, kynää ja numeroituja paperiliuskoja muistiinpanoille. Kirjassaan Personal Narrative of a Pilgrimage to Al-Medinah and Meccah hän kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei muistuta oopperaa, vaan kaikki on yksinkertaista ja vaikuttavaa."
+- [Filippiinit — maalehti / Kuvataide: Sata kaksikymmentäseitsemän hahmoa kalliossa] ennen 2000 eaa. — Angonon ja Binangonanin rajalla on matala kalliosuoja, jonka seinään on kaiverrettu 127 hahmoa: pyöreäpäisiä ihmisiä V-kirjaimen muotoisine vartaloineen sekä sammakoita ja liskoja. Ne ovat Filippiinien vanhin tunnettu taideteos, arviolta ennen vuotta 2000 eaa. tehty. Kaiverrusten arvellaan liittyneen parantamiseen: sairaus siirrettiin lapsesta kallion pintaan. Paikan löysi taidemaalari Carlos V. Francisco vuonna 1965. Hahmoista erottuu enää 51 selvästi, loput ovat kuluneet pois.
+
+### 45.1
+KYSYMYS: Miksi kaupunki muistaa kääpiöillä eikä patsailla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+### 45.2
+KYSYMYS: Kuinka monta hahmoa kaupunkiin mahtuu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mekka — kaupunkilehti / Historia: Upseeri, joka vaihtoi hahmoa matkalla] Richard Francis Burton oli brittiupseeri, joka oli palvellut seitsemän vuotta Intiassa ja tunsi tavat. Vuonna 1853 hän lähti Mekkaan valepuvussa ja vaihtoi hahmoa matkalla: ensin persialainen mirza, sitten sunnisheikki, lääkäri, taikuri ja dervissi. Huhtikuussa hän oli Aleksandriassa, toukokuussa Kairossa, 27. heinäkuuta Medinassa ja 11. syyskuuta Mekassa. Koraanikotelossa hän kantoi kelloa, kompassia, kynää ja numeroituja paperiliuskoja muistiinpanoille. Kirjassaan Personal Narrative of a Pilgrimage to Al-Medinah and Meccah hän kirjoitti: "Mekassa ei ole mitään teatraalista, mikään ei muistuta oopperaa, vaan kaikki on yksinkertaista ja vaikuttavaa."
+- [Filippiinit — maalehti / Kuvataide: Sata kaksikymmentäseitsemän hahmoa kalliossa] ennen 2000 eaa. — Angonon ja Binangonanin rajalla on matala kalliosuoja, jonka seinään on kaiverrettu 127 hahmoa: pyöreäpäisiä ihmisiä V-kirjaimen muotoisine vartaloineen sekä sammakoita ja liskoja. Ne ovat Filippiinien vanhin tunnettu taideteos, arviolta ennen vuotta 2000 eaa. tehty. Kaiverrusten arvellaan liittyneen parantamiseen: sairaus siirrettiin lapsesta kallion pintaan. Paikan löysi taidemaalari Carlos V. Francisco vuonna 1965. Hahmoista erottuu enää 51 selvästi, loput ovat kuluneet pois.
+
+### 45.3
+KYSYMYS: Voiko muistomerkki olla piiloleikki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Varsova
+Maa, jossa pelaaja on: Puola
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kaupunki, jonka muistomerkkejä on yli tuhat — ja jokainen on polven korkeudella
+Tietoruudun teksti: Wrocławissa, Puolan kolmanneksi suurimmassa kaupungissa, on muistomerkki, jota ei näe jos katsoo eteenpäin. Kadunkulmissa, ikkunalaudoilla ja portaiden kaiteissa istuu pieniä pronssihahmoja, kaksikymmentä tai kolmekymmentä senttiä korkeita: krasnale, kääpiöt. Ensimmäinen niistä ei ollut leikkiä. Vuonna 2001 Świdnickan kadulle pystytettiin kääpiöpatsas muistomerkiksi Pomarańczowa Alternatywa -liikkeelle, jonka tunnus kääpiö oli, ja kaksi vuotta myöhemmin kaupunginjohtaja paljasti polven korkeudelle pienen laatan vanhan porvaristalon seinään torin ja Pyhän Elisabetin kirkon välissä. Sitten tuli kuvanveistäjä. Wrocławin taideakatemiasta valmistuneen Tomasz Moczekin viisi ensimmäistä hahmoa asetettiin paikoilleen elokuussa 2005: Miekkailija yliopiston lähelle, Teurastaja Stare Jatkin holvikäytävään, kaksi Sisyfosta Świdnickan kadulle ja Odranpesijä Piasekin sillan kupeeseen. Isoisäsi ei näh…
+Isoisän matkakirjamerkintä: Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

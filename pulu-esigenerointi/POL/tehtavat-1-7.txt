@@ -1,0 +1,202 @@
+================ KOHTA 31 (kohde:hahmotelma-kartuzy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kohdekartta / Kohdekartta: Luxorin museo] 1975 Museo avattiin 1975 Niilin itärannalle rantakadun varteen. Kaksikerroksisen talon piirsi Mahmud El Hakim jo 1962, ja esineet aseteltiin 1972–1975. Esillä on tarkoituksella paljon vähemmän kuin Kairon egyptiläisessä museossa: vähän esineitä, väljä ripustus ja monikieliset selitteet. Vuonna 1989 Luxorin temppelin aurinkopihan alta kaivettiin 26 patsaan kätkö. Ne oli haudattu, kun roomalaiset muuttivat alueen sotilasleiriksi; ensimmäiset viisi löytyivät noin metrin syvyydestä. Joukossa oli Amenhotep III:n kvartsiittipatsas kaksoiskruunuineen, kelkka jalustanaan; korkeudeksi ilmoitetaan 2,49 metriä, osassa lähteitä 1,8. Patsaan viereen seinään on kaiverrettu selite: Amenhotep III, 18. dyna…
+
+### 31.1
+KYSYMYS: Ketkä perustivat Kartuzyn noin vuonna 1380?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxor — kohdekartta / Kohdekartta: Luxorin museo] 1975 Museo avattiin 1975 Niilin itärannalle rantakadun varteen. Kaksikerroksisen talon piirsi Mahmud El Hakim jo 1962, ja esineet aseteltiin 1972–1975. Esillä on tarkoituksella paljon vähemmän kuin Kairon egyptiläisessä museossa: vähän esineitä, väljä ripustus ja monikieliset selitteet. Vuonna 1989 Luxorin temppelin aurinkopihan alta kaivettiin 26 patsaan kätkö. Ne oli haudattu, kun roomalaiset muuttivat alueen sotilasleiriksi; ensimmäiset viisi löytyivät noin metrin syvyydestä. Joukossa oli Amenhotep III:n kvartsiittipatsas kaksoiskruunuineen, kelkka jalustanaan; korkeudeksi ilmoitetaan 2,49 metriä, osassa lähteitä 1,8. Patsaan viereen seinään on kaiverrettu selite: Amenhotep III, 18. dyna…
+
+### 31.2
+KYSYMYS: Minkä kansan kulttuurikeskus Kartuzy on ollut?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kartuzy (kulttuuri)
+Tietoruudun teksti: Kartuzy on kaupunki Pohjois-Puolassa Itä-Pommerin historiallisella alueella noin 32 kilometriä Gdańskista länteen. Se perustettiin noin vuonna 1380 Prahasta tulleiden kartusiaanimunkkien luostariksi, ja kaupunki on saanut nimensä heiltä; Saksalainen ritarikunta antoi luostarille suuria maa-alueita. Munkit raivasivat lähimetsät ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Preussi liitti seudun Puolan ensimmäisessä jaossa 1772 ja lakkautti luostarin vuonna 1826, ja asutus alkoi kasvaa taloudellisesti vasta, kun luostarin maat jaettiin vuonna 1841. Kartuzy on pitkään ollut kašubien kulttuurikeskus, ja kašubimuseo on toiminut siellä vuodesta 1947.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-lowicz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+### 32.1
+KYSYMYS: Keiden asuinpaikka Łowicz oli Puola-Liettuassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+### 32.2
+KYSYMYS: Mitä ulkoilmamuseossa Łowiczin lähellä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łowicz (kulttuuri)
+Tietoruudun teksti: Łowicz on noin 27 000 asukkaan kaupunki Keski-Puolassa Łódźin maakunnassa. Se oli Puolan primasten eli arkkipiispojen residenssi Puola-Liettuassa, ja kuningasvallan välivaiheessa siitä tuli väliaikainen Puolan pääkaupunki; siksi pienellä kaupungilla on oma piispa ja tuomiokirkkobasilika. Tuomiokirkko on Puolan historiallinen monumentti, ja kaupungin laidalla ovat entisen piispanlinnan rauniot. Łowiczissa on merkittävä etnografinen museo ja 17 hehtaarin ulkoilmamuseo, joka esittelee perinteisiä puutaloja ja kylämaailmaa. Kaupunki on myös tärkeä ruoantuotantopaikka: siellä valmistetaan hedelmä- ja vihannessäilykkeitä sekä maitotuotteita.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-ciechocinek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Vanhemmat pitävät torilla lastensa puolta] Kansanpuiston kulmassa toimii avioliittotori: vanhemmat kokoontuvat lauantaisin ja sunnuntaisin puoliltapäivin etsimään naimattomille aikuisille lapsilleen puolisoa. Lapsen tiedot — syntymävuosi, pituus, koulutus, ammatti, tulot ja horoskooppimerkki — kirjoitetaan arkille, joka ripustetaan narulle tai avatun sateenvarjon päälle, ja sitten kävellään lukemassa muiden arkkeja ja jututetaan lupaavien kohdalla. Tori on toiminut vuodesta 2004, ja moni käy siellä vuosikausia: osumia syntyy harvoin, ja osa vanhemmista ei ole kertonut ilmoituksesta lapselleen lainkaan.
+- [Lissabon — kaupunkilehti / Lissabon: Azulejot pitävät talon viileänä] Lissabonin talot on päällystetty maalatuilla laatoilla. Tavallisen azulejon sivu on neljätoista senttiä, ja laatat ladotaan seinään kuvioksi. Kyse ei ole vain koristeesta: laatta torjuu sadetta ja pitää sisällä viileämpää helteellä. Nimi ei tule espanjan sinistä tarkoittavasta sanasta azul vaan arabian sanasta az-zulayj, kiillotettu pikkukivi.
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 33.1
+KYSYMYS: Minkä maailmanennätyksen kaupungin rakennelmat pitävät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Vanhemmat pitävät torilla lastensa puolta] Kansanpuiston kulmassa toimii avioliittotori: vanhemmat kokoontuvat lauantaisin ja sunnuntaisin puoliltapäivin etsimään naimattomille aikuisille lapsilleen puolisoa. Lapsen tiedot — syntymävuosi, pituus, koulutus, ammatti, tulot ja horoskooppimerkki — kirjoitetaan arkille, joka ripustetaan narulle tai avatun sateenvarjon päälle, ja sitten kävellään lukemassa muiden arkkeja ja jututetaan lupaavien kohdalla. Tori on toiminut vuodesta 2004, ja moni käy siellä vuosikausia: osumia syntyy harvoin, ja osa vanhemmista ei ole kertonut ilmoituksesta lapselleen lainkaan.
+- [Lissabon — kaupunkilehti / Lissabon: Azulejot pitävät talon viileänä] Lissabonin talot on päällystetty maalatuilla laatoilla. Tavallisen azulejon sivu on neljätoista senttiä, ja laatat ladotaan seinään kuvioksi. Kyse ei ole vain koristeesta: laatta torjuu sadetta ja pitää sisällä viileämpää helteellä. Nimi ei tule espanjan sinistä tarkoittavasta sanasta azul vaan arabian sanasta az-zulayj, kiillotettu pikkukivi.
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Lapan akvedukti] 1744–1750 Kaupungin ydin oli soiden ympäröimä, ja vesi oli huonoa: juomavesi kannettiin käsin puroista kaupungin ulkopuolelta. Jo 1602 oli suunnitelmia johtaa vettä Cariocajoen latvoilta Santa Teresan kukkulalta, mutta kanavatyöt takkusivat rahan ja tekniikan puutteessa niin, että 1600-luvun lopussa valmiina oli vain muutama sata metriä. Vasta 1706 jälkeen työ eteni, ja ensimmäinen akvedukti valmistui 1723 tuoden veden barokkiseen suihkulähteeseen nykyisellä Largo da Cariocalla. Vuoteen 1744 mennessä rakennelma oli jo huonossa kunnossa, ja kuvernööri Gomes Freire de Andrade määräsi tilalle suuremman. Sen suunnitteli portugalilainen sotilasinsinööri José Fernandes Pinto Alpoim Lissabonin Águ…
+
+### 33.2
+KYSYMYS: Mihin sairauksiin paikallisten lähteiden hoitovaikutukset kohdistuvat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ciechocinek (kulttuuri)
+Tietoruudun teksti: Ciechocinek on kylpyläkaupunki Kuyavian–Pommerin maakunnassa Veikselin rannalla Pohjois-Keski-Puolassa, ja siellä asuu noin 10 400 ihmistä. Kaupunki on kuuluisa maailman pisimmistä suolavesitorneistaan (graduation towers). Paikalliset suolaiset lähteet arvioitiin poikkeuksellisen arvokkaiksi, ja lähdettä nro 14 kutsuttiin luonnon ihmeeksi. Kun Wieliczka ja Bochnia joutuivat Itävallalle Puolan ensimmäisessä jaossa, viranomaiset kiinnostuivat Ciechocinekin ja läheisen Słońskin suolavaroista, ja Stanisław Staszicin aloitteesta laadittiin suolanvalmistushanke. Kylpylän ja lomakohteen kehitys alkoi vuonna 1836, ja vuonna 1867 kaupunki sai rautatieyhteyden Bydgoszczin ja Varsovan kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sri Lanka — maalehti / Urheilu: Kamppailulaji temppelin seinämaalauksissa] Angampora yhdistää kaksi puolta: angam on aseeton taistelu ja illangam käyttää aseita, muun muassa taipuisaa ethunu kaduwa -miekkaa. Ominaista ovat painepisteisiin kohdistuvat iskut ja ottelun päättyminen otteeseen, josta vastustaja ei pääse irti; ottelualue sovitaan etukäteen, ja joskus se on kuoppa. Kaksi koulukuntaa, Maruwaliya ja Sudaliya, ottelivat keskenään kuninkaan katsoessa. Laji hiipui, kun koko saari siirtyi siirtomaahallintoon 1815; usein toistetun väitteen mukaan se olisi myös kielletty asetuksella, mutta väitteelle ei ole esitetty näyttöä. Liikkeitä on säilynyt temppelien seinämaalauksissa.
+- [Murzuk — kaupunkilehti / Orjakaravaanien risteysasema: Matka kuolettavan hiekkameren yli] Karavaanimatka Sudanista Fezzaniin kesti orjiksi siepatuille ihmisille usein kuukausia ja kulki vedettömien hiekkamerien halki, joissa päivälämpötila saattoi nousta yli 45 asteeseen. Kuljetettavat joutuivat kävelemään suurimman osan matkasta jalan kahlittuina toisiinsa, kun kamelit kantoivat vettä, ruokaa ja kauppatavaraa. Aikalaisarvioiden mukaan huomattava osa karavaanien mukana lähteneistä ei koskaan saavuttanut rannikkoa, vaan kuoli janoon tai sairauksiin matkalla. Murzukin oaasi oli usein ensimmäinen paikka, jossa selviytyneet pääsivät lepäämään ylitettyään Saharan laajimmat hiekkasaret.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-kornik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+### 34.1
+KYSYMYS: Kuka perusti Kórnikin arboretumin 1800-luvun alkupuolella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+### 34.2
+KYSYMYS: Kenelle kreivi Zamoyski testamenttasi linnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kórnikin linna (kulttuuri)
+Tietoruudun teksti: Kórnikin linna on 1300-luvulla rakennettu linna Kórnikin kaupungissa Wielkopolskassa. Nykyisen uusgoottilaisen ilmeensä se sai vuonna 1855 tehdyssä muutostyössä, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin Tytus Działyńskille ja tämän pojalle Jan Kanty Działyńskille. Linnaa ympäröi Kórnikin arboretum, jonka kreivi Tytus Działyński perusti 1800-luvun alkupuolella; se on Puolan vanhin ja suurin ja Euroopan neljänneksi suurin, noin 40 hehtaaria ja yli 3 300 taksonia. Kreivi Władysław Zamoyski testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa on museo ja Kórnikin kirjasto, jonka merkittäviin teoksiin kuuluu Adam Mickiewiczin Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-lancut) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+
+### 35.1
+KYSYMYS: Mitkä suvut olivat Łańcutin linnan tunnetuimmat omistajat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+
+### 35.2
+KYSYMYS: Kuka suku omisti linnan vuoteen 1816?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Łańcutin linna (kulttuuri)
+Tietoruudun teksti: Łańcutin linna on historiallisten rakennusten kompleksi Łańcutissa Subkarpaattien maakunnassa Kaakkois-Puolassa, ja sitä ympäröi puisto. Se oli aikanaan Pileckien, Lubomirskien ja Potockien suvun asuinpaikka, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Historia: Linna jonka osti skotti] 1656 — Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen 1945, jolloin linna valtiollistettiin ja muutettiin alueen historian museoksi.
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

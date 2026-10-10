@@ -1,0 +1,196 @@
+================ KOHTA 26 (kohde:hahmotelma-kalwaria) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalwaria Zebrzydowska (historia)
+Tietoruudun teksti: Kalwaria Zebrzydowska on noin 4 400 asukkaan kaupunki Etelä-Puolassa Pikku-Puolan alueella. Sen luostari- ja pyhiinvaelluskompleksin tilasi Krakovan vojevoda Mikołaj Zebrzydowski: hän sai 1. joulukuuta 1602 Lanckoronan linnasta katsellessaan lähikukkuloita ja laaksoja näyn, jonka mukaan hän rakennutti Jerusalemin muurien ulkopuolisen Golgatan mallin mukaan roomalaiskatolisen luostarin ja Kristuksen kärsimystien polut. Kaupunki on saanut nimensä luostarista ja perustajastaan, ja Zebrzydówin kaupunki perustettiin vuonna 1617 majoittamaan kasvavaa pyhiinvaeltajien joukkoa. Habsburgien Itävalta liitti alueen itseensä Puolan ensimmäisessä jaossa 1772, ja itävaltalaishallinto muutti kaupungin nimeksi Kalwaria.
+
+### 26.1
+KYSYMYS: Minkä pyhän paikan jäljennös Kalwaria Zebrzydowskan luostarikompleksi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalwaria Zebrzydowska (historia)
+Tietoruudun teksti: Kalwaria Zebrzydowska on noin 4 400 asukkaan kaupunki Etelä-Puolassa Pikku-Puolan alueella. Sen luostari- ja pyhiinvaelluskompleksin tilasi Krakovan vojevoda Mikołaj Zebrzydowski: hän sai 1. joulukuuta 1602 Lanckoronan linnasta katsellessaan lähikukkuloita ja laaksoja näyn, jonka mukaan hän rakennutti Jerusalemin muurien ulkopuolisen Golgatan mallin mukaan roomalaiskatolisen luostarin ja Kristuksen kärsimystien polut. Kaupunki on saanut nimensä luostarista ja perustajastaan, ja Zebrzydówin kaupunki perustettiin vuonna 1617 majoittamaan kasvavaa pyhiinvaeltajien joukkoa. Habsburgien Itävalta liitti alueen itseensä Puolan ensimmäisessä jaossa 1772, ja itävaltalaishallinto muutti kaupungin nimeksi Kalwaria.
+
+### 26.2
+KYSYMYS: Kuka Kalwarian tilasi rakennettavaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalwaria Zebrzydowska (historia)
+Tietoruudun teksti: Kalwaria Zebrzydowska on noin 4 400 asukkaan kaupunki Etelä-Puolassa Pikku-Puolan alueella. Sen luostari- ja pyhiinvaelluskompleksin tilasi Krakovan vojevoda Mikołaj Zebrzydowski: hän sai 1. joulukuuta 1602 Lanckoronan linnasta katsellessaan lähikukkuloita ja laaksoja näyn, jonka mukaan hän rakennutti Jerusalemin muurien ulkopuolisen Golgatan mallin mukaan roomalaiskatolisen luostarin ja Kristuksen kärsimystien polut. Kaupunki on saanut nimensä luostarista ja perustajastaan, ja Zebrzydówin kaupunki perustettiin vuonna 1617 majoittamaan kasvavaa pyhiinvaeltajien joukkoa. Habsburgien Itävalta liitti alueen itseensä Puolan ensimmäisessä jaossa 1772, ja itävaltalaishallinto muutti kaupungin nimeksi Kalwaria.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-sandomierz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sandomierz (historia)
+Tietoruudun teksti: Sandomierz on noin 24 000 asukkaan historiallinen kaupunki Kaakkois-Puolassa Veikselin rannalla lähellä San-joen yhtymäkohtaa. Sen säilynyt vanhakaupunki on merkittävä matkailunähtävyys, jonka Puolan presidentti julisti kansalliseksi monumentiksi vuonna 2017. Kaupunki oli aikanaan yksi Pikku-Puolan ja koko maan tärkeimmistä kaupunkikeskuksista ja kuninkaankaupunki, joka toimi alueen hallintokeskuksena korkealta keskiajalta 1800-luvulle asti. Kronikoitsija Gallus Anonymus luki sen 1100-luvun alussa Krakovan ja Wrocławin ohella Puolan pääkaupunkeihin, ja Bolesław III:n testamentti teki siitä yhden ruhtinaskunnan pääkaupungin. Mongolit ryöstivät kaupunkia vuosina 1241, 1260 ja 1287.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Montevideo — kohdekartta / Kohdekartta: Keskusasema] 1897 Vanha Montevideon asema paloi 1891, ja Central Uruguay Railway aloitti uuden rakentamisen sen jälkeen. Peruskivi laskettiin 27. elokuuta 1893, ja asema avattiin matkustajille 15. heinäkuuta 1897. Sen suunnitteli italialainen insinööri ja arkkitehti Luigi Andreoni, ja se nousi Aguadan kaupunginosaan hieman vanhankaupungin ulkopuolelle. Asema kasvoi vielä valmistumisensa jälkeen. Vuonna 1912 sen raiteet yhdistettiin satamaterminaaliin, kun sataman työt olivat valmistuneet, ja bulevardin puolella merta täytettiin maaksi niin, että raiteet ulottuivat lähes Guatemala-kadulle asti. Rio Negro -kadun lipunmyynti siirrettiin suureen keskushalliin. Valtio antoi asemalle 1955 nimen José Artigasin…
+
+### 27.1
+KYSYMYS: Ketkä ryöstivät Sandomierzin vuosina 1241, 1260 ja 1287?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sandomierz (historia)
+Tietoruudun teksti: Sandomierz on noin 24 000 asukkaan historiallinen kaupunki Kaakkois-Puolassa Veikselin rannalla lähellä San-joen yhtymäkohtaa. Sen säilynyt vanhakaupunki on merkittävä matkailunähtävyys, jonka Puolan presidentti julisti kansalliseksi monumentiksi vuonna 2017. Kaupunki oli aikanaan yksi Pikku-Puolan ja koko maan tärkeimmistä kaupunkikeskuksista ja kuninkaankaupunki, joka toimi alueen hallintokeskuksena korkealta keskiajalta 1800-luvulle asti. Kronikoitsija Gallus Anonymus luki sen 1100-luvun alussa Krakovan ja Wrocławin ohella Puolan pääkaupunkeihin, ja Bolesław III:n testamentti teki siitä yhden ruhtinaskunnan pääkaupungin. Mongolit ryöstivät kaupunkia vuosina 1241, 1260 ja 1287.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Akershusin linnoitus] 1290-luku Akershusin linnoitus kohoaa kalliolla Oslon rannalla, ja se on vartioinut kaupunkia jo yli 700 vuotta. Kuningas Haakon V käski rakentaa sen 1290-luvun lopulla, sen jälkeen kun kaupunki oli osoittautunut liian helposti hyökättäväksi vuonna 1287. Linnoitusta on piiritetty monta kertaa – ruotsalaiset yrittivät vuonna 1308 ja Kaarle Knuutinpoika vuosina 1449–1450 – mutta mikään vieras armeija ei ole koskaan onnistunut valtaamaan sitä taistelemalla. Kuningas Kristian IV muutti vanhan linnan 1600-luvulla hienoksi renessanssipalatsiksi. Toisen maailmansodan aikana saksalaiset miehittivät linnoituksen ja teloittivat siellä vankeja, mutta Norjan vastarintaliike vapautti sen 11. toukokuuta …
+
+### 27.2
+KYSYMYS: Minä vuonna Puolan presidentti julisti vanhankaupungin kansalliseksi monumentiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sandomierz (historia)
+Tietoruudun teksti: Sandomierz on noin 24 000 asukkaan historiallinen kaupunki Kaakkois-Puolassa Veikselin rannalla lähellä San-joen yhtymäkohtaa. Sen säilynyt vanhakaupunki on merkittävä matkailunähtävyys, jonka Puolan presidentti julisti kansalliseksi monumentiksi vuonna 2017. Kaupunki oli aikanaan yksi Pikku-Puolan ja koko maan tärkeimmistä kaupunkikeskuksista ja kuninkaankaupunki, joka toimi alueen hallintokeskuksena korkealta keskiajalta 1800-luvulle asti. Kronikoitsija Gallus Anonymus luki sen 1100-luvun alussa Krakovan ja Wrocławin ohella Puolan pääkaupunkeihin, ja Bolesław III:n testamentti teki siitä yhden ruhtinaskunnan pääkaupungin. Mongolit ryöstivät kaupunkia vuosina 1241, 1260 ja 1287.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Montevideo — kohdekartta / Kohdekartta: Keskusasema] 1897 Vanha Montevideon asema paloi 1891, ja Central Uruguay Railway aloitti uuden rakentamisen sen jälkeen. Peruskivi laskettiin 27. elokuuta 1893, ja asema avattiin matkustajille 15. heinäkuuta 1897. Sen suunnitteli italialainen insinööri ja arkkitehti Luigi Andreoni, ja se nousi Aguadan kaupunginosaan hieman vanhankaupungin ulkopuolelle. Asema kasvoi vielä valmistumisensa jälkeen. Vuonna 1912 sen raiteet yhdistettiin satamaterminaaliin, kun sataman työt olivat valmistuneet, ja bulevardin puolella merta täytettiin maaksi niin, että raiteet ulottuivat lähes Guatemala-kadulle asti. Rio Negro -kadun lipunmyynti siirrettiin suureen keskushalliin. Valtio antoi asemalle 1955 nimen José Artigasin…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-zakopane) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zakopane (kulttuuri)
+Tietoruudun teksti: Zakopane on noin 27 000 asukkaan kaupunki Etelä-Puolassa Podhalen alueella Tatran juurella; se on gorali-kulttuurin keskus, ja sitä kutsutaan usein Puolan talvipääkaupungiksi. Se sijaitsee 800–1 100 metrin korkeudessa laaksossa Tatra-vuorten ja Gubałówka-mäen välissä, ja keskusta on Krupówki- ja Kościuszko-katujen risteyksessä. Vanhimmat asiakirjat mainitsevat sen 1600-luvulta, ja vuonna 1676 se oli 43 asukkaan kylä; 1800-luvulla siitä tuli Galitsian suurin metallurgian keskus ja vuoteen 1889 mennessä ilmastollinen kylpyläpaikka. Zakopane-tyyli on Podhalen kansantaiteesta innoituksensa saanut arkkitehtuuri, jonka uranuurtaja oli Stanisław Witkiewicz ja jota pidetään nykyään goralien perinteen ytimenä.
+
+### 28.1
+KYSYMYS: Minkä kansan kulttuurin keskus Zakopane on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zakopane (kulttuuri)
+Tietoruudun teksti: Zakopane on noin 27 000 asukkaan kaupunki Etelä-Puolassa Podhalen alueella Tatran juurella; se on gorali-kulttuurin keskus, ja sitä kutsutaan usein Puolan talvipääkaupungiksi. Se sijaitsee 800–1 100 metrin korkeudessa laaksossa Tatra-vuorten ja Gubałówka-mäen välissä, ja keskusta on Krupówki- ja Kościuszko-katujen risteyksessä. Vanhimmat asiakirjat mainitsevat sen 1600-luvulta, ja vuonna 1676 se oli 43 asukkaan kylä; 1800-luvulla siitä tuli Galitsian suurin metallurgian keskus ja vuoteen 1889 mennessä ilmastollinen kylpyläpaikka. Zakopane-tyyli on Podhalen kansantaiteesta innoituksensa saanut arkkitehtuuri, jonka uranuurtaja oli Stanisław Witkiewicz ja jota pidetään nykyään goralien perinteen ytimenä.
+
+### 28.2
+KYSYMYS: Minkä katujen risteyksessä Zakopanen keskusta on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zakopane (kulttuuri)
+Tietoruudun teksti: Zakopane on noin 27 000 asukkaan kaupunki Etelä-Puolassa Podhalen alueella Tatran juurella; se on gorali-kulttuurin keskus, ja sitä kutsutaan usein Puolan talvipääkaupungiksi. Se sijaitsee 800–1 100 metrin korkeudessa laaksossa Tatra-vuorten ja Gubałówka-mäen välissä, ja keskusta on Krupówki- ja Kościuszko-katujen risteyksessä. Vanhimmat asiakirjat mainitsevat sen 1600-luvulta, ja vuonna 1676 se oli 43 asukkaan kylä; 1800-luvulla siitä tuli Galitsian suurin metallurgian keskus ja vuoteen 1889 mennessä ilmastollinen kylpyläpaikka. Zakopane-tyyli on Podhalen kansantaiteesta innoituksensa saanut arkkitehtuuri, jonka uranuurtaja oli Stanisław Witkiewicz ja jota pidetään nykyään goralien perinteen ytimenä.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-kazimierz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazimierz Dolny (kulttuuri)
+Tietoruudun teksti: Kazimierz Dolny on pieni historiallinen kaupunki Itä-Puolassa Veikselin itärannalla noin 50 kilometrin päässä Lublinista. Se kukoisti eniten 1500-luvulla ja 1600-luvun ensimmäisellä puoliskolla Veikselillä käydyn viljakaupan ansiosta. Kaupan taannuttua kaupungista tuli taloudellinen syrjäseutu, ja juuri tämä pysähtyneisyys säilytti sen renessanssiajan kaupunkisuunnitelman ja ulkonäön. Vuodesta 1181 kaupungin nimi on Kazimierz ruhtinas Kasimir II Oikeamielisen kunniaksi, ja 1800-luvulta lähtien siitä on tullut lomakohde, joka houkuttelee taiteilijoita ja kesäasukkaita. Nykyään siellä on gallerioita lähes jokaisella kadulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+- [Nicaragua — maalehti / Kansanperinne: Kaupunki, jota sanotaan kansanperinteen kehdoksi] Masayaa kutsutaan Nicaraguan kansanperinteen kehdoksi ja käsityön sydämeksi. Kaupungin päätorilla myydään käsin kudottuja riippumattoja, kirjottuja puseroita, puuveistoksia ja hamppupunoksia, ja järven puoleisessa kaupunginosassa on kokonainen kortteli, joka tekee vain riippumattoja. Vanhaan 1900-luvun alun markkinahalliin on kunnostettu erillinen käsityötori, jossa esitetään torstai-iltaisin kansantansseja. Monimbón kaupunginosa on Masayan alkuperäisasutuksista ainoa, joka on säilyttänyt oman identiteettinsä.
+
+### 29.1
+KYSYMYS: Mikä sai Kazimierz Dolnyn kukoistamaan 1500- ja 1600-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazimierz Dolny (kulttuuri)
+Tietoruudun teksti: Kazimierz Dolny on pieni historiallinen kaupunki Itä-Puolassa Veikselin itärannalla noin 50 kilometrin päässä Lublinista. Se kukoisti eniten 1500-luvulla ja 1600-luvun ensimmäisellä puoliskolla Veikselillä käydyn viljakaupan ansiosta. Kaupan taannuttua kaupungista tuli taloudellinen syrjäseutu, ja juuri tämä pysähtyneisyys säilytti sen renessanssiajan kaupunkisuunnitelman ja ulkonäön. Vuodesta 1181 kaupungin nimi on Kazimierz ruhtinas Kasimir II Oikeamielisen kunniaksi, ja 1800-luvulta lähtien siitä on tullut lomakohde, joka houkuttelee taiteilijoita ja kesäasukkaita. Nykyään siellä on gallerioita lähes jokaisella kadulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+
+### 29.2
+KYSYMYS: Miksi kaupunki on säilyttänyt renessanssiajan ilmeensä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazimierz Dolny (kulttuuri)
+Tietoruudun teksti: Kazimierz Dolny on pieni historiallinen kaupunki Itä-Puolassa Veikselin itärannalla noin 50 kilometrin päässä Lublinista. Se kukoisti eniten 1500-luvulla ja 1600-luvun ensimmäisellä puoliskolla Veikselillä käydyn viljakaupan ansiosta. Kaupan taannuttua kaupungista tuli taloudellinen syrjäseutu, ja juuri tämä pysähtyneisyys säilytti sen renessanssiajan kaupunkisuunnitelman ja ulkonäön. Vuodesta 1181 kaupungin nimi on Kazimierz ruhtinas Kasimir II Oikeamielisen kunniaksi, ja 1800-luvulta lähtien siitä on tullut lomakohde, joka houkuttelee taiteilijoita ja kesäasukkaita. Nykyään siellä on gallerioita lähes jokaisella kadulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Kansanperinne: Kaupunki, jota sanotaan kansanperinteen kehdoksi] Masayaa kutsutaan Nicaraguan kansanperinteen kehdoksi ja käsityön sydämeksi. Kaupungin päätorilla myydään käsin kudottuja riippumattoja, kirjottuja puseroita, puuveistoksia ja hamppupunoksia, ja järven puoleisessa kaupunginosassa on kokonainen kortteli, joka tekee vain riippumattoja. Vanhaan 1900-luvun alun markkinahalliin on kunnostettu erillinen käsityötori, jossa esitetään torstai-iltaisin kansantansseja. Monimbón kaupunginosa on Masayan alkuperäisasutuksista ainoa, joka on säilyttänyt oman identiteettinsä.
+- [Košice — kohdekartta / Kohdekartta: Urbanin torni] 1500-luku Urbanin torni on tuomiokirkon renessanssiajan kellotorni, joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 suuri Urbanin kello, joka sai nimensä viininviljelijöiden suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja Franciscus Illenfeld. Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin 1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on roomalaisajalta 300-luvulta. Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. Sirpaleista koottu k…
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-zywiec) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+### 30.1
+KYSYMYS: Kuka perusti Żywiecin panimon vuonna 1852?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+### 30.2
+KYSYMYS: Miksi kaupunki siirrettiin nykyiselle paikalleen vuonna 1448?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Żywiec (ruoka)
+Tietoruudun teksti: Żywiec on noin 31 000 asukkaan kaupunki Soła-joen varrella Etelä-Puolassa Żywiecin järven ja maisemapuiston lähellä; historiallisesti ja kulttuurisesti se kuuluu Pikku-Puolaan ja goralien maihin. Kaupunki mainitaan ensimmäisen kerran vuonna 1308 katolisen seurakunnan paikkana, ja se siirrettiin nykyiselle paikalleen vuonna 1448, koska vanha Żywiec oli altis tulville. Vanha linna rakennettiin 1300-luvun puolivälissä, ja sen ympärillä on 26 hehtaarin maisemapuisto. Kun kaupungin tilat siirtyivät vuonna 1822 Habsburg-Lothringenin arkkiherttua Kaarlelle, hänen poikansa arkkiherttua Albrecht perusti kaupunkiin Żywiecin panimon vuonna 1852; Heineken osti sen 1990-luvulla.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

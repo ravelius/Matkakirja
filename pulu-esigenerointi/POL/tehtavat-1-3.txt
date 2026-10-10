@@ -1,0 +1,192 @@
+================ KOHTA 11 (kohde:gniezno) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+### 11.1
+KYSYMYS: Miksi Gniezno oli Puolan ensimmäinen pääkaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+### 11.2
+KYSYMYS: Kuka oli tarun Lech?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gniezno (historia)
+Tietoruudun teksti: Gniezno on kaupunki Keski-Länsi-Puolassa noin viidenkymmenen kilometrin päässä Poznańista. Se oli Piast-suvun päälinnoja ja Puolan ensimmäinen historiallinen pääkaupunki 900-luvulla ja 1000-luvun alussa. Kaupunki on maan vanhimman arkkihiippakunnan istuin — se perustettiin vuonna 1000 — ja sen arkkipiispa on Puolan primas, joten Gniezno on maan kirkollinen pääkaupunki. Kuten Rooma, Gniezno perustettiin seitsemälle kukkulalle; Lechin kukkulalla seisoo Gnieznon katedraali, ja ruhtinaan linnoitus rakennettiin sinne juuri ennen vuotta 940 paikalle, jossa oli aiemmin ollut slaavilaisen uskonnon pyhiä paikkoja. Puolalaisen tarun mukaan kolme veljestä lähti metsälle ja hajaantui: Rus itään, Čech länteen ja Lech pohjoiseen, missä hän kohtasi pesäänsä puolustavan valkoisen kotkan laskevaa aurinkoa vasten ja päätti asettua paikalle.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:elblaginkanava) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Ras Hafun: Puiset alukset satamassa] Kauppiaiden alukset olivat todennäköisesti nykyisten dhow-veneiden esi-isiä: puurunkoisia, kolmionmuotoisella latinalaispurjeella varustettuja aluksia, jotka soveltuivat hyvin Intian valtameren tuuliin. Samantyyppisiä veneitä nähtiin Somalian rannikolla vielä isoisän matkan aikaan 1800-luvulla. Ras Hafunin alue kuului 1800-luvulla Majeerteenin sulttaanikuntaan, joka oli hallinnut tätä rannikkoa jo 1300-luvulta lähtien ja jonka arvovaltaisin satamakaupunki lähistöllä oli Alula. Antiikin kauppasatamasta oli siis kulunut jo lähes kaksi vuosituhatta, mutta puiset purjeveneet toivat kauppiaita samalle rannikolle yhä uudelleen.
+- [Valparaíso — kaupunkilehti / Valparaíso: Kanava joka vei aseman] Panaman kanavan avaaminen 1914 käänsi kaiken: laivat alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, sataman liikenne väheni ja kaupungin talous taantui. 1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat perheet muuttivat pois. 2000-luvulla San Antonion satama ohitti sen käsitellyssä konttimäärässä. Laituri on silti vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.
+- [Egypti — maalehti / Historia: Kanava, jota maailma vahtii] 1869 — Suezin kanava avattiin 1869, ja se lyhensi merimatkan Euroopasta Aasiaan tuhansilla kilometreillä — laivojen ei enää tarvinnut kiertää koko Afrikkaa. Nykyään kanavan kautta kulkee yli kymmenesosa maailmankaupasta. Keväällä 2021 koko maailma sai muistutuksen kapeikon merkityksestä, kun 400-metrinen konttilaiva Ever Given juuttui poikittain kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja kaivinkone kaivoi keulaa irti hiekasta koko maailman seuratessa.
+
+### 12.1
+KYSYMYS: Miten alukset nousevat sata metriä ylös?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Ras Hafun: Puiset alukset satamassa] Kauppiaiden alukset olivat todennäköisesti nykyisten dhow-veneiden esi-isiä: puurunkoisia, kolmionmuotoisella latinalaispurjeella varustettuja aluksia, jotka soveltuivat hyvin Intian valtameren tuuliin. Samantyyppisiä veneitä nähtiin Somalian rannikolla vielä isoisän matkan aikaan 1800-luvulla. Ras Hafunin alue kuului 1800-luvulla Majeerteenin sulttaanikuntaan, joka oli hallinnut tätä rannikkoa jo 1300-luvulta lähtien ja jonka arvovaltaisin satamakaupunki lähistöllä oli Alula. Antiikin kauppasatamasta oli siis kulunut jo lähes kaksi vuosituhatta, mutta puiset purjeveneet toivat kauppiaita samalle rannikolle yhä uudelleen.
+
+### 12.2
+KYSYMYS: Kuka kanavan suunnitteli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elblągin kanava (tekniikka)
+Tietoruudun teksti: Elblągin kanava on 80,5 kilometriä pitkä kanava Varmian ja Masurian voivodikunnassa Puolassa: se kulkee etelään Drużno-järveltä Drwęca-joelle ja Jeziorak-järvelle ja kantaa enintään viidenkymmenen tonnin aluksia. Korkeusero on lähes sata metriä, ja se voitetaan sulkujen sekä järvien välisten vinohissien järjestelmällä. Preussin kuninkaan toimeksiannosta kanavan suunnitteli Georg Steenke vuosina 1825–1844, ja rakentaminen alkoi 1844; 9,5 kilometrin matkalla korkeusero oli tavallisille suluille liian suuri, joten tilalle otettiin Yhdysvaltain Morris-kanavan mallin mukaiset vinohissit. Kanava avattiin nimellä Oberländischer Kanal 29. lokakuuta 1860, ja rajojen muututtua toisen maailmansodan jälkeen se jäi Puolaan; sotavauriot korjattiin ja liikenne palasi 1948. Alkuperäisiä vinohissejä oli neljä — Buczyniec, Kąty, Oleśnica ja Jelenie — ja niiden nousut ovat 18,8–22 metriä; myöhemmin lisätt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kaupunkilehti / Valparaíso: Kanava joka vei aseman] Panaman kanavan avaaminen 1914 käänsi kaiken: laivat alkoivat suosia kanavaa Magalhaesin salmen riskien sijaan, sataman liikenne väheni ja kaupungin talous taantui. 1900-luku oli Valparaísolle epäsuotuisa, ja monet varakkaat perheet muuttivat pois. 2000-luvulla San Antonion satama ohitti sen käsitellyssä konttimäärässä. Laituri on silti vilkas: satama välittää noin kymmenen miljoonaa tonnia rahtia vuodessa – kontteja, kuparia ja hedelmiä – ja ottaa vastaan noin 50 risteilyalusta ja 150 000 matkustajaa kaudessa.
+- [Egypti — maalehti / Historia: Kanava, jota maailma vahtii] 1869 — Suezin kanava avattiin 1869, ja se lyhensi merimatkan Euroopasta Aasiaan tuhansilla kilometreillä — laivojen ei enää tarvinnut kiertää koko Afrikkaa. Nykyään kanavan kautta kulkee yli kymmenesosa maailmankaupasta. Keväällä 2021 koko maailma sai muistutuksen kapeikon merkityksestä, kun 400-metrinen konttilaiva Ever Given juuttui poikittain kanavaan kuudeksi päiväksi: sadat laivat jonottivat, ja kaivinkone kaivoi keulaa irti hiekasta koko maailman seuratessa.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:krzemionki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+
+### 13.1
+KYSYMYS: Mitä Krzemionkista louhittiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+
+### 13.2
+KYSYMYS: Kuinka kauas kirveet kulkivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Krzemionki (kauppa)
+Tietoruudun teksti: Krzemionki on neoliittinen ja varhaisen pronssikauden piikivikaivosten kokonaisuus noin kahdeksan kilometriä Ostrowiec Świętokrzyskin kaupungista koilliseen. Se on Euroopan suurimpia esihistoriallisia piikivikaivoksia yhdessä Englannin Grime's Gravesin ja Belgian Spiennesin kanssa. Louhinta alkoi noin 3900 eaa. ja jatkui noin vuoteen 1600 eaa.: kaivosalue on 4,5 kilometriä pitkä ja 25–180 metriä leveä, ja tunnettuja kuiluja on yli 4 000, syvimmillään yhdeksän metriä. Raidallisesta piikivestä tehtiin ennen kaikkea kirveitä ja talttoja, ja niillä käytiin kauppaa jopa 660 kilometrin päähän kaivoksilta; vilkkain aika oli 2500–2000 eaa. Kohde merkittiin Unescon maailmanperintöluetteloon 6. heinäkuuta 2019.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-bialowieza) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+
+### 14.1
+KYSYMYS: Kuka rakennutti Białowieżan kylään valkoisen puisen metsästyskartanon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Viina jossa on heinänkorsi pullossa] nykyään — Żubrówka on maustettu vodka, jonka jokaiseen pulloon lisätään yksi puhdas heinänkorsi — biisoninheinää, joka kerätään käsin Białowieżan metsästä Puolan itärajalta Valko-Venäjän vastaisella rajaseudulla. Sama metsä on Euroopan alkuperäisten metsäbiisonien viimeinen laaja elinalue, ja heinä saa nimensä juuri niiden laidunmaista. Kuivattu heinä antaa viinalle vienon, hieman vaniljaisen ja tuoreen heinän tuoksun, joka erottaa sen selvästi tavallisesta vodkasta — pullon pohjalle jäävä korsi on samalla merkki aitoudesta.
+
+### 14.2
+KYSYMYS: Minkä suuren maaeläimen kanta metsässä on Euroopan suurin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Białowieżan metsä (kulttuuri)
+Tietoruudun teksti: Białowieżan metsä on laaja metsäkompleksi ja Unescon maailmanperintöalue Puolan ja Valko-Venäjän rajalla. Se on yksi Euroopan tasangon halki aikanaan ulottuneen alkumetsän viimeisistä ja suurimmista jäänteistä, ja siellä elää yli 800 visenttiä, Euroopan raskain maaeläin. Nimi tulee metsän keskellä olevasta Białowieżan kylästä ja tarkoittaa puolaksi valkoista tornia; se viittaa Władysław II Jagiellon rakennuttamaan valkoiseen puiseen metsästyskartanoon. Kolmannessa Puolan jaossa 1795 metsä joutui Venäjän hallintaan, ja vuonna 1888 se siirrettiin keisarillisen hovin ministeriön suoraan hallintaan, jolloin siitä tuli keisarin yksityinen metsästysalue palatsin, puiston, teiden ja rautatien kera.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-biebrza) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biebrzan suot (luonto · joki)
+Tietoruudun teksti: Biebrzan kansallispuisto sijaitsee Podlasien maakunnassa Koillis-Puolassa Biebrza-joen varrella. Se perustettiin 9. syyskuuta 1993, ja sen pinta-ala on 592 neliökilometriä, joten se on Puolan 23 kansallispuiston suurin; siitä noin 255 neliökilometriä on soita, 182 peltoja ja niittyjä ja 155 metsää. Biebrzan suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Puisto on kirjattu Ramsar-sopimuksen kosteikoksi vuonna 1995, ja sen tärkein osa on tiukasti suojeltu Czerwone Bagno eli Punainen suo. Puiston päämaja on Osowiecin 1800-luvun linnoituksen alueella.
+
+### 15.1
+KYSYMYS: Mitä eläimiä Biebrzan soilla elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biebrzan suot (luonto · joki)
+Tietoruudun teksti: Biebrzan kansallispuisto sijaitsee Podlasien maakunnassa Koillis-Puolassa Biebrza-joen varrella. Se perustettiin 9. syyskuuta 1993, ja sen pinta-ala on 592 neliökilometriä, joten se on Puolan 23 kansallispuiston suurin; siitä noin 255 neliökilometriä on soita, 182 peltoja ja niittyjä ja 155 metsää. Biebrzan suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Puisto on kirjattu Ramsar-sopimuksen kosteikoksi vuonna 1995, ja sen tärkein osa on tiukasti suojeltu Czerwone Bagno eli Punainen suo. Puiston päämaja on Osowiecin 1800-luvun linnoituksen alueella.
+
+### 15.2
+KYSYMYS: Mikä suo on puiston tiukimmin suojeltu osa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Biebrzan suot (luonto · joki)
+Tietoruudun teksti: Biebrzan kansallispuisto sijaitsee Podlasien maakunnassa Koillis-Puolassa Biebrza-joen varrella. Se perustettiin 9. syyskuuta 1993, ja sen pinta-ala on 592 neliökilometriä, joten se on Puolan 23 kansallispuiston suurin; siitä noin 255 neliökilometriä on soita, 182 peltoja ja niittyjä ja 155 metsää. Biebrzan suot suojelevat laajoja, suhteellisen koskemattomia rämeitä, joissa elää harvinaisia kosteikkolintuja sekä hirviä ja majavia. Puisto on kirjattu Ramsar-sopimuksen kosteikoksi vuonna 1995, ja sen tärkein osa on tiukasti suojeltu Czerwone Bagno eli Punainen suo. Puiston päämaja on Osowiecin 1800-luvun linnoituksen alueella.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
