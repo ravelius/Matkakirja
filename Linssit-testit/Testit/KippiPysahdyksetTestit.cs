@@ -23,7 +23,8 @@ namespace Matkakirja.Linssit.Testit
 
         /// <summary>Ympäröivät katot (m) TF 180 -lokista (opas: … ympäröivät katot); muut 15 m.</summary>
         static readonly Dictionary<string, double> Ymparys = new Dictionary<string, double>
-        { ["Q2981"] = 5, ["Q19675"] = 27, ["Q23402"] = 16, ["Q189503"] = 11, ["Q243"] = 6, ["Q64436"] = 21 };
+        { ["Q2981"] = 5, ["Q19675"] = 27, ["Q23402"] = 16, ["Q189503"] = 11, ["Q243"] = 6, ["Q64436"] = 21,
+          ["Q217527"] = 7, ["Q754194"] = 12, ["Q847613"] = 2 };   // San Marco, kellotorni, Venceslas (simu 984010db6)
         /// <summary>Workerin katse_suunta / katse_kaari (esittely-v1e, LS1/PT 9.10.).</summary>
         static readonly Dictionary<string, (double suunta, double kaari)> Katse = new Dictionary<string, (double, double)>
         { ["Q189503"] = (295, 12), ["Q550"] = (295, 12) };
@@ -37,13 +38,16 @@ namespace Matkakirja.Linssit.Testit
             public string Loki;
         }
 
-        public static OpasKohde[] PariisinReitti()
+        public static OpasKohde[] PariisinReitti() => Reitti("pariisi");
+        public static OpasKohde[] Reitti(string kaupunki)
         {
-            var c = PalloKaupungitTestit.Lue().First(x => x.Id == "pariisi");
+            var c = PalloKaupungitTestit.Lue().First(x => x.Id == kaupunki);
             return OpasReitti.Lyhin(c.Kohteet, k => (k.Lat, k.Lon), out _).ToArray();
         }
 
         /// <summary>Workerin vastaus JSONina (tools/pollo/worker.js pysähdys) → OpasKohde.Lue, kuten sovitin.</summary>
+        /// <summary>Workerin esittely-v1g:n Notre-Dame-kentät (tuotannossa 11.10.): katse_suunta 117, katse_loppu true, lasku_osuus 0,5.</summary>
+        static bool v1g;
         static OpasKohde Workerilta(OpasKohde k, double kesto)
         {
             var j = new Dictionary<string, object>
@@ -54,25 +58,39 @@ namespace Matkakirja.Linssit.Testit
             if (k.KorkeusM > 0) j["korkeus_m"] = k.KorkeusM;
             if (!string.IsNullOrEmpty(k.Luokka)) j["luokka"] = k.Luokka;
             if (Katse.TryGetValue(k.Id, out var ks)) { j["katse_suunta"] = ks.suunta; j["katse_kaari"] = ks.kaari; }
+            if (v1g && k.Id == "Q2981")
+            {
+                // Sama muoto kuin workerin vastaus (MiniJson: luku → double, true → bool).
+                var w = (Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"katse_suunta\": 117, \"katse_loppu\": true, \"lasku_osuus\": 0.5}");
+                foreach (var kv in w) j[kv.Key] = kv.Value;
+            }
             return OpasKohde.Lue(j);
         }
 
-        static readonly Dictionary<Profiili, Ajo> ajot = new Dictionary<Profiili, Ajo>();
+        static readonly Dictionary<(Profiili, string, double, double, bool), Ajo> ajot = new Dictionary<(Profiili, string, double, double, bool), Ajo>();
 
         /// <summary>Pariisin kierros kaupunkitilan avauksesta (1,1 km / 50°, siirto ja avauksen kierto) kuten sovitin.</summary>
-        public static Ajo Aja(Profiili p = Profiili.Normaali)
+        /// <param name="tuloSuunta">Mistä suunnasta (°) kaupunkiin tullaan (siirron lähtöpaikka 50 km:n päässä; NaN = kaupungin päältä):
+        /// avausnäkymä katsoo tulosuuntaan, joten 1. kohteen kehys riippuu siitä (simu 984010db6: San Marco idästä).</param>
+        /// <param name="avausS">Avauksen ja opastuksen kesto ennen kierrosta (s; simu 984010db6 / 7f65898c3: ~51 s).</param>
+        /// <param name="workerV1g">Notre-Damen katse workerin kentistä (esittely-v1g) eikä Ydin-oletuksesta.</param>
+        public static Ajo Aja(Profiili p = Profiili.Normaali, string kaupunki = "pariisi", double tuloSuunta = double.NaN, double avausS = 14, bool workerV1g = false)
         {
-            if (ajot.TryGetValue(p, out var valmis)) return valmis;
+            var avain = (p, kaupunki, tuloSuunta, avausS, workerV1g);
+            if (ajot.TryGetValue(avain, out var valmis)) return valmis;
+            v1g = workerV1g;
             bool vanha = OpasSilmukka.PalloLento; OpasSilmukka.PalloLento = true;
             try
             {
-                var reitti = PariisinReitti();
-                var c = PalloKaupungitTestit.Lue().First(x => x.Id == "pariisi");
+                var reitti = Reitti(kaupunki);
+                var c = PalloKaupungitTestit.Lue().First(x => x.Id == kaupunki);
                 var ajo = new Ajo { Reitti = reitti };
                 var loki = new System.Text.StringBuilder();
                 bool odotus = p == Profiili.Odotus;
                 double vastausS = odotus ? 7 : 2, puheLisaS = odotus ? 5 : 0, t = 0, lentoAlkoi = double.NaN;
-                var s = new OpasSilmukka(OpasSilmukka.Avauskuva(c.Lat, c.Lon)) { AvausEtaisyysOhitus = 1100, AvausKallistusOhitus = 50, PakotaSiirto = true, PyynnotSeis = true };
+                double aLat = c.Lat, aLon = c.Lon;
+                if (!double.IsNaN(tuloSuunta)) { aLat += 0.45 * Math.Cos(tuloSuunta * Math.PI / 180); aLon += 0.45 * Math.Sin(tuloSuunta * Math.PI / 180) / Math.Cos(c.Lat * Math.PI / 180); }
+                var s = new OpasSilmukka(OpasSilmukka.Avauskuva(aLat, aLon)) { AvausEtaisyysOhitus = 1100, AvausKallistusOhitus = 50, PakotaSiirto = true, PyynnotSeis = true };
                 var vastaukset = new List<(double t, int n, string toive)>(); var hiljaa = new List<double>(); var ymp = new List<(double t, OpasKohde k)>();
                 s.Pyyda += (n, toive) => vastaukset.Add((t + vastausS, n, toive));
                 s.AlkaaPuhua += k => { if (k?.Id != null) ajo.Puhe[k.Id] = t; hiljaa.Add(t + k.KestoS + puheLisaS); loki.Append($"{t:F1} puhuu {k?.Id}; "); };
@@ -93,8 +111,11 @@ namespace Matkakirja.Linssit.Testit
                 {
                     t += Dt;
                     // Esitys (avaus + opastus) ~14 s siirron jälkeen, sitten kierros (sovitin: AloitaKierros purkaa PyynnotSeis).
-                    if (!kierrosAlkoi && s.Vaihe == OpasVaihe.Odottaa && s.VaiheAika >= 14)
-                    { kierrosAlkoi = true; s.AloitaKierros(reitti.Select(k => (k.Nimi, k.Lat, k.Lon)).ToList()); loki.Append($"{t:F1} kierros alkaa; "); }
+                    if (!kierrosAlkoi && s.Vaihe == OpasVaihe.Odottaa && s.VaiheAika >= avausS)
+                    {
+                        kierrosAlkoi = true; s.AloitaKierros(reitti.Select(k => (k.Nimi, k.Lat, k.Lon)).ToList()); loki.Append($"{t:F1} kierros alkaa; ");
+                        foreach (var k in reitti) s.LisaaEste(k.Lat, k.Lon, OpasSilmukka.EsteKorkeusLuokasta(k.Luokka));   // kuten sovitin (listan luokka)
+                    }
                     for (int j = vastaukset.Count - 1; j >= 0; j--)
                     {
                         if (vastaukset[j].t > t) continue;
@@ -116,7 +137,7 @@ namespace Matkakirja.Linssit.Testit
                     if (kierrosAlkoi && kohde == reitti[^1].Id && hiljaa.Count == 0 && s.Vaihe != OpasVaihe.Puhuu && !s.KierrosKaynnissa) break;
                 }
                 ajo.Loki = loki.ToString();
-                return ajot[p] = ajo;
+                return ajot[avain] = ajo;
             }
             finally { OpasSilmukka.PalloLento = vanha; }
         }
@@ -289,14 +310,15 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void NotreDameKiertaaLansijulkisivunEteenJaLaskeutuuAlkupuolella()
         {
             var viat = new List<string>();
-            foreach (var p in new[] { Profiili.Normaali, Profiili.Odotus })
+            foreach (var (p, avausS, worker) in new[] { (Profiili.Normaali, 14.0, false), (Profiili.Odotus, 14.0, false), (Profiili.Normaali, 51.0, false),
+                (Profiili.Normaali, 51.0, true), (Profiili.Normaali, 14.0, true), (Profiili.Normaali, 75.0, true), (Profiili.Normaali, 0.0, true) })
             {
-                var a = Aja(p); var x = Asennot(a, "Q2981");
+                var a = Aja(p, "pariisi", double.NaN, avausS, worker); var x = Asennot(a, "Q2981");
                 Oleta.Tosi(x.Count > 10, $"{p}: Notre-Dame mitattu ({x.Count})");
                 double kesto = x[^1].T, saapui = x[0].SilmaM, pienin = x.Min(y => y.SilmaM);
                 var edessa = x.FirstOrDefault(y => Kulmaero(y.SilmaSuunta, JulkisivuSuunta) <= JulkisivuToleranssiAst);
                 double valmis = x.First(y => y.SilmaM <= pienin + 1).T;
-                Console.WriteLine($"      {p} Notre-Dame: pysähdys {kesto:F1} s, silmä saapuessa {saapui:F0} m → {pienin:F0} m (valmis {valmis:F1} s), silmän suunta {x[0].SilmaSuunta:F0}° → {x[^1].SilmaSuunta:F0}°, julkisivun edessä ±{JulkisivuToleranssiAst}° {(edessa.EtM > 0 ? $"{edessa.T:F1} s" : "ei")} – lähtö");
+                Console.WriteLine($"      {p} avaus {avausS:F0} s {(worker ? "worker v1g" : "Ydin-oletus")} Notre-Dame: pysähdys {kesto:F1} s, silmä saapuessa {saapui:F0} m → {pienin:F0} m (valmis {valmis:F1} s), silmän suunta {x[0].SilmaSuunta:F0}° → {x[^1].SilmaSuunta:F0}°, julkisivun edessä ±{JulkisivuToleranssiAst}° {(edessa.EtM > 0 ? $"{edessa.T:F1} s" : "ei")} – lähtö");
                 // Kierto päättyy länsijulkisivun eteen (lähtöhetkellä silmä julkisivun suunnassa) ja on siellä vähintään viimeiset 5 s.
                 if (Kulmaero(x[^1].SilmaSuunta, JulkisivuSuunta) > JulkisivuToleranssiAst) viat.Add($"{p}: lähdössä silmä {x[^1].SilmaSuunta:F0}° (julkisivu {JulkisivuSuunta}°)");
                 if (edessa.EtM <= 0 || kesto - edessa.T < 5) viat.Add($"{p}: julkisivun edessä vasta {edessa.T:F1} s / {kesto:F1} s");
@@ -399,6 +421,64 @@ namespace Matkakirja.Linssit.Testit
                 }
             foreach (var v in viat) Console.WriteLine("      KUOPPA " + v);
             Oleta.Tosi(viat.Count == 0, $"{viat.Count} saapumisessa kuoppa: {string.Join("; ", viat.Take(8))}");
+        }
+
+        // ---- AUKION KIERTO JA KORKEAT RAKENTEET (simu 984010db6, PT 11.10.: San Marcon kierto kulki kellotornin läpi) ----
+        /// <summary>Aukion kierrolla (saapumista 2 s ennen → lähtö; aiemmin lähtö edellisen kohteen, esim. Krakovan Mariankirkon, vierestä) silmä ei kulje korkean rakenteen vierestä alle EsteVaraM:n, ellei
+        /// se ole rakenteen huipun + PalloEsteVaraM:n yläpuolella. Rakenteet: saman kierroksen muut kohteet (korkeus_m tai luokka
+        /// torni/kirkko nimelliskorkeudella), säde min(15, koko/2).</summary>
+        public const double EsteVaraM = 30;
+        public sealed class AukioMittaus { public string Kaupunki, Aukio, Este = "-"; public double Vapaa = double.MaxValue, SilmaMin = double.MaxValue; public int Rikkeita; }
+        public static List<AukioMittaus> MittaaAukiot(string kaupunki, double tuloSuunta = double.NaN)
+        {
+            var a = Aja(Profiili.Normaali, kaupunki, tuloSuunta); var tulos = new List<AukioMittaus>();
+            foreach (var q in a.Reitti.Where(k => OpasKuvaus.AukioLuokka(k.Luokka)))
+            {
+                if (!a.Saapui.TryGetValue(q.Id, out double t0)) continue;
+                double t1 = a.Lahti.TryGetValue(q.Id, out var l) ? l : a.R[^1].t;
+                var m = new AukioMittaus { Kaupunki = kaupunki, Aukio = q.Nimi };
+                foreach (var x in a.Reitti)
+                {
+                    if (x.Id == q.Id || KierrosLento.EtaisyysM(x.Lat, x.Lon, q.Lat, q.Lon) > 400) continue;
+                    double h = x.KorkeusM > 0 ? x.KorkeusM : OpasSilmukka.EsteKorkeusLuokasta(x.Luokka), sade = Math.Min(15, 0.5 * x.KokoM);
+                    if (h < OpasSilmukka.PalloEsteMinM) continue;
+                    foreach (var r in a.R)
+                    {
+                        if (r.t < t0 - 2 || r.t > t1 || r.kohde != q.Id) continue;
+                        var e = OpasKuvaus.KameraPaikka(r.a, x.Lat, x.Lon);
+                        double silma = e.u - MaaM, vapaa = Math.Sqrt(e.e * e.e + e.n * e.n) - sade;
+                        if (silma >= h + OpasSilmukka.PalloEsteVaraM - 1) continue;   // yläpuolella
+                        if (vapaa < m.Vapaa) { m.Vapaa = vapaa; m.Este = $"{x.Nimi} {h:F0} m"; }
+                        if (vapaa < EsteVaraM) m.Rikkeita++;
+                    }
+                }
+                foreach (var r in a.R) if (r.t >= t0 && r.t <= t1 && r.kohde == q.Id && r.v != OpasVaihe.Lentaa) m.SilmaMin = Math.Min(m.SilmaMin, OpasKuvaus.KameraPaikka(r.a, q.Lat, q.Lon).u - MaaM);
+                tulos.Add(m);
+            }
+            return tulos;
+        }
+
+        [Testi] static void AukionKiertoVaistaaKorkeatRakenteet()
+        {
+            var viat = new List<string>(); int n = 0;
+            Console.WriteLine("      | Kaupunki | aukio | lähin este (silmä alle huipun + 15 m) | vapaa m | silmä min m | rikkeitä |");
+            foreach (var c in PalloKaupungitTestit.Lue().Where(c => c.Kohteet.Any(k => OpasKuvaus.AukioLuokka(k.Luokka))))
+                foreach (var m in MittaaAukiot(c.Id))
+                {
+                    n++;
+                    Console.WriteLine($"      | {c.Nimi} | {m.Aukio} | {m.Este} | {(m.Vapaa == double.MaxValue ? "-" : m.Vapaa.ToString("F0"))} | {m.SilmaMin:F0} | {m.Rikkeita} |");
+                    if (m.Rikkeita > 0) viat.Add($"{c.Nimi} {m.Aukio}: {m.Este} {m.Vapaa:F0} m");
+                    if (m.SilmaMin < OpasKuvaus.PalloAukioKattoMinM - 1) viat.Add($"{c.Nimi} {m.Aukio}: silmä {m.SilmaMin:F0} m");
+                }
+            // San Marco joka tulosuunnasta (simu: idästä, kierto kellotornin läpi): kellotorni ohitetaan yläpuolelta tai ≥ EsteVaraM:n päästä.
+            for (int su = 0; su < 360; su += 45)
+            {
+                var sm = MittaaAukiot("venetsia", su).First(m => m.Aukio == "Pyhän Markuksen tori");
+                Console.WriteLine($"      San Marco tulosuunta {su}°: lähin {sm.Este}, vapaa {(sm.Vapaa == double.MaxValue ? "-" : sm.Vapaa.ToString("F0"))} m, silmä min {sm.SilmaMin:F0} m, rikkeitä {sm.Rikkeita}");
+                if (sm.Rikkeita > 0) viat.Add($"San Marco {su}°: {sm.Este} {sm.Vapaa:F0} m");
+            }
+            Oleta.Tosi(n >= 18, $"aukioita mitattu {n}");
+            Oleta.Tosi(viat.Count == 0, string.Join("; ", viat));
         }
 }
 }

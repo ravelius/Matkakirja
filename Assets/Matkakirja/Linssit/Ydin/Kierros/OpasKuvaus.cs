@@ -155,11 +155,16 @@ namespace Matkakirja.Linssit.Kierros
                     }
                 }
             }
+            // AUKION KATOT (simu 984010db6, San Marco ja Venceslauksen aukio: ympäröivät katot 7 ja 2 m, koska oma korkeusmalli ei tunne
+            // rakennuksia Pariisin ja Tukholman ulkopuolella; silmä 32–36 m kulki kattojen tasalla, tumma rakennus etualalla): aukion
+            // kierrossa silmä vähintään PalloAukioKattoMinM maasta (OpasOhjaus.Rajoita ja spiraalin alaraja).
+            bool aukioKehys = AukioLuokat.Contains((luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant());
+            if (OpasSilmukka.PalloLento && aukioKehys) kattoYla = Math.Max(kattoYla, PalloAukioKattoMinM);
             return new Pysahdys
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
                 Suuntima = KierrosLento.Kiedo(tulosuunta + SivuKulma), Kallistus = kall, EtaisyysM = et, MinEtM = minEt, KattoYlaM = kattoYla,
-                LoppuEtM = loppuEt > 0 && loppuEt < et ? loppuEt : 0,
+                LoppuEtM = loppuEt > 0 && loppuEt < et ? loppuEt : 0, Aukio = aukioKehys,
             };
         }
         /// <summary>Kierron loppu (PT 10.10.): kohde täyttää näin suuren osan pystykentästä (KuvaPystyAst) kierron lopussa.</summary>
@@ -169,6 +174,9 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kierron loppuetäisyys vähintään (m) ja aukion keskusmonumentin oletuskorkeus (m; Concorden obeliski 23 m), kun
         /// workerin korkeus_m puuttuu.</summary>
         public const double PalloLoppuMinM = 70, AukioKohdeKorkeusM = 23;
+        /// <summary>Aukion kierron kattoraja vähintään (m maasta; oletettu kattolinja ~26 m + KattoVaraM), kun ympäröivien kattojen
+        /// mittaus jää matalaksi.</summary>
+        public const double PalloAukioKattoMinM = 38;
 
         /// <summary>Pysähdyksen asento hetkellä aikaS saapumisesta: pehmeästi alkava hidas kierto ja kevyt dolly sisään.
         /// aikaS = 0 antaa täsmälleen kehyksen (lennon loppu), joten saapuminen on jatkuva.</summary>
