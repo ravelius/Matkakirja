@@ -80,7 +80,11 @@ namespace Matkakirja.Linssit
         /// <summary>uusin-3.json (9.10., juna 173; PT/LR: uusi data vain sitä lukeville buildeille): mallit, jotka tarvitsevat
         /// OmaMallin PBR-kartat, kaupungin auringon ja alfaleikkauksen (ND v5+ korttipuut, COLOR_0-sävyerot). uusin-2 jää vanhoille
         /// (170–172, nyt v6b), joten niihin ei päädy dataa, jota niiden varjostin ei osaa piirtää.</summary>
-        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-3.json";
+        /// <summary>uusin-4.json (10.10., juna 174; PT: vanhoja appeja ei rikota): mallit, joiden tekstuurit ovat KTX2:ta
+        /// (KHR_texture_basisu, tyokalut/omat_mallit_ktx2.py; pysyvät pakattuina GPU:lle). Vain 174+ lukee sitä; jos sitä ei vielä ole
+        /// ämpärissä, haetaan uusin-3 (VaraOsoitin), joten mallit eivät katoa ennen vientiä. 173 ja vanhemmat lukevat uusin-3:a.</summary>
+        public const string VerkkoOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-4.json";
+        public const string VaraOsoitin = "https://media.matkakirja.app/kartta/omat-mallit/uusin-3.json";
         static string verkkoJson, verkkoJuuri;
         static bool verkkoHaettu, verkkoHaussa;
         /// <summary>R2:n mallit.json saapui (avoin kaupunkinäkymä avaa lähellä olevat mallit).</summary>
@@ -91,15 +95,16 @@ namespace Matkakirja.Linssit
         static System.Collections.IEnumerator HaeVerkosta()
         {
             verkkoHaussa = true;
-            string osoitin = null;
-            using (var r = UnityEngine.Networking.UnityWebRequest.Get(VerkkoOsoitin + "?t=" + DateTime.UtcNow.Ticks / TimeSpan.TicksPerMinute))
+            string osoitin = null, pohja = null;
+            foreach (var o in new[] { VerkkoOsoitin, VaraOsoitin })
             {
+                using var r = UnityEngine.Networking.UnityWebRequest.Get(o + "?t=" + DateTime.UtcNow.Ticks / TimeSpan.TicksPerMinute);
                 r.timeout = 15;
                 yield return r.SendWebRequest();
                 if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success
                     && Matkakirja.Peli.MiniJson.Jasenna(r.downloadHandler.text) is Dictionary<string, object> d && d.TryGetValue("mallit", out var m))
-                    osoitin = m as string;
-                else Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin ei latautunut ({r.responseCode})");
+                { osoitin = m as string; pohja = o; break; }
+                Debug.Log($"MATKAKIRJA kaupunki: omat mallit: osoitin {o.Substring(o.LastIndexOf('/') + 1)} ei latautunut ({r.responseCode})");
             }
             // DIAGNOSTIIKKA (Natiiviseppä 10.10., juna 173 jetsam): Documents/omat-mallit-osoitin.txt (esim. "v6h2/mallit.json") ohittaa
             // ämpärin osoittimen, jotta korjattu data voidaan ajaa laitteella ennen osoitinvaihtoa. Tyhjä tiedosto = ei ohitusta.
@@ -112,7 +117,7 @@ namespace Matkakirja.Linssit
             catch (Exception) { }
             if (!string.IsNullOrEmpty(osoitin) && !osoitin.Contains("..") && !osoitin.StartsWith("/"))
             {
-                string url = new Uri(new Uri(VerkkoOsoitin), osoitin).AbsoluteUri;
+                string url = new Uri(new Uri(pohja), osoitin).AbsoluteUri;
                 using var r = UnityEngine.Networking.UnityWebRequest.Get(url);
                 r.timeout = 15;
                 yield return r.SendWebRequest();
