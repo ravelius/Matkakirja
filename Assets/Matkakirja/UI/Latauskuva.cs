@@ -9,6 +9,11 @@
 //               nousu ≤ 4 pt, jakso 7–8 s)
 //   valokuva   koko kuvan hidas lähentyminen (Ken Burns 1,00 → 1,04 / 8 s ja takaisin; TaustaLahentyy, Päätoimittaja 8.10.);
 //              sama liike oppaan latauskuvan valokuvalle Kuvasuurennoksessa (Kuvasuurennos.Lahentyy → Latauskuva.AsetaRajaus).
+//   alaosa     valinnainen toinen kuva (sama rajaus) taustan alaosaan kohdasta AlaosaAlku alkaen: korvaa taustan etualan
+//              (omistaja TF 176: "poista etuala, jossa köyden kiinnityspiste maassa näkyy"; pallossa still-kuvan tumma alaosa,
+//              pikselilleen sama kuin tausta saumassa)
+// LIIKE PIIRTYY (omistaja TF 176, 6.7: "pallo ei liiku lainkaan"): liikkeen ajan UiKerros.MerkitseMuutos joka päivityksessä, jotta
+// Ruudunpaivitys ei harvenna piirtoa PAIKALLAAN-väliin (2 s); taajuus pysyy lepotilan 30 fps:ssä.
 // Latauspalkki ja nimi pysyvät isännän nykyisessä pohjassa (Latauspalkki, mk-astroavaus) tämän päällä. Ilman kerroksia näkyy
 // pelkkä still-kuva (ei ajastinta). Esiin heti tai häivyttäen Tyylikirja.Kesto.Avaus (alle 250 ms). Päivitys 30 fps:n tahdissa
 // UI:n omalla ajastimella; ei Ruudunpaivitys.Herata-kutsua (hidas liike ei tarvitse täyttä taajuutta, lämpö).
@@ -55,7 +60,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Juuri (koko isännän ala, ei kosketuksia); isäntä lisää palkin ja nimen tämän päälle.</summary>
         public readonly VisualElement Juuri;
-        readonly VisualElement tausta, koysiTaso;
+        readonly VisualElement tausta, alaosa, koysiTaso;
+        float alaosaAlku;
         readonly List<(VisualElement El, Kerros K)> kerrokset = new List<(VisualElement, Kerros)>();
         readonly List<Koysi> koydet = new List<Koysi>();
         IVisualElementScheduledItem ajastin;
@@ -70,6 +76,9 @@ namespace Matkakirja.Natiivi
             tausta = Rakenne.El("mk-latauskuva__tausta", Juuri, PickingMode.Ignore);
             tausta.style.position = Position.Absolute;
             tausta.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100));
+            alaosa = Rakenne.El("mk-latauskuva__alaosa", Juuri, PickingMode.Ignore);
+            alaosa.style.position = Position.Absolute;
+            alaosa.style.display = DisplayStyle.None;
             koysiTaso = Taysi(Rakenne.El("mk-latauskuva__koydet", Juuri, PickingMode.Ignore));
             koysiTaso.generateVisualContent += PiirraKoydet;
         }
@@ -118,6 +127,7 @@ namespace Matkakirja.Natiivi
         public void Aseta(Texture2D taustaKuva, IList<Kerros> uudet = null, IList<Koysi> uudetKoydet = null)
         {
             tausta.style.backgroundImage = taustaKuva != null ? new StyleBackground(taustaKuva) : new StyleBackground(StyleKeyword.None);
+            AsetaAlaosa(null, 0f);
             foreach (var (el, _) in kerrokset) el.RemoveFromHierarchy();
             kerrokset.Clear(); koydet.Clear();
             if (uudet != null)
@@ -139,6 +149,20 @@ namespace Matkakirja.Natiivi
             Kaynnista();
         }
 
+        /// <summary>
+        /// Alaosa (null = pois): kuva, jolla on sama rajaus kuin taustalla, näytetään taustan päällä kohdasta alku (osuus kuvan
+        /// korkeudesta) alas; köydet ja kerrokset piirtyvät sen päälle.
+        /// </summary>
+        public void AsetaAlaosa(Texture2D kuva, float alku)
+        {
+            alaosaAlku = Mathf.Clamp(alku, 0f, 0.99f);
+            alaosa.style.backgroundImage = kuva != null ? new StyleBackground(kuva) : new StyleBackground(StyleKeyword.None);
+            alaosa.style.display = kuva != null ? DisplayStyle.Flex : DisplayStyle.None;
+            Asettele();
+        }
+
+        public bool AlaosaNakyy => alaosa.style.display == DisplayStyle.Flex;
+
         /// <summary>Taustakuvan ala isännän koordinaateissa (esim. peittävä rajaus); kerrokset ja köydet asettuvat sen mukaan.</summary>
         public void Sovita(Rect kuvaAla)
         {
@@ -151,6 +175,12 @@ namespace Matkakirja.Natiivi
         void Asettele()
         {
             tausta.style.left = ala.x; tausta.style.top = ala.y; tausta.style.width = ala.width; tausta.style.height = ala.height;
+            // Alaosa: kuva koko taustan korkuisena, alareunaan kohdistettuna; elementti alkaa kohdasta alaosaAlku.
+            float osa = 1f - alaosaAlku;
+            alaosa.style.left = ala.x; alaosa.style.top = ala.y + alaosaAlku * ala.height;
+            alaosa.style.width = ala.width; alaosa.style.height = osa * ala.height;
+            alaosa.style.backgroundSize = new BackgroundSize(Length.Percent(100), Length.Percent(100f / osa));
+            alaosa.style.backgroundPositionY = new BackgroundPosition(BackgroundPositionKeyword.Bottom, 0);
             foreach (var (el, k) in kerrokset)
             {
                 el.style.left = ala.x + k.Paikka.x * ala.width; el.style.top = ala.y + k.Paikka.y * ala.height;
@@ -198,6 +228,7 @@ namespace Matkakirja.Natiivi
         void Paivita()
         {
             double t = Time.unscaledTime - alku;
+            if (nakyy && (kerrokset.Count > 0 || TaustaLahentyy) && UiKerros.Olemassa) UiKerros.Hae().MerkitseMuutos();
             if (TaustaLahentyy)
             {
                 var (sx, sy) = TaustaTunniste == null ? (0.0, 0.0) : LatausLiike.Suunta(TaustaTunniste);
@@ -248,7 +279,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi- ja lokikuvaus: näkyvyys, kerrokset asentoineen, köydet.</summary>
         public string Kuvaus()
         {
-            var sb = new System.Text.StringBuilder($"latauskuva {(nakyy ? "näkyy" : "piilossa")}, ala {ala.x:0},{ala.y:0} {ala.width:0}×{ala.height:0}, kerroksia {kerrokset.Count}, köysiä {koydet.Count}");
+            var sb = new System.Text.StringBuilder($"latauskuva {(nakyy ? "näkyy" : "piilossa")}, ala {ala.x:0},{ala.y:0} {ala.width:0}×{ala.height:0}, kerroksia {kerrokset.Count}, köysiä {koydet.Count}, alaosa {(AlaosaNakyy ? alaosaAlku.ToString("0.00") : "-")}");
             double t = Time.unscaledTime - alku;
             foreach (var (_, k) in kerrokset)
             {
