@@ -27,13 +27,28 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - **v46y** (kappelin kaariportaikko, PT kohta 4): kavely.py kaytava(seina=, leik_lev=), kaariportaat r 5,85 / leveys 0,85 / seinät 0,15,
   ampumakäytävän leikkaus ristiksi; kuoren leikattu ala tornilla 140 → 51 m²; reittipisteet siirretty (reittitesti scratchpad reittitesti.py:
   kaikki kävelypinnalla, vapaata 0,42–0,44 m). Ajo `tyokalut-lr/kaariportaat_v46y.zsh` (+ paikkaa_kappeli.py). Vanhat `v46x-talteen/`.
-  Viennit 1499 + nyky käynnissä 08.2x (hashit luovutuksen lopussa / viesteissä Siirtosepälle).
+  **v46y-paketit (toimitettu Siirtosepälle 176:een 08.4x): NYKY c60e46eb73969b9a** (blender 0915a452f72cddd5, v45e 751d75cad; asu nyky,
+  tornien n1790-vuosileikkaukset), **1499 d1a8ad15aeb7f0af** (blender 30fa12007ccfabe4, v45e 627c0da05).
 - **Tukholman kaupungintalo**: Karttasepän v1s-pinnat → `tekoaly_koko.zsh sh v1s - pelkka-kohdistus` + `aja_tekseli_v1.zsh`, portti 0,
   lod0 6 840 / lod1 4 280 / lod2 1 296 kolmiota; arkki `stadshuset-v1/esikatselu/tekoaly-v1/sh_v1s_arkki.jpg`. LS2 teki testipaketin;
   PT: 176:een ASTC-ehdolla (LS2 vie). Avoinna: LS2:n sävyhuomiot (kupari vaalea?), LS1:n julkisivuvalo, omistajan kortti.
 
 ## Avoimet
 
-1. Hashit v46y-1499 ja v46y-nyky Siirtosepälle (176) + PT:lle.
+1. (tehty) hashit Siirtosepälle ja PT:lle. Seuraavaksi: Siirtosepän arkki uusilla paketeilla → korjaukset.
 2. Siirtoseppä: arkki v46w/v46x/v46y; savu-tyhjät; leikkausraja 48.
 3. Eiffel v1 (LS2:n pari), ND v3d (omistajan kyllä), pp/RH/co LS2:n kuvat — kuten aamun luovutuksessa.
+4. Karttaseppä 08.3x: Olavinlinnan veden väri `_tyo/karttaseppa/vesivari-olavinlinna-20261010/vesivari-kaudet-olavinlinna.json`
+   (Kyrönsalmi kesä: syvä 0,001/0,003/0,005, matala 0,002/0,004/0,006 lineaarinen, 0,9 FNU; talvi epäluotettava, Haapavesi ei käytössä)
+   → järven vesi-pinta (rakennuksen pinta "vesi" / LS2:n vesi) — sovitaan Siirtosepän/LS2:n kanssa, kuka kytkee.
+5. Stadshuset: lansi = Karttasepän v2s (tornin pilkutus pois), muut v1s; glb:t päivitetty 08.3x, LS2 vie 176:een ASTC:nä.
+6. LS2 08.3x pelikuvat (Matkakirja-linssiseppa-2 c2d26ff51, docs/raportit/kaappaukset/linssiseppa2-pitka-20261010/): **Eiffel v1 korjattavat**:
+   esplanadin maa tasainen vaalea beige laatta peittää Champ de Marsin puistot (kirkas neliö) → maa pois tai Googlen väriin/leikkaus pienemmäksi;
+   torni vaaleampi/punaruskeampi kuin Googlen tumma ruskea (lahde/eiffel.py RUSKEA0/1 tummemmaksi); 1. ja 2. kerroksen tasot sinisinä
+   paneeleina (materiaali/väri). Préfecture v1, Riddarholmen v3b, Concorde v2: arkit prefektuuri-v1.jpg, riddarholmen-v3b.jpg, concorde-v2.jpg
+   (katso ja korjaa). Kaupungintalon pelikuva tulee LS2:n seuraajalta.
+
+## Seuraavan session järjestys
+
+1) Eiffel v1:n LS2-korjaukset (kohta 6) → LS2:n uusi pari. 2) Préfecture/RH/Concorde-arkit (kohta 6). 3) Kaupungintalon pelikuva
+(LS2:n seuraaja) → kalibrointi → omistajan kortti PT:n kautta; LS1:n julkisivuvalo, kun malli on pelissä. 4) Siirtosepän arkin löydökset.
