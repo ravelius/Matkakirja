@@ -330,7 +330,7 @@
 
 .mk-nostoselain .mk-nostoselain__avaaja > Label,
 .mk-nostoselain .mk-nostoselain__autoteksti {
-    letter-spacing: 43.62px; /* web 6.98px */ /* puolet .mk-nosto__ylarivi-harvennuksesta (13,97) */
+    letter-spacing: 6.98px; /* web 0.76px: puolet .mk-nosto__ylarivi-harvennuksesta (13,97) */
 }
 
 .mk-nostoselain .mk-nostoselain__auto {
@@ -416,7 +416,7 @@
     flex-direction: row;
     align-items: center;
     margin: 0 0 5px 0;
-    letter-spacing: 43.62px; /* web 6.98px */ /* NOSTOT-tekstin harvennus */
+    letter-spacing: 6.98px; /* web 0.76px: NOSTOT-tekstin harvennus */
     color: var(--tk-paperi-muste-pehmea);
 }
 
