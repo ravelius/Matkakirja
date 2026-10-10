@@ -22,6 +22,17 @@ kopioi edellinen kultainen nimellä), poista `Linssit-testit/Testit/Osaviipaleet
 katoaa) ja tarkista, tarvitaanko `ThiefAjuri.cs`:n `RauhallinenYlitys { 69 }` vielä (kokeile ilman: OlavinlinnaMOsaTestit.KiinniTarkistuspisteeseenJaLoppuun
 ja PiiloonMenoTekeeTarkistuspisteen; PT: rajaa EI löysätä). Linssit + unity-tarkistus → SHA PT:lle. Uusi haara junan 177 rungon (tai 04915cace:n) päälle.
 
+## ILTA 10.10. — JUNAT 178 JA 179 (kaikki kuitattu, Natiiviseppä kokoaa)
+
+Proto-haarat (peilit peili/proto/siirtoseppa-<haara>), ketju 99b9fead3 → a98b7e1a6 → 73bc9b9bd → 8775705c9 → eecbb6474 → 674f3d589 → 187359ae0:
+- juna 178: 99b9fead3 (v47a palatsiraja), 73bc9b9bd (KiinniJokaPisteessa M-osa, vain OLAVINLINNA_LAAJA=1), 8775705c9 (ThiefAjuri: osarajaa
+  ei ylitetä epäilyn aikana, RauhallinenYlitys tyhjä; piste 69 reilu ajoituskohta, peliin ei muutosta, ei Pulun vihjettä).
+- juna 179: 5f4b1f616 (ReittiKulku Ytimeen, haara hahmot-reittipaikka 8775705c9:n päällä), eecbb6474 (huoneet 2–4 laajaan testiin),
+  674f3d589 (lokivaroitus puuttuvasta pintanimestä), 187359ae0 (tarkistuspiste tikkaiden yläpäähän; harja 89–91 → 88).
+- Web PR ravelius/Matkakirja#4351 (pintapankkiin rantakivi + rantakivi(-puoli).jpg = kallio × 0,66): Julkaisija mergeää; ilmoita LR:lle mainissa → LR vie.
+- Laaja testi: `OLAVINLINNA_LAAJA=1 ./kaanna.sh KiinniJokaPisteessa` aina kun Olavinlinnan paketti, reitti tai vartijat muuttuvat (~170 s).
+- OPITTUA: natiivissa pinnan pohjakuva korvaa värin (tila B), COLOR_0 = AO/lämpö/satunnainen; kävelyosan valo atlaksesta, historiassa tasainen 0,42.
+
 ## ERÄ 2 — KUITATTU JUNAAN 178 (Natiiviseppä kokoaa)
 
 `siirtoseppa/palatsiraja` **99b9fead3** (BUILD 177 -master 3d0c8c4a7 päällä; peili peili/proto/siirtoseppa-palatsiraja): pala cf16ad94ef3c76bc v47a,
