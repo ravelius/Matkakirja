@@ -710,6 +710,9 @@ namespace Matkakirja.Editori
                 () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
             ("pillerin aarteet", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("aarteet", -1); },
                 () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
+            // Pillerivalikon Asetukset-näkymä (ikäraja Asetuksista, PT 10.10. 11.5x: Ikäraja-rivi tilan kanssa).
+            ("pillerin asetukset", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("asetukset", -1); },
+                () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
             // Saapumisen näkymät (Natiivi-UI 10.10.2026) kuten `ui saapumiskortti`, `ui traileri firenze` ja `ui luento ateena`
             // (ääneton testikomento: fokusmerkintä ja luentakuvat).
             ("saapumiskortti", () => UiNakymat.Hae().Saapumiskortti.Nayta("ATEENA · PÄIVÄ 1/80", () => { }, () => { }),
