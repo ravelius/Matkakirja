@@ -1,0 +1,917 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Ehkä maailman vanhin sotilassoittokunta] Mehter on osmanien sotilassoittokunta, jota pidetään vanhimpana tunnettuna yhä toimivana marssivana soittokuntana maailmassa. Täydessä kokoonpanossa jokaista soitinta oli yhdeksän: yhdeksän rumpua, yhdeksän kimeää zurnaa, yhdeksän lautasparia. Jyminä kuului Euroopan puolelle asti, ja Haydn, Mozart ja Beethoven kirjoittivat kaikki musiikkia, joka matkii sitä. Soittokunta lakkautettiin 1826, mutta Istanbulin sotilasmuseon johtaja herätti sen henkiin 1911. Museossa se marssii yhä.
+AIEMPI KYSYMYS: Kuka säveltäjä työskenteli Eszterházan palatsissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Eszterházan palatsissa työskenteli säveltäjä [[Joseph Haydn]], joka palveli [[Esterházyn]] ruhtinassukua kapellimestarina useita vuosikymmeniä, ja Eszterházassa hän vietti merkittävän osan aikaansa. Palatsin rakennutti ruhtinas Nikolaus I Esterházy 1760-luvulla, ja hovissa esitettiin musiikkia ja oopperaa. Tarkkoja vuosilukuja en lähde muistinvaraisesti luettelemaan. Haydn on yksi [[klassismin]] tunnetuimmista säveltäjistä, ja hänen tuotantonsa käsittää muun muassa sinfonioita ja jousikvartetteja. Musiikki kuuluu parhaiten silloin, kun kukaan ei yritä puhua päälle.
+KYSYMYS: Kerro lisää: Joseph Haydn
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Kuka säveltäjä työskenteli Eszterházan palatsissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Eszterházan palatsissa työskenteli säveltäjä [[Joseph Haydn]], joka palveli [[Esterházyn]] ruhtinassukua kapellimestarina useita vuosikymmeniä, ja Eszterházassa hän vietti merkittävän osan aikaansa. Palatsin rakennutti ruhtinas Nikolaus I Esterházy 1760-luvulla, ja hovissa esitettiin musiikkia ja oopperaa. Tarkkoja vuosilukuja en lähde muistinvaraisesti luettelemaan. Haydn on yksi [[klassismin]] tunnetuimmista säveltäjistä, ja hänen tuotantonsa käsittää muun muassa sinfonioita ja jousikvartetteja. Musiikki kuuluu parhaiten silloin, kun kukaan ei yritä puhua päälle.
+KYSYMYS: Kerro lisää: Esterházyn
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Voiton Neitsyt tuomiokirkossa] Tuomiokirkon rakentaminen alkoi jo 1619, ja se vihittiin käyttöön 1622 – siis vain muutama vuosi sen jälkeen, kun portugalilaiset olivat karkottaneet ranskalaiset saarelta. Kirkko sai nimen Nossa Senhora da Vitória, Voiton Neitsyt, Guaxenduban taistelun kunniaksi: portugalilaisten vuonna 1615 käymä voitto kiihdytti ranskalaisten lopullista häätöä Maranhãosta. Nykyinen vaalean keltainen julkisivu kellotorneineen syntyi myöhemmin, kun kirkkoa laajennettiin 1700-luvun lopulla klassismin hengessä – lopputulos on portugalilaisen siirtomaabarokin ja uusklassismin yhdistelmä keskellä Praça Dom Pedro II:ta.
+- [Tampere — kaupunkilehti / Tampere: Neljä patsasta sillan kaiteella] Hämeensilta vie kaupungin pääkadun kosken yli. Sen kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta vuodelta 1929: metsästäjä, erämies, kauppias ja verontuoja. Patsaat ovat 1920-luvun klassismin tunnetuimpia töitä Suomessa, ja ne kuvaavat neljää elinkeinoa, joilla seudulla on eletty. Silta itse uusittiin vuonna 2019, mutta se rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin samalla punertavalla graniitilla — patsaat nostettiin takaisin paikoilleen.
+AIEMPI KYSYMYS: Kuka säveltäjä työskenteli Eszterházan palatsissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tämän minä tiedän. Eszterházan palatsissa työskenteli säveltäjä [[Joseph Haydn]], joka palveli [[Esterházyn]] ruhtinassukua kapellimestarina useita vuosikymmeniä, ja Eszterházassa hän vietti merkittävän osan aikaansa. Palatsin rakennutti ruhtinas Nikolaus I Esterházy 1760-luvulla, ja hovissa esitettiin musiikkia ja oopperaa. Tarkkoja vuosilukuja en lähde muistinvaraisesti luettelemaan. Haydn on yksi [[klassismin]] tunnetuimmista säveltäjistä, ja hänen tuotantonsa käsittää muun muassa sinfonioita ja jousikvartetteja. Musiikki kuuluu parhaiten silloin, kun kukaan ei yritä puhua päälle.
+KYSYMYS: Kerro lisää: klassismin
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Minkä maan rajan lähellä Fertőd sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Fertőd]] sijaitsee lähellä [[Itävallan]] rajaa, Győr-Moson-Sopronin läänissä Luoteis-Unkarissa. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Fertőd muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Rajan yli lentäminen on minulle yksi siiven räpäytys.
+KYSYMYS: Kerro lisää: Fertőd
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Minkä maan rajan lähellä Fertőd sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Fertőd]] sijaitsee lähellä [[Itävallan]] rajaa, Győr-Moson-Sopronin läänissä Luoteis-Unkarissa. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Fertőd muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Rajan yli lentäminen on minulle yksi siiven räpäytys.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Mistä kaupungeista Fertőd muodostettiin vuonna 1950?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä yksityiskohta. [[Fertőd]] muodostettiin vuonna 1950, kun [[Eszterházan]] ja [[Süttörin]] kaupungit yhdistettiin. Eszterháza on tunnettu palatsistaan, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Fertőd sijaitsee Győr-Moson-Sopronin läänissä lähellä Itävallan rajaa. Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen. Nimien vaihtuminen on minulle tuttua, sillä reitit ovat pysyneet mutta kylttejä on uusittu.
+KYSYMYS: Kerro lisää: Süttörin
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Kenen kuninkaan nimestä matyó-kansan nimen arvellaan tulevan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Matyó-kansan]] nimen arvellaan tulevan kuningas [[Matthias Corvinuksen]] nimestä. [[Mezőkövesd]] sai häneltä sinetin ja etuoikeuksia vuonna 1464. Kaupunki sijaitsee Pohjois-Unkarissa Borsod-Abaúj-Zemplénin läänissä, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Matyó-museo esittelee kansan perinnettä, ja matyó-talot ovat kaupungin nähtävyys. Nimen tarina on arvelu, mutta se on ihan uskottava arvelu.
+KYSYMYS: Kerro lisää: Matyó-kansan
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Kenen kuninkaan nimestä matyó-kansan nimen arvellaan tulevan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Matyó-kansan]] nimen arvellaan tulevan kuningas [[Matthias Corvinuksen]] nimestä. [[Mezőkövesd]] sai häneltä sinetin ja etuoikeuksia vuonna 1464. Kaupunki sijaitsee Pohjois-Unkarissa Borsod-Abaúj-Zemplénin läänissä, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Matyó-museo esittelee kansan perinnettä, ja matyó-talot ovat kaupungin nähtävyys. Nimen tarina on arvelu, mutta se on ihan uskottava arvelu.
+KYSYMYS: Kerro lisää: Matthias Corvinuksen
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Kenen kuninkaan nimestä matyó-kansan nimen arvellaan tulevan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Matyó-kansan]] nimen arvellaan tulevan kuningas [[Matthias Corvinuksen]] nimestä. [[Mezőkövesd]] sai häneltä sinetin ja etuoikeuksia vuonna 1464. Kaupunki sijaitsee Pohjois-Unkarissa Borsod-Abaúj-Zemplénin läänissä, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Matyó-museo esittelee kansan perinnettä, ja matyó-talot ovat kaupungin nähtävyys. Nimen tarina on arvelu, mutta se on ihan uskottava arvelu.
+KYSYMYS: Kerro lisää: Mezőkövesd
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Milloin rautatie ulottui Mezőkövesdiin?
+AIEMPI VASTAUS (Livia):
+No niin. [[Rautatie]] ulottui [[Mezőkövesdiin]] vuonna 1860. Kaupunki sijaitsee Pohjois-Unkarissa Borsod-Abaúj-Zemplénin läänissä, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1784 kaupunki oli vapautunut feodaalivelvoitteistaan, joten rautatie tuli sinne noin kuusi vuosikymmentä myöhemmin. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nykyään nähtävyys. Juna oli kyyhkyn kilpailija, mutta sen kanssa tultiin toimeen.
+KYSYMYS: Kerro lisää: Rautatie
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Milloin rautatie ulottui Mezőkövesdiin?
+AIEMPI VASTAUS (Livia):
+No niin. [[Rautatie]] ulottui [[Mezőkövesdiin]] vuonna 1860. Kaupunki sijaitsee Pohjois-Unkarissa Borsod-Abaúj-Zemplénin läänissä, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1784 kaupunki oli vapautunut feodaalivelvoitteistaan, joten rautatie tuli sinne noin kuusi vuosikymmentä myöhemmin. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nykyään nähtävyys. Juna oli kyyhkyn kilpailija, mutta sen kanssa tultiin toimeen.
+KYSYMYS: Kerro lisää: Mezőkövesdiin
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Kuka oli kuningas Matthias Corvinus?
+AIEMPI VASTAUS (Livia):
+Kas, mielenkiintoinen kuningas. [[Matthias Corvinus]] oli Unkarin kuningas 1400-luvulla, ja hänen valtakauttaan pidetään Unkarin historian loistokautena. Hän tunnetaan [[renessanssin]] ja oppineisuuden tukijana sekä [[Corvina-kirjastosta]], joka oli aikansa merkittävä kirjakokoelma. Vuonna 1464 hän antoi Mezőkövesdille sinetin ja etuoikeuksia, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Tarkkoja vuosilukuja en muistinvaraisesti luettele, ja hallitsijakausi on helppo tarkistaa. Kirjasto kuulostaa kyyhkystä turvalliselta paikalta, kunhan ikkuna on auki.
+KYSYMYS: Kerro lisää: Matthias Corvinus
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Kuka oli kuningas Matthias Corvinus?
+AIEMPI VASTAUS (Livia):
+Kas, mielenkiintoinen kuningas. [[Matthias Corvinus]] oli Unkarin kuningas 1400-luvulla, ja hänen valtakauttaan pidetään Unkarin historian loistokautena. Hän tunnetaan [[renessanssin]] ja oppineisuuden tukijana sekä [[Corvina-kirjastosta]], joka oli aikansa merkittävä kirjakokoelma. Vuonna 1464 hän antoi Mezőkövesdille sinetin ja etuoikeuksia, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Tarkkoja vuosilukuja en muistinvaraisesti luettele, ja hallitsijakausi on helppo tarkistaa. Kirjasto kuulostaa kyyhkystä turvalliselta paikalta, kunhan ikkuna on auki.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Kuka oli kuningas Matthias Corvinus?
+AIEMPI VASTAUS (Livia):
+Kas, mielenkiintoinen kuningas. [[Matthias Corvinus]] oli Unkarin kuningas 1400-luvulla, ja hänen valtakauttaan pidetään Unkarin historian loistokautena. Hän tunnetaan [[renessanssin]] ja oppineisuuden tukijana sekä [[Corvina-kirjastosta]], joka oli aikansa merkittävä kirjakokoelma. Vuonna 1464 hän antoi Mezőkövesdille sinetin ja etuoikeuksia, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Tarkkoja vuosilukuja en muistinvaraisesti luettele, ja hallitsijakausi on helppo tarkistaa. Kirjasto kuulostaa kyyhkystä turvalliselta paikalta, kunhan ikkuna on auki.
+KYSYMYS: Kerro lisää: Corvina-kirjastosta
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Milloin turkkilaiset miehittivät Mezőkövesdin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Turkkilaiset miehittivät [[Mezőkövesdin]] vuonna 1544. Kaupunki tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Tuolloin suuri osa Unkarista oli osa [[Osmanien valtakuntaa]] tai sen vaikutuspiirissä, ja rajaseutujen asukkaat kärsivät sotatoimista. Sittemmin kaupunki rakennettiin uudelleen: vuonna 1784 se vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Siitä on onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mezőkövesdin
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Milloin turkkilaiset miehittivät Mezőkövesdin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Turkkilaiset miehittivät [[Mezőkövesdin]] vuonna 1544. Kaupunki tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Tuolloin suuri osa Unkarista oli osa [[Osmanien valtakuntaa]] tai sen vaikutuspiirissä, ja rajaseutujen asukkaat kärsivät sotatoimista. Sittemmin kaupunki rakennettiin uudelleen: vuonna 1784 se vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Siitä on onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Osmanien valtakuntaa
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Minkä käsityön takia matyó-kansa on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Matyó-kansa]] on tunnettu värikkäästä [[kirjonnasta]], joka koristaa vaatteita ja kodin tekstiilejä. Kuviot ovat usein kukkamaisia ja runsaita. [[Mezőkövesdissä]] matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä. Kirjonta kuuluu Unkarin tunnetuimpiin kansantaiteen muotoihin, mutta yksityiskohtia värivalikoimasta tai kuvioiden merkityksistä en lähde muistinvaraisesti väittämään. Väriloisto näkyy kyllä katolle asti.
+KYSYMYS: Kerro lisää: Matyó-kansa
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Sudan — maalehti / Musiikki: Juban yöt, jolloin soittivat Skylarks ja Rejaf Jazz] 1970–1980-luvut — Juba oli 1970- ja 1980-luvuilla vilkkaan yöelämän kaupunki, ja lavalla soittivat muun muassa Skylarks ja Rejaf Jazz. Musiikissa kuului koko naapuruston kirjo: monet muusikot lauloivat englanniksi, suahiliksi, juba-arabiaksi, omalla kielellään tai sekoittaen niitä kaikkia. Myöhemmin tähän tuli lisää sävyjä, kun eteläsudanilaisia asui pitkiä aikoja Etiopiassa, Keniassa ja Ugandassa ja oppi sikäläiset kielet ja tyylit. Emmanuel Kembe laulaa kansanmusiikkia, reggaeta ja afrobeatia, Yaba Angelosi afrobeatia, r&b:tä ja zoukia.
+AIEMPI KYSYMYS: Minkä käsityön takia matyó-kansa on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Matyó-kansa]] on tunnettu värikkäästä [[kirjonnasta]], joka koristaa vaatteita ja kodin tekstiilejä. Kuviot ovat usein kukkamaisia ja runsaita. [[Mezőkövesdissä]] matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä. Kirjonta kuuluu Unkarin tunnetuimpiin kansantaiteen muotoihin, mutta yksityiskohtia värivalikoimasta tai kuvioiden merkityksistä en lähde muistinvaraisesti väittämään. Väriloisto näkyy kyllä katolle asti.
+KYSYMYS: Kerro lisää: kirjonnasta
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+AIEMPI KYSYMYS: Minkä käsityön takia matyó-kansa on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Matyó-kansa]] on tunnettu värikkäästä [[kirjonnasta]], joka koristaa vaatteita ja kodin tekstiilejä. Kuviot ovat usein kukkamaisia ja runsaita. [[Mezőkövesdissä]] matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä. Kirjonta kuuluu Unkarin tunnetuimpiin kansantaiteen muotoihin, mutta yksityiskohtia värivalikoimasta tai kuvioiden merkityksistä en lähde muistinvaraisesti väittämään. Väriloisto näkyy kyllä katolle asti.
+KYSYMYS: Kerro lisää: Mezőkövesdissä
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+AIEMPI KYSYMYS: Mikä ylimyssuku rakennutti Gödöllön palatsin alun perin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Gödöllön]] palatsin rakennutti alun perin [[Grassalkovichin]] ylimyssuku. Myöhemmin siellä viettivät kesiään Itävallan keisari ja Unkarin kuningas [[Frans Joosef]] sekä hänen puolisonsa Elisabeth eli Sisi. Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Palatsi oli siis ylimyssuvun koti ennen kuin se muuttui kuninkaalliseksi kesäpaikaksi. Sukujen kodit ovat kyyhkylle liian isoja.
+KYSYMYS: Kerro lisää: Gödöllön
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+AIEMPI KYSYMYS: Mikä ylimyssuku rakennutti Gödöllön palatsin alun perin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Gödöllön]] palatsin rakennutti alun perin [[Grassalkovichin]] ylimyssuku. Myöhemmin siellä viettivät kesiään Itävallan keisari ja Unkarin kuningas [[Frans Joosef]] sekä hänen puolisonsa Elisabeth eli Sisi. Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Palatsi oli siis ylimyssuvun koti ennen kuin se muuttui kuninkaalliseksi kesäpaikaksi. Sukujen kodit ovat kyyhkylle liian isoja.
+KYSYMYS: Kerro lisää: Grassalkovichin
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+AIEMPI KYSYMYS: Mikä ylimyssuku rakennutti Gödöllön palatsin alun perin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Gödöllön]] palatsin rakennutti alun perin [[Grassalkovichin]] ylimyssuku. Myöhemmin siellä viettivät kesiään Itävallan keisari ja Unkarin kuningas [[Frans Joosef]] sekä hänen puolisonsa Elisabeth eli Sisi. Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Palatsi oli siis ylimyssuvun koti ennen kuin se muuttui kuninkaalliseksi kesäpaikaksi. Sukujen kodit ovat kyyhkylle liian isoja.
+KYSYMYS: Kerro lisää: Frans Joosef
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+AIEMPI KYSYMYS: Kenelle palatsi lahjoitettiin vuonna 1867?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuonna 1867 Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa ja lahjoitti sen palatsineen [[Frans Joosefille]] ja [[Elisabethille]] kruunajaislahjaksi. Siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja [[Gödöllő]] sijaitsee noin 30 kilometriä Budapestin laitamilta koilliseen. Kruunajaislahja on minusta aika suuri, kun omasta lahjasta kyyhkyllä on vain kirje.
+KYSYMYS: Kerro lisää: Frans Joosefille
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+AIEMPI KYSYMYS: Kenelle palatsi lahjoitettiin vuonna 1867?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuonna 1867 Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa ja lahjoitti sen palatsineen [[Frans Joosefille]] ja [[Elisabethille]] kruunajaislahjaksi. Siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja [[Gödöllő]] sijaitsee noin 30 kilometriä Budapestin laitamilta koilliseen. Kruunajaislahja on minusta aika suuri, kun omasta lahjasta kyyhkyllä on vain kirje.
+KYSYMYS: Kerro lisää: Elisabethille
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+AIEMPI KYSYMYS: Kenelle palatsi lahjoitettiin vuonna 1867?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuonna 1867 Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa ja lahjoitti sen palatsineen [[Frans Joosefille]] ja [[Elisabethille]] kruunajaislahjaksi. Siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja [[Gödöllő]] sijaitsee noin 30 kilometriä Budapestin laitamilta koilliseen. Kruunajaislahja on minusta aika suuri, kun omasta lahjasta kyyhkyllä on vain kirje.
+KYSYMYS: Kerro lisää: Gödöllő
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+AIEMPI KYSYMYS: Kuka oli keisarinna Elisabeth eli Sisi?
+AIEMPI VASTAUS (Livia):
+No jopas, kysymys on oikea klassikko. [[Elisabeth]] eli Sisi oli Itävallan keisarinna ja Unkarin kuningatar, keisari [[Frans Joosefin]] puoliso. Hän oli syntyjään [[Baijerin]] herttuakunnasta, ja hänet tunnetaan erityisesti kauneudestaan ja matkustamisen rakkaudestaan sekä läheisestä suhteestaan Unkariin. Gödöllön palatsi oli hänelle ja Frans Joosefille kruunajaislahja, ja siellä he viettivät kesiään sekä kevättä ja syksyä. Elämästä on tehty runsaasti elokuvia ja kirjoja, mutta tarkkoja yksityiskohtia en lähde muistinvaraisesti listaamaan. Hän oli matkaaja, ja siinä me olemme samanlaisia.
+KYSYMYS: Kerro lisää: Elisabeth
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+AIEMPI KYSYMYS: Kuka oli keisarinna Elisabeth eli Sisi?
+AIEMPI VASTAUS (Livia):
+No jopas, kysymys on oikea klassikko. [[Elisabeth]] eli Sisi oli Itävallan keisarinna ja Unkarin kuningatar, keisari [[Frans Joosefin]] puoliso. Hän oli syntyjään [[Baijerin]] herttuakunnasta, ja hänet tunnetaan erityisesti kauneudestaan ja matkustamisen rakkaudestaan sekä läheisestä suhteestaan Unkariin. Gödöllön palatsi oli hänelle ja Frans Joosefille kruunajaislahja, ja siellä he viettivät kesiään sekä kevättä ja syksyä. Elämästä on tehty runsaasti elokuvia ja kirjoja, mutta tarkkoja yksityiskohtia en lähde muistinvaraisesti listaamaan. Hän oli matkaaja, ja siinä me olemme samanlaisia.
+KYSYMYS: Kerro lisää: Frans Joosefin
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Haas–Lilienthalin talo] 1886–1973 Talon rakennutti kauppias William Haas (1849–1916), joka syntyi juutalaiseen perheeseen Baijerin Reckendorfissa ja saapui San Franciscoon lokakuussa 1868. Hän menestyi nopeasti tukkukauppiaana ja meni 1880 naimisiin Bertha Greenebaumin kanssa, jonka isä oli niin ikään baijerilainen ja omisti kalifornialaisen kauppahuoneen. Perhe asui useissa vuokra-asunnoissa, kunnes rakennutti 1886 oman talon Franklin Streetille. Suunnittelijaksi tuli baijerilainen arkkitehti Peter R. Schmidt. Talo on punapuuta, tyyliltään Queen Anne ja Eastlake, ja sen kulmassa on tornihuone noitalakin muotoisine kattoineen. Pohjaratkaisu on kaupungille tyypillinen rivitalokaava, joka kehitettiin syvien ja kapei…
+- [Saksa — maalehti / Historia: Kuningas rakensi itselleen satulinnan] 1869 — Baijerin kuningas Ludvig II ei viihtynyt hallitsijana vaan saduissa. Vuonna 1869 hän alkoi rakennuttaa vuorenrinteelle linnaa, joka näyttää keskiaikaiselta mutta oli sisältä aikansa uusinta tekniikkaa: keskuslämmitys, juokseva vesi ja jopa sähkökelloilla kutsuttava palveluskunta. Ludvig ehti asua Neuschwansteinissa vain 172 päivää, ja rahat loppuivat kesken — torneja jäi rakentamatta. Nykyään linnassa käy 1,4 miljoonaa vierasta vuodessa, ja sen sanotaan olleen Disneyn satulinnan esikuva.
+AIEMPI KYSYMYS: Kuka oli keisarinna Elisabeth eli Sisi?
+AIEMPI VASTAUS (Livia):
+No jopas, kysymys on oikea klassikko. [[Elisabeth]] eli Sisi oli Itävallan keisarinna ja Unkarin kuningatar, keisari [[Frans Joosefin]] puoliso. Hän oli syntyjään [[Baijerin]] herttuakunnasta, ja hänet tunnetaan erityisesti kauneudestaan ja matkustamisen rakkaudestaan sekä läheisestä suhteestaan Unkariin. Gödöllön palatsi oli hänelle ja Frans Joosefille kruunajaislahja, ja siellä he viettivät kesiään sekä kevättä ja syksyä. Elämästä on tehty runsaasti elokuvia ja kirjoja, mutta tarkkoja yksityiskohtia en lähde muistinvaraisesti listaamaan. Hän oli matkaaja, ja siinä me olemme samanlaisia.
+KYSYMYS: Kerro lisää: Baijerin
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Lipusta leikattiin keskusta pois] 1956 — Lokakuussa 1956 Budapestin kaduille nousi kansannousu maata hallinnutta neuvostojärjestelmää vastaan. Mielenosoittajat ottivat tunnuksekseen maan lipun, jonka keskeltä oli leikattu vaakuna pois: jäljelle jäi puna-valko-vihreä lippu ja siinä reikä. Nousu kesti runsaat kaksi viikkoa, ja se kukistettiin marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä nostetaan salkoon joka lokakuu.
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Unkari — maalehti / Menovinkit] Unkari on avannut oman muistinsa: kaksisataatuhatta valokuvaa ilmaiseksi, Budapestin kartat neljältä eri vuodelta, Bartókin äänittämät kansanlaulut ja kameroita, joista näkee haikaran pesään juuri nyt.
+AIEMPI KYSYMYS: Kuinka kaukana Gödöllő on Budapestista?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Gödöllő]] on noin 30 kilometriä [[Budapestin]] laitamilta koilliseen. Se on Pestin läänin kaupunki, jonka palatsin rakennutti alun perin Grassalkovichin ylimyssuku. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä. Pienen aamulennon matka se on.
+KYSYMYS: Kerro lisää: Budapestin
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+AIEMPI KYSYMYS: Mikä oli Itävalta-Unkarin kaksoismonarkia?
+AIEMPI VASTAUS (Livia):
+Tuota, siinä on vähän pitkä tarina. [[Itävalta-Unkarin kaksoismonarkia]] syntyi vuoden 1867 sovinnon seurauksena: Itävallan keisari oli samalla Unkarin kuningas, ja Unkari sai laajan itsehallinnon omissa sisäisissä asioissaan. Valtiolla oli yhteinen hallitsija sekä yhteisiä asioita, kuten ulkopolitiikka ja puolustus. [[Frans Joosef]] oli molempien maiden hallitsija, ja Gödöllön palatsi lahjoitettiin hänelle ja Elisabethille kruunajaislahjaksi vuonna 1867. Kaksoismonarkia päättyi ensimmäisen maailmansodan lopussa vuonna 1918. Sanoja tuli ihan tarpeeksi, ja minun päässäni humisee.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin kaksoismonarkia
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+AIEMPI KYSYMYS: Kuka Unkarin kansallislaulun säveltäjä syntyi Gyulassa?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä muistan. Unkarin kansallislaulun säveltäjä on [[Ferenc Erkel]], ja hän syntyi [[Gyulassa]], Békésin läänin kaupungissa Suurella Unkarin tasangolla Fehér-Körös-joen varrella. Erkel tunnetaan myös oopperasäveltäjänä. Samasta kaupungista on kotoisin myös [[Albrecht Dürerin]] isä, jonka poika nousi yhdeksi Euroopan tunnetuimmista taiteilijoista. Ei paha saldo yhdelle kaupungille, sanoi kyyhky katolta.
+KYSYMYS: Kerro lisää: Ferenc Erkel
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+AIEMPI KYSYMYS: Kuka Unkarin kansallislaulun säveltäjä syntyi Gyulassa?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä muistan. Unkarin kansallislaulun säveltäjä on [[Ferenc Erkel]], ja hän syntyi [[Gyulassa]], Békésin läänin kaupungissa Suurella Unkarin tasangolla Fehér-Körös-joen varrella. Erkel tunnetaan myös oopperasäveltäjänä. Samasta kaupungista on kotoisin myös [[Albrecht Dürerin]] isä, jonka poika nousi yhdeksi Euroopan tunnetuimmista taiteilijoista. Ei paha saldo yhdelle kaupungille, sanoi kyyhky katolta.
+KYSYMYS: Kerro lisää: Gyulassa
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Tornin kulmassa on sarvikuono] Belémin torni valmistui 1519 vartioimaan joensuuta. Sen vartiotornien juurella on kiveen hakattuja eläimenpäitä, ja yksi niistä on sarvikuono — sitä pidetään ensimmäisenä sarvikuonoveistoksena Länsi-Euroopan taiteessa. Malli oli elävä: Intiasta tuotu sarvikuono saapui Lissaboniin 20. toukokuuta 1515. Kuningas Manuel I lähetti sen lahjaksi paaville, mutta laiva haaksirikkoutui Italian rannikolla ja kannelle kahlittu eläin hukkui. Albrecht Dürer teki siitä kuuluisan puupiirroksen näkemättä eläintä koskaan.
+AIEMPI KYSYMYS: Kuka Unkarin kansallislaulun säveltäjä syntyi Gyulassa?
+AIEMPI VASTAUS (Livia):
+Ai se, tän minä muistan. Unkarin kansallislaulun säveltäjä on [[Ferenc Erkel]], ja hän syntyi [[Gyulassa]], Békésin läänin kaupungissa Suurella Unkarin tasangolla Fehér-Körös-joen varrella. Erkel tunnetaan myös oopperasäveltäjänä. Samasta kaupungista on kotoisin myös [[Albrecht Dürerin]] isä, jonka poika nousi yhdeksi Euroopan tunnetuimmista taiteilijoista. Ei paha saldo yhdelle kaupungille, sanoi kyyhky katolta.
+KYSYMYS: Kerro lisää: Albrecht Dürerin
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Kuinka kauan linnan puolustajat kestivät piirityksen vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnan puolustajat kestivät piirityksen lähteiden mukaan 59–63 päivää, eli noin kaksi kuukautta, ennen kuin he antautuivat. Piiritys alkoi heinäkuun 1566 alussa, ja linnaa vastaan marssi [[osmanien]] armeija, jonka vahvuudeksi arvioidaan 27 000–30 000 miestä, kun taas puolustajia oli noin 2 000. Lähteiden mukaan mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä yhtä pitkään. Siitä on kulunut yli neljäsataa vuotta, ja [[Gyulan linna]] on yhä kaupungin tunnetuimpia nähtävyyksiä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: osmanien
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+AIEMPI KYSYMYS: Kuinka kauan linnan puolustajat kestivät piirityksen vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnan puolustajat kestivät piirityksen lähteiden mukaan 59–63 päivää, eli noin kaksi kuukautta, ennen kuin he antautuivat. Piiritys alkoi heinäkuun 1566 alussa, ja linnaa vastaan marssi [[osmanien]] armeija, jonka vahvuudeksi arvioidaan 27 000–30 000 miestä, kun taas puolustajia oli noin 2 000. Lähteiden mukaan mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä yhtä pitkään. Siitä on kulunut yli neljäsataa vuotta, ja [[Gyulan linna]] on yhä kaupungin tunnetuimpia nähtävyyksiä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Gyulan linna
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Tasanko, jolla näkee kangastuksia] 1973 — Hortobágy on laaja tasanko, jolla ei kasva juuri puita, vaan pelkkää heinää ja suolaista niittyä. Se on Euroopan laajin yhtenäinen luonnonniitty, ja siitä tehtiin maan ensimmäinen kansallispuisto vuonna 1973. Kuumina päivinä tasangolla näkyy kangastuksia: ilma väreilee ja kaukainen kaivo tai lauma näyttää kelluvan irti maasta. Alueella laidunnetaan vanhoja kotieläinrotuja, muun muassa harmaata nautaa ja kierteissarvista racka-lammasta, joita ilman niitty kasvaisi umpeen.
+AIEMPI KYSYMYS: Mikä on Unkarin suuri tasanko, jota kutsutaan pusztaksi?
+AIEMPI VASTAUS (Livia):
+No niin, tasanko on sitä, mitä minä parhaiten ymmärrän. [[Unkarin suuri tasanko]], unkariksi Alföld, kattaa suuren osan maan pinta-alasta ja jatkuu rajojen yli naapurimaihin. Sen perinteistä niittyjen ja laidunten maisemaa kutsutaan [[pusztaksi]], ja siellä on perinteisesti laiduntanut karjaa, hevosia ja lampaita. [[Hortobágyn kansallispuisto]] on yksi tunnetuimmista paikoista, joissa tätä maisemaa suojellaan.
+
+Ylhäältä katsoen tasanko on pöytä ilman reunoja, ja minä arvostan sitä, että horisontti näkyy aina. Siinä ei kyl tuulelta suojaa löydä.
+KYSYMYS: Kerro lisää: Unkarin suuri tasanko
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+AIEMPI KYSYMYS: Mikä on Unkarin suuri tasanko, jota kutsutaan pusztaksi?
+AIEMPI VASTAUS (Livia):
+No niin, tasanko on sitä, mitä minä parhaiten ymmärrän. [[Unkarin suuri tasanko]], unkariksi Alföld, kattaa suuren osan maan pinta-alasta ja jatkuu rajojen yli naapurimaihin. Sen perinteistä niittyjen ja laidunten maisemaa kutsutaan [[pusztaksi]], ja siellä on perinteisesti laiduntanut karjaa, hevosia ja lampaita. [[Hortobágyn kansallispuisto]] on yksi tunnetuimmista paikoista, joissa tätä maisemaa suojellaan.
+
+Ylhäältä katsoen tasanko on pöytä ilman reunoja, ja minä arvostan sitä, että horisontti näkyy aina. Siinä ei kyl tuulelta suojaa löydä.
+KYSYMYS: Kerro lisää: pusztaksi
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Tasanko, jolla näkee kangastuksia] 1973 — Hortobágy on laaja tasanko, jolla ei kasva juuri puita, vaan pelkkää heinää ja suolaista niittyä. Se on Euroopan laajin yhtenäinen luonnonniitty, ja siitä tehtiin maan ensimmäinen kansallispuisto vuonna 1973. Kuumina päivinä tasangolla näkyy kangastuksia: ilma väreilee ja kaukainen kaivo tai lauma näyttää kelluvan irti maasta. Alueella laidunnetaan vanhoja kotieläinrotuja, muun muassa harmaata nautaa ja kierteissarvista racka-lammasta, joita ilman niitty kasvaisi umpeen.
+AIEMPI KYSYMYS: Mikä on Unkarin suuri tasanko, jota kutsutaan pusztaksi?
+AIEMPI VASTAUS (Livia):
+No niin, tasanko on sitä, mitä minä parhaiten ymmärrän. [[Unkarin suuri tasanko]], unkariksi Alföld, kattaa suuren osan maan pinta-alasta ja jatkuu rajojen yli naapurimaihin. Sen perinteistä niittyjen ja laidunten maisemaa kutsutaan [[pusztaksi]], ja siellä on perinteisesti laiduntanut karjaa, hevosia ja lampaita. [[Hortobágyn kansallispuisto]] on yksi tunnetuimmista paikoista, joissa tätä maisemaa suojellaan.
+
+Ylhäältä katsoen tasanko on pöytä ilman reunoja, ja minä arvostan sitä, että horisontti näkyy aina. Siinä ei kyl tuulelta suojaa löydä.
+KYSYMYS: Kerro lisää: Hortobágyn kansallispuisto
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Mistä Gyulan vieressä virtaava Fehér-Körös-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Fehér-Körös, romaniaksi Crișul Alb, saa alkunsa [[Romanian]] puolelta ja virtaa rajan yli Unkarin tasangolle. Se kuuluu [[Tiszan]] vesistöön, ja Tisza laskee puolestaan [[Tonavaan]]. Tarkasta lähdepaikasta ja yhtymäkohdista en ole varma, joten niistä on parempi tarkistaa kartalta. Jokia seuraamalla minä olen löytänyt perille monta kertaa.
+KYSYMYS: Kerro lisää: Romanian
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Mistä Gyulan vieressä virtaava Fehér-Körös-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Fehér-Körös, romaniaksi Crișul Alb, saa alkunsa [[Romanian]] puolelta ja virtaa rajan yli Unkarin tasangolle. Se kuuluu [[Tiszan]] vesistöön, ja Tisza laskee puolestaan [[Tonavaan]]. Tarkasta lähdepaikasta ja yhtymäkohdista en ole varma, joten niistä on parempi tarkistaa kartalta. Jokia seuraamalla minä olen löytänyt perille monta kertaa.
+KYSYMYS: Kerro lisää: Tiszan
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mistä Gyulan vieressä virtaava Fehér-Körös-joki saa alkunsa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Fehér-Körös, romaniaksi Crișul Alb, saa alkunsa [[Romanian]] puolelta ja virtaa rajan yli Unkarin tasangolle. Se kuuluu [[Tiszan]] vesistöön, ja Tisza laskee puolestaan [[Tonavaan]]. Tarkasta lähdepaikasta ja yhtymäkohdista en ole varma, joten niistä on parempi tarkistaa kartalta. Jokia seuraamalla minä olen löytänyt perille monta kertaa.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Lipusta leikattiin keskusta pois] 1956 — Lokakuussa 1956 Budapestin kaduille nousi kansannousu maata hallinnutta neuvostojärjestelmää vastaan. Mielenosoittajat ottivat tunnuksekseen maan lipun, jonka keskeltä oli leikattu vaakuna pois: jäljelle jäi puna-valko-vihreä lippu ja siinä reikä. Nousu kesti runsaat kaksi viikkoa, ja se kukistettiin marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä nostetaan salkoon joka lokakuu.
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Unkari — maalehti / Menovinkit] Unkari on avannut oman muistinsa: kaksisataatuhatta valokuvaa ilmaiseksi, Budapestin kartat neljältä eri vuodelta, Bartókin äänittämät kansanlaulut ja kameroita, joista näkee haikaran pesään juuri nyt.
+AIEMPI KYSYMYS: Miksi Unkarissa on niin paljon lämpökylpylöitä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Unkari sijaitsee Pannonian altaassa, jossa maankuori on ohut ja maan sisäinen lämpö nousee lähemmäs pintaa kuin monessa muussa Euroopan osassa, joten maaperästä saadaan kuumaa vettä. Tämän vuoksi maassa on runsaasti lämpölähteitä ja kylpylöitä, ja kylpeminen on osa unkarilaista arkea, vaikkapa [[Budapestin]] kylpylöissä ja [[Gyulan]] lämpökylpylässä. Kylpylän jälkeen minä ottaisin kyl kürtőskalácsin.
+KYSYMYS: Kerro lisää: Budapestin
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+AIEMPI KYSYMYS: Miksi Unkarissa on niin paljon lämpökylpylöitä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Unkari sijaitsee Pannonian altaassa, jossa maankuori on ohut ja maan sisäinen lämpö nousee lähemmäs pintaa kuin monessa muussa Euroopan osassa, joten maaperästä saadaan kuumaa vettä. Tämän vuoksi maassa on runsaasti lämpölähteitä ja kylpylöitä, ja kylpeminen on osa unkarilaista arkea, vaikkapa [[Budapestin]] kylpylöissä ja [[Gyulan]] lämpökylpylässä. Kylpylän jälkeen minä ottaisin kyl kürtőskalácsin.
+KYSYMYS: Kerro lisää: Gyulan
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Mitä tapahtumaa Feszty-panoraama kuvaa?
+AIEMPI VASTAUS (Livia):
+Kato, siinä on mittaa. Feszty-panoraama kuvaa unkarilaisten maahantulon alkua [[Karpaattien]] altaalle vuonna 895. Sen maalasi [[Árpád Feszty]] apulaisineen, ja se valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi. Teos on 15 metriä korkea ja 120 metriä pitkä, ja se on yksi harvoista maailmassa säilyneistä syklooramoista. Sitä esitellään [[Ópusztaszerin]] kansallisessa perintöpuistossa, jossa se on ollut pysyvästi esillä vuodesta 1995. Sellaista seinää ei kyyhky ehdi yhdellä lennolla ohittaa.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+AIEMPI KYSYMYS: Mitä tapahtumaa Feszty-panoraama kuvaa?
+AIEMPI VASTAUS (Livia):
+Kato, siinä on mittaa. Feszty-panoraama kuvaa unkarilaisten maahantulon alkua [[Karpaattien]] altaalle vuonna 895. Sen maalasi [[Árpád Feszty]] apulaisineen, ja se valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi. Teos on 15 metriä korkea ja 120 metriä pitkä, ja se on yksi harvoista maailmassa säilyneistä syklooramoista. Sitä esitellään [[Ópusztaszerin]] kansallisessa perintöpuistossa, jossa se on ollut pysyvästi esillä vuodesta 1995. Sellaista seinää ei kyyhky ehdi yhdellä lennolla ohittaa.
+KYSYMYS: Kerro lisää: Árpád Feszty
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+AIEMPI KYSYMYS: Mitä tapahtumaa Feszty-panoraama kuvaa?
+AIEMPI VASTAUS (Livia):
+Kato, siinä on mittaa. Feszty-panoraama kuvaa unkarilaisten maahantulon alkua [[Karpaattien]] altaalle vuonna 895. Sen maalasi [[Árpád Feszty]] apulaisineen, ja se valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi. Teos on 15 metriä korkea ja 120 metriä pitkä, ja se on yksi harvoista maailmassa säilyneistä syklooramoista. Sitä esitellään [[Ópusztaszerin]] kansallisessa perintöpuistossa, jossa se on ollut pysyvästi esillä vuodesta 1995. Sellaista seinää ei kyyhky ehdi yhdellä lennolla ohittaa.
+KYSYMYS: Kerro lisää: Ópusztaszerin
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+- [Budapest — kaupunkilehti / Musiikki] Budapestissa keksittiin soitin, jota lyödään vasaroilla, ja tapa, jolla kansantanssia ei katsota vaan tanssitaan itse.
+AIEMPI KYSYMYS: Minkä juhlan kunniaksi panoraama maalattiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Panoraama maalattiin unkarilaisten maahantulon tuhannennen vuosipäivän kunniaksi, ja maalaus valmistui 13. toukokuuta 1894. Unkarissa vietettiin tuhatvuotisjuhlaa laajasti 1890-luvulla, ja päätapahtumat järjestettiin vuonna 1896 [[Budapestissa]]. Maalauksen tekijä oli [[Árpád Feszty]], ja hän työskenteli apulaistensa kanssa. Juhla-aikaan minä olisin toivonut pullaa, mutta kai sitä oli ainakin tarjolla.
+KYSYMYS: Kerro lisää: Budapestissa
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+AIEMPI KYSYMYS: Mikä on sykloorama ja miten se eroaa tavallisesta maalauksesta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sykloorama on ympyrän muotoon rakennettu maalaus, jonka keskellä katsoja seisoo ja jota hän katselee joka suuntaan kiertäen, joten se ympäröi hänet kokonaan. Se eroaa tavallisesta taulusta siis siten, että katsoja on kuvan sisällä eikä sen edessä. Tällaiset teokset olivat suosittu huvi 1800-luvulla, ja niitä on säilynyt maailmassa vain muutamia kymmeniä, joihin kuuluu [[Ópusztaszerin]] [[Feszty-panoraama]].
+
+Minä pidän ympyrämaalauksesta, koska ylhäältä katsottuna kaikki näyttää lopulta samalta. Mut tämä on pienessä huoneessa kyl hyvä keksintö.
+KYSYMYS: Kerro lisää: Feszty-panoraama
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Keksinnöt: Kilokaupalla vitamiinia] 1932 — Albert Szent-Györgyi tutki ainetta, joka esti hedelmien ruskettumisen. Ainetta oli vaikea saada tarpeeksi tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. Tarinan mukaan idea syntyi illallispöydässä.
+AIEMPI KYSYMYS: Missä päin Unkaria Ópusztaszer sijaitsee?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ópusztaszer sijaitsee Unkarin eteläosassa Csongrádin läänissä Suurella Unkarin tasangolla, [[Szegedin]] kaupungin pohjoispuolella. Alue tunnetaan kansallisesta perintöpuistostaan, joka on Unkarin historian ulkoilmamuseo ja perustettiin vuonna 1982. Tunnetuin nähtävyys on [[Feszty-panoraama]]. Kartalta se löytyy kyl helpommin kuin ylhäältä, koska tasanko näyttää joka paikasta samalta.
+KYSYMYS: Kerro lisää: Szegedin
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Mitä arkeologia ja etnografia tutkivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Arkeologia tutkii menneiden aikojen elämää esineiden, rakennusten ja maaperän jäämien avulla, usein kaivauksilla. [[Kansatiede]] eli etnografia tutkii kansojen ja yhteisöjen elämäntapoja, perinteitä, asumista, vaatteita ja työtä. Molemmat kuuluvat [[Ópusztaszerin]] perintöpuiston näyttelyihin, joissa esitellään Unkarin muinaista ja varhaisen uuden ajan historiaa. Tällaisessa [[ulkoilmamuseossa]] voi kävellä kuin historian sisällä. Ja minä kävelen vain vähän, mutta lennän mieluummin.
+KYSYMYS: Kerro lisää: Kansatiede
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+AIEMPI KYSYMYS: Mitä arkeologia ja etnografia tutkivat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Arkeologia tutkii menneiden aikojen elämää esineiden, rakennusten ja maaperän jäämien avulla, usein kaivauksilla. [[Kansatiede]] eli etnografia tutkii kansojen ja yhteisöjen elämäntapoja, perinteitä, asumista, vaatteita ja työtä. Molemmat kuuluvat [[Ópusztaszerin]] perintöpuiston näyttelyihin, joissa esitellään Unkarin muinaista ja varhaisen uuden ajan historiaa. Tällaisessa [[ulkoilmamuseossa]] voi kävellä kuin historian sisällä. Ja minä kävelen vain vähän, mutta lennän mieluummin.
+KYSYMYS: Kerro lisää: ulkoilmamuseossa
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+AIEMPI KYSYMYS: Kuka otti Herendin tehtaan haltuunsa velkojana vuonna 1839?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Herendin tehtaan otti velkojana haltuunsa vuonna 1839 [[Mór Fischer]], sillä perustaja Vince Stinglin rahat olivat loppuneet. Fischer aloitti taideposliinin valmistuksen, ja 1800-luvun puolivälissä tehdas toimitti tuotteita Habsburgien hoville ja aristokraateille eri puolille Eurooppaa. Vuonna 1865 keisari [[Frans Joosef]] antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy. Velkoja ja aatelismies, ei huono ura.
+KYSYMYS: Kerro lisää: Mór Fischer
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+AIEMPI KYSYMYS: Kuka otti Herendin tehtaan haltuunsa velkojana vuonna 1839?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Herendin tehtaan otti velkojana haltuunsa vuonna 1839 [[Mór Fischer]], sillä perustaja Vince Stinglin rahat olivat loppuneet. Fischer aloitti taideposliinin valmistuksen, ja 1800-luvun puolivälissä tehdas toimitti tuotteita Habsburgien hoville ja aristokraateille eri puolille Eurooppaa. Vuonna 1865 keisari [[Frans Joosef]] antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy. Velkoja ja aatelismies, ei huono ura.
+KYSYMYS: Kerro lisää: Frans Joosef
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kohdekartta / Kohdekartta: Victorian laituri] Elokuun 10. päivänä 1519 viisi laivaa irrotti köydet tässä kaupungissa ja laskeutui Guadalquiviria alas Sanlúcariin, joen suulle. Purjeet nostettiin vasta syyskuun 20. päivänä, ja mukana oli noin 270 miestä. Kolmen vuoden päästä palasi yksi laiva, Victoria, ja sen kannella kahdeksantoista miestä. Matkan varrella oli kuollut myös retkikunnan johtaja. Mutta tässä on se kohta, joka isoisääsi kiinnostaisi kaikkein eniten. Kap Verdellä miehet nousivat maihin ostamaan ruokaa ja kuulivat, että päivä oli kymmenes heinäkuuta. Heidän omassa kirjanpidossaan oli yhdeksäs. He olivat merkinneet joka ikisen päivän kolmen vuoden ajan, eikä yhtäkään ollut jäänyt kirjaamatta — ja silti yksi puuttui. Portugal…
+- [Kamerun — kaupunkilehti / Kamerun: Mongo ma Ndemi ja Victorian synty] Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.
+AIEMPI KYSYMYS: Minkä kuningattaren mukaan yksi Herendin kuvioista on nimetty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yksi Herendin tunnetuimmista kuvioista on nimetty kuningatar [[Victorian]] mukaan. Herendin töitä oli esillä muun muassa [[Lontoon]] näyttelyssä vuonna 1851, ja Victoria kuului tehtaan tunnettuihin tilaajiin. Tarkoista yksityiskohdista en ole varma, joten ne kannattaa tarkistaa valmistajan omista lähteistä. [[Herendin]] posliini oli joka tapauksessa hovien suosiossa. Yhdestä kuviosta tulikin pitkä tarina.
+KYSYMYS: Kerro lisää: Victorian
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Lontoon silmä] 2000 Pyörä on 135 metriä korkea, mutta oudointa siinä on tuki: se roikkuu vain toiselta puolelta, kuten polkupyörän eturenkaan pinnat yhdellä haarukalla. Toista yhtä korkeaa näin tuettua maisemapyörää ei maailmassa ole. Pyörää ei nostettu paikalleen valmiina. Koko kehä koottiin makuulleen Thamesin päälle rakennetuille lautoille, ja sitten sitä nostettiin pystyyn hitaasti, pari astetta tunnissa. Kapseleita on 32, numeroitu 1–33, koska numeroa 13 ei ole lainkaan. Pyörä pyörii hitaammin kuin ihminen kävelee eikä pysähdy koskaan — kyytiin astutaan sen liikkuessa.
+- [Melbourne — kaupunkilehti / Historia: Kylä, joka nimettiin Lontoon mukaan] John Batman kertoi touko-kesäkuussa 1835 ostaneensa kahdeksalta wurundjerivanhimmalta 600 000 eekkeriä maata. Osapuolilla ei ollut yhteistä kieltä, ja vanhimmat ymmärsivät tilaisuuden todennäköisesti tanderrumiksi, seremoniaksi jolla annetaan lupa käyttää maata väliaikaisesti. Kuvernööri Richard Bourke mitätöi sopimuksen ja teki paikasta 1836 Port Phillipin hallintokeskuksen. Robert Russell mittasi tontit 1836 ja Robert Hoddle merkitsi ruudukon 1837. Nimen Melbourne Bourke antoi 10. huhtikuuta 1837 Britannian pääministerin mukaan.
+AIEMPI KYSYMYS: Minkä kuningattaren mukaan yksi Herendin kuvioista on nimetty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yksi Herendin tunnetuimmista kuvioista on nimetty kuningatar [[Victorian]] mukaan. Herendin töitä oli esillä muun muassa [[Lontoon]] näyttelyssä vuonna 1851, ja Victoria kuului tehtaan tunnettuihin tilaajiin. Tarkoista yksityiskohdista en ole varma, joten ne kannattaa tarkistaa valmistajan omista lähteistä. [[Herendin]] posliini oli joka tapauksessa hovien suosiossa. Yhdestä kuviosta tulikin pitkä tarina.
+KYSYMYS: Kerro lisää: Lontoon
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+AIEMPI KYSYMYS: Minkä kuningattaren mukaan yksi Herendin kuvioista on nimetty?
+AIEMPI VASTAUS (Livia):
+Katotaas. Yksi Herendin tunnetuimmista kuvioista on nimetty kuningatar [[Victorian]] mukaan. Herendin töitä oli esillä muun muassa [[Lontoon]] näyttelyssä vuonna 1851, ja Victoria kuului tehtaan tunnettuihin tilaajiin. Tarkoista yksityiskohdista en ole varma, joten ne kannattaa tarkistaa valmistajan omista lähteistä. [[Herendin]] posliini oli joka tapauksessa hovien suosiossa. Yhdestä kuviosta tulikin pitkä tarina.
+KYSYMYS: Kerro lisää: Herendin
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+AIEMPI KYSYMYS: Mistä posliini valmistetaan ja miksi se on niin hienoa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Posliini valmistetaan pääosin [[kaoliinista]] eli valkoisesta savesta, maasälvästä ja kvartsista. Massa muotoillaan ja poltetaan hyvin korkeassa lämpötilassa, yli tuhannen asteen kuumuudessa, jolloin siitä tulee tiivis, kova ja ohuenakin valoa läpäisevä. Euroopassa sen valmistuksen salaisuus ratkesi 1700-luvun alussa Saksassa, [[Meissenissä]]. Käsinmaalattu ja kullattu posliini on hienoa myös siksi, että jokainen kappale vaatii kokeneiden tekijöiden aikaa.
+
+Minä olen hauras itsekin, joten kunnioitan posliinia. Kyyhkynä en kyl tilaisi teekuppeja.
+KYSYMYS: Kerro lisää: kaoliinista
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+AIEMPI KYSYMYS: Mistä posliini valmistetaan ja miksi se on niin hienoa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Posliini valmistetaan pääosin [[kaoliinista]] eli valkoisesta savesta, maasälvästä ja kvartsista. Massa muotoillaan ja poltetaan hyvin korkeassa lämpötilassa, yli tuhannen asteen kuumuudessa, jolloin siitä tulee tiivis, kova ja ohuenakin valoa läpäisevä. Euroopassa sen valmistuksen salaisuus ratkesi 1700-luvun alussa Saksassa, [[Meissenissä]]. Käsinmaalattu ja kullattu posliini on hienoa myös siksi, että jokainen kappale vaatii kokeneiden tekijöiden aikaa.
+
+Minä olen hauras itsekin, joten kunnioitan posliinia. Kyyhkynä en kyl tilaisi teekuppeja.
+KYSYMYS: Kerro lisää: Meissenissä
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+AIEMPI KYSYMYS: Missä päin Unkaria Herendin kaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Herend sijaitsee Länsi-Unkarissa, [[Veszprémin]] lähellä, [[Balatonjärven]] pohjoispuolella olevalla seudulla. Siellä toimii Herendin posliinimanufaktuuri, joka perustettiin vuonna 1826 ja on erikoistunut käsinmaalattuun ja kullattuun posliiniin. Seutu kuuluu Tonavan länsipuolisiin alueisiin, joita unkariksi kutsutaan Dunántúliksi. Tarkkaa etäisyyttä Budapestiin en ole varma, mutta sinne ei kyyhkyllä ole pitkä matka.
+KYSYMYS: Kerro lisää: Veszprémin
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Järvi, joka lämpenee nopeasti] Kesäisin — Balaton on Keski-Euroopan suurin järvi, pinta-alaltaan lähes kuusisataa neliökilometriä. Erikoista siinä on mataluus: keskisyvyys on vain runsaat kolme metriä, ja eteläreunalla voi kahlata satoja metrejä ennen kuin vesi ylettyy hartioihin. Matala vesi lämpenee nopeasti, joten järvi on kesällä lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se myös jäätyy talvella lähes joka vuosi. Rannat ovat purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.
+AIEMPI KYSYMYS: Missä päin Unkaria Herendin kaupunki sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Herend sijaitsee Länsi-Unkarissa, [[Veszprémin]] lähellä, [[Balatonjärven]] pohjoispuolella olevalla seudulla. Siellä toimii Herendin posliinimanufaktuuri, joka perustettiin vuonna 1826 ja on erikoistunut käsinmaalattuun ja kullattuun posliiniin. Seutu kuuluu Tonavan länsipuolisiin alueisiin, joita unkariksi kutsutaan Dunántúliksi. Tarkkaa etäisyyttä Budapestiin en ole varma, mutta sinne ei kyyhkyllä ole pitkä matka.
+KYSYMYS: Kerro lisää: Balatonjärven
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Gellértinvuori] 1850–1854 Gellértinvuori kohoaa 235 metrin korkeuteen Tonavan yllä, ja sen nimi tulee piispa Gellertistä, joka surmattiin kukkulalla kansannousussa vuonna 1046 — tarinan mukaan hänet suljettiin piikkitynnyriin ja vieritettiin alas rinnettä. Kukkulan sisällä on kuumien lähteiden muovaamia luolia; vuonna 2007 sieltä löytyi kokonainen kristallien peittämä luola, joka on syntynyt jo 300 000–500 000 vuotta sitten. Huipulla seisoo Citadella-linnoitus, jonka Habsburgit rakensivat 1850-luvulla vuoden 1848 kansannousun jälkeen pitääkseen kaupunkia kurissa. Sen vieressä kohoaa iso pronssipatsas, jonka neuvostojoukot pystyttivät toisen maailmansodan jälkeen voiton muistoksi — patsas näkyy lähes joka p…
+AIEMPI KYSYMYS: Keitä olivat Habsburgit ja mitä valtioita he hallitsivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Habsburgit]] olivat Euroopan merkittävä hallitsijasuku, joka hallitsi vuosisatojen ajan Itävaltaa ja sen naapurialueita sekä oli pitkään Pyhän saksalais-roomalaisen keisarikunnan keisareita. Vuonna 1867 syntyi [[Itävalta-Unkarin]] kaksoismonarkia, jossa Habsburgien keisari oli myös Unkarin kuningas. Keisari [[Frans Joosef]] hallitsi 1800-luvun puolivälistä 1900-luvun alkuun. Suku on aika iso pala Keski-Euroopan historiaa, ja tähän minä en kyl yhdellä lennolla ylettäisi.
+KYSYMYS: Kerro lisää: Habsburgit
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Keitä olivat Habsburgit ja mitä valtioita he hallitsivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Habsburgit]] olivat Euroopan merkittävä hallitsijasuku, joka hallitsi vuosisatojen ajan Itävaltaa ja sen naapurialueita sekä oli pitkään Pyhän saksalais-roomalaisen keisarikunnan keisareita. Vuonna 1867 syntyi [[Itävalta-Unkarin]] kaksoismonarkia, jossa Habsburgien keisari oli myös Unkarin kuningas. Keisari [[Frans Joosef]] hallitsi 1800-luvun puolivälistä 1900-luvun alkuun. Suku on aika iso pala Keski-Euroopan historiaa, ja tähän minä en kyl yhdellä lennolla ylettäisi.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+AIEMPI KYSYMYS: Mikä tyylisuunta näkyi Visegrádissa ensimmäistä kertaa Italian ulkopuolella?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kyseessä oli italialainen [[renessanssi]]. Kuningas [[Mátyás Corvinus]] rakennutti [[Visegrádin]] kuninkaallisen palatsin uudelleen vuosina 1477–1484 myöhäisgoottilaiseen tyyliin ja koristeli sen renessanssin muodoilla, jotka lähteiden mukaan nähtiin Italian ulkopuolella Euroopassa ensimmäistä kertaa juuri täällä. Palatsi sijaitsi Tonavan rannalla, ja sen alkuperä ulottuu 1300-luvulle. Tämän kuninkaan palatsista minä olisin halunnut katsoa.
+KYSYMYS: Kerro lisää: renessanssi
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+AIEMPI KYSYMYS: Mikä tyylisuunta näkyi Visegrádissa ensimmäistä kertaa Italian ulkopuolella?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kyseessä oli italialainen [[renessanssi]]. Kuningas [[Mátyás Corvinus]] rakennutti [[Visegrádin]] kuninkaallisen palatsin uudelleen vuosina 1477–1484 myöhäisgoottilaiseen tyyliin ja koristeli sen renessanssin muodoilla, jotka lähteiden mukaan nähtiin Italian ulkopuolella Euroopassa ensimmäistä kertaa juuri täällä. Palatsi sijaitsi Tonavan rannalla, ja sen alkuperä ulottuu 1300-luvulle. Tämän kuninkaan palatsista minä olisin halunnut katsoa.
+KYSYMYS: Kerro lisää: Mátyás Corvinus
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+AIEMPI KYSYMYS: Mikä tyylisuunta näkyi Visegrádissa ensimmäistä kertaa Italian ulkopuolella?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Kyseessä oli italialainen [[renessanssi]]. Kuningas [[Mátyás Corvinus]] rakennutti [[Visegrádin]] kuninkaallisen palatsin uudelleen vuosina 1477–1484 myöhäisgoottilaiseen tyyliin ja koristeli sen renessanssin muodoilla, jotka lähteiden mukaan nähtiin Italian ulkopuolella Euroopassa ensimmäistä kertaa juuri täällä. Palatsi sijaitsi Tonavan rannalla, ja sen alkuperä ulottuu 1300-luvulle. Tämän kuninkaan palatsista minä olisin halunnut katsoa.
+KYSYMYS: Kerro lisää: Visegrádin
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: Punainen linna] 1500-luku Linna seisoo vanhankaupungin kaakkoisnurkassa omalla kalliollaan. Pohja on epäsäännöllinen nelikulmio, jonka sivut ovat 115, 90, 130 ja 140 metriä, ja pinta-alaa on noin 13 000 neliömetriä; muurien sisällä on useita rakennuksia ja pihoja. Kaivauksissa on löytynyt roomalaisajan jäänteitä, joten paikka voi olla yhtä vanha kuin foinikialaisten Oea. Nykyiset rakenteet ovat pääosin 1500-luvulta. Aragonian kuningaskunta valtasi Tripolin vuonna 1510, ja vuodesta 1530 linnaa pitivät johanniittaritarit, kunnes ottomaanit ajoivat heidät pois 1551. Linnan kerrotaan saaneen punamullan värinsä juuri silloin, ja siitä tulee sen nimi. Ensimmäinen ottomaanien käskynhaltija Murad Agha muutti linna…
+- [Tripoli — kohdekartta / Kohdekartta: Darghutin moskeija] n. 1560 Ottomaanit valtasivat Tripolin vuonna 1551 johanniittaritareilta, ja ensimmäinen käskynhaltija Darghut korjasi ja rakensi kaupungin linnoitukset uudelleen. Vanhakaupunki sai silloin sen viisikulmaisen muodon, joka sillä on yhä. Noin vuonna 1560 Darghut rakennutti muurien sisään oman moskeijansa ja valitsi paikaksi ritarien kirkon tontin. Perimätieto kertoo, ettei kirkkorakennusta purettu vaan se otettiin uuden rakennuksen sisään. Darghut kaatui vuonna 1565 Maltan suuressa piirityksessä. Hänen ruumiinsa tuotiin Tripoliin ja haudattiin tähän moskeijaan, ja haudat ovat yhä toisen mihrabin vieressä. Iskander Pasha teetti 1600-luvun alussa muutoksia: minareetti muotoiltiin uudelleen vuon…
+AIEMPI KYSYMYS: Miksi palatsi hautautui maan alle vuosisadoiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Palatsi jäi raunioiksi, kun [[ottomaanit]] piirittivät sen vuonna 1544. Sen jälkeen rakennuksia ei enää kunnostettu, ja ajan mittaan rauniot peittyivät maahan, luultavasti rinteeltä valuneen maa-aineksen ja rappeutumisen myötä. Tarkasta syystä en ole varma. Kun 1700-luvulle tultaessa palatsi oli kokonaan maan peitossa ja unohdettu, kaivaukset alkoivat vasta vuonna 1934, ja ne jatkuvat yhä. [[Visegrádin]] kuninkaallinen palatsi on siis saanut uuden elämän. Hyvä että se löytyi uudestaan.
+KYSYMYS: Kerro lisää: ottomaanit
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä on Tonavan mutka, jonka rannalla Visegrád sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Tonavan mutka]], unkariksi Dunakanyar, on kohta, jossa joki kiertää vuorten ja kukkuloiden välistä ja kääntyy Visegrádin tienoilla jyrkästi etelään kohti Budapestia. Maisema on vuoristoinen ja jokilaakson rinteitä peittävät metsät. [[Visegrád]] on yksi seudun historiallisista paikoista, ja sen linnoitus kohoaa joen yläpuolella. Ylhäältä katsottuna se on kyyhkyn lempinäkymiä.
+KYSYMYS: Kerro lisää: Tonavan mutka
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+AIEMPI KYSYMYS: Mikä on Tonavan mutka, jonka rannalla Visegrád sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Tonavan mutka]], unkariksi Dunakanyar, on kohta, jossa joki kiertää vuorten ja kukkuloiden välistä ja kääntyy Visegrádin tienoilla jyrkästi etelään kohti Budapestia. Maisema on vuoristoinen ja jokilaakson rinteitä peittävät metsät. [[Visegrád]] on yksi seudun historiallisista paikoista, ja sen linnoitus kohoaa joen yläpuolella. Ylhäältä katsottuna se on kyyhkyn lempinäkymiä.
+KYSYMYS: Kerro lisää: Visegrád
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Missä Visegrád sijaitsee suhteessa Budapestiin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Visegrád sijaitsee [[Tonavan]] rannalla Budapestista pohjoiseen, noin neljäkymmentä kilometriä kaupungista. Se on pieni kaupunki, joka oli keskiajalla Unkarin kuningasten asuinpaikka. Kuninkaallinen palatsi seisoi joen rannalla, ja korkealla rinteellä on [[linnoitus]]. Matkaa Budapestista on lyhyt, joten kyyhkynä minä olen perillä ennen kuin ehdin kunnolla lähteä.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Missä Visegrád sijaitsee suhteessa Budapestiin?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Visegrád sijaitsee [[Tonavan]] rannalla Budapestista pohjoiseen, noin neljäkymmentä kilometriä kaupungista. Se on pieni kaupunki, joka oli keskiajalla Unkarin kuningasten asuinpaikka. Kuninkaallinen palatsi seisoi joen rannalla, ja korkealla rinteellä on [[linnoitus]]. Matkaa Budapestista on lyhyt, joten kyyhkynä minä olen perillä ennen kuin ehdin kunnolla lähteä.
+KYSYMYS: Kerro lisää: linnoitus
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+AIEMPI KYSYMYS: Miten arkeologit löytävät hautautuneita rakennuksia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hautautuneita rakennuksia etsitään vanhojen karttojen, kirjallisten lähteiden ja maastohavaintojen avulla. Maan alla olevia rakenteita voidaan tutkia myös geofysikaalisilla menetelmillä, kuten [[georadarilla]], joka paljastaa maan alla olevia muureja kaivamatta. Varsinaisessa kaivauksessa maa poistetaan kerros kerrokselta ja löydöt kirjataan tarkasti, ja kerrosten järjestys kertoo, mikä on vanhempaa ja mikä nuorempaa. Näin on toimittu myös [[Visegrádissa]], jossa kaivaukset alkoivat vuonna 1934 ja jatkuvat yhä. Hitaasti, mutta varmasti, kuten kyyhkyn kirjepostikin.
+KYSYMYS: Kerro lisää: georadarilla
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+AIEMPI KYSYMYS: Miten arkeologit löytävät hautautuneita rakennuksia?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hautautuneita rakennuksia etsitään vanhojen karttojen, kirjallisten lähteiden ja maastohavaintojen avulla. Maan alla olevia rakenteita voidaan tutkia myös geofysikaalisilla menetelmillä, kuten [[georadarilla]], joka paljastaa maan alla olevia muureja kaivamatta. Varsinaisessa kaivauksessa maa poistetaan kerros kerrokselta ja löydöt kirjataan tarkasti, ja kerrosten järjestys kertoo, mikä on vanhempaa ja mikä nuorempaa. Näin on toimittu myös [[Visegrádissa]], jossa kaivaukset alkoivat vuonna 1934 ja jatkuvat yhä. Hitaasti, mutta varmasti, kuten kyyhkyn kirjepostikin.
+KYSYMYS: Kerro lisää: Visegrádissa

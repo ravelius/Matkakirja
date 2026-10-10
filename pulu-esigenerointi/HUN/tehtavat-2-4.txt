@@ -1,0 +1,1033 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiskunságin puszta (kulttuuri)
+Tietoruudun teksti: Kiskunságin kansallispuisto sijaitsee Tonavan ja Tisza-joen välisellä alueella Bács-Kiskunin läänissä, ja se perustettiin vuonna 1975; Unesco on julistanut sen biosfäärialueeksi. Puisto kattaa 530 neliökilometriä Suuren Unkarin tasangon Pikku-Kumanian alueella, ja se koostuu seitsemästä erillisestä osasta. Yksi niistä on Kiskunságin puszta, jossa vuosittain järjestetään tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Fülöpházan lähellä on hiekkadyynejä, joiden sanotaan liikkuvan otollisessa tuulessa, ja alueen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia muuttolintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Vuoret, luolat ja kuiva joki: Biosfäärialue kaupungin kyljessä] Kaupungin eteläpuolella kohoavat Sierra Madre Orientalin vuoret kuuluvat Cumbres de Monterreyn kansallispuistoon, joka on ollut Unescon MAB-ohjelman biosfäärialue vuodesta 2006. Puiston sisällä on kanjoneita, polkuja ja teitä, jotka kulkevat vuoroin aavikon ja metsän läpi. Tunnetuimmat kohteet ovat La Huasteca lännessä ja Potrero Chico koillisessa, joista kummastakin on tullut kansainvälisen tason kalliokiipeilypaikka. Matacanesin kymmenen tunnin reitillä laskeudutaan köysillä, kahlataan maanalaisia jokia ja ohitetaan putouksia. Cola de Caballo, hevosenhäntä, putoaa noin 35 kilometriä etelämpänä.
+- [Jordania — maalehti / Vedet: Rotkossa kuljetaan vastavirtaan vedessä] Kuolleeseenmereen laskee idästä rotko, jonka pohjalla virtaa vettä ympäri vuoden. Wadi Mujibin suojelualue perustettiin vuonna 1987, ja Unesco nimesi sen biosfäärialueeksi 2011. Rotkon kapeinta kohtaa sanotaan Siqiksi, ja siellä retki tehdään vastavirtaan vedessä kahlaten: seinämät nousevat molemmin puolin lähes pystyinä, eikä kuivaa polkua ole. Jokea ruokkii seitsemän sivupuroa, ja valuma-alueen korkeusero on yli tuhat seitsemänsataa metriä — ylängöltä alas neljänsadan metrin syvyyteen merenpinnan alapuolelle.
+AIEMPI KYSYMYS: Mikä Unesco-asema Kiskunságin puistolla on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Unesco on julistanut Kiskunságin kansallispuiston [[biosfäärialueeksi]]. Puisto sijaitsee Bács-Kiskunin läänissä, ja sen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia [[muuttolintuja]]. Alueella järjestetään myös tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Muuttolinnut tietävät, mikä on hyvä pysähdyspaikka.
+KYSYMYS: Kerro lisää: biosfäärialueeksi
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiskunságin puszta (kulttuuri)
+Tietoruudun teksti: Kiskunságin kansallispuisto sijaitsee Tonavan ja Tisza-joen välisellä alueella Bács-Kiskunin läänissä, ja se perustettiin vuonna 1975; Unesco on julistanut sen biosfäärialueeksi. Puisto kattaa 530 neliökilometriä Suuren Unkarin tasangon Pikku-Kumanian alueella, ja se koostuu seitsemästä erillisestä osasta. Yksi niistä on Kiskunságin puszta, jossa vuosittain järjestetään tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Fülöpházan lähellä on hiekkadyynejä, joiden sanotaan liikkuvan otollisessa tuulessa, ja alueen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia muuttolintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi: Lahti joka ruokkii sata tuhatta lintua] Roebuck Bayn laajat mutatasangot ovat yksi harvoista paikoista maailmassa, joissa pohjaeläimiä elää niin tiheästi, että ne riittävät ruokkimaan kansainvälisesti merkittäviä määriä muuttolintuja. Lahdella on havaittu yli 120 vesilintulajia, joista lähes 40 on Itä-Aasian ja Australasian muuttoreitillä liikkuvia kahlaajia, ja joka vuosi noin 100 000 lintua kerääntyy sinne ennen paluulentoaan pohjoisen pesimäalueille Siperiaan ja Alaskaan asti. Satelliittikuvissa lahden vuorovesitasangot näkyvät laajoina, veden peittäminä tai paljaina alueina sen mukaan, missä vaiheessa vuorovesi kulloinkin on.
+AIEMPI KYSYMYS: Mikä Unesco-asema Kiskunságin puistolla on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Unesco on julistanut Kiskunságin kansallispuiston [[biosfäärialueeksi]]. Puisto sijaitsee Bács-Kiskunin läänissä, ja sen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia [[muuttolintuja]]. Alueella järjestetään myös tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Muuttolinnut tietävät, mikä on hyvä pysähdyspaikka.
+KYSYMYS: Kerro lisää: muuttolintuja
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiskunságin puszta (kulttuuri)
+Tietoruudun teksti: Kiskunságin kansallispuisto sijaitsee Tonavan ja Tisza-joen välisellä alueella Bács-Kiskunin läänissä, ja se perustettiin vuonna 1975; Unesco on julistanut sen biosfäärialueeksi. Puisto kattaa 530 neliökilometriä Suuren Unkarin tasangon Pikku-Kumanian alueella, ja se koostuu seitsemästä erillisestä osasta. Yksi niistä on Kiskunságin puszta, jossa vuosittain järjestetään tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Fülöpházan lähellä on hiekkadyynejä, joiden sanotaan liikkuvan otollisessa tuulessa, ja alueen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia muuttolintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bahr el Ghazal — kaupunkilehti / Karjapaimentolaisten maailma: Karja morsiamen hintana] Karja vaihtaa omistajaa myös avioliitossa: sulhasen suku maksaa morsiamen suvulle useita kymmeniä nautoja, mikä vahvistaa syntyvien lasten kuulumisen isän sukuun. Järjestelmä on niin vahva, että jos mies kuolee lapsettomana, hänen sukunsa voi silti maksaa karjaa naiselle, jonka lapset lasketaan juridisesti vainajan omiksi — niin kutsuttu haamuavioliitto. Dinkat ovat Etelä-Sudanin suurin kansanryhmä, noin 4,5 miljoonaa ihmistä eli reilut 40 prosenttia koko maan väestöstä, ja suurin osa heistä asuu edelleen juuri Bahr el Ghazalin ja Ylä-Niilin karjanhoitoalueilla.
+AIEMPI KYSYMYS: Mitä Kiskunságin pusztalla järjestetään vuosittain?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo on kiva aihe. Kiskunságin pusztalla järjestetään vuosittain tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Puszta on yksi [[Kiskunságin kansallispuiston]] seitsemästä erillisestä osasta, ja se sijaitsee Suuren Unkarin tasangolla. Perinteiden elvyttäminen tarkoittaa, että entisaikojen tapoja tuodaan näkyviin nykypäivänä, esimerkiksi [[karjanhoitoperinnettä]] esitellen. Katolta se näyttäisi varmasti hienolta.
+KYSYMYS: Kerro lisää: karjanhoitoperinnettä
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kohdekartta / Kohdekartta: Vanha vankila] 1845–1924 Vankila oli Port Phillipin ensimmäinen pysyvä vankila. Vartijaksi nimitettiin 1. tammikuuta 1838 George Wintle sadan punnan vuosipalkalla, ja paikkaa kutsuttiin kansanomaisesti Wintlen hotelliksi. Kun kultaa löytyi 1851 ja väkeä tulvi siirtokuntaan, järjestyksen ylläpito kävi vaikeaksi: uusi siipi rakennettiin 1852–1854, tällä kertaa basaltista eikä hiekkakivestä. Malli oli brittiläisen vankila-insinöörin Joshua Jebbin ja erityisesti Lontoon Pentonvillen mallivankilan. Muuri valmistui 1864, ja kokonaisuus täytti yhden korttelin. Aikakauden vankilaoppi uskoi hiljaisuuteen. Vakavista rikoksista tuomitut aloittivat pohjakerroksesta eristyksessä, eivätkä he saaneet puhua toisilleen; s…
+- [Syyria — maalehti / Historia: Katsomo jäi linnoituksen sisään] Bosran teatteri rakennettiin 100-luvulla jaa. mustasta basaltista, jota Hauranin tasangon alla on paksuina kerroksina. Katsomo on 102 metriä leveä, ja se on säilynyt kokonaisena ylintä pylväskäytävää myöten, mikä on roomalaisessa teatterissa harvinaista. Syy on siinä, mitä rakennukselle tehtiin myöhemmin. Teatteri jäi alun perin kaupungin muurien ulkopuolelle, mutta myöhemmät hallitsijat muurasivat sen ympärille linnoituksen torneineen vuosina 1202–1253. Katsomo jäi muurien sisään piiloon, ja sisukseen kertyi hiekkaa, joka todennäköisesti suojasi istuinrivejä. Hiekka kaivettiin pois, ja teatteri kunnostettiin vuosina 1947–1970. Bosra otettiin maailmanperintöluetteloon vuonna 1980.
+AIEMPI KYSYMYS: Mistä kivilajista Badacsonyn läheiset vuoret koostuvat?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Badacsonyn läheiset vuoret koostuvat [[basaltista]], joka on tulivuoritoiminnassa syntynyt kivilaji. Ne ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö. Kukkulat ovat yksittäisiä ja erikoisen muotoisia, ja ne sijaitsevat [[Balatonin]] pohjoisrannalla Länsi-Unkarissa. Hyvä kivi, ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: basaltista
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Seuson hopeat] Roomalainen hopeakalusto matkusti Unkarin pellosta Lontoon holveihin paperilla, jonka mukaan se oli aina asunut Libanonissa. Hopea itse todisti toista: lautaseen oli kaiverrettu Balatonin roomalainen nimi. Esine voi valehdella alkuperänsä vain, jos kukaan ei lue mitä siihen on kirjoitettu.
+AIEMPI KYSYMYS: Mistä kivilajista Badacsonyn läheiset vuoret koostuvat?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Badacsonyn läheiset vuoret koostuvat [[basaltista]], joka on tulivuoritoiminnassa syntynyt kivilaji. Ne ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö. Kukkulat ovat yksittäisiä ja erikoisen muotoisia, ja ne sijaitsevat [[Balatonin]] pohjoisrannalla Länsi-Unkarissa. Hyvä kivi, ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Balatonin
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+AIEMPI KYSYMYS: Minkä viinialueen keskus Badacsony on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Badacsony on [[Badacsonyn viinialueen]] keskus. Se sijaitsee [[Balatonin]] pohjoisrannalla Länsi-Unkarissa, ja nimi tarkoittaa sekä aluetta, vuoren huippua että alueen kaupunkia. Basalttivuorten rinteet ovat siis sekä geologisesti että viininviljelyn kannalta merkittävää seutua. Viinille en ole vielä saanut makua, mutta pullan kanssa se varmaan menisi.
+KYSYMYS: Kerro lisää: Badacsonyn viinialueen
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+AIEMPI KYSYMYS: Kuka runoilija asui Badacsonyn vuorella?
+AIEMPI VASTAUS (Livia):
+No jopas. Runoilija [[Sándor Kisfaludy]] asui Badacsonyn vuorella. Hän tapasi siellä vaimonsa [[Róza Szegedyn]], ja tapahtumaa muistetaan pienessä näyttelyssä. Kisfaludyn entinen talo on nykyään ravintola. Vuori on siis ollut rakkaustarinan paikka, mikä on kyyhkylle tuttu aihe.
+KYSYMYS: Kerro lisää: Sándor Kisfaludy
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+AIEMPI KYSYMYS: Kuka runoilija asui Badacsonyn vuorella?
+AIEMPI VASTAUS (Livia):
+No jopas. Runoilija [[Sándor Kisfaludy]] asui Badacsonyn vuorella. Hän tapasi siellä vaimonsa [[Róza Szegedyn]], ja tapahtumaa muistetaan pienessä näyttelyssä. Kisfaludyn entinen talo on nykyään ravintola. Vuori on siis ollut rakkaustarinan paikka, mikä on kyyhkylle tuttu aihe.
+KYSYMYS: Kerro lisää: Róza Szegedyn
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+AIEMPI KYSYMYS: Mikä Kisfaludyn entinen talo on nykyään?
+AIEMPI VASTAUS (Livia):
+Hmm, annas ku mietin. Runoilija [[Sándor Kisfaludyn]] entinen talo Badacsonyn vuorella on nykyään ravintola. Samalla paikalla on pieni näyttely, joka muistuttaa siitä, että Kisfaludy tapasi vuorella vaimonsa [[Róza Szegedyn]]. Talo on siis nykyisin vierailijoiden käytössä eikä enää asuinkäytössä. Ravintolassa olisi kyl hyvä paikka pullalle.
+KYSYMYS: Kerro lisää: Sándor Kisfaludyn
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä Badacsonyn vuorilla kasvaa ja elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Badacsonyn [[basalttivuoret]] ovat harvinaisten kasvien ja eläinten elinympäristö. Ne ovat ainutlaatuisia geologisia jäänteitä, jotka syntyivät tulivuoritoiminnassa. Alue sijaitsee [[Balatonin]] pohjoisrannalla, ja kukkulat erottuvat ympäristöstään erikoisilla muodoillaan. Tarkkoja lajeja en osaa nimetä, mutta luonto on selvästi vaihtelevaa.
+KYSYMYS: Kerro lisää: basalttivuoret
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+AIEMPI KYSYMYS: Mikä on Gemencin metsän erikoisuus Tonavan varrella?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Gemenc on ainutlaatuinen metsä [[Szekszárdin]] ja Bajan välissä Unkarissa. Sen kuvataan olevan [[Tonavan]] ainoa jäljellä oleva vuorovesialue Unkarissa, vaikka en ole varma, miten sana vuorovesi tässä tarkalleen tulee ymmärtää. Metsän eläimistöön kuuluvat muun muassa hirvet, villisiat, haikarat, muuttohaukat ja merikotkat, ja hirvikanta on maailmankuulu. Metsä kuuluu [[Tonava-Dráva-kansallispuistoon]]. Jokivarren metsä on aina lintujen suosikki.
+KYSYMYS: Kerro lisää: Szekszárdin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä on Gemencin metsän erikoisuus Tonavan varrella?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Gemenc on ainutlaatuinen metsä [[Szekszárdin]] ja Bajan välissä Unkarissa. Sen kuvataan olevan [[Tonavan]] ainoa jäljellä oleva vuorovesialue Unkarissa, vaikka en ole varma, miten sana vuorovesi tässä tarkalleen tulee ymmärtää. Metsän eläimistöön kuuluvat muun muassa hirvet, villisiat, haikarat, muuttohaukat ja merikotkat, ja hirvikanta on maailmankuulu. Metsä kuuluu [[Tonava-Dráva-kansallispuistoon]]. Jokivarren metsä on aina lintujen suosikki.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+AIEMPI KYSYMYS: Mikä on Gemencin metsän erikoisuus Tonavan varrella?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Gemenc on ainutlaatuinen metsä [[Szekszárdin]] ja Bajan välissä Unkarissa. Sen kuvataan olevan [[Tonavan]] ainoa jäljellä oleva vuorovesialue Unkarissa, vaikka en ole varma, miten sana vuorovesi tässä tarkalleen tulee ymmärtää. Metsän eläimistöön kuuluvat muun muassa hirvet, villisiat, haikarat, muuttohaukat ja merikotkat, ja hirvikanta on maailmankuulu. Metsä kuuluu [[Tonava-Dráva-kansallispuistoon]]. Jokivarren metsä on aina lintujen suosikki.
+KYSYMYS: Kerro lisää: Tonava-Dráva-kansallispuistoon
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Minkä eläimen kanta on maailmankuulu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gemencin metsässä maailmankuulu on hirvikanta, koska sen perimä on erinomainen ja sarvet vaikuttavia. Metsän muuhun eläimistöön kuuluvat villisiat, haikarat, [[muuttohaukat]] ja [[merikotkat]]. Gemenc sijaitsee Szekszárdin ja Bajan välissä Tonavan varrella. Sarvia en itse tarvitse, mutta olen kuullut niistä paljon.
+KYSYMYS: Kerro lisää: muuttohaukat
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+AIEMPI KYSYMYS: Minkä eläimen kanta on maailmankuulu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Gemencin metsässä maailmankuulu on hirvikanta, koska sen perimä on erinomainen ja sarvet vaikuttavia. Metsän muuhun eläimistöön kuuluvat villisiat, haikarat, [[muuttohaukat]] ja [[merikotkat]]. Gemenc sijaitsee Szekszárdin ja Bajan välissä Tonavan varrella. Sarvia en itse tarvitse, mutta olen kuullut niistä paljon.
+KYSYMYS: Kerro lisää: merikotkat
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mihin kansallispuistoon Gemenc kuuluu?
+AIEMPI VASTAUS (Livia):
+Katotaas. Gemenc kuuluu [[Tonava-Dráva-kansallispuistoon]]. Se on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja sen vieressä virtaa [[Tonava]]. Kansallispuistoon kuuluvassa metsässä elää muun muassa hirviä, villisikoja ja merikotkia. Hyvin menee, kun nimikin on jo näin pitkä.
+KYSYMYS: Kerro lisää: Tonava
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+AIEMPI KYSYMYS: Mitä puita Gemencin metsässä kasvaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Gemencin metsässä veden lähellä kasvaa [[pajuja]] ja [[poppeleita]]. Kauempana vedestä alkavat laajat [[tammi-saarni-jalavametsät]]. Tämä vyöhykkeisyys johtuu todennäköisesti siitä, kuinka lähellä vettä puut kasvavat, mutta tarkkoja syitä en ole varma. Pajut ovat kuulemma hyviä pesäpaikkoja.
+KYSYMYS: Kerro lisää: pajuja
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Puutarhat: Vihreä suorakaide keskellä paljasta maata] Mahanin kylän laidalla Kermanin maakunnassa on Shazdeh eli ruhtinaan puutarha. Ylhäältä katsottuna se on tarkka suorakaide: muurien sisällä kasvaa poppeleita, sypressejä ja hedelmäpuita, ja heti muurin takana alkaa paljas sorapinta. Pinta-alaa on 5,5 hehtaaria. Puutarha on porrastettu rinteeseen, joten keskiakselin allas laskeutuu tasolta toiselle portaikkona, ja rinteen ylimmällä tasolla on kaksikerroksinen asuinrakennus. Nykyisen asunsa puisto sai 1870-luvulta alkaen Kermanin kuvernöörin Abdolhamid Mirzan tilauksesta. Rakennuttaja kuoli 1890-luvun alussa, ja muurarit jättivät työn kesken: sisääntuloportissa näkyy yhä viimeistelemättömiä kohtia.
+AIEMPI KYSYMYS: Mitä puita Gemencin metsässä kasvaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Gemencin metsässä veden lähellä kasvaa [[pajuja]] ja [[poppeleita]]. Kauempana vedestä alkavat laajat [[tammi-saarni-jalavametsät]]. Tämä vyöhykkeisyys johtuu todennäköisesti siitä, kuinka lähellä vettä puut kasvavat, mutta tarkkoja syitä en ole varma. Pajut ovat kuulemma hyviä pesäpaikkoja.
+KYSYMYS: Kerro lisää: poppeleita
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+AIEMPI KYSYMYS: Mitä puita Gemencin metsässä kasvaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Gemencin metsässä veden lähellä kasvaa [[pajuja]] ja [[poppeleita]]. Kauempana vedestä alkavat laajat [[tammi-saarni-jalavametsät]]. Tämä vyöhykkeisyys johtuu todennäköisesti siitä, kuinka lähellä vettä puut kasvavat, mutta tarkkoja syitä en ole varma. Pajut ovat kuulemma hyviä pesäpaikkoja.
+KYSYMYS: Kerro lisää: tammi-saarni-jalavametsät
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Belgia — maalehti / Luonto: Myrsky avasi Bruggelle tien merelle] 1134 — Vuonna 1134 myrsky puhkaisi Flanderin rannikon ja synnytti Zwin-nimisen vuorovesikanavan, joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta Brugge sai meriyhteyden ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. 1200-luvun lopulta alkaen kanava kuitenkin liettyi, ja noin vuodesta 1500 se oli käyttökelvoton. Nykyinen luonnonsuojelualue perustettiin vuonna 1952. Siellä kasvaa suolaa kestäviä kasveja, ja Zwin on harvoja paikkoja Belgiassa, joissa elää valkoisia haikaroita.
+- [Qatar — maalehti / Luonto: Ainoa metsä kasvaa rantavedessä] Qatarin ainoa varsinainen metsä on mangrove. Al Thakiran matalassa lahdessa kasvaa harmaamangrovea, ja se on maan laajin yhtenäinen kasvusto. Puiden juuristo pidättää mutaa ja hidastaa aallokkoa, ja juurten suojassa kasvaa kalanpoikasia ja katkarapuja — sama saalis, jota kalastajat myöhemmin nostavat lahdelta. Rantavedessä ruokailee lintuja: haikaroita, kahlaajia ja talvisin flamingoja. Alue on suojeltu, ja siellä liikutaan kajakilla, koska vettä on paikoin vain vaaksan verran.
+AIEMPI KYSYMYS: Mitä lintuja Gemencissä elää?
+AIEMPI VASTAUS (Livia):
+No niin, tässä päästään minun alueelleni. Gemencin metsässä elää [[haikaroita]], [[muuttohaukkoja]] ja [[merikotkia]]. Lisäksi metsän eläimistöön kuuluvat hirvet ja villisiat, ja metsä on elinympäristö myös Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille. Se sijaitsee Tonava-Dráva-kansallispuistossa. Pulua ei mainittu, mutta ymmärrän kyl.
+KYSYMYS: Kerro lisää: haikaroita
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Mitä lintuja Gemencissä elää?
+AIEMPI VASTAUS (Livia):
+No niin, tässä päästään minun alueelleni. Gemencin metsässä elää [[haikaroita]], [[muuttohaukkoja]] ja [[merikotkia]]. Lisäksi metsän eläimistöön kuuluvat hirvet ja villisiat, ja metsä on elinympäristö myös Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille. Se sijaitsee Tonava-Dráva-kansallispuistossa. Pulua ei mainittu, mutta ymmärrän kyl.
+KYSYMYS: Kerro lisää: muuttohaukkoja
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+AIEMPI KYSYMYS: Mitä lintuja Gemencissä elää?
+AIEMPI VASTAUS (Livia):
+No niin, tässä päästään minun alueelleni. Gemencin metsässä elää [[haikaroita]], [[muuttohaukkoja]] ja [[merikotkia]]. Lisäksi metsän eläimistöön kuuluvat hirvet ja villisiat, ja metsä on elinympäristö myös Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille. Se sijaitsee Tonava-Dráva-kansallispuistossa. Pulua ei mainittu, mutta ymmärrän kyl.
+KYSYMYS: Kerro lisää: merikotkia
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+AIEMPI KYSYMYS: Mikä on Unkarin suurin kirkko?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Unkarin suurin kirkko on Esztergomin basilika, joka tunnetaan myös nimellä Neitsyt Marian taivaaseenottamisen ja [[Pyhän Adalbertin]] primaattikatedraali. Sen sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä, ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu [[Linnavuoren]] huipulle aiempien kirkkojen perustuksille, ja se on Unkarin katolisen kirkon istuin. Aika iso kirkko, ei mahdu kyyhkyn sulkeisiin.
+KYSYMYS: Kerro lisää: Pyhän Adalbertin
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Lhasa: Talvipalatsi Punaisella kummulla] Marpo Rilla eli Punaisella kummulla oli seissyt linna jo 600-luvulta, kun Viides dalai-lama määräsi 1645 rakennettavaksi uuden palatsin. Ulkoseinät nousivat kolmessa vuodessa, mutta sisustus vei neljäkymmentäviisi vuotta lisää. Dalai-lama muutti Valkoiseen palatsiin 1649, ja Punainen palatsi nousi vasta 1690–1694, kaksitoista vuotta hänen kuolemansa jälkeen. Tuloksena on kolmetoista kerrosta, yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin kaksisataatuhatta patsasta; korkeutta on 119 metriä kukkulan päältä ja yli kolmesataa laakson pohjalta. Kaltevat kiviseinät ovat kolmisen metriä paksut, ja perustuksiin valettiin kuparia järistysten varalta.
+AIEMPI KYSYMYS: Mikä on Unkarin suurin kirkko?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Unkarin suurin kirkko on Esztergomin basilika, joka tunnetaan myös nimellä Neitsyt Marian taivaaseenottamisen ja [[Pyhän Adalbertin]] primaattikatedraali. Sen sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä, ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu [[Linnavuoren]] huipulle aiempien kirkkojen perustuksille, ja se on Unkarin katolisen kirkon istuin. Aika iso kirkko, ei mahdu kyyhkyn sulkeisiin.
+KYSYMYS: Kerro lisää: Linnavuoren
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Mitä osmanit tekivät Esztergomin kirkolle vuonna 1543?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuonna 1543 osmanit valtasivat Esztergomin, purkivat kirkon kuorin ja käyttivät loppua [[moskeijana]]. Siitä on yli neljäsataa vuotta, ja tuolloin kaupunkien valtaukset ja rajojen siirtymiset olivat osa ajan sotia. Nykyisen [[katedraalin]] peruskivi laskettiin vasta vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: moskeijana
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mitä osmanit tekivät Esztergomin kirkolle vuonna 1543?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vuonna 1543 osmanit valtasivat Esztergomin, purkivat kirkon kuorin ja käyttivät loppua [[moskeijana]]. Siitä on yli neljäsataa vuotta, ja tuolloin kaupunkien valtaukset ja rajojen siirtymiset olivat osa ajan sotia. Nykyisen [[katedraalin]] peruskivi laskettiin vasta vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: katedraalin
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+AIEMPI KYSYMYS: Kuka rakennutti ensimmäisen kirkon Esztergomin Linnavuorelle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ensimmäisen kirkon, Pyhän Adalbertin kirkon, rakennutti [[Tapani I]] 1000-luvun alussa. Siitä tuli Unkarin ensimmäinen tuomiokirkko. Nykyinen basilika on rakennettu [[Linnavuoren]] huipulle aiempien kirkkojen perustuksille. Vuosiluvut ovat lähteiden mukaan hiukan tarkempia, mutta pitäydyn varovaisessa arviossa. Harvemmin kyyhky saa kertoa näin vanhoista asioista.
+KYSYMYS: Kerro lisää: Tapani I
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+AIEMPI KYSYMYS: Milloin nykyisen katedraalin peruskivi laskettiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän muistan. Nykyisen katedraalin peruskivi laskettiin vuonna 1822. [[Yläkirkko]] vihittiin käyttöön 31. elokuuta 1856. Kirkko sijaitsee [[Linnavuoren]] huipulla, ja sen perustuksina ovat aiemmat kirkot. Rakennusaika oli siis pitkä, mikä ei ole kirkoille harvinaista. Hyvä muisti kyyhkyllä.
+KYSYMYS: Kerro lisää: Yläkirkko
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+AIEMPI KYSYMYS: Kuinka korkea basilikan kupoli on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä osaan. Esztergomin basilikan [[kupoli]] kohoaa ulkoa 100 metrin korkeuteen. Kirkon pituus on 118 metriä ja leveys 49 metriä, joten kyseessä on Unkarin suurin kirkko. Se seisoo [[Linnavuoren]] huipulla, ja sisäpinta-ala on 5 600 neliömetriä. Ylhäältä katsottuna se näyttää varmasti vielä upeammalta.
+KYSYMYS: Kerro lisää: kupoli
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Minä vuosina Mohácsin lähellä käytiin kaksi kuuluisaa taistelua?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän minä muistan. Mohácsin lähellä käytiin kaksi taistelua, vuosina 1526 ja 1687. Ensimmäinen merkitsi [[Osmanien]] vallan alkua [[Unkarissa]] ja jälkimmäinen sen loppua, joten ne rajaavat yhdessä Unkarin osmanien ajan. Uudempikin taistelu on yli kolmensadan vuoden takaa, ja silloin alueen vallanpitäjät ja rajat olivat aivan toiset kuin nykyään. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Osmanien
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+AIEMPI KYSYMYS: Minä vuosina Mohácsin lähellä käytiin kaksi kuuluisaa taistelua?
+AIEMPI VASTAUS (Livia):
+Selvä juttu, tän minä muistan. Mohácsin lähellä käytiin kaksi taistelua, vuosina 1526 ja 1687. Ensimmäinen merkitsi [[Osmanien]] vallan alkua [[Unkarissa]] ja jälkimmäinen sen loppua, joten ne rajaavat yhdessä Unkarin osmanien ajan. Uudempikin taistelu on yli kolmensadan vuoden takaa, ja silloin alueen vallanpitäjät ja rajat olivat aivan toiset kuin nykyään. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Unkarissa
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Minkä nimistä karnevaalia Mohácsissa vietetään joka kevät?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on kiva kysymys. Mohácsissa vietettävän karnevaalin nimi on [[Busójárás]], ja se pidetään joka kevät. [[Unesco]] kirjasi karnevaalin aineettoman kulttuuriperinnön luetteloon vuonna 2009. Karnevaali kuuluu siis alueen elävään perinteeseen, joka jatkuu vuosittain. Kevät on kyl parasta aikaa, ja kürtőskalács tuoksuis varmaan katolle asti.
+KYSYMYS: Kerro lisää: Busójárás
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Minkä nimistä karnevaalia Mohácsissa vietetään joka kevät?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tää on kiva kysymys. Mohácsissa vietettävän karnevaalin nimi on [[Busójárás]], ja se pidetään joka kevät. [[Unesco]] kirjasi karnevaalin aineettoman kulttuuriperinnön luetteloon vuonna 2009. Karnevaali kuuluu siis alueen elävään perinteeseen, joka jatkuu vuosittain. Kevät on kyl parasta aikaa, ja kürtőskalács tuoksuis varmaan katolle asti.
+KYSYMYS: Kerro lisää: Unesco
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mikä oli Mohácsin sanjak Osmanien vallan aikana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sanjak oli [[Osmanien valtakunnan]] hallinnollinen alue, eli provinssia pienempi hallintoyksikkö. Mohács oli Mohácsin sanjakin hallintokeskus, joten sieltä käsin alueen asioita hoidettiin osmanien vallan aikana. Kaupunki sijaitsee [[Tonavan]] oikealla rannalla Etelä-Unkarissa, ja jo roomalaisaikana rannalla oli sotilasleiri. Sanakin on kyl hankala lausua pulun nokalla.
+KYSYMYS: Kerro lisää: Osmanien valtakunnan
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Mikä oli Mohácsin sanjak Osmanien vallan aikana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sanjak oli [[Osmanien valtakunnan]] hallinnollinen alue, eli provinssia pienempi hallintoyksikkö. Mohács oli Mohácsin sanjakin hallintokeskus, joten sieltä käsin alueen asioita hoidettiin osmanien vallan aikana. Kaupunki sijaitsee [[Tonavan]] oikealla rannalla Etelä-Unkarissa, ja jo roomalaisaikana rannalla oli sotilasleiri. Sanakin on kyl hankala lausua pulun nokalla.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Keitä olivat Tonavan švaabit, joita Mohácsissa asui?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tonavan švaabit ovat saksankielistä väestöä, jonka esivanhemmat asettuivat Unkarin alueelle [[Habsburgien]] aikana. Mohácsissa heitä oli asukkaiden enemmistö vuoteen 1945 asti. Sen jälkeen kaupungin väestö muuttui, ja nykyinen [[Mohácsin]] väestö on koostumukseltaan toisenlainen. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Keitä olivat Tonavan švaabit, joita Mohácsissa asui?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tonavan švaabit ovat saksankielistä väestöä, jonka esivanhemmat asettuivat Unkarin alueelle [[Habsburgien]] aikana. Mohácsissa heitä oli asukkaiden enemmistö vuoteen 1945 asti. Sen jälkeen kaupungin väestö muuttui, ja nykyinen [[Mohácsin]] väestö on koostumukseltaan toisenlainen. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Mohácsin
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+AIEMPI KYSYMYS: Mikä Baranya on, ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Mmm— Baranya, tän minä tiedän. Baranya on lääni Etelä-Unkarissa, Kroatian rajalla. Läänin keskus on [[Pécs]], ja Mohács kuuluu samaan lääniin, [[Tonavan]] oikealle rannalle. En ole aivan varma läänin tarkoista rajoista, joten ne kannattaa tarkistaa kartasta. Pullasta en osaa sanoa siel mitään, harmi.
+KYSYMYS: Kerro lisää: Pécs
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+AIEMPI KYSYMYS: Kuka linnanpäällikkö puolusti Szigetvária vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli tärkeä mies. Szigetvárin linnanpäällikkö oli [[Nikola Zrinski]], joka oli nimitetty tehtävään vuonna 1561. Vuonna 1566 sulttaani [[Suleiman]] johti armeijansa henkilökohtaisesti linnoituksen luo, ja piiritys alkoi elokuussa. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä. Tapahtumista on yli neljäsataa vuotta, ja sinä aikana Unkarin rajat ja vallanpitäjät ovat vaihtuneet moneen kertaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Nikola Zrinski
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Hasht Behesht] 1669 Hasht behesht tarkoittaa persiaksi kahdeksaa paratiisia, ja Iranissa sana on myös pohjakaavan nimi: keskussali, jonka ympärille sijoittuu kahdeksan huonetta. Isfahanin paviljonki on kaavan safavidilainen esimerkki, ja sen rakennutti dynastian kahdeksas hallitsija, shaahi Suleiman I. Se oli hallitsijan yksityinen huvimaja. Vuosiluvut hajoavat: valmistumisvuodeksi merkitään 1669, samasta talosta esitetään myös vuotta 1671, ja väljimmin 1600-luvun loppupuoli. Talo on kahdeksankulmainen ja kaksikerroksinen, ja siihen johtaa kaksi pääovea. Umpinainen se ei ole: neljällä leveimmällä sivulla on suuri holvattu parveke eli iwan, ja parvekkeiden alla nousee ohuita puupylväitä. Keskellä on sali k…
+- [Istanbul — kohdekartta / Kohdekartta: Süleymaniyen moskeija] 1550–1557 Sulttaani Suleiman Suuri tilasi itselleen moskeijan, joka ylittäisi kaikki edeltäjiensä rakennuttamat. Työ annettiin hovin pääarkkitehdille Mimar Sinanille, ja paikaksi valittiin kaupungin kolmas kukkula, jolla seisoi vanha sulttaanin palatsi Eski Saray — se purettiin tieltä. Sisäänkäynnin yläpuolinen arabiankielinen piirtokirjoitus antaa perustamisvuodeksi 1550 ja vihkimisvuodeksi 1557. Rukoussali on lähes neliö, 58,5 kertaa 57,5 metriä, ja sen yllä on yksi valtava kupoli: korkeutta 53 metriä ja halkaisijaa 26,5 metriä eli tasan puolet korkeudesta. Pihan kulmissa on neljä minareettia. Niiden parvekkeita on yhteensä kymmenen, minkä on sanottu viittaavan siihen, että Suleiman oli j…
+AIEMPI KYSYMYS: Kuka linnanpäällikkö puolusti Szigetvária vuonna 1566?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli tärkeä mies. Szigetvárin linnanpäällikkö oli [[Nikola Zrinski]], joka oli nimitetty tehtävään vuonna 1561. Vuonna 1566 sulttaani [[Suleiman]] johti armeijansa henkilökohtaisesti linnoituksen luo, ja piiritys alkoi elokuussa. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä. Tapahtumista on yli neljäsataa vuotta, ja sinä aikana Unkarin rajat ja vallanpitäjät ovat vaihtuneet moneen kertaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Suleiman
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+AIEMPI KYSYMYS: Mitä nimi Szigetvár tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi Szigetvár tarkoittaa saarilinnaa. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset [[Almás-joen]] soiselle tulva-alueelle, joten nimi kuvaa paikkaa hyvin. Vuonna 2011 Unkarin parlamentti antoi kaupungille arvonimen [[Civitas Invicta]]. Saarilinna kuulostaa kyl kyyhkyn mielestä turvalliselta.
+KYSYMYS: Kerro lisää: Almás-joen
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+AIEMPI KYSYMYS: Mitä nimi Szigetvár tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi Szigetvár tarkoittaa saarilinnaa. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset [[Almás-joen]] soiselle tulva-alueelle, joten nimi kuvaa paikkaa hyvin. Vuonna 2011 Unkarin parlamentti antoi kaupungille arvonimen [[Civitas Invicta]]. Saarilinna kuulostaa kyl kyyhkyn mielestä turvalliselta.
+KYSYMYS: Kerro lisää: Civitas Invicta
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+AIEMPI KYSYMYS: Milloin sulttaani Suleiman kuoli Szigetvárin piirityksen aikana?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sulttaani Suleiman kuoli luonnollisiin syihin syyskuussa 1566, lähteiden mukaan 6. tai 7. syyskuuta. Hän oli tuolloin 72-vuotias ja huonokuntoinen, mutta johti silti armeijansa henkilökohtaisesti. Linnoitus kaatui seuraavana päivänä, ja piiritys tunnetaan [[Zrinskin]] ja hänen miestensä viimeisestä hyökkäyksestä. Tapahtumat sijoittuvat aikaan, jolloin [[Unkarin]] kuningaskunnan alue oli jakautunut eri valtojen kesken.
+KYSYMYS: Kerro lisää: Zrinskin
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Milloin sulttaani Suleiman kuoli Szigetvárin piirityksen aikana?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sulttaani Suleiman kuoli luonnollisiin syihin syyskuussa 1566, lähteiden mukaan 6. tai 7. syyskuuta. Hän oli tuolloin 72-vuotias ja huonokuntoinen, mutta johti silti armeijansa henkilökohtaisesti. Linnoitus kaatui seuraavana päivänä, ja piiritys tunnetaan [[Zrinskin]] ja hänen miestensä viimeisestä hyökkäyksestä. Tapahtumat sijoittuvat aikaan, jolloin [[Unkarin]] kuningaskunnan alue oli jakautunut eri valtojen kesken.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mihin asti Zrinski teki hyökkäysretkiä Szigetvárista?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina [[Tonavalle]] asti. Linnoitus sijaitsi [[Almás-joen]] soisella tulva-alueella, mikä teki siitä vaikeasti valloitettavan. Sotaretket jäävät mieluusti muille, minä lennän vain kirjeet.
+KYSYMYS: Kerro lisää: Tonavalle
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mitä arvonimi Civitas Invicta tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Civitas Invicta on latinaa ja tarkoittaa suunnilleen voittamatonta eli valloittamatonta kaupunkia. [[Unkarin parlamentti]] antoi arvonimen [[Szigetvárin]] kaupungille vuonna 2011. Nimi viittaa kaupungin pitkään linnoituskaupungin perinteeseen.
+
+Latinaa sentään, suvun kieltä, joten tällä kertaa minä olen kotikentällä.
+KYSYMYS: Kerro lisää: Unkarin parlamentti
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+AIEMPI KYSYMYS: Mitä arvonimi Civitas Invicta tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Civitas Invicta on latinaa ja tarkoittaa suunnilleen voittamatonta eli valloittamatonta kaupunkia. [[Unkarin parlamentti]] antoi arvonimen [[Szigetvárin]] kaupungille vuonna 2011. Nimi viittaa kaupungin pitkään linnoituskaupungin perinteeseen.
+
+Latinaa sentään, suvun kieltä, joten tällä kertaa minä olen kotikentällä.
+KYSYMYS: Kerro lisää: Szigetvárin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Kenen tyttären syntymäpaikaksi Sárospatakin linna perinteisesti tunnetaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnan rakennutti kuningas [[Andreas II]], ja se tunnetaan perinteisesti hänen tyttärensä [[Pyhän Elisabetin]] syntymäpaikkana. Perinteeseen kannattaa suhtautua sellaisena kuin se on, sillä syntymäpaikkaa on vaikea varmistaa täysin. Vähän vaikea tarkistaa, kun minä en ollu paikalla.
+KYSYMYS: Kerro lisää: Andreas II
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Košice — kaupunkilehti / Rakennukset: Kirkko, johon mahtuu yli viisituhatta ihmistä] Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, pohjoinen torni kohoaa 59 metriin, ja kirkkoon mahtuu yli 5 000 ihmistä. Nykyinen kirkko alkoi nousta noin vuoden 1380 palon jälkeen aiemman, Elisabetille pyhitetyn kirkon paikalle, ja sen katsotaan valmistuneen vuonna 1508. Sisällä keskilaivaa leikkaa yhtä korkea ja leveä poikkilaiva, ja yhdessä ne muodostavat kreikkalaisen ristin.
+AIEMPI KYSYMYS: Kenen tyttären syntymäpaikaksi Sárospatakin linna perinteisesti tunnetaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnan rakennutti kuningas [[Andreas II]], ja se tunnetaan perinteisesti hänen tyttärensä [[Pyhän Elisabetin]] syntymäpaikkana. Perinteeseen kannattaa suhtautua sellaisena kuin se on, sillä syntymäpaikkaa on vaikea varmistaa täysin. Vähän vaikea tarkistaa, kun minä en ollu paikalla.
+KYSYMYS: Kerro lisää: Pyhän Elisabetin
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Rákóczit ja kotiinpaluu Kassaan] Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina 1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.
+AIEMPI KYSYMYS: Kuka johti vapaussotaa Habsburgeja vastaan vuosina 1703–1711?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vapaussotaa johti [[Frans II Rákóczi]]. Sárospatakin kaupunkilaiset osallistuivat sotaan aktiivisesti, ja kaupungin linnan omistivat aikanaan [[Rákóczien]] suku ja muut aatelissuvut. Sota käytiin [[Habsburgeja]] vastaan yli kolmesataa vuotta sitten, aikana jolloin Unkarin asema Habsburgien alaisuudessa oli vahvasti esillä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Frans II Rákóczi
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+AIEMPI KYSYMYS: Kuka johti vapaussotaa Habsburgeja vastaan vuosina 1703–1711?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vapaussotaa johti [[Frans II Rákóczi]]. Sárospatakin kaupunkilaiset osallistuivat sotaan aktiivisesti, ja kaupungin linnan omistivat aikanaan [[Rákóczien]] suku ja muut aatelissuvut. Sota käytiin [[Habsburgeja]] vastaan yli kolmesataa vuotta sitten, aikana jolloin Unkarin asema Habsburgien alaisuudessa oli vahvasti esillä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Rákóczien
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+AIEMPI KYSYMYS: Kuka johti vapaussotaa Habsburgeja vastaan vuosina 1703–1711?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vapaussotaa johti [[Frans II Rákóczi]]. Sárospatakin kaupunkilaiset osallistuivat sotaan aktiivisesti, ja kaupungin linnan omistivat aikanaan [[Rákóczien]] suku ja muut aatelissuvut. Sota käytiin [[Habsburgeja]] vastaan yli kolmesataa vuotta sitten, aikana jolloin Unkarin asema Habsburgien alaisuudessa oli vahvasti esillä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgeja
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Kuka oli runoilija Bálint Balassi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bálint Balassi oli unkarilainen runoilija, jonka elinaika sijoittuu [[renessanssin]] aikaan. Hän meni naimisiin [[Krisztina Dobón]] kanssa Sárospatakin linnassa, jonka omistajiin Dobón suku aikanaan kuului. Runoilijan tuotannosta en ole varma, joten sen tarkemmat piirteet kannattaa tarkistaa kirjallisuudesta. Runoilijat ja kyyhkyt lentävät molemmat, vaikka eri tavalla.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+AIEMPI KYSYMYS: Kuka oli runoilija Bálint Balassi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bálint Balassi oli unkarilainen runoilija, jonka elinaika sijoittuu [[renessanssin]] aikaan. Hän meni naimisiin [[Krisztina Dobón]] kanssa Sárospatakin linnassa, jonka omistajiin Dobón suku aikanaan kuului. Runoilijan tuotannosta en ole varma, joten sen tarkemmat piirteet kannattaa tarkistaa kirjallisuudesta. Runoilijat ja kyyhkyt lentävät molemmat, vaikka eri tavalla.
+KYSYMYS: Kerro lisää: Krisztina Dobón
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+- [Puola — maalehti / Historia: Sydän joka jäi kotiin] 1849 — Fryderyk Chopin kuoli Pariisissa 17. lokakuuta 1849 vain 39-vuotiaana, kaukana kotimaastaan. Hänen oma toiveensa oli, että hänen sydämensä palautettaisiin Puolaan, vaikka ruumis haudattiinkin Père Lachaisen hautausmaalle Pariisiin. Ruumiinavauksen tehnyt lääkäri otti sydämen talteen, ja Chopinin sisar Ludwika kuljetti sen alkoholiin säilöttynä Varsovaan. Sydän muurattiin Pyhän Ristin kirkon pilariin, jossa se lepää yhä tänään — säveltäjä jäi ruumiiltaan Ranskaan mutta sydämeltään kotiin Puolaan.
+AIEMPI KYSYMYS: Miksi Sárospatak oli tärkeä keskiajalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sárospatak sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä. Keskiajalla kaupunki oli tärkeä, koska lähellä kulki kauppareitti [[Puolaan]]. Kaupunki sijaitsee [[Bodrog-joen]] laaksossa Pohjois-Unkarissa, ja sitä kutsutaan usein pelkästään Pataksi. Torilla olis ollu varmaan kuhinaa.
+KYSYMYS: Kerro lisää: Puolaan
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+AIEMPI KYSYMYS: Miksi Sárospatak oli tärkeä keskiajalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Sárospatak sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä. Keskiajalla kaupunki oli tärkeä, koska lähellä kulki kauppareitti [[Puolaan]]. Kaupunki sijaitsee [[Bodrog-joen]] laaksossa Pohjois-Unkarissa, ja sitä kutsutaan usein pelkästään Pataksi. Torilla olis ollu varmaan kuhinaa.
+KYSYMYS: Kerro lisää: Bodrog-joen
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+AIEMPI KYSYMYS: Ketkä omistivat Sárospatakin linnan myöhemmin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnan omistivat myöhemmin muun muassa [[Perényin]], [[Dobón]] ja [[Rákóczien]] suvut. Linnan oli rakennuttanut kuningas Andreas II, ja se tunnetaan perinteisesti Pyhän Elisabetin syntymäpaikkana. Omistajia riitti, kuten linnoilla yleensä.
+KYSYMYS: Kerro lisää: Perényin
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+AIEMPI KYSYMYS: Ketkä omistivat Sárospatakin linnan myöhemmin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Linnan omistivat myöhemmin muun muassa [[Perényin]], [[Dobón]] ja [[Rákóczien]] suvut. Linnan oli rakennuttanut kuningas Andreas II, ja se tunnetaan perinteisesti Pyhän Elisabetin syntymäpaikkana. Omistajia riitti, kuten linnoilla yleensä.
+KYSYMYS: Kerro lisää: Dobón
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Millä nimellä Soprónia kutsuttiin roomalaisaikana?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Roomalaisaikana paikalla oli kaupunki nimeltä [[Scarbantia]]. Sen [[foorumin]] paikalla on nykyään Soprónin pääaukio, joten kaupungin vanha ydin on pysynyt samalla seudulla. Sopron sijaitsee Itävallan rajalla lähellä Neusiedlinjärveä.
+
+Suku on vanhaa roomalaista, joten Scarbantia kuulostaa melkein sukulaiselta.
+KYSYMYS: Kerro lisää: Scarbantia
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Millä nimellä Soprónia kutsuttiin roomalaisaikana?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Roomalaisaikana paikalla oli kaupunki nimeltä [[Scarbantia]]. Sen [[foorumin]] paikalla on nykyään Soprónin pääaukio, joten kaupungin vanha ydin on pysynyt samalla seudulla. Sopron sijaitsee Itävallan rajalla lähellä Neusiedlinjärveä.
+
+Suku on vanhaa roomalaista, joten Scarbantia kuulostaa melkein sukulaiselta.
+KYSYMYS: Kerro lisää: foorumin
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Minkä lisänimen kaupunki sai vuoden 1921 kansanäänestyksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä tiedän. Soprón lisänimi on [[Civitas Fidelissima]], eli uskollisin kaupunki. [[Itävalta-Unkarin]] hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa kansanäänestyksessä joulukuussa 1921, jossa noin 65 prosenttia äänesti Unkarin puolesta. Siitä lähtien kaupunkia on kutsuttu tällä nimellä. Uskollisin kaupunki, siinä on kyl kyyhkyllekin hyvä esikuva.
+KYSYMYS: Kerro lisää: Civitas Fidelissima
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Minkä lisänimen kaupunki sai vuoden 1921 kansanäänestyksen jälkeen?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tän minä tiedän. Soprón lisänimi on [[Civitas Fidelissima]], eli uskollisin kaupunki. [[Itävalta-Unkarin]] hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa kansanäänestyksessä joulukuussa 1921, jossa noin 65 prosenttia äänesti Unkarin puolesta. Siitä lähtien kaupunkia on kutsuttu tällä nimellä. Uskollisin kaupunki, siinä on kyl kyyhkyllekin hyvä esikuva.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Saksan Itä-Afrikka] Vuodesta 1885 vuoteen 1918 Kilimanjaro kuului Saksan Itä-Afrikkaan, Saksan keisarikunnan siirtomaahan. Alueen hallintoa varten rakennettiin bomia eli hallintolinnoja, joista yksi pystytettiin Moshiin vuonna 1893. Ensimmäisen maailmansodan jälkeen alue siirtyi Britannian hallintaan Tanganjikan nimellä, ja vuonna 1961 itsenäistyneessä maassa kiivettiin Kilimanjaron huipulle pimeässä yössä nostamaan uusi lippu – tästä juontuu myös huipun myöhempi nimi Uhuru eli Vapaus.
+AIEMPI KYSYMYS: Mikä oli vuoden 1989 Paneurooppalainen piknik?
+AIEMPI VASTAUS (Livia):
+No niin, tää on tärkeä tapahtuma. Paneurooppalainen piknik pidettiin elokuussa 1989 Soprónin lähellä Unkarin ja Itävallan rajalla. Rajaportti avattiin tilaisuudessa symbolisesti hetkeksi, ja useat [[Itä-Saksan]] kansalaiset ylittivät rajan [[Itävaltaan]]. Tapahtuma kuuluu niihin, jotka heikensivät [[rautaesirippua]] Euroopassa. Kyl kyyhky raja-aidat ohittaa, mut ihmisille se oli iso asia.
+KYSYMYS: Kerro lisää: Itä-Saksan
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Torni romuraudaksi] Huijari Victor Lustig luki Pariisissa 1925 lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito on. Hän palkkasi väärentäjän tekemään valtion kirjelomakkeita, kutsui joukon romukauppiaita luottamukselliseen kokoukseen kalliiseen hotelliin ja esittäytyi posti- ja lennätinministeriön varapääjohtajana: valtio aikoo myydä tornin romuksi, mutta asia on arkaluontoinen eikä siitä saa puhua. Uhrikseen hän valitsi André Poissonin, joka halusi nousta Pariisin liike-elämän sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman — noin 70 000 frangia. Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi Pariisiin saman vuode…
+- [Itävalta — maalehti / Luonto] Itävaltaan mahtuu jäätiköstä arojärveen: sama maa pitää sisällään maailman suurimman jääluolan ja järven, jonka yli näkee maapallon kaarevuuden.
+AIEMPI KYSYMYS: Mikä oli vuoden 1989 Paneurooppalainen piknik?
+AIEMPI VASTAUS (Livia):
+No niin, tää on tärkeä tapahtuma. Paneurooppalainen piknik pidettiin elokuussa 1989 Soprónin lähellä Unkarin ja Itävallan rajalla. Rajaportti avattiin tilaisuudessa symbolisesti hetkeksi, ja useat [[Itä-Saksan]] kansalaiset ylittivät rajan [[Itävaltaan]]. Tapahtuma kuuluu niihin, jotka heikensivät [[rautaesirippua]] Euroopassa. Kyl kyyhky raja-aidat ohittaa, mut ihmisille se oli iso asia.
+KYSYMYS: Kerro lisää: Itävaltaan
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Mikä oli vuoden 1989 Paneurooppalainen piknik?
+AIEMPI VASTAUS (Livia):
+No niin, tää on tärkeä tapahtuma. Paneurooppalainen piknik pidettiin elokuussa 1989 Soprónin lähellä Unkarin ja Itävallan rajalla. Rajaportti avattiin tilaisuudessa symbolisesti hetkeksi, ja useat [[Itä-Saksan]] kansalaiset ylittivät rajan [[Itävaltaan]]. Tapahtuma kuuluu niihin, jotka heikensivät [[rautaesirippua]] Euroopassa. Kyl kyyhky raja-aidat ohittaa, mut ihmisille se oli iso asia.
+KYSYMYS: Kerro lisää: rautaesirippua
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Mikä on Neusiedlinjärvi eli Fertő?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Neusiedlinjärvi eli Fertő on järvi [[Itävallan]] ja [[Unkarin]] rajalla, lähellä Sopronia. Järvi on matala, ja sen ympärillä oleva kulttuurimaisema kuuluu [[Unescon]] maailmanperintökohteisiin. Tarkkoja mittoja en ole varma, joten jätän ne mainitsematta. Minä pysyn kyl kaupungissa, siel on pullaa.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä on Neusiedlinjärvi eli Fertő?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Neusiedlinjärvi eli Fertő on järvi [[Itävallan]] ja [[Unkarin]] rajalla, lähellä Sopronia. Järvi on matala, ja sen ympärillä oleva kulttuurimaisema kuuluu [[Unescon]] maailmanperintökohteisiin. Tarkkoja mittoja en ole varma, joten jätän ne mainitsematta. Minä pysyn kyl kaupungissa, siel on pullaa.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Mikä on Neusiedlinjärvi eli Fertő?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Neusiedlinjärvi eli Fertő on järvi [[Itävallan]] ja [[Unkarin]] rajalla, lähellä Sopronia. Järvi on matala, ja sen ympärillä oleva kulttuurimaisema kuuluu [[Unescon]] maailmanperintökohteisiin. Tarkkoja mittoja en ole varma, joten jätän ne mainitsematta. Minä pysyn kyl kaupungissa, siel on pullaa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+AIEMPI KYSYMYS: Millä nimellä Sopron tunnetaan saksaksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Saksaksi Sopron tunnetaan nimellä [[Ödenburg]]. Kaupunki sijaitsee [[Itävallan]] rajalla, ja Itävalta-Unkarin ajan perintö näkyy sen historiassa. Kaupungin kuuluminen Unkariin ratkaistiin kansanäänestyksessä vuonna 1921. Saksaksi kuulostaa vähän jäykemmältä, mut samaa kaupunkia.
+KYSYMYS: Kerro lisää: Ödenburg
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Kuka perusti Jákin benediktiiniluostarin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli kreivi. Jákin [[benediktiiniluostarin]] perusti kreivi [[Martin Ják]]. Luostarin kirkoksi rakennettiin alun perin [[Pyhän Yrjön seurakuntakirkko]], joka on nykyään Unkarin parhaiten säilynyt romaaninen kirkko. Kylä sijaitsee Vasin läänissä Unkarin läntisellä rajalla. Aika hyvin kyyhky muisti nimet tänään.
+KYSYMYS: Kerro lisää: benediktiiniluostarin
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+AIEMPI KYSYMYS: Kuka perusti Jákin benediktiiniluostarin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli kreivi. Jákin [[benediktiiniluostarin]] perusti kreivi [[Martin Ják]]. Luostarin kirkoksi rakennettiin alun perin [[Pyhän Yrjön seurakuntakirkko]], joka on nykyään Unkarin parhaiten säilynyt romaaninen kirkko. Kylä sijaitsee Vasin läänissä Unkarin läntisellä rajalla. Aika hyvin kyyhky muisti nimet tänään.
+KYSYMYS: Kerro lisää: Martin Ják
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+AIEMPI KYSYMYS: Kuka perusti Jákin benediktiiniluostarin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se oli kreivi. Jákin [[benediktiiniluostarin]] perusti kreivi [[Martin Ják]]. Luostarin kirkoksi rakennettiin alun perin [[Pyhän Yrjön seurakuntakirkko]], joka on nykyään Unkarin parhaiten säilynyt romaaninen kirkko. Kylä sijaitsee Vasin läänissä Unkarin läntisellä rajalla. Aika hyvin kyyhky muisti nimet tänään.
+KYSYMYS: Kerro lisää: Pyhän Yrjön seurakuntakirkko
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Kirjallisuus: Ensimmäinen romaani oli Monte-Criston sukua] 1724–1904 — Burmalainen runo oli vuosisatoja sidottu lay-lone tha-paikin muottiin: nelitavuisia säkeitä, jotka on ketjutettu kiipeävällä riimillä kolmenkymmenen rivin säkeistöiksi. Muotti alkoi löystyä, kun brittiläinen lähetysseura toi maahan ensimmäisen kirjapainon 1816. Historiaa oli kirjoitettu jo ennen sitä: U Kala kokosi 1724 Suuret aikakirjat vuoteen 1711 asti, ja kuningas Bagyidaw asetti 1829 oppineet laatimaan Lasipalatsin aikakirjan. Ensimmäinen burmalainen romaani ilmestyi 1904, ja sen kirjoitti James Hla Kyaw — esikuvana oli Monte-Criston kreivi.
+- [Dublin — kaupunkilehti / Dublin: Romaani, joka kestää yhden päivän] James Joycen romaani Odysseus kertoo yhden ainoan päivän: torstain 16. kesäkuuta 1904 Dublinissa. Joyce valitsi juuri sen päivän, koska silloin hän oli ollut ensi kertaa kävelyllä tulevan vaimonsa Nora Barnaclen kanssa. Nyt joka 16. kesäkuuta dublinilaiset pukeutuvat vuoden 1904 vaatteisiin ja kulkevat kirjan reitit läpi. Ensimmäinen sellainen retki tehtiin 1954 vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 tuntia.
+AIEMPI KYSYMYS: Minkä tyylinen Jákin kirkko on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Jákin kirkko on [[romaaninen]], ja se on Unkarin parhaiten säilynyt romaaninen kirkko. Siinä on kolme laivaa ja kolme apsidia, jotka muodostavat [[basilikarakenteen]]. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla. Kirkko seisoo yhä, kyl se vaan jaksaa.
+KYSYMYS: Kerro lisää: romaaninen
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Minkä tyylinen Jákin kirkko on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Jákin kirkko on [[romaaninen]], ja se on Unkarin parhaiten säilynyt romaaninen kirkko. Siinä on kolme laivaa ja kolme apsidia, jotka muodostavat [[basilikarakenteen]]. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla. Kirkko seisoo yhä, kyl se vaan jaksaa.
+KYSYMYS: Kerro lisää: basilikarakenteen
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+AIEMPI KYSYMYS: Millaisia aiheita Jákin kirkon pylväänpäissä on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Pyhän Yrjön kirkon]] pylväänpäät on veistetty kasvi- ja eläinaiheilla. Veistoksia on koristeena sekä kirkon ulkopuolella että sisällä, ja pääoven edessä oli aikoinaan kylän [[rotunda]]. Eläimet ovat aina hyvä aihe, sanoo kyyhky.
+KYSYMYS: Kerro lisää: Pyhän Yrjön kirkon
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+AIEMPI KYSYMYS: Millaisia aiheita Jákin kirkon pylväänpäissä on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Pyhän Yrjön kirkon]] pylväänpäät on veistetty kasvi- ja eläinaiheilla. Veistoksia on koristeena sekä kirkon ulkopuolella että sisällä, ja pääoven edessä oli aikoinaan kylän [[rotunda]]. Eläimet ovat aina hyvä aihe, sanoo kyyhky.
+KYSYMYS: Kerro lisää: rotunda
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kaupunkilehti / Chennai: Linnoitus, joka valmistui Pyhän Yrjön päivänä] Elokuussa 1639 kauppias Francis Day tapasi Chandragirissä Vijayanagaran keisarin Peda Venkata Rayan ja pyysi kaistaletta Koromandelin rannikkoa kauppahuonetta ja varastoa varten. Lupa annettiin 22. elokuuta, ja paikalla oli tuolloin kalastajakylä nimeltä Madraspatnam. Englannin Itä-Intian kauppakomppania rakensi rantaan linnoituksen, joka valmistui 23. huhtikuuta 1644 eli Pyhän Yrjön päivänä noin kolmentuhannen punnan kustannuksin. Muurien sisään jäi White Town, ulkopuolelle kasvoi George Town, ja näistä kahdesta tuli Madras. Muurien sisällä on myös St. Mary’s, Intian vanhin anglikaaninen kirkko, rakennettu 1678–1680.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Merkato, Afrikan suurin tori] Merkato on Afrikan suurin ulkoilmatori: se peittää useita neliökilometrejä ja työllistää arviolta 13 000 ihmistä 7 100 yrityksessä. Sen läpi kulkeva päätavara on paikallisesti kasvatettu kahvi. Tori syntyi miehityksen aikana: vanha kauppapaikka oli Pyhän Yrjön kirkon luona, ja miehityshallinto siirsi sen länteen ja nimesi uuden torin italian sanalla markkinat. Tori kasvoi ilman kaavaa ja jakautui tavaralajien mukaan osastoihin, joita kutsutaan nimellä terra: yhdessä myydään huonekaluja, toisessa kodinkoneita, kolmannessa kierrätettyä romumetallia.
+AIEMPI KYSYMYS: Missä päin Unkaria Ják sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän [[Pyhän Yrjön]] kirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se tunnetaan veistoksistaan. Kylä kuuluu siis [[Vasin läänin]] alueeseen. Rajan yli lentäminen on kyl kyyhkyltä helppo temppu.
+KYSYMYS: Kerro lisää: Pyhän Yrjön
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+AIEMPI KYSYMYS: Missä päin Unkaria Ják sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän [[Pyhän Yrjön]] kirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se tunnetaan veistoksistaan. Kylä kuuluu siis [[Vasin läänin]] alueeseen. Rajan yli lentäminen on kyl kyyhkyltä helppo temppu.
+KYSYMYS: Kerro lisää: Vasin läänin
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+AIEMPI KYSYMYS: Mikä on rotunda kirkkoarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+No jopas. Rotunda on pyöreä rakennus tai kirkkotila, jonka pohjakaava on ympyrä. Jákin kylässä pääoven edessä oli aikoinaan kylän rotunda. Rotundat ovat osa [[kirkkoarkkitehtuurin]] vanhaa perinnettä, ja Jákin kylän rotunda sijaitsi [[Pyhän Yrjön kirkon]] vieressä. Pyöreä talo on kyl kyyhkylle mukava, ei kulmia.
+KYSYMYS: Kerro lisää: kirkkoarkkitehtuurin
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Kuka kuningas rakennutti Tatan linnan uudelleen renessanssityyliin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnan rakennutti uudelleen renessanssityyliin kuningas [[Matthias Corvinus]], jonka aikana Tatan linna koki kukoistuskautensa. Alun perin linnan oli rakennuttanut [[Lackfin]] suku, ja kaupunki sijaitsee Luoteis-Unkarissa noin 70 kilometrin päässä [[Budapestista]] Gerecsen ja Vértesin vuorten välisessä laaksossa. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: Matthias Corvinus

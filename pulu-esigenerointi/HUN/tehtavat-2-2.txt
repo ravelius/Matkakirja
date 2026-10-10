@@ -1,0 +1,1036 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kékes (luonto · vuori)
+Tietoruudun teksti: Unkarin korkein kohta, 1014 metriä, Mátra-vuoriston laella. Se on maan ainoa yli tuhannen metrin huippu, ja koko Unkarista vain runsas prosentti on tätä ylänköä — muu maa on alankoa ja loivia kukkuloita. Mátra on vulkaanista alkuperää, ja sen andesiitti- ja rioliittirinteitä peittää pyökkimetsä. Nimi Kékes tulee sanasta kék, sininen: kaukaa katsottuna vuori näyttää siniseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi suurin osa Unkarista on tasaista?
+AIEMPI VASTAUS (Livia):
+Mmm— tätä minä olen katsonut ylhäältä monta kertaa. Suuri osa Unkaria kuuluu Pannonian altaaseen, joka on vuorten ympäröimä laaja alanko. Lähteiden mukaan alue oli kauan sitten veden peitossa, ja siihen kertyi jokien tuomaa sedimenttiä, mikä tasoitti maaston. Suurin joki, [[Tonava]], ja [[Tisza]] ovat osa tätä alankoa, ja korkeimmat kohdat, kuten [[Kékes]], ovat poikkeuksia loivassa maisemassa. Tarkkaa ajoitusta en lähde arvaamaan. Alhaalta katsottuna se on hyvä leipäpelto.
+KYSYMYS: Kerro lisää: Tonava
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kékes (luonto · vuori)
+Tietoruudun teksti: Unkarin korkein kohta, 1014 metriä, Mátra-vuoriston laella. Se on maan ainoa yli tuhannen metrin huippu, ja koko Unkarista vain runsas prosentti on tätä ylänköä — muu maa on alankoa ja loivia kukkuloita. Mátra on vulkaanista alkuperää, ja sen andesiitti- ja rioliittirinteitä peittää pyökkimetsä. Nimi Kékes tulee sanasta kék, sininen: kaukaa katsottuna vuori näyttää siniseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Joki kukkii kesäkuussa] Kesäkuu — Tiszajoessa elää Euroopan suurin päivänkorento. Toukka kaivautuu joen savipenkkaan ja elää siellä kolme vuotta. Sitten muutamana kesäkuun iltana kaikki nousevat pintaan yhtä aikaa, kuoriutuvat aikuisiksi ja lentävät. Aikuisella ei ole edes toimivaa suuta, sillä se ei ehdi syödä: se elää vain muutaman tunnin, parittelee ja kuolee. Vedenpinta täyttyy silloin siivistä niin, että ilmiötä kutsutaan joen kukinnaksi. Ilmiö on palannut sen jälkeen, kun joen vedenlaatu parani.
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miksi suurin osa Unkarista on tasaista?
+AIEMPI VASTAUS (Livia):
+Mmm— tätä minä olen katsonut ylhäältä monta kertaa. Suuri osa Unkaria kuuluu Pannonian altaaseen, joka on vuorten ympäröimä laaja alanko. Lähteiden mukaan alue oli kauan sitten veden peitossa, ja siihen kertyi jokien tuomaa sedimenttiä, mikä tasoitti maaston. Suurin joki, [[Tonava]], ja [[Tisza]] ovat osa tätä alankoa, ja korkeimmat kohdat, kuten [[Kékes]], ovat poikkeuksia loivassa maisemassa. Tarkkaa ajoitusta en lähde arvaamaan. Alhaalta katsottuna se on hyvä leipäpelto.
+KYSYMYS: Kerro lisää: Tisza
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+AIEMPI KYSYMYS: Mitä Istállós-kőn luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Istállós-kőn luola on yksi Unkarin tärkeimmistä kivikauden löytöpaikoista. Sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Löydöt kertovat, että [[Bükk-vuoriston]] alueella on asuttu tai ainakin liikuttu hyvin kauan sitten, ja ne ovat tärkeitä [[esihistorian]] tutkimukselle. Tarkkoja löytövuosia tai yksittäisten esineiden ikää en ole varma, joten jätän ne mainitsematta. Se oli kuule monen tuhannen vuoden mittainen asia.
+KYSYMYS: Kerro lisää: Bükk-vuoriston
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kohdekartta / Kohdekartta: Tiibetin museo] avattu 1999 Museo avattiin 5. lokakuuta 1999, ja se on alueen ensimmäinen suuri nykyaikainen museo. Rakennus on L-kirjaimen muotoinen ja seisoo Potalan alapuolella Norbulingkan tien kulmassa. Julkisivu on harmaata tiiltä, räystäät tummanruskeat ja valkoiset ja katto kullattu — yhdistelmä perinteistä tiibetiläistä rakennustapaa ja nykyarkkitehtuuria. Tontti on runsaat viisi hehtaaria ja rakennettua alaa on 23 508 neliömetriä, josta näyttelytilaa 10 451. Kokonaisuus jakautuu kolmeen osaan: päänäyttelyhalliin, kansankulttuurin puutarhaan ja hallinto-osaan. Keskellä on sisäpiha, jonka valkoinen lattia ja kattoikkunat jäljittelevät luostarien pihoja. Kokoelmassa on yli puoli miljoonaa esinettä, …
+AIEMPI KYSYMYS: Mitä Istállós-kőn luolasta on löydetty?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Istállós-kőn luola on yksi Unkarin tärkeimmistä kivikauden löytöpaikoista. Sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Löydöt kertovat, että [[Bükk-vuoriston]] alueella on asuttu tai ainakin liikuttu hyvin kauan sitten, ja ne ovat tärkeitä [[esihistorian]] tutkimukselle. Tarkkoja löytövuosia tai yksittäisten esineiden ikää en ole varma, joten jätän ne mainitsematta. Se oli kuule monen tuhannen vuoden mittainen asia.
+KYSYMYS: Kerro lisää: esihistorian
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+AIEMPI KYSYMYS: Millainen vuoristo Bükk on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bükk on kalkkikivivuoristo, ja sen korkein huippu on Istállós-kő, 959 metriä, joka on Unkarin toiseksi korkein kohta. Kalkkikivi liukenee veteen, joten alueelle on syntynyt luolia ja painanteita, ja ylätasanko on täynnä [[doliineja]], joihin sadevesi katoaa. Kivikauden löytöjen vuoksi vuoriston [[luolat]] ovat myös arkeologisesti tärkeitä. Se on siis aivan toisenlainen vuoristo kuin vulkaaninen [[Mátra]].
+
+Ylhäältä katsottuna se näyttää tavalliselta metsäiseltä selänteeltä, ja vasta maan alla alkavat varsinaiset ihmeet.
+KYSYMYS: Kerro lisää: doliineja
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Cahow, riutat ja luolat: Kalkkikivestä syntyneet luolat] Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.
+AIEMPI KYSYMYS: Millainen vuoristo Bükk on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bükk on kalkkikivivuoristo, ja sen korkein huippu on Istállós-kő, 959 metriä, joka on Unkarin toiseksi korkein kohta. Kalkkikivi liukenee veteen, joten alueelle on syntynyt luolia ja painanteita, ja ylätasanko on täynnä [[doliineja]], joihin sadevesi katoaa. Kivikauden löytöjen vuoksi vuoriston [[luolat]] ovat myös arkeologisesti tärkeitä. Se on siis aivan toisenlainen vuoristo kuin vulkaaninen [[Mátra]].
+
+Ylhäältä katsottuna se näyttää tavalliselta metsäiseltä selänteeltä, ja vasta maan alla alkavat varsinaiset ihmeet.
+KYSYMYS: Kerro lisää: luolat
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+AIEMPI KYSYMYS: Millainen vuoristo Bükk on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Bükk on kalkkikivivuoristo, ja sen korkein huippu on Istállós-kő, 959 metriä, joka on Unkarin toiseksi korkein kohta. Kalkkikivi liukenee veteen, joten alueelle on syntynyt luolia ja painanteita, ja ylätasanko on täynnä [[doliineja]], joihin sadevesi katoaa. Kivikauden löytöjen vuoksi vuoriston [[luolat]] ovat myös arkeologisesti tärkeitä. Se on siis aivan toisenlainen vuoristo kuin vulkaaninen [[Mátra]].
+
+Ylhäältä katsottuna se näyttää tavalliselta metsäiseltä selänteeltä, ja vasta maan alla alkavat varsinaiset ihmeet.
+KYSYMYS: Kerro lisää: Mátra
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+AIEMPI KYSYMYS: Mitä doliinit ovat ja miten ne syntyvät?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Doliini on maanpinnan pyöreähkö painanne, joka syntyy karstialueilla, kun sadevesi liuottaa kalkkikiveä ja kivi vajoaa tai liukenee pois. Vesi ei jää painanteeseen seisomaan vaan katoaa maan alle halkeamien ja luolien kautta. [[Bükk-vuoriston]] ylätasangolla doliineja on paljon, ja ne ovat tyypillinen osa [[karstimaisemaa]]. Koon voivat vaihdella pienistä kuopista suuriin kuoppiin, mutta tarkkoja mittoja en ala keksiä. Eikä siitä pulla kyllä pienene.
+KYSYMYS: Kerro lisää: karstimaisemaa
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Arki: Villa pakataan paaleiksi] nykyään — Kerintäkauden jälkeen villa lajitellaan ja puristetaan suuriksi paaleiksi tilojen omissa villavajoissa, kuten West Point Islandin kuvassa näkyvässä rakennuksessa. Paalit kuljetetaan pienillä aluksilla tai lentäen Port Stanleyhin ja sieltä laivalla eteenpäin, sillä Falklandeilla ei ole omaa villatehdasta. Monilla syrjäisillä tiloilla koko perhe osallistuu kerintään ja pakkaamiseen muutaman viikon ajan vuodessa, ja työ on säilynyt lähes samanlaisena jo 1800-luvun lopulta asti. Villavaja on usein tilan suurin rakennus asuinrakennuksen jälkeen.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Millaisia eläimiä jääkaudella eli Euroopassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Jääkaudella Euroopassa eli suuria nisäkkäitä, joiden sukulaisia ei enää tapaa: [[villamammutti]], [[villasarvikuono]] ja [[luolakarhu]] kuuluivat niihin. Lisäksi alueella liikkui peuroja, hevosia ja susia, ja ne sopeutuivat kylmään ilmastoon paksulla turkilla. Jääkauden eläinten luita on löydetty luolista, kuten [[Istállós-kőn]] luolasta, ja ne kertovat siitä, millainen luonto alueella oli. Tarkkoja lajilistoja jokaisesta paikasta en osaa antaa. Aika kaukana ovat tuntuneet nämä mammuttiajat.
+KYSYMYS: Kerro lisää: villamammutti
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Arki: Villa pakataan paaleiksi] nykyään — Kerintäkauden jälkeen villa lajitellaan ja puristetaan suuriksi paaleiksi tilojen omissa villavajoissa, kuten West Point Islandin kuvassa näkyvässä rakennuksessa. Paalit kuljetetaan pienillä aluksilla tai lentäen Port Stanleyhin ja sieltä laivalla eteenpäin, sillä Falklandeilla ei ole omaa villatehdasta. Monilla syrjäisillä tiloilla koko perhe osallistuu kerintään ja pakkaamiseen muutaman viikon ajan vuodessa, ja työ on säilynyt lähes samanlaisena jo 1800-luvun lopulta asti. Villavaja on usein tilan suurin rakennus asuinrakennuksen jälkeen.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Millaisia eläimiä jääkaudella eli Euroopassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Jääkaudella Euroopassa eli suuria nisäkkäitä, joiden sukulaisia ei enää tapaa: [[villamammutti]], [[villasarvikuono]] ja [[luolakarhu]] kuuluivat niihin. Lisäksi alueella liikkui peuroja, hevosia ja susia, ja ne sopeutuivat kylmään ilmastoon paksulla turkilla. Jääkauden eläinten luita on löydetty luolista, kuten [[Istállós-kőn]] luolasta, ja ne kertovat siitä, millainen luonto alueella oli. Tarkkoja lajilistoja jokaisesta paikasta en osaa antaa. Aika kaukana ovat tuntuneet nämä mammuttiajat.
+KYSYMYS: Kerro lisää: villasarvikuono
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+- [Kiova — kaupunkilehti / Historia: Luola, josta kasvoi luostari] Vuonna 1051 munkki Antonius asettui Athos-vuorelta palattuaan Dnipro-joen rantatörmään kaivettuun luolaan. Hänen askeettinen elämänsä veti puoleensa seuraajia, ja pian luolaan kokoontui pieni munkkiyhteisö. Kolmas johtaja, Teodosios, järjesti yhteisölle omat säännöt ja rakennutti ensimmäiset maanpäälliset rakennukset luolien yläpuolelle. Nimi Petšerska tulee sanasta petšera, luola — ja koko luostarikompleksi kantaa sitä nimeä yhä.
+AIEMPI KYSYMYS: Millaisia eläimiä jääkaudella eli Euroopassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Jääkaudella Euroopassa eli suuria nisäkkäitä, joiden sukulaisia ei enää tapaa: [[villamammutti]], [[villasarvikuono]] ja [[luolakarhu]] kuuluivat niihin. Lisäksi alueella liikkui peuroja, hevosia ja susia, ja ne sopeutuivat kylmään ilmastoon paksulla turkilla. Jääkauden eläinten luita on löydetty luolista, kuten [[Istállós-kőn]] luolasta, ja ne kertovat siitä, millainen luonto alueella oli. Tarkkoja lajilistoja jokaisesta paikasta en osaa antaa. Aika kaukana ovat tuntuneet nämä mammuttiajat.
+KYSYMYS: Kerro lisää: luolakarhu
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+AIEMPI KYSYMYS: Millaisia eläimiä jääkaudella eli Euroopassa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Jääkaudella Euroopassa eli suuria nisäkkäitä, joiden sukulaisia ei enää tapaa: [[villamammutti]], [[villasarvikuono]] ja [[luolakarhu]] kuuluivat niihin. Lisäksi alueella liikkui peuroja, hevosia ja susia, ja ne sopeutuivat kylmään ilmastoon paksulla turkilla. Jääkauden eläinten luita on löydetty luolista, kuten [[Istállós-kőn]] luolasta, ja ne kertovat siitä, millainen luonto alueella oli. Tarkkoja lajilistoja jokaisesta paikasta en osaa antaa. Aika kaukana ovat tuntuneet nämä mammuttiajat.
+KYSYMYS: Kerro lisää: Istállós-kőn
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+AIEMPI KYSYMYS: Miksi Alpit loppuvat juuri tähän?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Alpit eivät varsinaisesti pääty jyrkästi vaan madaltuvat idässä, ja [[Kőszegin vuoret]] ovat Alppien itäisin haara. Heti niiden itäpuolella alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä. Alpit syntyivät mannerlaattojen törmätessä, ja vuoriston vaikutus heikkenee kauempana törmäysvyöhykkeestä. Alppien koko ketjun rakenne on monimutkainen, enkä ala selittää sen yksityiskohtia. [[Írott-kő]] on Unkarin läntisin huippu, 882 metriä. Eikä siihen tarvittu edes torvea.
+KYSYMYS: Kerro lisää: Kőszegin vuoret
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+AIEMPI KYSYMYS: Miksi Alpit loppuvat juuri tähän?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Alpit eivät varsinaisesti pääty jyrkästi vaan madaltuvat idässä, ja [[Kőszegin vuoret]] ovat Alppien itäisin haara. Heti niiden itäpuolella alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä. Alpit syntyivät mannerlaattojen törmätessä, ja vuoriston vaikutus heikkenee kauempana törmäysvyöhykkeestä. Alppien koko ketjun rakenne on monimutkainen, enkä ala selittää sen yksityiskohtia. [[Írott-kő]] on Unkarin läntisin huippu, 882 metriä. Eikä siihen tarvittu edes torvea.
+KYSYMYS: Kerro lisää: Írott-kő
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+AIEMPI KYSYMYS: Millaista oli asua rajavuorella?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tästä en ole aivan varma, koska yksityiskohdat vaihtelevat aikakausittain. Raja kulkee [[Írott-kőn]] huipulla, ja sen laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Rajavuorella asuminen on tarkoittanut sitä, että ihmiset ja kylät ovat eläneet kahden valtion rajavyöhykkeellä, ja rajan merkitys on muuttunut ajan myötä. Nykyisin Unkari ja Itävalta kuuluvat molemmat [[Schengen-alueeseen]], ja raja ylitetään helposti. Aiemmin tilanne oli toinen, mutta tarkkoja vuosia en uskalla antaa. Jos kysyt minulta, kyyhky ei pyydä lupaa rajoilta.
+KYSYMYS: Kerro lisää: Írott-kőn
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+AIEMPI KYSYMYS: Millaista oli asua rajavuorella?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tästä en ole aivan varma, koska yksityiskohdat vaihtelevat aikakausittain. Raja kulkee [[Írott-kőn]] huipulla, ja sen laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Rajavuorella asuminen on tarkoittanut sitä, että ihmiset ja kylät ovat eläneet kahden valtion rajavyöhykkeellä, ja rajan merkitys on muuttunut ajan myötä. Nykyisin Unkari ja Itävalta kuuluvat molemmat [[Schengen-alueeseen]], ja raja ylitetään helposti. Aiemmin tilanne oli toinen, mutta tarkkoja vuosia en uskalla antaa. Jos kysyt minulta, kyyhky ei pyydä lupaa rajoilta.
+KYSYMYS: Kerro lisää: Schengen-alueeseen
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä on Pannonian alanko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pannonian alanko eli Pannonian allas on laaja Keski-Euroopan alanko, jota Alpit, Karpaatit ja Dinaariset vuoret ympäröivät. Suurin osa Unkarista kuuluu siihen, ja alue jatkuu myös naapurimaiden puolelle. [[Kőszegin vuoret]] ovat Alppien itäisin haara, ja niiden itäpuolella maasto muuttuu tasaiseksi. Alueen maaperä on ollut hyvää viljelysmaata, ja sen läpi virtaavat [[Tonava]] ja [[Tisza]]. Tarkkaa pinta-alaa en ole varma. Onpas tämä ollut tasainen vastaus.
+KYSYMYS: Kerro lisää: Tonava
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Joki kukkii kesäkuussa] Kesäkuu — Tiszajoessa elää Euroopan suurin päivänkorento. Toukka kaivautuu joen savipenkkaan ja elää siellä kolme vuotta. Sitten muutamana kesäkuun iltana kaikki nousevat pintaan yhtä aikaa, kuoriutuvat aikuisiksi ja lentävät. Aikuisella ei ole edes toimivaa suuta, sillä se ei ehdi syödä: se elää vain muutaman tunnin, parittelee ja kuolee. Vedenpinta täyttyy silloin siivistä niin, että ilmiötä kutsutaan joen kukinnaksi. Ilmiö on palannut sen jälkeen, kun joen vedenlaatu parani.
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Mikä on Pannonian alanko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pannonian alanko eli Pannonian allas on laaja Keski-Euroopan alanko, jota Alpit, Karpaatit ja Dinaariset vuoret ympäröivät. Suurin osa Unkarista kuuluu siihen, ja alue jatkuu myös naapurimaiden puolelle. [[Kőszegin vuoret]] ovat Alppien itäisin haara, ja niiden itäpuolella maasto muuttuu tasaiseksi. Alueen maaperä on ollut hyvää viljelysmaata, ja sen läpi virtaavat [[Tonava]] ja [[Tisza]]. Tarkkaa pinta-alaa en ole varma. Onpas tämä ollut tasainen vastaus.
+KYSYMYS: Kerro lisää: Tisza
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Halifax: Kuudes joulukuuta 1917] Ranskalainen rahtialus Mont-Blanc ja norjalainen Imo, joka oli rahdattu Belgian avustustoimikunnalle, törmäsivät Halifaxin satamassa aamulla 6. joulukuuta 1917. Mont-Blanc kuljetti räjähdysaineita; törmäys vaurioitti kannen bentsolitynnyreitä, höyryt syttyivät, ja noin kaksikymmentä minuuttia myöhemmin laiva räjähti. Räjähdys oli aikansa suurin ihmisen aiheuttama. Vähintään 1 782 ihmistä kuoli ja arviolta 9 000 loukkaantui, ja lähes kaikki rakennukset kahdeksansadan metrin säteellä tuhoutuivat. Hyökyaalto vei mennessään Tufts Coven mi'kmaq-yhteisön. Apu tuli Bostonista.
+AIEMPI KYSYMYS: Mikä on Alppien korkein vuori?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Alppien korkein vuori on [[Mont Blanc]], joka kohoaa noin 4800 metriin ja sijaitsee Ranskan ja Italian rajalla. Tarkka korkeus vaihtelee lähteiden mukaan muutamalla metrillä, ja siksi kerron vain pyöreän arvon. Verrattuna siihen [[Írott-kő]], Unkarin läntisin huippu, on vaatimaton 882 metriä, ja [[Kőszegin vuoret]] ovat Alppien itäisimpiä haaroja. Mont Blancin juurella sijaitsee muun muassa Chamonix. Ei paha kyyhkyltä, vaikka en ole itse noussut.
+KYSYMYS: Kerro lisää: Mont Blanc
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+AIEMPI KYSYMYS: Miksi Tonava kääntyy Unkarissa niin jyrkästi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Tonava virtaa Visegrádin kohdalla vuoristoon ja kääntyy lännestä jyrkästi etelään, ja kohtaa kutsutaan [[Tonavan mutkaksi]]. Joki ei pääse kulkemaan suoraan, koska edessä on vuoristoinen maasto, ja se hakee reittinsä ympäröivän maaston mukaan. Mutkan jälkeen joki laskeutuu tasaisemmalle alueelle ja jakaa [[Budapestin]] kahtia, Budan länsirannalle ja Pestin itärannalle. Geologiasta en tiedä tarkkaa selitystä, joten en keksi sitä. Sieltä ylhäältä mutka näyttää komealta.
+KYSYMYS: Kerro lisää: Tonavan mutkaksi
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Lipusta leikattiin keskusta pois] 1956 — Lokakuussa 1956 Budapestin kaduille nousi kansannousu maata hallinnutta neuvostojärjestelmää vastaan. Mielenosoittajat ottivat tunnuksekseen maan lipun, jonka keskeltä oli leikattu vaakuna pois: jäljelle jäi puna-valko-vihreä lippu ja siinä reikä. Nousu kesti runsaat kaksi viikkoa, ja se kukistettiin marraskuun alussa. Noin kaksisataatuhatta ihmistä pakeni maasta. Reikälippu on yhä maan kansallispäivän tunnus, ja sitä nostetaan salkoon joka lokakuu.
+- [Unkari — maalehti / Ruoka: Kakku, jolle annettiin oma asetus] 1884 — Sokerileipuri Dobos C. József kehitti vuonna 1884 kakun, joka säilyisi aikana ennen jääkaappeja: viisi ohutta levyä, väliin suklaavoikreemiä ja päälle kova karamellikansi, joka estää kuivumisen. Hän esitteli sen Budapestin suuressa näyttelyssä vuonna 1885, ja maistajiin kuuluivat keisari Frans Joosef ja keisarinna Elisabet. Reseptin Dobos piti salassa vuoteen 1906. Vuonna 2017 Unkarin ministeriö määräsi asetuksella, millainen dobostorta saa olla.
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Unkari — maalehti / Menovinkit] Unkari on avannut oman muistinsa: kaksisataatuhatta valokuvaa ilmaiseksi, Budapestin kartat neljältä eri vuodelta, Bartókin äänittämät kansanlaulut ja kameroita, joista näkee haikaran pesään juuri nyt.
+AIEMPI KYSYMYS: Miksi Tonava kääntyy Unkarissa niin jyrkästi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Tonava virtaa Visegrádin kohdalla vuoristoon ja kääntyy lännestä jyrkästi etelään, ja kohtaa kutsutaan [[Tonavan mutkaksi]]. Joki ei pääse kulkemaan suoraan, koska edessä on vuoristoinen maasto, ja se hakee reittinsä ympäröivän maaston mukaan. Mutkan jälkeen joki laskeutuu tasaisemmalle alueelle ja jakaa [[Budapestin]] kahtia, Budan länsirannalle ja Pestin itärannalle. Geologiasta en tiedä tarkkaa selitystä, joten en keksi sitä. Sieltä ylhäältä mutka näyttää komealta.
+KYSYMYS: Kerro lisää: Budapestin
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+AIEMPI KYSYMYS: Miten Buda ja Pest yhdistettiin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia, ja samana vuonna niistä tehtiin yksi ainoa kaupunki: [[Budapest]]. Kaupunkien välillä oli jo ennen sitä yhteys, sillä vuonna 1849 valmistunut [[Ketjusilta]] oli ensimmäinen pysyvä silta Budan ja Pestin välillä. Tonava jakoi kaupungin vuoriseen länsirantaan ja tasaiseen itärantaan. Yhdistyminen tapahtui samana vuonna kuin isoisän matkakirja, eli hyvään aikaan.
+
+Meikäläisten muistiinpanojen mukaan silta teki kulkemisesta paljon helpompaa, ja minä arvostan jokaista siltaa, jota ei tarvitse ylittää siivin.
+KYSYMYS: Kerro lisää: Budapest
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+AIEMPI KYSYMYS: Miten Buda ja Pest yhdistettiin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia, ja samana vuonna niistä tehtiin yksi ainoa kaupunki: [[Budapest]]. Kaupunkien välillä oli jo ennen sitä yhteys, sillä vuonna 1849 valmistunut [[Ketjusilta]] oli ensimmäinen pysyvä silta Budan ja Pestin välillä. Tonava jakoi kaupungin vuoriseen länsirantaan ja tasaiseen itärantaan. Yhdistyminen tapahtui samana vuonna kuin isoisän matkakirja, eli hyvään aikaan.
+
+Meikäläisten muistiinpanojen mukaan silta teki kulkemisesta paljon helpompaa, ja minä arvostan jokaista siltaa, jota ei tarvitse ylittää siivin.
+KYSYMYS: Kerro lisää: Ketjusilta
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Minkä maiden pääkaupunkien läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tonava virtaa neljän pääkaupungin läpi: Wienin Itävallassa, Bratislavan Slovakiassa, Budapestin Unkarissa ja Belgradin Serbiassa. Se on poikkeuksellinen joki, koska se yhdistää niin monta maata ja kulttuuria. Mustan metsän lähteiltä alkava [[Tonava]] virtaa lopulta Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Tarkkaa muiden maiden lukumäärää en tässä ala listata, ettei tule virhettä. Kaupungeista [[Budapest]] on tuttu, ja [[Wien]] on jäänyt mieleen kahvilansa vuoksi.
+KYSYMYS: Kerro lisää: Tonava
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Wien 1873 — kun huudot vaihtuvat hiljaisuudeksi] 9.5.1873 — Joku huutaa myyntitarjouksen, ja hetken päästä kymmenet huutavat perässä — kukaan ei enää kuuntele ostajia, vain toisiaan. Wienin väliaikaisessa pörssitalossa Schottenringillä on perjantai 9. toukokuuta 1873, ja kurssit ovat pudonneet aamupäivällä niin jyrkästi, että pörssimeklari tarraa pöydän reunaan tunteakseen edes jonkin pysyvän. Vain kahdeksan päivää sitten keisari Franz Joseph avasi maailmannäyttelyn Praterissa, ja koko Eurooppa oli tullut katsomaan Itävalta-Unkarin nousua — rautatie- ja rakennusosakkeiden hinnat olivat kohonneet vuosia pelkällä lupauksella. Nyt lupaus loppuu yhtä äkkiä kuin se alkoi: pankki toisensa jälkeen ilmoittaa maksukyvyttömyydestä, ja poliisi joutu…
+- [Wien — kaupunkilehti / Wien] Kaupunki, jossa keisari söi aamiaista eläintarhan keskellä ja jonka kuuluisin ratas kulkee hitaammin kuin sinä kävelet.
+AIEMPI KYSYMYS: Minkä maiden pääkaupunkien läpi Tonava virtaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tonava virtaa neljän pääkaupungin läpi: Wienin Itävallassa, Bratislavan Slovakiassa, Budapestin Unkarissa ja Belgradin Serbiassa. Se on poikkeuksellinen joki, koska se yhdistää niin monta maata ja kulttuuria. Mustan metsän lähteiltä alkava [[Tonava]] virtaa lopulta Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Tarkkaa muiden maiden lukumäärää en tässä ala listata, ettei tule virhettä. Kaupungeista [[Budapest]] on tuttu, ja [[Wien]] on jäänyt mieleen kahvilansa vuoksi.
+KYSYMYS: Kerro lisää: Wien
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+AIEMPI KYSYMYS: Mitä Ketjusillasta tiedetään?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ketjusilta eli [[Széchenyin ketjusilta]] valmistui vuonna 1849, ja se oli ensimmäinen pysyvä silta Budan ja Pestin välillä. Sen nimi tulee siitä, että kansi roikkuu raskaista metalliketjuista. Siltaa ehdotti ja ajoi eteenpäin kreivi István Széchenyi, ja sen suunnitteli englantilainen insinööri William Tierney Clark. Sodan aikana silta vaurioitui, mutta se rakennettiin uudelleen, ja nykyisin se on yksi [[Budapestin]] tunnetuimpia nähtävyyksiä. Tarkkoja päivämääriä en ala arvata. Minä olen lentänyt sen yli useammin kuin ehdin laskea.
+KYSYMYS: Kerro lisää: Széchenyin ketjusilta
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+AIEMPI KYSYMYS: Miten paprika tuli Unkariin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paprika saapui Unkariin [[ottomaanien]] mukana 1500-luvulla, ja siitä tuli myöhemmin keskeinen osa unkarilaista keittiötä. [[Gulyás]] on Unkarissa keitto, jossa on lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Se, mitä muualla kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. [[Budapestin]] suuressa kauppahallissa, joka avattiin vuonna 1897, paprikaa myydään makeasta tuliseen. Pulla on minulle tärkeämpi, mutta unkarilainen kürtőskalács voittaa ne kaikki.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Gulyás on keitto, ei pata] Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja suuressa kauppahallissa sitä myydään makeasta tuliseen. Halli vihittiin 15. helmikuuta 1897, sen suunnitteli Samu Pecz, ja katto katettiin Pécsin Zsolnay-laatoilla. Pinta-alaa on 10 000 neliötä kolmessa kerroksessa: alimmasta löytyvät kalakauppiaat ja suolakurkut, kadun tasalta liha, leipä ja mausteet.
+AIEMPI KYSYMYS: Miten paprika tuli Unkariin?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paprika saapui Unkariin [[ottomaanien]] mukana 1500-luvulla, ja siitä tuli myöhemmin keskeinen osa unkarilaista keittiötä. [[Gulyás]] on Unkarissa keitto, jossa on lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Se, mitä muualla kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. [[Budapestin]] suuressa kauppahallissa, joka avattiin vuonna 1897, paprikaa myydään makeasta tuliseen. Pulla on minulle tärkeämpi, mutta unkarilainen kürtőskalács voittaa ne kaikki.
+KYSYMYS: Kerro lisää: Gulyás
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Joki kukkii kesäkuussa] Kesäkuu — Tiszajoessa elää Euroopan suurin päivänkorento. Toukka kaivautuu joen savipenkkaan ja elää siellä kolme vuotta. Sitten muutamana kesäkuun iltana kaikki nousevat pintaan yhtä aikaa, kuoriutuvat aikuisiksi ja lentävät. Aikuisella ei ole edes toimivaa suuta, sillä se ei ehdi syödä: se elää vain muutaman tunnin, parittelee ja kuolee. Vedenpinta täyttyy silloin siivistä niin, että ilmiötä kutsutaan joen kukinnaksi. Ilmiö on palannut sen jälkeen, kun joen vedenlaatu parani.
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miksi jokea haluttiin oikaista?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ennen 1800-lukua [[Tisza]] mutkitteli niin loivasti, että [[kevättulvat]] levittivät veden kymmenien kilometrien levyisiksi soiksi. Tulvat haittasivat viljelyä ja asumista, joten jokea haluttiin säännöstellä. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt, joissa yli sata mutkaa katkaistiin oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla maisema muuttui paljon. Tässä oli aika paljon työtä, enkä ole nähnyt kuin lopputuloksen.
+KYSYMYS: Kerro lisää: Tisza
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+AIEMPI KYSYMYS: Miksi jokea haluttiin oikaista?
+AIEMPI VASTAUS (Livia):
+Ai tota. Ennen 1800-lukua [[Tisza]] mutkitteli niin loivasti, että [[kevättulvat]] levittivät veden kymmenien kilometrien levyisiksi soiksi. Tulvat haittasivat viljelyä ja asumista, joten jokea haluttiin säännöstellä. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt, joissa yli sata mutkaa katkaistiin oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla maisema muuttui paljon. Tässä oli aika paljon työtä, enkä ole nähnyt kuin lopputuloksen.
+KYSYMYS: Kerro lisää: kevättulvat
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Borneo — kaupunkilehti / Luonto: Metsä, joka näki dinosaurukset] Borneon sademetsän arvioidaan olevan noin 140 miljoonaa vuotta vanha, mikä tekee siitä yhden maailman vanhimmista. Alavia osia hallitsevat yhä samat puut kuin miljoonia vuosia sitten eli dipterokarpit, ja pelkästään alangon sademetsää on 427 500 neliökilometriä. Koko rantaviivaa kiertää turvesuometsä, ja tuhannen metrin yläpuolella alkaa vuoristosademetsä. Makean veden kaloja tunnetaan noin 440 lajia — suunnilleen yhtä paljon kuin Sumatralla ja Jaavalla yhteensä. Vuoden 2007 Heart of Borneo -sopimuksen jälkeen saarelta oli vuoteen 2010 mennessä löydetty 123 tieteelle uutta lajia.
+AIEMPI KYSYMYS: Mitä säännöstely teki alangon maisemalle?
+AIEMPI VASTAUS (Livia):
+No jopas. Säännöstelyn myötä [[Tisza]] lyheni satoja kilometrejä, ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta, jossa joki oli levittänyt vetensä laajoille tulva-alueille. Alanko muuttui avoimeksi viljelymaaksi, ja luonnon monimuotoisuus kärsi, sillä soiden ja tulvametsien eliöt menettivät elinympäristöjään. Nykyisin [[Suuren alangon]] tulvamaita palautetaan joillakin alueilla, mutta tarkkoja hankkeita en tunne. Hieno maisema silti, vaikka alkuperäinen on mennyt.
+KYSYMYS: Kerro lisää: Suuren alangon
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miksi suot ovat tärkeitä luonnolle?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Suot ovat tärkeitä, koska ne sitovat vettä ja tasaavat tulvia: kun joki nousee, suo ottaa osan vedestä vastaan ja luovuttaa sen hitaasti. Ne toimivat myös elinympäristönä monille linnuille, kasveille ja hyönteisille, ja ne suodattavat vettä. [[Tiszan]] varren vanhat suot kuivattiin pelloiksi säännöstelytöiden aikana, ja samalla menetettiin tärkeitä elinympäristöjä. [[Suuri alanko]] oli kerran huomattavasti kosteampi kuin nykyisin. Kyyhkynä pidän kuivasta, mutta myönnän soiden arvon.
+KYSYMYS: Kerro lisää: Tiszan
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+AIEMPI KYSYMYS: Miksi suot ovat tärkeitä luonnolle?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Suot ovat tärkeitä, koska ne sitovat vettä ja tasaavat tulvia: kun joki nousee, suo ottaa osan vedestä vastaan ja luovuttaa sen hitaasti. Ne toimivat myös elinympäristönä monille linnuille, kasveille ja hyönteisille, ja ne suodattavat vettä. [[Tiszan]] varren vanhat suot kuivattiin pelloiksi säännöstelytöiden aikana, ja samalla menetettiin tärkeitä elinympäristöjä. [[Suuri alanko]] oli kerran huomattavasti kosteampi kuin nykyisin. Kyyhkynä pidän kuivasta, mutta myönnän soiden arvon.
+KYSYMYS: Kerro lisää: Suuri alanko
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mihin jokeen Tisza lopulta virtaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Tisza]] virtaa lopulta [[Tonavaan]]. Liittymiskohta on Serbian puolella, kun Tisza on ensin kulkenut Karpaateilta Suuren alangon halki pohjoisesta etelään. Matkallaan se kohtaa useita maita, ja Unkarissa se on toinen suuri joki Tonavan jälkeen. Tarkkaa liittymispaikkaa en ala nimetä varmuuden puutteessa. Jokien yhdistyessä Tonavan vesimäärä kasvaa, ja yhdessä ne laskevat lopulta Mustallemerelle. Pitkä on tämä joen matka, ja minulle se on tuttu ylhäältä.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Joki kukkii kesäkuussa] Kesäkuu — Tiszajoessa elää Euroopan suurin päivänkorento. Toukka kaivautuu joen savipenkkaan ja elää siellä kolme vuotta. Sitten muutamana kesäkuun iltana kaikki nousevat pintaan yhtä aikaa, kuoriutuvat aikuisiksi ja lentävät. Aikuisella ei ole edes toimivaa suuta, sillä se ei ehdi syödä: se elää vain muutaman tunnin, parittelee ja kuolee. Vedenpinta täyttyy silloin siivistä niin, että ilmiötä kutsutaan joen kukinnaksi. Ilmiö on palannut sen jälkeen, kun joen vedenlaatu parani.
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miksi Dráva sai jäädä säännöstelemättä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost tulee mieleen jokivarsi ylhäältä katsottuna. Joen oikaiseminen oli Euroopassa tavallista, ja esimerkiksi [[Tisza]] sai suoremman uoman, mutta Dráva jäi suurelta osin koskemattomaksi. Yhtä ainoaa syytä en osaa varmasti nimetä, mutta yksi selitys voi olla se, että joki kulkee pitkän matkaa kahden maan rajana, mikä tekee yhteisistä uomatöistä hankalampia. Seurauksena joki on yhä leveä ja arvaamaton: se siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen [[tulvametsät]] kuuluvat Keski-Euroopan laajimpiin, ja joki laskee lopulta [[Tonavaan]]. Kyl minä pidän joesta, jota ei ole viivoitettu suoraksi.
+KYSYMYS: Kerro lisää: Tisza
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Macapá — kaupunkilehti / Suisto ja sademetsä: Tulvametsät ja tulipunaiset linnut] Macapán ympärillä maisema vaihtelee mangrovemetsien, makeanveden kosteikkojen ja kausittain tulvivien metsien välillä. Aivan kaupungin kupeessa sijaitseva Rio Curiaún suojelualue kattaa yli 20 000 hehtaaria tulvaniittyjä, tulvametsää ja savannia, ja se on rauhoitettu myös alueen perinteisen väestön elämäntavan turvaamiseksi. Kosteikkojen tunnetuin asukas on guará eli tulipunainen ibis, jonka räikeän punainen höyhenpuku erottuu kauas mangrovepuiden ja mutavallien keskeltä; samat vesialueet ovat myös suiston kalastajien tärkeimpiä pyyntipaikkoja.
+AIEMPI KYSYMYS: Miksi Dráva sai jäädä säännöstelemättä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost tulee mieleen jokivarsi ylhäältä katsottuna. Joen oikaiseminen oli Euroopassa tavallista, ja esimerkiksi [[Tisza]] sai suoremman uoman, mutta Dráva jäi suurelta osin koskemattomaksi. Yhtä ainoaa syytä en osaa varmasti nimetä, mutta yksi selitys voi olla se, että joki kulkee pitkän matkaa kahden maan rajana, mikä tekee yhteisistä uomatöistä hankalampia. Seurauksena joki on yhä leveä ja arvaamaton: se siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen [[tulvametsät]] kuuluvat Keski-Euroopan laajimpiin, ja joki laskee lopulta [[Tonavaan]]. Kyl minä pidän joesta, jota ei ole viivoitettu suoraksi.
+KYSYMYS: Kerro lisää: tulvametsät
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Miksi Dráva sai jäädä säännöstelemättä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost tulee mieleen jokivarsi ylhäältä katsottuna. Joen oikaiseminen oli Euroopassa tavallista, ja esimerkiksi [[Tisza]] sai suoremman uoman, mutta Dráva jäi suurelta osin koskemattomaksi. Yhtä ainoaa syytä en osaa varmasti nimetä, mutta yksi selitys voi olla se, että joki kulkee pitkän matkaa kahden maan rajana, mikä tekee yhteisistä uomatöistä hankalampia. Seurauksena joki on yhä leveä ja arvaamaton: se siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen [[tulvametsät]] kuuluvat Keski-Euroopan laajimpiin, ja joki laskee lopulta [[Tonavaan]]. Kyl minä pidän joesta, jota ei ole viivoitettu suoraksi.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Millaisia eläimiä joen rannoilla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Katolta katsottuna rantametsä on aika täynnä siipiveljiä. Dráva-joen tulvametsissä pesii muun muassa [[merikotkia]] ja [[mustahaikaroita]], jotka tarvitsevat laajoja, rauhallisia metsäalueita ja kalaisia vesiä. Joen alati muuttuvat särkät, vanhat uomat ja kosteikot tarjoavat elinympäristöjä myös monille kaloille, sammakkoeläimille ja vesilinnuille, vaikka tarkkaa lajilistaa en osaa luetella. Juuri säännöstelemätön, vapaasti liikkuva joki pitää nämä elinympäristöt olemassa. Haikaroiden kanssa minulla on vanhaa kilpailua taivaalla.
+KYSYMYS: Kerro lisää: merikotkia
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Millaisia eläimiä joen rannoilla elää?
+AIEMPI VASTAUS (Livia):
+Ai tota. Katolta katsottuna rantametsä on aika täynnä siipiveljiä. Dráva-joen tulvametsissä pesii muun muassa [[merikotkia]] ja [[mustahaikaroita]], jotka tarvitsevat laajoja, rauhallisia metsäalueita ja kalaisia vesiä. Joen alati muuttuvat särkät, vanhat uomat ja kosteikot tarjoavat elinympäristöjä myös monille kaloille, sammakkoeläimille ja vesilinnuille, vaikka tarkkaa lajilistaa en osaa luetella. Juuri säännöstelemätön, vapaasti liikkuva joki pitää nämä elinympäristöt olemassa. Haikaroiden kanssa minulla on vanhaa kilpailua taivaalla.
+KYSYMYS: Kerro lisää: mustahaikaroita
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+- [Alpit — kaupunkilehti / Luonto: Lintu, joka syö luita] Partakorppikotkan ravinnosta valtaosa on luuta — se on ainoa lintu maailmassa, joka elää lähes pelkillä luilla. Isot luut se kantaa ilmaan ja pudottaa kalliolle, kunnes ne murtuvat, ja nielee palat kokonaisina; vatsahapot ovat niin väkeviä, että luu liukenee. Siipiväli on lähes kolme metriä. Lintu tapettiin Alpeilta sukupuuttoon 1900-luvun alkuun mennessä, koska sen luultiin vievän lampaita ja lapsia. Palautus aloitettiin 1986, ja nyt niitä pesii taas satakunta paria.
+- [Alpit — kaupunkilehti / Alpit: Vuori hehkuu punaisena auringon laskiessa] Matterhorn on lähes symmetrinen pyramidi, jonka neljä jyrkkää seinämää osoittavat ilmansuuntiin, ja huippu kohoaa 4 478 metriin Sveitsin ja Italian rajalla. Auringon laskiessa tai noustessa huippu hehkuu hetken punaisena tai oranssina, kun matala valo heijastuu ilmakehän pisaroista — ilmiötä kutsutaan alppihehkuksi (saksaksi Alpenglühen), ja nimi tulee juuri Alpeilta. Muotonsa ja hehkunsa ansiosta Matterhorn on yksi maailman kuvatuimmista vuorista.
+AIEMPI KYSYMYS: Mistä Dráva saa alkunsa ja mitä maita se kiertää?
+AIEMPI VASTAUS (Livia):
+Kato, tän reitin minä olen lentänyt pätkittäin. Dráva saa alkunsa [[Alpeilta]], Italian pohjoisosasta, ja virtaa Itävallan ja [[Slovenian]] kautta Kroatiaan. Alajuoksulla se kulkee Unkarin ja Kroatian rajana ja yhtyy lopulta [[Tonavaan]] Itä-Kroatiassa, [[Osijekin]] seudulla. Koko matka on noin seitsemänsataa kilometriä, mutta luku on suuntaa-antava. Matkan varrella haaveilin kyl kunnon pullasta.
+KYSYMYS: Kerro lisää: Alpeilta
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kohdekartta / Kohdekartta: Lohikäärmesilta] 1901 Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden 1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun professori Janez Koželj on arvellut, että uutta tekniikkaa kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että epäonnistuminen olisi täällä ollut pienempi vahinko. Silta tehtiin wieniläisen Pittel+Brausewetterin suunnitelmista insinööri Josef Melanin patentin mukaan, ja arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton Bonaventura Jeg…
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan tuomiokirkko] 1701–1706 Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen kirkko, ja sen tuntee vihreästä kupolista ja kahdesta tornista. Paikalla seisoi ensin kolmilaivainen romaaninen kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se paloi taas, ja tuhopoltosta epäiltiin turkkilaisia. Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse valvonut työtä, joten rakentajat muuttivat suunnitelm…
+AIEMPI KYSYMYS: Mistä Dráva saa alkunsa ja mitä maita se kiertää?
+AIEMPI VASTAUS (Livia):
+Kato, tän reitin minä olen lentänyt pätkittäin. Dráva saa alkunsa [[Alpeilta]], Italian pohjoisosasta, ja virtaa Itävallan ja [[Slovenian]] kautta Kroatiaan. Alajuoksulla se kulkee Unkarin ja Kroatian rajana ja yhtyy lopulta [[Tonavaan]] Itä-Kroatiassa, [[Osijekin]] seudulla. Koko matka on noin seitsemänsataa kilometriä, mutta luku on suuntaa-antava. Matkan varrella haaveilin kyl kunnon pullasta.
+KYSYMYS: Kerro lisää: Slovenian
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Mistä Dráva saa alkunsa ja mitä maita se kiertää?
+AIEMPI VASTAUS (Livia):
+Kato, tän reitin minä olen lentänyt pätkittäin. Dráva saa alkunsa [[Alpeilta]], Italian pohjoisosasta, ja virtaa Itävallan ja [[Slovenian]] kautta Kroatiaan. Alajuoksulla se kulkee Unkarin ja Kroatian rajana ja yhtyy lopulta [[Tonavaan]] Itä-Kroatiassa, [[Osijekin]] seudulla. Koko matka on noin seitsemänsataa kilometriä, mutta luku on suuntaa-antava. Matkan varrella haaveilin kyl kunnon pullasta.
+KYSYMYS: Kerro lisää: Osijekin
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Miten tulvametsä eroaa tavallisesta metsästä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on sellainen metsä, joka osaa kastua. Tulvametsä on metsä, jonka maa joutuu säännöllisesti veden alle, kun joki nousee yli äyräidensä. Siellä kasvaa kosteutta kestäviä lajeja, kuten [[pajuja]], [[leppiä]] ja [[poppeleita]], ja tulva tuo mukanaan lietettä, joka lannoittaa maaperää. Tavallisessa metsässä maa on pääosin kuiva ja pysyy samanlaisena vuodesta toiseen, kun taas tulvametsä muuttuu joen mukana: uomat siirtyvät, lammet syntyvät ja kuolevat, ja kaatuneet puut jäävät lahoamaan, mikä hyödyttää hyönteisiä ja lintuja. Tällaisia metsiä on Euroopassa jäljellä verrattain vähän, koska jokia on oikaistu ja padottu. Ja minä kun pelkäsin pelkkää sadetta.
+KYSYMYS: Kerro lisää: pajuja
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Miten tulvametsä eroaa tavallisesta metsästä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on sellainen metsä, joka osaa kastua. Tulvametsä on metsä, jonka maa joutuu säännöllisesti veden alle, kun joki nousee yli äyräidensä. Siellä kasvaa kosteutta kestäviä lajeja, kuten [[pajuja]], [[leppiä]] ja [[poppeleita]], ja tulva tuo mukanaan lietettä, joka lannoittaa maaperää. Tavallisessa metsässä maa on pääosin kuiva ja pysyy samanlaisena vuodesta toiseen, kun taas tulvametsä muuttuu joen mukana: uomat siirtyvät, lammet syntyvät ja kuolevat, ja kaatuneet puut jäävät lahoamaan, mikä hyödyttää hyönteisiä ja lintuja. Tällaisia metsiä on Euroopassa jäljellä verrattain vähän, koska jokia on oikaistu ja padottu. Ja minä kun pelkäsin pelkkää sadetta.
+KYSYMYS: Kerro lisää: leppiä
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Puutarhat: Vihreä suorakaide keskellä paljasta maata] Mahanin kylän laidalla Kermanin maakunnassa on Shazdeh eli ruhtinaan puutarha. Ylhäältä katsottuna se on tarkka suorakaide: muurien sisällä kasvaa poppeleita, sypressejä ja hedelmäpuita, ja heti muurin takana alkaa paljas sorapinta. Pinta-alaa on 5,5 hehtaaria. Puutarha on porrastettu rinteeseen, joten keskiakselin allas laskeutuu tasolta toiselle portaikkona, ja rinteen ylimmällä tasolla on kaksikerroksinen asuinrakennus. Nykyisen asunsa puisto sai 1870-luvulta alkaen Kermanin kuvernöörin Abdolhamid Mirzan tilauksesta. Rakennuttaja kuoli 1890-luvun alussa, ja muurarit jättivät työn kesken: sisääntuloportissa näkyy yhä viimeistelemättömiä kohtia.
+AIEMPI KYSYMYS: Miten tulvametsä eroaa tavallisesta metsästä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on sellainen metsä, joka osaa kastua. Tulvametsä on metsä, jonka maa joutuu säännöllisesti veden alle, kun joki nousee yli äyräidensä. Siellä kasvaa kosteutta kestäviä lajeja, kuten [[pajuja]], [[leppiä]] ja [[poppeleita]], ja tulva tuo mukanaan lietettä, joka lannoittaa maaperää. Tavallisessa metsässä maa on pääosin kuiva ja pysyy samanlaisena vuodesta toiseen, kun taas tulvametsä muuttuu joen mukana: uomat siirtyvät, lammet syntyvät ja kuolevat, ja kaatuneet puut jäävät lahoamaan, mikä hyödyttää hyönteisiä ja lintuja. Tällaisia metsiä on Euroopassa jäljellä verrattain vähän, koska jokia on oikaistu ja padottu. Ja minä kun pelkäsin pelkkää sadetta.
+KYSYMYS: Kerro lisää: poppeleita
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Miten joki muuttaa uomaansa ajan mittaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joki ei ole koskaan valmis, se vaan näyttää siltä. Vapaasti virtaava joki kuluttaa rantaansa mutkan ulkoreunalla, jossa virta on nopeampaa, ja kasaa kuljettamaansa hiekkaa ja soraa sisäreunalle, jossa virta hidastuu; ilmiötä kutsutaan [[eroosioksi]]. Tällaisia mutkia nimitetään [[meandereiksi]], ja ne syvenevät ja siirtyvät hitaasti alavirtaan. Suuren tulvan aikana vesi voi oikaista mutkan itse ja kaivaa uuden uoman, jolloin vanhasta jää umpeutuva [[hevosenkenkäjärvi]]. Dráva on tästä hyvä esimerkki, koska sitä ei ole suurelta osin oikaistu, ja siksi sen uomat ja särkät muuttuvat yhä. Ylhäältä katsoen se näyttää kyl siltä, että joku olisi heittänyt narun maahan.
+KYSYMYS: Kerro lisää: eroosioksi
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+AIEMPI KYSYMYS: Miten joki muuttaa uomaansa ajan mittaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joki ei ole koskaan valmis, se vaan näyttää siltä. Vapaasti virtaava joki kuluttaa rantaansa mutkan ulkoreunalla, jossa virta on nopeampaa, ja kasaa kuljettamaansa hiekkaa ja soraa sisäreunalle, jossa virta hidastuu; ilmiötä kutsutaan [[eroosioksi]]. Tällaisia mutkia nimitetään [[meandereiksi]], ja ne syvenevät ja siirtyvät hitaasti alavirtaan. Suuren tulvan aikana vesi voi oikaista mutkan itse ja kaivaa uuden uoman, jolloin vanhasta jää umpeutuva [[hevosenkenkäjärvi]]. Dráva on tästä hyvä esimerkki, koska sitä ei ole suurelta osin oikaistu, ja siksi sen uomat ja särkät muuttuvat yhä. Ylhäältä katsoen se näyttää kyl siltä, että joku olisi heittänyt narun maahan.
+KYSYMYS: Kerro lisää: meandereiksi
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kazakstan — maalehti / Historia: Kylä, joka haastoi hevosen historian] 3700–3100 eaa. — Pohjois-Kazakstanissa Imanburlyq-joen rannalla asuttiin kuoppataloissa, joiden pohjia on kaivettu esiin yli sataviisikymmentä. Kylän ympäriltä löytyi aitauksia sekä hevosenluuta ja -lantaa niin suunnattomat määrät, ettei metsästys enää selittänyt niitä: noin 3500 eaa. botailaisten koko elämä pyöri hevosen ympärillä. Siitä eteenpäin tutkijat ovat eri mieltä. Vuonna 2009 luista luettiin jalostuksen merkkejä ja hampaista kolmenlaista kulumaa, jollaisen sanottiin syntyvän vain kuolaimista — siis kesytys ja ratsastus lähes tuhat vuotta luultua aiemmin. Myöhemmin sama kuluma on selitetty luonnollisena, aitaukset pyyntiaitoina ja lantakerrokset metsästyssaaliin jäljinä. Yksi asia …
+- [Mongolia — maalehti / Musiikki: Viulu, jonka kielet ovat hevosen jouhia] Morin khuur on kaksikielinen jousisoitin, jonka kaikukoppa on puolisuunnikkaan muotoinen ja jonka lavan yläpäähän on veistetty hevosen pää. Kielet punottiin jouhista: paksumpaan, urospuoliseksi kutsuttuun kieleen otettiin 130 jouhta oriin hännästä ja ohuempaan, naaraspuoliseen 105 tamman hännästä. Jousta pidetään alakautta, ja siksi soittaja voi kiristää jouhia sormillaan kesken vedon ja säätää sävyä. Tarun mukaan paimen Namjil sai lentävän hevosen, jonka siivet leikattiin kateudesta poikki; hevonen kuoli, ja paimen teki sen nahasta ja jouhista soittimen surullisia laulujaan varten.
+AIEMPI KYSYMYS: Miten joki muuttaa uomaansa ajan mittaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Joki ei ole koskaan valmis, se vaan näyttää siltä. Vapaasti virtaava joki kuluttaa rantaansa mutkan ulkoreunalla, jossa virta on nopeampaa, ja kasaa kuljettamaansa hiekkaa ja soraa sisäreunalle, jossa virta hidastuu; ilmiötä kutsutaan [[eroosioksi]]. Tällaisia mutkia nimitetään [[meandereiksi]], ja ne syvenevät ja siirtyvät hitaasti alavirtaan. Suuren tulvan aikana vesi voi oikaista mutkan itse ja kaivaa uuden uoman, jolloin vanhasta jää umpeutuva [[hevosenkenkäjärvi]]. Dráva on tästä hyvä esimerkki, koska sitä ei ole suurelta osin oikaistu, ja siksi sen uomat ja särkät muuttuvat yhä. Ylhäältä katsoen se näyttää kyl siltä, että joku olisi heittänyt narun maahan.
+KYSYMYS: Kerro lisää: hevosenkenkäjärvi
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Järvi, joka putosi maan alle] Indawgyi Kachinin osavaltiossa on suurin kokonaan Myanmarissa sijaitseva järvi: 13 kilometriä idästä länteen ja 24 pohjoisesta etelään. Se ei ole kraatteri eikä jäätikön jälki vaan vajoama-allas, joka syntyi Sagaingin siirroksen sivuaskelmaan — sama repeämä kuin Kalifornian Salton Troughissa. Suullinen perimätieto kertoo hedelmällisestä laaksosta, joka täyttyi äkkiä vedellä maanjäristyksen jälkeen ja hukutti kylän asukkaineen. Järvi on Ramsar-kohde vuodesta 2016 ja Unescon biosfäärialue vuodesta 2017. Sen rannoilla pesii ympäri vuoden kaksi äärimmäisen uhanalaista korppikotkalajia.
+- [Alpit — kaupunkilehti / Luonto: Jää vetäytyy ylöspäin] Alppien jäätiköt ovat kutistuneet nopeasti: 1800-luvun puolivälin jälkeen niistä on sulanut yli puolet, ja pelkästään 2000-luvulla kutistuminen on kiihtynyt. Vuoristomajoja, jotka rakennettiin aikanaan jäätikön reunaan, seisoo nyt satoja metrejä paljaan kiven yllä. Sulaminen ei ole vain maisema-asia: jäätiköt varastoivat talven lumen ja päästävät sen jokiin kesällä, joten niiden kadotessa muuttuu myös se, milloin Euroopan suurissa joissa on vettä.
+- [Sveitsi — maalehti / Vuoret: Jäätikkö, joka virtaa kuin joki] 2001 — Aletschin jäätikkö on Alppien suurin: noin kaksikymmentä kilometriä pitkä ja paksuimmalta kohdalta lähes tuhat metriä syvä jäämassa. Se ei ole paikallaan vaan valuu alaspäin muutamia satoja metrejä vuodessa — niin hitaasti, ettei sitä näe, mutta pinnan tummat juovat kertovat virtauksen suunnan kuin joen pyörteet. Unesco otti jäätikön ympäristöineen maailmanperintöluetteloon vuonna 2001. Jäätikkö on lyhentynyt viime vuosikymmeninä nopeasti.
+AIEMPI KYSYMYS: Miksi Balaton on niin matala?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Katolta järvi näyttää kyl ihan tavalliselta, mutta pohja on yllättävän lähellä. Balaton on Keski-Euroopan suurin järvi, mutta sen keskisyvyys on vain noin kolme metriä. Se sijaitsee laajassa ja loivapohjaisessa painanteessa, eikä altaassa ole syviä uria kuten [[jäätikön]] kovertamissa vuorijärvissä. Lisäksi järveen on kertynyt ajan mittaan jokien ja rantojen tuomaa ainesta, joka on pitänyt pohjan matalana. Tarkkaa syntyhistoriaa en osaa kertoa varmasti, mutta tulos on tunnettu: lämpenevä, kahlattava [[Tihanyn]] niemen seutu ja talvella jäätyvä pinta. Kyyhkylle tuo on ihan hyvä järvi, kastuu vain jalat.
+KYSYMYS: Kerro lisää: jäätikön
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+AIEMPI KYSYMYS: Miksi Balaton on niin matala?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Katolta järvi näyttää kyl ihan tavalliselta, mutta pohja on yllättävän lähellä. Balaton on Keski-Euroopan suurin järvi, mutta sen keskisyvyys on vain noin kolme metriä. Se sijaitsee laajassa ja loivapohjaisessa painanteessa, eikä altaassa ole syviä uria kuten [[jäätikön]] kovertamissa vuorijärvissä. Lisäksi järveen on kertynyt ajan mittaan jokien ja rantojen tuomaa ainesta, joka on pitänyt pohjan matalana. Tarkkaa syntyhistoriaa en osaa kertoa varmasti, mutta tulos on tunnettu: lämpenevä, kahlattava [[Tihanyn]] niemen seutu ja talvella jäätyvä pinta. Kyyhkylle tuo on ihan hyvä järvi, kastuu vain jalat.
+KYSYMYS: Kerro lisää: Tihanyn
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Mikä on Tihanyn luostarin perustamiskirja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kyl kirje, jonka kaltaisia minä kunnioitan. Tihanyn niemellä seisova luostari perustettiin vuonna 1055, ja sen perustamiskirja on säilynyt tähän päivään. Luostarin perusti kuningas [[Andreas I]], ja asiakirja on kirjoitettu pääosin [[latinaksi]]. Sen erikoisuus on, että tekstin seassa on unkarinkielisiä sanoja ja paikannimiä, ja asiakirjaa pidetään vanhimpana säilyneenä, jossa unkaria on näin mukana. Kirjeet ovat minun alaani.
+KYSYMYS: Kerro lisää: Andreas I
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Sarajevo — kaupunkilehti / Historian hetki] Arkkiherttua Franz Ferdinandin auto ajoi vahingossa Latin-sillan kulmaan Sarajevossa 28. kesäkuuta 1914 — suoraan salamurhaajan eteen, joka luuli tehtävänsä jo epäonnistuneen.
+- [Venetsia — kohdekartta / Kohdekartta: Aldon paino] Tässä kaupungissa keksittiin se, mitä isoisäsi kantoi takintaskussaan. Aldo Manuzio muutti Venetsiaan 1490 ja perusti painonsa 1494; ensimmäinen kirja ilmestyi seuraavana keväänä. Siihen aikaan kirja oli huonekalu. Klassikoihin painettiin selitykset tekstin ympärille, niteestä tuli painava, ja kirjastoissa kirjat oli usein ketjutettu pulpettiin kiinni — lukija ei liikkunut, kirja liikkui vielä vähemmän. Manuzio käänsi asetelman ympäri. Hän jätti selitykset pois, pienensi sivun noin postikortin kokoiseksi ja kutsui tulosta latinaksi kannettaviksi pikkukirjoiksi. Vuonna 1501 hän painoi tässä koossa Vergiliuksen. Sitä varten hän tilasi bolognalaiselta Francesco Griffolta kirjasimen, joka jälji…
+AIEMPI KYSYMYS: Mikä on Tihanyn luostarin perustamiskirja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kyl kirje, jonka kaltaisia minä kunnioitan. Tihanyn niemellä seisova luostari perustettiin vuonna 1055, ja sen perustamiskirja on säilynyt tähän päivään. Luostarin perusti kuningas [[Andreas I]], ja asiakirja on kirjoitettu pääosin [[latinaksi]]. Sen erikoisuus on, että tekstin seassa on unkarinkielisiä sanoja ja paikannimiä, ja asiakirjaa pidetään vanhimpana säilyneenä, jossa unkaria on näin mukana. Kirjeet ovat minun alaani.
+KYSYMYS: Kerro lisää: latinaksi
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+AIEMPI KYSYMYS: Voiko Balatonilla uida ja milloin vesi on lämpimintä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Uimisesta minä en ole kokemusasiantuntija, mutta rannoilta olen nähnyt paljon. Balatonilla uidaan paljon, ja järvi on kesällä lämmin, koska matala vesi lämpenee nopeasti. Pintaveden lämpötila nousee heinä- ja elokuussa usein selvästi yli kahdenkymmenen asteen. Eteläranta on erityisen loiva ja kahlattava, ja siellä sijaitsevat vilkkaat lomakaupungit, kuten [[Siófok]]. Pohjoisranta on kumpuilevampaa [[viinialuetta]]. Syvyys ja lämpötila vaihtelevat sään mukaan, joten tarkkoja lukuja en lupaa. Minä pysyn mieluummin rannalla ja mussutan jotain.
+KYSYMYS: Kerro lisää: Siófok
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Voiko Balatonilla uida ja milloin vesi on lämpimintä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Uimisesta minä en ole kokemusasiantuntija, mutta rannoilta olen nähnyt paljon. Balatonilla uidaan paljon, ja järvi on kesällä lämmin, koska matala vesi lämpenee nopeasti. Pintaveden lämpötila nousee heinä- ja elokuussa usein selvästi yli kahdenkymmenen asteen. Eteläranta on erityisen loiva ja kahlattava, ja siellä sijaitsevat vilkkaat lomakaupungit, kuten [[Siófok]]. Pohjoisranta on kumpuilevampaa [[viinialuetta]]. Syvyys ja lämpötila vaihtelevat sään mukaan, joten tarkkoja lukuja en lupaa. Minä pysyn mieluummin rannalla ja mussutan jotain.
+KYSYMYS: Kerro lisää: viinialuetta
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+AIEMPI KYSYMYS: Mitä kaloja Balatonilla kalastetaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Kaloista minulla on vain katseen tuntuma. Balatonilla tunnetuimpia saaliskaloja on [[kuha]], jota unkariksi kutsutaan nimellä fogas ja jota tarjotaan ravintoloissa paistettuna ja keitoissa. Järvessä elää myös muun muassa [[karppia]], mutta tarkkaa lajilistaa tai saalismääriä en osaa varmasti kertoa. Kalastukseen tarvitaan Unkarissa lupa, ja kalastusta säännellään. Mieluummin minä silti söisin pullan.
+KYSYMYS: Kerro lisää: kuha
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+AIEMPI KYSYMYS: Mitä kaloja Balatonilla kalastetaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Kaloista minulla on vain katseen tuntuma. Balatonilla tunnetuimpia saaliskaloja on [[kuha]], jota unkariksi kutsutaan nimellä fogas ja jota tarjotaan ravintoloissa paistettuna ja keitoissa. Järvessä elää myös muun muassa [[karppia]], mutta tarkkaa lajilistaa tai saalismääriä en osaa varmasti kertoa. Kalastukseen tarvitaan Unkarissa lupa, ja kalastusta säännellään. Mieluummin minä silti söisin pullan.
+KYSYMYS: Kerro lisää: karppia
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+AIEMPI KYSYMYS: Millaista viiniä Balatonin rannoilla tehdään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: viinirinteet näkyvät katolle asti. Balatonin ympäristössä on useita viinialueita, joista tunnetuin lienee pohjarannan [[Badacsony]]. Sen rinteet ovat vulkaanista maaperää, ja alueella tehdään pääosin valkoviinejä. Yleinen rypälelajike on [[olaszrizling]], ja paikallisena erikoisuutena mainitaan usein kéknyelű. Tarkkoja tuotantomääriä tai laatuarvioita en tohdi antaa. Viini ei oo kyyhkyn juttu, mutta tuoksusta pidän.
+KYSYMYS: Kerro lisää: Badacsony
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+AIEMPI KYSYMYS: Millaista viiniä Balatonin rannoilla tehdään?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: viinirinteet näkyvät katolle asti. Balatonin ympäristössä on useita viinialueita, joista tunnetuin lienee pohjarannan [[Badacsony]]. Sen rinteet ovat vulkaanista maaperää, ja alueella tehdään pääosin valkoviinejä. Yleinen rypälelajike on [[olaszrizling]], ja paikallisena erikoisuutena mainitaan usein kéknyelű. Tarkkoja tuotantomääriä tai laatuarvioita en tohdi antaa. Viini ei oo kyyhkyn juttu, mutta tuoksusta pidän.
+KYSYMYS: Kerro lisää: olaszrizling
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miten puszta syntyi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Puszta on yllättävämpi kuin miltä se näyttää. Hortobágyn aro ei ole kokonaan luonnon oma. Alueella oli ennen laajoja soita ja tulvamaita, mutta [[Tiszan]] säännöstely kuivatti suot 1800-luvulla, ja jäljelle jäi suolainen maa, jolla puut eivät juuri menesty. Sitä alettiin käyttää laitumena, ja vuosisatoja jatkunut laiduntaminen on pitänyt maiseman avoimena. Tuloksena on yksi Euroopan laajimmista yhtenäisistä [[luonnonlaitumista]]. Ylhäältä se näyttää kyl hämmästyttävän tyhjältä.
+KYSYMYS: Kerro lisää: Tiszan
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Miten puszta syntyi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Puszta on yllättävämpi kuin miltä se näyttää. Hortobágyn aro ei ole kokonaan luonnon oma. Alueella oli ennen laajoja soita ja tulvamaita, mutta [[Tiszan]] säännöstely kuivatti suot 1800-luvulla, ja jäljelle jäi suolainen maa, jolla puut eivät juuri menesty. Sitä alettiin käyttää laitumena, ja vuosisatoja jatkunut laiduntaminen on pitänyt maiseman avoimena. Tuloksena on yksi Euroopan laajimmista yhtenäisistä [[luonnonlaitumista]]. Ylhäältä se näyttää kyl hämmästyttävän tyhjältä.
+KYSYMYS: Kerro lisää: luonnonlaitumista
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Millaista karjaa aroilla laidunnetaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Karjaa riittää, sen verran muistan. Hortobágyn aroilla laiduntaa perinteisesti unkarilainen [[harmaakarja]], jonka tunnistaa vaalean harmaasta turkista ja pitkistä sarvista. Sen seurana laiduntavat kierteissarviset [[racka-lampaat]] sekä hevoslaumat. Eläimiä hoitavat paimenet eli [[csikósit]], jotka laiduntavat niitä pusztalla yhä. Ei paha ryhmäkuva yhdelle laitumelle.
+KYSYMYS: Kerro lisää: harmaakarja
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Tasanko, jolla näkee kangastuksia] 1973 — Hortobágy on laaja tasanko, jolla ei kasva juuri puita, vaan pelkkää heinää ja suolaista niittyä. Se on Euroopan laajin yhtenäinen luonnonniitty, ja siitä tehtiin maan ensimmäinen kansallispuisto vuonna 1973. Kuumina päivinä tasangolla näkyy kangastuksia: ilma väreilee ja kaukainen kaivo tai lauma näyttää kelluvan irti maasta. Alueella laidunnetaan vanhoja kotieläinrotuja, muun muassa harmaata nautaa ja kierteissarvista racka-lammasta, joita ilman niitty kasvaisi umpeen.
+AIEMPI KYSYMYS: Millaista karjaa aroilla laidunnetaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Karjaa riittää, sen verran muistan. Hortobágyn aroilla laiduntaa perinteisesti unkarilainen [[harmaakarja]], jonka tunnistaa vaalean harmaasta turkista ja pitkistä sarvista. Sen seurana laiduntavat kierteissarviset [[racka-lampaat]] sekä hevoslaumat. Eläimiä hoitavat paimenet eli [[csikósit]], jotka laiduntavat niitä pusztalla yhä. Ei paha ryhmäkuva yhdelle laitumelle.
+KYSYMYS: Kerro lisää: racka-lampaat
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Millaista karjaa aroilla laidunnetaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Karjaa riittää, sen verran muistan. Hortobágyn aroilla laiduntaa perinteisesti unkarilainen [[harmaakarja]], jonka tunnistaa vaalean harmaasta turkista ja pitkistä sarvista. Sen seurana laiduntavat kierteissarviset [[racka-lampaat]] sekä hevoslaumat. Eläimiä hoitavat paimenet eli [[csikósit]], jotka laiduntavat niitä pusztalla yhä. Ei paha ryhmäkuva yhdelle laitumelle.
+KYSYMYS: Kerro lisää: csikósit
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Mikä on gémeskút ja miten se toimii?
+AIEMPI VASTAUS (Livia):
+Mmm— tuon kaivon tunnistaa kauas. Gémeskút on vipuvarrella toimiva kaivo. Korkean pystypuun päässä on pitkä, keskeltä tuettu [[vipuvarsi]]: toisessa päässä roikkuu ämpäri tai kauha, toisessa [[vastapaino]]. Kun veden nostaja painaa ämpärin puoleista päätä alas, vastapaino auttaa nostamaan täyden ämpärin ylös. Rakenteen etu on, että se vaatii vähän voimaa, ja sen siluetti näkyy tasaisella aroilla kilometrien päähän. Kaivoa on käytetty muun muassa karjan juottamiseen. Kyyhky tyytyy lätäkköön, valitettavasti.
+KYSYMYS: Kerro lisää: vipuvarsi
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä on gémeskút ja miten se toimii?
+AIEMPI VASTAUS (Livia):
+Mmm— tuon kaivon tunnistaa kauas. Gémeskút on vipuvarrella toimiva kaivo. Korkean pystypuun päässä on pitkä, keskeltä tuettu [[vipuvarsi]]: toisessa päässä roikkuu ämpäri tai kauha, toisessa [[vastapaino]]. Kun veden nostaja painaa ämpärin puoleista päätä alas, vastapaino auttaa nostamaan täyden ämpärin ylös. Rakenteen etu on, että se vaatii vähän voimaa, ja sen siluetti näkyy tasaisella aroilla kilometrien päähän. Kaivoa on käytetty muun muassa karjan juottamiseen. Kyyhky tyytyy lätäkköön, valitettavasti.
+KYSYMYS: Kerro lisää: vastapaino
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Luonto: Kurki, joka ei muuta minnekään] Japaninkurki on maailman harvinaisimpia kurkia. Mantereen linnut muuttavat Siperiasta ja Koillis-Kiinasta talveksi Korean niemimaalle, mutta Itä-Hokkaidon kanta pysyy paikallaan ja siirtyy talvehtimaan vain noin 150 kilometrin päähän. Vuoden 2020 talvilaskennassa Japanissa oli noin 1 900 lintua. Koiras painaa keskimäärin 8,2 kiloa. Hokkaidon alkuperäiskansa ainu kutsui lintua nimellä Sarurun Kamuy, suon jumala. Japani rauhoitti lajin ja sen pesimäalueet vuonna 1935, ja Kushiron kurjet nimettiin erityiseksi luonnonmuistomerkiksi vuonna 1952.
+AIEMPI KYSYMYS: Mitä lintuja Hortobágyn aroilla näkee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minulla on silmää. Hortobágyn alue on tunnettu lintualueena, ja erityisesti syksyllä sen kosteikoilla pysähtyy muuttomatkalla lepäämään [[kurkia]]. Lisäksi alueella tavataan lukuisia vesi- ja kahlaajalintuja, ja alue kuuluu [[kansallispuistoon]]. Tarkkaa lajilukua en osaa sanoa. Siellä olisi kyl seuraa minullekin.
+KYSYMYS: Kerro lisää: kurkia
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Mitä lintuja Hortobágyn aroilla näkee?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minulla on silmää. Hortobágyn alue on tunnettu lintualueena, ja erityisesti syksyllä sen kosteikoilla pysähtyy muuttomatkalla lepäämään [[kurkia]]. Lisäksi alueella tavataan lukuisia vesi- ja kahlaajalintuja, ja alue kuuluu [[kansallispuistoon]]. Tarkkaa lajilukua en osaa sanoa. Siellä olisi kyl seuraa minullekin.
+KYSYMYS: Kerro lisää: kansallispuistoon
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Millaista vaatetusta csikósit perinteisesti käyttävät?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hatun huomaa aina ensin. Perinteinen csikós pukeutui leveälieriseen hattuun, väljään pellavapaitaan ja leveälahkeisiin pellavahousuihin, joita kutsuttiin nimellä [[gatya]]. Kylmällä säällä päälle puettiin paksusta huovasta tehty, usein kirjailtu viitta [[szűr]], ja käteen kuului pitkä ruoska [[karikás]]. Nykyään asu näkyy ennen kaikkea näytöksissä ja juhlissa eikä arjen työvaatteena, eikä yksityiskohtia ole sopivaa yleistää kaikkiin paimeniin. Ylhäältä päin hattu on ainakin helppo huomata.
+KYSYMYS: Kerro lisää: gatya
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Millaista vaatetusta csikósit perinteisesti käyttävät?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hatun huomaa aina ensin. Perinteinen csikós pukeutui leveälieriseen hattuun, väljään pellavapaitaan ja leveälahkeisiin pellavahousuihin, joita kutsuttiin nimellä [[gatya]]. Kylmällä säällä päälle puettiin paksusta huovasta tehty, usein kirjailtu viitta [[szűr]], ja käteen kuului pitkä ruoska [[karikás]]. Nykyään asu näkyy ennen kaikkea näytöksissä ja juhlissa eikä arjen työvaatteena, eikä yksityiskohtia ole sopivaa yleistää kaikkiin paimeniin. Ylhäältä päin hattu on ainakin helppo huomata.
+KYSYMYS: Kerro lisää: szűr
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+AIEMPI KYSYMYS: Millaista vaatetusta csikósit perinteisesti käyttävät?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hatun huomaa aina ensin. Perinteinen csikós pukeutui leveälieriseen hattuun, väljään pellavapaitaan ja leveälahkeisiin pellavahousuihin, joita kutsuttiin nimellä [[gatya]]. Kylmällä säällä päälle puettiin paksusta huovasta tehty, usein kirjailtu viitta [[szűr]], ja käteen kuului pitkä ruoska [[karikás]]. Nykyään asu näkyy ennen kaikkea näytöksissä ja juhlissa eikä arjen työvaatteena, eikä yksityiskohtia ole sopivaa yleistää kaikkiin paimeniin. Ylhäältä päin hattu on ainakin helppo huomata.
+KYSYMYS: Kerro lisää: karikás
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Miten aszú-viini tehdään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on kyl herkullinen aihe, vaikka en juo viiniä. Syksyllä rypäleisiin kehittyy Bodrog- ja Tisza-jokien sumun ansiosta [[jalohome]], joka kuivattaa marjoja rusinamaisiksi ja väkevöi niiden sokerin. Näin kutistuneet aszú-marjat poimitaan käsin, yksi kerrallaan, ja ne murskataan taikinaksi. Taikina liotetaan viinissä tai mehussa, minkä jälkeen neste pusertuu erilleen ja kypsyy tynnyreissä. Makeus ilmoitettiin perinteisesti yksiköllä nimeltä [[puttonyos]], mutta tarkat nykyiset säännöt eivät ole tiedossani. Minä olisin kyl valinnut sämpylän.
+KYSYMYS: Kerro lisää: jalohome
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Miten aszú-viini tehdään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on kyl herkullinen aihe, vaikka en juo viiniä. Syksyllä rypäleisiin kehittyy Bodrog- ja Tisza-jokien sumun ansiosta [[jalohome]], joka kuivattaa marjoja rusinamaisiksi ja väkevöi niiden sokerin. Näin kutistuneet aszú-marjat poimitaan käsin, yksi kerrallaan, ja ne murskataan taikinaksi. Taikina liotetaan viinissä tai mehussa, minkä jälkeen neste pusertuu erilleen ja kypsyy tynnyreissä. Makeus ilmoitettiin perinteisesti yksiköllä nimeltä [[puttonyos]], mutta tarkat nykyiset säännöt eivät ole tiedossani. Minä olisin kyl valinnut sämpylän.
+KYSYMYS: Kerro lisää: puttonyos
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Miksi juuri tämä rinne tuottaa makeaa viiniä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: sumu näyttää ylhäältä kuin höyhensaarelta. Rinne nousee [[Bodrogin]] ja [[Tiszan]] yhtymäkohdassa, ja jokien yöllinen ja aamuinen sumu tuo rypäleisiin kosteutta, joka suosii [[jalohomeen]] kehittymistä. Kun syyspäivät ovat tyypillisesti aurinkoisia ja kuivia, home kuivattaa marjat ja väkevöi sokerin. Kukkula on lisäksi vulkaaninen, ja tulivuoriperäinen maaperä antaa viinille omaa luonnettaan. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737. Sumu on kyyhkyn ainoa vihollinen.
+KYSYMYS: Kerro lisää: Bodrogin
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+AIEMPI KYSYMYS: Miksi juuri tämä rinne tuottaa makeaa viiniä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: sumu näyttää ylhäältä kuin höyhensaarelta. Rinne nousee [[Bodrogin]] ja [[Tiszan]] yhtymäkohdassa, ja jokien yöllinen ja aamuinen sumu tuo rypäleisiin kosteutta, joka suosii [[jalohomeen]] kehittymistä. Kun syyspäivät ovat tyypillisesti aurinkoisia ja kuivia, home kuivattaa marjat ja väkevöi sokerin. Kukkula on lisäksi vulkaaninen, ja tulivuoriperäinen maaperä antaa viinille omaa luonnettaan. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737. Sumu on kyyhkyn ainoa vihollinen.
+KYSYMYS: Kerro lisää: Tiszan
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Miksi juuri tämä rinne tuottaa makeaa viiniä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: sumu näyttää ylhäältä kuin höyhensaarelta. Rinne nousee [[Bodrogin]] ja [[Tiszan]] yhtymäkohdassa, ja jokien yöllinen ja aamuinen sumu tuo rypäleisiin kosteutta, joka suosii [[jalohomeen]] kehittymistä. Kun syyspäivät ovat tyypillisesti aurinkoisia ja kuivia, home kuivattaa marjat ja väkevöi sokerin. Kukkula on lisäksi vulkaaninen, ja tulivuoriperäinen maaperä antaa viinille omaa luonnettaan. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737. Sumu on kyyhkyn ainoa vihollinen.
+KYSYMYS: Kerro lisää: jalohomeen
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+AIEMPI KYSYMYS: Missä päin Unkaria Tokaj sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas karttaa. Tokaj sijaitsee Koillis-Unkarissa, lähellä [[Slovakian]] rajaa, Bodrog- ja Tisza-jokien yhtymäkohdassa. Ympäröivä viinialue kuuluu [[Unescon]] maailmanperintökohteisiin 2000-luvun alusta lähtien. Kaupunki on pieni, ja sen ympäristö on tunnettu rinteistä ja viinikellareista. Ylhäältä kartta näyttää aina helpommalta.
+KYSYMYS: Kerro lisää: Slovakian
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Missä päin Unkaria Tokaj sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, katsotaas karttaa. Tokaj sijaitsee Koillis-Unkarissa, lähellä [[Slovakian]] rajaa, Bodrog- ja Tisza-jokien yhtymäkohdassa. Ympäröivä viinialue kuuluu [[Unescon]] maailmanperintökohteisiin 2000-luvun alusta lähtien. Kaupunki on pieni, ja sen ympäristö on tunnettu rinteistä ja viinikellareista. Ylhäältä kartta näyttää aina helpommalta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Mikä rypälelajike on Tokajin viinien pääraaka-aine?
+AIEMPI VASTAUS (Livia):
+Just niin, nimet ovat tässä koukku. Tokajin viinien tärkein rypälelajike on [[furmint]], jonka happamuus on makeiden viinien raikas vastapaino. Sen seurana käytetään yleisesti [[hárslevelűä]] ja [[sárgamuskotályta]]. Tarkkoja osuuksia eri viineissä en osaa varmasti sanoa, sillä ne vaihtelevat tuottajan ja viinityypin mukaan. Nimet ovat kyllä pulun kauhu.
+KYSYMYS: Kerro lisää: furmint
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Mikä rypälelajike on Tokajin viinien pääraaka-aine?
+AIEMPI VASTAUS (Livia):
+Just niin, nimet ovat tässä koukku. Tokajin viinien tärkein rypälelajike on [[furmint]], jonka happamuus on makeiden viinien raikas vastapaino. Sen seurana käytetään yleisesti [[hárslevelűä]] ja [[sárgamuskotályta]]. Tarkkoja osuuksia eri viineissä en osaa varmasti sanoa, sillä ne vaihtelevat tuottajan ja viinityypin mukaan. Nimet ovat kyllä pulun kauhu.
+KYSYMYS: Kerro lisää: hárslevelűä
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+AIEMPI KYSYMYS: Mikä rypälelajike on Tokajin viinien pääraaka-aine?
+AIEMPI VASTAUS (Livia):
+Just niin, nimet ovat tässä koukku. Tokajin viinien tärkein rypälelajike on [[furmint]], jonka happamuus on makeiden viinien raikas vastapaino. Sen seurana käytetään yleisesti [[hárslevelűä]] ja [[sárgamuskotályta]]. Tarkkoja osuuksia eri viineissä en osaa varmasti sanoa, sillä ne vaihtelevat tuottajan ja viinityypin mukaan. Nimet ovat kyllä pulun kauhu.
+KYSYMYS: Kerro lisää: sárgamuskotályta

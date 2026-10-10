@@ -1,0 +1,1044 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Kuka kuningas rakennutti Tatan linnan uudelleen renessanssityyliin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnan rakennutti uudelleen renessanssityyliin kuningas [[Matthias Corvinus]], jonka aikana Tatan linna koki kukoistuskautensa. Alun perin linnan oli rakennuttanut [[Lackfin]] suku, ja kaupunki sijaitsee Luoteis-Unkarissa noin 70 kilometrin päässä [[Budapestista]] Gerecsen ja Vértesin vuorten välisessä laaksossa. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: Lackfin
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+AIEMPI KYSYMYS: Kuka kuningas rakennutti Tatan linnan uudelleen renessanssityyliin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linnan rakennutti uudelleen renessanssityyliin kuningas [[Matthias Corvinus]], jonka aikana Tatan linna koki kukoistuskautensa. Alun perin linnan oli rakennuttanut [[Lackfin]] suku, ja kaupunki sijaitsee Luoteis-Unkarissa noin 70 kilometrin päässä [[Budapestista]] Gerecsen ja Vértesin vuorten välisessä laaksossa. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: Budapestista
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Kuka päällikkö puolusti Tatan linnaa vuonna 1526?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun osmanit olivat voittaneet [[Mohácsin taistelun]] vuonna 1526 ja kuningas [[Ludvig II]] oli kaatunut, linnan päällikkö, kreivi [[György Cseszneky]], puolusti Tatan linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Tapahtumista on kulunut noin viisisataa vuotta, ja Unkarin kuningaskunta oli tuolloin suuren murroksen keskellä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mohácsin taistelun
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Kuka päällikkö puolusti Tatan linnaa vuonna 1526?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun osmanit olivat voittaneet [[Mohácsin taistelun]] vuonna 1526 ja kuningas [[Ludvig II]] oli kaatunut, linnan päällikkö, kreivi [[György Cseszneky]], puolusti Tatan linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Tapahtumista on kulunut noin viisisataa vuotta, ja Unkarin kuningaskunta oli tuolloin suuren murroksen keskellä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ludvig II
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Kuka päällikkö puolusti Tatan linnaa vuonna 1526?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kun osmanit olivat voittaneet [[Mohácsin taistelun]] vuonna 1526 ja kuningas [[Ludvig II]] oli kaatunut, linnan päällikkö, kreivi [[György Cseszneky]], puolusti Tatan linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Tapahtumista on kulunut noin viisisataa vuotta, ja Unkarin kuningaskunta oli tuolloin suuren murroksen keskellä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: György Cseszneky
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Kuka oli Matthias Corvinus?
+AIEMPI VASTAUS (Livia):
+Ai tota. Matthias Corvinus oli Unkarin kuningas 1400-luvulla, ja hänet muistetaan [[renessanssin]] suurena tukijana. Hänen hovinsa tunnettiin oppineista ja taiteilijoista, ja hänen kirjastonsa [[Bibliotheca Corviniana]] oli yksi aikansa merkittävimmistä kirjakokoelmista Euroopassa. Myös Tatan linnan hän määräsi rakennettavaksi uudelleen renessanssityyliin. Kirjasto kuulostaa kyl mukavalta tukikohdalta kyyhkyllekin.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Tiede: Kirjasto, joka halusi kaikki kirjat] Aleksandrian muinainen kirjasto yritti mahdotonta: koota kaiken maailman tiedon yhteen paikkaan. Satamaan saapuvat laivat tarkastettiin kirjojen varalta, ja kääröt kopioitiin kokoelmiin. Kirjaston tutkijat mittasivat maapallon ympärysmitan ja järjestivät tähdet luetteloiksi. Kirjasto tuhoutui vähitellen, mutta vuonna 2002 Aleksandriaan avattiin sen perillinen: Bibliotheca Alexandrina, jonka lukusali on maailman suurimpia.
+AIEMPI KYSYMYS: Kuka oli Matthias Corvinus?
+AIEMPI VASTAUS (Livia):
+Ai tota. Matthias Corvinus oli Unkarin kuningas 1400-luvulla, ja hänet muistetaan [[renessanssin]] suurena tukijana. Hänen hovinsa tunnettiin oppineista ja taiteilijoista, ja hänen kirjastonsa [[Bibliotheca Corviniana]] oli yksi aikansa merkittävimmistä kirjakokoelmista Euroopassa. Myös Tatan linnan hän määräsi rakennettavaksi uudelleen renessanssityyliin. Kirjasto kuulostaa kyl mukavalta tukikohdalta kyyhkyllekin.
+KYSYMYS: Kerro lisää: Bibliotheca Corviniana
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Missä Gerecsen vuoristo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Gerecse on matalahko, pehmeälinjainen vuoristo Luoteis-Unkarissa, [[Transdanubian]] alueella Tatan seudulla. Sen vieressä kohoaa [[Vértesin]] vuoristo, ja näiden kahden välissä on laakso, jossa Tata sijaitsee. Vuoristoalue ei ole kaukana [[Tuna-joesta]]. En ole varma sen tarkasta korkeudesta, joten jätän luvun pois. Vuoria on aina mukava katsella ylhäältä.
+KYSYMYS: Kerro lisää: Transdanubian
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Missä Gerecsen vuoristo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Gerecse on matalahko, pehmeälinjainen vuoristo Luoteis-Unkarissa, [[Transdanubian]] alueella Tatan seudulla. Sen vieressä kohoaa [[Vértesin]] vuoristo, ja näiden kahden välissä on laakso, jossa Tata sijaitsee. Vuoristoalue ei ole kaukana [[Tuna-joesta]]. En ole varma sen tarkasta korkeudesta, joten jätän luvun pois. Vuoria on aina mukava katsella ylhäältä.
+KYSYMYS: Kerro lisää: Vértesin
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Missä Gerecsen vuoristo sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Gerecse on matalahko, pehmeälinjainen vuoristo Luoteis-Unkarissa, [[Transdanubian]] alueella Tatan seudulla. Sen vieressä kohoaa [[Vértesin]] vuoristo, ja näiden kahden välissä on laakso, jossa Tata sijaitsee. Vuoristoalue ei ole kaukana [[Tuna-joesta]]. En ole varma sen tarkasta korkeudesta, joten jätän luvun pois. Vuoria on aina mukava katsella ylhäältä.
+KYSYMYS: Kerro lisää: Tuna-joesta
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+AIEMPI KYSYMYS: Kuinka kauan osmanit hallitsivat Unkarin osia?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Osmanit hallitsivat suurta osaa Unkarista noin puolitoista vuosisataa, 1500-luvun alkupuoliskolta 1600-luvun loppuun. Käännekohta oli [[Mohácsin taistelu]] vuonna 1526, ja [[Budan]] valtaus vuonna 1541 vahvisti heidän asemaansa, kunnes [[Habsburgien]] johtamat joukot vapauttivat Budan vuonna 1686. Rajaseutujen linnat, Tata niiden joukossa, olivat tänä aikana tärkeitä linnoituksia. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mohácsin taistelu
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Ketjusilta] 1840–1849 Ennen vuotta 1849 Budan ja Pestin välillä ei ollut yhtään pysyvää siltaa — talvella joki jäätyi, keväällä se täyttyi ajojäästä, ja ihmiset joutuivat odottamaan tai turvautumaan veneisiin. Kreivi István Széchenyi tilasi ratkaisun englantilaiselta insinööriltä William Tierney Clarkilta, ja silta valmistui 375 metrin pituisena — aikanaan mullistava insinööritaidon näyte. Sillan päissä makaa neljä kivileijonaa, jotka János Marschalkó veisti vuonna 1852. Kaupungissa kiertää vanha tarina, jonka mukaan leijonilta unohdettiin veistää kielet — todellisuudessa kielet ovat paikallaan, ne eivät vain näy kadulta. Vuonna 1945 saksalaisjoukot räjäyttivät sillan sodan lopulla; se rakennettiin uud…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Kuinka kauan osmanit hallitsivat Unkarin osia?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Osmanit hallitsivat suurta osaa Unkarista noin puolitoista vuosisataa, 1500-luvun alkupuoliskolta 1600-luvun loppuun. Käännekohta oli [[Mohácsin taistelu]] vuonna 1526, ja [[Budan]] valtaus vuonna 1541 vahvisti heidän asemaansa, kunnes [[Habsburgien]] johtamat joukot vapauttivat Budan vuonna 1686. Rajaseutujen linnat, Tata niiden joukossa, olivat tänä aikana tärkeitä linnoituksia. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Budan
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Kuinka kauan osmanit hallitsivat Unkarin osia?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Osmanit hallitsivat suurta osaa Unkarista noin puolitoista vuosisataa, 1500-luvun alkupuoliskolta 1600-luvun loppuun. Käännekohta oli [[Mohácsin taistelu]] vuonna 1526, ja [[Budan]] valtaus vuonna 1541 vahvisti heidän asemaansa, kunnes [[Habsburgien]] johtamat joukot vapauttivat Budan vuonna 1686. Rajaseutujen linnat, Tata niiden joukossa, olivat tänä aikana tärkeitä linnoituksia. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Euroopan ensimmäinen kaupunkivaakuna] Kassa oli ensimmäinen kaupunki Euroopassa, jolle myönnettiin oma vaakuna. Kuningas Ludvig I Suuri antoi sen vuonna 1369 Diósgyőrin linnassa nykyisen Miskolcin lähellä. Alkuperäisessä vaakunassa oli vain punaiset ja hopeiset raidat sekä kolme liljaa sinisellä pohjalla. Vuoteen 1502 mennessä kaupunki oli saanut neljä vaakunakirjaa neljältä hallitsijalta, ja nykyinen vaakuna on lähes muuttumaton tuosta vuodesta. Hlavná-kadulle paljastettiin vaakunapatsas vuonna 2002.
+AIEMPI KYSYMYS: Mitä nimi Diósgyőr tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi koostuu kahdesta osasta: sana dió tarkoittaa saksanpähkinää, ja győr on vanha muoto sanasta gyűrű eli rengas. Rengas viittaa ensimmäisen linnan pyöreään muotoon. Paikka on nykyään osa [[Miskolcin]] kaupunkia, ja nimen sanat ovat peräisin [[unkarin kielestä]], joka kuuluu suomalais-ugrilaisiin kieliin. Pähkinä pysyy sentään mielessä.
+KYSYMYS: Kerro lisää: Miskolcin
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [PRI — maalehti / Musiikki: Neljästä kielestä kymmeneen] 1887 — Cuatro kehittyi espanjalaisesta kitarasta siirtomaa-ajan maaseudulla, ja sen nimi tulee alkuperäisistä neljästä kielestä. Vuosisatojen mittaan soitin muuttui: 1700-luvulla kielet olivat vielä suolesta, ja 1800-luvun alkuun mennessä niistä oli tullut metallia, mikä antoi soittimelle kirkkaamman ja voimakkaamman äänen. Nykyinen kymmenkielinen, viisikuoroinen cuatro vakiintui vuoteen 1887 mennessä ja on muodoltaan lähempänä viulua kuin kitaraa. Siitä tuli maaseudun jíbaro-väestön musiikin sydän yhdessä tiplen ja bordonúan kanssa, ja sillä säestetään yhä aguinaldo- ja seis-lauluja joulun aikaan. Cuatro tunnetaan nykyään Puerto Rican kansallissoittimena.
+- [Unkari — maalehti / Kieli] Unkari kuulostaa naapureiden korvaan oudolta, eikä syyttä: sen lähimmät sukulaiset ovat kaukana pohjoisessa ja idässä. Neljä juttua kielestä, jota puhuu noin 13 miljoonaa ihmistä.
+AIEMPI KYSYMYS: Mitä nimi Diósgyőr tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Nimi koostuu kahdesta osasta: sana dió tarkoittaa saksanpähkinää, ja győr on vanha muoto sanasta gyűrű eli rengas. Rengas viittaa ensimmäisen linnan pyöreään muotoon. Paikka on nykyään osa [[Miskolcin]] kaupunkia, ja nimen sanat ovat peräisin [[unkarin kielestä]], joka kuuluu suomalais-ugrilaisiin kieliin. Pähkinä pysyy sentään mielessä.
+KYSYMYS: Kerro lisää: unkarin kielestä
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+- [Pariisi — kohdekartta / Kohdekartta: Bastilji 1789] Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvottelut kestäv…
+AIEMPI KYSYMYS: Minkä kuninkaan aikana linna kukoisti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Diósgyőrin linnan kukoistuskausi osui kuningas [[Ludvig Suuren]] hallituskaudelle. Hänen aikanaan vuonna 1364 lähellä oleva [[Miskolc]] liitettiin Diósgyőrin tilaan. Vuonna 1369 hän myönsi linnassa [[Košicen]] kaupungille, tuolloin nimeltä Kassa, vaakunan, jota pidetään Euroopan ensimmäisenä kaupunkivaakunana. Kuninkaillakin oli siis lempiloma-asuntonsa, ihan niin kuin minulla on kaiteeni.
+KYSYMYS: Kerro lisää: Ludvig Suuren
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+AIEMPI KYSYMYS: Minkä kuninkaan aikana linna kukoisti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Diósgyőrin linnan kukoistuskausi osui kuningas [[Ludvig Suuren]] hallituskaudelle. Hänen aikanaan vuonna 1364 lähellä oleva [[Miskolc]] liitettiin Diósgyőrin tilaan. Vuonna 1369 hän myönsi linnassa [[Košicen]] kaupungille, tuolloin nimeltä Kassa, vaakunan, jota pidetään Euroopan ensimmäisenä kaupunkivaakunana. Kuninkaillakin oli siis lempiloma-asuntonsa, ihan niin kuin minulla on kaiteeni.
+KYSYMYS: Kerro lisää: Miskolc
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kohdekartta / Kohdekartta: Urbanin torni] 1500-luku Urbanin torni on tuomiokirkon renessanssiajan kellotorni, joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 suuri Urbanin kello, joka sai nimensä viininviljelijöiden suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja Franciscus Illenfeld. Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin 1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on roomalaisajalta 300-luvulta. Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. Sirpaleista koottu k…
+AIEMPI KYSYMYS: Minkä kuninkaan aikana linna kukoisti?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Diósgyőrin linnan kukoistuskausi osui kuningas [[Ludvig Suuren]] hallituskaudelle. Hänen aikanaan vuonna 1364 lähellä oleva [[Miskolc]] liitettiin Diósgyőrin tilaan. Vuonna 1369 hän myönsi linnassa [[Košicen]] kaupungille, tuolloin nimeltä Kassa, vaakunan, jota pidetään Euroopan ensimmäisenä kaupunkivaakunana. Kuninkaillakin oli siis lempiloma-asuntonsa, ihan niin kuin minulla on kaiteeni.
+KYSYMYS: Kerro lisää: Košicen
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Kuka oli Béla IV?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Béla IV oli [[Unkarin]] kuningas 1200-luvulla, ja hänet muistetaan erityisesti maan jälleenrakennuksesta [[mongolien]] hyökkäyksen jälkeen. Hänen aikanaan vahvistettiin linnoja ja maahan kutsuttiin uudisasukkaita. Myös [[Diósgyőrin]] nykyinen linna rakennettiin todennäköisesti hänen hallituskaudellaan. Tässä oli ihan riittävästi kuningasta yhdelle aamulle.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mongo ma Ndemi ja Victorian synty] Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+AIEMPI KYSYMYS: Kuka oli Béla IV?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Béla IV oli [[Unkarin]] kuningas 1200-luvulla, ja hänet muistetaan erityisesti maan jälleenrakennuksesta [[mongolien]] hyökkäyksen jälkeen. Hänen aikanaan vahvistettiin linnoja ja maahan kutsuttiin uudisasukkaita. Myös [[Diósgyőrin]] nykyinen linna rakennettiin todennäköisesti hänen hallituskaudellaan. Tässä oli ihan riittävästi kuningasta yhdelle aamulle.
+KYSYMYS: Kerro lisää: mongolien
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Euroopan ensimmäinen kaupunkivaakuna] Kassa oli ensimmäinen kaupunki Euroopassa, jolle myönnettiin oma vaakuna. Kuningas Ludvig I Suuri antoi sen vuonna 1369 Diósgyőrin linnassa nykyisen Miskolcin lähellä. Alkuperäisessä vaakunassa oli vain punaiset ja hopeiset raidat sekä kolme liljaa sinisellä pohjalla. Vuoteen 1502 mennessä kaupunki oli saanut neljä vaakunakirjaa neljältä hallitsijalta, ja nykyinen vaakuna on lähes muuttumaton tuosta vuodesta. Hlavná-kadulle paljastettiin vaakunapatsas vuonna 2002.
+AIEMPI KYSYMYS: Kuka oli Béla IV?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Béla IV oli [[Unkarin]] kuningas 1200-luvulla, ja hänet muistetaan erityisesti maan jälleenrakennuksesta [[mongolien]] hyökkäyksen jälkeen. Hänen aikanaan vahvistettiin linnoja ja maahan kutsuttiin uudisasukkaita. Myös [[Diósgyőrin]] nykyinen linna rakennettiin todennäköisesti hänen hallituskaudellaan. Tässä oli ihan riittävästi kuningasta yhdelle aamulle.
+KYSYMYS: Kerro lisää: Diósgyőrin
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+AIEMPI KYSYMYS: Millainen kaupunki Miskolc on nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Miskolc on yksi Pohjois-Unkarin tärkeimmistä kaupungeista ja [[Borsod-Abaúj-Zemplénin]] läänin keskus. Kaupunki sijaitsee [[Bükk-vuoriston]] juurella, ja sitä on perinteisesti pidetty teollisuuskaupunkina, jossa rauta- ja terästeollisuudella oli suuri merkitys. Diósgyőr on nykyään osa Miskolcia, ja sen linna on suosittu käyntikohde. Teräskaupunki, mutta ylhäältä katsoen ei yhtään hassumpi.
+KYSYMYS: Kerro lisää: Borsod-Abaúj-Zemplénin
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+AIEMPI KYSYMYS: Millainen kaupunki Miskolc on nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Miskolc on yksi Pohjois-Unkarin tärkeimmistä kaupungeista ja [[Borsod-Abaúj-Zemplénin]] läänin keskus. Kaupunki sijaitsee [[Bükk-vuoriston]] juurella, ja sitä on perinteisesti pidetty teollisuuskaupunkina, jossa rauta- ja terästeollisuudella oli suuri merkitys. Diósgyőr on nykyään osa Miskolcia, ja sen linna on suosittu käyntikohde. Teräskaupunki, mutta ylhäältä katsoen ei yhtään hassumpi.
+KYSYMYS: Kerro lisää: Bükk-vuoriston
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+AIEMPI KYSYMYS: Kuka oli Ludvig Suuri?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Ludvig I, jota kutsutaan nimellä Ludvig Suuri, oli [[Anjoun]] suvun [[Unkarin]] kuningas 1300-luvulla, ja hän hallitsi vuodesta 1342 vuoteen 1382. Vuodesta 1370 hän oli myös [[Puolan]] kuningas. Hänen aikanaan Unkarin valta ulottui laajalle, ja hänen kukoistuskautensa näkyi myös Diósgyőrin linnassa.
+
+Kahden kruunun mies. Minulle riittäisi yksi kaide ja kunnon kürtőskalács.
+KYSYMYS: Kerro lisää: Anjoun
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Kuka oli Ludvig Suuri?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Ludvig I, jota kutsutaan nimellä Ludvig Suuri, oli [[Anjoun]] suvun [[Unkarin]] kuningas 1300-luvulla, ja hän hallitsi vuodesta 1342 vuoteen 1382. Vuodesta 1370 hän oli myös [[Puolan]] kuningas. Hänen aikanaan Unkarin valta ulottui laajalle, ja hänen kukoistuskautensa näkyi myös Diósgyőrin linnassa.
+
+Kahden kruunun mies. Minulle riittäisi yksi kaide ja kunnon kürtőskalács.
+KYSYMYS: Kerro lisää: Puolan
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Musiikki: Paroni, joka kirjoitti musiikin kuuteen niteeseen] 1932–1934 — Rodolphe d’Erlanger kokosi maloufin säännöt ja historian kuuteen niteeseen ja perusti Rachidian, konservatorion, joka toimii yhä. Hänen ehdotuksestaan kuningas Fuad I kutsui koolle arabialaisen musiikin kongressin Kairoon 14. maaliskuuta – 3. huhtikuuta 1932, ja d’Erlanger toimi sen varapuheenjohtajana. Paikalla olivat muun muassa Béla Bartók ja Paul Hindemith, ja delegaatioita tuli Algeriasta, Egyptistä, Irakista, Marokosta, Syyriasta, Tunisiasta ja Turkista. Kongressissa äänitettiin 360 esitystä, joista 162 julkaistiin levyinä; äänitteitä säilytetään Pariisissa, Lontoossa ja Berliinissä.
+AIEMPI KYSYMYS: Kuka kuningas rakennutti Sümegin linnan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sümegin linnan rakennutti kuningas [[Béla IV]] 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle, noin 32 kilometriä [[Balatonilta]] pohjoiseen. Myöhemmin kuningas [[Stefanus V]] lahjoitti linnan Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena. Kuninkaat rakensivat korkealle, ja minä ymmärrän sen.
+KYSYMYS: Kerro lisää: Béla IV
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Järvi, joka lämpenee nopeasti] Kesäisin — Balaton on Keski-Euroopan suurin järvi, pinta-alaltaan lähes kuusisataa neliökilometriä. Erikoista siinä on mataluus: keskisyvyys on vain runsaat kolme metriä, ja eteläreunalla voi kahlata satoja metrejä ennen kuin vesi ylettyy hartioihin. Matala vesi lämpenee nopeasti, joten järvi on kesällä lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se myös jäätyy talvella lähes joka vuosi. Rannat ovat purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.
+AIEMPI KYSYMYS: Kuka kuningas rakennutti Sümegin linnan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sümegin linnan rakennutti kuningas [[Béla IV]] 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle, noin 32 kilometriä [[Balatonilta]] pohjoiseen. Myöhemmin kuningas [[Stefanus V]] lahjoitti linnan Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena. Kuninkaat rakensivat korkealle, ja minä ymmärrän sen.
+KYSYMYS: Kerro lisää: Balatonilta
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+AIEMPI KYSYMYS: Kuka kuningas rakennutti Sümegin linnan?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Sümegin linnan rakennutti kuningas [[Béla IV]] 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle, noin 32 kilometriä [[Balatonilta]] pohjoiseen. Myöhemmin kuningas [[Stefanus V]] lahjoitti linnan Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena. Kuninkaat rakensivat korkealle, ja minä ymmärrän sen.
+KYSYMYS: Kerro lisää: Stefanus V
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mongo ma Ndemi ja Victorian synty] Alkuperäisasukkaat duala kutsuivat tulivuorta nimellä Mongo ma Ndemi, "Suuruuden vuori". Vuonna 1858 brittiläinen lähetyssaarnaaja Alfred Saker perusti vuoren juurelle, Ambas-lahden rannalle, siirtokunnan nimeltä Victoria: turvapaikan muun muassa vapautetuille orjille sen jälkeen, kun Espanja oli karkottanut protestanttiset lähetystyöntekijät naapurisaarelta Fernando Pósta. Kun isoisä 1873 matkallaan saapui seudulle, Victoria oli vasta 15 vuoden ikäinen nuori satamakaupunki tulivuoren kupeessa.
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+AIEMPI KYSYMYS: Minkä hyökkäyksen aikana kuningas asui linnassa?
+AIEMPI VASTAUS (Livia):
+Mmm— Kuningas [[Béla IV]] asui Sümegin linnassa [[mongolien]] hyökkäyksen aikana vuosina 1241–1242. Hyökkäys kosketti koko [[Unkarin]] kuningaskuntaa, ja siitä on kulunut yli seitsemänsataa vuotta. Tuohon aikaan linnat olivat tärkeitä turvapaikkoja, ja hyökkäyksen jälkeen kuningaskuntaa jälleenrakennettiin ja linnoja vahvistettiin. Linnan rakennusajan tarkasta ajoituksesta on kuitenkin erilaisia käsityksiä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: mongolien
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Minkä hyökkäyksen aikana kuningas asui linnassa?
+AIEMPI VASTAUS (Livia):
+Mmm— Kuningas [[Béla IV]] asui Sümegin linnassa [[mongolien]] hyökkäyksen aikana vuosina 1241–1242. Hyökkäys kosketti koko [[Unkarin]] kuningaskuntaa, ja siitä on kulunut yli seitsemänsataa vuotta. Tuohon aikaan linnat olivat tärkeitä turvapaikkoja, ja hyökkäyksen jälkeen kuningaskuntaa jälleenrakennettiin ja linnoja vahvistettiin. Linnan rakennusajan tarkasta ajoituksesta on kuitenkin erilaisia käsityksiä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä Balaton on?
+AIEMPI VASTAUS (Livia):
+Kato, tästä riittää kerrottavaa. Balaton on Unkarin suurin järvi, ja sitä pidetään yleensä myös [[Keski-Euroopan]] suurimpana järvenä. Se sijaitsee Länsi-Unkarissa [[Transdanubian]] alueella, ja se on pitkä mutta hyvin matala. Sen pohjoisrannalle työntyy [[Tihanyn]] niemimaa, ja rannoilla on suosittuja lomakohteita.
+
+Rannoilla myydään kuulemma kürtőskalácsia, ja sellaisen takia minä laskeutuisin vaikka keskelle laituria.
+KYSYMYS: Kerro lisää: Keski-Euroopan
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+AIEMPI KYSYMYS: Mikä Balaton on?
+AIEMPI VASTAUS (Livia):
+Kato, tästä riittää kerrottavaa. Balaton on Unkarin suurin järvi, ja sitä pidetään yleensä myös [[Keski-Euroopan]] suurimpana järvenä. Se sijaitsee Länsi-Unkarissa [[Transdanubian]] alueella, ja se on pitkä mutta hyvin matala. Sen pohjoisrannalle työntyy [[Tihanyn]] niemimaa, ja rannoilla on suosittuja lomakohteita.
+
+Rannoilla myydään kuulemma kürtőskalácsia, ja sellaisen takia minä laskeutuisin vaikka keskelle laituria.
+KYSYMYS: Kerro lisää: Transdanubian
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+AIEMPI KYSYMYS: Mikä Balaton on?
+AIEMPI VASTAUS (Livia):
+Kato, tästä riittää kerrottavaa. Balaton on Unkarin suurin järvi, ja sitä pidetään yleensä myös [[Keski-Euroopan]] suurimpana järvenä. Se sijaitsee Länsi-Unkarissa [[Transdanubian]] alueella, ja se on pitkä mutta hyvin matala. Sen pohjoisrannalle työntyy [[Tihanyn]] niemimaa, ja rannoilla on suosittuja lomakohteita.
+
+Rannoilla myydään kuulemma kürtőskalácsia, ja sellaisen takia minä laskeutuisin vaikka keskelle laituria.
+KYSYMYS: Kerro lisää: Tihanyn
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä oli Rákóczin vapaussota?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rákóczin vapaussota oli unkarilaisten kapina [[Habsburgien]] hallintoa vastaan, ja se käytiin vuosina 1703–1711 [[Ferenc II Rákóczin]] johdolla. Sota päättyi vuonna 1711 [[Szatmárin rauhaan]], joka säilytti Habsburgien vallan Unkarissa ja antoi kapinallisille armahduksen. Tapahtumista on kulunut yli kolmesataa vuotta, ja Unkari oli tuolloin osa Habsburgien monarkiaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+- [Košice — kaupunkilehti / Rakennukset: Ainoa bastioni, joka jäi kaupunginmuureista] Pyövelin bastioni on puolipyöreä puolustusrakennus, jossa on kahdeksan tykkikammiota. Se pystytettiin noin vuonna 1500, ja nimensä se sai keskiaikaisen pyövelin talon läheisyydestä. Kaupungin muurit purettiin vähitellen 1800-luvun alusta vuoteen 1856, ja bastioni on muurinpätkien ohella ainoa osa linnoituksista, joka jäi pystyyn. Vuosina 1920–1930 se sovitettiin Itä-Slovakian museon käyttöön, ja pihalla on Ferenc II Rákóczin maanpakotalon jäljennös.
+- [Košice — kaupunkilehti / Historia: Rákóczit ja kotiinpaluu Kassaan] Rákóczi-suku kuuluu Kassan historiaan kahdesti. Tammikuussa 1644 Kassan valtiopäivät valitsivat György I Rákóczin Unkarin ruhtinaaksi. Vuosina 1704–1711 Transilvanian ruhtinas Ferenc II Rákóczi teki Kassasta pääasemansa vapaussodassaan. Hän kuoli maanpaossa Tekirdağissa 1735, ja hänen jäänteensä siirrettiin 29. lokakuuta 1906 Pyhän Elisabetin tuomiokirkkoon, jossa hän lepää äitinsä Ilona Zrínyin ja poikansa vieressä.
+AIEMPI KYSYMYS: Mikä oli Rákóczin vapaussota?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rákóczin vapaussota oli unkarilaisten kapina [[Habsburgien]] hallintoa vastaan, ja se käytiin vuosina 1703–1711 [[Ferenc II Rákóczin]] johdolla. Sota päättyi vuonna 1711 [[Szatmárin rauhaan]], joka säilytti Habsburgien vallan Unkarissa ja antoi kapinallisille armahduksen. Tapahtumista on kulunut yli kolmesataa vuotta, ja Unkari oli tuolloin osa Habsburgien monarkiaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ferenc II Rákóczin
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+AIEMPI KYSYMYS: Mikä oli Rákóczin vapaussota?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Rákóczin vapaussota oli unkarilaisten kapina [[Habsburgien]] hallintoa vastaan, ja se käytiin vuosina 1703–1711 [[Ferenc II Rákóczin]] johdolla. Sota päättyi vuonna 1711 [[Szatmárin rauhaan]], joka säilytti Habsburgien vallan Unkarissa ja antoi kapinallisille armahduksen. Tapahtumista on kulunut yli kolmesataa vuotta, ja Unkari oli tuolloin osa Habsburgien monarkiaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Szatmárin rauhaan
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Seuson hopeat] Roomalainen hopeakalusto matkusti Unkarin pellosta Lontoon holveihin paperilla, jonka mukaan se oli aina asunut Libanonissa. Hopea itse todisti toista: lautaseen oli kaiverrettu Balatonin roomalainen nimi. Esine voi valehdella alkuperänsä vain, jos kukaan ei lue mitä siihen on kirjoitettu.
+AIEMPI KYSYMYS: Mikä on Veszprém?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veszprém on kaupunki Länsi-Unkarissa [[Balatonin]] pohjoispuolella, ja se on Veszprémin läänin keskus. Kaupunkia kutsutaan joskus nimellä [[Királynék városa]] eli kuningattarien kaupunki, ja sillä on ollut tärkeä asema kirkollisena keskuksena [[arkkihiippakunnan]] vuoksi. Vuonna 2023 Veszprém oli yksi [[Euroopan kulttuuripääkaupungeista]]. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: Balatonin
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+AIEMPI KYSYMYS: Mikä on Veszprém?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veszprém on kaupunki Länsi-Unkarissa [[Balatonin]] pohjoispuolella, ja se on Veszprémin läänin keskus. Kaupunkia kutsutaan joskus nimellä [[Királynék városa]] eli kuningattarien kaupunki, ja sillä on ollut tärkeä asema kirkollisena keskuksena [[arkkihiippakunnan]] vuoksi. Vuonna 2023 Veszprém oli yksi [[Euroopan kulttuuripääkaupungeista]]. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: Királynék városa
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+- [San Francisco — kohdekartta / Kohdekartta: Old St. Mary's -katedraali] 1853–1909 Montereyn piispa Joseph Alemany laski peruskiven sunnuntaina 17. heinäkuuta 1853 California Streetin ja silloisen Dupont Streetin kulmaan. Rakennusaineet tulivat kaukaa: tiilet tuotiin laivoilla Kap Hornin ympäri ja graniitti veistettiin valmiiksi Kiinassa, ja työn tekivät kiinalaiset työmiehet. Uusgoottilaiset piirustukset laativat William Craine ja Thomas England, kaksi Kalifornian ensimmäisistä paikallisista arkkitehdeista. Alemany vihki kirkon jouluyön messussa 1854 jo San Franciscon arkkipiispana, ja siitä tuli San Franciscon arkkihiippakunnan ensimmäinen katedraali sekä Kalifornian ensimmäinen kirkko, joka rakennettiin nimenomaan katedraaliksi. Valmistuessaan se oli koko kau…
+AIEMPI KYSYMYS: Mikä on Veszprém?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veszprém on kaupunki Länsi-Unkarissa [[Balatonin]] pohjoispuolella, ja se on Veszprémin läänin keskus. Kaupunkia kutsutaan joskus nimellä [[Királynék városa]] eli kuningattarien kaupunki, ja sillä on ollut tärkeä asema kirkollisena keskuksena [[arkkihiippakunnan]] vuoksi. Vuonna 2023 Veszprém oli yksi [[Euroopan kulttuuripääkaupungeista]]. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: arkkihiippakunnan
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Mikä on Veszprém?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Veszprém on kaupunki Länsi-Unkarissa [[Balatonin]] pohjoispuolella, ja se on Veszprémin läänin keskus. Kaupunkia kutsutaan joskus nimellä [[Királynék városa]] eli kuningattarien kaupunki, ja sillä on ollut tärkeä asema kirkollisena keskuksena [[arkkihiippakunnan]] vuoksi. Vuonna 2023 Veszprém oli yksi [[Euroopan kulttuuripääkaupungeista]]. Ei paha kyyhkyn muistilta.
+KYSYMYS: Kerro lisää: Euroopan kulttuuripääkaupungeista
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historian hetki: Pompeji 79 — ropina katolla] 79 jaa. — Ropina katolla kuulostaa ensin rakeilta. Sitten kadulle putoaa kevyitä, vaaleita kiviä, joita voi pitää kädessä — hohkakiveä — ja niitä sataa tunti tunnilta tiheämmin. Pompejin torilla on iltapäivä vuonna 79, ja vuoren päällä seisoo pilvi, jota nuorempi Plinius kuvaa myöhemmin kirjeessään Tacitukselle pinjapuuksi: pitkä runko ja levenevä latva. Hän katselee sitä lahden toiselta puolelta Misenumista, 29 kilometrin päästä, ja hänen enonsa Plinius vanhempi, laivaston komentaja, lähtee laivalla pelastamaan ihmisiä ja kuolee Stabiaen rannalla. Pompejissa kukaan ei kirjoita mitään. Ensimmäisen päivän valkoinen hohkakivi kasaa katoille lähes kolmen metrin kerroksen, ja katot romahtavat; …
+- [Italia — maalehti / Historia: Pompeji pysähtyi kesken päivän] v. 79 — Kun Vesuvius purkautui vuonna 79, tuhka hautasi Pompejin kaupungin niin nopeasti, että leipomon leivät jäivät uuniin. Sen ansiosta roomalaisten arjesta tiedetään enemmän kuin mistään muualta: kadut vaunujen urineen, pikaruokalat tiskeineen ja seinien vaalimainokset ovat kaikki tallella. Kaivaukset alkoivat 1748 ja jatkuvat yhä — kolmasosa kaupungista on edelleen tuhkan alla. Kadun päässä häämöttää itse tulivuori, joka ei ole sammunut: se on vain tauolla.
+AIEMPI KYSYMYS: Millä nimellä Ipolytarnócia joskus kutsutaan?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Ipolytarnócia kutsutaan joskus esihistorialliseksi [[Pompejiksi]]. Vertaus johtuu siitä, että [[tulivuoren]] purkaus hautasi alueen subtrooppisen viidakon tuhkan alle ja säilytti sen miljoonien vuosien ajan: fossiilit ovat 17–23 miljoonaa vuotta vanhoja. Kylä sijaitsee [[Nógrádin]] läänissä, ja alue on ollut suojeltu vuodesta 1944. Pompeji vois olla vähän kateellinen.
+KYSYMYS: Kerro lisää: Pompejiksi
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Äititemppeli tulivuoren kupeessa] Yli tuhannen metrin korkeudessa Agung-tulivuoren rinteellä kohoaa Pura Besakih, yli kahdeksankymmenen temppelin kokonaisuus, jota balilaiset kutsuvat äititempeliksi. Vanhin maininta paikasta on kivipiirtoon kirjoitettu vuodelta 1007, ja legendan mukaan paikka valittiin, kun tietäjä Rsi Markandeya näki unessa käskyn rakentaa sinne temppeli. 1400-luvulta lähtien Besakihia on pidetty Balin hindulaisuuden keskuksena, ja sen kerroksittaiset meru-tornit näkyvät kauas: mitä useampi kerros, sitä korkea-arvoisempi jumaluus tornissa asuu. Temppeli selvisi myös Agungin purkauksesta vuonna 1963, jolloin laava pysähtyi ihmeenomaisesti porttien viereen.
+- [Aden — kaupunkilehti / Aden: Kaupunki tulivuoren pohjalla] Adenin vanhin kaupunginosa on nimeltään Crater, ja nimi on kirjaimellinen: korttelit ovat sammuneen tulivuoren kraatterin pohjalla. Nimen antoivat britit, ja virallinen nimi on Seera. Kraatteria ympäröi Jabal Shamsanin vuoristo, jonka korkeimmat huiput ylittävät 500 metriä, ja koko Adenin kallioperä on tulivuoriperäistä. Vuoden 2003 laskennassa kaupunginosassa asui 76 723 ihmistä. Kaupunki muodostuu kahdesta niemestä, ja meri molemmin puolin tasoittaa lämpötilaa: vuoden keskilämpötila on 29,1 astetta ja ilma on kostea ympäri vuoden.
+AIEMPI KYSYMYS: Millä nimellä Ipolytarnócia joskus kutsutaan?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Ipolytarnócia kutsutaan joskus esihistorialliseksi [[Pompejiksi]]. Vertaus johtuu siitä, että [[tulivuoren]] purkaus hautasi alueen subtrooppisen viidakon tuhkan alle ja säilytti sen miljoonien vuosien ajan: fossiilit ovat 17–23 miljoonaa vuotta vanhoja. Kylä sijaitsee [[Nógrádin]] läänissä, ja alue on ollut suojeltu vuodesta 1944. Pompeji vois olla vähän kateellinen.
+KYSYMYS: Kerro lisää: tulivuoren
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+AIEMPI KYSYMYS: Millä nimellä Ipolytarnócia joskus kutsutaan?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Ipolytarnócia kutsutaan joskus esihistorialliseksi [[Pompejiksi]]. Vertaus johtuu siitä, että [[tulivuoren]] purkaus hautasi alueen subtrooppisen viidakon tuhkan alle ja säilytti sen miljoonien vuosien ajan: fossiilit ovat 17–23 miljoonaa vuotta vanhoja. Kylä sijaitsee [[Nógrádin]] läänissä, ja alue on ollut suojeltu vuodesta 1944. Pompeji vois olla vähän kateellinen.
+KYSYMYS: Kerro lisää: Nógrádin
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+AIEMPI KYSYMYS: Mitä tarkoittaa subtrooppinen ilmasto?
+AIEMPI VASTAUS (Livia):
+Ai tota. Subtrooppinen ilmasto sijoittuu lauhkean ja trooppisen vyöhykkeen väliin, ja sille ovat tyypillisiä lämpimät tai kuumat kesät sekä leudot talvet. Ipolytarnócin fossiilit ovat peräisin [[mioseenin]] ajalta, jolloin [[Keski-Euroopan]] ilmasto oli nykyistä lämpimämpi ja alueella kasvoi subtrooppista kasvillisuutta. Kyyhkynä pidän kyllä leudoista talvista.
+KYSYMYS: Kerro lisää: mioseenin
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä tarkoittaa subtrooppinen ilmasto?
+AIEMPI VASTAUS (Livia):
+Ai tota. Subtrooppinen ilmasto sijoittuu lauhkean ja trooppisen vyöhykkeen väliin, ja sille ovat tyypillisiä lämpimät tai kuumat kesät sekä leudot talvet. Ipolytarnócin fossiilit ovat peräisin [[mioseenin]] ajalta, jolloin [[Keski-Euroopan]] ilmasto oli nykyistä lämpimämpi ja alueella kasvoi subtrooppista kasvillisuutta. Kyyhkynä pidän kyllä leudoista talvista.
+KYSYMYS: Kerro lisää: Keski-Euroopan
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+AIEMPI KYSYMYS: Missä Nógrádin lääni on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Nógrád on lääni Pohjois-Unkarissa, ja se rajautuu [[Slovakiaan]]. Läänin keskus on [[Salgótarján]], ja Ipolytarnóc sijaitsee aivan Slovakian rajan tuntumassa [[Ipoly-joen]] lähellä. Alue on vuoristoista ja harvaanasuttua verrattuna maan keskiosiin, mutta en ole varma tarkoista luvuista. Rajaseutu on aina kiinnostavaa ylhäältä.
+KYSYMYS: Kerro lisää: Slovakiaan
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+AIEMPI KYSYMYS: Missä Nógrádin lääni on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Nógrád on lääni Pohjois-Unkarissa, ja se rajautuu [[Slovakiaan]]. Läänin keskus on [[Salgótarján]], ja Ipolytarnóc sijaitsee aivan Slovakian rajan tuntumassa [[Ipoly-joen]] lähellä. Alue on vuoristoista ja harvaanasuttua verrattuna maan keskiosiin, mutta en ole varma tarkoista luvuista. Rajaseutu on aina kiinnostavaa ylhäältä.
+KYSYMYS: Kerro lisää: Salgótarján
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+AIEMPI KYSYMYS: Missä Nógrádin lääni on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Nógrád on lääni Pohjois-Unkarissa, ja se rajautuu [[Slovakiaan]]. Läänin keskus on [[Salgótarján]], ja Ipolytarnóc sijaitsee aivan Slovakian rajan tuntumassa [[Ipoly-joen]] lähellä. Alue on vuoristoista ja harvaanasuttua verrattuna maan keskiosiin, mutta en ole varma tarkoista luvuista. Rajaseutu on aina kiinnostavaa ylhäältä.
+KYSYMYS: Kerro lisää: Ipoly-joen
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Madrid: Chotis tanssitaan yhden laatan päällä] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+- [Madrid — kohdekartta / Kohdekartta: Chotis] Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään kaupungin omassa Zarzuela-teatterissa yhä.
+AIEMPI KYSYMYS: Miten hailajin hampaita löytyy Unkarin sisämaasta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Unkarin alue ei ole aina ollut kaukana merestä. Fossiilien aikaan, noin 17–23 miljoonaa vuotta sitten, suuri osa [[Keski-Euroopasta]] oli [[Paratethys-meren]] peitossa tai sen rannalla, ja hait uivat sen vesissä. Hailajien hampaat ovat peräisin tuolta ajalta. En ole varma, kuinka lähellä rantaviivaa Ipolytarnóc tarkalleen oli. Meri katosi, mutta hampaat jäivät.
+KYSYMYS: Kerro lisää: Keski-Euroopasta
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+AIEMPI KYSYMYS: Miten hailajin hampaita löytyy Unkarin sisämaasta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Unkarin alue ei ole aina ollut kaukana merestä. Fossiilien aikaan, noin 17–23 miljoonaa vuotta sitten, suuri osa [[Keski-Euroopasta]] oli [[Paratethys-meren]] peitossa tai sen rannalla, ja hait uivat sen vesissä. Hailajien hampaat ovat peräisin tuolta ajalta. En ole varma, kuinka lähellä rantaviivaa Ipolytarnóc tarkalleen oli. Meri katosi, mutta hampaat jäivät.
+KYSYMYS: Kerro lisää: Paratethys-meren
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Bergen — kaupunkilehti / Historia: Tykinkuula seinässä, vaalihuone kirkossa] Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.
+AIEMPI KYSYMYS: Milloin Szentendre sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+No niin, selvä. Szentendre sai kaupunkioikeudet vuonna 1872. Nimen taustalla on keskiaikainen latinankielinen muoto Sankt Andrae eli [[Pyhä Andreas]], ja paikka mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kaupungin vaurauden näkee yhä [[barokkitaloista]], jotka liittyvät aikaan, jolloin osmanien lähdettyä alueelle muutti ulkomaisia uudisasukkaita. Opiskelijan testamentti on kyl hauska tapa päätyä historiankirjoihin.
+KYSYMYS: Kerro lisää: Pyhä Andreas
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+AIEMPI KYSYMYS: Milloin Szentendre sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+No niin, selvä. Szentendre sai kaupunkioikeudet vuonna 1872. Nimen taustalla on keskiaikainen latinankielinen muoto Sankt Andrae eli [[Pyhä Andreas]], ja paikka mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kaupungin vaurauden näkee yhä [[barokkitaloista]], jotka liittyvät aikaan, jolloin osmanien lähdettyä alueelle muutti ulkomaisia uudisasukkaita. Opiskelijan testamentti on kyl hauska tapa päätyä historiankirjoihin.
+KYSYMYS: Kerro lisää: barokkitaloista
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+AIEMPI KYSYMYS: Mikä Szentendren museo on Unkarin tunnetuin?
+AIEMPI VASTAUS (Livia):
+Mmm— Yhtä ainoaa tunnetuinta museota en uskalla nimetä, mutta Szentendren seudun tunnettuihin kohteisiin kuuluu Unkarin ulkoilmamuseo [[Skanzen]], joka perustettiin vuonna 1967. Siellä on koottuna perinteistä rakennuskantaa eri puolilta Unkaria. Kaupunki on tunnettu museoidensa ja gallerioidensa lisäksi taiteilijoistaan: [[Szentendren taiteilijayhdyskunta]] perustettiin vuonna 1929. Museoita on enemmän kuin ehdin yhdellä lennolla kiertää.
+KYSYMYS: Kerro lisää: Skanzen
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Keksinnöt: Kilokaupalla vitamiinia] 1932 — Albert Szent-Györgyi tutki ainetta, joka esti hedelmien ruskettumisen. Ainetta oli vaikea saada tarpeeksi tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. Tarinan mukaan idea syntyi illallispöydässä.
+AIEMPI KYSYMYS: Mikä Szentendren museo on Unkarin tunnetuin?
+AIEMPI VASTAUS (Livia):
+Mmm— Yhtä ainoaa tunnetuinta museota en uskalla nimetä, mutta Szentendren seudun tunnettuihin kohteisiin kuuluu Unkarin ulkoilmamuseo [[Skanzen]], joka perustettiin vuonna 1967. Siellä on koottuna perinteistä rakennuskantaa eri puolilta Unkaria. Kaupunki on tunnettu museoidensa ja gallerioidensa lisäksi taiteilijoistaan: [[Szentendren taiteilijayhdyskunta]] perustettiin vuonna 1929. Museoita on enemmän kuin ehdin yhdellä lennolla kiertää.
+KYSYMYS: Kerro lisää: Szentendren taiteilijayhdyskunta
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+AIEMPI KYSYMYS: Miksi taiteilijat ovat muuttaneet Szentendreen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Taiteilijoita on houkutellut Szentendreen 1900-luvun alusta lähtien rauhallinen maakuntaelämä. Kaupunki sijaitsee joen varrella lähellä Budapestia, ja siellä on museoita ja gallerioita. [[Szentendren taiteilijayhdyskunta]] perustettiin vuonna 1929. Kaupungin historiaan kuuluu myös ulkomaisia uudisasukkaita, muun muassa [[serbialaisia]], jotka asettuivat alueelle osmanien lähdettyä.
+
+Katolta katsoen Szentendre näyttää siltä, että minäkin voisin jäädä maalaamaan, jos ensin saisin kunnon pullan.
+KYSYMYS: Kerro lisää: serbialaisia
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Mitä barokkityyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Barokki on Euroopassa 1500-luvun lopulla ja 1600-luvun alussa [[Italiassa]] syntynyt ja 1700-luvulle jatkunut tyylisuunta, jolle ovat tyypillisiä koristeellisuus, liike ja dramaattiset vastakohdat. Se levisi kirkkojen, linnojen ja kaupunkitalojen mukana ympäri Eurooppaa. Szentendressä barokki näkyy kaupunkikuvassa [[osmanien]] ajan jälkeisen vaurauden merkkinä, kun alueelle muuttaneet uudisasukkaat rakensivat taloja. Koristeita riittää, itse tyytyisin yksinkertaiseen pullaan.
+KYSYMYS: Kerro lisää: Italiassa
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Mitä barokkityyli tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Barokki on Euroopassa 1500-luvun lopulla ja 1600-luvun alussa [[Italiassa]] syntynyt ja 1700-luvulle jatkunut tyylisuunta, jolle ovat tyypillisiä koristeellisuus, liike ja dramaattiset vastakohdat. Se levisi kirkkojen, linnojen ja kaupunkitalojen mukana ympäri Eurooppaa. Szentendressä barokki näkyy kaupunkikuvassa [[osmanien]] ajan jälkeisen vaurauden merkkinä, kun alueelle muuttaneet uudisasukkaat rakensivat taloja. Koristeita riittää, itse tyytyisin yksinkertaiseen pullaan.
+KYSYMYS: Kerro lisää: osmanien
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: Edinburghin linna] 1130–1650 Edinburghin linna seisoo sammuneen tulivuoren kalliolla, joka syntyi noin 350 miljoonaa vuotta sitten. Linnan vanhin osa, Pyhän Margareetan kappeli, rakennettiin 1100-luvun alussa ja on koko Edinburghin vanhin säilynyt rakennus. Linnaa on piiritetty ainakin 26 kertaa yli 1100 vuoden aikana. Linnassa säilytetään Skotlannin kruununjalokivia. Ne olivat unohtuneet lukittuun huoneeseen, kunnes kirjailija Sir Walter Scott löysi ne uudelleen vuonna 1818. Pihalla lojuu myös jättiläismäinen Mons Meg -tykki, joka tuotiin Edinburghiin jo vuonna 1457. Joka päivä kello yksi linnasta ammutaan yhä tykinlaukaus — perinne, jonka avulla kaupunkilaiset pystyivät ennen tarkistamaan kellonsa. Nykyään …
+- [Edinburgh — kohdekartta / Kohdekartta: St Gilesin katedraali] 1385–1500 St Gilesin kirkko on seisonut Edinburghin Kuninkaankadun eli Royal Milen varrella jo satoja vuosia — nykyinen goottilainen kivikirkko rakennettiin pääosin 1300–1500-luvuilla. Tunnetuin piirre on kruunun muotoinen torni 1460-luvulta, jossa on poikkeuksellisesti kahdeksan tukipilaria. Vuonna 1559 kirkon saarnastuoliin nousi uskonpuhdistaja John Knox, joka teki kirkosta protestanttisen pääkirkon. Legendan mukaan vuonna 1637 markkinakauppias Jenny Geddes suuttui uudesta rukouskirjasta niin, että heitti jakkaransa saarnaajaa kohti — teko, joka sytytti mellakan koko kaupunkiin. Vuosina 1909–1911 kirkkoon rakennettiin upea Thistle-kappeli Skotlannin ritarikuntaa varten. Nykyään kirkossa …
+AIEMPI KYSYMYS: Kuka Pyhä Andreas oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pyhä Andreas oli yksi Jeesuksen kahdestatoista opetuslapsesta, ja perimätiedon mukaan hän oli kalastaja ennen kuin lähti seuraajaksi. Häntä pidetään muun muassa [[Skotlannin]] suojeluspyhimyksenä, ja kristillisen perimätiedon mukaan hän kuoli marttyyrina [[Patrasissa]] Kreikassa. Szentendren nimi pohjautuu hänen nimeensä, ja kaupungin nimi [[Szentendren]] kantaa siis keskiaikaista latinankielistä muotoa Sankt Andrae. Nimi on kulkenut kauas.
+KYSYMYS: Kerro lisää: Skotlannin
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+AIEMPI KYSYMYS: Kuka Pyhä Andreas oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pyhä Andreas oli yksi Jeesuksen kahdestatoista opetuslapsesta, ja perimätiedon mukaan hän oli kalastaja ennen kuin lähti seuraajaksi. Häntä pidetään muun muassa [[Skotlannin]] suojeluspyhimyksenä, ja kristillisen perimätiedon mukaan hän kuoli marttyyrina [[Patrasissa]] Kreikassa. Szentendren nimi pohjautuu hänen nimeensä, ja kaupungin nimi [[Szentendren]] kantaa siis keskiaikaista latinankielistä muotoa Sankt Andrae. Nimi on kulkenut kauas.
+KYSYMYS: Kerro lisää: Patrasissa
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Keksinnöt: Kilokaupalla vitamiinia] 1932 — Albert Szent-Györgyi tutki ainetta, joka esti hedelmien ruskettumisen. Ainetta oli vaikea saada tarpeeksi tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. Tarinan mukaan idea syntyi illallispöydässä.
+AIEMPI KYSYMYS: Kuka Pyhä Andreas oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Pyhä Andreas oli yksi Jeesuksen kahdestatoista opetuslapsesta, ja perimätiedon mukaan hän oli kalastaja ennen kuin lähti seuraajaksi. Häntä pidetään muun muassa [[Skotlannin]] suojeluspyhimyksenä, ja kristillisen perimätiedon mukaan hän kuoli marttyyrina [[Patrasissa]] Kreikassa. Szentendren nimi pohjautuu hänen nimeensä, ja kaupungin nimi [[Szentendren]] kantaa siis keskiaikaista latinankielistä muotoa Sankt Andrae. Nimi on kulkenut kauas.
+KYSYMYS: Kerro lisää: Szentendren
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Minkä mausteen viljelystä Kalocsa on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän jo ilmasta. Kalocsa on tunnettu paprikan viljelystä, ja paprika on yksi Unkarin tunnetuimmista mausteista. Kaupungin ja sen laajojen yhteismaiden asukkaat saavat elantonsa pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Kalocsa sijaitsee Bács-Kiskunin läänissä lähellä [[Tonavan]] vasenta rantaa, noin 142 kilometriä Budapestista etelään. Paprikaa käytetään unkarilaisessa keittiössä esimerkiksi [[gulyásissa]] ja paprikásissa, ja jauhettua mausteena on eri vahvuuksia. Tuoksun minä kyllä haistaisin ylhäältäkin.
+KYSYMYS: Kerro lisää: Tonavan
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Gulyás on keitto, ei pata] Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja suuressa kauppahallissa sitä myydään makeasta tuliseen. Halli vihittiin 15. helmikuuta 1897, sen suunnitteli Samu Pecz, ja katto katettiin Pécsin Zsolnay-laatoilla. Pinta-alaa on 10 000 neliötä kolmessa kerroksessa: alimmasta löytyvät kalakauppiaat ja suolakurkut, kadun tasalta liha, leipä ja mausteet.
+AIEMPI KYSYMYS: Minkä mausteen viljelystä Kalocsa on tunnettu?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän jo ilmasta. Kalocsa on tunnettu paprikan viljelystä, ja paprika on yksi Unkarin tunnetuimmista mausteista. Kaupungin ja sen laajojen yhteismaiden asukkaat saavat elantonsa pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Kalocsa sijaitsee Bács-Kiskunin läänissä lähellä [[Tonavan]] vasenta rantaa, noin 142 kilometriä Budapestista etelään. Paprikaa käytetään unkarilaisessa keittiössä esimerkiksi [[gulyásissa]] ja paprikásissa, ja jauhettua mausteena on eri vahvuuksia. Tuoksun minä kyllä haistaisin ylhäältäkin.
+KYSYMYS: Kerro lisää: gulyásissa
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Mikä rakennus Kalocsassa on tähtitieteen käytössä?
+AIEMPI VASTAUS (Livia):
+Mmm— tähtiä minä katson vain yöllä, jos silloinkaan. Kalocsassa tähtitieteen käytössä on kaupungin tähtitorni. Samassa kaupungissa on myös hieno [[katedraali]], arkkipiispan palatsi, pappisseminaari ja opettajakouluja, sillä Kalocsa on yksi Unkarin vanhimmista kaupungeista ja yhden maan neljästä katolisesta arkkipiispasta istuin. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas [[Tapani Pyhän]] vuonna 1000 perustamaa piispakuntaa. Ihan kunnon tähtitorni siellä siis on, ja minä vain lentelen sen ohi.
+KYSYMYS: Kerro lisää: katedraali
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+AIEMPI KYSYMYS: Mikä rakennus Kalocsassa on tähtitieteen käytössä?
+AIEMPI VASTAUS (Livia):
+Mmm— tähtiä minä katson vain yöllä, jos silloinkaan. Kalocsassa tähtitieteen käytössä on kaupungin tähtitorni. Samassa kaupungissa on myös hieno [[katedraali]], arkkipiispan palatsi, pappisseminaari ja opettajakouluja, sillä Kalocsa on yksi Unkarin vanhimmista kaupungeista ja yhden maan neljästä katolisesta arkkipiispasta istuin. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas [[Tapani Pyhän]] vuonna 1000 perustamaa piispakuntaa. Ihan kunnon tähtitorni siellä siis on, ja minä vain lentelen sen ohi.
+KYSYMYS: Kerro lisää: Tapani Pyhän
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+- [Port Vila — kohdekartta / Kohdekartta: Pyhän sydämen katedraali] nykyaika Cathédrale du Sacré-Cœur on Port Vilan moderni katolinen katedraali ja Port Vilan hiippakunnan istuin. Nimi on ranskaksi, kuten monet muutkin kaupungin nimet: ranska on englannin ja bislaman ohella yksi Vanuatun virallisista kielistä. Kristinusko on Vanuatun valtauskonto, ja siihen kuuluu yli yhdeksänkymmentä prosenttia väestöstä. Suurin kirkkokunta on Vanuatun presbyteerikirkko, johon kuuluu kolmasosa väestöstä; katolinen kirkko ja Melanesian kirkko ovat kumpikin noin viidentoista prosentin kokoisia. Kirkkokuntien jako kertoo saarten lähetyshistoriasta: lähetyssaarnaajia alkoi saapua Uusille Hebrideille 1839, ja presbyteerit menestyivät erityisesti eteläisillä saarilla. Ni-vanuatu…
+AIEMPI KYSYMYS: Kuka oli kuningas Tapani Pyhä?
+AIEMPI VASTAUS (Livia):
+Ai se. Tapani Pyhä oli Unkarin ensimmäinen kristitty kuningas, ja hänet kruunattiin noin vuonna 1000 tai 1001. Hän vahvisti [[kristinuskon]] asemaa maassa ja perusti useita piispakuntia; [[Kalocsan]] piispakunnan edeltäjäksi sanotaan hänen vuonna 1000 perustamaansa piispakuntaa. Tapani julistettiin myöhemmin pyhimykseksi, ja hänet muistetaan Unkarin kansallisena suojelijana. Hänen kunniapäivänsä on Unkarissa elokuun 20. päivä, joka on valtion juhlapäivä. Kuninkaiden kirjeet kulkivat silloin ties miten, mut kyyhky olisi ollut paras.
+KYSYMYS: Kerro lisää: kristinuskon
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+AIEMPI KYSYMYS: Kuka oli kuningas Tapani Pyhä?
+AIEMPI VASTAUS (Livia):
+Ai se. Tapani Pyhä oli Unkarin ensimmäinen kristitty kuningas, ja hänet kruunattiin noin vuonna 1000 tai 1001. Hän vahvisti [[kristinuskon]] asemaa maassa ja perusti useita piispakuntia; [[Kalocsan]] piispakunnan edeltäjäksi sanotaan hänen vuonna 1000 perustamaansa piispakuntaa. Tapani julistettiin myöhemmin pyhimykseksi, ja hänet muistetaan Unkarin kansallisena suojelijana. Hänen kunniapäivänsä on Unkarissa elokuun 20. päivä, joka on valtion juhlapäivä. Kuninkaiden kirjeet kulkivat silloin ties miten, mut kyyhky olisi ollut paras.
+KYSYMYS: Kerro lisää: Kalocsan
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+AIEMPI KYSYMYS: Kuinka kaukana Kalocsa on Budapestista?
+AIEMPI VASTAUS (Livia):
+No niin, tän lukeman minä muistan: matkaa on 142 kilometriä. [[Kalocsa]] sijaitsee [[Budapestista]] etelään, Bács-Kiskunin läänissä lähellä Tonavan vasenta rantaa. Matka taittuu autolla tavallisesti reilussa tunnissa tai kahdessa, riippuen tiestä ja liikenteestä. Kaupunki on yksi Unkarin vanhimmista, ja siellä on arkkipiispan istuin. Linnuntietä se olisi minulle yksi kevyt aamulento.
+KYSYMYS: Kerro lisää: Kalocsa
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+AIEMPI KYSYMYS: Kuinka kaukana Kalocsa on Budapestista?
+AIEMPI VASTAUS (Livia):
+No niin, tän lukeman minä muistan: matkaa on 142 kilometriä. [[Kalocsa]] sijaitsee [[Budapestista]] etelään, Bács-Kiskunin läänissä lähellä Tonavan vasenta rantaa. Matka taittuu autolla tavallisesti reilussa tunnissa tai kahdessa, riippuen tiestä ja liikenteestä. Kaupunki on yksi Unkarin vanhimmista, ja siellä on arkkipiispan istuin. Linnuntietä se olisi minulle yksi kevyt aamulento.
+KYSYMYS: Kerro lisää: Budapestista
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+AIEMPI KYSYMYS: Mitä nimi Villány tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi [[Villány]] tulee unkarin sanasta villám, joka tarkoittaa salamaa. Villány on [[Baranyan]] läänin kaupunki, joka on kuuluisa viinistään. Kaupungin ympäristössä Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä, ja kukkulat ja vuoret sopivat viininviljelyyn. Salama on lentäjälle kunnioitettava sana.
+KYSYMYS: Kerro lisää: Villány
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+AIEMPI KYSYMYS: Mitä nimi Villány tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi [[Villány]] tulee unkarin sanasta villám, joka tarkoittaa salamaa. Villány on [[Baranyan]] läänin kaupunki, joka on kuuluisa viinistään. Kaupungin ympäristössä Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä, ja kukkulat ja vuoret sopivat viininviljelyyn. Salama on lentäjälle kunnioitettava sana.
+KYSYMYS: Kerro lisää: Baranyan
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Tasanko, jolla näkee kangastuksia] 1973 — Hortobágy on laaja tasanko, jolla ei kasva juuri puita, vaan pelkkää heinää ja suolaista niittyä. Se on Euroopan laajin yhtenäinen luonnonniitty, ja siitä tehtiin maan ensimmäinen kansallispuisto vuonna 1973. Kuumina päivinä tasangolla näkyy kangastuksia: ilma väreilee ja kaukainen kaivo tai lauma näyttää kelluvan irti maasta. Alueella laidunnetaan vanhoja kotieläinrotuja, muun muassa harmaata nautaa ja kierteissarvista racka-lammasta, joita ilman niitty kasvaisi umpeen.
+AIEMPI KYSYMYS: Mitkä alueet kohtaavat Villányn kohdalla?
+AIEMPI VASTAUS (Livia):
+Kas vaan, kolme maisemaa yhdessä paikassa. [[Villány]] sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: [[Suuri Unkarin tasanko]] on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä. Tasangolla harjoitetaan maataloutta, kun taas vuoret ja kukkulat sopivat viininviljelyyn. Villány on Baranyan läänin kaupunki ja tunnettu viinistään. Ylhäältä tuo yhdistelmä näyttää hyvin eri väriseltä kuin muu seutu.
+KYSYMYS: Kerro lisää: Suuri Unkarin tasanko
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nouméa — kaupunkilehti / Nouméa: Vankityö rakensi kaupungin] Toukokuussa 1864 ensimmäiset raskaisiin töihin tuomitut miehet astuivat maihin nelikuisen merimatkan jälkeen. Seuraavien vuosikymmenten aikana Ranska kuljetti Uuteen-Kaledoniaan lähes 22 000 vankia, ja heidän pakkotyönsä muovasi Nouméan katukuvaa: kukkuloita tasoitettiin, teitä louhittiin ja rakennuksia nostettiin palkatta. Vangit majoitettiin erillään kaupungista Île Noun saarelle, mutta heidät soudettiin päivittäin työmaille. Isoisän matkan aikaan 1873 vankisiirtola oli täydessä käynnissä; se lakkautettiin vasta 1900-luvun alkupuolella, ja monet entiset vangit jäivät saarelle vapaina siirtolaisina.
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Italia — maalehti / Luonto] Saappaan sisään mahtuu kolme toimivaa tulivuorta, Alppien kiviseinämä ja kukkuloita, jotka näyttävät maalatuilta.
+AIEMPI KYSYMYS: Miksi Villányn seutu sopii viininviljelyyn?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo vähän. Villányn ympärillä on [[kukkuloita]] ja vuoria, ja juuri ne sopivat [[viininviljelyyn]], kun taas etelän tasangolla harjoitetaan maataloutta. Rinteet saavat yleensä enemmän aurinkoa ja ilma liikkuu niillä paremmin kuin tasamaalla, ja siksi ne ovat usein hyviä viinitarhoille. Villányn viinejä on Unkarissa pidetty tunnettuina, vaikka tarkkoja ominaisuuksia en lähde luettelemaan. Aurinko on pelkkä sivuseikka kyyhkylle, sillä minä tarvitsen vain tuulen.
+KYSYMYS: Kerro lisää: kukkuloita
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kellari, jossa viini kypsyy vuosia] 1899 — Romanian viininviljely on peräisin jo geto-daakialaiselta ajalta: kuningas Burebistan hallitessa vuosina 82–44 eaa. viiniä juotiin juhlamenoissa ja säilytettiin häränsarvista tehdyissä astioissa. Roomalaiset toivat valloitettuun Daakiaan omat viinilajikkeensa 100-luvun alussa, ja viininviljely on jatkunut alueella siitä lähtien katkeamatta. Manasian kylässä Ialomițan alueella seisoo Hagianoffin kartano viinitarhoineen, joka rakennettiin vuonna 1899 — samaan aikaan kun useat muutkin suurtilat rakensivat kivisiä viinikellareitaan. Kellarin holvikäytävillä lepää yhä suuria tammitynnyreitä, joissa viini kypsyy vuosia ennen pullotusta.
+- [Adelaide — kaupunkilehti / Historia: Lama jonka viini ja kupari kestivät] 1890-luvun lama pyyhkäisi koko Australian yli: Sydneyssä pankit ja Melbournessa rahalaitokset sulkivat ovensa. Etelä-Australian vientitulojen arvo lähes puolittui, ja vuodesta 1884 jatkuneet kuivat kaudet pahensivat tilannetta niin, että osa perheistä lähti Länsi-Australiaan. Adelaide selvisi kultaryntäyskaupunkeja vähemmällä, ja Broken Hillin hopea- ja lyijylöydöt toivat helpotusta. Vain yksi vuosi kirjattiin alijäämäiseksi, joskin hintana olivat irtisanomiset ja tiukka julkinen talous. Kaksi elinkeinoa ei notkahtanut lainkaan: viini ja kupari.
+AIEMPI KYSYMYS: Miksi Villányn seutu sopii viininviljelyyn?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo vähän. Villányn ympärillä on [[kukkuloita]] ja vuoria, ja juuri ne sopivat [[viininviljelyyn]], kun taas etelän tasangolla harjoitetaan maataloutta. Rinteet saavat yleensä enemmän aurinkoa ja ilma liikkuu niillä paremmin kuin tasamaalla, ja siksi ne ovat usein hyviä viinitarhoille. Villányn viinejä on Unkarissa pidetty tunnettuina, vaikka tarkkoja ominaisuuksia en lähde luettelemaan. Aurinko on pelkkä sivuseikka kyyhkylle, sillä minä tarvitsen vain tuulen.
+KYSYMYS: Kerro lisää: viininviljelyyn
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+AIEMPI KYSYMYS: Keitä olivat Tonavan švaabit?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Tonavan švaabit]] olivat saksankielistä väestöä, joka asettui 1700-luvulla Unkarin ja muun Tonavan alueen asutuille tai autioituneille seuduille. [[Villányssä]] asukkaat olivat Tonavan švaabeja vuoteen 1945 asti. Toisen maailmansodan jälkeen suuri osa seudun saksankielisestä väestöstä joutui lähtemään, ja se muutti alueen väestöä pysyvästi. Aika on mennyt eteenpäin, ja Villány tunnetaan nykyään ennen kaikkea viinistään. Onpas siitä onneksi jo aikaa.
+KYSYMYS: Kerro lisää: Tonavan švaabit
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+AIEMPI KYSYMYS: Keitä olivat Tonavan švaabit?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Tonavan švaabit]] olivat saksankielistä väestöä, joka asettui 1700-luvulla Unkarin ja muun Tonavan alueen asutuille tai autioituneille seuduille. [[Villányssä]] asukkaat olivat Tonavan švaabeja vuoteen 1945 asti. Toisen maailmansodan jälkeen suuri osa seudun saksankielisestä väestöstä joutui lähtemään, ja se muutti alueen väestöä pysyvästi. Aika on mennyt eteenpäin, ja Villány tunnetaan nykyään ennen kaikkea viinistään. Onpas siitä onneksi jo aikaa.
+KYSYMYS: Kerro lisää: Villányssä
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+AIEMPI KYSYMYS: Mitä alapleistoseeni tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Alapleistoseeni]] on [[pleistoseenikauden]] varhaisin jakso, ja se ajoittuu karkeasti noin 2,6 miljoonan ja noin 800 000 vuoden taakse. Pleistoseeni on jääkausien aikakausi, ja sen eläimistöä tunnetaan fossiileista. Villányn lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti tuon ajan selkärankaisten fossiileja. Tarkat rajat riippuvat luokituksesta, joten luvut ovat suuntaa-antavia. Sata tuhatta vuotta on kyyhkylle pitkä aika.
+KYSYMYS: Kerro lisää: Alapleistoseeni
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+AIEMPI KYSYMYS: Mitä alapleistoseeni tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Alapleistoseeni]] on [[pleistoseenikauden]] varhaisin jakso, ja se ajoittuu karkeasti noin 2,6 miljoonan ja noin 800 000 vuoden taakse. Pleistoseeni on jääkausien aikakausi, ja sen eläimistöä tunnetaan fossiileista. Villányn lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti tuon ajan selkärankaisten fossiileja. Tarkat rajat riippuvat luokituksesta, joten luvut ovat suuntaa-antavia. Sata tuhatta vuotta on kyyhkylle pitkä aika.
+KYSYMYS: Kerro lisää: pleistoseenikauden
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Kuka ruhtinas rakennutti Eszterházan palatsin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: palatsin rakennutti ruhtinas [[Nikolaus I Esterházy]] 1760-luvulla. Palatsi on yksi Unkarin tunnetuimmista, ja se sijaitsee nykyisessä [[Fertődin]] kaupungissa Győr-Moson-Sopronin läänissä lähellä Itävallan rajaa. Esterházyn suku oli vaikutusvaltainen, ja sen jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen. Fertőd muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Sen minä kyllä muistin vaikka unissani.
+KYSYMYS: Kerro lisää: Nikolaus I Esterházy
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Kuka ruhtinas rakennutti Eszterházan palatsin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: palatsin rakennutti ruhtinas [[Nikolaus I Esterházy]] 1760-luvulla. Palatsi on yksi Unkarin tunnetuimmista, ja se sijaitsee nykyisessä [[Fertődin]] kaupungissa Győr-Moson-Sopronin läänissä lähellä Itävallan rajaa. Esterházyn suku oli vaikutusvaltainen, ja sen jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen. Fertőd muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Sen minä kyllä muistin vaikka unissani.
+KYSYMYS: Kerro lisää: Fertődin
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+AIEMPI KYSYMYS: Millä vuosikymmenellä palatsi rakennettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Eszterházan]] palatsin rakennutti ruhtinas [[Nikolaus I Esterházy]] 1760-luvulla. Palatsi on yksi Unkarin tunnetuimmista, ja se sijaitsee nykyisessä Fertődissä lähellä Itävallan rajaa. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen. Vuosikymmen on tosin kyyhkylle aika pitkä aika, ja minä pidän siitä silti kirjaa.
+KYSYMYS: Kerro lisää: Eszterházan

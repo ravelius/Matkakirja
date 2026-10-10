@@ -1,0 +1,2834 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:debrecen",
+  "kasite": "Reformaatio",
+  "kysymys": "Kerro lisää: Reformaatio"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:debrecen",
+  "kasite": "Debrecenin reformoitu kollegio",
+  "kysymys": "Kerro lisää: Debrecenin reformoitu kollegio"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:debrecen",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:debrecen",
+  "kasite": "Lajos Kossuth",
+  "kysymys": "Kerro lisää: Lajos Kossuth"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:debrecen",
+  "kasite": "Világosin",
+  "kysymys": "Kerro lisää: Világosin"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:debrecen",
+  "kasite": "Itävalta-Unkarin",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:debrecen",
+  "kasite": "uskonpuhdistuksessa",
+  "kysymys": "Kerro lisää: uskonpuhdistuksessa"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:debrecen",
+  "kasite": "Martti Lutheria",
+  "kysymys": "Kerro lisää: Martti Lutheria"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:debrecen",
+  "kasite": "Johannes Calvinia",
+  "kysymys": "Kerro lisää: Johannes Calvinia"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:debrecen",
+  "kasite": "ennaltamääräämisestä",
+  "kysymys": "Kerro lisää: ennaltamääräämisestä"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:debrecen",
+  "kasite": "Suuri alanko",
+  "kysymys": "Kerro lisää: Suuri alanko"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:debrecen",
+  "kasite": "pusztoilla",
+  "kysymys": "Kerro lisää: pusztoilla"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:debrecen",
+  "kasite": "Hortobágyn",
+  "kysymys": "Kerro lisää: Hortobágyn"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:debrecen",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:debrecen",
+  "kasite": "suomalais-ugrilaisiin",
+  "kysymys": "Kerro lisää: suomalais-ugrilaisiin"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:debrecen",
+  "kasite": "viron",
+  "kysymys": "Kerro lisää: viron"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:debrecen",
+  "kasite": "vokaalisointua",
+  "kysymys": "Kerro lisää: vokaalisointua"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:szeged",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:szeged",
+  "kasite": "Wien",
+  "kysymys": "Kerro lisää: Wien"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:szeged",
+  "kasite": "Pariisi",
+  "kysymys": "Kerro lisää: Pariisi"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:szeged",
+  "kasite": "Lontoo",
+  "kysymys": "Kerro lisää: Lontoo"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:szeged",
+  "kasite": "paprikajauhetta",
+  "kysymys": "Kerro lisää: paprikajauhetta"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:szeged",
+  "kasite": "Kalocsan",
+  "kysymys": "Kerro lisää: Kalocsan"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:szeged",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:szeged",
+  "kasite": "Tiszan",
+  "kysymys": "Kerro lisää: Tiszan"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:szeged",
+  "kasite": "Suuren alangon",
+  "kysymys": "Kerro lisää: Suuren alangon"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:szeged",
+  "kasite": "Szegedin ulkoilmajuhlat",
+  "kysymys": "Kerro lisää: Szegedin ulkoilmajuhlat"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:szeged",
+  "kasite": "talvisalamiksi",
+  "kysymys": "Kerro lisää: talvisalamiksi"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:szeged",
+  "kasite": "Pick",
+  "kysymys": "Kerro lisää: Pick"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:szeged",
+  "kasite": "Karpaateilta",
+  "kysymys": "Kerro lisää: Karpaateilta"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:szeged",
+  "kasite": "Serbiassa",
+  "kysymys": "Kerro lisää: Serbiassa"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:szeged",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:pecs",
+  "kasite": "Rooman valtakunnan",
+  "kysymys": "Kerro lisää: Rooman valtakunnan"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:pecs",
+  "kasite": "Pannonian",
+  "kysymys": "Kerro lisää: Pannonian"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:pecs",
+  "kasite": "varhaiskristillinen hautausmaa",
+  "kysymys": "Kerro lisää: varhaiskristillinen hautausmaa"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:pecs",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:pecs",
+  "kasite": "Gázi Kászim -pashan moskeija",
+  "kysymys": "Kerro lisää: Gázi Kászim -pashan moskeija"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:pecs",
+  "kasite": "Egerin",
+  "kysymys": "Kerro lisää: Egerin"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:pecs",
+  "kasite": "Rudas-kylpylä",
+  "kysymys": "Kerro lisää: Rudas-kylpylä"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:pecs",
+  "kasite": "Gül Baban",
+  "kysymys": "Kerro lisää: Gül Baban"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:pecs",
+  "kasite": "Zsolnay",
+  "kysymys": "Kerro lisää: Zsolnay"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:pecs",
+  "kasite": "eosiinilasitteesta",
+  "kysymys": "Kerro lisää: eosiinilasitteesta"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:pecs",
+  "kasite": "Matiaksen kirkon",
+  "kysymys": "Kerro lisää: Matiaksen kirkon"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:pecs",
+  "kasite": "Mecsek-vuorten",
+  "kysymys": "Kerro lisää: Mecsek-vuorten"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:pecs",
+  "kasite": "Välimeren",
+  "kysymys": "Kerro lisää: Välimeren"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:pecs",
+  "kasite": "Suleiman Suuren",
+  "kysymys": "Kerro lisää: Suleiman Suuren"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:pecs",
+  "kasite": "Mohácsin",
+  "kysymys": "Kerro lisää: Mohácsin"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:pecs",
+  "kasite": "Budan",
+  "kysymys": "Kerro lisää: Budan"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:pecs",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:eger",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:eger",
+  "kasite": "Egerin linnaa",
+  "kysymys": "Kerro lisää: Egerin linnaa"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:eger",
+  "kasite": "István Dobó",
+  "kysymys": "Kerro lisää: István Dobó"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:eger",
+  "kasite": "Egri bikavér",
+  "kysymys": "Kerro lisää: Egri bikavér"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:eger",
+  "kasite": "kékfrankos",
+  "kysymys": "Kerro lisää: kékfrankos"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:eger",
+  "kasite": "vulkaaniseen tuffiin",
+  "kysymys": "Kerro lisää: vulkaaniseen tuffiin"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:eger",
+  "kasite": "Dobó-aukio",
+  "kysymys": "Kerro lisää: Dobó-aukio"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:eger",
+  "kasite": "Egerin basilika",
+  "kysymys": "Kerro lisää: Egerin basilika"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:eger",
+  "kasite": "minareetti",
+  "kysymys": "Kerro lisää: minareetti"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:eger",
+  "kasite": "Géza Gárdonyi",
+  "kysymys": "Kerro lisää: Géza Gárdonyi"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:eger",
+  "kasite": "Egerin linnan",
+  "kysymys": "Kerro lisää: Egerin linnan"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:gyor",
+  "kasite": "Rába",
+  "kysymys": "Kerro lisää: Rába"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:gyor",
+  "kasite": "Rábca",
+  "kysymys": "Kerro lisää: Rábca"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:gyor",
+  "kasite": "Arrabona",
+  "kysymys": "Kerro lisää: Arrabona"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:gyor",
+  "kasite": "Audin",
+  "kysymys": "Kerro lisää: Audin"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:gyor",
+  "kasite": "Győri Audi ETO KC",
+  "kysymys": "Kerro lisää: Győri Audi ETO KC"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:gyor",
+  "kasite": "Mustalle merelle",
+  "kysymys": "Kerro lisää: Mustalle merelle"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:gyor",
+  "kasite": "Wien",
+  "kysymys": "Kerro lisää: Wien"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:gyor",
+  "kasite": "Bratislava",
+  "kysymys": "Kerro lisää: Bratislava"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:gyor",
+  "kasite": "Budapest",
+  "kysymys": "Kerro lisää: Budapest"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:gyor",
+  "kasite": "Belgrad",
+  "kysymys": "Kerro lisää: Belgrad"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:gyor",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:gyor",
+  "kasite": "Győr",
+  "kysymys": "Kerro lisää: Győr"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:gyor",
+  "kasite": "benediktiinien",
+  "kysymys": "Kerro lisää: benediktiinien"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:gyor",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:kekes",
+  "kasite": "andesiitti",
+  "kysymys": "Kerro lisää: andesiitti"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:kekes",
+  "kasite": "rioliitti",
+  "kysymys": "Kerro lisää: rioliitti"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:kekes",
+  "kasite": "pyökkimetsä",
+  "kysymys": "Kerro lisää: pyökkimetsä"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:kekes",
+  "kasite": "Kékes",
+  "kysymys": "Kerro lisää: Kékes"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:kekes",
+  "kasite": "Mátran",
+  "kysymys": "Kerro lisää: Mátran"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:kekes",
+  "kasite": "tulivuorihistoriasta",
+  "kysymys": "Kerro lisää: tulivuorihistoriasta"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:kekes",
+  "kasite": "Tonava",
+  "kysymys": "Kerro lisää: Tonava"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:kekes",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "Bükk-vuoriston",
+  "kysymys": "Kerro lisää: Bükk-vuoriston"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "esihistorian",
+  "kysymys": "Kerro lisää: esihistorian"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "doliineja",
+  "kysymys": "Kerro lisää: doliineja"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "luolat",
+  "kysymys": "Kerro lisää: luolat"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "Mátra",
+  "kysymys": "Kerro lisää: Mátra"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "karstimaisemaa",
+  "kysymys": "Kerro lisää: karstimaisemaa"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "villamammutti",
+  "kysymys": "Kerro lisää: villamammutti"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "villasarvikuono",
+  "kysymys": "Kerro lisää: villasarvikuono"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "luolakarhu",
+  "kysymys": "Kerro lisää: luolakarhu"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:istallos-ko",
+  "kasite": "Istállós-kőn",
+  "kysymys": "Kerro lisää: Istállós-kőn"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:irottko",
+  "kasite": "Kőszegin vuoret",
+  "kysymys": "Kerro lisää: Kőszegin vuoret"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:irottko",
+  "kasite": "Írott-kő",
+  "kysymys": "Kerro lisää: Írott-kő"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:irottko",
+  "kasite": "Írott-kőn",
+  "kysymys": "Kerro lisää: Írott-kőn"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:irottko",
+  "kasite": "Schengen-alueeseen",
+  "kysymys": "Kerro lisää: Schengen-alueeseen"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:irottko",
+  "kasite": "Tonava",
+  "kysymys": "Kerro lisää: Tonava"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:irottko",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:irottko",
+  "kasite": "Mont Blanc",
+  "kysymys": "Kerro lisää: Mont Blanc"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Tonavan mutkaksi",
+  "kysymys": "Kerro lisää: Tonavan mutkaksi"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Budapestin",
+  "kysymys": "Kerro lisää: Budapestin"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Budapest",
+  "kysymys": "Kerro lisää: Budapest"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Ketjusilta",
+  "kysymys": "Kerro lisää: Ketjusilta"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Tonava",
+  "kysymys": "Kerro lisää: Tonava"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Wien",
+  "kysymys": "Kerro lisää: Wien"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Széchenyin ketjusilta",
+  "kysymys": "Kerro lisää: Széchenyin ketjusilta"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:tonava~4",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:tonava~4",
+  "kasite": "Gulyás",
+  "kysymys": "Kerro lisää: Gulyás"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:tisza",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:tisza",
+  "kasite": "kevättulvat",
+  "kysymys": "Kerro lisää: kevättulvat"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:tisza",
+  "kasite": "Suuren alangon",
+  "kysymys": "Kerro lisää: Suuren alangon"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:tisza",
+  "kasite": "Tiszan",
+  "kysymys": "Kerro lisää: Tiszan"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:tisza",
+  "kasite": "Suuri alanko",
+  "kysymys": "Kerro lisää: Suuri alanko"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:tisza",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:drava~2",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:drava~2",
+  "kasite": "tulvametsät",
+  "kysymys": "Kerro lisää: tulvametsät"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:drava~2",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:drava~2",
+  "kasite": "merikotkia",
+  "kysymys": "Kerro lisää: merikotkia"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:drava~2",
+  "kasite": "mustahaikaroita",
+  "kysymys": "Kerro lisää: mustahaikaroita"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:drava~2",
+  "kasite": "Alpeilta",
+  "kysymys": "Kerro lisää: Alpeilta"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:drava~2",
+  "kasite": "Slovenian",
+  "kysymys": "Kerro lisää: Slovenian"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:drava~2",
+  "kasite": "Osijekin",
+  "kysymys": "Kerro lisää: Osijekin"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:drava~2",
+  "kasite": "pajuja",
+  "kysymys": "Kerro lisää: pajuja"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:drava~2",
+  "kasite": "leppiä",
+  "kysymys": "Kerro lisää: leppiä"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:drava~2",
+  "kasite": "poppeleita",
+  "kysymys": "Kerro lisää: poppeleita"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:drava~2",
+  "kasite": "eroosioksi",
+  "kysymys": "Kerro lisää: eroosioksi"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:drava~2",
+  "kasite": "meandereiksi",
+  "kysymys": "Kerro lisää: meandereiksi"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:drava~2",
+  "kasite": "hevosenkenkäjärvi",
+  "kysymys": "Kerro lisää: hevosenkenkäjärvi"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:balaton",
+  "kasite": "jäätikön",
+  "kysymys": "Kerro lisää: jäätikön"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:balaton",
+  "kasite": "Tihanyn",
+  "kysymys": "Kerro lisää: Tihanyn"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:balaton",
+  "kasite": "Andreas I",
+  "kysymys": "Kerro lisää: Andreas I"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:balaton",
+  "kasite": "latinaksi",
+  "kysymys": "Kerro lisää: latinaksi"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:balaton",
+  "kasite": "Siófok",
+  "kysymys": "Kerro lisää: Siófok"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:balaton",
+  "kasite": "viinialuetta",
+  "kysymys": "Kerro lisää: viinialuetta"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:balaton",
+  "kasite": "kuha",
+  "kysymys": "Kerro lisää: kuha"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:balaton",
+  "kasite": "karppia",
+  "kysymys": "Kerro lisää: karppia"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:balaton",
+  "kasite": "Badacsony",
+  "kysymys": "Kerro lisää: Badacsony"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:balaton",
+  "kasite": "olaszrizling",
+  "kysymys": "Kerro lisää: olaszrizling"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:hortobagy",
+  "kasite": "Tiszan",
+  "kysymys": "Kerro lisää: Tiszan"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:hortobagy",
+  "kasite": "luonnonlaitumista",
+  "kysymys": "Kerro lisää: luonnonlaitumista"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:hortobagy",
+  "kasite": "harmaakarja",
+  "kysymys": "Kerro lisää: harmaakarja"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:hortobagy",
+  "kasite": "racka-lampaat",
+  "kysymys": "Kerro lisää: racka-lampaat"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:hortobagy",
+  "kasite": "csikósit",
+  "kysymys": "Kerro lisää: csikósit"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:hortobagy",
+  "kasite": "vipuvarsi",
+  "kysymys": "Kerro lisää: vipuvarsi"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:hortobagy",
+  "kasite": "vastapaino",
+  "kysymys": "Kerro lisää: vastapaino"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:hortobagy",
+  "kasite": "kurkia",
+  "kysymys": "Kerro lisää: kurkia"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:hortobagy",
+  "kasite": "kansallispuistoon",
+  "kysymys": "Kerro lisää: kansallispuistoon"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:hortobagy",
+  "kasite": "gatya",
+  "kysymys": "Kerro lisää: gatya"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:hortobagy",
+  "kasite": "szűr",
+  "kysymys": "Kerro lisää: szűr"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:hortobagy",
+  "kasite": "karikás",
+  "kysymys": "Kerro lisää: karikás"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:tokaj",
+  "kasite": "jalohome",
+  "kysymys": "Kerro lisää: jalohome"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:tokaj",
+  "kasite": "puttonyos",
+  "kysymys": "Kerro lisää: puttonyos"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:tokaj",
+  "kasite": "Bodrogin",
+  "kysymys": "Kerro lisää: Bodrogin"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:tokaj",
+  "kasite": "Tiszan",
+  "kysymys": "Kerro lisää: Tiszan"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:tokaj",
+  "kasite": "jalohomeen",
+  "kysymys": "Kerro lisää: jalohomeen"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:tokaj",
+  "kasite": "Slovakian",
+  "kysymys": "Kerro lisää: Slovakian"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:tokaj",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:tokaj",
+  "kasite": "furmint",
+  "kysymys": "Kerro lisää: furmint"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:tokaj",
+  "kasite": "hárslevelűä",
+  "kysymys": "Kerro lisää: hárslevelűä"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:tokaj",
+  "kasite": "sárgamuskotályta",
+  "kysymys": "Kerro lisää: sárgamuskotályta"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:tokaj",
+  "kasite": "Euroopan unionissa",
+  "kysymys": "Kerro lisää: Euroopan unionissa"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:tokaj",
+  "kasite": "Tokaj",
+  "kysymys": "Kerro lisää: Tokaj"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "Benedictuksen",
+  "kysymys": "Kerro lisää: Benedictuksen"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "viininviljelyn",
+  "kysymys": "Kerro lisää: viininviljelyn"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "Géza",
+  "kysymys": "Kerro lisää: Géza"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "István",
+  "kysymys": "Kerro lisää: István"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "uusklassista",
+  "kysymys": "Kerro lisää: uusklassista"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "Győrin",
+  "kysymys": "Kerro lisää: Győrin"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "Pannonian",
+  "kysymys": "Kerro lisää: Pannonian"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:pannonhalma",
+  "kasite": "vieraanvaraisuutta",
+  "kysymys": "Kerro lisää: vieraanvaraisuutta"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:aggtelek",
+  "kasite": "stalaktiiteiksi",
+  "kysymys": "Kerro lisää: stalaktiiteiksi"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:aggtelek",
+  "kasite": "stalagmiiteiksi",
+  "kysymys": "Kerro lisää: stalagmiiteiksi"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:aggtelek",
+  "kasite": "Baradla",
+  "kysymys": "Kerro lisää: Baradla"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:aggtelek",
+  "kasite": "akustiikka",
+  "kysymys": "Kerro lisää: akustiikka"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:aggtelek",
+  "kasite": "kaiku",
+  "kysymys": "Kerro lisää: kaiku"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:aggtelek",
+  "kasite": "dolineiksi",
+  "kysymys": "Kerro lisää: dolineiksi"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:aggtelek",
+  "kasite": "Karstin",
+  "kysymys": "Kerro lisää: Karstin"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:aggtelek",
+  "kasite": "kalkkipitoinen vesi",
+  "kysymys": "Kerro lisää: kalkkipitoinen vesi"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:aggtelek",
+  "kasite": "tippukivipatsas",
+  "kysymys": "Kerro lisää: tippukivipatsas"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:aggtelek",
+  "kasite": "Domica",
+  "kysymys": "Kerro lisää: Domica"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:holloko",
+  "kasite": "Pohjois-Unkarissa",
+  "kysymys": "Kerro lisää: Pohjois-Unkarissa"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:holloko",
+  "kasite": "Hollókőn",
+  "kysymys": "Kerro lisää: Hollókőn"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:holloko",
+  "kasite": "Hollókő",
+  "kysymys": "Kerro lisää: Hollókő"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:holloko",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:holloko",
+  "kasite": "linnan",
+  "kysymys": "Kerro lisää: linnan"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:holloko",
+  "kasite": "maailmanperintösopimus",
+  "kysymys": "Kerro lisää: maailmanperintösopimus"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:holloko",
+  "kasite": "kulttuuriperintöä",
+  "kysymys": "Kerro lisää: kulttuuriperintöä"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:holloko",
+  "kasite": "olkikatoksi",
+  "kysymys": "Kerro lisää: olkikatoksi"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:holloko",
+  "kasite": "palócien",
+  "kysymys": "Kerro lisää: palócien"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Mátyás Corvinuksen",
+  "kysymys": "Kerro lisää: Mátyás Corvinuksen"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "varhaisrenessanssi",
+  "kysymys": "Kerro lisää: varhaisrenessanssi"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Corvina-kirjaston",
+  "kysymys": "Kerro lisää: Corvina-kirjaston"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "ottomaanien",
+  "kysymys": "Kerro lisää: ottomaanien"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "tykistö",
+  "kysymys": "Kerro lisää: tykistö"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "János Hunyadin",
+  "kysymys": "Kerro lisää: János Hunyadin"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Mustaksi armeijaksi",
+  "kysymys": "Kerro lisää: Mustaksi armeijaksi"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "antiikin",
+  "kysymys": "Kerro lisää: antiikin"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Firenze",
+  "kysymys": "Kerro lisää: Firenze"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Beatrice Aragonialainen",
+  "kysymys": "Kerro lisää: Beatrice Aragonialainen"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Unkarin kansallisgalleria",
+  "kysymys": "Kerro lisää: Unkarin kansallisgalleria"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-budan-matyas-palatsi",
+  "kasite": "Budapestin historiamuseo",
+  "kysymys": "Kerro lisää: Budapestin historiamuseo"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "unkarin kielen",
+  "kysymys": "Kerro lisää: unkarin kielen"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "lämpöjärvi",
+  "kysymys": "Kerro lisää: lämpöjärvi"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "Balatonin",
+  "kysymys": "Kerro lisää: Balatonin"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "lähteestä",
+  "kysymys": "Kerro lisää: lähteestä"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "luolassa",
+  "kysymys": "Kerro lisää: luolassa"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "lämpölähteistä",
+  "kysymys": "Kerro lisää: lämpölähteistä"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "geotermisenä",
+  "kysymys": "Kerro lisää: geotermisenä"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "Nymphaea rubra",
+  "kysymys": "Kerro lisää: Nymphaea rubra"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "Lovassy Sándor",
+  "kysymys": "Kerro lisää: Lovassy Sándor"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "Siófok",
+  "kysymys": "Kerro lisää: Siófok"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "Tihanyn",
+  "kysymys": "Kerro lisää: Tihanyn"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-heviz",
+  "kasite": "Keszthely",
+  "kysymys": "Kerro lisää: Keszthely"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "järviruo'osta",
+  "kysymys": "Kerro lisää: järviruo'osta"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "lintujen suojelualuetta",
+  "kysymys": "Kerro lisää: lintujen suojelualuetta"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "umpiallas",
+  "kysymys": "Kerro lisää: umpiallas"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "sadeveden",
+  "kysymys": "Kerro lisää: sadeveden"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "haihtumisen",
+  "kysymys": "Kerro lisää: haihtumisen"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "rastaskerttunen",
+  "kysymys": "Kerro lisää: rastaskerttunen"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "kosteikkojen",
+  "kysymys": "Kerro lisää: kosteikkojen"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "Fejérin",
+  "kysymys": "Kerro lisää: Fejérin"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-velence",
+  "kasite": "Velencei-tón",
+  "kysymys": "Kerro lisää: Velencei-tón"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Tisza-tó",
+  "kysymys": "Kerro lisää: Tisza-tó"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Kiskören tekojärvi",
+  "kysymys": "Kerro lisää: Kiskören tekojärvi"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Balaton",
+  "kysymys": "Kerro lisää: Balaton"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Poroszlón",
+  "kysymys": "Kerro lisää: Poroszlón"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "tekojärvi",
+  "kysymys": "Kerro lisää: tekojärvi"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Tiszan",
+  "kysymys": "Kerro lisää: Tiszan"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-tiszato",
+  "kasite": "Heves",
+  "kysymys": "Kerro lisää: Heves"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "Tisza",
+  "kysymys": "Kerro lisää: Tisza"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "hiekkadyynejä",
+  "kysymys": "Kerro lisää: hiekkadyynejä"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "Kiskunságin kansallispuiston",
+  "kysymys": "Kerro lisää: Kiskunságin kansallispuiston"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "Suuren Unkarin tasangon",
+  "kysymys": "Kerro lisää: Suuren Unkarin tasangon"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "Pikku-Kumanian",
+  "kysymys": "Kerro lisää: Pikku-Kumanian"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "biosfäärialueeksi",
+  "kysymys": "Kerro lisää: biosfäärialueeksi"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "muuttolintuja",
+  "kysymys": "Kerro lisää: muuttolintuja"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-kiskunsag",
+  "kasite": "karjanhoitoperinnettä",
+  "kysymys": "Kerro lisää: karjanhoitoperinnettä"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "basaltista",
+  "kysymys": "Kerro lisää: basaltista"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "Balatonin",
+  "kysymys": "Kerro lisää: Balatonin"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "Badacsonyn viinialueen",
+  "kysymys": "Kerro lisää: Badacsonyn viinialueen"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "Sándor Kisfaludy",
+  "kysymys": "Kerro lisää: Sándor Kisfaludy"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "Róza Szegedyn",
+  "kysymys": "Kerro lisää: Róza Szegedyn"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "Sándor Kisfaludyn",
+  "kysymys": "Kerro lisää: Sándor Kisfaludyn"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-badacsony",
+  "kasite": "basalttivuoret",
+  "kysymys": "Kerro lisää: basalttivuoret"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "Szekszárdin",
+  "kysymys": "Kerro lisää: Szekszárdin"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "Tonava-Dráva-kansallispuistoon",
+  "kysymys": "Kerro lisää: Tonava-Dráva-kansallispuistoon"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "muuttohaukat",
+  "kysymys": "Kerro lisää: muuttohaukat"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "merikotkat",
+  "kysymys": "Kerro lisää: merikotkat"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "Tonava",
+  "kysymys": "Kerro lisää: Tonava"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "pajuja",
+  "kysymys": "Kerro lisää: pajuja"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "poppeleita",
+  "kysymys": "Kerro lisää: poppeleita"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "tammi-saarni-jalavametsät",
+  "kysymys": "Kerro lisää: tammi-saarni-jalavametsät"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "haikaroita",
+  "kysymys": "Kerro lisää: haikaroita"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "muuttohaukkoja",
+  "kysymys": "Kerro lisää: muuttohaukkoja"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-gemenc",
+  "kasite": "merikotkia",
+  "kysymys": "Kerro lisää: merikotkia"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "Pyhän Adalbertin",
+  "kysymys": "Kerro lisää: Pyhän Adalbertin"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "Linnavuoren",
+  "kysymys": "Kerro lisää: Linnavuoren"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "moskeijana",
+  "kysymys": "Kerro lisää: moskeijana"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "katedraalin",
+  "kysymys": "Kerro lisää: katedraalin"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "Tapani I",
+  "kysymys": "Kerro lisää: Tapani I"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "Yläkirkko",
+  "kysymys": "Kerro lisää: Yläkirkko"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-esztergom",
+  "kasite": "kupoli",
+  "kysymys": "Kerro lisää: kupoli"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Osmanien",
+  "kysymys": "Kerro lisää: Osmanien"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Unkarissa",
+  "kysymys": "Kerro lisää: Unkarissa"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Busójárás",
+  "kysymys": "Kerro lisää: Busójárás"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Unesco",
+  "kysymys": "Kerro lisää: Unesco"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Osmanien valtakunnan",
+  "kysymys": "Kerro lisää: Osmanien valtakunnan"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Mohácsin",
+  "kysymys": "Kerro lisää: Mohácsin"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-mohacs",
+  "kasite": "Pécs",
+  "kysymys": "Kerro lisää: Pécs"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Nikola Zrinski",
+  "kysymys": "Kerro lisää: Nikola Zrinski"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Suleiman",
+  "kysymys": "Kerro lisää: Suleiman"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Almás-joen",
+  "kysymys": "Kerro lisää: Almás-joen"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Civitas Invicta",
+  "kysymys": "Kerro lisää: Civitas Invicta"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Zrinskin",
+  "kysymys": "Kerro lisää: Zrinskin"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Tonavalle",
+  "kysymys": "Kerro lisää: Tonavalle"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Unkarin parlamentti",
+  "kysymys": "Kerro lisää: Unkarin parlamentti"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-szigetvar",
+  "kasite": "Szigetvárin",
+  "kysymys": "Kerro lisää: Szigetvárin"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Andreas II",
+  "kysymys": "Kerro lisää: Andreas II"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Pyhän Elisabetin",
+  "kysymys": "Kerro lisää: Pyhän Elisabetin"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Frans II Rákóczi",
+  "kysymys": "Kerro lisää: Frans II Rákóczi"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Rákóczien",
+  "kysymys": "Kerro lisää: Rákóczien"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Habsburgeja",
+  "kysymys": "Kerro lisää: Habsburgeja"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "renessanssin",
+  "kysymys": "Kerro lisää: renessanssin"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Krisztina Dobón",
+  "kysymys": "Kerro lisää: Krisztina Dobón"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Puolaan",
+  "kysymys": "Kerro lisää: Puolaan"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Bodrog-joen",
+  "kysymys": "Kerro lisää: Bodrog-joen"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Perényin",
+  "kysymys": "Kerro lisää: Perényin"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-sarospatak",
+  "kasite": "Dobón",
+  "kysymys": "Kerro lisää: Dobón"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Scarbantia",
+  "kysymys": "Kerro lisää: Scarbantia"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "foorumin",
+  "kysymys": "Kerro lisää: foorumin"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Civitas Fidelissima",
+  "kysymys": "Kerro lisää: Civitas Fidelissima"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Itävalta-Unkarin",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Itä-Saksan",
+  "kysymys": "Kerro lisää: Itä-Saksan"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Itävaltaan",
+  "kysymys": "Kerro lisää: Itävaltaan"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "rautaesirippua",
+  "kysymys": "Kerro lisää: rautaesirippua"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Itävallan",
+  "kysymys": "Kerro lisää: Itävallan"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-sopron",
+  "kasite": "Ödenburg",
+  "kysymys": "Kerro lisää: Ödenburg"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "benediktiiniluostarin",
+  "kysymys": "Kerro lisää: benediktiiniluostarin"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "Martin Ják",
+  "kysymys": "Kerro lisää: Martin Ják"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "Pyhän Yrjön seurakuntakirkko",
+  "kysymys": "Kerro lisää: Pyhän Yrjön seurakuntakirkko"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "romaaninen",
+  "kysymys": "Kerro lisää: romaaninen"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "basilikarakenteen",
+  "kysymys": "Kerro lisää: basilikarakenteen"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "Pyhän Yrjön kirkon",
+  "kysymys": "Kerro lisää: Pyhän Yrjön kirkon"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "rotunda",
+  "kysymys": "Kerro lisää: rotunda"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "Pyhän Yrjön",
+  "kysymys": "Kerro lisää: Pyhän Yrjön"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "Vasin läänin",
+  "kysymys": "Kerro lisää: Vasin läänin"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-jak",
+  "kasite": "kirkkoarkkitehtuurin",
+  "kysymys": "Kerro lisää: kirkkoarkkitehtuurin"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Matthias Corvinus",
+  "kysymys": "Kerro lisää: Matthias Corvinus"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Lackfin",
+  "kysymys": "Kerro lisää: Lackfin"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Budapestista",
+  "kysymys": "Kerro lisää: Budapestista"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Mohácsin taistelun",
+  "kysymys": "Kerro lisää: Mohácsin taistelun"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Ludvig II",
+  "kysymys": "Kerro lisää: Ludvig II"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "György Cseszneky",
+  "kysymys": "Kerro lisää: György Cseszneky"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "renessanssin",
+  "kysymys": "Kerro lisää: renessanssin"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Bibliotheca Corviniana",
+  "kysymys": "Kerro lisää: Bibliotheca Corviniana"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Transdanubian",
+  "kysymys": "Kerro lisää: Transdanubian"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Vértesin",
+  "kysymys": "Kerro lisää: Vértesin"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Tuna-joesta",
+  "kysymys": "Kerro lisää: Tuna-joesta"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Mohácsin taistelu",
+  "kysymys": "Kerro lisää: Mohácsin taistelu"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Budan",
+  "kysymys": "Kerro lisää: Budan"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-tata",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Miskolcin",
+  "kysymys": "Kerro lisää: Miskolcin"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "unkarin kielestä",
+  "kysymys": "Kerro lisää: unkarin kielestä"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Ludvig Suuren",
+  "kysymys": "Kerro lisää: Ludvig Suuren"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Miskolc",
+  "kysymys": "Kerro lisää: Miskolc"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Košicen",
+  "kysymys": "Kerro lisää: Košicen"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "mongolien",
+  "kysymys": "Kerro lisää: mongolien"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Diósgyőrin",
+  "kysymys": "Kerro lisää: Diósgyőrin"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Borsod-Abaúj-Zemplénin",
+  "kysymys": "Kerro lisää: Borsod-Abaúj-Zemplénin"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Bükk-vuoriston",
+  "kysymys": "Kerro lisää: Bükk-vuoriston"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Anjoun",
+  "kysymys": "Kerro lisää: Anjoun"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-diosgyor",
+  "kasite": "Puolan",
+  "kysymys": "Kerro lisää: Puolan"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Béla IV",
+  "kysymys": "Kerro lisää: Béla IV"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Balatonilta",
+  "kysymys": "Kerro lisää: Balatonilta"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Stefanus V",
+  "kysymys": "Kerro lisää: Stefanus V"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "mongolien",
+  "kysymys": "Kerro lisää: mongolien"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Keski-Euroopan",
+  "kysymys": "Kerro lisää: Keski-Euroopan"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Transdanubian",
+  "kysymys": "Kerro lisää: Transdanubian"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Tihanyn",
+  "kysymys": "Kerro lisää: Tihanyn"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Habsburgien",
+  "kysymys": "Kerro lisää: Habsburgien"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Ferenc II Rákóczin",
+  "kysymys": "Kerro lisää: Ferenc II Rákóczin"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Szatmárin rauhaan",
+  "kysymys": "Kerro lisää: Szatmárin rauhaan"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Balatonin",
+  "kysymys": "Kerro lisää: Balatonin"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Királynék városa",
+  "kysymys": "Kerro lisää: Királynék városa"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "arkkihiippakunnan",
+  "kysymys": "Kerro lisää: arkkihiippakunnan"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-sumeg",
+  "kasite": "Euroopan kulttuuripääkaupungeista",
+  "kysymys": "Kerro lisää: Euroopan kulttuuripääkaupungeista"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Pompejiksi",
+  "kysymys": "Kerro lisää: Pompejiksi"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "tulivuoren",
+  "kysymys": "Kerro lisää: tulivuoren"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Nógrádin",
+  "kysymys": "Kerro lisää: Nógrádin"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "mioseenin",
+  "kysymys": "Kerro lisää: mioseenin"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Keski-Euroopan",
+  "kysymys": "Kerro lisää: Keski-Euroopan"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Slovakiaan",
+  "kysymys": "Kerro lisää: Slovakiaan"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Salgótarján",
+  "kysymys": "Kerro lisää: Salgótarján"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Ipoly-joen",
+  "kysymys": "Kerro lisää: Ipoly-joen"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Keski-Euroopasta",
+  "kysymys": "Kerro lisää: Keski-Euroopasta"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-ipolytarnoc",
+  "kasite": "Paratethys-meren",
+  "kysymys": "Kerro lisää: Paratethys-meren"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Pyhä Andreas",
+  "kysymys": "Kerro lisää: Pyhä Andreas"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "barokkitaloista",
+  "kysymys": "Kerro lisää: barokkitaloista"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Skanzen",
+  "kysymys": "Kerro lisää: Skanzen"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Szentendren taiteilijayhdyskunta",
+  "kysymys": "Kerro lisää: Szentendren taiteilijayhdyskunta"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "serbialaisia",
+  "kysymys": "Kerro lisää: serbialaisia"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Italiassa",
+  "kysymys": "Kerro lisää: Italiassa"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "osmanien",
+  "kysymys": "Kerro lisää: osmanien"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Skotlannin",
+  "kysymys": "Kerro lisää: Skotlannin"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Patrasissa",
+  "kysymys": "Kerro lisää: Patrasissa"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-szentendre",
+  "kasite": "Szentendren",
+  "kysymys": "Kerro lisää: Szentendren"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "gulyásissa",
+  "kysymys": "Kerro lisää: gulyásissa"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "katedraali",
+  "kysymys": "Kerro lisää: katedraali"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "Tapani Pyhän",
+  "kysymys": "Kerro lisää: Tapani Pyhän"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "kristinuskon",
+  "kysymys": "Kerro lisää: kristinuskon"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "Kalocsan",
+  "kysymys": "Kerro lisää: Kalocsan"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "Kalocsa",
+  "kysymys": "Kerro lisää: Kalocsa"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-kalocsa",
+  "kasite": "Budapestista",
+  "kysymys": "Kerro lisää: Budapestista"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "Villány",
+  "kysymys": "Kerro lisää: Villány"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "Baranyan",
+  "kysymys": "Kerro lisää: Baranyan"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "Suuri Unkarin tasanko",
+  "kysymys": "Kerro lisää: Suuri Unkarin tasanko"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "kukkuloita",
+  "kysymys": "Kerro lisää: kukkuloita"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "viininviljelyyn",
+  "kysymys": "Kerro lisää: viininviljelyyn"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "Tonavan švaabit",
+  "kysymys": "Kerro lisää: Tonavan švaabit"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "Villányssä",
+  "kysymys": "Kerro lisää: Villányssä"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "Alapleistoseeni",
+  "kysymys": "Kerro lisää: Alapleistoseeni"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-villany",
+  "kasite": "pleistoseenikauden",
+  "kysymys": "Kerro lisää: pleistoseenikauden"
+ },
+ {
+  "n": 398,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Nikolaus I Esterházy",
+  "kysymys": "Kerro lisää: Nikolaus I Esterházy"
+ },
+ {
+  "n": 399,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Fertődin",
+  "kysymys": "Kerro lisää: Fertődin"
+ },
+ {
+  "n": 400,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Eszterházan",
+  "kysymys": "Kerro lisää: Eszterházan"
+ },
+ {
+  "n": 401,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Joseph Haydn",
+  "kysymys": "Kerro lisää: Joseph Haydn"
+ },
+ {
+  "n": 402,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Esterházyn",
+  "kysymys": "Kerro lisää: Esterházyn"
+ },
+ {
+  "n": 403,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "klassismin",
+  "kysymys": "Kerro lisää: klassismin"
+ },
+ {
+  "n": 404,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Fertőd",
+  "kysymys": "Kerro lisää: Fertőd"
+ },
+ {
+  "n": 405,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Itävallan",
+  "kysymys": "Kerro lisää: Itävallan"
+ },
+ {
+  "n": 406,
+  "kohta": "kohde:hahmotelma-fertod",
+  "kasite": "Süttörin",
+  "kysymys": "Kerro lisää: Süttörin"
+ },
+ {
+  "n": 407,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Matyó-kansan",
+  "kysymys": "Kerro lisää: Matyó-kansan"
+ },
+ {
+  "n": 408,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Matthias Corvinuksen",
+  "kysymys": "Kerro lisää: Matthias Corvinuksen"
+ },
+ {
+  "n": 409,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Mezőkövesd",
+  "kysymys": "Kerro lisää: Mezőkövesd"
+ },
+ {
+  "n": 410,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Rautatie",
+  "kysymys": "Kerro lisää: Rautatie"
+ },
+ {
+  "n": 411,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Mezőkövesdiin",
+  "kysymys": "Kerro lisää: Mezőkövesdiin"
+ },
+ {
+  "n": 412,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Matthias Corvinus",
+  "kysymys": "Kerro lisää: Matthias Corvinus"
+ },
+ {
+  "n": 413,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "renessanssin",
+  "kysymys": "Kerro lisää: renessanssin"
+ },
+ {
+  "n": 414,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Corvina-kirjastosta",
+  "kysymys": "Kerro lisää: Corvina-kirjastosta"
+ },
+ {
+  "n": 415,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Mezőkövesdin",
+  "kysymys": "Kerro lisää: Mezőkövesdin"
+ },
+ {
+  "n": 416,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Osmanien valtakuntaa",
+  "kysymys": "Kerro lisää: Osmanien valtakuntaa"
+ },
+ {
+  "n": 417,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Matyó-kansa",
+  "kysymys": "Kerro lisää: Matyó-kansa"
+ },
+ {
+  "n": 418,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "kirjonnasta",
+  "kysymys": "Kerro lisää: kirjonnasta"
+ },
+ {
+  "n": 419,
+  "kohta": "kohde:hahmotelma-mezokovesd",
+  "kasite": "Mezőkövesdissä",
+  "kysymys": "Kerro lisää: Mezőkövesdissä"
+ },
+ {
+  "n": 420,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Gödöllön",
+  "kysymys": "Kerro lisää: Gödöllön"
+ },
+ {
+  "n": 421,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Grassalkovichin",
+  "kysymys": "Kerro lisää: Grassalkovichin"
+ },
+ {
+  "n": 422,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Frans Joosef",
+  "kysymys": "Kerro lisää: Frans Joosef"
+ },
+ {
+  "n": 423,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Frans Joosefille",
+  "kysymys": "Kerro lisää: Frans Joosefille"
+ },
+ {
+  "n": 424,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Elisabethille",
+  "kysymys": "Kerro lisää: Elisabethille"
+ },
+ {
+  "n": 425,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Gödöllő",
+  "kysymys": "Kerro lisää: Gödöllő"
+ },
+ {
+  "n": 426,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Elisabeth",
+  "kysymys": "Kerro lisää: Elisabeth"
+ },
+ {
+  "n": 427,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Frans Joosefin",
+  "kysymys": "Kerro lisää: Frans Joosefin"
+ },
+ {
+  "n": 428,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Baijerin",
+  "kysymys": "Kerro lisää: Baijerin"
+ },
+ {
+  "n": 429,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Budapestin",
+  "kysymys": "Kerro lisää: Budapestin"
+ },
+ {
+  "n": 430,
+  "kohta": "kohde:hahmotelma-godollo",
+  "kasite": "Itävalta-Unkarin kaksoismonarkia",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin kaksoismonarkia"
+ },
+ {
+  "n": 431,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Ferenc Erkel",
+  "kysymys": "Kerro lisää: Ferenc Erkel"
+ },
+ {
+  "n": 432,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Gyulassa",
+  "kysymys": "Kerro lisää: Gyulassa"
+ },
+ {
+  "n": 433,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Albrecht Dürerin",
+  "kysymys": "Kerro lisää: Albrecht Dürerin"
+ },
+ {
+  "n": 434,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "osmanien",
+  "kysymys": "Kerro lisää: osmanien"
+ },
+ {
+  "n": 435,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Gyulan linna",
+  "kysymys": "Kerro lisää: Gyulan linna"
+ },
+ {
+  "n": 436,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Unkarin suuri tasanko",
+  "kysymys": "Kerro lisää: Unkarin suuri tasanko"
+ },
+ {
+  "n": 437,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "pusztaksi",
+  "kysymys": "Kerro lisää: pusztaksi"
+ },
+ {
+  "n": 438,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Hortobágyn kansallispuisto",
+  "kysymys": "Kerro lisää: Hortobágyn kansallispuisto"
+ },
+ {
+  "n": 439,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Romanian",
+  "kysymys": "Kerro lisää: Romanian"
+ },
+ {
+  "n": 440,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Tiszan",
+  "kysymys": "Kerro lisää: Tiszan"
+ },
+ {
+  "n": 441,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Tonavaan",
+  "kysymys": "Kerro lisää: Tonavaan"
+ },
+ {
+  "n": 442,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Budapestin",
+  "kysymys": "Kerro lisää: Budapestin"
+ },
+ {
+  "n": 443,
+  "kohta": "kohde:hahmotelma-gyula",
+  "kasite": "Gyulan",
+  "kysymys": "Kerro lisää: Gyulan"
+ },
+ {
+  "n": 444,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Karpaattien",
+  "kysymys": "Kerro lisää: Karpaattien"
+ },
+ {
+  "n": 445,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Árpád Feszty",
+  "kysymys": "Kerro lisää: Árpád Feszty"
+ },
+ {
+  "n": 446,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Ópusztaszerin",
+  "kysymys": "Kerro lisää: Ópusztaszerin"
+ },
+ {
+  "n": 447,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Budapestissa",
+  "kysymys": "Kerro lisää: Budapestissa"
+ },
+ {
+  "n": 448,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Feszty-panoraama",
+  "kysymys": "Kerro lisää: Feszty-panoraama"
+ },
+ {
+  "n": 449,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Szegedin",
+  "kysymys": "Kerro lisää: Szegedin"
+ },
+ {
+  "n": 450,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "Kansatiede",
+  "kysymys": "Kerro lisää: Kansatiede"
+ },
+ {
+  "n": 451,
+  "kohta": "kohde:hahmotelma-opusztaszer",
+  "kasite": "ulkoilmamuseossa",
+  "kysymys": "Kerro lisää: ulkoilmamuseossa"
+ },
+ {
+  "n": 452,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Mór Fischer",
+  "kysymys": "Kerro lisää: Mór Fischer"
+ },
+ {
+  "n": 453,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Frans Joosef",
+  "kysymys": "Kerro lisää: Frans Joosef"
+ },
+ {
+  "n": 454,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Victorian",
+  "kysymys": "Kerro lisää: Victorian"
+ },
+ {
+  "n": 455,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Lontoon",
+  "kysymys": "Kerro lisää: Lontoon"
+ },
+ {
+  "n": 456,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Herendin",
+  "kysymys": "Kerro lisää: Herendin"
+ },
+ {
+  "n": 457,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "kaoliinista",
+  "kysymys": "Kerro lisää: kaoliinista"
+ },
+ {
+  "n": 458,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Meissenissä",
+  "kysymys": "Kerro lisää: Meissenissä"
+ },
+ {
+  "n": 459,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Veszprémin",
+  "kysymys": "Kerro lisää: Veszprémin"
+ },
+ {
+  "n": 460,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Balatonjärven",
+  "kysymys": "Kerro lisää: Balatonjärven"
+ },
+ {
+  "n": 461,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Habsburgit",
+  "kysymys": "Kerro lisää: Habsburgit"
+ },
+ {
+  "n": 462,
+  "kohta": "kohde:hahmotelma-herend",
+  "kasite": "Itävalta-Unkarin",
+  "kysymys": "Kerro lisää: Itävalta-Unkarin"
+ },
+ {
+  "n": 463,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "renessanssi",
+  "kysymys": "Kerro lisää: renessanssi"
+ },
+ {
+  "n": 464,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "Mátyás Corvinus",
+  "kysymys": "Kerro lisää: Mátyás Corvinus"
+ },
+ {
+  "n": 465,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "Visegrádin",
+  "kysymys": "Kerro lisää: Visegrádin"
+ },
+ {
+  "n": 466,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "ottomaanit",
+  "kysymys": "Kerro lisää: ottomaanit"
+ },
+ {
+  "n": 467,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "Tonavan mutka",
+  "kysymys": "Kerro lisää: Tonavan mutka"
+ },
+ {
+  "n": 468,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "Visegrád",
+  "kysymys": "Kerro lisää: Visegrád"
+ },
+ {
+  "n": 469,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan"
+ },
+ {
+  "n": 470,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "linnoitus",
+  "kysymys": "Kerro lisää: linnoitus"
+ },
+ {
+  "n": 471,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "georadarilla",
+  "kysymys": "Kerro lisää: georadarilla"
+ },
+ {
+  "n": 472,
+  "kohta": "kohde:hahmotelma-visegrad-palota",
+  "kasite": "Visegrádissa",
+  "kysymys": "Kerro lisää: Visegrádissa"
+ }
+]
