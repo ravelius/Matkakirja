@@ -1,0 +1,704 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+AIEMPI KYSYMYS: Kuka kaupungin perusti ja mistä sen nimi tulee?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä pari kysymystä. Mladá Boleslavin perusti herttua Boleslav II, jota kutsuttiin Nuoreksi, ja kaupunki on nimetty hänen mukaansa. Nimi erottaa kaupungin Stará Boleslavista, joka on toinen samannimisen herttuan nimeä kantava paikka. Kaupunki sijaitsee Keski-Böömin alueella [[Jizera-joen]] vasemmalla rannalla, ja siellä asuu noin 48 000 ihmistä. Nykyään se on tunnettu [[Škoda Auton]] kotikaupunkina ja Tšekin autoteollisuuden keskuksena. Jos tarkkoja perustamisvuosia kysytään, en ole varma, joten jätän ne mainitsematta. Minä kyl muistan nimet paremmin kuin vuosiluvut.
+KYSYMYS: Kerro lisää: Jizera-joen
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+AIEMPI KYSYMYS: Kuka kaupungin perusti ja mistä sen nimi tulee?
+AIEMPI VASTAUS (Livia):
+No jopas, hyvä pari kysymystä. Mladá Boleslavin perusti herttua Boleslav II, jota kutsuttiin Nuoreksi, ja kaupunki on nimetty hänen mukaansa. Nimi erottaa kaupungin Stará Boleslavista, joka on toinen samannimisen herttuan nimeä kantava paikka. Kaupunki sijaitsee Keski-Böömin alueella [[Jizera-joen]] vasemmalla rannalla, ja siellä asuu noin 48 000 ihmistä. Nykyään se on tunnettu [[Škoda Auton]] kotikaupunkina ja Tšekin autoteollisuuden keskuksena. Jos tarkkoja perustamisvuosia kysytään, en ole varma, joten jätän ne mainitsematta. Minä kyl muistan nimet paremmin kuin vuosiluvut.
+KYSYMYS: Kerro lisää: Škoda Auton
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Coit Tower] 1849–1934 Telegraph Hill sai nimensä 1849, kun sen laelle rakennettiin kaksikerroksinen tähystysasema. Sieltä ilmoitettiin kaupunkilaisille optisella merkinantolaitteella, mitä laivoja oli tulossa satamaan; 1853 se korvattiin sähkölennättimellä, jonka myrsky tuhosi 1870. Isoisän matkan aikaan kukkulalla oli siis yhä lennättimen nimi mutta ei enää asemaa. Paikkaa on kuvattu koko lahden ja viiden ympäröivän piirikunnan parhaaksi näköalapaikaksi. Tornin maksoi Lillie Hitchcock Coit (1843–1929). Viisitoistavuotiaana hän näki Knickerbocker Engine Co. No. 5:n palokunnan jäävän vajaamiehiseksi hälytyksessä Telegraph Hillille, heitti koulukirjansa maahan ja auttoi ruiskun mäkeen huutaen muitakin si…
+- [Winnipeg — kohdekartta / Kohdekartta: Union Station] 1911 Main Streetin varrella oleva Union Station avattiin 1911, ja sen suunnitteli newyorkilainen toimisto Warren and Wetmore. Beaux-arts-tyylisessä talossa on kolme laituria ja kahdeksan raidetta, ja siitä lähtevät yhä Kanadan halki kulkevat kaukojunat. Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja sen tunnetuin kappale on Countess of Dufferin — ensimmäinen höyryveturi, joka on kulkenut Kanadan preeriamaakunnissa. Baldwin Locomotive Works rakensi sen 1872 Northern Pacific Railwaylle, ja 1877 se myytiin 9 700 dollarilla rautatieurakoitsija Joseph Whiteheadille. Veturi lastattiin proomulle Minnesotassa ja hinattiin Punaistajokea pohjoiseen; se saapui St. Bonifaceen 9. lokakuuta 1877…
+AIEMPI KYSYMYS: Mikä yhtiö osti Laurin & Klementin vuonna 1925?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Laurin & Klement -yhtiön osti vuonna 1925 [[Škoda Works]]. Yhtiö oli perustettu [[Mladá Boleslavissa]] vuonna 1895, ja siitä tuli [[Škoda Auton]] edeltäjä. Autoteollisuudesta muodostui kaupungin talouden päävoima, ja nykyään Mladá Boleslav on Tšekin autoteollisuuden keskus ja siksi koko maan teollisuuden keskus. Kaupunki sijaitsee Keski-Böömin alueella [[Jizera-joen]] vasemmalla rannalla, ja siellä on noin 48 000 asukasta. Kauppa merkitsi sitä, että pienestä paikallisesta yhtiöstä tuli osa suurempaa teollisuuskonsernia.
+KYSYMYS: Kerro lisää: Škoda Works
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mladá Boleslav (tekniikka)
+Tietoruudun teksti: Mladá Boleslav on noin 48 000 asukkaan kaupunki Keski-Böömin alueella Jizera-joen vasemmalla rannalla. Se on Tšekin autoteollisuuden keskus Škoda Auton ansiosta ja siksi koko Tšekin teollisuuden keskus. Kaupunki on nimetty perustajansa, herttua Boleslav II:n mukaan, jota kutsuttiin Nuoreksi, ja nimi erottaa sen Stará Boleslavista. 1800-luvulla kaupunki vaurastui, ja siellä perustettiin uusia kouluja, teattereita, museoita ja tehtaita; vuonna 1895 perustettiin Laurin & Klement -yhtiö, Škoda Auton edeltäjä, ja autoteollisuudesta tuli kaupungin talouden päävoima. Škoda Works osti yhtiön vuonna 1925.
+AIEMPI KYSYMYS: Mikä yhtiö osti Laurin & Klementin vuonna 1925?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Laurin & Klement -yhtiön osti vuonna 1925 [[Škoda Works]]. Yhtiö oli perustettu [[Mladá Boleslavissa]] vuonna 1895, ja siitä tuli [[Škoda Auton]] edeltäjä. Autoteollisuudesta muodostui kaupungin talouden päävoima, ja nykyään Mladá Boleslav on Tšekin autoteollisuuden keskus ja siksi koko maan teollisuuden keskus. Kaupunki sijaitsee Keski-Böömin alueella [[Jizera-joen]] vasemmalla rannalla, ja siellä on noin 48 000 asukasta. Kauppa merkitsi sitä, että pienestä paikallisesta yhtiöstä tuli osa suurempaa teollisuuskonsernia.
+KYSYMYS: Kerro lisää: Mladá Boleslavissa
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Arki ja tavat: Nukketeatteri puolusti kieltä] 1800-luku — Habsburgien valtakunnassa virastojen ja koulujen kieli oli saksa, mutta kiertävät nukkenäyttelijät esittivät markkinoilla näytelmänsä tšekiksi — siksi marionetit muistetaan Tšekissä kielen puolustajina. Unesco otti tšekkiläisen ja slovakialaisen nukketeatterin ihmiskunnan kulttuuriperinnön luetteloon vuonna 2016. Prahassa on yhä teattereita, joissa lankojen varassa esitetään kokonainen ooppera.
+AIEMPI KYSYMYS: Minkä metallin louhinta teki Příbramista Habsburgien monarkian tuottoisimman kaivoskaupungin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hopean. Příbramissa louhittiin hopeaa, ja hopeankaivuu alkoi kehittyä 1500-luvun alussa. Jo 1400-luvulla alueelle oli tullut saksalaisia louhimaan hopeaa. Sitten 1700-luvulla Příbramista tuli koko [[Habsburgien monarkian]] tuottoisimman hopeankaivuun paikka, ja kaupunki oli keskuskaivosviraston kotipaikka. Kaupunki sijaitsee [[Litavka-joen]] varrella Brdyn ylängöllä Keski-Böömissä, ja siellä on noin 33 000 asukasta. Kaupungin ensimmäinen maininta on vuodelta 1216. Sain taas hopeaa mietittyä, mikä on kyyhkylle harvinaista.
+KYSYMYS: Kerro lisää: Habsburgien monarkian
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+AIEMPI KYSYMYS: Minkä metallin louhinta teki Příbramista Habsburgien monarkian tuottoisimman kaivoskaupungin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: hopean. Příbramissa louhittiin hopeaa, ja hopeankaivuu alkoi kehittyä 1500-luvun alussa. Jo 1400-luvulla alueelle oli tullut saksalaisia louhimaan hopeaa. Sitten 1700-luvulla Příbramista tuli koko [[Habsburgien monarkian]] tuottoisimman hopeankaivuun paikka, ja kaupunki oli keskuskaivosviraston kotipaikka. Kaupunki sijaitsee [[Litavka-joen]] varrella Brdyn ylängöllä Keski-Böömissä, ja siellä on noin 33 000 asukasta. Kaupungin ensimmäinen maininta on vuodelta 1216. Sain taas hopeaa mietittyä, mikä on kyyhkylle harvinaista.
+KYSYMYS: Kerro lisää: Litavka-joen
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+- [Mekka — kaupunkilehti / Mekka: Kaivo, jolla oli oma ammattikunta] Kaksikymmentä metriä Kaabasta itään on Zamzamin kaivo, jonka varassa kaupunki eli ennen vesijohtoja. Se on noin kolmekymmentä metriä syvä ja halkaisijaltaan runsaasta metristä kahteen ja puoleen; yläpuolisko on hiekkakerroksissa kivimuurattuna, alapuolisko louhittu kallioon. Perimätiedon mukaan kaivo avautui, kun Hagar etsi vettä pojalleen Ismailille. Vettä nostettiin köydellä ja ämpärillä, ja jakelua hoiti oma ammattikunta, zamzamit: 1800-luvulla tulijalle osoitettiin oma zamzami, joka säilytti hänen nimellään merkittyä ruukkua ja kantoi vettä koko matkan. Vuonna 1964 kaivon suu siirrettiin kellariin, ja nyt sitä katsellaan lasin takaa.
+AIEMPI KYSYMYS: Mikä pyhiinvaelluskohde kohoaa Příbramin yllä?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sepä on tunnettu paikka. Příbramin yllä kohoaa Svatá Hora, joka on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde. Nimi tarkoittaa suomeksi Pyhää vuorta. Paikka on kuulunut vuosisatojen ajan uskonnollisen elämän keskuksiin Keski-Böömissä, ja sinne saapuu pyhiinvaeltajia edelleen. Itse kaupunki sijaitsee [[Litavka-joen]] varrella Brdyn ylängöllä, ja asukkaita on noin 33 000. Kaupunki tunnetaan myös [[kaivoshistoriastaan]]. Rakennuksen tarkoista rakennusvuosista en ole varma, joten niitä en kerro. Ylhäältä katsottuna se on hyvä merkkipaikka.
+KYSYMYS: Kerro lisää: kaivoshistoriastaan
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+AIEMPI KYSYMYS: Mitä Příbramin vanhoille kaivoksille on tapahtunut?
+AIEMPI VASTAUS (Livia):
+No niin, vastaus on suoraviivainen. Vuoden 1989 [[sametillisen vallankumouksen]] jälkeen Příbramin vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaivosalasta on kuitenkin jäänyt kaupungin identiteettiin vahva jälki, ja kaupunki on yhä tunnettu kaivoshistoriastaan. Muistaakseni vanhoja kaivoksia on esitelty myös kaivosmuseona, mutta sen tarkasta sisällöstä en ole varma. Kaupunki sijaitsee Keski-Böömissä [[Litavka-joen]] varrella, ja asukkaita on noin 33 000. Uraanikaivosten sulkeminen oli osa laajempaa muutosta, jossa Tšekin raskas teollisuus supistui. Onpas siitä jo aikaa.
+KYSYMYS: Kerro lisää: sametillisen vallankumouksen
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä sametillinen vallankumous oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sametillinen vallankumous oli vuoden 1989 lopulla Tšekkoslovakiassa tapahtunut rauhanomainen vallanvaihto, jossa kommunistihallinto luopui vallasta. Nimi viittaa siihen, että muutos tapahtui pääosin ilman väkivaltaa. Tapahtumat liittyivät laajempaan [[Itä-Euroopan]] murrokseen, ja [[Tšekkoslovakia]] jakautui myöhemmin Tšekiksi ja Slovakiaksi, mutta jakautumisen tarkasta ajankohdasta en ole varma. Příbramissa vallankumouksen jälkeen suljettiin vanhat hopea- ja lyijykaivokset sekä uraanikaivokset. Kaupunki sijaitsee [[Litavka-joen]] varrella Keski-Böömissä, ja asukkaita on noin 33 000. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Itä-Euroopan
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Příbram (tekniikka)
+Tietoruudun teksti: Příbram on noin 33 000 asukkaan kaupunki Litavka-joen varrella Brdyn ylängöllä Keski-Böömissä, ja se on tunnettu kaivoshistoriastaan. Kaupungin ensimmäinen maininta on vuodelta 1216, ja 1400-luvulla alueelle tuli saksalaisia louhimaan hopeaa. Hopeankaivuu alkoi kehittyä 1500-luvun alussa, ja 1700-luvulla Příbramista tuli koko Habsburgien monarkian tuottoisimman hopeankaivuun paikka; kaupunki oli keskuskaivosviraston kotipaikka. Vuoden 1989 sametillisen vallankumouksen jälkeen vanhat hopea- ja lyijykaivokset sekä modernit uraanikaivokset suljettiin. Kaupungin yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.
+AIEMPI KYSYMYS: Mitä sametillinen vallankumous oli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sametillinen vallankumous oli vuoden 1989 lopulla Tšekkoslovakiassa tapahtunut rauhanomainen vallanvaihto, jossa kommunistihallinto luopui vallasta. Nimi viittaa siihen, että muutos tapahtui pääosin ilman väkivaltaa. Tapahtumat liittyivät laajempaan [[Itä-Euroopan]] murrokseen, ja [[Tšekkoslovakia]] jakautui myöhemmin Tšekiksi ja Slovakiaksi, mutta jakautumisen tarkasta ajankohdasta en ole varma. Příbramissa vallankumouksen jälkeen suljettiin vanhat hopea- ja lyijykaivokset sekä uraanikaivokset. Kaupunki sijaitsee [[Litavka-joen]] varrella Keski-Böömissä, ja asukkaita on noin 33 000. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Tšekkoslovakia
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Milloin Kamenický Šenovin lasinvalmistajat mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän pitää tarkentaa. Kamenický Šenovin ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat [[sorbit]]. Lasinvalmistajien ensimmäisestä maininnasta en ole varma, mutta kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Silloin lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja asukkaita on noin 3 800. Kylä kuului aluksi [[Česká Kamenicen]] tilaan. Kyl se vuosiluku vähän pelottaa, kun ei ole varma.
+KYSYMYS: Kerro lisää: sorbit
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Milloin Kamenický Šenovin lasinvalmistajat mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän pitää tarkentaa. Kamenický Šenovin ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat [[sorbit]]. Lasinvalmistajien ensimmäisestä maininnasta en ole varma, mutta kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Silloin lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja asukkaita on noin 3 800. Kylä kuului aluksi [[Česká Kamenicen]] tilaan. Kyl se vuosiluku vähän pelottaa, kun ei ole varma.
+KYSYMYS: Kerro lisää: Česká Lípan
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Milloin Kamenický Šenovin lasinvalmistajat mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Tuota niin, tähän pitää tarkentaa. Kamenický Šenovin ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat [[sorbit]]. Lasinvalmistajien ensimmäisestä maininnasta en ole varma, mutta kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Silloin lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja asukkaita on noin 3 800. Kylä kuului aluksi [[Česká Kamenicen]] tilaan. Kyl se vuosiluku vähän pelottaa, kun ei ole varma.
+KYSYMYS: Kerro lisää: Česká Kamenicen
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mikä kaupungin koulu on maailman vanhin omalla alallaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kamenický Šenovin lasialan keskiasteen koulu on maailman vanhin oman alansa ammattikoulu. Se perustettiin vuonna 1856, ja se koulutti lasinjalostajia kaupungissa, jonka historia on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Kaupungin [[lasimuseo]] toimii noin vuonna 1770 rakennetussa talossa. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja siellä on noin 3 800 asukasta. Koulun nykyisestä nimestä en ole varma. Kaupunki on [[lasiteollisuutensa]] ansiosta tunnettu Böömissä. Lasi on kyllä kaunista ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: lasimuseo
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mikä kaupungin koulu on maailman vanhin omalla alallaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kamenický Šenovin lasialan keskiasteen koulu on maailman vanhin oman alansa ammattikoulu. Se perustettiin vuonna 1856, ja se koulutti lasinjalostajia kaupungissa, jonka historia on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Kaupungin [[lasimuseo]] toimii noin vuonna 1770 rakennetussa talossa. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömin ylängöllä, ja siellä on noin 3 800 asukasta. Koulun nykyisestä nimestä en ole varma. Kaupunki on [[lasiteollisuutensa]] ansiosta tunnettu Böömissä. Lasi on kyllä kaunista ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: lasiteollisuutensa
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mitä Kamenický Šenovin lasimuseossa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kamenický Šenovin lasimuseo toimii noin vuonna 1770 rakennetussa talossa, ja se liittyy kaupungin pitkään [[lasinvalmistuksen]] historiaan. Museon tarkasta kokoelmasta en ole varma, mutta tällaisissa museoissa on tavallisesti esillä paikallista [[lasitaidetta]] ja lasin jalostukseen liittyviä esineitä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään, ja 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömissä, ja siellä on noin 3 800 asukasta. Talo on siis museona vanhempi kuin moni maa.
+KYSYMYS: Kerro lisää: lasinvalmistuksen
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mitä Kamenický Šenovin lasimuseossa on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kamenický Šenovin lasimuseo toimii noin vuonna 1770 rakennetussa talossa, ja se liittyy kaupungin pitkään [[lasinvalmistuksen]] historiaan. Museon tarkasta kokoelmasta en ole varma, mutta tällaisissa museoissa on tavallisesti esillä paikallista [[lasitaidetta]] ja lasin jalostukseen liittyviä esineitä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään, ja 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti. Kaupunki sijaitsee [[Česká Lípan]] alueella Keski-Böömissä, ja siellä on noin 3 800 asukasta. Talo on siis museona vanhempi kuin moni maa.
+KYSYMYS: Kerro lisää: lasitaidetta
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Luonto: Sudet palasivat sadan vuoden tauon jälkeen] Viimeinen Saksan susi ammuttiin 1900-luvun alussa, ja sata vuotta maa oli sudeton. Vuonna 2000 Lausitzin seudulle Itä-Saksaan syntyi ensimmäinen uusi pentue, kun sudet vaelsivat rajan yli Puolasta — ne asettuivat armeijan vanhalle harjoitusalueelle, jossa kukaan ei häirinnyt. Nykyään Saksassa elää taas noin kaksisataa laumaa. Paluu jakaa mielipiteitä: lammasfarmarit suojaavat katraitaan aidoin ja koirin, ja susikannan kasvua seurataan tarkasti.
+AIEMPI KYSYMYS: Keitä sorbit ovat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sorbit ovat länsislaavilainen kansa, joka asuu pääasiassa Saksassa [[Lausitzin]] alueella, ja heidän kielensä on sorbi. Kamenický Šenovin ensimmäisen kylän, [[Sonovin]], perustivat sorbit, ja se mainitaan vuonna 1352. Kylä kuului [[Česká Kamenicen]] tilaan. Sorbien historiasta Böömissä en ole varma, joten en laajenna sitä. Nykyään kaupunki on kuitenkin tunnettu lasinvalmistuksesta, ja siinä on noin 3 800 asukasta Česká Lípan alueella. Kaupungin sorbilainen alku kertoo siitä, kuinka monet kansat ovat asuneet alueella ennen nykyistä Tšekkiä. Pieni kansa, pitkä muisti.
+KYSYMYS: Kerro lisää: Lausitzin
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Keitä sorbit ovat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Sorbit ovat länsislaavilainen kansa, joka asuu pääasiassa Saksassa [[Lausitzin]] alueella, ja heidän kielensä on sorbi. Kamenický Šenovin ensimmäisen kylän, [[Sonovin]], perustivat sorbit, ja se mainitaan vuonna 1352. Kylä kuului [[Česká Kamenicen]] tilaan. Sorbien historiasta Böömissä en ole varma, joten en laajenna sitä. Nykyään kaupunki on kuitenkin tunnettu lasinvalmistuksesta, ja siinä on noin 3 800 asukasta Česká Lípan alueella. Kaupungin sorbilainen alku kertoo siitä, kuinka monet kansat ovat asuneet alueella ennen nykyistä Tšekkiä. Pieni kansa, pitkä muisti.
+KYSYMYS: Kerro lisää: Sonovin
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Angola — maalehti / Kuvataide: Pyhä kukkula, jonka ikää ei osata sanoa] Namiben maakunnassa Virein kunnassa on neljä kalliotaidekohdetta kilometrin säteellä toisistaan: Tchitundu-Hulu. Nimi tulkitaan taivaan kukkulaksi, sielujen kukkulaksi tai pyhäksi kukkulaksi. Isompi kohde sai 1973 lisänimen mumule, mies, ja pienempi mucai, nainen. Mumule peittää 726 metriä korkean yksittäisvuoren rinteet, ja huipun kalliosuojassa on yli 180 maalausta, enimmäkseen punaisella ja valkoisella. Kuviot ovat pääosin geometrisia, samankeskisiä ympyröitä ja viivoja, ja ne on tehty kiveä lävistämällä tai hiomalla. Ikä on yhä auki: kaivausaineisto viittaa ajanlaskun edelliseen vuosituhanteen, pigmenttinäytteet seuraavaan.
+AIEMPI KYSYMYS: Mitä lasin jalostus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lasin jalostus tarkoittaa sitä, että valmiista lasista tehdään koriste- tai käyttöesine esimerkiksi [[hiomalla]], [[kaivertamalla]], maalaamalla tai muulla tavalla koristelemalla. Se eroaa lasin sulattamisesta ja puhaltamisesta, jotka ovat esineen perusmuodon valmistusta. [[Kamenický Šenovissa]] lasin jalostus ja lasikauppa kasvoivat valtavasti 1600- ja 1700-luvuilla, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja [[lasiteollisuus]] on yhä tunnusomainen osa sen historiaa. Tämä oli sentään selkeä vastaus.
+KYSYMYS: Kerro lisää: hiomalla
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mitä lasin jalostus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lasin jalostus tarkoittaa sitä, että valmiista lasista tehdään koriste- tai käyttöesine esimerkiksi [[hiomalla]], [[kaivertamalla]], maalaamalla tai muulla tavalla koristelemalla. Se eroaa lasin sulattamisesta ja puhaltamisesta, jotka ovat esineen perusmuodon valmistusta. [[Kamenický Šenovissa]] lasin jalostus ja lasikauppa kasvoivat valtavasti 1600- ja 1700-luvuilla, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja [[lasiteollisuus]] on yhä tunnusomainen osa sen historiaa. Tämä oli sentään selkeä vastaus.
+KYSYMYS: Kerro lisää: kaivertamalla
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mitä lasin jalostus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lasin jalostus tarkoittaa sitä, että valmiista lasista tehdään koriste- tai käyttöesine esimerkiksi [[hiomalla]], [[kaivertamalla]], maalaamalla tai muulla tavalla koristelemalla. Se eroaa lasin sulattamisesta ja puhaltamisesta, jotka ovat esineen perusmuodon valmistusta. [[Kamenický Šenovissa]] lasin jalostus ja lasikauppa kasvoivat valtavasti 1600- ja 1700-luvuilla, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja [[lasiteollisuus]] on yhä tunnusomainen osa sen historiaa. Tämä oli sentään selkeä vastaus.
+KYSYMYS: Kerro lisää: Kamenický Šenovissa
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamenický Šenov (kauppa)
+Tietoruudun teksti: Kamenický Šenov on noin 3 800 asukkaan kaupunki Česká Lípan alueella Keski-Böömin ylängöllä. Kaupungin historia ja kehitys on sidoksissa lasinvalmistukseen 1600-luvulta nykypäivään. Ensimmäinen kylä, Sonov, mainitaan vuonna 1352, ja sen perustivat sorbit; kylä kuului Česká Kamenicen tilaan. 1600- ja 1700-luvuilla lasin jalostus ja lasikauppa kasvoivat valtavasti, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856, ja se on maailman vanhin oman alansa ammattikoulu; lasimuseo toimii noin vuonna 1770 rakennetussa talossa.
+AIEMPI KYSYMYS: Mitä lasin jalostus tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Lasin jalostus tarkoittaa sitä, että valmiista lasista tehdään koriste- tai käyttöesine esimerkiksi [[hiomalla]], [[kaivertamalla]], maalaamalla tai muulla tavalla koristelemalla. Se eroaa lasin sulattamisesta ja puhaltamisesta, jotka ovat esineen perusmuodon valmistusta. [[Kamenický Šenovissa]] lasin jalostus ja lasikauppa kasvoivat valtavasti 1600- ja 1700-luvuilla, ja asukkaat alkoivat rikastua. Kaupungin lasialan keskiasteen koulu perustettiin vuonna 1856. Kaupunki sijaitsee Česká Lípan alueella Keski-Böömissä, ja [[lasiteollisuus]] on yhä tunnusomainen osa sen historiaa. Tämä oli sentään selkeä vastaus.
+KYSYMYS: Kerro lisää: lasiteollisuus
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Miten Jan Žižka menetti näkönsä kokonaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyllä hurja tarina. Jan Žižka, [[husiittien]] sotapäällikkö, oli menettänyt toisen silmänsä jo aiemmin, ja jäljellä oleva silmä vaurioitui [[Rabín linnan]] toisen piirityksen aikana vuonna 1421. Legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä, ja hän sokeutui tämän jälkeen kokonaan. Kertomukset eroavat yksityiskohdissa toisistaan, joten tarkkaa tapahtumaketjua ei voi pitää varmana. Žižka johti joukkojaan kuitenkin sokeanakin ja kuoli vuonna 1424 kesken sotaretken, todennäköisesti [[ruttoon]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: husiittien
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Miten Jan Žižka menetti näkönsä kokonaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyllä hurja tarina. Jan Žižka, [[husiittien]] sotapäällikkö, oli menettänyt toisen silmänsä jo aiemmin, ja jäljellä oleva silmä vaurioitui [[Rabín linnan]] toisen piirityksen aikana vuonna 1421. Legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä, ja hän sokeutui tämän jälkeen kokonaan. Kertomukset eroavat yksityiskohdissa toisistaan, joten tarkkaa tapahtumaketjua ei voi pitää varmana. Žižka johti joukkojaan kuitenkin sokeanakin ja kuoli vuonna 1424 kesken sotaretken, todennäköisesti [[ruttoon]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Rabín linnan
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marseille — kaupunkilehti / Historia: Rutto, joka tappoi joka toisen kaupunkilaisen] Rutto saapui Marseilleen toukokuussa 1720 kauppalaiva Grand-Saint-Antoinen mukana Levantista, ja sairaus levisi nopeasti kaupunkiin, jonka viranomaiset olivat aluksi kieltäytyneet asettamasta laivaa karanteeniin kauppaetujen takia. Tauti tappoi lopulta noin puolet kaupungin sadastatuhannesta asukkaasta kahden vuoden aikana. Taiteilija Michel Serre eli itse epidemian keskellä ja maalasi katukohtauksia, joissa ruumiita kasataan kärryihin kadulle — hänen teoksensa ovat harvinaisia silminnäkijäkuvia siitä, miltä ruttoepidemia näytti todellisuudessa. Katastrofi johti tiukempiin karanteenisäännöksiin koko Ranskan satamissa.
+- [Iso-Britannia — maalehti / Tiede: Rutto sulki yliopiston ja avasi maailman] Kun rutto sulki Cambridgen yliopiston 1665, 23-vuotias Isaac Newton palasi kotitilalleen Woolsthorpeen. Siellä vietetyn puolentoista vuoden aikana hän kehitti differentiaalilaskennan, selvitti valon jakautumisen väreiksi prisman avulla ja muotoili painovoiman lain. Hän itse kertoi myöhemmin, että ajatus lähti puutarhan omenapuusta: miksi omena putoaa aina suoraan alas? Newton oli myös rahapajan johtaja ja jahtasi väärentäjiä katujen kapakoissa — hän lähetti heistä useita hirsipuuhun.
+AIEMPI KYSYMYS: Miten Jan Žižka menetti näkönsä kokonaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kyllä hurja tarina. Jan Žižka, [[husiittien]] sotapäällikkö, oli menettänyt toisen silmänsä jo aiemmin, ja jäljellä oleva silmä vaurioitui [[Rabín linnan]] toisen piirityksen aikana vuonna 1421. Legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä, ja hän sokeutui tämän jälkeen kokonaan. Kertomukset eroavat yksityiskohdissa toisistaan, joten tarkkaa tapahtumaketjua ei voi pitää varmana. Žižka johti joukkojaan kuitenkin sokeanakin ja kuoli vuonna 1424 kesken sotaretken, todennäköisesti [[ruttoon]]. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ruttoon
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mikä teki Rabín linnasta Tšekin suurimman linnaraunion?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Rabí on pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna, ja syynä on sen laajuus. Linnan perusti 1300-luvulla uskottavasti [[Velhartican]] suku, ja vuonna 1479 tilan ostanut Půta Švihovský z Rýžmberka tilasi mestarirakentaja [[Benedikt Riedin]] laajentamaan sitä jopa kuuden metrin paksuisilla muureilla. Hanke tyhjensi suvun varat, eikä linna valmistunut koskaan kokonaan. [[Kolmikymmenvuotisen sodan]] tuho ja vuoden 1720 tulipalo jättivät sen raunioiksi, eikä Lambergin suku enää korjannut linnaa vaan siirsi asuinpaikkansa Žichoviceen. Kyl minä tän muistin ihan itse.
+KYSYMYS: Kerro lisää: Velhartican
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mikä teki Rabín linnasta Tšekin suurimman linnaraunion?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Rabí on pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna, ja syynä on sen laajuus. Linnan perusti 1300-luvulla uskottavasti [[Velhartican]] suku, ja vuonna 1479 tilan ostanut Půta Švihovský z Rýžmberka tilasi mestarirakentaja [[Benedikt Riedin]] laajentamaan sitä jopa kuuden metrin paksuisilla muureilla. Hanke tyhjensi suvun varat, eikä linna valmistunut koskaan kokonaan. [[Kolmikymmenvuotisen sodan]] tuho ja vuoden 1720 tulipalo jättivät sen raunioiksi, eikä Lambergin suku enää korjannut linnaa vaan siirsi asuinpaikkansa Žichoviceen. Kyl minä tän muistin ihan itse.
+KYSYMYS: Kerro lisää: Benedikt Riedin
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Mikä teki Rabín linnasta Tšekin suurimman linnaraunion?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Rabí on pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna, ja syynä on sen laajuus. Linnan perusti 1300-luvulla uskottavasti [[Velhartican]] suku, ja vuonna 1479 tilan ostanut Půta Švihovský z Rýžmberka tilasi mestarirakentaja [[Benedikt Riedin]] laajentamaan sitä jopa kuuden metrin paksuisilla muureilla. Hanke tyhjensi suvun varat, eikä linna valmistunut koskaan kokonaan. [[Kolmikymmenvuotisen sodan]] tuho ja vuoden 1720 tulipalo jättivät sen raunioiksi, eikä Lambergin suku enää korjannut linnaa vaan siirsi asuinpaikkansa Žichoviceen. Kyl minä tän muistin ihan itse.
+KYSYMYS: Kerro lisää: Kolmikymmenvuotisen sodan
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+AIEMPI KYSYMYS: Keitä olivat husiitit?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Husiitit olivat 1400-luvun alun Böömin uskonnollinen ja yhteiskunnallinen liike, joka sai nimensä papin ja uudistajan [[Jan Husin]] mukaan. Hus tuomittiin harhaoppisena ja poltettiin roviolla [[Konstanzin kirkolliskokouksen]] yhteydessä vuonna 1415, mikä kiihdytti kapinaa Böömissä. Husiittien vaatimuksiin kuuluivat muun muassa saarnaaminen kansan kielellä ja ehtoollinen myös maallikoille molemmin muodoin, leivällä ja viinillä. [[Husiittisotien]] aikana liikkeen joukot taistelivat katolisen kirkon ja keisarikunnan ristiretkiä vastaan, ja heitä johti muiden muassa Jan Žižka. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Jan Husin
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+AIEMPI KYSYMYS: Keitä olivat husiitit?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Husiitit olivat 1400-luvun alun Böömin uskonnollinen ja yhteiskunnallinen liike, joka sai nimensä papin ja uudistajan [[Jan Husin]] mukaan. Hus tuomittiin harhaoppisena ja poltettiin roviolla [[Konstanzin kirkolliskokouksen]] yhteydessä vuonna 1415, mikä kiihdytti kapinaa Böömissä. Husiittien vaatimuksiin kuuluivat muun muassa saarnaaminen kansan kielellä ja ehtoollinen myös maallikoille molemmin muodoin, leivällä ja viinillä. [[Husiittisotien]] aikana liikkeen joukot taistelivat katolisen kirkon ja keisarikunnan ristiretkiä vastaan, ja heitä johti muiden muassa Jan Žižka. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Konstanzin kirkolliskokouksen
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Keitä olivat husiitit?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Husiitit olivat 1400-luvun alun Böömin uskonnollinen ja yhteiskunnallinen liike, joka sai nimensä papin ja uudistajan [[Jan Husin]] mukaan. Hus tuomittiin harhaoppisena ja poltettiin roviolla [[Konstanzin kirkolliskokouksen]] yhteydessä vuonna 1415, mikä kiihdytti kapinaa Böömissä. Husiittien vaatimuksiin kuuluivat muun muassa saarnaaminen kansan kielellä ja ehtoollinen myös maallikoille molemmin muodoin, leivällä ja viinillä. [[Husiittisotien]] aikana liikkeen joukot taistelivat katolisen kirkon ja keisarikunnan ristiretkiä vastaan, ja heitä johti muiden muassa Jan Žižka. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Husiittisotien
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Mistä Otava-joki saa alkunsa ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Otava on Etelä-Böömin joki, joka syntyy [[Šumavan]] vuoriston vesistä, kun kaksi latvajokea, Vydra ja Křemelná, yhtyvät. Se kulkee Sušicen ja Strakonicen kautta [[Písekiin]] ja yhtyy lopulta [[Vltava-jokeen]]. Jokea on käytetty muinoin kullanhuuhdontaan, ja Rabín linna perustettiin 1300-luvulla muun muassa vartioimaan kauppareittejä ja kultaesiintymiä. Joet on kyyhkyn parhaat tienviitat, sen kyl muistan.
+KYSYMYS: Kerro lisää: Šumavan
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mistä Otava-joki saa alkunsa ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Otava on Etelä-Böömin joki, joka syntyy [[Šumavan]] vuoriston vesistä, kun kaksi latvajokea, Vydra ja Křemelná, yhtyvät. Se kulkee Sušicen ja Strakonicen kautta [[Písekiin]] ja yhtyy lopulta [[Vltava-jokeen]]. Jokea on käytetty muinoin kullanhuuhdontaan, ja Rabín linna perustettiin 1300-luvulla muun muassa vartioimaan kauppareittejä ja kultaesiintymiä. Joet on kyyhkyn parhaat tienviitat, sen kyl muistan.
+KYSYMYS: Kerro lisää: Písekiin
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Kaarlensilta] 1357–1402 Kaarlensillan rakensi keisari Kaarle IV vuonna 1357 korvaamaan vanhan Judit-sillan, jonka tulva oli tuhonnut. Legendan mukaan rakennustyöt aloitettiin tarkalleen kello 5.31 aamulla 9. heinäkuuta 1357 — päivämäärä ja kellonaika muodostavat yhdessä palindromin, ja Kaarle IV uskoi tämän erikoisen lukusarjan tekevän sillasta vahvemman. Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. Vuosina 1683–1714 sillan kaiteille pystytettiin 30 barokkipatsasta pyhimyksistä — nykyään sillalla nähtävät patsaat ovat kuitenkin kopioita, sillä alkuperäiset siirrettiin talteen museoon vuodesta 1965 lähtien sään ja saasteiden vaurioittamina. Kaarlensilta oli Vltava-joen ainoa ylityspaikka aina…
+AIEMPI KYSYMYS: Mistä Otava-joki saa alkunsa ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Otava on Etelä-Böömin joki, joka syntyy [[Šumavan]] vuoriston vesistä, kun kaksi latvajokea, Vydra ja Křemelná, yhtyvät. Se kulkee Sušicen ja Strakonicen kautta [[Písekiin]] ja yhtyy lopulta [[Vltava-jokeen]]. Jokea on käytetty muinoin kullanhuuhdontaan, ja Rabín linna perustettiin 1300-luvulla muun muassa vartioimaan kauppareittejä ja kultaesiintymiä. Joet on kyyhkyn parhaat tienviitat, sen kyl muistan.
+KYSYMYS: Kerro lisää: Vltava-jokeen
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mitä tšekkiläiseen perinneruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— Nyt alkoi tehdä mieli jotain. Perinteiseen tšekkiläiseen ruokapöytään kuuluu usein runsas liharuoka ja jauhoista tehty lisuke. Tunnettu on [[svíčková]], hapankermakastikkeessa tarjoiltava naudanliha, jonka kanssa syödään tavallisesti [[knedlíky]], eli keitettyjä tai höyrytettyjä taikinamöykkyjä. Toinen tuttu yhdistelmä on sianliha, knedlíky ja hapankaali, ja myös kulho [[gulášia]] kuuluu monen ravintolan listalle. Makeaa leivonnaista edustaa [[koláč]], jonka täytteenä voi olla esimerkiksi unikonsiemeniä, rahkaa tai luumuhilloa. Koláč on muuten sellainen, jonka perässä minä lentäisin Prahaan asti.
+KYSYMYS: Kerro lisää: svíčková
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mitä tšekkiläiseen perinneruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— Nyt alkoi tehdä mieli jotain. Perinteiseen tšekkiläiseen ruokapöytään kuuluu usein runsas liharuoka ja jauhoista tehty lisuke. Tunnettu on [[svíčková]], hapankermakastikkeessa tarjoiltava naudanliha, jonka kanssa syödään tavallisesti [[knedlíky]], eli keitettyjä tai höyrytettyjä taikinamöykkyjä. Toinen tuttu yhdistelmä on sianliha, knedlíky ja hapankaali, ja myös kulho [[gulášia]] kuuluu monen ravintolan listalle. Makeaa leivonnaista edustaa [[koláč]], jonka täytteenä voi olla esimerkiksi unikonsiemeniä, rahkaa tai luumuhilloa. Koláč on muuten sellainen, jonka perässä minä lentäisin Prahaan asti.
+KYSYMYS: Kerro lisää: knedlíky
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mitä tšekkiläiseen perinneruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— Nyt alkoi tehdä mieli jotain. Perinteiseen tšekkiläiseen ruokapöytään kuuluu usein runsas liharuoka ja jauhoista tehty lisuke. Tunnettu on [[svíčková]], hapankermakastikkeessa tarjoiltava naudanliha, jonka kanssa syödään tavallisesti [[knedlíky]], eli keitettyjä tai höyrytettyjä taikinamöykkyjä. Toinen tuttu yhdistelmä on sianliha, knedlíky ja hapankaali, ja myös kulho [[gulášia]] kuuluu monen ravintolan listalle. Makeaa leivonnaista edustaa [[koláč]], jonka täytteenä voi olla esimerkiksi unikonsiemeniä, rahkaa tai luumuhilloa. Koláč on muuten sellainen, jonka perässä minä lentäisin Prahaan asti.
+KYSYMYS: Kerro lisää: gulášia
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rabín linna (historia)
+Tietoruudun teksti: Rabín linna kohoaa Otava-joen yläpuolella Etelä-Böömissä, ja siitä tuli pinta-alaltaan Tšekin suurin linnarauniona säilynyt linna. Ensimmäinen maininta linnasta on vuodelta 1380, ja Velhartican suvun uskotaan perustaneen sen 1300-luvulla vartioimaan kauppareittejä ja kultaesiintymiä. Husiittisodissa Jan Žižkan joukot valtasivat linnan kahdesti vuosina 1420–1421, ja legendan mukaan nuolen irrottama päärynäpuun sirpale osui hänen jäljellä olevaan silmäänsä toisen piirityksen aikana. Půta Švihovský z Rýžmberka osti tilan 1479 ja tilasi mestarirakentaja Benedikt Riedin laajentamaan linnaa muun muassa jopa kuuden metrin paksuisilla muureilla, mutta hanke tyhjensi suvun varat eikä valmistunut koskaan kokonaan. Kolmikymmenvuotisen sodan tuho ja vuoden 1720 tulipalo jättivät linnan raunioiksi, minkä jälkeen Lambergin suku siirsi asuinpaikkansa Žichoviceen eikä linnaa enää korjattu. Rabí juliste…
+AIEMPI KYSYMYS: Mitä tšekkiläiseen perinneruokaan kuuluu?
+AIEMPI VASTAUS (Livia):
+Mmm— Nyt alkoi tehdä mieli jotain. Perinteiseen tšekkiläiseen ruokapöytään kuuluu usein runsas liharuoka ja jauhoista tehty lisuke. Tunnettu on [[svíčková]], hapankermakastikkeessa tarjoiltava naudanliha, jonka kanssa syödään tavallisesti [[knedlíky]], eli keitettyjä tai höyrytettyjä taikinamöykkyjä. Toinen tuttu yhdistelmä on sianliha, knedlíky ja hapankaali, ja myös kulho [[gulášia]] kuuluu monen ravintolan listalle. Makeaa leivonnaista edustaa [[koláč]], jonka täytteenä voi olla esimerkiksi unikonsiemeniä, rahkaa tai luumuhilloa. Koláč on muuten sellainen, jonka perässä minä lentäisin Prahaan asti.
+KYSYMYS: Kerro lisää: koláč
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+AIEMPI KYSYMYS: Mitä valtakunnanregaliat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Valtakunnanregaliat olivat hallitsijan vallan näkyviä tunnuksia, kuten kruunu, valtikka, valtakunnanomena ja miekka, joita käytettiin kruunajaisissa ja muissa juhlallisissa menoissa. [[Karlštejnissa]] niitä säilytettiin yhdessä [[Böömin kruununjalokivien]] ja pyhäinjäännösten kanssa, ja ne olivat osa kruunun aarteita. Hussilaissotien alettua regaliat vietiin linnasta pois vuonna 1421, ja ne kuljetettiin Unkarin kautta [[Nürnbergiin]]. Kyl minä kruunun tunnistaisin, mut pää sopisi siihen huonosti.
+KYSYMYS: Kerro lisää: Karlštejnissa
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Klementinum] Isoisäsi kirjaa ilmanpuntarin lukemat, koska hän ei luota muistiin. Prahassa on talo, joka on tehnyt saman kauemmin kuin yksikään suku. Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina, vaurioitui hussilaissodissa 1420 ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston, jollaista harvassa kaupungissa on. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Vuonna 1791 siellä …
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Mitä valtakunnanregaliat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Valtakunnanregaliat olivat hallitsijan vallan näkyviä tunnuksia, kuten kruunu, valtikka, valtakunnanomena ja miekka, joita käytettiin kruunajaisissa ja muissa juhlallisissa menoissa. [[Karlštejnissa]] niitä säilytettiin yhdessä [[Böömin kruununjalokivien]] ja pyhäinjäännösten kanssa, ja ne olivat osa kruunun aarteita. Hussilaissotien alettua regaliat vietiin linnasta pois vuonna 1421, ja ne kuljetettiin Unkarin kautta [[Nürnbergiin]]. Kyl minä kruunun tunnistaisin, mut pää sopisi siihen huonosti.
+KYSYMYS: Kerro lisää: Böömin kruununjalokivien
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+AIEMPI KYSYMYS: Mitä valtakunnanregaliat olivat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Valtakunnanregaliat olivat hallitsijan vallan näkyviä tunnuksia, kuten kruunu, valtikka, valtakunnanomena ja miekka, joita käytettiin kruunajaisissa ja muissa juhlallisissa menoissa. [[Karlštejnissa]] niitä säilytettiin yhdessä [[Böömin kruununjalokivien]] ja pyhäinjäännösten kanssa, ja ne olivat osa kruunun aarteita. Hussilaissotien alettua regaliat vietiin linnasta pois vuonna 1421, ja ne kuljetettiin Unkarin kautta [[Nürnbergiin]]. Kyl minä kruunun tunnistaisin, mut pää sopisi siihen huonosti.
+KYSYMYS: Kerro lisää: Nürnbergiin
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+AIEMPI KYSYMYS: Miksi keisari rakensi aarrekammion linnan kauas kaupungista?
+AIEMPI VASTAUS (Livia):
+No jopas. Karlštejn seisoo noin kolmenkymmenen kilometrin päässä Prahasta kukkulalla [[Berounka-joen]] yläpuolella, ja syyksi esitetään yleensä turvallisuus: korkea ja vahvasti linnoitettu paikka suojasi kruunun aarteita paremmin kuin kaupunki. Keisari [[Kaarle IV]] valvoi rakentamista ja sisustusta itse, joten paikka oli hänen harkittu valintansa. En ole varma, onko hänen tarkoista perusteistaan säilynyt kirjallisia todisteita, joten perustelu on pääosin tulkintaa. Lentäen se on kyl kätevä matka, ajurille ehkä vähemmän.
+KYSYMYS: Kerro lisää: Berounka-joen
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Miksi keisari rakensi aarrekammion linnan kauas kaupungista?
+AIEMPI VASTAUS (Livia):
+No jopas. Karlštejn seisoo noin kolmenkymmenen kilometrin päässä Prahasta kukkulalla [[Berounka-joen]] yläpuolella, ja syyksi esitetään yleensä turvallisuus: korkea ja vahvasti linnoitettu paikka suojasi kruunun aarteita paremmin kuin kaupunki. Keisari [[Kaarle IV]] valvoi rakentamista ja sisustusta itse, joten paikka oli hänen harkittu valintansa. En ole varma, onko hänen tarkoista perusteistaan säilynyt kirjallisia todisteita, joten perustelu on pääosin tulkintaa. Lentäen se on kyl kätevä matka, ajurille ehkä vähemmän.
+KYSYMYS: Kerro lisää: Kaarle IV
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+AIEMPI KYSYMYS: Miten keskiaikaista linnaa piiritettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Keskiaikaista linnaa piiritettiin usein saartamalla se, jolloin puolustajilta yritettiin katkaista ruoan ja veden saanti. Muureja yritettiin murtaa heittokoneilla, kuten [[katapulteilla]] ja trebucheteilla, ja muurien yli pyrittiin pääsemään [[piiritystorneilla]] ja tikkailla. Joskus muurien alle kaivettiin myös tunneleita, joiden romahtaminen kaatoi osan muuria. Hyvin sijoitettu linna saattoi kestää pitkään, ja esimerkiksi [[Karlštejnin]] linna kesti vuoden 1422 piirityksen. Onneks se seisoo ny rauhassa.
+KYSYMYS: Kerro lisää: katapulteilla
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kaupunkilehti / Historia: Lähes neljän kuukauden piiritys] Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen nimensä.
+- [PRI — maalehti / Historia: Piiritys joka synnytti jättiläisen] 1634 — Vuonna 1625 hollantilainen amiraali Boudewijn Hendricksz piiritti San Juanin ja poltti suuren osan kaupungista, vaikka El Morron linnoitusta ei saatukaan valtaan. Piiritys paljasti aukon: kaupunki oli suojaton maan puolelta. Espanjan kruunu päätti rakentaa toisen linnakkeen, Castillo San Cristóbalin, jonka työt alkoivat vuonna 1634 ja jatkuivat runsaat sata vuotta, valmistuen 1790. Valmiina se oli suurin espanjalaisten koskaan Uuteen maailmaan rakentama linnoitus. Sen kuivat vallihaudat, tunnelit ja toisiinsa kytketyt bastionit tekivät siitä lähes valloittamattoman, eikä yksikään vihollinen onnistunut koskaan valtaamaan sitä väkisin.
+AIEMPI KYSYMYS: Miten keskiaikaista linnaa piiritettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Keskiaikaista linnaa piiritettiin usein saartamalla se, jolloin puolustajilta yritettiin katkaista ruoan ja veden saanti. Muureja yritettiin murtaa heittokoneilla, kuten [[katapulteilla]] ja trebucheteilla, ja muurien yli pyrittiin pääsemään [[piiritystorneilla]] ja tikkailla. Joskus muurien alle kaivettiin myös tunneleita, joiden romahtaminen kaatoi osan muuria. Hyvin sijoitettu linna saattoi kestää pitkään, ja esimerkiksi [[Karlštejnin]] linna kesti vuoden 1422 piirityksen. Onneks se seisoo ny rauhassa.
+KYSYMYS: Kerro lisää: piiritystorneilla
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+AIEMPI KYSYMYS: Miten keskiaikaista linnaa piiritettiin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Keskiaikaista linnaa piiritettiin usein saartamalla se, jolloin puolustajilta yritettiin katkaista ruoan ja veden saanti. Muureja yritettiin murtaa heittokoneilla, kuten [[katapulteilla]] ja trebucheteilla, ja muurien yli pyrittiin pääsemään [[piiritystorneilla]] ja tikkailla. Joskus muurien alle kaivettiin myös tunneleita, joiden romahtaminen kaatoi osan muuria. Hyvin sijoitettu linna saattoi kestää pitkään, ja esimerkiksi [[Karlštejnin]] linna kesti vuoden 1422 piirityksen. Onneks se seisoo ny rauhassa.
+KYSYMYS: Kerro lisää: Karlštejnin
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+AIEMPI KYSYMYS: Kuka oli keisari Kaarle IV?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tän minä kyllä muistan. Kaarle IV syntyi vuonna 1316 ja oli Böömin kuningas sekä [[Pyhän saksalais-roomalaisen keisarikunnan]] keisari, joka kruunattiin keisariksi Roomassa vuonna 1355. Hän teki Prahasta keisarikunnan keskuksen ja perusti sinne yliopiston vuonna 1348, joka tunnetaan nykyisin nimellä [[Kaarlen yliopisto]]. Myös [[Kaarlen sillan]] rakentaminen alkoi hänen aikanaan, vuonna 1357. Kaarle IV kuoli vuonna 1378. Mies rakensi linnan, sillan ja yliopiston, kyl minä jo yhdestä pesästä väsyn.
+KYSYMYS: Kerro lisää: Pyhän saksalais-roomalaisen keisarikunnan
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Tiede: Sääkirja, joka alkoi 1775] Klementinum alkoi 1000-luvun kappelista, jatkui dominikaaniluostarina ja muutettiin 1556 jesuiittakollegioksi. Vuonna 1622 sinne siirrettiin Kaarlen yliopiston kirjasto, ja päärakennusvaihe 1709–1726 antoi talolle barokkikirjaston. Kun jesuiittakunta lakkautettiin 1773, keisarinna Maria Teresia teki rakennuksesta observatorion, kirjaston ja yliopiston. Kansalliskirjasto perustettiin 1781, ja vuodesta 1782 taloon on toimitettu vapaakappale jokaisesta painetusta kirjasta. Pisin yhtäjaksoinen työ on kuitenkin tehty tornissa: Böömin vanhin säänmittaus alkoi Klementinumissa vuonna 1775, ja se jatkuu yhä.
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka oli keisari Kaarle IV?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tän minä kyllä muistan. Kaarle IV syntyi vuonna 1316 ja oli Böömin kuningas sekä [[Pyhän saksalais-roomalaisen keisarikunnan]] keisari, joka kruunattiin keisariksi Roomassa vuonna 1355. Hän teki Prahasta keisarikunnan keskuksen ja perusti sinne yliopiston vuonna 1348, joka tunnetaan nykyisin nimellä [[Kaarlen yliopisto]]. Myös [[Kaarlen sillan]] rakentaminen alkoi hänen aikanaan, vuonna 1357. Kaarle IV kuoli vuonna 1378. Mies rakensi linnan, sillan ja yliopiston, kyl minä jo yhdestä pesästä väsyn.
+KYSYMYS: Kerro lisää: Kaarlen yliopisto
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka oli keisari Kaarle IV?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tän minä kyllä muistan. Kaarle IV syntyi vuonna 1316 ja oli Böömin kuningas sekä [[Pyhän saksalais-roomalaisen keisarikunnan]] keisari, joka kruunattiin keisariksi Roomassa vuonna 1355. Hän teki Prahasta keisarikunnan keskuksen ja perusti sinne yliopiston vuonna 1348, joka tunnetaan nykyisin nimellä [[Kaarlen yliopisto]]. Myös [[Kaarlen sillan]] rakentaminen alkoi hänen aikanaan, vuonna 1357. Kaarle IV kuoli vuonna 1378. Mies rakensi linnan, sillan ja yliopiston, kyl minä jo yhdestä pesästä väsyn.
+KYSYMYS: Kerro lisää: Kaarlen sillan
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kohdekartta / Kohdekartta: Pyhän Patrickin basilika] 1843–1847 Montrealin irlantilaiset kuuluivat aluksi samoihin seurakuntiin kuin ranskankieliset katolilaiset. Kun irlantilaisten määrä kasvoi vuoden 1817 tienoilta alkaen, heidät siirrettiin 1825 fransiskaanien kirkkoon, mutta vuonna 1841 heitä oli jo 6 500 eikä kirkko riittänyt. Tontti ostettiin, ja työ alkoi syyskuussa 1843 silloisen kaupungin laidalla, rinteessä, josta näkyi seurakuntalaisten koteihin Point St. Charlesissa, Goose Villagessa ja Griffintownissa. Peruskiviä laskettiin seitsemän. Ensimmäinen messu pidettiin Pyhän Patrickin päivänä 17. maaliskuuta 1847, ja kirkosta tuli Montrealin vanhin englanninkielinen katolinen kirkko. Uusgoottilaisen kirkon suunnittelivat P. L. Morin ja i…
+- [Chennai — kohdekartta / Kohdekartta: Kapaleeshwararin temppeli] 600-luvulta Shivalle omistettu temppeli on Mylaporessa, ja sen arvellaan olevan 600-luvulta ja pallavien rakennuttama. Päätelmä perustuu siihen, että temppeli mainitaan nayanar-pyhimysten hymneissä; 600-luvun Tevaram-kokoelma ylistää sen jumalaa, ja temppeli luetaan Paadal Petra Sthalam -pyhäkköjen joukkoon. Runoilijat Sambandar ja Arunagirinathar kuitenkin sijoittavat temppelin selvästi meren rantaan, kun nykyinen rakennus on kortteleiden sisällä. Nimi tulee sanoista kapala eli pää ja Ishvara, Shivan lisänimi. Puraanien mukaan Brahma jätti Kailasvuorella osoittamatta Shivalle kunnioitusta, jolloin Shiva irrotti yhden hänen viidestä päästään; katumuksekseen Brahma tuli Mylaporeen ja pystytt…
+AIEMPI KYSYMYS: Mitä pyhäinjäännökset ovat ja miksi niitä säilytettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyhäinjäännökset ovat pyhimysten ruumiinosia, heidän käyttämiään esineitä tai muita kristillisen perinteen mukaan pyhinä pidettyjä muistoja. Keskiajalla niiden uskottiin tuovan suojelua ja armoa, ja niiden kunnioittaminen oli tärkeä osa uskonelämää. Hallitsijat keräsivät [[pyhimysten]] jäännöksiä, koska ne lisäsivät sekä heidän hurskauttaan että arvovaltaansa. Karlštejnissa pyhäinjäännökset säilytettiin aarrekammion sydämessä, tornin [[Pyhän Ristin kappelin]] yhteydessä. Itse minä säilyttäisin mieluummin pullaa, mut en kai ole pyhimys.
+KYSYMYS: Kerro lisää: pyhimysten
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Praha
+Maa, jossa pelaaja on: Tšekki
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Keisari rakensi kokonaisen linnan yhtä huonetta varten — ja huone valmistui viimeisenä
+Tietoruudun teksti: Kolmekymmentä kilometriä Prahasta lounaaseen, kukkulalla Berounka-joen yllä, seisoo Karlštejn. Kaarle IV perusti sen 1348 yhtä tarkoitusta varten: siellä säilytettäisiin keisarikunnan valtakunnanregaliat, Böömin kruununjalokivet, pyhäinjäännökset ja muut kruunun aarteet. Rakennustöitä johti myöhempi linnanvouti Vitus Bítovilainen, mutta keisari valvoi rakentamista ja sisustusta itse.
+
+Työ kesti lähes kaksikymmentä vuotta, ja se katsottiin valmiiksi vasta 1365, kun aarrekammion sydän vihittiin: suuressa tornissa oleva Pyhän Ristin kappeli. Turvassa aarteet olivat vain kunnes maa levisi: hussilaissotien alettua regaliat vietiin 1421 pois ja kuljetettiin Unkarin kautta Nürnbergiin. Vuoden 1422 piirityksestä muistetaan yksityiskohta, jota linnaoppaat eivät jätä kertomatta: hyökkääjät heittivät katapulteilla muurin yli kahdentuhannen kärryllisen verran lantaa. Linna kesti sen ja on ollut avo…
+Isoisän matkakirjamerkintä: Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Pyhän ristin kirkko] 1679–1696 Pyhän ristin kirkko rakennettiin Krakowskie Przedmieście -kadun varrelle vuosina 1679–1696 komeaan barokkityyliin, pääsuunnittelijanaan Józef Szymon Bellotti. Julkisivun koristeelliset huiput lisättiin vielä 1720- ja 1730-luvuilla. Kirkon pilariin muurattiin vuonna 1882 pieni uurna, jossa säilytetään säveltäjä Fryderyk Chopinin sydäntä. Chopinin sisar oli salakuljettanut sydämen Pariisista Varsovaan jo vuonna 1849 veljensä toiveen mukaisesti - vaikka ruumis haudattiin Ranskaan, sydän sai levätä kotimaassa. Sodan aikana vuonna 1944 saksalaiset joukot räjäyttivät kirkon pahoin, mutta Chopinin sydän ehdittiin siirtää turvaan ennen räjäytyksiä. Kirkko rakennettiin uudelleen vuosina 19…
+- [Valletta — kaupunkilehti / Historia: Saari, joka sai George-ristin] Kesäkuusta 1940 marraskuuhun 1942 Saksan ja Italian ilmavoimat yrittivät pommittaa ja näännyttää brittien Maltan antautumaan, sillä saarelta käsin iskettiin Pohjois-Afrikkaan kulkeviin huoltokuljetuksiin. Pelkästään 20. maaliskuuta – 28. huhtikuuta 1942 saksalaiset pudottivat saarelle 6 557 tonnia pommeja, niistä 3 150 tonnia Vallettaan. Ruoka ja vesi alkoivat loppua, ja elokuun 1942 Pedestal-saattueen 14 kauppalaivasta upotettiin yhdeksän. Kuningas Yrjö VI myönsi 15. huhtikuuta 1942 George-ristin koko saarelle sen asukkaiden sankaruuden kunniaksi. Risti on ollut Maltan lipussa vuodesta 1943, ja itse kunniamerkki ja kuninkaan viestit ovat nyt Pyhän Elmon linnakkeen sotamuseossa.
+AIEMPI KYSYMYS: Mitä pyhäinjäännökset ovat ja miksi niitä säilytettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pyhäinjäännökset ovat pyhimysten ruumiinosia, heidän käyttämiään esineitä tai muita kristillisen perinteen mukaan pyhinä pidettyjä muistoja. Keskiajalla niiden uskottiin tuovan suojelua ja armoa, ja niiden kunnioittaminen oli tärkeä osa uskonelämää. Hallitsijat keräsivät [[pyhimysten]] jäännöksiä, koska ne lisäsivät sekä heidän hurskauttaan että arvovaltaansa. Karlštejnissa pyhäinjäännökset säilytettiin aarrekammion sydämessä, tornin [[Pyhän Ristin kappelin]] yhteydessä. Itse minä säilyttäisin mieluummin pullaa, mut en kai ole pyhimys.
+KYSYMYS: Kerro lisää: Pyhän Ristin kappelin

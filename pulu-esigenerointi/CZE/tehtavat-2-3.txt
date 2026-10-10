@@ -1,0 +1,1005 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Milloin metsä rauhoitettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Luin sen vuosiluvun kerran kaiteelta. Aarniometsä [[Boubínský prales]] rauhoitettiin luonnonsuojelualueeksi vuonna 1858, noin viisitoista vuotta ennen isoisäsi matkaa. Tuolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana, joten päätös oli poikkeuksellinen. Suojelualue sijaitsee [[Boubínin]] rinteillä [[Etelä-Böömissä]], ja sitä pidetään yhtenä Euroopan vanhimmista suojelualueista. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Boubínský prales
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+AIEMPI KYSYMYS: Milloin metsä rauhoitettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Luin sen vuosiluvun kerran kaiteelta. Aarniometsä [[Boubínský prales]] rauhoitettiin luonnonsuojelualueeksi vuonna 1858, noin viisitoista vuotta ennen isoisäsi matkaa. Tuolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana, joten päätös oli poikkeuksellinen. Suojelualue sijaitsee [[Boubínin]] rinteillä [[Etelä-Böömissä]], ja sitä pidetään yhtenä Euroopan vanhimmista suojelualueista. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Boubínin
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Milloin metsä rauhoitettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä muistan. Luin sen vuosiluvun kerran kaiteelta. Aarniometsä [[Boubínský prales]] rauhoitettiin luonnonsuojelualueeksi vuonna 1858, noin viisitoista vuotta ennen isoisäsi matkaa. Tuolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana, joten päätös oli poikkeuksellinen. Suojelualue sijaitsee [[Boubínin]] rinteillä [[Etelä-Böömissä]], ja sitä pidetään yhtenä Euroopan vanhimmista suojelualueista. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Etelä-Böömissä
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Kuinka korkea vuori on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, korkeus kiinnostaa. Minulle kaikki kattoja korkeampi on jo vuori. [[Boubín]] on 1 362 metriä korkea vaara [[Etelä-Böömissä]], noin kolme ja puoli kilometriä Kubova Huťin kylästä itään. Se kuuluu [[Šumavan]] vuoristoon, ja suurin osa sen rinteistä on aarniometsää. Minä ylitän sen yhdellä siiven lyönnillä, tai ainakin kuvittelen niin.
+KYSYMYS: Kerro lisää: Boubín
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Kuinka korkea vuori on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, korkeus kiinnostaa. Minulle kaikki kattoja korkeampi on jo vuori. [[Boubín]] on 1 362 metriä korkea vaara [[Etelä-Böömissä]], noin kolme ja puoli kilometriä Kubova Huťin kylästä itään. Se kuuluu [[Šumavan]] vuoristoon, ja suurin osa sen rinteistä on aarniometsää. Minä ylitän sen yhdellä siiven lyönnillä, tai ainakin kuvittelen niin.
+KYSYMYS: Kerro lisää: Šumavan
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+AIEMPI KYSYMYS: Mikä ero on aarniometsällä ja hoidetulla metsällä?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää juttua. Kerron lyhyesti. Aarniometsä on metsää, johon ihminen ei ole vaikuttanut lainkaan tai on vaikuttanut hyvin vähän, joten se on saanut kehittyä luonnollisesti pitkään. Siinä kasvaa eri-ikäisiä puita, osa hyvin vanhoja, ja maassa makaa kaatuneita runkoja, jotka lahoavat vähitellen ja tarjoavat elinympäristön monille sienille ja hyönteisille. Hoidetussa metsässä puut kaadetaan yleensä ennen kuin ne ehtivät vanheta, joten [[lahopuuta]] on huomattavasti vähemmän. [[Boubínský prales]] on tällainen metsä [[Etelä-Böömissä]]. Kaupunkilinnulle tämä on kyllä vähän villiä seutua.
+KYSYMYS: Kerro lisää: lahopuuta
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+- [Valko-Venäjä — maalehti / Luonto: Berezinan biosfäärialue] vuodesta 1925 — Berezinan luonnonsuojelualue perustettiin 30. tammikuuta 1925 suojelemaan muun muassa majavia ja muuta riistaa, ja sillä on ollut biosfäärialueen asema vuodesta 1979. Alue sijaitsee noin 120 kilometriä Minskistä pohjoiseen, ja sen pinta-ala on 85 200 hehtaaria. Yli 60 prosenttia siitä on soita, ja Berezina-joki virtaa sen halki 100 kilometrin matkan. Alueella on tavattu 56 nisäkäs- ja 237 lintulajia sekä 813 putkilokasvilajia; joukossa ovat ruskeakarhu, hirvi, ilves, majava, saukko ja kalasääski. Ramsar-kosteikoksi alue nimettiin 2010.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+AIEMPI KYSYMYS: Millaisia eläimiä Šumavan metsissä elää?
+AIEMPI VASTAUS (Livia):
+Ai se. Siellä on aika jännää väkeä. Šumavan laajoissa metsissä elää lähteiden mukaan muun muassa [[ilves]], ja alue on tärkeä myös monille linnuille, kuten [[metsolle]]. Suuret yhtenäiset metsät antavat pedoille ja metsoille tarvitsemansa rauhan, ja siksi vanhojen metsien suojelu on tärkeää myös [[Boubínin]] ympäristössä. Tarkkaa lajiluetteloa en ole varma muistavani, joten se kannattaa tarkistaa erikseen. Itse pysyttelen mieluummin ilveksen ulottumattomissa.
+KYSYMYS: Kerro lisää: ilves
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+AIEMPI KYSYMYS: Millaisia eläimiä Šumavan metsissä elää?
+AIEMPI VASTAUS (Livia):
+Ai se. Siellä on aika jännää väkeä. Šumavan laajoissa metsissä elää lähteiden mukaan muun muassa [[ilves]], ja alue on tärkeä myös monille linnuille, kuten [[metsolle]]. Suuret yhtenäiset metsät antavat pedoille ja metsoille tarvitsemansa rauhan, ja siksi vanhojen metsien suojelu on tärkeää myös [[Boubínin]] ympäristössä. Tarkkaa lajiluetteloa en ole varma muistavani, joten se kannattaa tarkistaa erikseen. Itse pysyttelen mieluummin ilveksen ulottumattomissa.
+KYSYMYS: Kerro lisää: metsolle
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boubín (luonto · vuori)
+Tietoruudun teksti: Boubín on 1 362 metriä korkea vaara Etelä-Böömissä, noin kolme ja puoli kilometriä Kubova Hutʹin kylästä itään. Suurin osa sen rinteistä on aarniometsä, Boubínský prales, joka rauhoitettiin luonnonsuojelualueeksi jo vuonna 1858 — siis viisitoista vuotta ennen isoisäsi matkaa ja aikana, jolloin koskematonta metsää pidettiin useimmiten vain hakkaamattomana puutavarana. Se on siksi yksi Euroopan vanhimmista suojelualueista.
+AIEMPI KYSYMYS: Saako aarniometsässä kävellä vapaasti?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tähän kannattaa vastata varovasti. Aarniometsäalueilla liikkuminen on yleensä rajoitettua: kävijöiden tulee pysyä merkityillä poluilla, jotta kasvillisuus ja maaperä säilyvät. Näin on tavallista monilla [[luonnonsuojelualueilla]], ja [[Boubínský prales]] kierretään käytännössä merkittyä reittiä pitkin. Tarkat säännöt ja mahdolliset rajoitukset kannattaa tarkistaa ennen käyntiä, sillä en ole niistä täysin varma. Minä lennän, joten polku on minulle lähinnä teoreettinen.
+KYSYMYS: Kerro lisää: luonnonsuojelualueilla
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Kuka suunnitteli koko maiseman?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Yhtä nimeä minä en tähän panisi. Koko maiseman takana oli [[Liechtensteinin]] ruhtinassuku eikä yksittäinen suunnittelija: suku yhdisti omistamansa [[Valticen]] ja [[Lednicen]] maat 1600-luvulta 1900-luvulle yhdeksi suureksi puistoksi, ja 1800-luvulla työtä jatkettiin englantilaisen maisemapuiston mallin mukaan. Lednicen uusgoottilaisen asun teetti vuosina 1846–1858 ruhtinas [[Alois II]]. Alueella työskenteli eri aikoina useita arkkitehteja ja puutarhureita, mutta heidän nimiään en ole varma. Pitkäjänteisempää työtä kuin yksikään minun postireittini.
+KYSYMYS: Kerro lisää: Liechtensteinin
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Kuka suunnitteli koko maiseman?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Yhtä nimeä minä en tähän panisi. Koko maiseman takana oli [[Liechtensteinin]] ruhtinassuku eikä yksittäinen suunnittelija: suku yhdisti omistamansa [[Valticen]] ja [[Lednicen]] maat 1600-luvulta 1900-luvulle yhdeksi suureksi puistoksi, ja 1800-luvulla työtä jatkettiin englantilaisen maisemapuiston mallin mukaan. Lednicen uusgoottilaisen asun teetti vuosina 1846–1858 ruhtinas [[Alois II]]. Alueella työskenteli eri aikoina useita arkkitehteja ja puutarhureita, mutta heidän nimiään en ole varma. Pitkäjänteisempää työtä kuin yksikään minun postireittini.
+KYSYMYS: Kerro lisää: Valticen
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Kuka suunnitteli koko maiseman?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Yhtä nimeä minä en tähän panisi. Koko maiseman takana oli [[Liechtensteinin]] ruhtinassuku eikä yksittäinen suunnittelija: suku yhdisti omistamansa [[Valticen]] ja [[Lednicen]] maat 1600-luvulta 1900-luvulle yhdeksi suureksi puistoksi, ja 1800-luvulla työtä jatkettiin englantilaisen maisemapuiston mallin mukaan. Lednicen uusgoottilaisen asun teetti vuosina 1846–1858 ruhtinas [[Alois II]]. Alueella työskenteli eri aikoina useita arkkitehteja ja puutarhureita, mutta heidän nimiään en ole varma. Pitkäjänteisempää työtä kuin yksikään minun postireittini.
+KYSYMYS: Kerro lisää: Lednicen
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Kuka suunnitteli koko maiseman?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Yhtä nimeä minä en tähän panisi. Koko maiseman takana oli [[Liechtensteinin]] ruhtinassuku eikä yksittäinen suunnittelija: suku yhdisti omistamansa [[Valticen]] ja [[Lednicen]] maat 1600-luvulta 1900-luvulle yhdeksi suureksi puistoksi, ja 1800-luvulla työtä jatkettiin englantilaisen maisemapuiston mallin mukaan. Lednicen uusgoottilaisen asun teetti vuosina 1846–1858 ruhtinas [[Alois II]]. Alueella työskenteli eri aikoina useita arkkitehteja ja puutarhureita, mutta heidän nimiään en ole varma. Pitkäjänteisempää työtä kuin yksikään minun postireittini.
+KYSYMYS: Kerro lisää: Alois II
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Luonto: Toscanan maisema on tehty käsin] Val d'Orcian aaltoilevat kukkulat sypressiriveineen näyttävät maalaukselta, ja tavallaan ne ovatkin: maisema on viljelty samaan asuun jo renessanssin aikana, ja aikakauden maalarit ottivat siitä mallin taulujensa taustoihin. Sypressit istutettiin teiden varsille opasteiksi ja tuulensuojaksi; vehnä ja viini vuorottelevat rinteillä. Koko laakso on Unescon maailmanperintökohde — ei koskemattomana luontona, vaan siksi että ihminen ja maisema muovasivat toisiaan satojen vuosien ajan.
+AIEMPI KYSYMYS: Mikä yhdistää linnoja toisiinsa?
+AIEMPI VASTAUS (Livia):
+Kato, tähän on helppo vastata. Se on pitkä suora juttu. Valticen ja Lednicen linnoja yhdistää ensinnäkin sama omistaja: [[Liechtensteinin]] ruhtinassuku hallitsi molempia vuosisatojen ajan. Vuonna 1715 linnat yhdistettiin toisiinsa seitsemän kilometrin pituisella puistotiellä, ja suuri osa tiestä on yhä käytössä. Lisäksi molemmat kuuluvat samaan 283 neliökilometrin kokonaisuuteen, jonka suku muotoili [[maisemapuistoksi]]. Raja kulki aikoinaan keskellä puistoa, sillä Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan. Seitsemän kilometriä on kyyhkylle yksi aamulenkki.
+KYSYMYS: Kerro lisää: maisemapuistoksi
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Miten englantilainen puutarha eroaa barokkipuutarhasta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ylhäältä ero näkyy heti. Barokkipuutarha on muotoiltu tiukan geometrisesti: reitit ovat suoria, pensaat leikattuja ja koko asetelma symmetrinen, jotta kävijä näkisi vallan ja järjestyksen. Englantilaisessa maisemapuistossa pyritään päinvastoin luonnollisen näköiseen kokonaisuuteen, jossa on aaltoilevia nurmikenttiä, vapaasti kasvavia puuryhmiä, lampia ja koristerakennuksia. Tyyli kehittyi Englannissa 1700-luvulla, ja sen tunnetuimpia suunnittelijoita oli [[Capability Brown]]. [[Liechtensteinin]] ruhtinaat jatkoivat [[Lednicen]] ja [[Valticen]] alueella työtä englantilaisen puiston mallin mukaan 1800-luvulla. Kyyhkynä arvostan penkkejä enemmän kuin geometriaa.
+KYSYMYS: Kerro lisää: Capability Brown
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+AIEMPI KYSYMYS: Missä Liechtensteinin ruhtinaskunta sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Pieni maa, nopea vastaus. Liechtensteinin ruhtinaskunta sijaitsee Keski-Euroopassa [[Sveitsin]] ja [[Itävallan]] välissä, Reinin laaksossa. Sen pääkaupunki on [[Vaduz]], ja se on yksi Euroopan pienimmistä valtioista. Maa on saanut nimensä ruhtinassuvun mukaan, ja sama suku omisti aikoinaan Lednicen ja Valticen maat Määrissä. Koko maan ehtii lentää ennen kuin pulla ehtii jäähtyä.
+KYSYMYS: Kerro lisää: Sveitsin
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Missä Liechtensteinin ruhtinaskunta sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Pieni maa, nopea vastaus. Liechtensteinin ruhtinaskunta sijaitsee Keski-Euroopassa [[Sveitsin]] ja [[Itävallan]] välissä, Reinin laaksossa. Sen pääkaupunki on [[Vaduz]], ja se on yksi Euroopan pienimmistä valtioista. Maa on saanut nimensä ruhtinassuvun mukaan, ja sama suku omisti aikoinaan Lednicen ja Valticen maat Määrissä. Koko maan ehtii lentää ennen kuin pulla ehtii jäähtyä.
+KYSYMYS: Kerro lisää: Itävallan
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+AIEMPI KYSYMYS: Missä Liechtensteinin ruhtinaskunta sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Pieni maa, nopea vastaus. Liechtensteinin ruhtinaskunta sijaitsee Keski-Euroopassa [[Sveitsin]] ja [[Itävallan]] välissä, Reinin laaksossa. Sen pääkaupunki on [[Vaduz]], ja se on yksi Euroopan pienimmistä valtioista. Maa on saanut nimensä ruhtinassuvun mukaan, ja sama suku omisti aikoinaan Lednicen ja Valticen maat Määrissä. Koko maan ehtii lentää ennen kuin pulla ehtii jäähtyä.
+KYSYMYS: Kerro lisää: Vaduz
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lednice ja Valtice (kulttuuri)
+Tietoruudun teksti: Etelä-Määrissä on 283 neliökilometrin alue, jonka yksi suku muotoili tarkoituksella maisemaksi. Liechtensteinin ruhtinaat yhdistivät 1600-luvulta 1900-luvulle omistamansa Valticen ja Lednicen yhdeksi valtavaksi puistoksi, ja 1800-luvulla he jatkoivat työtä englantilaisen maisemapuiston malliin. Valticen linna laajennettiin myöhäisromaanisena 1200-luvun alkupuoliskolla, vaurioitui pahoin hussilaissodissa ja rakennettiin barokkiin Kaarle I Liechtensteinilaisen aikana; Lednice oli 1300-luvulta Valticen tilaan kuulunut linnoitettu kartano, laajeni palatsiksi vuodesta 1680 ja sai vuosina 1846–1858 ruhtinas Alois II:n teettämän uusgoottilaisen asun. Vuonna 1715 linnat yhdistettiin seitsemän kilometrin pituisella puistotiellä, ja suuri osa siitä on yhä käytössä. Raja kulki keskellä puistoa: Valtice kuului Itävaltaan ja Lednice Böömin kuningaskuntaan, ja vasta Saint-Germainin sopimus vuonna 191…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Kulttuuri- ja tiedepalatsi] 1952–1955 Kulttuuri- ja tiedepalatsi oli Neuvostoliiton lahja Puolan kansalle. Sopimus rakentamisesta allekirjoitettiin huhtikuussa 1952, ja jättiläismäinen pilvenpiirtäjä valmistui jo heinäkuussa 1955 - työmaalla ahersi tuhansia neuvostoliittolaisia ja puolalaisia rakentajia. Rakennus on 237 metriä korkea, Puolan toiseksi korkein, ja siinä on peräti 3 288 huonetta 42 kerroksessa - teattereita, museoita, konserttisaleja ja jopa yliopisto. Näköalatasanteelta 30. kerroksesta, 114 metrin korkeudesta, näkee koko Varsovan. Vuonna 2000 torniin asennettiin neljä valtavaa, yli 6 metriä leveää kellotaulua - hetken aikaa maailman suurin kellotorni. Rakennus jakaa yhä mielipiteitä neuvostomenneisyyden…
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Mitä Unescon maailmanperintö tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Kyl minä sen tiedän. Unescon maailmanperintöluettelo on YK:n kasvatus-, tiede- ja kulttuurijärjestön ylläpitämä lista kohteista, joiden katsotaan olevan poikkeuksellisen arvokkaita koko ihmiskunnalle. Kohde voi olla kulttuuri- tai luontokohde tai molempia, ja luetteloon pääsy edellyttää, että kohde suojellaan ja sitä hoidetaan pitkäjänteisesti. [[Lednicen]] ja [[Valticen]] alue on yksi tällainen [[kulttuurimaisema]]. Lista on pidempi kuin minun postireittini.
+KYSYMYS: Kerro lisää: kulttuurimaisema
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Kensingtonin tori] 1880-luku Maan osti 1815 George Taylor Denison, joka oli palvellut miliisissä vuoden 1812 sodassa. Hänen tilansa ulottui Queen Street Westiltä Bloor Streetille, ja nykyistä Bellevue Square -puistoa hän käytti ratsuväkijoukkonsa harjoituskenttänä. Tila jaettiin tonteiksi 1850-luvulla, ja 1880-luvulla pienille tonteille rakennettiin taloja irlantilaisille ja skotlantilaisille siirtolaistyöläisille. Monet niistä ovat yhä pystyssä esimerkiksi Wales Avenuen varrella, ja toria lähimmissä taloissa on kadun puolella kauppa. 1900-luvun alussa alueelle muutti itäeurooppalaisia juutalaisia ja italialaisia siirtolaisia. He tulivat "Wardista", ahtaasta tulijoiden korttelistosta Yonge Streetin ja Univers…
+AIEMPI KYSYMYS: Miltä Josefov ennen asanacea näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys. Josefov oli Prahan keskiaikainen juutalaiskortteli, jossa rakennukset olivat tiheässä ja kujat ahtaita ja mutkittelevia. Kortteliin kuului useita [[synagogia]], ja niistä kuusi on säilynyt nykypäivään. Vanha [[juutalaishautausmaa]] sijaitsi aivan asutuksen keskellä. Tarkkaa kuvausta jostakin tietystä loistovuosikymmenestä en pysty antamaan, ja kuvaukset eri aikojen kaduista, taloista ja asukkaista kannattaa tarkistaa erikseen. Kaupunkia ylhäältä katsovalle kortteli oli varmasti sokkelo.
+KYSYMYS: Kerro lisää: synagogia
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+AIEMPI KYSYMYS: Miltä Josefov ennen asanacea näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Hyvä kysymys. Josefov oli Prahan keskiaikainen juutalaiskortteli, jossa rakennukset olivat tiheässä ja kujat ahtaita ja mutkittelevia. Kortteliin kuului useita [[synagogia]], ja niistä kuusi on säilynyt nykypäivään. Vanha [[juutalaishautausmaa]] sijaitsi aivan asutuksen keskellä. Tarkkaa kuvausta jostakin tietystä loistovuosikymmenestä en pysty antamaan, ja kuvaukset eri aikojen kaduista, taloista ja asukkaista kannattaa tarkistaa erikseen. Kaupunkia ylhäältä katsovalle kortteli oli varmasti sokkelo.
+KYSYMYS: Kerro lisää: juutalaishautausmaa
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+AIEMPI KYSYMYS: Miksi Josefov ennen asanacea katosi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tämä on vakava aihe. Josefovin vanha asutus purettiin kaupunkisaneerauksessa, jota kutsutaan tšekiksi asanaceksi. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Yleisesti saneerauksen perusteena mainitaan alueen ahtaus ja huono kunto, ja tuohon aikaan samanlaisia kaupunkien uudistuksia tehtiin monessa Euroopan kaupungissa. Kuusi [[synagogaa]] ja vanha [[juutalaishautausmaa]] säilyivät, ja ne ovat edelleen paikoillaan [[Prahan]] keskustassa. Onpas siitä onneksi jo yli sata vuotta.
+KYSYMYS: Kerro lisää: synagogaa
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kaupunkilehti / Tiede: Prahan hevoset] Przewalskin hevonen on mongolialainen villihevonen, jolla on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei siis ole karannut kesyhevonen vaan oma lajinsa. Toisen maailmansodan jälkeen niitä oli jäljellä vain kahdessa eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla koko maailman eläintarhoissa oli enää kaksitoista yksilöä. Vuonna 1959 Prahan eläintarhalle uskottiin lajin kansainvälisen kantakirjan pito. Luonnosta laji hävisi kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.
+AIEMPI KYSYMYS: Miksi Josefov ennen asanacea katosi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tämä on vakava aihe. Josefovin vanha asutus purettiin kaupunkisaneerauksessa, jota kutsutaan tšekiksi asanaceksi. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Yleisesti saneerauksen perusteena mainitaan alueen ahtaus ja huono kunto, ja tuohon aikaan samanlaisia kaupunkien uudistuksia tehtiin monessa Euroopan kaupungissa. Kuusi [[synagogaa]] ja vanha [[juutalaishautausmaa]] säilyivät, ja ne ovat edelleen paikoillaan [[Prahan]] keskustassa. Onpas siitä onneksi jo yli sata vuotta.
+KYSYMYS: Kerro lisää: Prahan
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Vanhauusi synagoga] 1270 Vanhauusi synagoga valmistui Prahan juutalaiskortteliin noin vuonna 1270, ja se on Euroopan vanhin yhä toimiva synagoga. Rakennus on goottilaista tyyliä, ja sen kivikattoa kannattelee poikkeuksellinen viisisakarainen holvikaari — useimmissa goottilaisissa rakennuksissa holvissa on neljä tai kuusi sakaraa, mutta täällä niitä on juuri viisi. Synagogassa on kaksitoista pitkää, kapeaa ikkunaa — yksi Israelin jokaista sukukuntaa kohden. Rakennuksen vintillä säilytetään legendan mukaan rabbi Jehuda Löw ben Becalelin 1500-luvulla luoman Golemin, savesta muovatun jättiläisolennon, ruumista. Kun vintti lopulta todella tutkittiin vuonna 2014, sieltä ei kuitenkaan löytynyt Golemista jälkeäkään.
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+AIEMPI KYSYMYS: Mitä Josefovissa voi nykyään nähdä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän vastaan rauhassa. Josefov on Prahan vanha juutalaiskortteli, joka kuuluu nykyään kaupungin keskustaan. Saneerauksessa säilyneet kuusi synagogaa ovat yhä paikoillaan, ja niihin kuuluu muun muassa [[Vanha-uusi synagoga]]; osa synagogista toimii museona. Korttelissa on myös vanha juutalaishautausmaa. Saneerauksen jälkeen alueelle rakennettiin uusia kaupunkitaloja ja leveitä katuja, kuten [[Pařížská]]-katu. Siellä kannattaa kulkea hiljaa ja katsoa ylös.
+KYSYMYS: Kerro lisää: Vanha-uusi synagoga
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+AIEMPI KYSYMYS: Mitä Josefovissa voi nykyään nähdä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän vastaan rauhassa. Josefov on Prahan vanha juutalaiskortteli, joka kuuluu nykyään kaupungin keskustaan. Saneerauksessa säilyneet kuusi synagogaa ovat yhä paikoillaan, ja niihin kuuluu muun muassa [[Vanha-uusi synagoga]]; osa synagogista toimii museona. Korttelissa on myös vanha juutalaishautausmaa. Saneerauksen jälkeen alueelle rakennettiin uusia kaupunkitaloja ja leveitä katuja, kuten [[Pařížská]]-katu. Siellä kannattaa kulkea hiljaa ja katsoa ylös.
+KYSYMYS: Kerro lisää: Pařížská
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+AIEMPI KYSYMYS: Mitä Prahan vanhalla hautausmaalla on erikoista?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hiljainen paikka. Kerron rauhassa. Vanha juutalaishautausmaa [[Josefovin]] kortteleissa säilyi koko saneerauksen ajan. Se otettiin käyttöön lähteiden mukaan 1400-luvulla, ja hautaukset jatkuivat 1700-luvun loppupuolelle. Koska tilaa ei saatu lisää, vainajia haudattiin useisiin kerroksiin, ja siksi muistokivet ovat hyvin tiheässä ja kallellaan. Alueelle on haudattu muun muassa oppinut [[rabbi Loew]]. Siellä on hyvä olla hiljaa.
+KYSYMYS: Kerro lisää: Josefovin
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kohdekartta / Kohdekartta: Elgin ja Winter Garden] 1913 Kaksi teatteria on ladottu päällekkäin: Winter Garden on kuusi kerrosta Elginin yläpuolella. Ne ovat maailman viimeiset säilyneet edwardiaaniset päällekkäiset teatterit. Talo rakennettiin 1913 Marcus Loew'n teatteriketjun lippulaivaksi, ja sen suunnitteli arkkitehti Thomas W. Lamb. Molemmat salit tehtiin varieteelle ja aikakauden lyhyille mykkäelokuville, mutta kumpikin eri yleisölle. Alempi sali — alun perin Loew's Yonge Street Theatre — oli kultaa, marmoria ja kupoli, ja siellä pyöri jatkuva varietee- ja elokuvaohjelma. Ylempi Winter Garden on niin sanottu tunnelmateatteri: maalaispuutarha tähtitaivaan alla, seinillä kasvi- ja säleikkömaalauksia, pylväinä puunrunkoja ja valaisimina l…
+- [Praha — kohdekartta / Kohdekartta: Vanhauusi synagoga] 1270 Vanhauusi synagoga valmistui Prahan juutalaiskortteliin noin vuonna 1270, ja se on Euroopan vanhin yhä toimiva synagoga. Rakennus on goottilaista tyyliä, ja sen kivikattoa kannattelee poikkeuksellinen viisisakarainen holvikaari — useimmissa goottilaisissa rakennuksissa holvissa on neljä tai kuusi sakaraa, mutta täällä niitä on juuri viisi. Synagogassa on kaksitoista pitkää, kapeaa ikkunaa — yksi Israelin jokaista sukukuntaa kohden. Rakennuksen vintillä säilytetään legendan mukaan rabbi Jehuda Löw ben Becalelin 1500-luvulla luoman Golemin, savesta muovatun jättiläisolennon, ruumista. Kun vintti lopulta todella tutkittiin vuonna 2014, sieltä ei kuitenkaan löytynyt Golemista jälkeäkään.
+AIEMPI KYSYMYS: Mitä Prahan vanhalla hautausmaalla on erikoista?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hiljainen paikka. Kerron rauhassa. Vanha juutalaishautausmaa [[Josefovin]] kortteleissa säilyi koko saneerauksen ajan. Se otettiin käyttöön lähteiden mukaan 1400-luvulla, ja hautaukset jatkuivat 1700-luvun loppupuolelle. Koska tilaa ei saatu lisää, vainajia haudattiin useisiin kerroksiin, ja siksi muistokivet ovat hyvin tiheässä ja kallellaan. Alueelle on haudattu muun muassa oppinut [[rabbi Loew]]. Siellä on hyvä olla hiljaa.
+KYSYMYS: Kerro lisää: rabbi Loew
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nouméa — kaupunkilehti / Nouméa: Majakka joka rakennettiin Pariisissa] Nouméan edustan suojariutassa on vain kolme laivoille kelpaavaa aukkoa, ja tärkeintä niistä, Boularin väylää, valvoo Amédéen saaren majakka. Sen 56-metrinen rautatorni valmistettiin osina Pariisissa vuonna 1862, kuljetettiin Seineä pitkin Le Havreen ja purjehdittiin sieltä maailman toiselle laidalle. Torni koottiin lopulliselle paikalleen ja sytytettiin ensi kertaa marraskuussa 1865 - Ranskan ensimmäinen metallinen majakka. 247 kierreporrasta johtavat huipulle, josta valo kantoi kauas merelle ja opasti etenkin vankilaivoja turvallisesti perille asti.
+AIEMPI KYSYMYS: Mitä asanace-sana tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sana on aika vieras, mut selitän. Asanace on tšekin kielen sana kaupunkialueen saneerauksesta, eli ahtaasti tai huonokuntoisesti rakennetun alueen purkamisesta ja uudelleenrakentamisesta. Prahassa sillä tarkoitetaan erityisesti 1800-luvun lopun ja 1900-luvun alun hanketta, jossa vuonna 1893 vahvistetun lain nojalla [[Josefovin]] ja muiden vanhojen kortteleiden ahtaat kujat purettiin ja tilalle rakennettiin leveämpiä katuja ja uusia taloja. Samanlaisia kaupunkien uudistuksia tehtiin tuolloin muuallakin Euroopassa, esimerkiksi [[Pariisissa]] [[Haussmannin]] johdolla. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Pariisissa
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Josefov ennen asanacea (historia)
+Tietoruudun teksti: Josefov oli Prahan tiheästi rakennettu keskiaikainen juutalaiskortteli. Frans Joosef vahvisti saneerauslain vuonna 1893, ja valtaosa kujista purettiin vuosina 1895–1913. Kuusi synagogaa ja vanha hautausmaa säilyivät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Jones-silta] valmistui 1920 Samalla kohdalla Pasig-jokea on ollut silta vuodesta 1630. Viimeinen niistä oli espanjalaiskauden Puente de España, joka romahti syyskuun 1914 rankkasateissa, kun keskimmäinen virtapilari petti. Uusi silta rakennettiin kadun verran alavirtaan vuosina 1919–1920, ja se avattiin 1921. Se on 115 metriä pitkä ja 16,7 metriä leveä, ja siinä on kolme jännettä ja kaksi virtapilaria. Sillan suunnitteli filippiiniläinen arkkitehti Juan M. Arellano. Hän oli käynyt Pariisissa ja otti mallia Haussmannin kaupunkiuudistuksen silloista ja erityisesti Pont Alexandre III:sta: virtapilareihin tuli delfiinien selässä ratsastavia poikia, ja sillan molempiin päihin nostettiin neljä jalustaa, joill…
+- [Pariisi — kohdekartta / Kohdekartta: Palais Garnier] 1875 Uuden oopperatalon suunnittelukilpailu julkistettiin joulukuussa 1860, ja siihen osallistui 171 kilpailijaa. Voittajaksi julistettiin toukokuussa 1861 yksimielisesti nuori Charles Garnier, joka ei ollut vielä vakiinnuttanut asemaansa — viimeinen sana valinnassa oli keisari Napoleon III:lla. Paikka oli hankala: paroni Haussmannin osoittama tontti oli vinoneliön muotoinen, ja sen ympärille oli tulossa korkeita taloja. Garnier ratkaisi asian tekemällä talosta näyttämön myös ulkopuolelta — portaikko ja lämpiö ovat yhtä koreat kuin katsomo. Taloa sanottiin pitkään yksinkertaisesti Pariisin oopperaksi. Nimi vaihtui arkkitehdin mukaan vasta 1989, kun Opéra Bastille valmistui; nykyään Palais G…
+AIEMPI KYSYMYS: Mitä asanace-sana tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Sana on aika vieras, mut selitän. Asanace on tšekin kielen sana kaupunkialueen saneerauksesta, eli ahtaasti tai huonokuntoisesti rakennetun alueen purkamisesta ja uudelleenrakentamisesta. Prahassa sillä tarkoitetaan erityisesti 1800-luvun lopun ja 1900-luvun alun hanketta, jossa vuonna 1893 vahvistetun lain nojalla [[Josefovin]] ja muiden vanhojen kortteleiden ahtaat kujat purettiin ja tilalle rakennettiin leveämpiä katuja ja uusia taloja. Samanlaisia kaupunkien uudistuksia tehtiin tuolloin muuallakin Euroopassa, esimerkiksi [[Pariisissa]] [[Haussmannin]] johdolla. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Haussmannin
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Mikä on Böömin paratiisin korkein kohta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sen minä muistan. Korkeus on helppo laskea. Alueen korkein kohta on 744 metrin korkuinen [[Kozákov]]. Se sijaitsee noin 60 kilometriä Prahasta koilliseen, [[Jičínin]] ja [[Turnovin]] kaupunkien välisellä seudulla. Huippu ei ole korkea, mutta alueen kallioiden ja metsien ansiosta maisemat ovat näyttäviä. Minulle 744 metriä on kyllä tarpeeksi.
+KYSYMYS: Kerro lisää: Kozákov
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+AIEMPI KYSYMYS: Mikä on Böömin paratiisin korkein kohta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sen minä muistan. Korkeus on helppo laskea. Alueen korkein kohta on 744 metrin korkuinen [[Kozákov]]. Se sijaitsee noin 60 kilometriä Prahasta koilliseen, [[Jičínin]] ja [[Turnovin]] kaupunkien välisellä seudulla. Huippu ei ole korkea, mutta alueen kallioiden ja metsien ansiosta maisemat ovat näyttäviä. Minulle 744 metriä on kyllä tarpeeksi.
+KYSYMYS: Kerro lisää: Jičínin
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Mikä on Böömin paratiisin korkein kohta?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sen minä muistan. Korkeus on helppo laskea. Alueen korkein kohta on 744 metrin korkuinen [[Kozákov]]. Se sijaitsee noin 60 kilometriä Prahasta koilliseen, [[Jičínin]] ja [[Turnovin]] kaupunkien välisellä seudulla. Huippu ei ole korkea, mutta alueen kallioiden ja metsien ansiosta maisemat ovat näyttäviä. Minulle 744 metriä on kyllä tarpeeksi.
+KYSYMYS: Kerro lisää: Turnovin
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto] Tšekissä ei ole merta eikä jäätiköitä, mutta maan alla aukeaa kuilu ja maan päällä hiekkakivestä kasvanut kaupunki, jossa kadut ovat kalliota.
+AIEMPI KYSYMYS: Mistä kivestä monet alueen kaupungit on rakennettu?
+AIEMPI VASTAUS (Livia):
+Just niin, se on helppo. Kivi on jalkojen alla. Monet alueen ympärillä sijaitsevat kaupungit on rakennettu [[hiekkakivestä]], jota alueella on runsaasti. Sama kivi muodostaa Böömin paratiisin kuuluisat kalliot, sillä tuuli, vesi ja pakkanen ovat vuosituhansien kuluessa muovanneet niistä erikoisia muotoja. Erityisen tunnettu on [[Prachovin kalliot]] -alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933. Kivestä sen kun rakennetaan, vaikka minä asun mieluummin katolla.
+KYSYMYS: Kerro lisää: hiekkakivestä
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Mistä kivestä monet alueen kaupungit on rakennettu?
+AIEMPI VASTAUS (Livia):
+Just niin, se on helppo. Kivi on jalkojen alla. Monet alueen ympärillä sijaitsevat kaupungit on rakennettu [[hiekkakivestä]], jota alueella on runsaasti. Sama kivi muodostaa Böömin paratiisin kuuluisat kalliot, sillä tuuli, vesi ja pakkanen ovat vuosituhansien kuluessa muovanneet niistä erikoisia muotoja. Erityisen tunnettu on [[Prachovin kalliot]] -alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933. Kivestä sen kun rakennetaan, vaikka minä asun mieluummin katolla.
+KYSYMYS: Kerro lisää: Prachovin kalliot
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä geopark tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivipuistohan se on, suunnilleen. Geopark on alue, jonka geologinen perintö on tavallista merkittävämpi ja jota hoidetaan niin, että kallioperää suojellaan, siitä kerrotaan kävijöille ja alueen kehitystä tuetaan kestävästi, esimerkiksi matkailun kautta. [[Unescon]] geopark -tunnuksen saavat alueet, jotka täyttävät nämä ehdot. [[Böömin paratiisi]], tšekiksi [[Český ráj]], on Tšekin ainoa Unescon geopark. Kyl kivestä riittää juteltavaa.
+KYSYMYS: Kerro lisää: Unescon
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Mitä geopark tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivipuistohan se on, suunnilleen. Geopark on alue, jonka geologinen perintö on tavallista merkittävämpi ja jota hoidetaan niin, että kallioperää suojellaan, siitä kerrotaan kävijöille ja alueen kehitystä tuetaan kestävästi, esimerkiksi matkailun kautta. [[Unescon]] geopark -tunnuksen saavat alueet, jotka täyttävät nämä ehdot. [[Böömin paratiisi]], tšekiksi [[Český ráj]], on Tšekin ainoa Unescon geopark. Kyl kivestä riittää juteltavaa.
+KYSYMYS: Kerro lisää: Böömin paratiisi
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Mitä geopark tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kivipuistohan se on, suunnilleen. Geopark on alue, jonka geologinen perintö on tavallista merkittävämpi ja jota hoidetaan niin, että kallioperää suojellaan, siitä kerrotaan kävijöille ja alueen kehitystä tuetaan kestävästi, esimerkiksi matkailun kautta. [[Unescon]] geopark -tunnuksen saavat alueet, jotka täyttävät nämä ehdot. [[Böömin paratiisi]], tšekiksi [[Český ráj]], on Tšekin ainoa Unescon geopark. Kyl kivestä riittää juteltavaa.
+KYSYMYS: Kerro lisää: Český ráj
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Millaisia kallioita hiekkakivestä muodostuu?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kivessä on hyviä istumapaikkoja. Hiekkakivi on pehmeää ja huokoista, joten tuuli, vesi ja pakkanen muokkaavat sitä vuosituhansien ajan; tätä kutsutaan [[rapautumiseksi]]. Vesi tunkeutuu rakoihin, jäätyy ja laajentuessaan lohkoo kiveä, ja tuuli hioo pintaa. Tuloksena on pystysuoria torneja, kapeita rotkoja, kalliokaaria ja sientä muistuttavia muotoja. [[Prachovin kallioiden]] alue Böömin paratiisissa on ollut suojeltu vuodesta 1933. Kivi ei kiirehdi, ja niin teen minäkin.
+KYSYMYS: Kerro lisää: rapautumiseksi
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Millaisia kallioita hiekkakivestä muodostuu?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kivessä on hyviä istumapaikkoja. Hiekkakivi on pehmeää ja huokoista, joten tuuli, vesi ja pakkanen muokkaavat sitä vuosituhansien ajan; tätä kutsutaan [[rapautumiseksi]]. Vesi tunkeutuu rakoihin, jäätyy ja laajentuessaan lohkoo kiveä, ja tuuli hioo pintaa. Tuloksena on pystysuoria torneja, kapeita rotkoja, kalliokaaria ja sientä muistuttavia muotoja. [[Prachovin kallioiden]] alue Böömin paratiisissa on ollut suojeltu vuodesta 1933. Kivi ei kiirehdi, ja niin teen minäkin.
+KYSYMYS: Kerro lisää: Prachovin kallioiden
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Mistä Kozákov on tunnettu?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Se on alueen korkein kohta, mutta muutakin siinä on. Kozákov on 744 metrin korkeudessa Böömin paratiisin korkein kohta. Sitä pidetään tunnettuna [[akaattien]] löytöpaikkana, mutta yksityiskohdista en ole aivan varma. Lähistöllä sijaitseva [[Turnov]] on tunnettu jalokivien ja korujen työstöstä, ja alueen hiekkakivestä on rakennettu monia ympäröiviä kaupunkeja. Hyvä että muistin edes tämän.
+KYSYMYS: Kerro lisää: akaattien
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Böömin paratiisi (luonto · vuori)
+Tietoruudun teksti: Böömin paratiisi eli tšekiksi Český ráj on luonto- ja kulttuurialue Tšekissä; sen suojeltu maisema-alue kattaa 181 neliökilometriä, ja alueen geopark on Tšekin ainoa Unescon geopark. Se sijaitsee noin 60 kilometriä Prahasta koilliseen Jičínin ja Turnovin kaupunkien välissä, pääjokena Jizera, ja sen korkein kohta on 744 metrin korkuinen Kozákov. Suojelualue perustettiin vuonna 1955 maan ensimmäisenä luonnonsuojelualueena. Alueen tunnetuimpiin piirteisiin kuuluu hiekkakivi, josta monet ympäröivät kaupungit on rakennettu, ja tuuli, vesi ja pakkanen ovat muovanneet kallioista erikoisia muotoja. Erityisen huomionarvoinen on Prachovin kalliomuodostelmien alue, joka on ollut suojeltu luonnonsuojelualue vuodesta 1933.
+AIEMPI KYSYMYS: Mistä Kozákov on tunnettu?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Se on alueen korkein kohta, mutta muutakin siinä on. Kozákov on 744 metrin korkeudessa Böömin paratiisin korkein kohta. Sitä pidetään tunnettuna [[akaattien]] löytöpaikkana, mutta yksityiskohdista en ole aivan varma. Lähistöllä sijaitseva [[Turnov]] on tunnettu jalokivien ja korujen työstöstä, ja alueen hiekkakivestä on rakennettu monia ympäröiviä kaupunkeja. Hyvä että muistin edes tämän.
+KYSYMYS: Kerro lisää: Turnov
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+AIEMPI KYSYMYS: Kuka runoilija vieraili kalliokaupungissa vuonna 1790?
+AIEMPI VASTAUS (Livia):
+No jopas, tämän minä tiedän. Hän oli kuuluisa mies. Vuonna 1790 alueella vieraili saksalainen runoilija ja kirjailija [[Johann Wolfgang von Goethe]]. Vierailu on jäänyt muistiin osana [[Adršpachin]] kalliokaupungin historiaa: ensimmäiset luonnonystävät Sleesiasta olivat saapuneet kalliokaupunkiin jo noin vuonna 1700, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Kyyhkyjä ei vierailijaluetteloon ole merkitty.
+KYSYMYS: Kerro lisää: Johann Wolfgang von Goethe
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+AIEMPI KYSYMYS: Kuka runoilija vieraili kalliokaupungissa vuonna 1790?
+AIEMPI VASTAUS (Livia):
+No jopas, tämän minä tiedän. Hän oli kuuluisa mies. Vuonna 1790 alueella vieraili saksalainen runoilija ja kirjailija [[Johann Wolfgang von Goethe]]. Vierailu on jäänyt muistiin osana [[Adršpachin]] kalliokaupungin historiaa: ensimmäiset luonnonystävät Sleesiasta olivat saapuneet kalliokaupunkiin jo noin vuonna 1700, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Kyyhkyjä ei vierailijaluetteloon ole merkitty.
+KYSYMYS: Kerro lisää: Adršpachin
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Mikä lintu pesii Adršpachin kallioilla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Sukulaisia kai. Alueen kalliolla pesii [[muuttohaukka]], ja Adršpachin alue on yksi Euroopan suurimpia sen pysyviä pesimäpaikkoja. Haukat käyttävät pystysuoria kallioseinämiä pesäpaikkoinaan, ja siksi osa kallioista suljetaan pesimäaikaan, jotta lintujen pesintä ei häiriintyisi. Alue on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933. Pysyttelen kunnioittavasti kauempana.
+KYSYMYS: Kerro lisää: muuttohaukka
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+AIEMPI KYSYMYS: Kuka Rübezahl on?
+AIEMPI VASTAUS (Livia):
+Ai, hänet minä tunnen. Lintuväellä on hänestä omat huhut. Rübezahl on Sleesian ja Böömin rajaseudun vuorten taruhahmo, vuorihenki, jota tšekiksi kutsutaan nimellä [[Krakonoš]]. Hänet liitetään erityisesti [[Krkonoše]]-vuoriston eli Jättiläisvuorten seutuun. Kansantarinoissa hän on välillä auttaja ja välillä kiusanhenki, joka muuttaa säätä ja eksyttää matkaajia. Adršpachin alueen kalliomuodostelmista yksi, [[Rübezahlin urut]], on nimetty hänen mukaansa. Pysyttelen mieluummin hänen hyvissä väleissään.
+KYSYMYS: Kerro lisää: Krakonoš
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+AIEMPI KYSYMYS: Kuka Rübezahl on?
+AIEMPI VASTAUS (Livia):
+Ai, hänet minä tunnen. Lintuväellä on hänestä omat huhut. Rübezahl on Sleesian ja Böömin rajaseudun vuorten taruhahmo, vuorihenki, jota tšekiksi kutsutaan nimellä [[Krakonoš]]. Hänet liitetään erityisesti [[Krkonoše]]-vuoriston eli Jättiläisvuorten seutuun. Kansantarinoissa hän on välillä auttaja ja välillä kiusanhenki, joka muuttaa säätä ja eksyttää matkaajia. Adršpachin alueen kalliomuodostelmista yksi, [[Rübezahlin urut]], on nimetty hänen mukaansa. Pysyttelen mieluummin hänen hyvissä väleissään.
+KYSYMYS: Kerro lisää: Krkonoše
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+AIEMPI KYSYMYS: Kuka Rübezahl on?
+AIEMPI VASTAUS (Livia):
+Ai, hänet minä tunnen. Lintuväellä on hänestä omat huhut. Rübezahl on Sleesian ja Böömin rajaseudun vuorten taruhahmo, vuorihenki, jota tšekiksi kutsutaan nimellä [[Krakonoš]]. Hänet liitetään erityisesti [[Krkonoše]]-vuoriston eli Jättiläisvuorten seutuun. Kansantarinoissa hän on välillä auttaja ja välillä kiusanhenki, joka muuttaa säätä ja eksyttää matkaajia. Adršpachin alueen kalliomuodostelmista yksi, [[Rübezahlin urut]], on nimetty hänen mukaansa. Pysyttelen mieluummin hänen hyvissä väleissään.
+KYSYMYS: Kerro lisää: Rübezahlin urut
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+AIEMPI KYSYMYS: Miksi muuttohaukka on harvinaistunut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sukurasitteitakin tässä on. Muuttohaukka harvinaistui Euroopassa voimakkaasti 1900-luvun puolivälin jälkeen, kun torjunta-aineet, erityisesti [[DDT]], kertyivät [[ravintoketjussa]] petolintujen elimistöön. Ne ohensivat munankuoria, jolloin pesinnät epäonnistuivat. Kanta alkoi toipua, kun aineet kiellettiin ja pesimäpaikkoja suojeltiin. [[Adršpachin]] kalliot ovat yksi Euroopan tärkeistä pesimäpaikoista, ja siellä osa kallioista suljetaan pesimäaikaan. Kyyhkynä minulla on tästä vähän ristiriitaiset tunteet.
+KYSYMYS: Kerro lisää: DDT
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [NFK — maalehti / Tiede: Saari täynnä jättiläispetoja] nykyään — Phillipinsaarella elää juoksujalkainen Cormocephalus coynei, joka kasvaa lähes 30 senttiä pitkäksi ja on yksi maailman suurimmista. Se metsästää öisin pesäkoloita täynnä olevalla saarella mustasiipipetreliä, jonka poikasia se tappaa myrkyllisillä etuhampaikkeillaan – tutkijat arvioivat, että juoksujalkaiset syövät jopa 3 700 petrelinpoikasta vuosittain. Määrä kuulostaa dramaattiselta, mutta saaren 19 000 pesivälle petreliparille se ei ole uhka: koska saarella ei ole nisäkkäitä, juoksujalkainen on ottanut niiden paikan luonnollisena petona ravintoketjussa. Laji elää vain tällä yhdellä pienellä saarella eikä sitä tavata muualla maailmassa.
+AIEMPI KYSYMYS: Miksi muuttohaukka on harvinaistunut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sukurasitteitakin tässä on. Muuttohaukka harvinaistui Euroopassa voimakkaasti 1900-luvun puolivälin jälkeen, kun torjunta-aineet, erityisesti [[DDT]], kertyivät [[ravintoketjussa]] petolintujen elimistöön. Ne ohensivat munankuoria, jolloin pesinnät epäonnistuivat. Kanta alkoi toipua, kun aineet kiellettiin ja pesimäpaikkoja suojeltiin. [[Adršpachin]] kalliot ovat yksi Euroopan tärkeistä pesimäpaikoista, ja siellä osa kallioista suljetaan pesimäaikaan. Kyyhkynä minulla on tästä vähän ristiriitaiset tunteet.
+KYSYMYS: Kerro lisää: ravintoketjussa
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Keksinnöt: Piirros lentävästä miehestä] 1595 — Faust Vrančić oli piispa, kielitieteilijä ja keksijä, joka julkaisi kirjassaan piirroksen nimeltä Homo Volans, lentävä ihminen. Kuvassa mies laskeutuu tornista neliömäisen purjeen varassa — se on varhaisimpia kuvauksia laskuvarjosta, ja idean pohjana oli Leonardo da Vincin luonnos. Kertomuksen mukaan Vrančić kokeili laitetta itse Venetsiassa. Vaikka koe olisi tarua, piirros on tosi: sen mitat toimivat, ja samalla periaatteella laskuvarjot tehtiin vielä satoja vuosia myöhemmin.
+AIEMPI KYSYMYS: Kuka Goethe oli?
+AIEMPI VASTAUS (Livia):
+No niin, hänestä riittää juttua. Tiivistän parhaani mukaan. Johann Wolfgang von Goethe (1749–1832) oli saksalainen kirjailija, runoilija ja luonnontutkija, jota pidetään yhtenä saksankielisen kirjallisuuden merkittävimmistä hahmoista. Hänen tunnetuimpia teoksiaan ovat näytelmä [[Faust]] ja romaani [[Nuoren Wertherin kärsimykset]]. Hän vietti suuren osan elämästään [[Weimarissa]], jossa hän palveli herttuakunnan hovissa. Matkoillaan hän kävi myös Böömissä, ja vuoden 1790 vierailu Adršpachin kalliokaupungissa on yksi niistä. Tuo mies kirjoitti enemmän kuin minä olen koskaan kantanut.
+KYSYMYS: Kerro lisää: Faust
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+AIEMPI KYSYMYS: Kuka Goethe oli?
+AIEMPI VASTAUS (Livia):
+No niin, hänestä riittää juttua. Tiivistän parhaani mukaan. Johann Wolfgang von Goethe (1749–1832) oli saksalainen kirjailija, runoilija ja luonnontutkija, jota pidetään yhtenä saksankielisen kirjallisuuden merkittävimmistä hahmoista. Hänen tunnetuimpia teoksiaan ovat näytelmä [[Faust]] ja romaani [[Nuoren Wertherin kärsimykset]]. Hän vietti suuren osan elämästään [[Weimarissa]], jossa hän palveli herttuakunnan hovissa. Matkoillaan hän kävi myös Böömissä, ja vuoden 1790 vierailu Adršpachin kalliokaupungissa on yksi niistä. Tuo mies kirjoitti enemmän kuin minä olen koskaan kantanut.
+KYSYMYS: Kerro lisää: Nuoren Wertherin kärsimykset
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adršpach-Teplicen kalliot (luonto · vuori)
+Tietoruudun teksti: Adršpach-Teplicen kalliot ovat joukko hiekkakivimuodostelmia Hradec Královén alueella Tšekissä, ja ne on nimetty kahden lähikunnan, Adršpachin ja Teplice nad Metujin, mukaan. Kalliot on suojeltu kansallisena luonnonsuojelualueena vuodesta 1933, ja vuodesta 1991 alue kuuluu Broumovskon suojeltuun maisema-alueeseen. Monilla muodostelmilla on mielikuvituksellisia nimiä, kuten Espanjalainen muuri, Isoisän tuoli ja Rübezahlin urut. Ensimmäiset luonnonystävät Sleesiasta saapuivat kalliokaupunkiin noin vuonna 1700, Goethe vieraili siellä vuonna 1790, ja 1800-luvun alussa alueelle tehtiin ensimmäiset polut. Alue on myös yksi Euroopan suurimpia muuttohaukan pysyviä pesimäpaikkoja.
+AIEMPI KYSYMYS: Kuka Goethe oli?
+AIEMPI VASTAUS (Livia):
+No niin, hänestä riittää juttua. Tiivistän parhaani mukaan. Johann Wolfgang von Goethe (1749–1832) oli saksalainen kirjailija, runoilija ja luonnontutkija, jota pidetään yhtenä saksankielisen kirjallisuuden merkittävimmistä hahmoista. Hänen tunnetuimpia teoksiaan ovat näytelmä [[Faust]] ja romaani [[Nuoren Wertherin kärsimykset]]. Hän vietti suuren osan elämästään [[Weimarissa]], jossa hän palveli herttuakunnan hovissa. Matkoillaan hän kävi myös Böömissä, ja vuoden 1790 vierailu Adršpachin kalliokaupungissa on yksi niistä. Tuo mies kirjoitti enemmän kuin minä olen koskaan kantanut.
+KYSYMYS: Kerro lisää: Weimarissa
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+- [Tampere — kohdekartta / Kohdekartta: Pyynikin näkötorni] 1929 Torni valmistui Pyynikinharjun laelle vuonna 1929 apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta punagraniitista. Harjun laki on 152 metriä merenpinnasta, joten tornin tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Pyynikinharju on maailman korkein pitkittäisharju: se kohoaa 160 metriin merenpinnasta ja 80 metriä Pyhäjärven pintaa ylemmäs. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun hiekka vierii vuosien mittaan alaspäin. Tornin juurella toimii munkkikahvila, joka on ainakin yhtä kuuluisa kuin näköala. Sokerissa kieritetyt munkit paistetaa…
+AIEMPI KYSYMYS: Mikä oli Pradědin huipun ensimmäinen rakennus?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Huipun ensimmäinen rakennus oli 32 metriä korkea kivinen [[näkötorni]], jonka [[sudeettisaksalaiset]] matkailijat rakensivat vuosina 1903–1912. Vuori kuuluu [[Hrubý Jeseníkin]] vuoristoon, jonka korkein huippu se on, ja nykyään sen laella kohoaa tornin sijaan 162 metriä korkea televisiolähetin. Kyl se vanha torni ois kelvannut minulle levähdyspaikaksi.
+KYSYMYS: Kerro lisää: näkötorni
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+AIEMPI KYSYMYS: Mikä oli Pradědin huipun ensimmäinen rakennus?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Huipun ensimmäinen rakennus oli 32 metriä korkea kivinen [[näkötorni]], jonka [[sudeettisaksalaiset]] matkailijat rakensivat vuosina 1903–1912. Vuori kuuluu [[Hrubý Jeseníkin]] vuoristoon, jonka korkein huippu se on, ja nykyään sen laella kohoaa tornin sijaan 162 metriä korkea televisiolähetin. Kyl se vanha torni ois kelvannut minulle levähdyspaikaksi.
+KYSYMYS: Kerro lisää: sudeettisaksalaiset
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+AIEMPI KYSYMYS: Mikä oli Pradědin huipun ensimmäinen rakennus?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Huipun ensimmäinen rakennus oli 32 metriä korkea kivinen [[näkötorni]], jonka [[sudeettisaksalaiset]] matkailijat rakensivat vuosina 1903–1912. Vuori kuuluu [[Hrubý Jeseníkin]] vuoristoon, jonka korkein huippu se on, ja nykyään sen laella kohoaa tornin sijaan 162 metriä korkea televisiolähetin. Kyl se vanha torni ois kelvannut minulle levähdyspaikaksi.
+KYSYMYS: Kerro lisää: Hrubý Jeseníkin
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+AIEMPI KYSYMYS: Mitä keskiajalla uskottiin Petrovy kameny -kivien asukkaista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Keskiajalla pelättiin, että [[gneissikivimuodostelma]] Petrovy kameny oli noitien asuinpaikka. Muodostelma sijaitsee lähellä [[Pradědin]] huippua, ja kivien erikoinen ulkonäkö ruokki aikoinaan tällaisia uskomuksia. Nykyään kivet ovat ennen kaikkea retkeilijöiden näkökohde. Hyvä että noidat on sentään jääny tarinoihin.
+KYSYMYS: Kerro lisää: gneissikivimuodostelma
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kohdekartta / Kohdekartta: Prado-museo] 1819 Arkkitehti Juan de Villanueva suunnitteli rakennuksen jo vuonna 1785 kuningas Kaarle III:n tilauksesta luonnontieteiden museoksi. Suunnitelmat viivästyivät sotien takia, ja lopulta kuningas Ferdinand VII päätti tehdä siitä taidemuseon. Prado avasi ovensa marraskuussa 1819. Museossa on maailman hienoimpia maalauksia: Velázquezin Las Meninas, Boschin Maallisten ilojen puutarha ja Goyan synkät niin kutsutut mustat maalaukset. Goya on museon eniten esillä oleva taiteilija. Kokoelmiin kuuluu nykyään noin 7 600 maalausta ja tuhansia piirustuksia ja veistoksia. Rakennusta laajennettiin maan alle 2007, ja vuonna 2023 museossa kävi yli 3,3 miljoonaa kävijää.
+AIEMPI KYSYMYS: Mitä keskiajalla uskottiin Petrovy kameny -kivien asukkaista?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Keskiajalla pelättiin, että [[gneissikivimuodostelma]] Petrovy kameny oli noitien asuinpaikka. Muodostelma sijaitsee lähellä [[Pradědin]] huippua, ja kivien erikoinen ulkonäkö ruokki aikoinaan tällaisia uskomuksia. Nykyään kivet ovat ennen kaikkea retkeilijöiden näkökohde. Hyvä että noidat on sentään jääny tarinoihin.
+KYSYMYS: Kerro lisää: Pradědin
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuinka korkea Praděd on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Praděd kohoaa 1 491 metrin korkeuteen, joten se on [[Hrubý Jeseníkin]] vuoriston korkein huippu ja Tšekin viidenneksi korkein vuori. Se on myös [[Määrin]] sekä Tšekin ja Ylä-Sleesian historiallisten alueiden korkein kohta. Vuorella riittää siis korkeutta, vaikka alppivuorten rinnalla se on vaatimaton. Ei paha kyyhkyltä muistaa luvut.
+KYSYMYS: Kerro lisää: Määrin
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Urheilu: Maalille vahingossa kuusivuotiaana] 1998 — Dominik Hašek vietiin isänsä kanssa viisivuotiaiden jääkiekkokokeisiin, mutta koska hän oli pitkä ja yhdeksänvuotiailta puuttui maalivahti, hänet pantiin heidän kanssaan jäälle. Kuusitoistavuotiaana hän oli nuorin ammattilaisliigassa pelannut jääkiekkoilija. Naganon olympialaisissa 1998 Hašek torjui Tšekin joukkueen olympiavoittoon, ja se on yhä maan jääkiekon ainoa olympiakulta. Hänen tyyliään sanottiin räpiköinniksi: hän heittäytyi jäähän ja torjui millä tahansa ruumiinosalla. Hänen torjuntaprosenttinsa on NHL:n kaikkien aikojen paras.
+AIEMPI KYSYMYS: Mitä Praděd-nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi Praděd tarkoittaa kirjaimellisesti isoisoisää. Vuoren korkeus, 1 491 metriä, tekee siitä [[Hrubý Jeseníkin]] suurimman huipun, joten nimi sopii hyvin sen asemaan vuoriston ikään kuin vanhimpana ja arvokkaimpana jäsenenä. Alueella puhuttiin ja puhutaan [[tšekin]] kielellä, ja nimi on tuttu sekä paikallisille että retkeilijöille. Isoisät ovat kyl aina asian ytimessä.
+KYSYMYS: Kerro lisää: tšekin
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+AIEMPI KYSYMYS: Mitä Pradědin huipulla on nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Nykyään Pradědin huipulla on 162 metriä korkea [[televisiolähetin]], joka hallitsee vuoriston maisemaa. Vuori on myös suosittu [[hiihtoalue]], jonne tulee talvisin laskettelijoita ja hiihtäjiä. Aiemmin huipulla oli kivinen näkötorni, mutta lähetin on sen jälkeen vallannut paikan. Ylhäältä päin molemmat näyttävät samalta, eli korkeilta.
+KYSYMYS: Kerro lisää: televisiolähetin
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Praděd (luonto · vuori)
+Tietoruudun teksti: Praděd on Hrubý Jeseníkin vuoriston huippu Tšekissä; 1 491 metrin korkeudessaan se on vuoriston korkein ja Tšekin viidenneksi korkein vuori sekä Määrin, Tšekin Sleesian ja Ylä-Sleesian historiallisten alueiden korkein huippu. Nimi tarkoittaa kirjaimellisesti isoisoisää. Ensimmäinen vuorella ollut rakennus oli 32 metriä korkea kivinen näkötorni, jonka sudeettisaksalaiset matkailijat rakensivat vuosina 1903–1912. Huipun lähellä oleva Petrovy kameny on gneissikivimuodostelma, jonka keskiajalla pelättiin olevan noitien asuinpaikka. Nykyään huipulla on 162 metriä korkea televisiolähetin, ja vuori on suosittu hiihtoalue.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kaupunkilehti / Granada: Aamulla hiihtoa, iltapäivällä merta] Granadan keskustasta on vajaat kolmekymmentä kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin seitsemänkymmentä Välimeren rannalle, joten saman päivän aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli kolmen kilometrin korkeuteen, ja vieressä kohoaa Mulhacén, 3 479 metriä, Iberian niemimaan korkein huippu. Lunta ei silti ole taattu: alppihiihdon MM-kisat oli määrä pitää täällä 1995, mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
+AIEMPI KYSYMYS: Mitä Pradědin huipulla on nykyään?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Nykyään Pradědin huipulla on 162 metriä korkea [[televisiolähetin]], joka hallitsee vuoriston maisemaa. Vuori on myös suosittu [[hiihtoalue]], jonne tulee talvisin laskettelijoita ja hiihtäjiä. Aiemmin huipulla oli kivinen näkötorni, mutta lähetin on sen jälkeen vallannut paikan. Ylhäältä päin molemmat näyttävät samalta, eli korkeilta.
+KYSYMYS: Kerro lisää: hiihtoalue
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+AIEMPI KYSYMYS: Miksi Hranicen syvänteen koko syvyyttä ei tiedetä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Syvänteen koko syvyyttä ei tiedetä, koska sen alaosa on tulvinut [[Hranice-järven]] veden alle eikä pohjaa ole voitu mitata. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, joten todellinen pohja on yhä tuntematon. Hranicen [[karstinen]] romahduskuoppa on siis edelleen salaisuus. Ei tuossa syvyydessä kyyhky kyl pärjäis.
+KYSYMYS: Kerro lisää: Hranice-järven
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+AIEMPI KYSYMYS: Miksi Hranicen syvänteen koko syvyyttä ei tiedetä?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä kysymys. Syvänteen koko syvyyttä ei tiedetä, koska sen alaosa on tulvinut [[Hranice-järven]] veden alle eikä pohjaa ole voitu mitata. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, joten todellinen pohja on yhä tuntematon. Hranicen [[karstinen]] romahduskuoppa on siis edelleen salaisuus. Ei tuossa syvyydessä kyyhky kyl pärjäis.
+KYSYMYS: Kerro lisää: karstinen
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuuba — maalehti / Ruoka: Lepakot, jotka päätyivät pullon kylkeen] 1862 — Katalonialainen viinikauppias Facundo Bacardí Massó muutti Santiago de Cubaan 1830. Rommi oli tuolloin halpaa ja karkeaa, joten hän eristi paikallisesta sokeriruo’osta oman hiivakannan, kehitti lähes kymmenessä vuodessa hiilisuodatuksen ja sekoitti kaksi tislettä valkotammessa — tuloksena maailman ensimmäinen kirkas ja kevytrunkoinen rommi. Veljekset ostivat tislaamon 4. helmikuuta 1862. Sen orsissa asui hedelmälepakoita, ja Facundon vaimo Amalia ehdotti lepakkoa merkiksi: lukutaidoton asiakas tunnisti kuvan.
+AIEMPI KYSYMYS: Mikä eläin yöpyy syvänteen kuivissa luolissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Syvänteen kuivissa luolissa yöpyvät [[lepakot]]. Luoliin pääsee nousemaan järven pinnan alapuolelta, 48 metrin syvyydestä, joten ne sijaitsevat veden yläpuolella ja ovat kuivia. Lepakoille tällainen suojainen paikka on sopiva yöpymispaikka. Muuten [[Hranicen syvänne]] on maailman syvin tulvinut luola. Siipiveljiä siis, mutta ihan eri liigaa.
+KYSYMYS: Kerro lisää: lepakot
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+AIEMPI KYSYMYS: Mikä eläin yöpyy syvänteen kuivissa luolissa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Syvänteen kuivissa luolissa yöpyvät [[lepakot]]. Luoliin pääsee nousemaan järven pinnan alapuolelta, 48 metrin syvyydestä, joten ne sijaitsevat veden yläpuolella ja ovat kuivia. Lepakoille tällainen suojainen paikka on sopiva yöpymispaikka. Muuten [[Hranicen syvänne]] on maailman syvin tulvinut luola. Siipiveljiä siis, mutta ihan eri liigaa.
+KYSYMYS: Kerro lisää: Hranicen syvänne
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+AIEMPI KYSYMYS: Kuinka syvä Hranicen syvänne on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla. Syvänne on [[karstinen]] romahduskuoppa [[Hranicen]] kaupungin lähellä, ja se on maailman syvin tulvinut luola. Koko syvyys on kuitenkin tuntematon, koska alaosa on veden peitossa. Mittaus on siis vasta alku. Tuo luku on kyl mahdoton kuvitella lentäjältäkin.
+KYSYMYS: Kerro lisää: Hranicen
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+AIEMPI KYSYMYS: Miten Hranicen syvänne on syntynyt?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Syvänne on [[karstinen]] [[romahduskuoppa]], ja vuonna 2020 tehdyn tieteellisen retkikunnan havaintojen perusteella arvellaan, että kuoppa on syntynyt ylös nousseen kuuman ja happamen veden vaikutuksesta. Alimmat osat ovat [[sedimentin]] täyttämiä. Arvio on siis edelleen vain arvio, eikä asiasta ole täyttä varmuutta. Tätä sain pohtia pitkään.
+KYSYMYS: Kerro lisää: romahduskuoppa
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+AIEMPI KYSYMYS: Miten Hranicen syvänne on syntynyt?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Syvänne on [[karstinen]] [[romahduskuoppa]], ja vuonna 2020 tehdyn tieteellisen retkikunnan havaintojen perusteella arvellaan, että kuoppa on syntynyt ylös nousseen kuuman ja happamen veden vaikutuksesta. Alimmat osat ovat [[sedimentin]] täyttämiä. Arvio on siis edelleen vain arvio, eikä asiasta ole täyttä varmuutta. Tätä sain pohtia pitkään.
+KYSYMYS: Kerro lisää: sedimentin
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hranicen syvänne (luonto · järvi)
+Tietoruudun teksti: Hranicen syvänne eli tšekiksi Hranická propast on maailman syvin tulvinut luola: se on karstinen romahduskuoppa Hranicen kaupungin lähellä. Suurin varmistettu syvyys on 519,5 metriä, josta 450 metriä on veden alla, mutta koko syvyys on tuntematon, koska syvänteen alaosa on tulvinut Hranice-järven veden alle. Vuonna 2020 tieteellinen retkikunta havaitsi, että alimmat osat ovat sedimentin täyttämiä, ja arveltiin, että kuoppa on syntynyt ylös noussen kuumasta happamasta vedestä. Järven pinnan alapuolella 48 metrin syvyydessä on mahdollista nousta kuiviin luoliin, joissa lepakot yöpyvät.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä on karstinen romahduskuoppa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Karstinen romahduskuoppa syntyy, kun vesi liuottaa maanalaisia kiviä, yleensä [[kalkkikiveä]], ja syntynyt ontelo romahtaa kasaan. Tällaisia kuoppia ja luolia esiintyy kalkkikivialueilla eri puolilla Eurooppaa. [[Hranicen syvänne]] on yksi tällainen romahduskuoppa, ja se on tulvinut veden alle. Maa voi siis olla jalkojen alla paljon ontompaa kuin luulisi. Kyyhky pysyy kyl mieluummin ilmassa.
+KYSYMYS: Kerro lisää: kalkkikiveä
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka kuningas määräsi lammen perustettavaksi vuonna 1366?
+AIEMPI VASTAUS (Livia):
+No jopas. Lammen perustamisen määräsi kuningas [[Kaarle IV]] vuonna 1366. Lampi oli alun perin 300 hehtaarin kokoinen, ja sen vanhempi nimi oli Velký rybník eli Suuri lammikko. Nykyisen nimensä se on saanut romanttisen runoilijan [[Karel Hynek Máchan]] mukaan. Ajatella, että kuningas määräsi lammen, eikä kukaan edes kysynyt kyyhkyltä.
+KYSYMYS: Kerro lisää: Kaarle IV
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+AIEMPI KYSYMYS: Kuka kuningas määräsi lammen perustettavaksi vuonna 1366?
+AIEMPI VASTAUS (Livia):
+No jopas. Lammen perustamisen määräsi kuningas [[Kaarle IV]] vuonna 1366. Lampi oli alun perin 300 hehtaarin kokoinen, ja sen vanhempi nimi oli Velký rybník eli Suuri lammikko. Nykyisen nimensä se on saanut romanttisen runoilijan [[Karel Hynek Máchan]] mukaan. Ajatella, että kuningas määräsi lammen, eikä kukaan edes kysynyt kyyhkyltä.
+KYSYMYS: Kerro lisää: Karel Hynek Máchan
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+AIEMPI KYSYMYS: Minkä runoilijan mukaan järvi on nimetty?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Järvi on nimetty romanttisen runoilijan [[Karel Hynek Máchan]] mukaan. Häntä viehätti ympäröivä maisema, ja hän sijoitti tunnetuimman runonsa [[Májin]] lähtökohdan sinne. Aiemmin lammen nimi oli Velký rybník eli Suuri lammikko. Runoilija sai siis nimen, kun lampi oli ollut jo satoja vuosia olemassa. Hieno kunnianosoitus, mutta ei kyl sama kuin oma pulla.
+KYSYMYS: Kerro lisää: Májin
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+AIEMPI KYSYMYS: Kuinka suuri Máchovo jezero on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Máchovo jezeron pinta-ala on 2,84 neliökilometriä, ja se on [[Libereczin]] alueen suurin lampi. Alun perin se oli 300 hehtaarin kokoinen. Koska se on keinotekoinen, sitä sanotaan lammeksi, mutta alueen suurimpana vesialueena sitä kutsutaan järveksi. Sijaitsee [[Doksyn]] kaupungissa. Pinta-alaa on paljon, kyl siinä kyyhkykin väsyy.
+KYSYMYS: Kerro lisää: Libereczin
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+AIEMPI KYSYMYS: Kuinka suuri Máchovo jezero on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Máchovo jezeron pinta-ala on 2,84 neliökilometriä, ja se on [[Libereczin]] alueen suurin lampi. Alun perin se oli 300 hehtaarin kokoinen. Koska se on keinotekoinen, sitä sanotaan lammeksi, mutta alueen suurimpana vesialueena sitä kutsutaan järveksi. Sijaitsee [[Doksyn]] kaupungissa. Pinta-alaa on paljon, kyl siinä kyyhkykin väsyy.
+KYSYMYS: Kerro lisää: Doksyn
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+AIEMPI KYSYMYS: Kenen suvun omistuksessa alue oli vuoteen 1920?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vuoteen 1920 asti alue kuului [[Waldsteinin]] suvulle. Lammen rannalla oli 1800-luvulla [[kylpyläkohde]], ja lammen perustamisen oli määrännyt kuningas [[Kaarle IV]] jo vuonna 1366. Sukujen omistukset ovat vaihtuneet vuosisatojen mittaan, ja alue on muuttunut vähitellen matkailukohteeksi. Aika monta omistajaa, ja kyyhkyllä ei ole yhtään.
+KYSYMYS: Kerro lisää: Waldsteinin
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Máchovo jezero (luonto · järvi)
+Tietoruudun teksti: Máchovo jezero on Doksyn kaupungissa Libereczin alueella oleva lampi, jonka pinta-ala on 2,84 neliökilometriä; se on alueen suurin lampi, ja siksi sitä kutsutaan järveksi keinotekoisesta alkuperästään huolimatta. Kuningas Kaarle IV määräsi vuonna 1366 suuren lammen perustettavaksi, ja se oli alun perin 300 hehtaarin kokoinen. Lammen vanhempi nimi oli Velký rybník eli Suuri lammikko, ja nykyisen nimensä se on saanut romanttisen runoilijan Karel Hynek Máchan mukaan, jota ympäröivä maisema viehätti ja joka sijoitti tunnetuimman runonsa Májin lähtökohdan sinne. 1800-luvulla lammen rannalla oli kylpyläkohde, ja vuoteen 1920 asti alue kuului Waldsteinin suvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Kenen suvun omistuksessa alue oli vuoteen 1920?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vuoteen 1920 asti alue kuului [[Waldsteinin]] suvulle. Lammen rannalla oli 1800-luvulla [[kylpyläkohde]], ja lammen perustamisen oli määrännyt kuningas [[Kaarle IV]] jo vuonna 1366. Sukujen omistukset ovat vaihtuneet vuosisatojen mittaan, ja alue on muuttunut vähitellen matkailukohteeksi. Aika monta omistajaa, ja kyyhkyllä ei ole yhtään.
+KYSYMYS: Kerro lisää: kylpyläkohde
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Musiikki: Kuuro mies sävelsi joen] Bedřich Smetana menetti kuulonsa kokonaan lokakuussa 1874. Alle kaksi kuukautta myöhemmin, 20. marraskuuta ja 8. joulukuuta välisenä aikana, hän sävelsi Vltavan — teoksen, joka seuraa jokea kahdesta pienestä lähteestä Prahaan asti. Matkalla kuuluu metsästystorvia, häätanssi ja kuutamo, kunnes joki jyrisee koskessa. Hän ei kuullut teostaan koskaan. Vuodesta 1952 Prahan kevät -festivaali on alkanut joka 12. toukokuuta juuri tällä musiikilla.
+- [Praha — kaupunkilehti / Praha: Golem nukkuu ullakolla] Prahan juutalaiskorttelin vanhinta synagogaa sanotaan Vanhaksiuudeksi. Se valmistui 1200-luvulla ja on yhä käytössä. Tarinan mukaan rabbi Löw muovasi 1500-luvulla Vltavan savesta Golemin, ihmisen kokoisen apurin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon synagogan ullakolle. Sinne ei tarinan mukaan saa nousta.
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mikä joki on padottu Lipnon tekojärveksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle [[padon]] ja [[vesivoimalan]] yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.
+KYSYMYS: Kerro lisää: Vltavan
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Historiallinen aukio] 1723 alkaen Tämä on se paikka, josta kaupunki alkoi. Vasili Tatištšev etsi vuonna 1721 Uralilta kohtaa, jossa olisi sekä malmia että metsää, ja valitsi Iset-joen rannan. Työ seisahtui, kun Berg-kollegio ei hyväksynyt hanketta, ja jatkui vasta 12. maaliskuuta 1723 Georg Wilhelm de Genninin johdolla. Järjestys oli tarkka: ensin padottiin joki, sitten rakennettiin ruukki, joka kävi padon voimalla. Vasarapajaa koeajettiin 18. marraskuuta 1723, ja siitä päivästä lasketaan kaupungin ikä. Ruukista kasvoi kokonainen tehdaskortteli padon molemmin puolin. Vuonna 1725 siellä alettiin lyödä kuparirahaa, ja myöhemmin alue tunnettiin mekaanisena tehtaana ja rahapajana. Sen muurit, portit ja osa halleista…
+- [Samarkand — kohdekartta / Kohdekartta: Hazrat Khizrin moskeija] 1850-luku Moskeija seisoo kummulla Shah-i-Zindaa vastapäätä, ja sen nimi tulee Khizristä, islamilaisen perinteen legendaarisesta profeetasta. Paikan tarina alkaa arabien valloituksesta: kerrotaan, että kun Qutayba ibn Muslimin joukot valtasivat Samarkandin vuonna 712, ne yrittivät hukuttaa kaupungin linnoituksen patoamalla Juy-i Arzizin kanavan, mutta suuri valkoinen lintu putosi taivaalta ja rikkoi padon. Tapauksen muistoksi rakennettiin moskeija Afrasiyabin eteläportille, sogdien arvostaman zarathustralaisen temppelin paikalle. Se moskeija tuhoutui mongolivalloituksessa 1220. Nykyinen rakennus on 1850-luvulta ja seisoo vanhoilla perustuksilla; mihrabin kirjoitus antaa vuosiluvuksi 1855. S…
+AIEMPI KYSYMYS: Mikä joki on padottu Lipnon tekojärveksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle [[padon]] ja [[vesivoimalan]] yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.
+KYSYMYS: Kerro lisää: padon
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+AIEMPI KYSYMYS: Mikä joki on padottu Lipnon tekojärveksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: joki on Vltava. Lipnon tekojärvi on rakennettu [[Vltavan]] varrelle [[padon]] ja [[vesivoimalan]] yhteyteen, ja se on Tšekin suurin vesialue. Pato valmistui vuonna 1960. Se sijaitsee Vltavan portaikon korkeimmalla portaalla, noin 726 metrin korkeudessa. Vltava on Tšekin tunnetuimpia jokia, ja Lipno on sen yläjuoksulla. Hyvin muistin tämän, vaikka vedestä en juuri perusta.
+KYSYMYS: Kerro lisää: vesivoimalan
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Kaarlensilta] 1357–1402 Kaarlensillan rakensi keisari Kaarle IV vuonna 1357 korvaamaan vanhan Judit-sillan, jonka tulva oli tuhonnut. Legendan mukaan rakennustyöt aloitettiin tarkalleen kello 5.31 aamulla 9. heinäkuuta 1357 — päivämäärä ja kellonaika muodostavat yhdessä palindromin, ja Kaarle IV uskoi tämän erikoisen lukusarjan tekevän sillasta vahvemman. Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. Vuosina 1683–1714 sillan kaiteille pystytettiin 30 barokkipatsasta pyhimyksistä — nykyään sillalla nähtävät patsaat ovat kuitenkin kopioita, sillä alkuperäiset siirrettiin talteen museoon vuodesta 1965 lähtien sään ja saasteiden vaurioittamina. Kaarlensilta oli Vltava-joen ainoa ylityspaikka aina…
+AIEMPI KYSYMYS: Miksi Lipnon voimala päätettiin rakentaa?
+AIEMPI VASTAUS (Livia):
+Hmm, selvä juttu. Voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Etelä-Böömin [[Vltava]] aiheutti toistuvia tulvia ja vahinkoja muun muassa [[Český Krumlovissa]]. Valmistelutyöt alkoivat vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato tuottaa sähköä, ja samalla se hillitsee tulvia. Tulvat ei kyyhkyä haittaa, mutta kaupunkilaisia haittasi.
+KYSYMYS: Kerro lisää: Vltava

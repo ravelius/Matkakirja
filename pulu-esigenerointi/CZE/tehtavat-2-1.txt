@@ -1,0 +1,1178 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+AIEMPI KYSYMYS: Miksi vuorella on kaksi nimeä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys tuo. Vuorella on kaksi nimeä, koska se seisoo Tšekin ja Puolan rajalla ja kumpikin kansa kutsuu sitä omalla kielellään: tšekiksi Sněžka, puolaksi Śnieżka. Molemmat nimet johtuvat slaavilaisista lunta tarkoittavista sanoista, joten ne kuvaavat samaa asiaa, vuoren pitkään valkoisena pysyvää huippua. Saksaksi vuori on [[Schneekoppe]], ja sekin tarkoittaa suunnilleen lumihuippua. Nimet ovat siis eri kieliasuja samasta ajatuksesta, ja ne kuuluvat [[Jättiläisvuorten]] korkeimmalle kohdalle. Kyl lumi kuuluu kaikilla kielillä.
+KYSYMYS: Kerro lisää: Schneekoppe
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi vuorella on kaksi nimeä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Hyvä kysymys tuo. Vuorella on kaksi nimeä, koska se seisoo Tšekin ja Puolan rajalla ja kumpikin kansa kutsuu sitä omalla kielellään: tšekiksi Sněžka, puolaksi Śnieżka. Molemmat nimet johtuvat slaavilaisista lunta tarkoittavista sanoista, joten ne kuvaavat samaa asiaa, vuoren pitkään valkoisena pysyvää huippua. Saksaksi vuori on [[Schneekoppe]], ja sekin tarkoittaa suunnilleen lumihuippua. Nimet ovat siis eri kieliasuja samasta ajatuksesta, ja ne kuuluvat [[Jättiläisvuorten]] korkeimmalle kohdalle. Kyl lumi kuuluu kaikilla kielillä.
+KYSYMYS: Kerro lisää: Jättiläisvuorten
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+AIEMPI KYSYMYS: Mitä huipulla on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Huipulla on [[Pyhän Laurentiuksen kappeli]], joka on lähteiden mukaan rakennettu 1600-luvun lopulla. Sen lisäksi siellä toimii [[sääasema]], jonka lautasmaiset rakennukset erottuvat kauas, sekä ravintola retkeilijöiden käyttöön. Rajalinja kulkee huipun yli, joten rakennukset sijaitsevat osin Tšekin ja osin Puolan puolella. Tšekin puolelta kulkee [[köysirata]] lähelle huippua, ja loppumatka taitetaan jalan.
+
+Rajaviivaa en koskaan nähnyt ylhäältä, vaikka katsoin tarkkaan. Silti huipulla seisoo samaan aikaan kahdessa maassa, ja se jäi mieleen.
+KYSYMYS: Kerro lisää: Pyhän Laurentiuksen kappeli
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+- [Denver — kaupunkilehti / Vuoret ja ohut ilma: Ohut ilma, kolmetuhatta tuntia aurinkoa] Denverin ilmasto on viileä puolikuiva: kosteus on yleisesti matala ja aurinkoa on noin 3 100 tuntia vuodessa. Korkeuden ja kuivuuden takia vuorokauden lämpötilavaihtelu on suuri läpi vuoden, ja sisämaan sijainti ylätasangolla tuo äkillisiä säänmuutoksia. Kaupungin virallinen sääasema on lentokentällä noin kolmenkymmenen kilometrin päässä keskustasta, ja siitä kiistellään: vuoden 2019 vertailussa lentokentän keskilämpötila oli 10,1 astetta ja keskustan 11,7 astetta.
+AIEMPI KYSYMYS: Mitä huipulla on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Huipulla on [[Pyhän Laurentiuksen kappeli]], joka on lähteiden mukaan rakennettu 1600-luvun lopulla. Sen lisäksi siellä toimii [[sääasema]], jonka lautasmaiset rakennukset erottuvat kauas, sekä ravintola retkeilijöiden käyttöön. Rajalinja kulkee huipun yli, joten rakennukset sijaitsevat osin Tšekin ja osin Puolan puolella. Tšekin puolelta kulkee [[köysirata]] lähelle huippua, ja loppumatka taitetaan jalan.
+
+Rajaviivaa en koskaan nähnyt ylhäältä, vaikka katsoin tarkkaan. Silti huipulla seisoo samaan aikaan kahdessa maassa, ja se jäi mieleen.
+KYSYMYS: Kerro lisää: sääasema
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Luonto: Köysirata rakennettiin jään reunaan, ja jää lähti] 1963 — Pasterze on Itävallan suurin jäätikkö, noin kahdeksan kilometriä pitkä. Vuonna 1963 näköalapaikalta rakennettiin köysirata alas juuri siihen kohtaan, jossa jään reuna silloin oli. Nyt ala-asemalta joutuu kävelemään noin kaksi kilometriä ennen kuin jäätikkö alkaa. Pinta-alasta on 1850-luvun jälkeen sulanut lähes puolet. Jään alta on paljastunut turvetta ja puuta: seitsemäntuhatta vuotta sitten samalla paikalla kasvoi sembramänty, ja karja kävi syömässä ruohoa.
+AIEMPI KYSYMYS: Mitä huipulla on nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Huipulla on [[Pyhän Laurentiuksen kappeli]], joka on lähteiden mukaan rakennettu 1600-luvun lopulla. Sen lisäksi siellä toimii [[sääasema]], jonka lautasmaiset rakennukset erottuvat kauas, sekä ravintola retkeilijöiden käyttöön. Rajalinja kulkee huipun yli, joten rakennukset sijaitsevat osin Tšekin ja osin Puolan puolella. Tšekin puolelta kulkee [[köysirata]] lähelle huippua, ja loppumatka taitetaan jalan.
+
+Rajaviivaa en koskaan nähnyt ylhäältä, vaikka katsoin tarkkaan. Silti huipulla seisoo samaan aikaan kahdessa maassa, ja se jäi mieleen.
+KYSYMYS: Kerro lisää: köysirata
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi: Puu, joka kasvaa pitkin maata] Iqaluit on puurajan pohjoispuolella, vaikka se on selvästi napapiirin eteläpuolella. Syy on meressä: kylmä Baffin Island Current pitää kesät niin viileinä, että puuraja kulkee Kanadan itäosassa yhtä etelässä kuin Pohjois-Labradorissa — talvet sen sijaan ovat suunnilleen samanlaisia kuin Yellowknifessa. Puita kaupungissa on silti muutama: etelään kääntyneitä tuotuja mustakuusia, joita lumikinos suojaa talvella. Pensaista tavallisin on arktinen paju, joka voi olla lähes kahdeksan metriä pitkä ja viisitoista senttiä korkea. Se kasvaa siihen suuntaan, johon kannattaa.
+AIEMPI KYSYMYS: Millainen sää huipulla yleensä on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Huipun sää on vuoristoisen korkeuden vuoksi ankara: tuulta on paljon, sumuisia päiviä on runsaasti ja lämpötila pysyy kesälläkin viileänä. Lumipeite voi viipyä huipulla pitkälle kevääseen, ja talvella myrskytuulet ovat tavallisia. Vuori on alle kahtatuhatta metriä korkea, mutta [[Jättiläisvuorten]] ilmasto on avoimuutensa takia selvästi ankarampi kuin korkeus antaisi olettaa, ja [[puuraja]] kulkee tavallista alempana. Villatakki mukaan, sen minä sanon.
+KYSYMYS: Kerro lisää: puuraja
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+AIEMPI KYSYMYS: Kuka on Krakonoš?
+AIEMPI VASTAUS (Livia):
+Mmm— hauska valinta. Krakonoš on Jättiläisvuorten kansantarujen vuorihenki ja vuoriston tarinoiden hallitsija. Saksankielisissä tarinoissa hänet tunnetaan nimellä [[Rübezahl]]. Perinteen mukaan hän ilmestyy vaeltajille eri hahmoissa, auttaa kunnollisia matkalaisia ja rankaisee ahneita ja ilkeitä. Hänen kerrotaan myös vaikuttavan säähän, ja siksi hänelle on helppo antaa syy vuoriston oikuille. Hahmo on yhä elävä osa [[Jättiläisvuorten]] kansanperinnettä. Ei paha seura, kunhan on hyvällä tuulella.
+KYSYMYS: Kerro lisää: Rübezahl
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+AIEMPI KYSYMYS: Mitä kasvillisuutta huipun lähellä on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Huipun lähellä kasvillisuus on matalaa, koska puuraja jää selvästi alemmas. Alueella kasvaa [[kääpiömäntyä]], heinikkoa, sammalia ja jäkälää, ja huippuseutua kutsutaan usein [[alpiiniseksi tundraksi]], mikä on harvinaista näin matalassa Keski-Euroopan vuoristossa. Kasvilajien joukossa kerrotaan olevan jääkauden jäänteitä. Suuri osa alueesta kuuluu [[Krkonošen kansallispuistoon]], jonka tarkoitus on suojella tätä erikoista luontoa. Pienet kasvit, isot tuulet.
+KYSYMYS: Kerro lisää: kääpiömäntyä
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Tundra ja vuorovesi] Kaupungin edessä nousee ja laskee joka päivä seitsemästä yhteentoista metriä vettä, ja takana alkaa tundra, jolla korkein pensas yltää nilkkaan. Sää tekee täällä sen, mitä kartta ei kerro.
+AIEMPI KYSYMYS: Mitä kasvillisuutta huipun lähellä on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Huipun lähellä kasvillisuus on matalaa, koska puuraja jää selvästi alemmas. Alueella kasvaa [[kääpiömäntyä]], heinikkoa, sammalia ja jäkälää, ja huippuseutua kutsutaan usein [[alpiiniseksi tundraksi]], mikä on harvinaista näin matalassa Keski-Euroopan vuoristossa. Kasvilajien joukossa kerrotaan olevan jääkauden jäänteitä. Suuri osa alueesta kuuluu [[Krkonošen kansallispuistoon]], jonka tarkoitus on suojella tätä erikoista luontoa. Pienet kasvit, isot tuulet.
+KYSYMYS: Kerro lisää: alpiiniseksi tundraksi
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sněžka (luonto · vuori)
+Tietoruudun teksti: Sněžka eli puolaksi Śnieżka on Tšekin ja Puolan rajalla ja Jättiläisvuorten Sleesian harjanteen hallitsevin kohta. Sen 1 603 metrin huippu on samalla Tšekin korkein piste, Ala-Sleesian voivodikunnan korkein kohta ja koko Sudeettien katto. Sama huippu on siis kahden maan korkein vuori omalla puolellaan rajaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+AIEMPI KYSYMYS: Mitä kasvillisuutta huipun lähellä on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Huipun lähellä kasvillisuus on matalaa, koska puuraja jää selvästi alemmas. Alueella kasvaa [[kääpiömäntyä]], heinikkoa, sammalia ja jäkälää, ja huippuseutua kutsutaan usein [[alpiiniseksi tundraksi]], mikä on harvinaista näin matalassa Keski-Euroopan vuoristossa. Kasvilajien joukossa kerrotaan olevan jääkauden jäänteitä. Suuri osa alueesta kuuluu [[Krkonošen kansallispuistoon]], jonka tarkoitus on suojella tätä erikoista luontoa. Pienet kasvit, isot tuulet.
+KYSYMYS: Kerro lisää: Krkonošen kansallispuistoon
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Missä Elben lähde tarkalleen on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Elben lähde on Jättiläisvuorten Tšekin puolella, [[Labská louka]] -nimisellä turvesoisella ylänköniityllä, joka sijaitsee lähellä [[Špindlerův Mlýnin]] kylää. Korkeutta lähteellä on noin 1 400 metriä. Lähde on kivillä kehystetty allas, ja sen ympärillä kerrotaan olevan Tšekin kaupunkien vaakunoita. Sieltä pieni puro alkaa kulkea alas rinnettä kohti Böömin tasankoa. Pieni se alku on, mut Hampuriin asti jaksaa.
+KYSYMYS: Kerro lisää: Labská louka
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Missä Elben lähde tarkalleen on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Elben lähde on Jättiläisvuorten Tšekin puolella, [[Labská louka]] -nimisellä turvesoisella ylänköniityllä, joka sijaitsee lähellä [[Špindlerův Mlýnin]] kylää. Korkeutta lähteellä on noin 1 400 metriä. Lähde on kivillä kehystetty allas, ja sen ympärillä kerrotaan olevan Tšekin kaupunkien vaakunoita. Sieltä pieni puro alkaa kulkea alas rinnettä kohti Böömin tasankoa. Pieni se alku on, mut Hampuriin asti jaksaa.
+KYSYMYS: Kerro lisää: Špindlerův Mlýnin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Miksi joella on kaksi nimeä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vanha juttu. Labe on tšekinkielinen ja Elbe saksankielinen nimi samalle joelle, joka virtaa [[Böömin]] halki ja jatkaa Saksaan. Kumpikin kansa on muokannut hyvin vanhan nimen oman kielensä äänteiden mukaiseksi. Roomalaiset kirjoittivat nimen muodossa [[Albis]], ja nimen uskotaan juontuvan kannasta, jonka merkitystä usein arvellaan valkoiseksi tai joeksi, mutta tutkijat eivät ole asiasta täysin yksimielisiä. Vanhat nimet pysyy, vähän niin kuin kyyhkysuvut.
+KYSYMYS: Kerro lisää: Böömin
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Miksi joella on kaksi nimeä?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vanha juttu. Labe on tšekinkielinen ja Elbe saksankielinen nimi samalle joelle, joka virtaa [[Böömin]] halki ja jatkaa Saksaan. Kumpikin kansa on muokannut hyvin vanhan nimen oman kielensä äänteiden mukaiseksi. Roomalaiset kirjoittivat nimen muodossa [[Albis]], ja nimen uskotaan juontuvan kannasta, jonka merkitystä usein arvellaan valkoiseksi tai joeksi, mutta tutkijat eivät ole asiasta täysin yksimielisiä. Vanhat nimet pysyy, vähän niin kuin kyyhkysuvut.
+KYSYMYS: Kerro lisää: Albis
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Mitkä suurkaupungit ovat Elben varrella?
+AIEMPI VASTAUS (Livia):
+Joo, katotaas. Tšekissä Elben varrella ovat muun muassa Hradec Králové, Pardubice ja Ústí nad Labem, jonka nimi tarkoittaa Elben suuta eli Elben rannalla olevaa Ústíä. Saksassa joen varrella sijaitsevat suuret kaupungit [[Dresden]], [[Magdeburg]] ja [[Hampuri]], joista viimeinen on lähellä jokisuuta Pohjanmerellä. Joki on siis kulkenut vuosisatojen ajan yhtenä Keski-Euroopan tärkeimmistä kauppa- ja kulkureiteistä. Hyvä joki, paljon laituripaikkoja.
+KYSYMYS: Kerro lisää: Dresden
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Mitkä suurkaupungit ovat Elben varrella?
+AIEMPI VASTAUS (Livia):
+Joo, katotaas. Tšekissä Elben varrella ovat muun muassa Hradec Králové, Pardubice ja Ústí nad Labem, jonka nimi tarkoittaa Elben suuta eli Elben rannalla olevaa Ústíä. Saksassa joen varrella sijaitsevat suuret kaupungit [[Dresden]], [[Magdeburg]] ja [[Hampuri]], joista viimeinen on lähellä jokisuuta Pohjanmerellä. Joki on siis kulkenut vuosisatojen ajan yhtenä Keski-Euroopan tärkeimmistä kauppa- ja kulkureiteistä. Hyvä joki, paljon laituripaikkoja.
+KYSYMYS: Kerro lisää: Magdeburg
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Mitkä suurkaupungit ovat Elben varrella?
+AIEMPI VASTAUS (Livia):
+Joo, katotaas. Tšekissä Elben varrella ovat muun muassa Hradec Králové, Pardubice ja Ústí nad Labem, jonka nimi tarkoittaa Elben suuta eli Elben rannalla olevaa Ústíä. Saksassa joen varrella sijaitsevat suuret kaupungit [[Dresden]], [[Magdeburg]] ja [[Hampuri]], joista viimeinen on lähellä jokisuuta Pohjanmerellä. Joki on siis kulkenut vuosisatojen ajan yhtenä Keski-Euroopan tärkeimmistä kauppa- ja kulkureiteistä. Hyvä joki, paljon laituripaikkoja.
+KYSYMYS: Kerro lisää: Hampuri
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Onko Elbe kulkukelpoinen laivoille?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Saksassa Elbe on merkittävä vesiväylä, ja sen varrella sijaitseva [[Hampurin satama]] on yksi Euroopan suurimmista satamista. Alajuoksulla [[vuorovesi]] vaikuttaa jokeen Hampurin tienoille asti, ja suurikin merialus pääsee jokea pitkin sisämaahan. Tšekin puolella laivaliikenne on vähäisempää ja keskittyy joen alaosaan, jossa jokea on säännelty padoilla ja sulkuportailla. Minä lennän silti mieluummin.
+KYSYMYS: Kerro lisää: Hampurin satama
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Broome — kaupunkilehti / Dinosaurukset ja vuorovesi] Broomen rannikko ei ole vain ihmisten satama: liuskekivessä uinuu 130 miljoonan vuoden takaisia dinosaurusten jälkiä, ja Roebuck Bayn vuorovesi loihtii joka kuukausi ilmiön, jota ei näe missään muualla maailmassa.
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+AIEMPI KYSYMYS: Onko Elbe kulkukelpoinen laivoille?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Saksassa Elbe on merkittävä vesiväylä, ja sen varrella sijaitseva [[Hampurin satama]] on yksi Euroopan suurimmista satamista. Alajuoksulla [[vuorovesi]] vaikuttaa jokeen Hampurin tienoille asti, ja suurikin merialus pääsee jokea pitkin sisämaahan. Tšekin puolella laivaliikenne on vähäisempää ja keskittyy joen alaosaan, jossa jokea on säännelty padoilla ja sulkuportailla. Minä lennän silti mieluummin.
+KYSYMYS: Kerro lisää: vuorovesi
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+AIEMPI KYSYMYS: Mitä Elben tulvassa elokuussa 2002 tapahtui?
+AIEMPI VASTAUS (Livia):
+Joo, sen muistan. Elokuussa 2002 Keski-Euroopassa satoi poikkeuksellisen runsaasti, ja Elbe sekä sen sivujoet tulvivat Tšekissä ja Saksassa. Tulva vaati ihmishenkiä ja aiheutti valtavia vahinkoja. [[Dresdenin]] vanhaa kaupunkia peitti vesi, ja useat historialliset rakennukset ja museot kärsivät pahoin; tulvaa kärsi myös [[Prahan]] seutu Vltavan varrella. Sen jälkeen tulvasuojausta on parannettu, mutta Elbe nousi suureksi uudelleen kesällä 2013. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Dresdenin
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Labe (luonto · joki)
+Tietoruudun teksti: Labe eli saksaksi Elbe on yksi Keski-Euroopan suurista joista. Se saa alkunsa Jättiläisvuorilta Pohjois-Tšekistä, virtaa suuren osan Böömiä ja jatkaa Saksaan, missä se laskee Pohjanmereen Cuxhavenissa 110 kilometriä Hampurista luoteeseen. Kokonaispituutta sillä on 1 094 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kaupunkilehti / Tiede: Prahan hevoset] Przewalskin hevonen on mongolialainen villihevonen, jolla on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei siis ole karannut kesyhevonen vaan oma lajinsa. Toisen maailmansodan jälkeen niitä oli jäljellä vain kahdessa eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla koko maailman eläintarhoissa oli enää kaksitoista yksilöä. Vuonna 1959 Prahan eläintarhalle uskottiin lajin kansainvälisen kantakirjan pito. Luonnosta laji hävisi kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.
+AIEMPI KYSYMYS: Mitä Elben tulvassa elokuussa 2002 tapahtui?
+AIEMPI VASTAUS (Livia):
+Joo, sen muistan. Elokuussa 2002 Keski-Euroopassa satoi poikkeuksellisen runsaasti, ja Elbe sekä sen sivujoet tulvivat Tšekissä ja Saksassa. Tulva vaati ihmishenkiä ja aiheutti valtavia vahinkoja. [[Dresdenin]] vanhaa kaupunkia peitti vesi, ja useat historialliset rakennukset ja museot kärsivät pahoin; tulvaa kärsi myös [[Prahan]] seutu Vltavan varrella. Sen jälkeen tulvasuojausta on parannettu, mutta Elbe nousi suureksi uudelleen kesällä 2013. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Prahan
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Prahan linna] 870 Prahan linnan rakentaminen alkoi jo vuonna 870, kun kukkulalle pystytettiin ensimmäinen kivikirkko. Siitä lähtien linnaa on laajennettu ja rakennettu uudelleen yli tuhannen vuoden ajan, ja nykyään se on Guinnessin ennätystenkirjan mukaan maailman suurin muinainen linnakokonaisuus: aluetta on noin 70 000 neliömetriä, ja se on lähes 570 metriä pitkä. Linnassa on asunut Böömin kuninkaita ja Pyhän saksalais-roomalaisen keisarikunnan hallitsijoita, ja nykyisin se on Tšekin tasavallan presidentin virka-asunto. Linnan sisällä, salaisessa kammiossa, säilytetään myös Böömin kruununjalokiviä, joita pääsee katsomaan vain harvoin. Linnan pihalla on koettu myös dramaattisia hetkiä: natsi-Saksan mieh…
+- [Praha — kaupunkilehti / Tiede: Prahan hevoset] Przewalskin hevonen on mongolialainen villihevonen, jolla on 33 kromosomiparia siinä missä kesyhevosella on 32 — se ei siis ole karannut kesyhevonen vaan oma lajinsa. Toisen maailmansodan jälkeen niitä oli jäljellä vain kahdessa eläintarhassa, Münchenissä ja Prahassa, ja 1950-luvun lopulla koko maailman eläintarhoissa oli enää kaksitoista yksilöä. Vuonna 1959 Prahan eläintarhalle uskottiin lajin kansainvälisen kantakirjan pito. Luonnosta laji hävisi kokonaan, mutta 1990-luvulta lähtien hevosia on palautettu Mongolian aroille — osa niistä Tšekin ilmavoimien koneilla.
+AIEMPI KYSYMYS: Miksi Vltavaa sanotaan kansallisjoeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän minulla on vastaus. Vltava on Tšekin pisin joki ja virtaa [[Prahan]] halki, mutta kansallisjoen asema perustuu ennen kaikkea musiikkiin. Säveltäjä [[Bedřich Smetanan]] sinfoninen runo Vltava kuvaa joen matkaa lähteiltä Prahaan, ja se kuuluu hänen kuusiosaiseen [[Má vlast]] -sarjaansa, jonka nimi tarkoittaa isänmaatani. Teos syntyi 1870-luvun puolivälissä aikana, jolloin tšekkiläinen kansallistunne oli voimakkaasti nousussa, ja Smetana oli sävellystyönsä aikoihin menettänyt kuulonsa. Sarja soi yhä Prahassa suurena kansallisena juhlana. Olen kuullut sen kerran kaiteelta, ja se jäi mieleen.
+KYSYMYS: Kerro lisää: Prahan
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Musiikki: Kuuro mies sävelsi joen] Bedřich Smetana menetti kuulonsa kokonaan lokakuussa 1874. Alle kaksi kuukautta myöhemmin, 20. marraskuuta ja 8. joulukuuta välisenä aikana, hän sävelsi Vltavan — teoksen, joka seuraa jokea kahdesta pienestä lähteestä Prahaan asti. Matkalla kuuluu metsästystorvia, häätanssi ja kuutamo, kunnes joki jyrisee koskessa. Hän ei kuullut teostaan koskaan. Vuodesta 1952 Prahan kevät -festivaali on alkanut joka 12. toukokuuta juuri tällä musiikilla.
+AIEMPI KYSYMYS: Miksi Vltavaa sanotaan kansallisjoeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän minulla on vastaus. Vltava on Tšekin pisin joki ja virtaa [[Prahan]] halki, mutta kansallisjoen asema perustuu ennen kaikkea musiikkiin. Säveltäjä [[Bedřich Smetanan]] sinfoninen runo Vltava kuvaa joen matkaa lähteiltä Prahaan, ja se kuuluu hänen kuusiosaiseen [[Má vlast]] -sarjaansa, jonka nimi tarkoittaa isänmaatani. Teos syntyi 1870-luvun puolivälissä aikana, jolloin tšekkiläinen kansallistunne oli voimakkaasti nousussa, ja Smetana oli sävellystyönsä aikoihin menettänyt kuulonsa. Sarja soi yhä Prahassa suurena kansallisena juhlana. Olen kuullut sen kerran kaiteelta, ja se jäi mieleen.
+KYSYMYS: Kerro lisää: Bedřich Smetanan
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Miksi Vltavaa sanotaan kansallisjoeksi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tähän minulla on vastaus. Vltava on Tšekin pisin joki ja virtaa [[Prahan]] halki, mutta kansallisjoen asema perustuu ennen kaikkea musiikkiin. Säveltäjä [[Bedřich Smetanan]] sinfoninen runo Vltava kuvaa joen matkaa lähteiltä Prahaan, ja se kuuluu hänen kuusiosaiseen [[Má vlast]] -sarjaansa, jonka nimi tarkoittaa isänmaatani. Teos syntyi 1870-luvun puolivälissä aikana, jolloin tšekkiläinen kansallistunne oli voimakkaasti nousussa, ja Smetana oli sävellystyönsä aikoihin menettänyt kuulonsa. Sarja soi yhä Prahassa suurena kansallisena juhlana. Olen kuullut sen kerran kaiteelta, ja se jäi mieleen.
+KYSYMYS: Kerro lisää: Má vlast
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Mikä oli Pyhän Johanneksen koski?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pyhän Johanneksen koski eli [[Svatojánské proudy]] oli Vltavan koskijakso Prahan eteläpuolella, joka oli lauttamiehille ja [[tukinuittajille]] vaarallinen ja tunnettu paikka. Nimen taustasta en ole varma. Koski jäi veden alle, kun Vltavalle rakennettiin 1900-luvulla vesivoimapatoja ja patoaltaita, ja siitä lähtien joen luonne tällä osuudella on ollut tyyni. Kosken minä kyllä ohittaisin lentäen.
+KYSYMYS: Kerro lisää: Svatojánské proudy
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Mikä oli Pyhän Johanneksen koski?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pyhän Johanneksen koski eli [[Svatojánské proudy]] oli Vltavan koskijakso Prahan eteläpuolella, joka oli lauttamiehille ja [[tukinuittajille]] vaarallinen ja tunnettu paikka. Nimen taustasta en ole varma. Koski jäi veden alle, kun Vltavalle rakennettiin 1900-luvulla vesivoimapatoja ja patoaltaita, ja siitä lähtien joen luonne tällä osuudella on ollut tyyni. Kosken minä kyllä ohittaisin lentäen.
+KYSYMYS: Kerro lisää: tukinuittajille
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Mihin jokeen Vltava laskee?
+AIEMPI VASTAUS (Livia):
+Ai se. Vltava laskee Elbeen eli [[Labeen]] [[Mělníkissä]], noin kolmenkymmenen kilometrin päässä [[Prahasta]] pohjoiseen. Yhtymäkohdassa Vltava tuo yleensä mukanaan enemmän vettä kuin Labe, mutta joki jatkaa siitä eteenpäin Labe-nimisenä kohti Saksaa ja Pohjanmerta. Hyvä paikka laskeutua, jos on pitkä lento takana.
+KYSYMYS: Kerro lisää: Labeen
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Mihin jokeen Vltava laskee?
+AIEMPI VASTAUS (Livia):
+Ai se. Vltava laskee Elbeen eli [[Labeen]] [[Mělníkissä]], noin kolmenkymmenen kilometrin päässä [[Prahasta]] pohjoiseen. Yhtymäkohdassa Vltava tuo yleensä mukanaan enemmän vettä kuin Labe, mutta joki jatkaa siitä eteenpäin Labe-nimisenä kohti Saksaa ja Pohjanmerta. Hyvä paikka laskeutua, jos on pitkä lento takana.
+KYSYMYS: Kerro lisää: Mělníkissä
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mihin jokeen Vltava laskee?
+AIEMPI VASTAUS (Livia):
+Ai se. Vltava laskee Elbeen eli [[Labeen]] [[Mělníkissä]], noin kolmenkymmenen kilometrin päässä [[Prahasta]] pohjoiseen. Yhtymäkohdassa Vltava tuo yleensä mukanaan enemmän vettä kuin Labe, mutta joki jatkaa siitä eteenpäin Labe-nimisenä kohti Saksaa ja Pohjanmerta. Hyvä paikka laskeutua, jos on pitkä lento takana.
+KYSYMYS: Kerro lisää: Prahasta
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka rakennutti Kaarlensillan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kaarlensillan rakennutti Böömin kuningas ja Pyhän saksalais-roomalaisen keisarikunnan keisari [[Kaarle IV]], ja sen perustuskivi laskettiin vuonna 1357. Silta korvasi aiemman [[Juditin sillan]], jonka tulva tuhosi 1342. Sillan suunnittelun yhteydessä mainitaan usein rakennusmestari [[Peter Parler]], ja silta valmistui noin 1400-luvun alussa. Sillan patsaat ovat pääosin barokkiajalta, 1600- ja 1700-luvuilta. Silta on kuulunut Prahan tunnetuimpiin nähtävyyksiin vuosisatojen ajan.
+
+Silta on kestänyt yli kuusisataa vuotta tulvia ja turisteja. Minä olen istunut sen patsailla useammin kuin kukaan viitsii muistaa, ja ihmiset ovat aina antaneet tilaa.
+KYSYMYS: Kerro lisää: Kaarle IV
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Kaarlensilta] 1357–1402 Kaarlensillan rakensi keisari Kaarle IV vuonna 1357 korvaamaan vanhan Judit-sillan, jonka tulva oli tuhonnut. Legendan mukaan rakennustyöt aloitettiin tarkalleen kello 5.31 aamulla 9. heinäkuuta 1357 — päivämäärä ja kellonaika muodostavat yhdessä palindromin, ja Kaarle IV uskoi tämän erikoisen lukusarjan tekevän sillasta vahvemman. Silta on 516 metriä pitkä ja lepää 16 kaariholvin päällä. Vuosina 1683–1714 sillan kaiteille pystytettiin 30 barokkipatsasta pyhimyksistä — nykyään sillalla nähtävät patsaat ovat kuitenkin kopioita, sillä alkuperäiset siirrettiin talteen museoon vuodesta 1965 lähtien sään ja saasteiden vaurioittamina. Kaarlensilta oli Vltava-joen ainoa ylityspaikka aina…
+AIEMPI KYSYMYS: Kuka rakennutti Kaarlensillan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kaarlensillan rakennutti Böömin kuningas ja Pyhän saksalais-roomalaisen keisarikunnan keisari [[Kaarle IV]], ja sen perustuskivi laskettiin vuonna 1357. Silta korvasi aiemman [[Juditin sillan]], jonka tulva tuhosi 1342. Sillan suunnittelun yhteydessä mainitaan usein rakennusmestari [[Peter Parler]], ja silta valmistui noin 1400-luvun alussa. Sillan patsaat ovat pääosin barokkiajalta, 1600- ja 1700-luvuilta. Silta on kuulunut Prahan tunnetuimpiin nähtävyyksiin vuosisatojen ajan.
+
+Silta on kestänyt yli kuusisataa vuotta tulvia ja turisteja. Minä olen istunut sen patsailla useammin kuin kukaan viitsii muistaa, ja ihmiset ovat aina antaneet tilaa.
+KYSYMYS: Kerro lisää: Juditin sillan
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Kuka rakennutti Kaarlensillan?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kaarlensillan rakennutti Böömin kuningas ja Pyhän saksalais-roomalaisen keisarikunnan keisari [[Kaarle IV]], ja sen perustuskivi laskettiin vuonna 1357. Silta korvasi aiemman [[Juditin sillan]], jonka tulva tuhosi 1342. Sillan suunnittelun yhteydessä mainitaan usein rakennusmestari [[Peter Parler]], ja silta valmistui noin 1400-luvun alussa. Sillan patsaat ovat pääosin barokkiajalta, 1600- ja 1700-luvuilta. Silta on kuulunut Prahan tunnetuimpiin nähtävyyksiin vuosisatojen ajan.
+
+Silta on kestänyt yli kuusisataa vuotta tulvia ja turisteja. Minä olen istunut sen patsailla useammin kuin kukaan viitsii muistaa, ja ihmiset ovat aina antaneet tilaa.
+KYSYMYS: Kerro lisää: Peter Parler
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Vltavan rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vltava saa alkunsa [[Šumavan]] vuoristosta Etelä-Böömistä ja virtaa siitä pohjoiseen. Sen varrella ovat muun muassa [[Český Krumlov]], [[České Budějovice]] ja [[Praha]], joista viimeinen on joen tunnetuin ja suurin kaupunki. Joki kulkee siis läpi koko Böömin kaupunkien ja kylien, ja laskee lopulta Labeen. Prahassa minä nokin kerran vánočkaa torilta, ja se oli hyvää.
+KYSYMYS: Kerro lisää: Šumavan
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Vltavan rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vltava saa alkunsa [[Šumavan]] vuoristosta Etelä-Böömistä ja virtaa siitä pohjoiseen. Sen varrella ovat muun muassa [[Český Krumlov]], [[České Budějovice]] ja [[Praha]], joista viimeinen on joen tunnetuin ja suurin kaupunki. Joki kulkee siis läpi koko Böömin kaupunkien ja kylien, ja laskee lopulta Labeen. Prahassa minä nokin kerran vánočkaa torilta, ja se oli hyvää.
+KYSYMYS: Kerro lisää: Český Krumlov
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Vltavan rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vltava saa alkunsa [[Šumavan]] vuoristosta Etelä-Böömistä ja virtaa siitä pohjoiseen. Sen varrella ovat muun muassa [[Český Krumlov]], [[České Budějovice]] ja [[Praha]], joista viimeinen on joen tunnetuin ja suurin kaupunki. Joki kulkee siis läpi koko Böömin kaupunkien ja kylien, ja laskee lopulta Labeen. Prahassa minä nokin kerran vánočkaa torilta, ja se oli hyvää.
+KYSYMYS: Kerro lisää: České Budějovice
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vltava (luonto · joki)
+Tietoruudun teksti: Vltavan nimi tarkoittaa villiä vettä. Sekä tšekin Vltava että saksan Moldau juontuvat vanhasta germaanisesta sanaparista wilt ahwa, ja 1100-luvun Böömin kronikassa joki esiintyy muodossa Wlitaua. Villiys on sittemmin kesytetty: 1930-luvulta alkaen Prahan eteläpuolelle on rakennettu yhdeksän vesivoimapatoa, ja niiden altaiden alle jäi muun muassa Pyhän Johanneksen koski. Kansallisjoeksi Vltavaa kutsutaan syystä: Bedřich Smetana hahmotteli samannimistä sinfonista runoaan vuosina 1872—1874, ja se on Má vlast -sarjan ainoa osa, joka ehti lähes valmiiksi ennen kuin säveltäjä kesällä 1874 menetti kuulonsa. Elokuussa 2002 tulva vei ihmishenkiä ja heikensi Kaarlensiltaa niin pahoin, että korjaukset kestivät vuosia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha] Sata tornia, kello joka näyttää auringon paikan taivaalla — ja savesta tehty jättiläinen ullakolla.
+AIEMPI KYSYMYS: Mitkä kaupungit ovat Vltavan rannalla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Vltava saa alkunsa [[Šumavan]] vuoristosta Etelä-Böömistä ja virtaa siitä pohjoiseen. Sen varrella ovat muun muassa [[Český Krumlov]], [[České Budějovice]] ja [[Praha]], joista viimeinen on joen tunnetuin ja suurin kaupunki. Joki kulkee siis läpi koko Böömin kaupunkien ja kylien, ja laskee lopulta Labeen. Prahassa minä nokin kerran vánočkaa torilta, ja se oli hyvää.
+KYSYMYS: Kerro lisää: Praha
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mistä kaupungin rikkaus tuli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kutná Horan rikkaus tuli [[hopeasta]]. Hopeakaivostoiminta alkoi 1200-luvun lopulla, ja siitä tuli Böömin kuningaskunnan merkittävä tulolähde, jonka ansiosta kaupunki kasvoi nopeasti yhdeksi maan rikkaimmista. Kaupungissa toimi kuninkaallinen rahapaja [[Vlašský dvůr]], josta hopearahat levisivät laajalle Keski-Eurooppaan. Rikkaus näkyi myös rakentamisessa: kaupunkiin nousi suuria kirkkoja, kuten [[Pyhän Barbaran kirkko]]. Hopea kiiltää kauas, sen huomaa ylhäältäkin.
+KYSYMYS: Kerro lisää: hopeasta
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+AIEMPI KYSYMYS: Mistä kaupungin rikkaus tuli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kutná Horan rikkaus tuli [[hopeasta]]. Hopeakaivostoiminta alkoi 1200-luvun lopulla, ja siitä tuli Böömin kuningaskunnan merkittävä tulolähde, jonka ansiosta kaupunki kasvoi nopeasti yhdeksi maan rikkaimmista. Kaupungissa toimi kuninkaallinen rahapaja [[Vlašský dvůr]], josta hopearahat levisivät laajalle Keski-Eurooppaan. Rikkaus näkyi myös rakentamisessa: kaupunkiin nousi suuria kirkkoja, kuten [[Pyhän Barbaran kirkko]]. Hopea kiiltää kauas, sen huomaa ylhäältäkin.
+KYSYMYS: Kerro lisää: Vlašský dvůr
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+AIEMPI KYSYMYS: Mistä kaupungin rikkaus tuli?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kutná Horan rikkaus tuli [[hopeasta]]. Hopeakaivostoiminta alkoi 1200-luvun lopulla, ja siitä tuli Böömin kuningaskunnan merkittävä tulolähde, jonka ansiosta kaupunki kasvoi nopeasti yhdeksi maan rikkaimmista. Kaupungissa toimi kuninkaallinen rahapaja [[Vlašský dvůr]], josta hopearahat levisivät laajalle Keski-Eurooppaan. Rikkaus näkyi myös rakentamisessa: kaupunkiin nousi suuria kirkkoja, kuten [[Pyhän Barbaran kirkko]]. Hopea kiiltää kauas, sen huomaa ylhäältäkin.
+KYSYMYS: Kerro lisää: Pyhän Barbaran kirkko
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+AIEMPI KYSYMYS: Mitä nimi Kutná Hora tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hora tarkoittaa tšekiksi vuorta, ja kaupunki on saanut nimensä samannimisestä vuoresta. Kutná-osan alkuperästä on useita selityksiä. Taru kertoo vuoren saaneen nimensä munkkien kaavuista, saksaksi [[Kutten]], mutta todennäköisemmin nimi juontuu keskiyläsaksan sanasta kutte eli kuoppa. Kolmas selitys liittyy tšekin sanoihin kutit, tehdä työtä, ja kutat, kaivaa malmia. Kaksi viimeistä viittaavat kaivostyöhön, mikä sopii [[hopeakaivosten]] kaupunkiin. Kolme selitystä, ja kaikki kuulostaa uskottavalta.
+KYSYMYS: Kerro lisää: Kutten
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Mitä nimi Kutná Hora tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hora tarkoittaa tšekiksi vuorta, ja kaupunki on saanut nimensä samannimisestä vuoresta. Kutná-osan alkuperästä on useita selityksiä. Taru kertoo vuoren saaneen nimensä munkkien kaavuista, saksaksi [[Kutten]], mutta todennäköisemmin nimi juontuu keskiyläsaksan sanasta kutte eli kuoppa. Kolmas selitys liittyy tšekin sanoihin kutit, tehdä työtä, ja kutat, kaivaa malmia. Kaksi viimeistä viittaavat kaivostyöhön, mikä sopii [[hopeakaivosten]] kaupunkiin. Kolme selitystä, ja kaikki kuulostaa uskottavalta.
+KYSYMYS: Kerro lisää: hopeakaivosten
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+AIEMPI KYSYMYS: Mikä on Sedlecin luukappeli?
+AIEMPI VASTAUS (Livia):
+Tuo on vakava paikka. Sedlecin luukappeli on hautausmaakirkon alla oleva luuhuone, jonne on koottu kymmenien tuhansien ihmisten luita. Luut siirrettiin sinne hautausmaalta keskiajan jälkeen, ja niiden määrää kasvattivat ruttovuodet ja sodat, mm. [[musta surma]] 1300-luvulla. Nykyisen asunsa kappeli sai vuonna 1870, kun puunveistäjä [[František Rint]] sai tehtäväkseen järjestää luut koristeiksi, kuten kynttilänjaloiksi ja kattokruunuksi. Paikka kuuluu Kutná Horan maailmanperintökohteeseen. Sinne on sopiva mennä hiljaa.
+KYSYMYS: Kerro lisää: musta surma
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+AIEMPI KYSYMYS: Mikä on Sedlecin luukappeli?
+AIEMPI VASTAUS (Livia):
+Tuo on vakava paikka. Sedlecin luukappeli on hautausmaakirkon alla oleva luuhuone, jonne on koottu kymmenien tuhansien ihmisten luita. Luut siirrettiin sinne hautausmaalta keskiajan jälkeen, ja niiden määrää kasvattivat ruttovuodet ja sodat, mm. [[musta surma]] 1300-luvulla. Nykyisen asunsa kappeli sai vuonna 1870, kun puunveistäjä [[František Rint]] sai tehtäväkseen järjestää luut koristeiksi, kuten kynttilänjaloiksi ja kattokruunuksi. Paikka kuuluu Kutná Horan maailmanperintökohteeseen. Sinne on sopiva mennä hiljaa.
+KYSYMYS: Kerro lisää: František Rint
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Miksi Pyhän Barbaran kirkko on kaivosmiesten kirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pyhä Barbara on kaivosmiesten suojeluspyhimys, ja siksi hopeakaivosten kaupungin asukkaat rakennuttivat hänelle omistetun kirkon. Rakentaminen alkoi 1300-luvun lopulla [[gotiikan]] tyylillä, ja lähteiden mukaan työtä johti aluksi [[Parlerin]] rakentajasuvun jäsen. Työ keskeytyi pitkiksi ajoiksi, ja kirkko saatiin valmiiksi vasta paljon myöhemmin. Kirkon seinämaalausten kerrotaan kuvaavan myös kaivostyötä ja rahanlyöntiä. Kaivosmiehillä oli hyvä suojelija ja hyvä rakennusrahasto.
+KYSYMYS: Kerro lisää: gotiikan
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+AIEMPI KYSYMYS: Miksi Pyhän Barbaran kirkko on kaivosmiesten kirkko?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pyhä Barbara on kaivosmiesten suojeluspyhimys, ja siksi hopeakaivosten kaupungin asukkaat rakennuttivat hänelle omistetun kirkon. Rakentaminen alkoi 1300-luvun lopulla [[gotiikan]] tyylillä, ja lähteiden mukaan työtä johti aluksi [[Parlerin]] rakentajasuvun jäsen. Työ keskeytyi pitkiksi ajoiksi, ja kirkko saatiin valmiiksi vasta paljon myöhemmin. Kirkon seinämaalausten kerrotaan kuvaavan myös kaivostyötä ja rahanlyöntiä. Kaivosmiehillä oli hyvä suojelija ja hyvä rakennusrahasto.
+KYSYMYS: Kerro lisää: Parlerin
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Kaksi tuntia, jolloin kaikki pysähtyi] 1989 — Marraskuun 17. päivänä 1989 mellakkapoliisi hajotti opiskelijoiden mielenosoituksen Prahassa. Kolmessa päivässä kadulle tuli jo puoli miljoonaa ihmistä, ja noiden päivien tunnukseksi tuli ääni: mielenosoittajat nostivat avaimensa ilmaan ja helisyttivät niitä. Ratkaisu tuli 27. marraskuuta, kun koko Tšekkoslovakiassa pidettiin kahden tunnin yleislakko. Seuraavana päivänä kommunistinen puolue ilmoitti luopuvansa yksinvallastaan. Vuoden viimeisinä päivinä presidentiksi valittiin näytelmäkirjailija Václav Havel, joka oli saman vuoden alussa istunut vankilassa.
+AIEMPI KYSYMYS: Mikä oli pražský groš?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pražský groš eli Prahan groši oli hopearaha, jonka kuningas [[Václav II]] otti käyttöön noin vuonna 1300 hyödyntääkseen Kutná Horan hopeaa. Kolikot lyötiin kaupungin kuninkaallisessa rahapajassa [[Vlašský dvůr]]issa. Nimi groš juontuu latinasta, [[denarius grossus]] eli paksu penni. Raha oli arvostettu ja levisi laajalle Keski-Eurooppaan, ja groši-nimi on säilynyt rahojen nimissä pitkään. Hopearahaa minä en ole koskaan kantanut, kirje on kevyempi.
+KYSYMYS: Kerro lisää: Václav II
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kutná Hora (historia)
+Tietoruudun teksti: Kutná Hora on kaupunki Keski-Böömissä, noin 52 kilometriä Prahasta itään, ja siellä asuu noin 22 000 ihmistä. Sen koko historia on sidottu hopeakaivoksiin: ne tekivät siitä rikkaan ja nopeasti kasvavan kaupungin.
+
+Nimi tulee samannimisestä vuoresta — hora tarkoittaa vuorta. Tarujen mukaan vuori sai nimensä munkkien kaavuista (saksaksi Kutten, tšekiksi kutny), mutta todennäköisemmin taustalla on keskiyläsaksan sana kutte, kuoppa. Nimi voi juontua myös tšekin sanoista kutit, tehdä työtä, tai kutat, kaivaa malmia.
+
+Kaupungin keskusta, Sedlecin luostari ja Sedlecin luukappeli otettiin maailmanperintöluetteloon 1995 arkkitehtuurinsa ja sen vaikutuksen takia, joka niillä oli muiden Keski-Euroopan kaupunkikeskustojen rakentamiseen. Vanha keskusta on lisäksi suojeltu kaupunkimuistomerkkialueena, Tšekin neljänneksi laajimpana.
+AIEMPI KYSYMYS: Mikä oli pražský groš?
+AIEMPI VASTAUS (Livia):
+Katotaas. Pražský groš eli Prahan groši oli hopearaha, jonka kuningas [[Václav II]] otti käyttöön noin vuonna 1300 hyödyntääkseen Kutná Horan hopeaa. Kolikot lyötiin kaupungin kuninkaallisessa rahapajassa [[Vlašský dvůr]]issa. Nimi groš juontuu latinasta, [[denarius grossus]] eli paksu penni. Raha oli arvostettu ja levisi laajalle Keski-Eurooppaan, ja groši-nimi on säilynyt rahojen nimissä pitkään. Hopearahaa minä en ole koskaan kantanut, kirje on kevyempi.
+KYSYMYS: Kerro lisää: denarius grossus
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Krumlov tulee keskiyläsaksan sanoista [[Krumme Aue]], jotka tarkoittavat vinoa niittyä. Nimi viittaa [[Vltavan]] mutkaan, jonka sisään kaupunki rakentui. Saksankielinen nimi on [[Krumau]], ja se on pysynyt käytössä vuosisatoja tšekinkielisen rinnalla. Vino niitty, hauska nimi kaupungille.
+KYSYMYS: Kerro lisää: Krumme Aue
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Musiikki: Kuuro mies sävelsi joen] Bedřich Smetana menetti kuulonsa kokonaan lokakuussa 1874. Alle kaksi kuukautta myöhemmin, 20. marraskuuta ja 8. joulukuuta välisenä aikana, hän sävelsi Vltavan — teoksen, joka seuraa jokea kahdesta pienestä lähteestä Prahaan asti. Matkalla kuuluu metsästystorvia, häätanssi ja kuutamo, kunnes joki jyrisee koskessa. Hän ei kuullut teostaan koskaan. Vuodesta 1952 Prahan kevät -festivaali on alkanut joka 12. toukokuuta juuri tällä musiikilla.
+- [Praha — kaupunkilehti / Praha: Golem nukkuu ullakolla] Prahan juutalaiskorttelin vanhinta synagogaa sanotaan Vanhaksiuudeksi. Se valmistui 1200-luvulla ja on yhä käytössä. Tarinan mukaan rabbi Löw muovasi 1500-luvulla Vltavan savesta Golemin, ihmisen kokoisen apurin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon synagogan ullakolle. Sinne ei tarinan mukaan saa nousta.
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Krumlov tulee keskiyläsaksan sanoista [[Krumme Aue]], jotka tarkoittavat vinoa niittyä. Nimi viittaa [[Vltavan]] mutkaan, jonka sisään kaupunki rakentui. Saksankielinen nimi on [[Krumau]], ja se on pysynyt käytössä vuosisatoja tšekinkielisen rinnalla. Vino niitty, hauska nimi kaupungille.
+KYSYMYS: Kerro lisää: Vltavan
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Krumlov tulee keskiyläsaksan sanoista [[Krumme Aue]], jotka tarkoittavat vinoa niittyä. Nimi viittaa [[Vltavan]] mutkaan, jonka sisään kaupunki rakentui. Saksankielinen nimi on [[Krumau]], ja se on pysynyt käytössä vuosisatoja tšekinkielisen rinnalla. Vino niitty, hauska nimi kaupungille.
+KYSYMYS: Kerro lisää: Krumau
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Miksi nimen eteen lisättiin sana Český?
+AIEMPI VASTAUS (Livia):
+Ai tota. Český tarkoittaa böömiläistä, ja sana lisättiin kaupungin nimeen 1400-luvulla, jotta se erottuisi Etelä-[[Määrissä]] sijaitsevasta [[Moravský Krumlovista]]. Moravský tarkoittaa vastaavasti määriläistä. Kaksi kaupunkia sijaitsee siis eri historiallisilla alueilla, ja lisämääreet kertovat, kumpaa Krumlovia tarkoitetaan. Kaksi Krumlovia, kaksi eri maakuntaa.
+KYSYMYS: Kerro lisää: Määrissä
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Miksi nimen eteen lisättiin sana Český?
+AIEMPI VASTAUS (Livia):
+Ai tota. Český tarkoittaa böömiläistä, ja sana lisättiin kaupungin nimeen 1400-luvulla, jotta se erottuisi Etelä-[[Määrissä]] sijaitsevasta [[Moravský Krumlovista]]. Moravský tarkoittaa vastaavasti määriläistä. Kaksi kaupunkia sijaitsee siis eri historiallisilla alueilla, ja lisämääreet kertovat, kumpaa Krumlovia tarkoitetaan. Kaksi Krumlovia, kaksi eri maakuntaa.
+KYSYMYS: Kerro lisää: Moravský Krumlovista
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Mitä Krumlovin linnassa on nähtävää?
+AIEMPI VASTAUS (Livia):
+No jopas. Krumlovin linna on lähteiden mukaan Tšekin toiseksi laajin linnakompleksi Prahan linnan jälkeen, ja siihen kuuluu useita pihoja ja korkea torni. Linna oli pitkään [[Rosenbergin]] suvun ja myöhemmin [[Schwarzenbergin]] suvun hallussa. Linnan [[barokkiteatteri]] on lähteiden mukaan yksi Euroopan parhaiten säilyneistä, ja perinteen mukaan linnan vallihaudassa pidetään karhuja. Linna on niin iso, että eksyisin sinne ilman siipiä.
+KYSYMYS: Kerro lisää: Rosenbergin
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Mitä Krumlovin linnassa on nähtävää?
+AIEMPI VASTAUS (Livia):
+No jopas. Krumlovin linna on lähteiden mukaan Tšekin toiseksi laajin linnakompleksi Prahan linnan jälkeen, ja siihen kuuluu useita pihoja ja korkea torni. Linna oli pitkään [[Rosenbergin]] suvun ja myöhemmin [[Schwarzenbergin]] suvun hallussa. Linnan [[barokkiteatteri]] on lähteiden mukaan yksi Euroopan parhaiten säilyneistä, ja perinteen mukaan linnan vallihaudassa pidetään karhuja. Linna on niin iso, että eksyisin sinne ilman siipiä.
+KYSYMYS: Kerro lisää: Schwarzenbergin
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Mitä Krumlovin linnassa on nähtävää?
+AIEMPI VASTAUS (Livia):
+No jopas. Krumlovin linna on lähteiden mukaan Tšekin toiseksi laajin linnakompleksi Prahan linnan jälkeen, ja siihen kuuluu useita pihoja ja korkea torni. Linna oli pitkään [[Rosenbergin]] suvun ja myöhemmin [[Schwarzenbergin]] suvun hallussa. Linnan [[barokkiteatteri]] on lähteiden mukaan yksi Euroopan parhaiten säilyneistä, ja perinteen mukaan linnan vallihaudassa pidetään karhuja. Linna on niin iso, että eksyisin sinne ilman siipiä.
+KYSYMYS: Kerro lisää: barokkiteatteri
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Milloin kaupunki sai maailmanperintöaseman?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Český Krumlovin historiallinen keskusta otettiin [[UNESCOn maailmanperintöluetteloon]] vuonna 1992. Syynä on poikkeuksellisen hyvin säilynyt keskiaikainen kaupunkirakenne sekä [[renessanssin]] ja barokin rakennukset linnan ympärillä. Hyvä että joku vahtii, kun minä vain kurkin.
+KYSYMYS: Kerro lisää: UNESCOn maailmanperintöluetteloon
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Milloin kaupunki sai maailmanperintöaseman?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Český Krumlovin historiallinen keskusta otettiin [[UNESCOn maailmanperintöluetteloon]] vuonna 1992. Syynä on poikkeuksellisen hyvin säilynyt keskiaikainen kaupunkirakenne sekä [[renessanssin]] ja barokin rakennukset linnan ympärillä. Hyvä että joku vahtii, kun minä vain kurkin.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Eurooppa: Punainen silta Euroopan kortteleihin] Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli 69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, Euroopan investointipankki ja parlamentin sihteeristö, jossa työskentelee yli 4 000 ihmistä.
+AIEMPI KYSYMYS: Miksi Egon Schiele liitetään Český Krumloviin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kerrottu paljon. Schielen äiti oli kotoisin Krumlovista, ja hän asui kaupungissa 1911 paikkeilla maalaten sen kattoja ja kujia. Paikalliset suhtautuivat hänen elämäntapaansa nuivasti, ja hän joutui lähtemään. Kaupunki on sittemmin ottanut hänet omakseen: täällä toimii [[Egon Schiele Art Centrum]], ja hänet muistetaan [[ekspressionismin]] merkittävänä taiteilijana. Taiteilijat ja kaupungit, harvoin heti ystäviä.
+KYSYMYS: Kerro lisää: Egon Schiele Art Centrum
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Český Krumlov (historia)
+Tietoruudun teksti: Český Krumlov on noin 13 000 asukkaan kaupunki Etelä-Böömissä, Vltavan varrella Böömin metsän kukkuloilla. Nimi Krumlov tulee keskiyläsaksan sanoista Krumme Aue, vino niitty: kaupunki on nimetty Vltavan mutkan mukaan. Määre Český eli böömiläinen lisättiin 1400-luvulla, jotta kaupunki erottuisi Moravský Krumlovista Etelä-Määrissä.
+
+Joen mutka on ollut asuttu kauan. Vanhimmat jäljet ovat vanhemmalta kivikaudelta, laajempi asutus pronssikaudelta, kelttiläiset asuinpaikat nuoremmalta rautakaudelta ja ensimmäinen slaavilainen asutus 500-luvulta. Varhaiskeskiajalla alueen läpi kulki kauppateitä Vltavaa myöten.
+
+Krumlovin linnan perusti hieman ennen vuotta 1250 aatelisen Vítkovci-suvun haara. Kaupunki mainitaan ensi kerran vuoden 1253 asiakirjassa nimellä Chrumbenowe. Se rakentui kahdessa vaiheessa: ensin linnan alle syntyi itsestään Latrán-niminen osa. Historiallinen keskusta linnoineen on su…
+AIEMPI KYSYMYS: Miksi Egon Schiele liitetään Český Krumloviin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on kerrottu paljon. Schielen äiti oli kotoisin Krumlovista, ja hän asui kaupungissa 1911 paikkeilla maalaten sen kattoja ja kujia. Paikalliset suhtautuivat hänen elämäntapaansa nuivasti, ja hän joutui lähtemään. Kaupunki on sittemmin ottanut hänet omakseen: täällä toimii [[Egon Schiele Art Centrum]], ja hänet muistetaan [[ekspressionismin]] merkittävänä taiteilijana. Taiteilijat ja kaupungit, harvoin heti ystäviä.
+KYSYMYS: Kerro lisää: ekspressionismin
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+AIEMPI KYSYMYS: Miksi kaksi kolmasosaa maailman oluesta on vaaleaa lageria?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kato, yksi panimo muutti koko juoman. [[Plzeňin]] panimossa pani vuonna 1842 ensimmäisen oluensa baijerilainen panimomestari [[Josef Groll]], ja yleisesti ensimmäisenä vaaleana lagerina pidetty kirkas, kullankeltainen ja raikas olut osui ihmisten makuun niin hyvin, että panimot muualla alkoivat jäljitellä sitä. Jäljittelijät käyttivät usein nimiä [[pils]], pilsner tai pilsener, jotka viittaavat kaupungin nimeen. Näin tyyli levisi vähitellen kaikkialle, ja nykyään yli kaksi kolmasosaa maailmassa valmistettavasta oluesta on vaaleaa lageria. Ja tän kaiken minä muistin ilman lunttausta.
+KYSYMYS: Kerro lisää: Plzeňin
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+AIEMPI KYSYMYS: Miksi kaksi kolmasosaa maailman oluesta on vaaleaa lageria?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kato, yksi panimo muutti koko juoman. [[Plzeňin]] panimossa pani vuonna 1842 ensimmäisen oluensa baijerilainen panimomestari [[Josef Groll]], ja yleisesti ensimmäisenä vaaleana lagerina pidetty kirkas, kullankeltainen ja raikas olut osui ihmisten makuun niin hyvin, että panimot muualla alkoivat jäljitellä sitä. Jäljittelijät käyttivät usein nimiä [[pils]], pilsner tai pilsener, jotka viittaavat kaupungin nimeen. Näin tyyli levisi vähitellen kaikkialle, ja nykyään yli kaksi kolmasosaa maailmassa valmistettavasta oluesta on vaaleaa lageria. Ja tän kaiken minä muistin ilman lunttausta.
+KYSYMYS: Kerro lisää: Josef Groll
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Kolme veljestä] 1400-luvun loppu–1746 Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt asuinrakennusten rivi. Vanhin veljeksistä on peräisin 1400-luvun lopulta, ja alun perin siellä oli vain yksi suuri huone sekä ullakko tavaroiden säilytystä varten. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, mutta sen koristeellinen kivinen ovensuu lisättiin vasta sata vuotta myöhemmin, vuonna 1746. Nuorin veljeksistä rakennettiin 1600-luvun lopulla, ja se on kapea, koristeellinen barokkitalo. Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne kunnostettiin 1950-luvulla. Vuonna 2020 Kol…
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+AIEMPI KYSYMYS: Miksi kaksi kolmasosaa maailman oluesta on vaaleaa lageria?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kato, yksi panimo muutti koko juoman. [[Plzeňin]] panimossa pani vuonna 1842 ensimmäisen oluensa baijerilainen panimomestari [[Josef Groll]], ja yleisesti ensimmäisenä vaaleana lagerina pidetty kirkas, kullankeltainen ja raikas olut osui ihmisten makuun niin hyvin, että panimot muualla alkoivat jäljitellä sitä. Jäljittelijät käyttivät usein nimiä [[pils]], pilsner tai pilsener, jotka viittaavat kaupungin nimeen. Näin tyyli levisi vähitellen kaikkialle, ja nykyään yli kaksi kolmasosaa maailmassa valmistettavasta oluesta on vaaleaa lageria. Ja tän kaiken minä muistin ilman lunttausta.
+KYSYMYS: Kerro lisää: pils
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+AIEMPI KYSYMYS: Mitä nimi Urquell tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Helppo nakki. Urquell on saksaa ja tarkoittaa alkulähdettä; tšekinkielinen vastine on Prazdroj, jolla on sama merkitys. Saksankielinen tavaramerkki Urquell ja tšekinkielinen [[Prazdroj]] luotiin vuonna 1898, kun alkuperäisyydestä oli tullut tärkeää kilpailevan panimon perustamisen jälkeen. Nimi [[Pilsner Urquell]] kääntyy suunnilleen muotoon "Plzeňin alkuperäinen lähde", ja se on pysynyt käytössä näihin päiviin asti. Lyhyt vastaus, harvinaista minulta.
+KYSYMYS: Kerro lisää: Prazdroj
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+AIEMPI KYSYMYS: Mitä nimi Urquell tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Helppo nakki. Urquell on saksaa ja tarkoittaa alkulähdettä; tšekinkielinen vastine on Prazdroj, jolla on sama merkitys. Saksankielinen tavaramerkki Urquell ja tšekinkielinen [[Prazdroj]] luotiin vuonna 1898, kun alkuperäisyydestä oli tullut tärkeää kilpailevan panimon perustamisen jälkeen. Nimi [[Pilsner Urquell]] kääntyy suunnilleen muotoon "Plzeňin alkuperäinen lähde", ja se on pysynyt käytössä näihin päiviin asti. Lyhyt vastaus, harvinaista minulta.
+KYSYMYS: Kerro lisää: Pilsner Urquell
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+AIEMPI KYSYMYS: Kuka Josef Groll oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, henkilökysymys. Josef Groll oli baijerilainen panimomestari, joka pani Plzeňissä vuonna 1842 ensimmäisen oluen panimossa, jonka kaupungin asukkaat olivat perustaneet. Hänet muistetaan siitä, että hänen valmistamansa vaalea [[lager]] tuli myöhemmin tunnetuksi nimellä [[Pilsner Urquell]] ja että sen tyyli levisi ympäri maailmaa. Panimomestarin työ perustui baijerilaiseen oluenvalmistuksen perinteeseen, jossa olut kypsytetään viileässä. Ja pulla jäi taas kysymättä.
+KYSYMYS: Kerro lisää: lager
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+AIEMPI KYSYMYS: Miksi oluella on sekä saksan- että tšekinkielinen nimi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Plzeňin panimon perustivat tšekin- ja saksankieliset asukkaat yhdessä, ja kaupungissa puhuttiin molempia kieliä. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj, ja molemmat tarkoittavat alkulähdettä. Tuolloin [[Böömi]] kuului [[Itävalta-Unkariin]], jossa kaksikielisyys oli monilla alueilla arkipäivää, joten kummallakin kielellä oli luonnollisesti oma nimensä. Ennen vanhaan se oli ihan tavallista.
+KYSYMYS: Kerro lisää: Böömi
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plzeňský Prazdroj (ruoka)
+Tietoruudun teksti: Plzeňský Prazdroj on panimo, joka avattiin Plzeňissä vuonna 1842. Se oli ensimmäinen panimo, joka valmisti vaaleaa lageria. Olut tuli niin suosituksi ja sitä jäljiteltiin niin paljon, että yli kaksi kolmasosaa nykyään maailmassa valmistettavasta oluesta on vaaleaa lageria — usein nimellä pils, pilsner tai pilsener juuri tämän panimon mukaan.
+
+Panimon perustivat 1839 Plzeňin tšekin- ja saksankieliset asukkaat yhdessä nimellä Bürgerbrauerei, porvarien panimo. Ensimmäisen oluen pani täällä vuonna 1842 baijerilainen panimomestari Josef Groll. Vuonna 1859 "Pilsner Bier" rekisteröitiin tuotenimeksi paikallisessa kauppakamarissa.
+
+Kun kilpailija perustettiin 1869, alkuperäisyydestä tuli tärkeää. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj: molemmat tarkoittavat alkulähdettä, ja nimi Pilsner Urquell kääntyy suunnilleen "Plzeňin alkuperäinen lähde".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+AIEMPI KYSYMYS: Miksi oluella on sekä saksan- että tšekinkielinen nimi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Plzeňin panimon perustivat tšekin- ja saksankieliset asukkaat yhdessä, ja kaupungissa puhuttiin molempia kieliä. Vuonna 1898 luotiin saksankielinen tavaramerkki Urquell ja tšekinkielinen Prazdroj, ja molemmat tarkoittavat alkulähdettä. Tuolloin [[Böömi]] kuului [[Itävalta-Unkariin]], jossa kaksikielisyys oli monilla alueilla arkipäivää, joten kummallakin kielellä oli luonnollisesti oma nimensä. Ennen vanhaan se oli ihan tavallista.
+KYSYMYS: Kerro lisää: Itävalta-Unkariin
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+- [Pietari — kohdekartta / Kohdekartta: Mendelejev 1869] Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvuudesta atom…
+AIEMPI KYSYMYS: Mitä Mendel tarkoitti sanoilla vallitseva ja väistyvä?
+AIEMPI VASTAUS (Livia):
+No niin, perinnöllisyyttä. Vallitseva ominaisuus tulee näkyviin, kun sen perii edes toiselta vanhemmalta, ja väistyvä ominaisuus näkyy vain, jos sen perii molemmilta. [[Mendel]] huomasi hernekokeissaan, että kun puhdas keltasiemeninen kasvi risteytettiin puhtaan vihersiemenisen kanssa, kaikki jälkeläiset olivat keltaisia, koska keltainen on vallitseva ominaisuus. Seuraavassa sukupolvessa vihreä palasi suhteessa yksi vihreä kolmea keltaista kohti, joten väistyvä ominaisuus ei ollut hävinnyt vaan piiloutunut. Näin [[Mendelin]] hernekokeet muuttivat vanhan risteytystiedon säännöiksi. Hernekeitto ei ole koskaan tuntunut yhtä tieteelliseltä.
+KYSYMYS: Kerro lisää: Mendel
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Mitä Mendel tarkoitti sanoilla vallitseva ja väistyvä?
+AIEMPI VASTAUS (Livia):
+No niin, perinnöllisyyttä. Vallitseva ominaisuus tulee näkyviin, kun sen perii edes toiselta vanhemmalta, ja väistyvä ominaisuus näkyy vain, jos sen perii molemmilta. [[Mendel]] huomasi hernekokeissaan, että kun puhdas keltasiemeninen kasvi risteytettiin puhtaan vihersiemenisen kanssa, kaikki jälkeläiset olivat keltaisia, koska keltainen on vallitseva ominaisuus. Seuraavassa sukupolvessa vihreä palasi suhteessa yksi vihreä kolmea keltaista kohti, joten väistyvä ominaisuus ei ollut hävinnyt vaan piiloutunut. Näin [[Mendelin]] hernekokeet muuttivat vanhan risteytystiedon säännöiksi. Hernekeitto ei ole koskaan tuntunut yhtä tieteelliseltä.
+KYSYMYS: Kerro lisää: Mendelin
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Miksi työn merkitys ymmärrettiin vasta vuosikymmeniä myöhemmin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tuo on surullinen mutta tuttu juttu. Mendel julkaisi tuloksensa vuonna 1866, mutta aikalaiset eivät ilmeisesti ymmärtäneet niiden merkitystä: perinnöllisyyden mekanismeja ei vielä tunnettu, ja matemaattinen lähestymistapa oli biologiassa tuolloin harvinainen. Työ löydettiin uudelleen noin vuonna 1900, kun [[Hugo de Vries]] ja [[Carl Correns]] päätyivät kokeissaan samanlaisiin tuloksiin. Tarkat yksityiskohdat siitä, kuka huomasi minkäkin ensin, ovat lähteissä osin epäselviä, enkä ole niistä varma. Hiljaa kulkeva tieto kulkee joskus vuosikymmeniä, sen minä tiedän.
+KYSYMYS: Kerro lisää: Hugo de Vries
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Miksi työn merkitys ymmärrettiin vasta vuosikymmeniä myöhemmin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tuo on surullinen mutta tuttu juttu. Mendel julkaisi tuloksensa vuonna 1866, mutta aikalaiset eivät ilmeisesti ymmärtäneet niiden merkitystä: perinnöllisyyden mekanismeja ei vielä tunnettu, ja matemaattinen lähestymistapa oli biologiassa tuolloin harvinainen. Työ löydettiin uudelleen noin vuonna 1900, kun [[Hugo de Vries]] ja [[Carl Correns]] päätyivät kokeissaan samanlaisiin tuloksiin. Tarkat yksityiskohdat siitä, kuka huomasi minkäkin ensin, ovat lähteissä osin epäselviä, enkä ole niistä varma. Hiljaa kulkeva tieto kulkee joskus vuosikymmeniä, sen minä tiedän.
+KYSYMYS: Kerro lisää: Carl Correns
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi Mendel valitsi koekasviksi herneen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Herne soveltuu [[perinnöllisyyden]] tutkimiseen erinomaisesti, koska sitä on helppo kasvattaa ja siitä saa nopeasti uusia sukupolvia. Sillä on myös selvästi erottuvia ominaisuuksia, kuten siemenen väri ja muoto, joita voi seurata sukupolvesta toiseen. Herne pölyttää tavallisesti itsensä, joten tutkija pystyy hallitsemaan, mitkä kasvit [[risteytyvät]] keskenään. Siksi [[Mendel]] sai selkeitä ja toistettavia tuloksia seitsemästä eri ominaisuudesta. Kyyhkynä minä olisin ollut vaikea koekohde.
+KYSYMYS: Kerro lisää: perinnöllisyyden
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Miksi Mendel valitsi koekasviksi herneen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Herne soveltuu [[perinnöllisyyden]] tutkimiseen erinomaisesti, koska sitä on helppo kasvattaa ja siitä saa nopeasti uusia sukupolvia. Sillä on myös selvästi erottuvia ominaisuuksia, kuten siemenen väri ja muoto, joita voi seurata sukupolvesta toiseen. Herne pölyttää tavallisesti itsensä, joten tutkija pystyy hallitsemaan, mitkä kasvit [[risteytyvät]] keskenään. Siksi [[Mendel]] sai selkeitä ja toistettavia tuloksia seitsemästä eri ominaisuudesta. Kyyhkynä minä olisin ollut vaikea koekohde.
+KYSYMYS: Kerro lisää: risteytyvät
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Mitä geenit ovat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, isoja sanoja. Geenit ovat perinnöllisen tiedon perusyksiköitä: ne ovat [[DNA-molekyylin]] jaksoja, jotka sisältävät ohjeita solun toiminnalle ja elimistön ominaisuuksille. Ne sijaitsevat [[kromosomeissa]], ja jokainen ihminen saa kopion jokaisesta geenistään kummaltakin vanhemmaltaan. Juuri tähän [[Mendelin]] kuvaamat näkymättömät "tekijät" lopulta johtivat, vaikka hän ei voinut tietää DNA:sta mitään. Pienestä vihkosta tuli iso asia, sanon minä.
+KYSYMYS: Kerro lisää: DNA-molekyylin
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Mitä geenit ovat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, isoja sanoja. Geenit ovat perinnöllisen tiedon perusyksiköitä: ne ovat [[DNA-molekyylin]] jaksoja, jotka sisältävät ohjeita solun toiminnalle ja elimistön ominaisuuksille. Ne sijaitsevat [[kromosomeissa]], ja jokainen ihminen saa kopion jokaisesta geenistään kummaltakin vanhemmaltaan. Juuri tähän [[Mendelin]] kuvaamat näkymättömät "tekijät" lopulta johtivat, vaikka hän ei voinut tietää DNA:sta mitään. Pienestä vihkosta tuli iso asia, sanon minä.
+KYSYMYS: Kerro lisää: kromosomeissa
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Omeryen hamam] 1571 Kylpylän paikalla seisoi 1300-luvulla augustinolaisten Pyhän Marian kirkko, kivestä muurattu ja katettu pienillä kupoleilla. Nikosian piirityksessä 1570 tykkituli hajotti siitä suurimman osan. Vuonna 1571 Lala Mustafa Pasha rakennutti paikalle moskeijan kalifi Omarin muistoksi, ja kylpylä pystytettiin saman kokonaisuuden osaksi. Kirkosta on yhä jäljellä pääsisäänkäynnin ovi, joka on 1300-luvulta Lusignanien ajalta, ja koillissivulla erottuu jäänteitä myöhemmästä renessanssivaiheesta. Hamamissa kuljetaan aina samassa järjestyksessä: riisuutumis- ja vilvoittelutila, lämmin välihuone, kuuma huone. Kuuman huoneen keskellä on lämmitetty marmoripöytä, jolla maataan, ja nurkissa pieniä kupoli…
+- [Iquitos — kohdekartta / Kohdekartta: Malecón Tarapacá] 1800-luvun loppu Malecón on viiden korttelin mittainen betonoitu ja mayolikalla päällystetty rantakatu Itaya-joen törmällä, kaupungin itäreunassa ja korttelin päässä Plaza de Armasista. Se rakennettiin 1800-luvun lopulla, kun kumi teki kaupungista rikkaan. Alkuaan se oli kokoontumispaikka: kaupunkiin saapuneet tutkimusmatkailijat tapasivat toisensa täällä ja katselivat ulkomaisia aluksia, jotka menivät alas Amazonille. Nimi tulee Tarapacán departementista, jonka Peru menetti Tyynenmeren sodassa — muistoksi kaatuneille, ei paikan omasta historiasta. Varrella on kumikauden julkisivuja, Orlando Casanova Hellerin pronssipatsas, vanha San Agustínin koulu ja augustinolaisten luostari, Amazonian k…
+AIEMPI KYSYMYS: Mikä ihmeen augustinolaismunkki on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Munkkeja, kas vaan. Augustinolaismunkki kuuluu [[augustinolaisten]] luostariveljeskuntaan, joka noudattaa kirkkoisä Augustinuksen laatimaa ohjesääntöä. Munkit asuvat yhteisönä, rukoilevat yhdessä ja jakavat omaisuutensa. Monissa augustinolaisluostareissa harjoitettiin myös opetusta ja tutkimusta, ja [[Mendel]] toimi apottina Pyhän Tuomaan luostarissa [[Brnossa]]. Luostarin muurien sisällä mahtui siis hernepeltoa ja tiedettä. Aika kekseliäs yhdistelmä.
+KYSYMYS: Kerro lisää: augustinolaisten
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mendelin luostari (tekniikka)
+Tietoruudun teksti: Gregor Johann Mendel (1822–1884) oli biologi, meteorologi, matemaatikko ja augustinolaismunkki, joka toimi Pyhän Tuomaan luostarin apottina Brnossa. Hänet tunnetaan jälkikäteen modernin perinnöllisyystieteen perustajana.
+
+Viljelijät olivat tienneet vuosituhansia, että risteyttämällä saa esiin haluttuja ominaisuuksia. Mendelin hernekokeet vuosina 1856–1863 tekivät siitä sääntöjä. Hän seurasi seitsemää herneen ominaisuutta: kasvin korkeutta, palon muotoa ja väriä, siemenen muotoa ja väriä sekä kukan paikkaa ja väriä. Kun puhdasta keltasiemenistä hernettä risteytettiin puhtaan vihersiemenisen kanssa, jälkeläiset olivat aina keltaisia — mutta seuraavassa sukupolvessa vihreät palasivat suhteessa yksi vihreä kolmea keltaista kohti. Ilmiön selittämiseksi Mendel otti käyttöön sanat vallitseva ja väistyvä.
+
+Hän julkaisi työnsä 1866 ja osoitti, että näkymättömät "tekijät" — nykyään geenit — määrä…
+AIEMPI KYSYMYS: Mikä ihmeen augustinolaismunkki on?
+AIEMPI VASTAUS (Livia):
+Ai tota. Munkkeja, kas vaan. Augustinolaismunkki kuuluu [[augustinolaisten]] luostariveljeskuntaan, joka noudattaa kirkkoisä Augustinuksen laatimaa ohjesääntöä. Munkit asuvat yhteisönä, rukoilevat yhdessä ja jakavat omaisuutensa. Monissa augustinolaisluostareissa harjoitettiin myös opetusta ja tutkimusta, ja [[Mendel]] toimi apottina Pyhän Tuomaan luostarissa [[Brnossa]]. Luostarin muurien sisällä mahtui siis hernepeltoa ja tiedettä. Aika kekseliäs yhdistelmä.
+KYSYMYS: Kerro lisää: Brnossa
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Litomyšl (sana)
+Tietoruudun teksti: Litomyšl on noin 10 000 asukkaan kaupunki Loučná-joen varrella Svitavyn ylängöllä Itä-Böömissä. Nimi tulee henkilönnimestä Litomysl ja tarkoittaa Litomyslin linnaa.
+
+Ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas Slavníkin kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän Böömistä Määriin johtavan kauppatien varrella. Kuningas Ottokar II korotti sen kaupungiksi 1259. Sen jälkeen kaupunkia omistivat vuorollaan useat aatelissuvut, ja Pernštejnit rakensivat linnan vuosina 1568–1581. Vuodesta 1344 vuoteen 1474 kaupunki oli myös oman hiippakuntansa istuin.
+
+Kaupungin kirjallinen maine syntyi toisaalta. Uskonpuhdistusta edeltänyt Veljesseurakunta on kirjattu Litomyšliin jo 1490, ja Kostkan suvun suojeluksessa se kukoisti — ja perusti kaupunkiin kirjapainon. Nykyään Litomyšl tunnetaan linnastaan, joka on maailmanperintökohde.
+AIEMPI KYSYMYS: Ketkä perustivat kaupunkiin kirjapainon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä liittyy uskontoon. Litomyšlin kirjapainon perusti Veljesseurakunta, uskonpuhdistusta edeltänyt kristillinen liike, joka oli kirjattu kaupunkiin jo vuonna 1490. Se kukoisti [[Kostkan]] suvun suojeluksessa, ja kirjapaino perustettiin juuri tässä ympäristössä. [[Veljesseurakunta]] tunnettiin Böömissä oppineisuudestaan ja kirjallisesta toiminnastaan, ja siksi Litomyšl sai maineen kirjallisuuden kaupunkina. Tarkkaa perustamisvuotta en ole varma. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Kostkan
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Litomyšl (sana)
+Tietoruudun teksti: Litomyšl on noin 10 000 asukkaan kaupunki Loučná-joen varrella Svitavyn ylängöllä Itä-Böömissä. Nimi tulee henkilönnimestä Litomysl ja tarkoittaa Litomyslin linnaa.
+
+Ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas Slavníkin kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän Böömistä Määriin johtavan kauppatien varrella. Kuningas Ottokar II korotti sen kaupungiksi 1259. Sen jälkeen kaupunkia omistivat vuorollaan useat aatelissuvut, ja Pernštejnit rakensivat linnan vuosina 1568–1581. Vuodesta 1344 vuoteen 1474 kaupunki oli myös oman hiippakuntansa istuin.
+
+Kaupungin kirjallinen maine syntyi toisaalta. Uskonpuhdistusta edeltänyt Veljesseurakunta on kirjattu Litomyšliin jo 1490, ja Kostkan suvun suojeluksessa se kukoisti — ja perusti kaupunkiin kirjapainon. Nykyään Litomyšl tunnetaan linnastaan, joka on maailmanperintökohde.
+AIEMPI KYSYMYS: Ketkä perustivat kaupunkiin kirjapainon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä liittyy uskontoon. Litomyšlin kirjapainon perusti Veljesseurakunta, uskonpuhdistusta edeltänyt kristillinen liike, joka oli kirjattu kaupunkiin jo vuonna 1490. Se kukoisti [[Kostkan]] suvun suojeluksessa, ja kirjapaino perustettiin juuri tässä ympäristössä. [[Veljesseurakunta]] tunnettiin Böömissä oppineisuudestaan ja kirjallisesta toiminnastaan, ja siksi Litomyšl sai maineen kirjallisuuden kaupunkina. Tarkkaa perustamisvuotta en ole varma. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Veljesseurakunta
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Litomyšl (sana)
+Tietoruudun teksti: Litomyšl on noin 10 000 asukkaan kaupunki Loučná-joen varrella Svitavyn ylängöllä Itä-Böömissä. Nimi tulee henkilönnimestä Litomysl ja tarkoittaa Litomyslin linnaa.
+
+Ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas Slavníkin kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän Böömistä Määriin johtavan kauppatien varrella. Kuningas Ottokar II korotti sen kaupungiksi 1259. Sen jälkeen kaupunkia omistivat vuorollaan useat aatelissuvut, ja Pernštejnit rakensivat linnan vuosina 1568–1581. Vuodesta 1344 vuoteen 1474 kaupunki oli myös oman hiippakuntansa istuin.
+
+Kaupungin kirjallinen maine syntyi toisaalta. Uskonpuhdistusta edeltänyt Veljesseurakunta on kirjattu Litomyšliin jo 1490, ja Kostkan suvun suojeluksessa se kukoisti — ja perusti kaupunkiin kirjapainon. Nykyään Litomyšl tunnetaan linnastaan, joka on maailmanperintökohde.
+AIEMPI KYSYMYS: Mistä kaupungin nimi tulee?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimiä minä rakastan. Litomyšlin nimi tulee henkilönnimestä Litomysl, ja se tarkoittaa Litomyslin linnaa. Kaupungin ensimmäinen maininta on vuodelta 981, kun Chronica Boemorum kertoo ruhtinas [[Slavníkin]] kuolemasta. Litomyšl oli alun perin Slavník-suvun linnoitettu asuinpaikka merkittävän kauppatien varrella, joka johti [[Böömistä]] Määriin. Kyllä sieltä paljon nimiä löytyy, kun jaksaa lukea. Kirjepostia lukenut tietää.
+KYSYMYS: Kerro lisää: Slavníkin

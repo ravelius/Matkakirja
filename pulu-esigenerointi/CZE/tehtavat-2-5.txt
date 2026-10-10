@@ -1,0 +1,1031 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+AIEMPI KYSYMYS: Kuinka monta sotilasta Preussilla ja Itävallalla oli taistelussa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Preussilla oli noin 285 000 sotilasta ja Itävallalla noin 240 000. Taistelu oli [[Itävallan ja Preussin sodan]] suurin, ja [[Leipzigin taistelun]] 1813 jälkeen se oli maailman suurin. Kyse oli siis valtavista armeijoista, jotka kohtasivat [[Böömissä]] heinäkuussa 1866. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Itävallan ja Preussin sodan
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+- [Bergen — kaupunkilehti / Musiikki: Kesäilta, joka lähetti pojan Leipzigiin] Kesällä 1858 perheystävä Ole Bull tunnisti viisitoistavuotiaan Edvard Griegin lahjakkuuden ja suostutteli tämän vanhemmat lähettämään pojan Leipzigin konservatorioon. Keväällä 1860 Grieg selvisi kahdesta hengenvaarallisesta keuhkosairaudesta, keuhkopussintulehduksesta ja tuberkuloosista. Hän debytoi konserttipianistina Ruotsin Karlshamnissa 1861 ja avioitui serkkunsa, sopraano Nina Hagerupin kanssa 11. kesäkuuta 1867. Seuraavana kesänä hän sävelsi a-mollipianokonserttonsa; sen kantaesitti Edmund Neupert Kööpenhaminassa 3. huhtikuuta 1869, eikä Grieg itse päässyt paikalle.
+AIEMPI KYSYMYS: Kuinka monta sotilasta Preussilla ja Itävallalla oli taistelussa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Preussilla oli noin 285 000 sotilasta ja Itävallalla noin 240 000. Taistelu oli [[Itävallan ja Preussin sodan]] suurin, ja [[Leipzigin taistelun]] 1813 jälkeen se oli maailman suurin. Kyse oli siis valtavista armeijoista, jotka kohtasivat [[Böömissä]] heinäkuussa 1866. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Leipzigin taistelun
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+AIEMPI KYSYMYS: Kuinka monta sotilasta Preussilla ja Itävallalla oli taistelussa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Preussilla oli noin 285 000 sotilasta ja Itävallalla noin 240 000. Taistelu oli [[Itävallan ja Preussin sodan]] suurin, ja [[Leipzigin taistelun]] 1813 jälkeen se oli maailman suurin. Kyse oli siis valtavista armeijoista, jotka kohtasivat [[Böömissä]] heinäkuussa 1866. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Böömissä
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+AIEMPI KYSYMYS: Mitkä tekijät vaikuttivat Preussin voittoon?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Preussin voittoon vaikuttivat parempi koulutus, [[Moltken]] taktiikka, Dreysen [[neulakivääri]] ja [[rautateiden]] hyödyntäminen joukkojen siirroissa. Rautatiet nopeuttivat joukkojen kokoamista, ja neulakivääri mahdollisti nopeamman tulituksen kuin vanhemmat aseet. Itävallan armeija joutui lopulta vetäytymään kello 15 mennessä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Moltken
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+AIEMPI KYSYMYS: Mitkä tekijät vaikuttivat Preussin voittoon?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Preussin voittoon vaikuttivat parempi koulutus, [[Moltken]] taktiikka, Dreysen [[neulakivääri]] ja [[rautateiden]] hyödyntäminen joukkojen siirroissa. Rautatiet nopeuttivat joukkojen kokoamista, ja neulakivääri mahdollisti nopeamman tulituksen kuin vanhemmat aseet. Itävallan armeija joutui lopulta vetäytymään kello 15 mennessä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: neulakivääri
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Karachi Cityn rautatieasema] 1861–1864 Scinde Railway -yhtiö perustettiin maaliskuussa 1855, ja työt Karachin pääteasemalla alkoivat huhtikuussa 1858. Rata vei Kotriin, 174 kilometrin päähän Induksen varteen, ja se avattiin yleisölle 13. toukokuuta 1861 — seudun ensimmäinen yleisölle avattu rautatie. Itse asemarakennus valmistui toukokuussa 1864. Asema oli aluksi nimeltään McLeod Station sen kadun mukaan, jonka eteläreunalle se rakennettiin; katu on nykyään I. I. Chundrigar Road. 1880-luvulla asemasta rakennettiin uusi versio hieman lännemmäksi, ja vuoteen 1905 mennessä brittihallinnon papereissa puhuttiin Karachi Cityn asemasta. Ratapihat järjestettiin uusiksi 1908. Nykyinen keltaisesta Gizrin hiekkakivestä muurattu a…
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Hiili nousee vuoren uumenista] Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.
+AIEMPI KYSYMYS: Mitkä tekijät vaikuttivat Preussin voittoon?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Preussin voittoon vaikuttivat parempi koulutus, [[Moltken]] taktiikka, Dreysen [[neulakivääri]] ja [[rautateiden]] hyödyntäminen joukkojen siirroissa. Rautatiet nopeuttivat joukkojen kokoamista, ja neulakivääri mahdollisti nopeamman tulituksen kuin vanhemmat aseet. Itävallan armeija joutui lopulta vetäytymään kello 15 mennessä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: rautateiden
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Musiikki: Kuuro mies sävelsi joen] Bedřich Smetana menetti kuulonsa kokonaan lokakuussa 1874. Alle kaksi kuukautta myöhemmin, 20. marraskuuta ja 8. joulukuuta välisenä aikana, hän sävelsi Vltavan — teoksen, joka seuraa jokea kahdesta pienestä lähteestä Prahaan asti. Matkalla kuuluu metsästystorvia, häätanssi ja kuutamo, kunnes joki jyrisee koskessa. Hän ei kuullut teostaan koskaan. Vuodesta 1952 Prahan kevät -festivaali on alkanut joka 12. toukokuuta juuri tällä musiikilla.
+- [Praha — kaupunkilehti / Praha: Golem nukkuu ullakolla] Prahan juutalaiskorttelin vanhinta synagogaa sanotaan Vanhaksiuudeksi. Se valmistui 1200-luvulla ja on yhä käytössä. Tarinan mukaan rabbi Löw muovasi 1500-luvulla Vltavan savesta Golemin, ihmisen kokoisen apurin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon synagogan ullakolle. Sinne ei tarinan mukaan saa nousta.
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Minkä jokien yhtymäkohdan yllä Zvíkovin linna seisoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linna seisoo jyrkällä niemekkeellä [[Vltavan]] ja [[Otavan]] yhtymäkohdan yllä, ja sinne on vaikea päästä. Zvíkov sijaitsee noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä, ja sitä kutsutaan usein Tšekin linnojen kuninkaaksi. Se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista.
+
+Jyrkkä niemeke kahden joen yllä on kyyhkyn mielestä loistava istumapaikka. Linnan asukkaat olivat varmaan eri mieltä siitä, kuinka helppoa sinne on kävellä.
+KYSYMYS: Kerro lisää: Vltavan
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+AIEMPI KYSYMYS: Minkä jokien yhtymäkohdan yllä Zvíkovin linna seisoo?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Linna seisoo jyrkällä niemekkeellä [[Vltavan]] ja [[Otavan]] yhtymäkohdan yllä, ja sinne on vaikea päästä. Zvíkov sijaitsee noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä, ja sitä kutsutaan usein Tšekin linnojen kuninkaaksi. Se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista.
+
+Jyrkkä niemeke kahden joen yllä on kyyhkyn mielestä loistava istumapaikka. Linnan asukkaat olivat varmaan eri mieltä siitä, kuinka helppoa sinne on kävellä.
+KYSYMYS: Kerro lisää: Otavan
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Kuinka kauan hussiitit piirittivät linnaa vuonna 1429?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hussiitit piirittivät linnaa neljä kuukautta vuonna 1429, mutta eivät saaneet sitä valtaansa. Linnan linnoitukset olivat niin vahvat, että se kesti piirityksen. Zvíkov sijaitsee [[Etelä-Böömissä]] jyrkällä niemekkeellä, ja myöhemmin, vuonna 1618, sen varuskunta torjui [[Habsburgien]] sotilaita. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Etelä-Böömissä
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Arki ja tavat: Nukketeatteri puolusti kieltä] 1800-luku — Habsburgien valtakunnassa virastojen ja koulujen kieli oli saksa, mutta kiertävät nukkenäyttelijät esittivät markkinoilla näytelmänsä tšekiksi — siksi marionetit muistetaan Tšekissä kielen puolustajina. Unesco otti tšekkiläisen ja slovakialaisen nukketeatterin ihmiskunnan kulttuuriperinnön luetteloon vuonna 2016. Prahassa on yhä teattereita, joissa lankojen varassa esitetään kokonainen ooppera.
+AIEMPI KYSYMYS: Kuinka kauan hussiitit piirittivät linnaa vuonna 1429?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hussiitit piirittivät linnaa neljä kuukautta vuonna 1429, mutta eivät saaneet sitä valtaansa. Linnan linnoitukset olivat niin vahvat, että se kesti piirityksen. Zvíkov sijaitsee [[Etelä-Böömissä]] jyrkällä niemekkeellä, ja myöhemmin, vuonna 1618, sen varuskunta torjui [[Habsburgien]] sotilaita. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+AIEMPI KYSYMYS: Milloin Zvíkovin linna mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Linna mainitaan ensimmäisen kerran vuonna 1234. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas [[Ottokar I:n]] määräyksestä. Se on yksi Tšekin maiden tärkeimmistä [[varhaisgoottilaisista]] linnoista. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Ottokar I:n
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+AIEMPI KYSYMYS: Milloin Zvíkovin linna mainitaan ensimmäisen kerran?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Linna mainitaan ensimmäisen kerran vuonna 1234. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas [[Ottokar I:n]] määräyksestä. Se on yksi Tšekin maiden tärkeimmistä [[varhaisgoottilaisista]] linnoista. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: varhaisgoottilaisista
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+AIEMPI KYSYMYS: Millä lempinimellä Zvíkovia kutsutaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Zvíkovia kutsutaan usein Tšekin linnojen kuninkaaksi. Linna sijaitsee [[Zvíkovské Podhradín]] kunnassa noin 15 kilometriä [[Písekistä]] pohjoiseen Etelä-Böömissä. Nimi viittaa linnan merkitykseen varhaisgoottilaisena linnana sekä sen vahvoihin linnoituksiin. Kuningas, vai kyyhkyn silmin vain hyvä istumapaikka.
+KYSYMYS: Kerro lisää: Zvíkovské Podhradín
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Zvíkovin linna (historia)
+Tietoruudun teksti: Zvíkov, jota kutsutaan usein Tšekin linnojen kuninkaaksi, on linna Zvíkovské Podhradín kunnassa noin 15 kilometriä Písekistä pohjoiseen Etelä-Böömissä. Se seisoo vaikeasti tavoitettavalla, jyrkällä niemekkeellä Vltavan ja Otavan yhtymäkohdan yllä, ja se on yksi Tšekin maiden tärkeimmistä varhaisgoottilaisista linnoista. Nykyinen linna rakennettiin 1200-luvun alkupuoliskolla luultavasti kuningas Ottokar I:n määräyksestä, ja se mainitaan ensimmäisen kerran vuonna 1234. Sen linnoitukset olivat niin vahvat, että hussiitit piirittivät sitä neljä kuukautta vuonna 1429 saamatta sitä valtaan, ja vuonna 1618 sen 140 miehen varuskunta torjui 4 000 Habsburgien sotilasta.
+AIEMPI KYSYMYS: Millä lempinimellä Zvíkovia kutsutaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Zvíkovia kutsutaan usein Tšekin linnojen kuninkaaksi. Linna sijaitsee [[Zvíkovské Podhradín]] kunnassa noin 15 kilometriä [[Písekistä]] pohjoiseen Etelä-Böömissä. Nimi viittaa linnan merkitykseen varhaisgoottilaisena linnana sekä sen vahvoihin linnoituksiin. Kuningas, vai kyyhkyn silmin vain hyvä istumapaikka.
+KYSYMYS: Kerro lisää: Písekistä
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Kuka keisari perusti Karlovy Varyn?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Karlovy Varyn perusti keisari [[Kaarle IV]] 1300-luvulla, ja kaupungin nimi tarkoittaa Kaarlen kylpyjä. Kaupunki sijaitsee Ohře- ja Teplá-jokien yhtymäkohdassa [[Länsi-Böömissä]], ja sen saksankielinen nimi on [[Karlsbad]]. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Kaarle IV
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+AIEMPI KYSYMYS: Kuka keisari perusti Karlovy Varyn?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Karlovy Varyn perusti keisari [[Kaarle IV]] 1300-luvulla, ja kaupungin nimi tarkoittaa Kaarlen kylpyjä. Kaupunki sijaitsee Ohře- ja Teplá-jokien yhtymäkohdassa [[Länsi-Böömissä]], ja sen saksankielinen nimi on [[Karlsbad]]. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Länsi-Böömissä
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+AIEMPI KYSYMYS: Kuka keisari perusti Karlovy Varyn?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Karlovy Varyn perusti keisari [[Kaarle IV]] 1300-luvulla, ja kaupungin nimi tarkoittaa Kaarlen kylpyjä. Kaupunki sijaitsee Ohře- ja Teplá-jokien yhtymäkohdassa [[Länsi-Böömissä]], ja sen saksankielinen nimi on [[Karlsbad]]. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Karlsbad
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Kaarle IV rakensi sillan ja yliopiston] Kaarle IV oli Böömin kuningas ja Saksalais-roomalaisen keisarikunnan keisari, ja hän teki Prahasta valtakuntansa pääkaupungin. Hänen aikanaan kaupunki sai yliopiston, kokonaan uuden kaupunginosan ja kivisillan Vltavan yli. Silta aloitettiin vuonna 1357 hetkellä, jonka numerot luetaan yhtä lailla eteen- ja taaksepäin: 1-3-5-7-9-7-5-3-1. Se kantaa yhä, ja sitä sanotaan Kaarlensillaksi.
+AIEMPI KYSYMYS: Mitä kaupungin nimi Karlovy Vary tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Karlovy Vary tarkoittaa Kaarlen kylpyjä, ja se viittaa kaupungin perustajaan, keisari [[Kaarle IV:ään]]. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Saksaksi kaupunki tunnetaan nimellä [[Karlsbad]]. Hyvä nimi, ja minä muistan sen kyl.
+KYSYMYS: Kerro lisää: Kaarle IV:ään
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+AIEMPI KYSYMYS: Milloin tsaari Pietari Suuri vieraili Karlovy Varyssa?
+AIEMPI VASTAUS (Livia):
+No niin. Tsaari Pietari Suuri vieraili Karlovy Varyssa vuonna 1711. Kaupunki oli tuolloin jo tunnettu kylpyläpaikka, ja myöhemmin 1800-luvulla siitä kasvoi suosittu kohde Euroopan [[aristokratialle]]. Nykyään kaupunki on noin 49 000 asukkaan [[kylpyläkaupunki]] Länsi-Böömissä.
+
+Tsaarit ja kreivit kuuluivat kylpylävieraisiin, mutta minä olisin kyllä mieluummin ollut ensimmäisenä paikalla, kun torilla jaettiin leivonnaisia.
+KYSYMYS: Kerro lisää: aristokratialle
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Roomalainen kylpylä] Kylpylän lattiat ovat poissa, mutta niiden kannattimet ovat tallella: nurmella seisoo satoja tiilipinoja tasaisissa riveissä. Ne ovat hypokaustin pilareita. Pinojen päälle ladottiin tiililaatta, sen päälle betonikerros ja vasta ylimmäksi huoneen lattia, joten lattian ja maan väliin jäi yhtenäinen ontelo. Uunista tuleva kuuma ilma ja savu kiersivät pilareiden välissä ja nousivat seinien sisään muurattuja tiiliputkia pitkin katolle, joten lämpöä tuli sekä lattiasta että seinistä. Kylpylä rakennettiin 200-luvulla keisari Caracallan (hallitsi 198–217) aikana ja omistettiin lääketieteen jumalalle Asklepiokselle. Kolikkolöydöt ajoittivat rakentamisen ja osoittivat noin viidensadan vuoden käytön. …
+- [Sansibar — kohdekartta / Kohdekartta: Hamamnin kylpylä] 1870–1888 Sulttaani Barghash bin Said rakennutti kaupunkiin yleisen kylpylän vuosina 1870–1888. Se toimi kylpylänä vuoteen 1920 asti. Persialaiseksi sitä kutsutaan siksi, että rakentaminen tilattiin shiraziarkkitehdeilta. Sana hamamni tarkoittaa kylpyjen paikkaa, ja siitä on tullut myös koko korttelin nimi. Sisällä oli monimutkainen tilasarja: kuumia ja kylmiä altaita, käymälöitä, parranajotiloja ja ravintola. Kuuma vesi tuotiin maanalaisia akvedukteja pitkin. Sisäänpääsy oli maksullinen, joten säännöllisesti kylpylää käyttivät vain varakkaat sansibarilaiset. Kylpylä oli avoinna sekä miehille että naisille, mutta eri aikoina. Kylpylä ei ole enää toiminnassa, mutta se on avoinna kävijöille j…
+AIEMPI KYSYMYS: Milloin tsaari Pietari Suuri vieraili Karlovy Varyssa?
+AIEMPI VASTAUS (Livia):
+No niin. Tsaari Pietari Suuri vieraili Karlovy Varyssa vuonna 1711. Kaupunki oli tuolloin jo tunnettu kylpyläpaikka, ja myöhemmin 1800-luvulla siitä kasvoi suosittu kohde Euroopan [[aristokratialle]]. Nykyään kaupunki on noin 49 000 asukkaan [[kylpyläkaupunki]] Länsi-Böömissä.
+
+Tsaarit ja kreivit kuuluivat kylpylävieraisiin, mutta minä olisin kyllä mieluummin ollut ensimmäisenä paikalla, kun torilla jaettiin leivonnaisia.
+KYSYMYS: Kerro lisää: kylpyläkaupunki
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mikä legenda kertoo Karlovy Varyn kuuman lähteen löytymisestä?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Legendan mukaan keisari [[Kaarle IV]] oli metsästysretkellä, ja hänen seurueensa löysi kuuman lähteen sattumalta. Keisari paransi lähteen vedellä loukkaantuneen jalkansa, ja kaupunki sai nimensä hänen mukaansa. Karlovy Vary on [[kylpyläkaupunki]] [[Ohře-joen]] ja Teplá-joen yhtymäkohdassa Länsi-Böömissä. Tarina on legenda, joten sen todenperäisyydestä ei ole varmaa tietoa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Ohře-joen
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovy Vary (kulttuuri)
+Tietoruudun teksti: Karlovy Vary, saksaksi Karlsbad, on noin 49 000 asukkaan kylpyläkaupunki Ohře- ja Teplá-jokien yhtymäkohdassa Länsi-Böömissä. Sen perusti Kaarle IV 1300-luvulla, ja nimi tarkoittaa Kaarlen kylpyjä. Legendan mukaan keisarin metsästysseurue löysi kuuman lähteen sattumalta, ja lähteen vedellä hän paransi loukkaantuneen jalkansa. Kaupunki kasvoi kylpyläksi 1800-luvulla ja oli suosittu kohde Euroopan aristokratialle; tsaari Pietari Suuri vieraili siellä vuonna 1711. Nykyään siellä on yli 80 lähdettä, joista vain 16 on juotavia, ja vuonna 2021 kaupunki liitettiin Unescon maailmanperintökohteeseen Euroopan suuret kylpyläkaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuinka moni Karlovy Varyn lähteistä on juotavia?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Karlovy Varyssa on yli 80 lähdettä, joista vain 16 on juotavia. Vuonna 2021 kaupunki liitettiin [[Unescon maailmanperintökohteeseen]] Euroopan suuret kylpyläkaupungit. Kaupunki on perinteinen [[kylpyläkaupunki]], jossa lähteiden vettä on juotu ja käytetty kylpyihin. Kuusitoista juotavaa lähdettä ja yhtään pullaa ei näy.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohteeseen
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Kuka lääkäri osoitti Mariánské Lázněn lähteiden parantavat ominaisuudet?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lääkäri oli Josef Nehr, [[Teplán luostarin]] lääkäri, joka osoitti lähteiden parantavat ominaisuudet vuosina 1779–1820. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta Nehrin työn jälkeen. Kylpyläksi paikka tuli vuonna 1818 ja kaupungiksi 1868, ja kaupungin [[kulta-aika]] ajoittuu 1800-luvun jälkipuoliskolle. [[Mariánské Lázně]] on siis kylpyläkaupunki, jonka maine rakentui lähteiden varaan. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Teplán luostarin
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Marokko — maalehti / Historia: Kultainen sulttaani ja retki Nigerille] 1590–1591 — Taistelun voittajaksi jäi Ahmad al-Mansur, jota kutsuttiin nimellä al-Dhahabī, kultainen. Lunnasrahoilla hän rakensi Marrakechiin El Badin palatsin, jonka työ alkoi jo joulukuussa 1578 ja kesti viisitoista vuotta. Kultaa hän halusi lisää, ja se oli Saharan takana: 16. lokakuuta 1590 lähti aavikon yli neljäntuhannen miehen armeija, jota johti espanjalaissyntyinen Judar Pasha. Tondibin taistelussa songhailaisia oli nelinkymmentätuhatta, mutta heillä ei ollut ruutiaseita. Marokkolaiset ryöstivät Timbuktun, Djennén ja pääkaupunki Gaon — ja huomasivat, ettei Saharan takaista valtakuntaa voi hallita. Kaupungit menetettiin pian vuoden 1620 jälkeen.
+AIEMPI KYSYMYS: Kuka lääkäri osoitti Mariánské Lázněn lähteiden parantavat ominaisuudet?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lääkäri oli Josef Nehr, [[Teplán luostarin]] lääkäri, joka osoitti lähteiden parantavat ominaisuudet vuosina 1779–1820. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta Nehrin työn jälkeen. Kylpyläksi paikka tuli vuonna 1818 ja kaupungiksi 1868, ja kaupungin [[kulta-aika]] ajoittuu 1800-luvun jälkipuoliskolle. [[Mariánské Lázně]] on siis kylpyläkaupunki, jonka maine rakentui lähteiden varaan. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: kulta-aika
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Kuka lääkäri osoitti Mariánské Lázněn lähteiden parantavat ominaisuudet?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lääkäri oli Josef Nehr, [[Teplán luostarin]] lääkäri, joka osoitti lähteiden parantavat ominaisuudet vuosina 1779–1820. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta Nehrin työn jälkeen. Kylpyläksi paikka tuli vuonna 1818 ja kaupungiksi 1868, ja kaupungin [[kulta-aika]] ajoittuu 1800-luvun jälkipuoliskolle. [[Mariánské Lázně]] on siis kylpyläkaupunki, jonka maine rakentui lähteiden varaan. Ei paha muisti kyyhkyltä.
+KYSYMYS: Kerro lisää: Mariánské Lázně
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Minkä runon Goethe nimesi kaupungin mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on helppo. Johann Wolfgang von Goethe nimesi runonsa [[Marienbadin elegia]] kaupungin saksankielisen nimen mukaan, ja runo on vuodelta 1823. Marienbad on tšekiksi Mariánské Lázně, ja kaupunki sijaitsee [[Karlovy Varyn]] alueella Länsi-Böömissä. Runo liittää kylpyläkaupungin [[saksalaiseen kirjallisuuteen]] ja tekee siitä tunnetun myös sellaisille, joita lähteet eivät kiinnosta. Goethe ainakin osasi valita kylpylänsä.
+KYSYMYS: Kerro lisää: Marienbadin elegia
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Minkä runon Goethe nimesi kaupungin mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on helppo. Johann Wolfgang von Goethe nimesi runonsa [[Marienbadin elegia]] kaupungin saksankielisen nimen mukaan, ja runo on vuodelta 1823. Marienbad on tšekiksi Mariánské Lázně, ja kaupunki sijaitsee [[Karlovy Varyn]] alueella Länsi-Böömissä. Runo liittää kylpyläkaupungin [[saksalaiseen kirjallisuuteen]] ja tekee siitä tunnetun myös sellaisille, joita lähteet eivät kiinnosta. Goethe ainakin osasi valita kylpylänsä.
+KYSYMYS: Kerro lisää: Karlovy Varyn
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Minkä runon Goethe nimesi kaupungin mukaan?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tuo on helppo. Johann Wolfgang von Goethe nimesi runonsa [[Marienbadin elegia]] kaupungin saksankielisen nimen mukaan, ja runo on vuodelta 1823. Marienbad on tšekiksi Mariánské Lázně, ja kaupunki sijaitsee [[Karlovy Varyn]] alueella Länsi-Böömissä. Runo liittää kylpyläkaupungin [[saksalaiseen kirjallisuuteen]] ja tekee siitä tunnetun myös sellaisille, joita lähteet eivät kiinnosta. Goethe ainakin osasi valita kylpylänsä.
+KYSYMYS: Kerro lisää: saksalaiseen kirjallisuuteen
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Luonto: Kivikaupunki, jossa haukat pesivät] 1933 — Koillis-Böömissä hiekkakivi on lohkeillut pystysuoriksi torneiksi, joiden väliin jää kapeita kujia. Aluetta sanotaan kivikaupungiksi, ja sen muodoille on annettu nimiä kuten Espanjan muuri, Isoisän tuoli ja Sokerikeko. Paikallinen väki uskaltautui kallioiden sekaan aikoinaan vain silloin, kun kylää uhkasi vaara. Vuonna 1790 tänne saapui katselemaan runoilija Goethe, ja vuodesta 1933 alue on ollut kansallinen luonnonsuojelualue. Se on yksi Euroopan tärkeimmistä muuttohaukan pesimäpaikoista, ja siksi osa kallioista suljetaan pesimäaikaan.
+AIEMPI KYSYMYS: Mitä Mariánské Lázněn nimi tarkoittaa suomeksi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nimi tarkoittaa suomeksi Marian kylpyä. Saksaksi kaupunki on Marienbad, ja nykyisen nimensä paikka sai vuonna 1808. Kylpyläksi se tuli vuonna 1818 ja kaupungiksi 1868. [[Mariánské Lázně]] on noin 14 000 asukkaan kylpyläkaupunki [[Länsi-Böömissä]]. Kylpy ja pulla, siinä ois minun unelmapäivä.
+KYSYMYS: Kerro lisää: Länsi-Böömissä
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Mistä vuodesta lähtien Mariánské Lázně on ollut kaupunki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Mariánské Lázně sai kaupunkioikeudet vuonna 1868. Nykyisen nimensä paikka sai vuonna 1808 ja kylpyläksi se tuli 1818. Suurin osa kaupungin rakennuksista on peräisin 1800-luvun jälkipuoliskolta, jolloin kylpylän [[kulta-aika]] oli käynnissä ja kaupunkiin saapui [[julkkiksia]] ja hallitsijoita. Ihan kunnioitettava ikä kaupungille, sanoisin.
+KYSYMYS: Kerro lisää: julkkiksia
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Milloin lähteet mainitaan ensimmäisen kerran asiakirjoissa?
+AIEMPI VASTAUS (Livia):
+Mmm— Lähteet mainitaan asiakirjoissa jo vuonna 1341. Lääkinnälliseen käyttöön ne otettiin kuitenkin vasta, kun Teplán luostarin lääkäri [[Josef Nehr]] osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Lähteet ovat hiilidioksidipitoisia, ja juuri niiden vuoksi 1800-luvulla kaupunkiin saapui [[hiilidioksidipitoisten]] vesien perässä monia vieraita. Kyllä lähteet osasivat odottaa, kauemmin kuin minä pullaa.
+KYSYMYS: Kerro lisää: Josef Nehr
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mariánské Lázně (kulttuuri)
+Tietoruudun teksti: Mariánské Lázně, saksaksi Marienbad, on noin 14 000 asukkaan kylpyläkaupunki Karlovy Varyn alueella Länsi-Böömissä, ja sen nimi tarkoittaa Marian kylpyä. Suurin osa kaupungin rakennuksista on peräisin sen kulta-ajalta 1800-luvun jälkipuoliskolta, jolloin monet julkkikset ja Euroopan huippuhallitsijat tulivat nauttimaan hiilidioksidipitoisista parantavista lähteistä. Lähteet mainitaan asiakirjoissa jo vuonna 1341, mutta lääkinnälliseen käyttöön ne otettiin vasta, kun Teplán luostarin lääkäri Josef Nehr osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Nykyisen nimensä paikka sai vuonna 1808, kylpyläksi se tuli 1818 ja kaupungiksi 1868. Johann Wolfgang von Goethe nimesi runonsa Marienbadin elegia (1823) kaupungin mukaan.
+AIEMPI KYSYMYS: Milloin lähteet mainitaan ensimmäisen kerran asiakirjoissa?
+AIEMPI VASTAUS (Livia):
+Mmm— Lähteet mainitaan asiakirjoissa jo vuonna 1341. Lääkinnälliseen käyttöön ne otettiin kuitenkin vasta, kun Teplán luostarin lääkäri [[Josef Nehr]] osoitti niiden parantavat ominaisuudet vuosina 1779–1820. Lähteet ovat hiilidioksidipitoisia, ja juuri niiden vuoksi 1800-luvulla kaupunkiin saapui [[hiilidioksidipitoisten]] vesien perässä monia vieraita. Kyllä lähteet osasivat odottaa, kauemmin kuin minä pullaa.
+KYSYMYS: Kerro lisää: hiilidioksidipitoisten
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuka rakennutti Telčin linnan renessanssityyliin 1500-luvun puolivälissä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linnan rakennutti uudelleen renessanssityyliin Zachariáš z Hradce 1500-luvun puolivälissä. Hän muutti myös kaupungin goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Kokonaisuus on säilynyt niin hyvin, että [[Telčin]] historiallinen keskusta kuuluu [[Unescon maailmanperintökohteisiin]]. Kaupunki sijaitsee [[Vysočinan]] alueella kalalampien ympäröimänä. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Telčin
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuka rakennutti Telčin linnan renessanssityyliin 1500-luvun puolivälissä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linnan rakennutti uudelleen renessanssityyliin Zachariáš z Hradce 1500-luvun puolivälissä. Hän muutti myös kaupungin goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Kokonaisuus on säilynyt niin hyvin, että [[Telčin]] historiallinen keskusta kuuluu [[Unescon maailmanperintökohteisiin]]. Kaupunki sijaitsee [[Vysočinan]] alueella kalalampien ympäröimänä. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohteisiin
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+AIEMPI KYSYMYS: Kuka rakennutti Telčin linnan renessanssityyliin 1500-luvun puolivälissä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linnan rakennutti uudelleen renessanssityyliin Zachariáš z Hradce 1500-luvun puolivälissä. Hän muutti myös kaupungin goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Kokonaisuus on säilynyt niin hyvin, että [[Telčin]] historiallinen keskusta kuuluu [[Unescon maailmanperintökohteisiin]]. Kaupunki sijaitsee [[Vysočinan]] alueella kalalampien ympäröimänä. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Vysočinan
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kaupunki, joka tekee itse maansa] Lagos on kasvanut myös ulospäin vedestä. Ikoyi on liitetty Lagosin saareen täyttömaalla, ja osa saaria erottavista salmista on ruopattu ja rakennettu umpeen. Victoria Islandin merenpuoleinen Bar Beach on rakennettu ympäristöllisesti uudelleen, ja laguunin suulle nousee Eko Atlantic, joka laajentaa Victoria Islandia. Kaupunki levittäytyy yli kolmenkymmenen kilometrin matkalle laguunin lounais- ja länsirannalla. Vesi maksaa siitä hintansa: laguuniin päätyy päivittäin suuri määrä kaupungin ja teollisuuden jätevettä, ja Ogun- ja Osun-joet tuovat lisää. Merenpinnan nousu ja maan painuminen koskettavat Lagosia enemmän kuin useimpia Afrikan suurkaupunkeja.
+AIEMPI KYSYMYS: Minkä tyylisiä Telčin torin talot ovat?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot, joissa on korkeat päädyt. Renessanssityyli tuli taloihin 1500-luvulla, kun Zachariáš z Hradce muutti kaupungin goottilaiset talot renessanssitaloiksi arkadeineen ja koristeltuine julkisivuineen. Vanhan [[Telčin]] torin yhtenäisyys on yksi syy siihen, että keskusta on suojeltu [[kaupunkimonumenttialueena]]. Kaupungin ensimmäinen kirjallinen maininta on vuodelta 1335. Kaunis tori, sitä katsoisi mielellään ylhäältä.
+KYSYMYS: Kerro lisää: kaupunkimonumenttialueena
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+AIEMPI KYSYMYS: Kuinka suuri kaupunki Telč on asukasluvultaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Telčissä asuu noin 5 100 ihmistä, joten kyseessä on pieni kaupunki. Se sijaitsee kukkulaisessa maisemassa [[Křižanovin ylängöllä]] ja sitä ympäröivät kalalammet. Pienestä koostaan huolimatta kaupungin historiallinen keskusta on [[Unescon maailmanperintökohde]], mikä kertoo sen rakennusperinnön arvosta. Pieni kaupunki, mutta isompi maine kuin monella isolla.
+KYSYMYS: Kerro lisää: Křižanovin ylängöllä
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuinka suuri kaupunki Telč on asukasluvultaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Telčissä asuu noin 5 100 ihmistä, joten kyseessä on pieni kaupunki. Se sijaitsee kukkulaisessa maisemassa [[Křižanovin ylängöllä]] ja sitä ympäröivät kalalammet. Pienestä koostaan huolimatta kaupungin historiallinen keskusta on [[Unescon maailmanperintökohde]], mikä kertoo sen rakennusperinnön arvosta. Pieni kaupunki, mutta isompi maine kuin monella isolla.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+AIEMPI KYSYMYS: Mikä Telčissä on Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Ai tota. Unescon maailmanperintökohde on Telčin historiallinen keskusta, joka on suojeltu kaupunkimonumenttialueena. Keskustan ilme perustuu renessanssi- ja barokkitaloihin, joissa on arkadit ja koristellut julkisivut, sekä toriin, jota reunustavat yhtenäisesti kunnostetut talot. Kaupungin [[renessanssilinna]] on osa samaa kokonaisuutta. Ympäristöä leimaavat kukkulat ja kalalammet [[Vysočinan]] alueella. Tällaista kokonaisuutta ei näe joka päivä, vaikka minä näen paljon.
+KYSYMYS: Kerro lisää: renessanssilinna
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Milloin Telč mainitaan ensimmäisen kerran kirjallisissa lähteissä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ensimmäinen kirjallinen maininta Telčistä on vuodelta 1335. Paikallisen legendan mukaan kaupunki perustettiin jo vuonna 1099, mutta sitä ei voi todistaa kirjallisella lähteellä. Nykyisen ilmeensä [[Telč]] sai 1500-luvun puolivälissä, kun Zachariáš z Hradce rakennutti linnan uudelleen [[renessanssityyliin]]. Legenda on kaunis, mutta paperi ratkaisee, ainakin historioitsijalle.
+KYSYMYS: Kerro lisää: Telč
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Telč (kulttuuri)
+Tietoruudun teksti: Telč on noin 5 100 asukkaan kaupunki Vysočinan alueella kukkulaisessa maisemassa Křižanovin ylängöllä, kalalampien ympäröimänä. Sen historiallinen keskusta on suojeltu kaupunkimonumenttialueena ja Unescon maailmanperintökohde. Paikallisen legendan mukaan kaupunki perustettiin vuonna 1099, mutta ensimmäinen kirjallinen maininta on vuodelta 1335. 1500-luvun puolivälissä Zachariáš z Hradce rakennutti keskiaikaisen linnan uudelleen renessanssityyliin ja muutti goottilaiset talot renessanssitaloiksi, joissa on arkadit ja koristellut julkisivut. Toria reunustavat yhtenäisesti kunnostetut renessanssi- ja barokkitalot korkeine päätyineen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+AIEMPI KYSYMYS: Milloin Telč mainitaan ensimmäisen kerran kirjallisissa lähteissä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ensimmäinen kirjallinen maininta Telčistä on vuodelta 1335. Paikallisen legendan mukaan kaupunki perustettiin jo vuonna 1099, mutta sitä ei voi todistaa kirjallisella lähteellä. Nykyisen ilmeensä [[Telč]] sai 1500-luvun puolivälissä, kun Zachariáš z Hradce rakennutti linnan uudelleen [[renessanssityyliin]]. Legenda on kaunis, mutta paperi ratkaisee, ainakin historioitsijalle.
+KYSYMYS: Kerro lisää: renessanssityyliin
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+AIEMPI KYSYMYS: Mikä luostari perustettiin Třebíčiin vuonna 1101?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Třebíčiin perustettiin vuonna 1101 benediktiiniluostari, ja se sijaitsi siinä, missä nykyään on linna. Kaupungin historia alkaa tästä luostarista. Luostarin pohjalta syntyi myöhemmin [[Pyhän Procopiuksen basilika]], joka on yhdessä juutalaiskorttelin kanssa [[Unescon maailmanperintökohde]] vuodesta 2003. Třebíč oli laajentumisensa aikana [[Määrin]] kolmanneksi tärkein kaupunki. Ei paha kyyhkyltä, jolla ei ole edes kirjastokorttia.
+KYSYMYS: Kerro lisää: Pyhän Procopiuksen basilika
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä luostari perustettiin Třebíčiin vuonna 1101?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Třebíčiin perustettiin vuonna 1101 benediktiiniluostari, ja se sijaitsi siinä, missä nykyään on linna. Kaupungin historia alkaa tästä luostarista. Luostarin pohjalta syntyi myöhemmin [[Pyhän Procopiuksen basilika]], joka on yhdessä juutalaiskorttelin kanssa [[Unescon maailmanperintökohde]] vuodesta 2003. Třebíč oli laajentumisensa aikana [[Määrin]] kolmanneksi tärkein kaupunki. Ei paha kyyhkyltä, jolla ei ole edes kirjastokorttia.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohde
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä luostari perustettiin Třebíčiin vuonna 1101?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Třebíčiin perustettiin vuonna 1101 benediktiiniluostari, ja se sijaitsi siinä, missä nykyään on linna. Kaupungin historia alkaa tästä luostarista. Luostarin pohjalta syntyi myöhemmin [[Pyhän Procopiuksen basilika]], joka on yhdessä juutalaiskorttelin kanssa [[Unescon maailmanperintökohde]] vuodesta 2003. Třebíč oli laajentumisensa aikana [[Määrin]] kolmanneksi tärkein kaupunki. Ei paha kyyhkyltä, jolla ei ole edes kirjastokorttia.
+KYSYMYS: Kerro lisää: Määrin
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kaupunkilehti / Praha: Golem nukkuu ullakolla] Prahan juutalaiskorttelin vanhinta synagogaa sanotaan Vanhaksiuudeksi. Se valmistui 1200-luvulla ja on yhä käytössä. Tarinan mukaan rabbi Löw muovasi 1500-luvulla Vltavan savesta Golemin, ihmisen kokoisen apurin, joka heräsi henkiin suuhun asetetusta lapusta. Kun Golem kävi liian voimakkaaksi, rabbi otti lapun pois ja kantoi hahmon synagogan ullakolle. Sinne ei tarinan mukaan saa nousta.
+AIEMPI KYSYMYS: Mikä on Pyhän Procopiuksen basilikan ruusuikkunan erikoisuus?
+AIEMPI VASTAUS (Livia):
+Katotaas. Basilikan goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen ruusuikkuna, joka muistuttaa kasvia. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja se on yhdessä [[juutalaiskorttelin]] kanssa [[Unescon maailmanperintökohde]] vuodesta 2003. Ruusuikkuna on goottilaisen rakennustaiteen tyypillinen elementti, mutta kymmenosaisena ja kasvimaisena se on poikkeuksellinen. Sellaisen ikkunan läpi näkyisi kyllä hyvin ulos lentäjäkin.
+KYSYMYS: Kerro lisää: juutalaiskorttelin
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+AIEMPI KYSYMYS: Minkä joen varrella Třebíč sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Třebíč sijaitsee Jihlava-joen varrella [[Vysočinan]] alueella. Kaupungissa asuu noin 34 000 ihmistä. Sen historia alkaa vuonna 1101 perustetusta benediktiiniluostarista, ja nykyään siellä on [[Unescon maailmanperintökohteeksi]] luokiteltu juutalaiskortteli sekä basilika. Joet olivat ennen vanhaan tärkeitä, ja ylhäältä ne näyttävät yhä parhailta reiteiltä.
+KYSYMYS: Kerro lisää: Vysočinan
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Minkä joen varrella Třebíč sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on helppo. Třebíč sijaitsee Jihlava-joen varrella [[Vysočinan]] alueella. Kaupungissa asuu noin 34 000 ihmistä. Sen historia alkaa vuonna 1101 perustetusta benediktiiniluostarista, ja nykyään siellä on [[Unescon maailmanperintökohteeksi]] luokiteltu juutalaiskortteli sekä basilika. Joet olivat ennen vanhaan tärkeitä, ja ylhäältä ne näyttävät yhä parhailta reiteiltä.
+KYSYMYS: Kerro lisää: Unescon maailmanperintökohteeksi
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Milloin Třebíčin juutalaiskortteli tuli Unescon maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Ai se. Juutalaiskortteli ja Pyhän Procopiuksen basilika kirjattiin yhdessä Unescon maailmanperintökohteeksi vuonna 2003. Kohde todistaa kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Kortteli ja [[basilika]] kuuluvat samaan nimeen, koska ne kertovat yhdessä, miten eri yhteisöt elivät saman kaupungin sisällä. [[Třebíč]] on tästä hyvä esimerkki. Kaksi kohdetta, yksi merkintä, sellainen pyöreä järjestely.
+KYSYMYS: Kerro lisää: basilika
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+AIEMPI KYSYMYS: Milloin Třebíčin juutalaiskortteli tuli Unescon maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Ai se. Juutalaiskortteli ja Pyhän Procopiuksen basilika kirjattiin yhdessä Unescon maailmanperintökohteeksi vuonna 2003. Kohde todistaa kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Kortteli ja [[basilika]] kuuluvat samaan nimeen, koska ne kertovat yhdessä, miten eri yhteisöt elivät saman kaupungin sisällä. [[Třebíč]] on tästä hyvä esimerkki. Kaksi kohdetta, yksi merkintä, sellainen pyöreä järjestely.
+KYSYMYS: Kerro lisää: Třebíč
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Třebíč (kulttuuri)
+Tietoruudun teksti: Třebíč on noin 34 000 asukkaan kaupunki Jihlava-joen varrella Vysočinan alueella. Kaupungin historian alku liittyy benediktiiniluostarin perustamiseen vuonna 1101 siihen, missä nykyään on linna, ja laajentumisensa aikana Třebíč oli Määrin kolmanneksi tärkein kaupunki. Juutalaiskortteli ja Pyhän Procopiuksen basilika ovat yhdessä Unescon maailmanperintökohde vuodesta 2003, koska ne todistavat kulttuurien vuorovaikutuksesta usean vuosisadan ajalta. Basilika sai alkunsa 1100-luvun alussa benediktiiniluostarina, ja sen goottilaisiin piirteisiin kuuluu harvinainen kymmenosainen kasvia muistuttava ruusuikkuna.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+AIEMPI KYSYMYS: Kuinka tärkeä kaupunki Třebíč oli Määrissä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Třebíč oli laajentumisensa aikana Määrin kolmanneksi tärkein kaupunki. Sen asema kasvoi vuonna 1101 perustetun benediktiiniluostarin ympärille, ja nykyään luostarin paikalla on linna. Kaupunki on säilyttänyt arvonsa kulttuurikohteena, sillä [[juutalaiskortteli]] ja [[Pyhän Procopiuksen basilika]] ovat Unescon maailmanperintökohteita. Kolmas sija kuulostaa pieneltä, mutta Määrissä se on kova sija.
+KYSYMYS: Kerro lisää: juutalaiskortteli
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Kuka arkkitehti suunnitteli Vihreän vuoren pyhiinvaelluskirkon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kirkon suunnitteli böömiläinen arkkitehti Johann Santini Aichel, ja se oli hänen viimeinen työnsä. Hän yhdisti siinä Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719 ja jatkuivat vuoteen 1727, ja kirkko julistettiin Unescon maailmanperintökohteeksi vuonna 1994. Kirkko on omistettu [[Johannes Nepomukilaiselle]], ja se sijaitsee [[Žďár nad Sázavoun]] laidalla. Pitkä työ, mutta kyllä se muistinvarainen kyyhky jaksaa.
+KYSYMYS: Kerro lisää: Johannes Nepomukilaiselle
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Kuka arkkitehti suunnitteli Vihreän vuoren pyhiinvaelluskirkon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: kirkon suunnitteli böömiläinen arkkitehti Johann Santini Aichel, ja se oli hänen viimeinen työnsä. Hän yhdisti siinä Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719 ja jatkuivat vuoteen 1727, ja kirkko julistettiin Unescon maailmanperintökohteeksi vuonna 1994. Kirkko on omistettu [[Johannes Nepomukilaiselle]], ja se sijaitsee [[Žďár nad Sázavoun]] laidalla. Pitkä työ, mutta kyllä se muistinvarainen kyyhky jaksaa.
+KYSYMYS: Kerro lisää: Žďár nad Sázavoun
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Mikä luku hallitsee kirkon suunnitelmaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kirkon suhteissa hallitsee luku viisi. Kyseessä on [[Johann Santini Aichelin]] viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennus kuuluu Unescon maailmanperintökohteisiin vuodesta 1994, ja se sijaitsee Määrin ja Böömin historiallisen rajan tuntumassa. Viisi toistuu rakennuksen suhteissa, ja [[Zelená hora]] onkin erityinen esimerkki tarkkaan mietitystä barokista. Hyvä luku, ja minä laskin sen kahdesti.
+KYSYMYS: Kerro lisää: Johann Santini Aichelin
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Mikä luku hallitsee kirkon suunnitelmaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kirkon suhteissa hallitsee luku viisi. Kyseessä on [[Johann Santini Aichelin]] viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennus kuuluu Unescon maailmanperintökohteisiin vuodesta 1994, ja se sijaitsee Määrin ja Böömin historiallisen rajan tuntumassa. Viisi toistuu rakennuksen suhteissa, ja [[Zelená hora]] onkin erityinen esimerkki tarkkaan mietitystä barokista. Hyvä luku, ja minä laskin sen kahdesti.
+KYSYMYS: Kerro lisää: Zelená hora
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Milloin Vihreän vuoren kirkon rakennustyöt alkoivat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi. Kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen vuonna 1720, ja työt jatkuivat vuoteen 1727. Arkkitehtina oli [[Johann Santini Aichel]], ja kirkko sijaitsee [[Žďár nad Sázavoun]] laidalla. Hyvin pitkään rakennettu, sanoisin, ja silti yhä pystyssä.
+KYSYMYS: Kerro lisää: Johann Santini Aichel
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Milloin Vihreän vuoren kirkko tuli maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kirkko tuli [[Unescon]] maailmanperintökohteeksi vuonna 1994. Se on [[Pyhän Johannes Nepomukilaisen]] pyhiinvaelluskirkko, joka sijaitsee Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Rakennus on [[Johann Santini Aichelin]] viimeinen työ, ja se edustaa [[barokin]] ja goottilaisten viittausten yhdistelmää. Hyvä vuosi muistaa, vaikka lentäjän päässä on paljon muutakin.
+KYSYMYS: Kerro lisää: Unescon
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Milloin Vihreän vuoren kirkko tuli maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kirkko tuli [[Unescon]] maailmanperintökohteeksi vuonna 1994. Se on [[Pyhän Johannes Nepomukilaisen]] pyhiinvaelluskirkko, joka sijaitsee Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Rakennus on [[Johann Santini Aichelin]] viimeinen työ, ja se edustaa [[barokin]] ja goottilaisten viittausten yhdistelmää. Hyvä vuosi muistaa, vaikka lentäjän päässä on paljon muutakin.
+KYSYMYS: Kerro lisää: Pyhän Johannes Nepomukilaisen
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Milloin Vihreän vuoren kirkko tuli maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kirkko tuli [[Unescon]] maailmanperintökohteeksi vuonna 1994. Se on [[Pyhän Johannes Nepomukilaisen]] pyhiinvaelluskirkko, joka sijaitsee Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Rakennus on [[Johann Santini Aichelin]] viimeinen työ, ja se edustaa [[barokin]] ja goottilaisten viittausten yhdistelmää. Hyvä vuosi muistaa, vaikka lentäjän päässä on paljon muutakin.
+KYSYMYS: Kerro lisää: barokin
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vihreän vuoren pyhiinvaelluskirkko (kulttuuri)
+Tietoruudun teksti: Zelená horan eli Vihreän vuoren Pyhän Johannes Nepomukilaisen pyhiinvaelluskirkko on uskonnollinen rakennus Žďár nad Sázavoun laidalla Määrin ja Böömin historiallisen rajan tuntumassa. Se on böömiläisen arkkitehdin Johann Santini Aichelin viimeinen työ, jossa hän yhdisti Borrominin barokkia ja goottilaisia viittauksia. Rakennustyöt alkoivat vuonna 1719, kun katolinen kirkko julisti Johannes Nepomukilaisen kielen turmeltumattomaksi; kirkko vihittiin heti hänen autuaaksi julistamisensa jälkeen 1720, ja työt jatkuivat vuoteen 1727. Puoli vuosisataa myöhemmin vakavan palon jälkeen katon muotoa muutettiin. Kirkon suhteissa hallitsee luku viisi, ja se julistettiin Unescon maailmanperintökohteeksi vuonna 1994.
+AIEMPI KYSYMYS: Minkä tyylejä Santini yhdisti Vihreän vuoren kirkossa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Johann Santini Aichel yhdisti kirkossa Borrominin barokkia ja goottilaisia viittauksia. Kirkko oli hänen viimeinen työnsä, ja sen suhteita hallitsee luku viisi. Rakennustyöt alkoivat vuonna 1719 ja kirkko vihittiin 1720, ja kokonaisuus valmistui vuonna 1727. Nykyään [[Zelená hora]] kuuluu Unescon maailmanperintökohteisiin. [[Borromini]] oli italialainen arkkitehti, jonka tyyli vaikutti laajalti Euroopassa. Aikamoinen yhdistelmä, ja minä pidän varsinkin goottilaisesta tunnelmasta.
+KYSYMYS: Kerro lisää: Borromini
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+AIEMPI KYSYMYS: Minkä kasvin viljelyperinteestä Žatec on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Kato, tuo on selvä. Žatec on kuuluisa humalan viljelyperinteestä, erityisesti yli 700 vuotta vanhasta Saaz-jalohumalan viljelystä, jota käyttävät useat panimot. Humalan viljely mainitaan kaupungissa ensimmäisen kerran vuonna 1348, ja oluenpanon perinne alkoi jo vuonna 1261. Žatec ja Saazin [[humalamaisema]] kirjattiin Unescon maailmanperintöluetteloon vuonna 2023. Kaupungissa on sekä [[humalamuseo]] että [[panimomuseo]]. Humala sopii kyyhkyn huoneentauluksi, mutta pulla olisi parempi.
+KYSYMYS: Kerro lisää: humalamaisema
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+AIEMPI KYSYMYS: Minkä kasvin viljelyperinteestä Žatec on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Kato, tuo on selvä. Žatec on kuuluisa humalan viljelyperinteestä, erityisesti yli 700 vuotta vanhasta Saaz-jalohumalan viljelystä, jota käyttävät useat panimot. Humalan viljely mainitaan kaupungissa ensimmäisen kerran vuonna 1348, ja oluenpanon perinne alkoi jo vuonna 1261. Žatec ja Saazin [[humalamaisema]] kirjattiin Unescon maailmanperintöluetteloon vuonna 2023. Kaupungissa on sekä [[humalamuseo]] että [[panimomuseo]]. Humala sopii kyyhkyn huoneentauluksi, mutta pulla olisi parempi.
+KYSYMYS: Kerro lisää: humalamuseo
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dunedin — kohdekartta / Kohdekartta: Speightsin panimo] 1876 James Speight, Charles Greenslade ja William Dawson perustivat panimon Rattray Streetille 1876 lähdettyään töistä skotlantilaisesta Wellpark-panimosta. Neljä vuotta myöhemmin panimo voitti kultamitalin Melbournen kansainvälisessä näyttelyssä, ja siitä syntyi Gold Medal Ale -nimi, joka on yhä talon tunnetuin tuote. Vuoteen 1887 mennessä Speightsista oli tullut Uuden-Seelannin suurin panimo, ja se vei olutta Australiaan ja Tyynenmeren saarille. Vuonna 1923 panimo sulautui yhdeksän muun kanssa New Zealand Breweries -yhtiöksi, ja samana vuonna kuoli perustajista Dawson. Vuonna 1960 yhtiö yritti yksinkertaistaa valikoimaansa ja vaihtoi tuotenimen, mutta muutos kesti vain kaksi kuukautta: Sp…
+- [Dublin — kohdekartta / Kohdekartta: Guinness-panimo] 1759 Guinnessin panimo Dublinissa on yksi maailman kuuluisimmista oluttehtaista. Sen perusti Arthur Guinness vuonna 1759, kun hän allekirjoitti St. James's Gate -panimon tontista vuokrasopimuksen, joka on voimassa peräti 9000 vuotta! Panimo valmistaa tummaa stout-olutta vain neljästä aineesta: vedestä, ohrasta, humalasta ja hiivasta. Nykyinen vierailukeskus Guinness Storehouse avautui yleisölle vuonna 2000 rakennuksessa, joka valmistui jo vuonna 1902 panimon käymistehtaaksi. Sen keskellä kohoaa lasinen aula, joka on muotoiltu valtavan olutlasin näköiseksi — rakennus on peräti seitsemän kerrosta korkea. Ylimmässä kerroksessa sijaitsee Gravity Bar, josta näkee kauas Dublinin ylle. Vuoteen 202…
+AIEMPI KYSYMYS: Minkä kasvin viljelyperinteestä Žatec on kuuluisa?
+AIEMPI VASTAUS (Livia):
+Kato, tuo on selvä. Žatec on kuuluisa humalan viljelyperinteestä, erityisesti yli 700 vuotta vanhasta Saaz-jalohumalan viljelystä, jota käyttävät useat panimot. Humalan viljely mainitaan kaupungissa ensimmäisen kerran vuonna 1348, ja oluenpanon perinne alkoi jo vuonna 1261. Žatec ja Saazin [[humalamaisema]] kirjattiin Unescon maailmanperintöluetteloon vuonna 2023. Kaupungissa on sekä [[humalamuseo]] että [[panimomuseo]]. Humala sopii kyyhkyn huoneentauluksi, mutta pulla olisi parempi.
+KYSYMYS: Kerro lisää: panimomuseo
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Mikä on kaupungin saksankielinen nimi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaupungin saksankielinen nimi on Saaz. Sama nimi näkyy kaupungin tunnetussa tuotteessa, Saaz-jalohumalassa, jota useat panimot käyttävät. Žatec sijaitsee [[Ohře-joen]] varrella Ústí nad Labemin alueella Mostin altaassa, ja se sai kaupunkioikeudet 1200-luvulla. Kaupungin [[humalamaisema]] kirjattiin Unescon maailmanperintöluetteloon vuonna 2023. Kaksi nimeä, yksi kaupunki, ja minä tarvitsen vain yhden pullan.
+KYSYMYS: Kerro lisää: Ohře-joen
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Žatec (ruoka)
+Tietoruudun teksti: Žatec, saksaksi Saaz, on noin 19 000 asukkaan kaupunki Ohře-joen varrella Ústí nad Labemin alueella Mostin altaassa. Se sai kaupunkioikeudet 1200-luvulla ja on kuuluisa yli 700 vuotta vanhasta Saaz-jalohumalan viljelyperinteestä, jota useat panimot käyttävät. Oluenpanon perinne alkoi siellä vuonna 1261, humalan viljely mainitaan ensimmäisen kerran 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Žatec ja Saazin humalamaisema kirjattiin Unescon maailmanperintöluetteloon vuonna 2023, ja kaupungissa on humalamuseo ja panimomuseo.
+AIEMPI KYSYMYS: Milloin oluenpanon perinne alkoi Žatecissa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Oluenpanon perinne alkoi Žatecissa vuonna 1261. Humalan viljely mainitaan kaupungissa ensimmäisen kerran vuonna 1348, ja Žatecin panimo aloitti tuotantonsa vuosina 1800–1801. Kaupunki on kuuluisa yli 700 vuotta vanhasta [[Saaz-jalohumalan]] viljelyperinteestä. Nykyään siellä on myös [[panimomuseo]]. Pitkä perinne, kauemmin kuin yksikään kyyhkyn lento.
+KYSYMYS: Kerro lisää: Saaz-jalohumalan
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+AIEMPI KYSYMYS: Minkä juuston valmistuksesta Loštice on tunnettu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Loštice on tunnettu [[Olomoucké tvarůžky]] -juuston valmistuksesta. Kyseessä on aromikas, voimakastuoksuinen juusto, joka kuuluu [[Määrin]] perinteisiin ruokiin, ja kaupunki sijaitsee Olomoucin alueella Třebůvka-joen varrella. Juusto on tuotteena niin tunnettu, että se kuljettaa pienen kaupungin nimen kauas sen omien rajojen ulkopuolelle. Kaupungissa asuu noin 3 100 ihmistä. Kyl tuoksun haistaa ennen kuin kyltin ehtii lukea.
+KYSYMYS: Kerro lisää: Olomoucké tvarůžky
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Minkä juuston valmistuksesta Loštice on tunnettu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Loštice on tunnettu [[Olomoucké tvarůžky]] -juuston valmistuksesta. Kyseessä on aromikas, voimakastuoksuinen juusto, joka kuuluu [[Määrin]] perinteisiin ruokiin, ja kaupunki sijaitsee Olomoucin alueella Třebůvka-joen varrella. Juusto on tuotteena niin tunnettu, että se kuljettaa pienen kaupungin nimen kauas sen omien rajojen ulkopuolelle. Kaupungissa asuu noin 3 100 ihmistä. Kyl tuoksun haistaa ennen kuin kyltin ehtii lukea.
+KYSYMYS: Kerro lisää: Määrin
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+AIEMPI KYSYMYS: Minkä joen varrella Loštice sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Loštice sijaitsee Třebůvka-joen varrella Olomoucin alueella [[Määrissä]], Tšekin itäosassa. Kaupungissa on noin 3 100 asukasta, ja se tunnetaan erityisesti [[Olomoucké tvarůžky]] -juuston valmistuksesta. Třebůvka on pieni joki, joka virtaa alueen läpi, ja sen laakso on ollut asutusta jo vuosisatojen ajan. Kaupungin ensimmäinen kirjallinen maininta on vuodelta 1267. Ylhäältä katsottuna joki on kapea hopeinen viiva, ja sitä on mukava seurata.
+
+Meikäläisten muistiinpanojen mukaan Määrin pikkujoet ovat aina olleet hyviä suuntaviittoja kirjekyyhkylle. Mutta kyllä minä leivonnaisen mieluummin löytäisin kuin joen.
+KYSYMYS: Kerro lisää: Määrissä
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+AIEMPI KYSYMYS: Milloin Loštice sai kaupunkistatuksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mennäänpä historiaan. Loštice ylennettiin kaupungiksi luultavasti vuonna 1353, eli sen asema on vakiintunut jo yli kuudensadan vuoden ajan. Ensimmäinen kirjallinen maininta paikasta on vanhempi: se löytyy piispa [[Bruno von Schauenburgin]] asiakirjasta vuodelta 1267. Näiden kahden vuosiluvun välillä asutus kasvoi siis asiakirjoissa mainitusta paikasta kaupungiksi. Vuosiluku 1353 on esitetty varauksella, koska tarkkaa ylennysajankohtaa ei ole varmuudella pystytty osoittamaan. Kaupunki sijaitsee [[Třebůvka-joen]] varrella [[Olomoucin]] alueella Määrissä, ja sen asukasluku on nykyään noin 3 100. Ja kyl se vanhuus näkyy, jos osaa katsoa.
+KYSYMYS: Kerro lisää: Bruno von Schauenburgin
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+AIEMPI KYSYMYS: Milloin Loštice sai kaupunkistatuksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mennäänpä historiaan. Loštice ylennettiin kaupungiksi luultavasti vuonna 1353, eli sen asema on vakiintunut jo yli kuudensadan vuoden ajan. Ensimmäinen kirjallinen maininta paikasta on vanhempi: se löytyy piispa [[Bruno von Schauenburgin]] asiakirjasta vuodelta 1267. Näiden kahden vuosiluvun välillä asutus kasvoi siis asiakirjoissa mainitusta paikasta kaupungiksi. Vuosiluku 1353 on esitetty varauksella, koska tarkkaa ylennysajankohtaa ei ole varmuudella pystytty osoittamaan. Kaupunki sijaitsee [[Třebůvka-joen]] varrella [[Olomoucin]] alueella Määrissä, ja sen asukasluku on nykyään noin 3 100. Ja kyl se vanhuus näkyy, jos osaa katsoa.
+KYSYMYS: Kerro lisää: Třebůvka-joen
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+AIEMPI KYSYMYS: Milloin Loštice sai kaupunkistatuksen?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mennäänpä historiaan. Loštice ylennettiin kaupungiksi luultavasti vuonna 1353, eli sen asema on vakiintunut jo yli kuudensadan vuoden ajan. Ensimmäinen kirjallinen maininta paikasta on vanhempi: se löytyy piispa [[Bruno von Schauenburgin]] asiakirjasta vuodelta 1267. Näiden kahden vuosiluvun välillä asutus kasvoi siis asiakirjoissa mainitusta paikasta kaupungiksi. Vuosiluku 1353 on esitetty varauksella, koska tarkkaa ylennysajankohtaa ei ole varmuudella pystytty osoittamaan. Kaupunki sijaitsee [[Třebůvka-joen]] varrella [[Olomoucin]] alueella Määrissä, ja sen asukasluku on nykyään noin 3 100. Ja kyl se vanhuus näkyy, jos osaa katsoa.
+KYSYMYS: Kerro lisää: Olomoucin
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Auckland — kohdekartta / Kohdekartta: Symonds Streetin hautausmaa] 1842 Symonds Streetin hautausmaa oli Aucklandin ensimmäinen virallinen hautausmaa, ja siihen haudattiin vuodesta 1842 alkaen. Se on 5,8 hehtaarin lehtimetsä Grafton Gullyn länsirinteellä Symonds Streetin ja Karangahape Roadin kulmassa, ja nimi tulee William Cornwallis Symondsilta, brittiupseerilta, joka oli näkyvästi mukana siirtokunnan perustamisessa. Alue jaettiin aluksi neljään osaan: anglikaaneille, katolisille ja juutalaisille sekä yhteinen osa presbyteereille, wesleyläisille ja muille. Vuoteen 1852 mennessä yhteisestä osasta tuli presbyteerien, ja rinnalle tehtiin uusi wesleyläisten ja yleinen osa. Kun Länsi-Aucklandiin perustettiin uusi kunnallinen hautausmaa Waikumeteen, Symonds Str…
+- [Valparaíso — kohdekartta / Kohdekartta: Toisinajattelijoiden hautausmaa] 1825 Hautausmaa on Panteón-kukkulalla Cementerio N:o 1:n vastapäätä, vanhan kaupunginvankilan vieressä — vankilassa toimii nykyään kulttuurikeskus. Se perustettiin 1825 brittiläisten ja muiden eurooppalaisten asukkaiden haudoiksi: heidän protestanttinen uskonsa poikkesi valtionuskonnosta, joka oli roomalaiskatolinen. 1800-luvun alussa Valparaísoon muuttaneita ei-katolisia ei saanut haudata katolisiin hautausmaihin. Heidät haudattiin Playa Anchan kukkulalle tai heitettiin mereen. Vuonna 1823 Britannian konsuli George Seymour osti pormestari Robert Simpsonin avulla maata vankilan vierestä juuri tätä varten: hautausmaaksi niille, joita kutsuttiin toisinajattelijoiksi. Alue jakautuu kahdeksaan …
+AIEMPI KYSYMYS: Mitä Lošticen juutalaisyhteisöstä tiedetään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lošticen juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen. Yhteisön [[hautausmaa]] perustettiin vuonna 1554 ja [[synagoga]] rakennettiin vuonna 1571. Vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton, mikä tarkoitti, että se hoiti omia asioitaan omana yksikkönään. Yhteisö oli osa [[Määrin]] juutalaista historiaa, jolle on tunnusomaista pienet paikalliset yhteisöt ja omat rakennuksensa. Hautausmaa ja synagoga kuuluvat niihin rakennuksiin, jotka kertovat yhteisön vuosisatojen mittaisesta arjesta kaupungissa. Mitä yhteisön myöhemmistä vaiheista tiedetään, siitä en ole varma.
+KYSYMYS: Kerro lisää: hautausmaa
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manaus — kohdekartta / Kohdekartta: Beit Yaacovin synagoga] 1962 Amazonin juutalaisyhteisö on vanha ja sen synagoga nuori. Manausin seurakunta syntyi kahdesta aiemmasta, joiden juuret ovat 1920-luvulla; nykyinen talo valmistui 1962, kun seurakunnat yhdistyivät. Se on yksi Pohjois-Brasilian suurimmista ja vaikutusvaltaisimmista amazonianjuutalaisten seurakunnista. Yhteisö tuli jokea pitkin kaupan mukana. Marokon juutalaiset alkoivat 1800-luvun alussa muuttaa Brasiliaan, ja moni päätyi Amazonille: he perustivat kauppaverkostoja, jotka ulottuivat Belémistä ja Manausista jokivarren takamaille asti, ja toimivat välikäsinä kumin tuottajien ja vientisatamien välillä. Manaus on tässä poikkeus, sillä sinne saapuivat ensin elsassilaiset juutalaiset Ranskan–Pr…
+- [Hobart — kohdekartta / Kohdekartta: Hobartin synagoga] 1845 Argyle Streetin synagoga vihittiin 4. heinäkuuta 1845, ja se on Australian vanhin synagogarakennus. Tyyli on harvinainen: egyptiläinen kertaustyyli, jota tunnistaa ikkunoiden puolisuunnikkaan muodosta ja pylväiden lootuskapiteeleista. Piirustukset teki hobartilainen arkkitehti James Thomson, skotlantilainen vanki, joka oli saanut armahduksen 1829. Tontti oli osa entisen vangin Judah Solomonin puutarhaa. Salissa on 150 istumapaikkaa, ja takaosassa on kovat penkit juutalaisille vangeille, jotka marssitettiin alkuaikoina jumalanpalvelukseen aseellisen vartion saattamina. Uskotaan, ettei maailmassa ole toista juutalaista rukoushuonetta, jossa olisi vangeille varatut paikat. Rakennus on Tas…
+AIEMPI KYSYMYS: Mitä Lošticen juutalaisyhteisöstä tiedetään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Lošticen juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen. Yhteisön [[hautausmaa]] perustettiin vuonna 1554 ja [[synagoga]] rakennettiin vuonna 1571. Vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton, mikä tarkoitti, että se hoiti omia asioitaan omana yksikkönään. Yhteisö oli osa [[Määrin]] juutalaista historiaa, jolle on tunnusomaista pienet paikalliset yhteisöt ja omat rakennuksensa. Hautausmaa ja synagoga kuuluvat niihin rakennuksiin, jotka kertovat yhteisön vuosisatojen mittaisesta arjesta kaupungissa. Mitä yhteisön myöhemmistä vaiheista tiedetään, siitä en ole varma.
+KYSYMYS: Kerro lisää: synagoga
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Loštice (ruoka)
+Tietoruudun teksti: Loštice on noin 3 100 asukkaan kaupunki Třebůvka-joen varrella Olomoucin alueella Määrissä. Se on tunnettu aromikkaan Olomoucké tvarůžky -juuston valmistuksesta. Kaupungin ensimmäinen kirjallinen maininta on piispa Bruno von Schauenburgin asiakirjassa vuodelta 1267, ja se ylennettiin kaupungiksi luultavasti vuonna 1353. Juutalaisten läsnäolo on dokumentoitu vuodesta 1544 alkaen: juutalainen hautausmaa perustettiin vuonna 1554 ja synagoga rakennettiin vuonna 1571, ja vuosina 1581–1850 juutalaisyhteisö oli kaupunginhallinnosta riippumaton.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Keksinnöt: Pappi rakensi sääkoneen pellolle] 1754 — Prokop Diviš oli pappi Příměticen kylässä ja uskoi, että ukkosen voi estää imemällä sähkön pois pilvistä. Kesäkuun 15. päivänä 1754 hän pystytti pellolleen nelikymmenmetrisen tangon, jonka päähän hän kiinnitti peltilaatikoita ja yli 400 metallipiikkiä. Raskaat ketjut johtivat rakennelman maahan, ja juuri siksi siitä tuli yksi maailman ensimmäisistä maadoitetuista ukkosenjohdattimista — vaikka Diviš itse luuli tekevänsä aivan muuta. Kuivana kesänä 1759 kyläläiset syyttivät konetta sateen puutteesta ja purkivat sen.
+AIEMPI KYSYMYS: Kuka oli piispa Bruno von Schauenburg?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bruno von Schauenburg oli Olomoucin piispa 1200-luvulla, ja hänen asiakirjassaan vuodelta 1267 mainitaan [[Loštice]] ensimmäisen kerran kirjallisesti. Lähteiden mukaan hän toimi [[Olomoucin]] piispana ja oli aikansa tärkeitä kirkon ja valtion miehiä [[Määrissä]], mutta tarkkoja vuosilukuja en ole varma muistamaan. Keskiajalla piispat olivat paitsi hengellisiä johtajia myös maallisia vallanpitäjiä, ja heidän asiakirjansa ovat usein ainoa tapa, jolla pienten paikkakuntien varhaisimmat vaiheet tunnetaan. Näin on myös Lošticen kohdalla. Tässä oli kyllä enemmän muistelemista kuin tarkoitus.
+KYSYMYS: Kerro lisää: Loštice
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+AIEMPI KYSYMYS: Minkä makeisen valmistuksesta Štramberk on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai se. Štramberk on tunnettu [[Štramberkin korvat]] -nimisen perinneleivonnaisen valmistuksesta, jota on tehty noin 800 vuotta. Valmistus on EU:n suojattu maantieteellinen merkintä, ja se oli ensimmäinen tšekkiläinen tuote, jolle tällainen suoja myönnettiin. Tuote on siis sidottu tiukasti paikkaan, eikä samannimistä tuotetta saa valmistaa muualla. Kaupunki sijaitsee [[Määrin]] ja Sleesian esivuoristossa noin 25 kilometriä Ostravasta lounaaseen, ja asukkaita on noin 3 500. Murun koon kyl arvioin silmämääräisesti, ja tää on kyllä kuulostanut hyvältä.
+KYSYMYS: Kerro lisää: Štramberkin korvat
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Minkä makeisen valmistuksesta Štramberk on tunnettu?
+AIEMPI VASTAUS (Livia):
+Ai se. Štramberk on tunnettu [[Štramberkin korvat]] -nimisen perinneleivonnaisen valmistuksesta, jota on tehty noin 800 vuotta. Valmistus on EU:n suojattu maantieteellinen merkintä, ja se oli ensimmäinen tšekkiläinen tuote, jolle tällainen suoja myönnettiin. Tuote on siis sidottu tiukasti paikkaan, eikä samannimistä tuotetta saa valmistaa muualla. Kaupunki sijaitsee [[Määrin]] ja Sleesian esivuoristossa noin 25 kilometriä Ostravasta lounaaseen, ja asukkaita on noin 3 500. Murun koon kyl arvioin silmämääräisesti, ja tää on kyllä kuulostanut hyvältä.
+KYSYMYS: Kerro lisää: Määrin
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+AIEMPI KYSYMYS: Mikä on Štramberkin tunnetuin torni?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Štramberkin tunnetuin torni on Trúba-torni, joka on yksi kaupungin tärkeimmistä nähtävyyksistä. Se kohoaa kaupungin yllä ja näkyy kauas ympäristöön, joten se toimii samalla maamerkkinä. Toinen tärkeä nähtävyys on Pyhän [[Johannes Nepomukilaisen]] kirkko. Kaupunki sijaitsee [[Määrin]] ja Sleesian esivuoristossa, noin 25 kilometriä Ostravasta lounaaseen, ja se perustettiin vuonna 1359 markkreivi Johann Henryn toimesta. Tornin historian yksityiskohdista en ole varma, joten jätän ne kertomatta.
+
+Minä tykkään torneista, koska niiden huipulta näkee kaupungin kokonaisena. Mutta jos kysytään, mieluummin kiipeäisin kyllä leipomon katolle.
+KYSYMYS: Kerro lisää: Johannes Nepomukilaisen
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Neljäkymmentä kiloa pippuria banaaniviljelmältä] 1958– — Penjan laakso on vanhaa tulivuoren maata, ja siihen istutti pippurin Antoine Decré, jolla oli seudulla banaaniviljelmä. Ensimmäinen vientierä lähti maaliskuussa 1958: yksi neljänkymmenen kilon säkki valkopippuria. Nykyään poivre de Penja on suojattu maantieteellinen merkintä seitsemässätoista Afrikan OAPI-maassa ja lisäksi Euroopan unionissa — harvinaista afrikkalaiselle maataloustuotteelle. Michelin-kokit löysivät sen, ja toukokuussa 2016 kilosta maksettiin jopa 321 euroa. Samasta köynnöksestä saadaan vihreä, musta, valkoinen ja punainen pippuri; ero syntyy vain poimintahetkestä ja käsittelystä.
+AIEMPI KYSYMYS: Mitä Štramberkin korvat on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Štramberkin korvat on perinteinen tšekkiläinen leivonnainen, jota on valmistettu Štramberkissä noin 800 vuotta. Se on EU:n [[suojattu maantieteellinen merkintä]], joten nimeä saa käyttää vain paikallisesti valmistetusta tuotteesta. Tuote oli ensimmäinen tšekkiläinen, jolle tällainen suoja myönnettiin. Täsmällisestä reseptistä en ole varma, mutta perinteisesti sen tiedetään olevan mausteinen ja pehmeä makeinen, joka leivotaan käsityönä. Kaupunki sijaitsee [[Määrin]] ja [[Sleesian]] esivuoristossa. Minä haaveilen jo ikkunalaudasta, jolla tällainen lepäisi.
+KYSYMYS: Kerro lisää: suojattu maantieteellinen merkintä
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+AIEMPI KYSYMYS: Mitä Štramberkin korvat on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Štramberkin korvat on perinteinen tšekkiläinen leivonnainen, jota on valmistettu Štramberkissä noin 800 vuotta. Se on EU:n [[suojattu maantieteellinen merkintä]], joten nimeä saa käyttää vain paikallisesti valmistetusta tuotteesta. Tuote oli ensimmäinen tšekkiläinen, jolle tällainen suoja myönnettiin. Täsmällisestä reseptistä en ole varma, mutta perinteisesti sen tiedetään olevan mausteinen ja pehmeä makeinen, joka leivotaan käsityönä. Kaupunki sijaitsee [[Määrin]] ja [[Sleesian]] esivuoristossa. Minä haaveilen jo ikkunalaudasta, jolla tällainen lepäisi.
+KYSYMYS: Kerro lisää: Sleesian
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Medhane Alem] 1100–1200-luku Maailman Vapahtajan taloa pidetään maailman suurimpana monoliittikirkkona: se on kokonaan yhtä kivipaatta, jonka ympäriltä kallio on louhittu pois. Se rakennettiin Zagwe-dynastian aikana ja kuuluu Jordan-puron pohjoiseen ryhmään. Kirkkoa ympäröi pilarikäytävä, ja koko rakennus on tehty samasta kivestä kuin sen katto ja lattia. Täällä säilytetään Lalibelan ristiä, Etiopian arvokkaimpia uskonnollisia perintöesineitä. Kirkko on myös yksi niistä viidestä, joiden päälle pystytettiin 2008 Euroopan unionin rahoituksella suojakatokset. Ne oli tarkoitettu väliaikaisiksi siihen asti, kunnes pysyvämpi ratkaisu löytyisi, mutta ne ovat yhä paikoillaan — ja niiden paino on nyt oma ongelman…
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Mitä suojattu maantieteellinen merkintä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suojattu maantieteellinen merkintä on EU:n laatumerkki, joka sitoo tuotteen nimen tiettyyn alueeseen. Tuotteen jokin vaihe, kuten valmistus, jalostus tai raaka-aineen alkuperä, liittyy alueeseen, ja nimeä saa käyttää vain siellä tuotetuista tuotteista. Merkintä suojaa kuluttajaa jäljitelmiltä ja perinteen ylläpitäjiä kilpailulta, joka lainaisi nimeä ilman yhteyttä paikkaan. Štramberkin kohdalla merkintä koskee [[Štramberkin korvat]] -leivonnaista, ja se oli ensimmäinen tšekkiläinen tuote, jolle merkintä myönnettiin. Näitä merkintöjä on nykyään satoja ympäri [[Euroopan unionin]] alueen. Ja nyt minä kyl janoan jotain makeaa.
+KYSYMYS: Kerro lisää: Euroopan unionin
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Štramberk (ruoka)
+Tietoruudun teksti: Štramberk on noin 3 500 asukkaan kaupunki Määrin ja Sleesian esivuoristossa 25 kilometriä Ostravasta lounaaseen. Se on tunnettu Štramberkin korvat -perinneleivonnaisesta, jota on valmistettu noin 800 vuotta; valmistus on EU:n suojattu maantieteellinen merkintä ja ensimmäinen tšekkiläinen tuote, jolla se on. Kaupungin tärkeimpiä nähtävyyksiä ovat Trúba-torni ja Pyhän Johannes Nepomukilaisen kirkko. Kaupunki perustettiin vuonna 1359 Määrin markkreivi Johann Henryn toimesta, ja 1400-luvulta se oli Määrin veljeskunnan keskus. 1800-luvun jälkipuoliskolla siellä alkoi kalkkikiven louhinta, ja rautatie avattiin vuonna 1881.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä Štramberkin lähellä louhittiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Štramberkissä alkoi 1800-luvun jälkipuoliskolla kalkkikiven louhinta, ja alueen maisema on osin muovautunut sen mukaan. Kalkkikivi on kaupungin ympäristössä luonteenomainen kivilaji, ja se on vaikuttanut myös alueen luontoon ja maisemaan. Rautatie avattiin vuonna 1881, mikä helpotti tuotteiden kuljettamista ja kasvatti kaupungin yhteyksiä. Aiemmin kaupunki oli ollut 1400-luvulta lähtien [[Määrin veljeskunnan]] keskus. Kaupunki sijaitsee [[Määrin]] ja Sleesian esivuoristossa noin 25 kilometriä Ostravasta lounaaseen. Ei paha kyyhkyltä näin monta vuosilukua.
+KYSYMYS: Kerro lisää: Määrin veljeskunnan

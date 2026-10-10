@@ -1,0 +1,1036 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+AIEMPI KYSYMYS: Miksi Lipnon voimala päätettiin rakentaa?
+AIEMPI VASTAUS (Livia):
+Hmm, selvä juttu. Voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Etelä-Böömin [[Vltava]] aiheutti toistuvia tulvia ja vahinkoja muun muassa [[Český Krumlovissa]]. Valmistelutyöt alkoivat vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato tuottaa sähköä, ja samalla se hillitsee tulvia. Tulvat ei kyyhkyä haittaa, mutta kaupunkilaisia haittasi.
+KYSYMYS: Kerro lisää: Český Krumlovissa
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+AIEMPI KYSYMYS: Milloin Lipnon pato valmistui?
+AIEMPI VASTAUS (Livia):
+Joo, kyllä tämä muistuu. Lipnon pato valmistui vuonna 1960. Valmistelutyöt alkoivat [[Lipno nad Vltavoun]] kunnassa vuonna 1951, ja padon rakennus käynnistyi vuonna 1952. Pato on siis valmistunut noin kahdeksassa vuodessa. Se rakennettiin [[Vltavan]] varrelle sekä sähköntuotantoa että tulvien torjuntaa varten. Hyvä projekti, ei kyl mikään yhden kesän juttu.
+KYSYMYS: Kerro lisää: Lipno nad Vltavoun
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+AIEMPI KYSYMYS: Kuinka paljon sähköä Lipnon voimala tuottaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin, eli yhteensä 128 megawattia nimellistehoa. Nimellisteho kertoo suurimman suunnitellun tehon, ja todellinen tuotanto riippuu veden määrästä. Voimala sijaitsee [[Vltavan]] varrella [[Lipnon]] padon yhteydessä. Kyl tässä riittää virtaa moneen kotiin.
+KYSYMYS: Kerro lisää: Lipnon
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lipnon tekojärvi (luonto · järvi)
+Tietoruudun teksti: Lipnon tekojärvi on Vltava-joen varrelle rakennettu pato ja vesivoimala Tšekissä, ja se on Tšekin suurin vesialue. Etelä-Böömin Vltava aiheutti toistuvia tulvia ja vahinkoja muun muassa Český Krumlovissa, ja voimala päätettiin rakentaa sekä joen voiman hyödyntämiseksi että katastrofien estämiseksi. Valmistelutyöt alkoivat Lipno nad Vltavoun kunnassa vuonna 1951, padon rakennus alkoi vuonna 1952 ja pato valmistui vuonna 1960. Pato on Vltavan portaikon korkeimmalla portaalla noin 726 metrin korkeudella, ja alue rajoittuu Šumavan kansallispuistoon. Voimalassa on kaksi turbiinia, joiden nimellisteho on 64 megawattia kumpikin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Aarniometsän ydin aidattiin] 1858 — Šumavan vuorilla Etelä-Böömissä kasvaa metsä, jota ei ole koskaan hakattu: Boubínský prales. Metsänhoitaja Josef John sai sen suojeluun jo vuonna 1858, mikä tekee siitä Tšekin kolmanneksi vanhimman luonnonsuojelualueen. Vanhimmat puut ovat 400–500 vuoden ikäisiä, ja kuuluisin niistä oli Kuusten kuningas, jonka lumimyrsky kaatoi vuonna 1970. Metsän ydin on aidattu, jotta kävijät ja peurat eivät talloisi taimia. Kaatuneet rungot jätetään maahan lahoamaan, sillä niiden päältä nousee uusi puusukupolvi.
+AIEMPI KYSYMYS: Mikä kansallispuisto rajoittuu Lipnon alueeseen?
+AIEMPI VASTAUS (Livia):
+No niin. Lipnon alue rajoittuu [[Šumavan]] kansallispuistoon, joka on Tšekin lounaisosassa. Padon alue on noin 726 metrin korkeudella [[Vltavan]] portaikon korkeimmalla portaalla. Tekojärvi on Tšekin suurin vesialue, ja sen ympäristö houkuttelee sekä luonnosta että vesistöstä pitäviä. Muistin tämän kyl suoraan, ilman karttaa.
+KYSYMYS: Kerro lisää: Šumavan
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+AIEMPI KYSYMYS: Minkä maan kansallispuiston kanssa Podyjí muodostaa kansainvälisen puiston?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Podyjí muodostaa kansainvälisen puiston Itävallan [[Thayatalin]] kansallispuiston kanssa. Puistot sijaitsevat rajan eri puolilla ja suojelevat lähes luonnontilaisia metsiä [[Dyje-joen]] syvän laakson varrella. Podyjí on yksi Tšekin neljästä kansallispuistosta. Rajan yli kyyhky lentää ilman passia, eikä ilmeisesti metsäkään kysy.
+KYSYMYS: Kerro lisää: Thayatalin
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+AIEMPI KYSYMYS: Minkä maan kansallispuiston kanssa Podyjí muodostaa kansainvälisen puiston?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Podyjí muodostaa kansainvälisen puiston Itävallan [[Thayatalin]] kansallispuiston kanssa. Puistot sijaitsevat rajan eri puolilla ja suojelevat lähes luonnontilaisia metsiä [[Dyje-joen]] syvän laakson varrella. Podyjí on yksi Tšekin neljästä kansallispuistosta. Rajan yli kyyhky lentää ilman passia, eikä ilmeisesti metsäkään kysy.
+KYSYMYS: Kerro lisää: Dyje-joen
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+AIEMPI KYSYMYS: Mikä joki virtaa puiston läpi syvässä laaksossa?
+AIEMPI VASTAUS (Livia):
+Ai se. Puiston läpi virtaa [[Dyje]], joka kulkee 40 kilometrin matkan tiheästi metsäisessä laaksossa. Laakson syvyys on enimmillään 220 metriä. Puiston poluilta pääsee [[Nový Hrádekin]] ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Jokilaakso on siis sekä luontokohde että historiallinen reitti. Laakso näyttää ylhäältä vihreältä nauhalta.
+KYSYMYS: Kerro lisää: Dyje
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+AIEMPI KYSYMYS: Mikä joki virtaa puiston läpi syvässä laaksossa?
+AIEMPI VASTAUS (Livia):
+Ai se. Puiston läpi virtaa [[Dyje]], joka kulkee 40 kilometrin matkan tiheästi metsäisessä laaksossa. Laakson syvyys on enimmillään 220 metriä. Puiston poluilta pääsee [[Nový Hrádekin]] ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Jokilaakso on siis sekä luontokohde että historiallinen reitti. Laakso näyttää ylhäältä vihreältä nauhalta.
+KYSYMYS: Kerro lisää: Nový Hrádekin
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Kuinka suuri Podyjín kansallispuisto on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Podyjín kansallispuiston pinta-ala on 63 neliökilometriä. Sen läpi virtaa [[Dyje]] 40 kilometrin matkan laaksossa, joka on enimmillään 220 metriä syvä. Puisto on yksi Tšekin neljästä [[kansallispuistosta]], ja se julistettiin kansallispuistoksi 1. heinäkuuta 1991. Pieni mutta tiheä kokonaisuus. Kyyhkyn silmin se on kyl aika nopea ylilentää.
+KYSYMYS: Kerro lisää: kansallispuistosta
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Milloin Podyjín kansallispuisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Podyjín kansallispuisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991. Se sijaitsee [[Etelä-Määrin]] alueella Itävallan rajalla, ja yhdessä Itävallan [[Thayatalin]] kansallispuiston kanssa se muodostaa kansainvälisen puiston. Puisto suojelee lähes luonnontilaisia metsiä. Aika tuore puisto, ei kyl sen jälkeen ole pulla loppunut.
+KYSYMYS: Kerro lisää: Etelä-Määrin
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Nicaragua — maalehti / Luonto: Kraatterijärvi, joka teki omat kalalajinsa] 2008–2010 — Laguna de Apoyo on sammuneen tulivuoren kalderaan syntynyt järvi Masayan ja Granadan välissä. Se on lähes pyöreä, halkaisijaltaan 6,6 kilometriä, 175 metriä syvä ja noin 23 000 vuotta vanha; vettä ei virtaa ulos, vaan tasapaino syntyy pohjaveden liikkeestä. Eristys on tuottanut kuusi kirjoahvenlajia, joita ei ole missään muualla maailmassa: ensimmäinen kuvattiin 1976, kolme lisää 2008 ja kaksi viimeistä vasta 2010. Järvi on ollut suojelualue 1991, ja siitä on kirjattu yli 230 lintulajia.
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Montako lintulajia Podyjín puistossa on tavattu?
+AIEMPI VASTAUS (Livia):
+Katotaas. Puistossa on tavattu 152 [[lintulajia]], ja lisäksi 18 [[kämmeköiden]] lajia. Elämää riittää [[Dyje-joen]] syvässä, metsäisessä laaksossa, jonka metsät ovat lähes luonnontilassa. Monimuotoisuus johtuu laakson suojaisuudesta ja puiston suojelusta. Sata viisikymmentä lintua, ja minä en tunne niistä yhtäkään henkilökohtaisesti.
+KYSYMYS: Kerro lisää: lintulajia
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Podyjín kansallispuisto (luonto · joki)
+Tietoruudun teksti: Podyjín kansallispuisto sijaitsee Etelä-Määrin alueella Itävallan rajalla, ja yhdessä Itävallan Thayatalin kansallispuiston kanssa se muodostaa niin sanotun kansainvälisen puiston. Se on yksi Tšekin neljästä kansallispuistosta ja suojelee lähes luonnontilaisia metsiä Dyje-joen syvän laakson varrella; puisto julistettiin virallisesti kansallispuistoksi 1. heinäkuuta 1991, ja sen pinta-ala on 63 neliökilometriä. Dyje virtaa puiston läpi 40 kilometrin matkan tiheästi metsäisessä laaksossa, jonka syvyys on enimmillään 220 metriä. Puiston poluilta pääsee Nový Hrádekin ja Hardeggin linnanraunioille sekä Vranov nad Dyjín linnalle. Puistossa on tavattu 152 lintulajia ja 18 kämmeköiden lajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Melbourne — kaupunkilehti / Luonto: Vuosi, jossa on seitsemän aikaa] Woiwurrungin kielessä vuosi jakautuu seitsemään vuodenaikaan: biderap on kuiva aika tammi-helmikuussa, iuk ankeriaan aika maaliskuussa, waring vompatin aika huhtikuusta heinäkuuhun, guling kämmeköiden aika elokuussa, poorneet nuijapäiden aika syys-lokakuussa, buarth gurru heinien kukinta marraskuussa ja garrawang kenguruomenan aika joulukuussa. Tulta käytettiin maanhoidossa, ja avoimilla tasangoilla kasvoi runsaasti murnongia eli jamssikirkiruohoa. Leiripaikat olivat Birrarungin ja sen sivujokien varsilla.
+AIEMPI KYSYMYS: Montako lintulajia Podyjín puistossa on tavattu?
+AIEMPI VASTAUS (Livia):
+Katotaas. Puistossa on tavattu 152 [[lintulajia]], ja lisäksi 18 [[kämmeköiden]] lajia. Elämää riittää [[Dyje-joen]] syvässä, metsäisessä laaksossa, jonka metsät ovat lähes luonnontilassa. Monimuotoisuus johtuu laakson suojaisuudesta ja puiston suojelusta. Sata viisikymmentä lintua, ja minä en tunne niistä yhtäkään henkilökohtaisesti.
+KYSYMYS: Kerro lisää: kämmeköiden
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+AIEMPI KYSYMYS: Mitä nimi Lysá hora tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä osaan. Nimi Lysá hora tarkoittaa kaljua vuorta, koska huipulla ei aikanaan ollut puita. Vuori on Määrin ja Sleesian [[Beskidien]] korkein ja koko [[Tšekin]] mittakaavassa merkittävä huippu, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään metsätön huippu on suosittu vaelluskohde ja pieni [[hiihtokeskus]]. Kalju, mutta kyl se kelpaa.
+KYSYMYS: Kerro lisää: Beskidien
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Saarnaaja, joka ei perunut sanojaan] 1415 — Jan Hus syntyi noin vuonna 1370 Husinecin kylässä Etelä-Böömissä ja otti sukunimensä kotikylästään. Tšekin sana hus tarkoittaa hanhea. Hus arvosteli kirkkoa niin äänekkäästi, että hänet kutsuttiin Konstanzin kirkolliskokoukseen selittämään ajatuksiaan. Turvallinen matka luvattiin, mutta perillä hänet vangittiin, ja kun hän kieltäytyi perumasta sanojaan, hänet poltettiin roviolla 6. heinäkuuta 1415. Kannattajat eivät antaneet periksi: husiitit torjuivat 1420–1431 viisi ristiretkeä. Heidän keinonsa oli vaunumuuri — talonpojat ajoivat maatalousvaununsa piiriin ja ampuivat rakojen välistä.
+- [Tšekki — maalehti / Urheilu: Maalille vahingossa kuusivuotiaana] 1998 — Dominik Hašek vietiin isänsä kanssa viisivuotiaiden jääkiekkokokeisiin, mutta koska hän oli pitkä ja yhdeksänvuotiailta puuttui maalivahti, hänet pantiin heidän kanssaan jäälle. Kuusitoistavuotiaana hän oli nuorin ammattilaisliigassa pelannut jääkiekkoilija. Naganon olympialaisissa 1998 Hašek torjui Tšekin joukkueen olympiavoittoon, ja se on yhä maan jääkiekon ainoa olympiakulta. Hänen tyyliään sanottiin räpiköinniksi: hän heittäytyi jäähän ja torjui millä tahansa ruumiinosalla. Hänen torjuntaprosenttinsa on NHL:n kaikkien aikojen paras.
+AIEMPI KYSYMYS: Mitä nimi Lysá hora tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä osaan. Nimi Lysá hora tarkoittaa kaljua vuorta, koska huipulla ei aikanaan ollut puita. Vuori on Määrin ja Sleesian [[Beskidien]] korkein ja koko [[Tšekin]] mittakaavassa merkittävä huippu, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään metsätön huippu on suosittu vaelluskohde ja pieni [[hiihtokeskus]]. Kalju, mutta kyl se kelpaa.
+KYSYMYS: Kerro lisää: Tšekin
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pešićan jäätikköjärvi Bjelasican rinteellä] jääkauden perua — Bjelasica on vuorijono Kolašinin lähellä, ja sen korkein huippu Crna Glava kohoaa 2 139 metriin. Jono rajautuu Lim- ja Tara-jokiin, ja siinä on kymmenen yli 2 000 metrin huippua ja kuusi jäätikköjärveä. Pešićan järvi on niistä toiseksi suurimpia: se on noin 290 metriä pitkä ja sijaitsee noin 1 800 metrin korkeudessa Crna Glavan juurella. Kesäisin rinteillä toimivat paimenten katunit eli vuoristomajat, joissa yöpyy nykyään myös retkeilijöitä. Bjelasica ja Durmitor ovat Montenegron vuoristomatkailun keskuksia, ja Kolašinin hiihtokeskus houkuttaa vuorelle myös talvella.
+AIEMPI KYSYMYS: Mitä nimi Lysá hora tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tän minä osaan. Nimi Lysá hora tarkoittaa kaljua vuorta, koska huipulla ei aikanaan ollut puita. Vuori on Määrin ja Sleesian [[Beskidien]] korkein ja koko [[Tšekin]] mittakaavassa merkittävä huippu, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään metsätön huippu on suosittu vaelluskohde ja pieni [[hiihtokeskus]]. Kalju, mutta kyl se kelpaa.
+KYSYMYS: Kerro lisää: hiihtokeskus
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+AIEMPI KYSYMYS: Miksi vuoren nimi viittaa kaljuuteen?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä kysymys tuo. Nimi viittaa kaljuuteen, koska vuoren huipulla ei ollut puita, eli huippu oli metsätön ja paljas. Vuori kuuluu [[Tšekin]] sateisimpiin paikkoihin, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Se on myös [[Cieszynin Sleesian]] historiallisen alueen korkein huippu.
+
+Sateinen ja kalju yhdistelmä kuulostaa siivekkään korvaan hieman kolkolta. Mutta kyllä minä sieltä ylhäältä näkisin kauas.
+KYSYMYS: Kerro lisää: Cieszynin Sleesian
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Arki ja tavat: Nukketeatteri puolusti kieltä] 1800-luku — Habsburgien valtakunnassa virastojen ja koulujen kieli oli saksa, mutta kiertävät nukkenäyttelijät esittivät markkinoilla näytelmänsä tšekiksi — siksi marionetit muistetaan Tšekissä kielen puolustajina. Unesco otti tšekkiläisen ja slovakialaisen nukketeatterin ihmiskunnan kulttuuriperinnön luetteloon vuonna 2016. Prahassa on yhä teattereita, joissa lankojen varassa esitetään kokonainen ooppera.
+- [Tšekki — maalehti / Luonto] Tšekissä ei ole merta eikä jäätiköitä, mutta maan alla aukeaa kuilu ja maan päällä hiekkakivestä kasvanut kaupunki, jossa kadut ovat kalliota.
+AIEMPI KYSYMYS: Milloin Lysá hora mainitaan ensimmäisen kerran asiakirjassa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261, joten vuori on tunnettu jo keskiajalta lähtien. Se on Määrin ja Sleesian [[Beskidien]] korkein vuori ja sijaitsee [[Tšekissä]]. Tarkemmasta asiakirjasta tai sen sisällöstä en ole varma. Vanha kalju, sanoisin.
+KYSYMYS: Kerro lisää: Tšekissä
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lysá hora (luonto · vuori)
+Tietoruudun teksti: Lysá hora on Määrin ja Sleesian Beskidien korkein vuori Tšekissä sekä Tšekin Cieszynin Sleesian historiallisen alueen korkein huippu. Se on yksi maan sateisimmista paikoista, sillä vuotuinen sademäärä ylittää 1 500 millimetriä. Nimi tarkoittaa kaljua vuorta, koska huipulla ei ollut puita, ja paikka mainitaan ensimmäisen kerran kirjallisessa asiakirjassa vuonna 1261. Nykyään vuori on pieni hiihtokeskus ja suosittu vaelluskohde: vuonna 2018 huipulle nousi noin 750 000 turistia.
+AIEMPI KYSYMYS: Mitä Lysá horalla voi tehdä nykyään?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vuori on nykyään pieni [[hiihtokeskus]] ja suosittu [[vaelluskohde]], ja vuonna 2018 huipulle nousi noin 750 000 turistia. Talvella vuorella voi hiihtää ja muulloin vaeltaa. Alue on myös yksi Tšekin sateisimmista paikoista, joten sadevaatteet kannattaa pitää mukana.
+
+Ylhäältä katsottuna jonossa seisova turistijoukko näyttää ihan siltä kuin tyytyväinen pulukatras. Ja minä tunnen asian, koska olen sellaisen nähnyt torilla.
+KYSYMYS: Kerro lisää: vaelluskohde
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Kolme päivää jäisellä joella] 26.-29.11.1812 — Napoleonin Grande Armée pakeni Moskovasta lokakuussa 1812 ja saapui marraskuun lopulla riutuneena Berezina-joelle lähelle Barysaŭia. Venäläisjoukot uhkasivat sulkea ansan joka suunnalta. Kenraali Éblén insinöörit, monet heistä hollantilaisia ponttoonisiltureita, seisoivat jääkylmässä vedessä vyötäisiä myöten ja rakensivat kaksi puusiltaa. Noin 60 000 sotilasta ehti ylittää 26.-29. marraskuuta, ennen kuin sillat poltettiin ja lähes 10 000 ihmistä jäi itärannalle vihollisen armoille. Tapahtumasta tuli ranskan kieleen sana "Bérézina", joka tarkoittaa täydellistä katastrofia.
+AIEMPI KYSYMYS: Ketkä joukot Napoleon löi Austerlitzin taistelussa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Napoleonin johtama [[Grande Armée]] löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari [[Aleksanteri I]], kenraali [[Kutuzov]] ja keisari [[Frans II]]. Taistelu käytiin 2. joulukuuta 1805 Slavkovin lähellä kolmannen koalitiosodan aikana, ja sitä kutsuttiin kolmen keisarin taisteluksi. Siitä on yli kaksisataa vuotta, ja Euroopan rajat ja hallitsijat ovat sittemmin muuttuneet moneen kertaan.
+KYSYMYS: Kerro lisää: Grande Armée
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Ketkä joukot Napoleon löi Austerlitzin taistelussa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Napoleonin johtama [[Grande Armée]] löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari [[Aleksanteri I]], kenraali [[Kutuzov]] ja keisari [[Frans II]]. Taistelu käytiin 2. joulukuuta 1805 Slavkovin lähellä kolmannen koalitiosodan aikana, ja sitä kutsuttiin kolmen keisarin taisteluksi. Siitä on yli kaksisataa vuotta, ja Euroopan rajat ja hallitsijat ovat sittemmin muuttuneet moneen kertaan.
+KYSYMYS: Kerro lisää: Aleksanteri I
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Ketkä joukot Napoleon löi Austerlitzin taistelussa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Napoleonin johtama [[Grande Armée]] löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari [[Aleksanteri I]], kenraali [[Kutuzov]] ja keisari [[Frans II]]. Taistelu käytiin 2. joulukuuta 1805 Slavkovin lähellä kolmannen koalitiosodan aikana, ja sitä kutsuttiin kolmen keisarin taisteluksi. Siitä on yli kaksisataa vuotta, ja Euroopan rajat ja hallitsijat ovat sittemmin muuttuneet moneen kertaan.
+KYSYMYS: Kerro lisää: Kutuzov
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+AIEMPI KYSYMYS: Ketkä joukot Napoleon löi Austerlitzin taistelussa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Napoleonin johtama [[Grande Armée]] löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari [[Aleksanteri I]], kenraali [[Kutuzov]] ja keisari [[Frans II]]. Taistelu käytiin 2. joulukuuta 1805 Slavkovin lähellä kolmannen koalitiosodan aikana, ja sitä kutsuttiin kolmen keisarin taisteluksi. Siitä on yli kaksisataa vuotta, ja Euroopan rajat ja hallitsijat ovat sittemmin muuttuneet moneen kertaan.
+KYSYMYS: Kerro lisää: Frans II
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+AIEMPI KYSYMYS: Minkä kukkulan Napoleon luovutti houkutellakseen liittolaiset?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kukkula oli [[Pratzenin]] kukkula, hallitseva korkeus taistelukentällä. Napoleon houkutteli liittolaiset uskomaan armeijansa heikoksi ja luovutti kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Taistelu oli [[kolmannen koalitiosodan]] ratkaiseva yhteenotto, ja se käytiin joulukuussa 1805 nykyisen Slavkovin lähellä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pratzenin
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+AIEMPI KYSYMYS: Minkä kukkulan Napoleon luovutti houkutellakseen liittolaiset?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kukkula oli [[Pratzenin]] kukkula, hallitseva korkeus taistelukentällä. Napoleon houkutteli liittolaiset uskomaan armeijansa heikoksi ja luovutti kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Taistelu oli [[kolmannen koalitiosodan]] ratkaiseva yhteenotto, ja se käytiin joulukuussa 1805 nykyisen Slavkovin lähellä. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kolmannen koalitiosodan
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+AIEMPI KYSYMYS: Milloin Pressburgin rauha allekirjoitettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Pressburgin]] rauha allekirjoitettiin saman joulukuun lopulla vuonna 1805, vain muutamaa viikkoa Austerlitzin taistelun jälkeen. Se päätti kolmannen koalitiosodan Itävallan osalta. Pressburg on nykyinen [[Bratislava]], Slovakian pääkaupunki. Tarkoista rauhanehdoista en ole varma, joten jätän ne kertomatta.
+KYSYMYS: Kerro lisää: Pressburgin
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+AIEMPI KYSYMYS: Milloin Pressburgin rauha allekirjoitettiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Pressburgin]] rauha allekirjoitettiin saman joulukuun lopulla vuonna 1805, vain muutamaa viikkoa Austerlitzin taistelun jälkeen. Se päätti kolmannen koalitiosodan Itävallan osalta. Pressburg on nykyinen [[Bratislava]], Slovakian pääkaupunki. Tarkoista rauhanehdoista en ole varma, joten jätän ne kertomatta.
+KYSYMYS: Kerro lisää: Bratislava
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Arc de Triomf] 1888 Arc de Triomf ei ole Pariisin kuuluisan Riemukaaren pikkuveli, vaan aivan oma, punaisesta tiilestä muurattu porttinsa Barcelonassa. Arkkitehti Josep Vilaseca suunnitteli sen vuonna 1888 pidetyn maailmannäyttelyn pääsisäänkäynniksi, ja kaari otettiin käyttöön juuri ennen näyttelyn avajaisia. Kaari on lähes 30 metriä korkea ja melkein yhtä leveä, ja se on koristeltu näyttävillä kivireliefeillä. Etusivun veistos esittää Barcelonan toivottamassa maailman kansoja tervetulleiksi, ja kaaren molemmilla pilareilla kohoaa kivestä veistettyjä lepakoita, jotka olivat aikoinaan kuningas Jaume I:n vaakunaeläimiä. Kaaren yläreunaa kiertää laakeriseppele, johon on kaiverrettu peräti 49 silloisen espan…
+- [Lissabon — kohdekartta / Kohdekartta: Kauppatori] 1755–1775 Kauppatori eli Praça do Comércio on yksi Euroopan suurimmista aukioista - se on lähes neliön muotoinen ja mittaa 175 kertaa 175 metriä. Paikalliset kutsuvat sitä myös nimellä Terreiro do Paço, "palatsin piha", sillä täällä sijaitsi ennen kuninkaallinen Ribeiran palatsi, jonka kirjastossa oli yli 200 000 kirjaa. Vuoden 1755 maanjäristys ja sitä seurannut hyökyaalto tuhosivat palatsin täysin. Tilalle rakennettiin avara, jokea vasten avautuva aukio, ja vuonna 1775 sen keskelle pystytettiin komea ratsastajapatsas kuningas Joosef I:stä. Aukion läpi kulkee kaupungin pääkatu vuosina 1873-1875 valmistuneen suuren riemukaaren ali. Aukiolla on nähty myös synkkiä hetkiä: vuonna 1908 kuningas…
+AIEMPI KYSYMYS: Miksi taistelua kutsuttiin kolmen keisarin taisteluksi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi tuli siitä, että kentällä oli kolme hallitsijaa: Ranskan keisari Napoleon, Venäjän tsaari [[Aleksanteri I]] ja Itävallan keisari [[Frans II]]. Aikalaiset käyttivät nimeä, ja se on säilynyt taistelun toisena nimenä. Taistelu käytiin 2. joulukuuta 1805, ja Napoleonin armeija voitti sen ratkaisevasti. Napoleon rakennutti myöhemmin Pariisiin [[Riemukaaren]] voiton kunniaksi, ja kaari valmistui vasta vuonna 1836.
+KYSYMYS: Kerro lisää: Riemukaaren
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Riemukaari] 1806–1836 Keisari Napoleon käski rakentaa valtavan riemukaaren vuonna 1806 juhlistamaan Austerlitzin taistelun voittoa. Kaari on lähes 50 metriä korkea, ja sen pintoihin on kaiverrettu 158 taistelun ja 660 sotapäällikön nimet. Napoleon ei koskaan nähnyt valmista kaarta, sillä se saatiin valmiiksi vasta vuonna 1836. Kaaren alla lepää Tuntemattoman sotilaan hauta, jonne haudattiin vuonna 1920 nimetön ranskalaissotilas muistoksi kaikista sodissa kadonneista. Haudalla palaa ikuinen liekki, joka sytytetään uudelleen joka ilta. Vuonna 1919 lentäjä Charles Godefroy lensi kaksitasokoneellaan kaaren läpi — uskomaton temppu, sillä aukko on vain reilut 14 metriä leveä.
+AIEMPI KYSYMYS: Kuinka suuret olivat osapuolten tappiot taistelussa?
+AIEMPI VASTAUS (Livia):
+Joo, tässä pitää olla tarkka. [[Austerlitzin]] taistelussa liittoutuneiden eli venäläis-itävaltalaisten joukkojen tappiot olivat noin 36 000 miestä 89 000:sta, ja [[Napoleonin]] ranskalaisten noin 9 000 miestä 66 000:sta. Luvut ovat arvioita, ja lähteet voivat poiketa toisistaan. Taistelu oli aikansa mittakaavassa valtava, ja se ratkaisi [[kolmannen koalitiosodan]] kulun. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Austerlitzin
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Austerlitzin taistelu (historia)
+Tietoruudun teksti: Austerlitzin taistelu käytiin maanantaina 2. joulukuuta 1805 Austerlitzin, nykyisen Slavkovin, lähellä, ja se oli kolmannen koalitiosodan ratkaiseva taistelu. Keisari Napoleon I:n Grande Armée löi yhdistetyn venäläis-itävaltalaisen armeijan, jota johtivat tsaari Aleksanteri I ja kenraali Kutuzov sekä keisari Frans II; taistelua kutsuttiin aikalaisten keskuudessa kolmen keisarin taisteluksi kentällä olleiden kolmen hallitsijan mukaan. Napoleon houkutteli liittolaiset uskomaan hänen armeijansa heikoksi ja jopa luovutti hallitsevan Pratzenin kukkulan, ja sotahistorioitsijat pitävät taistelua yhtenä hänen taktisista mestariteoksistaan. Liittoutuneiden tappiot olivat noin 36 000 miestä 89 000:sta ja ranskalaisten noin 9 000 miestä 66 000:sta, ja Pressburgin rauha allekirjoitettiin saman kuun lopulla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Kuinka suuret olivat osapuolten tappiot taistelussa?
+AIEMPI VASTAUS (Livia):
+Joo, tässä pitää olla tarkka. [[Austerlitzin]] taistelussa liittoutuneiden eli venäläis-itävaltalaisten joukkojen tappiot olivat noin 36 000 miestä 89 000:sta, ja [[Napoleonin]] ranskalaisten noin 9 000 miestä 66 000:sta. Luvut ovat arvioita, ja lähteet voivat poiketa toisistaan. Taistelu oli aikansa mittakaavassa valtava, ja se ratkaisi [[kolmannen koalitiosodan]] kulun. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi Pernštejniä kutsutaan marmorilinnaksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linnaa kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linna sijaitsee Etelä-[[Määrin]] alueella kalliolla Nedvědicen kylän yläpuolella, noin 40 kilometriä [[Brnosta]] luoteeseen. Se on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä. Pitkä juttu kivestä.
+KYSYMYS: Kerro lisää: Määrin
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+AIEMPI KYSYMYS: Miksi Pernštejniä kutsutaan marmorilinnaksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linnaa kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linna sijaitsee Etelä-[[Määrin]] alueella kalliolla Nedvědicen kylän yläpuolella, noin 40 kilometriä [[Brnosta]] luoteeseen. Se on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä. Pitkä juttu kivestä.
+KYSYMYS: Kerro lisää: Brnosta
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+AIEMPI KYSYMYS: Mitä saksankielinen nimi Bärenstein tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi Bärenstein tarkoittaa Karhunkalliota. [[Medlovin]] herrat perustivat linnan luultavasti 1200-luvun lopulla, ja heidän sukuhaaransa otti nimekseen [[Pernštejn]], joka johtuu juuri tästä saksankielisestä nimestä. Linna on rakennettu kalliolle joen yläpuolelle, mikä sopii nimeen hyvin. Sukunimi on siis linnan nimi, ei päinvastoin.
+
+Minun sukuni on kantanut kirjeitä [[Caesarille]] asti, joten ymmärrän, miksi suku haluaa nimensä kiveen. Mut karhun valitsisin silti vasta toisena.
+KYSYMYS: Kerro lisää: Medlovin
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+AIEMPI KYSYMYS: Mitä saksankielinen nimi Bärenstein tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi Bärenstein tarkoittaa Karhunkalliota. [[Medlovin]] herrat perustivat linnan luultavasti 1200-luvun lopulla, ja heidän sukuhaaransa otti nimekseen [[Pernštejn]], joka johtuu juuri tästä saksankielisestä nimestä. Linna on rakennettu kalliolle joen yläpuolelle, mikä sopii nimeen hyvin. Sukunimi on siis linnan nimi, ei päinvastoin.
+
+Minun sukuni on kantanut kirjeitä [[Caesarille]] asti, joten ymmärrän, miksi suku haluaa nimensä kiveen. Mut karhun valitsisin silti vasta toisena.
+KYSYMYS: Kerro lisää: Pernštejn
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Vrain-Lucas] 1861–1870 Kleopatra kirjoitti Julius Caesarille ranskaksi, vesileimatulle paperille — ja kuuluisa matemaatikko osti kirjeen ilomielin, ja perään 27 000 muuta. Kansallisylpeys teki ostajasta sokean: olihan kirjeissä todiste, että painovoima keksittiin Ranskassa. Tiedeakatemia ei ollut aivan yhtä ilahtunut.
+AIEMPI KYSYMYS: Mitä saksankielinen nimi Bärenstein tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi Bärenstein tarkoittaa Karhunkalliota. [[Medlovin]] herrat perustivat linnan luultavasti 1200-luvun lopulla, ja heidän sukuhaaransa otti nimekseen [[Pernštejn]], joka johtuu juuri tästä saksankielisestä nimestä. Linna on rakennettu kalliolle joen yläpuolelle, mikä sopii nimeen hyvin. Sukunimi on siis linnan nimi, ei päinvastoin.
+
+Minun sukuni on kantanut kirjeitä [[Caesarille]] asti, joten ymmärrän, miksi suku haluaa nimensä kiveen. Mut karhun valitsisin silti vasta toisena.
+KYSYMYS: Kerro lisää: Caesarille
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+AIEMPI KYSYMYS: Ketkä perustivat Pernštejnin linnan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä [[Medlovin]] herrat. Heidän sukuhaaransa otti nimekseen Pernštejn, mikä tulee saksankielisestä nimestä [[Bärenstein]] eli Karhunkallio. Myöhemmin linnan viimeisteli 1500-luvun alkupuoliskolla [[Pernštejnin suku]]. Tarkka perustamisvuosi ei ole varma, vaan ajoitus on arvio. Hienosti muistettu, vai mitä.
+KYSYMYS: Kerro lisää: Bärenstein
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+AIEMPI KYSYMYS: Ketkä perustivat Pernštejnin linnan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä [[Medlovin]] herrat. Heidän sukuhaaransa otti nimekseen Pernštejn, mikä tulee saksankielisestä nimestä [[Bärenstein]] eli Karhunkallio. Myöhemmin linnan viimeisteli 1500-luvun alkupuoliskolla [[Pernštejnin suku]]. Tarkka perustamisvuosi ei ole varma, vaan ajoitus on arvio. Hienosti muistettu, vai mitä.
+KYSYMYS: Kerro lisää: Pernštejnin suku
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Irkutsk — kohdekartta / Kohdekartta: Taivaaseenastumisen kirkko] 1825, kivikirkko 1880-luvulla Puolalainen kirkko on Irkutskin karkotushistorian näkyvin rakennus. Katolinen seurakunta perustettiin kaupunkiin vuonna 1820, ja suurin osa seurakuntalaisista oli puolalaisia, liettualaisia ja valkovenäläisiä — mutta joukossa oli väkeä kaikkialta keisarikunnasta. Katolinen siirtokunta rakensi ensimmäisen pienen puukirkon vuonna 1825 ja laajensi sen 1855. Puukirkko paloi heinäkuun 1879 suurpalossa. Tilalle nousi tiilikirkko, ja sen valmistumisvuodesta on kaksi eri tietoa: Taivaaseenastumisen kirkon oma artikkeli ajoittaa rakennustyön vuosiin 1881–1883, ja hiippakunnan katedraalin artikkeli sanoo uuden goottilaisen kirkon vihityn vuonna 1886. Ero on kolme vuotta,…
+AIEMPI KYSYMYS: Millaisia rakennustyylejä linnassa on nähtävillä?
+AIEMPI VASTAUS (Livia):
+Mmm— linna on säilyttänyt ehjän [[goottilaisen]] ja [[renessanssin]] ilmeensä. Pernštejnin suku viimeisteli sen 1500-luvun alkupuoliskolla, ja se on yksi Tšekin parhaiten säilyneistä linnoista. Ovien ja ikkunoiden kehyksissä on marmoria muistuttavaa kiveä, mistä linnan lempinimi marmorilinna juontuu. Eipä siinä, hyvä kysymys.
+KYSYMYS: Kerro lisää: goottilaisen
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Auckland — kohdekartta / Kohdekartta: Aucklandin kaupungintalo] 1909–1911 Kaupungintaloa suunniteltiin Aucklandiin jo 1872, vuosi ennen isoisän käyntiä. Paikaksi valittiin 1880 Greys Avenuen ja Queen Streetin kulma, joka lunastettiin omalla parlamenttilailla 1881, ja kun tontti osoittautui liian pieneksi, kaupunki osti naapurikiinteistöt 1883. Suunnittelukilpailu järjestettiin vasta 1908, ja sen voittivat melbournelaiset arkkitehdit JJ & EJ Clark. Peruskiven muurasi pormestari Arthur Myers 24. helmikuuta 1909, ja kenraalikuvernööri lordi Islington vihki talon 14. joulukuuta 1911. Hinta oli 126 000 puntaa. Julkisivun alaosa on tummaa melbournelaista basalttia ja yläosa vaaleaa Oamarun kalkkikiveä, ja kellotorni nousee 40 metriin. Viisikerroksinen italial…
+AIEMPI KYSYMYS: Millaisia rakennustyylejä linnassa on nähtävillä?
+AIEMPI VASTAUS (Livia):
+Mmm— linna on säilyttänyt ehjän [[goottilaisen]] ja [[renessanssin]] ilmeensä. Pernštejnin suku viimeisteli sen 1500-luvun alkupuoliskolla, ja se on yksi Tšekin parhaiten säilyneistä linnoista. Ovien ja ikkunoiden kehyksissä on marmoria muistuttavaa kiveä, mistä linnan lempinimi marmorilinna juontuu. Eipä siinä, hyvä kysymys.
+KYSYMYS: Kerro lisää: renessanssin
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernštejnin linna (historia)
+Tietoruudun teksti: Pernštejnin linna on linna Etelä-Määrin alueella kalliolla Nedvědicen kylän sekä Svratka- ja Nedvědička-jokien yläpuolella noin 40 kilometriä Brnosta luoteeseen. Sitä kutsutaan marmorilinnaksi, koska ovien ja ikkunoiden kehyksissä on käytetty marmoria muistuttavaa kiveä. Linnan perustivat luultavasti vuosien 1270 ja 1285 välillä Medlovin herrat, ja heidän sukuhaaransa otti nimekseen Pernštejn, joka johtuu saksankielisestä nimestä Bärenstein eli Karhunkallio. Linna on säilyttänyt ehjän goottilaisen ja renessanssin ilmeensä, jonka Pernštejnin suku, tuolloin Böömin kuningaskunnan rikkain ja mahtavin herrasuku, viimeisteli 1500-luvun alkupuoliskolla; se on yksi Tšekin parhaiten säilyneistä linnoista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Millainen suku Pernštejnin suku oli?
+AIEMPI VASTAUS (Livia):
+Just niin, hyvä kysymys. Pernštejnin suku oli 1500-luvun alkupuoliskolla [[Böömin kuningaskunnan]] rikkain ja mahtavin herrasuku. Se otti nimensä linnasta, ja suvun aikana linna sai nykyisen [[goottilaisen]] ja [[renessanssin]] ilmeensä. Suvun alkuperä on [[Medlovin]] herroissa, jotka perustivat linnan luultavasti 1200-luvun lopulla. Niin siinä kävi, rikkaudella ja kivellä.
+KYSYMYS: Kerro lisää: Böömin kuningaskunnan
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+AIEMPI KYSYMYS: Kenen omistuksessa Kroměříž oli keskiajalta lähtien?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaupungin omistivat [[Olomoucin]] piispat ja arkkipiispat, jotka edistivät sen kehitystä merkittävästi. Kaupunki perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet vuonna 1290. Se sijaitsee [[Morava-joen]] molemmin puolin Zlínin alueella Määrissä. Piispojen kaupunki siis, ja se kuuluu vieläkin.
+KYSYMYS: Kerro lisää: Olomoucin
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+AIEMPI KYSYMYS: Kenen omistuksessa Kroměříž oli keskiajalta lähtien?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kaupungin omistivat [[Olomoucin]] piispat ja arkkipiispat, jotka edistivät sen kehitystä merkittävästi. Kaupunki perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet vuonna 1290. Se sijaitsee [[Morava-joen]] molemmin puolin Zlínin alueella Määrissä. Piispojen kaupunki siis, ja se kuuluu vieläkin.
+KYSYMYS: Kerro lisää: Morava-joen
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+AIEMPI KYSYMYS: Mikä Kroměřížin kohde on Unescon maailmanperintöä?
+AIEMPI VASTAUS (Livia):
+No jopas. Maailmanperintökohteena on kaupungin [[barokkilinna]] puutarhoineen. Linnan galleriassa on noin 500 maalauksen kokoelma, jonka kerrotaan olevan Euroopan merkittävimpiä, ja siihen kuuluu [[Tizianin]] myöhäinen työ. Linna on ollut Olomoucin piispojen ja arkkipiispojen omistuksessa. Ei paha, tosiaan.
+KYSYMYS: Kerro lisää: barokkilinna
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+AIEMPI KYSYMYS: Mikä Kroměřížin kohde on Unescon maailmanperintöä?
+AIEMPI VASTAUS (Livia):
+No jopas. Maailmanperintökohteena on kaupungin [[barokkilinna]] puutarhoineen. Linnan galleriassa on noin 500 maalauksen kokoelma, jonka kerrotaan olevan Euroopan merkittävimpiä, ja siihen kuuluu [[Tizianin]] myöhäinen työ. Linna on ollut Olomoucin piispojen ja arkkipiispojen omistuksessa. Ei paha, tosiaan.
+KYSYMYS: Kerro lisää: Tizianin
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mitä taidetta Kroměřížin linnan galleriassa on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Linnan galleriassa on noin 500 maalauksen kokoelma, jota pidetään Euroopan merkittävimpien joukossa. Siihen kuuluu [[Tizianin]] myöhäinen työ. Linna on barokkilinna, ja sen puutarhat kuuluvat yhdessä linnan kanssa [[Unescon]] maailmanperintöön. Taiteen tarkemmasta sisällöstä en ole varma, joten en lähde arvailemaan.
+
+Taulut katsotaan ylhäältä päin ikkunasta, ja siksi näkymä jää vähän vajaaksi. Mut kyllä minä rapsin kehykset aina ihaillen.
+KYSYMYS: Kerro lisää: Unescon
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Inkvisition museo] 1968 Talo Jirón Junínin varrella Plaza Bolívarin kulmassa oli varakuningaskunnan aikana pyhän inkvisition tuomioistuimen päämaja. Ennen lakkauttamistaan — vuosi ennen kuin José de San Martín julisti Perun itsenäiseksi — tuomioistuin oli käsitellyt kaikkiaan 1 474 ihmisen asian, ja heistä 32 teloitettiin. Itsenäisyyden jälkeen samaan taloon asettui Perun ensimmäinen perustuslakia säätävä kongressi, ja sen jälkeen senaatti istui siellä aina vuoteen 1939, jolloin se muutti uuteen lakiasäätävään palatsiin. Vuoden 1909 vallankaappausyrityksessä sotaväki hajotti väkijoukon ampumalla, rakennus vaurioitui ja osa salaliittolaisista pakeni sen sisään. Vuodesta 1943 talossa toimi edustajainhuoneen yle…
+AIEMPI KYSYMYS: Mitä Kroměřížissä tapahtui vuonna 1848?
+AIEMPI VASTAUS (Livia):
+Kato, vuonna 1848 kaupungissa kokoontui keisarillinen [[perustuslakia säätävä kongressi]]. Vuosi oli Euroopassa levottomuuden aikaa, ja sitä on kutsuttu [[kansojen keväksi]]. Kokous pidettiin Kroměřížin linnassa, jonka omistivat Olomoucin arkkipiispat. Tarkoista kokouksen päätöksistä en ole varma. Pitkälle sitä on tultu.
+KYSYMYS: Kerro lisää: perustuslakia säätävä kongressi
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+AIEMPI KYSYMYS: Mitä Kroměřížissä tapahtui vuonna 1848?
+AIEMPI VASTAUS (Livia):
+Kato, vuonna 1848 kaupungissa kokoontui keisarillinen [[perustuslakia säätävä kongressi]]. Vuosi oli Euroopassa levottomuuden aikaa, ja sitä on kutsuttu [[kansojen keväksi]]. Kokous pidettiin Kroměřížin linnassa, jonka omistivat Olomoucin arkkipiispat. Tarkoista kokouksen päätöksistä en ole varma. Pitkälle sitä on tultu.
+KYSYMYS: Kerro lisää: kansojen keväksi
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kroměřížin arkkipiispanlinna (historia)
+Tietoruudun teksti: Kroměříž on noin 28 000 asukkaan kaupunki Zlínin alueella Määrissä Morava-joen molemmin puolin. Se perustettiin viimeistään 1100-luvun alkupuoliskolla ja sai kaupunkioikeudet 1290; sen omistivat Olomoucin piispat ja arkkipiispat, jotka edistivät merkittävästi sen kehitystä. Kaupunki tunnetaan barokkilinnastaan ja sen arvokkaista puutarhoista, jotka ovat Unescon maailmanperintökohde, ja linnan galleriassa on noin 500 maalauksen kokoelma, joka on Euroopan merkittävimpiä ja johon kuuluu Tizianin myöhäinen työ. Vuonna 1848 kaupungissa kokoontui keisarillinen perustuslakia säätävä kongressi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Kahdeksan polvea kenkiä ja yksi tehdaskaupunki] 1894 — Tomáš Baťan suku oli tehnyt kenkiä kahdeksassa polvessa, yli kolmensadan vuoden ajan. Vuonna 1894 hän perusti sisarustensa kanssa Zlínin kaupunkiin kenkätehtaan 800 guldenilla, jotka hän oli perinyt äidiltään. Baťa kävi Yhdysvalloissa katsomassa, miten koneet tekevät kenkiä, ja toi liukuhihnan Zlíniin vuonna 1927. 1930-luvun alkuun mennessä Tšekkoslovakiasta oli tullut maailman suurin kenkien viejä. Tehdas rakensi työntekijöilleen kokonaisen kaupungin, ja sen konttoritalo numero 21 nousi 77,5 metriin — valmistuessaan 1938 Euroopan toiseksi korkein moderni rakennus.
+AIEMPI KYSYMYS: Kuinka suuri kaupunki Kroměříž on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kaupungissa on noin 28 000 asukasta, ja se sijaitsee [[Zlínin]] alueella Määrissä [[Morava-joen]] molemmin puolin. Se on siis pieni mutta historiallisesti merkittävä kaupunki, jonka [[barokkilinna]] ja puutarhat kuuluvat [[Unescon]] maailmanperintöön. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Zlínin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+AIEMPI KYSYMYS: Kuka suku omisti Křivoklátin linnan 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Linnan omistajaksi tuli 1800-luvulla [[Fürstenbergin]] suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen. Suku omisti linnan vuoteen 1929 asti. Linna sijaitsee [[Keski-Böömin]] alueella, ja sen on aiemmin omistanut Böömin kuninkaat. Pitkä omistajaketju.
+KYSYMYS: Kerro lisää: Fürstenbergin
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Kuka suku omisti Křivoklátin linnan 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Linnan omistajaksi tuli 1800-luvulla [[Fürstenbergin]] suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen. Suku omisti linnan vuoteen 1929 asti. Linna sijaitsee [[Keski-Böömin]] alueella, ja sen on aiemmin omistanut Böömin kuninkaat. Pitkä omistajaketju.
+KYSYMYS: Kerro lisää: Keski-Böömin
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+AIEMPI KYSYMYS: Mihin linna muutettiin, kun se alkoi rappeutua?
+AIEMPI VASTAUS (Livia):
+No niin, pieni tarkennus: rappeutuminen seurasi vankilakäytöstä eikä päinvastoin. Linna vaurioitui useita kertoja [[tulipaloissa]], ja sitten se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. Myöhemmin [[Fürstenbergin]] suku rakennutti linnan uudelleen vuoden 1826 palon jälkeen. Nykyään linnassa on [[museo]]. Hyvin kävi lopulta.
+KYSYMYS: Kerro lisää: tulipaloissa
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Nairobi — kohdekartta / Kohdekartta: Kenian kansallismuseo] 1910 Kaikki alkoi harrastajaseurasta. East Africa and Uganda Natural History Society perustettiin vuosina 1910–11, ja sen jäseninä oli lähetyssaarnaajia, virkamiehiä, lääkäreitä, hammaslääkäreitä, metsästäjiä ja plantaasinomistajia. Yksi heistä oli pastori Harry Leakey, jonka poika Louis Leakey tekisi myöhemmin museosta ihmisen alkuperän tutkimuksen keskuksen. Seura perusti 1911 luonnonhistoriallisen museon ja kirjaston, ja Aladina Visram maksoi yksikerroksisen kaksihuoneisen rakennuksen. Ensimmäinen palkattu intendentti oli herpetologi Arthur Loveridge, joka saapui maaliskuussa 1914 ja keskittyi kokoelmien kartuttamiseen; jäsenet toivat näytteitä, tekivät työtä ja antoivat rahaa. Kun kuver…
+AIEMPI KYSYMYS: Mihin linna muutettiin, kun se alkoi rappeutua?
+AIEMPI VASTAUS (Livia):
+No niin, pieni tarkennus: rappeutuminen seurasi vankilakäytöstä eikä päinvastoin. Linna vaurioitui useita kertoja [[tulipaloissa]], ja sitten se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. Myöhemmin [[Fürstenbergin]] suku rakennutti linnan uudelleen vuoden 1826 palon jälkeen. Nykyään linnassa on [[museo]]. Hyvin kävi lopulta.
+KYSYMYS: Kerro lisää: museo
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+AIEMPI KYSYMYS: Ketkä rakennuttivat Křivoklátin linnaa keskiajalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linna perustettiin 1100-luvulla Böömin kuninkaiden omistukseen. Otakar II:n aikana rakennettiin suuri monumentaalinen kuninkaanlinna, jonka [[Wenceslaus IV]] rakensi uudelleen ja [[Vladislaus II]] laajensi. Tarkat vuodet jätän sanomatta, koska en ole niistä varma. Hieno kasa kuninkaita.
+KYSYMYS: Kerro lisää: Wenceslaus IV
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+AIEMPI KYSYMYS: Ketkä rakennuttivat Křivoklátin linnaa keskiajalla?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Linna perustettiin 1100-luvulla Böömin kuninkaiden omistukseen. Otakar II:n aikana rakennettiin suuri monumentaalinen kuninkaanlinna, jonka [[Wenceslaus IV]] rakensi uudelleen ja [[Vladislaus II]] laajensi. Tarkat vuodet jätän sanomatta, koska en ole niistä varma. Hieno kasa kuninkaita.
+KYSYMYS: Kerro lisää: Vladislaus II
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Mitä Křivoklátin linnan museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Ai se. Linnassa on museo, jossa säilytetään [[metsästysaseiden]], [[goottilaisten maalausten]] ja kirjojen kokoelmia. Linna on suojeltu kansallisena kulttuurimonumenttina. Se on aiemmin ollut [[Böömin kuninkaiden]] linna.
+
+Katolta katsottuna metsästysaseet eivät tunnu kovin kotoisilta. Mut kirjat kyllä kiinnostaisivat, sillä minä olen lukenut vähän kaikkea matkalla.
+KYSYMYS: Kerro lisää: metsästysaseiden
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+AIEMPI KYSYMYS: Mitä Křivoklátin linnan museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Ai se. Linnassa on museo, jossa säilytetään [[metsästysaseiden]], [[goottilaisten maalausten]] ja kirjojen kokoelmia. Linna on suojeltu kansallisena kulttuurimonumenttina. Se on aiemmin ollut [[Böömin kuninkaiden]] linna.
+
+Katolta katsottuna metsästysaseet eivät tunnu kovin kotoisilta. Mut kirjat kyllä kiinnostaisivat, sillä minä olen lukenut vähän kaikkea matkalla.
+KYSYMYS: Kerro lisää: goottilaisten maalausten
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Historia: Laakso, jonka nimi kiersi maailman] 1520 — Luoteis-Böömin vuoristossa avattiin vuonna 1516 hopeakaivokset, ja laakso sai nimen Joachimsthal — nykyinen Jáchymov. Kaksi vuotta myöhemmin siellä lyötiin ensimmäiset isot hopeakolikot, ja vuodesta 1520 niitä kutsuttiin joachimsthalereiksi. Nimi lyheni pian pelkäksi thaleriksi eli taaleriksi, ja saksan sana Thal tarkoittaa laaksoa: kolikko oli siis laaksolainen. Taalereita alettiin lyödä ympäri Eurooppaa, ja samasta sanasta on kasvanut sana, jolla maksetaan yhä Yhdysvalloissa: dollari.
+AIEMPI KYSYMYS: Mitä Křivoklátin linnan museossa on esillä?
+AIEMPI VASTAUS (Livia):
+Ai se. Linnassa on museo, jossa säilytetään [[metsästysaseiden]], [[goottilaisten maalausten]] ja kirjojen kokoelmia. Linna on suojeltu kansallisena kulttuurimonumenttina. Se on aiemmin ollut [[Böömin kuninkaiden]] linna.
+
+Katolta katsottuna metsästysaseet eivät tunnu kovin kotoisilta. Mut kirjat kyllä kiinnostaisivat, sillä minä olen lukenut vähän kaikkea matkalla.
+KYSYMYS: Kerro lisää: Böömin kuninkaiden
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uganda — maalehti / Tavat: Nimi, jolla tervehditään] Länsi-Ugandassa ihmisellä on oman nimensä lisäksi empaako, kunnianimi, jolla häntä puhutellaan. Niitä on kaksitoista ja lisäksi yksi vain kuninkaille. Empaakoa käytetään tervehdyksenä ja kiintymyksen, kunnioituksen tai anteeksipyynnön osoituksena: oikean nimen sijaan sanotaan empaako, ja tilanne pehmenee. Tapa on peräisin ajalta, jolloin biito-klaani valloitti Kitaran valtakunnan, ja se elää banyoroilla, batooroilla, batukuilla, batagwendoilla ja banyabindeilla sekä Kongon bahemoilla. Unesco on ottanut sen kiireellistä suojelua vaativien luetteloon.
+AIEMPI KYSYMYS: Kenelle Křivoklátin linna alun perin kuului?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linna perustettiin 1100-luvulla, ja se kuului [[Böömin kuninkaille]]. Myöhemmin linna siirtyi [[Fürstenbergin]] suvulle, joka omisti sen vuoteen 1929. [[Otakar II:n]] aikana linnasta rakennettiin suuri kuninkaanlinna. Kuninkaille se siis kuului, kaikki alkoi sieltä.
+KYSYMYS: Kerro lisää: Böömin kuninkaille
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Křivoklátin linna (historia)
+Tietoruudun teksti: Křivoklátin linna on Keski-Böömin alueella Křivoklátissa sijaitseva linna, joka on suojeltu kansallisena kulttuurimonumenttina. Se perustettiin 1100-luvulla ja kuului Böömin kuninkaille; Otakar II:n aikana rakennettiin suuri, monumentaalinen kuninkaanlinna, jonka Wenceslaus IV rakensi uudelleen ja Vladislaus II laajensi. Linna vaurioitui useita kertoja tulipaloissa, ja se muutettiin ankaraksi vankilaksi, jolloin rakennus rappeutui. 1800-luvulla omistajaksi tuli Fürstenbergin suku, joka rakennutti linnan uudelleen vuoden 1826 palon jälkeen ja omisti sen vuoteen 1929. Nykyään linnassa on museo, jossa säilytetään metsästysaseiden, goottilaisten maalausten ja kirjojen kokoelmia.
+AIEMPI KYSYMYS: Kenelle Křivoklátin linna alun perin kuului?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Linna perustettiin 1100-luvulla, ja se kuului [[Böömin kuninkaille]]. Myöhemmin linna siirtyi [[Fürstenbergin]] suvulle, joka omisti sen vuoteen 1929. [[Otakar II:n]] aikana linnasta rakennettiin suuri kuninkaanlinna. Kuninkaille se siis kuului, kaikki alkoi sieltä.
+KYSYMYS: Kerro lisää: Otakar II:n
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Kuka sotapäällikkö murhattiin Chebissä 24. helmikuuta 1634?
+AIEMPI VASTAUS (Livia):
+Kääk. Joo, tän minä tiedän. Chebissä murhattiin kolmikymmenvuotisen sodan aikana sotapäällikkö [[Albrecht von Wallenstein]], ja murha tapahtui torin varrella olevassa kaupunkitalossa vuonna 1634. Lähteet antavat päivämääräksi joko 24. tai 25. helmikuuta, joten tarkasta päivästä ei kannata olla liian varma. Talo tunnetaan nykyään [[Pachelbelin talona]], ja siellä toimii kaupunginmuseo. Tapahtumasta on kulunut lähes neljäsataa vuotta, ja se sijoittuu aikaan, jolloin [[kolmikymmenvuotinen sota]] repi Keski-Eurooppaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Albrecht von Wallenstein
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Kuka sotapäällikkö murhattiin Chebissä 24. helmikuuta 1634?
+AIEMPI VASTAUS (Livia):
+Kääk. Joo, tän minä tiedän. Chebissä murhattiin kolmikymmenvuotisen sodan aikana sotapäällikkö [[Albrecht von Wallenstein]], ja murha tapahtui torin varrella olevassa kaupunkitalossa vuonna 1634. Lähteet antavat päivämääräksi joko 24. tai 25. helmikuuta, joten tarkasta päivästä ei kannata olla liian varma. Talo tunnetaan nykyään [[Pachelbelin talona]], ja siellä toimii kaupunginmuseo. Tapahtumasta on kulunut lähes neljäsataa vuotta, ja se sijoittuu aikaan, jolloin [[kolmikymmenvuotinen sota]] repi Keski-Eurooppaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Pachelbelin talona
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Kuka sotapäällikkö murhattiin Chebissä 24. helmikuuta 1634?
+AIEMPI VASTAUS (Livia):
+Kääk. Joo, tän minä tiedän. Chebissä murhattiin kolmikymmenvuotisen sodan aikana sotapäällikkö [[Albrecht von Wallenstein]], ja murha tapahtui torin varrella olevassa kaupunkitalossa vuonna 1634. Lähteet antavat päivämääräksi joko 24. tai 25. helmikuuta, joten tarkasta päivästä ei kannata olla liian varma. Talo tunnetaan nykyään [[Pachelbelin talona]], ja siellä toimii kaupunginmuseo. Tapahtumasta on kulunut lähes neljäsataa vuotta, ja se sijoittuu aikaan, jolloin [[kolmikymmenvuotinen sota]] repi Keski-Eurooppaa. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kolmikymmenvuotinen sota
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Millä nimellä Chebiä kutsuttiin saksaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaupungin saksankielinen nimi on Eger. Sama nimi elää edelleen historiallisen [[Egerlandin]] nimessä, jolla tarkoitetaan Chebin ympärillä olevaa aluetta. Ennen saksalaisten karkotusta vuonna 1945 Cheb oli saksankielisen Egerlandin keskus, ja nykyään se on noin 33 000 asukkaan kaupunki [[Ohře-joen]] varrella aivan Saksan rajalla. Kaksi nimeä, ja minä muistan kyl molemmat.
+KYSYMYS: Kerro lisää: Egerlandin
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+AIEMPI KYSYMYS: Millä nimellä Chebiä kutsuttiin saksaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaupungin saksankielinen nimi on Eger. Sama nimi elää edelleen historiallisen [[Egerlandin]] nimessä, jolla tarkoitetaan Chebin ympärillä olevaa aluetta. Ennen saksalaisten karkotusta vuonna 1945 Cheb oli saksankielisen Egerlandin keskus, ja nykyään se on noin 33 000 asukkaan kaupunki [[Ohře-joen]] varrella aivan Saksan rajalla. Kaksi nimeä, ja minä muistan kyl molemmat.
+KYSYMYS: Kerro lisää: Ohře-joen
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Mikä on Chebin historiallisen keskustan tärkein muistomerkki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Chebin tärkein muistomerkki on [[Chebin linna]], joka kuuluu hyvin säilyneeseen historialliseen keskustaan. Kaupunki kärsi pahoin sekä [[hussiittisodissa]] että [[kolmikymmenvuotisessa sodassa]], mutta vanhan keskustan ilme on silti säilynyt tähän päivään asti. Linna kertoo kaupungin pitkästä historiasta rajaseudun keskuksena.
+
+Linnat ovat kyyhkyn silmin parhaita paikkoja: korkealla ja harjalla saa istua rauhassa. Minä en vain ole varma, mitä linnan vahtimiehet ajattelevat siitä.
+KYSYMYS: Kerro lisää: Chebin linna
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Mikä on Chebin historiallisen keskustan tärkein muistomerkki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Chebin tärkein muistomerkki on [[Chebin linna]], joka kuuluu hyvin säilyneeseen historialliseen keskustaan. Kaupunki kärsi pahoin sekä [[hussiittisodissa]] että [[kolmikymmenvuotisessa sodassa]], mutta vanhan keskustan ilme on silti säilynyt tähän päivään asti. Linna kertoo kaupungin pitkästä historiasta rajaseudun keskuksena.
+
+Linnat ovat kyyhkyn silmin parhaita paikkoja: korkealla ja harjalla saa istua rauhassa. Minä en vain ole varma, mitä linnan vahtimiehet ajattelevat siitä.
+KYSYMYS: Kerro lisää: hussiittisodissa
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Mikä on Chebin historiallisen keskustan tärkein muistomerkki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Chebin tärkein muistomerkki on [[Chebin linna]], joka kuuluu hyvin säilyneeseen historialliseen keskustaan. Kaupunki kärsi pahoin sekä [[hussiittisodissa]] että [[kolmikymmenvuotisessa sodassa]], mutta vanhan keskustan ilme on silti säilynyt tähän päivään asti. Linna kertoo kaupungin pitkästä historiasta rajaseudun keskuksena.
+
+Linnat ovat kyyhkyn silmin parhaita paikkoja: korkealla ja harjalla saa istua rauhassa. Minä en vain ole varma, mitä linnan vahtimiehet ajattelevat siitä.
+KYSYMYS: Kerro lisää: kolmikymmenvuotisessa sodassa
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Mikä museo toimii Chebin torin varrella olevassa talossa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Torin varrella olevassa kaupunkitalossa toimii vuodesta 1873 alkaen ollut kaupunginmuseo. Talo tunnetaan myös [[Pachelbelin talona]], ja se on sama rakennus, jossa sotapäällikkö [[Wallenstein]] murhattiin vuonna 1634. Museo on siis toiminut talossa yli sata viisikymmentä vuotta. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Wallenstein
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Cheb (historia)
+Tietoruudun teksti: Cheb, saksaksi Eger, on noin 33 000 asukkaan kaupunki Ohře-joen varrella Karlovy Varyn alueella Saksan rajalla. Ennen saksalaisten karkotusta vuonna 1945 se oli saksankielisen Egerlandin keskus, ja sen historiallinen keskusta on hyvin säilynyt; tärkein muistomerkki on Chebin linna. Kaupunki kärsi pahoin hussiittisodissa ja kolmikymmenvuotisessa sodassa, ja vuonna 1634 sotapäällikkö Albrecht von Wallenstein murhattiin siellä. Murha tapahtui torin varrella olevassa kaupunkitalossa, joka tunnetaan myös Pachelbelin talona; vuodesta 1873 talossa on toiminut kaupunginmuseo.
+AIEMPI KYSYMYS: Mitä Chebissä tapahtui vuonna 1945?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Vuonna 1945, toisen maailmansodan jälkeen, kaupungin saksalaiset karkotettiin. Cheb oli ennen sitä saksankielisen [[Egerlandin]] keskus, joten väestö vaihtui kaupungissa perusteellisesti. Kyse oli osasta laajempaa sodanjälkeistä [[karkotusta]], joka koski saksankielistä väestöä Tšekin alueella. Tapahtumasta on kulunut yli kahdeksankymmentä vuotta, ja kaupungin historiallinen keskusta on säilynyt hyvin. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: karkotusta
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Punta Arenas: Miljoona hehtaaria lampaita] Huhtikuussa 1889 portugalilainen laivanvarustaja José Nogueira vuokrasi 180 000 hehtaaria Tulimaata, ja vuotta myöhemmin hän ja Sara Braun saivat vuokralle 1 009 000 hehtaaria eli kolmanneksen saaren vuokrattavasta maasta. Nogueiran kuoltua 1893 Braun otti yhtiön haltuunsa. Aidat katkaisivat selkʼnamien vaellusreitit ja lampaat veivät heidän tärkeimmän ravintonsa guanakon; yhtiö sai hallitukselta luvan poistaa alkuperäisväestön alueelta, ja José Menéndez antoi käskyn heidän hävittämisestään. Vuoden 2008 totuuskomissio osoitti sukujen osuuden. Isoisän matkavuonna selkʼnameja oli vielä noin neljä tuhatta, ja Chile tunnusti heidät eläväksi kansaksi 2023.
+AIEMPI KYSYMYS: Kuka kuvanveistäjä koristi Kuksin sairaalan ja kirkon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rakennukset koristi barokkiveistäjä [[Matthias Braun]], jonka veistokset ovat Kuksin tunnetuin nähtävyys. Hänen tunnetuimpia töitään siellä ovat [[Hyveet ja Paheet]], ja ne koristavat sairaalan ja Pyhän Kolminaisuuden kirkon rakennuksia. Rakennukset ovat säilyneet [[barokin]] mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+Veistokset seisovat ulkona sateessa, ja sen minä ymmärrän. Minäkin ränsistyn vähän, jos istun liian kauan ulkona.
+KYSYMYS: Kerro lisää: Matthias Braun
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Bali: Oikeussali, jonka katto tuomitsi] Klungkungin palatsin kulmaan rakennettiin 1700-luvun lopulla Kerta Gosa, kuninkaan oikeusistuimen paviljonki. Siellä Dewa Agungin tuomarit ratkoivat riitoja ja rikoksia suoraan katosta katsoen: paviljongin kattoon on maalattu kerros kerrokselta tarina Bhima Swargasta, sankarista joka vaeltaa manalassa näkemässä, miten synnit palkitaan piinalla ja hyveet palkinnolla. Maalaukset muistuttivat sekä tuomareita että syytettyjä siitä, että lopullinen tuomio odottaa joka tapauksessa toisessa elämässä. Kun Hollanti tuhosi Klungkungin palatsin puputan-taistelun jälkeen vuonna 1908, Kerta Gosa oli yksi harvoista rakennuksista, jotka jätettiin pystyyn.
+AIEMPI KYSYMYS: Kuka kuvanveistäjä koristi Kuksin sairaalan ja kirkon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rakennukset koristi barokkiveistäjä [[Matthias Braun]], jonka veistokset ovat Kuksin tunnetuin nähtävyys. Hänen tunnetuimpia töitään siellä ovat [[Hyveet ja Paheet]], ja ne koristavat sairaalan ja Pyhän Kolminaisuuden kirkon rakennuksia. Rakennukset ovat säilyneet [[barokin]] mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+Veistokset seisovat ulkona sateessa, ja sen minä ymmärrän. Minäkin ränsistyn vähän, jos istun liian kauan ulkona.
+KYSYMYS: Kerro lisää: Hyveet ja Paheet
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Kuka kuvanveistäjä koristi Kuksin sairaalan ja kirkon?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Rakennukset koristi barokkiveistäjä [[Matthias Braun]], jonka veistokset ovat Kuksin tunnetuin nähtävyys. Hänen tunnetuimpia töitään siellä ovat [[Hyveet ja Paheet]], ja ne koristavat sairaalan ja Pyhän Kolminaisuuden kirkon rakennuksia. Rakennukset ovat säilyneet [[barokin]] mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+Veistokset seisovat ulkona sateessa, ja sen minä ymmärrän. Minäkin ränsistyn vähän, jos istun liian kauan ulkona.
+KYSYMYS: Kerro lisää: barokin
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Pyhän Kolminaisuuden katedraali] 1855 Seurakunta perustettiin 1844 ja kirkko rakennettiin 1855 brittivaruskunnan kirkoksi. Suunnittelija oli Bombayn pioneerijoukkojen kapteeni John Hill, ja kirkkosalista tuli 115 jalkaa pitkä; sinne mahtui kahdeksansataa kävijää. Rakennusaine on vaaleaa Gizrin hiekkakiveä samoin kuin monessa muussa saman ajan karachilaisessa talossa. Torni oli alun perin 150 jalkaa korkea, ja sen huipulla pidettiin merkkivaloja: Karachin satamaan ei vielä ollut majakkaa, ja kirkko oli kaupungin korkein rakennus. Vuonna 1904 kapteeni Hill ja pääinsinööri John Brunton tarkastivat rakennuksen ja totesivat perustukset heikoiksi, joten kaksi ylintä kerrosta purettiin. Torni jäi 115 jalan korkuiseksi. Ensimmäise…
+- [Addis Abeba — kohdekartta / Kohdekartta: Kolminaisuuden katedraali] 1931 Kidist Selassie eli Kolminaisuuden katedraali on Etiopian ortodoksisen tewahedo-kirkon arvokkain katedraali. Se perustettiin 22. joulukuuta 1931 keisari Haile Selassien johdolla, mutta rakentaminen keskeytyi miehityksen ajaksi ja valmistui vasta 1942. Kirkko pystytettiin muistoksi vastarinnasta miehitystä vastaan. Rakennus on nelikulmainen, mikä on Etiopiassa harvinaista — useimmat kirkot ovat ympyränmuotoisia. Sisätila noudattaa Salomonin temppelin kolmijakoa: ulkokehällä seurakunta laulaa hymnit, keskimmäisellä jaetaan ehtoollinen, ja sisimpään pääsevät vain papit. Siellä säilytetään tabotia, liitonarkin jäljennöstä, jonka siunaamisesta rakennustyö aloitettiin. Kirkko on maan merkitt…
+AIEMPI KYSYMYS: Mitkä ovat Braunin kuuluisimmat veistokset Kuksissa?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tost minä osaan kertoo. Braunin kuuluisimmat veistokset Kuksissa ovat [[Hyveet ja Paheet]], jotka koristavat kylpylän ja sairaalan rakennuksia. Veistokset kuuluvat Kuksin barokkikokonaisuuteen, johon kuuluvat myös [[Pyhän Kolminaisuuden kirkko]] kryptineen sekä apteekki. Nykyään ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta. Hyveet ja paheet, ja minä kyl tiedän, kumpi niistä houkuttaa enemmän.
+KYSYMYS: Kerro lisää: Pyhän Kolminaisuuden kirkko
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+AIEMPI KYSYMYS: Kuka osti Kuksin tilan vuonna 1684?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tilan osti kreivi [[Franz Anton von Sporck]] vuonna 1684. Hän yhdisti kolme [[mineraalilähdettä]] yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Myöhemmin alueelle rakennettiin sairaala ja kirkko, ja ne koristettiin barokkiveistoksilla. Ja tän kaiken minä muistin päästäni.
+KYSYMYS: Kerro lisää: Franz Anton von Sporck
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+AIEMPI KYSYMYS: Kuka osti Kuksin tilan vuonna 1684?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tilan osti kreivi [[Franz Anton von Sporck]] vuonna 1684. Hän yhdisti kolme [[mineraalilähdettä]] yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Myöhemmin alueelle rakennettiin sairaala ja kirkko, ja ne koristettiin barokkiveistoksilla. Ja tän kaiken minä muistin päästäni.
+KYSYMYS: Kerro lisää: mineraalilähdettä
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Joen alku on merkitty kivirenkaalla] 1968 — Labe eli Elbe saa alkunsa Krkonošen harjulta noin 1 387 metrin korkeudelta ja päättyy 1 094 kilometrin päähän Pohjanmereen. Retkeilijöitä varten alkukohta on merkitty kivetylle aukiolle pyöreällä kivirenkaalla, johon vesi tulee ja josta se lähtee. Vuodesta 1968 sen vieressä on kaartunut kivimuuri, johon Jiří Škopek maalasi 28 vaakunaa: ne kuuluvat kaupungeille, joiden ohi joki matkallaan merelle virtaa. Todellinen lähde on parisataa metriä lännempänä, eikä sinne päästetä ketään.
+AIEMPI KYSYMYS: Mitä Kuksin alueella tehtiin ennen asutusta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Ennen asutusta alueella pestiin kultaa. Kuks sijaitsee [[Elbe-joen]] eli Labe-joen varrella Hradec Královén alueella, ja kullanpesu liittyi joen läheisyyteen. Myöhemmin tilan osti kreivi [[Franz Anton von Sporck]], joka rakennutti paikalle kylpylän. Olipa vaihtelevaa väkeä joenrannalla.
+KYSYMYS: Kerro lisää: Elbe-joen
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuks (historia)
+Tietoruudun teksti: Kuks on noin 200 asukkaan kylä Elbe-joen eli Labe-joen varrella Hradec Královén alueella Tšekissä, ja sen pääasiallinen nähtävyys on barokkinen kylpylärakennus, jossa on Matthias Braunin kuuluisia veistoksia. Ennen asutusta alueella pestiin kultaa, ja kreivi Franz Anton von Sporck osti tilan vuonna 1684. Hän yhdisti kolme mineraalilähdettä yhteen paikkaan ja rakennutti vuosina 1692–1696 yksinkertaisen kylpylän, jota hän laajensi, kun lähteen parantava vaikutus oli todistettu. Vuosina 1707–1715 rakennettiin sairaala ja Pyhän Kolminaisuuden kirkko kryptineen, ja rakennukset koristettiin Braunin barokkiveistoksilla, joista kuuluisimmat ovat Hyveet ja Paheet. Sairaalan, kirkon ja apteekin rakennukset ovat säilyneet barokin mestariteoksina, mutta ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Sara Braunin hautausmaa] 1894 Avenida Bulnesin varrella on neljän hehtaarin hautausmaa, jolla on kolme porttia. Se vihittiin 9. huhtikuuta 1894 kuvernööri Manuel Señoretin aikana ja korvasi vanhan hautausmaan, joka oli nykyisen Lautaron aukion paikalla. Maan lahjoitti Sara Braun, ja insinööri Fortunato Circutti suunnitteli portit ja muurit 1919. Alue täyttyi jo kauan sitten, ja sen tilalle on tullut uudempi hautausmaa pohjoisempana; vanha on säilyttänyt asemansa monumenttihautausmaana. CNN on listannut sen maailman kauneimpien hautausmaiden joukkoon, ja se on ollut Chilen kansallismonumentti vuodesta 2012. Käytävien varrella ovat kaupungin suurten sukujen kappelit: Menéndez-Behety, Braun Hamburger, Blanchard, Green…
+- [Punta Arenas — kaupunkilehti / Punta Arenas: Miljoona hehtaaria lampaita] Huhtikuussa 1889 portugalilainen laivanvarustaja José Nogueira vuokrasi 180 000 hehtaaria Tulimaata, ja vuotta myöhemmin hän ja Sara Braun saivat vuokralle 1 009 000 hehtaaria eli kolmanneksen saaren vuokrattavasta maasta. Nogueiran kuoltua 1893 Braun otti yhtiön haltuunsa. Aidat katkaisivat selkʼnamien vaellusreitit ja lampaat veivät heidän tärkeimmän ravintonsa guanakon; yhtiö sai hallitukselta luvan poistaa alkuperäisväestön alueelta, ja José Menéndez antoi käskyn heidän hävittämisestään. Vuoden 2008 totuuskomissio osoitti sukujen osuuden. Isoisän matkavuonna selkʼnameja oli vielä noin neljä tuhatta, ja Chile tunnusti heidät eläväksi kansaksi 2023.
+AIEMPI KYSYMYS: Miksi Kuksin ulkoveistokset ovat vaarassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Ulkoveistokset rapautuvat nopeasti sateen ja maakosteuden vaikutuksesta, koska ne seisovat ulkona säiden armoilla. Sairaalan, kirkon ja apteekin rakennukset ovat sen sijaan säilyneet barokin mestariteoksina. Ulkona olevat [[Matthias Braunin]] veistokset, kuten [[Hyveet ja Paheet]], kärsivät kosteudesta eniten. Sade on kyl veistäjän pahin kilpailija.
+KYSYMYS: Kerro lisää: Matthias Braunin
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad-järvi — kaupunkilehti / Bornun valtakunta: Preussin lahjat sheikille] Preussin kuningas Wilhelm I lähetti tutkimusmatkailija Gustav Nachtigalin viemään lahjoja Bornun hallitsijalle kiitokseksi saksalaisille matkaajille osoitetusta vieraanvaraisuudesta. Nachtigal lähti Tripolista helmikuussa 1869 ja saapui Bornun pääkaupunkiin Kukawaan 6. kesäkuuta 1870, missä sheikki Umar otti hänet ystävällisesti vastaan. Hovin virkamies Ahmed ibn Brahim antoi Nachtigalille vanhoja asiakirjoja, joiden pohjalta tämä kokosi luettelon Bornun hallitsijoista vuosisatojen ajalta. Sheikin luvalla Nachtigal teki myöhemmin tutkimusmatkoja Kanemiin ja Bagirmiin ja osoitti Bahr-el-Ghazalin toimivan ajoittain järven laskujokena.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+AIEMPI KYSYMYS: Kuka voitti Königgrätzin taistelun vuonna 1866?
+AIEMPI VASTAUS (Livia):
+Kääk. No niin, tän minä muistan. Taistelun voitti [[Preussin kuningaskunta]], joka löi [[Itävallan keisarikunnan]] Itävallan ja Preussin sodan ratkaisevassa taistelussa. Taistelu käytiin 3. heinäkuuta 1866 Hradec Královén ja Sadován kylän lähellä Böömissä, ja siinä Itävallan armeija joutui vetäytymään kello 15 mennessä. Tapahtumasta on kulunut yli sata viisikymmentä vuotta, ja sen tulos muutti Keski-Euroopan voimasuhteita. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Preussin kuningaskunta
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varsova — kohdekartta / Kohdekartta: Wienin asema] Tässä kaupungissa mitta oli kahdenlainen, ja isoisäsi olisi pitänyt siitä enemmän kuin torin väreistä. Varsovasta lounaaseen lähtevä Wienin rata avattiin 14. kesäkuuta 1845, ensin kolmenkymmenen kilometrin pätkänä, ja se ylsi Itävallan rajalle huhtikuussa 1848: kaikkiaan runsaat 327 kilometriä ja 27 asemaa. Se oli ensimmäinen rata Kongressi-Puolassa ja toinen koko keisarikunnassa. Ja se oli rakennettu eurooppalaiseen mittaan, 1 435 millimetriä kiskosta kiskoon, kun kaikilla muilla keisarikunnan radoilla mitta oli leveämpi, 1 524. Kaksi rataa, kaksi mittaa, eikä yhtäkään vaunua voinut ajaa toiselta toiselle. Pietarin rata tuli Varsovaan 1862 ja pysähtyi joen toiselle rannalle. Kierbedźin sil…
+- [Venetsia — kohdekartta / Kohdekartta: Dogen palatsi] Kun isoisäsi käveli täällä, kaupunki oli ollut Italiaa seitsemän vuotta. Sitä ennen se oli ollut Itävallan keisarikunnan osa vuodesta 1815 asti, ja vaihdos tapahtui papereilla: elokuussa 1866 Itävalta luovutti alueen Ranskalle sillä ehdolla, että Ranska luovuttaa sen Italian kuninkaalle sitten kun asukkailta on kysytty. Kysyminen tapahtui sunnuntaina 21. ja maanantaina 22. lokakuuta 1866. Äänet laskettiin viikkoa myöhemmin dogen palatsin laskuhuoneessa, ja tulos luettiin ensin salissa ja sitten palatsin parvekkeelta. Sen jälkeen alkoi se osa, joka olisi pitänyt isoisäsi hereillä. Kaikkia ääniä ei ollut ehditty laskea: Rovigon piirin kunnista puuttui yli viisituhatta ääntä ja siirtolaisilta …
+AIEMPI KYSYMYS: Kuka voitti Königgrätzin taistelun vuonna 1866?
+AIEMPI VASTAUS (Livia):
+Kääk. No niin, tän minä muistan. Taistelun voitti [[Preussin kuningaskunta]], joka löi [[Itävallan keisarikunnan]] Itävallan ja Preussin sodan ratkaisevassa taistelussa. Taistelu käytiin 3. heinäkuuta 1866 Hradec Královén ja Sadován kylän lähellä Böömissä, ja siinä Itävallan armeija joutui vetäytymään kello 15 mennessä. Tapahtumasta on kulunut yli sata viisikymmentä vuotta, ja sen tulos muutti Keski-Euroopan voimasuhteita. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Itävallan keisarikunnan
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+AIEMPI KYSYMYS: Millä toisella nimellä taistelua kutsutaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä tiedän. Taistelua kutsutaan myös [[Sadován taisteluksi]], koska se käytiin Sadován kylän lähellä. Toinen nimi tulee [[Hradec Královén]] kaupungista, joka tunnetaan saksaksi nimellä Königgrätz. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Sadován taisteluksi
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Königgrätzin taistelu (historia)
+Tietoruudun teksti: Königgrätzin taistelu eli Sadován taistelu oli Itävallan ja Preussin sodan ratkaiseva taistelu, jossa Preussin kuningaskunta löi Itävallan keisarikunnan. Se käytiin 3. heinäkuuta 1866 böömiläisen Hradec Královén (saksaksi Königgrätz) ja Sadován kylän lähellä, ja se oli sodan suurin taistelu sekä Leipzigin taistelun 1813 jälkeen maailman suurin. Preussilla oli noin 285 000 sotilasta ja Itävallalla 240 000. Preussin voittoon vaikuttivat parempi koulutus, Moltken taktiikka, Dreysen neulakivääri ja rautateiden hyödyntäminen joukkojen siirroissa. Itävallan armeija joutui vetäytymään kello 15 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Keksinnöt: Sana syntyi sivellin suussa] 1920 — Karel Čapek kirjoitti vuonna 1920 näytelmän tehtaasta, joka valmistaa keinotekoisia työntekijöitä. Hän aikoi kutsua niitä sanalla labor, mutta se kuulosti hänestä paperiselta. Hän meni kysymään neuvoa veljeltään Josefilta, joka seisoi maalaamassa. Josef ehdotti sivellin suussaan sanaa robot ja jatkoi työtään. Sana tulee vanhasta tšekin sanasta robota, joka tarkoitti maaorjan pakkotyötä. Näytelmä R.U.R. sai ensi-iltansa 2. tammikuuta 1921 Hradec Královéssa, ja kolmessa vuodessa se oli käännetty kolmellekymmenelle kielelle.
+AIEMPI KYSYMYS: Millä toisella nimellä taistelua kutsutaan?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä tiedän. Taistelua kutsutaan myös [[Sadován taisteluksi]], koska se käytiin Sadován kylän lähellä. Toinen nimi tulee [[Hradec Královén]] kaupungista, joka tunnetaan saksaksi nimellä Königgrätz. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Hradec Královén
