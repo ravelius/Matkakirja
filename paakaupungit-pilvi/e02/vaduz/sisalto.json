@@ -70,7 +70,7 @@
    ],
    "correct": 0,
    "level": 2,
-   "hint": "Toinen materiaaleista on tulivuorikiveä.",
+   "hint": "Rakennus on ulkopuolelta lähes musta.",
    "fact": "Rakennuksen ulkopinta on värjättyä betonia ja mustaa basalttia, ja siihen on upotettu jokikiviä.",
    "source": "https://en.wikipedia.org/wiki/Kunstmuseum_Liechtenstein"
   },
@@ -84,7 +84,7 @@
    ],
    "correct": 0,
    "level": 3,
-   "hint": "Sana tulee latinasta, ja se liittyy veden kuljettamiseen.",
+   "hint": "Nimi on romaanista alkuperää, ei saksalaista.",
    "fact": "Nimen juuri on retoromaaninen auadutg, joka juontuu latinan sanasta aquaeductus.",
    "source": "https://en.wikipedia.org/wiki/Vaduz"
   }
@@ -92,7 +92,7 @@
  "tiedot": [
   "Vaduz on yksi harvoista pääkaupungeista, joissa ei ole lentokenttää, ja lähin suuri lentoasema on Zürichissä.",
   "Lähteen mukaan Liechtensteinin ainoa luonnonjärvi, Gampriner Seelein, syntyi Reinin tulvassa vuonna 1927.",
-  "Runoilija Ida Ospelt-Amann (1899–1996) kirjoitti Vaduzin alemannisella murteella, ja hän julkaisi teoksensa yksinomaan sillä."
+  "Runoilija Ida Ospelt-Amann (1899–1996) kirjoitti Vaduzin alemannisella murteella, ja lähteen mukaan häntä pidettiin maan tärkeimpänä murderunoilijana."
  ],
  "valokuva": {
   "tiedosto": "Schloss Vaduz. Ansicht von Westen. 2015-10-03 17-52-32.jpg",
@@ -121,8 +121,8 @@
     },
     {
      "tiedosto": "LIE Vaduz, Schlossweg, Aussicht 0014.jpg",
-     "lyhyt": "Rein muodostaa Liechtensteinin rajan Sveitsiin.",
-     "selite": "Vaduz on Reinin itärannalla laakson keskiosassa, ja joki on 27 kilometriä pitkä raja Sveitsin kanssa.",
+     "lyhyt": "Vaduzin takana kohoavat Alpit, ja Rein kulkee laakson länsireunalla.",
+     "selite": "Rein on 27 kilometriä pitkä raja Sveitsin kanssa.",
      "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
     }
    ],
@@ -141,7 +141,7 @@
      "teksti": "Liechtensteinin suku halusi paikan keisarikunnan valtiopäivillä, mutta sillä ei ollut maata suoraan keisarin alaisuudessa. Siksi se osti Schellenbergin herruuden 1699 ja Vaduzin kreivikunnan 1712 Hohenemsin suvulta. Vaduzin kreivikunta oli muodostettu jo 1342 Werdenbergin kreivikunnan osana, ja markkinaoikeudet kylälle oli antanut keisari Rudolf II 1592. Ruhtinaat eivät asuneet ostetulla maalla: lähteen mukaan suvereenin ruhtinaan ensimmäinen vierailu oli vasta 1842. Isoisän matkavuonna 1873 ruhtinas asui siis yhä muualla, ja vakituinen asuinpaikka siirtyi Vaduzin linnaan vasta 1938.",
      "tiedosto": "Anton Florian v Liechtenstein.jpg",
      "lyhyt": "Ruhtinas Anton Florian von Liechtenstein, jonka kunniaksi Kaarle VI vahvisti ruhtinaskunnan nimen.",
-     "selite": "Ruhtinaskunta sai nimensä Liechtensteinin suvulta, ei kaupungilta, ja se sai paikkansa keisarikunnan valtiopäivillä 1719.",
+     "selite": "Ruhtinaskunta sai nimensä Liechtensteinin suvulta, ei kaupungilta, ja siitä tuli keisarikunnan suvereeni jäsen 1719.",
      "lahde": "Unidentified painter, Wikimedia Commons (PD)",
      "wiki": "History of Liechtenstein"
     },
@@ -208,7 +208,7 @@
       },
       {
        "otsikko": "Milloin kannattaa tulla",
-       "teksti": "Sääaineiston mittauspisteessä tammikuu on kylmin, keskilämpö −0,6 astetta, ja heinäkuu lämpimin, 20,3 astetta. Sadetta tulee joka kuukausi, eniten elokuussa. Wikipedian ilmasto-osio antaa heinäkuun keskimaksimiksi 25 astetta ja tammikuun maksimiksi 3 astetta sekä vuosisateeksi noin 900 millimetriä, joten mittauspisteen sademääriä kannattaa pitää suuntaa-antavina. Schalunin raunioille on noin kilometri keskustasta, ja polku on avoin jalan tai pyörällä. Sadetta tulee ympäri vuoden, joten sadevaatteet kannattaa pitää mukana. Maan ainoa hiihtoalue on Malbun.",
+       "teksti": "Sääaineiston mittauspisteessä tammikuu on kylmin, keskilämpö −0,6 astetta, ja heinäkuu lämpimin, 20,3 astetta. Sadetta tulee joka kuukausi, eniten elokuussa. Lähteen ilmastotietojen mukaan heinäkuun keskimaksimi on 25 astetta, tammikuun 3 astetta ja vuosisade noin 900 millimetriä, joten mittauspisteen sademääriä kannattaa pitää suuntaa-antavina. Schalunin raunioille on noin kilometri keskustasta, ja polku on avoin jalan tai pyörällä. Sadetta tulee ympäri vuoden, joten sadevaatteet kannattaa pitää mukana. Maan ainoa hiihtoalue on Malbun.",
        "kuva": {
         "tiedosto": "LIE Vaduz, Burgruine Schalun 0017.jpg",
         "lyhyt": "Schalunin linnanraunio on Vaduzin kunnan alueella vuorilla.",
@@ -281,30 +281,30 @@
      "1 000"
     ],
     "oikea": 0,
-    "fakta": "Armeija lakkautettiin 12.2.1868 rahoitussyistä, ja maa julisti samalla pysyvän puolueettomuuden."
+    "fakta": "Liechtenstein ei liittynyt vuonna 1871 perustettuun Saksan keisarikuntaan eikä Itävaltaan, vaan julisti pysyvän puolueettomuuden."
    },
    "nostot": [
     {
      "otsikko": "Keisarin päätös ja pysyvät rajat",
      "teksti": "Liechtensteinin suvun ostamilla alueilla ei ollut muuta feodaaliherraa kuin keisari, ja se oli ostosten tärkein etu. Keisari Kaarle VI yhdisti Schellenbergin ja Vaduzin 23.1.1719 ruhtinaskunnaksi nimellä Liechtenstein. Lähteen mukaan nimi annettiin suvun ruhtinaan, keisarin uskollisen palvelijan Anton Florianin, kunniaksi. Siitä päivästä lähtien Liechtenstein oli Pyhän saksalais-roomalaisen keisarikunnan suvereeni jäsen. Maan rajat ovat pysyneet samoina vuodesta 1434, jolloin Rein muodostui keisarikunnan ja sveitsiläiskantonien rajaksi. Rein on 27 kilometriä pitkä raja Sveitsin kanssa.",
      "tiedosto": "Josef Johann Adam v Liechtenstein.jpg",
-     "lyhyt": "Josef Johann Adam von Liechtenstein oli ruhtinas, jonka aikana suku osti Vaduzin kreivikunnan.",
+     "lyhyt": "Josef Johann Adam von Liechtenstein (1690–1732) oli ruhtinas 1721–1732.",
      "selite": "Vaduzin kreivikunta ostettiin vuonna 1712, ja ruhtinaskunta sai nimensä seitsemän vuotta myöhemmin.",
      "lahde": "Frans van Stampart, Wikimedia Commons (PD)",
      "wiki": "History of Liechtenstein"
     },
     {
      "otsikko": "Vaduz, joka poltettiin 1499",
-     "teksti": "Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana, ja 1400-luvulla alueella oli kolme sotaa ja tuhoa. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592, ja kylä rakentui uudelleen linnan juurelle. Tästä ajasta Vaduzissa muistuttavat linnan paksut kiviseinät, jotka ovat peräisin eri vuosisadoilta.",
+     "teksti": "Vaduzin linna mainitaan lähteissä 1322, ja Schalunin linnan ensimmäinen kirjallinen maininta on jo vuodelta 1237. Vaduzin kreivikunta muodostettiin 1342 Werdenbergin kreivikunnan osana, ja 1400-luvulla alueella oli kolme sotaa ja tuhoa. Švaabin sodassa 1499 sveitsiläiset polttivat linnan ja tuhosivat koko kylän. Keisari Rudolf II antoi Vaduzille markkinaoikeudet 1592. Linnan rakentajiksi oletetaan Werdenberg-Sargansin kreivit, ja Liechtensteinin suku osti sen 1712. ",
      "tiedosto": "Schloss Vaduz. Ansicht von Nordwesten. 2015-10-03 16-50-11.jpg",
      "lyhyt": "Vaduzin linna poltettiin Švaabin sodassa 1499, ja sen länsisiipeä laajennettiin 1613–1640.",
-     "selite": "Linnan paksut kiviseinät ovat peräisin eri vuosisadoilta, ja vanhimmat osat ovat 1100-luvulta.",
+     "selite": "Linnan vanhimmat osat ovat 1100-luvulta, ja tornin seinät ovat maan tasolla jopa neljä metriä paksut.",
      "lahde": "Shesmax, Wikimedia Commons (CC BY-SA 4.0)",
      "wiki": "Vaduz"
     },
     {
      "otsikko": "Armeija, joka palasi ehkä yhden miehen isompana",
-     "teksti": "Itävalta-Preussin sodassa 1866 ruhtinas Johann II asetti sotilaansa Saksan liiton käyttöön vain Tirolin puolustamiseksi. Maan joukot asettuivat Stilfser Jochille Peter Rheinbergerin johdolla, ja 20 miehen reservi jäi Vaduzin linnaan. Kun sota päättyi 22.7., armeija marssi kotiin ja sai juhlallisen vastaanoton Vaduzissa. Kansantarun mukaan lähti 80 miestä ja palasi 81, ja lisämiehen henkilöllisyys on kiistanalainen: hän oli itävaltalainen yhteysupseeri tai italialainen maanviljelijä. Armeija lakkautettiin 12.2.1868 rahoitussyistä. Viimeinen elossa ollut veteraani Andreas Kieber kuoli 1939.",
+     "teksti": "Itävalta-Preussin sodassa 1866 ruhtinas Johann II asetti sotilaansa Saksan liiton käyttöön vain Tirolin puolustamiseksi. Maan joukot asettuivat Stilfser Jochille Peter Rheinbergerin johdolla, ja 20 miehen reservi jäi Vaduzin linnaan. Kun sota päättyi 22.7., armeija marssi kotiin ja sai juhlallisen vastaanoton Vaduzissa. Kansantarun mukaan lähti 80 miestä ja palasi 81, ja lisämiehen henkilöllisyys on kiistanalainen: hän oli itävaltalainen yhteysupseeri tai italialainen maanviljelijä. Armeija lakkautettiin 12.2.1868, kun Saksan liitto oli hajonnut ja ylläpito oli käynyt kalliiksi. Viimeinen elossa ollut veteraani Andreas Kieber kuoli 1939.",
      "tiedosto": "PlaqueAndreasKieber-MaurenCemeteryLiechtenstein RomanDeckert25012023.jpg",
      "lyhyt": "Andreas Kieber (1844–1939) oli viimeinen elossa ollut Liechtensteinin armeijan veteraani.",
      "selite": "Muistolaatta Maurenin hautausmaalla kertoo viimeisestä veteraanista, joka kuoli 94-vuotiaana.",
@@ -313,10 +313,10 @@
     },
     {
      "otsikko": "Perustuslaki 1862 ja ensimmäiset maapäivät",
-     "teksti": "Vuoden 1862 perustuslain valmisteli pääosin Karl Schädler, ja se vahvistettiin 26.9.1862. Se perustui Vorarlbergin perustuslakiin ja loi kansalaisvapaudet sekä ensimmäistä kertaa maapäivät eli Landtagin. Taustalla olivat 1848–1849 Saksan vallankumoukset, jotka vaikuttivat maahan: kansankokous pidettiin 22.3.1848 ja perustuslakineuvosto 27.7.1848, mutta ruhtinas Aloys II palautti yksinvallan 20.7.1852. Kunnallislaki 1864 antoi Vaduzille pormestarin ja kunnanvaltuuston. Isoisän matkavuonna 1873 maa oli siis vasta opetellut uutta järjestystä, ja rautatie oli valmistunut vuotta aiemmin.",
+     "teksti": "Vuoden 1862 perustuslain valmisteli pääosin Karl Schädler, ja se vahvistettiin 26.9.1862. Se oli pitkälti Vorarlbergin perustuslain mallinen ja loi kansalaisvapaudet sekä ensimmäistä kertaa maapäivät eli Landtagin. Taustalla olivat 1848–1849 vallankumoukset: kansankomitea asetti 22.3.1848 kolmihenkisen johtokunnan ja perustuslakineuvosto 27.7.1848, mutta ruhtinas Aloys II palautti yksinvallan 20.7.1852. Kunnallislaki 1864 antoi Vaduzille pormestarin ja kunnanvaltuuston. Isoisän matkavuonna 1873 maa oli siis vasta opetellut uutta järjestystä.",
      "tiedosto": "Landtag of Liechtenstein 1931.jpg",
      "lyhyt": "Maapäivät eli Landtag perustettiin ensimmäisen kerran vuoden 1862 perustuslailla.",
-     "selite": "Kuva on vuodelta 1931, ja se on vanhin löytynyt kuva maapäivistä.",
+     "selite": "Maapäivät eli Landtag on Liechtensteinin parlamentti, ja kuva on vuodelta 1931.",
      "lahde": "Unknown, Liechtensteinisches Landesarchiv, Wikimedia Commons (PD)",
      "wiki": "History of Liechtenstein"
     }
@@ -367,8 +367,8 @@
    "kuvat": [
     {
      "tiedosto": "LIE Vaduz, Schloss Vaduz 0007.jpg",
-     "lyhyt": "Vaduzin linnan pyöreä torni on rakennettu karkeasta kivestä.",
-     "selite": "Linnan tornit ja siivet ovat syntyneet eri vuosisatoina, ja nykyisen asunnon ruhtinaat saivat 1900-luvun kunnostuksessa.",
+     "lyhyt": "Vaduzin linnan pyöreä torni rakennettiin vuosina 1529–1532.",
+     "selite": "Linnan tornit ja siivet ovat syntyneet eri vuosisatoina, ja vanhin osa on 1100-luvun itätorni.",
      "lahde": "-wuppertaler, Wikimedia Commons (CC BY 4.0)"
     }
    ],
@@ -394,7 +394,7 @@
     {
      "tiedosto": "Liechtensteinisches Landesmuseum in Vaduz (2018).jpg",
      "lyhyt": "Kansallismuseo esittelee Liechtensteinin kulttuuri- ja luonnonhistoriaa.",
-     "selite": "Museon kolme rakennusta ovat yhteensä 2 000 neliömetrin näyttelytilat.",
+     "selite": "Museon näyttelytilaa on yhteensä 2 000 neliömetriä ja 42 huonetta.",
      "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
     }
    ],
@@ -458,15 +458,15 @@
    123,
    101
   ],
-  "luonnehdinta": "Tammikuu on kylmin kuukausi, keskilämpö −0,6 astetta, ja heinäkuu lämpimin, 20,3 astetta. Sadetta kertyy joka kuukausi, eniten elokuussa (257 mm) ja vähiten tammikuussa (49 mm). Vuosisumma näissä luvuissa on 1 724 mm."
+  "luonnehdinta": "Tammikuu on kylmin kuukausi, keskilämpö −0,6 astetta, ja heinäkuu lämpimin, 20,3 astetta. Mittauspisteen aineiston mukaan sadetta kertyy joka kuukausi, eniten elokuussa (257 mm) ja vähiten tammikuussa (49 mm), mutta luvut ovat vain suuntaa-antavia: vuosisumma niissä on 1 724 mm, kun lähde antaa vuosisateeksi noin 900 mm."
  },
  "ehdotukset": {
   "lentoasema": null,
   "huomiot": [
    "Kohdekartassa 5 kohdetta: lähteissä koordinaatit vain viidelle; hallitusrakennuksen (Regierungsgebäude, Q2137745) koordinaatit puuttuvat, ja kuudes kohde voidaan lisätä myöhemmin.",
-   "Kunstmuseumin koordinaatti 47.13944, 9.52250 on en-Wikipedian artikkelin otsikkotieto ja sama leveysaste kuin linnalla; lähteestä ei saatu muuta arvoa, joten käytetty sellaisenaan.",
+   "Kunstmuseumin koordinaatti vahvistettu OSM:stä (ero noin 30 m).",
    "Saa.json sademäärät (vuosisumma 1 724 mm) poikkeavat Wikipedian noin 900 mm:stä; selitetty oppaan sääjaksossa.",
-   "Nosto T1 kuvateksti: Josef Johann Adam hankki Vaduzin 1712 (kuvat.md); faktapohjassa ostajaksi mainitaan Johann Adam Andreas (Schellenberg 1699). Tarkista.",
+   "Nosto T1 kuvateksti korjattu: Vaduzin osti 1712 ruhtinas Johann Adam Andreas, ja kuvan Josef Johann Adam oli ruhtinas 1721–1732.",
    "Lentoaseman IATA-koodia ei ole luettu lähteestä, joten ei merkitty."
   ]
  }

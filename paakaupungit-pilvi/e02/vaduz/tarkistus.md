@@ -70,3 +70,10 @@ Yhteenveto: VÄÄRIN 9, EPÄVARMA 8.
 - Nykypolitiikka/sota: ei ongelmia (1866 sota historiaa, neutraalisti).
 - Kuvat vs kuvat.md: kaikki muut kuvatekstit kertovat kohteesta ja sopivat "mitä kuvassa näkyy" -kuvaukseen; poikkeukset A-osassa (linna 0007, Schlossweg 0014, T1).
 - Fi/en ristiriita linnan iästä (fi: rakennettu n. 1300, vanhimmat osat 1100-luvulla; en: torni 1100-luvulta) on teksteissä ratkaistu en-linjalla; ei virhe.
+
+## Korjattu
+
+- Kaikki 9 VÄÄRIN-riviä korjattu sanatarkasti: T1-kuvateksti (Josef Johann Adam, ruhtinas 1721–1732), tehtava.fakta (puolueettomuus, ei nostovirkettä), kysymysten 3 ja 4 vihjeet, K2-selite (suvereeni jäsen 1719), linnan kuvateksti (pyöreä torni 1529–1532) ja selite, T4-selite, tiedot[2] (Ospelt-Amann), sääjakso ("Lähteen ilmastotietojen mukaan").
+- EPÄVARMA: armeijan lakkautuksen syyt (T3), kansankomitea 22.3.1848, Vorarlbergin esikuva, linnan uudelleenrakentumislause poistettu ja selite korjattu, kansallismuseon kuvan selite (2 000 m², 42 huonetta), kansikuva 3 (Alpit, Rein 27 km).
+- Sade: saa.json-luvut jätetty, luonnehdinta pehmennetty (suuntaa-antavia, lähde noin 900 mm).
+- ehdotukset.huomiot: T1- ja Kunstmuseum-rivit päivitetty ratkaistuiksi. Nosto 1 -tekstiin lisättiin lähteellinen virke (Werdenberg-Sargans, osto 1712) jotta pituusrajat täyttyvät. Kuvia ei vaihdettu, kuvat.md koskematta (T1-huomio jää vanhaksi).
