@@ -420,7 +420,9 @@ riittää tähän moninkertaisesti.
 - Worker lokittaa virhetilanteesta vain tilakoodin — ei pelaajan
   tekstiä eikä avainta.
 - Käyttörajojen laskurit tallentavat IP-osoitteesta vain lyhyen
-  tiivisteen, ei osoitetta itseään.
+  tiivisteen, ei osoitetta itseään. Tiiviste on suolattu
+  (HMAC-SHA-256 salaisuudella `IP_SUOLA`, GitHubin `POLLO_IP_SUOLA`),
+  jottei sitä voi palauttaa osoitteeksi kokeilemalla kaikkia osoitteita.
 - Järjestelmäkehote (pöllön säännöt: ei tehtävävastauksia, ei
   juonipaljastuksia, ei keksittyjä faktoja) on workerissa, ei pelin
   koodissa. Sitä ei voi kiertää muokkaamalla selaimen puolta.

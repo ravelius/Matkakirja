@@ -79,6 +79,10 @@ import {
   lueLuku,
   luoJatkoSuodatin,
   paivaAvain,
+  ipTiiviste,
+  tiiviste,
+  opasPaivaAvain,
+  puhePaivaAvain,
   poimiEhdotukset,
   poimiJatkot,
   poimiSahkeTuomio,
@@ -864,15 +868,29 @@ test('päiväraja ja kuukausibudjetti pysäyttävät omilla viesteillään', () 
   assert.equal(tarkistaRajat({ paiva: 99999, paivaraja: 0, kuukausiraja: 0 }).ok, true);
 });
 
-test('päiväavain ei sisällä raakaa IP-osoitetta ja on vakaa vuorokauden ajan', () => {
+test('päiväavain ei sisällä raakaa IP-osoitetta ja on vakaa vuorokauden ajan', async () => {
   const aamu = new Date('2026-08-12T06:00:00Z');
   const ilta = new Date('2026-08-12T23:30:00Z');
   const huomenna = new Date('2026-08-13T06:00:00Z');
-  const a = paivaAvain('203.0.113.7', aamu);
-  assert.ok(!a.includes('203.0.113.7'), 'avaimessa oli raaka IP');
-  assert.equal(a, paivaAvain('203.0.113.7', ilta));
-  assert.notEqual(a, paivaAvain('203.0.113.7', huomenna));
-  assert.notEqual(a, paivaAvain('203.0.113.8', aamu));
+  for (const suola of ['', 'testisuola-1']) {
+    const a = await paivaAvain('203.0.113.7', aamu, suola);
+    assert.ok(!a.includes('203.0.113.7'), 'avaimessa oli raaka IP');
+    assert.equal(a, await paivaAvain('203.0.113.7', ilta, suola));
+    assert.notEqual(a, await paivaAvain('203.0.113.7', huomenna, suola));
+    assert.notEqual(a, await paivaAvain('203.0.113.8', aamu, suola));
+  }
+});
+
+test('IP-tiiviste suolataan salaisuudella (#4326): 8 heksamerkkiä, suola vaihtaa tiivisteen, ilman suolaa vanha FNV-1a', async () => {
+  const ip = '203.0.113.7';
+  assert.equal(await ipTiiviste(ip, ''), tiiviste(ip));
+  const a = await ipTiiviste(ip, 'testisuola-1');
+  assert.match(a, /^[0-9a-f]{8}$/);
+  assert.notEqual(a, tiiviste(ip));
+  assert.equal(a, await ipTiiviste(ip, 'testisuola-1'));
+  assert.notEqual(a, await ipTiiviste(ip, 'testisuola-2'));
+  assert.match(await opasPaivaAvain(ip, new Date('2026-10-10T08:00:00Z'), 'testisuola-1'), /^opas:p3:2026-10-10:[0-9a-f]{8}$/);
+  assert.match(await puhePaivaAvain(ip, new Date('2026-10-10T08:00:00Z'), 'testisuola-1'), /^puhe:p:2026-10-10:[0-9a-f]{8}$/);
 });
 
 test('CORS päästää läpi vain listatut originit', () => {

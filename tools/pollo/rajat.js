@@ -71,10 +71,10 @@ export function opasElevenPaivaAvain(nyt = new Date()) {
   return `eleven:opas:p:${nyt.toISOString().slice(0, 10)}`;
 }
 
-export function opasPaivaAvain(ip, nyt = new Date()) {
+export async function opasPaivaAvain(ip, nyt = new Date(), suola = '') {
   // p2/p3 (5.10.2026 ilta): avain vaihdettiin, kun natiivin uusintasilmukka täytti Macin/kodin IP:n päivärajan; julkaisu
   // nollasi laskurit (ei KV-käsityötä). Tiheysraja (worker oppaanTiheysYlittyy) estää toiston.
-  return `opas:p3:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+  return `opas:p3:${nyt.toISOString().slice(0, 10)}:${await ipTiiviste(ip, suola)}`;
 }
 
 /*
@@ -192,9 +192,29 @@ export function tiiviste(teksti) {
   return h.toString(16).padStart(8, '0');
 }
 
-/** Päivälaskurin avain. Vuorokausi vaihtuu UTC-keskiyöllä. */
-export function paivaAvain(ip, nyt = new Date()) {
-  return `pollo:p:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+/**
+ * IP-osoitteen laskuritiiviste (Sisältökirjurin #4326-tarkistus, PT 10.10.2026): suolaamaton 32-bittinen FNV-1a
+ * palautuu IPv4-osoitteeksi kokeilemalla kaikki 2^32 osoitetta, joten KV:n avaimista olisi saanut kävijöiden osoitteet.
+ * Suolan kanssa tiiviste on HMAC-SHA-256(suola, ip):n 8 ensimmäistä heksamerkkiä (sama 8 merkin muoto kuin ennen);
+ * suola on workerin salaisuus IP_SUOLA (GitHubin POLLO_IP_SUOLA, ei repoon). Ilman suolaa (paikalliset testit, vanha
+ * julkaisu) käytetään entistä FNV-1a:ta. Suolan vaihto nollaa IP-kohtaiset päivälaskurit kerran.
+ */
+const hmacAvaimet = new Map();
+export async function ipTiiviste(ip, suola) {
+  const teksti = String(ip ?? 'tuntematon');
+  if (!suola) return tiiviste(teksti);
+  let avain = hmacAvaimet.get(suola);
+  if (!avain) {
+    avain = await crypto.subtle.importKey('raw', new TextEncoder().encode(suola), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
+    hmacAvaimet.set(suola, avain);
+  }
+  const h = new Uint8Array(await crypto.subtle.sign('HMAC', avain, new TextEncoder().encode(teksti)));
+  return [...h.subarray(0, 4)].map((t) => t.toString(16).padStart(2, '0')).join('');
+}
+
+/** Päivälaskurin avain. Vuorokausi vaihtuu UTC-keskiyöllä. suola = env.IP_SUOLA. */
+export async function paivaAvain(ip, nyt = new Date(), suola = '') {
+  return `pollo:p:${nyt.toISOString().slice(0, 10)}:${await ipTiiviste(ip, suola)}`;
 }
 
 /** Kuukausibudjetin avain. Kuukausi vaihtuu UTC-kuukauden vaihtuessa. */
@@ -213,8 +233,8 @@ export function puluElevenPaivaAvain(nyt = new Date()) {
   return `eleven:pulu:p:${nyt.toISOString().slice(0, 10)}`;
 }
 
-export function puhePaivaAvain(ip, nyt = new Date()) {
-  return `puhe:p:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+export async function puhePaivaAvain(ip, nyt = new Date(), suola = '') {
+  return `puhe:p:${nyt.toISOString().slice(0, 10)}:${await ipTiiviste(ip, suola)}`;
 }
 
 export function puheKuukausiAvain(nyt = new Date()) {
