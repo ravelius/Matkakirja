@@ -1,0 +1,473 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "zagreb",
+ "maa": "HRV",
+ "era": "e01",
+ "kaupunki": {
+  "id": "zagreb",
+  "name": "Zagreb",
+  "wiki": "Zagreb",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 45.813,
+   "lon": 15.977
+  }
+ },
+ "artikkeli": {
+  "intro": "Zagreb on Kroatian pääkaupunki ja suurin kaupunki, joka kasvoi kahdesta vierekkäisestä kukkulakaupungista. Piispanistuin **Kaptol** perustettiin 1094, ja **Gradec** sai vapaan kuninkaallisen kaupungin aseman 1242. Nimi Zagreb tunnetaan asiakirjasta 1134, mutta koko kaupungin nimenä se vakiintui vasta 1852.\n\nIsoisän matkavuonna 1873 kaupunki oli jo yksi kokonaisuus: yhdistyminen oli tapahtunut noin 1850, rautatie oli avattu 1862 ja Ban Jelačićin ratsastajapatsas seisoi keskusaukiolla. Tuomiokirkon kaksoistornit, Alakaupungin säännölliset korttelit ja raitiotie puuttuivat vielä, sillä ne syntyivät vasta **vuoden 1880 maanjäristyksen** jälkeen.\n\nNykyään kaupungissa asuu 777 744 ihmistä (DZS:n arvio vuoden 2025 puolivälissä). Kaupunki sijaitsee Savan varrella Medvednica-vuoren etelärinteillä lähellä Slovenian rajaa. Sen keskusta jatkuu kukkuloilta etelään aukioiden ja puistojen sarjana.",
+  "teksti": "Zagrebin nimen alkuperä on epäselvä. Lähteen mukaan todennäköisin selitys on sana, joka tarkoittaa penkereen tai vallinharjan kaltaista maastonmuotoa ja viittaa Gričin ensimmäisen vuosituhannen linnoitteisiin. Kansa on kertonut myös legendan, jossa kuvernööri käski tytön ammentamaan vettä Manduševacin kaivosta sanoin \"Zagrabi, Mando\".\n\nGradec ja Kaptol olivat vuosisatoja eri kaupunkeja, ja niiden alapuolelle tasangolle perustettiin 1641 torialue Manduševac-lähteen lähelle. Siitä kasvoi nykyinen Ban Jelačić -aukio. Kaupunki kuuluu Kroatian erityisasemassa oleviin hallintoalueisiin: se on sekä kaupunki että piirikunta, ja sillä on 17 kaupunginosaa.\n\nNykyisen ilmeensä kaupunki sai pitkälti vuosina 1880–1914, kun maanjäristyksen jälkeen syntyi uusi asemakaava ja Alakaupunki sai säännöllisen korttelirakenteen. Toinen voimakas järistys 22.3.2020 vaurioitti historiallista keskustaa ja tuomiokirkon tornia, ja kunnostus jatkui lähteen mukaan vielä vuonna 2026."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä joen varrella Zagreb sijaitsee?",
+   "options": [
+    "Sava",
+    "Drava",
+    "Kupa",
+    "Una"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Joki on Tonavan sivujoki ja virtaa kaupungin eteläpuolella.",
+   "fact": "Zagreb sijaitsee Kroatian pohjoisosassa Savan varrella, Medvednica-vuoren etelärinteillä.",
+   "source": "https://en.wikipedia.org/wiki/Zagreb"
+  },
+  {
+   "q": "Mitä Lotrščakin tornissa tapahtuu joka päivä keskipäivällä?",
+   "options": [
+    "Tykki ammutaan",
+    "Kello soi kaksitoista kertaa",
+    "Torniin nostetaan lippu",
+    "Torin portit avataan"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Tapa on peräisin 1800-luvulta ja ottaa kuuloaistin mukaan.",
+   "fact": "Ensimmäinen laukaus ammuttiin 1.1.1877, ja se toimi merkkinä kirkonkellojen soittajille.",
+   "source": "https://en.wikipedia.org/wiki/Lotr%C5%A1%C4%8Dak_Tower"
+  },
+  {
+   "q": "Kenen mukaan Zagrebin keskusaukio on nimetty?",
+   "options": [
+    "Bani Josip Jelačić",
+    "Nikola Šubić Zrinski",
+    "Ivan Mažuranić",
+    "Julije Klović"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Hän oli sotilas ja Kroatian bani, ja aukiolla on hänen ratsastajapatsaansa.",
+   "fact": "Aukio nimettiin Jelačićin mukaan 1848, ja Fernkornin ratsastajapatsas pystytettiin sinne 1866.",
+   "source": "https://en.wikipedia.org/wiki/Ban_Jela%C4%8Di%C4%87_Square"
+  },
+  {
+   "q": "Mikä säilyi vahingoittumattomana Yläkaupungin tulipalossa vuonna 1731?",
+   "options": [
+    "Neitsyt Marian maalaus",
+    "Pyhän Markuksen urut",
+    "Vanhan portin ovi",
+    "Kaupungin sinetti"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Esine löytyi raunioista kolmantena päivänä, ja sen puinen kehys oli palanut.",
+   "fact": "Maalaus säilyi Kivisen portin luona, ja portin holvin alle rakennettiin sille pieni alttari.",
+   "source": "https://en.wikipedia.org/wiki/Stone_Gate_(Zagreb)"
+  },
+  {
+   "q": "Minkä tyylisenä Zagrebin tuomiokirkko rakennettiin uudelleen vuoden 1880 maanjäristyksen jälkeen?",
+   "options": [
+    "Uusgoottilaisena",
+    "Barokkityylisenä",
+    "Uusrenessanssina",
+    "Jugendina"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Tyyli herätti henkiin keskiajan rakennustaiteen.",
+   "fact": "Hermann Bollén johtama kunnostus kesti 1880–1902, ja tornit rakennettiin 1889–1899.",
+   "source": "https://en.wikipedia.org/wiki/Zagreb_Cathedral"
+  }
+ ],
+ "tiedot": [
+  "Zagrebin vaijerihissi on lähteen mukaan yksi maailman lyhimmistä julkisen liikenteen vaijerihisseistä: ratapituus on 66 metriä ja matka kestää 64 sekuntia.",
+  "Zagrebin keskipäivän tykki on ammuttu 1.1.1877 alkaen, ja sen laukaus toimi alun perin kirkonkellojen soittajien aikamerkkinä.",
+  "Zagreb on lähteen mukaan Euroopan yhdeksänneksi sateisin pääkaupunki, ja sen vuosisadanta on noin 840 mm."
+ ],
+ "valokuva": {
+  "tiedosto": "Kamenita vrata 29102016-002.jpg",
+  "vuosi": "2016",
+  "lahde": "Yamen, Commons (CC BY-SA 4.0)",
+  "lyhyt": "Kivinen portti on Gradecin muurien ainoa säilynyt kaupunginportti.",
+  "selite": "Kivinen portti rakennettiin 1200-luvulla osana Gradecin muureja, ja sen holvin alla on Neitsyt Marian maalaus, joka säilyi vuoden 1731 tulipalossa."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Zagreb",
+   "johdanto": "Zagreb on Kroatian pääkaupunki, joka kasvoi kahdesta kukkulasta ja jonka nykyinen ilme syntyi vuoden 1880 maanjäristyksen jälkeen. Isoisän matkavuonna 1873 kaupunki oli vielä entisellään: raitiotietä ja Alakaupungin kortteleita ei ollut, mutta rautatie ja Ban Jelačićin patsas jo olivat.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Zagreb, Panorama 002.jpg",
+     "lyhyt": "Zagrebin keskusta on kasvanut Savan laaksoon ja Medvednican rinteille.",
+     "selite": "Zagreb on Kroatian pääkaupunki, jonka keskusta on kasvanut Savan laaksoon ja Medvednica-vuoren etelärinteille.",
+     "lahde": "Vojtěch Dočkal, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Zagreb seen from the top of the old town funicular.jpg",
+     "lyhyt": "Yläkaupunki on Zagrebin keskiaikainen ydin.",
+     "selite": "Yläkaupunki eli Gradec on Zagrebin keskiaikainen ydin, joka sai vapaan kuninkaallisen kaupungin aseman 1242.",
+     "lahde": "Alex Sirac, Wikimedia Commons (CC BY 4.0)"
+    },
+    {
+     "tiedosto": "Zagreb Gornji grad1.jpg",
+     "lyhyt": "Yläkaupungin ja Kaptolin kukkulat muodostivat Zagrebin kaksi vanhaa ydintä.",
+     "selite": "Yläkaupungin ja Kaptolin kukkulat olivat vuosisatoja kaksi eri kaupunkia, jotka yhdistettiin noin 1850.",
+     "lahde": "Fraxinus, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kaupunki, joka rakennettiin uusiksi",
+     "teksti": "Maanjäristys 9.11.1880 oli voimakkuudeltaan 6,3, ja sen episentrumi oli Medvednicalla. Vahingot olivat lähteen mukaan puolet silloisesta valtion vuosibudjetista. Tuomiokirkon päälaiva romahti ja yksi torni vaurioitui korjauskelvottomaksi. Kirkko kunnostettiin uusgoottilaiseen asuun arkkitehti Hermann Bollén johdolla 1880–1902, ja tornit rakennettiin 1889–1899. Myös Pyhän Markuksen kirkko, jonka laaja kunnostus oli jo käynnissä, sai silloin uusgoottilaisen ilmeensä. Järistyksen jälkeen 1880–1914 kaupunki sai nykyisen asemakaavansa, ja Alakaupunki sai säännöllisen korttelirakenteen.",
+     "tiedosto": "Zagreb Cathedral against blue sky and puffy clouds.jpg",
+     "lyhyt": "Zagrebin tuomiokirkko sai nykyisen uusgoottilaisen asunsa 1880–1902.",
+     "selite": "Zagrebin tuomiokirkko on omistettu Neitsyt Marian taivaaseenottamiselle, ja sen nykyinen uusgoottilainen asu syntyi 1880 järistyksen jälkeen.",
+     "lahde": "Bodro777, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "1880 Zagreb earthquake"
+    },
+    {
+     "otsikko": "Tykki, joka ampuu keskipäivällä",
+     "teksti": "Lotrščakin torni rakennettiin osana Gradecin muureja, jotka olivat lähteen mukaan valmiit 1266, puolustamaan eteläistä Dverce-porttia. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello: kello ripustettiin torniin 1646 merkiksi porttien sulkemisesta. Dverce-portti purettiin 1812 kävelykadun tieltä, ja 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta. Keskipäivän tykki ammuttiin ensimmäisen kerran 1.1.1877, joten isoisän matkavuonna 1873 sitä ei vielä ollut. Laukaukset keskeytyivät ensimmäisen maailmansodan ajaksi ja jatkuivat 1927.",
+     "tiedosto": "Lotrščak Tower, Zagreb.jpg",
+     "lyhyt": "Lotrščakin torni on osa Gradecin muureja ja Zagrebin keskipäivän tykin koti.",
+     "selite": "Lotrščakin torni rakennettiin Gradecin eteläisen portin puolustukseksi, ja nykyisin siellä on näköalatasanne.",
+     "lahde": "Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Lotrščak Tower"
+    },
+    {
+     "otsikko": "Karjatori, josta tuli puisto",
+     "teksti": "Karjamarkkina siirrettiin 1826 nykyisen Zrinjevacin paikalle, ja puisto-aukio syntyi vähitellen sen tilalle. Virallisesti Nikola Šubić Zrinski -aukio on 12 540 neliömetrin laajuinen ja kuuluu Lenucin vihreään hevosenkenkään, Alakaupungin aukioiden ketjuun. Lähteen mukaan ketjussa on seitsemän aukiota. Puiston keskellä on musiikkipaviljonki vuodelta 1891, Eduard Pristerin lahjoitus kaupungille. Eteläosassa on kuuden merkittävän kroatialaisen rintakuvat, muiden muassa Julije Klovićin ja Ivan Mažuranićin. Aukion ympärillä ovat arkeologinen museo, Kroatian tiedeakatemia ja Strossmayerin vanhojen mestarien galleria.",
+     "tiedosto": "Zrinjevac Park, Zagreb, Croatia - July 2022.jpg",
+     "lyhyt": "Zrinjevacin musiikkipaviljonki on vuodelta 1891.",
+     "selite": "Zrinjevac on Alakaupungin puisto-aukio, jonka keskellä on Eduard Pristerin lahjoittama musiikkipaviljonki vuodelta 1891.",
+     "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)",
+     "wiki": "Nikola Šubić Zrinski Square"
+    },
+    {
+     "otsikko": "Kaupungin nimi ja puro",
+     "teksti": "Zagrebin nimen alkuperä on epävarma. Legendan mukaan kuvernööri käski tytön ammentaa vettä Manduševacin kaivosta sanoin \"Zagrabi, Mando\". Toinen legenda liittää nimen Augustin Kažotićin kaivamaan kaivoon, mutta historioitsija Ivan Tkalčić hylkäsi sen vakavana selityksenä. Medveščak-puro virtasi Gradecin ja Kaptolin välissä ja pyöritti vesimyllyjä. Se peitettiin 1898, ja syntynyt katu nimettiin 1913 Tkalčićevaksi. Heinäkuussa 1651 puro tulvi ja tuhosi talot, ja lähteen mukaan 52 ihmistä kuoli.",
+     "tiedosto": "Cafes at beginning of Tkalčićeva street.jpg",
+     "lyhyt": "Tkalčićevan katu kulkee peitetyn Medveščak-puron paikalla.",
+     "selite": "Tkalčićevan katu syntyi Medveščak-puron peittämisen jälkeen 1898, ja se sai nykyisen nimensä 1913 historioitsija Ivan Tkalčićin mukaan.",
+     "lahde": "JasonParis, Wikimedia Commons (CC BY 2.0)",
+     "wiki": "Tkalčićeva Street"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Zagreb Funicular 12.jpg",
+     "lyhyt": "Zagrebin vaijerihissi yhdistää Alakaupungin Yläkaupunkiin.",
+     "selite": "Zagrebin vaijerihissi rakennettiin 1890, ja se on 66 metriä pitkä ja kulkee 64 sekunnissa.",
+     "lahde": "Gveret Tered, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "Zagreb on Kroatian pääkaupunki, kahden kukkulan ja Alakaupungin kaupunki. Yläkaupunkiin pääsee jalan Ban Jelačić -aukiolta tai Tomićevan kadun vaijerihissillä. Keskusta on suurelta osin jalankulkijoille, ja raitiovaunu on pääkulkuväline. Maksuväline on euro. Kaupungissa viihtyy kävellen, kahviloissa ja torilla.",
+    "artikkeli": {
+     "nimi": "Matkailijan Zagreb",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa kahvitauko on tapa ja jossa kahden kukkulan välinen matka taittuu jalan.",
+     "nosto": "Joka päivä keskipäivällä Lotrščakin tornin tykki laukeaa, ja se on Yläkaupungin tunnetuin aikamerkki.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Zagreb Franjo Tuđman -lentoasema (ZAG) on noin 17 km kaakkoon keskustasta Velika Goricassa, ja sieltä kulkee linja-auto Eugen Kvaternik -aukiolle; uusi terminaali avattiin maaliskuun lopussa 2017. Junayhteydet johtavat muun muassa Ljubljanaan, Budapestiin, Müncheniin, Wieniin ja Zürichiin. Kaupungin sisällä pääkulkuväline on raitiovaunu: päivälinjoja on 15 ja yölinjoja 4, ja ensimmäinen linja avattiin 5.9.1891. Keskinopeus on noin 13 km/h, joten matkaan kannattaa varata aikaa. Yläkaupunkiin pääsee jalan Ban Jelačić -aukiolta tai Tomićevan kadun vaijerihissillä, joka on 66 metriä pitkä ja rakennettiin 1890. Hissi oli suljettu korjauksen vuoksi 20.1.2025 alkaen, joten sen nykytila kannattaa tarkistaa."
+      },
+      {
+       "otsikko": "Yläkaupunki ja Tkalčićeva",
+       "teksti": "Yläkaupunki ja Kaptol muodostavat keskiaikaisen ytimen, ja Yläkaupunki on lähteen mukaan yksi Kroatian parhaiten säilyneistä kaupunkiytimistä. Pyhän Markuksen aukio on sen keskus, ja Kivinen portti on ainoa säilynyt Gradecin neljästä portista. Lauantaisin huhti–syyskuussa aukiolla esiintyy Hopeisen lohikäärmeen ritarikunta, joka näyttelee Gradecin ja Kaptolin taisteluita. Strossmayerin kävelykadulta avautuu näköala kaupungin yli. Gradecin ja Kaptolin välissä virtasi ennen Medveščak-puro; se peitettiin 1898, ja sen paikalle syntynyt katu on nykyään Tkalčićeva.",
+       "kuva": {
+        "tiedosto": "Zagreb - Ulica Ivana Tkalčića.jpg",
+        "lyhyt": "Tkalčićeva-katu syntyi peitetyn Medveščak-puron paikalle.",
+        "selite": "Tkalčićeva-katu syntyi Medveščak-puron peittämisen jälkeen 1898, ja se sai nykyisen nimensä 1913 historioitsija Ivan Tkalčićin mukaan.",
+        "lahde": "Fred Romero from Paris, France, Wikimedia Commons (CC BY 2.0)"
+       }
+      },
+      {
+       "otsikko": "Puistot ja Mirogoj",
+       "teksti": "Vihreä hevosenkenkä jatkuu Zrinjevacista Taidepaviljonkiin asti. Maksimir on kaupunkimetsä, jonka piispa Maksimilijan Vrhovac lahjoitti kaupungille, ja sen eläintarha avattiin 1925. Jarun-järvi lounaassa tarjoaa uimarannan ja souturatoja. Medvednican Sljeme (1 035 m) on helppo saavuttaa gondolihissillä, jonka matka kestää noin 16 minuuttia. Mirogojin hautausmaapuisto vihittiin 6.11.1876, sen suunnitteli Hermann Bollé, ja arkadit valmistuivat vasta 1929. Mirogojille pääsee ZET-bussilla 106 Kaptolilta.",
+       "kuva": {
+        "tiedosto": "Park-šuma Maksimir, main path, Zagreb, 2025.jpg",
+        "lyhyt": "Maksimir on piispa Vrhovacin kaupungille lahjoittama kaupunkimetsä.",
+        "selite": "Maksimir on kaupunkimetsä, jonka piispa Maksimilijan Vrhovac lahjoitti kaupungille ja jonka eläintarha avattiin 1925.",
+        "lahde": "Antimuonium, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Zagrebin ruokapöydässä tavataan zagrebački odrezak, cordon bleun kaltainen leike, štrukli eli rahkastrudeli, sarma, mlinci, kremšnite ja orehnjača. Licitar-sydän on hunajataikinasta tehty keksi. Dolacin tori Ban Jelačić -aukion yläpuolella on toiminut päivittäisenä torina nykyisellä paikallaan vuodesta 1930. Sen punaiset sateenvarjot ovat tunnistettava näky, ja alakerran hallissa myydään muun muassa sir i vrhnje -juustoa ja kermaa. Špica on kahvitauko keskustan kahviloissa, ja se on vilkkaimmillaan lauantaisin puolen päivän aikaan.",
+       "kuva": {
+        "tiedosto": "Tržnica Dolac (Farmers’ Market), Zagreb, Croatia.jpg",
+        "lyhyt": "Dolacin tori on Zagrebin päivittäinen torikauppa.",
+        "selite": "Dolacin tori Ban Jelačić -aukion yläpuolella on toiminut nykyisellä paikallaan vuodesta 1930.",
+        "lahde": "Sharon Hahn Darlin, Wikimedia Commons (CC BY 2.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Zagrebin ilmasto on lauhkea ja siinä on neljä selvää vuodenaikaa. Sääaineiston mukaan tammikuun keskilämpö on 0,4 astetta ja heinä- ja elokuun 22,6 astetta. Sadetta tulee vähiten tammikuussa, 27 mm, ja eniten lokakuussa, 132 mm. Lähteen mukaan vuosisadanta on noin 840 mm, ja Zagreb on Euroopan yhdeksänneksi sateisin pääkaupunki. Adventtina Ban Jelačić -aukio koristellaan joulukuusilla ja valoilla, ja kaupungin joulutori valittiin lähteen mukaan Euroopan parhaaksi kolmena vuonna peräkkäin 2015–2017."
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Kivinen portti",
+        "tahdet": 3,
+        "selite": "Gradecin ainoa säilynyt kaupunginportti, jonka holvin alla on Neitsyt Marian maalaus, joka säilyi 1731 tulipalossa."
+       },
+       {
+        "mita": "Lotrščakin tornin keskipäivälaukaus",
+        "tahdet": 3,
+        "selite": "Grič-tykki ammutaan joka päivä keskipäivällä, ja laukaus on kuulunut kaupunkiin vuodesta 1877."
+       },
+       {
+        "mita": "Dolacin tori",
+        "tahdet": 3,
+        "selite": "Päivittäinen torikauppa punaisten sateenvarjojen alla Ban Jelačić -aukion yläpuolella."
+       },
+       {
+        "mita": "Mirogoj",
+        "tahdet": 2,
+        "selite": "Hermann Bollén suunnittelema hautausmaapuisto arkadeineen."
+       },
+       {
+        "mita": "Rikkoutuneiden suhteiden museo",
+        "tahdet": 2,
+        "selite": "Ćirilometodska-kadun museo on lähteen mukaan maan ensimmäinen yksityismuseo."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Tuomiokirkko on kunnostuksessa",
+        "teksti": "Tuomiokirkko on ollut vuodesta 2020 laajassa kunnostuksessa, eikä uudelleenavauksen päivämäärä ollut lähteessä tiedossa."
+       },
+       {
+        "otsikko": "Taidepaviljonki oli suljettu",
+        "teksti": "Taidepaviljonki oli lähteen mukaan suljettu vuonna 2026 vuoden 2020 järistyksen vuoksi, joten avoinnaolo kannattaa tarkistaa."
+       },
+       {
+        "otsikko": "Raitiovaunut ovat hitaita",
+        "teksti": "Keskinopeus on noin 13 km/h, ja kävely on usein nopein tapa liikkua keskustassa."
+       },
+       {
+        "otsikko": "Maksuväline on euro",
+        "teksti": "Kroatiassa maksetaan eurolla."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Taidetta hevosenkengän sisällä",
+   "johdanto": "Zagrebin taide ei asu vain museoissa: yksi galleria saatiin alun perin toisesta kaupungista, yksi patsas piilotettiin muurin sisään ja yksi museo kerää naivistien maalauksia. Aukioiden ja palatsien ketju kantaa useita kaupungin taidelaitoksia.",
+   "tehtava": {
+    "kysymys": "Missä kaupungissa Taidepaviljongin rautarungon varaan rakennettu paviljonki pystytettiin ensin näyttelyä varten?",
+    "vaihtoehdot": [
+     "Budapest",
+     "Wien",
+     "Praha",
+     "Ljubljana"
+    ],
+    "oikea": 0,
+    "fakta": "Paviljongin rautarunko tehtiin valmiiksi osiksi 1896 vuosituhatnäyttelyä varten, jotta rakennus voitaisiin siirtää Zagrebiin."
+   },
+   "nostot": [
+    {
+     "otsikko": "Rautarunko Budapestista",
+     "teksti": "Ajatuksen oman näyttelypaviljongin rakentamisesta esitti maalari Vlaho Bukovac keväällä 1895. Budapestin vuosituhatnäyttelyyn 1896 pystytettiin esivalmistetun rautarungon varaan paviljonki, jotta se voitaisiin myöhemmin siirtää Zagrebiin. Rakennuksen uuden version suunnittelivat wieniläiset Fellner ja Helmer, ja se tehtiin 1897–1898. Avajaiset olivat 15.12.1898 Hrvatski salon -näyttelyllä. Lähteen mukaan paviljonki on Kaakkois-Euroopan vanhin galleria, ja se on järjestänyt noin 700 näyttelyä. Vuoden 2020 järistyksen jälkeen se oli lähteen mukaan suljettu kävijöiltä vuonna 2026.",
+     "tiedosto": "Pabellón del Arte, Zagreb, Croacia, 2014-04-20, DD 05.JPG",
+     "lyhyt": "Taidepaviljonki valmistui 1898 Zagrebin näyttelytilaksi.",
+     "selite": "Taidepaviljonki on Zagrebin näyttelyitä varten rakennettu galleria, jonka avajaiset olivat 15.12.1898.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Art Pavilion (Zagreb)"
+    },
+    {
+     "otsikko": "Alaston kaivo muurin sisässä",
+     "teksti": "Ivan Meštrović teki Elämän kaivon (Zdenac života) 1905, ja se oli esillä 1909 hänen galleriassaan osoitteessa Ilica 12. Izidor Kršnjavi osti teoksen 1912, ja se asennettiin kansallisteatterin eteen Kroatian tasavallan aukiolle. Kaivo sijoitettiin muurien ympäröimään syvennykseen, jotta alastomat vartalot eivät lähteen mukaan herättäisi konservatiivisessa Zagrebissa hämmästystä ja arvostelua. Teatterin keltaisen rakennuksen suunnittelivat Fellner ja Helmer, ja se avattiin 14.11.1895 keisari Franz Joseph I:n läsnä ollessa. Isoisän matkavuonna 1873 rakennusta ei vielä ollut.",
+     "tiedosto": "Croatian National Theater, Zagreb 01.jpg",
+     "lyhyt": "Kansallisteatterin edustalla on Ivan Meštrovićin Elämän kaivo.",
+     "selite": "Kansallisteatterin rakennus avattiin 1895, ja sen sisäänkäynnillä on Ivan Meštrovićin Elämän kaivo.",
+     "lahde": "Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Croatian National Theatre, Zagreb"
+    },
+    {
+     "otsikko": "Naivistit ja Mimaran lahjoitus",
+     "teksti": "Kroatialaisen naivistisen taiteen museo on lähteen mukaan yksi maailman ensimmäisistä naivistimuseoista. Se toimii 1700-luvun Raffayn palatsissa Yläkaupungissa, ja kokoelmassa on lähes 2 000 teosta. Mimara-museo perustettiin Ante Topić Mimaran lahjoituksesta ja avattiin yleisölle 1987. Sen 3 750 teoksen joukossa on Rubensin, Velázquezin, Renoirin ja Goyan töitä, ja museo toimii 1800-luvun lopun uusrenessanssipalatsissa. Strossmayerin vanhojen mestarien galleria Zrinjevacin laidalla esittelee eurooppalaista maalausta 1300-luvulta 1800-luvulle.",
+     "tiedosto": "Museo Mimara, Zagreb, Croacia, 2014-04-20, DD 01.JPG",
+     "lyhyt": "Mimara-museo esittelee Ante Topić Mimaran lahjoittamaa kokoelmaa.",
+     "selite": "Mimara-museo avattiin yleisölle 1987 Ante Topić Mimaran lahjoituksen pohjalta, ja se toimii 1800-luvun lopun uusrenessanssipalatsissa.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Mimara Museum"
+    },
+    {
+     "otsikko": "Esirippu ja kattomaalaukset",
+     "teksti": "Kansallisteatterin juhlaesiripun Hrvatski narodni preporod maalasi Vlaho Bukovac, ja katsomon kattomaalaukset teki wieniläinen Alexander Demetrius Goltz. Aulan katto on Ivan Tišovin työtä vuodelta 1911. Moderni galleria on toiminut Vranyczanyn palatsissa Zrinjevacin laidalla vuodesta 1934. Taide- ja käsityömuseo perustettiin 1880 säilyttämään käsityötä teollisen tuotannon rinnalla. Etnografinen museo, joka perustettiin 1919, toimii vuoden 1903 secession-tyylisessä Kauppakamarin talossa.",
+     "tiedosto": "Croatian National Theatre in Zagreb, April 18, 2022.jpg",
+     "lyhyt": "Kansallisteatterin juhlaesirippu ja kattomaalaukset ovat Bukovacin ja Goltzin töitä.",
+     "selite": "Kansallisteatterin juhlaesiripun Hrvatski narodni preporod maalasi Vlaho Bukovac, ja katsomon kattomaalaukset teki Alexander Demetrius Goltz.",
+     "lahde": "Koreanovsky, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Vlaho Bukovac"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Historiallinen ydin on Yläkaupunki ja Kaptol sekä niiden alapuolella oleva keskusaukio. Alakaupunki jatkuu etelään vihreän hevosenkengän aukioina. Kohteet ovat kävelymatkan sisällä toisistaan.",
+  "rajat": {
+   "pohjoinen": 45.8186,
+   "etela": 45.8045,
+   "lansi": 15.9691,
+   "ita": 15.9836
+  },
+  "kohteet": [
+   {
+    "nimi": "Kivinen portti",
+    "lat": 45.8158,
+    "lon": 15.9753
+   },
+   {
+    "nimi": "Lotrščakin torni",
+    "lat": 45.81472,
+    "lon": 15.97306
+   },
+   {
+    "nimi": "Zagrebin tuomiokirkko",
+    "lat": 45.81444,
+    "lon": 15.97972
+   },
+   {
+    "nimi": "Zrinjevac",
+    "lat": 45.81028,
+    "lon": 15.97806,
+    "tyyppi": "aukio"
+   },
+   {
+    "nimi": "Taidepaviljonki",
+    "lat": 45.80722,
+    "lon": 15.97861
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Kivinen portti": {
+   "aika": "1200-luku",
+   "teksti": "Kivinen portti on ainoa säilynyt Gradecin neljästä kaupunginportista; muut olivat Mesnička, Opatička ja Dverce. Se rakennettiin 1200-luvulla osana Gradecin muureja, ja nykyilmeensä se sai 1700-luvulla. Isoisän matkavuonna 1873 portti oli yhä kaupunginportti Yläkaupungin itälaidalla.\n\nToukokuun lopussa 1731 syttyi tulipalo Pyhän Joosefin seminaarissa, ja se levisi Yläkaupunkiin ja Kaptoliin. Kolmantena päivänä raunioista löytyi vahingoittumaton Neitsyt Marian maalaus, josta vain puinen kehys oli palanut. Hurskas leski rakennutti maalaukselle pienen alttarin portin holvin alle.\n\nKivinen portti esiintyy August Šenoan romaanissa Zlatarevo zlato, ja holvin syvennyksessä on Dora Krupićin pieni patsas. Kardinaali Kuharić julisti portin Neitsyt Marian kaupungin suojeluspyhimykseksi 31.5.1991. Lähteen mukaan portti ei vaurioitunut 2020 maanjäristyksessä.",
+   "kuvat": [
+    {
+     "tiedosto": "Puerta de Piedra, Zagreb, Croacia, 2014-04-20, DD 02.JPG",
+     "lyhyt": "Kivisen portin holvin alla on Neitsyt Marian maalaukselle rakennettu alttari.",
+     "selite": "Kivisen portin holvin alla on pieni alttari, joka rakennettiin 1731 tulipalosta säilyneelle Neitsyt Marian maalaukselle.",
+     "lahde": "Diego Delso, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Lotrščakin torni": {
+   "aika": "1200-luku",
+   "teksti": "Lotrščakin torni rakennettiin osana Gradecin muureja, jotka olivat lähteen mukaan valmiit 1266, puolustamaan eteläistä Dverce-porttia. Nimi tulee latinan sanoista campana latrunculorum, varkaiden kello. Kello ripustettiin torniin 1646 merkiksi porttien sulkemisesta, ja Dverce-portti purettiin 1812 eteläisen kävelykadun tieltä.\n\nVuonna 1857 romanttisessa restauroinnissa torniin lisättiin kaksi kerrosta ja puinen palotähystys. Isoisän matkavuonna 1873 nämä lisäykset olivat jo paikallaan, mutta tykkiä ei vielä ollut. Kaupunki päätti hankkia sen myöhemmin 1800-luvulla, ja ensimmäinen laukaus ammuttiin 1.1.1877. Laukaus toimi merkkinä kirkonkellojen soittajille.\n\nTykki ammutaan neljännen kerroksen eteläikkunasta. Laukaukset keskeytyivät ensimmäisen maailmansodan ajaksi ja jatkuivat 1927. Pohjakerroksessa toimi 1800-luvulla kahvila, ja nykyisin tornissa on näköalatasanne, joka kuuluu Klovićevi Dvori -galleriaan.",
+   "kuvat": [
+    {
+     "tiedosto": "Kula Lotrščak i Dverce.jpg",
+     "lyhyt": "Lotrščakin torni sijaitsee Yläkaupungin eteläreunalla.",
+     "selite": "Lotrščakin torni rakennettiin Gradecin muurien eteläisen Dverce-portin puolustukseksi.",
+     "lahde": "Bobonajbolji, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Zagrebin tuomiokirkko": {
+   "aika": "1217, 1880–1902",
+   "teksti": "Zagrebin tuomiokirkon virallinen nimi on Neitsyt Marian taivaaseenottamisen ja pyhien Tapanin ja Ladislauksen katedraali. Piispanistuin perustettiin 1094, ja ensimmäinen katedraali valmistui ja vihittiin 1217. Lähteen mukaan se on Kroatian korkein sakraalirakennus. Tataarit tuhosivat Kaptolin 1242, ja piispa Timotej jälleenrakensi kirkon 1263–1287.\n\nIsoisän matkavuonna 1873 tuomiokirkko oli vielä keskiajan ja barokin sekoitus ilman kaksoistorneja. Arkkipiispanistuin oli sillä ollut vuodesta 1853. Vuoden 1880 maanjäristys romahdutti päälaivan, ja arkkitehti Hermann Bollén johtama uusgoottilainen kunnostus kesti 1880–1902. Tornit rakennettiin 1889–1899, ja ne ovat noin 108 metriä korkeat.\n\nJokaisessa tornissa on neljä pronssista kelloa 60 metrin korkeudessa. Järistys 22.3.2020 pudotti eteläisen tornin kärjen arkkipiispanpalatsin katolle, ja lähteen mukaan pohjoinen torni purettiin 17.4.2020. Kunnostus jatkui lähteen mukaan vuonna 2026.",
+   "kuvat": [
+    {
+     "tiedosto": "Zagreb Cathedral 03.jpg",
+     "lyhyt": "Tuomiokirkon kaksi tornia kohoavat Kaptolin yllä.",
+     "selite": "Tuomiokirkon kaksi uusgoottilaista tornia rakennettiin 1889–1899 ja ne ovat noin 108 metriä korkeat.",
+     "lahde": "Bernard Gagnon, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Zrinjevac": {
+   "aika": "1826",
+   "teksti": "Zrinjevac eli virallisesti Nikola Šubić Zrinski -aukio on 12 540 neliömetrin puisto-aukio Alakaupungissa. Karjamarkkina siirrettiin sen paikalle 1826, ja isoisän matkavuonna 1873 kaupunki oli jo vuosikymmenet pitänyt aukiota kaupungin puistoalueena. Puiston musiikkipaviljonkia ei kuitenkaan vielä ollut, sillä se tuli 1891 Eduard Pristerin lahjoituksena.\n\nAukio kuuluu Lenucin vihreään hevosenkenkään, Alakaupungin aukioiden ketjuun. Lähteen mukaan ketjussa on seitsemän aukiota. Eteläosassa on kuuden merkittävän kroatialaisen rintakuvat, muiden muassa Julije Klovićin ja Ivan Mažuranićin.\n\nAukion ympärillä on arkeologinen museo lännessä, Kroatian tiedeakatemia ja Strossmayerin vanhojen mestarien galleria etelässä sekä korkein oikeus pohjoisessa. Moderni galleria on toiminut Vranyczanyn palatsissa Zrinjevacin laidalla vuodesta 1934.",
+   "kuvat": [
+    {
+     "tiedosto": "Zrinjevac Park, Zagreb, May 2025.jpg",
+     "lyhyt": "Zrinjevac on Alakaupungin vanhin puisto-aukio vihreässä hevosenkengässä.",
+     "selite": "Zrinjevac on yksi Alakaupungin vihreän hevosenkengän aukioista, ja sen keskellä on suihkulähde plataanien alla.",
+     "lahde": "Hijerovit, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Taidepaviljonki": {
+   "aika": "1897–1898",
+   "teksti": "Taidepaviljonki rakennettiin Zagrebin näyttelytilaksi 1897–1898. Maalari Vlaho Bukovac esitti ajatuksen keväällä 1895, ja Budapestin vuosituhatnäyttelyyn 1896 pystytettiin esivalmistetun rautarungon varaan paviljonki, jotta se voitaisiin siirtää Zagrebiin. Rakennuksen uuden version suunnittelivat wieniläiset Fellner ja Helmer. Isoisän matkavuonna 1873 paviljonkia ei vielä ollut.\n\nAvajaiset olivat 15.12.1898. Lähteen mukaan paviljonki on Kaakkois-Euroopan vanhin galleria ja Zagrebin ainoa suuria näyttelyitä varten rakennettu galleria, ja sen näyttelytilaa on 600 neliömetriä. Se on järjestänyt noin 700 näyttelyä, joissa on ollut esillä muiden muassa Rodinin, Mooren, Miron ja Warholin töitä.\n\nRakennus sijaitsee Tomislav-aukion pohjoislaidalla päärautatieaseman edessä. Julkisivun rintakuvat esittävät idässä Klovićia, Medulićia ja Carpaccioa sekä lännessä Michelangeloa, Raffaelloa ja Tizianoa. Lasikatto kunnostettiin 2006–2013, ja lähteen mukaan paviljonki oli suljettu kävijöiltä vuonna 2026.",
+   "kuvat": [
+    {
+     "tiedosto": "Umjetnički paviljon, Zagreb.jpg",
+     "lyhyt": "Taidepaviljonki sijaitsee Tomislav-aukion pohjoislaidalla.",
+     "selite": "Taidepaviljonki on keltainen näyttelyrakennus, jonka lasikatto kunnostettiin 2006–2013.",
+     "lahde": "ScF, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 45.81,
+  "lon": 15.98,
+  "keskilampo": [
+   0.4,
+   3.9,
+   6.1,
+   11.9,
+   15.7,
+   19.6,
+   22.6,
+   22.6,
+   18.1,
+   12.4,
+   7.2,
+   3.1
+  ],
+  "sade": [
+   27,
+   43,
+   67,
+   54,
+   80,
+   75,
+   72,
+   103,
+   52,
+   132,
+   59,
+   62
+  ],
+  "luonnehdinta": "Tammikuu on kylmin kuukausi keskilämmöllä 0,4 astetta, ja heinä- ja elokuu ovat lämpimimmät 22,6 asteella. Toukokuusta syyskuuhun keskilämpö on 15,7–22,6 astetta. Sadetta tulee vähiten tammikuussa, 27 mm, ja eniten lokakuussa, 132 mm."
+ },
+ "ehdotukset": {
+  "lentoasema": "Zagreb Franjo Tuđman (ZAG)",
+  "huomiot": [
+   "Wikivoyage ja um.fi eivät olleet luettuina faktapohjassa; matkustusturvallisuus ja oppaan käytännön tiedot vaativat Sisältökirjurin tarkistuksen.",
+   "Vaijerihissin nykytila (suljettu 20.1.2025 alkaen, avautuminen 2026 ei tiedossa) ja Taidepaviljongin sekä tuomiokirkon avoinnaolo vuonna 2026 tulee tarkistaa.",
+   "Kohdekartassa on 5 kohdetta (alle 6), koska kuvia riitti vain viidelle: Pyhän Markuksen kirkko, Ban Jelačić -aukio ja Kansallisteatteri jäivät pois kuvien puutteen vuoksi (teatterin kaksi kuvaa käytettiin nostoihin). Lisäkuvilla ne palautettavissa kartalle. Mirogoj-kuva (Mirogoj Cemetery Arcade.jpg) jäi käyttämättä, koska oppaan jaksoille ei ollut sopivaa paikkaa.",
+   "Tkalčićeva-kuva on oppaan jaksossa 2, koska katu ei ole sallittu kohdetyyppi. Kivisen portin Wikidata-koordinaatti on matalatarkkuuksinen (faktapohja 8 N); Mac tarkistaa sijainnin kartalla."
+  ]
+ }
+}
