@@ -12579,3 +12579,242 @@ Omistaja 10.10.2026 klo 09.18 lähetti kuvan Hazin (@diegohaz) twiitistä ali-ag
 ## OMISTAJA 10.10. 16.4x: ASEMATAULU JAETTU MUILLE TILEILLE, TILINVAIHDOSSA SAMA OSOITE (10.10.2026 klo 16.41)
 
 10.10. 16.4x–16.4x OMISTAJA: "eikö tämä artefakti tallennu tällaisenaan siis minnekään?" → PT: artefakti on tallessa claude.ai:ssa tällä tilillä versiohistorioineen, mutta toinen tili ei voi muuttaa sitä → kortti "Kyllä, kerro miten (suositus)" → ohje: Share-valikosta muokkausoikeus muille tileille → omistaja: "tehty". RAAMATTU (ASEMATAULU): tilinvaihdossa sama osoite (read url → writer → julkaisu url-parametrilla + ArtifactData), kopio lähteestä vain ilman writer-oikeutta. Samalla TF 178 TestFlightissa iOS + Mac 16.40 (iOS 834278eb, Mac 82c7a246, BUILD 9e10d4d33).
+
+## PT 10.10. 16.4x: JUNA 179 SIIRTOSEPÄN ESINETARKISTUS, LR:N V47-VIENTI HYLÄTTY (10.10.2026 klo 18.55)
+
+10.10. 16.4x KUITATTU 179: Siirtoseppä esine-tarkistus 1f7429f6b (naamio, avaimet, köysi tarkistuspisteiksi kun kukaan ei epäile; Thief-reitillä ei näy mittauksissa, hyöty rauhassa avaimet ottavalle; Linssit 1311). Siirtoseppä HYLKÄSI LR:n v47-viennin 02d3f613/61e0938f (1499-asu ja kappalaisen rukouskirja puuttuivat, väärä pohja) → LR vie uudelleen v45h:n pohjalta → Siirtoseppä kytkee + rannan kuvapari.
+
+## JULKAISIJA 10.10. 16.4x: TF 178 TESTFLIGHTISSA IOS + MAC (10.10.2026 klo 18.55)
+
+10.10. 16.4x Julkaisija: TF 178 TESTFLIGHTISSA iOS + Mac sisäisellä ryhmällä (iOS VALID 834278eb, ajot 38055042435 + sisäinen 38056343701; Mac VALID 82c7a246, 38055232072), BUILD 178 = 9e10d4d33, muutosloki d3de61fd8, ulkoinen ohitettu. Asemataulu: TF 178 valmis, TF 176 pois. Omistajalle yksi rivi.
+
+## PT 10.10. 16.4x: JUNA 179 TARJOTIN PALAA KEITTIÖÖN (10.10.2026 klo 18.55)
+
+10.10. 16.4x KUITATTU 179: Siirtoseppä keittio-kiinni 0771b2e05 (kiinnijäännissä tarjotin palaa keittiön pöydälle; ennen se saattoi jäädä tyrmään ja estää torkkujan ohituksen eväillä = mahdollinen jumi; unity-tarkistus 0).
+
+## OMISTAJA 10.10. 16.4x: ILMAKEHÄ KAIKKIALLA JUNAAN 179, ASEMATAULUN PÄIVITYSNAPPI (10.10.2026 klo 18.55)
+
+10.10. 16.4x KUITATTU 179: LS2 ilmakeha-kaikkialla d3885f6d1 (KaupunkiIlmakeha.Oletus = true kaikissa kaupungeissa; pilvikerros ja aerosoli/pilvi-ilmasto yhä vain kehityskaupungeissa; L1309, unity 0; arkki 668ff1dc9 Ateena/Lissabon/Praha nyt | päällä tarkistettu: horisontit usvaisiksi, Prahan etuala hieman viileämpi → jatkossa säätö vain lähietäisyyteen). OMISTAJA (Asemataulu): "asematauluun voisi lisätä myös päivitä napin, jos haluan ajankohtaiset tiedot" + "nappi voisi olla oik. yläkulma ja siinä näkyisi vain kauanko aikaa sitten on päivietty ja sitä painamalla päivitys tapahtuisi. päivitetty tekstin ja sitten tekstin voi ottaa pois kokonaan" → PT (versio 35, capabilities db + comments): oikean yläkulman nappi näyttää vain tietojen iän ("nyt", "5 min", "1 h 5 min"); napautus lähettää comments.sendToClaude-kommentin "Päivitä Asemataulu" Päätoimittajan sessiolle (artefaktin vahti, auto-replies armed) → PT ajaa scratchpad/asemataulu/paivita.py (kone.py + laitteet.py + Postivahdin mittarit/roolit → vienti/*.json) → ArtifactData batch → vastaus "Päivitetty" ja ketju ratkaistuksi. Jos Päätoimittaja ei kuuntele (no_session), nappi kertoo sen. RAAMATTUUN ASEMATAULU-kohtaan + tools/asemataulu/paivita.py.
+
+## PT 10.10. 16.5x: PULU BIH/BEL/ISL VALMIIT, MLT JA LUX PILVEEN (10.10.2026 klo 18.55)
+
+10.10. 16.5x PT: Pulu BIH/BEL/ISL valmiit (f04409dd5 / d61302d99 / 01a0fe070) → SK pistokoe; MLT ja LUX käynnistetty pilvessä 16.52 (MLT session_01RENs8ZXpU9bcKikYo7iEqB LUX session_01Sgu6VQnhcYNa44qL6b7Ci9 ). PR:t #4355 ja #4354 mergetty, #4357 ja #4358 auki.
+
+## PT 10.10. 16.5x: JUNA 179 PULU 28 MAATA (10.10.2026 klo 18.55)
+
+10.10. 16.5x KUITATTU 179: Pelikoodari pulu-nor-svk-svn f31979deb (Pulu 28 maata, ämpäri = pilvihaarat tavulleen, 3 taivutusjäännöstä PurettujenJaanteet-listaan, Peli 456/456); #4357 rebasattu 8a8abe844 → Julkaisija.
+
+## OMISTAJA 10.10. 16.5x: KUUMAILMAPALLON KÖYSI TAIPUU JA PALLO HEILUU SELVÄSTI (10.10.2026 klo 18.55)
+
+10.10. 16.5x OMISTAJA (kuvat: Pariisin latauskuva + Pariisin opas): "kuumailmapallon köysi pitää taipua aidosti ja pallo pitää liikkua selkeästi tuulessa heiluen." → N-UI heti maakortin korjauksen 1 jälkeen (juna 179): köysi ketjukäyränä (painuma seuraa koria joka ruudussa), pallo heiluu selvästi (kallistus ~±2–3°, sivuliike ~±10–15 pt, jakso ~5–7 s, pieni puuskaisuus), kori ja köydet seuraavat; KUMOAA pallon osalta LATAUSKUVA-linjan vähäeleisen ±0,5–0,75°:n → RAAMATTUUN (LATAUSKUVA) seuraavassa docs-PR:ssä.
+
+## OMISTAJA 10.10. 16.5x: PARIISIN ESITTELY TULEE KIPIN PÄÄLLE (KIIRE) (10.10.2026 klo 18.55)
+
+10.10. 16.5x OMISTAJA (iPad, TF 178): "pariisin esittely ei ala kun kaupunkiin saavutaa vaan se alkaa kun paikaa kippiä ja silloin kuvat tulevat kipin päälle. korjaa kiireellisenä. ipadilla testattu uusin versio" → KIIRE LS1:lle (museo2 keskeytetään): toisto iPad-simulla 9e10d4d33, epäily 92cda8472 / saapumisen esittelyn käynnistys (sama oire kuin 12.4x) → korjaus → kuvapari/video → juna 179; omistajalta lupa nopeaan TF:ään, kun korjaus on valmis.
+
+## OMISTAJA 10.10. 16.5x: JUNA 179 LÄHTEE HETI KORJAUKSESTA, PEKINGIN VESIVÄRI (10.10.2026 klo 18.55)
+
+10.10. 16.5x OMISTAJA: "julkaise juna heti kun pariisin saapuminen ja kip korjattu" → JUNA 179 LÄHTEE HETI LS1:n korjauksen kuittauksesta (päivän 4. TF omistajan pyynnöstä); Natiiviseppä kokoaa kuitatuista, keskeneräiset seuraavaan. KUITATTU 179: LS2 peking-vesivari efc88563c (kerroin 1 kuten Tukholma/Pariisi; vallihauta 6/16/25 → 14/35/33, oikea orto 54/80/68 käsitelty kirkkaammaksi) → pelikuvapari ilmakehä päällä 179:n käännöksestä → PT arvioi oman kertoimen tarpeen.
+
+## LINNANRAKENTAJA 10.10. 16.5x: NOTRE-DAME V5 VALOKUVASTA JA KIVIPORTTI (10.10.2026 klo 18.55)
+
+10.10. 16.5x LR: ND v5 (arkki da726ecc5): yksityiskohdat leivottu tekstuuriin oikeasta valokuvasta 01 (CC BY-SA 4.0, 82 pisteen vääntö, vain hieno yksityiskohta; arkadit, nelilehdet, tympanonit, saumat, patsaat; ei polygoneja, muisti ennallaan), kivi harmaammaksi (atlas 176/163/143 → 152/148/139, b/r 0,88), KIVIPORTTI (keltaisuus b/r ≥ 0,85, kirkkaus ≤ 1,10 × oikea) hylkää v4d:n, päästää v5:n; etelä- ja pohjoissivut yhä tekoälypintoja → LS2 pelikuvapari (oikea | v4d | v5) → PT → omistaja; CC BY-SA -tekijä LAHTEET.md:hen ja pelin Lähteisiin. Olavinlinna 1499 viedään uudelleen v45f-pohjalta.
+
+## PT 10.10. 17.00: ASEMATAULUN PÄIVITYSNAPPI TOIMII (10.10.2026 klo 18.55)
+
+10.10. 17.00 PT: PÄIVITYSNAPPI TOIMII: omistajan napautus → kommentti "Päivitä Asemataulu" (posted by the artifact, sent to Claude) → automaattinen vastaus ketjuun + herätys → paivita.py → batch (mittarit v11, roolit v7, laitteet v4) → ketju ratkaistu.
+
+## OMISTAJA 10.10. 17.0x: BUGIKORJAUKSET ASEMATAULUN TYÖLISTAAN (10.10.2026 klo 18.55)
+
+10.10. 17.0x OMISTAJA (Asemataulu): "bugikorjaukset pitäisi näkyä jotenkin työlistassa, vaikka koottuna pakettina" → PT (versio 36): työlistan ensimmäinen kohde BUGIKORJAUKSET (tilannekappaleessa yksi vika per rivi tilan kanssa, edistys = korjatut/kaikki), junan lähdettyä korjatut siirtyvät Valmistuneisiin kohteeksi "Bugikorjaukset (TF NNN)"; rivinvaihdot säilyvät (pre-line). PT päivittää kuittauksissa. RAAMATTUUN ASEMATAULU-kohtaan seuraavassa docs-PR:ssä.
+
+## SISÄLTÖKIRJURI 10.10. 17.0x: PULU BIH/BEL/ISL PISTOKOE (10.10.2026 klo 18.55)
+
+10.10. 17.0x SK: Pulu BIH/BEL/ISL pistokoe (30 vastausta, 16 väitettä): korjattavat BIH 3, BEL 4, ISL 6 (raportti _tyo/sisaltokirjuri/pulu-pistokoe-bih-bel-isl-20261010.md) → PT lähetti sanatarkat korjausohjeet pilvisessioille 17.0x (korjaus-bih/bel/isl.md) → SK tarkistaa haarat → Julkaisija vie → Pelikoodari kultaiset.
+
+## JULKAISIJA 10.10. 17.0x: RAAMATTU-PR #4358 MERGETTY, PULU 28 MAATA VIETY (10.10.2026 klo 18.55)
+
+10.10. 17.0x Julkaisija: Raamattu-PR #4358 MERGED 16b9f65d3 (worktree fable-raamattu-1010d poistettu); mergetty myös #4355 b790d65e2, #4354 e99b19db2 (paketti viennissä), #4357 731fa60f5, #4353 414c2428e; Pulu NOR/SVK/SVN viety (maat.json 28); TF 179 odottaa LS1:n KIIRE-korjausta + lukitusta.
+
+## PT 10.10. 17.0x: LAITTEET.PY-LAAJENNUS KESKEN, OMA NOLLAUS (10.10.2026 klo 18.55)
+
+10.10. 17.0x PT: laitteet.py-laajennuksen Opus-agentti pysähtyi omistajan keskeytykseen ennen kirjoittamista → laajennus tekemättä, seuraava konteksti tekee itse (omistajan kortin valinnat voimassa). PT:n oma nollaus 65 %:ssa 17.0x (keskustelu Paatoimittaja-2026-10-10-klo-1538-1705.md).
+
+## PT 10.10. 17.1x: NATIIVI-UI NOLLATTU (10.10.2026 klo 18.55)
+
+10.10. 17.1x PT: NUI NOLLATTU (luovutus 7cbc74467 viesti-natiivi-ui-luovutus-20261010-ilta.md; maakortin pääkaupunkirivi f572720ab kuvaparia vaille, pallopalaute e0eeafb4f pelikuvaa vaille) → aloitusviesti + RC päälle 17.1x.
+
+## KARTTASEPPÄ 10.10. 17.1x: KAIKKI MAAT ERÄT 5–6 JA PÄÄKAUPUNKIEN KUVAT (10.10.2026 klo 18.55)
+
+10.10. 17.1x Karttaseppä: KAIKKI MAAT erät 5–6 (Amerikat 18 + Oseania 8) + pääkaupunkien kuvat, PR #4359 (8546aec1b; skeema 1.61: paakaupungit.kuvat ja maat.*.paakaupunki.kuvat, 318 kuvaa 167 maalle, kaikki URLit 200; Reykjavík, Tunis, Kotte pisteiksi; laudalla 199 maata, 118 pistettä; npm test 5456/0); #4354 (Aasia + Afrikka) mergetty. HAVAINTO: Kano osuu laudalla Nigerin rajojen sisään, Kap Palmas Norsunluurannikolle (käsin sijoitetut kaupungit) → PT: #4359 CONFLICTING → rebase; seuraava erä Kano + Kap Palmas oikeisiin maihin + automaattinen testi "kaupunki oman cityCountry-maansa rajojen sisällä".
+
+## PT 10.10. 17.1x: JUNA 179 MUSEO2 JA PUHELIMEN NIMIKYLTIT (10.10.2026 klo 18.55)
+
+10.10. 17.1x KUITATTU 179: LS1 museo-kombo-178 691969c66 (käännös aea8b8f24; puhelimen pystyssä nimikyltin otsikko Tyylikirjan Otsikko-koossa, pisimmät nimet Staalmeesters 56, Vermeer 53, Yövartio 51 merkkiä kahdella rivillä, alarivi maalauksen yläpuolella; kuvapari lokit/todistus-museo-nimet-178-20261010-1659/nimikyltti-pari-aea8b8f24.jpg) → Natiiviseppä junaan 179; museo lisää muistia → iPad-muistiajo ennen vientiä.
+
+## KARTTASEPPÄ 10.10. 17.1x: LAUDAN KAUPUNKIEN SIJAINNIT (KYSYMYS) (10.10.2026 klo 18.55)
+
+10.10. 17.1x Karttaseppä (erä 2, kysymys): laudan kaupunkien x/y ovat vanhoilta laudoilta (tools/vanha-maailma.mjs 3.8.), ei oikeista koordinaateista; toisen maan sisällä mm. Riika (LTU), Tallinna (LVA), Vilna (BLR), Viktorianputoukset (ZMB), Kap Palmas (CIV), Kano (NER), Kilimandžaro (KEN), Karthago (DZA), Hongkong (CHN), Alpit (FRA); ero oikeaan Riika ≈ 380 km, Tallinna 81 yks → PT (laudan sisältö PT:n alaa): KOKO SIIRTO: Wikidatan koordinaatit (CC0) kaikille 266 kaupungille, siirto kun ero > 10 yks, rannikkokaupungit rannalle naulattuina; testi "kaupunki oman maansa sisällä" + poikkeuslista perusteluineen; ennen PR:ää yleiskuvat ennen/jälkeen (Eurooppa lähikuvana: nimiöiden päällekkäisyys) PT:lle; reittiviivat + kultaiset jäljet samaan PR:ään tai Pelikoodari; natiivin lat/lon pariteetti tarkistetaan. #4359 rebasattu (ristiriita #4357:n kanssa). Vesi v7 oli jo tehty (v7b ämpärissä 10.4x).
+
+## SIIRTOSEPPÄ 10.10. 17.1x: JUNA 179 LAAJA TESTI LÄPI (10.10.2026 klo 18.55)
+
+10.10. 17.1x Siirtoseppä: JUNA 179 + 0771b2e05 LAAJA TESTI LÄPI, ei uutta jumia: M-osan 70 kohtaa pahin menetys 63 s, pisin paluu 19; huoneiden 2–4 18 kohtaa pahin menetys 71 s; Linssit 1316/1316, unity 0; lokin "jumissa"-rivi = ValoreittiKiinniVaroituksen-testin tarkoituksellinen valoreitti. LR:n v47b-hashit tulleet → Siirtoseppä kytkee.
+
+## LINSSISEPPÄ 2 10.10. 17.1x: NOTRE-DAME V5 -PARI, V5B HETI (10.10.2026 klo 18.55)
+
+10.10. 17.1x LS2: ND v5 -PARI (2381723a3 nd-v5-edesta-ylha.jpg: oikea | v4d | v5): edestä v5 selvästi lähempänä oikeaa (pystynousut, galleria, portaalien veistokset, ruusuikkuna; kivi harmaampi, keltaisuus pois); ylhäältä lyijy +6 %, parvis ennallaan; paketti nd3/v6k13 (= v6k9 + v5, portti 0), mallit.json-tekijään "länsijulkisivun valokuva The wub 2025 (CC BY-SA 4.0)". LR: kiviportin ennuste osui (180/173/159 vs peli 181/174/159), b/r 0,81 → 0,88 (oikea 0,89), kirkkaus L 174 → 171 (oikea pilvessä 149, aamuauringossa 165) → PT: v5b HETI (kivi −10 %, kirkkausraja 1,10 → 1,00, tavoite L 150–160) → LS2 pari oikea | v4d | v5b + portaalien lähikuva → PT → omistaja; v6k13:a ei viedä.
+
+## OMISTAJA 10.10. 17.2x: TAIDEMUSEOON VARJOT JA LATTIAHEIJASTUS (10.10.2026 klo 18.55)
+
+10.10. 17.2x OMISTAJA: "onko taidemuseossa kaikki unityn uudet grafiikkaparannukset käytössä?" → PT (koodista 691969c66): EI KAIKKIA. Käytössä: oma MuseoValaistu-varjostin (kohdevalot oikeista valovoimista, 24 lähintä keilaa, Kelvin-värit), salin heijastuva valo leivottuna LR:n valoatlakseen (sali-v1), HDR + Neutral-sävykartoitus (maalausten värit), hillitty hehku, vinjetti 0,1, ajallinen reunanpehmennys (TAA High). EI käytössä: Unityn valot ja varjot (kehykset ja patsaat eivät heitä varjoa), Surface Cache GI, SSR (lattia ei heijasta), SSAO (nurkat), syvyyskuva pois. Kortti → omistaja "Varjot ja lattiaheijastus" (PT:n suositus oli vain varjot): TAIDEMUSEOON VARJOT (kehykset, patsaat, nurkat valmiiksi laskettuina, LR:n leivonta) + LATTIAHEIJASTUS (kevyin hyvältä näyttävä tapa, raskas osa vain uusimmille laitteille; LS2:lla SSR-kokemus) → LS1 suunnitelma Pariisin KIIREN jälkeen → junaan 180 → kuvapari → omistaja. RAAMATTUUN taidemuseon kohtaan seuraavassa docs-PR:ssä.
+
+## KARTTASEPPÄ 10.10. 17.2x: LAUDAN SIIRTO PERUTTU, PALLOPISTETESTI (10.10.2026 klo 18.55)
+
+10.10. 17.2x Karttaseppä PERUI siirron: PT:n sitova päätös 7.9.2026 (js/packs/maailmankartta-pallopisteet.js): laudan x/y ei muutu (reitit, via-pisteet, satamat, minCityDistance 60 / tests/rules.test); jokaisella 266 kaupungilla on jo Wikidatan pallopiste, jota pallo ja natiivivienti käyttävät; pallopisteillä toisen maan sisällä vain Alpit (aluemerkki) ja Titicaca (rajajärvi) → PT: siirto peruttu; pieni PR: testi "pallopiste oman maan sisällä tai ≤ 5 yks rajasta" + poikkeuslista + ISL:n countryShape uudelleen NE:stä (väärässä paikassa ja liian pieni).
+
+## PT 10.10. 17.2x: JUNA 179 MAAKORTIN PÄÄKAUPUNKIRIVI (10.10.2026 klo 18.55)
+
+10.10. 17.2x KUITATTU 179: NUI asettelutesti-mac-179-2 f572720ab (maakortin pääkaupunkirivi: asettelutesti läpi iPhone pysty ×2, iPad pysty, iPhone vaaka; Israel avautui, 16.35 satunnainen; kuvat Ranska PÄÄKAUPUNKI / Israel HALLINNON PAIKKA katsottu) → NUI lähettää SHA:n Natiivisepälle.
+
+## OMISTAJA 10.10. 17.3x: ASEMATAULUN MITTAREIDEN IKÄ JA POSTIVAHDIN LUPA (10.10.2026 klo 18.55)
+
+10.10. 17.3x OMISTAJA (Asemataulu, kuva: Viikko 22 %, 5h 46 %, Päätoimittaja 61 %): "nämä eivät päivity tarpeeksi usein" → syy: Postivahti kirjoittaa mittarit.json 4–5 min välein, mutta artefaktiin vain PT:n 20 min kierros (ja nollauksen jälkeen ei lainkaan); sivun ikä näytti uusimman minkä tahansa dokumentin iän ("nyt") → sivu v38: ikä = mittareiden ikä, punainen yli 15 min. Postivahti kieltäytyi kirjoittamasta artefaktiin ilman omistajan omaa lupaa → kortti → omistaja "Kyllä (suositus)": omistaja kirjoittaa Postivahdin sessioon "kyllä" → Postivahti vie mittarit/roolit/laitteet joka kierroksella.
+
+## OMISTAJA 10.10. 17.4x: ASEMATAULU PÄIVITTYY VAIN KUN AUKI (KATSOJAN SYKE) (10.10.2026 klo 18.55)
+
+10.10. 17.4x OMISTAJA: "asematauluun voisi tehdä jonkin tunnisteen, jotta se ei turhaan päivity jos en ole itse seuraamassa…" → PT:n tarkennus kortilla → omistaja "Vain kun taulu on auki (suositus)": sivu v39 kirjoittaa talo/katsoja.ts 2 min välein ja esiin tullessaan (vain näkyvissä); Postivahti vie vain, kun syke < 5 min; Päivitä-nappi aina heti. RAAMATTUUN ASEMATAULU-kohtaan.
+
+## OMISTAJA 10.10. 17.4x: ASEMATAULUN LAITTEET LAAJENNETTU (10.10.2026 klo 18.55)
+
+10.10. 17.4x OMISTAJA: "milloin ne loput asemataulun päivitykset tulevat?" → laitteet.py laajennettu (omistajan 16.4x kortti): Unity (eräajot + xcodebuild roolin mukaan, Actions-ajuri = TestFlight-käännös (CI)), Simulaattorit (T7-sarjan käynnissä olevat, rooli nimestä, prosessori UDID-prosesseista), Pilviajot (pulu-<iso3>-pilvi-haarat, commit alle 40 min, maiden nimet maailmankartta.js:stä), Codex (claude/postilaatikko: tilaus "Tilaus Codexille" uudempi kuin toimitus tai toimitus alle 15 min eikä "Complete"), Blenderin prosessori; ~1,4 s. tools/asemataulu/-kopio seuraavaan docs-PR:ään.
+
+## OMISTAJA 10.10. 17.3x: PARIISIN ESITTELY ON SAAPUMISESITYKSEN JATKE (10.10.2026 klo 18.55)
+
+10.10. 17.3x OMISTAJA (Pariisin kortti, vastaus tekstinä): "Pariisin esittelyhän ei pitäisi liittyä siihen [kuumailmapalloon] mitenkään vaan se pitää tulla kun pelaaja saapuu kaupunkiin ja korvaa tai jatkaa sitä nykyistä kolmen kuvan esittelyä joka tulee nyt jokaiseen kaupunkiin saavuttaessa" → LS1:n A (550b2d6cd, kippi aukeaa itsestään) HYLÄTTY → linssiseppa/pariisi-esittely-179 aaa5a6fe7: saapumisesitys jatkuu luennan jälkeen samalla pakalla ja Ohitalla nykyintron kuvilla C1–C5 musiikin tahdissa (pohja taipui: 2 + 5 korttia ≤ 7), Ohita/lähtö lopettaa, kippi aina ilman introa → arkki → PT → juna 179. RAAMATTUUN (KAUPUNGIN ESITTELY = saapumisesityksen jatke, ei palloa).
+
+## OMISTAJA 10.10. 17.4x: SIMULAATTORIN KAATUMISIKKUNAT POIS (10.10.2026 klo 18.55)
+
+10.10. 17.4x OMISTAJA: "näitä tulee vieläkin" + "noita oli noin 30kpl" (com.apple.migrationpluginwrapper lopetti yllättäen) → syy: simulaattorin ensimmäinen käynnistys (uusi tai tyhjennetty laite) kaataa sen sisäisen tietojensiirron 3 kertaa (DiagnosticReports 42 kpl lokakuussa; tänään pariteetti-iPhone-vaaka 6, linssiseppa-iPhone 3, linssiseppa-iPad11 3, pariteetti-iPad11-834 1); koodaus-käyttäjän CrashReporter DialogType ei ole asetettu (aiempi asetus meni toiselle tilille) → omistajalle komento `defaults write com.apple.CrashReporter DialogType none` (omistaja ajaa itse; järjestelmäasetus).
+
+## OMISTAJA 10.10. 17.4x: TAIDEMUSEON TYÖNJAKO (10.10.2026 klo 18.55)
+
+10.10. 17.4x OMISTAJA: "miksi mikään sessio ei tee taidemuseota?" → museo2 kuitattu junaan 179; varjot + lattiaheijastus jaettu heti: LR leipoo varjot (sali v2e: kehykset, patsaat, AO valoatlakseen), LS2 tekee lattiaheijastuksen (huonekohtainen heijastuskuva + Fresnel), LS1 maakontaktin ja kytkennän Pariisin jälkeen; Asemataulun tehtävät päivitetty.
+
+## OMISTAJA 10.10. 17.4x: NOTRE-DAME V5B JUNAAN, V5C KAARET MALLIIN (10.10.2026 klo 18.55)
+
+10.10. 17.4x OMISTAJA (ND v5b -kortti, oikea | v4d | v5b): "paljon parempi, mutta vertaa itse, tekstuurit menevät väärin, holvikaari leviää pystylinjojen päälle tesktruureissa. tämän voi jo sisällyttää seuraavaan junaan, mutta täytyy vielä parantaa, pystytkö itse näkemään virheet?" → v6k14 vientiin (LS2 → Julkaisija); PT:n havainnot: portaalien maalatut kaarirenkaat eivät osu mallin kaaripaloihin (kaksi kaarta, kaari pilastereiden päällä), ruusuikkunatason ikkunoiden kaaret valuvat tukipilareille, portaalien ympärillä kuvapistelaikkuja (venytys > 2×) → LR v5c: rekisteröinti mallin reunakarttaan elementti kerrallaan, yksityiskohdat omalle pinnalleen, tarkempi portaalilähde, uusi portti reunaetäisyys ≤ 2 px + venytys ≤ 2× → LS2 pari → PT → omistaja.
+
+## OMISTAJA 10.10. 17.4x: ASEMATAULUN JUNATEKSTIT RANSKALAISIN VIIVOIN (10.10.2026 klo 18.55)
+
+10.10. 17.4x OMISTAJA (Asemataulu, kuva Juna 179 -paneelista): "valmiina ja työn alla alakohdat voisi tehdä ranskalaisilla viivoilla" → junat-dokumentin tekstit muotoon "Valmiina:
+– …
+Työn alla:
+– …" (myös TF:t: Korjattu / Uutta), sivu säilyttää rivinvaihdot (pre-line). PT kirjoittaa jatkossa näin. RAAMATTUUN ASEMATAULU-kohtaan.
+
+## OMISTAJA 10.10. 17.5x: LATAUSPALLON KÖYSI JATKUU SUMUUN (10.10.2026 klo 18.55)
+
+10.10. 17.5x OMISTAJA (pallovideo, latauspallo-tuuli e0eeafb4f): "muuten hyvä mutta köyden pitää jatkua alemmas ja hävitä sumuun, muuten näyttää irralliselta" → NUI: köysi jatkuu alareunan sumuvyöhykkeeseen ja häivytetään sumuun (ei päätä ilmassa), pysty + vaaka → tavoite juna 179, muuten 180. RAAMATTUUN LATAUSKUVA-kohtaan (selvä heilunta + köysi sumuun).
+
+## PT 10.10. 17.5x: JUNA 179 OLAVINLINNA V47B-2 (10.10.2026 klo 18.55)
+
+10.10. 17.5x KUITATTU 179: Siirtoseppä v47b-2 c3091ed82 (0771b2e05:n päällä; pala e7d9da6d44f147d1 + esittely 4e1b2774ab27119a, rantakivi-pinta, paalun leikkaus; 1499-asu ja kappalaisen kädet mukana; Linssit 1311/1311, unity 0; rannan pari 648e2395 | 3d764228 katsottu: valkoiset rantakivet ennallaan = vanha vika ympäristön rantakivet.glb:n piirrossa, ei regressio, piilotuskoe odottaa simuvuoroa). Siirtoseppä laaja testi juna 179 + 0771b2e05 läpi.
+
+## PELIKOODARI 10.10. 17.5x: NIMEN LIUKU (#4360) (10.10.2026 klo 18.55)
+
+10.10. 17.5x Pelikoodari #4360 (362820bec) nimen liuku: nimen paikka kelpaa vain, jos mikään ladottu piste ei ole lähempänä kuin oma (Ramallah ei enää Jerusalemin alle); 2 testiä, npm test 5455/5455 → Julkaisija. NUI: natiivissa ei toistu (Kevyt-sääntö jättää pinoon osuvan pääkaupunkipisteen pois) → ei muutosta.
+
+## SISÄLTÖKIRJURI 10.10. 17.5x: PÄÄKAUPUNKIKUVAT 342/342 (10.10.2026 klo 18.55)
+
+10.10. 17.5x SK: Codex-uusintakierros 18/18 hyväksytty → PÄÄKAUPUNKIKUVAT 342/342 (171 maata × 2), kuvat-hyvaksytyt.json Karttasepälle ja Julkaisijalle. Karttaseppä: #4359 korvattu #4361:llä (rebase #4357:n päälle, USA → Washington, kuvat 336/168), #4362 pallopistetesti + Islannin muoto NE:stä (npm test 5459/0) → Julkaisija; pyramidi-poltto NAS:lle (137 064 tiedostoa, tarkistussummat), käynnistyslevyllä 78 Gi.
+
+## POSTIVAHTI 10.10. 17.5x: KONTEKSTIRAJAT JA ROOLIEN NOLLAUKSET (10.10.2026 klo 18.55)
+
+10.10. 17.5x Postivahti: kontekstirajat LS1 55 %, LS2 50 %, Siirtoseppä 50 %, LR 50 % → PT: LR, LS2, Siirtoseppä nollaus nyt (luovutus + clear_session self, PT aloitusviesti lepoilmoituksen jälkeen); LS1 Pariisin kuittauksen jälkeen. Pilvisessiot (MLT, LUX, ISL, BEL, BIH, NOR, SVN, SVK) idle → jonokierros tarkistaa haarat.
+
+## OMISTAJA 10.10. 17.5x: KAUPUNKIMUSIIKIN UUSI POHJA (PAIKALLINEN PERINNE) (10.10.2026 klo 18.55)
+
+10.10. 17.5x OMISTAJA (kaupunkikappaleet erä 1): "kokeile tehdä muutama kaupunki uudestaan musiikin osalta ja muuta prompti kokonaan. saa olla sama musiikillinen sointukulku mutta ilman klassisien musiikin orkesteria ja 1800 luvun henkä. saisi olla paikallisia soittimia ja tyyliltään paikallisen perinne musiikin kuuloinen tai muuten kaupunkia ja erityisesti maata kuvastava toteutus. nyt musiikit liian samanoloisia ja tylsiä, eivätkä kuvasta tarpeeksi kaupungin ja sen kulttuurin henkeä. myöskään paikalliset soittimet eivät pääse tarpeeksi esille. tempo voi olla periaatteessa mikä vain, mikä sopii paikan henkeen." → PT: syy = kaikille yhteinen "1873 warm chamber orchestra" -tyylilisäys + "plays UNDER the ambient… even dynamics" → UUSI POHJA: paikallinen perinnelaji + 2–3 nimettyä perinnesoitinta johtoäänenä + lajin rytmi ja tempo, isoisän teeman (D–G–F–E–D–C–D) sointukulku paikallisittain, instrumentaali, ei orkesteria/pianoa/jousistoa/soittorasiaa/1800-luvun salonkityyliä, saumaton silmukka → Pelikoodari pilotti 4 × yksi otto (Budapest, Tukholma, Madrid, Helsinki; ~0,30 $) → mp3:t omistajalle → erä 2 (46) uudella pohjalla vasta omistajan arvion jälkeen. RAAMATTUUN (KAUPUNKIMUSIIKKI) omistajan hyväksynnän jälkeen.
+
+## PT 10.10. 17.5x: PULU PILVEEN ALB, MKD, MNE JA MDA (10.10.2026 klo 18.55)
+
+10.10. 17.5x PT: Pulu pilveen ALB session_01M46BQD9Cde6SDoffYZCvUq, MKD session_01Etat8M5yt92Dt8RisP2nBS, MNE session_01GtkosPKWycJd7pZcP7WTAA, MDA session_019xjBPmiWZF3CWaDRrd7mAT (Euroopasta ilman Pulua jäljellä SRB, BLR, TUR). BIH/BEL/ISL korjaukset (17.06) + LUX/MLT vaihe 2 → SK.
+
+## OMISTAJA 10.10. 17.5x: MOSKOVA KAUPUNKIMUSIIKIN PILOTTIIN, JUNA 179 -RUNKO JA MUISTIPORTTI (10.10.2026 klo 18.55)
+
+10.10. 17.5x OMISTAJA: "ota moskova mukaan myös" → kaupunkimusiikin pilotti 5 kaupunkia (Budapest, Tukholma, Madrid, Helsinki, Moskova), yksi otto kustakin, ~0,40 $. Natiiviseppä: juna 179 runko c9b1aa726 (+ museo 691969c66, maakortti f572720ab, pallo e0eeafb4f, v47b c3091ed82; L1343/P456/K461), muistiajo Release e97fa2eaf iPad Pro 13: Pariisi 0,75/0,74 Gt, Olavinlinna 0,72, museo 2,85 Gt min vapaa, ei jetsameja → PORTTI OK; lukitus LS1:n Pariisin kuittauksesta. LR nollattu 17.5x (aloitusviesti: v2e-kehysvarjojen tarkistus + ND v5c), Siirtoseppä nollattu (piilotuskoe → Julkaisijan simuvuoro). Levy: siirra.py lokit 17.55 (766 Mi, vapaa 79,7 Gi).
+
+## OMISTAJA 10.10. 18.0x: PEKING KAUPUNKIMUSIIKIN PILOTTIIN (10.10.2026 klo 18.55)
+
+10.10. 18.0x OMISTAJA: "tee myös peking" → kaupunkimusiikin pilotti 6 kaupunkia (+ Peking: jinghu, pipa, dizi + oopperan lyömäsoittimet), yksi otto, ~0,48 $.
+
+## JULKAISIJA 10.10. 18.0x: OMAT MALLIT V6K14 (NOTRE-DAME V5B) VIETY (10.10.2026 klo 18.55)
+
+10.10. 18.0x Julkaisija: VIETY omat-mallit v6k14 (= v6k9 + ND v5b, ND hieman pienempi) + osoitin uusin-4 → v6k14 (omistajan lupa 17.4x LS2:n kautta). Muistiajo 179 OK e97fa2eaf → TF 179 valmiina heti Natiivisepän lukituksesta + PT:n muutoslokista. LS2 nollattu 18.0x (aloitusviesti: museon lattiaheijastus ensin).
+
+## PT 10.10. 18.0x: JUNA 179 PARIISIN ESITTELY SAAPUESSA, LUKITUS (10.10.2026 klo 18.55)
+
+10.10. 18.0x KUITATTU 179: LS1 linssiseppa/pariisi-esittely-179 a6771263c (käännös 0ee59681a; saapuessa luennan 3 kuvan jälkeen sama pakka ja Ohita jatkuvat C1–C5:llä 7,8/19,4/23,3/27,1/31,0 s musiikin soidessa, sitten Livia; kippi aina ilman musiikkia ja C-kuvia; iPad + iPhone 6/6, Exception 0; ensimmäinen ajo löysi ajoitusvian (kuvat kerralla kaupungin kappaleen soidessa) → korjattu; L1310, unity 0; arkki todistus-pariisi-esittely-179b-20261010-1755 katsottu). EI 550b2d6cd. → JUNA 179 LUKITUS (Natiiviseppä c9b1aa726 + a6771263c), muutosloki Julkaisijalle → TF 179 iOS + Mac (päivän 4. TF omistajan pyynnöstä). NUI:n köysi sumuun → 180. Havainto: iPhonen saapumisesityksessä Pulu valokuvan päällä 8 s / 25 s (LS1 tarkistaa, onko vanha). Pelikoodari: kaupunkimusiikin pilotti 4/6 valmis (Budapest, Tukholma, Madrid, Helsinki; ~0,32 $, ääniportti 0/0, AST: orkesteri ≤ 0,02, piano ≤ 0,01, laulu 0) → lähetetty omistajalle; Moskova ja Peking tulossa. LS1 nollaus pyydetty (55 %).
+
+## SISÄLTÖKIRJURI 10.10. 18.0x: PULU BEL JA ISL HYVÄKSYTTY, LUX/MLT-KORJAUKSET (10.10.2026 klo 18.55)
+
+10.10. 18.0x SK: Pulu BIH/BEL/ISL korjaukset 13/13 oikein → BEL ja ISL HYVÄKSYTTY (Julkaisija vie TF 179:n jälkeen → Pelikoodari kultaiset); BIH yksi jäännös (kysymysteksti "pormestari" → "piirin johtaja") → korjaus2-bih.md pilveen 18.0x. LUX/MLT pistokoe (18 väitettä, _tyo/sisaltokirjuri/pulu-pistokoe-lux-mlt-20261010.md): LUX 7 + MLT 6 korjausta → korjaus-lux.md / korjaus-mlt.md pilveen 18.0x (sanatarkasti SK:n mukaan; Fort Manoel pehmennetty, Ħaġar Qim UNESCO 1992 laajennuksena, Ġgantija 1980).
+
+## PT 10.10. 18.1x: JUNA 180 PULU 30 MAATA (10.10.2026 klo 18.55)
+
+10.10. 18.1x KUITATTU 180: Pelikoodari pulu-bel-isl 8fca1d3d4 (f31979deb:n päällä; Pulu 30 maata, kultaiset = pilvihaarat tavulleen, kaanna.sh 456/456; testin korjaus: "Kerro lisää" saavutettava myös toisen tason linkistä; jäänteet BEL turnhout/pellavakauppa, ISL dettifoss/urriðafossin poikkeuslistalle). Pilotin kaupunkimusiikki 6/6 (Moskova, Peking lisäksi; ~0,48 $) lähetetty omistajalle. SK nollaus pyydetty (50 %).
+
+## OMISTAJA 10.10. 18.1x: JAETUN ÄÄNISIVUARTEFAKTIN RAJAT (10.10.2026 klo 18.55)
+
+10.10. 18.1x OMISTAJA: "ovatko nuo siellä äänet artefaktissa?" → kortti (uusi äänisivu?) → OMISTAJA: "ei, se ääni artefakti on jaettu kaikille neljälle tilille samalla tavalla kuin asemataulu ja kaikilla tileillä on muokkaus oikeus. käytä sitä" + "miksi en saa kiinnitettyä minulle jaettua artefaktia jos olen kuitenkin sen muokkaaja" → PT: äänisivu (Qr7WvfZvKiNxGNwbFEeW2t) = "shared with you from another organization (writer)"; julkaisu kaatui: "People invited from outside the organization can only publish pages, stylesheets, scripts, text data, images, videos and fonts to this artifact" → ääntä ei voi lisätä muulta kuin sivun omistavalta tililtä (äänitiedostoa ei naamioida videoksi); kiinnitys: Artifact pin → "Couldn't pin… or pinning isn't available yet for this account" → toisen organisaation jakamaa artefaktia ei voi kiinnittää muokkausoikeudesta huolimatta. RAAMATTUUN (ASEMATAULU/ÄÄNISIVU: jaetun sivun rajat). Uusi osio valmiina scratchpad/aanisivu/index-uusi.html (uusi | vanha, 6 kaupunkia) omistavan tilin julkaisua varten.
+
+## OMISTAJA 10.10. 18.1x: MOSKOVA JA PEKING PIENEMMÄLLÄ KOKOONPANOLLA JA MODERNIT ESITTELYMUSIIKIT (10.10.2026 klo 18.55)
+
+10.10. 18.1x OMISTAJA: "tee uudet moskova ja peking ja ne saisi olla pienemmällä kokoonpanolla tehtyjä, eli mielellään vain muutama soitin. tee samalla myös ne modernit esittelymusiikit näihin kahteen kaupunkiin" → Pelikoodari 4 × yksi otto (~0,32 $): Moskova v4 ja Peking v4 2–3 soittimella + Moskovan ja Pekingin moderni esittelymusiikki Pariisin nykyintron musiikin mallilla.
+
+## LINNANRAKENTAJA 10.10. 18.1x: TAIDEMUSEON VARJOT V2F (10.10.2026 klo 18.55)
+
+10.10. 18.1x LR: NL-sali v2f (83a0be2ce): kehykset pois Cycles-leivonnasta ja AO:sta, tilalle pehmeä varjo seinän paikkakartasta kohdevalon suuntaan alareunaan (voima 0,5, pehmeys 4,5 cm); m2-v1/v2 = RP-P-OB-444/602; PT katsoi: hillityt pehmeät varjot kehysten alla, ei mustaa reunusta → LS1 kytkee. Päällekkäisyys: LS1 teki ennen nollausta oman lattiaheijastuksen 45e35e9e6 → PT: lattiaheijastus = LS2 (saa käyttää 45e35e9e6:n osia), LS1 = v2f-kytkentä + maakontakti + mittaus.
+
+## NATIIVISEPPÄ 10.10. 18.1x: BUILD 179 LUKITTU (10.10.2026 klo 18.55)
+
+10.10. 18.1x Natiiviseppä: BUILD 179 LUKITTU = 75fcc2b1b (master; juna/b13 45b93a2e0 = c9b1aa726 + LS1 a6771263c; L1344/P456/K461, unity 0, muistiportti OK museo mukana) → Julkaisija TF iOS ajo 38062505058, Mac käännöksessä. Juna 180 jonossa: NUI köysi sumuun e341491f7 (kuvaa odottaa), Pelikoodari pulu-bel-isl 8fca1d3d4. SK nollattu 18.1x (luovutus -ilta2.md). Pelikoodari: taidemuseon Soundly-haku (museo1) odottaa riviä "NÄYTTÖ VAPAA" klo 20 jälkeen (PT:n muistutus 20.07).
+
+## PELIKOODARI 10.10. 18.2x: MOSKOVA V4, PEKING V4 JA NOPEAT ESITTELYMUSIIKIT (10.10.2026 klo 18.55)
+
+10.10. 18.2x Pelikoodari: Moskova v4 (balalaika + bajaani, 2/4, 72 s looppi) ja Peking v4 (jinghu + pipa + hiljainen guzheng, 72 s) + modernit esittelymusiikit moskova-nopea (124 bpm, 88 s, Pariisin "nyt 2" -muoto, balalaika/bajaani tunnisteina, luokitin ei erota balalaikkaa) ja peking-nopea (124 bpm, 92 s, erhu-koukku + pipa); ~0,32 $, Moskovan 2 ensimmäistä muotoilua estyi Googlen sanasuodattimeen (ei kulua); ääniportti 0/0; peliversiot −11,8…−12,0 LUFS → lähetetty omistajalle tiedostoina (äänisivulle vasta omistavalta tililtä).
+
+## OMISTAJA 10.10. 18.2x: ÄÄNISIVU OMAKSI SUOJATUKSI SIVUKSI (10.10.2026 klo 18.55)
+
+10.10. 18.2x OMISTAJA: "täytyy tehdä musiikista sitten ennemmin oma nettisivu githubin tms kautta. saatko ladattua artefaktista nykyiset tiedot sinne ja liitettyä nämä uudet?" → PT: kyllä (486 tiedostoa ~250 Mt + 10 uutta); ostetut tehosteet ja muiden vertailukappaleet eivät saa olla julkisia → kortti → OMISTAJA "Suojattu sivu (suositus)": Cloudflare Pages + Access (vain omistajan sähköpostikirjautuminen) → Julkaisijan erä TF 179:n jälkeen (lataus artefaktista, uudet osiot, Pages-projekti, Access; puuttuvat token-oikeudet → kortti). LS1 kytki v2f + oman lattiaheijastuksen 5f0cbd6a0 → lattiaheijastus LS1:lle, LS2 lopettaa päällekkäisen. PT 61 % → tilamuisti fable-tila-20261010-ilta2.
+
+## SISÄLTÖKIRJURI 10.10. 18.2x: PULU BIH, LUX JA MLT HYVÄKSYTTY (10.10.2026 klo 18.55)
+
+10.10. 18.2x SK: Pulu BIH (4aecca5b6), LUX (d5dd3b222), MLT (4c51b7ad7) korjaukset tarkistettu → HYVÄKSYTTY vientiin (SK lähetti Julkaisijalle); huom Bourscheid "11 vartiotornia" / "150 m Sûren yläpuolella" yhden lähteen varassa, ei virhe. → Pelikoodari kultaiset viennin jälkeen (33 maata). Julkaisija: TF 179 iOS Applelle (38062505058), v654 osoittimessa (#4361 skeema 1.61, 118 pääkaupunkia + kuvat), #4362 mergetty, äänisivu-erä aloitettu.
+
+## PT 10.10. 18.2x: OMA NOLLAUS (10.10.2026 klo 18.55)
+
+10.10. 18.2x PT: OMA NOLLAUS ~63 %:ssa (keskustelu Paatoimittaja-2026-10-10-klo-1708-1824.md, luovutus viesti-fable-luovutus-20261010-ilta2.md, aloitusviesti päivitetty; Postivahti lähettää aloitusviestin nollauksen jälkeen). LS1: museo-SHA 0b2db5829 (5f0cbd6a0 + LS2:n sumeushavainto karheus²·2).
+
+## JULKAISIJA 10.10. 18.2x: TF 179 IOS TESTFLIGHTISSA JA ÄÄNISIVU VALMIS (10.10.2026 klo 18.55)
+
+10.10. 18.2x Julkaisija: TF 179 iOS TESTFLIGHTISSA (VALID e082f865, sisäinen ajo 38063384224 18.26); Mac 179 käännetty 18.23 → Mac TF -ajo. ÄÄNISIVU VALMIS https://matkakirja-aanet.pages.dev/ (Cloudflare Pages + Access: vain samireivinen@gmail.com kertakoodilla, istunto 30 vrk; artefaktin 485 tiedostoa + PT:n osio 6 kaupunkia uusi | vanha + Moskova v4, Peking v4, Moskova/Peking nopea → Musiikki 112; Access luotu ennen sisältöä, ilman kirjautumista 302; lisäys yhdellä komennolla julkaisija-tyokalut/aanisivu-lisaa.py, ohje aanisivu-OHJE.md). RAAMATTUUN ÄÄNISIVU-kohtaan (korvaa jaetun artefaktin Qr7WvfZvKiNxGNwbFEeW2t). Pulu BIH/LUX/MLT + BEL/ISL viety, maat.json 33.
+
+## PT 10.10. 18.3x: PULU SRB, BLR JA TUR PILVEEN, RANTAKIVIEN PIILOTUSKOE 1 (10.10.2026 klo 18.55)
+
+10.10. 18.3x PT: Pulu ALB/MKD/MNE/MDA vaihe 2 valmis → SK pistokoe; SRB session_01EGHTnnVfyQedteyqK41doU, BLR session_01VTocVjxzgREuF42PJokgWa, TUR session_01USkKso4febEMzjQbQRGk81 käynnistetty pilveen (viimeiset Euroopan maat). Siirtosepän piilotuskoe 1b8329002 (todistus-kivet-diag-a08c-20261010-1806): valkoiset rantakivet näkyvät sekä ilman Ymparisto:malli:rantakivet että ilman Tila:kavely:ranta-1499 → lähde muu (epäily lisaPinnat-rantakivi / maasto) → uusi koe. Karttaseppä: jono tyhjä → oma suositus. Asemataulu: TF 179 valmis, juna 180 kertyy, Äänisivu ja Ilmakehä Valmistuneisiin, Bugikorjaukset (TF 179).
+
+## SIIRTOSEPPÄ 10.10. 18.3x: NATIIVI PIIRTÄÄ GLB:STÄ VAIN ENSIMMÄISEN MESHIN (10.10.2026 klo 18.55)
+
+10.10. 18.3x Siirtoseppä: piilotuskoe 1806: ympäristömalli EI ole valkoisten kivien lähde (d2 pätevä); d3 virheellinen (SeikkailuHistoria kytkee ranta-1499:n takaisin joka ruutu). LÖYDÖS: natiivin glb-lukija piirtää tilasta vain ENSIMMÄISEN meshin → v47b:n rantakivi- ja vesipohja-meshit (#4355 lisaPinnat) eivät piirry lainkaan (LR:n monimeshinen vienti vs. natiivin yksimeshinen lukija) → Siirtoseppä korjaa natiiviin kivien jälkeen. Koe 2 0e6b015a5 (forceRenderingOff: e1 normaali, e2 ilman Vaihe:, e3 ilman Ulkokuori, e4 ilman Ymparisto) → Julkaisijan käännös- ja simuvuoro.
+
+## JULKAISIJA 10.10. 18.3x: TF 179 MAC VALMIS, JUNA 180 KUITTAUKSET, PEKINGIN VESIVÄRIPÄÄTÖS (10.10.2026 klo 18.55)
+
+10.10. 18.3x Julkaisija: TF 179 MAC VALID 59b06213 (ajo 38063677637, sisäinen ryhmä 18.32), iOS e082f865 → JUNA 179 VALMIS (ulkoinen ohitettu). KUITATTU 180: Pelikoodari pelikoodari/pulu-bih-lux-mlt e2b97a8a4 (8fca1d3d4:n päällä, korvaa sen; Pulu 33 maata, kaanna.sh 456/456, 3 jäännöstä poikkeuslistalle) → Natiiviseppä. KUITATTU 180: NUI natiivi-ui/pallo-koysi-sumuun-179 e341491f7 (köysi häipyy sumuun ilman päätä, iPhone vaaka nimen yläpuolella; v1-vaaka/v2-pysty katsottu; L1321/P456/K461). LS2 Peking-pari ilmakehä päällä (67abf9bb6) → PT: vallihaudalle oma vesivärikerroin (tavoite orto 54/80/68), kattojen ja muurien väri mitataan oikeaa ortoa vasten; omistajalle sarja peli | oikea (ei Google-Pariisia). Postivahti 95 %: kieltäytyi clear_sessionista ilman omistajan "kyllä"-vastausta → automaattinen tiivistys 97 %:ssa riittää. Karttaseppä oma suositus: KAUPUNKIEN PUUT (OSM Pariisi 345 000 + Tukholma 15 000 + Meta/WRI 1 m latvuskorkeus CC BY 4.0; Pariisin puurekisteri robots.txt:ssä kielletty → ei käytetä) → LS1, LR/LS2. Siirtoseppä koe 2: kivet jäävät erikseen piilotettaessa (kaksi päällekkäistä lähdettä?) → koe 3 df0b13952; MONIMESH-KORJAUS (kaikki 9 kävelyosaa monimeshisiä, natiivi piirtää vain ensimmäisen) hyväksytty omaksi eräkseen kivien jälkeen, ennen/jälkeen-arkki PT + LR.
+
+## OMISTAJA 10.10. 18.4x: LINSSI JOS MAA LAKKAISI PYÖRIMÄSTÄ PÄÄKARTALLE (10.10.2026 klo 18.55)
+
+10.10. 18.4x OMISTAJA (kuva: @vintagemapstore "If Earth stopped spinning", NOAA ETOPO 2022): "Tämä olisi hyvä interaktiivinen ja opettavainen linssi. Mitä olet mieltä?" → PT laski ETOPO 3′:llä (jäykkä Maa, veden tilavuus säilyy, A = ω²R²/2g = 11,0 km): pysähtyneenä päiväntasaaja −4,17 km, navat +6,85 km, raja 38,0°; Helsinki ja Tukholma ~4 km syvyydessä, Lontoo 2,6, Pariisi 2,0, Rooma 0,7; Madrid ja Ateena juuri maata; New York 0,5 km pohjaa, Miami maata (scratchpad/pyoriminen.mjs) → kortti → OMISTAJA: "linssi saisi olla koko maapallo ja lähinnä visuaalinen ensin. eli pyörimisnopeutta voisi säätää joko nopeammaksi tai hitaammaksi ja samalla näkisi miten meri reagoisi. linssin pitää olla visuaalisesti mahdollisimman hieno ja toteutetaan se pääkartalle, mutta karsitaan siitä kaikki lisäkerrokset, jotta vain meri ja maa korkeuseroineen näkyy. toinen vaihtoehto olisi tehdä se värilliselle topografiakartalle. kumpi olisi mielestäsi parempi…" → PT: PÄÄKARTTA (nykyinen maa satelliittiväreissä, paljastuva pohja paljaana sedimenttinä oikealla pohjan korkokuvalla, hukkuva maa syvyysvärillä veden alla, nykyinen rantaviiva haaleana viivana, korostettu korkokuva + matala aurinko, merenpinta liukuu 1–2 s); säädin 0–200 % + vuorokauden pituus; VAIN EUROOPPA -poikkeus omistajan päätöksellä (koko maapallo) → LS2 prototyyppikuvat 100/50/0/150 % → PT → omistaja. RAAMATTUUN (LINSSIT: MAAN PYÖRIMINEN) kun omistaja hyväksyy prototyypin.
+
+## PT 10.10. 18.5x: PEKINGIN VESIKERROIN JUNAAN 180, KAUPUNKIEN PUUT, NOTRE-DAME V5C → V5D (10.10.2026 klo 18.55)
+
+10.10. 18.5x KUITATTU 180: LS2 linssiseppa2/peking-vesikerroin 2c2305012 (75fcc2b1b:n päällä; kalibroitu junan 179 .appilla ilmakehä päällä klo 13: vallihauta × 6,25/4,32/2,5 → 54/80/68 = S2-orto, Beihai + Zhongnanhai × 3,24/3,96/1,9 → 70/102/80; L 1345/1345, unity 0). KATOT liian kirkkaat ja kylläiset (peli 206/156/113 vs orto 161/130/101, katot/pihat 1,53 vs 1,05) → LR. Karttaseppä: KAUPUNKIEN PUUT valmis (_tyo/karttaseppa/puut-20261010/: Pariisi 506 000, Tukholma 1,05 milj., Olavinlinna 110 000, Peking 67 000; 250 m ruudut, 0,5–8,4 Mt/kohde; OSM + Meta/WRI CC BY 4.0) → PT: LS1 tekee korttipuut museon jälkeen omana eränään (kuvaparit katutaso + pallo, Googlen sulaneet puut eivät saa näkyä tuplana, iPad-muistimittaus, LISÄÄ MUISTIA). Siirtoseppä koe 3: valkoiset kivet ovat linnan ULKOKUORESSA (katoavat vasta kuoren piilotuksella); Kuori:Kevyt ja Kuori:Huippu piirtävät historiassa YHTÄ AIKAA → koe 4 (kumpi taso) → LR (atlas/UV) tai natiivin tasonvaihto. LR: ND v5c (1d5befa85; portaalit ja ruusutason ikkunaparit mallin kaarirenkaisiin, kaari renkaan ulkopuolella 0,00–0,06, venytys ≤ 1,98×, kivi × 0,96) → PT katsoi lähikuvan: ENNEN OMISTAJAA v5d (mustat säleet arkivolttien reunoilla, vino ja pysty tumma viiva oikean portaalin yllä, tornien lanseettien yläpuolinen pyörrekuvio) → LS2 pari oikea | v5b | v5d.
