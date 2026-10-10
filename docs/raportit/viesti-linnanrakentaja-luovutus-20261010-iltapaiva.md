@@ -46,3 +46,22 @@ Siirtosepän arkki v46z-176-b (`proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261
 
 1) NL-sali v2d loppuun (tuotanto → kopio → LS1). 2) Olavinlinna-erä (kohdat 1–3 yllä; pinta 'rantakivi' sovitaan Siirtosepän kanssa ensin).
 3) LS2:n ND v4d -mittaus ja Peking v3 -pari → säätö (ND: portin kattokalibrointi pelimittaukseen, jos tarpeen). 4) Siirtosepän uusi arkki.
+
+## JATKO 15.3x–15.5x (nollauksen jälkeen)
+
+- **NL-sali v2d VALMIS**: tausta-ajon kuvavaihe oli kuollut (2/4); leiden + kg_pitka ajettu uudelleen. `_valmiit/taidemuseo-alankomaat-v2d`
+  (sama rakenne kuin v2c), arkki ecf2fcb38. LS1 + PT ilmoitettu.
+- **ND v4d HYVÄKSYTTY LS2:lla** (lyijy +7 %, ei kalibrointia) → PT vie omistajalle. **Peking v3**: malli ok; tumma Jinshui = Karttasepän
+  vesipinta (LS2 mittaa ja vie PT:lle/Karttasepälle), ei minun glb:ssä.
+- **Olavinlinna v47** (Siirtosepän arkki v46z-176-b): `olavinlinna-kavely-v1/lahde/tyokalut-lr/rantakivi_paalu.py` paikkasi v44/kavelyn
+  (ranta-1499.glb: 13 kiveä meshiksi `ranta-1499-rantakivi`, materiaali 'rantakivi', valoatlas säilyy; osat/merkit/ranta1499.json +
+  'b1499-paalu' historia_vuosi 1975). Lähteet samoin (kavely.py PINNAT + osa.bm("rantakivi") + VUODET, ranta1499.py LEIKKAUKSET;
+  varmuuskopiot *_ennen_rantakivi.py / *_ennen_paalu.*, v47-talteen/). materiaalit/detaljit.json: rantakivi = kallion kopio.
+  **nyky_kavely.zsh oli kadonnut** → uusi `tyokalut-lr/nyky_kavely.py` (tuottaa tavu-identtisen tuloksen; aja aina kun v44/kavely muuttuu).
+  Leikkauksia: v44 15 (oli 14), nyky 18.
+- **Vienti**: worktree `/Users/Shared/Claude/wt/linnanrakentaja-linna-v45g` (pohja origin/main). Ämpärissä: 1499 **b29589432d525843**
+  (blender.json committattu 83ffed64b, pushattu), NYKY **6b99bd219430fbad** (blender.json scratchpadissa → kopioi ajon jälkeen).
+  ODOTTAA Siirtosepän PR #4351 (pinnat.js rantakivi + pinnat/rantakivi.jpg; Julkaisija ilmoittaa mergestä). Sitten: merge origin/main
+  v45g:hen → push → `gh workflow run vie-dioraama.yml --ref linnanrakentaja-linna-v45g -f rakennus=olavinlinna -f kuiva=false -f osoitin=false`
+  → PALA-hash lokista → nyky-blender.json commit → sama dispatch → molemmat hashit Siirtosepälle + PT:lle.
+- Pienemmät (ei tässä erässä): ohut tolppa (−58,4 / 15,2), rantaliuskan sirpale (69 / 30), kaksi tummaa palaa järvellä.
