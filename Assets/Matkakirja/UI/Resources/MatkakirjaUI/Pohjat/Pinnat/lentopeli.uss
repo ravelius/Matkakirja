@@ -27,7 +27,7 @@
     margin: 0;
     padding: 0;
     font-size: var(--tk-koko-kapiteeli);
-    letter-spacing: 9.38px; /* web 1.5px */
+    letter-spacing: 12px; /* web 0.12em: tyylikirja kapiteeli harvennus (UITK em/100) */
     color: var(--tk-muste-pehmea);
 }
 
