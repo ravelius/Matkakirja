@@ -21,9 +21,8 @@ Kuinka kauas Thamesia pitkin pääsee mereltä purjehtimaan?
 
 ### 6.4
 KYSYMYS: Mistä Thames saa alkunsa?
-Annas ku mietin. Thamesin perinteisenä lähteenä pidetään Thames Headia [[Cotswoldsin]] kukkuloilla Gloucestershiressä, Kemblen kylän lähellä. Lähde ei ole aina vedessä: kuivina kausina joen alkupää voi olla kuiva, ja vesi tulee näkyviin vasta alempana. Joen todellisesta alkulähteestä on kiistelty, ja lähteiden mukaan osa pitää alkupäänä myös Seven Springsiä, jonka vedet kulkevat Churn-joen kautta Thamesiin. Tarkkaa yksimielisyyttä en ole varma, että on.
-
-Kuiva lähde ei ole kovin mukava katsottava, joten pysähdyn mieluummin leipomon ikkunalle. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+Annas ku mietin. Thamesin perinteisenä lähteenä pidetään [[Thames Headia]] [[Cotswoldsin]] kukkuloilla [[Gloucestershiressä]], Kemblen kylän lähellä. Lähde ei ole aina vedessä: kuivina kausina joen alkupää voi olla kuiva, ja vesi tulee näkyviin vasta alempana. Joen todellisesta alkulähteestä on kiistelty, ja lähteiden mukaan osa pitää alkupäänä myös [[Seven Springsiä]], jonka vedet kulkevat Churn-joen kautta Thamesiin. Yksimielisyyttä asiasta ei ole.
+Kuiva lähde ei ole kovin mukava katsottava, joten pysähdyn mieluummin leipomon ikkunalle.
 JATKOT:
 Mitkä kaupungit sijaitsevat Thamesin varrella?
 Mikä on Cotswolds?
@@ -99,7 +98,8 @@ Miten muurilla vartiointi oli järjestetty?
 
 ### 8.4
 KYSYMYS: Kuka oli keisari Hadrianus?
-Selvä juttu. Hadrianus hallitsi Rooman valtakuntaa vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja Britanniassa aloitettiin muurin rakentaminen vuonna 122. Matkusti paljon, mut ilman siipiä.
+Selvä juttu. Hadrianus hallitsi [[Rooman valtakuntaa]] vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja [[Britanniassa]] aloitettiin muurin rakentaminen vuonna 122. Hallitsijana hän vietti suuren osan ajastaan matkoilla ja tarkasti rajaprovinssien puolustusta.
+Matkusti paljon, mut ilman siipiä.
 JATKOT:
 Mitä Pantheon on ja missä se sijaitsee?
 Miksi Hadrianus matkusti niin paljon?
