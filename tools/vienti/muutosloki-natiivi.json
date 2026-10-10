@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (173)",
+   "paiva": "2026-10-10",
+   "teksti": "Pariisi alkaa nykyajan introlla, ja Pariisissa ja Tukholmassa kuuluvat kirkonkellot, suihkulähteet ja satamavesi. Olavinlinnan historiassa linna rakentuu vuosi vuodelta, ja linnan väki puhuu kasvotusten. Varustekuvat ovat valokuvamaisia, eikä peli enää kaadu iPadilla Pariisissa."
+  },
+  {
    "versio": "1.1 (172)",
    "paiva": "2026-10-09",
    "teksti": "Olavinlinna: historia elokuvana, uusia esineitä, aukeavat ovet ja äänet. Pallo: sadekuurot, märät kadut, salamat, iltaikkunat, Pariisin jokilaivat ja saapumismusiikki, tarkemmat Notre-Dame ja Kuninkaanlinna. Uudet varustekuvat, iPhone pystyssä ja nimi on nyt Matkakirja."
