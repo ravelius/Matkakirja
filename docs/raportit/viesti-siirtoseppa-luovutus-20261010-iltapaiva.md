@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 10.10.2026 iltapäivä (Opus 5.5, high; TILINVAIHTO 12.3x, konteksti 38 %)
+# Siirtosepän luovutus 10.10.2026 iltapäivä (Opus 5.5, high; TILINVAIHTO siirtyi junan 177 lähdön jälkeen, konteksti 38 %)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
@@ -21,7 +21,7 @@ ja PiiloonMenoTekeeTarkistuspisteen; PT: rajaa EI löysätä). Linssit + unity-t
 
 ## JUNA 176 (build 177) — KUITATTU
 
-Kärki **siirtoseppa/historia-suoja 1210b674e** (PT kuittasi ehdolla Linssit läpi: 1300/1300). Ketju a4c6539e5 → 479702aac (esittely-vaiheet) →
+Kärki **siirtoseppa/historia-suoja 1210b674e** (PT kuittasi ehdolla Linssit läpi: 1300/1300). Natiiviseppä: junan 176 runko 9bf070143 (K454, P453, L1307, tarkista ok). Ketju a4c6539e5 → 479702aac (esittely-vaiheet) →
 f0f3b7fe6 → 85cb145f6 → b49804af5 → 4ced0237b → 023c37675 (haara siirtoseppa/esittely-vaiheet-v46z) → 1210b674e. SHA:t on lähetetty Natiivisepälle.
 
 - f0f3b7fe6: v46z (LR) — pala 4e464f44e51710f8 v46z (kappeli-kavely rajat.min y 9,2 → 9,6), esittely b4cd41abc499dbde v46z-nyky,
