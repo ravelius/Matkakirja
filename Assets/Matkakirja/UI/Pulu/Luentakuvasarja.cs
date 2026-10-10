@@ -58,7 +58,7 @@ namespace Matkakirja.Natiivi
             set
             {
                 luentoKaynnissa = value;
-                if (!value) { ohita.style.display = DisplayStyle.None; return; }
+                if (!value) { ohita.style.display = introOhita ? DisplayStyle.Flex : DisplayStyle.None; return; }
                 // Omistaja 30.9. (TF 1.1 (81)): Ohita koko luennon ajan, myös kaupungeissa ilman luentakuvia (Bryssel,
                 // Košice, Ljubljana, Luxemburg, Valletta: ennen Ohita ilmestyi vain ensimmäisen kuvan mukana). Paikka
                 // seuraa kasvavaa kaistaletta.
@@ -70,12 +70,30 @@ namespace Matkakirja.Natiivi
         }
         bool luentoKaynnissa;
 
+        /// <summary>Pariisin nykyintron C1–C5-jatko (Saapumisesitys.NykyIntro; PT 10.10. 19.3x, juna 180): vain Ohita näkyviin, EI
+        /// luentatilaa — kartta (nappula, kohdekaupungit) pysyy normaalitilassa kuten 178:ssa. Luentatila koskee vain luennan kuvia.</summary>
+        public bool IntroOhita
+        {
+            get => introOhita;
+            set
+            {
+                introOhita = value;
+                if (luentoKaynnissa) return;
+                ohita.style.display = value ? DisplayStyle.Flex : DisplayStyle.None;
+                if (!value) return;
+                AsetaPaikka();
+                paikanSeuranta ??= pakka.schedule.Execute(AsetaPaikka).Every(250);
+                paikanSeuranta.Resume();
+            }
+        }
+        bool introOhita;
+
         /// <summary>Uusi kuva pakan päälle (lataa ensin; kuva, joka ei lataudu, jää pois).</summary>
         public void Lisaa(VirtaKuva k)
         {
             if (k == null) return;
             loppu?.Pause();
-            ohita.style.display = luentoKaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
+            ohita.style.display = luentoKaynnissa || introOhita ? DisplayStyle.Flex : DisplayStyle.None;
             AsetaPaikka(); // Ohita heti oikeaan reunaan, ei ensin alas keskelle
             Natiivi.Kuvat.Hae(k.Osoite, t =>
             {
@@ -249,7 +267,7 @@ namespace Matkakirja.Natiivi
             bool soi = kartalla && p != null && p.AutomaattinenSoi && !luentoKaynnissa;
             if (soi == muuLuenta) return;
             muuLuenta = soi;
-            if (luentoKaynnissa) return;
+            if (luentoKaynnissa || introOhita) return;
             ohita.style.display = soi ? DisplayStyle.Flex : DisplayStyle.None;
             if (soi)
             {

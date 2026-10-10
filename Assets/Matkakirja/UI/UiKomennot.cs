@@ -1364,6 +1364,10 @@ namespace Matkakirja.Natiivi
                     if (h.Length > 2 && (h[0] == "paina" || h[0] == "vapauta")) return "=" + HiiriTesti.Nappi(UiKerros.Hae(), new Vector2(H(1), H(2)), h[0] == "paina");
                     return "=käyttö: ui hiiri klikkaa x y | pallo <id> | poimi x y | paina x y | vapauta x y";
                 }
+                case "saapumisintro":
+                    // "ui saapumisintro [0|1]": Pariisin nykyintro saapumisesityksen jatkona päälle/pois (A/B, PT 10.10. 19.5x, juna 180).
+                    if (loput == "0" || loput == "1") Saapumisesitys.IntroSaapuessa = loput == "1";
+                    return "=saapumisintro " + (Saapumisesitys.IntroSaapuessa ? 1 : 0);
                 case "kaupunkipallot":
                 {
                     // "ui kaupunkipallot [tila|0|1|napauta <id|i>]": kaupunkioppaan kuumailmapallot kartalla (omistaja 7.10.).
