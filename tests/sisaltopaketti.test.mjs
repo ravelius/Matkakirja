@@ -449,7 +449,10 @@ test('skeema 1.9: luentojen aikaleimat ja Livian puheen cuet', async () => {
   const ateena = livia.find((r) => r.id === 'ateena');
   const { livianAaniOsoite } = await import('../js/liviapuhe.js');
   assert.equal(ateena.aani, livianAaniOsoite('ateena', 2));
-  assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
+  // PT 10.10.2026 (tarkistus C2): eleiden osoite vain, kun ne ovat ämpärissä (eleetTila ok), muuten null (ei 404-viittausta).
+  if (ateena.eleetTila === 'ok') assert.match(ateena.eleet, /^https:\/\/media\.matkakirja\.app\/.+livia-ateena-3\.eleet\.json(\?.*)?$/);
+  else assert.equal(ateena.eleet, null);
+  for (const r of livia) assert.equal(r.eleet !== null, r.eleetTila === 'ok', r.id);
   assert.ok(ateena.cuet.length >= 3 && ateena.cuet.every((c) => c.ankkuri && c.tarkoitus));
 });
 
@@ -467,7 +470,8 @@ test('skeema 1.11: Livian cue-data (ele, validoidut ajat, repliikit)', async () 
       assert.ok(rivi.cuet.every((c) => c.alku === null && c.loppu === null), rivi.id);
     }
   }
-  assert.ok(livia.some((r) => r.eleetTila === 'ok'), 'ainakin yksi validoitu');
+  // 10.10.2026: kaikki 45 kaupunkia ovat v4-versioissa ilman kohdistusta (tools/vienti/livian-eleet.json: puuttuu 45).
+  assert.ok(livia.every((r) => ['ok', 'puuttuu', 'hylatty', 'vanhentunut', 'ei-haettu'].includes(r.eleetTila)));
   const luennat = JSON.parse(tiedostot.get('kokoelmat/luennat.json')).alkiot;
   for (const r of luennat.flatMap((l) => l.reaktiot ?? [])) {
     assert.equal(r.ele, livianLuentareaktionTiedot(r)?.ele ?? null, r.id);
@@ -1330,16 +1334,22 @@ test('skeema 1.38: kaupunkien asukasluku Wikidatasta (Linssiseppä)', () => {
 
 test('skeema 1.39: karttavalojen webin ankkuri ja nimiön kylki (Natiivi-UI, löydös 50 C)', async () => {
   const { lukittuAnkkuri } = await import('../js/pallolauta/nostoankkurit.js');
+  const { karkaavaPiirtopiste } = await import('../tools/vienti/karttavalot.mjs');
   const valot = JSON.parse(tiedostot.get('kokoelmat/karttavalot.json')).alkiot;
-  let ankkureita = 0;
+  const maarajat = new Map(JSON.parse(tiedostot.get('kokoelmat/maarajat.json')).alkiot.map((m) => [m.id, m]));
+  let ankkureita = 0; let rajattuja = 0;
   for (const v of valot) {
     assert.ok('ankkuri' in v && 'puoli' in v, v.id);
     assert.ok(v.puoli === null || ['oikea', 'vasen', 'yla', 'ala'].includes(v.puoli), `${v.id}: ${v.puoli}`);
     if (v.lahde !== 'fokuskohde' && v.lahde !== 'takynosto' && v.lahde !== 'maalehtinosto') continue;
     const l = lukittuAnkkuri(`nosto:${v.tunnus}`, v.maa);
-    assert.deepEqual(v.ankkuri, l ? { lat: l.lat, lon: l.lng } : null, v.id);
+    const odotettu = l ? { lat: l.lat, lon: l.lng } : null;
+    // KARKAAVA NIMI (PT 10.10.2026): yli 25 km tai toiseen maahan karkaava ankkuri nollataan nimiön kanssa.
+    if (odotettu && v.ankkuri === null && v.nimio === null && karkaavaPiirtopiste({ ...v, ankkuri: odotettu }, maarajat)) { rajattuja += 1; continue; }
+    assert.deepEqual(v.ankkuri, odotettu, v.id);
     if (v.ankkuri) ankkureita += 1;
   }
+  assert.ok(rajattuja < 30, `rajattuja ankkureita ${rajattuja}`);
   assert.ok(ankkureita > 400, `ankkureita ${ankkureita}`);
   // Mittauksen esimerkki: Versailles on webissä omassa paikassaan, ei Pariisin kyljessä.
   const vers = valot.find((v) => v.maa === 'FRA' && v.tunnus === 'nosto-maalehti-peilisali');
