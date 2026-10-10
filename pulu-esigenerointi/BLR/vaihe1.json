@@ -18,7 +18,7 @@
   "kohde": "kohde:mirin-linna",
   "kysymys": "Mihin linnaa käytettiin toisen maailmansodan aikana ja sen jälkeen?",
   "uusi": false,
-  "vastaus": "Tuota niin, tää on raskas aihe. Toisen maailmansodan aikana saksalaiset perustivat linnaan [[getton]] paikallisille juutalaisille. Sodan jälkeen, vuosina 1944–1956, linnassa oli asuntoja, mikä vaurioitti sisätiloja. Tuolloin alue kuului [[Neuvostoliittoon]], ja siitä on nyt yli kahdeksankymmentä vuotta. Nykyään linna on kunnostettu, ja se toimii museona sekä kuuluu Unescon maailmanperintöluetteloon. Onpas siit onneksi pitkä aika.",
+  "vastaus": "Tuota niin, tää on raskas aihe. Toisen maailmansodan aikana saksalaiset perustivat linnaan [[getton]] paikallisille juutalaisille. Sodan jälkeen linnassa asui ihmisiä, mikä vaurioitti sisätiloja; asuntokäyttö jatkui 1950-luvun puolivälin tienoille asti. Tuolloin alue kuului [[Neuvostoliittoon]], ja siitä on nyt yli kahdeksankymmentä vuotta. Nykyään linna on kunnostettu, ja se toimii museona sekä kuuluu Unescon maailmanperintöluetteloon. Onpas siit onneksi pitkä aika.",
   "linkit": [
    "getton",
    "Neuvostoliittoon"
@@ -75,7 +75,7 @@
   "kohde": "kohde:njasvizin-linna",
   "kysymys": "Kuka aloitti Njasvižin linnan rakentamisen vuonna 1582?",
   "uusi": false,
-  "vastaus": "Selvä juttu, tän nimen minä osaan. Linnan rakentamisen aloitti vuonna 1582 [[Mikołaj Krzysztof Sierotka Radziwiłł]], joka kuului mahtavaan Radziwiłł-sukuun. Suku oli saanut alueen haltuunsa vuonna 1533, ja rakennustyöt valmistuivat vuonna 1604. Linna on [[renessanssin]] ja [[barokin]] tyylien yhdistelmä, ja sen kulmissa on neljä kahdeksankulmaista tornia. Pelkkä nimi vei puolet tilasta.",
+  "vastaus": "Selvä juttu, tän nimen minä osaan. Linnan rakentamisen aloitti vuonna 1582 [[Mikołaj Krzysztof Sierotka Radziwiłł]], joka kuului mahtavaan Radziwiłł-sukuun. Radziwiłł-suku oli saanut alueen haltuunsa 1500-luvun alkupuoliskolla, ja linna on [[renessanssin]] ja [[barokin]] tyylien yhdistelmä. Rakennustyöt valmistuivat vuonna 1604, ja sen kulmissa on neljä kahdeksankulmaista tornia. Pelkkä nimi vei puolet tilasta.",
   "linkit": [
    "Mikołaj Krzysztof Sierotka Radziwiłł",
    "renessanssin",
@@ -90,7 +90,7 @@
   "kohde": "kohde:njasvizin-linna",
   "kysymys": "Mitä linnalle tapahtui Pohjan suuressa sodassa?",
   "uusi": false,
-  "vastaus": "Hmm— tähän tarvii vähän taustaa. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuren sodan aikana. Sota käytiin vuosina 1700–1721 pääasiassa [[Ruotsin]] ja sitä vastaan liittoutuneiden valtojen välillä, ja sen taistelut ulottuivat myös [[Puolan–Liettuan kansainyhteisön]] alueelle, johon linna tuolloin kuului. Linna on sittemmin entisöity laajasti vuosina 2004–2012. Siitä on onneksi jo yli kolmesataa vuotta.",
+  "vastaus": "Hmm— tähän tarvii vähän taustaa. Ruotsin armeija ryösti linnan vuonna 1706 Pohjan suuren sodan aikana. Sota käytiin vuosina 1700–1721 pääasiassa [[Ruotsin]] ja sitä vastaan liittoutuneiden valtojen välillä, ja sen taistelut ulottuivat myös [[Puolan–Liettuan kansainyhteisön]] alueelle, johon linna tuolloin kuului. Njasvižin linnan entisöinti ja museoiminen kestivät yli kymmenen vuotta, ja linna avattiin yleisölle vuonna 2012. Siitä on onneksi jo yli kolmesataa vuotta.",
   "linkit": [
    "Ruotsin",
    "Puolan–Liettuan kansainyhteisön"
@@ -134,7 +134,7 @@
   "kohde": "kohde:njasvizin-linna",
   "kysymys": "Miten rakennuksia entisöidään, jotta ne säilyvät alkuperäisinä?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Tost minä osaan kertoo. Entisöinti perustuu ensin tutkimukseen: rakennuksen vaiheet selvitetään arkistojen, piirrosten ja rakenteiden tutkimuksen avulla. Korjauksissa käytetään mahdollisuuksien mukaan alkuperäisiä tai samanlaisia materiaaleja ja perinteisiä työtapoja, ja uudet osat pyritään tekemään sellaisiksi, että ne voi erottaa vanhoista. Kansainvälisenä lähtökohtana pidetään vuonna 1964 laadittua [[Venetsian peruskirjaa]]. [[Njasvižin linnassa]] entisöinti kesti vuosina 2004–2012. Kyl sitä remonttia riitti.",
+  "vastaus": "Odotas vähän. Tost minä osaan kertoo. Entisöinti perustuu ensin tutkimukseen: rakennuksen vaiheet selvitetään arkistojen, piirrosten ja rakenteiden tutkimuksen avulla. Korjauksissa käytetään mahdollisuuksien mukaan alkuperäisiä tai samanlaisia materiaaleja ja perinteisiä työtapoja, ja uudet osat pyritään tekemään sellaisiksi, että ne voi erottaa vanhoista. Kansainvälisenä lähtökohtana pidetään vuonna 1964 laadittua [[Venetsian peruskirjaa]]. [[Njasvižin linnassa]] entisöinti ja museoiminen kestivät yli kymmenen vuotta, ja linna avattiin yleisölle vuonna 2012. Kyl sitä remonttia riitti.",
   "linkit": [
    "Venetsian peruskirjaa",
    "Njasvižin linnassa"
@@ -148,7 +148,7 @@
   "kohde": "kohde:braslavin-jarvet",
   "kysymys": "Kuinka monta järveä Braslavin puistoon kuuluu?",
   "uusi": false,
-  "vastaus": "Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu 30 toisiinsa yhteydessä olevaa järveä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kolmekymmentä järveä ja yksi kyyhky, tasapaino on vähän vinossa.",
+  "vastaus": "Kas vaan, tähän on helppo vastata. Braslavin järvien kansallispuistoon kuuluu kymmeniä toisiinsa yhteydessä olevia järviä. Puisto sijaitsee [[Vitebskin]] alueen luoteisosassa lähellä Liettuan rajaa, ja se perustettiin syyskuussa 1995. Pinta-alaltaan se on noin 700 neliökilometriä, ja suurimpia järviä ovat [[Drivjaty]], [[Snudy]] ja [[Strusta]]. Kymmeniä järviä ja yksi kyyhky, tasapaino on vähän vinossa.",
   "linkit": [
    "Vitebskin",
    "Drivjaty",
@@ -370,7 +370,7 @@
   "kohde": "kohde:gomelin-palatsi",
   "kysymys": "Kuka suunnitteli palatsin alkuperäisen uusklassisen version?",
   "uusi": false,
-  "vastaus": "Kato, tän minä tiedän. Palatsin alkuperäisen uusklassisen suunnitelman laati arkkitehti [[Ivan Starov]], ja rakennuksen teetti kenttämarsalkka [[Pjotr Rumjantsev]] 1700-luvun lopulla Sozh-joen rannalle [[Gomeliin]]. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.",
+  "vastaus": "Kato, tän minä tiedän. Palatsin uusklassisen suunnitelman katsotaan yleensä olevan arkkitehti [[Ivan Starov]]in (tekijyys on tutkijoiden kesken epävarma), ja kenttämarsalkka [[Pjotr Rumjantsev]] rakennutti palatsin [[Gomeliin]] vuosina 1777–1796. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.",
   "linkit": [
    "Ivan Starov",
    "Pjotr Rumjantsev",
@@ -385,7 +385,7 @@
   "kohde": "kohde:gomelin-palatsi",
   "kysymys": "Mitä Paskevitš lisäsi palatsiin?",
   "uusi": false,
-  "vastaus": "Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven, kun kiinteistö oli siirtynyt hänelle 1830-luvulla kruunun ostettua sen. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.",
+  "vastaus": "Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] osti palatsin 1834 ja laajennutti sitä: palatsiin lisättiin muun muassa torni ja sivusiipiä. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.",
   "linkit": [
    "Kenttämarsalkka",
    "Ivan Paskevitš"
@@ -461,10 +461,9 @@
   "kohde": "kohde:hahmotelma-vanha-minsk",
   "kysymys": "Miksi Vanha Minsk katosi?",
   "uusi": false,
-  "vastaus": "Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalainen [[Luftwaffe]] pommitti kaupunkia 24. kesäkuuta 1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 prosenttia rakennuskannasta oli raunioina. Sodan jälkeen kaupunki päätettiin rakentaa lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.",
+  "vastaus": "Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalaiset pommittivat Minskiä kesäkuussa 1941, ja sodan aikana suurin osa kaupungin rakennuskannasta, arvioiden mukaan lähes neljä viidesosaa tai enemmän, tuhoutui. Sodan jälkeen kaupunki rakennettiin lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.",
   "linkit": [
    "toisessa maailmansodassa",
-   "Luftwaffe",
    "Neuvostoliiton"
   ],
   "jatkot": [

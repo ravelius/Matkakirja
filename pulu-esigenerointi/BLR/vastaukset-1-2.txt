@@ -1,13 +1,13 @@
 ### 6.1
 KYSYMYS: Kuka suunnitteli palatsin alkuperäisen uusklassisen version?
-Kato, tän minä tiedän. Palatsin alkuperäisen uusklassisen suunnitelman laati arkkitehti [[Ivan Starov]], ja rakennuksen teetti kenttämarsalkka [[Pjotr Rumjantsev]] 1700-luvun lopulla Sozh-joen rannalle [[Gomeliin]]. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.
+Kato, tän minä tiedän. Palatsin uusklassisen suunnitelman katsotaan yleensä olevan arkkitehti [[Ivan Starov]]in (tekijyys on tutkijoiden kesken epävarma), ja kenttämarsalkka [[Pjotr Rumjantsev]] rakennutti palatsin [[Gomeliin]] vuosina 1777–1796. Uusklassismille ovat tyypillisiä selkeät, tasapainoiset muodot ja antiikin esikuvista lainatut yksityiskohdat, ja juuri sellaista tyyliä palatsin ensimmäinen versio edusti. Ei paha kyyhkyltä.
 JATKOT:
 Kuka oli kenttämarsalkka Pjotr Rumjantsev?
 Mikä museo palatsissa nykyään toimii?
 
 ### 6.2
 KYSYMYS: Mitä Paskevitš lisäsi palatsiin?
-Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] lisäsi palatsiin nelikerroksisen tornin ja kolmikerroksisen siiven, kun kiinteistö oli siirtynyt hänelle 1830-luvulla kruunun ostettua sen. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.
+Selvä juttu. [[Kenttämarsalkka]] [[Ivan Paskevitš]] osti palatsin 1834 ja laajennutti sitä: palatsiin lisättiin muun muassa torni ja sivusiipiä. Muutokset toivat rakennukseen ison osan siitä ilmeestä, jonka vuoksi palatsi tunnetaan nykyisin molempien omistajiensa nimillä. Tämän kaiken minä muistin ilman muistiinpanoja.
 JATKOT:
 Kuka oli Ivan Paskevitš?
 Millainen puisto palatsia ympäröi?
@@ -47,7 +47,7 @@ Millaisia synagogia Itä-Euroopan kaupungeissa oli?
 
 ### 7.2
 KYSYMYS: Miksi Vanha Minsk katosi?
-Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalainen [[Luftwaffe]] pommitti kaupunkia 24. kesäkuuta 1941 kolmessa aallossa, ja sodan loppuun mennessä 80–90 prosenttia rakennuskannasta oli raunioina. Sodan jälkeen kaupunki päätettiin rakentaa lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.
+Kääk. Vanha Minsk tuhoutui [[toisessa maailmansodassa]]: saksalaiset pommittivat Minskiä kesäkuussa 1941, ja sodan aikana suurin osa kaupungin rakennuskannasta, arvioiden mukaan lähes neljä viidesosaa tai enemmän, tuhoutui. Sodan jälkeen kaupunki rakennettiin lähes kokonaan uudelleen, eikä vanhaa kaupunkia palautettu ennalleen, vaan tilalle nousi uusi, suunnitelmallinen [[Neuvostoliiton]] aikainen kaupunkikuva. Tapahtuma oli suuri menetys asukkaille, ja sen jäljet näkyvät kaupungissa yhä, vaikka siitä on kulunut jo yli kahdeksankymmentä vuotta.
 JATKOT:
 Millainen Minsk on nykyisin?
 Miten muut Euroopan kaupungit rakennettiin sodan jälkeen?
