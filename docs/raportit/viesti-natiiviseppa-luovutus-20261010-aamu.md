@@ -47,6 +47,11 @@ tai devicectl device install app (bundle fi.matkakirja.peli.kehitys), sitten mui
 - 176 + NUI pohjavahti-varit-175 31bac5ad0 → runko **72099e128** (tarkista.sh 0, pohjavahti 67).
 - 6.7-käynnistysjumi 08.52 (juna/b13-vahti: LuoPallo 0 % CPU ennen "Begin MonoManager ReloadAssembly", satunnainen) → Julkaisija:
   proto-kaanna.sh ajaa LuoPallon unity-vahti.sh:n alla (RAUHA=120, jumi → yksi uusinta; varmuuskopio .ennen-luovahti-20261010).
+- 09.4x Jumi toistui TF 175 -ajoissa 38029450555 ja 38031240840 (Actions-runner): pääsäie kernelin open()-kutsussa
+  (ModuleMetadata → opendir) T7:llä olevassa 6.7-editorissa; Claude-sessioista ajetut menivät läpi → hypoteesi irrotettavan taltion
+  käyttö (TCC) / T7-I/O. Korjaukset: PR #4334 (proto3d-testflight.yml vahdilla(): jumi ennen ReloadAssemblya → 30 s → yksi uusinta;
+  Julkaisija mergeää) + Julkaisija kopioi editorin /Applications/Unity/Hub/Editor/6000.7.0b4 ja kääntää symlinkin
+  /Users/Shared/Claude/unity/6000.7.0b4 sinne. T7-editoria EI poisteta ennen Julkaisijan ilmoitusta. TF 175 kolmas yritys sen jälkeen.
 
 ## TILA 08.5x — JUNA 175 LUKITTU (Unity 6.7)
 - BUILD 175 = **86ef3b3e630c49012b33a552b3ff475d4cd82604** (proton master; juna/b13 8d6ff7bc9; simukäännös ee95d97c8 08.49; puu identtinen,
