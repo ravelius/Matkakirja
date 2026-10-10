@@ -70,6 +70,7 @@ namespace Matkakirja.Natiivi
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
             SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-vienti-1", null, t.ovi + Vector3.up * 1.6f);   // vartija sulkee oven (repliikit-lapi-v1)
             SeikkailuEsineet.Kolahti += t.Kolina;
+            go.AddComponent<SeikkailuTyrmaAanet>().Alusta(t, t.istuin, t.ovi, t.rako, t.avaimet, t.ryomiOn ? t.ryomi : t.ovi, kirjaa);   // tippuva vesi, askeleet, ohjaava ääni (Pelikoodari 11.10., PT B3)
             kirjaa?.Invoke($"seikkailu: tyrmä (muunnelma {t.ydin.Muunnelma}: {(t.ydin.Muunnelma == 1 ? "avaimet ilmaraosta" : t.ydin.Muunnelma == 2 ? "vesipojan ovi" : "irtokivi")})");
             return true;
         }

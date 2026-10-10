@@ -38,7 +38,7 @@ namespace Matkakirja.Natiivi
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
-            public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti;
+            public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti, VaroitusAsti;
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             public bool Tunnisti;
@@ -377,6 +377,8 @@ namespace Matkakirja.Natiivi
                 {
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
                     Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
+                    if (Havahtui(v.Aivot.Profiili, v.EdellinenTila, v.Aivot.Tila) && Time.unscaledTime >= v.VaroitusAsti)
+                    { v.VaroitusAsti = Time.unscaledTime + VaroitusValiS; VaroitusAlkoi?.Invoke(ag.transform.position); }
                     v.EdellinenTila = v.Aivot.Tila;
                 }
                 if (v.Aivot.Tila == VartijanTila.Kiinni) { if (SeikkailuPelaaja.Ensimmainen && p != null) StartCoroutine(Ote(v, p)); else Kiinni(v); break; }
@@ -591,8 +593,12 @@ namespace Matkakirja.Natiivi
         // Riidan ikkuna (pelattavuusmalli 8.1 huone 2): soutaja-2 veneestä → portinvartija-riita-1 → -2, portinvartija 12 s selin porttiin
         // (näkö 4 m, ±35°) → portinvartija-paluu-5. Ensimmäinen 20 s pelaajan tultua, sitten 40 s:n välein, kun pelaaja on laiturilla tai portilla.
         const float RiitaValiS = 40f; float riitaAsti = 20f; bool riitaKaynnissa;
+        // Repliikit vain ensimmäisessä riidassa (PT B3, Laitetestaaja TF 180: riita ja soutaja-2 toistuivat 56–80 s:n silmukkana);
+        // myöhemmät ikkunat ilman puhetta: airon loiske veneestä kertoo suunnan, portinvartija kääntyy ja portin valo vaihtuu kuten ennen.
+        int riitaKerta;
         /// <summary>Riita alkoi (portinvartija selin porttiin): Pulun ensivihje laiturilla (SeikkailuVihjeet, LS2 8.10.).</summary>
         public static event Action RiitaAlkoi;
+        static readonly string[] Airot = { "soutu-01", "soutu-03", "soutu-05", "soutu-07", "soutu-09" };   // olavinlinna-soundly-v2
         System.Collections.IEnumerator Riita(SeikkailuPelaaja p)
         {
             var pv = vartijat.Find(x => x.Aivot.Profiili == VartijaProfiili.Portinvartija && x.Agentti != null);
@@ -602,8 +608,10 @@ namespace Matkakirja.Natiivi
             if (d != null) foreach (var m in d.Merkit) if (m.Nimi == "vene:laituri") vene = new Vector3((float)m.X, (float)m.Y, (float)-m.Z);
             riitaKaynnissa = true;
             PortinValo(d, true);
-            var r = SeikkailuRepliikit.Aktiivinen;
-            double k1 = r != null && r.Valmis ? r.Soita("soutaja-2", vene) : 0;
+            bool puhe = riitaKerta++ == 0;
+            var r = puhe ? SeikkailuRepliikit.Aktiivinen : null;
+            if (!puhe) SeikkailuAanet.SoitaJokin(Airot, "molskahdus", vene, 0.7f);
+            double k1 = r != null && r.Valmis && r.SoitostaS("soutaja-2") > 90f ? r.Soita("soutaja-2", vene) : 0;   // veneessä juuri kuultu → suoraan riitaan
             yield return new WaitForSecondsRealtime((float)Math.Max(1.0, k1));
             pv.Aivot.AloitaRiita(vene.x, vene.z);
             kirjaa?.Invoke("seikkailu: riita alkaa (portinvartija selin porttiin 12 s)");
@@ -843,6 +851,22 @@ namespace Matkakirja.Natiivi
             kirjaa?.Invoke($"seikkailu: kiipeilijä nähtiin lyhdyn valossa ({lahin.Osa})");
             p.LopetaOteKiipeily();
             StartCoroutine(Vie(lahin, p));
+        }
+
+        // VAROITUSÄÄNI (PT B3, Laitetestaaja TF 180: "ääni ei kerro, mistä vartija tulee", vain sydän 1 s ennen kiinniottoa): kun
+        // kiinni ottava hahmo havahtuu partiosta, sen suunnasta kuuluu varusteiden kalahdus ja terän sihahdus (repliikin lisäksi).
+        // Siirtosepän A1 (näkyvä varoitus) kutsuu samaa tapahtumaa omasta varoitushetkestään; siihen asti havahtuminen laukaisee sen.
+        public static event Action<Vector3> VaroitusAlkoi;
+        const float VaroitusValiS = 6f;
+        static SeikkailuVartijat() { VaroitusAlkoi += VaroitusAani; }
+        static bool Havahtui(VartijaProfiili pr, VartijanTila oli, VartijanTila nyt) => pr.Ottaa
+            && (oli == VartijanTila.Partio || oli == VartijanTila.Paluu)
+            && (nyt == VartijanTila.Epaily || nyt == VartijanTila.Etsinta || nyt == VartijanTila.Etsii || nyt == VartijanTila.Halytys);
+        /// <summary>Suunnallinen varoitus vartijan paikasta (Soundly varuste-01…06 ja raapaisu; 3D kuulokehyksessä).</summary>
+        public static void VaroitusAani(Vector3 vartija)
+        {
+            SeikkailuAanet.Soita("varusteet", vartija + Vector3.up * 1.1f, 1f);
+            SeikkailuAanet.Soita("raapaisu", vartija + Vector3.up * 1.2f, 0.7f, 0.85f);
         }
 
         void OnDestroy()
