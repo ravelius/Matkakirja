@@ -5,6 +5,16 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 15.4x — JUNA 178 dbd56ba32, MUSEON MUISTIKORJAUS VALMIS
+- **JUNA 178 = natiiviseppa/juna-178 dbd56ba32** (350a97ac0 + Siirtoseppä kiinni-kaikki 73bc9b9bd → ajuri-osaraja 8775705c9, LS1 pariisi-mac 92cda8472,
+  tuileries-pois 197610afd). L1309/P456/K460, unity 0. Lisää muistia: ei. Muutoslokiin lisäksi: "Kaupunkipallon napautus avaa taas Pariisin esittelyn."
+  + "Pariisin kohdalla kartalla ollut harmaa kappale on poistettu." Odottaa: LS1 museo2-kombo ea715a36f (PT kuittaa kuva-arkin jälkeen; NUI 9f7ea98ac mukana),
+  omistajan muut bugit, TF vasta omistajan luvalla. **JUNA 179 jonossa:** Siirtoseppä hahmot-reittipaikka 5f4b1f616 (8775705c9:n päällä).
+- **MUSEO**: oikea syy = MuseoTekstuurit Nakyvat(int.MaxValue) → rajaton ruutuhaku Yövartiolle kävellessä, levyvälimuistin ruudut jonottivat (keko +590 Mt / 2 s).
+  Korjaukset natiiviseppa/museo-muisti: 378daacc3 (patsaat peräkkäin, float-virrat) + **a52df1672** (ruudut paikkamäärään, ≤ 8 matkalla). iPad c 075d2cacd:
+  gc varattu max 572 (b: 1126), fp huippu 2,59 Gt (b: 3,03), min vapaa 2,53 Gt, ei varoituksia. Patsaat oikein (b-ajon aula-kuvat). Lähetetty LS1:lle museo2-kärkeen.
+- Levy: pääkopion Build/dd-laite + laite (b4e6f695) pois → +4 Gi (81 Gi). DerivedData 6 G = käännöspalvelun yo-kopio, jätetty.
+
 ## TILA 15.1x — JUNA 178 RUNKO + MUSEOAJO
 - **JUNA 178 runko natiiviseppa/juna-178 = 350a97ac0** (wt proto-natiiviseppa-j175; BUILD 177 3d0c8c4a7 -puu + LS1 pallomerkit d74c8142c, opas-kori 063fba058;
   Siirtoseppä palatsiraja 99b9fead3 (v47a, paketit 200); NUI pulu-pallovaisto 2c05d4700, tahdet-iso-v4 3b7e3d8c1 (kuva 200), paakaupungit-178-2 723a578f0;
