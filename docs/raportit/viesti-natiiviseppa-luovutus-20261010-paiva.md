@@ -5,6 +5,15 @@ Edellinen: viesti-natiiviseppa-luovutus-20261010-aamu.md (TILA-osiot 08.0x–11.
 Viestit: SendMessage-raja oli täynnä → varakanava mcp__ccd_session_mgmt__send_message (PT local_593b89a1…, Julkaisija local_22b29f10…,
 LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari local_97810d35…, Sisältökirjuri local_256f6a15…).
 
+## TILA 14.3x (uusi sessio tilinvaihdon jälkeen)
+- Unity 6.3 T7:llä tarkistettu: sisäisellä vain K63-kääntäjäketju 126 Mt (tarkoituksella), symlinkki ok, levy 73 Gi vapaana.
+- Museo: LS1 kytki patsaat (4b92767ed) → MuseoVeistokset-kohta TEHTY. Pohjaväri-kohta HYLÄTTY: kaikki 4 tekstuuritonta = Blenderin oletusvalkoinen
+  (1,0 / 0,97), marmori 0,86/0,84/0,80 on parempi. Ämpäri: 35 patsasta × malli.glb + veisto.json HTTP 200.
+- **natiiviseppa/museo-muisti-177 = 139bd24cd** (BUILD 177 3d0c8c4a7 + linssiseppa/museo-kombo-176 48c4d9f28; unity 0; pohjavahti MuseoTaulu fontti 1 = NUI:n
+  kirjaus). Peilattu peili/proto/natiiviseppa/museo-muisti-177. Laitekäännös scratchpad 4b38df01…/laite-museo.sh 139bd24cd, ajo
+  proto-3d/tyokalut/natiiviseppa-ajot/museo-muisti-ipad.sh <nimi> (2 × avaus, 20 pysähdystä, vapaa kulku, sulku). ODOTTAA Julkaisijan KÄÄNNÖS NYT
+  (pyydetty 14.2x; lukko oli LS1:n pallomerkit-paivitys). Juna 178: LS1 KIIRE 2 ensin, kun PT kuittaa.
+
 ## TILA 13.4x — JUNA 177 LUKITTU
 - **BUILD 177 = 3d0c8c4a74ee7abbe2c4b492c43e49973f2fe4c2** (proton master; juna/b13 3bb291169 = 2900f8e39 + Siirtoseppä historia-kamera 04915cace;
   puu identtinen; L1307/P456/K454, unity 0). Omistaja 13.3x: ilman LS1:n KIIRE 2:ta (kohdemerkit + kaupunkivalinta → seuraava juna). Simukäännöstä ei
