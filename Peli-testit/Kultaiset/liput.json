@@ -192,6 +192,31 @@
    "lippu": "Flag of Malta.svg"
   },
   {
+   "iso": "AND",
+   "nimi": "Andorra",
+   "lippu": "Flag of Andorra.svg"
+  },
+  {
+   "iso": "LIE",
+   "nimi": "Liechtenstein",
+   "lippu": "Flag of Liechtenstein.svg"
+  },
+  {
+   "iso": "MCO",
+   "nimi": "Monaco",
+   "lippu": "Flag of Monaco.svg"
+  },
+  {
+   "iso": "SMR",
+   "nimi": "San Marino",
+   "lippu": "Flag of San Marino.svg"
+  },
+  {
+   "iso": "VAT",
+   "nimi": "Vatikaani",
+   "lippu": "Flag of Vatican City (2023–present).svg"
+  },
+  {
    "iso": "MNE",
    "nimi": "Montenegro",
    "lippu": "Flag of Montenegro.svg"
