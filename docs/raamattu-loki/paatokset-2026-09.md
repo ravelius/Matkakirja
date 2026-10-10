@@ -12511,3 +12511,67 @@ Omistaja 10.10.2026 klo 09.18 lähetti kuvan Hazin (@diegohaz) twiitistä ali-ag
 ## PT 10.10. 15.4x: PULU PILVESSÄ BIH/BEL/ISL, JUNA 179 SIIRTOSEPÄN ERÄT, ND V4D JA PEKING V3 (10.10.2026 klo 15.51)
 
 10.10. 15.4x PT (jonokierros): Pulu pilvessä NOR, SVK ja SVN valmiit (haarat pulu-nor-pilvi 3bcf3bcc2, pulu-svk-pilvi ef325458d, pulu-svn-pilvi 7d7ffdbeb: paketti + raportti) → Sisältökirjurin pistokoe → Julkaisija vie. Seuraavat käynnistetty 15.48 tämän tilin krediitillä (komentorivi org f04011ee): BIH session_012YXxHpZPsfQS48nY5wmH4N, BEL session_015xFPbFC4cYzgCbyCUdx8h6, ISL session_019u2FxoKst4UVei8BLienqM. KUITATTU JUNAAN 179: Siirtoseppä kiinni-alku eecbb6474 (huoneiden 2–4 kiinnijääntitesti 18 kohdassa, vain testi), 674f3d589 (lokiin puuttuvan pinnan nimi kerran per pinta), 187359ae0 (tikkaiden yläpää tarkistuspisteeksi; harjalla kiinni jäänyt palaa tikkaiden yläpäähän). LS2: Peking v3 + maahelma 400 m, ND v4d (v6k12, lyijy +7 %, raja 10 %) valmis omistajan pariksi; LR: Pekingin tumma Jinshui-joki ja vallihauta tulevat LS2:n maakerroksesta → LS2 korjaa peking-maa.py:ssä. Seuraavat erät: Natiivi-UI Kaukasus + Lähi-itä natiiviin, Pelikoodari sama webissä + workerin IP-suola + illalla taidemuseon Soundly-haku, Julkaisija #4351/#4350/#4349-paketti.
+
+## OMISTAJA 10.10. 15.5x: NOTRE-DAME V4D EI VIELÄ (VÄRI, PYSTYNOUSUT), KREDIITTI KULUU, ISR-ASEMA (10.10.2026 klo 16.38)
+
+10.10. 15.5x OMISTAJA (kortti, ND v4d "Viedäänkö peliin?"): "ei ole vielä tarpeeksi hyvä. väri on liian kirkas ja keltainen ja pitää tehdä lisää polygoneja ainakin julkisivuun missä pysty nousut ovat aivat tyhjiä vaikka oikassa rakennuksessa on paljon yksityiskohtia. voisi tietenkin kokeilla että ei lisätä polygoneja vaan piirretään nuo tarkemmat yksityiskohdat suoraan tekstuureiksi." → ND v4d EI vientiin; LR ND v5: kiven sävy harmaammaksi ja vähemmän keltaiseksi (kalibrointi 2024–2026 kuviin myös sävyn/valkotasapainon osalta), pystynousujen yksityiskohdat ensin leivottuina tekstuureina, tarvittaessa polygoneja LOD0:aan; VERTAILUPORTTIIN kiven keltaisuus omaksi rajakseen (v4d läpäisi portin, mutta ei omistajaa; PT:n oppi: tarkista sävy ja yksityiskohtien tiheys, ei vain kirkkautta). LS2 pelikuvapari oikea | v4d | v5. Krediittikortti: "Krediittiä on kulunut" → pilviajot jatkuvat krediitillä (MLT, LUX, pienet seuraavaksi). NUI 79eb3c621 (Kaukasus + Lähi-itä natiivissa, vain datatesti, P456/L1307/K461) KUITATTU 179 paketin viennin jälkeen; NUI:n suositus (pohjavahdin C#-värivakiot Tyylikirjaan samoilla arvoilla) hyväksytty. ISR.paakaupunki = {jerusalem, asema "hallinnon paikka"} on 15.0x-linjauksen mukainen (Karttaseppä f0413cad7, vaihtoehto A): maakortit lukevat asema-kentän ("Hallinnon paikka: Jerusalem/Ramallah"), ei koskaan "Pääkaupunki" ISR:lle tai PSE:lle (Pelikoodari web, N-UI natiivi).
+
+## PT 10.10. 16.0x: ISS-KUPOLA 3D EI VOITA, PEKINGIN VESIVÄRI, PULU-PISTOKOE PILVEEN (10.10.2026 klo 16.38)
+
+10.10. 16.0x PT: ISS-KUPOLA 3D (LS2 503682973, klassinen 7 ikkunan näkymä, muisti 1221 vs 1337 Mt) EI VOITA nykyistä: puitteet peittävät Maan ja oliivinharmaa sisätila jää Codexin kuvaa vaatimattomammaksi → nykyinen kuva jää, ei iPad-mittausta eikä omistajalle; haara linssiseppa2/cupola3d-koe talteen. PEKINGIN VESI: juurisyy puuttuva mitattu vesiväri (vallihauta 6/16/25 vs oikea 54/80/68) → LS2 VesiVari.Tunniste Pekingille + Karttaseppä vesivari-kaudet vari-v1:een. Pulu-pistokoe (SK) NOR 7/10, SVK 9/10, SVN 8/10 → korjausohjeet pilvisessioille (claude -p --cloud <id>; zsh ei pilko `set -- $x` -muuttujaa, käytä erillisiä komentoja). Natiiviseppä: juna 178 runko dbd56ba32 (L1309/P456/K460), museo-muisti 378daacc3 + a52df1672 (Yövartion rajaton ruutuhaku +590 Mt; iPad huippu 2,59 Gt, min vapaa 2,53 Gt) LS1:n museo2-kärkeen.
+
+## OMISTAJA 10.10. 16.0x: JUNA 178 JULKAISTAAN, TAIDEMUSEO JUNAAN 179 (10.10.2026 klo 16.38)
+
+10.10. 16.0x OMISTAJA: "junan voi julkaista. siirretään taidemuseo seuraavaan junaan" → juna 178 lukitaan dbd56ba32:ksi ilman museo2:ta, TF 178 iOS + Mac (päivän 3. TF omistajan pyynnöstä), taidemuseo + museo-muisti junaan 179. Asemataulu: Juna 178 "Julkaistaan nyt", Juna 179 (5/1) lisätty, kysymys "Juna 178: kerro, kun saa julkaista" poistettu.
+
+## PT 10.10. 16.1x: PÄÄKAUPUNKIRIVI MAAKORTTIIN (A) (10.10.2026 klo 16.38)
+
+10.10. 16.1x PT: PÄÄKAUPUNKIRIVI MAAKORTTIIN (Pelikoodarin kysymys, A): kaikille maille, joilla pääkaupunki tiedetään, olemassa olevalla Väkiluku-rivipohjalla "Pääkaupunki: <nimi>", asema "hallinnon paikka" → "Hallinnon paikka: Jerusalem/Ramallah" (15.0x-linjauksen toteutus; B eli vain ISR/PSE hylätty, koska se näyttäisi kiistan erikoisrivinä); N-UI natiivi + Pelikoodari web rinnakkain. Pelikoodari #4353 (erä 2 -tarkistus + sw-kommentti, npm 5451/5451) → Julkaisija; IP-suola jo tuotannossa (POLLO_IP_SUOLA 7.10.). KUITATTU 179: Siirtoseppä 51029519e, NUI 293eae603. NUI:lle Mac-ikkunakoot asettelutestiin (omistajan näyttö 2560 × 1440).
+
+## PT 10.10. 16.1x: RAAMATTU-PR #4352 MERGETTY, TF 178 -MUUTOSLOKI, SIIRTOSEPÄN TARKISTUSPISTEET (10.10.2026 klo 16.38)
+
+10.10. 16.1x: Raamattu-PR #4352 MERGED 4204e7c64 (Asemataulun täydennykset + loki 15.1x–15.5x), worktree fable-raamattu-1010b poistettu. Julkaisija: TF 178 -haara tf178-ei-ulkoista valmiina; PT lähetti kuitatun muutoslokin ja vahvisti, ettei muistiajoa tarvita. Siirtoseppä aloitti oman suosituksensa: esinetarkistuspisteet naamio (T6b), avaimet (T6c), köysi (T8a) peliin ja simulaattoriin (tarjotin T3c pois, koska putoaa kiinnijäännissä).
+
+## SISÄLTÖKIRJURI 10.10. 16.2x: PULU NOR/SVK/SVN HYVÄKSYTTY (10.10.2026 klo 16.38)
+
+10.10. 16.2x SK: Pulu NOR/SVK/SVN pistokoekorjaukset OIKEIN → HYVÄKSYTTY, Julkaisijalle vientiin (cd5bdd97d / 5073edc11 / f885fa45c); Pelikoodarille natiivin Pulu-kultaiset viennin jälkeen → juna 179.
+
+## LINNANRAKENTAJA 10.10. 16.2x: OLAVINLINNA V47 RANTAKIVET (10.10.2026 klo 16.38)
+
+10.10. 16.2x LR: Olavinlinna v47 (rantakivet + paalu) viety: PALA 1499 02d3f613c9daf6e7, NYKY 61e0938f710ac8b2 → Siirtoseppä kiinnittää + rannan pelikuvapari PT:lle → juna 179; PR #4355 (rakenna.mjs lisaPinnat: natiivi lukee pinnat vain paketista) → Julkaisija; LR aloitti ND v5:n.
+
+## PT 10.10. 16.3x: MUSEO2 YKSI KORJAUS (YÖVARTION NIMIKYLTTI IPHONELLA) (10.10.2026 klo 16.38)
+
+10.10. 16.3x PT: MUSEO2 42cb5efb8 (käännös b6a08c0de; + museo-muisti; iPad 11/11, iPhone 8/8, L1322): Poistu (tumma KORTTI-variantti), vaaleat teoskyltit ja iPhonen Yövartio-kortti OK; YKSI KORJAUS: iPhone pystyssä Yövartion nimikyltin 3-rivinen otsikko painaa alarivin (tekijä, vuosi) maalauksen kehyksen päälle → kyltti kokonaan maalauksen yläpuolelle olemassa olevilla pohjilla → kuvapari → kuittaus 179. NL-sali v2d rinnakkain. Julkaisija: muutosloki 178 #4356 d3de61fd8 (proosaksi validaattorin rajaan 3 lausetta / 280 mrk, sisältö sama), #4353 mergeytyy, #4355 + Pulu NOR/SVK/SVN TF 178:n jälkeen.
+
+## OMISTAJA 10.10. 16.3x: ASEMATAULUN JUNAT (UUSIN ENSIN, ORANSSI, KOLME) (10.10.2026 klo 16.38)
+
+10.10. 16.3x OMISTAJA (Asemataulu, kuvakaappaus junariviltä): "pidä uusin juna aina ensimmäisenä ja muuta käännössä oleva juna oranssin väriseksi. Näytä aina vain kolme junaa tai TF:ää yhteensä" → PT (artefaktin versio 31): junat numeron mukaan uusin ensin, enintään kolme, käännössä/lähtee-tilassa oleva oranssina (uusi token --oranssi #C25E0C / tumma #F0974A). RAAMATTUUN ASEMATAULU-kohtaan seuraavassa docs-PR:ssä + tools/asemataulu/asemataulu.html. Julkaisijalle KYLLÄ: Pekingin vesivari-kaudet.json korvaa ämpärin version (vanha .ennen-peking-20261010), #4354 (Karttaseppä Aasia + Afrikka) merge + sisältöpaketti TF 178:n jälkeen.
+
+## OMISTAJA 10.10. 16.4x: ILMAKEHÄ KAIKKIIN KAUPUNKEIHIN (10.10.2026 klo 16.38)
+
+10.10. 16.4x OMISTAJA (kortti, Ateenan arkki LS2 481204381 ateena-ilmakeha.jpg: nyt | ilmakehä päällä): "Kaikissa kaupungeissa" (PT:n suositus oli Ateena nyt, muut tarkistettuina) → ILMAKEHÄ OLETUKSENA PÄÄLLÄ KAIKISSA GOOGLE-KAUPUNGEISSA (laajentaa kehityskaupunkien linjausta tältä osin; RAAMATTUUN seuraavassa docs-PR:ssä). LS2: KaupunkiIlmakeha 6.7-haaralle + kuva-arkki 3–4 kaupungista → PT → juna 179. Ateenan työlistarivi: ilmakehä ratkaisee tumman merinauhan, oma vesi ei tarpeen.
+
+## SISÄLTÖKIRJURI 10.10. 16.4x: PÄÄKAUPUNKIEN CODEX-KUVAT 324/342 (10.10.2026 klo 16.38)
+
+10.10. 16.4x SK: pääkaupunkien Codex-kuvat 324/342 HYVÄKSYTTY (170 maata, 58 korjausta; kuvat-hyvaksytyt.json Karttasepälle + Julkaisijalle). PT: uusintakierros vain puuttuville 16 maata × 1 + BGD × 2 = 18 kuvaa (omistajan 342 kuvan määrän sisällä). Reykjavík, Tunis, Kotte (6 kuvaa) ylittävät määrän → OMISTAJAN KORTTIIN seuraavalla kerralla.
+
+## NATIIVISEPPÄ 10.10. 16.4x: BUILD 178 JA JUNA 179 -RUNKO (10.10.2026 klo 16.38)
+
+10.10. 16.4x Natiiviseppä: BUILD 178 = 9e10d4d33 (master; L1309/P456/K460, käännöspalvelu 16.11 ok), Mac 178 käännetty 16.15 → Julkaisija TF iOS + Mac; ei muistilisää (177:n ajo pätee). JUNA 179 RUNKO natiiviseppa/juna-179 37835358d (Siirtoseppä 5f4b1f616 + 187359ae0-ketju + 51029519e, NUI 293eae603 + 79eb3c621; L1315/P456/K461) odottaa museo2-kärkeä.
+
+## OMISTAJA 10.10. 16.4x: ASEMATAULUN JUNAN ETENEMINEN NELIÖINÄ (10.10.2026 klo 16.38)
+
+10.10. 16.4x OMISTAJA (Asemataulu): "saisiko oranssiin junaan sen alapuolelle saman tyyliset palkit etenemisestä kuin työlistassa. voisi olla vain neliön muotoisena ja pienemmällä" → PT (versio 32): käännössä olevan junan nimen alla 5 pientä oranssia neliötä (junat-rivin kenttä edistys 0–5: 1 lukittu, 2 käännetty, 3 lähetetty Applelle, 4 Apple käsitellyt, 5 TestFlightissa; PT päivittää). RAAMATTUUN ASEMATAULU-kohtaan seuraavassa docs-PR:ssä.
+
+## SISÄLTÖKIRJURI 10.10. 16.5x: CODEX-UUSINTAKIERROS 18 KUVAA (10.10.2026 klo 16.38)
+
+10.10. 16.5x SK: Codex-uusintakierros postilaatikossa a24a96b49 (posti/sisaltokirjuri-codex-uusintakierros-20261010.md): 18 kuvaa (16 maata × 1 + BGD × 2), pehmeämmät ehdot (etäiset geneeriset rakennusmassat sallittu; nimetyt suojatut teokset, kasvot ja teksti kielletty), 70 v -rivi, havainnekuva-merkintä, polku <id>-v3.png.
+
+## OMISTAJA 10.10. 16.5x: ASEMATAULUN LAITTEET, VALMISTUNEET, MUISTI JA PROSESSORI, JÄLJELLÄ OLEVA AIKA (10.10.2026 klo 16.38)
+
+10.10. 16.5x OMISTAJA (Asemataulu, viestit järjestyksessä): "saisiko junan palkkien perään pienellä sulkuihin arvioitu jäljellä oleva aika esim (15min)", "lisää asematauluun myös Ipad osio, missä näkyy, mitä iPadilla parhaillaan testataan. lisää myös Blender osio, mikä näyttää puolestaan jos blenderillä on jokin työn alla. onko joku muu vielä jokanka voisi näyttää myös?", "Lisää työlistan alle otsikko "Valmistuneet" mitä painamalla näkyisi listassa valmistuneet projektit. mitä olet mieltä?", "poista uusin testflight levyn perästä ja korvaa se muistin ja prosessorin käytöllä. onko järkevä?" → PT (artefaktin versio 33 + tiedot): 1) käännössä olevan junan neliöiden perässä arvioitu jäljellä oleva aika "(34 min)" (junat-rivin kenttä valmis_arvio, PT arvioi CI:n + Applen käsittelyn keston); 2) LAITTEET-osio ennen rooleja: iPad ja Blender ruutuina (käytössä vihreä / vapaa harmaa, "Rooli: mitä"); tiedot scratchpad/asemataulu/laitteet.py (prosessihaku, rooli Claude-vanhemman työkansiosta, tunnetut iPad-ajot selkokielelle, muuten roolin tehtävä tehtavat-dokumentista) → laitteet.json → Postivahti ajaa kierroksella, PT vie dokumenttiin laitteet; 3) VALMISTUNEET-otsikko työlistan alla, napautus näyttää valmistuneet (tila "valmis", kenttä valmistui pp.kk.; aluksi Asemataulu, Ikäraja asetuksiin, Unity 6.7, Astronautin kameran kohteet); 4) Levyn perässä Muisti ja Prosessori prosentteina (scratchpad/asemataulu/kone.py: memory_pressure ja top), Uusin TestFlight pois. RAAMATTUUN ASEMATAULU-kohtaan + tools/asemataulu/ (asemataulu.html, laitteet.py, kone.py) seuraavassa docs-PR:ssä.
+
+## OMISTAJA 10.10. 17.0x: LAITTEISIIN UNITY, PILVIAJOT, SIMULAATTORIT, CODEX JA BLENDERIN PROSESSORI (10.10.2026 klo 16.38)
+
+10.10. 17.0x OMISTAJA (kortti Laitteet, monivalinta): "Unity-käännökset (suositus), Pilviajot (suositus), Simulaattorit, Codex-tilaukset" → laitteet.py laajennetaan (Opus-agentti) neljällä rivillä. OMISTAJA: "saisiko blenderiin jotenkin muutamalla palkilla kuinka paljon käyttää prosessoria. pystyykö edes näyttämään?" → kyllä: rivin kenttä prosessori = prosessien %cpu / ytimet (0–100), sivulla 5 pientä palkkia + prosentti nimen perässä (versio 34).
