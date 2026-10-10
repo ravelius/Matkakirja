@@ -160,6 +160,9 @@ namespace Matkakirja.Linssit.Museo
             else if (Vaihe == MuseoVaihe.Pysahtyy && VaiheenAika >= VaiheenKesto) AloitaSiirtyma(Kohta + 1, Mista);
         }
 
+        /// <summary>Pysähdys kestää vähintään s sekuntia (kertojan äänite, MuseoKertoja); vain pysähdyksessä.</summary>
+        public void PidennaPysahdys(double s) { if (Vaihe == MuseoVaihe.Pysahtyy && s > VaiheenKesto) VaiheenKesto = s; }
+
         public void Tauko(bool paalla) { if (Tauolla != paalla) { Tauolla = paalla; Versio++; } }
 
         /// <summary>Seuraava pysähdys (kävellen nykyisestä paikasta); viimeisen jälkeen kierros on valmis.</summary>

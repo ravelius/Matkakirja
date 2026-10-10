@@ -243,6 +243,18 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        [Testi] static void PysahdysKertojanMittainen()
+        {
+            var k = new MuseoKierros(Alankomaat());
+            k.PidennaPysahdys(60);
+            Oleta.Tosi(k.VaiheenKesto < 60, "siirtymää ei pidennetä");
+            for (int i = 0; i < 600 && k.Vaihe != MuseoVaihe.Pysahtyy; i++) k.Paivita(0.05);
+            k.PidennaPysahdys(45);
+            Oleta.Tosi(Math.Abs(k.VaiheenKesto - 45) < 1e-9, "pysähdys kertojan äänitteen mittainen");
+            k.PidennaPysahdys(10);
+            Oleta.Tosi(Math.Abs(k.VaiheenKesto - 45) < 1e-9, "lyhyempi ei lyhennä");
+        }
+
         [Testi] static void AsetaPaikka()
         {
             var k = new MuseoKierros(Alankomaat());

@@ -86,7 +86,8 @@ namespace Matkakirja.Natiivi
                 // Esittely kuuluu napista: avaus aloittaa luennan (kaiutin keskeyttää), toinen painallus sulkee.
                 // Ei teosta (vapaa kulku käytävällä): sama nappi avaa huoneen kortin.
                 if (MuseoSovitin.Aktiivinen?.Teos == null && MuseoSovitin.Aktiivinen?.NykyinenHuone != null) { MuseoSovitin.HuoneKortti(); return; }
-                luennalla = !MuseoSovitin.EsittelyAuki;
+                // Kertojan äänite (MuseoKertoja) ensin; kortin lukija (puhesynteesi) vain teoksille, joilla sitä ei ole.
+                luennalla = !MuseoSovitin.EsittelyAuki && !MuseoSovitin.KertojaEsittelee();
                 MuseoSovitin.Esittele();
             }, ryhma);
 
