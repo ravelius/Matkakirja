@@ -263,6 +263,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0, astioita, "52 m:n päästä ei astioita");
             Oleta.Tosi(maitoja >= 6, "maitovaahdotin ennallaan");
             Oleta.Tosi(Array.IndexOf(Matkakirja.Linssit.Elava.IhmisAanet.PyoranKellot, PalloKaupunkiAanet.PyoranKelloPisteet[2]) >= 0, "pisteiden pyörän kellot IhmisAanetin sarjassa");
+            var ih = Matkakirja.Linssit.Elava.IhmisAanet.Lue("{\"kadut\":[{\"p\":[[0,0],[100,0]]}]}", 3);
+            ih.Paivita(0, 50, 5, 10); ih.Pakota("pyora");
+            var pk = ih.Paivita(1, 50, 5, 10);
+            Oleta.Tosi(pk != null && Array.IndexOf(PalloKaupunkiAanet.PyoranKelloPisteet, pk.Tunnus) >= 0, "pakotettu pyörän kello pisteistä: " + pk?.Tunnus);
         }
 
         [Testi] static void ToriHiljeneeSorinanAikanaJaHallit()
