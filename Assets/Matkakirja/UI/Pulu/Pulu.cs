@@ -143,17 +143,6 @@ namespace Matkakirja.Natiivi
             var kartuscha = ui.Kartuscha?.AukiKortti;
             if (kartuscha != null && kartuscha.panel != null && kartuscha.worldBound.height > 0)
                 korkein = Mathf.Max(korkein, kartuscha.panel.visualTree.layout.height - kartuscha.worldBound.yMin + 8f);
-            // Ajattelijan kipsipää (ERIKOISNOSTOT, Päätoimittaja 2.10.2026; web #3866 pulu-vaistettava): kun pää on pulun
-            // kohdalla tai sen alla, pulu nousee sen yläpuolelle kuten avatun kartuutsin kohdalla.
-            if (ui.Erikoisnostot != null && alue.panel != null && alue.worldBound.width > 0)
-                foreach (var paa in ui.Erikoisnostot.NakyvaAlueet())
-                    if (paa.xMax > alue.worldBound.xMin && paa.xMin < alue.worldBound.xMax && paa.yMax > alue.worldBound.yMin - 40f)
-                        korkein = Mathf.Max(korkein, alue.panel.visualTree.layout.height - paa.yMin + 8f);
-            // Kaupunkioppaan kuumailmapallo (omistaja 7.10.): sama väistö kuin kipsipäällä.
-            if (ui.KaupunkiPallot != null && alue.panel != null && alue.worldBound.width > 0)
-                foreach (var pa in ui.KaupunkiPallot.NakyvaAlueet())
-                    if (pa.xMax > alue.worldBound.xMin && pa.xMin < alue.worldBound.xMax && pa.yMax > alue.worldBound.yMin - 40f)
-                        korkein = Mathf.Max(korkein, alue.panel.visualTree.layout.height - pa.yMin + 8f);
             // Maapallon vuosi -linssin paneeli alareunassa: sama hyppy sen yläpuolelle.
             var vuosi = ui.Linssit?.Vuosi?.Paneeli;
             if (vuosi != null && vuosi.panel != null && ui.Linssit.Vuosi.Nakyvissa && vuosi.worldBound.height > 0)
@@ -164,7 +153,31 @@ namespace Matkakirja.Natiivi
                 korkein = Mathf.Max(korkein, radio.panel.visualTree.layout.height - radio.worldBound.yMin + 6f);
             // ISS-kyydin ohjauspöytä alareunassa (omistaja 29.9.2026): Pulu sen yläpuolelle.
             korkein = Mathf.Max(korkein, AlaVara);
-            return Mathf.Max(perus, korkein);
+            float pohja = Mathf.Max(perus, korkein);
+            // Ajattelijan kipsipää (ERIKOISNOSTOT, Päätoimittaja 2.10.2026; web #3866 pulu-vaistettava) ja kaupunkioppaan
+            // kuumailmapallo (omistaja 7.10.): kun este on pulun kohdalla tai sen alla, pulu nousee sen yläpuolelle.
+            // TF 177 (omistaja 10.10., maailmahyppy Ateena → Pariisi): este verrataan pulun LEPOPAIKKAAN (pohja), ei nykyiseen
+            // paikkaan — muuten noussut pulu osui seuraavaan ylempään palloon ja kiipesi kehys kehykseltä pistepillerin päälle.
+            if (alue.panel == null || alue.worldBound.width <= 0) return pohja;
+            float ruutu = alue.panel.visualTree.layout.height, lepoYla = ruutu - pohja - alue.worldBound.height;
+            float este = 0f;
+            void Vaista(IEnumerable<Rect> alueet)
+            {
+                foreach (var a in alueet)
+                    if (a.xMax > alue.worldBound.xMin && a.xMin < alue.worldBound.xMax && a.yMax > lepoYla - 40f)
+                        este = Mathf.Max(este, ruutu - a.yMin + 8f);
+            }
+            if (ui.Erikoisnostot != null) Vaista(ui.Erikoisnostot.NakyvaAlueet());
+            if (ui.KaupunkiPallot != null) Vaista(ui.KaupunkiPallot.NakyvaAlueet());
+            // Pulu ei koskaan yläpalkin (pistepilleri) eikä sen alla olevan hakunapin päälle (PT 10.10.): yläreuna vähintään
+            // Vali.S niiden alapuolella; matalalla ruudulla perusasema voittaa.
+            float yla = ui.Tilarivi != null ? ui.Tilarivi.NakyvaAlareuna : 0f;
+            var haku = ui.Karttaselite?.LinssitNappi;
+            if (haku != null && haku.panel != null && haku.resolvedStyle.display != DisplayStyle.None && haku.worldBound.height > 0
+                && haku.worldBound.xMax > alue.worldBound.xMin && haku.worldBound.xMin < alue.worldBound.xMax)
+                yla = Mathf.Max(yla, haku.worldBound.yMax);
+            float katto = yla > 0f ? ruutu - yla - Tyylikirja.Vali.S - alue.worldBound.height : float.MaxValue;
+            return Mathf.Max(perus, Mathf.Min(Mathf.Max(pohja, este), katto));
         }
 
         // --- joka ruutu ----------------------------------------------------------------
