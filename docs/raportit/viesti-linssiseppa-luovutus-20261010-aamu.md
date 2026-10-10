@@ -39,8 +39,10 @@ App-kopiot `proto-3d/lokit/linssiseppa-app/`: ls-ikkuna-175 (63648842a), maa-dtm
    (oikein päin, kulma ja SHA kuvaan: proto-3d/tyokalut/linssiseppa-ajot/yopari.py), bulevardi ennen/jälkeen.
 2. Pelikoodari peruutti KaupunkiPisteAanet.cs:n (KaupunkiAanet/SoundlyAanet tekevät jo 3D-pisteet); PT päättää pyörän kellot ja kahvilan astiat.
 3. Strömmenin musta vesi: LS2 vie PT:lle (aluekohtainen nosto 1,5 m).
-4. Karttaseppä tekee (pyyntöni 10.10.): kadut-<id>.json (OSM oneway, lanes, roundabout, maxspeed) katuliikenteen suuntiin ja
-   Tukholman avoin maanpinta (Lantmäteriet, jos avoin) → kytke KatuLiikenteeseen ja maa-tukholma (PT:n muistipäätös).
+4. VALMIS DATA: Karttasepän _tyo/karttaseppa/kadut-20261010/ (LUEMINUT.md): kadut-<id>.json, p ajosuuntaan (oneway=-1 käännetty),
+   yksisuuntainen, kaistat_eteen/_taakse, nopeus_kmh, liittymä, silta/tunneli, bussi_vastaan, vain_joukkoliikenne → kytke
+   tyokalut/elava_kaupunki.py:n katuliikenteeseen (Ydin KatuLiikenne: yksisuuntaisilla vain eteen) PT:n luvalla, kuva bulevardilta.
+   Tukholman maanpinta (Lantmäteriet CC0) odottaa omistajan Geotorget-tunnusta.
 5. Steam Audio -mittaus iPadilla Tukholmassa, budjetin kuvapari iPadilla (junan 173 portin jälkeen), ND-lähilento (LR:n malli).
 
 ## Opetukset
