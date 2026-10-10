@@ -67,3 +67,9 @@ Yhteenveto: VÄÄRIN 10, EPÄVARMA 14.
 | Nykypolitiikka, sota | Ei nykypolitiikkaa, vaaleja, nykysotaa eikä rikollisuutta; 31.5.1991 on uskonnollinen tapahtuma | PILVIOHJE 4.6 | OK |
 | 1873-väitteet (muut) | rautatie 1862, patsas 1866, Lotrščak 1857/1877, teatteri 1895, Taidepaviljonki 1898, Zrinjevacin paviljonki 1891 | ks. yllä | OK (poikkeukset ks. VÄÄRIN) |
 | Kuvatekstit (muut) | lyhyt ≤ 100 merkkiä ja kertoo kohteesta; kuvat.md:n kuvaukset ja kuvatekstit eivät ristiriidassa | kuvat.md | OK (poikkeukset ks. yllä) |
+
+## Korjattu
+
+- VÄÄRIN (kaikki 10 korjattu sanatarkasti): intro 2. kappale ja kaupunkilehti johdanto (raitiotie/tornit/asemakaava), kysymys 3 vihje, Kivisen portin suojeluspyhimys-lause, Zrinjevacin 1873-lause, Zrinjevac-kuvan lyhyt ja selite, oppaan nosto (aikamerkki vuodesta 1877), Etnografinen museo (entinen Trades Hall), kansallisteatterin kuvan lyhyt ja selite.
+- EPÄVARMA: poistettu arkkipiispanistuin 1853, linja-autolause, euro-maininnat (hyvaTietaa[3] korvattu joulutorifaktalla) sekä sadekuukausiminimi/-maksimi (luonnehdinta ja jakso); kellot -> kellotaulut; Strossmayer-lause muotoiltu uudelleen; kysymysten 0 ja 3 vihjeet ja vaihtoehto (Piispan palatsin ovi), kysymyksen 4 vihje; tehtava.fakta; tiedot[1] korvattu Tkalčićeva-faktalla; Manda-legenda poistettu nostosta (nostoon lisätty Ulica Potok ja 1134); kaivoveistos-muotoilu; Taidepaviljongin kuvaselite; Tkalčićeva-kuvan selite.
+- wiki-viite "Art Pavilion (Zagreb)" -> "Art Pavilion in Zagreb" (ei löytynyt). Kuvia ei vaihdettu.
