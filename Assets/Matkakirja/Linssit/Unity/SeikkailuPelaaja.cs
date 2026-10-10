@@ -574,6 +574,7 @@ namespace Matkakirja.Natiivi
                 if (float.IsNaN(silmaMaailma)) { silmaMaailma = tavoite; silmaNopeus = 0f; }
                 silmaMaailma = Mathf.SmoothDamp(silmaMaailma, tavoite, ref silmaNopeus, PortaatViive, Mathf.Infinity, dt);
                 silmaMaailma = Mathf.Clamp(silmaMaailma, tavoite - PortaatMaxJalki, tavoite + PortaatMaxJalki);
+                silmaMaailma = KattoRaja(silmaMaailma);
                 olka.localPosition = new Vector3(0f, silmaMaailma - transform.position.y, 0f);
                 AsetaTakakuva(olka.position, olka.rotation);   // paluu takakuvasta silmiin
             }
@@ -586,6 +587,26 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA seikkailu: putosi, palautus {paluu}");
                 cc.enabled = false; transform.position = paluu; cc.enabled = true; pysty = 0;
             }
+        }
+
+        // KATTORAJA (A2, PT:n yösuunnitelma 11.10.; botti-kävely b044/b059 lähes mustat portaissa): alas mentäessä jäljessä tuleva silmä
+        // (≤ PortaatMaxJalki) tai matala holvi vei kameran katon sisään. Pallo (KattoVaraM) pyyhkäistään kapselin keskeltä silmään;
+        // osuma kiinteään törmäykseen (ei esineitä eikä pelaajaa) laskee silmän sen alle.
+        public const float KattoVaraM = 0.12f;
+        readonly RaycastHit[] kattoOsumat = new RaycastHit[8];
+        float KattoRaja(float silmaY)
+        {
+            var pp = transform.position; float alaY = pp.y + 1.0f;
+            if (silmaY <= alaY) return silmaY;
+            int n = Physics.SphereCastNonAlloc(new Vector3(pp.x, alaY, pp.z), KattoVaraM, Vector3.up, kattoOsumat, silmaY - alaY, 1 << gameObject.layer, QueryTriggerInteraction.Ignore);
+            float raja = silmaY;
+            for (int i = 0; i < n; i++)
+            {
+                var o = kattoOsumat[i];
+                if (o.distance <= 0f || o.collider == cc || o.collider.attachedRigidbody != null || o.collider.CompareTag("Player")) continue;
+                raja = Mathf.Min(raja, alaY + o.distance);
+            }
+            return raja;
         }
 
         /// <summary>Leike liiketavasta ja vauhdista: idle / kyykky_idle seistessä, kavely / juoksu / hiipiminen liikkeessä; toistonopeus =
