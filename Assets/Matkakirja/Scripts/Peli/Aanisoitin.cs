@@ -144,6 +144,10 @@ namespace Matkakirja.Natiivi
                 // Web js/linssit/satelliitti-aani.js ASTRONAUTIN_HUMINA: 84 s, −30,48 LUFS, voima 0,45, nousu 2 s.
                 ["astro-humina"] = ("https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera/20260916/"
                                     + "93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b.mp3", 0.45, 2000),
+                // Taidemuseon saliääni (omistaja 10.10. 22.0x äänisivulla: "Sali: Belgradin nykytaiteen museo, kunhan soittaa tarpeeksi
+                // hiljaisella"; LS2, Soundly SND84353, 60 s saumaton silmukka −23 LUFS). Hiljainen tausta kertojan, askelten ja sorinan alla:
+                // voima 0,22 (−13 dB) → noin −36 LUFS ennen ryhmäkerrointa; taso mitattu simutallenteesta (aani mittaa / kaappaa).
+                ["museo-sali"] = ("https://media.matkakirja.app/aanet/taidemuseo-soundly-v1/sali-belgrad.mp3", 0.22, 2500),
             };
 
         /// <summary>Linssin taustaääni tunnuksella; null = pois. Tuntematon tunnus kirjataan eikä soi.</summary>
@@ -161,7 +165,7 @@ namespace Matkakirja.Natiivi
             // eksplisiittisesti (Aanimikseri.Nyt päivittyy vasta seuraavassa ruudussa linssin avautuessa). Taso luetaan avauksessa.
             var mik = Matkakirja.Linssit.Aanet.Aanimikseri.Yhteinen;
             string kon = tunnus == Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Humina ? "iss" : "linssit";
-            if (!mik.Rekisteroity(tunnus)) mik.Rekisteroi(kon, "maisema", tunnus, kon == "iss" ? "Astronautin humina" : tunnus, tunnus);
+            if (!mik.Rekisteroity(tunnus)) mik.Rekisteroi(kon, "maisema", tunnus, kon == "iss" ? "Astronautin humina" : tunnus == "museo-sali" ? "Taidemuseon sali" : tunnus, tunnus);
             s.Tila.LinssiTausta(t.Url, t.Voima * mik.AaniKerroin(kon, tunnus), t.NousuMs);
         }
 

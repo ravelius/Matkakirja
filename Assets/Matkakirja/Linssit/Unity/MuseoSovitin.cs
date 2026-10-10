@@ -44,6 +44,8 @@ namespace Matkakirja.Natiivi
         public static bool Astc = true;
         /// <summary>LR:n sali-GLB väliaikaishallin tilalle (KuvaJuuri + MuseoRakennus.SaliKansio); false = väliaikaishalli ("museo sali halli").</summary>
         public static bool SaliGlb = true;
+        /// <summary>Salien taustaääni (Aanisoitin.LinssiTaustat; omistaja 10.10. 22.0x: Belgradin nykytaiteen museo, hiljaisena).</summary>
+        public const string SaliAani = "museo-sali";
         /// <summary>Sali-GLB:n taso: 0 = 13 k kolmiota + atlas 4096² (22 Mt), 1 = 7,8 k + 2048² (5,6 Mt); −1 = laitteen muistin mukaan.</summary>
         public static int SaliLod = -1;
         static int SaliTaso => SaliLod >= 0 ? SaliLod : SystemInfo.systemMemorySize >= 7000 ? 0 : 1;
@@ -112,7 +114,7 @@ namespace Matkakirja.Natiivi
             if (kierto != null) SyoteLukko.Esta(this);
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
-            y.Taustaaani(null);
+            y.Taustaaani(SaliAani);
 
             var pallonKamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             nayttamo = MuseoNayttamo.Luo(pallonKamera);
