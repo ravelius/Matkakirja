@@ -1,0 +1,224 @@
+# Karttakohteiden korostukset (perus|näkyvä) sisältöpaketista v633: moduulit/js/packs/{fokuskohteet,maastokohteet,hahmotelma}-<iso>.json
+# exportit.<VIENTI>_<ISO>[].korostukset (kuten NostoSisalto); kohta = kohde:<id> (PuluValmiitLataus.Kohta). Nostokortin testiin.
+kohde:thessaloniki	GRC	Bysantti
+kohde:patras	GRC	ruutukaava
+kohde:ioannina	GRC	kreikkalainen valistus
+kohde:nafplio	GRC	Ioannis Kapodistrias
+kohde:iraklion	GRC	Knossos
+kohde:iraklion	GRC	minolainen kulttuuri
+kohde:olympos	GRC	Mytikas
+kohde:parnassos	GRC	bauksiitti
+kohde:taygetos	GRC	Pentadaktylos
+kohde:pindos	GRC	Dinaariset Alpit
+kohde:smolikas	GRC	ofioliitti
+kohde:smolikas	GRC	Drakolímni
+kohde:psiloritis	GRC	Idan luola
+kohde:egeanmeri	GRC	Minotauros
+kohde:joonianmeri	GRC	Kalypson syvänne
+kohde:kreetanmeri	GRC	Libyanmeri
+kohde:traakianmeri	GRC	Dardanellit
+kohde:aliakmonas	GRC	Plinius vanhempi
+kohde:aliakmonas	GRC	Thermaïkoksen lahti
+kohde:strymonas	GRC	Amfipoli
+kohde:strymonas	GRC	Kerkinin tekojärvi
+kohde:evros	GRC	Orfeus
+kohde:evros	GRC	Adrianopoli
+kohde:korintin-kanava	GRC	Periandros
+kohde:korintin-kanava	GRC	vetotie
+kohde:santorini	GRC	Akrotiri
+kohde:santorini	GRC	kaldera
+kohde:delfoi	GRC	omfalos
+kohde:delfoi	GRC	Pythia
+kohde:akropolis	GRC	Parthenon
+kohde:akropolis-museo	GRC	Parthenon
+kohde:olympia	GRC	stadion
+kohde:kalamata	GRC	Kalamon
+kohde:ermoupoli	GRC	Pireus
+kohde:epidauros	GRC	Asklepios
+kohde:marathon	GRC	fenkoli
+kohde:antikythera	GRC	analogiatietokone
+kohde:rodoksen-kolossi	GRC	Helios
+kohde:rodoksen-kolossi	GRC	Delfoin oraakkeli
+kohde:knossos	GRC	minolainen
+kohde:knossos	GRC	pithos
+kohde:antiikin-agora	GRC	agora
+kohde:antiikin-agora	GRC	Hefaistoksen temppeli
+kohde:olympieion	GRC	korinttilainen
+kohde:olympieion	GRC	cella
+kohde:hahmotelma-vikos	GRC	Vikosin rotko
+kohde:hahmotelma-samaria	GRC	kri-kri
+kohde:hahmotelma-pelion	GRC	Kheironin
+kohde:hahmotelma-prespa	GRC	Pieni Prespa
+kohde:hahmotelma-kerkini	GRC	Ramsar
+kohde:hahmotelma-navagio	GRC	Navagio
+kohde:hahmotelma-milos	GRC	Venus de Milo
+kohde:hahmotelma-vergina	GRC	Aigai
+kohde:hahmotelma-pella	GRC	Aleksanteri Suuri
+kohde:hahmotelma-philippi	GRC	Paavali
+kohde:hahmotelma-bassae	GRC	Apollon Epikurioksen
+kohde:hahmotelma-delos	GRC	Apollon
+kohde:hahmotelma-monemvasia	GRC	Malvasia
+kohde:hahmotelma-sounion	GRC	Perikleen
+kohde:hahmotelma-samothrace	GRC	Nike
+kohde:hahmotelma-meteora	GRC	Suuri Meteoron
+kohde:hahmotelma-athos	GRC	munkkiyhteisö
+kohde:hahmotelma-metsovo	GRC	Metsovone
+kohde:hahmotelma-korfu	GRC	Kerkyra
+kohde:hahmotelma-kastoria	GRC	turkis
+kohde:hahmotelma-naoussa	GRC	viini
+kohde:hahmotelma-lavrio	GRC	hopea
+kohde:hahmotelma-kalavryta	GRC	hammasraide
+kohde:hahmotelma-chios	GRC	mastiksi
+kohde:hahmotelma-zagori	GRC	kivisilta
+kohde:hahmotelma-arta	GRC	kansanballadi
+kohde:hahmotelma-thermopylae	GRC	Leonidas
+kohde:hahmotelma-missolonghi	GRC	Byron
+kohde:hahmotelma-navarino	GRC	Navarinon taistelu
+kohde:hahmotelma-heraion	GRC	Herodotos
+kohde:hahmotelma-heraion	GRC	Polykrates
+kohde:hahmotelma-korintin-apollon-temppeli	GRC	Lucius Mummius
+kohde:hahmotelma-korintin-apollon-temppeli	GRC	doorilainen
+kohde:hahmotelma-deinokrateen-vuori	GRC	Deinokrates
+kohde:hahmotelma-eleusiin-mysteerit	GRC	Telesterion
+kohde:hahmotelma-nekromanteion	GRC	Akheron
+kohde:hahmotelma-keros	GRC	Keroksen aarre
+kohde:hahmotelma-abdera	GRC	Demokritos
+kohde:hahmotelma-melissani	GRC	katavothres
+kohde:hahmotelma-gla	GRC	Kopaisjärvestä
+kohde:hahmotelma-kastan-kumpu	GRC	Hefaistionille
+kohde:hahmotelma-gortynin-laki	GRC	vuororiveittäin
+kohde:hahmotelma-chlemoutsi	GRC	Akhaian ruhtinaskunnan
+kohde:hahmotelma-dispilio	GRC	paalukylän
+kohde:hahmotelma-pavlopetri	GRC	Elafonisoksen
+kohde:hahmotelma-poliokhni	GRC	Troijan
+kohde:hahmotelma-sporadien-meripuisto	GRC	välimerenmunkkihylkeen
+kohde:zugspitze	DEU	jäätikkö
+kohde:watzmann	DEU	Berchtesgadenin Alpit
+kohde:feldberg	DEU	Schwarzwald
+kohde:grosser-arber	DEU	Baijerin metsä
+kohde:brocken	DEU	Brockenin haamu
+kohde:brocken	DEU	Faust
+kohde:pohjanmeri	DEU	mannerjalusta
+kohde:itameri	DEU	murtovesi
+kohde:bodensee	DEU	Seerhein
+kohde:rein	DEU	Bodenjärvi
+kohde:elbe	DEU	Vltava
+kohde:tonava	DEU	Donaueschingen
+kohde:oder	DEU	Szczecinin laguuni
+kohde:weser	DEU	Werra
+kohde:brandenburgin-portti	DEU	kvadriga
+kohde:brandenburgin-portti	DEU	Unter den Linden
+kohde:sanssouci	DEU	rokokoo
+kohde:hampuri	DEU	Hansaliitto
+kohde:hampuri	DEU	Elbe
+kohde:kolnin-tuomiokirkko	DEU	gotiikka
+kohde:kolnin-tuomiokirkko	DEU	reliikki
+kohde:munchen	DEU	Wittelsbach
+kohde:munchen	DEU	Isar
+kohde:dresden	DEU	Elbe
+kohde:dresden	DEU	Lusatia
+kohde:wartburg	DEU	Uusi testamentti
+kohde:ruhrin-alue	DEU	Hellweg
+kohde:ruhrin-alue	DEU	monikeskuksinen
+kohde:schwerinin-linna	DEU	Chambord
+kohde:bambergin-vanhakaupunki	DEU	Vanha raatihuone
+kohde:naumburgin-tuomiokirkko	DEU	lahjoittajahahmoa
+kohde:bremenin-raatihuone	DEU	Roland
+kohde:hahmotelma-saechsische-schweiz	DEU	Königstein
+kohde:hahmotelma-ruegen	DEU	liitukallio
+kohde:hahmotelma-sylt	DEU	Hindenburgdamm
+kohde:hahmotelma-helgoland	DEU	Deutschlandlied
+kohde:hahmotelma-lueneburger-heide	DEU	kulttuurimaisema
+kohde:hahmotelma-spreewald	DEU	sorbien
+kohde:hahmotelma-chiemsee	DEU	Herrenchiemsee
+kohde:hahmotelma-hermannsdenkmal	DEU	Arminius
+kohde:hahmotelma-externsteine	DEU	Irminsul
+kohde:hahmotelma-saalburg	DEU	Limes
+kohde:hahmotelma-hohenzollern	DEU	Hohenzollern-suvun
+kohde:hahmotelma-quedlinburg	DEU	Henrik Linnustajan
+kohde:hahmotelma-maulbronn	DEU	sisterssiläisluostari
+kohde:hahmotelma-rothenburg	DEU	Romanttiseen tiehen
+kohde:hahmotelma-bayreuth	DEU	Nibelungin sormuksen
+kohde:hahmotelma-ruedesheim	DEU	Rheingaun
+kohde:hahmotelma-bernkastel	DEU	Spitzhäuschen
+kohde:hahmotelma-triberg	DEU	vesiputoukset
+kohde:hahmotelma-hameln	DEU	pillipiiparin
+kohde:hahmotelma-oberammergau	DEU	Passionnäytelmä
+kohde:hahmotelma-voelklingen	DEU	masuuni
+kohde:hahmotelma-freiberg	DEU	Bergakademie
+kohde:hahmotelma-meissen	DEU	Albrechtsburgin
+kohde:hahmotelma-jena	DEU	Carl Zeiss
+kohde:hahmotelma-muengsten	DEU	Kaiser-Wilhelm-Brücke
+kohde:hahmotelma-hambach	DEU	Hambachin juhla
+kohde:hahmotelma-bad-ems	DEU	Emsin sähke
+kohde:hahmotelma-rammelsberg	DEU	hopea
+kohde:hahmotelma-ansbach	DEU	Kaspar Hauser
+kohde:hahmotelma-krautturm	DEU	Pfalzin perimyssota
+kohde:hahmotelma-krautturm	DEU	gesprengter Turm
+kohde:vesuvius	ITA	köysirata
+kohde:pompeji	ITA	muotti
+kohde:pompeji	ITA	insula
+kohde:napoli	ITA	Neápolis
+kohde:napoli	ITA	Parthenope
+kohde:pisa	ITA	kellotorni
+kohde:capri	ITA	Villa Jovis
+kohde:capri	ITA	Grotta Azzurra
+kohde:cinque-terre	ITA	terassi
+kohde:matera	ITA	Sassit
+kohde:matera	ITA	ylätasanko
+kohde:dolomiitit	ITA	Monti Pallidi
+kohde:dolomiitit	ITA	karbonaattikallio
+kohde:etna	ITA	tuhka
+kohde:milano	ITA	Mediolanum
+kohde:milano	ITA	herttuakunta
+kohde:torino	ITA	Savoiji
+kohde:torino	ITA	synagoga
+kohde:comojarvi	ITA	jääkausi
+kohde:comojarvi	ITA	silkkiteollisuus
+kohde:po	ITA	Monviso
+kohde:po	ITA	penger
+kohde:sardinia	ITA	nuraghe
+kohde:sardinia	ITA	mikromanner
+kohde:forum-romanum	ITA	Curia Julia
+kohde:forum-romanum	ITA	Basilica Aemilia
+kohde:colosseum	ITA	velarium
+kohde:colosseum	ITA	hypogeum
+kohde:adrianmeri	ITA	Otranton salmi
+kohde:tyrrhenanmeri	ITA	etruskit
+kohde:ligurianmeri	ITA	liguurit
+kohde:messinansalmi	ITA	Kharybdis
+kohde:aquileia	ITA	mosaiikkilattia
+kohde:amalfin-rannikko	ITA	sitruunoita
+kohde:tropea	ITA	Santa Maria dell'Isola
+kohde:gerace	ITA	tuomiokirkko
+kohde:saepinum	ITA	Porta Bojano
+kohde:termolin-linna	ITA	Castello Svevo
+kohde:hahmotelma-monviso	ITA	jadeiitti
+kohde:hahmotelma-gran-sasso	ITA	jäätikkö
+kohde:hahmotelma-gran-paradiso	ITA	Granta Parey
+kohde:hahmotelma-garda	ITA	Benacus
+kohde:hahmotelma-stromboli	ITA	Sciara del Fuoco
+kohde:hahmotelma-elba	ITA	Napoleon
+kohde:hahmotelma-villa-adriana	ITA	nymfaeumi
+kohde:hahmotelma-paestum	ITA	doorilaista
+kohde:hahmotelma-agrigento	ITA	Concordia
+kohde:hahmotelma-castel-del-monte	ITA	kahdeksankulmaisesta
+kohde:hahmotelma-tarquinia	ITA	etruskien
+kohde:hahmotelma-monte-cassino	ITA	Benedictus
+kohde:hahmotelma-chianti	ITA	Sangiovese
+kohde:hahmotelma-val-d-orcia	ITA	Pienza
+kohde:hahmotelma-alba	ITA	tryffeli
+kohde:hahmotelma-valdobbiadene	ITA	Prosecco
+kohde:hahmotelma-assisi	ITA	Giotto
+kohde:hahmotelma-urbino	ITA	Palazzo Ducale
+kohde:hahmotelma-cremona	ITA	Stradivari
+kohde:hahmotelma-portofino	ITA	Portus Delphini
+kohde:hahmotelma-carrara	ITA	marmori
+kohde:hahmotelma-larderello	ITA	boorihappo
+kohde:hahmotelma-brennero	ITA	Brennerin rautatie
+kohde:hahmotelma-stelvio	ITA	Carlo Donegani
+kohde:hahmotelma-ivrea	ITA	Appelsiinitaistelu
+kohde:hahmotelma-canossa	ITA	investituuririidan
+kohde:hahmotelma-cannae	ITA	Hannibal
+kohde:hahmotelma-solferino	ITA	Henry Dunant
+kohde:hahmotelma-teano	ITA	Garibaldi
