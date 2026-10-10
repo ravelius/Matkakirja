@@ -1,0 +1,191 @@
+================ KOHTA 21 (kohde:hahmotelma-thy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thyn kansallispuisto (kulttuuri)
+Tietoruudun teksti: Thyn kansallispuisto avattiin yleisölle 22. elokuuta 2008 Luoteis-Jyllannissa, Hanstholmin ja Agger Tangen välisellä rannikolla. Se on noin 55 kilometriä pitkä ja 244 neliökilometrin laajuinen, ja se valittiin vuonna 2007 Tanskan varsinaisen alueen ensimmäiseksi kansallispuistoksi. Maisemaa hallitsevat tuuliset rannat, dyynit ja nummet sekä istutetut havumetsät. Liikkuva hiekka vaivasi asukkaita vuosisatoja, ja vasta noin vuonna 1800 alettiin järjestelmällisesti istuttaa dyyniheinää ja havupuita sen pysäyttämiseksi; onnistuminen kesti yli sata vuotta. Puiston pohjoisosan Hanstholm Vildtreservat on Tanskan suurin yhtenäinen hiekkanummi.
+
+### 21.1
+KYSYMYS: Miksi Thyn dyynialueille alettiin istuttaa heinää ja puita noin vuonna 1800?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thyn kansallispuisto (kulttuuri)
+Tietoruudun teksti: Thyn kansallispuisto avattiin yleisölle 22. elokuuta 2008 Luoteis-Jyllannissa, Hanstholmin ja Agger Tangen välisellä rannikolla. Se on noin 55 kilometriä pitkä ja 244 neliökilometrin laajuinen, ja se valittiin vuonna 2007 Tanskan varsinaisen alueen ensimmäiseksi kansallispuistoksi. Maisemaa hallitsevat tuuliset rannat, dyynit ja nummet sekä istutetut havumetsät. Liikkuva hiekka vaivasi asukkaita vuosisatoja, ja vasta noin vuonna 1800 alettiin järjestelmällisesti istuttaa dyyniheinää ja havupuita sen pysäyttämiseksi; onnistuminen kesti yli sata vuotta. Puiston pohjoisosan Hanstholm Vildtreservat on Tanskan suurin yhtenäinen hiekkanummi.
+
+### 21.2
+KYSYMYS: Mikä tekee Hanstholmin riistansuojelualueesta erityisen Tanskassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Thyn kansallispuisto (kulttuuri)
+Tietoruudun teksti: Thyn kansallispuisto avattiin yleisölle 22. elokuuta 2008 Luoteis-Jyllannissa, Hanstholmin ja Agger Tangen välisellä rannikolla. Se on noin 55 kilometriä pitkä ja 244 neliökilometrin laajuinen, ja se valittiin vuonna 2007 Tanskan varsinaisen alueen ensimmäiseksi kansallispuistoksi. Maisemaa hallitsevat tuuliset rannat, dyynit ja nummet sekä istutetut havumetsät. Liikkuva hiekka vaivasi asukkaita vuosisatoja, ja vasta noin vuonna 1800 alettiin järjestelmällisesti istuttaa dyyniheinää ja havupuita sen pysäyttämiseksi; onnistuminen kesti yli sata vuotta. Puiston pohjoisosan Hanstholm Vildtreservat on Tanskan suurin yhtenäinen hiekkanummi.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-mols-bjerge) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mols Bjerge (luonto · vuori)
+Tietoruudun teksti: Mols Bjerge on Djurslandin niemimaalla Keski-Jyllannissa sijaitseva kansallispuisto, jonka kuningatar Margrethe II vihki 29. elokuuta 2009; se oli Tanskan toinen kansallispuisto. Puisto kattaa 180 neliökilometriä, ja sen kumpuileva, monimuotoinen maasto syntyi viime jääkauden lopulla. Molsin kukkulat nousevat enimmillään 137 metriin, ja alueelta on löydetty yli puolet Tanskan luonnonvaraisista kasvilajeista. Maisemassa näkyy myös menneisyyttä: kivikauden hautakumpuja ja dolmeneja sekä 1300-luvun alussa rakennetun Kalø-linnan rauniot pienellä saarella. Ørnbjerg Mølle on puiston ainoa toimiva vesimylly; nykyiset rakennukset ovat vuodelta 1833, mutta paikalla on ollut mylly jo 1500-luvulta.
+
+### 22.1
+KYSYMYS: Miksi Molsin maasto on niin kumpuilevaa ja monimuotoista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mols Bjerge (luonto · vuori)
+Tietoruudun teksti: Mols Bjerge on Djurslandin niemimaalla Keski-Jyllannissa sijaitseva kansallispuisto, jonka kuningatar Margrethe II vihki 29. elokuuta 2009; se oli Tanskan toinen kansallispuisto. Puisto kattaa 180 neliökilometriä, ja sen kumpuileva, monimuotoinen maasto syntyi viime jääkauden lopulla. Molsin kukkulat nousevat enimmillään 137 metriin, ja alueelta on löydetty yli puolet Tanskan luonnonvaraisista kasvilajeista. Maisemassa näkyy myös menneisyyttä: kivikauden hautakumpuja ja dolmeneja sekä 1300-luvun alussa rakennetun Kalø-linnan rauniot pienellä saarella. Ørnbjerg Mølle on puiston ainoa toimiva vesimylly; nykyiset rakennukset ovat vuodelta 1833, mutta paikalla on ollut mylly jo 1500-luvulta.
+
+### 22.2
+KYSYMYS: Mitä muinaisia jälkiä Molsin maastosta löytyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mols Bjerge (luonto · vuori)
+Tietoruudun teksti: Mols Bjerge on Djurslandin niemimaalla Keski-Jyllannissa sijaitseva kansallispuisto, jonka kuningatar Margrethe II vihki 29. elokuuta 2009; se oli Tanskan toinen kansallispuisto. Puisto kattaa 180 neliökilometriä, ja sen kumpuileva, monimuotoinen maasto syntyi viime jääkauden lopulla. Molsin kukkulat nousevat enimmillään 137 metriin, ja alueelta on löydetty yli puolet Tanskan luonnonvaraisista kasvilajeista. Maisemassa näkyy myös menneisyyttä: kivikauden hautakumpuja ja dolmeneja sekä 1300-luvun alussa rakennetun Kalø-linnan rauniot pienellä saarella. Ørnbjerg Mølle on puiston ainoa toimiva vesimylly; nykyiset rakennukset ovat vuodelta 1833, mutta paikalla on ollut mylly jo 1500-luvulta.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-himmelbjerget) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+
+### 23.1
+KYSYMYS: Miksi Himmelbjerget ei enää olekaan Tanskan korkein kohta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Vuohi, jota ei ole missään muualla] nykyään — Kreetan vuorilla elää kri-kri, kesyvuohta pienempi mutta värikkäämpi eläin, jonka sarvet kaartuvat taakse kuin kaksi sapelia. Sitä tavataan vain Kreetalla ja muutamalla asumattomalla pikkusaarella sen edustalla. Vuonna 1960 kri-krejä oli jäljellä alle kaksisataa, ja se oli yksi syy siihen, että Samarian rotkosta tehtiin kansallispuisto vuonna 1962. Nyt niitä on noin kaksituhatta. Lefká Óri -vuoristossa kri-kri laiduntaa vain yöllä, joten vaeltaja näkee sen harvoin. Molekyylitutkimukset paljastivat yllätyksen: kri-kri ei olekaan alkuperäinen villivuohi vaan villiintynyt kesyvuohi.
+
+### 23.2
+KYSYMYS: Mitä ihmiset tekivät kukkulalla 1800-luvulla ja miksi sinne rakennettiin torni?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Himmelbjerget (luonto · vuori)
+Tietoruudun teksti: Himmelbjerget on 147 metriä korkea kukkula Ryn ja Silkeborgin välissä Søhøjlandetin järviseudulla. Sitä pidettiin Tanskan korkeimpana luonnonpisteenä vuoteen 1847, jolloin Ejer Bavnehøj mitattiin korkeammaksi; vuoden 2005 tutkimuksen jälkeen korkeimmaksi todettiin Møllehøj (170,86 m). Kukkulan rinne on silti tanskalaisittain vaikuttava, sillä Julsø-järven pinnasta huipulle on 121 metriä. Yli kaksisataa vuotta ihmiset ovat kokoontuneet täällä ihailemaan maisemia ja juhlimaan tanskalaisen kansakunnan syntyä. Huipulle rakennettiin vuonna 1875 punatiilinen torni kuningas Frederik VII:n kunniaksi, koska hän antoi maalle sen ensimmäisen perustuslain vuonna 1849.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-laeso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+
+### 24.1
+KYSYMYS: Miksi Læsøn suolateollisuus lopulta loppui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+
+### 24.2
+KYSYMYS: Miksi saaren talojen katot tehtiin merikasveista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Læsø (luonto · saari)
+Tietoruudun teksti: Læsø on Kattegatin suurin saari, noin 19 kilometrin päässä Jyllannin koillisrannikosta. Nimi juontuu muinaisnorjan sanasta Hlésey eli Hlérin saari, ja Hlér on norjalaisessa mytologiassa meren henkilöitymänä esiintyvä jättiläinen. Keskiajalla saari tunnettiin suolateollisuudestaan: pohjavesi voi olla yli 15-prosenttisen suolaista, ja kuumina kesinä suola väkevöityi luontaisesti tasaisilla suoniityillä. Lopullinen keittäminen tehtiin sadoissa suolauuneissa, jotka söivät valtavasti puuta. Lopulta saari jäi ilman metsää, hiekkamyrskyt hautasivat kyliä ja suolan otto kiellettiin. Kattomateriaalin puutteen vuoksi taloja alettiin 1600-luvulta lähtien peittää meriajokkaalla.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-bornholm) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Historia: Peurannahat lähtivät Japaniin] 1624–1662 — Hollantilainen Itä-Intian kauppakomppania asettui Formosalle vuonna 1624 käydäkseen kauppaa Kiinan ja Japanin kanssa. Pian yhtiö huomasi, mikä saarella oli arvokkainta: läntisillä tasangoilla laidunsi valtavia formosanpeurojen laumoja, ja niiden sitkeästä nahasta japanilaiset tekivät samuraiden haarniskoja. Vuonna 1638 saarelta vietiin Japaniin 151 400 peurannahkaa. Toinen suuri vientitavara oli sokeri: vuonna 1658 Taiwan tuotti 1 730 000 catty-painoa, josta 800 000 purjehti Persiaan ja 600 000 Japaniin. Kolmas oli rikki, jota kerättiin Keelungin ja Tamsuin seudulta.
+
+### 25.1
+KYSYMYS: Miksi Bornholmia kutsutaan sekä aurinkosaareksi että kalliosaareksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+### 25.2
+KYSYMYS: Mitä saarella tapahtui vuonna 1658 ja miten se palasi Tanskalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bornholm (luonto · saari)
+Tietoruudun teksti: Bornholm on tanskalainen saari Itämerellä, muusta Tanskasta itään, Ruotsin eteläpuolella sekä Saksan ja Puolan pohjoispuolella. Sitä sanotaan aurinkosaareksi sään vuoksi ja kalliosaareksi geologian takia, sillä kallioperä on pääosin graniittia. Pohjoisessa jyrkät kalliomuodostelmat erottavat saaren muun Tanskan loivasta kumpumaastosta, ja lämmin ilmasto antaa kasvaa paikalliselle viikunalajikkeelle 'Bornholmin timantille'. Saarella on useita Tanskan pyöreistä kirkoista, ja luoteiskärjessä on Hammershusin linnanraunio, Pohjois-Euroopan suurin keskiaikainen linnoitus. Strategisen sijaintinsa vuoksi saaresta on taisteltu vuosisatoja: sitä ovat hallinneet Tanskan lisäksi Ruotsi ja Lyypekki, ja vuonna 1658 Ruotsille luovutettu saari palasi Tanskalle vuonna 1660 paikallisen kapinan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Historia: Peurannahat lähtivät Japaniin] 1624–1662 — Hollantilainen Itä-Intian kauppakomppania asettui Formosalle vuonna 1624 käydäkseen kauppaa Kiinan ja Japanin kanssa. Pian yhtiö huomasi, mikä saarella oli arvokkainta: läntisillä tasangoilla laidunsi valtavia formosanpeurojen laumoja, ja niiden sitkeästä nahasta japanilaiset tekivät samuraiden haarniskoja. Vuonna 1638 saarelta vietiin Japaniin 151 400 peurannahkaa. Toinen suuri vientitavara oli sokeri: vuonna 1658 Taiwan tuotti 1 730 000 catty-painoa, josta 800 000 purjehti Persiaan ja 600 000 Japaniin. Kolmas oli rikki, jota kerättiin Keelungin ja Tamsuin seudulta.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

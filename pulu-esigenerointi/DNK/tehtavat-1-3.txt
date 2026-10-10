@@ -1,0 +1,265 @@
+================ KOHTA 11 (kohde:tollundin-mies) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tollundin mies (historia)
+Tietoruudun teksti: Turpeennostajat Viggo ja Emil Højgaard löysivät 8. toukokuuta 1950 ruumiin turvekuopasta kaksitoista kilometriä Silkeborgista länteen; ensimmäisenä sen huomasi Viggon vaimo Grethe Højgaard. Mies oli säilynyt niin hyvin, että perhe luuli löytäneensä tuoreen murhan uhrin ja soitti poliisille.
+
+Poliisi kutsui paikalle Aarhusin yliopiston arkeologin Peter Vilhelm Globin, joka arvioi ruumiin noin kahdentuhannen vuoden ikäiseksi. Radiohiiliajoitus tarkensi kuolinajan vuosien 405 ja 380 eaa. väliin, esiroomalaiselle rautakaudelle, ja iäksi arvioitiin noin neljäkymmentä vuotta. Kaulassa oli tiukalla punottu nahkasilmukka, ja kuolinsyyksi on oikeuslääketieteellisesti todettu hirttäminen. Oliko kyseessä uhri vai rangaistus, ei tiedetä — todisteet eivät riitä kumpaankaan.
+
+Suon hapan ja hapeton vesi liuotti suuren osan luustosta mutta säilytti pehmytkudokset: sydämen, keuhkot ja maksan. Silmät ja …
+
+### 11.1
+KYSYMYS: Miksi löytäjät luulivat ruumista tuoreeksi murhan uhriksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tollundin mies (historia)
+Tietoruudun teksti: Turpeennostajat Viggo ja Emil Højgaard löysivät 8. toukokuuta 1950 ruumiin turvekuopasta kaksitoista kilometriä Silkeborgista länteen; ensimmäisenä sen huomasi Viggon vaimo Grethe Højgaard. Mies oli säilynyt niin hyvin, että perhe luuli löytäneensä tuoreen murhan uhrin ja soitti poliisille.
+
+Poliisi kutsui paikalle Aarhusin yliopiston arkeologin Peter Vilhelm Globin, joka arvioi ruumiin noin kahdentuhannen vuoden ikäiseksi. Radiohiiliajoitus tarkensi kuolinajan vuosien 405 ja 380 eaa. väliin, esiroomalaiselle rautakaudelle, ja iäksi arvioitiin noin neljäkymmentä vuotta. Kaulassa oli tiukalla punottu nahkasilmukka, ja kuolinsyyksi on oikeuslääketieteellisesti todettu hirttäminen. Oliko kyseessä uhri vai rangaistus, ei tiedetä — todisteet eivät riitä kumpaankaan.
+
+Suon hapan ja hapeton vesi liuotti suuren osan luustosta mutta säilytti pehmytkudokset: sydämen, keuhkot ja maksan. Silmät ja …
+
+### 11.2
+KYSYMYS: Mitä suo säilytti ja mitä se liuotti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tollundin mies (historia)
+Tietoruudun teksti: Turpeennostajat Viggo ja Emil Højgaard löysivät 8. toukokuuta 1950 ruumiin turvekuopasta kaksitoista kilometriä Silkeborgista länteen; ensimmäisenä sen huomasi Viggon vaimo Grethe Højgaard. Mies oli säilynyt niin hyvin, että perhe luuli löytäneensä tuoreen murhan uhrin ja soitti poliisille.
+
+Poliisi kutsui paikalle Aarhusin yliopiston arkeologin Peter Vilhelm Globin, joka arvioi ruumiin noin kahdentuhannen vuoden ikäiseksi. Radiohiiliajoitus tarkensi kuolinajan vuosien 405 ja 380 eaa. väliin, esiroomalaiselle rautakaudelle, ja iäksi arvioitiin noin neljäkymmentä vuotta. Kaulassa oli tiukalla punottu nahkasilmukka, ja kuolinsyyksi on oikeuslääketieteellisesti todettu hirttäminen. Oliko kyseessä uhri vai rangaistus, ei tiedetä — todisteet eivät riitä kumpaankaan.
+
+Suon hapan ja hapeton vesi liuotti suuren osan luustosta mutta säilytti pehmytkudokset: sydämen, keuhkot ja maksan. Silmät ja …
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:egeskov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeskovin linna (kulttuuri)
+Tietoruudun teksti: Egeskov seisoo Kværndrupin lähellä Fynin saaren eteläosassa, ja se on Tanskan parhaiten säilynyt renessanssin vesilinna. Paikka mainitaan ensimmäisen kerran 1405, ja nykyisen rakennuksen pystytti Frands Brockenhuus 1554.
+
+Rakennusaika selittää muodon. Kreivin kapina, yleinen levottomuus ja uskonpuhdistukseen johtanut sisällissota saivat useimmat Tanskan aateliset linnoittamaan kotinsa. Egeskov nousi tammipaalujen varaan pieneen järveen, jonka suurin syvyys on viisi metriä, ja alun perin sinne pääsi vain nostosilta laskettuna.
+
+Linna on kaksi pitkää rakennusta, jotka yhdistää yli metrin paksuinen kaksoismuuri. Muurin sisällä on salaportaita ja kaivo, ja ajatus oli, että puolustajat voivat luopua toisesta talosta ja jatkaa taistelua toisesta. Kahdesta pyöreästä kulmatornista pystyi ampumaan hyökkääjää sivusta, ja keskiaikaista puolustusta ovat myös tykkiaukot, kaatoreiät ja nuoliraot. Ulk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Gamelan – pronssin puhetta] Gamelan-musiikki syntyi Jaavalla, mutta löysi Balilla oman äänensä 1400-luvulla, kun Majapahit-valtakunnan sortuessa aateliset, taiteilijat ja papit pakenivat saarelle tuoden mukanaan gongit ja metallilaatat. Hovin juhlagamelaneita, gong gedeä, soitettiin jo 1400–1500-luvun kuninkaskuntien temppelijuhlissa, ja soittajat oppivat ohjelmiston korvakuulolta sukupolvi toisensa jälkeen ilman nuotteja. 1800-luvun lopulla balilaiskylissä syntyi nopeatempoisempi gong kebyar, joka räjähti suosioon Jagaragan kylän kilpailussa joulukuussa 1915 – silminnäkijöiden mukaan sidotut karjaeläimetkin repivät itsensä irti kuullessaan uuden tyylin rytmin ensi kertaa.
+
+### 12.1
+KYSYMYS: Miksi 1500-luvun aateliset linnoittivat kotinsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeskovin linna (kulttuuri)
+Tietoruudun teksti: Egeskov seisoo Kværndrupin lähellä Fynin saaren eteläosassa, ja se on Tanskan parhaiten säilynyt renessanssin vesilinna. Paikka mainitaan ensimmäisen kerran 1405, ja nykyisen rakennuksen pystytti Frands Brockenhuus 1554.
+
+Rakennusaika selittää muodon. Kreivin kapina, yleinen levottomuus ja uskonpuhdistukseen johtanut sisällissota saivat useimmat Tanskan aateliset linnoittamaan kotinsa. Egeskov nousi tammipaalujen varaan pieneen järveen, jonka suurin syvyys on viisi metriä, ja alun perin sinne pääsi vain nostosilta laskettuna.
+
+Linna on kaksi pitkää rakennusta, jotka yhdistää yli metrin paksuinen kaksoismuuri. Muurin sisällä on salaportaita ja kaivo, ja ajatus oli, että puolustajat voivat luopua toisesta talosta ja jatkaa taistelua toisesta. Kahdesta pyöreästä kulmatornista pystyi ampumaan hyökkääjää sivusta, ja keskiaikaista puolustusta ovat myös tykkiaukot, kaatoreiät ja nuoliraot. Ulk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Gamelan – pronssin puhetta] Gamelan-musiikki syntyi Jaavalla, mutta löysi Balilla oman äänensä 1400-luvulla, kun Majapahit-valtakunnan sortuessa aateliset, taiteilijat ja papit pakenivat saarelle tuoden mukanaan gongit ja metallilaatat. Hovin juhlagamelaneita, gong gedeä, soitettiin jo 1400–1500-luvun kuninkaskuntien temppelijuhlissa, ja soittajat oppivat ohjelmiston korvakuulolta sukupolvi toisensa jälkeen ilman nuotteja. 1800-luvun lopulla balilaiskylissä syntyi nopeatempoisempi gong kebyar, joka räjähti suosioon Jagaragan kylän kilpailussa joulukuussa 1915 – silminnäkijöiden mukaan sidotut karjaeläimetkin repivät itsensä irti kuullessaan uuden tyylin rytmin ensi kertaa.
+
+### 12.2
+KYSYMYS: Mistä linnan nimi kertoo?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Egeskovin linna (kulttuuri)
+Tietoruudun teksti: Egeskov seisoo Kværndrupin lähellä Fynin saaren eteläosassa, ja se on Tanskan parhaiten säilynyt renessanssin vesilinna. Paikka mainitaan ensimmäisen kerran 1405, ja nykyisen rakennuksen pystytti Frands Brockenhuus 1554.
+
+Rakennusaika selittää muodon. Kreivin kapina, yleinen levottomuus ja uskonpuhdistukseen johtanut sisällissota saivat useimmat Tanskan aateliset linnoittamaan kotinsa. Egeskov nousi tammipaalujen varaan pieneen järveen, jonka suurin syvyys on viisi metriä, ja alun perin sinne pääsi vain nostosilta laskettuna.
+
+Linna on kaksi pitkää rakennusta, jotka yhdistää yli metrin paksuinen kaksoismuuri. Muurin sisällä on salaportaita ja kaivo, ja ajatus oli, että puolustajat voivat luopua toisesta talosta ja jatkaa taistelua toisesta. Kahdesta pyöreästä kulmatornista pystyi ampumaan hyökkääjää sivusta, ja keskiaikaista puolustusta ovat myös tykkiaukot, kaatoreiät ja nuoliraot. Ulk…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:mons-klint) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møns Klint (luonto · vuori)
+Tietoruudun teksti: Møns Klint on kuuden kilometrin mittainen liitu- ja kalkkikivijyrkänne Mønin saaren itärannikolla Itämeren äärellä. Osa kallioista putoaa suoraan sata kaksikymmentä metriä mereen. Korkein niistä on Dronningestolen, joka kohoaa 128 metriä merenpinnan yläpuolelle.
+
+Jyrkänteen takana on metsää, laitumia, lampia ja jyrkkiä kukkuloita. Yksi niistä on Aborrebjerg, joka 142 metrillään on Tanskan korkeimpia kohtia. Kalliot ja niiden viereinen puistoalue on suojeltu luonnonsuojelualueena.
+
+Kävijöitä on noin 250 000 vuodessa. Alueella on selvästi merkityt reitit kävelijöille, ratsastajille ja pyöräilijöille, ja jyrkänteen harjaa myötäilevältä polulta pääsee useassa kohdassa portaita alas rantaan. Kallionreunan tuntumassa avattiin 29. toukokuuta 2007 GeoCenter Møns Klint, jonka piirsi kansainvälisen suunnittelukilpailun voittanut arkkitehtitoimisto PLH Architects ja jonka avasi kuningatar Margaree…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+
+### 13.1
+KYSYMYS: Kuinka korkealle jyrkänne nousee merestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møns Klint (luonto · vuori)
+Tietoruudun teksti: Møns Klint on kuuden kilometrin mittainen liitu- ja kalkkikivijyrkänne Mønin saaren itärannikolla Itämeren äärellä. Osa kallioista putoaa suoraan sata kaksikymmentä metriä mereen. Korkein niistä on Dronningestolen, joka kohoaa 128 metriä merenpinnan yläpuolelle.
+
+Jyrkänteen takana on metsää, laitumia, lampia ja jyrkkiä kukkuloita. Yksi niistä on Aborrebjerg, joka 142 metrillään on Tanskan korkeimpia kohtia. Kalliot ja niiden viereinen puistoalue on suojeltu luonnonsuojelualueena.
+
+Kävijöitä on noin 250 000 vuodessa. Alueella on selvästi merkityt reitit kävelijöille, ratsastajille ja pyöräilijöille, ja jyrkänteen harjaa myötäilevältä polulta pääsee useassa kohdassa portaita alas rantaan. Kallionreunan tuntumassa avattiin 29. toukokuuta 2007 GeoCenter Møns Klint, jonka piirsi kansainvälisen suunnittelukilpailun voittanut arkkitehtitoimisto PLH Architects ja jonka avasi kuningatar Margaree…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Luonto: Jyrkänne Maltan katolla] nykyään — Maltan länsirannikolla Dinglin kylä seisoo tasangolla noin 230 metrin korkeudessa, ja aivan sen vieressä jyrkänne pudottaa maiseman mereen. Maltan korkein kohta, Ta' Dmejrek, nousee 253 metriin. Ritarikunnan aikana Dinglin seutua pidettiin turvallisena merirosvoilta, koska jyrkänteiden takia rantaan oli mahdotonta nousta. Merellä näkyy pieni asumaton Filfla-saari. Kylän nimen uskotaan tulevan englantilaisesta ritarista sir Thomas Dingleystä, jonka omistuksessa oli suuri osa seudun maista.
+
+### 13.2
+KYSYMYS: Milloin kalliot pääsivät maailmanperintöluetteloon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møns Klint (luonto · vuori)
+Tietoruudun teksti: Møns Klint on kuuden kilometrin mittainen liitu- ja kalkkikivijyrkänne Mønin saaren itärannikolla Itämeren äärellä. Osa kallioista putoaa suoraan sata kaksikymmentä metriä mereen. Korkein niistä on Dronningestolen, joka kohoaa 128 metriä merenpinnan yläpuolelle.
+
+Jyrkänteen takana on metsää, laitumia, lampia ja jyrkkiä kukkuloita. Yksi niistä on Aborrebjerg, joka 142 metrillään on Tanskan korkeimpia kohtia. Kalliot ja niiden viereinen puistoalue on suojeltu luonnonsuojelualueena.
+
+Kävijöitä on noin 250 000 vuodessa. Alueella on selvästi merkityt reitit kävelijöille, ratsastajille ja pyöräilijöille, ja jyrkänteen harjaa myötäilevältä polulta pääsee useassa kohdassa portaita alas rantaan. Kallionreunan tuntumassa avattiin 29. toukokuuta 2007 GeoCenter Møns Klint, jonka piirsi kansainvälisen suunnittelukilpailun voittanut arkkitehtitoimisto PLH Architects ja jonka avasi kuningatar Margaree…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Pikku-Sveitsin kalliot] nykyään — Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön ulottuville.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:lindholm-hoje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindholm Høje (sana)
+Tietoruudun teksti: Lindholm Høje on viikinkiaikainen hautausmaa ja entinen asuinpaikka Aalborgin pohjoispuolella, kaupungin yllä kohoavalla kummulla. Eteläinen, alempi osa on ajalta 1000–1050 jaa., mutta pohjoinen ja ylempi osa on paljon vanhempi: se ulottuu 400-luvulle pohjoismaiseen rautakauteen. Ensimmäinen suuri kaivaus alkoi 1952 ja kattoi lopulta 589 hautaa noin seitsemästäsadasta; pieniä kaivauksia oli tehty jo 1889. Kiviä oli viety vuosisatojen ajan, ja 1800-luvulla niitä rikottiin tienrakennukseen.
+
+Kylä sijaitsi tärkeässä paikassa: Limfjordin, Jyllannin poikki kulkevan vesireitin, ylityskohdassa. Viikinkiaikana salmen yli pääsi vain tästä tai paljon lännempää Aggersundista, koska rantoja reunusti suo. Asutus hylättiin noin vuonna 1200, luultavasti siksi, että länsirannikon hiekka lähti liikkeelle laajojen metsänhakkuiden jälkeen ja tuuli kantoi sen sisämaahan. Sama hiekka peitti paikan ja säilyt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+
+### 14.1
+KYSYMYS: Mitä haudan kiviladelman muoto kertoi vainajasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindholm Høje (sana)
+Tietoruudun teksti: Lindholm Høje on viikinkiaikainen hautausmaa ja entinen asuinpaikka Aalborgin pohjoispuolella, kaupungin yllä kohoavalla kummulla. Eteläinen, alempi osa on ajalta 1000–1050 jaa., mutta pohjoinen ja ylempi osa on paljon vanhempi: se ulottuu 400-luvulle pohjoismaiseen rautakauteen. Ensimmäinen suuri kaivaus alkoi 1952 ja kattoi lopulta 589 hautaa noin seitsemästäsadasta; pieniä kaivauksia oli tehty jo 1889. Kiviä oli viety vuosisatojen ajan, ja 1800-luvulla niitä rikottiin tienrakennukseen.
+
+Kylä sijaitsi tärkeässä paikassa: Limfjordin, Jyllannin poikki kulkevan vesireitin, ylityskohdassa. Viikinkiaikana salmen yli pääsi vain tästä tai paljon lännempää Aggersundista, koska rantoja reunusti suo. Asutus hylättiin noin vuonna 1200, luultavasti siksi, että länsirannikon hiekka lähti liikkeelle laajojen metsänhakkuiden jälkeen ja tuuli kantoi sen sisämaahan. Sama hiekka peitti paikan ja säilyt…
+
+### 14.2
+KYSYMYS: Miksi kylä hylättiin noin vuonna 1200?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lindholm Høje (sana)
+Tietoruudun teksti: Lindholm Høje on viikinkiaikainen hautausmaa ja entinen asuinpaikka Aalborgin pohjoispuolella, kaupungin yllä kohoavalla kummulla. Eteläinen, alempi osa on ajalta 1000–1050 jaa., mutta pohjoinen ja ylempi osa on paljon vanhempi: se ulottuu 400-luvulle pohjoismaiseen rautakauteen. Ensimmäinen suuri kaivaus alkoi 1952 ja kattoi lopulta 589 hautaa noin seitsemästäsadasta; pieniä kaivauksia oli tehty jo 1889. Kiviä oli viety vuosisatojen ajan, ja 1800-luvulla niitä rikottiin tienrakennukseen.
+
+Kylä sijaitsi tärkeässä paikassa: Limfjordin, Jyllannin poikki kulkevan vesireitin, ylityskohdassa. Viikinkiaikana salmen yli pääsi vain tästä tai paljon lännempää Aggersundista, koska rantoja reunusti suo. Asutus hylättiin noin vuonna 1200, luultavasti siksi, että länsirannikon hiekka lähti liikkeelle laajojen metsänhakkuiden jälkeen ja tuuli kantoi sen sisämaahan. Sama hiekka peitti paikan ja säilyt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:billund) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Billund (kauppa)
+Tietoruudun teksti: Puuseppä Ole Kirk Christiansen perusti yrityksensä Billundissa 1932, kun lama oli vienyt taloustavaroiden valmistukselta pohjan. Aluksi tehtaasta tuli puuleluja. Nimi Lego on lyhennys tanskan sanoista leg godt, leiki hyvin; latinassa sama sana tarkoittaa muun muassa kokoan, valitsen ja luen — merkitykset, jotka kävivät toteen vasta kun tehdas alkoi tehdä nystyröityjä palikoita.
+
+Muovituotanto alkoi Tanskassa 1947, ja kun puutyöosasto paloi, pojan Godtfredin päätös oli lopettaa puulelut kokonaan ja keskittyä palikkajärjestelmään. Lukkiutuvien palikoiden valmistus alkoi 1949. Esikuvana olivat englantilaisen leluntekijän Hilary Pagen 1939 keksimät palikat, joita valmisti hänen yhtiönsä Kiddicraft.
+
+Vuonna 1961 Christiansen rakennutti Billundin lentokentän alun, jotta leluja saisi maailmalle. Yhtiö on pysynyt perheen omistuksessa; vuodesta 1995 sitä on hallinnoitu sijoitusyhtiö Kirkbin kaut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Palikka, joka sopii yhä vanhoihin] 1958 — Puuseppä Ole Kirk Christiansen alkoi 1930-luvun pulavuosina tehdä puisia leluja Billundin kylässä. Nimeksi tuli Lego kahdesta tanskan sanasta: leg godt, leiki hyvin. Nykyinen muovipalikka patentoitiin 1958, ja sen salaisuus on palikan sisällä olevat putket, jotka pitävät osat kiinni juuri sopivalla voimalla. Mitat ovat pysyneet samoina, joten vuonna 1958 tehty palikka sopii tänään ostettuun. Kuudesta samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa erilaista yhdistelmää.
+- [Honiara — kaupunkilehti / Rautapohjan meri: Lentokenttä, jonka takia sodittiin] Japanilaiset joukot saapuivat Guadalcanalille toukokuussa 1942. Kun amerikkalainen tiedustelulento havaitsi, että saaren pohjoisrannikolle Lunga Pointiin rakennettiin lentokenttää, tilanne muuttui kriittiseksi: kenttä uhkasi Yhdysvaltain ja Australian välisiä yhteyksiä. Yhdysvallat teki 7. elokuuta 1942 sodan ensimmäisen maihinnousunsa, ja kenttä vallattiin vähällä vaivalla — mutta sen pitäminen seuraavat kuusi kuukautta oli koko Tyynenmeren sotanäyttämön kiivaimpia kamppailuja. Laivaston rakennusjoukot viimeistelivät kentän ja nimesivät sen Henderson Fieldiksi Midwayssä kaatuneen merijalkaväen lentäjän mukaan.
+
+### 15.1
+KYSYMYS: Mistä sanasta nimi Lego tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Billund (kauppa)
+Tietoruudun teksti: Puuseppä Ole Kirk Christiansen perusti yrityksensä Billundissa 1932, kun lama oli vienyt taloustavaroiden valmistukselta pohjan. Aluksi tehtaasta tuli puuleluja. Nimi Lego on lyhennys tanskan sanoista leg godt, leiki hyvin; latinassa sama sana tarkoittaa muun muassa kokoan, valitsen ja luen — merkitykset, jotka kävivät toteen vasta kun tehdas alkoi tehdä nystyröityjä palikoita.
+
+Muovituotanto alkoi Tanskassa 1947, ja kun puutyöosasto paloi, pojan Godtfredin päätös oli lopettaa puulelut kokonaan ja keskittyä palikkajärjestelmään. Lukkiutuvien palikoiden valmistus alkoi 1949. Esikuvana olivat englantilaisen leluntekijän Hilary Pagen 1939 keksimät palikat, joita valmisti hänen yhtiönsä Kiddicraft.
+
+Vuonna 1961 Christiansen rakennutti Billundin lentokentän alun, jotta leluja saisi maailmalle. Yhtiö on pysynyt perheen omistuksessa; vuodesta 1995 sitä on hallinnoitu sijoitusyhtiö Kirkbin kaut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Palikka, joka sopii yhä vanhoihin] 1958 — Puuseppä Ole Kirk Christiansen alkoi 1930-luvun pulavuosina tehdä puisia leluja Billundin kylässä. Nimeksi tuli Lego kahdesta tanskan sanasta: leg godt, leiki hyvin. Nykyinen muovipalikka patentoitiin 1958, ja sen salaisuus on palikan sisällä olevat putket, jotka pitävät osat kiinni juuri sopivalla voimalla. Mitat ovat pysyneet samoina, joten vuonna 1958 tehty palikka sopii tänään ostettuun. Kuudesta samanlaisesta kahdeksan nystyn palikasta saa yli 900 miljoonaa erilaista yhdistelmää.
+
+### 15.2
+KYSYMYS: Miksi pikkukylään rakennettiin lentokenttä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Billund (kauppa)
+Tietoruudun teksti: Puuseppä Ole Kirk Christiansen perusti yrityksensä Billundissa 1932, kun lama oli vienyt taloustavaroiden valmistukselta pohjan. Aluksi tehtaasta tuli puuleluja. Nimi Lego on lyhennys tanskan sanoista leg godt, leiki hyvin; latinassa sama sana tarkoittaa muun muassa kokoan, valitsen ja luen — merkitykset, jotka kävivät toteen vasta kun tehdas alkoi tehdä nystyröityjä palikoita.
+
+Muovituotanto alkoi Tanskassa 1947, ja kun puutyöosasto paloi, pojan Godtfredin päätös oli lopettaa puulelut kokonaan ja keskittyä palikkajärjestelmään. Lukkiutuvien palikoiden valmistus alkoi 1949. Esikuvana olivat englantilaisen leluntekijän Hilary Pagen 1939 keksimät palikat, joita valmisti hänen yhtiönsä Kiddicraft.
+
+Vuonna 1961 Christiansen rakennutti Billundin lentokentän alun, jotta leluja saisi maailmalle. Yhtiö on pysynyt perheen omistuksessa; vuodesta 1995 sitä on hallinnoitu sijoitusyhtiö Kirkbin kaut…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Honiara — kaupunkilehti / Rautapohjan meri: Lentokenttä, jonka takia sodittiin] Japanilaiset joukot saapuivat Guadalcanalille toukokuussa 1942. Kun amerikkalainen tiedustelulento havaitsi, että saaren pohjoisrannikolle Lunga Pointiin rakennettiin lentokenttää, tilanne muuttui kriittiseksi: kenttä uhkasi Yhdysvaltain ja Australian välisiä yhteyksiä. Yhdysvallat teki 7. elokuuta 1942 sodan ensimmäisen maihinnousunsa, ja kenttä vallattiin vähällä vaivalla — mutta sen pitäminen seuraavat kuusi kuukautta oli koko Tyynenmeren sotanäyttämön kiivaimpia kamppailuja. Laivaston rakennusjoukot viimeistelivät kentän ja nimesivät sen Henderson Fieldiksi Midwayssä kaatuneen merijalkaväen lentäjän mukaan.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

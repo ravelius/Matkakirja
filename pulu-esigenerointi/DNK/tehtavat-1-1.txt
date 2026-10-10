@@ -1,0 +1,259 @@
+================ KOHTA 1 (kohde:mllehj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansalliskirjasto] Nunatta Atuagaateqarfia on Grönlannin yleinen kirjasto ja kansalliskirjasto samassa laitoksessa. Se on maan suurin käsikirjasto, ja sen tehtävä on säilyttää kansallista kulttuuriperintöä ja historiaa. Kokoelma on jaettu kahteen paikkaan. Keskustan yleinen kirjasto palvelee kaupunkilaisia, ja Ilimmarfikin kampuksella Nuussuaqin kaupunginosassa on Groenlandica — Grönlantia käsittelevän historiallisen aineiston kokoelma. Vuonna 2018 Ilimmarfikin tietokannassa oli 101 824 nimekettä. Kirjasto on maassa, jossa kirjoitettu kieli on nuori ja jossa kirjallisuutta on julkaistu grönlanniksi vasta runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se on käytännössä ainoa paikka, jossa maan oma painet…
+
+### 1.1
+KYSYMYS: Miten näin matala kumpu voi olla maan korkein?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jemen — maalehti / Historia: Kumpu on vanhojen talojen tekemä] Vanha Marib on savitiilikylä kummun päällä, mutta kumpu ei ole luonnon tekemä. Savitiilitalo kestää muutaman sukupolven, ja kun se sortuu, seuraava rakennetaan raunion päälle. Kun tämä toistuu riittävän monta kertaa, maanpinta nousee talojen mukana. Kummun sisään on hautautunut Saban valtakunnan pääkaupunki eli sama paikka, josta patoa aikanaan hallinnoitiin. Kylä tyhjeni 1900-luvun kuluessa, ja asukkaat siirtyivät tasangolle uuteen Maribiin noin kolmen kilometrin päähän. Vanhat talot jäivät paikoilleen ilman kattoja.
+- [Mosul — kohdekartta / Kohdekartta: Kuyunjikin kumpu] pääkaupunki noin 700–612 eKr. Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna 700 eKr., ja rakennustyö oli mittava: kaupungista tuli suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon kuin Babylonissa. Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa lampaan deminutiivia; arabit tunsivat kummun myös nimellä Armousheeah. Kumpu …
+
+### 1.2
+KYSYMYS: Mikä on Grönlannin korkein vuori?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Møllehøj (luonto · vuori)
+Tietoruudun teksti: Møllehøj on emämaan Tanskan korkein luonnollinen kohta: 170,86 metriä merenpinnasta. Se kohoaa Jyllannin sisämaan viljelysmaisemassa, eikä maassa ole yhtään vuorta — koko Tanska on jääkauden jälkeensä jättämää alavaa moreenimaata. Tanskan kuningaskunnan korkein kohta on aivan muualla, Grönlannin jäätiköiden keskellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansallismuseo] 1965 Nunatta Katersugaasivia Allagaateqarfialu oli yksi Grönlannin ensimmäisistä museoista. Sen ensimmäinen näyttely avattiin 1965 herrnhutilaisessa lähetystalossa, ja 1970-luvulla se muutti vanhaan siirtomaasatamaan vuonna 1936 rakennettuun varastoon. Muutto ei johtunut tilan puutteesta yksin: kokoelma kasvoi, kun Tanskan kansallismuseo alkoi palauttaa grönlantilaisia esineitä takaisin saarelle. Museon tunnetuin näyttely ovat Qilakitsoqin muumiot. Kaksi metsästäjää, Hans ja Jokum Grønvold, löysivät 9. lokakuuta 1972 riekkojahdissa Uummannaqin lähellä kiviröykkiön, jonka alla oli useita ruumiita. He peittivät haudan uudelleen ja ilmoittivat viranomaisille. Kahdeksan vainajaa oli säilynyt lu…
+- [Nuuk — kohdekartta / Kohdekartta: Grönlannin kansalliskirjasto] Nunatta Atuagaateqarfia on Grönlannin yleinen kirjasto ja kansalliskirjasto samassa laitoksessa. Se on maan suurin käsikirjasto, ja sen tehtävä on säilyttää kansallista kulttuuriperintöä ja historiaa. Kokoelma on jaettu kahteen paikkaan. Keskustan yleinen kirjasto palvelee kaupunkilaisia, ja Ilimmarfikin kampuksella Nuussuaqin kaupunginosassa on Groenlandica — Grönlantia käsittelevän historiallisen aineiston kokoelma. Vuonna 2018 Ilimmarfikin tietokannassa oli 101 824 nimekettä. Kirjasto on maassa, jossa kirjoitettu kieli on nuori ja jossa kirjallisuutta on julkaistu grönlanniksi vasta runsaat sata vuotta, poikkeuksellisen tärkeä laitos: se on käytännössä ainoa paikka, jossa maan oma painet…
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:pohjanmeri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+
+### 2.1
+KYSYMYS: Mikä Vattimeri on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Merenpohjan yli kävellään saarelle] nykyään — Maan pohjoisrannikon edessä on Vattimeri, matala vesi, joka vetäytyy joka luoteella pois ja paljastaa mutatasangot. Silloin sinne lähdetään kävelemään. Wadlopen tarkoittaa juuri sitä: kävelyä merenpohjaa pitkin mantereelta saarille, esimerkiksi Schiermonnikoogille tai Amelandille. Matkalla kahlataan virtauomien poikki, joissa vesi voi nousta rintaan asti, ja tärkein varuste on kello, sillä vuorovesi palaa. Yksin ei lähdetä: mukaan tarvitaan viranomaisen hyväksymä opas. Vattimeri on ollut maailmanperintökohde vuodesta 2009.
+- [Alankomaat — maalehti / Luonto ja vesi: Meri suljettiin, ja se lakkasi olemasta meri] 1932 — Zuiderzee oli matala merenlahti, joka tulvi rantakyliin. Insinööri Cornelis Lely piirsi suunnitelman sen sulkemisesta jo 1891, ja työ alkoi tammikuussa 1927. Patoa rakennettiin neljästä suunnasta yhtä aikaa, ja perustaksi upotettiin pajunoksista punottuja mattoja, joiden päälle ladottiin kiveä. Viimeinen aukko tukittiin 28. toukokuuta 1932 kello 13.02. Neljä kuukautta myöhemmin Zuiderzee menetti nimensä: padon sisäpuolen vesi on IJsselmeer ja ulkopuolen Vattimeri. Suolainen vesi muuttui vähitellen makeaksi.
+- [Saksa — maalehti / Luonto: Meri vetäytyy ja pohja aukeaa] Pohjanmeren rannikolla meri vetäytyy kahdesti päivässä kilometrien päähän ja jättää jälkeensä Wattenmeerin: mutatasangon, jota pitkin voi kävellä merenpohjassa saarelta toiselle. Opas kulkee aina mukana, sillä vuoksi palaa nopeammin kuin ihminen juoksee. Pohja näyttää tyhjältä mutta kuhisee elämää: yhdessä neliömetrissä voi asua kymmeniätuhansia matoja, kotiloita ja simpukoita, ja hietikoilla lepää kirjohylkeitä. Vattimeri on Unescon maailmanperintökohde.
+
+### 2.2
+KYSYMYS: Miksi Jyllannin länsirannikko on niin suora?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pohjanmeri (meri)
+Tietoruudun teksti: Pohjanmeri on Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, Belgian ja Ranskan välinen meri Euroopan mannerjalustalla. Etelässä se yhtyy Atlanttiin Englannin kanaalin kautta ja pohjoisessa Norjanmereen. Tanska on ainoa maa, jonka rannat ovat sekä tällä merellä että Itämerellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+- [Tanska — maalehti / Luonto: Puu joka värjää koko maan vihreäksi] nykyään — Pyökki eli bøg on Tanskan kansallispuu, ja toukokuussa metsät käyvät läpi bøgespringiksi kutsutun muutoksen: lehdet puhkeavat lähes koko maassa saman viikon aikana, ja ruskea talvimetsä muuttuu muutamassa päivässä kirkkaan vihreäksi. Juuri ennen lehtien puhkeamista metsän pohja peittyy valkoisista vuokoista, jotka ehtivät kukkia ainoana hetkenä, jolloin auringonvalo pääsee vielä paljaiden oksien läpi maahan asti. Ilmiö houkuttelee joka kevät tuhansia retkeilijöitä metsiin, ja monet perheet tekevät siitä vuotuisen perinteen. Pyökkimetsiä on eniten Sjællannin ja Itä-Jyllannin alueilla, missä maaperä ja ilmasto sopivat puulle parhaiten.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:itameri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 3.1
+KYSYMYS: Miksi Itämeren vesi on murtovettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Laiva, joka upposi ja nousi] Kuninkaan ylpeys, sotalaiva Vasa, lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 — ja kaatui ensimmäiseen kunnon tuulenpuuskaan ehdittyään noin kilometrin. Laiva oli rakennettu liian kapeaksi ja korkeaksi, ja vesi ryntäsi sisään avoimista tykkiporteista. Vasa makasi sataman pohjamudassa 333 vuotta, kunnes se nostettiin 1961 lähes ehjänä: Itämeren vähäsuolainen vesi oli pitänyt laivamadot loitolla. Nykyään alus seisoo omassa museossaan yhä valtaosin alkuperäisenä puuna, ja Vasa-museo on koko Pohjolan suosituimpia museoita.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+
+### 3.2
+KYSYMYS: Mitkä salmet yhdistävät Itämeren Pohjanmereen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Suolaisen veden ovi on Tanskan: Juutinrauma, Iso-Belt ja Vähä-Belt ovat meren ainoa yhteys Pohjanmerelle, ja niiden matalat kynnykset päästävät suolavettä sisään vain harvakseltaan. Siksi juuri ne ovat aina olleet Itämeren avain.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:roskilden-tuomiokirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+
+### 4.1
+KYSYMYS: Miksi kirkossa on niin monta erityylistä kappelia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+### 4.2
+KYSYMYS: Kuka teki Roskildesta pääkaupungin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Roskilden tuomiokirkko (historia)
+Tietoruudun teksti: Roskilden tuomiokirkko on Tanskan kirkon katedraali Roskildessa Sjællandin saarella ja Tanskan hallitsijoiden virallinen hautakirkko.
+
+Kirkko rakennettiin 1100- ja 1200-luvuilla, ja siinä on sekä goottilaisia että romaanisia piirteitä. Se on Skandinavian varhaisimpia tiilestä rakennettuja goottilaisia katedraaleja ja levitti tiiligotiikan tyylin Pohjois-Eurooppaan. Maailmanperintökohteeksi se otettiin 1995 kahdesta syystä: rakennus näyttää kahdeksansataa vuotta eurooppalaisia tyylikausia, ja se oli tiiligotiikan varhainen esikuva.
+
+Hallitsijoiden päähautapaikka kirkko on ollut 1400-luvulta lähtien, ja siksi sitä on laajennettu ja muutettu vuosisatojen ajan hautakappeleita varten — kukin lisätty kappeli on oman aikansa tyyliä.
+
+Roskildesta tuli Tanskan pääkaupunki noin vuonna 960, kun Harald Sinihammas siirtyi sinne Jellingistä ja rakennutti kuninkaankartanon ja sen viereen pienen sauvak…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historian hetki: Roskildenvuono noin 1040 — kuusikymmentä airoa] n. 1040 — Ensimmäinen ääni on airon kolahdus hankaimeen, ja se toistuu kuusikymmentä kertaa yhtä aikaa. Nuori soutaja lähtee ensimmäiselle pitkälle matkalleen eikä tiedä, palaako miehistö kaupankävijöinä, sotureina vai ei lainkaan. Vuono on matala ja mutkitteleva, ja sen takana on koko maailma: Atlantti lännessä, idässä jokireitit Mustallemerelle. Miehet työntävät keulaa irti rantamudasta, kilvet on ripustettu laidalle matkan ajaksi, purje on raidallista villaa ja päähineet huopaa ja nahkaa — sarvikypärä on 1800-luvun oopperalavojen keksintö eikä esiinny yhdessäkään viikinkiajan löydössä. Juuri tällaisia laivoja tunnetaan tarkasti, koska viisi niistä upotettiin 1000-luvulla tähän samaan vuo…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:kronborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — maalehti / Kirjallisuus: Shakespeare krioksi, koska kieli ei ole murre] 1964–2013 — Kriota puhuu yli yhdeksänkymmentä prosenttia maan väestöstä, mutta sillä ei ole virallista asemaa. Sanasto tulee englannista, kieliopin arvellaan seuraavan jamaikalaista maroonikreolia ja afrikkalaiset sanat ovat pääosin akanista, jorubasta ja igbosta; lapsi on pikin portugalin sanasta pequeno. Toimittaja ja kielimies Thomas Decker väitti 1900-luvun puolivälissä, ettei krio ole murre vaan kieli, ja todisti sen kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 ja Vanha testamentti 2013.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 5.1
+KYSYMYS: Millä nimellä Shakespeare kutsui linnaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — maalehti / Kirjallisuus: Shakespeare krioksi, koska kieli ei ole murre] 1964–2013 — Kriota puhuu yli yhdeksänkymmentä prosenttia maan väestöstä, mutta sillä ei ole virallista asemaa. Sanasto tulee englannista, kieliopin arvellaan seuraavan jamaikalaista maroonikreolia ja afrikkalaiset sanat ovat pääosin akanista, jorubasta ja igbosta; lapsi on pikin portugalin sanasta pequeno. Toimittaja ja kielimies Thomas Decker väitti 1900-luvun puolivälissä, ettei krio ole murre vaan kieli, ja todisti sen kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 ja Vanha testamentti 2013.
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 5.2
+KYSYMYS: Mikä Juutinrauman tulli oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kronborg (sana)
+Tietoruudun teksti: Kronborg on linna ja linnoitus Helsingørin kaupungissa. William Shakespeare nimesi sen Hamletissa Elsinoreksi, ja se on Pohjois-Euroopan merkittävimpiä renessanssilinnoja.
+
+Linna seisoo Sjællandin koillisimmassa kärjessä Juutinrauman kapeimmalla kohdalla, jossa salmi on vain neljä kilometriä leveä. Siitä sen strateginen merkitys: paikka hallitsee yhtä harvoista uloskäynneistä Itämereltä.
+
+Tarina alkaa Krogen-nimisestä linnoituksesta, jonka Eerik Pommerilainen rakennutti 1420-luvulla. Kuningas vaati Juutinrauman tullia jokaiselta laivalta, joka halusi salmen kautta Itämerelle tai sieltä pois, ja linnoitus salmen kapeimmassa kohdassa oli keino periä maksu. Vuosina 1574–1585 Frederik II muutatti keskiaikaisen linnoituksen renessanssilinnaksi.
+
+Tulipalo tuhosi suuren osan linnasta 1629, ja Christian IV rakennutti sen uudelleen. Vuonna 1658 ruotsalaiset piirittivät ja valtasivat Kronborgin j…
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

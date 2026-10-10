@@ -1,0 +1,199 @@
+================ KOHTA 16 (kohde:hahmotelma-christiansborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toinen Christiansborg (historia)
+Tietoruudun teksti: Ensimmäinen Christiansborg tuhoutui tulipalossa vuonna 1794. Toinen palatsi valmistui 1828 mutta paloi sekin 1884. Sen rauniot seisoivat 23 vuotta ennen nykyisen, kolmannen Christiansborgin rakennustöiden alkua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Historian hetki: Christiansborg 1884 — savu valtaosien alla] 3.10.1884 — Vartija pysähtyy käytävällä ja nuuskii ilmaa — hajussa on jotain, joka ei kuulu perjantai-iltapäivään Christiansborgin linnassa. Se on 3. lokakuuta 1884, ja savu nousee huoneesta aivan Riddersalenin, ritarisalin, alapuolelta, missä vanha kaakeliuuni on juuri sytyttänyt jotain palamaan. Kukaan ei vielä tiedä, että linnan seinien sisällä on vuosikymmenten aikana syntynyt lukemattomia onttoja välitiloja, jotka vetävät liekkiä eteenpäin kuin savupiiput. Palokunta saapuu nopeasti, mutta tuli leviää käytävästä käytävään nopeammin kuin kukaan osaa sitä pysäyttää. Yön aikana koko linnan päärakennus — valtiopäivien, hallituksen ja kuninkaan asuintilojen koti — palaa lähes tyhjäksi kuorek…
+- [Kööpenhamina — kaupunkilehti / Sadut: Lupa huvipuistolle annettiin viideksi vuodeksi kerrallaan] Luvan huvipuistolle antoi kuningas Christian VIII viideksi vuodeksi kerrallaan. Perustaja Georg Carstensen sai luvan perustelemalla asian suoraan: kun kansa huvittelee, se ei ajattele politiikkaa. Puisto rakennettiin kaupungin linnoitusvallin ulkopuolelle noin kuudenkymmenenyhden tuhannen neliömetrin alalle, ja 1850-luvulle asti sinne mentiin Vesterportin eli länsiportin kautta. Puiston järvi ei ole koriste vaan jäänne vanhasta vallihaudasta, ja ilotulitukset heijastuivat siitä. Pimeän tultua puutarha valaistiin värillisillä lampuilla, ja musiikista vastasi kolmenkymmenen vuoden ajan Hans Christian Lumbye, jota sanottiin Pohjolan Straussiksi.
+
+### 16.1
+KYSYMYS: Miltä Toinen Christiansborg näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toinen Christiansborg (historia)
+Tietoruudun teksti: Ensimmäinen Christiansborg tuhoutui tulipalossa vuonna 1794. Toinen palatsi valmistui 1828 mutta paloi sekin 1884. Sen rauniot seisoivat 23 vuotta ennen nykyisen, kolmannen Christiansborgin rakennustöiden alkua.
+
+### 16.2
+KYSYMYS: Miksi Toinen Christiansborg katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Toinen Christiansborg (historia)
+Tietoruudun teksti: Ensimmäinen Christiansborg tuhoutui tulipalossa vuonna 1794. Toinen palatsi valmistui 1828 mutta paloi sekin 1884. Sen rauniot seisoivat 23 vuotta ennen nykyisen, kolmannen Christiansborgin rakennustöiden alkua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kaupunkilehti / Historian hetki: Christiansborg 1884 — savu valtaosien alla] 3.10.1884 — Vartija pysähtyy käytävällä ja nuuskii ilmaa — hajussa on jotain, joka ei kuulu perjantai-iltapäivään Christiansborgin linnassa. Se on 3. lokakuuta 1884, ja savu nousee huoneesta aivan Riddersalenin, ritarisalin, alapuolelta, missä vanha kaakeliuuni on juuri sytyttänyt jotain palamaan. Kukaan ei vielä tiedä, että linnan seinien sisällä on vuosikymmenten aikana syntynyt lukemattomia onttoja välitiloja, jotka vetävät liekkiä eteenpäin kuin savupiiput. Palokunta saapuu nopeasti, mutta tuli leviää käytävästä käytävään nopeammin kuin kukaan osaa sitä pysäyttää. Yön aikana koko linnan päärakennus — valtiopäivien, hallituksen ja kuninkaan asuintilojen koti — palaa lähes tyhjäksi kuorek…
+- [Kööpenhamina — kaupunkilehti / Sadut: Lupa huvipuistolle annettiin viideksi vuodeksi kerrallaan] Luvan huvipuistolle antoi kuningas Christian VIII viideksi vuodeksi kerrallaan. Perustaja Georg Carstensen sai luvan perustelemalla asian suoraan: kun kansa huvittelee, se ei ajattele politiikkaa. Puisto rakennettiin kaupungin linnoitusvallin ulkopuolelle noin kuudenkymmenenyhden tuhannen neliömetrin alalle, ja 1850-luvulle asti sinne mentiin Vesterportin eli länsiportin kautta. Puiston järvi ei ole koriste vaan jäänne vanhasta vallihaudasta, ja ilotulitukset heijastuivat siitä. Pimeän tultua puutarha valaistiin värillisillä lampuilla, ja musiikista vastasi kolmenkymmenen vuoden ajan Hans Christian Lumbye, jota sanottiin Pohjolan Straussiksi.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-vesterport) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesterport (historia)
+Tietoruudun teksti: Vesterport oli Kööpenhaminan läntinen pääportti ja kaupungin vilkkain sisäänkäynti. Vuonna 1722 uudistettu portti purettiin 1857–1859, kun linnoituksia purettiin. Paikalla on nykyinen Rådhuspladsen.
+
+### 17.1
+KYSYMYS: Miltä Vesterport näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesterport (historia)
+Tietoruudun teksti: Vesterport oli Kööpenhaminan läntinen pääportti ja kaupungin vilkkain sisäänkäynti. Vuonna 1722 uudistettu portti purettiin 1857–1859, kun linnoituksia purettiin. Paikalla on nykyinen Rådhuspladsen.
+
+### 17.2
+KYSYMYS: Miksi Vesterport katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vesterport (historia)
+Tietoruudun teksti: Vesterport oli Kööpenhaminan läntinen pääportti ja kaupungin vilkkain sisäänkäynti. Vuonna 1722 uudistettu portti purettiin 1857–1859, kun linnoituksia purettiin. Paikalla on nykyinen Rådhuspladsen.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-rubjerg-knude) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rubjerg Knude (merenkulku)
+Tietoruudun teksti: Rubjerg Knude on majakka Pohjanmeren rannikolla Pohjois-Jyllannissa, Lønstrup Klintin kallion päällä 60 metriä merenpinnan yläpuolella. Rakennustyöt alkoivat vuonna 1899, ja majakan valo syttyi ensimmäisen kerran 27. joulukuuta 1900. Alueella liikkuva hiekka ja rannikon eroosio ovat vakava ongelma, sillä rantaviiva syöpyy keskimäärin 1,5 metriä vuodessa. Hiekka pakotti hylkäämään majakan viereiset rakennukset vuonna 2002, ja vuonna 2019 majakkatorni siirrettiin 70 metriä kauemmas rannasta erityisesti rakennettuja kiskoja pitkin. Siirron ansiosta torni säilyy odotusten mukaan ainakin noin vuoteen 2060.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Akorda] 2001–2004 Nimi Aqorda tarkoittaa valkoista ordaa eli hallitsijan leiriä. Talo rakennettiin vuosina 2001–2004 Mabetex-yhtiön työnä, ja se on presidentin työpaikka ja hallinnon toimitalo — ei asunto. Korkeutta on huippuineen 80 metriä, kerroksia seitsemän ja kerrosalaa 36 720 neliömetriä. Katolla on sinivalkoinen kupoli ja sen päällä kullattu huippu: aurinko, jolla on 32 sädettä, ja auringon alla lentävä arokotka. Sama pari on Kazakstanin lipussa. Ensimmäisessä kerroksessa ovat suuri keskussali, lehdistösali, juhlasali ja talvipuutarha, toisessa työhuoneet. Kolmas kerros on kansainvälisiä tilaisuuksia varten, ja sen salit on nimetty pintojensa mukaan: Marmorisali, Kultasali, Ovaali sali ja It…
+
+### 18.1
+KYSYMYS: Miksi Rubjerg Knuden majakka jouduttiin siirtämään kauemmas rannasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rubjerg Knude (merenkulku)
+Tietoruudun teksti: Rubjerg Knude on majakka Pohjanmeren rannikolla Pohjois-Jyllannissa, Lønstrup Klintin kallion päällä 60 metriä merenpinnan yläpuolella. Rakennustyöt alkoivat vuonna 1899, ja majakan valo syttyi ensimmäisen kerran 27. joulukuuta 1900. Alueella liikkuva hiekka ja rannikon eroosio ovat vakava ongelma, sillä rantaviiva syöpyy keskimäärin 1,5 metriä vuodessa. Hiekka pakotti hylkäämään majakan viereiset rakennukset vuonna 2002, ja vuonna 2019 majakkatorni siirrettiin 70 metriä kauemmas rannasta erityisesti rakennettuja kiskoja pitkin. Siirron ansiosta torni säilyy odotusten mukaan ainakin noin vuoteen 2060.
+
+### 18.2
+KYSYMYS: Miten 720 tonnia painava majakkatorni saatiin siirrettyä 70 metriä sisämaahan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rubjerg Knude (merenkulku)
+Tietoruudun teksti: Rubjerg Knude on majakka Pohjanmeren rannikolla Pohjois-Jyllannissa, Lønstrup Klintin kallion päällä 60 metriä merenpinnan yläpuolella. Rakennustyöt alkoivat vuonna 1899, ja majakan valo syttyi ensimmäisen kerran 27. joulukuuta 1900. Alueella liikkuva hiekka ja rannikon eroosio ovat vakava ongelma, sillä rantaviiva syöpyy keskimäärin 1,5 metriä vuodessa. Hiekka pakotti hylkäämään majakan viereiset rakennukset vuonna 2002, ja vuonna 2019 majakkatorni siirrettiin 70 metriä kauemmas rannasta erityisesti rakennettuja kiskoja pitkin. Siirron ansiosta torni säilyy odotusten mukaan ainakin noin vuoteen 2060.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Akorda] 2001–2004 Nimi Aqorda tarkoittaa valkoista ordaa eli hallitsijan leiriä. Talo rakennettiin vuosina 2001–2004 Mabetex-yhtiön työnä, ja se on presidentin työpaikka ja hallinnon toimitalo — ei asunto. Korkeutta on huippuineen 80 metriä, kerroksia seitsemän ja kerrosalaa 36 720 neliömetriä. Katolla on sinivalkoinen kupoli ja sen päällä kullattu huippu: aurinko, jolla on 32 sädettä, ja auringon alla lentävä arokotka. Sama pari on Kazakstanin lipussa. Ensimmäisessä kerroksessa ovat suuri keskussali, lehdistösali, juhlasali ja talvipuutarha, toisessa työhuoneet. Kolmas kerros on kansainvälisiä tilaisuuksia varten, ja sen salit on nimetty pintojensa mukaan: Marmorisali, Kultasali, Ovaali sali ja It…
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-raabjerg-mile) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Råbjerg Mile (luonto · vuori)
+Tietoruudun teksti: Råbjerg Mile on Skagenin ja Frederikshavnin välissä sijaitseva rannikkodyyni, joka vaeltaa tuulen mukana. Se on Pohjois-Euroopan suurin liikkuva dyyni: sen pinta-ala on noin kaksi neliökilometriä ja korkeus noin 40 metriä. Tuuli työntää sitä koilliseen enimmillään 18 metriä vuodessa, ja se jättää taakseen matalan, kostean hiekkakaistan kohti Skagerrakia, jossa se syntyi yli 300 vuotta sitten. Vaeltavat dyynit ajoivat Pohjois-Jyllannin asukkaita pois rannikolta, ja 1300-luvun lopulla rakennetun kirkon hiekka peitti lähes kokonaan; kirkko hylättiin 1795, ja jäljellä on vain torni. Useimmat dyynit pysäytettiin istuttamalla, mutta Råbjerg Mile jätettiin liikkumaan, jotta tulevat sukupolvet ymmärtäisivät ongelman.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+- [Tromssa — kohdekartta / Kohdekartta: Jäämerenkatedraali] 1965 Jäämerenkatedraali (norjaksi Ishavskatedralen) on Tromssan tunnetuin rakennus, mutta se ei ole isoisän aikaan liittyvä nähtävyys - se rakennettiin vasta paljon myöhemmin, vuosina 1964-1965. Rakennustyöt alkoivat 1. huhtikuuta 1964, ja kirkko vihittiin käyttöön 19. marraskuuta 1965. Arkkitehti Jan Inge Hovig suunnitteli kirkolle omalaatuisen muodon: sen terävät, taivasta kohti nousevat harjat muistuttavat läheisen Håja-saaren kaksoishuippuja. Rakennus on tehty valetusta, alumiinipäällysteisestä betonista, mikä oli 1960-luvulla hyvin moderni ratkaus. Itäpäädyssä on vuonna 1972 valmistunut suurikokoinen lasimosaiikki 'Kristuksen paluu', taiteilija Victor Sparren käsialaa. Kirkossa on tila…
+
+### 19.1
+KYSYMYS: Miksi Råbjerg Mile jätettiin tarkoituksella liikkumaan, vaikka muut dyynit pysäytettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Råbjerg Mile (luonto · vuori)
+Tietoruudun teksti: Råbjerg Mile on Skagenin ja Frederikshavnin välissä sijaitseva rannikkodyyni, joka vaeltaa tuulen mukana. Se on Pohjois-Euroopan suurin liikkuva dyyni: sen pinta-ala on noin kaksi neliökilometriä ja korkeus noin 40 metriä. Tuuli työntää sitä koilliseen enimmillään 18 metriä vuodessa, ja se jättää taakseen matalan, kostean hiekkakaistan kohti Skagerrakia, jossa se syntyi yli 300 vuotta sitten. Vaeltavat dyynit ajoivat Pohjois-Jyllannin asukkaita pois rannikolta, ja 1300-luvun lopulla rakennetun kirkon hiekka peitti lähes kokonaan; kirkko hylättiin 1795, ja jäljellä on vain torni. Useimmat dyynit pysäytettiin istuttamalla, mutta Råbjerg Mile jätettiin liikkumaan, jotta tulevat sukupolvet ymmärtäisivät ongelman.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+
+### 19.2
+KYSYMYS: Mitä tapahtui kirkolle, jonka hiekka peitti lähes kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Råbjerg Mile (luonto · vuori)
+Tietoruudun teksti: Råbjerg Mile on Skagenin ja Frederikshavnin välissä sijaitseva rannikkodyyni, joka vaeltaa tuulen mukana. Se on Pohjois-Euroopan suurin liikkuva dyyni: sen pinta-ala on noin kaksi neliökilometriä ja korkeus noin 40 metriä. Tuuli työntää sitä koilliseen enimmillään 18 metriä vuodessa, ja se jättää taakseen matalan, kostean hiekkakaistan kohti Skagerrakia, jossa se syntyi yli 300 vuotta sitten. Vaeltavat dyynit ajoivat Pohjois-Jyllannin asukkaita pois rannikolta, ja 1300-luvun lopulla rakennetun kirkon hiekka peitti lähes kokonaan; kirkko hylättiin 1795, ja jäljellä on vain torni. Useimmat dyynit pysäytettiin istuttamalla, mutta Råbjerg Mile jätettiin liikkumaan, jotta tulevat sukupolvet ymmärtäisivät ongelman.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Jäämerenkatedraali] 1965 Jäämerenkatedraali (norjaksi Ishavskatedralen) on Tromssan tunnetuin rakennus, mutta se ei ole isoisän aikaan liittyvä nähtävyys - se rakennettiin vasta paljon myöhemmin, vuosina 1964-1965. Rakennustyöt alkoivat 1. huhtikuuta 1964, ja kirkko vihittiin käyttöön 19. marraskuuta 1965. Arkkitehti Jan Inge Hovig suunnitteli kirkolle omalaatuisen muodon: sen terävät, taivasta kohti nousevat harjat muistuttavat läheisen Håja-saaren kaksoishuippuja. Rakennus on tehty valetusta, alumiinipäällysteisestä betonista, mikä oli 1960-luvulla hyvin moderni ratkaus. Itäpäädyssä on vuonna 1972 valmistunut suurikokoinen lasimosaiikki 'Kristuksen paluu', taiteilija Victor Sparren käsialaa. Kirkossa on tila…
+- [Melbourne — kohdekartta / Kohdekartta: Pyhän Paavalin katedraali] 1891 Tontilla pidettiin Melbournen ensimmäinen julkinen kristillinen jumalanpalvelus 1835. Kortteli oli silloin hallituksen varausmaata kaukana silloisesta keskustasta ja toimi viljatorina. Vuoteen 1848 mennessä paikka oli ensimmäisen Princes-sillan vieressä, ja näkyvä tontti luovutettiin anglikaaniselle kirkolle. Basalttinen Pyhän Paavalin kirkko vihittiin 1852. Kaupungin kasvaessa hiippakunta päätti rakentaa tilalle katedraalin, ja työ annettiin englantilaiselle uusgotiikan mestarille William Butterfieldille. Jotta kirkko mahtuisi korttelille, se käännettiin ruutukaavan mukaisesti pohjois–eteläsuuntaan eikä perinteiseen itään. Peruskivi laskettiin 1880, mutta Butterfield riitaantui melbou…
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-romo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rømø (luonto · saari)
+Tietoruudun teksti: Rømø on Tanskan eteläisin Vatimeren saarista; tämän aseman piti aiemmin pieni asumaton Jordsand, joka upposi vuonna 1999. Saaren pinta-ala on 129 neliökilometriä. Se on yhdistetty mantereeseen penkereellä kulkevalla tiellä, ja saksalainen Sylt-saari on vain noin kolmen kilometrin päässä. Kommandørgårdin museossa on valaanpyyntiin liittyviä esineitä ja valaan luuranko; sana kommandør tarkoitti aikoinaan valaanpyyntialuksen kapteenia. Vuoden 1864 sodan jälkeen alue siirtyi Preussille ja myöhemmin Saksan keisarikunnalle, ja Rømø palasi Tanskalle vasta vuonna 1920 kansanäänestyksen jälkeen. Saarella syntyi vuonna 1836 myös merikapteeni Peter Mærsk Møller, jonka poika perusti Maersk-laivayhtiön.
+
+### 20.1
+KYSYMYS: Miksi Kommandørgårdin museossa on valaan luuranko?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rømø (luonto · saari)
+Tietoruudun teksti: Rømø on Tanskan eteläisin Vatimeren saarista; tämän aseman piti aiemmin pieni asumaton Jordsand, joka upposi vuonna 1999. Saaren pinta-ala on 129 neliökilometriä. Se on yhdistetty mantereeseen penkereellä kulkevalla tiellä, ja saksalainen Sylt-saari on vain noin kolmen kilometrin päässä. Kommandørgårdin museossa on valaanpyyntiin liittyviä esineitä ja valaan luuranko; sana kommandør tarkoitti aikoinaan valaanpyyntialuksen kapteenia. Vuoden 1864 sodan jälkeen alue siirtyi Preussille ja myöhemmin Saksan keisarikunnalle, ja Rømø palasi Tanskalle vasta vuonna 1920 kansanäänestyksen jälkeen. Saarella syntyi vuonna 1836 myös merikapteeni Peter Mærsk Møller, jonka poika perusti Maersk-laivayhtiön.
+
+### 20.2
+KYSYMYS: Mitä tapahtui vuonna 1920, kun Rømø palasi Tanskalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rømø (luonto · saari)
+Tietoruudun teksti: Rømø on Tanskan eteläisin Vatimeren saarista; tämän aseman piti aiemmin pieni asumaton Jordsand, joka upposi vuonna 1999. Saaren pinta-ala on 129 neliökilometriä. Se on yhdistetty mantereeseen penkereellä kulkevalla tiellä, ja saksalainen Sylt-saari on vain noin kolmen kilometrin päässä. Kommandørgårdin museossa on valaanpyyntiin liittyviä esineitä ja valaan luuranko; sana kommandør tarkoitti aikoinaan valaanpyyntialuksen kapteenia. Vuoden 1864 sodan jälkeen alue siirtyi Preussille ja myöhemmin Saksan keisarikunnalle, ja Rømø palasi Tanskalle vasta vuonna 1920 kansanäänestyksen jälkeen. Saarella syntyi vuonna 1836 myös merikapteeni Peter Mærsk Møller, jonka poika perusti Maersk-laivayhtiön.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

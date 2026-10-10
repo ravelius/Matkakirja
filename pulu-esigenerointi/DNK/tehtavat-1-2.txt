@@ -1,0 +1,293 @@
+================ KOHTA 6 (kohde:jellingin-kivet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+
+### 6.1
+KYSYMYS: Miksi kiviä sanotaan Tanskan kastetodistukseksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+### 6.2
+KYSYMYS: Mistä langattoman Bluetoothin nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jellingin kivet (historia)
+Tietoruudun teksti: Jellingin kivet ovat kaksi järeää 900-luvun riimukiveä Jellingin kylässä. Vanhemman pystytti kuningas Gorm Vanha vaimonsa Thyran muistoksi. Suuremman pystytti Gormin poika Harald Sinihammas vanhempiensa muistoksi ja juhli siinä samalla Tanskan ja Norjan valloitustaan sekä tanskalaisten kääntymistä kristinuskoon.
+
+Kivet liitetään vahvasti Tanskan syntyyn kuningaskuntana: molemmissa kirjoituksissa esiintyy nimi Danmark. Suuremmassa kivessä mainitaan nimenomaisesti kääntyminen pakanuudesta ja siinä on kuva ristiinnaulitusta Kristuksesta, ja siksi sitä on kansanomaisesti kutsuttu Tanskan kastetodistukseksi — nimityksen keksi taidehistorioitsija Rudolf Broby-Johansen 1930-luvulla.
+
+Vuonna 1994 kivet sekä lähellä olevat hautakummut ja pieni kirkko liitettiin maailmanperintöluetteloon vertaansa vailla olevana esimerkkinä sekä pakanallisesta että kristillisestä pohjoismaisesta kulttuurista. Vuo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:ribe) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+
+### 7.1
+KYSYMYS: Kuinka vanha Ribe on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+
+### 7.2
+KYSYMYS: Mikä Burchardin tulva oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ribe (kaupungit)
+Tietoruudun teksti: Ribe on kaupunki Lounais-Jyllannissa ja Tanskan vanhin kaupunki. Asukkaita on reilut kahdeksantuhatta.
+
+Kauppa kävi täällä jo 700-luvun alussa, ja rahaa saatettiin lyödä Ribessä jo vuonna 720. Yli kolmestasadasta Tanskasta löytyneestä sceatta-rahasta 216 on löydetty Ribestä tai sen ympäriltä. Kauppasuhteet kulkivat etenkin Friisinmaalle ja Englantiin.
+
+Kun arkkipiispa Ansgar lähti käännyttämään Skandinaviaa, hän pyysi noin vuonna 860 kuningas Horik II:lta luvan rakentaa Skandinavian ensimmäisen kirkon juuri Ribeen. Piispa — ja siis katedraali — voidaan varmuudella osoittaa vasta vuodesta 948. Kaivauksissa on kuitenkin löydetty 2 000–3 000 kristittyä hautaa 800-luvulta, mikä kertoo suuresta kristityistä yhteisöstä, joka eli viikinkien rinnalla rauhassa.
+
+Kaupunki on matalalla merenrantaniityllä, ja myrskytulvat ovat iskeneet siihen toistuvasti. Tuhoisin oli Burchardin tulva vuonna 1634; …
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:skagen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+- [Sudan — maalehti / Historia: Kuningatar, joka hautasi keisarin pään portaiden alle] 25–22 eaa. — Kushin hallitsijan arvonimi kandake tarkoitti kuningatarta tai kuningataräitiä, ja kun sen kantaja hallitsi itse, hän käytti myös kuninkaan arvoa qore. Kandake Amanirenas johti sotaa Rooman Egyptiä vastaan vuosina 25–22 eaa. Sotaretkeltä tuotiin saaliina keisari Augustuksen pronssinen pää, joka haudattiin Meroëssa temppelin portaiden alle — niin että kaikki temppeliin tulijat astuivat sen päälle. Britti John Garstang löysi pään joulukuussa 1910 kahden ja puolen metrin syvyydestä puhtaasta hiekasta, ja se on nyt Britannian museossa.
+
+### 8.1
+KYSYMYS: Mikä hautasi vanhan kirkon?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sudan — maalehti / Historia: Kuningatar, joka hautasi keisarin pään portaiden alle] 25–22 eaa. — Kushin hallitsijan arvonimi kandake tarkoitti kuningatarta tai kuningataräitiä, ja kun sen kantaja hallitsi itse, hän käytti myös kuninkaan arvoa qore. Kandake Amanirenas johti sotaa Rooman Egyptiä vastaan vuosina 25–22 eaa. Sotaretkeltä tuotiin saaliina keisari Augustuksen pronssinen pää, joka haudattiin Meroëssa temppelin portaiden alle — niin että kaikki temppeliin tulijat astuivat sen päälle. Britti John Garstang löysi pään joulukuussa 1910 kahden ja puolen metrin syvyydestä puhtaasta hiekasta, ja se on nyt Britannian museossa.
+
+### 8.2
+KYSYMYS: Keitä Skagenin maalarit olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skagen (kulttuuri)
+Tietoruudun teksti: Skagen on Tanskan pohjoisin kaupunki Jyllannin pohjoiskärjessä. Sen satama on maan tärkein kalasatama, ja kaupungissa käy noin kaksi miljoonaa matkailijaa vuodessa.
+
+Asutus alkoi keskiajalla kalastajakylänä, joka tunnettiin sillistään. 1800-luvun lopulla merimaisemat, kalastajat ja iltavalo houkuttelivat paikalle ryhmän impressionisteja, jotka tunnetaan nyt Skagenin maalareina. Monet kaupungin tunnetuista rakennuksista liittyvät heihin: Brøndumin hotelli, Skagenin museo sekä Michael ja Anna Ancherin talo.
+
+Pyhän Laurentiuksen kirkko rakennettiin kylän laitaan 1300-luvun lopulla, mutta lentohiekka hautasi sen. Tilalle rakennettiin uusi Skagenin kirkko vuonna 1841.
+
+Matkailu alkoi kasvaa, kun kapearaiteinen rautatie avattiin 1890 ja nykyinen satama 20. marraskuuta 1907. Skagenin asema on Tanskan pohjoisin rautatieasema.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Luonto: Hiekkasärkkä joka kävelee] noin 1700 — Råbjerg Mile on Pohjois-Euroopan suurin liikkuva hiekkasärkkä: se on noin kaksi neliökilometriä laaja ja jopa 40 metriä korkea, ja siinä on arviolta neljä miljoonaa kuutiometriä hiekkaa. Tuuli työntää koko kummun koillista kohti jopa 18 metriä vuodessa, ja hiekan takana paljastuu matala, kostea vyöhyke, josta erottaa, mistä särkkä on kulkenut. Alkujaan hiekka nousi Länsi-Jyllannin rannikolta yli 300 vuotta sitten, ja se on ainoa laaja liikkuvien dyynien alue koko Tanskassa. Skagenin ja Frederikshavnin välissä liikkuvaa hiekkavuorta katsoo vuosittain noin 250 000 kävijää, jotka kiipeävät sen laelle katsomaan merta molempiin suuntiin.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:frederiksborgin-linna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Frederiksborgin linna (kulttuuri)
+Tietoruudun teksti: Frederiksborgin linna Hillerødissä rakennettiin 1600-luvun alussa Tanskan ja Norjan kuninkaan Christian IV:n asunnoksi, ja siitä tuli Skandinavian suurin renessanssiasunto. Se seisoo kolmella pikkusaarella linnajärvessä, ja sen vieressä on laaja barokkityylinen puutarha.
+
+Nimi on Christianin edeltäjän. Frederik II hankki Hillerødsholmin kartanon vaihtokaupalla vuonna 1550, laajennutti liian pientä rakennusta vuodesta 1560 ja nimesi tilan sitten uudelleen Frederiksborgiksi.
+
+Vuonna 1859 vakava tulipalo tuhosi linnan. Se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta, ja yleisön tuen sekä panimomies J. C. Jacobsenin rahojen turvin huoneistot kunnostettiin täysin.
+
+Linna avattiin yleisölle Tanskan kansallishistoriallisena museona vuonna 1882. Museossa on Tanskan suurin muotokuvakokoelma, ja tulipalolta säästyneet kappeli ja audienssisali ovat yhä alkuperäisine koristel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+
+### 9.1
+KYSYMYS: Kuka maksoi linnan kunnostuksen tulipalon jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Frederiksborgin linna (kulttuuri)
+Tietoruudun teksti: Frederiksborgin linna Hillerødissä rakennettiin 1600-luvun alussa Tanskan ja Norjan kuninkaan Christian IV:n asunnoksi, ja siitä tuli Skandinavian suurin renessanssiasunto. Se seisoo kolmella pikkusaarella linnajärvessä, ja sen vieressä on laaja barokkityylinen puutarha.
+
+Nimi on Christianin edeltäjän. Frederik II hankki Hillerødsholmin kartanon vaihtokaupalla vuonna 1550, laajennutti liian pientä rakennusta vuodesta 1560 ja nimesi tilan sitten uudelleen Frederiksborgiksi.
+
+Vuonna 1859 vakava tulipalo tuhosi linnan. Se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta, ja yleisön tuen sekä panimomies J. C. Jacobsenin rahojen turvin huoneistot kunnostettiin täysin.
+
+Linna avattiin yleisölle Tanskan kansallishistoriallisena museona vuonna 1882. Museossa on Tanskan suurin muotokuvakokoelma, ja tulipalolta säästyneet kappeli ja audienssisali ovat yhä alkuperäisine koristel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Linna joka selvisi joka sodasta] 1500-luvulta — Aatelismies Jurij Iljinitš aloitti linnan rakentamisen 1400-luvun lopulla tatarien ratsioiden ja naapuririitojen vuoksi. 1500-luvun jälkipuoliskolla linna siirtyi mahtisuku Radziwiłłeille, ja Mikołaj Kristof "Orpo" Radziwiłł laajensi sitä kolmikerroksisilla asuinsiivillä, uudisti torneja ja kaivatti vallihaudan. Vuosisatojen ajan linna koki hyökkäyksiä, tuhoja ja jälleenrakennuksia - viimeksi toisessa maailmansodassa, jolloin sen muurien sisään perustettiin juutalaisghetto. Pitkän kunnostuksen jälkeen Unesco lisäsi Mirin linnan maailmanperintöluetteloon vuonna 2000.
+
+### 9.2
+KYSYMYS: Mistä linnan nimi tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Frederiksborgin linna (kulttuuri)
+Tietoruudun teksti: Frederiksborgin linna Hillerødissä rakennettiin 1600-luvun alussa Tanskan ja Norjan kuninkaan Christian IV:n asunnoksi, ja siitä tuli Skandinavian suurin renessanssiasunto. Se seisoo kolmella pikkusaarella linnajärvessä, ja sen vieressä on laaja barokkityylinen puutarha.
+
+Nimi on Christianin edeltäjän. Frederik II hankki Hillerødsholmin kartanon vaihtokaupalla vuonna 1550, laajennutti liian pientä rakennusta vuodesta 1560 ja nimesi tilan sitten uudelleen Frederiksborgiksi.
+
+Vuonna 1859 vakava tulipalo tuhosi linnan. Se rakennettiin uudelleen vanhojen piirustusten ja maalausten pohjalta, ja yleisön tuen sekä panimomies J. C. Jacobsenin rahojen turvin huoneistot kunnostettiin täysin.
+
+Linna avattiin yleisölle Tanskan kansallishistoriallisena museona vuonna 1882. Museossa on Tanskan suurin muotokuvakokoelma, ja tulipalolta säästyneet kappeli ja audienssisali ovat yhä alkuperäisine koristel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Itävalta — maalehti / Historia: Härkä möyryää linnan tornista] 1502 — Hohensalzburgin linna kohoaa Salzburgin yllä kalliolla, ja sen rakentaminen alkoi jo vuonna 1077 — se on yksi Euroopan suurimmista keskiaikaisista linnoista, 250 metriä pitkä ja 150 metriä leveä. Piispa Leonhard von Keutschach tilasi linnan torniin vuonna 1502 mekaanisen urkukoneen, jossa on yli 200 pilliä; sen möyryävää ääntä verrattiin härän ammumiseen, ja niin siitä tuli Salzburgin härkä. Rochus Egedacher uudisti sen 1735, ja se soi yhä päivittäin palmusunnuntaista lokakuun loppuun kello 7, 11 ja 18. Linna koki ainoan piirityksensä talonpoikaissodassa 1525 ja antautui taistelutta ranskalaisille vuonna 1800.
+- [Ljubljana — kohdekartta / Kohdekartta: Ljubljanan linna] 1100-luku Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti 1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin kirjallinen maininta on Udinen tuomiokirkon arkistossa säilytetyssä pergamentissa, luultavasti vuoden 1161 jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä linnana, ja 1278 se siirtyi Rudolf Habsburgille. Nykyisen ääriviivansa linna sai 1400-luvulla, kun se purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, porttitorneineen ja nostosiltoineen; samaan aikaan valmistui Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin luultavasti ylhäisi…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:storebaeltin-silta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Storebæltin silta (tekniikka)
+Tietoruudun teksti: Storebæltin kiinteä yhteys ylittää Isonbeltin salmen Sjællandin ja Fynin välissä. Se on kahdeksantoista kilometriä pitkä kokonaisuus, jossa on riippusilta autoille ja rautatietunneli Sjællandin ja pienen Sprogøn saaren välillä sekä palkkisilta autoille ja junille Sprogøstä Fyniin.
+
+Riippusillan päävälin pituus on 1,6 kilometriä, maailman seitsemänneksi pisin. Yhdessä Öresundin ja Pikkubeltin siltojen kanssa yhteys tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta.
+
+Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta; ensimmäiset siltaluonnokset ovat 1850-luvulta ja valtionrautateiden suunnitelma vuodelta 1934. Tanskan hallitus päätti rakentaa yhteyden 1986, junaliikenne alkoi 1997 ja autoliikenne 1998. Hanke on Tanskan historian suurin rakennusurakka.
+
+Ennen siltaa lautta vei salmen yli tunnin. Nyt ylitys kestää kymmenen minuuttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+
+### 10.1
+KYSYMYS: Kuinka kauan salmen ylitys kesti ennen siltaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Storebæltin silta (tekniikka)
+Tietoruudun teksti: Storebæltin kiinteä yhteys ylittää Isonbeltin salmen Sjællandin ja Fynin välissä. Se on kahdeksantoista kilometriä pitkä kokonaisuus, jossa on riippusilta autoille ja rautatietunneli Sjællandin ja pienen Sprogøn saaren välillä sekä palkkisilta autoille ja junille Sprogøstä Fyniin.
+
+Riippusillan päävälin pituus on 1,6 kilometriä, maailman seitsemänneksi pisin. Yhdessä Öresundin ja Pikkubeltin siltojen kanssa yhteys tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta.
+
+Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta; ensimmäiset siltaluonnokset ovat 1850-luvulta ja valtionrautateiden suunnitelma vuodelta 1934. Tanskan hallitus päätti rakentaa yhteyden 1986, junaliikenne alkoi 1997 ja autoliikenne 1998. Hanke on Tanskan historian suurin rakennusurakka.
+
+Ennen siltaa lautta vei salmen yli tunnin. Nyt ylitys kestää kymmenen minuuttia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Istanbul — kohdekartta / Kohdekartta: Galatan silta] 1845 Kultaisen sarven yli on suunniteltu siltaa kauan. Vuosina 1502–1503 sulttaani Bajasid II pyysi ehdotuksia, ja Leonardo da Vinci piirsi 280 metrin yhtenäisen jännevälin — aikansa pisimmän. Sulttaani ei hyväksynyt sitä, ja myös Michelangelo kieltäytyi tehtävästä. Ajatus jäi lepäämään kolmeksi ja puoleksi vuosisadaksi. Ensimmäinen silta nykyiselle paikalle rakennettiin puusta vuonna 1845 sulttaanin äidin pyynnöstä. Kolme ensimmäistä päivää ylitys oli ilmainen, sitten alkoi tulli: jalankulkija maksoi viisi paraa, selkäreppuinen kymmenen ja hevosvaunut sata. Maksua keräsivät valkopukuiset virkailijat sillan molemmissa päissä aina vuoteen 1930. Puusilta korvattiin 1863, ja 1875 valmistui bri…
+
+### 10.2
+KYSYMYS: Mikä Sprogø on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Storebæltin silta (tekniikka)
+Tietoruudun teksti: Storebæltin kiinteä yhteys ylittää Isonbeltin salmen Sjællandin ja Fynin välissä. Se on kahdeksantoista kilometriä pitkä kokonaisuus, jossa on riippusilta autoille ja rautatietunneli Sjællandin ja pienen Sprogøn saaren välillä sekä palkkisilta autoille ja junille Sprogøstä Fyniin.
+
+Riippusillan päävälin pituus on 1,6 kilometriä, maailman seitsemänneksi pisin. Yhdessä Öresundin ja Pikkubeltin siltojen kanssa yhteys tekee mahdolliseksi ajaa Manner-Euroopasta Ruotsiin Tanskan kautta.
+
+Kiinteästä yhteydestä ehdittiin väitellä yli viisikymmentä vuotta; ensimmäiset siltaluonnokset ovat 1850-luvulta ja valtionrautateiden suunnitelma vuodelta 1934. Tanskan hallitus päätti rakentaa yhteyden 1986, junaliikenne alkoi 1997 ja autoliikenne 1998. Hanke on Tanskan historian suurin rakennusurakka.
+
+Ennen siltaa lautta vei salmen yli tunnin. Nyt ylitys kestää kymmenen minuuttia.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

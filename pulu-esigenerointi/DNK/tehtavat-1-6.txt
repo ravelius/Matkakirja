@@ -1,0 +1,198 @@
+================ KOHTA 26 (kohde:hahmotelma-hammershus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+- [Kabul — kaupunkilehti / Historia: Lähettilään loppu ja linnoituksen loppu] Syyskuussa 1879 Britannian lähettiläs Kabuliin, Sir Pierre Louis Napoleon Cavagnari, surmattiin Bala Hissarin sisällä. Teko laukaisi yleisen kansannousun ja Toisen anglo-afgaanisodan toisen vaiheen. Linnoitus vaurioitui pahoin: brittiläinen residenssi paloi ja asevarasto räjähti. Wikipedian oma artikkeli kertoo lopusta kahdella tavalla — johdannon mukaan britit tuhosivat linnoituksen 1880, mutta historiaosion mukaan kenraali Frederick Roberts halusi purkaa sen kokonaan, ja lopulta se päinvastoin vahvistettiin keväällä 1880. Emiiri Abdur Rahman Khan laski samana vuonna uuden linnakkeen perustukset, ja Bala Hissar hylättiin 1890-luvulla.
+
+### 26.1
+KYSYMYS: Miksi Hammershusia oli vaikea vallata?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+
+### 26.2
+KYSYMYS: Mitä linnalle tapahtui sen jälkeen, kun se hylättiin linnoituksena?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hammershus (historia)
+Tietoruudun teksti: Hammershus on keskiaikainen linnoitus Bornholmin saaren pohjoiskärjessä Hammerenin niemellä. Se rakennettiin 1200-luvulla, ja se oli Skandinavian suurin keskiaikainen linnoitus. Linna kohoaa 74 metriä merenpinnan yläpuolelle, ja sitä ympäröi 750 metrin mittainen kehämuuri. Huoneita suojasi useita sisäkkäisiä puolustuskehiä, ja sivulla oli kaksi luonnonlähdelampea juomaveden tarpeisiin. Linnasta taisteltiin monesti Tanskan kuninkaiden ja arkkipiispojen välillä, ja myöhemmin sen valtasivat muun muassa Lyypekin joukot ja ruotsalaiset. Linna hylättiin linnoituksena vuonna 1743 ja purettiin osittain noin vuonna 1750, minkä vuoksi se on nykyään raunio, jota on kunnostettu ja huollettu 1800-luvun lopulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Historia: Kaupunki, joka melkein hylättiin ennen kuin ehti alkaa] Paul Chomedey de Maisonneuve johti siirtolaisryhmän saaren eteläosaan ja perusti Ville-Marien 17. toukokuuta 1642 siirtokunnan ensimmäisenä kuvernöörinä; mukana olivat kappeli ja Jeanne Mancen johtama sairaala. Vuoteen 1643 mennessä siirtokunta oli irokeesien hyökkäysten kohteena, ja väkiluku painui alle viidenkymmenen. Jos Maisonneuven Ranskasta värväämät sata uutta siirtolaista eivät olisi saapuneet syksyllä 1653, kaupunki olisi hylätty ja selviytyjät siirretty Québeciin. Vuoteen 1685 mennessä asukkaita oli noin kuusisataa ja paikasta oli tullut turkiskaupan keskus.
+- [Kabul — kaupunkilehti / Historia: Lähettilään loppu ja linnoituksen loppu] Syyskuussa 1879 Britannian lähettiläs Kabuliin, Sir Pierre Louis Napoleon Cavagnari, surmattiin Bala Hissarin sisällä. Teko laukaisi yleisen kansannousun ja Toisen anglo-afgaanisodan toisen vaiheen. Linnoitus vaurioitui pahoin: brittiläinen residenssi paloi ja asevarasto räjähti. Wikipedian oma artikkeli kertoo lopusta kahdella tavalla — johdannon mukaan britit tuhosivat linnoituksen 1880, mutta historiaosion mukaan kenraali Frederick Roberts halusi purkaa sen kokonaan, ja lopulta se päinvastoin vahvistettiin keväällä 1880. Emiiri Abdur Rahman Khan laski samana vuonna uuden linnakkeen perustukset, ja Bala Hissar hylättiin 1890-luvulla.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-koldinghus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 27.1
+KYSYMYS: Miksi Koldinghus rakennettiin juuri Koldingin kukkulalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+### 27.2
+KYSYMYS: Miksi linna jäi rauniona vuosikymmeniksi vuoden 1808 palon jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koldinghus (historia)
+Tietoruudun teksti: Koldinghus on Tanskan kuninkaallinen linna Koldingin kaupungissa Jyllannin niemimaan etelä-keskiosassa. Se perustettiin 1200-luvulla puolustamaan etelärajaa Schleswigin herttuoita vastaan, ja myöhemmin siitä tuli kuninkaallinen asuinpaikka. Kristian IV rakennutti siihen Jättiläistornin, jota koristivat neljän jättiläisen patsaat; nykyään jäljellä on vain Herkuleen patsas. Vuonna 1808 linnaan majoitettiin espanjalaisia sotilaita, ja yöllä syttynyt tulipalo tuhosi päärakennukset. Varoja jälleenrakennukseen ei ollut, joten linna oli vuosikymmeniä raunio, jossa vieraili muun muassa H. C. Andersen. Nykyään restauroitu linna on museo: laaja kunnostus kesti vuodesta 1976 vuoteen 1993 ja palkittiin Europa Nostra -palkinnolla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-dybbol) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+
+### 28.1
+KYSYMYS: Miksi Tanskan armeija vetäytyi Dannevirken linjalta juuri Dybbølin juoksuhautoihin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+
+### 28.2
+KYSYMYS: Miksi Dybbøl tunnettiin aikoinaan nimellä Düppel?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dybbøl (historia)
+Tietoruudun teksti: Dybbøl on pieni kaupunki Etelä-Jyllannin kaakkoiskulmassa, noin kuusi kilometriä Sønderborgista länteen. Se tunnetaan vuoden 1864 taistelusta Toisessa Schleswigin sodassa. Tanskan armeija vetäytyi Dannevirken puolustuslinjalta, kun sen tukena olleet vesistöt ja suot jäätyivät kovana talvena, ja hakeutui puolustuskelpoisempaan asemaan Dybbølin kenttälinnakkeisiin. Preussilaiset pommittivat asemaa kuukauden ajan rihlatuilla tykeillä, ja 18. huhtikuuta 1864 heidän hyökkäyksensä onnistui. Rauhansopimuksessa Tanska luovutti Schleswigin, ja paikkakunta oli vuosina 1864–1920 saksalaisen hallinnon alla nimellä Düppel. Dybbølin mylly on Tanskan kansallissymboli, ja alue on nykyään suojeltu muistomerkki- ja museoalue.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-viborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kohdekartta / Kohdekartta: Dilin satama] 1726 Dilin satama on pieni, avoin ja luonnollinen: merenpohja on hiekkaa, mutta siinä on niin paljon riuttoja, että käytettävissä oleva syväys vaihtelee huomattavasti paikasta toiseen. Sataman reunaa kiertävä luonnonriutta suojaa sitä sadekauden pahimmilta säiltä, ja sisääntulo kulkee kapeaa väylää kahden erillisen riutan välistä — ne näkyvät laskuvedellä ja on merkitty poijuin. Paikalla on ollut satama ainakin vuodesta 1726, jolloin se oli jo portugalilaisten pysähdyspaikka. Skotlantilainen John Crawfurd kirjoitti 1820, että Dilissä kävi vuosittain kymmenestä kahteentoista englantilaista laivaa täydentämässä varastojaan sinä aikana, kun britit miehittivät Molukkeja 1810–1814. Sataman satam…
+- [Antofagasta — kohdekartta / Kohdekartta: Antofagastan katedraali] 1907—1917 Antofagastan katedraali on palanut kahdesti ennen kuin se rakennettiin kiveen. Ensimmäinen versio nousi 1872 karkeista laakeripuulaudoista, ja kellotapulina oli neljästä viiteen metriä korkea tolppa, jossa riippui kaksi pientä kelloa ja teräskolmio. Se paloi joulukuussa 1880. Tilalle tuli puinen rakennus, jonka katto oli puolikupoli ja josta nousi korkea torni. 1880-luvun loppupuoliskolla se korvattiin koristeellisemmalla suunnitelmalla — ja sekin paloi, 15. marraskuuta 1906. Peruskivi nykyiselle kirkolle laskettiin täsmälleen vuosi palon jälkeen, 15. marraskuuta 1907. Uusgoottilaisen rakennuksen teki arkkitehti Emilio Doyère; symbolinen vihkiäinen pidettiin 1914, mutta talo valmi…
+
+### 29.1
+KYSYMYS: Miksi Viborgin tuomiokirkko jouduttiin rakentamaan uudelleen 1800-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+
+### 29.2
+KYSYMYS: Mitä keskiaikaiselle kirkolle tapahtui vuoden 1726 jälkeen, ennen kuin se purettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viborgin tuomiokirkko (historia)
+Tietoruudun teksti: Viborgin tuomiokirkko on yksi Tanskan tärkeimmistä historiallisista kirkoista Jyllannin pohjoisosassa, ja kaupungissa on ollut piispanistuin vuodesta 1065. Nykyinen rakennus on silti 1800-luvun työ: sen paikalla seissyt keskiaikainen katedraali aloitettiin noin vuonna 1130, mutta vuoden 1726 tulipalo jätti jäljelle vain paljaat seinät ja holvit. Rauniot koteloitiin barokkityyliseen rakennukseen, ja vuosina 1800–1814 kirkkoa käytettiin jopa viljavarastona. Lopulta se purettiin ja rakennettiin tiilestä uudelleen, minkä jälkeen eteen tehtiin halvempi graniittijulkisivu. Esikuvana oli Lundin romaaninen tuomiokirkko Ruotsissa, ja uusi kirkko vihittiin käyttöön 1876. Vanhin osa on krypta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dili — kohdekartta / Kohdekartta: Dilin satama] 1726 Dilin satama on pieni, avoin ja luonnollinen: merenpohja on hiekkaa, mutta siinä on niin paljon riuttoja, että käytettävissä oleva syväys vaihtelee huomattavasti paikasta toiseen. Sataman reunaa kiertävä luonnonriutta suojaa sitä sadekauden pahimmilta säiltä, ja sisääntulo kulkee kapeaa väylää kahden erillisen riutan välistä — ne näkyvät laskuvedellä ja on merkitty poijuin. Paikalla on ollut satama ainakin vuodesta 1726, jolloin se oli jo portugalilaisten pysähdyspaikka. Skotlantilainen John Crawfurd kirjoitti 1820, että Dilissä kävi vuosittain kymmenestä kahteentoista englantilaista laivaa täydentämässä varastojaan sinä aikana, kun britit miehittivät Molukkeja 1810–1814. Sataman satam…
+- [Antofagasta — kohdekartta / Kohdekartta: Antofagastan katedraali] 1907—1917 Antofagastan katedraali on palanut kahdesti ennen kuin se rakennettiin kiveen. Ensimmäinen versio nousi 1872 karkeista laakeripuulaudoista, ja kellotapulina oli neljästä viiteen metriä korkea tolppa, jossa riippui kaksi pientä kelloa ja teräskolmio. Se paloi joulukuussa 1880. Tilalle tuli puinen rakennus, jonka katto oli puolikupoli ja josta nousi korkea torni. 1880-luvun loppupuoliskolla se korvattiin koristeellisemmalla suunnitelmalla — ja sekin paloi, 15. marraskuuta 1906. Peruskivi nykyiselle kirkolle laskettiin täsmälleen vuosi palon jälkeen, 15. marraskuuta 1907. Uusgoottilaisen rakennuksen teki arkkitehti Emilio Doyère; symbolinen vihkiäinen pidettiin 1914, mutta talo valmi…
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-lejre) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+
+### 30.1
+KYSYMYS: Mitä Lejren kaivauksissa löytyi, joka tukee tarinoita muinaisesta kuningasistuimesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+
+### 30.2
+KYSYMYS: Miksi Lejren asutusta pidetään pikemmin kauppa- ja uskontokeskuksena kuin sotilastukikohtana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lejre (historia)
+Tietoruudun teksti: Lejre on pieni rautatiekaupunki Sjællandin luoteisosassa, mutta Tanskan historiassa sen nimi painaa paljon. Keskiaikaiset lähteet, kuten Saxo Grammaticuksen Gesta Danorum, kertovat Lejren Skjöldung-suvun kuninkaista, ja paikkaa on pidetty Beowulf-eepoksen kuninkaanhallin Heorotin esikuvana. Legendat ovat suurelta osin satua, mutta 1980-luvulta alkaneet kaivaukset osoittivat niillä olevan todellinen pohja. Gammel Lejren luona paljastui rautakauden ja viikinkiajan asutus, jossa oli vähintään 50–60 metrin pituisten hallien pylväänreikiä. Asutus ajoittuu noin vuosien 550 ja 1000 välille. Aseita löytyi vähän, joten paikka näyttää olleen pikemmin kauppa-, käsityö- ja uskonnollinen keskus kuin sotilastukikohta.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

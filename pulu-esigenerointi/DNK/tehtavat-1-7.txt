@@ -1,0 +1,198 @@
+================ KOHTA 31 (kohde:hahmotelma-ringsted) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+### 31.1
+KYSYMYS: Mitä Pyhän Bendtin kirkossa on, mikä tekee siitä erityisen Tanskan historiassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+### 31.2
+KYSYMYS: Mitä maakäräjät (landsting) olivat, ja mitä niissä tehtiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ringsted (historia)
+Tietoruudun teksti: Ringsted on kaupunki Sjællandin saaren keskiosassa, noin 60 kilometrin päässä Kööpenhaminasta. Keskiajalla siellä kokoontuivat Sjællandin maakäräjät, jotka siirtyivät vuonna 1584 Pyhän Bendtin kirkkoon ja vuonna 1805 Kööpenhaminaan. Pyhän Bendtin kirkko on kaupungin tunnetuin nähtävyys: se on entinen benediktiiniläisluostarin romaaninen kirkko, jossa on lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja. Kaupungin vaakuna on vuodelta 1421, ja sen kolmen palvojahahmon tulkinnasta on väitelty. Kaupunki itse tulkitsee ne pyhäksi Knud Lavardiksi, kuningas Erik Plovpenningiksi ja Benedictus Nursialaiseksi. Nykyään Ringsted on myös vilkas rautatieristeys Sjællandin keskellä.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-ladby) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+### 32.1
+KYSYMYS: Miksi Ladbyn laivahaudasta löytyi vain vähän vainajan luita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+### 32.2
+KYSYMYS: Millaisia hautalahjoja viikinkipäällikön mukana oli, ja mitä ne kertovat hänestä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ladbyn laivahauta (historia)
+Tietoruudun teksti: Ladbyn laivahauta on Fynin koillisosassa, lähellä Kertemindeä. Se on ainoa Tanskasta löydetty viikinkiajan laivahauta, koska vastaava Hedebyn kammiohauta on nykyään Saksassa. Haudan ajoitetaan 900-luvun alkuun, ja ajoitus perustuu koiran valjaiden kullattuun pronssilenkkiin. Hauta paljastui noin 28. helmikuuta 1935, kun apteekkari ja harrastelija-arkeologi Poul Helweg Mikkelsen löysi sen. Kaivauksissa esiin tuli runsaasti hautalahjoja, sekä esineitä että eläimiä. Hauta oli kuitenkin pahoin vahingoittunut, ja vainajasta löytyi vain muutama pieni luu. Nykyään laiva on säilytetty löytöpaikallaan, jossa toimii viikinkimuseo.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-christiansfeld) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+
+### 33.1
+KYSYMYS: Miksi Christiansfeld on Unescon maailmanperintökohde?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+
+### 33.2
+KYSYMYS: Mitä kuningas Kristian VII lupasi, jotta uuden kaupungin rakentaminen kannattaisi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Christiansfeld (historia)
+Tietoruudun teksti: Christiansfeld on kaupunki Etelä-Jyllannissa, jonka herrnhutilaiset perustivat vuonna 1773. Se sai nimensä Tanskan kuningas Kristian VII:n mukaan, ja rakentajien houkuttelemiseksi kuningas lupasi kymmenen vuoden verovapauden sekä maksoi kymmenesosan uusien talojen kustannuksista. Suurin osa kaupungista rakennettiin vuosina 1773–1800 tiukan asemakaavan mukaan Kirkkotorin ympärille: talot ovat yksi- tai kaksikerroksisia, keltaisesta tiilestä tehtyjä ja punakattoisia, ja monet niistä olivat yhteisasuntoja leskille sekä naimattomille naisille ja miehille. Kaupunki liitettiin Preussille vuonna 1864 ja palasi Tanskaan vasta vuonna 1920. Nykyään se on Unescon maailmanperintökohde (2015), parhaiten säilynyt esimerkki herrnhutilaisten kaupunkisuunnittelusta, ja tunnettu hunajakakuistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-kalundborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalundborg (historia)
+Tietoruudun teksti: Kalundborg on kaupunki Sjællandin saaren luoteisrannikolla, noin 110 kilometrin päässä Kööpenhaminasta. Alue asutettiin vuonna 1170 Kalundborgin vuonon pohjukassa olevan luonnonsataman ääreen, ja kaupunki kasvoi 1800-luvulla ja 1900-luvun puoliväliin mennessä suureksi teollisuuskeskukseksi. Sen tunnetuin nähtävyys on Vor Frue Kirke eli Neitsyt Marian kirkko, jonka viisi tornihuippua ovat kaupungin tavaramerkki. Kirkko liitetään kuningas Valdemar I:een ja arkkipiispa Absaloniin, ja sen kerrotaan rakentaneen Absalonin veli Esbern Snare. Kalundborg on myös tunnettu teollisesta symbioosista: yritykset ovat vaihtaneet vettä, energiaa ja sivutuotteita jo 1960-luvun alusta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Christiansborgin linna] 1907–1928 Christiansborgin linna seisoo Slotsholmenin saarella paikalla, jossa piispa Absalon rakensi Kööpenhaminan ensimmäisen linnan jo vuonna 1167. Sen jälkeen paikalle on noussut linna toisensa perään - kahdesti aiempi rakennus on tuhoutunut kokonaan tulipalossa, vuosina 1794 ja 1884. Nykyinen, jo kolmas Christiansborg valmistui vuosina 1907–1928. Se on rakennettu uusbarokkityyliin raudoitetusta betonista, ja sen torni kohoaa 106 metrin korkeuteen - se on Kööpenhaminan korkein rakennus. Christiansborg on maailmanlaajuisestikin harvinainen: se on ainoa rakennus, jossa toimivat samaan aikaan kaikki kolme valtiovallan haaraa - Tanskan parlamentti, pääministerin toimisto ja korkein oikeus. …
+- [Caracas — kaupunkilehti / Luonto: Musta lääke keisarin kihtiin] Kauan ennen porauslauttoja alkuperäiskansat keräsivät maan pinnalle pursuavaa mustaa mene-tervaa lääkkeeksi, valaistukseen ja kanoottien tiivistämiseen. Espanjalaiset oppivat saman tempun: vuonna 1539 Venezuelasta laivattiin Espanjaan yksi tynnyri öljyä keisari Kaarle V:n kihdin hoitoon. Teollinen poraus alkoi 1910-luvulla, ja sen keskus olivat Maracaibo-järven ympärillä ja alla olevat kentät, joiden matalaan veteen nousi metsä poraustorneja. Vuoteen 1928 mennessä Venezuela oli maailman suurin öljynviejä, ja öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön pääkonttori on Caracasissa.
+
+### 34.1
+KYSYMYS: Keitä olivat Absalon ja Esbern Snare, joihin kaupungin kuuluisa kirkko liitetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalundborg (historia)
+Tietoruudun teksti: Kalundborg on kaupunki Sjællandin saaren luoteisrannikolla, noin 110 kilometrin päässä Kööpenhaminasta. Alue asutettiin vuonna 1170 Kalundborgin vuonon pohjukassa olevan luonnonsataman ääreen, ja kaupunki kasvoi 1800-luvulla ja 1900-luvun puoliväliin mennessä suureksi teollisuuskeskukseksi. Sen tunnetuin nähtävyys on Vor Frue Kirke eli Neitsyt Marian kirkko, jonka viisi tornihuippua ovat kaupungin tavaramerkki. Kirkko liitetään kuningas Valdemar I:een ja arkkipiispa Absaloniin, ja sen kerrotaan rakentaneen Absalonin veli Esbern Snare. Kalundborg on myös tunnettu teollisesta symbioosista: yritykset ovat vaihtaneet vettä, energiaa ja sivutuotteita jo 1960-luvun alusta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Christiansborgin linna] 1907–1928 Christiansborgin linna seisoo Slotsholmenin saarella paikalla, jossa piispa Absalon rakensi Kööpenhaminan ensimmäisen linnan jo vuonna 1167. Sen jälkeen paikalle on noussut linna toisensa perään - kahdesti aiempi rakennus on tuhoutunut kokonaan tulipalossa, vuosina 1794 ja 1884. Nykyinen, jo kolmas Christiansborg valmistui vuosina 1907–1928. Se on rakennettu uusbarokkityyliin raudoitetusta betonista, ja sen torni kohoaa 106 metrin korkeuteen - se on Kööpenhaminan korkein rakennus. Christiansborg on maailmanlaajuisestikin harvinainen: se on ainoa rakennus, jossa toimivat samaan aikaan kaikki kolme valtiovallan haaraa - Tanskan parlamentti, pääministerin toimisto ja korkein oikeus. …
+
+### 34.2
+KYSYMYS: Mikä on teollinen symbioosi, ja miten se sai alkunsa Kalundborgissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalundborg (historia)
+Tietoruudun teksti: Kalundborg on kaupunki Sjællandin saaren luoteisrannikolla, noin 110 kilometrin päässä Kööpenhaminasta. Alue asutettiin vuonna 1170 Kalundborgin vuonon pohjukassa olevan luonnonsataman ääreen, ja kaupunki kasvoi 1800-luvulla ja 1900-luvun puoliväliin mennessä suureksi teollisuuskeskukseksi. Sen tunnetuin nähtävyys on Vor Frue Kirke eli Neitsyt Marian kirkko, jonka viisi tornihuippua ovat kaupungin tavaramerkki. Kirkko liitetään kuningas Valdemar I:een ja arkkipiispa Absaloniin, ja sen kerrotaan rakentaneen Absalonin veli Esbern Snare. Kalundborg on myös tunnettu teollisesta symbioosista: yritykset ovat vaihtaneet vettä, energiaa ja sivutuotteita jo 1960-luvun alusta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto: Musta lääke keisarin kihtiin] Kauan ennen porauslauttoja alkuperäiskansat keräsivät maan pinnalle pursuavaa mustaa mene-tervaa lääkkeeksi, valaistukseen ja kanoottien tiivistämiseen. Espanjalaiset oppivat saman tempun: vuonna 1539 Venezuelasta laivattiin Espanjaan yksi tynnyri öljyä keisari Kaarle V:n kihdin hoitoon. Teollinen poraus alkoi 1910-luvulla, ja sen keskus olivat Maracaibo-järven ympärillä ja alla olevat kentät, joiden matalaan veteen nousi metsä poraustorneja. Vuoteen 1928 mennessä Venezuela oli maailman suurin öljynviejä, ja öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön pääkonttori on Caracasissa.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-odense) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odense (kulttuuri)
+Tietoruudun teksti: Odense on Tanskan kolmanneksi suurin kaupunki ja Fynin saaren kaupallinen keskus. Nimi juontuu muodosta Óðins vé, ”Odinin pyhäkkö”, ja kirjallisissa lähteissä kaupunki mainitaan ensimmäisen kerran vuonna 988. Sadunkertoja Hans Christian Andersen syntyi Odensessa vuonna 1805 suutarin poikana ja asui lapsuutensa pienessä ristikkorakenteisessa talossa kaksivuotiaasta neljäntoistavuotiaaksi. Hänen syntymäkotinaan pidetystä keltaisesta talosta tuli museo vuonna 1908, ja lapsuudenkoti avattiin museona vuonna 1930. Kaupunki kasvoi 1800-luvulla nopeasti: Fynin poikki rakennettiin rautatie vuonna 1865, ja Odensesta tuli yksi Tanskan suurimmista rautatiesolmuista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Urheilu: Kylä, jonka takaa ennätykset tulevat] 1953–2026 — Thame on šerpakylä Solukhumbussa, viimeinen ympärivuotinen asutus vanhalla Tiibetin-suolatiellä. Sieltä ovat kotoisin sekä Apa Sherpa, joka nousi Everestille 21 kertaa, että Kami Rita Sherpa, joka teki saman 32. kerran toukokuussa 2026 — enemmän kuin kukaan muu. Kami Rita kasvoi yksihuoneisessa talossa, harkitsi munkiksi ryhtymistä ja kantoi tavaraa perusleirille jo lapsena. Myös Tenzing Norgay vietti lapsuutensa Thamessa. Ammatti on yhä vaarallinen: šerpojen osuus Everestin kuolonuhreista on noin kolmannes.
+- [Kööpenhamina — kaupunkilehti / Sadut: Poika tuli kaupunkiin yksin] Hans Christian Andersen syntyi Odensessa suutarin perheeseen vuonna 1805. Neljätoistavuotiaana hän lähti yksin Kööpenhaminaan ja aikoi kuninkaalliseen teatteriin laulajaksi. Ääni kuitenkin murtui, eikä tanssijasta tai näyttelijästäkään tullut mitään. Virkamies Jonas Collin järjesti pojalle koulupaikan, ja koulussa Andersen istui monta vuotta itseään paljon nuorempien kanssa. Ensimmäinen ohut satuvihko ilmestyi vuonna 1835, ja satuja on käännetty yli sadalle kielelle.
+
+### 35.1
+KYSYMYS: Mitä Odensen nimi alun perin tarkoitti, ja minkä muinaisen jumalan mukaan kaupunki on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odense (kulttuuri)
+Tietoruudun teksti: Odense on Tanskan kolmanneksi suurin kaupunki ja Fynin saaren kaupallinen keskus. Nimi juontuu muodosta Óðins vé, ”Odinin pyhäkkö”, ja kirjallisissa lähteissä kaupunki mainitaan ensimmäisen kerran vuonna 988. Sadunkertoja Hans Christian Andersen syntyi Odensessa vuonna 1805 suutarin poikana ja asui lapsuutensa pienessä ristikkorakenteisessa talossa kaksivuotiaasta neljäntoistavuotiaaksi. Hänen syntymäkotinaan pidetystä keltaisesta talosta tuli museo vuonna 1908, ja lapsuudenkoti avattiin museona vuonna 1930. Kaupunki kasvoi 1800-luvulla nopeasti: Fynin poikki rakennettiin rautatie vuonna 1865, ja Odensesta tuli yksi Tanskan suurimmista rautatiesolmuista.
+
+### 35.2
+KYSYMYS: Millaisessa kodissa Andersen vietti lapsuutensa Odensessa, ja mitä talossa on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Odense (kulttuuri)
+Tietoruudun teksti: Odense on Tanskan kolmanneksi suurin kaupunki ja Fynin saaren kaupallinen keskus. Nimi juontuu muodosta Óðins vé, ”Odinin pyhäkkö”, ja kirjallisissa lähteissä kaupunki mainitaan ensimmäisen kerran vuonna 988. Sadunkertoja Hans Christian Andersen syntyi Odensessa vuonna 1805 suutarin poikana ja asui lapsuutensa pienessä ristikkorakenteisessa talossa kaksivuotiaasta neljäntoistavuotiaaksi. Hänen syntymäkotinaan pidetystä keltaisesta talosta tuli museo vuonna 1908, ja lapsuudenkoti avattiin museona vuonna 1930. Kaupunki kasvoi 1800-luvulla nopeasti: Fynin poikki rakennettiin rautatie vuonna 1865, ja Odensesta tuli yksi Tanskan suurimmista rautatiesolmuista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nepal — maalehti / Urheilu: Kylä, jonka takaa ennätykset tulevat] 1953–2026 — Thame on šerpakylä Solukhumbussa, viimeinen ympärivuotinen asutus vanhalla Tiibetin-suolatiellä. Sieltä ovat kotoisin sekä Apa Sherpa, joka nousi Everestille 21 kertaa, että Kami Rita Sherpa, joka teki saman 32. kerran toukokuussa 2026 — enemmän kuin kukaan muu. Kami Rita kasvoi yksihuoneisessa talossa, harkitsi munkiksi ryhtymistä ja kantoi tavaraa perusleirille jo lapsena. Myös Tenzing Norgay vietti lapsuutensa Thamessa. Ammatti on yhä vaarallinen: šerpojen osuus Everestin kuolonuhreista on noin kolmannes.
+- [Kööpenhamina — kaupunkilehti / Sadut: Poika tuli kaupunkiin yksin] Hans Christian Andersen syntyi Odensessa suutarin perheeseen vuonna 1805. Neljätoistavuotiaana hän lähti yksin Kööpenhaminaan ja aikoi kuninkaalliseen teatteriin laulajaksi. Ääni kuitenkin murtui, eikä tanssijasta tai näyttelijästäkään tullut mitään. Virkamies Jonas Collin järjesti pojalle koulupaikan, ja koulussa Andersen istui monta vuotta itseään paljon nuorempien kanssa. Ensimmäinen ohut satuvihko ilmestyi vuonna 1835, ja satuja on käännetty yli sadalle kielelle.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

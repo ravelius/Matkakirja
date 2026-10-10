@@ -1,0 +1,204 @@
+================ KOHTA 41 (kohde:hahmotelma-samso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio de Aguas Corrientes] 1887–1894 Kaupungin ensimmäinen vesilaitos oli brittiomisteinen Buenos Aires Water Supply and Drainage Company Limited, ja se avattiin 1869. Sen ensimmäinen johtaja oli insinööri Guillermo Villanueva, jonka rintakuva seisoo talon puutarhassa. Yhtiön arkisto perustettiin isoisän matkavuonna 1873, ja se on yhä ainoa kokoelma, jossa on täydelliset tiedot kaupungin vesihuollon suunnittelusta — vanhimmat piirustukset ovat vuodelta 1870. Talon suunnittelivat 1877 norjalainen arkkitehti Olaf Boye, ruotsalainen insinööri Carlos Nyströmer ja brittiläinen rakennusinsinööri John Bateman. Rakentaminen alkoi 1887 ja talo vihittiin 1894. Sisällä oli kolmessa kerroksessa kaksitoista vesisäiliötä, joihin m…
+
+### 41.1
+KYSYMYS: Miksi viikingit kaivoivat kanavan keskelle pientä saarta Kattegatissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+### 41.2
+KYSYMYS: Miten saari, joka ennen tuotti energiansa tuontiöljyllä ja -hiilellä, pääsi eroon fossiilisista polttoaineista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Samsø (tekniikka)
+Tietoruudun teksti: Samsø on Kattegatin saari noin 15 kilometrin päässä Jyllannin rannikosta. Saaren poikki kaivettiin vuosina 726–729 puureunainen Kanhaven kanava, joka on yksi suurimmista tunnetuista viikinkien rakennushankkeista. Keskiajalla saarelle rakennettiin viisi linnoitusta, mutta niistä on jäljellä vain linnakumpuja. Vuonna 1997 Samsø voitti valtion kilpailun ja siitä tuli uusiutuvan energian mallikunta: ensimmäinen tuulivoimala käynnistyi vuonna 2000, ja merelle rakennettiin kymmenen voimalaa vuoteen 2003 mennessä. Nykyään saaren sähkö tulee vuositasolla kokonaan tuulesta, ja lämmöstä 75 % tuotetaan paikallisella aurinko- ja biomassaenergialla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Palacio de Aguas Corrientes] 1887–1894 Kaupungin ensimmäinen vesilaitos oli brittiomisteinen Buenos Aires Water Supply and Drainage Company Limited, ja se avattiin 1869. Sen ensimmäinen johtaja oli insinööri Guillermo Villanueva, jonka rintakuva seisoo talon puutarhassa. Yhtiön arkisto perustettiin isoisän matkavuonna 1873, ja se on yhä ainoa kokoelma, jossa on täydelliset tiedot kaupungin vesihuollon suunnittelusta — vanhimmat piirustukset ovat vuodelta 1870. Talon suunnittelivat 1877 norjalainen arkkitehti Olaf Boye, ruotsalainen insinööri Carlos Nyströmer ja brittiläinen rakennusinsinööri John Bateman. Rakentaminen alkoi 1887 ja talo vihittiin 1894. Sisällä oli kolmessa kerroksessa kaksitoista vesisäiliötä, joihin m…
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-maribo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+### 42.1
+KYSYMYS: Millainen oli Leonora Christina Ulfeldtin elämä ennen kuin hän päätyi Maribon luostariin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+### 42.2
+KYSYMYS: Mikä birgittalaisluostari oikein oli, ja miksi sellainen perustettiin Lollandille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maribo (kauppa)
+Tietoruudun teksti: Maribo on Lollandin saaren keskellä sijaitseva kauppakaupunki, josta on nykyään tullut Lollandin kunnan hallintokeskus. Kaupunkia ympäröivät pohjoisessa Nørresø ja etelässä Søndersø, joka on Lollandin suurin järvi ja jossa on enemmän saaria kuin missään muussa Tanskan järvessä. Kaupungin menneisyys liittyy birgittalaisluostariin, jonka perustamista auttoivat Vadstenan luostarista lähetetyt munkit. Luostari lakkautettiin vuonna 1536 ja muutettiin 1556 aatelisneitojen luostariksi, ja sen kirkosta tuli myöhemmin kaupungin kirkko. Vuosina 1803–1804 kirkko sai Lolland-Falsterin hiippakunnan tuomiokirkon aseman, ja kuningas Kristian IV:n tytär Leonora Christina Ulfeldt vietti luostarissa elämänsä viimeiset vuodet.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-ebeltoft) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+
+### 43.1
+KYSYMYS: Mitä Poul la Cour tutki, kun hän teki varhaista työtä tuulivoiman parissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Keksinnöt: Myllyt seisovat meressä] 2000 — Tanska on tehnyt sähköä tuulesta pitempään kuin melkein kukaan: opettaja Poul la Cour rakensi jo 1890-luvulla tuulimyllyn, joka tuotti sähköä koulun tarpeisiin. Kööpenhaminan edustalle valmistui vuonna 2000 Middelgrundenin merituulipuisto, jonka kaksikymmentä myllyä seisovat kaaressa merellä. Puolet siitä rakennettiin osuuskuntana: tuhannet tavalliset ihmiset ostivat osuuden ja saavat siitä tuoton. Nykyään tuuli tuottaa yli puolet koko maan sähköstä.
+
+### 43.2
+KYSYMYS: Miksi juuri Ebeltoftin vanha keskusta haluttiin suojella 1960-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ebeltoft (merenkulku)
+Tietoruudun teksti: Ebeltoft on vanha satamakaupunki Jyllannin niemimaan Djurslandin niemellä, Tanskan keskisellä itärannikolla. Vanhan keskustan mukulakivikadut ja vuosisatoja vanhat ristikkotalot on haluttu säilyttää: suojelusuunnitelmat aloittivat 1960-luvulla kaupunginvaltuusto ja Tanskan kansallismuseo. Kaupungin nähtävyyksiin kuuluu Fregatten Jylland, joka on maailman pisin puinen sotalaiva. Lisäksi Ebeltoftissa toimii Glasmuseet Ebeltoft, yksi maailman ensimmäisistä lasimuseoista, jonka lasitaiteilijat Finn Lynggaard ja Tchai Munch perustivat vuonna 1985. Ebeltoftissa syntyi myös tiedemies ja keksijä Poul la Cour, joka teki varhaista työtä tuulivoiman parissa.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-tonder) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Siirtokunta, joka muutti saarelta mantereelle] Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri Claus Paarss siirsi Hans Egeden Toivon siirtokunnan Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi toivoksi. Alku oli karu: Paarssin siirtolaiset olivat kapinoineita sotilaita ja tuomittuja, ja ensimmäisen vuoden aikana useimmat kuolivat keripukkiin ja muihin tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi suuren osan paikallisväestöstä ja myös Egeden vaimon. Egede palasi Tanskaan 1736 ja jätti työn pojalleen Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta 1979, samana päivänä kun kotihallinto aloitti.
+- [Nuuk — kaupunkilehti / Tiede ja tekniikka: Yliopisto, joka aloitti lähetysasemalla] Grönlannin ainoa yliopisto Ilisimatusarfik perustettiin Nuukiin 1987, jotta korkeakoulutusta olisi saatavilla myös kotona. Ensimmäiset vuodet se toimi entisellä herrnhutilaisella lähetysasemalla Uudessa Herrnhutissa — samassa paikassa, josta koko kaupunki osittain kasvoi. 2000-luvun lopulla yliopisto muutti omaan tutkimuskompleksiinsa Ilimmarfikiin, jossa ovat muun muassa kielen, kulttuurihistorian ja teologian laitokset, Grönlannin tilastokeskus ja kansalliskirjaston Groenlandica-kokoelma. Useimmat kurssit opetetaan tanskaksi, osa grönlanniksi. Yliopisto on pieni, koska moni grönlantilainen opiskelija lähtee Tanskaan.
+
+### 44.1
+KYSYMYS: Miksi kaupunki liitettiin Tanskaan, vaikka useimmat asukkaat äänestivät Saksan puolesta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nuuk — kaupunkilehti / Nuuk: Siirtokunta, joka muutti saarelta mantereelle] Kaupunki syntyi 1728, kun kuninkaallinen kuvernööri Claus Paarss siirsi Hans Egeden Toivon siirtokunnan Kangeqin saarelta mantereelle inuiittiasutuksen Nûkin kohdalle. Uusi linnake nimettiin Godthaabiksi, hyväksi toivoksi. Alku oli karu: Paarssin siirtolaiset olivat kapinoineita sotilaita ja tuomittuja, ja ensimmäisen vuoden aikana useimmat kuolivat keripukkiin ja muihin tauteihin. Vuosien 1733–1734 isorokkoepidemia tappoi suuren osan paikallisväestöstä ja myös Egeden vaimon. Egede palasi Tanskaan 1736 ja jätti työn pojalleen Poulille. Nimi vaihtui Nuukiksi vasta 1. toukokuuta 1979, samana päivänä kun kotihallinto aloitti.
+- [Nuuk — kaupunkilehti / Tiede ja tekniikka: Yliopisto, joka aloitti lähetysasemalla] Grönlannin ainoa yliopisto Ilisimatusarfik perustettiin Nuukiin 1987, jotta korkeakoulutusta olisi saatavilla myös kotona. Ensimmäiset vuodet se toimi entisellä herrnhutilaisella lähetysasemalla Uudessa Herrnhutissa — samassa paikassa, josta koko kaupunki osittain kasvoi. 2000-luvun lopulla yliopisto muutti omaan tutkimuskompleksiinsa Ilimmarfikiin, jossa ovat muun muassa kielen, kulttuurihistorian ja teologian laitokset, Grönlannin tilastokeskus ja kansalliskirjaston Groenlandica-kokoelma. Useimmat kurssit opetetaan tanskaksi, osa grönlanniksi. Yliopisto on pieni, koska moni grönlantilainen opiskelija lähtee Tanskaan.
+
+### 44.2
+KYSYMYS: Miten pitsiteollisuus sai pienen kauppakaupungin kasvamaan nopeasti 1600- ja 1700-luvuilla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tønder (kauppa)
+Tietoruudun teksti: Tønder on kaupunki Etelä-Tanskan alueella lähellä Saksan rajaa ja Tønderin kunnan pääkaupunki. Hansaliitto myönsi sille satamaoikeudet vuonna 1243, ja sitä pidetään Tanskan vanhimpana etuoikeutettuna kauppakaupunkina. 1550-luvulla sataman suora yhteys mereen katkesi, kun kaupungin länsipuolelle rakennettiin penkereitä. Keskustaa hallitsevat 1600-luvun lopun ja 1700-luvun alun talot, jolloin kaupunki kasvoi nopeasti pitsiteollisuuden ansiosta. Ennen vuotta 1864 Tønder kuului Schleswigin herttuakuntaan, ja vuoden 1920 kansanäänestysten jälkeen se liitettiin Tanskaan, vaikka noin 76 prosenttia kaupunkilaisista äänesti Saksan puolesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Käsityö: Pitsi, jota ei kudota vaan leikataan] 1846 — Carrickmacrossin pitsi ei ole kudottua vaan ommeltua. Ohut palttina kiinnitetään harsokankaan päälle, kuvio ommellaan reunoja pitkin kiinni ja ylimääräinen kangas leikataan varovasti pois. Tekniikka tuli Irlantiin 1820-luvulla, mutta se levisi laajalle vasta nälänhädän aikana, kun pitsikouluja perustettiin antamaan naisille ansiota. Työ oli hidasta ja tarkkaa, ja hyvästä kauluksesta sai enemmän kuin viikon päiväpalkan. Pitsiä tehdään kaupungissa yhä, ja sitä on käytetty muun muassa kuninkaallisissa hääpuvuissa.
+- [Asunción — kaupunkilehti / Arki ja perintö: Pitsi, joka kantaa hämähäkin nimeä] Ñandutí tarkoittaa guaraniksi hämähäkinseittiä, ja pitsi tehdään juuri sen näköiseksi. Kangas pingotetaan kehykseen, ja siihen vedetään säteittäisiä puuvilla- tai silkkilankoja, joista syntyy pyöreitä seittikuvioita; yhteen kiekkoon voi kertyä jopa sataviisikymmentä sädettä. Tekijä käyttää työssään vain kolmea välinettä ja nimeää työvaiheet niiden mukaan: lyijykynä piirtää kuvion, neula kutoo sen, ja sakset irrottavat valmiin kiekon alustakankaasta.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-nyborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Neljä metriä metallia, jota soitetaan vain palatsissa] Kakaki on kolmesta neljään metriä pitkä metallitorvi, ja sen ääni kuuluu vallalle. Samaa nimeä käytetään Tšadissa, Nigerissä, Nigeriassa, Beninissä, Ghanassa ja Burkina Fasossa; Etiopiassa ja Eritreassa soitin tunnetaan nimellä malakat. Alkuaan se oli songhailaisen ratsuväen soitin. Hausojen keskuudessa kakakia soitetaan vain kuninkaan tai sulttaanin palatsissa osana saraa, viikoittain toistuvaa vallan osoitusta, ja vain miehet soittavat sitä. Pitkiä kuninkaallisia torvia — kakakia ja wazaa — kuullaan kruunajaisissa kaikkialla Tšadissa ja Sudanissa.
+
+### 45.1
+KYSYMYS: Mitä Danehof oli, ja keitä siellä kokoontui päättämään maan asioista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+### 45.2
+KYSYMYS: Mitä Tanskan ensimmäinen perustuslaki vuonna 1282 oikeastaan tarkoitti kuninkaan vallalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nyborgin linna (historia)
+Tietoruudun teksti: Nyborgin linna on entisöity keskiaikainen linna Nyborgin kaupungissa Fynin saarella. Se perustettiin noin vuonna 1170, ja alun perin se oli vallihaudan ympäröimä neliönmuotoinen linna, jossa oli kulmatornit ja niiden välillä muuri. Kuningas Eerik V Klipping allekirjoitti linnassa Tanskan ensimmäisen perustuslain vuonna 1282, ja vuoteen 1413 asti linnan päärakennus oli keskiaikaisen parlamentin, Danehofin, pääasiallinen kokouspaikka. Kuningas Kristian III teetti 1540-luvulla uuden juhlasalin ja tornin. Ruotsin ja Tanskan välisessä sodassa 1657–58 linna vaurioitui pahoin, ja se entisöitiin 1900-luvun alussa museoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšad — maalehti / Musiikki: Neljä metriä metallia, jota soitetaan vain palatsissa] Kakaki on kolmesta neljään metriä pitkä metallitorvi, ja sen ääni kuuluu vallalle. Samaa nimeä käytetään Tšadissa, Nigerissä, Nigeriassa, Beninissä, Ghanassa ja Burkina Fasossa; Etiopiassa ja Eritreassa soitin tunnetaan nimellä malakat. Alkuaan se oli songhailaisen ratsuväen soitin. Hausojen keskuudessa kakakia soitetaan vain kuninkaan tai sulttaanin palatsissa osana saraa, viikoittain toistuvaa vallan osoitusta, ja vain miehet soittavat sitä. Pitkiä kuninkaallisia torvia — kakakia ja wazaa — kuullaan kruunajaisissa kaikkialla Tšadissa ja Sudanissa.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

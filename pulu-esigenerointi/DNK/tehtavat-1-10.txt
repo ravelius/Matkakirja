@@ -1,0 +1,72 @@
+================ KOHTA 46 (nosto:trelleborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Linnoitus, joka on täydellinen ympyrä] 980 — Trelleborgin linnoitus rakennettiin noin vuonna 980, ja se on ilmasta katsottuna tarkka ympyrä: valli kiertää alueen ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä taloryhmää, joissa jokaisessa neljä pitkää taloa. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata — ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu tarkasti maastoon. Unesco otti linnoitukset maailmanperintöluetteloon vuonna 2023.
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+
+### 46.1
+KYSYMYS: Miten linnoituksen rakennusvuosi saatiin selville?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vancouver — kohdekartta / Kohdekartta: Vancouverin taidegalleria] 1911 Talo ei ole alun perin museo vaan oikeustalo. Francis Rattenbury voitti sen suunnittelukilpailun 1905, rakennustyöt alkoivat 1906, ja provinssin oikeustalo avattiin 1911. Sisällä oli kahdeksantoista oikeussalia. Talossa on joonialaiset pylväät, keskellä kupoli ja juhlalliset pylväiköt, ja marmori tuotiin Alaskasta, Tennesseestä ja Vermontista. Thomas Hooperin piirtämä sivusiipi lisättiin länsipuolelle 1912. Oikeuslaitos muutti pois 1979, ja talo julistettiin kansalliseksi historialliseksi kohteeksi 1980. Vanhan sisäänkäynnin molemmin puolin makaa graniittinen leijona. Kivet tuotiin Nelson Islandilta, ja leijonat asetettiin paikoilleen 1910. Neljäntenä marraskuuta 1942 kaksi dynamiittir…
+- [Darwin — kohdekartta / Kohdekartta: Mutamaja] 1883 Rinteessä Hughes Avenuen ja Kitchener Driven välissä seisoi talo, jota kutsuttiin Mutamajaksi. Virallinen nimi oli Aspendale, ja pilkkanimi kuului Knightin hulluus. Sen rakensi 1883 arkkitehti John George Knight, joka toimi 1890–1892 Pohjoisterritorion hallintomiehenä. Talo oli kaksikerroksinen ja vain yhden huoneen levyinen, ja sen ympäri kiersivät leveät kuistit. Seinät muurattiin tiilistä, joita lähde kutsuu egyptiläisiksi. Ivanimestä huolimatta talosta on tullut trooppisen rakentamisen kekseliäisyyden vertauskuva. Se paloi uudenvuodenaattona 1933 tyhjillään ollessaan — asukkaat olivat lomamatkalla. Tutkinnassa ei saatu selville varmaa syytä, mutta lopulta syy pantiin sähkövalojen p…
+
+### 46.2
+KYSYMYS: Miksi samanlaisia linnoituksia rakennettiin useita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Linnoitus, joka on täydellinen ympyrä] 980 — Trelleborgin linnoitus rakennettiin noin vuonna 980, ja se on ilmasta katsottuna tarkka ympyrä: valli kiertää alueen ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä taloryhmää, joissa jokaisessa neljä pitkää taloa. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata — ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu tarkasti maastoon. Unesco otti linnoitukset maailmanperintöluetteloon vuonna 2023.
+
+### 46.3
+KYSYMYS: Kuka oli Harald Sinihammas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kööpenhamina
+Maa, jossa pelaaja on: Tanska
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tuhat vuotta vanha linnoitus on niin tarkka ympyrä, että sen mitat kertovat suunnittelijan
+Tietoruudun teksti: Sjællandin Slagelsen lähellä on maastossa rengas, joka näyttää ilmasta katsottuna piirretyltä. Trelleborgin linnoitus rakennettiin noin vuonna 980, ja sen valli kiertää sisäpihan, jonka halkaisija on noin satakolmekymmentäkuusi metriä. Vallin läpi kulkee neljä porttia neljään ilmansuuntaan, ja kaksi tietä risteää keskellä kuin kellotaulun viisarit. Sisällä oli neljä neliötä, joissa kussakin neljä pitkää taloa — kuusitoista taloa, kaikki samanmittaisia.
+
+Tarkkuus on se, mikä tekee paikasta kiinnostavan. Samalla mitalla rakennettiin useita linnoituksia eri puolille maata, ja ne ovat niin samanlaisia, että ne on selvästi suunniteltu yhdessä paikassa ja mitattu maastoon tarkasti. Se tarkoittaa, että joku käski, joku mittasi ja joku maksoi — ja että valtakunta oli olemassa jo ennen kuin siitä kirjoitettiin. Rakennusvuosi saatiin puun vuosirenkaista, ja se osuu saman kuninkaan aikaan, joka py…
+Isoisän matkakirjamerkintä: Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanska — maalehti / Historia: Kivi, jossa maan nimi lukee ensimmäisen kerran] 965 — Jellingin kylässä seisoo kaksi riimukiveä. Isomman pystytti noin vuonna 965 kuningas Harald Sinihammas, ja siihen on hakattu, että hän voitti koko Tanskan ja Norjan ja teki tanskalaisista kristittyjä. Sana Tanska esiintyy siinä ensimmäisen kerran maan omalla kielellä, ja siksi kiveä sanotaan maan syntytodistukseksi. Kuningas sai myöhemmin oudon jälkimaineen: langaton Bluetooth-yhteys on nimetty hänen mukaansa, koska se yhdistää laitteita kuten hän yhdisti heimoja.
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI

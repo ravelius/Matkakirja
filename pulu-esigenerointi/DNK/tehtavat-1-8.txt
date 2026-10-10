@@ -1,0 +1,198 @@
+================ KOHTA 36 (kohde:hahmotelma-horsens) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Horsens (kulttuuri)
+Tietoruudun teksti: Horsens on kaupunki Jyllannin niemimaan kaakkoisrannikolla, Horsensinvuonon perukassa noin 50 kilometriä Aarhusista etelään. Nimen uskotaan tulevan vanhan tanskan sanoista hors (hevonen) ja næs (niemi). Kaupungin varhaisimmat jäljet ovat 800-luvun pakanallinen hautapaikka ja talojen jäänteet, ja 1200-luvulla se sai oman lakikirjansa. Teollistuminen alkoi 1800-luvun puolivälissä, ja maalta muutti väkeä tehtaisiin: Horsensiin perustettiin Kööpenhaminan ulkopuolella ensimmäinen tanskalainen rautavalimo sekä tupakka- ja tekstiilitehtaita. Vuosina 1853-2006 kaupungissa toimi Horsensin valtionvankila, jossa on nykyään vankila- ja rikosmuseo. Kaupungissa syntyi myös Venäjän laivaston kapteeni Vitus Bering.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Musiikki: Päivän mittainen näytelmä, joka alkaa puheella] Hira gasy on ylängön päivän mittainen näytös: laulua, tanssia ja kabary-puhetta. Ryhmä on tavallisesti sukua keskenään ja tulee maaseudulta, ja usein kaksi ryhmää kilpailee vuorotellen. Miehillä on olkihatut ja punaiset takit 1800-luvun ranskalaisen sotilaspuvun malliin, naisilla keisarikauden hovin tyyliin ommellut yhtenäiset puvut. Perinnesoittimia ei juuri kuulu, koska muoto syntyi hovissa: soittimina ovat viulut, trumpetit sekä virveli- ja bassorumpu. Järjestys on vakio — rummut, teeman esittelevä kabary, yli tunnin kuorolaulu, neljännestunnin tanssi ja lyhyt päätös. Ryhmiä on yli kahdeksankymmentä.
+
+### 36.1
+KYSYMYS: Miksi ihmiset muuttivat 1800-luvulla maaseudulta Horsensiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Horsens (kulttuuri)
+Tietoruudun teksti: Horsens on kaupunki Jyllannin niemimaan kaakkoisrannikolla, Horsensinvuonon perukassa noin 50 kilometriä Aarhusista etelään. Nimen uskotaan tulevan vanhan tanskan sanoista hors (hevonen) ja næs (niemi). Kaupungin varhaisimmat jäljet ovat 800-luvun pakanallinen hautapaikka ja talojen jäänteet, ja 1200-luvulla se sai oman lakikirjansa. Teollistuminen alkoi 1800-luvun puolivälissä, ja maalta muutti väkeä tehtaisiin: Horsensiin perustettiin Kööpenhaminan ulkopuolella ensimmäinen tanskalainen rautavalimo sekä tupakka- ja tekstiilitehtaita. Vuosina 1853-2006 kaupungissa toimi Horsensin valtionvankila, jossa on nykyään vankila- ja rikosmuseo. Kaupungissa syntyi myös Venäjän laivaston kapteeni Vitus Bering.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madagaskar — maalehti / Musiikki: Päivän mittainen näytelmä, joka alkaa puheella] Hira gasy on ylängön päivän mittainen näytös: laulua, tanssia ja kabary-puhetta. Ryhmä on tavallisesti sukua keskenään ja tulee maaseudulta, ja usein kaksi ryhmää kilpailee vuorotellen. Miehillä on olkihatut ja punaiset takit 1800-luvun ranskalaisen sotilaspuvun malliin, naisilla keisarikauden hovin tyyliin ommellut yhtenäiset puvut. Perinnesoittimia ei juuri kuulu, koska muoto syntyi hovissa: soittimina ovat viulut, trumpetit sekä virveli- ja bassorumpu. Järjestys on vakio — rummut, teeman esittelevä kabary, yli tunnin kuorolaulu, neljännestunnin tanssi ja lyhyt päätös. Ryhmiä on yli kahdeksankymmentä.
+
+### 36.2
+KYSYMYS: Mitä vanhojen tanskan sanojen hors ja næs kertovat Horsensin sijainnista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Horsens (kulttuuri)
+Tietoruudun teksti: Horsens on kaupunki Jyllannin niemimaan kaakkoisrannikolla, Horsensinvuonon perukassa noin 50 kilometriä Aarhusista etelään. Nimen uskotaan tulevan vanhan tanskan sanoista hors (hevonen) ja næs (niemi). Kaupungin varhaisimmat jäljet ovat 800-luvun pakanallinen hautapaikka ja talojen jäänteet, ja 1200-luvulla se sai oman lakikirjansa. Teollistuminen alkoi 1800-luvun puolivälissä, ja maalta muutti väkeä tehtaisiin: Horsensiin perustettiin Kööpenhaminan ulkopuolella ensimmäinen tanskalainen rautavalimo sekä tupakka- ja tekstiilitehtaita. Vuosina 1853-2006 kaupungissa toimi Horsensin valtionvankila, jossa on nykyään vankila- ja rikosmuseo. Kaupungissa syntyi myös Venäjän laivaston kapteeni Vitus Bering.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-marstal) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marstal (merenkulku)
+Tietoruudun teksti: Marstal on Ærøn saaren suurin kaupunki Etelä-Tanskassa, ja sillä on pitkä merenkulun historia. Kaupunki perustettiin 1500-luvulla, ja 1600- ja 1700-luvuilla elanto tuli puulaivojen rakentamisesta ja purjehtimisesta. Talot nousivat satamalaitureilta ylöspäin johtavien polkujen varsille, eikä kaupunki kasvanut minkään torin tai kirkon ympärille. Satamassa sijaitsevalla Frederiksøen-saarella oli laivojen korjaustelakka, kunnes se vuokrattiin vuonna 1863 kalkinpolttoon; sen kivinen laituri on paikallisten merimiesten talkoilla tekemä vuodelta 1825. Marstalin kirkossa riippuu seitsemän votiivilaivaa, jotka kertovat kaupungin merenkulun kasvusta 1700-luvulta 1900-luvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Luonto: Sininen metsä, joka kukkii kolme viikkoa] huhtikuu — Hallerbos on Zoniënwoud-metsän eteläkärjessä, noin 15 kilometriä Brysselistä etelään Hallen kaupungin liepeillä. Metsä on jäännös muinaisesta Kolenwoud-metsästä, joka peitti aikoinaan suuren osan nykyistä Belgiaa. Huhtikuun puolivälissä metsän pohja peittyy muutamaksi viikoksi kokonaan sinisillä metsäkellosipuleilla — kukinta on niin runsas, että paikallinen matkailuneuvonta perusti sille aikanaan oman puhelinlinjan, josta sai kuulla kukinnan tilanteen. Parhaiten sinisen maton näkee aikaisin aamulla, ennen kuin kävijät ehtivät poluille.
+
+### 37.1
+KYSYMYS: Miksi Marstal ei kasvanut torin tai kirkon ympärille vaan satamalaitureilta nouseville poluille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marstal (merenkulku)
+Tietoruudun teksti: Marstal on Ærøn saaren suurin kaupunki Etelä-Tanskassa, ja sillä on pitkä merenkulun historia. Kaupunki perustettiin 1500-luvulla, ja 1600- ja 1700-luvuilla elanto tuli puulaivojen rakentamisesta ja purjehtimisesta. Talot nousivat satamalaitureilta ylöspäin johtavien polkujen varsille, eikä kaupunki kasvanut minkään torin tai kirkon ympärille. Satamassa sijaitsevalla Frederiksøen-saarella oli laivojen korjaustelakka, kunnes se vuokrattiin vuonna 1863 kalkinpolttoon; sen kivinen laituri on paikallisten merimiesten talkoilla tekemä vuodelta 1825. Marstalin kirkossa riippuu seitsemän votiivilaivaa, jotka kertovat kaupungin merenkulun kasvusta 1700-luvulta 1900-luvulle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Luonto: Sininen metsä, joka kukkii kolme viikkoa] huhtikuu — Hallerbos on Zoniënwoud-metsän eteläkärjessä, noin 15 kilometriä Brysselistä etelään Hallen kaupungin liepeillä. Metsä on jäännös muinaisesta Kolenwoud-metsästä, joka peitti aikoinaan suuren osan nykyistä Belgiaa. Huhtikuun puolivälissä metsän pohja peittyy muutamaksi viikoksi kokonaan sinisillä metsäkellosipuleilla — kukinta on niin runsas, että paikallinen matkailuneuvonta perusti sille aikanaan oman puhelinlinjan, josta sai kuulla kukinnan tilanteen. Parhaiten sinisen maton näkee aikaisin aamulla, ennen kuin kävijät ehtivät poluille.
+
+### 37.2
+KYSYMYS: Mitä seitsemän kirkossa roikkuvaa pienoislaivaa kertovat kaupungin historiasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Marstal (merenkulku)
+Tietoruudun teksti: Marstal on Ærøn saaren suurin kaupunki Etelä-Tanskassa, ja sillä on pitkä merenkulun historia. Kaupunki perustettiin 1500-luvulla, ja 1600- ja 1700-luvuilla elanto tuli puulaivojen rakentamisesta ja purjehtimisesta. Talot nousivat satamalaitureilta ylöspäin johtavien polkujen varsille, eikä kaupunki kasvanut minkään torin tai kirkon ympärille. Satamassa sijaitsevalla Frederiksøen-saarella oli laivojen korjaustelakka, kunnes se vuokrattiin vuonna 1863 kalkinpolttoon; sen kivinen laituri on paikallisten merimiesten talkoilla tekemä vuodelta 1825. Marstalin kirkossa riippuu seitsemän votiivilaivaa, jotka kertovat kaupungin merenkulun kasvusta 1700-luvulta 1900-luvulle.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-aalborg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aalborg (ruoka)
+Tietoruudun teksti: Aalborg on Tanskan neljänneksi suurin kaupunki, ja se sijaitsee Limfjordin kapeimmassa kohdassa, mikä teki siitä keskiajalla tärkeän sataman. Kaupunki vaurastui 1500- ja 1600-luvuilla ulkomaankaupan ansiosta. 1800-luvun puolivälin jälkeen kasvu kääntyi uuteen nousuun, kun Limfjordin yli valmistui ponttonisilta vuonna 1865 ja rautatie saapui kaupunkiin vuonna 1869. Aalborgista tuli maan tärkein tupakkatuotteiden ja väkevien juomien valmistaja. Kaupungissa toimi vuoteen 2014 asti De Danske Spritfabrikker, joka on maailman suurin akvaviittien tuottaja ja viejä. Sen vuonna 1931 valmistunut pääkonttori on tanskalaisen tehdasarkkitehtuurin mestariteos ja nykyään kansallisesti suojeltu kohde.
+
+### 38.1
+KYSYMYS: Mitä akvaviitti on, ja miksi Aalborg tunnetaan siitä koko maailmassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aalborg (ruoka)
+Tietoruudun teksti: Aalborg on Tanskan neljänneksi suurin kaupunki, ja se sijaitsee Limfjordin kapeimmassa kohdassa, mikä teki siitä keskiajalla tärkeän sataman. Kaupunki vaurastui 1500- ja 1600-luvuilla ulkomaankaupan ansiosta. 1800-luvun puolivälin jälkeen kasvu kääntyi uuteen nousuun, kun Limfjordin yli valmistui ponttonisilta vuonna 1865 ja rautatie saapui kaupunkiin vuonna 1869. Aalborgista tuli maan tärkein tupakkatuotteiden ja väkevien juomien valmistaja. Kaupungissa toimi vuoteen 2014 asti De Danske Spritfabrikker, joka on maailman suurin akvaviittien tuottaja ja viejä. Sen vuonna 1931 valmistunut pääkonttori on tanskalaisen tehdasarkkitehtuurin mestariteos ja nykyään kansallisesti suojeltu kohde.
+
+### 38.2
+KYSYMYS: Miksi Aalborgin Limfjordin kapein kohta teki kaupungista tärkeän sataman?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aalborg (ruoka)
+Tietoruudun teksti: Aalborg on Tanskan neljänneksi suurin kaupunki, ja se sijaitsee Limfjordin kapeimmassa kohdassa, mikä teki siitä keskiajalla tärkeän sataman. Kaupunki vaurastui 1500- ja 1600-luvuilla ulkomaankaupan ansiosta. 1800-luvun puolivälin jälkeen kasvu kääntyi uuteen nousuun, kun Limfjordin yli valmistui ponttonisilta vuonna 1865 ja rautatie saapui kaupunkiin vuonna 1869. Aalborgista tuli maan tärkein tupakkatuotteiden ja väkevien juomien valmistaja. Kaupungissa toimi vuoteen 2014 asti De Danske Spritfabrikker, joka on maailman suurin akvaviittien tuottaja ja viejä. Sen vuonna 1931 valmistunut pääkonttori on tanskalaisen tehdasarkkitehtuurin mestariteos ja nykyään kansallisesti suojeltu kohde.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-soro) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorø Akademi (kulttuuri)
+Tietoruudun teksti: Sorø Akademi on Sjællandilla sijaitseva sisäoppilaitos ja lukio, jonka juuret ovat vuonna 1140 perustetussa Sorøn luostarissa. Reformaation jälkeen kruunu otti luostarin haltuunsa, ja Kristian IV muutti sen vuonna 1623 ritariakatemiaksi. Kirjailija Ludvig Holberg testamenttasi 1700-luvulla suurimman osan omaisuudestaan oppilaitoksen uudelleen perustamiseen. Päärakennus paloi vuonna 1813 ja rakennettiin uudelleen; akatemia avattiin uudelleen vuonna 1825, ja siitä tuli Tanskan kultakauden keskeinen kohtaamispaikka, jossa vierailivat muun muassa H. C. Andersen ja kuvanveistäjä Bertel Thorvaldsen. Porttirakennus on Tanskan vanhin yhä asuttu rakennus, ja siellä Saxo Grammaticus kirjoitti Gesta Danorum -kronikkansa.
+
+### 39.1
+KYSYMYS: Miksi Sorøn luostari muuttui reformaation jälkeen oppilaitokseksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorø Akademi (kulttuuri)
+Tietoruudun teksti: Sorø Akademi on Sjællandilla sijaitseva sisäoppilaitos ja lukio, jonka juuret ovat vuonna 1140 perustetussa Sorøn luostarissa. Reformaation jälkeen kruunu otti luostarin haltuunsa, ja Kristian IV muutti sen vuonna 1623 ritariakatemiaksi. Kirjailija Ludvig Holberg testamenttasi 1700-luvulla suurimman osan omaisuudestaan oppilaitoksen uudelleen perustamiseen. Päärakennus paloi vuonna 1813 ja rakennettiin uudelleen; akatemia avattiin uudelleen vuonna 1825, ja siitä tuli Tanskan kultakauden keskeinen kohtaamispaikka, jossa vierailivat muun muassa H. C. Andersen ja kuvanveistäjä Bertel Thorvaldsen. Porttirakennus on Tanskan vanhin yhä asuttu rakennus, ja siellä Saxo Grammaticus kirjoitti Gesta Danorum -kronikkansa.
+
+### 39.2
+KYSYMYS: Mitä Saxo Grammaticus kirjoitti Sorøn porttirakennuksessa, ja miksi teos on tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sorø Akademi (kulttuuri)
+Tietoruudun teksti: Sorø Akademi on Sjællandilla sijaitseva sisäoppilaitos ja lukio, jonka juuret ovat vuonna 1140 perustetussa Sorøn luostarissa. Reformaation jälkeen kruunu otti luostarin haltuunsa, ja Kristian IV muutti sen vuonna 1623 ritariakatemiaksi. Kirjailija Ludvig Holberg testamenttasi 1700-luvulla suurimman osan omaisuudestaan oppilaitoksen uudelleen perustamiseen. Päärakennus paloi vuonna 1813 ja rakennettiin uudelleen; akatemia avattiin uudelleen vuonna 1825, ja siitä tuli Tanskan kultakauden keskeinen kohtaamispaikka, jossa vierailivat muun muassa H. C. Andersen ja kuvanveistäjä Bertel Thorvaldsen. Porttirakennus on Tanskan vanhin yhä asuttu rakennus, ja siellä Saxo Grammaticus kirjoitti Gesta Danorum -kronikkansa.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-esbjerg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esbjerg (kauppa)
+Tietoruudun teksti: Esbjerg on Jyllannin länsirannikon satamakaupunki, josta on tullut Tanskan viidenneksi suurin kaupunki. Ennen vuotta 1868 alueella oli vain muutama maatila, kunnes päätettiin perustaa satama. Uusi satama korvasi Altonan, joka oli ollut Tanskan tärkein Pohjanmeren satama mutta joutui Saksan hallintaan Toisen Schleswigin sodan jälkeen vuonna 1864. Satamaa rakennettiin kuninkaallisen asetuksen nojalla vuodesta 1868 vuoteen 1874, ja sille avattiin rautatieyhteydet Vardeen ja Fredericiaan. Kaupungin kadut suunniteltiin ruutukaavaan, ja se kasvoi nopeasti kalastus- ja vientisatamana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kaupunkilehti / Historia] Kioton historia alkaa yhdestä päätöksestä: vuonna 794 keisari Kanmu jätti Naran ja rakennutti uuden pääkaupungin tyhjälle paikalle Yamashiron laaksoon. Heian-kyō mitattiin Tang-dynastian pääkaupungin Chang’anin mukaan, ja sen ruutukaava on yhä kaupungin runko. Heian-kaudella Kiotosta tuli hovikulttuurin keskus, ja sen ympärille kehittyivät ne taiteen ja estetiikan muodot, joita Japanissa pidetään yhä omimpina. Sitten kaupunki paloi: Ōnin-sota 1467–1477 runteli sitä lähes kokonaan, eikä se toipunut ennen 1500-luvun puoliväliä. Toyotomi Hideyoshi rakensi keskustan uusiksi 1500-luvun lopulla — hän kaksinkertaisti pohjois–etelä-katujen määrän ja ympäröi kaupungin maavalleilla. Tokugawa-shōgunit…
+- [Liberia — maalehti / Ruoka: Mauste, joka antoi rannikolle nimen] 1461– — Portugalilaiset saapuivat rannikolle 1461 ja nimesivät sen Costa da Pimentaksi, pippurirannikoksi; myöhemmin nimi kääntyi muotoon Grain Coast, jyvärannikko. Kyse oli maniguetista, inkiväärin sukuisesta kasvista, jonka viiden sentin palossa on kymmeniä punaruskeita siemeniä. Maku on pistävä kuin mustapippurissa mutta sitrusmainen. Kuningas Alfonso V myönsi 1469 Fernão Gomesille yksinoikeuden Guineanlahden kauppaan sadantuhannen realin vuosimaksusta ja lupauksesta tutkia 160 kilometriä uutta rannikkoa vuodessa. Keskiajan Euroopassa jyvät korvasivat kalliin pippurin, ja Pariisin talousopas suositteli niitä ummehtuneen viinin parantamiseen.
+
+### 40.1
+KYSYMYS: Miksi Tanska rakensi kokonaan uuden sataman lähes tyhjälle rannikolle vuonna 1868?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esbjerg (kauppa)
+Tietoruudun teksti: Esbjerg on Jyllannin länsirannikon satamakaupunki, josta on tullut Tanskan viidenneksi suurin kaupunki. Ennen vuotta 1868 alueella oli vain muutama maatila, kunnes päätettiin perustaa satama. Uusi satama korvasi Altonan, joka oli ollut Tanskan tärkein Pohjanmeren satama mutta joutui Saksan hallintaan Toisen Schleswigin sodan jälkeen vuonna 1864. Satamaa rakennettiin kuninkaallisen asetuksen nojalla vuodesta 1868 vuoteen 1874, ja sille avattiin rautatieyhteydet Vardeen ja Fredericiaan. Kaupungin kadut suunniteltiin ruutukaavaan, ja se kasvoi nopeasti kalastus- ja vientisatamana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kioto — kaupunkilehti / Historia] Kioton historia alkaa yhdestä päätöksestä: vuonna 794 keisari Kanmu jätti Naran ja rakennutti uuden pääkaupungin tyhjälle paikalle Yamashiron laaksoon. Heian-kyō mitattiin Tang-dynastian pääkaupungin Chang’anin mukaan, ja sen ruutukaava on yhä kaupungin runko. Heian-kaudella Kiotosta tuli hovikulttuurin keskus, ja sen ympärille kehittyivät ne taiteen ja estetiikan muodot, joita Japanissa pidetään yhä omimpina. Sitten kaupunki paloi: Ōnin-sota 1467–1477 runteli sitä lähes kokonaan, eikä se toipunut ennen 1500-luvun puoliväliä. Toyotomi Hideyoshi rakensi keskustan uusiksi 1500-luvun lopulla — hän kaksinkertaisti pohjois–etelä-katujen määrän ja ympäröi kaupungin maavalleilla. Tokugawa-shōgunit…
+- [Liberia — maalehti / Ruoka: Mauste, joka antoi rannikolle nimen] 1461– — Portugalilaiset saapuivat rannikolle 1461 ja nimesivät sen Costa da Pimentaksi, pippurirannikoksi; myöhemmin nimi kääntyi muotoon Grain Coast, jyvärannikko. Kyse oli maniguetista, inkiväärin sukuisesta kasvista, jonka viiden sentin palossa on kymmeniä punaruskeita siemeniä. Maku on pistävä kuin mustapippurissa mutta sitrusmainen. Kuningas Alfonso V myönsi 1469 Fernão Gomesille yksinoikeuden Guineanlahden kauppaan sadantuhannen realin vuosimaksusta ja lupauksesta tutkia 160 kilometriä uutta rannikkoa vuodessa. Keskiajan Euroopassa jyvät korvasivat kalliin pippurin, ja Pariisin talousopas suositteli niitä ummehtuneen viinin parantamiseen.
+
+### 40.2
+KYSYMYS: Miksi rautatieyhteys oli uudelle satamalle yhtä tärkeä kuin itse laiturit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esbjerg (kauppa)
+Tietoruudun teksti: Esbjerg on Jyllannin länsirannikon satamakaupunki, josta on tullut Tanskan viidenneksi suurin kaupunki. Ennen vuotta 1868 alueella oli vain muutama maatila, kunnes päätettiin perustaa satama. Uusi satama korvasi Altonan, joka oli ollut Tanskan tärkein Pohjanmeren satama mutta joutui Saksan hallintaan Toisen Schleswigin sodan jälkeen vuonna 1864. Satamaa rakennettiin kuninkaallisen asetuksen nojalla vuodesta 1868 vuoteen 1874, ja sille avattiin rautatieyhteydet Vardeen ja Fredericiaan. Kaupungin kadut suunniteltiin ruutukaavaan, ja se kasvoi nopeasti kalastus- ja vientisatamana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubai — kohdekartta / Kohdekartta: Abra-laiturit] Abra on puinen vene, ja nimi tulee arabian verbistä abara, ylittää. Abrat ovat Dubain vanhin joukkoliikenneväline: ennen siltoja ja Al Shindaghan tunnelia lahdelman toiselle puolelle pääsi vain veneellä. Keskikokoiseen yksimoottoriseen abraan mahtuu 20 matkustajaa. He istuvat katoksen alla penkeillä ohjaamon ympärillä, kymmenen kummallakin puolella, kasvot vettä kohti, ja kuljettaja ohjaa veneen keskeltä. Ylitys Deiran ja Bur Dubain välillä kestää viidestä seitsemään minuuttia, ja veneitä lähtee muutaman minuutin välein. Lippu maksetaan suoraan kuljettajalle. Veneitä on noin 150, ja ne kuljettavat vuodessa 15–20 miljoonaa matkustajaa. Al Sabkhan ja vanhan suukin välinen reitti kulkee ympäri…
+- [Dubai — kohdekartta / Kohdekartta: Dhow-satama] Khor Dubai ei ole joki vaan Persianlahden suolainen lahti, joka työntyy noin 14 kilometriä sisämaahan. Leveyttä on 200–1200 metriä ja syvyyttä keskimäärin 6,5–7 metriä. Deiran puoleiseen laituriin kiinnittyy puisia dhow-aluksia kahden ja kolmen rivissä, ja lasti odottaa laiturilla taivasalla laatikkopinoina. Lahden kautta kulkee yhä yli 13 000 alusta vuodessa. Dhow on eurooppalaisten antama yleisnimi Intian valtameren pitkärunkoisille purjealuksille. Suurimmissa on noin kolmenkymmenen hengen miehistö, pienimmissä tusinan verran. Osa purjehtii yhä monsuunin mukana: etelään Itä-Afrikkaan talvella tai alkukeväästä taatelilastissa, takaisin Arabiaan myöhään keväällä mangrovepuutavaraa kyydissä.…
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
