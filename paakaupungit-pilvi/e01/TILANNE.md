@@ -6,7 +6,7 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | id | A | B | C | D | E | F | huomio |
 |---|---|---|---|---|---|---|---|
 | zagreb | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | kohteita 5 (kuvapula) | | |
-| belgrad | ✓ | ✓ | ✓ | ✓ | | | | |
+| belgrad | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 2 varoitusta: lisenssi CC BY-SA 3.0 rs | | | |
 | tirana | ✓ | ✓ | ✓ | | | | |
 | skopje | ✓ | | | | | | |
 | podgorica | ✓ | | | | | | |
