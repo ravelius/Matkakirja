@@ -2649,6 +2649,24 @@ namespace Matkakirja.Natiivi
             return id != null && korkeusMallit.TryGetValue(id, out var m) ? m.Korkeus(lat, lon) : double.NaN;
         }
 
+        // MAANPINTA (DTM; PT 10.10. junaan 175, Karttaseppä maa-<id>.json + -lahi.png, IGN LiDAR HD MNT / GLO-30): elävän kaupungin autot,
+        // raitiovaunut ja kyyhkyt maan pinnalle (DSM:ssä puut ja rakennusten reunat: Pariisissa 4,2 % katupisteistä yli 5 m maan yläpuolella).
+        // Ladataan DSM:n jälkeen samaan tapaan, vain lähiosa (ei kaukoa; muisti). Puuttuva = DSM kuten ennen.
+        static readonly Dictionary<string, OmaKorkeus> maaMallit = new Dictionary<string, OmaKorkeus>();
+        static readonly HashSet<string> maaPuuttuu = new HashSet<string>();
+        /// <summary>Maanpinnan ellipsoidikorkeus (DTM), muuten pinta (DSM); NaN, jos kumpaakaan ei ole muistissa.</summary>
+        public static double OmaMaanpinta(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            if (id != null && maaMallit.TryGetValue(id, out var m)) { double h = m.Korkeus(lat, lon); if (!double.IsNaN(h)) return h; }
+            return OmaMaa(lat, lon);
+        }
+        /// <summary>Onko maanpinta ratkennut (ladattu tai todettu puuttuvaksi): katuliikenne rakennetaan vasta silloin.</summary>
+        public static bool MaanpintaValmis(double lat, double lon)
+        {
+            string id = KorkeusId(lat, lon);
+            return id != null && (maaMallit.ContainsKey(id) || maaPuuttuu.Contains(id)) && !double.IsNaN(OmaMaa(lat, lon));
+        }
         /// <summary>Maa kohteen ympäriltä: pienin pinta keskeltä ja 8 pisteestä 70 m:n kehältä (tornin huippu ei ole maa; Eiffel).</summary>
         public static double OmaMaaKehalla(double lat, double lon)
         {
@@ -2734,8 +2752,24 @@ namespace Matkakirja.Natiivi
             korkeusHaussa.Remove(id);
             if (tyo.IsFaulted || tyo.Result.Osat.Count == 0) { korkeusPuuttuu.Add(id); o.Kirjaa($"opas: korkeusmalli {id} virheellinen ({tyo.Exception?.GetBaseException().Message})"); yield break; }
             korkeusMallit[id] = tyo.Result; korkeusJarjestys.Remove(id); korkeusJarjestys.Add(id);
-            while (korkeusJarjestys.Count > 2) { korkeusMallit.Remove(korkeusJarjestys[0]); korkeusJarjestys.RemoveAt(0); }
+            while (korkeusJarjestys.Count > 2) { korkeusMallit.Remove(korkeusJarjestys[0]); maaMallit.Remove(korkeusJarjestys[0]); maaPuuttuu.Remove(korkeusJarjestys[0]); korkeusJarjestys.RemoveAt(0); }
             o.Kirjaa($"opas: korkeusmalli {id} ladattu {Time.realtimeSinceStartup - t0:F1} s ({string.Join(", ", tyo.Result.Osat.ConvertAll(x => $"{x.Nimi} {x.W}×{x.H} {x.RuutuM:F0} m"))})");
+            // Maanpinta (DTM): vain lähiosa.
+            string maaNimi = "maa-" + id + ".json";
+            yield return Hae(maaNimi);
+            if (!tavut.TryGetValue(maaNimi, out var mt)) { maaPuuttuu.Add(id); yield break; }
+            string maaJson = Encoding.UTF8.GetString(mt);
+            foreach (var oo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.Objekti(MiniJson.Jasenna(maaJson)), "osat")))
+            {
+                var d = MiniJson.Objekti(oo);
+                if (MiniJson.Teksti(d, "osa") == "lahi" && MiniJson.Teksti(d, "tiedosto") is string n) yield return Hae(n);
+            }
+            var maaTyo = System.Threading.Tasks.Task.Run(() => OmaKorkeus.Lue(maaJson, n => tavut.TryGetValue(n, out var b) ? b : null));
+            while (!maaTyo.IsCompleted) yield return null;
+            tavut.Clear();
+            if (maaTyo.IsFaulted || maaTyo.Result.Osat.Count == 0) { maaPuuttuu.Add(id); o.Kirjaa($"opas: maanpinta {id} puuttuu tai virheellinen"); yield break; }
+            if (korkeusMallit.ContainsKey(id)) maaMallit[id] = maaTyo.Result;
+            o.Kirjaa($"opas: maanpinta {id} ladattu ({string.Join(", ", maaTyo.Result.Osat.ConvertAll(x => $"{x.Nimi} {x.W}×{x.H} {x.RuutuM:F0} m"))})");
         }
 
         /// <summary>Kohteen maa ja korkeus: keskipiste + kehä (OpasKuvaus.MaaJaKorkeus; Eiffel-korjaus 7.10.).</summary>

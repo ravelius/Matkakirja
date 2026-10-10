@@ -258,13 +258,14 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalVector(IdAla, new Vector4((float)k.TaivasAla[0], (float)k.TaivasAla[1], (float)k.TaivasAla[2], 0));
         }
 
-        /// <summary>Maan korkeus paikallisessa ENU:ssa omasta korkeusmallista (NaN = ei muistissa): pienin kolmesta pisteestä.</summary>
+        /// <summary>Maan korkeus paikallisessa ENU:ssa omasta korkeusmallista (NaN = ei muistissa): pienin kolmesta pisteestä.
+        /// 10.10. (PT, juna 175): maanpinnasta (DTM) kun ladattu, muuten pinnasta (DSM).</summary>
         double Maa(double x, double z)
         {
             double cl = System.Math.Cos(lat0 * System.Math.PI / 180), h = double.NaN;
             foreach (var (dx, dz) in new[] { (0.0, 0.0), (4.0, 0.0), (0.0, 4.0) })
             {
-                double hh = OpasSovitin.OmaMaa(lat0 + (z + dz) / 111132.0, lon0 + (x + dx) / (111320.0 * cl));
+                double hh = OpasSovitin.OmaMaanpinta(lat0 + (z + dz) / 111132.0, lon0 + (x + dx) / (111320.0 * cl));
                 if (!double.IsNaN(hh)) h = double.IsNaN(h) ? hh : System.Math.Min(h, hh);
             }
             return double.IsNaN(h) ? h : h - (x * x + z * z) / (2 * 6371000.0);
@@ -292,7 +293,7 @@ namespace Matkakirja.Natiivi
         {
             if (katuJson == null || katu != null || Time.unscaledTime - katuYritys < 2f) return;
             katuYritys = Time.unscaledTime;
-            if (double.IsNaN(OpasSovitin.OmaMaa(lat0, lon0))) return;   // korkeusmalli ei vielä muistissa
+            if (!OpasSovitin.MaanpintaValmis(lat0, lon0)) return;   // korkeusmalli tai maanpinta ei vielä ratkennut
             try { katu = KatuLiikenne.Lue(katuJson, Maa, autoRaja, 20261009); }
             catch (System.Exception e) { Debug.Log("MATKAKIRJA kaupunki: katuliikenne virhe " + e.Message); katuJson = null; return; }
             katuJson = null;
@@ -390,7 +391,7 @@ namespace Matkakirja.Natiivi
                 if (p.Paikka.Kyyhky && double.IsNaN(p.Pinta) && nakyy && Time.unscaledTime - p.Haettu > 1f)
                 {
                     p.Haettu = Time.unscaledTime;
-                    double h = OpasSovitin.OmaMaa(p.Paikka.Lat, p.Paikka.Lon);
+                    double h = OpasSovitin.OmaMaanpinta(p.Paikka.Lat, p.Paikka.Lon);
                     if (!double.IsNaN(h)) p.Pinta = h - (p.Paikka.X * p.Paikka.X + p.Paikka.Z * p.Paikka.Z) / (2 * 6371000.0);
                 }
                 nakyy &= !double.IsNaN(p.Pinta);
