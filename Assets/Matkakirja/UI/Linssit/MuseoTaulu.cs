@@ -94,6 +94,8 @@ namespace Matkakirja.Natiivi
             poistuRivi.style.position = Position.Absolute;
             poistuRivi.style.top = 16; poistuRivi.style.right = 16;
             poistuRivi.style.display = DisplayStyle.None;
+            // Tumma sali: KORTTI-pohjan tumma variantti (vaalea reunus ja teksti), muuten nappi ei erotu (museo2-arkki 15.4x).
+            poistuRivi.AddToClassList("mk-kortti-kehys--tumma");
             Kirjasimet.Aseta(Rakenne.Nappi(Kieli.T("ui.pelit.poistu"), "mk-nappi--toiminto", () =>
             {
                 Debug.Log("MATKAKIRJA museo: Poistu");
