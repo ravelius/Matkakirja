@@ -52,3 +52,9 @@ Edellinen luovutus on `viesti-karttaseppa-luovutus-20261009-ilta.md`, jonka osio
 - **VESI v7b ämpärissä** (Julkaisija 10.4x, 11 tiedostoa, 0 virhettä). Kytkentä ja muutosloki ovat LS2:n junassa.
 - **ND 440 × 440 m** (LS2:n kiirepyyntö 10.5x): `_tyo/karttaseppa/notre-dame-440/`. Sisäosa on bitilleen sama kuin vanha. concorde-ign.mjs:n json-bugi korjattu (ortokerros oli kiinteästi 2021; ND:n kuva on 2018).
 - **Odottaa:** Tukholman maanpinta 1 m, kun LM_GEOTORGET_USER/PASS ovat avaintiedostossa (ei vielä 11.0x).
+- **VERTAILUORTOT (PT 11.4x, omistajan toive: automaattiset tarkistukset uusille 3D-malleille), valmis 12.3x:** `_tyo/karttaseppa/vertailu/<kohde>/` (orto.jpg mallin ENU-ruudussa + meta.json + varjot.jpg; LUEMINUT) kohteille notre-dame (IGN 2018), kuninkaanlinna (Copernicus VHR 2021: vain sisäiseen käyttöön), eiffel, prefektuuri (IGN 2021) ja peking (S2).
+  - **Työkalu:** T7 `vertailu/vertailu.py --malli <id>`.
+  - **Lähde sijainnin mukaan:** IGN/PDOK/PNOA/EEA/S2.
+  - **Aurinko:** varjoista pintamallia vasten (IGN LiDAR MNS tai `--dsm-osm` PBF).
+  - **ANSA:** EEA:n palvelimen 4326-projisointi siirsi kuvaa ~28 m, joten haku tehdään natiivissa 3035:ssä.
+  - **LR:lle viesti varakanavalla** (SendMessage ei tavoittanut nimellä).
