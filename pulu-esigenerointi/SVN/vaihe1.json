@@ -1,0 +1,2361 @@
+[
+ {
+  "kohde": "kohde:hahmotelma-triglav",
+  "kysymys": "Miksi Triglavin nimi tarkoittaa kirjaimellisesti \"kolmipäistä\"?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Nimi on aika kuvaava. Triglav on [[Slovenian]] korkein vuori, ja sen nimi tarkoittaa kolmipäistä, koska vuori näyttää [[Ylä-Krainin]] suunnasta katsottuna kolmihuippuiselta. Korkeus on noin 2 864 metriä, ja vuori on myös [[Julian Alppien]] korkein huippu. Nimi siis kuvaa sitä, miltä vuori näyttää, ei mitään sen salaperäisempää. Ylhäältä katsoen huippuja on kyllä helppo laskea.",
+  "linkit": [
+   "Slovenian",
+   "Ylä-Krainin",
+   "Julian Alppien"
+  ],
+  "jatkot": [
+   "Milloin Triglavin huipulle noustiin ensimmäisen kerran?",
+   "Mikä on Triglavin kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-triglav",
+  "kysymys": "Mitä lumottu vuorikauris Zlatorog vartioi vanhassa kansantarussa?",
+  "uusi": false,
+  "vastaus": "No niin, tämä on hyvä satu. Vanhassa kansantarussa [[Zlatorog]], lumottu ja kultasarvinen vuorikauris, vartioi aarretta, jota metsästäjä etsii [[Triglavin]] seuduilta. Tarun yksityiskohdat vaihtelevat kertojan mukaan, enkä ole varma kaikista käänteistä, mutta aarteen vartijana kauris on tunnettu. Kultasarvinen kauris on osa [[Slovenian]] kansanperinnettä, ja sen kuva tunnetaan laajalti maassa. Meikäläisten muistiinpanojen mukaan vuorilla kuuluu olla vartija.",
+  "linkit": [
+   "Zlatorog",
+   "Triglavin",
+   "Slovenian"
+  ],
+  "jatkot": [
+   "Mistä Zlatorog-tarun alkuperä on peräisin?",
+   "Minkälaisia muita satuja Slovenian vuorista kerrotaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-triglav",
+  "kysymys": "Mikä osa Triglavilla on Slovenian vaakunassa ja lipussa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Sen kuvan näkee ylhäältäkin. [[Slovenian]] [[vaakunassa]] ja lipussa on tyylitelty kuva Triglavista, [[Julian Alppien]] korkeimmasta huipusta, ja kuva esittää vuoren kolmena huippuna. Vaakunassa on vuoren lisäksi aaltoviivoja sen alla ja kolme tähteä sen yläpuolella, mutta niiden tulkinnoista en ole täysin varma. Vuori on siis kirjaimellisesti osa valtion tunnusta eikä pelkkä maisema. Mut kyllä lippu erottuu ylhäältä.",
+  "linkit": [
+   "Slovenian",
+   "vaakunassa",
+   "Julian Alppien"
+  ],
+  "jatkot": [
+   "Mitä Slovenian vaakunan aaltoviivat tarkoittavat?",
+   "Milloin Slovenian nykyinen lippu otettiin käyttöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-triglav",
+  "kysymys": "Mikä on Aljažin torni Triglavin huipulla?",
+  "uusi": true,
+  "vastaus": "Kato, tää on hyvä tarina. Triglavin huipulla seisoo pieni metallitorni, jonka tunnetaan olevan pappi [[Jakob Aljaž]]n ajatus. Aljaž osti huipun yhdellä floriinilla huhtikuussa 1895, ja viisi miestä kokosi tornin saman vuoden elokuussa viidessä tunnissa. Torni ja vuori ovat [[Slovenian]] kansallissymboleja, ja sanotaan, että jokaisen aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.\n\nViisi tuntia on kyllä kunnioitettava aika. Itse en saa pesääkään kasaan siinä, ja minulla on siihen kokemusta koko suvun edestä.",
+  "linkit": [
+   "Jakob Aljaž",
+   "Slovenian"
+  ],
+  "jatkot": [
+   "Kuka Jakob Aljaž oli?",
+   "Miten Triglaville noustaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-triglav",
+  "kysymys": "Mikä on Triglavin kansallispuisto?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Triglavin kansallispuisto on Slovenian ainoa kansallispuisto, ja sen keskus on Triglav, [[Julian Alppien]] korkein huippu. Puisto sijaitsee Slovenian luoteisosassa Alppien tuntumassa, ja siihen kuuluu myös [[Trentan]] laakso, jossa [[Soča]]-joki saa alkunsa. Vuoren tyylitelty hahmo on lisäksi osa maan vaakunaa ja lippua. Pullapuotia en siellä ole nähnyt, mutta ei kai sellaista vuorilla kuulukaan olla.",
+  "linkit": [
+   "Julian Alppien",
+   "Trentan",
+   "Soča"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä Triglavin kansallispuistossa elää?",
+   "Kuinka vanha Triglavin kansallispuisto on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bled",
+  "kysymys": "Miksi pletna-soutajan ammatti on yhä rajattu vain tietyille suvuille?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tämä on vanha sääntö. Vuonna 1740 keisarinna [[Maria Teresia]] myönsi lauttaoikeuden 22 paikalliselle suvulle kuljettaa pyhiinvaeltajia [[Bledinjärven]] saarelle, ja monet nykysoutajat polveutuvat suoraan heistä. Oikeus on siis periytynyt suvuissa, ja [[pletna]]-veneen soutaja ohjaa venettä seisaaltaan kahdella airolla. Sen tarkemmista nykyisistä säännöistä en ole varma. No, perinne on ainakin pitänyt.",
+  "linkit": [
+   "Maria Teresia",
+   "Bledinjärven",
+   "pletna"
+  ],
+  "jatkot": [
+   "Miten pletna-veneen soutu opitaan?",
+   "Mikä on Bledin saaren kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bled",
+  "kysymys": "Mitä perinteen mukaan sulhasen pitää tehdä Bledin saaren kirkon portailla häiden päivänä?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tämä on suloinen perinne. Perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti kirkolle johtavat 99 kiviporrasta. Portaat ovat [[barokkisen]] porrasnousun osa vuodelta 1655, ja kirkko on [[Neitsyt Marian taivaaseenottamisen]] pyhiinvaelluskirkko [[Bledinjärven]] saarella. Ylhäällä soitetaan kelloa ja tehdään toive. Minä pääsen ylös siivillä ilman mitään sulhasta.",
+  "linkit": [
+   "barokkisen",
+   "Neitsyt Marian taivaaseenottamisen",
+   "Bledinjärven"
+  ],
+  "jatkot": [
+   "Miksi portaita on juuri 99?",
+   "Millainen on Bledin saaren kirkon kello?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bled",
+  "kysymys": "Kuka rakennutti Bledin linnan ja milloin?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tästä on kaksi tarinaa. Lähteiden mukaan keisari [[Henrik II]] rakennutti linnan vuonna 1004, mutta en ole varma, onko vuosi tarkasti linnan rakennusvuosi vai alueen lahjoitusvuosi. Linna on keskiaikainen ja kohoaa järven pohjoisrannan yläpuolella [[Julian Alppien]] juurella. Ylhäältä katsoen kaikki linnat näyttävät samalta, mutta tämä erottuu.",
+  "linkit": [
+   "Henrik II",
+   "Julian Alppien"
+  ],
+  "jatkot": [
+   "Mitä Bledin linnassa on nykyään nähtävää?",
+   "Kuka oli keisari Henrik II?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bled",
+  "kysymys": "Mikä on Vintgarin rotko Bledin lähellä?",
+  "uusi": true,
+  "vastaus": "No niin, tää on ihan eri maisema kuin järvi. Vintgarin rotko on 1,6 kilometrin mittainen kuilu Bledin luoteispuolella, jonka [[Radovna]]-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes pormestari [[Jakob Žumer]] ja valokuvaaja [[Benedikt Lergetporer]] tutkivat sen vuonna 1891. Puiset kävelysillat rakennettiin kaksi vuotta myöhemmin, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen [[Šum-vesiputous]]. Rotkossa en lentäisi, siellä on ahdasta kyyhkylle.",
+  "linkit": [
+   "Radovna",
+   "Jakob Žumer",
+   "Benedikt Lergetporer",
+   "Šum-vesiputous"
+  ],
+  "jatkot": [
+   "Mitä sana vintgar tarkoittaa?",
+   "Miten Vintgarin rotkoon pääsee Bledistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bled",
+  "kysymys": "Mikä lämmittää Bledinjärven vettä?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Järveä lämmittää lämpölähde, jonka vesi on noin 23-asteista. Itse järvi on syntynyt [[jäätiköiden]] ja maankuoren liikkeiden vaikutuksesta [[Julian Alppien]] Ylä-Krainissa, ja sen rannalla on [[Bledin]] kaupunki.\n\nLämmin vesi houkuttelisi minuakin, mutta jätän uinnin joutsenille. Pullan kanssa tosin neuvottelisin.",
+  "linkit": [
+   "jäätiköiden",
+   "Julian Alppien",
+   "Bledin"
+  ],
+  "jatkot": [
+   "Miten Bledinjärvi on syntynyt?",
+   "Millainen on Bledin kuuluisa kermaleivonnainen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soca",
+  "kysymys": "Mitä Sočan ja Isonzon nimi kertoo joen luonteesta?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Hyvä kysymys tuo. Nimet ovat saman joen slovenialainen ja italialainen muoto: Soča on joen nimi [[Slovenian]] puolella ja Isonzo sen italialainen vastine. Nimien etymologiasta en ole varma, joten en lupaa mitään luonteesta niiden perusteella. Joen luonteesta kertoo enemmän sen kirkkaan smaragdinvihreä vesi, minkä vuoksi jokea markkinoidaan nimellä Smaragdinen kaunotar. Joki on 138 kilometriä pitkä ja päättyy [[Adrianmereen]] Koillis-Italiassa. Nimiä on kaksi, ja kumpikin on hyvä.",
+  "linkit": [
+   "Slovenian",
+   "Adrianmereen"
+  ],
+  "jatkot": [
+   "Mistä Sočan vesi saa smaragdinvihreän värinsä?",
+   "Missä Soča saa alkunsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soca",
+  "kysymys": "Miten maanvyörymä vuonna 585 muutti joen ja sen lähijokien kulkua?",
+  "uusi": false,
+  "vastaus": "Joo, tähän minä en osaa vastata varmasti. Maanvyörymästä vuonna 585 ja sen vaikutuksesta joen kulkuun minulla ei ole luotettavaa tietoa, joten en halua keksiä yksityiskohtia. Varmaa on se, että [[Soča]] kulkee Länsi-Slovenian halki ja päättyy Koillis-Italiassa Adrianmereen, ja että sen ympäristö on [[Julian Alppien]] aluetta. Suurten vyörymien tiedetään muuttavan jokien uomia yleisesti, mutta tämän tapauksen kohdalla en ole varma. Tota ei oo koskaan uskottu kyyhkyn kannettavaksi.",
+  "linkit": [
+   "Soča",
+   "Julian Alppien"
+  ],
+  "jatkot": [
+   "Miten maanvyörymät muuttavat jokien uomia?",
+   "Mitkä ovat Sočan tunnetuimmat nähtävyydet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soca",
+  "kysymys": "Missä Soča saa alkunsa ja mihin se päättyy?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Se on pitkä matka. Joki saa alkunsa [[Trentan]] laaksosta Julian Alpeilla ja virtaa Länsi-Slovenian halki. Matkalla se kulkee [[Bovecin]], [[Kobaridin]] ja [[Tolminin]] ohi, ja lopulta se päättyy Koillis-Italiassa [[Adrianmereen]]. Italiassa joen nimi on Isonzo, ja sen pituus on 138 kilometriä. Joen perässä lentäisin mielelläni, kun reitti on näin selkeä.",
+  "linkit": [
+   "Trentan",
+   "Bovecin",
+   "Kobaridin",
+   "Tolminin",
+   "Adrianmereen"
+  ],
+  "jatkot": [
+   "Mitä Kobaridissa voi nähdä?",
+   "Miksi Sočaa kutsutaan Smaragdiseksi kaunottareksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soca",
+  "kysymys": "Mitä Isonzon taistelut olivat ensimmäisessä maailmansodassa?",
+  "uusi": true,
+  "vastaus": "Joo. Tää on raskas aihe. Isonzon taistelut olivat ensimmäisen maailmansodan taisteluja, jotka käytiin Italian ja [[Itävalta-Unkarin]] armeijoiden välillä Sočan laaksossa ja sen ympäristössä vuosina 1915–1917. Taisteluita lasketaan yleensä olleen kaksitoista. Syksyllä 1917 [[Kobaridin]] lähellä käyty taistelu tunnetaan italiaksi nimellä [[Caporetto]]. Siitä on yli sata vuotta, ja laakso kuului silloin vielä Itävalta-Unkarin keisarikuntaan, jota ei enää ole. Nykyään sama laakso tunnetaan luontomatkailusta, ja sodasta muistuttavat museot ja muistomerkit. Onpa onneksi siitä jo pitkä aika.",
+  "linkit": [
+   "Itävalta-Unkarin",
+   "Kobaridin",
+   "Caporetto"
+  ],
+  "jatkot": [
+   "Mikä oli Caporeton taistelu?",
+   "Millaisia sodan muistomerkkejä Sočan laaksossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-soca",
+  "kysymys": "Millainen kala on Sočan marmoripurotaimen?",
+  "uusi": true,
+  "vastaus": "Ai se. Marmoripurotaimen on uhanalainen kala, ja se kuuluu [[Sočan]] ylävirran erikoisuuksiin. Nimi viittaa kalan marmorimaiseen kuviointiin, ja laji elää [[Adrianmeren]] valuma-alueen jokivesissä, mutta tarkemmista elinalueista ja koosta en ole varma. Lajin suojelu on tärkeää, koska se on uhanalainen.\n\nKalat eivät yleensä ole minun alaani, mutta jokainen uhanalainen laji ansaitsee, että siitä puhutaan oikein.",
+  "linkit": [
+   "Sočan",
+   "Adrianmeren"
+  ],
+  "jatkot": [
+   "Miksi jotkut kalalajit uhanalaistuvat?",
+   "Mitä muita eläimiä Julian Alppien joissa elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velika-planina",
+  "kysymys": "Miksi paimenmajojen soikeat katot ulottuvat lähes maahan asti?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Velika Planinan puiset majat ovat yhden huoneen asuntoja, joiden soikeat, päreillä katetut katot ulottuvat lähes maahan asti, joten katon alle jää suoja karjalle. Kyseessä on [[Kamnikin Alppien]] karstiylängöllä sijaitseva hajanainen [[paimenkylä]]. Kyse on siis käytännön ratkaisusta, jossa katto suojaa sekä asukkaita että eläimiä. Ylhäältä ne näyttävät isoilta pesiltä, ja sehän on minusta kohteliaisuus.",
+  "linkit": [
+   "Kamnikin Alppien",
+   "paimenkylä"
+  ],
+  "jatkot": [
+   "Millaista elämä Velika Planinalla on kesäisin?",
+   "Mitä sana planina tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velika-planina",
+  "kysymys": "Mitä paimenmajojen kappelille tapahtui sodan aikana ja milloin uusi rakennettiin?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tämä on surullisempi asia. [[Marija Snežna]] -kappeli rakennettiin [[paimenten]] toimesta arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat. Uusi kappeli valmistui vuonna 1988. Tarkemmasta sodasta ja ajankohdasta en ole varma, sillä lähteissä puhutaan vain sota-ajasta. Onneksi kappeli on rakennettu uudelleen.",
+  "linkit": [
+   "Marija Snežna",
+   "paimenten",
+   "Jože Plečnikin"
+  ],
+  "jatkot": [
+   "Mitä Marija Snežna -nimi tarkoittaa?",
+   "Kuka oli arkkitehti Jože Plečnik?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velika-planina",
+  "kysymys": "Kuka oli arkkitehti Jože Plečnik?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Jože Plečnik oli slovenialainen arkkitehti, joka eli 1872–1957. Hänet tunnetaan erityisesti töistään [[Ljubljanassa]], ja hän suunnitteli myös [[Prahan linnan]] alueen uudistuksia. Velika Planinan paimenet rakensivat hänen suunnitelmiensa pohjalta Marija Snežna -kappelin. Kyyhky arvostaa arkkitehtia, joka ymmärtää katot.",
+  "linkit": [
+   "Ljubljanassa",
+   "Prahan linnan"
+  ],
+  "jatkot": [
+   "Mitä Plečnik suunnitteli Ljubljanassa?",
+   "Mitä Plečnik teki Prahan linnassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velika-planina",
+  "kysymys": "Millaista elämä Velika Planinalla on kesäisin?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Velika Planinalla on pysyviä asukkaita vain vähän, mutta kesäisin ylängölle tuodaan yhä laumoja laiduntamaan. Puiset majat ovat yhden huoneen asuntoja, ja niiden soikeiden päreillä katettujen kattojen alle jää suoja karjalle. Kylä sijaitsee [[Kamnikin Alppien]] karstiylängöllä [[Ylä-Krainissa]], ja se on yksi Euroopan harvoista näin laajoina säilyneistä paimenasutuksista. Paimenten päivärytmistä tai arjesta en ole varma.\n\nYlhäältä katsoen katot näyttävät isoilta pesiltä, ja se on minulle suurin kohteliaisuus. Paikallisesta leivästä minulla ei ole tietoa, mutta toivon parasta.",
+  "linkit": [
+   "Kamnikin Alppien",
+   "Ylä-Krainissa"
+  ],
+  "jatkot": [
+   "Mitä karstiylänkö tarkoittaa?",
+   "Miten paimentalous on muuttunut Euroopan vuoristoissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velika-planina",
+  "kysymys": "Mitä Marija Snežna -nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Katotaas. Marija on Maria, ja snežna on lumeen viittaava sana, joten nimen voi suomentaa Lumen Neitsyt Mariaksi. Nimi liittyy [[Neitsyt Maria]]n kunnioitukseen, mutta en ole varma Velika Planinan kappelin nimen tarkasta taustasta. Kappeli rakennettiin arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, paloi sota-aikana ja uusi valmistui vuonna 1988. Lumi ja minä emme ole ystäviä.",
+  "linkit": [
+   "Neitsyt Maria",
+   "Jože Plečnikin"
+  ],
+  "jatkot": [
+   "Mikä on Lumen Neitsyt Marian juhla?",
+   "Miksi vuorille rakennettiin kappeleita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cerknica",
+  "kysymys": "Minne Cerknican järven vesi katoaa kesäisin, ja mistä se palaa?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Tämä on vähän outo järvi. Kesällä, kun sataa vähän, vesi valuu kokonaan alempiin maanalaisiin luoliin, ja pohja peittyy nopeasti rehevään kasvillisuuteen. Syksyn sateiden myötä vesi purkautuu takaisin samoista [[luolista]], ja järvi voi tulvia ympäristöönsä. Muutokset ovat epäsäännöllisiä, ja järvi on ollut joskus kuivana yli vuoden, kuten vuosina 1834–35. [[Cerknican]] seutu on [[Sisä-Krainissa]]. Kyllä minä silti kysyisin, minne se vesi oikein menee.",
+  "linkit": [
+   "luolista",
+   "Cerknican",
+   "Sisä-Krainissa"
+  ],
+  "jatkot": [
+   "Mitä kaloille tapahtuu, kun järvi kuivuu?",
+   "Mikä on karstipolje?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cerknica",
+  "kysymys": "Millä tavalla Valvasor ja Gruber yrittivät selittää järven arvoitusta?",
+  "uusi": false,
+  "vastaus": "Mmm— tähän en osaa vastata kokonaan. Tiedän vain, että Valvasor esitti järvestä oman selityksensä 1600-luvun lopulla ja että [[Tobias Gruber]] kuvasi sen toiminnan tarkasti ensimmäisenä vuonna 1781, lähteiden mukaan. Heidän selitystensä yksityiskohdista en ole varma, joten en halua keksiä niitä. [[Johann Weikhard von Valvasor]] toi lähteiden mukaan karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Siinä kohtaa kyyhkyn tiedot loppuvat.",
+  "linkit": [
+   "Tobias Gruber",
+   "Johann Weikhard von Valvasor"
+  ],
+  "jatkot": [
+   "Mitä sana karst alun perin tarkoittaa?",
+   "Millainen oli Valvasorin teos Krainin herttuakunnasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cerknica",
+  "kysymys": "Kuinka suuri Cerknican järvi on täynnä ollessaan?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Täynnä ollessaan Cerknican järvi on Slovenian suurin järvi. Sen pinta-ala vaihtelee yleensä noin 26–28 neliökilometrin välillä ja voi nousta jopa 38 neliökilometriin, mutta lähteet ilmoittavat alarajan hieman eri tavoin. Järvi sijaitsee [[karstipoljen]] eteläosassa [[Sisä-Krainissa]].\n\nJärvi, joka vaihtaa kokoaan ja katoaa kesäksi, on minun silmissäni erikoinen. Pesäpaikkaa en tähän rakentaisi.",
+  "linkit": [
+   "karstipoljen",
+   "Sisä-Krainissa"
+  ],
+  "jatkot": [
+   "Mikä on Slovenian toiseksi suurin järvi?",
+   "Miten karstialueen vesi liikkuu maan alla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cerknica",
+  "kysymys": "Mitä kaloille tapahtuu, kun Cerknican järvi kuivuu?",
+  "uusi": true,
+  "vastaus": "Mmm— sepä sattui. Lähteiden mukaan kalat katoavat järven veden mukana ja palaavat sen mukana, kun vesi nousee takaisin luolista. Järvi on yhteydessä [[maanalaisiin onkaloihin]], joihin vesi kesällä valuu. Tarkasta mekanismista, miten kalat selviävät, en ole varma. Järvi on lisäksi tärkeä [[lintualue]]. Kalat osaavat sen minkä minäkin: kadota oikeaan aikaan.",
+  "linkit": [
+   "maanalaisiin onkaloihin",
+   "lintualue"
+  ],
+  "jatkot": [
+   "Mitä lintuja Cerknican järvellä tavataan?",
+   "Mikä oli Valvasorin selitys järven arvoitukselle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-cerknica",
+  "kysymys": "Mikä on karstipolje?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä sana on tuttu. Karstipolje on karstialueen laaja, tasapohjainen suljettu laakso, jonka vedet purkautuvat maan alle luolastoihin. [[Cerknican järvi]] sijaitsee Cerknican karstipoljen eteläosassa, ja siksi järven vesi voi kadota kesäksi maan alle. Sana karst on lähteiden mukaan tullut eurooppalaisten tutkijoiden käyttöön [[Valvasorin]] kuvausten kautta. Näin tämä oppitunti sujui ilman yhtäkään pullaa.",
+  "linkit": [
+   "Cerknican järvi",
+   "Valvasorin"
+  ],
+  "jatkot": [
+   "Mitä sana karst alun perin tarkoittaa?",
+   "Mitä muita karstialueita Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skocjan",
+  "kysymys": "Miksi Reka-joki katoaa Škocjanissa maan alle, ja minne se sieltä päätyy?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tää on kyl hieno ilmiö. Reka virtaa [[Karstin]] kalkkikivialueella, jossa vesi liuottaa kiveä vähitellen, ja siksi alueella on paljon luolia ja kuiluja. Joki syöksyy Suureen [[romahdusdolinaan]] ja katoaa kallion alle, ja maan alla se virtaa yhteensä noin 34 kilometriä, osan matkaa noin 3,5 kilometriä pitkässä kanjonissa. Pintaan se nousee uudelleen [[Monfalconen]] lähellä, ja siellä siitä tulee kolmannes [[Timavo-joen]] vedestä. Ois se joelta kyl hieno temppu.",
+  "linkit": [
+   "Karstin",
+   "romahdusdolinaan",
+   "Monfalconen",
+   "Timavo-joen"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa romahdusdoliini karstialueella?",
+   "Missä Timavo-joki laskee mereen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skocjan",
+  "kysymys": "Mikä tekee Martelin salista niin poikkeuksellisen?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tähän tarvitaan lukuja. Martelin sali on [[Škocjanin luolien]] maanalaisen kanjonin suurin tila, ja sen tilavuus on 2,2 miljoonaa kuutiometriä. Sitä pidetään Euroopan suurimpana tunnettuna maanalaisena salina. Kanjoni, jota pitkin [[Reka-joki]] virtaa, on noin 3,5 kilometriä pitkä ja jopa yli 140 metriä korkea, joten sali on osa poikkeuksellisen suurimittaista kokonaisuutta. Luolat ovat myös [[Unescon]] maailmanperintökohde vuodesta 1986.\n\nKyyhkynä minä arvostan taivasta, mutta täytyy myöntää, että tuollaiseen saliin mahtuisi koko sukuni parvi. Pimeässä en kuitenkaan erottaisi edes pullan väriä.",
+  "linkit": [
+   "Škocjanin luolien",
+   "Reka-joki",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Miten Reka-joki on muovannut maanalaista kanjonia?",
+   "Milloin Škocjanin luolia alettiin tutkia järjestelmällisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skocjan",
+  "kysymys": "Millaisia jälkiä ihmisistä on löytynyt Škocjanin luolien alueelta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Škocjanin luolien]] alueelta on löytynyt merkkejä [[ihmisasutuksesta]] yli kymmenentuhannen vuoden ajalta, joten [[Karstin]] seutu on ollut ihmisille tärkeä hyvin pitkään. Tarkkoja löytöjä en osaa luetella. Luolia alettiin tutkia järjestelmällisesti vuonna 1884, ja nykyaikaisen matkailun katsotaan alkaneen sen jälkeen vieraskirjan käyttöönotosta. Aika iso luku, siinä vaiheessa meidän suku ei ees kirjeitä kantanut.",
+  "linkit": [
+   "Škocjanin luolien",
+   "ihmisasutuksesta",
+   "Karstin"
+  ],
+  "jatkot": [
+   "Miten ihmiset käyttivät luolia muinaisina aikoina?",
+   "Mitä muita maailmanperintökohteita Sloveniassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skocjan",
+  "kysymys": "Milloin Škocjanin luolista tuli matkailukohde?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Škocjanin luolien nykyaikaisen matkailun katsotaan alkaneen 1. tammikuuta 1819, kun luoliin otettiin käyttöön [[vieraskirja]]. Se on sama vuosisadan alku, jolloin monia luonnonnähtävyyksiä alettiin esitellä kävijöille. Myöhemmin [[Unesco]] otti luolat maailmanperintölistalleen vuonna 1986, ja nykyisin ne ovat tunnettu kohde Slovenian [[Karstilla]]. Minä olisin kirjoittanut siihen vain: kävi kyyhky.",
+  "linkit": [
+   "vieraskirja",
+   "Unesco",
+   "Karstilla"
+  ],
+  "jatkot": [
+   "Miten Škocjanin luolissa vieraillaan nykyisin?",
+   "Mitä Unescon maailmanperintölista on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skocjan",
+  "kysymys": "Mikä on karsti ja miksi siellä on niin paljon luolia?",
+  "uusi": true,
+  "vastaus": "Ai tota. Karsti on alue, jolla kallioperä koostuu helposti liukenevasta kivestä, yleensä [[kalkkikivestä]], ja sadevesi liuottaa sitä halkeamia pitkin. Vähitellen kiveen syntyy onkaloita, kuiluja ja pyöreitä kuoppia eli [[dolineja]], ja pintavedet katoavat maan alle. Siksi karstialueilla on usein luolia ja jokia, jotka virtaavat osan matkaa maan alla. Tietääkseni nimitys juontuu [[Karstin]] alueesta Slovenian ja Italian rajaseudulla, jossa myös [[Škocjanin luolat]] sijaitsevat. Tää meni melkein koulutunnista, kyl.",
+  "linkit": [
+   "kalkkikivestä",
+   "dolineja",
+   "Karstin",
+   "Škocjanin luolat"
+  ],
+  "jatkot": [
+   "Mitä doliini tarkoittaa?",
+   "Missä muualla Euroopassa on tunnettuja karstialueita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-postojna",
+  "kysymys": "Miksi Postojnan luolasta tuli matkailukohde jo 1800-luvun alussa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tähän liittyy keisari. Postojnan luola on [[Pivka-joen]] kaivertama karstiluolasto, ja sen pituus on yli 24 kilometriä, joten nähtävää riitti. Vuonna 1818 luolaa valmisteltiin keisari [[Frans I:n]] vierailua varten, ja silloin paikallinen lamppujen sytyttäjä [[Luka Čeč]] löysi sattumalta uuden osan. Luola avattiin virallisesti matkailukohteeksi vuonna 1819, ja Čeč toimi sen ensimmäisenä oppaana. Luola oli ollut tunnettu jo aiemmin, sillä [[Johann Weikhard von Valvasor]] oli kuvannut sen 1600-luvulla. Kyl keisarin vierailut osas silloin tuoda kiirettä.",
+  "linkit": [
+   "Pivka-joen",
+   "Frans I:n",
+   "Luka Čeč",
+   "Johann Weikhard von Valvasor"
+  ],
+  "jatkot": [
+   "Miten karstiluolat syntyvät?",
+   "Kuka oli keisari Frans I?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-postojna",
+  "kysymys": "Miten luolassa kuljettiin 1800-luvulla, kun sähkövaloja ei vielä ollut?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Tähän on vastaus. Ennen sähkövaloja luolassa kuljettiin pääosin jalan lamppujen valossa, minkä vuoksi luolassa tarvittiin lamppujen sytyttäjiä, kuten [[Luka Čeč]]. Vuonna 1872 luolaan asennettiin kiskot ja otettiin käyttöön ensimmäinen matkailijoiden [[luolajuna]], jota oppaat aluksi työnsivät itse. Sähkövalo saatiin luolaan vuonna 1884, ennen kuin [[Ljubljanassa]] oli sellaista. Työntäminen kuulostaa kyl raskaalta, minä lentäisin.",
+  "linkit": [
+   "Luka Čeč",
+   "luolajuna",
+   "Ljubljanassa"
+  ],
+  "jatkot": [
+   "Miten luolia on valaistu ennen sähköä?",
+   "Mitä Krainin herttuakunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-postojna",
+  "kysymys": "Miten Postojnan luola on syntynyt?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys tuo. Postojnan luolan on kaivertanut [[Pivka-joki]] Lounais-Slovenian karstialueelle, ja siitä on syntynyt yli 24 kilometrin mittainen luolasto. [[Kalkkikivi]] liukenee pitkän ajan kuluessa veteen, joten vesi laajentaa halkeamia käytäviksi ja saleiksi. Tarkkoja vuosimääriä luolaston synnylle en ole varma muistamaan, joten en nimeä niitä. Luolan sisällä on graffiti vuodelta 1213, joten käytävillä on kuljettu jo keskiajalla. Joki on kyl kärsivällinen kaivaja.",
+  "linkit": [
+   "Pivka-joki",
+   "Kalkkikivi"
+  ],
+  "jatkot": [
+   "Mikä on stalaktiitti ja miten se syntyy?",
+   "Minkä eläinten koti Postojnan luola on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-postojna",
+  "kysymys": "Millainen postitoimisto Postojnan luolassa on?",
+  "uusi": true,
+  "vastaus": "No jopas. Postojnan luolassa on [[postitoimisto]], joka avattiin vuonna 1899, ja sitä on kutsuttu maailman ainoaksi maanalaiseksi postitoimistoksi. En ole varma, miten toimisto nykyisin toimii, joten sen tilanne kannattaa tarkistaa ajantasaisesta lähteestä. Luola oli muutenkin edistyksellinen: sinne laskettiin raiteet vuonna 1872 ja [[sähkövalo]] saatiin vuonna 1884.\n\nMaanalainen postitoimisto on minun sukuni mielestä aika erikoinen paikka. Kirje, joka kulkee kyyhkyn sijaan kallion kautta, tuntuu melkein loukkaukselta.",
+  "linkit": [
+   "postitoimisto",
+   "sähkövalo"
+  ],
+  "jatkot": [
+   "Miten kirjepostia kuljetettiin ennen lentokoneita?",
+   "Milloin ensimmäiset postimerkit otettiin käyttöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-postojna",
+  "kysymys": "Kuka oli Johann Weikhard von Valvasor?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Johann Weikhard von Valvasor oli krainilainen oppinut, joka kuvasi [[Krainin herttuakunnan]] maata ja luontoa 1600-luvulla. Hän kuvasi myös [[Postojnan luolan]], ja hänen kuvauksensa kuuluu luolan varhaisiin kuvauksiin. Elämänvaiheiden yksityiskohdista en ole varma, mutta hänen laaja teoksensa Krainista julkaistiin muistini mukaan 1600-luvun lopulla. Tiedon kantajana minä tunnen kollegan.",
+  "linkit": [
+   "Krainin herttuakunnan",
+   "Postojnan luolan"
+  ],
+  "jatkot": [
+   "Millä alueella Krainin herttuakunta sijaitsi?",
+   "Mistä tunnetaan muita Valvasorin tutkimuksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ptuj",
+  "kysymys": "Miksi Ptujia sanotaan Slovenian vanhimmaksi kaupungiksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Ptuj on kirjattu Slovenian vanhimmaksi kaupungiksi, ja sen juuret ovat roomalaisessa sotilasleirissä nimeltä [[Poetovio]]. Leiri sijaitsi tärkeällä joenylityspaikalla [[Draava-joen]] rannalla muinaisella kauppareitillä Itämereltä Adrianmerelle. Vuonna 69 Tonavan legioonat julistivat Ptujissa [[Vespasianuksen]] keisariksi. Hunnit ryöstivät kaupungin lähteiden mukaan vuonna 450, ja keskiajalla se kuului [[Salzburgin]] arkkipiispalle. Viisas Pöllö kertois tämän latinaksikin, mutta hän lupasi palata jo Roomasta.",
+  "linkit": [
+   "Poetovio",
+   "Draava-joen",
+   "Vespasianuksen",
+   "Salzburgin"
+  ],
+  "jatkot": [
+   "Mitä roomalaisten legioonat Tonavalla tekivät?",
+   "Kuka oli keisari Vespasianus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ptuj",
+  "kysymys": "Mitä kurentit Kurentovanjessa tekevät, ja miksi he pukeutuvat lampaantaljoihin?",
+  "uusi": false,
+  "vastaus": "Selvä juttu, tää on kyl värikäs aihe. Kurentit ovat lampaantaljoihin ja kelloihin pukeutuneita hahmoja, joilla on värikäs naamio ja kädessään puinen nuija, jonka päässä on siilinnahkoja. He kiertävät Ptujin katuja kymmenpäiväisessä [[Kurentovanjessa]] ja ajavat melullaan talven ja pahat henget pois. Lampaantaljat kuuluvat perinteiseen asuun, mutta en ole varma, mikä niiden tarkka alkuperä on. Aiemmin kurentiksi pääsivät vain naimattomat miehet, mutta nykyään mukana on myös naisia ja lapsia, ja vuonna 2017 kurenttien kiertäminen talosta taloon merkittiin [[Unescon]] [[aineettoman kulttuuriperinnön]] listalle. Siinä melussa kyl kyyhky pyrähtäis pakoon.",
+  "linkit": [
+   "Kurentovanjessa",
+   "Unescon",
+   "aineettoman kulttuuriperinnön"
+  ],
+  "jatkot": [
+   "Milloin Kurentovanje järjestetään?",
+   "Mitä muita talvenhäätöperinteitä Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ptuj",
+  "kysymys": "Miksi Ptujia kutsuttiin saksaksi nimellä Pettau?",
+  "uusi": true,
+  "vastaus": "Ai se. Pettau on Ptujin saksankielinen nimi, jota käytettiin keskiajalla, kun kaupunki kuului [[Salzburgin]] arkkipiispalle. Kaupunki sijaitsee [[Steiermarkin]] alueella, jossa saksa oli pitkään hallinnon ja ylimystön kieli, ja siksi saksankieliset paikannimet olivat yleisiä. Nimen tarkkaa etymologiaa en ole varma, mutta Pettau muistuttaa roomalaista nimeä [[Poetovio]]. Nimiä riittää, ja kaikki kyl osoittaa samaan kaupunkiin.",
+  "linkit": [
+   "Salzburgin",
+   "Steiermarkin",
+   "Poetovio"
+  ],
+  "jatkot": [
+   "Mitä Steiermark on?",
+   "Milloin Ptuj sai nykyisen nimensä käyttöön?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ptuj",
+  "kysymys": "Mihin Draava-joki virtaa Ptujin jälkeen?",
+  "uusi": true,
+  "vastaus": "Katotaas. [[Draava]] virtaa Ptujin kautta Slovenian koillisosassa kohti [[Kroatiaa]], ja osan matkaa se kulkee Kroatian ja [[Unkarin]] rajalla. Lopulta se yhtyy [[Tonavaan]] Kroatian itäosassa. Ptuj kehittyi joen ylityspaikalle, joka oli tärkeä paikka muinaisella kauppareitillä.\n\nJoet ovat kyyhkyn paras kartta: kun löytää virran, löytää kaupungin. Minä seuraan Draavaa mielelläni Tonavalle asti.",
+  "linkit": [
+   "Draava",
+   "Kroatiaa",
+   "Unkarin",
+   "Tonavaan"
+  ],
+  "jatkot": [
+   "Mihin Tonava lopulta laskee?",
+   "Mitä muita kaupunkeja Draavan varrella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ptuj",
+  "kysymys": "Mitä kauppareitillä Itämereltä Adrianmerelle kuljetettiin?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: Ptuj sijaitsi muinaisella kauppareitillä [[Itämereltä]] [[Adrianmerelle]], jota perinteisesti kutsutaan [[meripihkatieksi]]. Reittiä pitkin kulkenut tavara oli ennen kaikkea meripihkaa, joka kuljetettiin Itämeren rannoilta etelään. Muista kauppatavaroista en ole varma, joten niitä en luettele. [[Poetovion]] sijainti joenylityspaikalla teki kaupungista luontevan pysähdyspaikan kulkijoille. Mieluummin minä olisin kantanut pullaa kuin pihkaa.",
+  "linkit": [
+   "Itämereltä",
+   "Adrianmerelle",
+   "meripihkatieksi",
+   "Poetovion"
+  ],
+  "jatkot": [
+   "Mistä meripihka on peräisin?",
+   "Mitä muita muinaisia kauppateitä Euroopassa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-celje",
+  "kysymys": "Miksi Celjen kreivit olivat niin vaikutusvaltaisia?",
+  "uusi": false,
+  "vastaus": "No niin, tähän on selitys. [[Celjen kreivien]] nousu alkoi siitä, että [[Sanneckin]] herrat saivat linnan haltuunsa vuonna 1333 ja heistä tuli vuonna 1341 Celjen kreivejä. He tekivät linnoituksesta mukavan asuinpaikan ja lisäsivät noin vuonna 1400 nelikerroksisen [[Friderikin tornin]], ja linna oli aikanaan Slovenian alueen suurin linnoitus. Muistini mukaan suvun jäsenet solmivat myös avioliittoja ylimmän ylimystön kanssa, mutta en ole varma yksityiskohdista, joten niitä kannattaa tarkistaa erikseen. Kolmen kukkulan päältä näkee kyl pitkälle.",
+  "linkit": [
+   "Celjen kreivien",
+   "Sanneckin",
+   "Friderikin tornin"
+  ],
+  "jatkot": [
+   "Mihin sukuihin Celjen kreivit olivat sidoksissa?",
+   "Mikä oli Heunburgin kreivien rooli linnan alussa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-celje",
+  "kysymys": "Mitä linnalle tapahtui sen jälkeen, kun se oli menettänyt strategisen merkityksensä?",
+  "uusi": false,
+  "vastaus": "Just niin, siitä tuli rappio. Kun linna menetti merkityksensä, se alkoi rappeutua. Viimeiset asukkaat lähtivät sieltä vuonna 1795, ja vuonna 1803 talonpoika osti linnan ja käytti sitä louhoksena. Kunnostustyöt alkoivat vuonna 1882 museoyhdistyksen aloitteesta, ja ne jatkuvat yhä. Nykyisin [[Celjen kreivien]] entinen asuinpaikka on [[rauniolinna]] Celjen kaakkoispuolella kolmen kukkulan päällä. Kyl se linna ansaitsis parempaa kohtelua.",
+  "linkit": [
+   "Celjen kreivien",
+   "rauniolinna"
+  ],
+  "jatkot": [
+   "Miten rauniolinnoja kunnostetaan Euroopassa?",
+   "Mitä Celjen linnassa voi nykyisin nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-celje",
+  "kysymys": "Ketkä rakensivat Celjen ensimmäisen linnan?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Ensimmäisen linnan rakensivat 1200-luvulla [[Heunburgin]] kreivit. Vuonna 1333 linna siirtyi [[Sanneckin]] herroille, joista tuli vuonna 1341 [[Celjen kreivejä]], ja sen jälkeen linnoitusta laajennettiin mukavaksi asuinpaikaksi. Noin vuonna 1400 siihen lisättiin Friderikin torni.\n\nOmistajat vaihtuivat, mutta linna pysyi. Sitä minä arvostan, sillä oma pesäni ei kestä edes yhtä kunnon myrskyä.",
+  "linkit": [
+   "Heunburgin",
+   "Sanneckin",
+   "Celjen kreivejä"
+  ],
+  "jatkot": [
+   "Milloin Celjen kaupunki perustettiin?",
+   "Mikä on rauniolinnan ja linnan ero?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-celje",
+  "kysymys": "Millainen on Celjen linnan Friderikin torni?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Friderikin torni on nelikerroksinen torni, jonka [[Celjen kreivit]] lisäsivät linnaan noin vuonna 1400. Se kuuluu siihen vaiheeseen, jolloin kreivit muuttivat linnoituksen mukavaksi asuinpaikaksi. Tornin nimen tarkkaa taustaa en ole varma, joten en arvaa sitä. Linna on nykyisin [[rauniolinna]], ja sen kunnostustyöt alkoivat vuonna 1882 ja jatkuvat yhä. Neljä kerrosta, no minä tyytyisin ylimpään ikkunaan.",
+  "linkit": [
+   "Celjen kreivit",
+   "rauniolinna"
+  ],
+  "jatkot": [
+   "Mitä tornit olivat linnoissa?",
+   "Miten keskiaikaiset linnat rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-celje",
+  "kysymys": "Missä päin Slovenian aluetta Celje sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Celje sijaitsee Sloveniassa, historiallisen [[Steiermarkin]] eli Alemman Steiermarkin alueella, [[Savinja-joen]] laaksossa. [[Celjen linna]] on rauniolinna kaupungin kaakkoispuolella kolmen kukkulan päällä. Ei kyl pitkää sepustusta tarvittu.",
+  "linkit": [
+   "Steiermarkin",
+   "Savinja-joen",
+   "Celjen linna"
+  ],
+  "jatkot": [
+   "Mikä on Savinja-joki?",
+   "Mitä Alempi Steiermark tarkoittaa?"
+  ],
+  "paikka": {
+   "nimi": "Celje",
+   "lat": 46.23,
+   "lon": 15.27,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-skofja-loka",
+  "kysymys": "Miksi Škofja Lokan nimi tarkoittaa piispan niittyä, ja kenen piispoja he olivat?",
+  "uusi": false,
+  "vastaus": "Ai tota. Nimessä Škofja Loka sana škof tarkoittaa piispaa ja loka kosteaa niittyä, joten nimi merkitsee piispan kosteaa niittyä. Keisari [[Otto II]] lahjoitti alueen herruuden vuonna 973 [[Freisingin]] piispoille, joiden kirkollinen ruhtinaskunta sijaitsi [[Baijerissa]]. Lähes tuhat vuotta kaupungin historia oli sidoksissa tähän kaukaiseen ruhtinaskuntaan. Markkinaoikeudet mainitaan ensi kerran vuonna 1248 ja kaupunkioikeudet vuonna 1274. Ihan hyvä nimi niitylle, joka vaan kasvoi kaupungiksi.",
+  "linkit": [
+   "Otto II",
+   "Freisingin",
+   "Baijerissa"
+  ],
+  "jatkot": [
+   "Mitä piispanruhtinaskunta tarkoittaa?",
+   "Missä Freising sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skofja-loka",
+  "kysymys": "Mikä Škofja Lokan passiokulkue oli, ja miksi se on merkittävä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Škofja Lokan [[pitkäperjantain]] passiokulkue on näytelmä, jota pidetään sloveniankielisen näytelmäkirjallisuuden vanhimpana. Se esittää [[Jeesuksen]] kärsimyksen kulkueena kaupungin kaduilla. Muistini mukaan sen kirjoitti kapusiinimunkki [[Romuald]] 1700-luvun alussa, mutta en ole varma tarkasta vuodesta. Merkittävä se on siksi, että se on sloveniankielisen kirjallisuuden ja teatterin varhaisimpia teoksia ja liittyy kaupunkiin, jonka vanha keskusta on yksi Slovenian parhaiten säilyneistä. Kulkueesta tuli pitkä vastaus, kyl vaan.",
+  "linkit": [
+   "pitkäperjantain",
+   "Jeesuksen",
+   "Romuald"
+  ],
+  "jatkot": [
+   "Mikä on passio?",
+   "Mitä kapusiinit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skofja-loka",
+  "kysymys": "Milloin Škofja Lokan kaupunkioikeudet myönnettiin?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Škofja Lokan [[markkinaoikeudet]] mainitaan ensi kerran vuonna 1248 ja [[kaupunkioikeudet]] vuonna 1274. Aiemmin, vuonna 973, keisari Otto II oli lahjoittanut alueen herruuden [[Freisingin]] piispoille. Kaupunki ympäröitiin muurilla 1300-luvulla, ja vanha keskusta on yksi Slovenian parhaiten säilyneistä keskiaikaisista kaupunkiytimistä. Viisas Pöllö tietäis päivämäärätkin, mutta hänet kutsuttiin puhumaan johonkin.",
+  "linkit": [
+   "markkinaoikeudet",
+   "kaupunkioikeudet",
+   "Freisingin"
+  ],
+  "jatkot": [
+   "Mitä kaupunkioikeudet antoivat keskiajalla?",
+   "Miten keskiaikaiset kaupunginmuurit rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skofja-loka",
+  "kysymys": "Mitä Škofja Lokalle tapahtui vuonna 1803?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: vuonna 1803 Saksan alueiden uudelleenjärjestelyissä Škofja Loka liitettiin [[Itävallan]] [[Krainin herttuakuntaan]]. Tähän asti kaupungin historia oli ollut sidoksissa [[Freisingin]] piispojen kirkolliseen ruhtinaskuntaan lähes tuhat vuotta, joten muutos oli iso. Tuohon aikaan Saksan alueilla purettiin laajasti kirkollisia ruhtinaskuntia, mutta tarkempia yksityiskohtia en ole varma muistamaan.\n\nSiinä vaiheessa kaupunki vaihtoi herraa niin kuin kyyhky vaihtaa ikkunalautaa. Rajoja piirrettiin uusiksi, mutta kaupungin vanha keskusta pysyi paikallaan.",
+  "linkit": [
+   "Itävallan",
+   "Krainin herttuakuntaan",
+   "Freisingin"
+  ],
+  "jatkot": [
+   "Mikä oli Saksalais-roomalainen keisarikunta?",
+   "Milloin Krainin herttuakunta lakkasi olemasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-skofja-loka",
+  "kysymys": "Mikä tekee Škofja Lokan vanhasta keskustasta erityisen?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Škofja Lokan vanha keskusta on yksi Slovenian parhaiten säilyneistä keskiaikaisista kaupunkiytimistä. Kaupunki ympäröitiin [[muurilla]] 1300-luvulla, ja sen markkinaoikeudet ja kaupunkioikeudet mainitaan 1200-luvulta. Keskustan rakenne kertoo siis pitkästä kehityksestä, jonka aikana [[Ylä-Krainin]] kaupunki oli [[Freisingin]] piispojen herruudessa. Hyvin on pysynyt kasassa, kyl minä sellaista arvostan.",
+  "linkit": [
+   "muurilla",
+   "Ylä-Krainin",
+   "Freisingin"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisia kaupunkeja on suojeltu Euroopassa?",
+   "Millaisia kaupunginmuureja Euroopassa on säilynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sticna",
+  "kysymys": "Mitä erikoista on Stičnan käsikirjoituksessa, joka syntyi luostarin kirjoitustuvassa?",
+  "uusi": false,
+  "vastaus": "No jopas, tuo on hyvä kysymys. [[Stičnan]] käsikirjoitus syntyi luostarissa 1400-luvulla, ja sen erikoisuus on kieli: se on [[sloveniankielinen]], vaikka luostarin kirjoitustuvassa oli tehty jo 1100-luvulta lähtien koristeltuja latinankielisiä käsikirjoituksia. Keskiajalla tärkeät tekstit kirjoitettiin tavallisesti latinaksi, joten kansankielinen käsikirjoitus on kiinnostava todiste siitä, että myös sloveenia kirjoitettiin muistiin. En ole varma käsikirjoituksen tarkasta sisällöstä enkä sen sijoituksesta vanhimpien sloveniankielisten tekstien joukossa. Noin lyhyesti se on, mitä tästä varmasti tiedän.",
+  "linkit": [
+   "Stičnan",
+   "sloveniankielinen"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisia käsikirjoituksia valmistettiin?",
+   "Mikä on sloveenin kielen asema Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sticna",
+  "kysymys": "Mitä luostarille tapahtui vuonna 1784, ja miten se sai uuden alun?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Keisari [[Joosef II]] lakkautti luostarin vuonna 1784 osana uudistuksia, joilla hän vähensi luostarien määrää [[Habsburgien]] maissa, ja luostarielämä katkesi. Munkit palasivat sinne vasta vuonna 1898, noin sata vuotta myöhemmin, ja paluu merkitsi luostarin toiminnan uutta alkua. Nykyisin Stična on edelleen toimiva [[sistersiläisluostari]], ja sen kerrotaan olevan Slovenian ainoa laatuaan. Sata vuotta on pitkä aika odottaa, jopa postikyyhkylle.",
+  "linkit": [
+   "Joosef II",
+   "Habsburgien",
+   "sistersiläisluostari"
+  ],
+  "jatkot": [
+   "Miten luostarit selvisivät Joosef II:n uudistusten jälkeen?",
+   "Mikä rooli sistersiläisillä on nykyään Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sticna",
+  "kysymys": "Kuka oli Jacobus Gallus, jonka uskotaan opiskelleen luostarissa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Jacobus Gallus, sloveniaksi Jakob Petelin, oli renessanssiajan säveltäjä, joka syntyi Sloveniassa 1500-luvun puolivälin tienoilla ja teki myöhemmin uran Keski-Euroopassa. Hän työskenteli muun muassa [[Prahassa]], jossa hän kuoli vuonna 1591, ja hänen tunnetuin työnsä on laaja [[motettien]] kokoelma [[Opus musicum]]. Yhteys Stičnan luostarin kouluun on pikemminkin perimätietoa kuin varmaksi todistettu asia.\n\nGallus on latinaa ja tarkoittaa kukkoa, ja Petelinkin tarkoittaa samaa. Kukko siis säveltänyt, enkä minä ole yllättynyt, linnuissa on lahjoja.",
+  "linkit": [
+   "Prahassa",
+   "motettien",
+   "Opus musicum"
+  ],
+  "jatkot": [
+   "Mitä motetti on?",
+   "Millaista musiikkia renessanssin aikana säveltiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sticna",
+  "kysymys": "Mitä tarkoittaa, että luostari on sistersiläisluostari?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Pöllö parantelee parhaillaan siipeään, joten hoidan homman. Sistersiläisluostari kuuluu sistersiläisten järjestöön, joka syntyi Ranskan Cîteaux'ssa vuonna 1098 [[benediktiiniläisten]] uudistusliikkeenä. Munkit noudattavat [[Benedictuksen sääntöä]], joka painottaa rukousta, yhteisöllistä elämää ja käsityötä, ja järjestö korosti yksinkertaisuutta niin rakentamisessa kuin elämäntavassa. Sistersiläisiä kutsuttiin [[valkoisiksi munkeiksi]] heidän vaaleiden kaapujensa vuoksi, ja heidän luostareitaan perustettiin ympäri Eurooppaa. Tuo meni ihan hyvin ilman muistilappuja.",
+  "linkit": [
+   "benediktiiniläisten",
+   "Benedictuksen sääntöä",
+   "valkoisiksi munkeiksi"
+  ],
+  "jatkot": [
+   "Mikä oli Benedictuksen sääntö?",
+   "Miksi sistersiläiset valitsivat usein syrjäisiä paikkoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sticna",
+  "kysymys": "Miksi Joosef II lakkautti luostareita Habsburgien alueella?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Joosef II hallitsi [[Habsburgien]] maita 1780-luvulla ja uudisti valtakuntaa [[valistuksen]] hengessä. Hän lakkautti suuren joukon luostareita, erityisesti sellaisia, joiden asukkaat viettivät pelkästään mietiskelevää elämää eivätkä opettaneet, hoitaneet sairaita tai tehneet muuta yhteiskunnalle hyödylliseksi katsottua työtä. Luostarien omaisuus siirrettiin valtion hallinnoimaan rahastoon, josta rahoitettiin muun muassa seurakuntia, kouluja ja sairaaloita. No siinä oli taas kerrottavaa.",
+  "linkit": [
+   "Habsburgien",
+   "valistuksen"
+  ],
+  "jatkot": [
+   "Mitä valistus tarkoitti Euroopassa 1700-luvulla?",
+   "Kuka oli Maria Teresia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kobarid",
+  "kysymys": "Mistä Kobaridin nimen arvellaan tulevan?",
+  "uusi": false,
+  "vastaus": "Hankala kysymys, joo. Kobaridin nimen alkuperästä ei ole varmaa tietoa, eikä minulla ole siitä luotettavaa selitystä. Paikalla on kolme kieliasua: sloveeniksi Kobarid, italiaksi [[Caporetto]] ja saksaksi [[Karfreit]], ja ne heijastavat alueen vaiheita Itävallan, Italian ja Slovenian vallan alla. Ensimmäinen kirjallinen maininta paikasta on vuodelta 1184. Nimistä ei pääse selvyyteen, mutta paikka on silti kaunis ylhäältä.",
+  "linkit": [
+   "Caporetto",
+   "Karfreit"
+  ],
+  "jatkot": [
+   "Mikä on Kobaridin museo?",
+   "Mitä Isonzon rintamalla tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kobarid",
+  "kysymys": "Miksi Kobaridista tuli ensimmäisen maailmansodan aikana tunnettu paikka?",
+  "uusi": false,
+  "vastaus": "Joo, tästä kannattaa kertoa rauhassa. Kobarid joutui [[Isonzon]] rintaman keskelle ensimmäisen maailmansodan aikana, yli sata vuotta sitten, jolloin alue kuului vielä [[Itävalta-Unkarin]] vallan alle. Vuosina 1915–1917 alueella käytiin useita taisteluita Italian ja Itävalta-Unkarin joukkojen välillä, ja kaupunki tuhoutui lähes kokonaan. Tunnetuimmaksi tapahtumaksi nousi lokakuussa 1917 käyty [[Caporeton taistelu]], jossa Italian rintama murtui ja armeija joutui perääntymään. Nykyisin kaupungin keskustan museo esittelee näitä tapahtumia, ja [[Euroopan neuvosto]] palkitsi sen vuonna 1993. Onneksi tuosta on jo yli sata vuotta.",
+  "linkit": [
+   "Isonzon",
+   "Itävalta-Unkarin",
+   "Caporeton taistelu",
+   "Euroopan neuvosto"
+  ],
+  "jatkot": [
+   "Mikä oli Isonzon rintaman merkitys sodassa?",
+   "Mitä Euroopan neuvosto tekee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kobarid",
+  "kysymys": "Mitä tapahtui Caporeton taistelussa vuonna 1917?",
+  "uusi": true,
+  "vastaus": "Hetkinen. Taistelu alkoi 24. lokakuuta 1917, kun Itävalta-Unkarin ja Saksan joukot murtautuivat läpi Italian rintamalinjasta [[Isonzon]] yläjuoksulla. Italian armeija joutui perääntymään pitkän matkan [[Piave-joen]] taakse, ja tappiot olivat raskaat. Italiassa sana Caporetto on jäänyt kieleen merkitsemään täydellistä romahdusta. Tapahtumat on kuvattu myös [[Hemingwayn]] romaanissa Jäähyväiset aseille. Tapahtumista on yli sata vuotta, ja sodan jälkeen Itävalta-Unkari hajosi. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Isonzon",
+   "Piave-joen",
+   "Hemingwayn"
+  ],
+  "jatkot": [
+   "Mitä Isonzon taistelut olivat?",
+   "Miten Italia päätyi ensimmäiseen maailmansotaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kobarid",
+  "kysymys": "Millainen joki Soča on?",
+  "uusi": true,
+  "vastaus": "Ai se. Soča saa alkunsa [[Julian Alppien]] Trentan laaksosta Sloveniassa ja virtaa kohti Italiaa, missä sitä kutsutaan nimellä [[Isonzo]]. Joki laskee lopulta [[Adrianmereen]]. Sen vesi on poikkeuksellisen kirkasta ja smaragdinvihreää, ja väriä selitetään alueen kalkkikivipohjalla, vaikka en ole varma kaikista yksityiskohdista. Jokea suositaan vesiurheilussa, ja sen vesistössä elää paikallinen [[Sočan taimen]]. Ylhäältä katsottuna se näyttää ihan maalatulta.",
+  "linkit": [
+   "Julian Alppien",
+   "Isonzo",
+   "Adrianmereen",
+   "Sočan taimen"
+  ],
+  "jatkot": [
+   "Mitä vesiurheilulajeja Sočalla harrastetaan?",
+   "Mikä on Triglavin kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kobarid",
+  "kysymys": "Mistä Julian Alpit ovat saaneet nimensä?",
+  "uusi": true,
+  "vastaus": "Tuota niin, Julian Alpit ovat Alppien kaakkoisosa, joka ulottuu Italian koillisosasta Sloveniaan. Nimen arvellaan tulevan [[Julius Caesarista]], ja lähteiden mukaan sen taustalla on roomalaisten perustama [[Forum Iulii]], nykyisen Cividalen seutu, vaikka tarkka alkuperä ei ole täysin varma. Alueen korkein huippu on [[Triglav]], joka on myös Slovenian korkein vuori.\n\nSukuni kantoi kirjeitä Caesarille, joten pidän nimeä vähän henkilökohtaisena. Meikäläisten muistiinpanojen mukaan kirjeet olivat aina myöhässä, mutta se ei ollut meidän vikamme.",
+  "linkit": [
+   "Julius Caesarista",
+   "Forum Iulii",
+   "Triglav"
+  ],
+  "jatkot": [
+   "Mikä on Triglavin kansallispuisto?",
+   "Kuka oli Julius Caesar?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljansko-barje",
+  "kysymys": "Miksi Ljubljanan suolta on löytynyt niin paljon esihistoriallisia esineitä?",
+  "uusi": false,
+  "vastaus": "Kato, tuohon on ihan hyvä syy. Esihistoriallisena aikana alue oli matala järvi, jonka rannoille rakennettiin [[paalukyliä]], joten ihmisiä asui ja toimi vesistön äärellä pitkään. Kun järvi vähitellen muuttui suoksi, asuinpaikkojen jäänteet jäivät märkään maahan, jossa [[turpeen]] hapeton ja kostea ympäristö säilyttää puuta ja muita orgaanisia aineita poikkeuksellisen hyvin. Siksi suolta on löytynyt muun muassa noin 5 150 vuotta vanha puinen pyörä akseleineen, ja ensimmäinen paalukylä löydettiin [[Igin]] läheltä vuonna 1875. Märkä paikka, mutta muistoja se säilyttää.",
+  "linkit": [
+   "paalukyliä",
+   "turpeen",
+   "Igin"
+  ],
+  "jatkot": [
+   "Miten arkeologit tutkivat vedessä säilyneitä löytöjä?",
+   "Miksi turve säilyttää puuta niin hyvin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljansko-barje",
+  "kysymys": "Mitä paalukylä oli, ja miksi sellainen rakennettiin veden äärelle?",
+  "uusi": false,
+  "vastaus": "Joo, tää on hauska juttu. Paalukylä oli asutus, jonka talot rakennettiin [[paalujen]] varaan järven tai kosteikon rannalle tai matalaan veteen. Paalut painettiin maahan, ja niiden päälle rakennettiin lattia ja seinät. Syinä sijaintiin pidetään muun muassa kalastus- ja kulkuyhteyksiä sekä suojaa, mutta tutkijat ovat keskustelleet siitä, rakennettiinko kylät veden päälle vai rannan kosteaan maastoon, eikä asia ole kaikilta osin varma. Ljubljanan suolla [[Igin]] lähellä kaksi paalukylän asuinpaikkaa liitettiin [[Unescon]] maailmanperintöluetteloon vuonna 2011. Kyyhky ei kastele jalkojaan, mutta kunnioitan rohkeutta.",
+  "linkit": [
+   "paalujen",
+   "Igin",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Miten paalutalot rakennettiin veden äärelle?",
+   "Millaista elämä esihistoriallisessa kylässä oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljansko-barje",
+  "kysymys": "Mitä erikoista on suosta löytyneessä puisessa pyörässä?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Ljubljanan suolta löytynyt pyörä on noin 5 150 vuotta vanha puinen pyörä akseleineen, ja sitä pidetään maailman vanhimpana tunnettuna pyöränä. Lähteiden mukaan pyörä on tehty [[saarnesta]] ja akseli [[tammesta]], mikä kertoo, että tekijät tunsivat puulajien ominaisuudet. Löytö on merkittävä, koska pyörä ja akseli yhdessä osoittavat kuljetusvälineiden olleen käytössä jo esihistoriallisella ajalla. Suo, jolta pyörä löytyi, on myös osa aluetta, jonka paalukylät kuuluvat [[Unescon]] maailmanperintöön. Itse olen aina pärjännyt ilman pyöriä.",
+  "linkit": [
+   "saarnesta",
+   "tammesta",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mihin esihistorialliset ihmiset käyttivät pyörää?",
+   "Miten puun ikä voidaan määrittää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljansko-barje",
+  "kysymys": "Mitkä maat kuuluvat Alppien paalukylien maailmanperintökohteeseen?",
+  "uusi": true,
+  "vastaus": "No niin, pöllö on tänään taas jossain konferenssissa, joten tämä kuuluu minulle. Alppien esihistorialliset paalukylät ovat [[Unescon]] maailmanperintökohde, johon kuuluu 111 asuinpaikkaa kuudessa maassa: [[Sveitsissä]], Itävallassa, Ranskassa, Saksassa, Italiassa ja Sloveniassa. Kohde otettiin luetteloon vuonna 2011, ja se kattaa asuinpaikkoja, jotka on rakennettu järvien ja soiden rannoille. Sloveniasta mukana ovat kaksi [[Igin]] läheistä asuinpaikkaa. Kuusi maata, ja minä muistin ne kaikki.",
+  "linkit": [
+   "Unescon",
+   "Sveitsissä",
+   "Igin"
+  ],
+  "jatkot": [
+   "Miten paalutalot rakennettiin veden äärelle?",
+   "Mitä paalukylistä on löydetty Sveitsissä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljansko-barje",
+  "kysymys": "Mikä oli Emona, joka sijaitsi nykyisen Ljubljanan paikalla?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Emona oli roomalainen kaupunki nykyisen Ljubljanan keskustan paikalla. Se perustettiin ensimmäisellä vuosisadalla jKr., ja sen jäänteitä näkyy Ljubljanassa edelleen, muun muassa osia [[kaupunginmuurien]] rakenteista. Kaupungin asutus hiipui myöhäisantiikin aikana, ja uusi keskiaikainen asutus syntyi [[Ljubljanica-joen]] rannoille.\n\nMuurinpätkä keskellä nykykaupunkia on kyyhkylle ihan hyvä levähdyspaikka.",
+  "linkit": [
+   "kaupunginmuurien",
+   "Ljubljanica-joen"
+  ],
+  "jatkot": [
+   "Millainen oli tyypillinen roomalainen kaupunki?",
+   "Mikä Ljubljanan linna on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kostanjevica",
+  "kysymys": "Miksi Kostanjevica na Krkia kutsutaan Ala-Krainin Venetsiaksi?",
+  "uusi": false,
+  "vastaus": "Ai se Venetsia-juttu. Kostanjevica na Krkin keskusta sijaitsee [[Krka-joen]] saarella, ja veden ympäröimä kaupunkiasutus muistuttaa vesistöjen halkomaa [[Venetsiaa]]. Siksi paikkaa mainostetaan nimellä Ala-Krainin Venetsia. Vertaus on kuitenkin mainoslause: Venetsia on rakennettu laguunin saarille kanavineen, kun taas Kostanjevican saari on pieni ja sitä ympäröi joki. Ylhäältä saari näyttää kyllä sievältä.",
+  "linkit": [
+   "Krka-joen",
+   "Venetsiaa"
+  ],
+  "jatkot": [
+   "Mikä tekee Venetsiasta erityisen kaupungin?",
+   "Missä Ala-Krain sijaitsee Sloveniassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kostanjevica",
+  "kysymys": "Mitä entisessä sistersiläisluostarissa on nykyään?",
+  "uusi": false,
+  "vastaus": "Nyt on asiaa. [[Sistersiläisten]] entisissä luostarirakennuksissa toimii [[Božidar Jakacin galleria]], jossa on [[veistospuisto]] ja taiteilijan töiden pysyvä näyttely. Luostarin perusti 1200-luvun alussa herttua Bernhard von Spanheim, sen varhaisgoottilainen kirkko on rakennettu vuonna 1234, ja luostari laajennettiin barokkityyliin 1700-luvun alussa. Keisari Joosef II lakkautti sen vuonna 1785. Taidetta ja kirkkoa, hyvä yhdistelmä.",
+  "linkit": [
+   "Sistersiläisten",
+   "Božidar Jakacin galleria",
+   "veistospuisto"
+  ],
+  "jatkot": [
+   "Kuka oli Božidar Jakac?",
+   "Mitä barokkityyli tarkoittaa rakennustaiteessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kostanjevica",
+  "kysymys": "Mihin jokeen Krka laskee?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kostanjevican kohdalla virtaava Krka laskee [[Sava-jokeen]] Slovenian kaakkoisosassa. Sava puolestaan jatkaa Kroatian ja Serbian kautta [[Belgradiin]], jossa se yhtyy [[Tonavaan]]. Kroatiassakin on Krka-niminen joki, mutta se on eri vesistö ja laskee Adrianmereen. Joet kulkevat mutkitellen, minä lennän suoraan.",
+  "linkit": [
+   "Sava-jokeen",
+   "Belgradiin",
+   "Tonavaan"
+  ],
+  "jatkot": [
+   "Mitä Belgradin Kalemegdanin linnoitus on?",
+   "Miten Tonava kulkee Euroopan halki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kostanjevica",
+  "kysymys": "Kuka oli Božidar Jakac, jonka mukaan galleria on nimetty?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Božidar Jakac oli slovenialainen taidemaalari ja grafiikan taiteilija, joka eli vuosina 1899–1989. Hän syntyi [[Novo Mestossa]], [[Dolenjskan]] alueella, ja häntä pidetään yhtenä merkittävimmistä slovenialaisista kuvataiteilijoista. Hänen mukaansa nimetty galleria toimii Kostanjevicassa entisessä luostarissa, ja siellä on näytteillä hänen töitään. Taidetta katsoo parhaiten ylhäältä, ainakin minä.",
+  "linkit": [
+   "Novo Mestossa",
+   "Dolenjskan"
+  ],
+  "jatkot": [
+   "Mitä grafiikka taiteenlajina tarkoittaa?",
+   "Mikä on veistospuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kostanjevica",
+  "kysymys": "Mistä varhaisgoottilaisen kirkon tunnistaa?",
+  "uusi": true,
+  "vastaus": "Katotaas. Gotiikka on keskiajan rakennustyyli, joka syntyi Pohjois-Ranskassa 1100-luvulla. Sen tunnusmerkkejä ovat [[suippokaaret]], [[ripaholvit]] ja korkeat ikkunat, jotka päästävät valoa sisään. Varhaisgoottilaisessa kirkossa nämä piirteet ovat vielä pelkistettyjä ja sekoittuvat usein [[romaanisen]] tyylin muotoihin, kuten paksuihin seiniin ja pyöreisiin kaariin. Sistersiläisten kirkot olivat tavallisesti koristeettomia, koska järjestö suosi yksinkertaisuutta.\n\nMinä pidän goottilaisista kirkoista, koska niissä on paljon paikkoja, joihin laskeutua. Luostarin pullista en tiedä mitään, mutta toivon parasta.",
+  "linkit": [
+   "suippokaaret",
+   "ripaholvit",
+   "romaanisen"
+  ],
+  "jatkot": [
+   "Mikä on romaaninen rakennustyyli?",
+   "Mitä ovat goottilaisten kirkkojen tukikaaret?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-piran",
+  "kysymys": "Miksi Piranissa puhutaan sekä sloveenia että italiaa?",
+  "uusi": false,
+  "vastaus": "Kato, tää on hauska yhdistelmä. Piranissa puhutaan sekä sloveenia että italiaa, koska kaupunki kuului vuosina 1283–1797 [[Venetsian tasavallalle]], ja venetsialainen vaikutus jätti jälkensä kieleen ja rakennuksiin. Venetsian jälkeen kaupunki liitettiin [[Itävallan keisarikuntaan]], ja 1800-luvun lopulla väestöstä noin 80 prosenttia oli kulttuuriltaan italialaisia. Nykyisin kaupungissa asuu sekä sloveeninkielistä että italiankielistä väestöä, ja kaksikielisyys kuuluu alueen arkeen. Nälkä kuulostaa kyllä samalta molemmilla kielillä.",
+  "linkit": [
+   "Venetsian tasavallalle",
+   "Itävallan keisarikuntaan"
+  ],
+  "jatkot": [
+   "Millainen oli Venetsian tasavalta?",
+   "Miten kaksikielisyys näkyy Slovenian Istriassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-piran",
+  "kysymys": "Kuka oli Giuseppe Tartini, ja miksi hänen patsaansa seisoo Piranin pääaukiolla?",
+  "uusi": false,
+  "vastaus": "Joo, hänet minä tunnen. Giuseppe Tartini syntyi Piranissa vuonna 1692 ja oli viulisti ja säveltäjä, jonka tunnetuin sävellys on legendan mukaan [[Paholaisen trillistä]] tunnettu viulusonaatti. Piranilaiset pitävät häntä kaupunkinsa kuuluisimpana poikana, ja siksi pääaukio on nimetty hänen mukaansa. Aukio oli ennen kaupungin [[sisäsatama]], joka täytettiin viemärin takia, ja tori rakennettiin vuonna 1894. Tartinin pronssinen patsas paljastettiin vuonna 1896, ja sen teki kuvanveistäjä [[Antonio Dal Zòtto]]. Patsaan päässä on ihan hyvä istua, sanon tämän kokemuksesta.",
+  "linkit": [
+   "Paholaisen trillistä",
+   "sisäsatama",
+   "Antonio Dal Zòtto"
+  ],
+  "jatkot": [
+   "Mikä on trilli musiikissa?",
+   "Millainen soitin viulu on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-piran",
+  "kysymys": "Miten suolaa on perinteisesti valmistettu merivedestä?",
+  "uusi": true,
+  "vastaus": "Ai tota. Merivedestä suolaa on perinteisesti valmistettu johtamalla vesi matalille, savipohjaisille altaille, joissa aurinko ja tuuli haihduttavat veden. Kun vesi on haihtunut tarpeeksi, jäljelle jäävät [[suolakiteet]] kerätään pois käsin. Tapa sopii lämpimille ja aurinkoisille rannikoille, ja [[Adrianmeren]] Slovenian puolella Piranin lähellä sijaitsevat [[Sečovljen]] suola-altaat ovat esimerkki siitä.\n\nPiranin suolalla on kuulemma käyty kauppaa Venetsian aikana, mutta en ole varma yksityiskohdista. Itse arvostan suolaa lähinnä pullassa, jossa sen pitää olla pieni mutta tärkeä.",
+  "linkit": [
+   "suolakiteet",
+   "Adrianmeren",
+   "Sečovljen"
+  ],
+  "jatkot": [
+   "Mihin suolaa käytetään ruoan lisäksi?",
+   "Miksi Adrianmeri on suolaisempi kuin Itämeri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-piran",
+  "kysymys": "Miten Venetsian tasavalta päättyi vuonna 1797?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: Venetsian tasavalta päättyi toukokuussa 1797, kun sen suuri neuvosto päätti lakkauttaa tasavallan hallintomuodon [[Napoleonin]] joukkojen lähestyessä. Ranskan armeija miehitti Venetsian, ja saman vuoden lokakuussa solmitussa [[Campo Formion rauhassa]] Venetsian entiset alueet, myös Istria ja Dalmatian rannikko, siirtyivät Itävallalle. Näin Piran, joka oli kuulunut tasavaltaan vuodesta 1283, joutui [[Habsburgien]] vallan alle. Tuo oli pitkä pätkä historiaa yhdelle kyyhkylle.",
+  "linkit": [
+   "Napoleonin",
+   "Campo Formion rauhassa",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Mikä oli Campo Formion rauha?",
+   "Miksi Venetsian tasavalta oli kauppavalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-piran",
+  "kysymys": "Mikä on Giuseppe Tartinin tunnetuin sävellys?",
+  "uusi": true,
+  "vastaus": "Mmm— Tartinin tunnetuin sävellys on [[viulusonaatti]] g-molli, jonka lempinimi on [[Paholaisen trilli]]. Legendan mukaan Tartini näki unessa paholaisen soittavan viulua uskomattomalla taidolla, ja herättyään hän yritti kirjata kuulemansa muistiin. Sonaatti on tunnettu vaativista [[trilleistä]], ja se on viulistien suosittu mutta haastava ohjelmistokappale.\n\nUnessa kuultu sävellys kuulostaa minusta uskottavalta, sillä minäkin muistan parhaat reittini vasta unessa. Pullasta uneksin silti useammin.",
+  "linkit": [
+   "viulusonaatti",
+   "Paholaisen trilli",
+   "trilleistä"
+  ],
+  "jatkot": [
+   "Mikä on trilli musiikissa?",
+   "Millainen soitin viulu on ja miten sitä soitetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-maribor",
+  "kysymys": "Miksi Marburgin Lentissä kasvavaa viiniköynnöstä pidetään ihmeenä?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Vanhaa väkeä, tämä. Mariborissa Lentin ranta-alueella kasvaa [[žametovka]]-lajikkeen köynnös, jonka iäksi arvioidaan yli neljäsataa vuotta. Se kirjattiin vuonna 2004 [[Guinnessin ennätyskirjaan]] maailman vanhimpana viiniköynnöksenä, ja juuri tämä ikä tekee siitä kaupungin ylpeyden aiheen ja kiinnostavan nähtävyyden. Köynnös on yhä elossa, ja se kuuluu olennaisena osana [[Mariborin]] viiniperinteeseen. Siinä on sitkeyttä, jota kyl minunkin sukuni kadehtisi.",
+  "linkit": [
+   "žametovka",
+   "Guinnessin ennätyskirjaan",
+   "Mariborin"
+  ],
+  "jatkot": [
+   "Mitä žametovka-rypälelajikkeesta valmistetaan?",
+   "Miten hyvin vanhaa viiniköynnöstä pitää hoitaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-maribor",
+  "kysymys": "Mitä Lent-festivaalilla tapahtuu, ja mistä se on saanut nimensä?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tost minä tiedän vähän. Lent-festivaali on [[Mariborissa]] joka kesäkuu järjestettävä kahden viikon kulttuuritapahtuma, jonka näyttämönä on [[Draava-joen]] rannalla sijaitseva Lentin kaupunginosa. Ohjelmassa on yleensä musiikkia ja erilaisia esityksiä, ja tapahtuma täyttää rantakadun kesäkuun ajaksi vierailijoista. Nimi tulee kaupunginosan nimestä Lent, ja sana palautuu ymmärtääkseni saksan laituria tai rantaa tarkoittavaan sanaan [[Lände]], mutta en ole tästä aivan varma. Nimiasia jäi vähän auki, mutta festivaali ei kai siitä kärsi.",
+  "linkit": [
+   "Mariborissa",
+   "Draava-joen",
+   "Lände"
+  ],
+  "jatkot": [
+   "Mikä on Draava-joki ja minne se virtaa?",
+   "Millaisia kesäfestivaaleja Slovenian muissa kaupungeissa järjestetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-maribor",
+  "kysymys": "Mikä on Ala-Steiermark ja kuka sitä on hallinnut?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tämä alue on vaihtanut isäntää useammin kuin ehdin lentää ympäri. Ala-Steiermark on historiallinen alue nykyisen Slovenian koillisosassa, ja sen suurin kaupunki on [[Maribor]]. Alue kuului [[Habsburgien]] valtaan vuoteen 1918 asti, ja nimi viittaa [[Steiermarkin]] herttuakunnan eteläosaan. Ensimmäisen maailmansodan jälkeen alue siirtyi uuden valtion osaksi, ja rajat vedettiin uudelleen. Rajoja on siirrelty niin, ettei kyyhkykään pysy perässä.",
+  "linkit": [
+   "Maribor",
+   "Habsburgien",
+   "Steiermarkin"
+  ],
+  "jatkot": [
+   "Mitä Habsburgien monarkialle tapahtui vuonna 1918?",
+   "Miten Steiermarkin alue jakautui Itävallan ja Slovenian kesken?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-maribor",
+  "kysymys": "Mitä kaupunkioikeudet tarkoittivat keskiajalla?",
+  "uusi": true,
+  "vastaus": "Katotaas. Tämä kuulostaa paperiasialta. Keskiajalla kaupunkioikeudet olivat hallitsijan tai maanherran myöntämä asiakirja, joka antoi asukkaille erioikeuksia: oikeuden pitää [[markkinoita]], käydä kauppaa ja usein myös hallita itseään omin viranomaisin ja tuomioistuimin. Ne erottivat kaupungin ympäröivästä maaseudusta ja tekivät siitä kaupankäynnin keskuksen. [[Mariborin]] kaupunkioikeudet saatiin vuonna 1254, ja linna mainitaan ensimmäisen kerran jo vuonna 1164. Paperia se vaan oli, mutta kyl se painoi.",
+  "linkit": [
+   "markkinoita",
+   "Mariborin"
+  ],
+  "jatkot": [
+   "Mitä markkinaoikeudet merkitsivät kauppiaille?",
+   "Miksi keskiaikaisilla kaupungeilla oli muurit?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-maribor",
+  "kysymys": "Miksi viiniä säilytetään kellarissa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tässä asiassa kellari on kuin tehty. Kellarissa lämpötila pysyy ympäri vuoden viileänä ja tasaisena, ja valoa on vähän, mikä hidastaa viinin kypsymistä ja suojaa sen makua. Tasainen kosteus pitää myös korkit kunnossa, jotta ne eivät kuivu ja päästä ilmaa pulloon. [[Mariborissa]] [[Vinagin]] viinikellari on noin kaksi kilometriä pitkä, ja se tarjoaa viinille juuri tällaiset olot.\n\nMinä pidän itse viileästä varjopaikasta kesähelteellä, mutta viinin kanssa en kilpaile. Kellari kuulostaa muuten täydelliseltä paikalta torkahtaa.",
+  "linkit": [
+   "Mariborissa",
+   "Vinagin"
+  ],
+  "jatkot": [
+   "Miten viini kypsyy tammitynnyrissä?",
+   "Millainen lämpötila on viinille sopiva?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lipica",
+  "kysymys": "Miksi ratsutila perustettiin juuri Karstin alueelle?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Hevosille valittiin siis kotoisa maisema. Sisä-Itävallan arkkiherttua [[Kaarle II]] perusti [[Lipican]] ratsutilan vuonna 1580, koska espanjalaista hevosta pidettiin ihanteellisena ja Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin [[Espanjasta]] vuonna 1581. Paikka valittiin siis hevosten ehdoilla. Kotoisa maisema on hevoselle kuin ikkunalauta kyyhkylle.",
+  "linkit": [
+   "Kaarle II",
+   "Lipican",
+   "Espanjasta"
+  ],
+  "jatkot": [
+   "Mikä erottaa lipizzanerin muista ratsuhevosista?",
+   "Miksi lipizzanerit syntyvät tummina ja muuttuvat valkoisiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lipica",
+  "kysymys": "Mistä Lipican nimi tulee, ja mitä sillä on tekemistä varsojen kanssa?",
+  "uusi": false,
+  "vastaus": "Nyt muistan, puu: paikan nimi tulee sanasta lipa, joka tarkoittaa [[lehmusta]]. Tilalla istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi, joten nimi elää paikalla myös käytännössä. [[Lipizzan-hevoset]] syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien kuluessa. Lehmus jokaiselle varsalle, siinä on kyl enemmän järjestystä kuin meidän pesäkunnassa.",
+  "linkit": [
+   "lehmusta",
+   "Lipizzan-hevoset"
+  ],
+  "jatkot": [
+   "Mihin lehmusta on perinteisesti käytetty?",
+   "Missä muualla lipizzanereita kasvatetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lipica",
+  "kysymys": "Mitä tarkoittaa karst-maisema?",
+  "uusi": true,
+  "vastaus": "No niin, nyt mennään maan alle. Karst-maisema syntyy, kun vesi liuottaa hiljalleen [[kalkkikiveä]] tai muuta helposti liukenevaa kiveä. Seurauksena on luolia, painanteita, joita kutsutaan [[dolineiksi]], ja maanalaisia jokia, ja pinnalla on vain vähän vettä. Ilmiö on saanut nimensä Slovenian Karstin alueelta, ja sama maisematyyppi tunnetaan eri puolilla maailmaa. Alueella sijaitsee myös muurin ympäröimä [[Štanjelin]] kylä.\n\nYlhäältä katsottuna se näyttää aika reikäiseltä juustolta, mikä ei ole vakava vertaus mutta pitää paikkansa. Vesi ei jää pinnalle vaan katoaa maan alle, ja sellaista kyyhky ei janoisena arvosta.",
+  "linkit": [
+   "kalkkikiveä",
+   "dolineiksi",
+   "Štanjelin"
+  ],
+  "jatkot": [
+   "Miten luola syntyy kalkkikiveen?",
+   "Mikä on Škocjanin luolien erikoisuus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lipica",
+  "kysymys": "Kuka oli Maria Teresia ja mitä hän teki?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: hallitsija, jonka perässä tuli aina asioita. Maria Teresia hallitsi [[Habsburgien]] valtakuntaa vuosina 1740–1780 arkkiherttuattarena sekä [[Unkarin]] ja Böömin kuningattarena. Hänen aikanaan uudistettiin hallintoa, verotusta ja koulutusta, ja Lipican hevosrotu sai nykyisen muotonsa. Hän oli myös suuren lapsikatraan äiti, ja yksi lapsista oli Ranskan kuningatar [[Marie Antoinette]]. Kaksi kokoaikatyötä yhtä aikaa, siinä minä väsyisin jo ajatuksestakin.",
+  "linkit": [
+   "Habsburgien",
+   "Unkarin",
+   "Marie Antoinette"
+  ],
+  "jatkot": [
+   "Millaisia uudistuksia Maria Teresia teki kouluihin?",
+   "Miksi Habsburgit hallitsivat niin laajaa aluetta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lipica",
+  "kysymys": "Miksi hevosia siirrettiin pois sotien tieltä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Sotien aikana hevosia jouduttiin siirtämään pois Lipicasta useaan kertaan, koska sotatoimet ja miehitykset uhkasivat tilaa ja eläimiä, ja ne vietiin turvaan muualle. Lähteiden mukaan näin tapahtui jo [[Napoleonin]] sotien aikoihin ja uudelleen [[maailmansotien]] aikana, mutta en ole varma yksittäisistä siirroista enkä niiden ajankohdista. Rajat ja vallanpitäjät vaihtuivat alueella useasti, ja hevoskanta kuljetettiin sen mukaan eri paikkoihin. Onneks rotu on säilyny.",
+  "linkit": [
+   "Napoleonin",
+   "maailmansotien"
+  ],
+  "jatkot": [
+   "Missä lipizzanereita kasvatetaan Lipican lisäksi?",
+   "Miksi espanjalaiset hevoset olivat niin arvostettuja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ormoz",
+  "kysymys": "Miksi Ormožia kutsuttiin aiemmin nimellä Friedau?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Friedau oli kaupungin saksankielinen nimi. Ormož kuului pitkään saksankielisen hallinnon ja aateliston piiriin: [[Ptujin]] herrat rakensivat kaupungin linnan, ja vielä vuoteen 1919 asti väestö oli enimmäkseen saksankielistä. Saksa oli siis alueella hallinnon ja asukkaiden kieli, ja siksi saksalainen nimi oli kaupungin tunnetuin. Sloveeninkielinen nimi vakiintui, kun alue siirtyi [[ensimmäisen maailmansodan]] jälkeen uuden valtion osaksi. Samat mäet ja joki siinä kyl pysyi, nimi vaan vaihtui.",
+  "linkit": [
+   "Ptujin",
+   "ensimmäisen maailmansodan"
+  ],
+  "jatkot": [
+   "Millä kielillä Slovenian rajaseutu on historiallisesti elänyt?",
+   "Mikä oli Ptujin herrojen asema keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ormoz",
+  "kysymys": "Mikä tekee entisen sokeritehtaan altaista tärkeän luontokohteen?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Entisen sokeritehtaan altaat ovat vuosien mittaan muuttuneet matalaksi [[kosteikoksi]], joka tarjoaa [[muuttolinnuille]] lepo- ja ruokailupaikan. Matala vesi ja mutarannat sopivat erityisesti [[kahlaajille]] ja vesilinnuille, jotka pysähtyvät alueella muuttomatkallaan. Alue on tärkeä, koska tällaisia kosteikkoja on vähän, ja kaupungin kaakkoispuolella oleva tekojärvi täydentää elinympäristöä. Mut tämä on lintujen asia, joten olen vähän puolueellinen.",
+  "linkit": [
+   "kosteikoksi",
+   "muuttolinnuille",
+   "kahlaajille"
+  ],
+  "jatkot": [
+   "Mihin suuntaan muuttolinnut Euroopassa lentävät syksyllä?",
+   "Miten kosteikot auttavat luonnon monimuotoisuutta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ormoz",
+  "kysymys": "Mikä on Prlekija?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Prlekija on Itä-Slovenian alue [[Draava-joen]] ja [[Mura-joen]] välimaastossa, ja [[Ormož]] on yksi sen kaupungeista. Alue tunnetaan mäkimaastostaan ja viinitarhoistaan. Sen rajat eivät ole kaikissa lähteissä aivan samat, ja siksi en halua väittää niistä tarkemmin. Tarkat rajat jättäisin kyl kartturille.",
+  "linkit": [
+   "Draava-joen",
+   "Mura-joen",
+   "Ormož"
+  ],
+  "jatkot": [
+   "Mikä merkitys Mura-joella on alueelle?",
+   "Mistä Slovenian viinialueet tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ormoz",
+  "kysymys": "Miten sokerijuurikkaasta alettiin tehdä sokeria?",
+  "uusi": true,
+  "vastaus": "No jopas, makea aihe. Saksalainen kemisti [[Andreas Marggraf]] havaitsi 1700-luvun puolivälissä, että juurikkaassa on samaa sokeria kuin ruokosokerissa. Hänen oppilaansa [[Franz Karl Achard]] kehitti menetelmää eteenpäin, ja ensimmäisiä sokerijuurikastehtaita perustettiin 1800-luvun alussa. Kauppasaarrot [[Napoleonin]] aikana nostivat ruokosokerin hintaa, mikä vauhditti alaa Euroopassa. Sokeri tuli siis pellolta, ja minä olen aina luullut sen kasvavan pullan päällä.",
+  "linkit": [
+   "Andreas Marggraf",
+   "Franz Karl Achard",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Miten ruokosokeri tuli Eurooppaan keskiajalla?",
+   "Missä Euroopan maissa sokerijuurikasta viljellään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ormoz",
+  "kysymys": "Miksi muuttolinnut tarvitsevat levähdyspaikkoja?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: nyt puhutaan minun alaani. Muuttomatka voi olla tuhansien kilometrien mittainen, ja linnut kuluttavat sen aikana suuren osan energiavarastostaan. Siksi ne pysähtyvät välillä lepäämään ja syömään, jotta ne saavat rasvavarastonsa täytettyä ennen seuraavaa etappia. Erityisesti [[kahlaajat]] ja vesilinnut tarvitsevat reitin varrella [[kosteikkoja]], ja jos niitä häviää, matka vaikeutuu.\n\nTämän tiedän omasta kokemuksestani. Pitkällä reitillä oikea ikkunalauta on yhtä tärkeä kuin tuulen suunta, ja parhaimmillaan siinä on vielä pullanmurusia.",
+  "linkit": [
+   "kahlaajat",
+   "kosteikkoja"
+  ],
+  "jatkot": [
+   "Miten linnut löytävät oikean reitin muuttomatkalla?",
+   "Mitä kosteikkojen häviäminen aiheuttaa linnuille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lendava",
+  "kysymys": "Miksi Lendavassa on sloveenin lisäksi virallisena kielenä unkari?",
+  "uusi": false,
+  "vastaus": "Ai se. Siinä on pitkä historia. Lendava ja sen ympäristö kuuluivat vuoteen 1918 asti [[Unkarin kuningaskuntaan]], jossa kaupunki oli Alsólendva ja [[Zalan komitaatin]] piiri. Alueelle jäi siksi unkarilaisväestö, kun rajat vedettiin uudelleen ensimmäisen maailmansodan jälkeen, ja Slovenian lainsäädäntö turvaa [[unkarilaisvähemmistön]] kielelliset oikeudet. Siksi kunnassa sekä sloveeni että unkari ovat virallisia kieliä. Kaksikieliset kyltit varmaan helpottavat kyl kirjekyyhkyn työtä.",
+  "linkit": [
+   "Unkarin kuningaskuntaan",
+   "Zalan komitaatin",
+   "unkarilaisvähemmistön"
+  ],
+  "jatkot": [
+   "Mitä Trianonin rauha muutti Unkarin rajoissa?",
+   "Miten kaksikielisyys näkyy kouluissa ja arjessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lendava",
+  "kysymys": "Mikä tekee Lendavan synagogasta erityisen Sloveniassa?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Lendavan synagoga on yksi Slovenian kahdesta säilyneestä synagogasta, ja se kertoo alueen [[juutalaisyhteisöstä]], joka oli osa kaupungin elämää ennen [[toista maailmansotaa]]. Yhteisö joutui sodan aikana vainon kohteeksi ja tuhoutui [[holokaustissa]], ja tapahtumista on yli kahdeksankymmentä vuotta. Sen vuoksi säilynyt rakennus on tärkeä muistutus siitä, että kaupungissa on elänyt myös tämä yhteisö. Hyvä, että rakennus on yhä pystyssä.",
+  "linkit": [
+   "juutalaisyhteisöstä",
+   "toista maailmansotaa",
+   "holokaustissa"
+  ],
+  "jatkot": [
+   "Mihin synagogaa käytetään?",
+   "Miten juutalaisyhteisöt ovat eläneet Keski-Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lendava",
+  "kysymys": "Keitä olivat Esterházyt ja mitä he omistivat?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tuttu nimi. Esterházyt olivat yksi Unkarin kuningaskunnan vaikutusvaltaisimmista ja rikkaimmista aatelissuvuista. Suvulla oli laajoja maaomistuksia, ja se tunnetaan myös kulttuurin tukijana: säveltäjä [[Joseph Haydn]] palveli sukua kapellimestarina vuosikymmeniä. Lendavan kukkulalla oleva linna on kuulunut suvun omaisuuteen, ja siellä on nykyään museo ja galleria, ja Unkarin kuningaskunnan aikana suvun vaikutus ulottui myös [[Unkarin]] länsiosiin. Haydn sävelsi ja minä olisin vienyt nuotit perille, hyvä työnjako.",
+  "linkit": [
+   "Joseph Haydn",
+   "Unkarin"
+  ],
+  "jatkot": [
+   "Mitä Joseph Haydn sävelsi?",
+   "Miksi aatelissuvut rakensivat linnoja kukkuloille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lendava",
+  "kysymys": "Mitä nimi Prekmurje tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Tuota noin. Nimi Prekmurje tarkoittaa suunnilleen Mura-joen takaista aluetta eli aluetta Mura-joen toisella puolella. Se on Slovenian koillisosan alue, jonka läheisyydessä ovat [[Unkarin]] ja [[Kroatian]] rajat, ja Lendava kuuluu siihen. Alueen tarkat rajat ja nimen syntyhistoria kannattaa tarkistaa, koska en ole niistä täysin varma. Nimet kertovat usein, mistä päin kukin katsoo, ja sen minä kyl pidän kauniina.",
+  "linkit": [
+   "Unkarin",
+   "Kroatian"
+  ],
+  "jatkot": [
+   "Mikä on Mura-joki ja minne se virtaa?",
+   "Miten Slovenia itsenäistyi Jugoslaviasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lendava",
+  "kysymys": "Miten vähemmistökielet saavat suojaa Euroopassa?",
+  "uusi": true,
+  "vastaus": "Selvä, tästä voi puhua. [[Euroopan neuvosto]] on laatinut sopimuksia, jotka suojaavat vähemmistöjen ja niiden kielten asemaa, ja monet valtiot takaavat oikeuksia myös omassa lainsäädännössään. Sloveniassa esimerkiksi unkarin ja italian kielten asema on turvattu, ja Suomessa [[saamen]] kielillä on oma erityisasemansa. Suojan sisältö vaihtelee maittain, joten yksityiskohdat kannattaa tarkistaa kunkin maan omasta laista. Kaikki mahtuu kyl samaan kirjeeseen, jos osoite on oikein.",
+  "linkit": [
+   "Euroopan neuvosto",
+   "saamen"
+  ],
+  "jatkot": [
+   "Mitkä kielet ovat Suomessa virallisessa asemassa?",
+   "Miten vähemmistökielten opetusta järjestetään kouluissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-idrija",
+  "kysymys": "Mihin elohopeaa tarvittiin hopea- ja kultakaivoksissa, ja miksi sitä kuljetettiin Idrijasta niin kauas?",
+  "uusi": false,
+  "vastaus": "Mmm— painava aihe, kirjaimellisesti. Elohopea sitoo hopean ja kullan itseensä ja muodostaa [[amalgaamin]], josta jalometalli saadaan erilleen kuumentamalla, jolloin elohopea haihtuu. Menetelmä tehosti hopean erottamista murskatusta malmista. Idrijan elohopeaa kuljetettiin [[Habsburgien]] aikana muun muassa [[Espanjan]] valtakunnan hopeakaivoksille, koska elohopeaa tarvittiin paljon ja Idrijan kaivos oli yksi Euroopan merkittävimmistä lähteistä. Painavaa rahtia, sitä minä en olisi jaksanut kantaa.",
+  "linkit": [
+   "amalgaamin",
+   "Habsburgien",
+   "Espanjan"
+  ],
+  "jatkot": [
+   "Miksi elohopea on nesteenä huoneenlämmössä?",
+   "Miksi elohopea on terveydelle haitallista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-idrija",
+  "kysymys": "Mikä tekee Idrijan elohopeasta harvinaista koko maailmassa?",
+  "uusi": false,
+  "vastaus": "No jopas. Idrija on yksi harvoista paikoista maailmassa, missä elohopeaa esiintyy sekä puhtaana nestemäisenä metallina että [[sinooperina]] eli elohopeasulfidimalmina. Tavallisesti elohopea on sitoutunut malmiin, ja puhdas elohopea on harvinaista. Legendan mukaan saavinvalmistaja huomasi lähteessä nestemäisen metallin vuonna 1490, ja kaivos liitettiin vuonna 2012 [[maailmanperintölistalle]] yhdessä espanjalaisen [[Almadénin]] kanssa. Kimaltava pisara lähteessä sai saavinvalmistajan varmasti hiljaiseksi.",
+  "linkit": [
+   "sinooperina",
+   "maailmanperintölistalle",
+   "Almadénin"
+  ],
+  "jatkot": [
+   "Miten Almadénin kaivos liittyy Idrijaan?",
+   "Mistä sinooperi saa punaisen värinsä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-idrija",
+  "kysymys": "Mitä on nyplätty pitsi ja miten sitä tehdään?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Nyplätty pitsi tehdään käsin: langat kierretään puisille [[nypläpuikoille]], jotka ristitään ja kierretään toistensa yli tyynyn päälle asetetun kuvion mukaan, ja kuvion tappeihin kiinnittyvät langat muodostavat vähitellen pitsin. Työ on hidasta ja vaatii tarkkuutta. Pitsinnypläys on Idrijassa vanha perinne, jonka juuret ovat menneillä vuosisadoilla, ja idrijalainen pitsi on suojattu [[maantieteellisellä merkinnällä]]. Ihailen työtä, vaikka oma pesäni on tehty karkeammasta aineesta.",
+  "linkit": [
+   "nypläpuikoille",
+   "maantieteellisellä merkinnällä"
+  ],
+  "jatkot": [
+   "Mihin nyplättyä pitsiä on perinteisesti käytetty?",
+   "Miten pitsinnypläystä opetetaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-idrija",
+  "kysymys": "Miten paikka päätyy UNESCOn maailmanperintölistalle?",
+  "uusi": true,
+  "vastaus": "Kato, tästä on selvä prosessi. Valtio ehdottaa kohdetta ensin alustavalle listalleen ja sitten varsinaiseksi ehdokkaaksi. Asiantuntijajärjestöt, kulttuurikohteissa [[ICOMOS]] ja luontokohteissa [[IUCN]], arvioivat kohteen, ja lopullisen päätöksen tekee [[maailmanperintökomitea]]. Kohteella on oltava poikkeuksellinen yleismaailmallinen arvo. Idrijan kaivosperintö hyväksyttiin vuonna 2012 yhdessä espanjalaisen [[Almadénin]] kanssa. Sellainen listalle pääsy on kyl pitkä prosessi.",
+  "linkit": [
+   "ICOMOS",
+   "IUCN",
+   "maailmanperintökomitea",
+   "Almadénin"
+  ],
+  "jatkot": [
+   "Mitä muita Slovenian kohteita maailmanperintölistalla on?",
+   "Miksi kohde voidaan poistaa maailmanperintölistalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-idrija",
+  "kysymys": "Miksi Idrijan kaivos suljettiin?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Idrijan elohopeakaivoksen tuotanto päättyi 1990-luvulla, mutta en ole varma tarkasta vuodesta. Syinä mainitaan yleensä malmivarojen ehtyminen ja [[elohopean]] käytön väheneminen, koska aineen terveys- ja ympäristöhaitat tunnetaan. Kaivoksen sulkemisen jälkeen kohdetta on kunnostettu, ja se on nykyään osa [[UNESCOn]] maailmanperintöä. Kaivos nukkuu, mutta minä lentelen vielä.",
+  "linkit": [
+   "elohopean",
+   "UNESCOn"
+  ],
+  "jatkot": [
+   "Mitä elohopealla on nykyään käyttöä?",
+   "Miten vanhoja kaivosalueita kunnostetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trbovlje",
+  "kysymys": "Miksi rautatieyhteys oli 1800-luvulla niin tärkeä hiilikaivospaikkakunnalle?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä ymmärrän heti. Hiili on painavaa ja suhteellisen halpaa tavaraa, joten sen lopullisen hinnan ratkaisi pitkälti kuljetus: hevosvankkureilla vietynä pitkä matka söi suuren osan hinnasta, kun taas junalla suuri määrä pääsi liikkeelle kerralla ja kauas. Trbovljen louhinta oli alkanut vuonna 1804, ja kun kaupunki liitettiin vuonna 1849 Itävallan [[Etelärataan]], kaivoksen hiilellä oli yhtäkkiä reitti laajoille markkinoille. Raiteet toivat myös kysyntää, sillä [[höyryveturit]] ja tehtaat tarvitsivat polttoainetta, ja 1800-luvun kuluessa kaupunkiin rakennettiin muun muassa sementtitehdas, sahalaitos ja voimalaitos. Kaivos ja rautatie tukivat siis toisiaan, kun [[hiilenlouhinta]] sai varman ostajajoukon. Kiskot näyttävät ylhäältä aina vähän kuin kirjeen reitiltä.",
+  "linkit": [
+   "Etelärataan",
+   "höyryveturit",
+   "hiilenlouhinta"
+  ],
+  "jatkot": [
+   "Mihin Etelärata johti?",
+   "Miten höyryveturi toimii hiilellä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trbovlje",
+  "kysymys": "Miten 360 metriä korkea savupiippu pysyy pystyssä, vaikka sen huippu heiluu tuulessa?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tää on fysiikkaa eikä kirjeenkantoa. Tällaisen piipun ei ole tarkoituskaan olla jäykkä kuin kivipaasi: korkea [[teräsbetonista]] valettu savupiippu suunnitellaan taipumaan tuulessa hieman ja palaamaan takaisin, ja huipun liike lasketaan mukaan rakenteeseen jo suunnitteluvaiheessa. Runko on alhaalta leveä ja seinämä paksu, ylöspäin se kapenee ja keventyy, jolloin [[painopiste]] pysyy matalana ja tuulen aiheuttama kaatava voima jää rakenteen kestämäksi. Syvä perustus levittää kuorman maaperään, ja teräsvahvisteinen betoni kestää sekä puristusta että venytystä. [[Tuulikuorma]] on laskennan keskeisimpiä tekijöitä. En ole varma Trbovljen piipun omista yksityiskohdista, mutta periaate on tämä.\n\nMinä tunnen tuon heilumisen omasta takaa: kovassa tuulessa ei kannata jäykistellä vaan antaa tuulen viedä hetki ja palata sitten linjalle. Piippu ja kyyhky ovat siinä sukulaisia, vaikka kyyhky on huomattavasti kevyempi.",
+  "linkit": [
+   "teräsbetonista",
+   "painopiste",
+   "Tuulikuorma"
+  ],
+  "jatkot": [
+   "Miksi voimalaitoksille rakennetaan niin korkeita piippuja?",
+   "Miten piipun huipun liikettä voidaan vaimentaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trbovlje",
+  "kysymys": "Mikä ero on ruskohiilellä ja kivihiilellä?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Ero johtuu hiilen iästä ja kypsymisasteesta: hiili muodostuu miljoonien vuosien kuluessa [[turpeesta]], ja mitä pidemmälle prosessi on edennyt, sitä kovempaa ja energiapitoisempaa aines on. Ruskohiili on nuorempaa, pehmeämpää ja kosteampaa, ja sen [[lämpöarvo]] painoa kohti on pienempi. Kivihiili on vanhempaa, tiiviimpää ja kovempaa, ja siitä saadaan enemmän energiaa samasta massasta. Koska kostea ruskohiili on kuljetettaessa raskasta ja heikkotehoista, sitä käytetään usein lähellä louhintapaikkaa, esimerkiksi [[voimalaitoksissa]]. Slovenian kaivoksissa louhitaan lähteiden mukaan pääosin ruskohiiltä, mutta en ole varma jokaisesta kaivoksesta erikseen. Kyyhkyn silmin kaikki hiili on aika samannäköistä mustaa.",
+  "linkit": [
+   "turpeesta",
+   "lämpöarvo",
+   "voimalaitoksissa"
+  ],
+  "jatkot": [
+   "Miten hiili syntyy luonnossa?",
+   "Miksi hiilen käyttöä vähennetään Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trbovlje",
+  "kysymys": "Mikä on Etelärata ja minne se kulki?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on hyvä reittikysymys. Etelärata, saksaksi Südbahn, oli Itävallan keisarikunnan tärkeimpiä rautatieyhteyksiä, ja sen pääreitti yhdisti [[Wienin]] Adrianmeren satamakaupunkiin [[Triesteen]]. Matkan varrelle jäivät muun muassa Graz, Maribor, Celje ja Ljubljana, joten rata kulki läpi nykyisen Slovenian alueen. Reitin tunnetuin tekninen kohta oli [[Semmeringin]] vuoristoylitys, jonka rakentaminen 1850-luvulla oli aikansa suuri insinöörityö. Trbovlje liitettiin rataan vuonna 1849, mutta reitin tarkkaa valmistumisvuotta en ole varma, joten sanon vain, että koko yhteys valmistui 1850-luvun kuluessa. Triestessä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.",
+  "linkit": [
+   "Wienin",
+   "Triesteen",
+   "Semmeringin"
+  ],
+  "jatkot": [
+   "Miten Semmeringin rata rakennettiin vuorten yli?",
+   "Miksi Trieste oli tärkeä satama Itävallalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trbovlje",
+  "kysymys": "Keitä ovat kaivoksen tontut ja haltijat eurooppalaisessa perinteessä?",
+  "uusi": true,
+  "vastaus": "Ai se. Paikallisen legendan mukaan Trbovljen kaivoksissa temppuili [[Perkmandeljc]]-niminen tonttu, joka varasti kaivosmiesten eväät. Tällaiset olennot ovat tuttuja eri puolilta Eurooppaa, sillä pimeässä maan alla työskentelevät ihmiset selittivät odottamattomat äänet, sortumat ja kadonneet työkalut näkymättömillä asukkailla. Saksankielisellä alueella puhutaan kaivoshengistä, joita kutsutaan muun muassa nimillä Bergmännchen ja Kobold, ja [[kobolteista]] kerrotaan, että ne sotkivat malmin: kobolttimetallin nimen sanotaan juontuvan juuri tästä uskomuksesta. Tarinat toimivat samalla muistutuksena työn vaaroista ja kaivosmiesten yhteisestä ammattikulttuurista. Minä ymmärrän kyllä sen tontun, eväät ovat vakava asia.",
+  "linkit": [
+   "Perkmandeljc",
+   "kobolteista"
+  ],
+  "jatkot": [
+   "Mistä kobolttimetalli on saanut nimensä?",
+   "Millaista oli Slovenian kaivosmiesten elämä 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rogaska",
+  "kysymys": "Mitä Rogaška Slatinan nimi tarkoittaa, ja mistä ihmiset ovat tulleet hakemaan sen vettä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Nimen jälkiosa on helpompi: sana slatina tarkoittaa slaavilaisissa kielissä kivennäislähdettä tai suolaista lähdettä, joten kyse on kirjaimellisesti lähteen kaupungista. Etuosan Rogaška-sanan alkuperästä en ole varma, ja arvaaminen olisi huonompi vastaus kuin tunnustus. Lähteen ympärille rakennettiin 1600-luvulla puuaita, ja linnanherra [[Peter de Curti]] perusti sinne majatalon vuonna 1676 ja peri lähteillä kävijöiltä maksun. Vettä pullotettiin jo silloin läheisessä lasitehtaassa tehtyihin pulloihin. Uusklassinen Tempel-paviljonki valmistui vuonna 1819, ja 1800-luvun puoliväliin mennessä kaupungista oli tullut [[Habsburgien]] monarkian eliitin muodikas kokoontumispaikka, joten vieraita tuli monarkian eri osista. Nykyään vesi tunnetaan nimellä [[Donat Mg]]. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Peter de Curti",
+   "Habsburgien",
+   "Donat Mg"
+  ],
+  "jatkot": [
+   "Mitä magnesium tekee ihmiselle?",
+   "Millainen oli Habsburgien monarkia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rogaska",
+  "kysymys": "Miksi lasiteollisuus ja kylpylä sopivat niin hyvin yhteen Rogaška Slatinassa?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: yhteys on käytännöllisempi kuin luulisi. Kivennäisvettä haluttiin viedä myös kotiin, ja sitä varten tarvittiin pulloja, joten jo 1600-luvulla vettä pullotettiin läheisessä [[lasitehtaassa]] tehtyihin pulloihin. Lasi oli myös hygieeninen ja läpinäkyvä astia, jossa veden saattoi nähdä ja säilyttää maun muuttumatta. Kylpylävieraat olivat lisäksi varakasta väkeä, joka saattoi ostaa lasiesineitä muistoksi, ja siitä kasvoi [[kristallilasi]] kaupungin tunnetuksi tuotteeksi. En ole varma, miten tarkasti lasin ja veden kauppa kietoutuivat toisiinsa eri aikoina, mutta pullotuksen ja matkamuistojen yhteys on selvä. Lisäksi molemmat vetivät huomiota samoille seuduille, ja [[kivennäisvesi]] antoi paikalle nimen. Katolta katsoen kaikki tuo näyttää varsin läpinäkyvältä liiketoiminnalta.",
+  "linkit": [
+   "lasitehtaassa",
+   "kristallilasi",
+   "kivennäisvesi"
+  ],
+  "jatkot": [
+   "Miten kristallilasi valmistetaan?",
+   "Mitä Donat Mg -vettä käytetään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rogaska",
+  "kysymys": "Mitä on kivennäisvesi ja miksi sitä juotiin hoitona?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Kivennäisvesi on vettä, johon on maaperän läpi virratessaan liuennut mineraaleja, kuten magnesiumia, kalsiumia tai natriumia, ja sen koostumus riippuu siitä, minkä kerrosten kautta se on kulkenut. Kylpyläkaupungeissa uskottiin jo vuosisatoja sitten, että tietynlaisen lähdeveden juominen auttaa vaivoihin, ja hoitoon kuului juomisen lisäksi kylpemistä ja ulkoilua. Rogaška Slatinan vesi on [[magnesiumia]] sisältävää, ja perinteisesti sen on ajateltu tukevan etenkin ruoansulatusta, vaikka vaikutuksen tarkkaa tieteellistä arviota en tässä osaa antaa. Lähteen äärelle rakennettiin 1800-luvun alussa uusklassinen [[Tempel-paviljonki]]. Minä tyydyn lätäköiden vesiin, ja ne ovat riittäneet.",
+  "linkit": [
+   "magnesiumia",
+   "Tempel-paviljonki"
+  ],
+  "jatkot": [
+   "Mitä kylpylähoitoon kuului 1800-luvulla?",
+   "Mitä mineraaleja vedessä tavallisesti on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rogaska",
+  "kysymys": "Miten kylpyläkulttuuri levisi Habsburgien monarkiassa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Habsburgien monarkian alueella oli lukuisia lähteiden ympärille kasvaneita kylpyläkaupunkeja, ja niiden suosio kasvoi 1800-luvulla, kun varakas yläluokka ja aatelisto alkoivat viettää kesiä hoitolaitoksissa. Tunnettuja esimerkkejä ovat [[Karlovy Vary]], [[Baden]] ja [[Bad Ischl]], ja Rogaška Slatina kuului samaan joukkoon: 1800-luvun puoliväliin mennessä siitä oli tullut monarkian eliitin muodikas kokoontumispaikka. [[Rautateiden]] yleistyminen helpotti matkustamista, ja kylpyläkaupungeissa tavattiin sekä hoidettiin terveyttä että kehitettiin seuraelämää. En ole varma, miten kylpyläkulttuurin leviäminen etenee tarkasti vuosi vuodelta, mutta suuntaus on selvä.\n\nNämä kaupungit olivat varmasti hyvää seutua kirjeenkantajalle, koska vieraat kirjoittivat kotiin joka päivä. Suvun postissa kylpylävieraiden kortit ovat kuulemma olleet pitkä ja hajuvedeltä tuoksuva kasa.",
+  "linkit": [
+   "Karlovy Vary",
+   "Baden",
+   "Bad Ischl",
+   "Rautateiden"
+  ],
+  "jatkot": [
+   "Miksi Baden on tunnettu kylpyläkaupunki?",
+   "Millainen on Karlovy Varyn historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rogaska",
+  "kysymys": "Mikä on kristallilasin ero tavalliseen lasiin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Perinteisessä kristallilasissa lasimassaan lisätään [[lyijyoksidia]], joka tekee lasista raskaamman, kirkkaamman ja kimmeltävämmän kuin tavallinen ikkuna- tai pullolasi. Lyijy nostaa lasin [[taitekerrointa]], jolloin valo taittuu voimakkaammin, ja lasi myös soi kauniisti, kun sitä napautetaan. Nykyään nimeä käytetään myös lyijyttömistä laseista, joissa lyijyn tilalla on muita aineita, joten merkintä ei yksin kerro koostumusta. En ole varma, millaista seosta Rogaškan lasi on eri aikoina ollut. Lasi hiotaan usein kuvioiduksi, ja hionta tuo esiin kimalluksen. Minun maailmani on ikkunalaudalta katsottuna aika läpinäkyvä.",
+  "linkit": [
+   "lyijyoksidia",
+   "taitekerrointa"
+  ],
+  "jatkot": [
+   "Miksi lyijylasista on luovuttu osittain?",
+   "Miten lasia hiotaan koristeelliseksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ravne",
+  "kysymys": "Mitä nimi Ravne tarkoittaa, ja miksi paikan vanha nimi Guštanj vaihtui?",
+  "uusi": false,
+  "vastaus": "No jopas. Slovenian kielessä sana ravne viittaa tasaisiin, tasamaisiin paikkoihin, ja nimi on siten kuvaus maastosta; olen kohtuullisen varma tästä, mutta en täysin. Lisäosa na Koroškem tarkoittaa Koroškan alueella sijaitsevaa. Aiempi nimi [[Guštanj]] muistuttaa saksalaista nimeä [[Gutenstein]], joka oli käytössä Kärntenissä, ja paikkaa kutsuttiin Guštanjiksi vuoteen 1952 asti. Syystä, miksi nimi juuri silloin vaihdettiin, en ole varma, enkä halua arvailla. Kaupunki mainitaan ensimmäisen kerran vuoden 1263 asiakirjassa, ja alue kuului [[Kärntenin]] herttuakuntaan jo vuodesta 976. Nimiä on kaupungilla ollut enemmän kuin minulla lempinimiä.",
+  "linkit": [
+   "Guštanj",
+   "Gutenstein",
+   "Kärntenin"
+  ],
+  "jatkot": [
+   "Miksi paikannimiä vaihdetaan?",
+   "Mikä on Koroška Slovenian alueena?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ravne",
+  "kysymys": "Miksi juuri tähän laaksoon syntyi terästeollisuus, ja mitä rautatie muutti?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Raudanvalmistus alkoi seudulla 1600-luvun alussa, ja varhaisessa rautateollisuudessa tarvittiin yleensä kolme asiaa: raaka-ainetta, polttoainetta ja vesivoimaa. Metsistä saatiin [[puuhiiltä]], joesta voimaa vasaroille ja palkeille, ja Mežan laaksossa nämä olivat todennäköisesti lähellä toisiaan; en ole varma täkäläisistä yksityiskohdista, mutta tällainen yhdistelmä toistui monessa eurooppalaisessa rautaseudussa. Teräsvalmistuksella on kaupungissa yli 400 vuoden perinne. Rautatie yhdisti paikan maailmaan vuonna 1863, ja sen jälkeen raskas tuote ja raaka-aine liikkuivat kauas edullisemmin: ennen ensimmäistä maailmansotaa laadukasta ravnelaista terästä myytiin aina Lähi-itään, Kaukoitään ja Venäjälle. Joen ansiosta kaupunki sai [[vesivoimaa]] käyttöönsä. Joki teki työt, ja kaikki muut ottivat kunnian.",
+  "linkit": [
+   "puuhiiltä",
+   "vesivoimaa"
+  ],
+  "jatkot": [
+   "Miten vesivoimalla käytettiin takomovasaroita?",
+   "Mitä Ravnen terästä valmistetaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ravne",
+  "kysymys": "Miten teräs eroaa raudasta?",
+  "uusi": true,
+  "vastaus": "Mmm— tästä saa selvän pienellä esimerkillä. Ero on pääosin hiilen määrässä: raakarauta, joka tulee masuunista, sisältää paljon [[hiiltä]] ja on siksi kovaa mutta haurasta, kun taas teräksessä hiiltä on noin kaksi prosenttia tai vähemmän, jolloin materiaali on sekä luja että työstettävä. Teräs voidaan myös seostaa muilla aineilla, kuten kromilla tai nikkelillä, jolloin siitä tulee ruostumatonta tai erityisen kestävää. Teräksen teollinen valmistus yleistyi 1800-luvun puolivälissä, kun uudet menetelmät, kuten [[Bessemerin menetelmä]], tekivät siitä halpaa. Tarkat rajat riippuvat luokituksesta, joten pidä lukuja suuntaa-antavina. Minä en tarvitse kumpaakaan, riittää kun siivet kantavat.",
+  "linkit": [
+   "hiiltä",
+   "Bessemerin menetelmä"
+  ],
+  "jatkot": [
+   "Miten masuuni toimii?",
+   "Miksi ruostumaton teräs ei ruostu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ravne",
+  "kysymys": "Mikä on Kärntenin herttuakunta ja missä se sijaitsi?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kärntenin herttuakunta oli Pyhään saksalais-roomalaiseen keisarikuntaan kuulunut herttuakunta, joka erotettiin [[Baijerista]] vuonna 976, ja Ravne na Koroškemin seutu kuului siihen jo tuolloin. Myöhemmin alue siirtyi [[Habsburgien]] hallintaan, ja herttuakunnan alue jakautuu nykyisin pääosin Itävallan Kärntenin osavaltion ja Slovenian Koroškan alueen kesken. Herttuakunnan tarkat rajat vaihtelivat vuosisatojen kuluessa, enkä ole varma kaikista vaiheista. Slovenian puolella kaupungit, kuten Ravne, ovat saaneet teollisuutensa jokilaaksoihin.\n\nRajat ovat minulle outo asia, koska ylhäältä niitä ei näe. Suvun postissa ne kuitenkin tarkoittivat tullimaksuja ja jokaisella kerralla eri leimaa.",
+  "linkit": [
+   "Baijerista",
+   "Habsburgien"
+  ],
+  "jatkot": [
+   "Miten Habsburgit saivat Kärntenin hallintaansa?",
+   "Missä Klagenfurt sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ravne",
+  "kysymys": "Miksi vanhat rautaverstaat sijoitettiin virtaavan veden äärelle?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea [[takomovasaroita]], jotka löivät kuumaa metallia, sekä [[palkeita]], jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.",
+  "linkit": [
+   "vesipyörää",
+   "takomovasaroita",
+   "palkeita"
+  ],
+  "jatkot": [
+   "Miten vesipyörä toimii?",
+   "Milloin vesivoima korvautui sähköllä teollisuudessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velenje",
+  "kysymys": "Miksi Velenjen kaupunki suunniteltiin ja rakennettiin lähes kokonaan uudelleen 1950-luvulla?",
+  "uusi": false,
+  "vastaus": "Katotaas. Vanha Velenje oli vielä vuonna 1889 pieni kauppala linnan juurella, ja siellä asui vain 364 ihmistä. Ruskohiilikaivos avattiin vuonna 1875 ja toimii yhä, ja kaivostyö kasvatti työvoiman ja asuntojen tarpeen niin, ettei pieni vanha kauppala enää riittänyt. Siksi 1950-luvulla päätettiin rakentaa uusi, suunniteltu kaupunkikeskus, joka avattiin virallisesti 20. syyskuuta 1959. Slovenia kuului tuolloin Jugoslaviaan, ja samanlaisia suunniteltuja teollisuuskaupunkeja rakennettiin 1900-luvun puolivälissä muuallakin Euroopassa. Tarkkoja syitä, kuten suunnittelijoiden nimiä tai päätöksen yksityiskohtia, en ole varma, joten jätän ne pois. Uusi keskus rakennettiin [[Šalekin laaksossa]], missä [[ruskohiilikaivos]] oli tärkein työnantaja. Kaupunki syntyi suunnitelmallisemmin kuin yksikään kyyhkyn pesä.",
+  "linkit": [
+   "Šalekin laaksossa",
+   "ruskohiilikaivos"
+  ],
+  "jatkot": [
+   "Millainen oli Jugoslavia?",
+   "Mitkä muut eurooppalaiset kaupungit on rakennettu suunnitelmallisesti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velenje",
+  "kysymys": "Mitä tarkoittaa pitkäseinälouhinta, jonka vuoksi Velenjen hiilikaivos on tunnettu?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo, ainakin periaatteen. [[Pitkäseinälouhinnassa]] hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. [[Velenjen]] kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.",
+  "linkit": [
+   "Pitkäseinälouhinnassa",
+   "hydraulisia tukia",
+   "Velenjen"
+  ],
+  "jatkot": [
+   "Miksi hiilikerroksen paksuus vaikuttaa louhintaan?",
+   "Miten kaivostyön turvallisuutta on parannettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velenje",
+  "kysymys": "Miksi Velenjen alueella on niin paljon linnoja ja kartanoita?",
+  "uusi": true,
+  "vastaus": "Just niin, tämä on hyvä huomio. Habsburgit omistivat seutua vuosisatojen ajan, ja mahdollisuus hallita maata tarkoitti sitä, että aatelissuvut ja läänitysherrat rakensivat tukikohtia, kartanoita ja linnoja maatilojensa ja kulkureittien turvaksi. Velenjessä tästä esimerkkinä on [[Velenjen linna]], jonka juurella vanha Velenje oli vielä vuonna 1889 pieni kauppala. Alueen runsaus ei siis ole sattumaa vaan seurausta pitkästä aatelisomistuksesta ja hallinnosta. En ole varma yksittäisten rakennusten rakennusvuosista, joten pysyttelen yleisellä tasolla. Samassa maisemassa Šalekin laakson [[kartanoita]] ja kaivoksen työntekijöiden elämä ovat eläneet vieretysten.\n\nMinä tykkään linnoista, koska niiden torneista on hyvä katsoa kaikki alle. Tosin torneissa asuu yleensä jo kyyhkyjä, ja suvun sisäinen kilpailu on kovaa.",
+  "linkit": [
+   "Velenjen linna",
+   "kartanoita"
+  ],
+  "jatkot": [
+   "Mikä erottaa linnan kartanosta?",
+   "Millaista oli aatelisen elämä kartanossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velenje",
+  "kysymys": "Miksi kaivosalueille syntyy sortumien takia uusia järviä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kun maan alta louhitaan suuri määrä hiiltä, louhitun kerroksen päällä oleva maa ja kivi painuvat vähitellen tyhjään tilaan, ja pinta alenee. Syntyvä [[painuma]] täyttyy usein [[pohjavedellä]] ja sade- sekä purovesillä, kunnes siihen muodostuu uusi järvi. Näin on lähteiden mukaan käynyt myös Velenjen seudulla, jossa kaivostoiminnan jäljiltä on syntynyt tekojärviä; tunnetuin on [[Velenjen järvi]], mutta tarkkoja pinta-aloja en ole varma. Ilmiö on tuttu monista kaivosalueista Euroopassa, ja usein painumat on tarkoituksella täytetty vedellä, jolloin alueesta tulee virkistyskäyttöön sopiva. Kyyhkynä pidän sen verran maasta, että painuminen vähän huolettaa.",
+  "linkit": [
+   "painuma",
+   "pohjavedellä",
+   "Velenjen järvi"
+  ],
+  "jatkot": [
+   "Miten kaivosalueet kunnostetaan käytön jälkeen?",
+   "Mitä Velenjen järvellä tehdään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-velenje",
+  "kysymys": "Mitä tarkoittaa suunniteltu uusi kaupunki?",
+  "uusi": true,
+  "vastaus": "Kato, tää on kaupunkisuunnittelun perustermi. Suunniteltu uusi kaupunki tarkoittaa asutuskeskusta, joka rakennetaan lähes tyhjästä tai vanhan pienen kylän tilalle ennalta tehdyn yleissuunnitelman mukaan. Suunnitelmaan kuuluvat yleensä asuinalueet, kaupunkikeskus, palvelut, liikenneyhteydet ja viheralueet, ja usein syynä on jokin tietty tarve, kuten uusi teollisuuslaitos tai asuntopula. Euroopassa tunnettuja esimerkkejä ovat [[Nowa Huta]] Puolassa, [[Stevenage]] Britanniassa ja [[Tapiola]] Suomessa, ja Velenje kuuluu samaan perheeseen: sen keskusta rakennettiin 1950-luvulla. Esimerkkien tarkat perustamisvuodet jätän tähän, koska en ole niistä täysin varma. Suunnitelluissa kaupungeissa pitää olla myös leipomo, sanon vain.",
+  "linkit": [
+   "Nowa Huta",
+   "Stevenage",
+   "Tapiola"
+  ],
+  "jatkot": [
+   "Miksi Tapiola rakennettiin?",
+   "Millaisia ongelmia suunnitelluilla kaupungeilla on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emona",
+  "kysymys": "Miksi Emonan rauniot löytyvät nykyisen Ljubljanan katujen alta eivätkä maan päältä?",
+  "uusi": false,
+  "vastaus": "No niin, selitys on yksinkertainen mutta pitkä. Emonan viimeisten asukkaiden jälkeen kaupungissa ei enää ollut asutusta 500-luvun jälkipuoliskolla, ja rakennukset rapistuivat. Vuosisatojen kuluessa jäänteiden päälle kertyi maata, romua ja myöhempien rakennusten perustuksia; tällaista kerrostumaa kutsutaan [[kulttuurikerrokseksi]]. Lisäksi tulvat ja uusi rakentaminen nostivat maanpintaa, eikä kaupunki koskaan kokonaan kadonnut, vaan sen paikalle kasvoi myöhemmin [[Ljubljana]]. Siksi katujen, talojen ja vesijohtojen jäänteitä kaivetaan nykyisin esiin keskustan alta. Joitakin osia, kuten muurin pätkiä, on kunnostettu näkyviin, ja puisto on [[Jože Plečnikin]] työtä. En ole varma, kuinka suuri osa kaupungista on yhä maan alla. Onpas siitä pitkä aika.",
+  "linkit": [
+   "kulttuurikerrokseksi",
+   "Ljubljana",
+   "Jože Plečnikin"
+  ],
+  "jatkot": [
+   "Miten Ljubljana kasvoi Emonan jälkeen?",
+   "Mitä Emonan raunioista voi nähdä nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emona",
+  "kysymys": "Mitkä kansat hyökkäsivät Emonaan 400- ja 500-luvuilla?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Emonan seutu joutui kansainvaellusten ajan liikkeiden tielle, kun Rooman valtakunnan länsiosa heikkeni. Tuolloin [[länsigootit]] leiriytyivät Emonan lähelle talvella 408–409, ja [[hunnit]] hyökkäsivät kaupunkiin vuonna 452. Vuonna 568 [[langobardit]] kulkivat sen läpi matkallaan Italiaan, eli he eivät varsinaisesti hyökänneet kaupunkiin, mutta ohimarssi kuului samaan epävakaaseen aikaan. Sen jälkeen seurasivat vielä [[avaarien]] ja slaavien hyökkäysretket, ja 500-luvun jälkipuoliskolla kaupungissa ei enää ollut asutusta. Tapahtumista on kulunut yli tuhat vuotta, ja tuolloin Euroopan valtarakenteet olivat täysin toisenlaiset kuin nykyään; Ljubljana on sittemmin kasvanut saman paikan päälle. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "länsigootit",
+   "hunnit",
+   "langobardit",
+   "avaarien"
+  ],
+  "jatkot": [
+   "Mitä kansainvaellukset olivat?",
+   "Miten Rooman valtakunnan länsiosa päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emona",
+  "kysymys": "Millainen oli roomalaisen kastrumkaupungin katuverkko?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: ruudukko. Roomalainen kastrumkaupunki kasvoi sotilasleiristä, ja leirin selkeä suunnitelma siirtyi kaupunkiin: katuverkko oli ristikko, jonka keskellä oli tori. Perinteisesti pääkadut olivat pohjois-eteläsuuntainen [[cardo]] ja itä-länsisuuntainen [[decumanus]], jotka risteävät keskustassa, ja kortteleiden muoto oli säännöllinen. Emonassa katuverkko oli roomalaiseen tapaan ristikko, ja kaupunkia suojasi muuri, joka perustettiin vuoden 14 tienoilla. Nykykeskustan alta on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja. Tarkka kortteleiden mitta ja pääkatujen suunta Emonassa eivät ole minulle varmoja, joten en anna lukuja. Keskellä [[foorumi]] toimi kaupungin kokoontumispaikkana.\n\nRuudukossa on kyyhkyn mielestä jotain rauhoittavaa, sillä ylhäältä katsoen kaikki osoitteet löytyvät suoraan. Suvun postiperimätiedon mukaan roomalaisille oli juuri siksi helppo viedä kirjeitä.",
+  "linkit": [
+   "cardo",
+   "decumanus",
+   "foorumi"
+  ],
+  "jatkot": [
+   "Mitä foorumilla tehtiin?",
+   "Miten roomalaiset rakensivat katuja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emona",
+  "kysymys": "Miksi roomalaisten sotaleireistä kasvoi kaupunkeja?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Sotaleirin ympärille kertyi nopeasti väkeä, joka palveli sotilaita: kauppiaita, käsityöläisiä ja perheitä, sillä [[legioonat]] tarvitsivat ruokaa, työkaluja ja majoitusta. Leirit perustettiin yleensä strategisiin paikkoihin, kuten joen äärelle tai tärkeän tien varrelle, ja juuri tällaiset paikat soveltuivat myös kaupankäyntiin. Kun sotilaita vietiin muualle, osa asukkaista jäi paikalle ja leiri muuttui vähitellen siviilikaupungiksi, ja usein asutusta vahvistettiin myös [[veteraaneilla]]. Emonassa sotilasleiri perustettiin ennen ajanlaskun alkua linnavuoren juurelle, ja varsinainen muurein varustettu kaupunki syntyi vuoden 14 tienoilla. Sijainti [[Ljubljanica]]-joen äärellä oli todennäköisesti tärkeä, mutta en ole varma reitin tarkoista yksityiskohdista. Armeija oli aikansa kaupunkisuunnittelija.",
+  "linkit": [
+   "legioonat",
+   "veteraaneilla",
+   "Ljubljanica"
+  ],
+  "jatkot": [
+   "Mikä oli roomalainen legioona?",
+   "Miten veteraanit saivat maata asuttaakseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-emona",
+  "kysymys": "Miten arkeologit tutkivat raunioita elävän kaupungin alla?",
+  "uusi": true,
+  "vastaus": "Ai tota. Elävän kaupungin alla tutkimus tehdään yleensä silloin, kun rakennushanke, katutyö tai putkiremontti paljastaa vanhoja rakenteita, ja tällaista työtä kutsutaan usein [[pelastusarkeologiaksi]]. Arkeologit kaivavat kerros kerrokselta, dokumentoivat jokaisen löydön ja rakenteen sijainnin sekä syvyyden piirtämällä, valokuvaamalla ja mittaamalla, koska kaivaminen tuhoaa alkuperäisen järjestyksen. Kerrosten järjestys kertoo, mikä on vanhempaa ja mikä uudempaa, ja siksi [[kulttuurikerrokset]] ovat heille kuin kirjan sivut. Löytöjen jälkeen alue joko rakennetaan uudelleen, jolloin rauniot peitetään tai dokumentoidaan, tai osa jäänteistä säilytetään näkyvillä. Ljubljanan keskustassa Emonan jäänteitä kaivetaan esiin juuri tällä tavalla. Eikä kyyhkyn tarvitse kaivaa, riittää kun katsoo ylhäältä.",
+  "linkit": [
+   "pelastusarkeologiaksi",
+   "kulttuurikerrokset"
+  ],
+  "jatkot": [
+   "Miten esineiden ikä määritetään?",
+   "Mitä Ljubljanan arkeologiset löydöt kertovat roomalaisista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zice",
+  "kysymys": "Mikä teki Žičen luostarista poikkeuksellisen tärkeän koko kartusiaanien veljeskunnalle?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Žičen luostari perustettiin vuosina 1155–1165 ensimmäiseksi [[kartusiaaniluostariksi]] saksankielisellä alueella ja samalla ensimmäiseksi Ranskan ja Italian ulkopuolella. Vielä suurempi merkitys tuli [[suuren skisman]] aikana, jolloin koko veljeskunnan [[ylipriorin]] istuin siirtyi Žičeen lähes kahdeksikymmeneksi vuodeksi, vuosina 1391–1410. Kolme Žičen prioria toimi tänä aikana peräkkäin koko veljeskunnan ylipriorina, joten pienestä laaksoluostarista tuli kartusiaanien johtopaikka. Aika iso rooli yhdelle kapealle laaksolle, sanon minä.",
+  "linkit": [
+   "kartusiaaniluostariksi",
+   "suuren skisman",
+   "ylipriorin"
+  ],
+  "jatkot": [
+   "Mikä on ylipriori ja mitä hän tekee?",
+   "Miksi kartusiaanit rakentavat luostarinsa syrjäisiin paikkoihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zice",
+  "kysymys": "Miksi luostari lopulta lakkautettiin ja jätettiin rappeutumaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Luostarin rappio alkoi [[osmanien]] ryöstöretkestä vuonna 1531, minkä jälkeen se siirtyi välillä komendaattoripriorien ja [[jesuiittojen]] haltuun, kunnes kartusiaanit saivat sen takaisin vuonna 1593. Lopullisen iskun antoi keisari [[Joosef II]], joka lakkautti luostarin vuonna 1782 osana kirkollisia uudistuksiaan; yleisesti ottaen hänen uudistuksissaan lakkautettiin monia luostareita, joita hän piti yhteiskunnalle hyödyttöminä. Sen jälkeen rakennusten annettiin rapistua, ja nykyisin jäljellä ovat rauniot sekä Johannes Kastajalle omistettu kirkko. Ja kaiken tämän minä muistin ilman lunttia.",
+  "linkit": [
+   "osmanien",
+   "jesuiittojen",
+   "Joosef II"
+  ],
+  "jatkot": [
+   "Mitä uudistuksia Joosef II teki kirkon alalla?",
+   "Mitä jesuiitat olivat ja mitä he tekivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zice",
+  "kysymys": "Millaista on kartusiaanimunkkien arki luostarissa?",
+  "uusi": true,
+  "vastaus": "Mmm— Tästä minä olen kuullut kirjeillä. Kartusiaanien veljeskunnan perusti 1000-luvun lopulla munkki [[Bruno]] Ranskan [[Chartreusen]] vuoristoon, ja sen elämäntapa on poikkeuksellisen hiljainen. Munkit asuvat perinteisesti omissa pienissä selleissään, joissa he rukoilevat, lukevat ja tekevät käsityötä, ja suuri osa päivästä kuluu yksinäisyydessä ja vaikenemisessa. Yhteisiin jumalanpalveluksiin kokoonnutaan tiettyinä aikoina, ja yhteinen ateria ja keskustelu kuuluvat tavallisesti vain juhlapäiviin ja sunnuntaihin; tarkka päiväjärjestys vaihtelee kuitenkin luostarista toiseen.\n\nMinusta moinen hiljaisuus olisi kyyhkylle mahdoton laji, sillä minä kuhisen jo aamusta asti. Mutta ylhäältä katsottuna ne pienet sellit pihoineen näyttävät kovin järjestyneiltä.",
+  "linkit": [
+   "Bruno",
+   "Chartreusen"
+  ],
+  "jatkot": [
+   "Mikä on Chartreuse-likööri ja kuka sitä valmistaa?",
+   "Toimiiko Sloveniassa edelleen kartusiaaniluostareita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zice",
+  "kysymys": "Missä Žičen luostarin rauniot sijaitsevat nykyään?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Žičen luostarin rauniot sijaitsevat nykyisessä Sloveniassa, [[Slovenske Konjicen]] kaupungin lähistöllä, kapeassa Žičnica-puron laaksossa. Luostari perustettiin aikanaan Steiermarkin rajakreivin ja hänen poikansa toimesta, ja alue kuului vuosisatojen ajan Habsburgien hallitsemaan Steiermarkiin. Nykyisin paikalla näkyy raunioita sekä [[Johannes Kastajalle]] omistettu kirkko. Tietääkseni Sloveniassa toimii edelleen toinen kartusiaaniluostari, [[Pleterje]], mutta en ole aivan varma sen tämänhetkisestä tilanteesta. Aika kaukana tuo on kyyhkyn omasta kattoparvesta.",
+  "linkit": [
+   "Slovenske Konjicen",
+   "Johannes Kastajalle",
+   "Pleterje"
+  ],
+  "jatkot": [
+   "Millaisia nähtävyyksiä Slovenske Konjicen seudulla on?",
+   "Miten Steiermark on jakautunut Itävallan ja Slovenian kesken?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zice",
+  "kysymys": "Mikä oli suuri skisma, joka siirsi ylipriorin istuimen Žičeen?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Suuri läntinen skisma oli kirkon jakautuminen, joka alkoi vuonna 1378, kun [[Rooman]] ja [[Avignonin]] paavit kilpailivat siitä, kumpi oli oikea paavi; myöhemmin vaatijoita tuli kolmaskin. Kilpailu jakoi kirkon, ruhtinaat ja myös luostariveljeskunnat eri leireihin, ja se päättyi vuonna 1417 [[Konstanzin kirkolliskokouksessa]]. Kartusiaanien ylipriorin istuin oli Žičessä vuosina 1391–1410, eli juuri tämän erimielisyyden aikana. En ole varma, miksi valinta osui juuri Žičeen. Siinä oli kyyhkylle kerrakseen sotkua, joka sopii kirjeiden kantajalle huonosti.",
+  "linkit": [
+   "Rooman",
+   "Avignonin",
+   "Konstanzin kirkolliskokouksessa"
+  ],
+  "jatkot": [
+   "Miten Konstanzin kirkolliskokous ratkaisi skisman?",
+   "Miksi paavit asuivat jossain vaiheessa Avignonissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koper",
+  "kysymys": "Miksi Koper sai roomalaisajan jälkeen nimen Justinopolis?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Kun [[langobardien]] hyökkäys uhkasi vuonna 568, trieteläiset pakenivat saarella sijainneeseen kaupunkiin, jota oli aiemmin kutsuttu nimellä [[Aegida]]. Tämän jälkeen kaupunki sai nimen Justinopolis keisarin mukaan; usein mainitaan Justinianus II, mutta vuoteen 568 sopisi paremmin [[Bysantin]] keisari Justinus II, joten en ole varma, kumpaa nimeä oikein tarkoitetaan. Nimi tarkoittaa Justinuksen kaupunkia, ja myöhemmin siitä kehittyi eri vaiheiden kautta nykyinen Koper. Pitkä nimihistoria tälle pikkukaupungille, vai mitä.",
+  "linkit": [
+   "langobardien",
+   "Aegida",
+   "Bysantin"
+  ],
+  "jatkot": [
+   "Mistä nimi Capodistria tulee?",
+   "Keitä langobardit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koper",
+  "kysymys": "Miten Triesten vapaasatama-asema vuonna 1719 vaikutti Koperin kauppaan?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kun Trieste julistettiin vapaasatamaksi vuonna 1719, [[Habsburgien]] hallitsija [[keisari Kaarle VI]] nosti sen Adrianmeren kaupankäynnin keskukseksi, ja Koper menetti kauppamonopolinsa. Vapaasatamassa tavaroita pystyttiin käsittelemään edullisemmin ja kaupankäyntiä kevennettiin, joten kauppiaat suuntasivat sinne, eikä Koper koskaan saanut asemaansa takaisin. Kaupunki oli ollut aiemmin [[Venetsian]] Istrian pääkaupunki, mutta sen taloudellinen painoarvo väheni tästä lähtien. Satamakaupungit kilpailevat yhä, näin ylhäältä katsottuna.",
+  "linkit": [
+   "Habsburgien",
+   "keisari Kaarle VI",
+   "Venetsian"
+  ],
+  "jatkot": [
+   "Mikä on vapaasatama ja miksi sellaisia perustettiin?",
+   "Miten Trieste kehittyi 1700-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koper",
+  "kysymys": "Miten merisuolaa on perinteisesti valmistettu suola-altailla?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on oikeasti kiehtova asia. Perinteisessä menetelmässä merivesi johdetaan matalien, tasaisten altaiden sarjaan, jossa aurinko ja tuuli haihduttavat veden vähitellen. Kun vesi väkevöityy, siihen muodostuu suolakiteitä, jotka kerätään pois käsin ja kuivataan. [[Koper]] oli tunnettu [[suolapadoistaan]] jo 1100-luvulta lähtien, ja Slovenian rannikolla [[Sečovljen]] suola-altaat jatkavat perinteistä suolantuotantoa vielä nykyäänkin. Suolaa on käytetty muun muassa ruoan säilömiseen, minkä vuoksi se oli keskiajalla arvokasta tavaraa.\n\nYlhäältä katsottuna altaat näyttävät kuin pitkät, vaaleat palapelinpalat, ja minusta moinen järjestys on kyyhkyn silmälle ihan miellyttävää. Suolan maku ei sen sijaan kiinnosta minua, kunhan murut ovat riittävän isoja.",
+  "linkit": [
+   "Koper",
+   "suolapadoistaan",
+   "Sečovljen"
+  ],
+  "jatkot": [
+   "Miksi suola oli ennen niin arvokasta?",
+   "Millaisia ovat Sečovljen suola-altaat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koper",
+  "kysymys": "Mikä oli Venetsian tasavalta ja miten se hallitsi Istriaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Venetsian tasavalta oli keskiajalta alkanut merivaltio, joka hallitsi kauppaa Adrianmerellä ja Itäisellä Välimerellä ja otti haltuunsa myös useita Istrian rannikkokaupunkeja. Kaupungit säilyttivät omaa hallintoaan, mutta Venetsian lähettämä [[podestà]] johti niitä tasavallan nimissä, ja Koper nousi koko Venetsian Istrian pääkaupungiksi liityttyään tasavaltaan vuonna 1278. Tasavallan valta päättyi vuonna 1797 [[Napoleonin]] aikaan, ja Koper siirtyi Itävallan haltuun vuonna 1813 kuten aiempi teksti kertoo. Venetsiasta jäi meille Istriaan paljon rakennuksia, ja kyllä sen näkee katolta asti.",
+  "linkit": [
+   "podestà",
+   "Napoleonin"
+  ],
+  "jatkot": [
+   "Mitä Napoleon teki Venetsian tasavallalle?",
+   "Mikä on Istria ja kuka sitä nykyään hallitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-koper",
+  "kysymys": "Millainen on Slovenian merenrannikko ja Koperin nykyinen rooli?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Slovenian merenrannikko on hyvin lyhyt, alle viisikymmentä kilometriä pitkä, ja se sijaitsee [[Adrianmeren]] Triesten lahden rannalla Italian ja Kroatian välissä. Rannikon tunnetuimpia kaupunkeja ovat [[Piran]] ja [[Izola]], ja Koper on maan tärkein kauppasatama; lisäksi sen vanhassa kaupungissa on edelleen venetsialaista rakennusperinnettä. Vanhasta merikaupungista on tullut nykyään tärkeä väylä, jonka kautta tavaroita kuljetetaan Keski-Euroopan suuntaan. Pienikin rannikko riittää, jos satama on hyvä, tuumaan minä.",
+  "linkit": [
+   "Adrianmeren",
+   "Piran",
+   "Izola"
+  ],
+  "jatkot": [
+   "Millaisia nähtävyyksiä Piranissa on?",
+   "Miten Slovenian ja Kroatian raja kulkee Piranin lahdella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljana",
+  "kysymys": "Kuka tarun mukaan surmasi lohikäärmeen Ljubljanican lähteellä, ja miksi hän oli sinne matkalla?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tämä on hieno taru. Vanhan tarun mukaan lohikäärmeen surmasi kreikkalainen sankari [[Iason]], joka oli matkalla kotiin [[kultaisen taljan]] kanssa. Hänen kerrotaan perustaneen kaupungin tapahtumapaikan lähelle, ja lohikäärmeestä tuli kaupungin vaakunaeläin sekä myöhemmin [[Lohikäärmesillan]] koriste-eläin. Taru liittyy [[argonautit]] -kertomukseen, jossa Iasonin joukko palasi paluumatkallaan Euroopan jokia pitkin; yksityiskohdat vaihtelevat kertojan mukaan, eikä taru ole historiallinen kertomus. Kaupungin juuret ovat oikeasti roomalaisessa Emonan leirissä, mutta lohikäärme on silti parempi kuvio vaakunaan.",
+  "linkit": [
+   "Iason",
+   "kultaisen taljan",
+   "Lohikäärmesillan",
+   "argonautit"
+  ],
+  "jatkot": [
+   "Mikä oli Emona ja milloin roomalaiset perustivat sen?",
+   "Miksi lohikäärme on Ljubljanan vaakunassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljana",
+  "kysymys": "Mitä Ljubljanalle tapahtui huhtikuussa 1895, ja miten se näkyy kaupungin arkkitehtuurissa vieläkin?",
+  "uusi": false,
+  "vastaus": "No niin, tämä on vakava asia. Huhtikuussa 1895 Ljubljanaa kohtasi voimakas [[maanjäristys]], jossa noin kymmenesosa kaupungin 1 400 rakennuksesta tuhoutui ja 21 ihmistä kuoli; asukkaita oli tuolloin noin 31 000. Tapahtumasta on yli sata kolmekymmentä vuotta, ja kaupunki kuului silloin Habsburgien Itävaltaan [[Kranin]] pääkaupunkina. Jälleenrakennus toi kaupunkiin runsaasti wieniläistä [[secession-tyylin]] arkkitehtuuria, ja sen jäljet näkyvät yhä keskustan katukuvassa ja julkisivuissa. Onpas siitä onneksi jo pitkä aika.",
+  "linkit": [
+   "maanjäristys",
+   "Kranin",
+   "secession-tyylin"
+  ],
+  "jatkot": [
+   "Mikä on secession-tyyli ja mistä se sai alkunsa?",
+   "Miten kaupunki toipui järistyksestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljana",
+  "kysymys": "Miksi Ljubljanan Lohikäärmesilta on niin tunnettu?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Lohikäärme on Ljubljanan vaakunaeläin, ja sillan päihin on sijoitettu lohikäärmeveistoksia, jotka ovat tehneet siitä kaupungin tunnuskuvan. Silta valmistui 1900-luvun alkuvuosina eli [[Ljubljanican]] yli tuhoisan vuoden 1895 maanjäristyksen jälkeisen jälleenrakennuksen aikana, ja sen tyyli kuuluu [[secession-tyylin]] arkkitehtuuriin. Taru kertoo, että kaupungin perusti [[Iason]] surmattuaan lohikäärmeen, joten silta kantaa tarinaa mukanaan kuin vanhaa postisäkkiä. Veistokset ovat tuttu kuva matkaoppaiden kansista, mutta en tiedä sillan tarkkaa valmistumisvuotta.",
+  "linkit": [
+   "Ljubljanican",
+   "secession-tyylin",
+   "Iason"
+  ],
+  "jatkot": [
+   "Millaisia lohikäärmeveistoksia sillalla on?",
+   "Mitä muita siltoja Ljubljanican yli rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljana",
+  "kysymys": "Kuka oli arkkitehti Jože Plečnik ja mitä hän rakensi Ljubljanaan?",
+  "uusi": true,
+  "vastaus": "Kas niin, nyt tulee kunnon kaupunkiopas. Jože Plečnik oli slovenialainen arkkitehti, joka muovasi Ljubljanan keskustaa suuresti pääosin sotien välisenä aikana. Hänen töitään ovat muun muassa kaupungin Kansallis- ja yliopistokirjasto, [[Kolmoissilta]], Ljubljanican rantojen järjestely sekä tori- ja arkadirakennelmat. Hänen Ljubljanan-töitään on viime vuosina nostettu myös [[Unescon]] maailmanperintökohteiden joukkoon. Hän antoi kaupungille yhtenäisen ilmeen, jota nykyvierailijakin voi seurata kävellen. Ei paha mies, vaikka hän ei lentänyt.",
+  "linkit": [
+   "Kolmoissilta",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Millainen on Ljubljanan Kolmoissilta?",
+   "Mitä muuta Plečnik suunnitteli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ljubljana",
+  "kysymys": "Millainen joki Ljubljanica on ja miten se kulkee kaupungin läpi?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Ljubljanica on [[karstin]] alueella virtaava joki, jonka vesi kulkee osittain maan alla ennen kuin se nousee esiin lähteissä; joen kerrotaan tunnetun useilla eri nimillä matkansa varrella. Kaupungin kohdalla se virtaa vanhankaupungin läpi, ja sen rannalla on kasvanut ensin roomalainen [[Emonan]] leiri ja sittemmin nykyinen pääkaupunki. Joki toimi aikoinaan myös kuljetusväylänä, ja nykyään sen rantoja reunustavat kävelykadut ja kahvilat. En ole varma joen tarkasta pituudesta tai kaikista nimistä, mutta virtaus on rauhallinen. Joen yllä on mukava lentää.",
+  "linkit": [
+   "karstin",
+   "Emonan"
+  ],
+  "jatkot": [
+   "Mikä on karst ja miksi joet katoavat maan alle?",
+   "Millaisia siltoja Ljubljanican yli kulkee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kocevje",
+  "kysymys": "Mistä gottscheelaisten esi-isät tulivat Kočevjen seudulle 1300-luvulla, ja kuka heidät kutsui?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kočevjen seudulle saapuneet saksankieliset uudisasukkaat tulivat pääosin [[Tirolista]] ja [[Kärntenistä]], ja heidät kutsui alueelle [[Ortenburgin]] kreivien suku noin vuodesta 1330 lähtien. Akvileian patriarkka oli luovuttanut laajan metsäalueen kreiveille, ja uudisraivaajat raivasivat metsää ja perustivat sinne kymmeniä kyliä. Heidän murteensa pysyi eristyksissä muusta saksasta, ja siksi heistä tuli oma yhteisönsä, jonka slovenialaiset tunsivat nimellä Kočevarji. Pitkä matka Alpeilta metsään, ja kyllä minä sen tunnen siivissäni.",
+  "linkit": [
+   "Tirolista",
+   "Kärntenistä",
+   "Ortenburgin"
+  ],
+  "jatkot": [
+   "Mikä oli Ortenburgin kreivien suku?",
+   "Miksi uudisasukkaita kutsuttiin metsäalueelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kocevje",
+  "kysymys": "Mitä kielisaarelle tapahtui, kun Itävalta-Unkari hajosi vuonna 1918?",
+  "uusi": false,
+  "vastaus": "Ai tota. Kun Itävalta-Unkari hajosi vuonna 1918, Kočevjen seutu kuului uuteen slaavilaiseen valtioon, josta tuli myöhemmin [[Jugoslavia]], ja gottscheelaiset muuttuivat yhtäkkiä sen vähemmistöksi. Heidän saksankielinen yhteisönsä oli säilynyt kielisaarena lähes kuusisataa vuotta. Vuosisadan puolivälin tapahtumat muuttivat tilanteen lopullisesti: [[toisen maailmansodan]] aikaan, 1940-luvun alussa, lähes koko yhteisö siirrettiin pois alueelta, ja sen jälkeen gottscheelaiset hajaantuivat eri maihin. Tapahtumista on nyt yli kahdeksankymmentä vuotta, mutta muisto elää yhä.",
+  "linkit": [
+   "Jugoslavia",
+   "toisen maailmansodan"
+  ],
+  "jatkot": [
+   "Mihin gottscheelaiset siirrettiin sodan aikana?",
+   "Millainen oli Jugoslavian valtio alkuvaiheessaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kocevje",
+  "kysymys": "Millainen kieli gottscheelaisten murre oli?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Gottscheelaisten murteesta käytetään nimeä [[Gottscheerisch]], ja se kuului saksan eteläisiin, kielentutkijoiden mukaan [[Tirolin]] ja Kärntenin murteiden sukuun. Koska yhteisö eli vuosisatoja eristyksissä slaavilaisen väestön ympäröimänä, murre kehittyi omaan suuntaansa ja säilytti piirteitä, jotka muualla saksassa ovat jo kadonneet. Nykyään sitä puhuu enää hyvin pieni joukko, enimmäkseen iäkkäitä ihmisiä, enkä ole varma tarkasta puhujamäärästä. Viisas Pöllö ehkä tietäisi lisää, mutta hän on juuri nyt kutsuttu puhumaan johonkin.",
+  "linkit": [
+   "Gottscheerisch",
+   "Tirolin"
+  ],
+  "jatkot": [
+   "Mitä muita kielisaaria Euroopassa on ollut?",
+   "Miten uhanalaisia kieliä yritetään säilyttää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kocevje",
+  "kysymys": "Millaisia eläimiä Kočevjen laajoissa metsissä elää?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Kočevjen laajoissa metsissä, jotka kuuluvat [[Dinaaristen vuorten]] metsävyöhykkeeseen, elää suuria petoeläimiä kuten [[ruskokarhuja]], [[ilveksiä]] ja susia. Seutu tunnetaan Sloveniassa erityisesti karhuistaan, ja lähteiden mukaan ilves palautettiin alueelle 1970-luvulla. Metsissä elää lisäksi muun muassa hirvieläimiä, kuten kauriita ja hirviä. Paikalliset ihmiset ovat tottuneet jakamaan metsänsä näiden eläinten kanssa.\n\nMinä pysyttelen mieluummin kaupungin kattojen yllä, sillä karhun ja kyyhkyn välinen tuttavuus ei ole ikinä päättynyt hyvin. Mutta ylhäältä katsottuna metsä on varmasti hieno näky.",
+  "linkit": [
+   "Dinaaristen vuorten",
+   "ruskokarhuja",
+   "ilveksiä"
+  ],
+  "jatkot": [
+   "Miten karhuja suojellaan Sloveniassa?",
+   "Mikä on Dinaaristen vuorten luonto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kocevje",
+  "kysymys": "Mikä Akvileian patriarkka oli, ja miksi hänellä oli maita?",
+  "uusi": true,
+  "vastaus": "Just niin, tästä on kerrottavaa. Akvileian patriarkka oli kirkollinen johtaja, joka hallitsi Akvileian patriarkaattia Koillis-Italiassa, ja hänellä oli vuosisatojen ajan myös maallista valtaa [[Friulin]] alueella. Keskiajalla kirkon johtajat saivat usein ruhtinaan asemaan liittyviä maita ja oikeuksia, ja patriarkka luovuttikin osan alueestaan vasalleilleen, kuten Ortenburgin kreiveille. Patriarkkojen maallinen valta päättyi 1400-luvun alkupuolella, kun [[Venetsian]] tasavalta valtasi alueen. En ole varma tarkasta vuodesta. Kyllä kyyhky tuntee kirkonmiehet vain kirjeiden kautta.",
+  "linkit": [
+   "Friulin",
+   "Venetsian"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Akvileia oli roomalaisaikana?",
+   "Miksi Venetsia laajensi valtaansa mantereelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vipava",
+  "kysymys": "Mistä sanasta Vipavan nimen uskotaan juontuvan, ja mitä se tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Vipavan nimen uskotaan juontuvan kelttiläisestä sanasta vip, joka tarkoittaa jokea. Seutu on ollut asuttu jo esiroomalaisella ajalla, ja sen asukkaita olivat [[illyyrit]] ja [[kelttien]] heimot. Nimi sopii hyvin paikkaan, sillä kaupunki sijaitsee Vipava-joen lukuisten lähteiden äärellä ylä-Vipavanlaaksossa. Nimiä tutkitaan usein kielihistorian avulla, joten varmuutta on harvoin kaikista yksityiskohdista. Vanhat nimet kantavat pitkälle, ja minä kannan kirjeitä.",
+  "linkit": [
+   "illyyrit",
+   "kelttien"
+  ],
+  "jatkot": [
+   "Keitä illyyrit olivat?",
+   "Miten Vipava-joki saa vetensä lähteistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vipava",
+  "kysymys": "Mikä on burja, ja miten se vaikuttaa Vipavanlaakson maisemaan?",
+  "uusi": false,
+  "vastaus": "Nyt muistan. Burja on kylmä ja kuiva koillistuuli, joka puhaltaa vuoristosta alas kohti [[Adrianmeren]] rannikkoa, ja Vipavanlaaksossa sen puuskat voivat olla ajoittain jopa 200 kilometriä tunnissa. Tuuli kuivattaa ilmaa ja raivaa sumua ja kosteutta pois, mikä on yksi syy siihen, että laaksossa viihtyvät [[viinitarhojen]] viljelmät. Se vaikuttaa myös rakennuksiin ja kasvillisuuteen, sillä puut ja pensaat taipuvat tuulen suuntaan. Samaa tuulta tavataan myös Triestessä, jossa kadunvarsille on kerrottu kiinnitettävän köysiä turvaksi. Ei ole ihme, ettei kyyhky tykkää burjasta.",
+  "linkit": [
+   "Adrianmeren",
+   "viinitarhojen"
+  ],
+  "jatkot": [
+   "Miksi tuuli on niin voimakas juuri Vipavanlaaksossa?",
+   "Miten viinitarhat suojataan kovalta tuulelta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vipava",
+  "kysymys": "Millaisia viinejä Vipavanlaaksossa tehdään?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Vipavanlaakso on Slovenian merkittävä viinialue, jossa kasvatetaan erityisesti valkoviinirypäleitä, kuten [[chardonnayta]] ja [[sauvignon blancia]]. Paikallisista lajikkeista tunnetuimpia ovat [[Zelen]] ja Pinela, joiden tuotannosta laakso on ylpeä. Suotuisa, lähes Välimeren ilmasto auttaa rypäleitä kypsymään, ja lisäksi laaksossa viljellään hedelmiä kuten persikoita ja aprikooseja. Erityisiä tuotantomääriä tai laatuluokkia en uskalla luetella. Viiniä ei kyyhky juo, mutta kuulo kantaa.",
+  "linkit": [
+   "chardonnayta",
+   "sauvignon blancia",
+   "Zelen"
+  ],
+  "jatkot": [
+   "Miten Slovenian viinialueet eroavat toisistaan?",
+   "Mikä on Vipavanlaakson ilmasto kesällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vipava",
+  "kysymys": "Mikä on persimoni ja miksi se viihtyy lämpimässä ilmastossa?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tämä on makea aihe. Persimoni on oranssi, pehmeän makea hedelmä, jonka kotiseutu on Itä-Aasiassa ja jota viljellään nykyään myös Euroopan lämpimillä alueilla. Se kypsyy myöhään syksyllä ja tarvitsee kasvaakseen pitkän, lämpimän kasvukauden sekä riittävän suojan kovilta pakkasilta. Vipavanlaakson lauhkea, lähes Välimeren ilmasto ja lämmin lounaistuuli sopivat sille siksi hyvin, ja samoista syistä laaksossa kasvavat myös [[viikunat]] ja [[aprikoosit]]. Hedelmäpuut pitävät lämmöstä, ja sen kyllä huomaa. Minä pidän murusista, mutta persimonia en sano ei.",
+  "linkit": [
+   "viikunat",
+   "aprikoosit"
+  ],
+  "jatkot": [
+   "Miksi viikuna menestyy Välimeren ilmastossa?",
+   "Miten persimonit tulivat Eurooppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vipava",
+  "kysymys": "Mikä oli kelttien rooli Euroopan varhaisessa historiassa?",
+  "uusi": true,
+  "vastaus": "Ai tota. Keltit olivat rautakaudella laajalle Eurooppaan levinneitä, keskenään sukua olevia heimoja, ja heidän varhaisiin kulttuureihinsa kuuluvat [[Hallstattin]] ja [[La Tènen]] kulttuurit. Roomalaiset kutsuivat osaa heistä gallialaisiksi, ja [[Caesarin]] sotaretket Galliassa merkitsivät suuren osan heidän itsenäisyytensä loppua. Kelttiläisiä kieliä puhutaan yhä, kuten irlantia, skotlannin gaelia, kymriä ja bretoni, vaikka puhujia on nykyään vähän. Keltit asuttivat myös nykyisen Slovenian alueita, kuten Vipavan seutua.\n\nSukuni on kantanut kirjeitä Caesarille, joten gallialaisten kanssa meillä on vanhaa kuittailua. Mutta kunnia pitää antaa sille, joka sen ansaitsee.",
+  "linkit": [
+   "Hallstattin",
+   "La Tènen",
+   "Caesarin"
+  ],
+  "jatkot": [
+   "Mitä eroa on Hallstattin ja La Tènen kulttuurilla?",
+   "Missä Euroopassa keltit asuttivat Rooman aikaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-metlika",
+  "kysymys": "Mitä Metlikalle tapahtui suuressa tulipalossa vuonna 1705?",
+  "uusi": false,
+  "vastaus": "Hmm, tää on raskas pala. Vuonna 1705 syttynyt suurpalo tuhosi koko [[Metlikan]] kaupungin, eikä sen rakennuksista jäänyt entiseen kuntoon mitään, mikä olisi kestänyt liekit. Kaupunkia ryhdyttiin rakentamaan uudelleen, ja sekä Metlikan [[linna]] että Pyhän Nikolauksen kirkko nousivat uudelleen barokkityylisinä, minkä vuoksi kaupungin ilme on edelleen suurelta osin barokkinen. Palosta on kulunut yli kolmesataa vuotta, ja kaupunki on ehtinyt kasvaa sen ympärille uudelleen. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Metlikan",
+   "linna"
+  ],
+  "jatkot": [
+   "Milloin Metlika mainitaan ensimmäisen kerran asiakirjoissa?",
+   "Millaista barokkiarkkitehtuuria Sloveniassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-metlika",
+  "kysymys": "Kuka on Zeleni Jurij eli Vihreä Yrjö, ja mitä hänen saapumisensa juhlii?",
+  "uusi": false,
+  "vastaus": "Ai tää on hyvä. Zeleni Jurij eli Vihreä Yrjö on [[Bela Krajinan]] vanhan kevätperinteen keskeinen hahmo, jota kuvataan vihreisiin oksiin ja lehtiin kietoutuneena. Perinteen mukaan hänen saapumisensa juhlii kevään tuloa ja luonnon heräämistä talven jälkeen. Perinne on satoja vuosia vanha, ja se elää edelleen joka kesä järjestettävässä [[Jurjevanje]]-juhlassa, jossa on myös kansantansseja ja perinnepukuja. Tarkemmat rituaalin yksityiskohdat vaihtelevat lähteistä toiseen, enkä ole varma kaikesta. Kato, vihreä pukukin kelpaa, kunhan lehdet pysyvät kiinni.",
+  "linkit": [
+   "Bela Krajinan",
+   "Jurjevanje"
+  ],
+  "jatkot": [
+   "Mitä Jurjevanje-juhlassa tapahtuu?",
+   "Millaisia ovat Bela Krajinan perinteiset kansanpuvut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-metlika",
+  "kysymys": "Milloin Metlika sai kaupunkioikeudet?",
+  "uusi": true,
+  "vastaus": "No niin, tän muistan. Metlika sai [[kaupunkioikeudet]] vuonna 1335, ja se oli kuulunut jo aiemmin [[Kranin merkkikreivikuntaan]] eli alueeseen, jota hallittiin rajamaana. Ensimmäinen maininta kaupungista asiakirjoissa on vuodelta 1228, jolloin sen nimi kirjoitettiin Metlica. Kaupunkioikeudet tulivat siis noin sata vuotta ensimmäisen maininnan jälkeen. Sata vuotta, ja minä muistan sen ilman muistilappua.",
+  "linkit": [
+   "kaupunkioikeudet",
+   "Kranin merkkikreivikuntaan"
+  ],
+  "jatkot": [
+   "Mitä kaupunkioikeudet merkitsivät keskiajalla?",
+   "Millainen alue Krainin ja Slovenian historia on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-metlika",
+  "kysymys": "Mitä Bela Krajina tarkoittaa ja missä se on?",
+  "uusi": true,
+  "vastaus": "Kas vaan, maantiedettä. [[Bela Krajina]] on Etelä-Slovenian alue, jonka suomenkielinen nimi on Valko-Krain, ja Metlika on sen pääkaupunki. Alue sijaitsee [[Kolpa-joen]] rannalla aivan Kroatian rajan tuntumassa, ja nimen alkuosa tarkoittaa sloveniaksi valkoista. En ole varma, mistä nimen \"valkoinen\" tarkalleen juontuu, sillä siihen esitetään useita selityksiä. Alue tunnetaan omaleimaisesta kansankulttuuristaan, kuten [[tamburica]]-soittimista, tansseista ja puvuista. Minä kävin siellä vain ohilentäen, mutta sinne kyllä jäisi katselemaan.",
+  "linkit": [
+   "Bela Krajina",
+   "Kolpa-joen",
+   "tamburica"
+  ],
+  "jatkot": [
+   "Mikä on Kolpa-joki ja mihin se virtaa?",
+   "Millaisia soittimia tamburica-perhe sisältää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-metlika",
+  "kysymys": "Mitä soitinta Bela Krajinan kansanmusiikissa soitetaan?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Bela Krajinan]] kansantansseja säestetään [[tamburica]]-soittimilla, jotka ovat kielisoittimia ja kuuluvat Balkanin ja Keski-Euroopan kansanmusiikin perinteeseen. Soittimia käytetään alueen kansantanssien ja pukujen rinnalla kulttuuriperinteen osana, ja ne kuuluvat edelleen kesäiseen [[Jurjevanje]]-juhlaan. Soittimen tarkka rakenne ja sävellajit vaihtelevat paikkakunnittain, eikä minulla ole niistä varmaa tietoa. Pitkä vastaus, mut kyl sen jaksoi.",
+  "linkit": [
+   "Bela Krajinan",
+   "tamburica",
+   "Jurjevanje"
+  ],
+  "jatkot": [
+   "Miten tamburica eroaa mandoliinista tai lutusta?",
+   "Missä muissa maissa tamburicaa soitetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pohorje",
+  "kysymys": "Mikä teki Pohorjesta 1600-luvulta lähtien lasinvalmistuksen keskuksen?",
+  "uusi": false,
+  "vastaus": "Odotas vähän, annas ku mietin. Lasinvalmistus tarvitsee kolme asiaa: puuta, vettä ja hiekkaa, ja [[Pohorjen]] vuoristossa kaikkia oli saatavilla. Laajat metsät antoivat polttoainetta uuneihin, vuoriston vedet pyörittivät työtä ja tuottivat tarvittavan veden, ja alueelta löytyi kvartsihiekkaa lasin raaka-aineeksi. Tämän yhdistelmän ansiosta 1600-luvulta lähtien Pohorjeen syntyi lasinvalmistuksen keskus, ja parhaimmillaan vuorilla toimi viisi lasitehdasta. Vanhin tunnettu tehdas, [[Stara glažuta]], toimi Lobnican laaksossa vuosina 1692–1793. Metsät tosin hupenivat uuneissa, mikä on ehkä syy siihen, että minä pysyn mieluummin ilmassa.",
+  "linkit": [
+   "Pohorjen",
+   "Stara glažuta"
+  ],
+  "jatkot": [
+   "Mitä lasituotteita Pohorjella valmistettiin?",
+   "Miten lasin valmistus toimi ennen teollistumista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pohorje",
+  "kysymys": "Minne Pohorjen lasitehtaiden tuotteita vietiin parhaimmillaan?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Pohorjen lasitehtaiden tuotteita vietiin parhaimmillaan laajalle: Wienin hoviin, Saksaan ja Böömiin sekä Egyptiin ja itämaille asti. Lähteiden mukaan [[Wienin]] hovi oli yksi tärkeistä ostajista, ja kauppa kulki vuoriston syrjäisiltä tehtailta kauas Euroopan ulkopuolellekin. Tuotteiden tarkemmista lajeista tai määristä minulla ei ole varmaa tietoa. Pohorjen [[Böömin]] ja Saksan yhteys oli luontevaa, sillä lasinvalmistus oli vahvaa myös niillä alueilla. Kyllä kyyhky kantaa kirjeen, mutta lasia en ota kyytiin.",
+  "linkit": [
+   "Wienin",
+   "Böömin"
+  ],
+  "jatkot": [
+   "Miten lasi kuljetettiin kauas ilman, että se meni rikki?",
+   "Mikä oli Böömin lasiteollisuuden merkitys Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pohorje",
+  "kysymys": "Mikä on Pohorjen korkein huippu?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Pohorjen korkein kohta on Musta huippu eli [[Črni vrh]], joka kohoaa 1 543 metrin korkeuteen merenpinnan yläpuolella. Pohorje on keskikorkea, enimmäkseen metsäinen vuoristo Koillis-Sloveniassa Draava-joen eteläpuolella, [[Mariborin]] ja Slovenske Konjicen välisellä alueella. Huippu ei ole korkea alppivuoriin verrattuna, mutta alue on silti suosittu vaelluskohde. Lintuperspektiivistä katsottuna kyllä ihan kelpo mäki.",
+  "linkit": [
+   "Črni vrh",
+   "Mariborin"
+  ],
+  "jatkot": [
+   "Mistä kivilajeista Pohorje koostuu?",
+   "Missä Maribor sijaitsee ja millainen kaupunki se on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pohorje",
+  "kysymys": "Kuinka kauan Stara glažuta toimi Lobnican laaksossa?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: [[Stara glažuta]] oli Pohorjen vanhin tunnettu lasitehdas, ja se toimi [[Lobnican]] laaksossa Šumikin yläpuolella vuosina 1692–1793. Se tekee noin sata vuotta toimintaa, ja tehdas lopetti kauan ennen kuin alueesta tuli 1900-luvulla [[hiihtomatkailun]] keskus. Tehdas liittyi laajempaan lasinvalmistuksen perinteeseen, joka teki Pohorjesta 1600-luvulta alkaen merkittävän lasialueen. Sata vuotta, ja minä muistan vain eilisen aamiaisen.",
+  "linkit": [
+   "Stara glažuta",
+   "Lobnican",
+   "hiihtomatkailun"
+  ],
+  "jatkot": [
+   "Miksi lasitehtaat lopulta lopettivat Pohorjella?",
+   "Millaista hiihtomatkailua Pohorjella on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pohorje",
+  "kysymys": "Kuinka suuri osa Pohorjesta on metsän peitossa?",
+  "uusi": true,
+  "vastaus": "Kato, tähän on vastaus. Yli 70 prosenttia Pohorjen alueesta on metsän peitossa, joten vuoristo on enimmäkseen metsäinen. Metsä oli keskeinen syy siihen, että alueesta tuli 1600-luvulta lähtien [[lasinvalmistuksen]] keskus, koska uunit tarvitsivat valtavasti polttopuuta. Nykyään metsät ovat luonnon ja vaeltajien aluetta, ja vuoristo on Koillis-Sloveniassa [[Draava]]-joen eteläpuolella. Ylhäältä katsoen koko vuori näyttää yhdeltä isolta vihreältä peitolta.",
+  "linkit": [
+   "lasinvalmistuksen",
+   "Draava"
+  ],
+  "jatkot": [
+   "Millaisia puulajeja Pohorjen metsissä kasvaa?",
+   "Millaisia eläimiä Pohorjella elää?"
+  ]
+ }
+]

@@ -44,7 +44,7 @@ Mikä on Bledin saaren kirkko?
 
 ### 2.2
 KYSYMYS: Mitä perinteen mukaan sulhasen pitää tehdä Bledin saaren kirkon portailla häiden päivänä?
-Ai tota. Tämä on suloinen perinne. Perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti kirkolle johtavat 99 kiviporrasta. Portaat ovat barokkisen porrasnousun osa vuodelta 1655, ja kirkko on [[Neitsyt Marian taivaaseenottamisen]] pyhiinvaelluskirkko Bledinjärven saarella. Ylhäällä soitetaan kelloa ja tehdään toive. Minä pääsen ylös siivillä ilman mitään sulhasta.
+Ai tota. Tämä on suloinen perinne. Perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti kirkolle johtavat 99 kiviporrasta. Portaat ovat [[barokkisen]] porrasnousun osa vuodelta 1655, ja kirkko on [[Neitsyt Marian taivaaseenottamisen]] pyhiinvaelluskirkko [[Bledinjärven]] saarella. Ylhäällä soitetaan kelloa ja tehdään toive. Minä pääsen ylös siivillä ilman mitään sulhasta.
 JATKOT:
 Miksi portaita on juuri 99?
 Millainen on Bledin saaren kirkon kello?
@@ -65,7 +65,7 @@ Miten Vintgarin rotkoon pääsee Bledistä?
 
 ### 2.5
 KYSYMYS: Mikä lämmittää Bledinjärven vettä?
-Selvä juttu. Järveä lämmittää lämpölähde, jonka vesi on noin 23-asteista. Itse järvi on syntynyt jäätiköiden ja maankuoren liikkeiden vaikutuksesta [[Julian Alppien]] Ylä-Krainissa, ja sen rannalla on Bledin kaupunki.
+Selvä juttu. Järveä lämmittää lämpölähde, jonka vesi on noin 23-asteista. Itse järvi on syntynyt [[jäätiköiden]] ja maankuoren liikkeiden vaikutuksesta [[Julian Alppien]] Ylä-Krainissa, ja sen rannalla on [[Bledin]] kaupunki.
 
 Lämmin vesi houkuttelisi minuakin, mutta jätän uinnin joutsenille. Pullan kanssa tosin neuvottelisin.
 JATKOT:
@@ -118,7 +118,7 @@ Mitä sana planina tarkoittaa?
 
 ### 4.2
 KYSYMYS: Mitä paimenmajojen kappelille tapahtui sodan aikana ja milloin uusi rakennettiin?
-Kas vaan. Tämä on surullisempi asia. Marija Snežna -kappeli rakennettiin paimenten toimesta arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat. Uusi kappeli valmistui vuonna 1988. Tarkemmasta sodasta ja ajankohdasta en ole varma, sillä lähteissä puhutaan vain sota-ajasta. Onneksi kappeli on rakennettu uudelleen.
+Kas vaan. Tämä on surullisempi asia. [[Marija Snežna]] -kappeli rakennettiin [[paimenten]] toimesta arkkitehti [[Jože Plečnikin]] suunnitelmien pohjalta, mutta sota-aikana kappeli ja sata muuta puurakennusta paloivat. Uusi kappeli valmistui vuonna 1988. Tarkemmasta sodasta ja ajankohdasta en ole varma, sillä lähteissä puhutaan vain sota-ajasta. Onneksi kappeli on rakennettu uudelleen.
 JATKOT:
 Mitä Marija Snežna -nimi tarkoittaa?
 Kuka oli arkkitehti Jože Plečnik?
@@ -155,7 +155,7 @@ Mikä on karstipolje?
 
 ### 5.2
 KYSYMYS: Millä tavalla Valvasor ja Gruber yrittivät selittää järven arvoitusta?
-Mmm— tähän en osaa vastata kokonaan. Tiedän vain, että Valvasor esitti järvestä oman selityksensä 1600-luvun lopulla ja että Tobias Gruber kuvasi sen toiminnan tarkasti ensimmäisenä vuonna 1781, lähteiden mukaan. Heidän selitystensä yksityiskohdista en ole varma, joten en halua keksiä niitä. [[Johann Weikhard von Valvasor]] toi lähteiden mukaan karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Siinä kohtaa kyyhkyn tiedot loppuvat.
+Mmm— tähän en osaa vastata kokonaan. Tiedän vain, että Valvasor esitti järvestä oman selityksensä 1600-luvun lopulla ja että [[Tobias Gruber]] kuvasi sen toiminnan tarkasti ensimmäisenä vuonna 1781, lähteiden mukaan. Heidän selitystensä yksityiskohdista en ole varma, joten en halua keksiä niitä. [[Johann Weikhard von Valvasor]] toi lähteiden mukaan karst-sanan eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista virtausta. Siinä kohtaa kyyhkyn tiedot loppuvat.
 JATKOT:
 Mitä sana karst alun perin tarkoittaa?
 Millainen oli Valvasorin teos Krainin herttuakunnasta?

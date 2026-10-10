@@ -104,7 +104,7 @@ Missä Klagenfurt sijaitsee?
 
 ### 23.5
 KYSYMYS: Miksi vanhat rautaverstaat sijoitettiin virtaavan veden äärelle?
-Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea takomovasaroita, jotka löivät kuumaa metallia, sekä palkeita, jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.
+Hyvä kysymys tuo. Ennen sähköä ja höyryä vesi oli helpoin tapa saada voimaa: virtaava joki pyöritti [[vesipyörää]], jonka liike välitettiin akselien kautta työkaluille. Raudanvalmistuksessa tämä tarkoitti ennen kaikkea [[takomovasaroita]], jotka löivät kuumaa metallia, sekä [[palkeita]], jotka puhalsivat ilmaa tuleen ja nostivat lämpötilan riittävän korkeaksi. Vesi oli lisäksi hyödyllistä jäähdytykseen ja malmin sekä tuotteiden kuljetukseen, vaikka kulkuyhteydet vaihtelivat paikasta toiseen. Laakso, jossa joki kulki tasaisesti ja metsää oli lähellä polttoaineeksi, tarjosi siis kaiken tarvittavan, ja tämä selittää, miksi vanhoja rautapaikkoja on usein joenvarsilla. En ole varma, miten tämä pätee juuri Mežan rautaverstaisiin. Joki teki työt, ja kaikki muut ottivat kunnian.
 JATKOT:
 Miten vesipyörä toimii?
 Milloin vesivoima korvautui sähköllä teollisuudessa?
@@ -118,7 +118,7 @@ Mitkä muut eurooppalaiset kaupungit on rakennettu suunnitelmallisesti?
 
 ### 24.2
 KYSYMYS: Mitä tarkoittaa pitkäseinälouhinta, jonka vuoksi Velenjen hiilikaivos on tunnettu?
-Tost minä osaan kertoo, ainakin periaatteen. Pitkäseinälouhinnassa hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. Velenjen kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.
+Tost minä osaan kertoo, ainakin periaatteen. [[Pitkäseinälouhinnassa]] hiilikerrosta louhitaan pitkällä rintamalla, joka voi olla satoja metrejä leveä, ja louhintakone liikkuu seinää pitkin irrottaen hiiltä, kun kuljetin vie sen pois. Työtilaa tukevat [[hydraulisia tukia]], jotka siirtyvät koneen mukana eteenpäin, ja tukien takana kattokerros antaa hallitusti periksi. Menetelmä on tehokas, koska tuotanto on keskitettyä ja työ pysyy pääosin tukien suojassa. [[Velenjen]] kaivoksen tiedetään louhivan poikkeuksellisen paksua hiilikerrosta, ja lähteiden mukaan siellä on kehitetty oma sovelluksensa tähän tarkoitukseen, mutta en ole varma sen yksityiskohdista. Maan alla en ole koskaan käynyt, ja hyvä niin.
 JATKOT:
 Miksi hiilikerroksen paksuus vaikuttaa louhintaan?
 Miten kaivostyön turvallisuutta on parannettu?
