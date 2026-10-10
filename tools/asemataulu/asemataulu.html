@@ -23,6 +23,7 @@
   --m-opus: #A8702F;
   --m-sonnet: #2F8580;
   --t-kysyy: #F5D3CB;
+  --oranssi: #C25E0C;
   --f-otsikko: "Raleway", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   --f-teksti: "Raleway", "Avenir Next", "Segoe UI", system-ui, sans-serif;
 }
@@ -30,7 +31,7 @@
   :root:not([data-theme="light"]) {
     --paperi: #1C1814; --pinta: #25201A; --muste: #EFE6D8; --himmea: #A99B88; --seepia: #D6A877;
     --reuna: #4A3F33; --vihrea: #6CC49A; --kulta: #E3B04B; --harmaa: #9C948A; --punainen: #E58A75;
-    --opus: #3A2C1D; --sonnet: #1D3330;
+    --opus: #3A2C1D; --sonnet: #1D3330; --oranssi: #F0974A;
   --t-tyo: #1D3324; --t-odottaa: #3A2E12; --t-lepo: #2A2622; --m-opus: #D9A066; --m-sonnet: #6CC1BC; --t-kysyy: #4D2219;
     --t-tyo: #1D3324; --t-odottaa: #3A2E12; --t-lepo: #2A2622; --m-opus: #D9A066; --m-sonnet: #6CC1BC; --t-kysyy: #4D2219;
     color-scheme: dark;
@@ -39,7 +40,7 @@
 :root[data-theme="dark"] {
   --paperi: #1C1814; --pinta: #25201A; --muste: #EFE6D8; --himmea: #A99B88; --seepia: #D6A877;
   --reuna: #4A3F33; --vihrea: #6CC49A; --kulta: #E3B04B; --harmaa: #9C948A; --punainen: #E58A75;
-  --opus: #3A2C1D; --sonnet: #1D3330;
+  --opus: #3A2C1D; --sonnet: #1D3330; --oranssi: #F0974A;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -147,6 +148,18 @@ details.juna .runko-tl .teksti { flex: 1 1 220px; min-width: 0; }
 .valmiit { gap: 0 20px; }
 .juna-nappi { background: none; border: none; padding: 3px 0; font: inherit; color: inherit; cursor: pointer; font-weight: 400; }
 .juna-nappi.tuleva { font-weight: 700; }
+.juna-nappi.kaannos { color: var(--oranssi); }
+/* Käännössä olevan junan eteneminen napin alla (omistaja 10.10. 16.4x): työlistan palkkien tyyli neliöinä ja pienempänä */
+#junat-valmiit { align-items: flex-start; }
+.juna-solu { display: inline-flex; flex-direction: column; align-items: flex-start; }
+.juna-edistys { display: inline-flex; gap: 2px; margin-top: -1px; }
+.juna-edistys i { display: block; width: 6px; height: 6px; border-radius: 1px; background: var(--reuna); }
+.juna-edistys i.on { background: var(--oranssi); }
+.juna-edistys { align-items: center; }
+.laite-cpu { align-items: center; }
+.laite-cpu i { width: 4px; height: 10px; }
+.laite-cpu-arvo { margin-left: 4px; font-size: 0.72rem; font-weight: 400; color: var(--himmea); font-variant-numeric: tabular-nums; }
+.juna-aika { margin-left: 4px; font-size: 0.7rem; color: var(--himmea); font-variant-numeric: tabular-nums; line-height: 1; }
 .juna-nappi[aria-expanded="true"] { color: var(--seepia); text-decoration: underline; text-underline-offset: 4px; }
 .juna-nappi:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
 .tf-paneeli { padding-left: 0; }
@@ -192,6 +205,13 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
 #tyolista details.juna { margin-left: 0.8em; }
 #tyolista details.juna .runko { padding-left: 2.1em; }
+/* Valmistuneet työlistan alla (omistaja 10.10. 16.3x) */
+.otsikkonappi { background: none; border: none; padding: 0; font: inherit; color: inherit; letter-spacing: inherit; cursor: pointer; }
+.otsikkonappi[aria-expanded="true"] { text-decoration: underline; text-underline-offset: 4px; }
+.otsikkonappi:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
+#valmistuneet details.juna { margin-left: 0.8em; }
+#valmistuneet details.juna .runko { padding-left: 2.1em; }
+#valmistuneet .valmistui { margin-left: auto; font-size: 0.78rem; color: var(--himmea); font-variant-numeric: tabular-nums; }
 </style>
 
 <main class="wrap">
@@ -211,6 +231,12 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     <h2>Työlista <button type="button" class="kysymykset kysymysnappi" id="kysymykset" aria-expanded="false" hidden></button></h2>
     <ul class="kysymyslista" id="kysymyslista" hidden></ul>
     <div class="rivit" id="tyolista"></div>
+    <h2 id="valmistuneet-otsikko" hidden><button type="button" class="otsikkonappi" id="valmistuneet-nappi" aria-expanded="false">Valmistuneet</button> <span class="kysymykset" id="valmistuneet-maara"></span></h2>
+    <div class="rivit" id="valmistuneet" hidden></div>
+  </section>
+  <section class="kortti" id="laitteet-osio" hidden>
+    <h2>Laitteet</h2>
+    <div class="roolit" id="laitteet"></div>
   </section>
   <section class="kortti" id="roolit-osio" hidden>
     <h2>Roolit <span class="kysymykset" id="roolimaara"></span></h2>
@@ -314,6 +340,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   }
   var valittuJuna = null;
   var kysymysAuki = false;
+  var valmistuneetAuki = false;
   var SONNET_ROOLIT = { 'Postivahti': 1, 'Sis\u00e4lt\u00f6kirjuri': 1, 'Laitetestaaja': 1 };
   function junaRivi(sailio, paneeli, rivit) {
     sailio.replaceChildren();
@@ -321,12 +348,29 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     rivit.forEach(function (r) {
       var nimi = r.nimi || '';
       var nimike = nimi + (typeof r.valmiit === 'number' ? ' (' + r.valmiit + '/' + (Number(r.odottaa) || 0) + ')' : '');
-      var b = luo('button', 'juna-nappi' + (siruLuokka(r.tila) !== 'valmis' ? ' tuleva' : ''), nimike);
+      var kaannos = /käännö|lähtee/i.test(String(r.tila || ''));
+      var b = luo('button', 'juna-nappi' + (siruLuokka(r.tila) !== 'valmis' ? ' tuleva' : '') + (kaannos ? ' kaannos' : ''), nimike);
+      if (kaannos) b.title = (b.title ? b.title + ', ' : '') + 'käännössä';
       if (typeof r.valmiit === 'number') b.title = r.valmiit + ' valmista, ' + (Number(r.odottaa) || 0) + ' odottaa';
       b.type = 'button';
       b.setAttribute('aria-expanded', valittuJuna === nimi ? 'true' : 'false');
       b.addEventListener('click', function () { valittuJuna = valittuJuna === nimi ? null : nimi; piirra(); });
-      sailio.append(b);
+      if (kaannos && typeof r.edistys === 'number') {
+        var solu = luo('span', 'juna-solu');
+        var ed = luo('span', 'juna-edistys');
+        var n = Math.max(0, Math.min(5, Math.round(r.edistys)));
+        ed.setAttribute('aria-label', 'eteneminen ' + n + '/5');
+        ed.title = 'eteneminen ' + n + '/5';
+        for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
+        // Arvioitu jäljellä oleva aika palkkien perässä (omistaja 10.10. 16.3x); kenttä valmis_arvio = ISO-aika.
+        var jj = r.valmis_arvio ? new Date(r.valmis_arvio).getTime() - Date.now() : NaN;
+        if (jj > 0) {
+          var mm = Math.ceil(jj / 60000);
+          ed.append(luo('span', 'juna-aika', '(' + (mm >= 60 ? Math.floor(mm / 60) + ' h ' + (mm % 60) + ' min' : mm + ' min') + ')'));
+        }
+        solu.append(b, ed);
+        sailio.append(solu);
+      } else sailio.append(b);
       if (valittuJuna === nimi) {
         if (r.teksti) paneeli.append(luo('div', 'teksti', r.teksti));
         if (r.lisa) paneeli.append(luo('div', 'lisa', r.lisa));
@@ -398,7 +442,9 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     $('junat-osio').hidden = !(j && j.rivit && j.rivit.length);
     var jr = (j && j.rivit) || [];
     $('junat').replaceChildren();
-    junaRivi($('junat-valmiit'), $('tf-paneeli'), jr.filter(function (x) { return siruLuokka(x.tila) !== 'valmis'; }).concat(jr.filter(function (x) { return siruLuokka(x.tila) === 'valmis'; })));
+    // Uusin juna aina ensin (numeron mukaan) ja enintään kolme junaa tai TF:ää; käännössä oleva oranssina (omistaja 10.10. 16.3x).
+    var junaNro = function (x) { var n = String(x.nimi || '').match(/(\d+)/); return n ? Number(n[1]) : 0; };
+    junaRivi($('junat-valmiit'), $('tf-paneeli'), jr.slice().sort(function (a, b) { return junaNro(b) - junaNro(a); }).slice(0, 3));
 
     $('tyolista-osio').hidden = !(t && t.rivit && t.rivit.length);
     var ky = t && t.kysymykset;
@@ -411,7 +457,61 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     kyL.replaceChildren();
     if (Array.isArray(ky)) ky.forEach(function (q) { kyL.append(luo('li', '', q)); });
     kyL.hidden = !(kysymysAuki && kyN && Array.isArray(ky));
-    taittuvat($('tyolista'), (t && t.rivit) || [], 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
+    // Valmistuneet erikseen työlistan alle; otsikon napautus näyttää ne (omistaja 10.10. 16.3x).
+    var tlRivit = (t && t.rivit) || [];
+    var onValmis = function (r) { return /^valmis/i.test(String(r.tila || '')); };
+    taittuvat($('tyolista'), tlRivit.filter(function (r) { return !onValmis(r); }), 'otsikko', function (r) { return /työn alla|odottaa|kokoamassa/i.test(String(r.tila || '')); });
+    var valmiitTl = tlRivit.filter(onValmis);
+    $('valmistuneet-otsikko').hidden = valmiitTl.length === 0;
+    $('valmistuneet-maara').textContent = valmiitTl.length ? '(' + valmiitTl.length + ')' : '';
+    $('valmistuneet-nappi').setAttribute('aria-expanded', valmistuneetAuki ? 'true' : 'false');
+    var vs = $('valmistuneet');
+    vs.hidden = !(valmistuneetAuki && valmiitTl.length);
+    var aukiV = {};
+    vs.querySelectorAll('details[open]').forEach(function (d) { aukiV[d.dataset.nimi] = true; });
+    vs.replaceChildren();
+    valmiitTl.forEach(function (r) {
+      var d = luo('details', 'juna pieni valmistunut');
+      d.dataset.nimi = r.otsikko || '';
+      if (aukiV[d.dataset.nimi]) d.open = true;
+      var su = luo('summary');
+      su.append(luo('span', 'otsikko', r.otsikko || ''));
+      if (r.valmistui) su.append(luo('span', 'valmistui', r.valmistui));
+      d.append(su);
+      var runko = luo('div', 'runko');
+      if (r.teksti) runko.append(luo('div', 'teksti', r.teksti));
+      if (r.tilanne) runko.append(luo('div', 'tilanne', r.tilanne));
+      d.append(runko);
+      vs.append(d);
+    });
+
+    // Laitteet (omistaja 10.10. 16.3x): mitä iPadilla ja Blenderillä on ajossa ja kenen ajo (Postivahdin laitteet.py → dokumentti laitteet).
+    var la = $('laitteet');
+    la.replaceChildren();
+    var lr = (tila.laitteet && tila.laitteet.rivit) || [];
+    $('laitteet-osio').hidden = lr.length === 0;
+    var tehtavatL = (tila.tehtavat && tila.tehtavat.rivit) || {};
+    lr.forEach(function (x) {
+      var kaytossa = x.tila === 'käytössä';
+      var kortti = luo('div', 'rooli ' + (kaytossa ? 'tila-tyo' : 'tila-lepo'));
+      var paa = luo('div', 'r-paa');
+      paa.append(luo('span', '', x.nimi || ''));
+      // Prosessorin käyttö pieninä palkkeina (omistaja 10.10. 16.4x): 5 palkkia = koko kone, perässä prosentti.
+      if (kaytossa && typeof x.prosessori === 'number') {
+        var pr = Math.max(0, Math.min(100, Math.round(x.prosessori)));
+        var ed = luo('span', 'edistys laite-cpu');
+        ed.title = 'prosessori ' + pr + ' %';
+        ed.setAttribute('aria-label', 'prosessori ' + pr + ' %');
+        var n = pr > 0 ? Math.max(1, Math.ceil(pr / 20)) : 0;
+        for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
+        ed.append(luo('span', 'laite-cpu-arvo', pr + ' %'));
+        paa.append(ed);
+      }
+      kortti.append(paa);
+      var mita = kaytossa ? ((x.tunnettu ? x.kuvaus : (tehtavatL[x.rooli] || x.kuvaus)) || 'ajo käynnissä') : 'Vapaa';
+      kortti.append(luo('div', 'r-teksti', kaytossa && x.rooli ? x.rooli + ': ' + mita : mita));
+      la.append(kortti);
+    });
 
     var ro = $('roolit');
     ro.replaceChildren();
@@ -446,6 +546,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   }
 
   $('kysymykset').addEventListener('click', function () { kysymysAuki = !kysymysAuki; piirra(); });
+  $('valmistuneet-nappi').addEventListener('click', function () { valmistuneetAuki = !valmistuneetAuki; piirra(); });
   piirra();
   setInterval(piirra, 60000);
 
