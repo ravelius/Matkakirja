@@ -1,54 +1,58 @@
-# Linssisepän luovutus 10.10.2026 klo 12.4x (tilinvaihto, PT)
+# Linssisepän luovutus 10.10.2026 klo 12.5x (nollaus, konteksti 55 %)
 
-Proto-haarat ovat paikallisia (sama git /Users/Shared/Claude/proto-3d/Matkakirja-proto), ei pushia. Kaikki työ on commitoitu;
-worktreissä ei keskeneräistä.
+Proto-haarat ovat paikallisia (sama git /Users/Shared/Claude/proto-3d/Matkakirja-proto), ei pushia. Kaikki työ on commitoitu.
+Omistaja: kaikki TF 176 -korjaukset seuraavaan julkaisuun (juna 176 → TF 177). **Juna odottaa vain LS1:n kolmea korjausta** (Pariisin
+pallo + pallomerkit 2 ja 4). SHA:t PT:lle ja Natiivisepälle heti, kun kukin on valmis. Julkaisija antaa etusijan (korjauskäännös on
+lukkojonossa seuraavana Natiivisepän Release-käännöksen jälkeen, ~13.20).
 
-## KIIREELLISET (omistaja: kaikki korjaukset seuraavaan julkaisuun, juna 176 → TF 177; Julkaisija antaa etusijan)
+## KIIRE 1: PARIISIN PALLO (omistajan TF 176 -kuvat)
+"kun siirryn suoraan toisesta maasta pariisin kippiin, niin kuumailmapallon päällä näkyy pariisin esittelykuvat ja kipin kertojan ääni
+ei kuulu edes esittelyn päätyttyä". Esittelykuvat = Pariisin nykyintro (OpasSovitin.Intro.cs, LS1:n oma), ja pallo = OpasSovitin
+(kaupunkitila, AvaaKaupunkitila ← KaupunkiPallot.Avaa).
+- **WIP-korjaus: linssiseppa/pallo-esittely-176 d8808a222** (wt/proto-linssiseppa-kaupunkiaanet, junan runko natiiviseppa/juna-176
+  51e42e7a6; L1301, unity 0). Sisältö: esitysVersio + EsitysVoimassa (istunto JA kaupunki) EsitysAvauksessa, SoitaJaOdotassa ja
+  AvausTekstinassa; EsitysNollaa (IntroSulje, silta.Stop, PyynnotSeis false), kun AvaaKaupunkitila vaihtaa auki olevan oppaan
+  kaupunkia; IntroVoimassa vaatii introKaupunki == KaupunkitilaId; Sulje kasvattaa esitysVersiota; laaja Avaa nollaa esitysAlkaa;
+  try/finally vapauttaa PyynnotSeisin, jos esitys päättyy ennen kierrosta; "kaupunkikierros ei alkanut" kirjataan.
+- **TODENTAMATTA.** Toisto `simuvuoro-pallo.zsh e325c3bb7` (iPhone D0D2CD1E, setsid, loki scratchpadissa ei säily →
+  proto-3d/lokit/todistus-pallo-vaihto-176-museo-kombo-176-20261010-1240/): **A-polku (Tukholma auki → linssi pois → Pariisin pallo)
+  EI toistanut vikaa** vanhalla 6.7-käännöksellä: intro, avaus, kierros ja pyynnöt OK, vaikka Tukholman avaus soi siirtymässä.
+  B-polku (Tukholma oppaan sisällä → suoraan Pariisi, eli auki olevan oppaan haara) oli kesken 12.5x → katso konsoli-stdout.log:
+  "opas: esitys alkaa (pariisi)", "intro loppui", "esitys: kaupunkikierros", "pyyntö 1 Pariisi".
+- HUOM skenaario: `oleta`-kuvio on regex → "(pariisi)"-sulut eivät osu (väärä PUUTE ja 120 s:n odotus). Korjaa sk-pallo-vaihto-176.txt:
+  "opas: esitys alkaa .pariisi." tai ilman sulkuja.
+- Jos B ei toista vikaa: omistajan polku on todennäköisesti kehittäjän maailmannäkymä / Macin pallo (TF 176 Mac). Toista Macilla
+  (alla) tai päättele lokista (Mac: ~/Library/Application Support/Matkakirja/Matkakirja 3D/linssi-loki.txt). Korjaus on
+  turvallinen joka tapauksessa (istuntovuoto on todellinen), mutta PT:lle kerrotaan, toistuiko vika.
 
-1. **PARIISIN PALLO: oppaan esittely pallon päällä + pallon kertoja ei ala** (PT 12.4x, omistajan TF 176 -kuvat). Suora siirtymä
-   toisesta maasta Pariisin pallokierrokseen (kippi) → Pariisin oppaan esittelykuvat (metro, Havainnekuva-merkki, ⏸ ⏭) koko ruudulla
-   pallon päällä, ja pallon kertoja ei ala edes esittelyn jälkeen. MENEE MUSEON EDELLE. Tila: EI ALOITETTU koodiin.
-   - Worktree valmiina: `wt/proto-linssiseppa-kaupunkiaanet`, haara **linssiseppa/pallo-esittely-176** = natiiviseppa/juna-176
-     51e42e7a6 (junan 176 runko).
-   - Sonnet-Explore kartoitti koodia (pallon käynnistys, kertojan portit, oppaan esittely saapuessa, suora siirtymä) ja jäi
-     kesken tilinvaihdossa → tee kartoitus uudelleen tai lue itse: OpasSovitin/OpasSilmukka (esittely, Viimeisin.puhuu,
-     OpasAaniSoi, KaupunkiNakyvissa), pallokierroksen kertoja ja siirtymä (Siirtymassa).
-   - Kaava: toisto todistusajolla (skenaario: avaa toisen maan kaupunki, sitten suoraan Pariisin pallo) → korjaus + testi
-     (Linssit-testit) → `Linssit-testit/unity-tarkistus.sh` + `kaanna.sh` → käännös/simu Julkaisijalta → SHA PT:lle + Natiivisepälle.
-2. **PALLON KOHDEMERKIT IRTI PALLOSTA** (PT 12.2x NUI:n kautta, omistajan TF 176 -palaute; NUI hoitaa kohdat 1 ja 3).
-   Aloituslennon kohdemerkit (KaupunkiMerkit: Moskova, Kairo, Istanbul, Ateena + lentoaika) avaruudessa / Atlantin päällä, ja
-   kehittäjänäkymän kaupunkivalinta ei osu (KaupunkiMerkit.Osuma). Selvitetty: Pallo.unityn muunnokset ja Cesium 1.25.1 ovat
-   samat ennen ja jälkeen Unity 6.7:n (7bab4da79). KaupunkiMerkit/PalloKierto ei muuttunut 7.10. jälkeen. Kohtaus syntyy
-   käännöksessä LuoPallosta. Merkit ovat georeferenssin lapsia, localPosition = TransformEarthCenteredEarthFixedPositionToUnity
-   (Rakenna-korutiini). Epäily: 6.7:n ajonaikainen käytös tai ajoitus. Toisto: **sk-pallo-merkit-176.txt** on lisätty
-   simuvuoro-museo2.zsh:n loppuun (iPhone D0D2CD1E, kuvat 0/5/15 s + vaaka) → katso kuvat ja korjaa.
+## KIIRE 2: PALLON KOHDEMERKIT IRTI (2) + KAUPUNKIVALINTA EI OSU KEHITTÄJÄNÄKYMÄSSÄ (4)
+- Omistaja ajoi todennäköisesti **TF 176:n Mac-natiivia** (NUI: ikkuna ~1,45:1 vaaka). Mac-app build 176: kopio
+  **/Users/Shared/Claude/proto-3d/lokit/linssiseppa-app/mac-176/Matkakirja 3D.app** (alkuperäinen Natiivisepän
+  Matkakirja-proto-mac/Build/mac/, älä aja sieltä). Käynnistys ilman napsautuksia: kirjoita
+  `~/Library/Application Support/Matkakirja/Matkakirja 3D/peli-komento.txt` ("odota-tila Aloitus 60 / uusi-peli 5 lontoo /
+  odota-tila Kartta 60"), sitten `open -n "<app>" --args -screen-fullscreen 0 -screen-width 1450 -screen-height 1000`; loki
+  ~/Library/Logs/Matkakirja/Matkakirja 3D/Player.log; kuva `screencapture -x`. Tarkista ensin, ettei omistaja käytä Macia
+  (HIDIdleTime > 60 s, muisti mac-gui-automaatio-omistajan-naytolla). Käynnistin 12.5x (pid 15554) ja sammutin nollausta varten
+  ennen kuvia.
+- iPhone-toisto sk-pallo-merkit-176.txt ajetaan simuvuoro-pallo.zsh:n lopussa (lokit/todistus-pallo-merkit-176-museo-kombo-176-*).
+- Koodi: merkit = georeferenssin lapsia, paikka gt.TransformPoint(pinta) + kamerasäde (3D). Siksi Screen/pixelRect-ero selittää
+  vain osumat (4), ei visuaalista irtoamista (2). Pallo.unityn muunnokset ja Cesium 1.25.1 ovat samat ennen ja jälkeen 6.7:n.
+  CesiumKaupunki siirtää yhteisen georeferenssin origoa ja palauttaa sen Suljessa (vanhaOrigo Avaassa). Mac-polun erot:
+  `#if UNITY_STANDALONE_OSX` (MacLaatu, Mac-profiili). Epäily: Macin ikkuna tai Retina (Screen vs. kamera.pixelRect) osumille;
+  visuaaliselle Mac-ajon georef/kamera-ero → toista ensin.
 
-## Museo (taidemuseo-176) — PT kuittaa NUI-kortin kuva-arkista
-
-- **linssiseppa/taidemuseo-176 4b92767ed** (L1322, unity 0): + Natiivisepän museo-muisti (ASTC-seinätaso, ruudut, patsaat
-  MuseoVeistokset, 6db621eeb), teokset.v2 (20 teosta), huonetekstit (Sali.Huoneet, HuoneVaihtui, HuoneKortti), LR:n sali-GLB
-  (MuseoRakennus.LataaSali: ämpäri taidemuseo/alankomaat/sali-v1/, viety; valoatlas varjostimeen _Atlas/_AtlasLx; simulla
-  JPEG-vara, koska simu ei tue ASTC:tä), veistospaikat (Sali.Jalustat + Resources/…/veistokset.json, 6 Rijks-sijoitusta,
-  Leidenin 12 odottaa valintaa: Sisältökirjuri/LR), todistusajo.sh (--doc, aani-alku/loppu, e71b2802a).
-- **Kombo linssiseppa/museo-kombo-176 48c4d9f28** = 4b92767ed + NUI natiivi-ui/museo-huonelukija-176 fb12f25b8 (korttikorjaus)
-  → käännetty **e325c3bb7** (app lokit/linssiseppa-app/museo-kombo-176). **SIMU: `simuvuoro-museo2.zsh e325c3bb7`**
-  (proto-3d/tyokalut/linssiseppa-ajot; iPad 00CF62C2 + iPhone D0D2CD1E + pallomerkit), Julkaisija antaa NYT, kun LS2 vapautuu (~12.45).
-  Katso kuvat itse (01b nimikyltti, 03 kortti, 03h huonekortti, 08b Yövartio-kortti; puhelin p02/p03/p03h/p05; oleta "museo: sali-glb"
-  näyttää, latautuiko LR:n sali) → kuittauspyyntö PT:lle.
-- Edellinen arkki 11.43 (92fa81e5d): NUI-kortin asettelu rikki (korjattu fb12f25b8:ssa). ASTC "ei pakettia" simulla on ODOTETTU.
-- Seuraavaksi museossa: Pelikoodarin museoäänet (aanet/taidemuseo-v1/; LS1 lisää MuseoSovitin.Askel ~0,75 m ja kytkee silmukan
-  Taustaaani/Silmukka-reitillä manifestista; kertoja kertoja/<Teos.Id>.mp3), Leidenin veistosvalinta, grafiikka.v2.1 (13 teosta,
-  vasta LR:n paikkojen + PT:n erän jälkeen), patsaiden 35 paketin vienti (Julkaisija).
-
-## Muut
-
-- **Juna 176 KUITATTU:** maa-dtm-175-u67 **29be895b8** (DTM + siltakorjaus), junan rungossa natiiviseppa/juna-176 16bcbfbd4.
-- **LS-äänet (korkea tuuli) todentamatta:** ls-aanet-175-u67 b59f82584/883522fb7 EI junassa. "opas kamera" ei muuta äänimaiseman
-  korkeutta (tila 4× 96 m) → KaupunkiAanimaisemaSoitin lukee OpasSovitin.KaupunkiKamera (PaivitaKameraTila); luultavasti
-  kameraTila on null opas kamera -tilassa → selvitä ja korjaa skenaario. PT: museon jälkeen.
-- Worktreet: wt/proto-linssiseppa-taidemuseo (museo; todistusajo.sh asuu täällä, linssiseppa-ajot/*.zsh osoittavat tänne),
-  wt/proto-linssiseppa-kaupunkiaanet (nyt pallo-esittely-176). astro-auto poistettu (haara linssiseppa/esilataus-173 tallessa).
+## Muut avoimet
+- **PT 12.4x, ei kiire:** `opas kori 0` ei aina pidä uudessa käännöksessä. LS2 joutui rajaamaan korin pois klo 9:n vertailukuvista
+  (PalloKori.cs / OpasValikko.cs). Kiertotie LS2:lla: KOMENNOT="opas ajallinen pois;opas kori 0". Korjaa junaan, kun ehdit.
+- **Museo (taidemuseo-176 4b92767ed, kombo 48c4d9f28 → käännös e325c3bb7):** `simuvuoro-museo2.zsh e325c3bb7` (2 simua) on Julkaisijan
+  jonossa pallon jälkeen → kuvat itse → kuittauspyyntö PT:lle (NUI-korttikorjaus fb12f25b8). Sisältö ja seuraavat vaiheet:
+  viesti-linssiseppa-luovutus-20261010-paiva.md + muistio linssiseppa-tila-20261009.md (rivit 10.10. 10.4x–12.4x).
+- **Juna 176 kuitattu:** maa-dtm-175-u67 29be895b8 (rungossa natiiviseppa/juna-176 16bcbfbd4).
+- **LS-äänet (korkea tuuli) todentamatta:** "opas kamera" ei muuta äänimaiseman korkeutta (tila 4× 96 m; KaupunkiAanimaisemaSoitin
+  ← OpasSovitin.KaupunkiKamera/PaivitaKameraTila). PT: museon jälkeen.
+- Worktreet: wt/proto-linssiseppa-taidemuseo (museo + todistusajo.sh, johon linssiseppa-ajot/*.zsh osoittavat) ja
+  wt/proto-linssiseppa-kaupunkiaanet (pallo-esittely-176).
 
 ## Taustalla käynnissä
-
-- Ei omia taustaprosesseja (käännökset K1/K2/K3 ja simuvuoro 11.43–12.13 valmiit; museo2-simu odottaa Julkaisijan NYT-sanaa).
+- `simuvuoro-pallo.zsh e325c3bb7` (setsid, iPhone D0D2CD1E; vaihto, sitten merkit; lopussa "SIMU ALAS"). Kun se päättyy: ilmoita
+  Julkaisijalle "simu vapaa" → museo2 seuraa.
