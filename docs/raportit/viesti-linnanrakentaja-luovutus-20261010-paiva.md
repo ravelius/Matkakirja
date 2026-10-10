@@ -153,6 +153,9 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
    peking; orto.jpg + meta.json + varjot.jpg; uusi malli: tyokalu/vertailu.py --malli <id>). vertaa_orto.py:ssä nyt `--meta meta.json`
    (ENU-rajaus, origo, aurinko metasta; tulos-jsonissa 'kaytto' — KL:n Copernicus VHR vain sisäiseen). ND v4b ajettu: kohdistus täsmää,
    aurinko 203,5/50 → katot −29 %, ulokkeet −45 %, suhde 0,70 vs 0,91 (notre-dame-v1/vertailu/v4b-ks.*) → v4c-suunta vahvistuu.
+   **(11.5x) Julkisivukuvat kaikille kohteille** (Sisältökirjuri): _tyo/sisaltokirjuri/vertailu/INDEKSI.md — nd, nd-yla, stadshus, eiffel,
+   prefecture, peking-tiananmen, peking-keskiakseli; 37 kuvaa, 2019+, kuvat.json (kamerapaikka, suunta, aika, tekijä, lisenssi). Ei droneja:
+   "ilmakuva-viisto" = kaukokuvia. Käytä Eiffel v2:n tornin väri/ristikko- ja ND:n edestä-vertailuun; vertaa_orto.py:n rinnalle julkisivuvertailu.
 3) **Siirtoseppä: palatsi-viipale 0,42 m** (osat.json palatsi rajat.min z −10,95 + Askelaanin 0,3 m vaakavara): kirkkotorniportaiden yläpäässä
    x −19,4, y 8,4–8,6, z −11,25…−10,95 reiteillä 41 → 42 ja 69 → 70. Korjaa: palatsin min z ≥ −10,6 tai min x > −19,0 (Olavinlinnan
    v44-lähteet, sama kuin v46z:n tapa). Testi OsaviipaleetTestit (4ced0237b) kaatuu, kun viipale katoaa → Siirtoseppä poistaa odotusrivin.
