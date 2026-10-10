@@ -50,6 +50,9 @@ header { display: flex; align-items: baseline; justify-content: space-between; g
 h1 { font-family: var(--f-otsikko); font-weight: 700; font-size: 1.75rem; letter-spacing: 0.06em; margin: 0; color: var(--seepia); text-wrap: balance; }
 .paivitetty { color: var(--himmea); font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 .paivitetty.vanha { color: var(--punainen); }
+.paivita { font: inherit; font-size: 0.85rem; color: var(--himmea); background: var(--pinta); border: 1px solid var(--reuna); border-radius: 5px; padding: 2px 9px; cursor: pointer; font-variant-numeric: tabular-nums; }
+.paivita:focus-visible { outline: 2px solid var(--seepia); outline-offset: 2px; }
+.paivita[aria-busy="true"] { color: var(--seepia); }
 .palkit { display: grid; gap: 10px; }
 .palkki { display: grid; grid-template-columns: 5.5em minmax(0, 1fr) auto; align-items: center; gap: 10px; }
 .palkki .nimi { font-size: 0.85rem; color: var(--himmea); letter-spacing: 0.04em; text-transform: uppercase; }
@@ -205,6 +208,8 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
 #tyolista details.juna { margin-left: 0.8em; }
 #tyolista details.juna .runko { padding-left: 2.1em; }
+/* Rivinvaihdot säilyvät (Bugikorjaukset-paketin vika per rivi, omistaja 10.10. 17.0x) */
+#tyolista .runko .teksti, #tyolista .runko .tilanne, #valmistuneet .runko .teksti { white-space: pre-line; }
 /* Valmistuneet työlistan alla (omistaja 10.10. 16.3x) */
 .otsikkonappi { background: none; border: none; padding: 0; font: inherit; color: inherit; letter-spacing: inherit; cursor: pointer; }
 .otsikkonappi[aria-expanded="true"] { text-decoration: underline; text-underline-offset: 4px; }
@@ -217,7 +222,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 <main class="wrap">
   <header>
     <h1>Asemataulu</h1>
-    <span class="paivitetty" id="paivitetty">Tiedot latautuvat…</span>
+    <button type="button" class="paivitetty paivita" id="paivitetty" title="Päivitä tiedot nyt">…</button>
   </header>
   <p class="tyhja" id="tyhja">Täällä näkyvät Matkakirjan kehityksen mittarit, junat, työlista ja roolien tila. Päätoimittaja ja Postivahti päivittävät sivun automaattisesti.</p>
   <section class="palkit" id="palkit" aria-label="Käyttörajat"></section>
@@ -269,10 +274,10 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   function ika(ts) {
     if (typeof ts !== 'number') return null;
     var min = Math.round((Date.now() - ts) / 60000);
-    if (min < 1) return 'juuri nyt';
-    if (min < 60) return min + ' min sitten';
+    if (min < 1) return 'nyt';
+    if (min < 60) return min + ' min';
     var h = Math.floor(min / 60);
-    return h + ' h ' + (min % 60) + ' min sitten';
+    return h + ' h ' + (min % 60) + ' min';
   }
   function riviLista(sailio, rivit, otsikkoKentta) {
     sailio.replaceChildren();
@@ -341,6 +346,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
   var valittuJuna = null;
   var kysymysAuki = false;
   var valmistuneetAuki = false;
+  var pyyntoKesken = 0;
   var SONNET_ROOLIT = { 'Postivahti': 1, 'Sis\u00e4lt\u00f6kirjuri': 1, 'Laitetestaaja': 1 };
   function junaRivi(sailio, paneeli, rivit) {
     sailio.replaceChildren();
@@ -384,11 +390,18 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     var onTietoa = !!(m || j || t || r || h);
     $('tyhja').hidden = onTietoa;
 
-    var uusin = [m, j, t, r, h].map(function (d) { return d && d.ts; }).filter(function (x) { return typeof x === 'number'; }).sort().pop();
+    // Ikä = mittareiden ikä (omistaja 10.10. 17.2x: "nämä eivät päivity tarpeeksi usein"); Postivahti vie mittarit 5 min välein,
+    // joten muiden dokumenttien tuore aikaleima ei saa peittää vanhoja lukuja. Ilman mittareita uusin muu aikaleima.
+    var uusin = (m && typeof m.ts === 'number') ? m.ts : [j, t, r, h, tila.laitteet, tila.tehtavat].map(function (d) { return d && d.ts; }).filter(function (x) { return typeof x === 'number'; }).sort().pop();
     var p = $('paivitetty');
-    if (uusin) {
-      p.textContent = 'Päivitetty ' + ika(uusin);
-      p.classList.toggle('vanha', Date.now() - uusin > 45 * 60000);
+    if (pyyntoKesken && uusin && uusin > pyyntoKesken) pyyntoKesken = 0;
+    if (pyyntoKesken && Date.now() - pyyntoKesken > 180000) pyyntoKesken = 0;
+    p.setAttribute('aria-busy', pyyntoKesken ? 'true' : 'false');
+    if (pyyntoKesken) {
+      p.textContent = '…';
+    } else if (uusin) {
+      p.textContent = ika(uusin);
+      p.classList.toggle('vanha', Date.now() - uusin > 15 * 60000);
     } else {
       p.textContent = onTietoa ? '' : 'Ei vielä tietoja';
     }
@@ -547,6 +560,21 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 
   $('kysymykset').addEventListener('click', function () { kysymysAuki = !kysymysAuki; piirra(); });
   $('valmistuneet-nappi').addEventListener('click', function () { valmistuneetAuki = !valmistuneetAuki; piirra(); });
+  // Päivitysnappi (omistaja 10.10. 16.4x): napautus lähettää Päätoimittajalle kommentin "Päivitä Asemataulu", ja se vie tuoreet tiedot heti.
+  $('paivitetty').addEventListener('click', function () {
+    var nappi = $('paivitetty');
+    if (pyyntoKesken || !window.claude || typeof window.claude.use !== 'function') return;
+    window.claude.use('comments').then(function (kom) {
+      if (!kom) { nappi.title = 'Päivitys ei ole käytettävissä tässä näkymässä'; return null; }
+      return kom.canSendToClaude().then(function (tilaK) {
+        if (tilaK !== 'available') { nappi.title = tilaK === 'no_session' ? 'Päätoimittaja ei ole juuri nyt kuulolla' : 'Päivitys ei ole käytettävissä'; return null; }
+        return kom.anchorFor(nappi).then(function (ankkuri) {
+          pyyntoKesken = Date.now(); piirra();
+          return kom.sendToClaude({ anchor: ankkuri, text: 'Päivitä Asemataulu' });
+        });
+      });
+    }).catch(function () { pyyntoKesken = 0; nappi.title = 'Päivitys epäonnistui, yritä hetken päästä'; piirra(); });
+  });
   piirra();
   setInterval(piirra, 60000);
 
@@ -568,6 +596,19 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     }, function () {
       $('paivitetty').textContent = 'Yhteys katkesi, lataa sivu uudelleen';
     });
+    // Katsojan syke (omistaja 10.10. 17.4x: "ei turhaan päivity jos en ole itse seuraamassa"): näkyvissä oleva sivu kirjoittaa
+    // talo/katsoja.ts 2 min välein ja heti esiin tullessaan; Postivahti vie mittarit vain, kun syke on alle 5 min vanha.
+    // Päivitä-nappi toimii aina. Kirjoitusoikeudettomalta katsojalta kirjoitus hylätään hiljaa.
+    var sykeKiinni = false;
+    function syke() {
+      if (sykeKiinni || document.visibilityState !== 'visible') return;
+      db.doc('talo/katsoja').set({ ts: Date.now() }).catch(function (e) {
+        if (e && (e.code === 'invalid_argument' || e.code === 'revoked' || e.code === 'not_granted')) sykeKiinni = true;
+      });
+    }
+    syke();
+    setInterval(syke, 120000);
+    document.addEventListener('visibilitychange', syke);
   });
 })();
 </script>
