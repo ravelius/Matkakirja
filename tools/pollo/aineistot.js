@@ -36,7 +36,7 @@ export const OPAS_AINEISTOT = Object.freeze({
   // Worker ja natiivi käyttävät tätä polkua, jos id on tässä, muuten opas/esittely-v1/<id>.json.
   // 9.10. (omistaja 8.10. 22.49 + 9.10. 08.2x "Käyttöön + Edinburgh"): 30 entistä äänetöntä kertojan äänin, opas/esittely-v2 (avaus.aani; aaneton: true pysyy → vain R2:n ääni).
   esittely_polut: {
-    pariisi: 'opas/esittely-v1e/pariisi.json',   // v1e 9.10.: + katse_kaari 12 Concordelle ja Champs-Élysées'lle (LS1/PT juna 174). v1d 9.10.: Concorden aukio ja Champs-Élysées katse_suunta 295 (LS1/PT kulma-arkki); v1c Concorden 5. kysymys "… kesällä 2024?" (Sisältökirjuri, PT), muuten v1
+    pariisi: 'opas/esittely-v1f/pariisi.json',   // v1f 10.10.: Louvre (Q19675) pyramidin kohdalle lat 48.86098 lon 2.33585, koko_m 25, korkeus_m 22, katse_suunta 112, katse_kaari 0 (LS1/PT, omistaja juna 180: lasipyramidi ei näkynyt). v1e 9.10.: + katse_kaari 12 Concordelle ja Champs-Élysées'lle (LS1/PT juna 174). v1d 9.10.: Concorden aukio ja Champs-Élysées katse_suunta 295 (LS1/PT kulma-arkki); v1c Concorden 5. kysymys "… kesällä 2024?" (Sisältökirjuri, PT), muuten v1
     praha: 'opas/esittely-v1b/praha.json', wien: 'opas/esittely-v1b/wien.json',
     amsterdam: 'opas/esittely-v2/amsterdam.json',
     ateena: 'opas/esittely-v2/ateena.json',

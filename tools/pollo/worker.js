@@ -44,7 +44,7 @@ import { tarkistaSyote, TURVA_JATKOT } from './opas-turva.js';
 import {
   AIKUINEN_OTSAKE, KURATOITU_KEHOTE, SEURANNAN_TTL_S, kuratoituSyote, ohjausVastaus, pulunTila, puuttuvaKuratoidaan, seurantaAvain, tarkistaVastaus,
 } from './kuratoitu.js';
-import { oppaanEsittely, valmisKohde, omatKohteet, esittelynAlku } from './opas-esittely.js';
+import { oppaanEsittely, valmisKohde, valmiinPaikka, omatKohteet, esittelynAlku } from './opas-esittely.js';
 import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu, sallittuAluePisteelle, kokeilut, sallitutPyynnolle } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
@@ -3623,7 +3623,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // generointia; ilman ääntä aani-, aani_pcm- ja kesto_s-kentät jäävät pois (LS1: natiivi näyttää tekstitilan).
   const aaneton = Boolean(valmis && esittely?.aaneton === true);
   if (valmis) {
-    const paikka = { ...valmisPaikka, lahde: valmisPaikka.lahde ?? 'kohdelista' };
+    // Esittelyn omat lat/lon voittavat kohdelistan (valmiinPaikka): pysähdys, korostus ja tuloksenPaikka samasta.
+    const paikka = { ...valmiinPaikka(valmisPaikka, valmis), lahde: valmisPaikka.lahde ?? 'kohdelista' };
     const nimi = valmisPaikka.nimi;
     tuloksenPaikka = { nimi, koko_m: valmis.koko_m, ...paikka };
     tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: valmis.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,

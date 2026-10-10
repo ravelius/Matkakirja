@@ -65,6 +65,18 @@ export function esittelynAlku(esittely, kaupunki) {
   return esittely.kierros?.[0] ?? ESITTELY_ALKU[kaupunkiId(kaupunki)] ?? null;
 }
 
+/**
+ * ESITTELYN OMA PAIKKA (LS1/PT 10.10.2026, omistajan bugi juna 180: "louvressa ei näytetty sitä lasikuutiota juuri
+ * ollenkaan"): kohdelistan lat/lon tulee Wikipediasta (Louvre = Cour Carrée, ~140 m pyramidista itään), ja kamera
+ * katsoi väärää kohtaa. Jos esittelyn kohteella on omat lat/lon, ne voittavat; muuten kohdelistan paikka sellaisenaan.
+ */
+export function valmiinPaikka(paikka, valmis) {
+  const lat = Number(valmis?.lat);
+  const lon = Number(valmis?.lon);
+  if (!paikka || valmis?.lat == null || valmis?.lon == null || !Number.isFinite(lat) || !Number.isFinite(lon)) return paikka;
+  return { ...paikka, lat, lon };
+}
+
 /** Kohteen valmis kerronta tunnuksella; lyhyt (kierros) jos pyydetty ja olemassa. */
 export function valmisKohde(esittely, id) {
   return esittely?.kohteet?.find((k) => k.id === id && typeof k.teksti === 'string' && k.teksti.trim()) ?? null;
