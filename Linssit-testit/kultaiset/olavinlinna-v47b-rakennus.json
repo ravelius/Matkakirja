@@ -18584,6 +18584,20 @@
       "tekstuuri": "pinnat/puu.jpg",
       "tekstuuri_puoli": "pinnat/puu-puoli.jpg"
     },
+    "rantakivi": {
+      "vari": "#5e5a52",
+      "toisto_m": 4,
+      "kuvio": {
+        "tyyppi": "kallio",
+        "koko_m": [
+          1.5,
+          1.5
+        ],
+        "vaihtelu": 0.4
+      },
+      "tekstuuri": "pinnat/rantakivi.jpg",
+      "tekstuuri_puoli": "pinnat/rantakivi-puoli.jpg"
+    },
     "rappaus": {
       "vari": "#d6c3a3",
       "toisto_m": 2,

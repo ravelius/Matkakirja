@@ -218,6 +218,23 @@
      "huom": "nykyinen ponttonisilta; vuosi ei tiedossa, TULKINTA: yleisölle avaaminen 1975 (#4249)"
     },
     {
+     "nimi": "b1499-paalu",
+     "keskipiste": [
+      -73.5,
+      1.25,
+      -18.0
+     ],
+     "koko": [
+      2.4,
+      21.5,
+      2.4
+     ],
+     "kierto_y": 0.0,
+     "vuodesta": null,
+     "historia_vuosi": 1975,
+     "huom": "ponttonisillan puupaalu vedessä (Siirtoseppä v46z-176-b), kuten ponttonisilta"
+    },
+    {
      "nimi": "b1499-kellobastioni-lounas",
      "keskipiste": [
       -71.0,
@@ -265,54 +282,6 @@
      "kierto_y": 0.0,
      "vuodesta": 1791,
      "huom": "Paksu bastioni (pohjoisosa), kuten yllä"
-    },
-    {
-     "nimi": "n1790-kellotorni",
-     "keskipiste": [
-      -44.0,
-      33.5,
-      -4.6
-     ],
-     "koko": [
-      17.0,
-      23.0,
-      17.0
-     ],
-     "kierto_y": 0.0,
-     "vuodesta": 1790,
-     "huom": "kellotorni: 1790-l. tiilikorotus ja kartiokatto (faktapohja E16; TULKINTA vuosi), nykyasun paketti"
-    },
-    {
-     "nimi": "n1790-kirkkotorni",
-     "keskipiste": [
-      -15.3,
-      34.5,
-      -14.0
-     ],
-     "koko": [
-      15.4,
-      21.0,
-      15.4
-     ],
-     "kierto_y": 0.0,
-     "vuodesta": 1790,
-     "huom": "kirkkotorni: 1790-l. tiilikorotus ja kartiokatto (faktapohja E16; TULKINTA vuosi), nykyasun paketti"
-    },
-    {
-     "nimi": "n1790-kijlin-torni",
-     "keskipiste": [
-      47.4,
-      30.75,
-      -43.5
-     ],
-     "koko": [
-      15.0,
-      28.5,
-      15.0
-     ],
-     "kierto_y": 0.0,
-     "vuodesta": 1790,
-     "huom": "kijlin-torni: 1790-l. tiilikorotus ja kartiokatto (faktapohja E16; TULKINTA vuosi), nykyasun paketti"
     }
    ],
    "varmuus": "V kerrokset, A porras",
