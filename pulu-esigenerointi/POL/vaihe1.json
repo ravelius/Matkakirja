@@ -1461,5 +1461,1795 @@
    "Miten Karpaatit jakautuvat osiin?",
    "Mikä Tatra on?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-szczeliniec",
+  "kysymys": "Mikä on Szczeliniec Wielkin korkein kohta?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Szczeliniec Wielkin korkein kohta on kivi nimeltä [[Fotel Pradziada]], suomeksi Isoisoisän nojatuoli. Se sijaitsee vuoren huipputasanteella, jota halkeamat, käytävät ja kalliolabyrintit pilkkovat. Huipulle pääsee [[Karłówista]] noin 680 kiviaskelman portaita pitkin, ja vuori kuuluu [[Pöytävuorten kansallispuistoon]]. Kyyhky ei kyl istuisi noin kovalla nojatuolilla.",
+  "linkit": [
+   "Fotel Pradziada",
+   "Karłówista",
+   "Pöytävuorten kansallispuistoon"
+  ],
+  "jatkot": [
+   "Millainen kivi hiekkakivi on?",
+   "Mitä muuta Pöytävuorten kansallispuistossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-szczeliniec",
+  "kysymys": "Mitä puolankielinen nimi Szczeliniec tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Puolankielinen nimi Szczeliniec Wielki tulkitaan suureksi halkeamaksi vuoreksi: sana szczelina tarkoittaa rakoa tai halkeamaa ja wielki suurta. Nimi sopii maisemaan, sillä huipputasanne on [[hiekkakivestä]] muodostunut massiivi, jota halkeamat ja käytävät pilkkovat. Vuori kuuluu [[Sudeettien]] tunnetuimpiin pöytävuoriin. Nimi osui kyllä napakasti.",
+  "linkit": [
+   "hiekkakivestä",
+   "Sudeettien"
+  ],
+  "jatkot": [
+   "Miksi hiekkakivi halkeilee helposti?",
+   "Missä muualla Euroopassa on pöytävuoria?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-szczeliniec",
+  "kysymys": "Miten pöytävuoret syntyvät?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Pöytävuori on vuori, jonka huippu on lähes tasainen. Se syntyy, kun kestävämpi kivikerros suojaa alla olevaa pehmeämpää kerrosta ja ympäröivä kiviaines poistuu vähitellen [[rapautumisen]] ja [[eroosion]] vaikutuksesta. Veden ja jäätymisen työ voi avata kallioon halkeamia, ja niin syntyvät myös kapeat käytävät ja kalliolabyrintit, joita esimerkiksi [[hiekkakivessä]] näkee.\n\nSiivekkäälle pöytävuori on erinomainen laskeutumispaikka, ja minä arvostan sitä, että siellä saa istua tasaisella. Portaita ei tarvitse kiivetä.",
+  "linkit": [
+   "rapautumisen",
+   "eroosion",
+   "hiekkakivessä"
+  ],
+  "jatkot": [
+   "Kuinka kauan eroosio kestää?",
+   "Mikä on pöytävuoren ja mesan ero?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-szczeliniec",
+  "kysymys": "Missä päin Eurooppaa Sudeetit sijaitsevat?",
+  "uusi": true,
+  "vastaus": "Kas vaan, maantiedettä. Sudeetit ovat vuoristo Keski-Euroopassa, pääosin [[Puolan]] ja [[Tšekin]] rajaseudulla, ja niiden länsipää ulottuu [[Saksan]] puolelle. Szczeliniec Wielki on vuoristoon kuuluva pöytävuori Lounais-Puolassa. Rajaseutu näyttää ylhäältä kyl melko vihreältä.",
+  "linkit": [
+   "Puolan",
+   "Tšekin",
+   "Saksan"
+  ],
+  "jatkot": [
+   "Mikä on Sudeettien korkein huippu?",
+   "Millaista luontoa Sudeeteilla elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-szczeliniec",
+  "kysymys": "Mitä nimi Große Heuscheuer tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Große Heuscheuer on vuoren saksankielinen nimi, ja sen voi kääntää suunnilleen Suureksi heinälatoksi, sillä saksan sana Heu tarkoittaa heinää ja Scheuer latoa. En ole varma, mistä nimi on alun perin saanut alkunsa. Vuori sijaitsee [[Kłodzkon]] seudulla [[Sudeettien]] kupeessa. Ei se silti mikään lato oo, sanon minä.",
+  "linkit": [
+   "Kłodzkon",
+   "Sudeettien"
+  ],
+  "jatkot": [
+   "Miksi vuorilla on usein sekä saksalainen että puolalainen nimi?",
+   "Miten Kłodzkon seutu kuuluu Puolaan nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grunwald",
+  "kysymys": "Ketkä liittolaiset voittivat Grunwaldin taistelun 15. heinäkuuta 1410?",
+  "uusi": false,
+  "vastaus": "Tost minä tiedän. Voittajina olivat [[Puolan kruunun]] ja [[Liettuan suuriruhtinaskunnan]] liittolaiset, joita johtivat kuningas Władysław II Jagiełło ja suuriruhtinas Vytautas. He löivät [[Saksalaisen ritarikunnan]] suurmestari Ulrich von Jungingenin joukot ratkaisevasti: suurin osa ritarikunnan johtajista kaatui tai joutui vangiksi. Ritarikunta kesti kuitenkin [[Malborkin linnan]] piirityksen. Taistelusta on tullut Puolassa ja Liettuassa kansallisen ylpeyden ja vastarinnan symboli, ja siitä on yli kuusisataa vuotta. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Puolan kruunun",
+   "Liettuan suuriruhtinaskunnan",
+   "Saksalaisen ritarikunnan",
+   "Malborkin linnan"
+  ],
+  "jatkot": [
+   "Mitä Thornin rauhassa 1411 sovittiin?",
+   "Miten Puola ja Liettua liittyivät yhteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grunwald",
+  "kysymys": "Millä toisella nimellä taistelua kutsutaan saksaksi?",
+  "uusi": false,
+  "vastaus": "Ai se. Saksaksi taistelua kutsutaan Tannenbergin taisteluksi, ja suomeksi puhutaan myös ensimmäisestä Tannenbergin taistelusta. Nimi tulee Tannenbergin kylästä, joka on nykyisin puolaksi Stębark. Numero erottaa taistelun myöhemmästä, vuonna 1914 käydystä samannimisestä taistelusta [[ensimmäisessä maailmansodassa]]. Puolaksi taistelu on Grunwald ja liettuaksi Žalgiris. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "ensimmäisessä maailmansodassa"
+  ],
+  "jatkot": [
+   "Miksi samaa paikkaa kutsutaan kolmella nimellä?",
+   "Mitä tapahtui Tannenbergin luona vuonna 1914?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grunwald",
+  "kysymys": "Mikä oli Saksalainen ritarikunta?",
+  "uusi": true,
+  "vastaus": "Kas vaan, historiaa. Saksalainen ritarikunta oli keskiaikainen sotilaallinen ja hengellinen ritarikunta, joka syntyi [[ristiretkien]] aikaan 1100-luvun lopulla. Myöhemmin se siirsi toimintansa Itämeren eteläpuolelle ja rakensi sinne oman ritarikuntavaltionsa, jonka keskus oli [[Malborkin]] linnassa. Grunwaldin taistelun jälkeen ritarikunta ei koskaan toipunut entiselleen. Pitkä tarina, ja minä kerroin sen lyhyesti.",
+  "linkit": [
+   "ristiretkien",
+   "Malborkin"
+  ],
+  "jatkot": [
+   "Mitä muita ritarikuntia keskiajalla oli?",
+   "Miten ritarikuntavaltio päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grunwald",
+  "kysymys": "Mikä Malborkin linna on?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Malborkin linna on Saksalaisen ritarikunnan keskiaikainen tiilinen linnakompleksi [[Nogat-joen]] rannalla Pohjois-Puolassa. Se toimi ritarikunnan pääpaikkana ja kesti piirityksen Grunwaldin taistelun jälkeen. Nykyisin linna kuuluu [[Unescon maailmanperintökohteisiin]]. Ylhäältä se näyttää kyl tosi komealta.",
+  "linkit": [
+   "Nogat-joen",
+   "Unescon maailmanperintökohteisiin"
+  ],
+  "jatkot": [
+   "Miten tiililinna rakennettiin keskiajalla?",
+   "Mitä Unescon maailmanperintö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grunwald",
+  "kysymys": "Kuka oli Vytautas?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys tuo. Vytautas oli [[Liettuan]] suuriruhtinas, joka johti liettualaisia joukkoja Grunwaldin taistelussa serkkunsa, Puolan kuninkaan [[Jagiełłon]] rinnalla. Hänen valtakauttaan pidetään usein Liettuan suuriruhtinaskunnan huippuaikana, ja hän kuoli noin vuonna 1430. Hän oli tärkeä hahmo sekä Liettuan että Puolan historiassa. Sukua se on, ja sukuun minä luotan.",
+  "linkit": [
+   "Liettuan",
+   "Jagiełłon"
+  ],
+  "jatkot": [
+   "Miten Liettuan suuriruhtinaskunta syntyi?",
+   "Missä Liettuan keskiaikainen pääkaupunki sijaitsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-frombork",
+  "kysymys": "Kuka tähtitieteilijä asui Fromborkissa 1500-luvun alussa?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä on pelissäkin juttua. Fromborkissa asui 1500-luvun alussa tähtitieteilijä [[Nikolaus Kopernikus]], joka työskenteli siellä kirkonmiehenä ja teki kaupungissa havaintojaan. Hän opiskeli aiemmin [[Krakovan yliopistossa]], ja vuonna 1543, juuri ennen kuolemaansa, hän julkaisi teoksen [[De revolutionibus orbium coelestium]], jossa Aurinko esitettiin aurinkokunnan keskipisteeksi. Hänen hautansa on Fromborkin tuomiokirkossa.\n\nSiivekkäälle taivas on arkea, ja silti kesti vuosituhansia, ennen kuin joku kirjoitti auki, että Aurinko on keskellä. Minusta se on ihmiseltä melko hieno saavutus.",
+  "linkit": [
+   "Nikolaus Kopernikus",
+   "Krakovan yliopistossa",
+   "De revolutionibus orbium coelestium"
+  ],
+  "jatkot": [
+   "Mitä Aristarkhos Samoslainen ehdotti jo antiikissa?",
+   "Miten Kopernikuksen ajatus otettiin aikanaan vastaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-frombork",
+  "kysymys": "Millä nimellä Frombork tunnetaan saksaksi?",
+  "uusi": false,
+  "vastaus": "Ai tota. Saksaksi Frombork on Frauenburg. Kaupunki sijaitsee [[Veikselinlahden]] rannalla Pohjois-Puolassa [[Warmian]] alueella, ja sitä sanotaan Warmian jalokiveksi. Se mainitaan ensimmäisen kerran 1200-luvun asiakirjassa, ja sen 1300-luvun [[tuomiokirkko]] rakennettiin uudelleen [[toisen maailmansodan]] vaurioiden jälkeen. Kaks nimee samalle kaupungille, ja kumpaakin minä osaan lausua.",
+  "linkit": [
+   "Veikselinlahden",
+   "Warmian",
+   "tuomiokirkko",
+   "toisen maailmansodan"
+  ],
+  "jatkot": [
+   "Missä Warmia sijaitsee?",
+   "Miten tuomiokirkko vaurioitui sodassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-frombork",
+  "kysymys": "Mitä heliosentrinen maailmankuva tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Katotaas. Heliosentrinen maailmankuva tarkoittaa käsitystä, jonka mukaan Aurinko on aurinkokunnan keskipiste ja Maa kiertää sitä muiden planeettojen tavoin. Vastakohtana on geosentrinen käsitys, jossa Maa oli maailmankaikkeuden keskellä. Ajatus ei ollut aivan uusi: antiikin kreikkalainen [[Aristarkhos Samoslainen]] esitti samankaltaisen mallin lähes kaksi vuosituhatta ennen [[Kopernikuksen]] teosta, mutta vasta Kopernikuksen työ käynnisti tieteellisen vallankumouksen. Myöhemmin [[Johannes Kepler]] osoitti planeettojen ratojen olevan ellipsejä. Ylhäältä katsoen asia näyttää kyl aika selvältä.",
+  "linkit": [
+   "Aristarkhos Samoslainen",
+   "Kopernikuksen",
+   "Johannes Kepler"
+  ],
+  "jatkot": [
+   "Miten ellipsirata eroaa ympyrästä?",
+   "Kuka oli Johannes Kepler?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-frombork",
+  "kysymys": "Mikä on planetaario?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Planetaario on tila, jossa kupolin muotoiselle katolle heijastetaan [[tähtitaivas]], jotta sitä voi tarkastella säästä ja vuorokaudenajasta riippumatta. Esitys näyttää tähdet, [[planeetat]] ja niiden liikkeet. Fromborkissa planetaario toimii [[Kopernikus-museon]] yhteydessä. Sisätaivas on sateella kyl kyyhkyn suosikki.",
+  "linkit": [
+   "tähtitaivas",
+   "planeetat",
+   "Kopernikus-museon"
+  ],
+  "jatkot": [
+   "Miten tähtitaivas näyttää eri vuodenaikoina?",
+   "Miten planeetat erottaa tähdistä taivaalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-frombork",
+  "kysymys": "Miten urut tuottavat äänensä?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Urut tuottavat äänen puhaltamalla ilmaa [[urkupillien]] läpi: ilmaa tuottavat palkeet tai nykyisin sähköpuhallin. Soittaja painaa koskettimia, jolloin ilma pääsee yksittäiseen pilliin, ja jokainen pilli soi yhdellä sävelkorkeudella, jonka määräävät pillin pituus ja rakenne. [[Rekistereillä]] valitaan, minkä pillirivien äänet kuuluvat. Fromborkissa järjestetään joka kesä kansainvälinen urkumusiikkifestivaali. Minä vain kurnutan, ja sekin on yhtä säveltä.",
+  "linkit": [
+   "urkupillien",
+   "Rekistereillä"
+  ],
+  "jatkot": [
+   "Miksi urkupillit ovat eri kokoisia?",
+   "Mikä on maailman vanhin urkutyyppi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-biskupin",
+  "kysymys": "Kuinka monta katua Biskupinin asutuksessa oli?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Biskupinin asutus oli järjestetty suorakaiteen muotoiseen ruudukkoon, jossa oli yksitoista katua. Asutus rakennettiin soiselle niemelle järveen, ja sitä ympäröi korkea puinen [[paaluaita]], joka nojasi tammirunkojen muodostamaan multatäytteiseen vallirakenteeseen. Kyseessä on [[pronssikauden]] lopun linnoitettu asutus Pohjois-Keski-Puolassa, ja nykyisin paikka toimii arkeologisena [[ulkoilmamuseona]]. Ruudukko on lintuparan mieleen, siit ei eksy.",
+  "linkit": [
+   "paaluaita",
+   "pronssikauden",
+   "ulkoilmamuseona"
+  ],
+  "jatkot": [
+   "Miten asukkaat saivat toimeentulonsa järven rannalla?",
+   "Miksi asutus rakennettiin niemelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-biskupin",
+  "kysymys": "Minkä kulttuurin asukkaat rakensivat Biskupinin?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Biskupinin rakensivat [[Lusatian kulttuurin]] asukkaat, tarkemmin sanottuna sen Biskupin-ryhmä, 700-luvulla eaa. Paikkaa luultiin löytöhetkellä varhaiseksi länsislaavilaiseksi asutukseksi, mutta arkeologit vahvistivat myöhemmin sen kuuluneen [[pronssikauden]] lopun kulttuuriin. Hyvä, että joku tarkisti, kyyhky ois voinut arvata väärin.",
+  "linkit": [
+   "Lusatian kulttuurin",
+   "pronssikauden"
+  ],
+  "jatkot": [
+   "Mitä tiedetään Lusatian kulttuurista?",
+   "Miten arkeologit erottavat kulttuurit toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-biskupin",
+  "kysymys": "Kuka löysi Biskupinin?",
+  "uusi": true,
+  "vastaus": "Ai se. Paikan löysi vuonna 1933 koulunopettaja [[Walenty Szwajcer]] oppilaineen, ja arkeologiset [[kaivaukset]] alkoivat seuraavana vuonna. Löytö osoittautui pronssikauden lopun linnoitetuksi asutukseksi, ja nykyisin kohde toimii arkeologisena [[ulkoilmamuseona]]. Kouluretki, josta tuli historiaa.",
+  "linkit": [
+   "Walenty Szwajcer",
+   "kaivaukset",
+   "ulkoilmamuseona"
+  ],
+  "jatkot": [
+   "Miten arkeologiset kaivaukset tehdään?",
+   "Mitä ulkoilmamuseo tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-biskupin",
+  "kysymys": "Mikä pronssikausi oli?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Pronssikausi on esihistoriallinen ajanjakso kivikauden jälkeen, jolloin työkalut ja aseet tehtiin pronssista, [[kuparin]] ja [[tinan]] seoksesta. Keski-Euroopassa se ajoittuu karkeasti noin vuosien 2000 ja 800 eaa. tienoille, mutta rajat vaihtelevat alueittain. Sitä seurasi [[rautakausi]], ja Biskupinin asutus on peräisin pronssikauden lopulta.\n\nPronssista tehtiin myös koruja, ja kyllä minäkin kelpaisin pronssirengas nilkassa, jos viestikapseli vain pysyisi kevyenä. Rautakaudella kyyhkyjen elämä ei luultavasti muuttunut yhtään.",
+  "linkit": [
+   "kuparin",
+   "tinan",
+   "rautakausi"
+  ],
+  "jatkot": [
+   "Miksi pronssi korvattiin raudalla?",
+   "Mistä tina saatiin pronssikaudella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-biskupin",
+  "kysymys": "Miten puun ikä voidaan määrittää vuosirenkaista?",
+  "uusi": true,
+  "vastaus": "Mmm— tuohon osaan vastata. Puu kasvattaa joka vuosi uuden renkaan, jonka leveys riippuu kasvukauden oloista. Kun eri vuosien kuvioita verrataan toisiinsa ja yhdistetään tunnettuun rengassarjaan, rakennuspuun kaatovuosi voidaan päätellä usein hyvin tarkasti. Menetelmää kutsutaan [[dendrokronologiaksi]], ja sitä käytetään arkeologiassa muun muassa [[tammirunkojen]] kaltaisten puurakenteiden ajoittamiseen. Puu muistaa, mitä minä unohdan.",
+  "linkit": [
+   "dendrokronologiaksi",
+   "tammirunkojen"
+  ],
+  "jatkot": [
+   "Miten radiohiiliajoitus toimii?",
+   "Kuinka vanhoja puita Euroopassa on säilynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-legnica",
+  "kysymys": "Ketä vastaan Henrik II Hurskas taisteli Legnican luona 9. huhtikuuta 1241?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Henrik II Hurskas, [[Sleesian]] herttua, taisteli [[mongoleja]] vastaan. Hänen johtamansa puolalaiset ja määriläiset joukot, joita tukivat feodaaliaateli ja muutamat paavin lähettämät ritarikuntien ritarit, yrittivät pysäyttää mongolien hyökkäyksen Puolaan. Yleisen historiallisen käsityksen mukaan taistelu oli murskaava tappio puolalaisille ja määriläisille, ja [[Długoszin]] mukaan Henrik kuoli taistelussa. Taistelusta on yli seitsemän vuosisataa, ja se tunnetaan myös Liegnitzin ja Wahlstattin taisteluna. Onneksi siitä on jo kauan.",
+  "linkit": [
+   "Sleesian",
+   "mongoleja",
+   "Długoszin"
+  ],
+  "jatkot": [
+   "Mitä tapahtui mongolien hyökkäykselle taistelun jälkeen?",
+   "Kuka oli Jan Długosz?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-legnica",
+  "kysymys": "Millä taktiikalla mongolit voittivat?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Mongolit käyttivät nopeaa [[ratsuväkeä]] ja [[jousiampujia]] sekä pitkää sarjaa tekaistuja perääntymisiä. Tekaistu perääntyminen houkuttelee vastustajan hajaantumaan ja lähtemään perään, minkä jälkeen sitä vastaan on helpompi iskeä. Näin Legnican luona saavutettiin murskaava voitto, vaikka tarkat yksityiskohdat ovat osin epävarmoja. Vanha tarina, ja onneksi kauas jäänyt.",
+  "linkit": [
+   "ratsuväkeä",
+   "jousiampujia"
+  ],
+  "jatkot": [
+   "Millaisia jousia ratsujousiampujat käyttivät?",
+   "Miksi tekaistu perääntyminen onnistui usein?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-legnica",
+  "kysymys": "Mikä oli Mohin taistelu?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Mohin taistelu oli mongolien voitto unkarilaisista, ja se käytiin kaksi päivää Legnican taistelun jälkeen huhtikuussa 1241. Unkarin joukkoja johti kuningas [[Béla IV]]. Yhdessä nämä kaksi taistelua osoittivat, kuinka tehokasta mongolien liikkuva sotataito oli Keski-Euroopassa. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Béla IV"
+  ],
+  "jatkot": [
+   "Mitä Unkarille tapahtui taistelun jälkeen?",
+   "Miksi mongolit lopulta vetäytyivät Euroopasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-legnica",
+  "kysymys": "Mitä feodaalijärjestelmä tarkoitti keskiajalla?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Feodaalijärjestelmä oli keskiajan Euroopassa yleinen yhteiskuntajärjestys, jossa hallitsija tai ylempi aatelinen luovutti maata eli [[läänityksen]] alemmalle aatelismiehelle, [[vasallille]], vastineeksi sotapalveluksesta ja uskollisuudesta. Maata viljelivät [[talonpojat]], jotka olivat usein sidottuja tilaan ja velvollisia maksuihin tai työhön. Järjestelmä vaihteli alueittain ja ajan myötä. Moni asia on ny helpompaa kuin silloin.",
+  "linkit": [
+   "läänityksen",
+   "vasallille",
+   "talonpojat"
+  ],
+  "jatkot": [
+   "Milloin feodaalijärjestelmä päättyi Euroopassa?",
+   "Mikä ero oli ritarilla ja aatelisella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-legnica",
+  "kysymys": "Kenen hallussa Sleesia on ollut vuosisatojen aikana?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Sleesia on kuulunut vuosisatojen kuluessa useille valtioille. Keskiajalla alueella hallitsivat Piast-suvun ruhtinaat, ja ruhtinaskunnat siirtyivät noin 1300-luvulta alkaen pääosin [[Böömin kruunun]] alaisuuteen. Myöhemmin alue kuului Habsburgeille, ja 1700-luvun puolivälin sodissa suurin osa siitä siirtyi [[Preussille]]. Toisen maailmansodan jälkeen suuri osa Sleesiasta liitettiin [[Puolaan]], ja pieni osa kuuluu Tšekille. Rajat siirtyvät, mut kyyhky lentää niiden yli.",
+  "linkit": [
+   "Böömin kruunun",
+   "Preussille",
+   "Puolaan"
+  ],
+  "jatkot": [
+   "Mitä kieliä Sleesiassa on puhuttu?",
+   "Miten Habsburgien valtakunta syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalwaria",
+  "kysymys": "Minkä pyhän paikan jäljennös Kalwaria Zebrzydowskan luostarikompleksi on?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Kalwaria Zebrzydowskan luostarikompleksi on jäljennös Jerusalemin muurien ulkopuolella sijaitsevasta Golgatasta, ja sen yhteyteen rakennettiin myös Kristuksen kärsimystien polut. Perustaja [[Mikołaj Zebrzydowski]] sai näyn katsellessaan lähikukkuloita ja laaksoja Lanckoronan linnasta, ja hän rakennutti roomalaiskatolisen luostarin sen mukaan. Paikasta tuli suosittu [[pyhiinvaelluskohde]], ja pyhiinvaeltajia varten perustettiin vuonna 1617 oma kaupunki. Eipä tarvinnut kyyhkyn Jerusalemiin asti lentää.",
+  "linkit": [
+   "Mikołaj Zebrzydowski",
+   "pyhiinvaelluskohde"
+  ],
+  "jatkot": [
+   "Mikä on Lanckoronan linna?",
+   "Milloin Kalwarian kaupunki perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalwaria",
+  "kysymys": "Kuka Kalwarian tilasi rakennettavaksi?",
+  "uusi": false,
+  "vastaus": "No niin, tost minä osaan kertoo. Kalwarian tilasi Krakovan vojevoda [[Mikołaj Zebrzydowski]], joka sai 1. joulukuuta 1602 Lanckoronan linnasta katsellessaan näyn ja rakennutti sen mukaisesti luostarin sekä kärsimystien polut. Kaupunki on saanut nimensä sekä luostarista että perustajastaan, ja sen läheisyyteen nousi pyhiinvaeltajia varten oma kaupunki. Kyseessä oli [[Krakovan]] alueen korkea virkamies. Kyl se vojevoda osasi tilata isosti.",
+  "linkit": [
+   "Mikołaj Zebrzydowski",
+   "Krakovan"
+  ],
+  "jatkot": [
+   "Mitä vojevoda tarkoittaa?",
+   "Mikä Kalwaria Zebrzydowskassa kiinnostaa pyhiinvaeltajia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalwaria",
+  "kysymys": "Mitä sana vojevoda tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Vojevoda on slaavilaisten maiden vanha arvonimi, joka tarkoitti alun perin sotajoukon johtajaa. [[Puolassa]] vojevoda johti aluetta, jota kutsutaan vojevodakunnaksi, ja nykyisin vojevoda on valtion keskushallinnon edustaja maakunnassa. [[Vojevodakunta]] on Puolan ylin hallinnollinen aluejako. Sanan vanhoista käyttötavoista en ole kaikilta osin varma. Pitkä titteli, mut lyhyt lentomatka.",
+  "linkit": [
+   "Puolassa",
+   "Vojevodakunta"
+  ],
+  "jatkot": [
+   "Montako vojevodakuntaa Puolassa on?",
+   "Mikä on Pikku-Puola?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalwaria",
+  "kysymys": "Mikä oli Puolan ensimmäinen jako?",
+  "uusi": true,
+  "vastaus": "Ai se. Puolan ensimmäisessä jaossa vuonna 1772 Venäjä, Preussi ja [[Habsburgien]] Itävalta liittivät itseensä osia Puolan–Liettuan valtiosta. Itävalta sai alueita etelästä, ja Kalwarian seutu päätyi sen hallintaan. Jakoja tehtiin myöhemmin vielä kaksi, ja vuoteen 1795 mennessä [[Puolan–Liettuan]] valtio oli kadonnut kartalta. Rajat liikkuu, mut kyyhky lentää yli.",
+  "linkit": [
+   "Habsburgien",
+   "Puolan–Liettuan"
+  ],
+  "jatkot": [
+   "Milloin Puola itsenäistyi uudelleen?",
+   "Mikä oli Puolan–Liettuan valtio?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalwaria",
+  "kysymys": "Mitä pyhiinvaellus tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Pyhiinvaellus on matka pyhäksi katsottuun paikkaan uskonnollisista syistä, esimerkiksi rukoilemaan, kiittämään tai tekemään parannusta. Sitä tunnetaan monissa uskonnoissa, ja kristinuskossa tunnettuja eurooppalaisia kohteita ovat esimerkiksi [[Santiago de Compostela]] ja [[Rooma]]. Kalwaria Zebrzydowskan kaupunki perustettiin vuonna 1617 juuri majoittamaan kasvavaa pyhiinvaeltajien joukkoa. Kävely on kyllä kyyhkylle vähän outo tapa matkustaa.",
+  "linkit": [
+   "Santiago de Compostela",
+   "Rooma"
+  ],
+  "jatkot": [
+   "Mikä on Santiago de Compostelan pyhiinvaellusreitti?",
+   "Miksi pyhiinvaeltajat kulkevat usein jalan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sandomierz",
+  "kysymys": "Ketkä ryöstivät Sandomierzin vuosina 1241, 1260 ja 1287?",
+  "uusi": false,
+  "vastaus": "Mmm— tän minä tiedän. Sandomierzia ryöstivät mongolit vuosina 1241, 1260 ja 1287. Ensimmäinen ryöstö liittyi laajaan hyökkäykseen, joka ulottui 1200-luvulla [[Puolaan]] ja [[Unkariin]], ja kaupunki joutui kolmesti kärsimään samasta syystä. Tapahtumista on yli seitsemänsataa vuotta, ja kaupungista on sittemmin tullut merkittävä matkailukohde. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Puolaan",
+   "Unkariin"
+  ],
+  "jatkot": [
+   "Millainen oli mongolien hyökkäys Puolaan 1241?",
+   "Mikä Sandomierzissa kiinnostaa matkailijoita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sandomierz",
+  "kysymys": "Minä vuonna Puolan presidentti julisti vanhankaupungin kansalliseksi monumentiksi?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Puolan presidentti julisti Sandomierzin vanhankaupungin kansalliseksi monumentiksi vuonna 2017. Säilynyt vanhakaupunki on merkittävä matkailunähtävyys, ja kaupunki oli korkealta keskiajalta 1800-luvulle asti alueen hallintokeskus sekä [[kuninkaankaupunki]]. Se kuului aikanaan [[Pikku-Puolan]] tärkeimpiin kaupunkikeskuksiin. Hyvä muisti kyyhkyllä, vaikka itse sanonkin.",
+  "linkit": [
+   "kuninkaankaupunki",
+   "Pikku-Puolan"
+  ],
+  "jatkot": [
+   "Mitä kuninkaankaupunki tarkoitti keskiajalla?",
+   "Mikä Pikku-Puola on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sandomierz",
+  "kysymys": "Mihin mereen Veikseli virtaa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Veikseli on Puolan pisin joki, ja se virtaa Etelä-Puolan vuoristosta halki maan [[Itämereen]] Gdańskinlahden kautta. Matkallaan se kulkee muun muassa [[Krakovan]] ja [[Varsovan]] kautta, ja Sandomierz sijaitsee sen rannalla San-joen yhtymäkohdan lähellä. Ylhäältä joki näyttää nauhalta, jonka päässä on meri.",
+  "linkit": [
+   "Itämereen",
+   "Krakovan",
+   "Varsovan"
+  ],
+  "jatkot": [
+   "Mitkä kaupungit sijaitsevat Veikselin varrella?",
+   "Mikä Gdańsk on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sandomierz",
+  "kysymys": "Kuka oli Bolesław III, jonka testamentti jakoi maan?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Bolesław III oli keskiajan Puolan ruhtinas, joka hallitsi 1100-luvun alkupuolella. Hänen testamenttinsa jakoi maan ruhtinaskuntiin, ja Sandomierz oli yksi niiden pääkaupungeista. Jaon seurauksena [[Puolan]] valtakunta pirstoutui pitkäksi aikaa [[ruhtinaskuntiin]]. Pitkä aika sitä on siitä, kyl minä sen luin.",
+  "linkit": [
+   "Puolan",
+   "ruhtinaskuntiin"
+  ],
+  "jatkot": [
+   "Milloin Puola yhdistyi uudelleen?",
+   "Miksi keskiajan hallitsijat jakoivat maansa perillisilleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sandomierz",
+  "kysymys": "Kuka oli kronikoitsija Gallus Anonymus?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Gallus Anonymus oli nimetön kronikoitsija, joka kirjoitti [[Puolan]] varhaisinta historiaa 1100-luvun alussa. Hänen nimensä tarkoittaa suunnilleen nimetöntä gallialaista, mutta hänen alkuperästään ei ole varmaa tietoa, enkä ole itsekään varma kaikista yksityiskohdista. Hänen [[kronikkansa]] on keskeinen varhaislähde Puolan ruhtinaiden ajasta, ja siinä Sandomierz mainitaan Krakovan ja Wrocławin ohella pääkaupunkina. Nimetön kirjoittaja, aika kyyhkymäistä sekin.",
+  "linkit": [
+   "Puolan",
+   "kronikkansa"
+  ],
+  "jatkot": [
+   "Mitä kronikka tarkoittaa?",
+   "Mikä Wrocław on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zakopane",
+  "kysymys": "Minkä kansan kulttuurin keskus Zakopane on?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Zakopane on [[goralien]] kulttuurin keskus Podhalen alueella Tatran juurella, ja sitä kutsutaan usein Puolan talvipääkaupungiksi. Goralit ovat vuoristoalueen asukkaita, ja heidän kansantaiteensa on innoittanut [[Zakopane-tyylin]] arkkitehtuuria. Nykyään tyyliä pidetään goralien perinteen ytimenä. Talvella ylhäältä näkee vaan valkoista ja savupiippuja.",
+  "linkit": [
+   "goralien",
+   "Zakopane-tyylin"
+  ],
+  "jatkot": [
+   "Millaista goralien kansantaide on?",
+   "Mikä Zakopane-tyyli on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zakopane",
+  "kysymys": "Minkä katujen risteyksessä Zakopanen keskusta on?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Zakopanen keskusta on Krupówki- ja Kościuszko-katujen risteyksessä. Kaupunki sijaitsee laaksossa [[Tatra-vuorten]] ja Gubałówka-mäen välissä noin 800–1 100 metrin korkeudessa. Sijainti Tatran juurella on tehnyt siitä suositun vuoristokaupungin. Risteys, josta kaikki lähtee, no sellaisia minä arvostan.",
+  "linkit": [
+   "Tatra-vuorten"
+  ],
+  "jatkot": [
+   "Millainen mäki Gubałówka on?",
+   "Miksi Zakopanea kutsutaan talvipääkaupungiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zakopane",
+  "kysymys": "Missä maissa Tatra-vuoret sijaitsevat?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Tatra-vuoret sijaitsevat Puolan ja Slovakian rajalla, ja ne kuuluvat [[Karpaattien]] vuoristoon. Ne ovat Karpaattien korkein osa, ja Zakopane on yksi tunnetuimmista kaupungeista niiden juurella. Rajan yli lentää vapaasti, passia ei kyyhkyltä kysytä.",
+  "linkit": [
+   "Karpaattien"
+  ],
+  "jatkot": [
+   "Mitä Karpaatit ovat?",
+   "Mitä Slovakiassa on Tatran puolella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zakopane",
+  "kysymys": "Mikä Galitsia oli?",
+  "uusi": true,
+  "vastaus": "Ai tota. Galitsia oli historiallinen alue nykyisen Etelä-Puolan ja Länsi-Ukrainan seuduilla, ja siitä tuli Itävallan hallitsemaa aluetta Puolan ensimmäisen jaon jälkeen vuonna 1772. Siellä sijaitsi myös Zakopane, josta tuli 1800-luvulla Galitsian suurin metallurgian keskus, kuten lähteissä kerrotaan. Alueen historia liittyy tiiviisti [[Habsburgien]] monarkiaan ja [[Puolan]] jakoihin. Rajat on ollut täällä aika liukkaita.",
+  "linkit": [
+   "Habsburgien",
+   "Puolan"
+  ],
+  "jatkot": [
+   "Mikä Habsburgien monarkia oli?",
+   "Missä Galitsian raja kulki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zakopane",
+  "kysymys": "Kuka oli Stanisław Witkiewicz?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Stanisław Witkiewicz oli puolalainen taidemaalari ja kirjoittaja, ja hänet tunnetaan [[Zakopane-tyylin]] uranuurtajana. Tyyli sai innoituksensa [[Podhalen]] kansantaiteesta, ja sitä pidetään nykyään goralien perinteen ytimenä. Zakopanen talot ovat siksi helppo tunnistaa. Tyyli on kyl kaunis, vaikka en minä puusta rakentaisi.",
+  "linkit": [
+   "Zakopane-tyylin",
+   "Podhalen"
+  ],
+  "jatkot": [
+   "Millaisia Zakopane-tyylisiä taloja on?",
+   "Mikä Podhale on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kazimierz",
+  "kysymys": "Mikä sai Kazimierz Dolnyn kukoistamaan 1500- ja 1600-luvulla?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: Kazimierz Dolnyn kukoistuksen taustalla oli Veikselillä käyty [[viljakauppa]]. Kaupunki kukoisti eniten 1500-luvulla ja 1600-luvun ensimmäisellä puoliskolla, kun vilja kulki [[Veikselillä]] markkinoille. Kaupan taannuttua kaupunki jäi taloudelliseksi syrjäseuduksi, mikä säilytti sen vanhan ilmeen. Jyvät ne ovat kyyhkynkin lempiasia.",
+  "linkit": [
+   "viljakauppa",
+   "Veikselillä"
+  ],
+  "jatkot": [
+   "Miten vilja kuljetettiin joella?",
+   "Mikä Kazimierz Dolny on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kazimierz",
+  "kysymys": "Miksi kaupunki on säilyttänyt renessanssiajan ilmeensä?",
+  "uusi": false,
+  "vastaus": "Katotaas. Kun viljakauppa taantui, Kazimierz Dolnysta tuli taloudellinen syrjäseutu, ja juuri tämä pysähtyneisyys säilytti sen [[renessanssiajan]] kaupunkisuunnitelman ja ulkonäön. Uusia rakennuksia ei samalla tavalla tarvittu, joten vanha kaupunkikuva jäi paikoilleen. Nykyään kaupunki on lomakohde, ja [[viljakaupan]] aikainen ilme houkuttelee taiteilijoita ja kesäasukkaita. Ironista, kun köyhtyminen pelasti kauneuden.",
+  "linkit": [
+   "renessanssiajan",
+   "viljakaupan"
+  ],
+  "jatkot": [
+   "Mikä renessanssi oli?",
+   "Miksi taiteilijat viihtyvät pienissä kaupungeissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kazimierz",
+  "kysymys": "Mikä renessanssi oli?",
+  "uusi": true,
+  "vastaus": "Mmm— Renessanssi oli Euroopan kulttuurin ja taiteen kausi, joka alkoi [[Italiassa]] noin 1300-luvulla ja levisi sieltä muualle. Sen aikana kiinnostuttiin uudelleen [[antiikin]] oppeihin, ja taiteessa sekä rakentamisessa suosittiin tasapainoa ja suhteita. [[Puolassa]] renessanssi oli kukoistuskausi 1500-luvulla, ja Kazimierz Dolnyn kaupunkikuva on tästä ajasta. Italiassa ois ollut maritozzoa, kyl minä sen tiedän.",
+  "linkit": [
+   "Italiassa",
+   "antiikin",
+   "Puolassa"
+  ],
+  "jatkot": [
+   "Mikä antiikki oli?",
+   "Mitä renessanssin jälkeen tuli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kazimierz",
+  "kysymys": "Missä Lublin sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Lublin on kaupunki [[Itä-Puolassa]], ja se on Lublinin [[vojevodakunnan]] keskus. Kazimierz Dolny sijaitsee noin 50 kilometrin päässä siitä Veikselin itärannalla. Lublinin seutu on ollut tärkeä alue Puolan historiassa. Ylhäältä sen löytää helposti, kun seuraa jokea.",
+  "linkit": [
+   "Itä-Puolassa",
+   "vojevodakunnan"
+  ],
+  "jatkot": [
+   "Mikä on Lublinin vanhakaupunki?",
+   "Miten Lublinista pääsee Kazimierz Dolnyyn?"
+  ],
+  "paikka": {
+   "nimi": "Lublin",
+   "lat": 51.25,
+   "lon": 22.57,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-kazimierz",
+  "kysymys": "Kuka oli ruhtinas Kasimir II Oikeamielinen?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kasimir II Oikeamielinen oli 1100-luvun lopun puolalainen [[ruhtinas]], joka hallitsi [[Krakovassa]] ja oli Bolesław III:n poika. Hänen mukaansa Kazimierz Dolny on saanut nimensä. Kaupungin nimi on pysynyt samana jo vuosisatoja. Oikeamielinen, siinä on lempinimi kerrakseen.",
+  "linkit": [
+   "ruhtinas",
+   "Krakovassa"
+  ],
+  "jatkot": [
+   "Millaista Krakova oli keskiajalla?",
+   "Mitä ruhtinas tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zywiec",
+  "kysymys": "Kuka perusti Żywiecin panimon vuonna 1852?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä minä tiedän. Żywiecin panimon perusti vuonna 1852 arkkiherttua [[Albrecht]], joka oli [[Habsburg-Lothringenin]] arkkiherttua Kaarlen poika. Kaupungin tilat olivat siirtyneet Kaarlelle vuonna 1822. Panimon osti myöhemmin 1990-luvulla [[Heineken]]. Panimossa ois kyl pullaakin, jos joku kysyis.",
+  "linkit": [
+   "Albrecht",
+   "Habsburg-Lothringenin",
+   "Heineken"
+  ],
+  "jatkot": [
+   "Mikä Habsburg-Lothringenin suku oli?",
+   "Mistä Heineken on kotoisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zywiec",
+  "kysymys": "Miksi kaupunki siirrettiin nykyiselle paikalleen vuonna 1448?",
+  "uusi": false,
+  "vastaus": "Ai se. Vanha Żywiec oli altis tulville, ja siksi kaupunki siirrettiin vuonna 1448 nykyiselle paikalleen [[Soła-joen]] varrelle. Kaupunki kuuluu historiallisesti ja kulttuurisesti [[Pikku-Puolaan]] ja [[goralien]] maihin. Uusi paikka on vanhan linnan ja maisemapuiston läheisyydessä. Tulvaa ei kyyhky pelkää, siivet kuivuu.",
+  "linkit": [
+   "Soła-joen",
+   "Pikku-Puolaan",
+   "goralien"
+  ],
+  "jatkot": [
+   "Mikä Soła-joki on?",
+   "Millainen Żywiecin vanha linna on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zywiec",
+  "kysymys": "Mikä Habsburgien suku oli?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Habsburgit olivat keskieurooppalainen hallitsijasuku, joka hallitsi [[Itävaltaa]] vuosisatojen ajan ja jonka alaisuuteen kuului laaja joukko eri kansojen maita. Suvun valta päättyi ensimmäisen maailmansodan lopussa vuonna 1918, kun [[Itävalta-Unkarin]] monarkia hajosi. Habsburgien haara omisti myös Żywiecin tilat 1800-luvulla. Pitkä suku, mut kyl meikäläisten on pidempi.",
+  "linkit": [
+   "Itävaltaa",
+   "Itävalta-Unkarin"
+  ],
+  "jatkot": [
+   "Mikä Itävalta-Unkari oli?",
+   "Millaisia kaupunkeja Habsburgit rakennuttivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zywiec",
+  "kysymys": "Mihin jokeen Soła laskee?",
+  "uusi": true,
+  "vastaus": "No niin, tost minä osaan kertoo. Soła on Veikselin sivujoki, joka virtaa Etelä-Puolan vuoristoalueilta Żywiecin kautta ja laskee [[Veikseliin]]. Veikseli puolestaan päätyy lopulta [[Itämereen]]. Żywiecin järvi ja maisemapuisto sijaitsevat kaupungin lähellä. Vesi löytää tiensä, ja kyyhky löytää kotiin.",
+  "linkit": [
+   "Veikseliin",
+   "Itämereen"
+  ],
+  "jatkot": [
+   "Millainen on Żywiecin järvi?",
+   "Mikä Itämeri on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zywiec",
+  "kysymys": "Mistä aineksista olut valmistetaan?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Oluen perusainekset ovat vesi, [[mallas]], [[humala]] ja hiiva. Mallas valmistetaan idätetystä ja kuivatusta viljasta, yleensä ohrasta, humala antaa oluelle kitkeryyttä ja hiiva muuttaa [[käymisessä]] sokerin alkoholiksi ja hiilidioksidiksi. Żywiecissä panimotoiminta on vanhaa perua, sillä panimo perustettiin vuonna 1852. Pullan puolelta minä hiivan tunnen paremmin.",
+  "linkit": [
+   "mallas",
+   "humala",
+   "käymisessä"
+  ],
+  "jatkot": [
+   "Mikä ero on lagerilla ja alella?",
+   "Mihin humalaa käytetään oluen lisäksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kartuzy",
+  "kysymys": "Ketkä perustivat Kartuzyn noin vuonna 1380?",
+  "uusi": false,
+  "vastaus": "Kato, tän nimen kuulee heti. Kartuzyn perustivat noin vuonna 1380 [[Prahasta]] tulleet [[kartusiaanimunkit]], jotka rakensivat paikalle luostarin, ja kaupunki on saanut nimensä heiltä. [[Saksalainen ritarikunta]] antoi luostarille suuria maa-alueita, minkä jälkeen munkit raivasivat lähimetsiä ja houkuttelivat Pommerin ruhtinaskunnasta talonpoikia asuttamaan raivattuja alueita. Seutu kuuluu Itä-Pommerin historialliseen alueeseen noin 32 kilometriä Gdańskista länteen. Munkit tekivät kyl ison työn.",
+  "linkit": [
+   "Prahasta",
+   "kartusiaanimunkit",
+   "Saksalainen ritarikunta"
+  ],
+  "jatkot": [
+   "Millainen munkkikunta kartusiaanit ovat?",
+   "Mitä kašubit ovat Pommerin alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kartuzy",
+  "kysymys": "Minkä kansan kulttuurikeskus Kartuzy on ollut?",
+  "uusi": false,
+  "vastaus": "No niin, se on helppo. Kartuzy on pitkään ollut [[kašubien]] kulttuurikeskus. Kašubit ovat Pommerin alueella elävä länsislaavilainen kansa, jolla on oma kielensä, ja kaupungissa on toiminut [[kašubimuseo]] vuodesta 1947. Kaupunki sijaitsee Itä-Pommerin historiallisella alueella Pohjois-Puolassa. Siinä meni lyhyt vastaus.",
+  "linkit": [
+   "kašubien",
+   "kašubimuseo"
+  ],
+  "jatkot": [
+   "Millainen kieli kašubi on?",
+   "Miten Itä-Pommeri eroaa muusta Puolasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kartuzy",
+  "kysymys": "Millainen munkkikunta kartusiaanit ovat?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Kartusiaanit ovat katolinen luostarijärjestö, jonka perusti noin vuonna 1084 [[Bruno Kölniläinen]]. Järjestön nimi tulee [[Chartreuse-vuoristosta]] Ranskasta, jonne ensimmäinen luostari rakennettiin. Kartusiaanien elämä on vaikenemisen ja yksinäisyyden elämää: jokaisella munkilla on oma selli, ja yhteisiä hetkiä on vain vähän. Kartuzyn munkit tulivat Prahasta, ja luostari raivasi seutua viljelykselle.\n\nHiljaisuus kuulostaa minusta ihan mahdottomalta. Minä kuherran vähintään kolme kertaa päivässä.",
+  "linkit": [
+   "Bruno Kölniläinen",
+   "Chartreuse-vuoristosta"
+  ],
+  "jatkot": [
+   "Mistä Chartreuse-likööri on saanut nimensä?",
+   "Miten luostarit vaikuttivat Euroopan maatalouteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kartuzy",
+  "kysymys": "Mikä oli Puolan ensimmäinen jako vuonna 1772?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Vuonna 1772 [[Preussi]], [[Venäjä]] ja Itävalta liittivät itseensä osia Puola-Liettuan reuna-alueista, ja tapahtumaa kutsutaan Puolan ensimmäiseksi jaoksi. Preussi sai haltuunsa muun muassa Pommerin seutua, jolla Kartuzy sijaitsee. Jakoja oli kaikkiaan kolme: myöhemmät tapahtuivat 1793 ja 1795, minkä jälkeen Puola-Liettua lakkasi olemasta, ja itsenäinen Puola palasi kartalle vasta vuonna 1918. [[Puola-Liettuan]] valtio oli siis pitkään poissa kartalta.",
+  "linkit": [
+   "Preussi",
+   "Venäjä",
+   "Puola-Liettuan"
+  ],
+  "jatkot": [
+   "Miksi Puola-Liettua heikkeni 1700-luvulla?",
+   "Miten Puola sai itsenäisyytensä takaisin 1918?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kartuzy",
+  "kysymys": "Millainen kaupunki Gdańsk on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Gdańsk on Itämeren rannalla Pohjois-Puolassa sijaitseva satamakaupunki, jota kutsuttiin saksaksi nimellä [[Danzig]]. Se on vanha kauppakaupunki, ja sen telakoilta lähti 1980-luvun alussa liikkeelle [[Solidaarisuus]]-ammattiliike, jolla oli suuri merkitys Puolan ja koko Itä-Euroopan muutokselle. Kaupunki sijaitsee Veikselin suistoalueen läheisyydessä [[Itämeren]] rannalla. Ylhäältä katsoen satamat näyttävät aina vähän kutsuvilta.",
+  "linkit": [
+   "Danzig",
+   "Solidaarisuus",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miksi Gdańskia kutsuttiin ennen Danzigiksi?",
+   "Mikä oli Solidaarisuus-liikkeen merkitys Puolalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lowicz",
+  "kysymys": "Keiden asuinpaikka Łowicz oli Puola-Liettuassa?",
+  "uusi": false,
+  "vastaus": "Ai tota, helppo. Łowicz oli Puolan [[primasten]] eli arkkipiispojen residenssi Puola-Liettuassa. Kuningasvallan välivaiheessa kaupungista tuli väliaikainen Puolan pääkaupunki, ja siksi pienellä kaupungilla on yhä oma piispa ja [[tuomiokirkkobasilika]]. Nykyisin kaupungissa asuu noin 27 000 ihmistä Keski-Puolassa Łódźin maakunnassa. Pieni kaupunki, mutta vanhaa arvokkuutta riittää.",
+  "linkit": [
+   "primasten",
+   "tuomiokirkkobasilika"
+  ],
+  "jatkot": [
+   "Mikä on primas?",
+   "Mitä tuomiokirkkobasilika tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lowicz",
+  "kysymys": "Mitä ulkoilmamuseossa Łowiczin lähellä on?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Łowiczin ulkoilmamuseo on 17 hehtaarin laajuinen, ja se esittelee perinteisiä [[puutaloja]] ja kylämaailmaa. Kaupungissa on lisäksi merkittävä [[etnografinen museo]], joten perinteinen maalaiselämä on esillä sekä sisällä että ulkona. Kaupungin laidalla ovat myös entisen piispanlinnan rauniot. Kyllä kyyhky tykkää museosta, jossa on ulkotilaa.",
+  "linkit": [
+   "puutaloja",
+   "etnografinen museo"
+  ],
+  "jatkot": [
+   "Mitä etnografinen museo tutkii ja esittelee?",
+   "Millaisia puutaloja Puolan maaseudulla on rakennettu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lowicz",
+  "kysymys": "Mistä Łowiczin kansanpuvut ovat tunnettuja?",
+  "uusi": true,
+  "vastaus": "Mmm— tost minä osaan kertoo vähän. Muistini mukaan Łowiczin seudun kansanpuvut ovat tunnettuja värikkäistä raidallisista villakankaista, ja seutu tunnetaan myös [[wycinanki]]-nimisistä paperileikkeistä. Perinteisiä pukuja nähdään parhaiten juhlissa, esimerkiksi [[Corpus Christi]] -juhlan kulkueessa, jossa kuljetaan kansanpuvuissa. En ole varma yksityiskohdista, joten tarkemmat tiedot kannattaa tarkistaa museosta. Katolta katsottuna värit näyttävät varmasti hienoilta.",
+  "linkit": [
+   "wycinanki",
+   "Corpus Christi"
+  ],
+  "jatkot": [
+   "Mikä on Corpus Christi -juhla?",
+   "Miten kansanpuvut vaihtelevat eri puolilla Puolaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lowicz",
+  "kysymys": "Mikä on primas?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Primas on kirkon arvonimi: katolisessa kirkossa primas on maan arkkipiispoista arvoltaan ensimmäinen, ja Puolassa tämä asema kuuluu [[Gnieznon]] arkkipiispalle. Puola-Liettuassa primas oli myös valtiollisesti tärkeä henkilö, sillä kuninkaan kuoleman ja uuden valinnan välisenä aikana hän toimi väliaikaisena valtionpäämiehenä eli [[interrex]]-hallitsijana. Tästä syystä Łowicz, primasten residenssi, nousi väliaikaisesti kuningasvallan välivaiheessa pääkaupungiksi. Pitkä sana, lyhyt virka.",
+  "linkit": [
+   "Gnieznon",
+   "interrex"
+  ],
+  "jatkot": [
+   "Miksi Gniezno on Puolan kirkon vanha keskus?",
+   "Miten Puola-Liettuan kuninkaat valittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lowicz",
+  "kysymys": "Mitä tuomiokirkkobasilika tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Tuomiokirkko]] on kirkko, jossa [[piispan]] istuin eli katedra sijaitsee. Basilika on puolestaan joko rakennustyyppi, jossa keskilaiva on sivulaivoja korkeampi, tai kunnianimi, jonka [[paavi]] voi myöntää historiallisesti tai hengellisesti merkittävälle kirkolle. Łowiczissa kaksi nimitystä yhdistyy, koska kaupungissa on piispa ja tuomiokirkkobasilika. En ole varma, onko Łowiczin kirkon basilika-asema nimenomaan paavin myöntämä kunnianimi.",
+  "linkit": [
+   "Tuomiokirkko",
+   "piispan",
+   "paavi"
+  ],
+  "jatkot": [
+   "Mitä eroa on tuomiokirkolla ja tavallisella kirkolla?",
+   "Miten basilikan rakennustyyppi syntyi antiikissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ciechocinek",
+  "kysymys": "Minkä maailmanennätyksen kaupungin rakennelmat pitävät?",
+  "uusi": false,
+  "vastaus": "Kas vaan, ennätyksiä. Ciechocinek on kuuluisa maailman pisimmistä [[suolavesitorneista]], joita kutsutaan englanniksi nimellä graduation towers. Torneissa suolainen lähdevesi valutetaan korkean rakennelman läpi, jolloin veden haihtuessa ilmaan nousee hienojakoista suolasumua, ja tornien ympäristöä pidetään terveellisenä hengityksen kannalta. Kaupunki sijaitsee [[Veikselin]] rannalla Kuyavian–Pommerin maakunnassa, ja siellä asuu noin 10 400 ihmistä. Tarkkaa pituutta en ole varma, mutta pitkiä ne ovat.",
+  "linkit": [
+   "suolavesitorneista",
+   "Veikselin"
+  ],
+  "jatkot": [
+   "Miten suolavesitornit toimivat?",
+   "Miten Ciechocinekista tuli kylpyläkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ciechocinek",
+  "kysymys": "Mihin sairauksiin paikallisten lähteiden hoitovaikutukset kohdistuvat?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Ciechocinekin suolalähteitä käytetään [[kylpylähoidoissa]], ja suolavesitornien ympäristön ilmaa hyödynnetään erityisesti hengitysteiden hoidossa. Muistini mukaan kylpylän hoidot kohdistuvat myös tuki- ja liikuntaelinten sekä verenkiertoelinten vaivoihin. En ole varma täydellisestä luettelosta, joten tarkat tiedot kannattaa tarkistaa kylpylän omista lähteistä. Lääkäri tietää tästä enemmän kuin kyyhky.",
+  "linkit": [
+   "kylpylähoidoissa"
+  ],
+  "jatkot": [
+   "Mitä kylpyläkaupungissa tehdään lomalla?",
+   "Miksi suolainen ilma voi helpottaa hengitystä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ciechocinek",
+  "kysymys": "Miksi suolalla oli ennen niin suuri arvo?",
+  "uusi": true,
+  "vastaus": "No jopas, hyvä kysymys. Ennen jääkaappeja suolaa tarvittiin ruoan säilyttämiseen, ja siksi sitä kauppasivat ja verottivat kaikki, jotka saivat siitä tuloja. Puolassa suola oli arvokasta, ja kun [[Wieliczka]] ja [[Bochnia]] joutuivat Puolan ensimmäisessä jaossa Itävallalle, viranomaiset alkoivat kiinnostua Ciechocinekin ja läheisen Słońskin suolavaroista. [[Stanisław Staszicin]] aloitteesta laadittiin suolanvalmistushanke. Siitä alkoi kylpyläkaupungin tie, ja tästä asiasta kyyhky kirjoittaisi kirjeen heti.",
+  "linkit": [
+   "Wieliczka",
+   "Bochnia",
+   "Stanisław Staszicin"
+  ],
+  "jatkot": [
+   "Miten suolaa on saatu kaivoksista ja merivedestä?",
+   "Kuka oli Stanisław Staszic?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ciechocinek",
+  "kysymys": "Miten suolavesitornit toimivat?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, katsotaas. Suolavesitornissa suolainen lähdevesi pumpataan korkean puurakennelman huipulle ja valutetaan risukimppujen läpi alas. Samalla osa vedestä haihtuu, jolloin jäljelle jäävä [[suolaliuos]] väkevöityy, ja tornin ympärille syntyy suolaisen sumun kyllästämä [[mikroilmasto]]. Alun perin tornit rakennettiin suolan valmistuksen tehostamiseksi, ja myöhemmin ne on otettu hoitokäyttöön. Haihtuva vesi on kyllä kiehtovaa, vaikka lentäjälle pelkkä tuuli riittää.",
+  "linkit": [
+   "suolaliuos",
+   "mikroilmasto"
+  ],
+  "jatkot": [
+   "Mitä suolalla tehtiin ennen sähköä?",
+   "Miten hengitystiet reagoivat suolaiseen ilmaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ciechocinek",
+  "kysymys": "Mikä joki Veikseli on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Veikseli]] on Puolan pisin joki. Se saa alkunsa Karpaattien vuoristosta Etelä-Puolassa, virtaa [[Varsovan]] ja Krakovan kautta ja laskee Gdańskin lähellä [[Itämereen]]. Ciechocinek sijaitsee joen rannalla Pohjois-Keski-Puolassa, ja joki on ollut tärkeä kulkuväylä Puolan kaupalle. Tarkkaa pituutta en ole varma, mutta pitkä se on. Yläilmoista Veikseli näyttää hopeiselta nauhalta.",
+  "linkit": [
+   "Veikseli",
+   "Varsovan",
+   "Itämereen"
+  ],
+  "jatkot": [
+   "Miten Veikselin tulvat ovat vaikuttaneet kaupunkeihin?",
+   "Mitkä kaupungit sijaitsevat Veikselin varrella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornik",
+  "kysymys": "Kuka perusti Kórnikin arboretumin 1800-luvun alkupuolella?",
+  "uusi": false,
+  "vastaus": "Ai se. Kórnikin arboretumin perusti kreivi [[Tytus Działyński]] 1800-luvun alkupuolella. Hän ja hänen poikansa [[Jan Kanty Działyński]] teettivät myös linnaan 1855 uusgoottilaisen ilmeen, joka perustui osittain Karl Friedrich Schinkelin suunnitelmiin. Arboretum ympäröi linnaa, ja sen pinta-ala on noin 40 hehtaaria ja kasvilajeja eli taksoneja on yli 3 300. Lähteiden mukaan se on Puolan vanhimpia ja suurimpia puutarhoja. Puissa on aina hyvä istua.",
+  "linkit": [
+   "Tytus Działyński",
+   "Jan Kanty Działyński"
+  ],
+  "jatkot": [
+   "Mikä on arboretum ja mitä siellä tutkitaan?",
+   "Mitä uusgoottilainen tyyli tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornik",
+  "kysymys": "Kenelle kreivi Zamoyski testamenttasi linnan?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Kreivi testamenttasi linnan taidekokoelmineen ja arboretumeineen Puolan valtiolle ennen kuolemaansa vuonna 1924. Nykyään linnassa toimii museo sekä [[Kórnikin kirjasto]], jonka merkittäviin teoksiin kuuluu [[Adam Mickiewiczin]] Dziady-runoelman kolmannen osan alkuperäiskäsikirjoitus. Linna on 1300-luvulla rakennettu, ja se sijaitsee Wielkopolskassa. Siinä oli yksi hyvä lahjoitus.",
+  "linkit": [
+   "Kórnikin kirjasto",
+   "Adam Mickiewiczin"
+  ],
+  "jatkot": [
+   "Kuka oli Adam Mickiewicz?",
+   "Miksi kirjastot säilyttävät käsikirjoituksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornik",
+  "kysymys": "Kuka oli Adam Mickiewicz?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: runoilija. Adam Mickiewicz eli vuosina 1798–1855, ja häntä pidetään Puolan kansallisrunoilijana. Hänen tunnetuimpiin teoksiinsa kuuluvat runoelma [[Pan Tadeusz]] ja näytelmämäinen [[Dziady]], ja hän kuului [[romantiikan]] suuriin kirjailijoihin Euroopassa. Dziady-runoelman kolmannen osan käsikirjoitus on Kórnikin kirjastossa. Runoilijat ovat hieman kuin kirjekyyhkyjä, sanoma vain kulkee eteenpäin.",
+  "linkit": [
+   "Pan Tadeusz",
+   "Dziady",
+   "romantiikan"
+  ],
+  "jatkot": [
+   "Mistä Pan Tadeusz kertoo?",
+   "Mitä romantiikka tarkoitti kirjallisuudessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornik",
+  "kysymys": "Mitä uusgoottilainen tyyli tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Just niin, hyvä kysymys. [[Uusgotiikka]] on 1800-luvulla suosittu rakennustyyli, joka palautti keskiajan goottilaisia piirteitä: suippokaaria, torneja ja ikkunakoristeita. Kórnikin linna sai nykyisen ilmeensä vuonna 1855, ja muutos perustui osittain [[Karl Friedrich Schinkelin]] suunnitelmiin, vaikka linna itse on rakennettu jo 1300-luvulla. Tyyli oli tuolloin muotia monissa Euroopan linnoissa ja kirkoissa. Ylhäältä päin linna näyttää kyllä satukirjan kuvalta.",
+  "linkit": [
+   "Uusgotiikka",
+   "Karl Friedrich Schinkelin"
+  ],
+  "jatkot": [
+   "Kuka oli Karl Friedrich Schinkel?",
+   "Mitkä ovat goottilaisen arkkitehtuurin tunnuspiirteet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kornik",
+  "kysymys": "Millainen alue Wielkopolska on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Wielkopolska on Länsi-Puolan historiallinen alue, jonka suomenkielinen nimi on [[Suur-Puola]]. Aluetta pidetään usein Puolan valtion kehtona, ja sen vanhoja keskuksia ovat [[Poznań]] ja [[Gniezno]]. Kórnikin linna sijaitsee Wielkopolskassa, ja sen kaupunki on arboretumin ja museon ansiosta tunnettu kohde. Nimi on pitkä, mutta alue on kyllä helppo muistaa.",
+  "linkit": [
+   "Suur-Puola",
+   "Poznań",
+   "Gniezno"
+  ],
+  "jatkot": [
+   "Miksi Gniezno oli Puolan ensimmäinen pääkaupunki?",
+   "Mitä Poznańissa kannattaa nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lancut",
+  "kysymys": "Mitkä suvut olivat Łańcutin linnan tunnetuimmat omistajat?",
+  "uusi": false,
+  "vastaus": "Tuota niin, kolme sukua. Łańcutin linna oli aikanaan [[Pileckien]], [[Lubomirskien]] ja [[Potockien]] suvun asuinpaikka. Paikan omisti 1300-luvun jälkipuoliskolla Toporczykin suku, joka rakensi kukkulalle puulinnan. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Lubomirskit omistivat sen vuoteen 1816 ja Potockit vuoteen 1944, ja nykyään kompleksi on yksi Puolan virallisista kansallisista historiallisista monumenteista. Aika monta nimeä yhdeksi linnaksi.",
+  "linkit": [
+   "Pileckien",
+   "Lubomirskien",
+   "Potockien"
+  ],
+  "jatkot": [
+   "Miksi aatelisto muutti linnoja palatseiksi?",
+   "Mikä Subkarpaattien maakunta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lancut",
+  "kysymys": "Kuka suku omisti linnan vuoteen 1816?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Linnan omisti vuoteen 1816 [[Lubomirskien]] suku. Heidän jälkeensä linna siirtyi [[Potockien]] suvulle, joka omisti sen vuoteen 1944. Nykyinen linna on peräisin 1600-luvulta, ja omistajat muuttivat sen myöhemmin palatsiasunnoksi. Linna sijaitsee Subkarpaattien maakunnassa Kaakkois-Puolassa. Yhdessä lauseessa vastaus olisi riittänyt.",
+  "linkit": [
+   "Lubomirskien",
+   "Potockien"
+  ],
+  "jatkot": [
+   "Millainen oli aatelin asema Puola-Liettuassa?",
+   "Miten linnat rakennettiin keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lancut",
+  "kysymys": "Miksi aatelisto muutti linnoja palatseiksi 1600-luvulta alkaen?",
+  "uusi": true,
+  "vastaus": "No niin, siihen on selitys. Keskiaikaiset linnat oli rakennettu puolustamaan, mutta [[tykistön]] kehittyessä vanhat muurit eivät enää suojanneet kunnolla. Samaan aikaan aatelisto halusi asumismukavuutta ja edustuksellisia tiloja, jotka sopivat [[barokin]] aikakauden makuun: suuria saleja, puistoja ja koristeltuja julkisivuja. Siksi monet linnat saivat palatsin muodon, ja Łańcutin nykyinen linna on peräisin 1600-luvulta. Tämä koskee Euroopassa monia aatelissukujen asuinpaikkoja.\n\nMinä olisin valinnut palatsin heti: lämmin, korkea ja täynnä ikkunalautoja. Linnaa tuskin kukaan haluaa pullapäivänä.",
+  "linkit": [
+   "tykistön",
+   "barokin"
+  ],
+  "jatkot": [
+   "Miten tykistö muutti linnojen rakentamista?",
+   "Mitä barokkirakentaminen on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lancut",
+  "kysymys": "Millainen oli aatelin asema Puola-Liettuassa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Puola-Liettuassa aatelisto eli [[szlachta]] oli poikkeuksellisen suuri ja vaikutusvaltainen yhteiskuntaluokka. Kuningas valittiin vaalilla, ja aateliston edustajat kokoontuivat valtiopäiville eli [[Sejm]]iin, jossa päätöksentekoon vaikutti myös [[liberum veto]] -periaate: yksi edustaja saattoi estää päätöksen. Aateliston etuja puolustettiin niin sanotulla kultaisella vapaudella, ja linnat ja palatsit olivat sen vauraan elämäntavan näkyvä osoitus. Moni linna kertoo siitä, miten eri tavalla maata silloin hallittiin.",
+  "linkit": [
+   "szlachta",
+   "Sejm",
+   "liberum veto"
+  ],
+  "jatkot": [
+   "Miten liberum veto vaikutti Puola-Liettuan loppuun?",
+   "Miten Puola-Liettuan kuninkaat valittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lancut",
+  "kysymys": "Millainen alue Subkarpaattien maakunta on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Subkarpaattien maakunta eli Podkarpackie on Kaakkois-Puolan alue [[Karpaattien]] juurella. Sen pääkaupunki on [[Rzeszów]], ja maakunta rajoittuu etelässä Slovakiaan sekä idässä Ukrainaan. Łańcutin linna sijaitsee maakunnassa, ja se on yksi Puolan virallisista kansallisista historiallisista monumenteista. Vuorten läheltä on kyllä mukava lentää.",
+  "linkit": [
+   "Karpaattien",
+   "Rzeszów"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Rzeszów on?",
+   "Mitä Karpaattien vuoristossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pszczyna",
+  "kysymys": "Kuka ranskalainen arkkitehti johti palatsin uudistusta 1870-luvulla?",
+  "uusi": false,
+  "vastaus": "Kato, tän nimen minä muistan. Palatsin uudistusta vuosina 1870–1876 johti ranskalainen arkkitehti [[Gabriel-Hippolyte Destailleur]]. Uudistus tehtiin aikana, jolloin [[Pszczynan linna]] oli von Pless -suvun asuinpaikka ja Pless kuului Preussin kuningaskuntaan. Ranskalainen nimi puolalaisessa linnassa, kyl se kyyhkyä hymyilyttää.",
+  "linkit": [
+   "Gabriel-Hippolyte Destailleur",
+   "Pszczynan linna"
+  ],
+  "jatkot": [
+   "Millainen suku von Pless oli?",
+   "Millaista tyyliä linnan nykyinen ulkoasu edustaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pszczyna",
+  "kysymys": "Mikä säveltäjä vieraili palatsissa 1705?",
+  "uusi": false,
+  "vastaus": "No niin, tost minä osaan kertoo. Vuonna 1705 palatsissa vieraili säveltäjä [[Georg Philipp Telemann]], joka toimi tuolloin Promnitzin kapellimestarina. Hän vietti palatsissa paljon aikaa ja tutustui puolalaiseen ja määriläiseen kansanmusiikkiin, joka jätti jälkensä hänen sävellyksiinsä. Promnitzin suku oli saksalainen aatelissuku, joka piti [[Pszczynan linna]]a asuinpaikkanaan 1500-luvun puolivälistä 1700-luvun puoliväliin.\n\nKansanmusiikki on minusta aina kuulostanut paremmalta torin laidalta kuin salissa, mutta ehkä Telemann oli samaa mieltä, koska hän kuunteli sitä niin tarkasti.",
+  "linkit": [
+   "Georg Philipp Telemann",
+   "Pszczynan linna"
+  ],
+  "jatkot": [
+   "Millaista musiikkia Telemann sävelsi?",
+   "Millaista on määriläinen kansanmusiikki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pszczyna",
+  "kysymys": "Mikä suku asui Pszczynan linnassa 1700-luvun jälkeen?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Linna oli von Promnitz -suvun asuinpaikka 1500-luvun puolivälistä 1700-luvun puoliväliin, ja sen jälkeen siellä asui [[von Pless -suku]]. Aiemmin linnan omistivat Piast-herttuat, ja vuonna 1742 Pless liitettiin [[Preussin]] kuningaskuntaan. Sukujen vaihtuessa myös linnan ulkoasu muuttui, osittain barokki-klassistiseksi.\n\nPitkä suvunvaihtoketju, mut kyl minä pysyin mukana.",
+  "linkit": [
+   "von Pless -suku",
+   "Preussin"
+  ],
+  "jatkot": [
+   "Keitä olivat Piast-herttuat?",
+   "Miten Preussin kuningaskunta syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pszczyna",
+  "kysymys": "Mihin valtioon Pless liitettiin vuonna 1742?",
+  "uusi": true,
+  "vastaus": "Ai se. Vuonna 1742 Pless liitettiin Preussin kuningaskuntaan. Alue oli sitä ennen kuulunut muihin hallintoihin, ja liittäminen muutti sen asemaa [[Sleesian]] rajamaiden kartalla. Myöhemmin alueen mukana linnaa asuttivat saksalaiset von Pless -suvun jäsenet, ja 1870–1876 palatsin uudistusta johti ranskalainen arkkitehti. Rajat ovat siis siirtyneet useammin kuin kyyhky ehtii perään lentää, ja tarkat vuodet jätän sen takia vain tähän yhteen.",
+  "linkit": [
+   "Sleesian"
+  ],
+  "jatkot": [
+   "Mikä oli Preussin kuningaskunta?",
+   "Missä Pszczyna sijaitsee nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pszczyna",
+  "kysymys": "Mihin tyyliin linna rakennettiin uudelleen 1600-luvulla?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Linna rakennettiin 1600-luvulla uudelleen [[renessanssityyliin]]. Alun perin se oli rakennettu linnaksi 1200-luvulla tai aiemmin goottilaiseen tyyliin. Myöhemmin, 1700- ja 1800-luvuilla, ulkoasua muutettiin osittain barokki-klassistiseksi, ja nykyisin [[Pszczynan linna]] kuvataan klassististyyliseksi palatsiksi. Tyylit ovat kerrostuneet toistensa päälle kuin pullan kierteet.",
+  "linkit": [
+   "renessanssityyliin",
+   "Pszczynan linna"
+  ],
+  "jatkot": [
+   "Mitä renessanssi tarkoittaa rakennustaiteessa?",
+   "Mikä erottaa goottilaisen tyylin muista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lodz",
+  "kysymys": "Kenen Valkoisessa tehtaassa Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Puolan ensimmäinen höyrykäyttöinen kangaspuu aloitti toimintansa vuonna 1839 [[Ludwik Geyerin]] Valkoisessa tehtaassa [[Łódźissa]]. Tehdas edustaa kaupungin tekstiiliteollisuuden alkuvaiheita, ja teollistuminen kiihtyi etenkin sen jälkeen, kun tullimuuri Venäjän rajalta poistettiin 1851. Valkoinen tehdas on siis kutomisen historiaa, ja se kuulostaa kyyhkyn korvaan kovin kolkolta.",
+  "linkit": [
+   "Ludwik Geyerin",
+   "Łódźissa"
+  ],
+  "jatkot": [
+   "Miksi Venäjällä oli suuri kysyntä tekstiileille?",
+   "Mitä Valkoisessa tehtaassa on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lodz",
+  "kysymys": "Kuka rakennutti kaksitoista tehdasta ja eklektisen palatsin vuosina 1872–1892?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Vuosina 1872–1892 suuren tekstiilivalmistuskokonaisuuden rakennutti [[Izrael Poznański]]. Kokonaisuuteen kuului kaksitoista tehdasta, voimalaitoksia, työläistaloja ja eklektinen palatsi. Poznański oli yksi Łódźin teollisuusmagnaateista, ja toinen merkittävä rahoittaja oli [[Karl Wilhelm Scheibler]]. Ei paha rakennusurakka, ja minä vain katselin sitä ylhäältä.",
+  "linkit": [
+   "Izrael Poznański",
+   "Karl Wilhelm Scheibler"
+  ],
+  "jatkot": [
+   "Kuka oli Karl Wilhelm Scheibler?",
+   "Mitä eklektinen tyyli tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lodz",
+  "kysymys": "Minä vuonna Łódźin ja Koluszkin rautatie avattiin?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: vuonna 1865. Łódźin ja Koluszkin yhteys avattiin silloin, ja rautatie vauhditti kaupungin teollisuutta entisestään. Aiemmin kasvua oli edistänyt se, että tullimuuri poistettiin 1851, jolloin [[Łódźin]] tekstiilejä voitiin viedä vapaasti Venäjälle. Voimakkaimman teollistumisen aikaa olivat vuodet 1870–1890. Rautatiet kuuluvat niihin keksintöihin, joista kyyhky ei ole koskaan ollut täysin varma, onko ne kilpailija vai kollega.",
+  "linkit": [
+   "Łódźin"
+  ],
+  "jatkot": [
+   "Miten rautatiet muuttivat kaupunkien kasvua Euroopassa?",
+   "Millainen kaupunki Łódź on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lodz",
+  "kysymys": "Mitkä kaksi teollisuusmagnaattia rahoittivat Łódźin rakennuksia?",
+  "uusi": true,
+  "vastaus": "No jopas, hyvä kysymys. Łódźin rakennukset ja laitokset syntyivät teollisuusmagnaattien rahoilla, erityisesti [[Karl Wilhelm Scheiblerin]] ja [[Izrael Poznańskin]]. Heidän vaikutuksensa näkyy kaupungissa tehtaina, voimalaitoksina, työläistaloina ja palatseina. Poznański rakennutti vuosina 1872–1892 laajan tekstiilitehtaiden kokonaisuuden. Rahaa oli sillon paljon, sen verran sentään tiedän.",
+  "linkit": [
+   "Karl Wilhelm Scheiblerin",
+   "Izrael Poznańskin"
+  ],
+  "jatkot": [
+   "Millaisia työläistalot olivat?",
+   "Milloin Łódźin teollisuus kasvoi nopeimmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lodz",
+  "kysymys": "Miksi Łódźin tekstiilivienti Venäjälle vapautui 1851?",
+  "uusi": true,
+  "vastaus": "Ai tota. Vuonna 1851 Venäjän viranomaiset poistivat Kongressi-Puolalle asetetun tullimuurin. Sen ansiosta [[Łódź]] saattoi viedä tekstiilejään vapaasti Venäjälle, jossa kysyntä oli suurta. Tämä vauhditti kaupungin kasvua teollisuuskeskukseksi, jota rautatiet ja magnaattien rahoitus edistivät edelleen. Tulleista minulla ei ole kokemusta, kyyhky kun ylittää rajat ilman paperia.",
+  "linkit": [
+   "Łódź"
+  ],
+  "jatkot": [
+   "Mikä oli Kongressi-Puola?",
+   "Miten Łódź muuttui teollisuuden hiipuessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bochnia",
+  "kysymys": "Milloin Bochnian suolakaivos perustettiin?",
+  "uusi": false,
+  "vastaus": "Tuota niin. [[Bochnian suolakaivos]] perustettiin vuonna 1248, sen jälkeen kun suolaa oli löydetty alueelta 1100- ja 1200-luvuilla. Siitä tuli osa kuninkaallista Krakovan suolayhtiötä, ja se on Puolan vanhin kaupallinen yritys. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Ei ihme, että suolaa riitti, mutta kuka sen jaksoi kantaa.",
+  "linkit": [
+   "Bochnian suolakaivos"
+  ],
+  "jatkot": [
+   "Millaista suolan louhinta oli keskiajalla?",
+   "Miltä Bochnian kaivos näyttää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bochnia",
+  "kysymys": "Minkä kuninkaallisen yhtiön osaksi kaivos tuli?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Kaivoksesta tuli osa kuninkaallista Krakovan suolayhtiötä, puolaksi [[Żupy krakowskie]]. Yhtiö hallinnoi suolan louhintaa kuninkaan lukuun, ja [[Bochnian suolakaivos]] on tunnettu Puolan vanhimpana kaupallisena yrityksenä. Kaivos perustettiin vuonna 1248, ja suolan tuotanto päättyi 1990. Kuninkaallinen yhtiö, joo, ja minä olen vain kyyhky.",
+  "linkit": [
+   "Żupy krakowskie",
+   "Bochnian suolakaivos"
+  ],
+  "jatkot": [
+   "Miksi suola oli aikanaan arvokasta?",
+   "Mikä on Wieliczkan suolakaivos?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bochnia",
+  "kysymys": "Millä nimellä Krakovan suolayhtiö tunnetaan puolaksi?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: kysymys osui juuri kohdalleni. Krakovan suolayhtiö tunnetaan puolaksi nimellä [[Żupy krakowskie]]. Se oli kuninkaallinen yhtiö, ja [[Bochnian suolakaivos]] kuului siihen perustamisensa jälkeen. Kaivos on yksi maailman vanhimmista suolakaivoksista. Puolan lausuminen on kyyhkyn kielelle melkoinen urakka.",
+  "linkit": [
+   "Żupy krakowskie",
+   "Bochnian suolakaivos"
+  ],
+  "jatkot": [
+   "Miten kuninkaalliset yhtiöt toimivat keskiajalla?",
+   "Mitä Krakovan suolayhtiö tuotti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bochnia",
+  "kysymys": "Milloin Bochnian kaivos lopetti suolan tuotannon?",
+  "uusi": true,
+  "vastaus": "Mmm— muistan tämän. Kaivos lopetti suolan tuotannon vuonna 1990, mutta se on säilynyt matkailukohteena. Maanalaisessa kaupungissa on kammioita, kuiluja ja käytäviä, ja suurin säilynyt kammio on muutettu sanatorioksi. [[Bochnian suolakaivos]] kuuluu Unescon maailmanperintöluetteloon Wieliczkan kohteen laajennuksena vuodesta 2013. Maan alla ei ole kyyhkyllä mitään tekemistä, ja siks se jääköön ihmisille.",
+  "linkit": [
+   "Bochnian suolakaivos"
+  ],
+  "jatkot": [
+   "Millainen on sanatorio kaivoksen sisällä?",
+   "Miten Unescon maailmanperintökohde valitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bochnia",
+  "kysymys": "Mihin Unescon kohteeseen Bochnia kuuluu laajennuksena?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Bochnian suolakaivos kuuluu Unescon maailmanperintöluetteloon [[Wieliczkan suolakaivoksen]] kohteen laajennuksena vuodesta 2013. Kaivoksen kammiot, kuilut ja käytävät muodostavat maanalaisen kaupungin, ja kappelin läpi kulkevat junaraiteet. Kohde on myös [[Bochnian suolakaivos]] eli yksi maailman vanhimmista suolakaivoksista. Raiteet kappelissa ovat minusta aina olleet kummallinen yhdistelmä.",
+  "linkit": [
+   "Wieliczkan suolakaivoksen",
+   "Bochnian suolakaivos"
+  ],
+  "jatkot": [
+   "Mitä Wieliczkan kaivoksessa voi nähdä?",
+   "Mitä Unescon maailmanperintö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tarnowskie-gory",
+  "kysymys": "Mitä sana góry tarkoitti vanhassa puolassa?",
+  "uusi": false,
+  "vastaus": "Ai se. Sana góry tarkoitti vanhassa puolassa kaivoksia, vaikka nykypuolassa se tarkoittaa vuoria. Se on osa [[Tarnowskie Górin]] nimeä, joka tulee Tarnowice-kylästä ja kyseisestä sanasta. Kaupunki sijaitsee Sleesiassa Etelä-Puolassa Katowicen lähellä, ja siellä on Unescon maailmanperintökohde, historiallinen [[hopeakaivos]]. Kyl nimet kantavat historiaa mukanaan.",
+  "linkit": [
+   "Tarnowskie Górin",
+   "hopeakaivos"
+  ],
+  "jatkot": [
+   "Miten Sleesia on sijoittunut Puolan kartalle?",
+   "Miten hopeaa louhittiin kaivoksissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tarnowskie-gory",
+  "kysymys": "Mistä kylästä Tarnowskie Górin nimen alkuosa tulee?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Nimen alkuosa tulee Tarnowice-kylästä. Loppuosa góry tarkoitti vanhassa puolassa kaivoksia, joten [[Tarnowskie Górin]] nimi voidaan ymmärtää Tarnowicen kaivoksiksi. Kaupunki sijaitsee Sleesiassa Etelä-Puolassa, ja siellä on Unescon maailmanperintökohde, historiallinen [[hopeakaivos]]. Kylän nimeä en oikein osaa lausua, mutta kirjoittaa sen kyllä.",
+  "linkit": [
+   "Tarnowskie Górin",
+   "hopeakaivos"
+  ],
+  "jatkot": [
+   "Mikä Tarnowicen kylä on nykyään?",
+   "Mikä tekee hopeakaivoksesta maailmanperintökohteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tarnowskie-gory",
+  "kysymys": "Mikä kone tuotiin Walesista kaivosten vedenpoistoon 1788?",
+  "uusi": true,
+  "vastaus": "Nyt muistan tämän. Vuonna 1788 Walesista tuotiin [[Newcomenin ilmakehäkone]] tyhjentämään maanalaisia vesiä. Kone sytytti teollisen vallankumouksen paikalla, ja lopulta käytössä oli kahdeksan höyrykonetta. Tämä tapahtui [[Tarnowskie Górin]] hopeakaivoksilla Sleesiassa, joka kuuluu nykyisin Unescon maailmanperintöön. Höyrykoneet ovat kyyhkyn silmin kovin äänekkäitä, mutta kyl ne kaivoksesta veden poistivat.",
+  "linkit": [
+   "Newcomenin ilmakehäkone",
+   "Tarnowskie Górin"
+  ],
+  "jatkot": [
+   "Miten Newcomenin kone toimi?",
+   "Mikä oli teollinen vallankumous?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tarnowskie-gory",
+  "kysymys": "Montako höyrykonetta Tarnowskie Górin kaivoksilla lopulta käytettiin?",
+  "uusi": true,
+  "vastaus": "No niin, tämän minä muistan. Lopulta käytössä oli kahdeksan höyrykonetta. Ensimmäinen tuotiin Walesista vuonna 1788: [[Newcomenin ilmakehäkone]] tyhjensi maanalaisia vesiä ja sytytti teollisen vallankumouksen paikalla. [[Tarnowskie Górin]] hopeakaivos on nykyään Unescon maailmanperintökohde. Kahdeksan konetta, ja kaikki ne puhkuivat ilman minua.",
+  "linkit": [
+   "Newcomenin ilmakehäkone",
+   "Tarnowskie Górin"
+  ],
+  "jatkot": [
+   "Mihin hopeaa käytettiin?",
+   "Miksi kaivoksista piti poistaa vettä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tarnowskie-gory",
+  "kysymys": "Mitä kaupungissa perustettiin vuonna 1803?",
+  "uusi": true,
+  "vastaus": "Katotaas. Vuonna 1803 Tarnowskie Górissa perustettiin yksi maailman ensimmäisistä [[kaivoskouluista]]. Koulu liittyi kaupungin kaivosperinteeseen, johon kuuluivat myös höyrykoneet ja hopeamalmin louhinta. Malmin lähde ehtyi 1900-luvun alussa ja louhinta loppui kokonaan. [[Tarnowskie Górin]] hopeakaivos on nykyään Unescon maailmanperintökohde. Kaivoskoulussa kyyhkyllä ei olisi ollut paljoa opittavaa, ja ehkä se on pelkkä hyvä asia.",
+  "linkit": [
+   "kaivoskouluista",
+   "Tarnowskie Górin"
+  ],
+  "jatkot": [
+   "Mitä kaivoskoulussa opetettiin?",
+   "Miksi hopeamalmi ehtyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-boleslawiec",
+  "kysymys": "Millä saksankielisellä nimellä Bolesławiecin keramiikkaa kutsutaan?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tämän tiedän. Keramiikkaa kutsutaan kaupungin saksankielisen nimen mukaan [[Bunzlauer-keramiikaksi]]. Se kehittyi kansanperinteestä omaksi keramiikkalajikseen, joka erottuu muodostaan, massastaan, lasitteestaan ja koristelustaan. Se lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin, ja kaupunki, [[Bolesławiec]], sijaitsee Bóbr-joen varrella Ala-Sleesiassa. Kyl sellaisesta astiasta söisi mielellään jotain hyvää.",
+  "linkit": [
+   "Bunzlauer-keramiikaksi",
+   "Bolesławiec"
+  ],
+  "jatkot": [
+   "Miten Bunzlauer-keramiikka koristellaan?",
+   "Missä Ala-Sleesia sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-boleslawiec",
+  "kysymys": "Mikä Bolesławiecin ympäristössä soveltuu savenvalantaan?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Alueen savi soveltuu hyvin savenvalantaan. Astiat muotoiltiin potkukiekolla, kastettiin lietelasitteeseen ja poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Näin syntyi [[Bunzlauer-keramiikka]], josta [[Bolesławiec]] on tunnettu. Savessa ei ole kyyhkylle mitään kiinnostavaa, mutta astioista pidän.",
+  "linkit": [
+   "Bunzlauer-keramiikka",
+   "Bolesławiec"
+  ],
+  "jatkot": [
+   "Miten potkukiekko toimii?",
+   "Mitä lietelasite tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-boleslawiec",
+  "kysymys": "Missä lämpötilassa Bolesławiecin keramiikka poltettiin?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Astiat poltettiin suorakaiteen muotoisessa uunissa jopa 1 320 asteessa. Ennen polttoa ne muotoiltiin potkukiekolla ja kastettiin lietelasitteeseen. Alueen savi soveltuu hyvin savenvalantaan, ja [[Bunzlauer-keramiikka]] lasketaan Euroopan tärkeimpiin kansankeramiikan perinteisiin. [[Bolesławiec]] on pitkän keramiikkaperinteensä vuoksi kuuluisa kaupunki. Siellä on kuuma, ja kyl minä pysyn mielelläni katolla.",
+  "linkit": [
+   "Bunzlauer-keramiikka",
+   "Bolesławiec"
+  ],
+  "jatkot": [
+   "Miksi keramiikka poltetaan korkeassa lämmössä?",
+   "Mikä erottaa Bunzlauer-keramiikan muista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-boleslawiec",
+  "kysymys": "Millä joella Bolesławiec sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. [[Bolesławiec]] sijaitsee Bóbr-joen varrella Ala-Sleesiassa Lounais-Puolassa. Kaupunki perustettiin 1200-luvulla, ja se on tunnettu pitkästä keramiikkaperinteestään ja vanhastakaupungistaan. Joen lähellä oleva savi on osaltaan tehnyt [[Bunzlauer-keramiikasta]] mahdollista. Joki on kyllä kyyhkyllekin hyvä suunnistuspiste.",
+  "linkit": [
+   "Bolesławiec",
+   "Bunzlauer-keramiikasta"
+  ],
+  "jatkot": [
+   "Mitä vanhastakaupungista voi nähdä?",
+   "Millainen on Ala-Sleesian maisema?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-boleslawiec",
+  "kysymys": "Kuka Venäjän kenraalifeldmarsalkka kuoli Bolesławiecissa 1813?",
+  "uusi": true,
+  "vastaus": "Selvä. Venäjän kenraalifeldmarsalkka [[Kutuzov]] kuoli Bolesławiecissa 28. huhtikuuta 1813 Napoleonin sotien aikana. Kaupungissa vieraili Napoleonin sotien aikana myös [[Napoleon]] itse, kuuden tiedetyn käynnin mukaan. Tapahtumista on kulunut yli kaksisataa vuotta, ja aikanaan kaupungin hallitsijat ja rajat olivat toisenlaiset kuin nykyään. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Kutuzov",
+   "Napoleon"
+  ],
+  "jatkot": [
+   "Mikä oli Napoleonin sotien lopputulos?",
+   "Miten Kutuzov muistetaan Venäjällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-torun-zamek",
+  "kysymys": "Minkä ritarikunnan linna Toruńin rauniot olivat?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Toruńin linna oli [[Saksalaisen ritarikunnan]] linnoitus. Ritarikunta perusti sen 1200-luvun puolivälissä yhdeksi ensimmäisistä linnoistaan [[Kulmanmaalla]], ja se toimi aluksi komentajan asuinpaikkana sekä tukikohtana, josta käsin alistettiin pakanallisia preussilaisia. Linnasta on jäljellä lähinnä käymälätorni ja kellariholveja, ja ne kuuluvat nykyään [[Toruńin]] vanhankaupungin maailmanperintöalueeseen. Ei paha kyyhkyltä näin heti alkuun.",
+  "linkit": [
+   "Saksalaisen ritarikunnan",
+   "Kulmanmaalla",
+   "Toruńin"
+  ],
+  "jatkot": [
+   "Miksi Toruńin porvarit nousivat kapinaan ritarikuntaa vastaan?",
+   "Mistä Saksalainen ritarikunta sai alkunsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-torun-zamek",
+  "kysymys": "Miksi kaupunkilaiset purkivat linnan vuonna 1454?",
+  "uusi": false,
+  "vastaus": "No niin. [[Toruńin]] porvarit nousivat helmikuussa 1454 kapinaan ritarikunnan sortoa vastaan, ja linnan pieni saksalaisvarusväki antautui ja sai poistua. Sen jälkeen kaupunki ryösti linnan ja päätti purkaa sen kokonaan, jotta [[Saksalainen ritarikunta]] ei voisi vallata sitä takaisin. Tapahtuma käynnisti [[kolmentoista vuoden sodan]], joka kesti vuoteen 1466. Linnan jäännökset on kaivettu osin esiin, ja ne avattiin museona vuonna 1966. Onneksi siitä on jo yli viisisataa vuotta.",
+  "linkit": [
+   "Toruńin",
+   "Saksalainen ritarikunta",
+   "kolmentoista vuoden sodan"
+  ],
+  "jatkot": [
+   "Mitä kolmentoista vuoden sodassa lopulta ratkaistiin?",
+   "Millaisia linnoja Saksalainen ritarikunta rakensi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-torun-zamek",
+  "kysymys": "Miksi linnan käymälätorni rakennettiin puron päälle?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Keskiaikaisissa linnoissa käymälätorni rakennettiin usein joen, puron tai vallihaudan päälle, jotta virtaava vesi vei jätteet pois ja ne pysyivät kaukana asuintiloista. Ritarikunnan linnoissa tällaista tornia kutsuttiin nimellä [[dansker]], ja sellainen on Toruńin linnasta jäljellä. Tornilla saattoi olla myös puolustuksellinen merkitys, mutta en ole varma, miten se toteutui juuri Toruńissa. Aika arkinen aihe, mutta hyödyllinen.",
+  "linkit": [
+   "dansker"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisessa linnassa huolehdittiin juomavedestä?",
+   "Mikä on vallihauta ja mihin sitä käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-torun-zamek",
+  "kysymys": "Mikä on UNESCOn maailmanperintöluettelo?",
+  "uusi": true,
+  "vastaus": "Ai tota. Maailmanperintöluettelo on YK:n kasvatus-, tiede- ja kulttuurijärjestö [[UNESCOn]] ylläpitämä luettelo kohteista, joilla katsotaan olevan yleismaailmallista merkitystä koko ihmiskunnalle. Perustana on vuonna 1972 hyväksytty [[maailmanperintösopimus]]. Kohteet ovat kulttuuri- tai luonnonperintöä, ja maa, jonka alueella kohde sijaitsee, sitoutuu suojelemaan sitä. Myös [[Toruńin]] vanhakaupunki kuuluu luetteloon. Aika iso luettelo tuli selitettyä.",
+  "linkit": [
+   "UNESCOn",
+   "maailmanperintösopimus",
+   "Toruńin"
+  ],
+  "jatkot": [
+   "Mitä muita maailmanperintökohteita Puolassa on?",
+   "Miten kohde pääsee maailmanperintöluetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-torun-zamek",
+  "kysymys": "Mistä Preussi sai nimensä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Nimi tulee [[preussilaisista]], balttilaisesta heimosta, joka asui Itämeren etelärannikolla ennen kuin Saksalainen ritarikunta valloitti seudun 1200-luvulla. Ritarikunnan valtio muuttui myöhemmin sekularisoiduksi [[Preussin herttuakunnaksi]], ja nimi säilyi eri valtioissa vuosisatojen ajan. Alkuperäisten preussilaisten oman kielen tunnetaan kadonneen vuosisatoja sitten. Pitkä matka heimosta valtioksi.",
+  "linkit": [
+   "preussilaisista",
+   "Preussin herttuakunnaksi"
+  ],
+  "jatkot": [
+   "Millainen kieli vanha preussin kieli oli?",
+   "Milloin Preussin kuningaskunta syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ogrodzieniec",
+  "kysymys": "Minkä reitin varrella Ogrodzieńcin linna on?",
+  "uusi": false,
+  "vastaus": "Ai se. Linna on osa [[Kotkanpesät]]-linnojen reittiä, joka yhdistää alueen tunnettuja keskiaikaisia linnoja. Ogrodzieńcin linna kohoaa [[Jura-ylängön]] korkeimmalla kukkulalla, kalkkikivikallioiden ympäröimänä.\n\nKotkanpesät kuulostaa aika pröystäilevältä nimeltä. Kyyhkyn pesä olisi maltillisempi, mutta ei läheskään yhtä dramaattinen.",
+  "linkit": [
+   "Kotkanpesät",
+   "Jura-ylängön"
+  ],
+  "jatkot": [
+   "Mitä muita linnoja Kotkanpesät-reitin varrella on?",
+   "Millaista luontoa Jura-ylängöllä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ogrodzieniec",
+  "kysymys": "Mikä joukko poltti linnan osittain 1655?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Linnan polttivat osittain ruotsalaiset joukot vuonna 1655 [[Ruotsin]] miehityksen aikana. Vuonna 1702 [[Kaarle XII:n]] sotajoukot polttivat yli puolet linnasta uudelleen [[Isossa Pohjan sodassa]], eikä linnaa sen jälkeen enää koskaan korjattu. Se jäi vähitellen raunioiksi, ja lähialueen asukkaat käyttivät sitä rakennusaineksen lähteenä. Onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Ruotsin",
+   "Kaarle XII:n",
+   "Isossa Pohjan sodassa"
+  ],
+  "jatkot": [
+   "Mitä Puolassa tapahtui Ruotsin miehityksen aikana 1600-luvulla?",
+   "Mikä oli Iso Pohjan sota?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ogrodzieniec",
+  "kysymys": "Mikä on kalkkikivi ja miten se syntyy?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kalkkikivi on [[sedimenttikivilaji]], joka koostuu pääosin [[kalsiumkarbonaatista]]. Se syntyy yleensä meressä, kun merieliöiden kuoret ja luurangot kerrostuvat pohjaan ja kovettuvat vuosimiljoonien kuluessa kiveksi; osa kalkista saostuu myös suoraan vedestä. Jura-ylängön kalkkikalliot ovat pääosin [[jurakauden]] merenpohjaa. Aika vanhaa tavaraa, kyl.",
+  "linkit": [
+   "sedimenttikivilaji",
+   "kalsiumkarbonaatista",
+   "jurakauden"
+  ],
+  "jatkot": [
+   "Mistä Jura-kausi on saanut nimensä?",
+   "Mihin kalkkikiveä käytetään rakentamisessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ogrodzieniec",
+  "kysymys": "Miten renessanssilinna eroaa goottilaisesta linnasta?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Aikaisempi [[goottilainen]] linna oli ennen kaikkea puolustusrakennus, jossa oli paksut muurit, tornit ja pienet ikkunat. [[Renessanssi]] toi mukanaan symmetrian, runsaamman koristelun ja suuremmat ikkunat, ja linnasta tuli enemmän asuinpalatsi. Ogrodzieńcin linna laajeni renessanssilinnaksi 1500-luvulla [[Boner-suvun]] aikana. Tyylit vaihtuvat, kyyhky pysyy.",
+  "linkit": [
+   "goottilainen",
+   "Renessanssi",
+   "Boner-suvun"
+  ],
+  "jatkot": [
+   "Milloin renessanssi alkoi ja mistä se levisi?",
+   "Miten ruuti muutti linnojen rakentamista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ogrodzieniec",
+  "kysymys": "Kuka oli Ruotsin kuningas Kaarle XII?",
+  "uusi": true,
+  "vastaus": "Katotaas. Kaarle XII oli [[Ruotsin]] kuningas vuosina 1697–1718. Hänet tunnetaan sotakuninkaana, joka johti Ruotsia [[Isossa Pohjan sodassa]] ja kävi sotaretkiä muun muassa Puolassa. Hän kuoli vuonna 1718 [[Fredrikstenin linnoituksen]] piirityksessä Norjassa. Siitä on onneksi jo yli kolmesataa vuotta.",
+  "linkit": [
+   "Ruotsin",
+   "Isossa Pohjan sodassa",
+   "Fredrikstenin linnoituksen"
+  ],
+  "jatkot": [
+   "Miten Iso Pohjan sota vaikutti Suomeen?",
+   "Mitä Ruotsin suurvalta-aika tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "nosto:wieliczka",
+  "kysymys": "Miksi suolasta kannatti kaivaa vuori tyhjäksi?",
+  "uusi": false,
+  "vastaus": "Kas vaan. [[Wieliczkan]] kaivoksessa kaivettu suola oli ennen jääkaappeja välttämätöntä, koska sillä säilöttiin ruokaa, ja siitä maksettiin hyvin. Kaivosta johti kuninkaallinen Żupy Krakowskie, ja [[Kasimir III Suuri]] antoi sille etuoikeuksia sekä otti kaivosmiehet suojelukseensa. Suola kulki [[Krakovan kangashallin]] kautta maailmalle, ja tulot olivat sen mukaiset. Pöydässä suola näyttää kyllä paljon vaatimattomammalta.",
+  "linkit": [
+   "Wieliczkan",
+   "Kasimir III Suuri",
+   "Krakovan kangashallin"
+  ],
+  "jatkot": [
+   "Miten ruokaa säilöttiin suolalla ennen jääkaappeja?",
+   "Kuinka syvälle Wieliczkan kaivos ulottuu?"
+  ]
+ },
+ {
+  "kohde": "nosto:wieliczka",
+  "kysymys": "Miten kappelin voi veistää siitä, mikä louhitaan pois?",
+  "uusi": false,
+  "vastaus": "Ai se kappeli. Suolakivi on pehmeää kiveä, joten sitä pystyy työstämään käsityökaluilla toisin kuin esimerkiksi graniittia. [[Wieliczkan]] kaivoksessa kaivosmiehet veistivät suolasta alttareita, patsaita ja kokonaisia kirkkosaleja suoraan kaivoksen seiniin ja lattiaan. [[Pyhän Kingan kappeli]] on tunnetuin esimerkki, ja kerrotaan, että siellä myös kattokruunut on tehty suolakiteistä.\n\nMinä viihdyn mieluummin taivaalla, koska maan alla ei ole yhtään ilmavirtaa. Suolakiteistä tehty kattokruunu kuulostaa silti niin kauniilta, että voisin kerran käydä katsomassa.",
+  "linkit": [
+   "Wieliczkan",
+   "Pyhän Kingan kappeli"
+  ],
+  "jatkot": [
+   "Kuka Pyhä Kinga oli?",
+   "Kuinka syvällä maan alla kaivoksen kappeli sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "nosto:wieliczka",
+  "kysymys": "Mitä kaivokselle tapahtuu, kun sen tavara loppuu kaupasta?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Kaupallinen suolan louhinta [[Wieliczkan kaivoksessa]] päättyi 1990-luvulla, mutta tarkasta vuodesta en ole varma. Sen jälkeen kaivos on toiminut museona ja matkailukohteena, ja se on otettu [[maailmanperintöluetteloon]]. Kyllä kaivoskin osaa vaihtaa ammattia, kun tavara loppuu.",
+  "linkit": [
+   "Wieliczkan kaivoksessa",
+   "maailmanperintöluetteloon"
+  ],
+  "jatkot": [
+   "Kuinka monta kävijää kaivoksessa käy vuosittain?",
+   "Mitä muita suolakaivoksia Euroopassa on avoinna kävijöille?"
+  ]
+ },
+ {
+  "kohde": "nosto:wieliczka",
+  "kysymys": "Miten suolakerrokset ovat syntyneet maan alle?",
+  "uusi": true,
+  "vastaus": "Just niin. Suolakerrokset syntyvät, kun merivesi haihtuu. Muinainen matala meri tai merenlahti on voinut eristyä ja kuivua, jolloin veteen liuenneet suolat saostuivat pohjalle kerroksiksi, jotka myöhemmin peittyivät muilla sedimenteillä. [[Wieliczkan]] suola on peräisin tällaisesta muinaisesta merestä, joka haihtui miljoonia vuosia sitten, ja [[suolakivi]] on tämän kerrostuman kiinteää muotoa. Merestä kuiville, ja nyt siellä käydään kävelemässä.",
+  "linkit": [
+   "Wieliczkan",
+   "suolakivi"
+  ],
+  "jatkot": [
+   "Miksi Itämeri on vähemmän suolainen kuin valtameret?",
+   "Mihin suolaa käytetään ruoan lisäksi?"
+  ]
+ },
+ {
+  "kohde": "nosto:wieliczka",
+  "kysymys": "Kuka oli Kasimir III Suuri?",
+  "uusi": true,
+  "vastaus": "No jopas. Kasimir III Suuri oli Puolan kuningas, joka hallitsi vuosina 1333–1370. Hän oli [[Piast-suvun]] viimeinen kuningas, ja hänet muistetaan lainsäädännön, linnoitusten ja kaupunkien kehittämisestä. Vuonna 1364 hän perusti Krakovaan yliopiston, josta tuli myöhemmin [[Jagellonian yliopisto]]. Hänestä sanotaan, että hän muutti puisen Puolan kiviseksi. Aika paljon tehtyä yhdelle kuninkaalle.",
+  "linkit": [
+   "Piast-suvun",
+   "Jagellonian yliopisto"
+  ],
+  "jatkot": [
+   "Milloin Puola ja Liettua yhdistyivät?",
+   "Mikä oli Piast-suku?"
+  ]
+ },
+ {
+  "kohde": "nosto:torun-piparkakut",
+  "kysymys": "Miksi mausteleivonnasta tuli juuri yhden kaupungin ammatti?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Piparkakkuammatin synty johtui sijainnista: hyvä maaperä antoi vehnää, lähikylät hunajaa, ja mausteet tulivat kaukaa, pääosin Intiasta [[Mustanmeren]] ja [[Lvivin]] kautta tai meritse [[Gdańskin]] satamaan. Kaupunki tuki kauppaa verohelpotuksilla, ja 1500-luvulla lähistön sistersiläisluostari vaurastui pääosin tällä yhdellä työllä. Varhaisin maininta on vuodelta 1380 ja koskee leipuria nimeltä Niclos Czana. Ja tämä kaikki ilman, että kukaan kysyi pullasta.",
+  "linkit": [
+   "Mustanmeren",
+   "Lvivin",
+   "Gdańskin"
+  ],
+  "jatkot": [
+   "Mistä piparkakku on saanut nimensä?",
+   "Mikä on Nürnbergin Lebkuchen?"
+  ]
+ },
+ {
+  "kohde": "nosto:torun-piparkakut",
+  "kysymys": "Miten resepti pidetään salassa kokonaisen kaupungin kokoisena?",
+  "uusi": false,
+  "vastaus": "Hmm, salaisuuksia. Toruń ja Nürnberg varjelivat reseptejään toisiltaan pitkään, ja lopulta kaupungit tekivät vuonna 1556 sopimuksen, jonka mukaan kumpikin sai leipoa toisen erikoisuuksia. Keskiaikaisessa käsityössä salaisuus säilyi yleensä niin, että ammattitaito kulki vain [[kiltojen]] sisällä mestarilta oppipojalle, mutta Toruńin omista käytännöistä en ole varma. Esimerkiksi [[Nürnbergin]] piparkakkuperinne on samalla tavoin vanha. Pitkä salaisuus, ja silti se tuli tässä kerralla ilmi.",
+  "linkit": [
+   "kiltojen",
+   "Nürnbergin"
+  ],
+  "jatkot": [
+   "Miten kiltalaitos toimi keskiajalla?",
+   "Mitä Nürnbergin joulutori on?"
+  ]
+ },
+ {
+  "kohde": "nosto:torun-piparkakut",
+  "kysymys": "Mitä leivontamuotti kertoo siitä, kenelle leivottiin?",
+  "uusi": false,
+  "vastaus": "Kato ny. Yleisesti ottaen [[piparkakkumuotteihin]] veistettiin kuvia, jotka sopivat tilaisuuteen: pyhimyksiä ja hallitsijoita kirkkojuhliin, sydämiä ja pareja hääpöytään. Muotista voi siis päätellä, millaiseen juhlaan tai ostajaan kakku oli tarkoitettu, ja kuvat kertovat myös ajan makumaailmasta ja uskosta. Toruńin muottien tarkkoja aiheita en ole varma. Muotti on kyl se osa, jonka minä jättäisin syömättä.",
+  "linkit": [
+   "piparkakkumuotteihin"
+  ],
+  "jatkot": [
+   "Millaisesta puusta piparkakkumuotit yleensä veistettiin?",
+   "Miksi piparkakkuja leivotaan joulun aikaan?"
+  ]
+ },
+ {
+  "kohde": "nosto:torun-piparkakut",
+  "kysymys": "Mitä mausteita piparkakkuun tavallisesti tulee?",
+  "uusi": true,
+  "vastaus": "Mmm— mausteita. Piparkakun mausteet vaihtelevat reseptin mukaan, mutta tavallisimpia ovat [[kaneli]], [[inkivääri]] ja [[neilikka]], ja usein mukana on myös kardemummaa tai maustepippuria. Perinteisessä piparkakkutaikinassa makeuttajana käytetään usein hunajaa, ja Toruńissa hunaja tuli lähikylistä.\n\nTuoksun arvaan jo korkealta, ja se on minusta paras osa. Pulla ja piparkakku pitäisi vain pitää samassa taskussa.",
+  "linkit": [
+   "kaneli",
+   "inkivääri",
+   "neilikka"
+  ],
+  "jatkot": [
+   "Miten kaneli saadaan puusta mausteeksi?",
+   "Miksi hunajaa käytettiin ennen sokerin yleistymistä?"
+  ]
+ },
+ {
+  "kohde": "nosto:torun-piparkakut",
+  "kysymys": "Miksi Gdańsk oli ennen niin tärkeä satama?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Gdańsk sijaitsee [[Veikselin]] suistossa Itämeren rannalla, joten Puolan sisämaan tuotteet, kuten vilja ja puutavara, kulkivat jokea pitkin sinne ja sieltä meritse muualle Eurooppaan. Kaupunki kuului myös [[Hansaliiton]] kaupunkeihin, mikä helpotti kauppaa [[Itämeren]] ympärillä. Ylhäältä se näytti varmaan lokien valtakunnalta.",
+  "linkit": [
+   "Veikselin",
+   "Hansaliiton",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Mikä oli Hansaliitto?",
+   "Mitä Puolan sisämaassa viljeltiin ja vietiin ulkomaille?"
+  ]
+ },
+ {
+  "kohde": "nosto:wroclawin-kaapiot",
+  "kysymys": "Miksi kaupunki muistaa kääpiöillä eikä patsailla?",
+  "uusi": false,
+  "vastaus": "Joo, ne pikkuiset. Ensimmäinen kääpiöpatsas pystytettiin [[Wrocławin]] Świdnickan kadulle vuonna 2001 muistomerkiksi [[Pomarańczowa Alternatywa]] -liikkeelle, jonka tunnus kääpiö oli. Liikkeen tiedetään käyttäneen huumoria ja absurdeja katutapahtumia, joten pieni kääpiö sopii muistomerkiksi paremmin kuin juhlallinen patsas. Kaksi vuotta myöhemmin kaupunginjohtaja paljasti pienen laatan, ja elokuussa 2005 kuvanveistäjä [[Tomasz Moczek]] asetti paikoilleen viisi ensimmäistä hahmoa. Kyllä pienikin muistomerkki jaksaa naurattaa.",
+  "linkit": [
+   "Wrocławin",
+   "Pomarańczowa Alternatywa",
+   "Tomasz Moczek"
+  ],
+  "jatkot": [
+   "Mitä Moczekin ensimmäiset viisi hahmoa esittivät?",
+   "Missä Wrocław sijaitsee Puolan kartalla?"
+  ]
+ },
+ {
+  "kohde": "nosto:wroclawin-kaapiot",
+  "kysymys": "Kuinka monta hahmoa kaupunkiin mahtuu?",
+  "uusi": false,
+  "vastaus": "Laskeminen on vaikeaa. Hahmoja on yli tuhat, ja niitä on tullut lisää vuosien mittaan, joten tarkkaa nykyistä lukua en ole varma. Ensimmäiset viisi, Miekkailija, Teurastaja, kaksi [[Sisyfosta]] ja Odranpesijä, asetettiin paikoilleen elokuussa 2005, ja jokainen [[krasnale]]-hahmo on vain kaksikymmentä tai kolmekymmentä senttiä korkea. Kaupunki ei ole vielä sanonut, että tuli täyteen.",
+  "linkit": [
+   "Sisyfosta",
+   "krasnale"
+  ],
+  "jatkot": [
+   "Kuka oli Sisyfos kreikkalaisessa tarustossa?",
+   "Miten Wrocławin kääpiöitä tehdään pronssista?"
+  ]
+ },
+ {
+  "kohde": "nosto:wroclawin-kaapiot",
+  "kysymys": "Voiko muistomerkki olla piiloleikki?",
+  "uusi": false,
+  "vastaus": "Ai tuo leikki. Voi, ja [[Wrocławissa]] se on juuri sitä: [[krasnale]]-hahmot istuvat kadunkulmissa, ikkunalaudoilla ja portaiden kaiteilla, joten ne näkee vain katsomalla alas tai sivuun. Esimerkiksi kaupunginjohtajan paljastama laatta on polven korkeudella vanhan porvaristalon seinässä [[Pyhän Elisabetin kirkon]] ja torin välissä. Näin muistomerkistä tulee etsintäleikki, jossa kadut on kuljettava tarkemmin.\n\nMinä katson kaupunkeja ylhäältä, joten polven korkeudella oleva muistomerkki jäisi minulta kokonaan huomaamatta. Pitäisi kävellä, ja se on kyyhkylle epäilyttävä ajatus.",
+  "linkit": [
+   "Wrocławissa",
+   "krasnale",
+   "Pyhän Elisabetin kirkon"
+  ],
+  "jatkot": [
+   "Mikä on Pyhän Elisabetin kirkko Wrocławissa?",
+   "Millaisia muita pieniä patsaita Euroopan kaupungeissa on?"
+  ]
+ },
+ {
+  "kohde": "nosto:wroclawin-kaapiot",
+  "kysymys": "Mikä oli Wrocławin nimi, kun se kuului Saksaan?",
+  "uusi": true,
+  "vastaus": "Odotas hetki. Saksaksi kaupungin nimi oli Breslau. Kaupunki on historiallisesti [[Sleesian]] keskus ja kuului [[Preussin]] ja myöhemmin [[Saksan keisarikunnan]] osana Saksaan aina vuoteen 1945 saakka, jolloin se toisen maailmansodan jälkeen siirtyi Puolalle ja sai nimen Wrocław. Isoisän matkavuonna 1873 kaupunki oli siis vielä Breslau. Nimet vaihtuvat, mutta kaupunki jää.",
+  "linkit": [
+   "Sleesian",
+   "Preussin",
+   "Saksan keisarikunnan"
+  ],
+  "jatkot": [
+   "Missä Sleesia sijaitsee?",
+   "Mitä muita kaupunkeja siirtyi Puolalle sodan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "nosto:wroclawin-kaapiot",
+  "kysymys": "Mikä oli Solidaarisuus-liike Puolassa?",
+  "uusi": true,
+  "vastaus": "Selvä, tuo on tärkeä asia. Solidaarisuus eli Solidarność oli puolalainen vapaa ammattiyhdistys ja kansanliike, joka syntyi elokuussa 1980 [[Gdańskin]] telakan lakon yhteydessä. Sen tunnetuin johtaja oli [[Lech Wałęsa]]. Joulukuussa 1981 julistettu [[sotatila]] ajoi liikkeen maan alle, mutta vuoden 1989 neuvottelujen ja osittain vapaiden vaalien jälkeen kommunistinen valta Puolassa päättyi. Onneksi siitä on jo vuosikymmeniä.",
+  "linkit": [
+   "Gdańskin",
+   "Lech Wałęsa",
+   "sotatila"
+  ],
+  "jatkot": [
+   "Milloin Puola liittyi Euroopan unioniin?",
+   "Miten Puola siirtyi demokratiaan vuonna 1989?"
+  ]
  }
 ]
