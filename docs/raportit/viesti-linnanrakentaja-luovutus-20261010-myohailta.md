@@ -35,3 +35,6 @@ Ei taustaajoja, ei worktreetä. Python-kuvatyökalut: `/Users/Shared/Claude/prot
   → oikein (ei maamuutosta). SEURAUS: LS2:n kattovertailu (orto 161/130/101) on myös × 1,6 → todellinen kattoalbedo ~ /1,6 (S2:ssa sekoittuu
   varjoja) → Peking v4:n katot (arvio peli ~158/128/102) voivat yhä olla liian kirkkaat. Odota LS2:n mittaus ja vertaa albedoon
   (Karttasepän albedo-luokat.json, jos Pekingille tulee; nyt vain ND/prefektuuri/Eiffel/Louvre/KL/Olavinlinna).
+- LS2 20.1x (Peking v4 mitattu d954970eb, 1 300 m klo 13): ×1,6 kumoutuu suhteessa pihoihin. Katto/piha R/G/B peli 1,19/1,03/0,75 vs S2
+  1,05/0,88/0,73 → katot yhä ~13 % (R) ja 17 % (G) liian kirkkaat, B osuu. EHDOTUS Peking v5: kulta_katto R × 0,88, G × 0,85, B ennallaan
+  (v4:n päälle; pinnat.py → aja_laatat.zsh → vertailuportti → LS2). Absoluuttista orto/1,6:tta EI käytetä (katot pihoja tummemmiksi = väärin).
