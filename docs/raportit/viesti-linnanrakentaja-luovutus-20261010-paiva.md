@@ -120,6 +120,11 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
 - (12.0x) Peking v2 LS2:lle: maamerkit Sisältökirjurin mitoilla (monumentit.py v2, monumentit_geom: pylväiköt aukiolle, mausoleumi,
   nuolitornin aukot, stupa, pyöreät/8-kulmaiset Jingshanin paviljongit, uusi materiaali katto_sininen). Talteen glb-v1c/. Eiffel v1d (maa 95/91/87).
   Odottaa: seuraavan LS2:n Peking-pari Googlea vasten → säätö.
+- (12.3x) Peking v2b LS2:lle (PT 11.1x -lista tehty): pihapuut (pihatalot.PIHAT), julkisivut julkisivu/_b/_c/_d (crc32(id) % 5),
+  Karttasepän päivitetty paketti 10.4x (47 hallia/porttia raakakorkeudella; vanha lr-ennen-hallit/) → luokittele.py ajettu uudelleen. Talteen glb-v2/.
+  Worktree linnanrakentaja-linna-v45e poistettu (Postivahti). JONO: LS2:n Peking-pari → säätö; taidemuseon NL-sali v2: Sisältökirjurin 35 patsasta
+  _valmiit/taidemuseo-alankomaat-patsaat-vienti-20261010/.../patsaat/glb/ (patsaat.json, CC BY -krediitti) + 13 grafiikkaa/valokuvaa
+  _valmiit/taidemuseo-alankomaat-grafiikka-vienti-20261010/.../teokset.grafiikka.v2.json (pienet → komerot/kabinetit); dekimointi + pakkaus meillä.
 
 ## SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)
 1) **PEKING** (omistaja 09.3x: koekaupunki ~2 × 2 km: Kielletty kaupunki, Jingshan, Beihai, Tian'anmen, hutongit; poikkeus ei avaa muuta
