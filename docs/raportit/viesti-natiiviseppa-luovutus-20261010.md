@@ -5,6 +5,16 @@ proto-repo /Users/Shared/Claude/proto-3d/Matkakirja-proto. Edellinen luovutus: v
 **Istuntoviestit (SendMessage) olivat 10 viestin rajalla 00.46 alkaen** → kaikki sen jälkeen postissa
 docs/raportit/posti-natiiviseppa-20261010.md (lue kokonaan). Raportti: docs/raportit/muistimittaus-juna173-20261010.md.
 
+## TILA 10.10. 05.0x (uusin)
+- **JUNA 174 LUKITTU 05.03**: master **5f84c3594** (BUILD 174), juna/b13 **a0cb97549**, simukäännös c00caf146. Muistiajo 174 (b4e6f6951):
+  A v6h3 0,68, B 0,75, A v6hk3 0,75 Gt; uusin-4 → v6hk3 (Julkaisija). Muutosloki 174 PT:n kuittaama (BUILD 174 -commitissa). VIE-ehto:
+  Siirtosepän v46q 0° (päivä + hämärä) OK. TF-järjestys: 173 (kiinteä 39bb6921561fda7dcce7d11205adc90e6d315a51) omistajan nyt-sanalla,
+  174 heti perään.
+- 172:n B-polku v6b3:lla (65db09ce5): JETSAM 41 s (vapaa 0,01 Gt) → TF 172 kaatuu yhä; rivi PT:lle (aamun kortti).
+- Juna 175 jono (ei kuitattu): LS1 ikkunavalot-175 a753d5b34 (+2,36 Mt GPU), maa-dtm-175 08baea921 (+4,5 Mt), julkisivuvalot 02421cc9b;
+  LR Eiffel v1 (_valmiit/eiffel-v1, lod0 205 k kärkeä ~18 Mt, COLOR_0, ok). NUI: asettelutesti kahdessa osassa (sovittu b).
+- Worktreet: j173, j174, unity67 (T7).
+
 ## TILA 10.10. 03.5x (uusin; Natiiviseppä Opus max, konteksti 51 %)
 - **JUNA 173 LUKITTU 03.41**: master **39bb69215** (BUILD 173), juna/b13 **85436c355**, simukäännös be06cd054, juna.log kirjattu. TF vasta
   omistajan nyt-sanalla (PT:n aamukortti). Muutosloki Julkaisijalla. iPad-portti (v6h3, oikea osoitin): R20 A 0,66 Gt (85436c355),
