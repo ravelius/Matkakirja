@@ -22,10 +22,15 @@ juna-haara mukana tai haara, joka on junan päällä).
 Juurisyy: 87f1dd8a0 (LS1) käynnistää uuden esittelyn suoraan saapumisesta; luennaton saapumisluenta päättyy heti → PeliOhjain.LuentoLoppui
 → Saapumisesitys.Loppui → LoppuiJatko kesken esittelyn: Tyhjenna piilotti Ohitan ja pakan ja Livian kommentti alkoi esittelyn päälle
 (vianhaku todistus-pakka-diag-iphone-*: mk-ohita 0, mk-kuvakortti 0 vaikka c1–c5 lokissa).
-Korjaus natiivi-ui/esittely-pakka-180 **81a694496** (juna-180 44af9cda2:n päällä): Loppui palaa heti, kun introKaupunki == k.
-Käännös ja todennus käynnistetty 22.2x (scratchpad pakka-sarja.sh → proto-3d/lokit/natiivi-ui-app-pakka-180, todistus-pakka-iphone-180-*,
-todistus-pakka-ipad-180-*; skenaario maara mk-ohita 1 / mk-kuvakortti 1 ja 3). JÄLJELLÄ: katso tulokset → jos OK, kuittausrivi + SHA PT:lle,
-"lukko vapaa" ja "SIMU VAPAA" Julkaisijalle; jos PUUTE, jatka vianhakua (ElavaHerays.KuvapakkaLahtee → Hiljeni(0) on toinen pakan tyhjentäjä).
+Korjaus natiivi-ui/esittely-pakka-180 **81a694496** (Loppui palaa, kun introKaupunki == k) EI RIITTÄNYT: käännös f3270ff2c (22.12,
+app proto-3d/lokit/natiivi-ui-app-pakka-180), todistus-pakka-iphone-180-20261010-2212 ja -ipad-180-2214: yhä mk-ohita 0 ja mk-kuvakortti 0,
+vaikka c1–c5 tulevat lokiin. Korjaus on silti oikea (Livian kommentti ei ala esittelyn päälle), mutta juurisyy on muualla.
+HAVAINNOT jatkoon: (1) matkakirjakortti on esittelyn ajan "pieni" (179:ssä luennan aikana iso, pakka näkyi myös pienen kortin aikana);
+(2) Luentakuvasarja on samassa turva-säiliössä kuin kortti, joten säiliö ei ole piilossa → epäilyt: pakka.style.visibility Hidden
+(Matkakirjakortti.NaytaSallittu(false) LinssiUi-pelielementeistä elävän kartan saapumisesityksen aikana, ja esittely alkaa nyt sen aikana
+"elävä: 1,27 s luovutus" -vaiheessa, eikä palautus osu pakkaan) tai kuvat eivät synny (Kuvat.Hae → null). Seuraava askel: vianhakuskenaario
+(scratchpad pakka-diag.txt mallina) + lokirivi Luentakuvasarja.Lisaa/NaytaSallittu -kutsuihin, tai `ui puu` -tiedosto simun Documents-kansiosta
+ajon aikana. Kysy LS1:ltä (87f1dd8a0 on hänen). 179:n vertailu: todistus-pariisi-esittely-179b-puhelin-20261010-1755 (pakka näkyy).
 
 ## Seuraavaksi (PT)
 
