@@ -333,6 +333,17 @@ jobs:
           test -f "Build/$VIENTI_KANSIO/Info.plist"
           /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMERO" "Build/$VIENTI_KANSIO/Info.plist"
           /usr/libexec/PlistBuddy -c "Set :CFBundleShortVersionString $VERSIO" "Build/$VIENTI_KANSIO/Info.plist"
+          # ITMS-90208 (Apple hylkäsi TF 175:n 10.10.2026): Unity 6.7:n UnityRuntime.framework on Embed Frameworks -vaiheessa,
+          # ja sen Info.plistin MinimumOSVersion (15.0) on pienempi kuin appin IPHONEOS_DEPLOYMENT_TARGET (17.0). Pikakorjaus:
+          # frameworkin MinimumOSVersion = appin tavoite. Pysyvä korjaus Natiivisepän vientikoodiin.
+          UR="Build/$VIENTI_KANSIO/Frameworks/UnityRuntime.framework/Info.plist"
+          if [ -f "$UR" ]; then
+            tavoite=$(grep -o "IPHONEOS_DEPLOYMENT_TARGET = [0-9.]*" "Build/$VIENTI_KANSIO/Unity-iPhone.xcodeproj/project.pbxproj" | awk '{print $3}' | sort -V | tail -1)
+            [ -n "$tavoite" ] || { echo "::error::IPHONEOS_DEPLOYMENT_TARGET puuttuu pbxproj:sta"; exit 1; }
+            /usr/libexec/PlistBuddy -c "Set :MinimumOSVersion $tavoite" "$UR" 2>/dev/null \
+              || /usr/libexec/PlistBuddy -c "Add :MinimumOSVersion string $tavoite" "$UR"
+            echo "UnityRuntime.framework MinimumOSVersion → $tavoite"
+          fi
 
       - name: Pura App Store Connect -avain
         if: env.OHITA != '1'
