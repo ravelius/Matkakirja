@@ -1,0 +1,206 @@
+================ KOHTA 21 (kohde:hahmotelma-suzdal) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Zaisanin muistomerkki] 1969–1971 Muistomerkin rakentaminen alkoi 1969 pääarkkitehti A. Khishigtin johdolla, ja se paljastettiin 1971. Se on kaupungin eteläpuolella Tuulin takana olevalla kukkulalla. Alhaalta pohjoisrinteen aukiolta nousee kukkulan laelle 612 porrasta eli kolmesataa metriä portaita, ja lisäksi 680 metrin pituinen tie vie noin puoliväliin. Aukion muurissa on mongoliksi ja venäjäksi kirjoitettu omistusteksti. Laella oleva rakennelma on rengas, jonka muoto on otettu mongolialaisesta tulgasta eli liesijalustasta; se on elämän vertauskuva. Renkaan sisäpintaa kiertää maalaus, jonka aiheet ovat neuvostoliittolais-mongolialaisen yhteistyön vaiheita, ja renkaan vieressä seisoo 27-metrinen sotilaspatsas lip…
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+
+### 21.1
+KYSYMYS: Miksi Suzdal on säilynyt niin hyvin verrattuna moniin muihin Venäjän kaupunkeihin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+### 21.2
+KYSYMYS: Mikä on Kultainen rengas?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suzdal (kulttuuri)
+Tietoruudun teksti: Suzdal mainitaan lähteissä ensi kerran vuonna 1024, ja 1100-luvun alussa siitä tuli Rostov-Suzdalin ruhtinaskunnan pääkaupunki Vladimir Monomahin aikana; ruhtinas Juri Dolgoruki, myöhemmin Moskovan perustajaksi mainittu hallitsija, hallitsi täältä käsin. Kaupunki on nykyisin Kultaisen renkaan pienin jäsen, mutta se säästyi neuvostoajan teollistumiselta, joten 1200–1800-lukujen arkkitehtuuri on säilynyt lähes koskemattomana. Suzdalissa on yli 300 suojeltua muistomerkkiä, kolmisenkymmentä kirkkoa ja viisi luostaria pienellä alueella, ja Unesco listasi Vladimirin ja Suzdalin valkoiset muistomerkit maailmanperintöön 1992. Kaupungin ainutlaatuinen tunnelma on houkutellut yli 60 elokuvantekijää kuvauspaikaksi, muun muassa klassikon Andrei Rubljov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ulan Bator — kohdekartta / Kohdekartta: Zaisanin muistomerkki] 1969–1971 Muistomerkin rakentaminen alkoi 1969 pääarkkitehti A. Khishigtin johdolla, ja se paljastettiin 1971. Se on kaupungin eteläpuolella Tuulin takana olevalla kukkulalla. Alhaalta pohjoisrinteen aukiolta nousee kukkulan laelle 612 porrasta eli kolmesataa metriä portaita, ja lisäksi 680 metrin pituinen tie vie noin puoliväliin. Aukion muurissa on mongoliksi ja venäjäksi kirjoitettu omistusteksti. Laella oleva rakennelma on rengas, jonka muoto on otettu mongolialaisesta tulgasta eli liesijalustasta; se on elämän vertauskuva. Renkaan sisäpintaa kiertää maalaus, jonka aiheet ovat neuvostoliittolais-mongolialaisen yhteistyön vaiheita, ja renkaan vieressä seisoo 27-metrinen sotilaspatsas lip…
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-nizni-novgorod) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nižni Novgorodin messut (kaupungit)
+Tietoruudun teksti: Nižni Novgorodin messut olivat Venäjän suurin kauppatapahtuma, jonka juuret ulottuvat 1500-luvulle Makarjevin luostarin liepeille Volgan varrella. Moskovan suurruhtinaat perustivat messut alun perin houkutellakseen kauppaa pois Kazanin markkinoilta, jotka olivat toimineet jo vuodesta 1257. Vuoden 1816 tulipalon jälkeen messut siirrettiin nykyiselle paikalleen Nižni Novgorodiin, ja parhaimmillaan ne kokosivat kauppiaita aina Intiasta, Persiasta ja Keski-Aasiasta asti. Huipussaan 1900-luvun alussa messualueella oli 60 rakennusta ja peräti 2 500 kauppapaikkaa, ja messujen kautta kulki jopa puolet koko Venäjän vientituotannosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+- [Adelaide — kohdekartta / Kohdekartta: Eläintarha] 1883 Adelaiden eläintarha avattiin 23. toukokuuta 1883 ja on Australian toiseksi vanhin Melbournen jälkeen. Sen perusti Etelä-Australian kotouttamis- ja eläintieteellinen seura valtiolta saadulle maalle. Seurasta tuli kuninkaallinen 1937, kun Yrjö VI myönsi sille kuninkaallisen peruskirjan. Ensimmäinen johtaja oli R. E. Minchin 1882–1893; häntä seurasi poika A. C. Minchin 1893–1934 ja tätä pojanpoika R. R. L. Minchin 1935–1940 — kolme sukupolvea samassa virassa. Viisi rakennusta on suojeltu, niiden joukossa Frome Roadin pääportti ja vuoden 1900 norsutalo. Norsutalossa ei enää pidetä eläimiä, vaan siellä on opasteita; viimeinen norsu Samorn siirrettiin 1991 Monarton laajaan puistoon, jossa s…
+
+### 22.1
+KYSYMYS: Miksi Nižni Novgorodin messut perustettiin alun perin Kazanin lähelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nižni Novgorodin messut (kaupungit)
+Tietoruudun teksti: Nižni Novgorodin messut olivat Venäjän suurin kauppatapahtuma, jonka juuret ulottuvat 1500-luvulle Makarjevin luostarin liepeille Volgan varrella. Moskovan suurruhtinaat perustivat messut alun perin houkutellakseen kauppaa pois Kazanin markkinoilta, jotka olivat toimineet jo vuodesta 1257. Vuoden 1816 tulipalon jälkeen messut siirrettiin nykyiselle paikalleen Nižni Novgorodiin, ja parhaimmillaan ne kokosivat kauppiaita aina Intiasta, Persiasta ja Keski-Aasiasta asti. Huipussaan 1900-luvun alussa messualueella oli 60 rakennusta ja peräti 2 500 kauppapaikkaa, ja messujen kautta kulki jopa puolet koko Venäjän vientituotannosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+
+### 22.2
+KYSYMYS: Kuinka suuri osa Venäjän vientituotannosta kulki messujen kautta parhaimmillaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nižni Novgorodin messut (kaupungit)
+Tietoruudun teksti: Nižni Novgorodin messut olivat Venäjän suurin kauppatapahtuma, jonka juuret ulottuvat 1500-luvulle Makarjevin luostarin liepeille Volgan varrella. Moskovan suurruhtinaat perustivat messut alun perin houkutellakseen kauppaa pois Kazanin markkinoilta, jotka olivat toimineet jo vuodesta 1257. Vuoden 1816 tulipalon jälkeen messut siirrettiin nykyiselle paikalleen Nižni Novgorodiin, ja parhaimmillaan ne kokosivat kauppiaita aina Intiasta, Persiasta ja Keski-Aasiasta asti. Huipussaan 1900-luvun alussa messualueella oli 60 rakennusta ja peräti 2 500 kauppapaikkaa, ja messujen kautta kulki jopa puolet koko Venäjän vientituotannosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kohdekartta / Kohdekartta: Eläintarha] 1883 Adelaiden eläintarha avattiin 23. toukokuuta 1883 ja on Australian toiseksi vanhin Melbournen jälkeen. Sen perusti Etelä-Australian kotouttamis- ja eläintieteellinen seura valtiolta saadulle maalle. Seurasta tuli kuninkaallinen 1937, kun Yrjö VI myönsi sille kuninkaallisen peruskirjan. Ensimmäinen johtaja oli R. E. Minchin 1882–1893; häntä seurasi poika A. C. Minchin 1893–1934 ja tätä pojanpoika R. R. L. Minchin 1935–1940 — kolme sukupolvea samassa virassa. Viisi rakennusta on suojeltu, niiden joukossa Frome Roadin pääportti ja vuoden 1900 norsutalo. Norsutalossa ei enää pidetä eläimiä, vaan siellä on opasteita; viimeinen norsu Samorn siirrettiin 1991 Monarton laajaan puistoon, jossa s…
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-pelmenit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelmenit (ruoka)
+Tietoruudun teksti: Pelmeni-sana juontuu komin ja udmurtin kielten sanasta pel'n'an', joka tarkoittaa kirjaimellisesti leipäkorvaa — ohuen taikinan sisään käärittyä lihatäytettä. Ruoka levisi venäläiseen keittiöön, kun asutus laajeni Uralille ja Siperiaan, ja Komin tasavalta sekä Udmurtia pitävät yhä pelmenejä omana kansallisruokanaan. Perinteisesti siperialaiset metsästäjät ja matkalaiset pakastivat suuria määriä pelmenejä ulos talven pakkasessa ja kuljettivat niitä mukanaan eväänä pitkillä matkoilla. Ruoka tunnettiin jo 1800-luvun lopulla myös Ranskassa, sillä kokki Auguste Escoffier otti sen mukaan omaan keittokirjaansa.
+
+### 23.1
+KYSYMYS: Mistä kielistä pelmenien nimi juontuu ja mitä se tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelmenit (ruoka)
+Tietoruudun teksti: Pelmeni-sana juontuu komin ja udmurtin kielten sanasta pel'n'an', joka tarkoittaa kirjaimellisesti leipäkorvaa — ohuen taikinan sisään käärittyä lihatäytettä. Ruoka levisi venäläiseen keittiöön, kun asutus laajeni Uralille ja Siperiaan, ja Komin tasavalta sekä Udmurtia pitävät yhä pelmenejä omana kansallisruokanaan. Perinteisesti siperialaiset metsästäjät ja matkalaiset pakastivat suuria määriä pelmenejä ulos talven pakkasessa ja kuljettivat niitä mukanaan eväänä pitkillä matkoilla. Ruoka tunnettiin jo 1800-luvun lopulla myös Ranskassa, sillä kokki Auguste Escoffier otti sen mukaan omaan keittokirjaansa.
+
+### 23.2
+KYSYMYS: Miksi siperialaiset pakastivat pelmenejä talveksi ulos?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pelmenit (ruoka)
+Tietoruudun teksti: Pelmeni-sana juontuu komin ja udmurtin kielten sanasta pel'n'an', joka tarkoittaa kirjaimellisesti leipäkorvaa — ohuen taikinan sisään käärittyä lihatäytettä. Ruoka levisi venäläiseen keittiöön, kun asutus laajeni Uralille ja Siperiaan, ja Komin tasavalta sekä Udmurtia pitävät yhä pelmenejä omana kansallisruokanaan. Perinteisesti siperialaiset metsästäjät ja matkalaiset pakastivat suuria määriä pelmenejä ulos talven pakkasessa ja kuljettivat niitä mukanaan eväänä pitkillä matkoilla. Ruoka tunnettiin jo 1800-luvun lopulla myös Ranskassa, sillä kokki Auguste Escoffier otti sen mukaan omaan keittokirjaansa.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-tsiolkovski) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantin Tsiolkovski (tekniikka)
+Tietoruudun teksti: Konstantin Tsiolkovski syntyi 1857, ja yhdeksänvuotiaana sairastettu tulirokko vei suurimman osan hänen kuulostaan, minkä vuoksi hän opiskeli lähes kokonaan itsenäisesti kirjoja lukemalla. Vuonna 1892 hän muutti Kalugaan, jossa hän asui suurimman osan elämästään vaatimattomassa hirsitalossa — talosta tuli myöhemmin kotimuseo. Vuonna 1896 hän johti systemaattisesti niin sanotun Tsiolkovskin rakettiyhtälön, joka kuvaa raketin nopeuden, polttoaineen kulutuksen ja massasuhteen yhteyttä, ja vuoden 1903 julkaisussaan hän esitti, että monivaiheiset nesterakettimoottorit voisivat viedä aluksen kiertoradalle asti. Häntä pidetään yhdessä Hermann Oberthin ja Robert Goddardin kanssa nykyaikaisen raketti- ja avaruustekniikan uranuurtajana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Rakennukset: Raketti joka vei teleskoopin avaruuteen] 25.12.2021 — Ensimmäinen Ariane-kantoraketti laukaistiin Kouroun avaruuskeskuksesta joulukuussa 1979, ja siitä alkoi eurooppalaisen avaruustekniikan menestys-tarina. Vuonna 2008 valmistunut ELA-3-laukaisualue rakennettiin raskaille Ariane 5 -raketeille. Jouluaamuna 25. joulukuuta 2021 juuri tältä laukaisualustalta nousi Ariane 5, jonka kyydissä oli Nasan James Webb -avaruusteleskooppi. Se on tähän mennessä rakennetuista avaruus-teleskoopeista suurin ja tarkin, ja sen kuljettaminen onnistuneesti radalle oli yksi Kouroun avaruuskeskuksen tunnetuimmista laukaisuista.
+
+### 24.1
+KYSYMYS: Miksi Tsiolkovski opiskeli lähes kokonaan itsenäisesti kirjoja lukemalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantin Tsiolkovski (tekniikka)
+Tietoruudun teksti: Konstantin Tsiolkovski syntyi 1857, ja yhdeksänvuotiaana sairastettu tulirokko vei suurimman osan hänen kuulostaan, minkä vuoksi hän opiskeli lähes kokonaan itsenäisesti kirjoja lukemalla. Vuonna 1892 hän muutti Kalugaan, jossa hän asui suurimman osan elämästään vaatimattomassa hirsitalossa — talosta tuli myöhemmin kotimuseo. Vuonna 1896 hän johti systemaattisesti niin sanotun Tsiolkovskin rakettiyhtälön, joka kuvaa raketin nopeuden, polttoaineen kulutuksen ja massasuhteen yhteyttä, ja vuoden 1903 julkaisussaan hän esitti, että monivaiheiset nesterakettimoottorit voisivat viedä aluksen kiertoradalle asti. Häntä pidetään yhdessä Hermann Oberthin ja Robert Goddardin kanssa nykyaikaisen raketti- ja avaruustekniikan uranuurtajana.
+
+### 24.2
+KYSYMYS: Mihin vuoteen 1903 julkaistu Tsiolkovskin rakettiyhtälö johti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konstantin Tsiolkovski (tekniikka)
+Tietoruudun teksti: Konstantin Tsiolkovski syntyi 1857, ja yhdeksänvuotiaana sairastettu tulirokko vei suurimman osan hänen kuulostaan, minkä vuoksi hän opiskeli lähes kokonaan itsenäisesti kirjoja lukemalla. Vuonna 1892 hän muutti Kalugaan, jossa hän asui suurimman osan elämästään vaatimattomassa hirsitalossa — talosta tuli myöhemmin kotimuseo. Vuonna 1896 hän johti systemaattisesti niin sanotun Tsiolkovskin rakettiyhtälön, joka kuvaa raketin nopeuden, polttoaineen kulutuksen ja massasuhteen yhteyttä, ja vuoden 1903 julkaisussaan hän esitti, että monivaiheiset nesterakettimoottorit voisivat viedä aluksen kiertoradalle asti. Häntä pidetään yhdessä Hermann Oberthin ja Robert Goddardin kanssa nykyaikaisen raketti- ja avaruustekniikan uranuurtajana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Rakennukset: Raketti joka vei teleskoopin avaruuteen] 25.12.2021 — Ensimmäinen Ariane-kantoraketti laukaistiin Kouroun avaruuskeskuksesta joulukuussa 1979, ja siitä alkoi eurooppalaisen avaruustekniikan menestys-tarina. Vuonna 2008 valmistunut ELA-3-laukaisualue rakennettiin raskaille Ariane 5 -raketeille. Jouluaamuna 25. joulukuuta 2021 juuri tältä laukaisualustalta nousi Ariane 5, jonka kyydissä oli Nasan James Webb -avaruusteleskooppi. Se on tähän mennessä rakennetuista avaruus-teleskoopeista suurin ja tarkin, ja sen kuljettaminen onnistuneesti radalle oli yksi Kouroun avaruuskeskuksen tunnetuimmista laukaisuista.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-kaviaari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaviaari (ruoka)
+Tietoruudun teksti: Kaviaari on suolattua sammen mätiä, ja arvostetuimmat lajikkeet — beluga, ossetra ja sevruga — pyydystetään Kaspian- ja Mustaltamereltä. Kun Venäjä valtasi koko Volgan sen suulle asti 1500-luvulla, Astrahanista tuli maan tärkein kalastus- ja jalostuskeskus, ja se on ollut sitä lähes 400 vuotta. Belugan mäti on lajikkeista harvinaisinta ja kalleinta suurten, herneen kokoisten mätijyvien vuoksi, ja jo 1500-luvulla ranskalainen kirjailija François Rabelais mainitsi kaviaarin hienoimpana herkkuna. Astrahanin kremli kohoaa yhä Volgan rannalla kaupungin keskustassa, samalla seudulla, josta kaviaarikauppa on vuosisatoja käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+- [Venäjä — maalehti / Ruoka: Laskiaisviikolla syödään aurinkoja] Laskiaisviikolla — Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon suurta paastoa, ja sen ruoka on blini: ohut lettu, joka esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on vuoden mittaan loukannut.
+
+### 25.1
+KYSYMYS: Mistä kalasta parhain kaviaari saadaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaviaari (ruoka)
+Tietoruudun teksti: Kaviaari on suolattua sammen mätiä, ja arvostetuimmat lajikkeet — beluga, ossetra ja sevruga — pyydystetään Kaspian- ja Mustaltamereltä. Kun Venäjä valtasi koko Volgan sen suulle asti 1500-luvulla, Astrahanista tuli maan tärkein kalastus- ja jalostuskeskus, ja se on ollut sitä lähes 400 vuotta. Belugan mäti on lajikkeista harvinaisinta ja kalleinta suurten, herneen kokoisten mätijyvien vuoksi, ja jo 1500-luvulla ranskalainen kirjailija François Rabelais mainitsi kaviaarin hienoimpana herkkuna. Astrahanin kremli kohoaa yhä Volgan rannalla kaupungin keskustassa, samalla seudulla, josta kaviaarikauppa on vuosisatoja käynyt.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+- [Venäjä — maalehti / Ruoka: Laskiaisviikolla syödään aurinkoja] Laskiaisviikolla — Maslenitsa on viikon mittainen juhla ennen ortodoksisen kirkon suurta paastoa, ja sen ruoka on blini: ohut lettu, joka esittää aurinkoa. Täytteenä on smetanaa, hilloa, suolakalaa tai kaviaaria, ja teevesi keitetään samovaarissa. Viikon lopuksi poltetaan oljista tehty nukke, joka kuvaa talvea. Sunnuntaina on tapana pyytää anteeksi kaikilta, joita on vuoden mittaan loukannut.
+
+### 25.2
+KYSYMYS: Miksi juuri Astrahanista tuli Venäjän kaviaariteollisuuden keskus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaviaari (ruoka)
+Tietoruudun teksti: Kaviaari on suolattua sammen mätiä, ja arvostetuimmat lajikkeet — beluga, ossetra ja sevruga — pyydystetään Kaspian- ja Mustaltamereltä. Kun Venäjä valtasi koko Volgan sen suulle asti 1500-luvulla, Astrahanista tuli maan tärkein kalastus- ja jalostuskeskus, ja se on ollut sitä lähes 400 vuotta. Belugan mäti on lajikkeista harvinaisinta ja kalleinta suurten, herneen kokoisten mätijyvien vuoksi, ja jo 1500-luvulla ranskalainen kirjailija François Rabelais mainitsi kaviaarin hienoimpana herkkuna. Astrahanin kremli kohoaa yhä Volgan rannalla kaupungin keskustassa, samalla seudulla, josta kaviaarikauppa on vuosisatoja käynyt.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

@@ -1,0 +1,261 @@
+================ KOHTA 31 (kohde:hahmotelma-laatokka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Laatokka (luonto · järvi)
+Tietoruudun teksti: Laatokka on Euroopassa kokonaan sijaitsevista järvistä suurin, pinta-alaltaan lähes 17 900 neliökilometriä, ja se ulottuu Pietarin lähistöltä Karjalan tasavaltaan asti. Järvi täyttää muinaisen hautavajoaman ja poimulaakson, jota jääkauden liike syvensi entisestään — koillisosassa syvyys ylittää 200 metriä, vaikka keskisyvyys on vain noin 47 metriä. Järvellä ja sen noin 660 saaressa on pitkä henkinen historia: suurimmalla saarella sijaitsee keskiaikainen Valamon luostari, yksi Venäjän ortodoksisen kirkon merkittävimmistä pyhiinvaelluskohteista. Järvi laskee luoteeseen Nevajokea pitkin Suomenlahteen, ja sen rannalla maalasi muun muassa nuorena kuollut Fjodor Vasiljev, jonka pilvinen rantamaisema on vuodelta 1867.
+
+### 31.1
+KYSYMYS: Miksi Laatokka on erikoinen Euroopan järvien joukossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Laatokka (luonto · järvi)
+Tietoruudun teksti: Laatokka on Euroopassa kokonaan sijaitsevista järvistä suurin, pinta-alaltaan lähes 17 900 neliökilometriä, ja se ulottuu Pietarin lähistöltä Karjalan tasavaltaan asti. Järvi täyttää muinaisen hautavajoaman ja poimulaakson, jota jääkauden liike syvensi entisestään — koillisosassa syvyys ylittää 200 metriä, vaikka keskisyvyys on vain noin 47 metriä. Järvellä ja sen noin 660 saaressa on pitkä henkinen historia: suurimmalla saarella sijaitsee keskiaikainen Valamon luostari, yksi Venäjän ortodoksisen kirkon merkittävimmistä pyhiinvaelluskohteista. Järvi laskee luoteeseen Nevajokea pitkin Suomenlahteen, ja sen rannalla maalasi muun muassa nuorena kuollut Fjodor Vasiljev, jonka pilvinen rantamaisema on vuodelta 1867.
+
+### 31.2
+KYSYMYS: Mikä saari luostareineen sijaitsee järven keskellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Laatokka (luonto · järvi)
+Tietoruudun teksti: Laatokka on Euroopassa kokonaan sijaitsevista järvistä suurin, pinta-alaltaan lähes 17 900 neliökilometriä, ja se ulottuu Pietarin lähistöltä Karjalan tasavaltaan asti. Järvi täyttää muinaisen hautavajoaman ja poimulaakson, jota jääkauden liike syvensi entisestään — koillisosassa syvyys ylittää 200 metriä, vaikka keskisyvyys on vain noin 47 metriä. Järvellä ja sen noin 660 saaressa on pitkä henkinen historia: suurimmalla saarella sijaitsee keskiaikainen Valamon luostari, yksi Venäjän ortodoksisen kirkon merkittävimmistä pyhiinvaelluskohteista. Järvi laskee luoteeseen Nevajokea pitkin Suomenlahteen, ja sen rannalla maalasi muun muassa nuorena kuollut Fjodor Vasiljev, jonka pilvinen rantamaisema on vuodelta 1867.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-vologdan-voi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vologdan voi (ruoka)
+Tietoruudun teksti: Nikolai Vereštšagin maistoi normandialaista voita Pariisin maailmannäyttelyssä 1867 ja alkoi sen jälkeen kehittää omaa versiotaan, jossa kerma kuumennetaan tarkasti tietyssä lämpötilassa ennen kirnuamista. Menetelmä antaa voille tunnusomaisen makean, pähkinäisen maun, ja Vereštšagin esitteli lopputuloksensa Pariisin näyttelyssä 1878, jossa se voitti kultamitalin. Koska idea oli lähtöisin Ranskasta, voita myytiin aluksi nimellä Pariisin voi, ja vasta vuonna 1939 se nimettiin uudelleen Vologdan voiksi kotiseutunsa mukaan. Tuoteväärennösten vuoksi Venäjä rajasi nimen vuonna 2010 suojatuksi alkuperänimitykseksi, joka kuuluu vain aidosti Vologdan alueella valmistetulle voille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Ruoka: Kansallisruoka, joka on palmun voita] Moambe on öljypalmun hedelmien hedelmälihasta puristettua palmuvoita, ja poulet à la moambe tarkoittaa kanaa, joka on haudutettu siinä. Ruokaan tulee pinaattia ja tulista pilipiliä, ja seuraksi riisiä, bataattia, kovaksi keitettyjä kananmunia tai maniokkitahnaa; kana voidaan vaihtaa ankkaan tai kalaan. Sama ruoka on kansallisruoka neljässä maassa: Kongon demokraattisessa tasavallassa, Kongon tasavallassa, Gabonissa nimellä poulet nyembwe ja Angolassa nimellä moamba de galinha. Kikongoksi kana on nsusu, ja joen toisella puolella maapähkinäversio kulkee nimellä muamba nsusu.
+
+### 32.1
+KYSYMYS: Kuka kehitti Vologdan voin valmistustavan ja mistä hän sai idean?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vologdan voi (ruoka)
+Tietoruudun teksti: Nikolai Vereštšagin maistoi normandialaista voita Pariisin maailmannäyttelyssä 1867 ja alkoi sen jälkeen kehittää omaa versiotaan, jossa kerma kuumennetaan tarkasti tietyssä lämpötilassa ennen kirnuamista. Menetelmä antaa voille tunnusomaisen makean, pähkinäisen maun, ja Vereštšagin esitteli lopputuloksensa Pariisin näyttelyssä 1878, jossa se voitti kultamitalin. Koska idea oli lähtöisin Ranskasta, voita myytiin aluksi nimellä Pariisin voi, ja vasta vuonna 1939 se nimettiin uudelleen Vologdan voiksi kotiseutunsa mukaan. Tuoteväärennösten vuoksi Venäjä rajasi nimen vuonna 2010 suojatuksi alkuperänimitykseksi, joka kuuluu vain aidosti Vologdan alueella valmistetulle voille.
+
+### 32.2
+KYSYMYS: Miksi voita myytiin aluksi nimellä "Pariisin voi"?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vologdan voi (ruoka)
+Tietoruudun teksti: Nikolai Vereštšagin maistoi normandialaista voita Pariisin maailmannäyttelyssä 1867 ja alkoi sen jälkeen kehittää omaa versiotaan, jossa kerma kuumennetaan tarkasti tietyssä lämpötilassa ennen kirnuamista. Menetelmä antaa voille tunnusomaisen makean, pähkinäisen maun, ja Vereštšagin esitteli lopputuloksensa Pariisin näyttelyssä 1878, jossa se voitti kultamitalin. Koska idea oli lähtöisin Ranskasta, voita myytiin aluksi nimellä Pariisin voi, ja vasta vuonna 1939 se nimettiin uudelleen Vologdan voiksi kotiseutunsa mukaan. Tuoteväärennösten vuoksi Venäjä rajasi nimen vuonna 2010 suojatuksi alkuperänimitykseksi, joka kuuluu vain aidosti Vologdan alueella valmistetulle voille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kongo — maalehti / Ruoka: Kansallisruoka, joka on palmun voita] Moambe on öljypalmun hedelmien hedelmälihasta puristettua palmuvoita, ja poulet à la moambe tarkoittaa kanaa, joka on haudutettu siinä. Ruokaan tulee pinaattia ja tulista pilipiliä, ja seuraksi riisiä, bataattia, kovaksi keitettyjä kananmunia tai maniokkitahnaa; kana voidaan vaihtaa ankkaan tai kalaan. Sama ruoka on kansallisruoka neljässä maassa: Kongon demokraattisessa tasavallassa, Kongon tasavallassa, Gabonissa nimellä poulet nyembwe ja Angolassa nimellä moamba de galinha. Kikongoksi kana on nsusu, ja joen toisella puolella maapähkinäversio kulkee nimellä muamba nsusu.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-staraja-rjazan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rjazan (historia)
+Tietoruudun teksti: Vanha Rjazan eli Staraja Rjazan oli Rjazanin ruhtinaskunnan alkuperäinen pääkaupunki Okajoen rannalla, noin 50 kilometriä nykyisestä Rjazanista itään. Joulukuussa 1237 Batu-kaanin mongolijoukot piirittivät kaupunkia viiden päivän ajan, ja 21. joulukuuta ne murtautuivat sisään heittokoneilla revittyjen muurien läpi. Hyökkääjät tappoivat ruhtinas Juri Igorevitšin puolisoineen ja lähes koko väestön sekä polttivat kaupungin maan tasalle — arkeologit ovat myöhemmin löytäneet joukkohautoja väkivaltaisesti kuolleista asukkaista. Kaupunkia ei koskaan rakennettu uudelleen, vaan ruhtinaskunnan pääkaupunki siirtyi pysyvästi Perejaslavl-Rjazanskiin, joka nimettiin vasta 1778 Rjazaniksi. Nykyisin entisen kaupungin paikalla näkyy enää maavalleja, ja se on arkeologinen kaivauskohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Historia: Munkki, joka näki tulevan tuhon] Dominikaanimunkki Girolamo Savonarola nousi 1490-luvulla Firenzen todelliseksi vallanpitäjäksi saarnoillaan, joissa hän ennusti Jumalan rangaistusta kaupungin ylellisyydestä ja synnistä. Hänen ansiostaan Firenzeen perustettiin lyhytaikainen tasavalta Medici-suvun karkotuksen jälkeen. Tämän muotokuvan maalasi Fra Bartolomeo, joka oli itse yksi Savonarolan uskollisimmista seuraajista, samana vuonna kuin suuri Turhuuksien rovio.
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+
+### 33.1
+KYSYMYS: Kuka oli Vanhan Rjazanin ruhtinas, joka sai surmansa kaupungin tuhoutuessa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rjazan (historia)
+Tietoruudun teksti: Vanha Rjazan eli Staraja Rjazan oli Rjazanin ruhtinaskunnan alkuperäinen pääkaupunki Okajoen rannalla, noin 50 kilometriä nykyisestä Rjazanista itään. Joulukuussa 1237 Batu-kaanin mongolijoukot piirittivät kaupunkia viiden päivän ajan, ja 21. joulukuuta ne murtautuivat sisään heittokoneilla revittyjen muurien läpi. Hyökkääjät tappoivat ruhtinas Juri Igorevitšin puolisoineen ja lähes koko väestön sekä polttivat kaupungin maan tasalle — arkeologit ovat myöhemmin löytäneet joukkohautoja väkivaltaisesti kuolleista asukkaista. Kaupunkia ei koskaan rakennettu uudelleen, vaan ruhtinaskunnan pääkaupunki siirtyi pysyvästi Perejaslavl-Rjazanskiin, joka nimettiin vasta 1778 Rjazaniksi. Nykyisin entisen kaupungin paikalla näkyy enää maavalleja, ja se on arkeologinen kaivauskohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Saari, jolta Odysseus ei tahtonut lähteä] 2023 — Djerba on 514 neliökilometriä ja Pohjois-Afrikan suurin saari; vuoden 2014 laskennassa siellä asui 163 726 ihmistä. Saarta on pidetty lootuksensyöjien saarena, jonne Odysseus ajautui ja jossa miehistö unohti kotimatkan; kreikkalaisille se tunnettiin nimillä Lytos ja Meninx. Saaren juutalaisyhteisön El Ghriban synagoga on ollut yhtäjaksoisessa käytössä yli kaksituhatta vuotta, ja perimätiedon mukaan Jerusalemin temppelin tuhoutuessa paenneet papit toivat mukanaan oven ja kiviä, jotka muurattiin rakennukseen. Unesco otti koko saaren maailmanperintöluetteloon vuonna 2023.
+
+### 33.2
+KYSYMYS: Minne ruhtinaskunnan pääkaupunki siirrettiin tuhon jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vanha Rjazan (historia)
+Tietoruudun teksti: Vanha Rjazan eli Staraja Rjazan oli Rjazanin ruhtinaskunnan alkuperäinen pääkaupunki Okajoen rannalla, noin 50 kilometriä nykyisestä Rjazanista itään. Joulukuussa 1237 Batu-kaanin mongolijoukot piirittivät kaupunkia viiden päivän ajan, ja 21. joulukuuta ne murtautuivat sisään heittokoneilla revittyjen muurien läpi. Hyökkääjät tappoivat ruhtinas Juri Igorevitšin puolisoineen ja lähes koko väestön sekä polttivat kaupungin maan tasalle — arkeologit ovat myöhemmin löytäneet joukkohautoja väkivaltaisesti kuolleista asukkaista. Kaupunkia ei koskaan rakennettu uudelleen, vaan ruhtinaskunnan pääkaupunki siirtyi pysyvästi Perejaslavl-Rjazanskiin, joka nimettiin vasta 1778 Rjazaniksi. Nykyisin entisen kaupungin paikalla näkyy enää maavalleja, ja se on arkeologinen kaivauskohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Firenze — kaupunkilehti / Historia: Munkki, joka näki tulevan tuhon] Dominikaanimunkki Girolamo Savonarola nousi 1490-luvulla Firenzen todelliseksi vallanpitäjäksi saarnoillaan, joissa hän ennusti Jumalan rangaistusta kaupungin ylellisyydestä ja synnistä. Hänen ansiostaan Firenzeen perustettiin lyhytaikainen tasavalta Medici-suvun karkotuksen jälkeen. Tämän muotokuvan maalasi Fra Bartolomeo, joka oli itse yksi Savonarolan uskollisimmista seuraajista, samana vuonna kuin suuri Turhuuksien rovio.
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (nosto:kizin-kirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirkko rakennettiin ilman ainuttakaan naulaa — lukuun ottamatta sataakahdeksaakymmentätuhatta
+Tietoruudun teksti: Äänisen saarella seisoo puukirkko, jonka alttariristiin on kaiverrettu päiväys: kuudes kesäkuuta 1714. Se rakennettiin salaman polttaman vanhemman kirkon paikalle, eikä yhdenkään rakentajan nimeä tiedetä. Kirkko on kolmenkymmenenseitsemän metrin korkuinen ja siinä on kaksikymmentäkaksi kupolia — yksi Pohjois-Euroopan korkeimmista puurakennuksista. Rakennusaine on mäntytukki, halkaisijaltaan noin kolmekymmentä senttiä, ja tuhannet tukit tuotiin saarelle mantereelta. Tarina kertoo, että päärakentaja teki koko työn yhdellä kirveellä ja heitti sen valmistuttua järveen: toista samanlaista ei ole eikä tule.
+
+Kirkosta kerrotaan aina sama lause: se on rakennettu ilman ainuttakaan naulaa. Se on melkein totta, ja "melkein" on tässä kiinnostavampi kuin väite. Hirsirunko todella on nauloitta: hirret on veistetty kirveellä ja liitetty nurkissa salvoksin, ja koko rakennus lepää kivijalustalla ilman s…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Historia: Mies, joka jäi saarelle omasta tahdostaan] 1515–1545 — Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.
+- [Tansania — maalehti / Luonto: Apina, joka jäi saarelle meren noustessa] Sansibarinpunakolobi elää vain Ungujan saarella. Sen esi-isät jäivät saarelle, kun merenpinta nousi jääkauden lopulla, ja eristys on pienentänyt kalloa saarisäännön mukaisesti. Yksilöitä arvioidaan olevan 1 600–3 000, ja puolet niistä elää suojelualueiden ulkopuolella; tärkein turvapaikka on Jozanin kansallispuiston 25 neliökilometriä. Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.
+
+### 34.1
+KYSYMYS: Miten hirsirakennus pysyy pystyssä ilman nauloja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirkko rakennettiin ilman ainuttakaan naulaa — lukuun ottamatta sataakahdeksaakymmentätuhatta
+Tietoruudun teksti: Äänisen saarella seisoo puukirkko, jonka alttariristiin on kaiverrettu päiväys: kuudes kesäkuuta 1714. Se rakennettiin salaman polttaman vanhemman kirkon paikalle, eikä yhdenkään rakentajan nimeä tiedetä. Kirkko on kolmenkymmenenseitsemän metrin korkuinen ja siinä on kaksikymmentäkaksi kupolia — yksi Pohjois-Euroopan korkeimmista puurakennuksista. Rakennusaine on mäntytukki, halkaisijaltaan noin kolmekymmentä senttiä, ja tuhannet tukit tuotiin saarelle mantereelta. Tarina kertoo, että päärakentaja teki koko työn yhdellä kirveellä ja heitti sen valmistuttua järveen: toista samanlaista ei ole eikä tule.
+
+Kirkosta kerrotaan aina sama lause: se on rakennettu ilman ainuttakaan naulaa. Se on melkein totta, ja "melkein" on tässä kiinnostavampi kuin väite. Hirsirunko todella on nauloitta: hirret on veistetty kirveellä ja liitetty nurkissa salvoksin, ja koko rakennus lepää kivijalustalla ilman s…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Nikolskin kirkko] suojeltu kohde 1400036000 Nikolskin eli Pyhän Nikolauksen kirkko on kartan läntisin kohde ja Jakutskin ortodoksisista kirkoista sirointi. Se on kivestä, valkoiseksi rapattu, ja sen kolmiportaisesta kellotornista kohoaa kullattu kupoli ja sen päältä pitkä terävä huippu. Rakennus kuuluu Venäjän kulttuuriperintökohteisiin tunnuksella 1400036000. Kirkko kertoo siitä, miten Jakutskin uskonnollinen kartta on kerroksellinen. Ortodoksisuus tuli kaupunkiin linnoituksen mukana 1600-luvulla, ja sen laitokset ovat yhä näkyvissä: Preobraženskin katedraali, hengellinen seminaari ja Spasskin luostari. Niiden rinnalla elävät kuitenkin vanhemmat käsitykset. Jakuuttien perinteinen usko tuntee kolme maailmaa …
+
+### 34.2
+KYSYMYS: Miksi kupolit katettiin juuri haavalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirkko rakennettiin ilman ainuttakaan naulaa — lukuun ottamatta sataakahdeksaakymmentätuhatta
+Tietoruudun teksti: Äänisen saarella seisoo puukirkko, jonka alttariristiin on kaiverrettu päiväys: kuudes kesäkuuta 1714. Se rakennettiin salaman polttaman vanhemman kirkon paikalle, eikä yhdenkään rakentajan nimeä tiedetä. Kirkko on kolmenkymmenenseitsemän metrin korkuinen ja siinä on kaksikymmentäkaksi kupolia — yksi Pohjois-Euroopan korkeimmista puurakennuksista. Rakennusaine on mäntytukki, halkaisijaltaan noin kolmekymmentä senttiä, ja tuhannet tukit tuotiin saarelle mantereelta. Tarina kertoo, että päärakentaja teki koko työn yhdellä kirveellä ja heitti sen valmistuttua järveen: toista samanlaista ei ole eikä tule.
+
+Kirkosta kerrotaan aina sama lause: se on rakennettu ilman ainuttakaan naulaa. Se on melkein totta, ja "melkein" on tässä kiinnostavampi kuin väite. Hirsirunko todella on nauloitta: hirret on veistetty kirveellä ja liitetty nurkissa salvoksin, ja koko rakennus lepää kivijalustalla ilman s…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+### 34.3
+KYSYMYS: Miksi kirkko rakennettiin juuri saarelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kirkko rakennettiin ilman ainuttakaan naulaa — lukuun ottamatta sataakahdeksaakymmentätuhatta
+Tietoruudun teksti: Äänisen saarella seisoo puukirkko, jonka alttariristiin on kaiverrettu päiväys: kuudes kesäkuuta 1714. Se rakennettiin salaman polttaman vanhemman kirkon paikalle, eikä yhdenkään rakentajan nimeä tiedetä. Kirkko on kolmenkymmenenseitsemän metrin korkuinen ja siinä on kaksikymmentäkaksi kupolia — yksi Pohjois-Euroopan korkeimmista puurakennuksista. Rakennusaine on mäntytukki, halkaisijaltaan noin kolmekymmentä senttiä, ja tuhannet tukit tuotiin saarelle mantereelta. Tarina kertoo, että päärakentaja teki koko työn yhdellä kirveellä ja heitti sen valmistuttua järveen: toista samanlaista ei ole eikä tule.
+
+Kirkosta kerrotaan aina sama lause: se on rakennettu ilman ainuttakaan naulaa. Se on melkein totta, ja "melkein" on tässä kiinnostavampi kuin väite. Hirsirunko todella on nauloitta: hirret on veistetty kirveellä ja liitetty nurkissa salvoksin, ja koko rakennus lepää kivijalustalla ilman s…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Historia: Mies, joka jäi saarelle omasta tahdostaan] 1515–1545 — Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.
+- [Tansania — maalehti / Luonto: Apina, joka jäi saarelle meren noustessa] Sansibarinpunakolobi elää vain Ungujan saarella. Sen esi-isät jäivät saarelle, kun merenpinta nousi jääkauden lopulla, ja eristys on pienentänyt kalloa saarisäännön mukaisesti. Yksilöitä arvioidaan olevan 1 600–3 000, ja puolet niistä elää suojelualueiden ulkopuolella; tärkein turvapaikka on Jozanin kansallispuiston 25 neliökilometriä. Ryhmässä on 30–50 eläintä, ja koiraat pitävät yhtä — ne siistivät toisiaan ja puolustavat ryhmää yhdessä. Paikalliset kutsuvat lajia nimellä kima punju, myrkkyapina, sen voimakkaan hajun takia.
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (nosto:pietarhovin-suihkulahteet) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua
+Tietoruudun teksti: Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, maalaisasunnoksi meren rannalle. Vierailu Ranskan hovissa 1717 muutti mittakaavan lopullisesti, ja siitä juontuu lisänimi Venäjän Versailles. Puutarhat suunnitteli Jean-Baptiste Alexandre Le Blond, joka oli aiemmin työskennellyt Versaillesin puutarhurin kanssa, ja Francesco Bartolomeo Rastrelli laajensi kokonaisuuden 1747–1756. Sommitelman ratkaisee maasto: rannasta alle sadan metrin päässä nousee kuudentoista metrin törmä, ja sen rinnettä laskeutuu Suuri kaskadi, kuusikymmentäneljä suihkulähdettä. Sen juurella Simson aukaisee leijonan kitaa, ja kidasta nousee kahdenkymmenen metrin vesipatsas — puiston korkein.
+
+Ja tässä on se kohta, joka on helppo katsoa ohi: yksikään noista suihkulähteistä ei käytä pumppua. Vesi tulee luonnonlähteistä, se kerätään altaisiin yläpuutarhaan, ja sitten se saa pudota. Korkeusero tekee paineen, …
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kohdekartta / Kohdekartta: Sotamuistomerkki] 1925 Tasmanian tärkein sotamuistomerkki seisoo Queens Domainin kumpareella, josta näkyy sekä kaupunki että Derwent. Paikalla oli vuosina 1838–1923 Queens Battery -patteri, ja sijainti valittiin nimenomaan sen näkyvyyden ja oman sotilashistorian takia. Muistomerkki on art déco -tulkinta egyptiläisestä obeliskista: sinikivinen porrastettu jalusta, harmaasta graniitista tehty kapeneva vartalo ja pyramidin muotoinen huippu. Huipun alla on joka sivulla punaisesta läpikuultamattomasta lasista tehty risti, jota valaistaan takaa lakkaamatta. Suunnittelukilpailu pidettiin 1923, ja sen voitti hobartilainen toimisto Hutchinson and Walker. Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta korkeutta nost…
+- [Kreeta — kaupunkilehti / Maasto: Tasangolla pyöri tuhat purjetta] Lassithin ylätasanko on vuorten ympäröimä viljelyaukea 800 metrin korkeudessa. Sinne rakennettiin 1900-luvun alussa tuhansia pieniä tuulimyllyjä, joiden tehtävä ei ollut jauhaa vaan pumpata: valkoiset kangaspurjeet pyörittivät pumppua, joka nosti kasteluveden pellolle. Parhaimmillaan myllyjä oli noin kymmenentuhatta. Nykyään useimmat on korvattu moottoripumpuilla, mutta osa on kunnostettu ja purjeet nostetaan kesäksi paikoilleen.
+
+### 35.1
+KYSYMYS: Miten suihkulähde toimii ilman pumppua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua
+Tietoruudun teksti: Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, maalaisasunnoksi meren rannalle. Vierailu Ranskan hovissa 1717 muutti mittakaavan lopullisesti, ja siitä juontuu lisänimi Venäjän Versailles. Puutarhat suunnitteli Jean-Baptiste Alexandre Le Blond, joka oli aiemmin työskennellyt Versaillesin puutarhurin kanssa, ja Francesco Bartolomeo Rastrelli laajensi kokonaisuuden 1747–1756. Sommitelman ratkaisee maasto: rannasta alle sadan metrin päässä nousee kuudentoista metrin törmä, ja sen rinnettä laskeutuu Suuri kaskadi, kuusikymmentäneljä suihkulähdettä. Sen juurella Simson aukaisee leijonan kitaa, ja kidasta nousee kahdenkymmenen metrin vesipatsas — puiston korkein.
+
+Ja tässä on se kohta, joka on helppo katsoa ohi: yksikään noista suihkulähteistä ei käytä pumppua. Vesi tulee luonnonlähteistä, se kerätään altaisiin yläpuutarhaan, ja sitten se saa pudota. Korkeusero tekee paineen, …
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreeta — kaupunkilehti / Maasto: Tasangolla pyöri tuhat purjetta] Lassithin ylätasanko on vuorten ympäröimä viljelyaukea 800 metrin korkeudessa. Sinne rakennettiin 1900-luvun alussa tuhansia pieniä tuulimyllyjä, joiden tehtävä ei ollut jauhaa vaan pumpata: valkoiset kangaspurjeet pyörittivät pumppua, joka nosti kasteluveden pellolle. Parhaimmillaan myllyjä oli noin kymmenentuhatta. Nykyään useimmat on korvattu moottoripumpuilla, mutta osa on kunnostettu ja purjeet nostetaan kesäksi paikoilleen.
+- [Angola — maalehti / Luonto: Yö, jona niemimaasta tuli saari] Namiben rannikolla oli kalastajakylä São Martinho dos Tigres ja sen takana kapea kannas, joka piti kylän kiinni mantereessa. Kannaksen yli kulki vesijohto. Neljäntenätoista maaliskuuta 1962 meri mursi kannaksen läpi: aamuun mennessä Península dos Tigres oli Ilha dos Tigres, Angolan suurin saari, yhdeksänkymmentäkahdeksan neliökilometriä hiekkaa ilman juomavettä. Kylä tyhjeni, ja myöhemmin hylättiin myös Kunene-joen suulla ollut pumppuasema. Molemmista tuli aavekaupunkeja, joita aavikko ottaa vähitellen takaisin.
+
+### 35.2
+KYSYMYS: Miksi Venäjän hovi halusi oman Versaillesin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua
+Tietoruudun teksti: Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, maalaisasunnoksi meren rannalle. Vierailu Ranskan hovissa 1717 muutti mittakaavan lopullisesti, ja siitä juontuu lisänimi Venäjän Versailles. Puutarhat suunnitteli Jean-Baptiste Alexandre Le Blond, joka oli aiemmin työskennellyt Versaillesin puutarhurin kanssa, ja Francesco Bartolomeo Rastrelli laajensi kokonaisuuden 1747–1756. Sommitelman ratkaisee maasto: rannasta alle sadan metrin päässä nousee kuudentoista metrin törmä, ja sen rinnettä laskeutuu Suuri kaskadi, kuusikymmentäneljä suihkulähdettä. Sen juurella Simson aukaisee leijonan kitaa, ja kidasta nousee kahdenkymmenen metrin vesipatsas — puiston korkein.
+
+Ja tässä on se kohta, joka on helppo katsoa ohi: yksikään noista suihkulähteistä ei käytä pumppua. Vesi tulee luonnonlähteistä, se kerätään altaisiin yläpuutarhaan, ja sitten se saa pudota. Korkeusero tekee paineen, …
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hobart — kohdekartta / Kohdekartta: Sotamuistomerkki] 1925 Tasmanian tärkein sotamuistomerkki seisoo Queens Domainin kumpareella, josta näkyy sekä kaupunki että Derwent. Paikalla oli vuosina 1838–1923 Queens Battery -patteri, ja sijainti valittiin nimenomaan sen näkyvyyden ja oman sotilashistorian takia. Muistomerkki on art déco -tulkinta egyptiläisestä obeliskista: sinikivinen porrastettu jalusta, harmaasta graniitista tehty kapeneva vartalo ja pyramidin muotoinen huippu. Huipun alla on joka sivulla punaisesta läpikuultamattomasta lasista tehty risti, jota valaistaan takaa lakkaamatta. Suunnittelukilpailu pidettiin 1923, ja sen voitti hobartilainen toimisto Hutchinson and Walker. Alkuperäinen ehdotus oli 65 jalkaa korkea, mutta korkeutta nost…
+
+### 35.3
+KYSYMYS: Mitä Simsonin ja leijonan aihe tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kuusikymmentäneljä suihkulähdettä, ei yhtään pumppua
+Tietoruudun teksti: Pietari Suuri aloitti Pietarhovin vuonna 1709 vaatimattomasti, maalaisasunnoksi meren rannalle. Vierailu Ranskan hovissa 1717 muutti mittakaavan lopullisesti, ja siitä juontuu lisänimi Venäjän Versailles. Puutarhat suunnitteli Jean-Baptiste Alexandre Le Blond, joka oli aiemmin työskennellyt Versaillesin puutarhurin kanssa, ja Francesco Bartolomeo Rastrelli laajensi kokonaisuuden 1747–1756. Sommitelman ratkaisee maasto: rannasta alle sadan metrin päässä nousee kuudentoista metrin törmä, ja sen rinnettä laskeutuu Suuri kaskadi, kuusikymmentäneljä suihkulähdettä. Sen juurella Simson aukaisee leijonan kitaa, ja kidasta nousee kahdenkymmenen metrin vesipatsas — puiston korkein.
+
+Ja tässä on se kohta, joka on helppo katsoa ohi: yksikään noista suihkulähteistä ei käytä pumppua. Vesi tulee luonnonlähteistä, se kerätään altaisiin yläpuutarhaan, ja sitten se saa pudota. Korkeusero tekee paineen, …
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

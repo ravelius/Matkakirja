@@ -1,0 +1,231 @@
+================ KOHTA 16 (kohde:jasnaja-poljana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+- [Townsville — kohdekartta / Kohdekartta: Queens Gardens] 1870 Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin kasvitieteellinen reservi, jollaisia perustettiin siihen aikaan lähes joka kaupunkiin Queenslandissa. Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli yhtä lailla tieteellinen kuin taloudellinen. Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, mitkä kaupalliset kasvit kestäisivät tropiikin. Ensimmäisiä lajeja olivat kaakao, afrikkalainen öljypalmu ja mango. Osa silloin istutetuista hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen mukaan ne saattavat olla Australian vanhimpia viljeltyjä yksilöitä. Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi virkistyspuistoksi. Toisen maailmansodan aikana se oli sadant…
+
+### 16.1
+KYSYMYS: Mitkä kaksi romaania kirjoitettiin täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+- [Townsville — kohdekartta / Kohdekartta: Queens Gardens] 1870 Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin kasvitieteellinen reservi, jollaisia perustettiin siihen aikaan lähes joka kaupunkiin Queenslandissa. Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli yhtä lailla tieteellinen kuin taloudellinen. Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, mitkä kaupalliset kasvit kestäisivät tropiikin. Ensimmäisiä lajeja olivat kaakao, afrikkalainen öljypalmu ja mango. Osa silloin istutetuista hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen mukaan ne saattavat olla Australian vanhimpia viljeltyjä yksilöitä. Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi virkistyspuistoksi. Toisen maailmansodan aikana se oli sadant…
+
+### 16.2
+KYSYMYS: Mitä Jasnaja Poljana tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jasnaja Poljana (kulttuuri)
+Tietoruudun teksti: Jasnaja Poljana on kirjailijakotimuseo, Lev Tolstoin entinen koti kaksitoista kilometriä Tulasta lounaaseen ja kaksisataa kilometriä Moskovasta. Nimi tarkoittaa kirkasta aukiota. Tolstoi syntyi tässä talossa 9. syyskuuta 1828 ja kirjoitti siellä sekä Sodan ja rauhan että Anna Kareninan; hänet on haudattu lähistölle.
+
+Tila oli alun perin Kartsevin suvun omistuksessa. 1700-luvulla sen osti kenraalimajuri, ruhtinas Sergei Volkonski, ja se siirtyi hänen pojalleen Nikolaille, kirjailijan isoisälle. Nikolai aloitti päärakennuksen rakentamisen 1810 tilan korkeimmalle kohdalle, pystytti tallit, vaunuvajan, kylpyrakennuksen ja kaksi kasvihuonetta sekä istutti ranskalaisen puutarhan, englantilaisen maisemapuiston lampineen ja pitkät koivu- ja tammikujat.
+
+Tolstoi kutsui Jasnaja Poljanaa saavuttamattomaksi kirjalliseksi linnakkeekseen. Kesäkuussa 1921 tila kansallistettiin museoksi, ja sen ensimmä…
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:kaliningradin-tuomiokirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+- [Damaskos — kohdekartta / Kohdekartta: Hamidiyyan suuki] Suuki alkaa vanhankaupungin länsilaidalta linnoituksen kupeelta ja kulkee suoraan itään. Kuja on noin 600 metriä pitkä ja 15 metriä leveä, ja sen yllä kaartuu kymmenen metrin korkuinen metalliholvi. Kuja noudattaa roomalaisen kadun akselia, joka vei Jupiterin temppelille. Itäpäässä kuja päättyy temppelin porttirakennelmaan, jonka pylväät ja kaari seisovat yhä kadun päässä. Niiden takana avautuu Umaijadien moskeijan aukio. Roomalaiset alkoivat rakentaa temppeliä ensimmäisellä vuosisadalla jaa., ja portti on sen läntisen sisäänkäynnin säilynyt osa. Basaarikuja itse on paljon nuorempi ja ottomaanien aikaa. Se on nimetty sulttaani Abdülhamidin mukaan: rakentaminen alkoi noin vuonna 1780 Abdülha…
+
+### 17.1
+KYSYMYS: Missä filosofi Immanuel Kant lepää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Hamidiyyan suuki] Suuki alkaa vanhankaupungin länsilaidalta linnoituksen kupeelta ja kulkee suoraan itään. Kuja on noin 600 metriä pitkä ja 15 metriä leveä, ja sen yllä kaartuu kymmenen metrin korkuinen metalliholvi. Kuja noudattaa roomalaisen kadun akselia, joka vei Jupiterin temppelille. Itäpäässä kuja päättyy temppelin porttirakennelmaan, jonka pylväät ja kaari seisovat yhä kadun päässä. Niiden takana avautuu Umaijadien moskeijan aukio. Roomalaiset alkoivat rakentaa temppeliä ensimmäisellä vuosisadalla jaa., ja portti on sen läntisen sisäänkäynnin säilynyt osa. Basaarikuja itse on paljon nuorempi ja ottomaanien aikaa. Se on nimetty sulttaani Abdülhamidin mukaan: rakentaminen alkoi noin vuonna 1780 Abdülha…
+
+### 17.2
+KYSYMYS: Miten kirkon uusi torni saatiin paikalleen vuonna 1994?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliningradin tuomiokirkko (historia)
+Tietoruudun teksti: Kaliningradin tuomiokirkko seisoo Kneiphofin saarella Pregolja-joessa. Rakentaminen alkoi arviolta noin vuonna 1330, ja tiiligoottilainen kirkko valmistui pääosin vuoteen 1380 mennessä. Filosofi Immanuel Kantin hauta on kirkon kupeessa: hänen mausoleeminsa valmistui vuonna 1924 hänen syntymänsä 200-vuotisjuhlaksi. Brittiläiset pommitukset elokuussa 1944 tuhosivat kirkon katon ja tornin, ja kunnostus alkoi 1990-luvun alussa; uusi torni nostettiin paikalleen helikopterilla vuonna 1994. Nykyisin kirkossa on museo sekä luterilainen ja ortodoksinen kappeli, ja siellä pidetään konsertteja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-valkokivinen-kreml) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 18.1
+KYSYMYS: Miltä Moskovan valkokivinen Kreml näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 18.2
+KYSYMYS: Miksi Moskovan valkokivinen Kreml katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Moskovan valkokivinen Kreml (historia)
+Tietoruudun teksti: Dmitri Donskoi rakennutti Moskovan Kremlin vahvan valkokivimuurin vuosina 1366–1368. Ivan III puratti sen ja rakennutti italialaisten arkkitehtien johdolla nykyiset punatiilimuurit vuosina 1485–1495.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-peterhof) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Chicago Theatre] 1921 Veljekset Abe ja Barney Balaban sekä Sam ja Morris Katz rakensivat State Streetille 1921 lippulaivan elokuvateatteriketjulleen. Ketju kasvoi 28 teatteriin Chicagossa ja yli sataan muualla Keskilännessä, ja arkkitehdit Cornelius ja George Rapp piirsivät niistä monet. Chicago Theatre maksoi neljä miljoonaa dollaria ja oli valmistuessaan suurin, kallein ja komein siihen mennessä rakennettu elokuvapalatsi. Se on yhä vanhin säilynyt niistä. Avajaisissa 26. lokakuuta 1921 salissa oli 3 880 paikkaa, ja taloa mainostettiin maailman ihmeteatterina. Ohjelmaan kuului elokuvan lisäksi viisikymmenmiehinen orkesteri, lavashow ja Jesse Crawford Wurlitzer-uruilla, joissa oli neljä sormiota ja 26 äänik…
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+
+### 19.1
+KYSYMYS: Miksi Peterhofia kutsutaan "Venäjän Versailles'ksi"?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Chicago Theatre] 1921 Veljekset Abe ja Barney Balaban sekä Sam ja Morris Katz rakensivat State Streetille 1921 lippulaivan elokuvateatteriketjulleen. Ketju kasvoi 28 teatteriin Chicagossa ja yli sataan muualla Keskilännessä, ja arkkitehdit Cornelius ja George Rapp piirsivät niistä monet. Chicago Theatre maksoi neljä miljoonaa dollaria ja oli valmistuessaan suurin, kallein ja komein siihen mennessä rakennettu elokuvapalatsi. Se on yhä vanhin säilynyt niistä. Avajaisissa 26. lokakuuta 1921 salissa oli 3 880 paikkaa, ja taloa mainostettiin maailman ihmeteatterina. Ohjelmaan kuului elokuvan lisäksi viisikymmenmiehinen orkesteri, lavashow ja Jesse Crawford Wurlitzer-uruilla, joissa oli neljä sormiota ja 26 äänik…
+- [Pariisi — kohdekartta / Kohdekartta: Pariisin vuosisadat] Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte -niminen huijari sai kardinaali de Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen Versailles'n puistossa, jossa kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja kardinaali pidät…
+
+### 19.2
+KYSYMYS: Miten Peterhofin Suuren kaskadin suihkulähteet saavat vetensä liikkeelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peterhof (historia)
+Tietoruudun teksti: Pietari Suuri perusti Peterhofin 1700-luvun alussa Ranskan-matkansa 1717 innoittamana, ja palatsista tuli hänen vastauksensa Ludvig XIV:n Versailles'lle. Nykyinen laajempi kokonaisuus syntyi keisarinna Elisabetin aikana 1740–50-luvuilla arkkitehti Bartolomeo Rastrellin suunnitelmien mukaan. Puiston kuuluisin nähtävyys on Suuri kaskadi, jonka kymmenet kultaiset patsaat ja suihkulähteet toimivat ilman ainuttakaan pumppua: ylätarhan luonnollisista lähteistä valuva vesi ja korkeusero riittävät yksin käyttövoimaksi. Peterhof sijaitsee Suomenlahden rannalla lähellä Pietaria, ja se kattaa nykyisin lähes 4 000 hehtaaria puistoja ja rakennuksia.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-jekaterinburg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Uralin valtionyliopisto] 1920 Yliopisto perustettiin 19. lokakuuta 1920, ja sen perustajiin kuului kirjailija Maksim Gorki; hänen mukaansa se nimettiin vuonna 1936. Se on Keski-Uralin toiseksi vanhin korkeakoulu — vanhin on vuoriopisto, jonka perustaminen liittyi suoraan alueen kaivoksiin. Tunnuslause on latinaksi Hominem unius libri timeo, pelkään yhden kirjan miestä, ja se on lainattu Tuomas Akvinolaiselta. Talo Leninin valtakadun varrella on kaupungin toisen suuren rakennuskauden jäljiltä: 1930–1950-luvulla palattiin uusklassismiin, ja julkiset rakennukset saivat pylväiköt ja symmetriset siivet. Yliopistossa toimii nykyään neljätoista laitosta ja yhdeksänkymmentäviisi oppituolia, ja opetusalat ulottuvat biologia…
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg] Kaupunki alkoi padosta: 18. marraskuuta 1723 Iset-joen rannalla koeajettiin rautaruukin vasarapaja, ja siitä päivästä lasketaan Jekaterinburgin ikä. Kaksi vuotta myöhemmin ruukissa alettiin lyödä ruplaa, joka oli neliskulmainen kuparilaatta ja painoi 1 638 grammaa.
+
+### 20.1
+KYSYMYS: Miksi Jekaterinburg perustettiin juuri Uralin harjanteelle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kohdekartta / Kohdekartta: Uralin valtionyliopisto] 1920 Yliopisto perustettiin 19. lokakuuta 1920, ja sen perustajiin kuului kirjailija Maksim Gorki; hänen mukaansa se nimettiin vuonna 1936. Se on Keski-Uralin toiseksi vanhin korkeakoulu — vanhin on vuoriopisto, jonka perustaminen liittyi suoraan alueen kaivoksiin. Tunnuslause on latinaksi Hominem unius libri timeo, pelkään yhden kirjan miestä, ja se on lainattu Tuomas Akvinolaiselta. Talo Leninin valtakadun varrella on kaupungin toisen suuren rakennuskauden jäljiltä: 1930–1950-luvulla palattiin uusklassismiin, ja julkiset rakennukset saivat pylväiköt ja symmetriset siivet. Yliopistossa toimii nykyään neljätoista laitosta ja yhdeksänkymmentäviisi oppituolia, ja opetusalat ulottuvat biologia…
+
+### 20.2
+KYSYMYS: Mitä Jekaterinburgin rahapajassa valmistettiin 1870-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jekaterinburg (tekniikka)
+Tietoruudun teksti: Jekaterinburg perustettiin marraskuussa 1723 historioitsija Vasili Tatištševin ja saksalaissyntyisen insinööri Georg Wilhelm de Genninin johdolla Pietari Suuren käskystä, ja kaupunki sai nimensä keisarin puolisosta Jekaterinasta. Se rakennettiin metalliteollisuuden keskukseksi ja linnoitukseksi juuri Uralin harjanteelle, Euroopan ja Aasian rajalle. Vuosina 1820–1845 lähes 45 prosenttia koko maailman kullasta louhittiin Jekaterinburgin seudulta, ja kaupungin rahapaja löi suurimman osan Venäjän keisarikunnan kolikoista aina vuoteen 1876 asti. Siperian valtatie teki kaupungista Aasian portin jo 1760-luvulta lähtien, vuosikymmeniä ennen Trans-Siperian rautatietä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Jekaterinburg] Kaupunki alkoi padosta: 18. marraskuuta 1723 Iset-joen rannalla koeajettiin rautaruukin vasarapaja, ja siitä päivästä lasketaan Jekaterinburgin ikä. Kaksi vuotta myöhemmin ruukissa alettiin lyödä ruplaa, joka oli neliskulmainen kuparilaatta ja painoi 1 638 grammaa.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

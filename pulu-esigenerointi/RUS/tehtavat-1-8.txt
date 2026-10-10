@@ -1,0 +1,71 @@
+================ KOHTA 36 (nosto:baikal) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Se ei ole järvi vaan repeämä — ja se levenee neljä millimetriä vuodessa
+Tietoruudun teksti: Baikal on kuusisataakolmekymmentäkuusi kilometriä pitkä, seitsemänkymmentäyhdeksän kilometriä leveä ja tuhat kuusisataaneljäkymmentäkaksi metriä syvä. Pinta-alaltaan se on Belgian kokoinen ja vasta seitsemänneksi suurin järvi maailmassa, mutta syvyys ratkaisee: vettä siinä on kaksikymmentäkolmetuhatta kuutiokilometriä eli runsas viidennes maailman makeasta pintavedestä. Se on enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Ja se on maailman vanhin järvi, kahdenkymmenenviiden ja kolmenkymmenen miljoonan vuoden ikäinen.
+
+Syy kaikkeen tähän on se, ettei Baikal oikeastaan ole järvi vaan repeämä. Maankuori vetäytyy siinä kohdassa erilleen, ja railo levenee yhä noin neljä millimetriä vuodessa; maa tärisee muutaman vuoden välein. Pohjan alla on vielä seitsemän kilometriä sedimenttiä, joten itse repeämän pohjaan on pinnasta kahdeksasta yhteentoista kilometriä — syvin mannerrepeämä maa…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Hylje, joka synnyttää luolassa] nykyään — Munkkihylje on Välimeren ainoa hylje ja yksi maailman harvinaisimmista merinisäkkäistä: koko kannaksi arvioidaan 800–1 000 yksilöä. Niistä 250–300 elää Kreikan vesillä, ja tihein joukko on Gyároksen asumattomalla saarella. Vielä 1700-luvulla munkkihylkeet makasivat avoimilla rannoilla, mutta nykyään emo hakeutuu synnyttämään merenalaisiin luoliin, joihin on vaikea päästä. Poikanen on syntyessään noin metrin mittainen ja mustanruskean karvan peitossa. Alonnisoksen ympärille perustettiin vuonna 1992 merikansallispuisto juuri hylkeitä varten.
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon lapset nousevat järvestä] Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.
+
+### 36.1
+KYSYMYS: Miten järvestä voi tulla merta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Se ei ole järvi vaan repeämä — ja se levenee neljä millimetriä vuodessa
+Tietoruudun teksti: Baikal on kuusisataakolmekymmentäkuusi kilometriä pitkä, seitsemänkymmentäyhdeksän kilometriä leveä ja tuhat kuusisataaneljäkymmentäkaksi metriä syvä. Pinta-alaltaan se on Belgian kokoinen ja vasta seitsemänneksi suurin järvi maailmassa, mutta syvyys ratkaisee: vettä siinä on kaksikymmentäkolmetuhatta kuutiokilometriä eli runsas viidennes maailman makeasta pintavedestä. Se on enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Ja se on maailman vanhin järvi, kahdenkymmenenviiden ja kolmenkymmenen miljoonan vuoden ikäinen.
+
+Syy kaikkeen tähän on se, ettei Baikal oikeastaan ole järvi vaan repeämä. Maankuori vetäytyy siinä kohdassa erilleen, ja railo levenee yhä noin neljä millimetriä vuodessa; maa tärisee muutaman vuoden välein. Pohjan alla on vielä seitsemän kilometriä sedimenttiä, joten itse repeämän pohjaan on pinnasta kahdeksasta yhteentoista kilometriä — syvin mannerrepeämä maa…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Titicaca — kaupunkilehti / Titicaca-järvi: Auringon lapset nousevat järvestä] Inkojen perimätiedon mukaan aurinkojumala Inti loi kaksi lastaan, Manco Cápacin ja Mama Ocllon, ja lähetti heidät nousemaan Titicaca-järvestä opettamaan ihmisille maanviljelyä ja kudontaa. Espanjalaisen kronikoitsija Bernabé Cobon mukaan sisarpari – joka oli myös aviopari, inkasuvun tavan mukaan – kohosi esiin Isla del Solin pyhältä Titi Qala -kalliolta, jonka uskottiin olevan auringon asuinsija. Sieltä sisarukset vaelsivat kohti Cuzcoa kultaisen sauvan kanssa ja perustivat kaupungin, jossa sauva vaipui maahan. Toisessa versiossa Manco Cápac nousee maan alta luolasta – kumpikaan ei ole peräisin ajalta ennen espanjalaisten saapumista.
+
+### 36.2
+KYSYMYS: Miksi Baikalin vesi on niin kirkasta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Se ei ole järvi vaan repeämä — ja se levenee neljä millimetriä vuodessa
+Tietoruudun teksti: Baikal on kuusisataakolmekymmentäkuusi kilometriä pitkä, seitsemänkymmentäyhdeksän kilometriä leveä ja tuhat kuusisataaneljäkymmentäkaksi metriä syvä. Pinta-alaltaan se on Belgian kokoinen ja vasta seitsemänneksi suurin järvi maailmassa, mutta syvyys ratkaisee: vettä siinä on kaksikymmentäkolmetuhatta kuutiokilometriä eli runsas viidennes maailman makeasta pintavedestä. Se on enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Ja se on maailman vanhin järvi, kahdenkymmenenviiden ja kolmenkymmenen miljoonan vuoden ikäinen.
+
+Syy kaikkeen tähän on se, ettei Baikal oikeastaan ole järvi vaan repeämä. Maankuori vetäytyy siinä kohdassa erilleen, ja railo levenee yhä noin neljä millimetriä vuodessa; maa tärisee muutaman vuoden välein. Pohjan alla on vielä seitsemän kilometriä sedimenttiä, joten itse repeämän pohjaan on pinnasta kahdeksasta yhteentoista kilometriä — syvin mannerrepeämä maa…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kaupunkilehti / Baikal: Pohja on merenpinnan alapuolella] Baikal on 636 kilometriä pitkä ja 79 kilometriä leveä, ja sen syvin kohta on 1 642 metriä. Vettä siinä on 23 615 kuutiokilometriä, enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Pinta on 455 metriä merenpinnan yläpuolella, mutta pohja ulottuu 1 186 metriä merenpinnan alapuolelle, ja pohjan alla on vielä noin seitsemän kilometriä sedimenttiä. Talvella vesi on avoimilla selillä paikoin niin kirkasta, että näkyvyys yltää 30–40 metriin; kesällä se on 5–8 metriä. Jääkansi on 0,5–1,4 metriä paksu, ahtojäissä yli kaksi metriä.
+
+### 36.3
+KYSYMYS: Miten hylje on päätynyt keskelle mannerta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Moskova
+Maa, jossa pelaaja on: Venäjä
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Se ei ole järvi vaan repeämä — ja se levenee neljä millimetriä vuodessa
+Tietoruudun teksti: Baikal on kuusisataakolmekymmentäkuusi kilometriä pitkä, seitsemänkymmentäyhdeksän kilometriä leveä ja tuhat kuusisataaneljäkymmentäkaksi metriä syvä. Pinta-alaltaan se on Belgian kokoinen ja vasta seitsemänneksi suurin järvi maailmassa, mutta syvyys ratkaisee: vettä siinä on kaksikymmentäkolmetuhatta kuutiokilometriä eli runsas viidennes maailman makeasta pintavedestä. Se on enemmän kuin Pohjois-Amerikan Suurissa järvissä yhteensä. Ja se on maailman vanhin järvi, kahdenkymmenenviiden ja kolmenkymmenen miljoonan vuoden ikäinen.
+
+Syy kaikkeen tähän on se, ettei Baikal oikeastaan ole järvi vaan repeämä. Maankuori vetäytyy siinä kohdassa erilleen, ja railo levenee yhä noin neljä millimetriä vuodessa; maa tärisee muutaman vuoden välein. Pohjan alla on vielä seitsemän kilometriä sedimenttiä, joten itse repeämän pohjaan on pinnasta kahdeksasta yhteentoista kilometriä — syvin mannerrepeämä maa…
+Isoisän matkakirjamerkintä: Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Hylje, joka synnyttää luolassa] nykyään — Munkkihylje on Välimeren ainoa hylje ja yksi maailman harvinaisimmista merinisäkkäistä: koko kannaksi arvioidaan 800–1 000 yksilöä. Niistä 250–300 elää Kreikan vesillä, ja tihein joukko on Gyároksen asumattomalla saarella. Vielä 1700-luvulla munkkihylkeet makasivat avoimilla rannoilla, mutta nykyään emo hakeutuu synnyttämään merenalaisiin luoliin, joihin on vaikea päästä. Poikanen on syntyessään noin metrin mittainen ja mustanruskean karvan peitossa. Alonnisoksen ympärille perustettiin vuonna 1992 merikansallispuisto juuri hylkeitä varten.
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI

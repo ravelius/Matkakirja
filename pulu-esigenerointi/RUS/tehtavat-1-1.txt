@@ -1,0 +1,202 @@
+================ KOHTA 1 (kohde:elbrus) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+### 1.1
+KYSYMYS: Onko Elbrus Euroopassa vai Aasiassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+### 1.2
+KYSYMYS: Milloin Elbrus viimeksi purkautui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Elbrus (luonto · vuori)
+Tietoruudun teksti: Elbrus on Venäjän ja Euroopan korkein vuori. Se on sammunut kerrostulivuori, joka kohoaa 5 642 metriin, ja samalla Euraasian korkein tulivuori sekä maailman kymmenenneksi hallitsevin huippu. Se sijaitsee Kabardi-Balkarian tasavallassa Etelä-Venäjällä ja on Kaukasuksen vuoriston korkein huippu.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:narodnaja) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+### 2.1
+KYSYMYS: Miksi Narodnaja on kahdessa maanosassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+### 2.2
+KYSYMYS: Mitä komin nimi Naroda-Iz tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narodnaja (luonto · vuori)
+Tietoruudun teksti: Narodnajan huipulta sadevesi lähtee kahteen maanosaan. Vuori seisoo Uralin vedenjakajalla, joka on samalla Euroopan ja Aasian raja: Naroda-joki virtaa huipulta kaakkoon Obiin eli Siperiaan, ja Kosju luoteeseen Petšoraan eli Euroopan puolelle. Korkeutta on 1 894 metriä, mikä tekee siitä Uralin korkeimman huipun ja Euroopan-puoleisen Venäjän korkeimman kohdan Kaukasuksen ulkopuolella — ja koska ympärillä ei ole mitään sen veroista, sen suhteellinen korkeus on peräti 1 772 metriä. Komin kielellä vuori on Naroda-Iz, kansan vuori. Rinteillä on pieniä jäätiköitä ja tunturikangasta, laaksoissa harvaa lehtikuusi- ja koivumetsää.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:barentsinmeri~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+
+### 3.1
+KYSYMYS: Kuka Willem Barentsz oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Historia: Aurinko nousi kaksi viikkoa liian aikaisin] 1596–97 — Willem Barentszin laiva etsi pohjoista meritietä Kiinaan ja juuttui jäihin Novaja Zemljan rannikolle. Miehet purkivat laivasta puuta, keräsivät ajopuuta ja rakensivat majan, jota he kutsuivat nimellä Behouden Huys, Pelastunut talo. Seitsemäntoista miestä talvehti siellä napayössä. Tammikuun 24. päivänä 1597 he näkivät auringon kaksi viikkoa ennen kuin sen olisi pitänyt nousta — Barentsz ei uskonut silmiään. Kyse oli harvinaisesta ilmakehän kangastuksesta. Kesäkuussa lähdettiin kahdella avoveneellä kohti kotia. Barentsz kuoli viikko lähdön jälkeen; kaksitoista pääsi perille.
+
+### 3.2
+KYSYMYS: Miksi Murmansk ei jäädy talvella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Barentsinmeri (meri)
+Tietoruudun teksti: Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla ensimmäisiä retkiä kauas pohjoiseen. Venäjän puolella Murmanskin satama pysyy sulana ympäri vuoden lämpimän Pohjois-Atlantin virran ansiosta, ja meren itäkulmalla Petšoran suistossa on oma nimensä: Petšoranmeri.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:jaameri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Historia: Kaupunki, josta retkikunnat lähtivät napaa kohti] Tromssan sijainti syvän vuonon suojassa mutta silti lähellä avomerta teki siitä 1800-luvun lopulla luontevan viimeisen pysähdyspaikan napaseuduille suuntaaville retkikunnille — muun muassa Roald Amundsen ja Fridtjof Nansen varustautuivat ja rekrytoivat miehistöä Tromssassa ennen matkojaan Koillisväylälle ja Pohjoisnavan suunnalle. Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", osin ironisesti ja osin ylpeydestä sen kansainvälisestä merkityksestä napatutkimukselle. Nykyinen Polarmuseet toimii vanhassa tullirakennuksessa satamassa ja kertoo näiden retkikuntien historiasta.
+- [Salomonsaaret — maalehti / Historia: Saari, jolta lähdettiin sopimustyöhön] 1870–1903 — Malaitalta lähti 1870-luvulta vuoteen 1903 enemmän sopimustyöläisiä kuin miltään muulta Salomonsaarelta. Miehet ja jotkut naiset menivät Queenslandin ja Fidžin viljelmille; 1870-luvulla värväys oli usein laitonta ja sitä kutsuttiin nimellä blackbirding. Osa lähti vapaaehtoisesti ja teki jopa toisen työmatkan, mutta järjestelmä pysyi riistävänä. Kesäkuussa 1893 kapteeni Herbert Gibson julisti eteläiset Salomonsaaret Britannian protektoraatiksi — osaksi juuri siksi, että työvoiman lähde pysyisi muiden siirtomaavaltojen ulottumattomissa. Australia karkotti saarelaisia vuoden 1901 lain nojalla.
+
+### 4.1
+KYSYMYS: Kuinka paksua Jäämeren jää on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Historia: Kaupunki, josta retkikunnat lähtivät napaa kohti] Tromssan sijainti syvän vuonon suojassa mutta silti lähellä avomerta teki siitä 1800-luvun lopulla luontevan viimeisen pysähdyspaikan napaseuduille suuntaaville retkikunnille — muun muassa Roald Amundsen ja Fridtjof Nansen varustautuivat ja rekrytoivat miehistöä Tromssassa ennen matkojaan Koillisväylälle ja Pohjoisnavan suunnalle. Kaupungin lempinimeksi vakiintui "Jäämeren Pariisi", osin ironisesti ja osin ylpeydestä sen kansainvälisestä merkityksestä napatutkimukselle. Nykyinen Polarmuseet toimii vanhassa tullirakennuksessa satamassa ja kertoo näiden retkikuntien historiasta.
+
+### 4.2
+KYSYMYS: Miksi jotkut kutsuvat sitä Atlantin suistoksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jäämeri (meri)
+Tietoruudun teksti: Jäämeri on maailman viidestä valtamerestä pienin, matalin ja kylmin: pinta-alaa noin 14 060 000 neliökilometriä. Se ulottuu pohjoisnavan ympäriltä etelään noin 60. leveyspiirille ja sitä ympäröivät Euraasia ja Pohjois-Amerikka; rajat kulkevat maastonmuotoja pitkin, Tyynenmeren puolella Beringinsalmi ja Atlantin puolella Grönlanti–Skotlanti-harjanne. Suurimman osan vuodesta se on merijään peitossa. Osa tutkijoista kutsuu sitä Pohjoiseksi napamereksi tai jopa Atlantin suistoksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salomonsaaret — maalehti / Historia: Saari, jolta lähdettiin sopimustyöhön] 1870–1903 — Malaitalta lähti 1870-luvulta vuoteen 1903 enemmän sopimustyöläisiä kuin miltään muulta Salomonsaarelta. Miehet ja jotkut naiset menivät Queenslandin ja Fidžin viljelmille; 1870-luvulla värväys oli usein laitonta ja sitä kutsuttiin nimellä blackbirding. Osa lähti vapaaehtoisesti ja teki jopa toisen työmatkan, mutta järjestelmä pysyi riistävänä. Kesäkuussa 1893 kapteeni Herbert Gibson julisti eteläiset Salomonsaaret Britannian protektoraatiksi — osaksi juuri siksi, että työvoiman lähde pysyisi muiden siirtomaavaltojen ulottumattomissa. Australia karkotti saarelaisia vuoden 1901 lain nojalla.
+- [Iso-Britannia — maalehti / Urheilu: Neljän minuutin muuri murtui iltapäivällä] Pitkään uskottiin, ettei ihminen voi juosta mailia alle neljän minuutin — jotkut lääkärit pitivät sitä ihmiskeholle mahdottomana. Lääketieteen opiskelija Roger Bannister harjoitteli lounastauoillaan ja yritti 6. toukokuuta 1954 Oxfordin Iffley Roadin radalla. Tuuli oli kova, ja hän päätti vasta viime hetkellä juosta. Aika oli 3.59,4. Kuuluttaja ehti sanoa vain "three" ennen kuin yleisön huuto peitti loput. Alle kaksi kuukautta myöhemmin toinen juoksija alitti saman rajan — muuri oli ollut päässä.
+- [Italia — maalehti / Ruoka: Parmigiano kypsyy vuosia] Parmigiano Reggiano -kiekko painaa noin 40 kiloa ja kypsyy vähintään vuoden, usein kolmekin, ennen kuin tarkastaja koputtaa sitä vasaralla ja kuuntelee, onko sisus ehjä. Vain Parman seudulla tehty juusto saa kantaa nimeä, ja resepti on ollut sama lähes tuhat vuotta: maitoa, suolaa ja aikaa. Kiekot ovat niin arvokkaita, että jotkut italialaiset pankit hyväksyvät niitä lainan vakuudeksi — holveissa kypsyy juustoa kuin kultaharkkoja.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:ohotanmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Sahalin] Sahalin on Venäjän suurin saari: 948 kilometriä pitkä kaistale, joka on kapeimmillaan vain 26 kilometriä leveä. Mantereesta sen erottaa Tatarinsalmi, jonka pohjoisin kuristuskohta kaventuu runsaaseen seitsemään kilometriin.
+- [Sahalin — kaupunkilehti / Historia: Saari vaihdettiin saariketjuun] Vuoden 1855 Shimodan sopimus veti Venäjän ja Japanin rajan Iturupin ja Urupin väliin mutta jätti Sahalinin jakamatta. Pietarissa allekirjoitettiin 7. toukokuuta 1875 sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän hallussa olleet Kuriilit; allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto Takeaki. Portsmouthin rauhassa 1905 saaren 50. leveyspiirin eteläpuoli siirtyi Japanille, joka hallitsi sitä Karafuton prefektuurina. Pääkaupunki oli Toyohara, nykyinen Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi Neuvostoliitolle.
+
+### 5.1
+KYSYMYS: Mitkä ovat Kuriilit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Historia: Saari vaihdettiin saariketjuun] Vuoden 1855 Shimodan sopimus veti Venäjän ja Japanin rajan Iturupin ja Urupin väliin mutta jätti Sahalinin jakamatta. Pietarissa allekirjoitettiin 7. toukokuuta 1875 sopimus, jossa Japani luopui osuudestaan Sahaliniin ja sai vastineeksi Venäjän hallussa olleet Kuriilit; allekirjoittajina olivat Aleksandr Gortšakov ja Enomoto Takeaki. Portsmouthin rauhassa 1905 saaren 50. leveyspiirin eteläpuoli siirtyi Japanille, joka hallitsi sitä Karafuton prefektuurina. Pääkaupunki oli Toyohara, nykyinen Južno-Sahalinsk. Elokuussa 1945 koko saari siirtyi Neuvostoliitolle.
+
+### 5.2
+KYSYMYS: Miksi Sahalin on niin pitkä ja kapea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ohotanmeri (meri)
+Tietoruudun teksti: Ohotanmeri on Luoteis-Tyynenmeren reunameri. Sitä rajaavat idässä Venäjän Kamtšatkan niemimaa, kaakossa Kuriilit, etelässä Japanin Hokkaido, lännessä Sahalinin saari sekä lännessä ja pohjoisessa Itä-Siperian rannikko. Koillisnurkassa on Šelihovinlahti. Meri on saanut nimensä Ohotskin satamasta, joka puolestaan on nimetty Ohota-joen mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Sahalin] Sahalin on Venäjän suurin saari: 948 kilometriä pitkä kaistale, joka on kapeimmillaan vain 26 kilometriä leveä. Mantereesta sen erottaa Tatarinsalmi, jonka pohjoisin kuristuskohta kaventuu runsaaseen seitsemään kilometriin.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

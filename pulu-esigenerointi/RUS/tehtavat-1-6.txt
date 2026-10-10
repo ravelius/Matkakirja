@@ -1,0 +1,204 @@
+================ KOHTA 26 (kohde:hahmotelma-mihailovskoje) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mihailovskoje (kulttuuri)
+Tietoruudun teksti: Mihailovskoje on Aleksandr Puškinin perheen kartano Pihkovan alueella, ja maa oli lahjoitettu vuonna 1742 hänen äitinsä isoisälle Abram Gannibalille. Puškin vieraili tilalla säännöllisesti, mutta vuosina 1824–1826 hänet karkotettiin sinne poliittisen epäluulon vuoksi, kauas pääkaupunkien vaikutuspiiristä. Karkotusvuosina hän kirjoitti suuren osan mestariteoksestaan Jevgeni Onegin. Valtio osti kartanon Puškinin pojalta Grigorilta vasta 1899, ja vuodesta 1922 se on toiminut museona; toisen maailmansodan aikana kartano ryöstettiin ja tuhoutui pahoin, mutta se kunnostettiin sodan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Urheilu: Veturi voitti kolme kultaa Helsingissä] 1952 — Emil Zátopek meni 16-vuotiaana töihin Baťan kenkätehtaalle Zlíniin, ja tehtaan valmentaja määräsi hänet juoksukilpailuun vastoin hänen tahtoaan. Hän tuli sadan pojan joukosta toiseksi — ja innostui. Zátopek harjoitteli lumessa ja raskaissa työsaappaissa ja rakensi ohjelmansa sen mukaan, mitä oli lukenut Paavo Nurmesta. Helsingin olympialaisissa 1952 hän voitti 5 000 metriä, 10 000 metriä ja lopuksi maratonin, jota hän ei ollut koskaan aiemmin juossut. Kukaan muu ei ole voittanut näitä kolmea samoissa kisoissa.
+- [Barcelona — kohdekartta / Kohdekartta: Sagrada Família] 1882– Sagrada Família on Barcelonan valtava, yhä keskeneräinen kirkko, jota nerokas arkkitehti Antoni Gaudí alkoi suunnitella 1880-luvulla. Rakennustyöt käynnistyivät vuonna 1882, ja Gaudí otti hankkeen johtoonsa jo seuraavana vuonna. Hän omisti kirkolle lopun elämästään, mutta kun hän kuoli vuonna 1926, rakennuksesta oli valmiina vasta pieni osa. Kirkkoon on suunniteltu peräti 18 tornia, ja korkein niistä kohoaa yli 172 metriin – tämä tekee Sagrada Famíliasta maailman korkeimman kirkkorakennuksen. Sisällä valtavat kivipilarit haarautuvat katossa kuin puiden oksat, ja kirkon eri julkisivut kertovat Jeesuksen elämästä aivan eri tavoin: toinen riemuiten ja koristeellisesti, toinen karun pelki…
+
+### 26.1
+KYSYMYS: Miksi Puškin joutui Mihailovskojeen vasten tahtoaan vuosina 1824–1826?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mihailovskoje (kulttuuri)
+Tietoruudun teksti: Mihailovskoje on Aleksandr Puškinin perheen kartano Pihkovan alueella, ja maa oli lahjoitettu vuonna 1742 hänen äitinsä isoisälle Abram Gannibalille. Puškin vieraili tilalla säännöllisesti, mutta vuosina 1824–1826 hänet karkotettiin sinne poliittisen epäluulon vuoksi, kauas pääkaupunkien vaikutuspiiristä. Karkotusvuosina hän kirjoitti suuren osan mestariteoksestaan Jevgeni Onegin. Valtio osti kartanon Puškinin pojalta Grigorilta vasta 1899, ja vuodesta 1922 se on toiminut museona; toisen maailmansodan aikana kartano ryöstettiin ja tuhoutui pahoin, mutta se kunnostettiin sodan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Urheilu: Veturi voitti kolme kultaa Helsingissä] 1952 — Emil Zátopek meni 16-vuotiaana töihin Baťan kenkätehtaalle Zlíniin, ja tehtaan valmentaja määräsi hänet juoksukilpailuun vastoin hänen tahtoaan. Hän tuli sadan pojan joukosta toiseksi — ja innostui. Zátopek harjoitteli lumessa ja raskaissa työsaappaissa ja rakensi ohjelmansa sen mukaan, mitä oli lukenut Paavo Nurmesta. Helsingin olympialaisissa 1952 hän voitti 5 000 metriä, 10 000 metriä ja lopuksi maratonin, jota hän ei ollut koskaan aiemmin juossut. Kukaan muu ei ole voittanut näitä kolmea samoissa kisoissa.
+
+### 26.2
+KYSYMYS: Mitä mestariteosta hän kirjoitti siellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mihailovskoje (kulttuuri)
+Tietoruudun teksti: Mihailovskoje on Aleksandr Puškinin perheen kartano Pihkovan alueella, ja maa oli lahjoitettu vuonna 1742 hänen äitinsä isoisälle Abram Gannibalille. Puškin vieraili tilalla säännöllisesti, mutta vuosina 1824–1826 hänet karkotettiin sinne poliittisen epäluulon vuoksi, kauas pääkaupunkien vaikutuspiiristä. Karkotusvuosina hän kirjoitti suuren osan mestariteoksestaan Jevgeni Onegin. Valtio osti kartanon Puškinin pojalta Grigorilta vasta 1899, ja vuodesta 1922 se on toiminut museona; toisen maailmansodan aikana kartano ryöstettiin ja tuhoutui pahoin, mutta se kunnostettiin sodan jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Sagrada Família] 1882– Sagrada Família on Barcelonan valtava, yhä keskeneräinen kirkko, jota nerokas arkkitehti Antoni Gaudí alkoi suunnitella 1880-luvulla. Rakennustyöt käynnistyivät vuonna 1882, ja Gaudí otti hankkeen johtoonsa jo seuraavana vuonna. Hän omisti kirkolle lopun elämästään, mutta kun hän kuoli vuonna 1926, rakennuksesta oli valmiina vasta pieni osa. Kirkkoon on suunniteltu peräti 18 tornia, ja korkein niistä kohoaa yli 172 metriin – tämä tekee Sagrada Famíliasta maailman korkeimman kirkkorakennuksen. Sisällä valtavat kivipilarit haarautuvat katossa kuin puiden oksat, ja kirkon eri julkisivut kertovat Jeesuksen elämästä aivan eri tavoin: toinen riemuiten ja koristeellisesti, toinen karun pelki…
+- [Afganistan — maalehti / Kuvataide: Mestari, joka piilotettiin luolaan] 1455–1535 — Kamal ud-Din Behzad syntyi Heratissa noin 1455, jäi varhain orvoksi ja kasvoi hovin kirjastonhoitajan ja maalarin Mirak Naqqashin huomassa. Vuonna 1486 sulttaani Husayn Bayqara nimitti hänet Heratin hovipajojen johtajaksi. Behzad jätti kuviinsa tyhjää tilaa, antoi jokaiselle hahmolle omat kasvot ja piilotti kuviin pieniä kertomuksia. Tarun mukaan shaahi Ismail kätki hänet Chaldiranin taistelun aikana 1514 luolaan kuin aarteen. Vuonna 1522 hän siirtyi Tabrizin hovipajan johtoon. Töitä jäljiteltiin niin paljon, että tutkijat kiistelevät yhä siitä, mitkä kuvat ovat hänen.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-smolensk) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolensk (historia)
+Tietoruudun teksti: Smolensk mainitaan lähteissä ensi kerran jo vuonna 863, mikä tekee siitä yhden Venäjän vanhimmista kaupungeista, ja se sijaitsee ylä-Dneprin varrella strategisesti tärkeällä kauppareitillä Länsi-Euroopasta Moskovaan. Vuosina 1597–1602 rakennettu kivikremli on Venäjän suurin, ja sen paksut muurit ja lukuisat tornit hallitsivat aikoinaan Länsi-Venäjän puolustusta. Elokuussa 1812 kaupungin muurien juurella kohtasivat kaksi historian suurinta armeijaa, kun Napoleon valtasi Smolenskin noin 30 000 sotilaan hinnalla — taistelun kuvasi myöhemmin Lev Tolstoi romaanissaan Sota ja rauha. Keskiajalla kaupunki oli oman ruhtinaskuntansa pääkaupunki, ja se siirtyi vuorotellen liettualaisten, puolalaisten ja venäläisten hallintaan ennen kuin vakiintui osaksi Venäjää.
+
+### 27.1
+KYSYMYS: Miksi Smolenskin muuri oli niin strategisesti tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolensk (historia)
+Tietoruudun teksti: Smolensk mainitaan lähteissä ensi kerran jo vuonna 863, mikä tekee siitä yhden Venäjän vanhimmista kaupungeista, ja se sijaitsee ylä-Dneprin varrella strategisesti tärkeällä kauppareitillä Länsi-Euroopasta Moskovaan. Vuosina 1597–1602 rakennettu kivikremli on Venäjän suurin, ja sen paksut muurit ja lukuisat tornit hallitsivat aikoinaan Länsi-Venäjän puolustusta. Elokuussa 1812 kaupungin muurien juurella kohtasivat kaksi historian suurinta armeijaa, kun Napoleon valtasi Smolenskin noin 30 000 sotilaan hinnalla — taistelun kuvasi myöhemmin Lev Tolstoi romaanissaan Sota ja rauha. Keskiajalla kaupunki oli oman ruhtinaskuntansa pääkaupunki, ja se siirtyi vuorotellen liettualaisten, puolalaisten ja venäläisten hallintaan ennen kuin vakiintui osaksi Venäjää.
+
+### 27.2
+KYSYMYS: Mitä Smolenskissa tapahtui elokuussa 1812?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolensk (historia)
+Tietoruudun teksti: Smolensk mainitaan lähteissä ensi kerran jo vuonna 863, mikä tekee siitä yhden Venäjän vanhimmista kaupungeista, ja se sijaitsee ylä-Dneprin varrella strategisesti tärkeällä kauppareitillä Länsi-Euroopasta Moskovaan. Vuosina 1597–1602 rakennettu kivikremli on Venäjän suurin, ja sen paksut muurit ja lukuisat tornit hallitsivat aikoinaan Länsi-Venäjän puolustusta. Elokuussa 1812 kaupungin muurien juurella kohtasivat kaksi historian suurinta armeijaa, kun Napoleon valtasi Smolenskin noin 30 000 sotilaan hinnalla — taistelun kuvasi myöhemmin Lev Tolstoi romaanissaan Sota ja rauha. Keskiajalla kaupunki oli oman ruhtinaskuntansa pääkaupunki, ja se siirtyi vuorotellen liettualaisten, puolalaisten ja venäläisten hallintaan ennen kuin vakiintui osaksi Venäjää.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-rostov-veliki) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rostov Veliki (historia)
+Tietoruudun teksti: Rostov Veliki mainitaan lähteissä jo vuonna 862, ja se oli keskiajalla oman ruhtinaskuntansa keskus ennen liittämistään Moskovaan 1474. Kaupungin komean kremlin rakennutti metropoliitta Iona Sysojevitš vuosina 1667–1694 omaksi hallintokeskuksekseen, ja sitä pidetään yhtenä Venäjän kauneimmista Moskovan kremlin ulkopuolella. Assumptionin katedraalin kellotapulissa riippuu useita valtavia kelloja, joista suurin, vuonna 1688 valettu Sysoi, painaa 32 000 kiloa. Nykyään Rostov on tunnettu Kultaisen renkaan matkailukohteena ja perinteisestä emalikäsityöstään, finiftistä.
+
+### 28.1
+KYSYMYS: Kuka rakennutti Rostovin komean kremlin ja miksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rostov Veliki (historia)
+Tietoruudun teksti: Rostov Veliki mainitaan lähteissä jo vuonna 862, ja se oli keskiajalla oman ruhtinaskuntansa keskus ennen liittämistään Moskovaan 1474. Kaupungin komean kremlin rakennutti metropoliitta Iona Sysojevitš vuosina 1667–1694 omaksi hallintokeskuksekseen, ja sitä pidetään yhtenä Venäjän kauneimmista Moskovan kremlin ulkopuolella. Assumptionin katedraalin kellotapulissa riippuu useita valtavia kelloja, joista suurin, vuonna 1688 valettu Sysoi, painaa 32 000 kiloa. Nykyään Rostov on tunnettu Kultaisen renkaan matkailukohteena ja perinteisestä emalikäsityöstään, finiftistä.
+
+### 28.2
+KYSYMYS: Kuinka painava sen suurin kello, Sysoi, on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rostov Veliki (historia)
+Tietoruudun teksti: Rostov Veliki mainitaan lähteissä jo vuonna 862, ja se oli keskiajalla oman ruhtinaskuntansa keskus ennen liittämistään Moskovaan 1474. Kaupungin komean kremlin rakennutti metropoliitta Iona Sysojevitš vuosina 1667–1694 omaksi hallintokeskuksekseen, ja sitä pidetään yhtenä Venäjän kauneimmista Moskovan kremlin ulkopuolella. Assumptionin katedraalin kellotapulissa riippuu useita valtavia kelloja, joista suurin, vuonna 1688 valettu Sysoi, painaa 32 000 kiloa. Nykyään Rostov on tunnettu Kultaisen renkaan matkailukohteena ja perinteisestä emalikäsityöstään, finiftistä.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-sergiev-posad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sergiev Posad (kulttuuri)
+Tietoruudun teksti: Kolminaisuus-Sergein Lavra perustettiin vuonna 1337, kun munkki Sergei Radonezhilainen rakensi puisen Pyhän Kolminaisuuden kirkon Makovets-kukkulalle. Luostarista tuli Venäjän tärkein ja arvostetuin, ja sen Kolminaisuuskatedraalissa säilytetään Andrei Rubljovin kuuluisaa Kolminaisuus-ikonia. Vahvat 1550-luvulla rakennetut kivimuurit auttoivat luostaria kestämään puolalais-liettualaisten 16 kuukauden piirityksen vuosina 1608–1610. Nykyisin alueella toimii yli 300 munkkia, ja keisarinna Elisabetin tilaama 88-metrinen kellotorni oli aikanaan yksi Venäjän korkeimmista rakennuksista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+- [Mexico City — kaupunkilehti / Mexico City: Piiritys, joka kesti kolme kuukautta] Hernán Cortés saapui Tenochtitlaniin 8. marraskuuta 1519 monien muiden kansojen tukemana, ja hallitsija Moctezuma II otti vieraat vastaan lahjoin – mutta sopu ei kestänyt kauaa. Kesäkuun 30. päivän vastaisena yönä 1520 kaupunkilaiset ajoivat espanjalaiset ja heidän tlaxcalalaiset liittolaisensa ulos. Cortés kokosi joukkonsa uudelleen Tlaxcalassa ja aloitti piirityksen toukokuussa 1521; kolme kuukautta kestivät ruoan ja veden puute sekä tulokkaiden mukanaan tuoma isorokko, ja elokuussa Cuauhtémoc antautui. Voittajat säilyttivät kaupungin peruskaavan mutta rakensivat kirkkonsa temppelien päälle.
+
+### 29.1
+KYSYMYS: Kuka perusti Kolminaisuus-Sergein Lavran ja minä vuonna?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sergiev Posad (kulttuuri)
+Tietoruudun teksti: Kolminaisuus-Sergein Lavra perustettiin vuonna 1337, kun munkki Sergei Radonezhilainen rakensi puisen Pyhän Kolminaisuuden kirkon Makovets-kukkulalle. Luostarista tuli Venäjän tärkein ja arvostetuin, ja sen Kolminaisuuskatedraalissa säilytetään Andrei Rubljovin kuuluisaa Kolminaisuus-ikonia. Vahvat 1550-luvulla rakennetut kivimuurit auttoivat luostaria kestämään puolalais-liettualaisten 16 kuukauden piirityksen vuosina 1608–1610. Nykyisin alueella toimii yli 300 munkkia, ja keisarinna Elisabetin tilaama 88-metrinen kellotorni oli aikanaan yksi Venäjän korkeimmista rakennuksista.
+
+### 29.2
+KYSYMYS: Miten luostari kesti pitkän piirityksen 1600-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sergiev Posad (kulttuuri)
+Tietoruudun teksti: Kolminaisuus-Sergein Lavra perustettiin vuonna 1337, kun munkki Sergei Radonezhilainen rakensi puisen Pyhän Kolminaisuuden kirkon Makovets-kukkulalle. Luostarista tuli Venäjän tärkein ja arvostetuin, ja sen Kolminaisuuskatedraalissa säilytetään Andrei Rubljovin kuuluisaa Kolminaisuus-ikonia. Vahvat 1550-luvulla rakennetut kivimuurit auttoivat luostaria kestämään puolalais-liettualaisten 16 kuukauden piirityksen vuosina 1608–1610. Nykyisin alueella toimii yli 300 munkkia, ja keisarinna Elisabetin tilaama 88-metrinen kellotorni oli aikanaan yksi Venäjän korkeimmista rakennuksista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+- [Mexico City — kaupunkilehti / Mexico City: Piiritys, joka kesti kolme kuukautta] Hernán Cortés saapui Tenochtitlaniin 8. marraskuuta 1519 monien muiden kansojen tukemana, ja hallitsija Moctezuma II otti vieraat vastaan lahjoin – mutta sopu ei kestänyt kauaa. Kesäkuun 30. päivän vastaisena yönä 1520 kaupunkilaiset ajoivat espanjalaiset ja heidän tlaxcalalaiset liittolaisensa ulos. Cortés kokosi joukkonsa uudelleen Tlaxcalassa ja aloitti piirityksen toukokuussa 1521; kolme kuukautta kestivät ruoan ja veden puute sekä tulokkaiden mukanaan tuoma isorokko, ja elokuussa Cuauhtémoc antautui. Voittajat säilyttivät kaupungin peruskaavan mutta rakensivat kirkkonsa temppelien päälle.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-ipatievin-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipatievin luostari (historia)
+Tietoruudun teksti: Ipatievin luostari perustettiin noin 1330 tataarilähtöisen ruhtinas Tšetin toimesta, joka kääntyi kristityksi nimellä Zakarias, ja se sijaitsee Kostroma-joen rannalla vastapäätä Kostroman kaupunkia. Luostari nousi historiaan 14. maaliskuuta 1613, kun Zemski sobor -kokous ilmoitti juuri täällä oleskelleen nuoren Mihail Romanovin Venäjän uudeksi tsaariksi — hetki, joka käynnisti Romanovien 300-vuotisen hallituskauden. Luostarin kirjastosta löytyi myös arvokas Ipatievin aikakirja, joka sisältää keskeisiä 1300-luvun venäläisiä kronikoita ja jonka historioitsija Nikolai Karamzin toi tunnetuksi. Suurin osa nykyisistä rakennuksista on 1500–1600-luvuilta, ja tsaari Aleksanteri II käynnisti 1800-luvulla Mihail Romanovin asuinsijan entisöinnin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mustat rannat] Kamerunvuoren toistuvat purkaukset ovat värjänneet koko Ambas-lahden rannikon: hiekan ja pikkukivien joukossa on niin paljon mustaa laavakiveä, että rannat näyttävät kauttaaltaan tumman harmailta tai jopa mustilta. Limbén kaupungin edustalla paikalliset uivat ja viilentyvät näillä laavakivien reunustamilla rannoilla edelleen. Samat mustat kivet kertovat vuoren pitkästä purkaushistoriasta paljon konkreettisemmin kuin mikään aikakirja koskaan pystyisi kertomaan.
+- [Lontoo — kaupunkilehti / Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista] 21.9.1599 — Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on en…
+
+### 30.1
+KYSYMYS: Mikä merkittävä päätös tehtiin luostarissa 14. maaliskuuta 1613?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipatievin luostari (historia)
+Tietoruudun teksti: Ipatievin luostari perustettiin noin 1330 tataarilähtöisen ruhtinas Tšetin toimesta, joka kääntyi kristityksi nimellä Zakarias, ja se sijaitsee Kostroma-joen rannalla vastapäätä Kostroman kaupunkia. Luostari nousi historiaan 14. maaliskuuta 1613, kun Zemski sobor -kokous ilmoitti juuri täällä oleskelleen nuoren Mihail Romanovin Venäjän uudeksi tsaariksi — hetki, joka käynnisti Romanovien 300-vuotisen hallituskauden. Luostarin kirjastosta löytyi myös arvokas Ipatievin aikakirja, joka sisältää keskeisiä 1300-luvun venäläisiä kronikoita ja jonka historioitsija Nikolai Karamzin toi tunnetuksi. Suurin osa nykyisistä rakennuksista on 1500–1600-luvuilta, ja tsaari Aleksanteri II käynnisti 1800-luvulla Mihail Romanovin asuinsijan entisöinnin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista] 21.9.1599 — Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on en…
+- [Lontoo — kohdekartta / Kohdekartta: Globe 1599] Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen va…
+
+### 30.2
+KYSYMYS: Mikä arvokas aikakirja löytyi luostarin kirjastosta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipatievin luostari (historia)
+Tietoruudun teksti: Ipatievin luostari perustettiin noin 1330 tataarilähtöisen ruhtinas Tšetin toimesta, joka kääntyi kristityksi nimellä Zakarias, ja se sijaitsee Kostroma-joen rannalla vastapäätä Kostroman kaupunkia. Luostari nousi historiaan 14. maaliskuuta 1613, kun Zemski sobor -kokous ilmoitti juuri täällä oleskelleen nuoren Mihail Romanovin Venäjän uudeksi tsaariksi — hetki, joka käynnisti Romanovien 300-vuotisen hallituskauden. Luostarin kirjastosta löytyi myös arvokas Ipatievin aikakirja, joka sisältää keskeisiä 1300-luvun venäläisiä kronikoita ja jonka historioitsija Nikolai Karamzin toi tunnetuksi. Suurin osa nykyisistä rakennuksista on 1500–1600-luvuilta, ja tsaari Aleksanteri II käynnisti 1800-luvulla Mihail Romanovin asuinsijan entisöinnin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — kaupunkilehti / Kamerun: Mustat rannat] Kamerunvuoren toistuvat purkaukset ovat värjänneet koko Ambas-lahden rannikon: hiekan ja pikkukivien joukossa on niin paljon mustaa laavakiveä, että rannat näyttävät kauttaaltaan tumman harmailta tai jopa mustilta. Limbén kaupungin edustalla paikalliset uivat ja viilentyvät näillä laavakivien reunustamilla rannoilla edelleen. Samat mustat kivet kertovat vuoren pitkästä purkaushistoriasta paljon konkreettisemmin kuin mikään aikakirja koskaan pystyisi kertomaan.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

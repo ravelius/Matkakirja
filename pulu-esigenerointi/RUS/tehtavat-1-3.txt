@@ -1,0 +1,274 @@
+================ KOHTA 11 (kohde:kazanin-kreml) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Menovinkit] Venäjän suuret museot ja kirjastot ovat vieneet kokoelmansa verkkoon. Eremitaasin maalauksia voi zoomata, Kremlin kruunuja katsoa läheltä ja Prokudin-Gorskin värikuvat vievät vuoteen 1910.
+
+### 11.1
+KYSYMYS: Kuka määräsi kremlin rakennettavaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Menovinkit] Venäjän suuret museot ja kirjastot ovat vieneet kokoelmansa verkkoon. Eremitaasin maalauksia voi zoomata, Kremlin kruunuja katsoa läheltä ja Prokudin-Gorskin värikuvat vievät vuoteen 1910.
+
+### 11.2
+KYSYMYS: Mikä Söyembikän torni on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kazanin kreml (historia)
+Tietoruudun teksti: Kazanin kreml on Kazanin kaupungin vanha linnoitus Tatarstanissa. Iivana Julma määräsi sen rakennettavaksi Kazanin khaanien entisen linnan raunioille, ja Unesco listasi sen maailmanperintökohteeksi vuonna 2000. Tsaari kutsui työhön pihkovalaiset rakennusmestarit Postnik Jakovlevin ja Ivan Širjain, jota kutsuttiin Barmaksi.
+
+Vanhin rakennus on Marian ilmestyksen katedraali vuosilta 1554–1562. Se on ainoa 1500-luvun venäläinen kirkko, jossa on kuusi pilaria ja viisi apsista, ja se on rakennettu paikallisesta vaaleasta hiekkakivestä eikä tiilestä. Katedraalin viisikerroksinen kellotorni purettiin 1930.
+
+Näkyvin maamerkki on vino Söyembikän torni, joka on todennäköisesti Pietari Suuren ajalta; tunnettu tarina liittää sen Kazanin khaanikunnan viimeiseen kuningattareen. Kremlin eteläpäätä hallitsee Spasskajan torni, joka on samalla pääsisäänkäynti. Muurien sisällä ovat myös uudelleen rakennet…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:veliki-novgorod) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Historia: Etuoikeus, joka kesti neljäsataa vuotta] Hansakauppiaat asuivat omassa kaupunginosassaan, jossa käytettiin keskisaksaa, ja heillä oli yksinoikeus käydä kauppaa niiden pohjoisnorjalaisten kalastajien kanssa, jotka purjehtivat Bergeniin joka kesä. Kauppamonopoli Pohjois-Norjaan säilyi vuoteen 1789 asti. Suhteet muihin tulokkaisiin eivät aina olleet rauhalliset: 9. marraskuuta 1523 saksalaiset asukkaat kävivät useiden Bergeniin asettuneiden skotlantilaiskauppiaiden talouksien kimppuun. Noin vuodesta 1600 hansan ote alkoi hellittää norjalaisten kauppiaiden hyväksi, ja kontori suljettiin 1750-luvulla.
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+
+### 12.1
+KYSYMYS: Mikä Novgorodin tasavalta oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+
+### 12.2
+KYSYMYS: Mikä oli hansan kontor?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Novgorod (kaupungit)
+Tietoruudun teksti: Veliki Novgorod on Novgorodin alueen suurin kaupunki ja hallinnollinen keskus. Se sijaitsee Volhov-joen varrella kuusi kilometriä siitä, mistä joki lähtee Ilmenjärvestä, Moskovan ja Pietarin välisen valtatien varrella. Asukkaita on runsaat 224 000. Nimi tarkoittaa kirjaimellisesti suurta uuttakaupunkia.
+
+Novgorod on Venäjän vanhimpia kaupunkeja, ja se mainitaan lähteissä ensimmäisen kerran 800-luvulla. Vuosina 1136–1478 se oli Novgorodin tasavallan keskus, ja tasavalta hallitsi suurta osaa Venäjän pohjoisesta.
+
+Kaupunki toimi välittäjänä muiden venäläiskaupunkien ja Luoteis-Euroopan välillä ja vaurastui hansaliiton kaupassa; hansan päätoimipaikka eli kontor kaupungissa oli nimeltään Peterhof. Huipussaan 1300-luvulla Novgorod oli Euroopan suurimpia kaupunkeja. Nimen Veliki Novgorod kaupunki sai virallisesti vasta 1999, ja Unesco listasi sen maailmanperintökohteeksi 1992.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kaupunkilehti / Historia: Etuoikeus, joka kesti neljäsataa vuotta] Hansakauppiaat asuivat omassa kaupunginosassaan, jossa käytettiin keskisaksaa, ja heillä oli yksinoikeus käydä kauppaa niiden pohjoisnorjalaisten kalastajien kanssa, jotka purjehtivat Bergeniin joka kesä. Kauppamonopoli Pohjois-Norjaan säilyi vuoteen 1789 asti. Suhteet muihin tulokkaisiin eivät aina olleet rauhalliset: 9. marraskuuta 1523 saksalaiset asukkaat kävivät useiden Bergeniin asettuneiden skotlantilaiskauppiaiden talouksien kimppuun. Noin vuodesta 1600 hansan ote alkoi hellittää norjalaisten kauppiaiden hyväksi, ja kontori suljettiin 1750-luvulla.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:kolan-syvareika) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Vanhin kuori — ja reikä siinä] Keski- ja Etelä-Namibian Naman ryhmän kivistä löydettiin 1972 pieniä kalkkikartioita, jotka ovat sisäkkäin kuin suppilot. Ne saivat nimen Cloudina geologi Preston Cloudin mukaan, ja ne elivät noin 550 miljoonaa vuotta sitten, ediacaran kauden lopulla. Itse eläintä ei tunneta, vain sen putki: läpimitta 0,3–6,5 millimetriä, pituus korkeintaan 15 senttiä. Cloudina on varhaisimpia eläimiä, joilla oli kovettunut tukiranka, ja yleisin selitys kuorelle on suoja saalistajilta: Kiinan löydöissä osassa kuoria on porausreikiä, joiden koko seuraa kuoren kokoa. Kilpavarustelu alkoi ennen kambrikautta.
+
+### 13.1
+KYSYMYS: Kuinka syvälle reikä ylsi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Vanhin kuori — ja reikä siinä] Keski- ja Etelä-Namibian Naman ryhmän kivistä löydettiin 1972 pieniä kalkkikartioita, jotka ovat sisäkkäin kuin suppilot. Ne saivat nimen Cloudina geologi Preston Cloudin mukaan, ja ne elivät noin 550 miljoonaa vuotta sitten, ediacaran kauden lopulla. Itse eläintä ei tunneta, vain sen putki: läpimitta 0,3–6,5 millimetriä, pituus korkeintaan 15 senttiä. Cloudina on varhaisimpia eläimiä, joilla oli kovettunut tukiranka, ja yleisin selitys kuorelle on suoja saalistajilta: Kiinan löydöissä osassa kuoria on porausreikiä, joiden koko seuraa kuoren kokoa. Kilpavarustelu alkoi ennen kambrikautta.
+
+### 13.2
+KYSYMYS: Miksi kairaus keskeytettiin vuodeksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kolan syväreikä (tekniikka)
+Tietoruudun teksti: Kolan syväreikä SG-3 on syvin ihmisen tekemä reikä maapallolla: se ylsi vuonna 1989 pystysuoraan syvyyteen 12 262 metriä. Kyse oli neuvostoliittolaisesta tiedehankkeesta, jonka tavoite oli tunkeutua maankuoreen niin syvälle kuin mahdollista. Paikka on Kuolan niemimaalla Petšengan piirissä lähellä Norjan rajaa.
+
+Kairaus alkoi 24. toukokuuta 1970 tavallisella öljynporauslautalla Uralmaš-4E, jota oli hieman muunneltu 7 000 metriä varten. Vuonna 1974 paikalle pystytettiin uusi Uralmaš-15000, joka oli nimetty uuden tavoitteen — viidentoista kilometrin — mukaan. Reikiä porattiin kaikkiaan viisi, kukin halkaisijaltaan 23 senttiä.
+
+6. kesäkuuta 1979 hanke ohitti aiemman syvyysennätyksen, joka oli Oklahomassa porattu 9 583 metrin Bertha Rogers -reikä. Lokakuussa 1982 ensimmäinen reikä oli 11 662 metrissä. Kun toinen reikä ohitti 12 000 metriä vuonna 1983, kairaus pysäytettiin noin vuodeksi tiete…
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:tunguskan-rajahdys) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kakku jonka väitetään huijanneen keisarinnaa] 1900-luku — Tarinan mukaan nuori hovikondiittori keksi 1800-luvun alussa ohuista kakkulevyistä ja hapankermatäytteestä kakun miellyttääkseen keisari Aleksanteri I:n puolisoa Elizaveta Aleksejevnaa, joka ei muka sietänyt hunajaa — ja keisarinnan kerrotaan rakastuneen kakkuun tietämättä, että se oli täynnä juuri sitä. Tarina on kaunis, mutta mistään 1800-luvun keittokirjasta medovikia ei löydy: kakku yleistyi todellisuudessa vasta neuvostoaikana. Ohuet levyt paistetaan koviksi ja pinotaan päällekkäin hunajaisen täytteen kanssa, minkä jälkeen kakun annetaan seistä päiväkausia — täyte pehmentää levyt vasta varastoinnin aikana, ja pinta koristellaan usein murustetuilla leikkuutähteillä.
+- [St. Helena — kaupunkilehti / St. Helena: Lankalintu, jota ei löydy muualta] St. Helenan lankalintu eli saarikurmitsa on pieni ruskehtava kahlaaja, joka elää vain tällä yhdellä saarella koko maailmassa – se on saaren ainoa jäljellä oleva endeeminen maalintu ja samalla sen kansallissymboli. Lintu pesii avoimilla ruohoalueilla suoraan maahan ja on erittäin uhanalainen: yksilöitä on jäljellä vain muutama sata. Isoisän aikaan 1870-luvulla lankalintuja oli huomattavasti enemmän, ennen kuin laidunmaiden raivaus ja vieraslajit kutistivat niiden elinaluetta rajusti. Nykyään lintua suojellaan tarkasti, ja se koristaa myös saaren vaakunaa.
+
+### 14.1
+KYSYMYS: Miksi paikalta ei löydy kraatteria?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kakku jonka väitetään huijanneen keisarinnaa] 1900-luku — Tarinan mukaan nuori hovikondiittori keksi 1800-luvun alussa ohuista kakkulevyistä ja hapankermatäytteestä kakun miellyttääkseen keisari Aleksanteri I:n puolisoa Elizaveta Aleksejevnaa, joka ei muka sietänyt hunajaa — ja keisarinnan kerrotaan rakastuneen kakkuun tietämättä, että se oli täynnä juuri sitä. Tarina on kaunis, mutta mistään 1800-luvun keittokirjasta medovikia ei löydy: kakku yleistyi todellisuudessa vasta neuvostoaikana. Ohuet levyt paistetaan koviksi ja pinotaan päällekkäin hunajaisen täytteen kanssa, minkä jälkeen kakun annetaan seistä päiväkausia — täyte pehmentää levyt vasta varastoinnin aikana, ja pinta koristellaan usein murustetuilla leikkuutähteillä.
+- [St. Helena — kaupunkilehti / St. Helena: Lankalintu, jota ei löydy muualta] St. Helenan lankalintu eli saarikurmitsa on pieni ruskehtava kahlaaja, joka elää vain tällä yhdellä saarella koko maailmassa – se on saaren ainoa jäljellä oleva endeeminen maalintu ja samalla sen kansallissymboli. Lintu pesii avoimilla ruohoalueilla suoraan maahan ja on erittäin uhanalainen: yksilöitä on jäljellä vain muutama sata. Isoisän aikaan 1870-luvulla lankalintuja oli huomattavasti enemmän, ennen kuin laidunmaiden raivaus ja vieraslajit kutistivat niiden elinaluetta rajusti. Nykyään lintua suojellaan tarkasti, ja se koristaa myös saaren vaakunaa.
+
+### 14.2
+KYSYMYS: Kuinka laajalta alueelta metsä kaatui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tunguskan räjähdys (historia)
+Tietoruudun teksti: Tunguskan räjähdys tapahtui Podkamennaja Tunguska -joen lähellä Siperiassa 30. kesäkuuta 1908 aamulla. Sen voimaksi on arvioitu 3–50 megatonnia TNT:tä, ja se kaatoi metsää 2 150 neliökilometrin alalta. Silminnäkijäkertomusten perusteella jopa kolme ihmistä saattoi kuolla.
+
+Syyksi katsotaan meteorin ilmaräjähdys: noin 50–60 metriä leveä kivinen asteroidi tuli itäkaakosta lähes 27 kilometrin sekuntinopeudella ja hajosi 5–10 kilometrin korkeudessa. Koska se ei osunut maahan, kraatteria ei jäänyt. Kyseessä on suurin tunnetun historian aikana tapahtunut törmäys maapallolla.
+
+Kello 7.14 paikallista aikaa evenkiläiset ja venäläiset uudisasukkaat Baikalin luoteispuolen kukkuloilla näkivät sinertävän valon, joka oli lähes yhtä kirkas kuin aurinko. Noin kymmenen minuuttia myöhemmin kuului tykkitulta muistuttava jyrinä, ja paineaalto kaatoi ihmisiä jaloiltaan ja rikkoi ikkunoita satojen kilometrie…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+- [Kamerun — kaupunkilehti / Kamerunvuoren sademetsä: Puut jotka seisovat tukijaloilla] Kamerunvuoren alarinteiden sademetsässä monet jättiläispuut kannattelevat itseään leveillä, seinämäisillä tukijuurilla, jotka voivat levitä useiden metrien päähän rungosta. Sademetsän maaperä on yllättävän ohutta ja ravinneköyhää, joten juuret eivät ehdi kasvaa syvälle – tukijuuret antavat vakautta tuulta ja rankkasateita vastaan ja auttavat samalla keräämään ravinteita laajalta alueelta aivan maanpinnan tuntumasta. Sammalen peittämät tukijuuret ovat samalla oma pieni elinympäristönsä saniaisille ja hyönteisille.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:tobolskin-kreml) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 15.1
+KYSYMYS: Kuka oli Semjon Remezov?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+### 15.2
+KYSYMYS: Ketkä rakensivat kremliä pakkotyössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tobolskin kreml (historia)
+Tietoruudun teksti: Tobolskin kreml on Siperian ainoa kivestä rakennettu kreml. Se seisoo Tobolskissa Tjumenin alueella. Kaupunki perustettiin 1587, ja Moskova kannusti rakentamaan sinne kivestä. Vuosina 1683–1686 Moskovasta ja Veliki Ustjugista lähetetyt muurarit pystyttivät kivisen Pyhän Sofian katedraalin, ja 1700-luvun alussa nousivat muurit ja tornit. Työtä valvoi Siperian metropoliitta Paavali.
+
+1600-luvun lopulla rakentamista jatkoi Semjon Remezov, kartografi ja Siperian ensimmäinen historioitsija. Hän rakennutti virastopalatsin vuosina 1699–1704 kukkulan eteläisen jyrkänteen päälle ja kauppahallit 1702–1706.
+
+Ruhtinas Gagarin, joka nimitettiin 1708 Siperian läänin ensimmäiseksi kuvernööriksi, halusi kremlistä monumentaalisen hallinto- ja kauppakeskuksen. Töissä käytettiin Tobolskiin karkotettuja ruotsalaisia sotavankeja. Kukkulan sortumisen estämiseksi Tobol-joen uomaa siirrettiin kaksi virstaa ete…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Moskovan Kreml] 1485-1495 Linnoitus tällä paikalla on paljon vanhempi kuin luulisi: ensimmäisen linnan rakensi ruhtinas Juri Dolgorukin jo vuonna 1156, ja vuonna 1339 ruhtinas Iivana I Kalita vahvisti sitä tammisilla muureilla. Nykyiset punatiiliset muurit ja tornit, jotka yhä seisovat, rakennettiin vuosina 1485-1495 ruhtinas Iivana III:n käskystä. Iivana III kutsui työhön taitavia arkkitehtejä kaukaa Italiasta. Pietro Antonio Solari suunnitteli uudet muurit ja tornit, ja Marco Ruffo piirsi ruhtinaan uuden palatsin. Solarin nimi on kaiverrettu latinaksi yhä nähtävissä Spasskajan tornin porttien yläpuolella. Muuria on yhteensä 2235 metriä, ja se on paikoin 5-19 metriä korkea ja jopa 6,5 metriä paksu. Tornej…
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

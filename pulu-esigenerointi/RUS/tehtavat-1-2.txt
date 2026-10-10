@@ -1,0 +1,225 @@
+================ KOHTA 6 (kohde:beringinmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Kamtšatka: Kaksi pakettivenettä antoi satamalle nimen] Merenkulkija Ivan Jelagin lähti Vitus Beringin käskystä Ohotskista syksyllä 1739, talvehti Kamtšatkalla ja purjehti seuraavana keväänä Bolšeretskista niemimaan eteläkärjen ympäri Avatšanlahdelle 10. kesäkuuta 1740. Syyskuun 20. päivänä hän ilmoitti, että rantaan oli valmistunut yhteen liitetty asuinrakennus viisine huoneineen, kolme kasarmia ja kolme kaksikerroksista aittaa. Syyskuun lopulla lahdelle saapui Aleksei Tširikovin pakettivene Pyhä apostoli Paavali ja 6. lokakuuta Beringin Pyhä apostoli Pietari. Satama sai nimensä aluksilta, ja jälkimmäistä päivää — uutta lukua 17. lokakuuta — pidetään kaupungin perustamispäivänä.
+
+### 6.1
+KYSYMYS: Kuka Vitus Bering oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamtšatka — kaupunkilehti / Kamtšatka: Kaksi pakettivenettä antoi satamalle nimen] Merenkulkija Ivan Jelagin lähti Vitus Beringin käskystä Ohotskista syksyllä 1739, talvehti Kamtšatkalla ja purjehti seuraavana keväänä Bolšeretskista niemimaan eteläkärjen ympäri Avatšanlahdelle 10. kesäkuuta 1740. Syyskuun 20. päivänä hän ilmoitti, että rantaan oli valmistunut yhteen liitetty asuinrakennus viisine huoneineen, kolme kasarmia ja kolme kaksikerroksista aittaa. Syyskuun lopulla lahdelle saapui Aleksei Tširikovin pakettivene Pyhä apostoli Paavali ja 6. lokakuuta Beringin Pyhä apostoli Pietari. Satama sai nimensä aluksilta, ja jälkimmäistä päivää — uutta lukua 17. lokakuuta — pidetään kaupungin perustamispäivänä.
+
+### 6.2
+KYSYMYS: Kuinka kapea Beringinsalmi on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beringinmeri (meri)
+Tietoruudun teksti: Beringinmeri on Pohjois-Tyynenmeren reunameri, ja yhdessä Beringinsalmen kanssa se muodostaa rajan maailman kahden suurimman mantereen, Euraasian ja Amerikan, välille. Sen pinta-ala on yli 2 000 000 neliökilometriä: idässä ja koillisessa on Alaska, lännessä Venäjän Kaukoitä ja Kamtšatka. Nimi tulee Tanskassa syntyneeltä venäläiseltä merenkulkijalta Vitus Beringiltä, joka vuonna 1728 purjehti ensimmäisenä eurooppalaisena sen halki Tyyneltämereltä pohjoiseen Jäämerelle.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:volga) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+### 7.1
+KYSYMYS: Miksi Volga ei laske mereen vaan järveen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+### 7.2
+KYSYMYS: Mikä Rusin kaganaatti oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volga (luonto · joki)
+Tietoruudun teksti: Volga on Euroopan pisin joki ja maailman pisin sisävaluma-alueen joki: 3 531 kilometriä ja valuma-alue 1 360 000 neliökilometriä. Se virtaa Keski-Venäjältä Etelä-Venäjälle ja laskee Kaspianmereen, ei valtamereen. Sitä pidetään yleisesti Venäjän kansallisjokena, ja sen varrelle syntyi noin vuonna 830 varhainen valtiomuodostelma Rusin kaganaatti.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:ob) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Maa jossa joet virtaavat makeaa keittoa] 1800-luku — Kisseli on hapatetusta tai tärkkelyksellä sakeutetusta marjasta, hedelmästä tai viljasta keitetty jälkiruoka, jonka nimi juontuu vanhasta slaavilaisesta hapan-sanasta. Alkuperäiset kisselit tehtiin kaurasta tai rukiista ilman perunatärkkelystä, ja makea marjaversio yleistyi vasta 1800-luvulla, kun halpaa perunatärkkelystä alkoi olla kaikkien saatavilla. Venäläisissä saduissa ihannemaata kuvataan sanonnalla "maidonjoet, kisselirannat", ja kaukaista sukulaista sanotaan leikillään "seitsemänneksi vedeksi kisselin jälkeen" — niin ohuena serkkuus siinä näyttäytyy. Karpalosta keitetty kisseli on yksi suosituimmista versioista, ja sen paksu, kiiltävä pinta muistuttaa enemmän hyytelöä k…
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+
+### 8.1
+KYSYMYS: Mitkä ovat Siperian kolme suurta jokea?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+- [Townsville — kohdekartta / Kohdekartta: Queens Gardens] 1870 Kesäkuun 14. päivänä 1870 julistettiin sadan eekkerin kasvitieteellinen reservi, jollaisia perustettiin siihen aikaan lähes joka kaupunkiin Queenslandissa. Nimi Queens Park viittasi Viktoriaan, ja tarkoitus oli yhtä lailla tieteellinen kuin taloudellinen. Puutarha oli akklimatisaatiopuutarha: siellä kokeiltiin, mitkä kaupalliset kasvit kestäisivät tropiikin. Ensimmäisiä lajeja olivat kaakao, afrikkalainen öljypalmu ja mango. Osa silloin istutetuista hoop-männyistä ja mustapavuista kasvaa yhä, ja lähteen mukaan ne saattavat olla Australian vanhimpia viljeltyjä yksilöitä. Vuosisadan lopulla puutarha alkoi muuttua muodolliseksi virkistyspuistoksi. Toisen maailmansodan aikana se oli sadant…
+
+### 8.2
+KYSYMYS: Miksi Siperian joet virtaavat pohjoiseen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ob (luonto · joki)
+Tietoruudun teksti: Ob on Länsi-Siperian suuri joki, ja yhdessä sivujokensa Irtyšin kanssa se muodostaa maailman seitsemänneksi pisimmän jokijärjestelmän: 5 410 kilometriä. Joki syntyy Bijan ja Katunin yhtymäkohdassa, ja molemmat saavat alkunsa Altain vuorilta. Se on läntisin kolmesta suuresta Siperian joesta, jotka laskevat Jäämereen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Maa jossa joet virtaavat makeaa keittoa] 1800-luku — Kisseli on hapatetusta tai tärkkelyksellä sakeutetusta marjasta, hedelmästä tai viljasta keitetty jälkiruoka, jonka nimi juontuu vanhasta slaavilaisesta hapan-sanasta. Alkuperäiset kisselit tehtiin kaurasta tai rukiista ilman perunatärkkelystä, ja makea marjaversio yleistyi vasta 1800-luvulla, kun halpaa perunatärkkelystä alkoi olla kaikkien saatavilla. Venäläisissä saduissa ihannemaata kuvataan sanonnalla "maidonjoet, kisselirannat", ja kaukaista sukulaista sanotaan leikillään "seitsemänneksi vedeksi kisselin jälkeen" — niin ohuena serkkuus siinä näyttäytyy. Karpalosta keitetty kisseli on yksi suosituimmista versioista, ja sen paksu, kiiltävä pinta muistuttaa enemmän hyytelöä k…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:kizhin-pogosta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+
+### 9.1
+KYSYMYS: Kuinka monta kupolia Kirkastuksen kirkossa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+
+### 9.2
+KYSYMYS: Mitä sana pogosta tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kizhin pogosta (kulttuuri)
+Tietoruudun teksti: Kizhin pogosta on 1600-luvulle juontuva kokonaisuus Kizhin saarella Äänisellä Karjalan tasavallassa. Sana tarkoittaa aidan sisään jäävää aluetta, ja täällä sen sisällä ovat kaksi suurta puukirkkoa — 22-kupolinen Kirkastuksen kirkko ja 9-kupolinen Esirukouksen kirkko — sekä kellotapuli. Unesco otti kohteen maailmanperintöluetteloonsa 1990.
+
+Rakennusten perusyksikkö on pyöreä mäntyhirsi, halkaisijaltaan noin kolmekymmentä senttiä ja pituudeltaan kolmesta viiteen metriin. Koko pogosta rakennettiin ilman ainuttakaan naulaa, ja tuhannet hirret tuotiin mantereelta — aikanaan mittava kuljetusurakka.
+
+Kirkastuksen kirkon alttari laskettiin 6. kesäkuuta 1714. Se on lämmittämätön kesäkirkko, joka nousi salaman polttaman edeltäjänsä paikalle, eikä rakentajien nimiä tiedetä. Tarun mukaan pääkirvesmies käytti koko työhön yhtä kirvestä ja heitti sen valmistuttua järveen sanoen, ettei toista samanlais…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:solovetskin-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bolivia — maalehti / Ruoka: Siemen, jonka linnut jättävät rauhaan] Kinua kesytettiin Titicacajärven ympäristössä, ja se kasvaa yli neljän kilometrin korkeudessa. Siementen pinnalla on kitkerää saponiinia, joka karkottaa linnut, joten peltoa ei juuri tarvitse vartioida; kauppaan tuleva kinua on huuhdeltu kerroksesta puhtaaksi. YK:n yleiskokous julisti vuoden 2013 kansainväliseksi kinuavuodeksi andilaisten viljelijöiden perinteen kunniaksi. Vuonna 2023 maailmassa tuotettiin 112 251 tonnia kinuaa, ja siitä Perun osuus oli 62 ja Bolivian 37 prosenttia. Hintanousu 2004–2011 toi ylängölle rahaa mutta myös yksipuolisti viljelyä.
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Oponen kuuluisin vientitavara] Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.
+- [Somalia — maalehti / Luonto: Kameli on pankki ja maitokannu] Somalian keskuspankin arvion mukaan noin 80 prosenttia maan väestöstä on paimentolaisia tai puolipaimentolaisia, jotka pitävät vuohia, lampaita, kameleita ja nautoja ja täydentävät tulojaan keräämällä hartseja. Kamelinmaitoa tuotettiin maailmassa vuonna 2017 noin 2,85 miljoonaa tonnia, ja siitä 64 prosenttia lypsettiin Somaliassa ja Keniassa. Paimen voi elää pitkiä jaksoja pelkällä kamelinmaidolla: siitä syntyy helposti jogurttia, mutta voita tai juustoa siitä ei juuri saa.
+
+### 10.1
+KYSYMYS: Mikä oli Solovetskin kapina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+### 10.2
+KYSYMYS: Mitä luostarissa tuotettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Solovetskin luostari (historia)
+Tietoruudun teksti: Solovetskin luostari on linnoitettu luostari Solovetskin saarilla Vienanmerellä Pohjois-Venäjällä. Sen tärkeimmät rakennukset ovat 1500-luvulta, jolloin Filip Kolytšev toimi sen igumenina. Munkki Zosima perusti luostarin 1436; munkit German ja Savvati olivat asuneet saarella jo vuodesta 1429, ja heitä pidetään sen toisina perustajina.
+
+Luostari kasvoi kaupankäynnin varassa Vienanmeren alueen talous- ja politiikkakeskukseksi. Sillä oli suolakeittimöitä — 1660-luvulla 54 kappaletta — sekä ansapyyntiä, kalastusta, kiillelouhoksia, rautaruukkeja ja helmenkalastusta. 1600-luvulla siellä eli noin 350 munkkia ja 600–700 palvelijaa, käsityöläistä ja talonpoikaa.
+
+Luostari oli myös rajalinnoitus, jossa oli kymmeniä tykkejä ja vahva varuskunta; se torjui Liivinmaan ritarikunnan ja ruotsalaisten hyökkäykset 1571, 1582 ja 1611. 1650- ja 1660-luvuilla se oli vanhauskoisten tukikohta, ja vuosien 1668…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bolivia — maalehti / Ruoka: Siemen, jonka linnut jättävät rauhaan] Kinua kesytettiin Titicacajärven ympäristössä, ja se kasvaa yli neljän kilometrin korkeudessa. Siementen pinnalla on kitkerää saponiinia, joka karkottaa linnut, joten peltoa ei juuri tarvitse vartioida; kauppaan tuleva kinua on huuhdeltu kerroksesta puhtaaksi. YK:n yleiskokous julisti vuoden 2013 kansainväliseksi kinuavuodeksi andilaisten viljelijöiden perinteen kunniaksi. Vuonna 2023 maailmassa tuotettiin 112 251 tonnia kinuaa, ja siitä Perun osuus oli 62 ja Bolivian 37 prosenttia. Hintanousu 2004–2011 toi ylängölle rahaa mutta myös yksipuolisti viljelyä.
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Oponen kuuluisin vientitavara] Periplus-oppaan mukaan Oponesta "tuotettiin suuri määrä kanelia", ja kirjoittaja mainitsee erikseen kaksi parasta lajiketta nimeltä. Todellisuudessa kaneli kasvoi paljon kauempana, luultavasti nykyisen Sri Lankan tai Kaakkois-Aasian seudulla, ja se kulkeutui Afrikan sarveen jo valmiiksi kauppatavarana meritse idästä. Somalian rannikon kauppiaat toimivat siis tässä vaiheessa välikäsinä, jotka kokosivat kanelin muun rahdin joukkoon ja myivät sen eteenpäin roomalaisille ostajille tietämättä usein tarkkaan, mistä mauste alun perin oli lähtöisin.
+- [Somalia — maalehti / Luonto: Kameli on pankki ja maitokannu] Somalian keskuspankin arvion mukaan noin 80 prosenttia maan väestöstä on paimentolaisia tai puolipaimentolaisia, jotka pitävät vuohia, lampaita, kameleita ja nautoja ja täydentävät tulojaan keräämällä hartseja. Kamelinmaitoa tuotettiin maailmassa vuonna 2017 noin 2,85 miljoonaa tonnia, ja siitä 64 prosenttia lypsettiin Somaliassa ja Keniassa. Paimen voi elää pitkiä jaksoja pelkällä kamelinmaidolla: siitä syntyy helposti jogurttia, mutta voita tai juustoa siitä ei juuri saa.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
