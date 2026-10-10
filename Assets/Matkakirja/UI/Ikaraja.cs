@@ -142,6 +142,7 @@ namespace Matkakirja.Natiivi
                 case "aikuinen": Tallenna(true); return "aikuinen";
                 case "kuratoitu": Tallenna(false); return "alle 18 (kuratoitu)";
                 case "nollaa": Nollaa(); return "nollattu (kysytään seuraavalla live-kysymyksellä)";
+                case "sulje": Sulje(); return "ikäkysely kiinni";
                 default: return $"ikaraja: {(Aikuinen == true ? "aikuinen" : Aikuinen == false ? "alle 18" : eiNyt ? "ei nyt" : "ei kysytty")}, kuratoitu {Kuratoitu}";
             }
         }

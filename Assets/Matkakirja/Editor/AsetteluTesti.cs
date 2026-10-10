@@ -648,6 +648,9 @@ namespace Matkakirja.Editori
             ("loppukortti", () => UiNakymat.Hae().Huipennus.NaytaLoppu("Rahat loppuivat kaupungissa Marseille, matkan 12. päivänä. Laukussa 0 löytöä ja 0 unohdettua aarretta.", null, () => { }, () => { }), SuljeKaikki, 0.6),
             ("wiki", () => UiNakymat.Hae().Wiki.Avaa("Venetsia"), SuljeKaikki, 3.0),
             ("palaute", () => UiNakymat.Hae().Palaute.Avaa(), SuljeKaikki, 0.6),
+            // Kuratoitu live (PT 10.10. 10.5x): ikäkortti ja tuoreen chatin tekoälyrivi (tervehdys + "Vastaukset tuottaa tekoäly").
+            ("ikäkortti", () => Ikaraja.Testi("kysy"), () => Ikaraja.Testi("sulje"), 0.6),
+            ("pulu-chat", () => { var c = UiNakymat.Hae().Chat; c.Nollaa(); c.Avaa(); }, () => UiNakymat.Hae().Chat.Sulje(), 0.8),
             ("sähke", () => UiNakymat.Hae().Sahke.Testaa("liuska"), SuljeKaikki, 0.6),
             ("mylly", () => MyllyNakyma.Hae().Avaa(), SuljeKaikki, 0.6),
             ("tavli", () => TavliNakyma.Hae().Avaa(), SuljeKaikki, 0.6),
