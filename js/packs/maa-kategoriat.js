@@ -100,6 +100,7 @@ const MAAN_GENETIIVIT = {
   Itävalta: 'Itävallan',
   Kreikka: 'Kreikan',
   Kypros: 'Kyproksen',
+  Malediivit: 'Malediivien',
   Marokko: 'Marokon',
   'Papua-Uusi-Guinea': 'Papua-Uuden-Guinean',
   // Norfolkinsaari taipuu kuin saari (saari → saaren), ei kuin

@@ -64,3 +64,13 @@ test('Lähi-itä: uudet maat rajoineen, Ramallah hallinnon paikka, Jerusalem ilm
   assert.ok(!PAAKAUPUNGIT.ISR);
   assert.equal(MAAILMANKARTTA.map.cityCountry.jerusalem, undefined);
 });
+
+test('Aasia: Brunei ja Malediivit rajoineen, 12 puuttunutta pääkaupunkia pisteinä (10.10.2026)', () => {
+  for (const iso of ['BRN', 'MDV']) {
+    assert.ok(maat[iso]?.renkaat?.length, `${iso}: rajat puuttuvat`);
+    assert.ok(MAIDEN_PERUSTIEDOT[iso], `${iso}: perustiedot puuttuvat`);
+  }
+  for (const iso of ['BRN', 'MDV', 'BGD', 'BTN', 'KHM', 'PRK', 'KGZ', 'LAO', 'MYS', 'TJK', 'TKM', 'MMR', 'PAK', 'UZB']) {
+    assert.ok(PAAKAUPUNKIPISTEET.some((p) => p.maa === iso), `${iso}: pääkaupunki puuttuu`);
+  }
+});

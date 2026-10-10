@@ -17,7 +17,8 @@ import { ISO2 } from './iso2.mjs';
 
 export const MAARAJOJEN_TOLERANSSI = 0.05;
 /** Euroopan minivaltiot (sama joukko kuin tools/generoi-maapolygonit.mjs MINIVALTIOT). */
-const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT']);
+// Malediivit (kaikki maat 10.10.2026): atollit ovat minivaltioiden kokoluokkaa.
+const MINIVALTIOT = new Set(['AND', 'LIE', 'MCO', 'SMR', 'VAT', 'MDV']);
 const laajuus = (r) => Math.max(Math.max(...r.map(([x]) => x)) - Math.min(...r.map(([x]) => x)),
   Math.max(...r.map(([, y]) => y)) - Math.min(...r.map(([, y]) => y)));
 const asteet = ({ x, y }) => laudaltaAsteiksi('maailmankartta', x, y);

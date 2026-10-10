@@ -113,6 +113,11 @@ const MAAT = {
   // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
   // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
   // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  // Aasia (kaikki maat -projekti 10.10.2026): Brunei ja Malediivien atollit
+  // ovat pieniä renkaita; Malediivit myös MINIVALTIOT-poikkeukseen
+  // (generoi-maapolygonit, vienti/maarajat), koska saaret ovat alle MIN_KOKOn.
+  BRN: ['Brunei', 'Brunei', 'Flag of Brunei.svg', { minKoko: 0, sieto: 0.3 }],
+  MDV: ['Malediivit', 'Malediivit', 'Flag of Maldives.svg', { minKoko: 0, sieto: 0.1 }],
   BHR: ['Bahrain', 'Bahrain', 'Flag of Bahrain.svg', { minKoko: 0, sieto: 0.3 }],
   ISR: ['Israel', 'Israel', 'Flag of Israel.svg'],
   LBN: ['Libanon', 'Libanon', 'Flag of Lebanon.svg'],
@@ -167,6 +172,8 @@ const ANKKURIT = [
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],
   ['IDN', ['TLS']],
+  ['SGP', ['BRN']],
+  ['LKA', ['MDV']],
   ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],

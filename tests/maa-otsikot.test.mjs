@@ -68,6 +68,8 @@ const GENETIIVIT = {
   Israel: 'Israelin',
   Libanon: 'Libanonin',
   Palestiina: 'Palestiinan',
+  Brunei: 'Brunein',
+  Malediivit: 'Malediivien',
   // Monikkonimi kuten Salomonsaaret: sääntö antaisi
   // "Falklandinsaaretin", joten oikea muoto on maa-kategoriat.js:n
   // poikkeustaulussa.
