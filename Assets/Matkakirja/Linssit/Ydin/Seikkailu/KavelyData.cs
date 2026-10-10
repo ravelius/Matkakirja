@@ -24,6 +24,9 @@ namespace Matkakirja.Linssit.Seikkailu
         public Dictionary<string, object> ValoAtlas;
         /// <summary>Osan oletuspinta askelille (pelattavuusmalli 2.2: kivi, porras, puu, olki, sora, vesi); null = kivi.</summary>
         public string Pinta;
+        /// <summary>Dioraaman tila, jonka äänimaisema soi tässä osassa (`tila`, LR; Siirtoseppä 10.10.: huoneäänet pelaajan huoneesta);
+        /// null = KavelyData.AaniTila päättelee tunnuksesta.</summary>
+        public string Tila;
     }
 
     /// <summary>Särmiö, jonka sisältä kuori ei piirry kävelytilassa (keskipiste, koko, kierto y-akselin ympäri radiaaneina).</summary>
@@ -105,6 +108,18 @@ namespace Matkakirja.Linssit.Seikkailu
             if (Osat.TryGetValue(osa, out var o)) foreach (var n in o.Naapurit) ulos.Add(n);
             foreach (var kv in Osat) if (kv.Value.Naapurit.Contains(osa)) ulos.Add(kv.Key);
         }
+        /// <summary>Osan äänimaiseman tila (Siirtoseppä 10.10., PT:n jono: huoneen äänet pelaajan huoneesta): osan `tila`, muuten tila,
+        /// jonka tunnus on sama (kirjainkoosta riippumatta, keittio-G102 → keittio-g102) tai osa ilman "-kavely"-päätettä (kappeli-kavely →
+        /// kappeli); null = ei huonetta (piha, ulkoalue: vain linnan yleisäänet).</summary>
+        public string AaniTila(string osa, System.Collections.Generic.IEnumerable<string> tilat)
+        {
+            if (osa == null) return null;
+            if (Osat.TryGetValue(osa, out var o) && !string.IsNullOrEmpty(o.Tila)) return o.Tila;
+            string ilman = osa.EndsWith("-kavely", StringComparison.OrdinalIgnoreCase) ? osa.Substring(0, osa.Length - 7) : osa;
+            foreach (var t in tilat)
+                if (string.Equals(t, osa, StringComparison.OrdinalIgnoreCase) || string.Equals(t, ilman, StringComparison.OrdinalIgnoreCase)) return t;
+            return null;
+        }
         public bool RekvisiittaPeittaa(KavelyMerkki r)
         {
             foreach (var e in Lajia("esine"))
@@ -133,7 +148,7 @@ namespace Matkakirja.Linssit.Seikkailu
                     {
                         Id = pari.Key, Nakyva = MiniJson.Teksti(t, "nakyva"), Tormays = MiniJson.Teksti(t, "tormays"),
                         Kavely = MiniJson.Teksti(t, "kavely"), Varmuus = MiniJson.Teksti(v, "varmuus"),
-                        KattoY = MiniJson.Luku(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "kamera_rajat")), "katto_y"), Pinta = MiniJson.Teksti(v, "pinta"),
+                        KattoY = MiniJson.Luku(MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "kamera_rajat")), "katto_y"), Pinta = MiniJson.Teksti(v, "pinta"), Tila = MiniJson.Teksti(v, "tila"),
                         Markyys = MiniJson.Luku(v, "markyys") ?? 0,
                         ValoAtlas = MiniJson.ObjektiTaiNull(MiniJson.Kentta(v, "valoatlas")),
                     };
