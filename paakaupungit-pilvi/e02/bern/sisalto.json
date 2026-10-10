@@ -1,0 +1,506 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "bern",
+ "maa": "CHE",
+ "era": "e02",
+ "kaupunki": {
+  "id": "bern",
+  "name": "Bern",
+  "wiki": "Bern",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 46.948,
+   "lon": 7.447
+  }
+ },
+ "artikkeli": {
+  "intro": "Bern on **Sveitsin liittokaupunki**, jossa ovat maan hallituksen ja parlamentin kotipaikka. Perustuslaki ei nimeä virallista pääkaupunkia, joten liittokaupunki on tarkin nimitys. Asukkaita on 146 867 (31.12.2025). Vanhakaupunki nousee **Aare-joen ympäröimälle mäkiniemelle**, ja se on kuulunut Unescon maailmanperintökohteisiin vuodesta 1983.\n\nPerimätiedon mukaan herttua Berchtold V perusti kaupungin 1191, ja karhu on ollut sen sinetissä ja vaakunassa ainakin 1220-luvulta. Vuoden 1405 suurpalo tuhosi suurimman osan puutaloista, ja tilalle nousi vähitellen hiekkakivikaupunki, jonka holvikäytäviä on lähteen mukaan kuusi kilometriä. Liittokokouksen enemmistö valitsi Bernin hallituksen kotipaikaksi 28.11.1848.\n\nIsoisän matkavuonna 1873 kaupunki oli ollut hallituksen kotipaikka jo neljännesvuosisadan. Ensimmäinen liittopalatsi oli valmistunut 1857, mutta kupolilla varustettua parlamenttirakennusta ei vielä ollut, ja tuomiokirkon torni oli kesken: se valmistui vasta **1893**. Vanhankaupungin muoto ja kaduntasoiset holvikäytävät olivat kuitenkin jo silloin tuttuja.",
+  "teksti": "== Nimi ja alku ==\nBern on Sveitsin tasangolla, noin 20 kilometriä Bernin Alppien pohjoispuolella, ja Aare-joki kiertää vanhaakaupunkia. Keskiaikaisen kaupungin perusti Zähringenin suku, ja perimätiedon mukaan Berchtold V perusti sen 1191. Nimen alkuperä on epävarma: karhuselitys on lähteen mukaan kansanetymologiaa, ja nykyään pidetään todennäköisenä kelttiläistä nimeä.\n\n== Hiekkakivestä rakennettu ==\nVuoden 1405 suurpalon jälkeen puutalot korvattiin vähitellen hiekkakivirakennuksilla, ja holvikäytävät syntyivät 1400-luvulla. Tuomiokirkon rakentaminen aloitettiin 1421, ja se pysähtyi lähes kolmeksi vuosisadaksi 1575 jälkeen.\n\n== Liittokaupunki ==\nVuonna 1848 Bern valittiin hallituksen kotipaikaksi, ja ensimmäinen liittopalatsi valmistui 1857. Nykyinen parlamenttirakennus rakennettiin 1894–1902."
+ },
+ "kysymykset": [
+  {
+   "q": "Mikä eläin on Bernin vaakunassa?",
+   "options": [
+    "Karhu",
+    "Leijona",
+    "Kotka",
+    "Susi"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Vaakunaeläin on metsissä elävä suurpeto, jolla on paksu turkki.",
+   "fact": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1220-luvulta. Perimätiedon mukaan herttua nimesi kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan.",
+   "source": "https://en.wikipedia.org/wiki/Bern"
+  },
+  {
+   "q": "Millä nimellä Berniä kutsutaan, koska perustuslaki ei nimeä Sveitsille virallista pääkaupunkia?",
+   "options": [
+    "Liittokaupunki",
+    "Kruununkaupunki",
+    "Vapaakaupunki",
+    "Valtiokaupunki"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi liittyy siihen, miten Sveitsi on rakennettu valtioksi.",
+   "fact": "Bern on liittovaltion hallituksen ja parlamentin kotipaikka, ja siitä käytetään nimeä liittokaupunki (Bundesstadt).",
+   "source": "https://en.wikipedia.org/wiki/Bern"
+  },
+  {
+   "q": "Mitä tarkoittaa Zytglogge, Bernin kelloportin nimi?",
+   "options": [
+    "Aikakello",
+    "Vartiotorni",
+    "Kuninkaan portti",
+    "Muurin torni"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi on bernin saksan murretta.",
+   "fact": "Nimi Zytglogge, aikakello, on kirjattu ensi kerran 1413. Torni on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi.",
+   "source": "https://en.wikipedia.org/wiki/Zytglogge"
+  },
+  {
+   "q": "Mikä tuhosi suuren osan Bernin puutaloista vuonna 1405?",
+   "options": [
+    "Tulipalo",
+    "Tulva",
+    "Maanjäristys",
+    "Myrsky"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Tapahtuman jälkeen puutalot korvattiin vähitellen ristikko- ja kivitaloilla.",
+   "fact": "Vuoden 1405 suurpalo tuhosi suurimman osan kaupungin puurakennuksista. Sen jälkeen rakennettiin hiekkakivestä, ja siitä tuli vanhankaupungin tunnusmerkki.",
+   "source": "https://en.wikipedia.org/wiki/Old_City_(Bern)"
+  },
+  {
+   "q": "Minä vuonna Bernin tuomiokirkon torni valmistui?",
+   "options": [
+    "1893",
+    "1521",
+    "1575",
+    "1721"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Rakennustyö aloitettiin 1421, ja torni oli kauan kesken.",
+   "fact": "Tuomiokirkon rakennus aloitettiin 1421. Noin 100 metriä korkea torni valmistui lopulta 1893, ja lähteen mukaan se on Sveitsin korkein tuomiokirkon torni.",
+   "source": "https://en.wikipedia.org/wiki/Bern_Minster"
+  }
+ ],
+ "tiedot": [
+  "Vanhankaupungin holvikäytävien alla voi kävellä kuivin jaloin: lähteen mukaan niitä on kuusi kilometriä, ja kyseessä on yksi Euroopan pisimmistä katetuista ostoskaduista.",
+  "Marzilibahn on 105 metrin funikulaari, jonka vaunuja liikutti alussa vesi. Se kulkee Marzilin kaupunginosasta ylös Bundeshausin luo.",
+  "Nydeggbrücken keskikaari on 46 metriä leveä, ja lähteen mukaan se oli Euroopan suurin kaari aina 1890-luvulle asti."
+ ],
+ "valokuva": {
+  "tiedosto": "Bear pit, Berne, Switzerland-LCCN2001701111.jpg",
+  "vuosi": "noin 1890–1900",
+  "lahde": "Photochrom Print Collection, Commons (PD)",
+  "lyhyt": "Bärengraben, Bernin karhukuoppa, jonka neljäs versio avattiin 1857.",
+  "selite": "Bärengraben on Bernin karhukuoppa Nydeggbrücken päässä: nykyinen, neljäs kuoppa avattiin 1857, kun karhut muuttivat Aaren yli 27.5.1857."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Bern",
+   "johdanto": "Bern on Sveitsin liittokaupunki, jonka vanhakaupunki nousee Aare-joen mäkiniemelle ja jossa hiekkakivinen keskiaika on säilynyt ehjänä. Täällä on kansan hallituksen kotipaikka, ja kaupungin kilvessä kävelee karhu.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Bern, Blick von der Kirchfeldbrücke auf die Altstadt mit Münster und Münsterplattform sowie die Aare mit der Matteschwelle bei Sonnenuntergang - 2018 (45115470384).jpg",
+     "lyhyt": "Bernin tuomiokirkon noin 100 metrin torni valmistui vasta 1893.",
+     "selite": "Bernin tuomiokirkon noin 100 metriä korkea torni valmistui vasta 1893, vaikka rakennustyö oli aloitettu jo 1421.",
+     "lahde": "Thomas Woodtli from Zürich, Switzerland, Wikimedia Commons (CC BY-SA 2.0)"
+    },
+    {
+     "tiedosto": "Bern Panorama von Rosengarten 20211007.jpg",
+     "lyhyt": "Vanhakaupunki nousee Aare-joen mutkan ympäröimälle mäkiniemelle.",
+     "selite": "Bernin vanhakaupunki on rakennettu Aare-joen mutkan ympäröimälle mäkiniemelle, ja se on Unescon maailmanperintökohde vuodesta 1983.",
+     "lahde": "Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+     "tiedosto": "Altstadt Bern (Südostseite).jpg",
+     "lyhyt": "Matten alueella kolme tekokanavaa ajoi aikanaan kaupungin kolmea myllyä.",
+     "selite": "Matten alueella Aaren rannalla kolme tekokanavaa ajoi aikanaan kaupungin kolmea myllyä.",
+     "lahde": "August Geyler, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Karhu vai rako",
+     "teksti": "Kansantaru kertoo, että herttua Berchtold V lupasi nimetä uuden kaupungin ensimmäisen metsästyksessä kohtaamansa eläimen mukaan, ja se oli karhu. Lähteen mukaan yhteys sanaan Bär on kuitenkin kansanetymologiaa. Pitkään nimeä pidettiin peräisin Veronasta, jota keskiyläsaksaksi sanottiin Berniksi. Nykyään todennäköisempänä pidetään kelttiläistä juurta: 1980-luvulla löytyneessä sinkkitaulussa on Engehalbinselin entisen asutuksen nimi Brenodor. Karhu on silti kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta, ja 1800-luvulla kaupunkia leikillä kutsuttiin Mutzopolisiksi, koska Mutz tarkoittaa murteessa karhua.",
+     "tiedosto": "Bemalte Sandsteinskulptur Bär mit Wappen (Walter Schnegg 1952) 01.jpg",
+     "lyhyt": "Karhu on ollut Bernin sinetissä ja vaakunassa ainakin 1220-luvulta.",
+     "selite": "Karhu on Bernin vaakunaeläin: se on kuvattu kaupungin sinetissä ja vaakunassa ainakin 1220-luvulta lähtien.",
+     "lahde": "AnBuKu, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Bern"
+    },
+    {
+     "otsikko": "Tulipalo, joka teki kaupungista hiekkakiveä",
+     "teksti": "Vuoden 1405 suurpalo tuhosi suurimman osan Bernin puurakennuksista. Puutalojen tilalle rakennettiin vähitellen ensin ristikkotaloja ja sitten hiekkakivitaloja, ja ne ovat vanhankaupungin tunnusmerkki. Holvikäytävät syntyivät 1400-luvulla, kun talojen yläkerrat laajenivat kadun päälle. Lähteen mukaan käytäviä on yhteensä kuusi kilometriä, ja ne muodostavat yhden Euroopan pisimmistä katetuista ostoskaduista. Unesco perustelee vanhankaupungin maailmanperintölistausta muun muassa poikkeuksellisen johdonmukaisella kaavoituksella.",
+     "tiedosto": "Gerechtigkeitsgasse, Nordseite westlich Gerechtigkeitsbrunnen Bern 20230530 0025.jpg",
+     "lyhyt": "Vanhankaupungin holvikäytävät syntyivät 1400-luvulla, kun yläkerrat laajenivat kadun päälle.",
+     "selite": "Bernin vanhankaupungin holvikäytävät syntyivät 1400-luvulla, kun talojen yläkerrat laajenivat kadun päälle.",
+     "lahde": "Tilman2007, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Old City (Bern)"
+    },
+    {
+     "otsikko": "Pääkaupunki, jota ei nimetty",
+     "teksti": "Liittokokouksen edustajien enemmistö valitsi 28.11.1848 Bernin Sveitsin hallituksen kotipaikaksi Zürichin ja Luzernin edelle. Lähteen mukaan syinä olivat se, ettei valta keskittyisi talousvoimalle Zürichille, että katolinen ja konservatiivinen Luzern oli ollut Sonderbundissa ja että Bern sijaitsi keskeisemmin ja lähempänä ranskankielisiä kantoneja. Perustuslaki ei silti nimeä Berniä virallisesti pääkaupungiksi. Ensimmäinen liittopalatsi, nykyinen Bundeshaus West, rakennettiin 1852–1857 kaupungin kustannuksella. Isoisän matkavuonna 1873 se oli vasta kuusitoista vuotta vanha.",
+     "tiedosto": "Bern, Federal Palace, 1857.jpg",
+     "lyhyt": "Ensimmäinen liittopalatsi valmistui 1857 kaupungin kustannuksella.",
+     "selite": "Ensimmäinen liittopalatsi, nykyinen Bundeshaus West, rakennettiin 1852–1857 kaupungin kustannuksella ja luovutettiin 5.6.1857.",
+     "lahde": "Carl Durheim, Wikimedia Commons (PD)",
+     "wiki": "Federal Palace of Switzerland"
+    },
+    {
+     "otsikko": "Karhut kuopasta puistoon",
+     "teksti": "Karhujen pidosta on tarkka kuvaus kronikoitsija Valerius Anshelmilta vuodelta 1513: bernläiset palasivat Novaran taistelusta elävä karhu saaliinaan. Lähteet mainitsevat karhujen pidon myös jo 1400-luvun puolivälistä. Nykyinen, neljäs karhukuoppa avattiin 1857, ja karhut muuttivat Aaren yli 27.5.1857. Kuoppa on Nydeggbrücken päässä ja kansallisesti merkittävä kulttuurikohde. Viereinen BärenPark avattiin 2009 Aare-rinteeseen, ja kuoppaa ja puistoa yhdistää tunneli. Vuonna 2015 rakennettiin vielä kalteva hissi, Bärenbähnli.",
+     "tiedosto": "S02 720 neuer Bärengraben, Braunbär.jpg",
+     "lyhyt": "BärenPark avattiin 2009 Aare-rinteeseen vanhan karhukuopan viereen.",
+     "selite": "BärenPark avattiin 2009 Aare-rinteeseen vanhan karhukuopan viereen, ja kuoppaa ja puistoa yhdistää tunneli.",
+     "lahde": "Falk2, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Bärengraben"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Altstadt Bern - Kreuzgassbrunnen und Gerechtigkeitsgasse (2022).jpg",
+     "lyhyt": "Vanhankaupungin holvikäytäviä on yhteensä noin kuusi kilometriä.",
+     "selite": "Bernin vanhankaupungin holvikäytäviä on lähteen mukaan yhteensä kuusi kilometriä, ja ne ovat osa Unescon maailmanperintökohdetta.",
+     "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "Bern on Sveitsin liittokaupunki ja Bernin kantonin pääkaupunki, ja siellä asuu 146 867 ihmistä (31.12.2025). Kaupunki on Sveitsin tasangolla, noin 20 kilometriä Bernin Alppien pohjoispuolella, ja vanhakaupunki on Aare-joen kiertämällä niemekkeellä. Suurin osa asukkaista puhuu äidinkielenään saksaa, ja valuutta on Sveitsin frangi. Kaupunki on mäkinen, sillä korkeuseroa on enintään 60 metriä. Vanhakaupunki on Unescon maailmanperintökohde vuodesta 1983. Isot lentokentät ovat Zürichissä, Genevessä ja Baselissa, alle kahden tunnin junamatkan päässä.",
+    "artikkeli": {
+     "nimi": "Matkailijan Bern",
+     "taitto": "opas",
+     "teksti": "Kaupunki, jossa joki kiertää vanhaakaupunkia, holvikäytävät suojaavat sateelta ja hallitus kokoontuu torin laidalla.",
+     "nosto": "Bernin vanhakaupunki on kävelykaupunki, jonka holvikäytäviä on lähteen mukaan kuusi kilometriä. Hiekkakivitalojen välistä pääsee muutamassa minuutissa Aaren rantaan ja liittopalatsille.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Bernin päärautatieasema on lähteen mukaan Sveitsin toiseksi vilkkain: arkipäivässä siellä kulki 164 800 matkustajaa vuonna 2022. Asema avattiin vaiheittain 1858–1860, ja sen laajennus on rakenteilla; valmistumisen on kerrottu siirtyneen vuoteen 2029. Aseman kattoterassilta avautuu näkymä kaupunkiin ja Bernin Alppien suuntaan. Kaupunki on kävelykaupunki, ja keskusta kuuluu Libero-liikenneverkon vyöhykkeeseen 100; hinta määräytyy vyöhykkeiden mukaan.",
+       "kuva": {
+        "tiedosto": "Bern Hauptbahnhof (2014).jpg",
+        "lyhyt": "Bernin päärautatieasema avattiin vaiheittain 1858–1860.",
+        "selite": "Bernin päärautatieasema avattiin vaiheittain 1858–1860, ja se on lähteen mukaan Sveitsin toiseksi vilkkain.",
+        "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Vanhakaupunki",
+       "teksti": "Vanhakaupunki on Aaren kiertämällä niemekkeellä, ja Unesco listasi sen maailmanperintökohteeksi 1983. Kaduilla kulkee holvikäytäviä yhteensä noin kuusi kilometriä, ja suihkulähteillä seisoo yksitoista renessanssiajan allegorista patsasta, joista valtaosa on Hans Giengin tekemiä. Zytglogge-kellon eläinhahmot ja narri esiintyvät kolme minuuttia ennen tasatuntia. Alhaalla Matten alueella kolme tekokanavaa ajoi aikanaan kaupungin kolmea myllyä.",
+       "kuva": {
+        "tiedosto": "Gerechtigkeitsgasse und -brunnen in der Altstadt (Bern, 2014).jpg",
+        "lyhyt": "Vanhankaupungin suihkulähteillä on yksitoista renessanssiajan allegorista patsasta.",
+        "selite": "Vanhankaupungin suihkulähteillä on yksitoista renessanssiajan allegorista patsasta, joista valtaosa on Hans Giengin tekemiä.",
+        "lahde": "JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Liittokaupungin hallintoalue",
+       "teksti": "Bundeshaus on kolmen rakennuksen kokonaisuus, joka on yli 300 metriä pitkä, ja siihen voi tutustua. Parlamenttirakennuksen kupoli on ulkoa 64 metriä korkea. Edessä oleva Bundesplatz sai uuden ilmeensä 2004, ja lähteen mukaan sinne on kätketty 26 vesisuihkua, yksi kutakin kantonia kohti. Marzilibahn on 105 metrin funikulaari Marzilin kaupunginosasta Bundeshausille. Ruusutarha on entinen hautausmaa, josta tehtiin puisto 1913 ja josta on näköala vanhaankaupunkiin.",
+       "kuva": {
+        "tiedosto": "Bern Parliament Plaza Flagged Wide 2019-09-13 23-11.jpg",
+        "lyhyt": "Parlamenttirakennuksen kupoli on ulkoa 64 metriä korkea.",
+        "selite": "Bernin parlamenttirakennuksen kupoli on ulkoa 64 metriä korkea, ja sen mosaiikissa on Sveitsin vaakuna.",
+        "lahde": "Axel Tschentscher, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Bernin oma ruokatapahtuma on Zibelemärit eli sipulitori, joka järjestetään marraskuun neljäntenä maanantaina. Myyntiin tuodaan sipulipalmikkoja ja -seppeleitä sekä sipulipiirakkaa, sipulikeittoa, sipulipizzaa ja makkaraa sipulilla, lisäksi glögiä, paahdettuja manteleita ja Magenbrotia. Markkina alkaa virallisesti kello 6 ja päättyy kello 18, ja iltapäivällä pidetään konfettitaistelu. Lähteen mukaan perimätieto liittää markkinan vuoden 1405 paloon, mutta nykyinen muoto juontaa 1800-luvun puoliväliin.",
+       "kuva": {
+        "tiedosto": "Zibelemaerit 2009 Zibelemaennli.JPG",
+        "lyhyt": "Zibelemärit eli sipulitori järjestetään marraskuun neljäntenä maanantaina.",
+        "selite": "Zibelemärit eli sipulitori on Bernin markkina, joka järjestetään marraskuun neljäntenä maanantaina.",
+        "lahde": "Robert Illes, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Bernin ilmasto on valtamerinen, lähes mannerilmaston rajalla. Kuukausinormaalien mukaan tammikuu on kylmin, keskilämpö −0,5 astetta, ja heinäkuu lämpimin, 19,5 astetta. Sadetta tulee joka kuukausi: kuivin on tammikuu 32 millimetrillä ja sateisin elokuu 144 millimetrillä. Marraskuussa kaupunki täyttyy Zibelemäritistä, ja lokakuun alussa järjestetään shnit-lyhytelokuvafestivaali.",
+       "kuva": {
+        "tiedosto": "Bern Rosengarten Brunnen 20211007.jpg",
+        "lyhyt": "Ruusutarha oli ennen hautausmaa, joka muutettiin puistoksi 1913.",
+        "selite": "Bernin Ruusutarha oli ennen hautausmaa, joka muutettiin puistoksi 1913, ja sieltä on näköala vanhaankaupunkiin.",
+        "lahde": "Daniel Kraft, Wikimedia Commons (CC BY-SA 3.0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Vanhakaupunki holvikäytävineen",
+        "tahdet": 3,
+        "selite": "Unescon maailmanperintökohde, jonka holvikäytäviä on kuusi kilometriä."
+       },
+       {
+        "mita": "Tuomiokirkon portaali ja torni",
+        "tahdet": 3,
+        "selite": "Viimeisen tuomion veistokset ja noin sadan metrin torni, lähteen mukaan Sveitsin korkein."
+       },
+       {
+        "mita": "Bundeshaus ja Bundesplatz",
+        "tahdet": 2,
+        "selite": "Kolmen rakennuksen hallintokokonaisuus ja sen edessä 2004 uudistettu aukio."
+       },
+       {
+        "mita": "BärenPark",
+        "tahdet": 2,
+        "selite": "Karhupuisto Aare-rinteessä Nydeggbrücken vieressä."
+       },
+       {
+        "mita": "Zentrum Paul Klee",
+        "tahdet": 2,
+        "selite": "Renzo Pianon suunnittelema museo kaupungin itälaidalla."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Frangi ja saksa",
+        "teksti": "Valuutta on Sveitsin frangi, ja Bern on saksankielinen kaupunki neljän kansalliskielen maassa."
+       },
+       {
+        "otsikko": "Lentoasema on pieni",
+        "teksti": "Bern-Belpin lentoasema palvelee pääosin yleisilmailua ja charter-lentoja, ja isoille kentille Zürichiin, Geneveen tai Baseliin pääsee junalla alle kahdessa tunnissa."
+       },
+       {
+        "otsikko": "Kaupunki on mäkinen",
+        "teksti": "Alakaupunki Matte on ylhäällä olevasta keskustasta eri tasolla, ja korkeuseroa kaupungin sisällä on enintään 60 metriä."
+       },
+       {
+        "otsikko": "Pyhäpäivänä aseman kauppa on auki",
+        "teksti": "Aseman Rail City on lähteen mukaan avoinna pyhäpäivinä, koska liittovaltion kiinteistöihin ei sovelleta kantonin sulkemislakeja."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "kuvataide",
+   "nimi": "Kuvia kivessä, lasissa ja värissä",
+   "johdanto": "Bernin tuomiokirkon portaalissa kivi kertoo viimeisestä tuomiosta, ikkunat kuoleman tanssista ja kaupungin laidalla odottaa Paul Kleen maailma.",
+   "tehtava": {
+    "kysymys": "Missä Münsterin pääportaalin suurten patsaiden alkuperäiset ovat nykyään?",
+    "vaihtoehdot": [
+     "Bernin historiallisessa museossa",
+     "Yhä portaalin ympärillä",
+     "Zürichin tuomiokirkossa",
+     "Ne tuhoutuivat 1528"
+    ],
+    "oikea": 0,
+    "fakta": "Portaalin suuret vapaasti seisovat patsaat on korvattu jäljennöksillä, mutta noin 170 pienempää hahmoa on yhä alkuperäisiä."
+   },
+   "nostot": [
+    {
+     "otsikko": "Viimeinen tuomio kivessä",
+     "teksti": "Münsterin päätuloportaalin yllä on lähteen mukaan yksi Euroopan täydellisimmistä myöhäisgoottilaisista veistoskokoelmista. Aiheena on viimeinen tuomio: jumalattomat ovat alastomina oikealla, vanhurskaat valkoisissa vaatteissa vasemmalla, ja keskellä seisovat Oikeus ja arkkienkeli Mikael nostetulla miekalla. Veistäjänä oli Erhard Küng Westfalenin Stadtlohnista, ja patsaat veistettiin 1460–1501. Portaalin suuret, vapaasti seisovat patsaat, yhteensä 47, ovat nykyään jäljennöksiä, ja alkuperäiset säilytetään Bernin historiallisessa museossa. Veistokset olivat ainoat Münsterin patsaat, jotka säilyivät reformaation ikonoklasmista.",
+     "tiedosto": "Berner Münster (Hauptportal mit Jüngstem Gericht - Erhart Küng 1458-1485).jpg",
+     "lyhyt": "Münsterin päätuloportaalin viimeisen tuomion veistokset ovat Erhard Küngin työtä.",
+     "selite": "Münsterin päätuloportaalin viimeisen tuomion veistokset ovat Erhard Küngin työtä, ja ne säilyivät reformaation ikonoklasmista.",
+     "lahde": "Yair Haklai, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Bern Minster"
+    },
+    {
+     "otsikko": "Kuoleman tanssi lasissa",
+     "teksti": "Münsterin lasimaalaukset on tehty 1441–1450, ja lähteen mukaan ne kuuluvat Sveitsin arvokkaimpiin. Yhdessä ikkunassa kuolema luurankona tavoittaa ihmisiä kaikista yhteiskuntaluokista. Kuoleman tanssin aihe sai alkunsa 1300-luvulla Mustan surman aikaan, ja vuoteen 1425 mennessä sen hahmot olivat Pariisin Pyhien viattomien kirkon hautausmaalla. Ikkunat ovat keskeltä 2,92 metriä leveitä ja 13,15 metriä korkeita. Raekuuro vaurioitti vuonna 1520 oikean puoleisia ikkunoita, ja ne korvattiin 1868.",
+     "tiedosto": "Bern Münster Totentanzfenster detail3.jpg",
+     "lyhyt": "Kuoleman tanssin aihe sai alkunsa 1300-luvulla Mustan surman aikaan.",
+     "selite": "Kuoleman tanssin aiheessa luurankona kuvattu kuolema tavoittaa ihmisiä kaikista yhteiskuntaluokista; aihe sai alkunsa 1300-luvulla Mustan surman aikaan.",
+     "lahde": "Photo: Andreas Praefcke, Wikimedia Commons (CC BY 3.0)",
+     "wiki": "Bern Minster"
+    },
+    {
+     "otsikko": "Kuvat, jotka kaadettiin terassille",
+     "teksti": "Bern omaksui reformaation Bernin kiistakeskustelun (6.–26.1.1528) jälkeen. Samana vuonna Münsteristä poistettiin kaikki 43 sivualttaria, ja lähes kaikki sisämaalaukset ja koristeet kaadettiin viereiseen Münsterplattformiin. Lähteen mukaan terassi onkin arkeologisesti rikas paikka. Sisälle jäivät lasimaalaukset ja kuoripenkit: penkit tehtiin 1522–1525 Schaffhausenista palkatuilla mestareilla, ja lähteen mukaan ne ovat Sveitsin ensimmäiset renessanssityyliset kuoripenkit. Penkit korjattiin 1863–64.",
+     "tiedosto": "Münsterplattform Bern 01.jpg",
+     "lyhyt": "Reformaation aikana 1528 Münsteristä poistettiin kaikki 43 sivualttaria.",
+     "selite": "Münsterplattform on tuomiokirkon viereinen terassi, jonne kaadettiin reformaation aikana 1528 lähes kaikki kirkon sisämaalaukset ja koristeet.",
+     "lahde": "H.Helmlechner, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Bern Minster"
+    },
+    {
+     "otsikko": "Paul Klee ja kaupungin taidemuseot",
+     "teksti": "Kaupungin itälaidalla on Renzo Pianon suunnittelema Zentrum Paul Klee, jonka rakennus valmistui 2005 ja muistuttaa kolmea maisemaan sulautuvaa aaltoa. Lähteen mukaan museossa on noin 40 prosenttia Kleen koko kuvallisesta tuotannosta, ja perustana on Livia Klee-Meyerin vuonna 1997 kaupungille ja kantonille lahjoittama perintö, lähes 690 teosta. Pohjoisessa mäessä on Creaviva-luovuusstudio, keskellä näyttelytila ja etelässä kokoelmat. Kunstmuseum Bern on perustettu 1879, ja sen kokoelmassa on Kleen lisäksi muun muassa Picasson ja Ferdinand Hodlerin töitä.",
+     "tiedosto": "Zentrum Paul Klee, Bern - ch.jpg",
+     "lyhyt": "Renzo Pianon suunnittelema Zentrum Paul Klee valmistui 2005.",
+     "selite": "Renzo Pianon suunnittelema Zentrum Paul Klee valmistui 2005, ja sen rakennus muistuttaa kolmea maisemaan sulautuvaa aaltoa.",
+     "lahde": "Lysippos, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Zentrum Paul Klee"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Bernin ydin kulkee Aaren niemekkeen harjalla Bundesplatzilta Zytgloggen ja tuomiokirkon ohi karhukuopalle. Kohteet ovat parin kilometrin kävelyn sisällä toisistaan.",
+  "rajat": {
+   "pohjoinen": 46.9508,
+   "etela": 46.944,
+   "lansi": 7.4402,
+   "ita": 7.4635
+  },
+  "kohteet": [
+   {
+    "nimi": "Zytglogge",
+    "lat": 46.94806,
+    "lon": 7.44778
+   },
+   {
+    "nimi": "Bernin tuomiokirkko",
+    "lat": 46.94722,
+    "lon": 7.45139
+   },
+   {
+    "nimi": "Liittopalatsi",
+    "lat": 46.94667,
+    "lon": 7.44417
+   },
+   {
+    "nimi": "Bundesplatz",
+    "tyyppi": "aukio",
+    "lat": 46.94701,
+    "lon": 7.44412
+   },
+   {
+    "nimi": "Bärengraben ja BärenPark",
+    "lat": 46.94802,
+    "lon": 7.45963
+   },
+   {
+    "nimi": "Einsteinhaus",
+    "lat": 46.94767,
+    "lon": 7.44997
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Zytglogge": {
+   "aika": "noin 1218–1220",
+   "teksti": "Zytglogge eli kelloportti rakennettiin noin 1218–1220 kaupungin läntisen muurin porttitorniksi, ja sitä korotettiin seitsemän metriä noin 1270–1275. Kun muuri siirtyi 1344–1346, tornista tuli naisvankila. Nimi Zytglogge, aikakello, on kirjattu ensi kerran 1413.\n\nTorni paloi tyhjäksi 1405, ja samana vuonna valettiin uusi iso tuntikello. Tähtitieteellisen kellon mekanismi uusittiin 1527–1530 Kaspar Brunnerin työnä. Kolme minuuttia ennen tasatuntia kellon eläinhahmot ja narri esiintyvät, ja kultainen Kronos-hahmo lyö kelloa; nykyinen hahmo on 1930 tehty rekonstruktio.\n\nIsoisän matkavuonna 1873 portti oli seissyt paikallaan yli 600 vuotta. Nykyinen ulkoasu on pääosin vuosien 1770–71 kunnostuksesta, ja palautus tehtiin 1981–83. Lähteen mukaan se on kaupungin vanhin muistomerkki.",
+   "kuvat": [
+    {
+     "tiedosto": "Zytglogge in Bern Switzerland by Robbie Conceptuel.png",
+     "lyhyt": "Zytglogge on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi.",
+     "selite": "Zytglogge on rakennettu noin 1218–1220 kaupungin läntisen muurin porttitorniksi, ja sen tähtitieteellinen kello on uusittu 1527–1530.",
+     "lahde": "Conceptuel, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Bernin tuomiokirkko": {
+   "aika": "1421–1893",
+   "teksti": "Bernin tuomiokirkon, Münsterin, rakentaminen aloitettiin 11.3.1421 Matthäus Ensingerin johdolla. Edellinen kirkko purettiin 1449–1451, ja vanha torni seisoi vielä 1493 asti. Rakentaminen pysähtyi lähes kolmeksi vuosisadaksi 1575 jälkeen, ja noin 100 metrin torni valmistui lopulta 1893.\n\nUrut asennettiin kolmessa vaiheessa 1727–1783. Suurin kello on noin kymmenen tonnia painava, ja kellot soivat päivittäin keskipäivällä ja kello 18. Sisätilassa on säilynyt lasimaalauksia 1441–1450 ja kuoripenkit, vaikka reformaation myötä 1528 poistettiin kaikki 43 sivualttaria.\n\nIsoisän matkavuonna 1873 tornista puuttui vielä huippu: kello- ja tornityö valmistui vasta 1893, ja lähteen mukaan se on Sveitsin korkein tuomiokirkon torni.",
+   "kuvat": [
+    {
+     "tiedosto": "Bern munster.jpg",
+     "lyhyt": "Münsterin rakentaminen aloitettiin 1421, ja sen suurin kello soi päivittäin.",
+     "selite": "Münsterin rakentaminen aloitettiin 1421 Matthäus Ensingerin johdolla, ja kellot soivat päivittäin keskipäivällä ja kello 18.",
+     "lahde": "Pugefco, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Liittopalatsi": {
+   "aika": "1852–1902",
+   "teksti": "Bundeshaus on kolmen rakennuksen kokonaisuus, joka on yli 300 metriä pitkä. Länsisiipi rakennettiin 1852–1857 Jakob Friedrich Studerin suunnitelmien mukaan, ja siihen sijoitettiin hallinto, hallitus ja parlamentti. Itäsiipi valmistui 1884–1892, ja kupolilla varustettu parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla.\n\nParlamenttirakennuksen kupolin ulkokorkeus on 64 metriä, ja sen mosaiikissa on vaakuna ja motto Unus pro omnibus, omnes pro uno. Lähteen mukaan rakennuksessa on 30 kivilajia 13 kantonista, ja sen koristeluun osallistui 38 sveitsiläistä taiteilijaa. Rakennuksen kustannus oli 7,2 miljoonaa frangia.\n\nIsoisän matkavuonna 1873 vain länsisiipi oli valmis. Se tunnettiin silloin nimellä Bundes-Rathaus, eikä itäsiipeä tai kupolirakennusta ollut vielä olemassa.",
+   "kuvat": [
+    {
+     "tiedosto": "Bundeshauskuppel-von-Süden.JPG",
+     "lyhyt": "Parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla.",
+     "selite": "Parlamenttirakennus rakennettiin 1894–1902 Hans Wilhelm Auerin johdolla, ja sen kupolin mosaiikissa on Sveitsin vaakuna.",
+     "lahde": "Absolutely new, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Bundesplatz": {
+   "aika": "1765–2004",
+   "teksti": "Bundesplatzin länsikolmannes on entisen toisen kaupunginmuurin vallihaudan paikalla. Aukio rakennettiin 1765, ja Niklaus Hebler istutti sille lehmukset. Nimenä oli Parlamentplatz vuoteen 1909, ja lähes vuosisadan aukio toimi pysäköintialueena.\n\nKansallinen kilpailu järjestettiin 1991, ja voittaja oli ehdotus Platz als Platz. Aukio valmistui 31.7.2004 ja vihittiin 1.8.2004. Hanke palkittiin 2006 Yhdysvaltain arkkitehtiyhdistyksen kaupunkisuunnittelupalkinnolla. Lähteen mukaan granittilaatoituksessa on 26 vesisuihkua, yksi kutakin kantonia kohti.\n\nIsoisän matkavuonna 1873 nykyistä parlamenttirakennusta ei vielä ollut, ja aukion laidalla oli 1820-luvulla rakennettu kasino.",
+   "kuvat": [
+    {
+     "tiedosto": "Bern Bundesplatz view from above IMG 4365.JPG",
+     "lyhyt": "Bundesplatz sai nykyisen ilmeensä vuonna 2004.",
+     "selite": "Bundesplatz sai nykyisen ilmeensä vuonna 2004, ja sen suunnittelukilpailun voitti ehdotus Platz als Platz.",
+     "lahde": "Hadi, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Bärengraben ja BärenPark": {
+   "aika": "1857 ja 2009",
+   "teksti": "Bärengraben on Bernin karhukuoppa Nydeggbrücken päässä, ja se on kansallisesti merkittävä kulttuurikohde. Nykyinen, neljäs kuoppa avattiin 1857. Vuonna 1925 viereen lisättiin pienempi kuoppa pennuille, ja kuoppa saneerattiin 1994–1996. Kuoppa kuuluu Dählhölzlin eläintarhan hallintoon.\n\nBärenPark avattiin 2009 luonnonmukaisempana tarhana Aare-rinteeseen, ja sen ja kuopan välillä on tunneli. Kalteva hissi, Bärenbähnli, rakennettiin 2015. Karhu on sekä kaupungin että kantonin vaakunassa, ja Mary Plain -lastenkirjasarjan nuori karhu asuu kuopassa. Lähteen mukaan kuoppa näkyy myös Bond-elokuvassa On Her Majesty's Secret Service.\n\nIsoisän matkavuonna 1873 karhut olivat asuneet nykyisessä kuopassa jo kuusitoista vuotta, mutta BärenParkia ei ollut.",
+   "kuvat": [
+    {
+     "tiedosto": "Bern 126.jpg",
+     "lyhyt": "Bärengraben avattiin 1857, ja viereinen BärenPark 2009.",
+     "selite": "Bärengraben, Bernin karhukuoppa, avattiin 1857, ja viereinen BärenPark avattiin 2009.",
+     "lahde": "FrDr, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Einsteinhaus": {
+   "aika": "1903–1905",
+   "teksti": "Einsteinhaus on Kramgasse 49:ssä, ja Albert Einstein asui talon toisessa kerroksessa vaimonsa Mileva Marićin ja poikansa Hansin kanssa 1903–1905. Annus mirabilis -artikkelit kirjoitettiin tässä talossa. Samaan aikaan Einstein työskenteli liittovaltion henkisen omaisuuden toimistossa.\n\nNykyisin talossa on museo. Toisessa kerroksessa on aikakauden kalusteilla sisustettu asunto, ja kolmannessa kerroksessa kerrotaan Einsteinin elämäkerta. Pienempi näyttely on Bernin historiallisessa museossa.\n\nIsoisän matkavuonna 1873 Einsteinin asuminen talossa ei ollut vielä alkanut: se tapahtui vasta 1903–1905.",
+   "kuvat": [
+    {
+     "tiedosto": "Einstein Haus.jpg",
+     "lyhyt": "Einsteinhaus Kramgasse 49:ssä on museo talossa, jossa Einstein asui 1903–1905.",
+     "selite": "Einsteinhaus Kramgasse 49:ssä on museo talossa, jossa Albert Einstein asui perheineen 1903–1905.",
+     "lahde": "Aliman5040, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 46.95,
+  "lon": 7.45,
+  "keskilampo": [
+   -0.5,
+   2.1,
+   4,
+   8.6,
+   12.9,
+   15.6,
+   19.5,
+   17.7,
+   15.3,
+   9.7,
+   5.7,
+   1.7
+  ],
+  "sade": [
+   32,
+   85,
+   114,
+   108,
+   103,
+   112,
+   66,
+   144,
+   97,
+   121,
+   88,
+   80
+  ],
+  "luonnehdinta": "Bernissä tammikuu on kylmin kuukausi, keskilämpö −0,5 astetta, ja heinäkuu lämpimin, 19,5 astetta. Sadetta tulee joka kuukausi: kuivin on tammikuu 32 millimetrillä ja sateisin elokuu 144 millimetrillä. Vuoden sademäärä on näillä luvuilla yhteensä 1150 millimetriä."
+ },
+ "ehdotukset": {
+  "lentoasema": "Bern-Belp (BRN)",
+  "huomiot": [
+   "Kohdekartalla 6 kohdetta (Zytglogge, tuomiokirkko, liittopalatsi, Bundesplatz, Bärengraben ja BärenPark, Einsteinhaus). Nydeggbrücke ja Marzilibahn jätetty pois, koska ne ovat silta ja funikulaari eivätkä rakennus/aukio/luonto; luontokohteena voisi harkita Ruusutarhaa tai Aaren rantaa, jos koordinaatit haetaan.",
+   "Valokuva (karhukuoppa-vedos): alareunassa on vedoksen oma pieni painettu otsikkoteksti. Käytetty, koska se on himmeä ja kuuluu historialliseen vedokseen eikä ole lisätty päälle, eikä kuvat.md:ssä ole toista PD-vedosta; jos Päätoimittaja ei hyväksy, vaihtoehto on jokin nykykuva.",
+   "Valokuvalle ei ole nykykuvaparia (uusi-kenttä pois), koska kuvat.md:ssä ei ole vapaata nykykuvaa: Bärengraben-aiheiset nykykuvat on jo käytetty nostossa N4 ja kohteessa. Ennen–nyt-paria ei tehty.",
+   "Sääjakso ja saatiedot käyttävät saa.json-lukuja (ruututieto). Wikipedian ilmastotaulukko (Zollikofen 1981–2010) poikkeaa: heinäkuu 18,3 astetta, vuosisade noin 910 mm (fi) ja sateisin elokuu noin 110 mm; lukuja ei sekoitettu, ristiriita kirjattu tähän.",
+   "Faktapohjan kohta 8 ratkaistu: perustaminen 1191 perimätiedon mukaan; Goldene Handfeste 1218 jätetty pois; karhut 1400-luvun puolivälistä tai 1513; Münsterin torni noin 100 m; kello noin 10 t; Marzilibahn 105 m ilman lyhin-väitettä; Gurtenin korkeutta ei käytetty; parlamenttirakennus 1894–1902.",
+   "Orjakauppa (Bern South Sea Company), nykypolitiikka, Gurlitt-perintö ja Internationaalit jätetty pois; orjakauppa Päätoimittajan harkittavaksi.",
+   "Faktapohjassa Zollikoferin luvut ja Niklaus Manuelin kuoleman tanssi (1516–1519) ovat ristiriidassa lasimaalausten 1441–1450 kanssa; Manuelia ei käytetty L2-nostossa. Käytännön tietoihin (aukioloajat, hinnat) ei ole luettu Wikivoyagea eikä um.fi:tä; turvallisuuskappaletta ei kirjoitettu."
+  ]
+ }
+}
