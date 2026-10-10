@@ -97,6 +97,8 @@ fi
 # Staattiset ympäristömallit (ymparisto/mallit/*.glb, 7.10.2026: rantakivet, vene) ja vapaan kävelyn aineisto
 # (kavely/: osien glb:t, osat.json, merkit.json, esine-*.glb ja esine-*-4x4.astcm = esineiden ASTC-mipketjut 8.10.), jos lähteessä.
 for f in "$LAHDE"/ymparisto/mallit/*.glb(N); do lisaa "ymparisto/mallit/${f:t}" "ymparisto/mallit/${f:t}"; done
+# Mallien hämäräkuvat (10.10.2026, Siirtoseppä 71c2080c9): ymparisto/mallit/<id>-hamara.jpg ja -hamara-4x4.astcm, jos lähteessä.
+for f in "$LAHDE"/ymparisto/mallit/*-hamara.jpg(N) "$LAHDE"/ymparisto/mallit/*-hamara-4x4.astcm(N); do lisaa "ymparisto/mallit/${f:t}" "ymparisto/mallit/${f:t}"; done
 for f in "$LAHDE"/kavely/*.(glb|json|astcm)(N); do lisaa "kavely/${f:t}" "kavely/${f:t}"; done
 # Kävelyosien valoatlakset (8.10.2026, Thief-vertailun #2): kavely/valot/<osa>{,-512}.jpg ja -4x4.astcm (osat.json osa.valoatlas).
 for f in "$LAHDE"/kavely/valot/*.(jpg|astcm)(N); do lisaa "kavely/valot/${f:t}" "kavely/valot/${f:t}"; done
