@@ -25,6 +25,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _Himmea: 0.32
     - _Sade: 6.3
     - _SadeValittu: 8.4
     m_Colors: []
