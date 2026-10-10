@@ -389,18 +389,6 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
     var SONNET = { 'Postivahti': 1, 'Sisältökirjuri': 1, 'Laitetestaaja': 1 };
     var jarj = function (x) { var s = String(x.tila || 'lepo'); return s === 'kysyy' ? 0 : s === 'odottaa' ? 1 : s === 'työ' ? 2 : 3; };
     roolit.sort(function (a, b) { return jarj(a) - jarj(b); });
-    if (roolit.length) {
-      var sel = luo('div', 'selite');
-      var tilat = [['tila-tyo', 'työssä'], ['tila-odottaa', 'odottaa'], ['tila-lepo', 'lepää']];
-      if (roolit.some(function (x) { return x.tila === 'kysyy'; })) tilat.unshift(['tila-kysyy', 'kysyy sinulta']);
-      tilat.forEach(function (p) {
-        var sp = luo('span'); sp.append(luo('span', 'ruutu ' + p[0]), document.createTextNode(p[1])); sel.append(sp);
-      });
-      [['', 'Opus'], ['sonnet', 'Sonnet']].forEach(function (p) {
-        var sp = luo('span'); sp.append(luo('span', 'piste ' + p[0]), document.createTextNode(p[1])); sel.append(sp);
-      });
-      ro.append(sel);
-    }
     var ruudukko = luo('div', 'roolit');
     roolit.forEach(function (x) {
       var malli = String(x.malli || (SONNET[x.nimi] ? 'Sonnet' : 'Opus')).toLowerCase();
