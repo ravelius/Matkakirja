@@ -87,7 +87,7 @@ namespace Matkakirja.Natiivi
             IdKohde = Shader.PropertyToID("_KohdeP"), IdKohdeParam = Shader.PropertyToID("_KohdeParam"),
             IdVedet = Shader.PropertyToID("_Vedet"), IdVesiAlue = Shader.PropertyToID("_VesiAlue"), IdKamera = Shader.PropertyToID("_KameraP"),
             IdMaamerkit = Shader.PropertyToID("_Maamerkit"), IdMaamerkkiParam = Shader.PropertyToID("_MaamerkkiParam"),
-            IdLamppuParam = Shader.PropertyToID("_LamppuParam"), IdIkkunat = Shader.PropertyToID("_Ikkunat"), IdIkkunaData = Shader.PropertyToID("_IkkunaData");
+            IdLamppuParam = Shader.PropertyToID("_LamppuParam"), IdIkkunaTex = Shader.PropertyToID("_Ikkunat"), IdIkkunaData = Shader.PropertyToID("_IkkunaData");
         const int Koko = Matkakirja.Linssit.Kierros.KaupunkiYovalot.PxAste * Matkakirja.Linssit.Kierros.KaupunkiYovalot.Ruudukko;   // 720
 
         /// <summary>Kerran kehyksessä kaupunkinäkymässä. osuus 0–1 (hämärä → yö); isanta ajaa latauskorutiinit.</summary>
@@ -147,8 +147,8 @@ namespace Matkakirja.Natiivi
                     try
                     {
                         using var z = new System.IO.Compression.GZipStream(new MemoryStream(ia.bytes), System.IO.Compression.CompressionMode.Decompress);
-                        var raaka = new byte[1536 * 1536]; int luettu = 0, n;
-                        while (luettu < raaka.Length && (n = z.Read(raaka, luettu, raaka.Length - luettu)) > 0) luettu += n;
+                        var raaka = new byte[1536 * 1536]; int luettu = 0, nr;
+                        while (luettu < raaka.Length && (nr = z.Read(raaka, luettu, raaka.Length - luettu)) > 0) luettu += nr;
                         if (luettu == raaka.Length)
                         {
                             ikkunat = new Texture2D(1536, 1536, TextureFormat.R8, false, true) { name = "Yövalot: ikkunat " + vedetId, wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Point };
@@ -175,7 +175,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetTexture(IdVedet, vedet != null ? vedet : Texture2D.blackTexture);
             materiaali.SetVector(IdVesiAlue, vesiKeskus is (double, double) vk ? new Vector4((float)vk.lat, (float)vk.lon, VesiSivuM, Heijastus) : Vector4.zero);
             materiaali.SetVector(IdLamppuParam, new Vector4(vesiLamput && OsmLamput && vesiKeskus != null ? 1f : 0f, AlueVoima, 0f, 0f));
-            materiaali.SetTexture(IdIkkunat, ikkunat != null ? ikkunat : Texture2D.blackTexture);
+            materiaali.SetTexture(IdIkkunaTex, ikkunat != null ? ikkunat : Texture2D.blackTexture);
             materiaali.SetVector(IdIkkunaData, new Vector4(ikkunat != null && IkkunaData && vesiKeskus != null ? 1f : 0f, IkkunaKerroin, 0f, 0f));
             var kp = georef.transform.worldToLocalMatrix.MultiplyPoint3x4(kamera.transform.position);
             materiaali.SetVector(IdKamera, new Vector4(kp.x, kp.y, kp.z, 0f));
