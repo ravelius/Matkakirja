@@ -8,6 +8,7 @@
 # Mittaustaulukko: SAAPUMINEN_MITAT=<polku.md> [SAAPUMINEN_MAARAJAT=<maarajat.json>] ./kaanna.sh Saapumisnakyma
 # Rajakorkeussarja: VEKTORIT_KOE=<kansio> ./kaanna.sh Vektorisolut (esim. /Users/Shared/Claude/maasto-poltto/rajakorkeus/2026-09-25-gshhs-korkeus)
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
+# Pääkaupunkipisteet oikealla viennillä (skeema 1.60): PAAKAUPUNGIT_KOE=<paketin kansio> ./kaanna.sh Paakaupungit
 # Maakunnat maittain oikealla aineistolla (skeema 1.42) ja kestot: MAAKUNTARAJAT=<maakuntarajat.json> ./kaanna.sh Maakuntajako
 # Maakuntien värinumerot webin <ISO>.json-tiedostoihin verrattuna: MAAKUNTARAJAT=<…> MAAKUNNAT_WEB=<kansio> ./kaanna.sh MaakuntaVarit
 # Kehän aineisto (löydös 127): MAAMAA=<maamaa.geojson[.gz]> [MAAPOLYGONIT=<maapolygonit.geojson>] ./kaanna.sh Geojson

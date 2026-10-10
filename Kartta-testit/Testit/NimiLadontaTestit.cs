@@ -439,6 +439,42 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(!NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", null, true), "maa tuntematon: piiloon");
         }
 
+        [Testi] static void PaakaupungitKoepaketissa()
+        {
+            // Skeema 1.60 oikealla viennillä (PT 10.10.: #4349 Kaukasus ja Lähi-itä): PAAKAUPUNGIT_KOE=<paketin kansio>.
+            string kansio = Environment.GetEnvironmentVariable("PAAKAUPUNGIT_KOE");
+            string pk = kansio == null ? null : Path.Combine(kansio, "kokoelmat", "paakaupungit.json");
+            if (pk == null || !File.Exists(pk)) { Console.WriteLine("  (PAAKAUPUNGIT_KOE ei asetettu tai paakaupungit.json puuttuu)"); return; }
+            var kaupungit = Matkakirja.Peli.MiniJson.Alkiot(File.ReadAllText(Path.Combine(kansio, "kokoelmat", "kaupungit.json"))).ToList();
+            var pisteet = Matkakirja.Peli.MiniJson.Alkiot(File.ReadAllText(pk)).ToList();
+            var maat = Matkakirja.Peli.MiniJson.Alkiot(File.ReadAllText(Path.Combine(kansio, "kokoelmat", "maat.json")))
+                .ToDictionary(m => Matkakirja.Peli.MiniJson.Teksti(m, "id"));
+            var pysakit = new HashSet<string>(kaupungit.Select(k => Matkakirja.Peli.MiniJson.Teksti(k, "id")));
+            // Sama kuin KaupunkiMerkit.RakennaKaikki: maat, joilla on laudan kaupunki (maa null, esim. Jerusalem, ei kuulu).
+            var pysakkiMaat = new HashSet<string>(kaupungit.Select(k => Matkakirja.Peli.MiniJson.Teksti(k, "maa")).Where(m => m != null));
+            foreach (var p in pisteet)
+            {
+                string id = Matkakirja.Peli.MiniJson.Teksti(p, "id"), maa = Matkakirja.Peli.MiniJson.Teksti(p, "maa");
+                Oleta.Tosi(!pysakit.Contains(id), id + " ei ole pysäkki");
+                Oleta.Tosi(maa != null && maat.ContainsKey(maa), id + ": maa " + maa + " maakortille (maat.json)");
+                Oleta.Sama(0.0, Matkakirja.Peli.MiniJson.Luku(p, "tarkeys") ?? -1, id + " tärkeys 0");
+            }
+            string Maa(string id) => Matkakirja.Peli.MiniJson.Teksti(pisteet.First(p => Matkakirja.Peli.MiniJson.Teksti(p, "id") == id), "maa");
+            foreach (var id in new[] { "ramallah", "beirut", "manama", "jerevan", "baku", "tbilisi", "belgrad", "vatikaanivaltio" })
+                Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(false, Maa(id), "FRA", pysakkiMaat.Contains(Maa(id))), id + ": kaupungiton maa, näkyy Pariisissa");
+            Oleta.Tosi(!NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", "FRA", pysakkiMaat.Contains("SVK")), "Bratislava Pariisissa piiloon");
+            Oleta.Tosi(!pisteet.Any(p => Matkakirja.Peli.MiniJson.Teksti(p, "id").Contains("jerusalem")), "Jerusalemilla ei pääkaupunkipistettä");
+            Oleta.Sama("PSE", Maa("ramallah"), "Ramallah → PSE:n maakortti");
+            // Kevyet maatiedot (väkiluku, pinta-ala ilman sijoja) ja ISR ilman pääkaupunkipistettä: kartuschan rivit.
+            foreach (var iso in new[] { "ISR", "PSE", "LBN", "AND", "VAT" })
+            {
+                var t = Matkakirja.Peli.MiniJson.ObjektiTaiNull(Matkakirja.Peli.MiniJson.Kentta(maat[iso], "tiedot"));
+                Oleta.Tosi(t != null && Matkakirja.Peli.MiniJson.Teksti(t, "vakiluku") != null && Matkakirja.Peli.MiniJson.Teksti(t, "pintaAla") != null,
+                           iso + ": väkiluku ja pinta-ala");
+            }
+            Console.WriteLine($"  koepaketti {kansio}: {pisteet.Count} pääkaupunkipistettä, {pysakkiMaat.Count} maata pysäkein");
+        }
+
         [Testi] static void NimiVaihtaaKylkeaKunOikeaVarattu()
         {
             // Web sijoitaKaupunginNimi: oikea → vasen → ylä → ala → kehä.
