@@ -1,4 +1,4 @@
-# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v654 (AUT, BEL, BGR, BIH, CHE, CZE, DEU, DNK, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IRL, ISL, ITA, LTU, LUX, LVA, MLT, NLD, NOR, POL, PRT, ROU, RUS, SVK, SVN, SWE, UKR), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
+# Karttavalot (kohde:<id>) ja täkynostot (nosto:<id>) maittain sisältöpaketista v656 (ALB, AUT, BEL, BGR, BIH, BLR, CHE, CZE, DEU, DNK, ESP, EST, FIN, FRA, GBR, GRC, HRV, HUN, IRL, ISL, ITA, LTU, LUX, LVA, MDA, MKD, MLT, MNE, NLD, NOR, POL, PRT, ROU, RUS, SRB, SVK, SVN, SWE, UKR), Pulun valmiiden vastausten testiin (pulu-kultaiset.py)
 elaintaky:AUT	AUT
 elaintaky:BGR	BGR
 elaintaky:BIH	BIH
@@ -30,7 +30,10 @@ elaintaky:UKR	UKR
 hetki:afsluitdijkin-viimeinen-aukko-1932	NLD
 hetki:arkadin-luostarin-rajahdys-1866	GRC
 hetki:beethoven-yhdeksas-1824	AUT
+hetki:belgradin-piiritys-1456	SRB
+hetki:berezinan-ylitys-1812	BLR
 hetki:berliinin-muuri-1961	DEU
+hetki:bessarabian-liittyminen-1918	MDA
 hetki:brunel-thames-tunnel-1827	GBR
 hetki:christiansborgin-palo-1884	DNK
 hetki:cook-endeavour-plymouth-1768	GBR
@@ -47,6 +50,7 @@ hetki:jenner-rokotus-1796	GBR
 hetki:kolumbus-palos-1492	ESP
 hetki:kolumbus-portugali-1484	PRT
 hetki:kolumbus-santa-fe-1492	ESP
+hetki:krusevon-tasavalta-1903	MKD
 hetki:lavoisier-laboratorio-1780	FRA
 hetki:lontoon-palo-1666	GBR
 hetki:lumiere-elokuva-1895	FRA
@@ -58,6 +62,7 @@ hetki:michelangelo-sikstus-1510	ITA
 hetki:mozart-wien-1786	AUT
 hetki:nansen-fram-1893	NOR
 hetki:newton-prisma-1666	GBR
+hetki:obodin-kirjapaino-1494	MNE
 hetki:olympia-ateena-1896	GRC
 hetki:pasteur-pullot-1862	FRA
 hetki:pietari-perustus-1703	RUS
@@ -74,6 +79,7 @@ hetki:trafalgar-victory-1805	ESP
 hetki:vasco-da-gama-restelo-1497	PRT
 hetki:vesuvius-pompeji-79	ITA
 hetki:viikinkilaiva-roskilde-1040	DNK
+hetki:vloren-itsenaisyys-1912	ALB
 hetki:wienin-porssikrahi-1873	AUT
 kohde:adrianmeri	BIH
 kohde:adrianmeri~2	HRV
@@ -92,6 +98,7 @@ kohde:amalfin-rannikko	ITA
 kohde:aneto	ESP
 kohde:antiikin-agora	GRC
 kohde:antikythera	GRC
+kohde:apollonia	ALB
 kohde:aquileia	ITA
 kohde:aradin-linnoitus	ROU
 kohde:arenenberg	CHE
@@ -113,11 +120,14 @@ kohde:bastilji	FRA
 kohde:batalha	PRT
 kohde:bathin-roomalaiset-kylpylat	GBR
 kohde:bayeux-seinavaate	FRA
+kohde:belgradin-linnoitus	SRB
 kohde:belogradtsik	BGR
 kohde:bennevis	GBR
+kohde:beratin-vanhakaupunki	ALB
 kohde:berdytsivin-karmeliittaluostari	UKR
 kohde:beringinmeri	RUS
 kohde:billund	DNK
+kohde:biogradska-gora	MNE
 kohde:birka	SWE
 kohde:biskajanlahti	FRA
 kohde:bistritan-evankelinen-kirkko	ROU
@@ -131,18 +141,22 @@ kohde:bourtange	NLD
 kohde:boyana	BGR
 kohde:bran	ROU
 kohde:brandenburgin-portti	DEU
+kohde:braslavin-jarvet	BLR
 kohde:bregenzin-jarvinayttamo	AUT
 kohde:bremenin-raatihuone	DEU
+kohde:brestin-linnoitus	BLR
 kohde:brocken	DEU
 kohde:brownshillin-dolmen	IRL
 kohde:camargue	FRA
 kohde:canterburyn-katedraali	GBR
 kohde:capri	ITA
+kohde:caprianan-luostari	MDA
 kohde:carcassonnen-linnoituskaupunki	FRA
 kohde:carein-linna	ROU
 kohde:carnacin-kivirivit	FRA
 kohde:carnuntum	AUT
 kohde:carrauntoohil	IRL
+kohde:castel-mimi	MDA
 kohde:ceide-fields	IRL
 kohde:cesis	LVA
 kohde:cesky-krumlov	CZE
@@ -158,6 +172,7 @@ kohde:constanta	ROU
 kohde:cordoban-moskeijakatedraali	ESP
 kohde:corlean-puupolku	IRL
 kohde:corvin	ROU
+kohde:cricovan-viinikellarit	MDA
 kohde:croagh-patrick	IRL
 kohde:crystal-palace	GBR
 kohde:daugavpilsin-linnoitus	LVA
@@ -169,6 +184,7 @@ kohde:derzhprom	UKR
 kohde:dettifoss	ISL
 kohde:devils-bit	IRL
 kohde:dinara	HRV
+kohde:djavolja-varos	SRB
 kohde:dnepr	UKR
 kohde:dnestr	UKR
 kohde:dolomiitit	ITA
@@ -209,14 +225,18 @@ kohde:frederiksborgin-linna	DNK
 kohde:gaizinkalns	LVA
 kohde:galdhpiggen	NOR
 kohde:gamla-uppsala	SWE
+kohde:gamzigrad	SRB
 kohde:gerace	ITA
 kohde:geysir	ISL
 kohde:giethoorn	NLD
+kohde:gjirokastern-vanhakaupunki	ALB
 kohde:glencarin-vesiputous	IRL
 kohde:glendalough	IRL
 kohde:glomma	NOR
 kohde:gluckin-raamattumuseo	LVA
 kohde:gniezno	POL
+kohde:golubacin-linnoitus	SRB
+kohde:gomelin-palatsi	BLR
 kohde:gota-kanava	SWE
 kohde:gotaalv	SWE
 kohde:gotthardin-tunneli	CHE
@@ -332,6 +352,7 @@ kohde:hahmotelma-budan-matyas-palatsi	HUN
 kohde:hahmotelma-buen-retiro	ESP
 kohde:hahmotelma-bunratty	IRL
 kohde:hahmotelma-burren	IRL
+kohde:hahmotelma-butrint	ALB
 kohde:hahmotelma-cabo-de-finisterre	ESP
 kohde:hahmotelma-cachtice	SVK
 kohde:hahmotelma-cacvina	HRV
@@ -768,6 +789,7 @@ kohde:hahmotelma-oostende	BEL
 kohde:hahmotelma-oostvaardersplassen	NLD
 kohde:hahmotelma-opusztaszer	HUN
 kohde:hahmotelma-orava	SVK
+kohde:hahmotelma-orheiul-vechi	MDA
 kohde:hahmotelma-ormoz	SVN
 kohde:hahmotelma-orval	BEL
 kohde:hahmotelma-orvelte	NLD
@@ -924,6 +946,7 @@ kohde:hahmotelma-skocjan	SVN
 kohde:hahmotelma-skofja-loka	SVN
 kohde:hahmotelma-skogafoss	ISL
 kohde:hahmotelma-skokloster	SWE
+kohde:hahmotelma-skopjen-vanha-rautatieasema	MKD
 kohde:hahmotelma-skyr	ISL
 kohde:hahmotelma-slanic	ROU
 kohde:hahmotelma-slavkov	CZE
@@ -932,6 +955,7 @@ kohde:hahmotelma-slieve-league	IRL
 kohde:hahmotelma-slitere	LVA
 kohde:hahmotelma-sliven	BGR
 kohde:hahmotelma-slowinski	POL
+kohde:hahmotelma-smederevon-linnoitus	SRB
 kohde:hahmotelma-smolenice	SVK
 kohde:hahmotelma-smolensk	RUS
 kohde:hahmotelma-smolyan	BGR
@@ -1042,6 +1066,7 @@ kohde:hahmotelma-valkokivinen-kreml	RUS
 kohde:hahmotelma-valletta	MLT
 kohde:hahmotelma-valmiera	LVA
 kohde:hahmotelma-vanha-burgtheater	AUT
+kohde:hahmotelma-vanha-minsk	BLR
 kohde:hahmotelma-vanha-pietarinkirkko	ITA
 kohde:hahmotelma-vanha-vaasa-kirkko	FIN
 kohde:hahmotelma-varazdin	HRV
@@ -1103,6 +1128,7 @@ kohde:hahmotelma-wolin	POL
 kohde:hahmotelma-york-minster	GBR
 kohde:hahmotelma-ystad	SWE
 kohde:hahmotelma-yuste	ESP
+kohde:hahmotelma-zabljak-crnojevica	MNE
 kohde:hahmotelma-zagare	LTU
 kohde:hahmotelma-zagori	GRC
 kohde:hahmotelma-zakopane	POL
@@ -1122,6 +1148,7 @@ kohde:halti	FIN
 kohde:hameenlinna	FIN
 kohde:hampuri	DEU
 kohde:heimaey	ISL
+kohde:herakleia-lynkestis	MKD
 kohde:hersonesos	UKR
 kohde:hill-of-uisneach	IRL
 kohde:hohensalzburg	AUT
@@ -1184,6 +1211,7 @@ kohde:kjerag	NOR
 kohde:klaipeda	LTU
 kohde:klevanin-rakkaudentunneli	UKR
 kohde:knossos	GRC
+kohde:kokinon-observatorio	MKD
 kohde:kolan-syvareika	RUS
 kohde:koli	FIN
 kohde:kolkan-niemi	LVA
@@ -1192,10 +1220,12 @@ kohde:konesprezna-draha	CZE
 kohde:kopu-tuletorn	EST
 kohde:korcula	HRV
 kohde:korintin-kanava	GRC
+kohde:kotorinlahti	MNE
 kohde:kreetanmeri	GRC
 kohde:krimmlin-vesiputoukset	AUT
 kohde:krollermuller	NLD
 kohde:kronborg	DNK
+kohde:krujen-linna	ALB
 kohde:krzemionki	POL
 kohde:kultala	FIN
 kohde:kuressaaren-linna	EST
@@ -1215,6 +1245,7 @@ kohde:ligurianmeri	ITA
 kohde:lindholm-hoje	DNK
 kohde:litomysl	CZE
 kohde:loire	FRA
+kohde:lovcen-njegosin-mausoleumi	MNE
 kohde:lundintuomiokirkko	SWE
 kohde:lviv	UKR
 kohde:lyngenin-alpit	NOR
@@ -1223,18 +1254,23 @@ kohde:maastricht	NLD
 kohde:madara	BGR
 kohde:maglic	BIH
 kohde:malbork	POL
+kohde:manasijan-luostari	SRB
 kohde:marathon	GRC
 kohde:marbacka	SWE
 kohde:matera	ITA
+kohde:matkan-kanjoni	MKD
 kohde:matsalu	EST
 kohde:matterhorn	CHE
 kohde:mauthausen	AUT
+kohde:mavrovon-jarvi	MKD
 kohde:melkin-luostari	AUT
 kohde:mendelin-luostari	CZE
 kohde:meridan-roomalainen-teatteri	ESP
 kohde:messinansalmi	ITA
 kohde:milano	ITA
+kohde:milestii-mici	MDA
 kohde:millaun-silta	FRA
+kohde:mirin-linna	BLR
 kohde:mljet	HRV
 kohde:mllehj	DNK
 kohde:moherin-kalliot	IRL
@@ -1271,6 +1307,7 @@ kohde:neum	BIH
 kohde:newgrange	IRL
 kohde:nidaros	NOR
 kohde:nijmegen	NLD
+kohde:njasvizin-linna	BLR
 kohde:nordkapp	NOR
 kohde:norjanmeri	NOR
 kohde:ob	RUS
@@ -1278,6 +1315,7 @@ kohde:obidos	PRT
 kohde:oder	DEU
 kohde:odra	POL
 kohde:ohotanmeri	RUS
+kohde:ohridinjarvi	MKD
 kohde:olavinlinna	FIN
 kohde:olomouc	CZE
 kohde:olympia	GRC
@@ -1286,6 +1324,7 @@ kohde:olympos	GRC
 kohde:ontika	EST
 kohde:oradean-linnoitus	ROU
 kohde:osijek	HRV
+kohde:ostrogin-luostari	MNE
 kohde:palangan-meripihkamuseo	LTU
 kohde:pannonhalma	HUN
 kohde:parnassos	GRC
@@ -1296,9 +1335,11 @@ kohde:peipsi	EST
 kohde:peles	ROU
 kohde:pernik	BGR
 kohde:petajavedenvanhakirkko	FIN
+kohde:petrovaradinin-linnoitus	SRB
 kohde:pikkupollo	GRC
 kohde:pindos	GRC
 kohde:pisa	ITA
+kohde:plavjarvi	MNE
 kohde:plitvicen-jarvet	HRV
 kohde:plovdiv	BGR
 kohde:plzensky-prazdroj	CZE
@@ -1309,6 +1350,7 @@ kohde:pohjanmeri	DEU
 kohde:pohjanmeri~2	DNK
 kohde:pohjanmeri~3	GBR
 kohde:pohjanmeri~4	NLD
+kohde:polotskin-sofian-katedraali	BLR
 kohde:poltavan-taistelu	UKR
 kohde:pompeji	ITA
 kohde:pont-du-gard	FRA
@@ -1337,6 +1379,7 @@ kohde:rock-of-dunamase	IRL
 kohde:rodoksen-kolossi	GRC
 kohde:roros	NOR
 kohde:roskilden-tuomiokirkko	DNK
+kohde:rozafan-linna	ALB
 kohde:ruhrin-alue	DEU
 kohde:rumsiskes	LTU
 kohde:rundale	LVA
@@ -1357,6 +1400,7 @@ kohde:santiago-de-compostela	ESP
 kohde:santorini	GRC
 kohde:saovicente	PRT
 kohde:sardinia	ITA
+kohde:sarganin-kahdeksikko	SRB
 kohde:sarmizegetusa	ROU
 kohde:sava	HRV
 kohde:schwerinin-linna	DEU
@@ -1379,16 +1423,20 @@ kohde:snowdon	GBR
 kohde:sofijivkan-puisto	UKR
 kohde:solothurnin-katedraali	CHE
 kohde:solovetskin-luostari	RUS
+kohde:sorokan-linnoitus	MDA
 kohde:split	HRV
 kohde:srebarna	BGR
 kohde:st-paulin-katedraali	GBR
 kohde:stanserhorn	CHE
+kohde:stari-bar	MNE
 kohde:stiftsbibliothek	CHE
+kohde:stobi	MKD
 kohde:stonehenge	GBR
 kohde:stonin-muurit	HRV
 kohde:storebaeltin-silta	DNK
 kohde:struven-kaari	EST
 kohde:strymonas	GRC
+kohde:studenican-luostari	SRB
 kohde:suomenlahti	EST
 kohde:suomenlahti~2	FIN
 kohde:sutjeska	BIH
@@ -1398,6 +1446,7 @@ kohde:sveti-jure	HRV
 kohde:szeged	HUN
 kohde:tabor	CZE
 kohde:tajo	ESP
+kohde:taran-kanjoni	MNE
 kohde:taran-kukkula	IRL
 kohde:targu-jiun-brancusi-kokonaisuus	ROU
 kohde:tartu-ulikool	EST
@@ -1408,6 +1457,7 @@ kohde:thames	GBR
 kohde:thessaloniki	GRC
 kohde:thingvellir	ISL
 kohde:timisoaran-vanhakaupunki	ROU
+kohde:tipovan-luostari	MDA
 kohde:tismanan-luostari	ROU
 kohde:tisza	HUN
 kohde:titlis	CHE
@@ -1445,6 +1495,7 @@ kohde:vaalserberg	NLD
 kohde:vadstenan-luostari	SWE
 kohde:vaganski-vrh	HRV
 kohde:vainajoki	LVA
+kohde:valbonan-laakso	ALB
 kohde:valimeri	ESP
 kohde:valimeri~2	FRA
 kohde:vanern	SWE
