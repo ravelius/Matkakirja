@@ -1,4 +1,4 @@
-# Pelikoodarin luovutus 10.10.2026 klo 12.5x (NOLLAUS 52 %, PT; tilinvaihto siirtyi junan 177 jälkeen)
+# Pelikoodarin luovutus 10.10.2026 klo 13.0x (TAUKO, PT 12.5x: vain bugikorjaussessiot ennen buildia 177 ja tilinvaihtoa)
 
 Yksityiskohdat: docs/raportit/viesti-pelikoodari-luovutus-20261010-paiva.md (kohdat 2–2e). Ei keskeneräisiä muutoksia:
 checkout puhdas, kaikki worktreet committattu ja pushattu.
@@ -14,21 +14,23 @@ checkout puhdas, kaikki worktreet committattu ja pushattu.
   → omistaja kuuntelee.
 
 ## KESKEN NYT
-- **Pääkaupunkipisteet webiin** (PT 12.4x: piirto WEBISSÄ Karttasepän skeemalla). Worktree wt/pelikoodari-paakaupungit
-  (haara pelikoodari-paakaupungit, origin/main, ei muutoksia). Karttasepän haara karttaseppa-maat-eurooppa EI ollut vielä
-  originissa klo 12.5x (muutokset Karttasepän worktreessa committaamatta; Karttaseppä nollautui). Tarkista `git ls-remote origin
-  | grep maat-eurooppa` tai Karttasepän PR. Webin pallokartta: js/pallolauta/lauta.js (kaupungit-kerros ~r. 2069, pisteet
-  ~r. 4235, merkit.js, nimet.js = nimien karsinta), maakortti js/pallolauta/maapaneeli.js. Kysymykseni Karttasepälle
-  (data natiiville viennin kautta?) jäi vastaamatta → kysy uudelta Karttasepältä.
+- **Pääkaupunkipisteet (TAUOLLA, PT 12.5x: ei bugikorjaus)**. Karttasepän PR ravelius/Matkakirja#4344 (haara
+  karttaseppa-maat-eurooppa d098bfd93) auki. Karttaseppä: Pelikoodari = web (pallokartta + nimien karsinta, lukee
+  js/packs/paakaupungit.js suoraan, x/y projisoiLaudalle('maailmankartta', lon, lat)) + natiivin kultaiset; natiivin piirto N-UI
+  viennin kokoelmat/paakaupungit.json:sta.
+  - NATIIVIN KULTAISET VALMIS: proto-haara pelikoodari/paakaupungit-kultaiset 6e152384d (wt/proto-pelikoodari-paakaupungit):
+    kysymys-, lippu- ja pelijälki haaran js:ää vasten, tiivisteet = webin tiivisteet.json, C#-portti ennallaan, kaanna.sh 449/449.
+    EI junaan ennen kuin #4344 on mainissa (jäljet nojaavat sen maihin).
+  - WEBIN PIIRTO KESKEN, EI MUUTOKSIA: worktree wt/pelikoodari-paakaupungit nollattu #4344:n päälle (d098bfd93), puhdas. Opus-agentti
+    pysäytettiin lukuvaiheessa. Suunnitelma: pääkaupungit VAIN pallon aineistoon (js/pallolauta/nimet.js aineisto +
+    lauta.js kaupungit/pisteNakyy/pelinKaupunkirajaus `maa`-kentällä), tunnisteet etuliitteellä 'pk:', tarkeys 0 / aste 0,
+    ei pelikaupungin toimintoja; tasokartta (varapolku) ennalleen; yksikkötesti + Playwright-kuva Balkanilta.
+    NAPAUTUS = OLEMASSA OLEVA MAAKORTTI (PT:n linjaus, tarkentuu tauon jälkeen). PR vasta #4344:n jälkeen.
 - **Pöllön Peking-kokeilu** VALMIS: #4343 julkaistu, tuotannossa todennettu (giza-otsake → Peking näkyy, ilman ei); LS2 ajaa kuvat.
 - **ISS-äänierä 1**: PT:n äänisivulla, odottaa omistajan valintaa → vienti aanet/iss-v1/ + kytkentä (luovutus paiva kohta 1).
 
-1. **Karttasepän pääkaupungit** (PT 12.2x): kun haara karttaseppa-maat-eurooppa on originissa / PR auki: päivitä natiivin kultaiset
-   jäljet uusille maille (AND, LIE, MCO, SMR, VAT; liput, kysymysjälki, pelijälki: proto Peli-testit/Kultaiset tee-*.mjs →
-   kaanna.sh) ja tee pääkaupunkipisteiden piirto (js/packs/paakaupungit.js PAAKAUPUNKIPISTEET; olemassa oleva kaupunkimerkki ja nimi
-   tarkeys 0, olemassa oleva nimien karsinta, napautus avaa maakortin). KYSYTTY Karttasepältä: web, natiivi vai molemmat, ja
-   kulkeeko data natiiville viennin kautta — odota vastausta (list_events Karttaseppä local_37708e68-5a58-45ca-8dee-c13620993531).
-   Puuttuva merkkimuunnelma → rivi PT:lle (UI-pohjat).
+1. **Pääkaupunkipisteet** tauon jälkeen (PT:n aloitusviesti): ks. KESKEN NYT. Natiivin kultaiset valmiina; tee webin
+   piirto suunnitelman mukaan, napautus avaa olemassa olevan maakortin.
 2. **Kaupunkikappaleiden vienti** omistajan kuuntelun jälkeen: hyväksytyt ämpäriin audio/musa-kaupunki-<id>-lyria-v2.mp3
    (Julkaisijan kautta, SHA256SUMS), web js/kaupunkimusiikki.js KAUPUNKIRAIDAT (kuvaus = Sisältökirjurin kuvaus_fi) +
    natiivi AaniTaulut.Kaupunkiraidat, testit. Loput 28 vasta sen jälkeen (generoi.mjs: lisää ERA2-taulu; aja.zsh perl setsid).
