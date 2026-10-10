@@ -104,6 +104,9 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void ItavallanPaketti() => Maa("AUT", 53, 265, 586);
         [Testi] static void IrlanninPaketti() => Maa("IRL", 52, 260, 639);
         [Testi] static void RuotsinPaketti() => Maa("SWE", 51, 255, 628);
+        [Testi] static void PortugalinPaketti() => Maa("PRT", 49, 245, 598);
+        [Testi] static void SuomenPaketti() => Maa("FIN", 49, 245, 550);
+        [Testi] static void KroatianPaketti() => Maa("HRV", 48, 240, 544);
         [Testi] static void AlankomaidenPaketti() => Maa("NLD", 54, 270, 620);
 
         // Ämpärin hakemisto: kaikki maat, ja versio = paketin luontiaika minuutteina (UTC), joten laite hakee juuri tämän paketin.
@@ -111,8 +114,8 @@ namespace Matkakirja.Peli.Testit
         {
             var h = PuluValmiit.LueHakemisto(Lue("pulu-maat.json"));
             Oleta.Tosi(h != null, "hakemisto");
-            Oleta.Sama("AUT,DEU,ESP,FRA,GRC,IRL,ITA,NLD,ROU,SWE", string.Join(",", h.Keys.OrderBy(x => x, System.StringComparer.Ordinal)));
-            foreach (string maa in new[] { "GRC", "DEU", "ITA", "FRA", "ROU", "ESP", "NLD", "AUT", "IRL", "SWE" })
+            Oleta.Sama("AUT,DEU,ESP,FIN,FRA,GRC,HRV,IRL,ITA,NLD,PRT,ROU,SWE", string.Join(",", h.Keys.OrderBy(x => x, System.StringComparer.Ordinal)));
+            foreach (string maa in new[] { "GRC", "DEU", "ITA", "FRA", "ROU", "ESP", "NLD", "AUT", "IRL", "SWE", "PRT", "FIN", "HRV" })
             {
                 var juuri = (Dictionary<string, object>)MiniJson.Jasenna(Lue("pulu-" + maa.ToLowerInvariant() + ".json"));
                 string luotu = MiniJson.Teksti(juuri, "luotu");
