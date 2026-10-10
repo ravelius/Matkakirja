@@ -1,0 +1,2721 @@
+[
+ {
+  "kohde": "kohde:aukstojas",
+  "kysymys": "Miksi maan korkein kohta vaihtui vasta 2004?",
+  "uusi": false,
+  "vastaus": "Kato, tää on hyvä kysymys. Korkeusero oli hyvin pieni: [[Aukštojas]] on 293,84 metriä ja aiemmin korkeimpana pidetty [[Juozapinė]] 292,7 metriä, joten välillä on noin metri. Näin pientä eroa on vaikea havaita vanhemmilla mittausmenetelmillä, ja asia selvisi vasta, kun korkeus mitattiin vuonna 2004 [[GPS]]:n avulla Vilnan Gediminas-teknillisen yliopiston geodesian laitoksella. Tarkkaa syytä sille, miksi mittausta ei tehty aiemmin, en ole varma. Metrin takia vaihtui kokonainen maan katto, kyl se vähän huvittaa.",
+  "linkit": [
+   "Aukštojas",
+   "Juozapinė",
+   "GPS"
+  ],
+  "jatkot": [
+   "Miten maanmittauksessa korkeus määritetään merenpinnasta?",
+   "Kuinka tarkasti GPS mittaa korkeutta?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstojas",
+  "kysymys": "Mikä Medininkain ylänkö on?",
+  "uusi": false,
+  "vastaus": "No niin, katotaas. Medininkain ylänkö on Liettuan kaakkoisosassa sijaitseva kohonnut maastoalue, jolla on maan korkein kohta [[Aukštojas]]. Se sijaitsee noin 24 kilometriä [[Vilnasta]] kaakkoon. Aukštojaksesta noin viidensadan metrin päässä on [[Juozapinė]], jota pidettiin ennen maan korkeimpana kohtana. Ylänkö on korkeuserojen perusteella vaatimaton, mutta Liettuan mittakaavassa se on vuoristoa.",
+  "linkit": [
+   "Aukštojas",
+   "Vilnasta",
+   "Juozapinė"
+  ],
+  "jatkot": [
+   "Millainen luonto Liettuan ylängöillä on?",
+   "Mitä Liettuan kaakkoisosassa muuten on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstojas",
+  "kysymys": "Millainen maa Liettua on korkeussuhteiltaan?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Liettua on korkeussuhteiltaan matala ja suurelta osin tasainen maa, jossa alavat tasangot ja loivat kumpareet vuorottelevat. Maan korkein kohta [[Aukštojas]] kohoaa vain 293,84 metriä merenpinnan yläpuolelle [[Medininkain ylängöllä]] noin 24 kilometriä [[Vilnasta]] kaakkoon, mikä kertoo hyvin maan loivasta luonteesta. Itämeren rannikko on lyhyt ja matala. Ylhäältä katsoen se on kyl aika rauhallista maisemaa.",
+  "linkit": [
+   "Aukštojas",
+   "Medininkain ylängöllä",
+   "Vilnasta"
+  ],
+  "jatkot": [
+   "Mitkä ovat Euroopan matalimpia maita?",
+   "Mikä on Euroopan korkein vuori?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstojas",
+  "kysymys": "Miten GPS-mittaus eroaa vanhoista korkeusmittauksista?",
+  "uusi": true,
+  "vastaus": "Ai tota. Satelliittipaikannus eli [[GPS]] perustuu satelliittien lähettämiin signaaleihin, joiden avulla vastaanottimen sijainti ja korkeus voidaan laskea. Aiemmin korkeuksia määritettiin maanpäällisillä mittauksilla, kuten [[vaaituksella]] ja kulmamittauksilla, ja niiden tarkkuus saattoi vaihdella. Vuonna 2004 [[Aukštojas]] mitattiin GPS:n avulla, tulokseksi saatiin 293,84 metriä, ja se nousi Liettuan korkeimmaksi kohdaksi [[Juozapinėn]] ohi. Tulokset riippuvat myös käytetystä korkeusjärjestelmästä. Itse navigoin kyl vanhaan malliin, nokka kohti kotia.",
+  "linkit": [
+   "GPS",
+   "vaaituksella",
+   "Aukštojas",
+   "Juozapinėn"
+  ],
+  "jatkot": [
+   "Mitä vaaitus tarkoittaa maanmittauksessa?",
+   "Miten satelliittipaikannus oikein toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstojas",
+  "kysymys": "Millainen kaupunki Vilna on?",
+  "uusi": true,
+  "vastaus": "No niin, Vilna on tuttu paikka kattojen yläpuolelta. Vilna on Liettuan pääkaupunki, joka sijaitsee [[Neris]]-joen varrella maan kaakkoisosassa. Sen [[vanhakaupunki]] kuuluu [[Unescon]] maailmanperintöluetteloon, ja kaupunki on tunnettu historiallisesta keskustastaan ja kirkoistaan. Katolta katsottuna se kyl kannattaa nähdä.",
+  "linkit": [
+   "Neris",
+   "vanhakaupunki",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä kieltä Liettuassa puhutaan?",
+   "Mikä on Unescon maailmanperintöluettelo?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~4",
+  "kysymys": "Mikä Kuurinkynnäs on?",
+  "uusi": false,
+  "vastaus": "Ai se. Kuurinkynnäs on lähes sadan kilometrin pituinen hiekkaniemi, joka erottaa matalan lahden Itämerestä. Kapeimmillaan se on vain muutaman sadan metrin levyinen. Kun niemen metsät hakattiin 1600- ja 1700-luvuilla, tuuli pääsi liikuttamaan hiekkaa, ja [[dyynit]] alkoivat vaeltaa ja hautasivat alleen kokonaisia kyliä. Vaellus pysäytettiin istuttamalla mäntyä ja rantakauraa sata vuotta kestäneellä työllä, ja [[Unesco]] otti niemen maailmanperintöluetteloon vuonna 2000. Sata vuotta istutusta, kyl se on pitkä päivätyö.",
+  "linkit": [
+   "dyynit",
+   "Unesco"
+  ],
+  "jatkot": [
+   "Miten dyynit syntyvät ja liikkuvat?",
+   "Mitä muita Unescon kohteita Liettuassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~4",
+  "kysymys": "Miksi Itämeren vesi on murtovettä?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Itämeri on yhteydessä Atlantin valtamereen vain kapeiden [[Tanskan salmien]] kautta, joten suolaista merivettä pääsee sinne vähän ja vesi vaihtuu hitaasti. Samalla joet ja sade tuovat mereen runsaasti makeaa vettä ympäröiviltä mailta. Seurauksena vesi on vähäsuolaista, ja meri kuuluu maailman suurimpiin murtovesialtaisiin. Vähäsuolaisessa vedessä ei viihdy [[laivamato]], minkä vuoksi vanhat puuhylyt säilyvät pohjassa. Suolaa on vähän, mutta tarinoita sitäkin enemmän.",
+  "linkit": [
+   "Tanskan salmien",
+   "laivamato"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä murtovedessä elää?",
+   "Kuinka paljon suolaa Itämeressä on valtamereen verrattuna?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~4",
+  "kysymys": "Kuinka syvä Itämeri on?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Itämeri on matala meri: sen keskisyvyys on noin 50–60 metriä, ja syvin kohta, [[Landsortin syvänne]] Ruotsin rannikon edustalla, yltää lähteiden mukaan noin 460 metriin. Meri on yhteydessä Atlantin valtamereen vain kapeiden [[Tanskan salmien]] kautta, joten vesi vaihtuu hitaasti ja on murtovettä, ja siksi [[Vasan]] kaltaiset puuhylyt säilyvät pohjassa. Syvyydet on kyl enemmän kalojen kuin kyyhkyn alaa.",
+  "linkit": [
+   "Landsortin syvänne",
+   "Tanskan salmien",
+   "Vasan"
+  ],
+  "jatkot": [
+   "Miksi Atlantin ja Itämeren välinen yhteys on niin kapea?",
+   "Mitä kaloja Itämeressä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~4",
+  "kysymys": "Mistä Vasa-laiva on saanut nimensä?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Laiva sai nimensä Ruotsia hallinneen [[Vaasa-suvun]] mukaan, ja sen tilasi kuningas, joka oli tuolloin [[Kustaa II Aadolf]]. Se lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628 ja kaatui noin kilometrin purjehdittuaan, koska runko oli liian kapea ja korkea ja vesi pääsi sisään avoimista tykkiporteista. Laiva nostettiin pohjasta 1961, ja nykyään se seisoo omassa museossaan, [[Vasa-museossa]] Tukholmassa. Kuninkaat tilaa, kyyhkyt kantaa viestit.",
+  "linkit": [
+   "Vaasa-suvun",
+   "Kustaa II Aadolf",
+   "Vasa-museossa"
+  ],
+  "jatkot": [
+   "Millaisia sotalaivoja Ruotsilla oli 1600-luvulla?",
+   "Miten Vasa saatiin nostettua pohjasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:itameri~4",
+  "kysymys": "Miksi meripihkaa löytyy Itämeren rannoilta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Meripihka]] on kauan sitten puista valunutta ja kivettynyttä hartsia, ja Itämeren seudun pihka on ikivanhaa, lähteiden mukaan kymmenien miljoonien vuosien takaa. Aallot ja myrskyt huuhtovat sitä merenpohjasta rannalle, minkä vuoksi sitä on kerätty rannoilta halki aikojen, ja Itämeren etelärannan esiintymät mainittiin kirjoissa jo 1100-luvulla. Liettuan lyhyt rannikko on meripihkarantaa, ja [[Klaipėdan]] satamakaupunki elää yhä meren varassa. Minä ottaisin kyl mieluummin pullan.",
+  "linkit": [
+   "Meripihka",
+   "Klaipėdan"
+  ],
+  "jatkot": [
+   "Miten meripihkasta tehdään koruja?",
+   "Mitä meripihkan sisään voi jäädä?"
+  ]
+ },
+ {
+  "kohde": "kohde:nemunas",
+  "kysymys": "Miksi joella on niin monta nimeä?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Joki virtaa usean maan ja kielialueen halki, ja jokainen kieli on antanut sille oman nimensä: liettuaksi se on Nemunas, valkovenäjäksi Nioman, puolaksi [[Niemen]] ja saksaksi [[Memel]]. Nimet ovat yleensä saman vanhan nimen eri kielissä muotoutuneita muunnelmia, mutta tarkkaa alkuperää en ole varma. Joen lähde on [[Valko-Venäjällä]], ja se virtaa Liettuan halki Kuurinlahteen. Neljä nimeä, ja minä muistan vain kolme ensimmäisellä yrityksellä.",
+  "linkit": [
+   "Niemen",
+   "Memel",
+   "Valko-Venäjällä"
+  ],
+  "jatkot": [
+   "Mistä Nemunasin nimi on peräisin?",
+   "Mitkä muut Euroopan joet kulkevat usean maan kautta?"
+  ]
+ },
+ {
+  "kohde": "kohde:nemunas",
+  "kysymys": "Mikä Kuurinlahti on?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Kuurinlahti on matala lahti, jonka [[Kuurinkynnäs]] erottaa Itämerestä. Se on yhteydessä mereen kapean salmen kautta, ja [[Nemunas]] laskee siihen. Lahti on murtovettä, ja sen rannat ovat tärkeä osa alueen luontoa. Ylhäältä katsottuna hiekkaniemi ja lahti näyttävät kyl ihan karttapiirrokselta.",
+  "linkit": [
+   "Kuurinkynnäs",
+   "Nemunas"
+  ],
+  "jatkot": [
+   "Miten Kuurinkynnäs on syntynyt?",
+   "Mitä lintuja Kuurinlahdella tavataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:nemunas",
+  "kysymys": "Missä Kaunas sijaitsee?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Kaunas]] sijaitsee Liettuan keskiosassa, [[Nemunas]]-joen ja [[Neris]]-joen yhtymäkohdassa. Nemunas virtaa tässä kohdassa pohjoiseen ja kääntyy sitten länteen kohti merta. Kahden joen yhtymäkohta on tehnyt paikasta luontevan kauppa- ja liikennekaupungin. Kaksi jokea ja yksi kyyhky, sopiva suhde.",
+  "linkit": [
+   "Kaunas",
+   "Nemunas",
+   "Neris"
+  ],
+  "jatkot": [
+   "Mitä Kaunasissa on nähtävää?",
+   "Mikä oli Kaunasin asema Liettuan historiassa?"
+  ],
+  "paikka": {
+   "nimi": "Kaunas",
+   "lat": 54.9,
+   "lon": 23.89,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:nemunas",
+  "kysymys": "Mikä Kaliningradin alue on?",
+  "uusi": true,
+  "vastaus": "No niin, tää on hyvä kysymys. Kaliningradin alue on Venäjän alue Itämeren rannalla [[Puolan]] ja [[Liettuan]] välissä, eikä sillä ole maayhteyttä muuhun Venäjään. Sen pääkaupunki Kaliningrad tunnettiin aiemmin nimellä [[Königsberg]], ja alue kuuluu entiseen [[Itä-Preussiin]]. Nemunasin eteläinen haara muodostaa alueen pohjoisrajan. Siivillä rajat on kyl helpompia ylittää.",
+  "linkit": [
+   "Puolan",
+   "Liettuan",
+   "Königsberg",
+   "Itä-Preussiin"
+  ],
+  "jatkot": [
+   "Miksi Königsbergin nimi vaihtui?",
+   "Millainen oli Itä-Preussin historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:nemunas",
+  "kysymys": "Mikä Grodno on?",
+  "uusi": true,
+  "vastaus": "Ai se. Grodno on kaupunki Valko-Venäjän länsiosassa [[Nemunas]]-joen rannalla, lähellä Puolan ja Liettuan rajaa. Valkovenäjäksi kaupungin nimi kirjoitetaan Hrodna, ja joki virtaa sen kohdalta ensin länteen ja sieltä pohjoiseen kohti [[Kaunasia]]. Nimiä riittää, kyyhky ei pysy perässä.",
+  "linkit": [
+   "Nemunas",
+   "Kaunasia"
+  ],
+  "jatkot": [
+   "Miten Nemunas on vaikuttanut kaupunkien syntyyn?",
+   "Mitä kieliä Valko-Venäjällä puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:trakain-saarilinna",
+  "kysymys": "Kuka kuoli linnassa vuonna 1430?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Linnassa kuoli vuonna 1430 [[Vytautas Suuri]], suuriruhtinas, joka oli [[Kęstutisin]] poika ja sai Trakain saarilinnan päätyöt valmiiksi noin vuonna 1409. Hän hallitsi [[Liettuan suuriruhtinaskuntaa]], joka ulottui Itämereltä lähelle Mustaamerta ja oli 1400-luvun alussa Euroopan laajimpia valtioita. Hänen kuolemastaan on onneksi pitkä aika.",
+  "linkit": [
+   "Vytautas Suuri",
+   "Kęstutisin",
+   "Liettuan suuriruhtinaskuntaa"
+  ],
+  "jatkot": [
+   "Millainen oli Liettuan suuriruhtinaskunnan hallinto?",
+   "Missä Vytautas on haudattu?"
+  ]
+ },
+ {
+  "kohde": "kohde:trakain-saarilinna",
+  "kysymys": "Miksi linnan kunnostus oli vaikeaa?",
+  "uusi": false,
+  "vastaus": "Mmm— Trakain linna vaurioitui pahoin, kun [[saksalainen ritarikunta]] hyökkäsi sinne vuonna 1377, ja sen jälkeen rakennus rapistui vuosisatojen kuluessa pahasti. Kun rauniota ruvettiin kunnostamaan, alkuperäisestä rakennuksesta oli jäljellä vain osia, ja puuttuvat osat piti rakentaa uudelleen niukan tiedon varassa. Linna seisoo myös järven saarella, mikä tekee rakennustyöstä hankalaa. Tarkkoja vuosia ja työvaiheita en ole varma. Ylhäältä se näyttää kyl vaikuttavalta, vaikka työ oli tuskaa.",
+  "linkit": [
+   "saksalainen ritarikunta"
+  ],
+  "jatkot": [
+   "Miten keskiaikaisia linnoja kunnostetaan?",
+   "Mikä on Trakain linnan nykyinen käyttö?"
+  ]
+ },
+ {
+  "kohde": "kohde:trakain-saarilinna",
+  "kysymys": "Missä Trakai sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kato, tää on helppo. Trakai sijaitsee Liettuassa [[Vilnan]] länsipuolella, [[Galvė-järven]] ympäristössä, ja kaupungin tunnetuin nähtävyys on järven saarella seisova [[Trakain saarilinna]]. Trakai oli [[Liettuan suuriruhtinaskunnan]] tärkeimpiä keskuksia. Linna keskellä järveä näyttää ylhäältä kyl aika hyvältä.",
+  "linkit": [
+   "Vilnan",
+   "Galvė-järven",
+   "Trakain saarilinna",
+   "Liettuan suuriruhtinaskunnan"
+  ],
+  "jatkot": [
+   "Miten Trakaihin pääsee Vilnasta?",
+   "Minkälaista väkeä Trakaissa on asunut historian aikana?"
+  ],
+  "paikka": {
+   "nimi": "Trakai",
+   "lat": 54.64,
+   "lon": 24.93,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:trakain-saarilinna",
+  "kysymys": "Mikä Saksalainen ritarikunta oli?",
+  "uusi": true,
+  "vastaus": "Hetkinen. Saksalainen ritarikunta oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka syntyi [[ristiretkien]] aikana 1100-luvun lopulla ja siirsi toimintansa myöhemmin Itämeren alueelle. Se perusti Itämeren etelärannalle oman valtionsa [[Preussiin]] ja kävi pitkään sotia pakanallista Liettuaa vastaan. Trakain linna vaurioitui pahoin ritareiden hyökkäyksessä vuonna 1377, ja Kernavė poltettiin vuonna 1390. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "ristiretkien",
+   "Preussiin"
+  ],
+  "jatkot": [
+   "Miten ritarikunnan valtio päättyi?",
+   "Mitä Itämeren ristiretket olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:trakain-saarilinna",
+  "kysymys": "Mitä Vytautas Suuri teki?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi 1400-luvun alussa [[Liettuan suuriruhtinaskuntaa]], jonka alue ulottui Itämereltä lähelle Mustaamerta. Hän oli [[Kęstutisin]] poika ja sai valmiiksi [[Trakain saarilinnan]] päätyöt noin vuonna 1409. Hän kuoli linnassa vuonna 1430. Pitkä ja vaikuttava ura, sanon minä.",
+  "linkit": [
+   "Liettuan suuriruhtinaskuntaa",
+   "Kęstutisin",
+   "Trakain saarilinnan"
+  ],
+  "jatkot": [
+   "Millainen oli Liettuan ja Puolan unioni?",
+   "Miten Liettuasta tuli kristitty maa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kernave",
+  "kysymys": "Miksi Kernavėä sanotaan Liettuan Troijaksi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kernavė oli Liettuan ensimmäinen pääkaupunki, jonka [[saksalainen ritarikunta]] poltti vuonna 1390 [[Pajautan laaksossa]], minkä jälkeen kaupunkia ei rakennettu uudelleen. Rauniot peittyivät myöhemmin tulvakerroksen alle, joka muuttui märäksi [[turpeeksi]] ja säilytti jäänteet lähes koskemattomina. Siksi paikkaa on kutsuttu Liettuan Troijaksi, sillä Troijan tavoin se on arkeologisesti kuuluisa tuhoutunut ja haudattu kaupunki. Minun suvussa on kyl tuhoutuneita kaupunkeja nähty, mutta ei näin hyvin säilyneitä.",
+  "linkit": [
+   "saksalainen ritarikunta",
+   "Pajautan laaksossa",
+   "turpeeksi"
+  ],
+  "jatkot": [
+   "Miten arkeologit tutkivat tulvan peittämiä kohteita?",
+   "Mitä Kernavėn alueelta on löytynyt?"
+  ]
+ },
+ {
+  "kohde": "kohde:kernave",
+  "kysymys": "Mikä medgrinda on?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Sanan merkityksestä en ole täysin varma, mutta liettuan kielessä se näyttää koostuvan sanoista puu ja lankku- tai lattiarakenne, joten kyse on todennäköisesti puusta tehdystä päällysteestä, esimerkiksi katu- tai lattiarakenteesta. [[Kernavėn]] alueella puuta ja muita jäänteitä on säilynyt poikkeuksellisen hyvin, koska märkä [[turve]] suojasi ne lahoamiselta. Tarkempaa selitystä en uskalla arvata. Tuo sana on kyl liian vaikea kyyhkylle.",
+  "linkit": [
+   "Kernavėn",
+   "turve"
+  ],
+  "jatkot": [
+   "Miten märkä turve säilyttää puuta?",
+   "Millaisia rakennuksia Kernavėssa on tutkittu?"
+  ]
+ },
+ {
+  "kohde": "kohde:kernave",
+  "kysymys": "Mikä Neris-joki on?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Neris]] on Liettuan tärkeimpiä jokia: se saa alkunsa Valko-Venäjältä, virtaa Liettuaan [[Vilnan]] kautta ja yhtyy [[Nemunasiin]] Kaunasin kohdalla. Kernavė sijaitsee sen oikealla rannalla 35 kilometrin päässä Vilnasta. Joet kyl tuntee reitit paremmin ku minä.",
+  "linkit": [
+   "Neris",
+   "Vilnan",
+   "Nemunasiin"
+  ],
+  "jatkot": [
+   "Mikä on Nemunas-joen merkitys Liettualle?",
+   "Miten joet ovat vaikuttaneet kaupunkien sijaintiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:kernave",
+  "kysymys": "Mitä Unescon maailmanperintö tarkoittaa?",
+  "uusi": true,
+  "vastaus": "No jopas. Unescon maailmanperintöluettelo kokoaa kohteet, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo, ja niiden suojelu perustuu vuonna 1972 tehtyyn sopimukseen. Kohde otetaan luetteloon kulttuuri- tai luonnonarvojensa perusteella. Liettuasta luettelossa on esimerkiksi [[Kuurinkynnäs]], joka otettiin sinne vuonna 2000, ja myös [[Kernavėn]] arkeologinen alue kuuluu siihen, mutta sisäänoton vuodesta en ole varma. Luettelo on pitkä, eikä kyyhkyä ole vielä siihen merkitty.",
+  "linkit": [
+   "Kuurinkynnäs",
+   "Kernavėn"
+  ],
+  "jatkot": [
+   "Kuka päättää, mitkä kohteet pääsevät luetteloon?",
+   "Mitä tapahtuu, jos kohde vaarantuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:kernave",
+  "kysymys": "Kuka oli Traidenis?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Traidenis oli Liettuan suuriruhtinas 1200-luvun lopulla, ja [[Kernavė]] oli hänen istuimensa. [[Saksalainen ritarikunta]] piiritti Kernavėa vuonna 1279, ja silloin kaupunki mainitaan ensi kerran kirjallisissa lähteissä. Hänen hallituskautensa tarkat vuodet vaihtelevat lähteissä, joten en ole niistä varma. Vähän tietoa, mutta hyvä että jotain.",
+  "linkit": [
+   "Kernavė",
+   "Saksalainen ritarikunta"
+  ],
+  "jatkot": [
+   "Millainen oli Liettua 1200-luvulla?",
+   "Kuka perusti Liettuan valtion?"
+  ]
+ },
+ {
+  "kohde": "kohde:ristien-kukkula",
+  "kysymys": "Miksi ensimmäiset ristit pystytettiin?",
+  "uusi": false,
+  "vastaus": "No niin. Tähän tarvitaan vähän vakavuutta. Ristien kukkulan alkuperää ei tiedetä tarkasti, mutta ensimmäisten ristien uskotaan pystytetyn entiselle linnavuorelle vuoden 1831 kapinan jälkeen. [[Puola]] ja [[Liettua]] olivat nousseet kapinaan [[Venäjän]] valtaa vastaan vuosina 1831 ja 1863, eivätkä perheet löytäneet kaatuneiden kapinallisten ruumiita. Siksi he alkoivat pystyttää kaatuneille symbolisia ristejä, ja kukkula oli alun perin muistopaikka vainajille, joita ei ollut voitu haudata. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Puola",
+   "Liettua",
+   "Venäjän"
+  ],
+  "jatkot": [
+   "Mitä kukkulalle on tuotu ristien lisäksi?",
+   "Miten kukkula selvisi Neuvostoliiton aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:ristien-kukkula",
+  "kysymys": "Kuinka monta ristiä kukkulalla arvioidaan olevan?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Lukuja tässä kyllä riittää. Tarkkaa määrää ei tiedä kukaan, koska ristejä tuodaan jatkuvasti lisää. Arvioiden mukaan ristejä oli noin 55 000 vuonna 1990 ja noin 100 000 vuonna 2006, ja nykyisin niitä on yli satatuhatta, sekä isoja [[puuristejä]] että pieniä metallisia. Luku on pysynyt arviona myös siksi, että [[neuvostoaikana]] viranomaiset raivasivat kukkulan kolme kertaa, mutta ihmiset toivat ristit takaisin. Tämän kaiken minä muistin ihan päästä.",
+  "linkit": [
+   "puuristejä",
+   "neuvostoaikana"
+  ],
+  "jatkot": [
+   "Kuka saa tuoda kukkulalle oman ristin?",
+   "Milloin kukkulaa raivattiin neuvostoaikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:ristien-kukkula",
+  "kysymys": "Kävikö paavi Ristien kukkulalla?",
+  "uusi": true,
+  "vastaus": "Ai tota. Hyvä kysymys tuo. Kyllä kävi: paavi [[Johannes Paavali II]] vieraili kukkulalla vuonna 1993, siis vain muutama vuosi sen jälkeen, kun Liettua oli palauttanut itsenäisyytensä ja [[Neuvostoliiton]] aikainen uskonnonvaino oli päättynyt. Vierailu oli kukkulalle ja sen vaalijoille tärkeä hetki, sillä paikka oli vuosikymmeniä ollut sekä uskon että vastarinnan symboli. En ole varma vierailun tarkoista yksityiskohdista, kuten päivästä tai ohjelmasta. Siinä riitti kyyhkyllekin pohdittavaa.",
+  "linkit": [
+   "Johannes Paavali II",
+   "Neuvostoliiton"
+  ],
+  "jatkot": [
+   "Milloin Liettua palautti itsenäisyytensä?",
+   "Millainen paikka Šiauliai on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ristien-kukkula",
+  "kysymys": "Kuka saa tuoda kukkulalle oman ristin?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tän minä tiedän. Kuka tahansa saa tuoda oman ristinsä [[Ristien kukkulalle]], eikä siihen tarvita erityistä lupaa tai tehtävää. Ristejä on kaikenkokoisia, isoista puuristeistä pieniin metallisiin, ja uusia tuodaan koko ajan lisää. Kukkulalle on viety myös [[rukousnauhoja]] ja pieniä kuvia, joten paikka kasvaa jokaisen vierailijan mukana. Ei paha selitys kyyhkyltä.",
+  "linkit": [
+   "Ristien kukkulalle",
+   "rukousnauhoja"
+  ],
+  "jatkot": [
+   "Miksi kukkulasta tuli pyhiinvaelluspaikka?",
+   "Mitä kukkulalle on tuotu ristien lisäksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:ristien-kukkula",
+  "kysymys": "Mitä ristien lisäksi kukkulalle on tuotu?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Tästä riittää kerrottavaa. Sukupolvien mittaan kukkulalle on tuotu ristien ja krusifiksien lisäksi [[Neitsyt Marian]] patsaita, liettualaisten [[isänmaanystävien]] veistoksia sekä tuhansia pieniä kuvia ja rukousnauhoja. Kokonaismäärää ei tiedä kukaan, ja kukkulalle tuodaan edelleen uusia lahjoituksia. Näin kukkulasta on tullut yhtä aikaa rukouspaikka ja kansallisen muistamisen paikka [[Liettuassa]]. Ja kaiken tämän minä nään ylhäältä yhtenä suurena kuviona.",
+  "linkit": [
+   "Neitsyt Marian",
+   "isänmaanystävien",
+   "Liettuassa"
+  ],
+  "jatkot": [
+   "Miksi Neitsyt Maria on tärkeä liettualaisille?",
+   "Millainen on Liettuan uskonnollinen historia?"
+  ]
+ },
+ {
+  "kohde": "kohde:kuurinkynnas",
+  "kysymys": "Mikä pitää kynnäksen olemassa?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Annas ku mietin. Kynnäksen olemassaolo riippuu hiekan kulkeutumisen ja kertymisen tasapainosta. Perustana on jäätikön jättämä [[moreeni]], jonka päälle tuulet ja merivirrat toivat niin paljon hiekkaa, että muodostelma nousi merenpinnan yläpuolelle ja pysyi siellä. Geologisesti kynnäs on lyhytikäinen rannikkomuoto, joten sen pysyminen ei ole itsestäänselvyys vaan jatkuvan liikkeen tulos. Kaikki tämä koskee [[Kuurinlahden]] ja [[Itämeren]] väliin jäävää hiekkaista kaistaa.\n\nMinä olen lentänyt sen yli, ja ylhäältä se näyttää niin ohuelta, että tekisi mieli pitää siitä kiinni. Hiekka ja tuuli ovat kuitenkin hoitaneet homman paremmin kuin yksikään kyyhky.",
+  "linkit": [
+   "moreeni",
+   "Kuurinlahden",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Miten kynnäksen dyynejä suojellaan kulumiselta?",
+   "Kuinka leveä kynnäs on eri kohdissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:kuurinkynnas",
+  "kysymys": "Ketkä jakavat maailmanperintökohteen?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Kuurinkynnäksen jakavat [[Liettua]] ja [[Venäjä]]. Eteläosa kuuluu Venäjän [[Kaliningradin]] alueeseen, ja pohjoinen 52 kilometrin osuus Liettuan [[Klaipėdan]] lääniin. Kynnäksen kokonaispituus on 98 kilometriä, joten Venäjän osuudeksi jää noin 46 kilometriä. Kohde otettiin maailmanperintöluetteloon vuonna 2000, ja se on kahden valtion yhteinen. Kyl rajat ovat minulle outoja, kun itse lennän niiden yli.",
+  "linkit": [
+   "Liettua",
+   "Venäjä",
+   "Kaliningradin",
+   "Klaipėdan"
+  ],
+  "jatkot": [
+   "Kuinka pitkä Kuurinkynnäs on?",
+   "Mikä on Kaliningradin alue?"
+  ]
+ },
+ {
+  "kohde": "kohde:kuurinkynnas",
+  "kysymys": "Kuinka pitkä Kuurinkynnäs on?",
+  "uusi": true,
+  "vastaus": "Mmm— tän minä muistan. Kuurinkynnäs on 98 kilometriä pitkä, ohut ja kaareva hiekkadyynikynnäs, joka erottaa Kuurinlahden Itämerestä. Liettuan puolella on noin 52 kilometriä, ja kynnäs ulottuu etelässä [[Sambian]] niemimaalta pohjoiseen kapealle salmelle, jonka toisella puolella on [[Klaipėdan]] satamakaupunki. Leveys vaihtelee 400 metristä Venäjän puolella 3 800 metriin Liettuassa Nidan pohjoispuolella. Pitkä matka, mutta siivin se sujuu.",
+  "linkit": [
+   "Sambian",
+   "Klaipėdan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Klaipėda on?",
+   "Mikä Sambian niemimaa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:kuurinkynnas",
+  "kysymys": "Mikä Nida on?",
+  "uusi": true,
+  "vastaus": "No jopas. Hyvä kysymys tuo. Nida on kylä ja lomakeskus kynnäksen Liettuan puolella, Neringan alueella. Kirjailija [[Thomas Mann]] rakennutti sinne kesähuvilan 1930-luvun alussa, ja siitä on tullut nykyään kirjailijan muistoa vaaliva museo; en ole varma tarkoista vuosista. Nida sijaitsee [[Kuurinlahden]] rannalla, ja sen pohjoispuolella kynnäs on leveimmillään, noin 3 800 metriä. Lintuna minä pidän hiekasta enemmän kuin kylistä.",
+  "linkit": [
+   "Thomas Mann",
+   "Kuurinlahden"
+  ],
+  "jatkot": [
+   "Miksi Thomas Mann vietti kesiään Nidassa?",
+   "Mitä kynnäksellä voi tehdä kesällä?"
+  ]
+ },
+ {
+  "kohde": "kohde:kuurinkynnas",
+  "kysymys": "Mikä kaupunki Klaipėda on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Ai se. Klaipėda on Liettuan satamakaupunki [[Itämeren]] rannalla, kapean salmen toisella puolella Kuurinkynnäksen pohjoispäätä. Kaupungin vanha saksalainen nimi on [[Memel]], ja alue on ollut vuosisatojen mittaan monien vaikutteiden kohtaamispaikka. Salmi erottaa kaupungin kynnäksestä, ja sen yli kulkee lauttayhteys; en ole varma aikatauluista. Satamaa katselee mielellään, koska laivat kantavat aina jotain.",
+  "linkit": [
+   "Itämeren",
+   "Memel"
+  ],
+  "jatkot": [
+   "Miksi Klaipėdalla on saksalainen nimi?",
+   "Missä Palanga sijaitsee suhteessa Klaipėdaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:palangan-meripihkamuseo",
+  "kysymys": "Mitä meripihkan sisältä löytyy?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Tost minä osaan kertoo. Meripihkan sisään voi jäädä [[hyönteisiä]], [[hämähäkkejä]] tai kasvinosia, jotka juuttuivat pihkaan sen vielä ollessa pehmeää ja säilyivät kovettumisen jälkeen. Palangan museon noin 28 000 meripihkakappaleesta noin 15 000:ssa on tällaisia sulkeumia. Pihkaan on joskus jäänyt myös kasvinlehti, ja se näkyy sisällä kuin ikkunan takana. Ei paha kyyhkyltä, vaikka en itse ole koskaan jäänyt mihinkään kiinni.",
+  "linkit": [
+   "hyönteisiä",
+   "hämähäkkejä"
+  ],
+  "jatkot": [
+   "Miten meripihka syntyy?",
+   "Kuinka vanhoja sulkeumat voivat olla?"
+  ]
+ },
+ {
+  "kohde": "kohde:palangan-meripihkamuseo",
+  "kysymys": "Milloin palatsi rakennettiin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä muistan. Palangan meripihkamuseo toimii Tiškevičiaiden palatsissa, jonka [[Feliks Tyszkiewicz]] rakennutti uusrenessanssityyliin vuonna 1897 saksalaisen arkkitehdin suunnittelemana. Palatsia ympäröi [[Palangan kasvitieteellinen puutarha]], ja nykyään rakennuksessa toimiva museo on osa Liettuan kansallista taidemuseota. Rakennus on kunnostettu museokäyttöön. Se on kyllä komeampi kuin yksikään parvekkeeni.",
+  "linkit": [
+   "Feliks Tyszkiewicz",
+   "Palangan kasvitieteellinen puutarha"
+  ],
+  "jatkot": [
+   "Kuka suunnitteli Palangan palatsin?",
+   "Mitä Palangan puutarhassa kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:palangan-meripihkamuseo",
+  "kysymys": "Mikä on Meripihkan aurinko?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Nyt muistan: Meripihkan aurinko on [[Palangan meripihkamuseossa]] esillä oleva meripihkapala, jonka paino on noin kolme ja puoli kiloa. Kyseessä on siis iso kappale [[Itämeren]] rannikon kultaa, vaikka sen löytöpaikasta tai iästä en ole varma. Meripihka on havupuiden pihkaa, joka on kovettunut kymmeniä miljoonia vuosia sitten, joten jo pienikin pala on kunnioitettavan vanha. Kolme ja puoli kiloa on kyyhkylle käsittämätön paino.",
+  "linkit": [
+   "Palangan meripihkamuseossa",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Mistä meripihkaa löytyy Itämeren rannoilta?",
+   "Miten meripihkaa on käytetty koruissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:palangan-meripihkamuseo",
+  "kysymys": "Mitä meripihka oikeastaan on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tähän minä vastaan mielelläni. Meripihka ei ole kivi vaan [[havupuiden]] pihkaa, joka on kovettunut kymmeniä miljoonia vuosia sitten ja säilynyt merenpohjan hiekassa. Myrskyn jälkeen aallot heittävät sitä rannalle [[Itämeren]] rannikolla, ja pihkaan on joskus jäänyt kiinni hyönteinen tai kasvinlehti. Itämeren rannikko on ollut meripihkan lähde esihistoriasta asti.\n\nVäriltään se muistuttaa mielestäni hyvin paistettua pullan pintaa. Tiedän, ettei se ole tieteellinen havainto, mutta minä pidän siitä silti kiinni.",
+  "linkit": [
+   "havupuiden",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Kuinka vanhaa meripihka on?",
+   "Miten aito meripihka tunnistetaan jäljitelmästä?"
+  ]
+ },
+ {
+  "kohde": "kohde:palangan-meripihkamuseo",
+  "kysymys": "Miksi meripihka kelluu suolavedessä?",
+  "uusi": true,
+  "vastaus": "Katotaas. No niin. Meripihka on kevyttä, koska se on kovettunutta pihkaa eikä kiveä, ja siksi kevyimmät palat kelluvat suolaisessa vedessä. Suolaisessa vedessä [[nostevoima]] on suurempi kuin makeassa, sillä suola kasvattaa veden [[tiheyttä]]. Myrskyn jälkeen aallot heittävät meripihkaa rannalle, ja osa palasista nousee pintaan. En ole varma, kuinka suolaista veden täytyy olla, jotta tietty pala kelluu. Onpas tästä tullut fysiikkaa.",
+  "linkit": [
+   "nostevoima",
+   "tiheyttä"
+  ],
+  "jatkot": [
+   "Mistä Itämeren rannoilla meripihkaa etsitään?",
+   "Miksi Itämeri on vähemmän suolainen kuin valtameret?"
+  ]
+ },
+ {
+  "kohde": "kohde:rumsiskes",
+  "kysymys": "Miksi vanha kaupunki katosi?",
+  "uusi": false,
+  "vastaus": "Ai tota. Selvä juttu. Kaupungin eteläinen osa on nykyään tekojärven alla: vanha Rumšiškės hukkui, kun [[Kaunasin]] vesivoimalaitos rakennettiin ja jokea padottiin tekojärveksi. Tärkeimmät rakennukset, eli pyhän [[Mikael Arkkienkelin]] kirkko, sen kellotapuli ja kappeli, ehdittiin siirtää uudelle paikalle vuonna 1958. Nykyinen Rumšiškės sijaitsee [[tekojärven]] pohjoisrannalla. Siinä oli vähän muutakin kuin vettä.",
+  "linkit": [
+   "Kaunasin",
+   "Mikael Arkkienkelin",
+   "tekojärven"
+  ],
+  "jatkot": [
+   "Mitä tekojärvi tuottaa energiaa varten?",
+   "Mihin kirkko siirrettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:rumsiskes",
+  "kysymys": "Kuinka monta rakennusta museossa on?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä tiedän. Rumšiškėsin ulkoilmamuseossa on 140 rakennusta 1700- ja 1800-luvuilta sisustuksineen ja ympäristöineen. Museoalue on 175 hehtaaria, ja kokoelmaan kuuluu yli 90 000 esinettä. Rakennukset on siirretty muualta, ja ne esittelevät [[liettualaista]] maaseutuelämää aidossa ympäristössä. Se on yksi [[Euroopan]] suurimmista ulkoilmamuseoista. Onpas ollu kunnon luettelo.",
+  "linkit": [
+   "liettualaista",
+   "Euroopan"
+  ],
+  "jatkot": [
+   "Millaisia rakennuksia museossa on?",
+   "Milloin museo avattiin yleisölle?"
+  ]
+ },
+ {
+  "kohde": "kohde:rumsiskes",
+  "kysymys": "Mikä ulkoilmamuseo on?",
+  "uusi": true,
+  "vastaus": "No niin. Tuosta minä voin kertoa. Ulkoilmamuseo on museo, jossa vanhoja rakennuksia on koottu yhteen ja niiden ympäristö, sisustus ja esineet esitellään niin, että vierailija näkee, miten ihmiset ennen elivät. Rumšiškėsin museo perustettiin vuonna 1966 ja avattiin yleisölle vuonna 1974; siellä esitellään [[liettualaista maaseutuelämää]] aidoissa, muualta siirretyissä rakennuksissa. Tunnettu esikuva tällaisille museoille on tukholmalainen [[Skansen]].\n\nUlkoilmamuseossa minä viihtyisin, koska vanhat talot ovat täynnä arkea, ja arkeen kuuluu aina jokin leivonnainen. Liettuan version nimeä en tiedä, mutta varmasti sellainen on.",
+  "linkit": [
+   "liettualaista maaseutuelämää",
+   "Skansen"
+  ],
+  "jatkot": [
+   "Mikä on Skansen Tukholmassa?",
+   "Millaista oli maaseutuelämä Liettuassa 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:rumsiskes",
+  "kysymys": "Milloin Rumšiškės mainittiin ensi kertaa?",
+  "uusi": true,
+  "vastaus": "Mmm— muistan tämän. Rumšiškės mainitaan ensi kerran vuonna 1382 [[saksalaisen ritarikunnan]] laatimassa reittiselostuksessa. Kaupunki sijaitsee noin kahdenkymmenen kilometrin päässä Kaunasista itään, [[Kaunasin]] tekojärven pohjoisrannalla. Tuo reittiselostus tekee siitä hyvin vanhan paikan, vaikka suurin osa vanhasta kaupungista on nykyään veden alla. Hyvin vanhaa asiaa kaivettiin nyt esiin.",
+  "linkit": [
+   "saksalaisen ritarikunnan",
+   "Kaunasin"
+  ],
+  "jatkot": [
+   "Mikä saksalainen ritarikunta oli?",
+   "Millainen kaupunki Kaunas on?"
+  ]
+ },
+ {
+  "kohde": "kohde:rumsiskes",
+  "kysymys": "Mitkä rakennukset siirrettiin vuonna 1958?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Tähän on selvä vastaus. Vuonna 1958 siirrettiin vanhan Rumšiškėsin tärkeimmät rakennukset, eli pyhän [[Mikael Arkkienkelin]] kirkko, sen kellotapuli ja kappeli. Syy oli [[Kaunasin]] vesivoimalaitoksen rakentaminen, jonka tekojärvi peitti kaupungin eteläosan. Rakennukset saivat uuden paikan, vaikka vanha kaupunki jäi veden alle. En ole varma siirron tarkoista vaiheista. Minä olisin mieluummin lentänyt ne.",
+  "linkit": [
+   "Mikael Arkkienkelin",
+   "Kaunasin"
+  ],
+  "jatkot": [
+   "Miten kokonaisia rakennuksia voidaan siirtää?",
+   "Mitä muuta tekojärven alle jäi?"
+  ]
+ },
+ {
+  "kohde": "kohde:grutas-puisto",
+  "kysymys": "Mistä patsaat tulivat puistoon?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tää on vähän erikoinen aihe. Kun Liettua palautti itsenäisyytensä vuonna 1990, valtaosa neuvostoajan patsaista purettiin ja kasattiin eri paikkoihin. Liikemies [[Viliumas Malinauskas]] pyysi viranomaisilta patsaita omistukseensa, jotta hän voisi rakentaa niistä yksityisrahoitteisen museon. Puisto perustettiin vuonna 2001 [[Druskininkain]] lähelle, ja siellä patsaat esitellään [[sosialistisen realismin]] museona ja veistospuistona. Onpas siitä pitkä aika.",
+  "linkit": [
+   "Viliumas Malinauskas",
+   "Druskininkain",
+   "sosialistisen realismin"
+  ],
+  "jatkot": [
+   "Kuinka monta patsasta puistossa on?",
+   "Miksi puiston perustaminen oli kiistanalaista?"
+  ]
+ },
+ {
+  "kohde": "kohde:grutas-puisto",
+  "kysymys": "Minkä palkinnon puisto sai?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Annas ku mietin. Palkinnosta minulla ei ole tietoa, enkä halua arvailla sellaista, mitä en tiedä. Tiedän kuitenkin, että [[Viliumas Malinauskas]] perusti puiston vuonna 2001 [[Druskininkain]] lähelle, noin 130 kilometriä Vilnasta lounaaseen. Puiston perustaminen oli kiistanalaista ja kohtasi huomattavaa vastustusta, mikä kertoo, että paikka herättää keskustelua. Tätä en vain osaa kyyhkynä kertoa.",
+  "linkit": [
+   "Viliumas Malinauskas",
+   "Druskininkain"
+  ],
+  "jatkot": [
+   "Miksi puiston perustaminen oli kiistanalaista?",
+   "Milloin puisto avattiin yleisölle?"
+  ]
+ },
+ {
+  "kohde": "kohde:grutas-puisto",
+  "kysymys": "Kuinka monta patsasta puistossa on?",
+  "uusi": true,
+  "vastaus": "Kato, tän minä muistan. Grūtasin puiston näyttelyssä on 86 patsasta 46 kuvanveistäjältä. Puisto on [[sosialistisen realismin]] museo ja veistospuisto, jossa on neuvostoajan patsaita ja muita miehitysajan ideologisia jäänteitä. Epävirallisesti sitä kutsutaan [[Stalinin]] maailmaksi. Siinä on aika monta patsasta yhdelle puistolle.",
+  "linkit": [
+   "sosialistisen realismin",
+   "Stalinin"
+  ],
+  "jatkot": [
+   "Mitä puistossa on patsaiden lisäksi?",
+   "Missä Druskininkai sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:grutas-puisto",
+  "kysymys": "Kuka Viliumas Malinauskas on?",
+  "uusi": true,
+  "vastaus": "No niin. Tähän tiedän vain osan. Viliumas Malinauskas on liettualainen liikemies, joka perusti Grūtasin puiston vuonna 2001 [[Druskininkain]] lähelle. Hän pyysi viranomaisilta neuvostoaikaisia patsaita omistukseensa rakentaakseen niistä yksityisrahoitteisen museon. Alueen piirteet jäljittelevät osin [[neuvostoleirejä]]: puupolkuja, vartiotorneja ja piikkilanka-aitoja. Hänen muusta taustastaan en ole varma. Pidemmästä elämäkerrasta en uskalla sanoa mitään.",
+  "linkit": [
+   "Druskininkain",
+   "neuvostoleirejä"
+  ],
+  "jatkot": [
+   "Miksi puiston perustaminen herätti vastustusta?",
+   "Mitä gulag-leirit olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:grutas-puisto",
+  "kysymys": "Milloin Liettua palautti itsenäisyytensä?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Liettua julisti itsenäisyytensä palauttamisen maaliskuussa 1990, ja [[Neuvostoliitosta]] irtautuminen eteni sen jälkeen; kansainvälinen tunnustus tuli vuonna 1991. Neuvostomiehityksen aikana 1944–1990 uskonnon harjoittamista vainottiin, ja itsenäistymisen jälkeen neuvostoajan patsaat purettiin ja kasattiin eri paikkoihin. Osa niistä päätyi myöhemmin [[Grūtasin puistoon]]. Onpas siit onneksi jo vierähtänyt aikaa.",
+  "linkit": [
+   "Neuvostoliitosta",
+   "Grūtasin puistoon"
+  ],
+  "jatkot": [
+   "Mitä tapahtui Liettualle vuonna 1991?",
+   "Millainen on Liettuan nykyinen asema Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:yhdeksas-fortti",
+  "kysymys": "Mihin fortti alun perin rakennettiin?",
+  "uusi": false,
+  "vastaus": "Ai tota. Joo, tän minä tiedän, kaiteelta näkee vanhat linnoitukset hyvin. Yhdeksäs fortti rakennettiin puolustuslinnoitukseksi osaksi [[Kaunasin linnoitusta]], jonka [[Venäjän keisarikunta]] rakennutti kaupungin ympärille 1800-luvun lopulla. Fortin rakentaminen alkoi vuonna 1902, ja se valmistui juuri ennen ensimmäistä maailmansotaa. Sotilaallinen puolustustehtävä oli siis sen alkuperäinen käyttö, ja vasta vuodesta 1924 fortti toimi Kaunasin vankilana. Lyhyt vastaus, kerrankin.",
+  "linkit": [
+   "Kaunasin linnoitusta",
+   "Venäjän keisarikunta"
+  ],
+  "jatkot": [
+   "Mitä fortissa tapahtui toisen maailmansodan aikana?",
+   "Mikä Kaunasin linnoitus oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:yhdeksas-fortti",
+  "kysymys": "Miksi sitä alettiin kutsua kuoleman fortiksi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Raskas juttu, sanotaan se heti. Nimi syntyi siitä, että [[Saksan miehityksen]] aikana fortista tuli joukkomurhan paikka. Sinne kuljetettiin ja siellä surmattiin lähteiden mukaan 45 000–50 000 juutalaista, useimmat Kaunasista ja etenkin [[Kaunasin getosta]]; myös Ranskasta, Itävallasta ja Saksasta tuotiin ihmisiä teloitettaviksi. Vuoteen 1944 mennessä paikkaa kutsuttiin kuoleman fortiksi. Tapahtumista on kulunut yli kahdeksankymmentä vuotta, ja paikalla toimii nykyään museo ja muistomerkki. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Saksan miehityksen",
+   "Kaunasin getosta"
+  ],
+  "jatkot": [
+   "Mitä Kaunasin getossa tapahtui?",
+   "Mitä fortilla on nykyään nähtävänä?"
+  ]
+ },
+ {
+  "kohde": "kohde:yhdeksas-fortti",
+  "kysymys": "Mikä oli Kaunasin asema Liettuassa sotien välisenä aikana?",
+  "uusi": true,
+  "vastaus": "Kas vaan, historiakysymys. Kaunas toimi sotien välisenä aikana Liettuan väliaikaisena pääkaupunkina, koska [[Vilna]] oli tuolloin [[Puolan]] hallussa; Vilna palasi Liettualle vasta syksyllä 1939. Kaupunki kasvoi tuona aikana nopeasti, ja sen modernistinen arkkitehtuuri on nykyään [[Unescon maailmanperintöluettelossa]].\n\nVäliaikainen pääkaupunki kuulostaa juuri siltä, mikä kestää parikymmentä vuotta. Tunnen sen tunteen, sillä sukumme kaiteetkin olivat aina vain hetkeksi.",
+  "linkit": [
+   "Vilna",
+   "Puolan",
+   "Unescon maailmanperintöluettelossa"
+  ],
+  "jatkot": [
+   "Mikä Kaunasin modernistisessa arkkitehtuurissa on erityistä?",
+   "Milloin Vilna palasi Liettuan pääkaupungiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:yhdeksas-fortti",
+  "kysymys": "Mikä on gulag?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Raskas sana, mutta kerron sen suoraan. Gulag oli Neuvostoliiton pakkotyöleirien ja vankilaleirien hallintojärjestelmä, jonka leireille lähetettiin sekä rikollisina pidettyjä että poliittisia vankeja. Vangit joutuivat raskaaseen pakkotyöhön, usein kovissa oloissa kaukana kotoa, ja monet menehtyivät. Järjestelmä oli laajimmillaan [[Stalinin]] aikana, ja leirejä alettiin purkaa [[Neuvostoliiton]] sisällä Stalinin kuoleman jälkeen 1950-luvulla. Raskas aihe, mutta hyvä että kysyit.",
+  "linkit": [
+   "Stalinin",
+   "Neuvostoliiton"
+  ],
+  "jatkot": [
+   "Mitä NKVD tarkoitti?",
+   "Milloin Neuvostoliitto hajosi?"
+  ]
+ },
+ {
+  "kohde": "kohde:yhdeksas-fortti",
+  "kysymys": "Miten Liettua joutui Neuvostoliiton miehittämäksi 1940?",
+  "uusi": true,
+  "vastaus": "Odotas vähän, tässä on pitkä tarina. [[Molotov–Ribbentrop-sopimukseen]] vuonna 1939 liittyi salainen lisäpöytäkirja, jossa Saksa ja Neuvostoliitto jakoivat vaikutuspiirinsä Itä-Euroopassa, ja Liettua päätyi lopulta Neuvostoliiton piiriin. Kesäkuussa 1940 Neuvostoliitto esitti uhkavaatimuksen, neuvostojoukot saapuivat maahan, ja elokuussa 1940 Liettua liitettiin [[Neuvostoliiton]] osaksi. Saksa miehitti maan vuonna 1941, ja Liettua palautti itsenäisyytensä vuonna 1990, kun [[Baltian maiden]] itsenäistyminen oli käynnissä. Pitkä tarina, ja onneksi se on takana.",
+  "linkit": [
+   "Molotov–Ribbentrop-sopimukseen",
+   "Neuvostoliiton",
+   "Baltian maiden"
+  ],
+  "jatkot": [
+   "Milloin Liettua itsenäistyi uudelleen?",
+   "Mikä oli Baltian ketju vuonna 1989?"
+  ]
+ },
+ {
+  "kohde": "kohde:klaipeda",
+  "kysymys": "Miksi satama ei jäädy?",
+  "uusi": false,
+  "vastaus": "Ai se. Laiturilla sitä aina ihmetellään. Klaipėdan satama pysyy yleensä auki talvellakin, koska kaupunki sijaitsee [[Kuurinlahden]] ja [[Itämeren]] välisessä kapeassa salmessa, jossa vesi liikkuu jatkuvasti, ja Itämeren eteläosan talvet ovat leudompia kuin pohjoisessa. En ole täysin varma kaikista yksityiskohdista, ja kovimpina talvina jäätä voi silti muodostua. Hyvä paikka laivoille, ja kyyhkyllekin, kun ei tarvitse jäätä katsella.",
+  "linkit": [
+   "Kuurinlahden",
+   "Itämeren"
+  ],
+  "jatkot": [
+   "Mihin Klaipėdan satamaa käytetään tänä päivänä?",
+   "Miksi Itämeri jäätyy pohjoisessa helpommin?"
+  ]
+ },
+ {
+  "kohde": "kohde:klaipeda",
+  "kysymys": "Mistä nimi Memel tulee?",
+  "uusi": false,
+  "vastaus": "Katotaas. Nimiasiat ovat välillä sotkuisia. Nimi Memel on lyhentymä linnoituksen nimestä [[Memelburg]], jonka [[saksalaisen ritarikunnan]] rakentama linnoitus sai vuonna 1252. Nimi lyheni ajan mittaan muotoon Memel, ja sitä kaupungista käytettiin saksankielisenä nimenä. Sen tarkemmasta alkuperästä, esimerkiksi mahdollisesta yhteydestä paikalliseen jokinimeen, lähteet eivät ole yksimielisiä, enkä ole itse varma. Ei paha kyyhkyltä, vaikka loppu jäi auki.",
+  "linkit": [
+   "Memelburg",
+   "saksalaisen ritarikunnan"
+  ],
+  "jatkot": [
+   "Miten Klaipėdan nykynimi on syntynyt?",
+   "Mikä oli saksalainen ritarikunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:klaipeda",
+  "kysymys": "Mikä on Kuurinnokka, joka erottaa Kuurinlahden merestä?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kuurinnokka on kapea hiekkaniemi, joka erottaa Kuurinlahden Itämerestä ja ulottuu lähes sadan kilometrin pituisena. Sen pohjoispää on Klaipėdan kohdalla, josta sen erottaa kapea salmi. Nokka on jaettu [[Liettuan]] ja [[Venäjän]] kesken, ja se on tunnettu suurista [[hiekkadyyneistä]]; Unesco otti sen maailmanperintöluetteloon vuonna 2000. Ylhäältä se näyttää hiuskarvan ohuelta hiekkaviivalta.",
+  "linkit": [
+   "Liettuan",
+   "Venäjän",
+   "hiekkadyyneistä"
+  ],
+  "jatkot": [
+   "Miten dyynit syntyvät?",
+   "Mitä Kuurinnokalla voi nähdä lintuja?"
+  ]
+ },
+ {
+  "kohde": "kohde:klaipeda",
+  "kysymys": "Mikä oli Klaipėdan kapina vuonna 1923?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on kuuluisa juttu. Klaipėdan kapina oli tammikuussa 1923 Liettuan tukema kansannousu Klaipėdan alueella, joka oli ensimmäisen maailmansodan jälkeen irrotettu Saksasta ja jota hallitsi liittoutuneiden puolesta [[Ranska]]. Kapinalliset ottivat alueen haltuunsa, ja liittoutuneet vahvistivat Liettuan suvereniteetin alueeseen vuonna 1924, jolloin alueelle luvattiin autonomia. [[Saksa]] sai alueen takaisin maaliskuussa 1939. Pitkä historia pieneen kaupunkiin.",
+  "linkit": [
+   "Ranska",
+   "Saksa"
+  ],
+  "jatkot": [
+   "Miksi Saksa vaati Klaipėdaa takaisin vuonna 1939?",
+   "Mitä alueen autonomia tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:klaipeda",
+  "kysymys": "Miksi Itämeri on niin murtovetinen?",
+  "uusi": true,
+  "vastaus": "Mmm— tost minä osaan kertoo. Itämeri on murtovetinen, koska siihen virtaa jokien ja sateiden mukana runsaasti makeaa vettä, mutta yhteys suolaiseen [[Pohjanmereen]] kulkee vain kapeiden ja matalien [[Tanskan salmien]] kautta, joten suolaisen veden vaihtuvuus on vähäistä. Suolapitoisuus on siksi paljon valtamerten arvoa matalampi ja pienenee pohjoiseen ja itään mentäessä.\n\nYlhäältä Itämeri näyttää isolta altaalta, johon jokaisen joen kuuluu kaataa vettä. Ja kyllä ne kaatavatkin.",
+  "linkit": [
+   "Pohjanmereen",
+   "Tanskan salmien"
+  ],
+  "jatkot": [
+   "Mitkä kalat viihtyvät murtovedessä?",
+   "Mitä Tanskan salmet ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:puntukas",
+  "kysymys": "Mistä kivi on tullut Liettuaan?",
+  "uusi": false,
+  "vastaus": "Ai se kivi. Tost minä osaan kertoo. Kivi on [[rapakivigraniittia]], ja [[jäätikkö]] kuljetti sen paikalleen viime jääkauden aikana. Lähtöpaikka on todennäköisesti [[Suomi]], vaikka tarkkaa alkuperäistä paikkaa en osaa sanoa. Kauas on kivi lentänyt, vaikka ilman siipiä.",
+  "linkit": [
+   "rapakivigraniittia",
+   "jäätikkö",
+   "Suomi"
+  ],
+  "jatkot": [
+   "Mitä siirtolohkare tarkoittaa?",
+   "Milloin viimeinen jääkausi päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:puntukas",
+  "kysymys": "Keitä olivat Darius ja Girėnas?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Steponas Darius ja Stasys Girėnas olivat liettualaistaustaisia, Yhdysvalloissa asuneita lentäjiä. He lensivät [[Lituanica]]-koneella New Yorkista kohti Kaunasia heinäkuussa 1933, mutta lento päättyi onnettomuuteen, jossa molemmat kuolivat ennen perille pääsyä. Heistä tuli Liettuassa kansallissankareita, ja vuonna 1943 Saksan miehityksen aikana kuvanveistäjä [[Bronius Pundzius]] hakkasi Puntukas-kiveen salaa heidän muistoreliefinsä. Lentäjänä minä kunnioitan heitä.",
+  "linkit": [
+   "Lituanica",
+   "Bronius Pundzius"
+  ],
+  "jatkot": [
+   "Millainen kone Lituanica oli?",
+   "Miten lentäjät muistetaan Liettuassa nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:puntukas",
+  "kysymys": "Mitä rapakivigraniitti on ja mistä nimi tulee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Rapakivi on graniittityyppi, jossa on pyöreähköjä, vaaleita maasälpärakeita, joita reunustaa toisenlaisen maasälvän kehä. Kivi syntyi yli miljardi vuotta sitten, ja nimen arvellaan viittaavan siihen, että kivi rapautuu helposti. Suomessa rapakivialueita on esimerkiksi [[Viipurin]] seudulla ja [[Ahvenanmaalla]]. Kyyhky arvostaa selkeää nimeämistä.",
+  "linkit": [
+   "Viipurin",
+   "Ahvenanmaalla"
+  ],
+  "jatkot": [
+   "Mihin rapakiveä on käytetty rakennuksissa?",
+   "Miten graniitti eroaa muista kivilajeista?"
+  ]
+ },
+ {
+  "kohde": "kohde:puntukas",
+  "kysymys": "Kuka oli runoilija Antanas Baranauskas?",
+  "uusi": true,
+  "vastaus": "Ai tota. Runoilijoita minä en yleensä lue, mutta tämän tunnen. Antanas Baranauskas eli 1800-luvulla, ja hän oli Liettuan kirjallisuuden tärkeitä runoilijoita sekä katolinen piispa. Hänen tunnetuin teoksensa on runoelma [[Anykščių šilelis]], joka kuvaa [[Anykščiain]] metsää ja kertoo myös Puntukas-kiven tarinasta, jossa piru kantoi kiveä kirkon murskaamiseksi. Runoilija ja piispa, ja minä en osaa edes yhtä.",
+  "linkit": [
+   "Anykščių šilelis",
+   "Anykščiain"
+  ],
+  "jatkot": [
+   "Mitä Anykščių šilelis -runoelma kertoo?",
+   "Millainen kaupunki Anykščiai on?"
+  ]
+ },
+ {
+  "kohde": "kohde:puntukas",
+  "kysymys": "Mikä on siirtolohkare?",
+  "uusi": true,
+  "vastaus": "No niin, selvä. Siirtolohkare on iso kivenjärkäle, jonka [[mannerjäätikkö]] on kuljettanut pitkän matkan pois alkuperäiseltä paikaltaan ja jättänyt sulaessaan paikalleen. Sen kivilaji eroaa ympäröivästä kallioperästä, minkä vuoksi alkuperä voidaan usein jäljittää. [[Pohjois-Euroopassa]] niitä on runsaasti viimeisen [[jääkauden]] jäljiltä.\n\nMinä lennän Suomesta Liettuaan hetkessä, mutta kivi tarvitsi siihen jäätikön ja hyvin paljon aikaa. Jonkun täytyy silti arvostaa sitäkin matkaa.",
+  "linkit": [
+   "mannerjäätikkö",
+   "Pohjois-Euroopassa",
+   "jääkauden"
+  ],
+  "jatkot": [
+   "Miten jäätikkö kuljettaa kiviä?",
+   "Missä Suomessa siirtolohkareita on nähtävillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstaitija",
+  "kysymys": "Kuinka syvä Tauragnas-järvi on?",
+  "uusi": false,
+  "vastaus": "Kas vaan, mittakysymys. Tauragnas on Liettuan syvin järvi, ja sen syvyys on 60,5 metriä. Se sijaitsee [[Aukštaitijan kansallispuistossa]], jossa on yhteensä 126 järveä; pinta-alaltaan suurin niistä on [[Kretuonas]], 8,29 neliökilometriä. Sen verran syvä, ettei kyyhky sinne pulahda.",
+  "linkit": [
+   "Aukštaitijan kansallispuistossa",
+   "Kretuonas"
+  ],
+  "jatkot": [
+   "Kuinka monta kansallispuistoa Liettuassa on?",
+   "Mitä lajeja Aukštaitijan metsissä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstaitija",
+  "kysymys": "Miksi puistossa kasvaa niin monta lajia?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Puisto kattaa alle prosentin Liettuan pinta-alasta, mutta siellä tavataan 59 prosenttia maan kasvilajeista. Syynä on todennäköisesti elinympäristöjen runsaus: puistossa on metsää, enimmäkseen [[mäntyä]], 126 järveä ja niiden rantoja, jotka tarjoavat erilaisia kasvupaikkoja, mutta tarkkoja syitä en osaa luetella. Suojelun tarve näkyy myös siinä, että Liettuan [[punaisessa kirjassa]] suojeltuja lajeja on puistossa 64 kasvia, kahdeksan sienilajia ja 48 lintulajia. Ei paha kyyhkyltä, vaikka loppu jäi arvailuksi.",
+  "linkit": [
+   "mäntyä",
+   "punaisessa kirjassa"
+  ],
+  "jatkot": [
+   "Mikä on punainen kirja?",
+   "Miten metsä ja järvi vaikuttavat toisiinsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstaitija",
+  "kysymys": "Miten Liettuan järvet ovat syntyneet?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tämä on jäätikön työtä. Liettuan järvet ovat pääosin syntyneet viimeisen [[jääkauden]] jäljiltä. Maata peittänyt [[mannerjäätikkö]] kuopi altaita ja kasasi sulaessaan [[moreenia]], ja jäälohkareiden sulaminen jätti maastoon kuoppia, joihin vesi täyttyi. Seurauksena on järvirikas kumpumaasto, kuten Aukštaitijassa.\n\nYlhäältä katsoen Liettuan järvet näyttävät siltä kuin joku olisi sormenpäällä painanut maahan kuoppia ja vesi olisi juossut perässä. Se on tieteellisesti vähän epätarkka vertaus, mutta kyllä siitä kuvan saa.",
+  "linkit": [
+   "jääkauden",
+   "mannerjäätikkö",
+   "moreenia"
+  ],
+  "jatkot": [
+   "Mikä on moreeni?",
+   "Miten Suomen järvet ovat syntyneet?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstaitija",
+  "kysymys": "Mikä on punainen kirja, johon uhanalaiset lajit merkitään?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Punainen kirja on luettelo uhanalaisista eläin-, kasvi- ja sienilajeista. Kansainvälistä uhanalaisten lajien luetteloa ylläpitää [[IUCN]], ja monilla mailla, kuten Liettualla, on lisäksi oma kansallinen luettelonsa. Luettelot ohjaavat lajien suojelua, ja niiden tilaa seurataan [[uhanalaisista]] lajeista tehtävien arvioiden avulla. Kyyhky ei onneksi ole siinä luettelossa.",
+  "linkit": [
+   "IUCN",
+   "uhanalaisista"
+  ],
+  "jatkot": [
+   "Miten laji päätyy uhanalaisten luetteloon?",
+   "Mikä on IUCN?"
+  ]
+ },
+ {
+  "kohde": "kohde:aukstaitija",
+  "kysymys": "Missä Vilna on suhteessa tähän puistoon?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Vilna eli Vilnius on Liettuan pääkaupunki, ja se sijaitsee maan kaakkoisosassa, noin sadan kilometrin päässä Aukštaitijan puistosta etelään ja lähellä [[Valko-Venäjän]] rajaa. Kaupunki on [[Neris-joen]] varrella. Matka onnistuu kyyhkyltä yhdessä päivässä.",
+  "linkit": [
+   "Valko-Venäjän",
+   "Neris-joen"
+  ],
+  "jatkot": [
+   "Mikä Vilnan vanhakaupungissa on nähtävää?",
+   "Mikä joki virtaa Vilnan läpi?"
+  ],
+  "paikka": {
+   "nimi": "Vilna",
+   "lat": 54.69,
+   "lon": 25.28,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilnan-alalinna",
+  "kysymys": "Miltä Vilnan alalinna näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Katotaas. Vilnan alalinnan suurruhtinaiden palatsi oli Liettuan hallinnon keskus 1400-luvulta, ja sitä uudistettiin [[renessanssin]] aikana 1500-luvulla. Se oli komea hallintopalatsi, jossa [[suurruhtinaat]] asuivat ja hallitsivat, mutta sen tarkkaa ulkoasua tunnetaan vain osittain, enkä ole varma kaikista yksityiskohdista. Nykyinen museopalatsi on uusi jäljennös, joka on rakennettu tuhoutuneen palatsin paikalle. Ylhäältä sen olisi nähnyt hienosti, mutta minä saavuin liian myöhään.",
+  "linkit": [
+   "renessanssin",
+   "suurruhtinaat"
+  ],
+  "jatkot": [
+   "Mitä palatsissa nykyään voi nähdä?",
+   "Mikä oli suurruhtinaan tehtävä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilnan-alalinna",
+  "kysymys": "Miksi Vilnan alalinna katosi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Palatsi vaurioitui pahoin [[Venäjän sodan]] aikana vuosina 1655–1661, ja se jäi raunioiksi. Kun Liettua oli sittemmin joutunut Venäjän keisarikunnan alaisuuteen, [[tsaarin viranomaiset]] purkivat rauniot vuosina 1801–1805. Palatsin paikalle on rakennettu myöhemmin uusi jäljennös. Onpa siinä ollut monta käännettä.",
+  "linkit": [
+   "Venäjän sodan",
+   "tsaarin viranomaiset"
+  ],
+  "jatkot": [
+   "Milloin uusi palatsi rakennettiin?",
+   "Mikä oli Venäjän sota 1655–1661?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilnan-alalinna",
+  "kysymys": "Mikä Liettuan suurruhtinaskunta oli?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Liettuan suurruhtinaskunta oli keskiaikainen valtio, jonka perustajana pidetään [[Mindaugasta]], joka kruunattiin kuninkaaksi vuonna 1253. Valtio laajeni 1300- ja 1400-luvuilla itään ja etelään lähes Mustallemerelle asti. Liitto Puolan kanssa solmittiin ensin 1385 ja syvennettiin vuonna 1569 [[Lublinin unionissa]], jolloin syntyi yhteinen valtio. Se päättyi vuonna 1795 Puolan–Liettuan jakojen myötä. Iso valtio, pitkä vastaus.",
+  "linkit": [
+   "Mindaugasta",
+   "Lublinin unionissa"
+  ],
+  "jatkot": [
+   "Mikä oli Lublinin unioni?",
+   "Kuka oli Vytautas Suuri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilnan-alalinna",
+  "kysymys": "Mikä on Gediminasin torni Vilnassa?",
+  "uusi": true,
+  "vastaus": "Ai se torni. Gediminasin torni on [[Vilnan ylälinnan]] jäljellä oleva torni Gediminasin kukkulalla, ja sen huipulla liehuu [[Liettuan lippu]]. Nimi viittaa suurruhtinas Gediminasiin, jonka legendan mukaan näkemä uni [[rautasuden]] ääntelystä johti Vilnan perustamiseen. Se on yksi kaupungin tunnetuimmista maamerkeistä.\n\nMinä pidän torneista, koska niistä näkee kauas ja kaiteella on hyvä istua. Pullakahvila kukkulalla vielä puuttuisi, mutta ei sitä voi kaikkea saada.",
+  "linkit": [
+   "Vilnan ylälinnan",
+   "Liettuan lippu",
+   "rautasuden"
+  ],
+  "jatkot": [
+   "Kuka Gediminas oli?",
+   "Mitä legenda rautasudesta kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vilnan-alalinna",
+  "kysymys": "Onko Vilnan vanhakaupunki Unescon maailmanperintökohde?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: kyllä. Vilnan vanhakaupunki on [[Unescon]] maailmanperintökohde, ja se hyväksyttiin luetteloon vuonna 1994. Vanhakaupunki on tiheä ja kerroksellinen: siellä on [[goottia]], renessanssia ja [[barokkia]], ja barokki leimaa sitä erityisesti. Täällä olisi kaiteita vaikka kuinka monta.",
+  "linkit": [
+   "Unescon",
+   "goottia",
+   "barokkia"
+  ],
+  "jatkot": [
+   "Mitkä ovat Vilnan vanhakaupungin tärkeimmät kirkot?",
+   "Mikä on Unescon maailmanperintöluettelo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kedainiai",
+  "kysymys": "Miksi skotlantilaisia protestantteja muutti Liettuan pikkukaupunkiin 1500- ja 1600-luvuilla?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tän minä tiedän ainakin suuntaa-antavasti, sen verran meikäläisten muistiinpanot kertovat. Kėdainiai oli [[Radziwiłł-suvun]] kaupunki, ja suvun jäsenet kuuluivat kalvinistiseen kirkkoon, joten kaupungista tuli [[kalvinismin]] tukikohta Liettuassa. Skotlantilaiset muuttajat olivat suureksi osaksi kauppiaita ja käsityöläisiä, ja heille kaupunki, jonka herrat jakoivat heidän uskontonsa ja suosivat kaupankäyntiä, oli luonteva määränpää; tarkkoja syitä yksittäisten muuttajien kohdalla en ole varma. Heidän jälkensä näkyvät yhä [[skotlantilaisissa taloissa]] torin ympärillä. Ja tän kaiken minä kiikutin yhdellä hengenvedolla.",
+  "linkit": [
+   "Radziwiłł-suvun",
+   "kalvinismin",
+   "skotlantilaisissa taloissa"
+  ],
+  "jatkot": [
+   "Mitä kalvinismi tarkoittaa?",
+   "Millaisia ovat skotlantilaisten kauppiaiden talot Kėdainiaissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kedainiai",
+  "kysymys": "Miksi Radziwiłł-suvun linnassa allekirjoitettiin vuonna 1655 sopimus Ruotsin kanssa?",
+  "uusi": false,
+  "vastaus": "No niin, tää on raskaampaa historiaa. Vuonna 1655 Ruotsi hyökkäsi Puolan ja Liettuan alueelle, ja samoihin aikoihin Moskovan joukot olivat edenneet Liettuan suuriruhtinaskunnan maille ja valloittaneet muun muassa Vilnan. [[Radziwiłł-suvun]] johtavat jäsenet pyrkivät turvaamaan maansa ja oman asemansa hakemalla [[Ruotsin]] suojaa, ja Kėdainiaissa allekirjoitettu sopimus irrotti suuriruhtinaskunnan liitosta Puolan kanssa. Sopimus jäi kuitenkin lyhytaikaiseksi, ja sen tarkoista ehdoista ja päivämääristä en ole varma. Onpas siit jo pitkä aika.",
+  "linkit": [
+   "Radziwiłł-suvun",
+   "Ruotsin"
+  ],
+  "jatkot": [
+   "Mikä oli Liettuan suuriruhtinaskunta?",
+   "Miten Ruotsin ja Puolan sota 1600-luvulla päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kedainiai",
+  "kysymys": "Mikä kaupunki oli Liettuan väliaikainen pääkaupunki sotien välillä?",
+  "uusi": true,
+  "vastaus": "Kato, tää on kiva kysymys. Sotien välisenä aikana Liettuan väliaikainen pääkaupunki oli [[Kaunas]], jonka luona Kėdainiai sijaitsee noin 45 kilometrin päässä. Syynä oli se, että Vilnius oli tuolloin Puolan hallussa, joten Liettuan valtio piti hallintonsa Kaunasissa, vaikka Vilnius säilyi virallisena pääkaupunkina. Kaunas kasvoi näinä vuosina merkittävästi, ja sen modernia arkkitehtuuria on myöhemmin nostettu esiin. Pääkaupungin asema palasi [[Vilnaan]] vasta, kun kaupunki liitettiin takaisin Liettuaan toisen maailmansodan alussa.\n\nSiivin matka Kaunasista Kėdainiaihin on lyhyt, ja pullakin ehtisi pysyä lämpimänä.",
+  "linkit": [
+   "Kaunas",
+   "Vilnaan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Kaunas on nykyään?",
+   "Miksi Vilnius kuului Puolalle sotien välillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kedainiai",
+  "kysymys": "Mitä kalvinismi tarkoittaa ja mistä se sai alkunsa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kalvinismi on protestanttinen kristinuskon suuntaus, joka sai nimensä ranskalaissyntyisen uskonpuhdistajan [[Jean Calvinin]] mukaan. Calvin vaikutti 1500-luvulla Genevessä, ja hänen oppinsa korosti Raamatun asemaa, kirkon yksinkertaisuutta ja seurakuntien omaa järjestäytymistä. Suuntaus levisi laajalle Euroopassa, muun muassa Skotlantiin, Alankomaihin ja Unkariin, ja Liettuassakin sillä oli 1500- ja 1600-luvuilla vahvoja kannattajia. Myös [[reformoitu kirkko]] ja presbyteerit polveutuvat sen perinteestä. Ei paha kyyhkyltä, vaikka teologia ei ole minun vahvin lajini.",
+  "linkit": [
+   "Jean Calvinin",
+   "reformoitu kirkko"
+  ],
+  "jatkot": [
+   "Miten uskonpuhdistus levisi Euroopassa?",
+   "Mikä on presbyteerinen kirkko Skotlannissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kedainiai",
+  "kysymys": "Mikä oli Liivinmaa, jonka kronikassa Kėdainiai mainitaan?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Liivinmaa oli keskiaikainen ja myöhempi historiallinen alue Itämeren itärannalla, ja se kattoi lähinnä nykyisen [[Latvian]] ja [[Viron]] alueita. Keskiajalla aluetta hallitsi pääosin [[Saksalainen ritarikunta]] Liivinmaan haaransa kautta, ja alue koostui piispakunnista ja ritarikunnan mailta. Liivinmaasta kirjoitettiin useita kronikoita, joissa kuvataan ritarikunnan sotia ja naapurialueita, myös Liettuaa. Tarkan kronikan tekijästä tai vuodesta en ole varma. Sellainen kronikka sai sitten yhdestä kaupungista maininnan, ja minä pidin sen mielessä.",
+  "linkit": [
+   "Latvian",
+   "Viron",
+   "Saksalainen ritarikunta"
+  ],
+  "jatkot": [
+   "Mikä oli Saksalainen ritarikunta?",
+   "Miten Liivinmaa jakautui Latviaksi ja Viroksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birzai",
+  "kysymys": "Miksi Biržaihin padottiin ihmisten tekemä järvi jo 1500-luvun lopulla?",
+  "uusi": false,
+  "vastaus": "Kas vaan, hyvä kysymys tuo. Järvi, [[Širvėna]], padottiin vuonna 1575 Agluona- ja Apaščia-jokien yhtymäkohtaan, ja linnan rakentaminen alkoi vasta vuonna 1586, joten vesistö valmisteltiin linnaa varten. Vesi suojasi linnaa ympäriltä ja teki siitä puolustuskelpoisen, mikä oli tärkeää Ruotsin sotien aikana. Lähteiden mukaan järvi on Liettuan vanhin säilynyt tekojärvi, mutta muista käyttötarkoituksista, kuten myllyistä tai kalastuksesta, en ole varma. Jos haluat katsoa paikkaa, [[Biržain linna]] on rakennettu uudelleen 1990-luvun kunnostuksen jälkeen. Ihan kelpo linnoitus siitä tuli ylhäältä katsottuna.",
+  "linkit": [
+   "Širvėna",
+   "Biržain linna"
+  ],
+  "jatkot": [
+   "Millainen on Biržain linnakartano nykyään?",
+   "Miten padot ja tekojärvet toimivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birzai",
+  "kysymys": "Miksi Biržain seudulle on syntynyt tuhansia äkillisiä romahdusaukkoja maahan?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tää on oikeasti hieno luonnonilmiö. Biržain seutu kuuluu [[karstialueeseen]], jossa maaperän alla on helposti liukenevia kivilajeja, ja pohjoisessa Liettuassa kyse on lähinnä [[kipsistä]]. Pohjavesi liuottaa kiveä vuosien ajan ja muodostaa maan alle onkaloita, ja kun katto lopulta pettää, pinta romahtaa ja syntyy pyöreä [[karstiaukko]]. Biržain seudulla aukkoja on noin 9 000, ja yksi tunnetuimmista on 20 metriä syvä Karvės ola eli Lehmänluola, jonka legenda kertoo löytyneen, kun lehmä katosi maan alle. Tarkoista geologisista yksityiskohdista en ole varma, mut tämä on pääperiaate. No olipas siin yksi lehmä, jolla oli vaikutusta.",
+  "linkit": [
+   "karstialueeseen",
+   "kipsistä",
+   "karstiaukko"
+  ],
+  "jatkot": [
+   "Mikä on karstimaisema ja missä sitä on Euroopassa?",
+   "Mitä on kipsi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birzai",
+  "kysymys": "Milloin ja missä Martti Luther aloitti uskonpuhdistuksen?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Martti Luther]] oli saksalainen teologi ja munkki, ja uskonpuhdistuksen katsotaan alkaneen vuonna 1517, kun hän julkaisi arvostelunsa kirkon anekauppaa vastaan [[Wittenbergissä]]. Perimätiedon mukaan hän kiinnitti 95 teesiään kaupungin linnankirkon oveen, mutta historiantutkijat ovat kiistelleet siitä, tapahtuiko se juuri niin. Uskonpuhdistus levisi nopeasti Euroopassa ja synnytti [[protestantismin]] erilaisia suuntauksia, joihin kuuluvat luterilaisuus ja kalvinismi. Biržai nousi myöhemmin Liettuan uskonpuhdistuksen kulttuurikeskukseksi. Ja minä vielä muistin vuosiluvunkin.",
+  "linkit": [
+   "Martti Luther",
+   "Wittenbergissä",
+   "protestantismin"
+  ],
+  "jatkot": [
+   "Mitä Lutherin 95 teesiä käsittelivät?",
+   "Miten uskonpuhdistus tuli Suomeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birzai",
+  "kysymys": "Mikä oli Ruotsin suurvalta-aika, ja milloin se päättyi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tää kuuluu vakiokysymyksiin. Ruotsin suurvalta-ajalla tarkoitetaan ajanjaksoa, jolloin [[Ruotsi]] hallitsi Itämeren ympäristön laajoja alueita ja oli yksi Euroopan merkittävistä sotilasvalloista. Sen alkamisajankohdasta lähteet eivät ole täysin yksimielisiä, mutta yleensä sen katsotaan alkaneen 1600-luvun alussa, ja se päättyi Pohjan sodan jälkeen [[Uudenkaupungin rauhaan]] vuonna 1721. Liettuassa Ruotsin sodat tunnetaan siitä, että esimerkiksi Biržain linna toimi niiden aikana tärkeänä puolustuspaikkana. Kyllä tätä olisi saanut kertoa pidemminkin, mut tämä riittää.",
+  "linkit": [
+   "Ruotsi",
+   "Uudenkaupungin rauhaan"
+  ],
+  "jatkot": [
+   "Mitä Pohjan sota tarkoitti Suomelle?",
+   "Miksi Itämeri oli Ruotsille niin tärkeä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birzai",
+  "kysymys": "Mitkä maat ovat Liettuan naapureita?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa [[Venäjän]] Kaliningradin alue. Lisäksi Liettuan länsirannikko on Itämeren rannalla. Liettuan ja Puolan välillä on ollut historiallisesti tiiviit siteet, sillä ne olivat vuosisatoja samassa valtioliitossa. Pohjois-Liettuassa Latvian rajan tuntumassa sijaitsee esimerkiksi Žagarė. Ja pullaa löytyy joka rajan takaa, tiedoksi vaan.",
+  "linkit": [
+   "Latvia",
+   "Valko-Venäjä",
+   "Puola",
+   "Venäjän"
+  ],
+  "jatkot": [
+   "Mikä on Liettuan pääkaupunki ja mikä sen suurin kaupunki?",
+   "Milloin Liettuasta tuli EU:n jäsen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-telsiai",
+  "kysymys": "Mistä sanasta Telšiain nimi johtuu, ja mitä se kertoo kaupungin sijainnista?",
+  "uusi": false,
+  "vastaus": "Mmm— tää on kiva nimikysymys. Telšiain nimi on peräisin [[Telšė-purosta]], joka laskee kaupungin vieressä sijaitsevaan [[Mastis-järveen]], ja nimen katsotaan liittyvän veteen. Nimen tarkasta kantasanasta en ole varma. Sijaintiin nimi kertoo sen, että kaupunki on syntynyt veden äärelle: se on rakennettu seitsemän kukkulan päälle järven rannalle, ja puro on antanut sille sekä nimen että paikan. Kaupunki on [[Žemaitian]] alueen pääkaupunki, ja sen ensimmäiset maininnat ovat vuodelta 1398. Hyvä nimi, kun purokin on päässyt nimeämään kokonaisen kaupungin.",
+  "linkit": [
+   "Telšė-purosta",
+   "Mastis-järveen",
+   "Žemaitian"
+  ],
+  "jatkot": [
+   "Mitä Žemaitia tarkoittaa ja missä se on?",
+   "Miten Telšiain seitsemän kukkulaa näkyvät kaupunkikuvassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-telsiai",
+  "kysymys": "Miksi karhusta tuli Žemaitian tunnussymboli, ja millaisia karhuja Telšiaista löytyy?",
+  "uusi": false,
+  "vastaus": "No jopas, karhuja. Karhu on Žemaitian vanha tunnuseläin, ja musta [[karhu]] on alueen vaakunassa, mutta miksi juuri karhusta tuli tunnus, en ole varma: todennäköisesti syynä on seudun metsäisyys ja karhun voimaa symboloiva asema, mutta tämä on arvaus enkä halua väittää sitä varmaksi. Telšiaissa on 47 karhuveistosta; yksittäisten veistosten ulkomuodoista en ole varma. Kaupunki on [[Žemaitian]] pääkaupunki, joten karhut tuntuvat sopivan sinne. Karhuja ei kyllä saa laskea lennossa, mut yritin.",
+  "linkit": [
+   "karhu",
+   "Žemaitian"
+  ],
+  "jatkot": [
+   "Mitä muuta Žemaitian vaakunassa on?",
+   "Miten Alka-museo esittelee seudun kulttuuria?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-telsiai",
+  "kysymys": "Mikä oli kuvernementti Venäjän keisarikunnassa?",
+  "uusi": true,
+  "vastaus": "Ai se. Kuvernementti oli Venäjän keisarikunnan tärkein hallinnollinen alue, jota johti keisarin nimittämä kuvernööri. Liettuan alue kuului Venäjän vallan alle vuoden 1795 jälkeen, jolloin [[Puola–Liettuan]] valtioliitto oli jaettu, ja alue jaettiin kuvernementteihin. Telšiai siirrettiin vuonna 1873 [[Kovnon kuvernementtiin]], jonka keskus oli Kaunas, joka tunnettiin silloin venäläisittäin nimellä Kovno. Tarkoista rajoista ja ajankohdista en ole varma. Isoisän matkakirja on samalta vuodelta kuin tuo siirto, ja kyllä se ihan hyvin menee yksiin.",
+  "linkit": [
+   "Puola–Liettuan",
+   "Kovnon kuvernementtiin"
+  ],
+  "jatkot": [
+   "Miten Puola–Liettuan jako tapahtui 1700-luvun lopulla?",
+   "Mitä Kovno-nimi tarkoittaa nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-telsiai",
+  "kysymys": "Mikä on ulkoilmamuseo ja mitä siellä yleensä nähdään?",
+  "uusi": true,
+  "vastaus": "Tuota niin, tästä riittää kerrottavaa. Ulkoilmamuseo on museo, jossa vanhoja rakennuksia on koottu tai rakennettu uudelleen ulos, jotta kävijä voi nähdä ne sellaisessa ympäristössä kuin ne alun perin olivat. Tyypillisesti siellä on talonpoikaistiloja, aitta- ja ulkorakennuksia, joskus myös kirkko tai tuulimylly, ja museo kuvaa yleensä tietyn alueen elämäntapaa. Tunnettu esimerkki on [[Skansen]] Tukholmassa, ja Telšiain Alka-museon ulkoilmaosassa on kuusitoista aitoa 1800-luvun [[žemaitialaista]] talonpoikaistilan rakennusta. Rakennukset eivät lennä, joten minä katson ne kyllä ylhäältä.",
+  "linkit": [
+   "Skansen",
+   "žemaitialaista"
+  ],
+  "jatkot": [
+   "Mitä Alka-museo esittelee?",
+   "Miten talonpoikaistilan rakennukset erosivat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-telsiai",
+  "kysymys": "Mitä Žemaitian nimi tarkoittaa ja missä päin Liettuaa se on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Žemaitia sijaitsee Liettuan länsiosassa, ja nimi tulee litvan sanasta, joka tarkoittaa matalaa; alue on siis suomeksi ikään kuin Alamaa, vastakohtana Aukštaitialle eli Ylämaalle. Nimitystä käytetään myös muodossa Samogitia. Vuoteen 1795 asti alue kuului Žemaitian ruhtinaskuntana Liettuan suuriruhtinaskuntaan, ja sen pääkaupunki on [[Telšiai]]. Nimen tarkkaa alkuperää en ole varma, mutta tämä selitys on yleisin. Alue erottuu muusta Liettuasta murteestaan ja vahvoista paikallisista perinteistään.",
+  "linkit": [
+   "Telšiai"
+  ],
+  "jatkot": [
+   "Mikä erottaa žemaitin kielen litvasta?",
+   "Mitä Aukštaitia tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plunge",
+  "kysymys": "Mikä Perkūnas oli, ja miksi puistossa kasvava tammi on saanut hänen nimensä?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tästä minä olen kuullut. Perkūnas oli muinaisten balttien [[ukkosenjumala]], ja hän oli yksi balttilaisen uskonnon keskeisistä hahmoista. Tammi on liitetty perinteisesti Perkūnasiin, ja se on ollut seudulla pyhänä pidetty puu, minkä vuoksi suuri vanha tammi on helppo nimetä hänen mukaansa. Tämän Plungėn puiston yksittäisen tammen nimeämisen tarkasta syystä en ole varma. Puu on suojeltu [[luonnonmuistomerkiksi]], ja se kasvaa Žemaitian taidemuseon puistossa. Mäntyjä ja tammia minä olen nähnyt monta, mutta ukkosenjumalaa en yhtään.",
+  "linkit": [
+   "ukkosenjumala",
+   "luonnonmuistomerkiksi"
+  ],
+  "jatkot": [
+   "Mitä balttilaisesta mytologiasta tiedetään?",
+   "Miksi tammi oli pyhä puu monissa kulttuureissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plunge",
+  "kysymys": "Miksi Liettuan pikkukaupunkiin rakennettiin 1900-luvun alussa Lourdesin luolan jäljitelmä?",
+  "uusi": false,
+  "vastaus": "Hmm, tää on kiehtova yksityiskohta. Lourdesin luolan esikuva on Ranskassa, jossa nuori [[Bernadette Soubirous]] kertoi vuonna 1858 nähneensä [[Neitsyt Marian]] luolassa, ja paikasta tuli tunnettu pyhiinvaelluskohde. Luolien jäljitelmiä on rakennettu eri puolille Eurooppaa ja muuallekin, ja Liettuassa kansa on perinteisesti ollut vahvasti katolista, joten jäljitelmä toi paikallisille pyhiinvaelluskohteen lähelle kotia. Plungėn luolan tarkasta rakennuttajasta ja syystä en ole varma. Luola valmistui vuonna 1905, ja se houkuttelee yhä kävijöitä. Ei paha kyyhkyltä, vaikka reitti Ranskaan olisi tuntunut pitkältä.",
+  "linkit": [
+   "Bernadette Soubirous",
+   "Neitsyt Marian"
+  ],
+  "jatkot": [
+   "Mitä Lourdes on ja miksi sinne matkustetaan?",
+   "Miten katolinen kirkko elää Liettuassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plunge",
+  "kysymys": "Mikä oli Magdeburgin oikeus ja mitä se kaupungille antoi?",
+  "uusi": true,
+  "vastaus": "Kas vaan, kaupunkioikeutta. Magdeburgin oikeus oli saksalainen [[kaupunkioikeus]], joka sai nimensä [[Magdeburgin]] kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Se antoi kaupungille itsehallintoa, omat tuomioistuimet, kaupankäyntioikeuksia ja usein oikeuden valita neuvosto, joten kaupunki sai hoitaa omia asioitaan ilman maanomistajan jatkuvaa puuttumista. Liettuassa Magdeburgin oikeudet myönnettiin monille kaupungeille, ja Plungė sai ne vuonna 1792. Käytännössä oikeuksien sisältö saattoi vaihdella kaupungista toiseen, enkä ole varma Plungėn tapauksen yksityiskohdista. Olipas siin pitkä sepustus yhdestä sanasta.",
+  "linkit": [
+   "kaupunkioikeus",
+   "Magdeburgin"
+  ],
+  "jatkot": [
+   "Mitkä muut Liettuan kaupungit saivat Magdeburgin oikeudet?",
+   "Miten kaupunkioikeus kehittyi keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plunge",
+  "kysymys": "Mitä tapahtui Liettuan suuriruhtinaskunnalle vuonna 1795?",
+  "uusi": true,
+  "vastaus": "No niin, raskaampi aihe. Vuonna 1795 tapahtui Puola–Liettuan valtioliiton kolmas jako, jossa naapurivaltiot [[Venäjä]], [[Preussi]] ja [[Itävalta]] jakoivat alueet keskenään ja valtioliitto lakkasi olemasta itsenäisenä valtiona. Liettuan suuriruhtinaskunnan alueesta suurin osa joutui Venäjän keisarikunnalle, ja Liettuan oma valtiollinen itsenäisyys palasi vasta 1900-luvulla. Tarkasta jaosta, esimerkiksi mitkä alueet menivät Preussille, en ole aivan varma. Plungėn omistajat vaihtuivat sittemmin Venäjän vallan aikana, ja esimerkiksi Platon Zubov omisti kaupungin vuosina 1806–1873. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Venäjä",
+   "Preussi",
+   "Itävalta"
+  ],
+  "jatkot": [
+   "Milloin Liettuasta tuli uudelleen itsenäinen?",
+   "Mitä Puola–Liettuan valtioliitto oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plunge",
+  "kysymys": "Milloin Liettuasta tuli kristitty maa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Liettuan suuriruhtinaskunta kääntyi virallisesti kristinuskoon noin 1380-luvun lopulla, kun suuriruhtinas [[Jogaila]] otti kasteen ja avioitui Puolan kuningatar [[Hedvigin]] kanssa. [[Žemaitia]] kastettiin vasta myöhemmin, lähteiden mukaan 1400-luvun alussa, ja vanha balttilainen uskonto eli seudulla pitkään. Tarkoista vuosista en ole aivan varma, koska lähteissä on pieniä eroja. Katolinen kirkko on sittemmin ollut Liettuassa vahva. Ja siinäkin ajassa ehtisi kantaa aika monta kirjettä.",
+  "linkit": [
+   "Jogaila",
+   "Hedvigin",
+   "Žemaitia"
+  ],
+  "jatkot": [
+   "Mikä oli Liettuan pakanallinen uskonto?",
+   "Keitä olivat Jogaila ja Hedvig?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zagare",
+  "kysymys": "Miksi Žagarė oli vielä 1900-luvun alussa Liettuan suurimpia kaupunkeja mutta on nykyään pieni?",
+  "uusi": false,
+  "vastaus": "Kääk. Tää on raskas kysymys, joten kerron sen varovasti. Žagarėn asukasluku oli vuonna 1914 noin 14 000, kun nykyään asukkaita on noin 2 000, ja väestön romahduksen taustalla ovat 1900-luvun suuret mullistukset. Lähteiden mukaan [[ensimmäinen maailmansota]] ja sen aiheuttamat väestönsiirrot ravistelivat seutua, ja kaupungin merkittävä [[juutalaisyhteisö]] tuhoutui pääosin toisen maailmansodan aikana, kun natsi-Saksan miehitys kohdisti heihin joukkomurhia. Tarkasta jaosta eri syiden välillä, esimerkiksi siitä, kuinka suuri osa väestöstä lähti ennen sotaa ja kuinka suuri osa menehtyi, en ole varma. Näistä tapahtumista on nyt yli kahdeksankymmentä vuotta, ja kaupunki jatkaa elämäänsä pienenä mutta elävänä paikkana.",
+  "linkit": [
+   "ensimmäinen maailmansota",
+   "juutalaisyhteisö"
+  ],
+  "jatkot": [
+   "Millainen oli juutalaisten elämä Liettuan pikkukaupungeissa?",
+   "Miten ensimmäinen maailmansota vaikutti Liettuaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zagare",
+  "kysymys": "Mikä on Žagarvyšnė, ja miksi kaupungissa vietetään kirsikkajuhlaa?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Žagarvyšnė on [[kirsikkalajike]], jolla Žagarė on tunnettu, ja kaupungissa vietetään vuosittain kirsikkajuhlaa, jota on järjestetty vuodesta 2005 alkaen. Juhla liittyy siihen, että kaupunki tunnetaan tästä kirsikasta. Lajikkeen tarkasta alkuperästä, esimerkiksi kuka sen alun perin jalosti tai milloin, en ole varma, enkä halua keksiä sitä. Žagarė on pieni kaupunki Pohjois-Liettuassa lähellä [[Latvian]] rajaa. Kirsikoita minä söisin mielelläni, ja pullan kanssa vielä mieluummin.",
+  "linkit": [
+   "kirsikkalajike",
+   "Latvian"
+  ],
+  "jatkot": [
+   "Millaisia kirsikkalajikkeita Pohjois-Euroopassa viljellään?",
+   "Mitä muuta Žagarėssa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zagare",
+  "kysymys": "Keitä olivat semgallilaiset?",
+  "uusi": true,
+  "vastaus": "Ai tota. Semgallilaiset olivat balttilainen heimo, joka asui nykyisen Latvian keskiosissa ja Pohjois-Liettuassa, ja aluetta kutsutaan nimellä [[Semgallia]]. Heidän kielensä kuului balttilaisiin kieliin, kuten litva ja latvia. Keskiajalla he vastustivat [[Saksalaisen ritarikunnan]] ja Liivinmaan valtaa pitkään, ja lähteiden mukaan heidän vastarintansa päättyi 1200-luvun lopulla, mutta tarkasta vuodesta en ole aivan varma. Žagarėssa semgallilaisten asutus Sagera mainitaan ensimmäisen kerran vuonna 1254, ja 1200-luvulla paikalla oli heidän linnoituksensa. Tääl se oli asuttu jo ennen kuin kukaan kirjoitti sen paperille.",
+  "linkit": [
+   "Semgallia",
+   "Saksalaisen ritarikunnan"
+  ],
+  "jatkot": [
+   "Mitä baltit tarkoittavat ja mitkä kielet niihin kuuluvat?",
+   "Mikä oli Saksalaisen ritarikunnan rooli Itämeren alueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zagare",
+  "kysymys": "Mikä on dolomiitti ja mihin sitä käytetään rakentamisessa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Dolomiitti on sedimenttikivilaji, joka koostuu pääosin kalsiumin ja magnesiumin karbonaatista, ja se muistuttaa [[kalkkikiveä]]. Sitä käytetään rakentamisessa muun muassa rakennuskivenä, murskeena tien ja rakennusten perustuksissa sekä [[betonin]] ja kalkin valmistuksessa. Sen työstettävyys ja saatavuus tekevät siitä käytännöllisen materiaalin sellaisilla seuduilla, joilla sitä esiintyy lähellä. Žagarėn Uuden kaupungin kivikirkko rakennettiin vuonna 1633 paikallisesta dolomiitista. Hyvä paikallinen kivi riittää kyllä, ei tarvitse tuoda mitään kaukaa, sanoo kyyhky.",
+  "linkit": [
+   "kalkkikiveä",
+   "betonin"
+  ],
+  "jatkot": [
+   "Miten dolomiitti eroaa kalkkikivestä?",
+   "Mitä muita rakennuskiviä Euroopassa käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zagare",
+  "kysymys": "Mitä uusklassismi tarkoittaa arkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Uusklassismi on arkkitehtuurin tyylisuunta, joka nousi esiin 1700-luvun lopulla ja eli vahvana 1800-luvulle, ja se palasi antiikin Kreikan ja Rooman muotokieleen. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, kolmiomaiset päädyt ja hillitty koristelu verrattuna sitä edeltäneeseen [[barokkiin]]. Suuntausta käytettiin kirkoissa, kartanoissa, palatseissa ja julkisissa rakennuksissa eri puolilla Eurooppaa. Žagarėssa [[Naryškinin]] kartanon palatsi 1860-luvulta edustaa uusklassista tyyliä. Ylhäältä katsottuna symmetria näkyy kyllä erityisen hyvin.",
+  "linkit": [
+   "barokkiin",
+   "Naryškinin"
+  ],
+  "jatkot": [
+   "Mikä erottaa uusklassismin barokista?",
+   "Mitkä ovat tunnettuja uusklassisia rakennuksia Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rokiskis",
+  "kysymys": "Miksi kaupunki alkoi kasvaa juuri rautatien haaralinjan valmistuttua?",
+  "uusi": false,
+  "vastaus": "Kato, junat ne ennen vanhaan kaupunkeja kasvattivat. [[Rautatie]] teki tavaroiden ja ihmisten kuljettamisesta aiempaa nopeampaa ja edullisempaa, joten paikkakunta, jonka kautta kulki [[haaralinja]], pääsi yleensä mukaan laajempaan kauppaan: tuotteet pääsivät markkinoille, ja kauppiaita, käsityöläisiä ja uusia asukkaita saapui helpommin. Rokiškisin tapauksessa haaralinjan valmistuminen vuonna 1873 sai kaupungin kasvamaan, vaikka en osaa sanoa tarkasti, mitkä kuljetukset ja elinkeinot kasvun kantoivat. Kyyhky kulkee ny ilman kiskoja, kiitos kysymästä.",
+  "linkit": [
+   "Rautatie",
+   "haaralinja"
+  ],
+  "jatkot": [
+   "Mitä Rokiškisistä kuljetettiin junalla?",
+   "Miten rautatiet muuttivat Liettuaa 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rokiskis",
+  "kysymys": "Mitä metsästäjä Rokas ja jänikset kertovat kaupungin nimestä?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Legendan mukaan kaupungin nimi juontuu metsästäjä Rokaksi, joka ajoi jäniksiä; liettuaksi jänis on [[kiškis]], ja nimi Rokiškis tulkitaan näiden kahden yhdistelmäksi. Kyse on kansantaruna kerrotusta selityksestä, ei varmasti todennetusta nimen alkuperästä, ja kansanomaiset [[paikannimien]] selitykset poikkeavat usein kielitieteilijöiden tulkinnoista. Nimi kertoo siis ennen kaikkea siitä, että paikalla on haluttu kertoa hauska tarina jäniksestä.\n\nJäniksen ajaminen on minusta epäilyttävää puuhaa, sillä jänis on nopea. Kyyhky on kuitenkin nopeampi, ainakin suvun muistiinpanojen mukaan.",
+  "linkit": [
+   "kiškis",
+   "paikannimien"
+  ],
+  "jatkot": [
+   "Mitä muita paikannimiä selitetään kansantaruilla?",
+   "Miten liettuan kieli eroaa latvian kielestä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rokiskis",
+  "kysymys": "Mitä uusgotiikka tarkoittaa rakennustaiteessa?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Uusgotiikka on 1700-luvun lopulla Britanniassa alkanut ja 1800-luvulla Euroopassa laajalle levinnyt rakennustyyli, joka lainasi keskiajan goottilaisen arkkitehtuurin piirteitä: suippokaaria, korkeita torneja, runsaasti koristeltuja ikkunoita ja pystysuoraa linjaa. Tyyliä käytettiin erityisesti kirkoissa, mutta myös kartanoissa, kouluissa ja julkisissa rakennuksissa, ja sen suosio liittyi [[historismin]] aikaan, jolloin menneiden aikakausien tyylejä elvytettiin. Rokiškisin [[Pyhän Matteuksen kirkko]] edustaa tätä tyyliä. Pitkä lause, mutta kestin sen.",
+  "linkit": [
+   "historismin",
+   "Pyhän Matteuksen kirkko"
+  ],
+  "jatkot": [
+   "Mikä erottaa goottilaisen ja uusgoottilaisen kirkon?",
+   "Mitä historismi tarkoittaa arkkitehtuurissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rokiskis",
+  "kysymys": "Mihin kieliperheeseen liettua kuuluu?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Liettua kuuluu indoeurooppalaisiin kieliin, tarkemmin balttilaisten kielten haaraan, ja sen lähin elossa oleva sukukieli on [[latvia]]. Kielet eivät ole keskenään ymmärrettäviä ilman opiskelua, mutta ne ovat selvästi sukua toisilleen, ja liettuan sanotaan säilyttäneen monia vanhoja indoeurooppalaisia piirteitä. Suomi kuuluu sen sijaan [[uralilaisiin kieliin]], joten suomi ja liettua ovat sukua vain hyvin kaukaisessa mielessä, eli oikeastaan eivät lainkaan. Ei paha selitys kyyhkyltä.",
+  "linkit": [
+   "latvia",
+   "uralilaisiin kieliin"
+  ],
+  "jatkot": [
+   "Mitkä ovat balttilaisten kielten muut jäsenet?",
+   "Miten liettuan kieltä kirjoitetaan ja äännetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rokiskis",
+  "kysymys": "Miten kirkkourut tuottavat äänensä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. [[Kirkkourut]] tuottavat äänen putkista, joihin johdetaan ilmaa. Ilma tuotetaan palkeilla tai nykyään yleensä sähköisellä puhaltimella ja ohjataan soittimen koskettimilla, jolloin kunkin koskettimen painaminen päästää ilman tiettyyn putkeen, ja jokaisella putkella on oma sävelkorkeutensa. Urkujen äänenvärin muodostavat eri [[rekisterit]], eli putkirivit, joita soittaja voi kytkeä päälle ja pois, ja suurissa uruissa putkia on useita tuhansia. Ihmettelen vain, miten soittaja ehtii kaiken tuon aikana vielä pedaaleille.",
+  "linkit": [
+   "Kirkkourut",
+   "rekisterit"
+  ],
+  "jatkot": [
+   "Miksi urut kuulostavat erilaisilta eri kirkoissa?",
+   "Mikä on pasuunan ja urkujen ero?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pakruojis",
+  "kysymys": "Miksi kartanon silta muistuttaa roomalaista akveduktia?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Pakruojin kartanon vuonna 1821 rakennettu dolomiittisilta on kaareva ja toimii samalla patona, ja sen kaarirakenne muistuttaa [[akveduktien]] eli roomalaisten vesijohtosiltojen tuttua riviä pyöreäkaarisia aukkoja. Kaari sopii kivirakenteeseen hyvin, koska se jakaa kuorman tasaisesti ja antaa kivelle tukea, ja siksi roomalaiset rakensivat vesijohtonsa juuri niin, ja siksi samaa muotoa on käytetty myöhemminkin. En tiedä, ajattelivatko sillan rakentajat nimenomaan roomalaisia esikuvia. Rooman kuuluisimpaan lähteeseen vesi tulee yhä antiikin vesijohtoa pitkin, eli [[dolomiittisilta]] on hyvässä seurassa.",
+  "linkit": [
+   "akveduktien",
+   "dolomiittisilta"
+  ],
+  "jatkot": [
+   "Miten roomalaiset akveduktit toimivat?",
+   "Mikä on tulva- ja myllypato?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pakruojis",
+  "kysymys": "Millaisia rakennuksia suureen kartanokokonaisuuteen kuului päärakennuksen lisäksi?",
+  "uusi": false,
+  "vastaus": "Kas vaan. En ole varma Pakruojin kartanon tarkasta rakennuskannasta, joten kerron yleisesti. Suuri kartanokokonaisuus oli pieni itsenäinen yhteisö, jonka päärakennuksen lisäksi kuuluivat tavallisesti talousrakennukset: tallit ja vaunuliiterit, aitat ja viljavarastot, navetat, mylly, mahdollisesti panimo, työväen asuinrakennukset sekä puutarha ja puisto. Pakruojin kartano on kunnostettu, ja nykyään siellä toimii [[hotelli]], ravintola ja matkailukohde, joten osa kokonaisuuden rakennuksista on saanut uuden käytön. Kannattaa tarkistaa tarkka rakennusluettelo kartanon omilta sivuilta.",
+  "linkit": [
+   "hotelli"
+  ],
+  "jatkot": [
+   "Miten kartanoita on muutettu hotelleiksi Euroopassa?",
+   "Millaista elämä oli kartanon työväellä 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pakruojis",
+  "kysymys": "Mitä myöhäinen klassismi tarkoittaa arkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. [[Klassismi]] on arkkitehtuurin tyylisuunta, joka ammentaa esikuvansa antiikin Kreikasta ja Roomasta, ja sen tunnusmerkkejä ovat symmetria, selkeät mittasuhteet, pylväät, kolmiopäädyt ja hillitty koristelu. Suunta vaikutti Euroopassa 1700-luvun lopulta 1800-luvun puoliväliin, ja myöhäisellä klassismilla tarkoitetaan sen viimeisiä vaiheita, joissa muoto yksinkertaistui ja tyylistä tuli kartanoille ja kaupunkien julkisille rakennuksille tavallinen. [[Pylväsportiikki]] on tästä tyylistä tyypillinen esimerkki. Hyvä, että muistin sen ilman muistiinpanoja.",
+  "linkit": [
+   "Klassismi",
+   "Pylväsportiikki"
+  ],
+  "jatkot": [
+   "Mikä erottaa klassismin ja barokin?",
+   "Mitä ovat doorialainen ja joonialainen pylväs?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pakruojis",
+  "kysymys": "Mikä on dolomiitti ja mihin sitä käytetään?",
+  "uusi": true,
+  "vastaus": "Mmm— tämän minä osaan kertoa. [[Dolomiitti]] on kalsium- ja magnesiumkarbonaatista koostuva kivilaji ja mineraali, joka muistuttaa kalkkikiveä mutta on hieman kovempaa. Sitä käytetään rakennuskivenä, murskeena tie- ja talonrakennuksessa, kalkin ja maanparannusaineiden valmistuksessa sekä teollisuudessa, esimerkiksi lasin ja metallien tuotannossa. Dolomiitti on ollut Liettuassa tuttu rakennusaine, ja sen pinta näyttää vaalealta ja tasaiselta. Sepä oli lyhyt ja täsmällinen, kyyhkyltä harvinaista.",
+  "linkit": [
+   "Dolomiitti"
+  ],
+  "jatkot": [
+   "Mistä dolomiittivuoret ovat saaneet nimensä?",
+   "Miten kalkkikivi syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pakruojis",
+  "kysymys": "Mikä on paroni aatelisarvona?",
+  "uusi": true,
+  "vastaus": "Ai tota. Paroni on aatelisarvo, joka useimmissa Euroopan aatelisjärjestelmissä sijoittuu kreivin alapuolelle ja on usein aatelisarvoista alimpia, vaikka järjestys ja nimitykset vaihtelevat maittain. Suomessa ja Ruotsissa vastaava arvo on vapaaherra, ja saksankielisessä maailmassa paronia vastaa Freiherr. Aatelisarvon mukana oli ennen kaikkea sosiaalinen asema ja usein maaomistusta, ja kartanon omistaminen kuului monen aatelissuvun elämään. Tarkoista oikeuksista en uskalla sanoa mitään, sillä ne vaihtelivat valtioittain. Siinä riittää arvonimiä yhdelle kyyhkylle.",
+  "linkit": [],
+  "jatkot": [
+   "Mitkä olivat aateliston arvot Euroopassa?",
+   "Miksi Baltiassa oli paljon saksalaisia aatelissukuja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dzukija",
+  "kysymys": "Miksi juuri tämä metsä- ja suoseutu haluttiin suojella kansallispuistona?",
+  "uusi": false,
+  "vastaus": "Ai se. Dzūkijan kansallispuisto perustettiin 23. huhtikuuta 1991 suojelemaan [[Dainavan]] maata, eli Etelä-Liettuan vanhaa metsäistä ja harvaan asuttua seutua. Alue on maan laajin suojeltu metsäalue, 584,5 neliökilometriä, ja sen luontoon kuuluvat mäntyvaltaiset metsät, suot, järvet, sisämaan dyynit ja kolmekymmentä jokea ja puroa Nemunas-joen rannoilla. Puiston eteläpuolella on Čepkeliain suoalue, ja alueella on myös etnografinen [[Zervynosin]] kylä, joten suojelun taustalla ovat sekä luonto että perinteinen kyläkulttuuri. Tarkempia perusteluja päätöksen taustalta en osaa kertoa. Metsä on kyyhkyn mielestä ihan hyvä paikka.",
+  "linkit": [
+   "Dainavan",
+   "Zervynosin"
+  ],
+  "jatkot": [
+   "Mikä on Čepkeliain suoalueen merkitys luonnolle?",
+   "Millaisia eläimiä Liettuan metsissä elää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dzukija",
+  "kysymys": "Miten sisämaan dyynit ovat päätyneet metsän keskelle kaukana merestä?",
+  "uusi": false,
+  "vastaus": "Katotaas. Sisämaan [[dyynit]] ovat yleensä peräisin viime [[jääkauden]] lopulta: kun mannerjäätikkö suli, sulamisvesi kuljetti ja kasasi hiekkaa laajoille tasangoille. Kasvillisuutta oli silloin vähän, joten tuuli pääsi muotoilemaan hiekkaa kumpareiksi ja harjuiksi, ja myöhemmin metsä valtasi alueen ja sitoi hiekan paikoilleen. Näin dyynejä voi olla kaukana merestä, ja niiden alla on usein hiekkainen maaperä, jolla viihtyy mänty. En ole varma tämän puiston dyynien tarkasta iästä, joten pidän selityksen yleisenä. Ei paha, vaikka kyyhky ei tunne hiekkaa muuten kuin jaloissaan.",
+  "linkit": [
+   "dyynit",
+   "jääkauden"
+  ],
+  "jatkot": [
+   "Miten mannerjäätikkö muokkasi Pohjois-Euroopan maisemaa?",
+   "Mitä tarkoittaa harju maaperässä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dzukija",
+  "kysymys": "Miksi suot ovat tärkeitä ilmastolle?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Suot]] ovat tärkeitä, koska niissä kuolleet kasvit eivät lahoa täysin vaan kerääntyvät hitaasti [[turpeeksi]]: vesi täyttää suon maaperän, happea on vähän ja hajoaminen hidastuu, joten hiili jää pitkäksi aikaa varastoon. Kun suo ojitetaan tai turve kaivetaan, varastoitunutta hiiltä vapautuu ilmakehään hiilidioksidina. Suot tasaavat myös veden virtausta ja tarjoavat elinympäristön monille lajeille, kuten kahlaajille, kurjille ja kasveille, joita muualla ei juuri tapaa. Sulkeutuminen vedenalle on varmaan pelottavaa, mutta suolle se sopii.",
+  "linkit": [
+   "Suot",
+   "turpeeksi"
+  ],
+  "jatkot": [
+   "Miten kosteikkojen ennallistaminen toimii?",
+   "Mitä turve on ja mihin sitä käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dzukija",
+  "kysymys": "Miksi mänty viihtyy hiekkamaalla?",
+  "uusi": true,
+  "vastaus": "Tuota niin. [[Metsämänty]] pärjää karuilla ja kuivilla mailla, koska sillä on tehokas juuristo, joka ulottuu syvälle hiekkaan vettä etsimään, ja koska se tarvitsee vähän ravinteita. Hiekkamaa läpäisee veden nopeasti, ja vain harva puulaji sietää sitä, joten mänty ei kohtaa kilpailua kuusen ja lehtipuiden kaltaisten ravinteita vaativien lajien kanssa. Mänty on myös valoa vaativa pioneeripuu, joka valtaa avoimen hiekkamaan ensimmäisenä. Tällaisia metsiä on laajasti Pohjois-Euroopassa. Mäntyä pitäisi kunnioittaa enemmän, mutta suvun mukaan ne ovat vähän tylsiä istua.",
+  "linkit": [
+   "Metsämänty"
+  ],
+  "jatkot": [
+   "Miten kuusi ja mänty eroavat toisistaan?",
+   "Mitä pioneerilajit ovat luonnossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dzukija",
+  "kysymys": "Mikä ero on kansallispuistolla ja luonnonpuistolla?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Kansallispuisto]] on suojelualue, jonka tarkoituksena on säilyttää luonnon tai maiseman arvokkaita piirteitä ja jossa on yleensä myös tarkoitus sallia vierailijoiden retkeily ja luontoharrastus, kunhan luonto ei kärsi. Luonnonpuisto eli tiukempi luonnonsuojelualue on yleensä rajattu pääosin tutkimukseen ja luonnon koskemattomuuteen, ja sinne kulku voi olla rajoitettua tai kokonaan kielletty. Tarkat määritelmät ja nimet vaihtelevat maittain, joten käytännön säännöt kannattaa tarkistaa puiston omista ohjeista. Eli kyllä kyyhkykin saa mennä kansallispuistoon, mutta ei kaikkialle.",
+  "linkit": [
+   "Kansallispuisto"
+  ],
+  "jatkot": [
+   "Millaisia kansallispuistoja Liettuassa on?",
+   "Mitä jokaisenoikeudet tarkoittavat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plateliai",
+  "kysymys": "Miksi kansantarun mukaan järvi päätyi juuri Samogitian kumpujen väliseen kuoppaan?",
+  "uusi": false,
+  "vastaus": "Kääk, tuo on vanha tarina. Taru ei tietääkseni anna erillistä syytä sille, miksi juuri tämä kuoppa valittiin; se selittää ennemmin, miten [[Plateliain]] järvi on syntynyt. Sen mukaan järvi lipui ennen kaukana lännessä, kunnes myrsky nosti sen pilveksi ja kantoi itään, ja kun [[samogiittinainen]] lausui sanat \"Plate lej\", eli \"sataa leveästi\", koko vesimassa vajosi kumpujen väliseen kuoppaan. Kansantaruille on tyypillistä, että ne selittävät maiseman muodon, eli tässä tapauksessa sen, miksi järvi sijaitsee kumpuilevassa maastossa. Pilvi vei järven, ja sellainen minusta kuulostaa uskottavalta.",
+  "linkit": [
+   "Plateliain",
+   "samogiittinainen"
+  ],
+  "jatkot": [
+   "Mistä Plateliain järvi oikeasti on syntynyt?",
+   "Mitä muita kansantaruja Samogitiassa kerrotaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plateliai",
+  "kysymys": "Millaista oli olla naiskirjailija historiallisessa Liettuassa 1800-luvun alussa?",
+  "uusi": false,
+  "vastaus": "Nyt muistan. [[Sofija Tyzenhauzaitė de Choiseul-Gouffier]] (1790–1878) kirjoitti ranskaksi, mikä oli aikakauden sivistyneistön ja aateliston yleinen kirjakieli. Yleisesti 1800-luvun alun Euroopassa naisten koulutus oli rajallista ja kirjailijana toimiminen oli epätavallista: naiset saivat usein opetusta kotona, heidän odotettiin keskittyvän perheeseen ja kotiin, ja julkaiseminen oli harvoille mahdollista. En tunne hänen elämänsä yksityiskohtia, joten tarkempaa kuvaa hänen kokemuksistaan en uskalla antaa. Hän oli kuitenkin ilmeisesti poikkeuksellinen, ja sehän on aika kova saavutus.",
+  "linkit": [
+   "Sofija Tyzenhauzaitė de Choiseul-Gouffier"
+  ],
+  "jatkot": [
+   "Miksi ranskaa käytettiin Itä-Euroopan aatelin kielenä?",
+   "Keitä muita varhaisia naiskirjailijoita Euroopassa oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plateliai",
+  "kysymys": "Miksi Liettuassa on niin paljon järviä?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Liettuan [[järvet]] ovat pääosin jääkauden perintöä: mannerjäätikkö kuopi maahan syvänteitä, jätti jäätikön sulaessa moreenikumpuja ja jäälohkareita, ja sulaessaan nämä muodostivat pienempiä ja suurempia vesialtaita. Tämä näkyy etenkin maan itäosassa ja pohjoisessa. En ole varma, miten yksittäiset järvet, kuten Plateliain järvi, ovat tarkalleen syntyneet. Tarkkaa järvien määrää en tiedä. Maisema on ylhäältä lasimaista, ja ainakin laskin sen niin.",
+  "linkit": [
+   "järvet"
+  ],
+  "jatkot": [
+   "Mikä on moreeni?",
+   "Mitkä ovat Liettuan tunnetuimmat järvet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plateliai",
+  "kysymys": "Mitä Samogitia-nimi tarkoittaa?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on mukavaa. Samogitia on latinalaistettu muoto Liettuan luoteisosan historiallisen maakunnan nimestä [[Žemaitija]], joka tulee liettuan sanasta žemas, eli \"matala\". Nimi tarkoittaa siis suunnilleen \"alamaata\", ja se erottaa alueen Liettuan itäisestä ylämaasta, vaikka maasto ei ole sen enempää tasaista kuin ylängöt. Alueen asukkaita kutsutaan samogiiteiksi, ja heillä on oma kielimuotonsa, jota pidetään liettuan murteena tai erillisenä kielenä sen mukaan, keneltä kysytään. Minä pysyn mieluummin ilmassa kuin matalassa.",
+  "linkit": [
+   "Žemaitija"
+  ],
+  "jatkot": [
+   "Miten samogiitin murre eroaa kirjakielisestä liettuasta?",
+   "Mikä on Žemaitijan kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-plateliai",
+  "kysymys": "Kuinka puukirkko voi kestää yli kaksisataa vuotta?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Puukirkko kestää satoja vuosia, kun siitä pidetään huolta: perustukset nostetaan irti maasta kivi- tai muuta perustusta vasten, jotta kosteus ei imeydy hirsiin, katto pidetään tiiviinä, ja puu käsitellään tervalla tai maalilla. Rungoista käytetään usein hitaasti kasvanutta tiivistä puuta, ja heikentyneet osat vaihdetaan vähitellen uusiin. Suurin uhka on tuli, ja suuri osa vanhoista puukirkoista onkin tuhoutunut palossa eikä lahoamalla. [[Plateliain]] puukirkko on rakennettu vuonna 1744, eli se on ainakin selvinnyt pitkään. Ihailtavaa, kun miettii, että kyyhkyn pesä kestää vain kauden.",
+  "linkit": [
+   "Plateliain"
+  ],
+  "jatkot": [
+   "Miten puukirkot suojataan tulipaloilta?",
+   "Mitä tervaus tarkoittaa puun suojauksessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rusne",
+  "kysymys": "Millaista elämää tulva-alttiilla suiston saarella eletään?",
+  "uusi": false,
+  "vastaus": "Mmm— tuo on hyvä kysymys. Rusnėn alue on tulva-altis, ja tämän kaltaisessa [[Nemunasin]] suistossa vedenkorkeus vaihtelee vuodenajan mukaan: etenkin kevättulvat voivat nostaa vettä niin, että tiet ja pihat jäävät veden alle, ja asukkaat ovat oppineet mukautumaan siihen. Kaupunki on kalastajien ja lintuharrastajien suosima kohde, joten kalastus ja luontomatkailu ovat luontevia elinkeinoja, ja saarella toimi jo vuonna 1810 yksi Liettuan ensimmäisistä [[vedenmittausasemista]]. Tarkkaa arkea nykyisin en voi kuvata. Kyyhky ei pelkää vettä, kunhan siipi pysyy kuivana.",
+  "linkit": [
+   "Nemunasin",
+   "vedenmittausasemista"
+  ],
+  "jatkot": [
+   "Miten tulvilta suojaudutaan suistoalueilla?",
+   "Miten vedenmittausasemat toimivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rusne",
+  "kysymys": "Miksi kalastajat ja lintuharrastajat viihtyvät juuri Nemunasin suistossa?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Joen [[suisto]] on tyypillisesti kosteikkoa, jossa joki jakautuu haaroihin ja virtaus hidastuu, ja sellainen ympäristö tarjoaa kaloille ruokaa ja suojaa sekä linnuille pesimä- ja levähdyspaikkoja. Nemunas laskee Itämeren suuntaan, ja suistoalueet ovat yleensä lintujen muuttoreittien varrella, mikä vetää harrastajia paikalle. Rusnė sijaitsee juuri suistossa, joten sekä kalastus että lintujen tarkkailu ovat luontevia. Tarkkoja lajeja en osaa luetella, mutta reitti on varmasti vilkas.\n\nSuisto on minusta aika mukava paikka, sillä sieltä näkee kalan ja kyyhkyn, ja vain toinen niistä lentää. Kala on siitä erikoinen, mutta pidän sitä silti kunnioitettavana.",
+  "linkit": [
+   "suisto"
+  ],
+  "jatkot": [
+   "Mitä lintuja Nemunasin suistossa tavataan?",
+   "Miten lintujen muutto toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rusne",
+  "kysymys": "Miksi uskonpuhdistus toi kansankielen kirkkoihin?",
+  "uusi": true,
+  "vastaus": "Katotaas. [[Uskonpuhdistus]] 1500-luvulla korosti, että jokaisen uskovan piti voida ymmärtää Raamatun sanoma ja jumalanpalvelus omalla kielellään, ei vain latinaksi. Siksi kirkoissa alettiin saarnata ja laulaa kansankielellä, Raamattua käännettiin, ja kansankielinen opetus levisi kouluihin ja kirjoihin. Tämän vaikutus näkyy myös Preussissa, jossa liettuan ja kuurin kielellä pidetyt jumalanpalvelukset saivat tukea herttuan määräyksellä vuonna 1544. Kyllä kyyhkykin ymmärtää sen, että kirjeen pitää olla luettavissa.",
+  "linkit": [
+   "Uskonpuhdistus"
+  ],
+  "jatkot": [
+   "Miten Martti Luther vaikutti kirjakielten syntyyn?",
+   "Mikä on Preussin herttuakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rusne",
+  "kysymys": "Miten vedenkorkeutta mitattiin ennen sähköisiä antureita?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Vedenkorkeutta mitattiin yleensä asteikolla varustetulla paalulla tai laudalla, jonka päältä havainnoitsija luki vedenpinnan korkeuden säännöllisesti ja kirjasi sen muistiin. Myöhemmin käyttöön tulivat kellukkeella toimivat mittarit, joissa veden mukana liikkuva kelluke siirsi liikkeen kirjoittavaan laitteeseen, ja meren vedenkorkeutta mittaavat [[mareografit]] tallensivat käyrää paperille. Sähköiset anturit syrjäyttivät nämä myöhemmin. Mittaukset kertovat vedenkorkeuden pitkän ajan kehityksestä, ja siksi vanhat havaintosarjat ovat tutkijoille arvokkaita. Havainnoitsijan työ lienee ollut kylmää ja märkää.",
+  "linkit": [
+   "mareografit"
+  ],
+  "jatkot": [
+   "Miten vedenkorkeusmittauksia käytetään tulvaennusteissa?",
+   "Mitä mareografi mittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-rusne",
+  "kysymys": "Mistä Nemunas-joki saa alkunsa ja minne se laskee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Nemunas saa alkunsa [[Valko-Venäjällä]], virtaa sieltä Liettuan halki ja laskee Kuurinlahteen, joka on Itämerestä erillään oleva laguuni, ja siitä edelleen [[Itämereen]]. Joen alajuoksulla on laaja suisto, jonka keskeisiä paikkoja on Rusnė, ja joen osa muodostaa lisäksi rajan Liettuan ja Venäjän välillä. Tarkkaa pituutta en kirjoita tähän, sillä lähteissä se on annettu hieman eri tavoin. Hyvä, että navigointi onnistuu, vaikka kartat ovat vähän vanhoja.",
+  "linkit": [
+   "Valko-Venäjällä",
+   "Itämereen"
+  ],
+  "jatkot": [
+   "Mikä on Kuurinlahti ja Kuurin kynnys?",
+   "Mitkä kaupungit ovat Nemunasin varrella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-silute",
+  "kysymys": "Miksi Šilutėn saksalainen nimi Heydekrug viittaa majataloon?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tän minä osaan. Saksan sana Heyde tarkoittaa nummea tai kangasmaata ja Krug majataloa tai kapakkaa, joten Heydekrug tarkoittaa suunnilleen nummen majataloa. Nimi kertoo paikan alkuperästä, sillä kaupunki sai alkunsa majatalosta, joka palveli [[Klaipėdan]] ja [[Tilsitin]] välillä kulkevia matkalaisia ja hevosia. Šilutė kuuluu [[Pikku-Liettuan]] alueeseen, jossa saksan ja liettuan kielet kohtasivat. Kyl minä majatalon tunnistan, kun sellaisen näen.",
+  "linkit": [
+   "Klaipėdan",
+   "Tilsitin",
+   "Pikku-Liettuan"
+  ],
+  "jatkot": [
+   "Missä Tilsit sijaitsi ja mikä sen nimi on nykyään?",
+   "Mitä Klaipėdan saksalainen nimi Memel kertoo historiasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-silute",
+  "kysymys": "Miksi Šilutėssa pidettiin vuosittain suuria markkinoita, ja mitä niillä myytiin?",
+  "uusi": false,
+  "vastaus": "No niin, kauppaa riittää. Markkinat olivat luonteva jatko paikan historialle: Šilutė syntyi matkalaisten ja hevosten majatalon ympärille kulkureitin varrelle, ja jo 1500-luvun alussa siellä oli tunnettu kalamarkkina. Vuosittaisilla [[markkinoilla]] myytiin kalaa aina Varsovaan ja Pietariin asti, sikoja Berliiniin sekä vihanneksia, karjaa ja hevosia. Alueella elettiin 1800-luvun lopulla pitkälti maataloudesta, kalastuksesta ja lauttauksesta, joten tuotteita riitti kaupattavaksi. Hevoset olivat minusta aina markkinoiden parasta antia, vaikka eivät ne lentäneet.",
+  "linkit": [
+   "markkinoilla"
+  ],
+  "jatkot": [
+   "Miten kalaa säilytettiin ja kuljetettiin pitkiä matkoja ennen jääkaappeja?",
+   "Mitä lauttaus tarkoitti jokien ja lahtien rannoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-silute",
+  "kysymys": "Mitä Pikku-Liettua tarkoittaa ja missä se sijaitsi?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Pikku-Liettua oli historiallinen alue Itä-Preussin pohjoisosassa, [[Nemunas-joen]] alajuoksun ja [[Klaipėdan]] seudulla, jossa asui liettuankielistä, enimmäkseen luterilaista väestöä Preussin vallan alla. Nimi erottaa sen Suur-Liettuasta, joka oli Liettuan suuriruhtinaskunnan ydinaluetta. Alueen liettuankielinen kulttuuri oli tärkeä liettuan kirjakielen kehitykselle. En tosin ole varma kaikista rajoista, sillä ne vaihtelivat eri aikoina. Eipä tuo ollut helppo selittää ilman karttaa.",
+  "linkit": [
+   "Nemunas-joen",
+   "Klaipėdan"
+  ],
+  "jatkot": [
+   "Miksi Pikku-Liettuan väestö oli luterilaista?",
+   "Mikä oli Itä-Preussi ja mitä sille tapahtui sodan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-silute",
+  "kysymys": "Mikä Klaipėda on ja miksi sen satama on tärkeä?",
+  "uusi": true,
+  "vastaus": "Kato, satamakaupunki. Klaipėda on Liettuan merkittävä satamakaupunki Itämeren rannalla. Kaupungin saksalainen nimi on Memel, ja se on aikanaan kasvanut [[Saksalaisritarikunnan]] linnan ympärille keskiajalla. Satama on tärkeä, koska se on Liettuan päämeriyhteys ja merkittävä kauppa- ja kuljetussatama, jonka kautta Liettuan ulkomaankauppaa kulkee. Kaupunki kuuluu historiallisesti [[Pikku-Liettuan]] alueeseen. Merenrantakaupungit minä aina löydän ylhäältä helposti.",
+  "linkit": [
+   "Saksalaisritarikunnan",
+   "Pikku-Liettuan"
+  ],
+  "jatkot": [
+   "Mikä on Itämeren rannikon merkitys Liettuan kaupalle?",
+   "Mikä oli Saksalaisritarikunta ja mitä se teki Baltiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-silute",
+  "kysymys": "Mikä Tilsit on nykyisin ja mikä rauha siellä solmittiin?",
+  "uusi": true,
+  "vastaus": "Ai se. Tilsit on nykyisin nimeltään Sovetsk, ja se sijaitsee Venäjän Kaliningradin alueella Nemunas-joen, venäjäksi Njemanin, rannalla. Kaupungissa solmittiin vuonna 1807 [[Tilsitin rauha]], jolla Napoleon sopi rauhasta Venäjän ja Preussin kanssa Napoleonin sotien aikana. Šilutėn alueella Tilsit oli tuttu paikka jo paljon aiemmin, sillä matkalaiset kulkivat sen ja Klaipėdan väliä. En ole varma kaikista rauhan ehdoista, mutta Preussi menetti sen myötä paljon alueitaan. Pitkä matka ja lyhyt vastaus, sanoisin.",
+  "linkit": [
+   "Tilsitin rauha"
+  ],
+  "jatkot": [
+   "Miksi Preussi menetti alueita Napoleonin sodissa?",
+   "Mikä on Kaliningradin alue ja miksi se kuuluu Venäjään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varniai",
+  "kysymys": "Miksi Samogitian piispa asui juuri Varniaissa, ja miksi hiippakunnan keskus siirrettiin sieltä pois?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tähän on selvä vastaus. Samogitian kastamisen jälkeen piispa asui Varniaissa, ja kaupungista tuli [[Samogitian]] katolisen kirkon keskus. Syytä siihen, miksi valinta osui juuri Varniaihin, en ole varma, mutta paikka oli seudun hiippakunnan keskus vuosisatojen ajan. Hiippakunnan keskus siirrettiin Kaunasiin sen jälkeen, kun Venäjän keisarikunnan viranomaiset olivat tukahduttaneet vuoden 1863 [[tammikuun kansannousun]]; siirto oli osa Venäjän vallan otetta katolisesta kirkosta. Varniain tunnetuimpiin piispoihin kuului [[Motiejus Valančius]]. Onpa siitä kauan aikaa.",
+  "linkit": [
+   "Samogitian",
+   "tammikuun kansannousun",
+   "Motiejus Valančius"
+  ],
+  "jatkot": [
+   "Miksi Venäjän keisarikunta rajoitti katolista kirkkoa Liettuassa?",
+   "Kuka oli piispa Motiejus Valančius ja mistä hän tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varniai",
+  "kysymys": "Miksi liettuankielisen kirjan painaminen oli merkittävä tapahtuma 1500-luvun Liettuassa?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Liettuan suuriruhtinaskunnassa kirjallisina kielinä käytettiin tuolloin muita kieliä, ja liettuankielinen teksti oli harvinaista. [[Katechizmas]], jonka Mikalojus Daukša valmisti julkaisukuntoon Samogitian piispa Merkelis Giedraitisin tuella, oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Kirjan merkitys oli siinä, että liettuaa alettiin käyttää painettuna ja kirkon opetuksessa, mikä tuki kielen asemaa ja kirjakielen kehitystä. Painetun kirjan ansiosta sanoma tavoitti suuremman joukon lukijoita kuin käsin kopioidut tekstit. Kirjapainon voima on minusta aina ollut ihan pöyristyttävä.",
+  "linkit": [
+   "Katechizmas"
+  ],
+  "jatkot": [
+   "Kuka oli Mikalojus Daukša ja mitä hän kirjoitti?",
+   "Miten Gutenbergin kirjapaino levisi Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varniai",
+  "kysymys": "Keitä samogitit ovat ja missä he asuvat?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Samogitit eli žemaitit ovat Liettuan luoteisosassa asuva liettualainen ryhmä, ja heidän aluettaan kutsutaan Samogitiaksi eli liettuaksi Žemaitijaksi. Alueella puhutaan oman murteensa, joka eroaa selvästi liettuan yleiskielestä. Samogitia kastettiin Liettuan suuriruhtinas Vytautaksen aikana 1400-luvun alussa, ja se oli yksi Euroopan viimeisistä kristillistetyistä alueista. Alueen [[Varniai]] oli aikanaan katolisen kirkon keskus. Selvä juttu, ei kai tästä tullut liian pitkä.",
+  "linkit": [
+   "Varniai"
+  ],
+  "jatkot": [
+   "Miten samogitin murre eroaa liettuan yleiskielestä?",
+   "Kuka oli Vytautas ja miksi hänet muistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varniai",
+  "kysymys": "Mikä oli tammikuun kansannousu 1863 ja ketä vastaan?",
+  "uusi": true,
+  "vastaus": "Kas vaan, painava aihe. Tammikuun kansannousu oli Venäjän vallan vastainen kansannousu entisen Puolan–Liettuan alueella, joka alkoi tammikuussa 1863 ja tukahdutettiin pääosin seuraavan vuoden aikana. Kansannousuun osallistui puolalaisia ja liettualaisia, ja sen seurauksena Venäjän viranomaiset kiristivät otettaan: Liettuassa muun muassa katolista kirkkoa rajoitettiin, ja liettuankielisten kirjojen painaminen latinalaisin kirjaimin kiellettiin vuonna 1864. Kansannousun taustalla oli tyytymättömyys Venäjän hallintoon ja halu palauttaa entisen valtion itsenäisyys. Tapahtumasta on yli sata viisikymmentä vuotta, ja tänään Liettua on itsenäinen maa.",
+  "linkit": [],
+  "jatkot": [
+   "Miksi liettuankielisten kirjojen painaminen kiellettiin 1864?",
+   "Milloin Liettua palautti itsenäisyytensä ja miten?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-varniai",
+  "kysymys": "Mihin kieliryhmään liettuan kieli kuuluu?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Liettuan kieli kuuluu indoeurooppalaisiin kieliin ja niiden [[balttilaisiin kieliin]]. Sen lähin elävä sukukieli on latvia, kun taas suomi kuuluu aivan eri kielikuntaan, uralilaisiin kieliin. Liettuan kieltä pidetään arkaaisena, koska se on säilyttänyt vanhoja piirteitä, joita useimmat muut indoeurooppalaiset kielet ovat menettäneet. Latvia ja liettua eivät kuitenkaan ole keskenään ymmärrettäviä ilman opiskelua. Kyllä minä viestejä kannoin, mutta kieliä en juuri vaihdellut.",
+  "linkit": [
+   "balttilaisiin kieliin"
+  ],
+  "jatkot": [
+   "Mitä muita balttilaisia kieliä on ollut?",
+   "Miten liettua eroaa suomesta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-panemune",
+  "kysymys": "Miksi Nemunas-joen ranta oli linnalle niin strateginen paikka?",
+  "uusi": false,
+  "vastaus": "Ai tota. Hyvä paikka tosiaan. Joki oli tärkeä kulku- ja kauppareitti, ja sen rannalla sijaitseva linna pystyi valvomaan liikennettä, sekä veneitä että rantaa pitkin kulkevia matkalaisia. Siksi Panemunėn paikasta kiisteltiin jo varhain: [[Saksalaisritarikunnan]] uskotaan rakentaneen ensimmäisen linnan vuonna 1313, mutta Liettuan suuriruhtinas Vytenis valtasi sen jo seuraavana vuonna. Nykyinen tiililinna rakennettiin vuosina 1604–1610 kauppias János Eperjesin teettämänä. Joet ovat linnuille parasta karttaa, sen minä sanon.",
+  "linkit": [
+   "Saksalaisritarikunnan"
+  ],
+  "jatkot": [
+   "Miten joet toimivat kauppareitteinä keskiajan Euroopassa?",
+   "Mitä Saksalaisritarikunta rakensi Nemunas-joen varrelle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-panemune",
+  "kysymys": "Miksi linna pääsi rappeutumaan 1800-luvulla, vaikka se oli ollut upea asuinlinna?",
+  "uusi": false,
+  "vastaus": "Niin, harmillista. Rappeutuminen liittyi omistajasukuun: tsaarin viranomaiset takavarikoivat linnan sen omistajasuvulta marraskuun kansannousun jälkeen. Marraskuun kansannousu oli Venäjän vallan vastainen kapina 1830-luvun alussa, ja sen jälkeen omaisuutta takavarikoitiin kapinaan osallistuneilta suvuilta. Ilman omistajaa, joka olisi huolehtinut rakennuksesta, linna jäi korjaamatta ja rappeutui. Nykyisin [[Panemunėn linna]] on avoinna kävijöille ja siellä on museo. Onneksi siitä on selvitty.",
+  "linkit": [
+   "Panemunėn linna"
+  ],
+  "jatkot": [
+   "Mikä oli marraskuun kansannousu 1830 ja ketkä siihen osallistuivat?",
+   "Millainen on Panemunėn linnan museo nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-panemune",
+  "kysymys": "Mikä Saksalaisritarikunta oli ja mitä se teki Baltiassa?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. [[Saksalaisritarikunta]] oli keskiajalla syntynyt sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa ristiretkien aikana 1100-luvun lopulla. Se siirsi toimintansa Pohjois-Eurooppaan ja valloitti 1200-luvulla Preussin sekä laajensi valtaansa Baltian alueella rakentamalla linnoja ja kaupunkeja. Ritarikunnan sodat liettualaisia vastaan jatkuivat vuosisatoja, ja Panemunėn seudulla sen rakentama linna on osa tätä historiaa. Ritarikunnan valta heikkeni 1400-luvulla, kun Puola ja Liettua löivät sen Grunwaldin taistelussa vuonna 1410. Aika pitkä oppitunti kyyhkyltä.",
+  "linkit": [
+   "Saksalaisritarikunta"
+  ],
+  "jatkot": [
+   "Miksi Grunwaldin taistelu oli niin tärkeä?",
+   "Mitä Preussille tapahtui ritarikunnan vallan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-panemune",
+  "kysymys": "Kuka oli suuriruhtinas Vytenis ja milloin hän hallitsi?",
+  "uusi": true,
+  "vastaus": "Mmm— tähän tarvitaan tarkkuutta. Vytenis oli Liettuan suuriruhtinas, jonka hallituskaudeksi mainitaan lähteissä noin 1295–1315, joten hän hallitsi Liettuaa 1300-luvun alussa. Hän oli yksi [[Gediminidien]] suvun varhaisista hallitsijoista, ja hänen aikanaan Liettuan ja Saksalaisritarikunnan välillä käytiin jatkuvia taisteluja. Panemunėn linnan valtaaminen vuonna 1314 liittyy juuri tähän sotaiseen aikaan. Tarkkoja vuosilukuja en uskalla vannoa. Mutta suuntaa antaa.",
+  "linkit": [
+   "Gediminidien"
+  ],
+  "jatkot": [
+   "Keitä Gediminidit olivat?",
+   "Miten Liettuan suuriruhtinaskunta syntyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-panemune",
+  "kysymys": "Mikä on Nemunas-joki ja mihin se laskee?",
+  "uusi": true,
+  "vastaus": "No jopas, iso joki. [[Nemunas]] on Itä-Euroopan suuria jokia, joka virtaa Valko-Venäjän ja Liettuan halki ja laskee lopulta Itämereen. Jokea pitkin kulkee osa Liettuan ja Venäjän Kaliningradin alueen rajaa. Joki on historiallisesti ollut tärkeä kulkureitti, ja sen varrella on useita linnoja, kuten Panemunėn linna. Tarkkaa suuta en ole aivan varma, mutta suunta on oikea. Joki kantaa minuakin.",
+  "linkit": [
+   "Nemunas"
+  ],
+  "jatkot": [
+   "Mitä jokia Liettuassa on Nemunasin lisäksi?",
+   "Mikä on Kaliningradin alue?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-siluva",
+  "kysymys": "Miksi katolilaiset menettivät Šiluvan kirkon 1500-luvulla, ja miten he saivat sen takaisin?",
+  "uusi": false,
+  "vastaus": "Joo, tän voin kertoa. Reformaation aikana monet seudun asukkaat kääntyivät kalvinismiin, ja Šiluvan kirkko suljettiin noin vuonna 1569. Viimeinen kirkkoherra hautasi kirkon arvoesineet ja asiakirjat rautalaatikossa kirkon lähelle. Erään uskomuksen mukaan Neitsyt Maria ilmestyi paikalle lapsi sylissään, ja asiakirjat löytyivät pian sen jälkeen, minkä ansiosta katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen [[basilika]] valmistui vuonna 1786, ja [[Šiluva]] on yhä tärkeä katolinen pyhiinvaelluskohde. Tarina on pitkä, mutta paikka näyttää ylhäältä rauhalliselta.",
+  "linkit": [
+   "basilika",
+   "Šiluva"
+  ],
+  "jatkot": [
+   "Mikä oli reformaatio ja miten se levisi Liettuaan?",
+   "Mikä on pyhiinvaellus ja miksi ihmiset tekevät sellaisia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-siluva",
+  "kysymys": "Miksi Preussista salakuljetettuja liettuankielisiä kirjoja jaettiin juuri pyhiinvaelluspaikalla?",
+  "uusi": false,
+  "vastaus": "Tuota niin, sepä on sattuvaa. Kirjoja jaettiin pyhiinvaellusjuhlilla, koska niillä kokoontui paljon ihmisiä eri puolilta maata, ja ihmisjoukossa kirjojen jakaminen oli helpompaa kuin muualla. Liettuankielisten kirjojen painaminen latinalaisin kirjaimin oli kielletty Venäjän vallan aikana, ja kirjat salakuljetettiin Preussista Liettuaan. En ole varma kaikista yksityiskohdista, mutta pyhiinvaellus oli yksi harvoista paikoista, joissa ihmiset kokoontuivat laajalti. Tällaista [[kirjansalakuljetusta]] voi pitää omana tapanaan pitää kieltä elossa. Kyl minä salakuljetuksesta tiedän, vaikka kirjeet olivat aina laillisia.",
+  "linkit": [
+   "kirjansalakuljetusta"
+  ],
+  "jatkot": [
+   "Miten kirjansalakuljettajat toimivat Liettuassa?",
+   "Mikä oli liettuankielinen painokielto ja milloin se päättyi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-siluva",
+  "kysymys": "Mikä reformaatio oli ja miten se vaikutti Liettuaan?",
+  "uusi": true,
+  "vastaus": "Kato, iso aihe. [[Reformaatio]] oli 1500-luvun uskonpuhdistus, joka alkoi Martti Lutherin vuonna 1517 aloittamasta liikkeestä ja jakoi läntisen kristikunnan katolisiin ja protestantteihin. Liettuaan se levisi erityisesti kalvinismina, jota seurasivat monet aateliset. Šiluvassa se johti kirkon sulkemiseen noin vuonna 1569. Myöhemmin katolinen kirkko vahvistui Liettuassa uudelleen, mikä näkyy esimerkiksi pyhiinvaelluskohteena. Tämä oli paljon sanottavaa yhdelle kyyhkylle.",
+  "linkit": [
+   "Reformaatio"
+  ],
+  "jatkot": [
+   "Mikä erotti luterilaisuuden ja kalvinismin toisistaan?",
+   "Miten katolinen kirkko vastasi uskonpuhdistukseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-siluva",
+  "kysymys": "Mitä sana basilika tarkoittaa kirkkoarkkitehtuurissa?",
+  "uusi": true,
+  "vastaus": "Ai se. Sana basilika tulee kreikasta ja tarkoitti antiikin Roomassa julkista kokoontumis- ja oikeustalon rakennusta. Myöhemmin kristityt omaksuivat tämän rakennustyypin kirkkojensa mallina, ja kirkkoarkkitehtuurissa [[basilika]] tarkoittaa pitkää, usein kolmilaivaista kirkkoa, jonka keskilaiva on sivulaivoja korkeampi. Katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle. Šiluvan kirkko on tällainen basilika. Kyllä minun sukuni tunsi roomalaiset rakennukset, vaikka ei ihan sisältä.",
+  "linkit": [
+   "basilika"
+  ],
+  "jatkot": [
+   "Millainen oli roomalaisen forumin kokoontumispaikka?",
+   "Mitä tarkoittaa kolmilaivainen kirkko?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-siluva",
+  "kysymys": "Miten Liettua joutui Venäjän vallan alle 1700-luvun lopulla?",
+  "uusi": true,
+  "vastaus": "No niin, raskasta historiaa. Puolan–Liettuan yhteisvaltio jaettiin 1700-luvun lopulla naapurivaltioiden kesken kolmessa jaossa, joista viimeinen tapahtui vuonna 1795. Tuolloin suurin osa Liettuan alueesta joutui Venäjän keisarikunnan alle, ja osa siirtyi Preussille. Yhteisvaltion häviäminen tarkoitti, että Liettua menetti oman valtionsa aina ensimmäisen maailmansodan jälkeiseen aikaan asti. [[Puolan jaot]] ovat siis syy siihen, miksi 1800-luvun Liettuassa vallitsi Venäjän valta. Onpa siitä pitkä aika.",
+  "linkit": [
+   "Puolan jaot"
+  ],
+  "jatkot": [
+   "Milloin Liettua palautti itsenäisyytensä ensimmäisen kerran?",
+   "Mikä oli Puolan–Liettuan yhteisvalta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tytuvenai",
+  "kysymys": "Mitä Tytuvėnaille tapahtui 1600- ja 1700-lukujen sodissa, ja miten kaupunki toipui?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tytuvėnain luostarikompleksin pääosa valmistui vuonna 1633, mutta ruotsalaisten ja venäläisten joukkojen hyökkäykset ja pitkät sodat jättivät kaupungin autioksi vuoteen 1711 mennessä. Toipuminen alkoi, kun kaupunki sai vuonna 1724 markkinaoikeuden, joka auttoi elinkeinoelämää elpymään. [[Bernardiiniluostari]] on säilynyt kaupungin tunnetuimpana nähtävyytenä. Kaupungin kohtalo oli tavallinen monille Liettuan kaupungeille tuona aikana, mutta en tunne kaikkia yksityiskohtia. Hyvä, että toipui.",
+  "linkit": [
+   "Bernardiiniluostari"
+  ],
+  "jatkot": [
+   "Mikä oli Liettuan ja Ruotsin välinen sota 1600-luvulla?",
+   "Miten markkinaoikeus auttoi kaupunkeja kehittymään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tytuvenai",
+  "kysymys": "Miksi Venäjän viranomaiset sulkivat luostarin vuonna 1864?",
+  "uusi": false,
+  "vastaus": "Ai tota. Painava aihe. Vuoden 1863 kansannousun jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864. [[Tammikuun kansannousu]] oli Venäjän vallan vastainen kapina, ja sen jälkeen Venäjän viranomaiset sulkivat monia katolisia luostareita Liettuassa ja entisen Puolan–Liettuan alueella. Tytuvėnain luostari ja sen kirkko ovat säilyneet, ja ne ovat nykyisin tunnettu matkailukohde. Tapahtumista on kulunut yli sata viisikymmentä vuotta.",
+  "linkit": [
+   "Tammikuun kansannousu"
+  ],
+  "jatkot": [
+   "Mitä muita luostareita Venäjän viranomaiset sulkivat Liettuassa?",
+   "Mikä on bernardiiniluostari ja miten munkit elävät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tytuvenai",
+  "kysymys": "Keitä bernardiinit ovat ja mistä ne ovat saaneet nimensä?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Bernardiinit]] ovat fransiskaanien liikkeeseen kuuluva munkkikunta, joka on saanut nimensä Sienan Bernardinosta, 1400-luvun saarnaajasta ja pyhimyksestä. Puolassa ja Liettuassa fransiskaaniveljiä kutsuttiin yleisesti bernardiineiksi. Veljet elivät yksinkertaista elämää, saarnasivat ja ylläpitivät luostareita. Tytuvėnain luostari on yksi Liettuan tunnetuista bernardiiniluostareista. Nimi tuli Italiasta, ja se on tavallaan lähes sukulaisemme maasta.",
+  "linkit": [
+   "Bernardiinit"
+  ],
+  "jatkot": [
+   "Kuka oli Sienan Bernardino?",
+   "Mikä on fransiskaanien munkkikunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tytuvenai",
+  "kysymys": "Mikä oli Lublinin unioni ja mitä se muutti Liettuassa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Lublinin unioni oli vuonna 1569 solmittu sopimus, jolla Puolan kuningaskunta ja Liettuan suuriruhtinaskunta yhdistettiin yhteisvaltioksi, jota johti yhteinen hallitsija ja valtiopäivät. Liettua säilytti oman hallintonsa, lakinsa ja armeijansa, mutta liitto sitoi maat tiiviisti yhteen vuosisadoiksi. Unioni vaikutti myös Liettuan aatelistoon ja kulttuuriin, sillä puolan kielen ja kulttuurin vaikutus lisääntyi. [[Lublinin unioni]] hajosi vasta, kun yhteisvaltio jaettiin 1700-luvun lopulla. Sopimus oli pitkä, mutta kerroin sen lyhyesti.",
+  "linkit": [
+   "Lublinin unioni"
+  ],
+  "jatkot": [
+   "Mitä tapahtui yhteisvallalle 1700-luvulla?",
+   "Miten Liettuan aatelisto suhtautui unioniin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tytuvenai",
+  "kysymys": "Mikä on markkinaoikeus ja miksi se oli kaupungille tärkeä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Markkinaoikeus]] oli hallitsijan tai maanomistajan myöntämä lupa pitää kaupungissa säännöllisiä markkinoita. Se oli kaupungille tärkeä, koska markkinapäivät toivat paikalle kauppiaita ja ostajia ympäri seutua, mikä vilkastutti kauppaa ja toi tuloja kaupungille. Tytuvėnai sai markkinaoikeuden vuonna 1724, ja se auttoi kaupunkia toipumaan sotien jäljiltä. Markkinat olivat myös tapa vaihtaa uutisia, mikä on viestinviejälle aina mieleen. Torilla kannattaa käydä, siellä leivonnaisiakin on varmasti.",
+  "linkit": [
+   "Markkinaoikeus"
+  ],
+  "jatkot": [
+   "Mitä markkinat tarkoittivat kyläläisille ennen kauppoja?",
+   "Miten kaupunki sai kaupunkioikeudet keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alytus",
+  "kysymys": "Miksi Alytus oli vuosisatoja jaettu kahteen erilliseen osaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tarkkaa syytä jaolle en ole varma, joten sanon sen suoraan: Alytuksen kaksi osaa tunnetaan yhä nimillä Alytus I ja Alytus II, ja kaupunki sijaitsee [[Nemunas]]-joen rannalla, mikä on luontevin selitys kahdelle erilliselle asutukselle. Todennäköisesti osat kehittyivät pitkään omina yksikköinään, mutta tätä en pysty varmistamaan. Varmaa on, että kuningas [[Stefan Báthory]] antoi kaupungille kaupunkioikeudet vuonna 1581. Mieluummin myönnän ton kuin keksin tarinan.",
+  "linkit": [
+   "Nemunas",
+   "Stefan Báthory"
+  ],
+  "jatkot": [
+   "Mistä Nemunas-joki saa alkunsa?",
+   "Milloin Alytus sai kaupunkioikeudet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alytus",
+  "kysymys": "Mitä linnake vartioi Alytuksen paikalla 1300-luvulla?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Alytuksen paikalla 1300-luvulla ollut pieni puinen [[linnake]] sijaitsi [[Saksalaisen ritarikunnan]] rajalla, joten sen tehtävänä oli todennäköisesti vartioida rajaa ja suojata seutua ritarikunnan sotaretkiltä. Paikka mainitaan ensimmäisen kerran vuonna 1377. Linnake oli puinen ja pieni, ei siis suuri kivilinna, vaan rajaseudun vartiopaikka.",
+  "linkit": [
+   "linnake",
+   "Saksalaisen ritarikunnan"
+  ],
+  "jatkot": [
+   "Mikä Saksalainen ritarikunta oli?",
+   "Miksi rajalinnakkeet rakennettiin usein puusta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alytus",
+  "kysymys": "Mikä on Nemunas-joki ja mihin se laskee?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Nemunas on Liettuan tärkein joki, ja se virtaa Valko-Venäjältä Liettuan halki ja muodostaa osan Liettuan ja Venäjän Kaliningradin alueen rajasta. Se laskee Itämeren [[Kuurinkielekkeen laguuniin]], joka on erotettu avomerestä pitkällä hiekkaniemellä. Joen varrella sijaitsevat muun muassa Alytus, [[Kaunas]] ja Birštonas. Ei paha kyyhkyltä.",
+  "linkit": [
+   "Kuurinkielekkeen laguuniin",
+   "Kaunas"
+  ],
+  "jatkot": [
+   "Mikä on Kuurinkielekkeen laguuni?",
+   "Mitä kaupunkeja Nemunas-joen varrella sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alytus",
+  "kysymys": "Mikä on Liettuan virallinen kieli ja mihin kieliperheeseen se kuuluu?",
+  "uusi": true,
+  "vastaus": "No niin, tämän osaan kertoa. Liettuan virallinen kieli on [[liettua]], joka kuuluu indoeurooppalaisten kielten balttilaiseen haaraan. Sen lähin elossa oleva sukukieli on [[latvia]], mutta kielet eivät ole keskenään ymmärrettäviä ilman opiskelua. Liettua on säilyttänyt paljon vanhoja piirteitä, minkä vuoksi kielitieteilijät pitävät sitä arvokkaana tutkimuskohteena. Sukulaisuus suomen kanssa tästä ei löydy, mikä on pieni pettymys.",
+  "linkit": [
+   "liettua",
+   "latvia"
+  ],
+  "jatkot": [
+   "Mikä on latvian kielen suhde liettuaan?",
+   "Mitä balttilaiset kielet ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-alytus",
+  "kysymys": "Millainen alue Dzūkija on?",
+  "uusi": true,
+  "vastaus": "Ai tota. [[Dzūkija]] on Liettuan kaakkoisosan historiallinen alue, jonka tunnetuimpia piirteitä ovat laajat metsät, hiekkamaat ja oma murteensa, dzūkin murre. Alue tunnetaan myös sienestyksestä ja marjastuksesta sekä vanhoista kansanperinteistä. Sen historiallinen keskus on Alytus, ja alueella sijaitsee myös [[Dzūkijan kansallispuisto]]. Metsät näyttävät ylhäältä melkein loputtomilta, sen verran sanon.",
+  "linkit": [
+   "Dzūkija",
+   "Dzūkijan kansallispuisto"
+  ],
+  "jatkot": [
+   "Mitä muita historiallisia alueita Liettuassa on?",
+   "Millainen on dzūkin murre?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marijampole",
+  "kysymys": "Miksi liettuankielisiä kirjoja salakuljetettiin 1800-luvulla juuri Marijampolen seudulla?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Venäjän valta oli kieltänyt liettuankieliset kirjat latinalaisin kirjaimin, ja Marijampolen seutu sijaitsi lähellä Preussin rajaa, joten painetut kirjat oli helppo tuoda rajan yli Preussin puolelta. Tämän vuoksi seudusta tuli [[liettualaisen kansallisen heräämisen]] keskus, ja kirjojen kuljettajat tunnettiin nimellä kirjankantajat. Kielto oli voimassa vuosikymmenten ajan, aina 1900-luvun alkuun saakka. Kaupunki kuului tuolloin [[Venäjän keisarikuntaan]], ja Preussi oli rajan toisella puolella.\n\nKirjeiden ja kirjojen kantajat ovat minulle melkein kollegoita, vaikka heillä oli selkäreput eikä siipiä. Sukuni olisi ollut vähän kateellinen.",
+  "linkit": [
+   "liettualaisen kansallisen heräämisen",
+   "Venäjän keisarikuntaan"
+  ],
+  "jatkot": [
+   "Mikä oli Liettuan kansallinen herääminen?",
+   "Miksi Venäjä kielsi liettuankieliset kirjat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marijampole",
+  "kysymys": "Miksi Marijampolen puutalot vaihtuivat 1800-luvulla kivitaloiksi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Syynä oli vuoden 1868 palo, joka tuhosi monta kaupungin puutaloa. Puurakennukset syttyvät helposti ja tuli leviää niissä nopeasti, joten palon jälkeen taloja alettiin rakentaa kivestä, koska se on paljon paloturvallisempaa. Kaupunki rakennettiin siis osittain uudelleen paloturvallisemmaksi. Sama ajatus ohjasi muuallakin: palosta opittiin, ja kivi tuli puun tilalle.",
+  "linkit": [],
+  "jatkot": [
+   "Miksi kivitalot ovat paloturvallisempia kuin puutalot?",
+   "Mitä muita suuria kaupunkipaloja Euroopassa on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marijampole",
+  "kysymys": "Mistä Šešupė-joki virtaa ja mihin se päätyy?",
+  "uusi": true,
+  "vastaus": "Ai se. Šešupė on Nemunas-joen sivujoki, ja se virtaa Liettuan lounaisosassa muun muassa [[Marijampolen]] kautta. Joen alajuoksulla se muodostaa osan Liettuan ja Venäjän Kaliningradin alueen välistä rajaa, ja lopulta se yhtyy Nemunas-jokeen. Marijampolessa joki jakaa kaupungin kahteen osaan, joita yhdistävät sillat. Siltoja on kuusi, ja ne ovat minusta kauniita ylhäältä katsottuna.",
+  "linkit": [
+   "Marijampolen"
+  ],
+  "jatkot": [
+   "Mistä Šešupė-joen nimi tulee?",
+   "Mitä sivujoki tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marijampole",
+  "kysymys": "Millainen alue Suvalkija on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. [[Suvalkija]] on Liettuan lounaisosan historiallinen alue, joka tunnetaan hedelmällisistä pelloistaan ja maanviljelystään. Sen asukkaiden sanotaan olleen perinteisesti ahkeria ja säästäväisiä viljelijöitä, mutta tällainen yleistys ei päde kaikkiin. Alueen kulttuurikeskus on Marijampolė, ja seutu liittyy myös [[Liettuan kansalliseen heräämiseen]] 1800-luvulla. Maaseudun pelloista näkee ylhäältä hyvin, miten tasaista maa on.",
+  "linkit": [
+   "Suvalkija",
+   "Liettuan kansalliseen heräämiseen"
+  ],
+  "jatkot": [
+   "Mitä Suvalkijassa viljellään?",
+   "Miksi alue sai nimensä Suvalkista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marijampole",
+  "kysymys": "Mitkä maat rajaavat nykyistä Liettuaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Liettuan naapurimaita ovat pohjoisessa [[Latvia]], idässä ja kaakossa [[Valko-Venäjä]], etelässä [[Puola]] sekä lounaassa Venäjän Kaliningradin alue. Lisäksi Liettuan länsipuolella on Itämeren rannikko. Liettua on yksi kolmesta Baltian maasta, ja sen pohjoinen naapuri Latvia on samalla Baltian keskimmäinen valtio. Rajoja on siis monta, ja minusta ne ovat yhä aika kiinnostavia.",
+  "linkit": [
+   "Latvia",
+   "Valko-Venäjä",
+   "Puola"
+  ],
+  "jatkot": [
+   "Mitkä ovat kolme Baltian maata?",
+   "Mikä Kaliningradin alue on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vistytis",
+  "kysymys": "Miksi Vištytis alkoi taantua, vaikka rautatie rakennettiin vain muutaman kilometrin päähän?",
+  "uusi": false,
+  "vastaus": "No jopas. Kaupunki jäi rautatien ulkopuolelle: kun rautatie Königsbergistä Venäjälle rakennettiin vuonna 1861 [[Kybartain]] kautta, kaupan ja liikenteen painopiste siirtyi sinne. Muutama kilometri on junan aikakaudella merkittävä matka, koska tavarat ja ihmiset kulkivat sinne, missä juna pysähtyi. Vištytis ei enää ollut tärkeä kauppapaikka, ja kaupunki taantui nopeasti, vaikka sen katurakenne säilyi.",
+  "linkit": [
+   "Kybartain"
+  ],
+  "jatkot": [
+   "Mikä Kybartai on?",
+   "Miten rautatiet muuttivat kaupunkien asemaa Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vistytis",
+  "kysymys": "Mikä Vištytisin lähellä oleva suuri kivi on, ja miksi sitä on säilytetty?",
+  "uusi": false,
+  "vastaus": "Hmm, tuota niin. [[Vištytis-kivi]] on suuri siirtolohkare, siis jääkauden mannerjäätikön kuljettama kivi. Täsmällisiä mittoja en muista, joten jätän ne pois, enkä myöskään ole varma, minkä virallisen suojelun piirissä se on. Tällaiset suuret kivet ovat usein luonnonmuistomerkkejä, ja niihin liittyy paikallisia tarinoita ja perinteitä. Kiven vieressä kulkee järven ranta, ja ylhäältä katsottuna maisema on kaunis.",
+  "linkit": [
+   "Vištytis-kivi"
+  ],
+  "jatkot": [
+   "Mikä on siirtolohkare?",
+   "Miten jääkausi muovasi Liettuan maisemaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vistytis",
+  "kysymys": "Mitä Kaliningradin alue on ja kenen alueeseen se kuuluu?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. [[Kaliningradin alue]] on Venäjän osa, joka sijaitsee Liettuan ja Puolan välissä Itämeren rannalla. Se ei rajoitu muuhun Venäjään, joten sitä sanotaan eksklaaviksi. Alueen keskus on Kaliningrad, joka tunnettiin aiemmin nimellä [[Königsberg]]. Nykytilanteesta tietoni voivat olla vanhentuneet. Vištytis on aivan alueen rajan tuntumassa.",
+  "linkit": [
+   "Kaliningradin alue",
+   "Königsberg"
+  ],
+  "jatkot": [
+   "Miksi Königsbergin nimi vaihtui?",
+   "Mitä eksklaavi tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vistytis",
+  "kysymys": "Miten jääkausi muovasi Liettuan järvimaisemaa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Jääkauden aikana mannerjäätikkö peitti suuren osan Pohjois-Eurooppaa, ja sen sulaessa se jätti jälkeensä moreenia, harjuja, kumpuja ja painanteita. Painanteisiin muodostui järviä, ja Liettuassa niitä on runsaasti, erityisesti koillisessa ja kaakossa. Jäätikkö kuljetti mukanaan myös suuria kiviä, joita kutsutaan siirtolohkareiksi. Tämän kaiken oli pakko olla hidasta puuhaa, kun ajattelee, miten monta vuotta siihen meni.",
+  "linkit": [],
+  "jatkot": [
+   "Mikä on moreeni?",
+   "Miten järvi syntyy jäätikön sulaessa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-vistytis",
+  "kysymys": "Mitä tarkoittaa siirtolohkare?",
+  "uusi": true,
+  "vastaus": "Ai tota. [[Siirtolohkare]] on kivi, jonka mannerjäätikkö on kuljettanut pitkän matkan ja jättänyt sulaessaan paikkaan, jonka kallioperästä se ei ole peräisin. Siksi se eroaa ympäröivästä maaperästä. Siirtolohkareita on paljon esimerkiksi Suomessa ja Baltiassa. Tutkijat voivat selvittää kiven kallioperän perusteella, mistä suunnasta jäätikkö sen toi. Jotkut ovat valtavia, ja minä kyllä kunnioitan sellaista matkaa.",
+  "linkit": [
+   "Siirtolohkare"
+  ],
+  "jatkot": [
+   "Miten tutkijat selvittävät kiven alkuperän?",
+   "Missä Suomessa on suuria siirtolohkareita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zarasai",
+  "kysymys": "Miksi Zarasain keskusta rakennettiin vuonna 1837 hevosenkengän muotoiseksi?",
+  "uusi": false,
+  "vastaus": "No niin, tää on hyvä tarina. Vuoden 1834 tulipalo poltti lähes koko keskustan, ja kaupunki rakennettiin uudelleen vuonna 1837 uuden kaavan mukaan, jossa on hevosenkengän muotoinen aukio ja siitä säteilevät kadut. Tarkoituksena oli ehkäistä suuria tulipaloja, ja kaava on säilynyt lähes muuttumattomana. Säteittäiset kadut ja aukio antavat tulelle vähemmän helppoja reittejä kuin tiheä kujien verkko, ja [[Zarasain]] kaupunkikaava on edelleen tunnistettavissa.\n\nYlhäältä se hevosenkenkä näyttää melkein siltä kuin joku olisi piirtänyt sen tarkoituksella. Se kyllä oli piirretty, mutta pidän siitä silti.",
+  "linkit": [
+   "Zarasain"
+  ],
+  "jatkot": [
+   "Millainen kaupunkikaava on säteittäinen?",
+   "Mitä Zarasain ympäristössä on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zarasai",
+  "kysymys": "Mikä kansa antoi Zarasaille nimen, joka viittaa järviin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Nimi juontuu [[seloonien]] kielen sanasta, joka tarkoittaa järveä. Seloonit olivat balttilainen heimo, joka asui nykyisen Liettuan ja Latvian alueilla, ja heidän kielensä on kuollut sukupuuttoon. Zarasai on nimensä veroinen, sillä kaupunkia ympäröivät lukuisat järvet ja joet. Nimi on siis säilynyt vanhan kielen jäänteenä.",
+  "linkit": [
+   "seloonien"
+  ],
+  "jatkot": [
+   "Keitä seloonit olivat?",
+   "Mitä muita balttilaisia heimoja on ollut?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zarasai",
+  "kysymys": "Kuka oli tsaari Nikolai I?",
+  "uusi": true,
+  "vastaus": "Kas vaan. [[Nikolai I]] oli Venäjän keisari ja Suomen suuriruhtinas, joka hallitsi vuodesta 1825 vuoteen 1855. Hänen valtakauttaan leimasivat vahva keskusjohtoisuus, sensuuri ja sotilaallisuus. Hän tunnettiin myös vuoden 1830 Puolan marraskuun kansannousun kukistamisesta, ja Liettua kuului hänen aikanaan [[Venäjän keisarikuntaan]]. Zarasai nimettiin hetkeksi hänen poikansa mukaan. Pitkä valtakausi, ja minä muistan sen hyvin.",
+  "linkit": [
+   "Nikolai I",
+   "Venäjän keisarikuntaan"
+  ],
+  "jatkot": [
+   "Millainen Venäjän keisarikunta oli 1800-luvulla?",
+   "Mikä oli marraskuun kansannousu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zarasai",
+  "kysymys": "Mikä kaupunki Riika on?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Riika]] on Latvian pääkaupunki ja maan suurin kaupunki, joka sijaitsee Väinäjoen suulla Itämeren Riianlahden rannalla. Se on ollut tärkeä kauppakaupunki keskiajalta lähtien ja kuului [[Hansaliittoon]]. Vanhakaupunki ja jugend-arkkitehtuuri ovat tunnettuja, ja kaupungin vanhakaupunki on [[Unescon maailmanperintökohde]]. Riika oli myös se kaupunki, josta Zarasain vanha kauppatie alkoi, ja se on minusta kunnioitettava kirjekyyhkyn silmin.",
+  "linkit": [
+   "Riika",
+   "Hansaliittoon",
+   "Unescon maailmanperintökohde"
+  ],
+  "jatkot": [
+   "Mikä Hansaliitto oli?",
+   "Mitä jugend tarkoittaa arkkitehtuurissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zarasai",
+  "kysymys": "Milloin Liettua julisti itsenäisyytensä ensimmäisen kerran?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Liettua julisti itsenäisyytensä 16. helmikuuta 1918 Vilnassa, kun ensimmäinen maailmansota oli vielä käynnissä ja Venäjän keisarikunta oli romahtanut. Itsenäisyys kesti toiseen maailmansotaan asti, ja [[Neuvostoliitto]] liitti maan itseensä vuonna 1940. Liettua palautti itsenäisyytensä 11. maaliskuuta 1990, ja se oli ensimmäinen neuvostotasavalta, joka teki niin. Onpas siit pitkä aika.",
+  "linkit": [
+   "Neuvostoliitto"
+  ],
+  "jatkot": [
+   "Milloin Liettua liittyi Euroopan unioniin?",
+   "Miten Baltian maat ovat kehittyneet itsenäistymisen jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birstonas",
+  "kysymys": "Mistä Birštonasin nimi mahdollisesti tulee?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Nimen tarkkaa alkuperää en ole varma, ja siitä on useita arvailuja, joten en halua keksiä selitystä. Tiedän, että paikka mainitaan ensimmäisen kerran 1300-luvulla [[Saksalaisen ritarikunnan]] kronikoissa \"suolaisen veden tilana\", mikä viittaa alueen kivennäisvesiin. Se ei kuitenkaan välttämättä ole nimen alkuperä. Kylpyläkaupunki [[Birštonas]] sijaitsee Nemunas-joen rannalla. Kerrottakoon, että tässä en ole asiantuntija.",
+  "linkit": [
+   "Saksalaisen ritarikunnan",
+   "Birštonas"
+  ],
+  "jatkot": [
+   "Mikä on kivennäisvesi?",
+   "Mikä Saksalainen ritarikunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birstonas",
+  "kysymys": "Miksi suuriruhtinaat matkustivat Birštonasiin jo 1300-luvulla?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Birštonas oli Liettuan suuriruhtinaille ja aatelistolle metsästysretkien kohde 1300–1500-luvuilla, koska seudun metsät ja Nemunas-joen ympäristö tarjosivat hyvän riistamaan. Paikka tunnettiin myös \"suolaisen veden tilana\", mikä viittaa kivennäisvesiin. Kylpyläkäyttö alkoi kuitenkin vasta vuonna 1846, ja sitä ennen tärkeämpää oli metsästys. Metsät ovat nytkin paikalla, vaikka ruhtinaat ovat poissa.",
+  "linkit": [],
+  "jatkot": [
+   "Millaista metsästys oli keskiajan Liettuassa?",
+   "Milloin Birštonasin kylpylä perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birstonas",
+  "kysymys": "Mikä Kaunas on ja missä se sijaitsee?",
+  "uusi": true,
+  "vastaus": "No jopas. [[Kaunas]] on Liettuan toiseksi suurin kaupunki, ja se sijaitsee maan keskiosassa Nemunas- ja Neris-jokien yhtymäkohdassa. Kaupunki oli Liettuan väliaikainen pääkaupunki kahden maailmansodan välisenä aikana, kun Vilna kuului Puolalle. Kaupunki tunnetaan muun muassa vanhastakaupungistaan ja modernistisesta arkkitehtuuristaan. Birštonas on siitä noin 30 kilometrin päässä. Ihan hyvin muistin kaiken tämän.",
+  "linkit": [
+   "Kaunas"
+  ],
+  "jatkot": [
+   "Miksi Kaunas oli väliaikainen pääkaupunki?",
+   "Mitä modernistinen arkkitehtuuri tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birstonas",
+  "kysymys": "Mikä Saksalainen ritarikunta oli?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. [[Saksalainen ritarikunta]] oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka syntyi ristiretkien aikana Pyhällä maalla 1100-luvun lopulla. Myöhemmin se siirsi toimintansa Itämeren alueelle, perusti Preussin ritarikunnan valtion ja kävi pitkään sotaa pakanallisia heimoja ja Liettuaa vastaan. Se hävisi ratkaisevasti [[Grunwaldin taistelussa]] vuonna 1410. Nämä ovat vanhoja asioita, ja onneksi niistä on jo pitkä aika.",
+  "linkit": [
+   "Saksalainen ritarikunta",
+   "Grunwaldin taistelussa"
+  ],
+  "jatkot": [
+   "Mitä Grunwaldin taistelussa tapahtui?",
+   "Millainen oli Liettuan suuriruhtinaskunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-birstonas",
+  "kysymys": "Mikä on kivennäisvesi?",
+  "uusi": true,
+  "vastaus": "Ai se. [[Kivennäisvesi]] on vettä, joka sisältää luonnostaan liuenneita mineraaleja, kuten kalsiumia, magnesiumia ja natriumia, koska se on kulkenut maa- tai kallioperän läpi. Sitä on käytetty juomana ja kylpyhoidoissa pitkään, ja monet kylpyläkaupungit ovat syntyneet kivennäislähteiden ympärille. Hoitovaikutuksista on esitetty paljon väitteitä, mutta niiden todistusvoima vaihtelee. Birštonaskin on tällainen kaupunki. Vesi on vesi, mutta kyllä minä tykkään jokaisesta lähteestä.",
+  "linkit": [
+   "Kivennäisvesi"
+  ],
+  "jatkot": [
+   "Mitä kylpylähoidot ovat?",
+   "Mitkä kylpyläkaupungit ovat tunnettuja Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakai-niemekelinna",
+  "kysymys": "Kuka linnan rakennutti ja mihin sitä käytettiin sen jälkeen, kun se menetti puolustusmerkityksensä?",
+  "uusi": false,
+  "vastaus": "Kas vaan, linnakysymys. Tän minä näin katolta jo kauempaa. Linnan rakennutti suurruhtinas [[Kęstutis]] 1300-luvun jälkipuoliskolla, ja sen tarkoitus oli puolustaa aluetta [[Saksalaista ritarikuntaa]] vastaan. Kun [[Melnon rauha]] vuonna 1422 vei linnalta puolustusmerkityksen, suurruhtinaat ottivat sen asuinpaikakseen. Linnassa tapahtui myös väkivaltaa: Sigismund Kęstutaitis murhattiin siellä vuonna 1440. Sitä käytettiin 1500-luvulla lisäksi vankilana. Pitkä tarina yhdeksi linnaksi, sanon minä.",
+  "linkit": [
+   "Kęstutis",
+   "Saksalaista ritarikuntaa",
+   "Melnon rauha"
+  ],
+  "jatkot": [
+   "Mikä sodista tuhosi linnan lopullisesti?",
+   "Keitä dominikaanimunkit olivat ja mitä he linnan alueelle rakensivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakai-niemekelinna",
+  "kysymys": "Mikä sodista tuhosi linnan lopullisesti?",
+  "uusi": false,
+  "vastaus": "Ai se. Tähän minä osaan vastata ihan suoraan. Linnan tuhosi pahoin Venäjän ja Puolan välinen sota, joka kesti vuosina 1654–1667. Sen jälkeen linnaa ei koskaan rakennettu uudelleen, toisin kuin lähellä sijaitseva saarilinna. Vuonna 1678 alue luovutettiin dominikaanimunkeille, jotka rakensivat sinne luostarin ja kirkon 1770-luvulla, ja nykyään jäljellä olevat muurit ja tornit ovat [[Trakain kansallispuiston]] suojelemia. Hyvä muistaa, että tuhoutunut ei tarkoita kadonnutta.",
+  "linkit": [
+   "Trakain kansallispuiston"
+  ],
+  "jatkot": [
+   "Miksi saarilinna rakennettiin uudelleen mutta tämä jäi raunioksi?",
+   "Millaista Liettuan suuriruhtinaskunta oli 1600-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakai-niemekelinna",
+  "kysymys": "Keitä olivat Saksalaisen ritarikunnan jäsenet?",
+  "uusi": true,
+  "vastaus": "Mmm— ritarit. Heistä riittää kerrottavaa. Saksalainen ritarikunta oli keskiajalla syntynyt ritarillinen ja kristillinen järjestö, joka sai alkunsa ristiretkien aikana Pyhällä maalla. Jäsenet olivat sekä ritareita että munkkeja, ja järjestö perusti myöhemmin oman valtionsa Preussiin ja Itämeren itärannalle. Liettuan suuriruhtinaskunta oli pitkään sen vastustaja, ja juuri sitä vastaan [[Trakain]] linnat rakennettiin. Tarkkoja vuosilukuja en rupea arvailemaan, koska tämä on sellainen aihe, jossa lähteet vaihtelevat.",
+  "linkit": [
+   "Trakain"
+  ],
+  "jatkot": [
+   "Miten Liettua lopulta kääntyi kristinuskoon?",
+   "Mikä oli Grunwaldin taistelu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakai-niemekelinna",
+  "kysymys": "Mikä oli Liettuan suuriruhtinaskunta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kyyhkyt ovat lennelleet sen rajojen yli. Liettuan suuriruhtinaskunta oli keskiajalla ja uuden ajan alussa Euroopan itäosissa sijainnut laaja valtio, jonka keskuksia olivat [[Vilna]] ja Trakai. Se syntyi 1200-luvun lopulla tai sen tienoilla ja liittyi vähitellen läheiseen yhteyteen Puolan kanssa; 1500-luvulla valtiot muodostivat yhdessä Puola–Liettuan kaksoisvaltakunnan. Sen alueeseen kuului aikoinaan nykyisen Liettuan lisäksi suuria osia nykyisestä Valko-Venäjästä ja Ukrainasta. Valtio päättyi 1700-luvun lopulla Puolan–Liettuan jakoihin. Tarkkoja päivämääriä en nyt väitä.",
+  "linkit": [
+   "Vilna"
+  ],
+  "jatkot": [
+   "Mitä Puola–Liettuan kaksoisvaltakunta tarkoitti?",
+   "Kuka oli Vytautas Suuri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trakai-niemekelinna",
+  "kysymys": "Mitä tarkoittaa niemekelinna?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Sana on kyllä helppo, mutta kerrotaan se kunnolla. Niemekelinna on linna, joka on rakennettu niemelle eli vesistöön työntyvälle maakaistaleelle, jolloin vesi ympäröi sitä useammalta sivulta ja suojaa sitä. Maayhteyttä voitiin puolustaa erikseen esimerkiksi muurilla tai vallihaudalla. Saarilinnasta se eroaa siinä, että saarilinna seisoo kokonaan veden ympäröimänä saarella. Trakain alueella on kumpaakin tyyppiä, jotka ovat rakennetut samoille vesille. Minulle riittää, että linnan edessä on hyvä laituri.",
+  "linkit": [],
+  "jatkot": [
+   "Miksi linnoja rakennettiin järvien rannoille ja saarille?",
+   "Mitä vallihauta oli?"
+  ]
+ },
+ {
+  "kohde": "nosto:kursiu-nerija",
+  "kysymys": "Miten hiekkadyyni voi vaeltaa?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Tän minä olen nähnyt ylhäältä päin. Hiekkadyyni liikkuu tuulen vaikutuksesta: tuuli nostaa hiekkajyviä dyynin loivaa tuulenpuoleista rinnettä ylöspäin ja pudottaa niitä harjan yli jyrkälle suojanpuoleiselle rinteelle. Kun tätä jatkuu vuosikausia, koko dyyni siirtyy hitaasti eteenpäin. [[Kuurinkynnäksellä]] vaeltavat dyynit hautasivat alleen kokonaisia kyliä sen jälkeen, kun niemen metsät oli hakattu 1600- ja 1700-luvuilla. Kasvillisuus pysäyttää tämän liikkeen, ja siksi [[dyynit]] vaeltavat vain, jos ne ovat paljaita. Onneksi kyliä ehdittiin siirtää.",
+  "linkit": [
+   "Kuurinkynnäksellä",
+   "dyynit"
+  ],
+  "jatkot": [
+   "Miten dyynit pysäytettiin Kuurinkynnäksellä?",
+   "Mitkä asiat vaikuttavat dyynin vaellusnopeuteen?"
+  ]
+ },
+ {
+  "kohde": "nosto:kursiu-nerija",
+  "kysymys": "Miksi metsän kaataminen liikutti hiekkaa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Se on oikeastaan aika selkeä juttu. Metsä sitoo hiekan: puiden juuret pitävät maan paikoillaan, ja latvusto sekä alikasvillisuus hidastavat tuulta pinnan lähellä. Kun [[Kuurinkynnäksen]] metsät hävisivät 1600- ja 1700-luvuilla laidunnuksen, hakkuiden ja veneenrakennuksen takia, tuuli pääsi suoraan hiekkaan ja alkoi kuljettaa sitä. Dyynit lähtivät liikkeelle ja hautasivat alleen kokonaisia kyliä. Peitteen poistaminen riittää siis, kun maaperä on näin kevyttä ja rakeista. Metsää menee vähän aikaa kaataa, mutta kasvattaa sitä menee vuosikymmeniä.",
+  "linkit": [
+   "Kuurinkynnäksen"
+  ],
+  "jatkot": [
+   "Millaisia puita ja kasveja hiekalle istutettiin?",
+   "Miksi hiekkamaa on erityisen herkkä tuulelle?"
+  ]
+ },
+ {
+  "kohde": "nosto:kursiu-nerija",
+  "kysymys": "Voiko maanmuodon säilyttää istuttamalla?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: tähän on ihan oikea esimerkki. Kyllä voi, ainakin tiettyyn rajaan asti. Preussin hallitus aloitti [[Kuurinkynnäksellä]] laajat istutukset vuonna 1825, ja noin sadan vuoden työ mäntyineen ja rantakauroineen pysäytti dyynien vaelluksen. Kasvillisuus sitoo hiekan ja pitää muodon paikallaan, mutta suoja vaatii huolenpitoa: jos peite rikkoutuu, tuuli pääsee taas hiekkaan. En ole varma, miten nykyinen ylläpito käytännössä järjestetään, mutta [[Unesco]] otti niemen maailmanperintöluetteloon vuonna 2000. Ihminen kyllä sotkee ja korjaa omaa sotkuaan hitaasti.",
+  "linkit": [
+   "Kuurinkynnäksellä",
+   "Unesco"
+  ],
+  "jatkot": [
+   "Mitä tapahtuu, jos niemen kasvillisuus tuhoutuu?",
+   "Miten maailmanperintökohteita suojellaan?"
+  ]
+ },
+ {
+  "kohde": "nosto:kursiu-nerija",
+  "kysymys": "Mikä on Kuurinlahti?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kyyhkynä minä katson tällaisia ylhäältä. Kuurinlahti on matala rannikkolahti Itämeren eteläosassa, ja se on erotettu merestä [[Kuurinkynnäksellä]] eli pitkällä hiekkaniemellä. Lahteen laskee [[Nemunas]]-joki, joten sen vesi on suurelta osin vähäsuolaista. Lahti kuuluu osittain Liettuaan ja osittain Venäjään. En ole varma, kuinka tarkasti sen syvyys ja suolaisuus vaihtelevat vuodenaikojen mukaan, mutta matala se on. Hyvä paikka katsella lintuparvia.",
+  "linkit": [
+   "Kuurinkynnäksellä",
+   "Nemunas"
+  ],
+  "jatkot": [
+   "Millaisia lintuja Kuurinlahden seudulla näkee?",
+   "Mikä on Nemunas-joki?"
+  ]
+ },
+ {
+  "kohde": "nosto:kursiu-nerija",
+  "kysymys": "Mikä on Unescon maailmanperintöluettelo?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Tästä lukee jokaisen kohteen kyltissä. Unescon maailmanperintöluettelo on luettelo kohteista, joita pidetään koko ihmiskunnan yhteisenä perintönä ja joita halutaan suojella tuleville sukupolville. Kohde voi olla kulttuurikohde, luontokohde tai molempia. Perustana on Unescon maailmanperintösopimus, joka hyväksyttiin vuonna 1972. [[Kuurinkynnäs]] otettiin luetteloon vuonna 2000, ja kohde on Liettuan ja Venäjän yhteinen. Luetteloon pääsy ei ole kunnia vaan velvoite.",
+  "linkit": [
+   "Kuurinkynnäs"
+  ],
+  "jatkot": [
+   "Mitä muita maailmanperintökohteita Liettuassa on?",
+   "Miten kohde pääsee Unescon luetteloon?"
+  ]
+ },
+ {
+  "kohde": "nosto:kryziu-kalnas",
+  "kysymys": "Miksi kukkulalle vietiin ristejä eikä hautakiviä?",
+  "uusi": false,
+  "vastaus": "Kääk, tämä on raskaampi aihe. Katsotaan, mitä siitä voi rauhassa sanoa. Ensimmäisten ristien uskotaan tulleen kukkulalle 1800-luvun kapinoiden jälkeen, vuoden 1831 tienoilla. Omaiset eivät löytäneet kaatuneitaan eivätkä voineet haudata heitä, joten he pystyttivät kukkulalle ristin hautakiven sijaan. Risti oli symbolinen muistomerkki sille, jolle ei ollut hautaa. Tapa jäi elämään, ja [[Ristikukkulalle]] on sittemmin tuotu myös Neitsyt Marian patsaita, puuveistoksia ja rukousnauhoja. Siitä on onneksi jo yli sata vuotta.",
+  "linkit": [
+   "Ristikukkulalle"
+  ],
+  "jatkot": [
+   "Miten kukkulan ristien määrää on arvioitu?",
+   "Mikä on Liettuan suhde katoliseen perinteeseen?"
+  ]
+ },
+ {
+  "kohde": "nosto:kryziu-kalnas",
+  "kysymys": "Miten muistomerkki voi kasvaa ilman ketään, joka rakentaa sitä?",
+  "uusi": false,
+  "vastaus": "No niin, hyvä kysymys. Vastaus on ihmisissä, ei suunnitelmassa. [[Ristikukkulalla]] ei ole yhtä rakentajaa: kuka tahansa saa tuoda oman ristinsä, ja jokainen risti on yhden ihmisen tai perheen päätös. Kun tapa on kerran syntynyt, se kasvaa vierailijoiden mukana, ja ristejä on sekä isoja puisia että pieniä metallisia. Neuvostoaikana viranomaiset raivasivat kukkulan puskutraktoreilla kolme kertaa, ja ristit ilmestyivät yön aikana takaisin. Muistomerkki on siis yhteinen teos, jota kukaan ei ole tilannut. Hiljainen paikka, jossa kukaan ei vaadi mitään.",
+  "linkit": [
+   "Ristikukkulalla"
+  ],
+  "jatkot": [
+   "Miksi Neuvostoliitto yritti raivata kukkulan?",
+   "Kuka kukkulalle saa tuoda ristin?"
+  ]
+ },
+ {
+  "kohde": "nosto:kryziu-kalnas",
+  "kysymys": "Kuinka monta ristiä kukkulalle mahtuu?",
+  "uusi": false,
+  "vastaus": "Mmm— tähän ei ole varmaa lukua. Rehellisesti sanoen en tiedä. Kukkulalla ei ole virallista rajaa, ja ristit lisääntyvät jatkuvasti, joten raja tulee vastaan vain käytännössä: tilan ahtautuessa. Tarkkaa laskentaa ei ole, vaan pelkkiä arvioita: noin viisikymmentäviisituhatta ristiä vuonna 1990 ja noin satatuhatta vuonna 2006. Nykyisin ristejä on kuitenkin selvästi enemmän kuin sata tuhatta. Tarkka lukema ei kerro paikasta paljon; ratkaisevaa on, että jokainen risti on jonkun tuoma.",
+  "linkit": [],
+  "jatkot": [
+   "Miten ristien määrää voisi laskea?",
+   "Mikä on Šiauliai?"
+  ]
+ },
+ {
+  "kohde": "nosto:kryziu-kalnas",
+  "kysymys": "Mitä tarkoittaa linnavuori?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tätä sanaa tarvitaan Itämeren maissa usein. Linnavuori on kukkula tai vuoren kumpu, joka on aikoinaan linnoitettu puolustusta varten, usein puuvarustuksin ja vallein. Liettuassa tällaisia muinaisia kukkulalinnoja on paljon, ja ne ovat peräisin ajalta ennen kivilinnoja. [[Ristikukkula]] oli aikanaan linnavuori, ennen kuin siitä tuli muistamisen paikka. Ymmärrät sen paremmin, kun näet kukkulan itse. Kyyhky ei kaipaa muuria, kun on siivet.",
+  "linkit": [
+   "Ristikukkula"
+  ],
+  "jatkot": [
+   "Millaisia muinaisia linnoja Liettuassa on säilynyt?",
+   "Mitä eroa on linnavuorella ja kivilinnalla?"
+  ]
+ },
+ {
+  "kohde": "nosto:kryziu-kalnas",
+  "kysymys": "Milloin Liettua julistautui itsenäiseksi Neuvostoliitosta?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Tämä on sellainen, jonka haluan sanoa oikein. Liettua julisti itsenäisyytensä uudelleen 11. maaliskuuta 1990, ja se oli ensimmäinen Neuvostoliiton tasavalloista, joka teki niin. Itsenäisyyden kansainvälinen tunnustaminen ja Neuvostoliiton hajoaminen seurasivat vuonna 1991. Liettua oli ollut itsenäinen jo ennen toista maailmansotaa, joten kyse oli palautuksesta eikä aivan uudesta alusta. [[Vilnassa]] päivä on yhä merkittävä muistopäivä. Onpa siitä jo aikaa, mutta muistetaan.",
+  "linkit": [
+   "Vilnassa"
+  ],
+  "jatkot": [
+   "Mitä tapahtui Liettuassa vuonna 1991?",
+   "Milloin Liettua liittyi Euroopan unioniin?"
+  ]
+ },
+ {
+  "kohde": "nosto:trakai",
+  "kysymys": "Miksi linna rakennettiin saarelle eikä rannalle?",
+  "uusi": false,
+  "vastaus": "Kas vaan, hyvä kysymys. Tän minä näin ylhäältä jo toissa kesänä. Saari antoi puolustukselle valtavan edun: järvi oli luonnollinen muuri, jota ei tarvinnut rakentaa. Vihollisen oli vaikea lähestyä linnaa ilman veneitä, ja jokainen hyökkääjä oli näkyvissä jo kaukaa. Suuriruhtinas [[Kęstutis]] siirsi saarelle asuinpaikkansa ja aarrekammionsa 1300-luvulla, koska paikka suojasi sekä hänet että hänen aarteensa. Merkittävin rakennusvaihe päättyi vuonna 1409 hänen poikansa [[Vytautas Suuren]] aikana. Mikään muuri ei ole yhtä halpa kuin järvi.",
+  "linkit": [
+   "Kęstutis",
+   "Vytautas Suuren"
+  ],
+  "jatkot": [
+   "Millaista linnan sisäpuoli oli Vytautaksen aikana?",
+   "Miten vihollinen yritti valloittaa saarilinnoja?"
+  ]
+ },
+ {
+  "kohde": "nosto:trakai",
+  "kysymys": "Onko uudelleen rakennettu linna sama linna?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tästä filosofit kiistelevät, minä en. Linna on osittain alkuperäinen ja osittain uusi: se rakennettiin uudelleen rauniosta 1900-luvulla, ja työ perustui säilyneisiin muureihin, perustuksiin ja tutkittuun tietoon rakennuksen alkuperäisestä muodosta. Siksi se ei ole täysin sama linna eikä myöskään pelkkä jäljennös, vaan restauroitu ja osin uudelleen koottu rakennus. En ole varma, kuinka suuri osa tiilistä on alkuperäisiä. Historiantutkijat käyttävät rakennuksesta usein sanaa jälleenrakennus. Linna on silti [[Trakain]] linna, vaikka monta tiiltä olisi vaihtunut.",
+  "linkit": [
+   "Trakain"
+  ],
+  "jatkot": [
+   "Miten linnaa rekonstruoitiin 1900-luvulla?",
+   "Mitä Trakain linnassa on nykyään esillä?"
+  ]
+ },
+ {
+  "kohde": "nosto:trakai",
+  "kysymys": "Miksi museo skannaa esineensä kolmiulotteisiksi?",
+  "uusi": false,
+  "vastaus": "Tota niin. Hyvä, että kysyit. Museot skannaavat esineitään kolmiulotteisiksi useista syistä. Ensinnäkin skannaus tallentaa esineen muodon ja pinnan tarkasti, jolloin tieto säilyy, vaikka alkuperäinen vaurioituisi. Toiseksi tutkijat voivat tutkia esinettä kosketta ottamatta, mikä suojaa hauraita aarteita. Kolmanneksi skannauksesta voi tehdä näyttelyihin kopioita ja verkossa katsottavia malleja, jolloin esine tavoittaa ihmisiä kaikkialta. En ole varma, minkä tekniikan juuri tämä museo on valinnut, mutta tarkoitus on yleensä sama. Kyyhky ei tosin pääse kosketteleman, ei skannerilla eikä ilman.",
+  "linkit": [],
+  "jatkot": [
+   "Miten 3D-skannaus toimii?",
+   "Miten museot säilyttävät hauraita esineitä?"
+  ]
+ },
+ {
+  "kohde": "nosto:trakai",
+  "kysymys": "Kuka oli Vytautas Suuri?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Hänestä on kerrottu paljon. Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi noin vuodesta 1392 vuoteen 1430. Hän oli suuriruhtinas Kęstutisin poika ja nosti Liettuan suuriruhtinaskunnan huippuunsa: valtio ulottui hänen aikanaan laajalle itään ja etelään. Hänen aikaansa kuului myös Grunwaldin taistelu vuonna 1410, jossa Liettuan ja Puolan joukot voittivat Saksalaisen ritarikunnan. Tarkat vuodet vaihtelevat lähteittäin, joten sanon aikavälin vain suuntaa-antavasti. Hän kuoli [[Trakain]] saarilinnassa vuonna 1430. Liettuassa häntä muistetaan kansallissankarina.",
+  "linkit": [
+   "Trakain"
+  ],
+  "jatkot": [
+   "Mikä oli Grunwaldin taistelu?",
+   "Miten Vytautaksen valtakausi vaikutti Liettuaan?"
+  ]
+ },
+ {
+  "kohde": "nosto:trakai",
+  "kysymys": "Mikä on kibinai, Trakain tunnettu leivonnainen?",
+  "uusi": true,
+  "vastaus": "Ai se! Nyt puhutaan asiaa. Kibinai on täytetty taikinapiirakka, jota leivotaan erityisesti [[Trakaissa]]. Täytteenä on tavallisesti lihaa ja sipulia, mutta myös juusto- ja kasvistäytteitä tehdään. Piirakka liitetään kaupungin pitkään asuneeseen karaiimiyhteisöön, jonka perimätiedon mukaan Vytautas toi seudulle. En ole varma, kuinka vanha tämä tarina tarkalleen on, ja lähteet voivat olla erimielisiä. Joka tapauksessa kibinai on nykyään [[Liettuan]] matkailijoiden suosikki.\n\nMinä en ole koskaan päässyt maistamaan, ja se harmittaa. Pullakyyhky ei kysy, onko taikina makeaa vai suolaista.",
+  "linkit": [
+   "Trakaissa",
+   "Liettuan"
+  ],
+  "jatkot": [
+   "Keitä karaiimit ovat?",
+   "Mitä muita perinneruokia Liettuassa syödään?"
+  ]
+ }
+]
