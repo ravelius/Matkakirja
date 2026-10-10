@@ -71,12 +71,12 @@ export const OPAS_AINEISTOT = Object.freeze({
     vilna: 'opas/esittely-v2/vilna.json',
   },
   // Yksityiskohtakuvat (Sisältökirjuri 7.10.; natiivi lentää kuvan sivuun ankkurisanan kohdalla): luettelo media-juuresta.
-  // 10.10. (Päätoimittajan kuittaus 09.3x): 63 uutta Codex-havainnekuvaa 20 kaupunkiin (paketti opas-havainnekuvat-vienti-20261010; Sevilla perässä, kun Codex toimittaa).
+  // 10.10. (Päätoimittajan kuittaus 09.3x): 63 uutta Codex-havainnekuvaa 20 kaupunkiin (paketit opas-havainnekuvat-vienti-20261010 ja opas-havainnekuvat-7okt-vienti-20261010: + Pariisi 5, Praha 1, Wien 1, Kööpenhamina 1 kuvaa 7.10. toimituksista; Sevilla perässä, kun Codex toimittaa).
   yksityiskohdat_polut: {
-    pariisi: 'esittely/pariisi-v2/pariisi-yksityiskohdat.json',
-    praha: 'esittely/praha-v1/praha-yksityiskohdat.json', wien: 'esittely/wien-v1/wien-yksityiskohdat.json',
+    pariisi: 'esittely/pariisi-v3/pariisi-yksityiskohdat.json',
+    praha: 'esittely/praha-v2/praha-yksityiskohdat.json', wien: 'esittely/wien-v2/wien-yksityiskohdat.json',
     rooma: 'esittely/rooma-v5/rooma-yksityiskohdat.json', lontoo: 'esittely/lontoo-v3/lontoo-yksityiskohdat.json',
-    koopenhamina: 'esittely/koopenhamina-v4/koopenhamina-yksityiskohdat.json',
+    koopenhamina: 'esittely/koopenhamina-v5/koopenhamina-yksityiskohdat.json',
     // 31 äänetöntä (Sisältökirjuri 8.10., erät 1–2; ankkurit tarkistettu esittely-aaneton-v3:sta).
     venetsia: 'esittely/venetsia-v2/venetsia-yksityiskohdat.json', barcelona: 'esittely/barcelona-v2/barcelona-yksityiskohdat.json',
     berliini: 'esittely/berliini-v3/berliini-yksityiskohdat.json', amsterdam: 'esittely/amsterdam-v2/amsterdam-yksityiskohdat.json',
