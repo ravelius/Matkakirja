@@ -11,7 +11,7 @@ BUILD-viestin jälkeen omien haarojen rebase 6.7-runkoon + tarkistukset 6.7:llä
 - Ajo: 6.3-appi (oma kopio, EI jaettu käännöskopio) `/Users/Shared/Claude/proto-3d/lokit/pelikoodari-pisteet-175/app2/Matkakirja3D.app`
   (a83ce0b10 = d02226c68, Unity 6000.3.24f1), simu pelikoodari-iPad13 39644E75-8BDA-4ED8-98B1-3FC864B73697.
   Skenaariot `proto-3d/tyokalut/pelikoodari-ajot/sk-jaatyminen-a.txt` (kamera, ei pakotuksia, ei mittauksia) ja `-b.txt` (+ kello ja astia).
-  Käynnistys irrotettuna: `perl <scratch>/jaatyminen-a.pl` — scratch katoaa nollauksessa, joten tee uudelleen: todistusajo.sh
+  Käynnistys irrotettuna: `perl /Users/Shared/Claude/proto-3d/tyokalut/pelikoodari-ajot/jaatyminen-a.pl` (ja -b.pl; loki lokit/pelikoodari-pisteet-175/jaatyminen-a.log); sisältö: todistusajo.sh
   `--era jaatyminen-a --udid 39644E75-… --app <app2> --sha a83ce0b1 --haara d02226c68 --skenaario <sk> --laite ipad` (cwd proto-git),
   perl fork+setsid, loki talteen. Ilmoita Julkaisijalle "simu vapaa".
 - Päätöspuu: A jäätyy → kamera/laatat, ei ääni → rivi PT:lle + Natiivisepälle (koskee TF 174:ää). A ok, B jäätyy → ääni → korjaa itse.
