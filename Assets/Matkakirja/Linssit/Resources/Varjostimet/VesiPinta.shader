@@ -32,8 +32,10 @@ Shader "Matkakirja/Linssit/VesiPinta"
             CBUFFER_END
             // Vanat (Ydin VesiVanat, KaupunkiVesi.Vana): maailman x, z, suunta; B = nopeus m/s, veneen pituus m.
             float4 _VesiVana[16], _VesiVanaB[16]; float _VesiVanaMaara;
+            // Mitattu veden väri (KaupunkiVesi.AsetaVari, LS2 10.10.): vesistö 0/1 (uv.y), syvä ja matala (rannan 0–15 m), voima 0 = _Syva.
+            float4 _VesiSyva0, _VesiSyva1, _VesiMatala0, _VesiMatala1; float _VesiVariVoima;
             struct A { float4 p : POSITION; float2 uv : TEXCOORD0; };
-            struct V { float4 p : SV_POSITION; float3 w : TEXCOORD0; float ranta : TEXCOORD1; float sumu : TEXCOORD2; };
+            struct V { float4 p : SV_POSITION; float3 w : TEXCOORD0; float ranta : TEXCOORD1; float sumu : TEXCOORD2; float vesi : TEXCOORD3; };
             V vert(A a)
             {
                 V v; v.w = TransformObjectToWorld(a.p.xyz);
@@ -42,7 +44,7 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 float etM = length(v.w - _WorldSpaceCameraPos) * _IlmMaailma.x;
                 v.w.y += max(0.0, etM * 0.0012 - 0.4) / max(1e-6, _IlmMaailma.x);
                 v.p = TransformWorldToHClip(v.w);
-                v.ranta = a.uv.x; v.sumu = ComputeFogFactor(v.p.z); return v;
+                v.ranta = a.uv.x; v.vesi = a.uv.y; v.sumu = ComputeFogFactor(v.p.z); return v;
             }
             // Gradienttikohinan derivaatta (arvokohina, sileä) normaalikenttään.
             float2 Hash(float2 p) { p = float2(dot(p, float2(127.1, 311.7)), dot(p, float2(269.5, 183.3))); return frac(sin(p) * 43758.5453) * 2.0 - 1.0; }
@@ -99,7 +101,9 @@ Shader "Matkakirja/Linssit/VesiPinta"
                 // välke 1,5 → 0,75) ja pehmeä katto: kirkkaus lähestyy 1,2:ta, ei leikkaudu valkoiseksi, läiskän reuna liukuu.
                 aurinko = 1.2 * aurinko / (1.0 + aurinko);
                 // Loppuillan syvä vesi sinisen hetken sävyyn (ylhäältä katsottuna Fresnel ~0,02, muuten ruskeanmusta Googlen violetin veden vieressä).
-                float3 syva = _Syva.rgb * saturate(_IlmAurinko.y * 3.0 + 0.15) + IlmSininenHetki(normalize(float3(d.x, 0.25, d.z))) * 0.45;
+                float matalaS = smoothstep(0.0, 15.0, v.ranta);
+                float3 mitattu = lerp(lerp(_VesiMatala0.rgb, _VesiSyva0.rgb, matalaS), lerp(_VesiMatala1.rgb, _VesiSyva1.rgb, matalaS), saturate(v.vesi));
+                float3 syva = lerp(_Syva.rgb, mitattu, saturate(_VesiVariVoima)) * saturate(_IlmAurinko.y * 3.0 + 0.15) + IlmSininenHetki(normalize(float3(d.x, 0.25, d.z))) * 0.45;
                 float3 c = lerp(syva, taivas, fresnel) + aurinko * IlmLapaisy(_IlmParam.x, _IlmAurinko.y);
                 // Vaahto: valkoinen auringon ja taivaan valossa (näyttöavaruudessa kuten _Syva), vain lähellä (ei välkettä kaukana).
                 float vaahtoV = saturate(vaahto) * 0.75 * (1.0 - saturate(et * m / 2500.0));

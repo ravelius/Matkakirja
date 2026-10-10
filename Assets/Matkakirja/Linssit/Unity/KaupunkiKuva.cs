@@ -285,6 +285,8 @@ namespace Matkakirja.Natiivi
                         case "aamusumu": KaupunkiIlmakeha.Aamusumu = v; break;
                         case "pilvipaksuus": KaupunkiIlmakeha.PilviPaksuusM = v; break;
                         case "vesi": KaupunkiVesi.Pakotettu = v != 0; break;   // LS2 8.10.: oma vesipinta (seuraava kaupungin avaus)
+                        case "vesivari": KaupunkiVesi.Vari = v != 0; break;   // LS2 10.10.: mitattu veden väri (Sentinel-2)
+                        case "vesivarikerroin": KaupunkiVesi.VariKerroin = v; break;
                         case "vesinosto": KaupunkiVesi.NostoM = v; KaupunkiVesi.NostoAsetettu = true; break;
                         case "sumualku": AlkuKerroin = v; break;
                         case "sumuloppu": LoppuKerroin = v; break;
