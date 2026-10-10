@@ -51,9 +51,16 @@ test('pallolauta kytkee pisteet nimiin, rajaukseen ja maalehteen', () => {
   const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
   assert.match(lauta, /lisakaupungit: paakaupungit/);
   assert.match(lauta, /kaupungit = \[\.\.\.pallonKaupungit\(pack, kaydyt\), \.\.\.paakaupungit\]/);
-  assert.match(lauta, /if \(k\.maa === iso\) joukko\.add\(k\.id\)/);
+  assert.match(lauta, /if \(k\.maa === iso \|\| !laudanMaat\.has\(k\.maa\)\) joukko\.add\(k\.id\)/);
   assert.match(lauta, /if \(k\.pk\) \{[\s\S]{0,160}ui\.avaaMaalehti\?\.\(k\.maa\)/);
   assert.match(lauta, /const himmeaPiste = \(k\) => !k\.pk &&/);
   const nimet = readFileSync(new URL('../js/pallolauta/nimet.js', import.meta.url), 'utf8');
   assert.match(nimet, /for \(const c of lisakaupungit\) kaupungit\.push\(\{ c, lat: c\.lat, lng: c\.lon \}\)/);
+});
+
+test('maat ilman laudan kaupunkia: pääkaupunki on ainoa tie maahan', () => {
+  const laudanMaat = new Set(Object.values(MAAILMANKARTTA.map.cityCountry));
+  const aina = pisteet.filter((k) => !laudanMaat.has(k.maa)).map((k) => k.maa).sort();
+  for (const iso of ['ALB', 'BLR', 'MDA', 'MKD', 'MNE', 'SRB']) assert.ok(aina.includes(iso), iso);
+  assert.ok(!aina.includes('SVK') && !aina.includes('HRV'), 'pysäkkimaa noudattaa kohdemaan sääntöä');
 });

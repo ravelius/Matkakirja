@@ -2744,7 +2744,13 @@ export async function avaaPallolauta(ui) {
     if (avain === rajausAvain) return rajausJoukko;
     const joukko = new Set();
     for (const id of Object.keys(taulu)) if (taulu[id] === iso) joukko.add(id);
-    for (const k of paakaupungit) if (k.maa === iso) joukko.add(k.id);
+    /*
+     * PÄÄKAUPUNKI ON AINOA TIE MAAHAN, JOLLA EI OLE LAUDAN KAUPUNKIA (PT 10.10.2026;
+     * omistaja: maa valittavissa pääkaupungin kautta): Serbian, Albanian, Moldovan …
+     * piste näkyy aina. Kohdemaan sääntö koskee vain maita, joilla on pysäkkejä.
+     */
+    const laudanMaat = new Set(Object.values(taulu));
+    for (const k of paakaupungit) if (k.maa === iso || !laudanMaat.has(k.maa)) joukko.add(k.id);
     if (oma) joukko.add(oma);
     for (const id of kohdeIdt) joukko.add(id);
     rajausAvain = avain;
