@@ -180,6 +180,13 @@ namespace Matkakirja.Peli
         public HashSet<string> Kaupunkiraidat = new HashSet<string>();
         /// <summary>Kaupunkikohtaiset musiikkijaksot (KaupunkiJakso); muut kaupungit soittavat ketjun kuten ennen.</summary>
         public Dictionary<string, KaupunkiJakso> Jaksot = new Dictionary<string, KaupunkiJakso>();
+        /// <summary>
+        /// PALLON LATAUSRAIDAT (omistaja 10.10.2026 klo 22.1x, äänisivun "Kuumailmapallo: nykyaikaiset taustat"): kaupunki →
+        /// latausruudun oma raita, joka voittaa kaupungin kappaleen ja alueraidan (AaniTila.KaupunginPolku). Kerroin = tiedoston
+        /// äänekkyysero pelin musiikkiraitoihin (lähde −16 LUFS, pelin Lyria-raidat ≈ −11,5 LUFS); soitin kertoo sillä vain
+        /// Lataus-kanavan lähteen (Aanisoitin.AsetaTaso), joten mikserin taso pysyy A-linjauksen mukaisena ilman toista mp3-pakkausta.
+        /// </summary>
+        public Dictionary<string, (string Tunnus, double Kerroin)> Latausraidat = new Dictionary<string, (string, double)>();
         public Dictionary<string, string> KaupunginAlue = new Dictionary<string, string>();
         public HashSet<string> Alueraidat = new HashSet<string>();
         public Dictionary<string, string> AlueenMaat = new Dictionary<string, string>();
@@ -258,6 +265,10 @@ namespace Matkakirja.Peli
             foreach (var k in new[] { "pariisi", "lontoo", "rooma", "istanbul", "kairo", "pietari" }) t.Kaupunkiraidat.Add(k);
             // Kaupunkijakson pilotti (PT 9.10., omistajan valinta "Pariisi nyt 2: nopea nu-jazz" avaukseen): nopea → 3 s → hidas → pohja.
             t.Jaksot["pariisi"] = new KaupunkiJakso { Nopea = "musa-kaupunki-pariisi-nopea", TaukoMs = 3000 };
+            // Pallon latausraidat (omistaja 22.1x): Pariisi 1 bassoriffi ja harjat −16,1 LUFS (+4,6 dB), Tukholma 2 kontrabasso ja
+            // marimba −16,0 LUFS (+4,5 dB).
+            t.Latausraidat["pariisi"] = ("musa-pallo-pariisi", 1.70);
+            t.Latausraidat["tukholma"] = ("musa-pallo-tukholma", 1.68);
             t.KaupunginAlue["marseille"] = "valimeri";
             foreach (var a in new[] { "britteinsaaret", "pohjola", "keski-eurooppa", "valimeri", "balkan", "ita-eurooppa" }) t.Alueraidat.Add(a);
             void Alue(string alue, params string[] maat) { foreach (var m in maat) t.AlueenMaat[m] = alue; }

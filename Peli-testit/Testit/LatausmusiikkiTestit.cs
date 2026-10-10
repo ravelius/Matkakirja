@@ -39,7 +39,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(null, L(tila).Url, "ei latausta: hiljaa");
             tila.LatausKaupunki("pariisi", T);
             var w = L(tila);
-            Oleta.Tosi(w.Url != null && w.Url.Contains("/musa-kaupunki-pariisi-"), "kaupungin oma kappale kuten kartalla: " + w.Url);
+            Oleta.Tosi(w.Url != null && w.Url.Contains("/musa-pallo-pariisi-"), "Pariisin oma latausraita: " + w.Url);
             Oleta.Tosi(w.Uusi && w.Silmukka && !w.Tauko, "uusi soitin silmukkana");
             Oleta.Sama(AaniVakiot.LatausNousuMs, w.KestoMs ?? -1, "pehmeä nousu");
             Lahella(T, w.Tavoite, "annettu taso");
@@ -59,6 +59,20 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(null, L(tila).Url, "latausmusiikki pois");
             Oleta.Sama(AaniVakiot.LatausRistiMs, L(tila).PoisMs ?? -1, "ristihäivytys näkymän omaan ääneen");
             Oleta.Sama(3000, AaniVakiot.LatausRistiMs, "~3 s");
+            Oleta.Tosi(L(tila).PoisDesibeli, "ristihäivytys desibeleissä (PT 21.5x)");
+            // Häivytys 0,52 → 0 (linnan taso): 100 ms:n askel ≤ 1 dB lattiaan (−30 dB) asti, lopussa nolla.
+            var r = new Tasoramppi(0.52);
+            r.Aloita(0, AaniVakiot.LatausRistiMs, true);
+            double edellinen = 0.52, suurin = 0;
+            for (int i = 0; i < 29; i++)
+            {
+                for (int j = 0; j < 3; j++) r.Askel(1 / 30.0);
+                suurin = Math.Max(suurin, 20 * Math.Log10(edellinen / r.Arvo)); edellinen = r.Arvo;
+            }
+            Oleta.Tosi(suurin <= 1.0 + 1e-9, $"100 ms:n askel ≤ 1 dB: {suurin:0.00} dB");
+            Oleta.Tosi(20 * Math.Log10(0.52 / r.Arvo) <= Tasoramppi.HaivytysLattiaDb + 1e-9, "lattiassa ennen loppua");
+            for (int j = 0; j < 6; j++) r.Askel(1 / 30.0);
+            Oleta.Sama(0.0, r.Arvo, "lopussa nolla");
             Oleta.Tosi(!tila.LatausAuki, "latausruutu kiinni");
             tila.LatausOhi(avautui: true);
             Oleta.Sama(null, L(tila).PoisMs, "toinen sulku ei tee mitään");
@@ -71,6 +85,7 @@ namespace Matkakirja.Peli.Testit
             tila.LatausOhi(avautui: false);
             Oleta.Sama(null, L(tila).Url, "pois");
             Oleta.Sama(AaniVakiot.LatausPoisMs, L(tila).PoisMs ?? -1, "nopea häivytys");
+            Oleta.Tosi(!L(tila).PoisDesibeli, "ohitus lineaarinen");
             Oleta.Tosi(AaniVakiot.LatausPoisMs < AaniVakiot.LatausRistiMs, "ohitus nopeampi kuin ristihäivytys");
         }
 
@@ -248,12 +263,31 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void PuuttuvaRaitaEiYritaUudelleen()
         {
             var tila = Uusi();
-            tila.LatausKaupunki("pariisi", T);
+            tila.LatausKaupunki("ateena", T);
             tila.Puuttuu(Kanava.Lataus);
             Oleta.Sama(null, L(tila).Url, "404: hiljaa");
-            tila.LatausKaupunki("pariisi", T);
+            tila.LatausKaupunki("ateena", T);
             Oleta.Sama(null, L(tila).Url, "sama raita ei yritä uudelleen");
             Oleta.Tosi(tila.LatausAuki, "latausruutu auki");
+        }
+
+        [Testi] static void PallonLatausraidatVoittavatKaupunginKappaleen()
+        {
+            // Omistaja 10.10. 22.1x: Pariisiin "Pallo, Pariisi 1: bassoriffi ja harjat", Tukholmaan "Pallo, Tukholma 2: kontrabasso
+            // ja marimba"; muut kaupungit ennallaan. Kerroin = äänekkyyskorjaus −16 LUFS → pelin raitojen taso (+4,5 dB).
+            var t = AaniTaulut.Oletus();
+            Oleta.Sama(2, t.Latausraidat.Count, "kaksi latausraitaa");
+            foreach (var r in t.Latausraidat.Values)
+                Oleta.Tosi(r.Kerroin > 1.6 && r.Kerroin < 1.75, r.Tunnus + " kerroin +4,5 dB: " + r.Kerroin);
+            var tila = Uusi();
+            Oleta.Tosi(tila.KaupunginKappale("tukholma").Contains("/musa-pallo-tukholma-lyria-v2.mp3"), tila.KaupunginKappale("tukholma"));
+            Oleta.Tosi(tila.KaupunginKappale("ateena").Contains("/musa-kaupunki-ateena-"), "muut ennallaan");
+            tila.LatausKaupunki("pariisi", T);
+            Lahella(T, L(tila).Tavoite, "taso pysyy mikserin tasona (kerroin soittimessa)");
+            // Latausraita puuttuu (404): seuraava latausruutu soittaa kaupungin oman kappaleen.
+            tila.Puuttuu(Kanava.Lataus);
+            tila.LatausKaupunki("pariisi", T);
+            Oleta.Tosi(L(tila).Url?.Contains("/musa-kaupunki-pariisi-") == true, "varalla kaupungin kappale: " + L(tila).Url);
         }
 
         [Testi] static void MuutKanavatEnnallaan()

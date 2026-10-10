@@ -54,6 +54,8 @@ namespace Matkakirja.Peli
         public int? KestoMs;
         /// <summary>Ramppi tasainen desibeleissä (Tasoramppi; latausmusiikin jatko kartan tasolle).</summary>
         public bool Desibeli;
+        /// <summary>Poistuvan häivytys desibeleissä tasainen (latausmusiikin ristihäivytys, Tasoramppi.HaivytysLattiaDb).</summary>
+        public bool PoisDesibeli;
         /// <summary>Uusi soitin: lataa Url ja aloita kohdasta Alku (edellinen soitin, jos oli, häivytetään PoisMs:ssä).</summary>
         public bool Uusi;
         /// <summary>Edellinen soitin häivytetään nollaan ja vapautetaan (0 = heti); null = ei poistuvaa soitinta.</summary>
@@ -188,6 +190,7 @@ namespace Matkakirja.Peli
 
         int tapahtuma = -1;
         readonly int?[] pois = new int?[Kanavia];
+        readonly bool[] poisDb = new bool[Kanavia];
         readonly Queue<Action> jono = new Queue<Action>();
         readonly Toive[] toiveet = new Toive[Kanavia];
 
@@ -309,7 +312,7 @@ namespace Matkakirja.Peli
                 latausKantoi = false;
                 SoitaPaikka();
                 // Kierroksen raita jatkuu kartalle vain, jos kartan pohja on sama raita (LatausKantaa); muuten ristiin pois.
-                if (LatausJatkuu && !latausKantoi) LopetaLataus(AaniVakiot.LatausRistiMs);
+                if (LatausJatkuu && !latausKantoi) LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             }
         });
 
@@ -622,12 +625,15 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>
-        /// Kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
+        /// Pallon latausraita (AaniTaulut.Latausraidat), muuten kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
         /// kaupunkikappaleet tulevat) on kartan alueraita samalla valinnalla (Musiikkivalitsin.Alueraita). Puuttuvat ohi.
         /// </summary>
         string KaupunginPolku(string kaupunki)
         {
             if (string.IsNullOrEmpty(kaupunki)) return null;
+            // Pallon oma latausraita (AaniTaulut.Latausraidat) ensin; jos se puuttuu (404), kaupungin kappale tai alueraita.
+            string oma = t.Latausraidat.TryGetValue(kaupunki, out var lr) ? t.MusaPolku(lr.Tunnus) : null;
+            if (oma != null && !latausPuuttuvat.Contains(AaniOsoite.Url(oma))) return oma;
             var maa = t.Maa(kaupunki);
             var ketju = valitsin.Ketju(null, kaupunki, maa);
             var alue = valitsin.Alueraita(kaupunki, maa);
@@ -648,7 +654,7 @@ namespace Matkakirja.Peli
             if (!avautui) { LopetaLataus(AaniVakiot.LatausPoisMs); return; }
             if (!latausJatko || lataus == null || (pohja != null && pohjaPolku != lataus.Polku))
             {
-                LopetaLataus(AaniVakiot.LatausRistiMs);
+                LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
                 return;
             }
             // Sama raita jo pohjana (kaksi kopiota eri kohdissa): latausraita jatkaa, pohja pois.
@@ -710,7 +716,7 @@ namespace Matkakirja.Peli
             }
             var vaistyva = lataus;
             lataus = null;
-            if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.LatausRistiMs); Vapauta(vaistyva); }
+            if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.LatausRistiMs, desibeli: true); Vapauta(vaistyva); }
             var s = Uusi(Kanava.Lataus, latausUrl, true);
             s.Polku = latausPolku;
             lataus = s;
@@ -729,17 +735,19 @@ namespace Matkakirja.Peli
         {
             if (!LatausJatkuu || lataus == null) return false;
             if (polku != null && lataus.Polku == polku) { latausKantoi = true; return true; }
-            LopetaLataus(AaniVakiot.LatausRistiMs);
+            LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             return false;
         }
 
-        void LopetaLataus(int laskuMs)
+        /// <summary>Latausraita pois: desibeli = ristihäivytys desibeleissä tasaisena (PT 10.10. 21.5x: linnan ristihäivytys samalla
+        /// kaavalla kuin pallon jatko), muuten lineaarinen (ohitus, säädin).</summary>
+        void LopetaLataus(int laskuMs, bool desibeli = false)
         {
             var vanha = lataus;
             lataus = null;
             LatausJatkuu = false;
             if (vanha == null) return;
-            Ramppi(vanha, 0, laskuMs);
+            Ramppi(vanha, 0, laskuMs, desibeli);
             Vapauta(vanha);
         }
 
@@ -767,7 +775,7 @@ namespace Matkakirja.Peli
         void Tee(Action teko)
         {
             tapahtuma++;
-            for (int i = 0; i < pois.Length; i++) pois[i] = null;
+            for (int i = 0; i < pois.Length; i++) { pois[i] = null; poisDb[i] = false; }
             teko();
             while (jono.Count > 0) jono.Dequeue()();
             PaivitaToiveet();
@@ -787,6 +795,7 @@ namespace Matkakirja.Peli
                 w.Desibeli = s != null && s.MuutosT == tapahtuma && s.MuutosDb;
                 w.Uusi = s != null && s.SyntyiT == tapahtuma;
                 w.PoisMs = pois[i];
+                w.PoisDesibeli = pois[i] > 0 && poisDb[i];
                 w.Tauko = s?.Tauko ?? false;
                 w.Alku = s?.Alku ?? 0;
                 w.Silmukka = s?.Silmukka ?? false;
@@ -856,6 +865,7 @@ namespace Matkakirja.Peli
         {
             var i = (int)s.Kanava;
             pois[i] = Math.Max(pois[i] ?? 0, PoisKesto(s));
+            if (s.RamppiT == tapahtuma && s.RamppiKohde == 0 && s.MuutosDb) poisDb[i] = true;
         }
 
         // --- tasot ----------------------------------------------------------------
@@ -985,7 +995,7 @@ namespace Matkakirja.Peli
             if (polku == null || puuttuvat.Contains(polku)) { LopetaPohja(); return; }
             if (pohja != null && pohjaPolku == polku) return;
             // Jakson vaihe tarvitsee oman soittimen (PohjaLoppui): jatkuva latausraita ristiin pois.
-            if (LatausJatkuu) LopetaLataus(AaniVakiot.LatausRistiMs);
+            if (LatausJatkuu) LopetaLataus(AaniVakiot.LatausRistiMs, desibeli: true);
             var vaistyva = pohja;
             pohja = null;
             pohjaPolku = null;
