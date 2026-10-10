@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (177)",
+   "paiva": "2026-10-10",
+   "teksti": "Korjattu: pallon latauskuva liikkuu ja siinä on Poistu-nappi, saapumispaperi ulottuu ruudun yläreunaan ja Pariisin pallon esittely toimii. Olavinlinnan esittely näyttää linnan vaiheet kertojan kanssa, ja pilvet ja vedet ovat kauniimmat. Ikärajan voi tiukentaa Asetuksista."
+  },
+  {
    "versio": "1.1 (176)",
    "paiva": "2026-10-10",
    "teksti": "Peli toimii nyt Unity 6.7 -pelimoottorilla. Olavinlinnan esittely näyttää linnan nykyasussa kartiokattoineen, ja Pulu tuntee 25 maata. Pariisin ja Tukholman yöhön syttyvät maamerkkien ja ikkunoiden valot, ja kahviloista ja pyöristä kuuluu ääniä."
