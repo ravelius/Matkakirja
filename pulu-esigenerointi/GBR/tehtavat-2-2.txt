@@ -1,0 +1,1250 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+- [Libya — maalehti / Tiede: Mies, joka mittasi maapallon varjon avulla] 276–196 eaa. — Eratosthenes syntyi 276 eaa. Kyrenessä nykyisen Libyan rannikolla ja nousi Aleksandrian kirjaston pääkirjastonhoitajaksi. Hän keksi sanan maantiede, laski ensimmäisenä maan akselikallistuman ja kokosi maailmankartan, jossa oli pituus- ja leveyspiirit. Kuuluisin työ oli maapallon ympärysmitta: kesäpäivänseisauksen keskipäivänä sauva ei heittänyt Syenessä varjoa lainkaan, Aleksandriassa heitti, ja varjon kulma oli 7,2 astetta eli viideskymmenesosa ympyrästä. Kaupunkien väli oli askelmittaajien mukaan 5 000 stadionia, joten ympärysmitaksi tuli 250 000. Ihailijat sanoivat häntä moniottelijaksi, arvostelijat Beetaksi: hän oli joka lajissa toinen.
+AIEMPI KYSYMYS: Mihin suuntaan monumentti on suunnattu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Stonehenge on suunnattu päivänseisausten mukaan: [[kesäpäivänseisauksen]] auringonnousu osuu rakennelman akselille, ja vastakkaiseen suuntaan katsottaessa [[talvipäivänseisauksen]] aurinko laskee samaa linjaa. Kehä toimii siis eräänlaisena jättimäisenä kalenterina. Aika hyvä kalenteri ilman yhtään paristoa.
+KYSYMYS: Kerro lisää: kesäpäivänseisauksen
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Luonto: Papukaijat oppivat kämmenelle] 1969 — Lontoon puistoissa lentää kirkkaanvihreitä kauluskaijoja, joiden kotiseutu on Intiassa ja trooppisessa Afrikassa. Villiintynyt kanta alkoi lisääntyä pysyvästi vuonna 1969 Croydonissa, ja nyt lintuja on kymmeniätuhansia: vuoden 2012 yöpymispuiden laskennassa niitä kertyi Lontoossa noin 32 000. Talvi ei niitä kaada, sillä laji elää luonnossa myös Himalajan lumisilla alarinteillä parintuhannen metrin korkeudessa. Hyde Parkissa ja Kensington Gardensissa ne ovat oppineet lentämään suoraan avoimelle kämmenelle, jos siinä on siemeniä.
+- [Townsville — kaupunkilehti / Kuiva tropiikki: Tropiikki, jossa talvi on sininen] Townsvillen ilmasto on trooppinen savanni, ja sen erikoisuus on talvi. Muualla Queenslandin itärannikon tropiikissa — esimerkiksi Cairnsissa — sataa myös talvella, koska rannikko kulkee pohjois—etelä-suunnassa ja kaakkoispasaati nousee sitä vasten. Townsvillen kohdalla rannikko kääntyy itä—länsisuuntaiseksi, eikä nostetta synny. Siksi talvikuukaudet ovat sinitaivaisia: lämpimät päivät, viileät yöt ja tasainen pasaati. Vuosisade on 1 095 millimetriä 61 sadepäivänä, ja lähes kaikki siitä tulee marras—huhtikuun kuudessa kuukaudessa. Syyskuun keskisade on 9,9 millimetriä.
+- [Winnipeg — kaupunkilehti / Talvi, tulva ja preeria] Winnipegissä sää tulee joka suunnasta ja koko voimallaan: talvi on pitkä ja ankara, kesä kuuma ja ukkoinen, ja joka kevät katsotaan, kuinka korkealle Punainen joki nousee.
+AIEMPI KYSYMYS: Mihin suuntaan monumentti on suunnattu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Stonehenge on suunnattu päivänseisausten mukaan: [[kesäpäivänseisauksen]] auringonnousu osuu rakennelman akselille, ja vastakkaiseen suuntaan katsottaessa [[talvipäivänseisauksen]] aurinko laskee samaa linjaa. Kehä toimii siis eräänlaisena jättimäisenä kalenterina. Aika hyvä kalenteri ilman yhtään paristoa.
+KYSYMYS: Kerro lisää: talvipäivänseisauksen
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Historia: Kivet kiskottiin 250 kilometrin päästä] n. 2500 eaa. — Stonehengen suurimmat kivet painavat 25 tonnia, mutta hämmästyttävimpiä ovat pienemmät siniset kivet: ne louhittiin Walesin Preselivuorilta, noin 250 kilometrin päästä. Kukaan ei tiedä varmasti, miten ne siirrettiin — pyörää ei vielä ollut. Kehä on rakennettu niin, että keskikesän auringonnousu osuu täsmälleen sisäänkäynnin akselille, joten se toimii jättimäisenä kalenterina. Rakentamiseen meni yli tuhat vuotta ja monta sukupolvea: ne jotka aloittivat, eivät nähneet sitä valmiina.
+AIEMPI KYSYMYS: Mistä Stonehengen siniset kivet tuotiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne tulivat Walesista. Pienemmät siniset kivet louhittiin Walesin [[Preselivuorilta]], noin 250 kilometrin päästä Stonehengestä. Kukaan ei tiedä varmasti, miten ne siirrettiin, sillä pyörää ei ollut vielä käytössä. Suuret [[sarsen-kivet]] ovat painoltaan noin 25 tonnia, mutta sinikivien matka on silti vaikuttava.
+
+Minä lennän niin pitkän matkan yhdessä päivässä, ja sekin tuntuu jo siivissä. Kivien kanssa en olisi edes yrittänyt.
+KYSYMYS: Kerro lisää: Preselivuorilta
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+AIEMPI KYSYMYS: Mistä Stonehengen siniset kivet tuotiin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: ne tulivat Walesista. Pienemmät siniset kivet louhittiin Walesin [[Preselivuorilta]], noin 250 kilometrin päästä Stonehengestä. Kukaan ei tiedä varmasti, miten ne siirrettiin, sillä pyörää ei ollut vielä käytössä. Suuret [[sarsen-kivet]] ovat painoltaan noin 25 tonnia, mutta sinikivien matka on silti vaikuttava.
+
+Minä lennän niin pitkän matkan yhdessä päivässä, ja sekin tuntuu jo siivissä. Kivien kanssa en olisi edes yrittänyt.
+KYSYMYS: Kerro lisää: sarsen-kivet
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+AIEMPI KYSYMYS: Rakensivatko druidit Stonehengen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Eivät rakentaneet: Stonehenge on huomattavasti druidien aikaa vanhempi, sillä sen rakentaminen aloitettiin noin vuodesta 3100 eaa., kun taas druidit tunnetaan [[rautakauden]] kelttiläisen yhteiskunnan papistona. Rakentajat olivat [[neoliittisia]] ja pronssikauden ihmisiä, joiden nimiä ei tunneta, koska he eivät jättäneet kirjallisia lähteitä. Käsitys druideista Stonehengen rakentajina syntyi vasta uuden ajan alussa, kun esimerkiksi antikvaari [[John Aubrey]] yhdisti ne toisiinsa 1600-luvulla. Vanha erehdys, mut sitkeä.
+KYSYMYS: Kerro lisää: rautakauden
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+AIEMPI KYSYMYS: Rakensivatko druidit Stonehengen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Eivät rakentaneet: Stonehenge on huomattavasti druidien aikaa vanhempi, sillä sen rakentaminen aloitettiin noin vuodesta 3100 eaa., kun taas druidit tunnetaan [[rautakauden]] kelttiläisen yhteiskunnan papistona. Rakentajat olivat [[neoliittisia]] ja pronssikauden ihmisiä, joiden nimiä ei tunneta, koska he eivät jättäneet kirjallisia lähteitä. Käsitys druideista Stonehengen rakentajina syntyi vasta uuden ajan alussa, kun esimerkiksi antikvaari [[John Aubrey]] yhdisti ne toisiinsa 1600-luvulla. Vanha erehdys, mut sitkeä.
+KYSYMYS: Kerro lisää: neoliittisia
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Darwin — kohdekartta / Kohdekartta: Hotel Darwin] 1940 Esplanadin hotelli tunnettiin lempinimellä "Grand Old Duchess". Sen piirsi D. K. Turner toimistosta Stephenson and Turner, ja se rakennettiin vanhan Club Hotelin paikalle 50 000 – 85 000 punnan hinnalla. Avajaisiin heinäkuussa 1940 tuli kaksisataa vierasta, ja tilaisuutta johti territorion hallintopäällikkö Charles Aubrey Abbott. Hänen vaimonsa Hilda Abbott avasi ovet kultaisella avaimella, joka on nykyään esillä Darwinin puolustusta esittelevässä näyttelyssä. Kutsuluettelosta nousi riita: useat kaupungin vaikutusvaltaiset henkilöt jäivät ilman kutsua, ja lehdistö piti asiaa vakavana. Talossa oli piano-baari nimeltä Pickled Parrot ja hienostoravintola Green Room. Vuonna 1947 kommunisti…
+AIEMPI KYSYMYS: Rakensivatko druidit Stonehengen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Eivät rakentaneet: Stonehenge on huomattavasti druidien aikaa vanhempi, sillä sen rakentaminen aloitettiin noin vuodesta 3100 eaa., kun taas druidit tunnetaan [[rautakauden]] kelttiläisen yhteiskunnan papistona. Rakentajat olivat [[neoliittisia]] ja pronssikauden ihmisiä, joiden nimiä ei tunneta, koska he eivät jättäneet kirjallisia lähteitä. Käsitys druideista Stonehengen rakentajina syntyi vasta uuden ajan alussa, kun esimerkiksi antikvaari [[John Aubrey]] yhdisti ne toisiinsa 1600-luvulla. Vanha erehdys, mut sitkeä.
+KYSYMYS: Kerro lisää: John Aubrey
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+AIEMPI KYSYMYS: Mitä trilitoni tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä sana tuo. Trilitoni on kolmen kiven rakenne: kaksi pystykiveä ja niiden päällä yksi vaakasuora [[kamanakivi]]. Sana on peräisin kreikasta ja tarkoittaa kolmea kiveä. Stonehengessä trilitonit seisovat vapaasti [[sinikivien]] rengasta sisempänä. Kolme kiveä ja yksi hyvä sana.
+KYSYMYS: Kerro lisää: kamanakivi
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stonehenge (historia)
+Tietoruudun teksti: Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan monumentista.
+
+Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja pronssikautisten muistomerkkien rypäs, muun muassa useita satoja hautakumpuja.
+
+Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noi…
+AIEMPI KYSYMYS: Mitä trilitoni tarkoittaa?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä sana tuo. Trilitoni on kolmen kiven rakenne: kaksi pystykiveä ja niiden päällä yksi vaakasuora [[kamanakivi]]. Sana on peräisin kreikasta ja tarkoittaa kolmea kiveä. Stonehengessä trilitonit seisovat vapaasti [[sinikivien]] rengasta sisempänä. Kolme kiveä ja yksi hyvä sana.
+KYSYMYS: Kerro lisää: sinikivien
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jerusalem — kohdekartta / Kohdekartta: Damaskoksen portti] 1537 Damaskoksen portti on vanhankaupungin komein sisäänkäynti, ja nykyinen rakennus on vuodelta 1537 eli Suleiman Suuren muurityön ajalta. Portti ei kuitenkaan ole uusi paikkana: samassa kohdassa on ollut portti roomalaisajasta asti, ja nykyisen alta on kaivettu esiin vanhempi portti keisari Hadrianuksen ajalta. Arabiankielinen nimi Bab al-Amud tarkoittaa pylvään porttia, ja se on ollut käytössä ainakin 900-luvulta. Nimi säilyttää muiston roomalaisesta voitonpylväästä, joka kohosi portin takana olevalla aukiolla ja jonka päällä seisoi keisari Hadrianuksen patsas. Pylvästä ei ole enää olemassa, mutta se näkyy 500-luvulla tehdyssä Madaban mosaiikkikartassa — eli nimi on vanhempi kuin mikään …
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Mihin muurin kivet päätyivät?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on hyvä kertoa. [[Hadrianuksen muurin]] kivet ovat suurelta osin muualla: uuden ajan alussa lähes kaikki pystyssä ollut kiviaines purettiin ja käytettiin paikallisten teiden ja maatalojen rakennusaineeksi. Siksi mikään muurin kohta ei enää seiso alkuperäisessä korkeudessaan. Muuri on silti [[Unescon]] maailmanperintökohde, joka otettiin luetteloon vuonna 1987. Kierrätys ei ole mikään uusi keksintö.
+KYSYMYS: Kerro lisää: Hadrianuksen muurin
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+AIEMPI KYSYMYS: Mihin muurin kivet päätyivät?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä on hyvä kertoa. [[Hadrianuksen muurin]] kivet ovat suurelta osin muualla: uuden ajan alussa lähes kaikki pystyssä ollut kiviaines purettiin ja käytettiin paikallisten teiden ja maatalojen rakennusaineeksi. Siksi mikään muurin kohta ei enää seiso alkuperäisessä korkeudessaan. Muuri on silti [[Unescon]] maailmanperintökohde, joka otettiin luetteloon vuonna 1987. Kierrätys ei ole mikään uusi keksintö.
+KYSYMYS: Kerro lisää: Unescon
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sevilla — kaupunkilehti / Historia: Amfiteatterin muurit purettiin padoksi] Yhdeksän kilometrin päässä Sevillasta seisoo Itálica, jonka Scipio perusti vuonna 206 eaa. haavoittuneille veteraaneilleen ja nimesi Italian mukaan. Se oli ensimmäinen roomalainen asutus koko Hispaniassa, ja siellä syntyi kaksi Rooman keisaria, Trajanus ja Hadrianus. Kaupungin amfiteatteri oli aikanaan valtakunnan kolmanneksi suurin: siihen mahtui 25 000 katsojaa, vaikka kaupungissa asui arviolta 8 000 ihmistä. Sitten tuli hitaampi tuho kuin mikään sota: raunioita louhittiin rakennusaineeksi vuosisatoja, ja vuonna 1740 Sevillan kaupunki määräsi amfiteatterin muurit purettaviksi — kiviä tarvittiin Guadalquiviriin rakennettavaan patoon.
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Vesi sadan mailin päästä] Roomalaiset epäröivät pitkään Karthagon paikan uudelleenkäytössä, mutta Gaius Julius Caesar määräsi vuonna 44 eaa. uuden siirtokunnan perustettavaksi täsmälleen samalle niemelle. Kaupunki kasvoi nopeasti, ja 100-luvulla jaa. siitä oli tullut Rooman valtakunnan läntisen osan toiseksi suurin kaupunki, jossa asui parhaimmillaan satojatuhansia ihmisiä. Näin suuri väestö tarvitsi vettä, jota ei riittänyt lähialueelta: keisari Hadrianuksen aikana rakennettu vesijohto kuljetti vettä Zaghouanin vuorilta peräti 132 kilometrin matkan Karthagoon asti, ja se on yhä yksi pisimmistä koko Rooman valtakunnan tunnetuista vesijohdoista.
+AIEMPI KYSYMYS: Onko muuri Skotlannin raja?
+AIEMPI VASTAUS (Livia):
+No jopas. Ei ole: muuri kulkee kokonaan Englannin puolella, nykyisen Skotlannin ja Englannin rajan eteläpuolella, ja raja vakiintui vasta keskiajalla. Muuri merkitsi aikoinaan [[Rooman valtakunnan]] pohjoista rajaa Britanniassa. Roomalaiset rakensivat myöhemmin vielä pohjoisemmaksi [[Antoninuksen muurin]], mutta se oli käytössä vain lyhyen aikaa. Minä ylitän molemmat kysymättä lupaa.
+KYSYMYS: Kerro lisää: Rooman valtakunnan
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+AIEMPI KYSYMYS: Onko muuri Skotlannin raja?
+AIEMPI VASTAUS (Livia):
+No jopas. Ei ole: muuri kulkee kokonaan Englannin puolella, nykyisen Skotlannin ja Englannin rajan eteläpuolella, ja raja vakiintui vasta keskiajalla. Muuri merkitsi aikoinaan [[Rooman valtakunnan]] pohjoista rajaa Britanniassa. Roomalaiset rakensivat myöhemmin vielä pohjoisemmaksi [[Antoninuksen muurin]], mutta se oli käytössä vain lyhyen aikaa. Minä ylitän molemmat kysymättä lupaa.
+KYSYMYS: Kerro lisää: Antoninuksen muurin
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nome — kaupunkilehti / Nome: Maali tuhannen mailin päässä] Iditarod-koiravaljakkokilpailu on ajettu Anchoragesta Nomeen vuodesta 1973, ja matka on virallisesti 1 049 mailia, luku on symbolinen viittaus Alaskaan 49. osavaltiona. Kilpailu syntyi kunnianosoituksena vuoden 1925 seerumiajolle, jossa parikymmentä valjakkoa kuljetti kurkkumätärokotetta Nenanasta Nomeen 674 mailin matkan viidessä ja puolessa vuorokaudessa. Voittajat ajavat Nomeen nykyään reilussa viikossa, ja koko kaupunki kokoontuu Front Streetin maaliportille lipuin riippumatta kellonajasta tai säästä.
+AIEMPI KYSYMYS: Mikä on mailinlinnake?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Mailinlinnake oli pieni linnake, joka rakennettiin muuriin noin joka [[roomalaisen mailin]] välein. Sen läpi kulki portti, ja siinä majoittui pieni sotilasjoukko. Mailinlinnakkeiden välissä oli torneja, ja puolustuksen ohella muurin portit saattoivat toimia [[tullipaikkoina]].
+
+Mailinlinnake kuulostaa minun korvaani vähän postiasemalta: pieni paikka, jossa kulkijat pysähtyvät ja joku katsoo paperit. Sukuni tuntisi itsensä siellä kotoisaksi.
+KYSYMYS: Kerro lisää: roomalaisen mailin
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+AIEMPI KYSYMYS: Mikä on mailinlinnake?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Mailinlinnake oli pieni linnake, joka rakennettiin muuriin noin joka [[roomalaisen mailin]] välein. Sen läpi kulki portti, ja siinä majoittui pieni sotilasjoukko. Mailinlinnakkeiden välissä oli torneja, ja puolustuksen ohella muurin portit saattoivat toimia [[tullipaikkoina]].
+
+Mailinlinnake kuulostaa minun korvaani vähän postiasemalta: pieni paikka, jossa kulkijat pysähtyvät ja joku katsoo paperit. Sukuni tuntisi itsensä siellä kotoisaksi.
+KYSYMYS: Kerro lisää: tullipaikkoina
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karthago — kaupunkilehti / Karthagon nousu ja tuho: Härännahan kokoinen valtakunta] Perimätiedon mukaan Karthagon perusti foinikialainen kuningatar Elissa, jota myöhemmin kutsuttiin myös nimellä Dido. Hän pakeni kotikaupunkiaan Tyrosta sen jälkeen, kun oma veli Pygmalion oli murhannut hänen aviomiehensä, ja osti paikalliselta päälliköltä maata niin paljon kuin yksi härännahka riittäisi peittämään. Dido leikkautti nahan ohuiksi suikaleiksi ja ympäröi niillä kokonaisen kukkulan – näin syntyi tarinan mukaan kaupunki, jonka puunilainen nimi Qart-hadašt tarkoittaa yksinkertaisesti "uutta kaupunkia". Perinteinen perustamisvuosi on 814 eaa., yli 250 vuotta ennen Rooman ensimmäistä sotaa Karthagoa vastaan.
+- [Vancouver — kohdekartta / Kohdekartta: Keskuskirjasto] 1995 Vancouverin kirjastolla on kolme taloa, ja tämä on kolmas. Ensimmäinen syntyi, kun teräsmagnaatti Andrew Carnegie lupasi 1901 viisikymmentätuhatta dollaria, jos kaupunki antaisi tontin ja viisituhatta dollaria vuodessa toimintaan. Kaupungin itä- ja länsipuoli riitelivät heti siitä, kumpi saisi kirjaston, ja asia ratkaistiin kansanäänestyksellä. Talo avattiin marraskuussa 1903, ja se toimii nykyään asukastalona. Keskuskirjasto muutti 1957 Burrard Streetille ja sieltä 1995 nykyiseen taloonsa. Nykyinen talo on kaupungin siihenastisista hankkeista suurin. Marraskuussa 1990 pidettiin kansanäänestys, jonka jälkeen järjestettiin suunnittelukilpailu. Moshe Safdien ja DA Architectsin ehdotus ol…
+AIEMPI KYSYMYS: Kuka oli keisari Hadrianus?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hadrianus hallitsi [[Rooman valtakuntaa]] vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja [[Britanniassa]] aloitettiin muurin rakentaminen vuonna 122. Hallitsijana hän vietti suuren osan ajastaan matkoilla ja tarkasti rajaprovinssien puolustusta.
+Matkusti paljon, mut ilman siipiä.
+KYSYMYS: Kerro lisää: Rooman valtakuntaa
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rooma — kohdekartta / Kohdekartta: Pantheon] n. 126 Samalla paikalla seisoi ensin toinen temppeli, jonka sotapäällikkö Marcus Agrippa rakennutti noin 29 eaa., mutta se paloi. Keisari Hadrianus rakennutti tilalle täysin uuden temppelin, joka valmistui noin vuonna 126 — ja hän antoi kohteliaasti Agrippan nimen pysyä rakennuksen otsassa, vaikka koko hanke oli hänen omansa. Temppelin kupoli on edelleen maailman suurin raudoittamaton betonikupoli, halkaisijaltaan 43 metriä. Katon keskellä on pyöreä aukko, oculus eli 'silmä', jonka läpi paistaa aurinko ja sataa sade suoraan lattialle. Roomalaiset käyttivät kupolin yläosassa yhä kevyempää kiveä kuin alaosassa, jotta se ei romahtaisi omaan painoonsa. Pantheon on säilynyt näin hyväkuntoisena, …
+AIEMPI KYSYMYS: Kuka oli keisari Hadrianus?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hadrianus hallitsi [[Rooman valtakuntaa]] vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja [[Britanniassa]] aloitettiin muurin rakentaminen vuonna 122. Hallitsijana hän vietti suuren osan ajastaan matkoilla ja tarkasti rajaprovinssien puolustusta.
+Matkusti paljon, mut ilman siipiä.
+KYSYMYS: Kerro lisää: Pantheon
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Enemmän kasveja kuin koko Britanniassa] Pöytävuorella ja Kapin niemimaan vuorijonossa kasvaa arviolta 2 285 kasvilajia, ja niistä 1 500 mahtuu 57 neliökilometrin alalle Pöytävuorella ja sen takaisella tasangolla — vähintään yhtä monta lajia kuin koko Yhdistyneessä kuningaskunnassa. Noin neljä viidestä on fynbosia, afrikaansiksi hienoa pensaikkoa. Fynbos on sopeutunut tuleen: säännölliset kulot ovat hallinneet sitä ainakin kaksitoistatuhatta vuotta, ja kymmenen tai viidentoista vuoden väli suosii suuria proteoja. Vasco da Gama nimesi rannikon 1495 savujen maaksi näkemiensä tulien takia.
+- [Iso-Britannia — maalehti / Musiikki: Marssi, jota soitetaan päättäjäisissä] Edward Elgar opetteli musiikin itse: hänen isänsä piti soitinkauppaa, ja poika luki nuotteja varaston lattialla. Vuonna 1901 valmistunut marssi Pomp and Circumstance nro 1 sai yleisön niin villiksi, että se piti soittaa kolmesti peräkkäin. Sen keskiosan laulava melodia tunnetaan Britanniassa nimellä Land of Hope and Glory, ja Yhdysvalloissa sama sävelmä soi käytännössä joka koulun ja yliopiston päättäjäisissä — tapa alkoi Yalessa 1905, kun Elgar itse oli paikalla vastaanottamassa kunniatohtorin arvoa.
+- [Iso-Britannia — maalehti / Urheilu] Britanniassa kirjoitettiin säännöt peleille, joita nyt pelataan kaikkialla: jalkapallo, tennis ja kriketti syntyivät samoilla saarilla.
+AIEMPI KYSYMYS: Kuka oli keisari Hadrianus?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Hadrianus hallitsi [[Rooman valtakuntaa]] vuosina 117–138. Hän tunnetaan laajoista matkoistaan provinsseissa ja rakennushankkeistaan: hänen aikanaan Rooman [[Pantheon]] sai nykyisen muotonsa, ja [[Britanniassa]] aloitettiin muurin rakentaminen vuonna 122. Hallitsijana hän vietti suuren osan ajastaan matkoilla ja tarkasti rajaprovinssien puolustusta.
+Matkusti paljon, mut ilman siipiä.
+KYSYMYS: Kerro lisää: Britanniassa
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hadrianuksen muuri (historia)
+Tietoruudun teksti: Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen ohella muurin portit saattoivat toimia tullipaikkoina.
+
+Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa 1987.
+
+Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. Nykytutkimus on kaivanut esiin pa…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Lhasa: Talvipalatsi Punaisella kummulla] Marpo Rilla eli Punaisella kummulla oli seissyt linna jo 600-luvulta, kun Viides dalai-lama määräsi 1645 rakennettavaksi uuden palatsin. Ulkoseinät nousivat kolmessa vuodessa, mutta sisustus vei neljäkymmentäviisi vuotta lisää. Dalai-lama muutti Valkoiseen palatsiin 1649, ja Punainen palatsi nousi vasta 1690–1694, kaksitoista vuotta hänen kuolemansa jälkeen. Tuloksena on kolmetoista kerrosta, yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin kaksisataatuhatta patsasta; korkeutta on 119 metriä kukkulan päältä ja yli kolmesataa laakson pohjalta. Kaltevat kiviseinät ovat kolmisen metriä paksut, ja perustuksiin valettiin kuparia järistysten varalta.
+AIEMPI KYSYMYS: Mitä varten muuri rakennettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Muuri oli Rooman Britannian-provinssin puolustusvarustus, mutta sen tarkoituksesta on esitetty monenlaisia tulkintoja. Sotilaat majoittuivat [[linnakkeissa]] ja niiden välisissä torneissa, ja muurin portit saattoivat toimia [[tullipaikkoina]], joten se ei ollut pelkkä este vaan myös tapa valvoa liikennettä. Yksiselitteistä vastausta tarkoituksesta ei ole, koska eri tutkijat painottavat eri puolia. Aita ja portti samassa, kuten hyvässä pihassa.
+KYSYMYS: Kerro lisää: linnakkeissa
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Mikä paljasti kylän vuonna 1850?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kylän paljasti talvella 1850 Skotlantiin iskenyt ankara myrsky. Se repi maan pois [[Skaillinlahdella]] olleelta suurelta epäsäännölliseltä kummulta, ja sen alta tulivat näkyviin useiden pienten, katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen [[William Graham Watt]], ja kylä sijaitsee Orkneyn pääsaaren länsirannikolla. Joskus myrsky paljastaa sellaista, mitä ei muuten löytyisi.
+KYSYMYS: Kerro lisää: Skaillinlahdella
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kaupunkilehti / Townsville: Satama, jonka tulva vaati] 1864—1866 — Burdekin-joki nousi joka sadekausi yli äyräiden, ja silloin sisämaan karjatilat jäivät ilman yhteyttä etelän satamiin. Siksi joen pohjoispuolelle oli pakko saada oma satama. Woodstock Stationin John Melton Black, sydneyläisen liikemiehen Robert Townsin työntekijä, lähetti Andrew Ballin ja Mark Watt Reidin etsimään paikkaa, ja leiri pystytettiin 1864 Ross Creekin rantaan Melton Hillin alle. Towns kävi paikalla 1866 kolme päivää — ensimmäisen ja ainoan kerran — ja lupasi rahoituksen, jolloin kaupunki nimettiin hänen mukaansa. Kunta julistettiin helmikuussa 1866, ja Blackista tuli sen ensimmäinen pormestari.
+- [Chicago — kohdekartta / Kohdekartta: Willis Tower] 1973 Sears, Roebuck & Co. oli 1969 maailman suurin vähittäiskauppias ja työllisti noin 350 000 ihmistä. Kun yhtiö päätti koota tuhannet chicagolaiset toimistotyöntekijänsä yhteen taloon, esikaupunki hylättiin heti — se olisi vaatinut noin 7 000 ihmisen muuttamista. Tilalle valittiin kahden korttelin tontti Loopin länsilaidalta. Chicagon väljä kaavoitus olisi sallinut jopa 300-kerroksisen talon, mutta ilmailuhallinto rajoitti korkeutta ja harva vuokralainen halusi toimistoa pilvien tasalta. Suunnitelma julkistettiin 27. heinäkuuta 1970. Arkkitehti Bruce Graham ja insinööri Fazlur Rahman Khan ratkaisivat korkeuden yhdeksällä neliömäisellä putkella, jotka on niputettu kolme kertaa kolme -ruudu…
+AIEMPI KYSYMYS: Mikä paljasti kylän vuonna 1850?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kylän paljasti talvella 1850 Skotlantiin iskenyt ankara myrsky. Se repi maan pois [[Skaillinlahdella]] olleelta suurelta epäsäännölliseltä kummulta, ja sen alta tulivat näkyviin useiden pienten, katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen [[William Graham Watt]], ja kylä sijaitsee Orkneyn pääsaaren länsirannikolla. Joskus myrsky paljastaa sellaista, mitä ei muuten löytyisi.
+KYSYMYS: Kerro lisää: William Graham Watt
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Mitä nimi Skara Brae tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Brae on [[skotin]] sana ja tarkoittaa rinnettä. Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän. Nimi kertoo siis [[Orkneyn]] kielikerroksista.
+
+Minusta on hauskaa, että kylän nimi on oikeastaan kuvaus kummusta. Ihmiset nimesivät paikan sen mukaan, miltä se päältä näytti, ihan kuten minäkin.
+KYSYMYS: Kerro lisää: skotin
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Mitä nimi Skara Brae tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Brae on [[skotin]] sana ja tarkoittaa rinnettä. Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän. Nimi kertoo siis [[Orkneyn]] kielikerroksista.
+
+Minusta on hauskaa, että kylän nimi on oikeastaan kuvaus kummusta. Ihmiset nimesivät paikan sen mukaan, miltä se päältä näytti, ihan kuten minäkin.
+KYSYMYS: Kerro lisää: Orkneyn
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Millaisia kivisiä huonekaluja Skara Braessa on?
+AIEMPI VASTAUS (Livia):
+Hei, tää on kiva kysymys. [[Skara Braen]] taloissa on kivisiä huonekaluja ja kiinteitä kalusteita: esimerkiksi talon keskellä oleva tulisija sekä vuoteen kaltaisia rakenteita ja hyllykaappeja. Kivi oli luonteva rakennusaine [[Orkneysaarilla]], koska saarilla puuta oli niukasti. Ei ihan sohvaosaston parhaita, mut kestäviä.
+KYSYMYS: Kerro lisää: Skara Braen
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Millaisia kivisiä huonekaluja Skara Braessa on?
+AIEMPI VASTAUS (Livia):
+Hei, tää on kiva kysymys. [[Skara Braen]] taloissa on kivisiä huonekaluja ja kiinteitä kalusteita: esimerkiksi talon keskellä oleva tulisija sekä vuoteen kaltaisia rakenteita ja hyllykaappeja. Kivi oli luonteva rakennusaine [[Orkneysaarilla]], koska saarilla puuta oli niukasti. Ei ihan sohvaosaston parhaita, mut kestäviä.
+KYSYMYS: Kerro lisää: Orkneysaarilla
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Onko Skara Brae Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyllä: Skara Brae kuuluu [[Unescon]] maailmanperintökohteeseen Heart of Neolithic Orkney, joka otettiin luetteloon 1990-luvun lopulla. Siihen kuuluvat myös [[Maeshowe]]-hautakumpu ja [[Brodgarin kivikehä]]. Kivikautinen retkikohde, ja ilmaisen näköalan saa katolta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Onko Skara Brae Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyllä: Skara Brae kuuluu [[Unescon]] maailmanperintökohteeseen Heart of Neolithic Orkney, joka otettiin luetteloon 1990-luvun lopulla. Siihen kuuluvat myös [[Maeshowe]]-hautakumpu ja [[Brodgarin kivikehä]]. Kivikautinen retkikohde, ja ilmaisen näköalan saa katolta.
+KYSYMYS: Kerro lisää: Maeshowe
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+AIEMPI KYSYMYS: Onko Skara Brae Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyllä: Skara Brae kuuluu [[Unescon]] maailmanperintökohteeseen Heart of Neolithic Orkney, joka otettiin luetteloon 1990-luvun lopulla. Siihen kuuluvat myös [[Maeshowe]]-hautakumpu ja [[Brodgarin kivikehä]]. Kivikautinen retkikohde, ja ilmaisen näköalan saa katolta.
+KYSYMYS: Kerro lisää: Brodgarin kivikehä
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Ruoka: Mauste, jossa on kaksikymmentäseitsemän ainesta] Ras el hanout tarkoittaa kaupan parasta, ja siihen voidaan yhdistää jopa kaksikymmentäseitsemän maustetta. Osa niistä tuli idästä arabien mukana, mutta moni on maan omaa satoa: sahrami Taliouinesta, minttu ja oliivit Meknèsistä, appelsiinit ja sitruunat Fèsistä. Marokkolaisen ruoan tunnistaa säilötystä sitruunasta, arganöljystä, kuivatuista hedelmistä ja smenistä, suolatusta ja kypsytetystä voista, jonka tuoksu on väkevä. Perusvilja on nykyään vehnä ja riisi, mutta 1900-luvun puoliväliin asti etelässä syötiin ennen kaikkea ohraa.
+- [Addis Abeba — kaupunkilehti / Kahvin pääkaupunki: Tunti, joka alkaa paahtimesta] Kahviseremonia on Etiopian vieraanvaraisuuden muoto, ja se tehdään yleensä ison aterian jälkeen. Valmistaja paahtaa pavut vieraiden edessä ja kiertää huoneen savuavan pannun kanssa, jotta jokainen saa haistaa tuoksun. Sitten pavut jauhetaan ja keitetään jebena-savipannussa, ja kahvi kaadetaan pieniin si’ni-kuppeihin. Täydessä seremoniassa on kolme kierrosta — abol, tona ja bereka — ja koko ajan palaa suitsuke. Kahvin kanssa tarjotaan popcornia tai paahdettua ohraa eli koloa, ja lattialle levitetään tuoretta ruohoa.
+- [Viro — maalehti / Arki ja tavat: Kamaa ei keitetä ollenkaan] Vuosisatoja — Kamajauho on sekoitus paahdettua ohraa, ruista, kauraa ja hernettä. Sitä ei kypsennetä lainkaan: jauho vatkataan piimään, päälle pannaan marjoja, ja aamiainen on valmis minuutissa. Paahdettu jauho säilyi ennen kuukausia pilaantumatta, joten se oli pellolle ja merimatkalle sopiva eväs. Nykyään kamasta vatkataan myös jälkiruokavaahtoa.
+AIEMPI KYSYMYS: Mitä Skara Braen asukkaat söivät?
+AIEMPI VASTAUS (Livia):
+Ruoasta minä tiedän jotain. Tutkimusten mukaan asukkaat elättivät itsensä pääosin karjataloudella ja viljelyllä: he pitivät karjaa ja viljelivät viljaa, kuten [[ohraa]], ja lisäksi he kalastivat ja keräsivät [[äyriäisiä]] merenrannalta. Tarkkaa ruokavaliota ei voida tietää, mutta kylän läheltä löytyneet jätekasat antavat siitä osviittaa.
+
+Ohraa ja kalaa, minun makuuni vähän karua. Orkneylla on varmasti oma leivonnaisensa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: ohraa
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Skara Brae (historia)
+Tietoruudun teksti: Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan täydellisimpänä säilynyt kivikautinen kylä.
+
+Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen kylän.
+
+Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill Housen William Graham Watt, paik…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Privozin tori] 1827 Privoz on Odessan suurin ja vanhin ruokatori, ja sen tarina alkoi vuonna 1827. Aluksi kauppiaat myivät tavaroitaan suoraan hevoskärryjen lavalta – nimi ”Privoz” tarkoittaakin suunnilleen ”tuotu tavara”. Vuosikymmenten kuluessa torista kasvoi koko kaupungin sydän, paikka jossa ei vain ostettu ja myyty, vaan vaihdettiin myös kaikki tuoreimmat kaupungin kuulumiset. Tulipalo tuhosi torin, mutta se rakennettiin kokonaan uudelleen 1900-luvun alussa. Vuonna 1904 torille valmistui kaunis Hedelmäkäytävä, jonka kaarevat holvikäytävät ja koristeelliset julkisivut tekivät siitä torin näyttävimmän rakennuksen. Sitä pidetään edelleen torin ainoana varsinaisena arkkitehtuurinähtävyytenä. Privozilla m…
+- [GUF — maalehti / Ruoka: 36 tunnin pääsiäiskeitto] pääsiäinen — Bouillon d’awara eli awarakeitto valmistetaan piikikkään awara-palmun hedelmälihasta, joka keitetään sakeaksi oranssinruskeaksi liemeksi. Liemen sekaan lisätään suolattua ja savustettua lihaa, kalaa, äyriäisiä ja kasviksia, ja koko valmistus voi kestää jopa 36 tuntia. Keitto liittyy perinteisesti pääsiäiseen, jolloin perheet kokoontuvat valmistamaan sitä yhdessä koko päivän ajan. Ranskan Guayanassa tunnetaan sananlasku, jonka mukaan awarakeiton syönyt palaa aina takaisin Guayanaan — ruoka on monelle siirtolaiselle side kotiseutuun.
+AIEMPI KYSYMYS: Mitä Skara Braen asukkaat söivät?
+AIEMPI VASTAUS (Livia):
+Ruoasta minä tiedän jotain. Tutkimusten mukaan asukkaat elättivät itsensä pääosin karjataloudella ja viljelyllä: he pitivät karjaa ja viljelivät viljaa, kuten [[ohraa]], ja lisäksi he kalastivat ja keräsivät [[äyriäisiä]] merenrannalta. Tarkkaa ruokavaliota ei voida tietää, mutta kylän läheltä löytyneet jätekasat antavat siitä osviittaa.
+
+Ohraa ja kalaa, minun makuuni vähän karua. Orkneylla on varmasti oma leivonnaisensa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: äyriäisiä
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+AIEMPI KYSYMYS: Miksi silta tehtiin raudasta?
+AIEMPI VASTAUS (Livia):
+Sillasta minä tiedän yhtä ja toista. [[Ironbridgen]] rotkon seutu oli luonnollinen paikka rautatyölle, sillä kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa. Lisäksi joessa oli säilytettävä kulkukelpoinen väylä ja rannat olivat epävakaat, joten [[Thomas Farnolls Pritchard]] esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin, mutta työ tehtiin lopulta kahdessa vuodessa. Rohkea veto, ja se kannatti.
+KYSYMYS: Kerro lisää: Ironbridgen
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+AIEMPI KYSYMYS: Miksi silta tehtiin raudasta?
+AIEMPI VASTAUS (Livia):
+Sillasta minä tiedän yhtä ja toista. [[Ironbridgen]] rotkon seutu oli luonnollinen paikka rautatyölle, sillä kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa. Lisäksi joessa oli säilytettävä kulkukelpoinen väylä ja rannat olivat epävakaat, joten [[Thomas Farnolls Pritchard]] esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin, mutta työ tehtiin lopulta kahdessa vuodessa. Rohkea veto, ja se kannatti.
+KYSYMYS: Kerro lisää: Thomas Farnolls Pritchard
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+AIEMPI KYSYMYS: Kuka vastasi sillan rautatyöstä?
+AIEMPI VASTAUS (Livia):
+Sen nimen minä muistan, vaikka Pöllö parantelee ny siipeään. Rautaosista vastasi [[Abraham Darby III]], jonka suku oli tunnettu raudanvalmistajia [[Coalbrookdalessa]]. Sillan yhden jännevälin suunnitelman esitti [[Thomas Farnolls Pritchard]]. Silta seisoo yhä, ja se on parempi kuin mikään kehu.
+KYSYMYS: Kerro lisää: Abraham Darby III
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+AIEMPI KYSYMYS: Kuka vastasi sillan rautatyöstä?
+AIEMPI VASTAUS (Livia):
+Sen nimen minä muistan, vaikka Pöllö parantelee ny siipeään. Rautaosista vastasi [[Abraham Darby III]], jonka suku oli tunnettu raudanvalmistajia [[Coalbrookdalessa]]. Sillan yhden jännevälin suunnitelman esitti [[Thomas Farnolls Pritchard]]. Silta seisoo yhä, ja se on parempi kuin mikään kehu.
+KYSYMYS: Kerro lisää: Coalbrookdalessa
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mitä valurauta on?
+AIEMPI VASTAUS (Livia):
+Valurautaa, niinpä. Valurauta on raudan ja hiilen seos, jossa hiiltä on yli noin kaksi prosenttia, ja se valetaan sulana muotteihin. Se kestää hyvin puristusta mutta on hauras vedolle ja iskuille, minkä vuoksi se sopii [[kaarirakenteissa]] käytettäväksi, kuten [[Ironbridgen]] sillassa. Kaikilla on se oma suuntansa, jossa kestää, mut raudalla se on selvempi.
+KYSYMYS: Kerro lisää: kaarirakenteissa
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Enemmän kasveja kuin koko Britanniassa] Pöytävuorella ja Kapin niemimaan vuorijonossa kasvaa arviolta 2 285 kasvilajia, ja niistä 1 500 mahtuu 57 neliökilometrin alalle Pöytävuorella ja sen takaisella tasangolla — vähintään yhtä monta lajia kuin koko Yhdistyneessä kuningaskunnassa. Noin neljä viidestä on fynbosia, afrikaansiksi hienoa pensaikkoa. Fynbos on sopeutunut tuleen: säännölliset kulot ovat hallinneet sitä ainakin kaksitoistatuhatta vuotta, ja kymmenen tai viidentoista vuoden väli suosii suuria proteoja. Vasco da Gama nimesi rannikon 1495 savujen maaksi näkemiensä tulien takia.
+- [Iso-Britannia — maalehti / Musiikki: Marssi, jota soitetaan päättäjäisissä] Edward Elgar opetteli musiikin itse: hänen isänsä piti soitinkauppaa, ja poika luki nuotteja varaston lattialla. Vuonna 1901 valmistunut marssi Pomp and Circumstance nro 1 sai yleisön niin villiksi, että se piti soittaa kolmesti peräkkäin. Sen keskiosan laulava melodia tunnetaan Britanniassa nimellä Land of Hope and Glory, ja Yhdysvalloissa sama sävelmä soi käytännössä joka koulun ja yliopiston päättäjäisissä — tapa alkoi Yalessa 1905, kun Elgar itse oli paikalla vastaanottamassa kunniatohtorin arvoa.
+- [Iso-Britannia — maalehti / Urheilu] Britanniassa kirjoitettiin säännöt peleille, joita nyt pelataan kaikkialla: jalkapallo, tennis ja kriketti syntyivät samoilla saarilla.
+AIEMPI KYSYMYS: Mikä oli teollinen vallankumous?
+AIEMPI VASTAUS (Livia):
+Iso kysymys, mut yritetään. Teollinen vallankumous oli murros, joka alkoi [[Britanniassa]] 1700-luvun jälkipuoliskolla: koneet ja [[höyrykoneen]] voima syrjäyttivät käsityön, rautateollisuus ja [[tekstiiliteollisuus]] kasvoivat, ja ihmiset muuttivat maaseudulta kaupunkeihin tehtaiden perässä. Ironbridgen seutu oli yksi sen keskuksista.
+
+Teollinen vallankumous toi lennättimen ja rautatiet, ja ne veivät viimeisetkin kyyhkypostityöt. Setäni vei aikanaan kursseja Reuterille Aachenin ja Brysselin väliä, kunnes lennätin korvasi hänet. En ole katkera, melkein.
+KYSYMYS: Kerro lisää: Britanniassa
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Musiikki: Laulu piti nostoväen tahdissa] Purjelaivalla monta työtä vaati yhtäaikaista voimaa: ankkurin nostaminen tai purjeen kiristäminen onnistui vain, jos kaikki vetivät samalla hetkellä. Siksi laulettiin. Merimieslauluissa esilaulaja lauloi säkeen ja miehistö vastasi kertosäkeen — ja juuri kertosäkeen kohdalla vedettiin. What shall we do with the drunken sailor on niin sanottu stamp-and-go -laulu, jota laulettiin marssien kannen poikki köysi kädessä. Höyrykoneen myötä työlaulut kävivät tarpeettomiksi, mutta laulut jäivät.
+AIEMPI KYSYMYS: Mikä oli teollinen vallankumous?
+AIEMPI VASTAUS (Livia):
+Iso kysymys, mut yritetään. Teollinen vallankumous oli murros, joka alkoi [[Britanniassa]] 1700-luvun jälkipuoliskolla: koneet ja [[höyrykoneen]] voima syrjäyttivät käsityön, rautateollisuus ja [[tekstiiliteollisuus]] kasvoivat, ja ihmiset muuttivat maaseudulta kaupunkeihin tehtaiden perässä. Ironbridgen seutu oli yksi sen keskuksista.
+
+Teollinen vallankumous toi lennättimen ja rautatiet, ja ne veivät viimeisetkin kyyhkypostityöt. Setäni vei aikanaan kursseja Reuterille Aachenin ja Brysselin väliä, kunnes lennätin korvasi hänet. En ole katkera, melkein.
+KYSYMYS: Kerro lisää: höyrykoneen
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+AIEMPI KYSYMYS: Mikä oli teollinen vallankumous?
+AIEMPI VASTAUS (Livia):
+Iso kysymys, mut yritetään. Teollinen vallankumous oli murros, joka alkoi [[Britanniassa]] 1700-luvun jälkipuoliskolla: koneet ja [[höyrykoneen]] voima syrjäyttivät käsityön, rautateollisuus ja [[tekstiiliteollisuus]] kasvoivat, ja ihmiset muuttivat maaseudulta kaupunkeihin tehtaiden perässä. Ironbridgen seutu oli yksi sen keskuksista.
+
+Teollinen vallankumous toi lennättimen ja rautatiet, ja ne veivät viimeisetkin kyyhkypostityöt. Setäni vei aikanaan kursseja Reuterille Aachenin ja Brysselin väliä, kunnes lennätin korvasi hänet. En ole katkera, melkein.
+KYSYMYS: Kerro lisää: tekstiiliteollisuus
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+AIEMPI KYSYMYS: Mikä on Severnin vuorovesiaalto?
+AIEMPI VASTAUS (Livia):
+Vuorovesiaalto, nyt kiinnostaa. Severnin vuorovesiaalto syntyy, kun nousuvesi työntyy [[Bristolinkanaalin]] kapenevasta suusta [[Severn-joen]] suulle: vedenpinta nousee jokeen aaltona, joka kulkee ylävirtaan. Bristolinkanaalin vuorovesiero on erittäin suuri, ja ilmiö on voimakkaimmillaan tavallisesti kevään ja syksyn nousuvesien aikaan. Surffaajat ajaa sitä aaltoa, minä pysyn kuivana.
+KYSYMYS: Kerro lisää: Bristolinkanaalin
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ironbridge (tekniikka)
+Tietoruudun teksti: Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen vallankumouksen tunnuksena.
+
+Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet mahtuvat kulkemaan sen alitse.
+
+Vuonna 1934 silta suojeltiin muinais…
+AIEMPI KYSYMYS: Mikä on Severnin vuorovesiaalto?
+AIEMPI VASTAUS (Livia):
+Vuorovesiaalto, nyt kiinnostaa. Severnin vuorovesiaalto syntyy, kun nousuvesi työntyy [[Bristolinkanaalin]] kapenevasta suusta [[Severn-joen]] suulle: vedenpinta nousee jokeen aaltona, joka kulkee ylävirtaan. Bristolinkanaalin vuorovesiero on erittäin suuri, ja ilmiö on voimakkaimmillaan tavallisesti kevään ja syksyn nousuvesien aikaan. Surffaajat ajaa sitä aaltoa, minä pysyn kuivana.
+KYSYMYS: Kerro lisää: Severn-joen
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Mistä kylpylän vesi tulee?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Bathin kylpylöiden vesi on peräisin sadevedestä, joka putoaa [[Mendip-kukkuloille]] ja imeytyy [[kalkkikiven]] halkeamiin useiden kilometrien syvyyteen. Siellä maankuoren oma lämpö kuumentaa veden, ja paineen alaisena se nousee takaisin pintaan halkeamia ja siirroksia pitkin. Lähteiden mukaan yhdestä siirroksesta purkautuu päivittäin yli miljoona litraa noin 46-asteista vettä. Lämpimän lähteen ympärille kasvoi roomalaisaikana pieni kaupunki nimeltä [[Aquae Sulis]]. Kyl minä mieluummin kastelen siipeni lätäkössä.
+KYSYMYS: Kerro lisää: Mendip-kukkuloille
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+AIEMPI KYSYMYS: Mistä kylpylän vesi tulee?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Bathin kylpylöiden vesi on peräisin sadevedestä, joka putoaa [[Mendip-kukkuloille]] ja imeytyy [[kalkkikiven]] halkeamiin useiden kilometrien syvyyteen. Siellä maankuoren oma lämpö kuumentaa veden, ja paineen alaisena se nousee takaisin pintaan halkeamia ja siirroksia pitkin. Lähteiden mukaan yhdestä siirroksesta purkautuu päivittäin yli miljoona litraa noin 46-asteista vettä. Lämpimän lähteen ympärille kasvoi roomalaisaikana pieni kaupunki nimeltä [[Aquae Sulis]]. Kyl minä mieluummin kastelen siipeni lätäkössä.
+KYSYMYS: Kerro lisää: kalkkikiven
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Mistä kylpylän vesi tulee?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä osaan kertoo. Bathin kylpylöiden vesi on peräisin sadevedestä, joka putoaa [[Mendip-kukkuloille]] ja imeytyy [[kalkkikiven]] halkeamiin useiden kilometrien syvyyteen. Siellä maankuoren oma lämpö kuumentaa veden, ja paineen alaisena se nousee takaisin pintaan halkeamia ja siirroksia pitkin. Lähteiden mukaan yhdestä siirroksesta purkautuu päivittäin yli miljoona litraa noin 46-asteista vettä. Lämpimän lähteen ympärille kasvoi roomalaisaikana pieni kaupunki nimeltä [[Aquae Sulis]]. Kyl minä mieluummin kastelen siipeni lätäkössä.
+KYSYMYS: Kerro lisää: Aquae Sulis
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Miksi altaisiin ei saa mennä?
+AIEMPI VASTAUS (Livia):
+Ai se. Bathin [[roomalaisten]] rakentamissa altaissa ei uida, koska vesi ei nykyisellään ole turvallista kylpemiseen. Lähteiden mukaan 1970-luvun lopulla vedessä todettiin terveydelle vaarallisia mikrobeja, ja uiminen lopetettiin; en ole varma tarkasta vuodesta. Altaat ovat lisäksi arvokas muinaisjäännös, jota halutaan suojella kulumiselta. Kylpeä pääsee sen sijaan lähistöllä sijaitsevassa uudemmassa kylpylässä nimeltä [[Thermae Bath Spa]], jonka vesi tulee samoista lähteistä. Minä kylven mieluummin lätäkössä, siit ei oo kenellekään harmia.
+KYSYMYS: Kerro lisää: roomalaisten
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Miksi altaisiin ei saa mennä?
+AIEMPI VASTAUS (Livia):
+Ai se. Bathin [[roomalaisten]] rakentamissa altaissa ei uida, koska vesi ei nykyisellään ole turvallista kylpemiseen. Lähteiden mukaan 1970-luvun lopulla vedessä todettiin terveydelle vaarallisia mikrobeja, ja uiminen lopetettiin; en ole varma tarkasta vuodesta. Altaat ovat lisäksi arvokas muinaisjäännös, jota halutaan suojella kulumiselta. Kylpeä pääsee sen sijaan lähistöllä sijaitsevassa uudemmassa kylpylässä nimeltä [[Thermae Bath Spa]], jonka vesi tulee samoista lähteistä. Minä kylven mieluummin lätäkössä, siit ei oo kenellekään harmia.
+KYSYMYS: Kerro lisää: Thermae Bath Spa
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Kenelle jumalattarelle Bathin temppeli oli omistettu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bathin temppeli oli omistettu jumalattarelle nimeltä [[Sulis]], jota paikalliset kelttiläiset asukkaat palvoivat kuuman lähteen jumalattarena jo ennen roomalaisia. Roomalaiset yhdistivät hänet omaan viisauden ja käsityön jumalattareensa [[Minervaan]], ja yhdistelmää kutsuttiin nimellä Sulis Minerva. Kaupungin roomalainen nimi [[Aquae Sulis]] tarkoittaa Sulisin vesiä. Jumalattari on kyl säilyttäny nimensä paremmin kuin moni kuningas.
+KYSYMYS: Kerro lisää: Sulis
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Kenelle jumalattarelle Bathin temppeli oli omistettu?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bathin temppeli oli omistettu jumalattarelle nimeltä [[Sulis]], jota paikalliset kelttiläiset asukkaat palvoivat kuuman lähteen jumalattarena jo ennen roomalaisia. Roomalaiset yhdistivät hänet omaan viisauden ja käsityön jumalattareensa [[Minervaan]], ja yhdistelmää kutsuttiin nimellä Sulis Minerva. Kaupungin roomalainen nimi [[Aquae Sulis]] tarkoittaa Sulisin vesiä. Jumalattari on kyl säilyttäny nimensä paremmin kuin moni kuningas.
+KYSYMYS: Kerro lisää: Minervaan
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kohdekartta / Kohdekartta: Steamer Point] hiiliasema 1839 alkaen Tawahi tunnettiin brittiaikana nimellä Steamer Point, ja nimi kertoo koko jutun: tänne höyrylaivat tulivat. Kaupunginosa on niemen länsikärjessä, kuuden kilometrin päässä Craterista, ja se syntyi käytännössä tyhjästä brittihallinnon myötä. Vielä vuonna 1920 sinne nousivat kaikki matkustajalaivojen matkustajat. Kaupunginosasta tuli Adenin eurooppalainen kortteli. Rannassa on 1800-luvun laivalaituri, jota käytettiin arvovieraiden vastaanottoon, ja sen takana Crescent-hotelli verantoineen. Ranskalainen runoilija Arthur Rimbaud asui Adenissa vuosina 1880–1891 juuri tässä kaupunginosassa; hänen kaksikerroksinen talonsa avattiin yleisölle vuonna 1991, ja 1990-luvun lopulla …
+- [New Orleans — kaupunkilehti / New Orleans: Kaupunki puolikuun muotoisessa mutkassa] Ranskalainen Mississippi-yhtiö perusti kaupungin keväällä 1718 Jean-Baptiste Le Moyne de Bienvillen johdolla maalle, jota chitimacha-kansa oli perinteisesti asuttanut. Nimi La Nouvelle-Orléans annettiin Orléansin herttuan Philippe II:n mukaan; hän hoiti Ranskan valtionhoitajan tehtäviä Ludvig XV:n puolesta 1715–1723. Lempinimi Crescent City tulee joesta: alempi Mississippi kaartaa täällä niin jyrkästi kaupungin ympäri ja läpi, että kartalla asutus näyttää puolikuulta veden sylissä. Ensimmäinen ruutukaava piirrettiin suoraan joen luonnolliselle penkereelle, joka oli seudun korkeinta maata.
+AIEMPI KYSYMYS: Mistä Bath tunnetaan roomalaisten kylpylöiden lisäksi?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on monta vastausta. Bath tunnetaan 1700-luvun georgiaanisesta rakennustaiteestaan, jossa vaalean kalkkikiven väriset terassit ja kaarevat rivitalot, kuten [[Royal Crescent]], hallitsevat kaupunkikuvaa. Kirjailija [[Jane Austen]] asui kaupungissa muutaman vuoden 1800-luvun alussa, ja kaupunki esiintyy hänen romaaneissaan. UNESCO on kirjannut koko kaupungin maailmanperintöluetteloon. Ja Bathissa on muuten oma pullakin, Bath bun, mut se on toinen tarina.
+KYSYMYS: Kerro lisää: Royal Crescent
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mosul — kohdekartta / Kohdekartta: Kuyunjikin kumpu] pääkaupunki noin 700–612 eKr. Kuyunjik on Niniven kahdesta kummusta pohjoisempi, ja se on kaupungin akropoli. Kummun alla ovat Sanheribin ja hänen seuraajiensa palatsit: Asarhaddonin, Assurbanipalin, Assur-etel-ilanin, Sin-shumu-lisirin ja Sin-shar-ishkunin. Sanherib teki Ninivestä Assyrian pääkaupungin noin vuonna 700 eKr., ja rakennustyö oli mittava: kaupungista tuli suurempi kuin Babylon, Kalhu tai Assur, ja aikansa suurin koko maailmassa. Asukkaita oli yli satatuhatta, ehkä lähes sataviisikymmentätuhatta, eli noin kaksi kertaa niin paljon kuin Babylonissa. Nimi Kuyunjik on Layardin mukaan turkkia ja tarkoittaa lampaan deminutiivia; arabit tunsivat kummun myös nimellä Armousheeah. Kumpu …
+AIEMPI KYSYMYS: Mistä Bath tunnetaan roomalaisten kylpylöiden lisäksi?
+AIEMPI VASTAUS (Livia):
+No niin, tähän on monta vastausta. Bath tunnetaan 1700-luvun georgiaanisesta rakennustaiteestaan, jossa vaalean kalkkikiven väriset terassit ja kaarevat rivitalot, kuten [[Royal Crescent]], hallitsevat kaupunkikuvaa. Kirjailija [[Jane Austen]] asui kaupungissa muutaman vuoden 1800-luvun alussa, ja kaupunki esiintyy hänen romaaneissaan. UNESCO on kirjannut koko kaupungin maailmanperintöluetteloon. Ja Bathissa on muuten oma pullakin, Bath bun, mut se on toinen tarina.
+KYSYMYS: Kerro lisää: Jane Austen
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+AIEMPI KYSYMYS: Miten kalkkikivi syntyy?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kalkkikivi on sedimenttikivi, joka koostuu pääosin [[kalsiumkarbonaatista]]. Suuri osa kalkkikivestä on syntynyt muinaisissa meissä, kun merieliöiden kuoret ja luurankojen osat ovat kerääntyneet pohjaan ja puristuneet vuosimiljoonien aikana kiveksi. Kalkkikivi liukenee hitaasti happamaan sadeveteen, minkä vuoksi siihen syntyy halkeamia, [[luolia]] ja maanalaisia vesireittejä. Kivi kuin kivi, kunhan siinä on hyvä istua.
+KYSYMYS: Kerro lisää: kalsiumkarbonaatista
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bathin roomalaiset kylpylät (kulttuuri)
+Tietoruudun teksti: Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien 60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.
+
+Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.
+
+Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, kylpylärakennus ja museo, jossa on Aquae Sulisin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Budapest — kohdekartta / Kohdekartta: Gellértinvuori] 1850–1854 Gellértinvuori kohoaa 235 metrin korkeuteen Tonavan yllä, ja sen nimi tulee piispa Gellertistä, joka surmattiin kukkulalla kansannousussa vuonna 1046 — tarinan mukaan hänet suljettiin piikkitynnyriin ja vieritettiin alas rinnettä. Kukkulan sisällä on kuumien lähteiden muovaamia luolia; vuonna 2007 sieltä löytyi kokonainen kristallien peittämä luola, joka on syntynyt jo 300 000–500 000 vuotta sitten. Huipulla seisoo Citadella-linnoitus, jonka Habsburgit rakensivat 1850-luvulla vuoden 1848 kansannousun jälkeen pitääkseen kaupunkia kurissa. Sen vieressä kohoaa iso pronssipatsas, jonka neuvostojoukot pystyttivät toisen maailmansodan jälkeen voiton muistoksi — patsas näkyy lähes joka p…
+AIEMPI KYSYMYS: Miten kalkkikivi syntyy?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kalkkikivi on sedimenttikivi, joka koostuu pääosin [[kalsiumkarbonaatista]]. Suuri osa kalkkikivestä on syntynyt muinaisissa meissä, kun merieliöiden kuoret ja luurankojen osat ovat kerääntyneet pohjaan ja puristuneet vuosimiljoonien aikana kiveksi. Kalkkikivi liukenee hitaasti happamaan sadeveteen, minkä vuoksi siihen syntyy halkeamia, [[luolia]] ja maanalaisia vesireittejä. Kivi kuin kivi, kunhan siinä on hyvä istua.
+KYSYMYS: Kerro lisää: luolia
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Miten meri on muovannut kallioon valtavan kaaren?
+AIEMPI VASTAUS (Livia):
+Mmm— kaari näkyy ylhäältä hienosti. Aallot kuluttavat rannikon kallioita, ja kovempi kivi kestää kauemmin kuin pehmeämpi. [[Durdle Doorin]] kohdalla kestävä [[Portlandin kalkkikivi]] jäi pystyyn, kun sen takana ollut pehmeämpi kivi kului pois. Aallot iskeytyivät kallion heikkoihin kohtiin ja leikkasivat vähitellen aukon, josta tuli kaari. Läpi lentäminen on kyl kiusallisen houkuttelevaa.
+KYSYMYS: Kerro lisää: Durdle Doorin
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kaupunkilehti / Halifax: 1873: purjeita ja odotettu rata] Isoisän matkavuonna Halifax oli brittiläinen varuskunta- ja laivastosatama, joka oli ollut kuusi vuotta osa Kanadaa. Konfederaatio 1867 sai osakseen vastustusta juuri Halifaxin kauppiailta: maakunta oli varakas ja sen kauppasuhteet Bostoniin ja New Yorkiin toimivat. Brittivaruskunta pysyi kaupungissa vuoteen 1906 ja laivasto vuoteen 1910. Kaupunki odotti tulevansa Kanadan talvisatamaksi, mutta Intercolonial Railway valmistui vasta 1876 ja kiersi pohjoisen kautta; useimmat viejät lähettivät tavaransa Bostonin tai Portlandin kautta. Kaupungissa syntyi silti kaksi Kanadan suurimmista pankeista, ja purjelaivakausi oli huipussaan.
+- [San Ambrosio — kaupunkilehti / San Ambrosio: Isoisän aikaan vasta kartalle] Vuonna 1850 brittiläisen HMS Portlandin luutnantti Parkin kiipesi suurin vaivoin saaren lähes pystysuoria rinteitä ylös eikä löytänyt etsimäänsä guanoa – vain kanervamaisia pensaita. Vuonna 1869 Chilen korvetti Chacabuco poimi saarelta ensimmäiset kasvinäytteet, jotka tutkija Rodulfo Amando Philippi tunnisti. Isoisän oman vuoden 1873 matkan tienoilla saari oli siis yhä käytännössä kartoittamaton täplä valtamerellä: vasta lokakuussa 1874 kapteeni Ramón Vidal Gormaz mittasi rannikon tarkasti kaappiveneellä Covadonga, ja ensimmäiset luotettavat kartat julkaistiin vuotta myöhemmin.
+AIEMPI KYSYMYS: Miten meri on muovannut kallioon valtavan kaaren?
+AIEMPI VASTAUS (Livia):
+Mmm— kaari näkyy ylhäältä hienosti. Aallot kuluttavat rannikon kallioita, ja kovempi kivi kestää kauemmin kuin pehmeämpi. [[Durdle Doorin]] kohdalla kestävä [[Portlandin kalkkikivi]] jäi pystyyn, kun sen takana ollut pehmeämpi kivi kului pois. Aallot iskeytyivät kallion heikkoihin kohtiin ja leikkasivat vähitellen aukon, josta tuli kaari. Läpi lentäminen on kyl kiusallisen houkuttelevaa.
+KYSYMYS: Kerro lisää: Portlandin kalkkikivi
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jurassic Coastin kallioissa näkyy noin 185 miljoonan vuoden mittainen jakso maapallon historiaa. Aika jakautuu kolmeen kauteen: [[triaskauteen]], [[jurakauteen]] ja [[liitukauteen]], ja ne näkyvät kerroksina rantajakson eri osissa. Alue kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2001. Satakahdeksankymmentäviisi miljoonaa vuotta, väsyttää jo pelkkä lukeminen.
+KYSYMYS: Kerro lisää: triaskauteen
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jurassic Coastin kallioissa näkyy noin 185 miljoonan vuoden mittainen jakso maapallon historiaa. Aika jakautuu kolmeen kauteen: [[triaskauteen]], [[jurakauteen]] ja [[liitukauteen]], ja ne näkyvät kerroksina rantajakson eri osissa. Alue kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2001. Satakahdeksankymmentäviisi miljoonaa vuotta, väsyttää jo pelkkä lukeminen.
+KYSYMYS: Kerro lisää: jurakauteen
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuinka pitkän ajan geologinen historia näkyy Jurassic Coastilla?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Jurassic Coastin kallioissa näkyy noin 185 miljoonan vuoden mittainen jakso maapallon historiaa. Aika jakautuu kolmeen kauteen: [[triaskauteen]], [[jurakauteen]] ja [[liitukauteen]], ja ne näkyvät kerroksina rantajakson eri osissa. Alue kirjattiin UNESCOn maailmanperintöluetteloon vuonna 2001. Satakahdeksankymmentäviisi miljoonaa vuotta, väsyttää jo pelkkä lukeminen.
+KYSYMYS: Kerro lisää: liitukauteen
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Townsville — kohdekartta / Kohdekartta: Vanha postitalo] 1886—1964 Flinders Mallin itäpäässä seisoo sementtirapattu tiilitalo, jossa on renessanssin piirteitä: alakerrassa varjostava pylväskäytävä ja yläkerran julkisivulla kuisti. Suunnittelija oli John James Clark ja rakentaja Dennis Kellcher. Talo tehtiin vaiheittain 1880-luvulla: yksi vaihe oli kaksikerroksinen lennätinkonttori, toinen postikonttori ja postimestarin asunto, ja laajennuksia tehtiin vielä 1888. Kellotornin rakensi Henry L Davis & Co. Kellopeli tilattiin Englannista 1889 ja se oli asennettu 1891. Torni näkyi Ross Creekin yli, ja postitalon portailta pidettiin usein poliittisia puheita saippualaatikon päältä. Vuonna 1942 torni purettiin ja koneisto pantiin varastoon — Darwinin pom…
+- [Sierra Leone — maalehti / Kirjallisuus: Shakespeare krioksi, koska kieli ei ole murre] 1964–2013 — Kriota puhuu yli yhdeksänkymmentä prosenttia maan väestöstä, mutta sillä ei ole virallista asemaa. Sanasto tulee englannista, kieliopin arvellaan seuraavan jamaikalaista maroonikreolia ja afrikkalaiset sanat ovat pääosin akanista, jorubasta ja igbosta; lapsi on pikin portugalin sanasta pequeno. Toimittaja ja kielimies Thomas Decker väitti 1900-luvun puolivälissä, ettei krio ole murre vaan kieli, ja todisti sen kääntämällä: Shakespearen Julius Caesar ilmestyi krioksi 1964 ja sovitus As You Like Itistä 1966. Uusi testamentti käännettiin 1986 ja Vanha testamentti 2013.
+AIEMPI KYSYMYS: Mitä Durdle Doorin nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi Durdle on lähteiden mukaan peräisin [[vanhasta englannista]], ja sen uskotaan tulevan sanasta, joka tarkoittaa lävistettyä tai porattua. Nimi kuvaa siis hyvin kalliota, jonka läpi on aukko. Durdle Door sijaitsee [[Lulworthin]] lähellä [[Dorsetin]] rannikolla. Aika osuva nimi, vaikka vähän oudolta kuulostaa.
+KYSYMYS: Kerro lisää: vanhasta englannista
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Mitä Durdle Doorin nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi Durdle on lähteiden mukaan peräisin [[vanhasta englannista]], ja sen uskotaan tulevan sanasta, joka tarkoittaa lävistettyä tai porattua. Nimi kuvaa siis hyvin kalliota, jonka läpi on aukko. Durdle Door sijaitsee [[Lulworthin]] lähellä [[Dorsetin]] rannikolla. Aika osuva nimi, vaikka vähän oudolta kuulostaa.
+KYSYMYS: Kerro lisää: Lulworthin
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Mitä Durdle Doorin nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Nimi Durdle on lähteiden mukaan peräisin [[vanhasta englannista]], ja sen uskotaan tulevan sanasta, joka tarkoittaa lävistettyä tai porattua. Nimi kuvaa siis hyvin kalliota, jonka läpi on aukko. Durdle Door sijaitsee [[Lulworthin]] lähellä [[Dorsetin]] rannikolla. Aika osuva nimi, vaikka vähän oudolta kuulostaa.
+KYSYMYS: Kerro lisää: Dorsetin
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Mistä Jurassic Coast on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi tulee jurakaudesta, jonka kerrostumia rantajakson kalliot edustavat. Jurakauden oma nimi puolestaan on peräisin [[Juran vuoristosta]], joka kohoaa Ranskan ja Sveitsin rajalla ja jossa tämän ajanjakson kalkkikiveä on runsaasti näkyvillä. Englannin etelärannikon [[Jurassic Coast]] on siis saanut nimensä saman kauden kerrostumista, vaikka maisemat eroavat toisistaan täysin.
+
+Nimi on lainattu vuorilta, vaikka tämä rantajakso on kyllä paljon kauniimpi paikka lentää. Sen verran saan sanoa sukuni puolesta.
+KYSYMYS: Kerro lisää: Juran vuoristosta
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Mistä Jurassic Coast on saanut nimensä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimi tulee jurakaudesta, jonka kerrostumia rantajakson kalliot edustavat. Jurakauden oma nimi puolestaan on peräisin [[Juran vuoristosta]], joka kohoaa Ranskan ja Sveitsin rajalla ja jossa tämän ajanjakson kalkkikiveä on runsaasti näkyvillä. Englannin etelärannikon [[Jurassic Coast]] on siis saanut nimensä saman kauden kerrostumista, vaikka maisemat eroavat toisistaan täysin.
+
+Nimi on lainattu vuorilta, vaikka tämä rantajakso on kyllä paljon kauniimpi paikka lentää. Sen verran saan sanoa sukuni puolesta.
+KYSYMYS: Kerro lisää: Jurassic Coast
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuka Mary Anning oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Mary Anning]] oli 1800-luvun alussa [[Lyme Regisissä]] elänyt fossiilien kerääjä, joka löysi merieläinten luurankoja rannikon kallioista. Hänen löytönsä, muun muassa [[ikthyosaurusten]] ja [[plesiosaurusten]] jäänteet, auttoivat tutkijoita ymmärtämään sukupuuttoon kuolleita eliöitä. Hän oli köyhästä perheestä, ja lähteiden mukaan hän sai omana aikanaan vähän tunnustusta tiedeyhteisöltä. Ois tehnyt mieli auttaa kaivuussa, mut siivet on huonot lapiot.
+KYSYMYS: Kerro lisää: Mary Anning
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuka Mary Anning oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Mary Anning]] oli 1800-luvun alussa [[Lyme Regisissä]] elänyt fossiilien kerääjä, joka löysi merieläinten luurankoja rannikon kallioista. Hänen löytönsä, muun muassa [[ikthyosaurusten]] ja [[plesiosaurusten]] jäänteet, auttoivat tutkijoita ymmärtämään sukupuuttoon kuolleita eliöitä. Hän oli köyhästä perheestä, ja lähteiden mukaan hän sai omana aikanaan vähän tunnustusta tiedeyhteisöltä. Ois tehnyt mieli auttaa kaivuussa, mut siivet on huonot lapiot.
+KYSYMYS: Kerro lisää: Lyme Regisissä
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuka Mary Anning oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Mary Anning]] oli 1800-luvun alussa [[Lyme Regisissä]] elänyt fossiilien kerääjä, joka löysi merieläinten luurankoja rannikon kallioista. Hänen löytönsä, muun muassa [[ikthyosaurusten]] ja [[plesiosaurusten]] jäänteet, auttoivat tutkijoita ymmärtämään sukupuuttoon kuolleita eliöitä. Hän oli köyhästä perheestä, ja lähteiden mukaan hän sai omana aikanaan vähän tunnustusta tiedeyhteisöltä. Ois tehnyt mieli auttaa kaivuussa, mut siivet on huonot lapiot.
+KYSYMYS: Kerro lisää: ikthyosaurusten
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jurassic Coast ja Durdle Door (meri)
+Tietoruudun teksti: Jurassic Coast on noin 154 kilometrin pituinen rantajakso Englannin eteläosassa, Exmouthista Devonissa Studland Bayhin Dorsetissa. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2001, ja kallioiden kerrostumat edustavat kolmea kautta, triasta, juuraa ja liitua, yhteensä 185 miljoonan vuoden ajalta. Alueen korkein kohta on 191 metriä korkea Golden Cap. Lulworthin lähellä sijaitseva Durdle Door on luonnonkaari, jonka aallot ovat muovanneet kestävästä Portlandin kalkkikivestä, kun sen takana oleva pehmeämpi kivi on kulunut pois.
+AIEMPI KYSYMYS: Kuka Mary Anning oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Mary Anning]] oli 1800-luvun alussa [[Lyme Regisissä]] elänyt fossiilien kerääjä, joka löysi merieläinten luurankoja rannikon kallioista. Hänen löytönsä, muun muassa [[ikthyosaurusten]] ja [[plesiosaurusten]] jäänteet, auttoivat tutkijoita ymmärtämään sukupuuttoon kuolleita eliöitä. Hän oli köyhästä perheestä, ja lähteiden mukaan hän sai omana aikanaan vähän tunnustusta tiedeyhteisöltä. Ois tehnyt mieli auttaa kaivuussa, mut siivet on huonot lapiot.
+KYSYMYS: Kerro lisää: plesiosaurusten
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+AIEMPI KYSYMYS: Mitä katedraalin luoteisessa poikkilaivassa tapahtui joulukuussa 1170?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joulukuussa 1170 arkkipiispa [[Thomas Becket]] murhattiin Canterburyn katedraalissa kuningas [[Henrik II:n]] ritarien toimesta. Becket oli ollut pitkään ristiriidassa kuninkaan kanssa siitä, kenelle kuului valta kirkon asioissa. Hänet julistettiin muutamaa vuotta myöhemmin pyhimykseksi, ja hänen pyhäkköstään tuli vuosisadoiksi merkittävä [[pyhiinvaelluskohde]]. Tapahtuma järkytti aikalaisia, ja siitä on yli kahdeksansataa vuotta. Onneksi siit on jo aikaa.
+KYSYMYS: Kerro lisää: Thomas Becket
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+AIEMPI KYSYMYS: Mitä katedraalin luoteisessa poikkilaivassa tapahtui joulukuussa 1170?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joulukuussa 1170 arkkipiispa [[Thomas Becket]] murhattiin Canterburyn katedraalissa kuningas [[Henrik II:n]] ritarien toimesta. Becket oli ollut pitkään ristiriidassa kuninkaan kanssa siitä, kenelle kuului valta kirkon asioissa. Hänet julistettiin muutamaa vuotta myöhemmin pyhimykseksi, ja hänen pyhäkköstään tuli vuosisadoiksi merkittävä [[pyhiinvaelluskohde]]. Tapahtuma järkytti aikalaisia, ja siitä on yli kahdeksansataa vuotta. Onneksi siit on jo aikaa.
+KYSYMYS: Kerro lisää: Henrik II:n
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Keskushautausmaa] 1836 Hautausmaa avattiin 1836, ja siitä tuli maan kansallinen muistopaikka: sen presidenttien ja presidentinrouvien paviljonkiin on haudattu parikymmentä valtionpäämiestä, ensimmäisenä Kolumbian ensimmäinen perustuslaillinen presidentti Francisco de Paula Santander. Mausoleumeja veistivät muun muassa italialaiset Pietro Tenerani ja Sighinolfi. Alue julistettiin kansallismonumentiksi 1984. Muut haudat kertovat maan historian toisella tavalla. Täällä lepäävät kaupungin perustaja Gonzalo Jiménez de Quesada, runoilijat José Asunción Silva ja Rafael Pombo, kansallislaulun säveltänyt Oreste Sindici, Bavaria-panimon perustaja Leo Siegfried Kopp sekä neljä presidenttiehdokasta: Luis Carlos Galán, J…
+- [Addis Abeba — kohdekartta / Kohdekartta: Pyhän Yrjön katedraali] 1896 Kirkko on kahdeksankulmainen, mikä erottaa sen kaikesta muusta kaupungissa. Se rakennettiin vanhemman, 1400-luvulta peräisin olevan kirkon raunioille, ja nimi tulee siitä, että kirkon tabot eli arkku kannettiin Adwan taisteluun. Aikajana ajoittaa kirkon vuoteen 1896; nykyisen rakennuksen suunnitteli ja rakensi italialainen insinööri Sebastiano Castagna 1911. Molemmat luvut ovat oikein, koska ne kertovat eri asiasta. Katedraali seisoo Churchill Roadin pohjoispäässä ja on ollut kruunajaiskirkko: keisarinna Zewditu kruunattiin täällä 1917 ja keisari Haile Selassie 1930. Jälkimmäisen kruunajaisten takia kirkosta tuli myöhemmin myös rastafarien pyhiinvaelluskohde. Kirkon yhteydessä on museo…
+AIEMPI KYSYMYS: Mitä katedraalin luoteisessa poikkilaivassa tapahtui joulukuussa 1170?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joulukuussa 1170 arkkipiispa [[Thomas Becket]] murhattiin Canterburyn katedraalissa kuningas [[Henrik II:n]] ritarien toimesta. Becket oli ollut pitkään ristiriidassa kuninkaan kanssa siitä, kenelle kuului valta kirkon asioissa. Hänet julistettiin muutamaa vuotta myöhemmin pyhimykseksi, ja hänen pyhäkköstään tuli vuosisadoiksi merkittävä [[pyhiinvaelluskohde]]. Tapahtuma järkytti aikalaisia, ja siitä on yli kahdeksansataa vuotta. Onneksi siit on jo aikaa.
+KYSYMYS: Kerro lisää: pyhiinvaelluskohde
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+AIEMPI KYSYMYS: Kuka perusti Canterburyn katedraalin vuonna 597?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Katedraalin perusti [[Augustinus Canterburylainen]], jonka paavi [[Gregorius I]] lähetti Englantiin käännyttämään anglosakseja kristinuskoon. Hän saapui [[Kentin]] kuningaskuntaan vuonna 597 ja sai alueen kuninkaan tuen työlleen. Augustinuksesta tuli ensimmäinen Canterburyn arkkipiispa, ja tehtävä on säilynyt Englannin kirkon johtotehtävänä nykypäivään asti. Pöllö lupasi palata jo Konstantinopolissa, mut tässä sitä taas ollaan.
+KYSYMYS: Kerro lisää: Augustinus Canterburylainen
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Manila — kohdekartta / Kohdekartta: Manilan katedraali] nykyinen rakennus 1958 Manilan seurakuntakirkko perustettiin 1571 Meksikon arkkihiippakunnan alaisuuteen, ja paavi Gregorius XIII perusti Manilan hiippakunnan 6. helmikuuta 1579. Ensimmäisen katedraalin rakennutti hiippakunnan ensimmäinen piispa Domingo de Salazar vuonna 1581 nipapalmusta, puusta ja bambusta. Vuonna 1595 Rooma lähetti kirkolle sadan viidenkymmenenviiden marttyyrin ja kahdenkymmenen paavin pyhäinjäännökset, joita varten pääkirkon viereen rakennettiin oma sivurakennus. Rakennuksia on ollut kaikkiaan kahdeksan. Neljännen pääalttari veistettiin molave-puusta 1662, ja firenzeläinen munkki Juan de Uguccioni lisäsi 1750 kupolin ja poikkilaivan. Viides muistutti Rooman Il Gesùa, ku…
+AIEMPI KYSYMYS: Kuka perusti Canterburyn katedraalin vuonna 597?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Katedraalin perusti [[Augustinus Canterburylainen]], jonka paavi [[Gregorius I]] lähetti Englantiin käännyttämään anglosakseja kristinuskoon. Hän saapui [[Kentin]] kuningaskuntaan vuonna 597 ja sai alueen kuninkaan tuen työlleen. Augustinuksesta tuli ensimmäinen Canterburyn arkkipiispa, ja tehtävä on säilynyt Englannin kirkon johtotehtävänä nykypäivään asti. Pöllö lupasi palata jo Konstantinopolissa, mut tässä sitä taas ollaan.
+KYSYMYS: Kerro lisää: Gregorius I
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Halifax — kohdekartta / Kohdekartta: Vanha kellotorni] 1803 Kellotorni rakennettiin lokakuussa 1803, ja kello on käynyt 20. päivästä lokakuuta 1803 lähtien. Se on pysähtynyt vain kerran: Halifaxin räjähdyksessä 1917. Idea oli Kentin herttuan Edwardin, joka johti Britannian Pohjois-Amerikan joukkoja ja halusi korjata varuskunnan myöhästelytavan. Herttua oli tunnetusti pikkutarkka täsmällisyydestä ja piti mekaanisista laitteista, erityisesti sellaisista jotka soivat. Koneiston teki Benjamin Vulliamy, sama kellontekijä joka valmisti Kew'n observatorion regulaattorikellon. Kolme rautakelloa valettiin Whitechapelin kellovalimossa Lontoossa — samassa, josta tuli myös Liberty Bell. Piirustukset teki kapteeni William Fenwick. Torni haluttiin alun perin…
+- [Uzbekistan — maalehti / Historia: Aamu, joka rakensi pääkaupungin uusiksi] 1966 — Taškentin maanjäristys 26. huhtikuuta 1966 kello 05.23 oli momenttimagnitudiltaan vain 5,2, mutta sen keskus oli kaupungin keskustassa ja pesäke kolmen ja kahdeksan kilometrin välissä. Yli 80 prosenttia kaupungista tuhoutui ja 78 000–95 000 asuntoa hajosi — valtaosa savitiilitaloja. Merkittävistä rakennuksista säilyi vaurioitta vain Navoi-teatteri, jonka olivat rakentaneet japanilaiset sotavangit. Koditta jäi 200 000–300 000 ihmistä, ja töihin tuli väkeä muista neuvostotasavalloista; vuoteen 1970 mennessä oli valmistunut 100 000 uutta asuntoa. Samana vuonna perustettiin seismologian laitos.
+AIEMPI KYSYMYS: Kuka perusti Canterburyn katedraalin vuonna 597?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Katedraalin perusti [[Augustinus Canterburylainen]], jonka paavi [[Gregorius I]] lähetti Englantiin käännyttämään anglosakseja kristinuskoon. Hän saapui [[Kentin]] kuningaskuntaan vuonna 597 ja sai alueen kuninkaan tuen työlleen. Augustinuksesta tuli ensimmäinen Canterburyn arkkipiispa, ja tehtävä on säilynyt Englannin kirkon johtotehtävänä nykypäivään asti. Pöllö lupasi palata jo Konstantinopolissa, mut tässä sitä taas ollaan.
+KYSYMYS: Kerro lisää: Kentin
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Huumori: Nukke, jolla on syntymäpäivä] Samuel Pepys kirjoitti päiväkirjaansa 9. toukokuuta 1662 nähneensä Covent Gardenissa italialaisen nukketeatterin, joka oli hänen mielestään hyvin sievä. Nukettaja oli italialainen Pietro Gimonde, ja esityksen tähti oli Pulcinella, josta englannissa tuli Mr Punch. Tuota päivää pidetään yhä Punchin virallisena syntymäpäivänä. Punchin kimeä kirkuna syntyy swazzlesta, kahdesta metalliliuskasta ja niiden välisestä nauhasta, jota nukettaja pitää suussaan koko näytöksen ajan. Punchista on jäänyt englantiin sanontakin: pleased as Punch tarkoittaa hyvin tyytyväistä.
+- [Iso-Britannia — maalehti / Huumori: Sana cartoon syntyi vitsistä] Vuonna 1834 palanutta parlamenttitaloa rakennettiin uudelleen, ja Westminster Hallissa oli kesällä 1843 esillä jättimäisiä luonnoksia tulevia seinämaalauksia varten. Italiaksi tällaista luonnosta sanotaan nimellä cartone, englanniksi cartoon. Pilalehti Punch julkaisi 15. heinäkuuta 1843 oman versionsa otsikolla Cartoon, No. 1: 25-vuotias John Leech päästi ryysyiset katulapset hienoon taulugalleriaan, jossa rikkaiden muotokuvat riippuivat nälkäisten silmien edessä. Pilkka jäi elämään niin sitkeästi, että cartoon tarkoittaa englannissa yhä pilapiirrosta.
+AIEMPI KYSYMYS: Mistä Becket ja kuningas Henrik II riitelivät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Riita koski sitä, kenellä oli ylin valta kirkon asioissa [[Englannissa]]. Becket oli aluksi kuninkaan läheinen ystävä ja toiminut hänen [[kanslerina]], mutta [[arkkipiispaksi]] tultuaan hän alkoi puolustaa kirkon oikeuksia. Kiistaa aiheuttivat erityisesti kirkon tuomioistuimet ja papiston asema suhteessa kuninkaan tuomioistuimiin, ja riita kesti vuosia noin 1160-luvulta alkaen. Aika oli toinen, sillä kirkon ja kruunun välinen raja oli tuolloin vielä vakiintumatta monessa maassa.
+Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Englannissa
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+AIEMPI KYSYMYS: Mistä Becket ja kuningas Henrik II riitelivät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Riita koski sitä, kenellä oli ylin valta kirkon asioissa [[Englannissa]]. Becket oli aluksi kuninkaan läheinen ystävä ja toiminut hänen [[kanslerina]], mutta [[arkkipiispaksi]] tultuaan hän alkoi puolustaa kirkon oikeuksia. Kiistaa aiheuttivat erityisesti kirkon tuomioistuimet ja papiston asema suhteessa kuninkaan tuomioistuimiin, ja riita kesti vuosia noin 1160-luvulta alkaen. Aika oli toinen, sillä kirkon ja kruunun välinen raja oli tuolloin vielä vakiintumatta monessa maassa.
+Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: kanslerina
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+AIEMPI KYSYMYS: Mistä Becket ja kuningas Henrik II riitelivät?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Riita koski sitä, kenellä oli ylin valta kirkon asioissa [[Englannissa]]. Becket oli aluksi kuninkaan läheinen ystävä ja toiminut hänen [[kanslerina]], mutta [[arkkipiispaksi]] tultuaan hän alkoi puolustaa kirkon oikeuksia. Kiistaa aiheuttivat erityisesti kirkon tuomioistuimet ja papiston asema suhteessa kuninkaan tuomioistuimiin, ja riita kesti vuosia noin 1160-luvulta alkaen. Aika oli toinen, sillä kirkon ja kruunun välinen raja oli tuolloin vielä vakiintumatta monessa maassa.
+Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: arkkipiispaksi
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kirjallisuus: Runoilijoiden nurkka syntyi vahingossa] Geoffrey Chaucer haudattiin Westminster Abbeyhin vuonna 1400, mutta ei runojensa takia: hän oli hoitanut kuninkaan rakennustöitä ja asunut vuokralla kirkon alueella. Vasta 156 vuotta myöhemmin Nicholas Brigham teetti hänelle komean haudan ja siirsi luut siihen. Kun Edmund Spenser haudattiin viereen 1599, tapa oli syntynyt. Nyt saman eteläisen ristivarren lattia on täynnä kirjailijoiden muistolaattoja, joiden yli kävellään joka päivä.
+AIEMPI KYSYMYS: Mikä teos kertoo pyhiinvaeltajista matkalla Canterburyyn?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: pyhiinvaeltajista matkalla Canterburyyn kertoo [[Geoffrey Chaucerin]] 1300-luvun lopulla kirjoittama teos [[Canterburyn tarinat]]. Se on kirjoitettu [[keskienglanniksi]], ja siinä joukko eri ammateista tulevia pyhiinvaeltajia kertoo tarinoita matkalla Beckettin pyhäkölle.
+
+Kirjeenkantajana minun on sanottava, että pyhiinvaeltajat olivat aina hitaita matkaajia. Mutta tarinoita he kantoivat, ja se on oikeastaan sama ammatti.
+KYSYMYS: Kerro lisää: Geoffrey Chaucerin
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Christchurch — kaupunkilehti / Luonto: Metsä jonka nimi tarkoittaa katkaistua korvaa] Riccartonin esikaupungissa kasvaa 6,4 hehtaaria alkuperäistä kahikatea-metsää. Kāi tahu kutsui paikkaa nimellä Pūtaringamotu, joka tarkoittaa joko kaiun paikkaa tai katkaistua korvaa — jälkimmäinen on kuvaannollinen ilmaus muusta metsästä eristetylle saarekkeelle. Se on yksi vain neljästä Canterburyn tasangon alkuperäisen metsän jäänteestä, jotka säästyivät moanmetsästyskauden paloilta. John ja William Deans sopivat 1848 New Zealand Companyn kanssa noin 22 hehtaarin suojelusta, ja Riccarton Bush Act 1914 teki suojelusta pysyvän.
+- [Christchurch — kaupunkilehti / Christchurch] Canterbury-yhdistys piirsi Christchurchin Lontoossa jo ennen kuin kukaan asui täällä: katedraali keskelle, korkeakoulu viereen, ruutukaava Canterburyn tasangolle. Isoisän matkan aikoihin asukkaita oli reilut 14 000.
+AIEMPI KYSYMYS: Mikä teos kertoo pyhiinvaeltajista matkalla Canterburyyn?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: pyhiinvaeltajista matkalla Canterburyyn kertoo [[Geoffrey Chaucerin]] 1300-luvun lopulla kirjoittama teos [[Canterburyn tarinat]]. Se on kirjoitettu [[keskienglanniksi]], ja siinä joukko eri ammateista tulevia pyhiinvaeltajia kertoo tarinoita matkalla Beckettin pyhäkölle.
+
+Kirjeenkantajana minun on sanottava, että pyhiinvaeltajat olivat aina hitaita matkaajia. Mutta tarinoita he kantoivat, ja se on oikeastaan sama ammatti.
+KYSYMYS: Kerro lisää: Canterburyn tarinat
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä teos kertoo pyhiinvaeltajista matkalla Canterburyyn?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: pyhiinvaeltajista matkalla Canterburyyn kertoo [[Geoffrey Chaucerin]] 1300-luvun lopulla kirjoittama teos [[Canterburyn tarinat]]. Se on kirjoitettu [[keskienglanniksi]], ja siinä joukko eri ammateista tulevia pyhiinvaeltajia kertoo tarinoita matkalla Beckettin pyhäkölle.
+
+Kirjeenkantajana minun on sanottava, että pyhiinvaeltajat olivat aina hitaita matkaajia. Mutta tarinoita he kantoivat, ja se on oikeastaan sama ammatti.
+KYSYMYS: Kerro lisää: keskienglanniksi
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+AIEMPI KYSYMYS: Mikä erottaa goottilaisen rakennustyylin romaanisesta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Romaaniselle tyylille ovat tyypillisiä pyöreät kaaret, paksut seinät ja pienet ikkunat. Goottilaisessa rakentamisessa käytettiin [[teräväkaaria]], [[ristiholveja]] ja ulkopuolisia [[tukikaaria]], joiden ansiosta seinät saatiin ohuemmiksi ja ikkunat suuriksi. Canterburyn katedraalissa tämä näkyy, koska romaaninen rakennus uusittiin vuoden 1174 tulipalon jälkeen laajasti goottilaiseen tyyliin. Isommat ikkunat ovat kyllä kyyhkyn kannalta parannus.
+KYSYMYS: Kerro lisää: teräväkaaria
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Madrid — kaupunkilehti / Kuvataide: Maalari kirjasi arvonimensä maalaukseen jälkikäteen] Velázquezin rinnassa Las Meninas-teoksessa näkyy Santiagon ritarikunnan risti — mutta Velázquez sai ritarikunnan jäsenyyden vasta 1659, kolme vuotta maalauksen valmistumisen jälkeen. Perimätiedon mukaan joko kuningas itse maalasi ristin lisää jälkikäteen tai Velázquez lisäsi sen itse saatuaan arvonimen — kumpikaan ei ole varmuudella todistettu, mutta risti on joka tapauksessa myöhempi lisäys alkuperäiseen maalaukseen.
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+AIEMPI KYSYMYS: Mikä erottaa goottilaisen rakennustyylin romaanisesta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Romaaniselle tyylille ovat tyypillisiä pyöreät kaaret, paksut seinät ja pienet ikkunat. Goottilaisessa rakentamisessa käytettiin [[teräväkaaria]], [[ristiholveja]] ja ulkopuolisia [[tukikaaria]], joiden ansiosta seinät saatiin ohuemmiksi ja ikkunat suuriksi. Canterburyn katedraalissa tämä näkyy, koska romaaninen rakennus uusittiin vuoden 1174 tulipalon jälkeen laajasti goottilaiseen tyyliin. Isommat ikkunat ovat kyllä kyyhkyn kannalta parannus.
+KYSYMYS: Kerro lisää: ristiholveja
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Canterburyn katedraali (historia)
+Tietoruudun teksti: Canterburyn katedraali Kentissä on Englannin kirkon hengellinen keskus ja Canterburyn arkkipiispan istuin. Augustinus Canterburylainen perusti sen vuonna 597 paavi Gregorius I:n lähettämänä. Romaaninen katedraali rakennettiin uudelleen vuosina 1070–1077, ja vuoden 1174 tulipalon jälkeen alkoi laaja goottilainen jälleenrakennus. Thomas Becket murhattiin katedraalin luoteisessa poikkilaivassa 29. joulukuuta 1170 kuningas Henrik II:n ritarien toimesta. Pyhiinvaeltajat kulkivat Beckettin pyhäkölle vuosisatojen ajan. Unesco kirjasi kohteen maailmanperintöön vuonna 1988.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Frere Hall] 1863–1865 Talo seisoo Saddarin Civil Linesissä konsulaattien keskellä, Abdullah Haroon Roadin ja Fatima Jinnah Roadin välissä ja aivan siirtomaa-aikaisen Sind Clubin naapurissa. Tontti ostettiin kahdellatuhannella rupialla, jotka lahjoittivat Scinde Railwayn W. P. Andrew ja sir Frederick Arthur Bartholomew. Työ alkoi elokuussa 1863 ja rakennus vihittiin 10. lokakuuta 1865, vaikkei se ollut aivan valmis. Se oli tarkoitettu kaupungintaloksi, ja piirustukset teki Henry Saint Clair Wilkins, joka valittiin kahdentoista ehdokkaan joukosta; hinnaksi tuli noin 180 000 rupiaa. Nimi vaihtui Frere Halliksi 1884, kun sir Henry Bartle Edward Frere kuoli — sama komissaari, joka oli tehnyt sindistä hallin…
+- [Espanja — maalehti / Kuvataide: Kirkko, jota on rakennettu yli sata vuotta] Antoni Gaudí otti Sagrada Famílian työn vastaan 1883 ja teki sitä kuolemaansa asti — viimeiset vuodet hän asui työmaalla. Sisällä pylväät haarautuvat kuin puut, koska ne ovat puita: Gaudí sanoi metsän olevan paras rakennus, ja haarautuva pylväs kantaa katon painon ilman tukikaaria. Muodot hän laski riippuvilla naruilla ja painoilla, ja katsoi mallia peilistä ylösalaisin. Rakennus valmistuu aikaisintaan 2030-luvulla, eli työtä on kestänyt yli 140 vuotta.
+AIEMPI KYSYMYS: Mikä erottaa goottilaisen rakennustyylin romaanisesta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Romaaniselle tyylille ovat tyypillisiä pyöreät kaaret, paksut seinät ja pienet ikkunat. Goottilaisessa rakentamisessa käytettiin [[teräväkaaria]], [[ristiholveja]] ja ulkopuolisia [[tukikaaria]], joiden ansiosta seinät saatiin ohuemmiksi ja ikkunat suuriksi. Canterburyn katedraalissa tämä näkyy, koska romaaninen rakennus uusittiin vuoden 1174 tulipalon jälkeen laajasti goottilaiseen tyyliin. Isommat ikkunat ovat kyllä kyyhkyn kannalta parannus.
+KYSYMYS: Kerro lisää: tukikaaria

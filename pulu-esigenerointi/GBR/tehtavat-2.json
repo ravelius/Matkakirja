@@ -1,0 +1,2858 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Joseph Paxton",
+  "kysymys": "Kerro lisää: Joseph Paxton"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "kasvihuoneisiin",
+  "kysymys": "Kerro lisää: kasvihuoneisiin"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Hyde Parkiin",
+  "kysymys": "Kerro lisää: Hyde Parkiin"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Sydenham Hillillä",
+  "kysymys": "Kerro lisää: Sydenham Hillillä"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Crystal Palace Park",
+  "kysymys": "Kerro lisää: Crystal Palace Park"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Etelä-Lontoossa",
+  "kysymys": "Kerro lisää: Etelä-Lontoossa"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Hyde Parkissa",
+  "kysymys": "Kerro lisää: Hyde Parkissa"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Crystal Palace",
+  "kysymys": "Kerro lisää: Crystal Palace"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "maailmannäyttelyinä",
+  "kysymys": "Kerro lisää: maailmannäyttelyinä"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "roomalaisten",
+  "kysymys": "Kerro lisää: roomalaisten"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "romaanisissa kirkoissa",
+  "kysymys": "Kerro lisää: romaanisissa kirkoissa"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Crystal Palacen",
+  "kysymys": "Kerro lisää: Crystal Palacen"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Serpentine-järvi",
+  "kysymys": "Kerro lisää: Serpentine-järvi"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Speakers' Corner",
+  "kysymys": "Kerro lisää: Speakers' Corner"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:crystal-palace",
+  "kasite": "Kensington Gardensiin",
+  "kysymys": "Kerro lisää: Kensington Gardensiin"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:bennevis",
+  "kasite": "pakkasrapautumiseksi",
+  "kysymys": "Kerro lisää: pakkasrapautumiseksi"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:bennevis",
+  "kasite": "Ben Neviksen",
+  "kysymys": "Kerro lisää: Ben Neviksen"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:bennevis",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:bennevis",
+  "kasite": "Skotlannin",
+  "kysymys": "Kerro lisää: Skotlannin"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:bennevis",
+  "kasite": "jääkiipeilypaikkoja",
+  "kysymys": "Kerro lisää: jääkiipeilypaikkoja"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:bennevis",
+  "kasite": "Lumivyöryvaara",
+  "kysymys": "Kerro lisää: Lumivyöryvaara"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:bennevis",
+  "kasite": "kaldera",
+  "kysymys": "Kerro lisää: kaldera"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:bennevis",
+  "kasite": "Sumu",
+  "kysymys": "Kerro lisää: Sumu"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:bennevis",
+  "kasite": "sääasema",
+  "kysymys": "Kerro lisää: sääasema"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:bennevis",
+  "kasite": "Glen Nevisin",
+  "kysymys": "Kerro lisää: Glen Nevisin"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:bennevis",
+  "kasite": "Fort Williamin",
+  "kysymys": "Kerro lisää: Fort Williamin"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:bennevis",
+  "kasite": "kompassi",
+  "kysymys": "Kerro lisää: kompassi"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:snowdon",
+  "kasite": "Kymrin",
+  "kysymys": "Kerro lisää: Kymrin"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:snowdon",
+  "kasite": "Walesin",
+  "kysymys": "Kerro lisää: Walesin"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:snowdon",
+  "kasite": "Snowdonian",
+  "kysymys": "Kerro lisää: Snowdonian"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:snowdon",
+  "kasite": "arêteiksi",
+  "kysymys": "Kerro lisää: arêteiksi"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:snowdon",
+  "kasite": "kuruiksi",
+  "kysymys": "Kerro lisää: kuruiksi"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:snowdon",
+  "kasite": "Alpeilla",
+  "kysymys": "Kerro lisää: Alpeilla"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:snowdon",
+  "kasite": "Snowdon Mountain Railway",
+  "kysymys": "Kerro lisää: Snowdon Mountain Railway"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:snowdon",
+  "kasite": "hammaspyöräratana",
+  "kysymys": "Kerro lisää: hammaspyöräratana"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:snowdon",
+  "kasite": "Llanberisin",
+  "kysymys": "Kerro lisää: Llanberisin"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:snowdon",
+  "kasite": "Pohjois-Walesin",
+  "kysymys": "Kerro lisää: Pohjois-Walesin"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:snowdon",
+  "kasite": "Eryri",
+  "kysymys": "Kerro lisää: Eryri"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Euroopan",
+  "kysymys": "Kerro lisää: Euroopan"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Doggerland",
+  "kysymys": "Kerro lisää: Doggerland"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Norjanrintama",
+  "kysymys": "Kerro lisää: Norjanrintama"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Norjan",
+  "kysymys": "Kerro lisää: Norjan"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Ison-Britannian",
+  "kysymys": "Kerro lisää: Ison-Britannian"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Pohjanmeren öljyntuotannosta",
+  "kysymys": "Kerro lisää: Pohjanmeren öljyntuotannosta"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Silli",
+  "kysymys": "Kerro lisää: Silli"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "turska",
+  "kysymys": "Kerro lisää: turska"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "vuorovesiretkiä",
+  "kysymys": "Kerro lisää: vuorovesiretkiä"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Alankomaiden",
+  "kysymys": "Kerro lisää: Alankomaiden"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Englannin",
+  "kysymys": "Kerro lisää: Englannin"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:pohjanmeri~3",
+  "kasite": "Deltatyöt",
+  "kysymys": "Kerro lisää: Deltatyöt"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Tynwald",
+  "kysymys": "Kerro lisää: Tynwald"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "manksi",
+  "kysymys": "Kerro lisää: manksi"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Isle of Man TT",
+  "kysymys": "Kerro lisää: Isle of Man TT"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Mansaareen",
+  "kysymys": "Kerro lisää: Mansaareen"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Irlanninmeren",
+  "kysymys": "Kerro lisää: Irlanninmeren"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "kelttiläisestä perinteestään",
+  "kysymys": "Kerro lisää: kelttiläisestä perinteestään"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Liverpoolin",
+  "kysymys": "Kerro lisää: Liverpoolin"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Dublinin",
+  "kysymys": "Kerro lisää: Dublinin"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Holyheadin",
+  "kysymys": "Kerro lisää: Holyheadin"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Menain riippusilta",
+  "kysymys": "Kerro lisää: Menain riippusilta"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Dublin",
+  "kysymys": "Kerro lisää: Dublin"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Liverpool",
+  "kysymys": "Kerro lisää: Liverpool"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:irlanninmeri",
+  "kasite": "Belfast",
+  "kysymys": "Kerro lisää: Belfast"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:thames",
+  "kasite": "Boat Race",
+  "kysymys": "Kerro lisää: Boat Race"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:thames",
+  "kasite": "Oxfordin",
+  "kysymys": "Kerro lisää: Oxfordin"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:thames",
+  "kasite": "Severn",
+  "kysymys": "Kerro lisää: Severn"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:thames",
+  "kasite": "Bristolinkanaaliin",
+  "kysymys": "Kerro lisää: Bristolinkanaaliin"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:thames",
+  "kasite": "Teddingtonin",
+  "kysymys": "Kerro lisää: Teddingtonin"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:thames",
+  "kasite": "Thames Barrier",
+  "kysymys": "Kerro lisää: Thames Barrier"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:thames",
+  "kasite": "Thames Headia",
+  "kysymys": "Kerro lisää: Thames Headia"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:thames",
+  "kasite": "Cotswoldsin",
+  "kysymys": "Kerro lisää: Cotswoldsin"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:thames",
+  "kasite": "Gloucestershiressä",
+  "kysymys": "Kerro lisää: Gloucestershiressä"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:thames",
+  "kasite": "Seven Springsiä",
+  "kysymys": "Kerro lisää: Seven Springsiä"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:thames",
+  "kasite": "Lontoon Towerin",
+  "kysymys": "Kerro lisää: Lontoon Towerin"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:thames",
+  "kasite": "riippusillan",
+  "kysymys": "Kerro lisää: riippusillan"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:thames",
+  "kasite": "nostosillan",
+  "kysymys": "Kerro lisää: nostosillan"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:stonehenge",
+  "kasite": "kamanakivet",
+  "kysymys": "Kerro lisää: kamanakivet"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:stonehenge",
+  "kasite": "sarsen-kiviä",
+  "kysymys": "Kerro lisää: sarsen-kiviä"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:stonehenge",
+  "kasite": "Segovian akveduktin",
+  "kysymys": "Kerro lisää: Segovian akveduktin"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:stonehenge",
+  "kasite": "kesäpäivänseisauksen",
+  "kysymys": "Kerro lisää: kesäpäivänseisauksen"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:stonehenge",
+  "kasite": "talvipäivänseisauksen",
+  "kysymys": "Kerro lisää: talvipäivänseisauksen"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:stonehenge",
+  "kasite": "Preselivuorilta",
+  "kysymys": "Kerro lisää: Preselivuorilta"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:stonehenge",
+  "kasite": "sarsen-kivet",
+  "kysymys": "Kerro lisää: sarsen-kivet"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:stonehenge",
+  "kasite": "rautakauden",
+  "kysymys": "Kerro lisää: rautakauden"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:stonehenge",
+  "kasite": "neoliittisia",
+  "kysymys": "Kerro lisää: neoliittisia"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:stonehenge",
+  "kasite": "John Aubrey",
+  "kysymys": "Kerro lisää: John Aubrey"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:stonehenge",
+  "kasite": "kamanakivi",
+  "kysymys": "Kerro lisää: kamanakivi"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:stonehenge",
+  "kasite": "sinikivien",
+  "kysymys": "Kerro lisää: sinikivien"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Hadrianuksen muurin",
+  "kysymys": "Kerro lisää: Hadrianuksen muurin"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Rooman valtakunnan",
+  "kysymys": "Kerro lisää: Rooman valtakunnan"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Antoninuksen muurin",
+  "kysymys": "Kerro lisää: Antoninuksen muurin"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "roomalaisen mailin",
+  "kysymys": "Kerro lisää: roomalaisen mailin"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "tullipaikkoina",
+  "kysymys": "Kerro lisää: tullipaikkoina"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Rooman valtakuntaa",
+  "kysymys": "Kerro lisää: Rooman valtakuntaa"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Pantheon",
+  "kysymys": "Kerro lisää: Pantheon"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "Britanniassa",
+  "kysymys": "Kerro lisää: Britanniassa"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:hadrianuksen-muuri",
+  "kasite": "linnakkeissa",
+  "kysymys": "Kerro lisää: linnakkeissa"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Skaillinlahdella",
+  "kysymys": "Kerro lisää: Skaillinlahdella"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:skara-brae",
+  "kasite": "William Graham Watt",
+  "kysymys": "Kerro lisää: William Graham Watt"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:skara-brae",
+  "kasite": "skotin",
+  "kysymys": "Kerro lisää: skotin"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Orkneyn",
+  "kysymys": "Kerro lisää: Orkneyn"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Skara Braen",
+  "kysymys": "Kerro lisää: Skara Braen"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Orkneysaarilla",
+  "kysymys": "Kerro lisää: Orkneysaarilla"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Maeshowe",
+  "kysymys": "Kerro lisää: Maeshowe"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:skara-brae",
+  "kasite": "Brodgarin kivikehä",
+  "kysymys": "Kerro lisää: Brodgarin kivikehä"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:skara-brae",
+  "kasite": "ohraa",
+  "kysymys": "Kerro lisää: ohraa"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:skara-brae",
+  "kasite": "äyriäisiä",
+  "kysymys": "Kerro lisää: äyriäisiä"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Ironbridgen",
+  "kysymys": "Kerro lisää: Ironbridgen"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Thomas Farnolls Pritchard",
+  "kysymys": "Kerro lisää: Thomas Farnolls Pritchard"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Abraham Darby III",
+  "kysymys": "Kerro lisää: Abraham Darby III"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Coalbrookdalessa",
+  "kysymys": "Kerro lisää: Coalbrookdalessa"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:ironbridge",
+  "kasite": "kaarirakenteissa",
+  "kysymys": "Kerro lisää: kaarirakenteissa"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Britanniassa",
+  "kysymys": "Kerro lisää: Britanniassa"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:ironbridge",
+  "kasite": "höyrykoneen",
+  "kysymys": "Kerro lisää: höyrykoneen"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:ironbridge",
+  "kasite": "tekstiiliteollisuus",
+  "kysymys": "Kerro lisää: tekstiiliteollisuus"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Bristolinkanaalin",
+  "kysymys": "Kerro lisää: Bristolinkanaalin"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:ironbridge",
+  "kasite": "Severn-joen",
+  "kysymys": "Kerro lisää: Severn-joen"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Mendip-kukkuloille",
+  "kysymys": "Kerro lisää: Mendip-kukkuloille"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "kalkkikiven",
+  "kysymys": "Kerro lisää: kalkkikiven"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Aquae Sulis",
+  "kysymys": "Kerro lisää: Aquae Sulis"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "roomalaisten",
+  "kysymys": "Kerro lisää: roomalaisten"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Thermae Bath Spa",
+  "kysymys": "Kerro lisää: Thermae Bath Spa"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Sulis",
+  "kysymys": "Kerro lisää: Sulis"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Minervaan",
+  "kysymys": "Kerro lisää: Minervaan"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Royal Crescent",
+  "kysymys": "Kerro lisää: Royal Crescent"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "Jane Austen",
+  "kysymys": "Kerro lisää: Jane Austen"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "kalsiumkarbonaatista",
+  "kysymys": "Kerro lisää: kalsiumkarbonaatista"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:bathin-roomalaiset-kylpylat",
+  "kasite": "luolia",
+  "kysymys": "Kerro lisää: luolia"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Durdle Doorin",
+  "kysymys": "Kerro lisää: Durdle Doorin"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Portlandin kalkkikivi",
+  "kysymys": "Kerro lisää: Portlandin kalkkikivi"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "triaskauteen",
+  "kysymys": "Kerro lisää: triaskauteen"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "jurakauteen",
+  "kysymys": "Kerro lisää: jurakauteen"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "liitukauteen",
+  "kysymys": "Kerro lisää: liitukauteen"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "vanhasta englannista",
+  "kysymys": "Kerro lisää: vanhasta englannista"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Lulworthin",
+  "kysymys": "Kerro lisää: Lulworthin"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Dorsetin",
+  "kysymys": "Kerro lisää: Dorsetin"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Juran vuoristosta",
+  "kysymys": "Kerro lisää: Juran vuoristosta"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Jurassic Coast",
+  "kysymys": "Kerro lisää: Jurassic Coast"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Mary Anning",
+  "kysymys": "Kerro lisää: Mary Anning"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "Lyme Regisissä",
+  "kysymys": "Kerro lisää: Lyme Regisissä"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "ikthyosaurusten",
+  "kysymys": "Kerro lisää: ikthyosaurusten"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:jurassic-coast-durdle-door",
+  "kasite": "plesiosaurusten",
+  "kysymys": "Kerro lisää: plesiosaurusten"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Thomas Becket",
+  "kysymys": "Kerro lisää: Thomas Becket"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Henrik II:n",
+  "kysymys": "Kerro lisää: Henrik II:n"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "pyhiinvaelluskohde",
+  "kysymys": "Kerro lisää: pyhiinvaelluskohde"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Augustinus Canterburylainen",
+  "kysymys": "Kerro lisää: Augustinus Canterburylainen"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Gregorius I",
+  "kysymys": "Kerro lisää: Gregorius I"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Kentin",
+  "kysymys": "Kerro lisää: Kentin"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Englannissa",
+  "kysymys": "Kerro lisää: Englannissa"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "kanslerina",
+  "kysymys": "Kerro lisää: kanslerina"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "arkkipiispaksi",
+  "kysymys": "Kerro lisää: arkkipiispaksi"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Geoffrey Chaucerin",
+  "kysymys": "Kerro lisää: Geoffrey Chaucerin"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "Canterburyn tarinat",
+  "kysymys": "Kerro lisää: Canterburyn tarinat"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "keskienglanniksi",
+  "kysymys": "Kerro lisää: keskienglanniksi"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "teräväkaaria",
+  "kysymys": "Kerro lisää: teräväkaaria"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "ristiholveja",
+  "kysymys": "Kerro lisää: ristiholveja"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:canterburyn-katedraali",
+  "kasite": "tukikaaria",
+  "kysymys": "Kerro lisää: tukikaaria"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "laavan",
+  "kysymys": "Kerro lisää: laavan"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "basaltti",
+  "kysymys": "Kerro lisää: basaltti"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Fionn mac Cumhaill",
+  "kysymys": "Kerro lisää: Fionn mac Cumhaill"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Skotlantiin",
+  "kysymys": "Kerro lisää: Skotlantiin"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Staffan",
+  "kysymys": "Kerro lisää: Staffan"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Fingalin luola",
+  "kysymys": "Kerro lisää: Fingalin luola"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "tulivuorikiveä",
+  "kysymys": "Kerro lisää: tulivuorikiveä"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "laava",
+  "kysymys": "Kerro lisää: laava"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "merenpohjasta",
+  "kysymys": "Kerro lisää: merenpohjasta"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Belfast",
+  "kysymys": "Kerro lisää: Belfast"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Harland and Wolff",
+  "kysymys": "Kerro lisää: Harland and Wolff"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:hahmotelma-giants-causeway",
+  "kasite": "Titanic",
+  "kysymys": "Kerro lisää: Titanic"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Lake Districtille",
+  "kysymys": "Kerro lisää: Lake Districtille"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Kendalin",
+  "kysymys": "Kerro lisää: Kendalin"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Leven-jokea",
+  "kysymys": "Kerro lisää: Leven-jokea"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Morecamben lahteen",
+  "kysymys": "Kerro lisää: Morecamben lahteen"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Irlanninmerelle",
+  "kysymys": "Kerro lisää: Irlanninmerelle"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "jäätikkö",
+  "kysymys": "Kerro lisää: jäätikkö"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "jääkausien",
+  "kysymys": "Kerro lisää: jääkausien"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Beatrix Potter",
+  "kysymys": "Kerro lisää: Beatrix Potter"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "Peter Rabbit",
+  "kysymys": "Kerro lisää: Peter Rabbit"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "National Trustille",
+  "kysymys": "Kerro lisää: National Trustille"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-windermere",
+  "kasite": "William Wordsworthia",
+  "kysymys": "Kerro lisää: William Wordsworthia"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Wheal an Giver",
+  "kysymys": "Kerro lisää: Wheal an Giver"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "North Levant Mine",
+  "kysymys": "Kerro lisää: North Levant Mine"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Cornwallin",
+  "kysymys": "Kerro lisää: Cornwallin"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Cornwallin ja Länsi-Devonin kaivosmaiseman",
+  "kysymys": "Kerro lisää: Cornwallin ja Länsi-Devonin kaivosmaiseman"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "tinakaivoksista",
+  "kysymys": "Kerro lisää: tinakaivoksista"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Pendeenin",
+  "kysymys": "Kerro lisää: Pendeenin"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Trewellardin",
+  "kysymys": "Kerro lisää: Trewellardin"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Geevor",
+  "kysymys": "Kerro lisää: Geevor"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "kuparia",
+  "kysymys": "Kerro lisää: kuparia"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Geevorin",
+  "kysymys": "Kerro lisää: Geevorin"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "tinakaivoksena",
+  "kysymys": "Kerro lisää: tinakaivoksena"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-geevor-tin",
+  "kasite": "Cornwallissa",
+  "kysymys": "Kerro lisää: Cornwallissa"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Bollin-joen",
+  "kysymys": "Kerro lisää: Bollin-joen"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Styal Estaten",
+  "kysymys": "Kerro lisää: Styal Estaten"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Ten Hours Act",
+  "kysymys": "Kerro lisää: Ten Hours Act"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Quarry Bank Millin",
+  "kysymys": "Kerro lisää: Quarry Bank Millin"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Britanniassa",
+  "kysymys": "Kerro lisää: Britanniassa"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Cheshiren",
+  "kysymys": "Kerro lisää: Cheshiren"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Styal Estate",
+  "kysymys": "Kerro lisää: Styal Estate"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "Hannah Lightbodyn",
+  "kysymys": "Kerro lisää: Hannah Lightbodyn"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "puuvillatehtaat",
+  "kysymys": "Kerro lisää: puuvillatehtaat"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-quarry-bank-mill",
+  "kasite": "höyrykone",
+  "kysymys": "Kerro lisää: höyrykone"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "Jesse Hartley",
+  "kysymys": "Kerro lisää: Jesse Hartley"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "Philip Hardwick",
+  "kysymys": "Kerro lisää: Philip Hardwick"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "Liverpoolin",
+  "kysymys": "Kerro lisää: Liverpoolin"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "Albert Dock",
+  "kysymys": "Kerro lisää: Albert Dock"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "William Armstrong",
+  "kysymys": "Kerro lisää: William Armstrong"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "hydrauliset nosturit",
+  "kysymys": "Kerro lisää: hydrauliset nosturit"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "Merseyside Maritime Museum",
+  "kysymys": "Kerro lisää: Merseyside Maritime Museum"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-liverpool-docks",
+  "kasite": "Liverpoolissa",
+  "kysymys": "Kerro lisää: Liverpoolissa"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "John Radcliffen",
+  "kysymys": "Kerro lisää: John Radcliffen"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "James Gibbs",
+  "kysymys": "Kerro lisää: James Gibbs"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Oxfordin yliopistoa",
+  "kysymys": "Kerro lisää: Oxfordin yliopistoa"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Bodleian-kirjaston",
+  "kysymys": "Kerro lisää: Bodleian-kirjaston"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Oxfordin yliopiston",
+  "kysymys": "Kerro lisää: Oxfordin yliopiston"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Oxfordin yliopistossa",
+  "kysymys": "Kerro lisää: Oxfordin yliopistossa"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Vanhan Bodleian-kirjaston",
+  "kysymys": "Kerro lisää: Vanhan Bodleian-kirjaston"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Pyhän Marian kirkon",
+  "kysymys": "Kerro lisää: Pyhän Marian kirkon"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-oxford",
+  "kasite": "Oxfordin yliopistoon",
+  "kysymys": "Kerro lisää: Oxfordin yliopistoon"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "juutalaiset",
+  "kysymys": "Kerro lisää: juutalaiset"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Lontoossa",
+  "kysymys": "Kerro lisää: Lontoossa"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "fish and chips",
+  "kysymys": "Kerro lisää: fish and chips"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Charles Dickens",
+  "kysymys": "Kerro lisää: Charles Dickens"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Joseph Malinin",
+  "kysymys": "Kerro lisää: Joseph Malinin"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "John Leesin",
+  "kysymys": "Kerro lisää: John Leesin"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Mossleyssä",
+  "kysymys": "Kerro lisää: Mossleyssä"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "höyrytroolarit",
+  "kysymys": "Kerro lisää: höyrytroolarit"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Pohjanmereltä",
+  "kysymys": "Kerro lisää: Pohjanmereltä"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "rautatiet",
+  "kysymys": "Kerro lisää: rautatiet"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Oliver Twist",
+  "kysymys": "Kerro lisää: Oliver Twist"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "toisessa maailmansodassa",
+  "kysymys": "Kerro lisää: toisessa maailmansodassa"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "Britannian hallitus",
+  "kysymys": "Kerro lisää: Britannian hallitus"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-fish-and-chips",
+  "kasite": "ruokasäännöstelyn",
+  "kysymys": "Kerro lisää: ruokasäännöstelyn"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "Bedfordin herttuattaren",
+  "kysymys": "Kerro lisää: Bedfordin herttuattaren"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "Viktorian",
+  "kysymys": "Kerro lisää: Viktorian"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "yläluokan",
+  "kysymys": "Kerro lisää: yläluokan"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "keskiluokka",
+  "kysymys": "Kerro lisää: keskiluokka"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "sconeja",
+  "kysymys": "Kerro lisää: sconeja"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "clotted creamia",
+  "kysymys": "Kerro lisää: clotted creamia"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "Anna Russellia",
+  "kysymys": "Kerro lisää: Anna Russellia"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "iltapäivätee",
+  "kysymys": "Kerro lisää: iltapäivätee"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "high tea",
+  "kysymys": "Kerro lisää: high tea"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "Anna Russell",
+  "kysymys": "Kerro lisää: Anna Russell"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-afternoon-tea",
+  "kasite": "seurapiireihin",
+  "kysymys": "Kerro lisää: seurapiireihin"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "Robert Burnsin",
+  "kysymys": "Kerro lisää: Robert Burnsin"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "Skotlannissa",
+  "kysymys": "Kerro lisää: Skotlannissa"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "Burns Supper",
+  "kysymys": "Kerro lisää: Burns Supper"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "Ayrshiren",
+  "kysymys": "Kerro lisää: Ayrshiren"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "Robert Burns Birthplace Museum",
+  "kysymys": "Kerro lisää: Robert Burns Birthplace Museum"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "sisäelimistä",
+  "kysymys": "Kerro lisää: sisäelimistä"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "kaurasuurimoista",
+  "kysymys": "Kerro lisää: kaurasuurimoista"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "munuaisrasvasta",
+  "kysymys": "Kerro lisää: munuaisrasvasta"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "neeps and tatties",
+  "kysymys": "Kerro lisää: neeps and tatties"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "viskiä",
+  "kysymys": "Kerro lisää: viskiä"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "säkkipillin",
+  "kysymys": "Kerro lisää: säkkipillin"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-haggis",
+  "kasite": "Address to a Haggis",
+  "kysymys": "Kerro lisää: Address to a Haggis"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "Stephensonin",
+  "kysymys": "Kerro lisää: Stephensonin"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "Locomotion No. 1",
+  "kysymys": "Kerro lisää: Locomotion No. 1"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "hiilikaivokset",
+  "kysymys": "Kerro lisää: hiilikaivokset"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "höyryrautatiet",
+  "kysymys": "Kerro lisää: höyryrautatiet"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "George Stephenson",
+  "kysymys": "Kerro lisää: George Stephenson"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "höyryvetureita",
+  "kysymys": "Kerro lisää: höyryvetureita"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "rautatieaikakaudelle",
+  "kysymys": "Kerro lisää: rautatieaikakaudelle"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "Robert Stephenson and Company",
+  "kysymys": "Kerro lisää: Robert Stephenson and Company"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-stockton-darlington",
+  "kasite": "Stocktonin ja Darlingtonin rautatien",
+  "kysymys": "Kerro lisää: Stocktonin ja Darlingtonin rautatien"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "Boulton",
+  "kysymys": "Kerro lisää: Boulton"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "Watt",
+  "kysymys": "Kerro lisää: Watt"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "hopeaesineitä",
+  "kysymys": "Kerro lisää: hopeaesineitä"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "teollisen vallankumouksen",
+  "kysymys": "Kerro lisää: teollisen vallankumouksen"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "sarjatuotannossa",
+  "kysymys": "Kerro lisää: sarjatuotannossa"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "Matthew Boulton",
+  "kysymys": "Kerro lisää: Matthew Boulton"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "James Wattin",
+  "kysymys": "Kerro lisää: James Wattin"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "höyrykonetta",
+  "kysymys": "Kerro lisää: höyrykonetta"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "Soho House",
+  "kysymys": "Kerro lisää: Soho House"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "höyryvoimalla",
+  "kysymys": "Kerro lisää: höyryvoimalla"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "sarjatuotannon",
+  "kysymys": "Kerro lisää: sarjatuotannon"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-watt-soho",
+  "kasite": "Wattin",
+  "kysymys": "Kerro lisää: Wattin"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Cuillin",
+  "kysymys": "Kerro lisää: Cuillin"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Skyen",
+  "kysymys": "Kerro lisää: Skyen"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Sgùrr Alasdair",
+  "kysymys": "Kerro lisää: Sgùrr Alasdair"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Loch Coruiskin",
+  "kysymys": "Kerro lisää: Loch Coruiskin"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Coruiskin",
+  "kysymys": "Kerro lisää: Coruiskin"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "gabrosta",
+  "kysymys": "Kerro lisää: gabrosta"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "kansalliseksi maisema-alueeksi",
+  "kysymys": "Kerro lisää: kansalliseksi maisema-alueeksi"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Skotlannin",
+  "kysymys": "Kerro lisää: Skotlannin"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-isle-of-skye",
+  "kasite": "Cuillinin",
+  "kysymys": "Kerro lisää: Cuillinin"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "The Bonnie Banks o' Loch Lomond",
+  "kysymys": "Kerro lisää: The Bonnie Banks o' Loch Lomond"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "Skotlannin",
+  "kysymys": "Kerro lisää: Skotlannin"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "Ylämaiden",
+  "kysymys": "Kerro lisää: Ylämaiden"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "Irlannista",
+  "kysymys": "Kerro lisää: Irlannista"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "roomalaiset",
+  "kysymys": "Kerro lisää: roomalaiset"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "Munro",
+  "kysymys": "Kerro lisää: Munro"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "Glasgowta",
+  "kysymys": "Kerro lisää: Glasgowta"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "Highland Boundary Fault",
+  "kysymys": "Kerro lisää: Highland Boundary Fault"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-loch-lomond",
+  "kasite": "gaelin",
+  "kysymys": "Kerro lisää: gaelin"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Edvard I",
+  "kysymys": "Kerro lisää: Edvard I"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Pohjois-Walesin",
+  "kysymys": "Kerro lisää: Pohjois-Walesin"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Gwyneddissä",
+  "kysymys": "Kerro lisää: Gwyneddissä"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Konstantinopolin",
+  "kysymys": "Kerro lisää: Konstantinopolin"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Segontium",
+  "kysymys": "Kerro lisää: Segontium"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Walesin prinssiksi",
+  "kysymys": "Kerro lisää: Walesin prinssiksi"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Caernarfonin linnassa",
+  "kysymys": "Kerro lisää: Caernarfonin linnassa"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Edvard I:n",
+  "kysymys": "Kerro lisää: Edvard I:n"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-caernarfon",
+  "kasite": "Walesissa",
+  "kysymys": "Kerro lisää: Walesissa"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Doverin",
+  "kysymys": "Kerro lisää: Doverin"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "liitukauden",
+  "kysymys": "Kerro lisää: liitukauden"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Ranskan",
+  "kysymys": "Kerro lisää: Ranskan"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Julius Caesar",
+  "kysymys": "Kerro lisää: Julius Caesar"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Britanniaan",
+  "kysymys": "Kerro lisää: Britanniaan"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Ranskasta",
+  "kysymys": "Kerro lisää: Ranskasta"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Manner-Euroopasta",
+  "kysymys": "Kerro lisää: Manner-Euroopasta"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Calais'n",
+  "kysymys": "Kerro lisää: Calais'n"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Kanaalitunnelissa",
+  "kysymys": "Kerro lisää: Kanaalitunnelissa"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Eurostar",
+  "kysymys": "Kerro lisää: Eurostar"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Englannin kanaalin",
+  "kysymys": "Kerro lisää: Englannin kanaalin"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "Pohjanmereen",
+  "kysymys": "Kerro lisää: Pohjanmereen"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-dover-strait",
+  "kasite": "La Manche",
+  "kysymys": "Kerro lisää: La Manche"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "Northumbrian",
+  "kysymys": "Kerro lisää: Northumbrian"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "Edwin",
+  "kysymys": "Kerro lisää: Edwin"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "arkkipiispan",
+  "kysymys": "Kerro lisää: arkkipiispan"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "goottilaisista",
+  "kysymys": "Kerro lisää: goottilaisista"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "Viisi sisarta",
+  "kysymys": "Kerro lisää: Viisi sisarta"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "anglosaksien",
+  "kysymys": "Kerro lisää: anglosaksien"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "goottilaisen",
+  "kysymys": "Kerro lisää: goottilaisen"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "poikkilaivassa",
+  "kysymys": "Kerro lisää: poikkilaivassa"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-york-minster",
+  "kasite": "goottilaista",
+  "kysymys": "Kerro lisää: goottilaista"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Pyhän Margareetan kappeli",
+  "kysymys": "Kerro lisää: Pyhän Margareetan kappeli"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Edinburghin",
+  "kysymys": "Kerro lisää: Edinburghin"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Castle Rockilla",
+  "kysymys": "Kerro lisää: Castle Rockilla"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Malcolm III:n",
+  "kysymys": "Kerro lisää: Malcolm III:n"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Leithin",
+  "kysymys": "Kerro lisää: Leithin"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Edinburghin linnasta",
+  "kysymys": "Kerro lisää: Edinburghin linnasta"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "piiritystykki",
+  "kysymys": "Kerro lisää: piiritystykki"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Edinburghiin",
+  "kysymys": "Kerro lisää: Edinburghiin"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Belgian",
+  "kysymys": "Kerro lisää: Belgian"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Edinburghin linnassa",
+  "kysymys": "Kerro lisää: Edinburghin linnassa"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Walter Scott",
+  "kysymys": "Kerro lisää: Walter Scott"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "tulivuoren",
+  "kysymys": "Kerro lisää: tulivuoren"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-edinburgh-castle",
+  "kasite": "Royal Mile",
+  "kysymys": "Kerro lisää: Royal Mile"
+ },
+ {
+  "n": 345,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "rautaniitit",
+  "kysymys": "Kerro lisää: rautaniitit"
+ },
+ {
+  "n": 346,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Basil Brown",
+  "kysymys": "Kerro lisää: Basil Brown"
+ },
+ {
+  "n": 347,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Suffolkin",
+  "kysymys": "Kerro lisää: Suffolkin"
+ },
+ {
+  "n": 348,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Rædwald",
+  "kysymys": "Kerro lisää: Rædwald"
+ },
+ {
+  "n": 349,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "anglosaksien",
+  "kysymys": "Kerro lisää: anglosaksien"
+ },
+ {
+  "n": 350,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Itä-Anglia",
+  "kysymys": "Kerro lisää: Itä-Anglia"
+ },
+ {
+  "n": 351,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Treasure Act",
+  "kysymys": "Kerro lisää: Treasure Act"
+ },
+ {
+  "n": 352,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Edith Pretty",
+  "kysymys": "Kerro lisää: Edith Pretty"
+ },
+ {
+  "n": 353,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "British Museumille",
+  "kysymys": "Kerro lisää: British Museumille"
+ },
+ {
+  "n": 354,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 355,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Rooman",
+  "kysymys": "Kerro lisää: Rooman"
+ },
+ {
+  "n": 356,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "anglit",
+  "kysymys": "Kerro lisää: anglit"
+ },
+ {
+  "n": 357,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Lindisfarnen",
+  "kysymys": "Kerro lisää: Lindisfarnen"
+ },
+ {
+  "n": 358,
+  "kohta": "nosto:sutton-hoo",
+  "kasite": "Stamford Bridgen",
+  "kysymys": "Kerro lisää: Stamford Bridgen"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "uskonpuhdistuksen",
+  "kysymys": "Kerro lisää: uskonpuhdistuksen"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Lontoon suuressa palossa",
+  "kysymys": "Kerro lisää: Lontoon suuressa palossa"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Christopher Wrenin",
+  "kysymys": "Kerro lisää: Christopher Wrenin"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "St Paulin katedraalin",
+  "kysymys": "Kerro lisää: St Paulin katedraalin"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Paul's walk",
+  "kysymys": "Kerro lisää: Paul's walk"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Ludgate Hillin",
+  "kysymys": "Kerro lisää: Ludgate Hillin"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Christopher Wren",
+  "kysymys": "Kerro lisää: Christopher Wren"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Monument",
+  "kysymys": "Kerro lisää: Monument"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "lyijyllä",
+  "kysymys": "Kerro lisää: lyijyllä"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Wrenin",
+  "kysymys": "Kerro lisää: Wrenin"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Henrik VIII",
+  "kysymys": "Kerro lisää: Henrik VIII"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "Katariina Aragonialaisen",
+  "kysymys": "Kerro lisää: Katariina Aragonialaisen"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:st-paulin-katedraali",
+  "kasite": "uskonpuhdistukseen",
+  "kysymys": "Kerro lisää: uskonpuhdistukseen"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Nonsuch House",
+  "kysymys": "Kerro lisää: Nonsuch House"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Thamesin",
+  "kysymys": "Kerro lisää: Thamesin"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Peter de Colechurch",
+  "kysymys": "Kerro lisää: Peter de Colechurch"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "pilarien",
+  "kysymys": "Kerro lisää: pilarien"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "myrskytulvalta",
+  "kysymys": "Kerro lisää: myrskytulvalta"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Pohjanmeren",
+  "kysymys": "Kerro lisää: Pohjanmeren"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Horace Jonesin",
+  "kysymys": "Kerro lisää: Horace Jonesin"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Tower of Londonista",
+  "kysymys": "Kerro lisää: Tower of Londonista"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "Vilhelm Valloittajan",
+  "kysymys": "Kerro lisää: Vilhelm Valloittajan"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "White Tower",
+  "kysymys": "Kerro lisää: White Tower"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:vanha-london-bridge",
+  "kasite": "kruununjalokiviä",
+  "kysymys": "Kerro lisää: kruununjalokiviä"
+ },
+ {
+  "n": 383,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "Paddington",
+  "kysymys": "Kerro lisää: Paddington"
+ },
+ {
+  "n": 384,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "King's Cross",
+  "kysymys": "Kerro lisää: King's Cross"
+ },
+ {
+  "n": 385,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "Charles Pearson",
+  "kysymys": "Kerro lisää: Charles Pearson"
+ },
+ {
+  "n": 386,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "kaasulyhdyillä",
+  "kysymys": "Kerro lisää: kaasulyhdyillä"
+ },
+ {
+  "n": 387,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "höyryveturin",
+  "kysymys": "Kerro lisää: höyryveturin"
+ },
+ {
+  "n": 388,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "Metropolitan Railwayn",
+  "kysymys": "Kerro lisää: Metropolitan Railwayn"
+ },
+ {
+  "n": 389,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "sähköistyksen",
+  "kysymys": "Kerro lisää: sähköistyksen"
+ },
+ {
+  "n": 390,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "City and South London Railway",
+  "kysymys": "Kerro lisää: City and South London Railway"
+ },
+ {
+  "n": 391,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "Richard Trevithickin",
+  "kysymys": "Kerro lisää: Richard Trevithickin"
+ },
+ {
+  "n": 392,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "George Stephenson",
+  "kysymys": "Kerro lisää: George Stephenson"
+ },
+ {
+  "n": 393,
+  "kohta": "nosto:lontoon-metro-1863",
+  "kasite": "Rainhillin",
+  "kysymys": "Kerro lisää: Rainhillin"
+ },
+ {
+  "n": 394,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Etelämeren yhtiöön",
+  "kysymys": "Kerro lisää: Etelämeren yhtiöön"
+ },
+ {
+  "n": 395,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "valtionvelan",
+  "kysymys": "Kerro lisää: valtionvelan"
+ },
+ {
+  "n": 396,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Etelämeren yhtiö",
+  "kysymys": "Kerro lisää: Etelämeren yhtiö"
+ },
+ {
+  "n": 397,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Englannin pankki",
+  "kysymys": "Kerro lisää: Englannin pankki"
+ },
+ {
+  "n": 398,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Exchange Alleyn",
+  "kysymys": "Kerro lisää: Exchange Alleyn"
+ },
+ {
+  "n": 399,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Garraway's",
+  "kysymys": "Kerro lisää: Garraway's"
+ },
+ {
+  "n": 400,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "parlamentin",
+  "kysymys": "Kerro lisää: parlamentin"
+ },
+ {
+  "n": 401,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Ranskaa",
+  "kysymys": "Kerro lisää: Ranskaa"
+ },
+ {
+  "n": 402,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Vilhelm III",
+  "kysymys": "Kerro lisää: Vilhelm III"
+ },
+ {
+  "n": 403,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "Etelämeren yhtiön",
+  "kysymys": "Kerro lisää: Etelämeren yhtiön"
+ },
+ {
+  "n": 404,
+  "kohta": "nosto:exchange-alleyn-kupla",
+  "kasite": "tulppaanikuume",
+  "kysymys": "Kerro lisää: tulppaanikuume"
+ },
+ {
+  "n": 405,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Venetsian",
+  "kysymys": "Kerro lisää: Venetsian"
+ },
+ {
+  "n": 406,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Itävallan perimyssota",
+  "kysymys": "Kerro lisää: Itävallan perimyssota"
+ },
+ {
+  "n": 407,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Italiassa",
+  "kysymys": "Kerro lisää: Italiassa"
+ },
+ {
+  "n": 408,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Canaletton",
+  "kysymys": "Kerro lisää: Canaletton"
+ },
+ {
+  "n": 409,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Thames",
+  "kysymys": "Kerro lisää: Thames"
+ },
+ {
+  "n": 410,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Pyhän Paavalin katedraalin",
+  "kysymys": "Kerro lisää: Pyhän Paavalin katedraalin"
+ },
+ {
+  "n": 411,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Westminsterin silta",
+  "kysymys": "Kerro lisää: Westminsterin silta"
+ },
+ {
+  "n": 412,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Thamesille",
+  "kysymys": "Kerro lisää: Thamesille"
+ },
+ {
+  "n": 413,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Canal Granden",
+  "kysymys": "Kerro lisää: Canal Granden"
+ },
+ {
+  "n": 414,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Veduta",
+  "kysymys": "Kerro lisää: Veduta"
+ },
+ {
+  "n": 415,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Canaletto",
+  "kysymys": "Kerro lisää: Canaletto"
+ },
+ {
+  "n": 416,
+  "kohta": "nosto:canaletto-lontoossa",
+  "kasite": "Thames Barrier",
+  "kysymys": "Kerro lisää: Thames Barrier"
+ },
+ {
+  "n": 417,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Shakespearen",
+  "kysymys": "Kerro lisää: Shakespearen"
+ },
+ {
+  "n": 418,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Lontoon",
+  "kysymys": "Kerro lisää: Lontoon"
+ },
+ {
+  "n": 419,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "The George",
+  "kysymys": "Kerro lisää: The George"
+ },
+ {
+  "n": 420,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "National Trust",
+  "kysymys": "Kerro lisää: National Trust"
+ },
+ {
+  "n": 421,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Charles Dickens",
+  "kysymys": "Kerro lisää: Charles Dickens"
+ },
+ {
+  "n": 422,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Pikku Dorrit",
+  "kysymys": "Kerro lisää: Pikku Dorrit"
+ },
+ {
+  "n": 423,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Englantia",
+  "kysymys": "Kerro lisää: Englantia"
+ },
+ {
+  "n": 424,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Walesia",
+  "kysymys": "Kerro lisää: Walesia"
+ },
+ {
+  "n": 425,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Pohjois-Irlantia",
+  "kysymys": "Kerro lisää: Pohjois-Irlantia"
+ },
+ {
+  "n": 426,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "Skotlannissa",
+  "kysymys": "Kerro lisää: Skotlannissa"
+ },
+ {
+  "n": 427,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "olutta",
+  "kysymys": "Kerro lisää: olutta"
+ },
+ {
+  "n": 428,
+  "kohta": "nosto:the-george-pubi",
+  "kasite": "siideriä",
+  "kysymys": "Kerro lisää: siideriä"
+ },
+ {
+  "n": 429,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "The Beatles",
+  "kysymys": "Kerro lisää: The Beatles"
+ },
+ {
+  "n": 430,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "Abbey Road",
+  "kysymys": "Kerro lisää: Abbey Road"
+ },
+ {
+  "n": 431,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "The Beatlesin",
+  "kysymys": "Kerro lisää: The Beatlesin"
+ },
+ {
+  "n": 432,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "Abbey Road Studios",
+  "kysymys": "Kerro lisää: Abbey Road Studios"
+ },
+ {
+  "n": 433,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "St John's Woodin",
+  "kysymys": "Kerro lisää: St John's Woodin"
+ },
+ {
+  "n": 434,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "Englannissa",
+  "kysymys": "Kerro lisää: Englannissa"
+ },
+ {
+  "n": 435,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "Skotlannissa",
+  "kysymys": "Kerro lisää: Skotlannissa"
+ },
+ {
+  "n": 436,
+  "kohta": "nosto:abbey-roadin-suojatie",
+  "kasite": "Walesissa",
+  "kysymys": "Kerro lisää: Walesissa"
+ },
+ {
+  "n": 437,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Banksy",
+  "kysymys": "Kerro lisää: Banksy"
+ },
+ {
+  "n": 438,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Cans Festival",
+  "kysymys": "Kerro lisää: Cans Festival"
+ },
+ {
+  "n": 439,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Waterloon",
+  "kysymys": "Kerro lisää: Waterloon"
+ },
+ {
+  "n": 440,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Banksyn",
+  "kysymys": "Kerro lisää: Banksyn"
+ },
+ {
+  "n": 441,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Leake Streetin",
+  "kysymys": "Kerro lisää: Leake Streetin"
+ },
+ {
+  "n": 442,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Bristol",
+  "kysymys": "Kerro lisää: Bristol"
+ },
+ {
+  "n": 443,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "tägiin",
+  "kysymys": "Kerro lisää: tägiin"
+ },
+ {
+  "n": 444,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "kollaaseja",
+  "kysymys": "Kerro lisää: kollaaseja"
+ },
+ {
+  "n": 445,
+  "kohta": "nosto:leake-streetin-tunneli",
+  "kasite": "Britanniassa",
+  "kysymys": "Kerro lisää: Britanniassa"
+ },
+ {
+  "n": 446,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "One & Other",
+  "kysymys": "Kerro lisää: One & Other"
+ },
+ {
+  "n": 447,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Trafalgar Squaren",
+  "kysymys": "Kerro lisää: Trafalgar Squaren"
+ },
+ {
+  "n": 448,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Trafalgar Squarelle",
+  "kysymys": "Kerro lisää: Trafalgar Squarelle"
+ },
+ {
+  "n": 449,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "nykytaideteoksia",
+  "kysymys": "Kerro lisää: nykytaideteoksia"
+ },
+ {
+  "n": 450,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Nelsonin patsas",
+  "kysymys": "Kerro lisää: Nelsonin patsas"
+ },
+ {
+  "n": 451,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Lontoon pormestarin",
+  "kysymys": "Kerro lisää: Lontoon pormestarin"
+ },
+ {
+  "n": 452,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Trafalgar Squarella",
+  "kysymys": "Kerro lisää: Trafalgar Squarella"
+ },
+ {
+  "n": 453,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Trafalgarin taistelu",
+  "kysymys": "Kerro lisää: Trafalgarin taistelu"
+ },
+ {
+  "n": 454,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Horatio Nelsonin",
+  "kysymys": "Kerro lisää: Horatio Nelsonin"
+ },
+ {
+  "n": 455,
+  "kohta": "nosto:neljas-jalusta",
+  "kasite": "Kansallisgalleria",
+  "kysymys": "Kerro lisää: Kansallisgalleria"
+ },
+ {
+  "n": 456,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Tate Modernin",
+  "kysymys": "Kerro lisää: Tate Modernin"
+ },
+ {
+  "n": 457,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "turbiinihallin",
+  "kysymys": "Kerro lisää: turbiinihallin"
+ },
+ {
+  "n": 458,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Bankside",
+  "kysymys": "Kerro lisää: Bankside"
+ },
+ {
+  "n": 459,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Giles Gilbert Scott",
+  "kysymys": "Kerro lisää: Giles Gilbert Scott"
+ },
+ {
+  "n": 460,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Tate",
+  "kysymys": "Kerro lisää: Tate"
+ },
+ {
+  "n": 461,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Herzog & de Meuron",
+  "kysymys": "Kerro lisää: Herzog & de Meuron"
+ },
+ {
+  "n": 462,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "posliinin",
+  "kysymys": "Kerro lisää: posliinin"
+ },
+ {
+  "n": 463,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "turbiinihalliin",
+  "kysymys": "Kerro lisää: turbiinihalliin"
+ },
+ {
+  "n": 464,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Millennium Bridge",
+  "kysymys": "Kerro lisää: Millennium Bridge"
+ },
+ {
+  "n": 465,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Pyhän Paavalin katedraaliin",
+  "kysymys": "Kerro lisää: Pyhän Paavalin katedraaliin"
+ },
+ {
+  "n": 466,
+  "kohta": "nosto:tate-modernin-turbiinihalli",
+  "kasite": "Blavatnik Building",
+  "kysymys": "Kerro lisää: Blavatnik Building"
+ },
+ {
+  "n": 467,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "Eiffel-torni",
+  "kysymys": "Kerro lisää: Eiffel-torni"
+ },
+ {
+  "n": 468,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "ArcelorMittal Orbit",
+  "kysymys": "Kerro lisää: ArcelorMittal Orbit"
+ },
+ {
+  "n": 469,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "Stratfordin",
+  "kysymys": "Kerro lisää: Stratfordin"
+ },
+ {
+  "n": 470,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "Carsten Höllerin",
+  "kysymys": "Kerro lisää: Carsten Höllerin"
+ },
+ {
+  "n": 471,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "liukumäki",
+  "kysymys": "Kerro lisää: liukumäki"
+ },
+ {
+  "n": 472,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "Queen Elizabeth Olympic Park",
+  "kysymys": "Kerro lisää: Queen Elizabeth Olympic Park"
+ },
+ {
+  "n": 473,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "London Stadium",
+  "kysymys": "Kerro lisää: London Stadium"
+ },
+ {
+  "n": 474,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "West Ham United",
+  "kysymys": "Kerro lisää: West Ham United"
+ },
+ {
+  "n": 475,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "Stratfordin asemalle",
+  "kysymys": "Kerro lisää: Stratfordin asemalle"
+ },
+ {
+  "n": 476,
+  "kohta": "nosto:orbitin-liukumaki",
+  "kasite": "Docklands Light Railway",
+  "kysymys": "Kerro lisää: Docklands Light Railway"
+ }
+]

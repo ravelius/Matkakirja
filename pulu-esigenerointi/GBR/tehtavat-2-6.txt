@@ -1,0 +1,1295 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Rub al-Khali: Tyhjä neljännes on Ranskaa suurempi] Rub al-Khali on arabiaa ja tarkoittaa tyhjää neljännestä. Se on maailman suurin yhtenäinen hiekka-aavikko: noin 650 000 neliökilometriä eli Ranskaa suurempi, tuhat kilometriä idästä länteen ja viisisataa pohjoisesta etelään. Aavikko peittää suurimman osan Arabian niemimaan eteläisestä kolmanneksesta ja jakautuu neljän maan kesken: Saudi-Arabian, Omanin, Arabiemiirikuntien ja Jemenin. Valtaosa maastosta on hiekkamerta eli ergiä, jonka dyynit kohoavat jopa kahteensataanviiteenkymmeneen metriin, ja niiden väliin jää sora- ja kipsitasankoja. Hiekan punaisenoranssi väri tulee maasälvästä.
+AIEMPI KYSYMYS: Milloin Englannin pankki perustettiin ja miksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän osaan. Englannin pankki perustettiin vuonna 1694. Syynä oli valtion rahantarve: Englanti kävi sotaa [[Ranskaa]] vastaan, ja kuningas [[Vilhelm III]] tarvitsi lainaa. Yksityiset sijoittajat lainasivat valtiolle rahaa ja saivat vastineeksi oikeuden perustaa pankin. Pankista kehittyi vähitellen maan keskuspankki. Vanha kuvio, tuo valtion velka.
+KYSYMYS: Kerro lisää: Ranskaa
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Trinity Church] 1839–1846 Seurakunta sai peruskirjansa kuningas Vilhelm III:lta 6. toukokuuta 1697, ja maavuokraksi määrättiin kuusikymmentä vakallista vehnää vuodessa. Ensimmäinen kirkko valmistui 1698 Wall Streetin päähän Hudsonia kohti, ja se tuhoutui New Yorkin suurpalossa 1776. Toinen kirkko vihittiin 1790; sitä ennen seurakunta kokoontui Pyhän Paavalin kappelissa, jossa George Washington kävi jumalanpalveluksessa virkaanastujaistensa jälkeen 1789. Toinen kirkko purettiin, kun talven 1838–1839 lumet olivat heikentäneet sen rakenteita. Kolmas eli nykyinen kirkko rakennettiin 1839–1846 Richard Upjohnin uusgoottilaisten piirustusten mukaan ja vihittiin helatorstaina 1. toukokuuta 1846. Torni ristiineen y…
+- [Kapkaupunki — kohdekartta / Kohdekartta: Hyväntoivonlinnoitus] 1666 Hyväntoivonlinnoitus on Etelä-Afrikan vanhin säilynyt rakennus. Hollantilainen Itä-Intian kauppakomppania rakensi sen vuosina 1666–1679 korvaamaan Jan van Riebeeckin savesta ja puusta tehdyn linnakkeen. Ensimmäinen kivi laskettiin 2. tammikuuta 1666. Viisikulmaisen linnoituksen bastionit nimettiin 26. huhtikuuta 1679 Oranian Vilhelm III:n arvonimien mukaan: Leerdam, Buuren, Katzenellenbogen, Nassau ja Oranje. Linnoitus rakennettiin osittain orjatyöllä. Yhtiö ei orjuuttanut paikallisia, koska se pelkäsi kapinaa eikä tiennyt, kuinka suuria seudun kansat olivat; sen sijaan Kapiin tuotiin jopa kuusikymmentätuhatta orjuutettua ihmistä Madagaskarilta, Mosambikista, Hollannin Itä-Intiasta ja …
+AIEMPI KYSYMYS: Milloin Englannin pankki perustettiin ja miksi?
+AIEMPI VASTAUS (Livia):
+Ai tota, tän osaan. Englannin pankki perustettiin vuonna 1694. Syynä oli valtion rahantarve: Englanti kävi sotaa [[Ranskaa]] vastaan, ja kuningas [[Vilhelm III]] tarvitsi lainaa. Yksityiset sijoittajat lainasivat valtiolle rahaa ja saivat vastineeksi oikeuden perustaa pankin. Pankista kehittyi vähitellen maan keskuspankki. Vanha kuvio, tuo valtion velka.
+KYSYMYS: Kerro lisää: Vilhelm III
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Exchange Alley] Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Mitä tarkoittaa sana kupla taloudessa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kuplalla tarkoitetaan tilannetta, jossa omaisuuserän, kuten osakkeen tai kiinteistön, hinta nousee paljon pitemmälle kuin sen perusteltu arvo, koska ostajat odottavat hinnan jatkavan nousuaan. Nousu houkuttelee uusia ostajia, mikä nostaa hintaa edelleen, kunnes luottamus horjuu ja hinta romahtaa. [[Etelämeren yhtiön]] tapahtumat vuonna 1720 ovat tunnettu esimerkki, ja usein mainitaan myös Alankomaiden [[tulppaanikuume]] 1630-luvulla, vaikka historioitsijat ovat kiistelleet sen laajuudesta. Kupla on kaunis niin kauan kuin se ei puhkea.
+KYSYMYS: Kerro lisää: Etelämeren yhtiön
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kupla, joka puhkesi Exchange Alleyssä
+Tietoruudun teksti: Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja valtiovarainministeri John Aislabie erotettiin alahuoneesta ja suljettiin Toweriin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä tarkoittaa sana kupla taloudessa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kuplalla tarkoitetaan tilannetta, jossa omaisuuserän, kuten osakkeen tai kiinteistön, hinta nousee paljon pitemmälle kuin sen perusteltu arvo, koska ostajat odottavat hinnan jatkavan nousuaan. Nousu houkuttelee uusia ostajia, mikä nostaa hintaa edelleen, kunnes luottamus horjuu ja hinta romahtaa. [[Etelämeren yhtiön]] tapahtumat vuonna 1720 ovat tunnettu esimerkki, ja usein mainitaan myös Alankomaiden [[tulppaanikuume]] 1630-luvulla, vaikka historioitsijat ovat kiistelleet sen laajuudesta. Kupla on kaunis niin kauan kuin se ei puhkea.
+KYSYMYS: Kerro lisää: tulppaanikuume
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+AIEMPI KYSYMYS: Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä kuulin jo [[Venetsian]] laiturilla. Yleisesti esitetyn selityksen mukaan syynä oli, että [[Itävallan perimyssota]] vähensi englantilaisten vierailijoiden määrää [[Italiassa]], ja juuri he olivat olleet Canalettolle tärkeimpiä ostajia. Hän siirtyi siksi seuraamaan asiakkaitaan kotisaarelle ja asui Lontoossa noin yhdeksän vuotta. En ole varma, kuinka suuri osa päätöksestä oli rahaa ja kuinka suuri osa uteliaisuutta uutta kaupunkia kohtaan. Mutta kyllä kyyhky ymmärtää, että leipä seuraa sinne, missä asiakkaat ovat.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä kuulin jo [[Venetsian]] laiturilla. Yleisesti esitetyn selityksen mukaan syynä oli, että [[Itävallan perimyssota]] vähensi englantilaisten vierailijoiden määrää [[Italiassa]], ja juuri he olivat olleet Canalettolle tärkeimpiä ostajia. Hän siirtyi siksi seuraamaan asiakkaitaan kotisaarelle ja asui Lontoossa noin yhdeksän vuotta. En ole varma, kuinka suuri osa päätöksestä oli rahaa ja kuinka suuri osa uteliaisuutta uutta kaupunkia kohtaan. Mutta kyllä kyyhky ymmärtää, että leipä seuraa sinne, missä asiakkaat ovat.
+KYSYMYS: Kerro lisää: Itävallan perimyssota
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Musiikki: Ooppera keksittiin Italiassa] Ooppera syntyi Firenzessä 1600-luvun taitteessa, kun joukko oppineita yritti herättää henkiin antiikin Kreikan näytelmät — ja loi vahingossa kokonaan uuden taiteenlajin. Milanon La Scala on sen kuuluisin näyttämö: kuusi kerrosta aitioita kultauksineen ja yleisö, joka ei anna virheitä anteeksi. Sanat, joilla musiikista puhutaan kaikkialla maailmassa, ovat italiaa: piano tarkoittaa hiljaa, forte lujaa ja allegro iloisesti.
+AIEMPI KYSYMYS: Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?
+AIEMPI VASTAUS (Livia):
+Kato, tost minä kuulin jo [[Venetsian]] laiturilla. Yleisesti esitetyn selityksen mukaan syynä oli, että [[Itävallan perimyssota]] vähensi englantilaisten vierailijoiden määrää [[Italiassa]], ja juuri he olivat olleet Canalettolle tärkeimpiä ostajia. Hän siirtyi siksi seuraamaan asiakkaitaan kotisaarelle ja asui Lontoossa noin yhdeksän vuotta. En ole varma, kuinka suuri osa päätöksestä oli rahaa ja kuinka suuri osa uteliaisuutta uutta kaupunkia kohtaan. Mutta kyllä kyyhky ymmärtää, että leipä seuraa sinne, missä asiakkaat ovat.
+KYSYMYS: Kerro lisää: Italiassa
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+AIEMPI KYSYMYS: Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Canaletton]] Lontoon-näkymissä [[Thames]] on kaupungin vilkas pääväylä, jota pitkin kulkee pieniä soutuveneitä ja suurempia aluksia, ja rannoilla kohoavat kirkontornit sekä [[Pyhän Paavalin katedraalin]] kupoli. Maalauksista näkee myös, että kaupungin siluetti oli matalampi ja sen rakenteet puisempia kuin nykyään, ja yksi hänen tunnetuista aiheistaan oli rakenteilla ollut [[Westminsterin silta]]. Tarkkoja yksityiskohtia on kuitenkin syytä tarkistaa erikseen, sillä taiteilija saattoi järjestellä näkymiä kauniimmiksi.
+
+Minä kuljin samaa jokea kerran aamuyöstä, ja kyllä se nykyään on paljon hiljaisempi kuin noissa kuvissa. Veneitä en kaipaa, mutta pullantuoksu kyllä voisi tulla takaisin rannoille.
+KYSYMYS: Kerro lisää: Canaletton
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Thamesin vuorovesi] Se sumu, joka söi äänet, nousi joesta — ja se joki ei ole Lontoossa tavallinen joki. Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi nousee ja laskee kahdesti vuorokaudessa, keskustassa parhaimmillaan noin seitsemän metriä. Laskuveden aikaan kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne lasketaan portaita pitkin etsimään savipiippuja ja astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi, ja ammatti on isoisääsi vanhempi. Ranta ei silti ole vapaata riistaa: lupa on ostettava satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, myynti keskeytettiin vuonna 2022. Se avattiin uudelleen 2024, mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta vanhat löydöt on il…
+- [Lontoo — kaupunkilehti / Joki ja puisto] Thames on vuorovesijoki, ja laskuveden aikaan sen kivinen ranta paljastuu keskellä miljoonakaupunkia. Kulman takana on toinen maailma: aidattu puisto, jossa kulkee vapaana lauma hirviä. Molemmat on merkitty kartalle omina pisteinään.
+AIEMPI KYSYMYS: Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Canaletton]] Lontoon-näkymissä [[Thames]] on kaupungin vilkas pääväylä, jota pitkin kulkee pieniä soutuveneitä ja suurempia aluksia, ja rannoilla kohoavat kirkontornit sekä [[Pyhän Paavalin katedraalin]] kupoli. Maalauksista näkee myös, että kaupungin siluetti oli matalampi ja sen rakenteet puisempia kuin nykyään, ja yksi hänen tunnetuista aiheistaan oli rakenteilla ollut [[Westminsterin silta]]. Tarkkoja yksityiskohtia on kuitenkin syytä tarkistaa erikseen, sillä taiteilija saattoi järjestellä näkymiä kauniimmiksi.
+
+Minä kuljin samaa jokea kerran aamuyöstä, ja kyllä se nykyään on paljon hiljaisempi kuin noissa kuvissa. Veneitä en kaipaa, mutta pullantuoksu kyllä voisi tulla takaisin rannoille.
+KYSYMYS: Kerro lisää: Thames
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Lontoo 1666 — soitin veneessä, kaupunki tulessa] 2.–5.9.1666 — Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina …
+AIEMPI KYSYMYS: Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Canaletton]] Lontoon-näkymissä [[Thames]] on kaupungin vilkas pääväylä, jota pitkin kulkee pieniä soutuveneitä ja suurempia aluksia, ja rannoilla kohoavat kirkontornit sekä [[Pyhän Paavalin katedraalin]] kupoli. Maalauksista näkee myös, että kaupungin siluetti oli matalampi ja sen rakenteet puisempia kuin nykyään, ja yksi hänen tunnetuista aiheistaan oli rakenteilla ollut [[Westminsterin silta]]. Tarkkoja yksityiskohtia on kuitenkin syytä tarkistaa erikseen, sillä taiteilija saattoi järjestellä näkymiä kauniimmiksi.
+
+Minä kuljin samaa jokea kerran aamuyöstä, ja kyllä se nykyään on paljon hiljaisempi kuin noissa kuvissa. Veneitä en kaipaa, mutta pullantuoksu kyllä voisi tulla takaisin rannoille.
+KYSYMYS: Kerro lisää: Pyhän Paavalin katedraalin
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Colombo — kohdekartta / Kohdekartta: Fortin kellotorni] 1856–1857 Torni seisoo Chatham Streetin ja Janadhipathi Mawathan eli entisen Queen Streetin kulmassa. Se rakennettiin kellotorniksi 1856–57 ja valmistui 25. helmikuuta 1857; sen suunnitteli kuvernööri Henry George Wardin puoliso Emily Elizabeth Ward, ja työn teki yleisten töiden virasto John Flemming Churchillin valvonnassa. Kaksikymmentäyhdeksän metriä korkea rakennus oli valmistuessaan Colombon korkein. Kello oli vanhempi kuin torni. Kuvernööri Robert Brownrigg tilasi sen 1814 tuhannella kahdellasadalla punnalla, mutta säästösyistä se pantiin varastoon ja asennettiin vasta 1857. Koneiston teki lontoolainen Dent, sama paja joka oli valmistanut Westminsterin palatsin Big Benin 1852. Pääkell…
+- [Chennai — kohdekartta / Kohdekartta: Ripon Building] 1909–1913 Kaupunginhallinnon talo tilattiin 1909, ja sen suunnitteli G. T. S. Harris. Peruskiven laski Intian varakuningas lordi Minto joulukuussa 1909 — artikkeli antaa päiväksi sekä yhdennentoista että kahdennentoista. Rakennuksen teki Loganatha Mudaliar, työ kesti neljä vuotta ja maksoi 750 000 rupiaa. Nimi tuli lordi Riponista, Intian kenraalikuvernööristä, jota on sanottu paikallishallinnon isäksi. Madrasin kaupunginvaltuusto muutti taloon 1913 oltuaan sitä ennen useassa eri osoitteessa, ja avajaisiin kutsuttiin yli kolmetuhatta vierasta. Talo on täysin valkoinen uusklassinen rakennus, jossa on sekä joonialaisia että korinttilaisia piirteitä. Pituutta on 85 metriä ja leveyttä 32, ja ke…
+AIEMPI KYSYMYS: Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. [[Canaletton]] Lontoon-näkymissä [[Thames]] on kaupungin vilkas pääväylä, jota pitkin kulkee pieniä soutuveneitä ja suurempia aluksia, ja rannoilla kohoavat kirkontornit sekä [[Pyhän Paavalin katedraalin]] kupoli. Maalauksista näkee myös, että kaupungin siluetti oli matalampi ja sen rakenteet puisempia kuin nykyään, ja yksi hänen tunnetuista aiheistaan oli rakenteilla ollut [[Westminsterin silta]]. Tarkkoja yksityiskohtia on kuitenkin syytä tarkistaa erikseen, sillä taiteilija saattoi järjestellä näkymiä kauniimmiksi.
+
+Minä kuljin samaa jokea kerran aamuyöstä, ja kyllä se nykyään on paljon hiljaisempi kuin noissa kuvissa. Veneitä en kaipaa, mutta pullantuoksu kyllä voisi tulla takaisin rannoille.
+KYSYMYS: Kerro lisää: Westminsterin silta
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Musiikki: Orkesteri soitti proomulla kuninkaalle] Saksassa syntynyt Georg Friedrich Händel muutti Lontooseen ja jäi loppuiäkseen. Vuonna 1717 kuningas Yrjö I halusi juhlat Thamesille: viisikymmentä muusikkoa sijoitettiin proomulle, joka seurasi kuninkaan venettä pitkin jokea. Händelin Vesimusiikki soi niin, että kuningas pyysi toistamaan koko teoksen kolmesti — soittajat pelasivat sen läpi useaan kertaan matkalla Whitehallista Chelseaan ja takaisin. Händel sävelsi myös Messias-oratorion, jonka Halleluja-kuoron aikana yleisö nousee yhä seisomaan.
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+AIEMPI KYSYMYS: Miten venetsialaisen katse erosi lontoolaisten omasta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Venetsialaisen silmä oli koulittu veduttojen eli tarkkojen kaupunkinäkymien perinteeseen, jossa perspektiivi, kirkas valo ja rakennusten täsmällinen piirto olivat tärkeitä. Lontoolaisten omassa maalauksessa kaupunkikuvaa käsiteltiin usein väljemmin, ja Thamesin jokiaiheet saattoivat painottua tunnelmaan enemmän kuin tarkkaan rakennusten kuvaukseen. Tämä on kuitenkin yleistys, eikä se päde jokaiseen taiteilijaan. Canaletto toi [[Thamesille]] saman huolellisen katseen, jolla hän oli kuvannut [[Canal Granden]] palatsit.
+KYSYMYS: Kerro lisää: Thamesille
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kohdekartta / Kohdekartta: Canal Grande] 1631 Canal Grande on Venetsian pääkatu, vaikka se onkin oikeasti vesitie. Se mutkittelee kaupungin läpi käänteisen S-kirjaimen muotoisena, on 3,8 kilometriä pitkä ja 30–90 metriä leveä. Rannoilla seisoo yli 170 rakennusta, monet 1200–1700-luvuilta. Pitkään kanaalin yli pääsi vain yhtä ainoaa siltaa, Rialtoa — muuten piti mennä veneellä. Nykyään ylityspaikkoja on neljä, uusin on vuonna 2008 valmistunut lasinen Konstituutiosilta. Kanaalin varrella kohoaa valkoinen Santa Maria della Saluten kirkko. Sen rakentaminen alkoi 1631 kiitokseksi siitä, että hirveä ruttoepidemia vihdoin väistyi.
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+AIEMPI KYSYMYS: Miten venetsialaisen katse erosi lontoolaisten omasta?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Venetsialaisen silmä oli koulittu veduttojen eli tarkkojen kaupunkinäkymien perinteeseen, jossa perspektiivi, kirkas valo ja rakennusten täsmällinen piirto olivat tärkeitä. Lontoolaisten omassa maalauksessa kaupunkikuvaa käsiteltiin usein väljemmin, ja Thamesin jokiaiheet saattoivat painottua tunnelmaan enemmän kuin tarkkaan rakennusten kuvaukseen. Tämä on kuitenkin yleistys, eikä se päde jokaiseen taiteilijaan. Canaletto toi [[Thamesille]] saman huolellisen katseen, jolla hän oli kuvannut [[Canal Granden]] palatsit.
+KYSYMYS: Kerro lisää: Canal Granden
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä on veduta-maalaus?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. [[Veduta]] on italialainen sana, joka tarkoittaa kirjaimellisesti näkymää, ja taiteessa sillä viitataan yksityiskohtaiseen maalaukseen tai piirrokseen kaupungista tai sen osasta. Genre kukoisti Italiassa 1700-luvulla, ja sen suosio liittyi osittain matkailijoihin, jotka halusivat ostaa mukaansa muiston nähdystä kaupungista. Tunnetuimpia veduttojen tekijöitä oli [[Canaletto]], joka maalasi [[Venetsian]] kanavia ja torneja. Tyyli eroaa tavallisesta maisemamaalauksesta siinä, että kohteen tunnistettavuus ja tarkkuus ovat tärkeämpiä kuin tunnelma.
+KYSYMYS: Kerro lisää: Veduta
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Canaletto Lontoossa] Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+AIEMPI KYSYMYS: Mikä on veduta-maalaus?
+AIEMPI VASTAUS (Livia):
+Ai tota, hyvä kysymys. [[Veduta]] on italialainen sana, joka tarkoittaa kirjaimellisesti näkymää, ja taiteessa sillä viitataan yksityiskohtaiseen maalaukseen tai piirrokseen kaupungista tai sen osasta. Genre kukoisti Italiassa 1700-luvulla, ja sen suosio liittyi osittain matkailijoihin, jotka halusivat ostaa mukaansa muiston nähdystä kaupungista. Tunnetuimpia veduttojen tekijöitä oli [[Canaletto]], joka maalasi [[Venetsian]] kanavia ja torneja. Tyyli eroaa tavallisesta maisemamaalauksesta siinä, että kohteen tunnistettavuus ja tarkkuus ovat tärkeämpiä kuin tunnelma.
+KYSYMYS: Kerro lisää: Canaletto
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Canaletto maalasi myös Lontoon
+Tietoruudun teksti: Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten venetsialaisen silmin.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Cairns — kaupunkilehti / Riutta ja sademetsä: Riutta on nuorempi kuin luulisi] Vaikka riuttojen historia alueella on satojatuhansia vuosia pitkä, nykyinen elävä riuttarakenne on nuori. Great Barrier Reef Marine Park Authorityn mukaan se alkoi kasvaa vanhemman kalkkikivialustan päälle noin 9 000 vuotta sitten; CRC Reef Research Centre arvioi iäksi 6 000–8 000 vuotta. Viimeisen jääkauden huipulla merenpinta oli noin 120 metriä nykyistä alempana, ja kun se nousi, korallit saivat kasvaa yhä ylemmäs upponneiden rantakukkuloiden päällä. Riutta valittiin maailmanperintökohteeksi 1981.
+- [Iso-Britannia — maalehti / Kirjallisuus: Patsas, joka ilmestyi yön aikana] J. M. Barrie tilasi Peter Pan -patsaan omalla rahallaan ja antoi pystyttää sen Kensington Gardensiin 30. huhtikuuta 1912 salaa, ilman lupaa ja ilman juhlaa, jotta lapset luulisivat keijujen tuoneen sen yöllä. Seuraavana aamuna hän ilmoitti Times-lehdessä, että Serpentinen rannalle on ilmestynyt vappulahja: Peter Pan puhaltamassa pilliään puunkannon päällä. Kuvanveistäjä George Frampton ei kuitenkaan käyttänyt mallina Michael Llewelyn Daviesia, jonka valokuvat Barrie oli hänelle antanut, ja kirjailija jäi pettyneeksi: hänen mielestään patsaasta puuttui Peterin pirullinen puoli.
+AIEMPI KYSYMYS: Miten Thames-joen vuorovesi näkyy Lontoossa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tost minä osaan kertoo. [[Thames]] on Lontoon kohdalla vuorovesijoki, eli merenpinnan nousu ja lasku tuntuu joessa asti, ja vedenkorkeus voi vaihdella päivän mittaan useita metrejä. Vuoroveden aikaan joen rannoille paljastuu hiekkaa ja mutaa, ja vanhastaan alusten liikenne on sovitettu vuorovesiaikoihin. Tulvasuojana kaupunkia suojaa [[Thames Barrier]] -tulvaportti, jonka luvut ja ajankohdat kannattaa tarkistaa virallisista lähteistä, koska en ole niistä varma. Pitkä selitys, mutta vettä riitti.
+KYSYMYS: Kerro lisää: Thames Barrier
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tansania — maalehti / Historia: Opettaja, joka käänsi Shakespearen] 1961–1985 — Julius Nyerere opiskeli Makereressa ja Edinburghissa, palasi opettajaksi ja johti maansa itsenäisyyteen 1961; Tanganjika ja Sansibar yhdistyivät Tansaniaksi 1964. Vuoden 1967 Arushan julistus nosti omavaraisuuden ja yhteisöllisyyden — ujamaa, suurperhe — maan ohjelmaksi. Nyerere teki swahilista koko valtion kielen ja käänsi sille itse Shakespearen Julius Caesarin 1961 ja Venetsian kauppiaan 1972. Häntä kutsuttiin Mwalimuksi, opettajaksi; patsaita hän kielsi pystyttämästä itsestään ja jätti presidentin paikan vapaaehtoisesti 1985 — harvinaista koko mantereella.
+- [Košice — kaupunkilehti / Rakennukset: Shakespearen näytelmiä uusbarokkiteatterin katossa] Košicen valtionteatteri seisoo pääkadun varrella kaupungin keskustassa. Sen edustava uusbarokkirakennus tehtiin Adolf Langin suunnitelmien mukaan vuosina 1879–1899, joten työhön meni kaksi vuosikymmentä. Sisätilat on koristeltu runsaasti stukkityöllä, ja näyttämö on muodoltaan lyyran mallinen. Katon maalauksissa nähdään kohtauksia Shakespearen näytelmistä: Othellosta, Romeosta ja Juliasta, Kuningas Learista sekä Kesäyön unesta.
+AIEMPI KYSYMYS: Miltä näytelmän katsominen majatalon parvelta tuntui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Shakespearen]] aikaan [[Lontoon]] majatalon pihalla näytelmä esitettiin yleensä pihan toiseen päähän pystytetyltä lavalta, ja sivuilla kiertävien parvekekäytävien katsojat näkivät esityksen ylhäältä, suojassa sateelta ja kauempana pihalla seisovasta joukosta. Esityksen seuraaminen oli melko lähellä, mutta myös äänekästä, sillä alapihalla olivat muut katsojat, eläimet ja tarjoilijat. Tarkkaa tunnelmaa on vaikea tietää, koska kuvaukset ovat harvassa, enkä halua keksiä niitä. Mutta aika hyvä paikka siinä olisi ollut myös kyyhkylle.
+KYSYMYS: Kerro lisää: Shakespearen
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Lontoon silmä] 2000 Pyörä on 135 metriä korkea, mutta oudointa siinä on tuki: se roikkuu vain toiselta puolelta, kuten polkupyörän eturenkaan pinnat yhdellä haarukalla. Toista yhtä korkeaa näin tuettua maisemapyörää ei maailmassa ole. Pyörää ei nostettu paikalleen valmiina. Koko kehä koottiin makuulleen Thamesin päälle rakennetuille lautoille, ja sitten sitä nostettiin pystyyn hitaasti, pari astetta tunnissa. Kapseleita on 32, numeroitu 1–33, koska numeroa 13 ei ole lainkaan. Pyörä pyörii hitaammin kuin ihminen kävelee eikä pysähdy koskaan — kyytiin astutaan sen liikkuessa.
+AIEMPI KYSYMYS: Miltä näytelmän katsominen majatalon parvelta tuntui?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Shakespearen]] aikaan [[Lontoon]] majatalon pihalla näytelmä esitettiin yleensä pihan toiseen päähän pystytetyltä lavalta, ja sivuilla kiertävien parvekekäytävien katsojat näkivät esityksen ylhäältä, suojassa sateelta ja kauempana pihalla seisovasta joukosta. Esityksen seuraaminen oli melko lähellä, mutta myös äänekästä, sillä alapihalla olivat muut katsojat, eläimet ja tarjoilijat. Tarkkaa tunnelmaa on vaikea tietää, koska kuvaukset ovat harvassa, enkä halua keksiä niitä. Mutta aika hyvä paikka siinä olisi ollut myös kyyhkylle.
+KYSYMYS: Kerro lisää: Lontoon
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Dickensin pubi] The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+AIEMPI KYSYMYS: Miksi juuri The George säilyi, kun muut parvekemajatalot katosivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. En ole aivan varma kaikista syistä, mutta tiedossa on, että [[The George]] oli aikoinaan osa Southwarkin majataloketjua, jonka muut talot purettiin tai poltettiin, kun kaupunki muuttui. Rautatiet vähensivät vanhojen postitaloja ja kyydin tarvetta, joten monet majatalot menettivät tehtävänsä, ja tilalle rakennettiin varastoja ja toimistoja. [[National Trust]] otti rakennuksen hoitoonsa, minkä ansiosta jäljellä oleva siipi on säilynyt. Tarkat vuodet ja yksityiskohdat kannattaa tarkistaa varmemmasta lähteestä.
+KYSYMYS: Kerro lisää: The George
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Dickensin pubi] The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+AIEMPI KYSYMYS: Miksi juuri The George säilyi, kun muut parvekemajatalot katosivat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. En ole aivan varma kaikista syistä, mutta tiedossa on, että [[The George]] oli aikoinaan osa Southwarkin majataloketjua, jonka muut talot purettiin tai poltettiin, kun kaupunki muuttui. Rautatiet vähensivät vanhojen postitaloja ja kyydin tarvetta, joten monet majatalot menettivät tehtävänsä, ja tilalle rakennettiin varastoja ja toimistoja. [[National Trust]] otti rakennuksen hoitoonsa, minkä ansiosta jäljellä oleva siipi on säilynyt. Tarkat vuodet ja yksityiskohdat kannattaa tarkistaa varmemmasta lähteestä.
+KYSYMYS: Kerro lisää: National Trust
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Dickensin pubi] The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+AIEMPI KYSYMYS: Mitä Pikku Dorrit kertoo pubista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Charles Dickens]] mainitsee pubin romaanissaan [[Pikku Dorrit]], joka sijoittuu pitkälti Lontoon ja sen velkavankilan ympäristöön. En ole varma, missä kohtaa kirjaa tai miten tarkasti pubi kuvataan, joten en halua keksiä sisältöä, jota en ole lukenut. Varmaa on, että kirjailija tunsi kaupunginosan hyvin, sillä hän vietti siellä lapsuutensa vaikeita vuosia. Mainintaa pidetään yhtenä syynä siihen, että [[The George]] liitetään hänen nimeensä.
+KYSYMYS: Kerro lisää: Charles Dickens
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Dickensin pubi] The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+AIEMPI KYSYMYS: Mitä Pikku Dorrit kertoo pubista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Charles Dickens]] mainitsee pubin romaanissaan [[Pikku Dorrit]], joka sijoittuu pitkälti Lontoon ja sen velkavankilan ympäristöön. En ole varma, missä kohtaa kirjaa tai miten tarkasti pubi kuvataan, joten en halua keksiä sisältöä, jota en ole lukenut. Varmaa on, että kirjailija tunsi kaupunginosan hyvin, sillä hän vietti siellä lapsuutensa vaikeita vuosia. Mainintaa pidetään yhtenä syynä siihen, että [[The George]] liitetään hänen nimeensä.
+KYSYMYS: Kerro lisää: Pikku Dorrit
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Andesin yliopisto] 1948 Yliopiston perusti 1948 joukko kolumbialaisia älymystön edustajia Mario Laserna Pinzónin johdolla, ja se oli maan ensimmäinen yliopisto, joka perustettiin tunnustuksettomana: riippumattomaksi sekä puolueista että kirkosta. Perustamisen taustalla oli maan teollistuminen ja koulutetun työvoiman puute — opetusministeri Germán Arciniegas kertoi kongressille 1946, että maasta puuttuu insinöörejä, arkkitehteja, lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, perustajat pitivät sitä parhaana perusteluna yliopiston perustamiselle. Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä opiskelijalla. Malli otettiin yhdysvaltalaisesta …
+- [Sansibar — kohdekartta / Kohdekartta: Sansibarin valtionyliopisto] 1999 Sansibarin edustajainhuone perusti valtionyliopiston lailla 1999, ja toiminta alkoi 2002. Yliopisto on julkinen, ja sen pääkampus on Tunguussa saaren keskiosassa; Kivikaupungin laidalla on sen kaupunkikampus. Yliopistossa on swahilin ja vieraiden kielten koulu, täydennyskoulutuksen koulu, kasvatustieteiden koulu sekä luonnon- ja yhteiskuntatieteiden koulu. Kieli-instituutti on opettanut vuosia swahilia, arabiaa, englantia, espanjaa, portugalia, ranskaa ja saksaa, ja se opettaa swahilia ulkomaisille opiskelijoille eri puolilta maailmaa. Kasvatustieteiden puoli kouluttaa opettajia, joita saarilla tarvitaan. Sansibarin osuus swahilin kielessä on suurempi kuin saarten koko antaisi olettaa.…
+AIEMPI KYSYMYS: Mikä National Trust on ja mitä se omistaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän kyyhky tuntee. National Trust on Britannian hyväntekeväisyysjärjestö, joka perustettiin 1800-luvun lopulla suojelemaan historiallisia rakennuksia, puutarhoja ja luonnonmaisemia yleisön käyttöön. Se omistaa suuren määrän kartanoita, linnoja, rannikkoalueita ja maaseutua eri puolilla [[Englantia]], [[Walesia]] ja [[Pohjois-Irlantia]], ja sen toimintaa rahoittavat jäsenmaksut ja lahjoitukset. [[Skotlannissa]] vastaava järjestö on erillinen. Tarkkoja lukuja en uskalla kirjoittaa muistista, mutta mittakaava on valtava. Eikä yksikään niistä tilaa minulta pullaa teehuoneeseen.
+KYSYMYS: Kerro lisää: Englantia
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Mikä National Trust on ja mitä se omistaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän kyyhky tuntee. National Trust on Britannian hyväntekeväisyysjärjestö, joka perustettiin 1800-luvun lopulla suojelemaan historiallisia rakennuksia, puutarhoja ja luonnonmaisemia yleisön käyttöön. Se omistaa suuren määrän kartanoita, linnoja, rannikkoalueita ja maaseutua eri puolilla [[Englantia]], [[Walesia]] ja [[Pohjois-Irlantia]], ja sen toimintaa rahoittavat jäsenmaksut ja lahjoitukset. [[Skotlannissa]] vastaava järjestö on erillinen. Tarkkoja lukuja en uskalla kirjoittaa muistista, mutta mittakaava on valtava. Eikä yksikään niistä tilaa minulta pullaa teehuoneeseen.
+KYSYMYS: Kerro lisää: Walesia
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä National Trust on ja mitä se omistaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän kyyhky tuntee. National Trust on Britannian hyväntekeväisyysjärjestö, joka perustettiin 1800-luvun lopulla suojelemaan historiallisia rakennuksia, puutarhoja ja luonnonmaisemia yleisön käyttöön. Se omistaa suuren määrän kartanoita, linnoja, rannikkoalueita ja maaseutua eri puolilla [[Englantia]], [[Walesia]] ja [[Pohjois-Irlantia]], ja sen toimintaa rahoittavat jäsenmaksut ja lahjoitukset. [[Skotlannissa]] vastaava järjestö on erillinen. Tarkkoja lukuja en uskalla kirjoittaa muistista, mutta mittakaava on valtava. Eikä yksikään niistä tilaa minulta pullaa teehuoneeseen.
+KYSYMYS: Kerro lisää: Pohjois-Irlantia
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Edinburgh — kohdekartta / Kohdekartta: Holyroodin palatsi] 1501–1678 Holyroodin palatsi on Britannian hallitsijan virallinen asuinpaikka Skotlannissa. Sen vanhin osa rakennettiin 1520–1530-luvuilla, mutta suurin osa nykyisestä linnamaisesta palatsista rakennettiin uudelleen vuosina 1671–1678. Palatsin vieressä on Holyroodin luostarin rauniot — luostari perustettiin jo vuonna 1128. Palatsi tunnetaan erityisesti Marian, Skotlannin kuningattaren, kotina — hän asui siellä vuosina 1561–1567. Vuonna 1566 kuningattaren sihteeri David Rizzio murhattiin raa'asti hänen omissa huoneissaan. Palatsin 45-metrisessä juhlasalissa riippuu 96 muotokuvaa Skotlannin muinaisista kuninkaista. Koko palatsissa on 289 huonetta, ja sitä ympäröi kymmenen eekkerin puutarha.
+AIEMPI KYSYMYS: Mikä National Trust on ja mitä se omistaa?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämän kyyhky tuntee. National Trust on Britannian hyväntekeväisyysjärjestö, joka perustettiin 1800-luvun lopulla suojelemaan historiallisia rakennuksia, puutarhoja ja luonnonmaisemia yleisön käyttöön. Se omistaa suuren määrän kartanoita, linnoja, rannikkoalueita ja maaseutua eri puolilla [[Englantia]], [[Walesia]] ja [[Pohjois-Irlantia]], ja sen toimintaa rahoittavat jäsenmaksut ja lahjoitukset. [[Skotlannissa]] vastaava järjestö on erillinen. Tarkkoja lukuja en uskalla kirjoittaa muistista, mutta mittakaava on valtava. Eikä yksikään niistä tilaa minulta pullaa teehuoneeseen.
+KYSYMYS: Kerro lisää: Skotlannissa
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Globe 1599 — pihalla ei ole koskaan hiljaista] 21.9.1599 — Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on en…
+- [Lontoo — kohdekartta / Kohdekartta: Globe 1599] Pihalla ei ole koskaan hiljaista. Penniyleisö seisoo katsomon keskellä taivasalla, syö pähkinöitä, juo olutta ja huutaa näyttelijöille, ja näyttämön reunalla seisova poika, joka esittää Caesarin vaimoa, tietää, että hänen on puhuttava sen yli. Southwarkissa Thamesin etelärannalla on syyskuu 1599. Globe on rakennettu samana vuonna puusta, joka purettiin talvella Shoreditchin vanhasta The Theatre -näyttämöstä, kun vuokraisäntä yritti pitää rakennuksen itsellään; Burbagen veljekset omistavat siitä puolet ja William Shakespeare kahdeksasosan. Katsojia mahtuu noin 3 000. Baselilainen Thomas Platter kirjoittaa 21. syyskuuta nähneensä täällä Julius Caesarin ja lopuksi tanssin; se on ensimmäinen va…
+AIEMPI KYSYMYS: Miten pubissa tilataan ja maksetaan Britanniassa?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä olen nähnyt monelta kaiteelta. Perinteisessä britti-pubissa tilaus tehdään yleensä tiskillä, jolloin juomat maksetaan heti ja ne kannetaan itse pöytään, eikä tarjoilija tule pöytään kuten monissa muissa maissa. Tiskiltä saa tavallisesti [[olutta]], [[siideriä]] ja alkoholittomia juomia. Ruoka voidaan tilata samoin, ja pöytä usein valitaan ensin, tai pöytänumero kerrotaan tiskillä. Pubin tapoihin kuuluu myös vuorotellen tarjoaminen: ryhmässä joku hakee kierroksen ja seuraava hakee seuraavan. Käytännöt vaihtelevat paikoittain, ja nykyään monessa paikassa tilataan myös sovelluksella. Ja minun kierrokseni on aina jyvät.
+KYSYMYS: Kerro lisää: olutta
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Pubi, jossa Dickens istui
+Tietoruudun teksti: The George on Lontoon viimeinen parvekekäytävällinen majatalo: tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen omistaa National Trust — olutta myydään silti joka päivä.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miten pubissa tilataan ja maksetaan Britanniassa?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä olen nähnyt monelta kaiteelta. Perinteisessä britti-pubissa tilaus tehdään yleensä tiskillä, jolloin juomat maksetaan heti ja ne kannetaan itse pöytään, eikä tarjoilija tule pöytään kuten monissa muissa maissa. Tiskiltä saa tavallisesti [[olutta]], [[siideriä]] ja alkoholittomia juomia. Ruoka voidaan tilata samoin, ja pöytä usein valitaan ensin, tai pöytänumero kerrotaan tiskillä. Pubin tapoihin kuuluu myös vuorotellen tarjoaminen: ryhmässä joku hakee kierroksen ja seuraava hakee seuraavan. Käytännöt vaihtelevat paikoittain, ja nykyään monessa paikassa tilataan myös sovelluksella. Ja minun kierrokseni on aina jyvät.
+KYSYMYS: Kerro lisää: siideriä
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+AIEMPI KYSYMYS: Miksi juuri tästä suojatiestä tuli maailman kuuluisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Syy on levynkansi: neljä [[The Beatles]] -yhtyeen jäsentä käveli suojatien yli 8. elokuuta 1969, ja kuvaaja otti useita otoksia, kunnes sopiva kuva oli valmis. Kuvasta tuli [[Abbey Road]] -levyn kansi, ja nimi tuli levyn äänittäneen studion kadusta. Kuva on helppo tunnistaa, koska yhtyeen jäsenet kävelevät rivissä, ja siksi kohdetta on matkittu lukemattomia kertoja. Suojatien maine perustuukin siis kuvaan eikä itse tiehen. Kaikki alkoi siis yhdestä valokuva-aamusta, ja se riittää.
+KYSYMYS: Kerro lisää: The Beatles
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+AIEMPI KYSYMYS: Miksi juuri tästä suojatiestä tuli maailman kuuluisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Syy on levynkansi: neljä [[The Beatles]] -yhtyeen jäsentä käveli suojatien yli 8. elokuuta 1969, ja kuvaaja otti useita otoksia, kunnes sopiva kuva oli valmis. Kuvasta tuli [[Abbey Road]] -levyn kansi, ja nimi tuli levyn äänittäneen studion kadusta. Kuva on helppo tunnistaa, koska yhtyeen jäsenet kävelevät rivissä, ja siksi kohdetta on matkittu lukemattomia kertoja. Suojatien maine perustuukin siis kuvaan eikä itse tiehen. Kaikki alkoi siis yhdestä valokuva-aamusta, ja se riittää.
+KYSYMYS: Kerro lisää: Abbey Road
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+AIEMPI KYSYMYS: Millaista kadulla on, kun turistit jonottavat ylitystä ja autot odottavat?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, tämän näkee ylhäältä hyvin. Suojatien edessä ihmiset odottavat vuoroaan ja ottavat kuvia ryhmissä, ja kuljettajat joutuvat pysähtymään tai hidastamaan, kun joku poseeraa keskellä tietä. Paikan maine tulee [[The Beatlesin]] vuonna 1969 ilmestyneestä [[Abbey Road]] -albumista, jonka kansikuvassa yhtye ylittää tämän suojatien. Tilanne toistuu päivittäin, ja jotkut lontoolaiset pitävät sitä rasittavana, toiset hauskana. Liikenteen sujuvuus riippuu kellonajasta ja kävijämäärästä, enkä halua arvailla tarkkoja lukuja. Turvallisuuden vuoksi kannattaa muistaa, että kyseessä on tavallinen kaupunkikatu, jolla ajaa autoja. Ja jos joku jonottaa pullaa, minä liityn jonoon.
+KYSYMYS: Kerro lisää: The Beatlesin
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Abbey Roadin suojatie] Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+AIEMPI KYSYMYS: Mitä taustan studiossa äänitetään nykyään?
+AIEMPI VASTAUS (Livia):
+Tuota niin, katotaas. [[Abbey Road Studios]] on yhä toimiva äänitysstudio, jossa äänitetään monenlaista musiikkia, ja sen kuuluisuus perustuu osittain siihen, että [[The Beatles]] äänitti siellä suuren osan levyistään. Studiota on käytetty myös elokuvien ja pelien musiikin äänittämiseen sekä orkesterien levytyksiin. Tarkkoja nykyisiä projekteja en tiedä, koska tieto vaihtuu jatkuvasti, mutta yleiskuva on, että studio palvelee eri tyylilajeja klassisesta musiikista popiin. Kyyhky ei ole koskaan päässyt sisälle, eikä pitäisi pyytääkään.
+KYSYMYS: Kerro lisää: Abbey Road Studios
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chicago — kohdekartta / Kohdekartta: Taideinstituutti] 1879 Alkusysäys tuli 1866, kun 35 taiteilijaa perusti Dearborn Streetin ateljeehen Chicago Academy of Designin eurooppalaisten taideakatemioiden malliin. Koulu piti olla ilmainen ja sillä oma galleria; opetus alkoi 1868, ja 1870 akatemia sai oman viisikerroksisen kivitalon. Vuoden 1871 suurpalo tuhosi sen ja jätti akatemian velkoihin. Vuoteen 1878 mennessä velkaa oli 10 000 dollaria, ja 1879 osa jäsenistä perusti uuden yhdistyksen, joka osti konkurssiin menneen edeltäjänsä omaisuuden huutokaupasta. Nykyinen nimi otettiin käyttöön 1882. Nykyinen talo Michigan Avenuen varrella rakennettiin vuoden 1893 maailmannäyttelyä varten, ja museo muutti siihen näyttelyn jälkeen. Sisäänkäyntiä vartioi ka…
+- [New Orleans — kohdekartta / Kohdekartta: Tullitalo] 1848–1881 Tullitalon rakentaminen kesti 33 vuotta. Työ alkoi 1848 Alexander Thompson Woodin piirustusten mukaan, mutta Wood vaihdettiin jo 1850, ja häntä seurasi kahdeksan arkkitehtia, joista jokainen muutti suunnitelmaa. Talo täyttää kokonaisen puolisuunnikkaan muotoisen korttelin, ja sen tiilirunko on verhoiltu harmaalla graniitilla Quincystä Massachusettsista. Julkisivujen paksut pylväät ovat egyptiläistyyliset, ja alakerran seinissä on kaksikymmentäneljä tyhjää syvennystä: niihin oli tarkoitus asettaa kuuluisien amerikkalaisten patsaat, mutta suunnitelmaa yksinkertaistettiin eikä patsaita koskaan tehty. Talon keskellä on Marmorisali, yksi maan varhaisimmista ja hienoimmista kreikkalaise…
+AIEMPI KYSYMYS: Mikä Abbey Road Studios on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Abbey Road Studios]] on äänitysstudio Lontoon luoteisosassa, [[St John's Woodin]] kaupunginosassa, ja se tunnetaan erityisesti [[The Beatlesin]] äänityksistä 1960-luvulla. Studio perustettiin 1900-luvun alkupuoliskolla, mutta en ole varma tarkasta vuodesta. Siellä on äänitetty paljon klassista musiikkia, elokuvamusiikkia ja populaarimusiikkia, ja talo on säilynyt toiminnassa vuosikymmenten ajan. Nykyään studio on myös turistien suosima kohde, vaikka sisälle pääsee vain tietyin ehdoin.
+KYSYMYS: Kerro lisää: St John's Woodin
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Huumori: Nukke, jolla on syntymäpäivä] Samuel Pepys kirjoitti päiväkirjaansa 9. toukokuuta 1662 nähneensä Covent Gardenissa italialaisen nukketeatterin, joka oli hänen mielestään hyvin sievä. Nukettaja oli italialainen Pietro Gimonde, ja esityksen tähti oli Pulcinella, josta englannissa tuli Mr Punch. Tuota päivää pidetään yhä Punchin virallisena syntymäpäivänä. Punchin kimeä kirkuna syntyy swazzlesta, kahdesta metalliliuskasta ja niiden välisestä nauhasta, jota nukettaja pitää suussaan koko näytöksen ajan. Punchista on jäänyt englantiin sanontakin: pleased as Punch tarkoittaa hyvin tyytyväistä.
+- [Iso-Britannia — maalehti / Huumori: Sana cartoon syntyi vitsistä] Vuonna 1834 palanutta parlamenttitaloa rakennettiin uudelleen, ja Westminster Hallissa oli kesällä 1843 esillä jättimäisiä luonnoksia tulevia seinämaalauksia varten. Italiaksi tällaista luonnosta sanotaan nimellä cartone, englanniksi cartoon. Pilalehti Punch julkaisi 15. heinäkuuta 1843 oman versionsa otsikolla Cartoon, No. 1: 25-vuotias John Leech päästi ryysyiset katulapset hienoon taulugalleriaan, jossa rikkaiden muotokuvat riippuivat nälkäisten silmien edessä. Pilkka jäi elämään niin sitkeästi, että cartoon tarkoittaa englannissa yhä pilapiirrosta.
+AIEMPI KYSYMYS: Mitä suojelu tarkoittaa rakennuksille Britanniassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Britanniassa rakennus voi saada suojellun eli "listed" -aseman, mikä tarkoittaa, että sen muuttaminen vaatii viranomaisen luvan, jotta rakennuksen historiallinen tai rakenteellinen arvo säilyy. Suojelun asteita on eri alueilla, ja järjestelmä eroaa [[Englannissa]], [[Skotlannissa]] ja [[Walesissa]]. Suojelu ei tarkoita, ettei rakennusta saisi käyttää, mutta esimerkiksi julkisivun tai sisärakenteiden muutokset vaativat erillisen hyväksynnän. Sama ajatus on ulotettu myös joihinkin muihin kohteisiin kuin rakennuksiin, vaikka yksityiskohdat eivät ole minulle varmoja.
+KYSYMYS: Kerro lisää: Englannissa
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kohdekartta / Kohdekartta: Salmen rantabulevardi] 1800-luku – nykyaika Rantakatu kulkee salmen laitaa, ja siitä avautuu näkymä vedelle ja Tulimaahan. Satama on avoin myrskyille, mutta ennen Panaman kanavan valmistumista se oli yksi Chilen tärkeimmistä: täällä Atlantin ja Tyynenmeren väliä kulkevat höyrylaivat ottivat hiiltä. Kanava vei liikenteen, ja nykyään satamaa käyttävät enimmäkseen risteilyt ja tutkimusretkikunnat. Osa Etelämantereen risteilyistä lähtee täältä, ja satama on tukikohta myös alueen kanaviin ja vuonoihin suuntautuville matkoille. Rannassa on kaksi laivaa, jotka eivät enää purjehdi. County of Peebles ja Cavenga on upotettu paikoilleen aallonmurtajiksi suojaamaan satama-allasta. County of Peebles on merenkulun historiassa …
+- [Edinburgh — kohdekartta / Kohdekartta: Holyroodin palatsi] 1501–1678 Holyroodin palatsi on Britannian hallitsijan virallinen asuinpaikka Skotlannissa. Sen vanhin osa rakennettiin 1520–1530-luvuilla, mutta suurin osa nykyisestä linnamaisesta palatsista rakennettiin uudelleen vuosina 1671–1678. Palatsin vieressä on Holyroodin luostarin rauniot — luostari perustettiin jo vuonna 1128. Palatsi tunnetaan erityisesti Marian, Skotlannin kuningattaren, kotina — hän asui siellä vuosina 1561–1567. Vuonna 1566 kuningattaren sihteeri David Rizzio murhattiin raa'asti hänen omissa huoneissaan. Palatsin 45-metrisessä juhlasalissa riippuu 96 muotokuvaa Skotlannin muinaisista kuninkaista. Koko palatsissa on 289 huonetta, ja sitä ympäröi kymmenen eekkerin puutarha.
+AIEMPI KYSYMYS: Mitä suojelu tarkoittaa rakennuksille Britanniassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Britanniassa rakennus voi saada suojellun eli "listed" -aseman, mikä tarkoittaa, että sen muuttaminen vaatii viranomaisen luvan, jotta rakennuksen historiallinen tai rakenteellinen arvo säilyy. Suojelun asteita on eri alueilla, ja järjestelmä eroaa [[Englannissa]], [[Skotlannissa]] ja [[Walesissa]]. Suojelu ei tarkoita, ettei rakennusta saisi käyttää, mutta esimerkiksi julkisivun tai sisärakenteiden muutokset vaativat erillisen hyväksynnän. Sama ajatus on ulotettu myös joihinkin muihin kohteisiin kuin rakennuksiin, vaikka yksityiskohdat eivät ole minulle varmoja.
+KYSYMYS: Kerro lisää: Skotlannissa
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Suojatie, jota jonotetaan
+Tietoruudun teksti: Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kuusi kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa äänitetään musiikkia edelleen.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+- [Australia — maalehti / Talous: Kulta, joka kolminkertaisti väkiluvun] 1851–1861 — Helmikuussa 1851 Edward Hargraves kertoi julkisesti löytäneensä kultaa Bathurstin lähellä, ja saman vuoden aikana Victoriasta löytyi vielä rikkaampia kenttiä. Australian väkiluku kasvoi 430 000:sta 1 170 000:een kymmenessä vuodessa, Victoriasta tuli väkirikkain siirtokunta ja Melbournesta suurin kaupunki. Tulijoita saapui Britanniasta, Euroopasta, Yhdysvalloista ja Kiinasta: Victorian kentillä oli vuoteen 1855 mennessä 20 000 kiinalaista kaivosmiestä ja New South Walesissa 13 000. Siirtokuntien hallitukset vastasivat säätämällä kiinalaisille erillisiä veroja ja rajoituksia.
+AIEMPI KYSYMYS: Mitä suojelu tarkoittaa rakennuksille Britanniassa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Britanniassa rakennus voi saada suojellun eli "listed" -aseman, mikä tarkoittaa, että sen muuttaminen vaatii viranomaisen luvan, jotta rakennuksen historiallinen tai rakenteellinen arvo säilyy. Suojelun asteita on eri alueilla, ja järjestelmä eroaa [[Englannissa]], [[Skotlannissa]] ja [[Walesissa]]. Suojelu ei tarkoita, ettei rakennusta saisi käyttää, mutta esimerkiksi julkisivun tai sisärakenteiden muutokset vaativat erillisen hyväksynnän. Sama ajatus on ulotettu myös joihinkin muihin kohteisiin kuin rakennuksiin, vaikka yksityiskohdat eivät ole minulle varmoja.
+KYSYMYS: Kerro lisää: Walesissa
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+AIEMPI KYSYMYS: Miksi juuri tässä tunnelissa maalaaminen sallittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä. Syy on yhteisen sopimuksen ja tapahtuman ansiota: [[Banksy]] järjesti tunnelissa toukokuussa 2008 kolmipäiväisen [[Cans Festival]] -tapahtuman, jossa taiteilijat saivat maalata seinät luvallisesti. Tunneli sijaitsee [[Waterloon]] aseman alla, ja sitä on sen jälkeen pidetty paikkana, jossa katutaide on sallittua. Tarkkaa lupajärjestelyä en ole varma, mutta käytäntö on pysynyt, ja seinät uusiutuvat jatkuvasti. Luvallinen seinä on siis ollut tapahtuman perintö.
+KYSYMYS: Kerro lisää: Banksy
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+AIEMPI KYSYMYS: Miksi juuri tässä tunnelissa maalaaminen sallittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä. Syy on yhteisen sopimuksen ja tapahtuman ansiota: [[Banksy]] järjesti tunnelissa toukokuussa 2008 kolmipäiväisen [[Cans Festival]] -tapahtuman, jossa taiteilijat saivat maalata seinät luvallisesti. Tunneli sijaitsee [[Waterloon]] aseman alla, ja sitä on sen jälkeen pidetty paikkana, jossa katutaide on sallittua. Tarkkaa lupajärjestelyä en ole varma, mutta käytäntö on pysynyt, ja seinät uusiutuvat jatkuvasti. Luvallinen seinä on siis ollut tapahtuman perintö.
+KYSYMYS: Kerro lisää: Cans Festival
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+AIEMPI KYSYMYS: Miksi juuri tässä tunnelissa maalaaminen sallittiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on hyvä. Syy on yhteisen sopimuksen ja tapahtuman ansiota: [[Banksy]] järjesti tunnelissa toukokuussa 2008 kolmipäiväisen [[Cans Festival]] -tapahtuman, jossa taiteilijat saivat maalata seinät luvallisesti. Tunneli sijaitsee [[Waterloon]] aseman alla, ja sitä on sen jälkeen pidetty paikkana, jossa katutaide on sallittua. Tarkkaa lupajärjestelyä en ole varma, mutta käytäntö on pysynyt, ja seinät uusiutuvat jatkuvasti. Luvallinen seinä on siis ollut tapahtuman perintö.
+KYSYMYS: Kerro lisää: Waterloon
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+AIEMPI KYSYMYS: Miltä tuntuu maalata teos, joka voi kadota samana iltana?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tähän ei ole yhtä vastausta, enkä voi puhua taiteilijoiden puolesta. Tunneli kulkee [[Waterloon]] aseman alla, ja sen maine katutaidepaikkana sai vauhtia vuonna 2008 [[Banksyn]] järjestämästä tapahtumasta. Katutaiteessa ohimenevyys on usein osa ideaa, ja monet tekijät pitävät tärkeänä itse tekemistä, näkyvyyttä hetken ajan ja sitä, että seinä on kaikkien käytössä. Toisille teoksen katoaminen on harmillista, ja siksi osa dokumentoi työnsä valokuvaamalla. Tunnelin seinät maalataan uusiksi jatkuvasti, joten kokemus vaihtelee tekijän mukaan. Minä kantaisin kirjeen vain kerran enkä kaipaisi sitä.
+
+Minun mielestäni tässä on jotain kiehtovaa: taiteilija tekee työn tietäen, että kaupunki ottaa sen aamulla pois. Kyyhkynä minä tunnen saman, kun jyvät häviävät ennen kuin ehdin syödä ne.
+KYSYMYS: Kerro lisää: Banksyn
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+AIEMPI KYSYMYS: Mikä Cans Festival oli?
+AIEMPI VASTAUS (Livia):
+Kato, tost olen kuullut. [[Cans Festival]] oli katutaidetapahtuma, jonka [[Banksy]] järjesti toukokuussa 2008 [[Leake Streetin]] tunnelissa [[Waterloon]] aseman alla. Tapahtuma kesti kolme päivää, ja siinä taiteilijat saivat maalata tunnelin seinät luvallisesti. Osallistujamääristä ja nimistä en ole varma, enkä halua arvata niitä. Tapahtuma teki tunnelista tunnetun katutaiteen paikan, ja sen perintö elää yhä, vaikka yksittäiset työt ovat vaihtuneet moneen kertaan. Siinä oli kyyhkyllekin hyvä hetki kuljeksia.
+KYSYMYS: Kerro lisää: Leake Streetin
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Kuka Banksy on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, mielenkiintoinen kysymys. [[Banksy]] on brittiläinen katutaiteilija, joka tunnetaan kantaaottavista ja usein humoristisista kaavamaalauksistaan. Hänen henkilöllisyytensä on pysynyt virallisesti julkistamatta, eikä sitä voi varmasti sanoa, joten en arvaile. Hän on tehnyt töitä sekä kaduilla että gallerioissa, ja hänen teoksensa ovat saaneet suurta huomiota ympäri maailmaa. [[Bristol]] liitetään usein hänen taustaansa, mutta tämäkin on pikemmin yleinen käsitys kuin varmennettu tieto. Salaperäisyys on tehnyt hänestä legendan, ja kyyhky ymmärtää nimettömyyden.
+KYSYMYS: Kerro lisää: Bristol
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miten katutaide eroaa graffitista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rajaa on vaikea vetää tarkasti, ja ihmiset määrittelevät sen eri tavoin. Graffiti viittaa usein nimikirjoitukseen tai [[tägiin]], joka liittyy tekijän tyyliin ja kirjainten muotoiluun, kun taas katutaide kattaa laajemmin kuvia, [[kollaaseja]], julisteita ja installaatioita julkisessa tilassa. Molemmat voivat olla luvallisia tai luvattomia, ja [[Britanniassa]] luvaton maalaus on rangaistavaa. Raja on siis kulttuurinen eikä tiukka. Siinä on ollut mietittävää, ja sitä ei ratkaista yhdellä seinällä.
+KYSYMYS: Kerro lisää: tägiin
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miten katutaide eroaa graffitista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rajaa on vaikea vetää tarkasti, ja ihmiset määrittelevät sen eri tavoin. Graffiti viittaa usein nimikirjoitukseen tai [[tägiin]], joka liittyy tekijän tyyliin ja kirjainten muotoiluun, kun taas katutaide kattaa laajemmin kuvia, [[kollaaseja]], julisteita ja installaatioita julkisessa tilassa. Molemmat voivat olla luvallisia tai luvattomia, ja [[Britanniassa]] luvaton maalaus on rangaistavaa. Raja on siis kulttuurinen eikä tiukka. Siinä on ollut mietittävää, ja sitä ei ratkaista yhdellä seinällä.
+KYSYMYS: Kerro lisää: kollaaseja
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tunneli, jossa saa maalata
+Tietoruudun teksti: Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Enemmän kasveja kuin koko Britanniassa] Pöytävuorella ja Kapin niemimaan vuorijonossa kasvaa arviolta 2 285 kasvilajia, ja niistä 1 500 mahtuu 57 neliökilometrin alalle Pöytävuorella ja sen takaisella tasangolla — vähintään yhtä monta lajia kuin koko Yhdistyneessä kuningaskunnassa. Noin neljä viidestä on fynbosia, afrikaansiksi hienoa pensaikkoa. Fynbos on sopeutunut tuleen: säännölliset kulot ovat hallinneet sitä ainakin kaksitoistatuhatta vuotta, ja kymmenen tai viidentoista vuoden väli suosii suuria proteoja. Vasco da Gama nimesi rannikon 1495 savujen maaksi näkemiensä tulien takia.
+- [Iso-Britannia — maalehti / Musiikki: Marssi, jota soitetaan päättäjäisissä] Edward Elgar opetteli musiikin itse: hänen isänsä piti soitinkauppaa, ja poika luki nuotteja varaston lattialla. Vuonna 1901 valmistunut marssi Pomp and Circumstance nro 1 sai yleisön niin villiksi, että se piti soittaa kolmesti peräkkäin. Sen keskiosan laulava melodia tunnetaan Britanniassa nimellä Land of Hope and Glory, ja Yhdysvalloissa sama sävelmä soi käytännössä joka koulun ja yliopiston päättäjäisissä — tapa alkoi Yalessa 1905, kun Elgar itse oli paikalla vastaanottamassa kunniatohtorin arvoa.
+- [Lontoo — kohdekartta / Kohdekartta: Leake Streetin tunneli] Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla iltaan mennessä kadonnut toisen alle.
+AIEMPI KYSYMYS: Miten katutaide eroaa graffitista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rajaa on vaikea vetää tarkasti, ja ihmiset määrittelevät sen eri tavoin. Graffiti viittaa usein nimikirjoitukseen tai [[tägiin]], joka liittyy tekijän tyyliin ja kirjainten muotoiluun, kun taas katutaide kattaa laajemmin kuvia, [[kollaaseja]], julisteita ja installaatioita julkisessa tilassa. Molemmat voivat olla luvallisia tai luvattomia, ja [[Britanniassa]] luvaton maalaus on rangaistavaa. Raja on siis kulttuurinen eikä tiukka. Siinä on ollut mietittävää, ja sitä ei ratkaista yhdellä seinällä.
+KYSYMYS: Kerro lisää: Britanniassa
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Teos oli nimeltään [[One & Other]], ja siinä jokainen osallistuja sai tehdä jalustalla mitä halusi: jotkut pitivät puheita, toiset kantoivat banderolleja tai esiintyivät, ja jotkut vain nauttivat näkymästä. Tarkkoja esimerkkejä en ole varma muistamaan, joten en keksi niitä. Keskeistä oli, että tavallinen ihminen sai ottaa [[Trafalgar Squaren]] neljännen jalustan haltuunsa tunniksi. Sadan päivän aikana jalusta ei ollut tyhjänä lainkaan, ja se kelpaa hyväksi tarinaksi.
+KYSYMYS: Kerro lisää: One & Other
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Trafalgar Square] 1844 Ennen aukiota tässä olivat kuninkaan tallit. Kun ne siirrettiin pois, tontti vapautui ja aukio avattiin yleisölle 1844. Keskellä seisova pylväs muistaa Horatio Nelsonia, joka voitti meritaistelun 1805 ja kuoli siinä. Pronssileijonat tulivat vasta 1867. Kuvanveistäjä pyysi mallikseen kuolleen leijonan eläintarhasta, mutta piirsi niin hitaasti, että raato ehti mädäntyä — siksi tassut muistuttavat enemmän kissaa kuin leijonaa. Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta kiellettiin 2003, ja tilalle tuotiin haukka partioimaan. "Englanti odottaa jokaisen tekevän velvollisuutensa." — Horatio Nelsonin lippuviesti laivastolleen Tra…
+AIEMPI KYSYMYS: Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Teos oli nimeltään [[One & Other]], ja siinä jokainen osallistuja sai tehdä jalustalla mitä halusi: jotkut pitivät puheita, toiset kantoivat banderolleja tai esiintyivät, ja jotkut vain nauttivat näkymästä. Tarkkoja esimerkkejä en ole varma muistamaan, joten en keksi niitä. Keskeistä oli, että tavallinen ihminen sai ottaa [[Trafalgar Squaren]] neljännen jalustan haltuunsa tunniksi. Sadan päivän aikana jalusta ei ollut tyhjänä lainkaan, ja se kelpaa hyväksi tarinaksi.
+KYSYMYS: Kerro lisää: Trafalgar Squaren
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Trafalgar Square] 1844 Ennen aukiota tässä olivat kuninkaan tallit. Kun ne siirrettiin pois, tontti vapautui ja aukio avattiin yleisölle 1844. Keskellä seisova pylväs muistaa Horatio Nelsonia, joka voitti meritaistelun 1805 ja kuoli siinä. Pronssileijonat tulivat vasta 1867. Kuvanveistäjä pyysi mallikseen kuolleen leijonan eläintarhasta, mutta piirsi niin hitaasti, että raato ehti mädäntyä — siksi tassut muistuttavat enemmän kissaa kuin leijonaa. Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta kiellettiin 2003, ja tilalle tuotiin haukka partioimaan. "Englanti odottaa jokaisen tekevän velvollisuutensa." — Horatio Nelsonin lippuviesti laivastolleen Tra…
+AIEMPI KYSYMYS: Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken, ja tarkoitettu ratsastajapatsas ei koskaan valmistunut. Vuosikymmenten kuluessa aiheesta väiteltiin pitkään, ja yli 150 vuoden pohdinnan jälkeen päätettiin, ettei [[Trafalgar Squarelle]] tule pysyvää patsasta lainkaan. Sen sijaan jalustalle nostetaan vuorotellen uusia [[nykytaideteoksia]], ja jokainen teos on esillä rajatun ajan. Aukiota hallitsee [[Nelsonin patsas]]. Päätös on siis sekä rahasta että tahdosta syntynyt, ja kyyhkyt saavat levätä siinä.
+KYSYMYS: Kerro lisää: Trafalgar Squarelle
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Nykytaide] Lontoossa nykytaide ei pysy museon seinällä: sitä maalataan junatunnelin kattoon, nostetaan tyhjälle patsasjalustalle ja kiedotaan liukumäeksi olympiapuiston veistoksen ympärille. Kaikki neljä ovat nyt omina pisteinään kaupungin kartalla.
+- [Lontoo — kohdekartta / Kohdekartta: Neljäs jalusta] Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+AIEMPI KYSYMYS: Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken, ja tarkoitettu ratsastajapatsas ei koskaan valmistunut. Vuosikymmenten kuluessa aiheesta väiteltiin pitkään, ja yli 150 vuoden pohdinnan jälkeen päätettiin, ettei [[Trafalgar Squarelle]] tule pysyvää patsasta lainkaan. Sen sijaan jalustalle nostetaan vuorotellen uusia [[nykytaideteoksia]], ja jokainen teos on esillä rajatun ajan. Aukiota hallitsee [[Nelsonin patsas]]. Päätös on siis sekä rahasta että tahdosta syntynyt, ja kyyhkyt saavat levätä siinä.
+KYSYMYS: Kerro lisää: nykytaideteoksia
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Trafalgar Square] 1844 Ennen aukiota tässä olivat kuninkaan tallit. Kun ne siirrettiin pois, tontti vapautui ja aukio avattiin yleisölle 1844. Keskellä seisova pylväs muistaa Horatio Nelsonia, joka voitti meritaistelun 1805 ja kuoli siinä. Pronssileijonat tulivat vasta 1867. Kuvanveistäjä pyysi mallikseen kuolleen leijonan eläintarhasta, mutta piirsi niin hitaasti, että raato ehti mädäntyä — siksi tassut muistuttavat enemmän kissaa kuin leijonaa. Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta kiellettiin 2003, ja tilalle tuotiin haukka partioimaan. "Englanti odottaa jokaisen tekevän velvollisuutensa." — Horatio Nelsonin lippuviesti laivastolleen Tra…
+AIEMPI KYSYMYS: Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken, ja tarkoitettu ratsastajapatsas ei koskaan valmistunut. Vuosikymmenten kuluessa aiheesta väiteltiin pitkään, ja yli 150 vuoden pohdinnan jälkeen päätettiin, ettei [[Trafalgar Squarelle]] tule pysyvää patsasta lainkaan. Sen sijaan jalustalle nostetaan vuorotellen uusia [[nykytaideteoksia]], ja jokainen teos on esillä rajatun ajan. Aukiota hallitsee [[Nelsonin patsas]]. Päätös on siis sekä rahasta että tahdosta syntynyt, ja kyyhkyt saavat levätä siinä.
+KYSYMYS: Kerro lisää: Nelsonin patsas
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Lontoo 1666 — soitin veneessä, kaupunki tulessa] 2.–5.9.1666 — Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina …
+AIEMPI KYSYMYS: Kuka valitsee jalustan seuraavan teoksen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. En ole varma nykyisestä järjestelystä, koska se on voinut muuttua ajan myötä. Yleisesti ymmärrän, että [[Lontoon pormestarin]] vastuulla oleva taidejärjestelmä kutsuu ehdotuksia ja valitsee teoksia paneelin avulla, ja yleisö saa nähdä ehdokkaat ennen päätöstä. Tarkat nimet ja prosessin yksityiskohdat kannattaa tarkistaa virallisilta sivuilta. Neljäs jalusta on siis julkinen taidepaikka [[Trafalgar Squarella]], jossa uudet teokset vaihtuvat. Ja minä toivon, että seuraava olisi kyyhky.
+KYSYMYS: Kerro lisää: Lontoon pormestarin
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Trafalgar Square] 1844 Ennen aukiota tässä olivat kuninkaan tallit. Kun ne siirrettiin pois, tontti vapautui ja aukio avattiin yleisölle 1844. Keskellä seisova pylväs muistaa Horatio Nelsonia, joka voitti meritaistelun 1805 ja kuoli siinä. Pronssileijonat tulivat vasta 1867. Kuvanveistäjä pyysi mallikseen kuolleen leijonan eläintarhasta, mutta piirsi niin hitaasti, että raato ehti mädäntyä — siksi tassut muistuttavat enemmän kissaa kuin leijonaa. Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta kiellettiin 2003, ja tilalle tuotiin haukka partioimaan. "Englanti odottaa jokaisen tekevän velvollisuutensa." — Horatio Nelsonin lippuviesti laivastolleen Tra…
+AIEMPI KYSYMYS: Kuka valitsee jalustan seuraavan teoksen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. En ole varma nykyisestä järjestelystä, koska se on voinut muuttua ajan myötä. Yleisesti ymmärrän, että [[Lontoon pormestarin]] vastuulla oleva taidejärjestelmä kutsuu ehdotuksia ja valitsee teoksia paneelin avulla, ja yleisö saa nähdä ehdokkaat ennen päätöstä. Tarkat nimet ja prosessin yksityiskohdat kannattaa tarkistaa virallisilta sivuilta. Neljäs jalusta on siis julkinen taidepaikka [[Trafalgar Squarella]], jossa uudet teokset vaihtuvat. Ja minä toivon, että seuraava olisi kyyhky.
+KYSYMYS: Kerro lisää: Trafalgar Squarella
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Trafalgar Square] 1844 Ennen aukiota tässä olivat kuninkaan tallit. Kun ne siirrettiin pois, tontti vapautui ja aukio avattiin yleisölle 1844. Keskellä seisova pylväs muistaa Horatio Nelsonia, joka voitti meritaistelun 1805 ja kuoli siinä. Pronssileijonat tulivat vasta 1867. Kuvanveistäjä pyysi mallikseen kuolleen leijonan eläintarhasta, mutta piirsi niin hitaasti, että raato ehti mädäntyä — siksi tassut muistuttavat enemmän kissaa kuin leijonaa. Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta kiellettiin 2003, ja tilalle tuotiin haukka partioimaan. "Englanti odottaa jokaisen tekevän velvollisuutensa." — Horatio Nelsonin lippuviesti laivastolleen Tra…
+AIEMPI KYSYMYS: Mikä oli Trafalgarin taistelu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Trafalgarin taistelu]] oli meritaistelu, joka käytiin vuonna 1805 Napoleonin sotien aikana Espanjan rannikon edustalla. Britannian laivasto [[Horatio Nelsonin]] johdolla voitti Ranskan ja Espanjan yhdistetyn laivaston, mutta Nelson kuoli taistelussa. Voitto esti Napoleonin suunnitelmat hyökätä Britanniaan ja vahvisti britit merten johtavana valtana. Tapahtuma on nimennyt aukion [[Trafalgar Squaren]], jonka keskellä seisoo Nelsonin muistopylväs. Aika iso nimi pienelle niemelle.
+KYSYMYS: Kerro lisää: Trafalgarin taistelu
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Trafalgar Square] 1844 Ennen aukiota tässä olivat kuninkaan tallit. Kun ne siirrettiin pois, tontti vapautui ja aukio avattiin yleisölle 1844. Keskellä seisova pylväs muistaa Horatio Nelsonia, joka voitti meritaistelun 1805 ja kuoli siinä. Pronssileijonat tulivat vasta 1867. Kuvanveistäjä pyysi mallikseen kuolleen leijonan eläintarhasta, mutta piirsi niin hitaasti, että raato ehti mädäntyä — siksi tassut muistuttavat enemmän kissaa kuin leijonaa. Aukio oli pitkään kuuluisa kyyhkyistään: parvi kasvoi pahimmillaan noin 35 000 linnun kokoiseksi. Ruokinta kiellettiin 2003, ja tilalle tuotiin haukka partioimaan. "Englanti odottaa jokaisen tekevän velvollisuutensa." — Horatio Nelsonin lippuviesti laivastolleen Tra…
+AIEMPI KYSYMYS: Mikä oli Trafalgarin taistelu?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Trafalgarin taistelu]] oli meritaistelu, joka käytiin vuonna 1805 Napoleonin sotien aikana Espanjan rannikon edustalla. Britannian laivasto [[Horatio Nelsonin]] johdolla voitti Ranskan ja Espanjan yhdistetyn laivaston, mutta Nelson kuoli taistelussa. Voitto esti Napoleonin suunnitelmat hyökätä Britanniaan ja vahvisti britit merten johtavana valtana. Tapahtuma on nimennyt aukion [[Trafalgar Squaren]], jonka keskellä seisoo Nelsonin muistopylväs. Aika iso nimi pienelle niemelle.
+KYSYMYS: Kerro lisää: Horatio Nelsonin
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Tyhjä jalusta ja 2 400 ihmistä
+Tietoruudun teksti: Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: Maracanãn stadion] 1948–1950 Peruskivi laskettiin 2. elokuuta 1948, ja stadionin piti olla valmis vuoden 1950 jalkapallon maailmanmestaruuskisoihin eli alle kahdessa vuodessa. Työ myöhästyi niin pahasti, että Fifa lähetti paikalle Italian liiton johtajan Ottorino Barassin auttamaan. Työmaalla oli 1 500 miestä ja viimeisinä kuukausina 2 000 lisää. Avausottelu pelattiin 16. kesäkuuta 1950, vaikka stadion näytti yhä työmaalta: käymälöitä ja lehdistölehteriä ei ollut. Se oli silti heti maailman suurin stadion. Kisojen ratkaiseva ottelu pelattiin 16. heinäkuuta 1950. Brasilialle olisi riittänyt tasapeli, mutta Uruguay voitti 2–1, ja hiljaisuus katsomossa jäi historiaan nimellä Maracanazo. Virallinen yleisömäärä ol…
+- [Pariisi — kaupunkilehti / Historian hetki: Bastilji 1789 — musketti ilman ruutia] 14.7.1789 — Musketti painaa olkapäällä, mutta siihen ei ole ruutia. Pariisissa on 14. heinäkuuta 1789, ja aamulla väkijoukko on tyhjentänyt Invalidien sotilaskodin asevaraston: lähes 30 000 kivääriä, ei panoksia. Ruuti — 250 tynnyriä — on siirretty muutama päivä sitten Bastiljiin, keskiaikaiseen linnoitukseen Saint-Antoinen esikaupungin reunalle. Siksi kansa on siellä. Kuningas on erottanut suositun rahaministeri Neckerin, ja kaupungin ympärille on koottu joukkoja; Camille Desmoulins on huutanut Palais-Royalissa pöydältä, että verilöyly on tulossa. Bastiljissa on kuvernööri de Launay, 82 invalidisotilasta, 32 sveitsiläistä krenatööriä ja seitsemän vankia, joista neljä on väärentäjiä. Neuvot…
+AIEMPI KYSYMYS: Mitä Kansallisgalleria Trafalgar Squarella esittelee?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Kansallisgalleria]] sijaitsee [[Trafalgar Squaren]] pohjoislaidalla, ja sen kokoelmiin kuuluu eurooppalaista maalaustaidetta keskiajalta 1900-luvun alkuun. Esillä on muun muassa italialaisia, hollantilaisia ja ranskalaisia mestariteoksia, ja sisäänpääsy pysyvään kokoelmaan on lähteiden mukaan ilmainen. En ole varma kaikista tunnetuista teoksista, joten en luettele niitä muistista. Se on yksi Lontoon suosituimmista museoista. Ja jos Canaletton Venetsian veduttoja on tarjolla, minä pysähdyn niitä katsomaan.
+KYSYMYS: Kerro lisää: Kansallisgalleria
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Turbiinihalli] Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+AIEMPI KYSYMYS: Miltä sadan miljoonan siemenen päällä käveleminen tuntui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, en minä ole siinä kävellyt. Teoksen nimi oli Sunflower Seeds, ja alkuun vierailijat saivat astella posliinisiementen päällä, jolloin ne rahisivat ja kolisivat jalkojen alla. [[Tate Modernin]] museo kuitenkin rajoitti kävelyn pian avajaisten jälkeen, koska liikkuminen nosti ilmaan posliinipölyä, jota pidettiin terveydelle haitallisena; tarkkaa ajankohtaa en ole varma. Siemenmeri jäi tämän jälkeen katsottavaksi [[turbiinihallin]] reunalta, ja sen laajuus hahmottuu parhaiten juuri silloin, kun lattialle ei astuta. Kyyhky kävelee muutenkin vain pakon edessä.
+KYSYMYS: Kerro lisää: Tate Modernin
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Turbiinihalli] Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+AIEMPI KYSYMYS: Miltä sadan miljoonan siemenen päällä käveleminen tuntui?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny, en minä ole siinä kävellyt. Teoksen nimi oli Sunflower Seeds, ja alkuun vierailijat saivat astella posliinisiementen päällä, jolloin ne rahisivat ja kolisivat jalkojen alla. [[Tate Modernin]] museo kuitenkin rajoitti kävelyn pian avajaisten jälkeen, koska liikkuminen nosti ilmaan posliinipölyä, jota pidettiin terveydelle haitallisena; tarkkaa ajankohtaa en ole varma. Siemenmeri jäi tämän jälkeen katsottavaksi [[turbiinihallin]] reunalta, ja sen laajuus hahmottuu parhaiten juuri silloin, kun lattialle ei astuta. Kyyhky kävelee muutenkin vain pakon edessä.
+KYSYMYS: Kerro lisää: turbiinihallin
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miksi voimalaa ei purettu vaan siitä tehtiin museo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rakennus oli [[Bankside]]n öljyvoimala, jonka suunnitteli [[Giles Gilbert Scott]] ja joka suljettiin vuonna 1981. Kun [[Tate]] etsi tilaa nykytaiteelle, valinta kohdistui tähän jättimäiseen, vankkaan rakennukseen, jonka valtavat tilat sopivat suurelle taiteelle ja jonka ulkomuoto haluttiin säilyttää. Muutostyön suunnittelivat [[Herzog & de Meuron]] -arkkitehdit, ja museo avattiin yleisölle vuonna 2000. Teollisuusrakennuksen uusiokäyttö on sittemmin yleistynyt Euroopassa, mutta tarkkoja syitä päätöksen taustalla en ole varma.
+
+Se piippu on ylhäältä katsottuna yksi Lontoon helpoimmista maamerkeistä, ja minä olen istunut sen reunalla useammin kuin kukaan on kysynyt.
+KYSYMYS: Kerro lisää: Bankside
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Edinburgh — kohdekartta / Kohdekartta: St Gilesin katedraali] 1385–1500 St Gilesin kirkko on seisonut Edinburghin Kuninkaankadun eli Royal Milen varrella jo satoja vuosia — nykyinen goottilainen kivikirkko rakennettiin pääosin 1300–1500-luvuilla. Tunnetuin piirre on kruunun muotoinen torni 1460-luvulta, jossa on poikkeuksellisesti kahdeksan tukipilaria. Vuonna 1559 kirkon saarnastuoliin nousi uskonpuhdistaja John Knox, joka teki kirkosta protestanttisen pääkirkon. Legendan mukaan vuonna 1637 markkinakauppias Jenny Geddes suuttui uudesta rukouskirjasta niin, että heitti jakkaransa saarnaajaa kohti — teko, joka sytytti mellakan koko kaupunkiin. Vuosina 1909–1911 kirkkoon rakennettiin upea Thistle-kappeli Skotlannin ritarikuntaa varten. Nykyään kirkossa …
+AIEMPI KYSYMYS: Miksi voimalaa ei purettu vaan siitä tehtiin museo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rakennus oli [[Bankside]]n öljyvoimala, jonka suunnitteli [[Giles Gilbert Scott]] ja joka suljettiin vuonna 1981. Kun [[Tate]] etsi tilaa nykytaiteelle, valinta kohdistui tähän jättimäiseen, vankkaan rakennukseen, jonka valtavat tilat sopivat suurelle taiteelle ja jonka ulkomuoto haluttiin säilyttää. Muutostyön suunnittelivat [[Herzog & de Meuron]] -arkkitehdit, ja museo avattiin yleisölle vuonna 2000. Teollisuusrakennuksen uusiokäyttö on sittemmin yleistynyt Euroopassa, mutta tarkkoja syitä päätöksen taustalla en ole varma.
+
+Se piippu on ylhäältä katsottuna yksi Lontoon helpoimmista maamerkeistä, ja minä olen istunut sen reunalla useammin kuin kukaan on kysynyt.
+KYSYMYS: Kerro lisää: Giles Gilbert Scott
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Kuvataide: Parturin poika maalasi valon] Joseph Mallord William Turner syntyi vuonna 1775 Covent Gardenissa, jossa hänen isällään oli parturinliike Maiden Lanen varrella. Isä ripusti kymmenvuotiaan poikansa piirustuksia näyteikkunaan ja myi niitä muutamalla shillingillä, ja neljäntoistavuotiaana poika pääsi kuninkaallisen taideakatemian oppilaaksi. Kuollessaan 1851 hän testamenttasi kansakunnalle noin 300 öljymaalausta, noin 30 000 akvarellia ja piirustusta sekä satoja luonnoskirjoja ja toivoi valmiiden töidensä pysyvän yhdessä. Toive ei aivan toteutunut, mutta hänen töitään katsellaan yhä ilman pääsymaksua Tate Britainissa ja National Galleryssä.
+- [Lontoo — kohdekartta / Kohdekartta: Turbiinihalli] Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+AIEMPI KYSYMYS: Miksi voimalaa ei purettu vaan siitä tehtiin museo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rakennus oli [[Bankside]]n öljyvoimala, jonka suunnitteli [[Giles Gilbert Scott]] ja joka suljettiin vuonna 1981. Kun [[Tate]] etsi tilaa nykytaiteelle, valinta kohdistui tähän jättimäiseen, vankkaan rakennukseen, jonka valtavat tilat sopivat suurelle taiteelle ja jonka ulkomuoto haluttiin säilyttää. Muutostyön suunnittelivat [[Herzog & de Meuron]] -arkkitehdit, ja museo avattiin yleisölle vuonna 2000. Teollisuusrakennuksen uusiokäyttö on sittemmin yleistynyt Euroopassa, mutta tarkkoja syitä päätöksen taustalla en ole varma.
+
+Se piippu on ylhäältä katsottuna yksi Lontoon helpoimmista maamerkeistä, ja minä olen istunut sen reunalla useammin kuin kukaan on kysynyt.
+KYSYMYS: Kerro lisää: Tate
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Hongkong — kohdekartta / Kohdekartta: Tai Kwun] rakennukset 1841–1925, avattu uudelleen 2018 Tai Kwun on entinen keskuspoliisiaseman kortteli, joka sisältää kolme suojeltua muistomerkkiä: vanhan keskuspoliisiaseman, entisen kihlakunnanoikeuden ja Victorian vankilan. Kortteli rajautuu Hollywood Roadiin, Arbuthnot Roadiin, Chancery Laneen ja Old Bailey Streetiin, ja siinä on kuusitoista historiallista rakennusta vuosilta 1841–1925. Vanhin rakennus on vuonna 1841 rakennettu tuomarin talo selliosastoineen. Vankila sai nimen Victoria Gaol vuonna 1899. Alue laajeni ja rakentui uudelleen useaan kertaan: jo 1862 vankien määrä oli noussut kuuteensataanviiteenkymmeneen, ja hallinto päätti ottaa käyttöön viereisen tontin. Näin syntyi se kortteleide…
+- [Miami — kohdekartta / Kohdekartta: Pérezin taidemuseo] 2013 Museo perustettiin 1984 nimellä Center for the Fine Arts ja se toimi Flagler Streetillä Philip Johnsonin suunnittelemassa kulttuurikeskuksessa. Vuosina 1996–2013 se oli Miami Art Museum. Nykyisen nimensä ja nykyisen talonsa museo sai 2013. Uuden talon suunnittelivat sveitsiläiset Herzog & de Meuron, ja sen muoto viittaa Stiltsvilleen — Biscayne Bayn paaluille rakennettuihin puutaloihin. Rakennuksen ympärillä riippuu kasveja pitkinä pylväinä, ja se seisoo Maurice A. Ferré Parkissa aivan lahden rannalla. Kokoelmassa oli 2016 lähes kaksituhatta teosta, pääasiassa 1900- ja 2000-luvun taidetta Amerikoista, Länsi-Euroopasta ja Afrikasta. Muutto näkyi heti kävijämäärissä: vanhassa osoitteessa…
+AIEMPI KYSYMYS: Miksi voimalaa ei purettu vaan siitä tehtiin museo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Rakennus oli [[Bankside]]n öljyvoimala, jonka suunnitteli [[Giles Gilbert Scott]] ja joka suljettiin vuonna 1981. Kun [[Tate]] etsi tilaa nykytaiteelle, valinta kohdistui tähän jättimäiseen, vankkaan rakennukseen, jonka valtavat tilat sopivat suurelle taiteelle ja jonka ulkomuoto haluttiin säilyttää. Muutostyön suunnittelivat [[Herzog & de Meuron]] -arkkitehdit, ja museo avattiin yleisölle vuonna 2000. Teollisuusrakennuksen uusiokäyttö on sittemmin yleistynyt Euroopassa, mutta tarkkoja syitä päätöksen taustalla en ole varma.
+
+Se piippu on ylhäältä katsottuna yksi Lontoon helpoimmista maamerkeistä, ja minä olen istunut sen reunalla useammin kuin kukaan on kysynyt.
+KYSYMYS: Kerro lisää: Herzog & de Meuron
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Kiina — maalehti / Kuvataide: Sininen kestää kuumimman polton] Sinivalkoisen posliinin väri on kobolttioksidia, joka maalataan lasituksen alle. Kobolttia käytetään siksi, että se on harvoja väriaineita, jotka kestävät posliinin vaatiman korkean polttolämpötilan: muut värit vaativat toisen, matalamman polton lasituksen päälle. Idea sinivalkoisesta astiasta syntyi 800-luvulla Basrassa, jossa savenvalajat jäljittelivät Kiinasta tuotua valkoista kiviastiaa. Kiinassa tekniikka vietiin täydellisyyteen Jingdezhenin uuneissa, ja sieltä astiat matkasivat takaisin länteen.
+AIEMPI KYSYMYS: Miten yhtä teosta varten löydetään 1 600 käsityöläistä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Jingdezhen on vuosisatojen ajan ollut tunnettu posliinikaupunki, joten siellä on valmiiksi runsaasti [[posliinin]] tekijöitä ja pieniä työpajoja, joihin tällainen tilaus on luontevaa jakaa. Siitä, miten työ tarkalleen organisoitiin ja miten tekijät valittiin, minulla ei ole varmaa tietoa, joten en esitä arvauksia yksityiskohdista. Teos levitettiin [[Tate Modernin]] [[turbiinihalliin]], ja sen mittakaava, sata miljoonaa yksitellen maalattua siementä, kertoo kuitenkin työn jakautuneen hyvin monelle tekijälle ja vieneen yli kaksi vuotta. Aika hyvä vastaus kyyhkyn muistiin nähden.
+KYSYMYS: Kerro lisää: posliinin
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Turbiinihalli] Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+AIEMPI KYSYMYS: Miten yhtä teosta varten löydetään 1 600 käsityöläistä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Jingdezhen on vuosisatojen ajan ollut tunnettu posliinikaupunki, joten siellä on valmiiksi runsaasti [[posliinin]] tekijöitä ja pieniä työpajoja, joihin tällainen tilaus on luontevaa jakaa. Siitä, miten työ tarkalleen organisoitiin ja miten tekijät valittiin, minulla ei ole varmaa tietoa, joten en esitä arvauksia yksityiskohdista. Teos levitettiin [[Tate Modernin]] [[turbiinihalliin]], ja sen mittakaava, sata miljoonaa yksitellen maalattua siementä, kertoo kuitenkin työn jakautuneen hyvin monelle tekijälle ja vieneen yli kaksi vuotta. Aika hyvä vastaus kyyhkyn muistiin nähden.
+KYSYMYS: Kerro lisää: turbiinihalliin
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saint Helena — maalehti / Luonto: Suuri metsä istutetaan takaisin] Saaren yli kulki ennen laaja metsä, Great Wood, joka ulottui Deadwoodin tasangolta Prosperous Bayn tasangolle. Puut kaadettiin polttopuuksi, viinanpolttoon ja nahan parkitsemiseen, ja vuohet söivät taimet: vuonna 1710 raportoitiin, ettei metsästä ollut jäljellä yhtään pystyssä olevaa puuta. Rotat ja vuohet olivat siihen mennessä lisääntyneet vitsauksen mitoin, ja vuonna 1731 säädettiin asetus vuohikannan vähentämiseksi. Vuodesta 2000 saaren koillisosaan on istutettu Millennium Forestia, jonka tarkoitus on kasvattaa Great Wood takaisin kotoperäisistä lajeista.
+AIEMPI KYSYMYS: Mikä silta yhdistää Tate Modernin Pyhän Paavalin katedraaliin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä näen katolta joka päivä. Thamesin ylittää tässä kohdassa jalankulkijoille tarkoitettu [[Millennium Bridge]], joka yhdistää Tate Modernin [[Pyhän Paavalin katedraaliin]]. Silta avattiin vuonna 2000, mutta se suljettiin heti muutaman päivän kuluttua, koska se keinui kävelijöiden alla odottamattoman paljon. Siltaan asennettiin vaimentimia, ja se avattiin uudelleen vuonna 2002. Siitä lähtien se on toiminut vakaasti, ja sen yli kävelee nykyisin päivittäin suuri joukko ihmisiä.
+KYSYMYS: Kerro lisää: Millennium Bridge
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kaupunkilehti / Historian hetki: Lontoo 1666 — soitin veneessä, kaupunki tulessa] 2.–5.9.1666 — Kädet pitävät kiinni soittimen kannesta, koska se on ainoa, mitä veneeseen mahtui. Thamesilla on sunnuntai 2. syyskuuta 1666, ja Samuel Pepys, laivaston virkamies, kirjoittaa iltapäivällä päiväkirjaansa ihmisistä, jotka jäivät koteihinsa, kunnes tuli kosketti niitä, ja pakenivat sitten veneisiin. Tulipalo alkoi yöllä Thomas Farrinerin leipomosta Pudding Lanella; talon piika, joka ei uskaltanut kiivetä ikkunasta naapurin katolle, oli ensimmäinen kuollut. Pormestari Thomas Bloodworth ei purattanut taloja tulen tieltä, ja itätuuli teki lopun: kesä oli ollut kuiva, ja puukaupungin kadut olivat kapeita. Pepys itse kaivaa parmesaanijuustonsa ja viininsä puutarhaan maahan. Tiistaina …
+AIEMPI KYSYMYS: Mikä silta yhdistää Tate Modernin Pyhän Paavalin katedraaliin?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä näen katolta joka päivä. Thamesin ylittää tässä kohdassa jalankulkijoille tarkoitettu [[Millennium Bridge]], joka yhdistää Tate Modernin [[Pyhän Paavalin katedraaliin]]. Silta avattiin vuonna 2000, mutta se suljettiin heti muutaman päivän kuluttua, koska se keinui kävelijöiden alla odottamattoman paljon. Siltaan asennettiin vaimentimia, ja se avattiin uudelleen vuonna 2002. Siitä lähtien se on toiminut vakaasti, ja sen yli kävelee nykyisin päivittäin suuri joukko ihmisiä.
+KYSYMYS: Kerro lisää: Pyhän Paavalin katedraaliin
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Voimalasta tuli taidesali
+Tietoruudun teksti: Tate Modern on entinen öljyvoimala Thamesin etelärannalla. Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa auringonkukansiementä. Jokainen siemen oli muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon pääsee sisään ilmaiseksi.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mikä on Tate Modernin uusi osa, joka avattiin vuonna 2016?
+AIEMPI VASTAUS (Livia):
+No niin, tämän tiedän. Vuonna 2016 avattu laajennus tunnettiin ensin nimellä Switch House, ja nykyisin sen nimi on [[Blavatnik Building]]. Sen suunnittelivat samat arkkitehdit kuin alkuperäisen voimalan muutostyön, eli [[Herzog & de Meuron]]. Rakennus on muodoltaan porrastettu pyramidimainen torni, ja siihen sisältyy näköalataso, jolta avautuu näkymä yli Lontoon. Se lisäsi museon näyttelytilaa merkittävästi, vaikka tarkkaa lukua en ole varma. Pitkälle meni kyyhkyltä muistaminen tälläkin kertaa.
+KYSYMYS: Kerro lisää: Blavatnik Building
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Eiffel-torni] 1889 Kun Pariisiin rakennettiin maailmannäyttelyä varten vuonna 1889, insinööri Gustave Eiffelin toimisto pystytti Champ de Mars -puistoon noin 300 metriä korkean rautatornin vain reilussa kahdessa vuodessa. Torniin käytettiin 18 038 metalliosaa ja peräti 2,5 miljoonaa niittiä, ja koko rakennustyön aikana sattui vain yksi kuolemantapaus. Moni pariisilainen taiteilija vihasi tornia aluksi: kolmisensataa taiteilijaa ja kirjailijaa allekirjoitti vetoomuksen, jossa torni tuomittiin rumaksi ja hyödyttömäksi. Kirjailija Guy de Maupassant väitti syövänsä lounasta tornin ravintolassa joka päivä juuri siksi, että se oli ainoa paikka Pariisissa, josta tornia ei näkynyt. Torni oli tarkoitus purkaa jo …
+- [Pariisi — kaupunkilehti / Historian hetki: Champ de Mars 1888 — niitti kerrallaan taivaalle] elokuu 1888 — Tuuli tuntuu 115 metrin korkeudessa aivan toiselta kuin maassa, ja niittaajan on osattava seistä siinä koko päivä. Elokuussa 1888 Eiffel-tornin toinen kerros on saatu koottua, ja rautaristikko jatkuu yläpuolella tyhjään. Työ on toistoa: pajassa kuumennettu niitti lennätetään pihdeillä, painetaan reikään, ja kaksi miestä takoo sen kannan kiinni ennen kuin se jäähtyy. Niittejä tulee tornin valmistuessa 2,5 miljoonaa. Yhtään reikää ei porata paikan päällä: jokainen 18 038 osasta on piirretty Levallois-Perret'n konepajalla kymmenesosamillin tarkkuudella, ja jos osa ei sovi, se lähetetään takaisin. Rakentajia on kolmisensataa, ja työn aikana kuolee yksi. Suunnittelijat ovat Gustave…
+AIEMPI KYSYMYS: Miksi olympialaisille haluttiin oma maamerkki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Isäntäkaupunki haluaa usein jättää kisoista näkyvän ja muistettavan symbolin, kuten Pariisin [[Eiffel-torni]] syntyi aikanaan maailmannäyttelyä varten. Lontoossa tähän tarkoitukseen rakennettiin [[ArcelorMittal Orbit]], jonka tarkoitus oli toimia olympiapuiston tunnuksena ja näköalapaikkana kisojen jälkeenkin. Lähteiden mukaan teräsyhtiö ArcelorMittal rahoitti suuren osan hankkeesta, mutta tarkkaa osuutta en ole varma. Teräsvyyhti on sittemmin pysynyt osana [[Stratfordin]] kaupunkikuvaa.
+KYSYMYS: Kerro lisää: Eiffel-torni
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miksi olympialaisille haluttiin oma maamerkki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Isäntäkaupunki haluaa usein jättää kisoista näkyvän ja muistettavan symbolin, kuten Pariisin [[Eiffel-torni]] syntyi aikanaan maailmannäyttelyä varten. Lontoossa tähän tarkoitukseen rakennettiin [[ArcelorMittal Orbit]], jonka tarkoitus oli toimia olympiapuiston tunnuksena ja näköalapaikkana kisojen jälkeenkin. Lähteiden mukaan teräsyhtiö ArcelorMittal rahoitti suuren osan hankkeesta, mutta tarkkaa osuutta en ole varma. Teräsvyyhti on sittemmin pysynyt osana [[Stratfordin]] kaupunkikuvaa.
+KYSYMYS: Kerro lisää: ArcelorMittal Orbit
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Liukumäkiveistos] Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+AIEMPI KYSYMYS: Miksi olympialaisille haluttiin oma maamerkki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Isäntäkaupunki haluaa usein jättää kisoista näkyvän ja muistettavan symbolin, kuten Pariisin [[Eiffel-torni]] syntyi aikanaan maailmannäyttelyä varten. Lontoossa tähän tarkoitukseen rakennettiin [[ArcelorMittal Orbit]], jonka tarkoitus oli toimia olympiapuiston tunnuksena ja näköalapaikkana kisojen jälkeenkin. Lähteiden mukaan teräsyhtiö ArcelorMittal rahoitti suuren osan hankkeesta, mutta tarkkaa osuutta en ole varma. Teräsvyyhti on sittemmin pysynyt osana [[Stratfordin]] kaupunkikuvaa.
+KYSYMYS: Kerro lisää: Stratfordin
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Liukumäkiveistos] Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+AIEMPI KYSYMYS: Millaista alas laskeutuminen kaksitoista kertaa kiertyvässä putkessa on?
+AIEMPI VASTAUS (Livia):
+Hmm, tätä en ole itse kokeillut, koska lennän mieluummin. Liukumäki on 178 metriä pitkä, siinä on kaksitoista kierrosta, ja laskeutuminen kestää noin 40 sekuntia, joten vauhti vaihtelee ja kaarteet seuraavat toisiaan tiheään. [[Carsten Höllerin]] suunnittelema [[liukumäki]] kiertyy teräsrakenteen ympärille ja sen sisällä liikutaan putkessa, joten ulkopuolinen maisema vilahtelee kaarteiden välissä. Tarkempaa tietoa vauhdista tai tunnelin valaistuksesta minulla ei ole varmasti, joten en lähde arvailemaan. Olisin silti valinnut portaat, 455 askelmaa, vaikka siipi ei niitä käytä.
+KYSYMYS: Kerro lisää: Carsten Höllerin
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Liukumäkiveistos] Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+AIEMPI KYSYMYS: Millaista alas laskeutuminen kaksitoista kertaa kiertyvässä putkessa on?
+AIEMPI VASTAUS (Livia):
+Hmm, tätä en ole itse kokeillut, koska lennän mieluummin. Liukumäki on 178 metriä pitkä, siinä on kaksitoista kierrosta, ja laskeutuminen kestää noin 40 sekuntia, joten vauhti vaihtelee ja kaarteet seuraavat toisiaan tiheään. [[Carsten Höllerin]] suunnittelema [[liukumäki]] kiertyy teräsrakenteen ympärille ja sen sisällä liikutaan putkessa, joten ulkopuolinen maisema vilahtelee kaarteiden välissä. Tarkempaa tietoa vauhdista tai tunnelin valaistuksesta minulla ei ole varmasti, joten en lähde arvailemaan. Olisin silti valinnut portaat, 455 askelmaa, vaikka siipi ei niitä käytä.
+KYSYMYS: Kerro lisää: liukumäki
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Mitä teräsvyyhdille tehdään kisojen jälkeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Teräsvyyhti jäi pysyvästi paikalleen [[Queen Elizabeth Olympic Park]] -puistoon, ja se avattiin yleisölle vuonna 2014. Tornista on tarkoitus pitää huolta osana puiston pysyvää käyttöä, ja ylhäältä aukeaa näkymä yli itäisen Lontoon. Vuonna 2016 sen ympärille lisättiin [[Carsten Höllerin]] liukumäki, jolloin veistos sai uuden tehtävän. Näin kisojen jälkeinen käyttö on jatkunut matkailukohteena, ja se on yksi puiston tunnetuimmista nähtävyyksistä.
+KYSYMYS: Kerro lisää: Queen Elizabeth Olympic Park
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Defensores del Chacon stadion] 1916–1917 Paraguayn kansallisstadion rakennettiin Sajonian kaupunginosaan. Työ alkoi helmikuussa 1916, ja marraskuussa 1917 avattiin Stadium de Sajonia. Ensimmäisessä ottelussa kohtasivat Olimpia ja Libertad, ja Libertad voitti 1–0. Vuonna 1919 maajoukkue pelasi kentällä ensimmäisen ottelunsa, ja Faustino Casado teki Paraguayn ensimmäisen maalin stadionilla. Kun Uruguay voitti 1924 olympiakullan, jalkapalloliitto nimesi stadionin hetkeksi Uruguayksi naapurin kunniaksi. Chacon sodassa stadion oli sijaintinsa vuoksi ammusvarasto ja joukkojen kokoontumispaikka. Sodan jälkeen se sai nykyisen nimensä Chacon puolustajien mukaan. Vuoden 1953 Copa Américan voittorahoilla rakennettiin betonikatsomo …
+AIEMPI KYSYMYS: Mitä olympiastadionille tapahtui kisojen jälkeen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kisojen jälkeen olympiastadion uudistettiin ja nimettiin [[London Stadium]]iksi. Vuodesta 2016 alkaen siellä on pelannut kotiottelunsa jalkapallojoukkue [[West Ham United]], ja stadion on toiminut myös yleisurheilun ja konserttien näyttämönä. Se on siis jatkanut käyttöä, eikä jäänyt tyhjäksi kisojen jälkeen. Hyvä muisti, jos sen itse sanon.
+KYSYMYS: Kerro lisää: London Stadium
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: Naldham House] 1864 ja 1889 Australasian Steam Navigation Company osti tontin joen rannasta maaliskuussa 1852, mutta ensimmäinen laituri valmistui vasta 1859 ja toinen Eagle Streetin lähelle 1861. Vuonna 1864 tontille nousi kaksikerroksinen konttori, jossa istui yhtiön brisbanelainen asiamies Henry O'Reilly. Vuonna 1877 konttori korotettiin asiamiehestä sivukonttoriksi, ja rakennusta jatkettiin Felix Streetin kulmaan. 1880-luvun puolivälissä yhtiö sulautettiin useiden muiden kanssa Australasian United Steam Navigation Companyksi, josta tuli Queenslandin ja Australian merenkulun mahti. Elokuussa 1888 arkkitehdit McCredie Bros & Chambers pyysivät tarjouksia laajennuksesta, ja työn sai J. R. Locke Sydneyn Re…
+- [Kumasi — kohdekartta / Kohdekartta: Baba Yaran stadion] 1957 United African Company rakensi stadionin 1957, ja jalkapallokentäksi se vihittiin 1959. Ensimmäiset katsomot tulivat 1971, ja koko paikka rakennettiin uusiksi 1977. Nykyisin katsojia mahtuu 40 528 — enemmän kuin mihinkään muuhun Ghanan stadioniin. Nimi on kumasilaisen jalkapalloilijan. Baba Yara (1936–1969) pelasi Asante Kotokossa vuosina 1955–1961, ja stadion nimettiin hänen mukaansa 2004. Kotoko on yhä talon isäntä, ja sen rinnalla pelaa King Faisal. Kolmas suuri remontti valmistui 2008: länsikatsomo purettiin ja tilalle tuli kaksikerroksinen katsomo lehdistö- ja vierastiloineen, muut katsomot uusittiin, ja katsomon ja kentän väliin asennettiin läpinäkyvät paneelit, jotta yleisö ei p…
+AIEMPI KYSYMYS: Mitä olympiastadionille tapahtui kisojen jälkeen?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kisojen jälkeen olympiastadion uudistettiin ja nimettiin [[London Stadium]]iksi. Vuodesta 2016 alkaen siellä on pelannut kotiottelunsa jalkapallojoukkue [[West Ham United]], ja stadion on toiminut myös yleisurheilun ja konserttien näyttämönä. Se on siis jatkanut käyttöä, eikä jäänyt tyhjäksi kisojen jälkeen. Hyvä muisti, jos sen itse sanon.
+KYSYMYS: Kerro lisää: West Ham United
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lontoo — kohdekartta / Kohdekartta: Liukumäkiveistos] Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+AIEMPI KYSYMYS: Miten olympiapuistoon pääsee Lontoon keskustasta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Puisto sijaitsee [[Stratfordin asemalle]] kävelymatkan päässä, ja asemalla pysähtyvät muun muassa Central- ja Jubilee-metrolinjat sekä [[Docklands Light Railway]] ja Elizabeth line. Matka keskustasta kestää tavallisesti noin vartin tai kaksikymmentä minuuttia riippuen lähtöpaikasta ja linjasta, joskaan tarkkaa aikaa en ole varma. Asema toimi kisojen aikana pääsisäänkäyntinä, ja se on edelleen alueen tärkein liikenteen solmukohta.
+
+Kaikissa noissa porrasjonoissa pätee sama sääntö kuin muualla Lontoon metrossa, eli seisojat oikealle ja kiirehtijät vasemmalle, ja sen minä olen nähnyt ylhäältä itse.
+KYSYMYS: Kerro lisää: Stratfordin asemalle
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Lontoo
+Maa, jossa pelaaja on: Iso-Britannia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Veistos, jonka sisällä on liukumäki
+Tietoruudun teksti: Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.
+Isoisän matkakirjamerkintä: Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.
+AIEMPI KYSYMYS: Miten olympiapuistoon pääsee Lontoon keskustasta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Puisto sijaitsee [[Stratfordin asemalle]] kävelymatkan päässä, ja asemalla pysähtyvät muun muassa Central- ja Jubilee-metrolinjat sekä [[Docklands Light Railway]] ja Elizabeth line. Matka keskustasta kestää tavallisesti noin vartin tai kaksikymmentä minuuttia riippuen lähtöpaikasta ja linjasta, joskaan tarkkaa aikaa en ole varma. Asema toimi kisojen aikana pääsisäänkäyntinä, ja se on edelleen alueen tärkein liikenteen solmukohta.
+
+Kaikissa noissa porrasjonoissa pätee sama sääntö kuin muualla Lontoon metrossa, eli seisojat oikealle ja kiirehtijät vasemmalle, ja sen minä olen nähnyt ylhäältä itse.
+KYSYMYS: Kerro lisää: Docklands Light Railway
