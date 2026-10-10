@@ -116,6 +116,7 @@ namespace Matkakirja.Peli.Testit
             // Siirtosepän koepaketti v30 (skeema 1.24): siirtymä-, tila-, paikka- ja pohjaraidat sekä
             // aarreaiheet ovat samat kuin C#:n oletus, ja musiikkiketju-rivit = Ketju(∅).
             var oletus = AaniTaulut.Oletus();
+            oletus.KarttaVainKaupunki = false; // koepaketin ketjut ovat vanhaa kartan ketjua (alue → pohja)
             var t = AaniTaulut.Oletus();
             var korit = t.LueAanitaulut(File.ReadAllText(Path.Combine(KultaisetApu.Paketti, "aanitaulut.json")));
             Oleta.Sama(270, korit, "maisemakori-rivejä (266 kaupunkia + 4 virtuaalipaikkaa)");
@@ -431,7 +432,9 @@ namespace Matkakirja.Peli.Testit
             // Uusi laukaisu (paikka vaihtuu): molemmat soivat taas alusta.
             tila.Paikka("jalkamatka", "metsa");
             Oleta.Tosi(tila.Toive(Kanava.Maisema).Url != null && tila.Toive(Kanava.Maisema).Alku == 0, "uusi paikka alusta");
-            Oleta.Tosi(tila.Toive(Kanava.Pohja).Url != null, "pohja uudessa paikassa");
+            Oleta.Sama(null, tila.Toive(Kanava.Pohja).Url, "kartalla kaupungin ulkopuolella ei musiikkia (KarttaVainKaupunki)");
+            tila.Paikka("pariisi", "kaupunki");
+            Oleta.Tosi(tila.Toive(Kanava.Pohja).Url != null, "pohja uudessa kaupungissa");
         }
 
         [Testi] static void KerranLapiEiKoskeLinssinTaustaa()
@@ -518,6 +521,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void SuunnitelmanAiheet()
         {
             var t = Taulut();
+            t.KarttaVainKaupunki = false; // vanha kartan ketju (alue → maanosa → pohja, tunnukset); uusi sääntö KarttaVainKaupunkiTestit
             t.Maat["ateena"] = "GRC";
             t.Maat["lontoo"] = "GBR";
             var tila = new AaniTila(t, new Satunnainen(1).Seuraava);

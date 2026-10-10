@@ -6,9 +6,10 @@ namespace Matkakirja.Peli.Testit
 {
     static class KaupunkijaksoTestit
     {
-        static AaniTila Uusi(bool kerranLapi = true)
+        static AaniTila Uusi(bool kerranLapi = true, bool vanhaKetju = false)
         {
             var t = AaniTaulut.Oletus();
+            t.KarttaVainKaupunki = !vanhaKetju;
             t.Maat["pariisi"] = "FRA"; t.Maat["lontoo"] = "GBR"; t.Maat["wien"] = "AUT";
             return new AaniTila(t, new Satunnainen(1).Seuraava) { KerranLapi = kerranLapi };
         }
@@ -44,11 +45,16 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!s.Toive(Kanava.Pohja).Silmukka, "hidas kerran");
             Oleta.Sama("pariisi:hidas", s.Jakso);
             s.PohjaLoppui();
-            Oleta.Tosi(Soi(s, "musa-pohja"), "4. tausta: " + Pohja(s));
-            Oleta.Tosi(s.Toive(Kanava.Pohja).Silmukka, "tausta silmukkana");
+            // Kartalla vain kaupungin oma kappale (omistaja 10.10.2026): tausta ilman omaa raitaa = hiljaisuus, ei pohjavirettä.
+            Oleta.Sama(null, Pohja(s), "4. tausta: hiljaa");
             Oleta.Sama("pariisi:tausta", s.Jakso);
             s.JaksonTaukoOhi(1);
-            Oleta.Tosi(Soi(s, "musa-pohja"), "myöhäinen tauon loppu ei palauta hidasta");
+            Oleta.Sama(null, Pohja(s), "myöhäinen tauon loppu ei palauta hidasta");
+            // Vanha ketju: tausta = pohjavire silmukkana.
+            var v = Uusi(vanhaKetju: true);
+            v.Paikka("pariisi", "kaupunki");
+            v.PohjaLoppui(); v.JaksonTaukoOhi(1); v.PohjaLoppui();
+            Oleta.Tosi(Soi(v, "musa-pohja") && v.Toive(Kanava.Pohja).Silmukka, "vanha: tausta = pohjavire silmukkana: " + Pohja(v));
         }
 
         [Testi] static void PuuttuvaNopeaHyppaaHitaaseenIlmanTaukoa()
@@ -194,8 +200,11 @@ namespace Matkakirja.Peli.Testit
         {
             var s = Uusi();
             s.Paikka("wien", "kaupunki");
-            Oleta.Tosi(Soi(s, "musa-kaupunki-keski-eurooppa"), "alueraita: " + Pohja(s));
+            Oleta.Sama(null, Pohja(s), "kaupunki ilman omaa kappaletta: ei musiikkia");
             Oleta.Sama(null, s.Jakso);
+            var vanha = Uusi(vanhaKetju: true);
+            vanha.Paikka("wien", "kaupunki");
+            Oleta.Tosi(Soi(vanha, "musa-kaupunki-keski-eurooppa"), "vanha: alueraita: " + Pohja(vanha));
             var w = Uusi(kerranLapi: false);
             w.Paikka("pariisi", "kaupunki");
             Oleta.Tosi(Soi(w, "musa-kaupunki-pariisi") && !Soi(w, "musa-kaupunki-pariisi-nopea"), "web-tila (KerranLapi false): kaupunkiraita: " + Pohja(w));
