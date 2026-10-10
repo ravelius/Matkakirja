@@ -1121,5 +1121,743 @@
    "lon": 27.07,
    "tarkkuus": "alue"
   }
+ },
+ {
+  "kohde": "kohde:pernik",
+  "kysymys": "Miten kukeri-naamio tehdään?",
+  "uusi": false,
+  "vastaus": "Kato, tää on kyllä aitoa käsityötä. Kukeri-naamio valmistetaan käsin, perinteisesti puusta tai nahasta, ja siihen kootaan eläinhahmo, joka on tarkoituksella pelottava. Naamioita koristellaan alueesta ja tekijästä riippuen esimerkiksi sarvilla, höyhenillä, helmillä ja värikkäillä nauhoilla, mutta tarkka valmistustapa vaihtelee, enkä ole varma sen yksityiskohdista. Asuun kuuluvat lisäksi raskaat turkikset ja vyötäröllä roikkuvat [[pronssikellot]], joiden kalkkeen ja pelottavan ulkonäön uskottiin karkottavan pahat henget. Valmiit asut kokoontuvat tammikuussa [[Pernikin]] [[Surva-festivaaliin]], joka liitettiin [[Unescon]] aineettoman kulttuuriperinnön luetteloon 2015. Ei kyyhkyllä oo peukaloita, joten katselen vaan.",
+  "linkit": [
+   "pronssikellot",
+   "Pernikin",
+   "Surva-festivaaliin",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä kellojen ääni kukeri-perinteessä merkitsee?",
+   "Missä muualla Euroopassa on vastaavia naamiaisperinteitä?"
+  ]
+ },
+ {
+  "kohde": "kohde:pernik",
+  "kysymys": "Pääseekö kulkueeseen mukaan itse?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Katsojana kaduille pääsee seuraamaan menoa, sillä naamioituneet hahmot kulkevat ja tanssivat kaupungin kaduilla kolmen päivän ajan. Itse kukerina mukaan lähteminen on eri asia: asuun pukeutuvat yleensä kukeri-ryhmät, jotka saapuvat festivaaliin eri puolilta Bulgariaa ja ulkomailta, enkä ole varma, miten yksittäinen vierailija voi liittyä joukkoon. Osallistumisehdot kannattaa tarkistaa [[Pernikin]] [[Surva-naamiaisfestivaalin]] järjestäjiltä ennen matkaa. Minä seuraisin menoa kyl mieluummin katolta.",
+  "linkit": [
+   "Pernikin",
+   "Surva-naamiaisfestivaalin"
+  ],
+  "jatkot": [
+   "Mihin aikaan tammikuussa Surva-festivaali yleensä järjestetään?",
+   "Mitä kukeri-asuun kuuluu, jos haluaa kokeilla pukeutumista?"
+  ]
+ },
+ {
+  "kohde": "kohde:pernik",
+  "kysymys": "Miksi kukerit pukeutuvat eläinhahmoiksi?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Perinteen juurten uskotaan olevan esikristillisissä riiteissä, joissa talven ja pahojen henkien karkottaminen oli keskeistä. Eläinhahmot, sarvet ja turkikset tekevät asusta pelottavan, ja pelottavan ulkonäön sekä kellojen äänen uskottiin karkottavan pahat henget ja takaavan kylälle sadon ja terveyden. Osa tutkijoista yhdistää tavan [[traakialaisten]] ja muiden muinaisten Balkanin kansojen rituaaleihin, mutta tarkkaa alkuperää ei tiedetä varmasti. Nykyisin perinne elää eri puolilla [[Bulgarian]] kyliä ja kaupunkeja. Minulle riittäis kyl jo se kalke, kiitos.",
+  "linkit": [
+   "traakialaisten",
+   "Bulgarian"
+  ],
+  "jatkot": [
+   "Milloin kukeri-perinne on saanut alkunsa?",
+   "Miten kukeri-asu eroaa Bulgarian eri alueilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:pernik",
+  "kysymys": "Missä päin Bulgariaa Pernik sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Pernik sijaitsee Länsi-Bulgariassa, [[Sofian]] lounaispuolella, melko lähellä pääkaupunkia. Kaupunki tunnetaan kaivos- ja metalliteollisuuden perinteestä, mutta nykyisin ennen kaikkea tammikuun [[Surva-naamiofestivaalista]], jossa kukerit täyttävät kadut. Pullareissu Sofiasta sinne ois kyl ihan kohtuullinen.",
+  "linkit": [
+   "Sofian",
+   "Surva-naamiofestivaalista"
+  ],
+  "jatkot": [
+   "Millainen on Bulgarian pääkaupunki Sofia?",
+   "Mitä Pernikin ympäristössä on nähtävää?"
+  ],
+  "paikka": {
+   "nimi": "Pernik",
+   "lat": 42.6,
+   "lon": 23.03,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:pernik",
+  "kysymys": "Mitä tarkoittaa aineeton kulttuuriperintö?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Aineeton kulttuuriperintö tarkoittaa eläviä perinteitä, jotka siirtyvät sukupolvelta toiselle: juhlia, rituaaleja, tansseja, käsityötaitoja, lauluja ja suullista kerrontaa. Se erotetaan rakennuksista ja esineistä, joita voi säilyttää museossa, koska perinne säilyy vain, kun ihmiset jatkavat sitä. [[Unescon]] aineetonta kulttuuriperintöä koskeva yleissopimus hyväksyttiin vuonna 2003, ja sen pohjalta ylläpidetään luetteloa, johon kukeri-perinne on liitetty 2015. Esimerkiksi [[Pernikin]] naamiaiset ovat tällainen elävä perinne. Pernikissä se ainakin kuuluu, siel kolisee.",
+  "linkit": [
+   "Unescon",
+   "Pernikin"
+  ],
+  "jatkot": [
+   "Mitä muita bulgarialaisia perinteitä on Unescon luettelossa?",
+   "Miten perinteitä pidetään elossa nykyajassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:nesebar",
+  "kysymys": "Mikä doorilainen siirtokunta oli?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Kysymys viittaa [[Mesambriaan]], jonka kreikkalaiset perustivat Nesebarin niemelle 500-luvun eaa. alussa. Se oli [[Mustanmeren]] rannikon ainoa doorilainen siirtokunta ja merkittävä kauppapaikka. Perustajat tulivat [[Megarasta]], jonka asukkaat kuuluivat doorilaisiin kreikkalaisiin, yhteen antiikin Kreikan suurista kansanryhmistä. Alueella oli asunut ennen heitä traakialaisia, ja vuodesta 71 eaa. kaupunki oli Rooman vallan alla mutta säilytti etuoikeutensa, muun muassa oikeuden lyödä omaa rahaa. Hyvän paikan kreikkalaiset osas valita, sen minä sanon.",
+  "linkit": [
+   "Mesambriaan",
+   "Mustanmeren",
+   "Megarasta"
+  ],
+  "jatkot": [
+   "Miksi kreikkalaiset perustivat siirtokuntia Mustanmeren rannoille?",
+   "Mitä eroa oli doorilaisilla ja joonialaisilla kreikkalaisilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:nesebar",
+  "kysymys": "Miksi kirkkoja on niin monta?",
+  "uusi": false,
+  "vastaus": "Ai tota, siin on syynsä. Nesebar on pienelle niemelle rakennettu vanha kaupunki, jossa on kolmen vuosituhannen kerrostumat, ja suuri osa kirkoista on peräisin keskiajalta, [[Bysantin]] ja Bulgarian vallan ajalta. Kaupunki oli merkittävä satama- ja kauppapaikka, ja kerrotaan, että varakkaat asukkaat ja hallitsijat rahoittivat kirkkoja, minkä vuoksi niitä kertyi tiheään samalle kapealle niemelle. Erityisen vilkas aika oli tsaari [[Ivan Aleksanterin]] kaudella 1331—1371, jolloin kaupunki kukoisti. Tunnettuja kirkkoja ovat esimerkiksi [[Kristus Pantokratorin kirkko]] ja [[Pyhän Stefanin kirkko]].\n\nNiemi on niin pieni, että kyyhky ehtii kiertää kaikki kirkot yhden iltapäivän aikana. Sisään minä en pääse, mutta katot kelpaavat kyllä.",
+  "linkit": [
+   "Bysantin",
+   "Ivan Aleksanterin",
+   "Kristus Pantokratorin kirkko",
+   "Pyhän Stefanin kirkko"
+  ],
+  "jatkot": [
+   "Mistä Nesebarin kirkkojen rakennustyyli tunnetaan?",
+   "Millaisia freskoja Nesebarin kirkoissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:nesebar",
+  "kysymys": "Keitä traakialaiset olivat?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Traakialaiset olivat muinainen kansanryhmä, joka asui nykyisen Bulgarian ympäristössä ja sen lähiseuduilla [[Balkanin]] niemimaalla. Heitä ei yleensä yhdistänyt yksi valtio, vaan he koostuivat useista heimoista ja kuningaskunnista. Traakialaiset tunnetaan muun muassa hevoskulttuuristaan, kultaesineistään ja kummun alle rakennetuista haudoistaan. Rannikolle perustivat siirtokuntia [[kreikkalaiset]], ja myöhemmin alue joutui [[Rooman]] valtaan. Hevoset on hyviä, mut siivet kulkee kuitenkin nopeammin.",
+  "linkit": [
+   "Balkanin",
+   "kreikkalaiset",
+   "Rooman"
+  ],
+  "jatkot": [
+   "Mitä kultaesineitä traakialaisilta on löydetty?",
+   "Mitä traakialaisille tapahtui Rooman vallan aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:nesebar",
+  "kysymys": "Millainen kaupunki Megara oli?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Megara oli antiikin Kreikan kaupunkivaltio, joka sijaitsi [[Ateenan]] ja [[Korintin]] kannaksen tuntumassa Ateenan ja Korintin välillä. Se oli merenkulkijoiden ja kauppiaiden kaupunki, ja perimätiedon mukaan megaralaiset perustivat siirtokuntia laajalle, muun muassa [[Bysantionin]] eli myöhemmän Istanbulin paikalle sekä Mustanmeren rannoille. Nesebarin Mesambrian perustajat olivat samaa taustaa. Megara on yhä olemassa nykyisessä Kreikassa pienenä kaupunkina. Ne osas kyl matkustaa melkein kyyhkyn tahtiin.",
+  "linkit": [
+   "Ateenan",
+   "Korintin",
+   "Bysantionin"
+  ],
+  "jatkot": [
+   "Miten kreikkalainen siirtokunta perustettiin?",
+   "Millainen oli antiikin Kreikan kaupunkivaltio?"
+  ]
+ },
+ {
+  "kohde": "kohde:nesebar",
+  "kysymys": "Miksi kaupungit lyöttivät muinoin omaa rahaa?",
+  "uusi": true,
+  "vastaus": "Mmm— rahasta. Oma raha oli muinaisessa maailmassa sekä käytännön maksuväline että itsenäisyyden merkki. Kolikon kuva ja teksti kertoivat, kuka sen oli laskenut liikkeelle, ja kaupunki saattoi esitellä niillä tunnuksiaan ja jumaliaan. Kun [[Mesambria]] joutui vuodesta 71 eaa. [[Rooman]] vallan alle, [[Nesebarin]] kaupunki sai silti pitää oikeuden lyödä omaa rahaa, mikä kertoo sen erityisasemasta. Pullaan riittäis kyl pieni kolikko.",
+  "linkit": [
+   "Mesambria",
+   "Rooman",
+   "Nesebarin"
+  ],
+  "jatkot": [
+   "Mitä Mesambrian kolikoissa oli kuvattuna?",
+   "Miten rahaa käytettiin ennen kolikoita?"
+  ]
+ },
+ {
+  "kohde": "kohde:belogradtsik",
+  "kysymys": "Mistä kallioiden punainen väri tulee?",
+  "uusi": false,
+  "vastaus": "Ai se. Punaisen värin antaa [[rautaoksidi]], jota voi kutsua ruosteeksi: kun kiviaineksessa oleva rauta on hapettunut, kivi saa ruosteenpunaisen sävyn. Osa [[hiekkakiveä]] on vaaleampaa, koska rautaa on siinä vähemmän tai se on eri muodossa. Kalliot ovat hiekkakiveä ja konglomeraattia, ja ne alkoivat muodostua permikaudella ja jatkuivat trias- ja jurakaudella eli satojen miljoonien vuosien takaa. Sää ja eroosio ovat sittemmin muotoilleet kivistä tunnistettavia hahmoja Vidinin alueella [[Balkanvuorten]] länsirinteillä. Ruoste voi ollakin kaunista, kun sitä on tarpeeksi.",
+  "linkit": [
+   "rautaoksidi",
+   "hiekkakiveä",
+   "Balkanvuorten"
+  ],
+  "jatkot": [
+   "Mikä erottaa permikauden, triaskauden ja jurakauden toisistaan?",
+   "Mistä muista syistä kivet voivat olla punaisia?"
+  ]
+ },
+ {
+  "kohde": "kohde:belogradtsik",
+  "kysymys": "Miten linnoitus käyttää kallioita?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Belogradtšikin linnoitus on rakennettu niin, että kalliot ovat osa sen puolustusta: muurit yhdistävät kivimuodostumia toisiinsa, joten jyrkät kallioseinämät toimivat linnoituksen seininä siellä, missä ihmisen ei tarvinnut rakentaa omaa muuriaan. Lähteiden mukaan linnoituksen vanhimmat osat ovat peräisin [[Rooman]] ajalta, ja sitä on laajennettu myöhemmin. Alue on suojeltu: [[Belogradtšikin kalliot]] julistettiin luonnonmuistomerkiksi vuonna 1949, ja ne sijaitsevat [[Vidinin]] alueella.\n\nKallio tekee puolet työstä ja ihminen täydentää loput. Se on aika hyvä sopimus, jos minulta kysytään, vaikka en olekaan mikään muurari.",
+  "linkit": [
+   "Rooman",
+   "Belogradtšikin kalliot",
+   "Vidinin"
+  ],
+  "jatkot": [
+   "Kuka linnoitusta on käyttänyt vuosisatojen aikana?",
+   "Voiko linnoituksessa nykyisin vierailla?"
+  ]
+ },
+ {
+  "kohde": "kohde:belogradtsik",
+  "kysymys": "Mistä kallioiden hahmonimet ovat peräisin?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Kivistä on totuttu näkemään hahmoja, ja monilla muodostumilla on oma nimensä, kuten [[Aadam ja Eeva]], Madonna, Karhu, Koulutyttö ja [[Dervissi]]. Nimet perustuvat kivien muotoon: sama muodostuma voi muistuttaa katsojasta riippuen ihmistä tai eläintä. Tarinoita nimien takana on varmasti monia, mutta en ole varma, mikä kuuluu mihinkin kallioon, enkä halua keksiä sellaisia. Kalliot sijaitsevat [[Vidinin]] alueella Luoteis-Bulgariassa. Minä näen kyl jokaisessa kalliossa vähän kyyhkyn.",
+  "linkit": [
+   "Aadam ja Eeva",
+   "Dervissi",
+   "Vidinin"
+  ],
+  "jatkot": [
+   "Mitkä muut kalliomuodostelmat Euroopassa muistuttavat hahmoja?",
+   "Voiko kallioita nimetä myös nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:belogradtsik",
+  "kysymys": "Mitä eroa on hiekkakivellä ja konglomeraatilla?",
+  "uusi": true,
+  "vastaus": "Katotaas. Molemmat ovat [[sedimenttikiviä]] eli kerrostuneista aineksista syntyneitä kivilajeja. Hiekkakivi muodostuu hiekanjyvistä, jotka ovat painuneet ja sementoituneet yhteen. Konglomeraatissa kiviaineksen seassa on suurempia, pyöristyneitä kiviä, jotka sementoituminen on liittänyt hienojakoisemman aineksen sekaan. [[Belogradtšikin kalliot]] koostuvat näistä molemmista, ja [[rautaoksidi]] antaa niille ruosteenpunaisen värin. Konglomeraatti kuulostaa kyl siltä, että kivet päätti pysyä yhdessä.",
+  "linkit": [
+   "sedimenttikiviä",
+   "Belogradtšikin kalliot",
+   "rautaoksidi"
+  ],
+  "jatkot": [
+   "Miten hiekka sementoituu kiveksi?",
+   "Mistä muualta Euroopasta löytyy punaista hiekkakiveä?"
+  ]
+ },
+ {
+  "kohde": "kohde:belogradtsik",
+  "kysymys": "Miten tuuli ja sade ovat muovanneet kallioita?",
+  "uusi": true,
+  "vastaus": "No niin, tää on hidasta työtä. Muodot ovat syntyneet [[eroosiossa]], jossa vesi, tuuli ja lämpötilan vaihtelut ovat vuosimiljoonien kuluessa irrottaneet kivestä hiukkasia. Kun kiven eri osat ovat eri tavoin sementoituneita, pehmeämpi aines kuluu nopeammin ja kovempi jää seisomaan, jolloin esiin nousevat pylväät ja tornit. Vesi voi myös tunkeutua rakoihin ja jäätyessään laajeta, mikä halkoo kiveä edelleen. Tällainen hidas muotoutuminen on antanut [[Belogradtšikin kallioille]] niiden hahmomaisen ilmeen. Hidasta hommaa, ja kuitenkin kiveä on helpompi odottaa kuin pullaa.",
+  "linkit": [
+   "eroosiossa",
+   "Belogradtšikin kallioille"
+  ],
+  "jatkot": [
+   "Kuinka nopeasti kalliot yhä muuttuvat?",
+   "Onko kallioiden muotoja suojeltu kulumiselta?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveshtarin-hauta",
+  "kysymys": "Milloin hauta löydettiin?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: se ei olekaan kovin kauan sitten. Hauta löydettiin vuonna 1982, jolloin arkeologit myös kaivoivat sen esiin Koillis-Bulgariassa [[Razgradin]] läänissä Sveshtarin kylän lähellä. Hauta oli rakennettu jo 300-luvulla eaa., siis yli kaksi tuhatta vuotta aiemmin, ja sen uskotaan kuuluneen [[getalaisten]] kuninkaalle Dromichaetekselle. Vain muutama vuosi löydön jälkeen, vuonna 1985, kohde liitettiin [[Unescon]] maailmanperintöluetteloon. Vanhaa kamaa, melkein kuin meidän suku.",
+  "linkit": [
+   "Razgradin",
+   "getalaisten",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Miten arkeologit löysivät haudan kummun sisältä?",
+   "Miksi Sveshtarin hauta on päässyt Unescon luetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveshtarin-hauta",
+  "kysymys": "Mitä keskuskammion seinillä on?",
+  "uusi": false,
+  "vastaus": "Ai se, tosi kaunis juttu. Seinillä on kymmenen naishahmoa, jotka on veistetty korkokuvina ja jotka ovat väritettyjä, puoliksi ihmisen ja puoliksi kasvin muotoisia [[kariatideja]]. Niiden nostetut kädet näyttävät kantavan kattoa, ja hahmojen uskotaan esittävän jumalattaria. Lisäksi seinillä on säilyneitä alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Haudan uskotaan kuuluneen getalaiskuninkaalle [[Dromichaetekselle]], ja se liitettiin [[Unescon]] maailmanperintöluetteloon 1985.\n\nKymmenen naista pitää kattoa ylhäällä yli kaksituhatta vuotta ilman yhtään lomaa. Minä väsyn jo yhdestä pidemmästä lentoreitistä, ja sekin on nöyryyttävää.",
+  "linkit": [
+   "kariatideja",
+   "Dromichaetekselle",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Voiko hautaan nykyisin tutustua paikan päällä?",
+   "Miten maalaukset ovat säilyneet näin hyvin?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveshtarin-hauta",
+  "kysymys": "Keitä getalaiset olivat?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Getalaiset olivat [[traakialaisten]] heimoihin kuuluva kansa, jonka asuinalue ulottui antiikin lähteiden mukaan [[Tonavan]] molemmin puolin nykyisen Bulgarian ja Romanian seudulle. Heillä oli omia kuninkaita, ja Dromichaetes, jonka haudan uskotaan olevan Sveshtarin traakialaishauta, tunnetaan antiikin kirjoittajien mukaan taistelusta makedonialaista [[Lysimakhosta]] vastaan. Tarkat yksityiskohdat vaihtelevat lähteittäin, joten niihin on syytä suhtautua varoen. Historia on kyl kirjoittajiensa näköistä, sen minä tiedän.",
+  "linkit": [
+   "traakialaisten",
+   "Tonavan",
+   "Lysimakhosta"
+  ],
+  "jatkot": [
+   "Miten Tonava on yhdistänyt ja erottanut kansoja?",
+   "Kuka oli Lysimakhos ja miksi hän taisteli getalaisia vastaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveshtarin-hauta",
+  "kysymys": "Mitä kariatidit ovat?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Kariatidi on veistos, jossa naishahmo toimii pylvään tai tukirakenteen tavoin ja kantaa esimerkiksi kattoa tai ulokketta. Tunnetuimpia esimerkkejä ovat [[Ateenan]] [[Akropoliin]] Erekhtheion-temppelin kuusi kariatidia. [[Sveshtarin traakialaishaudan]] kariatidit eroavat niistä, sillä ne on veistetty kammion seinille korkokuvina ja ne ovat puoliksi ihmisen ja puoliksi kasvin muotoisia. Kuusi naista kantaa kattoa, minä kantaisin kyl korkeintaan kirjeen.",
+  "linkit": [
+   "Ateenan",
+   "Akropoliin",
+   "Sveshtarin traakialaishaudan"
+  ],
+  "jatkot": [
+   "Miksi kreikkalaiset käyttivät veistoksia pylväiden sijasta?",
+   "Mitä miespuolista vastinetta kariatideilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:sveshtarin-hauta",
+  "kysymys": "Onko Bulgariassa muita traakialaisten kuningashautoja?",
+  "uusi": true,
+  "vastaus": "Just niin, sellaisiakin on. Bulgariassa on säilynyt runsaasti traakialaisia kumpuhautoja, ja tunnetuimpia niistä on [[Kazanlakin]] traakialaishauta, jonka seinämaalaukset ovat kuuluisia ja joka on myös [[Unescon]] maailmanperintökohde. Kazanlak sijaitsee Keski-Bulgariassa niin sanotun Ruusulaakson tuntumassa. Alueella on muitakin hautakumpuja, mutta en ole varma, mitkä niistä on avattu kävijöille. Kumpuja riittää, ja kyl kyyhky istuu mielellään kummun päällä.",
+  "linkit": [
+   "Kazanlakin",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mikä tekee Kazanlakin haudan maalauksista erityisiä?",
+   "Miten traakialaiset hautasivat vainajansa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pliska-palatsi",
+  "kysymys": "Miltä Pliskan kaanien palatsi näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "No jopas, hyvä kysymys. Tarkkaa kuvaa on vaikea antaa, sillä ulkonäköä on rekonstruoitu arkeologisten kaivausten perusteella, enkä ole varma kaikista yksityiskohdista. Pliska oli [[ensimmäisen Bulgarian valtakunnan]] pääkaupunki vuosina 681–893, ja tutkimusten mukaan kaupunkiin kuului linnoitettu ydinalue, jossa hallitsijan palatsi oli kivestä rakennettu, sekä laaja ulompi alue vallien sisällä. [[Nikeforos I]] poltti palatsin vuonna 811, mutta kaani [[Omurtag]] rakennutti sen uudelleen. Valokuvaa ei oo, joten kuvittelu saa kelvata.",
+  "linkit": [
+   "ensimmäisen Bulgarian valtakunnan",
+   "Nikeforos I",
+   "Omurtag"
+  ],
+  "jatkot": [
+   "Millainen hallitsija kaani Omurtag oli?",
+   "Voiko Pliskan raunioihin tutustua nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pliska-palatsi",
+  "kysymys": "Miksi Pliskan kaanien palatsi katosi?",
+  "uusi": false,
+  "vastaus": "Tuota niin, asiaan vaikutti moni tekijä. [[Nikeforos I]] poltti palatsin vuonna 811, mutta kaani [[Omurtag]] rakennutti sen uudelleen. Kun valtakunnan pääkaupungin asema siirtyi 800-luvun lopulla [[Preslaviin]], Pliskan merkitys väheni, ja sodat tuhosivat kaupungin lopullisesti 900-luvun lopulla. Nykyisin paikalla on arkeologinen alue, jossa jäänteitä tutkitaan. Onneksi siitä on jo kauan.",
+  "linkit": [
+   "Nikeforos I",
+   "Omurtag",
+   "Preslaviin"
+  ],
+  "jatkot": [
+   "Miksi pääkaupunki siirrettiin Preslaviin?",
+   "Mitä Pliskasta on jäljellä nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pliska-palatsi",
+  "kysymys": "Missä Pliska sijaitsee nykyisin?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Pliska on pieni paikka maan koillisosassa. Pliska sijaitsee Koillis-Bulgariassa Šumenin alueella, lähellä [[Šumenin]] kaupunkia ja Mustanmeren rannikon [[Varnan]] länsipuolella. Paikka oli ensimmäisen Bulgarian valtakunnan pääkaupunki vuosina 681–893. Pullaa matkalle kyl otan, jos jollain on.",
+  "linkit": [
+   "Šumenin",
+   "Varnan"
+  ],
+  "jatkot": [
+   "Mitä Šumenin seudulla on muuta nähtävää?",
+   "Kuinka kaukana Pliska on Mustanmeren rannikolta?"
+  ],
+  "paikka": {
+   "nimi": "Pliska",
+   "lat": 43.37,
+   "lon": 27.12,
+   "tarkkuus": "alue"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-pliska-palatsi",
+  "kysymys": "Keitä protobulgaarit olivat?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: tästä on kiistelty. Protobulgaarit olivat arojen puolinomadinen kansa, joka perusti Bulgarian valtion Tonavan eteläpuolelle vuonna 681, ja heidän johtajansa oli kaani [[Asparuh]]. Kansan alkuperästä ja kielestä on tutkijoiden kesken erilaisia näkemyksiä, ja heidän katsotaan usein puhuneen turkkilaista kieltä, mutta asiasta ei ole täyttä varmuutta. Ajan myötä protobulgaarit sekoittuivat alueen [[slaavilaisiin]] asukkaisiin, ja syntyi valtio, jonka varhainen pääkaupunki oli Pliska. Se sijaitsi [[Tonavan]] eteläpuolella.\n\nAroilta Balkanille on ihan järkyttävän pitkä matka. Lentäen se sujuisi paremmin, mutta kai ihmiset tykkäävät kävellä.",
+  "linkit": [
+   "Asparuh",
+   "slaavilaisiin",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Miksi Bulgarian valtio syntyi juuri Tonavan eteläpuolelle?",
+   "Milloin bulgarialaiset ottivat kristinuskon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-pliska-palatsi",
+  "kysymys": "Millä kielellä Pliskan hallitsijat kirjoittivat?",
+  "uusi": true,
+  "vastaus": "Mmm— siin on kerrostumia. Pliskassa säilyneissä kivikirjoituksissa on käytetty kreikkaa, esimerkiksi kaani [[Omurtagin]] ajalta, ja kielenvalintaan vaikutti [[Bysantin]] läheisyys hallinnossa ja diplomatiassa. Slaavilainen kirjallisuus kehittyi vasta myöhemmin: perinteisesti [[Kyrillos ja Methodios]] laativat ensimmäisen slaavilaisen kirjaimiston 800-luvulla, ja kyrillisen kirjaimiston kehityksen katsotaan tapahtuneen heidän oppilaidensa piirissä Bulgariassa. Tarkat yksityiskohdat ovat kiistanalaisia. Kivikirjeet on kyl huonoja kyyhkylle, ihan liian painavia.",
+  "linkit": [
+   "Omurtagin",
+   "Bysantin",
+   "Kyrillos ja Methodios"
+  ],
+  "jatkot": [
+   "Miten kyrillinen kirjaimisto levisi muualle Eurooppaan?",
+   "Mitä eroa on glagoliittisella ja kyrillisellä kirjaimistolla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trigrad",
+  "kysymys": "Mihin luolaan Trigradska-joki syöksyy?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tän minä tiedän. Joki syöksyy [[Paholaisen kurkku]] -luolaan [[Rodopien]] vuoristossa. Se jatkaa matkaansa maan alla ja tulee noin 530 metrin päässä uudelleen esiin suurena [[karstilähteenä]]. Vesi siis katoaa kalliorotkon pohjalta ja ilmestyy takaisin päivänvaloon vasta aivan eri kohdassa. Hyvä tarina joelle, joka ei tyydy kulkemaan pintaa pitkin.",
+  "linkit": [
+   "Paholaisen kurkku",
+   "Rodopien",
+   "karstilähteenä"
+  ],
+  "jatkot": [
+   "Miten karstilähde syntyy?",
+   "Missä päin Bulgariaa Rodopien vuoristo sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trigrad",
+  "kysymys": "Kuinka korkea rotkon länsiseinä on?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Länsiseinä on noin 300 metriä korkea, ja itäseinä on vielä hieman korkeampi, 300–350 metriä. Seinien väli kapenee pohjoisosassa alun 300 metristä noin 100 metriin, joten rotko on kapeimmillaan hyvin jyrkkä ja ahdas. Seinät ovat pystysuoria [[marmorikalliota]] [[Rodopien]] sydämessä. Ylhäältä katsottuna sekin näyttää ihan kapealta raolta.",
+  "linkit": [
+   "marmorikalliota",
+   "Rodopien"
+  ],
+  "jatkot": [
+   "Miten joki voi kaivaa rotkon kovaan marmoriin?",
+   "Kuinka monta ihmistä rotkossa käy vuosittain?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trigrad",
+  "kysymys": "Mitä karstilähde tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Karstilähde on lähde, jossa vesi purkautuu maan pinnalle kalkkikiven tai marmorin kaltaisessa liukenevassa kivessä. Vesi liuottaa kiveen vähitellen onkaloita ja [[luolia]], ja sadevesi sekä jokivesi voivat kulkea niissä maan alla pitkiäkin matkoja. Lopulta vesi tulee esiin lähteenä, usein yhtenä vahvana purkautumispaikkana. [[Trigradin rotkossa]] joki katoaa luolaan ja tulee esiin juuri tällaisena lähteenä.\n\nMinä olen nähnyt katolta monta jokea, mutta joki, joka menee luolaan ja tulee toisaalta ulos, on silti minusta hieman epäilyttävä temppu. Kyllä sen silti hyväksyy, kun tietää syyn.",
+  "linkit": [
+   "luolia",
+   "Trigradin rotkossa"
+  ],
+  "jatkot": [
+   "Millaisia luolia karstialueilla syntyy?",
+   "Mikä ero on kalkkikivellä ja marmorilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trigrad",
+  "kysymys": "Mikä marmori on ja miten se eroaa kalkkikivestä?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Marmori on kivilaji, joka syntyy, kun kalkkikivi muuttuu kuumuuden ja paineen vaikutuksesta syvällä maankuoressa. Prosessia kutsutaan [[metamorfoosiksi]], ja siinä kiven rakenne kiteytyy uudelleen, jolloin marmori on yleensä tiiviimpää ja kiteisempää kuin alkuperäinen kalkkikivi. Molemmat koostuvat pääosin kalsiumkarbonaatista, ja siksi ne liukenevat hitaasti veteen, mikä selittää [[karstimuodostumat]] ja luolat. Ei paha kyyhkyltä.",
+  "linkit": [
+   "metamorfoosiksi",
+   "karstimuodostumat"
+  ],
+  "jatkot": [
+   "Mihin marmoria on perinteisesti käytetty?",
+   "Miksi marmori on joissain paikoissa niin valkoista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-trigrad",
+  "kysymys": "Milloin Trigradin rotko suojeltiin ja avattiin matkailijoille?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on tosiaan päivämäärä, jonka muistan. Rotko on ollut suojelualueena 1960-luvun alusta, ja matkailukäytössä se on ollut vuodesta 1977. Se sijaitsee noin 1,2 kilometrin päässä [[Trigradin]] kylästä 1 450 metrin korkeudessa [[Smolyanin]] läänissä. Suojelu on siis ollut voimassa jo pitkään ennen kuin kävijät pääsivät alueelle. Onpas siitä jo aikaa.",
+  "linkit": [
+   "Trigradin",
+   "Smolyanin"
+  ],
+  "jatkot": [
+   "Millaisia eläimiä Rodopien metsissä elää?",
+   "Mikä on Smolyanin lääni Bulgariassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-strandzha",
+  "kysymys": "Kuinka suuri Strandzhan luonnonpuisto on?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tuo on iso alue. [[Strandzhan luonnonpuisto]] kattaa 1 161 neliökilometriä, ja se on Bulgarian suurin suojelualue. Puisto sijaitsee maan äärimmäisessä kaakkoiskulmassa [[Turkin]] rajalla, ja [[metsät]] peittävät noin 80 prosenttia sen alasta. Puisto perustettiin 25. tammikuuta 1995. Pitkä vastaus oli, mutta lukuja riitti.",
+  "linkit": [
+   "Strandzhan luonnonpuisto",
+   "Turkin",
+   "metsät"
+  ],
+  "jatkot": [
+   "Millaisia metsiä Strandzhan alueella kasvaa?",
+   "Mitä Strandzhan alueen perinteisiin kuuluu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-strandzha",
+  "kysymys": "Millä tavalla nestinarstvo-perinnettä harjoitetaan?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tähän vastaan mielelläni. Nestinarstvo on [[Strandzhan]] alueen perinne, jossa tanssitaan paljain jaloin hehkuvilla hiilillä. Sitä pidetään pakanallisen menneisyyden jäänteenä, ja perinne on liitetty paikallisiin kristillisiin juhliin. Tarkemmat rituaalit ja niiden merkitys vaihtelevat lähteiden mukaan, enkä ole niistä kaikesta varma. Tanssijoita kutsutaan [[nestinareiksi]]. Hiilille ei minun jalkani kyllä menisi.",
+  "linkit": [
+   "Strandzhan",
+   "nestinareiksi"
+  ],
+  "jatkot": [
+   "Missä kylissä nestinarstvoa on perinteisesti harjoitettu?",
+   "Miten Strandzhan kansanperinnettä on suojeltu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-strandzha",
+  "kysymys": "Milloin Strandzhan luonnonpuisto perustettiin?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: [[Strandzhan luonnonpuisto]] perustettiin 25. tammikuuta 1995. Tarkoituksena oli suojella eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Puisto sijaitsee [[Bulgarian]] kaakkoiskulmassa Turkin rajalla, ja se on maan suurin suojelualue. Vanhin sen luonnonsuojelualueista, Silkosia, on perustettu jo vuonna 1933.\n\nMinä olen lentänyt monen rajan yli, eikä yksikään metsä ole kysynyt passia. Mut kyllä näissä kaakon metsissä on rauhaa, minkä kyyhkykin huomaa.",
+  "linkit": [
+   "Strandzhan luonnonpuisto",
+   "Bulgarian"
+  ],
+  "jatkot": [
+   "Mikä on Silkosian luonnonsuojelualue?",
+   "Mikä ero on luonnonpuistolla ja luonnonsuojelualueella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-strandzha",
+  "kysymys": "Mikä on Unescon biosfäärialue?",
+  "uusi": true,
+  "vastaus": "Mmm, ai se. [[Unescon]] biosfäärialue on alue, jolla yritetään yhdistää luonnon suojelu ja ihmisten kestävä elinkeino ja kulttuuri. Verkosto kuuluu Unescon ihmisen ja biosfäärin ohjelmaan, ja alueilla tutkitaan, miten luonnonvaroja voi käyttää niin, että ne säilyvät. Alue jaetaan tavallisesti ydinalueeseen, puskurivyöhykkeeseen ja yhteistyövyöhykkeeseen. [[Uzunbodzhak]] kuuluu tähän verkostoon Strandzhan alueella. Kyllä tästä riittäisi vielä juttua.",
+  "linkit": [
+   "Unescon",
+   "Uzunbodzhak"
+  ],
+  "jatkot": [
+   "Mitä muita biosfäärialueita Euroopassa on?",
+   "Mitä Uzunbodzhakin alueella suojellaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-strandzha",
+  "kysymys": "Mikä Silkosia on ja milloin se perustettiin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Silkosia on [[Strandzhan luonnonpuiston]] vanhin luonnonsuojelualue, ja se perustettiin vuonna 1933. Luonnonsuojelualue on tiukempi suojelun muoto kuin tavallinen luonnonpuisto, ja siellä luonnon annetaan kehittyä mahdollisimman häiriöttä. Alue kuuluu [[Bulgarian]] suojelualueiden vanhimpaan kerrokseen. Ihan pitkältä ajalta tämäkin tieto tuli.",
+  "linkit": [
+   "Strandzhan luonnonpuiston",
+   "Bulgarian"
+  ],
+  "jatkot": [
+   "Miten Bulgarian suojelualueet ovat kehittyneet?",
+   "Millaiset luontotyypit Strandzhan alueella ovat harvinaisia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolyan",
+  "kysymys": "Mikä on Rodopien korkein huippu Smolyanin lähellä?",
+  "uusi": false,
+  "vastaus": "Kato, tää on helppo. Korkein huippu on Golyam Perelik, joka on 2 191 metriä korkea ja kohoaa [[Keski-Rodopeilla]] [[Smolyanin]] juurella. Smolyan sijaitsee Tšernan ja Byalan jokien kapeassa laaksossa, ja lähellä ovat hiihtokeskukset [[Pamporovo]] ja [[Chepelare]]. Huippu on siis vuoriston korkein piste. Ylhäältä katsoen se on oikein kelpo kumpare.",
+  "linkit": [
+   "Keski-Rodopeilla",
+   "Smolyanin",
+   "Pamporovo",
+   "Chepelare"
+  ],
+  "jatkot": [
+   "Mitä hiihtokeskus Pamporovossa voi tehdä?",
+   "Millainen kaupunki Smolyan on nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolyan",
+  "kysymys": "Millä nimellä Smolyania kutsuttiin Osmanien aikana?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: kaupunki nimettiin [[Osmanien]] aikana Pashmakliksi, ja se on nykyisin [[Rodopien]] kaupunki. Kaupunki oli viisisataa vuotta Osmanien vallan alla, ja vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen Smolyan muodostui vasta vuonna 1960, kun kolme kylää yhdistyi. Nimi on siis vaihtunut moneen kertaan, ja kaupunkikin on rakentunut useammasta osasta.",
+  "linkit": [
+   "Osmanien",
+   "Rodopien"
+  ],
+  "jatkot": [
+   "Mistä Smolyanin nykyinen nimi tulee?",
+   "Mikä on vilajetti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolyan",
+  "kysymys": "Mistä Smolyanin nimi tulee?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla. Heimon nimi on säilynyt kaupungin nimessä vuosisatojen yli, vaikka seutu kuului keskiajalla [[Bysantin]] ja [[Bulgarian]] valtakunnille ja joutui sen jälkeen [[Osmanien]] alaisuuteen. Nimi on siis vanha ja kertoo alueen varhaisesta slaavilaisasutuksesta.\n\nMinä lentäisin mieluummin heimon nimestä toiseen kuin yrittäisin kirjoittaa sen kyrillisin kirjaimin. Mut onneksi se on helppo muistaa.",
+  "linkit": [
+   "Bysantin",
+   "Bulgarian",
+   "Osmanien"
+  ],
+  "jatkot": [
+   "Mitä tiedetään slaavilaisten asettumisesta Balkanille?",
+   "Millainen oli Bysantin valta Rodopeilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolyan",
+  "kysymys": "Mikä on vilajetti ja sandžakki Osmanien hallinnossa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Vilajetti oli [[Osmanien valtakunnan]] suurin hallinnollinen alue 1800-luvun puolivälin uudistusten jälkeen, ja se jaettiin pienempiin sandžakkeihin. Sandžakki oli siis vilajetin alainen hallintoalue. Esimerkiksi [[Smolyan]] kuului vuosina 1867–1912 Edirnen vilajetin Gümülcinen sandžakiin. Järjestelmä muuttui useaan otteeseen, joten tarkat rajat riippuvat vuosiluvusta. Onpas ollut byrokraattista väkeä.",
+  "linkit": [
+   "Osmanien valtakunnan",
+   "Smolyan"
+  ],
+  "jatkot": [
+   "Miten Osmanien valtakunnan hallinto uudistettiin 1800-luvulla?",
+   "Missä Edirne sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-smolyan",
+  "kysymys": "Mitä hiihtokeskuksia Smolyanin lähellä on?",
+  "uusi": true,
+  "vastaus": "No jopas. Lähellä ovat hiihtokeskukset [[Pamporovo]] ja [[Chepelare]], molemmat [[Rodopien]] vuoristossa. Smolyan itse on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Alue sijaitsee Golyam Perelikin juurella, joten talvisin lunta riittää hiihtäjille. Lumi näyttää ylhäältä aika kauniilta.",
+  "linkit": [
+   "Pamporovo",
+   "Chepelare",
+   "Rodopien"
+  ],
+  "jatkot": [
+   "Milloin Rodopeilla hiihtokausi yleensä alkaa?",
+   "Mitä Smolyanin seudulla voi kesällä tehdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-berkovitsa",
+  "kysymys": "Minkä huipun rinteellä Berkovitsa sijaitsee?",
+  "uusi": false,
+  "vastaus": "Katotaas. Berkovitsa sijaitsee [[Berkovska Stara Planinan]] Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa. Korkeutta kaupungilla on 405 metriä. Kaupunki on hiihtokeskus Luoteis-Bulgariassa Montanan läänissä, lähellä Varshetsin kaupunkia. Kom on siis kaupungin taustalla kohoava vuori, ja lähellä on [[Varshetsin]] kaupunki.",
+  "linkit": [
+   "Berkovska Stara Planinan",
+   "Varshetsin"
+  ],
+  "jatkot": [
+   "Mikä Kom-vuori on?",
+   "Mikä Stara Planina on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-berkovitsa",
+  "kysymys": "Minä vuonna kaupunki mainitaan ensi kerran Osmanien asiakirjoissa?",
+  "uusi": false,
+  "vastaus": "Just niin, vuosiluku on 1488. [[Berkovitsa]] mainitaan ensi kerran [[Osmanien]] asiakirjoissa vuonna 1488. Tämä ei tarkoita, että asutus olisi syntynyt vasta silloin: kaupungin länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Ensimmäinen maininta kertoo siis vain, milloin kaupunki ilmestyi näihin asiakirjoihin. Vanhoja kiviä riittää.",
+  "linkit": [
+   "Berkovitsa",
+   "Osmanien"
+  ],
+  "jatkot": [
+   "Mitä Kaleto-kukkulalla on säilynyt?",
+   "Mitä Osmanien asiakirjat kertovat Balkanin kaupungeista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-berkovitsa",
+  "kysymys": "Mikä oli Chiprovtsin kapina vuonna 1688?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Chiprovtsin kapina]] oli kapina Osmanien valtaa vastaan Luoteis-Bulgariassa vuonna 1688. Kapinan taustalla oli aikakauden suuri sota Osmanien valtakunnan ja eurooppalaisten valtojen välillä. Kapina kukistettiin, ja Chiprovtsin seutu kärsi vakavasti. Tapahtuma on jäänyt osaksi Bulgarian historiaa, ja seutu kuului [[Berkovitsan]] ympäristön tapahtumiin. Siitä on onneksi jo yli kolmesataa vuotta.",
+  "linkit": [
+   "Chiprovtsin kapina",
+   "Berkovitsan"
+  ],
+  "jatkot": [
+   "Miten Chiprovtsin seutu on sittemmin toipunut?",
+   "Mikä oli Konstantinin ja Fruzhinin kapina?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-berkovitsa",
+  "kysymys": "Kuka oli Vasil Levski?",
+  "uusi": true,
+  "vastaus": "Ai niin, hänestä. [[Vasil Levski]] oli bulgarialainen vallankumouksellinen, jota kutsutaan usein Bulgarian vapauttajaksi. Hän työskenteli kansallisen vapautusliikkeen puolesta ja perusti paikallisia vallankumouskomiteoita eri puolille maata. Elokuun 1872 lopussa hän vieraili [[Berkovitsassa]] Mito Ankovin kanssa. Hänet teloitettiin Sofiassa helmikuussa 1873, joten hän on yksi Bulgarian tunnetuimpia kansallishahmoja. Aika on siitä kulunut jo yli sata vuotta, ja hänen muistonsa elää yhä.",
+  "linkit": [
+   "Vasil Levski",
+   "Berkovitsassa"
+  ],
+  "jatkot": [
+   "Miten Bulgaria itsenäistyi Osmanien vallasta?",
+   "Missä Vasil Levskin muistomerkki on Sofiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-berkovitsa",
+  "kysymys": "Mitä nimi Stara Planina tarkoittaa?",
+  "uusi": true,
+  "vastaus": "Ai se. Stara Planina tarkoittaa bulgariaksi vanhaa vuorta tai vanhaa vuoristoa. Nimi viittaa [[Balkanvuoriston]] bulgarialaiseen nimeen, ja se kulkee halki Bulgarian itä–länsisuunnassa. [[Berkovska Stara Planina]] on tämän vuoriston läntinen osa, jonka rinteellä Berkovitsa sijaitsee. Nimi on siis kirjaimellinen kuvaus.\n\nMinusta on kaunista, että vuori on yksinkertaisesti vanha. Siihen verrattuna minä olen vasta nuori kyyhky.",
+  "linkit": [
+   "Balkanvuoriston",
+   "Berkovska Stara Planina"
+  ],
+  "jatkot": [
+   "Miksi Balkanin niemimaa on saanut nimensä?",
+   "Mitä muita nimiä Balkanvuoristolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sozopol",
+  "kysymys": "Minkä kaupungin kanssa Sozopol kilpaili kaupankäynnissä antiikissa?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Sozopolin kauppakilpailija oli Mesembria, nykyinen [[Nesebar]]. Kaupungit olivat molemmat kreikkalaisia siirtokuntia [[Mustanmeren]] länsirannalla, ja ne kilpailivat kaupasta ja merenkulusta. Sozopol oli antiikissa nimeltään Apollonia, ja siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista. Sen historia on siis pitkä. Mukava, kun kilpailua riittää vielä tänäkin päivänä.",
+  "linkit": [
+   "Nesebar",
+   "Mustanmeren"
+  ],
+  "jatkot": [
+   "Mitä tiedetään Nesebarin vanhasta kaupungista?",
+   "Millaista kauppaa Mustanmeren kreikkalaiskaupungit kävivät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sozopol",
+  "kysymys": "Minä vuonna roomalaiset valtasivat ja ryöstivät Sozopolin?",
+  "uusi": false,
+  "vastaus": "Joo, vuosi on muistissa. Roomalaislegioonat valtasivat ja ryöstivät kaupungin vuonna 72 eaa. Lucullus vei [[Apollon patsaan]] [[Roomaan]]. Silloin kaupunki oli vielä Apollonia, ja se oli ollut yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista. Tapahtuma oli kaupungille raskas, mutta kaupunki on säilynyt tähän päivään asti. Onneksi siitä on kulunut jo yli kaksi tuhatta vuotta.",
+  "linkit": [
+   "Apollon patsaan",
+   "Roomaan"
+  ],
+  "jatkot": [
+   "Kuka oli Lucullus?",
+   "Mitä Apollon patsaalle tapahtui Roomassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sozopol",
+  "kysymys": "Miksi kreikkalaiset perustivat siirtokuntia Mustanmeren rannoille?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Kreikkalaiset perustivat siirtokuntia [[Mustanmeren]] rannoille 700- ja 600-luvuilta eaa. lähtien, ja syitä oli useita: viljelymaan puute kotiseuduilla, kaupan mahdollisuudet sekä raaka-aineiden ja viljan saanti. Siirtokunnat olivat usein itsenäisiä kaupunkeja, jotka pitivät silti yhteyden emäkaupunkiinsa. Sozopol perustettiin 600-luvulla eaa. [[Miletoksen]] siirtolaisten toimesta. Siirtokunnat muokkasivat koko seudun kauppaa ja kulttuuria. Kyllä tämä kysymys vei hetken.",
+  "linkit": [
+   "Mustanmeren",
+   "Miletoksen"
+  ],
+  "jatkot": [
+   "Millaisia tavaroita Mustanmeren seudulta vietiin?",
+   "Miten kreikkalaiset siirtokunnat hallittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sozopol",
+  "kysymys": "Kuka oli Lucullus, joka vei Apollon patsaan Roomaan?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Lucullus oli [[roomalainen]] sotapäällikkö ja poliitikko. Lucullus-suvun jäsenet toimivat roomalaisjoukkojen johdossa Mustanmeren seudulla sodassa kuningas Mithridatesta vastaan. Lähteissä Apollonian valtaus liitetään sekä Lucius Lucullukseen että hänen veljeensä Marcus Lucullukseen, joten en ole varma, kumman nimissä valtaus tehtiin. [[Apollon patsas]] vietiin Roomaan, ja kaupunki menetti yhden tärkeimmistä aarteistaan.\n\nMinä olen nähnyt monta kaupunkia ryöstettynä, mutta patsaan vieminen toiseen maahan on silti ihan erityisen ikävä historia. Sellaiset tarinat eivät unohdu.",
+  "linkit": [
+   "roomalainen",
+   "Apollon patsas"
+  ],
+  "jatkot": [
+   "Millainen oli Mithridateen sodat?",
+   "Mitä Roomassa tehtiin ryöstetyillä patsailla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sozopol",
+  "kysymys": "Millainen kaupunki Burgas on?",
+  "uusi": true,
+  "vastaus": "Ai tota. Burgas on yksi Bulgarian merkittävistä satamakaupungeista [[Mustanmeren]] rannalla, ja se sijaitsee noin 35 kilometriä Sozopolista pohjoiseen. Kaupunki toimii alueen tärkeänä liikenne- ja kauppakeskuksena. [[Sozopol]] on sen eteläpuolella oleva vanha merenrantakaupunki, jossa on muinaisia kreikkalaisjuuria. Satamakaupungit ovat kyyhkyn mieleen, koska meri näyttää niistä kauniilta.",
+  "linkit": [
+   "Mustanmeren",
+   "Sozopol"
+  ],
+  "jatkot": [
+   "Mitä Burgasin ympäristössä voi nähdä?",
+   "Miten Burgasiin pääsee Sozopolista?"
+  ]
  }
 ]
