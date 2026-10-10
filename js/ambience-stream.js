@@ -1396,7 +1396,9 @@ export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikin
    */
   if (musiikkiPidossa()) { stopPohjaMusiikki(); return; }
   const polku = pohjanPolku(cityId, maa);
-  if (!polku || (pohja && pohjaPolku === polku)) return;
+  // Ei raitaa (kaupungin ulkopuolella kartalla, KARTTA_VAIN_KAUPUNKI): edellinen kappale häivytetään pois.
+  if (!polku) { stopPohjaMusiikki(); return; }
+  if (pohja && pohjaPolku === polku) return;
   /*
    * Väistyvä puoli lähtee nollaan omalla häivytyksellään ja vapautuu
    * itsestään. Sitä ei jäädä odottamaan eikä siihen enää kosketa

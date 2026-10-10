@@ -56,7 +56,7 @@
  * kortti avautuu ja sulkeutuu (renderQuiz).
  */
 import { musaPolku } from './media.js';
-import { kaupunginRaidat } from './kaupunkimusiikki.js';
+import { KARTTA_VAIN_KAUPUNKI, kaupunginRaidat } from './kaupunkimusiikki.js';
 
 /** Pohjavire: viimeinen taso, joka soi kun mikään muu ei sovi. */
 export const POHJARAITA = 'musa-pohja';
@@ -549,7 +549,8 @@ export function musiikkiketju(cityId = paikka, maa = paikanMaa) {
     polut.push(musaPolku(PAIKKARAIDAT[cityId].tunnus));
   }
   polut.push(...kaupunginRaidat(cityId, maa));
-  polut.push(musaPolku(POHJARAITA));
+  // Pohjavire vain vanhassa ketjussa: kartalla soi nyt vain kaupungin oma kappale (KARTTA_VAIN_KAUPUNKI).
+  if (!KARTTA_VAIN_KAUPUNKI) polut.push(musaPolku(POHJARAITA));
   return [...new Set(polut)];
 }
 

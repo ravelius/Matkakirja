@@ -412,7 +412,19 @@ export function maanosanMusiikki(maanosa) {
  * tarkoittaa, ettei paikalla ole omaa musiikkia — silloin soi
  * pohjavire (js/musiikkivalitsin.js).
  */
+/*
+ * KARTALLA VAIN KAUPUNGIN OMA KAPPALE (omistaja 10.10.2026, PT 11.1x: "karsia kaikki muut paitsi maan oman musiikin.
+ * myös tulomusiikit pois … koskee vain kartalla soivia musiikkeja, ei linssi ja peli musiikkeja"; kortti: "vain kaupunkien
+ * omat kappaleet"). Kartalta pois alueraidat, maanosaraidat, pohjavire (js/musiikkivalitsin.js), saapumistunnukset ja
+ * matkan siirtymäraidat (js/siirtymamusiikki.js); muualla kartalla kuuluu vain äänimaisema. Tilaraidat (lehti, matkalaukku,
+ * kohtaaminen, visa, aarre, loppu, etusivu) ja linssien raidat eivät muutu. false = vanha ketju (alue → maanosa → pohja);
+ * vanhan ketjun testit kääntävät kytkimen (asetaKarttaVainKaupunki).
+ */
+export let KARTTA_VAIN_KAUPUNKI = true;
+export function asetaKarttaVainKaupunki(arvo) { KARTTA_VAIN_KAUPUNKI = arvo !== false; }
+
 export function kaupunginRaidat(cityId, maa = null) {
+  if (KARTTA_VAIN_KAUPUNKI) return [kaupunginMusiikki(cityId)].filter(Boolean);
   return [
     kaupunginMusiikki(cityId),
     alueenMusiikki(kaupunginAlue(cityId, maa)),
@@ -449,6 +461,7 @@ export const SAAPUMISTUNNUKSET = Object.fromEntries(
  * @param {?string} maa kaupungin ISO-3-maakoodi pakan cityCountry-taulusta
  */
 export function saapumistunnus(cityId, maa = null) {
+  if (KARTTA_VAIN_KAUPUNKI) return null;
   const maanosa = kaupunginMaanosa(cityId, maa);
   if (!maanosa || !Object.hasOwn(SAAPUMISTUNNUKSET, maanosa)) return null;
   return musaPolku(SAAPUMISTUNNUKSET[maanosa]);
