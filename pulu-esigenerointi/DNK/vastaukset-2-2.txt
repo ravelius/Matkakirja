@@ -95,7 +95,7 @@ Miksi linna rakennettiin kolmelle saarelle järveen?
 Mitä näyttelyitä linnassa nykyään on?
 
 ### 97
-Frederiksborgin barokkityylinen puutarha on linnan vieressä, ja se täydentää järvellä seisovaa linnaa. Barokkipuutarhalle ovat tyypillisiä symmetria, suorat linjat, terassit ja leikatut kasvit, jotka korostavat järjestystä ja vallan kuvaa. Lähteiden mukaan puutarha on peräisin 1700-luvun alkupuolelta, mutta suunnittelijasta ja tarkasta ajoituksesta en ole varma. Puutarhan kokonaisuus muodostuu terasseista, vesiaiheista ja kulkuteistä, ja se on avoinna kävijöille. Barokkityyli kukoisti Euroopassa 1600-luvulta 1700-luvulle, ja [[Versailles]] on sen tunnetuin esimerkki.
+Frederiksborgin barokkityylinen puutarha on linnan vieressä, ja se täydentää järvellä seisovaa linnaa. Barokkipuutarhalle ovat tyypillisiä symmetria, suorat linjat, terassit ja leikatut kasvit, jotka korostavat järjestystä ja vallan kuvaa. Lähteiden mukaan puutarha on peräisin 1700-luvun alkupuolelta, mutta suunnittelijasta ja tarkasta ajoituksesta en ole varma. Puutarhan kokonaisuus muodostuu terasseista, vesiaiheista ja kulkuteistä, ja se on avoinna kävijöille. [[Barokkityyli]] kukoisti Euroopassa 1600-luvulta 1700-luvulle, ja [[Versailles]] on sen tunnetuin esimerkki.
 JATKOT:
 Mitkä asiat tekevät puutarhasta barokkityylisen?
 Miksi Versailles'n puutarha on niin kuuluisa?
@@ -170,13 +170,13 @@ Miten rautatieyhteys muutti matka-aikoja Tanskan sisällä?
 Kööpenhamina on Tanskan pääkaupunki, ja se sijaitsee Sjællandin itärannikolla Öresundin salmen äärellä. Kaupungissa on [[Tivoli]], vanha huvipuisto, sekä Langelinien rantapromenadilla [[Pieni merenneito]] -patsas, joka paljastettiin vuonna 1913. Panimomiesten perhe Jacobsen on jättänyt jälkensä kaupunkiin: [[Carlsbergin]] panimo on kaupungin tunnetuimpia yrityksiä. Öresundin silta yhdistää Kööpenhaminan seudun ruotsalaiseen [[Malmöön]]. Kaupungin keskusta on tiivis ja pyöräilyyn sopiva.
 JATKOT:
 Mikä on Tivoli ja milloin se perustettiin?
-Miten Kööpenhaminan keskusta eroaa muista Pohjoismaiden pääkaupungeista?
+Mikä tekee Kööpenhaminan keskustasta pyöräilykaupungin?
 
 ### 110
 Malmö on kaupunki Ruotsin eteläosassa Skånen maakunnassa Öresundin salmen itärannalla. Se on yksi Ruotsin suurimmista kaupungeista, ja sen vastarannalla on Kööpenhamina. Öresundin silta- ja tunneliyhteys yhdistää kaupungit toisiinsa, ja monet ihmiset matkustavat päivittäin niiden välillä. Malmön tunnetuimpia rakennuksia on [[Turning Torso]], kierteinen pilvenpiirtäjä, jonka siluetti hallitsee satamaa. Skånen alue kuului aikoinaan [[Tanskalle]], ennen kuin se siirtyi Ruotsille 1600-luvulla.
 JATKOT:
 Miten Skåne siirtyi Tanskalta Ruotsille?
-Kuinka monta ihmistä matkustaa päivittäin Kööpenhaminan ja Malmön välillä?
+Kuinka moni matkustaa päivittäin Kööpenhaminan ja Malmön välillä?
 
 ### 111
 Storebæltin kiinteä yhteys on kahdeksantoista kilometriä pitkä kokonaisuus, joka ylittää [[Isonbeltin]] salmen Sjællandin ja Fynin välissä. Siihen kuuluvat riippusilta autoille ja rautatietunneli Sjællandin ja [[Sprogøn]] välillä sekä palkkisilta autoille ja junille Sprogøstä Fyniin. Rakennushanke oli Tanskan historian suurin: hallitus päätti sen toteuttamisesta vuonna 1986, junaliikenne alkoi 1997 ja autoliikenne 1998. Ennen siltaa lautta vei salmen yli noin tunnin, nykyään ylitys kestää kymmenen minuuttia. Yhdessä [[Öresundin]] ja Pikkubeltin siltojen kanssa yhteys mahdollistaa ajamisen Manner-Euroopasta Ruotsiin.
@@ -248,7 +248,7 @@ Mitä eroa on pronssikaudella ja rautakaudella?
 Pellava on kasvi, jota on viljelty sekä kuitunsa että siementensä vuoksi. Kuiduista tehdään pellavakangasta eli liinaa, ja siemenistä saadaan [[pellavaöljyä]]. Tollundin miehen mahalaukusta löydettyyn ateriaan kuului pellavan siemeniä, [[ohraa]] ja villiyrttien siemeniä, joten ruoka oli puuromaista. Rautakaudella pellavaa viljeltiin Pohjois-Euroopassa, ja se oli tärkeä materiaali vaatteissa. Siemeniä käytettiin ravinnoksi, mutta tutkijoiden tulkinnat aterian yksityiskohdista ovat vaihdelleet.
 JATKOT:
 Miten pellavasta valmistettiin kangasta ennen vanhaan?
-Mitä villiyrttien siemeniä Tollundin miehen viimeiseen ateriaan kuului?
+Mitä muuta Tollundin miehen viimeiseen ateriaan kuului?
 
 ### 123
 Vilja tarkoittaa viljelykasveja, kuten ohraa, [[vehnää]], [[ruista]] ja kauraa, joiden jyvistä saadaan ruokaa. Pohjois-Euroopassa viljan viljely oli rautakaudella jo vakiintunutta, ja ohra oli yksi tärkeimmistä lajeista. Tollundin miehen viimeiseen ateriaan kuului [[ohraa]], ja ruoka oli puuromaista. Viljaa täydennettiin kerätyillä villikasveilla, mikä kertoo, että ravinto perustui sekä viljelyyn että keräilyyn. Viljan säilytys ja jauhaminen olivat arjen tärkeitä töitä, vaikka tarkat menetelmät vaihtelivat alueittain.
@@ -353,7 +353,7 @@ Mitä Unescon maailmanperintöluettelo tarkoittaa?
 Miksi liitukalliot kuluvat jatkuvasti merenpuolelta?
 
 ### 140
-Itämeri on Pohjois-Euroopan sisämeri, joka on matala ja suolapitoisuudeltaan vähäinen, eli se on [[murtovettä]]. Se yhdistyy Pohjanmereen kapeiden Tanskan salmien kautta, joita ovat Öresund, Isonbelt ja Pikkubelt. Rannikko jakautuu useaan maahan, muun muassa Tanskaan, Ruotsiin, Suomeen, Viroon, Latviaan, Liettuaan, Puolaan ja Saksaan. Møns Klint sijaitsee Itämeren rannalla Mønin itärannikolla. Vedenvaihto on hidasta, koska salmet ovat ahtaita, ja siksi meri on herkkä ympäristömuutoksille. Tarkat lukuarvot pinta-alasta ja syvyydestä voivat vaihdella lähteittäin.
+Itämeri on Pohjois-Euroopan sisämeri, joka on matala ja suolapitoisuudeltaan vähäinen, eli se on [[murtovettä]]. Se yhdistyy Pohjanmereen kapeiden Tanskan salmien kautta, joita ovat [[Öresund]], [[Isonbelt]] ja Pikkubelt. Rannikko jakautuu useaan maahan, muun muassa Tanskaan, Ruotsiin, Suomeen, Viroon, Latviaan, Liettuaan, Puolaan ja Saksaan. Møns Klint sijaitsee Itämeren rannalla Mønin itärannikolla. Vedenvaihto on hidasta, koska salmet ovat ahtaita, ja siksi meri on herkkä ympäristömuutoksille. Tarkat lukuarvot pinta-alasta ja syvyydestä voivat vaihdella lähteittäin.
 JATKOT:
 Miksi Itämeri on murtovettä eikä suolavettä?
 Mitkä maat rajautuvat Itämereen?
@@ -365,10 +365,10 @@ Miten sukupuuton rajakerros tunnistetaan kalliosta?
 Mikä erottaa Stevns Klintin Møns Klintistä?
 
 ### 142
-Liitu on kalkkikiven laji, joka koostuu pääosin kalsiumkarbonaatista. Se on syntynyt mikroskooppisten levien ja muiden merieliöiden kuorista, jotka laskeutuivat merenpohjaan liitukaudella. Liitu on pehmeää ja valkoista, ja sitä on käytetty muun muassa kirjoittamiseen ja rakennusmateriaalina. Euroopassa liitukerrostumia on Tanskan lisäksi Englannissa, Pohjois-Ranskassa ja Rügenin saarella. [[Kalsiumkarbonaatista]] koostuva kallio liukenee happamaan veteen, mikä selittää, miksi meri ja sade muokkaavat kalliota. Møns Klintin kerrostumat ovat liitukauden ajalta, ja tarkka ikä vaihtelee lähteittäin.
+Liitu on kalkkikiven laji, joka koostuu pääosin kalsiumkarbonaatista. Se on syntynyt mikroskooppisten levien ja muiden merieliöiden kuorista, jotka laskeutuivat merenpohjaan liitukaudella. Liitu on pehmeää ja valkoista, ja sitä on käytetty muun muassa kirjoittamiseen ja rakennusmateriaalina. Euroopassa liitukerrostumia on Tanskan lisäksi Englannissa, Pohjois-Ranskassa ja [[Rügenin]] saarella. [[Kalsiumkarbonaatista]] koostuva kallio liukenee happamaan veteen, mikä selittää, miksi meri ja sade muokkaavat kalliota. Møns Klintin kerrostumat ovat liitukauden ajalta, ja tarkka ikä vaihtelee lähteittäin.
 JATKOT:
 Miksi liitu liukenee helposti happamaan veteen?
-Mitä Doverin valkoisten kallioiden ja Møns Klintin välillä on yhteistä?
+Mitä yhteistä Doverin ja Møns Klintin kallioilla on?
 
 ### 143
 Jääkaudet ovat pitkiä ajanjaksoja, jolloin ilmasto oli nykyistä kylmempi ja suuret jäätiköt peittivät pohjoisia alueita. Tanskakin oli viimeisimmän jääkauden aikana jään peitossa, ja jään paine ja liike muokkasivat liitukerrostumia sekä jättivät jälkeensä [[moreenia]]. Jään vetäytymisen jälkeen, noin 11 700 vuotta sitten, alkoi nykyinen lämpökausi. Serbialainen tutkija [[Milutin Milanković]] selitti jääkausien rytmiä Maan radan muodon, akselin kallistuksen ja prekession muutoksilla. Hänen laskelmansa Maan saaman auringonsäteilyn vaihtelusta ovat yhä tärkeä osa ilmastotutkimusta.
@@ -407,7 +407,7 @@ Miten Møniltä pääsee Sjællandille?
 Millaisia retkeilyreittejä saarella on?
 
 ### 149
-Luonnonsuojelualue on alue, jonka luontoa, maisemaa tai eliölajeja suojellaan lailla. Suojelun tarkoituksena on säilyttää alue mahdollisimman luonnontilaisena, ja siksi toimintaa voidaan rajoittaa esimerkiksi liikkumisreiteillä ja rakentamisessa. Møns Klintin kalliot ja niiden viereinen puistoalue on suojeltu luonnonsuojelualueena, ja alueella kulkee selvästi merkityt reitit. Reiteillä pysyminen suojaa herkkää kasvillisuutta ja vähentää eroosiota. Kohde on lisäksi [[Unescon]] maailmanperintöluettelossa, ja se on tuonut alueelle entistä enemmän huomiota.
+Luonnonsuojelualue on alue, jonka luontoa, maisemaa tai eliölajeja suojellaan lailla. Suojelun tarkoituksena on säilyttää alue mahdollisimman luonnontilaisena, ja siksi toimintaa voidaan rajoittaa esimerkiksi liikkumisreiteillä ja rakentamisessa. [[Møns Klintin]] kalliot ja niiden viereinen puistoalue on suojeltu luonnonsuojelualueena, ja alueella kulkee selvästi merkityt reitit. Reiteillä pysyminen suojaa herkkää kasvillisuutta ja vähentää eroosiota. Kohde on lisäksi [[Unescon]] maailmanperintöluettelossa, ja se on tuonut alueelle entistä enemmän huomiota.
 JATKOT:
 Mitä eroa on luonnonsuojelualueella ja kansallispuistolla?
 Miten kävijämäärä vaikuttaa herkkään luontoon?
@@ -461,7 +461,7 @@ Miten viikingit navigoivat merillä?
 Mitä Jellingin kivet kertovat?
 
 ### 158
-Rautakausi on esihistoriallinen jakso, jolloin rautaa alettiin käyttää työkalujen ja aseiden valmistukseen. Tanskassa se alkoi noin 500 eaa. ja jatkui viikinkiaikaan, ja sen myöhäisintä vaihetta kutsutaan usein germaaniseksi rautakaudeksi. Lindholm Højen pohjoinen osa ulottuu 400-luvulle, joten se edustaa rautakauden hautaperinnettä. Eteläinen osa on [[viikinkiajalta]] vuosilta 1000–1050. Rautakauden ihmiset elivät maataloudesta, ja heidän asuinpaikkansa olivat usein kyliä, kuten Lindholm Høje. Tarkat ajoitukset vaihtelevat lähteittäin.
+Rautakausi on esihistoriallinen jakso, jolloin rautaa alettiin käyttää työkalujen ja aseiden valmistukseen. Tanskassa se alkoi noin 500 eaa. ja jatkui viikinkiaikaan, ja sen myöhäisintä vaihetta kutsutaan usein germaaniseksi rautakaudeksi. [[Lindholm Højen]] pohjoinen osa ulottuu 400-luvulle, joten se edustaa rautakauden hautaperinnettä. Eteläinen osa on [[viikinkiajalta]] vuosilta 1000–1050. Rautakauden ihmiset elivät maataloudesta, ja heidän asuinpaikkansa olivat usein kyliä, kuten Lindholm Høje. Tarkat ajoitukset vaihtelevat lähteittäin.
 JATKOT:
 Millaista elämä oli rautakauden kylässä?
 Miten rautakauden haudat eroavat viikinkiajan haudoista?
