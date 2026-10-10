@@ -1,0 +1,202 @@
+================ KOHTA 21 (kohde:hahmotelma-antiikin-serdika) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Serdika (historia)
+Tietoruudun teksti: Serdika oli merkittävä roomalainen provinssikaupunki nykyisen Sofian paikalla. Konstantinus Suuren kerrotaan kutsuneen sitä omaksi Roomakseen. Attilan hunnit tuhosivat kaupungin vuonna 447, ja Justinianus rakensi sen uudelleen.
+
+### 21.1
+KYSYMYS: Miltä Antiikin Serdika näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Serdika (historia)
+Tietoruudun teksti: Serdika oli merkittävä roomalainen provinssikaupunki nykyisen Sofian paikalla. Konstantinus Suuren kerrotaan kutsuneen sitä omaksi Roomakseen. Attilan hunnit tuhosivat kaupungin vuonna 447, ja Justinianus rakensi sen uudelleen.
+
+### 21.2
+KYSYMYS: Miksi Antiikin Serdika katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Serdika (historia)
+Tietoruudun teksti: Serdika oli merkittävä roomalainen provinssikaupunki nykyisen Sofian paikalla. Konstantinus Suuren kerrotaan kutsuneen sitä omaksi Roomakseen. Attilan hunnit tuhosivat kaupungin vuonna 447, ja Justinianus rakensi sen uudelleen.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-bansko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bansko (luonto · vuori)
+Tietoruudun teksti: Bansko on kaupunki Lounais-Bulgariassa Blagoevgradin alueella Razlogin lähellä. Se sijaitsee Pirin-vuorten juurella Nestos-joen laaksossa 925 metrin korkeudessa, lähellä samannimistä kansallispuistoa. Ennen Bansko oli pääasiassa karjankasvattajien ja kiertävien kauppiaiden yhteisö, mutta nykyään se on kansainvälinen talvi- ja kesämatkailun keskus ja hiihtokeskus. Kaupungista rakennettiin gondolihissi vuonna 2003, ja hiihtoalueella on 75 kilometriä rinteitä ja hissillä saavutettava huippu 2 600 metrin korkeudessa. Viiden kilometrin päässä sijaitsevassa Banyan kylässä on 27 lämpimän kivennäisveden lähdettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Kumasi: Kaupunki, josta ei ollut kahta samaa kuvausta] Vuonna 1873 Brackenbury kirjoitti Kumasista, että "kadut ovat yleensä hyvin leveitä ja puhtaita ja koristeltuja monilla kauniilla banyan-puilla, jotka antavat kiitollista varjoa auringon voimakkailta säteiltä". Vuotta myöhemmin F. Boyle huomautti, että kaupungin hajut eivät koskaan ole viemärin hajuja. Samasta kaupungista kirjoitettiin myös päinvastaista: William Butlerin kuvaus on yhtä halventava kuin toisten on ylistävä. Väkiluvustakaan ei päästy yksiin: asantilaiset lähteet arvioivat 1800-luvun alussa satatuhatta, eurooppalaiset kaksitoista- tai viisitoistatuhatta, ja historioitsija Ivor Wilks neljäkymmentätuhatta 1860-luvulla. Kaupunki oli sama; katsojat eivät.
+- [Intia — maalehti / Luonto: Yksi puu, joka näyttää metsältä] Suuri banyan kasvaa kasvitieteellisessä puutarhassa Howrahissa Kolkatan kupeessa. Banyan eli Ficus benghalensis laskee oksistaan ilmajuuria, jotka juurtuvat maahan ja paksuuntuvat uusiksi rungoiksi — niin puu leviää sivusuunnassa ilman rajaa. Tämä yksilö sai kaksi myrskyä ja sen jälkeen sienitaudin, ja alkuperäinen päärunko poistettiin vuonna 1925 jotta loppuosa säilyisi. Puun ympäri rakennettiin 330 metriä pitkä tie, mutta se on jo kasvanut tien ylikin. Vuonna 1989 se merkittiin maailman laaja-alaisimmaksi puuksi.
+
+### 22.1
+KYSYMYS: Minkä vuorten juurella Bansko sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bansko (luonto · vuori)
+Tietoruudun teksti: Bansko on kaupunki Lounais-Bulgariassa Blagoevgradin alueella Razlogin lähellä. Se sijaitsee Pirin-vuorten juurella Nestos-joen laaksossa 925 metrin korkeudessa, lähellä samannimistä kansallispuistoa. Ennen Bansko oli pääasiassa karjankasvattajien ja kiertävien kauppiaiden yhteisö, mutta nykyään se on kansainvälinen talvi- ja kesämatkailun keskus ja hiihtokeskus. Kaupungista rakennettiin gondolihissi vuonna 2003, ja hiihtoalueella on 75 kilometriä rinteitä ja hissillä saavutettava huippu 2 600 metrin korkeudessa. Viiden kilometrin päässä sijaitsevassa Banyan kylässä on 27 lämpimän kivennäisveden lähdettä.
+
+### 22.2
+KYSYMYS: Kuinka monta lämmintä kivennäislähdettä läheisessä Banyan kylässä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bansko (luonto · vuori)
+Tietoruudun teksti: Bansko on kaupunki Lounais-Bulgariassa Blagoevgradin alueella Razlogin lähellä. Se sijaitsee Pirin-vuorten juurella Nestos-joen laaksossa 925 metrin korkeudessa, lähellä samannimistä kansallispuistoa. Ennen Bansko oli pääasiassa karjankasvattajien ja kiertävien kauppiaiden yhteisö, mutta nykyään se on kansainvälinen talvi- ja kesämatkailun keskus ja hiihtokeskus. Kaupungista rakennettiin gondolihissi vuonna 2003, ja hiihtoalueella on 75 kilometriä rinteitä ja hissillä saavutettava huippu 2 600 metrin korkeudessa. Viiden kilometrin päässä sijaitsevassa Banyan kylässä on 27 lämpimän kivennäisveden lähdettä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kaupunkilehti / Kumasi: Kaupunki, josta ei ollut kahta samaa kuvausta] Vuonna 1873 Brackenbury kirjoitti Kumasista, että "kadut ovat yleensä hyvin leveitä ja puhtaita ja koristeltuja monilla kauniilla banyan-puilla, jotka antavat kiitollista varjoa auringon voimakkailta säteiltä". Vuotta myöhemmin F. Boyle huomautti, että kaupungin hajut eivät koskaan ole viemärin hajuja. Samasta kaupungista kirjoitettiin myös päinvastaista: William Butlerin kuvaus on yhtä halventava kuin toisten on ylistävä. Väkiluvustakaan ei päästy yksiin: asantilaiset lähteet arvioivat 1800-luvun alussa satatuhatta, eurooppalaiset kaksitoista- tai viisitoistatuhatta, ja historioitsija Ivor Wilks neljäkymmentätuhatta 1860-luvulla. Kaupunki oli sama; katsojat eivät.
+- [Intia — maalehti / Luonto: Yksi puu, joka näyttää metsältä] Suuri banyan kasvaa kasvitieteellisessä puutarhassa Howrahissa Kolkatan kupeessa. Banyan eli Ficus benghalensis laskee oksistaan ilmajuuria, jotka juurtuvat maahan ja paksuuntuvat uusiksi rungoiksi — niin puu leviää sivusuunnassa ilman rajaa. Tämä yksilö sai kaksi myrskyä ja sen jälkeen sienitaudin, ja alkuperäinen päärunko poistettiin vuonna 1925 jotta loppuosa säilyisi. Puun ympäri rakennettiin 330 metriä pitkä tie, mutta se on jo kasvanut tien ylikin. Vuonna 1989 se merkittiin maailman laaja-alaisimmaksi puuksi.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-pobiti-kamani) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobiti kamani (luonto · vuori)
+Tietoruudun teksti: Pobiti kamani, bulgariaksi istutetut kivet, on aavikkomainen kalliomuodostuma Varnan läänin luoteisrajalla Bulgariassa. Venäläinen arkeologi ja historioitsija Viktor Teplyakov kuvasi kivipylväät ensimmäisenä vuonna 1829, ja alue julistettiin luonnonmuistomerkiksi 1930-luvun lopulla. Pylväät ovat putkimaisia kertymiä, jotka ovat muodostuneet metaania sisältävien nesteiden noustessa, ja hiekan poistuttua ne ovat muodostaneet aavikkomaisen maiseman. Alue on kahdeksan kilometriä pitkä ja kolme leveä, ja siinä on seitsemän pylväsryhmää; suurimmassa, Dikilitashissa, on yli 350 kiveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ahaggar — kaupunkilehti / Ahaggar: Piikkikivien metsä] Ahaggarin maisemaa hallitsevat pystyt, piikkimäiset kivipylväät, jotka nousevat tasaisesta aavikosta kymmeniä tai jopa yli sata metriä ilmaan. Ne ovat vanhojen tulivuorten sisäisiä syöttökanavia: kun laava jähmettyi kanavan sisällä, siitä tuli ympäröivää kiveä huomattavasti kovempaa, ja miljoonien vuosien eroosio on sittemmin kuluttanut pehmeämmän kiven pois ja jättänyt jäljelle vain kovan ytimen. Tällaisia pystykiviä on Atakorin alueella kymmenittäin, ja monet niistä ovat saaneet oman nimensä paikallisilta asukkailta, jotka ovat käyttäneet niitä maamerkkeinä vuosisatojen ajan aavikon yli kulkiessaan.
+- [Persepolis — kaupunkilehti / Persepolis: Portti, jonka läpi kaikki kulkivat] Ensimmäinen rakennus, johon terassille noussut käveli, oli Xerxes I:n rakennuttama portti. Se on nelikulmainen sali, sivultaan noin kaksikymmentäviisi metriä, ja sen kivipylväät kohoavat noin kuudentoista ja puolen metrin korkeuteen kaksoishärkäpääkoristeisiin pylväänpäihin. Oviaukkoja vartioivat lamassut, siivekkäät härkä-ihmishahmot. Portin oma piirtokirjoitus antaa sille nimen kaikkien kansojen portti, ja teksti on kaiverrettu kolmella kielellä.
+
+### 23.1
+KYSYMYS: Mitä nimi Pobiti kamani tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobiti kamani (luonto · vuori)
+Tietoruudun teksti: Pobiti kamani, bulgariaksi istutetut kivet, on aavikkomainen kalliomuodostuma Varnan läänin luoteisrajalla Bulgariassa. Venäläinen arkeologi ja historioitsija Viktor Teplyakov kuvasi kivipylväät ensimmäisenä vuonna 1829, ja alue julistettiin luonnonmuistomerkiksi 1930-luvun lopulla. Pylväät ovat putkimaisia kertymiä, jotka ovat muodostuneet metaania sisältävien nesteiden noustessa, ja hiekan poistuttua ne ovat muodostaneet aavikkomaisen maiseman. Alue on kahdeksan kilometriä pitkä ja kolme leveä, ja siinä on seitsemän pylväsryhmää; suurimmassa, Dikilitashissa, on yli 350 kiveä.
+
+### 23.2
+KYSYMYS: Kuka kuvasi kivipylväät ensimmäisenä vuonna 1829?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pobiti kamani (luonto · vuori)
+Tietoruudun teksti: Pobiti kamani, bulgariaksi istutetut kivet, on aavikkomainen kalliomuodostuma Varnan läänin luoteisrajalla Bulgariassa. Venäläinen arkeologi ja historioitsija Viktor Teplyakov kuvasi kivipylväät ensimmäisenä vuonna 1829, ja alue julistettiin luonnonmuistomerkiksi 1930-luvun lopulla. Pylväät ovat putkimaisia kertymiä, jotka ovat muodostuneet metaania sisältävien nesteiden noustessa, ja hiekan poistuttua ne ovat muodostaneet aavikkomaisen maiseman. Alue on kahdeksan kilometriä pitkä ja kolme leveä, ja siinä on seitsemän pylväsryhmää; suurimmassa, Dikilitashissa, on yli 350 kiveä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ahaggar — kaupunkilehti / Ahaggar: Piikkikivien metsä] Ahaggarin maisemaa hallitsevat pystyt, piikkimäiset kivipylväät, jotka nousevat tasaisesta aavikosta kymmeniä tai jopa yli sata metriä ilmaan. Ne ovat vanhojen tulivuorten sisäisiä syöttökanavia: kun laava jähmettyi kanavan sisällä, siitä tuli ympäröivää kiveä huomattavasti kovempaa, ja miljoonien vuosien eroosio on sittemmin kuluttanut pehmeämmän kiven pois ja jättänyt jäljelle vain kovan ytimen. Tällaisia pystykiviä on Atakorin alueella kymmenittäin, ja monet niistä ovat saaneet oman nimensä paikallisilta asukkailta, jotka ovat käyttäneet niitä maamerkkeinä vuosisatojen ajan aavikon yli kulkiessaan.
+- [Persepolis — kaupunkilehti / Persepolis: Portti, jonka läpi kaikki kulkivat] Ensimmäinen rakennus, johon terassille noussut käveli, oli Xerxes I:n rakennuttama portti. Se on nelikulmainen sali, sivultaan noin kaksikymmentäviisi metriä, ja sen kivipylväät kohoavat noin kuudentoista ja puolen metrin korkeuteen kaksoishärkäpääkoristeisiin pylväänpäihin. Oviaukkoja vartioivat lamassut, siivekkäät härkä-ihmishahmot. Portin oma piirtokirjoitus antaa sille nimen kaikkien kansojen portti, ja teksti on kaiverrettu kolmella kielellä.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-kaliakra) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliakra (meri)
+Tietoruudun teksti: Kaliakra on niemi Etelä-Dobrudzhassa Bulgarian pohjoisella Mustanmeren rannikolla, ja se päättyy pitkään kapeaan kärkeen 12 kilometriä Kavarnasta itään. Rannikko on jyrkkää, ja pystysuorat kalliot laskeutuvat 70 metrin korkeudesta mereen; alue on luonnonsuojelualue, jolla voi havaita delfiinejä ja merimetsoja ja jonka yli kulkee tärkeä lintujen muuttoreitti Via Pontica. Nimi tulee bysanttilaisesta kreikasta ja tarkoittaa kaunista niemeä. Niemellä on keskiaikaisen Dobrotitsan despotaatin pääkaupungin linnoitusmuurien, vesijohdon ja kylpylän jäänteitä, ja ensimmäinen nykyaikainen majakka rakennettiin vuonna 1866 Osmanien valtakunnan majakkayhtiön toimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 24.1
+KYSYMYS: Mitä nimi Kaliakra tarkoittaa perinteisen käännöksen mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliakra (meri)
+Tietoruudun teksti: Kaliakra on niemi Etelä-Dobrudzhassa Bulgarian pohjoisella Mustanmeren rannikolla, ja se päättyy pitkään kapeaan kärkeen 12 kilometriä Kavarnasta itään. Rannikko on jyrkkää, ja pystysuorat kalliot laskeutuvat 70 metrin korkeudesta mereen; alue on luonnonsuojelualue, jolla voi havaita delfiinejä ja merimetsoja ja jonka yli kulkee tärkeä lintujen muuttoreitti Via Pontica. Nimi tulee bysanttilaisesta kreikasta ja tarkoittaa kaunista niemeä. Niemellä on keskiaikaisen Dobrotitsan despotaatin pääkaupungin linnoitusmuurien, vesijohdon ja kylpylän jäänteitä, ja ensimmäinen nykyaikainen majakka rakennettiin vuonna 1866 Osmanien valtakunnan majakkayhtiön toimesta.
+
+### 24.2
+KYSYMYS: Minä vuonna niemen ensimmäinen nykyaikainen majakka rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaliakra (meri)
+Tietoruudun teksti: Kaliakra on niemi Etelä-Dobrudzhassa Bulgarian pohjoisella Mustanmeren rannikolla, ja se päättyy pitkään kapeaan kärkeen 12 kilometriä Kavarnasta itään. Rannikko on jyrkkää, ja pystysuorat kalliot laskeutuvat 70 metrin korkeudesta mereen; alue on luonnonsuojelualue, jolla voi havaita delfiinejä ja merimetsoja ja jonka yli kulkee tärkeä lintujen muuttoreitti Via Pontica. Nimi tulee bysanttilaisesta kreikasta ja tarkoittaa kaunista niemeä. Niemellä on keskiaikaisen Dobrotitsan despotaatin pääkaupungin linnoitusmuurien, vesijohdon ja kylpylän jäänteitä, ja ensimmäinen nykyaikainen majakka rakennettiin vuonna 1866 Osmanien valtakunnan majakkayhtiön toimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-vratsa-ledenika) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ledenikan luola (luonto · vuori)
+Tietoruudun teksti: Ledenika, bulgariaksi jäinen, on luola Balkanvuorten luoteisosassa 16 kilometrin päässä Vratsan kaupungista; sisäänkäynti on noin 830 metrin korkeudessa. Luolassa on runsaasti käytäviä ja vaikuttavia karstimuodostelmia, kuten stalaktiitteja ja stalagmiitteja, ja se löydettiin noin 1900-luvun alussa. Luola on noin 300 metriä pitkä ja siinä on kymmenen salia, joista suurin, Suuri temppeli, on 15 metriä korkea; matkailijoille se on ollut avoinna vuodesta 1961. Talvella katossa voi olla jääpuikkoja, ja niiden runsauden arvellaan antaneen luolalle nimen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 25.1
+KYSYMYS: Mitä nimi Ledenika tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ledenikan luola (luonto · vuori)
+Tietoruudun teksti: Ledenika, bulgariaksi jäinen, on luola Balkanvuorten luoteisosassa 16 kilometrin päässä Vratsan kaupungista; sisäänkäynti on noin 830 metrin korkeudessa. Luolassa on runsaasti käytäviä ja vaikuttavia karstimuodostelmia, kuten stalaktiitteja ja stalagmiitteja, ja se löydettiin noin 1900-luvun alussa. Luola on noin 300 metriä pitkä ja siinä on kymmenen salia, joista suurin, Suuri temppeli, on 15 metriä korkea; matkailijoille se on ollut avoinna vuodesta 1961. Talvella katossa voi olla jääpuikkoja, ja niiden runsauden arvellaan antaneen luolalle nimen.
+
+### 25.2
+KYSYMYS: Minä vuonna luola avattiin matkailijoille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ledenikan luola (luonto · vuori)
+Tietoruudun teksti: Ledenika, bulgariaksi jäinen, on luola Balkanvuorten luoteisosassa 16 kilometrin päässä Vratsan kaupungista; sisäänkäynti on noin 830 metrin korkeudessa. Luolassa on runsaasti käytäviä ja vaikuttavia karstimuodostelmia, kuten stalaktiitteja ja stalagmiitteja, ja se löydettiin noin 1900-luvun alussa. Luola on noin 300 metriä pitkä ja siinä on kymmenen salia, joista suurin, Suuri temppeli, on 15 metriä korkea; matkailijoille se on ollut avoinna vuodesta 1961. Talvella katossa voi olla jääpuikkoja, ja niiden runsauden arvellaan antaneen luolalle nimen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

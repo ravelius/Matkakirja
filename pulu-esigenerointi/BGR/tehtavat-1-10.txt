@@ -1,0 +1,147 @@
+================ KOHTA 46 (kohde:hahmotelma-balchik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balchik (kulttuuri)
+Tietoruudun teksti: Balchik on kaupunki ja merenrantakohde Bulgarian Mustanmeren rannikolla Etelä-Dobrudzhassa, 42 kilometriä Varnasta koilliseen. Kaupunki levittäytyy kukkulaisille terasseille Dobrudzhan ylätasangolta mereen, ja sitä kutsutaan valkoiseksi kaupungiksi sen valkoisten kallioiden vuoksi. Traakialainen asutus siirtomaavallattiin kreikkalaisten toimesta nimellä Krounoi, ja se nimettiin uudelleen Dionysopolikseksi, kun mereltä löydettiin Dionysoksen patsas. Keskiajalla siellä oli Karvunan alueen pääkaupunki, ja Dobrotitsa siirsi despotaatin pääkaupungin Kaliakraan; Osmanien aikana kaupunki sai nykyisen nimensä. Vuosina 1913–1940 se oli Romanian hallussa, jolloin Balchikin palatsi oli kuningatar Marien suosima kesäasuinpaikka, ja palatsi ja sen kasvitieteellinen puutarha ovat nykyään kaupungin suosituimmat nähtävyydet.
+
+### 46.1
+KYSYMYS: Millä lempinimellä Balchikia kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balchik (kulttuuri)
+Tietoruudun teksti: Balchik on kaupunki ja merenrantakohde Bulgarian Mustanmeren rannikolla Etelä-Dobrudzhassa, 42 kilometriä Varnasta koilliseen. Kaupunki levittäytyy kukkulaisille terasseille Dobrudzhan ylätasangolta mereen, ja sitä kutsutaan valkoiseksi kaupungiksi sen valkoisten kallioiden vuoksi. Traakialainen asutus siirtomaavallattiin kreikkalaisten toimesta nimellä Krounoi, ja se nimettiin uudelleen Dionysopolikseksi, kun mereltä löydettiin Dionysoksen patsas. Keskiajalla siellä oli Karvunan alueen pääkaupunki, ja Dobrotitsa siirsi despotaatin pääkaupungin Kaliakraan; Osmanien aikana kaupunki sai nykyisen nimensä. Vuosina 1913–1940 se oli Romanian hallussa, jolloin Balchikin palatsi oli kuningatar Marien suosima kesäasuinpaikka, ja palatsi ja sen kasvitieteellinen puutarha ovat nykyään kaupungin suosituimmat nähtävyydet.
+
+### 46.2
+KYSYMYS: Kenen kuningattaren suosima kesäasuinpaikka Balchikin palatsi oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balchik (kulttuuri)
+Tietoruudun teksti: Balchik on kaupunki ja merenrantakohde Bulgarian Mustanmeren rannikolla Etelä-Dobrudzhassa, 42 kilometriä Varnasta koilliseen. Kaupunki levittäytyy kukkulaisille terasseille Dobrudzhan ylätasangolta mereen, ja sitä kutsutaan valkoiseksi kaupungiksi sen valkoisten kallioiden vuoksi. Traakialainen asutus siirtomaavallattiin kreikkalaisten toimesta nimellä Krounoi, ja se nimettiin uudelleen Dionysopolikseksi, kun mereltä löydettiin Dionysoksen patsas. Keskiajalla siellä oli Karvunan alueen pääkaupunki, ja Dobrotitsa siirsi despotaatin pääkaupungin Kaliakraan; Osmanien aikana kaupunki sai nykyisen nimensä. Vuosina 1913–1940 se oli Romanian hallussa, jolloin Balchikin palatsi oli kuningatar Marien suosima kesäasuinpaikka, ja palatsi ja sen kasvitieteellinen puutarha ovat nykyään kaupungin suosituimmat nähtävyydet.
+
+### 46.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+### 46.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 46 YHTEINEN KONTEKSTI
+
+================ KOHTA 47 (kohde:hahmotelma-cherven) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chervenin linnoitus (historia)
+Tietoruudun teksti: Chervenin linnoitus on keskiaikaisen kaupungin rauniot Cherni Lom -joen mutkassa kalliokukkulalla, noin 30 kilometriä Rusesta etelään Koillis-Bulgariassa. Kaupunki oli 1100-luvulta 1300-luvulle yksi Toisen Bulgarian valtakunnan tärkeimmistä sotilas-, hallinto- ja talouskeskuksista, ja siitä tuli vuonna 1235 bulgarialaisen ortodoksisen piispan istuimeksi. Kaivauksissa on paljastunut linnoitettu palatsialue, kaksi maanalaista vedenjohtokäytävää, kolmetoista kirkkoa sekä hallinto- ja asuinrakennuksia ja työpajoja. Osmanit valtasivat kaupungin vuonna 1388, ja vaikka se säilytti aluksi hallinnollisen asemansa, se autioitui vähitellen eikä sitä koskaan asutettu uudelleen. Kalliolle louhitut vedenjohdot ja alueen kalliokirkot ovat yhä nähtävissä kaivausalueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kohdekartta / Kohdekartta: Gidan Makaman museo] 1400-luku Ennen kuin Gidan Rumfa rakennettiin, Kanon hausakuninkaat asuivat tässä talossa. Se rakennettiin 1400-luvulla nuorelle Muhammad Rumfalle, joka oli juuri saanut perinteisen arvonimen makama. Kun Rumfasta tuli kuningas ja hän muutti uuteen palatsiin, taloon jäivät asumaan seuraavat makamat. Brittien vallattua Kanon 1903 rakennus toimi lyhyen aikaa siirtomaavirkamiesten toimistona. Sen jälkeen se jaettiin kolmeen: museoksi, alakouluksi ja asuinrakennukseksi. Seinät olivat alun perin savea, ja talo on yhä yksi parhaista esimerkeistä perinteisestä hausa-arkkitehtuurista, vaikka korjauksissa on käytetty nykyaineita. Museossa on yksitoista galleriaa, jotka ovat vanhojen makamojen huoneit…
+- [Murzuk — kaupunkilehti / Murzuk: Qala at Turk — turkkilaisten linna] Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, "turkkilaisten linna". Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.
+
+### 47.1
+KYSYMYS: Miksi Chervenistä tuli niin tärkeä kaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chervenin linnoitus (historia)
+Tietoruudun teksti: Chervenin linnoitus on keskiaikaisen kaupungin rauniot Cherni Lom -joen mutkassa kalliokukkulalla, noin 30 kilometriä Rusesta etelään Koillis-Bulgariassa. Kaupunki oli 1100-luvulta 1300-luvulle yksi Toisen Bulgarian valtakunnan tärkeimmistä sotilas-, hallinto- ja talouskeskuksista, ja siitä tuli vuonna 1235 bulgarialaisen ortodoksisen piispan istuimeksi. Kaivauksissa on paljastunut linnoitettu palatsialue, kaksi maanalaista vedenjohtokäytävää, kolmetoista kirkkoa sekä hallinto- ja asuinrakennuksia ja työpajoja. Osmanit valtasivat kaupungin vuonna 1388, ja vaikka se säilytti aluksi hallinnollisen asemansa, se autioitui vähitellen eikä sitä koskaan asutettu uudelleen. Kalliolle louhitut vedenjohdot ja alueen kalliokirkot ovat yhä nähtävissä kaivausalueella.
+
+### 47.2
+KYSYMYS: Mitä kaupungille tapahtui osmanien vallattua sen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chervenin linnoitus (historia)
+Tietoruudun teksti: Chervenin linnoitus on keskiaikaisen kaupungin rauniot Cherni Lom -joen mutkassa kalliokukkulalla, noin 30 kilometriä Rusesta etelään Koillis-Bulgariassa. Kaupunki oli 1100-luvulta 1300-luvulle yksi Toisen Bulgarian valtakunnan tärkeimmistä sotilas-, hallinto- ja talouskeskuksista, ja siitä tuli vuonna 1235 bulgarialaisen ortodoksisen piispan istuimeksi. Kaivauksissa on paljastunut linnoitettu palatsialue, kaksi maanalaista vedenjohtokäytävää, kolmetoista kirkkoa sekä hallinto- ja asuinrakennuksia ja työpajoja. Osmanit valtasivat kaupungin vuonna 1388, ja vaikka se säilytti aluksi hallinnollisen asemansa, se autioitui vähitellen eikä sitä koskaan asutettu uudelleen. Kalliolle louhitut vedenjohdot ja alueen kalliokirkot ovat yhä nähtävissä kaivausalueella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kano — kohdekartta / Kohdekartta: Gidan Makaman museo] 1400-luku Ennen kuin Gidan Rumfa rakennettiin, Kanon hausakuninkaat asuivat tässä talossa. Se rakennettiin 1400-luvulla nuorelle Muhammad Rumfalle, joka oli juuri saanut perinteisen arvonimen makama. Kun Rumfasta tuli kuningas ja hän muutti uuteen palatsiin, taloon jäivät asumaan seuraavat makamat. Brittien vallattua Kanon 1903 rakennus toimi lyhyen aikaa siirtomaavirkamiesten toimistona. Sen jälkeen se jaettiin kolmeen: museoksi, alakouluksi ja asuinrakennukseksi. Seinät olivat alun perin savea, ja talo on yhä yksi parhaista esimerkeistä perinteisestä hausa-arkkitehtuurista, vaikka korjauksissa on käytetty nykyaineita. Museossa on yksitoista galleriaa, jotka ovat vanhojen makamojen huoneit…
+- [Murzuk — kaupunkilehti / Murzuk: Qala at Turk — turkkilaisten linna] Murzukin maalinnoitus tunnettiin ottomaanien aikana nimellä Qala at Turk, "turkkilaisten linna". Sen juuret ulottuvat 1300-luvun alkuun, jolloin Marokosta saapunut Awlad Muhammad -suku teki oaasista oman sulttaanikuntansa pääkaupungin ja rakensi kukkulalle savitiilistä nousevan linnoituksen hallitsemaan karavaaniteitä. Ottomaanien vallattua Fezzanin 1500-luvun lopulla linna toimi ajoittain paikallishallinnon ja varuskunnan tukikohtana. Muureja on sittemmin korjattu vuosisatojen mittaan, mutta hammastetut tornit ja jyrkkä savivalli seisovat yhä hiekan keskellä muistuttamassa kaupungin poliittisesta merkityksestä.
+
+### 47.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+### 47.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 47 YHTEINEN KONTEKSTI
+
+================ KOHTA 48 (nosto:areena) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sofia
+Maa, jossa pelaaja on: Bulgaria
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hotellin aulassa on aukko lattiassa — sen alla taistelivat krokotiilit ja karhut
+Tietoruudun teksti: Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastausta odotettiin kahdeksankymmentäviisi vuotta.
+
+Kun rakennus lopulta löytyi, laatan lupaus osoittautui kirjaimelliseksi. Maasta nousivat portit liukuovineen, joista eläimet päästettiin kentälle, karhun ja villisian luita, satoja pronssikolikoita ja savitiiliä, joihin oli painunut vuohien, koirien ja kissojen tassunjälkiä. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle ihmiselle, ja areena oli noussut kahdessa vaiheessa Diocletianuksen ja Konstantinus Suuren aikana kaupunginmuurin ulkopuolelle. Käytössä se ehti olla alle sadan vuoden ajan: 400-luvull…
+Isoisän matkakirjamerkintä: Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Serdican areena] Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.
+- [Sofia — kaupunkilehti / Historia: Areena löytyi hotellin perustuksista] Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.
+
+### 48.1
+KYSYMYS: Miksi hotelli rakennettiin amfiteatterin päälle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sofia
+Maa, jossa pelaaja on: Bulgaria
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hotellin aulassa on aukko lattiassa — sen alla taistelivat krokotiilit ja karhut
+Tietoruudun teksti: Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastausta odotettiin kahdeksankymmentäviisi vuotta.
+
+Kun rakennus lopulta löytyi, laatan lupaus osoittautui kirjaimelliseksi. Maasta nousivat portit liukuovineen, joista eläimet päästettiin kentälle, karhun ja villisian luita, satoja pronssikolikoita ja savitiiliä, joihin oli painunut vuohien, koirien ja kissojen tassunjälkiä. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle ihmiselle, ja areena oli noussut kahdessa vaiheessa Diocletianuksen ja Konstantinus Suuren aikana kaupunginmuurin ulkopuolelle. Käytössä se ehti olla alle sadan vuoden ajan: 400-luvull…
+Isoisän matkakirjamerkintä: Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Historia: Areena löytyi hotellin perustuksista] Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.
+
+### 48.2
+KYSYMYS: Mitä Serdican amfiteatterille tapahtui antiikin jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sofia
+Maa, jossa pelaaja on: Bulgaria
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hotellin aulassa on aukko lattiassa — sen alla taistelivat krokotiilit ja karhut
+Tietoruudun teksti: Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastausta odotettiin kahdeksankymmentäviisi vuotta.
+
+Kun rakennus lopulta löytyi, laatan lupaus osoittautui kirjaimelliseksi. Maasta nousivat portit liukuovineen, joista eläimet päästettiin kentälle, karhun ja villisian luita, satoja pronssikolikoita ja savitiiliä, joihin oli painunut vuohien, koirien ja kissojen tassunjälkiä. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle ihmiselle, ja areena oli noussut kahdessa vaiheessa Diocletianuksen ja Konstantinus Suuren aikana kaupunginmuurin ulkopuolelle. Käytössä se ehti olla alle sadan vuoden ajan: 400-luvull…
+Isoisän matkakirjamerkintä: Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Historia: Areena löytyi hotellin perustuksista] Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.
+- [Sofia — kohdekartta / Kohdekartta: Serdican areena] Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.
+
+### 48.3
+KYSYMYS: Taistelivatko areenoilla oikeasti krokotiilit?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Sofia
+Maa, jossa pelaaja on: Bulgaria
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Hotellin aulassa on aukko lattiassa — sen alla taistelivat krokotiilit ja karhut
+Tietoruudun teksti: Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastausta odotettiin kahdeksankymmentäviisi vuotta.
+
+Kun rakennus lopulta löytyi, laatan lupaus osoittautui kirjaimelliseksi. Maasta nousivat portit liukuovineen, joista eläimet päästettiin kentälle, karhun ja villisian luita, satoja pronssikolikoita ja savitiiliä, joihin oli painunut vuohien, koirien ja kissojen tassunjälkiä. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle ihmiselle, ja areena oli noussut kahdessa vaiheessa Diocletianuksen ja Konstantinus Suuren aikana kaupunginmuurin ulkopuolelle. Käytössä se ehti olla alle sadan vuoden ajan: 400-luvull…
+Isoisän matkakirjamerkintä: Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.
+
+### 48.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI
+
+### 48.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 48 YHTEINEN KONTEKSTI

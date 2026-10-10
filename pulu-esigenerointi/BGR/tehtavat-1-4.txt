@@ -1,0 +1,253 @@
+================ KOHTA 16 (kohde:pernik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernik (kulttuuri)
+Tietoruudun teksti: Tammikuun lopulla Pernik kuuluu kukereille: naamioituneet hahmot tanssivat kaduilla puisissa eläinnaamioissa, vyöllään suuret kellot, joiden kalke karkottaa perinteen mukaan pahat henget ja tuo kylälle sadon, terveyden ja onnen. Survan naamiaisfestivaali on järjestetty vuodesta 1966, ja se on Balkanin ja koko itäisen Euroopan suurimpia: kolmen päivän ajaksi kaupunkiin kokoontuu tuhansia kukereita eri puolilta Bulgariaa ja maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Hirviö joka karkottaa talven] Tammikuu — Talven pimeimpänä aikana bulgarialaisten kylien läpi kulkee kukeri-naamioituja miehiä: raskaissa turkiksissa ja puisissa tai nahkaisissa naamioissa, vyötäröllä painavat pronssikellot, joita kolistellaan niin kovaa kuin jaksaa. Äänen ja pelottavan ulkonäön uskottiin karkottavan pahat henget ja takaavan kylälle hyvän sadon ja terveyden — perinteen juuret ovat esikristillisissä riiteissä. Vuodesta 1966 asti Pernikin kaupunkiin on kokoontunut tammikuussa satoja kukeri-ryhmiä ympäri maata kansainväliseen Surva-naamiofestivaaliin, joka liitettiin Unescon aineettoman kulttuuriperinnön luetteloon 2015.
+- [Salta — kaupunkilehti / Salta: Kaksi laatikkoa meressä] 1592 ja 1692 — Kertomuksen mukaan Callaon sataman edustalla nähtiin 19. kesäkuuta 1592 kaksi suurta laatikkoa kellumassa. Toisessa oli Neitsyt Córdoban luostarille, toisessa ristiinnaulittu Saltan pääkirkolle; koskaan ei saatu selville, mikä alus ne toi Espanjasta. Kuvat kannettiin muulien selässä vanhaa inkatietä noin 2 800 kilometriä. Sata vuotta myöhemmin, 13. syyskuuta 1692, maanjäristys tuhosi naapurikaupungin Estecon ja vaurioitti Saltaa; perimätiedon mukaan Neitsyt-kuva löytyi lattialta vahingoittumattomana, Kristus vietiin kulkueeseen ja 16. päivänä maa lakkasi tärisemästä. Milagro-juhla vietetään yhä 13.—15. syyskuuta, ja kulkue kokoaa vuosittain yli 850 000 ihmistä.
+
+### 16.1
+KYSYMYS: Miten kukeri-naamio tehdään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernik (kulttuuri)
+Tietoruudun teksti: Tammikuun lopulla Pernik kuuluu kukereille: naamioituneet hahmot tanssivat kaduilla puisissa eläinnaamioissa, vyöllään suuret kellot, joiden kalke karkottaa perinteen mukaan pahat henget ja tuo kylälle sadon, terveyden ja onnen. Survan naamiaisfestivaali on järjestetty vuodesta 1966, ja se on Balkanin ja koko itäisen Euroopan suurimpia: kolmen päivän ajaksi kaupunkiin kokoontuu tuhansia kukereita eri puolilta Bulgariaa ja maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Hirviö joka karkottaa talven] Tammikuu — Talven pimeimpänä aikana bulgarialaisten kylien läpi kulkee kukeri-naamioituja miehiä: raskaissa turkiksissa ja puisissa tai nahkaisissa naamioissa, vyötäröllä painavat pronssikellot, joita kolistellaan niin kovaa kuin jaksaa. Äänen ja pelottavan ulkonäön uskottiin karkottavan pahat henget ja takaavan kylälle hyvän sadon ja terveyden — perinteen juuret ovat esikristillisissä riiteissä. Vuodesta 1966 asti Pernikin kaupunkiin on kokoontunut tammikuussa satoja kukeri-ryhmiä ympäri maata kansainväliseen Surva-naamiofestivaaliin, joka liitettiin Unescon aineettoman kulttuuriperinnön luetteloon 2015.
+
+### 16.2
+KYSYMYS: Pääseekö kulkueeseen mukaan itse?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pernik (kulttuuri)
+Tietoruudun teksti: Tammikuun lopulla Pernik kuuluu kukereille: naamioituneet hahmot tanssivat kaduilla puisissa eläinnaamioissa, vyöllään suuret kellot, joiden kalke karkottaa perinteen mukaan pahat henget ja tuo kylälle sadon, terveyden ja onnen. Survan naamiaisfestivaali on järjestetty vuodesta 1966, ja se on Balkanin ja koko itäisen Euroopan suurimpia: kolmen päivän ajaksi kaupunkiin kokoontuu tuhansia kukereita eri puolilta Bulgariaa ja maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salta — kaupunkilehti / Salta: Kaksi laatikkoa meressä] 1592 ja 1692 — Kertomuksen mukaan Callaon sataman edustalla nähtiin 19. kesäkuuta 1592 kaksi suurta laatikkoa kellumassa. Toisessa oli Neitsyt Córdoban luostarille, toisessa ristiinnaulittu Saltan pääkirkolle; koskaan ei saatu selville, mikä alus ne toi Espanjasta. Kuvat kannettiin muulien selässä vanhaa inkatietä noin 2 800 kilometriä. Sata vuotta myöhemmin, 13. syyskuuta 1692, maanjäristys tuhosi naapurikaupungin Estecon ja vaurioitti Saltaa; perimätiedon mukaan Neitsyt-kuva löytyi lattialta vahingoittumattomana, Kristus vietiin kulkueeseen ja 16. päivänä maa lakkasi tärisemästä. Milagro-juhla vietetään yhä 13.—15. syyskuuta, ja kulkue kokoaa vuosittain yli 850 000 ihmistä.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:nesebar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nesebar (kaupungit)
+Tietoruudun teksti: Nesebar on pienelle niemelle rakennettu vanha kaupunki Mustanmeren rannalla Burgasin alueella. Unesco otti sen maailmanperintöluetteloon vuonna 1983, ja syy on kerrostumissa: samalla kalliolla on kolmen vuosituhannen jäljet päällekkäin.
+
+Ensin paikalla oli traakialainen asutus. 500-luvun eaa. alussa Megarasta tulleet kreikkalaiset perustivat siirtokunnan nimeltä Mesambria, joka oli Mustanmeren rannikon ainoa doorilainen siirtokunta ja merkittävä kauppapaikka. Vuodesta 71 eaa. kaupunki oli Rooman vallan alla mutta säilytti etuoikeutensa, muun muassa oikeuden lyödä omaa rahaa.
+
+Bysantin aikana Nesebar oli linnoitus, josta bysanttilaiset ja bulgarialaiset kiistelivät toistuvasti: kaani Krum valtasi sen vuonna 812, ja myöhemmin se palasi Bysantille. Tsaari Ivan Aleksanterin kaudella (1331—1371) kaupunki kukoisti, kunnes ristiretkeläiset valtasivat sen 1366.
+
+Kaupungissa ja sen ympäristössä …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+- [Colombo — kohdekartta / Kohdekartta: Wolvendaalin kirkko] 1749–1757 Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei tullut, ja pattitilanne aukesi vasta kuvernööri Julius Valentyn Stein van Gollenessen tultua virkaan 1743: hän päätti, että uusi kirkko nousee muurien ulkopuolelle suomaalle. Eurooppalaiset luulivat seudun sakaaleja susiksi, ja alue sai nimen Wolvendaal eli suden laakso. Perustukset laskettiin 1749, ja rakentaminen kesti kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. Rakennus on doorilainen ja pohjaltaan tasavartinen risti. Seinät ovat lähes puolitoista metri…
+
+### 17.1
+KYSYMYS: Mikä doorilainen siirtokunta oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nesebar (kaupungit)
+Tietoruudun teksti: Nesebar on pienelle niemelle rakennettu vanha kaupunki Mustanmeren rannalla Burgasin alueella. Unesco otti sen maailmanperintöluetteloon vuonna 1983, ja syy on kerrostumissa: samalla kalliolla on kolmen vuosituhannen jäljet päällekkäin.
+
+Ensin paikalla oli traakialainen asutus. 500-luvun eaa. alussa Megarasta tulleet kreikkalaiset perustivat siirtokunnan nimeltä Mesambria, joka oli Mustanmeren rannikon ainoa doorilainen siirtokunta ja merkittävä kauppapaikka. Vuodesta 71 eaa. kaupunki oli Rooman vallan alla mutta säilytti etuoikeutensa, muun muassa oikeuden lyödä omaa rahaa.
+
+Bysantin aikana Nesebar oli linnoitus, josta bysanttilaiset ja bulgarialaiset kiistelivät toistuvasti: kaani Krum valtasi sen vuonna 812, ja myöhemmin se palasi Bysantille. Tsaari Ivan Aleksanterin kaudella (1331—1371) kaupunki kukoisti, kunnes ristiretkeläiset valtasivat sen 1366.
+
+Kaupungissa ja sen ympäristössä …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montevideo — kohdekartta / Kohdekartta: Estévez-palatsi] 1874 Argentiinalainen yrittäjä ja sijoittaja Francisco Estévez tilasi talon 1873 ranskalaissyntyiseltä insinöörikapteenilta Édouard Manuel de Castelilta. Palatsi valmistui toukokuussa 1874 asuintaloksi korttelille, joka oli aiemmin ollut muurikaupungin ulkoraja. Sääntö vaati, että Plaza Independencian ympärillä julkisivun on oltava doorilainen, ja niin siitä tuli. Estévez ja hänen vaimonsa Matilde Nin Reyes asuivat toisessa kerroksessa, ja katutason siipi vuokrattiin Italian konsulaatille ja liikkeille. Estévezin konkurssin jälkeen talo siirtyi Banco de Londres y Río de la Platalle, ja valtio osti sen pankilta 1878 hintaan 130 000 Uruguayn pesoa. Presidentti Lorenzo Latorre teki palatsista …
+- [Colombo — kohdekartta / Kohdekartta: Wolvendaalin kirkko] 1749–1757 Kuvernööri Gustaaf Willem van Imhoff pyysi 1736 kauppakomppanialta lupaa purkaa linnoituksen sisällä ollut Kasteel Kerk ja rakentaa tilalle uusi kirkko. Lupaa ei tullut, ja pattitilanne aukesi vasta kuvernööri Julius Valentyn Stein van Gollenessen tultua virkaan 1743: hän päätti, että uusi kirkko nousee muurien ulkopuolelle suomaalle. Eurooppalaiset luulivat seudun sakaaleja susiksi, ja alue sai nimen Wolvendaal eli suden laakso. Perustukset laskettiin 1749, ja rakentaminen kesti kahdeksan vuotta. Kirkko vihittiin 6. maaliskuuta 1757, ja paikalla oli kaksi kuvernööriä, väistyvä ja tuleva. Rakennus on doorilainen ja pohjaltaan tasavartinen risti. Seinät ovat lähes puolitoista metri…
+
+### 17.2
+KYSYMYS: Miksi kirkkoja on niin monta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nesebar (kaupungit)
+Tietoruudun teksti: Nesebar on pienelle niemelle rakennettu vanha kaupunki Mustanmeren rannalla Burgasin alueella. Unesco otti sen maailmanperintöluetteloon vuonna 1983, ja syy on kerrostumissa: samalla kalliolla on kolmen vuosituhannen jäljet päällekkäin.
+
+Ensin paikalla oli traakialainen asutus. 500-luvun eaa. alussa Megarasta tulleet kreikkalaiset perustivat siirtokunnan nimeltä Mesambria, joka oli Mustanmeren rannikon ainoa doorilainen siirtokunta ja merkittävä kauppapaikka. Vuodesta 71 eaa. kaupunki oli Rooman vallan alla mutta säilytti etuoikeutensa, muun muassa oikeuden lyödä omaa rahaa.
+
+Bysantin aikana Nesebar oli linnoitus, josta bysanttilaiset ja bulgarialaiset kiistelivät toistuvasti: kaani Krum valtasi sen vuonna 812, ja myöhemmin se palasi Bysantille. Tsaari Ivan Aleksanterin kaudella (1331—1371) kaupunki kukoisti, kunnes ristiretkeläiset valtasivat sen 1366.
+
+Kaupungissa ja sen ympäristössä …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+- [Coober Pedy — kaupunkilehti / Coober Pedy: Kirkko kalliossa] Coober Pedyssä asuu yli neljäkymmentäviisi kansallisuutta, sillä toisen maailmansodan jälkeen kaivoksille saapui opaalinetsijöitä ympäri Etelä- ja Itä-Eurooppaa. Serbialaiset siirtolaiset louhivat 1990-luvun alussa oman kirkkonsa suoraan hiekkakiveen: seinät kaartuvat luonnollisina, ja alttarin ikonit hohtavat kynttilänvalossa kuin missä tahansa kivikirkossa, vaikka koko tila on porattu mäen sisään. Kirkkoa käyttävät nykyisin sekä serbialainen että kreikkalainen ortodoksiyhteisö, ja kaupungissa on muitakin maanalaisia kirkkoja sekä moskeija. Yhteinen kokemus kuumuudesta ja kaivostyöstä on hitsannut hyvin erilaiset taustat yhteen.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:belogradtsik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belogradtšikin kalliot (luonto)
+Tietoruudun teksti: Belogradtšikin kalliot ovat hiekkakivestä ja konglomeraatista muodostunut kivimuodostelmien joukko Luoteis-Bulgariassa Vidinin alueella, Balkanvuorten länsirinteillä. Muodostumat jatkuvat noin viidenkymmenen neliökilometrin alalla Rabišan kylältä idän suuntaan Belotintsiin, ja korkeimmat kalliot kohoavat jopa kahteensataan metriin.
+
+Ruosteenpunaisen värin antaa rautaoksidi; osa hiekkakivistä on vaaleampia. Muodostuminen alkoi permikaudella noin 230 miljoonaa vuotta sitten ja jatkui trias- ja jurakaudella.
+
+Kalliot on totuttu näkemään hahmoina, ja monilla on oma nimensä: Aadam ja Eeva, Madonna, Karhu, Koulutyttö ja Dervissi.
+
+Belogradtšikin linnoitus on rakennettu niin, että kalliot ovat osa sen puolustusta: muurit yhdistävät kivimuodostumia toisiinsa. Alue julistettiin luonnonmuistomerkiksi vuonna 1949 ja liitettiin maan luonnonmuistomerkkien rekisteriin 1987.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Alkuperäiskansat: Punainen kallio saa toisen nimen] 1873 — Heinäkuun 19. päivänä 1873 maanmittaaja William Gosse näki tasangolta kohoavan hiekkakiviselänteen ja nimesi sen Ayers Rockiksi Etelä-Australian ylisihteerin Henry Ayersin mukaan. Alueen anangu-kansalle paikka oli jo silloin Uluru: sen ympärillä on lähteitä, vesikuoppia, luolia ja vanhoja kalliomaalauksia. Kallio kohoaa tasangolta 348 metriä, ja sen ympärysmitta on 9,4 kilometriä. Maanomistus palautettiin anangulle 26. lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti kieltää kiipeämisen, ja kielto astui voimaan lokakuussa 2019 — kalliota katsotaan nyt vain sen juurelta.
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+
+### 18.1
+KYSYMYS: Mistä kallioiden punainen väri tulee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belogradtšikin kalliot (luonto)
+Tietoruudun teksti: Belogradtšikin kalliot ovat hiekkakivestä ja konglomeraatista muodostunut kivimuodostelmien joukko Luoteis-Bulgariassa Vidinin alueella, Balkanvuorten länsirinteillä. Muodostumat jatkuvat noin viidenkymmenen neliökilometrin alalla Rabišan kylältä idän suuntaan Belotintsiin, ja korkeimmat kalliot kohoavat jopa kahteensataan metriin.
+
+Ruosteenpunaisen värin antaa rautaoksidi; osa hiekkakivistä on vaaleampia. Muodostuminen alkoi permikaudella noin 230 miljoonaa vuotta sitten ja jatkui trias- ja jurakaudella.
+
+Kalliot on totuttu näkemään hahmoina, ja monilla on oma nimensä: Aadam ja Eeva, Madonna, Karhu, Koulutyttö ja Dervissi.
+
+Belogradtšikin linnoitus on rakennettu niin, että kalliot ovat osa sen puolustusta: muurit yhdistävät kivimuodostumia toisiinsa. Alue julistettiin luonnonmuistomerkiksi vuonna 1949 ja liitettiin maan luonnonmuistomerkkien rekisteriin 1987.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Australia — maalehti / Alkuperäiskansat: Punainen kallio saa toisen nimen] 1873 — Heinäkuun 19. päivänä 1873 maanmittaaja William Gosse näki tasangolta kohoavan hiekkakiviselänteen ja nimesi sen Ayers Rockiksi Etelä-Australian ylisihteerin Henry Ayersin mukaan. Alueen anangu-kansalle paikka oli jo silloin Uluru: sen ympärillä on lähteitä, vesikuoppia, luolia ja vanhoja kalliomaalauksia. Kallio kohoaa tasangolta 348 metriä, ja sen ympärysmitta on 9,4 kilometriä. Maanomistus palautettiin anangulle 26. lokakuuta 1985. Puiston hallitus päätti 2017 yksimielisesti kieltää kiipeämisen, ja kielto astui voimaan lokakuussa 2019 — kalliota katsotaan nyt vain sen juurelta.
+
+### 18.2
+KYSYMYS: Miten linnoitus käyttää kallioita?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Belogradtšikin kalliot (luonto)
+Tietoruudun teksti: Belogradtšikin kalliot ovat hiekkakivestä ja konglomeraatista muodostunut kivimuodostelmien joukko Luoteis-Bulgariassa Vidinin alueella, Balkanvuorten länsirinteillä. Muodostumat jatkuvat noin viidenkymmenen neliökilometrin alalla Rabišan kylältä idän suuntaan Belotintsiin, ja korkeimmat kalliot kohoavat jopa kahteensataan metriin.
+
+Ruosteenpunaisen värin antaa rautaoksidi; osa hiekkakivistä on vaaleampia. Muodostuminen alkoi permikaudella noin 230 miljoonaa vuotta sitten ja jatkui trias- ja jurakaudella.
+
+Kalliot on totuttu näkemään hahmoina, ja monilla on oma nimensä: Aadam ja Eeva, Madonna, Karhu, Koulutyttö ja Dervissi.
+
+Belogradtšikin linnoitus on rakennettu niin, että kalliot ovat osa sen puolustusta: muurit yhdistävät kivimuodostumia toisiinsa. Alue julistettiin luonnonmuistomerkiksi vuonna 1949 ja liitettiin maan luonnonmuistomerkkien rekisteriin 1987.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:sveshtarin-hauta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveshtarin traakialaishauta (historia)
+Tietoruudun teksti: Sveshtarin traakialaishauta sijaitsee Koillis-Bulgariassa Razgradin läänissä, noin 2,5 kilometriä Sveshtarin kylästä lounaaseen. Arkeologit löysivät ja kaivoivat haudan vuonna 1982, ja se on rakennettu 300-luvun eaa. ensimmäisellä neljänneksellä. Keskuskammion seinillä on kymmenen korkokuvana veistettyä naishahmoa, joita kuvataan väritetyiksi, puoliksi ihmisen ja puoliksi kasvin muotoisiksi kariatideiksi. Haudan uskotaan kuuluneen getalaiskuningas Dromichaetekselle. Kohde on ollut Unescon maailmanperintöluettelossa vuodesta 1985.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+
+### 19.1
+KYSYMYS: Milloin hauta löydettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveshtarin traakialaishauta (historia)
+Tietoruudun teksti: Sveshtarin traakialaishauta sijaitsee Koillis-Bulgariassa Razgradin läänissä, noin 2,5 kilometriä Sveshtarin kylästä lounaaseen. Arkeologit löysivät ja kaivoivat haudan vuonna 1982, ja se on rakennettu 300-luvun eaa. ensimmäisellä neljänneksellä. Keskuskammion seinillä on kymmenen korkokuvana veistettyä naishahmoa, joita kuvataan väritetyiksi, puoliksi ihmisen ja puoliksi kasvin muotoisiksi kariatideiksi. Haudan uskotaan kuuluneen getalaiskuningas Dromichaetekselle. Kohde on ollut Unescon maailmanperintöluettelossa vuodesta 1985.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Paraguay — maalehti / Luonto: Eläin, joka löydettiin fossiilina ennen kuin elävänä] 1930–1975 — Taguá eli chacon pekari kuvattiin tieteelle vuonna 1930 pelkkien fossiilien perusteella, ja lajia pidettiin sukupuuttoon kuolleena. Vuonna 1971 tutkijat huomasivat, että se elää yhä Argentiinan Saltassa — paikallisille eläin oli aina ollut tuttu, mutta länsimainen tiede kesti kauan uskoa asia todeksi, ja kuvaus julkaistiin vasta 1975. Taguá on suurin kolmesta pekarilajista ja sopeutunut kuivuuteen: sillä on laajat sivuontelot pölyä vastaan ja pienet sorkat, joilla se pujottelee piikeissä. Yksilöitä arvioidaan olevan noin kolmetuhatta.
+
+### 19.2
+KYSYMYS: Mitä keskuskammion seinillä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sveshtarin traakialaishauta (historia)
+Tietoruudun teksti: Sveshtarin traakialaishauta sijaitsee Koillis-Bulgariassa Razgradin läänissä, noin 2,5 kilometriä Sveshtarin kylästä lounaaseen. Arkeologit löysivät ja kaivoivat haudan vuonna 1982, ja se on rakennettu 300-luvun eaa. ensimmäisellä neljänneksellä. Keskuskammion seinillä on kymmenen korkokuvana veistettyä naishahmoa, joita kuvataan väritetyiksi, puoliksi ihmisen ja puoliksi kasvin muotoisiksi kariatideiksi. Haudan uskotaan kuuluneen getalaiskuningas Dromichaetekselle. Kohde on ollut Unescon maailmanperintöluettelossa vuodesta 1985.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-pliska-palatsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pliskan kaanien palatsi (historia)
+Tietoruudun teksti: Pliska oli ensimmäisen Bulgarian valtakunnan pääkaupunki vuosina 681–893. Nikeforos I poltti palatsin vuonna 811, mutta kaani Omurtag rakennutti sen uudelleen. Sodat tuhosivat kaupungin lopullisesti 900-luvun lopulla.
+
+### 20.1
+KYSYMYS: Miltä Pliskan kaanien palatsi näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pliskan kaanien palatsi (historia)
+Tietoruudun teksti: Pliska oli ensimmäisen Bulgarian valtakunnan pääkaupunki vuosina 681–893. Nikeforos I poltti palatsin vuonna 811, mutta kaani Omurtag rakennutti sen uudelleen. Sodat tuhosivat kaupungin lopullisesti 900-luvun lopulla.
+
+### 20.2
+KYSYMYS: Miksi Pliskan kaanien palatsi katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pliskan kaanien palatsi (historia)
+Tietoruudun teksti: Pliska oli ensimmäisen Bulgarian valtakunnan pääkaupunki vuosina 681–893. Nikeforos I poltti palatsin vuonna 811, mutta kaani Omurtag rakennutti sen uudelleen. Sodat tuhosivat kaupungin lopullisesti 900-luvun lopulla.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

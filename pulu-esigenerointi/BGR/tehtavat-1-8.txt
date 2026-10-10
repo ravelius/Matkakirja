@@ -1,0 +1,207 @@
+================ KOHTA 36 (kohde:hahmotelma-pleven) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+### 36.1
+KYSYMYS: Minä vuonna Osman Pasha antautui Plevnassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+### 36.2
+KYSYMYS: Missä puistossa Plevenin panoraama on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pleven (historia)
+Tietoruudun teksti: Pleven on Bulgarian seitsemänneksi väkirikkain kaupunki Pohjois-Bulgariassa Tonavan tasangolla, ja sen asukasluku oli 89 823 vuonna 2021. Osmanien vallan aikana Pleven säilytti bulgarialaisen luonteensa: ensimmäinen maallinen koulu avattiin vuonna 1825, ensimmäinen tyttökoulu Bulgariassa 1840 ja poikakoulu vuotta myöhemmin. Vasil Levski perusti Plevenissä vuonna 1869 ensimmäisen vallankumouskomiteansa osana kansallista verkostoaan. Kaupunki tunnetaan kansainvälisesti Plevnan piirityksestä Venäjän ja Turkin sodassa 1877–1878, joka oli yksi sodan ratkaisevista taisteluista; Osman Pasha antautui 28. marraskuuta 1877. Skobelevin puistossa on piirityksen muistoksi rakennettu Plevenin panoraama sekä ossuaari ja mausoleumi kaatuneille venäläisille ja romanialaisille sotilaille.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-nikopol) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+### 37.1
+KYSYMYS: Minä vuonna Nikopolin ristiretken taistelu käytiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+### 37.2
+KYSYMYS: Kuka oli Bulgarian viimeinen tsaari, joka puolusti Nikopolia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Nikopol (historia)
+Tietoruudun teksti: Nikopol on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla neljä kilometriä alavirtaan Osamin yhtymäkohdasta jyrkkien liitukallioiden juurella. Roomalaiset rakensivat siellä 1. vuosisadalla linnakkeen osaksi Tonavan puolustusjärjestelmää, ja kaupunki sai nimen Nicopolis eli voiton kaupunki vuonna 1059. Toisen Bulgarian valtakunnan viimeinen tsaari Ivan Shishman puolusti Nikopolin linnoitusta, kunnes ottomaanit valtasivat sen vuonna 1395, ja vuonna 1396 siellä käytiin keskiajan viimeisen suuren ristiretken taistelu, jossa Unkarin kuningas Sigismundin johtama kristillinen Euroopan armeija kärsi tappion Bayezid I:n joukoille. Osmanien aikana Nikopol kehittyi tärkeäksi sotilaalliseksi ja hallinnolliseksi keskukseksi, mutta Pleven ohitti sen alueen keskuksena 1600–1700-luvuilla; venäläiset valtasivat kaupungin vuonna 1877.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-vidin) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kohdekartta / Kohdekartta: Baba Yaran stadion] 1957 United African Company rakensi stadionin 1957, ja jalkapallokentäksi se vihittiin 1959. Ensimmäiset katsomot tulivat 1971, ja koko paikka rakennettiin uusiksi 1977. Nykyisin katsojia mahtuu 40 528 — enemmän kuin mihinkään muuhun Ghanan stadioniin. Nimi on kumasilaisen jalkapalloilijan. Baba Yara (1936–1969) pelasi Asante Kotokossa vuosina 1955–1961, ja stadion nimettiin hänen mukaansa 2004. Kotoko on yhä talon isäntä, ja sen rinnalla pelaa King Faisal. Kolmas suuri remontti valmistui 2008: länsikatsomo purettiin ja tilalle tuli kaksikerroksinen katsomo lehdistö- ja vierastiloineen, muut katsomot uusittiin, ja katsomon ja kentän väliin asennettiin läpinäkyvät paneelit, jotta yleisö ei p…
+- [Timbuktu — kohdekartta / Kohdekartta: Ahmed Baba -instituutti] 1973 Ahmed Baba -instituutti eli virallisemmin Ahmed Baba Institute of Higher Learning and Islamic Research perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. Nimi on 1600-luvulla eläneen timbuktulaisen oppineen Ahmad Baban. Instituutti on kaupungin ainoa julkinen kirjasto; muut kokoelmat ovat sukujen hallussa. Nykyisen rakennuksen suunnitteli eteläafrikkalainen arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 miljoonaa euroa, on 4 600 neliömetriä ja korvasi neljäkymmentä vuotta vanhan rapistuneen talon. Rakennuksessa on ilmastointi käsikirjoitusten säilytystä varten ja automaattinen sammutusjärjestelmä — molemmat ovat aavikon reunalla vaikeampia asioita kuin miltä kuulostaa. Kokoe…
+
+### 38.1
+KYSYMYS: Minkä kuninkaantyttären legendan mukaan Baba Vida on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kumasi — kohdekartta / Kohdekartta: Baba Yaran stadion] 1957 United African Company rakensi stadionin 1957, ja jalkapallokentäksi se vihittiin 1959. Ensimmäiset katsomot tulivat 1971, ja koko paikka rakennettiin uusiksi 1977. Nykyisin katsojia mahtuu 40 528 — enemmän kuin mihinkään muuhun Ghanan stadioniin. Nimi on kumasilaisen jalkapalloilijan. Baba Yara (1936–1969) pelasi Asante Kotokossa vuosina 1955–1961, ja stadion nimettiin hänen mukaansa 2004. Kotoko on yhä talon isäntä, ja sen rinnalla pelaa King Faisal. Kolmas suuri remontti valmistui 2008: länsikatsomo purettiin ja tilalle tuli kaksikerroksinen katsomo lehdistö- ja vierastiloineen, muut katsomot uusittiin, ja katsomon ja kentän väliin asennettiin läpinäkyvät paneelit, jotta yleisö ei p…
+- [Timbuktu — kohdekartta / Kohdekartta: Ahmed Baba -instituutti] 1973 Ahmed Baba -instituutti eli virallisemmin Ahmed Baba Institute of Higher Learning and Islamic Research perustettiin 1973, ja rahoitus tuli pääosin Kuwaitista. Nimi on 1600-luvulla eläneen timbuktulaisen oppineen Ahmad Baban. Instituutti on kaupungin ainoa julkinen kirjasto; muut kokoelmat ovat sukujen hallussa. Nykyisen rakennuksen suunnitteli eteläafrikkalainen arkkitehti, ja se valmistui 2009. Se maksoi noin 5,8 miljoonaa euroa, on 4 600 neliömetriä ja korvasi neljäkymmentä vuotta vanhan rapistuneen talon. Rakennuksessa on ilmastointi käsikirjoitusten säilytystä varten ja automaattinen sammutusjärjestelmä — molemmat ovat aavikon reunalla vaikeampia asioita kuin miltä kuulostaa. Kokoe…
+
+### 38.2
+KYSYMYS: Kuinka pitkän piirityksen linnoitus kesti Basileios II:n aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Baba Vida (historia)
+Tietoruudun teksti: Baba Vida on keskiaikainen linnoitus Vidinissä Luoteis-Bulgariassa Tonavan rannalla ja kaupungin tärkein maamerkki. Siinä on kaksi sisäkkäistä suojamuuria ja noin yhdeksän tornia, joista kolme on säilynyt täyteen keskiaikaiseen korkeuteensa, ja se on maan ainoa kokonaan säilynyt keskiaikainen linnoitus. Rakentaminen alkoi 900-luvulla muinaisen roomalaisen Bononian linnakkeen paikalla, ja legendan mukaan sen rakennutti kuninkaan vanhin tytär Vida, joka jäi naimattomaksi; nimi tarkoittaa mummo Vidaa. Linnoitus kesti Bysantin keisari Basileios II:n johtaman kahdeksan kuukauden piirityksen, ja tsaari Ivan Stratsimirin aikana 1356–1396 se oli hänen pääkaupunkinsa. Osmanien aikana sitä käytettiin asevarastona ja vankilana, eikä sitä ole käytetty puolustukseen 1700-luvun lopun jälkeen; nykyään siellä on museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-stara-zagora) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+
+### 39.1
+KYSYMYS: Minä vuonna Stara Zagorasta löydettiin neoliittiset asuinrakennukset?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+
+### 39.2
+KYSYMYS: Millä nimellä roomalaiset kutsuivat kaupunkia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stara Zagora (historia)
+Tietoruudun teksti: Stara Zagora on Bulgarian viidenneksi suurin kaupunki Ylä-Traakian tasangolla lähellä Kazanlakia, Plovdivia ja Slivenia; sen asukasluku on 121 582. Vuonna 1968 kaupungista löydettiin 6. vuosituhannen puolivälistä eaa. peräisin olevia neoliittisia asuinrakennuksia, jotka ovat Euroopan parhaiten säilynyt ja rikkain laatuaan ja jotka on muutettu museoksi. Alueelta on löydetty myös yli 7 000 vuotta vanha Euroopan ensimmäinen kuparitehdas ja suuri malmin louhintakeskus. Roomalaisten aikana kaupunki nimettiin Ulpia Augusta Traianaksi, ja se oli merkittävämpi kuin Philippopolis. Nykyinen nimi on peräisin turkkilaisesta nimestä Eski Zagra, vanha Zagra, joka vahvistettiin vuonna 1871.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-kyustendil) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+- [Miami — kaupunkilehti / Ruohojoki ja lahti: Kaupunki huokoisen kiven päällä] Miamin peruskallio on Miamin kalkkikiveä eli ooliittia, ja kerros on enintään noin viisitoista metriä paksu; sen päällä on vain ohut maakerros. Kivi syntyi jääkausien merenpinnan heilahduksista: noin 130 000 vuotta sitten merenpinta oli noin kahdeksan metriä nykyistä ylempänä ja koko Etelä-Florida oli matalan meren alla. Kallion alla on Biscaynen pohjavesiesiintymä, josta koko metropolialue ottaa juomavetensä. Siksi maata ei voi kaivaa viittä tai kuutta metriä syvemmälle osumatta veteen — ja siksi radat kulkevat kaupungissa pylväiden päällä.
+
+### 40.1
+KYSYMYS: Millä nimellä kaupunkia kutsuttiin antiikissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+- [Kappadokia — kaupunkilehti / Kappadokia: Punaisen joen savi] Avanos on rakennettu Kızılırmakin eli Punaisen joen mutkaan. Se on Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä, ja antiikissa se tunnettiin Halyksena. Joen punainen siltti on kaupungin savenvalajien raaka-aine, ja perinteen arvellaan ulottuvan heettiläisaikaan asti. Maantieteilijä Strabon mukaan Avanos oli tuolloin nimeltään Venessa ja Kappadokian kuningaskunnan kolmanneksi tärkein kaupunki. Vanhan kaupungin alla kulkee maanalaisia tiloja, joita savipajat käyttävät yhä varastoinaan.
+
+### 40.2
+KYSYMYS: Kuinka monta kivennäislähdettä kaupungissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyustendil (historia)
+Tietoruudun teksti: Kyustendil on kaupunki Bulgarian äärilännessä Kyustendilin laakson eteläosassa lähellä Serbian ja Pohjois-Makedonian rajoja, 90 kilometriä Sofiasta lounaaseen; asukkaita on 37 799. Traakialainen asutus perustettiin paikalle 400- tai 500-luvulla eaa., ja se oli tunnettu Asklepioksen pyhäköstä; Pautalia-nimisenä se oli Rooman aikana Dacia Mediterranean kolmanneksi suurin kaupunki. Roomalainen linnoitus oli yli 29 hehtaarin kokoinen, ja alueelta on löydetty kylpylöitä, basilikoja ja lattiamosaiikkeja. Nykyään Kyustendil on kansallinen kylpyläkaupunki 600 metrin korkeudessa: siellä on yli 40 kivennäislähdettä, ja kaupunki on Osogovon vuoren juurella tunnettu balneologian ja hedelmänviljelyn keskus. Ottomaanit liittivät kaupungin valtakuntaansa vuonna 1395.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Miami — kaupunkilehti / Ruohojoki ja lahti: Kaupunki huokoisen kiven päällä] Miamin peruskallio on Miamin kalkkikiveä eli ooliittia, ja kerros on enintään noin viisitoista metriä paksu; sen päällä on vain ohut maakerros. Kivi syntyi jääkausien merenpinnan heilahduksista: noin 130 000 vuotta sitten merenpinta oli noin kahdeksan metriä nykyistä ylempänä ja koko Etelä-Florida oli matalan meren alla. Kallion alla on Biscaynen pohjavesiesiintymä, josta koko metropolialue ottaa juomavetensä. Siksi maata ei voi kaivaa viittä tai kuutta metriä syvemmälle osumatta veteen — ja siksi radat kulkevat kaupungissa pylväiden päällä.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

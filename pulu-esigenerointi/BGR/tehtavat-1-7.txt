@@ -1,0 +1,190 @@
+================ KOHTA 31 (kohde:hahmotelma-koprivshtitsa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Espanja — maalehti / Historian hetki: Victoryn peräkansi 1805 — hetki ennen laukausta] 21.10.1805 — Kuinka kaukana vihollislinja vielä on? Nelson kysyy sitä kapteeni Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus tarkoittaa: Victory ajetaan suoraan lähitulitukseen. Kello on hieman yli kaksitoista. Neljännestä vaille kaksitoista Nelson lähetti lippuviestin "England expects that every man will do his duty", ja puolelta päivin ranskalainen Fougueux ampui ensimmäisen laukauksensa. Kansi on hiekoitettu, jottei veri tekisi lankuista liukkaita, ja tykkimiehet työskentelevät paitasillaan; ensimmäistä taisteluaan odottava ruutipoika yrittää lukea vanhempien merimiesten kasvoista, kuinka lähellä laukaus on. Victory on ajanut liittouman linjan läpi ja takertunut mastoistaan kii…
+
+### 31.1
+KYSYMYS: Minä vuonna huhtikuun kansannousun ensimmäinen laukaus ammuttiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Espanja — maalehti / Historian hetki: Victoryn peräkansi 1805 — hetki ennen laukausta] 21.10.1805 — Kuinka kaukana vihollislinja vielä on? Nelson kysyy sitä kapteeni Hardylta vielä kerran, ja kumpikin tietää, mitä vastaus tarkoittaa: Victory ajetaan suoraan lähitulitukseen. Kello on hieman yli kaksitoista. Neljännestä vaille kaksitoista Nelson lähetti lippuviestin "England expects that every man will do his duty", ja puolelta päivin ranskalainen Fougueux ampui ensimmäisen laukauksensa. Kansi on hiekoitettu, jottei veri tekisi lankuista liukkaita, ja tykkimiehet työskentelevät paitasillaan; ensimmäistä taisteluaan odottava ruutipoika yrittää lukea vanhempien merimiesten kasvoista, kuinka lähellä laukaus on. Victory on ajanut liittouman linjan läpi ja takertunut mastoistaan kii…
+
+### 31.2
+KYSYMYS: Mitä bulgarian sana kopriva tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koprivshtitsa (historia)
+Tietoruudun teksti: Koprivshtitsa on historiallinen kaupunki Sredna Goran vuorilla Topolnitsa-joen varrella, 111 kilometriä Sofiasta itään ja 1 030 metrin korkeudessa; nimi tulee bulgarian sanasta kopriva eli nokkonen. Kaupunki oli yksi vuoden 1876 huhtikuun kansannousun keskuksista, ja ensimmäinen laukaus Osmanien valtaa vastaan ammuttiin täällä sillalla, joka on vuodelta 1813. Kaupungissa on 383 arkkitehtuurimuistomerkkiä Bulgarian kansallisen herätyksen ajalta, joista suurin osa on kunnostettu alkuperäiseen asuunsa; yksi niistä on vuosina 1853–1856 rakennettu Oslekovin talo, nykyään etnografinen museo. Kaupungin ensimmäinen koulu perustettiin vuonna 1837, ja Bulgarian kansallinen kansanperinnefestivaali järjestetään täällä vuodesta 1965 noin viiden vuoden välein.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-shipka) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+### 32.1
+KYSYMYS: Minkä kahden kaupungin välillä Shipkan sola kulkee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+### 32.2
+KYSYMYS: Minä vuonna Shipkan muistomerkki avattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Shipkan sola (historia)
+Tietoruudun teksti: Shipkan sola on 1 150 metrin korkeudessa oleva maisemallinen sola Balkanvuorten läpi Bulgariassa. Se on Stara Zagoran ja Gabrovon läänien raja ja yhdistää Gabrovon ja Kazanlakin kaupungit; sola on osa Bulgarkan luonnonpuistoa. Vuosina 1877–1878 solalla käytiin Shipkan taisteluiksi kutsuttu sarja yhteenottoja, joissa venäläiset joukot ja bulgarialaiset vapaaehtoiset taistelivat Osmanien valtakuntaa vastaan. Vuonna 1934 avatun Shipkan muistomerkin ovat suunnitelleet arkkitehti Atanas Donkov ja kuvanveistäjä Aleksandar Andreev: se on 31,5 metriä korkea kivitorni, jonka sisäänkäynnin yllä on kahdeksan metriä pitkä pronssileijona.
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-perperikon) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+### 33.1
+KYSYMYS: Minkä kaupungin lähellä Perperikon sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+### 33.2
+KYSYMYS: Mikä oli Perperikonin saarnatuolin löydön erityisyys?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Perperikon (historia)
+Tietoruudun teksti: Perperikon on muinainen traakialainen kaupunki Itä-Rodopeilla 15 kilometriä Kardzhalista koilliseen 470 metriä korkealla kalliokukkulalla, jonka arvellaan olleen pyhä paikka. Se on Balkanin suurin megaliittinen kokonaisuus, ja keskiajalla se toimi linnoituksena. Alueella on ollut toimintaa jo vuodesta 5000 eaa., ja kalliosta hakattu, lähes kaksimetrinen pyöreä alttari on peräisin varhaiselta rautakaudelta. Arkeologi Nikolay Ovcharov aloitti kaivaukset vuonna 2000 ja paljasti valtavan monikerroksisen palatsin ja kukkulan ympäri rakennetun linnoituksen, jonka muurit ovat jopa 2,8 metriä paksut. Vuonna 2005 huipulta löytyi saarnatuoli, jonka arvellaan olevan ensimmäinen Bulgariasta löydetty ja joka on peräisin 300-luvun lopulta tai 400-luvun alusta.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-bachkovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [Mandalay — kohdekartta / Kohdekartta: Shwenandaw-luostari] siirretty 1878 tai 1880 Shwenandaw tarkoittaa kultaista palatsia, ja nimi on kirjaimellinen: rakennus oli aikanaan osa palatsia. Se kuului alun perin Amarapuran kuninkaanpalatsiin, siirtyi sen mukana Mandalayhin ja muodosti siellä Lasipalatsin pohjoisosan ja osan kuninkaan omista huoneista. Tässä rakennuksessa Mindon asui viimeiset aikansa. Isänsä kuoltua kuningas Thibaw purki huoneiston ja kokosi sen uudelleen palatsialueen ulkopuolelle luostariksi isänsä muistoksi. Työ maksoi 120 000 rupiaa. Siirron ajankohdasta en-Wikipedia antaa kaksi lukua: artikkelin leipäteksti sanoo purkamisen tapahtuneen 10. lokakuuta 1878 ja uudelleenkokoamisen valmistuneen 31. lokakuuta 1878, kun taas saman artik…
+
+### 34.1
+KYSYMYS: Minä vuonna Bachkovon luostari perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+
+### 34.2
+KYSYMYS: Mikä on ainoa luostarin alkuperäinen rakennus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bachkovon luostari (historia)
+Tietoruudun teksti: Bachkovon luostari on iso ortodoksinen luostari Etelä-Bulgariassa Chepelare-joen oikealla rannalla, 189 kilometriä Sofiasta ja 10 kilometriä Asenovgradista etelään. Sen perusti vuonna 1083 georgialainen valtiomies ja Bysantin palveluksessa ollut sotapäällikkö Gregory Pakourianos, ja siitä tuli yksi ulkomaisista georgialaisista luostarikeskuksista; luostari on tunnettu georgialaisen, bysanttilaisen ja bulgarialaisen kulttuurin yhdistelmästä. Toisen Bulgarian valtakunnan aikana sitä tuki tsaari Ivan Aleksandar. Turkkilaisten ryöstämä ja tuhoama luostari kunnostettiin 1400-luvun lopulla, ja Neitsyt Marian kirkko valmistui vuonna 1604. Ainoa alkuperäinen rakennus on luuhuone, joka on noin 300 metrin päässä nykyisestä luostarista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [Mandalay — kohdekartta / Kohdekartta: Shwenandaw-luostari] siirretty 1878 tai 1880 Shwenandaw tarkoittaa kultaista palatsia, ja nimi on kirjaimellinen: rakennus oli aikanaan osa palatsia. Se kuului alun perin Amarapuran kuninkaanpalatsiin, siirtyi sen mukana Mandalayhin ja muodosti siellä Lasipalatsin pohjoisosan ja osan kuninkaan omista huoneista. Tässä rakennuksessa Mindon asui viimeiset aikansa. Isänsä kuoltua kuningas Thibaw purki huoneiston ja kokosi sen uudelleen palatsialueen ulkopuolelle luostariksi isänsä muistoksi. Työ maksoi 120 000 rupiaa. Siirron ajankohdasta en-Wikipedia antaa kaksi lukua: artikkelin leipäteksti sanoo purkamisen tapahtuneen 10. lokakuuta 1878 ja uudelleenkokoamisen valmistuneen 31. lokakuuta 1878, kun taas saman artik…
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-lovech) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+### 35.1
+KYSYMYS: Kuka rakensi Lovechin katetun sillan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+### 35.2
+KYSYMYS: Minä vuonna toisen Bulgarian valtakunnan alku julistettiin Hisaryassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lovech (historia)
+Tietoruudun teksti: Lovech on kaupunki Pohjois-Keski-Bulgariassa noin 150 kilometriä Sofiasta koilliseen Osam-joen molemmin puolin. Kaupunki on yksi Bulgarian vanhimmista: sen ensimmäiset asukkaat olivat traakialainen meldi-heimo, jonka pääkaupunki Melta oli nykyisen Varosha-kaupunginosan paikalla. Vuonna 1187 entisessä roomalaisessa Hisarya-linnoituksessa allekirjoitettiin rauhansopimus Bulgarian ja Bysantin välillä, mikä merkitsi toisen Bulgarian valtakunnan alkua. Osmanien vallan aikana Lovech oli Vasil Levskin sisäisen vallankumousjärjestön toiminnan keskus, ja vanhassakaupungissa on Bulgarian suurin Levskin museo. Vuosina 1872–1874 mestarirakentaja Nikola Fichev eli Kolyu Ficheto rakensi kuuluisan katetun sillan Osam-joen yli, ainoan laatuaan Balkanilla; se paloi vuonna 1925 ja rakennettiin uudelleen 1931.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

@@ -1,0 +1,199 @@
+================ KOHTA 41 (kohde:hahmotelma-ruse) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+
+### 41.1
+KYSYMYS: Minä vuonna Rusen ja Varnan yhdistävä rautatie otettiin käyttöön?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+
+### 41.2
+KYSYMYS: Mikä on Rusen lempinimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruse (merenkulku)
+Tietoruudun teksti: Ruse on Bulgarian kuudenneksi suurin kaupunki Tonavan oikealla rannalla Romanian Giurgiun vastapäätä. Sijaintinsa ja Tonavan ylittävän rautatie- ja maantiesillan ansiosta se on Bulgarian tärkein jokisatama, jonka kautta kulkee suuri osa maan kansainvälisestä kaupasta. Osmanien aikana Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista ja Tuna-vilajetin hallintokeskukseksi, joka ulottui Varnasta ja Tulceasta Sofiaan ja Nišiin. Ruse tunnetaan monista Bulgarian ensimmäisistä: vuonna 1864 perustettiin maan ensimmäinen painotalo ja vuonna 1867 otettiin käyttöön Rusen ja Varnan yhdistävä ensimmäinen rautatie. Kaupungin 1800- ja 1900-lukujen uusbarokki- ja uusrokokoo-arkkitehtuuri on saanut sille lempinimen Pikku-Wien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-svishtov) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+### 42.1
+KYSYMYS: Mitä Svishtovin vanha nimi Sveshtniy tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+### 42.2
+KYSYMYS: Minä vuonna Sistovan rauha solmittiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Svishtov (merenkulku)
+Tietoruudun teksti: Svishtov on kaupunki Pohjois-Bulgariassa Tonavan oikealla rannalla Romanian Zimnicean vastapäätä; Veliko Tarnovon läänissä se on läänin toiseksi suurin kaupunki. Nimi tulee vanhasta bulgarian sanasta svesht eli kynttilä, koska kaupungissa oli majakka; Sistova-nimi mainittiin ensi kerran vuoden 1791 rauhansopimuksessa, joka päätti Itävallan ja Turkin viimeisen sodan. Kaupunki tunnistetaan roomalaiseksi siirtokunnaksi Novaeksi, jonka Vespasianus lähetti legioona I Italican tukikohdaksi vuonna 70. Kaupunki poltettiin poroksi vuosina 1810 ja 1829, mutta se rakennettiin nopeasti uudelleen, ja siitä tuli yksi Tonavan tärkeimmistä satamista sekä koulutuksen kotipaikka, jossa perustettiin ensimmäinen kauppa-ammattikoulu. Svishtov oli Venäjän ja Turkin sodan 1877–1878 ensimmäinen vapautettu kaupunki.
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-melnik) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Piiritanssi jonka italialainen piirsi] 1810 — Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa länsimaiseen korvaan kompastelevalta, vaikka tanssijalle rytmi on itsestäänselvä nopeiden ja hitaiden askelten vuorotteluna. Italialainen Luigi Mayer luonnosteli bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset julkaistiin kaiverruksina kirjassa vasta 1810, vuosia taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja kyläjuhlissa, ja jokainen osaa ainakin muutaman perusaskeleen.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 43.1
+KYSYMYS: Mikä on Bulgarian pienin kaupunki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Piiritanssi jonka italialainen piirsi] 1810 — Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa länsimaiseen korvaan kompastelevalta, vaikka tanssijalle rytmi on itsestäänselvä nopeiden ja hitaiden askelten vuorotteluna. Italialainen Luigi Mayer luonnosteli bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset julkaistiin kaiverruksina kirjassa vasta 1810, vuosia taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja kyläjuhlissa, ja jokainen osaa ainakin muutaman perusaskeleen.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 43.2
+KYSYMYS: Minkä sanan mukaan Melnik on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Melnik (ruoka)
+Tietoruudun teksti: Melnik on kaupunki Blagoevgradin läänissä Lounais-Bulgariassa Pirin-vuorten lounaisosassa noin 440 metrin korkeudessa. Se on arkkitehtuurisuojelualue, jossa 96 rakennusta on kulttuurimuistomerkkejä, ja kaupungin yllä kohoavat Melnikin hiekkapyramidit. Asukkaita on 385, joten se on Bulgarian pienin kaupunki, joka on säilyttänyt kaupunkiasemansa historiallisista syistä. Nimi tulee slaaveilta, jotka nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan sanasta mel eli valkoinen savi. Bulgarian kansallisen herätyksen aikana 1600–1700-luvuilla Melnik kukoisti tupakan ja viinin tuotannolla, ja viiniä vietiin ulkomaille lähinnä Englantiin ja Itävaltaan; 1700-luvun lopulla kaupungissa oli 1 300 taloa ja seitsemänkymmentä kirkkoa, mutta suuri tulipalo tuhosi sen.
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-karlovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovo (kulttuuri)
+Tietoruudun teksti: Karlovo on historiallisesti tärkeä kaupunki Keski-Bulgariassa Stryama-joen hedelmällisessä laaksossa Balkanvuorten eteläjuurella; asukkaita on noin 19 373 (2021). Se on kuuluisa ruusuöljystään, jota käytetään hajuvesien valmistuksessa. Karlovo on myös Vasil Levskin, kansallisen vapautuksen valmistelun tunnetuimman edelläkävijän, syntymäkaupunki, ja siellä on hänelle omistettu museo ja suuri muistomerkki. Nykyinen kaupunki syntyi vuonna 1483 Sushitsan kylän paikalle sulttaani Bayezid II:n aikana ja sai nimen Karlıova; vanhin säilynyt rakennus on vuodelta 1485 oleva Kurshum-moskeija eli lyijymoskeija. 1800-luvulla kaupungista tuli bulgarialaisen kulttuurin ja vallankumoustoiminnan keskus, ja ensimmäinen chitalishte eli lukusali avattiin vuonna 1869.
+
+### 44.1
+KYSYMYS: Minkä tuotteen valmistuksesta Karlovo on kuuluisa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovo (kulttuuri)
+Tietoruudun teksti: Karlovo on historiallisesti tärkeä kaupunki Keski-Bulgariassa Stryama-joen hedelmällisessä laaksossa Balkanvuorten eteläjuurella; asukkaita on noin 19 373 (2021). Se on kuuluisa ruusuöljystään, jota käytetään hajuvesien valmistuksessa. Karlovo on myös Vasil Levskin, kansallisen vapautuksen valmistelun tunnetuimman edelläkävijän, syntymäkaupunki, ja siellä on hänelle omistettu museo ja suuri muistomerkki. Nykyinen kaupunki syntyi vuonna 1483 Sushitsan kylän paikalle sulttaani Bayezid II:n aikana ja sai nimen Karlıova; vanhin säilynyt rakennus on vuodelta 1485 oleva Kurshum-moskeija eli lyijymoskeija. 1800-luvulla kaupungista tuli bulgarialaisen kulttuurin ja vallankumoustoiminnan keskus, ja ensimmäinen chitalishte eli lukusali avattiin vuonna 1869.
+
+### 44.2
+KYSYMYS: Minä vuonna Karlovon ensimmäinen chitalishte avattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karlovo (kulttuuri)
+Tietoruudun teksti: Karlovo on historiallisesti tärkeä kaupunki Keski-Bulgariassa Stryama-joen hedelmällisessä laaksossa Balkanvuorten eteläjuurella; asukkaita on noin 19 373 (2021). Se on kuuluisa ruusuöljystään, jota käytetään hajuvesien valmistuksessa. Karlovo on myös Vasil Levskin, kansallisen vapautuksen valmistelun tunnetuimman edelläkävijän, syntymäkaupunki, ja siellä on hänelle omistettu museo ja suuri muistomerkki. Nykyinen kaupunki syntyi vuonna 1483 Sushitsan kylän paikalle sulttaani Bayezid II:n aikana ja sai nimen Karlıova; vanhin säilynyt rakennus on vuodelta 1485 oleva Kurshum-moskeija eli lyijymoskeija. 1800-luvulla kaupungista tuli bulgarialaisen kulttuurin ja vallankumoustoiminnan keskus, ja ensimmäinen chitalishte eli lukusali avattiin vuonna 1869.
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+================ KOHTA 45 (kohde:hahmotelma-sliven) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sliven (kauppa)
+Tietoruudun teksti: Sliven on Bulgarian kahdeksanneksi suurin kaupunki Pohjois-Traakiassa Balkanvuorten juurella Slivenin laaksossa. Se on kuuluisa haidukeistaan, jotka taistelivat osmaneja vastaan 1800-luvulla, ja sitä kutsutaan sadan vojvodan kaupungiksi; kaupungin läheisyydessä on Sinite kamani -kalliomassiivi eli Siniset kalliot ja siihen liittyvä luonnonpuisto sekä Slivenin mineraalikylpylät. Talous on ollut teollisuuden varassa 1800-luvun alusta: vuonna 1834 Dobri Zhelyazkov perusti ensimmäisen tehtaan Bulgarian maissa, ja vuonna 1843 kaupunkiin perustettiin Osmanien valtakunnan ensimmäinen tekstiiliteollisuusyritys. Vuonna 1872 Slivenissä perustettiin lisäksi tupakka- ja väkijuomatehtaat, ja kaupungin hiippakunta kuului Bulgarian eksarkaattiin, joka perustettiin 28. helmikuuta 1870.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Ratsastaja jyrkänteellä] 700-luku — Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä korkea kalliojyrkänne, johon on veistetty 700-luvulla ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä hakattu kreikankielisiä kirjoituksia, jotka kertovat ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon maailmanperintöluetteloon 1979.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 45.1
+KYSYMYS: Kuka perusti vuonna 1834 Bulgarian maiden ensimmäisen tehtaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sliven (kauppa)
+Tietoruudun teksti: Sliven on Bulgarian kahdeksanneksi suurin kaupunki Pohjois-Traakiassa Balkanvuorten juurella Slivenin laaksossa. Se on kuuluisa haidukeistaan, jotka taistelivat osmaneja vastaan 1800-luvulla, ja sitä kutsutaan sadan vojvodan kaupungiksi; kaupungin läheisyydessä on Sinite kamani -kalliomassiivi eli Siniset kalliot ja siihen liittyvä luonnonpuisto sekä Slivenin mineraalikylpylät. Talous on ollut teollisuuden varassa 1800-luvun alusta: vuonna 1834 Dobri Zhelyazkov perusti ensimmäisen tehtaan Bulgarian maissa, ja vuonna 1843 kaupunkiin perustettiin Osmanien valtakunnan ensimmäinen tekstiiliteollisuusyritys. Vuonna 1872 Slivenissä perustettiin lisäksi tupakka- ja väkijuomatehtaat, ja kaupungin hiippakunta kuului Bulgarian eksarkaattiin, joka perustettiin 28. helmikuuta 1870.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Ratsastaja jyrkänteellä] 700-luku — Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä korkea kalliojyrkänne, johon on veistetty 700-luvulla ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä hakattu kreikankielisiä kirjoituksia, jotka kertovat ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon maailmanperintöluetteloon 1979.
+- [Bulgaria — maalehti / Naamiot ja narut: Kylä joka kutoo vieläkin] 1600-luku — Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun lopulla, kylän naiset alkoivat kutoa villamattoja pystysuoralla kangaspuulla. Tekniikka on pysynyt samana sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi käsin ja tiivistää sen pienellä lyömäkammalla niin, että maton molemmat puolet näyttävät samalta. Kuvioita — geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä yli kaksikymmentä erilaista, ja taito kulkee äidiltä tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta liitettiin Unescon aineettoman kulttuuriperinnön luetteloon.
+
+### 45.2
+KYSYMYS: Millä lempinimellä Slivenia kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sliven (kauppa)
+Tietoruudun teksti: Sliven on Bulgarian kahdeksanneksi suurin kaupunki Pohjois-Traakiassa Balkanvuorten juurella Slivenin laaksossa. Se on kuuluisa haidukeistaan, jotka taistelivat osmaneja vastaan 1800-luvulla, ja sitä kutsutaan sadan vojvodan kaupungiksi; kaupungin läheisyydessä on Sinite kamani -kalliomassiivi eli Siniset kalliot ja siihen liittyvä luonnonpuisto sekä Slivenin mineraalikylpylät. Talous on ollut teollisuuden varassa 1800-luvun alusta: vuonna 1834 Dobri Zhelyazkov perusti ensimmäisen tehtaan Bulgarian maissa, ja vuonna 1843 kaupunkiin perustettiin Osmanien valtakunnan ensimmäinen tekstiiliteollisuusyritys. Vuonna 1872 Slivenissä perustettiin lisäksi tupakka- ja väkijuomatehtaat, ja kaupungin hiippakunta kuului Bulgarian eksarkaattiin, joka perustettiin 28. helmikuuta 1870.
+
+### 45.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI
+
+### 45.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 45 YHTEINEN KONTEKSTI

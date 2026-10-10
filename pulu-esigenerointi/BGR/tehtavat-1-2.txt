@@ -1,0 +1,218 @@
+================ KOHTA 6 (kohde:rilan-luostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+
+### 6.1
+KYSYMYS: Miten luostari selvisi osmanivallan läpi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Katedraali kiitokseksi vapauttajille] 1912 — Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön 1924. Se on muistomerkki venäläisille sotilaille, jotka kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit näkyvät Sofian ylle kauas ympäristöön.
+
+### 6.2
+KYSYMYS: Mitä munkit tekevät luostarissa nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rilan luostari (kulttuuri)
+Tietoruudun teksti: Rilan luostari on Bulgarian suurin ja kuuluisin ortodoksiluostari, perustettu 900-luvulla erakko Pyhän Ivan Rilalaisen (876–946) mukaan. Se sijaitsee syvässä Rilan-joen laaksossa 1147 metrin korkeudessa, Rilan vuoriston sydämessä. Luostarissa asuu noin 60 munkkia, ja se on kuvattu Bulgarian yhden levin seteliin. Vuonna 2008 sitä kävi katsomassa 900 000 pyhiinvaeltajaa ja matkailijaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:vitosa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Sofia] Kaupungin vaakunassa lukee: kasvaa, mutta ei vanhene. Metroa kaivettaessa löytyi kokonainen roomalainen kortteli, ja etelässä vuori alkaa viimeisen bussipysäkin takaa.
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+
+### 7.1
+KYSYMYS: Voiko Vitoša vielä purkautua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+### 7.2
+KYSYMYS: Miksi vuori on sofialaisille niin tärkeä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vitoša (luonto · vuori)
+Tietoruudun teksti: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah ("musta huippu") kohoaa 2290 metriin. Vitošan luonnonpuisto perustettiin 1934 — Balkanin ensimmäinen laatuaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Sofia] Kaupungin vaakunassa lukee: kasvaa, mutta ei vanhene. Metroa kaivettaessa löytyi kokonainen roomalainen kortteli, ja etelässä vuori alkaa viimeisen bussipysäkin takaa.
+- [Istanbul — kohdekartta / Kohdekartta: Hagia Sofia] 532–537 Keisari Justinianus I rakennutti nykyisen Hagia Sofian uskomattoman nopeasti, vain viidessä vuodessa 532–537. Rakennustöitä johtivat kaksi matemaatikkoa, ja työmaalla saattoi olla yhtä aikaa yli 10 000 työntekijää. Rakennus on 82 metriä pitkä ja 73 metriä leveä, ja sen valtava kupoli kohoaa lähes 56 metrin korkeuteen halkaisijaltaan noin 33-metrisenä. Aikanaan se oli maailman suurin katettu tila, ja monet pitivät sen pysymistä pystyssä pienenä ihmeenä. Hagia Sofia on elänyt monta elämää: kirkkona se toimi yli tuhat vuotta (360–1453), sitten moskeijana Osmannien valloituksen jälkeen, museona vuodesta 1935 ja jälleen moskeijana vuodesta 2020 alkaen. "Salomo, minä olen voittanut sinut!…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:balkanvuoret) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balkanvuoret (luonto · vuori)
+Tietoruudun teksti: Balkanin niemimaa on saanut nimensä juuri tästä vuoristosta, jota bulgariaksi ja serbiaksi kutsutaan Stara planinaksi, "Vanhaksi vuoreksi". Se kulkee noin 560 kilometriä Serbian rajalta Mustallemerelle asti ja jakaa Bulgarian pohjois- ja eteläosiin. Korkein huippu on Botev-huippu (2376 m). Vuoriston karstimaastossa on lukuisia luolia, joista Maguran luola tunnetaan Euroopan merkittävimmistä kalliomaalauksista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Gaida — säkkipilli Balkanilla] Häissä ja tansseissa — Gaida on vuohennahasta tehty säkkipilli, jota soitetaan häissä ja tansseissa. Rodopeilta kotoisin oleva iso kaba gaida soi matalasti ja käheästi. Soittaja täyttää säkin puhaltamalla ja puristaa siitä ilmaa kainalollaan, jottei ääni katkea hengenvedon ajaksi. Tahtilajit ovat suomalaiseen korvaan outoja: yleisiä ovat 7/8 ja 11/16, joten askel menee pitkä–lyhyt–lyhyt.
+
+### 8.1
+KYSYMYS: Mitä sana Balkan tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balkanvuoret (luonto · vuori)
+Tietoruudun teksti: Balkanin niemimaa on saanut nimensä juuri tästä vuoristosta, jota bulgariaksi ja serbiaksi kutsutaan Stara planinaksi, "Vanhaksi vuoreksi". Se kulkee noin 560 kilometriä Serbian rajalta Mustallemerelle asti ja jakaa Bulgarian pohjois- ja eteläosiin. Korkein huippu on Botev-huippu (2376 m). Vuoriston karstimaastossa on lukuisia luolia, joista Maguran luola tunnetaan Euroopan merkittävimmistä kalliomaalauksista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Gaida — säkkipilli Balkanilla] Häissä ja tansseissa — Gaida on vuohennahasta tehty säkkipilli, jota soitetaan häissä ja tansseissa. Rodopeilta kotoisin oleva iso kaba gaida soi matalasti ja käheästi. Soittaja täyttää säkin puhaltamalla ja puristaa siitä ilmaa kainalollaan, jottei ääni katkea hengenvedon ajaksi. Tahtilajit ovat suomalaiseen korvaan outoja: yleisiä ovat 7/8 ja 11/16, joten askel menee pitkä–lyhyt–lyhyt.
+
+### 8.2
+KYSYMYS: Kuinka vanhoja Maguran maalaukset ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balkanvuoret (luonto · vuori)
+Tietoruudun teksti: Balkanin niemimaa on saanut nimensä juuri tästä vuoristosta, jota bulgariaksi ja serbiaksi kutsutaan Stara planinaksi, "Vanhaksi vuoreksi". Se kulkee noin 560 kilometriä Serbian rajalta Mustallemerelle asti ja jakaa Bulgarian pohjois- ja eteläosiin. Korkein huippu on Botev-huippu (2376 m). Vuoriston karstimaastossa on lukuisia luolia, joista Maguran luola tunnetaan Euroopan merkittävimmistä kalliomaalauksista.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:tonava~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Euroopan toiseksi pisin joki Volgan jälkeen ja oli aikoinaan Rooman valtakunnan raja — latinalainen nimi Danubius juontuu kelttiläisestä jumalattaresta Danusta. Suomen "Tonava" on peräisin saksan Donau-nimestä. Bulgarian pohjoisrajalla joki erottaa maan Romaniasta lähes koko matkan, ja sen varrella sijaitsevat muun muassa Vidinin, Kozloduyn ja Rusen kaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+- [Singapore — kohdekartta / Kohdekartta: Clarke Quay] laituri 1800-luvulta, kävelyalue 1993 Clarke Quay on Singapore-joen laituri Boat Quayn yläpuolella. Se on nimetty Sir Andrew Clarken mukaan, joka oli Straitsin siirtokuntien kuvernööri vuosina 1873–1875 ja jonka aikana Singaporesta tuli Malakan niemimaan valtioiden — Perakin, Selangorin ja Sungei Ujongin — pääsatama. Viereinen Clarke Street sai virallisen nimensä 1896; sitä ennen se oli kaksi katua, East Street ja West Street. Työnjako joella oli selvä. Boat Quayssa isot laivat purettiin lastiveneisiin, ja veneet kuljettivat tavaran ylävirtaan Clarke Quayn varastoihin. Eteläisen rannan hokkieninkielinen nimi Chhâ-chûn-thâu tarkoittaa polttopuulaituria: Indonesiasta tulleet pienet tongkangit…
+
+### 9.1
+KYSYMYS: Kuinka monen maan läpi Tonava virtaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Euroopan toiseksi pisin joki Volgan jälkeen ja oli aikoinaan Rooman valtakunnan raja — latinalainen nimi Danubius juontuu kelttiläisestä jumalattaresta Danusta. Suomen "Tonava" on peräisin saksan Donau-nimestä. Bulgarian pohjoisrajalla joki erottaa maan Romaniasta lähes koko matkan, ja sen varrella sijaitsevat muun muassa Vidinin, Kozloduyn ja Rusen kaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+
+### 9.2
+KYSYMYS: Kulkeeko joella vielä rahtiliikennettä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Tonava on Euroopan toiseksi pisin joki Volgan jälkeen ja oli aikoinaan Rooman valtakunnan raja — latinalainen nimi Danubius juontuu kelttiläisestä jumalattaresta Danusta. Suomen "Tonava" on peräisin saksan Donau-nimestä. Bulgarian pohjoisrajalla joki erottaa maan Romaniasta lähes koko matkan, ja sen varrella sijaitsevat muun muassa Vidinin, Kozloduyn ja Rusen kaupungit.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Clarke Quay] laituri 1800-luvulta, kävelyalue 1993 Clarke Quay on Singapore-joen laituri Boat Quayn yläpuolella. Se on nimetty Sir Andrew Clarken mukaan, joka oli Straitsin siirtokuntien kuvernööri vuosina 1873–1875 ja jonka aikana Singaporesta tuli Malakan niemimaan valtioiden — Perakin, Selangorin ja Sungei Ujongin — pääsatama. Viereinen Clarke Street sai virallisen nimensä 1896; sitä ennen se oli kaksi katua, East Street ja West Street. Työnjako joella oli selvä. Boat Quayssa isot laivat purettiin lastiveneisiin, ja veneet kuljettivat tavaran ylävirtaan Clarke Quayn varastoihin. Eteläisen rannan hokkieninkielinen nimi Chhâ-chûn-thâu tarkoittaa polttopuulaituria: Indonesiasta tulleet pienet tongkangit…
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:ruusulaakso) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruusulaakso (luonto)
+Tietoruudun teksti: Ruusulaakso jakautuu kahteen osaan, Karlovon laaksoon lännessä ja Kazanlakin laaksoon idässä, Balkanvuorten eteläpuolella. Aluetta on viljelty ruusuöljyn vuoksi vuosisatoja, ja se tuottaa yhä lähes puolet koko maailman ruusuöljystä — keskuksena toimii Kazanlakin kaupunki. Kukat poimitaan käsin touko-kesäkuussa, perinteisesti naisten työnä, ja EU myönsi bulgarialaiselle ruusuöljylle suojatun maantieteellisen merkinnän 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+- [Bosnia ja Hertsegovina — maalehti / Historia: Ruusu joka ei koskaan kuihdu] 1992–1996 — Sarajevon piiritys kesti huhtikuusta 1992 helmikuuhun 1996, lähes neljä vuotta — pisin nykyaikaisen sodankäynnin historiassa tunnettu pääkaupungin piiritys. Kaupungin jalkakäytyihin jäi kranaatinsirpaleiden repimiä tähtikuvioita, joihin sodan jälkeen alettiin valaa punaista hartsia surmansa saaneiden muistoksi. Näitä muistomerkkejä kutsutaan Sarajevon ruusuiksi, ja niitä on kaupungin kaduilla yhä kymmeniä. Piirityksen jälkeen kaupunki rakennettiin uudelleen, mutta ruusut jätettiin paikoilleen muistuttamaan.
+
+### 10.1
+KYSYMYS: Miten ruusuöljyä valmistetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruusulaakso (luonto)
+Tietoruudun teksti: Ruusulaakso jakautuu kahteen osaan, Karlovon laaksoon lännessä ja Kazanlakin laaksoon idässä, Balkanvuorten eteläpuolella. Aluetta on viljelty ruusuöljyn vuoksi vuosisatoja, ja se tuottaa yhä lähes puolet koko maailman ruusuöljystä — keskuksena toimii Kazanlakin kaupunki. Kukat poimitaan käsin touko-kesäkuussa, perinteisesti naisten työnä, ja EU myönsi bulgarialaiselle ruusuöljylle suojatun maantieteellisen merkinnän 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Vuori ja laakso: Ruusulaakson aamut] Aamuisin — Sofiasta itään, Kazanlăkin ympärille, aukeaa Ruusulaakso. Siellä kasvatetaan damaskonruusua hajuvesiöljyä varten, ja Bulgaria tuottaa siitä suuren osan koko maailman tarpeesta. Kukat poimitaan käsin auringon noustessa: päivän lämmössä tuoksuöljy haihtuu, joten työ alkaa aamuviideltä. Yhteen ainoaan grammaan ruusuöljyä tarvitaan noin kolme kiloa terälehtiä.
+
+### 10.2
+KYSYMYS: Miksi juuri tämä laakso sopii ruusuille?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ruusulaakso (luonto)
+Tietoruudun teksti: Ruusulaakso jakautuu kahteen osaan, Karlovon laaksoon lännessä ja Kazanlakin laaksoon idässä, Balkanvuorten eteläpuolella. Aluetta on viljelty ruusuöljyn vuoksi vuosisatoja, ja se tuottaa yhä lähes puolet koko maailman ruusuöljystä — keskuksena toimii Kazanlakin kaupunki. Kukat poimitaan käsin touko-kesäkuussa, perinteisesti naisten työnä, ja EU myönsi bulgarialaiselle ruusuöljylle suojatun maantieteellisen merkinnän 2014.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Ruusu joka ei koskaan kuihdu] 1992–1996 — Sarajevon piiritys kesti huhtikuusta 1992 helmikuuhun 1996, lähes neljä vuotta — pisin nykyaikaisen sodankäynnin historiassa tunnettu pääkaupungin piiritys. Kaupungin jalkakäytyihin jäi kranaatinsirpaleiden repimiä tähtikuvioita, joihin sodan jälkeen alettiin valaa punaista hartsia surmansa saaneiden muistoksi. Näitä muistomerkkejä kutsutaan Sarajevon ruusuiksi, ja niitä on kaupungin kaduilla yhä kymmeniä. Piirityksen jälkeen kaupunki rakennettiin uudelleen, mutta ruusut jätettiin paikoilleen muistuttamaan.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

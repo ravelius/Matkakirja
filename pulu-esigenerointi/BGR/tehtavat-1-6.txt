@@ -1,0 +1,198 @@
+================ KOHTA 26 (kohde:hahmotelma-trigrad) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trigradin rotko (luonto · vuori)
+Tietoruudun teksti: Trigradin rotko on Rodopien pystysuorien marmorikallioiden kanjoni Smolyanin läänissä, yhdessä Bulgarian eteläisimmistä lääneistä. Rotko sulkee sisäänsä Trigradska-joen, joka syöksyy Paholaisen kurkku -luolaan ja tulee 530 metrin päästä esiin suurena karstilähteenä. Länsiseinä on 300 metriä ja itäseinä 300–350 metriä korkea, ja seinien väli kapenee pohjoisosassa alun 300 metristä noin 100 metriin. Rotko on 1,2 kilometrin päässä Trigradin kylästä 1 450 metrin korkeudessa, ja se on yksi vain kolmesta maailman joen pelkkään marmoriin kaivamasta rotkosta; suojelualueena se on ollut 1960-luvun alusta ja matkailukäytössä vuodesta 1977.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+- [Petra — kaupunkilehti / Petra: Kapea rotko on ainoa portti kaupunkiin] Siq on runsaan kilometrin mittainen rotko, joka on kapeimmillaan vain noin kolme metriä leveä, kun seinät kohoavat yhdeksästäkymmenestä lähes kahteensataan metriin. Toisin kuin useimmat kanjonit se ei ole veden kaivama vaan luonnollinen murros, jonka maankuoren liike halkaisi ja jonka vesi vasta myöhemmin hioi sileäksi. Seinissä on votiivikoloja pyhille kivikuville, ja kun tietä madallettiin vuonna 1998, esiin tuli kaksi lähes kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin taluttamassa kahta kamelia. Rotkon suulla ollut holvikaari romahti maanjäristyksessä 1896.
+
+### 26.1
+KYSYMYS: Mihin luolaan Trigradska-joki syöksyy?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trigradin rotko (luonto · vuori)
+Tietoruudun teksti: Trigradin rotko on Rodopien pystysuorien marmorikallioiden kanjoni Smolyanin läänissä, yhdessä Bulgarian eteläisimmistä lääneistä. Rotko sulkee sisäänsä Trigradska-joen, joka syöksyy Paholaisen kurkku -luolaan ja tulee 530 metrin päästä esiin suurena karstilähteenä. Länsiseinä on 300 metriä ja itäseinä 300–350 metriä korkea, ja seinien väli kapenee pohjoisosassa alun 300 metristä noin 100 metriin. Rotko on 1,2 kilometrin päässä Trigradin kylästä 1 450 metrin korkeudessa, ja se on yksi vain kolmesta maailman joen pelkkään marmoriin kaivamasta rotkosta; suojelualueena se on ollut 1960-luvun alusta ja matkailukäytössä vuodesta 1977.
+
+### 26.2
+KYSYMYS: Kuinka korkea rotkon länsiseinä on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trigradin rotko (luonto · vuori)
+Tietoruudun teksti: Trigradin rotko on Rodopien pystysuorien marmorikallioiden kanjoni Smolyanin läänissä, yhdessä Bulgarian eteläisimmistä lääneistä. Rotko sulkee sisäänsä Trigradska-joen, joka syöksyy Paholaisen kurkku -luolaan ja tulee 530 metrin päästä esiin suurena karstilähteenä. Länsiseinä on 300 metriä ja itäseinä 300–350 metriä korkea, ja seinien väli kapenee pohjoisosassa alun 300 metristä noin 100 metriin. Rotko on 1,2 kilometrin päässä Trigradin kylästä 1 450 metrin korkeudessa, ja se on yksi vain kolmesta maailman joen pelkkään marmoriin kaivamasta rotkosta; suojelualueena se on ollut 1960-luvun alusta ja matkailukäytössä vuodesta 1977.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Rotko avattiin kävelijöille] 1893 — Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin alkanut tarkoittaa muitakin suojeltuja rotkoja.
+- [Petra — kaupunkilehti / Petra: Kapea rotko on ainoa portti kaupunkiin] Siq on runsaan kilometrin mittainen rotko, joka on kapeimmillaan vain noin kolme metriä leveä, kun seinät kohoavat yhdeksästäkymmenestä lähes kahteensataan metriin. Toisin kuin useimmat kanjonit se ei ole veden kaivama vaan luonnollinen murros, jonka maankuoren liike halkaisi ja jonka vesi vasta myöhemmin hioi sileäksi. Seinissä on votiivikoloja pyhille kivikuville, ja kun tietä madallettiin vuonna 1998, esiin tuli kaksi lähes kaksinkertaisessa koossa veistettyä kauppiasta, kumpikin taluttamassa kahta kamelia. Rotkon suulla ollut holvikaari romahti maanjäristyksessä 1896.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-strandzha) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+- [Yangon — kaupunkilehti / Historia: Hienoin majatalo Suezista itään] Strand-hotelli avattiin jokirannassa vuonna 1901. Rakennuttaja oli brittiläinen liikemies John Darwood, mutta pian talo siirtyi Sarkiesin veljeksille, joiden hotelleja olivat myös Raffles Singaporessa ja Eastern & Oriental Penangissa. Strandia mainostettiin hienoimpana majatalona Suezista itään, ja se oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista. Se ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on enemmän siirtomaa-ajan rakennuksia kuin missään muualla Kaakkois-Aasiassa, ja niistä noin kaksisataa merkittävintä liitettiin vuonna 1996 suojeltujen luetteloon.
+
+### 27.1
+KYSYMYS: Kuinka suuri Strandzhan luonnonpuisto on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Strand-hotelli] avattiin 1901 Osoitteessa 92 Strand Road avattiin vuonna 1901 hotelli, jonka rakennutti brittiläinen liikemies John Darwood. Se siirtyi pian Sarkiesin veljesten omistukseen — samojen, joilla oli Raffles Singaporessa ja Eastern & Oriental Penangissa. Siirtomaa-aikana Strand oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista, ja sitä mainostettiin hienoimpana majatalona Suezista itään. Asiakkaiksi otettiin tuolloin vain valkoisia; burmalaisille ovet avautuivat vasta vuonna 1945. Omistajia on ollut monta. Sarkiesit myivät hotellin vuonna 1925 ravintoloitsija Peter Bugalar Aratoonille ja Ae Amovsielle, ja talo peruskorjattiin 1937. Toisen maailmansodan aikana siinä majoitettiin lyhyen …
+- [Yangon — kaupunkilehti / Historia: Hienoin majatalo Suezista itään] Strand-hotelli avattiin jokirannassa vuonna 1901. Rakennuttaja oli brittiläinen liikemies John Darwood, mutta pian talo siirtyi Sarkiesin veljeksille, joiden hotelleja olivat myös Raffles Singaporessa ja Eastern & Oriental Penangissa. Strandia mainostettiin hienoimpana majatalona Suezista itään, ja se oli yksi Brittiläisen imperiumin ylellisimmistä hotelleista. Se ei ole ainoa säilynyt talo siltä ajalta: Yangonissa on enemmän siirtomaa-ajan rakennuksia kuin missään muualla Kaakkois-Aasiassa, ja niistä noin kaksisataa merkittävintä liitettiin vuonna 1996 suojeltujen luetteloon.
+
+### 27.2
+KYSYMYS: Millä tavalla nestinarstvo-perinnettä harjoitetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Strandzha (luonto · vuori)
+Tietoruudun teksti: Strandzhan luonnonpuisto on Bulgarian suurin suojelualue: se kattaa 1 161 neliökilometriä Strandzhan vuoristossa maan äärimmäisessä kaakkoiskulmassa Turkin rajalla. Puisto perustettiin 25. tammikuuta 1995 suojelemaan eurooppalaisesti merkittäviä ekosysteemejä sekä alueen perinteistä kulttuuria ja kansanperinnettä. Metsät peittävät 80 prosenttia puistosta, ja ne ovat Euroopan viimeisiä lauhkeita metsiä, joissa on ikivihreä laakeripuualuskasvillisuus. Vanhin puiston luonnonsuojelualueista, Silkosia, perustettiin vuonna 1933, ja Uzunbodzhak kuuluu Unescon biosfäärialueiden verkostoon. Perinteisiin kuuluu nestinarstvo, paljain jaloin tanssiminen hehkuvilla hiilillä, joka on pakanallisen menneisyyden jäänne.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-smolyan) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+### 28.1
+KYSYMYS: Mikä on Rodopien korkein huippu Smolyanin lähellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+### 28.2
+KYSYMYS: Millä nimellä Smolyania kutsuttiin Osmanien aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Smolyan (luonto · vuori)
+Tietoruudun teksti: Smolyan on kaupunki ja hiihtokeskus Etelä-Bulgariassa lähellä Kreikan rajaa. Se sijaitsee Tšernan (musta) ja Byalan (valkoinen) jokien kapeassa laaksossa Keski-Rodopeilla vuoriston korkeimman huipun Golyam Perelikin (2 191 metriä) juurella, ja lähellä ovat suositut hiihtokeskukset Pamporovo ja Chepelare. Nimi tulee slaavilaisesta smolyani-heimosta, joka asettui alueelle 600-luvulla, ja keskiajalla seutu kuului Bysantin ja Bulgarian valtakunnille ennen kuin se joutui Osmanien alaisuuteen. Osmanien aikana kaupunki nimettiin Pashmakliksi, ja se oli viisisataa vuotta Osmanien vallan alla; vuosina 1867–1912 se kuului Edirnen vilajetin Gümülcinen sandžakiin. Nykyinen kaupunki muodostui vuonna 1960 kolmen kylän yhdistyessä.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-berkovitsa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [São Paulo — kohdekartta / Kohdekartta: Solar da Marquesa de Santos] 1834 Talo on savesta poljettu ja 1700-luvun jälkipuoliskolta. Asiakirjoissa mainitaan 1739–1754 neljä taloa Rua do Carmon varrella, ja niistä kaksi ilmeisesti yhdistettiin yhdeksi kartanoksi. Prikaatikenraali José Joaquim Pinto de Morais Leme sai talon 1802 velkojen maksuksi. Nimensä talo sai Domitila de Castrolta, Santosin markiisittarelta, joka osti sen prikaatikenraalin perijättäreltä yhdellätoista contolla ja neljälläsadalla tuhannella réisillä palattuaan Rio de Janeirosta ja suhteensa Pedro I:een päätyttyä. Hän asui talossa 1834–1867 ja muutti sitä useaan otteeseen. Tanssiaiset ja illanvietot tekivät siitä São Paulon ylhäisimpiä osoitteita, ja sitä alettiin kutsua nimellä Palacete do C…
+
+### 29.1
+KYSYMYS: Minkä huipun rinteellä Berkovitsa sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+
+### 29.2
+KYSYMYS: Minä vuonna kaupunki mainitaan ensi kerran Osmanien asiakirjoissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berkovitsa (luonto · vuori)
+Tietoruudun teksti: Berkovitsa on kaupunki ja hiihtokeskus Luoteis-Bulgariassa, Montanan läänissä lähellä Varshetsin kaupunkia; asukkaita on noin 13 900. Se sijaitsee Berkovska Stara Planinan Kom-vuoren pohjoisrinteellä Berkovitsa-joen laaksossa 405 metrin korkeudessa. Kaupunki mainitaan ensi kerran Osmanien asiakirjoissa vuonna 1488, ja aivan sen länsipuolella Kaleto-kukkulalla on vanhan linnoitetun asutuksen ja varhaiskristillisen piispakompleksin jäänteitä. Seutu osallistui Konstantinin ja Fruzhinin kapinaan (1408–1413) sekä Chiprovtsin kapinaan vuonna 1688. Elokuun 1872 lopussa Vasil Levski saapui Berkovitsaan yhdessä Vratsan vallankumouskomitean puheenjohtajan Mito Ankovin kanssa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [São Paulo — kohdekartta / Kohdekartta: Solar da Marquesa de Santos] 1834 Talo on savesta poljettu ja 1700-luvun jälkipuoliskolta. Asiakirjoissa mainitaan 1739–1754 neljä taloa Rua do Carmon varrella, ja niistä kaksi ilmeisesti yhdistettiin yhdeksi kartanoksi. Prikaatikenraali José Joaquim Pinto de Morais Leme sai talon 1802 velkojen maksuksi. Nimensä talo sai Domitila de Castrolta, Santosin markiisittarelta, joka osti sen prikaatikenraalin perijättäreltä yhdellätoista contolla ja neljälläsadalla tuhannella réisillä palattuaan Rio de Janeirosta ja suhteensa Pedro I:een päätyttyä. Hän asui talossa 1834–1867 ja muutti sitä useaan otteeseen. Tanssiaiset ja illanvietot tekivät siitä São Paulon ylhäisimpiä osoitteita, ja sitä alettiin kutsua nimellä Palacete do C…
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-sozopol) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+### 30.1
+KYSYMYS: Minkä kaupungin kanssa Sozopol kilpaili kaupankäynnissä antiikissa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+### 30.2
+KYSYMYS: Minä vuonna roomalaiset valtasivat ja ryöstivät Sozopolin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sozopol (meri)
+Tietoruudun teksti: Sozopol on muinainen merenrantakaupunki Bulgarian Mustanmeren etelärannikolla 35 kilometriä Burgasista etelään, ja se on tunnettu Apollonia-taide- ja elokuvafestivaalista. Kreikkalaiset siirtolaiset Miletoksesta perustivat kaupungin 600-luvulla eaa. nimellä Antheia, ja myöhemmin se nimettiin Apolloniaksi Apollon temppelin mukaan; siitä tuli yksi Mustanmeren rikkaimmista kreikkalaissiirtokunnista ja Mesembrian, nykyisen Nesebarin, legendaarinen kauppakilpailija. Vuonna 72 eaa. roomalaislegioonat valloittivat ja ryöstivät kaupungin, ja Lucullus vei Apollon patsaan Roomaan. Satamalahdesta on löydetty 2. ja 1. vuosituhannen eaa. ankkureita, jotka todistavat vilkkaasta merenkulusta jo antiikin ajoilta. Osmanien vallan aikana kaupunki tunnettiin nimellä Sizebolu.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

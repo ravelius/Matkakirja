@@ -1,0 +1,212 @@
+================ KOHTA 11 (kohde:boyana) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boyanan kirkko (kulttuuri)
+Tietoruudun teksti: Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Historia: Kasvot, jotka maalattiin 1259] Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina.
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+- [Varsova — kaupunkilehti / Historia: Maalaukset, joista tuli pohjapiirustus] Vuonna 1767 italialainen Bernardo Bellotto, joka käytti setänsä Canaletton tavaramerkkinimeä, tuli Puolan kuninkaan hovimaalariksi ja maalasi lähes kolmekymmentä näkymää Varsovasta niin tarkasti, että ikkunat, koristelistat ja talojen mittasuhteet erottuvat yksitellen. Taulut olivat sodan aikana muualla kuin Varsovassa ja säilyivät ehjinä. Jälleenrakennuksessa arkkitehdit käyttivät niitä pohjapiirustuksina: talo toisensa jälkeen rakennettiin takaisin täsmälleen sellaisena kuin Bellotto oli sen kaksisataa vuotta aiemmin maalannut.
+
+### 11.1
+KYSYMYS: Kuka maalasi Boyanan freskot?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boyanan kirkko (kulttuuri)
+Tietoruudun teksti: Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kaupunkilehti / Historia: Kasvot, jotka maalattiin 1259] Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina.
+
+### 11.2
+KYSYMYS: Miten 1200-luvun maalaukset ovat säilyneet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Boyanan kirkko (kulttuuri)
+Tietoruudun teksti: Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Taide: Preussin kuninkaalta jääneet maalaukset päätyivät keisarinnalle] 1764 — Berliiniläinen kauppias Johann Ernst Gotzkowsky oli koonnut 225 maalauksen kokoelman Preussin kuningas Fredrik Suurelle, mutta seitsenvuotisen sodan jälkeen kuninkaan kassa oli tyhjä eikä hän voinut maksaa niistä. Vuonna 1764 Venäjän keisarinna Katariina Suuri osti koko kokoelman velan kuittaukseksi ja ripusti taulut yksityiseen siipirakennukseensa Talvipalatsin vieressä — rakennus sai nimen Eremitaasi, erakon asunto, koska sinne pääsivät vain harvat kutsutut. Tästä ostosta syntyi kokoelma, joka on nykyään yksi maailman suurimpia taidemuseoita.
+- [Varsova — kaupunkilehti / Historia: Maalaukset, joista tuli pohjapiirustus] Vuonna 1767 italialainen Bernardo Bellotto, joka käytti setänsä Canaletton tavaramerkkinimeä, tuli Puolan kuninkaan hovimaalariksi ja maalasi lähes kolmekymmentä näkymää Varsovasta niin tarkasti, että ikkunat, koristelistat ja talojen mittasuhteet erottuvat yksitellen. Taulut olivat sodan aikana muualla kuin Varsovassa ja säilyivät ehjinä. Jälleenrakennuksessa arkkitehdit käyttivät niitä pohjapiirustuksina: talo toisensa jälkeen rakennettiin takaisin täsmälleen sellaisena kuin Bellotto oli sen kaksisataa vuotta aiemmin maalannut.
+- [Wien — kohdekartta / Kohdekartta: Klimtin maalaukset] 1900–1907 Yliopisto tilasi taiteilijalta katon täydeltä tieteen riemuvoittoa ja sai sen sijaan Klimtin näkemyksen — mikä oli professorien mielestä skandaali. Maalauksia ei ripustettu koskaan, ja lopulta sota poltti koko kiistan kohteen. Jäljelle jäivät mustavalkoiset valokuvat ja opetus tilaustöiden vaaroista.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:jogurtti) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bulgarialainen jogurtti (ruoka)
+Tietoruudun teksti: Jogurtin tekee jogurtiksi maitohappobakteeri, jonka bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti Genevessä 1905 tutkiessaan kotimaansa jogurttia. Bakteeri nimettiin löytäjän kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä jogurtinvalmistuksen pääbakteeri kaikkialla maailmassa. Grigorov syntyi Studen Izvorin kylässä Tranin seudulla. Nobelisti Ilja Metšnikov arveli aikanaan Grigorovin työn pohjalta, että bulgarialaisten talonpoikien pitkä ikä johtui juuri jogurtista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Ratsastaja jyrkänteellä] 700-luku — Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä korkea kalliojyrkänne, johon on veistetty 700-luvulla ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä hakattu kreikankielisiä kirjoituksia, jotka kertovat ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon maailmanperintöluetteloon 1979.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Bulgaria — maalehti / Menovinkit] Bulgariassa moni museo on skannattu kolmiulotteiseksi, joten kirkon holviin ja arkeologian saliin pääsee kotoa käsin. Verkossa on myös vanhoja valokuvia, traakialaisten kultaa ja suoria kameroita lintujen pesillä.
+
+### 12.1
+KYSYMYS: Mitä bakteeri tekee maidolle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bulgarialainen jogurtti (ruoka)
+Tietoruudun teksti: Jogurtin tekee jogurtiksi maitohappobakteeri, jonka bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti Genevessä 1905 tutkiessaan kotimaansa jogurttia. Bakteeri nimettiin löytäjän kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä jogurtinvalmistuksen pääbakteeri kaikkialla maailmassa. Grigorov syntyi Studen Izvorin kylässä Tranin seudulla. Nobelisti Ilja Metšnikov arveli aikanaan Grigorovin työn pohjalta, että bulgarialaisten talonpoikien pitkä ikä johtui juuri jogurtista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Ruoka: Maito, jota kypsytetään noessa] Kalenjinien mursik on hapanmaitoa, joka kypsytetään sotet-kalebassissa. Astia harjataan puhtaaksi käpypalmun oksasta tehdyllä sosiot-harjalla ja sivellään sisältä puuhiilellä, joka hehkutetaan itet-pensaan oksista. Hiili tiivistää huokoisen kuoren ilmatiiviiksi, estää pilaantumisen, antaa maidolle sinertävän sävyn ja mausteisen maun. Maito jätetään hapantumaan kolmesta viiteen vuorokautta ja säilyy kuukauden. Mursikia juodaan häiden myötäjäisneuvottelujen päätteeksi, ja kansainvälisistä kisoista palaava juoksija saa kulauksen jo lentokentällä.
+
+### 12.2
+KYSYMYS: Miten jogurttia syödään Bulgariassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bulgarialainen jogurtti (ruoka)
+Tietoruudun teksti: Jogurtin tekee jogurtiksi maitohappobakteeri, jonka bulgarialainen lääketieteen opiskelija Stamen Grigorov tunnisti Genevessä 1905 tutkiessaan kotimaansa jogurttia. Bakteeri nimettiin löytäjän kotimaan mukaan Lactobacillus bulgaricukseksi, ja se on yhä jogurtinvalmistuksen pääbakteeri kaikkialla maailmassa. Grigorov syntyi Studen Izvorin kylässä Tranin seudulla. Nobelisti Ilja Metšnikov arveli aikanaan Grigorovin työn pohjalta, että bulgarialaisten talonpoikien pitkä ikä johtui juuri jogurtista.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Ratsastaja jyrkänteellä] 700-luku — Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä korkea kalliojyrkänne, johon on veistetty 700-luvulla ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä hakattu kreikankielisiä kirjoituksia, jotka kertovat ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon maailmanperintöluetteloon 1979.
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kuningashauta mäen uumenissa] 300-luku eaa. — Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 kummun sisältä traakialaisten kuningashauta 300-luvulta ennen ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen naishahmoista veistettyä pylvästä, joiden kädet on nostettu ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja koko rakennelma on säilynyt poikkeuksellisen hyvin kummun suojassa vuosituhansien ajan. Hauta liitettiin Unescon maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa ansiosta.
+- [Bulgaria — maalehti / Menovinkit] Bulgariassa moni museo on skannattu kolmiulotteiseksi, joten kirkon holviin ja arkeologian saliin pääsee kotoa käsin. Verkossa on myös vanhoja valokuvia, traakialaisten kultaa ja suoria kameroita lintujen pesillä.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:veliki-preslav) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Preslav (sana)
+Tietoruudun teksti: Veliki Preslav oli ensimmäisen Bulgarian valtakunnan pääkaupunki, ja hallitsija Simeon I siirsi tänne 893 valtakunnan kirjallisuuskoulun — keskiajan slaavien tärkeimmän oppineiston keskuksen, jossa käännettiin, sepitettiin runoja ja maalattiin keramiikkaa. Juuri Preslavin koulussa kehitettiin kyrillinen kirjaimisto, ja varhaisimmat ajoitettavat kyrilliset kirjoitukset on löydetty tältä seudulta. Bysantin keisarin joukot valtasivat ja polttivat kaupungin 972.
+
+### 13.1
+KYSYMYS: Keitä koulun kuuluisat kirjoittajat olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Preslav (sana)
+Tietoruudun teksti: Veliki Preslav oli ensimmäisen Bulgarian valtakunnan pääkaupunki, ja hallitsija Simeon I siirsi tänne 893 valtakunnan kirjallisuuskoulun — keskiajan slaavien tärkeimmän oppineiston keskuksen, jossa käännettiin, sepitettiin runoja ja maalattiin keramiikkaa. Juuri Preslavin koulussa kehitettiin kyrillinen kirjaimisto, ja varhaisimmat ajoitettavat kyrilliset kirjoitukset on löydetty tältä seudulta. Bysantin keisarin joukot valtasivat ja polttivat kaupungin 972.
+
+### 13.2
+KYSYMYS: Miksi kirjaimisto on nimetty Kyrilloksen mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliki Preslav (sana)
+Tietoruudun teksti: Veliki Preslav oli ensimmäisen Bulgarian valtakunnan pääkaupunki, ja hallitsija Simeon I siirsi tänne 893 valtakunnan kirjallisuuskoulun — keskiajan slaavien tärkeimmän oppineiston keskuksen, jossa käännettiin, sepitettiin runoja ja maalattiin keramiikkaa. Juuri Preslavin koulussa kehitettiin kyrillinen kirjaimisto, ja varhaisimmat ajoitettavat kyrilliset kirjoitukset on löydetty tältä seudulta. Bysantin keisarin joukot valtasivat ja polttivat kaupungin 972.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:madara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Madaran ratsastaja (historia)
+Tietoruudun teksti: Madaran kalliojyrkänteeseen on hakattu lähes luonnollisen kokoinen ratsastaja, joka työntää keihään hevosen jalkoihin kaatuneeseen leijonaan koira kintereillään. Reliefi veistettiin 23 metrin korkeuteen todennäköisesti 700-luvun alussa kaani Tervelin kaudella, ja sen ympärillä on kolme keskiajan kreikaksi kirjoitettua tekstiä Bulgarian varhaisista kaaneista. Kuvan merkitys on yhä arvoitus. Unescon maailmanperintölistalle reliefi pääsi 1979, ja se on kuvattu Bulgarian pikkukolikoihin.
+
+### 14.1
+KYSYMYS: Keitä kaanit Tervel ja Krum olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Madaran ratsastaja (historia)
+Tietoruudun teksti: Madaran kalliojyrkänteeseen on hakattu lähes luonnollisen kokoinen ratsastaja, joka työntää keihään hevosen jalkoihin kaatuneeseen leijonaan koira kintereillään. Reliefi veistettiin 23 metrin korkeuteen todennäköisesti 700-luvun alussa kaani Tervelin kaudella, ja sen ympärillä on kolme keskiajan kreikaksi kirjoitettua tekstiä Bulgarian varhaisista kaaneista. Kuvan merkitys on yhä arvoitus. Unescon maailmanperintölistalle reliefi pääsi 1979, ja se on kuvattu Bulgarian pikkukolikoihin.
+
+### 14.2
+KYSYMYS: Miten kalliokuvaa suojellaan rapautumiselta?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Madaran ratsastaja (historia)
+Tietoruudun teksti: Madaran kalliojyrkänteeseen on hakattu lähes luonnollisen kokoinen ratsastaja, joka työntää keihään hevosen jalkoihin kaatuneeseen leijonaan koira kintereillään. Reliefi veistettiin 23 metrin korkeuteen todennäköisesti 700-luvun alussa kaani Tervelin kaudella, ja sen ympärillä on kolme keskiajan kreikaksi kirjoitettua tekstiä Bulgarian varhaisista kaaneista. Kuvan merkitys on yhä arvoitus. Unescon maailmanperintölistalle reliefi pääsi 1979, ja se on kuvattu Bulgarian pikkukolikoihin.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:srebarna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Srebarna (eläimet)
+Tietoruudun teksti: Parin kilometrin päässä Tonavan etelärannasta lepää matala Srebarnan järvi, jonka nimen uskotuimman selityksen mukaan antoi täydenkuun hopeinen kimallus veden pinnassa. Järvi on Via Pontican, Euroopan ja Afrikan välisen lintujen muuttotien, varrella, ja sen alueella pesii 179 lintulajia — tunnetuimpana kiharapelikaani. Alue rauhoitettiin 1948, ja Unescon maailmanluonnonperintöön se otettiin 1983.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Luonto: Miljoona lintua yhdellä järvellä] Nakuru-, Elementaita- ja Bogoria-järvet olivat kymmenentuhatta vuotta sitten yksi syvä makean veden järvi; kun se kuivui, jäljelle jäi kolme emäksistä altaan pohjaa. Vesi ruokkii sinileviä, sinilevä ruokkii pikkuflamingoja, ja parhaimmillaan Nakurun pinta katoaa kokonaan liikkuvan vaaleanpunaisen maton alle. Linnut vaihtavat järveä ravinnon mukaan: kun Nakurun vesi nousi 2013, parvet siirtyivät Bogorialle, jonka rannalla purkautuu kuumia lähteitä. Unesco otti kolmikon maailmanperintöluetteloon 2011.
+- [Turkki — maalehti / Luonto] Turkin luonto on tehty tulivuoren tuhkasta, kuumasta lähdevedestä ja suolasta. Sen asukkaisiin kuuluu kissa, joka menee veteen, ja lintuparvi, joka pesii melkein kuivalla järvellä.
+- [Kreikka — maalehti / Luonto: Yhdeksän kiloa lintua ilmassa] keväällä — Kiharapelikaani on pelikaaneista suurin ja maailman raskaimpia lentäviä lintuja: siipiväli on 2,7–3,2 metriä ja paino keskimäärin noin 9,5 kiloa. Maailman suurin tunnettu pesimäsiirtokunta on Prespajärvellä, jonka pienemmän altaan rannoilla pesii noin 1 600 paria. Järvi jakautuu Kreikan ja Albanian kesken, joten lintujen laskeminen vaatii kahden maan yhteistyötä. Kiharapelikaani ei syöksy veteen ylhäältä, vaan ui pinnalla ja kurottaa nokkansa pinnan alle. Kreikassa nopeat moottoriveneet häiritsevät parvien ruokailua.
+
+### 15.1
+KYSYMYS: Kuinka suureksi kiharapelikaani kasvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Srebarna (eläimet)
+Tietoruudun teksti: Parin kilometrin päässä Tonavan etelärannasta lepää matala Srebarnan järvi, jonka nimen uskotuimman selityksen mukaan antoi täydenkuun hopeinen kimallus veden pinnassa. Järvi on Via Pontican, Euroopan ja Afrikan välisen lintujen muuttotien, varrella, ja sen alueella pesii 179 lintulajia — tunnetuimpana kiharapelikaani. Alue rauhoitettiin 1948, ja Unescon maailmanluonnonperintöön se otettiin 1983.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kreikka — maalehti / Luonto: Yhdeksän kiloa lintua ilmassa] keväällä — Kiharapelikaani on pelikaaneista suurin ja maailman raskaimpia lentäviä lintuja: siipiväli on 2,7–3,2 metriä ja paino keskimäärin noin 9,5 kiloa. Maailman suurin tunnettu pesimäsiirtokunta on Prespajärvellä, jonka pienemmän altaan rannoilla pesii noin 1 600 paria. Järvi jakautuu Kreikan ja Albanian kesken, joten lintujen laskeminen vaatii kahden maan yhteistyötä. Kiharapelikaani ei syöksy veteen ylhäältä, vaan ui pinnalla ja kurottaa nokkansa pinnan alle. Kreikassa nopeat moottoriveneet häiritsevät parvien ruokailua.
+
+### 15.2
+KYSYMYS: Mitä muita lintuja järvellä pesii?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Srebarna (eläimet)
+Tietoruudun teksti: Parin kilometrin päässä Tonavan etelärannasta lepää matala Srebarnan järvi, jonka nimen uskotuimman selityksen mukaan antoi täydenkuun hopeinen kimallus veden pinnassa. Järvi on Via Pontican, Euroopan ja Afrikan välisen lintujen muuttotien, varrella, ja sen alueella pesii 179 lintulajia — tunnetuimpana kiharapelikaani. Alue rauhoitettiin 1948, ja Unescon maailmanluonnonperintöön se otettiin 1983.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kenia — maalehti / Luonto: Miljoona lintua yhdellä järvellä] Nakuru-, Elementaita- ja Bogoria-järvet olivat kymmenentuhatta vuotta sitten yksi syvä makean veden järvi; kun se kuivui, jäljelle jäi kolme emäksistä altaan pohjaa. Vesi ruokkii sinileviä, sinilevä ruokkii pikkuflamingoja, ja parhaimmillaan Nakurun pinta katoaa kokonaan liikkuvan vaaleanpunaisen maton alle. Linnut vaihtavat järveä ravinnon mukaan: kun Nakurun vesi nousi 2013, parvet siirtyivät Bogorialle, jonka rannalla purkautuu kuumia lähteitä. Unesco otti kolmikon maailmanperintöluetteloon 2011.
+- [Turkki — maalehti / Luonto] Turkin luonto on tehty tulivuoren tuhkasta, kuumasta lähdevedestä ja suolasta. Sen asukkaisiin kuuluu kissa, joka menee veteen, ja lintuparvi, joka pesii melkein kuivalla järvellä.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

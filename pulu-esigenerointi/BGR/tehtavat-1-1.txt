@@ -1,0 +1,213 @@
+================ KOHTA 1 (kohde:plovdiv) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Naru joka odottaa haikaraa] 1. maaliskuuta — Baba Martan eli maaliskuun mummon päivänä 1. maaliskuuta bulgarialaiset antavat toisilleen martenitsoja: punaisesta ja valkoisesta langasta kierrettyjä rannenauhoja tai tupsuja. Punainen kuvaa verta ja voimaa, valkoinen puhtautta ja onnea, ja koru puetaan ranteeseen tai vaatteeseen suojaksi arvaamatonta kevätsäätä vastaan. Martenitsaa kannetaan niin kauan, kunnes näkee ensimmäisen muuttolinnun, useimmiten haikaran, tai kukkivan puun — silloin naru riisutaan ja sidotaan puun oksaan. Perinteen juuret ulottuvat kauas kristinuskoa varhaisempaan aikaan, ja maaliskuun alussa lähes jokaisen bulgarialaisen ranteessa näkyy oma punavalkoinen solmu.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+
+### 1.1
+KYSYMYS: Milloin Filibestä tuli taas Plovdiv?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+### 1.2
+KYSYMYS: Mitä bulgarialaisen kirkon elpyminen tarkoitti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Plovdiv (kaupungit)
+Tietoruudun teksti: Vuonna 1873 kaupunkia kutsuttiin Filibeksi, ja se kuului osmanien Edirnen vilajettiin — Bulgaria vapautui vasta 1878. Silti Filibe oli tuolloin bulgarialaisen kansallisen herätysliikkeen keskus: bulgarialainen kirkko elpyi täällä 1870. Kaupunki on rakentunut seitsemälle kukkulalle, minkä vuoksi sitä kutsutaan "seitsemän kukkulan kaupungiksi", ja asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Naamiot ja narut: Naru joka odottaa haikaraa] 1. maaliskuuta — Baba Martan eli maaliskuun mummon päivänä 1. maaliskuuta bulgarialaiset antavat toisilleen martenitsoja: punaisesta ja valkoisesta langasta kierrettyjä rannenauhoja tai tupsuja. Punainen kuvaa verta ja voimaa, valkoinen puhtautta ja onnea, ja koru puetaan ranteeseen tai vaatteeseen suojaksi arvaamatonta kevätsäätä vastaan. Martenitsaa kannetaan niin kauan, kunnes näkee ensimmäisen muuttolinnun, useimmiten haikaran, tai kukkivan puun — silloin naru riisutaan ja sidotaan puun oksaan. Perinteen juuret ulottuvat kauas kristinuskoa varhaisempaan aikaan, ja maaliskuun alussa lähes jokaisen bulgarialaisen ranteessa näkyy oma punavalkoinen solmu.
+- [Bulgaria — maalehti / Vuori ja laakso: Kivijoki, joka ei virtaa] 1895 — Vitosha-vuori alkaa heti Sofian eteläreunalta, ja sen huippu Tšerni Vrah kohoaa 2290 metriin. Rinteillä mutkittelee kivijokia: satojen metrien mittaisia nauhoja jättiläislohkareita, jotka valuvat alaspäin niin hitaasti, ettei liikettä huomaa. Kivet ovat vanhojen jäätiköiden jäänteitä. Elokuussa 1895 kolmesataa sofialaista kiipesi yhtenä joukkona huipulle, ja siitä päivästä lasketaan bulgarialaisen retkeilyn alku.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:varna) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+### 2.1
+KYSYMYS: Keitä kultaa kantaneet ihmiset olivat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+### 2.2
+KYSYMYS: Mistä Varnan kulta oli peräisin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varna (kaupungit)
+Tietoruudun teksti: Varna tunnettiin antiikissa nimellä Odessos ja on kehittynyt kolmen vuosituhannen aikana merkittäväksi satamakaupungiksi Mustallamerellä. Vuonna 1974 löydetystä Varnan nekropolista on kaivettu esiin yli 3000 kultaesinettä — maailman vanhin tunnettu kulta-aarre, ajoitettu vuosille 4600–4200 eaa. Nykyään Varnaa kutsutaan Bulgarian merelliseksi pääkaupungiksi, sillä siellä sijaitsee laivaston päämaja.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:veliko-tarnovo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kukkula, joka paloi kerran] 1393 — Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 osmanit piirittivät linnoitusta kolme kuukautta ja polttivat sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 Bulgarian valtion 1300-vuotisjuhlaan.
+- [Managua — kaupunkilehti / Managua: Palatsi joka kesti, ja komento joka valtasi sen] Sama Pablo Dambach suunnitteli myös Managuan kansallispalatsin, joka rakennettiin 1936–1940 vuoden 1931 järistyksen opetuksin vahvistettuna. Se piti pintansa: vuoden 1972 järistys jätti sen pystyyn, vaikka koko ympäröivä kortteli murskaantui. Palatsissa kokoontui kansalliskokous yli viidenkymmenen vuoden ajan, kunnes 22. elokuuta 1978 komentaja Edén Pastora — lisänimeltään "Komentaja Nolla" — johti sandinistikapinallisten joukon istuntosaliin ja otti kongressin panttivangiksi. Isku ruokki vallankumousta, joka kaatoi Somozan hallinnon 1979. Nykyään rakennus on Kulttuuripalatsi: siellä ovat kansallismuseo, -kirjasto ja -arkisto.
+
+### 3.1
+KYSYMYS: Miksi kansalliskokous kokoontui juuri täällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Managua — kaupunkilehti / Managua: Palatsi joka kesti, ja komento joka valtasi sen] Sama Pablo Dambach suunnitteli myös Managuan kansallispalatsin, joka rakennettiin 1936–1940 vuoden 1931 järistyksen opetuksin vahvistettuna. Se piti pintansa: vuoden 1972 järistys jätti sen pystyyn, vaikka koko ympäröivä kortteli murskaantui. Palatsissa kokoontui kansalliskokous yli viidenkymmenen vuoden ajan, kunnes 22. elokuuta 1978 komentaja Edén Pastora — lisänimeltään "Komentaja Nolla" — johti sandinistikapinallisten joukon istuntosaliin ja otti kongressin panttivangiksi. Isku ruokki vallankumousta, joka kaatoi Somozan hallinnon 1979. Nykyään rakennus on Kulttuuripalatsi: siellä ovat kansallismuseo, -kirjasto ja -arkisto.
+
+### 3.2
+KYSYMYS: Millainen kaupunki Veliko Tarnovo on nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Veliko Tarnovo (kaupungit)
+Tietoruudun teksti: Veliko Tarnovo oli Toisen Bulgarian valtakunnan pääkaupunki 1185–1393, kunnes osmanit valtasivat sen kolmen kuukauden piirityksen jälkeen. Isoisän vieraillessa 1873 kaupunki oli yhä osaa osmanivaltaa — kukaan ei vielä tiennyt, että vain kuusi vuotta myöhemmin, huhtikuussa 1879, tänne kokoontuisi Bulgarian ensimmäinen kansalliskokous hyväksymään maan ensimmäisen perustuslain.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bulgaria — maalehti / Kalliot ja kruunut: Kukkula, joka paloi kerran] 1393 — Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 osmanit piirittivät linnoitusta kolme kuukautta ja polttivat sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 Bulgarian valtion 1300-vuotisjuhlaan.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:rila) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+- [Nicaragua — maalehti / Luonto: Sammunut vuori, jonka laella on oma metsänsä] 1570 — Mombacho on 1 344 metriä korkea kerrostulivuori Granadan kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä sitä aiemmista ole historiallista tietoa. Huippu on niin korkealla ja kostea, että siellä kasvaa sumumetsää ja kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta kuin tältä vuorelta. Rinteiltä on laskettu yli 700 kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma -polulle pääsee vain oppaan kanssa.
+
+### 4.1
+KYSYMYS: Miten jääkausi muovasi Rilan järvet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Pyhän Yrjön rotunda] 300-luku Sofian keskustassa, hotellin ja presidentinlinnan välisellä pihalla, seisoo pyöreä punatiilinen rakennus. Se on kaupungin vanhin yhä pystyssä oleva rakennus: rotunda pystytettiin jo 300-luvun alussa, alun perin roomalaisen kylpylän kupolikattoiseksi saliksi – kauan ennen kuin siitä tuli kirkko. Kupoli kohoaa lähes 14 metrin korkeuteen, ja sisäseinillä on peräti viisi eri aikakauden freskokerrosta päällekkäin. Vaikuttavin niistä on peräisin 900-luvulta, Bulgarian niin sanotulta kultakaudelta: maalauksissa on 22 yli kaksimetristä profeettaa ja enkeli, jonka kasvot on maalattu niin taidokkaasti, että ne ovat innoittaneet taiteilijoita vuosisatojen ajan. 1500-luvulla osmanit muuttivat …
+
+### 4.2
+KYSYMYS: Mitä eläimiä vuoristossa elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Rila-vuoristo (luonto · vuori)
+Tietoruudun teksti: Rila on Bulgarian, koko Balkanin niemimaan ja koko Kaakkois-Euroopan korkein vuoristo — sen huippu Musala kohoaa 2925 metriin. Vuoristo kätkee lähes 200 jääkauden muovaamaa järveä, joista tunnetuin ryhmä on seitsemän Rilan järveä. Täältä saavat alkunsa monet Balkanin pisimmistä joista, ja Bulgarian vedenjakaja Mustanmeren ja Egeanmeren valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+- [Nicaragua — maalehti / Luonto: Sammunut vuori, jonka laella on oma metsänsä] 1570 — Mombacho on 1 344 metriä korkea kerrostulivuori Granadan kaupungin vieressä. Sen viimeisin purkaus oli 1570, eikä sitä aiemmista ole historiallista tietoa. Huippu on niin korkealla ja kostea, että siellä kasvaa sumumetsää ja kääpiömetsää, joiden kasveja ja eläimiä ei tavata muualta kuin tältä vuorelta. Rinteiltä on laskettu yli 700 kasvilajia, joukossa runsaasti kämmeköitä. Vuori on yksi Nicaraguan 78 suojelualueesta, ja vaativammalle El Puma -polulle pääsee vain oppaan kanssa.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:musala) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Kansallispuisto ja tutkimusasema] Vuonna 1959, tasan sata vuotta Lajien synnyn julkaisusta, Ecuador perusti saaristoon maansa ensimmäisen kansallispuiston. Puisto kattaa 97 prosenttia saariston maa-alasta ja jättää ihmisasutukselle tilaa vain jo olemassa olevien kylien kohdalla. Viisi vuotta myöhemmin, vuonna 1964, Puerto Ayoran laidalle avattiin Charles Darwin -tutkimusasema, joka yhä tänään kasvattaa uhanalaisia kilpikonnia takaisin luontoon ja seuraa saariston lajien tilaa. Vuonna 1978 Unesco lisäsi koko saariston maailmanperintöluetteloonsa ensimmäisten kohteiden joukossa.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Ensimmäinen huipulle] Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+
+### 5.1
+KYSYMYS: Miksi juuri huipulle rakennettiin tutkimusasema?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Galápagos — kaupunkilehti / Galápagossaaret: Kansallispuisto ja tutkimusasema] Vuonna 1959, tasan sata vuotta Lajien synnyn julkaisusta, Ecuador perusti saaristoon maansa ensimmäisen kansallispuiston. Puisto kattaa 97 prosenttia saariston maa-alasta ja jättää ihmisasutukselle tilaa vain jo olemassa olevien kylien kohdalla. Viisi vuotta myöhemmin, vuonna 1964, Puerto Ayoran laidalle avattiin Charles Darwin -tutkimusasema, joka yhä tänään kasvattaa uhanalaisia kilpikonnia takaisin luontoon ja seuraa saariston lajien tilaa. Vuonna 1978 Unesco lisäsi koko saariston maailmanperintöluetteloonsa ensimmäisten kohteiden joukossa.
+- [Kilimandžaro — kaupunkilehti / Kilimanjaro: Ensimmäinen huipulle] Saksalainen maantieteilijä Hans Meyer yritti nousta Kibon huipulle jo 1887, mutta joutui kääntymään takaisin puutteellisten varusteiden vuoksi. Toisella yrityksellä 1889 hän eteni yhdessä itävaltalaisen vuorikiipeilijän Ludwig Purtschellerin ja paikallisen oppaan Yohane Lauwon kanssa, ja lokakuun 6. päivänä he saavuttivat Kibon kraatterin reunan korkeimman kohdan. Meyer nimesi huipun Kaiser-Wilhelm-Spitzeksi keisari Vilhelmin mukaan; nimi vaihtui Uhuru Peakiksi eli Vapauden huipuksi vasta Tanganjikan itsenäistyttyä 1960-luvun alussa.
+- [Slovakia — maalehti / Luonto: Huipulle köysiradalla] 1793 — Lomnický štít on Korkeiden Tatrojen toiseksi korkein huippu, 2634 metriä. Ensimmäinen kirjattu nousu tehtiin 16. elokuuta 1793, kun englantilainen matkailija Robert Townson kiipesi sinne oppaan kanssa. Hän mittasi korkeudeksi 2633 metriä eli vain metrin liian vähän. Talvella huipulle noustiin ensimmäisen kerran 1891. Vuodesta 1940 lähtien Tatranská Lomnicasta on päässyt huipulle köysiradalla, ja siellä saa viipyä 50 minuuttia. Huipun asemalla toimii ympärivuotisesti aurinko-observatorio ja sääasema.
+
+### 5.2
+KYSYMYS: Millainen sää Musalalla on kesällä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Musala (luonto · vuori)
+Tietoruudun teksti: Musala on koko Balkanin niemimaan korkein kohta, 2925 metriä — nimi juontuu arabiasta osmanin turkin kautta ja tarkoittaa suunnilleen "rukouspaikkaa". Huipulta näkee kaikki Bulgarian suuret vuoristot Vitošasta Piriniin. Huipulla toimi vuodesta 1960 kosminen säteilyasema, kunnes tulipalo tuhosi sen 1983. Musalan keskilämpötila on Bulgarian ja koko Balkanin kylmin, keskimäärin -2,2 °C.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
