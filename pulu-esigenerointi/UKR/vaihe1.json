@@ -1080,5 +1080,364 @@
    "Mitä kuitulevy on?",
    "Kuinka kauan rata on ollut käytössä?"
   ]
+ },
+ {
+  "kohde": "kohde:berdytsivin-karmeliittaluostari",
+  "kysymys": "Milloin luostarin rakennustyöt valmistuivat?",
+  "uusi": false,
+  "vastaus": "Kato, tää on helppo. Rakennustyöt valmistuivat vuonna 1642. Ne olivat alkaneet vuonna 1634, joten rakentaminen kesti kahdeksan vuotta. Paikan oli lahjoittanut karmeliitoille vuonna 1630 voivoda [[Janusz Tyszkiewicz Łohojski]], ja lahjoitukseen kuului [[Berdytšivin]] linnoitus, johon [[karmeliittaluostari]] rakennettiin. Ei paha, kahdeksan vuotta, ja minä muistin kaikki luvut.",
+  "linkit": [
+   "Janusz Tyszkiewicz Łohojski",
+   "Berdytšivin",
+   "karmeliittaluostari"
+  ],
+  "jatkot": [
+   "Keitä paljasjalkaiset karmeliitat ovat?",
+   "Milloin luostari palautettiin kirkolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:berdytsivin-karmeliittaluostari",
+  "kysymys": "Minkä ikonin ansiosta luostari tuli tunnetuksi?",
+  "uusi": false,
+  "vastaus": "No niin, ikoni. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista. Paavi [[Benedictus XIV]] antoi ikonille kultaiset kruunut vuonna 1756, ja ikoni veti puoleensa [[pyhiinvaeltajia]]. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991. Pyhiinvaeltajat ja minä, kyl me ollaan samaa sukua.",
+  "linkit": [
+   "Benedictus XIV",
+   "pyhiinvaeltajia"
+  ],
+  "jatkot": [
+   "Mitä ikonin kruunaus tarkoittaa?",
+   "Mikä on pyhiinvaellus?"
+  ]
+ },
+ {
+  "kohde": "kohde:berdytsivin-karmeliittaluostari",
+  "kysymys": "Keitä paljasjalkaiset karmeliitat ovat?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Paljasjalkaiset karmeliitat ovat karmeliittaritarikunnan uudistushaara, joka syntyi 1500-luvun lopulla. Sen uudistajina pidetään [[Avilan Teresaa]] ja [[Ristin Johannesta]], jotka halusivat palauttaa luostarielämään yksinkertaisuuden, hiljaisuuden ja ankaran elämäntavan. Nimi viittaa tähän vaatimattomuuteen, sillä veljet ja sisaret käyttivät yksinkertaisia sandaaleja kenkien sijaan. Haara on levinnyt monen maan luostareihin ja toimii yhä tänä päivänä. Pitkä selitys, mut kyl tää pysyi päässä.",
+  "linkit": [
+   "Avilan Teresaa",
+   "Ristin Johannesta"
+  ],
+  "jatkot": [
+   "Mikä erotti uudistushaaran vanhemmasta karmeliittaritarikunnasta?",
+   "Milloin Avilan Teresa eli?"
+  ]
+ },
+ {
+  "kohde": "kohde:berdytsivin-karmeliittaluostari",
+  "kysymys": "Mikä on voivoda?",
+  "uusi": true,
+  "vastaus": "Ai tota, vanha virkanimi. Voivoda on slaavilaisissa maissa käytetty arvonimi, joka tarkoitti alun perin sotapäällikköä ja myöhemmin alueen hallitsijaa tai korkeaa virkamiestä. [[Puola-Liettuan]] valtakunnassa voivoda johti oman alueensa eli voivodikunnan hallintoa ja sotaväkeä, ja hän kuului yleensä ylimystöön. [[Berdytšivin]] luostarin lahjoittanut Janusz Tyszkiewicz Łohojski oli tällainen [[aatelismies]]. Sana elää yhä esimerkiksi Puolan nykyisessä aluejaossa, jossa maakuntaa kutsutaan nimellä voivodikunta. Virkanimi on mielestäni komea, vaikka minä en ole koskaan saanut tittelistä mitään.",
+  "linkit": [
+   "Puola-Liettuan",
+   "Berdytšivin",
+   "aatelismies"
+  ],
+  "jatkot": [
+   "Mikä oli Puola-Liettuan valtakunta?",
+   "Mitä voivodikunta tarkoittaa nykyisessä Puolassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:berdytsivin-karmeliittaluostari",
+  "kysymys": "Mitä kuuluisia ihmisiä liittyy Berdytšiviin?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tähän minä osaan vastata. Kirjailija [[Joseph Conrad]] syntyi Berdytšivissä vuonna 1857, ja hänestä tuli myöhemmin englanninkielisen kirjallisuuden merkittävä kirjailija. Ranskalainen [[Honoré de Balzac]] meni siellä naimisiin puolalaissyntyisen Ewelina Hańskan kanssa vuonna 1850. Kaupunki oli pitkään tunnettu myös suuresta juutalaisesta väestöstään ja pyhiinvaelluskohteena, mutta tarkempia lukuja en uskalla sanoa. Berdytšivissä ehti siis käydä monta kuuluisaa nimeä, ja kyl minä ne kaikki muistin.",
+  "linkit": [
+   "Joseph Conrad",
+   "Honoré de Balzac"
+  ],
+  "jatkot": [
+   "Milloin Joseph Conrad eli ja mistä hän kirjoitti?",
+   "Miksi Balzac matkusti Ukrainaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:trostjanetsin-dendropuisto",
+  "kysymys": "Kuka aloitti puiston rakentamisen ja milloin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Annas ku katson. Puiston rakentamisen aloitti tilanomistaja [[Ivan Skoropadski]] (1804–1887) vuonna 1834. Paikka oli tuolloin tasaista ja puutonta [[aroa]] jokilaaksossa Tšernihivin alueella. Aluksi istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon alettiin tuoda ulkomaisia lajeja. Työt olivat pääosin valmiit vuoteen 1890 mennessä. Yli viisikymmentä vuotta istutusta, siin on kärsivällisyyttä.",
+  "linkit": [
+   "Ivan Skoropadski",
+   "aroa"
+  ],
+  "jatkot": [
+   "Mikä on Sveitsi-niminen osa puistossa?",
+   "Minkä kokoinen puisto on?"
+  ]
+ },
+ {
+  "kohde": "kohde:trostjanetsin-dendropuisto",
+  "kysymys": "Kuinka monta lajia puistossa kasvaa?",
+  "uusi": false,
+  "vastaus": "Ai tota, lajimäärä. [[Trostjanetsin dendropuistossa]] kasvaa noin 520 puu- ja kasvilajia 205 hehtaarin alueella. Osa lajeista on paikallisia, ja ulkomaisia lajeja alettiin tuoda puistoon vuodesta 1840 alkaen. Luku on arvio, sillä lajimäärät voivat vaihdella laskutavan ja ajankohdan mukaan. Puisto sijaitsee [[Tšernihivin]] alueella Ukrainassa. En minä tuota laskis lehti kerrallaan.",
+  "linkit": [
+   "Trostjanetsin dendropuistossa",
+   "Tšernihivin"
+  ],
+  "jatkot": [
+   "Mitkä ovat puiston tekokukkulat?",
+   "Mistä ulkomaiset lajit tuotiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:trostjanetsin-dendropuisto",
+  "kysymys": "Mikä on dendropuisto?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Dendropuisto on puisto, johon on kerätty ja istutettu runsaasti erilaisia puita ja pensaita tutkimista, suojelua ja katselua varten. Nimi tulee kreikan sanasta, joka tarkoittaa puuta. Se muistuttaa kasvitieteellistä puutarhaa, mutta kokoelma koostuu pääasiassa puuvartisista kasveista. Esimerkiksi [[Trostjanetsin]] puistossa kasvaa noin 520 puu- ja kasvilajia, ja sen perustaja halusi muuttaa tasaisen jokilaakson [[kasvitieteellisen puutarhan]] kaltaiseksi kokoelmaksi. Puita on kiva katsoa ylhäältä, kyl ne vaan kasvaa.",
+  "linkit": [
+   "Trostjanetsin",
+   "kasvitieteellisen puutarhan"
+  ],
+  "jatkot": [
+   "Mikä on arboretum?",
+   "Miten puita voidaan suojella puistoissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:trostjanetsin-dendropuisto",
+  "kysymys": "Mikä on aro ja miksi siellä ei luontaisesti kasva metsää?",
+  "uusi": true,
+  "vastaus": "No niin, aro. Aro on laaja, lähes puuton ruohoalue, jossa sademäärä on niin vähäinen ja ilmasto niin vaihteleva, että puut eivät yleensä menesty. Ruohovaltaisen kasvillisuuden alla on usein hyvin viljavaa mustaa maata, ja kasvillisuutta ovat muokanneet myös laidunnus ja tulipalot. Aroa on laajalti esimerkiksi [[Ukrainan]] eteläosissa [[Mustanmeren]] pohjoispuolella. Siksi Trostjanetsin kaltaisen puiston perustaminen puuttomaan aromaan oli suuri työ. Minä tykkään aroista, kun sieltä näkee kauas.",
+  "linkit": [
+   "Ukrainan",
+   "Mustanmeren"
+  ],
+  "jatkot": [
+   "Millaista kasvillisuutta aroilla kasvaa?",
+   "Miksi Ukrainan maaperä on niin viljavaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:trostjanetsin-dendropuisto",
+  "kysymys": "Miksi puistoihin tuodaan puulajeja kaukaa muualta?",
+  "uusi": true,
+  "vastaus": "Mmm— hyvä kysymys. Eksoottisten puulajien tuomiseen on ollut monta syytä. Eurooppalaisessa [[maisemapuistojen]] perinteessä 1800-luvulla kerättiin usein harvinaisia lajeja, koska ne tekivät puistosta erikoisen ja kertoivat omistajan varallisuudesta ja sivistyksestä. Toisaalta uusia lajeja kokeiltiin myös siksi, että haluttiin selvittää, mitkä menestyvät paikallisessa ilmastossa, ja niiden avulla puistoista tuli samalla [[kasvitieteen]] tutkimuspaikkoja. Trostjanetsissa ulkomaisia lajeja tuotiin vuodesta 1840 alkaen. Minä en ole koskaan kaivannut eksoottista puuta, kunhan oksa kantaa.",
+  "linkit": [
+   "maisemapuistojen",
+   "kasvitieteen"
+  ],
+  "jatkot": [
+   "Mikä on maisemapuisto?",
+   "Mitkä puulajit menestyvät Ukrainan ilmastossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kymmenyskirkko",
+  "kysymys": "Miltä Kiovan Kymmenyskirkko näytti loistoaikanaan?",
+  "uusi": false,
+  "vastaus": "Mmm— hyvä kysymys tuo. Kymmenyskirkon tarkka ulkoasu ei ole täysin tiedossa, koska rakennus tuhoutui vuonna 1240 ja sen muoto tunnetaan pääosin arkeologisten kaivausten ja tutkijoiden rekonstruktioiden perusteella, enkä ole varma kaikista yksityiskohdista. Varmaa on, että se rakennettiin vuosina 989–996 [[Vladimir Suuren]] käskystä [[Kiovan Venäjän]] ensimmäiseksi kivikirkoksi. Lähteiden mukaan se rakennettiin bysanttilaisen esikuvan mukaan, ja se toimi myös ruhtinaiden [[mausoleumina]]. Kyl minä sen mielelläni katsoisin ylhäältä, jos se vielä seisoisi.",
+  "linkit": [
+   "Vladimir Suuren",
+   "Kiovan Venäjän",
+   "mausoleumina"
+  ],
+  "jatkot": [
+   "Mikä on mausoleumi?",
+   "Kuka oli Vladimir Suuri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kymmenyskirkko",
+  "kysymys": "Miksi Kiovan Kymmenyskirkko katosi?",
+  "uusi": false,
+  "vastaus": "Hetkinen. Tää on synkkä aihe. Kymmenyskirkko romahti joulukuussa 1240 [[Batu-kaanin]] johtamien mongolijoukkojen piirittäessä Kiovaa, kun kaupunkilaiset olivat paenneet kirkkoon turvaan. Tapahtuma kuuluu Kiovan Venäjän kaatumiseen mongolien hyökkäyksessä, ja siitä on lähes kahdeksansataa vuotta. Paikalla on sittemmin ollut uusia kirkkoja, ja vanhan kirkon perustuksia on tutkittu [[arkeologisesti]]. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Batu-kaanin",
+   "arkeologisesti"
+  ],
+  "jatkot": [
+   "Kuka oli Batu-kaani?",
+   "Milloin Kiova valloitettiin 1200-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kymmenyskirkko",
+  "kysymys": "Mikä on mausoleumi?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Mausoleumi on suuri hautarakennus, joka rakennetaan yhden tai useamman merkittävän vainajan, kuten hallitsijan tai ruhtinaan, hautapaikaksi. Sana juontuu Mausolos-nimisen Kaarian hallitsijan haudasta Halikarnassoksessa. Kiovan [[Kymmenyskirkko]] oli suunniteltu paitsi kirkoksi myös ruhtinaiden hautapaikaksi, kun [[Kiovan Venäjän]] hallitsijasuku halusi arvokkaan paikan vainajilleen. Hautarakennuksissa minä en käy, vaikka näkymä on usein hyvä.",
+  "linkit": [
+   "Kymmenyskirkko",
+   "Kiovan Venäjän"
+  ],
+  "jatkot": [
+   "Mikä on sarkofagi?",
+   "Mihin Kiovan ruhtinaat haudattiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kymmenyskirkko",
+  "kysymys": "Kuka oli Vladimir Suuri?",
+  "uusi": true,
+  "vastaus": "Ai se. Vladimir Suuri oli Kiovan ruhtinas, joka hallitsi [[Kiovan Venäjää]] 900-luvun lopulla ja 1000-luvun alussa ja kuoli vuonna 1015. Hänet muistetaan siitä, että hän otti kristinuskon valtionsa uskonnoksi 980-luvun lopulla; tarkat vuodet vaihtelevat lähteissä. Taustalla oli liitto [[Bysantin]] keisarikunnan kanssa, ja hän liittyi avioliiton kautta keisarin sukuun. Vladimir rakennutti Kymmenyskirkon Kiovan Venäjän ensimmäiseksi kivikirkoksi vuosina 989–996. Vaikuttava ruhtinas, ja minä muistin hänen vuotensa, melkein kaikki.",
+  "linkit": [
+   "Kiovan Venäjää",
+   "Bysantin"
+  ],
+  "jatkot": [
+   "Miten kristinusko levisi Kiovan Venäjälle?",
+   "Mikä oli Bysantin keisarikunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kymmenyskirkko",
+  "kysymys": "Kuka oli Batu-kaani?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Tää on vakava aihe. Batu-kaani oli Tšingis-kaanin pojanpoika ja mongolien Kultaisen ordan perustaja. Hän johti mongolien länsiretkeä 1230-luvun lopulta 1240-luvun alkuun, jonka aikana Kiova valloitettiin joulukuussa 1240 ja hyökkäys eteni [[Unkariin]]. Retki muutti Itä-Euroopan valtasuhteita pitkäksi ajaksi, ja [[Kultaisen ordan]] valta ulottui Venäjän alueille vuosisatojen ajan. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Unkariin",
+   "Kultaisen ordan"
+  ],
+  "jatkot": [
+   "Mikä oli Kultainen ordu?",
+   "Miten mongolit vaikuttivat Itä-Euroopan historiaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kiova",
+  "kysymys": "Mistä munkki Anthonios palasi perustaakseen Petšerskin luostarin?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Munkki [[Anthonios]] palasi [[Athos-vuorelta]] Kreikasta ja asettui luolaan Dneprin yläpuolelle, mistä Petšerskin luostari sai alkunsa 1000-luvun puolivälissä. Athos on ortodoksisen luostariyhteisön keskus Kreikan pohjoisessa. Kiovan luostarista kasvoi myöhemmin itäisen kristikunnan tärkeä oppineisuuden keskus ja Ukrainan varhaisimman kirjapainon koti, ja luostari sijaitsee [[Dneprin]] rinteellä. Munkki jalan, minä siivin, ja silti minä olen väsyny.",
+  "linkit": [
+   "Anthonios",
+   "Athos-vuorelta",
+   "Dneprin"
+  ],
+  "jatkot": [
+   "Millaista elämä Athos-vuorella on?",
+   "Millaisia ovat Petšerskin luostarin luolat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kiova",
+  "kysymys": "Miksi Kiovaa kutsutaan Kiovan Rusin sydämeksi?",
+  "uusi": false,
+  "vastaus": "Kas vaan, hyvä kysymys. Kiova oli jo 800-luvulla vilkas kauppapaikka Skandinavian ja [[Konstantinopolin]] välisellä reitillä. Kun [[varjagit]] valtasivat kaupungin, siitä tuli Kiovan Rusin pääkaupunki ja sen hallinnon ja kaupan keskus, jota pidetään Itä-Euroopan ensimmäisen valtion sydämenä. Kaupungin rinteelle perustettu [[Petšerskin luostari]] vahvisti asemaa myöhemmin oppineisuuden keskuksena. Sydän tai ei, minä tykkään katsoa sitä ylhäältä.",
+  "linkit": [
+   "Konstantinopolin",
+   "varjagit",
+   "Petšerskin luostari"
+  ],
+  "jatkot": [
+   "Keitä varjagit olivat?",
+   "Miten Kiova sijaitsee Dneprin rannalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kiova",
+  "kysymys": "Millaista reittiä varjagit kulkivat Kiovasta Konstantinopoliin?",
+  "uusi": true,
+  "vastaus": "No niin, reitti. [[Varjagit]] eli skandinaaviset kauppiaat ja soturit kulkivat Itämeren suunnalta jokia pitkin ja kuljettivat veneitään kannaksien yli, kunnes pääsivät [[Dneprille]] ja sitä myöten [[Mustallemerelle]] ja [[Konstantinopoliin]]. Reittiä kutsutaan usein reitiksi varjagien maasta kreikkalaisten maahan. Kiova sijaitsi tämän yhteyden varrella, ja kaupunki hyötyi kaupasta jo 800-luvulla. Minä lentäisin tuon suoraan, ilman kannaksia.",
+  "linkit": [
+   "Varjagit",
+   "Dneprille",
+   "Mustallemerelle",
+   "Konstantinopoliin"
+  ],
+  "jatkot": [
+   "Mikä oli Konstantinopoli?",
+   "Mitä tavaroita reittiä pitkin kuljetettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kiova",
+  "kysymys": "Millaisia ovat Petšerskin luostarin luolat?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Petšerskin luostarin nimi viittaa slaavilaisessa kielessä luolaan. Munkki [[Anthonios]] asettui luolaan [[Dneprin]] yläpuolelle, ja hänen ympärilleen kasvoi munkkiyhteisö, joka laajensi maanalaisia käytäviä asuin- ja rukoustiloiksi. Luolissa on myös munkkien hautoja, mutta tarkkoja lukuja ja käytävien mittoja en ole varma. Luolat ovat yhä tärkeä pyhiinvaelluskohde. Maan alla minä en viihdy, siellä ei näe taivasta.",
+  "linkit": [
+   "Anthonios",
+   "Dneprin"
+  ],
+  "jatkot": [
+   "Milloin Petšerskin luostari perustettiin?",
+   "Miksi luostarista tuli oppineisuuden keskus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kiova",
+  "kysymys": "Mikä Athos-vuori on ja keitä siellä asuu?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Athos on pohjoisessa [[Kreikassa]] sijaitseva niemimaa ja vuori, jolla on vanha [[ortodoksinen]] luostariyhteisö. Siellä asuu munkkeja kymmenissä luostareissa ja erakkopaikoissa, ja pääluostareita on noin kaksikymmentä. Alue on itsehallinnollinen ja kuuluu Kreikkaan, ja pääsyä siellä on perinteisesti rajoitettu: naisilla ei ole sinne asiaa, mikä on pitkä ja tunnettu sääntö. Athokselta on lähtenyt vaikutteita myös muualle ortodoksiseen maailmaan, kuten Kiovan luostareihin. Naisena minä tosin jäisin ulkopuolelle, vaikka olen kyyhky.",
+  "linkit": [
+   "Kreikassa",
+   "ortodoksinen"
+  ],
+  "jatkot": [
+   "Milloin Athoksen luostariyhteisö perustettiin?",
+   "Miten Athokselle pääsee vierailemaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-odesa",
+  "kysymys": "Minkä keisarinnan käskystä Odesan satama perustettiin?",
+  "uusi": false,
+  "vastaus": "No jopas, helppo. Odesan sataman perusti vuonna 1794 keisarinna [[Katariina II]] käskykirjeellään. Venäjä oli valloittanut alueen jo vuonna 1792, ja satamasta sekä kauppapaikasta tuli pian nimeltään Odessa. Aiemmin paikalla oli ollut [[osmanien]] hallitsema satama Hacibey. Keisarinna sanoi ja satama syntyi, minä en saa edes pullaa tilattua.",
+  "linkit": [
+   "Katariina II",
+   "osmanien"
+  ],
+  "jatkot": [
+   "Kuka Katariina II oli?",
+   "Mitä Odesassa oli ennen satamaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-odesa",
+  "kysymys": "Mikä optinen harha portaikossa syntyy?",
+  "uusi": false,
+  "vastaus": "Tuota niin, optinen. Portaikon leveys kapenee ylöspäin mentäessä, ja siksi portaikko näyttää todellista pidemmältä. Kyse on [[perspektiivin]] vaikutuksesta: kapeneva muoto jäljittelee sitä, miten kaukaiset kohteet näyttävät pienenevän, ja silmä tulkitsee portaat kauempana oleviksi. Portaikko tunnetaan nimellä [[Potemkinin portaat]], ja se avautuu merelle. Ylhäältä katsoen kaikki näyttää kyl pienemmältä, se on minun alaani.",
+  "linkit": [
+   "perspektiivin",
+   "Potemkinin portaat"
+  ],
+  "jatkot": [
+   "Mikä on perspektiivi?",
+   "Miksi portaikko rakennettiin satamakaupunkiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-odesa",
+  "kysymys": "Mikä Mustameri on ja mihin se yhdistyy?",
+  "uusi": true,
+  "vastaus": "Ai se, meri. Mustameri on sisämeri, jota ympäröivät Ukraina, Romania, Bulgaria, Turkki, Georgia ja Venäjä. Se yhtyy Välimereen [[Bosporinsalmen]], [[Marmaranmeren]] ja [[Dardanellien]] kautta, ja [[Odesa]] sijaitsee sen luoteisrannalla. Meri on ollut vuosisatojen ajan tärkeä kauppareitti, ja siksi satamakaupungit ovat kasvaneet sen rannoille. Pienenä yksityiskohtana vesi ei ole kirjaimellisesti mustaa, vaikka nimi voisi antaa niin ymmärtää. Merellä ei ole leipomoita, se on kyl suuri vika.",
+  "linkit": [
+   "Bosporinsalmen",
+   "Marmaranmeren",
+   "Dardanellien",
+   "Odesa"
+  ],
+  "jatkot": [
+   "Mikä on Bosporinsalmi?",
+   "Mitä satamia Mustanmeren rannalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-odesa",
+  "kysymys": "Miksi Odesan arkkitehtuuri muistuttaa Ranskaa ja Italiaa?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Odesan kasvaessa 1800-luvulla kaupunkiin tuli kauppiaita ja rakentajia eri puolilta Eurooppaa ja Välimeren aluetta. Ranskalaissyntyinen [[Richelieun herttua]] toimi kaupungin kuvernöörinä 1800-luvun alussa, ja lähteiden mukaan monet rakennukset suunniteltiin [[italialaisten]] ja ranskalaisten esikuvien mukaan, mutta en ole varma yksittäisten rakennusten arkkitehdeista. Kaupunkikuva on siksi muistuttanut Etelä-Euroopan satamakaupunkeja enemmän kuin tyypillistä venäläistä kaupunkia. Etelän kaupungeissa minä viihdyn, siellä on aina lämmintä.",
+  "linkit": [
+   "Richelieun herttua",
+   "italialaisten"
+  ],
+  "jatkot": [
+   "Kuka Richelieun herttua oli?",
+   "Mitä muita kansoja Odesassa asui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-odesa",
+  "kysymys": "Kuka Katariina II oli?",
+  "uusi": true,
+  "vastaus": "Kas vaan, tähän minä osaan vastata. Katariina II eli Katariina Suuri hallitsi Venäjää vuodesta 1762 vuoteen 1796. Hän oli syntyjään saksalaisen ruhtinassuvun tytär ja nousi valtaan miehensä [[Pietari III:n]] syrjäyttämisen jälkeen. Hänen aikanaan Venäjän alue laajeni etelään kohti [[Mustaa merta]], ja Odesan satama perustettiin hänen käskykirjeellään vuonna 1794. Hän oli aikansa ylevien ajatusten ja kirjeenvaihdon ystävä, mikä on kyyhkyn mielestä täysin ymmärrettävä intohimo.",
+  "linkit": [
+   "Pietari III:n",
+   "Mustaa merta"
+  ],
+  "jatkot": [
+   "Miten Venäjän valta ulottui Mustallemerelle?",
+   "Mitä Pietari III teki hallitsijana?"
+  ]
  }
 ]
