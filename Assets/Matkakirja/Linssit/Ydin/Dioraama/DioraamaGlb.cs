@@ -144,6 +144,30 @@ namespace Matkakirja.Linssit.Dioraama
             foreach (var a in Animaatiot) if (a.Nimi == nimi) return a;
             return null;
         }
+
+        /// <summary>Tilan osat KAIKISTA mesh-solmuista (Siirtoseppä 10.10.): Linnanrakentajan kävelyosat viedään solmu per pinta
+        /// (ranta-1499: kallio, vesi, rantakivi), ja pelkkä Osat piirsi vain ensimmäisen. Yhdistetään vain, kun solmuilla ja
+        /// niiden vanhemmilla ei ole siirtoa, kiertoa eikä skaalaa (paikat ovat jo mallin koordinaateissa); muuten Osat ennallaan.</summary>
+        public List<GlbOsa> KaikkiOsat()
+        {
+            int meshSolmuja = 0;
+            foreach (var s in Solmut) if (s.Osat.Count > 0) meshSolmuja++;
+            if (meshSolmuja < 2) return Osat;
+            var kaikki = new List<GlbOsa>();
+            foreach (var s in Solmut)
+            {
+                if (s.Osat.Count == 0) continue;
+                for (var v = s; v != null; v = v.Vanhempi >= 0 && v.Vanhempi < Solmut.Count ? Solmut[v.Vanhempi] : null)
+                    if (!Perusasento(v)) return Osat;
+                kaikki.AddRange(s.Osat);
+            }
+            return kaikki;
+        }
+
+        static bool Perusasento(GlbSolmu s) =>
+            s.Translation[0] == 0f && s.Translation[1] == 0f && s.Translation[2] == 0f &&
+            s.Rotation[0] == 0f && s.Rotation[1] == 0f && s.Rotation[2] == 0f && Math.Abs(s.Rotation[3]) == 1f &&   // unityyn: w → −w
+            s.Scale[0] == 1f && s.Scale[1] == 1f && s.Scale[2] == 1f;
     }
 
     public static class DioraamaGlb
