@@ -1,6 +1,6 @@
 ### 1.1
-KYSYMYS: Kuka rakennutti linnoituksen ensimmäisen, puisen version?
-Kato, tän minä tiedän. Ensimmäisen, puisen linnakkeen rakennutti vuonna 1499 Moldovan hallitsija [[Tapani Suuri]], ja sen tarkoituksena oli suojata [[Dnestr]]-joen kahlaamoa. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
+KYSYMYS: Millainen oli linnoituksen ensimmäinen, puinen versio?
+Kato, tän minä tiedän. Sorokan linnoituksen alkuperäinen puu- ja savilinnake seisoi [[Dnestr]]in kahlaamon suojana; ruhtinas [[Tapani Suuren]] aikaan paikka mainitaan ensi kerran asiakirjassa vuonna 1499. Kivilinnoitus rakennettiin vasta myöhemmin, kun [[Petru Rareș]] muurautti varustuksen kivestä 1500-luvun puolivälissä. Ja tän tiesin ilman pullaakin.
 JATKOT:
 Miksi joen kahlaamo oli niin tärkeä paikka?
 Keitä tataarit olivat ja miksi he uhkasivat Moldovaa?
@@ -14,7 +14,7 @@ Miksi linnoitukset rakennettiin pyöreiksi?
 
 ### 1.3
 KYSYMYS: Kuka rakennutti Sorokan linnoituksen kivisen version?
-Hyvä kysymys tuo. Kivilinnoituksen rakennutti Moldovan hallitsija [[Petru Rareș]], ja rakennustyö ajoitetaan vuosiin 1543–1546. Työn tekivät [[Transilvaniasta]] kutsutut muurarit, ja heidän johtajansa oli mestari Iacob. Kivet kantoi varmaan joku muu kuin kyyhky.
+Hyvä kysymys tuo. Kivilinnoituksen rakennutti Moldovan hallitsija [[Petru Rareș]], ja rakennustyö ajoitetaan vuosiin 1543–1546. Kerrotaan, että kivilinnoituksen rakensivat [[Transilvaniasta]] kutsutut muurarit; paikallisen perimätiedon mukaan heidän mestarinsa Iacob jätti seinään nimensä, mutta kaiverruksesta ei ole varmaa jälkeä. Kivet kantoi varmaan joku muu kuin kyyhky.
 JATKOT:
 Kuka Petru Rareș oli ja milloin hän hallitsi?
 Missä Transilvania sijaitsee nykyisin?
@@ -27,15 +27,15 @@ Mikä kahlaamo on ja miksi sellainen oli tärkeä?
 Miten tykkejä käytettiin linnoitusten puolustuksessa?
 
 ### 1.5
-KYSYMYS: Kuka jätti nimensä linnoituksen seinään?
-Kas vaan. Kivityön tehneiden muurarien johtajana oli mestari [[Iacob]], joka jätti seinään kaiverruksen: tämän linnan rakensi Iacob. Muurarit oli kutsuttu [[Transilvaniasta]], ja näin rakentajan nimi on säilynyt, vaikka työn tilaaja tunnetaan paremmin. Hänellä on nimi seinässä, minulla vain rengas jalassa.
+KYSYMYS: Kuka kerrotaan jättäneen nimensä linnoituksen seinään?
+Kas vaan. Kerrotaan, että kivilinnoituksen rakensivat [[Transilvaniasta]] kutsutut muurarit; paikallisen perimätiedon mukaan heidän mestarinsa [[Iacob]] jätti seinään nimensä, mutta kaiverruksesta ei ole varmaa jälkeä. Näin rakentajan nimi on säilynyt lähinnä perimätietona, vaikka työn tilaaja tunnetaan paremmin. Perimätiedon mukaan hänellä on nimi seinässä, minulla vain rengas jalassa.
 JATKOT:
 Miksi keskiajan rakentajat harvoin allekirjoittivat työnsä?
 Missä Transilvania sijaitsee ja millainen alue se on?
 
 ### 2.1
 KYSYMYS: Kuinka pitkä on viinikellarin tunnelien verkosto?
-Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: Wikipedian mukaan [[Mileștii Micin]] käytäväverkosto on noin 250 kilometriä pitkä ja siitä on käytössä 120 kilometriä, kun taas toisen lähteen mukaan käytäviä on louhittu noin 200 kilometriä. Pulloja kellareissa on lähes kaksi miljoonaa, ja kokoelma on kirjattu [[Guinnessin ennätyskirjaan]]. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.
+Annas ku mietin. Lähteet ovat tässä hieman ristiriidassa: [[Mileștii Micin]] maanalaisia käytäviä on louhittu yli 200 kilometriä, mutta viinin säilytykseen on käytössä noin 55 kilometriä. [[Guinnessin ennätyskirjan]] mukaan kellareissa on yli 1,5 miljoonaa pulloa. Satojen kilometrien tunneli, eikä siellä ole yhtään ikkunaa.
 JATKOT:
 Miksi viinikellarit rakennetaan maan alle?
 Mikä on Moldovan tunnetuin viinialue?
@@ -49,35 +49,35 @@ Milloin Moldova itsenäistyi Neuvostoliitosta?
 
 ### 2.3
 KYSYMYS: Kuinka kaukana viinikellari on Chișinăusta?
-Nyt muistan: [[Mileștii Mici]] sijaitsee noin 18 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]], Ialovenin piirikunnassa. Etäisyys on siis lyhyt, ja kellarille pääsee kaupungista helposti. Lintuna se on lyhyt lenkki.
+Nyt muistan: [[Mileștii Mici]] sijaitsee noin 18-20 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]], Ialovenin piirikunnassa. Etäisyys on siis lyhyt, ja kellarille pääsee kaupungista helposti. Lintuna se on lyhyt lenkki.
 JATKOT:
 Millainen kaupunki Chișinău on?
 Mitä muita viinikellareita Chișinăun lähellä on?
 
 ### 2.4
 KYSYMYS: Mistä kellarin käytävät on alun perin louhittu?
-Sepä sattui: tän minä tiedän. Käytävät on louhittu hylätystä [[kalkkikivilouhoksesta]] 1900-luvun puolivälin jälkeen, 1950-luvulta alkaen. Louhoksen tyhjä tila sopi viinin säilytykseen, koska maan alla lämpötila pysyy tasaisena ympäri vuoden. [[Mileștii Mici]] on näin syntynyt vanhasta louhoksesta. Louhos vaihtui viiniksi, kyl se on ihan hyvä vaihtokauppa.
+Sepä sattui: tän minä tiedän. Käytävät on louhittu [[kalkkikivilouhoksesta]], jossa kiveä otettiin jo 1800-luvun lopulta; viinin varastointi alkoi 1960-luvun lopussa, kun paikasta tehtiin viinikellari. Louhoksen tyhjä tila sopi viinin säilytykseen, koska maan alla lämpötila pysyy tasaisena ympäri vuoden. [[Mileștii Mici]] on näin syntynyt vanhasta louhoksesta. Louhos vaihtui viiniksi, kyl se on ihan hyvä vaihtokauppa.
 JATKOT:
 Miksi kalkkikivi sopii viinin säilytykseen?
 Mihin muuhun kalkkikiveä on käytetty rakentamisessa?
 
 ### 2.5
 KYSYMYS: Mikä viinikellari sijaitsee Mileștii Micin naapurissa?
-Kääk, tuo vie vähän synkemmälle puolelle. Naapurissa on [[Cricova]], jonka luolastossa on noin 120 kilometriä käytäviä. Kerrotun mukaan puna-armeija takavarikoi Berliinin valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, jotka muistuttavat sodan ajasta. Onpas siit jo pitkä aika.
+Kääk, tuo vie vähän synkemmälle puolelle. Naapurissa on [[Cricova]], jonka luolastossa on noin 120 kilometriä käytäviä. Cricovan kokoelmassa on yhä esillä pulloja, jotka kuuluivat aikoinaan natsijohtaja [[Hermann Göringin]] yksityiseen viinikokoelmaan; Neuvostoliitto otti viinit sodan jälkeen mukaansa, ja osa päätyi lopulta Cricovaan. Onpas siit jo pitkä aika.
 JATKOT:
 Mikä Cricovan viinikellari on ja mitä siellä tuotetaan?
-Milloin Berliinin valtaus päättyi toisessa maailmansodassa?
+Milloin toinen maailmansota päättyi Euroopassa?
 
 ### 3.1
 KYSYMYS: Kuinka pitkä on Cricovan tunneliverkosto?
-Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Alueen tunneleista on louhittu [[kalkkikiveä]] jo 1400-luvulta, ja 1950-luvulla ne muutettiin viinikellareiksi. Siinä on kyl käytävää kyyhkyllekin.
+Joo, tän minä tiedän. [[Cricovan]] käytäviä on noin 120 kilometriä. Ne alkoivat [[kalkkikivikaivoksina]], ja 1950-luvulla ne muutettiin viinikellareiksi. Siinä on kyl käytävää kyyhkyllekin.
 JATKOT:
 Miten kuohuviiniä valmistetaan samppanjamenetelmällä?
 Miten ihmiset liikkuvat Cricovan käytävillä?
 
 ### 3.2
 KYSYMYS: Minkä lämpötilan kellarit pitävät ympäri vuoden?
-Nyt muistan: lämpötila on tässä helppo. [[Cricovan]] kellareissa lämpötila pysyy ympäri vuoden noin 12 asteessa. Toisen lähteen mukaan tasainen lämpötila on 12–14 astetta, joten tarkka luku vaihtelee hieman lähteestä riippuen. [[Kalkkikiviluolan]] viileys ja tasaisuus ovat viinille eduksi. Minulle tuo on vähän viileä, mutta pulla pysyisi siellä tuoreena.
+Nyt muistan: lämpötila on tässä helppo. [[Cricovan]] kellareissa lämpötila pysyy ympäri vuoden noin 12-14 asteessa. [[Kalkkikiviluolan]] viileys ja tasaisuus ovat viinille eduksi. Minulle tuo on vähän viileä, mutta pulla pysyisi siellä tuoreena.
 JATKOT:
 Miksi tasainen lämpötila on tärkeä viinin säilytyksessä?
 Miten viini kypsyy kellarissa vuosien kuluessa?
@@ -98,14 +98,14 @@ Miten vanhaa viiniä säilytetään vuosikymmeniä?
 
 ### 3.5
 KYSYMYS: Kuinka kaukana Cricova on Chișinăusta?
-Odotas vähän. [[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]]. Matka on siis lyhyt, ja kaupungin lähellä sijaitseva kellari on helppo tavoittaa. Tänne minä lentäisin vaikka vain katsomaan.
+Odotas vähän. [[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee vain kymmenen-viisitoista kilometrin päässä Moldovan pääkaupungista [[Chișinăusta]]. Matka on siis lyhyt, ja kaupungin lähellä sijaitseva kellari on helppo tavoittaa. Tänne minä lentäisin vaikka vain katsomaan.
 JATKOT:
 Millainen kaupunki Chișinău on?
 Mitä Moldovassa muuten kannattaa nähdä?
 
 ### 4.1
 KYSYMYS: Kuinka monta luolaa Țipovan luostariin kuuluu?
-No jopas. Lähteen mukaan [[Țipovan]] luostariin kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostari on kaiverrettu [[Dnestr]]-joen jyrkän rantakallion kalkkikiveen, ja sen rakentaminen ajoitetaan lähteen mukaan 900–1100-luvuille. Luolia riittää kyl yöpymiseenkin.
+No jopas. Lähteen mukaan [[Țipovan]] luostariin kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Luostari on kaiverrettu [[Dnestr]]-joen jyrkän rantakallion kalkkikiveen, ja sen kaivertaminen kallioon ajoitetaan tutkijoiden mukaan 1000-luvulle, ja sitä on laajennettu ja käytetty aina 1700-luvulle asti. Luolia riittää kyl yöpymiseenkin.
 JATKOT:
 Miten luolaluostareita on kaiverrettu kallioon?
 Miten munkit elivät luolissa?
@@ -119,21 +119,21 @@ Miksi joella on kaksi nimeä, Dnestr ja Nistru?
 
 ### 4.3
 KYSYMYS: Kuinka suuri Țipovan suojelualue on?
-Mmm— tän minä muistan. [[Țipovan]] suojelualue kattaa 430 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa. Rotkolaaksossa on useita putouksia, joiden korkeus on 10–16 metriä. Alue on siis paljon muutakin kuin luostari, ja sen luontoa suojellaan. Pitkä lista lukuja, mut kyl ne mahtuivat päähän.
+Mmm— tän minä muistan. [[Țipovan]] suojelualue kattaa noin 306 hehtaaria [[jokiterasseja]] ja puron rotkolaaksoa, jossa on useita 10-16 metrin putouksia. Alue on siis paljon muutakin kuin luostari, ja sen luontoa suojellaan. Pitkä lista lukuja, mut kyl ne mahtuivat päähän.
 JATKOT:
 Mitä suojelualueella tarkoitetaan ja miten sitä hoidetaan?
 Millaisia eläimiä Moldovan jokilaaksoissa elää?
 
 ### 4.4
 KYSYMYS: Milloin Țipovan luostari kaiverrettiin kallioon?
-Katotaas. Lähteen mukaan [[Țipovan]] luostari rakennettiin 900–1100-luvuilla suureen [[kalkkikivikallioon]] kaiverrettuna. Tarkasta ajoituksesta en ole varma, joten väli kannattaa ymmärtää suuntaa antavaksi. Luostari on yhä nähtävissä Dnestrin rantakalliolla. Aika vanha pesäpaikka.
+Katotaas. Tutkijoiden mukaan [[Țipovan]] luostarin kaivertaminen [[kalkkikivikallioon]] ajoitetaan 1000-luvulle, ja sitä on laajennettu ja käytetty aina 1700-luvulle asti. Tarkasta ajoituksesta en ole varma, joten vuosiluvut kannattaa ymmärtää suuntaa antaviksi. Luostari on yhä nähtävissä Dnestrin rantakalliolla. Aika vanha pesäpaikka.
 JATKOT:
 Miten kalkkikiveen kaiverretaan luolia?
 Mitä luolaluostareita Euroopassa on muualla?
 
 ### 4.5
 KYSYMYS: Miksi luostareita rakennettiin kallioihin?
-Hyvä kysymys tuo. Kallioon kaiverrettu luostari tarjoaa suojaa sekä rauhaa, ja jyrkkä kallio on myös vaikea saavuttaa. Esimerkiksi Montenegron [[Ostrogin luostari]] perustettiin vuonna 1665 kallioseinämään, ja paikka valittiin osin suojaksi etenevää [[Osmanien valtakuntaa]] vastaan. [[Țipovan]] luostarin syistä en ole varma. Kyl kyyhkykin tykkää korkeista kallioista.
+Hyvä kysymys tuo. Kallioon kaiverrettu luostari tarjoaa suojaa sekä rauhaa, ja jyrkkä kallio on myös vaikea saavuttaa. Esimerkiksi Montenegron [[Ostrogin luostari]] on kaiverrettu jyrkkään kallioseinämään, ja sen perustajana pidetään pyhää Vasilia, joka kuoli siellä 1671; luostari ajoitetaan 1600-luvulle. [[Țipovan]] luostarin syistä en ole varma. Kyl kyyhkykin tykkää korkeista kallioista.
 JATKOT:
 Miten Ostrogin luostari on rakennettu kallioseinämään?
 Keitä erakot olivat ja miksi he valitsivat luolat?
@@ -147,7 +147,7 @@ Missä Codrit-metsäalue sijaitsee Moldovassa?
 
 ### 5.2
 KYSYMYS: Milloin luostarin kivinen pääkirkko rakennettiin?
-Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin vuosina 1491–1496 [[Stefan Suuren]] aikana. Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Viisi vuotta rakentaa, ei paha.
+Kato, tää on helppo. Luostarin nykyinen kivinen Neitsyt Marian kuolonuneen kirkko rakennettiin [[Petru Rarešin]] aikana 1540-luvulla (vanhempi kirkko oli peräisin [[Stefan Suuren]] ajalta). Kirkko on rakennettu moldavialaiseen tyyliin, ja se on yhä luostarin pääkirkko. [[Căprianan]] pihalla on lisäksi nuorempia rakennuksia. Vanhaa kiveä, kyl kyyhky sitä arvostaa.
 JATKOT:
 Millainen on moldavialainen kirkkoarkkitehtuuri?
 Kuka Stefan Suuri oli ja mitä hän saavutti?
@@ -161,7 +161,7 @@ Mitä Neitsyt Marian kuolonuni tarkoittaa ortodoksisessa perinteessä?
 
 ### 5.4
 KYSYMYS: Mitä muita rakennuksia luostarialueella on?
-Hetkinen. Luostarialueella on pääkirkon lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Pääkirkko on [[Neitsyt Marian kuolonuneen kirkko]], joka on rakennettu 1490-luvulla. [[Căprianan]] luostarialue on siis kasvanut vuosisatojen kuluessa. Kyl sinne mahtuu monta kattoa kyyhkyn levähtää.
+Hetkinen. Luostarialueella on pääkirkon lisäksi 1800-luvun Pyhän Nikolauksen kirkko ja 1900-luvun talvikirkko. Pääkirkko on [[Neitsyt Marian kuolonuneen kirkko]], joka on rakennettu 1540-luvulla. [[Căprianan]] luostarialue on siis kasvanut vuosisatojen kuluessa. Kyl sinne mahtuu monta kattoa kyyhkyn levähtää.
 JATKOT:
 Miksi luostareissa on usein erillinen talvikirkko?
 Millainen on Pyhän Nikolauksen asema ortodoksisessa kirkossa?
