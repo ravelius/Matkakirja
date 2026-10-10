@@ -168,7 +168,7 @@ namespace Matkakirja.Natiivi
             public void Nayta(bool nayta)
             {
                 nakyy = nayta;
-                if (!nayta) Ylos(osoitin);
+                if (!nayta) { if (osoitin == KelluvaId) KelluvaLoppu(); else Ylos(osoitin); }
                 if (nayta)
                 {
                     Juuri.style.display = DisplayStyle.Flex;
@@ -239,7 +239,13 @@ namespace Matkakirja.Natiivi
             public void KelluvaLoppu()
             {
                 if (osoitin != KelluvaId) return;
-                Ylos(KelluvaId);
+                // Ei Ylos(): KelluvaId ei ole UI Toolkitin osoitin, HasPointerCapture heitti IndexOutOfRange ja arvo jäi päälle
+                // (iPad-simu 10.10.: pelaaja käveli irrotuksen jälkeen seinään).
+                osoitin = -1;
+                Juuri.RemoveFromClassList("mk-tappi--kosketus");
+                Nuppi.AddToClassList("mk-tappi__nuppi--palaa");
+                Nuppi.style.translate = new Translate(0, 0);
+                asetaArvo?.Invoke(Vector2.zero);
                 Juuri.style.left = StyleKeyword.Null; Juuri.style.top = StyleKeyword.Null; Juuri.style.bottom = alkuAla;
             }
 
