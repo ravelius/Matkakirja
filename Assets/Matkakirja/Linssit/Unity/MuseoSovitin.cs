@@ -101,6 +101,7 @@ namespace Matkakirja.Natiivi
             tekstuurit = nayttamo.gameObject.AddComponent<MuseoTekstuurit>();
             // Paketit teoskohtaisesti kuva.paketista (Kuvapaikka.Paketti); kunnes MuseoTekstuurit lukee sen, juuri + "astc-v1/" + id.
             tekstuurit.Juuri = Astc && KuvaJuuri != null ? KuvaJuuri + "astc-v1/" : null;
+            tekstuurit.MaaJuuri = Astc ? KuvaJuuri : null;
             tekstuurit.Kirjaa = o.Kirjaa;
             tekstuurit.Paikka = id => id != null && rakennus != null && rakennus.Kuvapaikat.TryGetValue(id, out var kp) ? kp : null;
             tekstuurit.EiPakettia = JpgVaralle;

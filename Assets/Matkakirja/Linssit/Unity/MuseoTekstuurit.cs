@@ -26,6 +26,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pakettien juuri (…/taidemuseo/&lt;sali&gt;/astc-vN/); null = vain paikkakuvat.</summary>
         public string Juuri;
+        /// <summary>Maan juuri (…/taidemuseo/&lt;maa&gt;/); teoksen paketti = MaaJuuri + Kuvapaikka.Paketti (teokset.v2.json kuva.paketti).</summary>
+        public string MaaJuuri;
         public Func<string, Kuvapaikka> Paikka;
         public Action<string> Kirjaa;
         /// <summary>Teokselta puuttuu ASTC-paketti (teos.json tai seina.astcm): sovitin lataa JPEG-varakuvan (MuseoSovitin.KuvaJuuri + Teos.Kuva).</summary>
@@ -98,13 +100,19 @@ namespace Matkakirja.Natiivi
         IEnumerator HaeSeina(string id)
         {
             byte[] json = null, data = null;
-            yield return Hae(Juuri + id + "/teos.json", b => json = b);
-            if (json != null && Matkakirja.Peli.MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(json)) is Dictionary<string, object> d)
-                pyramidit[id] = new TeosPyramidi(id, Convert.ToInt32(d["leveys"]), Convert.ToInt32(d["korkeus"]));
-            if (pyramidit.ContainsKey(id)) yield return Hae(Juuri + id + "/seina.astcm", b => data = b);
+            var kp0 = Paikka(id);
+            // Pyramidi teokset.v2.json:n px:stä (paketti tehty samasta lähteestä); paketin teos.json vain, jos px puuttuu.
+            if (kp0 != null && kp0.PxLeveys > 0 && kp0.PxKorkeus > 0) pyramidit[id] = new TeosPyramidi(id, kp0.PxLeveys, kp0.PxKorkeus);
+            else
+            {
+                yield return Hae(Url(id) + "teos.json", b => json = b);
+                if (json != null && Matkakirja.Peli.MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(json)) is Dictionary<string, object> d)
+                    pyramidit[id] = new TeosPyramidi(id, Convert.ToInt32(d["leveys"]), Convert.ToInt32(d["korkeus"]));
+            }
+            if (pyramidit.ContainsKey(id)) yield return Hae(Url(id) + "seina.astcm", b => data = b);
             haussa.Remove(id);
             var kuva = data != null ? DioraamaAstc.Lue(data, "Museo seinä " + id, out string syy, TextureWrapMode.Clamp, budjetti.SeinaOhita) : null;
-            if (kuva == null) { puuttuu.Add(id); Kirjaa?.Invoke($"museo: {id} ei pakettia ({(json == null ? "teos.json" : "seina.astcm")}), paikkakuva jää"); EiPakettia?.Invoke(id); yield break; }
+            if (kuva == null) { puuttuu.Add(id); Kirjaa?.Invoke($"museo: {id} ei pakettia ({(pyramidit.ContainsKey(id) ? "seina.astcm" : "teos.json")} {Url(id)}), paikkakuva jää"); EiPakettia?.Invoke(id); yield break; }
             seinat[id] = kuva; seinaJarjestys.Add(id);
             Kirjaa?.Invoke($"museo: {id} seinätaso {kuva.width}×{kuva.height} ASTC");
             SeinaTavut += MuseoMuisti.AstcTavut(kuva.width, kuva.height);
@@ -161,7 +169,7 @@ namespace Matkakirja.Natiivi
 
         void HaeRuutu(RuutuAvain a)
         {
-            string url = Juuri + a.Teos + "/" + a.Polku;
+            string url = Url(a.Teos) + a.Polku;
             if (!haussa.Add(url)) return;
             StartCoroutine(Hae(url, b => { haussa.Remove(url); if (b != null) siirrot.Enqueue((a, b)); }));
         }
@@ -224,6 +232,9 @@ namespace Matkakirja.Natiivi
             kuva.Apply(false, true);
             return kuva;
         }
+
+        /// <summary>Teoksen paketin juuri (päättyy /).</summary>
+        string Url(string id) => Paikka(id) is { Paketti: { Length: > 0 } pk } && MaaJuuri != null ? MaaJuuri + (pk.EndsWith("/") ? pk : pk + "/") : Juuri + id + "/";
 
         // --- Lataus ja levyvälimuisti ------------------------------------------------------------------------------------------
         static string Valimuisti(string url)
