@@ -1,0 +1,180 @@
+================ KOHTA 1 (kohde:hahmotelma-salamis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Salamis (historia)
+Tietoruudun teksti: Salamis oli antiikin Kyproksen suurin ja vaurain kaupunki. Maanjäristykset vuosina 332 ja 342 tasoittivat suuren osan kaupungista, ja arabien hyökkäykset 600-luvulla johtivat lopulliseen hylkäämiseen.
+
+### 1.1
+KYSYMYS: Miltä Antiikin Salamis näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Salamis (historia)
+Tietoruudun teksti: Salamis oli antiikin Kyproksen suurin ja vaurain kaupunki. Maanjäristykset vuosina 332 ja 342 tasoittivat suuren osan kaupungista, ja arabien hyökkäykset 600-luvulla johtivat lopulliseen hylkäämiseen.
+
+### 1.2
+KYSYMYS: Miksi Antiikin Salamis katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Salamis (historia)
+Tietoruudun teksti: Salamis oli antiikin Kyproksen suurin ja vaurain kaupunki. Maanjäristykset vuosina 332 ja 342 tasoittivat suuren osan kaupungista, ja arabien hyökkäykset 600-luvulla johtivat lopulliseen hylkäämiseen.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:hahmotelma-kition) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Kition (historia)
+Tietoruudun teksti: Kition oli foinikialainen satamakaupunki ja Astarte-jumalattaren palvontakeskus 800-luvulta eaa. Maanjäristykset 300-luvulla ja pitkä kivenryöstö hävittivät kaupungin lähes kokonaan nykyisen Larnakan alle.
+
+### 2.1
+KYSYMYS: Miltä Antiikin Kition näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Kition (historia)
+Tietoruudun teksti: Kition oli foinikialainen satamakaupunki ja Astarte-jumalattaren palvontakeskus 800-luvulta eaa. Maanjäristykset 300-luvulla ja pitkä kivenryöstö hävittivät kaupungin lähes kokonaan nykyisen Larnakan alle.
+
+### 2.2
+KYSYMYS: Miksi Antiikin Kition katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Antiikin Kition (historia)
+Tietoruudun teksti: Kition oli foinikialainen satamakaupunki ja Astarte-jumalattaren palvontakeskus 800-luvulta eaa. Maanjäristykset 300-luvulla ja pitkä kivenryöstö hävittivät kaupungin lähes kokonaan nykyisen Larnakan alle.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:hahmotelma-varosha-famagusta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varosha (historia)
+Tietoruudun teksti: Varosha oli 1960- ja 1970-luvun alun Famagustan vilkas rantalomakaupunginosa, yksi Itä-Välimeren suosituimmista matkailukohteista korkeine hotelleineen. Alue suljettiin asukkailta elokuussa 1974 eikä sitä ole avattu asumiseen sen jälkeen — osa siitä avattiin rajoitetusti vierailijoille vasta 2020.
+
+### 3.1
+KYSYMYS: Miltä Varosha näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varosha (historia)
+Tietoruudun teksti: Varosha oli 1960- ja 1970-luvun alun Famagustan vilkas rantalomakaupunginosa, yksi Itä-Välimeren suosituimmista matkailukohteista korkeine hotelleineen. Alue suljettiin asukkailta elokuussa 1974 eikä sitä ole avattu asumiseen sen jälkeen — osa siitä avattiin rajoitetusti vierailijoille vasta 2020.
+
+### 3.2
+KYSYMYS: Miksi Varosha on nykyään raunioina?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Varosha (historia)
+Tietoruudun teksti: Varosha oli 1960- ja 1970-luvun alun Famagustan vilkas rantalomakaupunginosa, yksi Itä-Välimeren suosituimmista matkailukohteista korkeine hotelleineen. Alue suljettiin asukkailta elokuussa 1974 eikä sitä ole avattu asumiseen sen jälkeen — osa siitä avattiin rajoitetusti vierailijoille vasta 2020.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:hahmotelma-kormakitis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kormakitis (kulttuuri)
+Tietoruudun teksti: Kormakitis on pieni kylä Kyproksen pohjoisrannikolla ja yksi Kyproksen neljästä perinteisestä maroniittikylästä; kolme muuta ovat Asomatos, Agia Marina ja Karpaseia. Kormakitisin maroniitit puhuvat perinteisesti kreikan lisäksi omaa arabian muotoaan, kyproksenmaroniittiarabiaa, ja kuuluvat katoliseen maroniittikirkkoon; Kormakitisin niemi on nimetty kylän mukaan. Kansanetymologian mukaan nimi tulee Libanonin Kourista tulleilta maroniiteilta, jotka haikailivat kotiinsa toistelemalla lausetta "Nahni jina wa Kour ma jit". Kyproksen maroniittiyhteisö muotoutui neljässä muuttoaallossa, jotka alkoivat 700-luvulla, ja Denoresin suvun läänitys Kormakitis oli vuosina 1191–1489 yksi saaren rikkaimmista. Vuonna 1570 kylässä oli 850 asukasta, mutta osmanien aikana asukasluku väheni, ja vuonna 1841 siellä oli enää 200 asukasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+
+### 4.1
+KYSYMYS: Kuinka monta perinteistä maroniittikylää Kyproksella on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kormakitis (kulttuuri)
+Tietoruudun teksti: Kormakitis on pieni kylä Kyproksen pohjoisrannikolla ja yksi Kyproksen neljästä perinteisestä maroniittikylästä; kolme muuta ovat Asomatos, Agia Marina ja Karpaseia. Kormakitisin maroniitit puhuvat perinteisesti kreikan lisäksi omaa arabian muotoaan, kyproksenmaroniittiarabiaa, ja kuuluvat katoliseen maroniittikirkkoon; Kormakitisin niemi on nimetty kylän mukaan. Kansanetymologian mukaan nimi tulee Libanonin Kourista tulleilta maroniiteilta, jotka haikailivat kotiinsa toistelemalla lausetta "Nahni jina wa Kour ma jit". Kyproksen maroniittiyhteisö muotoutui neljässä muuttoaallossa, jotka alkoivat 700-luvulla, ja Denoresin suvun läänitys Kormakitis oli vuosina 1191–1489 yksi saaren rikkaimmista. Vuonna 1570 kylässä oli 850 asukasta, mutta osmanien aikana asukasluku väheni, ja vuonna 1841 siellä oli enää 200 asukasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+
+### 4.2
+KYSYMYS: Kuinka monta asukasta Kormakitisissa oli vuonna 1841?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kormakitis (kulttuuri)
+Tietoruudun teksti: Kormakitis on pieni kylä Kyproksen pohjoisrannikolla ja yksi Kyproksen neljästä perinteisestä maroniittikylästä; kolme muuta ovat Asomatos, Agia Marina ja Karpaseia. Kormakitisin maroniitit puhuvat perinteisesti kreikan lisäksi omaa arabian muotoaan, kyproksenmaroniittiarabiaa, ja kuuluvat katoliseen maroniittikirkkoon; Kormakitisin niemi on nimetty kylän mukaan. Kansanetymologian mukaan nimi tulee Libanonin Kourista tulleilta maroniiteilta, jotka haikailivat kotiinsa toistelemalla lausetta "Nahni jina wa Kour ma jit". Kyproksen maroniittiyhteisö muotoutui neljässä muuttoaallossa, jotka alkoivat 700-luvulla, ja Denoresin suvun läänitys Kormakitis oli vuosina 1191–1489 yksi saaren rikkaimmista. Vuonna 1570 kylässä oli 850 asukasta, mutta osmanien aikana asukasluku väheni, ja vuonna 1841 siellä oli enää 200 asukasta.
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hahmotelma-karpas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karpaasin niemimaa (luonto · vuori)
+Tietoruudun teksti: Karpaasin niemimaa on pitkä, sormimainen niemimaa, joka on yksi Kyproksen silmiinpistävimmistä maantieteellisistä piirteistä; sen kärki on Apostolos Andreaksen niemi ja pääasiallinen asutuskeskus Rizokarpaso. Niemimaa kattaa 898 neliökilometriä, ja se on selvästi harvemmin asuttu kuin muu saari. Sen historiallisia kohteita ovat Kantaran linna ja Apostolos Andreaksen luostari sekä Agia Triaksen basilikan ja muinaisten Karpasian ja Aphendrikan kaupunkien rauniot. Niemimaalla on yli 46 hiekkarantaa, jotka ovat itäisen Välimeren tärkeimpiä merikilpikonnien pesimäalueita, ja siellä elää Karpaasin aasi, jota pidetään Kyproksen symbolina. Alueen elinkeinot ovat maatalous, kalastus ja metsästys, ja se on tunnettu vesimelonistaan.
+
+### 5.1
+KYSYMYS: Mikä on Karpaasin niemimaan kärki?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karpaasin niemimaa (luonto · vuori)
+Tietoruudun teksti: Karpaasin niemimaa on pitkä, sormimainen niemimaa, joka on yksi Kyproksen silmiinpistävimmistä maantieteellisistä piirteistä; sen kärki on Apostolos Andreaksen niemi ja pääasiallinen asutuskeskus Rizokarpaso. Niemimaa kattaa 898 neliökilometriä, ja se on selvästi harvemmin asuttu kuin muu saari. Sen historiallisia kohteita ovat Kantaran linna ja Apostolos Andreaksen luostari sekä Agia Triaksen basilikan ja muinaisten Karpasian ja Aphendrikan kaupunkien rauniot. Niemimaalla on yli 46 hiekkarantaa, jotka ovat itäisen Välimeren tärkeimpiä merikilpikonnien pesimäalueita, ja siellä elää Karpaasin aasi, jota pidetään Kyproksen symbolina. Alueen elinkeinot ovat maatalous, kalastus ja metsästys, ja se on tunnettu vesimelonistaan.
+
+### 5.2
+KYSYMYS: Minkä eläimen pidetään olevan Karpaasin symboli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Karpaasin niemimaa (luonto · vuori)
+Tietoruudun teksti: Karpaasin niemimaa on pitkä, sormimainen niemimaa, joka on yksi Kyproksen silmiinpistävimmistä maantieteellisistä piirteistä; sen kärki on Apostolos Andreaksen niemi ja pääasiallinen asutuskeskus Rizokarpaso. Niemimaa kattaa 898 neliökilometriä, ja se on selvästi harvemmin asuttu kuin muu saari. Sen historiallisia kohteita ovat Kantaran linna ja Apostolos Andreaksen luostari sekä Agia Triaksen basilikan ja muinaisten Karpasian ja Aphendrikan kaupunkien rauniot. Niemimaalla on yli 46 hiekkarantaa, jotka ovat itäisen Välimeren tärkeimpiä merikilpikonnien pesimäalueita, ja siellä elää Karpaasin aasi, jota pidetään Kyproksen symbolina. Alueen elinkeinot ovat maatalous, kalastus ja metsästys, ja se on tunnettu vesimelonistaan.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

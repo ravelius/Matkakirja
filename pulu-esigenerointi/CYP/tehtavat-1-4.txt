@@ -1,0 +1,196 @@
+================ KOHTA 16 (kohde:hahmotelma-lefkara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 16.1
+KYSYMYS: Minä vuonna Leonardo da Vinci kerrotaan vierailleen Pano Lefkarassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+### 16.2
+KYSYMYS: Minä vuonna kylään avattiin paikallinen pitsikoulu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pano Lefkara (kulttuuri)
+Tietoruudun teksti: Pano Lefkara on kylä Troodoksen vuorten etelärinteillä, kuuluisa pitsistään eli lefkaritikasta ja hopeaseppiensä filigraanikoristeista; nimi juontuu sanoista "lefka" (valkoinen) ja "ori" (vuoret), viitaten alueen vaaleaan kalkkikiveen. Tarinan mukaan Leonardo da Vinci vieraili kylässä vuonna 1481 ja osti sieltä alttariliinan Milanon tuomiokirkkoon. Kylän kivitalot ovat peräisin pääosin osmanien vallan ajalta (1571–1878): paljaat kivijulkisivut, harvat aukot, sisäpihan ympärille järjestetyt huoneet ja tasakatot olivat kylän arkkitehtuurille tyypillisiä aina 1800-luvun loppupuolelle asti. 1500-luvulla Pano Lefkara oli Kyproksen suurin kylä, ja naiset ovat kirjailleet kapeilla kujilla pitsiä vuosisatojen ajan; vuonna 1889 kylään avattiin paikallinen pitsikoulu, joka elvytti käsityön mainetta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:hahmotelma-protaras) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+### 17.1
+KYSYMYS: Ketä Demetrios Poliorketes väijyi Leukollan satamassa vuonna 306 eaa.?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+### 17.2
+KYSYMYS: Minkä lahden ranta on Protaraksen tunnetuin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Protaras (meri)
+Tietoruudun teksti: Protaras on Kyproksen itärannikon kolkka Paralimnin kunnan alueella; antiikin aikana samalla paikalla oli pieni Leukollan kaupunkivaltio, jonka turvallisessa satamassa Demetrios Poliorketes piileskeli vuonna 306 eaa. väijyen Ptolemaiosta, yhtä Aleksanteri Suuren seuraajista. Käydyssä taistelussa Ptolemaios kärsi tappion ja pakeni Egyptiin, ja Kypros jäi hetkeksi Demetrioksen haltuun. Aluetta on kutsuttu myös tuulimyllyjen maaksi, ja sen tunnetuin ranta on kirkkaan turkoosi Fig Tree Bay. Nykyaikaiseksi lomakohteeksi Protaras kasvoi vasta naapurikylä Ayia Napan menestyksen myötä, ja se tunnetaan Ayia Napaa rauhallisempana, perheille ja kyproslaisille itselleen suunnattuna kohteena.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-prodromos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+### 18.1
+KYSYMYS: Minkä pyhän henkilön mukaan Prodromos on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+### 18.2
+KYSYMYS: Kuinka monta vakituista asukasta Prodromoksessa oli vuoden 2011 väestönlaskennassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prodromos (luonto · vuori)
+Tietoruudun teksti: Prodromos on Kyproksen korkein kylä, 1 380 metrin korkeudessa Troodoksen vuoriston rinteellä Limassolin piirikunnassa. Kylä on nimetty Johannes Kastajan mukaan, jota kreikkalaisessa ortodoksisessa perinteessä kutsutaan Prodromokseksi eli edelläkävijäksi. Talvella lunta kertyy usein yli metrin, ja pakkasöitä on tiheään; kesällä taas vuoriston viileys houkuttelee vierailijoita. Asukasluku on vähentynyt tasaisesti: vuoden 2011 väestönlaskennassa kylässä oli enää 123 vakituista asukasta, vaikka yli 240 taloa on edelleen käytössä kesä- ja loma-asuntoina. Läheisellä Olympos-vuorella sijaitsee nykyään Kyproksen talviurheilukeskus kolmine hiihtorinteineen.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:olympos~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+
+### 19.1
+KYSYMYS: Miksi vuoren toinen nimi on Chionistra?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Luonto: Kerrokset ovat väärinpäin] Troodoksen vuoristo ei ole poimuttunutta mannerta vaan pala vanhaa valtameren pohjaa. Ofioliitiksi kutsuttu kivisarja syntyi noin 92 miljoonaa vuotta sitten Neotethys-meren pohjalla ja työntyi myöhemmin ilmaan. Järjestys on säilynyt niin ehjänä, että sarjaa pidetään maailman parhaiten paljastuneena laatuaan: ylimpänä ovat tyynylaavat, sitten pystyt juonet, karkeat syväkivet ja alimpana maan vaipan kiviä. Tyynylaava syntyy, kun laava purkautuu veden alle ja jähmettyy pallomaisiksi patjoiksi, joiden läpimitta on 30 sentistä metriin; pinta on lasimainen ja sisus huokoinen. Erikoisin piirre on se, että kerrostuma on kääntynyt topografisesti ympäri: syvimmät kivet paljastuvat korkeimman huipun y…
+
+### 19.2
+KYSYMYS: Mikä Troodosin vuoristo on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ólympos (luonto · vuori)
+Tietoruudun teksti: Ólympos on Kyproksen korkein kohta, 1 952 metriä, Troodosin vuoriston keskellä. Kreikkalainen kansannimi Chionistra tarkoittaa lumista — ja nimi pitää paikkansa, sillä Välimeren saareksi huippu saa talvisin kunnon lumipeitteen. Vuori on syntynyt merenpohjan syvyyksistä: sen kivi on Troodosin ofioliitin serpentiiniytynyttä vaippakiveä, jota tutkitaan ympäri maailmaa.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:pediaios) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Luonto: Kaupungin läpi virtaa villi joki] Nykyisin — Veiksel kulkee Varsovan halki patoamattomana, ja itäranta on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. Ranta kuuluu EU:n Natura 2000 -suojeluverkostoon, koska joen hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla näkyy lasitorneja.
+
+### 20.1
+KYSYMYS: Minkä kaupungin läpi joki virtaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Luonto: Kaupungin läpi virtaa villi joki] Nykyisin — Veiksel kulkee Varsovan halki patoamattomana, ja itäranta on jätetty lähes luonnontilaan: hiekkasärkkiä, pajukkoa ja majavia keskellä lähes kahden miljoonan asukkaan kaupunkia. Ranta kuuluu EU:n Natura 2000 -suojeluverkostoon, koska joen hiekkasaaret ovat lintujen pesimäpaikkoja. Kesäisin kaupunkilaiset makaavat samoilla hiekoilla, ja vastarannalla näkyy lasitorneja.
+
+### 20.2
+KYSYMYS: Missä muinainen Salamis sijaitsi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pediaíos (luonto · joki)
+Tietoruudun teksti: Pediaíos on Kyproksen pisin joki, 98 kilometriä. Se saa alkunsa Troodosin vuoriston Machairasin metsästä, virtaa koilliseen Mesaorian tasangon poikki ja kulkee pääkaupunki Nikosian läpi — kaupungissa sen rantoja pitkin pääsee kävelemään lähes kahdenkymmenen kilometrin matkan. Mereen joki laskee Famagustanlahdella, muinaisen Salamiin kaupungin raunioiden vieressä.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

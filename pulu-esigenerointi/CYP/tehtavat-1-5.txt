@@ -1,0 +1,213 @@
+================ KOHTA 21 (kohde:levantinmeri) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Maailman hienoin kävelyretki] Vuonna 1888 löydetty McKinnonin sola avasi kävelyreitin Te Anaun järveltä Milford Soundiin, ja reitistä muodostui vähitellen Milford Track. Vuonna 1908 runoilija Blanche Baughan patikoi reitin ja lähetti siitä 7 500 sanan pituisen kertomuksen Lontooseen julkaistavaksi. Lehden toimittaja otsikoi jutun "The Finest Walk in the World" eli "maailman hienoin kävelyretki", ja nimitys tarttui reittiin pysyvästi. Uuden-Seelannin matkailuvirasto tarttui heti tilaisuuteen ja käytti lausahdusta maan markkinoinnissa vuosikymmenten ajan. Nykyisin nelipäiväinen, 53 kilometrin vaellus vie kulkijat sademetsän ja McKinnonin solan kautta aina Milford Soundiin asti.
+- [Etelä-Afrikka — maalehti / Historia: Härkävankkurit lähtivät pois brittien ulottuvilta] 1836 alkaen — Kapin siirtokunnan hollanninkieliset maanviljelijät eli buurit olivat kyllästyneet brittihallintoon, ja vuodesta 1836 alkaen tuhannet heistä pakkasivat koko omaisuutensa härkävankkureihin ja lähtivät pohjoiseen sisämaahan. Vaeltajat kutsuivat itseään nimellä voortrekker, "edelläkulkija". Matkasta syntyi kolme itsenäistä buuritasavaltaa — Transvaal, Oranjen vapaavaltio ja Natalia — ja samalla pitkä kiista maasta niiden kanssa, jotka siellä jo asuivat: pohjoiset ndebelet joutuivat väistymään, ja yhteenotot zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri vaellus on afrikaanerien perustarina.
+
+### 21.1
+KYSYMYS: Mikä on lessepsiläinen vaellus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Maailman hienoin kävelyretki] Vuonna 1888 löydetty McKinnonin sola avasi kävelyreitin Te Anaun järveltä Milford Soundiin, ja reitistä muodostui vähitellen Milford Track. Vuonna 1908 runoilija Blanche Baughan patikoi reitin ja lähetti siitä 7 500 sanan pituisen kertomuksen Lontooseen julkaistavaksi. Lehden toimittaja otsikoi jutun "The Finest Walk in the World" eli "maailman hienoin kävelyretki", ja nimitys tarttui reittiin pysyvästi. Uuden-Seelannin matkailuvirasto tarttui heti tilaisuuteen ja käytti lausahdusta maan markkinoinnissa vuosikymmenten ajan. Nykyisin nelipäiväinen, 53 kilometrin vaellus vie kulkijat sademetsän ja McKinnonin solan kautta aina Milford Soundiin asti.
+- [Etelä-Afrikka — maalehti / Historia: Härkävankkurit lähtivät pois brittien ulottuvilta] 1836 alkaen — Kapin siirtokunnan hollanninkieliset maanviljelijät eli buurit olivat kyllästyneet brittihallintoon, ja vuodesta 1836 alkaen tuhannet heistä pakkasivat koko omaisuutensa härkävankkureihin ja lähtivät pohjoiseen sisämaahan. Vaeltajat kutsuivat itseään nimellä voortrekker, "edelläkulkija". Matkasta syntyi kolme itsenäistä buuritasavaltaa — Transvaal, Oranjen vapaavaltio ja Natalia — ja samalla pitkä kiista maasta niiden kanssa, jotka siellä jo asuivat: pohjoiset ndebelet joutuivat väistymään, ja yhteenotot zulukuningaskunnan kanssa alkoivat murentaa sitä. Suuri vaellus on afrikaanerien perustarina.
+
+### 21.2
+KYSYMYS: Miten Suezin kanava muutti Välimeren eliöstöä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Levantinmeri (meri)
+Tietoruudun teksti: Levantinmeri on Välimeren itäisin osa, noin 320 000 neliökilometriä, ja Kypros on sen suurin saari. Syvin kohta, 4 384 metriä, on Plinius-hautavajoamassa noin kahdeksankymmentä kilometriä Kreetan eteläpuolella. Isoisäsi matkaa edeltävinä vuosina meri sai uuden oven: Suezin kanava valmistui 1869 ja yhdisti sen Punaiseenmereen. Vuosikymmeniä esteenä olivat Katkerat järvet, joiden suolapitoisuus oli liian korkea, mutta kun se tasaantui kanavan veden kanssa, este katosi ja Punaisenmeren kasvit ja eläimet alkoivat asuttaa itäistä Välimerta. Ilmiötä kutsutaan lessepsiläiseksi vaellukseksi kanavan pääinsinöörin Ferdinand de Lessepsin mukaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahara — kaupunkilehti / Eliöstö ja maasto] Sahara vaikuttaa elottomalta, mutta hiekan alla ja kivikoiden seassa elää eliöitä, jotka ovat sopeutuneet äärimmäiseen kuivuuteen ja kuumuuteen. Maasto vaihtelee laakeista dyynimeristä suolajärviin ja tuulen kuluttamiin vuoriin.
+- [Kongo — kaupunkilehti / Sademetsä ja joen eliöstö] Kongojoen ympärillä leviää maailman toiseksi suurin yhtenäinen sademetsä, ja itse joki kätkee syvyyksiinsä lajeja, jotka elävät vain siellä. Kosket ja virran voima ovat eristäneet eliöstön muusta Afrikasta vuosituhansien ajan.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:paphoksenmosaiikit) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+### 22.1
+KYSYMYS: Mikä Nea Paphos oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+### 22.2
+KYSYMYS: Miksi huvilat nimettiin lattioidensa mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paphoksen mosaiikit (historia)
+Tietoruudun teksti: Nea Paphos oli Kyproksen hallinnollinen pääkaupunki Ptolemaiosten ja Rooman aikaan, ja sen varakkaiden huviloiden lattioista on kaivettu esiin Välimeren parhaiten säilyneitä mosaiikkeja. Dionysoksen talo on 200-luvulta jaa., pinta-alaltaan noin 2 000 neliömetriä, ja mosaiikit peittävät siitä neljänneksen: metsästyskohtauksia, Apollon ja Dafnen takaa-ajo, Ganymedes ja kotka sekä neljä vuodenaikaa. Theseuksen huvila sai nimensä lattiakuvasta, jossa Theseus taistelee Minotaurosta vastaan, ja Aionin talo löytyi vasta 1983. Kaivaukset aloitti puolalainen Kazimierz Michałowski kesäkuussa 1965, ja ne jatkuvat yhä; Unesco liitti Paphoksen luetteloonsa 1980.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:palaipafos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Intia — maalehti / Kuvataide: Jumalat tulivat painokoneesta] Raja Ravi Varma (1848–1906) maalasi eurooppalaisen öljymaalauksen tekniikalla intialaisia aiheita: eeposten kohtauksia, jumalia ja muotokuvia. Suurin muutos ei kuitenkaan ollut tyyli vaan levikki. Varma alkoi painamalla litografioita myydä kuviaan halpoina vedoksina, jolloin sama kuva päätyi tavallisiin koteihin ympäri maata. Monen jumalhahmon nykyinen ulkonäkö on peräisin juuri näistä vedoksista — kasvot, asento ja vaatteet vakiintuivat sen mukaan, miltä ne näyttivät seinällä olevassa painokuvassa.
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+
+### 23.1
+KYSYMYS: Miksi jumalattaresta ei ollut kuvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Intia — maalehti / Kuvataide: Jumalat tulivat painokoneesta] Raja Ravi Varma (1848–1906) maalasi eurooppalaisen öljymaalauksen tekniikalla intialaisia aiheita: eeposten kohtauksia, jumalia ja muotokuvia. Suurin muutos ei kuitenkaan ollut tyyli vaan levikki. Varma alkoi painamalla litografioita myydä kuviaan halpoina vedoksina, jolloin sama kuva päätyi tavallisiin koteihin ympäri maata. Monen jumalhahmon nykyinen ulkonäkö on peräisin juuri näistä vedoksista — kasvot, asento ja vaatteet vakiintuivat sen mukaan, miltä ne näyttivät seinällä olevassa painokuvassa.
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+
+### 23.2
+KYSYMYS: Missä Afroditen tärkein pyhäkkö oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Palaipafos (historia)
+Tietoruudun teksti: Vanha Paphos, nykyinen Kouklia, on kukkulalla noin kaksitoista kilometriä uudesta kaupungista kaakkoon. Paikka on ollut asuttu neoliittiselta ajalta, ja siitä tuli antiikin maailman tärkein Afroditen palvontapaikka — jumalattaren myyttinen syntypaikka oli Kypros. Strabonin mukaan Nea Paphoksesta vanhaan kaupunkiin johtava tie täyttyi vuosittain pyhiinvaeltajista. Tacitus kertoo nuoren Tituksen käyneen katsomassa pyhäkköä ja panneen merkille oudon asian: jumalattaresta ei ollut kuvaa lainkaan, vain pyramidin muotoinen kivi.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:kourion) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Lahti joka antoi kaupungille elannon] Kaikkien pyhien lahti on Brasilian suurin lahti, ja Salvador seisoo kolmion muotoisella niemellä, joka erottaa sen Atlantista. Lahden yli on kuljettu viisi vuosisataa: suurelle Itaparican saarelle mennään yhä lautalla, joka lähtee Mercado Modelon läheltä. Koska valaat käyttivät lahtea pariutumisalueenaan, kaupungista kasvoi 1800-luvulla yksi eteläisen pallonpuoliskon suurista valaanpyyntisatamista – mutta pyynti oli jo hiipumassa 1870-luvulle tultaessa, juuri isoisän matka-aikoihin.
+- [Uzbekistan — maalehti / Kuvataide: Savi, joka riittää koko kaupungille] Rishtan Ferganan laaksossa on maan vanhimpia ja kuuluisimpia keramiikkakaupunkeja, ja syy on maan alla: melkein koko kaupungin alla on metrin tai puolentoista syvyydessä puolesta metristä puoleentoista paksu kerros punakeltaista savea. Savi kelpaa sellaisenaan ilman puhdistusta ja ilman muualta tuotua seosta. Väriaineet, kvartsihiekka ja tulenkestävä savi otetaan ympäröiviltä vuorilta, ja kuuluisan ishkor-lasitteen väri saadaan luonnon mineraaleista ja vuoristokasvien tuhkasta.
+
+### 24.1
+KYSYMYS: Mitä kaupungille tapahtui 300-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Salvador: Lahti joka antoi kaupungille elannon] Kaikkien pyhien lahti on Brasilian suurin lahti, ja Salvador seisoo kolmion muotoisella niemellä, joka erottaa sen Atlantista. Lahden yli on kuljettu viisi vuosisataa: suurelle Itaparican saarelle mennään yhä lautalla, joka lähtee Mercado Modelon läheltä. Koska valaat käyttivät lahtea pariutumisalueenaan, kaupungista kasvoi 1800-luvulla yksi eteläisen pallonpuoliskon suurista valaanpyyntisatamista – mutta pyynti oli jo hiipumassa 1870-luvulle tultaessa, juuri isoisän matka-aikoihin.
+- [Uzbekistan — maalehti / Kuvataide: Savi, joka riittää koko kaupungille] Rishtan Ferganan laaksossa on maan vanhimpia ja kuuluisimpia keramiikkakaupunkeja, ja syy on maan alla: melkein koko kaupungin alla on metrin tai puolentoista syvyydessä puolesta metristä puoleentoista paksu kerros punakeltaista savea. Savi kelpaa sellaisenaan ilman puhdistusta ja ilman muualta tuotua seosta. Väriaineet, kvartsihiekka ja tulenkestävä savi otetaan ympäröiviltä vuorilta, ja kuuluisan ishkor-lasitteen väri saadaan luonnon mineraaleista ja vuoristokasvien tuhkasta.
+
+### 24.2
+KYSYMYS: Miksi asutus siirtyi Episkopiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kourion (historia)
+Tietoruudun teksti: Kourion oli merkittävä kreikkalainen kaupunkivaltio Kyproksen lounaisrannikolla. Argoksesta tulleet uudisasukkaat asettuivat paikalle 1100-luvulla eaa., kun mykeneläiset palatsit olivat romahtaneet. Akropoli seisoo lähes sadan metrin korkuisella kalkkikivikielekkeellä Episkopinlahden yllä. Vuosien 365 ja 370 välillä viisi voimakasta maanjäristystä tuhosi kaupungin lähes kokonaan, ja se rakennettiin uudelleen vasta 400-luvun lopulla. Arabiretkikunnat hävittivät akropolin 648–649, ja asutus siirtyi kaksi kilometriä koilliseen Episkopiin, joka sai nimensä piispanistuimesta.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:khirokitia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Kuningas joka muuttui puuksi] Ouidah'n keskustassa säilynyt Kpasséen pyhä metsä on jäänne alkuperäisestä sademetsästä, joka kerran peitti koko rannikkoseudun. Legendan mukaan kaupungin perustajakuningas Kpasse pakeni tänne vihollisiaan ja muuttui iäkkääksi iroko-puuksi välttyäkseen kiinniottamiselta – puu seisoo yhä metsän keskellä ja sitä pidetään pyhänä. Metsän varjoisilla poluilla on kymmeniä patsaita, jotka esittävät vodun-uskonnon jumaluuksia ja esi-isiä, ja paikka toimii yhä sekä uskonnollisena pyhäkkönä että avoimena ulkoilmamuseona kaupungin vieraille.
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+### 25.1
+KYSYMYS: Miksi kylän ikä muuttui kolmella vuosituhannella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Orjarannikko — kaupunkilehti / Orjarannikko: Kuningas joka muuttui puuksi] Ouidah'n keskustassa säilynyt Kpasséen pyhä metsä on jäänne alkuperäisestä sademetsästä, joka kerran peitti koko rannikkoseudun. Legendan mukaan kaupungin perustajakuningas Kpasse pakeni tänne vihollisiaan ja muuttui iäkkääksi iroko-puuksi välttyäkseen kiinniottamiselta – puu seisoo yhä metsän keskellä ja sitä pidetään pyhänä. Metsän varjoisilla poluilla on kymmeniä patsaita, jotka esittävät vodun-uskonnon jumaluuksia ja esi-isiä, ja paikka toimii yhä sekä uskonnollisena pyhäkkönä että avoimena ulkoilmamuseona kaupungin vieraille.
+- [Kypros — maalehti / Käsityö: Nuorin tekijä oli 56-vuotias] Pano Lefkara on vuoristokylä Larnakan ja Limassolin välissä, ja sen pääkadulla liinat ripustetaan myyntiin suoraan puotien seinille ja oviaukkojen pieliin. Työ on hidasta: yhteen pöytäliinaan voi kulua kaksi vuotta, ja sellaisen hinta voi nousta tuhansiin euroihin. Tekijöitä on kuitenkin koko ajan vähemmän. Kylässä perustettiin yhdistys pitämään taitoa yllä, ja siihen kirjautui 70 jäsentä. Vuonna 2018 kylän nuorin ompelija oli 56-vuotias — perinne on siis elossa mutta ikääntyvissä käsissä. Lefkaritika merkittiin Unescon aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+### 25.2
+KYSYMYS: Mikä on tholos?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Khirokitia (historia)
+Tietoruudun teksti: Khirokitia on neoliittinen asuinpaikka Maronijoen laaksossa kuuden kilometrin päässä etelärannikolta, ja se on ollut Unescon luettelossa vuodesta 1998. Porphyrios Dikaios löysi paikan 1934 ja arveli sen syntyneen noin 4000 eaa.; radiohiiliajoitus siirsi perustamisen 7000 vuoteen eaa. Kylää ympäröi kahden ja puolen metrin paksuinen kivimuuri, ja sen sisällä on tiiviissä ryhmissä pyöreitä tholos-rakennuksia, halkaisijaltaan kahdesta yhdeksään metriä. Vainajat haudattiin koukkuasennossa aivan lattian alle. Kylä hylättiin tuntemattomasta syystä noin 6000 eaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Petra — kohdekartta / Kohdekartta: Al-Khazneh] 100-luvun alku jKr. Al-Khazneh rakennettiin 100-luvun alussa jKr. kuningas Aretas IV Philopatriksen aikana, ja sitä pidetään mausoleumina ja kryptana. Julkisivu on 37 metriä korkea ja 24 metriä leveä, ja se on Petran paras esimerkki hellenistisestä tyylistä — muodot viittaavat suoraan Aleksandrian arkkitehtuuriin. Keskellä ylätasoa on katkaistun päätykolmion sisään sijoitettu pyöreä tholos, ja huipulla näyttää kasvavan kaksi obeliskia suoraan kalliosta. Kuvaohjelma on tuonpuoleisuuden ohjelma. Ylimpänä on neljä kotkaa, joiden tehtävä oli kantaa sielut pois. Ylätason hahmot ovat tanssivia amatsoneja kaksoiskirveineen, ja sisäänkäyntiä vartioivat kaksoset Kastor ja Polluks, jotka elivät osan …
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

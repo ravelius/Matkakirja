@@ -1,0 +1,209 @@
+================ KOHTA 6 (kohde:hahmotelma-akamas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akamas (luonto · vuori)
+Tietoruudun teksti: Akamas on niemi ja kärki Kyproksen luoteiskulmassa; sen pinta-ala on 230 neliökilometriä. Ptolemaios kuvasi sitä tiheästi metsäiseksi niemeksi, jonka keskellä kohoaa vuoristo, ja niemi on nimetty Theseuksen pojan Akamaksen mukaan, joka oli Solin kaupunkivaltion perustaja. Niemen sydänalueen halki ei kulje teitä, ja alue on niin vaikeapääsyinen, että se on säilyttänyt runsaan lajiston: Euroopan ympäristökeskuksen mukaan se on yksi vain 22 Euroopan endeemisyysalueesta, ja 39 Kyproksen 128 endeemisestä kasvilajista kasvaa Akamaksella. Nähtävyyksiin kuuluvat merikilpikonnien suojelualue ja Aphroditen kylpypaikka, jossa jumalatar kerrotaan kylpeneen.
+
+### 6.1
+KYSYMYS: Minkä sankarin mukaan Akamas on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akamas (luonto · vuori)
+Tietoruudun teksti: Akamas on niemi ja kärki Kyproksen luoteiskulmassa; sen pinta-ala on 230 neliökilometriä. Ptolemaios kuvasi sitä tiheästi metsäiseksi niemeksi, jonka keskellä kohoaa vuoristo, ja niemi on nimetty Theseuksen pojan Akamaksen mukaan, joka oli Solin kaupunkivaltion perustaja. Niemen sydänalueen halki ei kulje teitä, ja alue on niin vaikeapääsyinen, että se on säilyttänyt runsaan lajiston: Euroopan ympäristökeskuksen mukaan se on yksi vain 22 Euroopan endeemisyysalueesta, ja 39 Kyproksen 128 endeemisestä kasvilajista kasvaa Akamaksella. Nähtävyyksiin kuuluvat merikilpikonnien suojelualue ja Aphroditen kylpypaikka, jossa jumalatar kerrotaan kylpeneen.
+
+### 6.2
+KYSYMYS: Kuinka monta Kyproksen 128 endeemisestä kasvilajista Akamasilla kasvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Akamas (luonto · vuori)
+Tietoruudun teksti: Akamas on niemi ja kärki Kyproksen luoteiskulmassa; sen pinta-ala on 230 neliökilometriä. Ptolemaios kuvasi sitä tiheästi metsäiseksi niemeksi, jonka keskellä kohoaa vuoristo, ja niemi on nimetty Theseuksen pojan Akamaksen mukaan, joka oli Solin kaupunkivaltion perustaja. Niemen sydänalueen halki ei kulje teitä, ja alue on niin vaikeapääsyinen, että se on säilyttänyt runsaan lajiston: Euroopan ympäristökeskuksen mukaan se on yksi vain 22 Euroopan endeemisyysalueesta, ja 39 Kyproksen 128 endeemisestä kasvilajista kasvaa Akamaksella. Nähtävyyksiin kuuluvat merikilpikonnien suojelualue ja Aphroditen kylpypaikka, jossa jumalatar kerrotaan kylpeneen.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-chrysorrogiatissa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chrysorrogiatissa (kulttuuri)
+Tietoruudun teksti: Chrysorrogiatissa on Kultaisen granaattiomenan Neitsyt Marialle omistettu luostari noin 40 kilometriä Pafoksesta koilliseen, noin 820 metrin korkeudessa. Sen perusti munkki Ignatios 1100-luvulla, ja se on 1,5 kilometrin päässä Panayian kylästä, jossa syntyi myöhempi arkkipiispa Makarios. Nykyinen rakennus on vuodelta 1770, ja juhlaa vietetään joka vuosi 15. elokuuta Neitsyt Marian kunniaksi. 1980-luvun puolivälissä luostarin vanha viinitehdas avattiin uudelleen, ja se tuottaa viiniä luostarin omilta viinitarhoilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 7.1
+KYSYMYS: Kuka munkki perusti luostarin 1100-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chrysorrogiatissa (kulttuuri)
+Tietoruudun teksti: Chrysorrogiatissa on Kultaisen granaattiomenan Neitsyt Marialle omistettu luostari noin 40 kilometriä Pafoksesta koilliseen, noin 820 metrin korkeudessa. Sen perusti munkki Ignatios 1100-luvulla, ja se on 1,5 kilometrin päässä Panayian kylästä, jossa syntyi myöhempi arkkipiispa Makarios. Nykyinen rakennus on vuodelta 1770, ja juhlaa vietetään joka vuosi 15. elokuuta Neitsyt Marian kunniaksi. 1980-luvun puolivälissä luostarin vanha viinitehdas avattiin uudelleen, ja se tuottaa viiniä luostarin omilta viinitarhoilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historia: Kuningas, josta tuli munkki] 1190–1196 — Stefan Nemanja yhdisti Serbian pirstoutuneet ruhtinaskunnat ja perusti Nemanjić-suvun, joka hallitsi maata yli kaksisataa vuotta. Hän aloitti Studenican luostarin rakentamisen 1180-luvulla ja pystytti sen sydämeen valkoisesta marmorista Neitsyt Marian kirkon. Maaliskuun 25. päivänä 1196 hän luopui vallasta poikansa Stefanin hyväksi ja otti munkiksi vihkimisessä nimen Simeon. Syksyllä 1197 hän matkasi Athos-vuorelle liittyäkseen sinne jo aiemmin lähteneeseen nuorimpaan poikaansa Rastkoon, josta tuli myöhemmin pyhä Sava, Serbian ortodoksisen kirkon perustaja. Studenica on Unescon maailmanperintöä vuodesta 1986.
+- [Xi’an — kaupunkilehti / Historia: Munkki, joka toi kirjat kotiin] Munkki Xuanzang palasi Intian-pyhiinvaellukseltaan satojen sanskritinkielisten käsikirjoitusten kanssa ja perusti Chang’aniin käännöskoulun. Niiden säilyttämiseksi hän valvoi vuonna 652 pagodin rakentamista Da Ci’enin temppeliin: viisikerroksinen torni, ulkokuori tiiltä ja sisäydin maata, kuusikymmentä metriä korkea. Tiilisaumoihin kasvoi rikkaruohoa, ja rakenne vaurioitui. Keisarinna Wu Zetian ja hoviväki lahjoittivat rahat, alkuperäinen torni purettiin ja tilalle nousi seitsenkerroksinen. Sisäseiniin kaiverrettiin Buddha-kuvia, joiden tekijäksi mainitaan aikansa kuuluisin maalari Yan Liben.
+
+### 7.2
+KYSYMYS: Minä päivänä luostarin juhlaa vietetään joka vuosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Chrysorrogiatissa (kulttuuri)
+Tietoruudun teksti: Chrysorrogiatissa on Kultaisen granaattiomenan Neitsyt Marialle omistettu luostari noin 40 kilometriä Pafoksesta koilliseen, noin 820 metrin korkeudessa. Sen perusti munkki Ignatios 1100-luvulla, ja se on 1,5 kilometrin päässä Panayian kylästä, jossa syntyi myöhempi arkkipiispa Makarios. Nykyinen rakennus on vuodelta 1770, ja juhlaa vietetään joka vuosi 15. elokuuta Neitsyt Marian kunniaksi. 1980-luvun puolivälissä luostarin vanha viinitehdas avattiin uudelleen, ja se tuottaa viiniä luostarin omilta viinitarhoilta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-soli) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soli (historia)
+Tietoruudun teksti: Soli eli Soloi oli muinainen kaupunkivaltio Kyproksen luoteisosassa Morphoun lahden rannalla. Se toimitti Ateenaan puutavaraa ja kuparia vastineeksi ylellisistä metalliesineistä. Vanhan perimätiedon mukaan Solin asemakaavan ja nimen olisi antanut ateenalainen valtiomies Solon (630–560 eaa.), mutta arkeologinen todistus kyseenalaistaa tämän: assyrialaisen Esarhaddonin prisman 600-luvun eaa. kirjoitukset mainitsevat Solin yhtenä Kyproksen kymmenestä kaupunkivaltiosta. Ruotsalainen Kyproksen retkikunta Einar Gjerstadin johdolla kaivoi Solia lokakuussa 1927; kaupunki sijaitsi Mesaorian tasangolla lähellä merta, viljelysmaita ja Kyproksen rikkainta kuparialuetta. Cholades-kukkulan temppelikompleksissa temppelit A ja B oli omistettu yhdessä Afroditelle ja Kybelelle, ja temppeli F oli omistettu Mithralle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kohdekartta / Kohdekartta: Giménezin talo] 1923—1924 Espanjalaiset kauppiaat Ismael Giménez ja Enrique Longueira avasivat 1915 yhdessä tekstiilikaupan nimeltä La Camelia. Kun yhtiö purkautui Longueiran palatessa kotimaahansa, Giménez päätti rakentaa oman liikkeensä Matta- ja Baquedano-katujen kulmassa olleelle joutomaalle. Hän matkusti vaimonsa María del Vallen kanssa Sevillaan, näki siellä arkkitehti José Espiau y Muñozin Ciudad de Londres -rakennuksen ja päätti, että hänen omansa tulisi olemaan samanlainen mutta suurempi ja koristeellisempi. Giménez tilasi piirustukset Espiau y Muñozilta ja toi Chileen sekä ne että rakennusmateriaaleja. Työn teki katalonialainen arkkitehti Jaime Pedreny, ja se alkoi 19. toukokuuta 1923. Materiaale…
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+
+### 8.1
+KYSYMYS: Mitä Soli toimitti Ateenaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soli (historia)
+Tietoruudun teksti: Soli eli Soloi oli muinainen kaupunkivaltio Kyproksen luoteisosassa Morphoun lahden rannalla. Se toimitti Ateenaan puutavaraa ja kuparia vastineeksi ylellisistä metalliesineistä. Vanhan perimätiedon mukaan Solin asemakaavan ja nimen olisi antanut ateenalainen valtiomies Solon (630–560 eaa.), mutta arkeologinen todistus kyseenalaistaa tämän: assyrialaisen Esarhaddonin prisman 600-luvun eaa. kirjoitukset mainitsevat Solin yhtenä Kyproksen kymmenestä kaupunkivaltiosta. Ruotsalainen Kyproksen retkikunta Einar Gjerstadin johdolla kaivoi Solia lokakuussa 1927; kaupunki sijaitsi Mesaorian tasangolla lähellä merta, viljelysmaita ja Kyproksen rikkainta kuparialuetta. Cholades-kukkulan temppelikompleksissa temppelit A ja B oli omistettu yhdessä Afroditelle ja Kybelelle, ja temppeli F oli omistettu Mithralle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Ateena: Vesikantaja voitti ensimmäisen maratonin] Ateenan Kallimarmaro on maailman ainoa kokonaan marmorista rakennettu stadion. Kun uuden ajan ensimmäiset olympialaiset alkoivat siellä keväällä 1896, katsomossa oli noin 60 000 ihmistä. Maratonille lähti seitsemäntoista juoksijaa, ja voittaja oli 23-vuotias Spyridon Louis. Hän kantoi työkseen juomavettä Maroúsista Ateenaan, jossa ei vielä ollut vesijohtoa. Aika oli 2.58.50. Voittajat eivät saaneet kultaa vaan hopeamitalin ja oliivinoksan.
+- [Ateena — kaupunkilehti / Historia: Iliou Melathron — Troijan palatsi] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+- [Ateena — kohdekartta / Kohdekartta: Iliou Melathron] Kesäkuussa 1873, kaivauksen viimeisenä päivänä, Heinrich Schliemann löysi Hisarlikin kummulta kultaa, jonka uskoi kuningas Priamoksen aarteeksi. Muutamaa vuotta myöhemmin hän rakennutti Ateenaan kadun varteen komean palatsin, Iliou Melathronin — Troijan palatsin. Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja kolikoita, sillä se on numismaattinen museo. Talon friisissä Schliemann kaivaa ikuisesti, lapio kädessä.
+
+### 8.2
+KYSYMYS: Kuka johti ruotsalaista Kyproksen retkikuntaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Soli (historia)
+Tietoruudun teksti: Soli eli Soloi oli muinainen kaupunkivaltio Kyproksen luoteisosassa Morphoun lahden rannalla. Se toimitti Ateenaan puutavaraa ja kuparia vastineeksi ylellisistä metalliesineistä. Vanhan perimätiedon mukaan Solin asemakaavan ja nimen olisi antanut ateenalainen valtiomies Solon (630–560 eaa.), mutta arkeologinen todistus kyseenalaistaa tämän: assyrialaisen Esarhaddonin prisman 600-luvun eaa. kirjoitukset mainitsevat Solin yhtenä Kyproksen kymmenestä kaupunkivaltiosta. Ruotsalainen Kyproksen retkikunta Einar Gjerstadin johdolla kaivoi Solia lokakuussa 1927; kaupunki sijaitsi Mesaorian tasangolla lähellä merta, viljelysmaita ja Kyproksen rikkainta kuparialuetta. Cholades-kukkulan temppelikompleksissa temppelit A ja B oli omistettu yhdessä Afroditelle ja Kybelelle, ja temppeli F oli omistettu Mithralle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Antofagasta — kohdekartta / Kohdekartta: Giménezin talo] 1923—1924 Espanjalaiset kauppiaat Ismael Giménez ja Enrique Longueira avasivat 1915 yhdessä tekstiilikaupan nimeltä La Camelia. Kun yhtiö purkautui Longueiran palatessa kotimaahansa, Giménez päätti rakentaa oman liikkeensä Matta- ja Baquedano-katujen kulmassa olleelle joutomaalle. Hän matkusti vaimonsa María del Vallen kanssa Sevillaan, näki siellä arkkitehti José Espiau y Muñozin Ciudad de Londres -rakennuksen ja päätti, että hänen omansa tulisi olemaan samanlainen mutta suurempi ja koristeellisempi. Giménez tilasi piirustukset Espiau y Muñozilta ja toi Chileen sekä ne että rakennusmateriaaleja. Työn teki katalonialainen arkkitehti Jaime Pedreny, ja se alkoi 19. toukokuuta 1923. Materiaale…
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-stavrovouni) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stavrovounin luostari (historia)
+Tietoruudun teksti: Stavrovounin luostari on kreikkalaisortodoksinen luostari Stavrovouni-nimisen kukkulan huipulla Larnakan piirikunnassa; nimi tarkoittaa Ristin vuorta. Perimätiedon mukaan sen perustivat pyhä Helena ja keisari Konstantinus Suuri noin vuosina 327–329: Helenan kerrotaan jättäneen Kyprokselle pala ristiä, jolla Jeesus ristiinnaulittiin. Luostari on yksi maailman vanhimmista, ja Stavrovouni on saaren varhaisimmin dokumentoitu luostari; vanhin kirjallinen maininta on venäläisen apotti Danielin muistiinpanoista vuodelta 1106. Merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa reliikkiarkussa; muita pyhäinjäännöksiä ovat hyvän ryövärin risti ja yksi pyhistä nauloista. Vuori tunnettiin aiemmin nimellä Olympos, joka on nykyään Troodoksen korkeimman huipun nimi.
+
+### 9.1
+KYSYMYS: Kuka perimätiedon mukaan perusti Stavrovounin luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stavrovounin luostari (historia)
+Tietoruudun teksti: Stavrovounin luostari on kreikkalaisortodoksinen luostari Stavrovouni-nimisen kukkulan huipulla Larnakan piirikunnassa; nimi tarkoittaa Ristin vuorta. Perimätiedon mukaan sen perustivat pyhä Helena ja keisari Konstantinus Suuri noin vuosina 327–329: Helenan kerrotaan jättäneen Kyprokselle pala ristiä, jolla Jeesus ristiinnaulittiin. Luostari on yksi maailman vanhimmista, ja Stavrovouni on saaren varhaisimmin dokumentoitu luostari; vanhin kirjallinen maininta on venäläisen apotti Danielin muistiinpanoista vuodelta 1106. Merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa reliikkiarkussa; muita pyhäinjäännöksiä ovat hyvän ryövärin risti ja yksi pyhistä nauloista. Vuori tunnettiin aiemmin nimellä Olympos, joka on nykyään Troodoksen korkeimman huipun nimi.
+
+### 9.2
+KYSYMYS: Minkä pyhäinjäännöksen luostari säilyttää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Stavrovounin luostari (historia)
+Tietoruudun teksti: Stavrovounin luostari on kreikkalaisortodoksinen luostari Stavrovouni-nimisen kukkulan huipulla Larnakan piirikunnassa; nimi tarkoittaa Ristin vuorta. Perimätiedon mukaan sen perustivat pyhä Helena ja keisari Konstantinus Suuri noin vuosina 327–329: Helenan kerrotaan jättäneen Kyprokselle pala ristiä, jolla Jeesus ristiinnaulittiin. Luostari on yksi maailman vanhimmista, ja Stavrovouni on saaren varhaisimmin dokumentoitu luostari; vanhin kirjallinen maininta on venäläisen apotti Danielin muistiinpanoista vuodelta 1106. Merkittävin pyhäinjäännös on pala ristiä, jota säilytetään suuressa hopeisessa ristinmuotoisessa reliikkiarkussa; muita pyhäinjäännöksiä ovat hyvän ryövärin risti ja yksi pyhistä nauloista. Vuori tunnettiin aiemmin nimellä Olympos, joka on nykyään Troodoksen korkeimman huipun nimi.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hahmotelma-kantara) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kantaran linna (historia)
+Tietoruudun teksti: Kantaran linna on linna Kyproksen pohjoisosassa Kyrenian vuorilla; sen rakennusajankohta ei ole tiedossa, mutta todennäköisimmin se on peräisin Bysantin ajalta. Se yhdistää bysanttilaisia ja frankkilaisia rakennuspiirteitä, ja se autioitui vuonna 1525 ja purettiin vuonna 1560. Kantara sijaitsee Buffaventon linnan itäpuolella ja Saint Hilarionin linna kauempana lännessä; linnat muodostivat suojaavan akselin vuoristoon ja välittivät toisilleen merkkejä. Linnan nimi tulee kyproksenarabian sanasta kandak, joka tarkoittaa kivisiltaa. Sitä käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana, mutta linna ei juuri joutunut taisteluihin; vuonna 1373 genovalaisten hyökätessä prinssi Johannes pakeni Kantaraan ja järjesti sieltä vastahyökkäyksen, joka ajoi genovalaiset pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+- [Tanger — kaupunkilehti / Tanger: Myötäjäisiksi annettu kaupunki] Portugalilaiset epäonnistuivat kolmesti ja ottivat Tangerin lopulta ilman taistelua 28. elokuuta 1471, kun varuskunta pakeni. Kahdensadan vuoden kuluttua kaupunki vaihtoi taas omistajaa ilman laukaustakaan: se luovutettiin 1661 Englannin Kaarle II:lle osana Katariina Braganzalaisen myötäjäisiä, ja englantilaiset ottivat sen haltuunsa tammikuussa 1662. Kaarle kutsui saalistaan kruunun korvaamattomaksi jalokiveksi. Satamaan rakennettiin aallonmurtaja, joka ylsi 1436 jalkaan ja maksoi 340 000 puntaa. Moulay Ismailin piiritys 1678–1680 ei murtanut kaupunkia, mutta parlamentti kyllästyi laskuun: lähtevät joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. helmikuuta 1684.
+
+### 10.1
+KYSYMYS: Minä vuonna Kantaran linna autioitui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kantaran linna (historia)
+Tietoruudun teksti: Kantaran linna on linna Kyproksen pohjoisosassa Kyrenian vuorilla; sen rakennusajankohta ei ole tiedossa, mutta todennäköisimmin se on peräisin Bysantin ajalta. Se yhdistää bysanttilaisia ja frankkilaisia rakennuspiirteitä, ja se autioitui vuonna 1525 ja purettiin vuonna 1560. Kantara sijaitsee Buffaventon linnan itäpuolella ja Saint Hilarionin linna kauempana lännessä; linnat muodostivat suojaavan akselin vuoristoon ja välittivät toisilleen merkkejä. Linnan nimi tulee kyproksenarabian sanasta kandak, joka tarkoittaa kivisiltaa. Sitä käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana, mutta linna ei juuri joutunut taisteluihin; vuonna 1373 genovalaisten hyökätessä prinssi Johannes pakeni Kantaraan ja järjesti sieltä vastahyökkäyksen, joka ajoi genovalaiset pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 10.2
+KYSYMYS: Minkä sanan mukaan linnan nimi on annettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kantaran linna (historia)
+Tietoruudun teksti: Kantaran linna on linna Kyproksen pohjoisosassa Kyrenian vuorilla; sen rakennusajankohta ei ole tiedossa, mutta todennäköisimmin se on peräisin Bysantin ajalta. Se yhdistää bysanttilaisia ja frankkilaisia rakennuspiirteitä, ja se autioitui vuonna 1525 ja purettiin vuonna 1560. Kantara sijaitsee Buffaventon linnan itäpuolella ja Saint Hilarionin linna kauempana lännessä; linnat muodostivat suojaavan akselin vuoristoon ja välittivät toisilleen merkkejä. Linnan nimi tulee kyproksenarabian sanasta kandak, joka tarkoittaa kivisiltaa. Sitä käytettiin merirosvoretkien vartiotornina, hallintokeskuksena ja vankilana, mutta linna ei juuri joutunut taisteluihin; vuonna 1373 genovalaisten hyökätessä prinssi Johannes pakeni Kantaraan ja järjesti sieltä vastahyökkäyksen, joka ajoi genovalaiset pois.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Myötäjäisiksi annettu kaupunki] Portugalilaiset epäonnistuivat kolmesti ja ottivat Tangerin lopulta ilman taistelua 28. elokuuta 1471, kun varuskunta pakeni. Kahdensadan vuoden kuluttua kaupunki vaihtoi taas omistajaa ilman laukaustakaan: se luovutettiin 1661 Englannin Kaarle II:lle osana Katariina Braganzalaisen myötäjäisiä, ja englantilaiset ottivat sen haltuunsa tammikuussa 1662. Kaarle kutsui saalistaan kruunun korvaamattomaksi jalokiveksi. Satamaan rakennettiin aallonmurtaja, joka ylsi 1436 jalkaan ja maksoi 340 000 puntaa. Moulay Ismailin piiritys 1678–1680 ei murtanut kaupunkia, mutta parlamentti kyllästyi laskuun: lähtevät joukot räjäyttivät sataman, ja Marokko sai kaupungin 7. helmikuuta 1684.
+- [Uruguay — maalehti / Kirjallisuus: Runoilija, jolle annettiin koko maanosan nimi] 1892–1979 — Juana Fernández Morales julkaisi ensimmäisen kokoelmansa Las lenguas de diamante vuonna 1919 nimellä Juana de Ibarbourou. Runot olivat suoria ja aistivoimaisia, ja ne levisivät nopeasti koko espanjankieliseen maailmaan. Vuonna 1929 hänelle annettiin Montevideon lainsäädäntöpalatsissa juhlallisesti nimi Juana de América — arvonimi, jota ei ollut ennen eikä jälkeen annettu kenellekään. Hän kirjoitti myös lastenkirjoja ja oli yksi ensimmäisiä latinalaisamerikkalaisia naisia, jotka saattoivat elää kirjoittamisella.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI

@@ -1,0 +1,178 @@
+================ KOHTA 26 (kohde:asinounkirkko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+- [Salvador — kohdekartta / Kohdekartta: Anglikaanisen kappelin paikka] 1853 Anglikaanisuus tuli Brasiliaan Portugalin hovin mukana. Portugali ja Britannia sopivat 1810 kauppa- ja merenkulkusopimuksessa, että anglikaanisia kappeleita saa rakentaa kahdella ehdolla: ne eivät saa näyttää temppeleiltä eivätkä käännyttää brasilialaisia. Salvadorin pappisvirka perustettiin 1815, ja jumalanpalvelukset pidettiin aluksi yksityiskodeissa. Vuonna 1811 kuvernööri Marcos de Noronha e Brito antoi luvan brittiläiselle hautausmaalle Barran rinteeseen, ja sen yhteyteen tuli kappeli hautajaisia varten. Itsenäistymisen jälkeen pappi Edward Parker osti tontin Campo Granden aukion läheltä, ja Pyhän Yrjön seura avasi kappelin lokakuussa 1853. Britit kutsuivat sitä nimellä Christ Chu…
+
+### 26.1
+KYSYMYS: Montako Troodosin kirkkoa on maailmanperintöluettelossa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+### 26.2
+KYSYMYS: Miksi kirkoilla on jyrkät puukatot?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asinoun kirkko (kulttuuri)
+Tietoruudun teksti: Troodosin maalatut kirkot ovat kymmenen bysanttilaista kirkkoa ja luostaria, joiden seinät ovat täynnä bysanttilaista ja sen jälkeistä seinämaalausta. Unesco liitti niistä yhdeksän luetteloonsa 1985 ja kymmenennen, Palaichori Oreinisin kirkon, vasta 2001. Nikitarin kylässä seisova Panagia Phorviotissa eli Asinoun kirkko on 1100-luvulta. Joukossa on myös Kyproksen vanhin säilynyt luostarikirkko, 1000-luvun Agios Nikolaos tis Stegis Kakopetriassa, ja Moutoullasin 1200-luvun kappeli, jonka jyrkkä puukatto on lajinsa varhaisin esimerkki.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+- [Salvador — kohdekartta / Kohdekartta: Anglikaanisen kappelin paikka] 1853 Anglikaanisuus tuli Brasiliaan Portugalin hovin mukana. Portugali ja Britannia sopivat 1810 kauppa- ja merenkulkusopimuksessa, että anglikaanisia kappeleita saa rakentaa kahdella ehdolla: ne eivät saa näyttää temppeleiltä eivätkä käännyttää brasilialaisia. Salvadorin pappisvirka perustettiin 1815, ja jumalanpalvelukset pidettiin aluksi yksityiskodeissa. Vuonna 1811 kuvernööri Marcos de Noronha e Brito antoi luvan brittiläiselle hautausmaalle Barran rinteeseen, ja sen yhteyteen tuli kappeli hautajaisia varten. Itsenäistymisen jälkeen pappi Edward Parker osti tontin Campo Granden aukion läheltä, ja Pyhän Yrjön seura avasi kappelin lokakuussa 1853. Britit kutsuivat sitä nimellä Christ Chu…
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:kykkoksenluostari) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Pashupatinath] perustettu 400-luvulla, nykyinen temppeli 1800-luvulta Pashupatinath on Kathmandun vanhin hindutemppeli ja omistettu Shivalle olentojen herrana. Se on Bagmatin rannalla kaupungin itäpuolella ja peräisin 400-luvulta, mutta alkuperäisestä rakennuksesta ei ole juuri mitään jäljellä: suuri osa siitä tuhoutui 1300-luvulla, ja nykyinen temppeli on 1800-luvulta. Härän kuva ja musta nelipäinen Pashupatin hahmo ovat ainakin kolmesataa vuotta vanhoja. Rakennus on pagodityyliä: kuutiomaisen rungon päällä on kaksi kattokertaa, jotka on katettu kuparilla ja kullalla, ja niitä kannattavat veistetyt puiset kattotuet eli tundalit. Temppelin papit ovat olleet Etelä-Intian Karnatakasta kotoisin olevia brahmi…
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+
+### 27.1
+KYSYMYS: Miksi alkuperäisestä luostarista ei ole jäljellä mitään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Pashupatinath] perustettu 400-luvulla, nykyinen temppeli 1800-luvulta Pashupatinath on Kathmandun vanhin hindutemppeli ja omistettu Shivalle olentojen herrana. Se on Bagmatin rannalla kaupungin itäpuolella ja peräisin 400-luvulta, mutta alkuperäisestä rakennuksesta ei ole juuri mitään jäljellä: suuri osa siitä tuhoutui 1300-luvulla, ja nykyinen temppeli on 1800-luvulta. Härän kuva ja musta nelipäinen Pashupatin hahmo ovat ainakin kolmesataa vuotta vanhoja. Rakennus on pagodityyliä: kuutiomaisen rungon päällä on kaksi kattokertaa, jotka on katettu kuparilla ja kullalla, ja niitä kannattavat veistetyt puiset kattotuet eli tundalit. Temppelin papit ovat olleet Etelä-Intian Karnatakasta kotoisin olevia brahmi…
+- [Lima — kohdekartta / Kohdekartta: San Franciscon luostari] 1672 Franciskaanit saivat tonttinsa jo silloin, kun Liman ruutukaava jaettiin 1535, mutta ensimmäinen kappeli jäätyi autioksi, kun laaksosta loppuivat munkit. Vasta 1546 saapunut Francisco de Santa Ana sai maan takaisin ja rakensi vaatimattoman kirkon. Seuraavan vuosisadan aikana luostarista kasvoi taideaarre — ja 4. helmikuuta 1655 maanjäristys kaatoi sen kokonaan ja vei mennessään koko vuosisadan työn. Uuden luostarin piirsi portugalilainen arkkitehti Constantino de Vasconcellos, ja rakennusmestarina toimi limalainen Manuel Escobar. Peruskiven laski varakuningas, Alba de Listen kreivi, 8. toukokuuta 1657, ja valmis talo vihittiin suurin menoin 3. lokakuuta 1672; sisätöitä jatkettiin vuote…
+
+### 27.2
+KYSYMYS: Kuka perusti luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kykkoksen luostari (kulttuuri)
+Tietoruudun teksti: Kykkoksen luostari on Kyproksen varakkaimpia, ja se seisoo 1 318 metrin korkeudessa Troodosin luoteisrinteellä, kaksikymmentä kilometriä Pedoulasista länteen. Bysantin keisari Aleksios I Komnenos perusti sen 1000-luvun lopulla. Alkuperäisestä rakennuksesta ei ole jäljellä mitään: luostari on palanut maan tasalle monta kertaa. Saaren ensimmäinen presidentti, arkkipiispa Makarios III, aloitti kirkollisen uransa täällä munkkina vuonna 1926.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Ruoka: Pastel de nata on luostarin resepti] Jerónimosin luostarin munkit paistoivat lehtitaikinakuppeja, joissa on munakermatäyte. Kun luostarit suljettiin 1834, resepti päätyi viereiselle sokerikaupalle, ja Pastéis de Belém on myynyt leivoksia vuodesta 1837. Kahvila kertoo paistavansa niitä yli 20 000 päivässä. Vain siellä ne saa nimittää pastéis de belém — muualla ne ovat pastel de nata.
+- [Bergen — kohdekartta / Kohdekartta: Munkelivin luostari] n. 1110 Kuningas Øystein I perusti benediktiiniluostarin noin vuonna 1110 ja omisti sen arkkienkeli Mikaelille. Paikka valittiin tarkoituksella: Nordnesin korkein kohta hallitsi juuri perustettua kaupunkia, ja luostarin oli määrä vauhdittaa sen kasvua. Munkeliv oli Norjan vanhimpia, rikkaimpia ja parhaiten dokumentoituja luostareita. Maan päällä siitä ei näy nykyään mitään. Ensimmäiset vuosisadat olivat vauraita, mutta 1300-luvun puolivälin musta surma käänsi suunnan. Vuonna 1393 rakennukset kärsivät pahoin, kun luostarin kimppuun kävivät vitaaliveljiksi kutsutut merirosvot. 1420-luvulla sen otti paavin luvalla haltuunsa birgittalaisjärjestö, ja siitä tuli kaksoisluostari, jossa asui sekä m…
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:kapgreco) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Meri ja satama: Satama siirtyi niemen toiselle puolelle] Vanha satama oli kraatterin puolella, mutta se mataloitui liettymällä, ja kaupan painopiste siirtyi niemen toiselle puolelle Steamer Pointiin. Sinne tuli hiiliasema, ja siellä matkustajat nousivat maihin. Matka Suezin kanavalle, Bombayhin ja Sansibariin on Adenista suunnilleen yhtä pitkä, ja kaupunki itse on vain kuuden metrin korkeudella merenpinnasta. 1950-luvulla satama oli maailman toiseksi vilkkain polttoainetäydennyspaikka, ja edellä oli vain New York. Raha vaihtui sataman mukana: kun Intia itsenäistyi vuonna 1947, Adenissa käytetyt Intian rupiat korvattiin Itä-Afrikan shillingeillä.
+- [Dakar — kaupunkilehti / Dakar: Muuri niemen poikki] Kun Cayorin marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina kukistettiin, ja lebut vetäytyivät niemelleen. He rakensivat lateriittilohkareista sarjan puolustusmuureja, joista pisin ulottui koko niemen poikki Yoffista Hanniin, ja torjuivat hyökkäyksen. Voiton jälkeen syntyi itsenäinen valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri tavoin: kaupungin oma artikkeli vuoteen 1795, lebu-kansan artikkeli vuosiin 1776–1812. Senegalin valtio tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi auktoriteetiksi.
+
+### 28.1
+KYSYMYS: Mikä oli niemen antiikinaikainen nimi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Meri ja satama: Satama siirtyi niemen toiselle puolelle] Vanha satama oli kraatterin puolella, mutta se mataloitui liettymällä, ja kaupan painopiste siirtyi niemen toiselle puolelle Steamer Pointiin. Sinne tuli hiiliasema, ja siellä matkustajat nousivat maihin. Matka Suezin kanavalle, Bombayhin ja Sansibariin on Adenista suunnilleen yhtä pitkä, ja kaupunki itse on vain kuuden metrin korkeudella merenpinnasta. 1950-luvulla satama oli maailman toiseksi vilkkain polttoainetäydennyspaikka, ja edellä oli vain New York. Raha vaihtui sataman mukana: kun Intia itsenäistyi vuonna 1947, Adenissa käytetyt Intian rupiat korvattiin Itä-Afrikan shillingeillä.
+- [Dakar — kaupunkilehti / Dakar: Muuri niemen poikki] Kun Cayorin marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut liittyivät mukaan. Kapina kukistettiin, ja lebut vetäytyivät niemelleen. He rakensivat lateriittilohkareista sarjan puolustusmuureja, joista pisin ulottui koko niemen poikki Yoffista Hanniin, ja torjuivat hyökkäyksen. Voiton jälkeen syntyi itsenäinen valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi. Lähteet ajoittavat tapahtumat eri tavoin: kaupungin oma artikkeli vuoteen 1795, lebu-kansan artikkeli vuosiin 1776–1812. Senegalin valtio tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi auktoriteetiksi.
+
+### 28.2
+KYSYMYS: Miten merenalaiset luolat syntyvät kalkkikiveen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kap Greco (luonto)
+Tietoruudun teksti: Kap Greco on niemeke Kyproksen kaakkoisosassa, Famagustanlahden eteläpäässä Ayia Napan ja Protarasin välissä. Se on Kyproksen tasavallan hallitsemien alueiden itäisin kohta ja käytännössä myös Euroopan unionin itäisin kärki, kun syrjäisimpiä alueita ei lasketa. Antiikissa niemi tunnettiin nimellä Pedalion, ja Strabonin mukaan sen yllä kohoava puolisuunnikkaan muotoinen kukkula oli pyhitetty Afroditelle. Kalkkikivijyrkänteisiin on kulunut merenalaisia luolia, joita kutsutaan keijuluoliksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Exmouth — kaupunkilehti / Exmouth: Muinainen riutta nousi vuoriksi] Exmouthin niemimaan selkärankana kohoava Cape Range ei ole tavallinen kukkulajono, vaan miljoonien vuosien takainen koralliriutta, joka on työntynyt ilmaan. Kalkkikivi syntyi meren pohjalle kertyneistä koralli- ja simpukkajäänteistä, ja kun Australian ja Aasian mannerlaatat alkoivat myöhäisellä mioseenikaudella puristua toisiaan vasten, alue kohosi hitaasti merestä kukkuloiksi. Vuosimiljoonien sadevedet ovat sittemmin uurtaneet kalkkikiveen syviä rotkoja, joiden seinämistä voi yhä löytää muinaisten riutaneliöiden fossiileja. Cape Range onkin Australian ainoa esimerkki näin vuorenpoimutuksen nostamasta karstialueesta.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:apostolosandreas) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Aden: Moskeija, jonka perustaja toi kahvin] Craterissa Aidrus-kadun varrella on Adenin tunnetuin moskeija. Se on nimetty Abu Bakr al-Aydarusin (1447-1508) mukaan. Hän syntyi Tarimissa Hadramautissa, tuli nuorena Adeniin, valvoi kaupungin moskeijan ja sen sufikoulun rakentamista ja jäi asumaan kaupunkiin; kuolemansa jälkeen häntä on pidetty Adenin walina eli suojeluspyhänä. Kolme arabiankielistä lähdettä liittää hänen nimensä kahviin: kertomuksen mukaan hän innostui kahvipensaan marjojen vaikutuksesta vaellusmatkoillaan ja toi tavan Hadramautiin. Moskeija rakennettiin 1400-luvun lopulla tai 1500-luvun alussa, ja nykyinen rakennus on vuoden 1859 jälkeiseltä ajalta.
+- [Iguazú — kaupunkilehti / Iguazú: Käärmejumala ja pakenevat rakastavaiset] Guaraníperäisen kertomuksen mukaan joen käärmejumala M'Boi oli valinnut nuoren Naipín omakseen. Naipí rakasti kuitenkin soturi Tarobáa, ja pari pakeni yhdessä kanootilla jokea pitkin. Raivostunut M'Boi kiemursi valtavalla ruumiillaan joen pohjaa vasten ja repäisi maan auki pakenijoiden edestä: syntyi kuilu, johon kanootti ja rakastavaiset putosivat. Tarinan mukaan Naipí muuttui kuilusta nousevaksi kiveksi ja Tarobá partaalle kasvavaksi palmuksi, joka katsoo ikuisesti kohti Naipiä. Legendasta tunnetaan useita toisiinsa kietoutuvia versioita eri alkuperäiskansojen keskuudessa, mutta ydin pysyy samana: putoukset syntyivät rakkaudesta ja raivosta.
+
+### 29.1
+KYSYMYS: Mistä luostarin lähde kertomuksen mukaan syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aden — kaupunkilehti / Aden: Moskeija, jonka perustaja toi kahvin] Craterissa Aidrus-kadun varrella on Adenin tunnetuin moskeija. Se on nimetty Abu Bakr al-Aydarusin (1447-1508) mukaan. Hän syntyi Tarimissa Hadramautissa, tuli nuorena Adeniin, valvoi kaupungin moskeijan ja sen sufikoulun rakentamista ja jäi asumaan kaupunkiin; kuolemansa jälkeen häntä on pidetty Adenin walina eli suojeluspyhänä. Kolme arabiankielistä lähdettä liittää hänen nimensä kahviin: kertomuksen mukaan hän innostui kahvipensaan marjojen vaikutuksesta vaellusmatkoillaan ja toi tavan Hadramautiin. Moskeija rakennettiin 1400-luvun lopulla tai 1500-luvun alussa, ja nykyinen rakennus on vuoden 1859 jälkeiseltä ajalta.
+- [Iguazú — kaupunkilehti / Iguazú: Käärmejumala ja pakenevat rakastavaiset] Guaraníperäisen kertomuksen mukaan joen käärmejumala M'Boi oli valinnut nuoren Naipín omakseen. Naipí rakasti kuitenkin soturi Tarobáa, ja pari pakeni yhdessä kanootilla jokea pitkin. Raivostunut M'Boi kiemursi valtavalla ruumiillaan joen pohjaa vasten ja repäisi maan auki pakenijoiden edestä: syntyi kuilu, johon kanootti ja rakastavaiset putosivat. Tarinan mukaan Naipí muuttui kuilusta nousevaksi kiveksi ja Tarobá partaalle kasvavaksi palmuksi, joka katsoo ikuisesti kohti Naipiä. Legendasta tunnetaan useita toisiinsa kietoutuvia versioita eri alkuperäiskansojen keskuudessa, mutta ydin pysyy samana: putoukset syntyivät rakkaudesta ja raivosta.
+
+### 29.2
+KYSYMYS: Kuka neuvotteli täällä antautumisestaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Apostolos Andreas (kulttuuri)
+Tietoruudun teksti: Apostolos Andreaksen luostari seisoo Karpasin niemellä aivan Kyproksen koillisimman kärjen eteläpuolella. Se on omistettu apostoli Andreaalle ja on Kyproksen ortodoksiselle kirkolle tärkeä paikka; sitä on kutsuttu Kyproksen Lourdesiksi, eikä sitä ole hoitanut järjestäytynyt munkkiyhteisö vaan vaihtuva joukko vapaaehtoisia pappeja ja maallikoita. Perimätiedon mukaan Andreaan alus ajautui matkalla Pyhälle maalle pois kurssilta ja osui täällä kallioihin; rantauduttuaan Andreas löi kalliota sauvallaan, ja siitä puhkesi lähde, jonka vesi palautti näön aluksen toisesta silmästään sokealle kapteenille. Siitä paikasta tuli pyhiinvaelluskohde. 1100-luvulla tässä oli linnoitettu luostari, ja sieltä käsin Isaakios Komnenos neuvotteli antautumisestaan Rikhard Leijonamielelle. Nykyinen pääkirkko on 1700-luvulta ja päärakennukset sata vuotta nuorempia. Sekä kreikkalais- että turkkilaiskyproslaiset pi…
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI

@@ -1,0 +1,191 @@
+================ KOHTA 11 (kohde:hahmotelma-lapithos) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lapithos (historia)
+Tietoruudun teksti: Lapithos eli Lapethos on kaupunki Kyproksen pohjoisrannikolla, noin kolme kilometriä muinaisesta Lapethoksen kaupunkivaltiosta Lambousasta pohjoiseen. Straboni kertoo laakonialaisten ja Praxandroksen perustaneen sen, mutta löydöt ajoittavat asutuksen jo vuoteen 3000 eaa.; se oli yksi Kyproksen yhdeksästä kaupunkivaltiosta, ja sen kuningas Peisistratos auttoi laivastoineen Aleksanteri Suurta Tyroksen valtauksessa. Rooman aikana kaupungissa oli yli 10 000 asukasta, ja se oli kuparin jalostuksen ja etenkin saviastioiden keskus; se sai nimen Lambousa eli loistava, ehkä rikkautensa, kauneutensa tai majakkansa vuoksi. Kun Bysantti otti saaren takaisin arabeilta vuonna 965, asukkaat siirsivät kaupungin kauemmas merestä Pentadaktylos-vuoren juurelle, ja Lusignanien aikana Lapithos oli väkirikkaampi kuin Limassol, Famagusta tai Pafos. Osmanien aikana, vuonna 1780, osa Lapithoksesta erotettiin uu…
+
+### 11.1
+KYSYMYS: Mitä nimi Lambousa tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lapithos (historia)
+Tietoruudun teksti: Lapithos eli Lapethos on kaupunki Kyproksen pohjoisrannikolla, noin kolme kilometriä muinaisesta Lapethoksen kaupunkivaltiosta Lambousasta pohjoiseen. Straboni kertoo laakonialaisten ja Praxandroksen perustaneen sen, mutta löydöt ajoittavat asutuksen jo vuoteen 3000 eaa.; se oli yksi Kyproksen yhdeksästä kaupunkivaltiosta, ja sen kuningas Peisistratos auttoi laivastoineen Aleksanteri Suurta Tyroksen valtauksessa. Rooman aikana kaupungissa oli yli 10 000 asukasta, ja se oli kuparin jalostuksen ja etenkin saviastioiden keskus; se sai nimen Lambousa eli loistava, ehkä rikkautensa, kauneutensa tai majakkansa vuoksi. Kun Bysantti otti saaren takaisin arabeilta vuonna 965, asukkaat siirsivät kaupungin kauemmas merestä Pentadaktylos-vuoren juurelle, ja Lusignanien aikana Lapithos oli väkirikkaampi kuin Limassol, Famagusta tai Pafos. Osmanien aikana, vuonna 1780, osa Lapithoksesta erotettiin uu…
+
+### 11.2
+KYSYMYS: Minä vuonna osa Lapithoksesta erotettiin Karavaksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lapithos (historia)
+Tietoruudun teksti: Lapithos eli Lapethos on kaupunki Kyproksen pohjoisrannikolla, noin kolme kilometriä muinaisesta Lapethoksen kaupunkivaltiosta Lambousasta pohjoiseen. Straboni kertoo laakonialaisten ja Praxandroksen perustaneen sen, mutta löydöt ajoittavat asutuksen jo vuoteen 3000 eaa.; se oli yksi Kyproksen yhdeksästä kaupunkivaltiosta, ja sen kuningas Peisistratos auttoi laivastoineen Aleksanteri Suurta Tyroksen valtauksessa. Rooman aikana kaupungissa oli yli 10 000 asukasta, ja se oli kuparin jalostuksen ja etenkin saviastioiden keskus; se sai nimen Lambousa eli loistava, ehkä rikkautensa, kauneutensa tai majakkansa vuoksi. Kun Bysantti otti saaren takaisin arabeilta vuonna 965, asukkaat siirsivät kaupungin kauemmas merestä Pentadaktylos-vuoren juurelle, ja Lusignanien aikana Lapithos oli väkirikkaampi kuin Limassol, Famagusta tai Pafos. Osmanien aikana, vuonna 1780, osa Lapithoksesta erotettiin uu…
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hahmotelma-morphou) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Morphou (ruoka)
+Tietoruudun teksti: Morphou on kaupunki Kyproksen luoteisosassa, kuuluisa appelsiineistaan, omenoistaan, vihanneksistaan, greipeistään ja meloneistaan; suuri osa sitrushedelmistä viedään ulkomaille ja loput jalostetaan mehuksi ja säilykkeiksi. Kaupungin kerrotaan perustaneen spartalaisten, jotka toivat mukanaan Afrodite-palvonnan; keskiajalla sitä kutsuttiin Morphoksi ja Theomorphoksi. 1300- ja 1400-luvuilla Morphoun alueella oli kuninkaallisia kyliä, joissa kuninkaat kannustivat kannattavaan sokeriviljelyyn, ja alue tuotti yli puolet Kyproksen sitrushedelmistä. Osmanien aikana 1500–1600-luvuilla Morphou oli tunnettu pellavan viennistä. Kaupungissa järjestetään vuosittain kaksiviikkoinen appelsiinifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+- [Vanuatu — maalehti / Ruoka: Kolmesataaseitsemänkymmentäneljätuhatta tonnia kookosta] 2018 — Noin 80 prosenttia väestöstä elää maasta, omavaraisviljelystä pieniin tiloihin. Kopra eli kuivattu kookosliha on selvästi tärkein vientikasvi ja kattaa yli kolmanneksen viennistä; perässä tulevat puutavara, naudanliha ja kaakao, ja kavan juuriuutteesta on tullut oma vientiartikkelinsa. Kopra, kaakao, kava ja naudanliha ovat yhdessä yli 60 prosenttia viennin arvosta. Vuonna 2018 maa tuotti 374 000 tonnia kookosta, 53 000 tonnia juureksia ja mukuloita, 16 000 tonnia banaania ja 13 000 tonnia vihanneksia. Ruokapula on harvinaista, koska melkein jokaisella perheellä on oma puutarha.
+
+### 12.1
+KYSYMYS: Kuka perusti kaupungin tarinan mukaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Morphou (ruoka)
+Tietoruudun teksti: Morphou on kaupunki Kyproksen luoteisosassa, kuuluisa appelsiineistaan, omenoistaan, vihanneksistaan, greipeistään ja meloneistaan; suuri osa sitrushedelmistä viedään ulkomaille ja loput jalostetaan mehuksi ja säilykkeiksi. Kaupungin kerrotaan perustaneen spartalaisten, jotka toivat mukanaan Afrodite-palvonnan; keskiajalla sitä kutsuttiin Morphoksi ja Theomorphoksi. 1300- ja 1400-luvuilla Morphoun alueella oli kuninkaallisia kyliä, joissa kuninkaat kannustivat kannattavaan sokeriviljelyyn, ja alue tuotti yli puolet Kyproksen sitrushedelmistä. Osmanien aikana 1500–1600-luvuilla Morphou oli tunnettu pellavan viennistä. Kaupungissa järjestetään vuosittain kaksiviikkoinen appelsiinifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Rautasusi näytti unessa kaupungin paikan] 1323 — Tarinan mukaan suuriruhtinas Gediminas nukahti metsästysretken jälkeen Vilnian ja Neriksen jokien yhtymäkohdassa ja näki unta rautaisesta sudesta, joka ulvoi kukkulalla sadan suden äänellä. Ylipappi Lizdeika tulkitsi unen: kukkulalle nousisi pääkaupunki, jonka maine kaikuisi yhtä kauas kuin suden ulvonta. Gediminas perusti kaupungin paikalle perinteisesti vuonna 1323 ja kutsui sinne kauppiaita ja käsityöläisiä ympäri Eurooppaa. Tuomiokirkkoaukiolla seisova patsas muistuttaa perustajasta, ja rautasudesta on tullut yksi Liettuan tunnetuimmista tunnuksista.
+
+### 12.2
+KYSYMYS: Minkä tuotteen viennistä Morphou oli tunnettu osmanien aikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Morphou (ruoka)
+Tietoruudun teksti: Morphou on kaupunki Kyproksen luoteisosassa, kuuluisa appelsiineistaan, omenoistaan, vihanneksistaan, greipeistään ja meloneistaan; suuri osa sitrushedelmistä viedään ulkomaille ja loput jalostetaan mehuksi ja säilykkeiksi. Kaupungin kerrotaan perustaneen spartalaisten, jotka toivat mukanaan Afrodite-palvonnan; keskiajalla sitä kutsuttiin Morphoksi ja Theomorphoksi. 1300- ja 1400-luvuilla Morphoun alueella oli kuninkaallisia kyliä, joissa kuninkaat kannustivat kannattavaan sokeriviljelyyn, ja alue tuotti yli puolet Kyproksen sitrushedelmistä. Osmanien aikana 1500–1600-luvuilla Morphou oli tunnettu pellavan viennistä. Kaupungissa järjestetään vuosittain kaksiviikkoinen appelsiinifestivaali.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vanuatu — maalehti / Ruoka: Kolmesataaseitsemänkymmentäneljätuhatta tonnia kookosta] 2018 — Noin 80 prosenttia väestöstä elää maasta, omavaraisviljelystä pieniin tiloihin. Kopra eli kuivattu kookosliha on selvästi tärkein vientikasvi ja kattaa yli kolmanneksen viennistä; perässä tulevat puutavara, naudanliha ja kaakao, ja kavan juuriuutteesta on tullut oma vientiartikkelinsa. Kopra, kaakao, kava ja naudanliha ovat yhdessä yli 60 prosenttia viennin arvosta. Vuonna 2018 maa tuotti 374 000 tonnia kookosta, 53 000 tonnia juureksia ja mukuloita, 16 000 tonnia banaania ja 13 000 tonnia vihanneksia. Ruokapula on harvinaista, koska melkein jokaisella perheellä on oma puutarha.
+- [Itä-Timor — maalehti / Ruoka: Kahvi, joka kasvoi ilman lannoitetta] Kahvi on maan tärkein vientikasvi: vuosina 2013–2019 sen osuus kaikesta muusta kuin fossiilisen polttoaineen viennistä oli 90 prosenttia. Pensaita on kasvatettu saarella satoja vuosia, ja 1800-luvun lopulla kahvi oli jo puolet siirtomaan kaupasta. Tiloja on noin 46 000, ja ne työllistävät viidesosan maan väestöstä; 46 prosenttia kotitalouksista saa tulonsa yksinomaan kahvista. Tarhoja on hoidettu vähän eikä niissä ole käytetty torjunta-aineita tai lannoitteita, mikä on osoittautunut luomukahvin ostajille valtiksi. Maassa kahvia sanotaan maatalouden kultaiseksi prinssiksi.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hahmotelma-polis) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polis (kulttuuri)
+Tietoruudun teksti: Polis, jonka koko nimi on Polis Chrysochous, on kaupunki Kyproksen luoteiskulmassa Chrysochoun lahden keskellä Akamaksen luonnonpuiston reunalla; sen kalastussatama on Latchi. Kreikan sana polis tarkoittaa kaupunkia tai kaupunkivaltiota, ja koko nimi tulee siitä, että paikka on alueen hallintokeskus; Chrysochou taas tulee kreikan sanasta khryso eli kulta, mutta mielipiteet ovat jakautuneet siitä, tarkoittaako se ensimmäisen asukkaan kultaseppää vai vaurautta läheisten kuparikaivosten ansiosta. Osmanien ajasta lähtien Polis oli sekakaupunki, jossa oli sekä kreikkalaisia että turkkilaisia yhteisöjä: vuoden 1831 väestölaskennassa, jossa laskettiin vain miehet, asukkaita oli 150 ja enemmistö oli turkkilaisia, ja vuoden 1891 laskennassa asukkaita oli 476 (258 kreikkalaista ja 218 turkkilaista). Lähellä ovat Aphroditen kylpypaikka ja keskiaikaisen georgialaisen ortodoksisen Gialian luostarin …
+
+### 13.1
+KYSYMYS: Mitä kreikan sana polis tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polis (kulttuuri)
+Tietoruudun teksti: Polis, jonka koko nimi on Polis Chrysochous, on kaupunki Kyproksen luoteiskulmassa Chrysochoun lahden keskellä Akamaksen luonnonpuiston reunalla; sen kalastussatama on Latchi. Kreikan sana polis tarkoittaa kaupunkia tai kaupunkivaltiota, ja koko nimi tulee siitä, että paikka on alueen hallintokeskus; Chrysochou taas tulee kreikan sanasta khryso eli kulta, mutta mielipiteet ovat jakautuneet siitä, tarkoittaako se ensimmäisen asukkaan kultaseppää vai vaurautta läheisten kuparikaivosten ansiosta. Osmanien ajasta lähtien Polis oli sekakaupunki, jossa oli sekä kreikkalaisia että turkkilaisia yhteisöjä: vuoden 1831 väestölaskennassa, jossa laskettiin vain miehet, asukkaita oli 150 ja enemmistö oli turkkilaisia, ja vuoden 1891 laskennassa asukkaita oli 476 (258 kreikkalaista ja 218 turkkilaista). Lähellä ovat Aphroditen kylpypaikka ja keskiaikaisen georgialaisen ortodoksisen Gialian luostarin …
+
+### 13.2
+KYSYMYS: Minkä lahden keskellä Polis sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Polis (kulttuuri)
+Tietoruudun teksti: Polis, jonka koko nimi on Polis Chrysochous, on kaupunki Kyproksen luoteiskulmassa Chrysochoun lahden keskellä Akamaksen luonnonpuiston reunalla; sen kalastussatama on Latchi. Kreikan sana polis tarkoittaa kaupunkia tai kaupunkivaltiota, ja koko nimi tulee siitä, että paikka on alueen hallintokeskus; Chrysochou taas tulee kreikan sanasta khryso eli kulta, mutta mielipiteet ovat jakautuneet siitä, tarkoittaako se ensimmäisen asukkaan kultaseppää vai vaurautta läheisten kuparikaivosten ansiosta. Osmanien ajasta lähtien Polis oli sekakaupunki, jossa oli sekä kreikkalaisia että turkkilaisia yhteisöjä: vuoden 1831 väestölaskennassa, jossa laskettiin vain miehet, asukkaita oli 150 ja enemmistö oli turkkilaisia, ja vuoden 1891 laskennassa asukkaita oli 476 (258 kreikkalaista ja 218 turkkilaista). Lähellä ovat Aphroditen kylpypaikka ja keskiaikaisen georgialaisen ortodoksisen Gialian luostarin …
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-kyrenia) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyrenia (historia)
+Tietoruudun teksti: Kyrenia on Kyproksen pohjoisrannikon kaupunki, joka on tunnettu historiallisesta satamastaan ja linnastaan. Kreikkalaisen myytin mukaan akhaialaiset Kepheus ja Praxandros perustivat sen Troijan sodan jälkeen ja nimesivät sen kotikaupunkinsa Kyreneian mukaan; roomalaiset laskivat linnan perustukset 1. vuosisadalla, ja kaupungin merkitys kasvoi 800-luvun jälkeen linnan tarjoaman turvan ansiosta. Lusignanien vallan aikana kaupunki ei koskaan antautunut, ja venetsialaiset laajensivat linnaa vuonna 1540 nykyiseen asuunsa paksuine muureineen ja tykkiaukkoineen; kaupunki antautui osmaneille 1570-luvun alussa. Linnan muurien sisällä on 1100-luvun kappeli, jossa on uudelleenkäytettyjä myöhäisroomalaisia pylväänpäitä, sekä haaksirikkomuseo. Vuonna 1831 kaupungin väestö oli jakautunut lähes tasan muslimien ja kristittyjen kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+
+### 14.1
+KYSYMYS: Minä vuonna venetsialaiset laajensivat Kyrenian linnaa nykyiseen asuunsa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyrenia (historia)
+Tietoruudun teksti: Kyrenia on Kyproksen pohjoisrannikon kaupunki, joka on tunnettu historiallisesta satamastaan ja linnastaan. Kreikkalaisen myytin mukaan akhaialaiset Kepheus ja Praxandros perustivat sen Troijan sodan jälkeen ja nimesivät sen kotikaupunkinsa Kyreneian mukaan; roomalaiset laskivat linnan perustukset 1. vuosisadalla, ja kaupungin merkitys kasvoi 800-luvun jälkeen linnan tarjoaman turvan ansiosta. Lusignanien vallan aikana kaupunki ei koskaan antautunut, ja venetsialaiset laajensivat linnaa vuonna 1540 nykyiseen asuunsa paksuine muureineen ja tykkiaukkoineen; kaupunki antautui osmaneille 1570-luvun alussa. Linnan muurien sisällä on 1100-luvun kappeli, jossa on uudelleenkäytettyjä myöhäisroomalaisia pylväänpäitä, sekä haaksirikkomuseo. Vuonna 1831 kaupungin väestö oli jakautunut lähes tasan muslimien ja kristittyjen kesken.
+
+### 14.2
+KYSYMYS: Kenelle kaupunki antautui 1570-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kyrenia (historia)
+Tietoruudun teksti: Kyrenia on Kyproksen pohjoisrannikon kaupunki, joka on tunnettu historiallisesta satamastaan ja linnastaan. Kreikkalaisen myytin mukaan akhaialaiset Kepheus ja Praxandros perustivat sen Troijan sodan jälkeen ja nimesivät sen kotikaupunkinsa Kyreneian mukaan; roomalaiset laskivat linnan perustukset 1. vuosisadalla, ja kaupungin merkitys kasvoi 800-luvun jälkeen linnan tarjoaman turvan ansiosta. Lusignanien vallan aikana kaupunki ei koskaan antautunut, ja venetsialaiset laajensivat linnaa vuonna 1540 nykyiseen asuunsa paksuine muureineen ja tykkiaukkoineen; kaupunki antautui osmaneille 1570-luvun alussa. Linnan muurien sisällä on 1100-luvun kappeli, jossa on uudelleenkäytettyjä myöhäisroomalaisia pylväänpäitä, sekä haaksirikkomuseo. Vuonna 1831 kaupungin väestö oli jakautunut lähes tasan muslimien ja kristittyjen kesken.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-famagusta) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+### 15.1
+KYSYMYS: Minkä kaupungin seuraajaksi Famagusta perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+### 15.2
+KYSYMYS: Miksi Famagustaa alettiin kutsua kirkkojen kaupungiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Famagusta (kauppa)
+Tietoruudun teksti: Famagusta on kaupunki Kyproksen itärannikolla, saaren syvimmän sataman äärellä; se perustettiin noin vuonna 274 eaa. nimellä Arsinoe sen jälkeen, kun maanjäristys oli tuhonnut läheisen Salamiin kaupungin. Lusignan-suvun vallan aikana 1200-luvulta lähtien kaupunki vaurastui kauppakeskukseksi, ja etenkin Akkon kukistumisen 1291 jälkeen sinne virranneet pakolaiskauppiaat rakennuttivat niin paljon kirkkoja, että Famagustaa alettiin kutsua kirkkojen kaupungiksi. Vuosina 1570–1571 kaupunki oli viimeinen Venetsian Kyproksen tukikohta, joka vastusti osmaneja: 13 kuukauden piirityksen jälkeen antautunut komendantti Marco Antonio Bragadin nyljettiin elävältä. Osmanien vallan alla latinalaiset karkotettiin ja kreikkalaiskyproslaiset joutuivat muuttamaan muurien ulkopuolelle 1570-luvulla, eivätkä Anatoliasta tuodut turkkilaisasukkaat täyttäneet autioitunutta kaupunkia; karkotetut kauppiaat asettuiv…
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
