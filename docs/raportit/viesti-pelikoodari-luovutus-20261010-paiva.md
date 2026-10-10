@@ -19,6 +19,9 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   peli-TP −0,8 dBTP → hiljennä ennen vientiä. Soundly-lähteet NAS soundly/eraiss1 (tyolista.tsv iss1-rivit, tehty.txt).
 
 ## 2. SEURAAVA ERÄ: workerin kuratoitu live (Raamattu ALLE 18 KURATOITU, PT 10.3x)
+- **TEHTY 10.55**: vaihe 1 PR #4337 (785b9c94e, wt/pelikoodari-kuratoitu-live), npm test 5432/0; PT ja NUI tietävät. NUI:n otsake
+  natiivi-ui/ikakysely-176 12d671ef1. Vaihe 2 = PULU_PUUTTUVA_KURATOITU=1 vasta vanhan TF-apin todennuksen jälkeen (PT päättää).
+  Tekemättä: Ilmoita ongelmasta -reitti (sovi muoto NUI:n kanssa) ja webin ikäkysely (UI-pohja → kysy PT:ltä).
 - NUI valmis: natiivi-ui/ikakysely-176 4c05f443e (Ikaraja.Kuratoitu/Aikuinen/Muuttui; kortti ennen 1. live-kysymystä; testikomento
   ui ikaraja kysy|aikuinen|kuratoitu|nollaa). Sovittu NUI:n kanssa: OTSAKE `x-matkakirja-aikuinen: 1|0` (1 = aikuinen), NUI lisää sen
   PuluChatin live-pyyntöihin itse.
@@ -30,7 +33,8 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Siirtoseppä local_b50bb32e-18e2-
   Testit npm test, PR → SHA PT:lle ja NUI:lle.
 
 ## 2b. TAIDEMUSEON ÄÄNET (PT 10.4x; tehdään ennen kuratoitua liveä, jos PT ei toisin sano)
-- 1) Salin äänimaisema Soundly Prosta: Soundly-haku `museo1` (6 hakua, NAS soundly/eramuseo1, loki _tyo/soundly-erat/ajo-museo1.log)
+- 1) **EPÄONNISTUI 10.5x** (väärät vanhat tiedostot → NAS eramuseo1/_vaara-osumat, museo1 pois tehty.txt:stä, ajo pysäytetty;
+  omistaja käytti näyttöä). Aja uudelleen joutilaalla koneella, tarkista nimet. Alkuperäinen ohje: Salin äänimaisema Soundly Prosta: Soundly-haku `museo1` (6 hakua, NAS soundly/eramuseo1, loki _tyo/soundly-erat/ajo-museo1.log)
   käynnistetty 10.4x. Tarkista nimet (sokea top-N), valitse, käsittele `proto-3d/_tyo/aanisivu-iss-20261010/kasittele.py`-mallilla
   (kopioi kansioon `_tyo/taidemuseo-aanet-20261010/`): peli −23 LUFS + ääniportti, kuuntelu −16 LUFS → rivi PT:lle (äänisivu).
 - 2) VALMIS: luentasuunnitelma `proto-3d/_tyo/taidemuseo-aanet-20261010/LUENTASUUNNITELMA.md` (A ≈9 000 merkkiä ≈600 kr, B 5 564 ≈370 kr)
