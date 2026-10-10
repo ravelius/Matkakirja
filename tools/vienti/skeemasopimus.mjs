@@ -43,6 +43,8 @@ export const VAATIMUKSET = {
   '1.59': ['manifest.asetukset'],
   // Karttaseppä 10.10.2026: pääkaupunkipisteet ja maiden perustiedot (kaikki maat -projekti).
   '1.60': ['kokoelma:paakaupungit', 'maat.perustiedot', 'maat.paakaupunki'],
+  // Karttaseppä 10.10.2026: pääkaupunkien havainnekuvat (PT).
+  '1.61': ['paakaupungit.kuvat'],
   '1.9': ['kokoelma:kuvakysymykset', 'kokoelma:lippumaat', 'kokoelma:pulmaaineisto', 'kokoelma:luennat',
     'kokoelma:livianpuhe', 'kokoelma:maat', 'manifest.offline'],
   '1.10': ['kokoelma:karttamerkit', 'kokoelma:karttavalot', 'kokoelma:maastonimet', 'kokoelma:maarajat',

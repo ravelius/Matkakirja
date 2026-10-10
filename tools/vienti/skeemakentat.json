@@ -38,10 +38,11 @@
   "1.57": "1e8ff1cd389b1f53",
   "1.58": "aee33ab3c2cba5aa",
   "1.59": "5e17497c5f6372ab",
-  "1.60": "4a8ca22618c14a91"
+  "1.60": "4a8ca22618c14a91",
+  "1.61": "ed66e0c3065b1cbe"
  },
  "uusin": {
-  "skeemaversio": "1.60",
+  "skeemaversio": "1.61",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -557,6 +558,7 @@
     "asukkaatLahde",
     "asukkaatVuosi",
     "id",
+    "kuvat",
     "kuvaus",
     "lat",
     "lauta",
