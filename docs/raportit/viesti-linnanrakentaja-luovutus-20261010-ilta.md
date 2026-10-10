@@ -15,7 +15,7 @@ Edellinen ja yksityiskohdat: `viesti-linnanrakentaja-luovutus-20261010-iltapaiva
 - **Olavinlinna v47b** kytketty (Siirtoseppä c3091ed82); odottaa vain Siirtosepän rannan kuvaparia. Vientihaarat v45f-ketjusta (v45h), EI mainista.
 - **Peking**: v3 malli kunnossa (LS2-pari 10.10.); tumma Jinshui = Karttasepän vesipinta, LS2 mittaa ja vie PT:lle/Karttasepälle. Ei avointa minulle.
 
-## JATKO 17.5x–19.x (nollauksen jälkeen, sama sessio)
+## JATKO 17.5x–18.5x (nollauksen jälkeen, sama sessio)
 - **NL-sali v2f VALMIS ja LS1 kytkenyt** (linssiseppa/museo-varjot-180 5f0cbd6a0): `_valmiit/taidemuseo-alankomaat-v2f`, kuva 83a0be2ce.
   Kehykset pois Cycles-varjostajista ja AO:sta → KEHYSVARJO (leivo_sali.py: seinän paikka-/normaalikartta EMIT-leivontana, pehmeä varjo
   kohdevalon suuntaan, KV_* vakiot). Ripustus yhteiseen `taidemuseo-runko/lahde/kehykset.py`; tarkistus teokset paikallaan `ripustus_kuva.py`.
