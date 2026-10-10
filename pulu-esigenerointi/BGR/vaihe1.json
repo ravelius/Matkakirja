@@ -2987,5 +2987,360 @@
    "Keitä traakialaiset olivat?",
    "Miksi Asklepios oli tärkeä antiikin Kreikassa?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ruse",
+  "kysymys": "Minä vuonna Rusen ja Varnan yhdistävä rautatie otettiin käyttöön?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Rusen ja Varnan välinen rautatie avattiin 1860-luvun puolivälissä, lähteiden mukaan vuonna 1866 tai 1867, eikä tarkasta vuodesta ole täyttä yksimielisyyttä. Rata yhdisti Tonavan jokisataman Mustanmeren rannikkoon, ja se rakennettiin Osmanien valtakunnan aikana. Sitä pidetään yleisesti yhtenä ensimmäisistä rautateistä Bulgarian alueella, ja se sai aikaan sen, että [[Varnan]] satamasta ja [[Tonavan]] varresta tuli yhteinen kauppareitti. Kyyhky olis silti ollut perillä nopeammin.",
+  "linkit": [
+   "Varnan",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Miksi Ruse oli tärkeä kaupunki Osmanien aikana?",
+   "Mikä silta yhdistää Rusen ja Romanian Giurgiun?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ruse",
+  "kysymys": "Mikä on Rusen lempinimi?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Rusen lempinimi on Pikku-Wien. Nimi viittaa kaupungin 1800- ja 1900-luvuilla rakennettuun uusbarokki- ja uusrokokoo-arkkitehtuuriin, joka muistuttaa Itävallan pääkaupungin [[Wienin]] tyyliä. Kaupunki kasvoi [[Tonavan]] kauppareitin varrella, ja rakennusten tyyli kertoo yhteyksistä Keski-Eurooppaan. Hyvät katot, sanoo kyyhky.",
+  "linkit": [
+   "Wienin",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Millaisia rakennuksia Rusen keskustassa on?",
+   "Miksi Tonava on ollut tärkeä kauppareitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ruse",
+  "kysymys": "Mikä silta yhdistää Rusen Romanian puolelle?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Rusen ja Romanian Giurgiun välillä kulkee Ystävyyden silta, joka ylittää [[Tonavan]] ja palvelee sekä rautatie- että maantieliikennettä. Silta on yksi Bulgarian ja [[Romanian]] välisen rajan tärkeistä ylityspaikoista, ja yhdessä jokisataman kanssa se selittää, miksi suuri osa Bulgarian ulkomaankaupasta kulkee Rusen kautta. Siltaa minä en tarvitse, siivet riittävät.",
+  "linkit": [
+   "Tonavan",
+   "Romanian"
+  ],
+  "jatkot": [
+   "Mikä kaupunki Giurgiu on?",
+   "Miten Tonava on vaikuttanut Bulgarian kauppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ruse",
+  "kysymys": "Mikä oli Tuna-vilajet?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. Tuna-vilajet eli Tonavan maakunta oli Osmanien valtakunnan hallintoalue, jonka keskuksena toimi Rusçuk eli nykyinen Ruse. Maakunta perustettiin 1800-luvun puolivälin tienoilla osana valtakunnan hallinnon uudistamista, ja se ulottui laajalti Tonavan eteläpuolisille alueille: Varnasta ja Tulceasta aina [[Sofiaan]] ja [[Nišiin]] asti. Hallintokeskuksena Rusçuk kasvoi yhdeksi valtakunnan tärkeimmistä Tonavan kaupungeista. Raja on sittemmin siirtynyt moneen kertaan, mut kyyhky lentää yli.",
+  "linkit": [
+   "Sofiaan",
+   "Nišiin"
+  ],
+  "jatkot": [
+   "Miksi Ruse sai painotalon ja rautatien jo 1860-luvulla?",
+   "Mikä Tonava on joenä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ruse",
+  "kysymys": "Mitä maita Tonava virtaa läpi matkallaan Mustallemerelle?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tän reitin minä olen lentänyt. Tonava saa alkunsa Saksassa ja virtaa [[Itävallan]], Slovakian, [[Unkarin]], Kroatian, Serbian, [[Romanian]], Bulgarian ja Moldovan kautta Ukrainaan, jossa se laskee Mustaanmereen. Bulgarian osuudella joki toimii pitkälti Romanian ja Bulgarian rajana, ja siksi Rusen kaltaiset kaupungit ovat olleet tärkeitä jokisatamia. Ja tämän kaiken minä kannoin päässäni.",
+  "linkit": [
+   "Itävallan",
+   "Unkarin",
+   "Romanian"
+  ],
+  "jatkot": [
+   "Mitkä kaupungit ovat Tonavan varrella?",
+   "Miten Tonavaa on käytetty kuljetusväylänä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-svishtov",
+  "kysymys": "Mitä Svishtovin vanha nimi Sveshtniy tarkoittaa?",
+  "uusi": false,
+  "vastaus": "Ai se. Nimi johtuu vanhasta bulgarian sanasta svesht, joka tarkoittaa kynttilää. Selitys liittyy siihen, että kaupungissa oli [[Tonavan]] rannalla majakka, joka ohjasi laivoja. Kaupungin länsimainen nimi Sistova tunnetaan vuoden 1791 rauhansopimuksesta, joka päätti [[Itävallan]] ja Osmanien valtakunnan välisen sodan. Majakka on kyllä lentäjälle kätevä.",
+  "linkit": [
+   "Tonavan",
+   "Itävallan"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Svishtov on tänään?",
+   "Mitä Sistovan rauhassa sovittiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-svishtov",
+  "kysymys": "Minä vuonna Sistovan rauha solmittiin?",
+  "uusi": false,
+  "vastaus": "No niin. Sistovan rauha solmittiin vuonna 1791. Sopimus päätti Habsburgien [[Itävallan]] ja Osmanien valtakunnan välisen sodan, ja sen mukaan Itävalta palautti valtaamiaan alueita, muun muassa [[Belgradin]] kaupungin, osmaneille. Rauhan nimi tulee Svishtovin vanhasta eurooppalaisesta nimestä Sistova, jossa neuvottelut käytiin. Hiljainen neuvottelukaupunki, tuumii kyyhky.",
+  "linkit": [
+   "Itävallan",
+   "Belgradin"
+  ],
+  "jatkot": [
+   "Miksi Itävalta ja Osmanien valtakunta kävivät sotaa?",
+   "Mikä oli Habsburgien monarkia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-svishtov",
+  "kysymys": "Mikä oli Novae roomalaisaikana?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Novae oli roomalainen sotilasleiri ja siirtokunta [[Tonavan]] rannalla, nykyisen Svishtovin kohdalla, osa Rooman valtakunnan pohjoista rajaa eli limesiä. Keisari Vespasianus lähetti paikalle [[legioona I Italican]] noin vuonna 70, ja leirin ympärille kasvoi siviiliasutus. Novae kuului niihin rajalinnoituksiin, joiden varassa Rooman valtakunta puolusti Tonavan linjaa. Sukuni on kantanut kirjeitä sellaisillekin leireille.",
+  "linkit": [
+   "Tonavan",
+   "legioona I Italican"
+  ],
+  "jatkot": [
+   "Mitä muita roomalaisia kohteita Tonavan varrella on?",
+   "Mikä oli legioona Rooman armeijassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-svishtov",
+  "kysymys": "Mitä Venäjän ja Turkin sota 1877–1878 muutti Bulgariassa?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Venäjän ja Osmanien valtakunnan välinen sota 1877–1878 johti Bulgarian vapautumiseen osmanivallasta. [[Venäjän]] armeija ylitti Tonavan Svishtovin kohdalla kesällä 1877, ja kaupungista tuli ensimmäinen vapautettu kaupunki. Sodan jälkeen [[Berliinin kongressissa]] vuonna 1878 muodostettiin autonominen Bulgarian ruhtinaskunta, joka oli Osmanien yliherruuden alainen. Täysi itsenäisyys tuli myöhemmin. Onpas siitä pitkä aika, eikä silti unohdu.",
+  "linkit": [
+   "Venäjän",
+   "Berliinin kongressissa"
+  ],
+  "jatkot": [
+   "Mikä oli Berliinin kongressi?",
+   "Miten Bulgaria sai itsenäisyyden?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-svishtov",
+  "kysymys": "Mikä kaupunki on Svishtovin vastapäätä Tonavan toisella puolella?",
+  "uusi": true,
+  "vastaus": "Katotaas. Svishtovin vastarannalla Tonavan toisella puolella on Zimnicea, kaupunki [[Romaniassa]]. Joki toimii tässä kohdassa Bulgarian ja Romanian rajana, ja molemmat kaupungit ovat olleet jokiliikenteen ja kaupan solmukohtia. Venäjän armeija ylitti [[Tonavan]] näiden kaupunkien välillä kesällä 1877. Vastaranta näkyy ylhäältä hyvin, mut ei kyyhky sitä rajaksi huomaa.",
+  "linkit": [
+   "Romaniassa",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Millainen maa Romania on?",
+   "Miten rajajoet vaikuttavat kaupankäyntiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-melnik",
+  "kysymys": "Mikä on Bulgarian pienin kaupunki?",
+  "uusi": false,
+  "vastaus": "Ai tota. Bulgarian pienin kaupunki on Melnik, jossa asukkaita on alle neljäsataa. Se on säilyttänyt kaupunkiasemansa historiallisista syistä, ja koko kaupunki on arkkitehtuurisuojelualue. Sen yllä kohoavat [[Melnikin hiekkapyramidit]], ja kaupunki sijaitsee [[Pirin-vuorten]] lounaisosassa Lounais-Bulgariassa. Pienempi kuin moni kylä, mut kaupunki se on.",
+  "linkit": [
+   "Melnikin hiekkapyramidit",
+   "Pirin-vuorten"
+  ],
+  "jatkot": [
+   "Miksi Melnik on säilyttänyt kaupunkiasemansa?",
+   "Millainen on Melnikin vanha arkkitehtuuri?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-melnik",
+  "kysymys": "Minkä sanan mukaan Melnik on nimetty?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Melnikin nimi tulee sanasta mel, joka tarkoittaa valkoista savea. [[Slavit]] nimesivät asutuksen ympäröivien hiekkamuodostelmien mukaan, sillä seudun vaaleat kalliot ja savikerrokset ovat kaupungin tunnusmerkki. Nimi viittaa siis suoraan maisemaan, jota [[hiekkapyramidit]] hallitsevat. Valkoista savea, jaa-a, pullataikinaa en sentään sano.",
+  "linkit": [
+   "Slavit",
+   "hiekkapyramidit"
+  ],
+  "jatkot": [
+   "Mitä hiekkapyramidit ovat ja miten ne ovat syntyneet?",
+   "Missä Melnik sijaitsee Bulgariassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-melnik",
+  "kysymys": "Mitä hiekkapyramidit ovat ja miten ne ovat syntyneet?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Melnikin hiekkapyramidit ovat korkeita, kapeita hiekka- ja savikivimuodostelmia, jotka ovat syntyneet vähitellen veden ja tuulen aiheuttaman [[eroosion]] muovaamina. Pehmeämpi aines on kulunut pois nopeammin kuin kovempi, ja jäljelle on jäänyt jyrkkiä pylväitä ja harjanteita kaupungin ympärille. Muodostelmat sijaitsevat [[Pirin-vuorten]] eteläpuolella, ja ne antavat Melnikille sen helposti tunnistettavan maiseman. Ylhäältä ne näyttävät aika komeilta.",
+  "linkit": [
+   "eroosion",
+   "Pirin-vuorten"
+  ],
+  "jatkot": [
+   "Voiko hiekkapyramideja kiertää vaeltamalla?",
+   "Missä päin Bulgariaa Pirin-vuoret ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-melnik",
+  "kysymys": "Millaista viiniä Melnikin seudulla tehdään?",
+  "uusi": true,
+  "vastaus": "Mmm— viiniä. Melnikin seutu on tunnettu viininviljelystä, ja kaupungin vauraus perustui 1600- ja 1700-luvuilla tupakan lisäksi viiniin, jota vietiin ulkomaille lähinnä [[Englantiin]] ja [[Itävaltaan]]. Seudun tunnetuimpana rypälelajikkeena pidetään paikallista lajiketta shiroka melnishka loza, josta valmistetaan punaviiniä. En ole aivan varma kaikista yksityiskohdista, mutta viininviljelyn pitkä perinne on varmaa. Minä pidän enemmän siemenistä.",
+  "linkit": [
+   "Englantiin",
+   "Itävaltaan"
+  ],
+  "jatkot": [
+   "Mitä Melnikin viinikellareissa on?",
+   "Miksi viinikauppa kukoisti kansallisen herätyksen aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-melnik",
+  "kysymys": "Missä Pirin-vuoret sijaitsevat ja mikä niissä on erityistä?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Pirin-vuoret sijaitsevat Lounais-Bulgariassa, [[Blagoevgradin]] läänissä, ja ne ovat jylhä alppityyppinen vuorijono. Vuoristosta suurin osa kuuluu Pirinin kansallispuistoon, joka on [[Unescon]] maailmanperintökohde. Alueella on vuoristojärviä, havumetsiä ja runsas kasvilajisto. Vuoret ovat tärkeä retkeilykohde, ja Melnik sijaitsee niiden lounaisosassa. Lentäisin kyllä ylikin, jos jaksaisin.",
+  "linkit": [
+   "Blagoevgradin",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä kasveja ja eläimiä Pirinissä elää?",
+   "Miksi Pirinin kansallispuisto on maailmanperintökohde?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovo",
+  "kysymys": "Minkä tuotteen valmistuksesta Karlovo on kuuluisa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Karlovo on kuuluisa ruusuöljystä, jota käytetään hajuvesien valmistuksessa. Kaupunki sijaitsee [[Stryama-joen]] hedelmällisessä laaksossa [[Balkanvuorten]] eteläjuurella, ja ruusuviljely kuuluu Bulgarian Ruusulaakson perinteeseen. Ruusuöljy on yksi maan tunnetuimpia vientituotteita ja tärkeä osa paikallista identiteettiä. Tuoksu kuuluu varmasti jo katolle asti.",
+  "linkit": [
+   "Stryama-joen",
+   "Balkanvuorten"
+  ],
+  "jatkot": [
+   "Miten ruusuöljy valmistetaan?",
+   "Kuka Karlovossa syntynyt Vasil Levski oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovo",
+  "kysymys": "Minä vuonna Karlovon ensimmäinen chitalishte avattiin?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Lähteiden mukaan Karlovon ensimmäinen chitalishte eli lukusali avattiin vuonna 1869, mutta en ole aivan varma tarkasta vuodesta. Chitalishte-laitokset syntyivät 1800-luvulla Bulgarian [[kansallisen herätyksen]] aikana kylien ja kaupunkien yhteisiksi kirjasto- ja sivistyskeskuksiksi. Karlovosta tuli samalla vuosisadalla bulgarialaisen kulttuurin ja vallankumoustoiminnan keskus, ja se sijaitsee [[Balkanvuorten]] juurella. Kirjoja ja niiden luku, tämä on kyyhkyn mieleen.",
+  "linkit": [
+   "kansallisen herätyksen",
+   "Balkanvuorten"
+  ],
+  "jatkot": [
+   "Mikä on chitalishte ja mikä sen tehtävä on?",
+   "Miksi Karlovosta tuli vallankumoustoiminnan keskus?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovo",
+  "kysymys": "Mistä ruusuöljy valmistetaan ja miksi se on arvokasta?",
+  "uusi": true,
+  "vastaus": "No jopas. Ruusuöljy valmistetaan ruusun terälehdistä vesihöyrytislauksella eli [[tislaamalla]]. Öljyn saamiseksi tarvitaan hyvin suuri määrä terälehtiä, ja siksi lopputuote on arvokasta. Bulgarian [[Ruusulaaksossa]], johon Karlovokin kuuluu, ruusuja viljellään öljyn raaka-aineeksi, ja öljyä käytetään erityisesti [[hajuvesiteollisuudessa]]. Ruusuntuoksu on kyllä parempi kuin torin kalakoju.",
+  "linkit": [
+   "tislaamalla",
+   "Ruusulaaksossa",
+   "hajuvesiteollisuudessa"
+  ],
+  "jatkot": [
+   "Milloin ruusut poimitaan Ruusulaaksossa?",
+   "Miksi hajuvesiin käytetään kukkien öljyjä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovo",
+  "kysymys": "Kuka oli Vasil Levski?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Vasil Levski syntyi vuonna 1837 [[Karlovossa]], ja hänestä tuli Bulgarian kansallisen vapautusliikkeen tunnetuin johtohahmo. Hän perusti salaisen vallankumouksellisen verkoston, jonka tarkoitus oli valmistella Bulgarian vapautumista Osmanien vallasta. [[Osmanien]] viranomaiset vangitsivat hänet, ja hänet hirtettiin [[Sofiassa]] helmikuussa 1873. Kuolemanrangaistus oli tuolloin käytössä lähes kaikkialla Euroopassa. Karlovossa on hänen museonsa ja muistomerkkinsä, ja hänet muistetaan Bulgariassa kansallissankarina.",
+  "linkit": [
+   "Karlovossa",
+   "Osmanien",
+   "Sofiassa"
+  ],
+  "jatkot": [
+   "Mitä Karlovon Levski-museossa on esillä?",
+   "Milloin Bulgaria vapautui osmanivallasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-karlovo",
+  "kysymys": "Mikä on chitalishte ja mikä sen tehtävä on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Chitalishte on bulgarialainen yhteisökeskus, jonka perustehtävä on ylläpitää kirjastoa ja lukusalia. Monessa chitalishtessa on myös kuoro, tanssiryhmä tai teatteri, ja ne toimivat kylien ja kaupunkien kulttuurikeskuksina. Laitokset syntyivät 1800-luvulla [[kansallisen herätyksen]] aikana, jolloin ne tukivat lukutaitoa ja kansallista sivistystä [[Bulgarian]] kaupungeissa ja kylissä. Moni niistä toimii yhä, eli kirjasto on edelleen kyyhkynkin suosikki.",
+  "linkit": [
+   "kansallisen herätyksen",
+   "Bulgarian"
+  ],
+  "jatkot": [
+   "Miten chitalishte eroaa tavallisesta kirjastosta?",
+   "Mitä kansallinen herätys Bulgariassa tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sliven",
+  "kysymys": "Kuka perusti vuonna 1834 Bulgarian maiden ensimmäisen tehtaan?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tehtaan perusti Slivenissä vuonna 1834 [[Dobri Zhelyazkov]], jota pidetään yleisesti Bulgarian maiden ensimmäisen tehtaan perustajana. Sliven kehittyi tämän jälkeen yhdeksi alueen tärkeistä teollisuuskaupungeista, ja vuonna 1843 sinne perustettiin lisäksi [[Osmanien]] valtakunnan ensimmäinen tekstiiliteollisuusyritys. Teollisuus säilyi kaupungin elinkeinona myöhemmin, kun siellä aloitti myös tupakka- ja väkijuomatehtaita. Kyyhky ei kyllä ole koskaan ollut tehtaassa töissä.",
+  "linkit": [
+   "Dobri Zhelyazkov",
+   "Osmanien"
+  ],
+  "jatkot": [
+   "Mikä merkitys tekstiiliteollisuudella oli Slivenille?",
+   "Millainen kaupunki Sliven on tänään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sliven",
+  "kysymys": "Millä lempinimellä Slivenia kutsutaan?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Slivenia kutsutaan sadan vojvodan kaupungiksi. Lempinimi viittaa kaupungin [[haidukkien]] perinteeseen: 1800-luvulla slivenläiset haidukit taistelivat [[Osmanien]] valtaa vastaan, ja vojvodat olivat heidän johtajiaan. Nimi kertoo, kuinka tärkeänä kaupunki on pitänyt vapaustaistelun perintöään. Sadan vojvodan joukossa olisi varmasti ollut paikka kyyhkyllekin.",
+  "linkit": [
+   "haidukkien",
+   "Osmanien"
+  ],
+  "jatkot": [
+   "Keitä haidukit olivat?",
+   "Mitä Slivenin ympäristössä on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sliven",
+  "kysymys": "Keitä haidukit olivat?",
+  "uusi": true,
+  "vastaus": "No niin. Haidukit olivat Balkanin niemimaalla osmanivallan aikana toimineita epäsäännöllisiä aseellisia ryhmiä, jotka vetäytyivät vuoristoon ja vastustivat vallanpitäjiä. Heidän johtajaansa kutsuttiin vojvodaksi. Kansanperinteessä haidukeista tuli vapaudenhaluisia sankarihahmoja, joista laulettiin kansanlauluissa ja joiden perintöä on vaalittu erityisesti [[Slivenin]] kaltaisissa vuoristokaupungeissa. [[Balkanin]] niemimaalla haidukkien toiminta liittyi laajemmin [[osmanivallan]] vastaiseen vastarintaan. Kyyhky ei tosin ollut paikalla kuuntelemassa lauluja.",
+  "linkit": [
+   "Slivenin",
+   "Balkanin",
+   "osmanivallan"
+  ],
+  "jatkot": [
+   "Mitä haidukeille tapahtui Bulgarian vapautumisen jälkeen?",
+   "Mikä oli vojvodan rooli haidukkiryhmässä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sliven",
+  "kysymys": "Mikä on Bulgarian eksarkaatti?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Bulgarian eksarkaatti oli Osmanien valtakunnan sisällä toiminut itsenäinen bulgarialainen kirkkokunta, joka perustettiin vuonna 1870 sulttaanin säädöksellä. Se erosi [[Konstantinopolin patriarkaatista]], jonka alaisuudessa bulgarialaiset seurakunnat olivat aiemmin olleet. Eksarkaatilla oli suuri merkitys [[kansallisen herätyksen]] ajan bulgarialaiselle identiteetille, koska se tarkoitti omaa kirkollista johtoa ja kieltä. Hiippakuntia oli useissa kaupungeissa, [[Slivenin]] hiippakunta mukaan lukien. Kirkko ja kansakunta kulkivat tässä rinnakkain.",
+  "linkit": [
+   "Konstantinopolin patriarkaatista",
+   "kansallisen herätyksen",
+   "Slivenin"
+  ],
+  "jatkot": [
+   "Miksi eksarkaatti oli tärkeä Bulgarian kansalliselle liikkeelle?",
+   "Mikä on Konstantinopolin patriarkaatti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-sliven",
+  "kysymys": "Millainen paikka Sinite kamanin luonnonpuisto on?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Sinite kamani eli Siniset kalliot on kalliomassiivi aivan Slivenin tuntumassa, ja sen ympärille on perustettu luonnonpuisto. Alue sijaitsee [[Balkanvuorten]] juurella ja on kaupunkilaisten ja matkailijoiden suosima retkeilykohde. Kaupungin muita nähtävyyksiä ovat tunnetut [[mineraalikylpylät]]. Jyrkät kalliot ovat kyyhkyn silmään kuin valmis kattoterassi.",
+  "linkit": [
+   "Balkanvuorten",
+   "mineraalikylpylät"
+  ],
+  "jatkot": [
+   "Millaisia retkireittejä Sinite kamanilla on?",
+   "Miksi mineraalivesi on terveellistä?"
+  ]
  }
 ]
