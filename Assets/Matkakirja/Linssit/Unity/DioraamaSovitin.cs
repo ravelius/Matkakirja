@@ -1005,7 +1005,7 @@ namespace Matkakirja.Natiivi
         {
             var ennen = SeikkailuRepliikit.Aktiivinen;
             var r = SeikkailuRepliikit.Luo(nayttamo.transform, MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-v4/manifest.json", o.Kirjaa);
-            if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v1/manifest.json");
+            if (r != ennen) SeikkailuRepliikit.LisaaManifest(MediaJuuri + "/seikkailu/" + RakennusId + "/repliikit-lapi-v2/manifest.json");   // v2 (Pelikoodari 10.10.): tyrma-vesipoika-1 huippu −2,3 dBTP, muut samat
         }
 
         bool alkuValittu, historiaPyydetty;
