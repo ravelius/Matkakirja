@@ -25,9 +25,12 @@ namespace Matkakirja.Linssit.Seikkailu
         public double TunnistaaM, TunnistaaS;
         /// <summary>Jahtinopeus m/s; 0 = ei jahtaa (kokki huutaa paikaltaan, apulainen).</summary>
         public double JahtaaMs = 2.2;
+        /// <summary>Jahdin ja etsinnän ulottuma vartiopaikasta (reitin 1. piste) metreinä; 0 = rajaton. Portinvartija vartioi siltaa
+        /// (A1, simuajo 11.10.: laiturin päähän perääntynyt ensikertalainen jäi silti kiinni, koska laituri on vain ~6 m).</summary>
+        public double JahtiM;
 
         public static readonly VartijaProfiili Vartija = new VartijaProfiili();
-        public static readonly VartijaProfiili Portinvartija = new VartijaProfiili { Nimi = "portinvartija" };
+        public static readonly VartijaProfiili Portinvartija = new VartijaProfiili { Nimi = "portinvartija", JahtiM = 6 };
         public static readonly VartijaProfiili Kokki = new VartijaProfiili { Nimi = "kokki", NakoM = 6, NakoKulma = 45, JahtaaMs = 0, Ottaa = false, TarjotinLupa = false, NaamioLupa = false };
         public static readonly VartijaProfiili Apulainen = new VartijaProfiili { Nimi = "apulainen", NakoM = 5, NakoKulma = 45, Kuulee = false, JahtaaMs = 0, Ottaa = false, TunnistaaM = 2, TunnistaaS = 2 };
         /// <summary>Linnaväki (huone 6: syövät ja noppaa pelaavat): näkee ja huutaa, ei jahtaa eikä ota kiinni; naamio kelpaa.</summary>
@@ -246,8 +249,10 @@ namespace Matkakirja.Linssit.Seikkailu
             }
             double voima = NakoVoima(s);
             double dp = Etaisyys(s.VartijaX, s.VartijaZ, s.PelaajaX, s.PelaajaZ);
+            // Näköyhteys katkesi yli 2 s: seuraava ote vaatii uuden varoituksen (A1: jokaista kiinniottoa edeltää varoitus).
             if (voima > 0) { Mittari = Math.Min(Turva > 0 && Profiili.Ottaa ? TurvaKatto : 1, Mittari + voima * dt); EpailyX = s.PelaajaX; EpailyZ = s.PelaajaZ; rauhaS = 0; eiNaeS = 0; Nakee = true; }
             else { Mittari = Math.Max(0, Mittari - (Valppaus > 0 ? ValpasLaskuS : MittariLaskuS) * dt); rauhaS += dt; eiNaeS += dt; Nakee = false; }
+            if (eiNaeS > EpailyUnohdusS && varoitusJaljella <= 0) varoitusTehty = false;
             bool valpas = Tila != VartijanTila.Partio && Tila != VartijanTila.Paluu;
             if (valpas) { varoitusS += dt; huippu = Math.Max(huippu, Mittari); }
             // Sydän (kohta 3.4): mittari ≥ 0,6, jahti, tai tutkii/etsii alle 4 m:n päässä; tempo 70 → 120 mittarin 0,6 → 1,0 mukaan.
@@ -293,7 +298,8 @@ namespace Matkakirja.Linssit.Seikkailu
                     break;
                 case VartijanTila.Etsinta:
                     merkki = true;
-                    if (Profiili.JahtaaMs > 0 && Etaisyys(s.VartijaX, s.VartijaZ, EpailyX, EpailyZ) > PerillaM) { KohdeX = EpailyX; KohdeZ = EpailyZ; Vauhti = KiireMs; }
+                    var (ex, ez) = Rajaa(EpailyX, EpailyZ);
+                    if (Profiili.JahtaaMs > 0 && Etaisyys(s.VartijaX, s.VartijaZ, ex, ez) > PerillaM) { KohdeX = ex; KohdeZ = ez; Vauhti = KiireMs; }
                     else
                     {
                         Vauhti = 0; katseluS += dt;
@@ -310,7 +316,7 @@ namespace Matkakirja.Linssit.Seikkailu
                     etsiiS += dt;
                     if (etsittavat.Count > 0 && etsiiS < EtsiiS)
                     {
-                        var q = etsittavat[0];
+                        var (qx, qz) = Rajaa(etsittavat[0].X, etsittavat[0].Z); var q = (X: qx, Z: qz);
                         if (Etaisyys(s.VartijaX, s.VartijaZ, q.X, q.Z) > PerillaM) { KohdeX = q.X; KohdeZ = q.Z; Vauhti = KavelyMs; katseluS = 0; }
                         else { Vauhti = 0; katseluS += dt; Yaw = Kulma(Yaw + Math.Sin(katseluS * 1.7) * 60 * dt); if (katseluS > EtsiiKatseluS) etsittavat.RemoveAt(0); }
                     }
@@ -318,10 +324,11 @@ namespace Matkakirja.Linssit.Seikkailu
                     break;
                 case VartijanTila.Halytys:
                     halytysS += dt;
-                    if (Profiili.JahtaaMs > 0) { KohdeX = EpailyX; KohdeZ = EpailyZ; Vauhti = Etaisyys(s.VartijaX, s.VartijaZ, EpailyX, EpailyZ) > (dp <= KiinniM ? 0.0 : PerillaM) ? Profiili.JahtaaMs : 0; }
+                    var (hx, hz) = Rajaa(EpailyX, EpailyZ);
+                    if (Profiili.JahtaaMs > 0) { KohdeX = hx; KohdeZ = hz; Vauhti = Etaisyys(s.VartijaX, s.VartijaZ, hx, hz) > (dp <= KiinniM ? 0.0 : PerillaM) ? Profiili.JahtaaMs : 0; if (Vauhti <= 0) Kaanny(dt, Suunta(EpailyX - s.VartijaX, EpailyZ - s.VartijaZ)); }   // ulottuman reunalla katsoo pelaajaa
                     else { Vauhti = 0; Kaanny(dt, Suunta(EpailyX - s.VartijaX, EpailyZ - s.VartijaZ)); }
                     if (!huudettu && (eiNaeS > HuutoS || Profiili.JahtaaMs <= 0)) { Huuto = true; huudettu = true; }   // kokki huutaa heti
-                    if (halytysS > HalytysS || eiNaeS > HuutoS + 2 && Etaisyys(s.VartijaX, s.VartijaZ, EpailyX, EpailyZ) <= PerillaM)
+                    if (halytysS > HalytysS || eiNaeS > HuutoS + 2 && Etaisyys(s.VartijaX, s.VartijaZ, hx, hz) <= PerillaM)
                     { if (Profiili.JahtaaMs > 0) { AloitaVaihe(VartijanTila.Etsii); ValitseEtsittavat(); } else Rauhoitu(true); }
                     break;
                 case VartijanTila.Paluu:
@@ -377,6 +384,14 @@ namespace Matkakirja.Linssit.Seikkailu
             if (Etaisyys(s.VartijaX, s.VartijaZ, p.X, p.Z) > PerillaM) { Vauhti = KavelyMs; odotus = 0; return; }
             Vauhti = 0; odotus += dt;
             if (odotus >= Math.Max(0, p.OdotaS - (Valppaus > 0 ? 1 : 0))) { piste = (piste + 1) % reitti.Count; odotus = 0; var q = reitti[piste]; KohdeX = q.X; KohdeZ = q.Z; Vauhti = KavelyMs; }
+        }
+
+        /// <summary>Kohde vartiopaikan ulottumaan (Profiili.JahtiM; 0 = ennallaan).</summary>
+        (double X, double Z) Rajaa(double x, double z)
+        {
+            if (Profiili.JahtiM <= 0 || reitti.Count == 0) return (x, z);
+            double px = reitti[0].X, pz = reitti[0].Z, dx = x - px, dz = z - pz, d = Math.Sqrt(dx * dx + dz * dz);
+            return d <= Profiili.JahtiM ? (x, z) : (px + dx / d * Profiili.JahtiM, pz + dz / d * Profiili.JahtiM);
         }
 
         void Kaanny(double dt, double tavoite)

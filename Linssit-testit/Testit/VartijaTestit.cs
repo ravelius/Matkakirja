@@ -273,5 +273,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(alku >= 0, "varoitus alkoi");
             Oleta.Tosi(!r2.Kiinni, $"pakeni varoituksen aikana ({v2.Tila})");
         }
+
+        [Testi] static void PortinvartijaEiJahtaaLaiturinPaahan()
+        {
+            // Simuajo 11.10. (laituri-a1): varoituksen jälkeen laiturin päähän perääntynyt jäi kiinni (laituri ~6 m). Portinvartija
+            // jahtaa enintään JahtiM vartiopaikastaan; pelaaja perääntyy näkyvissä 12 m:iin.
+            var v = new Vartija(new List<(double, double, double)> { (0, 0, 8.0) }, yaw: 0) { Profiili = VartijaProfiili.Portinvartija };
+            double alku = -1, kauimmas = 0;
+            var r = Laituri(v, 0, 5, t =>
+            {
+                if (alku < 0 && v.Varoittaa) alku = t;
+                if (v.Tila != VartijanTila.Partio) kauimmas = Math.Max(kauimmas, Math.Sqrt(v.KohdeX * v.KohdeX + v.KohdeZ * v.KohdeZ));
+                return alku < 0 ? (0, 5, true) : (0, 12, true);
+            }, 30);
+            Oleta.Tosi(alku >= 0, "varoitus alkoi");
+            Oleta.Tosi(!r.Kiinni, $"perääntyi laiturin päähän: ei kiinni ({v.Tila})");
+            Oleta.Tosi(kauimmas <= VartijaProfiili.Portinvartija.JahtiM + 1e-6, $"jahti vartiopaikan lähellä ({kauimmas:F2} m)");
+        }
+
+        [Testi] static void UusiVaroitusKunNakoKatkesi()
+        {
+            // Varoitus (pelaaja 3 m) → kulman taakse 3,5 s → näkyviin 6 m:iin: ote vasta toisen varoituksen jälkeen.
+            var v = new Vartija(Reitti, yaw: 0); double x = 0, z = 0; int varoituksia = 0; bool kiinni = false; double piiloon = -1;
+            for (double t = 0; t < 20 && !kiinni; t += 1 / 30.0)
+            {
+                if (piiloon < 0 && v.Varoittaa) piiloon = t;
+                bool nakyy = piiloon < 0 || t - piiloon > 3.5;
+                var s = new VartijanSyote { VartijaX = x, VartijaZ = z, PelaajaX = 0, PelaajaZ = piiloon < 0 || !nakyy ? 3 : 6, NakolinjaVapaa = nakyy, Valoisuus = 1, PelaajaVauhti = 0 };
+                v.Paivita(1 / 30.0, s);
+                if (v.VaroitusPyydetty) { v.VaroitusPyydetty = false; varoituksia++; }
+                kiinni = v.Tila == VartijanTila.Kiinni;
+                double dx = v.KohdeX - x, dz = v.KohdeZ - z, d = Math.Sqrt(dx * dx + dz * dz);
+                if (d > 1e-6 && v.Vauhti > 0) { double a = Math.Min(d, v.Vauhti / 30.0); x += dx / d * a; z += dz / d * a; v.Yaw = Math.Atan2(dx, dz) * 180 / Math.PI; }
+            }
+            Oleta.Tosi(kiinni, "lopulta kiinni");
+            Oleta.Sama(2, varoituksia);
+        }
 }
 }
