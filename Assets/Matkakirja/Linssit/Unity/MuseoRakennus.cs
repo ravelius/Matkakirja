@@ -33,6 +33,10 @@ namespace Matkakirja.Natiivi
         readonly List<GameObject> valiaikaiset = new List<GameObject>();
         /// <summary>Sali-GLB käytössä (malli + atlas + tekstuurit ladattu ja vaihdettu).</summary>
         public bool SaliGlb { get; private set; }
+        /// <summary>Sijoitettujen veistosten paikat MuseoVeistoksille (Isa = veistoksen alapinnan keskipiste jalustan päällä, glTF:n +Z eteen
+        /// katseen suuntaan) ja marmorinen pohjamateriaali.</summary>
+        public readonly List<MuseoVeistokset.Veistospaikka> Veistospaikat = new List<MuseoVeistokset.Veistospaikka>();
+        public Material VeistosPohja { get; private set; }
         public readonly Dictionary<string, Material> TeosMateriaalit = new Dictionary<string, Material>();
         /// <summary>Teoksen kuvan paikka MuseoTekstuureille (seinätaso materiaaliin, yksityiskohtaruudut kankaan eteen).</summary>
         public readonly Dictionary<string, MuseoTekstuurit.Kuvapaikka> Kuvapaikat = new Dictionary<string, MuseoTekstuurit.Kuvapaikka>();
@@ -137,6 +141,29 @@ namespace Matkakirja.Natiivi
                     var kv = MuseoGeometria.Kehys(prof, ulkoW, ulkoH, (1, 1, 1));
                     Kappale("Kehys", kv, km, go.transform, true, kaannaZ: true);
                 }
+            }
+            VeistosPohja = Materiaali("Veistos marmori", new Color(0.86f, 0.84f, 0.80f).linear, 0.04f, 0.35f);
+            var jalustaMat = Materiaali("Jalusta", Lin(MuseoGeometria.Vari(s, "kivi_hiekka", (0.77, 0.73, 0.63))), 0.03f, 0.8f);
+            foreach (var j in s.Jalustat)
+            {
+                if (j.Veistos == null) continue;
+                var go = new GameObject("Veistos " + j.Id + " " + j.Veistos) { layer = MuseoNayttamo.Kerros };
+                go.transform.SetParent(juuri, false);
+                go.transform.position = MuseoNayttamo.U(j.Paikka);
+                var katse = MuseoNayttamo.U(j.Katse); katse.y = 0;
+                // DioraamaGlb (unityyn) kääntää glTF:n +Z:n Unityn −Z:ksi: mallin etupuoli osoittaa katseeseen, kun −Z = katse.
+                if (katse.sqrMagnitude > 1e-6f) go.transform.rotation = Quaternion.LookRotation(-katse.normalized, Vector3.up);
+                Veistospaikat.Add(new MuseoVeistokset.Veistospaikka { Patsas = j.Veistos, Isa = go.transform });
+                // Väliaikaishallin jalusta (sali-GLB:ssä omat jalustat kivi_hiekka-materiaalina).
+                var v = new Verkko();
+                double hx = j.Koko.X / 2, hz = j.Koko.Z / 2, y1 = j.Koko.Y; var a = j.AlaKeski;
+                V3 P(double x, double y, double z) => new V3(a.X + x, a.Y + y, a.Z + z);
+                v.Nelio(P(-hx, y1, -hz), P(hx, y1, -hz), P(hx, y1, hz), P(-hx, y1, hz), new V3(0, 1, 0), (1, 1, 1));
+                v.Nelio(P(-hx, 0, hz), P(hx, 0, hz), P(hx, y1, hz), P(-hx, y1, hz), new V3(0, 0, 1), (1, 1, 1));
+                v.Nelio(P(hx, 0, -hz), P(-hx, 0, -hz), P(-hx, y1, -hz), P(hx, y1, -hz), new V3(0, 0, -1), (1, 1, 1));
+                v.Nelio(P(hx, 0, hz), P(hx, 0, -hz), P(hx, y1, -hz), P(hx, y1, hz), new V3(1, 0, 0), (1, 1, 1));
+                v.Nelio(P(-hx, 0, -hz), P(-hx, 0, hz), P(-hx, y1, hz), P(-hx, y1, -hz), new V3(-1, 0, 0), (1, 1, 1));
+                valiaikaiset.Add(Kappale("Jalusta " + j.Id, v, jalustaMat, juuri, true));
             }
             foreach (var t in s.Tekstitaulut)
             {
@@ -244,12 +271,15 @@ namespace Matkakirja.Natiivi
             yield return MuseoTekstuurit.Hae(kansio + $"sali-lod{lod}.glb", b => glb = b);
             if (juuri == null) yield break;
             if (glb == null) { kirjaa?.Invoke($"museo: sali-glb ei latautunut ({kansio}sali-lod{lod}.glb), väliaikaishalli jää"); yield break; }
-            yield return MuseoTekstuurit.Hae(kansio + $"valot/sali-lod{lod}-4x4.astcm", b => atlasData = b);
+            // iOS-simulaattorin GPU ei tue ASTC:tä (DioraamaAstc.AstcTuettu): atlas JPEG:nä ja tekstuurit glb:n upotetuista JPEG:istä.
+            bool astc = DioraamaAstc.AstcTuettu;
+            yield return MuseoTekstuurit.Hae(kansio + (astc ? $"valot/sali-lod{lod}-4x4.astcm" : $"valot/sali-lod{lod}.jpg"), b => atlasData = b);
             if (juuri == null) yield break;
             GlbMalli malli;
             try { malli = DioraamaGlb.Lue(glb, true); }
             catch (Exception e) { kirjaa?.Invoke("museo: sali-glb virheellinen: " + e.Message); yield break; }
-            var atlas = atlasData != null ? DioraamaAstc.Lue(atlasData, "Museo valoatlas", out string syy, TextureWrapMode.Clamp) : null;
+            var atlas = atlasData == null ? null : astc ? DioraamaAstc.Lue(atlasData, "Museo valoatlas", out string syy, TextureWrapMode.Clamp)
+                : Jpeg(atlasData, "Museo valoatlas (JPEG)", TextureWrapMode.Clamp);
             if (atlas == null) { kirjaa?.Invoke("museo: sali-glb ilman valoatlasta, väliaikaishalli jää"); yield break; }
             tuhottavat.Add(atlas);
             glb = null; atlasData = null;
@@ -261,10 +291,15 @@ namespace Matkakirja.Natiivi
                 var o = malli.Osat[i];
                 materiaalit[i] = SaliMateriaali(o, atlas);
                 if (o.Kuva < 0 || o.Pinta == null || tekstuurit.ContainsKey(o.Pinta)) continue;
-                byte[] d = null;
-                yield return MuseoTekstuurit.Hae(kansio + "tekstuurit/" + o.Pinta + ".astcm", b => d = b);
-                if (juuri == null) yield break;
-                var tex = d != null ? DioraamaAstc.Lue(d, "Museo " + o.Pinta, out _, TextureWrapMode.Repeat) : null;
+                Texture2D tex;
+                if (astc)
+                {
+                    byte[] d = null;
+                    yield return MuseoTekstuurit.Hae(kansio + "tekstuurit/" + o.Pinta + ".astcm", b => d = b);
+                    if (juuri == null) yield break;
+                    tex = d != null ? DioraamaAstc.Lue(d, "Museo " + o.Pinta, out _, TextureWrapMode.Repeat) : null;
+                }
+                else tex = o.Kuva < malli.Kuvat.Count && malli.Kuvat[o.Kuva] != null ? Jpeg(malli.Kuvat[o.Kuva], "Museo " + o.Pinta + " (JPEG)", TextureWrapMode.Repeat) : null;
                 tekstuurit[o.Pinta] = tex;
                 if (tex != null) tuhottavat.Add(tex);
                 else kirjaa?.Invoke($"museo: sali-glb tekstuuri {o.Pinta} puuttuu, pohjaväri");
@@ -277,8 +312,16 @@ namespace Matkakirja.Natiivi
             foreach (var v in valiaikaiset) if (v != null) v.SetActive(false);
             go.SetActive(true);
             SaliGlb = true;
-            kirjaa?.Invoke($"museo: sali-glb lod{lod} {kolmioita} kolmiota, {malli.Osat.Count} materiaalia, atlas {atlas.width}², " +
+            kirjaa?.Invoke($"museo: sali-glb lod{lod}{(astc ? "" : " JPEG-vara")} {kolmioita} kolmiota, {malli.Osat.Count} materiaalia, atlas {atlas.width}², " +
                            $"tekstuureja {ladattu}/{tekstuurit.Count}, {Time.realtimeSinceStartup - t0:F1} s");
+        }
+
+        static Texture2D Jpeg(byte[] d, string nimi, TextureWrapMode kaari)
+        {
+            var t = new Texture2D(2, 2, TextureFormat.RGBA32, true) { name = nimi };
+            if (!t.LoadImage(d, true)) { UnityEngine.Object.Destroy(t); return null; }
+            t.wrapMode = kaari; t.filterMode = FilterMode.Trilinear; t.anisoLevel = 4;
+            return t;
         }
 
         /// <summary>glTF-materiaali (pinnan nimi LR:n sali_blender.py:stä) MuseoValaistu-materiaaliksi: baseColorFactor lineaarisena,
@@ -349,7 +392,7 @@ namespace Matkakirja.Natiivi
             foreach (var rt in kuvat) if (rt != null) { rt.Release(); UnityEngine.Object.Destroy(rt); }
             kuvat.Clear();
             foreach (var o in tuhottavat) if (o != null) UnityEngine.Object.Destroy(o);
-            tuhottavat.Clear(); TeosMateriaalit.Clear(); Kuvapaikat.Clear(); valiaikaiset.Clear(); SaliGlb = false;
+            tuhottavat.Clear(); TeosMateriaalit.Clear(); Kuvapaikat.Clear(); valiaikaiset.Clear(); SaliGlb = false; Veistospaikat.Clear(); VeistosPohja = null;
             if (juuri != null) UnityEngine.Object.Destroy(juuri.gameObject);
         }
     }

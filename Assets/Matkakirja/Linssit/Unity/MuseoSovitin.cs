@@ -55,6 +55,7 @@ namespace Matkakirja.Natiivi
         MuseoNayttamo nayttamo;
         MuseoRakennus rakennus;
         MuseoTekstuurit tekstuurit;
+        MuseoVeistokset veistokset;
         readonly List<string> teosjarjestys = new List<string>();
         /// <summary>ASTC-paketittomat teokset JPEG-varalle yksi kerrallaan (purettu alkuperäinen ei kasaudu muistiin).</summary>
         readonly Queue<string> jpgJono = new Queue<string>();
@@ -132,6 +133,11 @@ namespace Matkakirja.Natiivi
             tekstuurit.Kirjaa = o.Kirjaa;
             tekstuurit.Paikka = id => id != null && rakennus != null && rakennus.Kuvapaikat.TryGetValue(id, out var kp) ? kp : null;
             tekstuurit.EiPakettia = JpgVaralle;
+            veistokset = nayttamo.gameObject.AddComponent<MuseoVeistokset>();
+            veistokset.Juuri = KuvaJuuri != null && rakennus.Veistospaikat.Count > 0 ? KuvaJuuri + "astc-v1/patsaat/" : null;
+            veistokset.Paikat = () => rakennus?.Veistospaikat;
+            veistokset.Pohjamateriaali = () => rakennus?.VeistosPohja;
+            veistokset.Kirjaa = o.Kirjaa;
             SeikkailuTapit.MuseoKavely = () => Auki && Kierros != null && Kierros.Vaihe == MuseoVaihe.Vapaa;
             EsittelyAuki = false;
             o.Kirjaa($"museo: auki {sali.Nimi}: {sali.Osat.Count} osaa, {sali.Ripustukset.Count} teosta, {Kierros.Pysahdykset.Count} pysähdystä, " +
@@ -154,6 +160,7 @@ namespace Matkakirja.Natiivi
             else Kierros.Paivita(dt);
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
             tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
+            veistokset?.Paivita(nayttamo.Kamera);
             var huone = sali.HuonePisteessa(Kierros.Nykyinen.P, NykyinenHuone);
             if (huone != NykyinenHuone)
             {
@@ -186,6 +193,7 @@ namespace Matkakirja.Natiivi
             EsittelyAuki = false; HuoneKorttiAuki = false; NykyinenHuone = null;
             SeikkailuTapit.MuseoKavely = null;
             tekstuurit?.Vapauta(); tekstuurit = null;
+            veistokset?.Vapauta(); veistokset = null;
             jpgJono.Clear();
             rakennus?.Tuhoa(); rakennus = null;
             nayttamo?.Tuhoa(); nayttamo = null;

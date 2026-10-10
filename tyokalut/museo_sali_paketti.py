@@ -1,7 +1,8 @@
 # TAIDEMUSEON SALI → ÄMPÄRIPAKETTI (Linssiseppä 10.10.2026, PT 11.2x). Linnanrakentajan valmis sali (_valmiit/taidemuseo-<maa>-v1)
 # → <ulos>/sali-v1/, jonka MuseoRakennus.LataaSali lukee polusta <maan juuri>sali-v1/:
-#   sali-lod{0,1}.glb                 sellaisenaan (TEXCOORD_0 toisto, TEXCOORD_1 valoatlas; upotettuja kuvia ei käytetä)
+#   sali-lod{0,1}.glb                 sellaisenaan (TEXCOORD_0 toisto, TEXCOORD_1 valoatlas; upotetut kuvat vain simulaattorin varana)
 #   valot/sali-lod{0,1}-4x4.astcm     LR:n valoatlas sellaisenaan (E / 1200 lx, sRGB)
+#   valot/sali-lod{0,1}.jpg           sama JPEG:nä iOS-simulaattorille (ei ASTC:tä; tekstuurit silloin glb:n upotetuista JPEG:istä)
 #   tekstuurit/<materiaali>.astcm     LR:n tekstuurit/<nimi>.jpg → ASTC 6×6 + mipit (teos_astc.pakkaa, rivit alhaalta ylös, sRGB)
 #   LAHTEET.md                        LR:n lähdeluettelo + tämän paketin rivit
 # Tekstuuri tehdään jokaiselle glb-materiaalille, jolla on baseColorTexture ja samanniminen tekstuurit/<nimi>.jpg.
@@ -27,7 +28,8 @@ def main():
     for lod in (0, 1):
         g = os.path.join(lr, 'glb', f'sali-lod{lod}.glb')
         shutil.copyfile(g, os.path.join(ulos, f'sali-lod{lod}.glb'))
-        shutil.copyfile(os.path.join(lr, 'valot', f'sali-lod{lod}-4x4.astcm'), os.path.join(ulos, 'valot', f'sali-lod{lod}-4x4.astcm'))
+        for v in (f'sali-lod{lod}-4x4.astcm', f'sali-lod{lod}.jpg'):
+            shutil.copyfile(os.path.join(lr, 'valot', v), os.path.join(ulos, 'valot', v))
         nimet.update(materiaalit(g))
     puuttuu = []
     for nimi in sorted(nimet):
