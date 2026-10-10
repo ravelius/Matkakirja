@@ -133,7 +133,10 @@ export const RAAMATTU = {
           + 'sovellukseen upottamista tai myyjän kirjallista vahvistusta ei vaadita, ja lisenssistä tarkistetaan vain, saako sisältöä '
           + 'käyttää pelissä (kaupallinen käyttö, nimeäminen, tekoälykoulutuskielto). Kumoaa Päätoimittajan 8.10.2026 klo 21.20 '
           + 'päätöksen (Sonniss vain AssetBundle-paketteina, ei avoimia mp3-osoitteita ostetuille äänille) ja samana iltana '
-          + 'jakeluperusteella tehdyt hylkäykset (äänikirjastot, Fab-asut): Sonnissin äänet kulkevat ämpärireitillä. Kuvat ovat yhä '
+          + 'jakeluperusteella tehdyt hylkäykset (äänikirjastot, Fab-asut): Sonnissin äänet kulkevat ämpärireitillä. SUOJATUT VALAISTUKSET '
+          + '(Päätoimittaja 10.10.2026 klo 03.3x): pelissä ei jäljitellä valaistussuunnitelmia, joita pidetään tekijänoikeuden suojaamina '
+          + '(esim. Eiffel-tornin yövalaistus ja tuntivälke). Maamerkit valaistaan yleisellä lämpimällä valonheittimellä, ja Eiffel-torni '
+          + 'näkyy yöllä vain katuvalojen keskellä. Kuvat ovat yhä '
           + 'vain PD/CC. Fakta (kerrottu omistajalle 9.10.2026 klo 00.28): ämpäriä ei voi selata, mutta tarkan osoitteen tietävä voi '
           + 'ladata yksittäisen tiedoston ilman kirjautumista, kuten peli itsekin lataa; linja pysyy, ellei omistaja muuta sitä. '
           + 'ElevenLabsin ääniefektit ovat sallittuja kuumailmapallon kokeilussa ("kokeillaan vain ensin"; katto 10 000 '
@@ -419,6 +422,7 @@ export const RAAMATTU = {
           + 'SIMUN MUISTIVAHTI (Julkaisija ja Päätoimittaja 10.10.2026 klo 00.3x–00.4x; LS1:n Pariisin simu kasvatti Macin swapia noin 40 Gt, koska simussa ei ole jetsam-rajaa): '
           + 'jokaisella SIMULAATTORI NYT -vuorolla Julkaisija käynnistää julkaisija-tyokalut/simu-muistivahti.zsh <UDID> (raja appi + oma SimMetalHost 12 Gt kevyille ja 16 Gt yhdelle '
           + 'raskaalle simulle, kill omalla pid:llä); kerrallaan enintään yksi raskas simu (Pariisi, Tukholma, Olavinlinna), ja memory_pressure-vapaa on vähintään 20 % ennen käynnistystä. '
+          + 'Simussa os_proc_available_memory on 0, joten pelin omat muistisuojat eivät toimi simussa (Natiiviseppä 10.10.2026): muistikorjaukset todennetaan aina iPadilla. '
           + 'VIKA TOISTETAAN ENNEN KORJAUSTA (Päätoimittaja 5.10.2026 klo 23.0x): korjaus lähetetään kuitattavaksi vasta, kun '
           + 'todistusajo tai testi on näyttänyt vian toistuvan oikealla polulla ja sama ajo on mennyt korjattuna läpi. '
           + 'VANHOJA APPEJA EI RIKOTA (Päätoimittaja 8.10.2026, Julkaisijan havainto): osoittimet (esim. dioraama/<rakennus>/uusin.json) '
@@ -3162,7 +3166,7 @@ export const RAAMATTU = {
           + 'pankkiin; uutta ääntä ei suunnitella, jos pankista löytyy sopiva, eikä sama ääni puhu kahta henkilöä samassa paikassa. '
           + 'Kaiku ja tila lisätään pelissä (Steam Audio), ei ääneen. Kertoja (William), Pulu ja isoisä ovat pankin ulkopuolella. '
           + 'Vanhat kirjastoäänet poistetaan linnasta kokonaan. Lähde: tools/aanipankki/ (rekisteri.json v1 lukittu, kartta-olavinlinna.json, LAHTEET.md).',
-        'ÄÄNET PCM:NÄ, PAKKAUS KERRAN (omistaja 5.10.2026 klo 13.4x, sitova): kaikki generoitavat äänet tilataan muodossa pcm_44100, tasoitus ja limitteri tehdään PCM:nä, ja mp3 pakataan vain kerran lopullisesta masterista. Koosteet tehdään WAV-mastereista, eikä jo pakattua ääntä pakata uudelleen.',
+        'ÄÄNET PCM:NÄ, PAKKAUS KERRAN (omistaja 5.10.2026 klo 13.4x, sitova): kaikki generoitavat äänet tilataan muodossa pcm_44100, tasoitus ja limitteri tehdään PCM:nä, ja mp3 pakataan vain kerran lopullisesta masterista. Koosteet tehdään WAV-mastereista, eikä jo pakattua ääntä pakata uudelleen. LYHYET KERTAÄÄNET (Pelikoodari 10.10.2026 klo 01.4x: 61 lyhyttä kertaääntä oli tasoitettu integroituun LUFSiin, ja ne jäivät +18…+24 dB liian koviksi ja yli 0 dBTP:n, esim. Olavinlinnan askeleet): alle noin sekunnin kertaäänet tasoitetaan huippuun tai lyhyen aikavälin kovuuteen, ja kaikkien äänten true peak on PCM-masterissa enintään −1 dBTP.',
         'LUKIJAÄÄNI WILLIAM, EI KONELUKIJAA (omistaja 5.10.2026 klo 13.2x, sitova): kuvaselitteet, nostokortit ja lehdet luetaan '
           + 'Williamin äänellä (ElevenLabs-striimi), Pulun chatin vastaukset Pulun omalla äänellä; xAI:n Aino-ääntä ei käytetä. ISS:n '
           + 'kuvaselitteitä ei lueta automaattisesti, vaan vain kaiutinnapista (pelaaja päättää, milloin kuulee lisää).',
