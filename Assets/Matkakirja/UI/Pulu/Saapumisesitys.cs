@@ -51,6 +51,8 @@ namespace Matkakirja.Natiivi
         readonly Matkakirjakortti kortti;
         readonly Pulu pulu;
         readonly HashSet<string> kommentoitu = new HashSet<string>();
+        /// <summary>Kaupungit, joiden nykyintro on soinut saapumisesityksessä (kerran per istunto kuten Livian kommentti).</summary>
+        readonly HashSet<string> introSoitettu = new HashSet<string>();
         IVisualElementScheduledItem vaihto, luentoOdotus;
         string kaupunki;
 
@@ -74,6 +76,7 @@ namespace Matkakirja.Natiivi
         public void Nollaa()
         {
             kommentoitu.Clear();
+            introSoitettu.Clear();
             luentoAlkanut.Clear();
             luettuSaapuminen = null;
         }
@@ -331,7 +334,11 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(k) || k != kaupunki) return;
             // PARIISIN ESITTELY (omistaja 10.10. 17.3x, sitova): saapumisesitys jatkuu samalla pakalla ja Ohitalla nykyintron
             // kuvilla C1–C5 musiikin tahdissa; Livian vuoro sen jälkeen (LoppuiJatko).
-            if (IntroSaapuessa && KaupunkiIntro.OnIntro(k) && ohjain?.LuentoOhitettu != true && NykyIntro(k)) return;
+            if (IntroSaapuessa && KaupunkiIntro.OnIntro(k) && ohjain?.LuentoOhitettu != true && !introSoitettu.Contains(k) && NykyIntro(k))
+            {
+                introSoitettu.Add(k);
+                return;
+            }
             LoppuiJatko(k);
         }
 
@@ -402,7 +409,13 @@ namespace Matkakirja.Natiivi
             bool soi = aani.KaupunkiIntro(k, KaupunkiIntro.MusiikinKatkoS, KaupunkiIntro.MusiikinHaivytysS, KaupunkiIntro.HidasAlkaaS);
             float alku = UnityEngine.Time.unscaledTime;
             float? musiikki = null;
-            Action<string, float> kuuntelija = (kk, kohta) => { if (KaupunkiIntro.OnIntro(kk)) musiikki = UnityEngine.Time.unscaledTime - kohta; };
+            // Kappale voi jo soida saapumisesta asti (kaupungin nopea jakso; iPad-simu 17.4x: kohta 31 s → kaikki kuvat kerralla):
+            // silloin kuvat kulkevat intron omalla kellolla luennan lopusta, muuten kappaleen kohdasta (tahti).
+            Action<string, float> kuuntelija = (kk, kohta) =>
+            {
+                if (!KaupunkiIntro.OnIntro(kk)) return;
+                musiikki = kohta < MusiikkiAlussaS ? UnityEngine.Time.unscaledTime - kohta : alku;
+            };
             if (soi) Aanisoitin.KaupunkiIntroAlkoi += kuuntelija;
             introKaupunki = k;
             kortti.Kuvat.LuentoKaynnissa = true;   // Ohita näkyviin kuten luennan ajan
@@ -438,6 +451,8 @@ namespace Matkakirja.Natiivi
         }
 
         Action introLopetus;
+        /// <summary>Kappaleen kohta, jota pienempi tarkoittaa, että intro käynnisti kappaleen (muuten se soi jo).</summary>
+        const float MusiikkiAlussaS = 2f;
 
         /// <summary>Intron ajastin ja musiikkikuuntelija pois; vaienna = Ohita tai lähtö (nopea jakso pois kuten oppaan ohituksessa).</summary>
         void LopetaIntro(bool vaienna)
