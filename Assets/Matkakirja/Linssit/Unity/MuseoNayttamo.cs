@@ -26,15 +26,17 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// LATTIAHEIJASTUS (omistaja 10.10. 17.2x, PT:n kuittaama suunnitelma, juna 180): peilikamera piirtää salin lattian tason
         /// (y = 0, kaikki osat) yli peilattuna puoliresoluutioiseen HDR-kuvaan (mipit karheuden sumeuteen), ja MuseoValaistu
-        /// sekoittaa sen lattiaan Fresnelin ja materiaalin _Heijastus-arvon mukaan. QA: "museo heijastus 0|1|tila".
+        /// sekoittaa sen lattiaan Fresnelin ja materiaalin _Heijastus-arvon mukaan. QA: "museo heijastus 0|1|tila|voima <x>".
         /// </summary>
         public static bool HeijastusPaalla = true;
+        /// <summary>Kerroin materiaalin _Heijastus-arvolle (QA "museo heijastus voima 1,5" vertailukuviin; 1 = oletus).</summary>
+        public static float HeijastusVoima = 1f;
         const float HeijastusSkaala = 0.5f, LattiaY = 0f, LahitasoVara = 0.02f;
         static readonly int IdHKuva = Shader.PropertyToID("_MuseoHeijastusKuva"), IdHMaara = Shader.PropertyToID("_MuseoHeijastusMaara"),
             IdHMipit = Shader.PropertyToID("_MuseoHeijastusMipit");
         Camera heijastusKamera;
         RenderTexture heijastusKuva;
-        public string HeijastusTila => $"heijastus {(HeijastusPaalla ? "päällä" : "pois")}, kuva {(heijastusKuva != null ? $"{heijastusKuva.width}×{heijastusKuva.height}" : "-")}";
+        public string HeijastusTila => $"heijastus {(HeijastusPaalla ? "päällä" : "pois")} voima {HeijastusVoima:0.##}, kuva {(heijastusKuva != null ? $"{heijastusKuva.width}×{heijastusKuva.height}" : "-")}";
 
         static readonly int IdMaara = Shader.PropertyToID("_MuseoSpotMaara"), IdP = Shader.PropertyToID("_MuseoSpotP"),
             IdD = Shader.PropertyToID("_MuseoSpotD"), IdV = Shader.PropertyToID("_MuseoSpotV"),
@@ -239,7 +241,7 @@ namespace Matkakirja.Natiivi
         void KameraAlkaa(ScriptableRenderContext _, Camera c)
         {
             if (c == heijastusKamera) Shader.SetGlobalFloat(IdHMaara, 0f);
-            else if (c == Kamera) Shader.SetGlobalFloat(IdHMaara, HeijastusPaalla && heijastusKuva != null ? 1f : 0f);
+            else if (c == Kamera) Shader.SetGlobalFloat(IdHMaara, HeijastusPaalla && heijastusKuva != null ? HeijastusVoima : 0f);
         }
 
         void OnDestroy() => RenderPipelineManager.beginCameraRendering -= KameraAlkaa;

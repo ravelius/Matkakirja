@@ -271,6 +271,8 @@ namespace Matkakirja.Natiivi
             if (k == "heijastus")
             {
                 if (osat.Length > 2 && (osat[2] == "0" || osat[2] == "1")) MuseoNayttamo.HeijastusPaalla = osat[2] == "1";
+                else if (osat.Length > 3 && osat[2] == "voima" && float.TryParse(osat[3].Replace(',', '.'), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float v))
+                    MuseoNayttamo.HeijastusVoima = Mathf.Clamp(v, 0f, 4f);
                 o.Kirjaa("museo: " + (nayttamo != null ? nayttamo.HeijastusTila : $"heijastus {(MuseoNayttamo.HeijastusPaalla ? "päällä" : "pois")}"));
                 return;
             }
