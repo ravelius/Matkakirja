@@ -7,6 +7,7 @@
 #
 # OSAT (Natiiviseppä 10.10.2026): pallo = pallo ja kartta, linna = linna ja linssit; kummallakin oma lukkovaraus ja 6 min:n
 # raja. Ilman osaa molemmat peräkkäin kahdella varauksella (lukko vapaana osien välissä: juna ja laitekäännökset väliin).
+# KUVA-ARKKI: MATKAKIRJA_ASETTELU_KUVAT="nähtävyys,ihmisen matkan valikko" (tai "*") → PNG:t kansioon <loki>-kuvat/.
 #
 # Unity -batchmode (ilman -nographicsia: paneelit piirtyvät laitteen kokoiseen tekstuuriin, kuten KoriKoosteTesti) -executeMethod
 # Matkakirja.Editori.AsetteluTesti.Aja; testi lopettaa Unityn itse (EditorApplication.Exit).
@@ -65,6 +66,7 @@ cd $KOPIO || vika "kopio puuttuu: $KOPIO"
 rm -f tulokset/asettelutesti.txt
 # Editori yhdistelmän ProjectVersion.txt:n mukaan (Julkaisija 10.10.2026, omistaja: 6.7 päälinjaksi, 6.3 paluuta varten).
 UNITY=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh .) || vika "editori"
+rm -rf tulokset/asettelukuvat
 UNITY_BURST_DISABLE_COMPILATION=1 nice -n 10 "$UNITY" -batchmode -projectPath . -executeMethod Matkakirja.Editori.AsetteluTesti.Aja \
   -logFile tulokset/asettelutesti-unity.log &
 upid=$!
@@ -75,6 +77,8 @@ cp tulokset/asettelutesti-unity.log $LOKI.unity.log 2>/dev/null
 grep "error CS" tulokset/asettelutesti-unity.log | sort -u | head >> $LOKI
 [[ -f tulokset/asettelutesti.txt ]] || vika "tulosta ei syntynyt (exit $koodi; $(grep -m1 'error CS\|Aborting\|Exception' tulokset/asettelutesti-unity.log))"
 cat tulokset/asettelutesti.txt >> $LOKI
+# Kuva-arkki (MATKAKIRJA_ASETTELU_KUVAT="näkymä,…" tai "*"): PNG:t lokin viereen, vain PT:n tarkistukseen.
+[[ -d tulokset/asettelukuvat ]] && { mkdir -p ${LOKI%.log}-kuvat; cp tulokset/asettelukuvat/*.png ${LOKI%.log}-kuvat/ 2>/dev/null; echo "kuvat ${LOKI%.log}-kuvat"; }
 grep "^VIKA\|ASETTELUTESTI" tulokset/asettelutesti.txt
 echo "loki $LOKI"
 exit $koodi
