@@ -32,9 +32,9 @@ namespace Matkakirja.Natiivi
         public static event Action Vaihtui;
         /// <summary>Esittelykortti auki (napista tai komennolla "museo esittele").</summary>
         public static bool EsittelyAuki { get; private set; }
-        /// <summary>Teosten kuvien juuri (teokset.json "kuva" sen alla); null = paikkakuvat. Ämpärin polku, kun Julkaisija on vienyt
-        /// Sisältökirjurin paketin; testissä "museo kuvajuuri file:///…/lahde/" (simulaattori lukee Macin levyä).</summary>
-        public static string KuvaJuuri;
+        /// <summary>Teosten kuvien juuri (teokset.json "kuva" sen alla); null = paikkakuvat. Ämpäri: Sisältökirjurin paketti (Julkaisija
+        /// vei 10.10., 117 tiedostoa); testissä "museo kuvajuuri file:///…/lahde/" tai "pois".</summary>
+        public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/lahde/";
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
