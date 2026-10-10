@@ -365,7 +365,7 @@ Miten tulvamaat eroavat soista?
 Miksi Tartto syntyi risteyskohtaan?
 
 ### 142
-Emajoki, jonka nimi tarkoittaa äitijokea, virtaa [[Võrtsjärvestä]] Tarton halki [[Peipsijärveen]]. Sen pituus on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Isoisän aikaan 1800-luvulla jokea käytettiin ahkerasti tavaraliikenteeseen: [[lodi]] toi Tarttoon polttopuuta, hirsiä, heinää ja kalaa, ja se kesti myös Peipsin aallot.
+Emajoki, jonka nimi tarkoittaa äitijokea, virtaa [[Võrtsjärvestä]] Tarton halki [[Peipsijärveen]]. Sen pituus on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Isoisän aikaan 1800-luvulla jokea käytettiin ahkerasti tavaraliikenteeseen: [[lodi]] toi Tarttoon polttopuuta, hirsiä, heinää ja kalaa, ja se kesti myös [[Peipsin]] aallot.
 JATKOT:
 Millaiset alukset kulkivat Emajoella?
 Missä Emajoen alajuoksu sijaitsee?
@@ -377,7 +377,7 @@ Milloin Tartossa pidettiin ensimmäiset laulujuhlat?
 Miten Struve liittyy Tarttoon?
 
 ### 144
-Jokiproomu on litteäpohjainen rahtialus, joka on tehty kuljettamaan raskasta tavaraa jokia pitkin. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Tarttoon]] polttopuuta, hirsiä, heinää ja kalaa. Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesitie sopi tähän työhön hyvin. Lodin tarkoista mitoista en ole varma, joten jätän ne kertomatta.
+Jokiproomu on litteäpohjainen rahtialus, joka on tehty kuljettamaan raskasta tavaraa jokia pitkin. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös [[Peipsin]] aallot. Isoisän aikaan jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Tarttoon]] polttopuuta, hirsiä, heinää ja kalaa. Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesitie sopi tähän työhön hyvin. Lodin tarkoista mitoista en ole varma, joten jätän ne kertomatta.
 JATKOT:
 Miten purjealus eroaa proomusta?
 Miksi vesitie oli tärkeä tavaraliikenteessä?
@@ -443,13 +443,13 @@ Miksi tulivuoriselitys hylättiin?
 Mitä karsti tarkoittaa?
 
 ### 155
-Karsti tarkoittaa maisemaa, joka syntyy, kun vesi liuottaa kalkkikiven kaltaista kiveä. Liuotus voi synnyttää maanpinnalle kuoppia ja luolia, ja kuopaksi voi romahtaa myös luolan katto. Siksi karsti oli looginen ehdokas selittämään kraatterimaisia kuoppia, ennen kuin [[Ivan Reinvald]] osoitti Kaalin kraatterien olevan meteoriitin tekemiä. Karstin esiintymisestä Saarenmaalla en ole varma, joten jätän sen kertomatta.
+Karsti tarkoittaa maisemaa, joka syntyy, kun vesi liuottaa kalkkikiven kaltaista kiveä. Liuotus voi synnyttää maanpinnalle kuoppia ja luolia, ja kuopaksi voi romahtaa myös luolan katto. Siksi karsti oli looginen ehdokas selittämään kraatterimaisia kuoppia, ennen kuin [[Ivan Reinvald]] osoitti Kaalin kraatterien olevan meteoriitin tekemiä. Karstin esiintymisestä [[Saarenmaalla]] en ole varma, joten jätän sen kertomatta.
 JATKOT:
 Millaisia luolia karstialueilla on?
 Miten meteoriittikraatteri eroaa karstikuopasta?
 
 ### 156
-Meteoriitti on avaruudesta tullut kappale, joka osuu maanpintaan. Kaalin tapauksessa kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+Meteoriitti on avaruudesta tullut kappale, joka osuu maanpintaan. [[Kaalin]] tapauksessa kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
 JATKOT:
 Milloin Kaalin meteoriitti iski?
 Miten meteoriittialkuperä todistettiin?

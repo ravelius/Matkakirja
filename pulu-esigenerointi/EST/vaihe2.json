@@ -697,8 +697,9 @@
   "kohde": "kohde:narvan-linnus",
   "kasite": "Narvajoen",
   "kysymys": "Kerro lisää: Narvajoen",
-  "vastaus": "Narvajoki virtaa Peipsijärvestä Suomenlahteen, ja se muodostaa suuren osan Viron ja Venäjän rajasta. Joen länsirannalla on virolainen Narvan kaupunki ja itärannalla venäläinen Ivangorod, ja kaksi linnaa seisoo vastakkain. Joessa on koski, jonka vesivoimaa on hyödynnetty sähköntuotantoon. Joen varrella on käyty myös sotia: Suuren Pohjan sodan aikana ruotsalaiset voittivat venäläiset [[Narvan taistelussa]] vuonna 1700. Narvajoki on siis ollut vuosisatojen ajan sekä kulkureitti että rajalinja.",
+  "vastaus": "Narvajoki virtaa Peipsijärvestä [[Suomenlahteen]], ja se muodostaa suuren osan Viron ja Venäjän rajasta. Joen länsirannalla on virolainen Narvan kaupunki ja itärannalla venäläinen Ivangorod, ja kaksi linnaa seisoo vastakkain. Joessa on koski, jonka vesivoimaa on hyödynnetty sähköntuotantoon. Joen varrella on käyty myös sotia: Suuren Pohjan sodan aikana ruotsalaiset voittivat venäläiset [[Narvan taistelussa]] vuonna 1700. Narvajoki on siis ollut vuosisatojen ajan sekä kulkureitti että rajalinja.",
   "linkit": [
+   "Suomenlahteen",
    "Narvan taistelussa"
   ],
   "jatkot": [
@@ -2097,11 +2098,12 @@
   "kohde": "kohde:emajogi",
   "kasite": "Emajoesta",
   "kysymys": "Kerro lisää: Emajoesta",
-  "vastaus": "Emajoki, jonka nimi tarkoittaa äitijokea, virtaa [[Võrtsjärvestä]] Tarton halki [[Peipsijärveen]]. Sen pituus on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Isoisän aikaan 1800-luvulla jokea käytettiin ahkerasti tavaraliikenteeseen: [[lodi]] toi Tarttoon polttopuuta, hirsiä, heinää ja kalaa, ja se kesti myös Peipsin aallot.",
+  "vastaus": "Emajoki, jonka nimi tarkoittaa äitijokea, virtaa [[Võrtsjärvestä]] Tarton halki [[Peipsijärveen]]. Sen pituus on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Isoisän aikaan 1800-luvulla jokea käytettiin ahkerasti tavaraliikenteeseen: [[lodi]] toi Tarttoon polttopuuta, hirsiä, heinää ja kalaa, ja se kesti myös [[Peipsin]] aallot.",
   "linkit": [
    "Võrtsjärvestä",
    "Peipsijärveen",
-   "lodi"
+   "lodi",
+   "Peipsin"
   ],
   "jatkot": [
    "Millaiset alukset kulkivat Emajoella?",
@@ -2127,8 +2129,9 @@
   "kohde": "kohde:emajogi",
   "kasite": "jokiproomu",
   "kysymys": "Kerro lisää: jokiproomu",
-  "vastaus": "Jokiproomu on litteäpohjainen rahtialus, joka on tehty kuljettamaan raskasta tavaraa jokia pitkin. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Tarttoon]] polttopuuta, hirsiä, heinää ja kalaa. Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesitie sopi tähän työhön hyvin. Lodin tarkoista mitoista en ole varma, joten jätän ne kertomatta.",
+  "vastaus": "Jokiproomu on litteäpohjainen rahtialus, joka on tehty kuljettamaan raskasta tavaraa jokia pitkin. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös [[Peipsin]] aallot. Isoisän aikaan jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Tarttoon]] polttopuuta, hirsiä, heinää ja kalaa. Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesitie sopi tähän työhön hyvin. Lodin tarkoista mitoista en ole varma, joten jätän ne kertomatta.",
   "linkit": [
+   "Peipsin",
    "Tarttoon"
   ],
   "jatkot": [
@@ -2285,9 +2288,10 @@
   "kohde": "kohde:kaali",
   "kasite": "karstista",
   "kysymys": "Kerro lisää: karstista",
-  "vastaus": "Karsti tarkoittaa maisemaa, joka syntyy, kun vesi liuottaa kalkkikiven kaltaista kiveä. Liuotus voi synnyttää maanpinnalle kuoppia ja luolia, ja kuopaksi voi romahtaa myös luolan katto. Siksi karsti oli looginen ehdokas selittämään kraatterimaisia kuoppia, ennen kuin [[Ivan Reinvald]] osoitti Kaalin kraatterien olevan meteoriitin tekemiä. Karstin esiintymisestä Saarenmaalla en ole varma, joten jätän sen kertomatta.",
+  "vastaus": "Karsti tarkoittaa maisemaa, joka syntyy, kun vesi liuottaa kalkkikiven kaltaista kiveä. Liuotus voi synnyttää maanpinnalle kuoppia ja luolia, ja kuopaksi voi romahtaa myös luolan katto. Siksi karsti oli looginen ehdokas selittämään kraatterimaisia kuoppia, ennen kuin [[Ivan Reinvald]] osoitti Kaalin kraatterien olevan meteoriitin tekemiä. Karstin esiintymisestä [[Saarenmaalla]] en ole varma, joten jätän sen kertomatta.",
   "linkit": [
-   "Ivan Reinvald"
+   "Ivan Reinvald",
+   "Saarenmaalla"
   ],
   "jatkot": [
    "Millaisia luolia karstialueilla on?",
@@ -2298,8 +2302,9 @@
   "kohde": "kohde:kaali",
   "kasite": "Meteoriitti",
   "kysymys": "Kerro lisää: Meteoriitti",
-  "vastaus": "Meteoriitti on avaruudesta tullut kappale, joka osuu maanpintaan. Kaalin tapauksessa kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.",
+  "vastaus": "Meteoriitti on avaruudesta tullut kappale, joka osuu maanpintaan. [[Kaalin]] tapauksessa kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.",
   "linkit": [
+   "Kaalin",
    "Kaalin järvi"
   ],
   "jatkot": [
@@ -2857,9 +2862,10 @@
   "kohde": "kohde:ontika",
   "kasite": "kroonin",
   "kysymys": "Kerro lisää: kroonin",
-  "vastaus": "Kroon oli Viron rahayksikkö. Ensimmäinen kroon otettiin käyttöön vuonna 1928, ja se otettiin uudelleen käyttöön vuonna 1992. Vuonna 1992 kroon sidottiin [[Saksan markkaan]], ja Viro luopui siitä euron käyttöönoton yhteydessä vuonna 2011. Kroonin sata sentti jaettiin sentteihin. Setelissä oli Baltian klintti, ja kuvat valittiin edustamaan maan luontoa. Tarkoista kurssi- ja painotiedoista en ole varma.",
+  "vastaus": "Kroon oli Viron rahayksikkö. Ensimmäinen kroon otettiin käyttöön vuonna 1928, ja se otettiin uudelleen käyttöön vuonna 1992. Vuonna 1992 kroon sidottiin [[Saksan markkaan]], ja Viro luopui siitä euron käyttöönoton yhteydessä vuonna 2011. Kroonin sata sentti jaettiin sentteihin. Setelissä oli [[Baltian klintti]], ja kuvat valittiin edustamaan maan luontoa. Tarkoista kurssi- ja painotiedoista en ole varma.",
   "linkit": [
-   "Saksan markkaan"
+   "Saksan markkaan",
+   "Baltian klintti"
   ],
   "jatkot": [
    "Milloin Viro otti euron käyttöön?",
@@ -4374,9 +4380,10 @@
   "kohde": "kohde:hahmotelma-otepaa",
   "kasite": "Pühajärven",
   "kysymys": "Kerro lisää: Pühajärven",
-  "vastaus": "Pühajärv on Otepään ylängöllä sijaitseva järvi Otepään kaupungin tuntumassa. Nimi tarkoittaa viroksi pyhää järveä, ja suomeksi vastaava nimi olisi Pyhäjärvi. Järvi kuuluu Otepään kumpuilevaan järvimaisemaan, ja talvisin ympäristössä on latuja. Miksi järvi on saanut pyhän nimen, en ole varma. Järven pinta-alasta ja syvyydestä en myöskään voi antaa tarkkoja tietoja. Alue on osa [[Otepään ylängön]] järvialuetta, ja lähistöllä on Etelä-Viron suosittuja talviurheilupaikkoja.",
+  "vastaus": "Pühajärv on Otepään ylängöllä sijaitseva järvi Otepään kaupungin tuntumassa. Nimi tarkoittaa viroksi pyhää järveä, ja suomeksi vastaava nimi olisi Pyhäjärvi. Järvi kuuluu Otepään kumpuilevaan järvimaisemaan, ja talvisin ympäristössä on latuja. Miksi järvi on saanut pyhän nimen, en ole varma. Järven pinta-alasta ja syvyydestä en myöskään voi antaa tarkkoja tietoja. Alue on osa [[Otepään ylängön]] järvialuetta, ja lähistöllä on [[Etelä-Viron]] suosittuja talviurheilupaikkoja.",
   "linkit": [
-   "Otepään ylängön"
+   "Otepään ylängön",
+   "Etelä-Viron"
   ],
   "jatkot": [
    "Miten virolaiset ovat nähneet järvet pyhinä paikkoina?",
@@ -5364,7 +5371,7 @@
   "kohde": "kohde:hahmotelma-alatskivi",
   "kasite": "Alatskivin linna",
   "kysymys": "Kerro lisää: Alatskivin linna",
-  "vastaus": "Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja [[Nolckenin suku]] peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin [[Balmoral-linnan]] tyyliin. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa toimii säveltäjä [[Eduard Tubinin]] museo.",
+  "vastaus": "Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja [[Nolckenin suku]] peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin [[Balmoral-linnan]] tyyliin. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa toimii säveltäjä [[Eduard Tubinin]] museo.",
   "linkit": [
    "Nolckenin suku",
    "Balmoral-linnan",
@@ -7023,8 +7030,9 @@
   "kohde": "kohde:hahmotelma-sindi",
   "kasite": "Sindin",
   "kysymys": "Kerro lisää: Sindin",
-  "vastaus": "Sindi on pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille, ja tehtaan perusti riikalainen kauppias Johann Christoph Wöhrmann. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa pitkään ollut betoninen pato purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella. Kaupunki on siis esimerkki [[tehdasyhdyskunnasta]], jonka ympäristö on sittemmin saanut uutta elämää.",
+  "vastaus": "Sindi on pieni kaupunki [[Pärnun]] joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille, ja tehtaan perusti riikalainen kauppias Johann Christoph Wöhrmann. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään. Joessa pitkään ollut betoninen pato purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella. Kaupunki on siis esimerkki [[tehdasyhdyskunnasta]], jonka ympäristö on sittemmin saanut uutta elämää.",
   "linkit": [
+   "Pärnun",
    "tehdasyhdyskunnasta"
   ],
   "jatkot": [
@@ -7194,8 +7202,9 @@
   "kohde": "kohde:hahmotelma-kunda",
   "kasite": "salakuljetuksen",
   "kysymys": "Kerro lisää: salakuljetuksen",
-  "vastaus": "Salakuljetuksella tarkoitetaan tavaroiden kuljettamista rajan yli tullia kiertäen tai kielletyn kaupan vuoksi. Syynä voi olla tullimaksujen välttäminen tai se, että tavara on kielletty tai säännelty. Merenrannikot ovat vanhastaan olleet salakuljetukselle otollisia, koska pienellä veneellä on helppo päästä rantaan huomaamatta. Suomenlahdella tunnettu ajanjakso oli Suomen [[kieltolaki]] vuosina 1919–1932, jolloin viinaa tuotiin laittomasti meritse muun muassa Virosta. Salakuljetuksen torjuntaa varten perustettiin erityisiä tullivartioita ja merivartiointia.",
+  "vastaus": "Salakuljetuksella tarkoitetaan tavaroiden kuljettamista rajan yli tullia kiertäen tai kielletyn kaupan vuoksi. Syynä voi olla tullimaksujen välttäminen tai se, että tavara on kielletty tai säännelty. Merenrannikot ovat vanhastaan olleet salakuljetukselle otollisia, koska pienellä veneellä on helppo päästä rantaan huomaamatta. [[Suomenlahdella]] tunnettu ajanjakso oli Suomen [[kieltolaki]] vuosina 1919–1932, jolloin viinaa tuotiin laittomasti meritse muun muassa Virosta. Salakuljetuksen torjuntaa varten perustettiin erityisiä tullivartioita ja merivartiointia.",
   "linkit": [
+   "Suomenlahdella",
    "kieltolaki"
   ],
   "jatkot": [
@@ -7264,9 +7273,10 @@
   "kohde": "kohde:hahmotelma-rapina",
   "kasite": "pergamentin",
   "kysymys": "Kerro lisää: pergamentin",
-  "vastaus": "Pergamentti on eläinten nahasta valmistettu kirjoitusalusta. Raaka-aineena käytettiin yleensä vasikan, lampaan tai vuohen nahkaa, joka liotettiin kalkkiliuoksessa, kaavittiin, venytettiin kehykseen ja kuivatettiin. Hienoin ja ohuin laatu valmistettiin vasikannahasta, ja sitä kutsutaan myös nimellä vellum. Pergamenttia käytettiin keskiajan [[käsikirjoituksissa]], joita kopioitiin luostareissa käsin. Se oli kestävää mutta kallista, sillä yhden kirjan valmistamiseen tarvittiin suuri määrä eläinten nahkoja. Siksi paperi, joka oli huomattavasti halvempaa, syrjäytti pergamentin vähitellen kirjojen materiaalina. Pergamenttia käytetään yhä erityisissä juhlallisissa asiakirjoissa.",
+  "vastaus": "Pergamentti on eläinten nahasta valmistettu kirjoitusalusta. Raaka-aineena käytettiin yleensä vasikan, lampaan tai vuohen nahkaa, joka liotettiin kalkkiliuoksessa, kaavittiin, venytettiin kehykseen ja kuivatettiin. Hienoin ja ohuin laatu valmistettiin vasikannahasta, ja sitä kutsutaan myös nimellä vellum. Pergamenttia käytettiin keskiajan [[käsikirjoituksissa]], joita kopioitiin [[luostareissa]] käsin. Se oli kestävää mutta kallista, sillä yhden kirjan valmistamiseen tarvittiin suuri määrä eläinten nahkoja. Siksi paperi, joka oli huomattavasti halvempaa, syrjäytti pergamentin vähitellen kirjojen materiaalina. Pergamenttia käytetään yhä erityisissä juhlallisissa asiakirjoissa.",
   "linkit": [
-   "käsikirjoituksissa"
+   "käsikirjoituksissa",
+   "luostareissa"
   ],
   "jatkot": [
    "Miten luostareissa kopioitiin käsikirjoituksia?",
@@ -7362,8 +7372,9 @@
   "kohde": "kohde:hahmotelma-rapina",
   "kasite": "Marian",
   "kysymys": "Kerro lisää: Marian",
-  "vastaus": "Maria on kristinuskossa Jeesuksen äiti. Luukkaan ja Matteuksen evankeliumien mukaan hän oli nuori nainen Nasaretista, jolle enkeli ilmoitti, että hän synnyttää pojan. Maria on erityisen tärkeä katolisessa ja ortodoksisessa kirkossa, joissa häntä kunnioitetaan rukouksin ja juhlapäivin, kun taas luterilaisessa perinteessä hänen asemansa on vaatimattomampi. Hänen kohtaamisensa Elisabetin kanssa on yksi Luukkaan evankeliumin tunnetuimmista kohtauksista. Maria on myös hyvin yleinen aihe eurooppalaisessa taiteessa, ja lukemattomat kirkot ovat saaneet hänen nimensä. Maaliskuun lopulla vietetään [[Marianpäivää]], joka liittyy hänelle tehtyyn ilmoitukseen.",
+  "vastaus": "Maria on kristinuskossa Jeesuksen äiti. Luukkaan ja Matteuksen evankeliumien mukaan hän oli nuori nainen Nasaretista, jolle enkeli ilmoitti, että hän synnyttää pojan. Maria on erityisen tärkeä katolisessa ja ortodoksisessa kirkossa, joissa häntä kunnioitetaan rukouksin ja juhlapäivin, kun taas luterilaisessa perinteessä hänen asemansa on vaatimattomampi. Hänen kohtaamisensa [[Elisabetin]] kanssa on yksi Luukkaan evankeliumin tunnetuimmista kohtauksista. Maria on myös hyvin yleinen aihe eurooppalaisessa taiteessa, ja lukemattomat kirkot ovat saaneet hänen nimensä. Maaliskuun lopulla vietetään [[Marianpäivää]], joka liittyy hänelle tehtyyn ilmoitukseen.",
   "linkit": [
+   "Elisabetin",
    "Marianpäivää"
   ],
   "jatkot": [
@@ -7375,8 +7386,9 @@
   "kohde": "kohde:hahmotelma-kardla",
   "kasite": "rannikkoruotsalaiseen",
   "kysymys": "Kerro lisää: rannikkoruotsalaiseen",
-  "vastaus": "Rannikkoruotsalaiset ovat ruotsinkielinen väestö, joka on asunut Viron länsirannikolla ja saarilla vuosisatojen ajan. Asutusta oli muun muassa Hiidenmaalla, [[Vormsissa]] ja Noarootsissa, ja heidän kulttuurinsa, murteensa ja tapansa erosivat naapurikylien virolaisista. Elinkeinoina olivat kalastus, merenkulku ja maanviljely. Suurin osa rannikkoruotsalaisista lähti Ruotsiin toisen maailmansodan lopulla vuonna 1944 pakoon Neuvostoliiton armeijan etenemistä. Heidän jälkeläisiään asuu nykyään pääasiassa Ruotsissa. Menneisyydestä muistuttavat paikannimet, kirkot ja Kärdlan kaltaisten paikkojen ruotsinkieliset nimet.",
+  "vastaus": "Rannikkoruotsalaiset ovat ruotsinkielinen väestö, joka on asunut Viron länsirannikolla ja saarilla vuosisatojen ajan. Asutusta oli muun muassa [[Hiidenmaalla]], [[Vormsissa]] ja Noarootsissa, ja heidän kulttuurinsa, murteensa ja tapansa erosivat naapurikylien virolaisista. Elinkeinoina olivat kalastus, merenkulku ja maanviljely. Suurin osa rannikkoruotsalaisista lähti Ruotsiin toisen maailmansodan lopulla vuonna 1944 pakoon Neuvostoliiton armeijan etenemistä. Heidän jälkeläisiään asuu nykyään pääasiassa Ruotsissa. Menneisyydestä muistuttavat paikannimet, kirkot ja Kärdlan kaltaisten paikkojen ruotsinkieliset nimet.",
   "linkit": [
+   "Hiidenmaalla",
    "Vormsissa"
   ],
   "jatkot": [
@@ -7474,8 +7486,9 @@
   "kohde": "kohde:hahmotelma-kardla",
   "kasite": "Heltermaahan",
   "kysymys": "Kerro lisää: Heltermaahan",
-  "vastaus": "Heltermaa on satama Hiidenmaan itärannalla, ja se on saaren tärkein yhteys mantereelle. Sieltä lähtee lautta Rohukülaan Länsi-Viron rannikolle, ja sataman kautta kulkee suuri osa saaren matkailijoista ja tavaraliikenteestä. Satamasta on matkaa saaren pääkaupunkiin Kärdlaan noin parikymmentä kilometriä. [[Hiidenmaa]] on harvaan asuttu saari, jonka luonto, rannat ja majakat houkuttelevat matkailijoita. Lauttojen aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa.",
+  "vastaus": "Heltermaa on satama Hiidenmaan itärannalla, ja se on saaren tärkein yhteys mantereelle. Sieltä lähtee lautta [[Rohukülaan]] Länsi-Viron rannikolle, ja sataman kautta kulkee suuri osa saaren matkailijoista ja tavaraliikenteestä. Satamasta on matkaa saaren pääkaupunkiin Kärdlaan noin parikymmentä kilometriä. [[Hiidenmaa]] on harvaan asuttu saari, jonka luonto, rannat ja majakat houkuttelevat matkailijoita. Lauttojen aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa.",
   "linkit": [
+   "Rohukülaan",
    "Hiidenmaa"
   ],
   "jatkot": [
