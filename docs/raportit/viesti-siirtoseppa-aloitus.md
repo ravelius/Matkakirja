@@ -4,5 +4,5 @@ Olet Siirtoseppä (Opus, high), checkout /Users/Shared/Claude/Matkakirja-siirtos
 siirtoseppa/luovutus-20261010-paiva && git pull`. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus
 docs/raportit/viesti-siirtoseppa-luovutus-20261010-iltapaiva.md KOKONAAN ja toimi sen mukaan. Proto-worktree
 /Users/Shared/Claude/wt/proto-siirtoseppa-kello (haara siirtoseppa/historia-suoja 1210b674e, juna 176:n kärki, puhdas). Taustalla ei ole
-ajoja. Erä 2 (palatsiraja) valmis 99b9fead3, odottaa PT:n kuittausta; seuraava tehtävä PT:ltä. NOLLAUSRAJA 50 %. Viestit Fablelle (PT) vain valmis
+ajoja. Erä 2 (palatsiraja) 99b9fead3 kuitattu junaan 178 (Natiiviseppä kokoaa); oma jono tyhjä, seuraava tehtävä PT:ltä. NOLLAUSRAJA 50 %. Viestit Fablelle (PT) vain valmis
 erä, jumi tai kysymys, enintään 8 riviä. Kuittaa PT:lle yhdellä rivillä.
