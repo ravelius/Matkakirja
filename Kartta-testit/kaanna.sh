@@ -14,9 +14,11 @@
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
 cd "$(dirname "$0")"
-R=/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/Resources/Scripting
-DN=$R/NetCoreRuntime/dotnet
-REF=$R/NetCoreRuntime/shared/Microsoft.NETCore.App/6.0.21
+# Editori ja versiomääritteet projektin ProjectVersion.txt:n mukaan (Julkaisija 10.10.2026, omistaja: 6.7 päälinjaksi).
+R=$(zsh /Users/Shared/Claude/proto-3d/tyokalut/unity-polku.sh --hakemisto "$(git rev-parse --show-toplevel)")/Unity.app/Contents/Resources/Scripting
+K63=/Applications/Unity/Hub/Editor/6000.3.24f1/Unity.app/Contents/Resources/Scripting   # kääntäjäketju 6.3:sta (6.7:ssä eri rakenne)
+DN=$K63/NetCoreRuntime/dotnet
+REF=$K63/NetCoreRuntime/shared/Microsoft.NETCore.App/6.0.21
 mkdir -p rakennus
 VIITTEET=""
 for f in "$REF"/*.dll; do case "$(basename "$f")" in Microsoft.VisualBasic*|mscorlib.dll|netstandard.dll|System.Private.*) ;; *) VIITTEET="$VIITTEET -r:$f";; esac; done
@@ -77,7 +79,7 @@ LAHTEET="
 ../Assets/Matkakirja/Linssit/Ydin/Maat/MaaOsuma.cs
 ../Assets/Matkakirja/Linssit/Ydin/Maat/MaatAineisto.cs
 "
-$DN "$R/DotNetSdkRoslyn/csc.dll" -nologo -nowarn:1701,1702 -langversion:9.0 -nullable:disable -target:exe \
+$DN "$K63/DotNetSdkRoslyn/csc.dll" -nologo -nowarn:1701,1702 -langversion:9.0 -nullable:disable -target:exe \
   -out:rakennus/KarttaTestit.dll $VIITTEET $(find Testit -name '*.cs') \
   $(printf '%s\n' $LAHTEET | sort -u)
 cat > rakennus/KarttaTestit.runtimeconfig.json <<J
