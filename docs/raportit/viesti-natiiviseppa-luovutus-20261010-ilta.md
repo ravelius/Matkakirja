@@ -65,3 +65,12 @@ Taustalla EI omia ajoja (cron 440f4d6d katoaa nollauksessa).
 - Juna 180 = 44af9cda2 (+ NUI 0cabed3f3, Siirtoseppä v47d b51f3aefb; v47d ei lisää muistia). Lukitus odottaa: LS1:n esittelypakan korjaus (yksi SHA, ⊃ NUI 81a694496)
   ja PT:n kuittausta Siirtosepän läpipeluu-vahdeille 25fe0ce70 (Kuuntele-nappi + pankkiäänien rekisteröinti, puhdas merge). Laiturin sininen pinta → 181 (LR).
 - JUNA 181 -jono: LS1 eca61364a (kipin linjaus 2), Pelikoodari latausmusiikki 04d98a0b9 (pallon omat latausraidat; äänet Julkaisijan viennin kautta).
+
+## TILA 10.10. 23.10 — BUILD 180 LUKITTU
+- **BUILD 180 = 04c2af3649b06fca077cd659db6e4c107c6c70d4** (proton master; juna/b13 9caa3d49b = juna-180 521663ace + NUI lataus-poistu b1735b24e; puu identtinen;
+  L1354/P470/K461, unity 0, tarkista ok; käännöspalvelu KÄÄNNETTY 6e60172cd 23:10). juna.log-rivi ja peilit tehty. Muutosloki julkaisija-tyokalut/muutosloki-180.txt.
+- SHA Julkaisijalle; Mac-käännös odottaa Julkaisijan NYT:iä (mac-kaanna.sh 04c2af364 1.1 180, BUNDLE_ID fi.matkakirja.peli, APPSTORE=1), sitten
+  kopio lokit/natiiviseppa-mac-tf-180-04c2af36 ja simu-.app vahdin jälkeen kopioi-juna-app.sh 1.1.180 04c2af364. TF 180 → rivi PT:lle.
+- Kaava: scratchpad d669b7e8…/{lukitse180-a.sh, lukitse180-b.sh, build180-viesti.txt}.
+- SEURAAVAKSI: akku- ja lämpömittaus TF 180:llä (PT 21.0x); juna 181 -jono: LS1 eca61364a, Pelikoodari 04d98a0b9, laiturin rantakivimalli (LR).
+  Proto-worktree proto-natiiviseppa-tyokalut voidaan poistaa (todistusajo-kuittaus nyt masterissa) — grep viittaukset ensin.
