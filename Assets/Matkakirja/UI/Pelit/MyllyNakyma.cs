@@ -566,6 +566,7 @@ namespace Matkakirja.Natiivi
                 SijoitaOtsikko(w / 2f, ylin, w - t.x - t.z);
                 paneeli.style.left = t.x + m; paneeli.style.right = t.z + m; paneeli.style.width = StyleKeyword.Auto;
                 paneeli.style.top = yla + koko + m; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.maxHeight = StyleKeyword.Null;
             }
             else
             {
@@ -575,7 +576,10 @@ namespace Matkakirja.Natiivi
                 Sijoita(lauta, vasen, ylin + oKork, koko, koko);
                 SijoitaOtsikko(vasen + koko / 2f, ylin, koko);
                 paneeli.style.left = StyleKeyword.Auto; paneeli.style.right = t.z + m; paneeli.style.width = pw;
-                paneeli.style.top = ylin + oKork; paneeli.style.bottom = StyleKeyword.Auto;
+                // Oikea palsta ylimmästä kohdasta (otsikko on vain laudan yläpuolella) ja enintään turva-alueen alareunaan
+                // (asettelutesti 10.10.2026: iPhone vaaka, Säännöt/Luovuta/Poistu y 384–429 ruudun alareunan alla).
+                paneeli.style.top = ylin; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.maxHeight = Mathf.Max(0f, h - ylin - t.w - m);
             }
         }
 
