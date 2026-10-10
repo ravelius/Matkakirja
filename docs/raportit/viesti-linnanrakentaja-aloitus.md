@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 15.3x)
+# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 17.5x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,11 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (10.10. 15.3x, nollaus):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltapaiva.md` KOKONAAN ja toimi sen lopun
+1. **NYT (10.10. 17.5x, nollaus 52 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltapaiva.md` KOKONAAN (erityisesti
+   loppuosiot "JATKO 15.3x–15.5x" ja "JATKO 15.5x–17.1x" + jatkorivit). Valmiit: NL-sali v2d ja v2e (varjot, LS1 kytkee), Olavinlinna v47b
+   (Siirtoseppä kytkenyt), ND v5b (LS2 mitannut, omistajan päätös). Ei taustaajoja eikä worktreetä auki. Odottaa: omistajan ND-päätös,
+   LS1:n v2e-kytkentä/palaute, Siirtosepän rannan kuvapari. Seuraava: PT:n jono.
+1u. **(vanha) 10.10. 15.3x, nollaus:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltapaiva.md` KOKONAAN ja toimi sen lopun
    järjestyksessä: NL-sali v2d loppuun (tuotanto → _valmiit/taidemuseo-alankomaat-v2d → LS1), Olavinlinna-erä (rantakivi-pinta Siirtosepän kanssa,
    paalun leikkaus), LS2:n ND v4d -mittaus ja Peking v3 -pari.
 1v. **(vanha) 10.10. 15.0x:** lue luovutuksen `viesti-linnanrakentaja-luovutus-20261010-paiva.md` loppuosiot "TAUON JÄLKEEN 14.1x–15.0x" ja
