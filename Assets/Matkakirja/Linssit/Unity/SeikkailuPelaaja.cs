@@ -624,7 +624,13 @@ namespace Matkakirja.Natiivi
 
         KavelySyote LueSyote()
         {
-            if (Time.unscaledTime < TestiLoppuu) return Testi;
+            if (Time.unscaledTime < TestiLoppuu) { testiKaynnissa = true; return Testi; }
+            if (testiKaynnissa)
+            {
+                // Testisyötteen loppu (poikki kavely tapit): paikka, silmät ja maassaolo lokiin (A2: kamera seinän/holvin sisällä).
+                testiKaynnissa = false;
+                Debug.Log($"MATKAKIRJA seikkailu: testisyöte loppui, paikka {transform.position}, silmät {olka.position}, katse {kavely.KameraYaw:F0}/{kavely.KameraPitch:F0}, maassa {cc.isGrounded}");
+            }
             var s = new KavelySyote();
             var kb = Keyboard.current;
             if (kb != null)
@@ -678,6 +684,7 @@ namespace Matkakirja.Natiivi
             if (SeikkailuKasittely.Kaynnissa) { s.HiiriX = s.HiiriY = 0; s.KatseX = s.KatseY = 0; }   // käsittely käsin: katse paikallaan
             return s;
         }
+        bool testiKaynnissa;
         static bool tapitHaettu; static System.Reflection.PropertyInfo tapVasen, tapOikea; static System.Reflection.MethodInfo tapKatse;
 
         /// <summary>Katseen syöte asteina ilman pelaajaa (veneessä): x kääntö oikealle, y nosto ylös — hiiri (oikea pohjassa tai lukittu),
