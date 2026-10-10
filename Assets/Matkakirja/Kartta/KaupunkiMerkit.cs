@@ -72,7 +72,7 @@ namespace Matkakirja
             LinssiTila = paalla;
             foreach (var m in merkit) Tyyli(m);
             PaivitaRenkaat();
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
             Debug.Log($"MATKAKIRJA kaupungit: linssinimet {(paalla ? "päälle" : "pois")} ({merkit.Count} merkkiä)");
         }
 
@@ -180,7 +180,7 @@ namespace Matkakirja
         public void NaytaVain(ICollection<string> kaupungit)
         {
             suodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
         }
         HashSet<string> suodatin;
 
@@ -194,7 +194,7 @@ namespace Matkakirja
         public void PeliSuodatin(ICollection<string> kaupungit)
         {
             peliSuodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
         }
         HashSet<string> peliSuodatin;
 
@@ -212,7 +212,7 @@ namespace Matkakirja
                 m.himmea = h;
                 AsetaPisteenVari(m);
             }
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
         }
         HashSet<string> himmeat;
         const float HimmeanPeitto = 0.4f;
@@ -319,7 +319,7 @@ namespace Matkakirja
             AsetaPisteenVari(m);
             float k = vari.HasValue ? 1.5f : 1f;
             m.pisteT.localScale = new Vector3(m.pisteKoko * k, m.pisteKoko * k, 1);
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
         }
         MaterialPropertyBlock korostusLohko;
 
@@ -397,7 +397,7 @@ namespace Matkakirja
                     if (!string.IsNullOrEmpty(id)) rengasIdt.Add(id);
             rengasValittu = valittu;
             PaivitaRenkaat();
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
         }
 
         readonly HashSet<string> rengasIdt = new HashSet<string>();
@@ -482,7 +482,7 @@ namespace Matkakirja
             etusija.Clear();
             if (kohteet != null) foreach (var k in kohteet) if (!string.IsNullOrEmpty(k)) etusija.Add(k);
             PaivitaJarjestys();
-            PallonLepo.Muuttui("kaupungit");
+            Likaa();
         }
         string omaKaupunki;
         readonly HashSet<string> etusija = new HashSet<string>();
@@ -788,7 +788,7 @@ namespace Matkakirja
                 kohteet[i].pinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
                 kohteet[i].pohjaKorkeus = korkeudet[i];
             }
-            PallonLepo.Valmistui("kaupungit");
+            likainen = true; PallonLepo.Valmistui("kaupungit");
         }
 
         /// <summary>Tärkeys 0–2 merkin tyyliä varten: paketin 1.2-kenttä tai vanha päättely.</summary>
@@ -858,7 +858,7 @@ namespace Matkakirja
             valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
             merkit.AddRange(valmiit);
             PaivitaRenkaat();
-            PallonLepo.Valmistui("kaupungit");
+            likainen = true; PallonLepo.Valmistui("kaupungit");
             Debug.Log($"MATKAKIRJA kaupungit: {merkit.Count} merkkiä, tärkeys {(paketinTarkeys ? "paketista" : "päätelty")}");
         }
 
@@ -876,14 +876,18 @@ namespace Matkakirja
         Merkki Osuma(Vector2 ruutu)
         {
             // Linssinimet ovat pelkkää karttaa: pisteitä ja nimiä ei voi napauttaa.
-            if (LinssiTila) return null;
+            if (LinssiTila || kamera == null) return null;
             float kerroin = PalloKierto.Pistekerroin;
             Merkki paras = null;
             float parasEtaisyys = float.MaxValue;
+            // PALLOMERKIT IRTI (LS1 10.10.): näkyvyys ja ruutupiste lasketaan tuoreesta pinnan pisteestä ja tämän hetken
+            // kamerasta (sama ehto kuin LateUpdatessa), ei juuren edellisen päivityksen paikasta tai aktiivisuudesta.
+            var kt = kamera.transform;
+            var gt = georeferenssi.transform;
+            var kalusteet = Kalusteet?.Invoke();
             foreach (var m in merkit)
             {
-                if (!m.juuri.gameObject.activeSelf) continue; // suodatetut ja takapuolen merkit ovat pois
-                Vector3 p = kamera.WorldToScreenPoint(m.juuri.position);
+                if (!Nakyvissa(m, kt, gt, kalusteet, out Vector3 p)) continue; // suodatetut ja takapuolen merkit
                 float d = Vector2.Distance(ruutu, p);
                 // Huomiorenkaan sisällä napautus osuu (raja suurempi säteistä: rengas 27 pt, osumaSade 44 pt).
                 float raja = m.rengas != null && m.rengas.gameObject.activeSelf ? Mathf.Max(osumaSade, rengasSade) * kerroin : osumaSade * kerroin;
@@ -892,6 +896,37 @@ namespace Matkakirja
                 if (d < raja && d < parasEtaisyys) { parasEtaisyys = d; paras = m; }
             }
             return paras;
+        }
+
+        /// <summary>Merkin näkyvyys ja ruutupiste tämän hetken kamerasta (LateUpdaten ehto; osumat).</summary>
+        bool Nakyvissa(Merkki m, Transform kt, Transform gt, IReadOnlyList<Ruutulaatikko> kalusteet, out Vector3 ruutu)
+        {
+            Vector3 paikka = gt.TransformPoint(m.pinta + m.normaali * KorkeusKerroin.Lisays(m.kaupunki.korkeus));
+            Vector3 kohti = kt.position - paikka;
+            ruutu = kamera.WorldToScreenPoint(paikka);
+            float etaisyys = kohti.magnitude;
+            if (etaisyys <= 0f) return false;
+            return (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && Suodatettu(m.kaupunki.id)
+                && MerkkiPaivitys.Edessa(Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys))
+                && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));
+        }
+
+        /// <summary>Merkkien tila muuttui (renkaat, suodattimet, tyyli): seuraava LateUpdate päivittää, vaikka kehys jäisi piirtämättä.</summary>
+        void Likaa()
+        {
+            likainen = true;
+            PallonLepo.Muuttui("kaupungit");
+        }
+
+        bool paivitetty, likainen;
+        MerkkiPaivitys.Asento viimeAsento;
+
+        MerkkiPaivitys.Asento Asento(Transform kt, Transform gt)
+        {
+            Vector3 p = kt.position;
+            Quaternion q = kt.rotation;
+            return new MerkkiPaivitys.Asento(p.x, p.y, p.z, q.x, q.y, q.z, q.w, kamera.fieldOfView, kamera.aspect,
+                Screen.width, Screen.height, PalloKierto.Pistekerroin, KorkeusKerroin.Arvo, gt.localToWorldMatrix.GetHashCode());
         }
 
         string valittu;
@@ -932,12 +967,17 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (merkit.Count == 0 || kamera == null) return;
-            // Kehyksen hinta (Pelikoodari 25.9.): kehystä ei piirretä (Ruudunpaivitys PAIKALLAAN, 59/60) → ei ladontaa.
-            // Kamera ja näkymä ovat silloin levossa, joten edellinen ladonta on voimassa; Nimikerros ohittaa samat kehykset,
-            // joten yhteiset Varaukset pysyvät yhtenäisinä. Säästö levossa ~0,25 ms/kehys (kehyksen-hinta-20260925.md).
-            if (!UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender) return;
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
+            // Kehyksen hinta (Pelikoodari 25.9.): kehystä ei piirretä (Ruudunpaivitys PAIKALLAAN, 59/60) → ei ladontaa.
+            // Säästö levossa ~0,25 ms/kehys (kehyksen-hinta-20260925.md). PALLOMERKIT IRTI (omistaja TF 176, LS1 10.10.):
+            // ohitus vain, kun mikään merkkien paikkaan vaikuttava ei ole muuttunut edellisen PÄIVITYKSEN jälkeen
+            // (MerkkiPaivitys): muuten laitteen piirtämä kehys, jonka willCurrentFrameRender luuli piirtämättömäksi, jätti
+            // merkit vanhoihin paikkoihin (takapuolen merkit näkyviin, osumat ohi).
+            var asento = Asento(kt, gt);
+            if (!MerkkiPaivitys.Paivitetaanko(UnityEngine.Rendering.OnDemandRendering.willCurrentFrameRender, paivitetty, likainen,
+                    asento, viimeAsento)) return;
+            paivitetty = true; likainen = false; viimeAsento = asento;
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             // Retina-näytöllä yksi piste on 2–3 pikseliä; mitoitus tehdään pisteinä.
             float kerroin = PalloKierto.Pistekerroin;
@@ -983,7 +1023,7 @@ namespace Matkakirja
                 // Aloitusportissa (PalloKierto.PorttiSumea) ei merkkejä eikä nimiöitä, kuten webin etusivupallossa.
                 Vector3 ruutu = kamera.WorldToScreenPoint(paikka);
                 bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && Suodatettu(m.kaupunki.id)
-                    && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f
+                    && MerkkiPaivitys.Edessa(Vector3.Dot(normaali, kohti / etaisyys))
                     // Löydös 164 jatko (Fable 26.9.): kalusteen (kartussi, Liiku, pulu, yläpalkki) alle jäävä piste ja sen
                     // nimi piiloon; valittavan kaupungin merkki näkyy aina.
                     && ((m.valintamerkki && !LinssiTila) || !KalusteenAlla(kalusteet, ruutu));

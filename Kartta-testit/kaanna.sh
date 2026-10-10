@@ -54,6 +54,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MaastoLaatat.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
+../Assets/Matkakirja/Kartta/MerkkiPaivitys.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/PakettiPaatokset.cs
