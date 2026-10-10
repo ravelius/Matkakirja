@@ -37,12 +37,20 @@ namespace Matkakirja.Editori
             ("mac-1280x800", "2560,1600,0,0,2560,1600,2,1,1"),
         };
 
-        /// <summary>MATKAKIRJA_ASETTELU_KOOT="mac" (tai "iphone,ipad"): vain nimen alulla valitut koot; tyhjä = kaikki (alustetaan KaikkiKoot-taulun jälkeen).</summary>
-        static readonly (string Nimi, string Arvo)[] Koot = KaikkiKoot.Where(k =>
+        /// <summary>MATKAKIRJA_ASETTELU_KOOT="mac" (tai "iphone,ipad"): vain nimen alulla valitut koot pyynnön järjestyksessä (sama koko
+        /// voi toistua: "iphone-pysty,iphone-pysty"); tyhjä = kaikki (alustetaan KaikkiKoot-taulun jälkeen).</summary>
+        static readonly (string Nimi, string Arvo)[] Koot = Suodata(KaikkiKoot, "MATKAKIRJA_ASETTELU_KOOT", k => k.Nimi);
+
+        /// <summary>MATKAKIRJA_ASETTELU_NAKYMAT="maakortti" (nimen alut pilkuin): vain nämä isot näkymät, ilman Kysy-, nosto- ja
+        /// HUD-vaiheita (nopea toisto); tyhjä = kaikki.</summary>
+        static readonly string[] NakymaSuodatin = (Environment.GetEnvironmentVariable("MATKAKIRJA_ASETTELU_NAKYMAT") ?? "")
+            .Split(',').Select(a => a.Trim()).Where(a => a.Length > 0).ToArray();
+
+        static T[] Suodata<T>(T[] kaikki, string muuttuja, Func<T, string> nimi)
         {
-            var v = Environment.GetEnvironmentVariable("MATKAKIRJA_ASETTELU_KOOT");
-            return string.IsNullOrWhiteSpace(v) || v.Split(',').Any(a => a.Trim().Length > 0 && k.Nimi.StartsWith(a.Trim(), StringComparison.Ordinal));
-        }).ToArray();
+            var v = (Environment.GetEnvironmentVariable(muuttuja) ?? "").Split(',').Select(a => a.Trim()).Where(a => a.Length > 0).ToArray();
+            return v.Length == 0 ? kaikki : v.SelectMany(a => kaikki.Where(k => nimi(k).StartsWith(a, StringComparison.Ordinal))).ToArray();
+        }
 
         static void SuljeMaakortti() { var k = UiNakymat.Hae().Kartuscha; k.Sulje(); k.Testaa(null, false); }
 
@@ -174,7 +182,9 @@ namespace Matkakirja.Editori
             Kirjaa($"-- kuva {tiedosto} (kerroksia {dokut.Count}, piirtyneitä {piirtyneet}{(ohitetut.Count > 0 ? ", eri kokoiset " + string.Join(" ", ohitetut) : "")})");
         }
 
-        static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
+        static bool OsaanKuuluu(string nimi) =>
+            (NakymaSuodatin.Length == 0 || NakymaSuodatin.Any(a => nimi.StartsWith(a, StringComparison.Ordinal)))
+            && (Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna"));
 
         public static void Aja()
         {
@@ -245,7 +255,7 @@ namespace Matkakirja.Editori
                     {
                         // Linnan osa alkaa suoraan isoista näkymistä (vain LinnanNakymat), sitten linnan HUD.
                         nakymaNro = 0;
-                        Siirry(Osa == "linna" ? Vaihe.Nakyma : Vaihe.Kysy);
+                        Siirry(Osa == "linna" || NakymaSuodatin.Length > 0 ? Vaihe.Nakyma : Vaihe.Kysy);
                     }
                     else if (Kulunut > 120) { Virhe("Play-tila ei käynnistynyt 120 s:ssa"); Siirry(Vaihe.Lopeta); }
                     break;
