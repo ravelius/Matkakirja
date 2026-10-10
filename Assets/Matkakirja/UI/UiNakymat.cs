@@ -447,7 +447,7 @@ namespace Matkakirja.Natiivi
             Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
             Wiki = new WikiIkkuna(kerros); // kaikkien edellisten päälle (sama kerros, myöhemmin; avaus tuo eteen)
-            Saapumiskortti = new Saapumiskortti(kerros, () => Tilarivi.Alareuna); // karttaruudun päälle, myös lennon kaistaleen
+            Saapumiskortti = new Saapumiskortti(kerros); // koko ruudun päälle yläreunaa myöten (omistaja TF 176)
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             LiputIso.Lataa();   // isojen lippujen luettelo (terävyys 9.10.2026)
             KuvatIso.Lataa();   // suurennoksen 2048 px kuvien luettelo (terävyys 9.10.2026)
