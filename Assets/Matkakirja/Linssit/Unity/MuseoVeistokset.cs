@@ -48,9 +48,17 @@ namespace Matkakirja.Natiivi
             }
             var halutut = new HashSet<string>(VeistosValinta.Valitse(ehdokkaat));
             foreach (var id in new List<string>(ladatut.Keys)) if (!halutut.Contains(id)) Pura(id);
+            // Yksi lataus kerrallaan, lähin ensin (iPad 10.10.: kaksi rinnakkaista GLB-lukua kasvatti Unityn hallittua kekoa ~100 Mt,
+            // joka ei palaudu käyttöjärjestelmälle; peräkkäin huippu on yhden patsaan verran).
+            if (haussa.Count > 0) return;
+            Veistospaikka lahin = null; double lahinEtaisyys = double.MaxValue;
             foreach (var p in paikat)
-                if (p?.Patsas != null && halutut.Contains(p.Patsas) && !ladatut.ContainsKey(p.Patsas) && haussa.Add(p.Patsas))
-                    StartCoroutine(Lataa(p.Patsas, p.Isa));
+            {
+                if (p?.Patsas == null || p.Isa == null || !halutut.Contains(p.Patsas) || ladatut.ContainsKey(p.Patsas)) continue;
+                double e = Vector3.Distance(kp, p.Isa.position);
+                if (e < lahinEtaisyys) { lahin = p; lahinEtaisyys = e; }
+            }
+            if (lahin != null && haussa.Add(lahin.Patsas)) StartCoroutine(Lataa(lahin.Patsas, lahin.Isa));
         }
 
         IEnumerator Lataa(string id, Transform isa)
@@ -64,18 +72,25 @@ namespace Matkakirja.Natiivi
             haussa.Remove(id);
             if (tyo.IsFaulted || tyo.Result.Osat.Count == 0 || isa == null) { puuttuu.Add(id); Kirjaa?.Invoke($"museo: patsas {id} glb-virhe {tyo.Exception?.InnerException?.Message}"); yield break; }
             var osa = tyo.Result.Osat[0];
+            glb = null;
             int n = osa.Paikat.Length / 3;
+            // Verkko suoraan GLB:n float-tauluista omina virtoinaan (ei Vector3-välitaulukoita hallittuun kekoon).
             var mesh = new Mesh { name = "Patsas " + id, indexFormat = n > 65000 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
-            var p = new Vector3[n]; var nn = new Vector3[n]; var uv = new Vector2[n];
-            for (int i = 0; i < n; i++)
+            var attr = new List<VertexAttributeDescriptor> { new VertexAttributeDescriptor(VertexAttribute.Position, VertexAttributeFormat.Float32, 3, 0) };
+            bool normaalit = osa.Normaalit != null && osa.Normaalit.Length == 3 * n, uvt = osa.Uv != null && osa.Uv.Length == 2 * n;
+            if (normaalit) attr.Add(new VertexAttributeDescriptor(VertexAttribute.Normal, VertexAttributeFormat.Float32, 3, attr.Count));
+            if (uvt) attr.Add(new VertexAttributeDescriptor(VertexAttribute.TexCoord0, VertexAttributeFormat.Float32, 2, attr.Count));
+            mesh.SetVertexBufferParams(n, attr.ToArray());
+            mesh.SetVertexBufferData(osa.Paikat, 0, 0, 3 * n, 0);
+            if (normaalit) mesh.SetVertexBufferData(osa.Normaalit, 0, 0, 3 * n, 1);
+            if (uvt)
             {
-                p[i] = new Vector3(osa.Paikat[3 * i], osa.Paikat[3 * i + 1], osa.Paikat[3 * i + 2]);
-                if (osa.Normaalit != null) nn[i] = new Vector3(osa.Normaalit[3 * i], osa.Normaalit[3 * i + 1], osa.Normaalit[3 * i + 2]);
-                if (osa.Uv != null) uv[i] = new Vector2(osa.Uv[2 * i], 1f - osa.Uv[2 * i + 1]);   // glTF v alas → Unity v ylös
+                for (int i = 1; i < osa.Uv.Length; i += 2) osa.Uv[i] = 1f - osa.Uv[i];   // glTF v alas → Unity v ylös
+                mesh.SetVertexBufferData(osa.Uv, 0, 0, 2 * n, normaalit ? 2 : 1);
             }
-            mesh.vertices = p; mesh.normals = nn; mesh.uv = uv;
-            mesh.SetIndices(osa.Kolmiot, MeshTopology.Triangles, 0);
-            mesh.RecalculateBounds();
+            mesh.SetIndices(osa.Kolmiot, MeshTopology.Triangles, 0, false);
+            mesh.bounds = Rajat(osa.Paikat);
+            if (!normaalit) mesh.RecalculateNormals();
             mesh.UploadMeshData(true);   // CPU-kopio pois
             var kuva = astc != null ? DioraamaAstc.Lue(astc, "Patsas " + id) : null;
             var pohja = Pohjamateriaali?.Invoke();
@@ -91,6 +106,18 @@ namespace Matkakirja.Natiivi
             ladatut[id] = new Ladattu { Go = go, Mesh = mesh, Kuva = kuva, Mat = mat, Tavut = tavut };
             Tavut += tavut;
             Kirjaa?.Invoke($"museo: patsas {id} {osa.Kolmiot.Length / 3} kolmiota, {tavut / 1e6:F1} Mt (yht {Tavut / 1e6:F1} Mt)");
+        }
+
+        static Bounds Rajat(float[] p)
+        {
+            if (p.Length < 3) return default;
+            Vector3 a = new Vector3(p[0], p[1], p[2]), b = a;
+            for (int i = 3; i + 2 < p.Length; i += 3)
+            {
+                var v = new Vector3(p[i], p[i + 1], p[i + 2]);
+                a = Vector3.Min(a, v); b = Vector3.Max(b, v);
+            }
+            var r = new Bounds(); r.SetMinMax(a, b); return r;
         }
 
         void Pura(string id)

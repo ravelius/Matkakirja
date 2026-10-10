@@ -33,6 +33,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Teokselta puuttuu ASTC-paketti (teos.json tai seina.astcm): sovitin lataa JPEG-varakuvan (MuseoSovitin.KuvaJuuri + Teos.Kuva).</summary>
         public Action<string> EiPakettia;
         public int GpuSiirtojaKehyksessa = 2;
+        /// <summary>Ruutuja yhtä aikaa haussa + siirtojonossa (iPad 10.10.: rajaton haku kävellessä Yövartiolle kasvatti hallittua kekoa ~590 Mt
+        /// 2 s:ssa, kun levyvälimuistin ruudut jonottivat GPU-siirtoa 2/kehys).</summary>
+        public int RuutujaMatkalla = 8;
+        int ruutujaHaussa;
 
         readonly Dictionary<string, TeosPyramidi> pyramidit = new Dictionary<string, TeosPyramidi>();
         readonly Dictionary<string, Texture2D> seinat = new Dictionary<string, Texture2D>();
@@ -69,8 +73,13 @@ namespace Matkakirja.Natiivi
             if (teos != nykyinen) { nykyinen = teos; varasto.Pyyda(Array.Empty<RuutuAvain>()); NaytaRuudut(); }
             if (teos != null && kamera != null && pyramidit.TryGetValue(teos, out var p) && p.OnYksityiskohtaa && Paikka(teos) is { } kp)
             {
-                var tarve = Nakyvat(kamera, p, kp);
-                foreach (var a in varasto.Pyyda(tarve)) HaeRuutu(a);
+                // Valinta mahtuu ruutupaikkoihin (karkeampi taso, jos ei); haku lähimmät ensin, vain RuutujaMatkalla kerrallaan.
+                var tarve = Nakyvat(kamera, p, kp, varasto.Paikkoja);
+                foreach (var a in varasto.Pyyda(tarve))
+                {
+                    if (ruutujaHaussa + siirrot.Count >= RuutujaMatkalla) break;
+                    HaeRuutu(a);
+                }
                 NaytaRuudut();
             }
             for (int n = 0; n < GpuSiirtojaKehyksessa && siirrot.Count > 0; n++) Siirra(siirrot.Dequeue());
@@ -148,7 +157,7 @@ namespace Matkakirja.Natiivi
         static readonly Plane[] tasot = new Plane[1];
 
         /// <summary>Näkyvä osa teoksesta ja näytön pikselit teoksen leveydellä: näytön kulmien säteet kankaan tasolle.</summary>
-        static List<RuutuAvain> Nakyvat(Camera kam, TeosPyramidi p, Kuvapaikka kp)
+        static List<RuutuAvain> Nakyvat(Camera kam, TeosPyramidi p, Kuvapaikka kp, int paikkoja)
         {
             var t = kp.Isa;
             var keski = t.TransformPoint(new Vector3(0, 0, kp.Z));
@@ -166,14 +175,15 @@ namespace Matkakirja.Natiivi
             var a = kam.WorldToScreenPoint(t.TransformPoint(new Vector3(-kp.Leveys / 2, 0, kp.Z)));
             var b = kam.WorldToScreenPoint(t.TransformPoint(new Vector3(kp.Leveys / 2, 0, kp.Z)));
             double px = a.z > 0 && b.z > 0 ? Vector2.Distance(a, b) : 0;
-            return px <= 0 ? new List<RuutuAvain>() : RuutuValinta.Ruudut(p, px, u0, v0, u1, v1, int.MaxValue);
+            return px <= 0 ? new List<RuutuAvain>() : RuutuValinta.Ruudut(p, px, u0, v0, u1, v1, paikkoja);
         }
 
         void HaeRuutu(RuutuAvain a)
         {
             string url = Url(a.Teos) + a.Polku;
             if (!haussa.Add(url)) return;
-            StartCoroutine(Hae(url, b => { haussa.Remove(url); if (b != null) siirrot.Enqueue((a, b)); }));
+            ruutujaHaussa++;
+            StartCoroutine(Hae(url, b => { haussa.Remove(url); ruutujaHaussa--; if (b != null && a.Teos == nykyinen) siirrot.Enqueue((a, b)); }));
         }
 
         void Siirra((RuutuAvain avain, byte[] data) s)
@@ -265,7 +275,7 @@ namespace Matkakirja.Natiivi
             StopAllCoroutines();
             foreach (var k in new List<int>(paikat.Keys)) VapautaPaikka(k);
             foreach (var s in seinat.Values) if (s != null) Destroy(s);
-            seinat.Clear(); seinaJarjestys.Clear(); paikkakuvat.Clear(); pyramidit.Clear(); haussa.Clear(); puuttuu.Clear(); siirrot.Clear();
+            seinat.Clear(); seinaJarjestys.Clear(); paikkakuvat.Clear(); pyramidit.Clear(); haussa.Clear(); puuttuu.Clear(); siirrot.Clear(); ruutujaHaussa = 0;
             varasto = new RuutuVarasto(budjetti.RuutuPaikat); SeinaTavut = 0; nykyinen = null;
         }
 
