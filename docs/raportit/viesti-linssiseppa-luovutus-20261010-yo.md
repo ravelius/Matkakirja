@@ -102,7 +102,17 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
    C1 7,74 s → ~8–9 s tyhjää. Korjaus Opus-agentilla haarassa **linssiseppa/esitys-musiikki-181** (wt intro, pohja 7c4fa279c):
    tarkista commit + testit → käännös → äänellinen simuajo (skenaario linssiseppa-ajot/sk-saapumisesitys-toisto.txt,
    simuvuoro-esitys-toisto.zsh <SHA> <app>) → mittausrivi PT:lle (musiikin alku vs. "Pariisi"-sanan alku aaltomuodosta; kuva 3 → C1 väli).
-   TOISTO TF 180 -koodilla: lokit/todistus-esitys-toisto-iphone-* (d107ccb57, iPhone D0D2CD1E) = "ennen".
+   TOISTO TF 180 -koodilla TEHTY: lokit/todistus-esitys-toisto-iphone-20261010-2357 (esitys.mp4 + esitys.wav Unity-kaappaus 24 kHz; loki: kappale
+   soi jo 8,79 s esittelyn alkaessa, C1 7,8 s esittelystä) = "ennen".
+   **KORJAUS VALMIS e38a38dee** (agentti; Peli-testit 474/474, Linssit 1356/1356, tarkista 0; EI laitteella): Pariisin nopea kappale ladataan
+   tauolla ja käynnistyy trailerin puheen alkaessa (nousu 150 ms, vaimennus puheen alla 0,6), uusi kuvalista C1 heti trailerin kuvien
+   jälkeen, C2 13,5 / C3 19,4 / C4 25,2 / C5 31,0 s, esittelyn kello kappaleen kohdasta. Mittausrivit "MATKAKIRJA ui saapuminen: puhe alkaa
+   <t>" / "musiikki alkaa <t>" (≤ 0,2 s), "traileri kuva 1–3 sisään", "traileri kuvat ohi", "nykyintro kuva c1 … (kello …)".
+   SEURAAVAKSI: käännös (`PROTO_APP_KOPIO=/Users/Shared/Claude/proto-3d/lokit/linssiseppa-app/esitys-musiikki-181 proto-kaanna.sh
+   linssiseppa/esitys-musiikki-181`, pyydetty Julkaisijalta 00.2x) → `zsh linssiseppa-ajot/simuvuoro-esitys-toisto.zsh <SHA>
+   <app>/Matkakirja3D.app` → mittaus: lokirivit + aaltomuoto (esitys.wav: musiikin alku vs. "Pariisi"-sanan alku, ffmpeg/numpy) + video
+   ruutu ruudulta (kuva 3 ulos → C1 sisään) → ennen/jälkeen-rivi PT:lle. Auki: maasaapumisella kappale latautuu samassa ruudussa kuin
+   traileri → mahdollinen viive näkyy lokista; vaimennus 0,6 ja kolmen tahdin kuvaväli kuunneltava.
 2. **SAMA ERÄ (PT 00.1x): pysähdykset + Notre-Dame + Concorde.** Omistaja TF 180: "Kippi pysähtyy vieläkin välillä liiaksi paikalleen."
    → koko Pariisin kierros simulla TF 180 -koodilla (app lokit/linssiseppa-app/esittely-pakka-180 = juna 180 + 7c4fa279c; huom. TF 180:ssä on
    f65ed2a39 mutta EI linjaus 2:ta eca61364a, joka on juna 181:ssä) ja pallon nopeus 0,1 s välein (QA-lokirivi tarvitaan, jos ei ole):
