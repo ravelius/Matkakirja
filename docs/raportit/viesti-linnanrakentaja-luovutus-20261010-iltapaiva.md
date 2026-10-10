@@ -80,3 +80,9 @@ Siirtosepän arkki v46z-176-b (`proto-3d/lokit/todistus-vaiheet-v46z-176-b-20261
   projisoi_tekseli.py: --nakymakuva, valoisuus_raja, ao_kuva (varmuuskopio projisoi_tekseli_ennen_nakymakuva.py). LAHTEET "v5".
   SEURAAVAKSI LS2:n parin mukaan: jos pystynousut lähikuvassa litteät → polygoneja LOD0:aan; etelä/pohjoinen yhä tekoälypintoja
   (samalla menetelmällä, jos vapaita suoria kuvia: Sisältökirjurin 04/05).
+- **ND v5b** (PT 17.2x, kivi −10 %): `tekoaly-v5b/`, kiviportti --L-max 1,00 LÄPI (ennuste peli L 153, b/r 0,884), ortoportti LÄPI → LS2:lle
+  pelikuvapariin (oikea | v5 | v5b) → PT → omistaja. LS2:n v5-mittaus 181/174/159 osui kiviportin ennusteeseen (180/173/159).
+- **TULOSSA (PT 17.2x, omistaja): taidemuseon varjot ja lattiaheijastus**, LS1 ottaa yhteyttä Pariisin KIIREEN jälkeen. Esiselvitys:
+  `taidemuseo-runko/lahde/leivo_sali.py` leipoo nyt vain salin geometrian valon (ei kehyksiä eikä patsaita varjostajina). Tarvitaan:
+  kehykset (sali_blender.py --esikatselu -geometria) ja patsaat (patsaat/*.glb + patsaat-pakattu.json, veistospaikat sali.json:sta)
+  leivontaan varjostajiksi (näkymättömät kameralle, holdout/ei omaa UV1:tä), nurkka-AO valoatlakseen.
