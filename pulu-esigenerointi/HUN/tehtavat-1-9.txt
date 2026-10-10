@@ -1,0 +1,161 @@
+================ KOHTA 41 (kohde:hahmotelma-gyula) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+- [St. John’s — kaupunkilehti / St. John’s: Kapea portti ja sen puolustajat] Satamaan johtaa kapea sola kallioiden välissä, ja juuri se teki kaupungista sekä turvallisen että halutun. Hollantilainen amiraali Michiel de Ruyter valtasi kaupungin kesäkuussa 1665, ja kauppiaat rakensivat puolustuksensa itse: englantilainen kauppiaskapteeni Christopher Martin laski maihin kuusi tykkiä aluksestaan ja torjui 1673 kahdellakymmenelläkolmella miehellä kolmen hollantilaisen sotalaivan hyökkäyksen. Ranskalaiset tuhosivat kaupungin 1696, piirittivät sen 1705 ja valtasivat 1709. Seitsenvuotisen sodan viimeinen taistelu Pohjois-Amerikassa käytiin täällä 1762, kun eversti William Amherst valtasi Signal Hillin aamunkoitteessa 15. syyskuuta.
+
+### 41.1
+KYSYMYS: Kuka Unkarin kansallislaulun säveltäjä syntyi Gyulassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+### 41.2
+KYSYMYS: Kuinka kauan linnan puolustajat kestivät piirityksen vuonna 1566?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gyula (kulttuuri)
+Tietoruudun teksti: Gyula on Békésin läänin kaupunki Suurella Unkarin tasangolla Fehér-Körös-joen varrella, 235 kilometriä Budapestista kaakkoon ja viiden kilometrin päässä Romanian rajasta. Se on tunnetuin keskiaikaisesta linnastaan ja lämpökylpylästään, ja kaupungissa ovat syntyneet Unkarin kansallislaulun säveltäjä Ferenc Erkel sekä Albrecht Dürerin isä. Ensimmäinen maininta on vuodelta 1313, ja linnan rakennus alkoi 1300-luvulla mutta valmistui vasta 1500-luvun puolivälissä. Heinäkuun 1566 alussa 27 000–30 000 miehen osmanien armeija piiritti 2 000 miehen linnaa, ja puolustajat antautuivat 59–63 päivän piirityksen jälkeen; mikään muu 1500-luvun unkarilaislinna ei kestänyt piirittäjiä niin kauan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+- [St. John’s — kaupunkilehti / St. John’s: Kapea portti ja sen puolustajat] Satamaan johtaa kapea sola kallioiden välissä, ja juuri se teki kaupungista sekä turvallisen että halutun. Hollantilainen amiraali Michiel de Ruyter valtasi kaupungin kesäkuussa 1665, ja kauppiaat rakensivat puolustuksensa itse: englantilainen kauppiaskapteeni Christopher Martin laski maihin kuusi tykkiä aluksestaan ja torjui 1673 kahdellakymmenelläkolmella miehellä kolmen hollantilaisen sotalaivan hyökkäyksen. Ranskalaiset tuhosivat kaupungin 1696, piirittivät sen 1705 ja valtasivat 1709. Seitsenvuotisen sodan viimeinen taistelu Pohjois-Amerikassa käytiin täällä 1762, kun eversti William Amherst valtasi Signal Hillin aamunkoitteessa 15. syyskuuta.
+
+### 41.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+### 41.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 41 YHTEINEN KONTEKSTI
+
+================ KOHTA 42 (kohde:hahmotelma-opusztaszer) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kohdekartta / Kohdekartta: Kaupungintalo] 1866 Adelaiden ensimmäinen kaupunginvaltuusto perustettiin 1840 ja kaatui 1843, minkä jälkeen siirtokunnan hallinto hoiti kaupungin asiat. Kun valtuusto perustettiin uudelleen 1852 ja James Hurtle Fisheristä tuli pormestari, alettiin puhua omasta talosta. Vuoden 1858 arkkitehtikilpailun voitti Edmund Wright, mutta hän kieltäytyi työstä: hän oli itse silloin pormestari. Uusi kilpailu järjestettiin 20. tammikuuta 1863, kun Wrightin kausi oli päättynyt, ja voiton vei hänen ja Edward Woodsin yhteinen ehdotus. Työ alkoi maaliskuussa 1863, ja kuvernööri Dominic Daly laski peruskiven 4. toukokuuta. Albertin tornin peruskivi laskettiin 13. tammikuuta 1864, ja sen alle pantiin sinetöity pullo, jossa…
+
+### 42.1
+KYSYMYS: Mitä tapahtumaa Feszty-panoraama kuvaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+### 42.2
+KYSYMYS: Minkä juhlan kunniaksi panoraama maalattiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ópusztaszer (kulttuuri)
+Tietoruudun teksti: Ópusztaszerin kansallinen perintöpuisto on Unkarin historian ulkoilmamuseo Csongrádin läänissä. Se perustettiin vuonna 1982, ja se on kuuluisin Feszty-panoraamasta, Árpád Fesztyn ja hänen apulaistensa maalaamasta syklooramasta, joka kuvaa unkarilaisten maahantulon alkua Karpaattien altaalle vuonna 895. Maalaus valmistui 13. toukokuuta 1894 tapahtuman tuhannennen vuosipäivän kunniaksi; se on 15 metriä korkea ja 120 metriä pitkä ja yksi vain 16 maailman olemassa olevasta syklooramasta. Puisto esittelee myös muinaisen ja varhaisen uuden ajan Unkarin arkeologiaa ja etnografiaa, ja panoraama on ollut pysyvästi esillä vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kohdekartta / Kohdekartta: Kaupungintalo] 1866 Adelaiden ensimmäinen kaupunginvaltuusto perustettiin 1840 ja kaatui 1843, minkä jälkeen siirtokunnan hallinto hoiti kaupungin asiat. Kun valtuusto perustettiin uudelleen 1852 ja James Hurtle Fisheristä tuli pormestari, alettiin puhua omasta talosta. Vuoden 1858 arkkitehtikilpailun voitti Edmund Wright, mutta hän kieltäytyi työstä: hän oli itse silloin pormestari. Uusi kilpailu järjestettiin 20. tammikuuta 1863, kun Wrightin kausi oli päättynyt, ja voiton vei hänen ja Edward Woodsin yhteinen ehdotus. Työ alkoi maaliskuussa 1863, ja kuvernööri Dominic Daly laski peruskiven 4. toukokuuta. Albertin tornin peruskivi laskettiin 13. tammikuuta 1864, ja sen alle pantiin sinetöity pullo, jossa…
+
+### 42.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+### 42.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 42 YHTEINEN KONTEKSTI
+
+================ KOHTA 43 (kohde:hahmotelma-herend) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+### 43.1
+KYSYMYS: Kuka otti Herendin tehtaan haltuunsa velkojana vuonna 1839?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+### 43.2
+KYSYMYS: Minkä kuningattaren mukaan yksi Herendin kuvioista on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Herendin posliini (kauppa)
+Tietoruudun teksti: Herendin posliinimanufaktuuri on unkarilainen yritys, joka on erikoistunut ylellisiin käsinmaalattuihin ja kullattuihin posliiniesineisiin; se perustettiin vuonna 1826, ja se sijaitsee Herendin kaupungissa Veszprémin lähellä. Vince Stingl perusti tehtaan savitavaratehtaaksi, mutta rahat loppuivat, ja hänen velkojansa Mór Fischer otti sen haltuunsa vuonna 1839 ja aloitti taideposliinin valmistuksen; vuoteen 1849 mennessä hän myi tuotteita Unkarin aatelistolle. 1800-luvun puolivälissä tehdas oli Habsburgien hovin ja aristokraattisten asiakkaiden hankkija ympäri Eurooppaa, ja se esitteli töitään Vienissä 1845, Lontoossa 1851, New Yorkissa 1853 ja Pariisissa 1855. Tilauksia tuli hoveista, muun muassa kuningatar Viktorialta, Frans Joosef I:ltä ja Maximilian I:ltä Meksikosta. Vuonna 1865 Frans Joosef antoi Fischerille aatelisarvon, ja vuodesta 1872 tämä käytti nimeä Mór Fischer Farkasházy, ku…
+
+### 43.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+### 43.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 43 YHTEINEN KONTEKSTI
+
+================ KOHTA 44 (kohde:hahmotelma-visegrad-palota) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kohdekartta / Kohdekartta: Kasbahin palatsi] 1700-luku Kasbahin korkeimmalla kohdalla seisoo Dar al-Makhzen, kuvernöörin ja vierailevan sulttaanin palatsi. Sen rakennutti 1700-luvun alussa Moulay Ismailin aikana pasha Ahmad ben Ali al-Rifi, ja perustuksina ovat englantilaisten Upper Castlen rauniot — talo seisoo siis kirjaimellisesti edellisen vallan päällä. Sulttaani Hassan I yöpyi täällä 1889. Rakennus kiertyy kahden sisäpihan ympärille. Katot ovat puuta, suihkulähteet marmoria ja seinät arabeskia; pääpihan pylväiden hienot marmorikapiteelit tuotiin todennäköisesti Italiasta rakennusaikaan. Palatsin kylkeen kuuluivat aikoinaan valtionkassa ja vankilat, jotka avautuivat kasbahin mechouar-aukiolle. Museoksi talo muutettiin jo 1922, ja…
+- [Odessa — kohdekartta / Kohdekartta: Potjomkinin portaat] 1837–1841 Odessan kuuluisin nähtävyys on jättiläismäinen kivinen porrasrivistö, joka johtaa satamasta ylös kaupungin keskustaan. Portaat rakennettiin vuosina 1837–1841 sveitsiläisen arkkitehti Francesco Boffon suunnitelmien mukaan, ja niiden rakentamista valvoi englantilainen insinööri John Upton. Alun perin portaissa oli 200 askelmaa, mutta ajan myötä osa niistä hautautui maan alle – nykyään portaissa lasketaan 192 askelmaa kymmenen tasanteen välissä. Portaissa on hauska temppu: ne on rakennettu niin, että yläpää on kapeampi (12,5 metriä) ja alapää leveämpi (yli 21 metriä). Kun seisoo alhaalla ja katsoo ylös, portaat näyttävät paljon lyhyemmiltä kuin ne todellisuudessa ovat, sillä tasantee…
+
+### 44.1
+KYSYMYS: Mikä tyylisuunta näkyi Visegrádissa ensimmäistä kertaa Italian ulkopuolella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+### 44.2
+KYSYMYS: Miksi palatsi hautautui maan alle vuosisadoiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Visegrádin kuninkaallinen palatsi (historia)
+Tietoruudun teksti: Visegrádin kuninkaallinen palatsi sai alkunsa, kun kuningas Kaarle Robert rakennutti ensimmäisen kuninkaanasunnon Tonavan rannalle vuoden 1325 jälkeen; hänen poikansa Ludvig I laajensi sen palatsiksi, ja Ludvigin ja Sigismundin aikana suurin osa vanhoista rakennuksista purettiin uuden, 123 x 123 metrin neliöpohjaisen palatsikompleksin tieltä. Vuosina 1477–1484 Mátyás Corvinus rakennutti palatsin uudelleen myöhäisgoottilaiseen tyyliin ja koristeli sen italialaisella renessanssityylillä — ensimmäistä kertaa tämä tyylisuunta näkyi Italian ulkopuolella Euroopassa. Ottomaanien piiritys vuonna 1544 jätti palatsin raunioiksi, ja 1700-luvulle tultaessa se oli kokonaan maan peitossa ja unohdettu. Kaivaukset alkoivat 1934 ja jatkuvat yhä, ja osa palatsin goottilaisista suihkulähteistä on sittemmin rekonstruoitu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kohdekartta / Kohdekartta: Kasbahin palatsi] 1700-luku Kasbahin korkeimmalla kohdalla seisoo Dar al-Makhzen, kuvernöörin ja vierailevan sulttaanin palatsi. Sen rakennutti 1700-luvun alussa Moulay Ismailin aikana pasha Ahmad ben Ali al-Rifi, ja perustuksina ovat englantilaisten Upper Castlen rauniot — talo seisoo siis kirjaimellisesti edellisen vallan päällä. Sulttaani Hassan I yöpyi täällä 1889. Rakennus kiertyy kahden sisäpihan ympärille. Katot ovat puuta, suihkulähteet marmoria ja seinät arabeskia; pääpihan pylväiden hienot marmorikapiteelit tuotiin todennäköisesti Italiasta rakennusaikaan. Palatsin kylkeen kuuluivat aikoinaan valtionkassa ja vankilat, jotka avautuivat kasbahin mechouar-aukiolle. Museoksi talo muutettiin jo 1922, ja…
+- [Odessa — kohdekartta / Kohdekartta: Potjomkinin portaat] 1837–1841 Odessan kuuluisin nähtävyys on jättiläismäinen kivinen porrasrivistö, joka johtaa satamasta ylös kaupungin keskustaan. Portaat rakennettiin vuosina 1837–1841 sveitsiläisen arkkitehti Francesco Boffon suunnitelmien mukaan, ja niiden rakentamista valvoi englantilainen insinööri John Upton. Alun perin portaissa oli 200 askelmaa, mutta ajan myötä osa niistä hautautui maan alle – nykyään portaissa lasketaan 192 askelmaa kymmenen tasanteen välissä. Portaissa on hauska temppu: ne on rakennettu niin, että yläpää on kapeampi (12,5 metriä) ja alapää leveämpi (yli 21 metriä). Kun seisoo alhaalla ja katsoo ylös, portaat näyttävät paljon lyhyemmiltä kuin ne todellisuudessa ovat, sillä tasantee…
+
+### 44.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI
+
+### 44.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 44 YHTEINEN KONTEKSTI

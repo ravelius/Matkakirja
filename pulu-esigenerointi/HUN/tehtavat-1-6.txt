@@ -1,0 +1,182 @@
+================ KOHTA 26 (kohde:hahmotelma-mohacs) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+### 26.1
+KYSYMYS: Minä vuosina Mohácsin lähellä käytiin kaksi kuuluisaa taistelua?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+### 26.2
+KYSYMYS: Minkä nimistä karnevaalia Mohácsissa vietetään joka kevät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mohács (historia)
+Tietoruudun teksti: Mohács on Baranyan läänin kaupunki Tonavan oikealla rannalla Etelä-Unkarissa. Kaupungin lähellä käytiin kaksi kuuluisaa taistelua, vuosina 1526 ja 1687, ja ne merkitsivät Osmanien vallan alkua ja loppua Unkarissa. Roomalaisaikana Tonavan rannalla oli sotilasleiri, ja Osmanien vallan aikana Mohács oli Mohácsin sanjakin hallintokeskus. Enemmistö asukkaista oli vuoteen 1945 asti Tonavan švaabeja. Joka kevät kaupungissa pidetään Busójárás-karnevaali, jonka Unesco kirjasi aineettoman kulttuuriperinnön luetteloon vuonna 2009.
+
+### 26.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+### 26.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 26 YHTEINEN KONTEKSTI
+
+================ KOHTA 27 (kohde:hahmotelma-szigetvar) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+### 27.1
+KYSYMYS: Kuka linnanpäällikkö puolusti Szigetvária vuonna 1566?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+### 27.2
+KYSYMYS: Mitä nimi Szigetvár tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szigetvár (historia)
+Tietoruudun teksti: Szigetvár on noin 12 000 asukkaan kaupunki Baranyan läänissä Etelä-Unkarissa; nimi tarkoittaa saarilinnaa, ja vuonna 2011 parlamentti antoi kaupungille arvonimen Civitas Invicta. Linnoitus sai alkunsa vuonna 1420, kun Ozsvát Anthemi rakennutti ensimmäiset tiilirakennukset Almás-joen soiselle tulva-alueelle. Nikola Zrinski nimitettiin linnanpäälliköksi vuonna 1561, ja hänen johdollaan linnasta tehtiin hyökkäysretkiä aina Tonavalle asti. Vuonna 1566 72-vuotias ja huonokuntoinen sulttaani Suleiman johti armeijansa henkilökohtaisesti Szigetváriin; linnoitusta piiritettiin 6. elokuuta alkaen, Suleiman kuoli luonnollisiin syihin 6. tai 7. syyskuuta, ja linnoitus kaatui seuraavana päivänä. Piiritys tunnetaan Zrinskin ja hänen miestensä viimeisestä rohkeasta hyökkäyksestä.
+
+### 27.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+### 27.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 27 YHTEINEN KONTEKSTI
+
+================ KOHTA 28 (kohde:hahmotelma-sarospatak) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+### 28.1
+KYSYMYS: Kenen tyttären syntymäpaikaksi Sárospatakin linna perinteisesti tunnetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+### 28.2
+KYSYMYS: Kuka johti vapaussotaa Habsburgeja vastaan vuosina 1703–1711?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sárospatak (historia)
+Tietoruudun teksti: Sárospatak on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa Bodrog-joen laaksossa, 70 kilometriä Miskolcista koilliseen; sitä kutsutaan usein pelkästään Pataksi, ja se on kulttuurikeskus ja historiallinen kaupunki. Kaupunki sai kaupunkioikeudet vuonna 1201 kuningas Emerikiltä, ja keskiajalla se oli tärkeä, koska lähellä kulki kauppareitti Puolaan. Linna, jonka Andreas II rakennutti, tunnetaan perinteisesti hänen tyttärensä Pyhän Elisabetin syntymäpaikkana. Linnan omistivat myöhemmin muun muassa Perényin, Dobón ja Rákóczien suvut, ja runoilija Bálint Balassi meni siellä naimisiin Krisztina Dobón kanssa. Kaupunkilaiset osallistuivat aktiivisesti Frans II Rákóczin johtamaan vapaussotaan Habsburgeja vastaan vuosina 1703–1711.
+
+### 28.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+### 28.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 28 YHTEINEN KONTEKSTI
+
+================ KOHTA 29 (kohde:hahmotelma-sopron) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Milford Soundin erakko] Skotlantilainen merimies Donald Sutherland saapui pienellä avoveneellä Milford Soundiin 3. joulukuuta 1877 - vain muutama vuosi isoisän oman matkan jälkeen - ja päätti jäädä. Hän rakensi rantaan ensin yhden, sitten kolme yksinkertaista mökkiä, joita paikalliset alkoivat leikkisästi kutsua "Milfordin kaupungiksi", vaikka asukkaita oli käytännössä vain hän itse ja koiransa. Yksinäisistä vuosistaan Bowen Fallsin kupeessa Sutherland sai lisänimen Milford Soundin erakko. Myöhemmin hän avioitui ja piti vaimonsa kanssa majataloa kasvavalle turistivirralle aina kuolemaansa lokakuussa 1919 asti - hän ehti asua vuonolla lähes 40 vuotta.
+- [PRI — maalehti / Musiikki: Salsan yliopisto perustettiin toukokuussa] 1962 — Pianisti Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico toukokuussa 1962 aiemman orkesterinsa hajottua. Yhtye yhdisti saaren omaa plena- ja bomba-perinnettä kuubalaisperäiseen sonrytmiin ja loi tanssikelpoisen, puhaltimien vetämän soundin, josta tuli tunnettu nimellä salsa. Vuosikymmenten kuluessa riveissä lauloi niin monta myöhemmin maailmankuuluksi tullutta laulajaa, että yhtye sai Kolumbiassa lisänimen "Salsan yliopisto". Ithier johti yhtyettä yli kuusi vuosikymmentä, ja se soittaa edelleen sekä levyillä että lavoilla. El Gran Combo on yhä yksi Latinalaisen Amerikan menestyneimmistä ja pisimpään toimineista yhtyeistä.
+
+### 29.1
+KYSYMYS: Millä nimellä Soprónia kutsuttiin roomalaisaikana?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+### 29.2
+KYSYMYS: Minkä lisänimen kaupunki sai vuoden 1921 kansanäänestyksen jälkeen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sopron (historia)
+Tietoruudun teksti: Sopron on kaupunki Unkarissa Itävallan rajalla lähellä Neusiedlinjärveä eli Fertőä. Roomalaisaikana paikalla oli Scarbantia-niminen kaupunki, jonka foorumin paikalla on nykyään Soprónin pääaukio. Osmanit ryöstivät kaupungin vuonna 1529 mutta eivät miehittäneet sitä, ja vuonna 1676 kaupunki tuhoutui tulipalossa, minkä jälkeen nykyinen barokkikaupunki syntyi. Itävalta-Unkarin hajottua Soprónin kuuluminen Unkariin ratkaistiin kiistanalaisessa paikallisessa kansanäänestyksessä 14. joulukuuta 1921, jossa 65 prosenttia äänesti Unkarin puolesta; siitä lähtien kaupunkia on kutsuttu nimellä Civitas Fidelissima eli uskollisin kaupunki. Kaupunki oli myös vuoden 1989 Paneurooppalaisen piknikin paikka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Milford Sound: Milford Soundin erakko] Skotlantilainen merimies Donald Sutherland saapui pienellä avoveneellä Milford Soundiin 3. joulukuuta 1877 - vain muutama vuosi isoisän oman matkan jälkeen - ja päätti jäädä. Hän rakensi rantaan ensin yhden, sitten kolme yksinkertaista mökkiä, joita paikalliset alkoivat leikkisästi kutsua "Milfordin kaupungiksi", vaikka asukkaita oli käytännössä vain hän itse ja koiransa. Yksinäisistä vuosistaan Bowen Fallsin kupeessa Sutherland sai lisänimen Milford Soundin erakko. Myöhemmin hän avioitui ja piti vaimonsa kanssa majataloa kasvavalle turistivirralle aina kuolemaansa lokakuussa 1919 asti - hän ehti asua vuonolla lähes 40 vuotta.
+- [PRI — maalehti / Musiikki: Salsan yliopisto perustettiin toukokuussa] 1962 — Pianisti Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico toukokuussa 1962 aiemman orkesterinsa hajottua. Yhtye yhdisti saaren omaa plena- ja bomba-perinnettä kuubalaisperäiseen sonrytmiin ja loi tanssikelpoisen, puhaltimien vetämän soundin, josta tuli tunnettu nimellä salsa. Vuosikymmenten kuluessa riveissä lauloi niin monta myöhemmin maailmankuuluksi tullutta laulajaa, että yhtye sai Kolumbiassa lisänimen "Salsan yliopisto". Ithier johti yhtyettä yli kuusi vuosikymmentä, ja se soittaa edelleen sekä levyillä että lavoilla. El Gran Combo on yhä yksi Latinalaisen Amerikan menestyneimmistä ja pisimpään toimineista yhtyeistä.
+
+### 29.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+### 29.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 29 YHTEINEN KONTEKSTI
+
+================ KOHTA 30 (kohde:hahmotelma-jak) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+### 30.1
+KYSYMYS: Kuka perusti Jákin benediktiiniluostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+### 30.2
+KYSYMYS: Minkä tyylinen Jákin kirkko on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ják (historia)
+Tietoruudun teksti: Ják on kylä Vasin läänissä Unkarin läntisellä rajalla. Kylän Pyhän Yrjön seurakuntakirkko on Unkarin parhaiten säilynyt romaaninen kirkko, ja se rakennettiin alun perin benediktiiniluostarin kirkoksi, jonka perusti kreivi Martin Ják. Kirkko on koristettu sekä ulkoa että sisältä rikkailla veistoksilla, ja sen kolme laivaa ja kolme apsidia muodostavat basilikarakenteen. Pylväänpäät on veistetty kasvi- ja eläinaiheilla, ja pääoven edessä oli aikoinaan kylän rotunda.
+
+### 30.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI
+
+### 30.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 30 YHTEINEN KONTEKSTI

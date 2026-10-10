@@ -1,0 +1,200 @@
+================ KOHTA 21 (kohde:hahmotelma-tiszato) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza-tó (luonto · järvi)
+Tietoruudun teksti: Tisza-tó eli Kiskören tekojärvi on Unkarin suurin tekojärvi, Heves-läänin kaakkoiskulmassa. Osana Tisza-joen tulvatorjuntahanketta Tiszan pato rakennettiin vuonna 1973, ja täyttö valmistui 1990-luvulla, jolloin syntyi 127 neliökilometrin järvi; se on 27 kilometriä pitkä, keskimäärin 1,3 metriä syvä ja enimmillään 17 metriä syvä, ja siinä on 43 neliökilometriä pieniä saaria. Kun järvi valmistui, unkarilaiset alkoivat lomailla siellä, koska se oli edullisempi ja vähemmän ruuhkainen kuin perinteinen lomakohde Balaton. Järvessä on monipuolinen lintu-, kasvi- ja eläinlajisto, ja Poroszlón ekokeskus esittelee Tiszan laakson luontoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+
+### 21.1
+KYSYMYS: Milloin Tiszan pato rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza-tó (luonto · järvi)
+Tietoruudun teksti: Tisza-tó eli Kiskören tekojärvi on Unkarin suurin tekojärvi, Heves-läänin kaakkoiskulmassa. Osana Tisza-joen tulvatorjuntahanketta Tiszan pato rakennettiin vuonna 1973, ja täyttö valmistui 1990-luvulla, jolloin syntyi 127 neliökilometrin järvi; se on 27 kilometriä pitkä, keskimäärin 1,3 metriä syvä ja enimmillään 17 metriä syvä, ja siinä on 43 neliökilometriä pieniä saaria. Kun järvi valmistui, unkarilaiset alkoivat lomailla siellä, koska se oli edullisempi ja vähemmän ruuhkainen kuin perinteinen lomakohde Balaton. Järvessä on monipuolinen lintu-, kasvi- ja eläinlajisto, ja Poroszlón ekokeskus esittelee Tiszan laakson luontoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Seitsemän heimoa tuli vuorten yli] 895 — Unkarilaisten esi-isät olivat ratsastavaa paimenkansaa, joka eli idässä arojen laidalla. Noin vuonna 895 seitsemän heimoa ylitti Karpaattien solat ja asettui Tonavan ja Tiszan väliseen tasankoon. Johtajaksi valittiin Árpád, ja hänen sukunsa hallitsi maata kolmesataa vuotta. Tapahtumaa kutsutaan nimellä honfoglalás, maan haltuunotto. Tarkkaa vuotta ei tiedetä, sillä ensimmäiset kirjalliset kuvaukset kirjoitettiin vasta satoja vuosia myöhemmin, kuvitettuun kronikkaan.
+
+### 21.2
+KYSYMYS: Miksi unkarilaiset alkoivat lomailla Tisza-tólla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza-tó (luonto · järvi)
+Tietoruudun teksti: Tisza-tó eli Kiskören tekojärvi on Unkarin suurin tekojärvi, Heves-läänin kaakkoiskulmassa. Osana Tisza-joen tulvatorjuntahanketta Tiszan pato rakennettiin vuonna 1973, ja täyttö valmistui 1990-luvulla, jolloin syntyi 127 neliökilometrin järvi; se on 27 kilometriä pitkä, keskimäärin 1,3 metriä syvä ja enimmillään 17 metriä syvä, ja siinä on 43 neliökilometriä pieniä saaria. Kun järvi valmistui, unkarilaiset alkoivat lomailla siellä, koska se oli edullisempi ja vähemmän ruuhkainen kuin perinteinen lomakohde Balaton. Järvessä on monipuolinen lintu-, kasvi- ja eläinlajisto, ja Poroszlón ekokeskus esittelee Tiszan laakson luontoa.
+
+### 21.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+### 21.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 21 YHTEINEN KONTEKSTI
+
+================ KOHTA 22 (kohde:hahmotelma-kiskunsag) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiskunságin puszta (kulttuuri)
+Tietoruudun teksti: Kiskunságin kansallispuisto sijaitsee Tonavan ja Tisza-joen välisellä alueella Bács-Kiskunin läänissä, ja se perustettiin vuonna 1975; Unesco on julistanut sen biosfäärialueeksi. Puisto kattaa 530 neliökilometriä Suuren Unkarin tasangon Pikku-Kumanian alueella, ja se koostuu seitsemästä erillisestä osasta. Yksi niistä on Kiskunságin puszta, jossa vuosittain järjestetään tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Fülöpházan lähellä on hiekkadyynejä, joiden sanotaan liikkuvan otollisessa tuulessa, ja alueen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia muuttolintuja.
+
+### 22.1
+KYSYMYS: Milloin Kiskunságin kansallispuisto perustettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiskunságin puszta (kulttuuri)
+Tietoruudun teksti: Kiskunságin kansallispuisto sijaitsee Tonavan ja Tisza-joen välisellä alueella Bács-Kiskunin läänissä, ja se perustettiin vuonna 1975; Unesco on julistanut sen biosfäärialueeksi. Puisto kattaa 530 neliökilometriä Suuren Unkarin tasangon Pikku-Kumanian alueella, ja se koostuu seitsemästä erillisestä osasta. Yksi niistä on Kiskunságin puszta, jossa vuosittain järjestetään tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Fülöpházan lähellä on hiekkadyynejä, joiden sanotaan liikkuvan otollisessa tuulessa, ja alueen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia muuttolintuja.
+
+### 22.2
+KYSYMYS: Mikä luonnonilmiö on Fülöpházan lähellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiskunságin puszta (kulttuuri)
+Tietoruudun teksti: Kiskunságin kansallispuisto sijaitsee Tonavan ja Tisza-joen välisellä alueella Bács-Kiskunin läänissä, ja se perustettiin vuonna 1975; Unesco on julistanut sen biosfäärialueeksi. Puisto kattaa 530 neliökilometriä Suuren Unkarin tasangon Pikku-Kumanian alueella, ja se koostuu seitsemästä erillisestä osasta. Yksi niistä on Kiskunságin puszta, jossa vuosittain järjestetään tapahtumia, joissa elvytetään vanhaa paimentolais- ja karjanhoitoperinnettä. Fülöpházan lähellä on hiekkadyynejä, joiden sanotaan liikkuvan otollisessa tuulessa, ja alueen alkalisilla järvillä pesii ja lepää kymmeniä tuhansia muuttolintuja.
+
+### 22.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+### 22.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 22 YHTEINEN KONTEKSTI
+
+================ KOHTA 23 (kohde:hahmotelma-badacsony) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+
+### 23.1
+KYSYMYS: Mistä kivilajista Badacsonyn läheiset vuoret koostuvat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Suuri moskeija] perimätiedon mukaan noin 630 Al-Jami al-Kabir on kartan tärkein rakennus ja kenties koko islamilaisen maailman vanhimpia moskeijoita. Varhaisten islamilaisten lähteiden mukaan Muhammad käski rakentaa sen noin vuonna 630, ja sitä pidetään ensimmäisenä Mekan ja Medinan ulkopuolelle rakennettuna moskeijana. Ajoitus nojaa perimätietoon: sama artikkeli antaa tietolaatikossaan väljemmän arvion 600–700-luvuille. Kaivauslöydöt kuitenkin tukevat varhaista ikää, sillä seinistä on löytynyt rakennusosia sekä aksumilaisesta katedraalista että sabalaisesta Ghumdanin palatsista — moskeija on siis rakennettu vanhemman kaupungin kivistä. Sen jälkeen se on rakennettu uudelleen monta kertaa. Umaijadikalifi al…
+
+### 23.2
+KYSYMYS: Minkä viinialueen keskus Badacsony on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Badacsony (luonto · vuori)
+Tietoruudun teksti: Badacsony on Balatonin pohjoisrannalla Länsi-Unkarissa oleva alue, vuoren huippu ja alueen kaupunki. Läheiset basalttivuoret ovat ainutlaatuisia geologisia jäänteitä ja harvinaisten kasvien ja eläinten elinympäristö: nämä yksittäiset, erikoisen muotoiset kukkulat syntyivät tulivuoritoiminnassa ennen kuin Pannonia oli aktiivinen geologinen alue. Badacsony on Badacsonyn viinialueen keskus. Runoilija Sándor Kisfaludy asui vuorella ja tapasi siellä vaimonsa Róza Szegedyn; tapahtumaa muistetaan pienessä näyttelyssä, ja Kisfaludyn entinen talo on nykyään ravintola.
+
+### 23.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+### 23.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 23 YHTEINEN KONTEKSTI
+
+================ KOHTA 24 (kohde:hahmotelma-gemenc) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Hirviö, jota ei ollut tarkoitus näyttää kenellekään] Inuiittien uskomuksessa tupilak oli kostohirviö, jonka angakkuq eli shamaani kokosi salassa eläimen osista ja herätti henkiin loitsulaululla, minkä jälkeen se laskettiin mereen etsimään tiettyä vihollista. Työ oli tekijälleen vaarallista: jos kohteella oli vahvempi taika, tupilak kääntyi takaisin, ja ainoa pelastus oli tunnustaa teko julkisesti. Koska tupilakit tehtiin salassa katoavista aineksista, yhtään ei ole säilynyt. Eurooppalaiset vieraat halusivat silti nähdä, miltä sellainen näyttää, ja niin niistä alettiin veistää kuvia kaskelotin hampaisiin.
+
+### 24.1
+KYSYMYS: Mikä on Gemencin metsän erikoisuus Tonavan varrella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+### 24.2
+KYSYMYS: Minkä eläimen kanta on maailmankuulu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gemenc (luonto · joki)
+Tietoruudun teksti: Gemenc on ainutlaatuinen metsä Szekszárdin ja Bajan välissä Unkarissa, ja se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa. Metsän eläimistöön kuuluvat hirvet, villisiat, haikarat, muuttohaukat ja merikotkat; hirvikanta on maailmankuulu, koska sen perimä on erinomainen ja sarvet vaikuttavia. Veden lähellä kasvaa pajuja ja poppeleita ja kauempana laajoja tammi-saarni-jalavametsiä. Metsä on elinympäristö Freyerin keisarikiitäjälle sekä 13 muulle suojellulle perhoslajille, ja se kuuluu Tonava-Dráva-kansallispuistoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grönlanti — maalehti / Kuvataide: Hirviö, jota ei ollut tarkoitus näyttää kenellekään] Inuiittien uskomuksessa tupilak oli kostohirviö, jonka angakkuq eli shamaani kokosi salassa eläimen osista ja herätti henkiin loitsulaululla, minkä jälkeen se laskettiin mereen etsimään tiettyä vihollista. Työ oli tekijälleen vaarallista: jos kohteella oli vahvempi taika, tupilak kääntyi takaisin, ja ainoa pelastus oli tunnustaa teko julkisesti. Koska tupilakit tehtiin salassa katoavista aineksista, yhtään ei ole säilynyt. Eurooppalaiset vieraat halusivat silti nähdä, miltä sellainen näyttää, ja niin niistä alettiin veistää kuvia kaskelotin hampaisiin.
+
+### 24.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+### 24.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 24 YHTEINEN KONTEKSTI
+
+================ KOHTA 25 (kohde:hahmotelma-esztergom) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+
+### 25.1
+KYSYMYS: Mikä on Unkarin suurin kirkko?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+- [Budapest — kohdekartta / Kohdekartta: Pyhän Tapanin kirkko] 1851–1906 Pyhän Tapanin kirkon rakentaminen kesti peräti 55 vuotta, vuodesta 1851 vuoteen 1906, ja matkan varrella tapahtui katastrofi: vuonna 1858 kesken rakennustöiden kupoli romahti, ja lähes valmis rakennus piti purkaa ja aloittaa alusta. Kolme eri arkkitehtia ehti työstää suunnitelmia ennen kuin kirkko vihdoin valmistui. Kirkon kupoli kohoaa 96 metrin korkeuteen, täsmälleen saman verran kuin parlamenttitalon kupoli — kaupungissa kuulemma sovittiin, ettei mikään muu rakennus saisi nousta korkeammalle kuin nämä kaksi. Kirkon sisällä säilytetään yhtä Unkarin oudoimmista aarteista: kuningas Pyhän Tapanin yli tuhat vuotta vanhaa, mumioitunutta oikeaa kättä.
+
+### 25.2
+KYSYMYS: Mitä osmanit tekivät Esztergomin kirkolle vuonna 1543?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esztergomin basilika (historia)
+Tietoruudun teksti: Esztergomin basilika eli Neitsyt Marian taivaaseenottamisen ja Pyhän Adalbertin primaattikatedraali on Unkarin katolisen kirkon istuin ja Esztergom-Budapestin arkkihiippakunnan äitikirkko. Se on Unkarin suurin kirkko: sisäpinta-ala on 5 600 neliömetriä, pituus 118 metriä, leveys 49 metriä ja kupoli kohoaa ulkoa 100 metrin korkeuteen. Kirkko on rakennettu Linnavuoren huipulle aiempien kirkkojen perustuksille; ensimmäisen, Pyhän Adalbertin kirkon rakennutti Tapani I vuosina 1001–1010 Unkarin ensimmäiseksi tuomiokirkoksi. Vuonna 1543 osmanit valtasivat kaupungin, purkivat kirkon kuorin ja käyttivät loppua moskeijana. Nykyisen katedraalin peruskivi laskettiin vuonna 1822, ja yläkirkko vihittiin käyttöön 31. elokuuta 1856.
+
+### 25.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI
+
+### 25.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 25 YHTEINEN KONTEKSTI

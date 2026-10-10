@@ -1,0 +1,186 @@
+================ KOHTA 36 (kohde:hahmotelma-kalocsa) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+### 36.1
+KYSYMYS: Minkä mausteen viljelystä Kalocsa on tunnettu?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+### 36.2
+KYSYMYS: Mikä rakennus Kalocsassa on tähtitieteen käytössä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kalocsa (ruoka)
+Tietoruudun teksti: Kalocsa on Bács-Kiskunin läänin kaupunki Tonavan vasemman rannan lähellä, 142 kilometriä Budapestista etelään, ja se on yksi Unkarin vanhimmista kaupungeista sekä yhden maan neljästä katolisesta arkkipiispasta istuin. Kaupungissa on hieno katedraali, arkkipiispan palatsi, tähtitorni, pappisseminaari ja opettajakouluja. Asukkaat ja kaupungin laajat yhteismaat elävät pääasiassa paprikan, hedelmien, pellavan, hampun ja viljan viljelystä sekä vesilintujen pyynnistä ja kalastuksesta. Nykyinen arkkipiispakunta perustettiin noin vuonna 1135, ja sen edeltäjäksi sanotaan kuningas Tapani Pyhän vuonna 1000 perustamaa piispakuntaa.
+
+### 36.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+### 36.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 36 YHTEINEN KONTEKSTI
+
+================ KOHTA 37 (kohde:hahmotelma-villany) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+
+### 37.1
+KYSYMYS: Mitä nimi Villány tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+
+### 37.2
+KYSYMYS: Mitkä alueet kohtaavat Villányn kohdalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Villány (ruoka)
+Tietoruudun teksti: Villány on Baranyan läänin kaupunki, joka on kuuluisa viinistään. Nimi tulee unkarin sanasta villám eli salama. Kaupunki sijaitsee kolmen suuren maantieteellisen alueen kohtaamispaikassa: Suuri Unkarin tasanko on etelässä, Baranyan kukkulat pohjoisessa ja Villányn vuoret lännessä; tasangolla harjoitetaan maataloutta, ja vuoret ja kukkulat sopivat viininviljelyyn. Vuoteen 1945 asti asukkaat olivat Tonavan švaabeja. Kaupungin lähellä sijaitsevasta fossiilipaikasta on löydetty runsaasti alapleistoseenin selkärankaisten fossiileja.
+
+### 37.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+### 37.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 37 YHTEINEN KONTEKSTI
+
+================ KOHTA 38 (kohde:hahmotelma-fertod) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 38.1
+KYSYMYS: Kuka ruhtinas rakennutti Eszterházan palatsin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+
+### 38.2
+KYSYMYS: Millä vuosikymmenellä palatsi rakennettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Fertőd (Eszterháza) (kulttuuri)
+Tietoruudun teksti: Fertőd on Győr-Moson-Sopronin läänin kaupunki lähellä Itävallan rajaa. Se muodostettiin vuonna 1950, kun Eszterházan ja Süttörin kaupungit yhdistettiin. Kaupungissa on yksi Unkarin tunnetuimmista palatseista, Eszterháza, jonka ruhtinas Nikolaus I Esterházy rakennutti 1760-luvulla. Vaikutusvaltaisen Esterházyn suvun jäseniä on haudattu suvun hautausmaalle noin kaksi kilometriä palatsista koilliseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Taskut jotka täytetään millä tahansa] nykyään — Pierogit ovat taikinataskuja, jotka suljetaan täytteen ympärille ja keitetään vedessä. Täyte voi olla melkein mitä tahansa: perunaa ja raejuustoa, hapankaalia, jauhelihaa, sieniä tai marjoja. Suolaiset pierogit tarjoillaan usein voissa paistettujen sipulien tai smetanan kera, ja makeat versiot ovat jälkiruokaa. Jokaisella alueella ja perheellä on omat suosikkitäytteensä, ja pierogien tekeminen yhdessä on monissa perheissä juhlapyhien vakiintunut perinne — erityisesti joulunaattona.
+
+### 38.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+### 38.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 38 YHTEINEN KONTEKSTI
+
+================ KOHTA 39 (kohde:hahmotelma-mezokovesd) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+
+### 39.1
+KYSYMYS: Kenen kuninkaan nimestä matyó-kansan nimen arvellaan tulevan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+
+### 39.2
+KYSYMYS: Milloin rautatie ulottui Mezőkövesdiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mezőkövesd (kulttuuri)
+Tietoruudun teksti: Mezőkövesd on kaupunki Borsod-Abaúj-Zemplénin läänissä Pohjois-Unkarissa, 50 kilometrin päässä Miskolcista ja 15 kilometrin päässä Egeristä. Vuonna 1464 kaupunki sai sinetin ja etuoikeuksia kuningas Matthias Corvinukselta, ja matyó-kansan nimen arvellaan tulevan hänen nimestään. Turkkilaiset miehittivät kaupungin vuonna 1544, ja se tuhoutui täysin vuonna 1552 ja uudelleen vuonna 1596, eikä sitä jälleenrakennettu lähes sataan vuoteen. Vuonna 1784 kaupunki vapautui feodaalivelvoitteistaan, ja rautatie ulottui sinne vuonna 1860. Matyó-talot ja 1800-luvun maalaiskaupungin tunnelmaa henkivät kadut ovat nähtävyys, ja matyó-museo esittelee kansan perinnettä.
+
+### 39.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+### 39.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 39 YHTEINEN KONTEKSTI
+
+================ KOHTA 40 (kohde:hahmotelma-godollo) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Punta Arenas: Vuosi 1873: kirje merenkulkumaille] Ensimmäiset vuosikymmenet olivat rankkoja. Chile käytti Punta Arenasia rangaistussiirtolana ja kurinpitopaikkana ongelmallisiksi katsotuille sotilaille. Joulukuussa 1851 vankien kapina johti kuvernööri Muñoz Gameron ja paikkakunnan papin surmaan sekä kirkon ja sairaalan tuhoon, ja 1877 tykkimiesten kapina tuhosi suuren osan kaupungista. Väliin mahtui käänne: 1867 presidentti José Joaquín Pérez tarjosi maata kenelle tahansa, joka suostui asettumaan seudulle, ja ensimmäiset britit saapuivat samana vuonna. Isoisän matkavuonna 1873 Chile lähetti suurille merenkulkumaille kirjeen, jossa se lupasi salmen olevan vapaa ja puolueeton kaikille lipuille.
+
+### 40.1
+KYSYMYS: Mikä ylimyssuku rakennutti Gödöllön palatsin alun perin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+### 40.2
+KYSYMYS: Kenelle palatsi lahjoitettiin vuonna 1867?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gödöllön palatsi (kulttuuri)
+Tietoruudun teksti: Gödöllő on Pestin läänin kaupunki noin 30 kilometriä Budapestin laitamilta koilliseen. Sen palatsin rakennutti alun perin Grassalkovichin ylimyssuku, ja myöhemmin Itävallan keisari ja Unkarin kuningas Frans Joosef ja hänen puolisonsa Elisabeth eli Sisi viettivät siellä kesiään. Unkarin valtio osti kartanon takaisin belgialaiselta pankilta maaliskuussa 1867 ja lahjoitti sen palatsineen Frans Joosefille ja Elisabethille kruunajaislahjaksi; siitä lähtien kuninkaallinen perhe vietti siellä pääasiassa kevättä ja syksyä, mikä nosti kaupungin elämää merkittävästi. Pohjoinen rautatie kulkee kaupungin läheltä kuninkaallisen kesäpaikan vuoksi, ja kaasutehdas valmistui vuoteen 1874 mennessä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Punta Arenas: Vuosi 1873: kirje merenkulkumaille] Ensimmäiset vuosikymmenet olivat rankkoja. Chile käytti Punta Arenasia rangaistussiirtolana ja kurinpitopaikkana ongelmallisiksi katsotuille sotilaille. Joulukuussa 1851 vankien kapina johti kuvernööri Muñoz Gameron ja paikkakunnan papin surmaan sekä kirkon ja sairaalan tuhoon, ja 1877 tykkimiesten kapina tuhosi suuren osan kaupungista. Väliin mahtui käänne: 1867 presidentti José Joaquín Pérez tarjosi maata kenelle tahansa, joka suostui asettumaan seudulle, ja ensimmäiset britit saapuivat samana vuonna. Isoisän matkavuonna 1873 Chile lähetti suurille merenkulkumaille kirjeen, jossa se lupasi salmen olevan vapaa ja puolueeton kaikille lipuille.
+
+### 40.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI
+
+### 40.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 40 YHTEINEN KONTEKSTI

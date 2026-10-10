@@ -1,0 +1,201 @@
+================ KOHTA 31 (kohde:hahmotelma-tata) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+### 31.1
+KYSYMYS: Kuka kuningas rakennutti Tatan linnan uudelleen renessanssityyliin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+### 31.2
+KYSYMYS: Kuka päällikkö puolusti Tatan linnaa vuonna 1526?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tata (historia)
+Tietoruudun teksti: Tata on Komárom-Esztergomin läänin kaupunki Luoteis-Unkarissa, noin 70 kilometrin päässä Budapestista Gerecsen ja Vértesin vuorten välisessä laaksossa. Sen ensimmäinen maininta on vuodelta 1221. Linnan rakennutti Lackfin suku, ja sen kukoistuskausi oli Matthias Corvinuksen aikana, jonka määräyksestä se rakennettiin uudelleen renessanssityyliin. Kun turkkilaiset voittivat Mohácsin taistelun vuonna 1526 ja kuningas Ludvig II kaatui, linnan päällikkö kreivi György Cseszneky puolusti linnaa onnistuneesti ryöstelevältä osmanien armeijalta. Osmanien vallan aikana Tatan linna oli tärkeä linnoitus.
+
+### 31.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+### 31.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 31 YHTEINEN KONTEKSTI
+
+================ KOHTA 32 (kohde:hahmotelma-diosgyor) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irak — maalehti / Muinaisuus: Kaksi kilometriä muuria autiomaassa] Hatra kukoisti 100- ja 200-luvuilla jaa. karavaanikaupunkina parthialaisvallan aikana. Kaupunkia kiersi sisä- ja ulkomuuri, halkaisijaltaan lähes kaksi kilometriä, ja niissä oli yli 160 tornia. Temppelialueen rakennuksissa yhdistyy kaksi tapaa rakentaa: kreikkalainen pylväsjärjestys ja idän korkea kaariholvi. Suurimman temppelin holvit kohosivat noin kolmenkymmenen metrin korkeuteen. Hatra otettiin maailmanperintöluetteloon vuonna 1985.
+- [Košice — kaupunkilehti / Historia: Euroopan ensimmäinen kaupunkivaakuna] Kassa oli ensimmäinen kaupunki Euroopassa, jolle myönnettiin oma vaakuna. Kuningas Ludvig I Suuri antoi sen vuonna 1369 Diósgyőrin linnassa nykyisen Miskolcin lähellä. Alkuperäisessä vaakunassa oli vain punaiset ja hopeiset raidat sekä kolme liljaa sinisellä pohjalla. Vuoteen 1502 mennessä kaupunki oli saanut neljä vaakunakirjaa neljältä hallitsijalta, ja nykyinen vaakuna on lähes muuttumaton tuosta vuodesta. Hlavná-kadulle paljastettiin vaakunapatsas vuonna 2002.
+- [Mexico City — kohdekartta / Kohdekartta: Kaupunginteatteri] 1918 Teatteri rakennettiin 1918 Donceles-kadun numeroon 36 vanhan Teatro Xicoténcatlin paikalle, ja se nimettiin primadonna Esperanza Iriksen mukaan. Iris — oikealta nimeltään María Esperanza Bonfil — oli Tabascon osavaltiosta kotoisin oleva operettilaulaja, jonka ura kukoisti Mexico Cityssä, Havannassa ja Madridissa ja joka kiersi laajalti Amerikoissa. Tunnetuimpia rooleja olivat Iloinen leski, Luxemburgin kreivi ja La princesa del dólar; 1930-luvulla hän näytteli myös elokuvissa. Iris rahoitti teatteria itse edellisen kiertueensa tuotoilla. Arkkitehdit Capetillo Servín ja Federico Mariscal ottivat esikuvaksi Milanon La Scalan. Teatteri avattiin 25. toukokuuta 1918 kaksi päivää sen jälkeen…
+
+### 32.1
+KYSYMYS: Mitä nimi Diósgyőr tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Euroopan ensimmäinen kaupunkivaakuna] Kassa oli ensimmäinen kaupunki Euroopassa, jolle myönnettiin oma vaakuna. Kuningas Ludvig I Suuri antoi sen vuonna 1369 Diósgyőrin linnassa nykyisen Miskolcin lähellä. Alkuperäisessä vaakunassa oli vain punaiset ja hopeiset raidat sekä kolme liljaa sinisellä pohjalla. Vuoteen 1502 mennessä kaupunki oli saanut neljä vaakunakirjaa neljältä hallitsijalta, ja nykyinen vaakuna on lähes muuttumaton tuosta vuodesta. Hlavná-kadulle paljastettiin vaakunapatsas vuonna 2002.
+
+### 32.2
+KYSYMYS: Minkä kuninkaan aikana linna kukoisti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diósgyőrin linna (historia)
+Tietoruudun teksti: Diósgyőr on historiallinen kaupunki Unkarissa, nykyään osa Miskolcia, ja sen keskiaikainen linna oli Unkarin kuninkaiden ja kuningattarien suosikkiloma-asunto. Nimi tulee sanoista dió eli saksanpähkinä ja győr, vanha muoto sanasta gyűrű eli rengas, joka viittaa ensimmäisen linnan pyöreään muotoon. Ensimmäinen linna rakennettiin luultavasti 1100-luvulla mutta tuhoutui mongolien hyökkäyksessä; nykyinen linna rakennettiin todennäköisesti Béla IV:n aikana 1200-luvulla. Linnan kukoistuskausi oli Ludvig Suuren hallituskaudella, ja vuonna 1364 lähellä oleva Miskolc liitettiin Diósgyőrin tilaan. Osmanit valtasivat alueen vuoden 1596 jälkeen, ja linna menetti sotilaallisen merkityksensä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irak — maalehti / Muinaisuus: Kaksi kilometriä muuria autiomaassa] Hatra kukoisti 100- ja 200-luvuilla jaa. karavaanikaupunkina parthialaisvallan aikana. Kaupunkia kiersi sisä- ja ulkomuuri, halkaisijaltaan lähes kaksi kilometriä, ja niissä oli yli 160 tornia. Temppelialueen rakennuksissa yhdistyy kaksi tapaa rakentaa: kreikkalainen pylväsjärjestys ja idän korkea kaariholvi. Suurimman temppelin holvit kohosivat noin kolmenkymmenen metrin korkeuteen. Hatra otettiin maailmanperintöluetteloon vuonna 1985.
+- [Mexico City — kohdekartta / Kohdekartta: Kaupunginteatteri] 1918 Teatteri rakennettiin 1918 Donceles-kadun numeroon 36 vanhan Teatro Xicoténcatlin paikalle, ja se nimettiin primadonna Esperanza Iriksen mukaan. Iris — oikealta nimeltään María Esperanza Bonfil — oli Tabascon osavaltiosta kotoisin oleva operettilaulaja, jonka ura kukoisti Mexico Cityssä, Havannassa ja Madridissa ja joka kiersi laajalti Amerikoissa. Tunnetuimpia rooleja olivat Iloinen leski, Luxemburgin kreivi ja La princesa del dólar; 1930-luvulla hän näytteli myös elokuvissa. Iris rahoitti teatteria itse edellisen kiertueensa tuotoilla. Arkkitehdit Capetillo Servín ja Federico Mariscal ottivat esikuvaksi Milanon La Scalan. Teatteri avattiin 25. toukokuuta 1918 kaksi päivää sen jälkeen…
+
+### 32.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+### 32.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 32 YHTEINEN KONTEKSTI
+
+================ KOHTA 33 (kohde:hahmotelma-sumeg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Aavikon kaivoskaupungin arki: Kaivosmiehet louhivat oman sairaalansa] Kun Darwiniin pudotettiin pommeja helmikuussa 1942, Mount Isassa pelättiin sisämaahan etenevän hyökkäyksen tavoittelevan juuri kaupungin arvokkaita malmivarantoja. Sairaalan ylilääkäri Edward Ryan suunnitteli kolmesta rinnakkaisesta tunnelista ja niitä yhdistävästä poikkikäytävästä koostuvan maanalaisen varasairaalan, ja vapaaehtoiset kaivosmiehet louhivat sen liuskekallioon parissa viikossa Mount Isa Minesin lainatuilla koneilla. Leikkaussali, synnytyshuone ja potilasosastot kalustettiin kevään 1942 aikana, mutta hyökkäystä ei koskaan tullut eikä sairaalaa koskaan tarvittu hoitoon. Tunnelit avattiin museona vuonna 2001.
+
+### 33.1
+KYSYMYS: Kuka kuningas rakennutti Sümegin linnan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+### 33.2
+KYSYMYS: Minkä hyökkäyksen aikana kuningas asui linnassa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sümegin linna (historia)
+Tietoruudun teksti: Sümegin linna on Sümegin kaupungin luona Veszprémin läänissä oleva linna. Béla IV rakennutti sen 1200-luvun puolivälissä tai lopulla Linnanmäen huipulle noin 32 kilometriä Balatonilta pohjoiseen, ja hän asui siellä mongolien hyökkäyksen aikana 1241–1242. Myöhemmin Stefanus V lahjoitti sen Veszprémin roomalaiskatoliselle arkkihiippakunnalle. Vuonna 1552, kun turkkilaiset valtasivat Veszprémin, linna rakennettiin uudelleen ja vahvistettiin rajalinnoitukseksi, ja vuonna 1713 itävaltalaisjoukot sytyttivät sen tuleen Rákóczin vapaussodan jälkeen. Linnaa pidetään Unkarin parhaiten säilyneenä linnoituksena.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mount Isa — kaupunkilehti / Aavikon kaivoskaupungin arki: Kaivosmiehet louhivat oman sairaalansa] Kun Darwiniin pudotettiin pommeja helmikuussa 1942, Mount Isassa pelättiin sisämaahan etenevän hyökkäyksen tavoittelevan juuri kaupungin arvokkaita malmivarantoja. Sairaalan ylilääkäri Edward Ryan suunnitteli kolmesta rinnakkaisesta tunnelista ja niitä yhdistävästä poikkikäytävästä koostuvan maanalaisen varasairaalan, ja vapaaehtoiset kaivosmiehet louhivat sen liuskekallioon parissa viikossa Mount Isa Minesin lainatuilla koneilla. Leikkaussali, synnytyshuone ja potilasosastot kalustettiin kevään 1942 aikana, mutta hyökkäystä ei koskaan tullut eikä sairaalaa koskaan tarvittu hoitoon. Tunnelit avattiin museona vuonna 2001.
+
+### 33.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+### 33.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 33 YHTEINEN KONTEKSTI
+
+================ KOHTA 34 (kohde:hahmotelma-ipolytarnoc) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+### 34.1
+KYSYMYS: Millä nimellä Ipolytarnócia joskus kutsutaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+### 34.2
+KYSYMYS: Mikä sai fossiilit säilymään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ipolytarnóc (historia)
+Tietoruudun teksti: Ipolytarnóc on kylä Nógrádin läänissä, ja sen lähellä on Ipolytarnócin fossiilien luonnonsuojelualue. Paikkaa kutsutaan joskus esihistorialliseksi Pompejiksi: siellä on 17–23 miljoonaa vuotta vanhoja fossiileja, joihin kuuluu 24 hailajin hampaita, lähes 100 metriä korkea kivettynyt mänty, yli 15 000 subtrooppista lehteä ja yli 3 000 eläimen jalanjälkeä 11 lajilta. Fossiilit säilyivät, koska tulivuoren purkaus hautasi koko subtrooppisen viidakon tuhkan alle. Alue on suojeltu vuodesta 1944, ja geologinen polku avattiin yleisölle vuonna 1986.
+
+### 34.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+### 34.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 34 YHTEINEN KONTEKSTI
+
+================ KOHTA 35 (kohde:hahmotelma-szentendre) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Keksinnöt: Kilokaupalla vitamiinia] 1932 — Albert Szent-Györgyi tutki ainetta, joka esti hedelmien ruskettumisen. Ainetta oli vaikea saada tarpeeksi tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. Tarinan mukaan idea syntyi illallispöydässä.
+
+### 35.1
+KYSYMYS: Milloin Szentendre sai kaupunkioikeudet?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Keksinnöt: Kilokaupalla vitamiinia] 1932 — Albert Szent-Györgyi tutki ainetta, joka esti hedelmien ruskettumisen. Ainetta oli vaikea saada tarpeeksi tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. Tarinan mukaan idea syntyi illallispöydässä.
+
+### 35.2
+KYSYMYS: Mikä Szentendren museo on Unkarin tunnetuin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szentendre (kulttuuri)
+Tietoruudun teksti: Szentendre on jokivarsikaupunki Pestin läänissä Budapestin ja Pilis-Visegrádin vuorten välissä, ja se tunnetaan museoistaan, gallerioistaan ja taiteilijoistaan. Nimi perustuu keskiaikaiseen latinankieliseen muotoon Sankt Andrae eli Pyhä Andreas, ja se mainitaan ensimmäisen kerran vuonna 1146 erään opiskelijan testamentissa. Kun osmanit oli ajettu pois, alueelle muutti ulkomaisia uudisasukkaita, ja kaupungin vaurauden näkee barokkitaloista; Szentendre sai kaupunkioikeudet vuonna 1872. Rauhallinen maakuntaelämä on houkutellut taiteilijoita 1900-luvun alusta, ja Szentendren taiteilijayhdyskunta perustettiin vuonna 1929. Unkarin ulkoilmamuseo Skanzen perustettiin vuonna 1967.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Keksinnöt: Kilokaupalla vitamiinia] 1932 — Albert Szent-Györgyi tutki ainetta, joka esti hedelmien ruskettumisen. Ainetta oli vaikea saada tarpeeksi tutkittavaksi: lisämunuaisista ja appelsiineista sitä irtosi vain hitusia. Ratkaisu tuli kotiseudulta. Szegedin seudun paprikassa ainetta oli poikkeuksellisen paljon, ja siitä sitä saatiin talteen kiloittain. Aine osoittautui C-vitamiiniksi, ja Szent-Györgyi sai työstään Nobelin palkinnon vuonna 1937. Tarinan mukaan idea syntyi illallispöydässä.
+
+### 35.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI
+
+### 35.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 35 YHTEINEN KONTEKSTI

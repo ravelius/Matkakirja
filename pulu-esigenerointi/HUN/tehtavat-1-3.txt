@@ -1,0 +1,208 @@
+================ KOHTA 11 (kohde:drava~2) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kaupunkilehti / Luonto: Kaksi kansaa, jotka asuivat rannoilla ensin] Guaíban rantojen vanhimmat asukkaat ovat kaingang ja mbyá-guaraní, ja molemmat elävät yhä. Kaingangeja on noin 51 000 neljässä osavaltiossa, ja heidän jê-kieliperheeseen kuuluva kielensä on aivan eri kuin naapureiden. Yhteisö jakautuu kahteen puoliskoon, kamé ja kanhru, jotka maalaavat kuvionsa eri tavoin: toiset suorin viivoin ja siksakein, toiset pistein ja ympyröin. Mbyá-guaraníta on Brasiliassa noin 8 400, ja heidän kyliään johtaa kaksi henkilöä: hengellinen karaí ja poliittinen mburuvichá.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 11.1
+KYSYMYS: Miksi Dráva sai jäädä säännöstelemättä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+### 11.2
+KYSYMYS: Millaisia eläimiä joen rannoilla elää?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dráva (luonto · joki)
+Tietoruudun teksti: Alpeilta tuleva joki kulkee runsaat kaksisataa kilometriä Unkarin ja Kroatian rajaa pitkin ja laskee lopulta Tonavaan. Toisin kuin Tisza, Dráva jäi suurelta osin oikaisematta, ja siksi se on yhä leveä ja arvaamaton: joki siirtelee hiekkasärkkiään, kaivaa uusia uomia ja jättää vanhoja kuivumaan. Rantojen tulvametsät ovat Keski-Euroopan laajimpia, ja niissä pesii muun muassa merikotkia ja mustahaikaroita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Porto Alegre — kaupunkilehti / Luonto: Kaksi kansaa, jotka asuivat rannoilla ensin] Guaíban rantojen vanhimmat asukkaat ovat kaingang ja mbyá-guaraní, ja molemmat elävät yhä. Kaingangeja on noin 51 000 neljässä osavaltiossa, ja heidän jê-kieliperheeseen kuuluva kielensä on aivan eri kuin naapureiden. Yhteisö jakautuu kahteen puoliskoon, kamé ja kanhru, jotka maalaavat kuvionsa eri tavoin: toiset suorin viivoin ja siksakein, toiset pistein ja ympyröin. Mbyá-guaraníta on Brasiliassa noin 8 400, ja heidän kyliään johtaa kaksi henkilöä: hengellinen karaí ja poliittinen mburuvichá.
+- [Alankomaat — maalehti / Keksinnöt: Kangaskauppias näki eläimiä, joita kukaan ei uskonut] 1674 — Antoni van Leeuwenhoek myi Delftissä kangasta ja tarkasti langan tiheyttä suurennuslasilla. Hän opetteli itse sulattamaan lasista pieniä pallolinssejä ja puristi yhden linssin kahden metallilevyn väliin. Laite ei ollut putki vaan pieni levy, mutta säilyneistä kappaleista tehokkain suurentaa 270-kertaisesti. Vuodesta 1674 hän kirjoitti Lontooseen kirjeitä pikkuolennoista, joita ui sadevedessä. Niitä ei uskottu, joten Lontoosta lähetettiin miehiä katsomaan. Samanlaisia löytyi myös hänen omista hampaistaan. Linssien hiontatavan hän vei mukanaan hautaan.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:balaton) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Järvi, joka lämpenee nopeasti] Kesäisin — Balaton on Keski-Euroopan suurin järvi, pinta-alaltaan lähes kuusisataa neliökilometriä. Erikoista siinä on mataluus: keskisyvyys on vain runsaat kolme metriä, ja eteläreunalla voi kahlata satoja metrejä ennen kuin vesi ylettyy hartioihin. Matala vesi lämpenee nopeasti, joten järvi on kesällä lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se myös jäätyy talvella lähes joka vuosi. Rannat ovat purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.
+
+### 12.1
+KYSYMYS: Miksi Balaton on niin matala?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Järvi, joka lämpenee nopeasti] Kesäisin — Balaton on Keski-Euroopan suurin järvi, pinta-alaltaan lähes kuusisataa neliökilometriä. Erikoista siinä on mataluus: keskisyvyys on vain runsaat kolme metriä, ja eteläreunalla voi kahlata satoja metrejä ennen kuin vesi ylettyy hartioihin. Matala vesi lämpenee nopeasti, joten järvi on kesällä lämpimämpi kuin useimmat Euroopan järvet. Samasta syystä se myös jäätyy talvella lähes joka vuosi. Rannat ovat purjehdusaluetta, sillä moottoriveneily on järvellä kielletty.
+
+### 12.2
+KYSYMYS: Mikä on Tihanyn luostarin perustamiskirja?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Balaton (luonto)
+Tietoruudun teksti: Keski-Euroopan suurin järvi, pinta-alaltaan noin 590 neliökilometriä mutta hämmästyttävän matala: keskisyvyys on vain kolmisen metriä, ja Tihanyn niemen kohdalla voi kahlata pitkälle ulapalle. Matalan veden takia järvi lämpenee kesällä nopeasti ja jäätyy talvella kokonaan. Tihanyn niemellä on vuonna 1055 perustettu luostari, jonka perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hortobagy) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+### 13.1
+KYSYMYS: Miten puszta syntyi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+### 13.2
+KYSYMYS: Millaista karjaa aroilla laidunnetaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortobágy (luonto)
+Tietoruudun teksti: Suuren alangon aroa, jota unkariksi sanotaan pusztaksi: Euroopan laajin yhtenäinen luonnonlaidun, jolla ei kasva puita juuri lainkaan. Maisema ei ole aivan luonnon oma — Tiszan säännöstely kuivatti suot, ja suolainen maa jäi laitumeksi. Paimenet eli csikósit laiduntavat täällä yhä unkarilaista harmaakarjaa, kierteissarvisia racka-lampaita ja hevoslaumoja, ja aron tunnusmerkki on gémeskút, korkea vipuvarrellinen kaivo, jonka näkee kilometrien päähän.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:tokaj) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kaupunkilehti / Arki: Rinne, jolla myydään yhä kankaita] Ulusin kupeessa nousee rinne nimeltä Çıkrıkçılar Yokuşu, kutojien mäki. Sen vanhoissa puodeissa myydään kankaita, käsin kudottuja mattoja ja nahkatavaraa, ja hinnat ovat matalat. Kupariseppien tori Bakırcılar Çarşısı on suosituin osa: kuparin lisäksi sieltä saa koruja, pukuja, vanhaa tavaraa ja kirjontaa. Ylempänä linnanporttia kohti puodit myyvät mausteita, kuivattuja hedelmiä ja pähkinöitä. Uudempi kauppa on siirtynyt Kızılayn ja Tunalı Hilmi -kadun varrelle, missä erään kauppakeskuksen nimi Karum viittaa assyrialaisten kauppasiirtoloihin, joita Keski-Anatoliassa oli jo 2000-luvun eaa. alussa.
+- [Argentiina — maalehti / Ruoka: Köynnökset, jotka istutettiin kaksikymmentä vuotta aiemmin] 1853 — Kaksikymmentä vuotta ennen isoisän matkaa, 17. huhtikuuta 1853, Domingo Faustino Sarmiento — vielä kaukana presidenttiydestä — antoi ranskalaiselle agronomille Michel Pouget'lle tehtävän tuoda viiniköynnöksiä Ranskasta Mendozaan ja perusti sinne maatalousoppilaitoksen Quinta Agronómican. Mukana oli malbec, Ranskassa vaatimaton ja hallalle altis rypäle, joka Mendozan korkealla ja kuivalla maalla alkoi tuottaa tummaa, pehmeätanniinista viiniä. Vuonna 1873 nuo köynnökset ovat jo juurtuneet — eikä kukaan vielä tiedä, että juuri niistä tulee Argentiinan tunnusmerkki.
+
+### 14.1
+KYSYMYS: Miten aszú-viini tehdään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+
+### 14.2
+KYSYMYS: Miksi juuri tämä rinne tuottaa makeaa viiniä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tokaj (ruoka)
+Tietoruudun teksti: Bodrog- ja Tisza-jokien yhtymäkohdassa nousee vulkaaninen kukkula, jonka rinteillä tehdään Unkarin kuuluisinta viiniä. Jokien sumu suosii jalohometta, joka kuivattaa rypäleet rusinoiksi ja väkevöi sokerin — niistä puristetaan makea aszú-viini. Tokaj-Hegyalja rajattiin omaksi viinialueekseen jo vuonna 1737, mikä tekee siitä yhden maailman ensimmäisistä suojatuista alkuperäalueista. Ranskan hovissa viinistä sanottiin "viinien kuningas ja kuninkaiden viini".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kaupunkilehti / Arki: Rinne, jolla myydään yhä kankaita] Ulusin kupeessa nousee rinne nimeltä Çıkrıkçılar Yokuşu, kutojien mäki. Sen vanhoissa puodeissa myydään kankaita, käsin kudottuja mattoja ja nahkatavaraa, ja hinnat ovat matalat. Kupariseppien tori Bakırcılar Çarşısı on suosituin osa: kuparin lisäksi sieltä saa koruja, pukuja, vanhaa tavaraa ja kirjontaa. Ylempänä linnanporttia kohti puodit myyvät mausteita, kuivattuja hedelmiä ja pähkinöitä. Uudempi kauppa on siirtynyt Kızılayn ja Tunalı Hilmi -kadun varrelle, missä erään kauppakeskuksen nimi Karum viittaa assyrialaisten kauppasiirtoloihin, joita Keski-Anatoliassa oli jo 2000-luvun eaa. alussa.
+- [Argentiina — maalehti / Ruoka: Köynnökset, jotka istutettiin kaksikymmentä vuotta aiemmin] 1853 — Kaksikymmentä vuotta ennen isoisän matkaa, 17. huhtikuuta 1853, Domingo Faustino Sarmiento — vielä kaukana presidenttiydestä — antoi ranskalaiselle agronomille Michel Pouget'lle tehtävän tuoda viiniköynnöksiä Ranskasta Mendozaan ja perusti sinne maatalousoppilaitoksen Quinta Agronómican. Mukana oli malbec, Ranskassa vaatimaton ja hallalle altis rypäle, joka Mendozan korkealla ja kuivalla maalla alkoi tuottaa tummaa, pehmeätanniinista viiniä. Vuonna 1873 nuo köynnökset ovat jo juurtuneet — eikä kukaan vielä tiedä, että juuri niistä tulee Argentiinan tunnusmerkki.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:pannonhalma) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pannonhalma (historia)
+Tietoruudun teksti: Kukkulan laella Győrin eteläpuolella seisoo benediktiiniläinen arkkiluostari, joka perustettiin vuonna 996 — siis ennen kuin Unkarissa oli kuningasta. Munkit toivat maahan kristinuskon lisäksi kirjoitustaidon, viininviljelyn ja koulun, ja luostarissa on yhä toiminnassa oleva lukio. Sen kirjastossa on satojatuhansia niteitä, ja rakennuksissa näkyy tuhannen vuoden verran tyylejä romaanisesta kaarikäytävästä uusklassiseen kirjastosaliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+
+### 15.1
+KYSYMYS: Mitä munkit tekivät luostarissa keskiajalla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pannonhalma (historia)
+Tietoruudun teksti: Kukkulan laella Győrin eteläpuolella seisoo benediktiiniläinen arkkiluostari, joka perustettiin vuonna 996 — siis ennen kuin Unkarissa oli kuningasta. Munkit toivat maahan kristinuskon lisäksi kirjoitustaidon, viininviljelyn ja koulun, ja luostarissa on yhä toiminnassa oleva lukio. Sen kirjastossa on satojatuhansia niteitä, ja rakennuksissa näkyy tuhannen vuoden verran tyylejä romaanisesta kaarikäytävästä uusklassiseen kirjastosaliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Historia: Munkit, jotka kasvattivat pelastuskoiria] Pyhän Bernhardin luostarihospitsi perustettiin 1000-luvulla yli 2 400 metrin korkeuteen auttamaan matkalaisia, jotka ylittivät vaarallisen solan Sveitsin ja Italian välillä. 1600–1700-luvuilla munkit alkoivat kasvattaa vahvoja, paksuturkkisia koiria etsimään lumimyrskyihin eksyneitä matkalaisia — rotu tunnetaan nykyään Bernhardinkoirana. Kuuluisin koirista, Barry, pelasti perimätiedon mukaan yli neljäkymmentä ihmistä 1800-luvun alussa ennen kuolemaansa 1814. Hospitsi toimii yhä matkailijoiden yösijana solan yli, ja munkkien koirankasvatusperinne jatkuu läheisessä erillisessä kasvattamossa.
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+
+### 15.2
+KYSYMYS: Miten Unkarista tuli kristitty maa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pannonhalma (historia)
+Tietoruudun teksti: Kukkulan laella Győrin eteläpuolella seisoo benediktiiniläinen arkkiluostari, joka perustettiin vuonna 996 — siis ennen kuin Unkarissa oli kuningasta. Munkit toivat maahan kristinuskon lisäksi kirjoitustaidon, viininviljelyn ja koulun, ja luostarissa on yhä toiminnassa oleva lukio. Sen kirjastossa on satojatuhansia niteitä, ja rakennuksissa näkyy tuhannen vuoden verran tyylejä romaanisesta kaarikäytävästä uusklassiseen kirjastosaliin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Bacardí-talo] 1930 Bacardí-rommiyhtiö halusi pääkonttorin ja järjesti suunnittelukilpailun: se kutsui joukon arkkitehteja ja lupasi voittajalle tuhat pesoa. Tuomaristossa istuivat yhtiön johtaja Henri Schueg Chassin sekä arkkitehdit Leonardo Morales y Pedroso, Enrique Gil, Emilio de Soto ja Pedro Martínez Inclán. Voiton veivät Esteban Rodríguez-Castells ja Rafael Fernández Ruenes. Tontti on 1 320 neliömetriä Monserraten ja San Juan de Diosin kulmassa Las Murallasin kaupunginosassa — sillä kaistalla, jonka purettu kaupunginmuuri jätti jälkeensä. Työ alkoi 6. tammikuuta 1930, ja yhtiö oli asettanut sille 300 päivän määräajan; talo valmistui joulukuussa saman vuoden puolella. Maaperä oli huono, joten perust…
+- [Budapest — kaupunkilehti / Uskonto: Puu, jonka lehdissä on nimiä] Synagogan takapihalla, joukkohaudan päällä, seisoo kuvanveistäjä Imre Vargan metallinen itkuraita-patsas, jonka jokaiseen hopeiseen lehteen on kaiverrettu holokaustissa menehtyneen unkarinjuutalaisen nimi. Patsas paljastettiin 1991, ja sen rahoittamista tuki osaltaan unkarilaissyntyinen Hollywood-näyttelijä Tony Curtis, jonka isä oli kotoisin Unkarista. Muistomerkki tunnetaan Elämän puuna.
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

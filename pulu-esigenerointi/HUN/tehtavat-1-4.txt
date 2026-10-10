@@ -1,0 +1,195 @@
+================ KOHTA 16 (kohde:aggtelek) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aggtelekin luolat (luonto)
+Tietoruudun teksti: Aggtelekin karstialueen kalkkikiveen on liuennut yli kaksisataa luolaa, ja niistä suurin on Baradla: yli kaksikymmentä kilometriä käytävää, joka jatkuu Slovakian puolelle Domican luolana. Käytävissä on kymmenien metrien korkuisia saleja ja Euroopan suurimpiin kuuluvia tippukivipatsaita. Suurimmassa salissa on niin poikkeuksellinen akustiikka, että siellä on pidetty konsertteja jo 1800-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+
+### 16.1
+KYSYMYS: Miten tippukivet syntyvät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aggtelekin luolat (luonto)
+Tietoruudun teksti: Aggtelekin karstialueen kalkkikiveen on liuennut yli kaksisataa luolaa, ja niistä suurin on Baradla: yli kaksikymmentä kilometriä käytävää, joka jatkuu Slovakian puolelle Domican luolana. Käytävissä on kymmenien metrien korkuisia saleja ja Euroopan suurimpiin kuuluvia tippukivipatsaita. Suurimmassa salissa on niin poikkeuksellinen akustiikka, että siellä on pidetty konsertteja jo 1800-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Luonto: Luolasto jatkuu rajan toiselle puolelle] Vuosimiljoonia — Aggtelekin kalkkikivialueella maan alla kulkee luolasto, jonka käytäviä on mitattu noin 25 kilometriä. Luolasto ei pysähdy valtakunnan rajalle, vaan jatkuu Slovakian puolelle, ja sitä hoidetaan yhtenä kokonaisuutena kahden maan kesken. Tippukivet kasvavat, kun kalkkipitoinen vesi tihkuu katosta ja jättää joka pisarasta ohuen kalkkikerroksen. Kasvu on hidasta, luokkaa senttimetri sadassa vuodessa. Yhdessä salissa on niin hyvä kaiku, että siellä pidetään konsertteja.
+
+### 16.2
+KYSYMYS: Miksi luolassa kaikuu niin hyvin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aggtelekin luolat (luonto)
+Tietoruudun teksti: Aggtelekin karstialueen kalkkikiveen on liuennut yli kaksisataa luolaa, ja niistä suurin on Baradla: yli kaksikymmentä kilometriä käytävää, joka jatkuu Slovakian puolelle Domican luolana. Käytävissä on kymmenien metrien korkuisia saleja ja Euroopan suurimpiin kuuluvia tippukivipatsaita. Suurimmassa salissa on niin poikkeuksellinen akustiikka, että siellä on pidetty konsertteja jo 1800-luvulta lähtien.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Krakova — kohdekartta / Kohdekartta: Mariankirkko] 1397 Mariankirkko on Krakovan tuomiokirkkoaukiolla seisova tiiligoottilainen kirkko. Sen perustukset ovat 1200-luvun alusta, mutta nykyinen mahtava runko valmistui vuoteen 1397 mennessä. Kirkolla on kaksi eripituista tornia - korkeampi torni sai kultaisen kruununsa vuonna 1666. Joka tunti, yötä päivää, korkeamman tornin huipulta kaikuu trumpetisti, joka soittaa vanhan hälytysmelodian ja katkaisee sen aina yhtäkkiä kesken. Tarinan mukaan tapa muistuttaa keskiaikaisesta soittajasta, jonka vihollinen ampui kesken varoituksen. Keskipäivän soitto lähetetään radiossa ympäri koko Puolaa. Kirkon sisällä on valtava puinen alttaritaulu, jonka kuvanveistäjä Veit Stoss veisti 1400-luvun lopulla - se on…
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+================ KOHTA 17 (kohde:holloko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hollókő (kulttuuri)
+Tietoruudun teksti: Cserhátin kukkuloilla oleva pikkukylä, jossa asuu palóceiksi kutsuttu kansanryhmä. Kylän vanha osa paloi vuonna 1909, ja se rakennettiin uudelleen täsmälleen entiseen malliin: valkoiseksi kalkitut savitalot, puiset parvekkeet ja olkikatot kahden puolen yhtä kaarevaa kujaa. Rinteellä on 1200-luvun linnan raunio. Hollókő oli ensimmäinen kylä maailmassa, joka otettiin Unescon maailmanperintöluetteloon elävänä asuinpaikkana eikä museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [Astana — kohdekartta / Kohdekartta: Nurjol-bulevardi] Kurokawan kaava 1998 Bulevardi on 2 200 metrin mittainen kävelyalue Vasemman rannan hallinto- ja liikekeskuksessa. Sen ja koko uuden kaupungin kaavan suunnitteli japanilainen arkkitehti Kisho Kurokawa, joka voitti vuoden 1998 kansainvälisen suunnittelukilpailun. Vanha nimi oli Suly Nuly eli Vihervesibulevardi. Bulevardi on kaupungin akseli. Itäpäässä on Akorda joen rannassa ja länsipäässä Khan Shatyrin teltta; niiden välissä seisoo Bajterek, ja molemmin puolin kohoaa rivi ministeriöitä, virastoja ja asuintorneja. Kävelyosuudella on suihkulähteiden kuja. Suunta ei ole sattumaa. Kurokawan periaate oli "historian ja tulevaisuuden symbioosi": vanha kaupunki joen pohjoispuolella säilytettäisiin …
+- [PRI — maalehti / Rakennukset] Vanha San Juan on Karibian parhaiten säilynyt siirtomaakaupunki: sitä vartioi kaksi linnoitusta, sen kadut kimaltavat sinisistä laivan painolastikivistä ja sen parvekkeet ovat säilyneet lähes ennallaan viisi vuosisataa.
+
+### 17.1
+KYSYMYS: Keitä palócit ovat?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hollókő (kulttuuri)
+Tietoruudun teksti: Cserhátin kukkuloilla oleva pikkukylä, jossa asuu palóceiksi kutsuttu kansanryhmä. Kylän vanha osa paloi vuonna 1909, ja se rakennettiin uudelleen täsmälleen entiseen malliin: valkoiseksi kalkitut savitalot, puiset parvekkeet ja olkikatot kahden puolen yhtä kaarevaa kujaa. Rinteellä on 1200-luvun linnan raunio. Hollókő oli ensimmäinen kylä maailmassa, joka otettiin Unescon maailmanperintöluetteloon elävänä asuinpaikkana eikä museona.
+
+### 17.2
+KYSYMYS: Miksi vanha kylä säilytettiin ennallaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hollókő (kulttuuri)
+Tietoruudun teksti: Cserhátin kukkuloilla oleva pikkukylä, jossa asuu palóceiksi kutsuttu kansanryhmä. Kylän vanha osa paloi vuonna 1909, ja se rakennettiin uudelleen täsmälleen entiseen malliin: valkoiseksi kalkitut savitalot, puiset parvekkeet ja olkikatot kahden puolen yhtä kaarevaa kujaa. Rinteellä on 1200-luvun linnan raunio. Hollókő oli ensimmäinen kylä maailmassa, joka otettiin Unescon maailmanperintöluetteloon elävänä asuinpaikkana eikä museona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Albaicínin näköalapaikka] 1000-luku–1400-luku Alhambraa vastapäätä, joen toisella puolella, kohoaa Albaicín - Granadan vanha kaupunginosa, jonka mutkittelevat kujat ovat säilyneet lähes ennallaan 1200–1400-luvuilta asti. Alueen juuret ulottuvat vielä kauemmas: jo 1000-luvulla täällä seisoi Zawi ben Zirin rakennuttama linnoitus, jota ympäröi lähes 75 hehtaarin kokoinen muuri. Kukkulan laella sijaitsee Mirador de San Nicolás, näköalapaikka josta avautuu Granadan kuuluisin maisema: koko Alhambra levittäytyy katsojan eteen laakson toisella puolella, lumihuippuinen Sierra Nevada taustalla. Kujien varsilla on yhä kymmeniä satojenkin vuosien takaisia maanalaisia vesisäiliöitä - yksi niistä, 1000-luvulla rakennettu Aljibe d…
+- [Astana — kohdekartta / Kohdekartta: Nurjol-bulevardi] Kurokawan kaava 1998 Bulevardi on 2 200 metrin mittainen kävelyalue Vasemman rannan hallinto- ja liikekeskuksessa. Sen ja koko uuden kaupungin kaavan suunnitteli japanilainen arkkitehti Kisho Kurokawa, joka voitti vuoden 1998 kansainvälisen suunnittelukilpailun. Vanha nimi oli Suly Nuly eli Vihervesibulevardi. Bulevardi on kaupungin akseli. Itäpäässä on Akorda joen rannassa ja länsipäässä Khan Shatyrin teltta; niiden välissä seisoo Bajterek, ja molemmin puolin kohoaa rivi ministeriöitä, virastoja ja asuintorneja. Kävelyosuudella on suihkulähteiden kuja. Suunta ei ole sattumaa. Kurokawan periaate oli "historian ja tulevaisuuden symbioosi": vanha kaupunki joen pohjoispuolella säilytettäisiin …
+- [PRI — maalehti / Rakennukset] Vanha San Juan on Karibian parhaiten säilynyt siirtomaakaupunki: sitä vartioi kaksi linnoitusta, sen kadut kimaltavat sinisistä laivan painolastikivistä ja sen parvekkeet ovat säilyneet lähes ennallaan viisi vuosisataa.
+
+### 17.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+### 17.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 17 YHTEINEN KONTEKSTI
+
+================ KOHTA 18 (kohde:hahmotelma-budan-matyas-palatsi) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Budan Mátyás-palatsi (historia)
+Tietoruudun teksti: Budan keskiaikainen kuninkaanlinna sai Mátyás Corvinuksen aikana 1470-luvulta lähtien loisteliaan varhaisrenessanssiasun. Vuoden 1686 piiritys tuhosi palatsin raskaalla tykistöllä, ja jäljelle jääneet rauniot purettiin 1715.
+
+### 18.1
+KYSYMYS: Miltä Budan Mátyás-palatsi näytti loistoaikanaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Budan Mátyás-palatsi (historia)
+Tietoruudun teksti: Budan keskiaikainen kuninkaanlinna sai Mátyás Corvinuksen aikana 1470-luvulta lähtien loisteliaan varhaisrenessanssiasun. Vuoden 1686 piiritys tuhosi palatsin raskaalla tykistöllä, ja jäljelle jääneet rauniot purettiin 1715.
+
+### 18.2
+KYSYMYS: Miksi Budan Mátyás-palatsi katosi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Budan Mátyás-palatsi (historia)
+Tietoruudun teksti: Budan keskiaikainen kuninkaanlinna sai Mátyás Corvinuksen aikana 1470-luvulta lähtien loisteliaan varhaisrenessanssiasun. Vuoden 1686 piiritys tuhosi palatsin raskaalla tykistöllä, ja jäljelle jääneet rauniot purettiin 1715.
+
+### 18.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+### 18.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 18 YHTEINEN KONTEKSTI
+
+================ KOHTA 19 (kohde:hahmotelma-heviz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hévízin järvi (luonto · järvi)
+Tietoruudun teksti: Hévízin järvi sijaitsee Hévízin kaupungissa Balatonin länsipään lähellä, kahdeksan kilometrin päässä Keszthelystä, ja nimi Hévíz tarkoittaa kuumaa vettä. Se on Euroopan suurin uitavissa oleva lämpöjärvi, jonka vesi nousee kahdesta lähteestä 38 metrin syvyisessä luolassa. Virtaus on niin voimakas, että järven vesi vaihtuu kokonaan kolmen ja puolen vuorokauden välein; päälähde antaa 90 prosenttia vedestä ja on 41-asteinen, ja järven lämpötila on kesällä 33–35 ja talvella 22 astetta, jolloin pinnalle voi nousta sumua. Lumpeet ovat suuri turistinähtävyys: Lovassy Sándor toi Nymphaea rubran järveen vuonna 1898.
+
+### 19.1
+KYSYMYS: Mitä nimi Hévíz tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hévízin järvi (luonto · järvi)
+Tietoruudun teksti: Hévízin järvi sijaitsee Hévízin kaupungissa Balatonin länsipään lähellä, kahdeksan kilometrin päässä Keszthelystä, ja nimi Hévíz tarkoittaa kuumaa vettä. Se on Euroopan suurin uitavissa oleva lämpöjärvi, jonka vesi nousee kahdesta lähteestä 38 metrin syvyisessä luolassa. Virtaus on niin voimakas, että järven vesi vaihtuu kokonaan kolmen ja puolen vuorokauden välein; päälähde antaa 90 prosenttia vedestä ja on 41-asteinen, ja järven lämpötila on kesällä 33–35 ja talvella 22 astetta, jolloin pinnalle voi nousta sumua. Lumpeet ovat suuri turistinähtävyys: Lovassy Sándor toi Nymphaea rubran järveen vuonna 1898.
+
+### 19.2
+KYSYMYS: Kuinka usein Hévízin järven vesi vaihtuu kokonaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hévízin järvi (luonto · järvi)
+Tietoruudun teksti: Hévízin järvi sijaitsee Hévízin kaupungissa Balatonin länsipään lähellä, kahdeksan kilometrin päässä Keszthelystä, ja nimi Hévíz tarkoittaa kuumaa vettä. Se on Euroopan suurin uitavissa oleva lämpöjärvi, jonka vesi nousee kahdesta lähteestä 38 metrin syvyisessä luolassa. Virtaus on niin voimakas, että järven vesi vaihtuu kokonaan kolmen ja puolen vuorokauden välein; päälähde antaa 90 prosenttia vedestä ja on 41-asteinen, ja järven lämpötila on kesällä 33–35 ja talvella 22 astetta, jolloin pinnalle voi nousta sumua. Lumpeet ovat suuri turistinähtävyys: Lovassy Sándor toi Nymphaea rubran järveen vuonna 1898.
+
+### 19.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+### 19.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 19 YHTEINEN KONTEKSTI
+
+================ KOHTA 20 (kohde:hahmotelma-velence) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velencei-tó (luonto · järvi)
+Tietoruudun teksti: Velencei-tó on Unkarin kolmanneksi suurin luonnonjärvi, umpiallas, ja suosittu lomakohde unkarilaisten keskuudessa. Sen pinta-ala on 26 neliökilometriä, josta kolmasosa on ruovikkoa. Aurinkoisen ilmaston ja järven matalan veden ansiosta se on yksi Euroopan lämpimimmistä järvistä, ja sen lämpötila voi kesällä nousta 26–28 asteeseen. Järvi sijaitsee Fejérin läänissä Velencen kukkuloiden juurella, M7-moottoritien varrella Budapestin ja Székesfehérvárin välissä. Osa järvestä on lintujen suojelualuetta.
+
+### 20.1
+KYSYMYS: Kuinka suuri osa Velencei-tón pinta-alasta on ruovikkoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velencei-tó (luonto · järvi)
+Tietoruudun teksti: Velencei-tó on Unkarin kolmanneksi suurin luonnonjärvi, umpiallas, ja suosittu lomakohde unkarilaisten keskuudessa. Sen pinta-ala on 26 neliökilometriä, josta kolmasosa on ruovikkoa. Aurinkoisen ilmaston ja järven matalan veden ansiosta se on yksi Euroopan lämpimimmistä järvistä, ja sen lämpötila voi kesällä nousta 26–28 asteeseen. Järvi sijaitsee Fejérin läänissä Velencen kukkuloiden juurella, M7-moottoritien varrella Budapestin ja Székesfehérvárin välissä. Osa järvestä on lintujen suojelualuetta.
+
+### 20.2
+KYSYMYS: Miksi Velencei-tó on yksi Euroopan lämpimimmistä järvistä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Velencei-tó (luonto · järvi)
+Tietoruudun teksti: Velencei-tó on Unkarin kolmanneksi suurin luonnonjärvi, umpiallas, ja suosittu lomakohde unkarilaisten keskuudessa. Sen pinta-ala on 26 neliökilometriä, josta kolmasosa on ruovikkoa. Aurinkoisen ilmaston ja järven matalan veden ansiosta se on yksi Euroopan lämpimimmistä järvistä, ja sen lämpötila voi kesällä nousta 26–28 asteeseen. Järvi sijaitsee Fejérin läänissä Velencen kukkuloiden juurella, M7-moottoritien varrella Budapestin ja Székesfehérvárin välissä. Osa järvestä on lintujen suojelualuetta.
+
+### 20.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI
+
+### 20.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 20 YHTEINEN KONTEKSTI

@@ -1,0 +1,212 @@
+================ KOHTA 1 (kohde:debrecen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Debrecen (kaupungit)
+Tietoruudun teksti: Unkarin toiseksi suurin kaupunki keskellä Suurta alankoa. Reformaation jälkeen Debrecen oli niin yksimielisen protestanttinen, että sitä kutsuttiin "kalvinismin Roomaksi", ja sen 1820-luvulla valmistunut Suuri kirkko on yhä maan suurin protestanttinen kirkko. Samassa kirkossa julistettiin huhtikuussa 1849 Habsburgien suvun menettäneen Unkarin valtaistuimen — kaupunki toimi silloin muutaman kuukauden ajan maan pääkaupunkina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Panama — kohdekartta / Kohdekartta: Afroantillilainen museo] 1980 Afroantillilainen museo kertoo niiden ihmisten historiasta, joita ilman kanavaa ei olisi rakennettu: Karibialta tulleiden työläisten ja heidän jälkeläistensä. Museo perustettiin 23. joulukuuta 1980, ja sen perusti Reina Torres de Araúz, joka perusti monet muutkin maan museoista. Rakennus itsessään on osa samaa tarinaa. Se pystytettiin 1909–1910 barbadoslaisten protestanttien kokoontumispaikaksi, ja tontin hankkimisessa auttoi Panama Railroad Company. Peruskivi laskettiin 1909, ja viisi rakennusta vihittiin käyttöön 16. tammikuuta 1910. Seurakunta muutti 1900-luvun puolivälissä Río Abajoon, ja talo rapistui 1970-luvun loppuun mennessä pahoin. Kokoelma alkoi valokuvista, ja kappelin vuod…
+
+### 1.1
+KYSYMYS: Miksi juuri Debrecenistä tuli protestanttien keskus?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Debrecen (kaupungit)
+Tietoruudun teksti: Unkarin toiseksi suurin kaupunki keskellä Suurta alankoa. Reformaation jälkeen Debrecen oli niin yksimielisen protestanttinen, että sitä kutsuttiin "kalvinismin Roomaksi", ja sen 1820-luvulla valmistunut Suuri kirkko on yhä maan suurin protestanttinen kirkko. Samassa kirkossa julistettiin huhtikuussa 1849 Habsburgien suvun menettäneen Unkarin valtaistuimen — kaupunki toimi silloin muutaman kuukauden ajan maan pääkaupunkina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Panama — kohdekartta / Kohdekartta: Afroantillilainen museo] 1980 Afroantillilainen museo kertoo niiden ihmisten historiasta, joita ilman kanavaa ei olisi rakennettu: Karibialta tulleiden työläisten ja heidän jälkeläistensä. Museo perustettiin 23. joulukuuta 1980, ja sen perusti Reina Torres de Araúz, joka perusti monet muutkin maan museoista. Rakennus itsessään on osa samaa tarinaa. Se pystytettiin 1909–1910 barbadoslaisten protestanttien kokoontumispaikaksi, ja tontin hankkimisessa auttoi Panama Railroad Company. Peruskivi laskettiin 1909, ja viisi rakennusta vihittiin käyttöön 16. tammikuuta 1910. Seurakunta muutti 1900-luvun puolivälissä Río Abajoon, ja talo rapistui 1970-luvun loppuun mennessä pahoin. Kokoelma alkoi valokuvista, ja kappelin vuod…
+
+### 1.2
+KYSYMYS: Mitä Unkarissa tapahtui vuonna 1849?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Debrecen (kaupungit)
+Tietoruudun teksti: Unkarin toiseksi suurin kaupunki keskellä Suurta alankoa. Reformaation jälkeen Debrecen oli niin yksimielisen protestanttinen, että sitä kutsuttiin "kalvinismin Roomaksi", ja sen 1820-luvulla valmistunut Suuri kirkko on yhä maan suurin protestanttinen kirkko. Samassa kirkossa julistettiin huhtikuussa 1849 Habsburgien suvun menettäneen Unkarin valtaistuimen — kaupunki toimi silloin muutaman kuukauden ajan maan pääkaupunkina.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:szeged) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szeged (kaupungit)
+Tietoruudun teksti: Kaupunki Tiszan ja Marosin yhtymäkohdassa, aurinkoisin paikka Unkarissa. Maaliskuussa 1879 — vain kuusi vuotta isoisän matkan jälkeen — Tisza mursi patonsa ja vei lähes koko kaupungin; pystyyn jäi muutama sata taloa. Szeged rakennettiin uudelleen kokonaan uuden kaavan mukaan, ja avun antaneet Euroopan suurkaupungit muistetaan yhä kehäkatujen nimissä: Wien, Bryssel, Rooma, Pariisi ja Lontoo. Kaupunki tunnetaan myös paprikastaan ja salamimakkarastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kaupunkilehti / Historia: Tulva siirsi koko kaupungin] Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden 1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä prosenttia edellisen vuosikymmenen rakentamisesta oli tapahtunut plazan eteläpuolella.
+- [Brisbane — kaupunkilehti / Historia: Tulva, joka vei sillan mukanaan] Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan tilalle järjestettiin väliaikainen lauttayhteys, mutta se päättyi onnettomuuteen kolme vuotta myöhemmin, kun Pearl-lautta kaatui helmikuussa 1896; arviolta puolet kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, ja jokainen niistä on muuttanut sitä, miten Brisbane varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle rakennettiin Wivenhoen pato.
+
+### 2.1
+KYSYMYS: Miten kaupunki rakennettiin tulvan jälkeen uudelleen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szeged (kaupungit)
+Tietoruudun teksti: Kaupunki Tiszan ja Marosin yhtymäkohdassa, aurinkoisin paikka Unkarissa. Maaliskuussa 1879 — vain kuusi vuotta isoisän matkan jälkeen — Tisza mursi patonsa ja vei lähes koko kaupungin; pystyyn jäi muutama sata taloa. Szeged rakennettiin uudelleen kokonaan uuden kaavan mukaan, ja avun antaneet Euroopan suurkaupungit muistetaan yhä kehäkatujen nimissä: Wien, Bryssel, Rooma, Pariisi ja Lontoo. Kaupunki tunnetaan myös paprikastaan ja salamimakkarastaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Los Angeles — kaupunkilehti / Historia: Tulva siirsi koko kaupungin] Alkuperäinen pueblo rakennettiin lähelle jokea, ja vuoden 1815 tulva pyyhkäisi sen mennessään. Yhteisö rakensi uudelleen kauemmas vedestä, nykyisen plazan kohdalle, ja sen ympärille syntyi kaupungin ensimmäinen kivikeskusta: kirkko, joka perustettiin 1814 ja valmistui 1822 ja jonka nykyinen rakennus on vuodelta 1861, vuonna 1818 rakennettu Ávila-adobe eli kaupungin vanhin säilynyt asuinrakennus ja lopulta Pico House. Vuonna 1891 Los Angeles Times laski, että yhdeksänkymmentä prosenttia edellisen vuosikymmenen rakentamisesta oli tapahtunut plazan eteläpuolella.
+- [Brisbane — kaupunkilehti / Historia: Tulva, joka vei sillan mukanaan] Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan tilalle järjestettiin väliaikainen lauttayhteys, mutta se päättyi onnettomuuteen kolme vuotta myöhemmin, kun Pearl-lautta kaatui helmikuussa 1896; arviolta puolet kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, ja jokainen niistä on muuttanut sitä, miten Brisbane varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle rakennettiin Wivenhoen pato.
+
+### 2.2
+KYSYMYS: Mistä szegediläinen paprika on kuuluisa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Szeged (kaupungit)
+Tietoruudun teksti: Kaupunki Tiszan ja Marosin yhtymäkohdassa, aurinkoisin paikka Unkarissa. Maaliskuussa 1879 — vain kuusi vuotta isoisän matkan jälkeen — Tisza mursi patonsa ja vei lähes koko kaupungin; pystyyn jäi muutama sata taloa. Szeged rakennettiin uudelleen kokonaan uuden kaavan mukaan, ja avun antaneet Euroopan suurkaupungit muistetaan yhä kehäkatujen nimissä: Wien, Bryssel, Rooma, Pariisi ja Lontoo. Kaupunki tunnetaan myös paprikastaan ja salamimakkarastaan.
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:pecs) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pécs (kaupungit)
+Tietoruudun teksti: Mecsek-vuorten etelärinteellä oleva kaupunki on ollut asuttuna roomalaisajoista asti: Sopianaen varhaiskristillinen hautausmaa 300-luvulta on yhä maan alla nähtävissä. Unkarin ensimmäinen yliopisto perustettiin täällä vuonna 1367. Ottomaanien vallan aikana kaupungin päätorille rakennettiin Gázi Kászim -pashan moskeija, ja sama kupolirakennus on nykyään katolinen kirkko — Unkarin suurin säilynyt ottomaanien ajan rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+
+### 3.1
+KYSYMYS: Millainen kaupunki roomalaisten Sopianae oli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pécs (kaupungit)
+Tietoruudun teksti: Mecsek-vuorten etelärinteellä oleva kaupunki on ollut asuttuna roomalaisajoista asti: Sopianaen varhaiskristillinen hautausmaa 300-luvulta on yhä maan alla nähtävissä. Unkarin ensimmäinen yliopisto perustettiin täällä vuonna 1367. Ottomaanien vallan aikana kaupungin päätorille rakennettiin Gázi Kászim -pashan moskeija, ja sama kupolirakennus on nykyään katolinen kirkko — Unkarin suurin säilynyt ottomaanien ajan rakennus.
+
+### 3.2
+KYSYMYS: Mitä ottomaanien ajasta on Unkarissa jäljellä?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pécs (kaupungit)
+Tietoruudun teksti: Mecsek-vuorten etelärinteellä oleva kaupunki on ollut asuttuna roomalaisajoista asti: Sopianaen varhaiskristillinen hautausmaa 300-luvulta on yhä maan alla nähtävissä. Unkarin ensimmäinen yliopisto perustettiin täällä vuonna 1367. Ottomaanien vallan aikana kaupungin päätorille rakennettiin Gázi Kászim -pashan moskeija, ja sama kupolirakennus on nykyään katolinen kirkko — Unkarin suurin säilynyt ottomaanien ajan rakennus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:eger) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eger (kaupungit)
+Tietoruudun teksti: Barokkikaupunki Mátran ja Bükin välissä. Vuonna 1552 Egerin linna kesti kuukausia kestäneen ottomaanien piirityksen, vaikka puolustajia oli vain runsaat kaksituhatta — tapaus on Unkarissa yhtä tunnettu kuin mikä tahansa voitettu taistelu. Puoli vuosisataa myöhemmin kaupunki kuitenkin siirtyi ottomaaneille, ja siltä ajalta on jäljellä 40 metriä korkea minareetti, Euroopan pohjoisin säilynyt. Ympäröivät rinteet tuottavat Egri bikavér -punaviiniä, jonka nimi tarkoittaa "härän verta".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kaupunkilehti / Toronto: Varuskunta, joka antoi kylälle nimen] Kuvernööri John Graves Simcoe perusti Yorkin kylän Ontariojärven pohjoisrannalle 1793 ja siirsi Yläkanadan pääkaupungin sinne Newarkista eli nykyisestä Niagara-on-the-Lakesta, koska paikkaa oli helpompi puolustaa Yhdysvaltoja vastaan. Sataman suulle nousi Fort Yorkin varuskunta, ja asutus levisi sen taakse nykyisen Parliament Streetin ja Front Streetin risteyksen tienoille. Nimi Toronto tulee alkuperäiskansojen kielistä: mohawkin tkaronto tarkoittaa paikkaa, jossa puita seisoo vedessä, ja se viittasi alun perin kauempana pohjoisessa olevaan kapeikkoon.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+
+### 4.1
+KYSYMYS: Miten pieni varuskunta kesti niin pitkän piirityksen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eger (kaupungit)
+Tietoruudun teksti: Barokkikaupunki Mátran ja Bükin välissä. Vuonna 1552 Egerin linna kesti kuukausia kestäneen ottomaanien piirityksen, vaikka puolustajia oli vain runsaat kaksituhatta — tapaus on Unkarissa yhtä tunnettu kuin mikä tahansa voitettu taistelu. Puoli vuosisataa myöhemmin kaupunki kuitenkin siirtyi ottomaaneille, ja siltä ajalta on jäljellä 40 metriä korkea minareetti, Euroopan pohjoisin säilynyt. Ympäröivät rinteet tuottavat Egri bikavér -punaviiniä, jonka nimi tarkoittaa "härän verta".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Toronto — kaupunkilehti / Toronto: Varuskunta, joka antoi kylälle nimen] Kuvernööri John Graves Simcoe perusti Yorkin kylän Ontariojärven pohjoisrannalle 1793 ja siirsi Yläkanadan pääkaupungin sinne Newarkista eli nykyisestä Niagara-on-the-Lakesta, koska paikkaa oli helpompi puolustaa Yhdysvaltoja vastaan. Sataman suulle nousi Fort Yorkin varuskunta, ja asutus levisi sen taakse nykyisen Parliament Streetin ja Front Streetin risteyksen tienoille. Nimi Toronto tulee alkuperäiskansojen kielistä: mohawkin tkaronto tarkoittaa paikkaa, jossa puita seisoo vedessä, ja se viittasi alun perin kauempana pohjoisessa olevaan kapeikkoon.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+
+### 4.2
+KYSYMYS: Mikä tekee Egerin viinistä erityisen?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Eger (kaupungit)
+Tietoruudun teksti: Barokkikaupunki Mátran ja Bükin välissä. Vuonna 1552 Egerin linna kesti kuukausia kestäneen ottomaanien piirityksen, vaikka puolustajia oli vain runsaat kaksituhatta — tapaus on Unkarissa yhtä tunnettu kuin mikä tahansa voitettu taistelu. Puoli vuosisataa myöhemmin kaupunki kuitenkin siirtyi ottomaaneille, ja siltä ajalta on jäljellä 40 metriä korkea minareetti, Euroopan pohjoisin säilynyt. Ympäröivät rinteet tuottavat Egri bikavér -punaviiniä, jonka nimi tarkoittaa "härän verta".
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:gyor) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Győr (kaupungit)
+Tietoruudun teksti: Kaupunki Budapestin ja Wienin puolivälissä, siinä missä Rába ja Rábca laskevat Tonavan sivuhaaraan Mosoni-Dunaan. Kolme jokea teki paikasta sekä kauppapaikan että linnoituksen, ja saksaksi se tunnettiin nimellä Raab. Ottomaanit pitivät kaupunkia neljä vuotta 1590-luvulla, minkä jälkeen se rakennettiin uudelleen italialaisten suunnittelijoiden käsissä — Győrin vanhakaupunki on siksi yksi Keski-Euroopan yhtenäisimpiä barokkikokonaisuuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malesia — maalehti / Rakennukset: Kello löi ensi kerran 1897] 1897 — Kuala Lumpur syntyi noin vuonna 1857 tinakaivoksia palvelevaksi kauppapaikaksi jokien yhtymäkohtaan. Neljä vuosikymmentä myöhemmin joen rantaan valmistui hallinnon talo, jonka julkisivu on 137,2 metriä pitkä — silloin Malaijan suurin rakennus. Yleisö pelkäsi, että kellotorni sortuisi, kun keskipäivällä ja viideltä ammuttiin merkkilaukaus, mutta 41-metrinen torni kesti. Ensimmäinen kello jouduttiin vaihtamaan, koska se ei sopinut rakennukseen; toinen tuli Croydonista ja löi kesäkuussa 1897.
+
+### 5.1
+KYSYMYS: Miksi kaupunki rakennettiin juuri jokien yhtymäkohtaan?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Győr (kaupungit)
+Tietoruudun teksti: Kaupunki Budapestin ja Wienin puolivälissä, siinä missä Rába ja Rábca laskevat Tonavan sivuhaaraan Mosoni-Dunaan. Kolme jokea teki paikasta sekä kauppapaikan että linnoituksen, ja saksaksi se tunnettiin nimellä Raab. Ottomaanit pitivät kaupunkia neljä vuotta 1590-luvulla, minkä jälkeen se rakennettiin uudelleen italialaisten suunnittelijoiden käsissä — Győrin vanhakaupunki on siksi yksi Keski-Euroopan yhtenäisimpiä barokkikokonaisuuksia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malesia — maalehti / Rakennukset: Kello löi ensi kerran 1897] 1897 — Kuala Lumpur syntyi noin vuonna 1857 tinakaivoksia palvelevaksi kauppapaikaksi jokien yhtymäkohtaan. Neljä vuosikymmentä myöhemmin joen rantaan valmistui hallinnon talo, jonka julkisivu on 137,2 metriä pitkä — silloin Malaijan suurin rakennus. Yleisö pelkäsi, että kellotorni sortuisi, kun keskipäivällä ja viideltä ammuttiin merkkilaukaus, mutta 41-metrinen torni kesti. Ensimmäinen kello jouduttiin vaihtamaan, koska se ei sopinut rakennukseen; toinen tuli Croydonista ja löi kesäkuussa 1897.
+
+### 5.2
+KYSYMYS: Mitä Győrissä tehdään nykyään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Győr (kaupungit)
+Tietoruudun teksti: Kaupunki Budapestin ja Wienin puolivälissä, siinä missä Rába ja Rábca laskevat Tonavan sivuhaaraan Mosoni-Dunaan. Kolme jokea teki paikasta sekä kauppapaikan että linnoituksen, ja saksaksi se tunnettiin nimellä Raab. Ottomaanit pitivät kaupunkia neljä vuotta 1590-luvulla, minkä jälkeen se rakennettiin uudelleen italialaisten suunnittelijoiden käsissä — Győrin vanhakaupunki on siksi yksi Keski-Euroopan yhtenäisimpiä barokkikokonaisuuksia.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

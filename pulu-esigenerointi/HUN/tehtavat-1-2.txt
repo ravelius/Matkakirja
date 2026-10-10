@@ -1,0 +1,206 @@
+================ KOHTA 6 (kohde:kekes) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kékes (luonto · vuori)
+Tietoruudun teksti: Unkarin korkein kohta, 1014 metriä, Mátra-vuoriston laella. Se on maan ainoa yli tuhannen metrin huippu, ja koko Unkarista vain runsas prosentti on tätä ylänköä — muu maa on alankoa ja loivia kukkuloita. Mátra on vulkaanista alkuperää, ja sen andesiitti- ja rioliittirinteitä peittää pyökkimetsä. Nimi Kékes tulee sanasta kék, sininen: kaukaa katsottuna vuori näyttää siniseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+
+### 6.1
+KYSYMYS: Miten Mátran vuoret syntyivät?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kékes (luonto · vuori)
+Tietoruudun teksti: Unkarin korkein kohta, 1014 metriä, Mátra-vuoriston laella. Se on maan ainoa yli tuhannen metrin huippu, ja koko Unkarista vain runsas prosentti on tätä ylänköä — muu maa on alankoa ja loivia kukkuloita. Mátra on vulkaanista alkuperää, ja sen andesiitti- ja rioliittirinteitä peittää pyökkimetsä. Nimi Kékes tulee sanasta kék, sininen: kaukaa katsottuna vuori näyttää siniseltä.
+
+### 6.2
+KYSYMYS: Millaista on Unkarin ainoalla yli tuhannen metrin huipulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kékes (luonto · vuori)
+Tietoruudun teksti: Unkarin korkein kohta, 1014 metriä, Mátra-vuoriston laella. Se on maan ainoa yli tuhannen metrin huippu, ja koko Unkarista vain runsas prosentti on tätä ylänköä — muu maa on alankoa ja loivia kukkuloita. Mátra on vulkaanista alkuperää, ja sen andesiitti- ja rioliittirinteitä peittää pyökkimetsä. Nimi Kékes tulee sanasta kék, sininen: kaukaa katsottuna vuori näyttää siniseltä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+- [Ruotsi — maalehti / Historia: Laiva, joka kaatui tuhannen metrin jälkeen] 1628 — Sotalaiva Vasa lähti neitsytmatkalleen Tukholman satamasta 10. elokuuta 1628. Se ehti purjehtia noin tuhat kolmesataa metriä, kun tuulenpuuska kallisti sen niin, että vesi syöksyi sisään avoimista tykkiluukuista. Kuningas oli vaatinut kaksi tykkikantta, eikä kapea runko kantanut niiden painoa. Itämeren vähäsuolaisessa vedessä ei elä laivamato, joka syö puun muissa merissä — siksi laiva säilyi mudassa. Vasa nostettiin 1961, ja siitä on alkuperäistä puuta yli 95 prosenttia.
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:istallos-ko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+### 7.1
+KYSYMYS: Mitä Istállós-kőn luolasta on löydetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+### 7.2
+KYSYMYS: Millainen vuoristo Bükk on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Istállós-kő (luonto · vuori)
+Tietoruudun teksti: Bükk-vuoriston korkein huippu, 959 metriä, ja Unkarin toiseksi korkein kohta. Vuoren kyljessä oleva Istállós-kőn luola on yksi maan tärkeimmistä kivikauden löytöpaikoista: sieltä on kaivettu esiin kymmeniätuhansia vuosia vanhoja kivi- ja luutyökaluja sekä jääkauden eläinten luita. Bükk on kalkkikivivuoristo, ja sen ylätasanko on täynnä doliineja eli maanpinnan painanteita, joihin sadevesi katoaa.
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:irottko) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+
+### 8.1
+KYSYMYS: Miksi Alpit loppuvat juuri tähän?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alpit — kaupunkilehti / Alpit] Vuoristo, jossa torvi kantaa laaksosta toiseen ja lumivyöryn kanssa on opittu elämään.
+
+### 8.2
+KYSYMYS: Millaista oli asua rajavuorella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Írott-kő (luonto · vuori)
+Tietoruudun teksti: Kőszegin vuorten korkein kohta, 882 metriä, ja Unkarin läntisin huippu. Vuori on tasan Unkarin ja Itävallan rajalla, ja saksaksi se on Geschriebenstein — molemmat nimet tarkoittavat "kirjoitettua kiveä". Laella oleva näkötorni on rakennettu suoraan rajalinjan päälle, joten portaissa voi astua maasta toiseen. Kőszegin vuoret ovat Alppien itäisin haara: idempänä alkaa Pannonian alanko, joka jatkuu tasaisena satoja kilometrejä.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:tonava~4) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+
+### 9.1
+KYSYMYS: Miksi Tonava kääntyy Unkarissa niin jyrkästi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Ruoka: Gulassi on Unkarissa keitto] 1897 — Se, mitä muualla Euroopassa kutsutaan gulassiksi, on Unkarissa pörkölt eli paksu pata. Gulyás taas on keitto: lientä, naudanlihaa, perunaa ja paprikaa, ja se syödään lusikalla. Sana tarkoittaa karjapaimenta — keitto keitettiin alun perin padassa laitumella. Paprika saapui maahan ottomaanien mukana 1500-luvulla, ja Budapestin suuressa kauppahallissa, joka avattiin vuonna 1897, sitä myydään makeasta tuliseen.
+
+### 9.2
+KYSYMYS: Miten Buda ja Pest yhdistettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tonava (luonto · joki)
+Tietoruudun teksti: Euroopan toiseksi pisin joki virtaa Mustan metsän lähteiltä Mustallemerelle, ja Unkarin halki sitä kulkee runsaat 400 kilometriä. Visegrádin kohdalla joki törmää vuoriin ja kääntyy lännestä jyrkästi etelään — sitä mutkaa sanotaan Tonavan mutkaksi. Sata kilometriä alavirtaan joki jakaa pääkaupungin kahtia: vuoriselle länsirannalle jää Buda ja tasaiselle itärannalle Pest, ja vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta niiden välillä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest] Buda, Óbuda ja Pest olivat vielä vuonna 1873 kolme eri kaupunkia. Samana vuonna niistä tehtiin yksi ainoa: Budapest.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:tisza) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Borneo — kaupunkilehti / Luonto: Metsä, joka näki dinosaurukset] Borneon sademetsän arvioidaan olevan noin 140 miljoonaa vuotta vanha, mikä tekee siitä yhden maailman vanhimmista. Alavia osia hallitsevat yhä samat puut kuin miljoonia vuosia sitten eli dipterokarpit, ja pelkästään alangon sademetsää on 427 500 neliökilometriä. Koko rantaviivaa kiertää turvesuometsä, ja tuhannen metrin yläpuolella alkaa vuoristosademetsä. Makean veden kaloja tunnetaan noin 440 lajia — suunnilleen yhtä paljon kuin Sumatralla ja Jaavalla yhteensä. Vuoden 2007 Heart of Borneo -sopimuksen jälkeen saarelta oli vuoteen 2010 mennessä löydetty 123 tieteelle uutta lajia.
+
+### 10.1
+KYSYMYS: Miksi jokea haluttiin oikaista?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+### 10.2
+KYSYMYS: Mitä säännöstely teki alangon maisemalle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tisza (luonto · joki)
+Tietoruudun teksti: Unkarin toinen suuri joki tulee Karpaateilta ja halkoo Suuren alangon pohjoisesta etelään. Ennen 1800-lukua Tisza mutkitteli niin loivasti, että kevättulvat levittivät veden kymmenien kilometrien levyisiksi soiksi. Isoisän matkan aikaan käynnissä olivat Euroopan suurimmat säännöstelytyöt: yli sata mutkaa katkaistiin läpikaivetuilla oikoteillä, joki lyheni satoja kilometrejä ja suot kuivattiin pelloiksi. Samalla katosi suuri osa vanhasta alankomaisemasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Borneo — kaupunkilehti / Luonto: Metsä, joka näki dinosaurukset] Borneon sademetsän arvioidaan olevan noin 140 miljoonaa vuotta vanha, mikä tekee siitä yhden maailman vanhimmista. Alavia osia hallitsevat yhä samat puut kuin miljoonia vuosia sitten eli dipterokarpit, ja pelkästään alangon sademetsää on 427 500 neliökilometriä. Koko rantaviivaa kiertää turvesuometsä, ja tuhannen metrin yläpuolella alkaa vuoristosademetsä. Makean veden kaloja tunnetaan noin 440 lajia — suunnilleen yhtä paljon kuin Sumatralla ja Jaavalla yhteensä. Vuoden 2007 Heart of Borneo -sopimuksen jälkeen saarelta oli vuoteen 2010 mennessä löydetty 123 tieteelle uutta lajia.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
