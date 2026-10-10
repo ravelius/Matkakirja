@@ -44,7 +44,7 @@ Mitä Eiríksstaðirilla on tutkittu?
 
 ### 7.2
 KYSYMYS: Miksi Eiríkr joutui lähtemään Haukadalurista?
-Tuota niin. Se on vakava juttu. Eiríkr oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta, ja siksi hänen oli lähdettävä; näin kertovat [[Landnámabók]] ja Punaisen Eirikin saaga. Tapahtumat sijoittuvat viikinkiaikaan, yli tuhat vuotta sitten, jolloin Islannissa riidat ratkaistiin sukujen ja kansankokousten kesken, eikä nykyisenlaista oikeuslaitosta ollut, joten surma johti usein pakoon tai karkotukseen. Sellainen aika oli, ja onneksi siitä on kulunut pitkä aika.
+Tuota niin. Se on vakava juttu. Eiríkr oli tappanut kaksi miestä kostoksi omien orjiensa kuolemasta, ja siksi hänen oli lähdettävä; näin kertovat [[Landnámabók]] ja [[Punaisen Eirikin saaga]]. Tapahtumat sijoittuvat viikinkiaikaan, yli tuhat vuotta sitten, jolloin Islannissa riidat ratkaistiin sukujen ja kansankokousten kesken, eikä nykyisenlaista oikeuslaitosta ollut, joten surma johti usein pakoon tai karkotukseen. Sellainen aika oli, ja onneksi siitä on kulunut pitkä aika.
 JATKOT:
 Mikä Landnámabók on?
 Millainen oli viikinkiajan islantilainen tila?
@@ -88,14 +88,14 @@ Mikä Hólar on?
 
 ### 8.3
 KYSYMYS: Kuka oli Jón Arason?
-Hetkinen. Tämä on vakava aihe. Jón Arason oli Hólarin viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa vuonna 1550 kahden poikansa kanssa uskonpuhdistuksen aikana. Tapahtumasta on kulunut yli 470 vuotta, ja sen ajan Islannissa uskonnon ja vallan kysymykset kietoutuivat tiiviisti yhteen. Hólarista tuli hänen aikanaan [[uskonpuhdistuksen]] aikaisen katolisen kirkon viimeinen tukikohta Islannissa, ja hänet tunnetaan yhä merkittävänä hahmona. Se on onneksi kaukana takana.
+Hetkinen. Tämä on vakava aihe. Jón Arason oli [[Hólarin]] viimeinen katolinen piispa, ja hänet mestattiin Skálholtissa vuonna 1550 kahden poikansa kanssa uskonpuhdistuksen aikana. Tapahtumasta on kulunut yli 470 vuotta, ja sen ajan Islannissa uskonnon ja vallan kysymykset kietoutuivat tiiviisti yhteen. Hólarista tuli hänen aikanaan [[uskonpuhdistuksen]] aikaisen katolisen kirkon viimeinen tukikohta Islannissa, ja hänet tunnetaan yhä merkittävänä hahmona. Se on onneksi kaukana takana.
 JATKOT:
 Kuka oli Guðbrandur Þorláksson?
 Mitä uskonpuhdistus Islannissa tarkoitti?
 
 ### 8.4
 KYSYMYS: Mikä islanninhevonen on?
-Hyvä kysymys tuo. Islanninhevonen on pienikokoinen mutta vahva hevosrotu, joka on tunnettu erityisestä [[tölt]]-askellajistaan. Hólarissa on islanninhevosen historian keskus, jossa rodun vaiheisiin voi tutustua. Rotu sopii hyvin Islannin vaativiin oloihin, ja sitä on perinteisesti käytetty niin matkantekoon kuin työhön.
+Hyvä kysymys tuo. Islanninhevonen on pienikokoinen mutta vahva hevosrotu, joka on tunnettu erityisestä [[tölt]]-askellajistaan. [[Hólarissa]] on islanninhevosen historian keskus, jossa rodun vaiheisiin voi tutustua. Rotu sopii hyvin Islannin vaativiin oloihin, ja sitä on perinteisesti käytetty niin matkantekoon kuin työhön.
 
 Minä en ole koskaan päässyt hevosen selkään, vaikka ehdotuksia on ollut. Selkä olisi kyllä tukeva paikka kyyhkylle, ja tölt näyttää ylhäältä tasaiselta.
 JATKOT:
@@ -111,7 +111,7 @@ Mitä luterilaisuus muutti Islannissa?
 
 ### 9.1
 KYSYMYS: Miten Heimaeyn satama pelastettiin?
-Selvä juttu. Satama pelastettiin jäähdyttämällä etenevä laava merivedellä. Tammikuussa 1973 viereisestä [[Eldfellistä]] virtasi laavaa, joka uhkasi sulkea sataman, ja satama oli saaren tärkein tulonlähde. Laavan päälle pumpattiin merivettä, joka jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja siitä tuli myöhemmin entistä suojaisampi. Siitä on onneksi jo yli viisikymmentä vuotta.
+Selvä juttu. Satama pelastettiin jäähdyttämällä etenevä laava merivedellä. Tammikuussa 1973 [[Heimaeyn]] viereisestä [[Eldfellistä]] virtasi laavaa, joka uhkasi sulkea sataman, ja satama oli saaren tärkein tulonlähde. Laavan päälle pumpattiin merivettä, joka jäähdytti reunan kovaksi ja käänsi virtaa. Satama säilyi, ja siitä tuli myöhemmin entistä suojaisampi. Siitä on onneksi jo yli viisikymmentä vuotta.
 JATKOT:
 Miksi laava jäähdytettiin merivedellä?
 Mikä Eldfell on?

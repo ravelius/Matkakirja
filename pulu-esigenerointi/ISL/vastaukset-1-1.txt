@@ -118,7 +118,7 @@ Mikä Mansaari on?
 
 ### 4.2
 KYSYMYS: Miksi käräjät lopetettiin täällä?
-Annas ku mietin. Alþingi piti viimeisen istuntonsa Þingvellirillä vuonna 1798, ja sen jälkeen kokoukset siirtyivät Reykjavíkiin. Yksittäistä syytä en ole varma, mutta lähteiden mukaan taustalla olivat kokouspaikan puutteelliset olosuhteet ja Tanskan hallinnon uudistukset, jotka muuttivat Alþingin asemaa. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa [[Alþingishúsið]]-talossa. Ulkona kalliolla olisi kyllä kuulunut kokoontua.
+Annas ku mietin. Alþingi piti viimeisen istuntonsa [[Þingvellirillä]] vuonna 1798, ja sen jälkeen kokoukset siirtyivät Reykjavíkiin. Yksittäistä syytä en ole varma, mutta lähteiden mukaan taustalla olivat kokouspaikan puutteelliset olosuhteet ja Tanskan hallinnon uudistukset, jotka muuttivat Alþingin asemaa. Vuodesta 1881 parlamentti on kokoontunut Reykjavíkissa [[Alþingishúsið]]-talossa. Ulkona kalliolla olisi kyllä kuulunut kokoontua.
 JATKOT:
 Millainen Alþingin asema oli Tanskan vallan aikana?
 Missä Islannin parlamentti kokoontuu nykyään?
@@ -141,7 +141,7 @@ Miten Islannin tulivuoria seurataan?
 
 ### 4.5
 KYSYMYS: Milloin Islanti itsenäistyi?
-Just niin, nyt muistan. Islanti sai vuonna 1918 sopimuksella suvereenin valtion aseman yhteisen kuninkaan alaisuudessa [[Tanskan]] kanssa, ja täysin itsenäiseksi tasavallaksi se julistautui 17. kesäkuuta 1944. Julistus tapahtui Þingvellirillä. Ensimmäisen askeleen oli ottanut jo vuoden 1874 perustuslaki, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Kyllä tämä meni hyvin muistista.
+Just niin, nyt muistan. Islanti sai vuonna 1918 sopimuksella suvereenin valtion aseman yhteisen kuninkaan alaisuudessa [[Tanskan]] kanssa, ja täysin itsenäiseksi [[tasavallaksi]] se julistautui 17. kesäkuuta 1944. Julistus tapahtui Þingvellirillä. Ensimmäisen askeleen oli ottanut jo vuoden 1874 perustuslaki, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa. Kyllä tämä meni hyvin muistista.
 JATKOT:
 Miksi Islannin kansallispäivä on 17. kesäkuuta?
 Miten Islannin ja Tanskan suhde on kehittynyt?

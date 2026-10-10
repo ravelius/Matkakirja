@@ -74,7 +74,7 @@ Mitä eroa on kilpitulivuorella ja kerrostulivuorella?
 
 ### 13.1
 KYSYMYS: Miksi putouksen vesi on harmaata?
-Ai tota. Dettifossin vesi tulee [[Vatnajökullin]] jäätiköltä, ja jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Jäätikön liike jauhaa kallioperää, ja syntynyt hieno jauhe sekoittuu jokeen niin, että vesi näyttää kirkkaan sijaan harmaanvalkoiselta. Kyllä se ylhäältä näyttää kahvilta, jossa on liikaa maitoa.
+Ai tota. [[Dettifossin]] vesi tulee [[Vatnajökullin]] jäätiköltä, ja jäätikköjoki kuljettaa mukanaan hienoa kiviainesta. Jäätikön liike jauhaa kallioperää, ja syntynyt hieno jauhe sekoittuu jokeen niin, että vesi näyttää kirkkaan sijaan harmaanvalkoiselta. Kyllä se ylhäältä näyttää kahvilta, jossa on liikaa maitoa.
 JATKOT:
 Kuinka suuri Vatnajökull on?
 Mitä muita putouksia Islannissa on?
