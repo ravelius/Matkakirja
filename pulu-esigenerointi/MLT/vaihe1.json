@@ -1435,5 +1435,552 @@
    "Miten Grand Harbour on vaikuttanut Maltan historiaan?",
    "Mikä merkitys Birgulla oli ennen Vallettan rakentamista?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-blue-grotto",
+  "kysymys": "Minkä kylän alueeseen luolat kuuluvat?",
+  "uusi": false,
+  "vastaus": "Kato, tää on helppo. Luolat ja Wied iż-Żurrieqin kalastajasatama kuuluvat [[Qrendin]] kylän alueeseen, ja tämä vahvistettiin Qrendin ja [[Żurrieqin]] välisessä rajakiistassa vuonna 1910. Kylä sijaitsee Maltan kaakkoisrannikolla, jossa meriluolien seinät heijastavat meriveden eri sinisen sävyjä. Luolien edustalla näkyy asumaton [[Filfla]]-saari. Rajakiistoja on kyllä tässä maailmassa nähty, mut tää pysyi onneksi paperilla.",
+  "linkit": [
+   "Qrendin",
+   "Żurrieqin",
+   "Filfla"
+  ],
+  "jatkot": [
+   "Millaisia kyliä Maltan kaakkoisrannikolla on?",
+   "Miten meriluolat syntyvät kalkkikivirannikolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-blue-grotto",
+  "kysymys": "Mikä asumaton saari näkyy luolien edustalla?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä näen katolta asti. Luolien edustalla merenselällä sijaitsee asumaton [[Filfla]]-saari, joka on nykyään lintujensuojelualue. Se kuuluu Maltan saariryhmään, ja sen läheisyys antaa luolien rannikolle sen tunnusomaisen maisemansa. Saarelle ei siis asu ketään, mutta linnuille se on tärkeä paikka. Ihan pienen lintuasian minä tästä saan kyllä sanottua.",
+  "linkit": [
+   "Filfla"
+  ],
+  "jatkot": [
+   "Mihin Filfla-saarta on aiemmin käytetty?",
+   "Millaisia lintuja Maltan saarilla pesii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-blue-grotto",
+  "kysymys": "Miksi meriluolien vesi näyttää niin siniseltä?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Meriveden sininen väri johtuu siitä, että vesi imee valon punaisia ja keltaisia aallonpituuksia voimakkaammin kuin sinisiä, jolloin sinistä valoa heijastuu ja siroaa takaisin. Luolissa vaikutelmaa voimistaa se, että päivänvalo tulee luolaan veden alta ja heijastuu vaaleasta merenpohjasta ja seinistä. Sävy vaihtelee siksi valon, vuorokaudenajan ja veden syvyyden mukaan. En ole varma, miten suuri osuus kullakin tekijällä juuri Maltan luolissa on. Kyllä kyyhky tämänkin osaa, vaikka lentää mieluummin kuin uipi.",
+  "linkit": [],
+  "jatkot": [
+   "Mikä saa meriveden näyttämään joskus vihreältä?",
+   "Miksi Välimeren vesi on usein niin kirkasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-blue-grotto",
+  "kysymys": "Mihin Filfla-saarta on aiemmin käytetty?",
+  "uusi": true,
+  "vastaus": "Ai se. Filfla-saarta on käytetty ammuntaharjoitusten kohteena, lähteiden mukaan 1970-luvulle asti, minkä jälkeen se on suojeltu. Nykyään saari on asumaton lintujensuojelualue, eikä sinne ole vapaata pääsyä. Tarkkoja vuosia en ole varma kertomaan, joten ne kannattaa tarkistaa Maltan luonnonsuojeluviranomaisen tiedoista. Parempi tämäkin käyttö kuin ei mitään.",
+  "linkit": [],
+  "jatkot": [
+   "Miksi saaria suojellaan linnuille?",
+   "Mitä muita suojelualueita Maltalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-blue-grotto",
+  "kysymys": "Miten Sinisiin luoliin tavallisesti pääsee tutustumaan?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Sinisiin luoliin tutustutaan yleensä Wied iż-Żurrieqin satamasta lähtevillä venekierroksilla, koska luolat ovat merenpuolella ja niiden sisään pääsee parhaiten vesiteitse. Kierrosten toteutuminen riippuu säästä ja merenkäynnistä, joten tarkka aikataulu kannattaa tarkistaa paikan päällä. Satamaa ympäröi Qrendin kylän alue, ja luolien edustalla näkyy [[Filfla]]. Siitä on lyhyt matka luolille, ja etukäteen kannattaa varautua auringonvaloon.",
+  "linkit": [
+   "Filfla"
+  ],
+  "jatkot": [
+   "Mihin vuorokaudenaikaan luolat ovat kauneimmillaan?",
+   "Millaista Maltan kalastajasatamien elämä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-victoria-cittadella",
+  "kysymys": "Minä vuonna osmanit valtasivat ja ryöstivät Cittadellan?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Osmanit valtasivat ja ryöstivät [[Cittadellan]] vuonna 1551 ([[osmanit]] hallitsivat tuolloin laajoja alueita Välimerellä). Linnoitus oli tuolloin jo vanhentunut, sillä se oli 1500-luvulle tultaessa jäänyt jälkeen ajan sotatekniikasta. Eteläiset muurit rakennettiin myöhemmin uudelleen ruutilinnoitukseksi vuosina 1599–1622. Aihe on raskas, ja onneksi siitä on jo pitkä aika.",
+  "linkit": [
+   "Cittadellan",
+   "osmanit"
+  ],
+  "jatkot": [
+   "Millaisia linnoituksia Maltalla rakennettiin 1600-luvulla?",
+   "Mitä osmanien ja Maltan ritarikunnan välillä tapahtui?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-victoria-cittadella",
+  "kysymys": "Minä vuonna kaupunki sai nimen Victoria?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Kaupunki sai nimen [[Victoria]] vuonna 1887, kun Ison-Britannian hallitus antoi sen kuningatar Victorian kultaisten kruunajaisten kunniaksi. Sitä ennen kaupunki tunnettiin yksinkertaisesti nimellä Rabat. Moni gozolainen kutsuu sitä yhä vanhalla nimellään, ja Cittadella on kaupungin linnoitettu ydin. Nimiä on näköjään yhtä monta kuin kyyhkyn sukuhaaraa.",
+  "linkit": [
+   "Victoria"
+  ],
+  "jatkot": [
+   "Miksi gozolaiset käyttävät yhä nimeä Rabat?",
+   "Mitä muita paikkoja Maltalla on nimetty brittiläisten mukaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-victoria-cittadella",
+  "kysymys": "Miksi Cittadellaa kutsutaan myös Castelloksi?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. Castello on italiaa ja tarkoittaa linnaa, ja nimi viittaa siihen, että Cittadella on keskiajalla linnaksi muutettu linnoitettu kaupunginosa. Akropoliksesta tehtiin linna, joka toimi turvapaikkana saaren väestölle, ja sen ulkopuolelle kasvoi 1400-luvulla esikaupunki. Nimi kertoo siis paikan tehtävästä eikä muusta, ja maltaksi sen vastine on hieman erilainen. Ei kyl linna ole kyyhkyn vahvin alue.",
+  "linkit": [],
+  "jatkot": [
+   "Miten keskiaikaiset linnat toimivat väestön turvapaikkoina?",
+   "Mikä on akropolis?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-victoria-cittadella",
+  "kysymys": "Mikä kaupunki Gaulos oli?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Gaulos oli puunilais-roomalainen kaupunki, jonka akropolis sijaitsi todennäköisesti [[Cittadellan]] paikalla. Alueella on asutusta pronssikaudesta lähtien, ja nimi tunnetaan myös Gozon antiikin nimenä. Keskiajalla akropoliksesta tehtiin linna. Kaupungin tarkasta laajuudesta ei ole varmuutta, joten sitä ei kannata väittää tarkasti. Antiikin Gozo tuntuu minusta kaukaiselta.",
+  "linkit": [
+   "Cittadellan"
+  ],
+  "jatkot": [
+   "Keitä puunilaiset olivat?",
+   "Millaisia roomalaisaikaisia jäänteitä Maltalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-victoria-cittadella",
+  "kysymys": "Miksi Cittadellan eteläiset muurit rakennettiin uusiksi?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Linnoitus oli 1500-luvulle tultaessa vanhentunut, ja osmanit valtasivat ja ryöstivät sen vuonna 1551. Eteläiset muurit rakennettiin uudelleen ruutilinnoitukseksi vuosina 1599–1622, jotta ne kestäisivät ruutiaseiden aikakauden. Syy on johdettavissa linnoituksen vanhentuneisuudesta, vaikka suoraa ilmoitusta päätöksen perusteista minulla ei ole. [[Cittadella]] sai siis uuden asun, vaikka sen ydin oli vanha. Rakentajat olivat aikansa insinöörejä, ei kyyhkyjä.",
+  "linkit": [
+   "Cittadella"
+  ],
+  "jatkot": [
+   "Mikä erottaa ruutilinnoituksen keskiaikaisesta linnasta?",
+   "Miten ruuti muutti linnoitusarkkitehtuuria Euroopassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-wied-il-ghasri",
+  "kysymys": "Minkä kylän suuntaan laakso jatkuu maalle päin?",
+  "uusi": false,
+  "vastaus": "Joo, tää on selvä. Laakso jatkuu maalle päin kohti [[Għasrin]] kylää. Wied il-Għasri on kapea merikuru [[Gozon]] pohjoisrannikolla, ja sen pohjalla on rauhallinen ranta noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta. Lyhyt vastaus, ja kyyhky ehti tehdä sen yhdellä siiven lyönnillä.",
+  "linkit": [
+   "Għasrin",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Millaisia kyliä Gozolla on?",
+   "Miten Wied il-Għasrin rannalle pääsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-wied-il-ghasri",
+  "kysymys": "Mitä laakson reunalla uskotaan sijainneen?",
+  "uusi": false,
+  "vastaus": "Ai tota. Laakson reunalla, vedenalaisen luolan vieressä, uskotaan sijainneen Maltan perinteisiä suolapatoja. Asia on esitetty uskomuksena, joten varmaa tietoa sijainnista ei ole. Wied il-Għasri on [[Gozon]] pohjoisrannikolla, ja nykyään syrjäinen ranta on suosittu sukeltajien ja uimareiden keskuudessa. Kyyhky ei kyl suolaa tarvitse.",
+  "linkit": [
+   "Gozon"
+  ],
+  "jatkot": [
+   "Miten suola otetaan talteen merivedestä?",
+   "Mitä sukeltajat voivat nähdä Gozon vesillä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-wied-il-ghasri",
+  "kysymys": "Millainen ranta Wied il-Għasrissa on?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Wied il-Għasrin ranta on rauhallinen ja sijaitsee kapean merikurun pohjalla noin 300 metrin päässä merestä. Merelle pääsee vain kapean, jyrkkäseinäisen sisäänkäynnin kautta, joten ranta on suojassa. Se on [[Gozon]] pohjoisrannikolla ja nykyään suosittu sukeltajien ja uimareiden keskuudessa. Rauhaa löytyy, kunhan muistaa kantaa omat eväät.",
+  "linkit": [
+   "Gozon"
+  ],
+  "jatkot": [
+   "Mikä tekee kapeasta merikurusta hyvän sukelluspaikan?",
+   "Mitä Gozolla kannattaa nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-wied-il-ghasri",
+  "kysymys": "Mikä on merikuru ja miten sellainen syntyy?",
+  "uusi": true,
+  "vastaus": "No jopas, hyvä kysymys. Merikuru on kapea, jyrkkäseinäinen laakso tai halkeama, jonka kautta meri tunkeutuu maahan. Sellainen voi syntyä esimerkiksi niin, että veden syövyttämä laakso jää meren alle merenpinnan noustessa. Maltaksi laaksoa tarkoittaa sana wied, mikä näkyy esimerkiksi nimessä [[Wied il-Għasri]]. Tarkkaa syntytapaa kullekin kurulle en ole varma sanomaan. Kyyhkynä pidän kuruista, koska niistä näkee hyvin kauas.",
+  "linkit": [
+   "Wied il-Għasri"
+  ],
+  "jatkot": [
+   "Mikä on fjordi?",
+   "Miten kalkkikivi liukenee veteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-wied-il-ghasri",
+  "kysymys": "Miten suolaa saadaan suolapadoissa merivedestä?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Suolapadoissa merivesi johdetaan matalaan altaaseen, jossa aurinko ja tuuli haihduttavat veden. Kun vesi haihtuu, jäljelle jää suola, joka kerätään talteen. Maltalla perinteiset suolapadot kaiverrettiin yleensä kallioon rannikon tuntumassa, ja Wied il-Għasrin reunalla uskotaan sijainneen sellaisia. Kuuma ja tuulinen sää nopeuttaa haihtumista.\n\nMinusta suola on kyllä kummallinen vaiva: meri antaa sitä ilmaiseksi, ja silti ihmiset kaivoivat sen kallioon. Pullan kanssa en suolaa halua, mutta Maltalla on varmasti oma suolainen leivonnaisensa, en vaan tiedä sen nimeä.",
+  "linkit": [],
+  "jatkot": [
+   "Miksi suola oli ennen niin arvokasta?",
+   "Miten suolaa käytettiin ruoan säilyttämiseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fungus-rock",
+  "kysymys": "Minä vuonna suurmestari Pinto julisti kallion kielletyksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Suurmestari Pinto julisti kallion kielletyksi alueeksi vuonna 1746. Kyseessä on [[Fungus Rock]], 60 metriä korkea kalkkikivisaareke Dwejran laguunin suulla Gozolla, ja syynä oli sen kasvi, jota ritarit pitivät arvokkaana. Luvattomalle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Tiukka tyyppi se Pinto.",
+  "linkit": [
+   "Fungus Rock"
+  ],
+  "jatkot": [
+   "Keitä Maltan suurmestarit olivat?",
+   "Mikä tekee soutuorjan työstä rangaistuksen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fungus-rock",
+  "kysymys": "Mitä rangaistusta luvattomalle kiipeäjälle uhattiin?",
+  "uusi": false,
+  "vastaus": "Katotaas. Luvattomalle kalliolle kiipeäjälle luvattiin kolmen vuoden rangaistus soutuorjana. Suurmestari Pinto oli julistanut [[Fungus Rockin]] kielletyksi alueeksi vuonna 1746, koska kalliolta löytyi arvokkaana pidetty kasvi. Rangaistus oli ankara, ja se osoittaa, kuinka tärkeänä kasvia pidettiin. Eikä meikäläinen kyl ala soutaa.",
+  "linkit": [
+   "Fungus Rockin"
+  ],
+  "jatkot": [
+   "Mitä soutuorjat tekivät galeereilla?",
+   "Mikä kasvi kalliolla kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fungus-rock",
+  "kysymys": "Mikä kasvi \"maltalainen sieni\" oikeasti on?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: se ei ole sieni lainkaan. Niin kutsuttu maltalainen sieni on loisikasvi, tieteelliseltä nimeltään Cynomorium coccineum, jota kasvoi [[Fungus Rockin]] kalliolla. Johanniittaritarikunnan ritarit pitivät sitä arvokkaana, koska ajan lääketieteessä uskottiin sen parantavan haavoja ja punatautia. Ritarit antoivat kasvia lahjaksi arvovaltaisille vieraille. Nimi on siis harhaanjohtava, ja kasvi on nimensä mukaisesti vaikea luokitella. Kyyhkynä pidän kyllä enemmän leivästä.",
+  "linkit": [
+   "Fungus Rockin"
+  ],
+  "jatkot": [
+   "Mikä on loiskasvi?",
+   "Millaisia lääkekasveja keskiajalla käytettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fungus-rock",
+  "kysymys": "Mikä Sininen ikkuna oli ja mitä sille tapahtui?",
+  "uusi": true,
+  "vastaus": "Ai tota. Sininen ikkuna oli luonnonkaari [[Fungus Rockin]] vieressä Dwejran alueella Gozolla. Se romahti mereen vuonna 2017, tietojeni mukaan myrskyisessä säässä, mutta tarkkaa päivää en ole varma. Kaari oli yksi saaren tunnetuimmista maisemista. Aihe on surullinen, ja hyvä että kuvia on säilynyt.",
+  "linkit": [
+   "Fungus Rockin"
+  ],
+  "jatkot": [
+   "Miten luonnonkaaret syntyvät?",
+   "Mitä muuta Dwejran alueella on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fungus-rock",
+  "kysymys": "Keitä Johanniittaritarikunnan ritarit olivat?",
+  "uusi": true,
+  "vastaus": "No niin. Johanniittaritarikunta eli Pyhän Johanneksen ritarikunta oli keskiaikainen katolinen sotilas- ja sairaanhoitajarikunta. Se hallitsi Maltaa 1500-luvun alusta 1700-luvun loppuun, ja ritarit löysivät [[Fungus Rockin]] kalliolta arvokkaaksi katsomansa loisikasvin. Tarkat vuodet en ole varma kaikilta osin muistamaan, mutta heidän kautensa muovasi Maltan linnoituksia ja kaupunkeja syvästi. Ritarit ovat suosittu aihe, ja minä kyllä kuuntelen.",
+  "linkit": [
+   "Fungus Rockin"
+  ],
+  "jatkot": [
+   "Miten ritarikunta päätyi Maltalle?",
+   "Mitä ritarikunnalle tapahtui Malta-kauden jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsalforn",
+  "kysymys": "Mitä sana marsa tarkoittaa arabiaksi?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Sana marsa tarkoittaa arabiaksi satamaa. [[Marsalforn]] on yhdistelmäsana, mutta jälkiosan forn-sanan alkuperästä ei olla varmoja. Kaupunki sijaitsee [[Gozon]] pohjoisrannikolla ja on yksi saaren suosituimmista matkailukeskuksista. Satama on siis jo nimessä, ja kyyhky arvostaa selkeyttä.",
+  "linkit": [
+   "Marsalforn",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Miksi arabian kieli vaikutti maltan kieleen?",
+   "Millaisia muita arabialaisperäisiä paikannimiä Maltalla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsalforn",
+  "kysymys": "Minkä kahden kylän välissä Marsalforn sijaitsee?",
+  "uusi": false,
+  "vastaus": "Kas vaan. [[Marsalforn]] sijaitsee [[Xagħran]] ja [[Żebbuġin]] kukkulakylien välissä Gozon pohjoisrannikolla. Kaupunkiin kuuluu myös Qbajjarin lahti. Se on yksi Gozon suosituimmista matkailukeskuksista, vaikka hiekkarantaa on vain vähän. Vastaus mahtui yhteen hengenvetoon.",
+  "linkit": [
+   "Marsalforn",
+   "Xagħran",
+   "Żebbuġin"
+  ],
+  "jatkot": [
+   "Millaisia kukkulakyliä Gozolla on?",
+   "Miten Gozolla liikutaan paikasta toiseen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsalforn",
+  "kysymys": "Millainen Marsalforn on rannoiltaan?",
+  "uusi": true,
+  "vastaus": "Tost minä osaan kertoo. [[Marsalfornissa]] hiekkarantaa on vain vähän, mutta kivikkoisella rannikolla on lukuisia uimapaikkoja kallioiden lomassa. Kaupunki sijaitsee [[Gozon]] pohjoisrannikolla ja on saaren suosituimpia matkailukeskuksia, jossa on runsaasti hotelleja, ravintoloita ja baareja. Rannat ovat siis enemmän kallioisia kuin pehmeitä. Kyyhkynä minä kyl istun mieluummin kalliolla.",
+  "linkit": [
+   "Marsalfornissa",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Miten kalliorannalla uidessa kannattaa varoa?",
+   "Millaisia kasveja Maltan rannikoilla kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsalforn",
+  "kysymys": "Mikä tekee Marsalfornista suositun matkailukeskuksen?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Marsalforn]] on [[Gozon]] pohjoisrannikon kaupunki, jossa on runsaasti hotelleja, ravintoloita ja baareja. Hiekkarantaa on vain vähän, mutta kivikkoisella rannikolla on lukuisia uimapaikkoja kallioiden lomassa. Kaupunki sijaitsee Xagħran ja Żebbuġin kukkulakylien välissä, ja se on yksi saaren suosituimmista matkailukeskuksista. Selitys on yksinkertainen: palvelut ja meri ovat lähellä. Itse haluaisin kyllä tietää, onko siellä hyvä pulla.",
+  "linkit": [
+   "Marsalforn",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Milloin Gozolla on parasta matkailuaikaa?",
+   "Millaista ruokaa Gozolla syödään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-marsalforn",
+  "kysymys": "Miten Gozolle pääsee Maltalta?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Gozolle pääsee Maltan pääsaarelta lautalla, joka kulkee Ċirkewwan ja Mġarrin välillä, ja matka kestää noin puoli tuntia. Lauttayhteys on tärkein reitti saarten välillä, ja aikataulut kannattaa tarkistaa etukäteen, sillä en ole varma niiden nykyisistä väleistä. Saarella sijaitsee muun muassa matkailukeskus [[Marsalforn]], ja [[Gozo]] on Maltan saariryhmän toinen asutettu päätyyppinen saari.\n\nMinä lensin tämän välin kerran siivillä, ja se oli paljon nopeampi kuin lautta. Tosin lautalla on kahvila, ja kahvilassa saattaa olla pullaa.",
+  "linkit": [
+   "Marsalforn",
+   "Gozo"
+  ],
+  "jatkot": [
+   "Millainen saari Comino on?",
+   "Miten Gozon ja Maltan historia eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kysymys": "Mitä Ir-Ramla l-Ħamra tarkoittaa suomeksi?",
+  "uusi": false,
+  "vastaus": "Kato, nimessä on koko kuvaus valmiina. Maltankielinen nimi tarkoittaa suomeksi punaista hiekkaa, ja se viittaa suoraan lahden rantaan: [[Gozon]] koillisrannikolla sijaitsevan lahden hiekka on punertavaa, mikä on [[Maltan]] saarilla poikkeuksellista, koska suurin osa rannoista on vaaleaa kalkkikiveä tai kivikkoa. Lahden länsilaidalla on lisäksi luola, jonka perimätieto yhdistää [[Homeroksen]] Odysseiaan. Kyl nimi kertoo kaiken, kun vaan osaa lukea.",
+  "linkit": [
+   "Gozon",
+   "Maltan",
+   "Homeroksen"
+  ],
+  "jatkot": [
+   "Miksi suurin osa Maltan rannoista on kalkkikiveä tai kivikkoa?",
+   "Mitä Homeroksen Odysseia kertoo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kysymys": "Minkä myyttisen hahmon nimeä lahden luola kantaa?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä tiedän. Luolan perimätieto yhdistää nymfi [[Kalypsoon]], jonka Homeros kuvaa [[Odysseiassa]] Odysseuksen pidättäjänä hänen kotimatkallaan. Kyse on nimenomaan perimätiedosta eikä todistetusta asiasta, sillä Kalypson saaren paikasta on esitetty useita ehdotuksia, ja [[Gozo]] on yksi niistä. Ei se muuten huono paikka jäädä jumiin olisi.",
+  "linkit": [
+   "Kalypsoon",
+   "Odysseiassa",
+   "Gozo"
+  ],
+  "jatkot": [
+   "Missä muualla Kalypson saaren on arveltu sijainneen?",
+   "Miten Odysseus lopulta pääsi lähtemään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kysymys": "Kuka oli nymfi Kalypso Homeroksen Odysseiassa?",
+  "uusi": true,
+  "vastaus": "Ai se. Kalypso oli nymfi, joka asui Ogygian saarella ja piti [[Odysseusta]] luonaan useita vuosia sen jälkeen, kun tämän laiva oli tuhoutunut. Hän tarjosi Odysseukselle kuolemattomuutta, mutta tämä halusi silti kotiin [[Ithakaan]], ja jumalten päätöksen jälkeen Kalypso päästi hänet lähtemään. Tarina tunnetaan [[Homeroksen]] Odysseiasta, ja [[Ramla Bayn]] luola on perimätiedossa liitetty siihen. Olipas siinä ikävä kotiin.",
+  "linkit": [
+   "Odysseusta",
+   "Ithakaan",
+   "Homeroksen",
+   "Ramla Bayn"
+  ],
+  "jatkot": [
+   "Millainen matka Odysseuksella oli Troijasta kotiin?",
+   "Kuka Homeros oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kysymys": "Miksi hiekka voi olla punertavaa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Hiekan punertava väri johtuu yleensä siitä, että sen rakeissa on rautaa sisältäviä [[mineraaleja]], jotka ruostumisen tapaan värjäävät hiekan punaiseksi tai ruskeaksi. Väri riippuu siitä, minkälaisesta kivestä hiekka on kulunut ja miten se on vuosien mittaan rapautunut. En ole varma, mikä tarkalleen selittää [[Ramla Bayn]] värin, mutta tämä on tavallisin selitys punaiselle hiekalle. Ja minä kun luulin hiekan olevan vain hiekkaa.",
+  "linkit": [
+   "mineraaleja",
+   "Ramla Bayn"
+  ],
+  "jatkot": [
+   "Mistä hiekka syntyy?",
+   "Missä muualla Euroopassa on punaisia rantoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-ramla-bay",
+  "kysymys": "Miten Gozolle pääsee Maltan pääsaarelta?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Gozolle pääsee lautalla, joka kulkee Maltan pääsaaren pohjoisosasta [[Ċirkewwan]] satamasta Gozon [[Mġarrin]] satamaan, ja matka kestää lyhyen aikaa. Saarten välissä on [[Gozon]] ja Maltan välinen salmi, jonka ylitys on päivittäistä arkea monelle saarelaiselle. Aikataulut kannattaa tarkistaa ennen lähtöä, sillä en ole varma niiden nykyisistä vuoroista. Siivin tuo olisi kyllä nopeampaa.",
+  "linkit": [
+   "Ċirkewwan",
+   "Mġarrin",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Mitä Gozolla kannattaa nähdä?",
+   "Mikä Cittadella on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kysymys": "Mitä kaupunkia linnoituksen oli tarkoitus korvata Gozon pääkaupunkina?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Linnoituksen oli tarkoitus toimia ydinlinnakkeena uudelle kaupungille, joka olisi korvannut [[Cittadellan]] Gozon pääkaupunkina. [[Johanniittaritarikunta]] rakensi [[Fort Chambrayn]] 1700-luvun puolivälissä Ras it-Tafalin niemelle, mutta suunnitelma ei koskaan toteutunut kokonaan. Suunnitelmat kun harvoin menevät ihan putkeen.",
+  "linkit": [
+   "Cittadellan",
+   "Johanniittaritarikunta",
+   "Fort Chambrayn"
+  ],
+  "jatkot": [
+   "Millainen linnoitus Cittadella on?",
+   "Miksi ritarit halusivat uuden kaupungin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kysymys": "Miksi linnoitusta käytettiin ranskalaismiehityksen jälkeen?",
+  "uusi": false,
+  "vastaus": "Tuota niin, hyvä kysymys. Ranskalaismiehityksen jälkeen [[Fort Chambrayn]] tilat otettiin uuteen käyttöön sotilassairaalana ja myöhemmin mielisairaalana, sillä suuri linnoitus tarjosi valmiit rakennukset tällaiseen tarkoitukseen. Linnoituksessa oli käyty taisteluita vuonna 1798 [[Ranskan]] miehityksen aikana, ja suunniteltu uusi kaupunki oli jäänyt toteutumatta. Nykyään sitä kunnostetaan ja sinne rakennetaan majoitustiloja. Ihan nätisti se on vanhoilla päivillään elänyt.",
+  "linkit": [
+   "Fort Chambrayn",
+   "Ranskan"
+  ],
+  "jatkot": [
+   "Milloin ranskalaiset valtasivat Maltan?",
+   "Millaista sotilassairaalan elämä oli 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kysymys": "Keitä olivat johanniittaritarit?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Johanniittaritarit olivat keskiaikainen sotilaallinen ja hengellinen ritarikunta, joka syntyi sairaiden hoitoon [[Jerusalemissa]]. Ritarikunta menetti tukikohtansa [[Rodoksella]] vuonna 1522, kun osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen, ja vaelsi seitsemän vuotta ennen kuin keisari Kaarle V antoi sille [[Maltan]] ja Gozon vuonna 1530. Ritarikunta asettui Birgun kaupunkiin ja rakensi sen vanhan linnan uudelleen Pyhän Angelon linnakkeeksi. Ja ne vielä unelmoivat Rodoksesta.",
+  "linkit": [
+   "Jerusalemissa",
+   "Rodoksella",
+   "Maltan"
+  ],
+  "jatkot": [
+   "Miten Rodoksen piiritys päättyi?",
+   "Mikä on ritarikunnan tilanne nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kysymys": "Mikä on bastioni linnoituksessa?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on helppo. Bastioni on linnoituksen muurista ulospäin työntyvä, yleensä kulmikas rakennelma, jolta puolustajat saattoivat ampua sivusuunnasta hyökkääjiä kohti muurin edustalla. Bastionit yleistyivät [[tykkien]] aikakaudella, koska matalat ja paksut kulmikkaat muodot kestivät tykinammuksia paremmin kuin korkeat keskiaikaiset muurit. [[Fort Chambray]] on tällainen bastionilinnoitus. Kyllä ne muodot ylhäältä näyttävät hienoilta.",
+  "linkit": [
+   "tykkien",
+   "Fort Chambray"
+  ],
+  "jatkot": [
+   "Miten tykit muuttivat linnoitusten rakentamista?",
+   "Mitä muita bastionilinnoituksia Euroopassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-fort-chambray",
+  "kysymys": "Mikä oli johanniittojen vuosimaksu Maltasta?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian varakuninkaalle. [[Keisari Kaarle V]] antoi ritarikunnalle [[Maltan]], Gozon ja Tripolin ikuiseksi läänitykseksi vuonna 1530, ja haukka oli symbolinen maksu tästä läänityksestä. Suurmestari Philippe Villiers de L'Isle-Adam purjehti [[Suureen satamaan]] 26. lokakuuta 1530. Haukka, ei edes kyyhky, hmph.",
+  "linkit": [
+   "Keisari Kaarle V",
+   "Maltan",
+   "Suureen satamaan"
+  ],
+  "jatkot": [
+   "Mitä läänitys tarkoitti keskiajalla?",
+   "Millainen oli Birgun kaupunki ritarien aikaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kysymys": "Mistä arabian sanasta Nadurin nimi juontuu?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Nimi juontuu arabian sanasta nadara, joka tarkoittaa tähystyspaikkaa. Sama ajatus näkyy [[Nadurin]] tunnuslauseessa Valpas ja vaakunassa, jossa aurinko nousee sinisestä merestä, ja kaupunki sijaitsee korkealla harjanteella [[Gozon]] Victorian itäpuolella. Ylhäältä tähystäminen on kyllä minun lempipuuhaani.",
+  "linkit": [
+   "Nadurin",
+   "Gozon"
+  ],
+  "jatkot": [
+   "Miksi maltan kielessä on arabialaisia sanoja?",
+   "Mikä on Gozon pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kysymys": "Mistä elinkeinosta kaupunki on tunnettu?",
+  "uusi": false,
+  "vastaus": "Sepä sattui. [[Nadur]] tunnetaan leipomoistaan, ja kaupunkia kutsutaan [[Gozon]] toiseksi kaupungiksi, koska se sijaitsee korkealla harjanteella Victorian itäpuolella. Sen läheltä löytyvät myös [[San Blasin]] ja Daħlet Qorrotin pienet kalliorannat, jotka ovat suosittuja uinti- ja retkeilypaikkoja. Täällä on varmasti oma versionsa pullasta, en vaan tiedä sen nimee.",
+  "linkit": [
+   "Nadur",
+   "Gozon",
+   "San Blasin"
+  ],
+  "jatkot": [
+   "Mitä perinteisiä leivonnaisia Gozolla syödään?",
+   "Millainen ranta San Blas on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kysymys": "Mitä kieltä maltalaiset puhuvat?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Maltalaiset puhuvat maltaa, joka on [[Maltan]] kansalliskieli ja kuuluu seemiläisiin kieliin, vaikka se kirjoitetaan latinalaisin aakkosin. Sen perusta on arabiassa, mutta mukana on paljon sanoja italiasta ja englannista, ja englanti on maassa toinen virallinen kieli. Esimerkiksi [[Nadurin]] nimi juontuu arabian sanasta. Kyllä tuo sekoitus on minusta kiinnostavampi kuin kielioppi.",
+  "linkit": [
+   "Maltan",
+   "Nadurin"
+  ],
+  "jatkot": [
+   "Miksi Maltan kielessä on italian sanoja?",
+   "Miten malta eroaa arabiasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kysymys": "Mikä on Gozon pääkaupunki?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Gozon]] pääkaupunki on Victoria, jota paikalliset kutsuvat myös nimellä Rabat. Kaupungin korkeimmalla kohdalla kohoaa [[Cittadella]], vanha linnoitettu keskus, josta on näkymät yli saaren. [[Nadur]] sijaitsee harjanteella Victorian itäpuolella. Ihan hyvä paikka katsella saarta, jos minulta kysytään.",
+  "linkit": [
+   "Gozon",
+   "Cittadella",
+   "Nadur"
+  ],
+  "jatkot": [
+   "Millainen linnoitus Cittadella on?",
+   "Miten Victoria sai nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-nadur",
+  "kysymys": "Mikä on ftira?",
+  "uusi": true,
+  "vastaus": "Ai tota. Ftira on perinteinen maltalainen ruoka, joka on leivän ja pizzan väliltä: litteä leipätaikina, jonka päälle tai väliin laitetaan täytteitä. Gozolla sitä tehdään oman perinteen mukaan, ja leipomot ovat tässä keskeisessä roolissa. En ole varma täytteiden tarkasta koostumuksesta, sillä ne vaihtelevat paikasta ja perheestä riippuen. [[Nadur]] on kuuluisa leipomoistaan, ja [[Gozolla]] ftira on tärkeä osa ruokakulttuuria. Hyvältä kuulostaa, mutta pullaa se ei ole.",
+  "linkit": [
+   "Nadur",
+   "Gozolla"
+  ],
+  "jatkot": [
+   "Mitä muuta Maltan keittiössä syödään?",
+   "Miten Gozon ruokaperinne eroaa Maltan pääsaaresta?"
+  ]
  }
 ]
