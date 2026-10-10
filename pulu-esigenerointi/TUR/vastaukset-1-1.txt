@@ -30,7 +30,7 @@ Miten Troijan kaupunki rakennettiin ja suojeltiin?
 
 ### 1.5
 KYSYMYS: Kuka oli Frank Calvert ja miksi hänet unohdettiin?
-Ai se. Frank Calvert oli englantilaissyntyinen, [[Dardanellien]] seudulla elänyt harrastajaarkeologi, joka omisti osan [[Hisarlıkin]] kummusta. Hän kaivoi siellä jo 1860-luvulla ja päätteli, että kumpu kätkee Homeroksen Troijan. Hän kertoi ajatuksensa [[Heinrich Schliemannille]], ja yhteistyö alkoi. Schliemann sai kaivauksista kuitenkin suurimman julkisuuden ja kunnian, ja Calvertin osuus jäi pitkään varjoon. Vasta myöhemmin tutkijat ovat nostaneet hänen työnsä uudelleen esiin. Kyl kyyhky tietää, miltä tuntuu jäädä kuoren ulkopuolelle.
+Ai se. Frank Calvert oli Maltalla syntynyt, englantilaisperheestä polveutuva harrastajaarkeologi, joka asui [[Dardanellien]] seudulla ja omisti osan [[Hisarlıkin]] kummusta. Hän kaivoi siellä jo 1860-luvulla ja päätteli, että kumpu kätkee Homeroksen Troijan. Hän kertoi ajatuksensa [[Heinrich Schliemannille]], ja yhteistyö alkoi. Schliemann sai kaivauksista kuitenkin suurimman julkisuuden ja kunnian, ja Calvertin osuus jäi pitkään varjoon. Vasta myöhemmin tutkijat ovat nostaneet hänen työnsä uudelleen esiin. Kyl kyyhky tietää, miltä tuntuu jäädä kuoren ulkopuolelle.
 JATKOT:
 Miten Schliemann sai luvan kaivaa Hisarlıkin kummulla?
 Miten Troijan kerrokset numeroidaan ja mikä niistä on Homeroksen?
@@ -83,7 +83,7 @@ Millaisia kirkkoja Kappadokian kallioihin on kaiverrettu?
 
 ### 3.2
 KYSYMYS: Kuinka syvälle maanalaiset kaupungit ulottuvat?
-Katotaas. Yksi tunnetuimmista maanalaisista kaupungeista, [[Derinkuyu]], ulottuu usein esitettyjen tietojen mukaan noin 60 metrin syvyyteen, ja kerroksia mainitaan olevan kahdeksantoista. Lukuja kannattaa pitää suuntaa-antavina, sillä vain osa tiloista on tutkittu ja avattu kävijöille. Toinen tunnettu kaupunki on [[Kaymaklı]]. Kaupungeissa on ollut asuntoja, talleja, kaivoja, ilmanvaihtokuiluja ja varastoja, ja pyöreät kivipaasit sulkivat käytäviä sisäpuolelta.
+Katotaas. [[Derinkuyu]] ulottuu eri lähteiden mukaan kymmeniä metrejä maan alle, usein ilmoitettujen tietojen mukaan noin 60-85 metrin syvyyteen; kerroksia mainitaan olevan jopa kahdeksantoista, mutta kävijöille on avoinna vain osa niistä. Lukuja kannattaa pitää suuntaa-antavina. Toinen tunnettu kaupunki on [[Kaymaklı]]. Kaupungeissa on ollut asuntoja, talleja, kaivoja, ilmanvaihtokuiluja ja varastoja, ja pyöreät kivipaasit sulkivat käytäviä sisäpuolelta.
 
 Minä olen korkealla viihtyvä lintu, joten kahdeksantoista kerrosta maan alla tuntuu minusta aivan käsittämättömältä.
 JATKOT:

@@ -117,7 +117,7 @@ Miten mausoleumi tuhoutui?
 
 ### 19.2
 KYSYMYS: Mitä Bodrumin linnasta on nykyään nähtävissä?
-Ai se. Bodrumin linna eli Pyhän Pietarin linna on yhä pystyssä sataman äärellä. [[Pyhän Johanneksen ritarit]] rakensivat sen 1400-luvun lopulta alkaen, ja osa rakennuskivistä saatiin Halikarnassoksen mausoleumin raunioista. Nykyään linnassa toimii [[vedenalaisen arkeologian museo]], jonka näyttelyissä on merestä nostettuja hylkylöytöjä, ja linnassa on torneja, joiden nimet viittaavat ritarikunnan eri kansalaisuuksiin. Avoinna olevat osat kannattaa tarkistaa paikan päältä. Tost linnasta kyl näkis kauas.
+Ai se. Bodrumin linna eli Pyhän Pietarin linna on yhä pystyssä sataman äärellä. [[Pyhän Johanneksen ritarit]] rakensivat linnan 1400-luvun alusta alkaen (työt alkoivat 1400-luvun ensimmäisellä vuosikymmenellä), ja osa rakennuskivistä saatiin Halikarnassoksen mausoleumin raunioista. Nykyään linnassa toimii [[vedenalaisen arkeologian museo]], jonka näyttelyissä on merestä nostettuja hylkylöytöjä, ja linnassa on torneja, joiden nimet viittaavat ritarikunnan eri kansalaisuuksiin. Avoinna olevat osat kannattaa tarkistaa paikan päältä. Tost linnasta kyl näkis kauas.
 JATKOT:
 Millaisia löytöjä vedenalaisen arkeologian museossa on?
 Keitä Pyhän Johanneksen ritarit olivat?
@@ -152,7 +152,7 @@ Milloin kaupungin nimi muuttui Istanbuliksi?
 
 ### 20.2
 KYSYMYS: Kuka vastasi muurien korjaamisesta?
-Kas vaan, korjaustöitä. Muurien rakennustyötä johti 400-luvun alussa idän prefekti [[Anthemios]], ja maanjäristysten vaurioiden jälkeen vuosina 437 ja 447 työ jatkui uusilla rakennelmilla. Lähteiden mukaan vuoden 447 vauriot korjattiin poikkeuksellisen nopeasti kaupungin prefektin johdolla, ja töihin osallistui kaupunkilaisia. Muurien kunnossapito kuului muutenkin [[Konstantinopolin]] hallinnolle ja keisarille. Tost muurista riittää kyl kertomista.
+Kas vaan, korjaustöitä. Muurien rakennustyötä johti 400-luvun alussa idän prefekti [[Anthemios]], ja maanjäristysten vaurioiden jälkeen vuosina 437 ja 447 työ jatkui uusilla rakennelmilla. Vuoden 447 maanjäristyksen vauriot korjattiin poikkeuksellisen nopeasti, lähteiden mukaan parissa kuukaudessa, ja töihin osallistuivat kaupunkilaiset ja ryhmittymien kannattajat. Muurien kunnossapito kuului muutenkin [[Konstantinopolin]] hallinnolle ja keisarille. Tost muurista riittää kyl kertomista.
 JATKOT:
 Miten maanjäristykset vaikuttivat Konstantinopoliin?
 Mitä tiiliraidat muurissa tekivät?
