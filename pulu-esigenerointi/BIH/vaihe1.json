@@ -448,10 +448,9 @@
   "kohde": "kohde:sutjeska",
   "kysymys": "Miten aarniometsä eroaa talousmetsästä?",
   "uusi": false,
-  "vastaus": "Selvä juttu. Metsä on metsä, mut tässä on iso ero. [[Aarniometsä]] on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. [[Perućica-aarniometsä]] on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.",
+  "vastaus": "Selvä juttu. Metsä on metsä, mut tässä on iso ero. [[Aarniometsä]] on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. Perućica-aarniometsä on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.",
   "linkit": [
    "Aarniometsä",
-   "Perućica-aarniometsä",
    "pyökit"
   ],
   "jatkot": [
@@ -478,10 +477,10 @@
   "kohde": "kohde:sutjeska",
   "kysymys": "Kuinka korkea Maglić on?",
   "uusi": true,
-  "vastaus": "Annas ku mietin. Korkeudet ovat just niitä lukuja, joissa kyyhky ei halua arvata. Maglić on Bosnia ja Hertsegovinan korkein vuori, ja sen huippu kohoaa noin 2 400 metrin korkeuteen. Se sijaitsee [[Sutjeskan kansallispuiston]] alueella lähellä Montenegron rajaa, ja rajalinja kulkee vuoren huipun tuntumassa. Tarkka korkeus ilmoitetaan eri lähteissä hieman eri tavoin, joten pyöristän mieluummin kuin arvaan. Vuoristo kuuluu Dinaaristen Alppien eteläosiin, ja sen rinteillä kasvaa laajoja metsiä ja korkeammalla kalliota. Matkalla huipulle ylitetään eri kasvillisuusvyöhykkeitä. Maglić on lisäksi [[Perućican]] aarniometsän yläpuolella kohoava näyttävä vuori.",
+  "vastaus": "Annas ku mietin. Korkeudet ovat just niitä lukuja, joissa kyyhky ei halua arvata. Maglić on Bosnia ja Hertsegovinan korkein vuori, ja sen huippu kohoaa noin 2 400 metrin korkeuteen. Se sijaitsee [[Sutjeskan kansallispuiston]] alueella lähellä Montenegron rajaa, ja rajalinja kulkee vuoren huipun tuntumassa. Tarkka korkeus ilmoitetaan eri lähteissä hieman eri tavoin, joten pyöristän mieluummin kuin arvaan. Vuoristo kuuluu [[Dinaaristen Alppien]] eteläosiin, ja sen rinteillä kasvaa laajoja metsiä ja korkeammalla kalliota. Matkalla huipulle ylitetään eri kasvillisuusvyöhykkeitä. Maglić on lisäksi Perućican aarniometsän yläpuolella kohoava näyttävä vuori.",
   "linkit": [
    "Sutjeskan kansallispuiston",
-   "Perućican"
+   "Dinaaristen Alppien"
   ],
   "jatkot": [
    "Mitä vuoristossa kasvaa puurajan yläpuolella?",
@@ -1011,7 +1010,7 @@
   "kohde": "kohde:adrianmeri",
   "kysymys": "Mikä on Pon laakso?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Hetkinen. Pon laakso on laaja tasanko Pohjois-Italiassa, jonka halki virtaa [[Po]]-joki Alpeilta Adrianmerelle. Joki on Italian pisin, ja laakso on yksi maan tärkeimmistä maatalous- ja teollisuusalueista. Tasanko on syntynyt joen tuomista sedimenteistä, ja Po muodostaa Adrianmeren rannalla laajan suiston. Pohjoisessa laaksoa rajaavat Alpit ja etelässä Apenniinit. Laakso on [[Adrianmeren]] luoteisin päätepiste, kuten tietoruudussakin sanotaan. Kyllä sieltä kelpaa katsella, vähän kuin leivinpaperi levitettynä.",
+  "vastaus": "Joo, tän minä tiedän. Hetkinen. Pon laakso on laaja tasanko Pohjois-Italiassa, jonka halki virtaa [[Po]]-joki Alpeilta Adrianmerelle. Joki on Italian pisin, ja laakso on yksi maan tärkeimmistä maatalous- ja teollisuusalueista. Tasanko on syntynyt joen tuomista sedimenteistä, ja Po muodostaa Adrianmeren rannalla laajan suiston. Pohjoisessa laaksoa rajaavat Alpit ja etelässä Apenniinit. Laakso on [[Adrianmeren]] luoteisin päätepiste. Kyllä sieltä kelpaa katsella, vähän kuin leivinpaperi levitettynä.",
   "linkit": [
    "Po",
    "Adrianmeren"

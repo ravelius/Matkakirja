@@ -1,0 +1,1043 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kaupunkilehti / Timbuktu: Suola tulee pohjoisesta, kolme viikkoa kerrallaan] Timbuktu oli Saharan kauppareitin eteläinen päätepiste, ja siihen koko kaupunki perustui. Vielä 1900-luvun jälkipuoliskolle asti kivisuola tuotiin kuudensadankuudenkymmenenneljän kilometrin päästä pohjoisesta kahdessa vuosittaisessa karavaanissa: toinen lähti marraskuun alussa, toinen maaliskuun lopussa. Karavaanissa oli useita tuhansia kameleja, matka kesti kolme viikkoa suuntaansa, ja paluumatkalla jokainen kameli kantoi neljä tai viisi kolmenkymmenen kilon laattaa. Menomatkalla vietiin ruokaa kaivosmiehille. Nykyään laatat tulevat kuorma-autolla, ja Timbuktusta suola jatkaa veneellä muualle Maliin.
+- [Gao — kaupunkilehti / Songhain kultainen valtakunta: Kulta ja suola kulkivat jokea pitkin] Kulta-suolakauppa oli koko Sahelin talouden selkäranka, ja Songhain valtakunta hallitsi sen tärkeintä solmukohtaa. Pohjoisesta tuotu suola ja etelästä noussut kulta vaihtoivat kuljetusvälinettä Timbuktussa, kun kamelikaravaanit kohtasivat joella kulkevat lastiveneet. Tavarat matkasivat vielä noin 800 kilometrin matkan Nigerjokea pitkin Djennéstä Gaohon ja takaisin, ja jokivarren kaupungit vaurastuivat tästä liikenteestä vuosisatojen ajan. Ilmasta katsottuna joki näyttää kapealta vihreältä nauhalta hiekan keskellä - juuri tämä nauha teki Songhaista mahdollisen keskellä maailman suurinta aavikkoa.
+AIEMPI KYSYMYS: Mikä Panonsko-järvi on ja miksi se on Euroopassa ainutlaatuinen?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Panonsko-järvi on Tuzlan keskuspuistossa sijaitseva suolajärvi, jonka vesi on suolaista, koska kaupungin alla on laajat [[suolaesiintymät]], joita on louhittu vuosisatoja. Lähteiden mukaan järvi on syntynyt pitkälti [[suolanlouhinnan]] seurauksena maanpinnan painuessa, mutta tästä en ole täysin varma. Sitä kutsutaan usein Euroopan ainutlaatuiseksi suolajärveksi; en ole varma, miten väite on rajattu, sillä suolaisia järviä on muuallakin Euroopassa. Meri keskellä kaupunkia, ja minä en uskalla edes kastaa siipeä.
+KYSYMYS: Kerro lisää: suolanlouhinnan
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+AIEMPI KYSYMYS: Miksi suola oli ennen vanhaan niin arvokas kauppatavara?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Suola oli arvokasta, koska se säilytti ruokaa aikana, jolloin jääkaappeja ei ollut: lihaa ja kalaa suolattiin, jotta ne kestivät talven yli. Suolaa tarvittiin myös ihmisten ja eläinten ravinnossa, ja koska sitä ei saatu kaikkialta, siitä tuli arvokas kauppatavara. Valtiot ymmärsivät, että suolan louhintaa ja kauppaa voitiin verottaa, kuten [[Tuzlan]] suolakaivokset [[ottomaanien]] aikaan osoittavat. Nykyään suola on halpaa, ja hyvä niin, sillä pulla ilman suolaa ei maistu.
+KYSYMYS: Kerro lisää: Tuzlan
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+AIEMPI KYSYMYS: Onko englannin sana salary todella peräisin suolasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Englannin sana salary tulee latinan sanasta [[salarium]], ja se on perinteisesti yhdistetty suolaan, latinaksi sal. Antiikin kirjoittajat mainitsevat suolan ja palkan yhteyden, ja tarina siitä, että [[roomalaisten]] sotilaille maksettiin palkka suolana, on yleinen. Tutkijat eivät kuitenkaan ole yksimielisiä siitä, mitä salarium alun perin tarkoitti, joten varmaa selitystä ei voi antaa.
+
+Sukuni sai palkkansa jyvinä, eikä kukaan ole koskaan kysynyt, olisinko mieluummin halunnut suolaa. Suolatut jyvät olisivat ehkä kelvanneet.
+KYSYMYS: Kerro lisää: salarium
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+AIEMPI KYSYMYS: Onko englannin sana salary todella peräisin suolasta?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Englannin sana salary tulee latinan sanasta [[salarium]], ja se on perinteisesti yhdistetty suolaan, latinaksi sal. Antiikin kirjoittajat mainitsevat suolan ja palkan yhteyden, ja tarina siitä, että [[roomalaisten]] sotilaille maksettiin palkka suolana, on yleinen. Tutkijat eivät kuitenkaan ole yksimielisiä siitä, mitä salarium alun perin tarkoitti, joten varmaa selitystä ei voi antaa.
+
+Sukuni sai palkkansa jyvinä, eikä kukaan ole koskaan kysynyt, olisinko mieluummin halunnut suolaa. Suolatut jyvät olisivat ehkä kelvanneet.
+KYSYMYS: Kerro lisää: roomalaisten
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Historian hetki: Sarajevo 1914 — auto pysähtyy väärään paikkaan] 28.6.1914 — Kuljettaja tajuaa virheen vasta, kun on jo kääntynyt väärään kujaan: reitti piti muuttaa sairaalavierailun vuoksi, mutta kukaan ei ehtinyt kertoa sitä hänelle. Se on sunnuntai 28. kesäkuuta 1914, ja arkkiherttua Franz Ferdinand istuu avoautossa vaimonsa Sophien vierellä Sarajevossa, missä joku on jo aiemmin samana aamuna heittänyt pommin heidän saattueensa kohti. Kuljettaja yrittää perua autoa takaisin Latin-sillan kupeessa, mutta moottori sammuu juuri siinä kohtaa, missä nuori Gavrilo Princip seisoo katukahvilan edessä — yksi kuudesta salamurhaajasta, joka oli jo luullut suunnitelman epäonnistuneen. Princip ampuu kahdesti muutaman metrin päästä. Hän yrittää vielä nielaista syan…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Bobiradasta tuli tulilinja, sitten graffititaidetta] 1984 — Sarajevo isännöi vuoden 1984 talviolympialaisia — ensimmäisiä, jotka pidettiin sosialistisessa maassa. Trebević-vuorelle rakennettu bob- ja kelkkarata oli kisojen näkyvimpiä uutuuksia, betonista valettu 1300 metrin mittainen kouru vuoren rinteessä. Kymmenen vuotta myöhemmin, Sarajevon piirityksen aikana 1992–1996, Trebević oli rintamalinjalla, ja hylätty rata toimi tykistöasemana kaupunkia kohti. Rata jäi käyttämättömäksi ja rappeutui, mutta 2000-luvulla siitä tuli suosittu graffititaiteen näyttämö ja nähtävyys, jonne moni kulkee yhä kävellen tai polkupyörällä.
+- [Sarajevo — kaupunkilehti / Sarajevo] Kapea jokilaakso, jossa yksi askel vie ottomaanien basaarista wieniläisen näköiseen kortteliin — ja jossa tornikello näyttää kahtatoista vasta auringon laskiessa.
+AIEMPI KYSYMYS: Mikä Bosnia ja Hertsegovinan pääkaupunki on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Bosnia ja Hertsegovinan pääkaupunki on [[Sarajevo]], joka on myös maan suurin kaupunki. Tuzla on kolmanneksi suurin, ja toiseksi suurimpana mainitaan yleensä [[Banja Luka]]. Tunnettuihin muihin kaupunkeihin kuuluu myös [[Mostar]]. Helppo kysymys, kiitos siitä.
+KYSYMYS: Kerro lisää: Sarajevo
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sofia — kohdekartta / Kohdekartta: Banja Bashin moskeija] 1566 Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin synagoga ja kaksi kirkkoa.
+- [Sofia — kaupunkilehti / Historia: Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti] Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin synagoga ja kaksi kirkkoa.
+- [Sofia — kaupunkilehti / Sofia: Neljä uskontoa saman korttelin ympärillä] Muutaman sadan metrin päässä toisistaan seisoo Sofiassa neljä eri uskonnon rakennusta: ortodoksinen Pyhän Nedeljan kirkko, Banja Bashin moskeija vuodelta 1566, Sofian synagoga ja katolinen Pyhän Joosefin katedraali. Kaupunkia kutsutaan siksi suvaitsevaisuuden neliöksi. Synagoga avattiin 1909 ja on Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia — enemmän kuin henkilöauto.
+AIEMPI KYSYMYS: Mikä Bosnia ja Hertsegovinan pääkaupunki on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Bosnia ja Hertsegovinan pääkaupunki on [[Sarajevo]], joka on myös maan suurin kaupunki. Tuzla on kolmanneksi suurin, ja toiseksi suurimpana mainitaan yleensä [[Banja Luka]]. Tunnettuihin muihin kaupunkeihin kuuluu myös [[Mostar]]. Helppo kysymys, kiitos siitä.
+KYSYMYS: Kerro lisää: Banja Luka
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tuzla (tekniikka)
+Tietoruudun teksti: Tuzla on Bosnia ja Hertsegovinan kolmanneksi suurin kaupunki, ja sen nimi tulee ottomaanien turkin sanasta tuzla, suolakaivos — kaupungin alla on laajat suolaesiintymät, joita on louhittu vuosisatoja verotulojen lähteeksi. Keskiajalla paikkaa kutsuttiin nimellä Soli, "suolat", ja jo 900-luvulla se tunnettiin Bysantin lähteissä linnoituksena nimeltä Salines. Nykyinen kaupunki juontuu vuodesta 1510, jolloin siitä tuli tärkeä ottomaanien varuskuntakaupunki. Kaupungin keskuspuistossa on Panonsko-järvi, Euroopan ainoa suolajärvi, jonka rannoilla käy vuosittain yli kolmesataaviisikymmentätuhatta kävijää.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+AIEMPI KYSYMYS: Mikä Bosnia ja Hertsegovinan pääkaupunki on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Bosnia ja Hertsegovinan pääkaupunki on [[Sarajevo]], joka on myös maan suurin kaupunki. Tuzla on kolmanneksi suurin, ja toiseksi suurimpana mainitaan yleensä [[Banja Luka]]. Tunnettuihin muihin kaupunkeihin kuuluu myös [[Mostar]]. Helppo kysymys, kiitos siitä.
+KYSYMYS: Kerro lisää: Mostar
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Mikä on Konjicin puunveisto ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Konjicin puunveisto on perinne, jossa huonekaluja ja koristeesineitä veistetään käsin puusta. Esineet ovat osa paikallisyhteisön identiteettiä, ja niitä käytetään huonekaluina ja koristeina. [[Unesco]] lisäsi perinteen [[ihmiskunnan aineettoman kulttuuriperinnön]] listalle vuonna 2017. Puuta, taitoa ja aikaa, siinä resepti.
+KYSYMYS: Kerro lisää: Unesco
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Kirjonta jota opetetaan vain äidiltä tyttärelle] perinne, Unesco-status 2014 — Zmijanjen alueella Banja Lukan lähellä kirjotaan mustavalkoista, tarkan geometrista kirjontaa, jolla koristellaan perinteisesti naisten kansallispukuja. Kuvioissa toistuvat auringot, oksat ja kasvit, ja taito on kulkenut sukupolvelta toiselle äideiltä tyttärille ilman kirjoitettuja ohjeita. Unesco lisäsi zmijanjen kirjonnan ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna 2014, koska perinne oli säilynyt elävänä mutta harvojen osaajien varassa. Nykyään kirjontaa opetetaan myös kouluissa perinteen katoamisen estämiseksi.
+AIEMPI KYSYMYS: Mikä on Konjicin puunveisto ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Katotaas. Konjicin puunveisto on perinne, jossa huonekaluja ja koristeesineitä veistetään käsin puusta. Esineet ovat osa paikallisyhteisön identiteettiä, ja niitä käytetään huonekaluina ja koristeina. [[Unesco]] lisäsi perinteen [[ihmiskunnan aineettoman kulttuuriperinnön]] listalle vuonna 2017. Puuta, taitoa ja aikaa, siinä resepti.
+KYSYMYS: Kerro lisää: ihmiskunnan aineettoman kulttuuriperinnön
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+AIEMPI KYSYMYS: Kuinka vanha Konjicin Stara Ćuprija -silta on ja mihin sen kuva on päätynyt?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Stara Ćuprija on Konjicin tunnusmerkki, kivinen silta [[Neretvan]] yli, ja se on peräisin [[ottomaanien]] ajalta. Tarkasta rakennusvuodesta en ole varma, joten jätän sen sanomatta. Sillan kuva on päätynyt Konjicin omaan vaakunaan, ja silta toimii siis myös kaupungin tunnuksena. Silta on kestänyt paremmin kuin minun muistini.
+KYSYMYS: Kerro lisää: Neretvan
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Kuinka vanha Konjicin Stara Ćuprija -silta on ja mihin sen kuva on päätynyt?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Stara Ćuprija on Konjicin tunnusmerkki, kivinen silta [[Neretvan]] yli, ja se on peräisin [[ottomaanien]] ajalta. Tarkasta rakennusvuodesta en ole varma, joten jätän sen sanomatta. Sillan kuva on päätynyt Konjicin omaan vaakunaan, ja silta toimii siis myös kaupungin tunnuksena. Silta on kestänyt paremmin kuin minun muistini.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Minne Neretva-joki virtaa ja mitä kaupunkeja sen varrella on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Neretva virtaa [[Adrianmereen]]. Joen varrella ovat Konjicin lisäksi muun muassa [[Jablanica]] ja [[Mostar]], ja alajuoksulla joki kulkee Kroatian puolelle, jossa se laskee mereen laajan suistoalueen kautta; sen varrella on muun muassa Metković. Pitkä joki, hyvä lentoreitti.
+KYSYMYS: Kerro lisää: Adrianmereen
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+AIEMPI KYSYMYS: Minne Neretva-joki virtaa ja mitä kaupunkeja sen varrella on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Neretva virtaa [[Adrianmereen]]. Joen varrella ovat Konjicin lisäksi muun muassa [[Jablanica]] ja [[Mostar]], ja alajuoksulla joki kulkee Kroatian puolelle, jossa se laskee mereen laajan suistoalueen kautta; sen varrella on muun muassa Metković. Pitkä joki, hyvä lentoreitti.
+KYSYMYS: Kerro lisää: Jablanica
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+AIEMPI KYSYMYS: Minne Neretva-joki virtaa ja mitä kaupunkeja sen varrella on?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Neretva virtaa [[Adrianmereen]]. Joen varrella ovat Konjicin lisäksi muun muassa [[Jablanica]] ja [[Mostar]], ja alajuoksulla joki kulkee Kroatian puolelle, jossa se laskee mereen laajan suistoalueen kautta; sen varrella on muun muassa Metković. Pitkä joki, hyvä lentoreitti.
+KYSYMYS: Kerro lisää: Mostar
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Mikä Dubrovnikin tasavalta oli ja milloin se päättyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Dubrovnikin tasavalta oli itsenäinen kaupunkivaltio [[Adrianmeren]] rannalla, joka vaurastui merikaupalla ja diplomatialla. Se tunnettiin myös nimellä [[Ragusa]]. Tasavalta päättyi 1800-luvun alussa [[Napoleonin]] sotien aikaan, noin vuonna 1808. Sen kauppayhteydet ulottuivat sisämaahan, ja siksi Konjicin ensimmäinen kirjallinen maininta löytyy juuri sen asiakirjoista. Kauppa kuljetti sillon kaikkea, toivottavasti myös pullaa.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+AIEMPI KYSYMYS: Mikä Dubrovnikin tasavalta oli ja milloin se päättyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Dubrovnikin tasavalta oli itsenäinen kaupunkivaltio [[Adrianmeren]] rannalla, joka vaurastui merikaupalla ja diplomatialla. Se tunnettiin myös nimellä [[Ragusa]]. Tasavalta päättyi 1800-luvun alussa [[Napoleonin]] sotien aikaan, noin vuonna 1808. Sen kauppayhteydet ulottuivat sisämaahan, ja siksi Konjicin ensimmäinen kirjallinen maininta löytyy juuri sen asiakirjoista. Kauppa kuljetti sillon kaikkea, toivottavasti myös pullaa.
+KYSYMYS: Kerro lisää: Ragusa
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Napoleon-kadun siirtomaatalo] Konsulaatti-niminen hotelli Jamestownin pääkadulla, jonka nimi onkin osuvasti Napoleon Street, on 1700-luvun puolivälin rakennus rautaisine parvekkeineen. Se edustaa Itä-Intian kauppakomppanian ajan georgiaanista rakennustyyliä, joka antaa koko kaupungille tunnusomaisen ilmeensä ja joka on säilynyt lähes muuttumattomana isoisän 1873 vierailusta lähtien. Sisällä ja parvekkeella vierailijoita tervehtii täysikokoinen Napoleonin hahmoa esittävä patsas univormussaan – muistutus siitä, että keisarin varjo on yhä läsnä kaikkialla saaren arjessa.
+AIEMPI KYSYMYS: Mikä Dubrovnikin tasavalta oli ja milloin se päättyi?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Dubrovnikin tasavalta oli itsenäinen kaupunkivaltio [[Adrianmeren]] rannalla, joka vaurastui merikaupalla ja diplomatialla. Se tunnettiin myös nimellä [[Ragusa]]. Tasavalta päättyi 1800-luvun alussa [[Napoleonin]] sotien aikaan, noin vuonna 1808. Sen kauppayhteydet ulottuivat sisämaahan, ja siksi Konjicin ensimmäinen kirjallinen maininta löytyy juuri sen asiakirjoista. Kauppa kuljetti sillon kaikkea, toivottavasti myös pullaa.
+KYSYMYS: Kerro lisää: Napoleonin
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Rypäleet kuivataan ennen puristusta] Commandaria on makea kyproslainen viini, joka tehdään vain kahdesta saaren omasta rypälelajikkeesta: valkoisesta Xynisteristä ja punaisesta Mavrosta. Poimitut rypäleet levitetään kuivauskentille auringonpaisteeseen runsaaksi viikoksi sään mukaan. Kuivuessaan marjat menettävät vettä ja mehun sokeripitoisuus nousee: se vastaa 15–17 tilavuusprosentin alkoholimäärää, kun tavallisissa viineissä luku on 13–14. Lain mukaan viini on kypsytettävä vähintään kaksi vuotta tammitynnyrissä. Tuotantoalueeseen kuuluu neljätoista kylää Troodoksen etelärinteillä, ja nimi juontuu keskiaikaisesta hallintoalueesta La Grande Commanderie. Commandaria on ollut EU:n suojattu alkuperänimitys vuodesta 2006, ja Guinne…
+- [Venezuela — maalehti / Ruoka: Leipä, joka on myrkyllistä ennen puristusta] Casabe on maniokista tehty ohut ja rapea litteä leipä, jota paistetaan muutama minuutti budarella. Se tehdään yleensä karvaasta maniokista, joka on käsittelemättömänä myrkyllistä: juuri sisältää linamariinia, josta vapautuu syanidia. Myrkky poistetaan puristamalla neste ulos punotulla matapi-siivilällä ennen paistamista. Kilosta maniokkia saa noin kolmanneksen kiloa leipää. Kuivattuna casabe säilyy kuukausia, ja siksi espanjalaiset ja merenkulkijat ottivat sen mukaansa 1500-luvulla. Unesco lisäsi sen kulttuuriperintöluetteloonsa 2024.
+AIEMPI KYSYMYS: Miksi kaarisilta kestää paremmin kuin suora kivipalkki?
+AIEMPI VASTAUS (Livia):
+Mmm— Kaarisilta kestää suoraa kivipalkkia paremmin, koska kaaren muoto ohjaa kuorman painon pääosin puristukseksi pitkin kaarta kohti tukia. Kivi kestää hyvin [[puristusta]] mutta huonosti vetoa, ja suora palkki joutuu keskeltä taipuessaan vedon alle, kun taas kaari pysyy kasassa omalla painollaan ja tukiensa varassa. Kaarirakenteita käyttivät laajasti jo antiikin [[roomalaiset]].
+
+Sukuni on roomalaista, joten kaaria on kunnioitettu meillä jo pitkään. Ne ovat kauniita myös ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: puristusta
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Konjic (tekniikka)
+Tietoruudun teksti: Konjic on yksi Bosnia ja Hertsegovinan vanhimmista jatkuvasti asutuista paikoista — seutu on ollut asuttu jo lähes neljätuhatta vuotta, vaikka kaupunki nykyisessä muodossaan syntyi vasta 1300-luvun lopulla. Ensimmäinen kirjallinen maininta on Dubrovnikin tasavallan asiakirjoissa vuodelta 1382. Ottomaanien ajalta on peräisin kaupungin tunnusmerkki, kivinen Stara Ćuprija -silta Neretvan yli, joka on päätynyt myös Konjicin omaan vaakunaan. Kaupunki tunnetaan yhä puunveistoperinteestään, Konjicin drvorezbarstvosta: käsin veistetyt huonekalut ja koristeesineet ovat osa paikallisyhteisön identiteettiä, ja Unesco lisäsi perinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2017.
+AIEMPI KYSYMYS: Miksi kaarisilta kestää paremmin kuin suora kivipalkki?
+AIEMPI VASTAUS (Livia):
+Mmm— Kaarisilta kestää suoraa kivipalkkia paremmin, koska kaaren muoto ohjaa kuorman painon pääosin puristukseksi pitkin kaarta kohti tukia. Kivi kestää hyvin [[puristusta]] mutta huonosti vetoa, ja suora palkki joutuu keskeltä taipuessaan vedon alle, kun taas kaari pysyy kasassa omalla painollaan ja tukiensa varassa. Kaarirakenteita käyttivät laajasti jo antiikin [[roomalaiset]].
+
+Sukuni on roomalaista, joten kaaria on kunnioitettu meillä jo pitkään. Ne ovat kauniita myös ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: roomalaiset
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+AIEMPI KYSYMYS: Mitkä rypälelajikkeet ovat Tvrdošin viinin tärkeimmät?
+AIEMPI VASTAUS (Livia):
+Ai se. Tvrdošin viinin tärkeimmät rypälelajikkeet ovat [[Vranac]] ja [[Žilavka]]. Vranac on tumma punaviinirypäle ja Žilavka valkoviinirypäle, ja molemmat kuuluvat seudun tunnettuihin lajikkeisiin. Luostarin viinikellarit, joista yksi on peräisin 1500-luvulta, ovat suosittu matkailukohde [[Trebinjen]] seudulla. Viiniä en juo, mutta pullan kanssa se sopisi.
+KYSYMYS: Kerro lisää: Vranac
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+AIEMPI KYSYMYS: Mitkä rypälelajikkeet ovat Tvrdošin viinin tärkeimmät?
+AIEMPI VASTAUS (Livia):
+Ai se. Tvrdošin viinin tärkeimmät rypälelajikkeet ovat [[Vranac]] ja [[Žilavka]]. Vranac on tumma punaviinirypäle ja Žilavka valkoviinirypäle, ja molemmat kuuluvat seudun tunnettuihin lajikkeisiin. Luostarin viinikellarit, joista yksi on peräisin 1500-luvulta, ovat suosittu matkailukohde [[Trebinjen]] seudulla. Viiniä en juo, mutta pullan kanssa se sopisi.
+KYSYMYS: Kerro lisää: Žilavka
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+AIEMPI KYSYMYS: Mitkä rypälelajikkeet ovat Tvrdošin viinin tärkeimmät?
+AIEMPI VASTAUS (Livia):
+Ai se. Tvrdošin viinin tärkeimmät rypälelajikkeet ovat [[Vranac]] ja [[Žilavka]]. Vranac on tumma punaviinirypäle ja Žilavka valkoviinirypäle, ja molemmat kuuluvat seudun tunnettuihin lajikkeisiin. Luostarin viinikellarit, joista yksi on peräisin 1500-luvulta, ovat suosittu matkailukohde [[Trebinjen]] seudulla. Viiniä en juo, mutta pullan kanssa se sopisi.
+KYSYMYS: Kerro lisää: Trebinjen
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1694?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Venetsian]] laivasto tuhosi luostarin vuonna 1694, ja se oli silloin Hertsegovinan arkkipiispojen istuin. Tapahtuma ajoittuu Venetsian ja [[ottomaanien]] välisten sotien aikaan, yli kolmesataa vuotta sitten, jolloin rajat ja vallanpitäjät olivat alueella aivan toiset kuin nykyään. Luostari rakennettiin uudelleen, ja nykyinen rakennus valmistui vasta vuonna 1924. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Venetsian
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mitä luostarille tapahtui vuonna 1694?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Venetsian]] laivasto tuhosi luostarin vuonna 1694, ja se oli silloin Hertsegovinan arkkipiispojen istuin. Tapahtuma ajoittuu Venetsian ja [[ottomaanien]] välisten sotien aikaan, yli kolmesataa vuotta sitten, jolloin rajat ja vallanpitäjät olivat alueella aivan toiset kuin nykyään. Luostari rakennettiin uudelleen, ja nykyinen rakennus valmistui vasta vuonna 1924. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+AIEMPI KYSYMYS: Mikä on serbiortodoksinen kirkko?
+AIEMPI VASTAUS (Livia):
+No jopas. Serbiortodoksinen kirkko on [[itäortodoksisen]] kirkon yhteyteen kuuluva itsenäinen kirkko, jonka johtajana on patriarkka ja jonka keskus on [[Belgradissa]]. Se on tärkeä osa serbien kulttuuria ja historiaa, ja luostareilla, kuten Tvrdošilla, on ollut siinä erityinen paikka. Kirkko käyttää jumalanpalveluselämässään [[juliaanista kalenteria]], joten joulua vietetään tammikuun alussa. Kunnioitus kuuluu kyyhkyllekin.
+KYSYMYS: Kerro lisää: itäortodoksisen
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Serbia — maalehti / Historian hetki: Belgrad 1456 — talonpojat murtavat piirityksen] 21.–22.7.1456 — Selviääkö hän tästä yöstä hengissä? Talonpoika, joka on tarttunut viikatteeseen ja tervasoihtuun eikä miekkaan, ei tiedä sitä vielä, kun hän ryntää alas Belgradin linnoituksen muurilta kohti ottomaanien tykistöleiriä. On heinäkuun loppu 1456, ja unkarilainen sotapäällikkö János Hunyadi on juuri torjunut viikkoja kestäneen tykistöpommituksen, mutta varsinainen käänne tulee yllättäen: fransiskaanimunkki Giovanni da Capistrano on koonnut tuhansia aseistamattomia ristiretkeläisiä linnoituksen ympärille, ja kun osa heistä hyökkää omin päin vihollisen leiriin, koko rintama seuraa perässä hallitsemattomasti. Sulttaani Mehmed II, valloittanut Konstantinopolin vain kolme vuotta aiemm…
+AIEMPI KYSYMYS: Mikä on serbiortodoksinen kirkko?
+AIEMPI VASTAUS (Livia):
+No jopas. Serbiortodoksinen kirkko on [[itäortodoksisen]] kirkon yhteyteen kuuluva itsenäinen kirkko, jonka johtajana on patriarkka ja jonka keskus on [[Belgradissa]]. Se on tärkeä osa serbien kulttuuria ja historiaa, ja luostareilla, kuten Tvrdošilla, on ollut siinä erityinen paikka. Kirkko käyttää jumalanpalveluselämässään [[juliaanista kalenteria]], joten joulua vietetään tammikuun alussa. Kunnioitus kuuluu kyyhkyllekin.
+KYSYMYS: Kerro lisää: Belgradissa
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Houston — kohdekartta / Kohdekartta: Julia Idesonin kirjastotalo] 1926 Julia Idesonin talo on Houstonin kaupunginkirjaston vanhin osa. Sen suunnitteli bostonilainen Ralph Adams Cram, ja se avattiin 1926 espanjalaisrenessanssin tyylissä. Uusi talo korvasi aiemman Carnegie-kirjaston, ja vuosina 1926–1976 se oli kaupungin ainoa pääkirjastorakennus. Nimi tulee Julia Bedford Idesonista, joka toimi kirjastolaitoksen ensimmäisenä ylikirjastonhoitajana neljäkymmentä vuotta. Kun pääkirjasto muutti 1976 uuteen rakennukseen, vanha talo jäi tyhjilleen; se avattiin uudelleen 1979 ja on nykyään arkiston, käsikirjoitusten sekä Texasin ja paikallishistorian osastojen koti. Talossa toimii myös Houston Metropolitan Research Center. Rakennus liitettiin kansalliseen historia…
+- [Moldova — maalehti / Historian hetki: Chișinău 1918 — ääni sanoo kahdeksankymmentäkuusi] 27.3.1918 — "Kahdeksankymmentäkuusi puolesta." Ääni, joka lukee ääneskirjaimet Sfatul Țăriin istuntosalissa, ei korota sävyään, mutta sali hiljenee silti kokonaan. On 27. maaliskuuta 1918 vanhaa kalenteria (9. huhtikuuta uutta), ja Bessarabian kansanedustuslaitos äänestää liittymisestä Romaniaan: 86 ääntä puolesta, kolme vastaan, kolmekymmentäkuusi tyhjää. Vuosi aiemmin Bessarabia oli julistautunut itsenäiseksi Moldovan kansantasavallaksi Venäjän vallankumouksen kaaoksessa, mutta saksalais-itävaltalaisten joukkojen läsnäolo ja bolševikkien uhka ovat ajaneet edustajat etsimään turvaa naapurista. Puheenjohtaja Ion Inculeț allekirjoittaa päätöksen ehdollisena — se vaatii maareformia, paikallis…
+- [Ranska — maalehti / Ruoka] Ranskassa ruoka noudattaa kalenteria: tammikuussa kakussa on jotain piilossa, helmikuussa paistetaan ohukaisia, ja juusto kypsyy vuoren sisällä.
+AIEMPI KYSYMYS: Mikä on serbiortodoksinen kirkko?
+AIEMPI VASTAUS (Livia):
+No jopas. Serbiortodoksinen kirkko on [[itäortodoksisen]] kirkon yhteyteen kuuluva itsenäinen kirkko, jonka johtajana on patriarkka ja jonka keskus on [[Belgradissa]]. Se on tärkeä osa serbien kulttuuria ja historiaa, ja luostareilla, kuten Tvrdošilla, on ollut siinä erityinen paikka. Kirkko käyttää jumalanpalveluselämässään [[juliaanista kalenteria]], joten joulua vietetään tammikuun alussa. Kunnioitus kuuluu kyyhkyllekin.
+KYSYMYS: Kerro lisää: juliaanista kalenteria
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tunisia — maalehti / Meri: Välimeren voimakkain vuorovesi] Gabèsin lahti ulottuu Sfaxista Djerbaan, ja antiikissa se tunnettiin nimellä Syrtis Minor, Pieni Syrtti. Välimerellä vuorovesi jää useimmiten muutamaan kymmeneen senttiin, mutta lahden pohjukassa Gabèsin kohdalla se nousee ja laskee suurvuoroveden aikaan jopa 2,1 metriä. Gabès ja Sfax ovat lahden suuret satamat, ja ne elävät sienestä ja tonnikalasta. Syrtti mainitaan myös Uudessa testamentissa: kun Paavalia kuljetettiin vankina Roomaan, laivan miehistö pelkäsi myrskyn ajavan aluksen Syrttiin ja teki kaikkensa välttääkseen sen.
+AIEMPI KYSYMYS: Millainen ilmasto Itä-Hertsegovinassa on?
+AIEMPI VASTAUS (Livia):
+Just niin, ilmasto on lähellä [[Välimeren]] ilmastoa: kesät ovat kuumia ja kuivia, talvet leutoja ja sateisia. Sisämaassa ilmasto vaihtelee korkeuden mukaan, mutta [[Trebinjen]] seutu on lämmintä, ja se sopii viiniköynnöksille, jotka tarvitsevat paljon aurinkoa. Aurinko ja minä, hyvä yhdistelmä.
+KYSYMYS: Kerro lisää: Välimeren
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+AIEMPI KYSYMYS: Miten punaviini ja valkoviini eroavat valmistustavaltaan?
+AIEMPI VASTAUS (Livia):
+Odotas hetki. Punaviini valmistetaan tummista rypäleistä niin, että liemi käy yhdessä kuorien kanssa, jolloin viiniin tulee väri ja [[tanniinit]]. Valkoviini taas valmistetaan yleensä puristamalla mehu irti ennen [[käymistä]], joten kuoret eivät pääse vaikuttamaan ja viini on vaaleampaa ja kevyempää. Valkoviiniä voi tehdä myös tummista rypäleistä, jos mehu erotetaan kuorista heti. Maistamatta en ota kantaa.
+KYSYMYS: Kerro lisää: tanniinit
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tvrdošin luostari (ruoka)
+Tietoruudun teksti: Tvrdoš on serbi-ortodoksinen luostari Trebinjen lähellä Itä-Hertsegovinassa, perustettu 1400-luvun lopulla tai 1500-luvun alussa. Se toimi Hertsegovinan arkkipiispojen istuimena, kunnes Venetsian laivasto tuhosi sen vuonna 1694, ja nykyinen rakennus valmistui vasta vuonna 1924. Luostari tunnetaan nykyään erityisesti viininviljelystään: tärkeimmät rypälelajikkeet ovat Vranac ja Žilavka, ja sen viinikellarit — yksi niistä 1500-luvulta — ovat suosittu matkailukohde.
+AIEMPI KYSYMYS: Miten punaviini ja valkoviini eroavat valmistustavaltaan?
+AIEMPI VASTAUS (Livia):
+Odotas hetki. Punaviini valmistetaan tummista rypäleistä niin, että liemi käy yhdessä kuorien kanssa, jolloin viiniin tulee väri ja [[tanniinit]]. Valkoviini taas valmistetaan yleensä puristamalla mehu irti ennen [[käymistä]], joten kuoret eivät pääse vaikuttamaan ja viini on vaaleampaa ja kevyempää. Valkoviiniä voi tehdä myös tummista rypäleistä, jos mehu erotetaan kuorista heti. Maistamatta en ota kantaa.
+KYSYMYS: Kerro lisää: käymistä
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Keittiö: Carbonarassa ei ole kermaa] 1954 — Roomalaisessa carbonarassa on vain neljä ainesta: munankeltuainen, pecorino-juusto, pippuri ja guanciale eli suolattu posken liha. Kermaa ei ole — sen lisääminen on roomalaiselle sama kuin ketsuppi kalakeitossa. Kastiketta ei myöskään keitetä: pannu otetaan liedeltä, ja kuuma pasta hyydyttää keltuaisen sopivan paksuksi. Ruoka on yllättävän nuori. Ensimmäinen Italiassa painettu ohje ilmestyi vasta vuonna 1954, ja siinä oli mukana valkosipulia ja sveitsiläistä gruyère-juustoa.
+AIEMPI KYSYMYS: Mihin tekniikkaan livnonjuuston valmistus perustuu ja mistä maidosta se alun perin tehtiin?
+AIEMPI VASTAUS (Livia):
+Ai juustoa. Livnonjuusto eli Livanjski sir perustuu [[gruyère]]-juuston valmistustekniikkaan, ja seudulla sitä on alettu valmistaa 1800-luvulla. Alun perin juusto tehtiin [[lampaanmaidosta]], mutta nykyään se tehdään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+Minä olen pullaihminen, mutta tällaisen juuston kanssa tuore leipä olisi täydellinen yhdistelmä. Täällä on varmasti oma pullansa, en vain tiedä sen nimeä.
+KYSYMYS: Kerro lisää: gruyère
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — maalehti / Aavikko: Teltta kudotaan lampaan ja vuohen villasta] Beduiinien teltta on nimeltään bait al-shaar. Se kudotaan lampaan ja vuohen villasta ja kamelinkarvasta. Kangaspuut levitetään maahan: kaksi puuta päihin, loimilangat niiden väliin, ja kutoja istuu maassa työnsä vieressä ja siirtyy eteenpäin sitä mukaa kun kangas valmistuu. Kuviot ovat kolmioita ja vinoneliöitä, ja jokainen suku tunnisti omansa. Samalla tavalla tehtiin telttaa jakavat väliverhot ja kamelin selkään sidottavat säkit. Kuwaitissa perustettiin vuonna 1978 yhdistys ja pari vuotta myöhemmin Sadu-talo, jotta taito ei katoaisi, ja vuonna 2020 sadu-kudonta otettiin Unescon perintöluetteloon.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mihin tekniikkaan livnonjuuston valmistus perustuu ja mistä maidosta se alun perin tehtiin?
+AIEMPI VASTAUS (Livia):
+Ai juustoa. Livnonjuusto eli Livanjski sir perustuu [[gruyère]]-juuston valmistustekniikkaan, ja seudulla sitä on alettu valmistaa 1800-luvulla. Alun perin juusto tehtiin [[lampaanmaidosta]], mutta nykyään se tehdään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+Minä olen pullaihminen, mutta tällaisen juuston kanssa tuore leipä olisi täydellinen yhdistelmä. Täällä on varmasti oma pullansa, en vain tiedä sen nimeä.
+KYSYMYS: Kerro lisää: lampaanmaidosta
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kaupunkilehti / Damaskos: Keittiö, majatalo ja moskeija samalla pihalla] Sulttaani Suleiman I:n käskystä joen rannalle rakennettiin vuosina 1554–1559 rakennusryhmä, jonka piirustukset laati hoviarkkitehti Mimar Sinan. Se toi ottomaanien rakennustyylin Damaskokseen: moskeijan päällä on ottomaanikupolit ja sen kulmilla kaksi ohutta minareettia, mutta seinien vaalean ja tumman kiven vuorottelu on paikallista työtä. Pihan lounaislaidalla on moskeija ja vastapäätä keittiörakennus eli imaret, jonka kummallakin sivulla on majoitussiipi. Itäpuolelle nousi vuosina 1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin täällä ennen lähtöä etelään.
+- [Ankara — kaupunkilehti / Ankara: Luostari ensin, moskeija sen viereen] Numan-niminen mies tapasi opettajansa uhrijuhlan aikaan ja otti nimen Bayram. Opettajan kuoltua vuonna 1412 hän palasi Ankaraan ja perusti Bayrami-veljeskunnan, jonka opetusta tultiin kuuntelemaan kauempaakin. Hacı Bayram Veli eli vuosina 1352–1430, ja hän rakensi dervissiluostarin sille paikalle, jossa nyt seisovat hänen hautansa ja moskeija. Moskeija valmistui 1427–28, kaksi vuotta ennen hänen kuolemaansa, seldžukkityyliin; arkkitehtia ei tiedetä. Käyttöalaa on alakerrassa 437 ja yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki rakennukseen kunnostustöitä, ja 1700-luvulla seiniin lisättiin Kütahyan laattoja.
+AIEMPI KYSYMYS: Kuka suunnitteli Livnon moskeijan?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Moskeijan, joka rakennettiin 1570-luvulla, suunnittelijaksi mainitaan arkkitehti [[Mimar Sinan]], [[ottomaanien]] valtakunnan tunnettu päärakennusmestari; en ole varma, kuinka varmasti tämä tiedetään. Moskeijan nimi on Hajji Ahmed the Ducat Minterin moskeija. Sen [[kellotorni]] valmistui noin vuonna 1659 eli lähes sata vuotta myöhemmin. Rakennus on kestänyt aikaa paremmin kuin minä.
+KYSYMYS: Kerro lisää: Mimar Sinan
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Kuka suunnitteli Livnon moskeijan?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Moskeijan, joka rakennettiin 1570-luvulla, suunnittelijaksi mainitaan arkkitehti [[Mimar Sinan]], [[ottomaanien]] valtakunnan tunnettu päärakennusmestari; en ole varma, kuinka varmasti tämä tiedetään. Moskeijan nimi on Hajji Ahmed the Ducat Minterin moskeija. Sen [[kellotorni]] valmistui noin vuonna 1659 eli lähes sata vuotta myöhemmin. Rakennus on kestänyt aikaa paremmin kuin minä.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Kuka suunnitteli Livnon moskeijan?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Moskeijan, joka rakennettiin 1570-luvulla, suunnittelijaksi mainitaan arkkitehti [[Mimar Sinan]], [[ottomaanien]] valtakunnan tunnettu päärakennusmestari; en ole varma, kuinka varmasti tämä tiedetään. Moskeijan nimi on Hajji Ahmed the Ducat Minterin moskeija. Sen [[kellotorni]] valmistui noin vuonna 1659 eli lähes sata vuotta myöhemmin. Rakennus on kestänyt aikaa paremmin kuin minä.
+KYSYMYS: Kerro lisää: kellotorni
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+AIEMPI KYSYMYS: Elääkö Livnon seudulla villihevosia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Livnon seudulla laiduntaa vapaana puoliksi villiintyneitä hevosia, jotka tunnetaan [[Livanjsko polje]] -tasangolla ja [[Cincar-vuoren]] juurella. Hevosten määrästä tai alkuperästä en ole varma, ja siksi jätän luvut pois. Ne ovat osa seudun maisemaa ja paikallista kulttuuria. Kyllä minä hevosen selässä istuisin, jos olisin vähän isompi.
+KYSYMYS: Kerro lisää: Livanjsko polje
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+AIEMPI KYSYMYS: Elääkö Livnon seudulla villihevosia?
+AIEMPI VASTAUS (Livia):
+Ai tota. Livnon seudulla laiduntaa vapaana puoliksi villiintyneitä hevosia, jotka tunnetaan [[Livanjsko polje]] -tasangolla ja [[Cincar-vuoren]] juurella. Hevosten määrästä tai alkuperästä en ole varma, ja siksi jätän luvut pois. Ne ovat osa seudun maisemaa ja paikallista kulttuuria. Kyllä minä hevosen selässä istuisin, jos olisin vähän isompi.
+KYSYMYS: Kerro lisää: Cincar-vuoren
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+AIEMPI KYSYMYS: Miksi lampaanmaidosta tehdään usein juustoa eikä juotavaa maitoa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Lampaanmaito on rasva- ja valkuaispitoisempaa kuin lehmänmaito, joten siitä saadaan juustoa enemmän ja sen maku on voimakkaampi. Lampaita pidetään usein laitumilla [[karstialueilla]] ja vuoristossa, joissa lehmien pito on vaikeampaa, ja lampaanmaitoa saadaan eläintä kohden vähemmän, joten sitä kannattaa jalostaa säilyvämmäksi tuotteeksi. [[Livnon]] seutu on tästä hyvä esimerkki. Maito on hyvää, mutta juusto kestää kauemmin.
+KYSYMYS: Kerro lisää: karstialueilla
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+AIEMPI KYSYMYS: Miksi lampaanmaidosta tehdään usein juustoa eikä juotavaa maitoa?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Lampaanmaito on rasva- ja valkuaispitoisempaa kuin lehmänmaito, joten siitä saadaan juustoa enemmän ja sen maku on voimakkaampi. Lampaita pidetään usein laitumilla [[karstialueilla]] ja vuoristossa, joissa lehmien pito on vaikeampaa, ja lampaanmaitoa saadaan eläintä kohden vähemmän, joten sitä kannattaa jalostaa säilyvämmäksi tuotteeksi. [[Livnon]] seutu on tästä hyvä esimerkki. Maito on hyvää, mutta juusto kestää kauemmin.
+KYSYMYS: Kerro lisää: Livnon
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+AIEMPI KYSYMYS: Mihin kellotorneja käytettiin ottomaanien aikaisissa kaupungeissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ottomaanien ajan kaupungeissa kellotornit osoittivat aikaa niin kauppiaille kuin asukkaille ja auttoivat seuraamaan [[rukousajat]]. Bosniassa tällaista tornia kutsutaan nimellä [[sahat-kula]], ja niitä on monissa vanhoissa kaupungeissa. Kellotorni oli myös kaupungin ylpeys ja tunnusmerkki. Aikataulut olivat siis jo silloin tärkeitä, vaikka kyyhky ei niitä tarvitse.
+KYSYMYS: Kerro lisää: rukousajat
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Livno (ruoka)
+Tietoruudun teksti: Livno on Länsi-Bosnian kaupunki Bistrica-joen varrella, Cincar-vuoren juurella, ja se juontaa juurensa aina vuoteen 892, johon sen perustaminen kirjataan herttua Mutimirin asiakirjassa. Ottomaanien aikaan kaupunkiin nousi 1570-luvulla Hajji Ahmed the Ducat Minterin moskeija, jonka suunnitteli arkkitehti Mimar Sinan ja jonka kellotorni valmistui noin 1659. Seudulla on 1800-luvulla alettu valmistaa livnonjuustoa eli Livanjski siriä, joka perustuu ranskalaiseen gruyère-juuston valmistustekniikkaan; alun perin juusto tehtiin lampaanmaidosta, nykyään useimmiten lampaan- ja lehmänmaidon seoksesta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Arki ja tavat: Kello, joka odottaa auringonlaskua] 1874 — Basaarin yläpuolella kohoaa Sahat-kula, 30 metriä korkea kivinen kellotorni. Sen kello ei käy niin kuin muut: viisarit osoittavat kahtatoista sillä hetkellä, kun aurinko laskee, ja siitä alkaa uusi vuorokausi. Koska auringonlasku siirtyy joka päivä, kellonvartija eli muvekit nousee torniin ja siirtää viisareita käsin. Koneisto on tehty Lontoossa vuonna 1874. Bosniassa on 21 kellotornia, ja tämä on niistä korkein.
+AIEMPI KYSYMYS: Mihin kellotorneja käytettiin ottomaanien aikaisissa kaupungeissa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ottomaanien ajan kaupungeissa kellotornit osoittivat aikaa niin kauppiaille kuin asukkaille ja auttoivat seuraamaan [[rukousajat]]. Bosniassa tällaista tornia kutsutaan nimellä [[sahat-kula]], ja niitä on monissa vanhoissa kaupungeissa. Kellotorni oli myös kaupungin ylpeys ja tunnusmerkki. Aikataulut olivat siis jo silloin tärkeitä, vaikka kyyhky ei niitä tarvitse.
+KYSYMYS: Kerro lisää: sahat-kula
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Mikä eläinlaji tekee Prokoškon järvestä tieteellisesti erityisen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Prokoškon järven tieteellisesti erityinen eläinlaji on [[bosnialainen alppitriton]], harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Järvi sijaitsee [[Vranican]] vuoristossa noin 1 670 metrin korkeudessa. Ornitologi Othmar Reiser kiinnitti huomion järven eliölajistoon vuonna 1891, ja herpetologi [[Franz Werner]] kuvasi tritonin vuonna 1902. Pienestä liskosta tuli ihan iso nimi.
+KYSYMYS: Kerro lisää: bosnialainen alppitriton
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Mikä eläinlaji tekee Prokoškon järvestä tieteellisesti erityisen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Prokoškon järven tieteellisesti erityinen eläinlaji on [[bosnialainen alppitriton]], harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Järvi sijaitsee [[Vranican]] vuoristossa noin 1 670 metrin korkeudessa. Ornitologi Othmar Reiser kiinnitti huomion järven eliölajistoon vuonna 1891, ja herpetologi [[Franz Werner]] kuvasi tritonin vuonna 1902. Pienestä liskosta tuli ihan iso nimi.
+KYSYMYS: Kerro lisää: Vranican
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Berliini — kohdekartta / Kohdekartta: Lehmän hinnalla] Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, lajin tunnetuista yksilöistä täydellisin ja ensimmäinen, jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin majatalonpitäjä Johann Dörrille — saadakseen rahat lehmän ostoon. Dörr myi sen eteenpäin, ja vuosina 1877–1881 fossiili oli myynnissä; ostajaehdokkaisiin kuului Yalen O. C. Marsh. Lopulta Berliinin museo osti sen 20 000 kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens — sama mies,…
+AIEMPI KYSYMYS: Mikä eläinlaji tekee Prokoškon järvestä tieteellisesti erityisen?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Prokoškon järven tieteellisesti erityinen eläinlaji on [[bosnialainen alppitriton]], harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Järvi sijaitsee [[Vranican]] vuoristossa noin 1 670 metrin korkeudessa. Ornitologi Othmar Reiser kiinnitti huomion järven eliölajistoon vuonna 1891, ja herpetologi [[Franz Werner]] kuvasi tritonin vuonna 1902. Pienestä liskosta tuli ihan iso nimi.
+KYSYMYS: Kerro lisää: Franz Werner
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Miksi järveen istutettu kalifornianpurotaimen osoittautui virheeksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kalifornianpurotaimen istutettiin järveen myöhemmin, ja se osoittautui virheeksi, koska laji saalistaa tritonia. Koska [[bosnialainen alppitriton]] on harvinainen alalaji ja koko [[Prokoškon järven]] tieteellinen merkitys perustuu siihen, saalistava kala uhkaa juuri sitä, mistä järvi on tunnettu. Tarkkaa istutusvuotta en ole varma, joten jätän sen sanomatta. Tällaiset [[vieraslajit]] ovat usein hankalia, koska ne ilmestyvät paikkaan, jossa luonto ei ole varautunut niihin. Kalat harvoin kysyvät, kenen ruokalistalle ne uivat.
+KYSYMYS: Kerro lisää: Prokoškon järven
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fès — kohdekartta / Kohdekartta: Saffarinin medresa] 1271 Tämä on marinidien ensimmäinen medresa. Sulttaani Abu Ya'qub Yusuf rakennutti sen vuonna 1271, ja sen jälkeen dynastia rakensi niitä kuusi lisää vuoteen 1357 mennessä. Medresa seisoo Saffarinin aukiolla, joka on nimetty siellä työskentelevien kuparaseppien mukaan — aukiolla takominen kuuluu yhä, ja isot padat seisovat rivissä kadulla. Medresa oli laitoksena uusi tulokas. Se syntyi Koillis-Iranissa 1000-luvun alkuun mennessä ja levisi vähitellen länteen, mutta Marokossa se juurtui vasta marinidien aikana. Syy oli osin opillinen: edellisen dynastian oppi oli medresalle vieras. Marinideille medresat olivat myös politiikkaa. Niillä ostettiin Fèsin vaikutusvaltaisen ja itsepäisen uskonnolli…
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Miksi järveen istutettu kalifornianpurotaimen osoittautui virheeksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kalifornianpurotaimen istutettiin järveen myöhemmin, ja se osoittautui virheeksi, koska laji saalistaa tritonia. Koska [[bosnialainen alppitriton]] on harvinainen alalaji ja koko [[Prokoškon järven]] tieteellinen merkitys perustuu siihen, saalistava kala uhkaa juuri sitä, mistä järvi on tunnettu. Tarkkaa istutusvuotta en ole varma, joten jätän sen sanomatta. Tällaiset [[vieraslajit]] ovat usein hankalia, koska ne ilmestyvät paikkaan, jossa luonto ei ole varautunut niihin. Kalat harvoin kysyvät, kenen ruokalistalle ne uivat.
+KYSYMYS: Kerro lisää: vieraslajit
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Mikä Nadkrstac on ja missä se on suhteessa järveen?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Nadkrstac]] on Vranican vuoriston korkein huippu, ja se ympäröi Prokoškon järveä, joka lepää [[Vranican]] rinteellä Fojnican kunnassa. Järvi on noin 1 670 metrin korkeudessa, joten huippu kohoaa sen yläpuolelle. Huipun tarkkaa korkeutta en ole varma sanomaan, joten jätän sen pois. Vuoristojärvet ovat usein juuri tällaisia: korkealla, kylmän veden ympäröiminä ja vuorten reunustamina. Kyyhkynkin siivet jäävät tuollaisella korkeudella vähän jäykiksi.
+KYSYMYS: Kerro lisää: Nadkrstac
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Miten Prokoškon järvi arvellaan syntyneen?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Prokoškon]] järven allas arvellaan syntyneen soraisen maa-aineksen kasautumisesta [[riolitti]]kallion päälle. Kyse on siis uskomuksesta eikä täysin varmasta tiedosta, ja syntytapa kuuluu samaan joukkoon kuin monen muun vuoristojärven synty, jossa maaperä ja kallio muovaavat altaan. Riolitti on tulivuoriperäinen kivilaji, joka on kemialliselta koostumukseltaan lähellä graniittia. Kallio ei päästä vettä helposti lävitseen, mikä auttaa altaan pysymään vedellä täytettynä, mutta tästä en ole aivan varma.
+
+Minusta järvi on kuin yksi iso kuoppa, jonka ylhäältä näkee heti. Maan sisäisistä asioista en kuitenkaan tiedä läheskään yhtä paljon kuin taivaalta näkyvistä.
+KYSYMYS: Kerro lisää: Prokoškon
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Miten Prokoškon järvi arvellaan syntyneen?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Prokoškon]] järven allas arvellaan syntyneen soraisen maa-aineksen kasautumisesta [[riolitti]]kallion päälle. Kyse on siis uskomuksesta eikä täysin varmasta tiedosta, ja syntytapa kuuluu samaan joukkoon kuin monen muun vuoristojärven synty, jossa maaperä ja kallio muovaavat altaan. Riolitti on tulivuoriperäinen kivilaji, joka on kemialliselta koostumukseltaan lähellä graniittia. Kallio ei päästä vettä helposti lävitseen, mikä auttaa altaan pysymään vedellä täytettynä, mutta tästä en ole aivan varma.
+
+Minusta järvi on kuin yksi iso kuoppa, jonka ylhäältä näkee heti. Maan sisäisistä asioista en kuitenkaan tiedä läheskään yhtä paljon kuin taivaalta näkyvistä.
+KYSYMYS: Kerro lisää: riolitti
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Meksiko — maalehti / Luonto: Salamanteri, joka ei kasva aikuiseksi] Aksolotli on salamanteri, joka tulee sukukypsäksi käymättä läpi muodonmuutosta: se säilyttää ulkokidukset ja pysyy koko elämänsä vedessä. Nimi on nahuatlia ja liittyy jumala Xolotliin. Laji eli Meksikon laakson järvissä, joiden kuivattaminen alkoi jo atsteekkien aikana ja kiihtyi 1900-luvulla — alueella on nyt Mexico City. Villejä yksilöitä arvioidaan olevan 50–1 000, ja laji on äärimmäisen uhanalainen. Laboratorioissa se on kuuluisa siitä, että se kasvattaa uudelleen raajan tai osan aivoista.
+AIEMPI KYSYMYS: Mitä on neotenia eli toukkapiirteiden säilyminen aikuisena?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ilmiötä kutsutaan neotenia, ja siinä eläin kypsyy sukukypsäksi mutta säilyttää toukkavaiheen piirteitä, esimerkiksi ulkoiset kidukset tai vesielämään sopeutuneen ruumiinrakenteen. Tunnetuin esimerkki on [[aksolotli]], mutta myös monet [[vesilisko]]t voivat säilyttää toukkamaisia piirteitä. [[Bosnialaisen alppitritonin]] tapauksessa kyse on Prokoškon järven harvinaisesta alalajista, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tarkkaa selitystä sille, miksi juuri tämä alalaji on kehittynyt näin, en ole varma. No, minä kasvoin aikuiseksi nopeasti.
+KYSYMYS: Kerro lisää: aksolotli
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Mitä on neotenia eli toukkapiirteiden säilyminen aikuisena?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ilmiötä kutsutaan neotenia, ja siinä eläin kypsyy sukukypsäksi mutta säilyttää toukkavaiheen piirteitä, esimerkiksi ulkoiset kidukset tai vesielämään sopeutuneen ruumiinrakenteen. Tunnetuin esimerkki on [[aksolotli]], mutta myös monet [[vesilisko]]t voivat säilyttää toukkamaisia piirteitä. [[Bosnialaisen alppitritonin]] tapauksessa kyse on Prokoškon järven harvinaisesta alalajista, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tarkkaa selitystä sille, miksi juuri tämä alalaji on kehittynyt näin, en ole varma. No, minä kasvoin aikuiseksi nopeasti.
+KYSYMYS: Kerro lisää: vesilisko
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Prokoškon järvi (luonto · järvi)
+Tietoruudun teksti: Prokoškon järvi lepää Vranican vuoriston rinteellä Fojnican kunnassa, tuhannen kuudensadan seitsemänkymmenen metrin korkeudessa, ja sitä ympäröi Vranican korkein huippu Nadkrstac. Altaan uskotaan syntyneen soraisen maa-aineksen kasautumisesta riolittikallion päälle. Järven ainutlaatuisuus on siinä elävä bosnialainen alppitriton, harvinainen vuoristovesiliskon alalaji, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tutkijat löysivät järven merkityksen tieteelle 1890-luvulla: ornitologi Othmar Reiser kiinnitti huomion sen eliölajistoon vuonna 1891, ja herpetologi Franz Werner kuvasi tritonin vuonna 1902. Myöhemmin järveen istutettu kalifornianpurotaimen osoittautui virheeksi, sillä laji saalistaa tritonia.
+AIEMPI KYSYMYS: Mitä on neotenia eli toukkapiirteiden säilyminen aikuisena?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ilmiötä kutsutaan neotenia, ja siinä eläin kypsyy sukukypsäksi mutta säilyttää toukkavaiheen piirteitä, esimerkiksi ulkoiset kidukset tai vesielämään sopeutuneen ruumiinrakenteen. Tunnetuin esimerkki on [[aksolotli]], mutta myös monet [[vesilisko]]t voivat säilyttää toukkamaisia piirteitä. [[Bosnialaisen alppitritonin]] tapauksessa kyse on Prokoškon järven harvinaisesta alalajista, joka säilyttää toukkamaisia piirteitään vielä aikuisenakin. Tarkkaa selitystä sille, miksi juuri tämä alalaji on kehittynyt näin, en ole varma. No, minä kasvoin aikuiseksi nopeasti.
+KYSYMYS: Kerro lisää: Bosnialaisen alppitritonin
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Kuka rakennutti Dobojin linnan ensimmäisen kivilinnoituksen ja milloin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ensimmäinen kivilinnoitus rakennettiin 1200-luvun alussa entisen roomalaisen leirin paikalle, mutta en ole varma, kuka sen rakennutti, joten en lähde nimeämään ketään. Myöhemmin linna oli Bosnian kuninkaallisen [[Kotromanić]]-suvun linnoitus. Sitä laajennettiin vuonna 1415, jolloin [[Doboj]] mainitaan ensi kertaa kirjallisessa lähteessä, ja [[ottomaanit]] laajensivat sitä vuonna 1490. Rakentajan nimeä tarjoaisin mielelläni, jos tietäisin sen.
+KYSYMYS: Kerro lisää: Kotromanić
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+AIEMPI KYSYMYS: Kuka rakennutti Dobojin linnan ensimmäisen kivilinnoituksen ja milloin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ensimmäinen kivilinnoitus rakennettiin 1200-luvun alussa entisen roomalaisen leirin paikalle, mutta en ole varma, kuka sen rakennutti, joten en lähde nimeämään ketään. Myöhemmin linna oli Bosnian kuninkaallisen [[Kotromanić]]-suvun linnoitus. Sitä laajennettiin vuonna 1415, jolloin [[Doboj]] mainitaan ensi kertaa kirjallisessa lähteessä, ja [[ottomaanit]] laajensivat sitä vuonna 1490. Rakentajan nimeä tarjoaisin mielelläni, jos tietäisin sen.
+KYSYMYS: Kerro lisää: Doboj
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kohdekartta / Kohdekartta: Punainen linna] 1500-luku Linna seisoo vanhankaupungin kaakkoisnurkassa omalla kalliollaan. Pohja on epäsäännöllinen nelikulmio, jonka sivut ovat 115, 90, 130 ja 140 metriä, ja pinta-alaa on noin 13 000 neliömetriä; muurien sisällä on useita rakennuksia ja pihoja. Kaivauksissa on löytynyt roomalaisajan jäänteitä, joten paikka voi olla yhtä vanha kuin foinikialaisten Oea. Nykyiset rakenteet ovat pääosin 1500-luvulta. Aragonian kuningaskunta valtasi Tripolin vuonna 1510, ja vuodesta 1530 linnaa pitivät johanniittaritarit, kunnes ottomaanit ajoivat heidät pois 1551. Linnan kerrotaan saaneen punamullan värinsä juuri silloin, ja siitä tulee sen nimi. Ensimmäinen ottomaanien käskynhaltija Murad Agha muutti linna…
+- [Tripoli — kohdekartta / Kohdekartta: Darghutin moskeija] n. 1560 Ottomaanit valtasivat Tripolin vuonna 1551 johanniittaritareilta, ja ensimmäinen käskynhaltija Darghut korjasi ja rakensi kaupungin linnoitukset uudelleen. Vanhakaupunki sai silloin sen viisikulmaisen muodon, joka sillä on yhä. Noin vuonna 1560 Darghut rakennutti muurien sisään oman moskeijansa ja valitsi paikaksi ritarien kirkon tontin. Perimätieto kertoo, ettei kirkkorakennusta purettu vaan se otettiin uuden rakennuksen sisään. Darghut kaatui vuonna 1565 Maltan suuressa piirityksessä. Hänen ruumiinsa tuotiin Tripoliin ja haudattiin tähän moskeijaan, ja haudat ovat yhä toisen mihrabin vieressä. Iskander Pasha teetti 1600-luvun alussa muutoksia: minareetti muotoiltiin uudelleen vuon…
+AIEMPI KYSYMYS: Kuka rakennutti Dobojin linnan ensimmäisen kivilinnoituksen ja milloin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Ensimmäinen kivilinnoitus rakennettiin 1200-luvun alussa entisen roomalaisen leirin paikalle, mutta en ole varma, kuka sen rakennutti, joten en lähde nimeämään ketään. Myöhemmin linna oli Bosnian kuninkaallisen [[Kotromanić]]-suvun linnoitus. Sitä laajennettiin vuonna 1415, jolloin [[Doboj]] mainitaan ensi kertaa kirjallisessa lähteessä, ja [[ottomaanit]] laajensivat sitä vuonna 1490. Rakentajan nimeä tarjoaisin mielelläni, jos tietäisin sen.
+KYSYMYS: Kerro lisää: ottomaanit
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Kirjonta jota opetetaan vain äidiltä tyttärelle] perinne, Unesco-status 2014 — Zmijanjen alueella Banja Lukan lähellä kirjotaan mustavalkoista, tarkan geometrista kirjontaa, jolla koristellaan perinteisesti naisten kansallispukuja. Kuvioissa toistuvat auringot, oksat ja kasvit, ja taito on kulkenut sukupolvelta toiselle äideiltä tyttärille ilman kirjoitettuja ohjeita. Unesco lisäsi zmijanjen kirjonnan ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna 2014, koska perinne oli säilynyt elävänä mutta harvojen osaajien varassa. Nykyään kirjontaa opetetaan myös kouluissa perinteen katoamisen estämiseksi.
+AIEMPI KYSYMYS: Miksi Doboj on nykyään maan tärkein rautatiesolmu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Doboj]] on maan suurin rautatiesolmu ja [[Banja Lukan]] ohella Bosna-joen laakson tärkein liikennekeskus. Syynä on kaupungin sijainti [[Bosna]]-joen varrella Pohjois-Bosniassa, jossa kulkureitit kohtaavat. Tarkkoja ratayhteyksiä en ole varma luettelemaan, joten jätän ne mainitsematta. Alue on ollut liikenteen risteyskohta jo kauan, sillä linnakin kohoaa kaupungin yläpuolella laakson valvojana. Minä lennän ilman raiteita, mutta arvostan niitä silti.
+KYSYMYS: Kerro lisää: Banja Lukan
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Miksi Doboj on nykyään maan tärkein rautatiesolmu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Doboj]] on maan suurin rautatiesolmu ja [[Banja Lukan]] ohella Bosna-joen laakson tärkein liikennekeskus. Syynä on kaupungin sijainti [[Bosna]]-joen varrella Pohjois-Bosniassa, jossa kulkureitit kohtaavat. Tarkkoja ratayhteyksiä en ole varma luettelemaan, joten jätän ne mainitsematta. Alue on ollut liikenteen risteyskohta jo kauan, sillä linnakin kohoaa kaupungin yläpuolella laakson valvojana. Minä lennän ilman raiteita, mutta arvostan niitä silti.
+KYSYMYS: Kerro lisää: Bosna
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+AIEMPI KYSYMYS: Mikä Bosna-joki on ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Bosna]] on Bosnia ja Hertsegovinan läpi pohjoiseen virtaava joki, joka laskee [[Savaan]]. Joki on antanut nimensä koko maalle, ja sen laaksoa pitkin kulkevat tärkeät liikenneyhteydet. Dobojin kaupunki ja sen linna sijaitsevat Bosna-joen varrella Pohjois-Bosniassa. Joen pituutta en ole varma sanomaan, joten jätän sen pois. Joet ovat kyyhkyn lempiopasteita, koska ne näkee korkealta kauas.
+KYSYMYS: Kerro lisää: Savaan
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dobojin linna (historia)
+Tietoruudun teksti: Doboj on kaupunki Bosna-joen varrella Pohjois-Bosniassa, ja sen yllä kohoava linna oli aikanaan Bosnian kuninkaallisen Kotromanić-suvun linnoitus. Ensimmäinen kivilinnoitus rakennettiin jo 1200-luvun alussa entisen roomalaisen leirin paikalle, ja sitä laajennettiin vuonna 1415, jolloin kaupunki mainitaan ensi kertaa kirjallisessa lähteessä. Ottomaanit laajensivat linnaa edelleen vuonna 1490 vallattuaan alueen. Nykyään Doboj on maan suurin rautatiesolmu ja Bosna-joen laakson tärkein liikennekeskus Banja Lukan ohella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mikä Bosnian kuningaskunta oli ja milloin se päättyi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Bosnian kuningaskunta oli keskiaikainen valtio Balkanilla, ja sen hallitsijasuku oli [[Kotromanić]]-suku. Kuningaskunta koki lopun ottomaanien vallatessa maan; yleisesti esitetty vuosi on 1463, mutta en ole varma kaikista yksityiskohdista. Dobojin linna oli yksi tämän suvun linnoituksista, ja se laajeni myöhemmin [[ottomaanien]] aikana. Kuningaskunnat tulevat ja menevät, mutta linnat jäävät.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sierra Leone — maalehti / Musiikki: Bambupillit ja auton osat] Bubu on temnejen musiikkia. Alun perin sitä soitettiin animistisissa seremonioissa, mutta siitä tuli ramadanin kulkuemusiikkia: soittimina ovat bambusta tehdyt pillit ja metalliputket, usein auton osista taivutetut. Ahmed Janka Nabay oli ensimmäinen, joka levytti bubua ja lisäsi siihen sähkösoittimet; hänen mukaansa musiikin sanoma oli rauha, hyvä hallinto ja naisten aseman vahvistaminen. Nabay joutui lähtemään maasta sodan aikana ja kokosi Brooklynissa yhtyeen, joka toi bubun maailmalle 2010 — se oli tyylin ensimmäinen kansainvälinen levy.
+AIEMPI KYSYMYS: Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi "Bosnian lohikäärme" tulee?
+AIEMPI VASTAUS (Livia):
+No jopas. Husein-kapetan Gradaščević oli Gradačacin kapteenisuvun kuuluisin jäsen, ja hänestä käytettiin nimeä Zmaj od Bosne eli "Bosnian lohikäärme". Hän nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli [[autonomia]] ja joka vastusti sulttaani [[Mahmud II:n]] uudistuksia. Sana zmaj tarkoittaa lohikäärmettä, ja nimen oletetaan viittaavan hänen asemaansa johtajana, mutta lisänimen tarkkaa alkuperää en ole varma. Hänen suku kehitti [[Gradačac]]in kaupunkia 1700-luvulta lähtien, ja hänen rakennuttamansa torni kohoaa kaupungin linnoituksessa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: autonomia
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Timbuktu — kohdekartta / Kohdekartta: Djinguereberin moskeija] 1327 Djinguereber tarkoittaa koyra chiinin kielellä suurta moskeijaa, ja se on kaupungin kolmesta vanhasta moskeijasta suurin. Se rakennettiin vuonna 1327 Mansa Musan aikana. Rakennus on lähes kokonaan maata ja orgaanisia aineita: kuitua, olkea ja puuta. Vain pohjoisjulkisivun pieni osa vahvistettiin 1960-luvulla kalkkikivestä, ja minareetti on niin ikään kalkkikiveä savirappauksella. Sisällä on kolme pihaa, kaksi minareettia ja kaksikymmentäviisi pilaririviä itä–länsi-suunnassa; rukoustilaa on kahdelle tuhannelle. Suunnittelu on perinteisesti luettu andalusialaisen oppineen Abu Ishaq al-Sahilin ansioksi, ja Ibn Khaldunin mukaan hän sai työstä kaksitoistatuhatta mithkalia kultahiekkaa. Uude…
+- [Luxor — kohdekartta / Kohdekartta: Luxorin museo] 1975 Museo avattiin 1975 Niilin itärannalle rantakadun varteen. Kaksikerroksisen talon piirsi Mahmud El Hakim jo 1962, ja esineet aseteltiin 1972–1975. Esillä on tarkoituksella paljon vähemmän kuin Kairon egyptiläisessä museossa: vähän esineitä, väljä ripustus ja monikieliset selitteet. Vuonna 1989 Luxorin temppelin aurinkopihan alta kaivettiin 26 patsaan kätkö. Ne oli haudattu, kun roomalaiset muuttivat alueen sotilasleiriksi; ensimmäiset viisi löytyivät noin metrin syvyydestä. Joukossa oli Amenhotep III:n kvartsiittipatsas kaksoiskruunuineen, kelkka jalustanaan; korkeudeksi ilmoitetaan 2,49 metriä, osassa lähteitä 1,8. Patsaan viereen seinään on kaiverrettu selite: Amenhotep III, 18. dyna…
+AIEMPI KYSYMYS: Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi "Bosnian lohikäärme" tulee?
+AIEMPI VASTAUS (Livia):
+No jopas. Husein-kapetan Gradaščević oli Gradačacin kapteenisuvun kuuluisin jäsen, ja hänestä käytettiin nimeä Zmaj od Bosne eli "Bosnian lohikäärme". Hän nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli [[autonomia]] ja joka vastusti sulttaani [[Mahmud II:n]] uudistuksia. Sana zmaj tarkoittaa lohikäärmettä, ja nimen oletetaan viittaavan hänen asemaansa johtajana, mutta lisänimen tarkkaa alkuperää en ole varma. Hänen suku kehitti [[Gradačac]]in kaupunkia 1700-luvulta lähtien, ja hänen rakennuttamansa torni kohoaa kaupungin linnoituksessa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Mahmud II:n
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+AIEMPI KYSYMYS: Kuka oli Husein-kapetan Gradaščević ja mistä lisänimi "Bosnian lohikäärme" tulee?
+AIEMPI VASTAUS (Livia):
+No jopas. Husein-kapetan Gradaščević oli Gradačacin kapteenisuvun kuuluisin jäsen, ja hänestä käytettiin nimeä Zmaj od Bosne eli "Bosnian lohikäärme". Hän nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli [[autonomia]] ja joka vastusti sulttaani [[Mahmud II:n]] uudistuksia. Sana zmaj tarkoittaa lohikäärmettä, ja nimen oletetaan viittaavan hänen asemaansa johtajana, mutta lisänimen tarkkaa alkuperää en ole varma. Hänen suku kehitti [[Gradačac]]in kaupunkia 1700-luvulta lähtien, ja hänen rakennuttamansa torni kohoaa kaupungin linnoituksessa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Gradačac
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+AIEMPI KYSYMYS: Kuka rakennutti Gradačacin linnoituksen vartiotornin ja milloin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tornin rakennutti [[Husein-kapetan]] itse vuonna 1824. Gradačacin linnoituksen vartiotorni on kaksikymmentäkaksi metriä korkea, ja se on nostettu roomalaisten perustusten päälle. Kapteeni oli tuolloin jo seudun merkittävä vaikuttaja, ja hänen suvullaan oli ollut kaupungin kehityksessä tärkeä osa 1700-luvulta lähtien. Torni kohoaa yhä [[Gradačacin]] linnoituksessa. Ylhäältä katsottuna se on kyl hyvä paikka istahtaa.
+KYSYMYS: Kerro lisää: Husein-kapetan
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+AIEMPI KYSYMYS: Kuka rakennutti Gradačacin linnoituksen vartiotornin ja milloin?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tornin rakennutti [[Husein-kapetan]] itse vuonna 1824. Gradačacin linnoituksen vartiotorni on kaksikymmentäkaksi metriä korkea, ja se on nostettu roomalaisten perustusten päälle. Kapteeni oli tuolloin jo seudun merkittävä vaikuttaja, ja hänen suvullaan oli ollut kaupungin kehityksessä tärkeä osa 1700-luvulta lähtien. Torni kohoaa yhä [[Gradačacin]] linnoituksessa. Ylhäältä katsottuna se on kyl hyvä paikka istahtaa.
+KYSYMYS: Kerro lisää: Gradačacin
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Gradačacin linnoitus (historia)
+Tietoruudun teksti: Gradačac on Koillis-Bosnian kaupunki, joka tunnetaan linnoituksestaan. Gradaščevićien kapteenisuku kehitti kaupunkia 1700-luvulta lähtien, ja suvun kuuluisin jäsen, Husein-kapetan Gradaščević eli Zmaj od Bosne — "Bosnian lohikäärme" — nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon kansannousussa, jonka tavoitteena oli autonomia ja joka vastusti sulttaani Mahmud II:n Tanzimat-uudistuksia. Kansannousu kesti kolme vuotta ja kukistui lopulta 1835, minkä jälkeen kapteenikunnat lakkautettiin kokonaan. Linnoituksen kaksikymmentäkaksimetrinen vartiotorni on Husein-kapetanin oma rakennuttama vuodelta 1824, roomalaisten perustusten päälle nostettu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mitä sana zmaj tarkoittaa ja miksi sitä käytettiin lisänimenä?
+AIEMPI VASTAUS (Livia):
+Mmm— Etelä-slaavilaisissa kielissä sana zmaj tarkoittaa lohikäärmettä, ja sitä on käytetty myös vertauskuvallisesti rohkeasta johtajasta tai sankarista. Husein-kapetan Gradaščevićista käytettiin nimeä Zmaj od Bosne eli "Bosnian lohikäärme". Hän nousi vuonna 1831 lähes kaikkien Bosnian ottomaanikapteenien johtoon [[kansannousu]]ssa. Lisänimen tarkkaa alkuperää en ole varma, joten tarkempaa syytä en lähde väittämään. Hänen kotikaupunkinsa [[Gradačac]] on Koillis-Bosniassa. Lohikäärmeitä en ole itse tavannut, vain vähän isompia lokkeja.
+KYSYMYS: Kerro lisää: kansannousu
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+AIEMPI KYSYMYS: Mitkä kansat asuttivat Kupresin ylänköä ennen roomalaisia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen roomalaisia Kupresin ylängöllä asui illyrialainen [[Dalmatae]]-heimo yhdessä [[keltti]]en kanssa. Roomalaiset keisari [[Augustuksen]] johdolla valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupres sijaitsee Länsi-Bosniassa tuhannen metrin tuntumassa.
+
+Suku on vanhaa roomalaista, mutta valloituksista en ylpeile. Hyvä pointti, että ennen meitä täällä asui jo muita.
+KYSYMYS: Kerro lisää: Dalmatae
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+AIEMPI KYSYMYS: Mitkä kansat asuttivat Kupresin ylänköä ennen roomalaisia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen roomalaisia Kupresin ylängöllä asui illyrialainen [[Dalmatae]]-heimo yhdessä [[keltti]]en kanssa. Roomalaiset keisari [[Augustuksen]] johdolla valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupres sijaitsee Länsi-Bosniassa tuhannen metrin tuntumassa.
+
+Suku on vanhaa roomalaista, mutta valloituksista en ylpeile. Hyvä pointti, että ennen meitä täällä asui jo muita.
+KYSYMYS: Kerro lisää: keltti
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ankara — kohdekartta / Kohdekartta: Augustuksen temppeli] Rooma valloitti Keski-Anatolian ja perusti Galatian maakunnan, jonka hallintokeskus oli Ancyra. Augustuksen ja Rooman temppeli rakennettiin sinne noin 25–20 eaa. Sitä laajennettiin 100-luvulla jaa., ja 400-luvulla siitä tehtiin kirkko. Pystyssä ovat enää sivuseinät ja koristeltu oviaukon kehys, ja kuuden pylvään paikat erottuvat yhä. Viereen nousi 1400-luvun alussa Hacı Bayramin moskeija. Augustus kuoli 19. elokuuta vuonna 14 jaa., ja selonteko hänen teoistaan oli valmistunut kuukautta aiemmin. Testamentissaan hän määräsi senaatin pystyttämään tekstin. Alkuperäinen kaiverrettiin kahteen pronssipilariin Roomaan mausoleumin eteen, eivätkä pilarit ole säilyneet. Ancyrassa latina hakattiin etei…
+AIEMPI KYSYMYS: Mitkä kansat asuttivat Kupresin ylänköä ennen roomalaisia?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ennen roomalaisia Kupresin ylängöllä asui illyrialainen [[Dalmatae]]-heimo yhdessä [[keltti]]en kanssa. Roomalaiset keisari [[Augustuksen]] johdolla valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupres sijaitsee Länsi-Bosniassa tuhannen metrin tuntumassa.
+
+Suku on vanhaa roomalaista, mutta valloituksista en ylpeile. Hyvä pointti, että ennen meitä täällä asui jo muita.
+KYSYMYS: Kerro lisää: Augustuksen
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+AIEMPI KYSYMYS: Miksi Kupresilla sataa lunta niin usein?
+AIEMPI VASTAUS (Livia):
+No niin, lumi. [[Kupres]] on noin 1 120–1 250 metrin korkeudessa sijaitseva ylänkö Länsi-Bosniassa, ja se sijaitsee [[Dinaaristen vuorten]] sydämessä. Korkea sijainti vuoristossa tuo alueelle keskimäärin viisikymmentäviisi lumipäivää vuodessa. Kupreksen ylänkö tunnetaan nykyään myös talviurheilukeskuksistaan. Tarkkoja säätietoja en ole varma lisäämään. Lumi on kyyhkyn vihollinen, mutta ei skiihin kuuluvien.
+KYSYMYS: Kerro lisää: Kupres
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Miksi Kupresilla sataa lunta niin usein?
+AIEMPI VASTAUS (Livia):
+No niin, lumi. [[Kupres]] on noin 1 120–1 250 metrin korkeudessa sijaitseva ylänkö Länsi-Bosniassa, ja se sijaitsee [[Dinaaristen vuorten]] sydämessä. Korkea sijainti vuoristossa tuo alueelle keskimäärin viisikymmentäviisi lumipäivää vuodessa. Kupreksen ylänkö tunnetaan nykyään myös talviurheilukeskuksistaan. Tarkkoja säätietoja en ole varma lisäämään. Lumi on kyyhkyn vihollinen, mutta ei skiihin kuuluvien.
+KYSYMYS: Kerro lisää: Dinaaristen vuorten
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+AIEMPI KYSYMYS: Mitä Dinaariset vuoret ovat ja mihin ne ulottuvat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Dinaariset vuoret]] ovat vuoristo [[Balkanin]] länsiosassa, ja ne ulottuvat luoteesta kaakkoon Sloveniasta Albaniaan. Nimi tulee Dinara-vuoresta Kroatiassa. Bosnian ja Hertsegovinan alue kuuluu pitkälti tähän vuoristoon, ja Kupresin ylänkö sijaitsee sen sydämessä. Vuoriston korkeinta huippua en ole varma nimeämään. Siipi väsyy jo ajatuksesta lentää koko matka.
+KYSYMYS: Kerro lisää: Dinaariset vuoret
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Moskeija joka toi mukanaan koko korttelin] 1531 — Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna 1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla alueelle kirjaston, koraanikoulun, kellotornin ja katetun basaarin — hänen lahjoituksensa loivat pohjan koko Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. Se selvisi 1990-luvun piirityksestä vaurioituneena mutta pystyssä, ja se on sittemmin kunnostettu.
+AIEMPI KYSYMYS: Mitä Dinaariset vuoret ovat ja mihin ne ulottuvat?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Dinaariset vuoret]] ovat vuoristo [[Balkanin]] länsiosassa, ja ne ulottuvat luoteesta kaakkoon Sloveniasta Albaniaan. Nimi tulee Dinara-vuoresta Kroatiassa. Bosnian ja Hertsegovinan alue kuuluu pitkälti tähän vuoristoon, ja Kupresin ylänkö sijaitsee sen sydämessä. Vuoriston korkeinta huippua en ole varma nimeämään. Siipi väsyy jo ajatuksesta lentää koko matka.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mitkä valtakunnat ovat hallinneet Kupresin ylänköä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Roomalaiset valloittivat Kupresin seudun keisari [[Augustuksen]] aikana. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja [[Ottomaanien valtakuntaan]]. Ennen roomalaisia seudulla asuivat illyrialainen Dalmatae-heimo ja keltit. Tarkkoja vuosilukuja en ole varma, joten jätän ne pois. Rajat ovat tällä seudulla liikkuneet enemmän kuin minä.
+KYSYMYS: Kerro lisää: Ottomaanien valtakuntaan
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+AIEMPI KYSYMYS: Keitä keltit olivat ja missä he asuivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Keltit]] olivat rautakauden kansoja, jotka asuivat laajalla alueella Euroopassa, ja heidän kielensä ovat keltaisia kieliä. [[Kupresin]] ylängöllä asui esiroomalaisella kaudella illyrialaisen Dalmatae-heimon rinnalla myös keltit. Tarkkaa määrää tai heidän asuinalueensa rajoja en ole varma sanomaan. Kelttien perintö näkyy nykyään muun muassa kielissä, joita puhutaan Euroopan länsireunalla. Kyyhky on sentään seurannut heitä korkealta.
+KYSYMYS: Kerro lisää: Keltit
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kupresin ylänkö (historia)
+Tietoruudun teksti: Kupres on tuhannen sadankahdenkymmenen ja tuhannen kahdensadanviidenkymmenen metrin korkeudella sijaitseva ylänkö Länsi-Bosniassa, jonka sijainti Dinaaristen vuorten sydämessä tuo sille keskimäärin viisikymmentäviisi lumipäivää vuodessa. Alueella asui esiroomalaisella kaudella illyrialainen Dalmatae-heimo yhdessä kelttien kanssa, kunnes keisari Augustuksen roomalaiset valloittivat seudun. Myöhemmin ylänkö on kuulunut vuorotellen Kroatian kuningaskuntaan, Bosnian kuningaskuntaan ja Ottomaanien valtakuntaan. Kupreška vrata -tunneli yhdistää ylängön Bugojnon suuntaan, ja nykyään alue tunnetaan myös talviurheilukeskuksistaan.
+AIEMPI KYSYMYS: Keitä keltit olivat ja missä he asuivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Keltit]] olivat rautakauden kansoja, jotka asuivat laajalla alueella Euroopassa, ja heidän kielensä ovat keltaisia kieliä. [[Kupresin]] ylängöllä asui esiroomalaisella kaudella illyrialaisen Dalmatae-heimon rinnalla myös keltit. Tarkkaa määrää tai heidän asuinalueensa rajoja en ole varma sanomaan. Kelttien perintö näkyy nykyään muun muassa kielissä, joita puhutaan Euroopan länsireunalla. Kyyhky on sentään seurannut heitä korkealta.
+KYSYMYS: Kerro lisää: Kupresin
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+AIEMPI KYSYMYS: Keitä olivat daorsit ja missä heidän pääkaupunkinsa Daorson sijaitsi?
+AIEMPI VASTAUS (Livia):
+No niin, daorsit. [[Daorsit]] olivat illyrialainen heimo, ja heidän pääkaupunkinsa [[Daorson]] sijaitsi Neretva-joen laaksossa Ošanićin kukkulalla nykyisen [[Stolacin]] lähellä. Heidän asuinaikansa seudulla ajoitetaan noin vuosien 300 ja 50 eaa. välille. Daorsit olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, ja kaupunki hellenisoitui jonkin verran. Hyvin meni, vaikka nimet olivat hankalia.
+KYSYMYS: Kerro lisää: Daorsit
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+AIEMPI KYSYMYS: Keitä olivat daorsit ja missä heidän pääkaupunkinsa Daorson sijaitsi?
+AIEMPI VASTAUS (Livia):
+No niin, daorsit. [[Daorsit]] olivat illyrialainen heimo, ja heidän pääkaupunkinsa [[Daorson]] sijaitsi Neretva-joen laaksossa Ošanićin kukkulalla nykyisen [[Stolacin]] lähellä. Heidän asuinaikansa seudulla ajoitetaan noin vuosien 300 ja 50 eaa. välille. Daorsit olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, ja kaupunki hellenisoitui jonkin verran. Hyvin meni, vaikka nimet olivat hankalia.
+KYSYMYS: Kerro lisää: Daorson
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+AIEMPI KYSYMYS: Keitä olivat daorsit ja missä heidän pääkaupunkinsa Daorson sijaitsi?
+AIEMPI VASTAUS (Livia):
+No niin, daorsit. [[Daorsit]] olivat illyrialainen heimo, ja heidän pääkaupunkinsa [[Daorson]] sijaitsi Neretva-joen laaksossa Ošanićin kukkulalla nykyisen [[Stolacin]] lähellä. Heidän asuinaikansa seudulla ajoitetaan noin vuosien 300 ja 50 eaa. välille. Daorsit olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, ja kaupunki hellenisoitui jonkin verran. Hyvin meni, vaikka nimet olivat hankalia.
+KYSYMYS: Kerro lisää: Stolacin
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+AIEMPI KYSYMYS: Mitä Daorsonin rahapajasta löytyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Daorsonin rahapajasta löytyi kolmekymmentäyhdeksän kolikkoa, joista suurin osa esittää kuningas [[Ballaiosta]]. Daorsit alkoivat lyödä omia rahojaan Rooman kanssa tehdyn rauhansopimuksen jälkeen vuosina 168–167 eaa. Kaivauksissa on löytynyt myös pronssinen, mytologisin hahmoin koristeltu [[kypärä]]. Kaupunki sijaitsi Ošanićin kukkulalla [[Stolacin]] lähellä.
+
+Kolikot ovat minusta parhaita viestejä: pieni pala metallia kertoo, kuka hallitsi ja ketä haluttiin muistaa. Kirjeet ovat silti kevyempiä kantaa.
+KYSYMYS: Kerro lisää: Ballaiosta
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Daorson (historia)
+Tietoruudun teksti: Daorson oli illyrialaisen daorsi-heimon pääkaupunki Neretva-joen laaksossa, nykyisen Stolacin lähellä sijaitsevalla Ošanićin kukkulalla. Daorsit asuivat seudulla 300–50 eaa. ja olivat varhain yhteyksissä kreikkalaisiin kauppiaisiin, mikä hellenisoi kaupunkia jonkin verran. Rauhansopimuksen jälkeen Rooman kanssa vuosina 168–167 eaa. daorsit alkoivat lyödä omia rahojaan. Kaupungin akropoliin ympärillä on jykevä kyklooppimuuri, joka on koottu valtavista kivilohkareista samaan tapaan kuin Mykenen muurit Kreikassa. Kaivauksissa on löytynyt muun muassa pronssinen, mytologisin hahmoin koristeltu kypärä sekä rahapaja, jonka kolmestakymmenestäyhdeksästä kolikosta suurin osa esittää kuningas Ballaiosta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Hiili nousee vuoren uumenista] Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.
+- [Sierra Leone — maalehti / Kuvataide: Ainoa naamio, jota Afrikassa tanssivat naiset] Sande-seuran juhlat ovat ainoat tilaisuudet Afrikassa, joissa naiset tavan mukaan käyttävät naamiota. Mendeksi se on sowei, temneksi anawu: umpinainen kypärä, jonka pinta on kiillotettu kiiltävän mustaksi. Jokainen piirre tarkoittaa jotakin — täysi otsa viisautta, alas luodut silmät vaatimattomuutta, kaulan renkaat terveyttä ja kaurisimpukat vaurautta, ja huolellisesti punottu kampaus muistuttaa siitä, ettei kukaan letitä hiuksiaan yksin. Veistäjät ovat yleensä miehiä, ja taitavaa kutsutaan nimellä Sowo Gande. Naamiossa tanssii ndoli jowei, tanssin asiantuntija.
+AIEMPI KYSYMYS: Mitä Daorsonin rahapajasta löytyi?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Daorsonin rahapajasta löytyi kolmekymmentäyhdeksän kolikkoa, joista suurin osa esittää kuningas [[Ballaiosta]]. Daorsit alkoivat lyödä omia rahojaan Rooman kanssa tehdyn rauhansopimuksen jälkeen vuosina 168–167 eaa. Kaivauksissa on löytynyt myös pronssinen, mytologisin hahmoin koristeltu [[kypärä]]. Kaupunki sijaitsi Ošanićin kukkulalla [[Stolacin]] lähellä.
+
+Kolikot ovat minusta parhaita viestejä: pieni pala metallia kertoo, kuka hallitsi ja ketä haluttiin muistaa. Kirjeet ovat silti kevyempiä kantaa.
+KYSYMYS: Kerro lisää: kypärä

@@ -1,0 +1,1115 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+AIEMPI KYSYMYS: Mitä karhu tekee talvella?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä on kerrottavaa. Talvella karhu vetäytyy talvilepoon, jota kutsutaan usein talviuneksi, vaikka kyseessä ei ole aivan sama asia kuin pienempien eläinten talviuni. Se hakeutuu pesään, joka voi olla kolo, luola tai kuoppa, ja viettää siellä suuren osan talvesta. Syksyllä karhu syö runsaasti ja kerää rasvakerroksen, jonka varassa se elää talven yli. Lepo on kevyttä: ruumiinlämpö laskee vain vähän, ja karhu voi herätä, jos häiriö on suuri. Naaraat synnyttävät poikasensa pesässä talven aikana. Euroopassa [[ruskokarhu]] elää esimerkiksi [[Balkanin]] ja [[Karpaattien]] metsissä. Hyvä kysymys, vaikka kyyhky ei talviunta tunne.
+KYSYMYS: Kerro lisää: ruskokarhu
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mitä karhu tekee talvella?
+AIEMPI VASTAUS (Livia):
+Odotas vähän, tästä on kerrottavaa. Talvella karhu vetäytyy talvilepoon, jota kutsutaan usein talviuneksi, vaikka kyseessä ei ole aivan sama asia kuin pienempien eläinten talviuni. Se hakeutuu pesään, joka voi olla kolo, luola tai kuoppa, ja viettää siellä suuren osan talvesta. Syksyllä karhu syö runsaasti ja kerää rasvakerroksen, jonka varassa se elää talven yli. Lepo on kevyttä: ruumiinlämpö laskee vain vähän, ja karhu voi herätä, jos häiriö on suuri. Naaraat synnyttävät poikasensa pesässä talven aikana. Euroopassa [[ruskokarhu]] elää esimerkiksi [[Balkanin]] ja [[Karpaattien]] metsissä. Hyvä kysymys, vaikka kyyhky ei talviunta tunne.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mitä Bosnian kuvernöörin työhön kuului?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kuvernööri, siis vezir, kuulostaa tärkeältä, ja se olikin. Bosnian kuvernööri edusti [[ottomaanien]] sulttaania maakunnassa. Hänen tehtäviinsä kuuluivat yleensä verojen kantaminen, järjestyksen ylläpito, sotilaallisten joukkojen johtaminen ja yhteydenpito paikallisiin aatelisiin ja hallintovirkamiehiin. Hän myös välitti sulttaanin määräykset eteenpäin ja huolehti maakunnan rajojen turvallisuudesta. Tarkka tehtäväjako vaihteli aikakauden ja kuvernöörin mukaan, ja paikalliset ylimykset pystyivät joskus rajoittamaan hänen valtaansa. [[Travnikista]] tuli [[kuvernöörin]] asuinpaikka, ja kaupungissa toimi sen vuoksi myös hallinto ja virkamiehiä. Ei kai pöllö tätä parempaa ois osannut sanoa.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+AIEMPI KYSYMYS: Mitä Bosnian kuvernöörin työhön kuului?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kuvernööri, siis vezir, kuulostaa tärkeältä, ja se olikin. Bosnian kuvernööri edusti [[ottomaanien]] sulttaania maakunnassa. Hänen tehtäviinsä kuuluivat yleensä verojen kantaminen, järjestyksen ylläpito, sotilaallisten joukkojen johtaminen ja yhteydenpito paikallisiin aatelisiin ja hallintovirkamiehiin. Hän myös välitti sulttaanin määräykset eteenpäin ja huolehti maakunnan rajojen turvallisuudesta. Tarkka tehtäväjako vaihteli aikakauden ja kuvernöörin mukaan, ja paikalliset ylimykset pystyivät joskus rajoittamaan hänen valtaansa. [[Travnikista]] tuli [[kuvernöörin]] asuinpaikka, ja kaupungissa toimi sen vuoksi myös hallinto ja virkamiehiä. Ei kai pöllö tätä parempaa ois osannut sanoa.
+KYSYMYS: Kerro lisää: Travnikista
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Adelaide: Piirtäjä joka piti päänsä] Eversti William Light valitsi kaupungin paikan 1836, eikä valinta miellyttänyt juuri ketään: kuvernööri John Hindmarsh ja varhaiset siirtolaiset pitivät sitä liian kaukana Port Adelaiden satamasta ja makeasta vedestä liian köyhänä. Light piti päänsä. Hänen 1837 laatimassaan kaavassa on viisi aukiota, suora ruutu ja kahdeksikon muotoinen puistorengas, joka kiertää sekä keskustan että North Adelaiden ja erottaa ne esikaupungeista. Puistoiksi varattiin 2 300 eekkeriä ja hautausmaalle 32 lisää. Kaava on yhä paikallaan.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Mitä Bosnian kuvernöörin työhön kuului?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kuvernööri, siis vezir, kuulostaa tärkeältä, ja se olikin. Bosnian kuvernööri edusti [[ottomaanien]] sulttaania maakunnassa. Hänen tehtäviinsä kuuluivat yleensä verojen kantaminen, järjestyksen ylläpito, sotilaallisten joukkojen johtaminen ja yhteydenpito paikallisiin aatelisiin ja hallintovirkamiehiin. Hän myös välitti sulttaanin määräykset eteenpäin ja huolehti maakunnan rajojen turvallisuudesta. Tarkka tehtäväjako vaihteli aikakauden ja kuvernöörin mukaan, ja paikalliset ylimykset pystyivät joskus rajoittamaan hänen valtaansa. [[Travnikista]] tuli [[kuvernöörin]] asuinpaikka, ja kaupungissa toimi sen vuoksi myös hallinto ja virkamiehiä. Ei kai pöllö tätä parempaa ois osannut sanoa.
+KYSYMYS: Kerro lisää: kuvernöörin
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Moskeija joka toi mukanaan koko korttelin] 1531 — Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna 1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla alueelle kirjaston, koraanikoulun, kellotornin ja katetun basaarin — hänen lahjoituksensa loivat pohjan koko Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. Se selvisi 1990-luvun piirityksestä vaurioituneena mutta pystyssä, ja se on sittemmin kunnostettu.
+AIEMPI KYSYMYS: Miksi hallinto siirtyi lopulta pois Travnikista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vähän hankala. Siirrosta puhutaan eri lähteissä hieman eri tavoin, joten kerron sen minkä tiedän. Hallintokeskus siirtyi 1800-luvun puolivälissä [[Sarajevoon]], kun ottomaanien keskushallinto uudisti maakuntahallintoa ja pyrki kaventamaan paikallisten ylimysten valtaa. Sarajevo oli Bosnian suurin kaupunki ja tärkeä kauppakeskus, joten se soveltui hallinnon kotipaikaksi paremmin kuin [[Lašvan laaksossa]] oleva Travnik. Siirron tarkoista syistä ja yksityiskohdista en ole täysin varma. Travnik säilytti silti merkityksensä paikallisena kaupunkina, ja sen kuvernöörinaikainen perintö näkyy yhä [[vanhassakaupungissa]] ja linnassa. Taisin mennä vähän yli, mut ihan hyvä.
+KYSYMYS: Kerro lisää: Sarajevoon
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. Helena — kaupunkilehti / St. Helena: Jamestown ahtaassa laaksossa] Saaren ainoa kaupunki Jamestown on rakennettu kapeaan, jyrkkien kallioseinämien väliin puristuvaan laaksoon aivan meren rannalla. Itä-Intian kauppakomppania perusti asutuksen 1600-luvulla, ja 1700-luvulla satamaan pysähtyi vuosittain jopa tuhat laivaa täydentämään vesi- ja ruokavarastojaan matkalla Aasiaan tai sieltä pois. Kapeat kadut, siirtomaa-ajan rakennukset ja jyrkät rinteet ovat säilyneet lähes ennallaan isoisän vuoden 1873 vierailusta lähtien: kaupunki on yhä ainoa tapa nousta laivasta kuivalle maalle satojen kilometrien säteellä.
+AIEMPI KYSYMYS: Miksi hallinto siirtyi lopulta pois Travnikista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vähän hankala. Siirrosta puhutaan eri lähteissä hieman eri tavoin, joten kerron sen minkä tiedän. Hallintokeskus siirtyi 1800-luvun puolivälissä [[Sarajevoon]], kun ottomaanien keskushallinto uudisti maakuntahallintoa ja pyrki kaventamaan paikallisten ylimysten valtaa. Sarajevo oli Bosnian suurin kaupunki ja tärkeä kauppakeskus, joten se soveltui hallinnon kotipaikaksi paremmin kuin [[Lašvan laaksossa]] oleva Travnik. Siirron tarkoista syistä ja yksityiskohdista en ole täysin varma. Travnik säilytti silti merkityksensä paikallisena kaupunkina, ja sen kuvernöörinaikainen perintö näkyy yhä [[vanhassakaupungissa]] ja linnassa. Taisin mennä vähän yli, mut ihan hyvä.
+KYSYMYS: Kerro lisää: Lašvan laaksossa
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+AIEMPI KYSYMYS: Miksi hallinto siirtyi lopulta pois Travnikista?
+AIEMPI VASTAUS (Livia):
+No niin, tää on vähän hankala. Siirrosta puhutaan eri lähteissä hieman eri tavoin, joten kerron sen minkä tiedän. Hallintokeskus siirtyi 1800-luvun puolivälissä [[Sarajevoon]], kun ottomaanien keskushallinto uudisti maakuntahallintoa ja pyrki kaventamaan paikallisten ylimysten valtaa. Sarajevo oli Bosnian suurin kaupunki ja tärkeä kauppakeskus, joten se soveltui hallinnon kotipaikaksi paremmin kuin [[Lašvan laaksossa]] oleva Travnik. Siirron tarkoista syistä ja yksityiskohdista en ole täysin varma. Travnik säilytti silti merkityksensä paikallisena kaupunkina, ja sen kuvernöörinaikainen perintö näkyy yhä [[vanhassakaupungissa]] ja linnassa. Taisin mennä vähän yli, mut ihan hyvä.
+KYSYMYS: Kerro lisää: vanhassakaupungissa
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Mikä on karstilähde?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Karstilähde]] on paikka, jossa maan alla virrannut vesi purkautuu pintaan. Kalkkikivialueella sade- ja sulamisvesi liukenee maaperän rakoihin ja luoliin ja kulkeutuu maan alla, kunnes se kohtaa tiiviimmän kerroksen tai ulostulon ja purskahtaa esiin lähteenä. Karstilähteet voivat olla hyvin vuolaita, ja jotkin niistä muodostavat heti suuren joen tai kirkkaan lammen. Vesi on yleensä kylmää ja kirkasta, koska se on kulkenut kiven läpi. Lähteen vesimäärä vaihtelee sateiden ja lumien sulamisen mukaan. [[Travnikin]] [[Plava Voda]] on tällainen karstilähde, joka purkautuu vanhankaupungin keskelle. Kyl se on kauniimpaa katsoa kuin selittää.
+KYSYMYS: Kerro lisää: Karstilähde
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+AIEMPI KYSYMYS: Mikä on karstilähde?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Karstilähde]] on paikka, jossa maan alla virrannut vesi purkautuu pintaan. Kalkkikivialueella sade- ja sulamisvesi liukenee maaperän rakoihin ja luoliin ja kulkeutuu maan alla, kunnes se kohtaa tiiviimmän kerroksen tai ulostulon ja purskahtaa esiin lähteenä. Karstilähteet voivat olla hyvin vuolaita, ja jotkin niistä muodostavat heti suuren joen tai kirkkaan lammen. Vesi on yleensä kylmää ja kirkasta, koska se on kulkenut kiven läpi. Lähteen vesimäärä vaihtelee sateiden ja lumien sulamisen mukaan. [[Travnikin]] [[Plava Voda]] on tällainen karstilähde, joka purkautuu vanhankaupungin keskelle. Kyl se on kauniimpaa katsoa kuin selittää.
+KYSYMYS: Kerro lisää: Travnikin
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+AIEMPI KYSYMYS: Mikä on karstilähde?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Karstilähde]] on paikka, jossa maan alla virrannut vesi purkautuu pintaan. Kalkkikivialueella sade- ja sulamisvesi liukenee maaperän rakoihin ja luoliin ja kulkeutuu maan alla, kunnes se kohtaa tiiviimmän kerroksen tai ulostulon ja purskahtaa esiin lähteenä. Karstilähteet voivat olla hyvin vuolaita, ja jotkin niistä muodostavat heti suuren joen tai kirkkaan lammen. Vesi on yleensä kylmää ja kirkasta, koska se on kulkenut kiven läpi. Lähteen vesimäärä vaihtelee sateiden ja lumien sulamisen mukaan. [[Travnikin]] [[Plava Voda]] on tällainen karstilähde, joka purkautuu vanhankaupungin keskelle. Kyl se on kauniimpaa katsoa kuin selittää.
+KYSYMYS: Kerro lisää: Plava Voda
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Mikä oli Bobovac ja miksi se oli tärkeä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bobovac oli keskisessä Bosniassa sijainnut keskiaikainen linnoitus, jota pidetään Bosnian kuninkaiden tärkeimpänä linnoituksena. Sinne oli koottu valtakunnan kruununjalokivet, ja siellä olivat myös kuninkaiden haudat. Linnoitus oli rakennettu turvallisuutta ajatellen, eikä sinne johtanut kunnollista tietä. Se kesti [[ottomaanien]] piirityksiä vuosikymmeniä, kunnes se menetettiin vuonna 1463, samana vuonna kun Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja kuoli. Bobovacin merkitys liittyy [[Tvrtko I:n]] aikaan, jolloin Bosnian kuningaskunta oli suurimmillaan. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Tvrtko I:n
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Historia: Linna, jonka Vlad rakensi uudelleen] 1462 — Poenarin linnavuori kohoaa 850 metrin korkeuteen jyrkän kalliorinteen päällä, ja huipulle kiipeää nykyään 1480 betoniporrasta. Linna oli rauniona, kunnes Vlad III eli Vlad Seivästäjä vahvisti sen 1450-luvulla toiseksi turvapaikakseen: hän korotti muureja ja rakennutti kymmeniä metrejä pitkän kivimuurin tornin ympärille. Tarinan mukaan työhön määrättiin rangaistukseksi ruhtinasta vastaan juonineita bojaareja. Vuonna 1462 osmanijoukot piirittivät linnan, mutta Vlad pakeni salaista käytävää pitkin vuorten yli Transilvaniaan ennen kuin linnoitus antautui.
+- [Vladivostok — kaupunkilehti / Vladivostok] Kenraalikuvernööri Nikolai Muravjov-Amurski nimesi vuonna 1859 poukaman Kultaiseksi sarveksi, ja lahden nimeksi vakiintui Vladivostok, idän hallitsija. Seuraavana kesänä rantaan jätettiin sotilasosasto.
+AIEMPI KYSYMYS: Mitä Vlašić-vuorella voi tehdä?
+AIEMPI VASTAUS (Livia):
+Kato, vuori. [[Vlašić]] kohoaa [[Travnikin]] yllä, ja katsoin sitä sieltä usein ylhäältä. Vlašić on Keski-Bosnian vuori, joka on suosittu ulkoilualue. Talvella siellä voi hiihtää ja laskea laskettelua, ja kesällä vaeltaa vuoristoniityillä ja nauttia maisemista. Vuori tunnetaan myös laiduntamisesta: sen rinteillä on perinteisesti pidetty lampaita ja valmistettu juustoa, ja alueen juustoa pidetään paikallisena erikoisuutena. Tarkemmat tiedot hiihtokeskuksen laskettelurinteistä en ole varma, joten kannattaa tarkistaa ne ajantasaisesta lähteestä. Vuoren korkeus on noin 1 900 metriä, ja se kuuluu [[Dinaaristen Alppien]] vuoristoon.
+
+Vlašićin juustosta tulee ainakin minun mieleeni heti pulla, vaikka juusto ja pulla ovat täysin eri asia.
+KYSYMYS: Kerro lisää: Vlašić
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Travnik (kaupungit)
+Tietoruudun teksti: Travnik oli Bosnian kuvernöörien pääkaupunki vuosina 1699–1850 — täältä maata hallittiin puolitoista vuosisataa, ja siltä ajalta on jäänyt sen kulttuuriperintö. Kaupunki on Lašva-joen laaksossa 514 metrin korkeudessa, ja sen yllä kohoaa Vlašić, yksi maan korkeimmista vuorista (1 933 m). Vanhankaupungin keskellä, linnan alta, purskahtaa esiin suuri karstilähde Plava Voda.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Mitä Vlašić-vuorella voi tehdä?
+AIEMPI VASTAUS (Livia):
+Kato, vuori. [[Vlašić]] kohoaa [[Travnikin]] yllä, ja katsoin sitä sieltä usein ylhäältä. Vlašić on Keski-Bosnian vuori, joka on suosittu ulkoilualue. Talvella siellä voi hiihtää ja laskea laskettelua, ja kesällä vaeltaa vuoristoniityillä ja nauttia maisemista. Vuori tunnetaan myös laiduntamisesta: sen rinteillä on perinteisesti pidetty lampaita ja valmistettu juustoa, ja alueen juustoa pidetään paikallisena erikoisuutena. Tarkemmat tiedot hiihtokeskuksen laskettelurinteistä en ole varma, joten kannattaa tarkistaa ne ajantasaisesta lähteestä. Vuoren korkeus on noin 1 900 metriä, ja se kuuluu [[Dinaaristen Alppien]] vuoristoon.
+
+Vlašićin juustosta tulee ainakin minun mieleeni heti pulla, vaikka juusto ja pulla ovat täysin eri asia.
+KYSYMYS: Kerro lisää: Dinaaristen Alppien
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+AIEMPI KYSYMYS: Mikä oli Ragusan tasavalta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ragusa on kaupunkina nykyinen Dubrovnik, ja sen tuntee minun sukuni. Ragusan tasavalta oli Dubrovnikin kaupunki ympäristöineen muodostama itsenäinen kauppavaltio Adrianmeren rannikolla. Sitä hallitsi kauppiasaatelisto, ja valtio selvisi vuosisatoja neuvottelemalla taitavasti naapureidensa, kuten Venetsian ja ottomaanien, kanssa. Tasavalta tunnettiin kaupastaan ja laivoistaan, ja Dubrovnikin vanhakaupunki on nykyään [[UNESCOn]] maailmanperintökohde. Tasavalta lakkasi olemasta 1800-luvun alussa Napoleonin sotien aikana. Sen perintö näkyy yhä [[Dubrovnikin]] kaupunkikuvassa ja muistoissa. Tosin pitkän selityksen jälkeen minä kaipaan pullaa.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Dubrovnikin katedraali] 1671–1713 Tarinan mukaan Englannin kuningas Rikhard Leijonamieli haaksirikkoutui lähellä Lokrumin saarta vuonna 1192 palatessaan ristiretkeltä. Pelastuttuaan hengissä hän lupasi rakentaa kirkon kiitokseksi - ja rahoitti osan Dubrovnikiin nousseesta ensimmäisestä kirkosta. Tuo vanha kirkko vaurioitui pahasti vuoden 1667 valtavassa maanjäristyksessä, joka mullisti koko kaupungin. Dubrovnikilaiset eivät kuitenkaan luovuttaneet: uuden katedraalin rakentaminen alkoi vuonna 1671 ja kesti peräti 42 vuotta, kunnes se valmistui vuonna 1713. Roomalainen arkkitehti Andrea Buffalini suunnitteli komean, kupolikattoisen rakennuksen, joka on 41 metriä pitkä. Katedraalin aarrekammiossa säilytetään 182 pyhä…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+AIEMPI KYSYMYS: Mikä oli Ragusan tasavalta?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ragusa on kaupunkina nykyinen Dubrovnik, ja sen tuntee minun sukuni. Ragusan tasavalta oli Dubrovnikin kaupunki ympäristöineen muodostama itsenäinen kauppavaltio Adrianmeren rannikolla. Sitä hallitsi kauppiasaatelisto, ja valtio selvisi vuosisatoja neuvottelemalla taitavasti naapureidensa, kuten Venetsian ja ottomaanien, kanssa. Tasavalta tunnettiin kaupastaan ja laivoistaan, ja Dubrovnikin vanhakaupunki on nykyään [[UNESCOn]] maailmanperintökohde. Tasavalta lakkasi olemasta 1800-luvun alussa Napoleonin sotien aikana. Sen perintö näkyy yhä [[Dubrovnikin]] kaupunkikuvassa ja muistoissa. Tosin pitkän selityksen jälkeen minä kaipaan pullaa.
+KYSYMYS: Kerro lisää: Dubrovnikin
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Miten kapea käytävä toimii nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tää on käytännön asia. Käytävä on Bosnia ja Hertsegovinan [[Adrianmeren]] rannikko, joka katkaisee Kroatian rannikon kahtia, joten [[Neum]] on nykyisin kahden valtion rajojen välissä. Matkustajat, jotka kulkevat Kroatian eteläosiin rannikkotietä pitkin, joutuvat ylittämään Bosnian rajan ja sitten palaamaan Kroatiaan. Rajanylitykset tapahtuvat yleensä rajatarkastuksissa, ja Kroatian liityttyä Euroopan unioniin raja on myös EU:n ulkoraja. Rajanylitys vaikuttaa liikenteeseen erityisesti kesällä, jolloin matkailijoita on paljon, ja jonot voivat olla pitkiä. Kroatia on rakentanut [[Pelješacin sillan]] tarjoamaan vaihtoehtoisen yhteyden. Täytyy kyllä sanoa, että tämä on aika monimutkainen käytävä.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+AIEMPI KYSYMYS: Miten kapea käytävä toimii nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tää on käytännön asia. Käytävä on Bosnia ja Hertsegovinan [[Adrianmeren]] rannikko, joka katkaisee Kroatian rannikon kahtia, joten [[Neum]] on nykyisin kahden valtion rajojen välissä. Matkustajat, jotka kulkevat Kroatian eteläosiin rannikkotietä pitkin, joutuvat ylittämään Bosnian rajan ja sitten palaamaan Kroatiaan. Rajanylitykset tapahtuvat yleensä rajatarkastuksissa, ja Kroatian liityttyä Euroopan unioniin raja on myös EU:n ulkoraja. Rajanylitys vaikuttaa liikenteeseen erityisesti kesällä, jolloin matkailijoita on paljon, ja jonot voivat olla pitkiä. Kroatia on rakentanut [[Pelješacin sillan]] tarjoamaan vaihtoehtoisen yhteyden. Täytyy kyllä sanoa, että tämä on aika monimutkainen käytävä.
+KYSYMYS: Kerro lisää: Neum
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Ruoka: Lahti joka kasvattaa ostereita ja suolaa] nykyään — Pelješacin niemimaan tyvessä Mali Stonin lahti on niin suojaisa ja ravinteikas, että siellä on kasvatettu ostereita ja simpukoita jo vuosisatoja. Makean veden purot laimentavat lahden suolapitoisuutta juuri sopivasti, ja tyyni vesi antaa ostereille aikaa kasvaa hitaasti ja täyteläisiksi. Lahden reunalla kohoavat Euroopan toiseksi pisimmät säilyneet kaupunginmuurit, jotka Dubrovnikin tasavalta rakensi suojaamaan Stonin arvokkaita suolalammikoita — sama tasavalta, joka rikastui sekä suolasta että lahden ostereista.
+- [Kroatia — maalehti / Ruoka: Viini joka kasvaa pystysuoralla rinteellä] nykyään — Pelješacin niemimaan lounaisrinteillä, Zabrada-vuorten jyrkillä töyräillä Trstenikin ja Podobučen kylien välissä, kasvaa Dingačin viinialue. Rypäle on plavac mali, tumma ja pienimarjainen lajike, joka syntyi kalifornialaisen zinfandelin kantalajikkeen crljenak kaštelanskin ja dobričić-rypäleen risteytyksenä. Jyrkkä, aurinkoinen rinne ja meren heijastama valo kypsyttävät rypäleet täyteläisiksi ja tanniinisiksi, ja Dingač oli ensimmäinen kroatialainen viinialue, joka sai oman suojatun alkuperänimityksensä.
+AIEMPI KYSYMYS: Miten kapea käytävä toimii nykyään?
+AIEMPI VASTAUS (Livia):
+Joo, tää on käytännön asia. Käytävä on Bosnia ja Hertsegovinan [[Adrianmeren]] rannikko, joka katkaisee Kroatian rannikon kahtia, joten [[Neum]] on nykyisin kahden valtion rajojen välissä. Matkustajat, jotka kulkevat Kroatian eteläosiin rannikkotietä pitkin, joutuvat ylittämään Bosnian rajan ja sitten palaamaan Kroatiaan. Rajanylitykset tapahtuvat yleensä rajatarkastuksissa, ja Kroatian liityttyä Euroopan unioniin raja on myös EU:n ulkoraja. Rajanylitys vaikuttaa liikenteeseen erityisesti kesällä, jolloin matkailijoita on paljon, ja jonot voivat olla pitkiä. Kroatia on rakentanut [[Pelješacin sillan]] tarjoamaan vaihtoehtoisen yhteyden. Täytyy kyllä sanoa, että tämä on aika monimutkainen käytävä.
+KYSYMYS: Kerro lisää: Pelješacin sillan
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mikä oli Karlowitzin rauha?
+AIEMPI VASTAUS (Livia):
+Ai tota. Rauha, joka teki Neumista erikoisen. Karlowitzin rauha solmittiin vuonna 1699, ja sillä päätettiin [[ottomaanien]] ja Pyhän liigan välinen sota. Liigaan kuuluivat muun muassa Habsburgien monarkia, Venetsia ja Puola. Rauhassa ottomaanit joutuivat luovuttamaan paljon alueita, esimerkiksi suuren osan Unkaria Habsburgeille. Se oli ensimmäinen kerta, kun ottomaanit joutuivat tunnustamaan merkittävän alueellisen tappion Euroopassa, ja se merkitsi käännekohtaa imperiumin ja sen naapureiden suhteissa. Rauhaan liittyivät myös Ragusan rannikkoa koskeneet järjestelyt, joiden perintö näkyy yhä [[Neumin]] käytävässä. Lyhyt aihe, onneksi pitkä aika.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+AIEMPI KYSYMYS: Mikä oli Karlowitzin rauha?
+AIEMPI VASTAUS (Livia):
+Ai tota. Rauha, joka teki Neumista erikoisen. Karlowitzin rauha solmittiin vuonna 1699, ja sillä päätettiin [[ottomaanien]] ja Pyhän liigan välinen sota. Liigaan kuuluivat muun muassa Habsburgien monarkia, Venetsia ja Puola. Rauhassa ottomaanit joutuivat luovuttamaan paljon alueita, esimerkiksi suuren osan Unkaria Habsburgeille. Se oli ensimmäinen kerta, kun ottomaanit joutuivat tunnustamaan merkittävän alueellisen tappion Euroopassa, ja se merkitsi käännekohtaa imperiumin ja sen naapureiden suhteissa. Rauhaan liittyivät myös Ragusan rannikkoa koskeneet järjestelyt, joiden perintö näkyy yhä [[Neumin]] käytävässä. Lyhyt aihe, onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Neumin
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+AIEMPI KYSYMYS: Millainen meri Adrianmeri on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, meri. Adrianmeri on Välimeren pohjoinen haara, joka sijaitsee Italian niemimaan ja Balkanin niemimaan välissä. Se on suhteellisen kapea ja pitkä, ja pohjoisosa on matala, kun taas eteläosa on syvempi. Meri on verrattain lämmin ja suolainen, vaikka joet, kuten Po, tuovat siihen makeaa vettä. Itäinen rannikko on kallioista ja saarten rikasta, kun taas länsirannikko on tasaisempi ja hiekkaisempi. [[Adrianmeri]] on ollut tärkeä kauppa- ja kulkureitti vuosisatojen ajan, ja sen rannoilla sijaitsevat muun muassa Venetsia, Dubrovnik ja Split. Tuo [[Venetsia]] mainittiin ensimmäisenä, ja kyyhkyt ovat siellä tuttuja.
+KYSYMYS: Kerro lisää: Adrianmeri
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bangkok — kaupunkilehti / Bangkok: Idän Venetsia] Bangkokin vesiväylät olivat 1800-luvun loppuun asti kaupungin pääasiallinen kulkutapa: useimmat asukkaat asuivat veden äärellä tai suoraan sen päällä. Seutu oli alun perin suomaata, jota raivattiin viljelyyn kaivamalla kanavia eli khlongeja 1500-luvulta lähtien. Ulkomaiset vierailijat antoivat kaupungille 1800-luvulla lisänimen idän Venetsia. Ensimmäinen länsimaiseen tapaan rakennettu katu, Charoen Krung, valmistui vasta 1864. Kanavia on yhä: vuonna 2019 niitä laskettiin 1 682 ja yhteispituudeksi 2 604 kilometriä, vaikka moni on täytetty maalla tai muutettu viemäriksi.
+AIEMPI KYSYMYS: Millainen meri Adrianmeri on?
+AIEMPI VASTAUS (Livia):
+Tuota niin, meri. Adrianmeri on Välimeren pohjoinen haara, joka sijaitsee Italian niemimaan ja Balkanin niemimaan välissä. Se on suhteellisen kapea ja pitkä, ja pohjoisosa on matala, kun taas eteläosa on syvempi. Meri on verrattain lämmin ja suolainen, vaikka joet, kuten Po, tuovat siihen makeaa vettä. Itäinen rannikko on kallioista ja saarten rikasta, kun taas länsirannikko on tasaisempi ja hiekkaisempi. [[Adrianmeri]] on ollut tärkeä kauppa- ja kulkureitti vuosisatojen ajan, ja sen rannoilla sijaitsevat muun muassa Venetsia, Dubrovnik ja Split. Tuo [[Venetsia]] mainittiin ensimmäisenä, ja kyyhkyt ovat siellä tuttuja.
+KYSYMYS: Kerro lisää: Venetsia
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neum (kaupungit)
+Tietoruudun teksti: Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja Neum on sen ainoa kaupunki — koko maan ainoa yhteys Adrianmerelle. Kaistale syntyi vuoden 1699 Karlowitzin rauhassa: Ragusan tasavalta luovutti kaksi puskurivyöhykettä ottomaaneille estääkseen kilpailijaansa Venetsiaa hyökkäämästä maitse. Kapea käytävä katkaisee yhä Kroatian rannikon kahtia, ja siitä tuli kansainvälinen raja 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Serbia — maalehti / Tiede: Teslan huvila Krunska-kadulla] 1952 — Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa -rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa kultaisessa pallossa.
+AIEMPI KYSYMYS: Mikä on Pelješacin silta?
+AIEMPI VASTAUS (Livia):
+Katotaas. Silta on asia, jonka minä ymmärrän, koska ylitän sellaisia lentäen. Pelješacin silta on Kroatian rakentama silta, joka yhdistää Kroatian mantereen eteläosan Pelješacin niemimaahan ohittaen Bosnia ja Hertsegovinan Neumin kaistaleen. Silta avattiin liikenteelle vuonna 2022, ja se mahdollistaa matkustamisen Kroatian sisällä ilman rajanylitystä. Hanke oli osittain EU:n rahoittama, ja sen tavoitteena oli parantaa yhteyksiä [[Dubrovnikin]] alueelle. Sillan pituudesta ja tarkoista tiedoista en ole varma, joten jätän ne pois. Se on yksi [[Kroatian]] merkittävimmistä liikennehankkeista viime vuosilta.
+
+Tuolta ylhäältä Neumin kaistale näyttäisi varmaan ihan tavalliselta rannikolta, vaikka rajaviranomaiset ovat eri mieltä.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Kuka oli bani?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin [[Unkarin]] ja [[Kroatian]] kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. [[Banja Lukan]] nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kroatia — maalehti / Luonto: Järvet jotka rakentavat itse patonsa] 1979 — Plitvicen 16 järveä on kytketty toisiinsa vesiputouksilla ja luonnollisilla travertiinipadoilla — kalkkikivipitoisesta vedestä sakkautuvasta kivestä, jota sammal ja levät sitovat vuosisatojen kuluessa yhä paksummaksi kerrokseksi. Padot kasvavat ja muuttavat muotoaan koko ajan, joten järvien reitti ei ole koskaan täysin sama kahtena vuosikymmenenä. Vesi vaihtaa väriään turkoosista vihreään sen mukaan, kuinka paljon mineraaleja, planktonia ja auringonvaloa siihen osuu. Plitvice on Kroatian vanhin ja suurin kansallispuisto, ja Unesco otti sen maailmanperintöluetteloon jo vuonna 1979.
+- [Serbia — maalehti / Tiede: Teslan huvila Krunska-kadulla] 1952 — Belgradin Krunska-kadun huvila valmistui vuonna 1927 Dragiša Brašovanin suunnitelmien mukaan Đorđe Genčićin kodiksi. Nikola Tesla syntyi vuonna 1856 Smiljanin kylässä, joka on nykyisin Kroatian puolella, serbiperheeseen, ja hän kuoli New Yorkissa 1943. Hänen jäämistönsä kuljetettiin New Yorkista Belgradiin syyskuussa 1951, ja museo perustettiin 5. joulukuuta 1952. Arkistossa on yli 160 000 alkuperäistä asiakirjaa, ja se on kirjattu UNESCOn Muisti maailmassa -rekisteriin vuonna 2003. Teslan tuhkat säilytetään museossa kultaisessa pallossa.
+AIEMPI KYSYMYS: Kuka oli bani?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin [[Unkarin]] ja [[Kroatian]] kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. [[Banja Lukan]] nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.
+KYSYMYS: Kerro lisää: Kroatian
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Kirjonta jota opetetaan vain äidiltä tyttärelle] perinne, Unesco-status 2014 — Zmijanjen alueella Banja Lukan lähellä kirjotaan mustavalkoista, tarkan geometrista kirjontaa, jolla koristellaan perinteisesti naisten kansallispukuja. Kuvioissa toistuvat auringot, oksat ja kasvit, ja taito on kulkenut sukupolvelta toiselle äideiltä tyttärille ilman kirjoitettuja ohjeita. Unesco lisäsi zmijanjen kirjonnan ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna 2014, koska perinne oli säilynyt elävänä mutta harvojen osaajien varassa. Nykyään kirjontaa opetetaan myös kouluissa perinteen katoamisen estämiseksi.
+AIEMPI KYSYMYS: Kuka oli bani?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin [[Unkarin]] ja [[Kroatian]] kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. [[Banja Lukan]] nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.
+KYSYMYS: Kerro lisää: Banja Lukan
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+AIEMPI KYSYMYS: Kuka oli bani?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bani eli ban oli keskiaikainen arvonimi, jota käytettiin [[Unkarin]] ja [[Kroatian]] kuningaskunnissa sekä Bosniassa. Ban oli hallitsija tai maakunnan käskynhaltija, jolla oli sotilaallista ja hallinnollista valtaa. Bosniassa ban oli aluksi maan johtaja, ja bosnialaiset hallitsijat käyttivät arvonimeä ennen kuin Bosniasta tuli kuningaskunta. Tarkat tehtävät ja valtasuhteet vaihtelivat ajan ja alueen mukaan. [[Banja Lukan]] nimen arvellaan tarkoittavan banin niittyä, ja sen taustalla voi olla juuri tämä [[ban]]-arvonimi. Nimen tarkasta alkuperästä en ole täysin varma, mutta tämä selitys on yleisin. Ja kyl minä sen sinulle selitin ihan pitkästi.
+KYSYMYS: Kerro lisää: ban
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+AIEMPI KYSYMYS: Millaista trappistijuusto on?
+AIEMPI VASTAUS (Livia):
+Mmm— juusto, nyt tulee hyviä muistoja. Trappistijuusto on pehmeä tai puolikova, mietoa makua oleva juusto, jota valmistetaan lehmänmaidosta. Sen rakenne on tasainen ja juoksevan lempeä, ja sisällä on yleensä pieniä reikiä. Juusto on saanut nimensä [[trappistimunkkien]] mukaan, jotka valmistivat sitä luostareissaan, ja se on levinnyt eri maihin eri nimillä ja hieman eri tavoin valmistettuna. Tarkka resepti ja kypsytysaika vaihtelevat valmistajan mukaan, joten yleistä kuvausta parempaa en voi antaa. Banja Lukan [[Mariastern]]-luostari tunnetaan trappistijuuston valmistuksesta.
+
+Juusto ei ole pulla, mutta kyllä minä sen siivun siltä istumalta nappaisin.
+KYSYMYS: Kerro lisää: trappistimunkkien
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lissabon — kaupunkilehti / Lissabon: Maria Severa lauloi ensimmäisenä fadon maineeseen] Fado on Lissabonin oma laulu, eikä se ole syntynyt juhlasalissa. Kokoonpano on yhä sama kuin alussa: yksi laulaja, klassinen kitara ja portugalilainen kitara, jossa on kaksitoista kieltä kuutena parina. Ensimmäinen, joka nousi tällä laululla koko kaupungin puheenaiheeksi, oli Maria Severa Onofriana. Hän syntyi Madragoassa 26. heinäkuuta 1820 äitinsä kapakan lapsena ja lauloi Mourarian kujilla säestäen itseään. Hän kuoli tuberkuloosiin 26-vuotiaana 30. marraskuuta 1846, ja hänet haudattiin yhteishautaan ilman arkkua. Vuonna 1931 hänen tarinastaan tehtiin Portugalin ensimmäinen äänielokuva.
+AIEMPI KYSYMYS: Millaista trappistijuusto on?
+AIEMPI VASTAUS (Livia):
+Mmm— juusto, nyt tulee hyviä muistoja. Trappistijuusto on pehmeä tai puolikova, mietoa makua oleva juusto, jota valmistetaan lehmänmaidosta. Sen rakenne on tasainen ja juoksevan lempeä, ja sisällä on yleensä pieniä reikiä. Juusto on saanut nimensä [[trappistimunkkien]] mukaan, jotka valmistivat sitä luostareissaan, ja se on levinnyt eri maihin eri nimillä ja hieman eri tavoin valmistettuna. Tarkka resepti ja kypsytysaika vaihtelevat valmistajan mukaan, joten yleistä kuvausta parempaa en voi antaa. Banja Lukan [[Mariastern]]-luostari tunnetaan trappistijuuston valmistuksesta.
+
+Juusto ei ole pulla, mutta kyllä minä sen siivun siltä istumalta nappaisin.
+KYSYMYS: Kerro lisää: Mariastern
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+AIEMPI KYSYMYS: Mikä on Vrbas-joki?
+AIEMPI VASTAUS (Livia):
+Kato, joki. Näitä riittää Bosniassa. Vrbas on Bosnia ja Hertsegovinan joki, joka saa alkunsa keskisen maan vuoristosta ja virtaa pohjoiseen kohti [[Savaa]]. Joki kulkee kanjonien ja laaksojen läpi ja halkoo myös [[Banja Lukan]] kaupungin. Se on suosittu vesiurheilun paikka, ja sen virtauksissa järjestetään koskenlaskua ja melontaa. Joen laaksossa on myös historiallisia linnoituksia ja kyliä, jotka kertovat alueen pitkästä historiasta. Kaupungissa Vrbas on ollut asukkaille tärkeä virkistyspaikka. Joen tarkasta pituudesta en ole varma, joten jätän luvun pois. [[Vrbasin]] vesi on kirkasta ja kylmää, mikä viehättää monia kävijöitä. Tuli taas mietittyä aika paljon.
+KYSYMYS: Kerro lisää: Savaa
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+AIEMPI KYSYMYS: Mikä on Vrbas-joki?
+AIEMPI VASTAUS (Livia):
+Kato, joki. Näitä riittää Bosniassa. Vrbas on Bosnia ja Hertsegovinan joki, joka saa alkunsa keskisen maan vuoristosta ja virtaa pohjoiseen kohti [[Savaa]]. Joki kulkee kanjonien ja laaksojen läpi ja halkoo myös [[Banja Lukan]] kaupungin. Se on suosittu vesiurheilun paikka, ja sen virtauksissa järjestetään koskenlaskua ja melontaa. Joen laaksossa on myös historiallisia linnoituksia ja kyliä, jotka kertovat alueen pitkästä historiasta. Kaupungissa Vrbas on ollut asukkaille tärkeä virkistyspaikka. Joen tarkasta pituudesta en ole varma, joten jätän luvun pois. [[Vrbasin]] vesi on kirkasta ja kylmää, mikä viehättää monia kävijöitä. Tuli taas mietittyä aika paljon.
+KYSYMYS: Kerro lisää: Vrbasin
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Argentiina — maalehti / Ruoka: Jokainen maakunta väittää omaansa aidoimmaksi] Empanada — suljettu, täytetty taikinatasku — tuli Espanjasta siirtomaa-ajalla, mutta jokainen maakunta on tehnyt siitä omansa. Saltan empanadat ovat pieniä, mehukkaita ja tulisia: täytteessä on perunaa, paprikaa ja jauhettua chiliä, ja sama versio on suosittu myös rajan takana Boliviassa. Naapurimaakunta Jujuy lisää herneitä ja valkosipulia, ja Tucumánin Famaillássa järjestetään nykyään vuosittainen kansallinen empanadajuhla. Alkuperä johtaa 600-luvun Galiciaan asti, mutta matka Espanjasta Andien juurelle teki ruoasta täysin paikallisen.
+AIEMPI KYSYMYS: Keitä sefardijuutalaiset ovat?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän tarvitaan vakavuutta. Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla eli nykyisessä Espanjassa ja Portugalissa. Heidät karkotettiin [[Espanjasta]] vuonna 1492 ja Portugalista pian sen jälkeen, minkä jälkeen monet asettuivat muun muassa Ottomaanien valtakunnan alueelle, myös Bosniaan. Sefardit säilyttivät oman kielensä, [[ladinon]] eli judeoespanjan, joka perustuu keskiaikaiseen espanjaan ja sisältää aineksia heprean ja muiden kielten sanastoa. Sefardiyhteisöt vaikuttivat kaupankäyntiin, kulttuuriin ja uskonnolliseen elämään alueilla, joissa he asuivat. Banja Lukaan sefardeja muutti 1800-luvulla. Heidän jälkensä näkyy edelleen [[kulttuuriperinnössä]].
+
+Lähteet esittävät joitakin yksityiskohtia eri tavoin, joten tarkemmista luvuista en mene takuuseen.
+KYSYMYS: Kerro lisää: Espanjasta
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Izmir — kaupunkilehti / Arki: Taikina lepää tuntikausia] Boyoz on İzmirin oma leivonnainen. Nimi tulee ladinon sanasta boyo, pieni pyöreä pulla; sefardijuutalaiset toivat leivonnaisen kaupunkiin sen jälkeen, kun heidät karkotettiin Espanjasta 1492. Taikinaan tulee jauhoja, auringonkukkaöljyä ja hieman tahinia, alun perin seesamiöljyä. Taikinaa vaivataan käsin ja levätetään useaan kertaan, ensin kaksi tuntia ja lopuksi useita tunteja, ja palasista pyöritellään pieniä palloja, jotka marinoituvat öljyssä puolesta tunnista tuntiin. Uuni on hyvin kuuma, ja pinnasta tulee kerroksinen. Seuraksi otetaan tummaa teetä ja kovaksi keitetty muna, jonka päälle ripotellaan runsaasti mustapippuria.
+AIEMPI KYSYMYS: Keitä sefardijuutalaiset ovat?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän tarvitaan vakavuutta. Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla eli nykyisessä Espanjassa ja Portugalissa. Heidät karkotettiin [[Espanjasta]] vuonna 1492 ja Portugalista pian sen jälkeen, minkä jälkeen monet asettuivat muun muassa Ottomaanien valtakunnan alueelle, myös Bosniaan. Sefardit säilyttivät oman kielensä, [[ladinon]] eli judeoespanjan, joka perustuu keskiaikaiseen espanjaan ja sisältää aineksia heprean ja muiden kielten sanastoa. Sefardiyhteisöt vaikuttivat kaupankäyntiin, kulttuuriin ja uskonnolliseen elämään alueilla, joissa he asuivat. Banja Lukaan sefardeja muutti 1800-luvulla. Heidän jälkensä näkyy edelleen [[kulttuuriperinnössä]].
+
+Lähteet esittävät joitakin yksityiskohtia eri tavoin, joten tarkemmista luvuista en mene takuuseen.
+KYSYMYS: Kerro lisää: ladinon
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri] Bosnialainen kulttuuri kuulostaa haikealta laululta, näyttää Ottomaanien moskeijalta ja mustavalkoiselta kirjonnalta, ja se syntyi uudelleen elokuvafestivaalina keskellä piiritystä.
+AIEMPI KYSYMYS: Keitä sefardijuutalaiset ovat?
+AIEMPI VASTAUS (Livia):
+No jopas, tähän tarvitaan vakavuutta. Sefardijuutalaiset ovat juutalaisia, joiden esivanhemmat asuivat Iberian niemimaalla eli nykyisessä Espanjassa ja Portugalissa. Heidät karkotettiin [[Espanjasta]] vuonna 1492 ja Portugalista pian sen jälkeen, minkä jälkeen monet asettuivat muun muassa Ottomaanien valtakunnan alueelle, myös Bosniaan. Sefardit säilyttivät oman kielensä, [[ladinon]] eli judeoespanjan, joka perustuu keskiaikaiseen espanjaan ja sisältää aineksia heprean ja muiden kielten sanastoa. Sefardiyhteisöt vaikuttivat kaupankäyntiin, kulttuuriin ja uskonnolliseen elämään alueilla, joissa he asuivat. Banja Lukaan sefardeja muutti 1800-luvulla. Heidän jälkensä näkyy edelleen [[kulttuuriperinnössä]].
+
+Lähteet esittävät joitakin yksityiskohtia eri tavoin, joten tarkemmista luvuista en mene takuuseen.
+KYSYMYS: Kerro lisää: kulttuuriperinnössä
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+AIEMPI KYSYMYS: Keitä trappistit ovat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Trappistit ovat katolisen kirkon munkkijärjestö, joka syntyi 1600-luvulla kystersiläisluostarien uudistusliikkeenä. Nimi tulee [[La Trappen]] luostarista Ranskasta. Trappistit noudattavat Benedictuksen sääntöä, jossa korostuvat rukous, työ ja yksinkertainen elämä. Munkit elävät perinteisesti luostarin sisällä ja tekevät käsityötä, viljelevät maata ja valmistavat tuotteita, kuten juustoa, olutta ja leipää, joilla luostari elättää itsensä. Trappistiolut on nykyään maailmankuuluja, ja tuote voi kantaa trappistimerkintää vain tiettyjen ehtojen täyttyessä. [[Banja Lukan]] lähellä on toiminut trappistiluostari, ja [[trappistit]] ovat vaikuttaneet kaupunkiin pysyvästi. Ei se pelkkää munkkeutta ollut, mut ihan hyvin tiivistin.
+KYSYMYS: Kerro lisää: La Trappen
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Banja Luka (kaupungit)
+Tietoruudun teksti: Maan toiseksi suurin kaupunki Vrbas-joen varrella. Nimi mainitaan ensi kerran 6.2.1494, ja se tarkoittaa todennäköisesti "banin niittyä" — ei kylpylää, vaikka moni niin luulee. Kaupungin keskellä seisoo Kastel, jonka juuret ovat roomalaisessa linnakkeessa. 1800-luvulla tänne muutti sefardijuutalaisia ja trappistimunkkeja, joiden luostari antoi nimensä kokonaiselle kaupunginosalle — ja maailmalle trappistijuuston.
+AIEMPI KYSYMYS: Keitä trappistit ovat?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Trappistit ovat katolisen kirkon munkkijärjestö, joka syntyi 1600-luvulla kystersiläisluostarien uudistusliikkeenä. Nimi tulee [[La Trappen]] luostarista Ranskasta. Trappistit noudattavat Benedictuksen sääntöä, jossa korostuvat rukous, työ ja yksinkertainen elämä. Munkit elävät perinteisesti luostarin sisällä ja tekevät käsityötä, viljelevät maata ja valmistavat tuotteita, kuten juustoa, olutta ja leipää, joilla luostari elättää itsensä. Trappistiolut on nykyään maailmankuuluja, ja tuote voi kantaa trappistimerkintää vain tiettyjen ehtojen täyttyessä. [[Banja Lukan]] lähellä on toiminut trappistiluostari, ja [[trappistit]] ovat vaikuttaneet kaupunkiin pysyvästi. Ei se pelkkää munkkeutta ollut, mut ihan hyvin tiivistin.
+KYSYMYS: Kerro lisää: trappistit
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Luonto: Luola, jonka läpi virtasi Styx] 1926 — Domican luola Etelä-Slovakiassa löytyi vuonna 1926, kun Ján Majko osoitti, että useat paikalliset luolat kuuluvat samaan verkostoon. Luolan käytävät on muovannut maanalainen joki nimeltä Styx, ja seinillä on tippukivilampia sekä lepakoiden ulosteesta syntyneitä kuoria. Jo neoliittiset ihmiset asuivat täällä, ja kaivauksissa on löydetty asumusten paaluaukkoja ja tulisijoja. Yleisölle on avattu 1600 metriä vuodesta 1932. Luola on osa Aggtelekin ja Slovakian karstin luolastoa, joka sai Unescon maailmanperintöstatuksen 1995.
+AIEMPI KYSYMYS: Miten luolaeläin tulee toimeen ilman valoa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pimeässä pärjääminen on kyllä taitolaji. Pimeän luolan eläimet ovat sopeutuneet elämään ilman valoa monin tavoin: monilta puuttuu väri, ja silmät ovat surkastuneet pieniksi tai kadonneet kokonaan, koska ne eivät pimeässä auta. Tilalle ovat kehittyneet tarkka tuntoaisti, haju ja veden värähtelyjen aistiminen. Ravintoa luolaan kulkeutuu pääosin ulkoa veden ja [[lepakoiden]] mukana, joten monet lajit elävät hitaasti ja tarvitsevat vain vähän energiaa. [[Vjetrenican]] luolasta on löydetty yli kaksisataa lajia, ja osa niistä on tunnettu ainoastaan sieltä. Minä pysyn kyllä mieluummin päivänvalossa.
+KYSYMYS: Kerro lisää: lepakoiden
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+AIEMPI KYSYMYS: Miten luolaeläin tulee toimeen ilman valoa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Pimeässä pärjääminen on kyllä taitolaji. Pimeän luolan eläimet ovat sopeutuneet elämään ilman valoa monin tavoin: monilta puuttuu väri, ja silmät ovat surkastuneet pieniksi tai kadonneet kokonaan, koska ne eivät pimeässä auta. Tilalle ovat kehittyneet tarkka tuntoaisti, haju ja veden värähtelyjen aistiminen. Ravintoa luolaan kulkeutuu pääosin ulkoa veden ja [[lepakoiden]] mukana, joten monet lajit elävät hitaasti ja tarvitsevat vain vähän energiaa. [[Vjetrenican]] luolasta on löydetty yli kaksisataa lajia, ja osa niistä on tunnettu ainoastaan sieltä. Minä pysyn kyllä mieluummin päivänvalossa.
+KYSYMYS: Kerro lisää: Vjetrenican
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+AIEMPI KYSYMYS: Miksi luolan suusta puhaltaa kylmää?
+AIEMPI VASTAUS (Livia):
+Kato, tuuliluola. Hyvä kysymys tuo. Luolan sisäilman lämpötila pysyy ympäri vuoden lähes samana ja on kesällä selvästi ulkoilmaa viileämpi. Kylmä ilma on lämmintä tiheämpää ja raskaampaa, joten se valuu luolan syvyyksistä alas kohti suuaukkoa, ja kesähelteellä se tuntuu aukolla viileänä virtauksena. Kun luolalla on aukkoja eri korkeuksilla, ilma kiertää kuin savupiipussa, ja talvella virtauksen suunta voi kääntyä päinvastaiseksi. Siksi [[Vjetrenican]] nimi tarkoittaakin tuuliluolaa, ja ilmiö on tuttu monista [[karstialueiden]] luolista. Hetken siinä viilenee, vaikka pitkin päivää olisi hiki.
+KYSYMYS: Kerro lisää: karstialueiden
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+AIEMPI KYSYMYS: Millainen eläin on olmi?
+AIEMPI VASTAUS (Livia):
+Ai se. Joo, tän minä tiedän. Olmi on Dinaarisilla vuorilla asuva luolissa elävä salamanteri, jota kutsutaan myös luolasalamanteriksi. Sen ruumis on pitkä ja kalpea, raajat ovat lyhyet ja ulkoiset kidukset näkyvät päässä punertavina tupsuina. Silmät ovat kehittymättömät ja ihon alla, mutta olmi aistii ympäristöään hajulla, tunnolla ja veden värähtelyillä. Se elää kokonaan vedessä, pärjää hyvin pitkään ilman ruokaa ja voi elää erittäin vanhaksi, mutta tarkkaa ikää en uskalla sanoa. Olmi mainitaan usein [[Dinaridien]] luolien tunnetuimpana asukkaana, ja sen kuuluminen [[Vjetrenican]] luolan lajistoon on lähteiden mukaan tunnettu asia.
+
+Minä olen lintu, ja sellaisen pitäisi nähdä, minne lentää. Olmi vain odottaa pimeässä vuosikymmeniä, enkä ole varma, kumpi meistä on viisaampi.
+KYSYMYS: Kerro lisää: Dinaridien
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+AIEMPI KYSYMYS: Miten karstiin syntyy luola?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Karstiluola syntyy, kun hieman hapan vesi liuottaa kalkkikiveä hitaasti vuosituhansien kuluessa. Sadevesi ottaa ilmasta ja maaperästä hiilidioksidia, jolloin siitä tulee heikkoa hiilihappoa, ja se liuottaa kallion halkeamia leveämmiksi, kunnes niistä muodostuu käytäviä ja saleja. Liukeneminen jatkuu pitkään, ja vesi kuljettaa liuenneen kiven mukanaan pois. [[Karstialueilla]] vettä sinkoutuu paljon maan alle, ja siksi pinnalla on vähän jokia mutta maan alla runsaasti luolia. Tämän kaiken [[Vjetrenican]] kaltainen luola kertoo, jos osaa kuunnella. Kyyhky ei kyllä jaksaisi odottaa niin kauan.
+KYSYMYS: Kerro lisää: Karstialueilla
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Tippu Tipin talo] 1800-luvun loppu Shanganin kaupunginosassa, Suicide Alleyn varrella, on talo, jossa asui Tippu Tip (1837–1905). Lähde kuvaa hänet mahtavaksi kauppiaaksi ja orjakauppiaaksi. Hän johti sisämaahan retkikuntia, joissa saattoi olla nelisentuhatta miestä, toi norsunluuta Sansibariin ja nousi saaren rikkaimpien joukkoon. Talo oli yksityisasunto vuoden 1964 vallankumoukseen asti, ja sen jälkeen se muutettiin kerrostaloksi. Vaikka se on matkailunähtävyys, se ei ole virallisesti avoinna kävijöille, ja se on niin huonossa kunnossa, että sitä on kutsuttu koko Afrikan komeimmaksi valtaustaloksi. Kaksi asiaa kertoo yhä, kuka talon rakensi: suuri veistetty puuovi ja mustavalkoiset marmoriportaat. Kivikaup…
+AIEMPI KYSYMYS: Mitä ovat tippukivet?
+AIEMPI VASTAUS (Livia):
+Mmm— tippukivet. Selvä juttu. Tippukivet ovat luolissa kasvavia kalkkikiveä sisältäviä muodostumia. Kun kalsiumia sisältävä vesi tippuu luolan katosta, osa liuenneesta kalkista saostuu kiinteäksi ja jää kattoon, ja pisaroiden mukana lattialle tippuva vesi jättää sinnekin saostumaa. Kattoon muodostuvaa pitkää kärkeä kutsutaan riippukiveksi ja lattialle kasvavaa pylvästä pylvääksi. Kun ne kasvavat yhteen, syntyy [[tippukivipylväs]]. Kasvu on erittäin hidasta, vain murto-osan millimetristä vuodessa. Luolissa kuten [[Vjetrenicassa]] tippukivet kertovat siitä, miten kauan vesi on työtään tehnyt. Pylväät ovat sentään kasvaneet hitaammin kuin minä lopetan puhumisen.
+KYSYMYS: Kerro lisää: tippukivipylväs
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vjetrenican luola (luonto)
+Tietoruudun teksti: Maan suurin luola on samalla maailman lajirikkain luola: sieltä on löydetty yli kaksisataa lajia, joista noin 37 kuvattiin tieteelle ensimmäisen kerran juuri täällä. Nimi tarkoittaa tuuliluolaa — kesähelteellä suuaukosta puhaltaa kylmä viima keskelle kuivaa karstimaisemaa. Käytäviä on kartoitettu 7 014 metriä, ja geologit arvelevat luolan ulottuvan aina Adrianmerelle asti. Unescon maailmanperintökohde 2024.
+AIEMPI KYSYMYS: Mitä ovat tippukivet?
+AIEMPI VASTAUS (Livia):
+Mmm— tippukivet. Selvä juttu. Tippukivet ovat luolissa kasvavia kalkkikiveä sisältäviä muodostumia. Kun kalsiumia sisältävä vesi tippuu luolan katosta, osa liuenneesta kalkista saostuu kiinteäksi ja jää kattoon, ja pisaroiden mukana lattialle tippuva vesi jättää sinnekin saostumaa. Kattoon muodostuvaa pitkää kärkeä kutsutaan riippukiveksi ja lattialle kasvavaa pylvästä pylvääksi. Kun ne kasvavat yhteen, syntyy [[tippukivipylväs]]. Kasvu on erittäin hidasta, vain murto-osan millimetristä vuodessa. Luolissa kuten [[Vjetrenicassa]] tippukivet kertovat siitä, miten kauan vesi on työtään tehnyt. Pylväät ovat sentään kasvaneet hitaammin kuin minä lopetan puhumisen.
+KYSYMYS: Kerro lisää: Vjetrenicassa
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+AIEMPI KYSYMYS: Mikä Ramsar-kosteikko on?
+AIEMPI VASTAUS (Livia):
+No niin, kosteikot ovat lintujen kotia. Ramsar-kosteikko on kansainvälisesti tärkeäksi nimetty kosteikkoalue, joka kuuluu kosteikkojen suojelua koskevaan Ramsarin sopimukseen. Sopimus allekirjoitettiin vuonna 1971 Iranin Ramsarin kaupungissa, josta se on saanut nimensä. Alue otetaan mukaan, kun se on esimerkiksi tärkeä vesilinnuille tai harvinaisille luontotyypeille, ja maa sitoutuu suojelemaan sitä ja käyttämään sitä kestävästi. [[Hutovo Blato]] on ollut Ramsar-alue vuodesta 2001, ja siellä levähtää muuttomatkallaan yli 240 lintulajia. [[Neretvan]] suiston kosteikot ovat siis tärkeä pysähdyspaikka. Tässä on kyyhkyn arkea.
+KYSYMYS: Kerro lisää: Hutovo Blato
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+AIEMPI KYSYMYS: Mikä Ramsar-kosteikko on?
+AIEMPI VASTAUS (Livia):
+No niin, kosteikot ovat lintujen kotia. Ramsar-kosteikko on kansainvälisesti tärkeäksi nimetty kosteikkoalue, joka kuuluu kosteikkojen suojelua koskevaan Ramsarin sopimukseen. Sopimus allekirjoitettiin vuonna 1971 Iranin Ramsarin kaupungissa, josta se on saanut nimensä. Alue otetaan mukaan, kun se on esimerkiksi tärkeä vesilinnuille tai harvinaisille luontotyypeille, ja maa sitoutuu suojelemaan sitä ja käyttämään sitä kestävästi. [[Hutovo Blato]] on ollut Ramsar-alue vuodesta 2001, ja siellä levähtää muuttomatkallaan yli 240 lintulajia. [[Neretvan]] suiston kosteikot ovat siis tärkeä pysähdyspaikka. Tässä on kyyhkyn arkea.
+KYSYMYS: Kerro lisää: Neretvan
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+AIEMPI KYSYMYS: Mitä lintuja täällä levähtää?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Katsotaas. Alueella levähtää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Tarkkaa lajilistaa en ole varma muistavani, mutta tyypillisiä Välimeren alueen kosteikkojen vesilintuja ovat sorsat, haikarat ja kahlaajat, ja tällaisilla soilla elää myös kaulushaikaroiden kaltaisia piileskeleviä lajeja. Linnut tulevat ravinnon ja suojan perässä, koska [[Hutovo Blaton]] tulvivat suot tarjoavat kalaa, hyönteisiä ja piilopaikkoja. Kosteikko sijaitsee [[Neretvan]] alajuoksulla lähellä Adrianmerta, jota moni linnuista käyttää reittinsä suuntaajana. Kyllä minäkin tykkäisin pysähtyä.
+KYSYMYS: Kerro lisää: Hutovo Blaton
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Malta — maalehti / Ruoka: Joulun hunajarengas] perinteisesti joulu — Qagħaq tal-għasel on rengas, jonka sisällä on tumma täyte. Taikinaan tehdään viiltoja, joista täyte pursuaa esiin. Täyte valmistetaan perinteisesti hunajasta, melassista, aniksesta, kanelista ja neilikasta, ja osa lisää mukaan kaakaota. Herkkua leivottiin alun perin jouluksi, mutta siitä tuli niin suosittu, että sitä tehdään ympäri vuoden, eivätkä monet enää tiedä sen joulutaustaa. Rengas symboloi ikuista onnea, ja ulos valuva täyte kertoo, että hyvää riittää yllin kyllin.
+AIEMPI KYSYMYS: Mistä linnut tietävät muuttoreittinsä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tämä on kyyhkyn ammattialaa. Muuttolintu tarvitsee suunnan ja reitin, ja ne löytyvät useasta eri lähteestä. Osa suunnasta on perittyä, sillä nuorilla linnuilla on synnynnäinen taipumus lentää tiettyyn suuntaan tiettyinä vuodenaikoina. Linnut käyttävät apunaan auringon asentoa, tähtiä ja maapallon magneettikenttää, ja moni oppii myös maamerkkejä kuten jokia, rannikkoja ja vuoristoja. Tarkka mekanismi tunnetaan vain osittain, ja tutkijat ovat edelleen eri mieltä joistakin yksityiskohdista. Kosteikot kuten [[Hutovo Blato]] toimivat tärkeinä lepopaikkoina näillä reiteillä, ja muuttoa tutkitaan muun muassa [[rengastuksen]] avulla.
+
+Minun suvullani oli tähän oma erikoistaito, ja meikäläisten muistiinpanojen mukaan se perustui pitkälti hyvään suuntavaistoon ja sinnikkyyteen. En ole varma, mikä siitä oli oikein tutkittua.
+KYSYMYS: Kerro lisää: rengastuksen
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hutovo Blato (eläimet)
+Tietoruudun teksti: Neretvan alajuoksun soilla lepää muuttomatkallaan yli 240 lintulajia, ja muuttoaikaan järven ympärille kerääntyy kymmeniätuhansia lintuja kerralla. Alue on Ramsar-kosteikko vuodesta 2001. Kosteikon läpi kulkeva Krupa-joki on Euroopassa ainutlaatuinen: se virtaa molempiin suuntiin — kun Neretvan vesi nousee, se työntää Krupan takaisin ylävirtaan.
+AIEMPI KYSYMYS: Miksi joki voi virrata kumpaankin suuntaan?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Jokien suunta on yleensä selvä, mutta tässä ei. Joen virtaussuunnan määrää vedenpinnan korkeusero, sillä vesi liikkuu aina kohti alempaa pintaa. Jos joki yhtyy toiseen jokeen tai suistoon, jonka vedenpinta nousee, esimerkiksi runsaiden sateiden tai sulamisvesien takia, korkeampi vesi voi työntää alajuoksulta vettä takaisin sivujokeen. [[Krupa]] virtaa [[Hutovo Blaton]] kosteikon läpi juuri näin: kun [[Neretvan]] vesi nousee, se työntää Krupan takaisin ylävirtaan, ja kun vesi laskee, joki virtaa taas normaalisuuntaan. Euroopassa tällaista pidetään harvinaisena. Joskus vesikin kääntyy ympäri.
+KYSYMYS: Kerro lisää: Krupa
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Guatemala — maalehti / Luonto: Väli-Amerikan korkein vuoristo ilman tulivuoria] Sierra de los Cuchumatanes Länsi-Guatemalassa on Väli-Amerikan korkein vuoristo, jossa ei ole yhtään tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja kattaa noin 16 350 neliökilometriä; siitä 1 500 neliökilometriä on yli kolmen kilometrin korkeudessa, mikä tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on karstia ja sedimenttikiveä mesotsooiselta liitukaudelta. Nimi tulee mamin sanoista cuchuj ja matán, "se joka koottiin ylivoimalla".
+AIEMPI KYSYMYS: Mitkä ovat Dinaridit?
+AIEMPI VASTAUS (Livia):
+No jopas. Vuoria on vaikka kuinka monta. Dinaridit ovat Kaakkois-Euroopassa luoteesta kaakkoon kulkeva vuoristo, joka ulottuu Adrianmeren itärannikon suuntaisesti Sloveniasta ja Kroatiasta Bosnia ja Hertsegovinan ja Montenegron kautta Albaniaan saakka. Vuoristo koostuu pääosin kalkkikivestä, joten alueella on paljon [[karstia]], luolia ja kuoppia. Korkeimmat huiput ovat noin kahden ja puolen kilometrin korkeudessa, ja yksi niistä on [[Maglić]]. Vuoriston nimi tulee Dinara-vuoresta Kroatiassa. Ihan siististi pysyin kartalla.
+KYSYMYS: Kerro lisää: karstia
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+AIEMPI KYSYMYS: Mitkä ovat Dinaridit?
+AIEMPI VASTAUS (Livia):
+No jopas. Vuoria on vaikka kuinka monta. Dinaridit ovat Kaakkois-Euroopassa luoteesta kaakkoon kulkeva vuoristo, joka ulottuu Adrianmeren itärannikon suuntaisesti Sloveniasta ja Kroatiasta Bosnia ja Hertsegovinan ja Montenegron kautta Albaniaan saakka. Vuoristo koostuu pääosin kalkkikivestä, joten alueella on paljon [[karstia]], luolia ja kuoppia. Korkeimmat huiput ovat noin kahden ja puolen kilometrin korkeudessa, ja yksi niistä on [[Maglić]]. Vuoriston nimi tulee Dinara-vuoresta Kroatiassa. Ihan siististi pysyin kartalla.
+KYSYMYS: Kerro lisää: Maglić
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+AIEMPI KYSYMYS: Miksi kaksoishuipuista käytetympi on matalampi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hyvä huomio. Syytä ei ole kerrottu varmasti, mutta järkeenkäypiä selityksiä on muutama. [[Bosnia ja Hertsegovinan]] puolella oleva huippu on helpompi lähestyä tavallisia reittejä pitkin, sillä korkeampi huippu on [[Montenegron]] puolella ja sinne pääsy voi edellyttää rajanylitystä tai erillistä lupaa rajavyöhykkeen takia. Lisäksi [[Maglićin]] kaksi huippua ovat vain kaksi metriä toistensa erolla, joten vaellusreitti valitaan useammin helppouden kuin korkeuden mukaan. Tarkkoja syitä en ole varma, joten en vahvista mitään varmasti. Eikä kaksi metriä kyyhkyn silmin paljon ole.
+KYSYMYS: Kerro lisää: Bosnia ja Hertsegovinan
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Zla Kolata, Montenegron korkein huippu] vuodesta 2009 — Zla Kolata kohoaa 2 534 metriin, ja se on Montenegron korkein vuori, vaikka koko vuoriston korkein huippu Maja Jezercë (2 694 m) on Albanian puolella. Se kuuluu Prokletijeen, jonka nimi tarkoittaa kirottuja, ja vuoriston Montenegron puolelle perustettiin kansallispuisto vuonna 2009. Puiston pinta-ala on noin 16 000 hehtaaria. Viimeisen jääkauden aikana laaksoja muovasivat kilometrien mittaiset jäätiköt, ja Ropojanan jäätikkö oli noin 12,5 kilometriä pitkä. Vuoristossa on noin 20 jäätikköjärveä, joista Hridsko jezero on vajaat 300 metriä pitkä.
+AIEMPI KYSYMYS: Miksi kaksoishuipuista käytetympi on matalampi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hyvä huomio. Syytä ei ole kerrottu varmasti, mutta järkeenkäypiä selityksiä on muutama. [[Bosnia ja Hertsegovinan]] puolella oleva huippu on helpompi lähestyä tavallisia reittejä pitkin, sillä korkeampi huippu on [[Montenegron]] puolella ja sinne pääsy voi edellyttää rajanylitystä tai erillistä lupaa rajavyöhykkeen takia. Lisäksi [[Maglićin]] kaksi huippua ovat vain kaksi metriä toistensa erolla, joten vaellusreitti valitaan useammin helppouden kuin korkeuden mukaan. Tarkkoja syitä en ole varma, joten en vahvista mitään varmasti. Eikä kaksi metriä kyyhkyn silmin paljon ole.
+KYSYMYS: Kerro lisää: Montenegron
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+AIEMPI KYSYMYS: Miksi kaksoishuipuista käytetympi on matalampi?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hyvä huomio. Syytä ei ole kerrottu varmasti, mutta järkeenkäypiä selityksiä on muutama. [[Bosnia ja Hertsegovinan]] puolella oleva huippu on helpompi lähestyä tavallisia reittejä pitkin, sillä korkeampi huippu on [[Montenegron]] puolella ja sinne pääsy voi edellyttää rajanylitystä tai erillistä lupaa rajavyöhykkeen takia. Lisäksi [[Maglićin]] kaksi huippua ovat vain kaksi metriä toistensa erolla, joten vaellusreitti valitaan useammin helppouden kuin korkeuden mukaan. Tarkkoja syitä en ole varma, joten en vahvista mitään varmasti. Eikä kaksi metriä kyyhkyn silmin paljon ole.
+KYSYMYS: Kerro lisää: Maglićin
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+AIEMPI KYSYMYS: Miten vuoristot syntyvät?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuorten synty on iso aihe. Suurin osa vuoristoista syntyy, kun maankuoren laatat liikkuvat ja törmäävät toisiinsa. Laattojen välinen paine poimuttaa ja nostaa kiviä, ja pitkän ajan kuluessa syntyy vuoristo. Toiset vuoret syntyvät tulivuoritoiminnasta tai siitä, että maankuoren lohkot nousevat murroslinjoja pitkin. Eroosio, kuten tuuli, vesi ja jää, kuluttaa vuoria samalla alas. [[Dinaridit]] ovat osa Euroopan vuoristoja, jotka ovat muotoutuneet Afrikan ja Euraasian laattojen liikkeiden seurauksena, ja [[Maglić]] kuuluu niihin. Tarkkoja vaiheita en uskalla tässä luetella. Tämä oli pitkä kurssi.
+KYSYMYS: Kerro lisää: Dinaridit
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+AIEMPI KYSYMYS: Miten korkeus vaikuttaa ilmastoon vuorilla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ylhäältä sen näkee parhaiten. Mitä korkeammalle noustaan, sitä kylmemmäksi ilma käy: keskimäärin lämpötila laskee noin kuusi astetta tuhatta metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Ilma on myös ohuempaa, joten happea on vähemmän, ja tuuli ja auringon säteily voivat olla voimakkaampia. Vuorilla satanee usein enemmän kuin ympäröivillä alankoalueilla, ja ylhäällä sade tulee lumena. Kasvillisuus vaihtuu vyöhykkeittäin, kun kasvuaika lyhenee: alhaalla metsää, ylempänä alppiniittyjä ja kallioita. Näin käy esimerkiksi [[Dinaridien]] huipuilla kuten [[Maglićilla]], joka kohoaa yli kahden kilometrin.
+
+Minun mielestäni vuoristo on kyyhkylle oikeastaan hyvä paikka katsoa, kun on sopiva sää. Liian korkealle ei silti ole pakko nousta.
+KYSYMYS: Kerro lisää: Dinaridien
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Maglić (luonto · vuori)
+Tietoruudun teksti: Maglić on rajan ylittävä vuori Dinaridien alueella Bosnia ja Hertsegovinan sekä Montenegron rajalla. Sen korkein huippu on 2 388 metriä ja Montenegron puolella; kaksoishuippu 2 386 metrissä on Bosnia ja Hertsegovinan puolella ja siten maan korkein kohta — ja samalla se kahdesta huipusta, jolla käydään useammin. Vuori kulkee luoteesta kaakkoon.
+AIEMPI KYSYMYS: Miten korkeus vaikuttaa ilmastoon vuorilla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ylhäältä sen näkee parhaiten. Mitä korkeammalle noustaan, sitä kylmemmäksi ilma käy: keskimäärin lämpötila laskee noin kuusi astetta tuhatta metriä kohti, vaikka tarkka luku vaihtelee sään mukaan. Ilma on myös ohuempaa, joten happea on vähemmän, ja tuuli ja auringon säteily voivat olla voimakkaampia. Vuorilla satanee usein enemmän kuin ympäröivillä alankoalueilla, ja ylhäällä sade tulee lumena. Kasvillisuus vaihtuu vyöhykkeittäin, kun kasvuaika lyhenee: alhaalla metsää, ylempänä alppiniittyjä ja kallioita. Näin käy esimerkiksi [[Dinaridien]] huipuilla kuten [[Maglićilla]], joka kohoaa yli kahden kilometrin.
+
+Minun mielestäni vuoristo on kyyhkylle oikeastaan hyvä paikka katsoa, kun on sopiva sää. Liian korkealle ei silti ole pakko nousta.
+KYSYMYS: Kerro lisää: Maglićilla
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+AIEMPI KYSYMYS: Miksi maan rannikko on niin lyhyt?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, tän minä tiedän. Bosnia ja Hertsegovinalla on rantaa Adrianmerellä vain kapea kaistale [[Neumin]] kohdalla, ja syy on historiallinen. Rannikko on ollut vuosisatojen ajan Dubrovnikin tasavallan ja sittemmin muiden valtioiden hallussa, ja Neumin kaistale jäi nykyisen Bosnia ja Hertsegovinan alueelle vanhoilla rajanvedoilla. Tarkat ajankohdat ja sopimukset en ole varma kertomaan, mutta kaistaleen kummallakin puolella on nykyisin [[Kroatia]]n aluetta. Kaistaleesta on tullut merkittävä osa maan merikuvaa, vaikka se on pieni. Kyyhky ylittää sen silmänräpäyksessä.
+KYSYMYS: Kerro lisää: Neumin
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Makkara, jonka ainekset on säädetty tarkasti] 1912 — Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin (sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa 1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja mustapippuria. Makkarat liitetään pareiksi puutikulla ja kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa vastustivat.
+- [Kroatia — maalehti / Menovinkit] Kroatia on pieni maa, mutta sen museot ja kirjastot ovat vieneet verkkoon yllättävän paljon: 4500 vuotta vanhoja saviesineitä 3D-malleina, glagoliittisia käsikirjoituksia ja virtuaalikävelyn vesiputouksille.
+AIEMPI KYSYMYS: Miksi maan rannikko on niin lyhyt?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Joo, tän minä tiedän. Bosnia ja Hertsegovinalla on rantaa Adrianmerellä vain kapea kaistale [[Neumin]] kohdalla, ja syy on historiallinen. Rannikko on ollut vuosisatojen ajan Dubrovnikin tasavallan ja sittemmin muiden valtioiden hallussa, ja Neumin kaistale jäi nykyisen Bosnia ja Hertsegovinan alueelle vanhoilla rajanvedoilla. Tarkat ajankohdat ja sopimukset en ole varma kertomaan, mutta kaistaleen kummallakin puolella on nykyisin [[Kroatia]]n aluetta. Kaistaleesta on tullut merkittävä osa maan merikuvaa, vaikka se on pieni. Kyyhky ylittää sen silmänräpäyksessä.
+KYSYMYS: Kerro lisää: Kroatia
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+AIEMPI KYSYMYS: Mikä Otranton salmi on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Katotaas. Otranton salmi on Adrianmeren eteläpäässä oleva kapea meriväylä, joka yhdistää Adrianmeren Joonianmereen ja erottaa Italian niemimaan kantapään Albanian rannikosta. Salmen leveys on lähteiden mukaan hieman yli kuusikymmentä kilometriä, mutta en ole varma tarkasta luvusta. Sen nimi tulee Otranton kaupungista Italian puolella. Salmi on tärkeä laivaväylä, ja sen yli kulkee muuttolintujen reittejä. [[Adrianmeri]] on tämän kautta yhteydessä [[Välimereen]] ja avomereen. Aika lyhyt matka kyyhkylle, ei paha.
+KYSYMYS: Kerro lisää: Adrianmeri
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+AIEMPI KYSYMYS: Mikä Otranton salmi on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Katotaas. Otranton salmi on Adrianmeren eteläpäässä oleva kapea meriväylä, joka yhdistää Adrianmeren Joonianmereen ja erottaa Italian niemimaan kantapään Albanian rannikosta. Salmen leveys on lähteiden mukaan hieman yli kuusikymmentä kilometriä, mutta en ole varma tarkasta luvusta. Sen nimi tulee Otranton kaupungista Italian puolella. Salmi on tärkeä laivaväylä, ja sen yli kulkee muuttolintujen reittejä. [[Adrianmeri]] on tämän kautta yhteydessä [[Välimereen]] ja avomereen. Aika lyhyt matka kyyhkylle, ei paha.
+KYSYMYS: Kerro lisää: Välimereen
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+AIEMPI KYSYMYS: Mikä aiheuttaa bora-tuulen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bora, no jopas. Bora on kylmä ja puuskainen tuuli, joka puhaltaa Adrianmeren itärannikolla vuoristosta kohti merta. Se syntyy, kun kylmä ilma kerääntyy vuorten taakse ylängölle ja purkautuu tiheänä ja raskaana alas vuorten rinteitä pitkin mereen. [[Dinaridien]] vuoristo toimii tässä esteenä ja ohjaa ilman solien kautta rannikolle, jolloin puuskat voivat olla erittäin voimakkaita. Bora on tyypillisesti kuiva ja kylmä, ja sitä esiintyy erityisesti talvella. [[Adrianmerellä]] se vaikuttaa laivaliikenteeseen ja sillalle ajamiseen. Tällaisessa tuulessa kyyhky pysyy mieluummin sisällä.
+KYSYMYS: Kerro lisää: Dinaridien
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+AIEMPI KYSYMYS: Mikä aiheuttaa bora-tuulen?
+AIEMPI VASTAUS (Livia):
+Ai tota. Bora, no jopas. Bora on kylmä ja puuskainen tuuli, joka puhaltaa Adrianmeren itärannikolla vuoristosta kohti merta. Se syntyy, kun kylmä ilma kerääntyy vuorten taakse ylängölle ja purkautuu tiheänä ja raskaana alas vuorten rinteitä pitkin mereen. [[Dinaridien]] vuoristo toimii tässä esteenä ja ohjaa ilman solien kautta rannikolle, jolloin puuskat voivat olla erittäin voimakkaita. Bora on tyypillisesti kuiva ja kylmä, ja sitä esiintyy erityisesti talvella. [[Adrianmerellä]] se vaikuttaa laivaliikenteeseen ja sillalle ajamiseen. Tällaisessa tuulessa kyyhky pysyy mieluummin sisällä.
+KYSYMYS: Kerro lisää: Adrianmerellä
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi meri on suolaista?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Meriveden suola tulee pääosin kivistä. Sade ja joet liuottavat kivistä mineraaleja ja suoloja ja kuljettavat ne mereen. Vesi haihtuu merestä ilmaan, mutta suolat jäävät veteen, joten pitoisuus on kasvanut hyvin pitkän ajan kuluessa. Lisäksi merenpohjan tulivuoritoiminta ja kuumat lähteet tuovat veteen aineita. Merivesi on keskimäärin suolaisuudeltaan noin kolmeen ja puoleen prosenttiin, mutta se vaihtelee: [[Adrianmeri]] on [[Itämerta]] suolaisempi, koska Itämereen virtaa paljon makeaa vettä. Siitä on pitkä matka jokiin.
+KYSYMYS: Kerro lisää: Itämerta
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+AIEMPI KYSYMYS: Mikä on Pon laakso?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hetkinen. Pon laakso on laaja tasanko Pohjois-Italiassa, jonka halki virtaa [[Po]]-joki Alpeilta Adrianmerelle. Joki on Italian pisin, ja laakso on yksi maan tärkeimmistä maatalous- ja teollisuusalueista. Tasanko on syntynyt joen tuomista sedimenteistä, ja Po muodostaa Adrianmeren rannalla laajan suiston. Pohjoisessa laaksoa rajaavat Alpit ja etelässä Apenniinit. Laakso on [[Adrianmeren]] luoteisin päätepiste, kuten tietoruudussakin sanotaan. Kyllä sieltä kelpaa katsella, vähän kuin leivinpaperi levitettynä.
+KYSYMYS: Kerro lisää: Po
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Adrianmeri (meri)
+Tietoruudun teksti: Adrianmeri erottaa Apenniinien niemimaan Balkanin niemimaasta. Se on Välimeren pohjoisin haara ja ulottuu Otranton salmesta luoteeseen Pon laaksoon asti. Rantaa sillä on kuudella maalla, ja Bosnia ja Hertsegovina on niistä se, jolla rantaa on kaikkein vähiten — kapea kaistale Neumin kohdalla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Mikä on Pon laakso?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Hetkinen. Pon laakso on laaja tasanko Pohjois-Italiassa, jonka halki virtaa [[Po]]-joki Alpeilta Adrianmerelle. Joki on Italian pisin, ja laakso on yksi maan tärkeimmistä maatalous- ja teollisuusalueista. Tasanko on syntynyt joen tuomista sedimenteistä, ja Po muodostaa Adrianmeren rannalla laajan suiston. Pohjoisessa laaksoa rajaavat Alpit ja etelässä Apenniinit. Laakso on [[Adrianmeren]] luoteisin päätepiste, kuten tietoruudussakin sanotaan. Kyllä sieltä kelpaa katsella, vähän kuin leivinpaperi levitettynä.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Mikä stećak on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Stećak on keskiaikainen hautakivi, jollaisia on Bosnia ja Hertsegovinassa, Kroatiassa, Montenegrossa ja Serbiassa. Kivet on veistetty kalkkikivestä, ja ne ovat muodoltaan laatta-, arkku- tai ristimäisiä. Monissa on koristeita ja kuvioita, kuten metsästyskohtauksia, ristejä, kuutamoita ja ritarikuvia, ja jotkut kantavat kirjoituksia. Ajoitus on suurin piirtein 1100-luvulta 1500-luvulle. Unesco on ottanut [[stećakit]] maailmanperintöluetteloon, ja yksi kokonaisuuden kalmistoista on [[Dugo Poljen]] kalmisto [[Blidinjen]] ylängöllä. Hiljaisia kivimuistomerkkejä, ja kauniita.
+KYSYMYS: Kerro lisää: stećakit
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Mikä stećak on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Stećak on keskiaikainen hautakivi, jollaisia on Bosnia ja Hertsegovinassa, Kroatiassa, Montenegrossa ja Serbiassa. Kivet on veistetty kalkkikivestä, ja ne ovat muodoltaan laatta-, arkku- tai ristimäisiä. Monissa on koristeita ja kuvioita, kuten metsästyskohtauksia, ristejä, kuutamoita ja ritarikuvia, ja jotkut kantavat kirjoituksia. Ajoitus on suurin piirtein 1100-luvulta 1500-luvulle. Unesco on ottanut [[stećakit]] maailmanperintöluetteloon, ja yksi kokonaisuuden kalmistoista on [[Dugo Poljen]] kalmisto [[Blidinjen]] ylängöllä. Hiljaisia kivimuistomerkkejä, ja kauniita.
+KYSYMYS: Kerro lisää: Dugo Poljen
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Mikä stećak on?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Stećak on keskiaikainen hautakivi, jollaisia on Bosnia ja Hertsegovinassa, Kroatiassa, Montenegrossa ja Serbiassa. Kivet on veistetty kalkkikivestä, ja ne ovat muodoltaan laatta-, arkku- tai ristimäisiä. Monissa on koristeita ja kuvioita, kuten metsästyskohtauksia, ristejä, kuutamoita ja ritarikuvia, ja jotkut kantavat kirjoituksia. Ajoitus on suurin piirtein 1100-luvulta 1500-luvulle. Unesco on ottanut [[stećakit]] maailmanperintöluetteloon, ja yksi kokonaisuuden kalmistoista on [[Dugo Poljen]] kalmisto [[Blidinjen]] ylängöllä. Hiljaisia kivimuistomerkkejä, ja kauniita.
+KYSYMYS: Kerro lisää: Blidinjen
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Kirjonta jota opetetaan vain äidiltä tyttärelle] perinne, Unesco-status 2014 — Zmijanjen alueella Banja Lukan lähellä kirjotaan mustavalkoista, tarkan geometrista kirjontaa, jolla koristellaan perinteisesti naisten kansallispukuja. Kuvioissa toistuvat auringot, oksat ja kasvit, ja taito on kulkenut sukupolvelta toiselle äideiltä tyttärille ilman kirjoitettuja ohjeita. Unesco lisäsi zmijanjen kirjonnan ihmiskunnan aineettoman kulttuuriperinnön luetteloon vuonna 2014, koska perinne oli säilynyt elävänä mutta harvojen osaajien varassa. Nykyään kirjontaa opetetaan myös kouluissa perinteen katoamisen estämiseksi.
+AIEMPI KYSYMYS: Miksi munika kasvaa juuri täällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puusta on kyse. Munika eli Balkanin vuoristomänty kasvaa Balkanin niemimaan vuoristoissa, yleensä kalkkikivisillä ja kuivilla, kivisillä rinteillä, joilla muut puut eivät pärjää. Se sietää kylmää, tuulta ja karua maaperää sekä lyhyttä kasvukautta, joten korkeat karstiylängöt sopivat sille. Lisäksi sen valkea runko erottaa sen muista männyistä. Täsmällistä syytä, miksi laji viihtyy juuri [[Masna Lukan]] rinteillä, en ole varma kertomaan, mutta [[Blidinjen]] korkeus ja ilmasto sopivat sen vaatimuksiin. [[Munikan]] kasvupaikat ovat melko rajallisia. Ei se puu mikään kyyhkyn lempipuu ole, jos totta puhutaan.
+
+Munika on kuulemma hyvin hidaskasvuinen ja voi elää todella vanhaksi, mutta en ole varma tarkasta iästä. Pidän siitä, että yksi puu jaksaa seistä niin pitkään yhdessä paikassa, vaikka minä en jaksa.
+KYSYMYS: Kerro lisää: Masna Lukan
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Miksi munika kasvaa juuri täällä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puusta on kyse. Munika eli Balkanin vuoristomänty kasvaa Balkanin niemimaan vuoristoissa, yleensä kalkkikivisillä ja kuivilla, kivisillä rinteillä, joilla muut puut eivät pärjää. Se sietää kylmää, tuulta ja karua maaperää sekä lyhyttä kasvukautta, joten korkeat karstiylängöt sopivat sille. Lisäksi sen valkea runko erottaa sen muista männyistä. Täsmällistä syytä, miksi laji viihtyy juuri [[Masna Lukan]] rinteillä, en ole varma kertomaan, mutta [[Blidinjen]] korkeus ja ilmasto sopivat sen vaatimuksiin. [[Munikan]] kasvupaikat ovat melko rajallisia. Ei se puu mikään kyyhkyn lempipuu ole, jos totta puhutaan.
+
+Munika on kuulemma hyvin hidaskasvuinen ja voi elää todella vanhaksi, mutta en ole varma tarkasta iästä. Pidän siitä, että yksi puu jaksaa seistä niin pitkään yhdessä paikassa, vaikka minä en jaksa.
+KYSYMYS: Kerro lisää: Munikan
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Guatemala — maalehti / Luonto: Väli-Amerikan korkein vuoristo ilman tulivuoria] Sierra de los Cuchumatanes Länsi-Guatemalassa on Väli-Amerikan korkein vuoristo, jossa ei ole yhtään tulivuorta. Se kohoaa 500 metristä yli 3 800 metriin ja kattaa noin 16 350 neliökilometriä; siitä 1 500 neliökilometriä on yli kolmen kilometrin korkeudessa, mikä tekee siitä koko Väli-Amerikan laajimman ylängön. Kallio on karstia ja sedimenttikiveä mesotsooiselta liitukaudelta. Nimi tulee mamin sanoista cuchuj ja matán, "se joka koottiin ylivoimalla".
+AIEMPI KYSYMYS: Miksi karstialueilla on vähän pintavesiä?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Karstialueen kallio on liukenevaa kalkkikiveä, johon on vuosisatojen kuluessa muodostunut halkeamia, rakoja ja onkaloita. Sadevesi ja sulamisvesi imeytyvät niiden kautta nopeasti maan alle sen sijaan, että ne virtaisivat pinnalla puroina ja jokina. Vesi kulkee luolissa ja maanalaisissa vesiväylissä ja nousee pintaan lähteinä usein kaukana imeytymiskohdasta. Siksi maisema voi olla kuiva ja kivinen, vaikka sataisi paljon. [[Blidinjen]] ylänkö on tällaista [[karstia]], ja sen järven pinta-ala vaihtelee vuodenajan mukaan. Kuivassa maisemassa tarvitaan siis hyvää suunnistustaitoa.
+KYSYMYS: Kerro lisää: karstia
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Miten järven pinta-ala voi vaihdella vuodenajan mukaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Katotaas. Järven pinta-ala riippuu siitä, kuinka paljon vettä siihen tulee ja kuinka paljon sitä poistuu. Keväällä lumen sulaminen ja sateet täyttävät järven, jolloin se laajenee tasaisilla rannoillaan, ja kuivempana kesänä haihdunta pienentää sitä. [[Karstialueilla]] järvet voivat lisäksi tyhjentyä maanalaisten vesiväylien kautta, jolloin vedenpinta laskee nopeasti. [[Blidinjen]] järvi on tällainen: sen pinta-ala vaihtelee kahden ja puolen ja kuuden neliökilometrin välillä. Tarkkaa syytä juuri tälle järvelle en ole varma, mutta periaate on tämä. Kyllä siinä lintu näkee eron jo ilmasta.
+KYSYMYS: Kerro lisää: Karstialueilla
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Miksi vuorilla sataa enemmän kuin laaksoissa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on sääoppia. Kun ilmavirtaus kohtaa vuoren, ilma pakotetaan nousemaan rinnettä ylös. Noustessaan ilma jäähtyy, ja kylmempi ilma ei pysty sitomaan yhtä paljon vesihöyryä, joten vesihöyry tiivistyy pilviksi ja satamaan vuoren tuulenpuoleisella rinteellä. Vuoren toisella puolella ilma laskeutuu ja lämpenee, ja sade jää vähäisemmäksi, joten syntyy niin sanottu sadevarjo. Siksi korkeilla huipuilla ja ylängöillä, kuten [[Blidinjen]] ympärillä [[Dinaridien]] vuoristossa, sataa usein runsaasti ja talvella lunta. Siksi [[Risovacin]] hiihtokeskuskin toimii. Lumi on kyyhkylle kyllä vähän hankalaa.
+
+Minä pidän itse enemmän kuivasta säästä, mutta pitää myöntää, että vuoristo tekee kauniin maiseman juuri sateen ansiosta.
+KYSYMYS: Kerro lisää: Dinaridien
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blidinjen puisto (luonto)
+Tietoruudun teksti: Blidinje on karstiylänkö Dinaarisilla vuorilla Čvrsnican, Čabuljan ja Vranin välissä. Ylänkö on noin 513 neliökilometriä, se ulottuu 22 kilometriä pohjois-eteläsuunnassa ja 17 kilometriä itä-länsisuunnassa, ja korkeus vaihtelee 1 150 metristä 2 228 metriin.
+
+Luonnonpuisto perustettiin 30. huhtikuuta 1995, ja sen pinta-ala on 364 neliökilometriä.
+
+Ylängön keskellä on Blidinjen järvi 1 184 metrin korkeudessa. Sen pinta-ala ei ole vakio vaan vaihtelee vuodenajan mukaan kahden ja puolen ja kuuden neliökilometrin välillä.
+
+Dugo Poljen kalmistossa seisoo keskiaikaisia stećak-hautakiviä, ja ne kuuluvat Unescon maailmanperintöluetteloon otettuun stećak-kokonaisuuteen. Masna Lukan rinteillä kasvaa munikaa eli valkorunkoista Balkanin vuoristomäntyä, ja Čvrsnican rinteellä toimii Risovacin hiihtokeskus.
+AIEMPI KYSYMYS: Miksi vuorilla sataa enemmän kuin laaksoissa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on sääoppia. Kun ilmavirtaus kohtaa vuoren, ilma pakotetaan nousemaan rinnettä ylös. Noustessaan ilma jäähtyy, ja kylmempi ilma ei pysty sitomaan yhtä paljon vesihöyryä, joten vesihöyry tiivistyy pilviksi ja satamaan vuoren tuulenpuoleisella rinteellä. Vuoren toisella puolella ilma laskeutuu ja lämpenee, ja sade jää vähäisemmäksi, joten syntyy niin sanottu sadevarjo. Siksi korkeilla huipuilla ja ylängöillä, kuten [[Blidinjen]] ympärillä [[Dinaridien]] vuoristossa, sataa usein runsaasti ja talvella lunta. Siksi [[Risovacin]] hiihtokeskuskin toimii. Lumi on kyyhkylle kyllä vähän hankalaa.
+
+Minä pidän itse enemmän kuivasta säästä, mutta pitää myöntää, että vuoristo tekee kauniin maiseman juuri sateen ansiosta.
+KYSYMYS: Kerro lisää: Risovacin
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+AIEMPI KYSYMYS: Ketä mausoleumiin haudattiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kuninkaiden asioissa pitää olla tarkka. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa, ja heidän joukossaan on tunnistettu kuninkaat [[Dabiša]], Ostoja, Ostojić, [[Tvrtko II]] ja Tomaš. Lisäksi löydettiin naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso, kuningatar [[Dorothea]]. Muiden vainajien henkilöllisyydestä en ole varma. Pitkä nimiluettelo, mut ei se muistia kauheasti rasittanu.
+KYSYMYS: Kerro lisää: Dabiša
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Ketä mausoleumiin haudattiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kuninkaiden asioissa pitää olla tarkka. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa, ja heidän joukossaan on tunnistettu kuninkaat [[Dabiša]], Ostoja, Ostojić, [[Tvrtko II]] ja Tomaš. Lisäksi löydettiin naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso, kuningatar [[Dorothea]]. Muiden vainajien henkilöllisyydestä en ole varma. Pitkä nimiluettelo, mut ei se muistia kauheasti rasittanu.
+KYSYMYS: Kerro lisää: Tvrtko II
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+AIEMPI KYSYMYS: Ketä mausoleumiin haudattiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kuninkaiden asioissa pitää olla tarkka. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa, ja heidän joukossaan on tunnistettu kuninkaat [[Dabiša]], Ostoja, Ostojić, [[Tvrtko II]] ja Tomaš. Lisäksi löydettiin naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso, kuningatar [[Dorothea]]. Muiden vainajien henkilöllisyydestä en ole varma. Pitkä nimiluettelo, mut ei se muistia kauheasti rasittanu.
+KYSYMYS: Kerro lisää: Dorothea
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Miksi kuninkaan istuin siirtyi Jajceen?
+AIEMPI VASTAUS (Livia):
+No niin. Kuningas [[Stjepan Tomašević]] siirsi istuimensa [[Jajceen]], kun [[osmanien]] painostus kasvoi. Osmanit valtasivat Bobovacin vuonna 1463, ja itsenäinen keskiaikainen Bosnian kuningaskunta päättyi samana vuonna. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Stjepan Tomašević
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bobovac (historia)
+Tietoruudun teksti: Bobovac on keskiaikaisen linnan raunio Varešin lähellä Keski-Bosniassa. Linna rakennettiin Bosnian paanin Stjepan II:n hallituskaudella, ja ensimmäinen kirjallinen maininta siitä on vuodelta 1349.
+
+Se oli 1300- ja 1400-luvuilla Bosnian hallitsijoiden linnoitettu pääpaikka. Hallintoa hoidettiin myös Sutjeskan kuninkaankartanossa, mutta Bobovac oli niistä kahdesta se, jota pystyi puolustamaan.
+
+Kaivauksissa on erotettu kolme palatsia — suuri palatsi, ylempi palatsi ja sivupalatsi — kolmella eri terassitasolla. Rakennustyyli on goottilainen, ja osassa on romaanis-goottilaisia piirteitä. Mausoleumin viidestä haudasta on löytynyt yhdeksän vainajaa: kuninkaat Dabiša, Ostoja, Ostojić, Tvrtko II ja Tomaš sekä naisen luuranko, jonka arvellaan olevan Tvrtko II:n puoliso kuningatar Dorothea.
+
+Kuningas Stjepan Tomašević siirsi istuimensa Jajceen osmanien painostaessa, ja osmanit valtasivat Bobovaci…
+AIEMPI KYSYMYS: Miksi kuninkaan istuin siirtyi Jajceen?
+AIEMPI VASTAUS (Livia):
+No niin. Kuningas [[Stjepan Tomašević]] siirsi istuimensa [[Jajceen]], kun [[osmanien]] painostus kasvoi. Osmanit valtasivat Bobovacin vuonna 1463, ja itsenäinen keskiaikainen Bosnian kuningaskunta päättyi samana vuonna. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Jajceen

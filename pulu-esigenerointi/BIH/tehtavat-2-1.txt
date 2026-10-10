@@ -1,0 +1,1053 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kohdekartta / Kohdekartta: Süleymaniyen moskeija] 1550–1557 Sulttaani Suleiman Suuri tilasi itselleen moskeijan, joka ylittäisi kaikki edeltäjiensä rakennuttamat. Työ annettiin hovin pääarkkitehdille Mimar Sinanille, ja paikaksi valittiin kaupungin kolmas kukkula, jolla seisoi vanha sulttaanin palatsi Eski Saray — se purettiin tieltä. Sisäänkäynnin yläpuolinen arabiankielinen piirtokirjoitus antaa perustamisvuodeksi 1550 ja vihkimisvuodeksi 1557. Rukoussali on lähes neliö, 58,5 kertaa 57,5 metriä, ja sen yllä on yksi valtava kupoli: korkeutta 53 metriä ja halkaisijaa 26,5 metriä eli tasan puolet korkeudesta. Pihan kulmissa on neljä minareettia. Niiden parvekkeita on yhteensä kymmenen, minkä on sanottu viittaavan siihen, että Suleiman oli j…
+AIEMPI KYSYMYS: Kuka oli Mimar Sinan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mimar Sinan oli ottomaanien hoviarkkitehti 1500-luvulla ja yksi koko aikakauden tunnetuimmista rakennusmestareista. Hän palveli useita sulttaaneja, ja hänen nimiinsä kirjataan lähteiden mukaan satoja rakennuksia, joista tunnetuimpia ovat [[Süleymaniye-moskeija]] Istanbulissa ja [[Selimiye]] Edirnessä. Hänen työnsä näkyy laajalla alueella: Damaskoksessa hänen piirustustensa mukaan rakennettiin 1550-luvulla moskeijan, keittiön ja majoitussiipien kokonaisuus, ja Mostarin [[Vanhan sillan]] suunnittelija [[Mimar Hayruddin]] oli hänen oppilaansa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Süleymaniye-moskeija
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Selimiyen moskeija] 1570 Perustuskivi laskettiin 1209, ja vihkiminen ehti vasta vuoteen 1326. Väliin osui kaksi maanjäristystä, 1267 ja 1303, ja keskilaiva ja länsijulkisivu valmistuivat vasta arkkipiispa Giovanni del Conten aikana 1319–1326. Sisämitat ovat 66 × 21 metriä, ja rakennus on Kyproksen vanhin ja suurin säilynyt goottilainen kirkko. Pohjakaava on lainattu Pariisista: kuoria kiertää käytävä eikä apsidiin tehty kappeleita, kuten Notre-Damessa. Ranskalaisen Lusignan-suvun kuninkaat kruunattiin täällä. Syyskuussa 1570 rakennus sai toisen elämän. Ensimmäinen perjantairukous pidettiin 15. syyskuuta, ja samana vuonna länsipäätyyn nousi kaksi minareettia. Sisällä muutos oli käytännöllinen: patsaat ja kirkon…
+- [Nikosia — kaupunkilehti / Nikosia: Tulkin talo vaihtoi omistajaa kahdesti] Hadjigeorgakis Kornesios toimi Kyproksen dragomaanina eli hallinnon tulkkina vuosina 1779–1809, ja noin vuonna 1796 sulttaani Selim III nimitti hänet virkaan elinikäisesti. Kartanonsa hän rakennutti Agios Antonioksen kaupunginosaan arkkipiispan asunnon lähelle. Vuoden 1804 kapinassa väkijoukko murtautui taloon ja ryösti sen, ja perhe pakeni Konstantinopoliin. Hänet teloitettiin siellä vuonna 1809, omaisuus takavarikoitiin ja talo meni kaupaksi 13 000 kuruşilla; nuorin poika osti sen takaisin vuonna 1830. Viimeinen asukas kuoli 1979, ja nyt talossa on etnologinen museo. Kunnostuksesta myönnettiin Europa Nostra -palkinto.
+AIEMPI KYSYMYS: Kuka oli Mimar Sinan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mimar Sinan oli ottomaanien hoviarkkitehti 1500-luvulla ja yksi koko aikakauden tunnetuimmista rakennusmestareista. Hän palveli useita sulttaaneja, ja hänen nimiinsä kirjataan lähteiden mukaan satoja rakennuksia, joista tunnetuimpia ovat [[Süleymaniye-moskeija]] Istanbulissa ja [[Selimiye]] Edirnessä. Hänen työnsä näkyy laajalla alueella: Damaskoksessa hänen piirustustensa mukaan rakennettiin 1550-luvulla moskeijan, keittiön ja majoitussiipien kokonaisuus, ja Mostarin [[Vanhan sillan]] suunnittelija [[Mimar Hayruddin]] oli hänen oppilaansa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Selimiye
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kaupunkilehti / Historian hetki: East River 1883 — kuka tämän sillan rakensi?] 24.5.1883 — Kuka tämän sillan oikeastaan rakensi? Kysymys leijuu 24. toukokuuta 1883 avajaisten yllä, vaikka kukaan ei sano sitä ääneen. Suunnittelija John A. Roebling kuoli jalkavammaan jo 1869 ennen töiden alkua. Hänen poikansa Washington Roebling johti työtä, kunnes sukeltajantauti, joka syntyi kaivettaessa tornien perustuksia paineilmakaissoneissa, lamautti hänet 1870-luvun alussa; sen jälkeen hän seurasi työmaata kaukoputkella makuuhuoneestaan Columbia Heightsilta. Hänen vaimonsa Emily Warren Roebling opetteli lujuusopin ja köysikäyrien matematiikan, kuljetti ohjeet insinööreille ja vastasi viranomaisille yli kymmenen vuotta. Tänään hän ylittää sillan ensimmäisenä vaunuissa, ja preside…
+- [Brisbane — kaupunkilehti / Historia: Tulva, joka vei sillan mukanaan] Helmikuun 1893 suurtulva peitti laajat alueet Brisbanesta ja vei mukanaan ensimmäisen Victoria Bridgen kokonaan. Sillan tilalle järjestettiin väliaikainen lauttayhteys, mutta se päättyi onnettomuuteen kolme vuotta myöhemmin, kun Pearl-lautta kaatui helmikuussa 1896; arviolta puolet kyydissä olleista kahdeksastakymmenestä sadasta ihmisestä menehtyi. Kaupunki koki uudet suurtulvat 1974, 2011 ja 2022, ja jokainen niistä on muuttanut sitä, miten Brisbane varautuu jokeensa — vuoden 1974 jälkeen yläjuoksulle rakennettiin Wivenhoen pato.
+AIEMPI KYSYMYS: Kuka oli Mimar Sinan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mimar Sinan oli ottomaanien hoviarkkitehti 1500-luvulla ja yksi koko aikakauden tunnetuimmista rakennusmestareista. Hän palveli useita sulttaaneja, ja hänen nimiinsä kirjataan lähteiden mukaan satoja rakennuksia, joista tunnetuimpia ovat [[Süleymaniye-moskeija]] Istanbulissa ja [[Selimiye]] Edirnessä. Hänen työnsä näkyy laajalla alueella: Damaskoksessa hänen piirustustensa mukaan rakennettiin 1550-luvulla moskeijan, keittiön ja majoitussiipien kokonaisuus, ja Mostarin [[Vanhan sillan]] suunnittelija [[Mimar Hayruddin]] oli hänen oppilaansa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Vanhan sillan
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+AIEMPI KYSYMYS: Kuka oli Mimar Sinan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Mimar Sinan oli ottomaanien hoviarkkitehti 1500-luvulla ja yksi koko aikakauden tunnetuimmista rakennusmestareista. Hän palveli useita sulttaaneja, ja hänen nimiinsä kirjataan lähteiden mukaan satoja rakennuksia, joista tunnetuimpia ovat [[Süleymaniye-moskeija]] Istanbulissa ja [[Selimiye]] Edirnessä. Hänen työnsä näkyy laajalla alueella: Damaskoksessa hänen piirustustensa mukaan rakennettiin 1550-luvulla moskeijan, keittiön ja majoitussiipien kokonaisuus, ja Mostarin [[Vanhan sillan]] suunnittelija [[Mimar Hayruddin]] oli hänen oppilaansa. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Mimar Hayruddin
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Rakennukset: Kaksi siltaa vanhan viereen] 1932 — Ljubljanica-joen ylittävä Kolmoissilta on kaupungin vanhin siltapaikka, sillä puusilta mainitaan täällä jo vuonna 1280. Nykyinen kivisilta valmistui 1842 ja sai nimen Franzin silta arkkiherttua Franz Karlin mukaan. Kun liikenne ahtautui, arkkitehti Jože Plečnik suunnitteli vuonna 1929 sen viereen kaksi hieman vinoon asetettua jalankulkusiltaa, ja kolmikko avattiin liikenteelle huhtikuussa 1932. Kaiteessa on 642 kaidepylvästä. Vuodesta 2007 kaikki kolme siltaa ovat olleet vain jalankulkijoille, ja vuonna 2021 ne liitettiin Unescon maailmanperintöön osana Plečnikin perintöä.
+- [Lagos — kaupunkilehti / Laguuni ja sillat: Kolme siltaa ja yksi vuosi 1901] Ensimmäinen silta Lagosin saaren ja mantereen välille rakennettiin 1901: Carterin silta, joka on nimetty vuosina 1891—1898 virassa olleen kuvernöörin mukaan. Sen rinnalle tulivat myöhemmin Ekon silta ja kolmas mannersilta. Kolmas mannersilta on noin 11,8 kilometriä pitkä ja kahdeksankaistainen; ensimmäisen vaiheen vihki presidentti Shehu Shagari 1980, ja kokonaisuus valmistui presidentti Ibrahim Babangidan aikana 1990. Se oli Afrikan pisin silta vuoteen 1996, jolloin Kairon 6. lokakuun silta valmistui. Silta alkaa Oworonshokista ja päättyy Adeniji Adelen liittymään saarella; matkalta näkyvät laguuni, yliopiston ranta, kansallisteatteri ja Makoko.
+AIEMPI KYSYMYS: Mitä sillanvartijan työhön kuului?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sana mostari tarkoittaa sillanvartijaa, ja sillanvartijat vartioivat [[Vanhaa siltaa]] ottomaanien aikana yli [[Neretva-joen]]. Silta oli tärkeä kulkureitti, ja sellaisilla paikoilla vartijoiden tehtävänä oli yleensä valvoa liikennettä ja pitää silta turvassa. En ole varma, perittiinkö sillalla maksuja, joten sitä en väitä. Nimi jäi kuitenkin elämään: koko kaupunki on nimetty vartijoidensa mukaan. Onpas siinä lyhyt virka, jonka mukaan kokonainen kaupunki nimettiin.
+KYSYMYS: Kerro lisää: Vanhaa siltaa
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+AIEMPI KYSYMYS: Mitä sillanvartijan työhön kuului?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Sana mostari tarkoittaa sillanvartijaa, ja sillanvartijat vartioivat [[Vanhaa siltaa]] ottomaanien aikana yli [[Neretva-joen]]. Silta oli tärkeä kulkureitti, ja sellaisilla paikoilla vartijoiden tehtävänä oli yleensä valvoa liikennettä ja pitää silta turvassa. En ole varma, perittiinkö sillalla maksuja, joten sitä en väitä. Nimi jäi kuitenkin elämään: koko kaupunki on nimetty vartijoidensa mukaan. Onpas siinä lyhyt virka, jonka mukaan kokonainen kaupunki nimettiin.
+KYSYMYS: Kerro lisää: Neretva-joen
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+AIEMPI KYSYMYS: Miksi Mostarin sillalta hypätään jokeen?
+AIEMPI VASTAUS (Livia):
+No jopas, sitä minä olen katsonut ylhäältä. [[Mostarin]] sillalta hyppääminen on vanha paikallinen perinne, ja nykyään siitä on tullut vuosittainen hyppykilpailu, jossa taitavat hyppääjät sukeltavat sillan kaarelta [[Neretva-jokeen]]. Hyppy on korkea, ja joen vesi on kylmää ja virtaavaa, joten sitä harjoitellaan ja siihen valmistaudutaan huolella. En ole varma tarkasta korkeudesta, joten jätän luvun pois. Perinteen kerrotaan olevan vanhempi kuin nykyinen kilpailu, ja sillan kaari on ollut hyppääjien katseenvangitsija vuosisatoja.
+KYSYMYS: Kerro lisää: Mostarin
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+AIEMPI KYSYMYS: Miksi Mostarin sillalta hypätään jokeen?
+AIEMPI VASTAUS (Livia):
+No jopas, sitä minä olen katsonut ylhäältä. [[Mostarin]] sillalta hyppääminen on vanha paikallinen perinne, ja nykyään siitä on tullut vuosittainen hyppykilpailu, jossa taitavat hyppääjät sukeltavat sillan kaarelta [[Neretva-jokeen]]. Hyppy on korkea, ja joen vesi on kylmää ja virtaavaa, joten sitä harjoitellaan ja siihen valmistaudutaan huolella. En ole varma tarkasta korkeudesta, joten jätän luvun pois. Perinteen kerrotaan olevan vanhempi kuin nykyinen kilpailu, ja sillan kaari on ollut hyppääjien katseenvangitsija vuosisatoja.
+KYSYMYS: Kerro lisää: Neretva-jokeen
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+AIEMPI KYSYMYS: Mikä on Neretva-joki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Neretva on Bosnia ja Hertsegovinan halki virtaava joki, joka kulkee [[Mostarin]] läpi ja päätyy lopulta Kroatian puolella [[Adrianmereen]]. Sen suiston alue on laaja ja hedelmällinen, ja jokilaakso on ollut vuosisatoja tärkeä kulkureitti rannikon ja sisämaan välillä. Joen vesi on vuoristoista, kirkasta ja viileää. Mostarissa joki jakaa kaupungin kahteen puoleen, ja sen yli kaartuu [[Vanha silta]]. Oikein hyvin kyyhky selvisi joesta, vaikka vettä en ole koskaan tykännyt kastella siipiä.
+KYSYMYS: Kerro lisää: Adrianmereen
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyrmontin silta] 1858 ja 1902 Ensimmäinen Pyrmontin silta avattiin 17. maaliskuuta 1858. Se oli puupaalusilta, jonka keskellä oli rautainen kääntyvä osa laivoja varten, ja ylityksestä perittiin pennin tulli. Kahden ensimmäisen viikon aikana tullin maksoi 20 000 jalankulkijaa, ja sillan yli kulki 932 kärryä ja rahtirattaita, 43 kevyttä kaksipyöräistä, 17 vaunua sekä 125 hevosta ratsastajineen. Tämä silta oli paikallaan isoisän matkan aikaan. Hallitus osti sen sillanomistajayhtiöltä 1884 hintaan 52 500 puntaa ja poisti tullin. Uudesta sillasta järjestettiin kilpailu 1891, mutta lama pysäytti hankkeen. Vasta 1894 julkisten töiden komitea valitsi noin kahdestakymmenestäkuudesta ehdotuksesta oman viraston teräsr…
+- [Kolkata — kohdekartta / Kohdekartta: Howrah-silta] ponttonisilta 1874, nykyinen 1943 Nykyinen Howrah-silta korvasi samalla paikalla olleen ponttonisillan, ja siksi sen alkuperäinen nimi oli New Howrah Bridge. Rakennustyö alkoi 1936 ja valmistui 1942; liikenteelle silta avattiin 3. helmikuuta 1943. Nimi vaihtui 14. kesäkuuta 1965 Rabindra Setuksi runoilija Rabindranath Tagoren mukaan, mutta puheessa se on yhä Howrah-silta. Sillassa ei ole yhtään mutteria eikä pulttia: koko rakenne on niitattu. Terästä kului 26 500 tonnia, ja siitä 23 000 tonnia oli Tata Steelin kehittämää Tiscrom-lujuusterästä. Perustuksia varten upotettiin valtavat kaivinkaivot, ja yhtenä yönä maa niiden alla petti niin että koko massa vajosi kerralla kaksi jalkaa — tärähdy…
+AIEMPI KYSYMYS: Mikä on Neretva-joki?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Neretva on Bosnia ja Hertsegovinan halki virtaava joki, joka kulkee [[Mostarin]] läpi ja päätyy lopulta Kroatian puolella [[Adrianmereen]]. Sen suiston alue on laaja ja hedelmällinen, ja jokilaakso on ollut vuosisatoja tärkeä kulkureitti rannikon ja sisämaan välillä. Joen vesi on vuoristoista, kirkasta ja viileää. Mostarissa joki jakaa kaupungin kahteen puoleen, ja sen yli kaartuu [[Vanha silta]]. Oikein hyvin kyyhky selvisi joesta, vaikka vettä en ole koskaan tykännyt kastella siipiä.
+KYSYMYS: Kerro lisää: Vanha silta
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+AIEMPI KYSYMYS: Mitä tarkoittaa Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Unescon maailmanperintökohde on paikka, jonka kansainvälinen yhteisö on todennut niin arvokkaaksi, että sen suojelu kuuluu koko ihmiskunnalle. Kohde voi olla rakennus, kaupunki tai luonnonmaisema, ja sen pitää täyttää tietyt kriteerit, jotka koskevat sen merkitystä ja aitoutta. Kun kohde on listalla, sen valtio sitoutuu suojelemaan sitä, ja suojelutyölle voi saada kansainvälistä tukea. Mostarin vanhakaupunki [[Vanhoine siltoineen]] kuuluu kohteisiin, ja myös Višegradin [[Drinan silta]] on listalla. Jotain sellaista tästä jää käteen, vaikka en pullaa saanut.
+KYSYMYS: Kerro lisää: Vanhoine siltoineen
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mostar (kaupungit)
+Tietoruudun teksti: Kaupunki on saanut nimensä sillanvartijoista, mostari, jotka vartioivat Vanhaa siltaa ottomaanien aikaan. Sulttaani Suleiman Suuri tilasi sillan 1557, ja sen suunnitteli Mimar Hayruddin, Istanbulin suurmestarin Mimar Sinanin oppilas. Silta valmistui yhdeksän vuotta myöhemmin ja oli valmistuessaan maailman levein ihmiskätten tekemä kaari. Sitä ennen paikalla heilui puinen riippusilta, jonka yli kuljettiin ottomaanimaantieteilijän mukaan "kuolemanpelossa".
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Sateenvarjo selässä] 1914 — Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi kotiseudulleen ja auttoi tutkimaan Drinan luolaa.
+AIEMPI KYSYMYS: Mitä tarkoittaa Unescon maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Katotaas. Unescon maailmanperintökohde on paikka, jonka kansainvälinen yhteisö on todennut niin arvokkaaksi, että sen suojelu kuuluu koko ihmiskunnalle. Kohde voi olla rakennus, kaupunki tai luonnonmaisema, ja sen pitää täyttää tietyt kriteerit, jotka koskevat sen merkitystä ja aitoutta. Kun kohde on listalla, sen valtio sitoutuu suojelemaan sitä, ja suojelutyölle voi saada kansainvälistä tukea. Mostarin vanhakaupunki [[Vanhoine siltoineen]] kuuluu kohteisiin, ja myös Višegradin [[Drinan silta]] on listalla. Jotain sellaista tästä jää käteen, vaikka en pullaa saanut.
+KYSYMYS: Kerro lisää: Drinan silta
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+AIEMPI KYSYMYS: Keitä dervissit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Dervissit olivat islamilaisen mystiikan eli [[sufilaisuuden]] seuraajia, jotka kuuluivat veljeskuntiin ja elivät usein yhteisissä luostareissa. Heidän elämäänsä kuuluivat rukous, hartausharjoitukset, opetus ja vieraanvaraisuus matkaajille. Tunnetuimpia ovat [[pyörivät dervissit]], joiden pyörimistanssi on osa uskonnollista harjoitusta. Ottomaanien aikana dervissiluostareita rakennettiin laajalle, ja [[Blagajin]] luostarissa on yhä vierashuone ja mausoleumi. Tarkka päivämäärä ei ole tässä tärkeä, ja suurin osa tavoista vaihteli veljeskunnittain. Kunnioittavasti sanottuna, kyyhky ei kyllä pysyisi tanssissa pyörimään.
+KYSYMYS: Kerro lisää: sufilaisuuden
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+AIEMPI KYSYMYS: Keitä dervissit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Dervissit olivat islamilaisen mystiikan eli [[sufilaisuuden]] seuraajia, jotka kuuluivat veljeskuntiin ja elivät usein yhteisissä luostareissa. Heidän elämäänsä kuuluivat rukous, hartausharjoitukset, opetus ja vieraanvaraisuus matkaajille. Tunnetuimpia ovat [[pyörivät dervissit]], joiden pyörimistanssi on osa uskonnollista harjoitusta. Ottomaanien aikana dervissiluostareita rakennettiin laajalle, ja [[Blagajin]] luostarissa on yhä vierashuone ja mausoleumi. Tarkka päivämäärä ei ole tässä tärkeä, ja suurin osa tavoista vaihteli veljeskunnittain. Kunnioittavasti sanottuna, kyyhky ei kyllä pysyisi tanssissa pyörimään.
+KYSYMYS: Kerro lisää: pyörivät dervissit
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+AIEMPI KYSYMYS: Keitä dervissit olivat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Dervissit olivat islamilaisen mystiikan eli [[sufilaisuuden]] seuraajia, jotka kuuluivat veljeskuntiin ja elivät usein yhteisissä luostareissa. Heidän elämäänsä kuuluivat rukous, hartausharjoitukset, opetus ja vieraanvaraisuus matkaajille. Tunnetuimpia ovat [[pyörivät dervissit]], joiden pyörimistanssi on osa uskonnollista harjoitusta. Ottomaanien aikana dervissiluostareita rakennettiin laajalle, ja [[Blagajin]] luostarissa on yhä vierashuone ja mausoleumi. Tarkka päivämäärä ei ole tässä tärkeä, ja suurin osa tavoista vaihteli veljeskunnittain. Kunnioittavasti sanottuna, kyyhky ei kyllä pysyisi tanssissa pyörimään.
+KYSYMYS: Kerro lisää: Blagajin
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montenegro — maalehti / Luonto: Pelikaanien järvi, joka hengittää] vuodesta 1983 — Skutarijärvi on Balkanin suurin järvi, ja siitä noin kaksi kolmasosaa kuuluu Montenegrolle. Järven pinta-ala vaihtelee vuodenaikojen mukaan 370 ja 530 neliökilometrin välillä, mutta syvimmilläänkin vettä on vain noin 44 metriä. Montenegron puoli sai kansallispuiston aseman vuonna 1983, ja alueella on tavattu noin 270 lintulajia sekä 34 alkuperäistä kalalajia, joista seitsemän on järven omia. Tunnetuimpia asukkaita ovat kiharapelikaanit, joiden siipiväli voi ylittää kolme metriä. Järven vedestä noin 62 prosenttia tulee Morača-joesta, ja Buna-joki laskee järvestä Adrianmerelle.
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri kallion juureen?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä paikka sillä. Luostari rakennettiin aivan [[Buna-joen]] lähteen viereen, kallion juureen, ja syy lienee ollut paikan erityisyys. Lähde syöksyy esiin valtavasta luolasta pystysuoran [[kallioseinän]] alta, ja vesi on poikkeuksellisen kylmää ja kirkasta. Tällainen paikka on luonnostaan rauhallinen, ja puhdas vesi oli luostarille ja sen vieraille tärkeä. En ole varma, mitä rakentajat tarkalleen ajattelivat, joten tämä on tulkintaa. Luostari seisoi noin vuonna 1520 viimeistään, ja vierashuone ja [[mausoleumi]] ovat yhä pystyssä. Kallion varjossa on kyllä varmasti ollut viileämpi kuin ikkunalaudalla.
+KYSYMYS: Kerro lisää: Buna-joen
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Uluru — kaupunkilehti / Kivi ja väri: Kallio joka ei kulunut pois] Suurin osa alueen alkuperäisistä hiekkakivikerrostumista on kadonnut miljoonien vuosien eroosiossa — jäljellä on nyt vain tasaista pensasaavikkoa laajalti Ulurun ympärillä. Kallio itse säilyi, koska sen kivi on poikkeuksellisen yhtenäistä: siitä puuttuvat heikot rakolinjat ja kerrosrajat, joita pitkin vesi ja pakkanen yleensä murentavat kiven vähitellen soraksi ja maaperäksi. Ilman tällaisia heikkouskohtia sadevesi valuu pinnalta pois sen sijaan, että tunkeutuisi kiven sisään ja halkaisisi sitä ajan myötä. Tulos on yksi ainoa, lähes murtumaton kivimassa, joka nousee ympäröivästä tasangosta lähes 350 metriä pystyyn seinämänä joka suunnasta katsottuna.
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri kallion juureen?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä paikka sillä. Luostari rakennettiin aivan [[Buna-joen]] lähteen viereen, kallion juureen, ja syy lienee ollut paikan erityisyys. Lähde syöksyy esiin valtavasta luolasta pystysuoran [[kallioseinän]] alta, ja vesi on poikkeuksellisen kylmää ja kirkasta. Tällainen paikka on luonnostaan rauhallinen, ja puhdas vesi oli luostarille ja sen vieraille tärkeä. En ole varma, mitä rakentajat tarkalleen ajattelivat, joten tämä on tulkintaa. Luostari seisoi noin vuonna 1520 viimeistään, ja vierashuone ja [[mausoleumi]] ovat yhä pystyssä. Kallion varjossa on kyllä varmasti ollut viileämpi kuin ikkunalaudalla.
+KYSYMYS: Kerro lisää: kallioseinän
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kašgar — kohdekartta / Kohdekartta: Yusuf Khass Hajibin mausoleumi] runoilija kuoli 1077, mausoleumi 1865 Yusuf Khass Hajib syntyi noin vuonna 1019 Balasagunissa, kara-hanidien pääkaupungissa nykyisen Kirgisian alueella. Hän aloitti pääteoksensa Kutadgu Biligin kotikaupungissaan ja sai sen valmiiksi Kašgarissa vuosina 1069–1070. Kun hän luovutti sen Kašgarin ruhtinaalle, tämä antoi hänelle arvonimen khass hajib, suunnilleen ylikamariherra. Kutadgu Bilig eli ”onnea tuova tieto” on ensimmäinen islamilaisten turkkilaisten kielellä kirjoitettu teos. Se on hallitsijanpeili: neljä päähenkilöä edustavat kukin yhtä abstraktia periaatetta, ja runomitta on arabialainen mutaqarib, yksitoistatavuisia riimipareja — ensimmäinen kerta, kun sitä sovellettiin turkkilaiskiel…
+- [Samarkand — kohdekartta / Kohdekartta: Khoja Doniyorin mausoleumi] 1900-luvun alku Mausoleumi on Afrasiyabin kummun itälaidalla Siyob-puron varressa, ja se on Samarkandin tunnetuimpia pyhiä paikkoja. Rakennus on suorakaiteen muotoinen, noin viisitoista metriä pitkä sali, jonka katolla on viisi kupolia. Se on 1900-luvun alusta, mutta paikka on vanha: Abu Tahirhojan teoksen "Samaria" mukaan Khoja Doniyor oli Qutham ibn Abbasin seuralaisia, ja perimätiedon mukaan Timur rakennutti haudan päälle moskeijan. Paikan erikoisuus on se, että kolmen uskonnon — islamin, kristinuskon ja juutalaisuuden — perinteissä esiintyy sama nimi: Doniyor, Daniil, Daniel. Siksi mausoleumilla käy kaikkien kolmen perinteen edustajia. Hautakammion vieressä on lähde, jota pidetään siuna…
+AIEMPI KYSYMYS: Miksi luostari rakennettiin juuri kallion juureen?
+AIEMPI VASTAUS (Livia):
+No niin, hyvä paikka sillä. Luostari rakennettiin aivan [[Buna-joen]] lähteen viereen, kallion juureen, ja syy lienee ollut paikan erityisyys. Lähde syöksyy esiin valtavasta luolasta pystysuoran [[kallioseinän]] alta, ja vesi on poikkeuksellisen kylmää ja kirkasta. Tällainen paikka on luonnostaan rauhallinen, ja puhdas vesi oli luostarille ja sen vieraille tärkeä. En ole varma, mitä rakentajat tarkalleen ajattelivat, joten tämä on tulkintaa. Luostari seisoi noin vuonna 1520 viimeistään, ja vierashuone ja [[mausoleumi]] ovat yhä pystyssä. Kallion varjossa on kyllä varmasti ollut viileämpi kuin ikkunalaudalla.
+KYSYMYS: Kerro lisää: mausoleumi
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+AIEMPI KYSYMYS: Mikä on karstilähde?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Karstilähde on lähde, jossa vesi tulee esiin kalkkikivialueen maanalaisista käytävistä ja luolista. Kalkkikivi liukenee vähitellen sateen ja pohjaveden mukana, ja liukeneminen muodostaa maan alle onkaloita ja vesiväyliä. Vesi voi kulkea maan alla pitkiäkin matkoja ennen kuin se purkautuu pintaan, ja se on usein kirkasta ja kylmää. [[Buna-joen]] lähde [[Blagajissa]] on tällainen: joki syöksyy valmiina esiin luolasta kallioseinän alta. Kalkkikivialueet ovat tyypillisiä [[Balkanin]] länsiosille, joten sama ilmiö toistuu laajalla alueella. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Blagajissa
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Moskeija joka toi mukanaan koko korttelin] 1531 — Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna 1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla alueelle kirjaston, koraanikoulun, kellotornin ja katetun basaarin — hänen lahjoituksensa loivat pohjan koko Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. Se selvisi 1990-luvun piirityksestä vaurioituneena mutta pystyssä, ja se on sittemmin kunnostettu.
+AIEMPI KYSYMYS: Mikä on karstilähde?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Karstilähde on lähde, jossa vesi tulee esiin kalkkikivialueen maanalaisista käytävistä ja luolista. Kalkkikivi liukenee vähitellen sateen ja pohjaveden mukana, ja liukeneminen muodostaa maan alle onkaloita ja vesiväyliä. Vesi voi kulkea maan alla pitkiäkin matkoja ennen kuin se purkautuu pintaan, ja se on usein kirkasta ja kylmää. [[Buna-joen]] lähde [[Blagajissa]] on tällainen: joki syöksyy valmiina esiin luolasta kallioseinän alta. Kalkkikivialueet ovat tyypillisiä [[Balkanin]] länsiosille, joten sama ilmiö toistuu laajalla alueella. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Arki ja tavat: Kahvi on aikayksikkö] 1400-luku — Bosnialainen kahvi keitetään kuparisessa džezvassa ja kaadetaan pieneen fildžan-kuppiin ilman korvaa. Tarjottimella tulee aina vesilasi ja pala rahat-lokumia, ja sokeripala kastetaan kahviin ennen kuin se pannaan suuhun. Kahvia ei juoda janoon vaan seuraksi: tapaamisen pituus mitataan kupillisina. Baščaršijan basaari, jonka kujilla kuparisepät yhä takovat džezvoja, on 1400-luvulta.
+AIEMPI KYSYMYS: Miten bosnialainen kahvi valmistetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Bosnialainen kahvi]] keitetään perinteisesti pienessä pitkävartisessa metallikannussa, jota kutsutaan nimellä [[džezva]]. Kahvi jauhetaan hyvin hienoksi, ja se keitetään yhdessä veden kanssa, kunnes pinnalle nousee vaahto. Kahvi kaadetaan pieniin kuppeihin, ja pohjalle jää hienoa sakkaa, joten sitä ei juoda aivan viimeiseen pisaraan asti. Kahvin kanssa tarjotaan usein sokeria ja makeisia, kuten [[lokumia]]. Kahvilla on paikallisessa vieraanvaraisuudessa tärkeä sija, ja sen ääressä istutaan rauhassa. Voisin minä istua sen kanssa, jos joku tarjoaisi pullan viereen.
+KYSYMYS: Kerro lisää: Bosnialainen kahvi
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Sarajevo: Kuja, jolla kahvipannu takotaan] Baščaršijan basaari jaettiin ammateittain, ja kujat saivat nimensä sen mukaan, mitä niillä tehtiin: Kovači sepistä, Sarači satulasepistä, Kazandžiluk kazandžeista eli kupariseppien ammatista. 1500-luvun jälkipuoliskolla basaarissa oli kahdeksankymmentä eri ammattia ja noin 12 000 puotia. Kazandžilukilla vasarat kalisevat yhä, ja kujan tunnetuin tuote on džezva: pieni pitkävartinen kuparipannu, jossa bosnialainen kahvi keitetään ja josta se kaadetaan pieniin fildžan-kuppeihin. Vesi kiehautetaan ensin, osa siitä otetaan sivuun, hienoksi jauhettu kahvi lisätään pannuun — ja pannun kapeneva muoto nostaa juoman pinnalle vaahdon.
+- [Bosnia ja Hertsegovina — maalehti / Arki ja tavat: Kahvi on aikayksikkö] 1400-luku — Bosnialainen kahvi keitetään kuparisessa džezvassa ja kaadetaan pieneen fildžan-kuppiin ilman korvaa. Tarjottimella tulee aina vesilasi ja pala rahat-lokumia, ja sokeripala kastetaan kahviin ennen kuin se pannaan suuhun. Kahvia ei juoda janoon vaan seuraksi: tapaamisen pituus mitataan kupillisina. Baščaršijan basaari, jonka kujilla kuparisepät yhä takovat džezvoja, on 1400-luvulta.
+AIEMPI KYSYMYS: Miten bosnialainen kahvi valmistetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Bosnialainen kahvi]] keitetään perinteisesti pienessä pitkävartisessa metallikannussa, jota kutsutaan nimellä [[džezva]]. Kahvi jauhetaan hyvin hienoksi, ja se keitetään yhdessä veden kanssa, kunnes pinnalle nousee vaahto. Kahvi kaadetaan pieniin kuppeihin, ja pohjalle jää hienoa sakkaa, joten sitä ei juoda aivan viimeiseen pisaraan asti. Kahvin kanssa tarjotaan usein sokeria ja makeisia, kuten [[lokumia]]. Kahvilla on paikallisessa vieraanvaraisuudessa tärkeä sija, ja sen ääressä istutaan rauhassa. Voisin minä istua sen kanssa, jos joku tarjoaisi pullan viereen.
+KYSYMYS: Kerro lisää: džezva
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Arki ja tavat: Kahvi on aikayksikkö] 1400-luku — Bosnialainen kahvi keitetään kuparisessa džezvassa ja kaadetaan pieneen fildžan-kuppiin ilman korvaa. Tarjottimella tulee aina vesilasi ja pala rahat-lokumia, ja sokeripala kastetaan kahviin ennen kuin se pannaan suuhun. Kahvia ei juoda janoon vaan seuraksi: tapaamisen pituus mitataan kupillisina. Baščaršijan basaari, jonka kujilla kuparisepät yhä takovat džezvoja, on 1400-luvulta.
+AIEMPI KYSYMYS: Miten bosnialainen kahvi valmistetaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Bosnialainen kahvi]] keitetään perinteisesti pienessä pitkävartisessa metallikannussa, jota kutsutaan nimellä [[džezva]]. Kahvi jauhetaan hyvin hienoksi, ja se keitetään yhdessä veden kanssa, kunnes pinnalle nousee vaahto. Kahvi kaadetaan pieniin kuppeihin, ja pohjalle jää hienoa sakkaa, joten sitä ei juoda aivan viimeiseen pisaraan asti. Kahvin kanssa tarjotaan usein sokeria ja makeisia, kuten [[lokumia]]. Kahvilla on paikallisessa vieraanvaraisuudessa tärkeä sija, ja sen ääressä istutaan rauhassa. Voisin minä istua sen kanssa, jos joku tarjoaisi pullan viereen.
+KYSYMYS: Kerro lisää: lokumia
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+AIEMPI KYSYMYS: Mihin Buna-joki laskee?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Buna on lyhyt joki, joka laskee [[Neretva-jokeen]] Blagajin lähistöllä. Vaikka matka on lyhyt, joki on vesirikas, koska sen lähde on yksi Euroopan suurimmista: vettä tulee noin 30 kuutiometriä sekunnissa. Joki ei siis ala purosta vaan syöksyy esiin valmiina luolasta pystysuoran kallioseinän alta. Neretva puolestaan jatkaa matkaansa kohti [[Adrianmerta]]. Pituudesta en ole varma, joten jätän luvun pois. Lyhyt joki, mutta ei pieni, ja se näkyy kyllä ylhäältä.
+KYSYMYS: Kerro lisää: Neretva-jokeen
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Blagajin dervissiluostari (historia)
+Tietoruudun teksti: Buna-joki ei ala purosta vaan syöksyy valmiina esiin valtavasta luolasta pystysuoran kallioseinän alta. Se on yksi Euroopan suurimmista lähteistä: vettä tulee noin 30 kuutiometriä sekunnissa, ja se on poikkeuksellisen kylmää ja kirkasta. Kallion juureen, aivan lähteen viereen, rakennettiin dervissiluostari viimeistään noin vuonna 1520 — sen vierashuone ja mausoleumi ovat yhä pystyssä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venetsia — kaupunkilehti / Kaupunki veden varassa: Portit nousevat merenpohjasta] Kun syksyn tuuli työntää Adrianmerta laguunia kohti, vesi nousee kaduille. Ilmiön nimi on acqua alta, korkea vesi. Korkein mitattu oli 194 senttiä 4. marraskuuta 1966, ja kaupunki varoittaa siitä sireeneillä: mitä useamman kerran sireeni soi, sitä korkeammalle vesi nousee. Lokakuusta 2020 alkaen suojana on ollut MOSE, 78 terästulvaporttia laguunin kolmen suuaukon pohjassa.
+AIEMPI KYSYMYS: Mihin Buna-joki laskee?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Buna on lyhyt joki, joka laskee [[Neretva-jokeen]] Blagajin lähistöllä. Vaikka matka on lyhyt, joki on vesirikas, koska sen lähde on yksi Euroopan suurimmista: vettä tulee noin 30 kuutiometriä sekunnissa. Joki ei siis ala purosta vaan syöksyy esiin valmiina luolasta pystysuoran kallioseinän alta. Neretva puolestaan jatkaa matkaansa kohti [[Adrianmerta]]. Pituudesta en ole varma, joten jätän luvun pois. Lyhyt joki, mutta ei pieni, ja se näkyy kyllä ylhäältä.
+KYSYMYS: Kerro lisää: Adrianmerta
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+- [Porto Velho — kaupunkilehti / Porto Velho: Aurinko laskee jokeen joka ilta] Kun ilta saapuu, Porto Velhon rantaraitille kokoontuu ihmisiä katsomaan auringonlaskua Rio Madeiran ylle - se on kaupungin vakiintunut ilta-askare siinä missä iltakävely muualla. Joelta palaa samaan aikaan kalastajaveneitä, jotka ovat olleet päivän saaliilla, sillä joki on monelle perheelle yhä tärkein toimeentulon lähde. Saalis myydään usein heti rantatorilla tuoreena, ennen kuin se ehtii pilaantua trooppisessa lämmössä. Sademetsän ilmasto tekee illoista kosteita ja lämpimiä ympäri vuoden, joten auringonlasku on myös hetki, jolloin päivän pahin helle vihdoin hellittää ja kaupunki herää toiseen elämäänsä.
+AIEMPI KYSYMYS: Mihin Una lopulta laskee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  Una laskee [[Save-jokeen]], jonka vesi jatkaa edelleen [[Tonavaan]] ja sitä kautta Mustallemerelle. Una kulkee matkallaan Bosnian ja Kroatian rajaseudulla, ja joen alajuoksulla se muodostaa osan valtioiden välistä rajaa. Joki on siis osa laajaa Tonavan vesistöä. Matkaa Unalla on 212 kilometriä, ja varrella on koskia, putouksia ja karstilähteitä. Kyllä joesta tulee aika iso, kun se liittyy isompaan.
+KYSYMYS: Kerro lisää: Save-jokeen
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mihin Una lopulta laskee?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  Una laskee [[Save-jokeen]], jonka vesi jatkaa edelleen [[Tonavaan]] ja sitä kautta Mustallemerelle. Una kulkee matkallaan Bosnian ja Kroatian rajaseudulla, ja joen alajuoksulla se muodostaa osan valtioiden välistä rajaa. Joki on siis osa laajaa Tonavan vesistöä. Matkaa Unalla on 212 kilometriä, ja varrella on koskia, putouksia ja karstilähteitä. Kyllä joesta tulee aika iso, kun se liittyy isompaan.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+AIEMPI KYSYMYS: Mitä Unan kansallispuistossa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Unan kansallispuisto]] on luontokohde, jonka joki- ja vesiputousmaisemat houkuttelevat kävijöitä. Alueella voi muun muassa kävellä ja patikoida luontopolkuja pitkin, ihailla putouksia ja kulkea joen varrella. Jokea käytetään myös melontaan ja koskenlaskuun, ja kesällä veteen uskaltautuvat uimarit. Tarkat palvelut ja reitit vaihtelevat, joten ajantasaiset tiedot kannattaa tarkistaa puiston omilta sivuilta. Puiston merkittävin nähtävyys on [[Štrbački buk]], joen suurin putous. Minä olen sentään lentäjä, joten en melo.
+KYSYMYS: Kerro lisää: Unan kansallispuisto
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+AIEMPI KYSYMYS: Mitä Unan kansallispuistossa voi tehdä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Unan kansallispuisto]] on luontokohde, jonka joki- ja vesiputousmaisemat houkuttelevat kävijöitä. Alueella voi muun muassa kävellä ja patikoida luontopolkuja pitkin, ihailla putouksia ja kulkea joen varrella. Jokea käytetään myös melontaan ja koskenlaskuun, ja kesällä veteen uskaltautuvat uimarit. Tarkat palvelut ja reitit vaihtelevat, joten ajantasaiset tiedot kannattaa tarkistaa puiston omilta sivuilta. Puiston merkittävin nähtävyys on [[Štrbački buk]], joen suurin putous. Minä olen sentään lentäjä, joten en melo.
+KYSYMYS: Kerro lisää: Štrbački buk
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+AIEMPI KYSYMYS: Mikä on Štrbački buk?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Štrbački buk]] on [[Unan]] suurin putous ja koko joen tunnetuimpia nähtävyyksiä. Putous muodostuu useista portaista, ja vesi kaatuu kalkkikivestä muodostuneiden kynnysten yli vaahtoavina verhoina. Putous sijaitsee [[Unan kansallispuiston]] alueella. En ole varma sen tarkasta korkeudesta, ja eri lähteet antavat vähän erilaisia lukuja, joten jätän tarkan luvun pois. Putouksen edessä vesi on turkoosia ja kirkasta, ja siitä syntyy hyvä kuva. Kaunis paikka, vaikka en uskalla mennä kovin lähelle.
+KYSYMYS: Kerro lisää: Unan
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+AIEMPI KYSYMYS: Mikä on Štrbački buk?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Štrbački buk]] on [[Unan]] suurin putous ja koko joen tunnetuimpia nähtävyyksiä. Putous muodostuu useista portaista, ja vesi kaatuu kalkkikivestä muodostuneiden kynnysten yli vaahtoavina verhoina. Putous sijaitsee [[Unan kansallispuiston]] alueella. En ole varma sen tarkasta korkeudesta, ja eri lähteet antavat vähän erilaisia lukuja, joten jätän tarkan luvun pois. Putouksen edessä vesi on turkoosia ja kirkasta, ja siitä syntyy hyvä kuva. Kaunis paikka, vaikka en uskalla mennä kovin lähelle.
+KYSYMYS: Kerro lisää: Unan kansallispuiston
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Miksi Una-joen vesi on niin kirkasta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Kirkkaus johtuu pitkälti siitä, että joki virtaa kalkkikivialueella eli [[karstissa]]. Sadevesi suodattuu kalkkikiven läpi ja kulkee maan alla, ja vesi kirkastuu kulkiessaan, koska siitä jää hiukkasia pois. Samalla vesi liuottaa kalkkia, ja se voi laskeutua takaisin kasvien ja kivien pinnalle muodostaen [[kalkkitufaa]]. Siitä ovat osittain muodostuneet [[Unan]] putousten kynnykset. Turkoosi sävy syntyy veden mineraaleista ja valon heijastuksista. Ylhäältä se näyttää kyllä kauniimmalta kuin mikään torin pulla.
+KYSYMYS: Kerro lisää: karstissa
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+AIEMPI KYSYMYS: Miksi Una-joen vesi on niin kirkasta?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. Kirkkaus johtuu pitkälti siitä, että joki virtaa kalkkikivialueella eli [[karstissa]]. Sadevesi suodattuu kalkkikiven läpi ja kulkee maan alla, ja vesi kirkastuu kulkiessaan, koska siitä jää hiukkasia pois. Samalla vesi liuottaa kalkkia, ja se voi laskeutua takaisin kasvien ja kivien pinnalle muodostaen [[kalkkitufaa]]. Siitä ovat osittain muodostuneet [[Unan]] putousten kynnykset. Turkoosi sävy syntyy veden mineraaleista ja valon heijastuksista. Ylhäältä se näyttää kyllä kauniimmalta kuin mikään torin pulla.
+KYSYMYS: Kerro lisää: kalkkitufaa
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Una-joki (luonto · joki)
+Tietoruudun teksti: Paikallisen tarinan mukaan joen nimesivät roomalaiset: nähtyään sen ensi kerran he sanoivat una — "ainoa", "yksi ainoa" — kuvaillakseen sen kauneutta. 212 kilometrin mittainen Una on täynnä koskia, putouksia ja karstilähteitä, ja sen yläjuoksu kuuluu Unan kansallispuistoon. Suurin putous on Štrbački buk. Joen varren tärkein kaupunki on Bihać.
+AIEMPI KYSYMYS: Missä päin Bosniaa Bihać sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Bihać sijaitsee Bosnia ja Hertsegovinan luoteisosassa aivan Kroatian rajan tuntumassa [[Una-joen]] varrella. Kaupunki on alueen tärkein keskus, ja sen ympärillä levittäytyy [[Unan kansallispuisto]]. Sijainti rajalla tarkoittaa, että kaupunki on lähempänä Kroatian kaupunkeja kuin monia Bosnian omia. Joki virtaa kaupungin läpi ja antaa sille leimansa. Pienestä päin se silti näyttää ylhäältä rauhalliselta paikalta.
+KYSYMYS: Kerro lisää: Una-joen
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+AIEMPI KYSYMYS: Kuka oli Mithras?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Mithras]] oli jumala, jota palvottiin [[mithralaisuudessa]], salaisessa kultissa, joka levisi Rooman valtakunnassa erityisesti sotilaiden keskuudessa. Hänet kuvattiin usein tappamassa härkää, ja kuva toistuu temppeleiden alttareissa. Kulttiin kuuluivat vihkimykset ja yhteiset ateriat maanalaisissa tai luolamaisissa temppeleissä. Jumalan nimi periytyy ilmeisesti Persian Mithraan, mutta yhteyden tarkkaa luonnetta tutkijat ovat pohtineet, enkä ole varma yksityiskohdista. [[Jajcen]] temppeli on 100-luvulta ja yksi Euroopan parhaiten säilyneistä. Lentävältä kyyhkyltä tämä vaatii kyllä luolassa käymistä.
+KYSYMYS: Kerro lisää: Mithras
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+AIEMPI KYSYMYS: Kuka oli Mithras?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Mithras]] oli jumala, jota palvottiin [[mithralaisuudessa]], salaisessa kultissa, joka levisi Rooman valtakunnassa erityisesti sotilaiden keskuudessa. Hänet kuvattiin usein tappamassa härkää, ja kuva toistuu temppeleiden alttareissa. Kulttiin kuuluivat vihkimykset ja yhteiset ateriat maanalaisissa tai luolamaisissa temppeleissä. Jumalan nimi periytyy ilmeisesti Persian Mithraan, mutta yhteyden tarkkaa luonnetta tutkijat ovat pohtineet, enkä ole varma yksityiskohdista. [[Jajcen]] temppeli on 100-luvulta ja yksi Euroopan parhaiten säilyneistä. Lentävältä kyyhkyltä tämä vaatii kyllä luolassa käymistä.
+KYSYMYS: Kerro lisää: mithralaisuudessa
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+AIEMPI KYSYMYS: Kuka oli Mithras?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Mithras]] oli jumala, jota palvottiin [[mithralaisuudessa]], salaisessa kultissa, joka levisi Rooman valtakunnassa erityisesti sotilaiden keskuudessa. Hänet kuvattiin usein tappamassa härkää, ja kuva toistuu temppeleiden alttareissa. Kulttiin kuuluivat vihkimykset ja yhteiset ateriat maanalaisissa tai luolamaisissa temppeleissä. Jumalan nimi periytyy ilmeisesti Persian Mithraan, mutta yhteyden tarkkaa luonnetta tutkijat ovat pohtineet, enkä ole varma yksityiskohdista. [[Jajcen]] temppeli on 100-luvulta ja yksi Euroopan parhaiten säilyneistä. Lentävältä kyyhkyltä tämä vaatii kyllä luolassa käymistä.
+KYSYMYS: Kerro lisää: Jajcen
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Millainen valtakunta Bosnian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bosnian kuningaskunta oli keskiaikainen itsenäinen valtakunta, jonka johdossa oli [[Kotromanićin]] suku. Tvrtko I kruunattiin kuninkaaksi vuonna 1377, ja hänen aikanaan valtakunta laajeni suurimpaan ulottuvuuteensa. Pääasiallinen kuninkaanlinnoitus oli [[Bobovac]], jonne oli koottu kruununjalokivet ja kuninkaiden haudat. Ottomaanit valloittivat valtakunnan, ja Bobovac kavallettiin vihollisille vuonna 1463. Samana vuonna viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta. Siitä on onneksi jo yli viisisataa vuotta.
+KYSYMYS: Kerro lisää: Kotromanićin
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Millainen valtakunta Bosnian kuningaskunta oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bosnian kuningaskunta oli keskiaikainen itsenäinen valtakunta, jonka johdossa oli [[Kotromanićin]] suku. Tvrtko I kruunattiin kuninkaaksi vuonna 1377, ja hänen aikanaan valtakunta laajeni suurimpaan ulottuvuuteensa. Pääasiallinen kuninkaanlinnoitus oli [[Bobovac]], jonne oli koottu kruununjalokivet ja kuninkaiden haudat. Ottomaanit valloittivat valtakunnan, ja Bobovac kavallettiin vihollisille vuonna 1463. Samana vuonna viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta. Siitä on onneksi jo yli viisisataa vuotta.
+KYSYMYS: Kerro lisää: Bobovac
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+AIEMPI KYSYMYS: Miksi vesiputous on keskellä Jajcen kaupunkia?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hauska. Putous syntyy siitä, että [[Pliva-joki]] kohtaa [[Vrbas-joen]] ja syöksyy sen laaksoon korkealta kynnykseltä. Kaupunki on rakentunut tälle kohdalle, koska paikka oli puolustuksen kannalta hyvä: joet ja jyrkät rinteet suojasivat vanhaakaupunkia. Siksi putous jäi keskelle, ja kaupunki kasvoi sen ympärille. En ole varma putouksen tarkasta korkeudesta, joten jätän luvun pois. Vesi pauhaa aivan kaupungin sydämessä, mikä on harvinaista. Hyvä paikka kyyhkylle, kun on kuuma.
+KYSYMYS: Kerro lisää: Pliva-joki
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+AIEMPI KYSYMYS: Miksi vesiputous on keskellä Jajcen kaupunkia?
+AIEMPI VASTAUS (Livia):
+Kato, tää on hauska. Putous syntyy siitä, että [[Pliva-joki]] kohtaa [[Vrbas-joen]] ja syöksyy sen laaksoon korkealta kynnykseltä. Kaupunki on rakentunut tälle kohdalle, koska paikka oli puolustuksen kannalta hyvä: joet ja jyrkät rinteet suojasivat vanhaakaupunkia. Siksi putous jäi keskelle, ja kaupunki kasvoi sen ympärille. En ole varma putouksen tarkasta korkeudesta, joten jätän luvun pois. Vesi pauhaa aivan kaupungin sydämessä, mikä on harvinaista. Hyvä paikka kyyhkylle, kun on kuuma.
+KYSYMYS: Kerro lisää: Vrbas-joen
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+AIEMPI KYSYMYS: Mitä Pliva-järvillä on nähtävää?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Pliva-järvet]] ovat kaksi [[Jajcen]] lähellä sijaitsevaa järveä, jotka ovat suosittu retkikohde. Niiden rannoilla on perinteisiä puisia vesimyllyjä, jotka seisovat veden päällä pienten putousten ja virtauksen keskellä. Maisema on vehreä ja rauhallinen, ja järvillä voi veneillä ja kävellä rantoja pitkin. [[Pliva-joki]] virtaa järvistä kaupunkiin ja syöksyy putoukseen. En muista tarkkoja lukuja, joten jätän ne pois. Myllyjen jauhoista pitäisi saada oikein hyvää pullaa, se on selvä.
+KYSYMYS: Kerro lisää: Pliva-järvet
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: Casona de San Marcos] 1605 San Marcosin yliopisto sai alkunsa yleisopinnoista, joita pidettiin dominikaanien Rosarion luostarissa 1. heinäkuuta 1548. Liman kaupunginvaltuusto lähetti munkki Tomás de San Martínin ja kapteeni Juan Jerónimo de Aliagan Espanjaan hakemaan perustamiskirjaa, ja kuningas Kaarle I ja kuningatar Juana myönsivät sen: yliopisto perustettiin virallisesti 12. toukokuuta 1551. Se on Amerikan ensimmäinen virallisesti perustettu ja yhä yhtäjaksoisesti toimiva yliopisto. Paavi Pius V antoi sille 1571 paavillisen aseman, ja samalla vaakunan Ruusukon Neitsyt vaihtui evankelista Markukseksi ja tämän leijonaksi. Tämä talo on vanhempi kuin yliopiston oleskelu siinä. Sen historia alkaa 1605, kun varaka…
+- [Chennai — kohdekartta / Kohdekartta: San Thomen basilika] 1523, nykyinen rakennus 1896 Portugalilaiset lähettivät 1521 lähetyssaarnaajia etsimään apostoli Tuomaan hautaa, jonka perimätieto sijoitti seudulle. Paikka löytyi hoitamattomana, ja kuningas Juhana III:n tuella sinne rakennettiin kirkko, joka vihittiin käyttöön 1523. Fransiscus Xaverius vieraili pyhäkössä 1545 ja asui noin vuoden sen pappilassa. Paavi Paavali V teki kirkosta katedraalin 1606. Nykyinen rakennus on vuodelta 1896, jolloin britit rakensivat kirkon uudelleen uusgoottilaiseen tyyliin kapteeni J. A. Powerin piirustusten mukaan. Se vihittiin juhlallisesti 1. huhtikuuta 1896. Pituutta on 64 metriä, leveyttä 12 ja korkeutta 41. Holvikatto on tiikkiä, ja ikkunoita on kuusitoista ja v…
+AIEMPI KYSYMYS: Kuka paavi Pius II oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  paavi [[Pius II]] oli alkujaan italialainen [[Enea Silvio Piccolomini]], ja hän toimi paaviudessa 1400-luvun lopulla viime vuosikymmeninä ennen Bosnian kaatumista. Hän oli oppinut humanisti, joka kirjoitti paljon, myös historiaa, matkakuvauksia ja kirjeitä. Paavina hän yritti koota Euroopan hallitsijat ristiretkelle ottomaaneja vastaan, mutta hanke ei onnistunut. Bosnian viimeinen kuningas [[Stjepan Tomašević]] sai häneltä kruununsa. Kirjeitä kirjoittanut ja matkustanut mies, jonka kanssa minulla olisi puhuttavaa.
+KYSYMYS: Kerro lisää: Pius II
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kohdekartta / Kohdekartta: Vila Velhan teatteri] 1964 Teatteri rakennettiin 1964 Avenida Seten varrelle, 1800-luvun uusklassisen Passeio Públicon länsilaidalle. Sen takana oli Teatro dos Novos, Bahian ensimmäinen ammattilaisryhmä 1950-luvulta, jota johti Bahian liittovaltionyliopiston opettaja João Augusto de Azevedo. Pysyvää näyttämöä ajoi joukko ryhmästä irtautuneita opiskelijoita — Echio Reis, Sônia Robatto, Carlos Petrovich, Othon Bastos, Thereza Sá ja Carmem Bittencourt — ja osavaltio antoi tontin 1961. Avajaisnäytöksessä Nós, Por Exemplo esiintyivät Caetano Veloso, Gilberto Gil, Tom Zé, Gal Costa ja Maria Bethânia. Talosta tuli 1960-luvun tropicália-vastakulttuurin keskus ja sotilasdiktatuurin (1964–1985) aikaisen kulttuurisen vasta…
+AIEMPI KYSYMYS: Kuka paavi Pius II oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  paavi [[Pius II]] oli alkujaan italialainen [[Enea Silvio Piccolomini]], ja hän toimi paaviudessa 1400-luvun lopulla viime vuosikymmeninä ennen Bosnian kaatumista. Hän oli oppinut humanisti, joka kirjoitti paljon, myös historiaa, matkakuvauksia ja kirjeitä. Paavina hän yritti koota Euroopan hallitsijat ristiretkelle ottomaaneja vastaan, mutta hanke ei onnistunut. Bosnian viimeinen kuningas [[Stjepan Tomašević]] sai häneltä kruununsa. Kirjeitä kirjoittanut ja matkustanut mies, jonka kanssa minulla olisi puhuttavaa.
+KYSYMYS: Kerro lisää: Enea Silvio Piccolomini
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jajce (kaupungit)
+Tietoruudun teksti: Jajce on kaupunki, jonka keskellä on vesiputous: Pliva-joki syöksyy Vrbasiin keskellä vanhaakaupunkia. Täällä oli itsenäisen Bosnian kuningaskunnan viimeinen pääkaupunki, ja täällä viimeinen kuningas Stjepan Tomašević otti vastaan kruununsa paavi Pius II:lta. Kaupungin alla on myös Mithras-temppeli 100-luvulta, yksi Euroopan parhaiten säilyneistä — se löytyi vahingossa, kun yksityistaloa rakennettiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kuningas kruunattiin, ja linna jäi pääkaupungiksi] 1377 — Tvrtko I Kotromanić kruunattiin Bosnian kuninkaaksi vuonna 1377, ja hänen hallintoaikanaan Bosnian kuningaskunta laajeni suurimpaan koskaan ulottuvuuteensa. Kuninkaiden pääasiallinen linnoitus oli Bobovac keskisessä Bosniassa: sinne oli koottu valtakunnan kruununjalokivet ja kuninkaiden haudat, eikä sinne johtanut kunnollista tietä turvallisuussyistä. Bobovac kesti Ottomaanien piirityksiä vuosikymmeniä, kunnes se kavallettiin vihollisille vuonna 1463 — samana vuonna Bosnian viimeinen kuningas Stjepan Tomašević vangittiin ja teloitettiin Jajcessa, ja itsenäinen keskiaikainen Bosnia lakkasi olemasta.
+AIEMPI KYSYMYS: Kuka paavi Pius II oli?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  paavi [[Pius II]] oli alkujaan italialainen [[Enea Silvio Piccolomini]], ja hän toimi paaviudessa 1400-luvun lopulla viime vuosikymmeninä ennen Bosnian kaatumista. Hän oli oppinut humanisti, joka kirjoitti paljon, myös historiaa, matkakuvauksia ja kirjeitä. Paavina hän yritti koota Euroopan hallitsijat ristiretkelle ottomaaneja vastaan, mutta hanke ei onnistunut. Bosnian viimeinen kuningas [[Stjepan Tomašević]] sai häneltä kruununsa. Kirjeitä kirjoittanut ja matkustanut mies, jonka kanssa minulla olisi puhuttavaa.
+KYSYMYS: Kerro lisää: Stjepan Tomašević
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Vapahtajan kirkko] 1682–1752 Vapahtajan kirkko (tanskaksi Vor Frelsers Kirke) seisoo Christianshavnissa, Amagerin puolella satamakanavaa. Kun Christian IV kaavaili Christianshavnia vuonna 1617, siitä piti tulla oma kauppiaskaupunkinsa, ja sellainen tarvitsi kirkon. Väliaikainen kirkko vihittiin 1639, mutta nykyisen kirkon rakentaminen alkoi vasta 1682 Lambert van Havenin piirustusten mukaan. Kirkko vihittiin 1695 keskeneräisenä: alttari oli tilapäinen ja tornista puuttui kokonaan huippu. Torni jäi tynkänä yli puoleksi vuosisadaksi. Vasta 1747 Fredrik V:n aikana suunnitelma kaivettiin esiin, ja uusi arkkitehti Lauritz de Thurah hylkäsi van Havenin ehdotuksen ja piirsi oman. Kuningas hyväksyi sen 1749, ja kolme…
+- [Porto Alegre — kohdekartta / Kohdekartta: Theatro São Pedro] 1858 Theatro São Pedro on Porto Alegren vanhin teatteri. Se perustettiin 1858 — viisitoista vuotta ennen isoisän matkaa — ja siitä tuli nopeasti paitsi taiteen myös seuraelämän ja politiikan keskus. Vuonna 1955 sen lämpiössä avattiin osavaltion taidemuseo, jolla ei silloin ollut omaa taloa. 1970-luvulla talo oli niin huonossa kunnossa, että perusteellinen korjaus oli pakko tehdä. Osavaltio valitsi työn johtoon Eva Sopherin, joka oli vetänyt kaupungissa lukuisia taidehankkeita PROARTE-järjestössä. Korjaus kesti yhdeksän vuotta, ja teatteri avattiin uudelleen 1984. Siitä tuli Sopherin elämäntyö: hän johti taloa 41 vuotta, kuolemaansa asti. Vuonna 1991 Sopherin asemaa yritettiin haastaa. Sillo…
+AIEMPI KYSYMYS: Mistä romaani Drinan silta kertoo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Ivo Andrićin]] romaani Drinan silta seuraa [[Višegradin]] kaupunkia ja sen kivisiltaa useiden vuosisatojen ajan. Silta toimii kirjan keskuksena: sen ympärillä elävät eri uskontoja ja kansallisuuksia edustavat ihmiset, ja heidän elämänsä, ilonsa ja surunsa kulkevat sillan yli sukupolvesta toiseen. Teos on historiallinen kronikka, joka alkaa ottomaanien ajasta ja ulottuu 1900-luvulle. Andrić sai kirjallisuuden Nobel-palkinnon, ja [[Drinan silta]] on hänen tunnetuimpia teoksiaan. Itse en ole lukenut sitä kokonaan, mutta kyllä sen sivuja on vilkaistu.
+KYSYMYS: Kerro lisää: Ivo Andrićin
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+AIEMPI KYSYMYS: Mistä romaani Drinan silta kertoo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Ivo Andrićin]] romaani Drinan silta seuraa [[Višegradin]] kaupunkia ja sen kivisiltaa useiden vuosisatojen ajan. Silta toimii kirjan keskuksena: sen ympärillä elävät eri uskontoja ja kansallisuuksia edustavat ihmiset, ja heidän elämänsä, ilonsa ja surunsa kulkevat sillan yli sukupolvesta toiseen. Teos on historiallinen kronikka, joka alkaa ottomaanien ajasta ja ulottuu 1900-luvulle. Andrić sai kirjallisuuden Nobel-palkinnon, ja [[Drinan silta]] on hänen tunnetuimpia teoksiaan. Itse en ole lukenut sitä kokonaan, mutta kyllä sen sivuja on vilkaistu.
+KYSYMYS: Kerro lisää: Višegradin
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovakia — maalehti / Keksinnöt: Sateenvarjo selässä] 1914 — Štefan Banič syntyi 1870 Smolenican lähellä ja muutti Yhdysvaltoihin, jossa hän työskenteli hiilikaivoksessa Pennsylvaniassa. Nähtyään lentokoneen putoamisen 1912 hän rakensi sateenvarjon kaltaisen laskuvarjon, joka kiinnitettiin kantajan kehoon. Patentti myönnettiin 25. elokuuta 1914 numerolla 1 108 484. Hänen kerrotaan kokeilleen keksintöään Washingtonissa hyppäämällä ensin 15-kerroksisen talon katolta ja sitten lentokoneesta, mutta varmaa näyttöä ei ole. Myöhemmin hän palasi kotiseudulleen ja auttoi tutkimaan Drinan luolaa.
+AIEMPI KYSYMYS: Mistä romaani Drinan silta kertoo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Ivo Andrićin]] romaani Drinan silta seuraa [[Višegradin]] kaupunkia ja sen kivisiltaa useiden vuosisatojen ajan. Silta toimii kirjan keskuksena: sen ympärillä elävät eri uskontoja ja kansallisuuksia edustavat ihmiset, ja heidän elämänsä, ilonsa ja surunsa kulkevat sillan yli sukupolvesta toiseen. Teos on historiallinen kronikka, joka alkaa ottomaanien ajasta ja ulottuu 1900-luvulle. Andrić sai kirjallisuuden Nobel-palkinnon, ja [[Drinan silta]] on hänen tunnetuimpia teoksiaan. Itse en ole lukenut sitä kokonaan, mutta kyllä sen sivuja on vilkaistu.
+KYSYMYS: Kerro lisää: Drinan silta
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+AIEMPI KYSYMYS: Mitä suurvisiirin työhön kuului?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suurvisiiri oli ottomaanien sulttaanin ylin ministeri, jonka vastuulla oli valtakunnan päivittäinen hallinto. Hän johti sulttaanin neuvostoa eli [[divaania]], valvoi virkamiehiä ja veroja ja vastasi usein myös sotilasasioista. Sulttaani saattoi antaa hänelle suuren vallan, ja sodan aikana suurvisiiri saattoi johtaa armeijaa. [[Višegradin]] sillan tilaaja [[Mehmed-pasha Sokolović]] toimi suurvisiirinä 1500-luvulla ja käytti asemaansa rakennuttaakseen sillan kotiseutunsa kunniaksi. Virka oli arvostettu mutta myös vaarallinen, sillä sulttaanin suosio saattoi vaihtua. Raskas virka, ja yhtä raskas oli pitkä vastaus.
+KYSYMYS: Kerro lisää: divaania
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+AIEMPI KYSYMYS: Mitä suurvisiirin työhön kuului?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Suurvisiiri oli ottomaanien sulttaanin ylin ministeri, jonka vastuulla oli valtakunnan päivittäinen hallinto. Hän johti sulttaanin neuvostoa eli [[divaania]], valvoi virkamiehiä ja veroja ja vastasi usein myös sotilasasioista. Sulttaani saattoi antaa hänelle suuren vallan, ja sodan aikana suurvisiiri saattoi johtaa armeijaa. [[Višegradin]] sillan tilaaja [[Mehmed-pasha Sokolović]] toimi suurvisiirinä 1500-luvulla ja käytti asemaansa rakennuttaakseen sillan kotiseutunsa kunniaksi. Virka oli arvostettu mutta myös vaarallinen, sillä sulttaanin suosio saattoi vaihtua. Raskas virka, ja yhtä raskas oli pitkä vastaus.
+KYSYMYS: Kerro lisää: Mehmed-pasha Sokolović
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Menovinkit] Bosnia ja Hertsegovina on pieni maa, mutta sen aarteet on viety verkkoon kolmiulotteisina: museosaleissa voi kävellä, keskiaikaisia hautakiviä kääntää kädessä ja Mostarin siltaa katsoa suorana.
+AIEMPI KYSYMYS: Mikä on Drina-joki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, Drina on Balkanin joki, joka kulkee pitkälti [[Bosnia ja Hertsegovinan]] ja Serbian rajalla. Se laskee [[Save-jokeen]], joka jatkaa Tonavaan. Joen kaksi latvahaaraa kohtaavat vuoristossa, ja alajuoksulla Drina on kulkenut syvässä, vehreässä laaksossa. Višegradissa sen yli kaartuu kivinen [[Sokolovićin silta]], jonka yksitoista kaarta tekevät joesta tunnetun. Tarkkaa pituutta en muista, joten jätän luvun pois. Hyvä joki lentää pitkin, jos ei yhtään eksy.
+KYSYMYS: Kerro lisää: Bosnia ja Hertsegovinan
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+- [Porto Velho — kaupunkilehti / Porto Velho: Aurinko laskee jokeen joka ilta] Kun ilta saapuu, Porto Velhon rantaraitille kokoontuu ihmisiä katsomaan auringonlaskua Rio Madeiran ylle - se on kaupungin vakiintunut ilta-askare siinä missä iltakävely muualla. Joelta palaa samaan aikaan kalastajaveneitä, jotka ovat olleet päivän saaliilla, sillä joki on monelle perheelle yhä tärkein toimeentulon lähde. Saalis myydään usein heti rantatorilla tuoreena, ennen kuin se ehtii pilaantua trooppisessa lämmössä. Sademetsän ilmasto tekee illoista kosteita ja lämpimiä ympäri vuoden, joten auringonlasku on myös hetki, jolloin päivän pahin helle vihdoin hellittää ja kaupunki herää toiseen elämäänsä.
+AIEMPI KYSYMYS: Mikä on Drina-joki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, Drina on Balkanin joki, joka kulkee pitkälti [[Bosnia ja Hertsegovinan]] ja Serbian rajalla. Se laskee [[Save-jokeen]], joka jatkaa Tonavaan. Joen kaksi latvahaaraa kohtaavat vuoristossa, ja alajuoksulla Drina on kulkenut syvässä, vehreässä laaksossa. Višegradissa sen yli kaartuu kivinen [[Sokolovićin silta]], jonka yksitoista kaarta tekevät joesta tunnetun. Tarkkaa pituutta en muista, joten jätän luvun pois. Hyvä joki lentää pitkin, jos ei yhtään eksy.
+KYSYMYS: Kerro lisää: Save-jokeen
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+AIEMPI KYSYMYS: Mikä on Drina-joki?
+AIEMPI VASTAUS (Livia):
+Tuota niin, Drina on Balkanin joki, joka kulkee pitkälti [[Bosnia ja Hertsegovinan]] ja Serbian rajalla. Se laskee [[Save-jokeen]], joka jatkaa Tonavaan. Joen kaksi latvahaaraa kohtaavat vuoristossa, ja alajuoksulla Drina on kulkenut syvässä, vehreässä laaksossa. Višegradissa sen yli kaartuu kivinen [[Sokolovićin silta]], jonka yksitoista kaarta tekevät joesta tunnetun. Tarkkaa pituutta en muista, joten jätän luvun pois. Hyvä joki lentää pitkin, jos ei yhtään eksy.
+KYSYMYS: Kerro lisää: Sokolovićin silta
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kaupunkilehti / Damaskos: Keittiö, majatalo ja moskeija samalla pihalla] Sulttaani Suleiman I:n käskystä joen rannalle rakennettiin vuosina 1554–1559 rakennusryhmä, jonka piirustukset laati hoviarkkitehti Mimar Sinan. Se toi ottomaanien rakennustyylin Damaskokseen: moskeijan päällä on ottomaanikupolit ja sen kulmilla kaksi ohutta minareettia, mutta seinien vaalean ja tumman kiven vuorottelu on paikallista työtä. Pihan lounaislaidalla on moskeija ja vastapäätä keittiörakennus eli imaret, jonka kummallakin sivulla on majoitussiipi. Itäpuolelle nousi vuosina 1566–1567 medrese. Ryhmästä tuli Mekkaan matkaavien pyhiinvaeltajien kokoontumispaikka: karavaani varustettiin täällä ennen lähtöä etelään.
+- [Ankara — kaupunkilehti / Ankara: Luostari ensin, moskeija sen viereen] Numan-niminen mies tapasi opettajansa uhrijuhlan aikaan ja otti nimen Bayram. Opettajan kuoltua vuonna 1412 hän palasi Ankaraan ja perusti Bayrami-veljeskunnan, jonka opetusta tultiin kuuntelemaan kauempaakin. Hacı Bayram Veli eli vuosina 1352–1430, ja hän rakensi dervissiluostarin sille paikalle, jossa nyt seisovat hänen hautansa ja moskeija. Moskeija valmistui 1427–28, kaksi vuotta ennen hänen kuolemaansa, seldžukkityyliin; arkkitehtia ei tiedetä. Käyttöalaa on alakerrassa 437 ja yläkerrassa 263 neliömetriä. 1500-luvulla Mimar Sinan teki rakennukseen kunnostustöitä, ja 1700-luvulla seiniin lisättiin Kütahyan laattoja.
+AIEMPI KYSYMYS: Kuka Mehmed-pasha Sokolović oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan, mielenkiintoinen mies. Mehmed-pasha Sokolović syntyi Bosniassa Višegradin seudulla ja päätyi lapsena ottomaanien palvelukseen devširme-järjestelmän kautta. Hän nousi uralla huipulle ja toimi suurvisiirinä useiden sulttaanien aikana 1500-luvun loppupuoliskolla. Hän käytti valtaansa myös rakennuttamalla, ja tunnetuin työ on kotiseudun [[Drinan silta]], jonka suunnitteli [[Mimar Sinan]] ja joka valmistui vuonna 1577. Tarkkoja vuosilukuja hänen virka-ajastaan en ole varma, joten jätän ne pois. Kotiseutu muistettiin hienosti, sen myönnän.
+KYSYMYS: Kerro lisää: Mimar Sinan
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Sarajevo: Sevdalinka — kaupunkilaulu kaipuusta] Sevdalinka on Bosnian oma laulutyyli: hidas, koristeltu ja aina kaipuusta. Nimi tulee turkin sanasta sevda, rakkaudenkaipuu. Laulut ovat vanhoja kaupunkilauluja, joita säestettiin sazilla, pitkäkaulaisella kielisoittimella, ja jotka siirtyivät suullisesti sukupolvelta toiselle. Radio teki niistä 1900-luvulla koko maan musiikkia: Nada Mamula muutti Sarajevoon ja lauloi Radio Sarajevon ohjelmissa, ja radioarkistoihin jäi häneltä yli 150 levytystä.
+AIEMPI KYSYMYS: Mikä on sevdalinka?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  [[sevdalinka]] on bosnialainen perinteinen laulutyyli, joka kertoo usein rakkaudesta, kaipauksesta ja surusta. Sana [[sevdah]] tulee turkin kautta arabiasta ja viittaa tunteelliseen kaipuuseen. Laulut ovat hitaita ja haikeita, ja niissä kuuluu [[Balkanin]] sekä [[ottomaanien]] vaikutus. Perinteisesti niitä esitettiin ilman säestystä tai pienellä soittimella, ja myöhemmin mukaan on tullut esimerkiksi harmonikka. Tarkkaa alkuperää ja aikaa tutkijat eivät tiedä varmasti. Hiljainen laulu sopii hyvin sillan ylle, jos kyyhky saa ehdottaa.
+KYSYMYS: Kerro lisää: sevdalinka
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mikä on sevdalinka?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  [[sevdalinka]] on bosnialainen perinteinen laulutyyli, joka kertoo usein rakkaudesta, kaipauksesta ja surusta. Sana [[sevdah]] tulee turkin kautta arabiasta ja viittaa tunteelliseen kaipuuseen. Laulut ovat hitaita ja haikeita, ja niissä kuuluu [[Balkanin]] sekä [[ottomaanien]] vaikutus. Perinteisesti niitä esitettiin ilman säestystä tai pienellä soittimella, ja myöhemmin mukaan on tullut esimerkiksi harmonikka. Tarkkaa alkuperää ja aikaa tutkijat eivät tiedä varmasti. Hiljainen laulu sopii hyvin sillan ylle, jos kyyhky saa ehdottaa.
+KYSYMYS: Kerro lisää: sevdah
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Moskeija joka toi mukanaan koko korttelin] 1531 — Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna 1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla alueelle kirjaston, koraanikoulun, kellotornin ja katetun basaarin — hänen lahjoituksensa loivat pohjan koko Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. Se selvisi 1990-luvun piirityksestä vaurioituneena mutta pystyssä, ja se on sittemmin kunnostettu.
+AIEMPI KYSYMYS: Mikä on sevdalinka?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  [[sevdalinka]] on bosnialainen perinteinen laulutyyli, joka kertoo usein rakkaudesta, kaipauksesta ja surusta. Sana [[sevdah]] tulee turkin kautta arabiasta ja viittaa tunteelliseen kaipuuseen. Laulut ovat hitaita ja haikeita, ja niissä kuuluu [[Balkanin]] sekä [[ottomaanien]] vaikutus. Perinteisesti niitä esitettiin ilman säestystä tai pienellä soittimella, ja myöhemmin mukaan on tullut esimerkiksi harmonikka. Tarkkaa alkuperää ja aikaa tutkijat eivät tiedä varmasti. Hiljainen laulu sopii hyvin sillan ylle, jos kyyhky saa ehdottaa.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Višegrad (historia)
+Tietoruudun teksti: Drina-joen yli kaartuu yksitoista kivikaarta, yhteensä 179,5 metriä. Sillan tilasi suurvisiiri Mehmed-pasha Sokolović kotiseutunsa kunniaksi, ja sen suunnitteli sama Mimar Sinan, joka rakensi sulttaanin tärkeimmät rakennukset — työ valmistui 1577. Silta on Unescon maailmanperintökohde vuodesta 2007, ja se on koko maailmalle tuttu Ivo Andrićin romaanista Drinan silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tripoli — kaupunkilehti / Tripoli: Ottomaanien kellotorni seisoo kujien keskellä] Medinan aukiolla seisoo ottomaaniaikainen kellotorni, yksi vanhankaupungin tunnetuimmista maamerkeistä. Torni on nelisivuinen ja kapenee ylöspäin kerroksittain: jokaisen kerroksen kulmissa on parittain pylväitä, ja niiden päällä kiertää koristeltu räystäslista. Muotokieli on eurooppalaisen ja ottomaanisen sekoitus — samaa yhdistelmää näkee myös medinan moskeijoissa, joissa marmoripylväät ja kaakelipinnat ovat rinnakkain arabialaisen kalligrafian kanssa. Torni on lähellä Souq al-Mushirin katua, ja se on kujilta helpoin kiintopiste: kun torni näkyy, tietää olevansa medinan keskellä. Rappaus on paikoin lohkeillut ja paljastanut alta kiviaineksen.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Laji jonka nimi tarkoittaa kaihoa] Ottomaanien kausi – nykyaika — Sevdalinka on bosnialainen kaupunkilainen kansanlaulun laji, joka syntyi Ottomaanien vallan aikana ja yhdistää ottomaani-, sefardijuutalaista ja slaavilaista musiikkiperinnettä. Nimi juontuu sanasta sevdah, joka tulee arabian sydäntä ja mustaa sappea tarkoittavasta käsitteestä ja viittaa syvään, usein onnettomaan rakkauden kaihoon. Perinteisesti laulua säesti saz, pitkä­kaulainen luuttu, myöhemmin haitari. Nykyisin lajia elvyttää muun muassa muusikko Damir Imamović, tunnetun sevdalinka-laulaja Zaim Imamovićin pojanpoika, joka on esiintynyt lajilla kansainvälisillä musiikkifestivaaleilla.
+AIEMPI KYSYMYS: Mikä on sevdalinka?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  [[sevdalinka]] on bosnialainen perinteinen laulutyyli, joka kertoo usein rakkaudesta, kaipauksesta ja surusta. Sana [[sevdah]] tulee turkin kautta arabiasta ja viittaa tunteelliseen kaipuuseen. Laulut ovat hitaita ja haikeita, ja niissä kuuluu [[Balkanin]] sekä [[ottomaanien]] vaikutus. Perinteisesti niitä esitettiin ilman säestystä tai pienellä soittimella, ja myöhemmin mukaan on tullut esimerkiksi harmonikka. Tarkkaa alkuperää ja aikaa tutkijat eivät tiedä varmasti. Hiljainen laulu sopii hyvin sillan ylle, jos kyyhky saa ehdottaa.
+KYSYMYS: Kerro lisää: ottomaanien
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla: Pimeä maailma kalkkikiven alla] Kalkkikivi liukenee veteen hitaasti mutta väsymättä, ja vuosituhannet ovat kaivertaneet Nullarborin alle satoja luolia, pystykuiluja ja maanalaisia järviä. Osa luolista, kuten Thampana, avautuu suoraan pinnalle pyöreänä aukkona, josta valo pilkottaa syvälle kaivautuneeseen halliin. Merkittävin löytö tehtiin Koonalda-luolasta, jonne muinaiset ihmiset kiipesivät yli 20 000 vuotta sitten louhimaan piikiveä pimeässä sormin – seinille jääneet piirrosurat ovat Australian vanhimpia tunnettuja ihmiskäden jälkiä täysin valottomassa tilassa. Luola sai kansallisen suojelun vasta 2014, yli 50 vuotta löydön jälkeen.
+AIEMPI KYSYMYS: Miksi karstijoen vesi on niin kylmää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo, vaikka kylmä vesi ei kyyhkyn lempiaihe oo. Karstijoen vesi on kylmää, koska suuri osa siitä on peräisin sadevedestä ja lumen sulamisvedestä, joka suodattuu [[kalkkikiven]] rakoihin ja virtaa maan alla ennen kuin purkautuu lähteinä pintaan. Maan alla vesi ei lämpene auringossa vaan omaksuu kallion lämpötilan, joka vuoristossa on matala. [[Neretvan]] kaltaisessa joessa korkeus, vuoristoilmasto ja syvät, varjoisat kanjonit pitävät lämpötilan alhaisena, ja lähdevesi virtaa niin nopeasti, ettei se ehdi lämmetä matkalla. Vastaavaa on muillakin [[karstialueen]] joilla. Kyl siin siivet jäätyis pelkästä ajatuksesta.
+KYSYMYS: Kerro lisää: kalkkikiven
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+AIEMPI KYSYMYS: Miksi karstijoen vesi on niin kylmää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo, vaikka kylmä vesi ei kyyhkyn lempiaihe oo. Karstijoen vesi on kylmää, koska suuri osa siitä on peräisin sadevedestä ja lumen sulamisvedestä, joka suodattuu [[kalkkikiven]] rakoihin ja virtaa maan alla ennen kuin purkautuu lähteinä pintaan. Maan alla vesi ei lämpene auringossa vaan omaksuu kallion lämpötilan, joka vuoristossa on matala. [[Neretvan]] kaltaisessa joessa korkeus, vuoristoilmasto ja syvät, varjoisat kanjonit pitävät lämpötilan alhaisena, ja lähdevesi virtaa niin nopeasti, ettei se ehdi lämmetä matkalla. Vastaavaa on muillakin [[karstialueen]] joilla. Kyl siin siivet jäätyis pelkästä ajatuksesta.
+KYSYMYS: Kerro lisää: Neretvan
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+AIEMPI KYSYMYS: Miksi karstijoen vesi on niin kylmää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo, vaikka kylmä vesi ei kyyhkyn lempiaihe oo. Karstijoen vesi on kylmää, koska suuri osa siitä on peräisin sadevedestä ja lumen sulamisvedestä, joka suodattuu [[kalkkikiven]] rakoihin ja virtaa maan alla ennen kuin purkautuu lähteinä pintaan. Maan alla vesi ei lämpene auringossa vaan omaksuu kallion lämpötilan, joka vuoristossa on matala. [[Neretvan]] kaltaisessa joessa korkeus, vuoristoilmasto ja syvät, varjoisat kanjonit pitävät lämpötilan alhaisena, ja lähdevesi virtaa niin nopeasti, ettei se ehdi lämmetä matkalla. Vastaavaa on muillakin [[karstialueen]] joilla. Kyl siin siivet jäätyis pelkästä ajatuksesta.
+KYSYMYS: Kerro lisää: karstialueen
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+AIEMPI KYSYMYS: Mitä kaloja Neretvan vesistössä elää?
+AIEMPI VASTAUS (Livia):
+Kato, kalat. Ne kiinnostaa minua lähinnä ylhäältä päin. [[Neretvan]] vesistössä elää useita kotoperäisiä kalalajeja, eli lajeja, joita ei tavata muualla. Tunnetuimpia ovat taimenet, kuten [[marmoritaimen]] ja Adrianmeren valuma-alueen oma pehmeäsuinen taimen, joka tunnetaan nimellä Salmo obtusirostris. Täydellisestä lajilistasta en ole varma, ja kotoperäisten kalojen tarkka määrä vaihtelee lähteestä riippuen. Niiden runsaus selittyy sillä, että karstialueen joet ovat pitkään olleet toisistaan eristyneitä ja kylmä, puhdas vesi on suosinut erikoistuneita lajeja. Taimenet viihtyvät nimenomaan [[kylmässä]] ja happirikkaassa vedessä, jollaista vuoristojoki tarjoaa. No, ei paha kalatieto linnulta.
+KYSYMYS: Kerro lisää: marmoritaimen
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+- [Peru — maalehti / Luonto: Kylmä meri keskellä tropiikkia] Perun rannikkoa pitkin virtaa pohjoiseen kylmä ja vähäsuolainen Humboldtin merivirta, joka ulottuu tuhannen kilometrin päähän merelle. Pintavesi jäähtyy Perun edustalla kuuteentoista asteeseen, kun trooppisilla merillä ollaan yleensä yli kahdessakymmenessäviidessä. Kumpuaminen nostaa ravinteet pintaan, ja virrasta saadaan 18–20 prosenttia koko maailman merikalansaaliista. Kalan päällä elää valtava merilintu- ja hyljekanta. Virran nimesi Alexander von Humboldt, vaikka José de Acosta kuvasi sen 250 vuotta aiemmin.
+AIEMPI KYSYMYS: Mitä kaloja Neretvan vesistössä elää?
+AIEMPI VASTAUS (Livia):
+Kato, kalat. Ne kiinnostaa minua lähinnä ylhäältä päin. [[Neretvan]] vesistössä elää useita kotoperäisiä kalalajeja, eli lajeja, joita ei tavata muualla. Tunnetuimpia ovat taimenet, kuten [[marmoritaimen]] ja Adrianmeren valuma-alueen oma pehmeäsuinen taimen, joka tunnetaan nimellä Salmo obtusirostris. Täydellisestä lajilistasta en ole varma, ja kotoperäisten kalojen tarkka määrä vaihtelee lähteestä riippuen. Niiden runsaus selittyy sillä, että karstialueen joet ovat pitkään olleet toisistaan eristyneitä ja kylmä, puhdas vesi on suosinut erikoistuneita lajeja. Taimenet viihtyvät nimenomaan [[kylmässä]] ja happirikkaassa vedessä, jollaista vuoristojoki tarjoaa. No, ei paha kalatieto linnulta.
+KYSYMYS: Kerro lisää: kylmässä
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyrmontin silta] 1858 ja 1902 Ensimmäinen Pyrmontin silta avattiin 17. maaliskuuta 1858. Se oli puupaalusilta, jonka keskellä oli rautainen kääntyvä osa laivoja varten, ja ylityksestä perittiin pennin tulli. Kahden ensimmäisen viikon aikana tullin maksoi 20 000 jalankulkijaa, ja sillan yli kulki 932 kärryä ja rahtirattaita, 43 kevyttä kaksipyöräistä, 17 vaunua sekä 125 hevosta ratsastajineen. Tämä silta oli paikallaan isoisän matkan aikaan. Hallitus osti sen sillanomistajayhtiöltä 1884 hintaan 52 500 puntaa ja poisti tullin. Uudesta sillasta järjestettiin kilpailu 1891, mutta lama pysäytti hankkeen. Vasta 1894 julkisten töiden komitea valitsi noin kahdestakymmenestäkuudesta ehdotuksesta oman viraston teräsr…
+- [Kolkata — kohdekartta / Kohdekartta: Howrah-silta] ponttonisilta 1874, nykyinen 1943 Nykyinen Howrah-silta korvasi samalla paikalla olleen ponttonisillan, ja siksi sen alkuperäinen nimi oli New Howrah Bridge. Rakennustyö alkoi 1936 ja valmistui 1942; liikenteelle silta avattiin 3. helmikuuta 1943. Nimi vaihtui 14. kesäkuuta 1965 Rabindra Setuksi runoilija Rabindranath Tagoren mukaan, mutta puheessa se on yhä Howrah-silta. Sillassa ei ole yhtään mutteria eikä pulttia: koko rakenne on niitattu. Terästä kului 26 500 tonnia, ja siitä 23 000 tonnia oli Tata Steelin kehittämää Tiscrom-lujuusterästä. Perustuksia varten upotettiin valtavat kaivinkaivot, ja yhtenä yönä maa niiden alla petti niin että koko massa vajosi kerralla kaksi jalkaa — tärähdy…
+AIEMPI KYSYMYS: Miksi Mostarin Vanha silta on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Ai se silta. Sen minä muistan, vaikka en uskaltanut laskeutua alas. Mostarin [[Vanha silta]] ylittää Neretvan yhdellä korkealla kaarella, ja se rakennettiin 1500-luvulla ottomaanien aikana. Silta tuhoutui 1990-luvun sodassa ja rakennettiin uudelleen, minkä jälkeen se on kuulunut [[UNESCOn]] maailmanperintökohteisiin. Se on tullut tunnetuksi sekä muotonsa että perinteensä vuoksi: nuoret miehet ovat hypänneet sillalta jokeen jo pitkään, ja nykyisin hypystä järjestetään kilpailu. Sillan ympärillä oleva kaupunginosa on hyvä esimerkki ottomaanien ajan kaupunkirakenteesta. Tarkkaa vuotta en tässä uskalla sanoa, koska lähteet antavat rakentamisajalle hieman vaihtelevia lukuja.
+
+Sillalta hyppääminen on kyyhkyn silmin hyvin outoa, koska me lennämme alas mieluummin siivet auki.
+KYSYMYS: Kerro lisää: Vanha silta
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+AIEMPI KYSYMYS: Miksi Mostarin Vanha silta on niin kuuluisa?
+AIEMPI VASTAUS (Livia):
+Ai se silta. Sen minä muistan, vaikka en uskaltanut laskeutua alas. Mostarin [[Vanha silta]] ylittää Neretvan yhdellä korkealla kaarella, ja se rakennettiin 1500-luvulla ottomaanien aikana. Silta tuhoutui 1990-luvun sodassa ja rakennettiin uudelleen, minkä jälkeen se on kuulunut [[UNESCOn]] maailmanperintökohteisiin. Se on tullut tunnetuksi sekä muotonsa että perinteensä vuoksi: nuoret miehet ovat hypänneet sillalta jokeen jo pitkään, ja nykyisin hypystä järjestetään kilpailu. Sillan ympärillä oleva kaupunginosa on hyvä esimerkki ottomaanien ajan kaupunkirakenteesta. Tarkkaa vuotta en tässä uskalla sanoa, koska lähteet antavat rakentamisajalle hieman vaihtelevia lukuja.
+
+Sillalta hyppääminen on kyyhkyn silmin hyvin outoa, koska me lennämme alas mieluummin siivet auki.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Budapest — kohdekartta / Kohdekartta: Gellértinvuori] 1850–1854 Gellértinvuori kohoaa 235 metrin korkeuteen Tonavan yllä, ja sen nimi tulee piispa Gellertistä, joka surmattiin kukkulalla kansannousussa vuonna 1046 — tarinan mukaan hänet suljettiin piikkitynnyriin ja vieritettiin alas rinnettä. Kukkulan sisällä on kuumien lähteiden muovaamia luolia; vuonna 2007 sieltä löytyi kokonainen kristallien peittämä luola, joka on syntynyt jo 300 000–500 000 vuotta sitten. Huipulla seisoo Citadella-linnoitus, jonka Habsburgit rakensivat 1850-luvulla vuoden 1848 kansannousun jälkeen pitääkseen kaupunkia kurissa. Sen vieressä kohoaa iso pronssipatsas, jonka neuvostojoukot pystyttivät toisen maailmansodan jälkeen voiton muistoksi — patsas näkyy lähes joka p…
+AIEMPI KYSYMYS: Mikä tekee karstista erityisen maastotyypin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Karstista on pitkä lista, mut yritän tiivistää. Karsti on maastotyyppi, joka syntyy, kun vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kiveä. Tästä seuraa tyypillisiä muotoja: [[luolia]], vajoamia eli dolineja, kallionkoloja ja maan alle katoavia jokia, jotka voivat purkautua pintaan kaukana lähtöpisteestään. Pinnalla alue voi olla kuivaa, vaikka maan alla virtaa runsaasti vettä. Nimi karst tulee Sloveniasta, jossa Valvasor kuvasi ilmiötä jo 1600-luvun lopulla, ja siitä sana levisi tutkijoiden kielenkäyttöön. [[Dinaaristen Alppien]] alue on yksi Euroopan tunnetuimmista karstialueista. Ja kyl minä tän kaiken kannoin päässäni.
+KYSYMYS: Kerro lisää: luolia
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sarajevo — kaupunkilehti / Luonto: Lähde, joka antoi maalle nimen] Vrelo Bosne on karstilähde, jossa kylmä vesi nousee kalkkikiven läpi kirkkaisiin altaisiin Sarajevon länsilaidalla, Dinaaristen vuorten juurella. Täältä alkaa Bosna-joki, joka virtaa halki koko maan ja antoi sille nimen. Lähdealue on suojeltu luonnonmuistomerkki, jonka altaissa ja saarekkeissa elää yli kaksikymmentä eläinlajia ja kymmeniä kasviyhdyskuntia aivan pääkaupungin kupeessa.
+AIEMPI KYSYMYS: Mikä tekee karstista erityisen maastotyypin?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Karstista on pitkä lista, mut yritän tiivistää. Karsti on maastotyyppi, joka syntyy, kun vesi liuottaa kalkkikiveä tai muuta helposti liukenevaa kiveä. Tästä seuraa tyypillisiä muotoja: [[luolia]], vajoamia eli dolineja, kallionkoloja ja maan alle katoavia jokia, jotka voivat purkautua pintaan kaukana lähtöpisteestään. Pinnalla alue voi olla kuivaa, vaikka maan alla virtaa runsaasti vettä. Nimi karst tulee Sloveniasta, jossa Valvasor kuvasi ilmiötä jo 1600-luvun lopulla, ja siitä sana levisi tutkijoiden kielenkäyttöön. [[Dinaaristen Alppien]] alue on yksi Euroopan tunnetuimmista karstialueista. Ja kyl minä tän kaiken kannoin päässäni.
+KYSYMYS: Kerro lisää: Dinaaristen Alppien
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Luonto: Suisto, jossa asuu 5500 lajia] 1991 — Tonavan suisto on Euroopan suurin säilynyt kosteikko, ja se levittäytyy yli 4100 neliökilometrille Romanian ja Ukrainan rajalla. Alueella elää yli 5500 kasvi- ja eläinlajia — enemmän kuin missään muualla Euroopassa — ja monimuotoisuudessa sen ohittavat maailmassa vain Australian Suuri valliriutta ja Galapagossaaret. Suistossa pesii yli 300 lintulajia, muun muassa suurin osa Euroopan pelikaaneista ja punakaulahanhista, ja vesissä ui lähes 90 kalalajia, joukossa sampia. Unesco otti suiston maailmanperintöluetteloon vuonna 1991, vuosi sen jälkeen kun siitä oli tehty biosfäärialue.
+- [Macapá — kaupunkilehti / Suisto ja sademetsä] Macapán edustalla Amazon ei ole enää yksi joki vaan satojen kilometrien levyinen sokkelo kanavia, jotka työntävät liejuista makeaa vettä kauas Atlantille ja ruokkivat suistoa ympäröivää sademetsää.
+AIEMPI KYSYMYS: Mihin mereen Neretva laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joki on pitkä matkaaja, vähän kuin meikäläiset. Neretva laskee Adrianmereen, ja sen suisto sijaitsee Kroatian puolella. Joki virtaa ensin Bosnia ja Hertsegovinan vuoristossa, kulkee Mostarin kautta ja jatkaa kohti rannikkoa, jossa laakso levenee hedelmälliseksi [[suistoalueeksi]]. Neretvan suisto tunnetaan viljelyksistään, ja sitä pidetään tärkeänä hedelmä- ja vihannesviljelyalueena sekä lintujen levähdyspaikkana. Suisto on myös [[Adrianmeren]] rannikon kosteikoista merkittäviä. Joen kokonaispituudesta lähteet esittävät hieman erilaisia lukuja. Ei paha, kun muistin ihan kaiken suunnistamatta.
+KYSYMYS: Kerro lisää: suistoalueeksi
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Neretva (luonto · joki)
+Tietoruudun teksti: Neretva on Dinaaristen Alppien suurin karstijoki: 225 kilometriä, josta 208 Bosnia ja Hertsegovinan puolella. Nimen arvellaan tulevan indoeurooppalaisesta juuresta ner, "sukeltaa" — sama juuri näkyy bosnian sanassa roniti. Joki on niin kylmää, että Mostarin sillalta hyppääminen vaatii harjoittelua, ja sen vesistössä elää poikkeuksellisen paljon kotoperäisiä kaloja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Ruoka: Adrianmeren suola 1200-luvulta] 1200-luvulta — Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo 1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. Altaiden reunoilla kasvaa suolaa vaativia kasveja.
+AIEMPI KYSYMYS: Mihin mereen Neretva laskee?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Joki on pitkä matkaaja, vähän kuin meikäläiset. Neretva laskee Adrianmereen, ja sen suisto sijaitsee Kroatian puolella. Joki virtaa ensin Bosnia ja Hertsegovinan vuoristossa, kulkee Mostarin kautta ja jatkaa kohti rannikkoa, jossa laakso levenee hedelmälliseksi [[suistoalueeksi]]. Neretvan suisto tunnetaan viljelyksistään, ja sitä pidetään tärkeänä hedelmä- ja vihannesviljelyalueena sekä lintujen levähdyspaikkana. Suisto on myös [[Adrianmeren]] rannikon kosteikoista merkittäviä. Joen kokonaispituudesta lähteet esittävät hieman erilaisia lukuja. Ei paha, kun muistin ihan kaiken suunnistamatta.
+KYSYMYS: Kerro lisää: Adrianmeren
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Cayenne — kaupunkilehti / Cayenne: Sademetsän portilla] Cayenne rakentui kapealle niemelle Amazonin sademetsän reunalle, ja kaupungin portilta alkoi heti aarniometsä täynnä lajeja, joita Euroopassa ei tunnettu lainkaan. Yksi näyttävimmistä asukkaista on Morpho menelaus -perhonen, jonka siivet ovat päältä metallisen siniset, mutta joka lepää päivisin ja öisin siivet suljettuina: silloin näkyy vain ruskea alapinta täynnä pöllön silmiä muistuttavia täpliä, jotka säikäyttävät lintuja ja muita saalistajia. Isoisän matkapäiväkirjassa sademetsän hyönteiset ja perhoset olivat yksi Cayennen suurimmista ihmeistä, aivan toisenlaisia kuin mikään kotimaassa.
+AIEMPI KYSYMYS: Miten aarniometsä eroaa talousmetsästä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Metsä on metsä, mut tässä on iso ero. [[Aarniometsä]] on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. [[Perućica-aarniometsä]] on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.
+KYSYMYS: Kerro lisää: Aarniometsä
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+AIEMPI KYSYMYS: Miten aarniometsä eroaa talousmetsästä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Metsä on metsä, mut tässä on iso ero. [[Aarniometsä]] on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. [[Perućica-aarniometsä]] on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.
+KYSYMYS: Kerro lisää: Perućica-aarniometsä
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kaupunkilehti / Luonto: Pyökkikäytävä, joka kasvatettiin laivastolle] 1700-luku — Zoniënwoudin suorat, jopa 40 metriä korkeat pyökit eivät kasvaneet sattumalta. Itävaltalaisen kuvernöörin Kaarle Lotringilaisen kaudella 1700-luvun puolivälissä metsää ryhdyttiin hoitamaan ranskalaisen metsätalousopin mukaan: puut istutettiin tiheään, jotta ne kasvaisivat suorina ja korkeina kohti valoa — juuri sellaisina, joita laivanrakentajat tarvitsivat mastoiksi ja parruiksi. Isoisän matkan aikaan vanhimmat näistä pyökeistä ovat jo yli vuosisadan ikäisiä, ja niiden väliin muodostuneita pylväikköjä kutsutaan metsän katedraaleiksi valon suodattuessa latvuston läpi kuin kirkon ikkunoista. Osa metsästä on nykyään Unescon maailmanperintökohde muiden Euroopan ikimetsien joukossa.
+AIEMPI KYSYMYS: Miten aarniometsä eroaa talousmetsästä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Metsä on metsä, mut tässä on iso ero. [[Aarniometsä]] on luonnontilainen metsä, jota ihminen ei ole hakannut tai muokannut, ja siksi siinä on puita monenikäisiä ja -kokoisia. Siellä on paljon vanhoja ja kuolleita puita, jotka lahotessaan tarjoavat elinympäristön sienille, hyönteisille, linnuille ja sammalille. Talousmetsää sen sijaan hoidetaan puuntuotantoa varten: puut ovat usein samanikäisiä, ne hakataan kasvettuaan ja uusi metsä istutetaan tai uudistetaan. Siksi talousmetsä on yleensä lajistoltaan köyhempi. [[Perućica-aarniometsä]] on esimerkki harvinaisesta metsästä, jonka [[pyökit]] ovat kasvaneet vuosisatoja ilman hakkuita. Eikä kukaan ole koskaan kysynyt, mitä kyyhky metsästä ajattelee.
+KYSYMYS: Kerro lisää: pyökit
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+AIEMPI KYSYMYS: Millainen eläin on gemssi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gemssi on minulle vähän kaukainen serkku vuorilta, vaikka ei lintu. Gemssi eli [[gemssi]] on vuoristoissa elävä, vuohen näköinen sorkkaeläin, joka kuuluu vuohiantiloopeihin. Sillä on lyhyet, koukkumaiset sarvet, jotka ovat sekä uroksilla että naarailla, ja talvella turkki on tummempi kuin kesällä. Gemssi liikkuu varmasti jyrkillä rinteillä ja kallioilla ja elää usein laumoina. Euroopassa sitä tavataan [[Alpeilla]] ja [[Balkanin]] vuorilla, ja Balkanilla elää oma alalajinsa. Ravinnoksi kelpaavat ruohot, yrtit ja lehdet, ja talvella myös havut. Hyvä kysymys tuo, vaikka vuorikiipeily ei oo minun tapani.
+KYSYMYS: Kerro lisää: gemssi
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Slovenia — maalehti / Luonto: Smaragdikaunotar] nykyään — Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.
+- [Italia — maalehti / Luonto: Alppikauris pelastui viime hetkellä] 1800-luvun puolivälissä alppikauriita oli jäljellä alle sata, kaikki yhdessä laaksossa Gran Paradison vuorilla — muualta Alpeilta ne oli metsästetty loppuun. Italian kuningas rauhoitti viimeisen lauman omaksi metsästysmaakseen, ja tästä ristiriidasta alkoi pelastus: alueesta tuli 1922 Italian ensimmäinen kansallispuisto. Nykyään Alpeilla kiipeilee taas yli 50 000 kaurista, ja jokainen polveutuu Gran Paradison lauman eläimistä. Sarvekas kiipeilijä on nykyään puiston tunnuksessa.
+AIEMPI KYSYMYS: Millainen eläin on gemssi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gemssi on minulle vähän kaukainen serkku vuorilta, vaikka ei lintu. Gemssi eli [[gemssi]] on vuoristoissa elävä, vuohen näköinen sorkkaeläin, joka kuuluu vuohiantiloopeihin. Sillä on lyhyet, koukkumaiset sarvet, jotka ovat sekä uroksilla että naarailla, ja talvella turkki on tummempi kuin kesällä. Gemssi liikkuu varmasti jyrkillä rinteillä ja kallioilla ja elää usein laumoina. Euroopassa sitä tavataan [[Alpeilla]] ja [[Balkanin]] vuorilla, ja Balkanilla elää oma alalajinsa. Ravinnoksi kelpaavat ruohot, yrtit ja lehdet, ja talvella myös havut. Hyvä kysymys tuo, vaikka vuorikiipeily ei oo minun tapani.
+KYSYMYS: Kerro lisää: Alpeilla
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Moskeija joka toi mukanaan koko korttelin] 1531 — Gazi Husrev-begin moskeija valmistui Sarajevoon vuonna 1531, ja sitä pidetään yhtenä Balkanin merkittävimmistä ottomaaniarkkitehtuurin esimerkeistä. Sen rakennutti ottomaanikuvernööri Gazi Husrev-beg, joka rahoitti samalla alueelle kirjaston, koraanikoulun, kellotornin ja katetun basaarin — hänen lahjoituksensa loivat pohjan koko Baščaršijan kauppakorttelille. Moskeijan pihalla on hänen hautansa, ja rakennus toimii yhä Sarajevon päämoskeijana. Se selvisi 1990-luvun piirityksestä vaurioituneena mutta pystyssä, ja se on sittemmin kunnostettu.
+AIEMPI KYSYMYS: Millainen eläin on gemssi?
+AIEMPI VASTAUS (Livia):
+Ai tota. Gemssi on minulle vähän kaukainen serkku vuorilta, vaikka ei lintu. Gemssi eli [[gemssi]] on vuoristoissa elävä, vuohen näköinen sorkkaeläin, joka kuuluu vuohiantiloopeihin. Sillä on lyhyet, koukkumaiset sarvet, jotka ovat sekä uroksilla että naarailla, ja talvella turkki on tummempi kuin kesällä. Gemssi liikkuu varmasti jyrkillä rinteillä ja kallioilla ja elää usein laumoina. Euroopassa sitä tavataan [[Alpeilla]] ja [[Balkanin]] vuorilla, ja Balkanilla elää oma alalajinsa. Ravinnoksi kelpaavat ruohot, yrtit ja lehdet, ja talvella myös havut. Hyvä kysymys tuo, vaikka vuorikiipeily ei oo minun tapani.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+AIEMPI KYSYMYS: Kuinka korkea Maglić on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Korkeudet ovat just niitä lukuja, joissa kyyhky ei halua arvata. Maglić on Bosnia ja Hertsegovinan korkein vuori, ja sen huippu kohoaa noin 2 400 metrin korkeuteen. Se sijaitsee [[Sutjeskan kansallispuiston]] alueella lähellä Montenegron rajaa, ja rajalinja kulkee vuoren huipun tuntumassa. Tarkka korkeus ilmoitetaan eri lähteissä hieman eri tavoin, joten pyöristän mieluummin kuin arvaan. Vuoristo kuuluu Dinaaristen Alppien eteläosiin, ja sen rinteillä kasvaa laajoja metsiä ja korkeammalla kalliota. Matkalla huipulle ylitetään eri kasvillisuusvyöhykkeitä. Maglić on lisäksi [[Perućican]] aarniometsän yläpuolella kohoava näyttävä vuori.
+KYSYMYS: Kerro lisää: Sutjeskan kansallispuiston
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+AIEMPI KYSYMYS: Kuinka korkea Maglić on?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Korkeudet ovat just niitä lukuja, joissa kyyhky ei halua arvata. Maglić on Bosnia ja Hertsegovinan korkein vuori, ja sen huippu kohoaa noin 2 400 metrin korkeuteen. Se sijaitsee [[Sutjeskan kansallispuiston]] alueella lähellä Montenegron rajaa, ja rajalinja kulkee vuoren huipun tuntumassa. Tarkka korkeus ilmoitetaan eri lähteissä hieman eri tavoin, joten pyöristän mieluummin kuin arvaan. Vuoristo kuuluu Dinaaristen Alppien eteläosiin, ja sen rinteillä kasvaa laajoja metsiä ja korkeammalla kalliota. Matkalla huipulle ylitetään eri kasvillisuusvyöhykkeitä. Maglić on lisäksi [[Perućican]] aarniometsän yläpuolella kohoava näyttävä vuori.
+KYSYMYS: Kerro lisää: Perućican
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+AIEMPI KYSYMYS: Millainen lintu maakotka on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Maakotka on kyyhkyn silmin vähän pelottava kollega. [[Maakotka]] on suuri petolintu, jonka siipien kärkiväli on usein yli kaksi metriä. Sen höyhenpuku on tummanruskea, ja niskassa on kullanruskea sävy, josta nimi tulee. Se elää vuoristoissa, metsäisillä ja avoimilla alueilla ja metsästää pienempiä nisäkkäitä ja lintuja, ja välillä myös raatoja. Maakotka pesii yleensä korkeille kallioille tai suurille puille ja käyttää pesää usein vuosikausia. Laji on [[Euroopassa]] elänyt vuoristoseuduilla vakaammin kuin alankoalueilla, ja sen [[lentoa]] on helppo seurata ilmavirroissa kaarrellessa.
+
+Maakotkan lento on aivan eri sarjaa kuin kyyhkyn, ja minä kunnioitan sitä hiljaa ja turvaetäisyydeltä.
+KYSYMYS: Kerro lisää: Maakotka
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Enemmän lintuja kuin Euroopassa ja Pohjois-Amerikassa] Kolumbia on yksi maailman seitsemästätoista megadiversistä maasta, ja sillä on maailman suurin lajitiheys pinta-alaa kohti sekä eniten kotoperäisiä lajeja. Noin kymmenen prosenttia maapallon lajeista elää siellä. Lintulajeja on yli 1 900 — enemmän kuin Euroopassa ja Pohjois-Amerikassa yhteensä ja 18 prosenttia koko maailman lintulajeista. Maa on ensimmäinen myös orkidealajien ja kotoperäisten perhosten määrässä, ja siellä on 32 maabiomia ja 314 ekosysteemityyppiä.
+AIEMPI KYSYMYS: Millainen lintu maakotka on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Maakotka on kyyhkyn silmin vähän pelottava kollega. [[Maakotka]] on suuri petolintu, jonka siipien kärkiväli on usein yli kaksi metriä. Sen höyhenpuku on tummanruskea, ja niskassa on kullanruskea sävy, josta nimi tulee. Se elää vuoristoissa, metsäisillä ja avoimilla alueilla ja metsästää pienempiä nisäkkäitä ja lintuja, ja välillä myös raatoja. Maakotka pesii yleensä korkeille kallioille tai suurille puille ja käyttää pesää usein vuosikausia. Laji on [[Euroopassa]] elänyt vuoristoseuduilla vakaammin kuin alankoalueilla, ja sen [[lentoa]] on helppo seurata ilmavirroissa kaarrellessa.
+
+Maakotkan lento on aivan eri sarjaa kuin kyyhkyn, ja minä kunnioitan sitä hiljaa ja turvaetäisyydeltä.
+KYSYMYS: Kerro lisää: Euroopassa
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sutjeskan kansallispuisto (luonto · vuori)
+Tietoruudun teksti: Puiston sydämessä on Perućica, aarniometsä jota ei ole koskaan hakattu. Pyökit kasvavat siellä yli 60 metriä korkeiksi ja osa puista on 300 vuotta vanhoja. Puistossa on nähty karhuja, gemssejä, susia, villikissoja ja villivuohia, ja se on koti yli 300 lintulajille — muun muassa maakotkalle ja muuttohaukalle. Yllä kohoaa Maglić, maan korkein huippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kohdekartta / Kohdekartta: Iqaluitin lentoasema] 2018 Iqaluitin lentoasema on kaupungin ainoa ympärivuotinen yhteys muuhun maailmaan. Kiitotie 16/34 on asfalttia ja 2 623 metriä pitkä, mikä riittää useimmille nykyaikaisille suihkukoneille, ja kenttä on 34 metriä merenpinnan yläpuolella. Uusi, vanhaa suurempi matkustajaterminaali valmistui vanhan pohjoispuolelle vuonna 2018. Canadian North lentää Iqaluitiin Ottawasta, Yellowknifesta ja useista Nunavutin yhteisöistä. Paikalliset yhtiöt Air Nunavut, Canadian Helicopters, Nunasi Helicopters ja Unaalik Aviation hoitavat tilauslennot, ja Air Nunavut ja Keewatin Air lääkärikuljetukset. Kenttä on virallinen saapumislentoasema, mutta rajaviranomainen käsittelee vain yleisilmailukoneita, joissa on …
+- [Whitehorse — kohdekartta / Kohdekartta: Whitehorsen lentoasema] 1920 alkaen Keväällä 1920 kaupungin yläpuolisella rinteellä olevaa puutavaratonttia raivattiin kiitoradaksi, koska Yhdysvaltain armeijan Black Wolf Squadron oli tulossa neljällä de Havilland DH-4 -koneella. Sama kaistale palveli 1920-luvun lopulla kaivosyhtiötä ja Yukon Airways and Exploration Companya. Kenttää laajennettiin 1940–1941, ja 1942 se siirtyi Kanadan ilmavoimille osana Luoteista porrasreittiä, jota pitkin koneita siirrettiin pohjoisen kautta. Sotilastukikohta suljettiin 1968, ja kenttä palasi siviilikäyttöön. Kenttä nimettiin 15. joulukuuta 2008 Erik Nielsenin mukaan, joka edusti Yukonia pitkään Kanadan parlamentissa. Se on osa Kanadan kansallista lentoasemajärjestelmää ja Yukon…
+- [Yhdysvallat — maalehti / Lento] Pohjois-Carolinan hiekkasärkillä nousi 17. joulukuuta 1903 ilmaan kone, jonka lento kesti kaksitoista sekuntia — ja jonka kuvan otti mies, joka ei ollut koskaan ennen käyttänyt kameraa.
+AIEMPI KYSYMYS: Millainen lintu maakotka on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Maakotka on kyyhkyn silmin vähän pelottava kollega. [[Maakotka]] on suuri petolintu, jonka siipien kärkiväli on usein yli kaksi metriä. Sen höyhenpuku on tummanruskea, ja niskassa on kullanruskea sävy, josta nimi tulee. Se elää vuoristoissa, metsäisillä ja avoimilla alueilla ja metsästää pienempiä nisäkkäitä ja lintuja, ja välillä myös raatoja. Maakotka pesii yleensä korkeille kallioille tai suurille puille ja käyttää pesää usein vuosikausia. Laji on [[Euroopassa]] elänyt vuoristoseuduilla vakaammin kuin alankoalueilla, ja sen [[lentoa]] on helppo seurata ilmavirroissa kaarrellessa.
+
+Maakotkan lento on aivan eri sarjaa kuin kyyhkyn, ja minä kunnioitan sitä hiljaa ja turvaetäisyydeltä.
+KYSYMYS: Kerro lisää: lentoa
