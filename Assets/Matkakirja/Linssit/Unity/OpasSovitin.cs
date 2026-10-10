@@ -516,6 +516,9 @@ namespace Matkakirja.Natiivi
             LatausKuvaPaivita();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
+            // Pienellä muistilla ei esilatausta nykyintron aikana (juna 173, R18: 10 s:n pidon jälkeen palannut esilataus vei latauspaikat
+            // pyörivältä avausnäkymältä, ja kaukainen kaupunki näkyi intron 14. sekunnilla vetenä). Kierros esilataa vasta intron jälkeen.
+            kaupunki.IntroEsilatausPois = introKaynnissa && KaupunkiKuva.PieniMuisti;
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
             var esi = silmukka.Esilataus(MaaKorkeus);
             // Siirtoruudun aikana 1. kohde puolikkaalla tarkkuudella: yleiskuva saa kaistan, tarkka kohde latautuu laskeutumisessa.

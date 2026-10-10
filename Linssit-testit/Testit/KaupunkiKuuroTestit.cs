@@ -91,7 +91,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(c.Contains("if (EsilatausEstetty) { EsikameraPois(); return; }"), "esikamera");
             Oleta.Tosi(c.Contains("if (georef == null || juuri == null || nakymat == null || EsilatausEstetty) maara = 0;"), "reittikamerat");
             Oleta.Tosi(c.Contains("&& !kuormaValinta && !EsilatausEstetty;"), "lähikamera");
-            Oleta.Tosi(c.Contains("public bool EsilatausEstetty => KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1;") && c.Contains("pieniHata.Nollaa();"), "vain pienellä muistilla, nollaus avauksessa");
+            Oleta.Tosi(c.Contains("public bool EsilatausEstetty => (KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1) || IntroEsilatausPois;") && c.Contains("pieniHata.Nollaa();"), "vain pienellä muistilla, nollaus avauksessa");
+            string o = System.IO.File.ReadAllText(System.IO.Path.Combine(AppContext.BaseDirectory, "..", "..", "Assets", "Matkakirja", "Linssit", "Unity", "OpasSovitin.cs"));
+            Oleta.Tosi(o.Contains("kaupunki.IntroEsilatausPois = introKaynnissa && KaupunkiKuva.PieniMuisti;"), "R18: pienellä muistilla ei esilatausta intron aikana");
         }
 
         [Testi] static void AluskerrosKorkealla()

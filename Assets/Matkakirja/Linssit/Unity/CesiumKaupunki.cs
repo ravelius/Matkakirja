@@ -283,7 +283,9 @@ namespace Matkakirja.Natiivi
             HataPieniPalautusGt = Matkakirja.Linssit.Kierros.PieniMuistihata.PalautusOletus;
         readonly Matkakirja.Linssit.Kierros.PieniMuistihata pieniHata = new Matkakirja.Linssit.Kierros.PieniMuistihata();
         /// <summary>Pienen muistin hädän taso 1 tai 2: esikamera, reittikamerat ja lähikamera pois laattavalinnasta.</summary>
-        public bool EsilatausEstetty => KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1;
+        public bool EsilatausEstetty => (KaupunkiKuva.PieniMuisti && pieniHata.Taso >= 1) || IntroEsilatausPois;
+        /// <summary>OpasSovitin: pienen muistin laitteella nykyintron ajan esilataus pois (pyörivä avausnäkymä saa kaikki latauspaikat).</summary>
+        public bool IntroEsilatausPois;
         /// <summary>Karkean valinnan pikselikerroin muistihädässä (myös iPadilla, jossa KarkeaSkaala voi olla 1).</summary>
         public const float HataSkaala = 0.5f;   // 0,6 → 0,5 (juna 173: 0,6 ei vapauttanut tarpeeksi ennen jetsamia)
         float KarkeaNyt => muistiPysaytys ? Mathf.Min(KarkeaSkaala, HataSkaala) : KarkeaSkaala;
@@ -564,7 +566,7 @@ namespace Matkakirja.Natiivi
 #endif
             karkeaKaytossa = false; kuormaValinta = false; tarkkaAlku = -1f;
             hataKaytetty = muistiPysaytys = pysaytettyTassa = Tauko = hataSeis = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
-            pieniHata.Nollaa();
+            pieniHata.Nollaa(); IntroEsilatausPois = false;
             kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}, välimuisti {GoogleValimuistiNyt >> 20} Mt{(Mac ? $", Mac-profiili {MacProfiili}" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
