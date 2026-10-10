@@ -129,3 +129,12 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
   + `kokoa_v46v.zsh`. s5 = v1 + 0,4 × (v3b − v1) (atlas-v46u/tulokset/olavinlinna_s5_v3c.png), tornit kulmaraja 0,8; s11 v2t, torni
   `--valokuva 0.79,0,1,1`; kalliokaistat s12/14/16 v1s (kuori_ohje.py SEINAT 12–16; s13/s15 eivät ole kalliota). Ennen/jälkeen v46v/.
 - Seuraavat kalliot: ranking_kallio.py (scratchpad-malli: ranking.py + z −6,8…2,5) → (−11,8 −27,7), (−3,4 28,2) jne.
+
+## TEHTY 06.2x–07.0x
+
+- **Tukholman kaupungintalo v1** (PT hyväksyi 06.2x; samat ehdot kuin Eiffel + LS1:n julkisivuvalo omaan malliin pelin jälkeen):
+  `_valmiit/stadshuset-v1` (lahde/hae.py, osat.py, stadshuset.py, stadshuset_kuva.py, LAHTEET.md, leikkaus_latlon.json); OSM-osat
+  kattomuotoineen, pohjoissiipi booleanilla relaatiosta, päätornin lyhty + kruunut TULKINTA. lod0 6,8 k, portti 0. Karttaseppä tekee
+  ohjauskuvat (malli sh, kansio codex-ohje-sh, näkymät + torni) → tekoälypinnat → `tekoaly_koko.zsh sh v1 - pelkka-kohdistus` →
+  projisoi_tekseli.py sh (+ kalibrointi kuten RH v3b, tiili 150/76/60) → LS2 pari pysähdyksestä 15, Natiiviseppä kolmiot, LS1 yövalo.
+- Kallion mattaus odottaa 175-arkkia (PT).
