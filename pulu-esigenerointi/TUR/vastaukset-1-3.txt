@@ -51,14 +51,14 @@ Onko helmisalakka uhanalainen?
 
 ### 12.3
 KYSYMYS: Voiko Vanjärvessä uida?
-Kas vaan. Vanjärvessä voi uida, ja sen rannoilla on uimarantoja, joilla paikalliset ja matkailijat käyvät etenkin kesäisin. Vesi on hyvin [[emäksistä]], ja se tuntuu uidessa pehmeältä ja liukkaalta iholla. Silmiin ja haavoihin se voi kirvellä, joten silmät kannattaa pitää kiinni tai suojata ja suolaisen kuivumisen jälkeen ihon pesu makealla vedellä on suositeltavaa. Veden korkea pH-arvo, 9,7–9,8, tekee siitä erilaisen kuin tavallinen järvi. Itse en ole uinut, vain lentänyt yli. Kevyt veto kyllä.
+Kas vaan. [[Vanjärvessä]] voi uida, ja sen rannoilla on uimarantoja, joilla paikalliset ja matkailijat käyvät etenkin kesäisin. Vesi on hyvin [[emäksistä]], ja se tuntuu uidessa pehmeältä ja liukkaalta iholla. Silmiin ja haavoihin se voi kirvellä, joten silmät kannattaa pitää kiinni tai suojata ja suolaisen kuivumisen jälkeen ihon pesu makealla vedellä on suositeltavaa. Veden korkea [[pH-arvo]], 9,7–9,8, tekee siitä erilaisen kuin tavallinen järvi. Itse en ole uinut, vain lentänyt yli. Kevyt veto kyllä.
 JATKOT:
 Miksi Vanjärvi ei jäädy talvella?
 Mitä pH-arvo mittaa?
 
 ### 12.4
 KYSYMYS: Millaisia nähtävyyksiä Vanjärven rannalla on?
-Sepä sattui: tähän osaan vastata. Järven rannalla ja saarilla on pitkän historian jälkiä. Itäisellä rannalla Vanin kaupungin tuntumassa kohoaa muinaisen Urartun ajan [[linnoitus]] korkealla kalliolla, ja järven Akdamarin saarella on armenialainen kirkko, joka on rakennettu noin 900-luvulla ja jonka seiniä koristavat reliefit. Matkailijat tulevat myös ihastelemaan järven turkoosia vettä ja ympäröiviä vuoria. Seudulla on pitkä historia, ja tarkat rakennusvuodet vaihtelevat lähteittäin. Pitkältä ne kyllä näyttävät.
+Sepä sattui: tähän osaan vastata. Järven rannalla ja saarilla on pitkän historian jälkiä. Itäisellä rannalla Vanin kaupungin tuntumassa kohoaa muinaisen Urartun ajan [[linnoitus]] korkealla kalliolla, ja järven [[Akdamarin]] saarella on armenialainen kirkko, joka on rakennettu noin 900-luvulla ja jonka seiniä koristavat reliefit. Matkailijat tulevat myös ihastelemaan järven turkoosia vettä ja ympäröiviä vuoria. Seudulla on pitkä historia, ja tarkat rakennusvuodet vaihtelevat lähteittäin. Pitkältä ne kyllä näyttävät.
 JATKOT:
 Milloin Akdamarin kirkko on rakennettu?
 Mikä Urartu oli?
@@ -116,7 +116,7 @@ Mitä Halys-nimi tarkoittaa?
 
 ### 14.2
 KYSYMYS: Kuka voitti pimennyksen taistelun?
-Joo, tän minä tiedän. Kumpikaan osapuoli ei voittanut. Taistelu käytiin Lyydian ja Meedian välillä, ja kesken taistelun tapahtunut [[auringonpimennys]] pelästytti sotilaat niin, että taistelu keskeytettiin ja osapuolet solmivat rauhan. Rauhansopimusta vahvistettiin lähteiden mukaan myös avioliitolla kuningasperheiden kesken. Taistelun ajankohta on tavallisesti sidottu vuoteen 585 eaa., ja pimennys on antiikin kreikkalaisen historiankirjoituksen tunnetuimpia tähtitieteellisiä tapahtumia. Rajajoeksi vakiintui Halys, nykyinen Kızılırmak. Se on vanha tarina, mutta edelleen hyvä.
+Joo, tän minä tiedän. Kumpikaan osapuoli ei voittanut. Taistelu käytiin [[Lyydian]] ja Meedian välillä, ja kesken taistelun tapahtunut [[auringonpimennys]] pelästytti sotilaat niin, että taistelu keskeytettiin ja osapuolet solmivat rauhan. Rauhansopimusta vahvistettiin lähteiden mukaan myös avioliitolla kuningasperheiden kesken. Taistelun ajankohta on tavallisesti sidottu vuoteen 585 eaa., ja pimennys on antiikin kreikkalaisen historiankirjoituksen tunnetuimpia tähtitieteellisiä tapahtumia. Rajajoeksi vakiintui Halys, nykyinen Kızılırmak. Se on vanha tarina, mutta edelleen hyvä.
 JATKOT:
 Miten auringonpimennys syntyy?
 Miten muinaiset kansat selittivät pimennykset?
