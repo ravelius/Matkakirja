@@ -429,6 +429,16 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(nayta[0] && !nayta[1], "nimibudjetti pysäkeille ensin");
         }
 
+        [Testi] static void PaakaupunkiRajauksessaKaupungitonMaaAina()
+        {
+            // PT 10.10.2026 (web #4347): kaupungittoman maan pääkaupunki aina, muuten vain pelaajan maan.
+            Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(true, "SVK", "FRA", true), "ei rajausta: näkyy");
+            Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(false, "SRB", "FRA", false), "Belgrad (Serbialla ei laudan kaupunkia): aina");
+            Oleta.Tosi(NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", "SVK", true), "Bratislava Košicessa: näkyy");
+            Oleta.Tosi(!NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", "FRA", true), "Bratislava Pariisissa: piiloon");
+            Oleta.Tosi(!NimiLadonta.PaakaupunkiRajauksessa(false, "SVK", null, true), "maa tuntematon: piiloon");
+        }
+
         [Testi] static void NimiVaihtaaKylkeaKunOikeaVarattu()
         {
             // Web sijoitaKaupunginNimi: oikea → vasen → ylä → ala → kehä.

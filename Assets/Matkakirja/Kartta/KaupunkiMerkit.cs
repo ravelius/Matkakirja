@@ -236,12 +236,15 @@ namespace Matkakirja
             && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id) || (himmeat != null && himmeat.Contains(id)));
 
         /// <summary>
-        /// Pääkaupunkipiste (<see cref="kevyet"/>): linssin suodatin kuten kaupungeilla (luettelossa id), pelin rajauksessa vain pelaajan
-        /// maan pääkaupunki (<see cref="peliMaa"/>), ei aloitusvalinnan aikana (vain valittavat).
+        /// Pääkaupunkipiste (<see cref="kevyet"/>): linssin suodatin kuten kaupungeilla (luettelossa id), ei aloitusvalinnan aikana (vain
+        /// valittavat); pelin rajaus <see cref="NimiLadonta.PaakaupunkiRajauksessa"/>.
         /// </summary>
         bool KevytSuodatettu(Sisalto.Kaupunki k) =>
             (suodatin == null || suodatin.Contains(k.id)) && valintamerkkeja == 0
-            && (LinssiTila || peliSuodatin == null || (peliMaa != null && k.maa == peliMaa));
+            && NimiLadonta.PaakaupunkiRajauksessa(LinssiTila || peliSuodatin == null, k.maa, peliMaa, k.maa != null && pysakkiMaat.Contains(k.maa));
+
+        /// <summary>Maat (ISO3), joilla on laudan kaupunkeja (RakennaKaikki).</summary>
+        readonly HashSet<string> pysakkiMaat = new HashSet<string>();
 
         /// <summary>
         /// PELI OHJAA REITTEJÄ (build 13, pariteetti B10/D18/A3/A15/C18, löydökset 57 ja 60): webissä kaupungin
@@ -838,7 +841,7 @@ namespace Matkakirja
             yield return Sisalto.Hae<Sisalto.Kaupunki>("paakaupungit", k => paakaupungit = k, valinnainen: true);
             if (paakaupungit == null || paakaupungit.Length == 0) yield break;
             var pysakit = new HashSet<string>();
-            foreach (var m in merkit) pysakit.Add(m.kaupunki.id);
+            foreach (var m in merkit) { pysakit.Add(m.kaupunki.id); if (m.kaupunki.maa != null) pysakkiMaat.Add(m.kaupunki.maa); }
             yield return Rakenna(System.Array.FindAll(paakaupungit, k => k.id != null && !pysakit.Contains(k.id)), true);
         }
 

@@ -782,6 +782,14 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// PÄÄKAUPUNKIPISTE PELIN RAJAUKSESSA (skeema 1.60; PT 10.10.2026, pariteetti web #4347): ilman rajausta (ei peliä, maailmatila,
+        /// lento, linssinimet) näkyy aina. Rajauksessa maa, jolla EI ole laudan kaupunkia (Serbia, Albania, Montenegro, minivaltiot …),
+        /// näyttää pääkaupunkinsa aina, koska se on ainoa tie maahan; maa, jolla on laudan kaupunkeja, vain pelaajan maana.
+        /// </summary>
+        public static bool PaakaupunkiRajauksessa(bool eiRajausta, string maa, string pelaajanMaa, bool maallaPysakkeja) =>
+            eiRajausta || !maallaPysakkeja || (pelaajanMaa != null && maa == pelaajanMaa);
+
+        /// <summary>
         /// KAUPUNKIEN LADONTA (löydös 50 vaihe 2, web js/karttanimet.js ladoRuutunimet): varauksissa on jo nostojen
         /// ikonit; ensin varataan KAIKKIEN kaupunkien pisteet (pelimerkit pysyvät paikallaan), sitten nimiöt
         /// järjestyksessä. Nimiö näytetään, jos se ei osu mihinkään varattuun paitsi omaan pisteeseensä (nimiö alkaa
