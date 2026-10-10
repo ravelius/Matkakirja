@@ -1204,5 +1204,1222 @@
    "Kuka oli Konstantin Tih Asen?",
    "Miksi Bojanan kirkko on Unescon kohde?"
   ]
+ },
+ {
+  "kohde": "kohde:vitosa",
+  "kasite": "Kultaiset sillat",
+  "kysymys": "Kerro lisää: Kultaiset sillat",
+  "vastaus": "Kultaiset sillat on Vitošan rinteillä oleva kivijoki, jossa suuret lohkareet täyttävät laajan rinnemaaston kuin jähmettynyt virta. Kivijoet syntyvät, kun [[rapautuminen]] ja routa irrottavat kalliosta kappaleita, jotka siirtyvät hyvin hitaasti alarinnettä kohti; liike on niin vähäistä, ettei sitä silmin huomaa. Kivijokien muodostumisen yhdistetään yleensä kylmiin ilmastovaiheisiin, [[jääkauden]] aikoihin, mutta yksittäisen muodostuman tarkasta iästä ja synnystä esitetään eri näkemyksiä. Paikka on suosittu retkikohde, ja se on lähellä [[Sofiaa]].",
+  "linkit": [
+   "rapautuminen",
+   "jääkauden",
+   "Sofiaa"
+  ],
+  "jatkot": [
+   "Miten rapautuminen muuttaa kalliota?",
+   "Mitä muuta Vitošalla voi tehdä talvella?"
+  ]
+ },
+ {
+  "kohde": "kohde:vitosa",
+  "kasite": "Serdica",
+  "kysymys": "Kerro lisää: Serdica",
+  "vastaus": "Serdica oli roomalainen kaupunki nykyisen Sofian paikalla. Nimi viittaa traakialaiseen [[serdien]] heimoon, jonka asuinseudulle kaupunki syntyi, ja Rooman vallan aikana siitä kasvoi tärkeä keskus. Keisari [[Konstantinus Suuri]] viihtyi kaupungissa, ja hänen kerrotaan sanoneen: Serdica on minun Roomani. Kun [[Sofian metroa]] kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löydöt jätettiin näkyviin, ja nykyään matkustaja nousee liukuportaita ylös keskelle roomalaista katua.",
+  "linkit": [
+   "serdien",
+   "Konstantinus Suuri",
+   "Sofian metroa"
+  ],
+  "jatkot": [
+   "Keitä traakialaiset olivat?",
+   "Mitä Konstantinus Suuri teki Rooman valtakunnalle?"
+  ]
+ },
+ {
+  "kohde": "kohde:vitosa",
+  "kasite": "Pyhän Sofian kirkosta",
+  "kysymys": "Kerro lisää: Pyhän Sofian kirkosta",
+  "vastaus": "Sofian kaupunki on saanut nykyisen nimensä Pyhän Sofian kirkosta, joka on yhä kaupungin keskustassa. Nimi ei viittaa pyhään naiseen vaan Jumalan viisauteen: kreikan Hagia Sophia tarkoittaa pyhää viisautta, ja samaa nimeä kantaa Konstantinopolin [[Hagia Sofia]]. Nykyisen basilikan rakennusvaihe ajoitetaan lähteiden mukaan 500-luvulle, ja paikalla on ollut kirkkoja jo aiemmin. Keskiajalla kirkon nimi siirtyi kaupunkiin, joka oli aiemmin tunnettu muun muassa nimellä [[Serdica]]. [[Osmanien]] aikana kirkko muutettiin moskeijaksi, ja myöhemmin se kunnostettiin uudelleen kirkoksi.",
+  "linkit": [
+   "Hagia Sofia",
+   "Serdica",
+   "Osmanien"
+  ],
+  "jatkot": [
+   "Milloin kaupunki sai nimekseen Sofia?",
+   "Millainen Pyhän Sofian kirkko on sisältä?"
+  ]
+ },
+ {
+  "kohde": "kohde:vitosa",
+  "kasite": "banitsa",
+  "kysymys": "Kerro lisää: banitsa",
+  "vastaus": "Banitsa on kerroksittain taiteltua [[filotaikinaa]], jonka väliin levitetään munaa, jogurttia ja suolaista valkoista juustoa. Arkena se on aamiaispala, mutta [[uudenvuoden aattona]] siitä tulee ennustuskone: taikinaan kääritään pieniä paperilappuja tai esineitä, joista jokainen lupaa jotain, kuten terveyttä, rakkautta, rahaa tai matkan. Piirakka leikataan niin, että jokainen ruokailija saa oman palansa, ja se, jonka viipaleesta löytyy lappu, kantaa lupausta koko tulevan vuoden. Perinne ulottuu bulgarialaisessa ruokakulttuurissa vuosisatojen taakse ja liittyy myös [[jouluun]] ja pääsiäiseen.",
+  "linkit": [
+   "filotaikinaa",
+   "uudenvuoden aattona",
+   "jouluun"
+  ],
+  "jatkot": [
+   "Mitä muita täytteitä banitsaan käytetään?",
+   "Mitä Bulgariassa syödään jouluna?"
+  ]
+ },
+ {
+  "kohde": "kohde:vitosa",
+  "kasite": "boza",
+  "kysymys": "Kerro lisää: boza",
+  "vastaus": "Boza on paksu ja vaalea juoma, joka tehdään hapattamalla [[hirssiä]] tai bulguria. Se pilaantuu lämpimässä, joten juomakausi alkaa perinteisesti vasta ilmojen kylmetessä. Ennen vanhaan myyjä kulki iltapimeällä kadulla ja huusi juoman nimeä pitkään, jotta ikkunat avautuisivat. Matkakirjailija [[Evliya Çelebi]] kirjasi 1600-luvun [[Istanbulin]] bozapuoteja, ja Vefan korttelissa toimii yhä 1800-luvulla avattu puoti. Bozaa juodaan myös Bulgariassa, ja sitä nautitaan usein banitsan kanssa.",
+  "linkit": [
+   "hirssiä",
+   "Evliya Çelebi",
+   "Istanbulin"
+  ],
+  "jatkot": [
+   "Miksi boza pilaantuu helposti lämmössä?",
+   "Mitä muuta hirssistä valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:vitosa",
+  "kasite": "kozunak",
+  "kysymys": "Kerro lisää: kozunak",
+  "vastaus": "Kozunak on Bulgariassa pääsiäisenä leivottava makea ja kohotaikinainen palmikkoleipä, jossa on tavallisesti munia, voita ja maitoa; joukkoon lisätään usein rusinoita tai pähkinöitä. Perinteisesti leipä kuuluu [[pääsiäisen]] juhlapöytään ja se leivotaan kotona. Samantapaisia pitkiä pääsiäisleipiä tunnetaan naapurimaissa, kuten Kreikan [[tsoureki]] ja Romanian [[cozonac]].",
+  "linkit": [
+   "pääsiäisen",
+   "tsoureki",
+   "cozonac"
+  ],
+  "jatkot": [
+   "Mitä pääsiäisenä muuten syödään Bulgariassa?",
+   "Miten tsoureki eroaa kozunakista?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "Stara planina",
+  "kysymys": "Kerro lisää: Stara planina",
+  "vastaus": "Stara planina eli Vanha vuori on vuoristo, joka kulkee noin 560 kilometrin matkan [[Serbian]] rajalta [[Mustallemerelle]] ja jakaa Bulgarian pohjois- ja eteläosiin. Korkein huippu on [[Botev-huippu]], jonka korkeus on 2376 metriä. Vuoriston karstimaastossa on lukuisia luolia, ja niistä [[Maguran luola]] tunnetaan kalliomaalauksistaan. Vuoristo on antanut nimensä koko Balkanin niemimaalle, vaikka nimen alkuperä on osin epävarma.",
+  "linkit": [
+   "Serbian",
+   "Mustallemerelle",
+   "Botev-huippu",
+   "Maguran luola"
+  ],
+  "jatkot": [
+   "Mistä Maguran luola tunnetaan?",
+   "Mikä on Botev-huippu?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "Balkanin niemimaana",
+  "kysymys": "Kerro lisää: Balkanin niemimaana",
+  "vastaus": "Balkanin niemimaa on Kaakkois-Euroopassa sijaitseva suuri niemimaa, jota ympäröivät [[Adrianmeren]], Joonianmeren, [[Egeanmeren]] ja [[Mustanmeren]] vedet. Sen rajat mantereen puolella eivät ole yksiselitteiset, ja eri lähteet laskevat siihen kuuluvaksi eri alueita. Alueella sijaitsevat muun muassa Bulgaria, Albania, Pohjois-Makedonia ja Serbia sekä Kreikan mantereinen osa. Nimen toi yleiseen käyttöön 1800-luvun alussa saksalainen maantieteilijä [[August Zeune]], joka luuli Balkanvuoria koko niemimaan selkärangaksi.",
+  "linkit": [
+   "Adrianmeren",
+   "Egeanmeren",
+   "Mustanmeren",
+   "August Zeune"
+  ],
+  "jatkot": [
+   "Mitkä maat kuuluvat Balkanin niemimaalle?",
+   "Millaista ilmastoa Balkanilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "turkin kielen",
+  "kysymys": "Kerro lisää: turkin kielen",
+  "vastaus": "Turkin kieli kuuluu [[turkkilaisiin kieliin]]. Siinä sanoihin liitetään päätteitä kuten suomessakin, ja päätteiden vokaalit sopeutuvat sanan vokaaleihin vokaalisoinnun mukaan. [[Osmanien]] valtakunnan aikana kirjakieli lainasi runsaasti sanoja arabiasta ja persiasta, ja sitä kirjoitettiin arabialaisin kirjaimin. Vuonna 1928 otettiin käyttöön [[latinalainen kirjaimisto]]. Osmanivallan vuosisatoina turkista siirtyi sanoja myös [[Balkanin]] kieliin, ja turkkilaisperäisiä sanoja on esimerkiksi bulgarian ja serbian arkisanastossa.",
+  "linkit": [
+   "turkkilaisiin kieliin",
+   "Osmanien",
+   "latinalainen kirjaimisto",
+   "Balkanin"
+  ],
+  "jatkot": [
+   "Mitä vokaalisointu tarkoittaa?",
+   "Mitä turkkilaisia lainasanoja suomessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "uudelta kivikaudelta",
+  "kysymys": "Kerro lisää: uudelta kivikaudelta",
+  "vastaus": "Uusi kivikausi eli neoliittinen kausi on esihistorian vaihe, jolloin ihmiset siirtyivät metsästyksestä ja keräilystä [[maanviljelyyn]] ja karjanhoitoon sekä asettuivat pysyviin kyliin. Tuolloin alettiin valmistaa myös [[keramiikkaa]] ja hioa kivityökaluja. Maanviljelys levisi Euroopassa Vähästä-Aasiasta [[Balkanin]] kautta, ja kausi ajoittuu alueella lähteiden mukaan noin 6. vuosituhannelle eaa. Maguran luolan maalausten ajoitus on kiistanalainen, ja asiantuntijat arvioivat sen eri tavoin.",
+  "linkit": [
+   "maanviljelyyn",
+   "keramiikkaa",
+   "Balkanin"
+  ],
+  "jatkot": [
+   "Milloin maanviljely tuli Suomeen?",
+   "Miten pronssi eroaa kuparista?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "pronssikauteen",
+  "kysymys": "Kerro lisää: pronssikauteen",
+  "vastaus": "Pronssikausi on esihistorian vaihe, jolloin työkalut ja aseet valmistettiin pronssista, [[kuparin]] ja [[tinan]] seoksesta. Se seurasi kivikautta, ja alkamisaika vaihtelee alueittain; Kaakkois-Euroopassa se ajoitetaan lähteiden mukaan noin 3. vuosituhannelle eaa. Koska tinaa ei löytynyt kaikkialta, raaka-aineita kuljetettiin pitkiä matkoja, ja kauppareitit tulivat tärkeiksi. Pronssikautta seurasi [[rautakausi]].",
+  "linkit": [
+   "kuparin",
+   "tinan",
+   "rautakausi"
+  ],
+  "jatkot": [
+   "Miksi pronssi korvattiin raudalla?",
+   "Mistä tina saatiin pronssikaudella?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "Venäjän–Turkin sotaan",
+  "kysymys": "Kerro lisää: Venäjän–Turkin sotaan",
+  "vastaus": "Venäjän–Turkin sota 1877–1878 käytiin Venäjän ja Osmanien valtakunnan välillä, ja Venäjän rinnalla taistelivat muun muassa Romania, Serbia ja bulgarialaiset vapaaehtoiset. Sota päättyi [[San Stefanon rauhassa]] maaliskuussa 1878. Sopimus olisi luonut laajan autonomisen Bulgarian ruhtinaskunnan, mutta suurvallat muuttivat järjestelyä kesällä [[Berliinin kongressissa]]. Bulgarian pohjoisosa sai autonomian osmanien yliherruuden alla, ja eteläosasta tuli autonominen [[Itä-Rumelia]]. Samassa yhteydessä Romania sai täyden itsenäisyytensä, ja Bulgaria itsenäistyi täysin vuonna 1908.",
+  "linkit": [
+   "San Stefanon rauhassa",
+   "Berliinin kongressissa",
+   "Itä-Rumelia"
+  ],
+  "jatkot": [
+   "Miksi Berliinin kongressi muutti San Stefanon rauhaa?",
+   "Mitä Itä-Rumelialle tapahtui myöhemmin?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "osmanivallasta",
+  "kysymys": "Kerro lisää: osmanivallasta",
+  "vastaus": "Osmanien valtakunta valloitti Bulgarian alueet 1300-luvun lopulla, ja valta kesti vuoteen 1878 asti, lähes viisi vuosisataa. Valtakunta oli moniuskontoinen: kristityt asukkaat saivat säilyttää uskontonsa, mutta heidän oikeudellinen asemansa poikkesi muslimien asemasta ja heiltä perittiin erityisiä veroja. Bulgarialaisen kulttuurin elpyminen alkoi 1700-luvulla, kun [[Paisi Hilendarilaisen]] vuonna 1762 valmistunut historiateos herätti kansallista omanarvontuntoa. Tämä kehitys tunnetaan nimellä [[kansallinen herääminen]], jonka aikana perustettiin kouluja ja julkaistiin kirjoja. Vuonna 1870 perustettiin bulgarialainen [[eksarkaatti]], oma kirkkohallinto, ja vuonna 1876 puhkesi [[huhtikuun kansannousu]].",
+  "linkit": [
+   "Paisi Hilendarilaisen",
+   "kansallinen herääminen",
+   "eksarkaatti",
+   "huhtikuun kansannousu"
+  ],
+  "jatkot": [
+   "Mikä oli Paisi Hilendarilaisen historiateoksen merkitys?",
+   "Miten bulgarialaiset koulut kehittyivät 1800-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "säkkipilli",
+  "kysymys": "Kerro lisää: säkkipilli",
+  "vastaus": "Säkkipilli on puhallinsoitin, jonka ääni syntyy ilmasäkistä: soittaja täyttää säkin puhaltamalla ja puristaa siitä ilmaa kainalollaan, jolloin ääni jatkuu katkeamatta myös hengityksen aikana. Soittimessa on tavallisesti melodiaputki ja yksi tai useampi pohjasäveltä soittava putki. Säkkipillejä tunnetaan eri puolilla Eurooppaa: tunnetuimpia ovat [[Skotlannin]] ylämaiden säkkipilli, [[Irlannin]] uilleann-pillit ja [[Galician]] gaita sekä Balkanin gaida. Soittimen alkuperästä ja iästä on useita käsityksiä, eikä sitä voi ajoittaa varmasti.",
+  "linkit": [
+   "Skotlannin",
+   "Irlannin",
+   "Galician"
+  ],
+  "jatkot": [
+   "Miten gaida eroaa skotlantilaisesta säkkipillistä?",
+   "Mitä muita soittimia Bulgarian kansanmusiikissa käytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "Rodopeilta",
+  "kysymys": "Kerro lisää: Rodopeilta",
+  "vastaus": "Rodopit ovat vuoristo Kaakkois-Euroopassa, joka ulottuu Etelä-Bulgariasta [[Kreikan]] puolelle. Bulgarian puolella korkein huippu on Golyam Perelik, jonka korkeus on noin 2190 metriä. Vuoristo on tunnettu kansanmusiikistaan, ja sieltä on kotoisin matalasti soiva kaba gaida. Rodopit liitetään myös traakialaiseen perinteeseen: kreikkalaisessa myytissä [[Orfeus]] yhdistetään Traakian vuoristoihin, ja Rodopeja pidetään usein hänen kotiseutunaan. Talvisin alueella hiihdetään, ja tunnettu hiihtokeskus on [[Pamporovo]].",
+  "linkit": [
+   "Kreikan",
+   "Orfeus",
+   "Pamporovo"
+  ],
+  "jatkot": [
+   "Mitä Orfeuksen myytti kertoo?",
+   "Keitä traakialaiset olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "kaba gaida",
+  "kysymys": "Kerro lisää: kaba gaida",
+  "vastaus": "Kaba gaida on [[Rodopien]] vuoristoalueen suuri ja matalaääninen [[säkkipilli]]. Säkki valmistetaan vuohen nahasta, ja soittimen sointi on matala ja käheä. Soittaja täyttää säkin puhaltamalla ja puristaa siitä ilmaa kainalollaan, jotta ääni ei katkea hengenvedon ajaksi. Soitinta käytetään [[kansanmusiikissa]] häissä ja tansseissa, ja musiikin rytmit poikkeavat suomalaiselle korvalle totutuista: yleisiä tahtilajeja ovat 7/8 ja 11/16. Kaba gaidan rinnalla soitetaan myös pienempiä ja korkeampia gaidoja.",
+  "linkit": [
+   "Rodopien",
+   "säkkipilli",
+   "kansanmusiikissa"
+  ],
+  "jatkot": [
+   "Miltä tahtilaji 7/8 tuntuu tanssittaessa?",
+   "Missä Bulgarian kansanmusiikkia esitetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "huhtikuun kansannousun",
+  "kysymys": "Kerro lisää: huhtikuun kansannousun",
+  "vastaus": "Huhtikuun kansannousu oli bulgarialaisten kapina osmanivaltaa vastaan keväällä 1876. Sen valmisteli maanalainen vallankumouksellinen verkosto, ja kapina puhkesi Etelä-Bulgarian vuoristoseuduilla. Osmanien joukot ja epäsäännölliset aseistetut ryhmät tukahduttivat sen nopeasti, ja kostotoimet kohdistuivat laajasti siviiliväestöön. Uutiset herättivät paheksuntaa Euroopassa: brittiläinen poliitikko [[Gladstone]] kirjoitti aiheesta tunnetun pamfletin. Tapahtumat johtivat osaltaan siihen, että [[Venäjän–Turkin sota]] syttyi vuonna 1877. Samana keväänä menehtyi myös runoilija [[Hristo Botev]], joka oli tullut Bulgariaan oman joukkonsa kanssa.",
+  "linkit": [
+   "Gladstone",
+   "Venäjän–Turkin sota",
+   "Hristo Botev"
+  ],
+  "jatkot": [
+   "Mitä Gladstone kirjoitti Bulgarian tapahtumista?",
+   "Miksi Venäjä ryhtyi sotaan Osmanien valtakuntaa vastaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:balkanvuoret",
+  "kasite": "Tonavan",
+  "kysymys": "Kerro lisää: Tonavan",
+  "vastaus": "Tonava on Euroopan toiseksi pisin joki Volgan jälkeen, ja sen pituudeksi ilmoitetaan noin 2850 kilometriä. Joki saa alkunsa Saksan Schwarzwaldin vuoristosta ja laskee Mustaanmereen suiston kautta. Roomalaisaikana Tonava oli pitkään Rooman valtakunnan pohjoinen raja, ja sen latinankielinen nimi Danubius juontuu kelttiläisestä jumalattaresta Danusta. Joen varrella sijaitsee neljä pääkaupunkia: [[Wien]], [[Bratislava]], [[Budapest]] ja [[Belgrad]]. Bulgarian pohjoisrajalla Tonava erottaa maan Romaniasta lähes koko matkan, ja sen varrella ovat muun muassa Vidin, Kozloduy ja Ruse.",
+  "linkit": [
+   "Wien",
+   "Bratislava",
+   "Budapest",
+   "Belgrad"
+  ],
+  "jatkot": [
+   "Mitä Tonava merkitsi Rooman valtakunnalle?",
+   "Millä tavoin Tonavan tulvat vaikuttavat varrella asuviin?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Saksasta",
+  "kysymys": "Kerro lisää: Saksasta",
+  "vastaus": "Tonava saa alkunsa Saksassa Baden-Württembergin osavaltiossa [[Schwarzwaldin]] itäpuolella, jossa Breg ja Brigach yhtyvät. Joki virtaa Baijerin halki ennen Itävaltaan siirtymistä ja kulkee matkallaan muun muassa [[Ulmin]], [[Regensburgin]] ja [[Passaun]] kaupunkien kautta. Passaussa Tonavaan yhtyy kaksi muuta jokea, Inn ja Ilz, minkä vuoksi kaupunkia kutsutaan kolmen joen kaupungiksi. Saksa muodostui yhtenäiseksi keisarikunnaksi vuonna 1871, joten vuonna 1873 maa oli vielä nuori valtio.",
+  "linkit": [
+   "Schwarzwaldin",
+   "Ulmin",
+   "Regensburgin",
+   "Passaun"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Regensburg on?",
+   "Mitä muita jokia Saksassa virtaa Tonavaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Unkarin",
+  "kysymys": "Kerro lisää: Unkarin",
+  "vastaus": "Tonava virtaa Unkarin halki pohjoisesta etelään, ja sen rannalla on maan pääkaupunki [[Budapest]]. Kaupunki syntyi, kun Tonavan länsirannalla sijainneet Buda ja Óbuda sekä itärannan Pest yhdistettiin yhdeksi kaupungiksi vuonna 1873. Pohjoisempana joki kiertää vuorten välistä jyrkän mutkan, jonka varrella ovat historialliset kaupungit [[Esztergom]] ja [[Visegrád]]; ne olivat keskiajalla kuninkaallisia asuinpaikkoja.",
+  "linkit": [
+   "Budapest",
+   "Esztergom",
+   "Visegrád"
+  ],
+  "jatkot": [
+   "Millainen Budapestin parlamenttitalo on?",
+   "Mitä Tonavan mutkassa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Mustallemerelle",
+  "kysymys": "Kerro lisää: Mustallemerelle",
+  "vastaus": "Musta meri on Euroopan ja Aasian välissä oleva sisämeri, joka on yhteydessä Välimereen Bosporinsalmen, Marmaranmeren ja Dardanellien kautta. Sen rannoilla sijaitsevat Bulgaria, Romania, Ukraina, Venäjä, Georgia ja Turkki. Meren syvimmissä osissa on yli kaksi kilometriä vettä, mutta syvemmällä happea ei juuri ole, joten elämä keskittyy ylempiin vesikerroksiin. Tonava laskee mereen laajan [[Tonavan suiston]] kautta. Bulgarian rannikon tunnettuja kaupunkeja ovat [[Varna]] ja [[Burgas]].",
+  "linkit": [
+   "Tonavan suiston",
+   "Varna",
+   "Burgas"
+  ],
+  "jatkot": [
+   "Miksi Mustan meren syvänne on hapeton?",
+   "Miten Musta meri on yhteydessä Välimereen?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Rein–Main–Tonava-kanavan",
+  "kysymys": "Kerro lisää: Rein–Main–Tonava-kanavan",
+  "vastaus": "Rein–Main–Tonava-kanava yhdistää Pohjanmereen laskevan Reinin vesistön Mustaanmereen laskevaan Tonavaan. Kanava valmistui vuonna 1992, ja se kulkee Baijerissa [[Bambergin]] ja [[Kelheimin]] välillä sulkujen avulla yli Euroopan päävedenjakajan. Ajatus ei ole uusi: [[Kaarle Suuren]] kerrotaan yrittäneen kaivaa kanavaa 700-luvun lopulla, ja 1800-luvun puolivälissä valmistui Baijerin kuninkaan Ludvig I:n aikainen [[Ludwig-kanava]].",
+  "linkit": [
+   "Bambergin",
+   "Kelheimin",
+   "Kaarle Suuren",
+   "Ludwig-kanava"
+  ],
+  "jatkot": [
+   "Miten sulut nostavat laivoja vedenjakajan yli?",
+   "Mikä Fossa Carolina oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Pohjanmerelle",
+  "kysymys": "Kerro lisää: Pohjanmerelle",
+  "vastaus": "Pohjanmeri on Atlantin valtameren matala reunameri Britannian, Norjan, Tanskan, Saksan, Alankomaiden, Belgian ja Ranskan välissä. Siihen laskevat muun muassa [[Rein]] ja Elbe, ja Reinin suisto sijaitsee Alankomaissa lähellä [[Rotterdamin]] satamakaupunkia. Alue on ollut tärkeä kalastukselle ja meriliikenteelle, ja 1900-luvun jälkipuoliskolta lähtien merenpohjasta on pumpattu öljyä ja kaasua erityisesti [[Norjan]] ja Britannian vesillä. Viimeisen jääkauden jälkeen nykyisen Pohjanmeren eteläosan paikalla oli vielä kuivaa maata, [[Doggerland]], joka hukkui merenpinnan noustessa.",
+  "linkit": [
+   "Rein",
+   "Rotterdamin",
+   "Norjan",
+   "Doggerland"
+  ],
+  "jatkot": [
+   "Mitä Doggerland oli?",
+   "Miten Alankomaat suojautuu tulvilta?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Ruse",
+  "kysymys": "Kerro lisää: Ruse",
+  "vastaus": "Ruse on Bulgarian pohjoisrajalla Tonavan rannalla sijaitseva kaupunki ja yksi maan tärkeimmistä jokisatamista. Vastarannalla on Romanian [[Giurgiu]], ja kaupunkien välillä kulkee Tonavan ylittävä Ystävyydensilta, joka valmistui 1950-luvulla. Kaupunki tunnetaan 1800- ja 1900-lukujen vaihteen rakennuksistaan, ja sitä on kutsuttu pikku-Wieniksi. Ruseen syntyi kirjailija [[Elias Canetti]], joka sai Nobelin kirjallisuuspalkinnon vuonna 1981. Osmanien aikana Rusen ja [[Varnan]] välille rakennettiin rautatie jo vuonna 1866.",
+  "linkit": [
+   "Giurgiu",
+   "Elias Canetti",
+   "Varnan"
+  ],
+  "jatkot": [
+   "Millaisia rakennuksia Rusen keskustassa on?",
+   "Mikä oli Elias Canettin tunnetuin teos?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Schwarzwaldin",
+  "kysymys": "Kerro lisää: Schwarzwaldin",
+  "vastaus": "Schwarzwald eli Musta metsä on metsäinen vuoristo Baden-Württembergissä Lounais-Saksassa [[Reinin]] laakson itäpuolella. Nimi viittaa tummiin havumetsiin, ja korkein huippu on Feldberg, jonka korkeus on noin 1500 metriä. Alue tunnetaan [[käkikelloista]], jotka ovat sen perinteistä käsityötä, sekä Schwarzwaldin kirsikkakakusta. [[Tonavan]] lähdejoet Breg ja Brigach saavat alkunsa Schwarzwaldin itäosista.",
+  "linkit": [
+   "Reinin",
+   "käkikelloista",
+   "Tonavan"
+  ],
+  "jatkot": [
+   "Miten käkikello toimii?",
+   "Mikä on Schwarzwaldin kirsikkakakku?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Donaueschingenissä",
+  "kysymys": "Kerro lisää: Donaueschingenissä",
+  "vastaus": "Donaueschingen on pieni kaupunki Baden-Württembergissä Schwarzwaldin kaakkoispuolella, jossa Breg ja Brigach yhtyvät. Yhtymäkohdasta lähtien joen nimenä on Tonava. Kaupungissa on myös [[Donauquelle]]-niminen lähdeallas, jota on perinteisesti pidetty Tonavan alkulähteenä ja joka sijaitsee [[Fürstenbergin]] ruhtinassuvun linnan vieressä. Pisimmän lähdejoen, Bregin, ylin lähde on kuitenkin [[Furtwangenin]] seudulla, minkä vuoksi alkulähteestä on esitetty eri käsityksiä. Kaupungissa järjestetään vuodesta 1921 uuden musiikin festivaali, [[Donaueschingenin musiikkipäivät]].",
+  "linkit": [
+   "Donauquelle",
+   "Fürstenbergin",
+   "Furtwangenin",
+   "Donaueschingenin musiikkipäivät"
+  ],
+  "jatkot": [
+   "Millainen on Donaueschingenin musiikkipäivien ohjelma?",
+   "Mikä Breg-joki on?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Romanian",
+  "kysymys": "Kerro lisää: Romanian",
+  "vastaus": "Romania on Kaakkois-Euroopan valtio, jonka pääkaupunki on [[Bukarest]]. Maan halki kaartuvat [[Karpaattien]] vuoret, ja Tonava muodostaa suuren osan maan eteläistä rajaa ennen suistoa Mustallamerellä. Romanian kieli on romaaninen kieli, joka polveutuu latinasta. Romania sai täyden itsenäisyytensä osmanien vallasta vuonna 1878, ja maasta tuli kuningaskunta vuonna 1881. Bukarestin sydämessä on [[Romanian ateneum]], pyöreä kupolikattoinen konserttitalo, joka vihittiin käyttöön vuonna 1888; sen rakentamista varten rahaa kerättiin tavallisilta ihmisiltä. Romania liittyi Euroopan unioniin vuonna 2007.",
+  "linkit": [
+   "Bukarest",
+   "Karpaattien",
+   "Romanian ateneum"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Bukarest on?",
+   "Miten romania eroaa muista romaanisista kielistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Ukrainan",
+  "kysymys": "Kerro lisää: Ukrainan",
+  "vastaus": "Ukraina on Itä-Euroopan valtio Mustanmeren pohjoisrannalla ja pinta-alaltaan yksi Euroopan suurimmista maista. Pääkaupunki on [[Kiova]], joka sijaitsee [[Dneprin]] rannalla. Kiovan [[Pyhän Sofian katedraali]] rakennettiin ilmeisesti vuonna 1037 ruhtinas Jaroslav Viisaan aikana, ja Pyhän Mikaelin kultakupolinen luostari perustettiin vuosina 1108–1113. Mustanmeren rannalla sijaitsee satamakaupunki [[Odessa]], jonka satama sai alkunsa 1790-luvulla. Ukrainan etelärajalla Tonava jakautuu haaroihin ennen merta.",
+  "linkit": [
+   "Kiova",
+   "Dneprin",
+   "Pyhän Sofian katedraali",
+   "Odessa"
+  ],
+  "jatkot": [
+   "Mikä on Kiovan Pyhän Sofian katedraalin merkitys?",
+   "Miten Odessa perustettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "pelikaanit",
+  "kysymys": "Kerro lisää: pelikaanit",
+  "vastaus": "Pelikaanit ovat suuria vesilintuja, joilla on pitkä nokka ja sen alapuolella ulottuva ihopussi. Tonavan suistossa pesii kaksi lajia, [[valkopelikaani]] ja [[kiharapelikaani]]. Pussi on kalanpyydys, ei varasto: lintu nostaa veden pussista pois ennen kuin nielee saaliin, ja kalastus tapahtuu usein ryhmässä. Kiharapelikaani on uhanalainen; sen kantaa tavataan Euroopassa myös Albaniassa, jossa [[Karavastan laguunin]] ympäristössä elää noin viisi prosenttia maailman uhanalaisesta kiharapelikaanikannasta.",
+  "linkit": [
+   "valkopelikaani",
+   "kiharapelikaani",
+   "Karavastan laguunin"
+  ],
+  "jatkot": [
+   "Missä muualla Euroopassa pelikaaneja tavataan?",
+   "Miksi kiharapelikaani on uhanalainen?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "legioonien",
+  "kysymys": "Kerro lisää: legioonien",
+  "vastaus": "Legioona oli Rooman armeijan suurin sotilasyksikkö, ja sen ydin oli raskaasti aseistettu jalkaväki. Yksikkö jaettiin pienempiin osiin, kuten kohortteihin ja centuriaihin. Tonavan rajalla legioonia sijoitettiin pysyviin leireihin, joiden ympärille kasvoi usein siviilikaupunki. Esimerkiksi [[Legio I Italica]] oli sijoitettuna Novaen leiriin nykyisessä Bulgariassa, ja Itävallassa sijainnut [[Carnuntum]] oli tärkeä rajakaupunki. Keisari [[Marcus Aurelius]] oleskeli Carnuntumissa sotaretkien aikaan.",
+  "linkit": [
+   "Legio I Italica",
+   "Carnuntum",
+   "Marcus Aurelius"
+  ],
+  "jatkot": [
+   "Miten roomalaisen legioonan elämä kului leirissä?",
+   "Mitä Marcus Aurelius kirjoitti Itsetutkisteluissaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Vindobona",
+  "kysymys": "Kerro lisää: Vindobona",
+  "vastaus": "Vindobona oli roomalainen legioonaleiri ja siviilikaupunki nykyisen Wienin paikalla, ja se kuului Tonavan rajalinjaan. Leiri perustettiin ensimmäisellä vuosisadalla jaa., ja siellä oli pitkään sijoitettuna [[Legio X Gemina]]. Keisari [[Marcus Aurelius]] kuoli vuonna 180 lähteiden mukaan joko Vindobonassa tai [[Sirmiumissa]], sillä lähteet ovat tästä eri mieltä. Wienin vanhin kaupunginosa sijaitsee osin leirin päällä. Vuonna 1873 Wienissä pidettiin [[maailmannäyttely]].",
+  "linkit": [
+   "Legio X Gemina",
+   "Marcus Aurelius",
+   "Sirmiumissa",
+   "maailmannäyttely"
+  ],
+  "jatkot": [
+   "Mitä roomalaisjäännöksiä Wienissä voi nähdä?",
+   "Millainen oli Wienin maailmannäyttely?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Novae",
+  "kysymys": "Kerro lisää: Novae",
+  "vastaus": "Novae oli roomalainen legioonaleiri ja myöhemmin kaupunki Tonavan eteläpuolella nykyisen [[Svištovin]] lähellä Pohjois-Bulgariassa. Leirissä oli sijoitettuna [[Legio I Italica]] ensimmäiseltä vuosisadalta jaa. alkaen, ja se kuului [[Ala-Moesian]] provinssiin. Leirin ympärille kasvoi siviilikaupunki, joka säilyi asuttuna myöhäisantiikin ajan. Alueella on tehty arkeologisia kaivauksia pitkään, ja esiin on tullut muun muassa leirin hallintorakennuksen ja kylpylän jäännöksiä.",
+  "linkit": [
+   "Svištovin",
+   "Legio I Italica",
+   "Ala-Moesian"
+  ],
+  "jatkot": [
+   "Mitä Novaen kaivauksilla on löytynyt?",
+   "Mitä Ala-Moesian provinssi kattoi?"
+  ]
+ },
+ {
+  "kohde": "kohde:tonava~2",
+  "kasite": "Moesian",
+  "kysymys": "Kerro lisää: Moesian",
+  "vastaus": "Moesia oli roomalainen provinssi Tonavan eteläpuolella, nykyisen Serbian ja Bulgarian alueella. Nimi tulee alueen asukkaista, moesien heimosta. Rooman valta vakiintui alueelle ensimmäisen vuosisadan vaihteessa, ja provinssi jaettiin myöhemmin kahtia: länsiosa oli [[Moesia Superior]] ja itäosa [[Moesia Inferior]], joka ulottui nykyisen Pohjois-Bulgarian alueelle. Tonavan pohjoispuolella sijaitsi [[Dacia]], josta tuli Rooman provinssi 100-luvun alussa. Provinssia vartioitiin Tonavan rajalinjan leireillä, joita olivat esimerkiksi Novae ja Viminacium.",
+  "linkit": [
+   "Moesia Superior",
+   "Moesia Inferior",
+   "Dacia"
+  ],
+  "jatkot": [
+   "Mitä Dacian provinssille tapahtui myöhemmin?",
+   "Millainen Novaen leiri oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "damaskonruusun",
+  "kysymys": "Kerro lisää: damaskonruusun",
+  "vastaus": "Damaskonruusu on pensasmainen ruusulaji, jonka vaaleanpunaiset kukat tuoksuvat voimakkaasti. Se on vanha [[risteytymä]], jonka syntyä on tutkittu: sen on arveltu polveutuvan useista ruusulajeista, mutta tarkka alkuperä on epävarma. Bulgariassa lajia viljellään öljyn vuoksi [[Ruusulaakson]] alueella, ja kukinta ajoittuu touko–kesäkuulle. Kukat poimitaan varhain aamulla, koska päivän lämpö haihduttaa tuoksuöljyn. Terälehdistä valmistetaan [[ruusuvettä]] ja ruusuöljyä.",
+  "linkit": [
+   "risteytymä",
+   "Ruusulaakson",
+   "ruusuvettä"
+  ],
+  "jatkot": [
+   "Miten damaskonruusua viljellään?",
+   "Mihin ruusuvettä käytetään ruoanlaitossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "höyrytislauksella",
+  "kysymys": "Kerro lisää: höyrytislauksella",
+  "vastaus": "Höyrytislaus on menetelmä, jolla haihtuvat aineet, kuten [[eteeristen öljyjen]] tuoksuyhdisteet, erotetaan kasviaineksesta. Terälehdet asetetaan tislauskattilaan, ja niiden läpi johdetaan kuumaa [[vesihöyryä]], joka kuljettaa mukanaan haihtuvia aineita jo alle sadan asteen lämpötilassa. Höyry jäähdytetään putkistossa takaisin nesteeksi, ja syntyvä tiiviste jakautuu kahteen kerrokseen, koska öljy ja vesi eivät sekoitu. Öljy erotetaan vedestä, ja jäljelle jäävä vesi on [[ruusuvettä]]. Menetelmä sopii lämmölle herkille tuoksuille.",
+  "linkit": [
+   "eteeristen öljyjen",
+   "vesihöyryä",
+   "ruusuvettä"
+  ],
+  "jatkot": [
+   "Miksi öljy ja vesi erottuvat toisistaan?",
+   "Mihin tislaus muuten perustuu?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "ruusuvettä",
+  "kysymys": "Kerro lisää: ruusuvettä",
+  "vastaus": "Ruusuvesi syntyy ruusuöljyn tislauksen sivutuotteena, kun terälehtien läpi johdettu höyry tiivistyy ja öljy erotetaan vedestä; jäljelle jäävä vesi tuoksuu ruusulle. Sitä käytetään ruoanlaitossa makeissa ja leivonnaisissa, muun muassa [[lokumissa]] ja [[baklavassa]], joihin se antaa kukkaisen aromin. Ruusuvettä käytetään myös kosmetiikassa ihon raikastamiseen, ja sen rinnalla on kalliimpi [[ruusuöljy]].",
+  "linkit": [
+   "lokumissa",
+   "baklavassa",
+   "ruusuöljy"
+  ],
+  "jatkot": [
+   "Miten ruusuvettä käytetään leivonnassa?",
+   "Miten ruusuvesi eroaa ruusuöljystä?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "Balkanvuorten",
+  "kysymys": "Kerro lisää: Balkanvuorten",
+  "vastaus": "Balkanvuoret eli Stara planina kulkevat Serbian rajalta Mustallemerelle noin 560 kilometrin matkan ja jakavat Bulgarian pohjois- ja eteläosiin. Korkein huippu on Botev-huippu, jonka korkeus on 2376 metriä. Vuoristo toimii vedenjakajana: pohjoisrinteiden vedet laskevat pääosin [[Tonavaan]], kun taas eteläpuolen joet virtaavat Egeanmerelle ja Mustallemerelle. Eteläpuolella sijaitsee [[Ruusulaakso]], jota vuoristo suojaa pohjoisen kylmiltä ilmavirtauksilta. Vuoriston solista tunnettu on [[Šipkan sola]], joka on Bulgarian vapautumisen aikaan liittyvä tärkeä muistopaikka.",
+  "linkit": [
+   "Tonavaan",
+   "Ruusulaakso",
+   "Šipkan sola"
+  ],
+  "jatkot": [
+   "Millaisia kasveja Balkanvuorilla kasvaa?",
+   "Mistä Šipkan solassa on kyse?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "damaskonruusulle",
+  "kysymys": "Kerro lisää: damaskonruusulle",
+  "vastaus": "Damaskonruusu viihtyy aurinkoisella paikalla ja hyvin vettä läpäisevässä maassa, ja se kestää kohtalaista talven kylmyyttä. Pensas kasvaa noin metrin tai kahden korkuiseksi, ja sen kukat ovat runsasterälehtisiä ja hyvin tuoksuvia. Bulgarialainen viljelylajike kukkii kerran vuodessa touko–kesäkuussa, ja kukinta kestää vain muutaman viikon, minkä vuoksi poimintatyö on tiivistä. Terälehdistä valmistetaan [[ruusuöljyä]] ja [[ruusuvettä]], ja viljely keskittyy [[Ruusulaakson]] alueelle.",
+  "linkit": [
+   "ruusuöljyä",
+   "ruusuvettä",
+   "Ruusulaakson"
+  ],
+  "jatkot": [
+   "Milloin ruusunpoimijat aloittavat työnsä?",
+   "Miten ruusupensas leikataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "Kazanlakin",
+  "kysymys": "Kerro lisää: Kazanlakin",
+  "vastaus": "Kazanlak on kaupunki Keski-Bulgariassa, [[Ruusulaakson]] itäosassa Balkanvuorten eteläpuolella. Kaupunki on ruusunviljelyn keskus ja järjestää vuosittain ruusujuhlan ruusunkorjuun aikaan alkukesällä. Lähellä on kaksi muinaista traakialaiskohdetta: Kazanlakin hautakammio kuuluu Unescon maailmanperintökohteisiin, ja [[Seuthopolis]] oli traakialaiskuningas Seuthes III:n perustama kaupunki. Kaupungin pohjoispuolella sijaitsee [[Šipkan]] sola.",
+  "linkit": [
+   "Ruusulaakson",
+   "Seuthopolis",
+   "Šipkan"
+  ],
+  "jatkot": [
+   "Mitä Seuthopolis oli?",
+   "Milloin Kazanlakin ruusujuhla järjestetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "traakialainen hautakammio",
+  "kysymys": "Kerro lisää: traakialainen hautakammio",
+  "vastaus": "Kazanlakin hautakammio on traakialainen kupolihauta, joka ajoitetaan noin 300-luvulle eaa. Se löydettiin sattumalta vuonna 1944 kummun kohdalla tehtyjen kaivutöiden yhteydessä. Hautakammio on pieni mehiläispesän muotoinen kupolihuone, jonka seinillä ja katossa on maalauksia, muun muassa ateriakohtaus. Alkuperäinen hauta on suljettu säilymisen vuoksi, ja vierailijoille on tehty jäljennös. Hauta kuuluu [[Unescon]] maailmanperintökohteisiin. [[Traakialaiset]] olivat indoeurooppalainen heimoryhmä, jonka asuinalue ulottui nykyisen Bulgarian alueelle; toinen merkittävä traakialaishauta on [[Sveshtarin]] hauta, jossa naishahmoiset pylväät kannattavat kattoa.",
+  "linkit": [
+   "Unescon",
+   "Traakialaiset",
+   "Sveshtarin"
+  ],
+  "jatkot": [
+   "Mitä Kazanlakin seinämaalaukset esittävät?",
+   "Millainen Sveshtarin hauta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "ruusujuhla",
+  "kysymys": "Kerro lisää: ruusujuhla",
+  "vastaus": "Kazanlakin ruusujuhla on vuosittainen festivaali, joka järjestetään ruusunkorjuun aikaan alkukesällä. Ohjelmaan kuuluvat kulkue, kansanmusiikkia ja -tansseja, kuten [[horo]], sekä [[ruusukuningattaren]] valinta, ja vieraat pääsevät seuraamaan ruusunpoimintaa. Juhlaa vietetään myös muissa Ruusulaakson kaupungeissa, esimerkiksi [[Karlovossa]]. Festivaalin ajoitus riippuu kukinnasta, jota säätelee kevään sää.",
+  "linkit": [
+   "horo",
+   "ruusukuningattaren",
+   "Karlovossa"
+  ],
+  "jatkot": [
+   "Miten ruusunpoimintaa esitetään juhlassa?",
+   "Mikä horo on?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "hajuvesiteollisuudessa",
+  "kysymys": "Kerro lisää: hajuvesiteollisuudessa",
+  "vastaus": "Hajuvesiteollisuudessa tuoksut rakennetaan [[tuoksunuoteista]]: huippunuotit haihtuvat nopeimmin, sydännuotit muodostavat tuoksun ytimen ja pohjanuotit pysyvät ihollaa pisimpään. Ruusuöljyä käytetään usein sydännuottina, ja sitä arvostetaan sen runsaan, kukkaisen tuoksun vuoksi. Perinteinen hajuvesien keskus on ranskalainen [[Grasse]], jossa on viljelty kukkia tuoksuteollisuudelle. Nykyään käytetään sekä luonnonaineita että synteettisiä tuoksuaineita, joita on käytetty jo 1800-luvun lopulta. Klassinen esimerkki ruusun ja jasmiinin yhdistelmästä on [[Chanel No. 5]].",
+  "linkit": [
+   "tuoksunuoteista",
+   "Grasse",
+   "Chanel No. 5"
+  ],
+  "jatkot": [
+   "Miksi Grasse on tunnettu hajuvesistä?",
+   "Mitä ovat synteettiset tuoksuaineet?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "kosmetiikassa",
+  "kysymys": "Kerro lisää: kosmetiikassa",
+  "vastaus": "Kosmetiikassa ruusuöljyä ja [[ruusuvettä]] käytetään tuoksuaineena ja ihonhoidossa. Ruusuvettä on perinteisesti käytetty kasvojen raikastamiseen, ja sitä on kasvovesissä, voiteissa ja saippuoissa. Ruusuöljy on kallis raaka-aine, ja siksi sitä käytetään tuotteissa tyypillisesti vain pieniä määriä. [[Euroopan unionin]] kosmetiikkalainsäädäntö edellyttää, että tietyt tuoksuaineisiin kuuluvat [[allergeenit]] merkitään tuotteen ainesosaluetteloon, kun niiden pitoisuus ylittää säädetyn rajan.",
+  "linkit": [
+   "ruusuvettä",
+   "Euroopan unionin",
+   "allergeenit"
+  ],
+  "jatkot": [
+   "Mitä ainesosaluettelon INCI-nimet tarkoittavat?",
+   "Voiko ruusuöljy aiheuttaa allergiaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "suojatun maantieteellisen merkinnän",
+  "kysymys": "Kerro lisää: suojatun maantieteellisen merkinnän",
+  "vastaus": "Suojattu maantieteellinen merkintä on Euroopan unionin laatujärjestelmän tunnus, joka suojaa tuotteen nimeä väärinkäytöltä. Merkinnän saaneen tuotteen jonkin tuotantovaiheen, kuten valmistuksen tai jalostuksen, täytyy tapahtua tietyllä alueella, ja tuotteen maineen tai ominaisuuksien on liityttävä alkuperään. Esimerkkejä ovat sloveenialainen [[Kranjska klobasa]], joka sai merkinnän tammikuussa 2015, ja liettualainen [[skilandis]], joka sai sen vuonna 2009. Bulgarialainen ruusuöljy sai merkinnän vuonna 2014. Merkintä on lievempi kuin [[suojattu alkuperänimitys]], jossa kaikkien tuotantovaiheiden on tapahduttava alueella.",
+  "linkit": [
+   "Kranjska klobasa",
+   "skilandis",
+   "suojattu alkuperänimitys"
+  ],
+  "jatkot": [
+   "Mitä suojattu alkuperänimitys tarkoittaa?",
+   "Mitkä suomalaiset tuotteet ovat saaneet EU-merkinnän?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "Karlovon",
+  "kysymys": "Kerro lisää: Karlovon",
+  "vastaus": "Karlovo on kaupunki Keski-Bulgariassa, [[Ruusulaakson]] läntisessä osassa Balkanvuorten eteläjuurella. Se on ruusunviljelyn keskus ja tunnettu ruusuöljystä. Karlovossa syntyi vapaustaistelija [[Vasil Levski]] vuonna 1837; hän kuoli Sofiassa vuonna 1873 osmanien oikeuden kuolemaantuomitsemana. Runoilija Hristo Botev syntyi lähellä sijaitsevassa [[Kaloferissa]]. Lähellä kohoaa myös [[Botev-huippu]], Balkanvuorten korkein huippu.",
+  "linkit": [
+   "Ruusulaakson",
+   "Vasil Levski",
+   "Kaloferissa",
+   "Botev-huippu"
+  ],
+  "jatkot": [
+   "Kuka Vasil Levski oli?",
+   "Mitä Karlovon ympäristössä on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:ruusulaakso",
+  "kasite": "ruusuöljyn",
+  "kysymys": "Kerro lisää: ruusuöljyn",
+  "vastaus": "Ruusuöljy on damaskonruusun terälehdistä tislattua tuoksuöljyä, jota käytetään [[hajuvesiteollisuudessa]] ja kosmetiikassa. Bulgaria tuottaa lähes puolet koko maailman ruusuöljystä, ja tuotanto keskittyy [[Ruusulaakson]] alueelle. Öljyn saanto on hyvin pieni: yhteen grammaan öljyä tarvitaan noin kolme kiloa terälehtiä, ja siksi öljy on kallista. EU myönsi bulgarialaiselle ruusuöljylle [[suojatun maantieteellisen merkinnän]] vuonna 2014.",
+  "linkit": [
+   "hajuvesiteollisuudessa",
+   "Ruusulaakson",
+   "suojatun maantieteellisen merkinnän"
+  ],
+  "jatkot": [
+   "Miksi ruusuöljy on niin kallista?",
+   "Miten ruusuöljyn aitous tunnistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Boyanan mestari",
+  "kysymys": "Kerro lisää: Boyanan mestari",
+  "vastaus": "Boyanan mestari on tuntemattomaksi jäänyt taidemaalari, jonka katsotaan tehneen kirkon vuoden 1259 freskot. Hänen nimensä ei ole säilynyt, mutta työ on tunnettu elävyydestään: kasvoilla on yksilöllisiä ilmeitä ja hahmot vaikuttavat eläviltä, mikä poikkeaa jäykemmästä keskiaikaisesta kuvatavasta. Tämän vuoksi maalauksia on usein verrattu italialaisen [[Giotton]] taiteeseen ja [[renessanssin]] alkuun, vaikka vertailuun suhtaudutaan varauksella. Maalausten tilaajana pidetään sebastokraattori Kaloyania, ja kirkossa on myös muotokuvat tsaari Konstantin Tih Asenista ja tsaaritar Irinasta. Kirkko on [[Unescon]] maailmanperintökohde.",
+  "linkit": [
+   "Giotton",
+   "renessanssin",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mistä Giotto tunnetaan?",
+   "Keitä tsaari Konstantin Tih Asen ja Irina olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "sebastokraattori Kaloyania",
+  "kysymys": "Kerro lisää: sebastokraattori Kaloyania",
+  "vastaus": "Kaloyan oli 1200-luvun bulgarialainen aatelismies, jolla oli sebastokraattorin arvonimi ja jonka kerrotaan hallinneen Sofian seutua tsaari [[Konstantin Tih Asenin]] aikana. Lähteiden mukaan hän oli tsaarin serkku. Hän laajennutti Boyanan kirkkoa, ja kirkon vuoden 1259 omistuskirjoitus nimeää hänet ja hänen vaimonsa [[Desislavan]] lahjoittajiksi. Kaloyanin muotokuvaa pidetään kirkon vaikuttavimpien maalausten joukossa. Hänen aikansa Bulgaria oli osa [[Toisen Bulgarian valtakunnan]] historiaa.",
+  "linkit": [
+   "Konstantin Tih Asenin",
+   "Desislavan",
+   "Toisen Bulgarian valtakunnan"
+  ],
+  "jatkot": [
+   "Mikä oli Toisen Bulgarian valtakunnan pääkaupunki?",
+   "Milloin Boyanan kirkko laajennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Desislavan",
+  "kysymys": "Kerro lisää: Desislavan",
+  "vastaus": "Desislava oli sebastokraattori Kaloyanin vaimo, ja hänet on kuvattu [[Boyanan kirkon]] seinällä lahjoittajapuolisona. Hänestä tiedetään vain vähän muuta kuin se, mitä kirkon omistuskirjoitus ja muotokuva kertovat. Muotokuvassa hänellä on rikkaat vaatteet ja koristeet, ja kasvot on maalattu elävästi; maalausta pidetään kirkon vaikuttavimpien joukossa. Kirkossa on myös tsaari [[Konstantin Tih Asenin]] ja tsaaritar Irinan muotokuvat, ja lahjoittajien kuvaaminen oli [[keskiajan]] kirkoissa yleistä.",
+  "linkit": [
+   "Boyanan kirkon",
+   "Konstantin Tih Asenin",
+   "keskiajan"
+  ],
+  "jatkot": [
+   "Miksi lahjoittajat kuvattiin kirkon seinille?",
+   "Keitä Konstantin Tih Asen ja Irina olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Boyanan kirkon",
+  "kysymys": "Kerro lisää: Boyanan kirkon",
+  "vastaus": "Boyanan kirkko on pieni keskiaikainen kirkko Sofian laidalla [[Vitošan]] juurella. Se rakennettiin kolmessa vaiheessa noin 300 vuoden aikana, ja sen tunnetuimmat freskot ovat vuodelta 1259. Seinillä on 89 kohtausta ja 240 ihmishahmoa. Freskojen tilaajana pidetään [[sebastokraattori Kaloyanin]] aikaa, ja kirkko kuuluu [[Unescon maailmanperintöluetteloon]] vuodesta 1979.",
+  "linkit": [
+   "Vitošan",
+   "sebastokraattori Kaloyanin",
+   "Unescon maailmanperintöluetteloon"
+  ],
+  "jatkot": [
+   "Miten kirkko laajennettiin eri vaiheissa?",
+   "Voiko Boyanan kirkkoon mennä sisään?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "freskot",
+  "kysymys": "Kerro lisää: freskot",
+  "vastaus": "Boyanan kirkon freskot ovat vuodelta 1259, ja ne kattavat seinät: yhteensä 89 kohtausta ja 240 ihmishahmoa. Kuvissa on uskonnollisia kohtauksia, kuten [[Viimeinen ehtoollinen]] ja [[Pyhän Nikolaoksen]] elämän tapahtumia, sekä lahjoittajien ja hallitsijoiden muotokuvia. Maalaukset on tehty freskotekniikalla märkään [[kalkkilaastiin]] ja täydennetty osin kuivalle laastille. Freskojen pintaa ovat myöhemmät maalauskerrokset peittäneet, ja vanhin kerros paljastettiin restauroinnissa 1900-luvulla. Hahmojen kasvot ovat yksilöllisiä, ja niitä on kiitetty luonnollisuudesta.",
+  "linkit": [
+   "Viimeinen ehtoollinen",
+   "Pyhän Nikolaoksen",
+   "kalkkilaastiin"
+  ],
+  "jatkot": [
+   "Mistä Pyhän Nikolaoksen elämästä kerrotaan?",
+   "Miten freskojen kuntoa suojellaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon",
+  "vastaus": "Unesco on Yhdistyneiden kansakuntien kasvatus-, tiede- ja kulttuurijärjestö, jonka päämaja on [[Pariisissa]]. Se perustettiin 1940-luvun puolivälissä. Järjestö ylläpitää [[maailmanperintöluetteloa]], joka perustuu vuonna 1972 hyväksyttyyn sopimukseen. Luetteloon voidaan hyväksyä kulttuuri- ja luontokohteita, joilla on poikkeuksellinen yleismaailmallinen merkitys. Bulgariasta luetteloon kuuluvat muun muassa Boyanan kirkko, [[Madaran ratsastaja]] ja [[Rilan luostari]].",
+  "linkit": [
+   "Pariisissa",
+   "maailmanperintöluetteloa",
+   "Madaran ratsastaja",
+   "Rilan luostari"
+  ],
+  "jatkot": [
+   "Miten kohde pääsee maailmanperintöluetteloon?",
+   "Mitä muita Bulgarian kohteita luettelossa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Fresko",
+  "kysymys": "Kerro lisää: Fresko",
+  "vastaus": "Fresko on seinämaalaustekniikka, jonka nimi tulee italian sanasta fresco, tuore. Maalari levittää seinälle ohuen kerroksen tuoretta laastia ja maalaa sen päälle vesiin sekoitetuilla väreillä, ennen kuin laasti ehtii kuivua. Kun laasti kovettuu, se sitoo värit itseensä, ja maalauksesta tulee osa seinää. Koska laastia ehtii työstää vain rajallisen ajan, seinä maalataan osissa, usein yhden päivän työnä kerrallaan. Tunnettuja esimerkkejä ovat minolaisen kulttuurin [[Knossoksen]] palatsin seinämaalaukset, [[Giotton]] freskot Padovassa ja Michelangelon maalaama [[Sikstuksen kappelin]] katto Roomassa.",
+  "linkit": [
+   "Knossoksen",
+   "Giotton",
+   "Sikstuksen kappelin"
+  ],
+  "jatkot": [
+   "Miten freskot eroavat öljymaalauksesta?",
+   "Mitä secco-maalaus on?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "kalkkilaastille",
+  "kysymys": "Kerro lisää: kalkkilaastille",
+  "vastaus": "Kalkkilaasti on rakennusmateriaali, joka valmistetaan sekoittamalla sammutettua kalkkia, hiekkaa ja vettä. Kalkki saadaan polttamalla [[kalkkikiveä]] korkeassa lämpötilassa, minkä jälkeen se sammutetaan vedellä. Laasti kovettuu vähitellen, kun se sitoo ilmasta [[hiilidioksidia]] ja muuttuu takaisin kalkkikiveksi. Siksi kalkki sopii freskoihin: värit sitoutuvat laastin pintaan sen kovettuessa. Kalkkilaastia ovat käyttäneet jo [[roomalaiset]], ja se on perinteinen materiaali vanhojen kirkkojen muureissa ja rappauksissa.",
+  "linkit": [
+   "kalkkikiveä",
+   "hiilidioksidia",
+   "roomalaiset"
+  ],
+  "jatkot": [
+   "Miten kalkkilaasti eroaa sementistä?",
+   "Miksi vanhat rakennukset rapataan kalkilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "pigmentit",
+  "kysymys": "Kerro lisää: pigmentit",
+  "vastaus": "Pigmentit ovat hienojakoisia värijauheita, jotka eivät liukene sideaineeseen vaan sekoittuvat siihen, kun taas väriaineet liukenevat. Perinteisiä pigmenttejä saatiin maasta ja mineraaleista: [[okraa]] käytettiin keltaiseen, punaiseen ja ruskeaan, ja kalliin sinisen värin antoi lapis lazulista valmistettu [[ultramariini]]. Freskoissa kalkkilaasti rajoittaa valintaa, koska emäksinen laasti tuhoaa osan väreistä, ja siksi käytettiin kalkinkestäviä pigmenttejä. Keinotekoisia pigmenttejä alettiin valmistaa 1700-luvulla, jolloin keksittiin [[preussinsininen]].",
+  "linkit": [
+   "okraa",
+   "ultramariini",
+   "preussinsininen"
+  ],
+  "jatkot": [
+   "Mistä pigmentit saatiin keskiajalla?",
+   "Miten väriaineet eroavat pigmenteistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Sofian",
+  "kysymys": "Kerro lisää: Sofian",
+  "vastaus": "Sofia on Bulgarian pääkaupunki, ja se sijaitsee [[Vitošan]] vuoriston juurella maan länsiosassa. Kaupungin historia ulottuu roomalaisaikaan, jolloin sen nimi oli Serdica, ja [[Pyhän Yrjön rotunda]], joka pystytettiin 300-luvun alussa, on kaupungin vanhin yhä pystyssä oleva rakennus. Bulgarian pääkaupungiksi Sofia valittiin vuonna 1879, vapautuksen jälkeen. Kaupungin tunnetuimpia maamerkkejä on [[Aleksanteri Nevskin katedraali]], joka rakennettiin vuosina 1882–1912 ja vihittiin käyttöön 1924; se on muistomerkki Venäjän–Turkin sodassa kaatuneille venäläissotilaille.",
+  "linkit": [
+   "Vitošan",
+   "Pyhän Yrjön rotunda",
+   "Aleksanteri Nevskin katedraali"
+  ],
+  "jatkot": [
+   "Mitä Sofian keskustassa on nähtävää?",
+   "Millainen ilmasto Sofiassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Cherni Vrah",
+  "kysymys": "Kerro lisää: Cherni Vrah",
+  "vastaus": "Cherni Vrah, bulgariaksi musta huippu, on Vitošan korkein huippu, ja sen korkeus on 2290 metriä. Huippu kohoaa aivan [[Sofian]] eteläpuolella. Elokuussa 1895 joukko sofialaisia nousi huipulle kirjailija [[Aleko Konstantinovin]] johdolla, ja tästä retkestä lasketaan bulgarialaisen retkeilyn alku. Rinteillä on kivijokia, joita pidetään kylmien ilmastovaiheiden perintönä. [[Vitošan luonnonpuisto]] perustettiin vuonna 1934, ja se oli Balkanin ensimmäinen laatuaan.",
+  "linkit": [
+   "Sofian",
+   "Aleko Konstantinovin",
+   "Vitošan luonnonpuisto"
+  ],
+  "jatkot": [
+   "Kuka Aleko Konstantinov oli?",
+   "Miten Cherni Vrahille pääsee kävellen?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Rilan",
+  "kysymys": "Kerro lisää: Rilan",
+  "vastaus": "Rila on vuoristo Lounais-Bulgariassa, ja siellä kohoaa [[Musala]], Bulgarian korkein huippu, jonka korkeus on noin 2925 metriä. Musalaa pidetään yleensä myös Balkanin niemimaan korkeimpana huippuna. Vuoristossa on lukuisia jäätikköjärviä, ja yksi alueen tunnetuimmista kohteista on [[Rilan luostari]], jonka perusti 900-luvulla erakkopyhimys [[Ivan Rilalainen]]. Nykyiset luostarirakennukset ovat pääosin 1800-luvulta, ja luostari kuuluu Unescon maailmanperintökohteisiin.",
+  "linkit": [
+   "Musala",
+   "Rilan luostari",
+   "Ivan Rilalainen"
+  ],
+  "jatkot": [
+   "Mitä Seitsemän Rilan järveä ovat?",
+   "Millainen Rilan luostari on sisältä?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Bysantin",
+  "kysymys": "Kerro lisää: Bysantin",
+  "vastaus": "Bysantti eli Itä-Rooman valtakunta oli Rooman valtakunnan itäinen jatke, joka säilyi vuoteen 1453. Sen pääkaupunki oli [[Konstantinopol]], jonka keisari Konstantinus Suuri vihki vuonna 330. Valtakunnan kieli oli kreikka ja uskonto ortodoksinen kristinusko. Keisari [[Justinianus I]] rakennutti 500-luvulla Hagia Sofian. Bysantti vaikutti voimakkaasti naapureihinsa: bulgarialaisten hallitsija [[Boris I]] otti kristinuskon käyttöön 860-luvulla, ja Kiovan ruhtinas [[Vladimir Suuri]] kastettiin ja käänsi alueensa kristityksi vuonna 988 Bysantin yhteyksien kautta.",
+  "linkit": [
+   "Konstantinopol",
+   "Justinianus I",
+   "Boris I",
+   "Vladimir Suuri"
+  ],
+  "jatkot": [
+   "Mikä oli Bysantin ja Bulgarian suhde keskiajalla?",
+   "Miten Hagia Sofia rakennettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Bulgariassa",
+  "kysymys": "Kerro lisää: Bulgariassa",
+  "vastaus": "Bulgaria on Kaakkois-Euroopan valtio, jonka pääkaupunki on [[Sofia]]. Maa rajoittuu pohjoisessa Romaniaan, lännessä Serbiaan ja Pohjois-Makedoniaan, etelässä Kreikkaan ja Turkkiin sekä idässä Mustaanmereen. Maata halkovat Balkanvuoret, ja se kuuluu Euroopan unioniin vuodesta 2007. Historiassa merkittäviä ovat 600-luvun lopulla syntynyt [[Ensimmäinen Bulgarian valtakunta]] ja osmanivalta, joka päättyi 1800-luvun lopulla. Maassa on Unescon maailmanperintökohteita, joihin kuuluvat muun muassa koillisessa sijaitseva [[Madaran ratsastaja]], kallioon 700-luvulla veistetty ratsastajan kuva, sekä traakialainen [[Sveshtarin]] hautakammio.",
+  "linkit": [
+   "Sofia",
+   "Ensimmäinen Bulgarian valtakunta",
+   "Madaran ratsastaja",
+   "Sveshtarin"
+  ],
+  "jatkot": [
+   "Mitä Ensimmäinen Bulgarian valtakunta oli?",
+   "Millainen ilmasto Bulgariassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:boyana",
+  "kasite": "Serbiassa",
+  "kysymys": "Kerro lisää: Serbiassa",
+  "vastaus": "Serbia on Kaakkois-Euroopan valtio, jonka pääkaupunki [[Belgrad]] sijaitsee Savan ja Tonavan yhtymäkohdassa. Keskiajalla Serbiaa hallitsi [[Nemanjićien]] hallitsijasuku, ja Serbian ortodoksinen kirkko on edelleen maan kulttuurissa tärkeä. Serbian ruhtinaskunta sai täyden itsenäisyytensä vuonna 1878 [[Berliinin kongressissa]]. Bysantin hovin arvonimiä, kuten sebastokraattori, käytettiin myös Serbiassa. Balkanvuoret ulottuvat Bulgariasta Serbian itäosiin, ja Serbiassa vuoristoa kutsutaan nimellä [[Stara planina]].",
+  "linkit": [
+   "Belgrad",
+   "Nemanjićien",
+   "Berliinin kongressissa",
+   "Stara planina"
+  ],
+  "jatkot": [
+   "Keitä Nemanjićit olivat?",
+   "Millainen kaupunki Belgrad on?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "Lactobacillus bulgaricus",
+  "kysymys": "Kerro lisää: Lactobacillus bulgaricus",
+  "vastaus": "Lactobacillus bulgaricus on sauvamainen maitohappobakteeri, jonka bulgarialainen lääketieteen opiskelija [[Stamen Grigorov]] tunnisti Genevessä vuonna 1905 tutkiessaan kotimaansa jogurttia. Bakteeri nimettiin löytäjän kotimaan mukaan. Nykyisin sen tieteellinen nimi on Lactobacillus delbrueckii -lajin alalaji bulgaricus. Se muodostaa maidon laktoosista maitohappoa, joka saostaa maidon valkuaisaineet ja sakeuttaa jogurtin, ja se toimii yhdessä [[Streptococcus thermophilus]] -bakteerin kanssa. Nobelisti [[Ilja Metšnikov]] arveli aikanaan Grigorovin työn pohjalta, että bulgarialaisten talonpoikien pitkä ikä johtui jogurtista.",
+  "linkit": [
+   "Stamen Grigorov",
+   "Streptococcus thermophilus",
+   "Ilja Metšnikov"
+  ],
+  "jatkot": [
+   "Miten nämä kaksi jogurttibakteeria toimivat yhdessä?",
+   "Mitä probiootit ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "laktoosia",
+  "kysymys": "Kerro lisää: laktoosia",
+  "vastaus": "Laktoosi eli maitosokeri on maidossa oleva sokeri, joka koostuu kahdesta yksinkertaisemmasta sokerista, [[glukoosista]] ja [[galaktoosista]]. Sen pilkkomiseen tarvitaan ruoansulatuksessa [[laktaasientsyymiä]]. Monella aikuisella laktaasin tuotanto vähenee lapsuuden jälkeen, jolloin maidon laktoosi voi aiheuttaa vatsaoireita, mikä tunnetaan nimellä laktoosi-intoleranssi. Hapatetuissa maitotuotteissa, kuten jogurtissa, osa laktoosista on bakteerien muuttamaa maitohapoksi, joten ne sopivat usein paremmin laktoosille herkille.",
+  "linkit": [
+   "glukoosista",
+   "galaktoosista",
+   "laktaasientsyymiä"
+  ],
+  "jatkot": [
+   "Mitä laktoositon maito on?",
+   "Miten bakteerit pilkkovat laktoosia?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "Streptococcus thermophilus",
+  "kysymys": "Kerro lisää: Streptococcus thermophilus",
+  "vastaus": "Streptococcus thermophilus on pallomainen, ketjuiksi järjestäytyvä maitohappobakteeri, joka viihtyy lämpimässä. Sitä käytetään jogurtin valmistuksessa yhdessä [[Lactobacillus bulgaricus]] -bakteerin kanssa: bakteerit hyötyvät toisistaan, ja yhteistyö nopeuttaa maidon happanemista. Streptococcus thermophilus pilkkoo maidon laktoosia maitohapoksi ja tuottaa jogurtille ominaista makua. Muista streptokokeista poiketen sitä pidetään elintarvikekäytössä turvallisena. Sitä käytetään myös joissakin juustoissa, kuten [[mozzarellassa]] ja [[emmentalissa]].",
+  "linkit": [
+   "Lactobacillus bulgaricus",
+   "mozzarellassa",
+   "emmentalissa"
+  ],
+  "jatkot": [
+   "Mitä streptokokit ovat?",
+   "Miten juusto valmistetaan maitohappobakteereilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "kiselo mlyako",
+  "kysymys": "Kerro lisää: kiselo mlyako",
+  "vastaus": "Kiselo mlyako tarkoittaa bulgariaksi happamaa maitoa, ja se on bulgarialaisen jogurtin perinteinen nimi. Perinteisesti sitä on tehty lampaanmaidosta savisissa astioissa, ja jogurtin tekee jogurtiksi maitohappobakteeri [[Lactobacillus bulgaricus]], jonka nimi viittaa Bulgariaan. Jogurtti oli tunnettu Balkanilla vuosisatoja ennen bakteerin tunnistamista vuonna 1905. Sofiassa sitä voi ostaa suoraan valmistajilta [[Zhenski pazarin]] torilta. Arjessa sitä syödään sellaisenaan tai ruoanlaitossa ainesosana, kuten kylmässä keitossa nimeltä [[tarator]].",
+  "linkit": [
+   "Lactobacillus bulgaricus",
+   "Zhenski pazarin",
+   "tarator"
+  ],
+  "jatkot": [
+   "Mitä Zhenski pazarilla myydään?",
+   "Miten kiselo mlyako valmistetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "tarator",
+  "kysymys": "Kerro lisää: tarator",
+  "vastaus": "Tarator on bulgarialainen kylmä keitto, jonka pohjana on [[jogurtti]]. Siihen sekoitetaan kurkkua, valkosipulia ja tilliä, ja usein mukaan tulee myös [[saksanpähkinöitä]] ja ruokaöljyä; keittoa ohennetaan vedellä. Sitä syödään kesällä viilentävänä ruokana. Samankaltaisia jogurttipohjaisia kurkkuruokia tunnetaan monessa Balkanin maassa, esimerkiksi Kreikan [[tzatziki]]. Balkanilla nimeä tarator käytetään joskus myös pähkinä-valkosipulikastikkeesta.",
+  "linkit": [
+   "jogurtti",
+   "saksanpähkinöitä",
+   "tzatziki"
+  ],
+  "jatkot": [
+   "Miten tzatziki eroaa taratorista?",
+   "Mitä muita kylmiä keittoja Balkanilla syödään?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "banitsa",
+  "kysymys": "Kerro lisää: banitsa",
+  "vastaus": "Banitsa on bulgarialainen suolainen piirakka, joka tehdään ohuesta [[filotaikinasta]]. Perinteinen täyte on muna, jogurtti ja valkoinen juusto, [[sirene]], ja taikina taitellaan kerroksiksi. Täytteitä on muitakin, esimerkiksi pinaattia tai purjoa; makeana versiona tunnetaan kurpitsalla täytetty [[tikvenik]]. Arkena banitsa on aamiaispala, usein jogurtin tai ayranin kanssa. [[Uudenvuoden aattona]] sen sekaan kääritään paperilappuja tai esineitä, joista jokainen lupaa jotain, kuten terveyttä, rakkautta, rahaa tai matkan, ja tapa liittyy myös jouluun ja pääsiäiseen.",
+  "linkit": [
+   "filotaikinasta",
+   "sirene",
+   "tikvenik",
+   "Uudenvuoden aattona"
+  ],
+  "jatkot": [
+   "Miten banitsa valmistetaan kotona?",
+   "Mitä ayran on?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "Lactococcus lactis",
+  "kysymys": "Kerro lisää: Lactococcus lactis",
+  "vastaus": "Lactococcus lactis on mesofiilinen maitohappobakteeri, joka kasvaa parhaiten kohtalaisessa lämpötilassa. Sitä käytetään monissa maitotuotteissa, kuten piimässä, viilissä ja monissa juustoissa. Se muuttaa maidon laktoosin maitohapoksi ja voi tuottaa myös makuaineita. Joillakin kannoilla on kyky tuottaa [[nisiiniä]], luonnollista säilöntäainetta. [[Viilin]] ropeus johtuu siitä, että osa viilin bakteereista tuottaa maitoon pitkäketjuisia sokerimolekyylejä, ja viilin pinnalla oleva valkoinen sametinen kerros on [[Geotrichum candidum]] -sienen muodostama.",
+  "linkit": [
+   "nisiiniä",
+   "Viilin",
+   "Geotrichum candidum"
+  ],
+  "jatkot": [
+   "Mitä nisiini on?",
+   "Miksi viilissä on valkoinen pintakerros?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "Itä-Euroopassa",
+  "kysymys": "Kerro lisää: Itä-Euroopassa",
+  "vastaus": "Itä-Euroopan rajaus vaihtelee lähteestä riippuen. Se tarkoittaa yleensä Euroopan itäosaa, johon luetaan esimerkiksi Venäjän eurooppalainen osa, Ukraina, Valko-Venäjä, Puola ja Romania; Bulgaria lasketaan joskus Itä-Eurooppaan, joskus Kaakkois-Eurooppaan. Termiä käytettiin laajasti [[kylmän sodan]] aikana kuvaamaan sosialististen maiden aluetta, jonka sotilasliittona oli [[Varsovan liitto]] ja johon kuului myös [[Neuvostoliitto]]. Kefiiri on Itä-Euroopassa tunnettu päivittäinen juoma, ja sitä juodaan muun muassa Venäjällä, Ukrainassa ja Puolassa.",
+  "linkit": [
+   "kylmän sodan",
+   "Varsovan liitto",
+   "Neuvostoliitto"
+  ],
+  "jatkot": [
+   "Mitä Varsovan liitto oli?",
+   "Mitkä maat kuuluvat Kaakkois-Eurooppaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "kefiirijyvillä",
+  "kysymys": "Kerro lisää: kefiirijyvillä",
+  "vastaus": "Kefiirijyvät ovat hyytelömäisiä, kukkakaalin kaltaisia kokkareita, joissa elää yhdessä [[maitohappobakteereja]] ja [[hiivoja]] proteiini- ja sokeriaineksen muodostaman matriisin sisällä. Ne eivät ole viljan jyviä vaan elävä yhdyskunta. Jyvät lisätään maitoon, joka käy huoneenlämmössä noin vuorokauden; sen jälkeen jyvät siivilöidään pois ja käytetään uudelleen seuraavassa erässä. Jyvät kasvavat ja lisääntyvät käytön myötä, joten niitä voi jakaa eteenpäin. Käyminen tuottaa [[maitohappoa]], pienen määrän alkoholia ja hiilidioksidia, mikä tekee juomasta hieman kuohuvan.",
+  "linkit": [
+   "maitohappobakteereja",
+   "hiivoja",
+   "maitohappoa"
+  ],
+  "jatkot": [
+   "Mistä kefiirijyviä saa?",
+   "Miten kefiiriä säilytetään?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "hiivoja",
+  "kysymys": "Kerro lisää: hiivoja",
+  "vastaus": "Hiivat ovat yksisoluisia sieniä. Tunnetuin laji on leivinhiiva [[Saccharomyces cerevisiae]], jota käytetään leivonnassa sekä oluen ja viinin valmistuksessa. Hiiva käyttää sokeria energianlähteenään ja tuottaa käymisessä [[etanolia]] ja hiilidioksidia: hiilidioksidi nostattaa taikinan ja kuohuttaa juomia. Ranskalainen [[Louis Pasteur]] osoitti 1800-luvulla, että alkoholikäyminen on hiivojen aikaansaamaa. Kefiirissä hiivat aiheuttavat pienen alkoholipitoisuuden ja kuohunnan.",
+  "linkit": [
+   "Saccharomyces cerevisiae",
+   "etanolia",
+   "Louis Pasteur"
+  ],
+  "jatkot": [
+   "Miten leivinhiiva eroaa panimohiivasta?",
+   "Mitä muuta Pasteur keksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "pastöroitu",
+  "kysymys": "Kerro lisää: pastöroitu",
+  "vastaus": "Pastörointi on lämpökäsittely, jossa nestemäinen elintarvike, kuten maito, kuumennetaan sen verran, että [[taudinaiheuttajat]] tuhoutuvat, mutta ravintoarvo ja maku säilyvät pääosin. Menetelmän nimi tulee ranskalaisesta [[Louis Pasteurista]], joka kehitti sen 1860-luvulla viinin ja oluen säilyvyyden parantamiseksi. Maitoa pastöroidaan yleisimmin noin 72 asteen lämpötilassa vajaan puolen minuutin ajan. Pidempään säilyvä [[UHT-käsittely]] käyttää huomattavasti korkeampaa lämpötilaa. Jogurtin kotivalmistuksessa maito kuumennetaan vielä uudelleen, mikä muuttaa maidon proteiinien rakennetta ja tekee jogurtista tiiviimmän.",
+  "linkit": [
+   "taudinaiheuttajat",
+   "Louis Pasteurista",
+   "UHT-käsittely"
+  ],
+  "jatkot": [
+   "Mitä UHT-maito on?",
+   "Miksi raakamaito voi olla vaarallista?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "maitohappobakteerit",
+  "kysymys": "Kerro lisää: maitohappobakteerit",
+  "vastaus": "Maitohappobakteerit ovat bakteeriryhmä, joka muodostaa sokereista käymisessä maitohappoa. Niitä on useissa suvuissa, kuten Lactobacillus, Lactococcus ja Streptococcus. Maitohappo laskee ruoan happamuutta, mikä hidastaa pilaantumista ja antaa tuotteelle hapanta makua. Maitohappobakteereja hyödynnetään jogurtin ja juuston lisäksi muun muassa [[hapankaalin]] ja [[hapanjuuren]] valmistuksessa. Niiden terveysvaikutuksia on tutkittu paljon, ja [[probioottien]] hyödystä esitetään vaihtelevia näkemyksiä.",
+  "linkit": [
+   "hapankaalin",
+   "hapanjuuren",
+   "probioottien"
+  ],
+  "jatkot": [
+   "Miten hapankaali valmistetaan?",
+   "Mitä probiootit ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:jogurtti",
+  "kasite": "starttikulttuuriksi",
+  "kysymys": "Kerro lisää: starttikulttuuriksi",
+  "vastaus": "Starttikulttuuri on valmis bakteeriseos, jota käytetään käymisen aloittamiseen. Kotona starttina käytetään yleensä lusikallista edellistä erää: siinä on elävät bakteerit valmiina, ja ne lisääntyvät uudessa maidossa nopeasti. Tapa on perinteinen jogurtin lisäksi [[viilin]] ja [[hapanjuuren]] valmistuksessa. Pitkään jatkettaessa kulttuuri voi heikentyä tai siihen voi päästä ei-toivottuja mikrobeja, joten uusi startti kannattaa hankkia aika ajoin. Teollisuudessa käytetään tarkasti valittuja bakteerikantoja, joita myydään pakastekuivattuina esimerkiksi [[juustonvalmistuksessa]].",
+  "linkit": [
+   "viilin",
+   "hapanjuuren",
+   "juustonvalmistuksessa"
+  ],
+  "jatkot": [
+   "Miksi starttikulttuuri heikkenee ajan myötä?",
+   "Miten hapanjuuri tehdään?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-preslav",
+  "kasite": "Konstantin Preslavilainen",
+  "kysymys": "Kerro lisää: Konstantin Preslavilainen",
+  "vastaus": "Konstantin Preslavilainen oli bulgarialainen kirkonmies ja kirjailija, joka vaikutti tsaari Simeon I:n aikana [[Preslavin]] kirjallisuuskoulussa 800-luvun lopulla ja 900-luvun alussa. Hänen kerrotaan olleen [[Metodioksen]] oppilas. Hänen tunnettuihin teoksiinsa kuuluu saarnakokoelma, jota kutsutaan opetusevankeliumiksi, sekä runomuotoinen alkusoitto evankeliumikäännökseen. Hänet liitetään myös [[kyrillisen kirjaimiston]] kehittämiseen, mutta tämän osuuden laajuudesta lähteet ovat eri mieltä. Hänestä tuli lopulta Preslavin piispa.",
+  "linkit": [
+   "Preslavin",
+   "Metodioksen",
+   "kyrillisen kirjaimiston"
+  ],
+  "jatkot": [
+   "Mitä opetusevankeliumi sisältää?",
+   "Kuka Metodios oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-preslav",
+  "kasite": "Johannes Eksarkki",
+  "kysymys": "Kerro lisää: Johannes Eksarkki",
+  "vastaus": "Johannes Eksarkki oli oppinut, joka vaikutti ensimmäisen Bulgarian valtakunnan aikana tsaari Simeonin hovissa 900-luvun alkupuolella. Hänet muistetaan kääntäjänä ja kokoajana: hän käänsi ja muokkasi kreikkalaisia teoksia [[kirkkoslaaviksi]] ja kirjoitti [[Heksaemeron]]-teoksen, joka käsittelee maailman luomista ja yhdistelee kreikkalaisten kirkkoisien tekstejä. Hänen työnsä auttoi kehittämään slaavilaista kirjakieltä [[Preslavin]] koulupiirissä.",
+  "linkit": [
+   "kirkkoslaaviksi",
+   "Heksaemeron",
+   "Preslavin"
+  ],
+  "jatkot": [
+   "Mitä Heksaemeron käsittelee?",
+   "Mitä kirkkoslaavi oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-preslav",
+  "kasite": "Tšernorizets Hrabar",
+  "kysymys": "Kerro lisää: Tšernorizets Hrabar",
+  "vastaus": "Tšernorizets Hrabar eli munkki Hrabar oli bulgarialainen kirjoittaja, jonka nimi tunnetaan vain tämän nimimerkin kautta. Hän kirjoitti 900-luvun alkupuolella teoksen Kirjaimista, jossa puolustetaan slaavilaisia kirjaimia niitä vastaan, jotka pitivät vain kreikkaa tai latinaa jumalanpalveluskielinä kelpaavina. Teoksessa hän kertoo, että slaavit käyttivät ennen omaa kirjaimistoa lovia ja viivoja ja että [[Kyrillos]] loi heille aakkoset. Hrabarin henkilöllisyydestä ja yhteydestä [[Preslavin]] kouluun on esitetty eri käsityksiä, ja joissakin tutkimuksissa hänet on yhdistetty [[Konstantin Preslavilaiseen]].",
+  "linkit": [
+   "Kyrillos",
+   "Preslavin",
+   "Konstantin Preslavilaiseen"
+  ],
+  "jatkot": [
+   "Mitä Kirjaimista-teoksessa sanotaan Kyrilloksesta?",
+   "Miksi slaavilaiset kirjaimet olivat kiistanalaisia?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-preslav",
+  "kasite": "Naum Preslavilainen",
+  "kysymys": "Kerro lisää: Naum Preslavilainen",
+  "vastaus": "Naum Preslavilainen oli keskiaikainen oppinut ja pyhimys, joka kuului [[Kyrilloksen]] ja Metodioksen oppilaisiin. Metodioksen kuoleman jälkeen oppilaat joutuivat poistumaan Suur-Määristä, ja Naum saapui Bulgariaan 880-luvun puolivälissä. Hän toimi Preslavissa ja siirtyi sitten yhdessä [[Kliment Ohridilaisen]] kanssa Ohridin seudulle. Naum perusti [[Ohridin järven]] rannalle luostarin, joka kantaa hänen nimeään. Hän kuoli 900-luvun alussa.",
+  "linkit": [
+   "Kyrilloksen",
+   "Kliment Ohridilaisen",
+   "Ohridin järven"
+  ],
+  "jatkot": [
+   "Kuka Kliment Ohridilainen oli?",
+   "Mitä Pyhän Naumin luostarissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-preslav",
+  "kasite": "Thessalonikissa",
+  "kysymys": "Kerro lisää: Thessalonikissa",
+  "vastaus": "Thessaloniki on Pohjois-Kreikan satamakaupunki ja maan toiseksi suurin kaupunki. Sen perusti makedonialaiskuningas [[Kassandros]] noin vuonna 315 eaa., ja hän nimesi sen vaimonsa Thessalonike mukaan, joka oli Aleksanteri Suuren sisarpuoli. Roomalaisaikana kaupunki sijaitsi tärkeän tien, [[Via Egnatian]], varrella. Bysantin aikana se oli yksi valtakunnan tärkeimmistä kaupungeista, ja sen varhaiskristilliset ja bysanttilaiset kirkot kuuluvat Unescon maailmanperintöön. Kaupungista olivat kotoisin veljekset Kyrillos ja Metodios. Kaupunki on kuulunut Kreikkaan vuodesta 1912, ja sen tunnetuin maamerkki on [[Valkoinen torni]].",
+  "linkit": [
+   "Kassandros",
+   "Via Egnatian",
+   "Valkoinen torni"
+  ],
+  "jatkot": [
+   "Mikä Valkoinen torni on?",
+   "Millaisia bysanttilaisia kirkkoja Thessalonikissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:veliki-preslav",
+  "kasite": "Metodios",
+  "kysymys": "Kerro lisää: Metodios",
+  "vastaus": "Metodios oli bysanttilainen munkki ja lähetyssaarnaaja, joka [[Kyrillos]]-veljensä kanssa on slaavilaisen kirjakielen perustaja. Hän syntyi Thessalonikissa 800-luvun alussa. Veljekset lähetettiin 860-luvulla Suur-Määriin ruhtinas [[Rastislavin]] pyynnöstä. Kyrilloksen kuoltua vuonna 869 Metodios jatkoi työtä: hänet vihittiin arkkipiispaksi, ja hän käänsi kirkollisia tekstejä slaaviksi. Hän kuoli vuonna 885. Hänen oppilaansa joutuivat lähtemään, ja osa heistä, kuten [[Kliment Ohridilainen]] ja Naum, löysi turvapaikan Bulgariasta. Paavi Johannes Paavali II nimitti Kyrilloksen ja Metodioksen Euroopan suojeluspyhimyksiksi vuonna 1980.",
+  "linkit": [
+   "Kyrillos",
+   "Rastislavin",
+   "Kliment Ohridilainen"
+  ],
+  "jatkot": [
+   "Mitä Suur-Määri oli?",
+   "Miksi paavi nimitti heidät Euroopan suojeluspyhimyksiksi?"
+  ]
  }
 ]
