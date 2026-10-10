@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "fcd02e01b928b7bd",
-  "kansio": "dioraama/olavinlinna/blender/fcd02e01b928b7bd/",
+  "hash": "c21fd3e35386a161",
+  "kansio": "dioraama/olavinlinna/blender/c21fd3e35386a161/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500-0-6x6.astcm",
@@ -1365,8 +1365,8 @@
     },
     {
       "polku": "kavely/kappeli-kavely.glb",
-      "sha256": "904e05f8488514cc483cf4caedd080da8de38bc26e401aa5fb2a17b058a21b22",
-      "tavuja": 239228
+      "sha256": "e972423fa7f34d0ff2034d7ba709b38538273151959240aa1396343f287ef420",
+      "tavuja": 334184
     },
     {
       "polku": "kavely/keittio-G102-kavely.glb",
@@ -1415,7 +1415,7 @@
     },
     {
       "polku": "kavely/muurikaytava.glb",
-      "sha256": "608432bf2af2606424edb5f75d3660c8f2201d00a1b82622959166f5b2d86796",
+      "sha256": "453d6d7a4060a5e044587588f6e153e1261cd9dc22a894b50c3bfb441b2a88a2",
       "tavuja": 74844
     },
     {
@@ -1520,7 +1520,7 @@
     },
     {
       "polku": "kavely/ranta-1499.glb",
-      "sha256": "90f6c1477e914e1434040beeaee1595dd3f11146b7728c720e8199cbc04ffd7d",
+      "sha256": "ffd8a9764639a00f11d5fae929622df069136469e6a2ab8d7c9be77ee0e75ccc",
       "tavuja": 1389232
     },
     {
@@ -2810,8 +2810,8 @@
     },
     {
       "polku": "tilat/kappeli.glb",
-      "sha256": "557ba692454c7168a13988eecad1e8ac95573a187d82a48468844f960e3be4af",
-      "tavuja": 1282804
+      "sha256": "9af288d279ee25e7b4b1babc680f2c7087d1c4d46f4d38b3357590475fc74280",
+      "tavuja": 1851752
     },
     {
       "polku": "tilat/keittio-g102.glb",
