@@ -103,7 +103,14 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
    tarkista commit + testit → käännös → äänellinen simuajo (skenaario linssiseppa-ajot/sk-saapumisesitys-toisto.txt,
    simuvuoro-esitys-toisto.zsh <SHA> <app>) → mittausrivi PT:lle (musiikin alku vs. "Pariisi"-sanan alku aaltomuodosta; kuva 3 → C1 väli).
    TOISTO TF 180 -koodilla: lokit/todistus-esitys-toisto-iphone-* (d107ccb57, iPhone D0D2CD1E) = "ennen".
-2. **Notre-Dame + Concorde (omistaja 00.0x / 00.1x, kippi)**: CONCORDEN AUKIO kierretään yhä liian kaukaa (kuvakaappaus /Users/koodaus/.claude/uploads/ef36e2b2-9f8a-43f8-b67f-32272c66f1d4/627ee082-image.png): kierto selvästi lähemmäs ja matalammaksi, obeliski + suihkulähteet täyttävät kuvan keskiosan (juna 180:n etäisyyskorjaus ei riittänyt). Notre-Dame: pysähdyksessä kamera laskeutuu nopeammin ja kaartaa länsijulkisivun (tornit, portaalit) eteen.
+2. **SAMA ERÄ (PT 00.1x): pysähdykset + Notre-Dame + Concorde.** Omistaja TF 180: "Kippi pysähtyy vieläkin välillä liiaksi paikalleen."
+   → koko Pariisin kierros simulla TF 180 -koodilla (app lokit/linssiseppa-app/esittely-pakka-180 = juna 180 + 7c4fa279c; huom. TF 180:ssä on
+   f65ed2a39 mutta EI linjaus 2:ta eca61364a, joka on juna 181:ssä) ja pallon nopeus 0,1 s välein (QA-lokirivi tarvitaan, jos ei ole):
+   lista kohdista, joissa nopeus < 10 % matkanopeudesta yli 1 s (kohde, kesto, syy: puheen odotus / kuvien lataus / kaaren loppu).
+   Korjaus: pallo jatkaa kaarta hitaasti myös puheen ja kuvien aikana, ei koskaan seisahdu. Todiste PT:lle: nopeuskäyrä ennen/jälkeen
+   (jälkeen = eca61364a + korjaus) + pysähdyslista. Linssit-testien PalloKaupungitTestit "seisahdus s" -sarake on hyvä lähtökohta
+   (ajaa Ydintä ilman laattoja; simussa lisänä laattojen/puheen odotus).
+   **Notre-Dame + Concorde (omistaja 00.0x / 00.1x, kippi)** (omistaja 00.0x / 00.1x, kippi)**: CONCORDEN AUKIO kierretään yhä liian kaukaa (kuvakaappaus /Users/koodaus/.claude/uploads/ef36e2b2-9f8a-43f8-b67f-32272c66f1d4/627ee082-image.png): kierto selvästi lähemmäs ja matalammaksi, obeliski + suihkulähteet täyttävät kuvan keskiosan (juna 180:n etäisyyskorjaus ei riittänyt). Notre-Dame: pysähdyksessä kamera laskeutuu nopeammin ja kaartaa länsijulkisivun (tornit, portaalit) eteen.
    Opas-datana jos mahdollista (katse_suunta/katse_kaari, osoitinvaihto), muuten juna 181. Todiste: kuva-arkki laskeutumisesta + kaaresta ja ajat → PT.
 3. **Pallokompassi**: testikäännös cb9dc2ed4 (app lokit/linssiseppa-app/testi-181, sis. kompassi + puut + soundly). Uusi iPad-ajo OK
    (lokit/todistus-pallokompassi-uusi-ipad-20261010-2353: kompassi kokonaan näkyvissä). Loput: `zsh linssiseppa-ajot/simuvuoro-pallokompassi-ajo.zsh
