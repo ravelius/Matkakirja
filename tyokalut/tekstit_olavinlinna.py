@@ -3,7 +3,7 @@
 # Assets/Matkakirja/Linssit/Resources/Tekstit/olavinlinna.fi.json (Peli/Tekstit.cs). Lähteet:
 #   - koodin tekstit (verbit, löytökortit, historian avainsanat): KOODI alla (koodi lukee ne Tekstit.T-avaimilla),
 #   - kertoja + avainsanat: kiinnitetyn paketin rakennus.json (PelattavaPala.Hash),
-#   - repliikit: seikkailu/olavinlinna/repliikit-v4/manifest.json (teksti),
+#   - repliikit: seikkailu/olavinlinna/repliikit-v5/manifest.json (teksti),
 #   - tietokortit: seikkailu/olavinlinna/tietokerros-v1/tietokerros.json (otsikko, lyhyt, teksti).
 # Datan tekstit luetaan pelissä Tekstit.TaiData(avain, data): taulu voittaa, data on varalla. Aja uudelleen, kun data muuttuu:
 #   python3 tyokalut/tekstit_olavinlinna.py
@@ -143,7 +143,7 @@ def main():
     esittely(r, t)
     if len(sys.argv) > 1:   # kopio testejä varten (Linssit-testit/kultaiset/olavinlinna-<versio>-rakennus.json)
         with open(sys.argv[1], 'w', encoding='utf-8') as f: json.dump(r, f, ensure_ascii=False)
-    m = hae(f'{MEDIA}/seikkailu/olavinlinna/repliikit-v4/manifest.json')
+    m = hae(f'{MEDIA}/seikkailu/olavinlinna/repliikit-v5/manifest.json')
     for x in (m if isinstance(m, list) else m.get('repliikit') or m.get('aanet') or []):
         if x.get('tunnus') and x.get('teksti'): t[f"olavinlinna.repliikki.{tunnus(x['tunnus'])}"] = x['teksti']
     tk = hae(f'{MEDIA}/seikkailu/olavinlinna/tietokerros-v1/tietokerros.json')
