@@ -72,12 +72,14 @@ namespace Matkakirja.Linssit.Museo
 
     public sealed class Teos
     {
-        public string Id, Otsikko, Alkuperainen, Taiteilija, Vuosi, Tekniikka, Lahde, Lisenssi, Iiif, Kuva;
+        /// <summary>Kuva = JPEG-seinäkuva (2048 px) ja Paketti = ASTC-paketin kansio ("astc-v1/&lt;id&gt;/"), kumpikin suhteessa maan juureen
+        /// (MuseoSovitin.KuvaJuuri); null = ei kuvaa / ei pakettia.</summary>
+        public string Id, Otsikko, Alkuperainen, Taiteilija, Vuosi, Tekniikka, Lahde, Lisenssi, Iiif, Kuva, Paketti;
         /// <summary>Lyhyt kuvateksti (1–3 virkettä, Sisältökirjuri); null = ei riviä kortissa.</summary>
         public string Kuvateksti;
         /// <summary>Kuva on havainnekuva (ei teoksen valokuva): kortti merkitsee sen kuten nostot.</summary>
         public bool Havainnekuva;
-        /// <summary>Seinäkuvan pikselit (leveys, korkeus); 0 = tuntematon.</summary>
+        /// <summary>Kuvan pikselit (leveys, korkeus): v2:ssa ASTC-paketin lähde (iso, pitkä sivu 8192), v1:ssä seinäkuva; 0 = tuntematon.</summary>
         public int KuvaLeveys, KuvaKorkeus;
         public double KorkeusCm, LeveysCm, Kuvasuhde;
         public bool Grafiikka;
@@ -233,8 +235,9 @@ namespace Matkakirja.Linssit.Museo
 
         /// <summary>Teos teokset.json:sta. Yhteinen skeema Sisältökirjurin paketin kanssa (PT 10.1x): kentät kelpaavat kummassakin
         /// muodossa (otsikko|nimi_fi, alkuperainen|nimi_en, taiteilija|tekija, korkeus_cm+leveys_cm|mitat_cm_kork_lev, lahde|museo,
-        /// lisenssi|teoksen_oikeustila, kuvateksti|kuvateksti_fi, kuva "polku"|kuva.seina.tiedosto). Paketin teoksen tunnus on
-        /// museon inventaarionumero (sali.json:n teos_ehdotus, esim. SK-C-5), muuten id.</summary>
+        /// teoksen_oikeustila|lisenssi, kuvateksti|kuvateksti_fi, kuva "polku"|kuva.seina.tiedosto|kuva.seina_lahde). teokset.v2.json
+        /// (Sisältökirjuri 10.10.): kuva = {paketti, px, lahde, seina_lahde}; id = museon inventaarionumero (sali.json:n teos_ehdotus,
+        /// esim. SK-C-5), vanhassa paketissa inventaario.</summary>
         public static Teos LueTeos(Dictionary<string, object> d)
         {
             string T(params string[] n) { foreach (var x in n) if (MiniJson.Teksti(d, x) is string v && v.Length > 0) return v; return null; }
@@ -242,13 +245,15 @@ namespace Matkakirja.Linssit.Museo
             double M(int i) => Convert.ToDouble(mitat[i], CultureInfo.InvariantCulture);
             var kuva = MiniJson.ObjektiTaiNull(MiniJson.Kentta(d, "kuva"));
             var seina = kuva != null ? MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuva, "seina")) : null;
-            var px = MiniJson.TaulukkoTaiTyhja(seina != null ? MiniJson.Kentta(seina, "px") : MiniJson.Kentta(d, "kuva_px"));
+            var px = MiniJson.TaulukkoTaiTyhja(seina != null ? MiniJson.Kentta(seina, "px") : kuva != null ? MiniJson.Kentta(kuva, "px") : MiniJson.Kentta(d, "kuva_px"));
+            var paketti = kuva != null ? MiniJson.Kentta(kuva, "paketti") : null;   // "astc-v1/<id>/" tai {polku}
             string id = T("inventaario", "id"), tekniikka = T("tekniikka");
             return new Teos
             {
                 Id = id, Otsikko = T("otsikko", "nimi_fi"), Alkuperainen = T("alkuperainen", "nimi_en"), Taiteilija = T("taiteilija", "tekija"),
-                Vuosi = T("vuosi"), Tekniikka = tekniikka, Lahde = T("lahde", "museo"), Lisenssi = T("lisenssi", "teoksen_oikeustila"), Iiif = T("iiif"),
-                Kuva = seina != null ? MiniJson.Teksti(seina, "tiedosto") : T("kuva"),
+                Vuosi = T("vuosi"), Tekniikka = tekniikka, Lahde = T("lahde", "museo"), Lisenssi = T("teoksen_oikeustila", "lisenssi"), Iiif = T("iiif"),
+                Kuva = seina != null ? MiniJson.Teksti(seina, "tiedosto") : kuva != null ? MiniJson.Teksti(kuva, "seina_lahde") : T("kuva"),
+                Paketti = paketti as string ?? (paketti is Dictionary<string, object> po ? MiniJson.Teksti(po, "polku") : null),
                 KorkeusCm = MiniJson.Luku(d, "korkeus_cm") ?? (mitat.Count == 2 ? M(0) : 50), LeveysCm = MiniJson.Luku(d, "leveys_cm") ?? (mitat.Count == 2 ? M(1) : 40),
                 Kuvasuhde = MiniJson.Luku(d, "kuvasuhde") ?? MiniJson.Luku(d, "kuvasuhde_leveys_per_korkeus") ?? 0,
                 Grafiikka = MiniJson.Kentta(d, "grafiikka") is bool g ? g : id != null && id.StartsWith("RP-P-", StringComparison.Ordinal),

@@ -34,7 +34,8 @@ namespace Matkakirja.Linssit.Testit
             foreach (var t in s.Teokset)
             {
                 Oleta.Tosi(t.Kuvateksti != null && t.Kuvateksti.Length > 20 && !t.Havainnekuva, $"{t.Id}: kuvateksti (Sisältökirjuri), ei havainnekuva");
-                Oleta.Tosi(t.Kuva != null && t.Kuva.StartsWith("kuvat/seina/") && Math.Max(t.KuvaLeveys, t.KuvaKorkeus) == 2048, $"{t.Id}: seinäkuva 2048 px");
+                Oleta.Tosi(t.Kuva != null && t.Kuva.StartsWith("lahde/kuvat/seina/") && t.Paketti == "astc-v1/" + t.Id + "/" && Math.Max(t.KuvaLeveys, t.KuvaKorkeus) == 8192,
+                    $"{t.Id}: seinäkuva, ASTC-paketti ja lähde 8192 px");
                 Oleta.Tosi(Math.Abs((double)t.KuvaLeveys / t.KuvaKorkeus - t.LeveysCm / t.KorkeusCm) / (t.LeveysCm / t.KorkeusCm) < 0.07, $"{t.Id}: kuvan ja mittojen suhde ≤ 7 %");
             }
             foreach (var rp in s.Reitti) if (rp.Kohde != null) Oleta.Tosi(s.HaePaikka(rp.Kohde) != null || s.Veistospaikat.Contains(rp.Kohde), $"reitin kohde {rp.Kohde} on teos- tai veistospaikka");
@@ -49,6 +50,18 @@ namespace Matkakirja.Linssit.Testit
             var t = Sali.LueTeos(Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(json)));
             Oleta.Tosi(t.Id == "SK-C-5" && t.Otsikko == "Yövartio" && t.Taiteilija == "Rembrandt van Rijn" && t.KorkeusCm == 379.5 && t.LeveysCm == 453.5, "nimi, tekijä, mitat");
             Oleta.Tosi(t.Kuva == "kuvat/seina/rijks-sk-c-5.jpg" && t.KuvaLeveys == 2048 && t.Kuvateksti.StartsWith("Rembrandtin") && !t.Havainnekuva && !t.Grafiikka, "kuva, kuvateksti, havainnekuva false");
+        }
+
+        // teokset.v2.json (Sisältökirjuri 10.10.): kuva = {paketti, px, lahde, seina_lahde}, oikeustila ennen lisenssiä.
+        [Testi] static void TeoksetV2()
+        {
+            const string json = "{\"id\":\"SK-C-5\",\"id_lahde\":\"rijks-sk-c-5\",\"nimi_fi\":\"Yövartio\",\"tekija\":\"Rembrandt van Rijn\",\"mitat_cm_kork_lev\":[379.5,453.5]," +
+                "\"lisenssi\":\"Public domain\",\"teoksen_oikeustila\":\"Public Domain Mark 1.0 (Rijksmuseum)\",\"kuvateksti_fi\":\"Rembrandtin ryhmämuotokuva.\"," +
+                "\"kuva\":{\"paketti\":\"astc-v1/SK-C-5/\",\"px\":[8192,6664],\"lahde\":\"lahde/kuvat/iso/rijks-sk-c-5.jpg\",\"seina_lahde\":\"lahde/kuvat/seina/rijks-sk-c-5.jpg\"}}";
+            var t = Sali.LueTeos(Matkakirja.Peli.MiniJson.Objekti(Matkakirja.Peli.MiniJson.Jasenna(json)));
+            Oleta.Tosi(t.Id == "SK-C-5" && t.Paketti == "astc-v1/SK-C-5/" && t.Kuva == "lahde/kuvat/seina/rijks-sk-c-5.jpg" && t.KuvaLeveys == 8192 && t.KuvaKorkeus == 6664,
+                "paketti, JPEG-vara ja px");
+            Oleta.Tosi(t.Lisenssi == "Public Domain Mark 1.0 (Rijksmuseum)", "teoksen oikeustila kortille: " + t.Lisenssi);
         }
 
         [Testi] static void HalliJaAukot()

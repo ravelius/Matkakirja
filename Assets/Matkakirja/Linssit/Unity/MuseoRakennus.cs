@@ -25,6 +25,8 @@ namespace Matkakirja.Natiivi
         readonly Shader varjostin;
         readonly List<Object> tuhottavat = new List<Object>();
         public readonly Dictionary<string, Material> TeosMateriaalit = new Dictionary<string, Material>();
+        /// <summary>Teoksen kuvan paikka MuseoTekstuureille (seinätaso materiaaliin, yksityiskohtaruudut kankaan eteen).</summary>
+        public readonly Dictionary<string, MuseoTekstuurit.Kuvapaikka> Kuvapaikat = new Dictionary<string, MuseoTekstuurit.Kuvapaikka>();
         public int Kolmioita { get; private set; }
 
         public MuseoRakennus(Transform isa)
@@ -117,6 +119,8 @@ namespace Matkakirja.Natiivi
                 // Kangas (tai paperi) 3 mm kehyksen sisähuulen alla; passepartout paperin takana.
                 double huuli = (prof?.HuuliCm ?? 1.5) / 100, kangas = Mathf.Max(0.001f, (float)(huuli - 0.003));
                 Kappale("Kuva", Suorakaide(w, h, kangas), mat, go.transform, true, kaannaZ: true);
+                Kuvapaikat[r.Teos.Id] = new MuseoTekstuurit.Kuvapaikka { Isa = go.transform, Materiaali = mat, Leveys = (float)w, Korkeus = (float)h, Z = -(float)kangas,
+                    Paketti = r.Teos.Paketti, PxLeveys = r.Teos.KuvaLeveys, PxKorkeus = r.Teos.KuvaKorkeus };
                 if (paikka.Grafiikka) Kappale("Passepartout", Suorakaide(ulkoW, ulkoH, kangas - 0.0008), paspisMat, go.transform, true, kaannaZ: true);
                 if (prof != null)
                 {
@@ -183,14 +187,15 @@ namespace Matkakirja.Natiivi
         public int KuviaLadattu { get; private set; }
 
         /// <summary>Teosten kuvat kuvajuuren alta (https:// tai file://; teokset.json "kuva" = suhteellinen polku), yksi kerrallaan,
-        /// jotta purettu alkuperäinen ei kasaudu muistiin. Epäonnistunut kuva jättää paikkakuvan.</summary>
-        public IEnumerator LataaKuvat(Sali s, string juuri, System.Action<string> kirjaa)
+        /// jotta purettu alkuperäinen ei kasaudu muistiin. Epäonnistunut kuva jättää paikkakuvan. vainTeos: vain tämä (ASTC-paketin vara).</summary>
+        public IEnumerator LataaKuvat(Sali s, string juuri, System.Action<string> kirjaa, string vainTeos = null)
         {
             if (string.IsNullOrEmpty(juuri)) yield break;
             if (!juuri.EndsWith("/")) juuri += "/";
             float t0 = Time.realtimeSinceStartup; int virheita = 0;
             foreach (var r in s.Ripustukset)
             {
+                if (vainTeos != null && r.Teos.Id != vainTeos) continue;
                 if (string.IsNullOrEmpty(r.Teos.Kuva) || !TeosMateriaalit.TryGetValue(r.Teos.Id, out var mat) || mat == null) continue;
                 using (var pyynto = UnityWebRequestTexture.GetTexture(juuri + r.Teos.Kuva, true))
                 {
@@ -207,9 +212,10 @@ namespace Matkakirja.Natiivi
                     kuvat.Add(rt);
                     mat.mainTexture = rt;
                     KuviaLadattu++;
+                    if (vainTeos != null) kirjaa?.Invoke($"museo: {vainTeos} JPEG-varakuva {rt.width}×{rt.height}");
                 }
             }
-            kirjaa?.Invoke($"museo: kuvat {KuviaLadattu}/{s.Ripustukset.Count} ladattu ({virheita} virhettä) {Time.realtimeSinceStartup - t0:F1} s, pitkä sivu {KuvaPitkaSivu} px");
+            if (vainTeos == null) kirjaa?.Invoke($"museo: kuvat {KuviaLadattu}/{s.Ripustukset.Count} ladattu ({virheita} virhettä) {Time.realtimeSinceStartup - t0:F1} s, pitkä sivu {KuvaPitkaSivu} px");
         }
 
         public void Tuhoa()
@@ -217,7 +223,7 @@ namespace Matkakirja.Natiivi
             foreach (var rt in kuvat) if (rt != null) { rt.Release(); Object.Destroy(rt); }
             kuvat.Clear();
             foreach (var o in tuhottavat) if (o != null) Object.Destroy(o);
-            tuhottavat.Clear(); TeosMateriaalit.Clear();
+            tuhottavat.Clear(); TeosMateriaalit.Clear(); Kuvapaikat.Clear();
             if (juuri != null) Object.Destroy(juuri.gameObject);
         }
     }

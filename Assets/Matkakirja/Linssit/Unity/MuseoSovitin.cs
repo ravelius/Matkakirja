@@ -7,6 +7,7 @@
 // Testikomennot (linssi-komento.txt): "linssi taidemuseo" avaa; "museo tila|kierros|vapaa|seuraava|edellinen|tauko 0|1|
 // siirry <n>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>".
 using System;
+using System.Collections.Generic;
 using System.Globalization;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Museo;
@@ -32,9 +33,11 @@ namespace Matkakirja.Natiivi
         public static event Action Vaihtui;
         /// <summary>Esittelykortti auki (napista tai komennolla "museo esittele").</summary>
         public static bool EsittelyAuki { get; private set; }
-        /// <summary>Teosten kuvien juuri (teokset.json "kuva" sen alla); null = paikkakuvat. Ämpäri: Sisältökirjurin paketti (Julkaisija
-        /// vei 10.10., 117 tiedostoa); testissä "museo kuvajuuri file:///…/lahde/" tai "pois".</summary>
-        public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/lahde/";
+        /// <summary>Maan juuri: teokset.json:n kuva.paketti (ASTC, Natiiviseppä) ja kuva.seina_lahde (JPEG-vara, Sisältökirjuri) sen alla;
+        /// null = paikkakuvat. Testissä "museo kuvajuuri file:///…/alankomaat/" tai "pois".</summary>
+        public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/";
+        /// <summary>ASTC-seinätaso ja yksityiskohtaruudut (MuseoTekstuurit); false = vain JPEG-seinäkuvat ("museo astc pois").</summary>
+        public static bool Astc = true;
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -42,6 +45,11 @@ namespace Matkakirja.Natiivi
         ILinssiYmparisto y;
         MuseoNayttamo nayttamo;
         MuseoRakennus rakennus;
+        MuseoTekstuurit tekstuurit;
+        readonly List<string> teosjarjestys = new List<string>();
+        /// <summary>ASTC-paketittomat teokset JPEG-varalle yksi kerrallaan (purettu alkuperäinen ei kasaudu muistiin).</summary>
+        readonly Queue<string> jpgJono = new Queue<string>();
+        bool jpgKaynnissa;
         Sali sali;
         public MuseoKierros Kierros { get; private set; }
         int naytettyVersio = -1;
@@ -85,8 +93,17 @@ namespace Matkakirja.Natiivi
             if (!rakennus.Varjostin) o.Kirjaa("museo: MuseoValaistu-varjostin puuttuu tai ei tuettu");
             rakennus.Rakenna(sali);
             nayttamo.AsetaKeilat(sali);
-            if (!string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
+            // ASTC (MuseoTekstuurit) on ensisijainen; JPEG vain sen puuttuessa, ettei myöhässä valmistuva JPEG ylikirjoita seinätasoa.
+            if (!Astc && !string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
             Kierros = new MuseoKierros(sali);
+            teosjarjestys.Clear();
+            foreach (int i in Kierros.Pysahdykset) teosjarjestys.Add(sali.HaeRipustus(sali.Reitti[i].Kohde)?.Teos.Id);
+            tekstuurit = nayttamo.gameObject.AddComponent<MuseoTekstuurit>();
+            // Paketit teoskohtaisesti kuva.paketista (Kuvapaikka.Paketti); kunnes MuseoTekstuurit lukee sen, juuri + "astc-v1/" + id.
+            tekstuurit.Juuri = Astc && KuvaJuuri != null ? KuvaJuuri + "astc-v1/" : null;
+            tekstuurit.Kirjaa = o.Kirjaa;
+            tekstuurit.Paikka = id => id != null && rakennus != null && rakennus.Kuvapaikat.TryGetValue(id, out var kp) ? kp : null;
+            tekstuurit.EiPakettia = JpgVaralle;
             SeikkailuTapit.MuseoKavely = () => Auki && Kierros != null && Kierros.Vaihe == MuseoVaihe.Vapaa;
             EsittelyAuki = false;
             o.Kirjaa($"museo: auki {sali.Nimi}: {sali.Osat.Count} osaa, {sali.Ripustukset.Count} teosta, {Kierros.Pysahdykset.Count} pysähdystä, " +
@@ -108,6 +125,7 @@ namespace Matkakirja.Natiivi
             }
             else Kierros.Paivita(dt);
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
+            tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
             if (Kierros.Versio != naytettyVersio)
             {
                 naytettyVersio = Kierros.Versio;
@@ -130,6 +148,8 @@ namespace Matkakirja.Natiivi
             if (Aktiivinen == this) Aktiivinen = null;
             EsittelyAuki = false;
             SeikkailuTapit.MuseoKavely = null;
+            tekstuurit?.Vapauta(); tekstuurit = null;
+            jpgJono.Clear();
             rakennus?.Tuhoa(); rakennus = null;
             nayttamo?.Tuhoa(); nayttamo = null;
             Kierros = null; sali = null; naytettyVersio = -1;
@@ -166,15 +186,34 @@ namespace Matkakirja.Natiivi
 
         static double L(string s) => double.Parse(s, CultureInfo.InvariantCulture);
 
+        void JpgVaralle(string id)
+        {
+            if (!Auki || string.IsNullOrEmpty(KuvaJuuri)) return;
+            jpgJono.Enqueue(id);
+            if (!jpgKaynnissa) o.StartCoroutine(AjaJpgJono());
+        }
+
+        System.Collections.IEnumerator AjaJpgJono()
+        {
+            jpgKaynnissa = true;
+            while (Auki && rakennus != null && jpgJono.Count > 0) yield return rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa, jpgJono.Dequeue());
+            jpgKaynnissa = false;
+        }
+
         /// <summary>Testikomennot "museo …" (LinssiOhjain.Suorita).</summary>
         public void Komento(string[] osat)
         {
             string k = osat.Length > 1 ? osat[1] : "tila";
             if (k == "kuvajuuri")
             {
-                KuvaJuuri = osat.Length > 2 && osat[2] != "pois" ? osat[2] : null;
-                o.Kirjaa("museo: kuvajuuri " + (KuvaJuuri ?? "pois (paikkakuvat)"));
-                if (Auki && KuvaJuuri != null) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
+                KuvaJuuri = osat.Length > 2 && osat[2] != "pois" ? (osat[2].EndsWith("/") ? osat[2] : osat[2] + "/") : null;
+                o.Kirjaa("museo: kuvajuuri " + (KuvaJuuri ?? "pois (paikkakuvat)") + (Auki ? " (voimaan seuraavassa avauksessa)" : ""));
+                return;
+            }
+            if (k == "astc")
+            {
+                Astc = osat.Length < 3 || osat[2] != "pois";
+                o.Kirjaa("museo: astc " + (Astc ? "päällä" : "pois (vain JPEG-seinäkuvat)") + (Auki ? " (voimaan seuraavassa avauksessa)" : ""));
                 return;
             }
             if (!Auki && k != "tila") { o.Kirjaa("museo: linssi ei ole auki (linssi taidemuseo)"); return; }
