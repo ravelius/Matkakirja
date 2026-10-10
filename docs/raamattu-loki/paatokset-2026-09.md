@@ -12148,3 +12148,7 @@ Pelin pohja ennen kaupunkia on iPadilla 2,4 Gt (huippu 4,5 Gt) → junaan 175 al
 ## PULU 18 MAATA JA AUTOMAATTI (PT, Sisältökirjuri ja Pelikoodari 10.10.2026 klo 06.5x) (10.10.2026 klo 06.53)
 
 Ämpärissä 18 maata (+ CZE, BGR, DNK, POL, EST yöllä). Pelikoodarin pulu-automaatti: uusi maa testiin yhdellä komennolla (pulu-kultaiset.py --kirjoita --haarat --testaa, tavuvertailu ämpäriin ja haaraan). Sisältökirjurilla HUN, CHE, GBR ja UKR; pilvessä LVA, LTU ja RUS; seuraavat NOR ja SVK.
+
+## PULU PYSÄYTETTY, PILVIKREDIITTI LOPPU (omistaja 10.10.2026 klo 07.0x) (10.10.2026 klo 07.00)
+
+Omistaja: "pysäytä pulun generointi nykyisten maiden jälkeen, pilvi kreditit loppu". Tämän tilin 250 dollarin pilvikrediitti käytettiin Pulun maihin 9.–10.10. (ämpärissä 18 maata; Sisältökirjurilla HUN, CHE, GBR, UKR ja LVA; pilvessä kesken LTU ja RUS). Uusia maita ei käynnistetä (NOR, SVK, SVN, BIH, BEL, ISL, MLT, LUX ja pienet jäävät), eikä uusia pilvisessioita avata ilman omistajan päätöstä. LTU ja RUS viedään loppuun vain, jos pilvi saa ne valmiiksi; muuten ne jäävät keskeneräisinä odottamaan. Jatko (toisen tilin krediitti tai paikallinen ajo kiintiöstä) vain omistajan päätöksellä.
