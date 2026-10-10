@@ -580,27 +580,21 @@ namespace Matkakirja.Editori
             // avautuvat ilman linssin sovitinta, aineisto paketista (puuttuessa Kuvanakyma.Esimerkki).
             ("astronautin kuva", () => Linssi("kuva"), SuljeKuva, 3.0),
             ("minipulun kortti", () => Linssi("kuva pulu"), SuljeKuva, 3.0),
-            // Kartan näkymät (Natiivi-UI 10.10.2026) kuten `ui kortti firenze [oma]`, `ui selite`, `ui maakunnat` ja
-            // `ui pilleri linssit|aarteet`.
-            ("kaupunkikortti", () => Kaupunkikortti(false), () => UiNakymat.Hae().Kaupunkikortti.Sulje(), 1.0),
-            ("oman kaupungin kortti", () => Kaupunkikortti(true), () => UiNakymat.Hae().Kaupunkikortti.Sulje(), 1.0),
-            ("karttaselite", () => { var s = UiNakymat.Hae().Karttaselite; s.Avaa(); s.VaihdaValilehti(false); },
-                () => UiNakymat.Hae().Karttaselite.Sulje(), 1.0),
-            ("maakunnat", () => { var s = UiNakymat.Hae().Karttaselite; s.Avaa(); s.VaihdaValilehti(true); s.Maakunnat.Testaa(null, false); },
-                () => UiNakymat.Hae().Karttaselite.Sulje(), 2.0),
+            // Kartan näkymät (Natiivi-UI 10.10.2026) kuten `ui kortti firenze` ja `ui pilleri linssit|aarteet`. Karttaselite
+            // (MaakuntaKartta: aina maakuntalappu) ja oman kaupungin kortti (samat elementit kuin edellisellä kortilla) eivät
+            // tuottaneet tyhjässä kohtauksessa uusia näkyviä elementtejä (ajo 10.10. 04.50, aikaraja): ei listalla.
+            ("kaupunkikortti", () => Kaupunkikortti(), () => UiNakymat.Hae().Kaupunkikortti.Sulje(), 1.0),
             ("pillerin linssit", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("linssit", -1); },
                 () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
             ("pillerin aarteet", () => { UiNakymat.Hae().Valikko.Sulje(); UiNakymat.Hae().Linssit.Valitsin.TestaaNakyma("aarteet", -1); },
                 () => UiNakymat.Hae().Linssit.Valitsin.Sulje(), 0.8),
         };
 
-        static void Kaupunkikortti(bool oma) =>
+        static void Kaupunkikortti() =>
             UiNakymat.Hae().Kaupunkikortti.Nayta("firenze", null, new KaupunkiToiminnot
             {
                 LueLehti = () => { },
-                Liiku = oma ? null : () => { },
-                Mannerlento = oma ? () => { } : null,
-                MannerlentoTeksti = oma ? "Mannerlento (£300)" : null,
+                Liiku = () => { },
                 Sulje = () => { },
             });
 
