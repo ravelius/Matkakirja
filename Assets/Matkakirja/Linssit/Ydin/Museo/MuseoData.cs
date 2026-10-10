@@ -35,6 +35,14 @@ namespace Matkakirja.Linssit.Museo
         public bool Kaari;
     }
 
+    /// <summary>Huone (Sisältökirjurin huoneet.json): nimi näkyy hetken huoneeseen tultaessa, teksti vain napautuksesta (Raamattu:
+    /// NIMIKYLTIT HETKEN, INFO NAPAUTUKSESTA). Osat = sali.json:n osa-id:t (komerot jakavat yhden huoneen).</summary>
+    public sealed class Huone
+    {
+        public string Id, Nimi, NimiEn, Teksti;
+        public readonly List<string> Osat = new List<string>();
+    }
+
     public sealed class Osa
     {
         public string Id, Nimi, Tyyppi, SeinaMateriaali, PaneeliMateriaali, Lattia, KattoTyyppi;
@@ -113,12 +121,36 @@ namespace Matkakirja.Linssit.Museo
         public readonly HashSet<string> Veistospaikat = new HashSet<string>(StringComparer.Ordinal);
         public readonly List<Teos> Teokset = new List<Teos>();
         public readonly List<Ripustus> Ripustukset = new List<Ripustus>();
+        public readonly List<Huone> Huoneet = new List<Huone>();
 
         public Osa HaeOsa(string id) => Osat.Find(o => o.Id == id);
         public Teospaikka HaePaikka(string id) => Teospaikat.Find(p => p.Id == id);
         public Ripustus HaeRipustus(string paikkaId) => Ripustukset.Find(r => r.Paikka.Id == paikkaId);
         /// <summary>Osa, jonka lattialla piste on (ensimmäinen osuma; aukkojen kohdalla kumpi tahansa).</summary>
         public Osa OsaPisteessa(V3 p) => Osat.Find(o => o.Sisalla(p));
+        public Huone HuoneOsalle(string osaId) => osaId == null ? null : Huoneet.Find(h => h.Osat.Contains(osaId));
+
+        /// <summary>Huone, jossa piste on. Pysyy edellisessä niin kauan kuin piste on sen jossakin osassa (oviaukoissa osat menevät
+        /// päällekkäin, eikä nimi saa välkkyä), ja osien ulkopuolella (aukon raossa) edellinen jää voimaan.</summary>
+        public Huone HuonePisteessa(V3 p, Huone edellinen)
+        {
+            if (edellinen != null && edellinen.Osat.Exists(id => HaeOsa(id)?.Sisalla(p) == true)) return edellinen;
+            return HuoneOsalle(OsaPisteessa(p)?.Id) ?? edellinen;
+        }
+
+        /// <summary>huoneet.json (Sisältökirjuri: huoneet[] = id, nimi_fi, nimi_en, osat, teksti_fi) salin huoneiksi; tuntemattomat osat ohitetaan.</summary>
+        public void LueHuoneet(string json)
+        {
+            Huoneet.Clear();
+            var j = MiniJson.Objekti(MiniJson.Jasenna(json));
+            foreach (var o in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "huoneet")))
+            {
+                var d = MiniJson.Objekti(o);
+                var h = new Huone { Id = MiniJson.Teksti(d, "id"), Nimi = MiniJson.Teksti(d, "nimi_fi"), NimiEn = MiniJson.Teksti(d, "nimi_en"), Teksti = MiniJson.Teksti(d, "teksti_fi") };
+                foreach (var x in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "osat"))) if (x is string id && HaeOsa(id) != null) h.Osat.Add(id);
+                if (h.Id != null && h.Osat.Count > 0) Huoneet.Add(h);
+            }
+        }
 
         /// <summary>sali.json + teokset.json → sali ripustuksineen (vain teokset, jotka teokset.json tuntee).</summary>
         public static Sali Lue(string saliJson, string teoksetJson)

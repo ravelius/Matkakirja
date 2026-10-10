@@ -33,6 +33,10 @@ namespace Matkakirja.Natiivi
         public static event Action Vaihtui;
         /// <summary>Esittelykortti auki (napista tai komennolla "museo esittele").</summary>
         public static bool EsittelyAuki { get; private set; }
+        /// <summary>Huonekortti auki (vain pelaajan napautuksesta tai komennolla "museo huone 1"; ei koskaan automaattisesti).</summary>
+        public static bool HuoneKorttiAuki { get; private set; }
+        /// <summary>Kävelijä tuli uuteen huoneeseen (myös avauksessa): UI näyttää nimen ~3 s ja häivyttää (kuten elävän oppaan paikan nimi).</summary>
+        public static event Action<Huone> HuoneVaihtui;
         /// <summary>Maan juuri: teokset.json:n kuva.paketti (ASTC, Natiiviseppä) ja kuva.seina_lahde (JPEG-vara, Sisältökirjuri) sen alla;
         /// null = paikkakuvat. Testissä "museo kuvajuuri file:///…/alankomaat/" tai "pois".</summary>
         public static string KuvaJuuri = "https://media.matkakirja.app/taidemuseo/alankomaat/";
@@ -67,6 +71,8 @@ namespace Matkakirja.Natiivi
         public Sali Sali => sali;
         /// <summary>Teos, jonka kortti esittelynapista avautuu (pysähdyksen teos tai vapaassa tilassa katsottu).</summary>
         public Ripustus Teos => Kierros?.NykyinenTeos;
+        /// <summary>Huone, jossa kävelijä on (huoneet.json); null = ei huonetekstejä.</summary>
+        public Huone NykyinenHuone { get; private set; }
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
@@ -78,6 +84,14 @@ namespace Matkakirja.Natiivi
             try { sali = Sali.Lue(saliJson.text, teoksetJson.text); }
             catch (Exception e) { o.Kirjaa("museo: sali virheellinen: " + e.Message); return; }
             finally { Resources.UnloadAsset(saliJson); Resources.UnloadAsset(teoksetJson); }
+            var huoneetJson = Resources.Load<TextAsset>("Museo/alankomaat/huoneet");
+            if (huoneetJson != null)
+            {
+                try { sali.LueHuoneet(huoneetJson.text); }
+                catch (Exception e) { o.Kirjaa("museo: huoneet.json virheellinen: " + e.Message); }
+                Resources.UnloadAsset(huoneetJson);
+            }
+            NykyinenHuone = null; HuoneKorttiAuki = false;
 
             Auki = true;
             Aktiivinen = this;
@@ -127,6 +141,15 @@ namespace Matkakirja.Natiivi
             else Kierros.Paivita(dt);
             nayttamo.Paivita(sali, Kierros.Nykyinen, dt);
             tekstuurit?.Paivita(nayttamo.Kamera, Kierros.NykyinenTeos?.Teos.Id, teosjarjestys, Kierros.Kohta);
+            var huone = sali.HuonePisteessa(Kierros.Nykyinen.P, NykyinenHuone);
+            if (huone != NykyinenHuone)
+            {
+                NykyinenHuone = huone;
+                if (HuoneKorttiAuki) HuoneKortti(false);   // vanhan huoneen kortti ei jää auki uuteen huoneeseen
+                o.Kirjaa($"museo: huone {huone?.Id ?? "-"} {huone?.Nimi}");
+                HuoneVaihtui?.Invoke(huone);
+                Vaihtui?.Invoke();
+            }
             if (Kierros.Versio != naytettyVersio)
             {
                 naytettyVersio = Kierros.Versio;
@@ -147,7 +170,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             if (Aktiivinen == this) Aktiivinen = null;
-            EsittelyAuki = false;
+            EsittelyAuki = false; HuoneKorttiAuki = false; NykyinenHuone = null;
             SeikkailuTapit.MuseoKavely = null;
             tekstuurit?.Vapauta(); tekstuurit = null;
             jpgJono.Clear();
@@ -171,9 +194,22 @@ namespace Matkakirja.Natiivi
         {
             if (Aktiivinen == null) return;
             EsittelyAuki = auki ?? !EsittelyAuki;
+            if (EsittelyAuki) HuoneKorttiAuki = false;
             // Esittelyn ajaksi kierros pysähtyy teoksen ääreen (pallon tapaan), sulkiessa jatkuu.
             var k = Aktiivinen.Kierros;
             if (k != null && k.Vaihe != MuseoVaihe.Vapaa) k.Tauko(EsittelyAuki);
+            Vaihtui?.Invoke();
+        }
+
+        /// <summary>Huonekortti (KORTTI-pohja, NUI): vain pelaajan napautuksesta nimikyltistä. Kierros pysähtyy kuten esittelyssä.</summary>
+        public static void HuoneKortti(bool? auki = null)
+        {
+            if (Aktiivinen?.NykyinenHuone == null) { HuoneKorttiAuki = false; return; }
+            bool oli = HuoneKorttiAuki;
+            HuoneKorttiAuki = auki ?? !HuoneKorttiAuki;
+            if (HuoneKorttiAuki) EsittelyAuki = false;
+            var k = Aktiivinen.Kierros;
+            if (oli != HuoneKorttiAuki && k != null && k.Vaihe != MuseoVaihe.Vapaa) k.Tauko(HuoneKorttiAuki);
             Vaihtui?.Invoke();
         }
 
@@ -182,7 +218,7 @@ namespace Matkakirja.Natiivi
             if (!Auki || Kierros == null) return "museo: kiinni";
             var r = Kierros.NykyinenTeos; var a = Kierros.Nykyinen;
             return $"museo: {Kierros.Vaihe}{(Kierros.Tauolla ? " tauko" : "")} {Kierros.Kohta + 1}/{Kierros.Pysahdykset.Count}, paikka {a.P}, suunta {a.Suunta}, " +
-                   $"osa {sali.OsaPisteessa(a.P)?.Id ?? "-"}, teos {(r == null ? "-" : r.Teos.Id + " " + r.Teos.Otsikko)}, esittely {(EsittelyAuki ? "auki" : "kiinni")}, valotuskorjaus {MuseoNayttamo.ValotusKorjausEv:+0.0;-0.0} EV";
+                   $"osa {sali.OsaPisteessa(a.P)?.Id ?? "-"}, teos {(r == null ? "-" : r.Teos.Id + " " + r.Teos.Otsikko)}, esittely {(EsittelyAuki ? "auki" : "kiinni")}, huone {NykyinenHuone?.Id ?? "-"}{(HuoneKorttiAuki ? " (kortti)" : "")}, valotuskorjaus {MuseoNayttamo.ValotusKorjausEv:+0.0;-0.0} EV";
         }
 
         static double L(string s) => double.Parse(s, CultureInfo.InvariantCulture);
@@ -227,6 +263,7 @@ namespace Matkakirja.Natiivi
                 case "tauko": Kierros.Tauko(osat.Length < 3 || osat[2] != "0"); break;
                 case "siirry" when osat.Length > 2: Kierros.Siirry(int.Parse(osat[2], CultureInfo.InvariantCulture) - 1); break;
                 case "esittele": Esittele(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
+                case "huone": HuoneKortti(osat.Length > 2 ? osat[2] != "0" : (bool?)null); break;
                 case "liiku" when osat.Length > 5:
                     if (Kierros.Vaihe != MuseoVaihe.Vapaa) Kierros.Vapaa();
                     for (double t = 0, s = L(osat[5]); t < s; t += 0.05) Kierros.VapaaLiike(L(osat[2]), L(osat[3]), L(osat[4]), 0, 0.05);

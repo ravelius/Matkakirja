@@ -64,6 +64,32 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(t.Lisenssi == "Public Domain Mark 1.0 (Rijksmuseum)", "teoksen oikeustila kortille: " + t.Lisenssi);
         }
 
+        // Huonetekstit (Sisältökirjuri huoneet.json, PT 10.5x): jokainen osa kuuluu yhteen huoneeseen, teksti 2–3 virkettä, nimi ei välky aukossa.
+        [Testi] static void Huoneet()
+        {
+            var s = Alankomaat();
+            s.LueHuoneet(File.ReadAllText(Polku("Assets", "Matkakirja", "Linssit", "Resources", "Museo", "alankomaat", "huoneet.json")));
+            Oleta.Tosi(s.Huoneet.Count == 8, $"8 huonetta: {s.Huoneet.Count}");
+            foreach (var o in s.Osat)
+                Oleta.Tosi(s.Huoneet.FindAll(h => h.Osat.Contains(o.Id)).Count == 1, $"osa {o.Id} yhdessä huoneessa");
+            foreach (var h in s.Huoneet)
+                Oleta.Tosi(!string.IsNullOrEmpty(h.Nimi) && h.Teksti != null && h.Teksti.Length > 80 && h.Teksti.Split(". ").Length <= 4, $"{h.Id}: nimi ja 2–3 virkkeen teksti");
+            Oleta.Tosi(s.HuoneOsalle("kg-k3o")?.Id == "kg-komerot", "komerot jakavat yhden huoneen");
+            var m1 = s.HaeOsa("m1"); var p = new V3((m1.X0 + m1.X1) / 2, 0, (m1.Z0 + m1.Z1) / 2);
+            var h1 = s.HuonePisteessa(p, null);
+            Oleta.Tosi(h1?.Id == "m1", "m1:n keskellä huone m1: " + h1?.Id);
+            Oleta.Tosi(s.HuonePisteessa(new V3(-1e4, 0, -1e4), h1) == h1, "osien ulkopuolella edellinen huone jää voimaan");
+            // Aukon päällekkäisyys: piste, joka on sekä m1:n että toisen osan sisällä, pysyy edellisessä huoneessa.
+            foreach (var o in s.Osat)
+            {
+                if (o == m1) continue;
+                double x0 = Math.Max(o.X0, m1.X0), x1 = Math.Min(o.X1, m1.X1), z0 = Math.Max(o.Z0, m1.Z0), z1 = Math.Min(o.Z1, m1.Z1);
+                if (x0 > x1 || z0 > z1) continue;
+                var y = new V3((x0 + x1) / 2, 0, (z0 + z1) / 2);
+                Oleta.Tosi(s.HuonePisteessa(y, h1) == h1 && s.HuonePisteessa(y, s.HuoneOsalle(o.Id)) == s.HuoneOsalle(o.Id), $"m1/{o.Id}-raja: huone ei vaihdu edestakaisin");
+            }
+        }
+
         [Testi] static void HalliJaAukot()
         {
             var s = Alankomaat();
