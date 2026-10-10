@@ -404,8 +404,10 @@
   "kohde": "kohde:kuressaaren-linna",
   "kysymys": "Mikä on Bomarsundin linnoitus?",
   "uusi": true,
-  "vastaus": "Kas vaan. Ahvenanmaan linnoitus, jaa. Bomarsund oli Venäjän keisarikunnan Ahvenanmaalle rakentama linnoitus, jonka rakennustyöt tehtiin 1800-luvun alkupuolella. Se tuhoutui [[Krimin sodan]] aikana, kun brittiläiset ja ranskalaiset joukot hyökkäsivät sitä vastaan, eikä sitä rakennettu uudelleen. Tarkat vuodet en ole varma, mutta tapahtumat ovat yli sadan vuoden takaa. Onpas siitä onneksi pitkä aika.",
+  "vastaus": "Kas vaan. [[Ahvenanmaan linnoitus]], jaa. Bomarsund oli [[Venäjän keisarikunnan]] Ahvenanmaalle rakentama linnoitus, jonka rakennustyöt tehtiin 1800-luvun alkupuolella. Se tuhoutui [[Krimin sodan]] aikana, kun brittiläiset ja ranskalaiset joukot hyökkäsivät sitä vastaan, eikä sitä rakennettu uudelleen. Tarkat vuodet en ole varma, mutta tapahtumat ovat yli sadan vuoden takaa. Onpas siitä onneksi pitkä aika.",
   "linkit": [
+   "Ahvenanmaan linnoitus",
+   "Venäjän keisarikunnan",
    "Krimin sodan"
   ],
   "jatkot": [
@@ -459,9 +461,11 @@
   "kohde": "kohde:kopu-tuletorn",
   "kysymys": "Mikä on meripeninkulma?",
   "uusi": true,
-  "vastaus": "Ai tota. No tähän vastaan mielelläni. Meripeninkulma on merenkulussa ja ilmailussa käytetty pituusyksikkö, jonka pituus on 1 852 metriä. Se perustuu alun perin yhteen [[kaariminuuttiin]] pitkin maapallon pintaa, minkä vuoksi se sopii hyvin merikarttojen käyttöön. Kõpun valon kantama ilmoitetaan juuri tällä yksiköllä. Ei paha kyyhkyltä.",
+  "vastaus": "Ai tota. No tähän vastaan mielelläni. Meripeninkulma on merenkulussa ja ilmailussa käytetty [[pituusyksikkö]], jonka pituus on 1 852 metriä. Se perustuu alun perin yhteen [[kaariminuuttiin]] pitkin maapallon pintaa, minkä vuoksi se sopii hyvin [[merikarttojen]] käyttöön. Kõpun valon kantama ilmoitetaan juuri tällä yksiköllä. Ei paha kyyhkyltä.",
   "linkit": [
-   "kaariminuuttiin"
+   "pituusyksikkö",
+   "kaariminuuttiin",
+   "merikarttojen"
   ],
   "jatkot": [
    "Miksi laivoilla käytetään solmuja?",
@@ -472,9 +476,11 @@
   "kohde": "kohde:kopu-tuletorn",
   "kysymys": "Miksi majakat rakennettiin korkeille paikoille?",
   "uusi": true,
-  "vastaus": "Hyvä kysymys tuo. Valo näkyy sitä kauemmas, mitä korkeammalla se on, koska maapallon kaarevuus ja [[horisontti]] rajoittavat näkyvyyttä matalalla. Siksi majakat rakennettiin kukkuloille tai korkeiksi torneiksi. Kõpussa torni seisoo Hiidenmaan korkeimman kukkulan laella, ja valo on yli sata metriä merenpinnan yläpuolella. Korkealta katsominen on kyllä kyyhkyn erikoisalaa.",
+  "vastaus": "Hyvä kysymys tuo. Valo näkyy sitä kauemmas, mitä korkeammalla se on, koska [[maapallon kaarevuus]] ja [[horisontti]] rajoittavat näkyvyyttä matalalla. Siksi majakat rakennettiin [[kukkuloille]] tai korkeiksi torneiksi. Kõpussa torni seisoo Hiidenmaan korkeimman kukkulan laella, ja valo on yli sata metriä merenpinnan yläpuolella. Korkealta katsominen on kyllä kyyhkyn erikoisalaa.",
   "linkit": [
-   "horisontti"
+   "maapallon kaarevuus",
+   "horisontti",
+   "kukkuloille"
   ],
   "jatkot": [
    "Miten majakan linssi vahvistaa valoa?",
@@ -513,8 +519,10 @@
   "kohde": "kohde:kihnu",
   "kysymys": "Mikä on kört?",
   "uusi": false,
-  "vastaus": "Tuota niin. Kört on Kihnun naisten raidallinen hame, joka kuuluu saaren omaleimaiseen kansanpukuun. Pukua käytetään yhä arjessa eikä vain juhlissa, ja naiset kutovat hameensa itse. Kihnun nimi viitotaan [[Viron viittomakielessä]] jäljittelemällä körtin pystyraitoja.\n\nYlhäältä raidat erottuvat kauas, ja se on hyvä tapa tunnistaa kylä. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.",
+  "vastaus": "Tuota niin. Kört on Kihnun naisten [[raidallinen hame]], joka kuuluu saaren omaleimaiseen [[kansanpukuun]]. Pukua käytetään yhä arjessa eikä vain juhlissa, ja naiset kutovat hameensa itse. Kihnun nimi viitotaan [[Viron viittomakielessä]] jäljittelemällä körtin pystyraitoja.\n\nYlhäältä raidat erottuvat kauas, ja se on hyvä tapa tunnistaa kylä. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.",
   "linkit": [
+   "raidallinen hame",
+   "kansanpukuun",
    "Viron viittomakielessä"
   ],
   "jatkot": [
@@ -526,8 +534,10 @@
   "kohde": "kohde:kihnu",
   "kysymys": "Mikä on troi?",
   "uusi": true,
-  "vastaus": "Katotaas. Troi on Kihnun miesten kuvioitu neuletakki, ja se kuuluu saaren perinteiseen kansanpukuun yhdessä raidallisen hameen ja neulottujen lapasten kanssa. Kuvioiden tarkkaa merkitystä en ole varma, joten en halua arvailla. Kihnulla käsityöt ovat yhä osa [[arkea]], ja niitä tehdään ja pidetään käytössä. Neuletakkeja minä en voi pitää, kun siivet ovat tiellä.",
+  "vastaus": "Katotaas. Troi on Kihnun miesten kuvioitu [[neuletakki]], ja se kuuluu saaren perinteiseen kansanpukuun yhdessä raidallisen hameen ja neulottujen [[lapasten]] kanssa. Kuvioiden tarkkaa merkitystä en ole varma, joten en halua arvailla. Kihnulla käsityöt ovat yhä osa [[arkea]], ja niitä tehdään ja pidetään käytössä. Neuletakkeja minä en voi pitää, kun siivet ovat tiellä.",
   "linkit": [
+   "neuletakki",
+   "lapasten",
    "arkea"
   ],
   "jatkot": [
@@ -539,9 +549,11 @@
   "kohde": "kohde:kihnu",
   "kysymys": "Mitä Unesco on tunnustanut Kihnun kulttuurissa?",
   "uusi": true,
-  "vastaus": "Mmm— tuo vaatii tarkkuutta. Kihnun kulttuuriperinne on liitetty [[ihmiskunnan aineettoman kulttuuriperinnön]] yhteyteen, ja lähteiden mukaan tämä tapahtui vuonna 2003. En ole varma, oliko kyseessä listaus vai julistus, joten en sano sitä tarkemmin. Tunnustuksen kohteena ovat saaren käsityöt, musiikki, tanssit ja muut perinteet, jotka elävät yhä arjessa. Pieni saari, iso maine.",
+  "vastaus": "Mmm— tuo vaatii tarkkuutta. [[Kihnun kulttuuriperinne]] on liitetty [[ihmiskunnan aineettoman kulttuuriperinnön]] yhteyteen, ja lähteiden mukaan tämä tapahtui vuonna 2003. En ole varma, oliko kyseessä listaus vai julistus, joten en sano sitä tarkemmin. Tunnustuksen kohteena ovat saaren [[käsityöt]], musiikki, tanssit ja muut perinteet, jotka elävät yhä arjessa. Pieni saari, iso maine.",
   "linkit": [
-   "ihmiskunnan aineettoman kulttuuriperinnön"
+   "Kihnun kulttuuriperinne",
+   "ihmiskunnan aineettoman kulttuuriperinnön",
+   "käsityöt"
   ],
   "jatkot": [
    "Mitä aineeton kulttuuriperintö tarkoittaa?",
@@ -550,10 +562,13 @@
  },
  {
   "kohde": "kohde:kihnu",
-  "kysymys": "Millaisia kihnulaiset häätavat ovat?",
+  "kysymys": "Millaisia kihnulaiset [[häätavat]] ovat?",
   "uusi": true,
-  "vastaus": "Ai tota. Kihnun häätavat ovat kaikkein monimutkaisin ja kirkkain ilmaus saaren kulttuurista. Häissä näkyvät samat asiat kuin muussakin perinteessä: musiikki, laulut, tanssit ja saaren omat puvut. Tarkkoja menoja en ole varma, joten en kerro niistä enempää. Siinä on pohjatietoa kyllä, ja loput saa selvittää muualta.",
-  "linkit": [],
+  "vastaus": "Ai tota. [[Kihnun]] häätavat ovat kaikkein monimutkaisin ja kirkkain ilmaus saaren kulttuurista. Häissä näkyvät samat asiat kuin muussakin perinteessä: [[musiikki]], laulut, tanssit ja saaren omat puvut. Tarkkoja menoja en ole varma, joten en kerro niistä enempää. Siinä on pohjatietoa kyllä, ja loput saa selvittää muualta.",
+  "linkit": [
+   "Kihnun",
+   "musiikki"
+  ],
   "jatkot": [
    "Miten Kihnun kansanpuku näkyy juhlissa?",
    "Millaisia runolauluja häissä lauletaan?"
@@ -592,8 +607,10 @@
   "kohde": "kohde:parnu",
   "kysymys": "Mikä oli Hansaliitto?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Hansaliitto oli Pohjois-Euroopan kauppakaupunkien ja kauppiaiden verkosto, joka vaikutti keskiajalta alkaen Itämeren ja Pohjanmeren alueella. [[Lyypekki]] oli sen keskeisiä kaupunkeja, ja liiton jäseniä oli useita Itämeren rannikon satamakaupunkeja. Pärnu liittyi siihen muiden Liivinmaan kaupunkien tavoin. Viisas Pöllö parantelee tällä hetkellä siipeään, mut ilman häntä tämä meni kyllä ihan hyvin.",
+  "vastaus": "Odotas vähän. Hansaliitto oli [[Pohjois-Euroopan]] kauppakaupunkien ja kauppiaiden verkosto, joka vaikutti keskiajalta alkaen [[Itämeren]] ja Pohjanmeren alueella. [[Lyypekki]] oli sen keskeisiä kaupunkeja, ja liiton jäseniä oli useita Itämeren rannikon satamakaupunkeja. Pärnu liittyi siihen muiden Liivinmaan kaupunkien tavoin. Viisas Pöllö parantelee tällä hetkellä siipeään, mut ilman häntä tämä meni kyllä ihan hyvin.",
   "linkit": [
+   "Pohjois-Euroopan",
+   "Itämeren",
    "Lyypekki"
   ],
   "jatkot": [
@@ -619,8 +636,11 @@
   "kohde": "kohde:parnu",
   "kysymys": "Kuka on hallinnut Pärnua vuosisatojen aikana?",
   "uusi": true,
-  "vastaus": "No jopas, tämä on pitkä lista. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, ja toisen kaupungin, Embeken, perusti Saksalainen ritarikunta. Puola-Liettua hallitsi kaupunkia 1560–1617, sen jälkeen Ruotsi, ja Suuren Pohjan sodan jälkeen Pärnu siirtyi Venäjälle. Nykyään se kuuluu Viroon. Kyyhkyn pää pyörii.",
-  "linkit": [],
+  "vastaus": "No jopas, tämä on pitkä lista. Vanhan Pärnun perusti [[Saare-Läänen piispa]] noin 1251, ja toisen kaupungin, Embeken, perusti [[Saksalainen ritarikunta]]. Puola-Liettua hallitsi kaupunkia 1560–1617, sen jälkeen Ruotsi, ja Suuren Pohjan sodan jälkeen Pärnu siirtyi Venäjälle. Nykyään se kuuluu Viroon. Kyyhkyn pää pyörii.",
+  "linkit": [
+   "Saare-Läänen piispa",
+   "Saksalainen ritarikunta"
+  ],
   "jatkot": [
    "Miksi Puola-Liettua hallitsi Pärnua?",
    "Milloin Viro itsenäistyi?"
@@ -644,8 +664,11 @@
   "kohde": "kohde:matsalu",
   "kysymys": "Miksi juuri tämä lahti on linnuille tärkeä?",
   "uusi": false,
-  "vastaus": "Tuota niin. Matsalunlahti sijaitsee Itä-Atlantin muuttoreitillä, joten sen kautta kulkee joka kevät yli kaksi miljoonaa vesilintua. Lahti on matala, vähäsuolainen ja ravinteikas, ja sitä ympäröivät tulvaniityt, rantaniityt ja ruovikot sekä yli viisikymmentä saarta lahden suulla. Nämä tarjoavat linnuille ruokaa ja suojaa. Hyvä ravintola on hyvä ravintola, olipa vieras kyyhky tai alli.",
-  "linkit": [],
+  "vastaus": "Tuota niin. [[Matsalunlahti]] sijaitsee Itä-Atlantin muuttoreitillä, joten sen kautta kulkee joka kevät yli kaksi miljoonaa [[vesilintua]]. Lahti on matala, vähäsuolainen ja ravinteikas, ja sitä ympäröivät tulvaniityt, rantaniityt ja ruovikot sekä yli viisikymmentä saarta lahden suulla. Nämä tarjoavat linnuille ruokaa ja suojaa. Hyvä ravintola on hyvä ravintola, olipa vieras kyyhky tai alli.",
+  "linkit": [
+   "Matsalunlahti",
+   "vesilintua"
+  ],
   "jatkot": [
    "Mikä on muuttoreitti?",
    "Miten Matsalun kansallispuistoa suojellaan?"
@@ -655,8 +678,10 @@
   "kohde": "kohde:matsalu",
   "kysymys": "Millainen lintu alli on?",
   "uusi": true,
-  "vastaus": "Ai se. Alli on pieni sorsalintu, joka pesii pohjoisilla alueilla ja talvehtii merellä. Koiraalla on erottuvan pitkä pyrstö. Matsalunlahdella alleja kulkee keväisin noin 1,6 miljoonaa, mikä tekee siitä [[muuttolinnuille]] tärkeän levähdyspaikan. Yksityiskohdat värityksestä en ole varma, joten jätän ne sikseen.",
+  "vastaus": "Ai se. Alli on pieni [[sorsalintu]], joka pesii pohjoisilla alueilla ja talvehtii merellä. Koiraalla on erottuvan pitkä pyrstö. [[Matsalunlahdella]] alleja kulkee keväisin noin 1,6 miljoonaa, mikä tekee siitä [[muuttolinnuille]] tärkeän levähdyspaikan. Yksityiskohdat värityksestä en ole varma, joten jätän ne sikseen.",
   "linkit": [
+   "sorsalintu",
+   "Matsalunlahdella",
    "muuttolinnuille"
   ],
   "jatkot": [
@@ -668,8 +693,10 @@
   "kohde": "kohde:matsalu",
   "kysymys": "Millainen lintu on merikotka?",
   "uusi": true,
-  "vastaus": "Joo, tän minä tiedän. Merikotka on yksi Euroopan suurimmista petolinnuista, ja sen siipiväli on yli kaksi metriä. Se saalistaa kalaa ja vesilintuja, ja siksi se viihtyy rannikoilla ja kosteikoilla. Matsalun alueella merikotka on korkeimmassa [[suojeluluokassa]]. Viisas Pöllö tuntisi sen lähisuvusta, mut hän on tällä hetkellä poissa.",
+  "vastaus": "Joo, tän minä tiedän. Merikotka on yksi Euroopan suurimmista [[petolinnuista]], ja sen siipiväli on yli kaksi metriä. Se saalistaa [[kalaa]] ja vesilintuja, ja siksi se viihtyy rannikoilla ja kosteikoilla. Matsalun alueella merikotka on korkeimmassa [[suojeluluokassa]]. Viisas Pöllö tuntisi sen lähisuvusta, mut hän on tällä hetkellä poissa.",
   "linkit": [
+   "petolinnuista",
+   "kalaa",
    "suojeluluokassa"
   ],
   "jatkot": [
@@ -679,10 +706,11 @@
  },
  {
   "kohde": "kohde:matsalu",
-  "kysymys": "Kuinka syvä Matsalunlahti on?",
+  "kysymys": "Kuinka syvä [[Matsalunlahti on]]?",
   "uusi": true,
-  "vastaus": "Hetkinen ny. Matsalunlahti on hyvin matala: sen keskisyvyys on vain puolitoista metriä. Lahti on kahdeksantoista kilometriä pitkä ja kuusi kilometriä leveä, vähäsuolainen ja ravinteikas. Rantaviivaa on noin 165 kilometriä, ja lahti kuuluu [[Matsalun kansallispuistoon]]. Matalassa vedessä minäkin kastelisin pelkät varpaat.",
+  "vastaus": "Hetkinen ny. [[Matsalunlahti]] on hyvin matala: sen keskisyvyys on vain puolitoista metriä. Lahti on kahdeksantoista kilometriä pitkä ja kuusi kilometriä leveä, vähäsuolainen ja ravinteikas. Rantaviivaa on noin 165 kilometriä, ja lahti kuuluu [[Matsalun kansallispuistoon]]. Matalassa vedessä minäkin kastelisin pelkät varpaat.",
   "linkit": [
+   "Matsalunlahti",
    "Matsalun kansallispuistoon"
   ],
   "jatkot": [
@@ -766,8 +794,10 @@
   "kohde": "kohde:peipsi",
   "kysymys": "Mitä järven jäällä tapahtui vuonna 1242?",
   "uusi": false,
-  "vastaus": "No niin. Peipsijärven jäällä käytiin 5. huhtikuuta 1242 jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.",
+  "vastaus": "No niin. [[Peipsijärven jäällä]] käytiin 5. huhtikuuta 1242 jäätaistelu [[Novgorodin tasavallan]] ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.",
   "linkit": [
+   "Peipsijärven jäällä",
+   "Novgorodin tasavallan",
    "Aleksanteri Nevski"
   ],
   "jatkot": [
@@ -822,10 +852,11 @@
  },
  {
   "kohde": "kohde:peipsi",
-  "kysymys": "Mistä osista Peipsijärvi koostuu?",
+  "kysymys": "Mistä osista [[Peipsijärvi]] koostuu?",
   "uusi": true,
-  "vastaus": "Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen Pihkvan järvi, jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.\n\nKolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.",
+  "vastaus": "Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen [[Pihkvan järvi]], jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.\n\nKolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.",
   "linkit": [
+   "Pihkvan järvi",
    "Lämmijärvi"
   ],
   "jatkot": [
@@ -837,9 +868,11 @@
   "kohde": "kohde:emajogi",
   "kysymys": "Miksi Tartto syntyi juuri tähän kohtaan?",
   "uusi": false,
-  "vastaus": "Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. Jokilaakson soisuus teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli Tarton kohdalla, ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.",
+  "vastaus": "Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. [[Jokilaakson soisuus]] teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli [[Tarton kohdalla]], ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.",
   "linkit": [
-   "Emajoesta"
+   "Jokilaakson soisuus",
+   "Emajoesta",
+   "Tarton kohdalla"
   ],
   "jatkot": [
    "Mikä on Tarton yliopisto?",
@@ -850,9 +883,11 @@
   "kohde": "kohde:emajogi",
   "kysymys": "Mikä lodi oli?",
   "uusi": false,
-  "vastaus": "Ai se. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon polttopuuta, hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.",
+  "vastaus": "Ai se. Lodi oli pieni [[jokiproomu]] tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon [[polttopuuta]], hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.",
   "linkit": [
-   "Emajokea"
+   "jokiproomu",
+   "Emajokea",
+   "polttopuuta"
   ],
   "jatkot": [
    "Miten jokiliikenne on muuttunut Virossa?",
@@ -937,8 +972,10 @@
   "kohde": "kohde:kaali",
   "kysymys": "Kuinka suuri Kaalin pääkraatteri on?",
   "uusi": true,
-  "vastaus": "Kas, siitä minä tiedän. Kaalin pääkraatterin halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.",
+  "vastaus": "Kas, siitä minä tiedän. [[Kaalin pääkraatterin]] halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.",
   "linkit": [
+   "Kaalin pääkraatterin",
+   "Kaalin järvi",
    "Saarenmaalla"
   ],
   "jatkot": [
@@ -1303,9 +1340,11 @@
   "kohde": "kohde:hahmotelma-narvan-vanhakaupunki",
   "kysymys": "Mitä vanhakaupungin paikalla on nykyään?",
   "uusi": true,
-  "vastaus": "Niin, tuo on surullinen kohta. Neuvostoviranomaiset purkivat jäljelle jääneet rauniot 1950-luvulla [[kerrostalojen]] tieltä, joten alueelle rakennettiin asuinkerrostaloja. Nykyisestä asemakaavasta ja siitä, mitä vanhastakaupungista on mahdollisesti säilynyt, en ole varma. Tapahtumista on yli kahdeksankymmentä vuotta, ja moni muistaa kaupungin vain valokuvista. Aika on onneksi tehnyt etäisyyttä.",
+  "vastaus": "Niin, tuo on surullinen kohta. [[Neuvostoviranomaiset]] purkivat jäljelle jääneet rauniot 1950-luvulla [[kerrostalojen]] tieltä, joten alueelle rakennettiin [[asuinkerrostaloja]]. Nykyisestä asemakaavasta ja siitä, mitä vanhastakaupungista on mahdollisesti säilynyt, en ole varma. Tapahtumista on yli kahdeksankymmentä vuotta, ja moni muistaa kaupungin vain valokuvista. Aika on onneksi tehnyt etäisyyttä.",
   "linkit": [
-   "kerrostalojen"
+   "Neuvostoviranomaiset",
+   "kerrostalojen",
+   "asuinkerrostaloja"
   ],
   "jatkot": [
    "Millainen kaupunki Narva on nykyään?",
@@ -1537,8 +1576,10 @@
   "kohde": "kohde:hahmotelma-endla",
   "kysymys": "Millaiset linnut viihtyvät soilla?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Suot ovat monille linnuille tärkeitä pesimä- ja ruokailupaikkoja, koska ne ovat laajoja, märkiä ja ihmisten kulkemia vähän. Endlan alueella pesii noin 180 lintulajia, ja suojelualueella on näkötorneja ja luontopolkuja, joilta lintuja voi tarkkailla. Yleisesti soilla viihtyvät esimerkiksi [[kurjet]] ja muut kosteikkojen lajit, mutta tarkkaa luetteloa Endlan lajeista en ole varma antamaan. Linnuille suot tarjoavat suojaa maapedoilta, hyönteisiä ja marjoja ruoaksi sekä rauhaa pesimiseen. Pitkä lista lajeja olisi ollut hauska, mutta kyyhky ei osaa kaikkea ulkoa.",
+  "vastaus": "Selvä juttu. Suot ovat monille linnuille tärkeitä pesimä- ja ruokailupaikkoja, koska ne ovat laajoja, märkiä ja ihmisten kulkemia vähän. [[Endlan alueella]] pesii noin 180 lintulajia, ja suojelualueella on [[näkötorneja]] ja luontopolkuja, joilta lintuja voi tarkkailla. Yleisesti soilla viihtyvät esimerkiksi [[kurjet]] ja muut kosteikkojen lajit, mutta tarkkaa luetteloa Endlan lajeista en ole varma antamaan. Linnuille suot tarjoavat suojaa maapedoilta, hyönteisiä ja marjoja ruoaksi sekä rauhaa pesimiseen. Pitkä lista lajeja olisi ollut hauska, mutta kyyhky ei osaa kaikkea ulkoa.",
   "linkit": [
+   "Endlan alueella",
+   "näkötorneja",
    "kurjet"
   ],
   "jatkot": [
@@ -1609,9 +1650,11 @@
   "kohde": "kohde:hahmotelma-taevaskoja",
   "kysymys": "Miten hiekkakivi syntyy ja miksi se murenee helposti?",
   "uusi": true,
-  "vastaus": "Kas vaan. [[Hiekkakivi]] syntyy, kun hiekkajyvät kerrostuvat esimerkiksi meren, joen tai järven pohjaan ja liittyvät ajan mittaan toisiinsa paineen ja sementoivien aineiden vaikutuksesta. Taevaskojan kalliot ovat devonikautista hiekkakiveä. Hiekkakivi voi murentua helposti, koska jyvät ovat sidottu toisiinsa vain löyhästi ja vesi, jää ja tuuli irrottavat niitä vähitellen. Joen läheisyys, sulamis- ja jäätymiskierto sekä kosteus nopeuttavat rapautumista. Murenemisen vauhti vaihtelee kivestä toiseen, ja tästä paikasta en tunne tarkkoja lukuja. Vierailijan kannattaa pitäytyä merkityillä poluilla. Itse pysyn ilmassa, enkä murene.",
+  "vastaus": "Kas vaan. [[Hiekkakivi]] syntyy, kun hiekkajyvät kerrostuvat esimerkiksi meren, joen tai järven pohjaan ja liittyvät ajan mittaan toisiinsa paineen ja sementoivien aineiden vaikutuksesta. [[Taevaskojan kalliot]] ovat [[devonikautista]] hiekkakiveä. Hiekkakivi voi murentua helposti, koska jyvät ovat sidottu toisiinsa vain löyhästi ja vesi, jää ja tuuli irrottavat niitä vähitellen. Joen läheisyys, sulamis- ja jäätymiskierto sekä kosteus nopeuttavat rapautumista. Murenemisen vauhti vaihtelee kivestä toiseen, ja tästä paikasta en tunne tarkkoja lukuja. Vierailijan kannattaa pitäytyä merkityillä poluilla. Itse pysyn ilmassa, enkä murene.",
   "linkit": [
-   "Hiekkakivi"
+   "Hiekkakivi",
+   "Taevaskojan kalliot",
+   "devonikautista"
   ],
   "jatkot": [
    "Miten rapautuminen muuttaa kallioita vuosisatojen kuluessa?",
@@ -1680,8 +1723,10 @@
   "kohde": "kohde:hahmotelma-vortsjarv",
   "kysymys": "Miksi matala järvi lämpenee ja jäätyy nopeasti?",
   "uusi": true,
-  "vastaus": "No jopas. Matalassa järvessä vettä on vähän verrattuna pinta-alaan, joten aurinko lämmittää sen nopeasti ja vastaavasti kylmä ilma jäähdyttää sen nopeasti. Syvässä järvessä suuri vesimassa varastoi lämpöä ja hidastaa muutosta. [[Võrtsjärvi]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja se on jään peitossa suunnilleen marraskuusta huhtikuuhun. Tuuli sekoittaa vettä, mikä auttaa lämpöä leviämään pohjaa myöten. Tarkkoja veden lämpötiloja en tässä yhteydessä väitä, koska ne vaihtelevat vuodesta toiseen.\n\nKesällä matala järvi lämpiää kuin lämmin kylpyvesi, mutta jos minulta kysytään, se on silti liian märkä. Talvella taas ylhäältä katsottuna koko järvi on yksi iso valkoinen levy.",
+  "vastaus": "No jopas. [[Matalassa järvessä]] [[vettä]] on vähän verrattuna pinta-alaan, joten aurinko lämmittää sen nopeasti ja vastaavasti kylmä ilma jäähdyttää sen nopeasti. Syvässä järvessä suuri vesimassa varastoi lämpöä ja hidastaa muutosta. [[Võrtsjärvi]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja se on jään peitossa suunnilleen marraskuusta huhtikuuhun. Tuuli sekoittaa vettä, mikä auttaa lämpöä leviämään pohjaa myöten. Tarkkoja veden lämpötiloja en tässä yhteydessä väitä, koska ne vaihtelevat vuodesta toiseen.\n\nKesällä matala järvi lämpiää kuin lämmin kylpyvesi, mutta jos minulta kysytään, se on silti liian märkä. Talvella taas ylhäältä katsottuna koko järvi on yksi iso valkoinen levy.",
   "linkit": [
+   "Matalassa järvessä",
+   "vettä",
    "Võrtsjärvi"
   ],
   "jatkot": [
@@ -1722,9 +1767,11 @@
   "kohde": "kohde:hahmotelma-muhu",
   "kysymys": "Miten Muhusta pääsi Saarenmaalle ja mantereelle ennen kuin Väinatamm-pengertie valmistui?",
   "uusi": false,
-  "vastaus": "Kato, lauttoja ja jäätä. [[Muhu]] on saari, jonka erottavat mantereesta Suuri väin ja Saarenmaasta Pieni väin, joten ennen pengertietä liikuttiin veneillä ja laivoilla sekä talvella jäätä pitkin. Jääreitti oli tuttu jo 1200-luvulla, jolloin ritarikunnan joukot ylittivät jäätä Saarenmaalle. Nykyään Muhun ja mantereen välillä kulkevat lautat. Tarkkaa tietoa vanhoista reiteistä, aikatauluista ja kuljetusvälineistä en ole varma antamaan, ja ne ovat vaihdelleet aikakausittain. Tienä pengertie on tietysti helpompi, mutta minulle ilma on aina auki. Siinä on oma etunsa.",
+  "vastaus": "Kato, lauttoja ja jäätä. [[Muhu]] on saari, jonka erottavat mantereesta [[Suuri väin]] ja Saarenmaasta [[Pieni väin]], joten ennen pengertietä liikuttiin veneillä ja laivoilla sekä talvella jäätä pitkin. Jääreitti oli tuttu jo 1200-luvulla, jolloin ritarikunnan joukot ylittivät jäätä Saarenmaalle. Nykyään Muhun ja mantereen välillä kulkevat lautat. Tarkkaa tietoa vanhoista reiteistä, aikatauluista ja kuljetusvälineistä en ole varma antamaan, ja ne ovat vaihdelleet aikakausittain. Tienä pengertie on tietysti helpompi, mutta minulle ilma on aina auki. Siinä on oma etunsa.",
   "linkit": [
-   "Muhu"
+   "Muhu",
+   "Suuri väin",
+   "Pieni väin"
   ],
   "jatkot": [
    "Milloin Väinatamm rakennettiin ja miksi?",
@@ -1749,9 +1796,11 @@
   "kohde": "kohde:hahmotelma-muhu",
   "kysymys": "Miksi villa ja neulotut sukat olivat tärkeitä pohjoisilla saarilla?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Pohjoisilla saarilla on usein kosteaa, tuulista ja viileää, joten lämpimät villavaatteet ovat olleet arkea. Villa eristää hyvin myös kosteana, ja siksi se on sopinut merenläheiseen ilmastoon. [[Muhu]] tunnetaan neulotuista sukistaan, ja virolaisessa kansanpuvussa pitäjät erottuvat omilla raidoillaan, väriyhdistelmillään ja koruillaan niin, että tunteva silmä näkee kantajan kotipitäjän. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja yksityiskohdat periytyivät äidiltä tyttärelle. Tarkkoja Muhun kuvioita tai värejä en ole varma luettelemaan. Kuvailen vain, en arvostele, ja tämä on kauniisti tehty perinne.",
+  "vastaus": "Selvä juttu. Pohjoisilla saarilla on usein kosteaa, tuulista ja viileää, joten lämpimät [[villavaatteet]] ovat olleet arkea. Villa eristää hyvin myös kosteana, ja siksi se on sopinut merenläheiseen ilmastoon. [[Muhu]] tunnetaan neulotuista sukistaan, ja virolaisessa [[kansanpuvussa]] pitäjät erottuvat omilla raidoillaan, väriyhdistelmillään ja koruillaan niin, että tunteva silmä näkee kantajan kotipitäjän. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja yksityiskohdat periytyivät äidiltä tyttärelle. Tarkkoja Muhun kuvioita tai värejä en ole varma luettelemaan. Kuvailen vain, en arvostele, ja tämä on kauniisti tehty perinne.",
   "linkit": [
-   "Muhu"
+   "villavaatteet",
+   "Muhu",
+   "kansanpuvussa"
   ],
   "jatkot": [
    "Miten villa kehrätään langaksi ja värjätään?",
@@ -2831,8 +2880,10 @@
   "kohde": "kohde:hahmotelma-sindi",
   "kysymys": "Millaista oli työ tekstiilitehtaassa 1800-luvulla?",
   "uusi": true,
-  "vastaus": "No niin, tämä oli kovaa työtä. Tekstiilitehtaassa kehrättiin lankaa ja kudottiin kangasta, usein koneilla, joita käytettiin vesivoimalla tai myöhemmin höyryllä. Työpäivät olivat yleensä pitkiä, palkat pieniä ja olosuhteet usein kovat, ja työntekijöinä oli myös lapsia. Työläiset asuivat tavallisesti tehtaan lähellä, kuten Sindissä, jossa työläisten talot rakennettiin tehtaan itäpuolelle. Euroopassa tällaiset tehtaat olivat osa [[teollisen vallankumouksen]] muutosta, joka siirsi työtä kodeista ja pelloilta tehtaisiin. Kyl minä kunnioitan ketä tahansa, joka tekee töitä vaikka sataa.",
+  "vastaus": "No niin, tämä oli kovaa työtä. [[Tekstiilitehtaassa]] kehrättiin lankaa ja kudottiin kangasta, usein koneilla, joita käytettiin [[vesivoimalla]] tai myöhemmin höyryllä. Työpäivät olivat yleensä pitkiä, palkat pieniä ja olosuhteet usein kovat, ja työntekijöinä oli myös lapsia. Työläiset asuivat tavallisesti tehtaan lähellä, kuten Sindissä, jossa työläisten talot rakennettiin tehtaan itäpuolelle. Euroopassa tällaiset tehtaat olivat osa [[teollisen vallankumouksen]] muutosta, joka siirsi työtä kodeista ja pelloilta tehtaisiin. Kyl minä kunnioitan ketä tahansa, joka tekee töitä vaikka sataa.",
   "linkit": [
+   "Tekstiilitehtaassa",
+   "vesivoimalla",
    "teollisen vallankumouksen"
   ],
   "jatkot": [

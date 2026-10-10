@@ -39,7 +39,7 @@ Miten satelliitit ovat muuttaneet maanmittausta?
 
 ### 12.1
 KYSYMYS: Mitä järven jäällä tapahtui vuonna 1242?
-No niin. Peipsijärven jäällä käytiin 5. huhtikuuta 1242 jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.
+No niin. [[Peipsijärven jäällä]] käytiin 5. huhtikuuta 1242 jäätaistelu [[Novgorodin tasavallan]] ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.
 JATKOT:
 Kuka oli Aleksanteri Nevski?
 Mitä Saksalainen ritarikunta oli?
@@ -66,8 +66,8 @@ Mitä itämerensuomalaiset kielet ovat?
 Miten Peipsi-nimi on syntynyt?
 
 ### 12.5
-KYSYMYS: Mistä osista Peipsijärvi koostuu?
-Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen Pihkvan järvi, jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.
+KYSYMYS: Mistä osista [[Peipsijärvi]] koostuu?
+Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen [[Pihkvan järvi]], jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.
 
 Kolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.
 JATKOT:
@@ -76,14 +76,14 @@ Miten Lämmijärvi on syntynyt?
 
 ### 13.1
 KYSYMYS: Miksi Tartto syntyi juuri tähän kohtaan?
-Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. Jokilaakson soisuus teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli Tarton kohdalla, ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.
+Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. [[Jokilaakson soisuus]] teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli [[Tarton kohdalla]], ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.
 JATKOT:
 Mikä on Tarton yliopisto?
 Mitä Tartossa kannattaa nykyään katsoa?
 
 ### 13.2
 KYSYMYS: Mikä lodi oli?
-Ai se. Lodi oli pieni jokiproomu tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon polttopuuta, hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.
+Ai se. Lodi oli pieni [[jokiproomu]] tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon [[polttopuuta]], hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.
 JATKOT:
 Miten jokiliikenne on muuttunut Virossa?
 Millaisia laivoja Peipsillä on liikennöinyt?
@@ -127,7 +127,7 @@ Kuinka usein meteoriitteja putoaa Maahan?
 
 ### 14.3
 KYSYMYS: Kuinka suuri Kaalin pääkraatteri on?
-Kas, siitä minä tiedän. Kaalin pääkraatterin halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.
+Kas, siitä minä tiedän. [[Kaalin pääkraatterin]] halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.
 JATKOT:
 Millainen Saarenmaa on saarena?
 Miten meteoriittikraatterit eroavat tulivuorikraattereista?
