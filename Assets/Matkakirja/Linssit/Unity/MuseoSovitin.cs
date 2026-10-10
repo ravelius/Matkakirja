@@ -5,7 +5,7 @@
 // Linnanrakentajan reitti, tauko/seuraava/edellinen), vapaa kulku (SeikkailuTapit: vasen tappi liike, veto katse) ja teoksen
 // esittely napista (MuseoTaulu, KORTTI-pohja). Näyttämö dioraaman tapaan omassa kerroksessa ja kuvassa (MuseoNayttamo).
 // Testikomennot (linssi-komento.txt): "linssi taidemuseo" avaa; "museo tila|kierros|vapaa|seuraava|edellinen|tauko 0|1|
-// siirry <n>|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
+// siirry <n>|paikka <x> <z> <yaw> [pitch]|esittele [0|1]|liiku <eteen> <sivulle> <kääntö> <s>|katse <yaw> <pitch>|valotus <ev>|huone [0|1]|sali glb|halli|lod0|lod1|auto"; "museo kuvajuuri <url|pois>", "museo astc pois".
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -312,6 +312,9 @@ namespace Matkakirja.Natiivi
                 case "katse" when osat.Length > 3:
                     if (Kierros.Vaihe != MuseoVaihe.Vapaa) Kierros.Vapaa();
                     Kierros.VapaaLiike(0, 0, L(osat[2]) / (MuseoKierros.VapaaKaantoAs * 1.0), L(osat[3]) / (MuseoKierros.VapaaKaantoAs * 1.0), 1.0);
+                    break;
+                case "paikka" when osat.Length > 4:
+                    if (!Kierros.Aseta(L(osat[2]), L(osat[3]), L(osat[4]), osat.Length > 5 ? L(osat[5]) : 0)) o.Kirjaa($"museo: paikka {osat[2]} {osat[3]} ei sallittu");
                     break;
                 case "valotus" when osat.Length > 2: MuseoNayttamo.ValotusKorjausEv = (float)L(osat[2]); break;
             }

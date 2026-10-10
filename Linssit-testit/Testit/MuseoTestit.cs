@@ -214,6 +214,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k.NykyinenTeos.Teos.Id == "SK-C-5", "siirry Yövartioon");
         }
 
+        [Testi] static void AsetaPaikka()
+        {
+            var k = new MuseoKierros(Alankomaat());
+            Oleta.Tosi(k.Aseta(-8.4, 4.4, 270), "grafiikkakabinetin keskelle, katse −X");
+            Oleta.Tosi(k.Vaihe == MuseoVaihe.Vapaa && Math.Abs(k.Nykyinen.P.X + 8.4) < 1e-9 && k.Nykyinen.Suunta.X < -0.99, "vapaa, paikka ja suunta");
+            Oleta.Tosi(!k.Aseta(-30, 4.4, 0), "salin ulkopuolelle ei");
+            Oleta.Tosi(k.Aseta(14.6, -80, 180, -10) && k.Nykyinen.Suunta.Z > 0.9 && k.Nykyinen.Suunta.Y < 0, "Leidenin siipi, katse +Z ja alas");
+        }
+
         [Testi] static void VapaaKulku()
         {
             var s = Alankomaat();

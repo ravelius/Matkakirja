@@ -218,6 +218,20 @@ namespace Matkakirja.Linssit.Museo
             Nykyinen = new MuseoAsento(p, p + suunta);
         }
 
+        /// <summary>QA (LS2 10.10.: kierroksen ulkopuoliset salit kuvaan): vapaa kulku pisteeseen (x, z) suuntaan yaw/pitch (astetta;
+        /// yaw 0 = −Z, 90 = +X). Palauttaa false, jos paikka ei ole sallittu (seinässä tai salin ulkopuolella).</summary>
+        public bool Aseta(double x, double z, double yawAste, double pitchAste = 0)
+        {
+            var p = new V3(x, SilmaY, z);
+            if (!Sallittu(p)) return false;
+            if (Vaihe != MuseoVaihe.Vapaa) Vapaa();
+            yaw = yawAste; pitch = Math.Max(-KallistusMax, Math.Min(KallistusMax, pitchAste));
+            Nykyinen = new MuseoAsento(p, p);
+            VapaaLiike(0, 0, 0, 0, 0);
+            Versio++;
+            return true;
+        }
+
         /// <summary>Kävijän paikka sallittu: osan sisällä seinävaran päässä tai aukon käytävässä.</summary>
         public bool Sallittu(V3 p)
         {
