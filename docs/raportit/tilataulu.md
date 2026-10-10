@@ -722,3 +722,5 @@ Ei tarkistettu tällä kierroksella (vanha luku ~40, karkea jako: Sisältö ~21,
 ## 6) proto-3d/lokit — tila
 
 43G yhteensä. 47 kansiota >48h (~11,8 Gt) + 14 .app-pakettia >24h (~9,5 Gt) — ks. kohta 5, listattu Fablelle 18:0x. Poisto odottaa omistajan lupaa Fablen kortilla.
+
+**Päivitetty 10.10. 14.1x (tilinvaihto, uusi tili):** Viikko 12 %, 5 h ikkuna 7 %, reset ma 12.10. klo 10.00; hälytykset 96/99 % kunnes omistaja vahvistaa rajan. Session id:t 10.10.: PÄÄTOIMITTAJA local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc; Julkaisija local_1325b8e8-c39c-49f0-9ba2-7cabd4f44629; Natiiviseppä local_04e2850b-d63c-481d-be73-c7d784a7cbcb; Natiivi-UI local_e9fdc695-8421-4c14-a187-8881e73c835a; Linssiseppä local_4b4b976c-42b6-4050-9232-dcd14ad3b2a4; Linssiseppä 2 local_ee961a2d-8a39-4941-8eec-60d24777be2c; Linnanrakentaja local_2cf16574-67b6-40c0-928e-68bf36c72db0; Siirtoseppä local_c264506b-dd61-4617-839f-23daf6d0bd5a; Karttaseppä local_4bd7c316-55bc-423a-9da1-821fdd123cab; Pelikoodari local_242febe9-d6cf-45ae-8280-faf394dc6e3e; Sisältökirjuri local_0c172ea0-6bb2-4afe-9c87-7938b882b4f3; Laitetestaaja local_3509b4ba-6000-4dea-869b-ecb22f4e3270 (tyhjä, lepo ei hälytä).
