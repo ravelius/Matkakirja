@@ -3,7 +3,22 @@
 Juokseva loki: `/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt` (tail -80). Pitolista: `julkaisija-tyokalut/pidossa.txt`.
 NOLLAUSRAJA 50 % (omistaja 08.3x, Raamattu #4327): kirjoita luovutus, kun konteksti ylittää 50 % (`get_usage`).
 
-## 1. Jono juuri nyt (12.15)
+## 0. PÄIVITYS 12.4x (lue ensin)
+
+- **TF 176 VALMIS molemmilla alustoilla:** iOS (VALID, sisäinen 11.24) ja **Mac TF 176** ajo 38040911547 (VALID, sisäinen).
+  Mac-uusinta tarvittiin: Steam Audion PlugIns/phonon.bundle + audioplugin_phonon.bundle ilman CFBundleIdentifieriä (altool
+  90276/90334); Natiiviseppä korjasi käsin, pysyvä korjaus Rakennus.MacOS:iin junaan 177.
+- **OMISTAJA 12.4x (PT):** "kaikki korjauspyynnöt seuraavaan julkaisuun, julkaisu heti kun valmiit" → **TF 177 (juna 176) iOS + Mac
+  heti Natiivisepän lukituksen jälkeen.** Vuoroissa ETUSIJA: NUI:n ja LS1:n TF 176 -korjaukset → Natiivisepän muistiajo → muut.
+  Muutosloki Natiiviseppä → PT → Julkaisija. tf177-ei-ulkoista luotu; muistiajo-177.txt tulee Natiiviseppältä.
+  Resepti: muutosloki-api.sh 177 "<teksti>" → tf-kaynnista.sh 177 <BUILD 177 täysi SHA> <muutosloki-merge-SHA> → Mac:
+  Natiivisepän mac-kaanna.sh … 1.1 177 → `gh workflow run proto3d-mac-testflight.yml --ref main -f build=177 -f lataa=true
+  -f sisainen_ryhma=true`. "TestFlightissa" PT:lle vasta Applen VALIDin jälkeen.
+- PR:t #4341 (983a58c67), #4342 (4c1f8178c), #4343 (6f7a16b6a, pollo-julkaisu success) MERGETTY.
+- Jono 12.4x: lukko vapaa; simussa LS2 A26BC7D0 (~12.45 asti) → LS1 museo2 (2 simua, `simuvuoro-museo2.zsh e325c3bb7`,
+  iPad 00CF62C2 + iPhone T7-UDID BD64C8E4). Siirtosepän vaihearkki 648e2395f tehty 12.29. NUI pallo tehty 12.3x.
+
+## 1. Jono (12.15, vanhentunut – ks. kohta 0) (12.15)
 
 - **Lukossa:** LS1 museo-kombo-176 48c4d9f28 → linssiseppa-app/museo-kombo-176.
 - **Simussa:** LS2 A26BC7D0 ~20 min (kupola A/B + ND edestä, .app lokit/linssiseppa2-app-cupola-bae9b17), alkoi 12.11, vahti 16.
