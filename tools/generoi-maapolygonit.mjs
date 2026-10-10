@@ -256,7 +256,28 @@ async function lueLahde() {
   const k = await lueLahdeRaaka();
   const r = krimUkrainalleAdmin0(k);
   console.log(`Krim → UKR: ${r.siirretty ? `siirretty (${r.karkia} kärkeä)` : 'ei muutosta'}`);
+  console.log(`Ahvenanmaa → FIN: ${ahvenanmaaSuomelle(k)} monikulmiota`);
   return k;
+}
+
+/*
+ * AHVENANMAA SUOMELLE (Karttasepän kartan tarkistus 10.10.2026, v656):
+ * Natural Earth antaa Ahvenanmaan omana admin-0-yksikkönään (ADM0_A3 ALD,
+ * suvereeni FI1), joten Suomen rengas päättyi Turun saaristoon eikä
+ * Ahvenanmaalla ollut maata lainkaan (Maarianhamina ja Bomarsund
+ * maarajojen ulkopuolella). Saaret liitetään FIN:n monikulmioihin;
+ * maayhteyttä ei ole, joten ompelua ei tarvita.
+ */
+function ahvenanmaaSuomelle(ne) {
+  const iso = (f) => f.properties.ADM0_A3 ?? f.properties.adm0_a3;
+  const ald = ne.features.find((f) => iso(f) === 'ALD');
+  const fin = ne.features.find((f) => iso(f) === 'FIN');
+  if (!ald || !fin) return 0;
+  const mk = (g) => (g.type === 'Polygon' ? [g.coordinates] : g.coordinates);
+  const lisa = mk(ald.geometry);
+  fin.geometry = { type: 'MultiPolygon', coordinates: [...mk(fin.geometry), ...lisa] };
+  ne.features.splice(ne.features.indexOf(ald), 1);
+  return lisa.length;
 }
 
 async function lueLahdeRaaka() {

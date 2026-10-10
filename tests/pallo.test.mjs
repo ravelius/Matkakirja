@@ -1074,13 +1074,19 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
    * mutta sen on oltava täsmälleen laudan oma piste (poikkeama 0) —
    * pallo ei siis siirry, vain vienti saa koordinaatin.
    */
-  for (const alue of ['borneo', 'kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
+  /*
+   * Viides kierros 10.10.2026 (PT, kartan kokonaistarkistus A1): Alppien
+   * laudan oma piste oli Elsassissa (Ranska) ja Borneon Kuchingissa
+   * (Malesia), joten kumpikin sai pisteen oikean maan sisältä eikä enää
+   * ole tässä luettelossa (tests/kaupungit-maissa.test.mjs).
+   */
+  for (const alue of ['kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
     'viktoria', 'tanganjika', 'tshadjarvi', 'galapagos', 'falkland', 'bali', 'sthelena',
     'hawaii', 'sierraleone', 'siinai', 'sepik',
     'bahrelghazal', 'bananal', 'orjarannikko',
     // Toinen kierros 7.9.2026 illalla: samasta syystä nämäkin jäävät.
     'sumatra', 'sisilia', 'kreeta', 'kapadokia', 'madagaskar', 'darfur',
-    'sahalin', 'kongo', 'angola', 'islanti', 'alpit', 'appalakit',
+    'sahalin', 'kongo', 'angola', 'islanti', 'appalakit',
     'labrador', 'rubalkhali']) {
     /*
      * Kolmas kierros 19.9.2026 (Fablen päätös, erä H): Sansibar,

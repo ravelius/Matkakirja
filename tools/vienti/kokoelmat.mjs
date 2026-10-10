@@ -38,7 +38,9 @@ import { repliikit as livianRepliikit } from '../generoi-pulu.mjs';
 import { lueLivianEleet, eleidenTila } from './livian-eleet.mjs';
 import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
-import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
+import {
+  karttavaloKokoelma, piilotaKaksoisnimet, rajaaKarkaavatNimet, rikastaKohdekartat, takynostoKokoelma,
+} from './karttavalot.mjs';
 import { rikastaElavaKartta } from './elava-kartta.mjs';
 import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
@@ -747,7 +749,7 @@ function livianPuheKokoelma(hae) {
   const eleet = lueLivianEleet();
   return taulukko('js/livia-pilotti-cuet.js#LIVIAN_LUENTA_CUET',
     'Livian luentakommentit kaupungeittain: aani = mp3 ämpärissä, eleet = ratkaistut cue-ajat (.eleet.json aanen '
-      + 'vieressä), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
+      + 'vieressä; null, kun eleetTila ei ole ok), cuet = { id, ankkuri, esiintyma, tarkoitus, voimakkuus, ele, alku, loppu }, tekstiSha256 = '
       + 'kommentin tekstin tiiviste, jota eleet vastaavat. ele = tekninen SVG-ele (js/livia-tilanteet.js '
       + 'livianPuheeleenTiedot). eleetTila: ok = alku/loppu (ms äänen alusta) on tarkistettu pelin validaattorilla '
       + 'ja aaniTavut/aaniSha256 kertovat, mihin mp3:een ne kuuluvat; puuttuu = ämpärissä ei eleitä (alku/loppu '
@@ -764,7 +766,8 @@ function livianPuheKokoelma(hae) {
       const ajat = new Map((haettu.tila === 'ok' ? haettu.eleet : []).map((e) => [e.id, e]));
       return {
         id: c.kaupunki, kaupunki: c.kaupunki, revision: c.revision, kentta: c.kentta, kupla: c.kupla,
-        tekstiSha256: c.tekstiSha256, aani, eleet: aani ? livianEleidenOsoite(aani) : null,
+        // PT 10.10.2026 (tarkistus C2): osoite vain, kun eleet on ämpärissä (ei 404-viittauksia).
+        tekstiSha256: c.tekstiSha256, aani, eleet: aani && haettu.tila === 'ok' ? livianEleidenOsoite(aani) : null,
         eleetTila: haettu.tila,
         aaniTavut: haettu.aani?.tavut ?? null, aaniSha256: haettu.aani?.sha256 ?? null,
         odottaa: odottaa.has(c.kaupunki),
@@ -1074,6 +1077,10 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   // Skeema 1.24: karttavalot = webin pallon nostokerroksen joukko (tools/vienti/karttavalot.mjs).
   const valot = karttavaloKokoelma(ns, hae, kokoelmat.kaupungit.alkiot, taulukko);
   kokoelmat.karttavalot = valot.kokoelma;
+  // PT 10.10.2026 (Karttasepän tarkistus A2): ladonnan karkaama nimi (> 25 km tai toinen maa) omaan pisteeseensä ilman nimeä.
+  rajaaKarkaavatNimet(kokoelmat.karttavalot.alkiot, kokoelmat.maarajat.alkiot);
+  // PT 10.10.2026 (tarkistus B2): sama nimiö kahdesti alle 2 km:n päässä → vain yksi nimi.
+  piilotaKaksoisnimet(kokoelmat.karttavalot.alkiot);
   // Skeema 1.45 (Elävä kartta): kokoluokka ja maakunta valoille, salaisuus maakunnille (tools/vienti/elava-kartta.mjs).
   rikastaElavaKartta(kokoelmat, taulukko);
   rikastaNippu4(kokoelmat, ns);
