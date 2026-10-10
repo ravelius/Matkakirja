@@ -2515,5 +2515,297 @@
    "Mitä kansallispuistossa saa tehdä?",
    "Mitkä ovat Ukrainan muut luonnonihmeet?"
   ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kultainen-portti",
+  "kysymys": "Kuka Kultaisen portin rakennutti ja miksi?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tän minä muistan, vaikka Viisas Pöllö onkin yhä matkoilla ja virka jäi minulle. Portin rakennutti ruhtinas [[Jaroslav Viisas]], [[Kiovan Rusin]] hallitsija, ja sillä oli kaksinainen tehtävä: se oli kaupungin muurin pääportti ja puolustusrakenne, mutta myös juhlallinen riemuportti, jonka kautta ruhtinaat ratsastivat kaupunkiin. Ajoituksesta lähteet ovat eri mieltä, sillä osa sijoittaa rakentamisen 1010-luvun lopulle ja 1020-luvun alkuun, osa 1030-luvulle. Nimen kerrotaan tulleen joko [[Konstantinopolin]] Kultaisesta portista, jonka mallin mukaan portti rakennettiin, tai portin lähellä kohonneen kirkon kultaisista kupoleista. Portin päälle rakennettiin myös pieni kirkko suojelemaan kaupunkia. Pitkäksi venähti, vaikka kyl minä yritin tiivistää.",
+  "linkit": [
+   "Jaroslav Viisas",
+   "Kiovan Rusin",
+   "Konstantinopolin"
+  ],
+  "jatkot": [
+   "Millainen oli Konstantinopolin Kultainen portti?",
+   "Mitä Neitsyt Marian ilmestyskirkko oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kultainen-portti",
+  "kysymys": "Miten paljon alkuperäisestä portista on oikeasti jäljellä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Ei kovin paljon, ja sen kyllä kuulee heti. Alkuperäisestä portista on nykyään jäljellä kaksi 1000-luvun muurinpätkää, jotka ovat nähtävillä paviljongin sisällä. Muu nykyinen rakennelma on [[Kiovan]] 1500-vuotisjuhlaa varten vuonna 1982 rakennettu täysimittainen [[rekonstruktio]]. Koska alkuperäisestä portista ei ole säilynyt yhtään aikalaiskuvaa, rekonstruktion ulkonäkö perustuu osin arvailuun, ja osa historioitsijoista on vaatinut sen purkamista, jotta aidot muurinpätkät pääsisivät esiin. Portti oli vaurioitunut pahoin vuoden 1240 piirityksessä ja rapistui sen jälkeen raunioiksi, ja kaivaukset aloitettiin [[metropoliitta Eugenioksen]] käynnistämänä vuonna 1832.\n\nKatolta katsottuna rekonstruktio näyttää ihan oikealta portilta, ja siinä on sekä sen vika että ansio. Kyllä ne vanhat muurinpätkät vaan ovat ne oikeat.",
+  "linkit": [
+   "Kiovan",
+   "rekonstruktio",
+   "metropoliitta Eugenioksen"
+  ],
+  "jatkot": [
+   "Miksi rekonstruktiota on kritisoitu?",
+   "Miten muurinpätkien ikä saadaan selville?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kultainen-portti",
+  "kysymys": "Kuka oli Jaroslav Viisas?",
+  "uusi": true,
+  "vastaus": "Kato, hyvä kysymys tuo. Jaroslav Viisas oli [[Kiovan Rusin]] ruhtinas, joka hallitsi Kiovaa vuodesta 1019 vuoteen 1054, jolloin hän kuoli. Häntä pidetään yhtenä Rusin tärkeimmistä hallitsijoista: hänen valtakaudellaan Kiovaan rakennettiin kivikirkkoja ja kaupungin puolustusrakenteita, ja [[Pyhän Sofian katedraalin]] rakentaminen liitetään hänen nimeensä. Hänen nimiinsä liitetään myös [[Russkaja Pravda]] -lakikokoelma, vaikka se karttui vasta myöhemmin. Tytärtensä avioliitoilla hän sitoi Rusin sukulaissuhteilla Ranskan, Norjan ja Unkarin hallitsijoihin, ja hänen puolisonsa Ingegerd oli ruotsalaisen kuninkaan tytär. Siinä oli sukua enemmän kuin kyyhkyjen sukukokouksessa, eikä se ole vähän.",
+  "linkit": [
+   "Kiovan Rusin",
+   "Pyhän Sofian katedraalin",
+   "Russkaja Pravda"
+  ],
+  "jatkot": [
+   "Mikä on Russkaja Pravda?",
+   "Kenen kanssa Jaroslav Viisaan tyttäret menivät naimisiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kultainen-portti",
+  "kysymys": "Mikä Kiovan Rusi oli?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Kiovan Rusi oli keskiajan itäslaavilainen valtioliitto, jonka keskuksena oli Kiova ja jota hallitsivat Rurikin suvun ruhtinaat. Kronikoiden mukaan se syntyi 800-luvun lopulla, ja [[varjagien]] eli skandinaavisten kauppiaiden ja sotajoukkojen osuudesta sen synnyssä on keskusteltu paljon. Ruhtinas [[Vladimir]] kastatti rusit kristinuskoon kronikan mukaan vuonna 988, ja yhteys [[Bysantin]] valtakuntaan muokkasi kirkkoa, kirjoitusta ja rakennustaidetta. Valtioliitto hajosi 1100-luvulta alkaen erillisiin ruhtinaskuntiin, ja 1200-luvun mongolivalloitus päätti sen. Sen perintöä pitävät nykyään omanaan useat valtiot, joten historiankirjoitus on osin tulkinnanvaraista. Aika monta vuosisataa mahtui yhteen vastaukseen.",
+  "linkit": [
+   "varjagien",
+   "Vladimir",
+   "Bysantin"
+  ],
+  "jatkot": [
+   "Miten Rusi kristillistettiin?",
+   "Mitä varjagit tekivät Rusissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kultainen-portti",
+  "kysymys": "Mitä Kiovalle tapahtui mongolien hyökkäyksessä 1240?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Tämä oli raskas hetki. Vuonna 1240 Batu-kaanin johtamat mongolijoukot piirittivät ja valtasivat Kiovan osana laajempaa sotaretkeä Itä-Euroopassa. Kaupunki ja sen rakennukset vaurioituivat pahoin, ja myös Kultainen portti sai tuolloin vakavia vaurioita. Hyökkäys oli iso isku [[Kiovan Rusin]] johtavalle keskukselle, ja kaupungin asema heikkeni pitkäksi aikaa, vaikka se ei kokonaan autioitunut. Siitä on kulunut yli seitsemänsataa vuotta, ja Kiova on sen jälkeen kasvanut [[Ukrainan]] pääkaupungiksi. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Kiovan Rusin",
+   "Ukrainan"
+  ],
+  "jatkot": [
+   "Miten Kiova kehittyi myöhemmin Ukrainan pääkaupungiksi?",
+   "Mikä Kiovasta tuli mongolien jälkeen?"
+  ]
+ },
+ {
+  "kohde": "nosto:trypillia",
+  "kysymys": "Miksi kokonainen kylä poltettiin parin sukupolven välein?",
+  "uusi": false,
+  "vastaus": "Kato, tästä on väitelty kauan. Varmaa vastausta ei ole. [[Trypillian kulttuurin]] asutuksia näyttää poltetun tarkoituksella noin kuudenkymmenen tai kahdeksankymmenen vuoden välein, mutta syystä tutkijat eivät ole yksimielisiä. Yhden selityksen mukaan kyse oli [[rituaalisesta uudistamisesta]], jossa talot ja koko kylä poltettiin elämänvaiheen päättyessä. Toisen mukaan syyt olivat käytännöllisiä: tuholaisten hävittäminen sekä lähimetsien ja peltojen ehtyminen, jolloin asutus siirtyi uuteen paikkaan. Osa tutkijoista on pohtinut myös ristiriitoja, mutta kaikista kylistä ei löydy merkkejä sodasta. Varmuutta ei ole, ja syitä on voinut olla useita. Kyyhkynä minä en kyllä polttaisi omaa pesää.",
+  "linkit": [
+   "Trypillian kulttuurin",
+   "rituaalisesta uudistamisesta"
+  ],
+  "jatkot": [
+   "Miten arkeologit tietävät, että kylät poltettiin tahallaan?",
+   "Mitä talojen polttaminen jätti arkeologeille?"
+  ]
+ },
+ {
+  "kohde": "nosto:trypillia",
+  "kysymys": "Voiko kuusituhatta vuotta vanhaa asutusta sanoa kaupungiksi?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Tutkijat jakautuvat, ja kaikki riippuu siitä, mitä kaupungilla tarkoitetaan. Koon puolesta suurimmat [[Trypillian]] asutukset olivat kaupunkien veroisia: niissä oli jopa kolmetuhatta rakennusta, ja asukasmääräksi on arvioitu kymmeniä tuhansia, joskin arviot ovat epävarmoja. Monet tutkijat eivät silti käytä sanaa kaupunki, koska asutuksista ei ole löytynyt selvää keskushallintoa, palatseja tai temppeleitä, ei kirjoitusta eikä muita merkkejä kaupunkimaisesta työnjaosta ja yhteiskunnallisesta hierarkiasta. Siksi englanninkielisessä tutkimuksessa niistä käytetään usein nimitystä [[megasite]], ja jotkut puhuvat kaupunkien esiasteesta. Minun mielestäni kaupunki on paikka, jossa on ainakin yksi kunnon leipomo.",
+  "linkit": [
+   "Trypillian",
+   "megasite"
+  ],
+  "jatkot": [
+   "Mikä erottaa kaupungin kylästä tutkijoiden mielestä?",
+   "Millainen oli Trypillian talo sisältä?"
+  ]
+ },
+ {
+  "kohde": "nosto:trypillia",
+  "kysymys": "Miten arkeologi löytää kylän, josta ei ole mitään maan päällä?",
+  "uusi": false,
+  "vastaus": "Ai se. Siihen on nokkelampi keino kuin lapio. Nykyään suuri osa löydöistä tehdään ilman kaivamista, ja tärkein menetelmä on [[magneettikartoitus]]: poltettu savi, kuten palaneiden talojen rapaus, magnetoituu eri tavalla kuin ympäröivä maa, ja herkkä [[magnetometri]] piirtää tämän jäljen kartaksi. Siksi poltetut kylät ovat arkeologeille onnekkaita, sillä rakennusten pohjat erottuvat kartasta tarkasti. Apuna käytetään myös ilmakuvia ja satelliittikuvia, joissa peltojen kasvusto voi paljastaa maan alla olevia rakenteita, sekä koekaivauksia ja saviastioiden sirpaleita, joilla paikka ajoitetaan. Näin on saatu kokonaisia pohjakarttoja useista [[Trypillian]] kulttuurin asutuksista.\n\nYlhäältä katsoen pelto kertoo joskus paljon: kasvusto kasvaa eri tavalla maan alla olevien rakenteiden päällä. Minä en ole koskaan huomannut sitä, mutta suvun maine on nyt pelastettu.",
+  "linkit": [
+   "magneettikartoitus",
+   "magnetometri",
+   "Trypillian"
+  ],
+  "jatkot": [
+   "Miten magnetometri toimii?",
+   "Mitä Trypillian kylistä on kaivettu esiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:trypillia",
+  "kysymys": "Keitä trypillialaiset olivat ja mihin he katosivat?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Tähän ei ole yhtä varmaa vastausta. Trypillian kulttuuri kuuluu laajempaan [[Cucuteni–Trypillia-kulttuuriin]], joka levisi [[Karpaateilta]] Dnesterille ja Dneprille ja eli noin vuosina 5050–2950 eaa. Heidän omaa nimeään ei tunneta, koska kirjoitusta ei ollut, ja nimi tulee Trypillian kylän löytöpaikasta. He olivat maanviljelijöitä ja karjanhoitajia, joiden esi-isien arvellaan tulleen osin [[Balkanin]] suunnalta, mutta alkuperästä keskustellaan edelleen. Kulttuurin loppuun on esitetty useita syitä, kuten ilmaston ja maaperän muutokset sekä aroilta levinneet karjankasvattajaryhmät. Todennäköisesti syitä oli useita, ja ihmisten ajatellaan yleensä sulautuneen muihin ryhmiin eikä hävinneen kokonaan. Vaikka kirjoitusta ei ollut, jäljet kyllä ovat jääneet.",
+  "linkit": [
+   "Cucuteni–Trypillia-kulttuuriin",
+   "Karpaateilta",
+   "Balkanin"
+  ],
+  "jatkot": [
+   "Mitä Cucuteni–Trypillia-kulttuurin saviastiat esittivät?",
+   "Keitä olivat arojen jamnakulttuurin karjankasvattajat?"
+  ]
+ },
+ {
+  "kohde": "nosto:trypillia",
+  "kysymys": "Mitä trypillialaiset viljelivät ja söivät?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tässä on aihe, josta minäkin innostun. [[Trypillian kulttuuri]] perustui [[maanviljelyyn]] ja karjanhoitoon. Löytöjen perusteella pelloilla viljeltiin muun muassa vehnää, ohraa ja [[palkokasveja]], ja karjaa olivat esimerkiksi naudat, siat sekä lampaat ja vuohet. Ruokaa valmistettiin saviastioissa, joita poltettiin kehittyneissä uuneissa. Suurten asutusten ruokahuolto vaati paljon peltoa ja laidunmaata lähiympäristöltä, minkä arvellaan voineen osaltaan vaikuttaa siihen, että asutukset uusiutuivat ja siirtyivät uusiin paikkoihin. Pampuškia ei silloin vielä ollut, ikävä kyllä.",
+  "linkit": [
+   "Trypillian kulttuuri",
+   "maanviljelyyn",
+   "palkokasveja"
+  ],
+  "jatkot": [
+   "Miten viljaa jauhettiin ja leivottiin kivikaudella?",
+   "Mitä muinaiset saviastiat kertovat ruoasta?"
+  ]
+ },
+ {
+  "kohde": "nosto:dneprin-kosket",
+  "kysymys": "Miten vene vietiin kosken ohi ennen kanavia?",
+  "uusi": false,
+  "vastaus": "Katotaas. Tää on sellainen asia, jossa lentäjällä on etulyöntiasema. Dneprin koskialueella vene ei päässyt kulkemaan, joten matkalaiset purkivat lastin, kantoivat tavarat rantaa pitkin ja vetivät tai kantoivat veneensä maitse kosken ohi. Tämä oli osa [[Nestorin kronikan]] reittiä varjageista kreikkalaisille, jota kauppiaat ja sotajoukot kulkivat Itämereltä Bysanttiin. Bysantin keisari [[Konstantinos Porfyrogennetos]] kuvasi koskia 900-luvun puolivälin tienoilla, ja hänen mukaansa kohta oli vaarallinen, koska [[petšenegit]] vaanivat matkalaisia juuri kosken ohituksen aikana. Kanna siinä sitten venettä, minä lensin aina yli.",
+  "linkit": [
+   "Nestorin kronikan",
+   "Konstantinos Porfyrogennetos",
+   "petšenegit"
+  ],
+  "jatkot": [
+   "Keitä petšenegit olivat?",
+   "Mikä oli reitti varjageista kreikkalaisille?"
+  ]
+ },
+ {
+  "kohde": "nosto:dneprin-kosket",
+  "kysymys": "Mitä tapahtuu maisemalle, kun tekoallas nousee sen päälle?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: Dnepr on tästä oiva esimerkki. Kun pato nostaa vedenpinnan, laakson alimmat osat jäävät veden alle: rannat, niityt, metsät, pellot ja asutukset peittyvät, ja uoma levenee järveksi. Koskien tapauksessa kallioinen kynnys ja sen putoukset hukkuvat, virta hidastuu, vesi syvenee ja laivat pääsevät kulkemaan, mutta alkuperäinen maisema, saaret ja kosken kohina häviävät. Eliöstö muuttuu, kun virtaava vesi vaihtuu seisovaksi, ja ihmisten asuinpaikkoja on usein siirrettävä. Dneprin kosket jäivät veden alle 1930-luvun alussa valmistuneen [[Dneprin vesivoimalaitoksen]] padon nostaman tekoaltaan alle lähellä [[Zaporižžjaa]]. Minun korvilleni se on kyllä rauhallisempaa.",
+  "linkit": [
+   "Dneprin vesivoimalaitoksen",
+   "Zaporižžjaa"
+  ],
+  "jatkot": [
+   "Milloin Dneprin vesivoimalaitos valmistui?",
+   "Miten tekoaltaat vaikuttavat kalakantoihin?"
+  ]
+ },
+ {
+  "kohde": "nosto:dneprin-kosket",
+  "kysymys": "Miksi joki putoaa juuri tietyissä kohdissa jyrkästi?",
+  "uusi": false,
+  "vastaus": "Hei, tää on oikeasti pöllön alaa, mutta hän parantelee siipeään, joten hoidan minä. Joen pudotus keskittyy kohtiin, joissa uomassa on kovaa kalliota. Dneprin koskialueella [[Ukrainan kilven]] graniitti ja gneissi nousivat joen uomaan, ja kova kivi kuluu hitaammin kuin sen ympärillä ja alapuolella oleva pehmeämpi maa- ja kiviaines, joten joen on pudottava kynnyksen yli. Samaan tapaan syntyvät koskia ja putouksia muuallakin: jyrkkä kohta pysyy paikallaan, kunnes [[eroosio]] vähitellen kuluttaa sen pois. Dneprillä tällaista kovaa kalliota oli kuudenkymmenenkuuden kilometrin matkalla, ja vesi putosi siellä yhteensä viisikymmentä metriä. Kivi voittaa, jos vain jaksaa odottaa.",
+  "linkit": [
+   "Ukrainan kilven",
+   "eroosio"
+  ],
+  "jatkot": [
+   "Mikä on Ukrainan kilpi?",
+   "Miten koski eroaa putouksesta?"
+  ]
+ },
+ {
+  "kohde": "nosto:dneprin-kosket",
+  "kysymys": "Keitä olivat koskien takana asuneet Zaporižžjan kasakat?",
+  "uusi": true,
+  "vastaus": "Sepä sattui: nimi kertoo jo paljon. Zaporižžjan kasakat olivat ukrainalainen sotilaallinen vapaaehtoisyhteisö, joka muodostui Dneprin koskien takana 1500-luvulla. Heidän keskuksensa oli [[Sič]], linnoitettu leiri koskien alapuolisilla saarilla ja rannoilla, ja kosket suojasivat sitä, koska vieraiden oli vaikea päästä sinne. Kasakat valitsivat johtajansa itse, olivat ortodokseja ja osallistuivat [[Puolan-Liettuan]], Krimin khaanikunnan ja Venäjän välisiin kamppailuihin vaihtelevin liittoumin. Venäjän keisarinna [[Katariina II]] hajotti Sičin vuonna 1775. Hyvä muuri on sellainen, jonka joki tekee itse.",
+  "linkit": [
+   "Sič",
+   "Puolan-Liettuan",
+   "Katariina II"
+  ],
+  "jatkot": [
+   "Mikä oli Sič?",
+   "Miksi Katariina II hajotti Sičin?"
+  ]
+ },
+ {
+  "kohde": "nosto:dneprin-kosket",
+  "kysymys": "Mikä Nestorin kronikka on ja mitä se kertoo?",
+  "uusi": true,
+  "vastaus": "Mmm— sitä kysytään harvoin. Nestorin kronikka, toiselta nimeltään Menneiden vuosien kertomus, on keskeinen itäslaavilaisen historian lähde, joka koottiin Kiovassa noin vuoden 1113 tienoilla. Perinteisesti sen kirjoittajaksi mainitaan Kiovan luolaluostarin munkki Nestor, mutta nykytutkimus pitää teosta useamman kirjoittajan ja kopioijan työnä. Se kertoo [[Kiovan Rusin]] alkuvaiheista, ruhtinaiden hallituskausista ja kristinuskon tulosta, ja kronikan mukaan ruhtinas [[Vladimir]] kastatti rusit vuonna 988. Se kuvaa myös reitin varjageista kreikkalaisille, joka kulki Dneprin koskien kautta, ja kertoo [[Rurikin]] kutsumisesta hallitsemaan, joskin tarina on osin legendamainen. Kirjurit tekivät raskaan työn, ja minä kuljetan sen vain perille.",
+  "linkit": [
+   "Kiovan Rusin",
+   "Vladimir",
+   "Rurikin"
+  ],
+  "jatkot": [
+   "Kuka oli Rurik?",
+   "Mitä Kiovan luolaluostari on?"
+  ]
+ },
+ {
+  "kohde": "nosto:sofian-mosaiikit",
+  "kysymys": "Miksi kirkon seinät kalkittiin umpeen?",
+  "uusi": false,
+  "vastaus": "Tuota niin, hyvä kysymys. Tarkasta syystä ei ole varmaa tietoa, mutta syitä voi päätellä katedraalin vaiheista. [[Pyhän Sofian katedraali]] kärsi keskiajan sodista ja rappeutui vuosisatojen ajan, jolloin kosteus ja ränsistyminen vahingoittivat seinäpintoja. Korjausten yhteydessä vauriot ja vanhat kuvat peitettiin rappaamalla ja kalkitsemalla, ja [[barokin]] aikana vanha bysanttilainen kuvakieli ei enää ollut muodissa. Viimeistään 1700-luvun alkuun mennessä sisustus oli kalkittu kokonaan umpeen. Kalkin alle jääminen on sittemmin osoittautunut osin onnenpotkuksi, sillä [[mosaiikkeja]] ja maalauksia säilyi siten tuleville sukupolville. Valkoinen seinä ei kerro, mitä sen alla on.",
+  "linkit": [
+   "Pyhän Sofian katedraali",
+   "barokin",
+   "mosaiikkeja"
+  ],
+  "jatkot": [
+   "Milloin mosaiikit löydettiin uudelleen?",
+   "Mitä barokki tarkoittaa kirkkoarkkitehtuurissa?"
+  ]
+ },
+ {
+  "kohde": "nosto:sofian-mosaiikit",
+  "kysymys": "Miten kalkin alle jäänyt mosaiikki saadaan esiin ehjänä?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Se on hidasta ja tarkkaa työtä. Kalkkikerros poistetaan käsityönä ja kerros kerrallaan: [[restauraattorit]] käyttävät pieniä työkaluja, esimerkiksi skalpelleja, ja pehmentävät kovettunutta pintaa kosteudella ja varovaisella mekaanisella poistolla, jotta alkuperäinen pinta ei vahingoitu. Mosaiikki koostuu pienistä lasikuutioista eli [[smalteista]], jotka on painettu märkään kalkkilaastiin, joten irtoavat kappaleet kiinnitetään takaisin ja heikentynyt laasti vahvistetaan. Työtä edeltävät tutkimus ja dokumentointi valokuvin ja piirroksin. Täysin ehjänä kaikkea ei aina saada esiin: menetyksiä ja myöhempiä korjauksia on, ja ne pyritään merkitsemään niin, että alkuperäinen erottuu. Minä en tohtisi koskea mihinkään tuollaiseen, siivet ovat liian kömpelöt.",
+  "linkit": [
+   "restauraattorit",
+   "smalteista"
+  ],
+  "jatkot": [
+   "Mikä on smaltti?",
+   "Mitä ero on freskolla ja mosaiikilla?"
+  ]
+ },
+ {
+  "kohde": "nosto:sofian-mosaiikit",
+  "kysymys": "Miksi nykytutkijat eivät osaa toistaa vanhoja lasivärejä?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tätäkin kysytään. Mosaiikin lasikuutiot eli [[smaltti]] on värjättyä lasia, jonka sävy riippuu lisätyistä metalliyhdisteistä, raaka-aineiden epäpuhtauksista, uunin lämpötilasta ja polttoilmakehästä. Vanhoja reseptejä ei ole säilynyt, ja raaka-aineet, polttoaineet ja uunit ovat nykyään toisenlaisia, joten täsmälleen samaa sävyä on vaikea saada, vaikka yksittäisiä sävyjä voidaan jäljitellä. Pyhän Sofian katedraalin mosaiikeissa sävyjä on poikkeuksellisen paljon, ja niiden sanotaan olevan nykykeinoin vaikeasti toistettavia. Kultainen pohja syntyy kultalehdestä, joka suojataan lasikerroksen alle, ja sekin on oma erikoisalansa. [[Kiovan]] mestarit osasivat tämän selvästi hyvin.\n\nReseptit kadotetaan helposti, ja se tuntuu ihan suvun salaisuudelta: kukaan ei kirjoita muistiin sitä, minkä kaikki osaavat.",
+  "linkit": [
+   "smaltti",
+   "Kiovan"
+  ],
+  "jatkot": [
+   "Miten lasia värjätään metalliyhdisteillä?",
+   "Miten kultainen tausta mosaiikkiin tehtiin?"
+  ]
+ },
+ {
+  "kohde": "nosto:sofian-mosaiikit",
+  "kysymys": "Mitä Orantaksi kutsuttu Neitsyt-mosaiikki esittää?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Oranta, latinaksi orans eli rukoileva, tarkoittaa kuvatyyppiä, jossa hahmo seisoo kädet kohotettuina rukoukseen. [[Pyhän Sofian katedraalin]] keskusapsidin mosaiikissa [[Neitsyt Marian]] hahmo esiintyy tässä asennossa kultaisella pohjalla ja on noin kuuden metrin korkuinen. Kuvan tehtävänä oli esittää Maria esirukoilijana ihmisten puolesta. Ukrainassa kuvaa kutsutaan myös [[murtumattomaksi muuriksi]], ja nimi viittaa siihen, että kuva on kestänyt aikaa ja vaikeita vaiheita. Kädet ylhäällä, ihan kuin kyyhky pitelisi siipiä auki ennen laskeutumista.",
+  "linkit": [
+   "Pyhän Sofian katedraalin",
+   "Neitsyt Marian",
+   "murtumattomaksi muuriksi"
+  ],
+  "jatkot": [
+   "Mitä esirukous tarkoittaa ortodoksisessa perinteessä?",
+   "Mitä muuta Pyhän Sofian katedraalissa on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "nosto:sofian-mosaiikit",
+  "kysymys": "Miksi katedraali on nimetty Pyhäksi Sofiaksi?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: tässä on pieni yllätys. Nimi ei viittaa pyhimykseen nimeltä Sofia vaan kreikan sanaan sophia eli viisaus, ja kirkko on omistettu Jumalan viisaudelle. Nimi on peräisin [[Konstantinopolin]] Hagia Sofiasta, joka oli yksi itäisen kristikunnan keskeisimmistä kirkoista, ja Kiovan ruhtinaat halusivat omaan pääkaupunkiinsa vastaavan. Katedraalin rakennuttajaksi mainitaan perinteisesti ruhtinas [[Jaroslav Viisas]], ja vanhan kronikan mukaan työ aloitettiin 1030-luvun lopulla, mutta tutkijat ovat esittäneet myös aikaisempaa ajoitusta. Kirkko viisaudelle, ei yhtään hullumpi idea.",
+  "linkit": [
+   "Konstantinopolin",
+   "Jaroslav Viisas"
+  ],
+  "jatkot": [
+   "Milloin Pyhän Sofian katedraali rakennettiin?",
+   "Mikä on Hagia Sofia Istanbulissa?"
+  ]
  }
 ]
