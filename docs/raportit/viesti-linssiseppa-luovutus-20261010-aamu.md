@@ -37,9 +37,11 @@ App-kopiot `proto-3d/lokit/linssiseppa-app/`: ls-ikkuna-175 (63648842a), maa-dtm
 
 1. Simuvuoron tulokset PT:lle: LS-äänet (LUFS/huiput, kellokoneisto ≤ 1/0,3 s), keinunta (vain lähdössä), julkisivu- ja ikkunayöparit
    (oikein päin, kulma ja SHA kuvaan: proto-3d/tyokalut/linssiseppa-ajot/yopari.py), bulevardi ennen/jälkeen.
-2. Pelikoodari kytkee kaupunkien 3D-pisteäänet (uudet tiedostot + yksi kutsu KaupunkiAanimaisemaSoittimeen), ei päällekkäisyyttä.
+2. Pelikoodari peruutti KaupunkiPisteAanet.cs:n (KaupunkiAanet/SoundlyAanet tekevät jo 3D-pisteet); PT päättää pyörän kellot ja kahvilan astiat.
 3. Strömmenin musta vesi: LS2 vie PT:lle (aluekohtainen nosto 1,5 m).
-4. Steam Audio -mittaus iPadilla Tukholmassa, budjetin kuvapari iPadilla (junan 173 portin jälkeen), ND-lähilento (LR:n malli).
+4. Karttaseppä tekee (pyyntöni 10.10.): kadut-<id>.json (OSM oneway, lanes, roundabout, maxspeed) katuliikenteen suuntiin ja
+   Tukholman avoin maanpinta (Lantmäteriet, jos avoin) → kytke KatuLiikenteeseen ja maa-tukholma (PT:n muistipäätös).
+5. Steam Audio -mittaus iPadilla Tukholmassa, budjetin kuvapari iPadilla (junan 173 portin jälkeen), ND-lähilento (LR:n malli).
 
 ## Opetukset
 
