@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 10.10.2026 22.1x)
+# Linnanrakentajan aloitusviesti (päivitetty 11.10.2026 00.5x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,7 +8,10 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-1. **NYT (10.10. 22.1x, nollaus 50 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltayo.md` KOKONAAN. Valmiit: Olavinlinna
+1. **NYT (11.10. 00.5x, nollaus 50 %):** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261011-yo.md` KOKONAAN ja toimi sen JONOn mukaan:
+   Olavinlinna v47f odottaa Siirtosepän pelikuvia (PT kuittaa), Siirtosepän mallivirheet erinä → v47g, ND v5g hyväksytty (LS2 paketoi),
+   museo v2g LS2:lla (RP-P-OB-612/-616 vain pyynnöstä), Pariisi v2 LS2:lla. Worktree wt/linnanrakentaja-linna-v45k auki (vientihaara).
+1s. **(vanha) 10.10. 22.1x, nollaus 50 %:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-iltayo.md` KOKONAAN. Valmiit: Olavinlinna
    v47d (Siirtoseppä kytkee), Peking v5 (TAUOLLA), ND v5f (odottaa LS2:n paria). TYÖN ALLA: Pariisin sumennetut korttelit
    (`/Users/Shared/Claude/proto-3d/_valmiit/pariisi-korttelit-v1/`, LAHTEET.md) — v1 ja v2 (julkisivujen vaihtelu + Bourbonin portikko, `pariisi-korttelit-v2/`) LS2:lla 22.3x; katso luovutuksen loppu "JATKO 22.1x–22.3x".
 1t. **(vanha) 10.10. 17.5x, nollaus 52 %:** lue `docs/raportit/viesti-linnanrakentaja-luovutus-20261010-ilta.md` ja sen osoittamat iltapäivän luovutuksen osiot; ALOITA ND v5c (suunnitelma iltapäivän luovutuksen lopussa). Vanhempi rivi: iltapäivän luovutus KOKONAAN (erityisesti
