@@ -1,0 +1,34 @@
+================ KOHTA 16 (kohde:hahmotelma-altmunster) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+### 16.1
+KYSYMYS: Kuka perusti Altmünsterin luostarin vuonna 1083?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+### 16.2
+KYSYMYS: Minne apotti Johannes Harder vei luostarin arvoesineet ennen tuhoa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Altmünsterin luostari (historia)
+Tietoruudun teksti: Altmünsterin luostari oli Luxemburgin kaupungin ensimmäinen luostari: Luxemburgin kreivi Konrad I perusti sen vuonna 1083 sukunsa yksityiseksi luostariksi ja asetti veljensä Rudolfin apotiksi. Luostarin koulusta tuli kaupungin ainoa oppilaitos, ja luostarikirkkoon haudattiin Luxemburgin kreivejä aina Henrik IV:n aikaan asti; myöhemmin Kaarle IV toi tapan takaisin hautauttaessaan sinne isänsä Jean Sokean. Ranskan kuningas Frans I valtasi Luxemburgin kaupungin 11. syyskuuta 1543, ja luostari tuhottiin todennäköisesti hänen joukkojensa toimesta pian sen jälkeen — tarkkaa tuhopäivää ja tuhoajia ei tunneta. Apotti Johannes Harder ehti viedä arvoesineet turvaan Trieriin ennen tuhoa, ja munkit siirtyivät ensin Pyhän Johanneksen hospitaaliin ja perustivat vuonna 1606 uuden luostarin, Neumünsterin, Grundin kaupunginosaan. Vanhalta Altmünsterin tasanteelta on jäljellä enää yksi pyöreä torni.
+
+### 16.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI
+
+### 16.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 16 YHTEINEN KONTEKSTI

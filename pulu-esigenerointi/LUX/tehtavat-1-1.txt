@@ -1,0 +1,202 @@
+================ KOHTA 1 (kohde:hahmotelma-clervaux) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clervaux (kulttuuri)
+Tietoruudun teksti: Clervaux on kaupunki Pohjois-Luxemburgissa Éislekin eli Öslingin alueella, joka kattaa 32 prosenttia maasta ja jossa on lähes kaikki Luxemburgin korkeimmat kukkulat, laajoja lehtimetsiä ja kauniita jokilaaksoja. Kylä syntyi Clervaux’n linnan ympärille: linnan vanhimmat osat ovat 1100-luvulta, ja niiden rakennutti Sponheimin kreivi Gerard, Viandenin kreivin veli, kun taas suuri palatsi ja pyöreät tornit ovat luultavasti vuoden 1400 tienoilta. Kaupungin vaakuna, jossa on kolme mustarastasta kultaisella pohjalla, myönnettiin vuonna 1896. Vuosina 1909–1910 kaupunkiin rakennettiin uusromaaninen Pyhän Mauritiuksen ja Pyhän Maurin benediktiiniluostari, jonka munkit olivat joutuneet lähtemään Ranskasta vuonna 1901. Clervaux’n linnassa on nykyään Edward Steichenin kokoaman valokuvanäyttelyn Ihmisen perhe pysyvä esillepano.
+
+### 1.1
+KYSYMYS: Kuinka suuren osan Luxemburgin pinta-alasta Ösling kattaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clervaux (kulttuuri)
+Tietoruudun teksti: Clervaux on kaupunki Pohjois-Luxemburgissa Éislekin eli Öslingin alueella, joka kattaa 32 prosenttia maasta ja jossa on lähes kaikki Luxemburgin korkeimmat kukkulat, laajoja lehtimetsiä ja kauniita jokilaaksoja. Kylä syntyi Clervaux’n linnan ympärille: linnan vanhimmat osat ovat 1100-luvulta, ja niiden rakennutti Sponheimin kreivi Gerard, Viandenin kreivin veli, kun taas suuri palatsi ja pyöreät tornit ovat luultavasti vuoden 1400 tienoilta. Kaupungin vaakuna, jossa on kolme mustarastasta kultaisella pohjalla, myönnettiin vuonna 1896. Vuosina 1909–1910 kaupunkiin rakennettiin uusromaaninen Pyhän Mauritiuksen ja Pyhän Maurin benediktiiniluostari, jonka munkit olivat joutuneet lähtemään Ranskasta vuonna 1901. Clervaux’n linnassa on nykyään Edward Steichenin kokoaman valokuvanäyttelyn Ihmisen perhe pysyvä esillepano.
+
+### 1.2
+KYSYMYS: Minä vuonna Clervaux’n kaupungin vaakuna myönnettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Clervaux (kulttuuri)
+Tietoruudun teksti: Clervaux on kaupunki Pohjois-Luxemburgissa Éislekin eli Öslingin alueella, joka kattaa 32 prosenttia maasta ja jossa on lähes kaikki Luxemburgin korkeimmat kukkulat, laajoja lehtimetsiä ja kauniita jokilaaksoja. Kylä syntyi Clervaux’n linnan ympärille: linnan vanhimmat osat ovat 1100-luvulta, ja niiden rakennutti Sponheimin kreivi Gerard, Viandenin kreivin veli, kun taas suuri palatsi ja pyöreät tornit ovat luultavasti vuoden 1400 tienoilta. Kaupungin vaakuna, jossa on kolme mustarastasta kultaisella pohjalla, myönnettiin vuonna 1896. Vuosina 1909–1910 kaupunkiin rakennettiin uusromaaninen Pyhän Mauritiuksen ja Pyhän Maurin benediktiiniluostari, jonka munkit olivat joutuneet lähtemään Ranskasta vuonna 1901. Clervaux’n linnassa on nykyään Edward Steichenin kokoaman valokuvanäyttelyn Ihmisen perhe pysyvä esillepano.
+
+### 1.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+### 1.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 1 YHTEINEN KONTEKSTI
+
+================ KOHTA 2 (kohde:hahmotelma-wiltz) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wiltz (kulttuuri)
+Tietoruudun teksti: Wiltz on kaupunki Luoteis-Luxemburgissa Wiltz-joen rannalla; asukkaita on 6 145. Nimi tulee kelttiläisestä sanasta, joka tarkoittaa puron varrella, ja paikka mainitaan ensi kerran vuonna 764; kaupunkioikeudet se sai vuonna 1240. Wiltzin kreivit kuuluvat Luxemburgin vanhimpiin, ja kaupungin tunnetuin nähtävyys on heidän Wiltzin linnansa, joka valmistui vuonna 1727 ja jonka viimeinen kreivi kuoli 1793. Linna oli yksityinen tyttökoulu vuosina 1851–1950 ja sen jälkeen vanhainkoti. 1800-luvun lopulla ja 1900-luvun alussa Wiltzin teollistumista vauhditti nahkateollisuus, erityisesti IDÉAL-parkitsemo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Andesin yliopisto] 1948 Yliopiston perusti 1948 joukko kolumbialaisia älymystön edustajia Mario Laserna Pinzónin johdolla, ja se oli maan ensimmäinen yliopisto, joka perustettiin tunnustuksettomana: riippumattomaksi sekä puolueista että kirkosta. Perustamisen taustalla oli maan teollistuminen ja koulutetun työvoiman puute — opetusministeri Germán Arciniegas kertoi kongressille 1946, että maasta puuttuu insinöörejä, arkkitehteja, lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, perustajat pitivät sitä parhaana perusteluna yliopiston perustamiselle. Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä opiskelijalla. Malli otettiin yhdysvaltalaisesta …
+
+### 2.1
+KYSYMYS: Minä vuonna Wiltzin linna valmistui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wiltz (kulttuuri)
+Tietoruudun teksti: Wiltz on kaupunki Luoteis-Luxemburgissa Wiltz-joen rannalla; asukkaita on 6 145. Nimi tulee kelttiläisestä sanasta, joka tarkoittaa puron varrella, ja paikka mainitaan ensi kerran vuonna 764; kaupunkioikeudet se sai vuonna 1240. Wiltzin kreivit kuuluvat Luxemburgin vanhimpiin, ja kaupungin tunnetuin nähtävyys on heidän Wiltzin linnansa, joka valmistui vuonna 1727 ja jonka viimeinen kreivi kuoli 1793. Linna oli yksityinen tyttökoulu vuosina 1851–1950 ja sen jälkeen vanhainkoti. 1800-luvun lopulla ja 1900-luvun alussa Wiltzin teollistumista vauhditti nahkateollisuus, erityisesti IDÉAL-parkitsemo.
+
+### 2.2
+KYSYMYS: Millä alalla Wiltzin teollistuminen kiihtyi 1800-luvun lopulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Wiltz (kulttuuri)
+Tietoruudun teksti: Wiltz on kaupunki Luoteis-Luxemburgissa Wiltz-joen rannalla; asukkaita on 6 145. Nimi tulee kelttiläisestä sanasta, joka tarkoittaa puron varrella, ja paikka mainitaan ensi kerran vuonna 764; kaupunkioikeudet se sai vuonna 1240. Wiltzin kreivit kuuluvat Luxemburgin vanhimpiin, ja kaupungin tunnetuin nähtävyys on heidän Wiltzin linnansa, joka valmistui vuonna 1727 ja jonka viimeinen kreivi kuoli 1793. Linna oli yksityinen tyttökoulu vuosina 1851–1950 ja sen jälkeen vanhainkoti. 1800-luvun lopulla ja 1900-luvun alussa Wiltzin teollistumista vauhditti nahkateollisuus, erityisesti IDÉAL-parkitsemo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bogotá — kohdekartta / Kohdekartta: Andesin yliopisto] 1948 Yliopiston perusti 1948 joukko kolumbialaisia älymystön edustajia Mario Laserna Pinzónin johdolla, ja se oli maan ensimmäinen yliopisto, joka perustettiin tunnustuksettomana: riippumattomaksi sekä puolueista että kirkosta. Perustamisen taustalla oli maan teollistuminen ja koulutetun työvoiman puute — opetusministeri Germán Arciniegas kertoi kongressille 1946, että maasta puuttuu insinöörejä, arkkitehteja, lääkäreitä, agronomeja ja jopa juristeja riittävästi. Kun Jorge Eliécer Gaitán murhattiin 9. huhtikuuta 1948, perustajat pitivät sitä parhaana perusteluna yliopiston perustamiselle. Opetus alkoi 29. maaliskuuta 1949 kahdeksankymmenellä opiskelijalla. Malli otettiin yhdysvaltalaisesta …
+
+### 2.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+### 2.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 2 YHTEINEN KONTEKSTI
+
+================ KOHTA 3 (kohde:hahmotelma-vianden) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viandenin linna (historia)
+Tietoruudun teksti: Viandenin linna Luxemburgin pohjoisosassa on yksi Reinin länsipuolen suurimmista linnoitetuista linnoista. Se seisoo kallionkielekkeellä 310 metrin korkeudessa Our-joen yläpuolella, ja linna rakennettiin romaaniseen tyyliin 1000–1300-luvuilla, minkä jälkeen siihen lisättiin goottilaisia piirteitä; 1600-luvulla sen viereen rakennettiin renessanssityylinen Nassaun kartano. Vuonna 1820 kuningas Vilhelm I myi linnan Wenzel Costerille, joka alkoi purkaa sitä ja myi katon tiilet, seinäpaneelit, ovet ja ikkunat pala palalta, minkä jälkeen linna oli raunioina. Vuonna 1827 kuningas osti raunion takaisin, ja vuonna 1851 Alankomaiden prinssi Henrik rakennutti kappelin uudelleen omalla kustannuksellaan; Victor Hugo vietti Viandenissa kolme kuukautta vuonna 1871. Linna on sittemmin kunnostettu kokonaan, ja työt valmistuivat vuonna 1990.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 3.1
+KYSYMYS: Kuka myi Viandenin linnan vuonna 1820?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viandenin linna (historia)
+Tietoruudun teksti: Viandenin linna Luxemburgin pohjoisosassa on yksi Reinin länsipuolen suurimmista linnoitetuista linnoista. Se seisoo kallionkielekkeellä 310 metrin korkeudessa Our-joen yläpuolella, ja linna rakennettiin romaaniseen tyyliin 1000–1300-luvuilla, minkä jälkeen siihen lisättiin goottilaisia piirteitä; 1600-luvulla sen viereen rakennettiin renessanssityylinen Nassaun kartano. Vuonna 1820 kuningas Vilhelm I myi linnan Wenzel Costerille, joka alkoi purkaa sitä ja myi katon tiilet, seinäpaneelit, ovet ja ikkunat pala palalta, minkä jälkeen linna oli raunioina. Vuonna 1827 kuningas osti raunion takaisin, ja vuonna 1851 Alankomaiden prinssi Henrik rakennutti kappelin uudelleen omalla kustannuksellaan; Victor Hugo vietti Viandenissa kolme kuukautta vuonna 1871. Linna on sittemmin kunnostettu kokonaan, ja työt valmistuivat vuonna 1990.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 3.2
+KYSYMYS: Kuinka kauan Victor Hugo asui Viandenissa vuonna 1871?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viandenin linna (historia)
+Tietoruudun teksti: Viandenin linna Luxemburgin pohjoisosassa on yksi Reinin länsipuolen suurimmista linnoitetuista linnoista. Se seisoo kallionkielekkeellä 310 metrin korkeudessa Our-joen yläpuolella, ja linna rakennettiin romaaniseen tyyliin 1000–1300-luvuilla, minkä jälkeen siihen lisättiin goottilaisia piirteitä; 1600-luvulla sen viereen rakennettiin renessanssityylinen Nassaun kartano. Vuonna 1820 kuningas Vilhelm I myi linnan Wenzel Costerille, joka alkoi purkaa sitä ja myi katon tiilet, seinäpaneelit, ovet ja ikkunat pala palalta, minkä jälkeen linna oli raunioina. Vuonna 1827 kuningas osti raunion takaisin, ja vuonna 1851 Alankomaiden prinssi Henrik rakennutti kappelin uudelleen omalla kustannuksellaan; Victor Hugo vietti Viandenissa kolme kuukautta vuonna 1871. Linna on sittemmin kunnostettu kokonaan, ja työt valmistuivat vuonna 1990.
+
+### 3.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+### 3.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 3 YHTEINEN KONTEKSTI
+
+================ KOHTA 4 (kohde:hahmotelma-echternach) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Echternach (historia)
+Tietoruudun teksti: Echternach on Itä-Luxemburgin kaupunki lähellä Saksan rajaa, ja se on Luxemburgin vanhin kaupunki. Se kasvoi Echternachin luostarin ympärille, jonka englantilainen munkki Pyhä Willibrord perusti vuonna 698; hänen kunniakseen järjestetään joka vuosi helluntaitiistaina hyppelykulkue. Romaaninen basilika, jonka krypta sisältää Willibrordin haudan, on säilynyt luostarista, ja luostarin kirjasto ja kirjoittamo olivat tunnettuja koko Euroopassa; kaupunki sai kaupunkioikeudet vuonna 1236. Luostari uudistettiin barokkityyliin vuonna 1737, mutta vuonna 1794 kirkko ryöstettiin ja luostari muutettiin posliinitehtaaksi, ja munkit hajotettiin 1797; kaupunki taantui, kunnes rautatie toi mukanaan uutta elämää ja matkailijoita. Seutu tunnetaan Pikku-Sveitsinä eli Müllerthalina: se kattaa seitsemän prosenttia maasta ja on rosoista, metsäistä ja luolien halkomaa, ja sen ainoa keskikokoinen asutus on Echt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Arki: Hypitään pyhimyksen haudalle] helluntaitiistai — Helluntaitiistaina Echternachin kaduilla hypitään: pyhiinvaeltajat pitävät kiinni valkoisen nenäliinan päistä ja tanssivat vasemmalta oikealle, jolloin jono etenee hitaasti. Soittajat esittävät vuosisataista sävelmää, joka muistuttaa irlantilaista jigiä ja perustuu kansanlauluun Adam had seven sons. Matka jokisillalta basilikaan on noin 1,5 kilometriä, ja perillä hypitään Pyhän Willibrordin haudan ohi. UNESCO merkitsi kulkueen aineettoman kulttuuriperinnön luetteloon 2010.
+
+### 4.1
+KYSYMYS: Minä vuonna Pyhä Willibrord perusti Echternachin luostarin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Echternach (historia)
+Tietoruudun teksti: Echternach on Itä-Luxemburgin kaupunki lähellä Saksan rajaa, ja se on Luxemburgin vanhin kaupunki. Se kasvoi Echternachin luostarin ympärille, jonka englantilainen munkki Pyhä Willibrord perusti vuonna 698; hänen kunniakseen järjestetään joka vuosi helluntaitiistaina hyppelykulkue. Romaaninen basilika, jonka krypta sisältää Willibrordin haudan, on säilynyt luostarista, ja luostarin kirjasto ja kirjoittamo olivat tunnettuja koko Euroopassa; kaupunki sai kaupunkioikeudet vuonna 1236. Luostari uudistettiin barokkityyliin vuonna 1737, mutta vuonna 1794 kirkko ryöstettiin ja luostari muutettiin posliinitehtaaksi, ja munkit hajotettiin 1797; kaupunki taantui, kunnes rautatie toi mukanaan uutta elämää ja matkailijoita. Seutu tunnetaan Pikku-Sveitsinä eli Müllerthalina: se kattaa seitsemän prosenttia maasta ja on rosoista, metsäistä ja luolien halkomaa, ja sen ainoa keskikokoinen asutus on Echt…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Arki: Hypitään pyhimyksen haudalle] helluntaitiistai — Helluntaitiistaina Echternachin kaduilla hypitään: pyhiinvaeltajat pitävät kiinni valkoisen nenäliinan päistä ja tanssivat vasemmalta oikealle, jolloin jono etenee hitaasti. Soittajat esittävät vuosisataista sävelmää, joka muistuttaa irlantilaista jigiä ja perustuu kansanlauluun Adam had seven sons. Matka jokisillalta basilikaan on noin 1,5 kilometriä, ja perillä hypitään Pyhän Willibrordin haudan ohi. UNESCO merkitsi kulkueen aineettoman kulttuuriperinnön luetteloon 2010.
+
+### 4.2
+KYSYMYS: Minä päivänä Echternachin hyppelykulkue järjestetään?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Echternach (historia)
+Tietoruudun teksti: Echternach on Itä-Luxemburgin kaupunki lähellä Saksan rajaa, ja se on Luxemburgin vanhin kaupunki. Se kasvoi Echternachin luostarin ympärille, jonka englantilainen munkki Pyhä Willibrord perusti vuonna 698; hänen kunniakseen järjestetään joka vuosi helluntaitiistaina hyppelykulkue. Romaaninen basilika, jonka krypta sisältää Willibrordin haudan, on säilynyt luostarista, ja luostarin kirjasto ja kirjoittamo olivat tunnettuja koko Euroopassa; kaupunki sai kaupunkioikeudet vuonna 1236. Luostari uudistettiin barokkityyliin vuonna 1737, mutta vuonna 1794 kirkko ryöstettiin ja luostari muutettiin posliinitehtaaksi, ja munkit hajotettiin 1797; kaupunki taantui, kunnes rautatie toi mukanaan uutta elämää ja matkailijoita. Seutu tunnetaan Pikku-Sveitsinä eli Müllerthalina: se kattaa seitsemän prosenttia maasta ja on rosoista, metsäistä ja luolien halkomaa, ja sen ainoa keskikokoinen asutus on Echt…
+
+### 4.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+### 4.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 4 YHTEINEN KONTEKSTI
+
+================ KOHTA 5 (kohde:hahmotelma-beaufort) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beaufortin linna (historia)
+Tietoruudun teksti: Beaufortin linna Itä-Luxemburgissa koostuu keskiaikaisen linnoituksen raunioista ja 1600-luvun asuinrakennuksesta. Linna alkoi luultavasti 1000-luvulla pienenä nelikulmaisena linnakkeena suuren kallion päällä, ja ensimmäinen tunnettu herra, Wauthier de Wiltz et Beaufort, mainitaan vuonna 1192. Kuvernööri Johann Baron von Beck osti suurimman osan omaisuudesta vuonna 1639 ja aloitti uuden asuinrakennuksen rakentamisen vuonna 1643, ja rakennus valmistui 1649. Linna hylättiin ja se rappeutui, ja 1800-luvun alussa sitä käytettiin jopa louhoksena; valtio julisti sen kansallismuistomerkiksi vuonna 1850. Uusi omistaja Henri Even kunnosti asuinrakennuksen vuonna 1893, ja Beaufort kuuluu Pikku-Sveitsin eli Müllerthalin alueeseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 5.1
+KYSYMYS: Minä vuonna valtio julisti linnan kansallismuistomerkiksi?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beaufortin linna (historia)
+Tietoruudun teksti: Beaufortin linna Itä-Luxemburgissa koostuu keskiaikaisen linnoituksen raunioista ja 1600-luvun asuinrakennuksesta. Linna alkoi luultavasti 1000-luvulla pienenä nelikulmaisena linnakkeena suuren kallion päällä, ja ensimmäinen tunnettu herra, Wauthier de Wiltz et Beaufort, mainitaan vuonna 1192. Kuvernööri Johann Baron von Beck osti suurimman osan omaisuudesta vuonna 1639 ja aloitti uuden asuinrakennuksen rakentamisen vuonna 1643, ja rakennus valmistui 1649. Linna hylättiin ja se rappeutui, ja 1800-luvun alussa sitä käytettiin jopa louhoksena; valtio julisti sen kansallismuistomerkiksi vuonna 1850. Uusi omistaja Henri Even kunnosti asuinrakennuksen vuonna 1893, ja Beaufort kuuluu Pikku-Sveitsin eli Müllerthalin alueeseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 5.2
+KYSYMYS: Mihin linnan rauniota käytettiin 1800-luvun alussa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Beaufortin linna (historia)
+Tietoruudun teksti: Beaufortin linna Itä-Luxemburgissa koostuu keskiaikaisen linnoituksen raunioista ja 1600-luvun asuinrakennuksesta. Linna alkoi luultavasti 1000-luvulla pienenä nelikulmaisena linnakkeena suuren kallion päällä, ja ensimmäinen tunnettu herra, Wauthier de Wiltz et Beaufort, mainitaan vuonna 1192. Kuvernööri Johann Baron von Beck osti suurimman osan omaisuudesta vuonna 1639 ja aloitti uuden asuinrakennuksen rakentamisen vuonna 1643, ja rakennus valmistui 1649. Linna hylättiin ja se rappeutui, ja 1800-luvun alussa sitä käytettiin jopa louhoksena; valtio julisti sen kansallismuistomerkiksi vuonna 1850. Uusi omistaja Henri Even kunnosti asuinrakennuksen vuonna 1893, ja Beaufort kuuluu Pikku-Sveitsin eli Müllerthalin alueeseen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Rakennukset: Linna, jonka katto myytiin pala palalta] 1820–1990 — Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille 3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat 1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.
+
+### 5.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI
+
+### 5.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 5 YHTEINEN KONTEKSTI

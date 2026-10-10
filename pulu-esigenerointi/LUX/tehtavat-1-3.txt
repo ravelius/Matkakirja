@@ -1,0 +1,221 @@
+================ KOHTA 11 (kohde:hahmotelma-diekirch) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Silta putouksen päällä] 1879 — Schiessentümpel on pieni vesiputous Mustan Ernzin joessa, noin kilometrin päässä Müllerthalin kylästä lounaaseen. Putouksen päällä kaartuu kivisilta, jonka kaide on tehty rustiikkisista puunrungoista. Valtion budjettiin varattiin 1877 rahaa kolmelle pienelle sillalle Müllerthalin alueelle. Piirustukset laati Diekirchin piirin insinööri Antoine Hartmann, ja kivityön teki kivenhakkaaja Jean-Pierre Prommenschenkel. Silta valmistui todennäköisesti 1879. Paikan nimi tarkoittaa sekä putousta että sen kohdalla kulkevan tien varren aluetta.
+
+### 11.1
+KYSYMYS: Mitä nimi Diekirch tarkoittaa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Luonto: Silta putouksen päällä] 1879 — Schiessentümpel on pieni vesiputous Mustan Ernzin joessa, noin kilometrin päässä Müllerthalin kylästä lounaaseen. Putouksen päällä kaartuu kivisilta, jonka kaide on tehty rustiikkisista puunrungoista. Valtion budjettiin varattiin 1877 rahaa kolmelle pienelle sillalle Müllerthalin alueelle. Piirustukset laati Diekirchin piirin insinööri Antoine Hartmann, ja kivityön teki kivenhakkaaja Jean-Pierre Prommenschenkel. Silta valmistui todennäköisesti 1879. Paikan nimi tarkoittaa sekä putousta että sen kohdalla kulkevan tien varren aluetta.
+
+### 11.2
+KYSYMYS: Kuka linnoitti kaupungin 1300-luvulla?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Diekirch (historia)
+Tietoruudun teksti: Diekirch on kaupunki Koillis-Luxemburgissa Sauer-joen eli Sûren rannalla; nimi tulee sanoista Diet-Kirch eli kansan kirkko. Tarinan mukaan Kaarle Suuri asutti alueelle sakseja 700-luvun lopulla, ja heidän kääntämisekseen kristinuskoon rakennettiin kirkko, joka antoi asutukselle nimen. 1300-luvulla Böömin kuningas ja Luxemburgin kreivi Juhana Sokea linnoitti kaupungin muurilla ja vallihaudalla, ja se säilyi jokseenkin linnoitettuna 1800-luvun alkuun, jolloin ranskalaiset purkivat muurit ja korvasivat ne puuistutuksilla. Kaivauksissa on todettu, että Pyhän Laurentiuksen kirkko on roomalainen rakennus, ja kaupungissa sijaitsi suuri roomalainen huvila, joka hylättiin 400-luvun alussa. Diekirchissä on kansallisesti merkittävä, kaupungin nimeä kantava panimo.
+
+### 11.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+### 11.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 11 YHTEINEN KONTEKSTI
+
+================ KOHTA 12 (kohde:hahmotelma-remich) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Lima: Muuri joka kaatui rautatien tieltä] Merirosvojen ja korsaarien uhka sai siirtomaahallinnon rakentamaan kaupungin ympärille muurin vuosina 1684–1687, varakuningas Melchor de Navarra y Rocafullin kaudella. Muurissa oli kymmenen porttia, ja se seurasi linjaa, jolla kulkevat nykyään Alfonso Ugarten, Paseo Colónin ja Graun kadut. Yhdysvaltalainen rautatieurakoitsija Henry Meiggs purki muurin 1872 Perun hallituksen sopimuksella tulevan kasvun tieltä – vain vuosi ennen isoisän matkaa. Porteista tunnetuin, Arco del Puente, tuhoutui katukauppiaiden sytyttämässä tulipalossa 1879.
+
+### 12.1
+KYSYMYS: Minä vuonna Remichiin rakennettiin ensimmäinen silta Moselin yli?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+### 12.2
+KYSYMYS: Kuka purki kaupungin linnoitukset vuonna 1687?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Remich (ruoka)
+Tietoruudun teksti: Remich on Kaakkois-Luxemburgin kaupunki Moselin vasemmalla rannalla; asukkaita on 4 101, ja se on pinta-alaltaan Luxemburgin pienin kunta. Moselin laaksossa viininviljely hallitsee, ja Remich on yksi sen kauneimmista ja matkailijoiden vilkkaimmin käyttämistä pikkukaupungeista. Roomalaisen Remacumin asutuksesta kehittyi Remich; kaupungin keskiaikaisten linnoitusten jäännöksiä, kuten Pyhän Nikolauksen portti, on yhä näkyvissä, ja Ludvig XIV:n armeija purki linnoitukset vuonna 1687. Kuningas Vilhelm II vieraili kaupungissa vuonna 1844 ja hänen poikansa Vilhelm III vuonna 1855; vuonna 1866 Moselin yli rakennettiin ensimmäinen silta. Moselin kanavoinnin jälkeen vuonna 1964 laivat ovat voineet kulkea joella ympäri vuoden.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kaupunkilehti / Lima: Muuri joka kaatui rautatien tieltä] Merirosvojen ja korsaarien uhka sai siirtomaahallinnon rakentamaan kaupungin ympärille muurin vuosina 1684–1687, varakuningas Melchor de Navarra y Rocafullin kaudella. Muurissa oli kymmenen porttia, ja se seurasi linjaa, jolla kulkevat nykyään Alfonso Ugarten, Paseo Colónin ja Graun kadut. Yhdysvaltalainen rautatieurakoitsija Henry Meiggs purki muurin 1872 Perun hallituksen sopimuksella tulevan kasvun tieltä – vain vuosi ennen isoisän matkaa. Porteista tunnetuin, Arco del Puente, tuhoutui katukauppiaiden sytyttämässä tulipalossa 1879.
+
+### 12.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+### 12.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 12 YHTEINEN KONTEKSTI
+
+================ KOHTA 13 (kohde:hahmotelma-grevenmacher) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kohdekartta / Kohdekartta: Dhamek-stupa] nykyinen hahmo 400–500-luvulta Dhamek-stupa on Sarnathin massiivisin rakennelma, ja se merkitsee paikkaa, jossa Buddha piti ensimmäisen opetuksensa. Nimen arvellaan lyhentyneen sanoista dharma chakra, dharman pyörä — juuri se pyörä, jonka Buddha kertomuksen mukaan pani täällä liikkeelle. Alaosa on ladottu tasaisiksi hakatuista kivilohkareista ja yläosa tiilestä, ja kivipinnassa kiertää nauha hienoja kukkakuvioita, jotka ovat Gupta-kauden tyyliä 400–500-luvulta. Rakennelmalla on pidempi historia kuin sen nykyisellä hahmolla. Perimätiedon mukaan Buddhan tuhkat jaettiin hänen kuolemansa jälkeen kahdeksaan stupaan, ja Dhamek oli ilmeisesti yksi niistä; keisari Ashokan arvellaan teettäneen sen l…
+- [Kanton — kaupunkilehti / Kanton: Viisi pässiä ja kukkien kaupunki] Kaupungin nimi on vaihtunut monta kertaa. Se perustettiin Panyuna, sai vuonna 226 Guang-prefektuurin pääpaikkana nimen, josta tuli nykyinen Guangzhou, ja keskiajan persialaiset tunsivat sen nimellä Khanfu. Suomen ja muiden länsimaiden Kanton tulee portugalilaisten muodosta Cidade de Cantão, joka on väännös maakunnan nimestä Guangdong — nimi tarttui kuitenkin kaupunkiin eikä maakuntaan. Lisänimiä on kaksi. Pässien kaupunki tulee tarusta, jonka mukaan viisi kuolematonta ratsasti pässeillä kaupunkiin ja opetti asukkaat viljelemään riisiä; kukkien kaupunki taas viittaa yksinkertaisesti seudun vehreyteen.
+
+### 13.1
+KYSYMYS: Minkä joen rannalla Grevenmacher sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+### 13.2
+KYSYMYS: Minkä nimen mukaan kantoni on nimetty?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Grevenmacher (ruoka)
+Tietoruudun teksti: Grevenmacher on kaupunki Itä-Luxemburgissa lähellä Saksan rajaa, ja sen mukaan on nimetty samanniminen kantoni ja vuoteen 2015 asti piiri. Kaupunki sijaitsee Moselin vasemmalla rannalla viininviljelyalueella. Kunnassa on 5 276 asukasta (2025). Kaupungin tunnettuihin henkilöihin kuuluu impressionistimaalari Frantz Seimetz (1858–1934).
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kohdekartta / Kohdekartta: Dhamek-stupa] nykyinen hahmo 400–500-luvulta Dhamek-stupa on Sarnathin massiivisin rakennelma, ja se merkitsee paikkaa, jossa Buddha piti ensimmäisen opetuksensa. Nimen arvellaan lyhentyneen sanoista dharma chakra, dharman pyörä — juuri se pyörä, jonka Buddha kertomuksen mukaan pani täällä liikkeelle. Alaosa on ladottu tasaisiksi hakatuista kivilohkareista ja yläosa tiilestä, ja kivipinnassa kiertää nauha hienoja kukkakuvioita, jotka ovat Gupta-kauden tyyliä 400–500-luvulta. Rakennelmalla on pidempi historia kuin sen nykyisellä hahmolla. Perimätiedon mukaan Buddhan tuhkat jaettiin hänen kuolemansa jälkeen kahdeksaan stupaan, ja Dhamek oli ilmeisesti yksi niistä; keisari Ashokan arvellaan teettäneen sen l…
+- [Kanton — kaupunkilehti / Kanton: Viisi pässiä ja kukkien kaupunki] Kaupungin nimi on vaihtunut monta kertaa. Se perustettiin Panyuna, sai vuonna 226 Guang-prefektuurin pääpaikkana nimen, josta tuli nykyinen Guangzhou, ja keskiajan persialaiset tunsivat sen nimellä Khanfu. Suomen ja muiden länsimaiden Kanton tulee portugalilaisten muodosta Cidade de Cantão, joka on väännös maakunnan nimestä Guangdong — nimi tarttui kuitenkin kaupunkiin eikä maakuntaan. Lisänimiä on kaksi. Pässien kaupunki tulee tarusta, jonka mukaan viisi kuolematonta ratsasti pässeillä kaupunkiin ja opetti asukkaat viljelemään riisiä; kukkien kaupunki taas viittaa yksinkertaisesti seudun vehreyteen.
+
+### 13.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+### 13.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 13 YHTEINEN KONTEKSTI
+
+================ KOHTA 14 (kohde:hahmotelma-esch) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+- [Sahalin — kaupunkilehti / Historia: Nertšinskistä Sahalinille] Ensimmäiset runsaat kolmesataa pakkotyövankia tuotiin Sahalinille Nertšinskistä vuonna 1859 kaivamaan kivihiiltä. Keisari Aleksanteri II vahvisti 18. huhtikuuta 1869 määräyksen, jonka mukaan Itä-Siperian kenraalikuvernöörin oli heti ryhdyttävä lähettämään saarelle jopa kahdeksansataa pakkotyövankia. Vankilat avattiin Aleksandrovskiin ja Korsakoviin vuonna 1880. Työt olivat raskaita: hiiltä ja rautamalmia, taloja ja teitä, lennätinlinjoja, soiden kuivatusta ja talvista metsänkaatoa. Kaikkiaan järjestelmän läpi kulki yli kolmekymmentätuhatta tuomittua.
+
+### 14.1
+KYSYMYS: Milloin alueelta löytyi runsaasti rautamalmia?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sahalin — kaupunkilehti / Historia: Nertšinskistä Sahalinille] Ensimmäiset runsaat kolmesataa pakkotyövankia tuotiin Sahalinille Nertšinskistä vuonna 1859 kaivamaan kivihiiltä. Keisari Aleksanteri II vahvisti 18. huhtikuuta 1869 määräyksen, jonka mukaan Itä-Siperian kenraalikuvernöörin oli heti ryhdyttävä lähettämään saarelle jopa kahdeksansataa pakkotyövankia. Vankilat avattiin Aleksandrovskiin ja Korsakoviin vuonna 1880. Työt olivat raskaita: hiiltä ja rautamalmia, taloja ja teitä, lennätinlinjoja, soiden kuivatusta ja talvista metsänkaatoa. Kaikkiaan järjestelmän läpi kulki yli kolmekymmentätuhatta tuomittua.
+
+### 14.2
+KYSYMYS: Minä vuonna Belvalin viimeinen masuuni lopetti toimintansa?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Esch-sur-Alzette (tekniikka)
+Tietoruudun teksti: Esch-sur-Alzette on Luxemburgin toiseksi väkirikkain kaupunki (37 922 asukasta) maan lounaisosassa Ranskan rajalla Alzette-joen laaksossa. Kaupunki mainitaan ensi kerran 12. huhtikuuta 1128 paavi Honorius II:lle osoitetussa viestissä, ja pitkään se oli pieni maalaiskylä, kunnes alueelta löytyi 1850-luvulla runsaasti rautamalmia. Kaivosten ja terästeollisuuden kehittyessä kaupungin väkiluku kymmenkertaistui muutamassa vuosikymmenessä, ja teollisuus toi Luxemburgille jatkuvaa talouskasvua 1800-luvun jälkipuoliskolla. Terästehdas ARBED perustettiin vuonna 1911, ja Belvalin viimeinen masuuni lopetti toimintansa vuonna 1997; vanhojen masuunien alue on muutettu uudeksi kaupunginosaksi. Esch valittiin vuoden 2022 Euroopan kulttuuripääkaupungiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Masuunit, joista tuli kampus] 1965–1997 — Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun 30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja konserttisali Rockhal.
+
+### 14.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+### 14.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 14 YHTEINEN KONTEKSTI
+
+================ KOHTA 15 (kohde:hahmotelma-mondorf) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Kansallinen taidemuseo] 1909 Paraguayn kansallinen taidemuseo syntyi yhden miehen kokoelmasta. Juan Silvano Godoi (1850–1926) oli varakkaan poliittisen suvun jäsen, ja maan levottomat olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan hän osti taidetta: kokoelmassa on töitä Courbet’lta, Murillolta ja Tintorettolta, ja painopiste on 1800-luvun lopun maalauksessa. Godoista tuli Paraguayn ensimmäinen museoiden ja arkistojen pääjohtaja. Valtio toivoi 1900-luvun alussa, että kaikki hänen teoksensa koottaisiin yhteen laitokseen. Museo Godoy perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; vuonna 1939 valtio vahvisti sen kansalliseksi taidemuseoksi. Nykyään esillä on yli 650 teosta — maalauksia, veistoksia,…
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+
+### 15.1
+KYSYMYS: Minä vuonna Mondorfin kylpylä vihittiin käyttöön?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+
+### 15.2
+KYSYMYS: Miksi ranskalaisvieraiden virta katkesi vuonna 1871?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mondorf-les-Bains (kulttuuri)
+Tietoruudun teksti: Mondorf-les-Bains on kylpyläkaupunki Kaakkois-Luxemburgissa, ja siellä on Luxemburgin ainoa kasino; kunnassa on noin 5 000 asukasta. Lämpövedet löydettiin 1840-luvulla, kun paikalta porattiin suolaa etsien ennätyssyvyyteen, 736 metriin; vesi ei kelvannut suolan valmistukseen sen runsaan rautapitoisuuden vuoksi, mutta paikallinen notaari J.-P. Ledure perusti kylpylän, ja arkkitehti Charles Eydtin rakentama kylpylälaitos vihittiin käyttöön 20. kesäkuuta 1847. Kylpylän menestys toi kylään ylellisiä hotelleja ja rikkaita ranskalaisvieraita, mutta vieraiden virta Ranskasta katkesi vuonna 1871, kun saksalaiset miehittivät Alsacen ja Lorrainen, ja kylpylä taantui vuosikymmeniä. Vasta kun valtio otti laitokset haltuunsa 21. huhtikuuta 1886, tilanne parani.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Asunción — kohdekartta / Kohdekartta: Kansallinen taidemuseo] 1909 Paraguayn kansallinen taidemuseo syntyi yhden miehen kokoelmasta. Juan Silvano Godoi (1850–1926) oli varakkaan poliittisen suvun jäsen, ja maan levottomat olot pakottivat hänet toistuvasti maanpakoon. Matkoillaan hän osti taidetta: kokoelmassa on töitä Courbet’lta, Murillolta ja Tintorettolta, ja painopiste on 1800-luvun lopun maalauksessa. Godoista tuli Paraguayn ensimmäinen museoiden ja arkistojen pääjohtaja. Valtio toivoi 1900-luvun alussa, että kaikki hänen teoksensa koottaisiin yhteen laitokseen. Museo Godoy perustettiin 1909 ja Godoi johti sitä kuolemaansa asti; vuonna 1939 valtio vahvisti sen kansalliseksi taidemuseoksi. Nykyään esillä on yli 650 teosta — maalauksia, veistoksia,…
+- [Vladivostok — kohdekartta / Kohdekartta: Linnoitusmuseo] linnoitus 1889–1918 Vladivostokin ympärille rakennettiin vuosina 1889–1918 yksi aikansa vahvimmista merilinnoituksista: kuusitoista linnaketta, kymmeniä rannikkopattereita ja maalinnakkeita, kilometreittäin tunneleita ja kasematteja, kaikki yhdistettyinä teihin ja maanalaisiin kaapeleihin. Port Arthurin menetys 1904 opetti suunnittelijoita: linnakkeita ei tehty kaavakirjan mukaan vaan vuorimaaston muotoihin, hajalleen ja näkymättömiin, ja betonia vahvistettiin vuoden 1913 koeammuntojen jälkeen entisestään. Työ katkesi ensimmäiseen maailmansotaan ja vallankumoukseen, kun noin kaksi kolmasosaa oli valmiina — eikä linnoitusta koskaan koeteltu taistelussa. Rakentajien johtaja Aleksei Šošin peru…
+
+### 15.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI
+
+### 15.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 15 YHTEINEN KONTEKSTI

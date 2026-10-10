@@ -1,0 +1,231 @@
+================ KOHTA 6 (kohde:hahmotelma-bourscheid) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourscheidin linna (historia)
+Tietoruudun teksti: Bourscheidin linna sijaitsee Koillis-Luxemburgissa Bourscheidin kylän lähellä. Keskiaikaisen linnan paikalla on jäänteitä roomalaisen ajan rakennelmista, ja se kohoaa noin 150 metriä Sûre-joen yläpuolelle; sitä ympäröi pyöreä muuri, jossa on 11 vartiotornia. Linna mainitaan ensi kerran vuonna 1095, vaikka se näyttää rakennetun noin vuonna 1000 aiempien perustusten päälle, ja sitä laajennettiin useita kertoja: ulkomuuri on vuodelta 1350, Stolzembourgin talo vuodelta 1384 ja piha vuodelta 1477. Vuodesta 1626 linnan omisti Metternichin suku, kunnes Ranskan vallankumous päätti sen feodaalivallan; 1800-luvulla kappelin romahdettua puhuttiin linnan purkamisesta, mutta vuonna 1936 se suojeltiin ja vuonna 1972 valtio osti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Kathmandun Durbar-aukio] nykyiset rakennukset 1500–1700-luvuilta Durbar tarkoittaa palatsien paikkaa, ja niitä on laaksossa kolme. Kathmandun aukiolla seisovat neljän kuningaskunnan — Kantipurin, Lalitpurin, Bhaktapurin ja Kirtipurin — perintörakennukset, ja aukio jakautuu kahteen nelikulmioon. Ulommassa ovat Kasthamandap, Kumari Ghar ja Shivan ja Parvatin temppeli, sisemmässä Hanuman Dhokan palatsi. Temppeleitä on kaikkiaan viisikymmentä, ja useimmat ovat 1500-luvun Malla-kuninkaiden aikaisia. Hanuman Dhoka on nimetty portin vieressä istuvan Hanuman-patsaan mukaan, joka on vuodelta 1672; dhoka on nepaliksi ovi. Palatsi kattaa viisi eekkeriä, ja sen vanhin osa on 1500-luvun puolivälistä. Kuningas Pratap Malla laaje…
+
+### 6.1
+KYSYMYS: Kuinka korkealla Sûre-joen yläpuolella Bourscheidin linna on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourscheidin linna (historia)
+Tietoruudun teksti: Bourscheidin linna sijaitsee Koillis-Luxemburgissa Bourscheidin kylän lähellä. Keskiaikaisen linnan paikalla on jäänteitä roomalaisen ajan rakennelmista, ja se kohoaa noin 150 metriä Sûre-joen yläpuolelle; sitä ympäröi pyöreä muuri, jossa on 11 vartiotornia. Linna mainitaan ensi kerran vuonna 1095, vaikka se näyttää rakennetun noin vuonna 1000 aiempien perustusten päälle, ja sitä laajennettiin useita kertoja: ulkomuuri on vuodelta 1350, Stolzembourgin talo vuodelta 1384 ja piha vuodelta 1477. Vuodesta 1626 linnan omisti Metternichin suku, kunnes Ranskan vallankumous päätti sen feodaalivallan; 1800-luvulla kappelin romahdettua puhuttiin linnan purkamisesta, mutta vuonna 1936 se suojeltiin ja vuonna 1972 valtio osti sen.
+
+### 6.2
+KYSYMYS: Kuinka monta vartiotornia linnaa ympäröivässä muurissa on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bourscheidin linna (historia)
+Tietoruudun teksti: Bourscheidin linna sijaitsee Koillis-Luxemburgissa Bourscheidin kylän lähellä. Keskiaikaisen linnan paikalla on jäänteitä roomalaisen ajan rakennelmista, ja se kohoaa noin 150 metriä Sûre-joen yläpuolelle; sitä ympäröi pyöreä muuri, jossa on 11 vartiotornia. Linna mainitaan ensi kerran vuonna 1095, vaikka se näyttää rakennetun noin vuonna 1000 aiempien perustusten päälle, ja sitä laajennettiin useita kertoja: ulkomuuri on vuodelta 1350, Stolzembourgin talo vuodelta 1384 ja piha vuodelta 1477. Vuodesta 1626 linnan omisti Metternichin suku, kunnes Ranskan vallankumous päätti sen feodaalivallan; 1800-luvulla kappelin romahdettua puhuttiin linnan purkamisesta, mutta vuonna 1936 se suojeltiin ja vuonna 1972 valtio osti sen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kathmandu — kohdekartta / Kohdekartta: Kathmandun Durbar-aukio] nykyiset rakennukset 1500–1700-luvuilta Durbar tarkoittaa palatsien paikkaa, ja niitä on laaksossa kolme. Kathmandun aukiolla seisovat neljän kuningaskunnan — Kantipurin, Lalitpurin, Bhaktapurin ja Kirtipurin — perintörakennukset, ja aukio jakautuu kahteen nelikulmioon. Ulommassa ovat Kasthamandap, Kumari Ghar ja Shivan ja Parvatin temppeli, sisemmässä Hanuman Dhokan palatsi. Temppeleitä on kaikkiaan viisikymmentä, ja useimmat ovat 1500-luvun Malla-kuninkaiden aikaisia. Hanuman Dhoka on nimetty portin vieressä istuvan Hanuman-patsaan mukaan, joka on vuodelta 1672; dhoka on nepaliksi ovi. Palatsi kattaa viisi eekkeriä, ja sen vanhin osa on 1500-luvun puolivälistä. Kuningas Pratap Malla laaje…
+
+### 6.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+### 6.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 6 YHTEINEN KONTEKSTI
+
+================ KOHTA 7 (kohde:hahmotelma-luxembourg) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Luxembourgin kaupunki (historia)
+Tietoruudun teksti: Luxembourgin kaupunki on Luxemburgin pääkaupunki Alzette- ja Pétrusse-jokien yhtymäkohdassa maan eteläosassa. Kaupunki syntyi, kun Ardennien Siegfried I hankki vuonna 963 Lucilinburhuc-linnakkeen ja alkoi rakentaa linnaa Bock-kalliolle; asutus kasvoi Kalatorin ympärille, ja kaupunki oli sijaintinsa vuoksi vuosisatojen ajan strategisesti tärkeä. Ranskalainen sotilasinsinööri Lazare Carnot kutsui sen linnoitusta maailman parhaaksi linnoitukseksi Gibraltaria lukuun ottamatta, mistä kaupunki sai lempinimen Pohjoisen Gibraltar. Vuoden 1867 Lontoon sopimus vaati Luxemburgia purkamaan kaupungin linnoitukset: purku, jonka piti avata kaupunki, kesti kuusitoista vuotta, maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita, ja Preussin varuskunta vetäytyi. Joet ovat kaivaneet 70 metriä syviä rotkoja, joita ylittävät monet sillat, esimerkiksi Adolphe-silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kohdekartta / Kohdekartta: Bockin kauppa 963] Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympäril…
+
+### 7.1
+KYSYMYS: Kuka hankki Lucilinburhucin linnakkeen vuonna 963?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Luxembourgin kaupunki (historia)
+Tietoruudun teksti: Luxembourgin kaupunki on Luxemburgin pääkaupunki Alzette- ja Pétrusse-jokien yhtymäkohdassa maan eteläosassa. Kaupunki syntyi, kun Ardennien Siegfried I hankki vuonna 963 Lucilinburhuc-linnakkeen ja alkoi rakentaa linnaa Bock-kalliolle; asutus kasvoi Kalatorin ympärille, ja kaupunki oli sijaintinsa vuoksi vuosisatojen ajan strategisesti tärkeä. Ranskalainen sotilasinsinööri Lazare Carnot kutsui sen linnoitusta maailman parhaaksi linnoitukseksi Gibraltaria lukuun ottamatta, mistä kaupunki sai lempinimen Pohjoisen Gibraltar. Vuoden 1867 Lontoon sopimus vaati Luxemburgia purkamaan kaupungin linnoitukset: purku, jonka piti avata kaupunki, kesti kuusitoista vuotta, maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita, ja Preussin varuskunta vetäytyi. Joet ovat kaivaneet 70 metriä syviä rotkoja, joita ylittävät monet sillat, esimerkiksi Adolphe-silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kohdekartta / Kohdekartta: Bockin kauppa 963] Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympäril…
+
+### 7.2
+KYSYMYS: Kuinka pitkään linnoituksen purkaminen kesti?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Luxembourgin kaupunki (historia)
+Tietoruudun teksti: Luxembourgin kaupunki on Luxemburgin pääkaupunki Alzette- ja Pétrusse-jokien yhtymäkohdassa maan eteläosassa. Kaupunki syntyi, kun Ardennien Siegfried I hankki vuonna 963 Lucilinburhuc-linnakkeen ja alkoi rakentaa linnaa Bock-kalliolle; asutus kasvoi Kalatorin ympärille, ja kaupunki oli sijaintinsa vuoksi vuosisatojen ajan strategisesti tärkeä. Ranskalainen sotilasinsinööri Lazare Carnot kutsui sen linnoitusta maailman parhaaksi linnoitukseksi Gibraltaria lukuun ottamatta, mistä kaupunki sai lempinimen Pohjoisen Gibraltar. Vuoden 1867 Lontoon sopimus vaati Luxemburgia purkamaan kaupungin linnoitukset: purku, jonka piti avata kaupunki, kesti kuusitoista vuotta, maksoi 1,5 miljoonaa kultafrangia ja tuhosi yli 24 kilometriä maanalaisia puolustusrakenteita, ja Preussin varuskunta vetäytyi. Joet ovat kaivaneet 70 metriä syviä rotkoja, joita ylittävät monet sillat, esimerkiksi Adolphe-silta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kabul — kohdekartta / Kohdekartta: Bala Hissar] linnoituksena ainakin 400-luvulta Bala Hissar tarkoittaa korkeaa linnaa, ja se seisoo vanhankaupungin eteläpuolella Sher Darwazan vuoren kärjessä. Paikan käyttö linnoituksena on ajoitettu ainakin 400-luvulle, mutta alkuperää ei tunneta: lähistöltä on löytynyt kušanikautta vanhempaa keramiikkaa sekä indokreikkalaisia ja akhaimenidien kolikoita. Linnoituksesta lähtevät Kabulin muurit, jotka ovat kuusi metriä korkeat ja lähes neljä metriä paksut ja seuraavat vuorenharjaa kaarevana viivana alas joelle. Babur valtasi linnoituksen 1504, ja mogulit tekivät siitä palatsin: Jahangir purki vanhoja rakennuksia ja rakennutti tilalle saleja ja nelijakoisen puutarhan, Shah Jahan asui täällä Keski-Aasian …
+- [Darwin — kohdekartta / Kohdekartta: Hotel Darwin] 1940 Esplanadin hotelli tunnettiin lempinimellä "Grand Old Duchess". Sen piirsi D. K. Turner toimistosta Stephenson and Turner, ja se rakennettiin vanhan Club Hotelin paikalle 50 000 – 85 000 punnan hinnalla. Avajaisiin heinäkuussa 1940 tuli kaksisataa vierasta, ja tilaisuutta johti territorion hallintopäällikkö Charles Aubrey Abbott. Hänen vaimonsa Hilda Abbott avasi ovet kultaisella avaimella, joka on nykyään esillä Darwinin puolustusta esittelevässä näyttelyssä. Kutsuluettelosta nousi riita: useat kaupungin vaikutusvaltaiset henkilöt jäivät ilman kutsua, ja lehdistö piti asiaa vakavana. Talossa oli piano-baari nimeltä Pickled Parrot ja hienostoravintola Green Room. Vuonna 1947 kommunisti…
+
+### 7.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+### 7.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 7 YHTEINEN KONTEKSTI
+
+================ KOHTA 8 (kohde:hahmotelma-larochette) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larochette (historia)
+Tietoruudun teksti: Larochette, luxemburgiksi Fiels, on kaupunki Keski-Luxemburgissa Valkoisen Ernz-joen laaksossa, ja sitä hallitsee osittain raunioitunut Larochetten linna. Linna, jonka varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella; sen rakennuttivat Larochetten herrat, Luxemburgin kreivien lippumiehet. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa, joista Homburgin kartano (1350) ja Créhangen kartano (1385) on kunnostettu; linna tuhoutui tulipalossa 1500-luvun lopulla. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus, ja linnan kaivosta kerrotaan legendoja.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto: Musta lääke keisarin kihtiin] Kauan ennen porauslauttoja alkuperäiskansat keräsivät maan pinnalle pursuavaa mustaa mene-tervaa lääkkeeksi, valaistukseen ja kanoottien tiivistämiseen. Espanjalaiset oppivat saman tempun: vuonna 1539 Venezuelasta laivattiin Espanjaan yksi tynnyri öljyä keisari Kaarle V:n kihdin hoitoon. Teollinen poraus alkoi 1910-luvulla, ja sen keskus olivat Maracaibo-järven ympärillä ja alla olevat kentät, joiden matalaan veteen nousi metsä poraustorneja. Vuoteen 1928 mennessä Venezuela oli maailman suurin öljynviejä, ja öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön pääkonttori on Caracasissa.
+
+### 8.1
+KYSYMYS: Millä joella Larochette sijaitsee?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larochette (historia)
+Tietoruudun teksti: Larochette, luxemburgiksi Fiels, on kaupunki Keski-Luxemburgissa Valkoisen Ernz-joen laaksossa, ja sitä hallitsee osittain raunioitunut Larochetten linna. Linna, jonka varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella; sen rakennuttivat Larochetten herrat, Luxemburgin kreivien lippumiehet. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa, joista Homburgin kartano (1350) ja Créhangen kartano (1385) on kunnostettu; linna tuhoutui tulipalossa 1500-luvun lopulla. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus, ja linnan kaivosta kerrotaan legendoja.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+### 8.2
+KYSYMYS: Millä alalla Larochette oli teollinen keskus 1700-luvun lopulta 1930-luvulle?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Larochette (historia)
+Tietoruudun teksti: Larochette, luxemburgiksi Fiels, on kaupunki Keski-Luxemburgissa Valkoisen Ernz-joen laaksossa, ja sitä hallitsee osittain raunioitunut Larochetten linna. Linna, jonka varhaisimmat maininnat ovat 1000-luvun lopulta ja 1100-luvulta, kohoaa kallionkielekkeellä noin 150 metriä joen yläpuolella; sen rakennuttivat Larochetten herrat, Luxemburgin kreivien lippumiehet. Suku laajeni, ja linnan viereen rakennettiin viisi erillistä kartanoa, joista Homburgin kartano (1350) ja Créhangen kartano (1385) on kunnostettu; linna tuhoutui tulipalossa 1500-luvun lopulla. Kaupunki oli 1700-luvun lopulta 1930-luvulle kutomoteollisuuden keskus, ja linnan kaivosta kerrotaan legendoja.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Caracas — kaupunkilehti / Luonto: Musta lääke keisarin kihtiin] Kauan ennen porauslauttoja alkuperäiskansat keräsivät maan pinnalle pursuavaa mustaa mene-tervaa lääkkeeksi, valaistukseen ja kanoottien tiivistämiseen. Espanjalaiset oppivat saman tempun: vuonna 1539 Venezuelasta laivattiin Espanjaan yksi tynnyri öljyä keisari Kaarle V:n kihdin hoitoon. Teollinen poraus alkoi 1910-luvulla, ja sen keskus olivat Maracaibo-järven ympärillä ja alla olevat kentät, joiden matalaan veteen nousi metsä poraustorneja. Vuoteen 1928 mennessä Venezuela oli maailman suurin öljynviejä, ja öljystä tuli maan tärkein vientituote. Valtion öljy-yhtiön pääkonttori on Caracasissa.
+
+### 8.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+### 8.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 8 YHTEINEN KONTEKSTI
+
+================ KOHTA 9 (kohde:hahmotelma-useldange) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 9.1
+KYSYMYS: Kuinka korkea Useldangen linnan päätorni on?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+
+### 9.2
+KYSYMYS: Minä vuonna linnan kappeli tuhoutui?
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Useldangen linna (historia)
+Tietoruudun teksti: Useldangen linna on keskiaikainen, nykyään pääosin raunioitunut linna Useldangen kylässä Länsi-Luxemburgissa. Se seisoo pienellä kukkulalla kylän keskustassa Attert-joen yllä, ja rauniot antavat hyvän kuvan keskiaikaisesta linnasta, etenkin ulkomuuri ja yksi pyöreistä torneista; keskellä kohoaa 25 metriä korkea päätorni. Linna näyttää olevan 1100-luvulta, jolloin Useldangen herrakunta perustettiin. Burgundin ja Ranskan välisen sodan seurauksena linna ja sen kappeli vaurioituivat pahoin, ja linna rappeutui; kappeli tuhoutui vuonna 1903. Vuonna 1924 Yhdysvalloista palannut Emma Kuhn osti raunion, ja linnan palatsin raunioiden päälle rakennettiin moderni rakennus, joka toimii nykyään kaupungintalona.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ghana — maalehti / Tavat: Nimi kertoo, minä päivänä synnyit] Akaanit antavat lapselle nimen sen viikonpäivän mukaan, jona hän syntyi, ja päivännimeen liittyy käsitys sielusta ja luonteesta. Miehen nimi alkaa Kumasin twissä usein tavulla kwa- tai ko-, naisen a-alkuisena ja päättyy -a tai -wa; fantien murteessa etuliitteet ovat toiset. Toinen nimi kertoo syntymäjärjestyksen tai kaksosuuden: panyin on vanhempi ja kakra nuorempi kaksonen. Lähes jokaisella ghanalaisella on päivännimi, vaikka käytössä olisi myös eurooppalainen nimi: presidentti Kwame Nkrumah syntyi lauantaina ja YK:n pääsihteeri Kofi Annan perjantaina.
+
+### 9.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+### 9.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 9 YHTEINEN KONTEKSTI
+
+================ KOHTA 10 (kohde:hahmotelma-schengen) ================
+YHTEINEN KONTEKSTI (uusille kysymyksille):
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+
+### 10.1
+KYSYMYS: Minä vuonna Schengenin sopimus allekirjoitettiin?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+
+### 10.2
+KYSYMYS: Minkä kolmen maan rajat kohtaavat kunnan alueella?
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Luxemburg
+Maa, jossa pelaaja on: Luxemburg
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Schengen (historia)
+Tietoruudun teksti: Schengen on viininviljelykylä ja kunta Kaakkois-Luxemburgissa Moselin länsirannalla. Kunnan rajalla on Saksan, Ranskan ja Luxemburgin rajojen kolmenkohta. Kunnan nimi vaihdettiin vuonna 2006 hyödyntämään Schengenin nimen tunnettuutta sen jälkeen, kun Schengenin sopimus allekirjoitettiin siellä vuonna 1985; kylässä itsessään oli 704 asukasta vuonna 2025. Schengenin linna on vuodelta 1390, mutta se rakennettiin 1800-luvulla lähes kokonaan uudelleen. Vuonna 2010 kylään avattiin Euroopan museo, joka esittelee Schengenin sopimusten historiaa ja merkitystä.
+Isoisän matkakirjamerkintä: Luxemburg, kesäkuussa 1873. Koko kaupunki on yhtä louhostyömaata: kuusi vuotta sitten Lontoon herrat päättivät pöydän ääressä, että tämä kallio, jota kukaan valloittaja ei ole koskaan saanut auki, on purettava kivi kiveltä. Bockin käytävissä kaikuu iskuvasaroita siellä, missä kreivi Siegfried aikoinaan rakensi ensimmäisen linnansa. Suurherttua hallitsee täältä käsin, mutta asuu Haagissa — en ole vielä tavannut ketään, joka olisi nähnyt hänet täällä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — maalehti / Historia: Rajaton Eurooppa alkoi Moselilta] 1985 — Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.
+
+### 10.3
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.4
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
+
+### 10.5
+KYSYMYS: (uusi — keksi itse)
+KONTEKSTI: kohdan 10 YHTEINEN KONTEKSTI
