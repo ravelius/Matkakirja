@@ -91,3 +91,15 @@ Edellinen: `viesti-linnanrakentaja-luovutus-20261009-yo.md`. Haara koodille: `li
 - **Riddarholmen v3** (riddarholmen-v1/tekoaly-v3-tekseli, portti 0, LS2:lla): Karttasepän v3-pinnat → codex-ohje kopioitu
   riddarholmen-v1/codex-ohje, `tekoaly_koko.zsh rh v3 - pelkka-kohdistus`, aja_tekseli_v3.zsh, kalibrointi_v3.json (tiili 214/140/98).
 - Karttaseppä: pp ja co OK:ttu (ajossa).
+
+## TEHTY 04.0x–04.3x
+
+- **ND v3c pelissä OK** (LS2 8a85f5207): piikki poissa, ei L-läiskää, reunat siistit; parvis Googlen ympäristöä vaaleampi (avoin huomio).
+- **Olavinlinna v46t** (paketti 6a9023165fa72a12, blender 4098d0028038d474, v45e f512a47d5): Paksu bastioni pois 1499-asusta (PT KYLLÄ):
+  olavinlinna-kavely-v1/lahde/ranta1499.py + 2 leikkausta (b1499-paksu-bastioni*, vuodesta 1791 kavely.py VUODET), ruudukko x −86…86 / z −14…68;
+  kavely.py → v25-tyo2, ranta-1499 + osat/merkit PAIKATTU blender-v44/kavely:hin (v25-tyo3, leivo_kavely --pohja 0,3), vanhat v46s-talteen/.
+  HUOM: koko osat.json:ia EI saa korvata kavely.py:n tuotoksella (valoatlas-kentät, ulkoalue, piilo:tupa-tynnyrit puuttuvat siitä).
+- **Préfecture pp v1** (prefektuuri-v1/tekoaly-v1-tekseli, kalibrointi_v1.json kuten ND v3b, aja_tekseli_v1.zsh), **Riddarholmen v3b**
+  (tiili 150/76/60, LS2/PT: v3 oli oranssi; tekoaly-v3b-tekseli), **Concorde co v2** (vain obeliski, kulta valoisuustilassa, aukion muut osat
+  yhdeksi meshiksi — alkuperäinen glb kaatui porttiin; concorde-v2/tekoaly-v2-tekseli) — kaikki portti 0, LS2:lla pelikuviin.
+- projisoi_tekseli.py tukee nyt nd/kl/rh/pp/co; tekoaly_koko.zsh `<malli> <tunniste> - pelkka-kohdistus`.
