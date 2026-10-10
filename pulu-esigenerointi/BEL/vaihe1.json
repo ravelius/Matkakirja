@@ -1190,11 +1190,10 @@
   "kohde": "kohde:hahmotelma-spa",
   "kysymys": "Kuka antiikin kirjoittaja mainitsi Span kuplivan lähteen?",
   "uusi": true,
-  "vastaus": "Selvä juttu. Seudun kuplivasta lähteestä kertoi [[Plinius vanhempi]], roomalainen kirjoittaja ja luonnontutkija. Hän eli ensimmäisellä vuosisadalla jKr. ja kirjoitti laajan luonnonhistoriaa käsittelevän teoksen [[Naturalis historia]]. Spa tunnettiin tuolloin nimellä [[Aquae Spadanae]]. Suku kantoi, hän kirjoitti, työnjako oli selvä.",
+  "vastaus": "Selvä juttu. Seudun kuplivasta lähteestä kertoi [[Plinius vanhempi]], roomalainen kirjoittaja ja luonnontutkija. Hän eli ensimmäisellä vuosisadalla ja kirjoitti laajan luonnonhistoriaa käsittelevän teoksen [[Naturalis historia]].",
   "linkit": [
    "Plinius vanhempi",
-   "Naturalis historia",
-   "Aquae Spadanae"
+   "Naturalis historia"
   ],
   "jatkot": [
    "Mitä Naturalis historia -teos käsittelee?",
