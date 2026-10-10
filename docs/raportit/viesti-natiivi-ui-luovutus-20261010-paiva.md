@@ -1,4 +1,4 @@
-# Natiivi-UI: luovutus 10.10.2026 klo 11.1x (konteksti ~40 %, PT:n nollausraja 50 %)
+# Natiivi-UI: luovutus 10.10.2026 klo 11.5x (konteksti ~45 %, PT:n nollausraja 50 %)
 
 Työtila: proto-worktree /Users/Shared/Claude/wt/proto-natiivi-ui-olavpeli (haarat natiivi-ui/<aihe>), web-checkout
 /Users/Shared/Claude/Matkakirja-natiivi-ui (haara natiivi-ui-luovutus-20261005, vain raportit). Muistio: natiivi-ui-tila-20261009.md.
@@ -20,6 +20,11 @@ Testit 6.7:llä: P449 / L1299 (LS1:n museohaaralla L1319) / K453. Editorikoodi: 
   (chat:<paikka>, POST /laheta). Testikomento ui ikaraja kysy|aikuinen|kuratoitu|nollaa|sulje. Asettelutestissä näkymät ikäkortti, pulu-chat.
   Workerin puoli: Pelikoodarin PR #4337 (puuttuva otsake = live, kunnes PT kytkee PULU_PUUTTUVA_KURATOITU=1).
 
+## Kuitattu junaan 176 myöhemmin (11.3x–11.4x, Natiivisepälle lähetetty)
+
+- linssipalkki-turva-176 25f28c53b (asettelutestin saaririvipoikkeus; linna-osa 4/4 ea16f95a4:n päällä, EnhancedTouch 0).
+- heksavarit-176 da28d281f (10 Kuviot.Vari-heksaa tokeneiksi; merkkijonovärit KaupunkiNostot/NostoMerkit jätetty tarkoituksella).
+
 ## Odottaa
 
 - **museo-esittely-176 adec86179** (LS1:n linssiseppa/taidemuseo-176 1200f364e:n päällä): MuseoTaulun esittelykortti (KORTTI: kapiteeli
@@ -27,10 +32,9 @@ Testit 6.7:llä: P449 / L1299 (LS1:n museohaaralla L1319) / K453. Editorikoodi: 
   aloittaa luennan; ohinapautus + Esc; KAPEA alareunaan ≤ 45 %, muuten Pohja.Sivukortti yläpalkin alta) ja huone (tiivis huonekortti = nimi
   Nimikyltti 3 s + häivytys; teksti vain napautuksesta: kyltti tai Esittele ilman teosta → MuseoSovitin.HuoneKortti). PT kuittaa LS1:n
   kuva-arkista (kombo 81f012fdc Julkaisijalla). Kuittauksen jälkeen SHA Natiivisepälle yhdessä LS1:n haaran kanssa.
-- **linssipalkki-turva-176 25f28c53b** (juna-176 68f860e85:n päällä): asettelutesti hyväksyy iPhone-pystyn linssin saaririvin Islandin
-  vierellä (omistajan löydös 74, 25.9.; AikajanaNakyma.AsetaSaaririvi on tarkoituksellinen, palkkia EI siirretä). Linna-osan uusinta
-  kombolla juna-176 ea16f95a4 + tämä haara Julkaisijan jonossa (~11.35): odotus 0 × "EnhancedTouch API is not enabled", löytö ja
-  tietokerros aukeavat, saaririvi ok. Tulos PT:lle; jos 4/4 puhdas, SHA PT:lle (ei pelikoodia).
+- **museo-huonelukija-176 b1b47d229** = adec86179 + huonekortin kaiutin (KortinLukija). PT kuittaa museon kanssa.
+- PT:n linja odottaa: (2) ikärajan muutos Asetuksista samalla ikäkortilla, (3) UI-C#:n inline-fonttikoot Tyylikirja.Koko-vakioiksi
+  + pohjavahdin C#-fonttilaskuri.
 
 ## Huomiot
 
