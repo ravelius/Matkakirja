@@ -62,6 +62,8 @@ const SIETO = 1.2;        // harvennuksen sallima poikkeama lautayksikköinä
  *   sade     pisin sallittu etäisyys keskuksesta lautayksikköinä —
  *            Saint Helenan kortti näyttää saaren, ei koko Atlanttia
  *            (NE:n SHN sisältää myös Ascensionin)
+ *   nimiPiste  [lon, lat] nimen paikaksi NE:n LABEL_X/Y:n sijaan — Kiribatin
+ *            LABEL on Linesaarilla, pääkaupunki Tarawa 3 000 km lännempänä
  *   lisaksi  NE:n erilliset alueet, jotka kuuluvat maan muotoon,
  *            koska laudan kaupunki on siellä: San Juan on Puerto
  *            Ricossa (NE:ssä oma piirre PRI, suvereniteetti US1) ja
@@ -113,6 +115,38 @@ const MAAT = {
   // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
   // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
   // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  // Oseania (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Atollivaltiot pienin rengas; Nauru,
+  // Tuvalu ja Marshallinsaaret myös MINIVALTIOT-poikkeukseen. Tonga ylittää
+  // sauman (175°W): renkaat siirtyvät keskuksen kierrokselle.
+  FSM: ['Mikronesia', 'Mikronesian liittovaltio', 'Flag of the Federated States of Micronesia.svg', { minKoko: 0, sieto: 0.3 }],
+  KIR: ['Kiribati', 'Kiribati', 'Flag of Kiribati.svg', { minKoko: 0, sieto: 0.3, nimiPiste: [172.97, 1.33] }],
+  MHL: ['Marshallinsaaret', 'Marshallinsaaret', 'Flag of the Marshall Islands.svg', { minKoko: 0, sieto: 0.1 }],
+  NRU: ['Nauru', 'Nauru', 'Flag of Nauru.svg', { minKoko: 0, sieto: 0.05 }],
+  PLW: ['Palau', 'Palau', 'Flag of Palau.svg', { minKoko: 0, sieto: 0.3 }],
+  TON: ['Tonga', 'Tonga', 'Flag of Tonga.svg', { minKoko: 0, sieto: 0.3 }],
+  TUV: ['Tuvalu', 'Tuvalu', 'Flag of Tuvalu.svg', { minKoko: 0, sieto: 0.05 }],
+  WSM: ['Samoa', 'Samoa', 'Flag of Samoa.svg', { minKoko: 0, sieto: 0.3 }],
+  // Amerikat (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Karibian saarivaltiot pienin rengas.
+  ATG: ['Antigua ja Barbuda', 'Antigua ja Barbuda', 'Flag of Antigua and Barbuda.svg', { minKoko: 0, sieto: 0.3 }],
+  BHS: ['Bahama', 'Bahama', 'Flag of the Bahamas.svg', { minKoko: 3, sieto: 0.5 }],
+  BLZ: ['Belize', 'Belize', 'Flag of Belize.svg'],
+  BRB: ['Barbados', 'Barbados', 'Flag of Barbados.svg', { minKoko: 0, sieto: 0.3 }],
+  CRI: ['Costa Rica', 'Costa Rica', 'Flag of Costa Rica.svg'],
+  DMA: ['Dominica', 'Dominica', 'Flag of Dominica.svg', { minKoko: 0, sieto: 0.3 }],
+  DOM: ['Dominikaaninen tasavalta', 'Dominikaaninen tasavalta', 'Flag of the Dominican Republic.svg'],
+  GRD: ['Grenada', 'Grenada', 'Flag of Grenada.svg', { minKoko: 0, sieto: 0.3 }],
+  GUY: ['Guyana', 'Guyana', 'Flag of Guyana.svg'],
+  HND: ['Honduras', 'Honduras', 'Flag of Honduras (1949–2022, 2026–present).svg'],
+  HTI: ['Haiti', 'Haiti', 'Flag of Haiti.svg'],
+  JAM: ['Jamaika', 'Jamaika', 'Flag of Jamaica.svg'],
+  KNA: ['Saint Kitts ja Nevis', 'Saint Kitts ja Nevis', 'Flag of Saint Kitts and Nevis.svg', { minKoko: 0, sieto: 0.3 }],
+  LCA: ['Saint Lucia', 'Saint Lucia', 'Flag of Saint Lucia.svg', { minKoko: 0, sieto: 0.3 }],
+  SLV: ['El Salvador', 'El Salvador', 'Flag of El Salvador.svg'],
+  SUR: ['Suriname', 'Suriname', 'Flag of Suriname.svg'],
+  TTO: ['Trinidad ja Tobago', 'Trinidad ja Tobago', 'Flag of Trinidad and Tobago.svg', { minKoko: 0, sieto: 0.3 }],
+  VCT: ['Saint Vincent ja Grenadiinit', 'Saint Vincent ja Grenadiinit', 'Flag of Saint Vincent and the Grenadines.svg', { minKoko: 0, sieto: 0.3 }],
   // Afrikka (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
   // liput Sisältökirjurin faktoista). Saarivaltiot pienin rengas kuten Maltalla.
   BDI: ['Burundi', 'Burundi', 'Flag of Burundi.svg'],
@@ -207,6 +241,8 @@ const ANKKURIT = [
   ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
+  ['VUT', ['FSM', 'KIR', 'MHL', 'NRU', 'PLW', 'TON', 'TUV', 'WSM']],
+  ['VEN', ['ATG', 'BHS', 'BLZ', 'BRB', 'CRI', 'DMA', 'DOM', 'GRD', 'GUY', 'HND', 'HTI', 'JAM', 'KNA', 'LCA', 'SLV', 'SUR', 'TTO', 'VCT']],
 ];
 
 const { MAAILMANKARTTA } = await import(`file://${join(JUURI, 'js/packs/maailmankartta.js')}`);
@@ -439,7 +475,8 @@ for (const [iso, [nimi, wiki, lippu, asetukset = {}]] of Object.entries(MAAT)) {
    * kartografin asettama ja parempi kuin laskettu keskipiste. Se
    * lasketaan ENNEN renkaita, koska renkaat keskitetään sen ympärille.
    */
-  let keskus = Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
+  let keskus = asetukset.nimiPiste ? viivaLaudalle([asetukset.nimiPiste])[0]
+    : Number.isFinite(f.properties.LABEL_X) && Number.isFinite(f.properties.LABEL_Y)
     ? viivaLaudalle([[f.properties.LABEL_X, f.properties.LABEL_Y]])[0]
     : null;
 

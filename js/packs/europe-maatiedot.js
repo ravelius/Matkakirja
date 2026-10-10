@@ -1004,7 +1004,7 @@ export const EUROPE_MAATIEDOT = {
   // kansalliset tilastovirastot 2024–2026). Ei sijoja eikä vertailupalkkia.
   AND: { vakiluku: '90 000', pintaAla: '468 km²' },
   LIE: { vakiluku: '41 000', pintaAla: '160 km²' },
-  MCO: { vakiluku: '39 000', pintaAla: '2 km²' },
+  MCO: { vakiluku: '39 000', pintaAla: '2,08 km²' },
   SMR: { vakiluku: '34 000', pintaAla: '61 km²' },
   VAT: { vakiluku: '882', pintaAla: '0,44 km²' },
 };

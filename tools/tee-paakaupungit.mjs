@@ -25,7 +25,8 @@ import { PAAKAUPUNGIT } from './vienti/paakaupungit.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..');
 const KOHDE = join(JUURI, 'js/packs/paakaupungit.js');
-const syotteet = process.argv.slice(2);
+const kuvaArg = process.argv.find((a) => a.startsWith('--kuvat='));
+const syotteet = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 if (!syotteet.length) { console.error('käyttö: node tools/tee-paakaupungit.mjs <faktat.json> [...]'); process.exit(1); }
 
 const { MAAILMANKARTTA } = await import(`file://${join(JUURI, 'js/packs/maailmankartta.js')}`);
@@ -35,6 +36,7 @@ const opas = JSON.parse(readFileSync(join(JUURI, 'data/oppaan-kuvat/kaupungit-va
 const opasQ = new Map(opas.filter((o) => o.q).map((o) => [o.q, o]));
 
 const vanha = existsSync(KOHDE) ? await import(`file://${KOHDE}?t=${Date.now()}`) : {};
+const kuvat = new Map(Object.entries(vanha.PAAKAUPUNKIEN_KUVAT ?? {}));
 const pisteet = new Map((vanha.PAAKAUPUNKIPISTEET ?? []).map((p) => [p.maa, p]));
 const perustiedot = new Map(Object.entries(vanha.MAIDEN_PERUSTIEDOT ?? {}));
 
@@ -48,9 +50,12 @@ const lahde = (a) => (a && typeof a === 'object' ? { arvo: a.arvo ?? null, vuosi
  * tehdä pistettä. Maakortti näyttää sen Israelin "hallinnon paikkana"
  * (tools/vienti/kokoelmat.mjs HALLINNON_PAIKAT, PT 10.10.2026).
  */
-const ASEMA = { PSE: 'hallinnon paikka' };
+// Bolivia: perustuslain pääkaupunki on Sucre, La Paz on hallituksen ja kongressin paikka.
+const ASEMA = { PSE: 'hallinnon paikka', BOL: 'hallinnon paikka' };
 // Pelin maatunnus poikkeaa ISO-koodista vain Etelä-Sudanissa (kartta-aineiston SDS).
 const PELIN_TUNNUS = { SSD: 'SDS' };
+// Kortin nimi lyhyenä; Sisältökirjurin muoto "Washington (Washington, D.C.)" on selite.
+const NIMI = { USA: 'Washington' };
 const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };
 // "paakaupunki"-rivien maa-objektissa on vain tunnus, nimi ja genetiivi
 // (maa on jo laudalla omine tietoineen); perustiedot vain täysistä riveistä.
@@ -87,7 +92,7 @@ for (const polku of syotteet) {
     const lat = k.sijainti?.lat ?? o?.lat; const lon = k.sijainti?.lon ?? o?.lon;
     if (!Number.isFinite(lat) || !Number.isFinite(lon)) throw new Error(`${iso}: pääkaupungilta puuttuu sijainti`);
     pisteet.set(iso, {
-      id, nimi: k.nimi_fi, nimiAlkukieli: k.nimi_alkukieli ?? null, maa: iso, lat: Number(lat.toFixed(4)), lon: Number(lon.toFixed(4)),
+      id, nimi: NIMI[iso] ?? k.nimi_fi, nimiAlkukieli: k.nimi_alkukieli ?? null, maa: iso, lat: Number(lat.toFixed(4)), lon: Number(lon.toFixed(4)),
       wikidata: q ?? o?.q ?? null,
       asema: ASEMA[iso] ?? k.asema ?? 'pääkaupunki',
       asukkaat: lahde(k.asukasluku),
@@ -98,11 +103,40 @@ for (const polku of syotteet) {
   }
 }
 
+/*
+ * KUVAT (PT 10.10.2026): Codexin havainnekuvat ämpärissä paakaupungit/<ISO3>/<pvm>/,
+ * Sisältökirjurin hyväksymä lista (kuvat-hyvaksytyt.json; hylätyt eivät ole listalla).
+ * Kuva kuuluu maalle vain, jos sen kaupunki on maan pääkaupunki pelissä: pisteen id,
+ * laudan pääkaupunki (tools/vienti/paakaupungit.mjs) tai Israelin hallinnon paikka.
+ * Esim. Etelä-Afrikan Pretoria-kuvat jäävät pois (pääkaupunki on Kapkaupunki).
+ * --kuvat korvaa koko taulun, koska lista on aina täydellinen.
+ */
+const KUVAN_KAUPUNKI = { guatemalacity: 'guatemala', mexicocity: 'mexico', vatikaani: 'vatikaanivaltio' };
+if (kuvaArg) {
+  const lista = JSON.parse(readFileSync(kuvaArg.slice('--kuvat='.length), 'utf8')).kuvat;
+  kuvat.clear();
+  const ohitettu = [];
+  for (const k of lista) {
+    const iso = PELIN_TUNNUS[k.maa] ?? k.maa;
+    const paa = pisteet.get(iso)?.id ?? PAAKAUPUNGIT[iso] ?? LAUDAN_KAUPUNKI_EI_PISTETTA[iso] ?? null;
+    const kid = tunnus(k.kaupunki);
+    if (!paa || (KUVAN_KAUPUNKI[kid] ?? kid) !== paa) { ohitettu.push(`${iso}:${k.kaupunki}`); continue; }
+    if (!/^paakaupungit\/[A-Z]{3}\/\d{8}\/[a-z0-9-]+\.(png|jpg|webp)$/.test(k.tiedosto)) throw new Error(`kuvan avain ${k.tiedosto}`);
+    if (!kuvat.has(iso)) kuvat.set(iso, []);
+    kuvat.get(iso).push({ tiedosto: k.tiedosto, motiivi: k.motiivi ?? null, kuvateksti: k.kuvateksti_fi ?? null,
+      // lahde: tests/kuvatekijat.test.mjs:n luokittelu (havainnekuva = tekoälyn tuottama, merkitty).
+      lahde: 'Matkakirjan havainnekuva', havainnekuva: k.havainnekuva === true, leveys: k.px?.[0] ?? null, korkeus: k.px?.[1] ?? null, sha256: k.sha256 ?? null });
+  }
+  for (const v of kuvat.values()) v.sort((a, b) => (a.motiivi ?? '').localeCompare(b.motiivi ?? '') || a.tiedosto.localeCompare(b.tiedosto));
+  console.log(`kuvat: ${[...kuvat.values()].reduce((a, v) => a + v.length, 0)} kuvaa ${kuvat.size} maalle; ohitettu ${ohitettu.length}: ${ohitettu.join(' ')}`);
+}
+
 const idt = [...pisteet.values()].map((p) => p.id);
 if (new Set(idt).size !== idt.length) throw new Error('kaksi pääkaupunkipistettä samalla id:llä');
 
 const jarjestys = (a, b) => (a < b ? -1 : 1);
 const rivit = [...pisteet.values()].sort((a, b) => jarjestys(a.maa, b.maa)).map((p) => `  ${JSON.stringify(p)},`).join('\n');
+const kuvaRivit = [...kuvat.entries()].sort(([a], [b]) => jarjestys(a, b)).map(([iso, v]) => `  ${iso}: ${JSON.stringify(v)},`).join('\n');
 const tiedot = [...perustiedot.entries()].sort(([a], [b]) => jarjestys(a, b)).map(([iso, t]) => `  ${iso}: ${JSON.stringify(t)},`).join('\n');
 writeFileSync(KOHDE, `// Koneen kirjoittama: node tools/tee-paakaupungit.mjs <faktat.json> (ks. työkalun otsikko).
 // Älä muokkaa käsin — korjaa Sisältökirjurin faktatiedostoon ja aja uudelleen.
@@ -119,6 +153,12 @@ ${rivit}
 
 export const MAIDEN_PERUSTIEDOT = {
 ${tiedot}
+};
+
+// PAAKAUPUNKIEN_KUVAT[ISO3]: hyväksytyt havainnekuvat (ämpärin avain, motiivi, kuvateksti,
+// mitat, sha256) maan pääkaupungista — pisteelle tai laudan kaupungille (vienti: kuvat).
+export const PAAKAUPUNKIEN_KUVAT = {
+${kuvaRivit}
 };
 `);
 console.log(`kirjoitettu ${KOHDE}: ${pisteet.size} pistettä (${lisatty} tästä ajosta), ${perustiedot.size} maan perustiedot`);
