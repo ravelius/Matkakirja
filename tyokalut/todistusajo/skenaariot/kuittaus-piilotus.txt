@@ -1,13 +1,13 @@
 # KUITTAUSTODISTE (Natiiviseppä 10.10.2026, PT 19.1x): komennon jälkeinen tila näkyy HETI seuraavassa kuvassa ilman odota-riviä
 # (ennen korjausta kuva otettiin ennen kuin sovellus oli lukenut Documents/*-komento.txt:n → kuva näytti tilan ennen komentoa).
-kuva 01-alku kartta, yläpalkki näkyy
-ui ylapalkki veto
-kuva 02-palkki-piilossa yläpalkki piilotettu (heti komennon jälkeen)
-ui ylapalkki napautus
-kuva 03-palkki-takaisin yläpalkki takaisin
-komento pallo tausta magenta
-kuva 04-tausta-magenta pallon tausta magenta (heti komennon jälkeen)
-komento pallo tausta pois
-kuva 05-tausta-pois tausta palautettu
+kuva 01-alku kartta, ei paneeleja
+ui linssi valitsin
+kuva 02-valitsin-auki linssivalitsin auki (heti komennon jälkeen)
+ui linssi pois
+kuva 03-valitsin-piilossa linssivalitsin piilotettu (heti komennon jälkeen)
+ui linssi peite
+kuva 04-peite odotuspeite päällä (heti komennon jälkeen)
+ui linssi peite pois
+kuva 05-peite-pois odotuspeite piilotettu
 veto 200 520 215 520 0.3
 ei-testattu iPad (sama kuittauskoodi kaikilla laitteilla)
