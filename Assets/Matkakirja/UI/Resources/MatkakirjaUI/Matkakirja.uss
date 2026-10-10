@@ -919,6 +919,21 @@
     width: 296px;
 }
 
+/* Ryhmärivin "näytä äänet" -väkänen (30 pt) valui paneelin ulkopuolelle (asettelutesti 9.10.2026 ajo #12: rivi 323 pt, sisäleveys
+ * 270 pt). Päätoimittaja: rivi mahtuu 270 pt:iin ilman leveysmuutosta: nimi 96, säädin vähintään 80 (+ 2 × 4), arvo 40. */
+.mk-aanentasot .mk-saadinrivi__nimi {
+    width: 96px;
+}
+
+.mk-aanentasot .mk-saadin {
+    min-width: 80px;
+    margin: -5px 4px;
+}
+
+.mk-aanentasot .mk-saadinrivi__arvo {
+    width: 40px;
+}
+
 .mk-pudotus__vieritys {
     flex-shrink: 1;
 }
