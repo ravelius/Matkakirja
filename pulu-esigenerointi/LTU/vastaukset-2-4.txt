@@ -77,7 +77,7 @@ Miksi Samogitia kastettiin Liettuan alueista viimeisenä?
 Millainen on Telšiain kaupunki?
 
 ### 254
-Samogiitit eli žemaitit ovat Liettuan luoteisosan Žemaitijan asukkaita, ja heillä on oma kielimuotonsa sekä vahva alueellinen tunnuksensa. Keskiajalla he joutuivat vastakkain [[Saksalaisen ritarikunnan]] kanssa, ja yksi tunnetuimmista taisteluista oli Saulen taistelu vuonna 1236, jossa liettualaisten joukot voittivat Liivinmaan Kalparitarit. Myöhemmin samogiitit olivat osa Liettuan suuriruhtinaskuntaa. Samogiittien kielimuotoa pidetään lähteestä riippuen liettuan murteena tai omana kielenään. Alueen perinteitä ovat esimerkiksi vahva kansanlaulu- ja puuveistoperinne, mutta tarkempia yksityiskohtia en ole varma.
+Samogiitit eli žemaitit ovat Liettuan luoteisosan Žemaitijan asukkaita, ja heillä on oma kielimuotonsa sekä vahva alueellinen tunnuksensa. Keskiajalla he joutuivat vastakkain [[Saksalaisen ritarikunnan]] kanssa, ja yksi tunnetuimmista taisteluista oli Saulen taistelu vuonna 1236, jossa liettualaisten joukot voittivat Liivinmaan Kalparitarit. Myöhemmin samogiitit olivat osa [[Liettuan suuriruhtinaskuntaa]]. Samogiittien kielimuotoa pidetään lähteestä riippuen liettuan murteena tai omana kielenään. Alueen perinteitä ovat esimerkiksi vahva kansanlaulu- ja puuveistoperinne, mutta tarkempia yksityiskohtia en ole varma.
 JATKOT:
 Mikä oli Saulen taistelun merkitys Liettualle?
 Miten Saksalainen ritarikunta joutui Liettuan rajalle?
@@ -203,7 +203,7 @@ Mitä Napoleonin lakikirja muutti?
 Miksi Napoleonin Venäjän sotaretki epäonnistui?
 
 ### 275
-Samogitian hiippakunta perustettiin lähteiden mukaan 1400-luvun alkupuolella Samogitian kastamisen jälkeen. Piispa asui Varniaissa, ja kaupungista tuli alueen katolisen kirkon keskus ja koulutuksen paikka. Hiippakunnan merkitys liettuan kielelle oli suuri: Samogitian piispat tukivat liettuankielisen kirjallisuuden julkaisua ja pappien kouluttamista. Hiippakunnan keskus siirrettiin Varniaista Kaunasiin Venäjän vallan aikana tammikuun kansannousun jälkeen. Alueen nykyinen keskus on [[Telšiai]], ja hiippakunnan nimi on säilynyt Telšiain piispan käytössä.
+Samogitian hiippakunta perustettiin lähteiden mukaan 1400-luvun alkupuolella Samogitian kastamisen jälkeen. Piispa asui Varniaissa, ja kaupungista tuli alueen katolisen kirkon keskus ja koulutuksen paikka. Hiippakunnan merkitys liettuan kielelle oli suuri: Samogitian piispat tukivat liettuankielisen kirjallisuuden julkaisua ja pappien kouluttamista. Hiippakunnan keskus siirrettiin Varniaista Kaunasiin Venäjän vallan aikana [[tammikuun kansannousun]] jälkeen. Alueen nykyinen keskus on [[Telšiai]], ja hiippakunnan nimi on säilynyt Telšiain piispan käytössä.
 JATKOT:
 Miten Samogitia kastettiin?
 Millainen oli piispa Valančiuksen toiminta Samogitiassa?
@@ -231,4 +231,250 @@ Mikalojus Daukša oli samogiittipappi ja kirjailija, joka eli 1500-luvulla ja 16
 JATKOT:
 Mitä esipuheessa sanotaan liettuan kielestä?
 Mikä oli Merkelis Giedraitisin rooli hiippakunnassa?
+
+### 280
+Vytautas Suuri oli Liettuan suuriruhtinas, joka hallitsi vuosina 1392–1430 ja syntyi noin vuonna 1350. Hänen aikanaan Liettuan suuriruhtinaskunta oli laajimmillaan: se ulottui Itämereltä lähelle Mustaamerta ja oli 1400-luvun alussa yksi Euroopan suurimmista valtioista. Vytautas oli serkkunsa [[Jogailan]] kanssa liittolainen ja johti Liettuan joukkoja [[Grunwaldin taistelussa]] vuonna 1410, jossa Saksalainen ritarikunta kärsi suuren tappion. Hänelle tarjottiin kuninkaankruunua, mutta hän kuoli vuonna 1430 ennen kruunajaisia. Liettuassa häntä pidetään kansallisena sankarina, ja Kaunasissa on hänen nimeään kantava yliopisto.
+JATKOT:
+Miksi Vytautas ei ehtinyt kruunajaisiin?
+Mikä oli Jogailan ja Vytautaksen suhde?
+
+### 281
+Varniai on pieni kaupunki Länsi-Liettuassa Telšiain maakunnassa, ja se on tunnettu Samogitian kirkollisena keskuksena. Samogitian kastamisen jälkeen piispa asui kaupungissa, ja se oli [[Samogitian hiippakunnan]] keskus, kunnes Venäjän keisarikunta siirsi hiippakunnan Kaunasiin tammikuun kansannousun jälkeen. Kaupungin nimi tulee läpi virtaavasta Varnelė-joesta, ja sen keskiaikainen nimi oli Medininkai. Varniaissa asuivat piispa [[Motiejus Valančius]] sekä [[Mikalojus Daukša]], jonka julkaisema katekismus vuodelta 1595 oli ensimmäinen suuriruhtinaskunnassa painettu liettuankielinen kirja. Lähistöllä on alueellinen luonnonpuisto, mutta sen tarkemmista yksityiskohdista en ole varma.
+JATKOT:
+Mitä Samogitian hiippakunnalle tapahtui Venäjän vallan aikana?
+Millainen oli piispa Valančiuksen toiminta Varniaissa?
+
+### 282
+Tammikuun kansannousun jälkeen Venäjän viranomaiset toteuttivat Liettuassa ja entisen Puola-Liettuan alueilla ankaria toimia. Vilnan kenraalikuvernöörinä toiminut [[Mihail Muravjov]] otti käyttöön rajoituksia, jotka kohdistuivat katoliseen kirkkoon ja puolalaiseen kulttuuriin, ja vuonna 1864 liettuan painaminen latinalaisin kirjaimin kiellettiin. Kansannousun johtajiin kuului muun muassa [[Konstanty Kalinowski]]. Painokiellon seurauksena liettuankielisiä kirjoja painettiin Preussissa ja salakuljetettiin maahan, ja vuonna 1883 Preussin puolella alettiin julkaista lehteä [[Aušra]]. Tämä vahvisti liettualaista [[kansallista heräämistä]] 1800-luvun lopulla.
+JATKOT:
+Millainen lehti Aušra oli?
+Miten kansallinen herääminen eteni Liettuassa?
+
+### 283
+Puolan–Liettuan kansakuntien yhteisvaltio syntyi vuonna 1569 [[Lublinin unionissa]], jossa Puolan kruunu ja Liettuan suuriruhtinaskunta yhdistettiin yhdeksi valtioksi. Sillä oli yhteinen valitsemalla nimitetty kuningas ja yhteinen valtiopäivä, mutta Liettua säilytti oman lakinsa ja hallintonsa. Valtio oli aikansa Euroopassa poikkeuksellinen, koska aatelisto vaikutti vahvasti päätöksiin ja uskonnollinen suvaitsevaisuus oli varsin laajaa. Päätöksenteon heikkoutena oli muun muassa [[liberum veto]], jonka mukaan yksi edustaja saattoi estää päätöksen. Valtio lakkasi olemasta [[Puolan jaoissa]] 1700-luvun lopulla.
+JATKOT:
+Miten Puolan jaot tapahtuivat?
+Mitä liberum veto tarkoitti?
+
+### 284
+Balttilaiset kielet ovat indoeurooppalaisten kielten haara, johon kuuluvat elävistä kielistä liettua ja latvia. Kuolleita balttilaisia kieliä ovat esimerkiksi [[vanha preussi]], joka kuoli sukupuuttoon 1600–1700-luvuilla, sekä kuurin ja semgallin kieli. Balttilaiset kielet ovat läheistä sukua slaavilaisille kielille, ja kielitieteilijät puhuvat usein yhteisestä balttilais-slaavilaisesta kantakielestä. Liettuaa pidetään hyvin arkaaisena, ja siksi se on kiinnostanut indoeurooppalaisten kielten tutkijoita. Myös suomen kielessä on joitakin vanhoja [[balttilaisia lainasanoja]], mutta niiden määrästä tutkijat ovat eri mieltä.
+JATKOT:
+Miksi liettuaa pidetään arkaaisena kielenä?
+Mitä vanhasta preussin kielestä tiedetään?
+
+### 285
+Latvia on Latvian virallinen kieli ja liettuan läheisin elävä sukukieli. Molemmat kuuluvat balttilaisiin kieliin, mutta ne eroavat toisistaan niin paljon, etteivät puhujat ymmärrä toisiaan ilman opiskelua. Latviassa painotus on aina sanan ensimmäisellä tavulla, ja tämän uskotaan johtuvan lähikontaktista [[liivin kielen]] kanssa. Kirjoitusjärjestelmä on latinalainen ja siinä on diakriittisiä merkkejä. Maan itäosassa käytetään myös kirjoitettua [[latgalin kieltä]], ja latvialaiseen kulttuuriin kuuluvat suuret [[laulu- ja tanssijuhlat]]. Pääkaupunki on Riika.
+JATKOT:
+Millainen kieli liivin kieli on?
+Miten laulu- ja tanssijuhlat järjestetään Latviassa?
+
+### 286
+Saksalainen ritarikunta kiinnostui Liettuasta ja erityisesti Samogitiasta siksi, että Samogitia oli maayhteys ritarikunnan Preussin ja Liivinmaan alueiden välillä. Liivinmaalla toimi ritarikunnan haara, [[Liivinmaan ritarikunta]], joka kuului ritarikunnan kokonaisuuteen. Nemunas oli tärkeä kulkureitti, ja ritarikunta rakensi sen varrelle linnoja, joita se käytti ratsioiden tukikohtina. Liettuan kääntyminen kristinuskoon vuonna 1387 vei ritarikunnalta pitkäaikaisen perustelun sodille. Vuonna 1398 solmittu [[Salynasin sopimus]] antoi ritarikunnalle väliaikaisesti oikeuden Samogitiaan.
+JATKOT:
+Miksi Samogitia oli ritarikunnalle niin tärkeä?
+Mitä Liivinmaan ritarikunnalle tapahtui myöhemmin?
+
+### 287
+Vytenis oli Liettuan suuriruhtinas, joka hallitsi lähteiden mukaan noin vuodesta 1295 vuoteen 1315. Hänen aikaansa leimasi jatkuva sotiminen Saksalaisen ritarikunnan ja Liivinmaan ritarikunnan kanssa, ja hän puolusti Liettuaa ritarikunnan hyökkäyksiltä. Hänen seuraajansa oli [[Gediminas]], jota perinteisesti pidetään hänen veljenään, ja Gediminas perusti [[Gediminidien]] suvun. Vytenis on yksi Liettuan keskiajan varhaisista hallitsijoista, mutta hänestä on säilynyt vain vähän tietoa. Tarkempia yksityiskohtia hänen elämästään en ole varma.
+JATKOT:
+Kuka oli Gediminas?
+Miten Liettuan puolustus ritarikuntaa vastaan toimi?
+
+### 288
+Marraskuun kansannousu alkoi Varsovassa marraskuun lopulla 1830 Venäjän vallan vastaisena kapinana, ja se levisi myös Liettuaan. Liettuassa kansannousun symbolihahmoksi nousi [[Emilia Plater]], joka johti omaa yksikköään ja kuoli vuonna 1831. Kansannousu tukahdutettiin vuoden 1831 loppuun mennessä. Seurauksena Venäjä tiukensi hallintoaan: Puolan perustuslaki kumottiin, ja [[Vilnan yliopisto]] suljettiin vuonna 1832. Monet kansannousun osanottajat pakenivat ulkomaille, ja heidän muodostamaansa maanpakolaisuutta kutsutaan [[suureksi emigraatioksi]].
+JATKOT:
+Miksi Vilnan yliopisto suljettiin?
+Keitä olivat suuren emigraation edustajat?
+
+### 289
+Panemunėn linna sijaitsee Nemunasin rannalla Länsi-Liettuassa. Nykyisen tiililinnan rakennutti puukauppias [[János Eperjes]] vuosina 1604–1610, ja sen suunnitteli hollantilainen arkkitehti [[Peter Nonhaardt]]. Linnan tyylissä näkyvät [[renessanssin]] ja barokin piirteet sekä myöhäisgoottia. Sitä pidetään todennäköisesti Liettuan aidoimpana säilyneenä asuinlinnana. Marraskuun kansannousun jälkeen tsaarin viranomaiset takavarikoivat sen omistajasuvulta, ja linna rappeutui. Nykyisin se on avoinna kävijöille ja siellä toimii museo.
+JATKOT:
+Mikä erottaa asuinlinnan puolustuslinnasta?
+Keitä olivat linnan omistajasuvut?
+
+### 290
+Saksalainen ritarikunta oli järjestäytynyt kolmen veljesluokan varaan: ritariveljet, pappisveljet ja palvelusveljet. Sen johtajaa kutsuttiin suurmestariksi, ja ritarit pukeutuivat valkoiseen kaapuun, jossa oli musta risti. Ritarikunnan pääpaikka oli aluksi Pyhässä maassa Akkonissa, sitten Venetsiassa, ja vuonna 1309 se siirtyi Preussin [[Marienburgiin]]. Vuonna 1457 pääpaikka siirtyi [[Königsbergiin]]. Ritarikunnan Preussin valtio muuttui maalliseksi herttuakunnaksi vuonna 1525. Ritarikunta on olemassa yhä, mutta nykyisin se on uskonnollinen ja hyväntekeväisyysjärjestö.
+JATKOT:
+Miten Marienburgin linna rakennettiin?
+Mitä Liivinmaan ritarikunnalle tapahtui 1500-luvulla?
+
+### 291
+Grunwaldin taistelu käytiin 15. heinäkuuta 1410 Saksalaisen ritarikunnan ja Puolan–Liettuan liittoutuneiden joukkojen välillä. Joukkoja johtivat Puolan kuningas Władysław II Jagiełło eli [[Jogaila]] ja Liettuan suuriruhtinas Vytautas. Ritarikunnan suurmestari [[Ulrich von Jungingen]] kaatui taistelussa, ja ritarikunnan armeija kärsi raskaan tappion. Liettuaksi taistelu tunnetaan nimellä Žalgirio mūšis. Rauhaan päädyttiin vuonna 1411 [[Toruńin rauhassa]], mutta ritarikunta ei hajonnut heti, vaan sen valta heikkeni vähitellen. Taistelusta on tullut keskeinen muisto sekä Puolassa että Liettuassa, ja sitä on kuvattu esimerkiksi [[Jan Matejkon]] maalauksessa.
+JATKOT:
+Mitä Toruńin rauhassa sovittiin?
+Miksi Jan Matejko maalasi Grunwaldin taistelun?
+
+### 292
+Gediminidit olivat Liettuan hallitsijasuku, jonka kantaisä oli suuriruhtinas Gediminas. Hän hallitsi noin vuodesta 1315 vuoteen 1341, ja perimätiedon mukaan hän perusti Vilnan vuonna 1323. Hänen poikiaan olivat [[Algirdas]] ja [[Kęstutis]]. Algirdasin poika Jogaila nousi Puolan kuninkaaksi, ja hänen jälkeläisensä muodostivat [[Jagiellonit]], jotka hallitsivat Puolaa ja Liettuaa vuoteen 1572. Vytautas Suuri oli Kęstutisin poika. Suvun tunnus on Gediminasin pylväät, ja Vilnassa Gediminasin torni on yksi kaupungin tunnuksista.
+JATKOT:
+Keitä olivat Algirdas ja Kęstutis?
+Miten Jagiellonit hallitsivat Puolaa?
+
+### 293
+Nemunas tunnetaan eri kielillä eri nimillä: valkovenäjäksi Nioman, puolaksi Niemen, venäjäksi Neman ja saksaksi Memel. Se on Liettuan vesiliikenteen ja historian kannalta keskeinen joki, ja sen varrella Kaunasissa siihen yhtyy Neris. Kaunasin lähellä joki on padottu vuonna 1959 valmistuneella voimalaitoksella, jolloin syntyi tekojärvi nimeltä [[Kauno marios]]. Alajuoksulla joki jakautuu suistossa useaan haaraan. Historiassa joki tunnetaan [[Napoleonin]] armeijan ylityksestä kesäkuussa 1812, kun sotaretki Venäjälle alkoi.
+JATKOT:
+Mitä Kauno marios on?
+Miten Napoleonin armeija ylitti Nemunasin?
+
+### 294
+Kaliningradin alue on Venäjän erillisalue Baltian rannalla Liettuan ja Puolan välissä. Se on osa entistä Itä-Preussia, ja alue siirtyi Neuvostoliiton hallintaan toisen maailmansodan jälkeen, kun Euroopan rajoja piirrettiin uudelleen [[Potsdamin konferenssissa]]. Alueen pääkaupunki Kaliningrad on entinen Königsberg, ja se sai nykyisen nimensä vuonna 1946 Neuvostoliiton johtajan Mihail Kalininin mukaan. Königsbergissä syntyi ja vaikutti filosofi [[Immanuel Kant]], ja kaupungin siltojen mukaan on nimetty [[Königsbergin siltaongelma]]. Myös [[Kuurinkynnäs]] on jaettu Liettuan ja Venäjän kesken.
+JATKOT:
+Miten Königsbergin siltaongelma ratkaistiin?
+Millainen oli Immanuel Kantin elämä Königsbergissä?
+
+### 295
+Basilika tarkoittaa kahta asiaa. Rakennustyyppinä se on pitkänmallinen kirkko, jossa keskilaivaa reunustavat sivulaivat, mutta katolisessa kirkossa basilika on myös arvonimi, jonka paavi voi myöntää tärkeälle kirkolle tai pyhiinvaelluskohteelle. Šiluvan Neitsyt Marian syntymän basilika valmistui vuonna 1786, ja se on yksi Liettuan tärkeimpiä pyhiinvaelluskohteita. Šiluvan suuret pyhiinvaellusjuhlat pidetään syyskuun alussa Neitsyt Marian syntymän juhlan aikaan. Paikassa vieraili vuonna 1993 [[Johannes Paavali II]], ja sinne suuntautuva [[pyhiinvaellus]] on edelleen elävä perinne.
+JATKOT:
+Mitä arvonimi basilika tarkoittaa katolisessa kirkossa?
+Mitä Johannes Paavali II teki Liettuassa vuonna 1993?
+
+### 296
+Šiluva on alle seitsemänsadan asukkaan pikkukaupunki Samogitiassa ja Liettuan tärkeimpiä katolisia pyhiinvaelluskohteita. Paikka mainitaan ensimmäisen kerran vuonna 1457, kun aatelismies [[Petras Gedgaudas]] rakennutti sinne Neitsyt Marian syntymän kirkon. Reformaation aikana monet seudun asukkaat kääntyivät [[kalvinismiin]], ja kirkko suljettiin noin vuonna 1569. Perimätiedon mukaan Neitsyt Maria ilmestyi paikalle 1600-luvun alussa, ja katolilaiset saivat kirkon takaisin vuonna 1622. Nykyinen basilika valmistui vuonna 1786, ja Šiluvassa vieraili vuonna 1993 myös [[Johannes Paavali II]].
+JATKOT:
+Mitä Šiluvan ilmestyksestä kerrotaan?
+Miten pyhiinvaellus Šiluvaan nykyisin järjestetään?
+
+### 297
+Preussista tuotiin kirjoja, koska Preussin puolella liettuan kielen painaminen oli sallittua, vaikka se oli kielletty Venäjän vallan alla vuosina 1864–1904. Painotoimintaa oli etenkin [[Itä-Preussissa]] ja kaupungeissa kuten [[Tilsitissä]], ja liettuankielinen väestö oli alueella vanhastaan vahvasti läsnä. Kirjat ja lehdet kuljetettiin rajan yli salaa, ja niiden joukossa oli rukouskirjoja, sanoma- ja aikakauslehtiä sekä kansallisen heräämisen kirjoja. Lehti [[Aušra]] alkoi ilmestyä Preussin puolella vuonna 1883. Kaikki tämä auttoi liettuan kielen asemaa pysymään elävänä.
+JATKOT:
+Miten kirjat ylittivät rajan?
+Mikä oli Aušra-lehden merkitys?
+
+### 298
+Kirjansalakuljetus tarkoitti sitä, että liettuankielisiä kirjoja kannettiin salaa Preussista Venäjän vallan alla olleeseen Liettuaan vuosina 1864–1904, jolloin latinalaisin kirjaimin painaminen oli kielletty. Kirjojen kantajia kutsuttiin liettuaksi nimellä knygnešiai. Tunnetuimpia heistä oli [[Jurgis Bielinis]], jota kutsuttiin kirjankantajien kuninkaaksi. Kirjansalakuljetuksen rinnalla toimivat salaiset kyläkoulut, joiden opettajia kutsuttiin [[daraktoreiksi]]. Kirjankantajien muistoksi vietetään Liettuassa vuosittain [[kirjankantajan päivää]] maaliskuussa.
+JATKOT:
+Millaista oli daraktorien opetus salaisissa kouluissa?
+Miten kirjankantajat välttivät rajavartijat?
+
+### 299
+Reformaatio oli 1500-luvun uskonpuhdistus, joka alkoi Martti Lutherin vuonna 1517 esittämästä anekaupan arvostelusta ja johti länsimaisen kirkon jakautumiseen. Rinnalle nousivat Zürichin Ulrich Zwinglin ja Genevessä toimineen Jean Calvinin opit. Katolinen kirkko vastasi uudistamalla itseään, ja tätä kutsutaan [[vastauskonpuhdistukseksi]]; sen keskeisiä vaiheita olivat [[Tridentin kirkolliskokous]] ja [[jesuiittojen]] toiminta. Saksassa [[Augsburgin uskonrauha]] vuonna 1555 antoi ruhtinaille oikeuden valita alueensa uskontunnustus. Puolan–Liettuan alueella uskonnollinen suvaitsevaisuus oli suhteellisen laajaa, ja kalvinismi sai kannatusta aatelistossa.
+JATKOT:
+Mitä jesuiitat tekivät Liettuassa?
+Miten Tridentin kirkolliskokous muutti katolista kirkkoa?
+
+### 300
+Martti Luther syntyi vuonna 1483 Eislebenissä ja kuoli samassa kaupungissa vuonna 1546. Hän oli augustinolaismunkki ja Wittenbergin yliopiston teologian professori. Vuonna 1517 hän lähetti arkkipiispalle kirjeen ja liitti siihen 95 väitettä anekaupasta, ja ne levisivät painettuina nopeasti. [[Wormsin valtiopäivillä]] vuonna 1521 hän kieltäytyi peruuttamasta oppejaan, ja hänet julistettiin lainsuojattomaksi. Hän piileskeli [[Wartburgin]] linnassa ja käänsi Uuden testamentin saksaksi. Vuonna 1525 hän meni naimisiin [[Katharina von Boran]] kanssa. Suomalaisen kirjakielen isä [[Mikael Agricola]] opiskeli Wittenbergissä Lutherin ja Melanchthonin johdolla.
+JATKOT:
+Miksi Lutherin Raamatun käännös oli tärkeä saksan kielelle?
+Mitä Mikael Agricola teki uskonpuhdistuksen hyväksi Suomessa?
+
+### 301
+Šiluvan basilika on Neitsyt Marian syntymälle omistettu kirkko, ja se valmistui vuonna 1786. Sen edeltäjä oli kirkko, jonka aatelismies [[Petras Gedgaudas]] rakennutti paikalle vuonna 1457. Kirkko suljettiin reformaation aikana noin vuonna 1569, ja katolilaiset saivat sen takaisin vuonna 1622. Basilika on Liettuan tärkeä pyhiinvaelluskohde, jonne kokoontuu uskovia erityisesti syyskuun alun juhlien aikaan. Vuonna 1993 paikassa vieraili [[Johannes Paavali II]]. Venäjän vallan aikana pyhiinvaellusjuhlat olivat myös kokoontumispaikka, jossa jaettiin salakuljetettuja liettuankielisiä kirjoja.
+JATKOT:
+Miten Neitsyt Marian syntymää juhlitaan?
+Millainen on Šiluvan ilmestyskappeli?
+
+### 302
+Venäjän keisarikunta oli Venäjän valtio vuosina 1721–1917, ja sen ensimmäinen keisari oli [[Pietari Suuri]], joka otti keisarin arvonimen Suuren Pohjan sodan päätyttyä. Pääkaupunki oli Pietari. [[Katariina Suuri]] hallitsi vuosina 1762–1796 ja laajensi valtakuntaa muun muassa Puolan jaoissa. Vuonna 1809 Suomi liitettiin keisarikuntaan autonomisena [[Suomen suuriruhtinaskuntana]]. Keisarikunta päättyi vuoden 1917 vallankumouksiin, kun keisari Nikolai II luopui vallasta. Liettuan alueella Venäjän valta kesti 1700-luvun lopulta ensimmäisen maailmansotaan.
+JATKOT:
+Miten Venäjän valta näkyi Liettuassa 1800-luvulla?
+Miksi Suomi sai autonomian Venäjän keisarikunnassa?
+
+### 303
+Puolan jaot olivat kolme jakoa, jotka tapahtuivat vuosina 1772, 1793 ja 1795. Niissä Venäjä, Preussi ja Itävalta jakoivat Puolan–Liettuan yhteisvaltion alueet keskenään, ja viimeisen jaon jälkeen yhteisvaltio lakkasi olemasta. Vuonna 1791 yhteisvaltio oli hyväksynyt uudistusmielisen [[Toukokuun kolmannen päivän perustuslain]], mutta naapurivaltiot puuttuivat asiaan. Viimeistä jakoa edelsi vuonna 1794 [[Kościuszkon kansannousu]]. Liettuan alueesta suurin osa liitettiin Venäjään, ja Preussi sai osan lounaisista alueista. Puola ja Liettua palasivat itsenäisiksi valtioiksi vasta ensimmäisen maailmansodan jälkeen.
+JATKOT:
+Mitä Toukokuun kolmannen päivän perustuslaki sääti?
+Miten Puola palasi karttaan vuonna 1918?
+
+### 304
+Tytuvėnai on kaupunki Kelmėn kunnassa Länsi-Liettuassa, ja se tunnetaan bernardiiniluostaristaan. Paikka mainitaan ensimmäisen kerran 1300-luvun lopulla, jolloin [[Bridvaišis-järven]] yllä kohoavalla linnavuorella oli puulinna. Vuonna 1609 Liettuan suuri lipunkantaja [[Andrius Valavičius]] osti Tytuvėnain, ja luostarikompleksin pääosa valmistui vuonna 1633. Sodat jättivät kaupungin autioksi vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuoden 1863 kansannousun jälkeen viranomaiset sulkivat luostarin vuonna 1864.
+JATKOT:
+Miksi Valavičius rakennutti luostarin?
+Mitä luostarille tapahtui sulkemisen jälkeen?
+
+### 305
+Bernardiiniluostari on [[fransiskaanien]] haaraan kuuluvien bernardiinien luostari. Tytuvėnain luostarin rakentamisen aloitti Andrius Valavičiuksen perhe vanhan kirkon viereen 1600-luvun alussa, ja kompleksin pääosa valmistui vuonna 1633. Luostarit olivat keskiajalta lähtien paikkoja, joissa rukoiltiin, tehtiin käsityötä ja annettiin opetusta, ja usein niillä oli myös rooli köyhien auttajana. [[Tammikuun kansannousun]] jälkeen viranomaiset syyttivät paikallisia munkkeja kapinallisten auttamisesta ja sulkivat luostarin vuonna 1864. Kompleksi sijaitsee [[Kelmėn kunnassa]], ja se on kaupungin tunnetuin nähtävyys.
+JATKOT:
+Miten luostarit toimivat keskiajalla?
+Mitä sulkeminen vuonna 1864 tarkoitti munkeille?
+
+### 306
+Liettua on Baltian maista eteläisin, ja sen pääkaupunki on [[Vilna]]. Maa on historiallisesti ollut Euroopan suurimpia valtioita 1400-luvulla Liettuan suuriruhtinaskuntana. Liettuan itsenäisyysjulistus allekirjoitettiin 16. helmikuuta 1918, ja Neuvostoliiton miehityksen jälkeen maa palautti itsenäisyytensä vuonna 1990 yhtenä ensimmäisistä neuvostotasavalloista. Elokuussa 1989 noin kaksi miljoonaa ihmistä muodosti Baltian maiden halki [[Baltian ketjun]]. Liettua liittyi Euroopan unioniin ja Natoon vuonna 2004, ja se otti käyttöön euron vuonna 2015.
+JATKOT:
+Mikä oli Liettuan suuriruhtinaskunta?
+Miten Liettua palautti itsenäisyytensä vuonna 1990?
+
+### 307
+Tammikuun kansannousu syttyi tammikuussa 1863 sen jälkeen, kun Venäjän viranomaiset määräsivät sotilasarvonnan, joka kohdistui erityisesti nuoriin miehiin. Kansannousu oli pääosin [[sissisotaa]], jota käytiin metsissä pienin joukoin. Liettuassa kansannousun johtohahmoja olivat muun muassa [[Konstanty Kalinowski]], ja Venäjän vastatoimia johti kenraalikuvernööri [[Mihail Muravjov]]. Kansannousun jälkeen kiristettiin rajoituksia, ja katoliseen kirkkoon kohdistettiin toimia, kuten luostarien sulkemisia, esimerkiksi Tytuvėnaissa vuonna 1864. Vuonna 1864 myös kiellettiin liettuan painaminen latinalaisin kirjaimin.
+JATKOT:
+Miksi sissisota valittiin taistelutavaksi?
+Mitä kenraalikuvernööri Muravjov teki Liettuassa?
+
+### 308
+Bernardiinit ovat fransiskaaniveljien haara, joka on saanut nimensä pyhimys [[Sienan Bernardinon]] mukaan. Bernardino eli vuosina 1380–1444, ja hän oli tunnettu saarnaaja, joka levitti hartautta Jeesuksen nimeä kohtaan. Hänet julistettiin pyhimykseksi vuonna 1450. Puolassa bernardiineiksi kutsuttiin [[observantteja]] eli ankarampaa luostarisääntöä noudattavia fransiskaaneja, ja heidän toimintaansa edisti italialainen saarnaaja [[Johannes Kapistranolainen]], joka vieraili Krakovassa 1450-luvulla. Veljet elivät yksinkertaista elämää ja saarnasivat kansankielellä.
+JATKOT:
+Miten Johannes Kapistranolainen vaikutti Puolassa?
+Mitä observantit tarkoittavat fransiskaanien historiassa?
+
+### 309
+Fransiskaanit ovat katolinen veljeskunta, jonka perusti [[Franciscus Assisilainen]] 1200-luvun alussa. He lupaavat köyhyyttä ja elävät kerjäläisveljinä, jotka saarnaavat ja auttavat köyhiä. Ajan mittaan veljeskunta jakautui eri haaroihin, kuten observantteihin, konventuaaleihin ja [[kapusiineihin]]. Fransiskaanit levittäytyivät kaikkialle Eurooppaan, ja Suomessa heillä oli keskiajalla luostareita esimerkiksi [[Raumalla]], jossa Pyhän Ristin kirkko on entisen fransiskaaniluostarin kirkko. Franciscuksen tunnetuin teksti on Aurinkolaulu.
+JATKOT:
+Mikä on Franciscuksen Aurinkolaulu?
+Mitä fransiskaanit tekivät Suomessa keskiajalla?
+
+### 310
+Puolan kuningaskunta syntyi keskiajalla, kun Puolan ruhtinas [[Mieszko I]] otti kasteen vuonna 966 ja kuningaskunta vakiintui 1000-luvulla. Keskiajalla pääkaupunki oli [[Kraków]]. Vuonna 1386 Liettuan suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren [[Jadwigan]] kanssa ja kruunattiin Puolan kuninkaaksi, jolloin maat liittyivät henkilöunioniin. Hänen perustamansa [[Jagiellonit]] hallitsivat Puolaa vuoteen 1572. Vuonna 1569 Lublinin unioni yhdisti Puolan ja Liettuan yhteisvaltioksi. Puolan kuningaskunta oli keskiajalla ja uuden ajan alussa yksi Euroopan suurista valtioista.
+JATKOT:
+Millainen kuningatar Jadwiga oli?
+Miksi Krakovasta tuli keskiajan pääkaupunki?
+
+### 311
+Liettuan suuriruhtinaskunta syntyi 1200-luvulla, ja [[Mindaugas]] kruunattiin kuninkaaksi vuonna 1253. Suurimmillaan valtio oli Vytautas Suuren aikana 1400-luvun alussa, jolloin se ulottui Itämereltä lähelle Mustaamerta ja oli Euroopan suurimpia valtioita. Pääkaupunki oli Vilna. Hallinnossa käytettiin pitkään [[ruteenin kieltä]], ja oikeus perustui kolmeen Liettuan statuuttiin, joista ensimmäinen annettiin vuonna 1529. Vuonna 1386 Jogaila otti kasteen ja avioitui Puolan kuningattaren kanssa, ja vuonna 1569 Lublinin unioni yhdisti maat yhteisvaltioksi. Suuriruhtinaskunta lakkasi olemasta [[Puolan jaoissa]] 1700-luvun lopulla.
+JATKOT:
+Millaisia olivat Liettuan statuutit?
+Miksi Mindaugas kruunattiin kuninkaaksi?
+
+### 312
+Lublinin unioni solmittiin vuonna 1569, ja sillä Puolan kuningaskunta ja Liettuan suuriruhtinaskunta yhdistettiin yhdeksi yhteisvaltioksi. Puolan kuningas ja Liettuan suuriruhtinas [[Sigismund II Augustus]] oli viimeinen Jagiellonien hallitsija, ja unioni oli osa hänen pyrkimystään turvata valtion jatkuvuus. Unionin myötä perustettiin [[yhteinen valtiopäivä]], ja kuninkaasta tuli valittava: Sigismundin kuoleman jälkeen vuonna 1572 valtio oli [[vaalikuningaskunta]]. Liettua säilytti oman lakinsa, rahastonsa ja armeijansa. Unionissa osa Liettuan eteläisistä alueista siirrettiin Puolan kruunun hallintaan.
+JATKOT:
+Miksi osa Liettuan alueista siirrettiin Puolalle?
+Miten vaalikuningaskunta toimi käytännössä?
+
+### 313
+Markkinaoikeus oli hallitsijan tai maanomistajan myöntämä lupa pitää säännöllisiä markkinoita. Se oli erillinen asia kuin laajemmat [[kaupunkioikeudet]], jotka antoivat kaupungille oman itsehallinnon ja lain. Liettuassa monet kaupungit saivat kaupunkioikeudet niin sanotun [[Magdeburgin oikeuden]] mukaisesti, esimerkiksi Vilna ja [[Kaunas]] 1300- ja 1400-lukujen vaihteessa lähteiden mukaan. Markkinaoikeus oli kaupungille tärkeä tulonlähde, sillä markkinapäivinä paikalle tuli kauppiaita ja ostajia kaukaakin. Ajoista riippuen se saattoi vaikuttaa kaupungin kehitykseen yhtä paljon kuin vuosien rauha.
+JATKOT:
+Mitä Magdeburgin oikeus tarkoitti kaupungeille?
+Miten markkinapäivät järjestettiin keskiajalla?
+
+### 314
+Tytuvėnai sijaitsee Kelmėn kunnassa, ja sen historia ulottuu 1300-luvun lopulle, jolloin [[Bridvaišis-järven]] rannalla kohoavalla linnavuorella oli puulinna. Vuonna 1609 paikan osti [[Andrius Valavičius]], Liettuan suuri lipunkantaja eli suuriruhtinaskunnan korkea virkamies. Hänen perheensä rakennutti luostarin ja kirkon, ja kompleksin pääosa valmistui vuonna 1633. Sotien jäljiltä kaupunki oli autio vuoteen 1711 mennessä, mutta vuonna 1724 myönnetty markkinaoikeus auttoi sen toipumaan. Vuonna 1864 viranomaiset sulkivat [[bernardiinien]] luostarin tammikuun kansannousun jälkeen, mutta rakennuskompleksi on säilynyt.
+JATKOT:
+Mitä lipunkantaja tarkoitti suuriruhtinaskunnassa?
+Millainen on Kelmėn seutu?
+
+### 315
+Nemunas virtaa Liettuassa Druskininkain seudulta [[Alytuksen]] ja kylpyläkaupunki [[Birštonasin]] kautta [[Kaunasiin]], ja sieltä se kääntyy länteen kohti Itämerta. Alytuksen kohdalla joki on vielä melko kapea ja mutkitteleva, ja sen rannat ovat hiekkaisia. Dzūkijan alue, jonka historiallinen keskus Alytus on, kuuluu joen vesistöalueeseen, ja suuri osa Dzūkijan kansallispuistosta sijaitsee sen rannoilla. Nemunasin varrella on säilynyt linnoja ja pieniä kaupunkeja, jotka kertovat joen merkityksestä kulkureittinä. Alajuoksulla joki muodostaa suiston.
+JATKOT:
+Millainen kaupunki Birštonas on?
+Miten Dzūkijan kansallispuisto liittyy Nemunasiin?
+
+### 316
+Stefan Báthory oli unkarilaissyntyinen [[Transilvanian]] ruhtinas, joka valittiin Puolan kuninkaaksi ja Liettuan suuriruhtinaaksi vuonna 1575. Hän syntyi vuonna 1533 ja kuoli vuonna 1586 Grodnossa. Báthory tunnetaan sotapäällikkönä, joka johti Puolan–Liettuan joukot voittoihin Venäjän tsaari Ivan IV:tä vastaan [[Liivinmaan sodassa]]. Sota päättyi vuonna 1582 Jam Zapolskin rauhaan. Hänen aikanaan perustettiin vuonna 1579 [[Vilnan yliopisto]], joka kehittyi Liettuan tärkeimmäksi oppilaitokseksi. Hän antoi myös kaupunkioikeudet Alytukselle vuonna 1581.
+JATKOT:
+Mitä Jam Zapolskin rauhassa sovittiin?
+Miten Vilnan yliopisto perustettiin?
+
+### 317
+Linnake on pieni linnoitettu rakennelma, joka on rakennettu vartioimaan tietä, rajaa tai kulkureittiä. Liettuassa linnoja rakennettiin aluksi puusta ja maavalleista, usein korkealle [[linnavuorille]], joissa luonnollinen mäki helpotti puolustusta. Tällaisia linnoitettuja mäkiä on säilynyt ympäri maata, ja yksi tunnetuimmista kokonaisuuksista on [[Kernavėn]] arkeologinen alue, joka on Unescon maailmanperintökohde. Puiset linnat paloivat helposti, joten ne jouduttiin rakentamaan usein uudelleen, ja vasta myöhemmin tärkeimpien paikkojen linnat korvattiin tiilestä ja kivestä rakennetuilla. Rajaseudun linnake toimi etupäässä vartiopaikkana ja hälytysasemana.
+JATKOT:
+Millaisia linnavuoria Liettuassa on säilynyt?
+Miksi Kernavė on Unescon maailmanperintökohde?
+
+### 318
+Saksalainen ritarikunta aloitti Preussin ristiretken 1230-luvulla, kun Mazovian ruhtinas [[Konrad]] kutsui sen apuun pakanallisia preussilaisia vastaan. Ritarikunta rakensi alueelle linnoja ja valloitti Preussin vuosikymmenten kuluessa. Sen jälkeen se suuntasi sotaretkensä Liettuaa vastaan. Retkille osallistui usein läntisen Euroopan ritareita vieraina, ja Nemunasin varrella ja Liettuan rajaseudulla käytiin vuosisadan ajan jatkuvia rajasotia. Liettuan kastamisen vuonna 1387 jälkeen ritarikunnan sotien perustelu heikkeni, ja [[Grunwaldin taistelu]] vuonna 1410 oli ratkaiseva tappio. Rajaseudun linnakkeet kuten Alytuksen seudun puulinna kuuluivat tähän pitkään rajasotien historiaan.
+JATKOT:
+Millaisia olivat ritarikunnan retket Liettuaan?
+Miten Liettuan kastaminen vuonna 1387 tapahtui?
+
+### 319
+Kuurinlahti on matala laguuni Itämeren rannalla, ja sen erottaa avomerestä kapea hiekkaniemi, [[Kuurinkynnäs]]. Laguunin jakavat Liettua ja Venäjän Kaliningradin alue. Nemunas tuo sinne makeaa vettä, joten laguunin vesi on murtovettä, ja yhteys Itämereen on vain kapea salmi Klaipėdan kohdalla. Kuurinkynnäs on Unescon maailmanperintökohde vuodelta 2000, ja sen dyynit ovat tunnettuja. Liettuan puolella sijaitsevassa [[Nidassa]] on kirjailija [[Thomas Mannin]] 1930-luvun alun kesähuvila, jossa kirjailija vietti kesiä.
+JATKOT:
+Miten Kuurinkynnäs on syntynyt?
+Millainen paikka Nida on?
+
+### 320
+Kaunas on Liettuan toiseksi suurin kaupunki, ja se sijaitsee Nemunasin ja Nerisin yhtymäkohdassa. Vilnan ollessa Puolan hallinnassa sotien välisenä aikana Kaunas toimi Liettuan väliaikaisena pääkaupunkina vuosina 1920–1939. Tuolloin kaupunkiin rakennettiin runsaasti modernistista arkkitehtuuria, ja kokonaisuus sai Unescon maailmanperintöstatuksen vuonna 2023. Kaupungissa on keskiaikainen [[Kaunasin linna]], ja taidemuseo on nimetty säveltäjä ja taidemaalari [[M. K. Čiurlionisin]] mukaan. Kaunas oli vuonna 2022 yksi [[Euroopan kulttuuripääkaupungeista]].
+JATKOT:
+Miksi Kaunasista tuli väliaikainen pääkaupunki?
+Millaista oli Čiurlionisin taide?
 
