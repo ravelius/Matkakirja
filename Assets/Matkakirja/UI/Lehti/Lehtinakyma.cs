@@ -209,6 +209,9 @@ namespace Matkakirja.Natiivi
                 turvaYla = r.y;
                 arkki.style.paddingTop = 10f + r.y;
                 arkki.style.paddingBottom = r.w;
+                // Sivureunat (asettelutesti 9.10.2026 23.40, iPhone vaaka: teksti Dynamic Islandin alla); muualla 0 kuten ennen.
+                arkki.style.paddingLeft = r.x;
+                arkki.style.paddingRight = r.z;
                 AsetaSisallysVara();
             }
             ui.TurvaMuuttui += Turvaa;
