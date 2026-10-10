@@ -1,0 +1,1034 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koknese (historia)
+Tietoruudun teksti: Koknese on noin 3 000 asukkaan kaupunki Väinäjoen oikealla rannalla. Paikalla oli alun perin latgalilaisten ja selonialaisten asutus, ja 1200-luvun alussa Riian piispa Albert rakennutti sinne kivilinnan Väinäjoen ja Pērse-joen yhtymäkohtaan. Kaupunki sai kaupunkioikeudet vuonna 1277 ja kukoisti 1300-luvulla osana kauppiaiden Hansaliiton verkostoa. Linnasta kiisteltiin sodissa vuosisatoja, ja se tuhoutui vuonna 1701 Suuren Pohjan sodan aikana. Rautatie kulki Koknesen kautta viimeistään 1861, mikä teki paikasta suositun virkistysalueen. Kun lähelle valmistui vuonna 1966 Pļaviņasin vesivoimala, linnanrauniojen perustukset jäivät veden alle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+AIEMPI KYSYMYS: Mitä kaupunkioikeudet tarkoittivat keskiajalla?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Kaupunkioikeudet olivat hallitsijan tai muun vallanpitäjän myöntämä asema, jonka myötä asutus sai kaupungin erityisoikeudet. Tyypillisesti niihin kuului oikeus pitää [[markkinoita]], harjoittaa kauppaa ja hoitaa osa omista asioistaan. Koknese sai kaupunkioikeudet vuonna 1277, ja se kukoisti 1300-luvulla osana [[Hansaliiton]] verkostoa. Oikeuksien tarkka sisältö vaihteli paikasta ja ajasta, joten yksityiskohdista Koknesen osalta en ole varma. Kauppa ja muurit kuuluvat yhteen, sanotaan.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Miksi Aizputen perustamisvuotena pidetään vuotta 1248?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuosiluvut jää kyyhkyllä helposti päähän. Vuonna 1248 [[Livonian ritarikunta]] rakennutti Aizputeen uuden linnan joen toiselle rannalle, ja juuri tätä vuotta pidetään kaupungin perustamisvuotena. Paikalla oli asutusta kuitenkin jo paljon aiemmin, sillä 800-luvulla siellä oli kuurilaisten [[Beida-linna]], jonka ympäristö kuului Bandavan alueen tiheimmin asuttuihin seutuihin. Perustamisvuosi merkitsee siis ritarikunnan linnan ympärille kasvaneen kaupungin alkua, ei paikan ensimmäistä asutusta. Myöhemmin, vuonna 1378, piispa myönsi kaupungille [[Magdeburgin oikeudet]]. Ja kaiken tän minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Livonian ritarikunta
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Miksi Aizputen perustamisvuotena pidetään vuotta 1248?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuosiluvut jää kyyhkyllä helposti päähän. Vuonna 1248 [[Livonian ritarikunta]] rakennutti Aizputeen uuden linnan joen toiselle rannalle, ja juuri tätä vuotta pidetään kaupungin perustamisvuotena. Paikalla oli asutusta kuitenkin jo paljon aiemmin, sillä 800-luvulla siellä oli kuurilaisten [[Beida-linna]], jonka ympäristö kuului Bandavan alueen tiheimmin asuttuihin seutuihin. Perustamisvuosi merkitsee siis ritarikunnan linnan ympärille kasvaneen kaupungin alkua, ei paikan ensimmäistä asutusta. Myöhemmin, vuonna 1378, piispa myönsi kaupungille [[Magdeburgin oikeudet]]. Ja kaiken tän minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Beida-linna
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Miksi Aizputen perustamisvuotena pidetään vuotta 1248?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Vuosiluvut jää kyyhkyllä helposti päähän. Vuonna 1248 [[Livonian ritarikunta]] rakennutti Aizputeen uuden linnan joen toiselle rannalle, ja juuri tätä vuotta pidetään kaupungin perustamisvuotena. Paikalla oli asutusta kuitenkin jo paljon aiemmin, sillä 800-luvulla siellä oli kuurilaisten [[Beida-linna]], jonka ympäristö kuului Bandavan alueen tiheimmin asuttuihin seutuihin. Perustamisvuosi merkitsee siis ritarikunnan linnan ympärille kasvaneen kaupungin alkua, ei paikan ensimmäistä asutusta. Myöhemmin, vuonna 1378, piispa myönsi kaupungille [[Magdeburgin oikeudet]]. Ja kaiken tän minä muistin ulkoa.
+KYSYMYS: Kerro lisää: Magdeburgin oikeudet
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Mitä ovat Magdeburgin oikeudet, ja mitä ne merkitsivät kaupungille?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Oikeudet on ollut tuttu aihe kirjeidenkin parissa. [[Magdeburgin oikeudet]] olivat saksalainen kaupunkioikeus, joka sai nimensä Magdeburgin kaupungista ja levisi keskiajalla laajalle Keski- ja Itä-Eurooppaan. Yleensä ne merkitsivät, että kaupunki sai oman tuomioistuimen ja neuvoston sekä oikeuden hoitaa omia asioitaan ja kauppaansa, ja kaupunkilaisten asema erosi selvemmin maaseudun väestön asemasta. [[Aizpute]] sai oikeudet piispalta vuonna 1378, mikä vahvisti sen asemaa kaupunkina. Yksityiskohdat vaihtelivat kaupungista toiseen, eikä minulla ole varmaa tietoa siitä, mitä ne tarkalleen olivat Aizputessa. Pitkä juridiikka, mut jaksoin.
+KYSYMYS: Kerro lisää: Aizpute
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Mikä Livonian ritarikunta oli?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä aihe. [[Livonian ritarikunta]] oli saksalainen sotilaallinen ritarikunta, joka hallitsi keskiajalla suurta osaa nykyisen Latvian ja Viron alueesta. Se oli haara [[Saksalaisen ritarikunnan]] suuresta järjestöstä, ja sen edeltäjänä toimi Liivinmaan miekkaveljien veljeskunta. Ritarikunta rakennutti seudulle linnoja, kuten Aizputen linnan vuonna 1248, ja kilpaili vallasta Riian hiippakunnan kanssa. Sen valta päättyi 1500-luvun puolivälin jälkeen [[Liivinmaan sodan]] aikoihin; tarkkoja vuosilukuja en ole täysin varma, joten sanon vain suunnilleen. Kyl linnat kestää kauemmin kuin kyyhkyn muisti.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mikä Livonian ritarikunta oli?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä aihe. [[Livonian ritarikunta]] oli saksalainen sotilaallinen ritarikunta, joka hallitsi keskiajalla suurta osaa nykyisen Latvian ja Viron alueesta. Se oli haara [[Saksalaisen ritarikunnan]] suuresta järjestöstä, ja sen edeltäjänä toimi Liivinmaan miekkaveljien veljeskunta. Ritarikunta rakennutti seudulle linnoja, kuten Aizputen linnan vuonna 1248, ja kilpaili vallasta Riian hiippakunnan kanssa. Sen valta päättyi 1500-luvun puolivälin jälkeen [[Liivinmaan sodan]] aikoihin; tarkkoja vuosilukuja en ole täysin varma, joten sanon vain suunnilleen. Kyl linnat kestää kauemmin kuin kyyhkyn muisti.
+KYSYMYS: Kerro lisää: Liivinmaan sodan
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Missä Kuurinmaa sijaitsee ja millainen alue se on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuurinmaa eli latviaksi Kurzeme on historiallinen alue [[Länsi-Latviassa]], Itämeren rannalla. Alueen nimi tulee [[kuurilaisista]], balttilaisesta heimosta, joka asui seudulla jo varhain. Keskiajalla alue joutui Livonian ritarikunnan ja hiippakunnan vallan alle, ja myöhemmin siitä muodostui oma [[Kuurinmaan herttuakunta]], joka kesti 1700-luvun lopulle. Vuonna 1795 Kuurinmaa liitettiin Venäjään, ja Aizpute sai oman piirinsä hallintokeskuksen aseman. Rannikko ja metsät kuuluvat alueen luonteeseen, mutta tarkempia rajoja en uskalla luvata. Aika laaja alue yhdelle kyyhkyn katsaukselle.
+KYSYMYS: Kerro lisää: Länsi-Latviassa
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Missä Kuurinmaa sijaitsee ja millainen alue se on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuurinmaa eli latviaksi Kurzeme on historiallinen alue [[Länsi-Latviassa]], Itämeren rannalla. Alueen nimi tulee [[kuurilaisista]], balttilaisesta heimosta, joka asui seudulla jo varhain. Keskiajalla alue joutui Livonian ritarikunnan ja hiippakunnan vallan alle, ja myöhemmin siitä muodostui oma [[Kuurinmaan herttuakunta]], joka kesti 1700-luvun lopulle. Vuonna 1795 Kuurinmaa liitettiin Venäjään, ja Aizpute sai oman piirinsä hallintokeskuksen aseman. Rannikko ja metsät kuuluvat alueen luonteeseen, mutta tarkempia rajoja en uskalla luvata. Aika laaja alue yhdelle kyyhkyn katsaukselle.
+KYSYMYS: Kerro lisää: kuurilaisista
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Missä Kuurinmaa sijaitsee ja millainen alue se on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kuurinmaa eli latviaksi Kurzeme on historiallinen alue [[Länsi-Latviassa]], Itämeren rannalla. Alueen nimi tulee [[kuurilaisista]], balttilaisesta heimosta, joka asui seudulla jo varhain. Keskiajalla alue joutui Livonian ritarikunnan ja hiippakunnan vallan alle, ja myöhemmin siitä muodostui oma [[Kuurinmaan herttuakunta]], joka kesti 1700-luvun lopulle. Vuonna 1795 Kuurinmaa liitettiin Venäjään, ja Aizpute sai oman piirinsä hallintokeskuksen aseman. Rannikko ja metsät kuuluvat alueen luonteeseen, mutta tarkempia rajoja en uskalla luvata. Aika laaja alue yhdelle kyyhkyn katsaukselle.
+KYSYMYS: Kerro lisää: Kuurinmaan herttuakunta
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+AIEMPI KYSYMYS: Keitä kuurilaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Kuurilaiset]] olivat balttilainen heimo, joka asui nykyisen Latvian länsiosassa Itämeren rannikolla. Heidät tunnettiin merenkävijöinä ja sotureina Viikinkiaikaan asti, ja heidän linnansa, kuten Aizputen Beida, kertovat asutuksen tiheydestä. Keskiajalla ritarikunta valloitti alueen, ja kuurilaiset sulautuivat vähitellen muihin ryhmiin, joista kehittyi latvialaisten kansa. Heidän nimensä elää yhä [[Kuurinmaassa]] sekä Kuurin kynnäksen nimessä Itämeren etelärannalla. Tarkkoja vuosia en ole varma, joten ne jäävät pois. Kyl heidän tarinansa vois täyttää kokonaisen lentomatkan.
+KYSYMYS: Kerro lisää: Kuurilaiset
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aizpute (kulttuuri)
+Tietoruudun teksti: Aizpute on kaupunki Kuurinmaalla Länsi-Latviassa, Tebra-joen laaksossa noin 50 kilometriä Liepājasta koilliseen. Paikalla oli jo 800-luvulla kuurilaisten Beida-linna, jonka ympäristö oli yksi Bandavan alueen tiheimmin asutuista. Livonian ritarikunta rakennutti vuonna 1248 uuden linnan joen toiselle rannalle, ja tätä vuotta pidetään kaupungin perustamisvuotena. Piispa myönsi kaupungille Magdeburgin oikeudet vuonna 1378. Kuurinmaa liitettiin Venäjään vuonna 1795, ja Aizpustesta tuli oman piirinsä hallintokeskus. Väkiluku kasvoi tuolloin nopeasti, ja 1800-luvulla kaupunkiin perustettiin muun muassa kynttiläpaja ja pahvitehdas; vuonna 1881 asukkaita oli 3 690.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+AIEMPI KYSYMYS: Keitä kuurilaiset olivat?
+AIEMPI VASTAUS (Livia):
+Kas vaan, hyvä kysymys. [[Kuurilaiset]] olivat balttilainen heimo, joka asui nykyisen Latvian länsiosassa Itämeren rannikolla. Heidät tunnettiin merenkävijöinä ja sotureina Viikinkiaikaan asti, ja heidän linnansa, kuten Aizputen Beida, kertovat asutuksen tiheydestä. Keskiajalla ritarikunta valloitti alueen, ja kuurilaiset sulautuivat vähitellen muihin ryhmiin, joista kehittyi latvialaisten kansa. Heidän nimensä elää yhä [[Kuurinmaassa]] sekä Kuurin kynnäksen nimessä Itämeren etelärannalla. Tarkkoja vuosia en ole varma, joten ne jäävät pois. Kyl heidän tarinansa vois täyttää kokonaisen lentomatkan.
+KYSYMYS: Kerro lisää: Kuurinmaassa
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+AIEMPI KYSYMYS: Mitä hyötyä Hansaliiton jäsenyys toi Valmieralle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kauppa tuoksuu jo täältä asti. [[Hansaliitto]] oli pohjoiseurooppalaisten kauppakaupunkien liitto, ja Valmiera kuului siihen 1300-luvulta 1500-luvulle. Jäsenyys toi kaupunkiin runsaasti kauppaa ja liikennettä, sillä liiton verkosto avasi yhteydet muihin Itämeren kaupunkeihin ja niiden markkinoihin. Samalla Valmiera nousi merkittäväksi paikaksi, ja sen aikana kaupungissa pidettiin useita [[maapäiviä]], joissa Liivinmaan säädyt kokoontuivat päättämään yhteisistä asioista. Linnan varjossa kasvoi siis myös kauppakaupunki. Tarkkoja kauppatavaroita en tiedä varmasti, joten jätän ne arvaamatta. Nyt tekis mieli vähän kaupungin leipää.
+KYSYMYS: Kerro lisää: Hansaliitto
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+AIEMPI KYSYMYS: Mitä hyötyä Hansaliiton jäsenyys toi Valmieralle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kauppa tuoksuu jo täältä asti. [[Hansaliitto]] oli pohjoiseurooppalaisten kauppakaupunkien liitto, ja Valmiera kuului siihen 1300-luvulta 1500-luvulle. Jäsenyys toi kaupunkiin runsaasti kauppaa ja liikennettä, sillä liiton verkosto avasi yhteydet muihin Itämeren kaupunkeihin ja niiden markkinoihin. Samalla Valmiera nousi merkittäväksi paikaksi, ja sen aikana kaupungissa pidettiin useita [[maapäiviä]], joissa Liivinmaan säädyt kokoontuivat päättämään yhteisistä asioista. Linnan varjossa kasvoi siis myös kauppakaupunki. Tarkkoja kauppatavaroita en tiedä varmasti, joten jätän ne arvaamatta. Nyt tekis mieli vähän kaupungin leipää.
+KYSYMYS: Kerro lisää: maapäiviä
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sokea laulaja kantoi kansan muistia] 1441 — Puolalaisessa kronikassa mainitaan jo vuonna 1441 hovissa soittanut bandura, luuttumainen kielisoitin, jossa oli aluksi vain 5–12 kieltä. Soitinta soittivat usein sokeat kiertelevät muusikot, kobzarit, jotka lauloivat dumeiksi kutsuttuja kertovia balladeja kasakoiden taisteluista ja sankareista – he olivat kansan elävä historiankirja aikana, jolloin harva osasi lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen 1930-luvulla vangitsemalla ja karkottamalla soittajia Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu hevosensa vierellä bandura sylissään.
+AIEMPI KYSYMYS: Mistä Valmieran nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tässä en ole varma. Valmieran nimen alkuperästä on esitetty useita selityksiä, eikä minulla ole luotettavaa tietoa siitä, mikä niistä pitää paikkansa. Varmaa on, että kaupungin saksankielinen nimi on Wolmar ja että kaupunki mainitaan ensimmäisen kerran vuoden 1323 [[kronikassa]], kun [[Liivinmaan miekkaveljet]] olivat rakentaneet joen varteen linnan jo 1200-luvulla. Nimen taustaa kannattaa kysyä paikalliselta kielentutkijalta tai kaupungin museosta, koska arvattu selitys olisi huonompi kuin rehellinen tietämättömyys. Harmi, ois ollut kiva tietää.
+KYSYMYS: Kerro lisää: kronikassa
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mistä Valmieran nimi on peräisin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tässä en ole varma. Valmieran nimen alkuperästä on esitetty useita selityksiä, eikä minulla ole luotettavaa tietoa siitä, mikä niistä pitää paikkansa. Varmaa on, että kaupungin saksankielinen nimi on Wolmar ja että kaupunki mainitaan ensimmäisen kerran vuoden 1323 [[kronikassa]], kun [[Liivinmaan miekkaveljet]] olivat rakentaneet joen varteen linnan jo 1200-luvulla. Nimen taustaa kannattaa kysyä paikalliselta kielentutkijalta tai kaupungin museosta, koska arvattu selitys olisi huonompi kuin rehellinen tietämättömyys. Harmi, ois ollut kiva tietää.
+KYSYMYS: Kerro lisää: Liivinmaan miekkaveljet
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+AIEMPI KYSYMYS: Mitä lasikuitu on ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai se. Lasikuitu on tuttu [[Valmieran]] teollisuudesta. [[Lasikuitu]] on ohuista lasisäikeistä valmistettu materiaali, joka on kevyttä mutta kestävää. Sitä käytetään muun muassa eristeissä sekä komposiittirakenteissa, joissa lasikuitu vahvistaa muovia ja muodostaa lujan, kevyen aineen. Tällaisia rakenteita on esimerkiksi veneiden, putkien ja tuulivoimaloiden lapojen valmistuksessa. Kuidun ansiosta tuote kestää kulutusta ja kosteutta paremmin kuin moni perinteinen materiaali. Valmieran tärkeimpiä teollisuudenaloja ovat lasikuidun lisäksi elintarviketeollisuus. Ei lintu osaa kudoa, mut kyl se kutsuu kuitua kauniiksi.
+KYSYMYS: Kerro lisää: Valmieran
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BHR — maalehti / Rakennukset: Kupoli on lasikuitua] Manaman al-Fatehin moskeija valmistui vuonna 1987, ja siihen mahtuu yli seitsemäntuhatta ihmistä. Erikoisin osa on kupoli: se ei ole kiveä eikä betonia vaan lasikuitua, ja se painaa noin viisikymmentäneljä tonnia. Aikanaan se oli maailman suurin lasikuitukupoli. Materiaalit tuotiin kaukaa: lattian marmori Italiasta, kattokruunu Itävallasta ja ovet Intian tiikistä. Seinillä kiertää kulmikasta kufi-kirjoitusta. Vuodesta 2006 rakennuksessa on toiminut myös Bahrainin kansalliskirjasto.
+AIEMPI KYSYMYS: Mitä lasikuitu on ja mihin sitä käytetään?
+AIEMPI VASTAUS (Livia):
+Ai se. Lasikuitu on tuttu [[Valmieran]] teollisuudesta. [[Lasikuitu]] on ohuista lasisäikeistä valmistettu materiaali, joka on kevyttä mutta kestävää. Sitä käytetään muun muassa eristeissä sekä komposiittirakenteissa, joissa lasikuitu vahvistaa muovia ja muodostaa lujan, kevyen aineen. Tällaisia rakenteita on esimerkiksi veneiden, putkien ja tuulivoimaloiden lapojen valmistuksessa. Kuidun ansiosta tuote kestää kulutusta ja kosteutta paremmin kuin moni perinteinen materiaali. Valmieran tärkeimpiä teollisuudenaloja ovat lasikuidun lisäksi elintarviketeollisuus. Ei lintu osaa kudoa, mut kyl se kutsuu kuitua kauniiksi.
+KYSYMYS: Kerro lisää: Lasikuitu
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+AIEMPI KYSYMYS: Mikä Vidzeme on ja millainen alue se on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Vidzeme]] on historiallinen alue Latvian koillisosassa, ja sen toiseksi suurin kaupunki on Valmiera. Alueen läpi virtaa [[Gauja-joki]], jonka laakso on tunnettu jyrkistä hiekkakivirinteistä ja metsistä; sen ympärillä on suosittu kansallispuisto. Keskiajalla Vidzemeä hallitsivat Livonian ritarikunta ja Riian hiippakunta, ja seudulle rakennettiin useita linnoja. Aluetta kutsuttiin saksalaisaikoina Liivinmaaksi, vaikka tämän nimen merkitys ja rajat vaihtelivat vuosisatojen kuluessa. Tarkempia rajoja en ole varma, joten jätän ne mainitsematta. Kaunis seutu ylhäältäkin katsottuna.
+KYSYMYS: Kerro lisää: Vidzeme
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Jyrkänne, jonka voi raapia kynnellä] 1973 — Gaujan laaksossa joki on kuluttanut rantaan punertavia jyrkänteitä, jotka ovat devonikautista hiekkakiveä — niin pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät kohoavat parikymmentä metriä, ja niiden juurella on luolia. Tunnetuimman luolan seinissä on nimikirjaimia jo 1600-luvulta, joten turistien tapa kaivertaa nimensä kiveen on paljon vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin 1973, ja se on Latvian suurin.
+AIEMPI KYSYMYS: Mikä Vidzeme on ja millainen alue se on?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Vidzeme]] on historiallinen alue Latvian koillisosassa, ja sen toiseksi suurin kaupunki on Valmiera. Alueen läpi virtaa [[Gauja-joki]], jonka laakso on tunnettu jyrkistä hiekkakivirinteistä ja metsistä; sen ympärillä on suosittu kansallispuisto. Keskiajalla Vidzemeä hallitsivat Livonian ritarikunta ja Riian hiippakunta, ja seudulle rakennettiin useita linnoja. Aluetta kutsuttiin saksalaisaikoina Liivinmaaksi, vaikka tämän nimen merkitys ja rajat vaihtelivat vuosisatojen kuluessa. Tarkempia rajoja en ole varma, joten jätän ne mainitsematta. Kaunis seutu ylhäältäkin katsottuna.
+KYSYMYS: Kerro lisää: Gauja-joki
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+AIEMPI KYSYMYS: Mitä maapäivät olivat Liivinmaalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maapäivät olivat keskiajan ja uuden ajan alun Liivinmaalla säätyjen kokouksia, joissa kokoontuivat yleensä aatelisten, papiston ja kaupunkien edustajat. Niissä käsiteltiin alueen yhteisiä asioita, kuten puolustusta, veroja ja lainsäädäntöä, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. [[Valmierassa]] pidettiin useita maapäiviä [[Hansaliiton]] aikana, mikä kertoo kaupungin asemasta Liivinmaan keskuspaikkana. Täsmällisiä vuosia ja päätöksiä en ole varma, joten en nimeä niitä. Tällaisesta tulee mieleen kyyhkyjen parlamentti kaiteella, mut siinä ei päätetä mitään.
+KYSYMYS: Kerro lisää: Valmierassa
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Valmiera (kulttuuri)
+Tietoruudun teksti: Valmiera on Vidzemen historiallisen alueen toiseksi suurin kaupunki, joka sijaitsee Gauja-joen molemmilla rannoilla noin 107 kilometriä Riiasta koilliseen. Liivinmaan miekkaveljet rakensivat joen varteen linnan 1200-luvulla, ja kaupunki mainitaan ensimmäisen kerran vuoden 1323 kronikassa. Valmiera kuului 1300-luvulta 1500-luvulle Hansaliittoon, mikä toi kaupunkiin runsaasti kauppaa ja liikettä, ja sen aikana kaupungissa pidettiin useita maapäiviä. Kaupunki kasvoi nopeasti 1800-luvulla: ensimmäinen silta Gaujan yli valmistui vuonna 1865, ja Riian ja Pietarin välinen rautatie kulki kaupungin kautta vuodesta 1899 alkaen. Nykyään Valmiera on tärkeä teollisuuskaupunki, jonka tärkeimpiä aloja ovat elintarvike- ja lasikuituteollisuus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+AIEMPI KYSYMYS: Mitä maapäivät olivat Liivinmaalla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Maapäivät olivat keskiajan ja uuden ajan alun Liivinmaalla säätyjen kokouksia, joissa kokoontuivat yleensä aatelisten, papiston ja kaupunkien edustajat. Niissä käsiteltiin alueen yhteisiä asioita, kuten puolustusta, veroja ja lainsäädäntöä, ja ne olivat tapa sovittaa yhteen eri tahojen etuja. [[Valmierassa]] pidettiin useita maapäiviä [[Hansaliiton]] aikana, mikä kertoo kaupungin asemasta Liivinmaan keskuspaikkana. Täsmällisiä vuosia ja päätöksiä en ole varma, joten en nimeä niitä. Tällaisesta tulee mieleen kyyhkyjen parlamentti kaiteella, mut siinä ei päätetä mitään.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+AIEMPI KYSYMYS: Mitä symboleja Lielvārden vyön kuvioissa on, ja miksi ne kiinnostavat taiteilijoita?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Lielvārden vyö]] on perinteinen kudottu vyö, jossa on 22 muinaista symbolia. Symbolit ovat geometrisia kuvioita, joita on tulkittu muun muassa auringon, kosmoksen, sään ja suojan merkeiksi; tarkkoja merkityksiä ei kuitenkaan tunneta varmasti, enkä halua luetella niitä arvaamalla. Kuviot ovat voimakkaita, selkeitä ja helposti toistettavia, minkä vuoksi ne sopivat taiteeseen, muotoiluun ja kansalliseen kuvastoon. Kuviointia on käytetty esimerkiksi Latvian [[seteleissä]]. Vyön muinaisuus ja tulkinnanvaraisuus lisäävät sen vetovoimaa, sillä jokainen katsoja voi lukea kuvioista oman tarinansa. Värejäkin kyl katsoisin pidempään.
+KYSYMYS: Kerro lisää: Lielvārden vyö
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+AIEMPI KYSYMYS: Mitä symboleja Lielvārden vyön kuvioissa on, ja miksi ne kiinnostavat taiteilijoita?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Lielvārden vyö]] on perinteinen kudottu vyö, jossa on 22 muinaista symbolia. Symbolit ovat geometrisia kuvioita, joita on tulkittu muun muassa auringon, kosmoksen, sään ja suojan merkeiksi; tarkkoja merkityksiä ei kuitenkaan tunneta varmasti, enkä halua luetella niitä arvaamalla. Kuviot ovat voimakkaita, selkeitä ja helposti toistettavia, minkä vuoksi ne sopivat taiteeseen, muotoiluun ja kansalliseen kuvastoon. Kuviointia on käytetty esimerkiksi Latvian [[seteleissä]]. Vyön muinaisuus ja tulkinnanvaraisuus lisäävät sen vetovoimaa, sillä jokainen katsoja voi lukea kuvioista oman tarinansa. Värejäkin kyl katsoisin pidempään.
+KYSYMYS: Kerro lisää: seteleissä
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mitä Henrikin Liivinmaan kronikka kertoo Lielvārden linnavuoresta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Henrikin Liivinmaan kronikka]] mainitsee Lielvārden paikalla olleen balttilaisen [[linnavuoren]] vuonna 1201. Linnavuori oli puolustettu asuinpaikka, jonka ympärillä seutu oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue. Kronikka on tärkeä lähde Liivinmaan valloituksen ajalta, koska sen kirjoittaja oli itse mukana tapahtumissa. Myöhemmin, vuonna 1229, Riian hiippakunta rakennutti seudulle kivilinnan, jonka rauniot ovat yhä nähtävillä. Linnavuoresta tarkempia yksityiskohtia en ole varma, joten jätän ne pois. Siitä on kyl sata vuotta ja vähän päälle, mut kyyhky muistaa.
+KYSYMYS: Kerro lisää: Henrikin Liivinmaan kronikka
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lhasa — kaupunkilehti / Lhasa: Talvipalatsi Punaisella kummulla] Marpo Rilla eli Punaisella kummulla oli seissyt linna jo 600-luvulta, kun Viides dalai-lama määräsi 1645 rakennettavaksi uuden palatsin. Ulkoseinät nousivat kolmessa vuodessa, mutta sisustus vei neljäkymmentäviisi vuotta lisää. Dalai-lama muutti Valkoiseen palatsiin 1649, ja Punainen palatsi nousi vasta 1690–1694, kaksitoista vuotta hänen kuolemansa jälkeen. Tuloksena on kolmetoista kerrosta, yli tuhat huonetta, kymmenentuhatta pyhäkköä ja noin kaksisataatuhatta patsasta; korkeutta on 119 metriä kukkulan päältä ja yli kolmesataa laakson pohjalta. Kaltevat kiviseinät ovat kolmisen metriä paksut, ja perustuksiin valettiin kuparia järistysten varalta.
+AIEMPI KYSYMYS: Mitä Henrikin Liivinmaan kronikka kertoo Lielvārden linnavuoresta?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Henrikin Liivinmaan kronikka]] mainitsee Lielvārden paikalla olleen balttilaisen [[linnavuoren]] vuonna 1201. Linnavuori oli puolustettu asuinpaikka, jonka ympärillä seutu oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue. Kronikka on tärkeä lähde Liivinmaan valloituksen ajalta, koska sen kirjoittaja oli itse mukana tapahtumissa. Myöhemmin, vuonna 1229, Riian hiippakunta rakennutti seudulle kivilinnan, jonka rauniot ovat yhä nähtävillä. Linnavuoresta tarkempia yksityiskohtia en ole varma, joten jätän ne pois. Siitä on kyl sata vuotta ja vähän päälle, mut kyyhky muistaa.
+KYSYMYS: Kerro lisää: linnavuoren
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+AIEMPI KYSYMYS: Kuka oli Andrejs Pumpurs ja mistä Lāčplēsis kertoo?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Andrejs Pumpurs]] oli latvialainen runoilija, joka sai inspiraationsa Lielvārden seudusta ja kirjoitti 1800-luvun lopulla [[Lāčplēsis]]-eepoksen. Eepos kertoo sankarista, jonka nimi tarkoittaa karhunrepijää, ja se perustuu osin kansanperinteeseen sekä Pumpursin omaan runoilijan mielikuvitukseen. Sankari taistelee vihollisia vastaan ja puolustaa maataan, ja tarina on tullut tunnetuksi Latvian kansalliseepoksena. Teoksen tarkkaa vuotta ja yksityiskohtia en ole täysin varma, joten sanon vain suunnilleen. Aika vahva kaveri tuo karhunrepijä.
+KYSYMYS: Kerro lisää: Andrejs Pumpurs
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+AIEMPI KYSYMYS: Kuka oli Andrejs Pumpurs ja mistä Lāčplēsis kertoo?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Andrejs Pumpurs]] oli latvialainen runoilija, joka sai inspiraationsa Lielvārden seudusta ja kirjoitti 1800-luvun lopulla [[Lāčplēsis]]-eepoksen. Eepos kertoo sankarista, jonka nimi tarkoittaa karhunrepijää, ja se perustuu osin kansanperinteeseen sekä Pumpursin omaan runoilijan mielikuvitukseen. Sankari taistelee vihollisia vastaan ja puolustaa maataan, ja tarina on tullut tunnetuksi Latvian kansalliseepoksena. Teoksen tarkkaa vuotta ja yksityiskohtia en ole täysin varma, joten sanon vain suunnilleen. Aika vahva kaveri tuo karhunrepijä.
+KYSYMYS: Kerro lisää: Lāčplēsis
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Mikä Riian hiippakunta oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Riian hiippakunta]] oli katolisen kirkon hallintoalue Liivinmaalla keskiajalla, ja sen perusti [[piispa Albert]] 1200-luvun alussa. Hiippakunta hallitsi osaa nykyisen Latvian alueesta, ja sen piispat toimivat sekä hengellisinä että maallisina johtajina. Se kilpaili vallasta Livonian ritarikunnan kanssa. Lielvārdessa hiippakunta rakennutti kivilinnan vuonna 1229. Myöhemmin Riian hiippakunta korotettiin arkkihiippakunnaksi, mutta tarkkaa vuotta en ole varma. Uskonpuhdistus ja Liivinmaan sota muuttivat tilanteen 1500-luvulla. Vahva vaikutus tuli ylhäältäkin katsottuna.
+KYSYMYS: Kerro lisää: Riian hiippakunta
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Mikä Riian hiippakunta oli?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Riian hiippakunta]] oli katolisen kirkon hallintoalue Liivinmaalla keskiajalla, ja sen perusti [[piispa Albert]] 1200-luvun alussa. Hiippakunta hallitsi osaa nykyisen Latvian alueesta, ja sen piispat toimivat sekä hengellisinä että maallisina johtajina. Se kilpaili vallasta Livonian ritarikunnan kanssa. Lielvārdessa hiippakunta rakennutti kivilinnan vuonna 1229. Myöhemmin Riian hiippakunta korotettiin arkkihiippakunnaksi, mutta tarkkaa vuotta en ole varma. Uskonpuhdistus ja Liivinmaan sota muuttivat tilanteen 1500-luvulla. Vahva vaikutus tuli ylhäältäkin katsottuna.
+KYSYMYS: Kerro lisää: piispa Albert
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Keitä liiviläiset ovat, ja onko heitä vielä olemassa?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiva aihe. [[Liiviläiset]] ovat itämerensuomalainen kansa, jonka kieli on sukua suomelle ja virolle. Heitä asui keskiajalla nykyisen Latvian rannikolla ja Väinäjoen eli Daugavan suistossa, ja ajan mittaan he sulautuivat latvialaisiin. [[Liivin kieli]] on kuolemassa: viimeinen äidinkielenään puhunut ihminen kuoli 2010-luvulla, mutta joukko ihmisiä pitää yllä liiviläistä kulttuuria ja opettelee kieltä. Liiviläisten rannikko Kuurinmaan pohjoispäässä on suojeltu kulttuurialue. Tarkempia lukuja asukasmääristä en ole varma. Kyl pienelle kansalle löytyy suuri sydän.
+KYSYMYS: Kerro lisää: Liiviläiset
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lielvārde (kulttuuri)
+Tietoruudun teksti: Lielvārde on noin 5 900 asukkaan kaupunki Daugavan oikealla rannalla, noin 52 kilometriä Riiasta kaakkoon. Alue oli esihistoriallisena aikana liiviläisten ja balttien kohtaamisalue, ja Henrikin Liivinmaan kronikka mainitsee paikalla olleen balttilaisen linnavuoren vuonna 1201. Riian hiippakunta rakennutti seudulle kivilinnan vuonna 1229, ja sen rauniot ovat yhä nähtävillä. Lielvārde tunnetaan myös Lielvārden vyöstä, perinteisestä kudotusta vyöstä, jossa on 22 muinaista symbolia; sen kuviointia on käytetty esimerkiksi Latvian seteleissä. Seutu inspiroi myös runoilijoita Auseklis ja Andrejs Pumpurs, joista jälkimmäinen kirjoitti Lāčplēsis-eepoksen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+AIEMPI KYSYMYS: Keitä liiviläiset ovat, ja onko heitä vielä olemassa?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on kiva aihe. [[Liiviläiset]] ovat itämerensuomalainen kansa, jonka kieli on sukua suomelle ja virolle. Heitä asui keskiajalla nykyisen Latvian rannikolla ja Väinäjoen eli Daugavan suistossa, ja ajan mittaan he sulautuivat latvialaisiin. [[Liivin kieli]] on kuolemassa: viimeinen äidinkielenään puhunut ihminen kuoli 2010-luvulla, mutta joukko ihmisiä pitää yllä liiviläistä kulttuuria ja opettelee kieltä. Liiviläisten rannikko Kuurinmaan pohjoispäässä on suojeltu kulttuurialue. Tarkempia lukuja asukasmääristä en ole varma. Kyl pienelle kansalle löytyy suuri sydän.
+KYSYMYS: Kerro lisää: Liivin kieli
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+AIEMPI KYSYMYS: Miksi nahkiainen on niin tärkeä Carnikavalle, että se on alueen vaakunassakin?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on herkkua minunkin kaiteelleni. [[Nahkiainen]] on ollut Carnikavan pitkäaikainen erikoisuus, ja grillattuna se on paikallisen ruokaperinteen keskeinen osa. Sen kalastus ja valmistus ovat kuuluneet kylän arkeen, ja nahkiainen on alueen vaakunassa. Carnikavan nahkiaiselle on myönnetty [[EU:n suojattu maantieteellinen merkintä]], joka tunnustaa tuotteen sidoksen alueeseen. Kylä kasvoi kartanon ympärille kalastajakyläksi Gauja-joen suulle, mikä selittää kalan merkityksen. Tarkkoja lukuja saaliista en ole varma. Kyl se maistuis mulle, mut en ole koskaan uskaltanut.
+KYSYMYS: Kerro lisää: Nahkiainen
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Neljäkymmentä kiloa pippuria banaaniviljelmältä] 1958– — Penjan laakso on vanhaa tulivuoren maata, ja siihen istutti pippurin Antoine Decré, jolla oli seudulla banaaniviljelmä. Ensimmäinen vientierä lähti maaliskuussa 1958: yksi neljänkymmenen kilon säkki valkopippuria. Nykyään poivre de Penja on suojattu maantieteellinen merkintä seitsemässätoista Afrikan OAPI-maassa ja lisäksi Euroopan unionissa — harvinaista afrikkalaiselle maataloustuotteelle. Michelin-kokit löysivät sen, ja toukokuussa 2016 kilosta maksettiin jopa 321 euroa. Samasta köynnöksestä saadaan vihreä, musta, valkoinen ja punainen pippuri; ero syntyy vain poimintahetkestä ja käsittelystä.
+AIEMPI KYSYMYS: Miksi nahkiainen on niin tärkeä Carnikavalle, että se on alueen vaakunassakin?
+AIEMPI VASTAUS (Livia):
+No jopas. Tämä on herkkua minunkin kaiteelleni. [[Nahkiainen]] on ollut Carnikavan pitkäaikainen erikoisuus, ja grillattuna se on paikallisen ruokaperinteen keskeinen osa. Sen kalastus ja valmistus ovat kuuluneet kylän arkeen, ja nahkiainen on alueen vaakunassa. Carnikavan nahkiaiselle on myönnetty [[EU:n suojattu maantieteellinen merkintä]], joka tunnustaa tuotteen sidoksen alueeseen. Kylä kasvoi kartanon ympärille kalastajakyläksi Gauja-joen suulle, mikä selittää kalan merkityksen. Tarkkoja lukuja saaliista en ole varma. Kyl se maistuis mulle, mut en ole koskaan uskaltanut.
+KYSYMYS: Kerro lisää: EU:n suojattu maantieteellinen merkintä
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+- [Ukraina — maalehti / Kulttuuri: Sokea laulaja kantoi kansan muistia] 1441 — Puolalaisessa kronikassa mainitaan jo vuonna 1441 hovissa soittanut bandura, luuttumainen kielisoitin, jossa oli aluksi vain 5–12 kieltä. Soitinta soittivat usein sokeat kiertelevät muusikot, kobzarit, jotka lauloivat dumeiksi kutsuttuja kertovia balladeja kasakoiden taisteluista ja sankareista – he olivat kansan elävä historiankirja aikana, jolloin harva osasi lukea. Neuvostovalta lopetti kiertelevän kobzariperinteen 1930-luvulla vangitsemalla ja karkottamalla soittajia Siperiaan. Bandurassa on nykyisin 56–68 kieltä, ja soitin näkyy usein "kasakka Mamai" -kansantaiteessa, jossa kasakka istuu hevosensa vierellä bandura sylissään.
+AIEMPI KYSYMYS: Mistä Carnikavan nimi voi olla peräisin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. En ole varma. Carnikavan nimen alkuperästä ei ole minulla luotettavaa tietoa, eikä arvaaminen olisi hyvä idea. Varmaa on, että paikka mainitaan [[Henrikin Liivinmaan kronikassa]] jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana, joten nimi on todennäköisesti hyvin vanha. Alue kuului [[Gauja-joen]] suiston seutuun, jossa asui liiviläisiä, ja nimen taustalla voi olla vanhaa paikannimistöä; tästä en kuitenkaan voi sanoa varmaa. Paikallinen kielentutkija tai kotiseutumuseo osaisi vastata paremmin. Harmi, ois ollut komea tarina.
+KYSYMYS: Kerro lisää: Henrikin Liivinmaan kronikassa
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Jyrkänne, jonka voi raapia kynnellä] 1973 — Gaujan laaksossa joki on kuluttanut rantaan punertavia jyrkänteitä, jotka ovat devonikautista hiekkakiveä — niin pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät kohoavat parikymmentä metriä, ja niiden juurella on luolia. Tunnetuimman luolan seinissä on nimikirjaimia jo 1600-luvulta, joten turistien tapa kaivertaa nimensä kiveen on paljon vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin 1973, ja se on Latvian suurin.
+AIEMPI KYSYMYS: Mistä Carnikavan nimi voi olla peräisin?
+AIEMPI VASTAUS (Livia):
+Tuota niin. En ole varma. Carnikavan nimen alkuperästä ei ole minulla luotettavaa tietoa, eikä arvaaminen olisi hyvä idea. Varmaa on, että paikka mainitaan [[Henrikin Liivinmaan kronikassa]] jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana, joten nimi on todennäköisesti hyvin vanha. Alue kuului [[Gauja-joen]] suiston seutuun, jossa asui liiviläisiä, ja nimen taustalla voi olla vanhaa paikannimistöä; tästä en kuitenkaan voi sanoa varmaa. Paikallinen kielentutkija tai kotiseutumuseo osaisi vastata paremmin. Harmi, ois ollut komea tarina.
+KYSYMYS: Kerro lisää: Gauja-joen
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+AIEMPI KYSYMYS: Millainen kala nahkiainen on?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Nahkiainen]] on pitkä, ankeriasmainen ja suomuton, leuaton kala, jonka suu on pyöreä ja imevä. Se on vanhaa kalamuotoa edustava laji: sillä ei ole leukoja eikä suomuja, ja sen kehittyminen alkaa jokiin laskeutuneena toukkana. Aikuisena lajit voivat elää jokien ja meren välillä, ja ne nousevat jokiin kutemaan. Nahkiaisten ravinto vaihtelee lajeittain, eivätkä kaikki lajit ime muiden kalojen verta. Suomessakin nahkiaista on syöty perinteisesti, esimerkiksi grillattuna. Tarkkaa lajia [[Carnikavassa]] en ole varma. Ei kauneuskilpailun voittaja, mut kyl se maistuu.
+KYSYMYS: Kerro lisää: Carnikavassa
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Neljäkymmentä kiloa pippuria banaaniviljelmältä] 1958– — Penjan laakso on vanhaa tulivuoren maata, ja siihen istutti pippurin Antoine Decré, jolla oli seudulla banaaniviljelmä. Ensimmäinen vientierä lähti maaliskuussa 1958: yksi neljänkymmenen kilon säkki valkopippuria. Nykyään poivre de Penja on suojattu maantieteellinen merkintä seitsemässätoista Afrikan OAPI-maassa ja lisäksi Euroopan unionissa — harvinaista afrikkalaiselle maataloustuotteelle. Michelin-kokit löysivät sen, ja toukokuussa 2016 kilosta maksettiin jopa 321 euroa. Samasta köynnöksestä saadaan vihreä, musta, valkoinen ja punainen pippuri; ero syntyy vain poimintahetkestä ja käsittelystä.
+AIEMPI KYSYMYS: Mitä EU:n suojattu maantieteellinen merkintä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Suojattu maantieteellinen merkintä]] on [[Euroopan unionin]] laatumerkki, jolla suojataan tuotteen nimeä, kun tuote liittyy tiettyyn alueeseen. Tuotteen jokin vaihe, esimerkiksi tuotanto tai valmistus, tapahtuu kyseisellä alueella, ja tuotteen maine tai ominaisuudet liittyvät alueeseen. Merkintä estää tuotteen nimen käyttämisen vääriin tuotteisiin. Carnikavan nahkiaisella on tällainen merkintä. Täsmällisiä vaatimuksia ei tässä kannata arvailla, joten jätän ne pois. Aika hieno titteli kalalle.
+KYSYMYS: Kerro lisää: Suojattu maantieteellinen merkintä
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Juusto joka muistuttaa aurinkoa] Juhannus — Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla piimää tai rahkaa yhdessä voin, kananmunien ja kuminan kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota juhannuksena juhlitaan päivän valoisimpana aikana. Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja monet perheet valmistavat sen yhä itse kotikeittiössä isoäidin ohjeella.
+AIEMPI KYSYMYS: Mitä EU:n suojattu maantieteellinen merkintä tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Suojattu maantieteellinen merkintä]] on [[Euroopan unionin]] laatumerkki, jolla suojataan tuotteen nimeä, kun tuote liittyy tiettyyn alueeseen. Tuotteen jokin vaihe, esimerkiksi tuotanto tai valmistus, tapahtuu kyseisellä alueella, ja tuotteen maine tai ominaisuudet liittyvät alueeseen. Merkintä estää tuotteen nimen käyttämisen vääriin tuotteisiin. Carnikavan nahkiaisella on tällainen merkintä. Täsmällisiä vaatimuksia ei tässä kannata arvailla, joten jätän ne pois. Aika hieno titteli kalalle.
+KYSYMYS: Kerro lisää: Euroopan unionin
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Jyrkänne, jonka voi raapia kynnellä] 1973 — Gaujan laaksossa joki on kuluttanut rantaan punertavia jyrkänteitä, jotka ovat devonikautista hiekkakiveä — niin pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät kohoavat parikymmentä metriä, ja niiden juurella on luolia. Tunnetuimman luolan seinissä on nimikirjaimia jo 1600-luvulta, joten turistien tapa kaivertaa nimensä kiveen on paljon vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin 1973, ja se on Latvian suurin.
+AIEMPI KYSYMYS: Missä Gauja-joki virtaa ja minne se laskee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Gauja]] on joki, joka virtaa Latvian koillisosassa [[Vidzemen]] alueella. Se kulkee muun muassa Valmieran kaupungin kautta, ja sen laaksossa on kansallispuisto, jossa on jyrkkiä rantakallioita ja metsiä. Joki laskee lopulta Riianlahteen Carnikavan kohdalla, joka sijaitsee noin 25 kilometriä Riiasta pohjoiseen. Gaujan suulla kylä kasvoi kalastajakyläksi, ja joen varrella on historiallisia linnoja. Joen pituutta en ole varma, joten jätän sen pois. Ylhäältä mutka näyttää aina mukavalta.
+KYSYMYS: Kerro lisää: Gauja
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Carnikava (ruoka)
+Tietoruudun teksti: Carnikava on taajama noin 25 kilometriä Riiasta pohjoiseen, Gauja-joen suulla Riianlahden rannalla. Paikka mainitaan Henrikin Liivinmaan kronikassa jo vuonna 1211 liiviläisten joukkojen kokoontumispaikkana. Carnikava kasvoi kartanon ympärille kalastajakyläksi, ja siellä kerrotaan perustetun vuonna 1880 Venäjän keisarikunnan ensimmäinen kalanviljelylaitos ja kalasäilyketehdas. Kylän pitkäaikainen erikoisuus on grillattu nahkiainen, joka on myös alueen vaakunassa, ja Carnikavan nahkiaisella on EU:n suojattu maantieteellinen merkintä. Nykyään paikka on suosittu kesälomakohde riikalaisten keskuudessa, ja siellä pidetään vuosittain kalastajien ja käsityöläisten markkinoita.
+AIEMPI KYSYMYS: Missä Gauja-joki virtaa ja minne se laskee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Gauja]] on joki, joka virtaa Latvian koillisosassa [[Vidzemen]] alueella. Se kulkee muun muassa Valmieran kaupungin kautta, ja sen laaksossa on kansallispuisto, jossa on jyrkkiä rantakallioita ja metsiä. Joki laskee lopulta Riianlahteen Carnikavan kohdalla, joka sijaitsee noin 25 kilometriä Riiasta pohjoiseen. Gaujan suulla kylä kasvoi kalastajakyläksi, ja joen varrella on historiallisia linnoja. Joen pituutta en ole varma, joten jätän sen pois. Ylhäältä mutka näyttää aina mukavalta.
+KYSYMYS: Kerro lisää: Vidzemen
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Miksi Ainaži oli hyvä paikka laivanrakennukselle?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ainaži sijaitsee Riianlahden rannalla, joten merelle pääsi suoraan, ja laivanrakennus kasvoi 1870-luvulla voimakkaasti. Rakennuspuuta tarjosivat [[Vidzemen]] ja [[Kuurinmaan]] mäntymetsät, ja satama oli lähellä raaka-ainetta. Alueen merenkulkuperinteeseen liittyi myös [[Ainažin merikoulu]], jonka Krišjānis Valdemārs rahoitti vuonna 1864; se koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Vanha liiviläinen kalastajakylä oli siis kasvanut merenkulun keskukseksi. Tarkkoja laivamääriä en ole varma, joten niistä ei kannata luvata mitään. Merelle katsoessa tekis mieli lentää.
+KYSYMYS: Kerro lisää: Vidzemen
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Miksi Ainaži oli hyvä paikka laivanrakennukselle?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ainaži sijaitsee Riianlahden rannalla, joten merelle pääsi suoraan, ja laivanrakennus kasvoi 1870-luvulla voimakkaasti. Rakennuspuuta tarjosivat [[Vidzemen]] ja [[Kuurinmaan]] mäntymetsät, ja satama oli lähellä raaka-ainetta. Alueen merenkulkuperinteeseen liittyi myös [[Ainažin merikoulu]], jonka Krišjānis Valdemārs rahoitti vuonna 1864; se koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Vanha liiviläinen kalastajakylä oli siis kasvanut merenkulun keskukseksi. Tarkkoja laivamääriä en ole varma, joten niistä ei kannata luvata mitään. Merelle katsoessa tekis mieli lentää.
+KYSYMYS: Kerro lisää: Kuurinmaan
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Miksi Ainaži oli hyvä paikka laivanrakennukselle?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ainaži sijaitsee Riianlahden rannalla, joten merelle pääsi suoraan, ja laivanrakennus kasvoi 1870-luvulla voimakkaasti. Rakennuspuuta tarjosivat [[Vidzemen]] ja [[Kuurinmaan]] mäntymetsät, ja satama oli lähellä raaka-ainetta. Alueen merenkulkuperinteeseen liittyi myös [[Ainažin merikoulu]], jonka Krišjānis Valdemārs rahoitti vuonna 1864; se koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Vanha liiviläinen kalastajakylä oli siis kasvanut merenkulun keskukseksi. Tarkkoja laivamääriä en ole varma, joten niistä ei kannata luvata mitään. Merelle katsoessa tekis mieli lentää.
+KYSYMYS: Kerro lisää: Ainažin merikoulu
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — maalehti / Historia: Kolme ja puoli vuotta banaanirahalla] 1942–1945 — Saari antautui 15. helmikuuta 1942 ja sai nimen Shonan-to, etelän valon saari. Britannian setelit poistuivat, ja tilalle tuli miehityshallinnon oma raha, jota painettiin lisää aina kun sitä tarvittiin. Sata kattia riisiä maksoi ensin viisi dollaria ja sodan lopussa viisituhatta. Ruoka jaettiin korteilla: aikuiselle viisi kiloa riisiä kuussa, lapselle kaksi, ja aikuisen annosta leikattiin neljännes. Bataatti, maniokki ja jamssi kasvoivat takapihoilla ja korvasivat riisin. Sotilaspoliisin vainoissa surmattiin kymmeniätuhansia siviilejä, enimmäkseen kiinalaisia miehiä. Antautumispäivää muistetaan yhä joka vuosi.
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+- [Senegal — maalehti / Ruoka] Senegalissa ateria on yhteinen vati, jonka ympärille mahtuu aina yksi lisää — se on teranga, vieraanvaraisuus.
+AIEMPI KYSYMYS: Mitä Ainažin nimi voi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. En ole varma. [[Ainažin]] nimen merkityksestä ei ole luotettavaa tietoa minulla, eikä arvaus olisi hyvä. Tiedän, että paikalla oli vanha liiviläinen kalastajakylä, joka mainitaan ensimmäisen kerran vuonna 1564, ja että kaupungin virolainen nimi on [[Heinaste]]. Nimen taustalla voi olla liiviläistä paikannimistöä, mutta se on pelkkä mahdollisuus, ei tieto. Paikallinen kielentutkija tai merikoulun museo voisi osata vastata. Harmi, ois ollut kiva selittää.
+KYSYMYS: Kerro lisää: Ainažin
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Mitä Ainažin nimi voi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. En ole varma. [[Ainažin]] nimen merkityksestä ei ole luotettavaa tietoa minulla, eikä arvaus olisi hyvä. Tiedän, että paikalla oli vanha liiviläinen kalastajakylä, joka mainitaan ensimmäisen kerran vuonna 1564, ja että kaupungin virolainen nimi on [[Heinaste]]. Nimen taustalla voi olla liiviläistä paikannimistöä, mutta se on pelkkä mahdollisuus, ei tieto. Paikallinen kielentutkija tai merikoulun museo voisi osata vastata. Harmi, ois ollut kiva selittää.
+KYSYMYS: Kerro lisää: Heinaste
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Kuka oli Krišjānis Valdemārs?
+AIEMPI VASTAUS (Livia):
+No niin. [[Krišjānis Valdemārs]] eli 1800-luvulla ja oli latvialainen kirjailija, toimittaja ja kansallisen heräämisen johtohahmo, joka kuului [[nuorlatvialaisten]] liikkeeseen. Hän ajoi latvian kielen ja kulttuurin asemaa sekä merenkulun kehittämistä, koska piti sitä keinona nostaa talonpoikien asemaa. Vuonna 1864 hän rahoitti Ainažin merikoulun, joka koulutti nuoria talonpoikia laivanpäälliköiksi maksutta. Tarkkoja syntymä- ja kuolinvuosia en ole varma, joten jätän ne mainitsematta. Koulun ansiosta Ainaži tunnetaan yhä merenkulun historiassa. Isoja asioita yhdeltä ihmiseltä, mut tarina on tosi.
+KYSYMYS: Kerro lisää: Krišjānis Valdemārs
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Kuka oli Krišjānis Valdemārs?
+AIEMPI VASTAUS (Livia):
+No niin. [[Krišjānis Valdemārs]] eli 1800-luvulla ja oli latvialainen kirjailija, toimittaja ja kansallisen heräämisen johtohahmo, joka kuului [[nuorlatvialaisten]] liikkeeseen. Hän ajoi latvian kielen ja kulttuurin asemaa sekä merenkulun kehittämistä, koska piti sitä keinona nostaa talonpoikien asemaa. Vuonna 1864 hän rahoitti Ainažin merikoulun, joka koulutti nuoria talonpoikia laivanpäälliköiksi maksutta. Tarkkoja syntymä- ja kuolinvuosia en ole varma, joten jätän ne mainitsematta. Koulun ansiosta Ainaži tunnetaan yhä merenkulun historiassa. Isoja asioita yhdeltä ihmiseltä, mut tarina on tosi.
+KYSYMYS: Kerro lisää: nuorlatvialaisten
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Mikä Riianlahti on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Riianlahti]] on Itämeren lahti, jonka rannoilla ovat Latvia ja Viro. Sen suuta rajaavat [[Saaremaa]] ja muut Viron saaret, ja siihen laskevat muun muassa Väinäjoki eli Daugava sekä Gauja. Lahti on suhteellisen matala ja sen suolaisuus on pienempi kuin valtameressä, ja talvella se voi jäätyä. Rannalla sijaitsevat Riika, Ainaži ja Carnikava. Tarkkoja syvyyksiä tai pinta-aloja en ole varma. Näkymä on ylhäältä mukavan harmaa, mut kyl se kuuluu kyyhkyn reviiriin.
+KYSYMYS: Kerro lisää: Riianlahti
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Mikä Riianlahti on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Riianlahti]] on Itämeren lahti, jonka rannoilla ovat Latvia ja Viro. Sen suuta rajaavat [[Saaremaa]] ja muut Viron saaret, ja siihen laskevat muun muassa Väinäjoki eli Daugava sekä Gauja. Lahti on suhteellisen matala ja sen suolaisuus on pienempi kuin valtameressä, ja talvella se voi jäätyä. Rannalla sijaitsevat Riika, Ainaži ja Carnikava. Tarkkoja syvyyksiä tai pinta-aloja en ole varma. Näkymä on ylhäältä mukavan harmaa, mut kyl se kuuluu kyyhkyn reviiriin.
+KYSYMYS: Kerro lisää: Saaremaa
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Punta Arenas — kaupunkilehti / Punta Arenas: Kuunari, joka rakennettiin yhtä matkaa varten] Chile lähetti 1843 retkikunnan rakentamaan linnakkeen salmen rannalle. Sitä varten rakennettiin San Carlos de Ancudissa kuunari Ancud, ensimmäinen Chilessä rakennettu sota-alus: viisitoista metriä pitkä ja neljällä tykillä varustettu. Komentajana oli britannialaissyntyinen Chilen laivaston upseeri John Williams Wilson. Aluksen oma artikkeli laskee kannella olleen kaksikymmentäkolme ihmistä, joista kaksi naista ja yksi lapsi; kaupungin artikkeli laskee kaksikymmentäyksi. Ancud lähti 22. toukokuuta ja saapui Punta Santa Analle 21. syyskuuta 1843. Koko miehistö nousi maihin, ja rantaan jätettiin kyltti sanoilla Viva Chile.
+AIEMPI KYSYMYS: Mitä eroa on kuunarilla ja briikillä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Kuunari]] on purjealus, jossa on kaksi tai useampi masto ja pääosin pitkittäispurjeet, jotka asettuvat aluksen suuntaisesti. [[Briikki]] taas on kaksimastoinen alus, jossa on pääosin poikittaispurjeet eli ristipurjeet. Pitkittäispurjeiden vuoksi kuunari kulkee yleensä hyvin tuulta vasten, kun taas ristipurjeet sopivat tuulen takana purjehtimiseen. Molempia tyyppejä rakennettiin ja käytettiin 1800-luvulla Itämerellä ja muualla. Yksityiskohdat vaihtelivat alusten mukaan, enkä ole varma, millaisia alukset olivat Ainažissa. Purjeet kyl kutkuttaa siipiä.
+KYSYMYS: Kerro lisää: Kuunari
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ainaži (merenkulku)
+Tietoruudun teksti: Ainaži on Riianlahden rannalla sijaitseva latvialainen satamakaupunki heti Viron rajan eteläpuolella, vanhan liiviläisen kalastajakylän paikalla. Kylä mainitaan ensimmäisen kerran vuonna 1564, ja 1870-luvulla alkoi voimakas kasvun aika laivanrakennuksen ja merenkulun myötä. Vidzemen ja Kuurinmaan mäntymetsät tarjosivat rakennuspuuta, ja vuonna 1864 Krišjānis Valdemārs rahoitti Ainažin merikoulun, Liivinmaan ensimmäisen, joka koulutti nuoria virolaisia ja latvialaisia talonpoikia laivanpäälliköiksi maksutta. Koulun ensimmäinen rehtori oli tutkimusmatkailija Christian Dahl. Nykyään merikoulun rakennuksessa toimii Ainažin merikoulun museo, joka esittelee koulun ja Vidzemen rannikon laivanrakennuksen historiaa.
+AIEMPI KYSYMYS: Mitä eroa on kuunarilla ja briikillä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Kuunari]] on purjealus, jossa on kaksi tai useampi masto ja pääosin pitkittäispurjeet, jotka asettuvat aluksen suuntaisesti. [[Briikki]] taas on kaksimastoinen alus, jossa on pääosin poikittaispurjeet eli ristipurjeet. Pitkittäispurjeiden vuoksi kuunari kulkee yleensä hyvin tuulta vasten, kun taas ristipurjeet sopivat tuulen takana purjehtimiseen. Molempia tyyppejä rakennettiin ja käytettiin 1800-luvulla Itämerellä ja muualla. Yksityiskohdat vaihtelivat alusten mukaan, enkä ole varma, millaisia alukset olivat Ainažissa. Purjeet kyl kutkuttaa siipiä.
+KYSYMYS: Kerro lisää: Briikki
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Alankomaat — maalehti / Luonto ja vesi: Entisellä merenpohjalla laiduntaa hevoslauma] 1968 — Flevolandin maakunta on kokonaan tehtyä maata: se pumpattiin kuiviin entisen Zuiderzeen pohjalta vuosina 1950–1968. Yhden polderin nurkkaan jäi kosteikko, jota ei ehditty rakentaa, ja siitä tuli Oostvaardersplassen. Sinne päästettiin 1983 kolmekymmentäkaksi heck-nautaa ja seuraavana vuonna kaksikymmentä konik-hevosta pitämään maisemaa avoimena; vuonna 1992 tulivat saksanhirvet. Vuonna 2006 alueelle asettui pesimään merikotka — paikkaan, joka oli neljäkymmentä vuotta aiemmin ollut meren pohjaa.
+AIEMPI KYSYMYS: Miksi Papeen tuotiin Heck-nautoja, konikhevosia ja visenttejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, laiduntajia. Hyvä kysymys tuo. Papeen tuotiin vuonna 1999 [[Heck-nautoja]] ja [[konikhevosia]] sekä muutamaa vuotta myöhemmin [[visenttejä]], jotta alueelle saataisiin takaisin suurten kasvinsyöjien luontainen vaikutus. Laiduntavat eläimet syövät ja tallaavat ruohoa, pensaita ja vesakkoa, jolloin kosteikot ja niityt pysyvät avoimina eivätkä umpeudu metsäksi. Avoin ja vaihteleva maasto sopii monille linnuille ja kasveille, ja laiduntajat tekevät hoitotyön ilman koneita. Eläinlajit muistuttavat Euroopan luonnon alkuperäisiä suurnisäkkäitä: Heck-nautaa on jalostettu muistuttamaan sukupuuttoon kuollutta alkuhärkää, konik on puolalaista alkuperää oleva hevosrotu ja visentti on Euroopassa luontaisesti elänyt suurnisäkäs. Näiden ansiosta Papen nisäkaslajisto on nykyään lähes täydellinen. No olipas siin pitkä laidun.
+KYSYMYS: Kerro lisää: Heck-nautoja
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Miksi Papeen tuotiin Heck-nautoja, konikhevosia ja visenttejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, laiduntajia. Hyvä kysymys tuo. Papeen tuotiin vuonna 1999 [[Heck-nautoja]] ja [[konikhevosia]] sekä muutamaa vuotta myöhemmin [[visenttejä]], jotta alueelle saataisiin takaisin suurten kasvinsyöjien luontainen vaikutus. Laiduntavat eläimet syövät ja tallaavat ruohoa, pensaita ja vesakkoa, jolloin kosteikot ja niityt pysyvät avoimina eivätkä umpeudu metsäksi. Avoin ja vaihteleva maasto sopii monille linnuille ja kasveille, ja laiduntajat tekevät hoitotyön ilman koneita. Eläinlajit muistuttavat Euroopan luonnon alkuperäisiä suurnisäkkäitä: Heck-nautaa on jalostettu muistuttamaan sukupuuttoon kuollutta alkuhärkää, konik on puolalaista alkuperää oleva hevosrotu ja visentti on Euroopassa luontaisesti elänyt suurnisäkäs. Näiden ansiosta Papen nisäkaslajisto on nykyään lähes täydellinen. No olipas siin pitkä laidun.
+KYSYMYS: Kerro lisää: konikhevosia
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Eläimet kaupungissa: Visentti pelastui kaupungin mäellä] 1891 — Djurgårdenin Skansen avattiin 1891, ja sinne siirrettiin kokonaisia taloja ympäri Ruotsia. Malli levisi niin laajalle, että monessa kielessä sana skansen tarkoittaa yhä ulkoilmamuseota. Skansenilla pidettiin myös visenttejä, Euroopan raskaimpia maaeläimiä. Kun laji oli 1920-luvulla katoamassa, koko maailmassa oli enää 54 visenttiä — ja kaksi niistä eli täällä. Vuonna 1929 Skansenilta lähetettiin hiehoja Puolan Białowieżaan, jonne laji päästettiin takaisin metsään 1952.
+AIEMPI KYSYMYS: Miksi Papeen tuotiin Heck-nautoja, konikhevosia ja visenttejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, laiduntajia. Hyvä kysymys tuo. Papeen tuotiin vuonna 1999 [[Heck-nautoja]] ja [[konikhevosia]] sekä muutamaa vuotta myöhemmin [[visenttejä]], jotta alueelle saataisiin takaisin suurten kasvinsyöjien luontainen vaikutus. Laiduntavat eläimet syövät ja tallaavat ruohoa, pensaita ja vesakkoa, jolloin kosteikot ja niityt pysyvät avoimina eivätkä umpeudu metsäksi. Avoin ja vaihteleva maasto sopii monille linnuille ja kasveille, ja laiduntajat tekevät hoitotyön ilman koneita. Eläinlajit muistuttavat Euroopan luonnon alkuperäisiä suurnisäkkäitä: Heck-nautaa on jalostettu muistuttamaan sukupuuttoon kuollutta alkuhärkää, konik on puolalaista alkuperää oleva hevosrotu ja visentti on Euroopassa luontaisesti elänyt suurnisäkäs. Näiden ansiosta Papen nisäkaslajisto on nykyään lähes täydellinen. No olipas siin pitkä laidun.
+KYSYMYS: Kerro lisää: visenttejä
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Miksi Papen alue on tärkeä muuttolinnuille?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on lähellä sydäntä, kun puhutaan siivekkäistä. Pape sijaitsee Latvian lounaisosassa [[Itämeren]] rannikon tuntumassa, ja alueen keskellä on [[Papen järvi]], matala ja laguunityyppinen vesistö, jota ympäröivät suot, soistuneet metsät ja dyynit. Tällainen vaihteleva kosteikkomaisema tarjoaa pesiville linnuille suojaisia pesimäpaikkoja ja muuttaville linnuille ravintoa sekä lepopaikan pitkän lennon aikana. Itämeren itärannikko on [[muuttolintujen]] käyttämää reittiä, ja Pape perustettiin luonnonpuistoksi vuonna 2003 nimenomaan pesivien ja muuttavien lintujen suojelemiseksi. Joka syksy alueella levähtää noin 50 000 lintua. Siel on kyl ruuhkaa syksyisin.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Miksi Papen alue on tärkeä muuttolinnuille?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on lähellä sydäntä, kun puhutaan siivekkäistä. Pape sijaitsee Latvian lounaisosassa [[Itämeren]] rannikon tuntumassa, ja alueen keskellä on [[Papen järvi]], matala ja laguunityyppinen vesistö, jota ympäröivät suot, soistuneet metsät ja dyynit. Tällainen vaihteleva kosteikkomaisema tarjoaa pesiville linnuille suojaisia pesimäpaikkoja ja muuttaville linnuille ravintoa sekä lepopaikan pitkän lennon aikana. Itämeren itärannikko on [[muuttolintujen]] käyttämää reittiä, ja Pape perustettiin luonnonpuistoksi vuonna 2003 nimenomaan pesivien ja muuttavien lintujen suojelemiseksi. Joka syksy alueella levähtää noin 50 000 lintua. Siel on kyl ruuhkaa syksyisin.
+KYSYMYS: Kerro lisää: Papen järvi
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+- [Tunisia — maalehti / Meri: Järvi, jonka padot melkein tappoivat] 1980–2006 — Ichkeulin järvi on Pohjois-Tunisiassa, parikymmentä kilometriä Bizertestä, Afrikan pohjoisimmasta kaupungista. Kansallispuisto on 126 neliökilometriä ja pääsi maailmanperintöluetteloon 1980. Järvi ja sen kosteikot ovat satojentuhansien muuttolintujen levähdyspaikka: sorsia, hanhia, kattohaikaroita ja flamingoja. Sitten järveen laskevat joet padottiin, makean veden tulo väheni, ja ruovikot ja sarat vaihtuivat suolaa sietäviin kasveihin — lintumäärät romahtivat. Kohde siirrettiin uhanalaisten maailmanperintökohteiden listalle 1996 ja poistettiin siltä 2006, kun suolaisuutta oli saatu laskemaan.
+AIEMPI KYSYMYS: Miksi Papen alue on tärkeä muuttolinnuille?
+AIEMPI VASTAUS (Livia):
+Mmm— tää on lähellä sydäntä, kun puhutaan siivekkäistä. Pape sijaitsee Latvian lounaisosassa [[Itämeren]] rannikon tuntumassa, ja alueen keskellä on [[Papen järvi]], matala ja laguunityyppinen vesistö, jota ympäröivät suot, soistuneet metsät ja dyynit. Tällainen vaihteleva kosteikkomaisema tarjoaa pesiville linnuille suojaisia pesimäpaikkoja ja muuttaville linnuille ravintoa sekä lepopaikan pitkän lennon aikana. Itämeren itärannikko on [[muuttolintujen]] käyttämää reittiä, ja Pape perustettiin luonnonpuistoksi vuonna 2003 nimenomaan pesivien ja muuttavien lintujen suojelemiseksi. Joka syksy alueella levähtää noin 50 000 lintua. Siel on kyl ruuhkaa syksyisin.
+KYSYMYS: Kerro lisää: muuttolintujen
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Mikä on dyyni ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dyyni on tuulen kasaama hiekkakumpu. Se syntyy, kun tuuli kuljettaa kuivaa hiekkaa rannalta sisämaahan päin ja hiekka pysähtyy esteen, esimerkiksi kasvin tai kiven taakse, ja alkaa kasautua. Kasvillisuus on tärkeä osa tapahtumaa, sillä juurakot ja varret sitovat hiekkaa ja antavat dyynille mahdollisuuden kasvaa korkeammaksi. Ajan mittaan dyynille voi alkaa kasvaa heinää, [[kanervaa]] ja lopulta puita, jolloin kumpu vakiintuu. Jos kasvillisuus katoaa, tuuli voi taas siirrellä hiekkaa ja dyyni vaeltaa. [[Papen luonnonpuiston]] dyynit ovat osa [[rannikkoluontoa]], jossa kosteat suot ja kuivat hiekkamaat vaihtelevat lähekkäin.
+
+Dyynin harjalta näkee kauas, mutta tuuli yrittää viedä kyyhkyn mukanaan. Minä kokeilin kerran ja päädyin kolme kilometriä väärään suuntaan.
+KYSYMYS: Kerro lisää: kanervaa
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Mikä on dyyni ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dyyni on tuulen kasaama hiekkakumpu. Se syntyy, kun tuuli kuljettaa kuivaa hiekkaa rannalta sisämaahan päin ja hiekka pysähtyy esteen, esimerkiksi kasvin tai kiven taakse, ja alkaa kasautua. Kasvillisuus on tärkeä osa tapahtumaa, sillä juurakot ja varret sitovat hiekkaa ja antavat dyynille mahdollisuuden kasvaa korkeammaksi. Ajan mittaan dyynille voi alkaa kasvaa heinää, [[kanervaa]] ja lopulta puita, jolloin kumpu vakiintuu. Jos kasvillisuus katoaa, tuuli voi taas siirrellä hiekkaa ja dyyni vaeltaa. [[Papen luonnonpuiston]] dyynit ovat osa [[rannikkoluontoa]], jossa kosteat suot ja kuivat hiekkamaat vaihtelevat lähekkäin.
+
+Dyynin harjalta näkee kauas, mutta tuuli yrittää viedä kyyhkyn mukanaan. Minä kokeilin kerran ja päädyin kolme kilometriä väärään suuntaan.
+KYSYMYS: Kerro lisää: Papen luonnonpuiston
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mikä on dyyni ja miten se syntyy?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dyyni on tuulen kasaama hiekkakumpu. Se syntyy, kun tuuli kuljettaa kuivaa hiekkaa rannalta sisämaahan päin ja hiekka pysähtyy esteen, esimerkiksi kasvin tai kiven taakse, ja alkaa kasautua. Kasvillisuus on tärkeä osa tapahtumaa, sillä juurakot ja varret sitovat hiekkaa ja antavat dyynille mahdollisuuden kasvaa korkeammaksi. Ajan mittaan dyynille voi alkaa kasvaa heinää, [[kanervaa]] ja lopulta puita, jolloin kumpu vakiintuu. Jos kasvillisuus katoaa, tuuli voi taas siirrellä hiekkaa ja dyyni vaeltaa. [[Papen luonnonpuiston]] dyynit ovat osa [[rannikkoluontoa]], jossa kosteat suot ja kuivat hiekkamaat vaihtelevat lähekkäin.
+
+Dyynin harjalta näkee kauas, mutta tuuli yrittää viedä kyyhkyn mukanaan. Minä kokeilin kerran ja päädyin kolme kilometriä väärään suuntaan.
+KYSYMYS: Kerro lisää: rannikkoluontoa
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Miten suo syntyy ja miksi soita suojellaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kosteikkoaiheista. Suo syntyy paikkaan, jossa maa on märkää niin pitkään, että kuolleet kasvit eivät ehdi hajota kokonaan. Vähähappisessa vedessä kasvijäte kerääntyy kerros kerrokselta [[turpeeksi]], ja tuhansien vuosien kuluessa syntyy paksu turvekerros. Soita suojellaan, koska ne ovat monien harvinaisten kasvien, hyönteisten ja lintujen elinympäristöjä ja koska ne tasaavat vesiä: suo sitoo sadevettä kuin sieni ja vapauttaa sen hitaasti. Turve sisältää myös suuren määrän [[hiiltä]], jota ojitettu ja kuivatettu suo päästää ilmaan. Papen alueella suot ja soistuneet metsät ovat osa luonnonpuiston kokonaisuutta. Märkä aihe, mut kyl se kuivasti meni.
+KYSYMYS: Kerro lisää: turpeeksi
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miten suo syntyy ja miksi soita suojellaan?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tää on kosteikkoaiheista. Suo syntyy paikkaan, jossa maa on märkää niin pitkään, että kuolleet kasvit eivät ehdi hajota kokonaan. Vähähappisessa vedessä kasvijäte kerääntyy kerros kerrokselta [[turpeeksi]], ja tuhansien vuosien kuluessa syntyy paksu turvekerros. Soita suojellaan, koska ne ovat monien harvinaisten kasvien, hyönteisten ja lintujen elinympäristöjä ja koska ne tasaavat vesiä: suo sitoo sadevettä kuin sieni ja vapauttaa sen hitaasti. Turve sisältää myös suuren määrän [[hiiltä]], jota ojitettu ja kuivatettu suo päästää ilmaan. Papen alueella suot ja soistuneet metsät ovat osa luonnonpuiston kokonaisuutta. Märkä aihe, mut kyl se kuivasti meni.
+KYSYMYS: Kerro lisää: hiiltä
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Mikä Liepāja on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Liepāja]] on Latvian länsirannikon satamakaupunki Itämeren rannalla, noin viidentoista kilometrin päässä Papen luonnonpuistosta pohjoiseen. Se on yksi Latvian suurimmista kaupungeista, ja sillä on pitkä ja leveä hiekkaranta. Kaupunkia kutsutaan usein tuulten kaupungiksi, ja meri vaikuttaa sen ilmastoon. Kaupunginosa [[Karosta]] on entinen sotasatama, jossa on säilynyt laajoja sotilasrakennuksia. Tuulessa lentäminen on kyl sukuammattini.
+KYSYMYS: Kerro lisää: Liepāja
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pape (eläimet)
+Tietoruudun teksti: Pape on luonnonpuisto Latvian lounaisosassa, noin 15 kilometriä Liepājasta etelään. Yli 5 700 hehtaarin alue koostuu pääosin soista, soistuneista metsistä ja dyyneistä Papen järven ympärillä; matala, laguunityyppinen järvi on tärkeä suojelukohde. Alue perustettiin luonnonpuistoksi vuonna 2003 suojelemaan pesiviä ja muuttavia lintuja, ja joka syksy siellä levähtää noin 50 000 lintua. Papeen tuotiin vuonna 1999 Heck-nautoja ja konikhevosia sekä muutamaa vuotta myöhemmin visenttejä, ja niin alueen nisäkaslajisto on nykyään lähes täydellinen.
+AIEMPI KYSYMYS: Mikä Liepāja on ja missä se sijaitsee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Liepāja]] on Latvian länsirannikon satamakaupunki Itämeren rannalla, noin viidentoista kilometrin päässä Papen luonnonpuistosta pohjoiseen. Se on yksi Latvian suurimmista kaupungeista, ja sillä on pitkä ja leveä hiekkaranta. Kaupunkia kutsutaan usein tuulten kaupungiksi, ja meri vaikuttaa sen ilmastoon. Kaupunginosa [[Karosta]] on entinen sotasatama, jossa on säilynyt laajoja sotilasrakennuksia. Tuulessa lentäminen on kyl sukuammattini.
+KYSYMYS: Kerro lisää: Karosta
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri kahden joen yhtymäkohtaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bauskan linna rakennettiin vuosina 1443–1450 [[Mūsan]] ja [[Mēmelen]] jokien yhtymäkohtaan kohoavalle niemekkeelle. Kahden joen välinen niemeke on yleensä helposti puolustettava, koska vesi suojaa sitä useammalta sivulta. Samalla paikka oli luonteva kohta valvoa liikennettä, sillä linna vartioi kauppareittiä Liettuasta Riikaan. Paikalla oli jo aiemmin ollut semigallialainen linnavuori, mikä kertoo, että paikka oli puolustettavaksi sopiva jo ennen ritarikuntaa. Linna vahvisti [[Liivinmaan ritarikunnan]] valtaa Semgallian alueella. Joki on kyyhkyllekin hyvä maamerkki.
+KYSYMYS: Kerro lisää: Mūsan
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri kahden joen yhtymäkohtaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bauskan linna rakennettiin vuosina 1443–1450 [[Mūsan]] ja [[Mēmelen]] jokien yhtymäkohtaan kohoavalle niemekkeelle. Kahden joen välinen niemeke on yleensä helposti puolustettava, koska vesi suojaa sitä useammalta sivulta. Samalla paikka oli luonteva kohta valvoa liikennettä, sillä linna vartioi kauppareittiä Liettuasta Riikaan. Paikalla oli jo aiemmin ollut semigallialainen linnavuori, mikä kertoo, että paikka oli puolustettavaksi sopiva jo ennen ritarikuntaa. Linna vahvisti [[Liivinmaan ritarikunnan]] valtaa Semgallian alueella. Joki on kyyhkyllekin hyvä maamerkki.
+KYSYMYS: Kerro lisää: Mēmelen
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri kahden joen yhtymäkohtaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bauskan linna rakennettiin vuosina 1443–1450 [[Mūsan]] ja [[Mēmelen]] jokien yhtymäkohtaan kohoavalle niemekkeelle. Kahden joen välinen niemeke on yleensä helposti puolustettava, koska vesi suojaa sitä useammalta sivulta. Samalla paikka oli luonteva kohta valvoa liikennettä, sillä linna vartioi kauppareittiä Liettuasta Riikaan. Paikalla oli jo aiemmin ollut semigallialainen linnavuori, mikä kertoo, että paikka oli puolustettavaksi sopiva jo ennen ritarikuntaa. Linna vahvisti [[Liivinmaan ritarikunnan]] valtaa Semgallian alueella. Joki on kyyhkyllekin hyvä maamerkki.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunnan
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui Ison Pohjan sodassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Kyllä rauniot kertovat omaa kieltään. Vuonna 1706 sodan aikana perääntyvät venäläisjoukot räjäyttivät sekä keskiaikaisen linnan että herttuoiden palatsin. Sota päättyi vasta vuonna 1721, ja Bauska kuului tuolloin [[Kuurinmaan ja Semgallian herttuakunnan]] alueeseen. Räjäytys jätti rakennukset raunioiksi, eikä niitä korjattu yli 150 vuoteen. [[Restaurointia]] on tehty 1990-luvulta alkaen, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Kuurinmaan ja Semgallian herttuakunnan
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+AIEMPI KYSYMYS: Mitä linnalle tapahtui Ison Pohjan sodassa?
+AIEMPI VASTAUS (Livia):
+No jopas. Kyllä rauniot kertovat omaa kieltään. Vuonna 1706 sodan aikana perääntyvät venäläisjoukot räjäyttivät sekä keskiaikaisen linnan että herttuoiden palatsin. Sota päättyi vasta vuonna 1721, ja Bauska kuului tuolloin [[Kuurinmaan ja Semgallian herttuakunnan]] alueeseen. Räjäytys jätti rakennukset raunioiksi, eikä niitä korjattu yli 150 vuoteen. [[Restaurointia]] on tehty 1990-luvulta alkaen, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot. Onpas siit onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Restaurointia
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+AIEMPI KYSYMYS: Keitä semgallit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Semgallit olivat [[balttilaisiin heimoihin]] kuuluva kansa, joka asui nykyisen Etelä-Latvian ja Pohjois-Liettuan alueilla. Heidän alueensa nimi on latviaksi [[Zemgale]], ja heimon nimi elää yhä alueen nimessä. Semgallit tunnettiin linnavuorista, joita ympäröivät puolustusvallit; Bauskan niemekkeellä oli sellainen ennen keskiaikaista linnaa. Heimo vastusti ristiretkiaikaisia valloittajia vuosikymmenien ajan, mutta joutui lopulta 1200-luvun lopulla [[Liivinmaan ritarikunnan]] vallan alle. Osa semgalleista siirtyi Liettuaan ja osa sulautui latvialaisiin.
+
+Vanhat linnavuoret erottuvat maisemasta vieläkin, ja minä katson niitä aina vähän pidempään. Ne ovat kuin maan oma muistikirja.
+KYSYMYS: Kerro lisää: balttilaisiin heimoihin
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+AIEMPI KYSYMYS: Keitä semgallit olivat?
+AIEMPI VASTAUS (Livia):
+Ai tota. Semgallit olivat [[balttilaisiin heimoihin]] kuuluva kansa, joka asui nykyisen Etelä-Latvian ja Pohjois-Liettuan alueilla. Heidän alueensa nimi on latviaksi [[Zemgale]], ja heimon nimi elää yhä alueen nimessä. Semgallit tunnettiin linnavuorista, joita ympäröivät puolustusvallit; Bauskan niemekkeellä oli sellainen ennen keskiaikaista linnaa. Heimo vastusti ristiretkiaikaisia valloittajia vuosikymmenien ajan, mutta joutui lopulta 1200-luvun lopulla [[Liivinmaan ritarikunnan]] vallan alle. Osa semgalleista siirtyi Liettuaan ja osa sulautui latvialaisiin.
+
+Vanhat linnavuoret erottuvat maisemasta vieläkin, ja minä katson niitä aina vähän pidempään. Ne ovat kuin maan oma muistikirja.
+KYSYMYS: Kerro lisää: Zemgale
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Kuvataide: Venus nousi merestä Firenzessä] Sandro Botticellin Venus nousee merestä simpukankuoressa, ja tuulet puhaltavat sen rantaan ruusujen sateessa. Maalaus syntyi 1480-luvun Firenzessä Medici-suvun tilauksesta, ja se oli rohkea teko: ensimmäisiä suuria maalauksia vuosisatoihin, joiden aihe ei ollut Raamatusta vaan antiikin tarustosta. Vuosisatoja myöhemmin siitä on tullut yksi maailman tunnistetuimmista kuvista — Venus katsoo ohi, kuin ei huomaisi koko mainetta.
+AIEMPI KYSYMYS: Mitä tarkoittaa renessanssi arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Renessanssi tarkoittaa arkkitehtuurissa tyyliä, joka syntyi [[Firenzessä]] 1400-luvulla ja palasi [[antiikin]] Rooman ja Kreikan esikuviin. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, pyöreät kaaret ja kupolit. Rakennuksen osat suunniteltiin suhteessa toisiinsa ja ihmisen mittakaavaan, eikä enää [[gotiikan]] korkeuteen pyrkivien holvien ja suippokaarien mukaan. Tyyli levisi Italiasta pohjoiseen vähitellen, ja Pohjois-Euroopassa se näkyi usein vanhojen linnojen uusina siipinä ja palatseina 1500-luvun lopulta alkaen. Roomalaiset sukulaiseni olisivat varmasti ylpeitä.
+KYSYMYS: Kerro lisää: Firenzessä
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+AIEMPI KYSYMYS: Mitä tarkoittaa renessanssi arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Renessanssi tarkoittaa arkkitehtuurissa tyyliä, joka syntyi [[Firenzessä]] 1400-luvulla ja palasi [[antiikin]] Rooman ja Kreikan esikuviin. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, pyöreät kaaret ja kupolit. Rakennuksen osat suunniteltiin suhteessa toisiinsa ja ihmisen mittakaavaan, eikä enää [[gotiikan]] korkeuteen pyrkivien holvien ja suippokaarien mukaan. Tyyli levisi Italiasta pohjoiseen vähitellen, ja Pohjois-Euroopassa se näkyi usein vanhojen linnojen uusina siipinä ja palatseina 1500-luvun lopulta alkaen. Roomalaiset sukulaiseni olisivat varmasti ylpeitä.
+KYSYMYS: Kerro lisää: antiikin
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kohdekartta / Kohdekartta: Pyhän Andreaksen katedraali] 1837–1868 Macquarie suunnitteli Greenwayn kanssa katedraalia, joka olisi ollut 61 metriä joka suuntaan ja seissyt suurella aukiolla muiden julkisten talojen keskellä. Peruskivi laskettiin juhlallisesti 31. elokuuta 1819, mutta työ jäi perustuksiin: suunnitelma hylättiin ja paikkaa siirrettiin, jotta George Street saatiin kulkemaan suorana. Piispa William Grant Broughton laski uuden peruskiven 1837 James Humen paljon vaatimattomampien piirustusten mukaan, ja työ pysähtyi 1842 kuivuuteen ja lamaan, kun muurit olivat noin viiden metrin korkuiset. Samana vuonna 1842 Broughtonin luo saapui Edmund Blacket mukanaan Canterburyn arkkipiispan suosituskirje. Hänestä tuli siirtomaan arkkitehti 1849–185…
+- [Adelaide — kohdekartta / Kohdekartta: St Peterin katedraali] 1869–1904 Adelaiden hiippakunta perustettiin kesäkuussa 1847, ja ensimmäinen piispa Augustus Short piti ensimmäiset vihkimyksensä 29. kesäkuuta 1848 — Pietarin päivänä. Katedraalia ei ollut, mutta tontti näytti olevan: kuvernööri Robe myönsi maaliskuussa 1848 palan Victoria Squarea, ja lahjoitus kirjattiin 23. huhtikuuta 1851. Sitten alettiin julkisesti kysyä, oliko kuvernöörillä ollut oikeutta luovuttaa yleistä puistoaluetta. Short vei asian itse korkeimpaan oikeuteen, ja kesäkuussa 1855 tuomio tuli: lahjoitus oli pätemätön eikä rakentamista voitu aloittaa. Piispa osti runsaan eekkerin maata Pennington Terracelta North Adelaidesta 8. elokuuta 1862. Piirustukset tilattiin Englannista Willia…
+AIEMPI KYSYMYS: Mitä tarkoittaa renessanssi arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Renessanssi tarkoittaa arkkitehtuurissa tyyliä, joka syntyi [[Firenzessä]] 1400-luvulla ja palasi [[antiikin]] Rooman ja Kreikan esikuviin. Tyylille ovat ominaisia symmetria, selkeät mittasuhteet, pylväät, pyöreät kaaret ja kupolit. Rakennuksen osat suunniteltiin suhteessa toisiinsa ja ihmisen mittakaavaan, eikä enää [[gotiikan]] korkeuteen pyrkivien holvien ja suippokaarien mukaan. Tyyli levisi Italiasta pohjoiseen vähitellen, ja Pohjois-Euroopassa se näkyi usein vanhojen linnojen uusina siipinä ja palatseina 1500-luvun lopulta alkaen. Roomalaiset sukulaiseni olisivat varmasti ylpeitä.
+KYSYMYS: Kerro lisää: gotiikan
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Miksi Riika oli keskiajalla tärkeä kauppakaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Riika perustettiin 1200-luvun alussa [[Väinäjoen]] suulle, ja paikka oli kaupankäynnille erinomainen: joki avasi reitin kauas sisämaahan ja joen suulla oli satama Itämerelle. Keskiajalla kaupunki kuului [[Hansaliittoon]], pohjoiseurooppalaisten kauppakaupunkien yhteenliittymään, ja sen kautta kulki sisämaan tuotteita merelle ja meren tuotteita sisämaahan. Samalla Riika oli myös [[Liivinmaan ritarikunnan]] ja kirkon tärkeä keskus. Satamissa on kyl aina parhaat leipomot.
+KYSYMYS: Kerro lisää: Väinäjoen
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bauskan linna (historia)
+Tietoruudun teksti: Liivinmaan ritarikunta rakensi Bauskan linnan vuosina 1443–1450 Mūsan ja Mēmelen jokien yhtymäkohtaan kohoavalle niemekkeelle, jonka paikalla oli aiemmin semigallialainen linnavuori. Linna vahvisti ritarikunnan valtaa Semgallian alueella ja vartioi kauppareittiä Liettuasta Riikaan. Ritarikunnan hajottua 1500-luvun puolivälissä linnasta tuli Kuurinmaan ja Semgallian herttuakunnan yksi pääasunnoista, ja siihen lisättiin 1590-luvulla uusi renessanssisiipi kahdine massiivisine pyöreine torneineen. Ison Pohjan sodan aikana vuonna 1706 perääntyvät venäläisjoukot räjäyttivät sekä vanhan linnan että palatsin, ja rauniot jäivät korjaamatta yli 150 vuodeksi. Vasta 1990-luvulta alkaen niitä on osittain restauroitu, ja nykyään kunnostettu palatsiosa toimii museona, kun taas keskiaikaisesta linnasta on jäljellä vain rauniot.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi Riika oli keskiajalla tärkeä kauppakaupunki?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Riika perustettiin 1200-luvun alussa [[Väinäjoen]] suulle, ja paikka oli kaupankäynnille erinomainen: joki avasi reitin kauas sisämaahan ja joen suulla oli satama Itämerelle. Keskiajalla kaupunki kuului [[Hansaliittoon]], pohjoiseurooppalaisten kauppakaupunkien yhteenliittymään, ja sen kautta kulki sisämaan tuotteita merelle ja meren tuotteita sisämaahan. Samalla Riika oli myös [[Liivinmaan ritarikunnan]] ja kirkon tärkeä keskus. Satamissa on kyl aina parhaat leipomot.
+KYSYMYS: Kerro lisää: Hansaliittoon
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Kadut ja sulut: Lohi nousee eduskuntatalon vierestä] Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä, ja siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes kaksikymmentäkaksi kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Aina ei ollut näin. Kalat palasivat vasta 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen asti.
+- [Ruotsi — maalehti / Eläimet kaupungissa: Lohi ui eduskuntatalon ohi] 2000 — Norrström on virta, jota pitkin Mälarenin vesi syöksyy mereen aivan eduskuntatalon vierestä. Siitä nostetaan joka vuosi satoja lohia ja meritaimenia: vuonna 2000 saatiin lohi, joka painoi lähes 22 kiloa. Vedessä elää noin kolmekymmentä kalalajia, enemmän kuin missään muualla Tukholman seudun vesissä. Kalat palasivat 1970-luvulla aloitettujen istutusten myötä, ja vuonna 2024 vanha vuoden 1850 sulku muutettiin kalatieksi, jota myöten kalat pääsevät nousemaan järveen.
+AIEMPI KYSYMYS: Miten kala voi hypätä vesiputouksen yli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kalat ovat aika taitavia akrobaatteja. [[Lohi]] ja monet muut vaelluskalat nousevat jokiin kutemaan, ja matkalla on usein koski tai pato. Kala kerää ensin vauhtia syvästä kuopasta putouksen alapuolella ja potkaisee itsensä pyrstön voimakkaalla lyönnillä vedestä ilmaan. Parin metrin korkuinen este on lohelle mahdollinen, vaikka useampi yritys voi vaatia aikansa. Kuldīgan [[Venta-joen]] putousta kutsutaan latviaksi nimellä [[Ventas rumba]], ja [[herttua Jaakobin]] ajalta kerrotaan, että kaupunki tunnettiin lohesta, joka pyydettiin ilmasta pajukoreihin. Hyppy on lihasvoimaa ja ajoitusta, ja veden nopeus ja syvyys ratkaisevat paljon. Minä lennän vain yli, mutta arvostan.
+KYSYMYS: Kerro lisää: Lohi
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miten kala voi hypätä vesiputouksen yli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kalat ovat aika taitavia akrobaatteja. [[Lohi]] ja monet muut vaelluskalat nousevat jokiin kutemaan, ja matkalla on usein koski tai pato. Kala kerää ensin vauhtia syvästä kuopasta putouksen alapuolella ja potkaisee itsensä pyrstön voimakkaalla lyönnillä vedestä ilmaan. Parin metrin korkuinen este on lohelle mahdollinen, vaikka useampi yritys voi vaatia aikansa. Kuldīgan [[Venta-joen]] putousta kutsutaan latviaksi nimellä [[Ventas rumba]], ja [[herttua Jaakobin]] ajalta kerrotaan, että kaupunki tunnettiin lohesta, joka pyydettiin ilmasta pajukoreihin. Hyppy on lihasvoimaa ja ajoitusta, ja veden nopeus ja syvyys ratkaisevat paljon. Minä lennän vain yli, mutta arvostan.
+KYSYMYS: Kerro lisää: Venta-joen
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miten kala voi hypätä vesiputouksen yli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kalat ovat aika taitavia akrobaatteja. [[Lohi]] ja monet muut vaelluskalat nousevat jokiin kutemaan, ja matkalla on usein koski tai pato. Kala kerää ensin vauhtia syvästä kuopasta putouksen alapuolella ja potkaisee itsensä pyrstön voimakkaalla lyönnillä vedestä ilmaan. Parin metrin korkuinen este on lohelle mahdollinen, vaikka useampi yritys voi vaatia aikansa. Kuldīgan [[Venta-joen]] putousta kutsutaan latviaksi nimellä [[Ventas rumba]], ja [[herttua Jaakobin]] ajalta kerrotaan, että kaupunki tunnettiin lohesta, joka pyydettiin ilmasta pajukoreihin. Hyppy on lihasvoimaa ja ajoitusta, ja veden nopeus ja syvyys ratkaisevat paljon. Minä lennän vain yli, mutta arvostan.
+KYSYMYS: Kerro lisää: Ventas rumba

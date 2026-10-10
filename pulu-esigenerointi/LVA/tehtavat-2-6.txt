@@ -1,0 +1,486 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+AIEMPI KYSYMYS: Miten kala voi hypätä vesiputouksen yli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kalat ovat aika taitavia akrobaatteja. [[Lohi]] ja monet muut vaelluskalat nousevat jokiin kutemaan, ja matkalla on usein koski tai pato. Kala kerää ensin vauhtia syvästä kuopasta putouksen alapuolella ja potkaisee itsensä pyrstön voimakkaalla lyönnillä vedestä ilmaan. Parin metrin korkuinen este on lohelle mahdollinen, vaikka useampi yritys voi vaatia aikansa. Kuldīgan [[Venta-joen]] putousta kutsutaan latviaksi nimellä [[Ventas rumba]], ja [[herttua Jaakobin]] ajalta kerrotaan, että kaupunki tunnettiin lohesta, joka pyydettiin ilmasta pajukoreihin. Hyppy on lihasvoimaa ja ajoitusta, ja veden nopeus ja syvyys ratkaisevat paljon. Minä lennän vain yli, mutta arvostan.
+KYSYMYS: Kerro lisää: herttua Jaakobin
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miksi juuri Kuldīgaan rakennettiin telakoita?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita, ja kaupunki oli [[Kuurinmaan herttuakunnan]] tärkeitä keskuksia. Herttua Jaakob pyrki kehittämään herttuakunnan taloutta ja kauppalaivastoa, joten telakoille oli tarvetta. Tarkkoja syitä paikan valintaan ei ole helppo todentaa, mutta Kuldīgassa oli sopivat edellytykset: [[Venta-joki]] toimi kulkureittinä kohti [[Itämerta]], ja ympäristössä oli runsaasti metsää rakennuspuuksi. Telakka kosken kupeessa kuulostaa kyl uskaliaalta.
+KYSYMYS: Kerro lisää: Kuurinmaan herttuakunnan
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miksi juuri Kuldīgaan rakennettiin telakoita?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita, ja kaupunki oli [[Kuurinmaan herttuakunnan]] tärkeitä keskuksia. Herttua Jaakob pyrki kehittämään herttuakunnan taloutta ja kauppalaivastoa, joten telakoille oli tarvetta. Tarkkoja syitä paikan valintaan ei ole helppo todentaa, mutta Kuldīgassa oli sopivat edellytykset: [[Venta-joki]] toimi kulkureittinä kohti [[Itämerta]], ja ympäristössä oli runsaasti metsää rakennuspuuksi. Telakka kosken kupeessa kuulostaa kyl uskaliaalta.
+KYSYMYS: Kerro lisää: Venta-joki
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi juuri Kuldīgaan rakennettiin telakoita?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita, ja kaupunki oli [[Kuurinmaan herttuakunnan]] tärkeitä keskuksia. Herttua Jaakob pyrki kehittämään herttuakunnan taloutta ja kauppalaivastoa, joten telakoille oli tarvetta. Tarkkoja syitä paikan valintaan ei ole helppo todentaa, mutta Kuldīgassa oli sopivat edellytykset: [[Venta-joki]] toimi kulkureittinä kohti [[Itämerta]], ja ympäristössä oli runsaasti metsää rakennuspuuksi. Telakka kosken kupeessa kuulostaa kyl uskaliaalta.
+KYSYMYS: Kerro lisää: Itämerta
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Miksi tiilisilta on yhä pystyssä sadanviidenkymmenen vuoden jälkeen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kuldīgan tiilinen [[kaarisilta]] [[Venta-joen]] yli on peräisin 1800-luvun lopulta, ja sen kestävyyden taustalla on useita tekijöitä. Kaarirakenne ohjaa kuorman tiilissä puristukseksi, jota tiili kestää erittäin hyvin. Tiili ja [[kalkkilaasti]] ovat kosteutta kestäviä materiaaleja, kun ne on valmistettu huolellisesti. Pitkä käyttöikä edellyttää kuitenkin myös kunnossapitoa. Perustusten ja muiden yksityiskohtien osalta en ole varma, mutta kaarisillan perusperiaate selittää paljon. Sata viisikymmentä vuotta on kyyhkylle ikuisuus.
+KYSYMYS: Kerro lisää: kaarisilta
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Miksi tiilisilta on yhä pystyssä sadanviidenkymmenen vuoden jälkeen?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kuldīgan tiilinen [[kaarisilta]] [[Venta-joen]] yli on peräisin 1800-luvun lopulta, ja sen kestävyyden taustalla on useita tekijöitä. Kaarirakenne ohjaa kuorman tiilissä puristukseksi, jota tiili kestää erittäin hyvin. Tiili ja [[kalkkilaasti]] ovat kosteutta kestäviä materiaaleja, kun ne on valmistettu huolellisesti. Pitkä käyttöikä edellyttää kuitenkin myös kunnossapitoa. Perustusten ja muiden yksityiskohtien osalta en ole varma, mutta kaarisillan perusperiaate selittää paljon. Sata viisikymmentä vuotta on kyyhkylle ikuisuus.
+KYSYMYS: Kerro lisää: kalkkilaasti
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Millainen kala vimpa on?
+AIEMPI VASTAUS (Livia):
+Kato, tuttu kala. [[Vimpa]] on karppikaloihin kuuluva, hopeanharmaa ja hieman litteä kala, jonka tuntee kuonon muodosta: kuono työntyy suun yli nokkamaisena. Sitä tavataan [[Itämeren]] rannikkovesissä ja joissa, ja kutuaikana vimpa nousee jokiin kutemaan, usein alkukesällä. Kalaa on pyydetty ruoaksi sekä tuoreena että savustettuna ja suolattuna. Vimpa on herkkä veden laadulle ja jokien padotuksille, sillä padot haittaavat vaelluskalojen nousua. Kutuajan pyyntirajoitukset suojaavat kantaa.
+
+Minulla on itselläni hyvä nokka, mutta vimpan nokka on rehellisesti sanottuna omaa luokkaansa.
+KYSYMYS: Kerro lisää: Vimpa
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+AIEMPI KYSYMYS: Millainen kala vimpa on?
+AIEMPI VASTAUS (Livia):
+Kato, tuttu kala. [[Vimpa]] on karppikaloihin kuuluva, hopeanharmaa ja hieman litteä kala, jonka tuntee kuonon muodosta: kuono työntyy suun yli nokkamaisena. Sitä tavataan [[Itämeren]] rannikkovesissä ja joissa, ja kutuaikana vimpa nousee jokiin kutemaan, usein alkukesällä. Kalaa on pyydetty ruoaksi sekä tuoreena että savustettuna ja suolattuna. Vimpa on herkkä veden laadulle ja jokien padotuksille, sillä padot haittaavat vaelluskalojen nousua. Kutuajan pyyntirajoitukset suojaavat kantaa.
+
+Minulla on itselläni hyvä nokka, mutta vimpan nokka on rehellisesti sanottuna omaa luokkaansa.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Mikä on Latvian laulujuhla ja kuinka usein se järjestetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Latvian laulujuhla, latviaksi [[Dziesmu svētki]], on suuri kuoro- ja tanssijuhla, jossa tuhannet laulajat kokoontuvat yhdessä esiintymään. Ensimmäiset latvialaiset laulujuhlat pidettiin Riiassa vuonna 1873, ja perinne on pysynyt elossa yli sadan viidenkymmenen vuoden ajan. Juhlia järjestetään perinteisesti noin viiden vuoden välein, ja lisäksi nuorille on omat juhlansa. Nykyään pääpaikka on Riian [[Mežaparksin]] laulukenttä. Baltian laulu- ja tanssijuhlaperinne kuuluu [[UNESCOn]] aineettoman kulttuuriperinnön luetteloon, ja juhlilla on ollut tärkeä rooli latvialaisen identiteetin säilymisessä. Minä kuuntelen kyl mieluummin kaiteelta kuin lavalta.
+KYSYMYS: Kerro lisää: Dziesmu svētki
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Kuoro, johon kuka tahansa voi liittyä] Laulujuhlaan ei tarvitse olla ammattilaulaja osallistuakseen: mukaan pääsevät koulujen, yliopistojen, työpaikkojen ja harrastuskuorojen jäsenet ympäri Latviaa, kunhan he läpäisevät paikallisen karsinnan ja harjoittelevat yhteisen ohjelmiston. Latvian nykyisessä, alle kahden miljoonan asukkaan maassa tuhannet ihmiset osallistuvat samaan juhlaan joka kerta. Moni osallistuja kuvailee kokemusta elämänsä vahvimmaksi yhteisöllisyyden hetkeksi: kun kolmekymmentätuhatta ääntä laulaa saman kansallislaulun yhtä aikaa Mežaparksin lavalla, ero yleisön ja esiintyjien välillä hämärtyy.
+- [Riika — kaupunkilehti / Musiikki: Lava, joka mahtuu kolmellekymmenelletuhannelle laulajalle] Nykyinen laulujuhla huipentuu Mežaparksin suurella lavalla Riiassa, jonne mahtuu esiintymään jopa kolmekymmentätuhatta laulajaa ja tanssijaa samaan aikaan — yksi maailman suurimmista pysyvistä esiintymislavoista. Yleisöä juhlaan kokoontuu vielä moninkertainen määrä ympäri Latviaa ja ulkomaita. Osallistujat harjoittelevat kuukausia omissa paikallisissa kuoroissaan ympäri maata ennen kuin kaikki kokoontuvat samaan aikaan samalle lavalle — logistinen ja musiikillinen ponnistus, joka toistuu nyt viidennen sukupolven latvialaisten kesken.
+AIEMPI KYSYMYS: Mikä on Latvian laulujuhla ja kuinka usein se järjestetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Latvian laulujuhla, latviaksi [[Dziesmu svētki]], on suuri kuoro- ja tanssijuhla, jossa tuhannet laulajat kokoontuvat yhdessä esiintymään. Ensimmäiset latvialaiset laulujuhlat pidettiin Riiassa vuonna 1873, ja perinne on pysynyt elossa yli sadan viidenkymmenen vuoden ajan. Juhlia järjestetään perinteisesti noin viiden vuoden välein, ja lisäksi nuorille on omat juhlansa. Nykyään pääpaikka on Riian [[Mežaparksin]] laulukenttä. Baltian laulu- ja tanssijuhlaperinne kuuluu [[UNESCOn]] aineettoman kulttuuriperinnön luetteloon, ja juhlilla on ollut tärkeä rooli latvialaisen identiteetin säilymisessä. Minä kuuntelen kyl mieluummin kaiteelta kuin lavalta.
+KYSYMYS: Kerro lisää: Mežaparksin
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan levein vesiputous on kahden metrin korkuinen — ja siitä pyydettiin lohta ilmasta
+Tietoruudun teksti: Kuldīgassa Venta-joki valuu kallioportaan yli koko leveydeltään. Putousta sanotaan Euroopan leveimmäksi, ja leveys riippuu siitä, mitä mitataan: lähteet antavat virtaavalle osalle runsaat sata metriä ja koko kynnykselle noin kaksisataaviisikymmentä, tulva-aikaan lähes kolmesataa. Korkeutta on kaikkiaan kaksi metriä. Se on juuri sopiva este: kutuaikaan kalat yrittävät sen yli hypäten, ja Kuldīga tunnettiin kaupunkina, jossa lohi pyydetään ilmasta. Herttua Jaakobin ajalta kerrotaan, että kallioon hakattiin patoja ja putouksen juurelle asetettiin toista sataa suurta pajukoria: se, joka ei jaksanut yli, tuli alas koriin. Sammet katosivat joesta vuoteen 1892 mennessä, ja nykyään pyydetään enimmäkseen vimpaa, kutuaikana rajoituksin.
+
+Kaupunki itse on samaa tarinaa. Herttua Jaakobin hallituskaudella 1642–1682 Kuldīgaan rakennettiin telakoita, salpietaritehdas ja tiilitehtaita — samat telakat, …
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Mikä on Latvian laulujuhla ja kuinka usein se järjestetään?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Latvian laulujuhla, latviaksi [[Dziesmu svētki]], on suuri kuoro- ja tanssijuhla, jossa tuhannet laulajat kokoontuvat yhdessä esiintymään. Ensimmäiset latvialaiset laulujuhlat pidettiin Riiassa vuonna 1873, ja perinne on pysynyt elossa yli sadan viidenkymmenen vuoden ajan. Juhlia järjestetään perinteisesti noin viiden vuoden välein, ja lisäksi nuorille on omat juhlansa. Nykyään pääpaikka on Riian [[Mežaparksin]] laulukenttä. Baltian laulu- ja tanssijuhlaperinne kuuluu [[UNESCOn]] aineettoman kulttuuriperinnön luetteloon, ja juhlilla on ollut tärkeä rooli latvialaisen identiteetin säilymisessä. Minä kuuntelen kyl mieluummin kaiteelta kuin lavalta.
+KYSYMYS: Kerro lisää: UNESCOn
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+AIEMPI KYSYMYS: Miksi aallot tulevat Kolkan kärjessä kahdesta suunnasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kolkan niemi on Kuurinmaan niemimaan luoteiskärki, jonka toisella puolella on [[Itämeren]] avoin selkä ja toisella [[Riianlahden]] vesi. Aallot syntyvät tuulesta, ja tuulet puhaltavat eri suunnista, joten kummallakin puolella on omat aallokkonsa. Kun aallot lähestyvät niemeä, ne taittuvat ja kääntyvät matalikkoa kohti, ja niemen kärjen kohdalla kaksi aallokkoa kohtaavat toisensa, jolloin syntyy ristiaallokko. Veden alla jatkuva matalikko vaikuttaa asiaan, koska aallot taipuvat ja hidastuvat matalassa vedessä. Niemi sijaitsee [[Slīteren kansallispuistossa]], ja sen muoto muuttuu jatkuvasti, koska hiekka liikkuu. Ei kyl ihme, että meri näyttää siel levottomalta.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Miksi aallot tulevat Kolkan kärjessä kahdesta suunnasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kolkan niemi on Kuurinmaan niemimaan luoteiskärki, jonka toisella puolella on [[Itämeren]] avoin selkä ja toisella [[Riianlahden]] vesi. Aallot syntyvät tuulesta, ja tuulet puhaltavat eri suunnista, joten kummallakin puolella on omat aallokkonsa. Kun aallot lähestyvät niemeä, ne taittuvat ja kääntyvät matalikkoa kohti, ja niemen kärjen kohdalla kaksi aallokkoa kohtaavat toisensa, jolloin syntyy ristiaallokko. Veden alla jatkuva matalikko vaikuttaa asiaan, koska aallot taipuvat ja hidastuvat matalassa vedessä. Niemi sijaitsee [[Slīteren kansallispuistossa]], ja sen muoto muuttuu jatkuvasti, koska hiekka liikkuu. Ei kyl ihme, että meri näyttää siel levottomalta.
+KYSYMYS: Kerro lisää: Riianlahden
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande: Terena - cerradon maanviljelijät] Terena-kansa on asuttanut nykyisen Mato Grosso do Sulin alueita, erityisesti Aquidauanan ja Mirandan seutuja, kauan ennen minkään kaupungin perustamista. He puhuvat arawakkilaiseen kieliperheeseen kuuluvaa terenaa ja ovat perinteisesti viljelleet maniokkia, riisiä, maissia ja papuja kylien verkostossa. Vuosina 1864-1870 käydyssä Paraguayn sodassa Terenat taistelivat Brasilian liittolaisina - sota päättyi vain kolme vuotta ennen isoisän matkaa. Sodan jälkeen monet Terenat menettivät maitaan karjatilallisille, jotka ottivat haltuunsa vailla virallista omistuskirjaa olleet alueet.
+AIEMPI KYSYMYS: Miksi aallot tulevat Kolkan kärjessä kahdesta suunnasta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kolkan niemi on Kuurinmaan niemimaan luoteiskärki, jonka toisella puolella on [[Itämeren]] avoin selkä ja toisella [[Riianlahden]] vesi. Aallot syntyvät tuulesta, ja tuulet puhaltavat eri suunnista, joten kummallakin puolella on omat aallokkonsa. Kun aallot lähestyvät niemeä, ne taittuvat ja kääntyvät matalikkoa kohti, ja niemen kärjen kohdalla kaksi aallokkoa kohtaavat toisensa, jolloin syntyy ristiaallokko. Veden alla jatkuva matalikko vaikuttaa asiaan, koska aallot taipuvat ja hidastuvat matalassa vedessä. Niemi sijaitsee [[Slīteren kansallispuistossa]], ja sen muoto muuttuu jatkuvasti, koska hiekka liikkuu. Ei kyl ihme, että meri näyttää siel levottomalta.
+KYSYMYS: Kerro lisää: Slīteren kansallispuistossa
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Unkari — maalehti / Kieli: Sukulaisia kaukaa pohjoisesta] Tuhansia vuosia — Unkari ei kuulu indoeurooppalaisiin kieliin kuten sen naapurit, vaan uralilaisiin kieliin. Samaan joukkoon kuuluvat suomi, viro ja saame sekä joukko pienempiä kieliä Uralin molemmin puolin. Sukulaisuus on kaukainen: unkarilainen ja suomalainen eivät ymmärrä toisiaan lainkaan. Yhteiset sanat näkyvät silti vanhimmissa sanoissa: kéz on käsi, vér on veri, hal on kala, méz on mesi ja szem on silmä. Erot syntyivät, kun kansat erosivat toisistaan tuhansia vuosia sitten.
+AIEMPI KYSYMYS: Mille kielille liivi on sukua?
+AIEMPI VASTAUS (Livia):
+Ai se. Liivi kuuluu [[uralilaisiin kieliin]], ja tarkemmin sanottuna [[itämerensuomalaisten kielten]] ryhmään, johon kuuluvat myös suomi, [[viron]] kieli, karjala ja muut lähikielet. Liivi on siis suomen ja viron sukukieli. Kielitieteessä sen tarkka asema sukupuussa on monimutkainen, mutta läheisimpänä sukulaisena pidetään usein viroa. Uralilaiseen kieliperheeseen kuuluu kauempana myös [[unkarin]] kieli. Liivi on elänyt vuosisatoja latvian vieressä ja lainannut siitä paljon sanastoa. Kielisuku on kaukainen, mut kürtőskalács on lähellä sydäntä.
+KYSYMYS: Kerro lisää: uralilaisiin kieliin
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sansibar — kohdekartta / Kohdekartta: Sansibarin valtionyliopisto] 1999 Sansibarin edustajainhuone perusti valtionyliopiston lailla 1999, ja toiminta alkoi 2002. Yliopisto on julkinen, ja sen pääkampus on Tunguussa saaren keskiosassa; Kivikaupungin laidalla on sen kaupunkikampus. Yliopistossa on swahilin ja vieraiden kielten koulu, täydennyskoulutuksen koulu, kasvatustieteiden koulu sekä luonnon- ja yhteiskuntatieteiden koulu. Kieli-instituutti on opettanut vuosia swahilia, arabiaa, englantia, espanjaa, portugalia, ranskaa ja saksaa, ja se opettaa swahilia ulkomaisille opiskelijoille eri puolilta maailmaa. Kasvatustieteiden puoli kouluttaa opettajia, joita saarilla tarvitaan. Sansibarin osuus swahilin kielessä on suurempi kuin saarten koko antaisi olettaa.…
+- [Taiwan — maalehti / Historia: Kieli lähti saarelta veneellä] n. 3000–1500 eaa. — Austronesialaisten kielten kotiseutu on tutkijoiden valtavirtakäsityksen mukaan Taiwan ja Penghun saaristo: saaren alkuperäiskansojen kielet ovat suvun syvimmät haarat, ja kaikki muut sen sadat kielet ovat lähtöisin täältä. Liike alkoi noin 3000–1500 eaa., ja Filippiinien pohjoisimmille Batanes-saarille päästiin noin 2200 eaa. Purjetta käytettiin jo ennen vuotta 2000 eaa., ja sen sekä kaksirunkoisten ja puomikellukkaisten veneiden avulla asutus levisi lopulta Madagaskarille lännessä, Pääsiäissaarelle idässä ja Uuteen-Seelantiin noin 1250 jaa. Mukana kulkivat riisi, banaani, kookos, taaro, kana, sika ja koira.
+AIEMPI KYSYMYS: Mille kielille liivi on sukua?
+AIEMPI VASTAUS (Livia):
+Ai se. Liivi kuuluu [[uralilaisiin kieliin]], ja tarkemmin sanottuna [[itämerensuomalaisten kielten]] ryhmään, johon kuuluvat myös suomi, [[viron]] kieli, karjala ja muut lähikielet. Liivi on siis suomen ja viron sukukieli. Kielitieteessä sen tarkka asema sukupuussa on monimutkainen, mutta läheisimpänä sukulaisena pidetään usein viroa. Uralilaiseen kieliperheeseen kuuluu kauempana myös [[unkarin]] kieli. Liivi on elänyt vuosisatoja latvian vieressä ja lainannut siitä paljon sanastoa. Kielisuku on kaukainen, mut kürtőskalács on lähellä sydäntä.
+KYSYMYS: Kerro lisää: itämerensuomalaisten kielten
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Perinne, jonka Unesco otti suojaansa] Unesco lisäsi Latvian, Viron ja Liettuan yhteiset laulu- ja tanssijuhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloonsa vuonna 2003 — tunnustuksena siitä, että perinne on säilyttänyt kolmen maan kansanmusiikkia elävänä sukupolvesta toiseen kirjoitetun nuotin ja suullisen opetuksen yhdistelmällä. Kolmen Baltian maan juhlat kehittyivät toisistaan erillään 1800-luvun kansallisen herätyksen aikana, mutta niitä yhdistää sama perusidea: tavalliset ihmiset, ei ammattilaiset, laulavat yhdessä isoina joukkoina oman kielensä ja kulttuurinsa kunniaksi.
+AIEMPI KYSYMYS: Mille kielille liivi on sukua?
+AIEMPI VASTAUS (Livia):
+Ai se. Liivi kuuluu [[uralilaisiin kieliin]], ja tarkemmin sanottuna [[itämerensuomalaisten kielten]] ryhmään, johon kuuluvat myös suomi, [[viron]] kieli, karjala ja muut lähikielet. Liivi on siis suomen ja viron sukukieli. Kielitieteessä sen tarkka asema sukupuussa on monimutkainen, mutta läheisimpänä sukulaisena pidetään usein viroa. Uralilaiseen kieliperheeseen kuuluu kauempana myös [[unkarin]] kieli. Liivi on elänyt vuosisatoja latvian vieressä ja lainannut siitä paljon sanastoa. Kielisuku on kaukainen, mut kürtőskalács on lähellä sydäntä.
+KYSYMYS: Kerro lisää: viron
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mille kielille liivi on sukua?
+AIEMPI VASTAUS (Livia):
+Ai se. Liivi kuuluu [[uralilaisiin kieliin]], ja tarkemmin sanottuna [[itämerensuomalaisten kielten]] ryhmään, johon kuuluvat myös suomi, [[viron]] kieli, karjala ja muut lähikielet. Liivi on siis suomen ja viron sukukieli. Kielitieteessä sen tarkka asema sukupuussa on monimutkainen, mutta läheisimpänä sukulaisena pidetään usein viroa. Uralilaiseen kieliperheeseen kuuluu kauempana myös [[unkarin]] kieli. Liivi on elänyt vuosisatoja latvian vieressä ja lainannut siitä paljon sanastoa. Kielisuku on kaukainen, mut kürtőskalács on lähellä sydäntä.
+KYSYMYS: Kerro lisää: unkarin
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Voiko kielen elvyttää sen jälkeen, kun viimeinen puhuja on kuollut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kielen elvyttäminen on mahdollista, mutta se vaatii paljon työtä, koska kielen pitää saada uusia puhujia, jotka käyttävät sitä oikeasti. Euroopasta on esimerkkejä: [[kornin]] kieli Cornwallissa ja [[manxin]] kieli Mansaarella olivat lakanneet olemasta yhteisön arkikieliä, mutta harrastajat ja opettajat ovat elvyttäneet niitä, ja niitä opiskellaan ja puhutaan nykyisin uudelleen. [[Liivin]] kielen viimeinen äidinkielinen puhuja kuoli vuonna 2013, mutta kieltä opetetaan ja sitä opiskelevia on, ja liivinsukuiset yhteisöt Latviassa pitävät perinnettä elossa. Elvytetty kieli ei ole täsmälleen samanlainen kuin ennen: sanasto ja ääntäminen perustuvat usein kirjallisiin lähteisiin ja nauhoituksiin, ja kielen pysyvyys riippuu siitä, siirtyykö se lapsille. Toivoa siis on, vaikka tie on pitkä.
+KYSYMYS: Kerro lisää: kornin
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Voiko kielen elvyttää sen jälkeen, kun viimeinen puhuja on kuollut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kielen elvyttäminen on mahdollista, mutta se vaatii paljon työtä, koska kielen pitää saada uusia puhujia, jotka käyttävät sitä oikeasti. Euroopasta on esimerkkejä: [[kornin]] kieli Cornwallissa ja [[manxin]] kieli Mansaarella olivat lakanneet olemasta yhteisön arkikieliä, mutta harrastajat ja opettajat ovat elvyttäneet niitä, ja niitä opiskellaan ja puhutaan nykyisin uudelleen. [[Liivin]] kielen viimeinen äidinkielinen puhuja kuoli vuonna 2013, mutta kieltä opetetaan ja sitä opiskelevia on, ja liivinsukuiset yhteisöt Latviassa pitävät perinnettä elossa. Elvytetty kieli ei ole täsmälleen samanlainen kuin ennen: sanasto ja ääntäminen perustuvat usein kirjallisiin lähteisiin ja nauhoituksiin, ja kielen pysyvyys riippuu siitä, siirtyykö se lapsille. Toivoa siis on, vaikka tie on pitkä.
+KYSYMYS: Kerro lisää: manxin
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+AIEMPI KYSYMYS: Voiko kielen elvyttää sen jälkeen, kun viimeinen puhuja on kuollut?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kielen elvyttäminen on mahdollista, mutta se vaatii paljon työtä, koska kielen pitää saada uusia puhujia, jotka käyttävät sitä oikeasti. Euroopasta on esimerkkejä: [[kornin]] kieli Cornwallissa ja [[manxin]] kieli Mansaarella olivat lakanneet olemasta yhteisön arkikieliä, mutta harrastajat ja opettajat ovat elvyttäneet niitä, ja niitä opiskellaan ja puhutaan nykyisin uudelleen. [[Liivin]] kielen viimeinen äidinkielinen puhuja kuoli vuonna 2013, mutta kieltä opetetaan ja sitä opiskelevia on, ja liivinsukuiset yhteisöt Latviassa pitävät perinnettä elossa. Elvytetty kieli ei ole täsmälleen samanlainen kuin ennen: sanasto ja ääntäminen perustuvat usein kirjallisiin lähteisiin ja nauhoituksiin, ja kielen pysyvyys riippuu siitä, siirtyykö se lapsille. Toivoa siis on, vaikka tie on pitkä.
+KYSYMYS: Kerro lisää: Liivin
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [BMU — maalehti / Luonto: Hiekka joka on täynnä pieneliöitä] nykyään — Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.
+- [Qatar — maalehti / Aavikko: Dyyni, joka hurisee kun hiekka vyöryy] Noin neljänkymmenen kilometrin päässä Dohasta, Mesaieedin suunnassa, on dyyni, jonka rinne pitää ääntä. Kun kuiva hiekka lähtee vyörymään alas jyrkkää sivua, siitä nousee hurina, jota on verrattu kaukaiseen moottoriin. Ääni voi jatkua minuutteja ja yltää yli sadan desibelin. Mikä tahansa hiekka ei laula: jyvien on oltava kuivia, pyöreitä, pinnaltaan puhtaita ja kooltaan 0,1–0,5 millimetriä. Kostea hiekka vaikenee, koska jyvät tarttuvat toisiinsa. Tällaisia laulavia dyynejä tunnetaan maailmasta noin 35 paikassa. Qatarissa rinteelle kiivetään iltapäivällä ja ääni saadaan aikaan liukumalla alas.
+AIEMPI KYSYMYS: Miten merivirta kuljettaa hiekkaa pitkin rantaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hiekan kulkeutuminen rannikkoa pitkin johtuu siitä, että aallot saapuvat rantaan harvoin täsmälleen suoraan. Kun aalto tulee vinosti, se työntää hiekkaa ylös rantaan samaan suuntaan kuin se itse etenee, mutta paluuvirtaus vetää hiekkaa takaisin suoraan alas rinnettä. Siten hiekkajyvät etenevät rannalla siksak-liikkeenä, ja pitkän ajan kuluessa suuret määrät hiekkaa siirtyvät rantaa pitkin. Niemen kaltaisissa paikoissa tämä kasaa [[hiekkasärkkiä]] ja kasvattaa niemeä, koska kulkeutuva hiekka pysähtyy kohtaan, jossa virta heikkenee. Ihmisen rakentamat [[aallonmurtajat]] ja laiturit katkaisevat kulkeutumisen, jolloin hiekka kasaantuu rakenteen toiselle puolelle ja toinen puoli alkaa kulua.
+
+Ylhäältä katsottuna hiekkasärkät näyttävät piirretyiltä viivoilta, ja nyt tiedän, miksi ne muuttuvat.
+KYSYMYS: Kerro lisää: hiekkasärkkiä
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Kuvataide: Aallon alla kyyhöttää Fuji] Katsushika Hokusai piirsi Suuren aallon vuoden 1831 lopulla. Se on ensimmäinen lehti sarjassa Kolmekymmentäkuusi näkymää Fuji-vuorelle, ja siinä on kolme venettä myrskyävällä merellä. Uutta oli väri: Euroopasta tuotu berliininsininen ei haalistunut kuten kasviväri, ja Hokusai rakensi koko kuvan sen varaan. Aalto ei ole hyökyaalto vaan tuulen nostama merenkäynti, ja vuori jää sen taakse pieneksi kolmioksi. Vedoksia lyötiin puulaatoista niin monta kuin kysyntää riitti; niistä tunnetaan nykyään enää noin sata säilynyttä kappaletta.
+- [Irlanti — maalehti / Käsityö: Vene, joka nousee aallon mukana] Vuosisatoja — Currach on vene, jonka runko rakennetaan ohuista puuriuloista ristikoksi ja päällystetään sitten kankaalla. Ennen käytettiin härän vuotaa, nykyään tervattua purjekangasta. Valmis vene on niin kevyt, että kaksi ihmistä kantaa sen ylösalaisin päänsä päällä rantaan. Kevyt runko nousee aallon mukana sen sijaan että puskisi sen läpi, ja siksi currach kestää Atlantin aallokkoa yllättävän hyvin. Airot ovat kapeat ja lähes lavattomat, jottei tuuli tartu niihin. Veneitä säilytetään ylösalaisin, ettei sade jää sisään.
+AIEMPI KYSYMYS: Miten merivirta kuljettaa hiekkaa pitkin rantaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Hiekan kulkeutuminen rannikkoa pitkin johtuu siitä, että aallot saapuvat rantaan harvoin täsmälleen suoraan. Kun aalto tulee vinosti, se työntää hiekkaa ylös rantaan samaan suuntaan kuin se itse etenee, mutta paluuvirtaus vetää hiekkaa takaisin suoraan alas rinnettä. Siten hiekkajyvät etenevät rannalla siksak-liikkeenä, ja pitkän ajan kuluessa suuret määrät hiekkaa siirtyvät rantaa pitkin. Niemen kaltaisissa paikoissa tämä kasaa [[hiekkasärkkiä]] ja kasvattaa niemeä, koska kulkeutuva hiekka pysähtyy kohtaan, jossa virta heikkenee. Ihmisen rakentamat [[aallonmurtajat]] ja laiturit katkaisevat kulkeutumisen, jolloin hiekka kasaantuu rakenteen toiselle puolelle ja toinen puoli alkaa kulua.
+
+Ylhäältä katsottuna hiekkasärkät näyttävät piirretyiltä viivoilta, ja nyt tiedän, miksi ne muuttuvat.
+KYSYMYS: Kerro lisää: aallonmurtajat
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+- [Itävalta — maalehti / Historia: Meripihkatie ylitti Tonavan täällä] roomalaisaika — Itävallan itäkolkassa oli aikoinaan 50 000 asukkaan roomalaiskaupunki Carnuntum. Se oli Ylä-Pannonian pääkaupunki ja Tonavan-laivaston tukikohta, ja juuri sen kohdalla meripihkatie ylitti joen: Itämereltä tuotu keltainen kivi kulki täältä Italiaan. Keisari Marcus Aurelius asui kaupungissa vuosina 172–175 ja kirjoitti siellä osan Itsetutkisteluistaan. Rauniot ovat nyt kymmenen neliökilometrin arkeologiapuisto Wienin ja Bratislavan puolivälissä. Pystyssä on enää 300-luvun voitonmerkki.
+AIEMPI KYSYMYS: Millä Liivinrannan asukkaat ovat perinteisesti eläneet?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Liivinrannan kylissä perinteinen elinkeino on ollut kalastus. Meri oli tärkeä ravinnonlähde: kalastajat pyydystivät kalaa [[Itämereltä]] ja [[Riianlahdelta]], ja kalaa suolattiin, savustettiin ja kuivattiin. Rannikkokylät elivät myös merenkulusta ja pienimuotoisesta maanviljelystä, vaikka hiekkamaa ei antanut suuria satoja. Nykyisin kalastus on vähentynyt, ja kylissä elinkeinot liittyvät usein matkailuun ja perinteen vaalimiseen. [[Liivinrannan]] suojelu ja kulttuuriperintö kiinnostavat vierailijoita. Kalaa kalaa, mut pullasta ei kukaan kysy.
+KYSYMYS: Kerro lisää: Itämereltä
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Millä Liivinrannan asukkaat ovat perinteisesti eläneet?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Liivinrannan kylissä perinteinen elinkeino on ollut kalastus. Meri oli tärkeä ravinnonlähde: kalastajat pyydystivät kalaa [[Itämereltä]] ja [[Riianlahdelta]], ja kalaa suolattiin, savustettiin ja kuivattiin. Rannikkokylät elivät myös merenkulusta ja pienimuotoisesta maanviljelystä, vaikka hiekkamaa ei antanut suuria satoja. Nykyisin kalastus on vähentynyt, ja kylissä elinkeinot liittyvät usein matkailuun ja perinteen vaalimiseen. [[Liivinrannan]] suojelu ja kulttuuriperintö kiinnostavat vierailijoita. Kalaa kalaa, mut pullasta ei kukaan kysy.
+KYSYMYS: Kerro lisää: Riianlahdelta
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Riika
+Maa, jossa pelaaja on: Latvia
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Niemi, jossa kaksi merta lyö vastakkain — ja kieli, jolla oli lopulta enää yksi puhuja
+Tietoruudun teksti: Kuurinmaan niemimaan luoteiskärjessä, Slīteren kansallispuistossa, on hiekkaniemi, jonka toisella puolella on Itämeri ja toisella Riianlahti. Aallot tulevat kahdesta suunnasta ja lyövät vastakkain kärjen kohdalla, ja veden alla niemi jatkuu matalikkona pitkälle ulapalle. Hiekka on liikkeessä: sitä kulkeutuu niemeä kohti vuodessa seitsemän–kahdeksansataatuhatta kuutiometriä, mutta noin yhdeksän kymmenesosaa kasautuu heti niemen pohjoispuolelle ja vain viisikymmentätuhatta kuutiota jatkaa lahden puolelle. Kärki siis rakentaa itseään koko ajan, mutta hitaammin kuin näyttää. Rantatasanko jatkuu noin seitsemänkymmentä kilometriä rannikkoa pitkin ja on paikoin kymmenen kilometriä leveä.
+
+Rannalla on kylärivi, jonka nimet eivät ole latviaa: Vaide, Saunags, Pitrags, Košrags, Sīkrags. Ne kuuluvat suojeltuun Liivinrantaan, ja niissä puhuttiin liiviä — uralilaista kieltä, itämerensuomalaisten kiel…
+Isoisän matkakirjamerkintä: Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.
+AIEMPI KYSYMYS: Millä Liivinrannan asukkaat ovat perinteisesti eläneet?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Liivinrannan kylissä perinteinen elinkeino on ollut kalastus. Meri oli tärkeä ravinnonlähde: kalastajat pyydystivät kalaa [[Itämereltä]] ja [[Riianlahdelta]], ja kalaa suolattiin, savustettiin ja kuivattiin. Rannikkokylät elivät myös merenkulusta ja pienimuotoisesta maanviljelystä, vaikka hiekkamaa ei antanut suuria satoja. Nykyisin kalastus on vähentynyt, ja kylissä elinkeinot liittyvät usein matkailuun ja perinteen vaalimiseen. [[Liivinrannan]] suojelu ja kulttuuriperintö kiinnostavat vierailijoita. Kalaa kalaa, mut pullasta ei kukaan kysy.
+KYSYMYS: Kerro lisää: Liivinrannan

@@ -1,0 +1,1136 @@
+### 161
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Miksi elokuun 15. päivä on Aglonassa erityinen?
+AIEMPI VASTAUS (Livia):
+Just niin, tää on iso päivä. Elokuun 15. päivä on [[Neitsyt Marian taivaaseenottamisen]] päivä, ja silloin Aglonaan saapuu kymmeniätuhansia ihmisiä; sama koskee helluntaita. Paikan merkitys liittyy myös Aglonan Jumalanäidin [[ikoniin]], jota on kauan pidetty ihmeitätekevänä. Ikoni on 1600-luvulta, eikä sen tekijää tunneta. Kymmeniätuhansia ihmisiä, enkä minä löytäisi kaidepaikkaa.
+KYSYMYS: Kerro lisää: ikoniin
+
+### 162
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+AIEMPI KYSYMYS: Kuinka vanha Aglonan ihmeitätekevä ikoni on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Aglonan Jumalanäidin ikoni]] on 1600-luvulta, joten se on yli kolmesataa vuotta vanha. Sen tekijää ei tunneta. Ikoni on siis vanhempi kuin nykyinen [[basilika]], jonka rakentaminen alkoi 1768. Sitä on kauan pidetty ihmeitätekevänä. Tuntematon tekijä, ja kyl se kiehtoo.
+KYSYMYS: Kerro lisää: Aglonan Jumalanäidin ikoni
+
+### 163
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Kuinka vanha Aglonan ihmeitätekevä ikoni on?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Aglonan Jumalanäidin ikoni]] on 1600-luvulta, joten se on yli kolmesataa vuotta vanha. Sen tekijää ei tunneta. Ikoni on siis vanhempi kuin nykyinen [[basilika]], jonka rakentaminen alkoi 1768. Sitä on kauan pidetty ihmeitätekevänä. Tuntematon tekijä, ja kyl se kiehtoo.
+KYSYMYS: Kerro lisää: basilika
+
+### 164
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+AIEMPI KYSYMYS: Mitkä järvet ympäröivät Aglonan kylää?
+AIEMPI VASTAUS (Livia):
+No jopas, kartta vaan eteen. Aglona seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä. Kylä on Latgalessa, neljäkymmentä kilometriä [[Daugavpilsista]] koilliseen. Lähistöllä ovat myös [[Uhrisaari]], Pirunjärvi ja [[Madelanun linnavuori]]. Kaksi järveä ja kannas, hyvä laskeutumispaikka.
+KYSYMYS: Kerro lisää: Daugavpilsista
+
+### 165
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+AIEMPI KYSYMYS: Mitkä järvet ympäröivät Aglonan kylää?
+AIEMPI VASTAUS (Livia):
+No jopas, kartta vaan eteen. Aglona seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä. Kylä on Latgalessa, neljäkymmentä kilometriä [[Daugavpilsista]] koilliseen. Lähistöllä ovat myös [[Uhrisaari]], Pirunjärvi ja [[Madelanun linnavuori]]. Kaksi järveä ja kannas, hyvä laskeutumispaikka.
+KYSYMYS: Kerro lisää: Uhrisaari
+
+### 166
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+AIEMPI KYSYMYS: Mitkä järvet ympäröivät Aglonan kylää?
+AIEMPI VASTAUS (Livia):
+No jopas, kartta vaan eteen. Aglona seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä. Kylä on Latgalessa, neljäkymmentä kilometriä [[Daugavpilsista]] koilliseen. Lähistöllä ovat myös [[Uhrisaari]], Pirunjärvi ja [[Madelanun linnavuori]]. Kaksi järveä ja kannas, hyvä laskeutumispaikka.
+KYSYMYS: Kerro lisää: Madelanun linnavuori
+
+### 167
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mitä basilica minor -arvo tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi [[Johannes Paavali II]] antoi sille [[basilica minor]] -arvon. Basilica minor on katolisessa kirkossa kunnianimitys, jonka paavi voi myöntää erityisen tärkeäksi katsotulle kirkolle. Arvo kertoo kirkon merkityksestä, ei sen rakennustavasta. Kyl se arvo kirkolle sopii.
+KYSYMYS: Kerro lisää: Johannes Paavali II
+
+### 168
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Aglonan basilika (kulttuuri)
+Tietoruudun teksti: Aglona on kylä Latgalessa, neljäkymmentä kilometriä Daugavpilsista koilliseen. Se seisoo kapealla kannaksella Cirišs- ja Egles-järvien välissä, ja nykyinen kylä on syntynyt kolmen asutuksen — Aglonan, Somersetan ja Jaunciemsin — yhdistyessä. Lähistöllä ovat Uhrisaari, Pirunjärvi ja Madelanun linnavuori.
+
+Dominikaanit perustivat kirkon ja luostarin vuonna 1700. Alkuperäinen puinen kirkko ja luostari purettiin 1760-luvulla, uuden rakentaminen alkoi 1768, ja kirkko vihittiin 1800. Taivaaseenottamisen basilika on Latvian tärkein katolinen kirkko.
+
+Neitsyt Marian taivaaseenottamisen päivänä 15. elokuuta ja helluntaina paikalle saapuu kymmeniätuhansia ihmisiä. Aglonan Jumalanäidin ikonia on kauan pidetty ihmeitätekevänä; se on 1600-luvulta, eikä sen tekijää tunneta.
+
+Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi Johannes Paavali II antoi sille basilica minor -arvon. Vuonna 1986 siellä…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salta — kohdekartta / Kohdekartta: San Franciscon basilika] 1870-luku Tontti varattiin fransiskaaneille jo vuoden 1582 perustamiskirjassa. Ensimmäinen kirkko valmistui 1625 ja oli niin hataraa tekoa, että toinen rakennettiin 1674; sekin paloi 1700-luvun puolivälissä. Nykyinen temppeli nousi heti sen jälkeen sevillalaisen fray Vicente Muñozin johdolla — saman miehen, joka teki Buenos Airesin San Franciscon ja Córdoban katedraalin kupolin. Työtä keskeyttivät kaksi paloa, 1761 ja 1772, rakennusvirheet, Muñozin kuolema ja itsenäisyyssodan jälkeinen köyhyys. Vasta kun isä Isidoro Fernández palasi 1857 Roomasta neljäntoista veljen kanssa, työ saatiin vauhtiin; luostarin viimeisteli Ugolino Cingolari kahdeksan vuotta myöhemmin. Luis Giorgi vihki kirkon uud…
+AIEMPI KYSYMYS: Mitä basilica minor -arvo tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Vuonna 1980 kirkko täytti kaksisataa vuotta, ja paavi [[Johannes Paavali II]] antoi sille [[basilica minor]] -arvon. Basilica minor on katolisessa kirkossa kunnianimitys, jonka paavi voi myöntää erityisen tärkeäksi katsotulle kirkolle. Arvo kertoo kirkon merkityksestä, ei sen rakennustavasta. Kyl se arvo kirkolle sopii.
+KYSYMYS: Kerro lisää: basilica minor
+
+### 169
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Milloin Raamattu käännettiin ensi kerran latviaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Johann Ernst Glück]] sai ensimmäisen latvialaisen Raamatun käännöksen valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan [[Marienburgissa]], joka on nykyinen [[Alūksne]]. Samassa rakennuksessa toimii nykyään Glückin raamattumuseo. Yli kolmesataa vuotta sitten, ja minä muistin vuoden.
+KYSYMYS: Kerro lisää: Johann Ernst Glück
+
+### 170
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Milloin Raamattu käännettiin ensi kerran latviaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Johann Ernst Glück]] sai ensimmäisen latvialaisen Raamatun käännöksen valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan [[Marienburgissa]], joka on nykyinen [[Alūksne]]. Samassa rakennuksessa toimii nykyään Glückin raamattumuseo. Yli kolmesataa vuotta sitten, ja minä muistin vuoden.
+KYSYMYS: Kerro lisää: Marienburgissa
+
+### 171
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Milloin Raamattu käännettiin ensi kerran latviaksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Johann Ernst Glück]] sai ensimmäisen latvialaisen Raamatun käännöksen valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan [[Marienburgissa]], joka on nykyinen [[Alūksne]]. Samassa rakennuksessa toimii nykyään Glückin raamattumuseo. Yli kolmesataa vuotta sitten, ja minä muistin vuoden.
+KYSYMYS: Kerro lisää: Alūksne
+
+### 172
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Kuka oli Glückin kasvattitytär?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Glückin kasvattitytär oli [[Marta Skowrońska]]. Hän meni naimisiin [[Pietari Suuren]] kanssa ja tunnetaan nimellä [[Katariina I]]. Vuosina 1725–1727 hän oli Venäjän keisarinna. Ei hassumpi ura kasvattitytölle.
+KYSYMYS: Kerro lisää: Marta Skowrońska
+
+### 173
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Kuka oli Glückin kasvattitytär?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Glückin kasvattitytär oli [[Marta Skowrońska]]. Hän meni naimisiin [[Pietari Suuren]] kanssa ja tunnetaan nimellä [[Katariina I]]. Vuosina 1725–1727 hän oli Venäjän keisarinna. Ei hassumpi ura kasvattitytölle.
+KYSYMYS: Kerro lisää: Pietari Suuren
+
+### 174
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Musta juoma joka pelasti keisarinnan] 1752 — Riianmustabalsami on tumma yrttilikööri, jonka resepti syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti kaupungissaan parikymmentä yrttiä, juurta ja maustetta korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se paransi Venäjän keisarinna Katariina Suuren, kun tämä sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan reseptin tuntee vain harva mestari ja hänen oppilaansa. Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, ja sitä viedään yli kolmeenkymmeneen maahan.
+AIEMPI KYSYMYS: Kuka oli Glückin kasvattitytär?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Glückin kasvattitytär oli [[Marta Skowrońska]]. Hän meni naimisiin [[Pietari Suuren]] kanssa ja tunnetaan nimellä [[Katariina I]]. Vuosina 1725–1727 hän oli Venäjän keisarinna. Ei hassumpi ura kasvattitytölle.
+KYSYMYS: Kerro lisää: Katariina I
+
+### 175
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Missä Glück opiskeli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Glück opiskeli [[Wittenbergissä]] ja [[Jenassa]] teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa. Ennen yliopisto-opintoja hän kävi Altenburgin latinakoulun. Mikä lista opintoja, minä opin vain reitit.
+KYSYMYS: Kerro lisää: Wittenbergissä
+
+### 176
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Missä Glück opiskeli?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Glück opiskeli [[Wittenbergissä]] ja [[Jenassa]] teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa. Ennen yliopisto-opintoja hän kävi Altenburgin latinakoulun. Mikä lista opintoja, minä opin vain reitit.
+KYSYMYS: Kerro lisää: Jenassa
+
+### 177
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Milloin Glück perusti ensimmäiset latviankieliset koulut?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Glück perusti [[Liivinmaan]] ensimmäiset latviankieliset koulut vuonna 1683, yli kymmenen vuotta ennen kuin hänen Raamatunkäännöksensä valmistui 1694. Hän oli [[luterilainen teologi]], joka työskenteli nykyisen Latvian alueella. Koulut ensin, Raamattu sitten, aika järkevä järjestys.
+KYSYMYS: Kerro lisää: Liivinmaan
+
+### 178
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kohdekartta / Kohdekartta: Tromssan tuomiokirkko] 1861 Tromssan tuomiokirkko on kokonaan puusta rakennettu keltainen kirkko, joka valmistui vuonna 1861 arkkitehti Christian Heinrich Groschin piirustusten mukaan. Se on ainoa Norjan luterilainen tuomiokirkko, joka on rakennettu puusta - ja sen sisään mahtuu yli 600 kirkkovierasta! Paikalla on ollut kirkko jo satoja vuosia ennen tätäkin: kuningas Håkon IV rakennutti tänne kappelin jo vuonna 1252, ja sen jälkeen paikalla on ollut ainakin kaksi muuta kirkkoa ennen nykyistä rakennusta. Kellotorni valmistui vuotta myöhemmin, 1862, ja kirkkoa koristeltiin lisää vielä 1880-luvulla. Isoisän vieraillessa Tromssassa 1873 kirkko oli vasta reilut kymmenen vuotta vanha - täysin uusi nähtävyys pienessä pu…
+AIEMPI KYSYMYS: Milloin Glück perusti ensimmäiset latviankieliset koulut?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Glück perusti [[Liivinmaan]] ensimmäiset latviankieliset koulut vuonna 1683, yli kymmenen vuotta ennen kuin hänen Raamatunkäännöksensä valmistui 1694. Hän oli [[luterilainen teologi]], joka työskenteli nykyisen Latvian alueella. Koulut ensin, Raamattu sitten, aika järkevä järjestys.
+KYSYMYS: Kerro lisää: luterilainen teologi
+
+### 179
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Missä Glück syntyi?
+AIEMPI VASTAUS (Livia):
+Mmm— Saksassa. Glück syntyi vuonna 1654 [[Wettinissä]] pappisperheeseen. Hän oli saksalainen kääntäjä ja teologi, joka työskenteli myöhemmin [[Liivinmaalla]] nykyisen Latvian alueella. Hän kuoli Moskovassa vuonna 1705. Saksasta Latviaan, aikamoinen lento.
+KYSYMYS: Kerro lisää: Wettinissä
+
+### 180
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Glückin raamattumuseo (sana)
+Tietoruudun teksti: Johann Ernst Glück (1654–1705) oli saksalainen kääntäjä ja luterilainen teologi, joka työskenteli Liivinmaalla nykyisen Latvian alueella. Hän syntyi Wettinissä pappisperheeseen, kävi Altenburgin latinakoulun ja opiskeli Wittenbergissä ja Jenassa teologiaa, retoriikkaa, filosofiaa, geometriaa, historiaa, maantiedettä ja latinaa.
+
+Glück käänsi ensimmäisenä Raamatun latviaksi ja sai työn valmiiksi vuonna 1694. Käännös tehtiin kokonaisuudessaan Marienburgissa, joka on nykyinen Alūksne, ja samassa rakennuksessa toimii nyt Ernst Glückin raamattumuseo. Vuonna 1683 hän perusti Liivinmaan ensimmäiset latviankieliset koulut.
+
+Glückillä oli neljä tytärtä ja poika, Ernst Gottlieb Glück, sekä kasvattitytär Marta Skowrońska. Marta meni naimisiin Pietari Suuren kanssa, ja hänet tunnetaan Katariina I:nä: vuosina 1725–1727 hän oli Venäjän keisarinna. Glück itse kuoli Moskovassa.
+AIEMPI KYSYMYS: Missä Glück syntyi?
+AIEMPI VASTAUS (Livia):
+Mmm— Saksassa. Glück syntyi vuonna 1654 [[Wettinissä]] pappisperheeseen. Hän oli saksalainen kääntäjä ja teologi, joka työskenteli myöhemmin [[Liivinmaalla]] nykyisen Latvian alueella. Hän kuoli Moskovassa vuonna 1705. Saksasta Latviaan, aikamoinen lento.
+KYSYMYS: Kerro lisää: Liivinmaalla
+
+### 181
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Miltä Riian Mustapäiden talo näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustapäiden talo oli yksi [[Riian]] komeimmista rakennuksista. Se rakennettiin vuonna 1334 kauppiaiden kokous- ja juhlapaikaksi, ja vuosisatojen kuluessa sen julkisivuun lisättiin koristeellisia [[renessanssiyksityiskohtia]]. Rakennuksessa kokoontui 1400-luvulta lähtien [[veljeskunta]], johon kuului naimattomia ulkomaisia kauppiaita, ja juuri heidän mukaansa talo sai nimensä. Ei paha kyyhkyltä, kun ei ole edes päässyt sisään.
+KYSYMYS: Kerro lisää: Riian
+
+### 182
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Talo joka räjäytettiin ja rakennettiin uudelleen] 1334 — Mustapäiden talo rakennettiin vuonna 1334 Riian kauppiaiden kokous- ja juhlapaikaksi, ja 1400-luvulta lähtien siellä kokoontui mustapäiksi kutsuttu naimattomien ulkomaisten kauppiaiden veljeskunta. Vuosisatojen aikana julkisivuun lisättiin koristeellisia renessanssiyksityiskohtia, ja talosta tuli yksi Riian komeimmista rakennuksista. Kesäkuussa 1941 sotatoimet vaurioittivat taloa pahoin, ja vuonna 1948 neuvostoviranomaiset räjäyttivät rauniot kokonaan — menneisyyttä ei haluttu muistaa. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999, kaupungin 800-vuotisjuhliin.
+AIEMPI KYSYMYS: Miltä Riian Mustapäiden talo näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustapäiden talo oli yksi [[Riian]] komeimmista rakennuksista. Se rakennettiin vuonna 1334 kauppiaiden kokous- ja juhlapaikaksi, ja vuosisatojen kuluessa sen julkisivuun lisättiin koristeellisia [[renessanssiyksityiskohtia]]. Rakennuksessa kokoontui 1400-luvulta lähtien [[veljeskunta]], johon kuului naimattomia ulkomaisia kauppiaita, ja juuri heidän mukaansa talo sai nimensä. Ei paha kyyhkyltä, kun ei ole edes päässyt sisään.
+KYSYMYS: Kerro lisää: renessanssiyksityiskohtia
+
+### 183
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Al Kufra — kaupunkilehti / Senussi-veljeskunta] Kufran teki 1800-luvun lopulla kuuluisaksi Senussi-veljeskunta, islamilainen uskonnollinen liike, joka pakeni tänne ottomaanien painostusta ja teki oaasista koko liikkeen uuden pyhän pääkaupungin.
+AIEMPI KYSYMYS: Miltä Riian Mustapäiden talo näytti loistoaikanaan?
+AIEMPI VASTAUS (Livia):
+Katotaas. Mustapäiden talo oli yksi [[Riian]] komeimmista rakennuksista. Se rakennettiin vuonna 1334 kauppiaiden kokous- ja juhlapaikaksi, ja vuosisatojen kuluessa sen julkisivuun lisättiin koristeellisia [[renessanssiyksityiskohtia]]. Rakennuksessa kokoontui 1400-luvulta lähtien [[veljeskunta]], johon kuului naimattomia ulkomaisia kauppiaita, ja juuri heidän mukaansa talo sai nimensä. Ei paha kyyhkyltä, kun ei ole edes päässyt sisään.
+KYSYMYS: Kerro lisää: veljeskunta
+
+### 184
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+AIEMPI KYSYMYS: Miksi Riian Mustapäiden talo katosi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Talo vaurioitui pahoin kesäkuussa 1941, kun sotatoimet osuivat [[Riiaan]]. Vuonna 1948 neuvostoviranomaiset räjäyttivät jäljelle jääneet rauniot kokonaan. Sodasta ja räjäytyksestä on nyt yli kahdeksankymmentä vuotta, ja Latvia oli tuolloin osa [[Neuvostoliittoa]], joten päätökset tehtiin Moskovan johtamassa järjestelmässä. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Riiaan
+
+### 185
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historia: Helsinki näytteli Neuvostoliittoa] Kylmän sodan aikana länsimaisia kuvausryhmiä ei päästetty kuvaamaan Moskovaan, joten Neuvostoliitto piti kuvata muualla. Helsinki kelpasi sijaiseksi: keskusta on Carl Ludvig Engelin piirtämää empireä ja Katajanokalla kohoaa ortodoksinen katedraali. Rikoselokuva Gorky Park (1983) kuvattiin pääosin Helsingissä, ja Kaisaniemen puisto sai esittää Moskovan nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä lunta.
+AIEMPI KYSYMYS: Miksi Riian Mustapäiden talo katosi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Talo vaurioitui pahoin kesäkuussa 1941, kun sotatoimet osuivat [[Riiaan]]. Vuonna 1948 neuvostoviranomaiset räjäyttivät jäljelle jääneet rauniot kokonaan. Sodasta ja räjäytyksestä on nyt yli kahdeksankymmentä vuotta, ja Latvia oli tuolloin osa [[Neuvostoliittoa]], joten päätökset tehtiin Moskovan johtamassa järjestelmässä. Itsenäistymisen jälkeen talo rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se vihittiin käyttöön vuonna 1999. Onpas siitä onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Neuvostoliittoa
+
+### 186
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Musta juoma joka pelasti keisarinnan] 1752 — Riianmustabalsami on tumma yrttilikööri, jonka resepti syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti kaupungissaan parikymmentä yrttiä, juurta ja maustetta korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se paransi Venäjän keisarinna Katariina Suuren, kun tämä sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan reseptin tuntee vain harva mestari ja hänen oppilaansa. Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, ja sitä viedään yli kolmeenkymmeneen maahan.
+AIEMPI KYSYMYS: Keitä Riian mustapäät olivat?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Mustapäät]] olivat kauppiaiden veljeskunta, johon kuului naimattomia ulkomaisia kauppiaita. Veljeskunta kokoontui [[Riian]] Mustapäiden talossa 1400-luvulta lähtien, ja talo toimi kauppiaiden kokous- ja juhlapaikkana. Nimen alkuperästä on useita selityksiä, enkä ole varma, mikä niistä on oikea. Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Mustapäät
+
+### 187
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Millainen kauppakaupunki Riia oli keskiajalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Riia oli keskiajalla merkittävä satama- ja kauppakaupunki Itämeren rannalla, ja se kuului [[Hansaliittoon]]. Kauppiaat kuljettivat kaupunkiin ja sieltä pois muun muassa viljaa, vahaa ja turkiksia. Tarkkoja määriä tai vuosilukuja en ole varma muistavani oikein, joten jätän ne pois. Kaupunki sijaitsee [[Väinäjoen]] suulla, ja se helpotti kauppaa sisämaahan. Ylhäältä katsottuna vesi on aina ollut Riian kulta.
+KYSYMYS: Kerro lisää: Hansaliittoon
+
+### 188
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Millainen kauppakaupunki Riia oli keskiajalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Riia oli keskiajalla merkittävä satama- ja kauppakaupunki Itämeren rannalla, ja se kuului [[Hansaliittoon]]. Kauppiaat kuljettivat kaupunkiin ja sieltä pois muun muassa viljaa, vahaa ja turkiksia. Tarkkoja määriä tai vuosilukuja en ole varma muistavani oikein, joten jätän ne pois. Kaupunki sijaitsee [[Väinäjoen]] suulla, ja se helpotti kauppaa sisämaahan. Ylhäältä katsottuna vesi on aina ollut Riian kulta.
+KYSYMYS: Kerro lisää: Väinäjoen
+
+### 189
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+AIEMPI KYSYMYS: Onko Riian vanhakaupunki maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyllä on: Riian historiallinen keskusta on [[Unescon]] maailmanperintökohde. [[Vanhakaupunki]] tunnetaan keskiaikaisesta katuverkostaan ja kauppiastaloistaan, ja Mustapäiden talo kuuluu sen tunnetuimpiin nähtävyyksiin. Tarkkaa vuotta, jolloin kohde otettiin listalle, en ole varma, joten jätän sen mainitsematta. Kaupungin keskustassa on lisäksi runsaasti jugendtaloja, mutta niiden määrästä en anna lukua. Hyvin meni, vaikka kukaan ei kysynyt pullasta.
+KYSYMYS: Kerro lisää: Unescon
+
+### 190
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Riian Mustapäiden talo (historia)
+Tietoruudun teksti: Mustapäiden talo oli Riian kauppiaiden kokoontumispaikka vuodesta 1334. Rakennus paloi tykistötulessa vuonna 1941, ja jäljelle jääneet rauniot räjäytettiin 1948. Nykyinen talo on vuosina 1996–1999 rakennettu jäljennös.
+AIEMPI KYSYMYS: Onko Riian vanhakaupunki maailmanperintökohde?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Kyllä on: Riian historiallinen keskusta on [[Unescon]] maailmanperintökohde. [[Vanhakaupunki]] tunnetaan keskiaikaisesta katuverkostaan ja kauppiastaloistaan, ja Mustapäiden talo kuuluu sen tunnetuimpiin nähtävyyksiin. Tarkkaa vuotta, jolloin kohde otettiin listalle, en ole varma, joten jätän sen mainitsematta. Kaupungin keskustassa on lisäksi runsaasti jugendtaloja, mutta niiden määrästä en anna lukua. Hyvin meni, vaikka kukaan ei kysynyt pullasta.
+KYSYMYS: Kerro lisää: Vanhakaupunki
+
+### 191
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+AIEMPI KYSYMYS: Minne Kuurinmaan herttuan laivasto Ventspilsistä aikoinaan lähti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kuurinmaan herttuakunnan aikana [[Ventspilsissä]] rakennettiin 44 sotalaivaa ja 79 kauppalaivaa, mutta laivaston tarkoista reiteistä minulla ei ole varmaa tietoa. Tiedän, että herttuakunta kävi kauppaa Itämerellä ja Länsi-Euroopan satamien kanssa. [[Herttua Jaakobin]] ajoilta tunnetaan myös siirtomaayritykset Länsi-Afrikassa ja Karibialla, mutta en ole varma, mitkä alukset niille matkoille lähtivät juuri Ventspilsistä. Jäätymätön satama teki liikenteestä mahdollista ympäri vuoden. Tämä oli kyllä kunnon laivastokysymys.
+KYSYMYS: Kerro lisää: Ventspilsissä
+
+### 192
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Buenos Aires — kohdekartta / Kohdekartta: Buenos Airesin katedraali] 1753–1863 Juan de Garay varasi kaupungin pääkirkolle vuonna 1580 saman korttelin neljänneksen, jolla katedraali yhä seisoo. Ensimmäiset kirkot olivat savitiilestä ja puusta, ja ne kaatuivat toinen toisensa jälkeen: yksi purettiin 1605 vanhana ja sopimattomana, seuraavan katto uhkasi sortua 1616 ja rakennus romahti, koska se oli tehty lahosta pajupuusta. Uusi kirkko valmistui 1618, mutta se oli edellistä pienempi. Kolmen laivan kirkko saatiin valmiiksi 1671, ja sen torni ja katto putosivat 1680-luvun alussa. Toukokuun 23. päivän yönä 1752 kirkon keskilaiva romahti jälleen. Nykyisen rakennuksen aloitti 1753 italialainen arkkitehti Antonio Masella. Hänen kupolissaan havaittiin halkeamia, se jo…
+AIEMPI KYSYMYS: Minne Kuurinmaan herttuan laivasto Ventspilsistä aikoinaan lähti?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kuurinmaan herttuakunnan aikana [[Ventspilsissä]] rakennettiin 44 sotalaivaa ja 79 kauppalaivaa, mutta laivaston tarkoista reiteistä minulla ei ole varmaa tietoa. Tiedän, että herttuakunta kävi kauppaa Itämerellä ja Länsi-Euroopan satamien kanssa. [[Herttua Jaakobin]] ajoilta tunnetaan myös siirtomaayritykset Länsi-Afrikassa ja Karibialla, mutta en ole varma, mitkä alukset niille matkoille lähtivät juuri Ventspilsistä. Jäätymätön satama teki liikenteestä mahdollista ympäri vuoden. Tämä oli kyllä kunnon laivastokysymys.
+KYSYMYS: Kerro lisää: Herttua Jaakobin
+
+### 193
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Krakova — kaupunkilehti / Historia: Wawel oli kasarmi ennen kuin siitä tuli museo] Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä, ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Vuoden 1795 jaon jälkeen kukkula joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen ja rakennuksia purettiin. Vasta vuonna 1905 keisari Frans Joosef käski joukkonsa pois. Kunnostus rahoitettiin yleisellä keräyksellä, ja lahjoittajien nimet kaiverrettiin tiiliin, joista muurattiin muuri pohjoisen portin lähelle. Ne ovat siellä yhä ja niitä voi lukea.
+AIEMPI KYSYMYS: Miksi laivanrakennus ja kauppa elpyivät Ventspilsissä vasta noin vuonna 1850?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupunki siirtyi vuonna 1795 [[Puolan kolmannen jaon]] jälkeen Venäjän keisarikunnalle, ja laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850. En ole varma tarkasta syystä, koska sitä ei tunneta minulle riittävän hyvin. Yleisesti 1800-luvun puolivälissä Itämeren satamien kauppa kasvoi höyrylaivojen ja kehittyvän liikenteen myötä, ja [[Venäjän]] sisämaan tuotteita tarvittiin ulkomaille. Kuurinmaan herttuakunnan päättyminen muutti kuitenkin alueen asemaa. Onpas ollu pitkä aikajana.
+KYSYMYS: Kerro lisää: Puolan kolmannen jaon
+
+### 194
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miksi laivanrakennus ja kauppa elpyivät Ventspilsissä vasta noin vuonna 1850?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaupunki siirtyi vuonna 1795 [[Puolan kolmannen jaon]] jälkeen Venäjän keisarikunnalle, ja laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850. En ole varma tarkasta syystä, koska sitä ei tunneta minulle riittävän hyvin. Yleisesti 1800-luvun puolivälissä Itämeren satamien kauppa kasvoi höyrylaivojen ja kehittyvän liikenteen myötä, ja [[Venäjän]] sisämaan tuotteita tarvittiin ulkomaille. Kuurinmaan herttuakunnan päättyminen muutti kuitenkin alueen asemaa. Onpas ollu pitkä aikajana.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 195
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli ja miten se toimi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Hansaliitto oli keskiajalla muodostunut pohjoisen Euroopan kauppakaupunkien ja kauppiaiden verkosto, jonka toiminta keskittyi Itämerelle ja Pohjanmerelle. Se suojeli jäsentensä kauppaa ja sovitti yhteisiä sääntöjä, ja siihen kuului muun muassa [[Lyypekki]]. Myös [[Ventspils]] oli tärkeä hansakaupunki, ja Riia kuului samaan verkostoon. Liittoa ei johtanut yksi hallitsija, vaan jäsenet sopivat asioista yhdessä. Liitto kutistui hiljalleen myöhempinä vuosisatoina, enkä kerro tarkkoja vuosia. Kyl se oli vaikuttava järjestely.
+KYSYMYS: Kerro lisää: Lyypekki
+
+### 196
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+AIEMPI KYSYMYS: Mikä Hansaliitto oli ja miten se toimi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Hansaliitto oli keskiajalla muodostunut pohjoisen Euroopan kauppakaupunkien ja kauppiaiden verkosto, jonka toiminta keskittyi Itämerelle ja Pohjanmerelle. Se suojeli jäsentensä kauppaa ja sovitti yhteisiä sääntöjä, ja siihen kuului muun muassa [[Lyypekki]]. Myös [[Ventspils]] oli tärkeä hansakaupunki, ja Riia kuului samaan verkostoon. Liittoa ei johtanut yksi hallitsija, vaan jäsenet sopivat asioista yhdessä. Liitto kutistui hiljalleen myöhempinä vuosisatoina, enkä kerro tarkkoja vuosia. Kyl se oli vaikuttava järjestely.
+KYSYMYS: Kerro lisää: Ventspils
+
+### 197
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Isfahanin basaari] Basaari on käytävä kahden eri-ikäisen kaupungin välillä. Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina 1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia basaareja. Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään 1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain se, että ne ovat yli tuhat vu…
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä jäätymätön satama tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Jäätymätön satama tarkoittaa satamaa, jonka vesi ei yleensä jäädy talvella niin, että laivaliikenne pysähtyisi. Siksi alukset voivat käyttää sitä ympäri vuoden, mikä on [[pohjoisessa]] suuri etu. [[Ventspilsin]] satama kuuluu tähän ryhmään, ja se sijaitsee Itämeren rannalla Venta-joen suulla. En ole varma tarkasta syystä, miksi jää ei täällä pysäytä liikennettä, mutta avoin meri ja virtaukset vaikuttavat yleensä asiaan.
+
+Siivekkäälle jäätyvä satama on lähinnä suuri liukumäki. Ja sulat laiturit ovat kyllä parempia istuskella.
+KYSYMYS: Kerro lisää: pohjoisessa
+
+### 198
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+AIEMPI KYSYMYS: Mitä jäätymätön satama tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Jäätymätön satama tarkoittaa satamaa, jonka vesi ei yleensä jäädy talvella niin, että laivaliikenne pysähtyisi. Siksi alukset voivat käyttää sitä ympäri vuoden, mikä on [[pohjoisessa]] suuri etu. [[Ventspilsin]] satama kuuluu tähän ryhmään, ja se sijaitsee Itämeren rannalla Venta-joen suulla. En ole varma tarkasta syystä, miksi jää ei täällä pysäytä liikennettä, mutta avoin meri ja virtaukset vaikuttavat yleensä asiaan.
+
+Siivekkäälle jäätyvä satama on lähinnä suuri liukumäki. Ja sulat laiturit ovat kyllä parempia istuskella.
+KYSYMYS: Kerro lisää: Ventspilsin
+
+### 199
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ventspils (historia)
+Tietoruudun teksti: Ventspils on Kuurinmaalla Latvian luoteisosassa sijaitseva kaupunki, joka ulottuu Venta-joen suulle Itämeren rannalle ja jonka satama on jäätymätön. Nimi tarkoittaa kirjaimellisesti "linnaa Venta-joella", ja se viittaa Liivinmaan ritarikunnan linnaan, jonka ympärille kaupunki kasvoi. Kaupunkioikeudet se sai vuonna 1314, ja siitä tuli tärkeä Hansaliiton kauppakaupunki. Kuurinmaan herttuakunnan aikana Ventspilsissä rakennettiin 44 sotalaivaa ja 79 kauppalaivaa. Puolan kolmannen jaon jälkeen vuonna 1795 kaupunki siirtyi Venäjän keisarikunnalle, mutta laivanrakennus ja kauppa nousivat uudelleen tärkeiksi vasta noin vuonna 1850.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Millainen valtio Kuurinmaan herttuakunta oli?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kuurinmaan herttuakunta oli pieni valtio nykyisen Latvian alueella, ja se oli [[Puola-Liettuan]] yhteisvaltion alainen. Herttuakunta oli olemassa 1500-luvun puolivälistä 1700-luvun lopulle, ja sen loppu tuli [[Puolan kolmannen jaon]] myötä vuonna 1795, jolloin alue siirtyi Venäjälle. Herttuakunnan aikana Ventspilsissä rakennettiin sotalaivoja ja kauppalaivoja, ja sen kauppa ulottui ulkomaille. Tarkkoja hallintoasioita en ole varma muistavani oikein. Pienikin valtio ehti siis näyttää kyynärpäänsä.
+KYSYMYS: Kerro lisää: Puola-Liettuan
+
+### 200
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+AIEMPI KYSYMYS: Miksi rautatie sai Jūrmalan kasvamaan kylpyläkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lomanviettäjät alkoivat tulla rannalle jo 1700-luvun lopulla ja 1800-luvun alussa, aluksi varakkaat maanomistajat ja sitten venäläiset upseerit. Riian ja Tukumsin välinen [[rautatie]] valmistui vuonna 1877, ja se kasvatti kävijämääriä paljon, koska matka [[Riiasta]] rannalle muuttui helpommaksi ja nopeammaksi. Rautatie toi rannalle yhä uusia lomailijoita, ja tästä syntyi kylpyläkaupunki, jossa on yli 4000 puutaloa. Ajattelin, että tuo oli ihan hyvä selitys.
+KYSYMYS: Kerro lisää: rautatie
+
+### 201
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+AIEMPI KYSYMYS: Miksi rautatie sai Jūrmalan kasvamaan kylpyläkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Lomanviettäjät alkoivat tulla rannalle jo 1700-luvun lopulla ja 1800-luvun alussa, aluksi varakkaat maanomistajat ja sitten venäläiset upseerit. Riian ja Tukumsin välinen [[rautatie]] valmistui vuonna 1877, ja se kasvatti kävijämääriä paljon, koska matka [[Riiasta]] rannalle muuttui helpommaksi ja nopeammaksi. Rautatie toi rannalle yhä uusia lomailijoita, ja tästä syntyi kylpyläkaupunki, jossa on yli 4000 puutaloa. Ajattelin, että tuo oli ihan hyvä selitys.
+KYSYMYS: Kerro lisää: Riiasta
+
+### 202
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Mitä meripihka on, ja miksi sitä löytyy Itämeren rannoilta?
+AIEMPI VASTAUS (Livia):
+Mmm— Meripihka on fossiilista puun pihkaa: muinaisten havupuumetsien pihka on kovettunut ja säilynyt kymmeniä miljoonia vuosia. Lähteiden mukaan [[Itämeren]] alueen meripihka on peräisin eoseenin ajan metsistä, mutta tarkkaa ikää en ole varma. Aallot ja virrat huuhtovat paloja rannalle erityisesti myrskyjen jälkeen, ja siksi [[Jūrmalan]] rannalta voi keväisin ja syksyisin löytää niitä. Meripihkaa on käytetty koruihin jo kauan sitten. Hyvin muistin, vaikka pulla jäi taas kysymättä.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 203
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+AIEMPI KYSYMYS: Mitä meripihka on, ja miksi sitä löytyy Itämeren rannoilta?
+AIEMPI VASTAUS (Livia):
+Mmm— Meripihka on fossiilista puun pihkaa: muinaisten havupuumetsien pihka on kovettunut ja säilynyt kymmeniä miljoonia vuosia. Lähteiden mukaan [[Itämeren]] alueen meripihka on peräisin eoseenin ajan metsistä, mutta tarkkaa ikää en ole varma. Aallot ja virrat huuhtovat paloja rannalle erityisesti myrskyjen jälkeen, ja siksi [[Jūrmalan]] rannalta voi keväisin ja syksyisin löytää niitä. Meripihkaa on käytetty koruihin jo kauan sitten. Hyvin muistin, vaikka pulla jäi taas kysymättä.
+KYSYMYS: Kerro lisää: Jūrmalan
+
+### 204
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Mikä Riianlahti on?
+AIEMPI VASTAUS (Livia):
+Hei, tän minä osaan. Riianlahti on Itämeren lahti, joka ulottuu Latvian ja Viron rannikkojen väliin. Se on suhteellisen matala, ja sen rannalla sijaitsevat muun muassa [[Riian]] kaupunki sekä [[Jūrmalan]] pitkä hiekkaranta. Lahden rannat ovat pääosin matalia ja hiekkaisia, joten loma-alueita on syntynyt etenkin Latvian puolelle. Lahden tarkkaa pinta-alaa en ole varma, joten en kerro lukua. Siivin katsottuna lahti on sievä kuin kuppi.
+KYSYMYS: Kerro lisää: Riian
+
+### 205
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Arki: Puutalot monen kulttuurin kaupungissa] nykyään — Cayennen vanhan keskustan kadunkulmissa seisoo yhä värikkäitä kreolitaloja: puisia, ikkunaluukullisia ja verannoin koristeltuja rakennuksia siirtomaa-ajalta. Niiden katveessa elää nykyään väestö, jossa sekoittuvat kreolit, alkuperäiskansat, Surinamesta paenneiden orjien jälkeläiset eli bushinengeet, hmongit, kiinalaiset ja brasilialaiset siirtolaiset. Arjessa kuulee ranskan lisäksi guayanankreolia ja monia muita kieliä, ja maksuvälineenä on euro, sillä alue on osa Euroopan unionia siinä missä Ranskan Euroopan puoleinen alue.
+AIEMPI KYSYMYS: Millaisia ovat Jūrmalan vanhat puutalot?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Jūrmalan]] tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat [[puutalot]], joita on yli 4000. Ne ovat enimmäkseen lomahuviloita, jotka rakennettiin kylpylävieraille rannan lähelle mäntymetsän sekaan. Tyylit vaihtelevat, ja monissa on koristeellisia verannan ja kuistin yksityiskohtia, mutta tarkkoja arkkitehtuurityylejä en ole varma luetella oikein. Monet talot on säilytetty kaupungin ilmeen osana.
+
+Minä katselisin niitä mieluiten ikkunalaudalta, jolla on pullavati. Vanhat puutalot tuoksuvat ylhäältä katsottuna aina vähän hartsilta ja kesältä.
+KYSYMYS: Kerro lisää: puutalot
+
+### 206
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jūrmala (kulttuuri)
+Tietoruudun teksti: Jūrmala on kylpyläkaupunki Riian Lahden ja Lielupe-joen välisellä kannaksella noin 25 kilometrin päässä Riiasta. Nimi tulee latvian sanoista jūra ("meri") ja mala ("reuna"), joten se tarkoittaa suunnilleen "merenrantaa". Kaupunki koostuu ketjusta pieniä lomakohteita, ja sen valkohiekkainen ranta on 33 kilometriä pitkä; keväisin ja syksyisin rannalta voi löytää meripihkan paloja. Lomanviettäjät alkoivat tulla rannalle 1700-luvun lopulla ja 1800-luvun alussa: ensin varakkaat maanomistajat ja sitten venäläiset upseerit, ja Riian ja Tukumsin välinen rautatie vuonna 1877 kasvatti kävijämääriä paljon. Kaupungin tunnusomaisia piirteitä ovat 1800- ja 1900-luvuilta peräisin olevat puutalot, joita on yli 4000.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+AIEMPI KYSYMYS: Mitä nimi Jūrmala tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:  nimi on peräisin latvian sanoista jūra, joka tarkoittaa merta, ja mala, joka tarkoittaa reunaa. Nimi tarkoittaa siis suunnilleen merenrantaa. Kaupunki koostuu ketjusta pieniä lomakohteita [[Riianlahden]] ja Lielupe-joen välisellä kannaksella, ja sen valkohiekkainen ranta on 33 kilometriä pitkä. Se sijaitsee noin 25 kilometrin päässä [[Riiasta]]. Täyteen nimi sopii hyvin, eikä siihen tarvita latinaa.
+KYSYMYS: Kerro lisää: Riianlahden
+
+### 207
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+AIEMPI KYSYMYS: Miksi Ķemerin lähdevedessä on rikkiä, ja miksi sitä pidettiin parantavana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ķemerin alueen luonnon [[rikkilähteet]] ovat syntyneet maaperän kerrostumista, mutta tarkkaa syntytapaa en ole varma selittämään oikein. Yleisesti rikkipitoinen vesi haisee mädälle munalle, koska siinä on rikkivetyä. Veden ja suomudan uskottiin parantavan, ja niitä on käytetty vuosisatojen ajan. Tämä johti 1800-luvulla useiden lomakohteiden, kylpylöiden ja parantoloiden syntyyn alueella, ja [[Ķemerin kansallispuisto]] suojelee nykyisin lähteitä ja mutia. Tämän pitkän vastauksen jälkeen sain varmasti ansaitun tauon.
+KYSYMYS: Kerro lisää: rikkilähteet
+
+### 208
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Suon yli kuljetaan lankkuja pitkin] Aamuisin — Ķemerin kansallispuistossa on keidassuo, jonka yli on rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa veden päällä niin, että maisema näyttää toiselta planeetalta. Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan takia alueella on myös kylpylä, jonne tultiin jo tsaarin aikaan hoitoihin.
+AIEMPI KYSYMYS: Miksi Ķemerin lähdevedessä on rikkiä, ja miksi sitä pidettiin parantavana?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ķemerin alueen luonnon [[rikkilähteet]] ovat syntyneet maaperän kerrostumista, mutta tarkkaa syntytapaa en ole varma selittämään oikein. Yleisesti rikkipitoinen vesi haisee mädälle munalle, koska siinä on rikkivetyä. Veden ja suomudan uskottiin parantavan, ja niitä on käytetty vuosisatojen ajan. Tämä johti 1800-luvulla useiden lomakohteiden, kylpylöiden ja parantoloiden syntyyn alueella, ja [[Ķemerin kansallispuisto]] suojelee nykyisin lähteitä ja mutia. Tämän pitkän vastauksen jälkeen sain varmasti ansaitun tauon.
+KYSYMYS: Kerro lisää: Ķemerin kansallispuisto
+
+### 209
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+AIEMPI KYSYMYS: Mitä kasveja kohosuolla voi kasvaa, vaikka ravinteita on vähän?
+AIEMPI VASTAUS (Livia):
+Mmm— Kohosuo on ravinneköyhä ympäristö, jossa kasvaa lajeja, jotka tulevat toimeen vähällä. Tyypillisiä ovat [[rahkasammalet]], jotka muodostavat suon pintakerroksen, sekä karpalo, hilla ja suopursu. Kihokki kerää ravintoa myös pienistä hyönteisistä. [[Ķemerin]] suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa. Lajien tarkkaa esiintymistä Ķemerissä en ole varma, mutta kohosuon ravinneköyhyys on ominaista kaikille tällaisille soille. Mitään suosta en ole koskaan syönyt, enkä aio.
+KYSYMYS: Kerro lisää: rahkasammalet
+
+### 210
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Suon yli kuljetaan lankkuja pitkin] Aamuisin — Ķemerin kansallispuistossa on keidassuo, jonka yli on rakennettu kilometrien mittainen lankkupolku. Suon pinnalla on tummia lampareita ja matalia mäntyjä, ja aamulla usva makaa veden päällä niin, että maisema näyttää toiselta planeetalta. Turve kasvaa hitaasti: noin millimetrin vuodessa, joten metrin paksuinen kerros on tuhat vuotta vanha. Suoveden ja mudan takia alueella on myös kylpylä, jonne tultiin jo tsaarin aikaan hoitoihin.
+AIEMPI KYSYMYS: Mitä kasveja kohosuolla voi kasvaa, vaikka ravinteita on vähän?
+AIEMPI VASTAUS (Livia):
+Mmm— Kohosuo on ravinneköyhä ympäristö, jossa kasvaa lajeja, jotka tulevat toimeen vähällä. Tyypillisiä ovat [[rahkasammalet]], jotka muodostavat suon pintakerroksen, sekä karpalo, hilla ja suopursu. Kihokki kerää ravintoa myös pienistä hyönteisistä. [[Ķemerin]] suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa. Lajien tarkkaa esiintymistä Ķemerissä en ole varma, mutta kohosuon ravinneköyhyys on ominaista kaikille tällaisille soille. Mitään suosta en ole koskaan syönyt, enkä aio.
+KYSYMYS: Kerro lisää: Ķemerin
+
+### 211
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Luonto: Metri tuhannessa vuodessa] Vuosituhansia — Irlannin soissa kasvava rahkasammal ei maadu kunnolla, koska vesi on hapanta ja hapetonta. Kuolleet kasvit painuvat kerroksiksi, ja tuhannessa vuodessa syntyy noin metri turvetta. Turvetta on nostettu lämmitykseen vuosisatoja: se leikataan pitkällä terällä palasiksi, jotka pinotaan pystyyn kuivumaan tuuleen. Suo säilyttää myös sen, mikä sinne joutuu, ja soista on löytynyt puisia teitä, voita puuastioissa ja kirjoja. Nykyään nostoa rajoitetaan, koska suot sitovat hiiltä ja niitä on jäljellä vain murto-osa.
+AIEMPI KYSYMYS: Miten turve syntyy suossa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Turve syntyy, kun suon kuolleet kasvit eivät lahoa kokonaan, koska märässä ympäristössä happea on vähän. Kerros kasvaa vähitellen, ja [[Ķemerin]] suolla se tapahtuu noin millimetrin vuodessa. Metrin paksuinen kerros on siis noin tuhat vuotta vanha. [[Rahkasammal]] on kohosuon tärkeä turvetta muodostava kasvi, ja turve on perinteisesti ollut polttoainetta ja kasvualustaa. Tämä käy lyhyestä kasvunopeudesta hyvin ilmi.
+KYSYMYS: Kerro lisää: Rahkasammal
+
+### 212
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+AIEMPI KYSYMYS: Mikä Litorinameri oli?
+AIEMPI VASTAUS (Livia):
+Just niin, tuo kuulostaa tutulta. Litorinameri oli Itämeren kehitysvaihe jääkauden jälkeen, jolloin meri oli nykyistä suolaisempi ja ulottui laajemmalle alueelle kuin nykyinen [[Itämeri]]. [[Ķemerin]] alueen järvet ovat sen entisiä laguuneja, joten ne muodostuivat meren vetäytyessä. Ajoituksesta tiedän vain, että kyse on tuhansien vuosien takaisista ajoista; tarkkoja lukuja en ole varma. Meren muodot ovat siis muuttuneet moneen kertaan.
+KYSYMYS: Kerro lisää: Itämeri
+
+### 213
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+AIEMPI KYSYMYS: Millaisia pitkospolut ovat ja miksi niitä tarvitaan?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Pitkospolut]] ovat suolle rakennettuja lankkupolkuja, joiden ansiosta kulkija pääsee suon yli kastumatta ja suota rikkomatta. [[Ķemerissä]] pitkospolkuja on kaksi, ja pidempi niistä on 3,4 kilometriä. Polku suojaa herkkää turvekasvustoa, sillä jokainen askel painaa pehmeää rahkasammalta. Suota tulee kunnioittaa, koska sen kasvi- ja turvekerros uusiutuu hitaasti. Siivin voisin ylittää suon vaikka ilman polkua.
+
+Minä pidän pitkospoluista, koska ne ovat kuin laiturit märällä maalla. Ja jos lankun päällä kävelee, ei tarvitse kantaa omaa sateenvarjoa.
+KYSYMYS: Kerro lisää: Pitkospolut
+
+### 214
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Ķemeri (historia)
+Tietoruudun teksti: Ķemerin kansallispuisto sijaitsee Jūrmalan länsipuolella, ja se perustettiin vuonna 1997. Puisto on 381,65 neliökilometrillään Latvian kolmanneksi suurin: sitä peittävät enimmäkseen metsät ja suot, joista merkittävin on Suuri Ķemerin suo. Alueella on myös järviä, jotka ovat Litorinameren entisiä laguuneja. Puisto suojelee luonnon rikkilähteitä ja parantaviksi katsottuja mutia, joita on käytetty vuosisatojen ajan ja jotka synnyttivät 1800-luvulla useita lomakohteita, kylpylöitä ja parantoloita. Suolla kasvaa syötäviä marjoja, kuten karpaloita ja hillaa, ja siellä on pitkospolut, joista pidempi on 3,4 kilometriä.
+AIEMPI KYSYMYS: Millaisia pitkospolut ovat ja miksi niitä tarvitaan?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Pitkospolut]] ovat suolle rakennettuja lankkupolkuja, joiden ansiosta kulkija pääsee suon yli kastumatta ja suota rikkomatta. [[Ķemerissä]] pitkospolkuja on kaksi, ja pidempi niistä on 3,4 kilometriä. Polku suojaa herkkää turvekasvustoa, sillä jokainen askel painaa pehmeää rahkasammalta. Suota tulee kunnioittaa, koska sen kasvi- ja turvekerros uusiutuu hitaasti. Siivin voisin ylittää suon vaikka ilman polkua.
+
+Minä pidän pitkospoluista, koska ne ovat kuin laiturit märällä maalla. Ja jos lankun päällä kävelee, ei tarvitse kantaa omaa sateenvarjoa.
+KYSYMYS: Kerro lisää: Ķemerissä
+
+### 215
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+AIEMPI KYSYMYS: Mistä tiedetään, milloin keskiaikainen Jaunpilsin linna on oikeasti rakennettu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Linna mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, joten se on rakennettu viimeistään silloin. Sen arvellaan rakennetun 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa. Usein mainittu vuosi 1301 ei perustu asiakirjoihin, joten sitä ei voi pitää varmana. [[Jaunpilsin linna]] on [[Liivinmaan ritarikunnan]] rakennuttama, ja ajoitus perustuu pitkälti kirjallisiin mainintoihin ja arvioon rakennuksesta. Hyvin meni, eikä vuosilukua tarvinnut arvata.
+KYSYMYS: Kerro lisää: Jaunpilsin linna
+
+### 216
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mistä tiedetään, milloin keskiaikainen Jaunpilsin linna on oikeasti rakennettu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Linna mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, joten se on rakennettu viimeistään silloin. Sen arvellaan rakennetun 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa. Usein mainittu vuosi 1301 ei perustu asiakirjoihin, joten sitä ei voi pitää varmana. [[Jaunpilsin linna]] on [[Liivinmaan ritarikunnan]] rakennuttama, ja ajoitus perustuu pitkälti kirjallisiin mainintoihin ja arvioon rakennuksesta. Hyvin meni, eikä vuosilukua tarvinnut arvata.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunnan
+
+### 217
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irlanti — maalehti / Historia: Kaksi valtiatarta, yksi yhteinen kieli] 1593 — Gráinne Ní Mháille johti 1500-luvulla laivastoa Länsi-Irlannin rannikolla. Hän peri isältään merenkulkusuvun ja piti hallussaan linnoja ja aluksia, joilla kerättiin maksuja ohi kulkevilta laivoilta. Vuonna 1593 hän purjehti Lontooseen tapaamaan kuningatar Elisabet I:tä, koska hänen poikansa oli vangittu. Kumpikaan ei osannut toisen kieltä, joten keskustelu käytiin latinaksi. Gráinne kieltäytyi kumartamasta, koska ei tunnustanut Elisabetia Irlannin kuningattareksi. Poika päästettiin silti vapaaksi.
+- [Jordania — maalehti / Rauniot: Aavikkolinnan katossa on tähtitaivas] Itäisellä aavikolla on rivi pieniä linnoja, joita kalifien hovi käytti levähdyspaikkoina ja kylpylöinä 700-luvulla. Tunnetuin on Qusayr Amra, jonka seinät ja holvit on maalattu täyteen kuvia: metsästystä, työmiehiä, soittajia ja eläimiä. Kylpyhuoneen kupoliin on maalattu tähtitaivas tähtikuvioineen — se on vanhimpia säilyneitä yrityksiä kuvata taivas pyöreälle pinnalle. Linna on Unescon maailmanperintökohde, ja sen vieressä on yhä vanha kaivo.
+- [Jordania — maalehti / Rauniot] Jordanian läpi on kuljettu aina: karavaanit, roomalaiset legioonat ja pyhiinvaeltajat. Matkan varrelle jäi kaupunkeja ja linnoja, joita seisoo yhä pystyssä keskellä maisemaa.
+- [Belgia — maalehti / Historia] Belgian kaupungit rikastuivat keskiajalla kankaalla ja rakensivat kilpaa linnoja, halleja ja torneja. Kivet muistavat senkin, minkä arkistot ovat menettäneet tulessa.
+AIEMPI KYSYMYS: Miksi Jaunpilsin linnaa ympäröivät ennen joka puolelta vesiesteet?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tästä en ole varma Jaunpilsin kohdalla, joten en väitä tarkkoja yksityiskohtia. Yleisesti keskiaikaisia [[linnoja]] ympäröivät vesiesteet, kuten vallihauta tai lampi, koska ne vaikeuttivat hyökkääjien pääsyä muurien juureen ja tekivät piirityksestä hankalaa. [[Jaunpilsin linna]] on kenttäkivistä ja yläosistaan tiilestä muurattu, ja siinä on massiivinen pyöreä torni. Vesiesteet ovat voineet olla osa tätä puolustusta. Sellaista hyvää selitystä en kuitenkaan osaa antaa varmana.
+KYSYMYS: Kerro lisää: linnoja
+
+### 218
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+AIEMPI KYSYMYS: Mikä oli Liivinmaan ritarikunta?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liivinmaan ritarikunta oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka hallitsi suuria alueita nykyisen Latvian ja Viron seudulla. Se oli yhteydessä [[Saksalaiseen ritarikuntaan]], ja se rakennutti alueelle useita linnoja, joihin kuuluu myös [[Jaunpilsin linna]]. Ritarikunnan tarkat vaiheet ja päättymisen vuoden jätän mainitsematta, koska en ole varma. Linnoissa asui komtuureja, jotka johtivat alueyksiköitä. Täytyy sanoa, että hyvin kyyhky luennoi.
+KYSYMYS: Kerro lisää: Saksalaiseen ritarikuntaan
+
+### 219
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+AIEMPI KYSYMYS: Mikä on komtuuri?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Komtuuri]] oli ritarikunnan alueyksikön johtaja, jonka tehtäviin kuuluivat alueen hallinto ja puolustus. Hän asui yleensä linnassa, joka toimi hallinnon keskuksena. Jaunpilsin linna siirtyi vuonna 1576 Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Sana tulee [[Liivinmaan ritarikunnan]] aikaisesta hallintojärjestelmästä, mutta tarkkaa arvojärjestystä en ole varma. Titteleitä riitti, ja niiden muistaminen vei oman aikansa.
+KYSYMYS: Kerro lisää: Komtuuri
+
+### 220
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+AIEMPI KYSYMYS: Missä Semgallia sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Semgallia]] on historiallinen alue nykyisen [[Latvian]] eteläosassa, ja siellä sijaitsee myös Jaunpilsin linna. Alue on saanut nimensä semgallilaisilta, joka oli muinainen itäbaltialainen heimo. Semgallia on tasaista viljelysmaata, mutta tarkkoja rajoja en ole varma selittämään oikein. Alueen historiaan kuuluvat sekä heimoyhteisöt että myöhemmät herttuakunnan ajat.
+
+Minusta Semgallia kuulostaa komealta nimeltä, vähän niin kuin sukuni olisi sieltä lähtöisin. Se ei ole, mutta kaunis nimi on silti kunnia.
+KYSYMYS: Kerro lisää: Semgallia
+
+### 221
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Jaunpilsin linna (historia)
+Tietoruudun teksti: Jaunpilsin linna eli saksaksi Neuenburg on Liivinmaan ritarikunnan rakennuttama keskiaikainen linna Semgallian alueella Latviassa. Se mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1411, ja se on luultavasti rakennettu 1300-luvun jälkipuoliskolla tai aivan 1400-luvun alussa; usein mainittu vuosi 1301 ei perustu asiakirjoihin. Kenttäkivistä ja yläosistaan tiilestä muurattu linna muodostaa epäsäännöllisen nelikulmion (41 × 30 metriä), ja 1400-luvulla sen kulmaan lisättiin massiivinen pyöreä torni. Vuonna 1576 linna siirtyi Dobelen viimeiselle ritarikunnan komtuurille Matthias von der Reckelle, ja hänen sukunsa omisti sen 1900-luvun alkuun asti. Yhdessä linnan saleista on Madonna ja lapsi -reliefi, jonka on usein luultu 1500-luvun työksi, mutta joka on todennäköisesti 1800-luvulta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Herneet jotka pitää maistaa joulun aikaan] Joulu — Harmaat herneet silavan kanssa kuuluvat Latvian jouluaterialle lähes pakollisena: kuivatut, isot ja harmaansävyiset herneet liotetaan ja keitetään, minkä jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa edes kourallinen, sillä pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: herneet, ohra ja pavut olivat maaseudun perusruokaa satoja vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään harmaita herneitä tarjoillaan myös ravintoloissa hienostuneempina versioina, pekonin ja retiisin kanssa.
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+AIEMPI KYSYMYS: Missä Semgallia sijaitsee?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Semgallia]] on historiallinen alue nykyisen [[Latvian]] eteläosassa, ja siellä sijaitsee myös Jaunpilsin linna. Alue on saanut nimensä semgallilaisilta, joka oli muinainen itäbaltialainen heimo. Semgallia on tasaista viljelysmaata, mutta tarkkoja rajoja en ole varma selittämään oikein. Alueen historiaan kuuluvat sekä heimoyhteisöt että myöhemmät herttuakunnan ajat.
+
+Minusta Semgallia kuulostaa komealta nimeltä, vähän niin kuin sukuni olisi sieltä lähtöisin. Se ei ole, mutta kaunis nimi on silti kunnia.
+KYSYMYS: Kerro lisää: Latvian
+
+### 222
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+- [Tallinna — kohdekartta / Kohdekartta: Raatihuoneentori] 1402–1404 Tallinnan raatihuone on koko Itämeren alueen ja Pohjoismaiden vanhin säilynyt raatihuone. Se rakennettiin vain parissa vuodessa, vuosina 1402-1404, keskiaikaisen torin laidalle. Hansakaupunkina Tallinnan kaupunginhallitus piti täällä kokouksiaan ja päätti niin kaupan, oikeuden kuin arjenkin asioista. Rakennuksen 36,8 metriä pitkässä salissa on nähtävissä yli 500 vuotta vanhoja seinävaatteita, jotka kuvaavat kuningas Salomonin elämää. Raatihuoneen 64 metriä korkeaan torniin johtaa peräti 115 porrasaskelmaa. Huipulla pyörii Vana Toomas, eli "Vanha Toomas" - kaupunginvartijaa esittävä tuuliviiri, joka on ollut Tallinnan tunnuskuva vuodesta 1530 lähtien. Alkuperäinen tuuliviiri on nyk…
+AIEMPI KYSYMYS: Miksi Slīteren yli lentää keväisin ja syksyisin kymmeniä tuhansia lintuja tunnissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Slīteren yli kulkee [[Itämeren]] lintujen muuttoreitti, ja [[Kuurinmaan]] länsirannikko ohjaa kulkua. Muuttolinnut seuraavat usein rantaviivaa eivätkä mielellään ylitä avointa merta pidempää matkaa kuin on pakko, joten ne kerääntyvät niemen tuntumassa kapealle kaistalle, jossa [[Irben salmi]] päättyy. Keväällä linnut palaavat pesimäalueilleen ja syksyllä lähtevät talvehtimaan, ja juuri silloin liike on vilkkainta. Siksi yhden tunnin aikana on havaittu jopa 60 000 lintua. Kyl minä sentään yhden suunnan osaan.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 223
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+AIEMPI KYSYMYS: Miksi Slīteren yli lentää keväisin ja syksyisin kymmeniä tuhansia lintuja tunnissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Slīteren yli kulkee [[Itämeren]] lintujen muuttoreitti, ja [[Kuurinmaan]] länsirannikko ohjaa kulkua. Muuttolinnut seuraavat usein rantaviivaa eivätkä mielellään ylitä avointa merta pidempää matkaa kuin on pakko, joten ne kerääntyvät niemen tuntumassa kapealle kaistalle, jossa [[Irben salmi]] päättyy. Keväällä linnut palaavat pesimäalueilleen ja syksyllä lähtevät talvehtimaan, ja juuri silloin liike on vilkkainta. Siksi yhden tunnin aikana on havaittu jopa 60 000 lintua. Kyl minä sentään yhden suunnan osaan.
+KYSYMYS: Kerro lisää: Kuurinmaan
+
+### 224
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+AIEMPI KYSYMYS: Miksi Slīteren yli lentää keväisin ja syksyisin kymmeniä tuhansia lintuja tunnissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Slīteren yli kulkee [[Itämeren]] lintujen muuttoreitti, ja [[Kuurinmaan]] länsirannikko ohjaa kulkua. Muuttolinnut seuraavat usein rantaviivaa eivätkä mielellään ylitä avointa merta pidempää matkaa kuin on pakko, joten ne kerääntyvät niemen tuntumassa kapealle kaistalle, jossa [[Irben salmi]] päättyy. Keväällä linnut palaavat pesimäalueilleen ja syksyllä lähtevät talvehtimaan, ja juuri silloin liike on vilkkainta. Siksi yhden tunnin aikana on havaittu jopa 60 000 lintua. Kyl minä sentään yhden suunnan osaan.
+KYSYMYS: Kerro lisää: Irben salmi
+
+### 225
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+AIEMPI KYSYMYS: Mikä oli Baltian jääjärvi, ja mitä sen rannalle jäi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Baltian jääjärvi]] oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Baltian jääjärvi
+
+### 226
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+AIEMPI KYSYMYS: Mikä oli Baltian jääjärvi, ja mitä sen rannalle jäi?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Baltian jääjärvi]] oli viimeisen jääkauden lopulla syntynyt sulamisvesien järvi, joka täytti Itämeren altaan ennen kuin yhteys valtamereen avautui. Mannerjäätikön vetäytyessä vesi kertyi jään ja maan väliin, ja järven ranta kulki muun muassa nykyisen Latvian alueella. Tuhansia vuosia sitten muodostunut muinainen ranta on säilynyt maastossa: Slīteren [[Zilie Kalni]] eli Siniset kukkulat ovat tämän rannan jäännös, jota nykyään peittävät lehtimetsät. Tarkat ajat vaihtelevat lähteiden mukaan, joten jätän vuosiluvut pois. Ja tämän kaiken minä muistin ilman karttaa.
+KYSYMYS: Kerro lisää: Zilie Kalni
+
+### 227
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Campo Grande — kaupunkilehti / Campo Grande: Terena - cerradon maanviljelijät] Terena-kansa on asuttanut nykyisen Mato Grosso do Sulin alueita, erityisesti Aquidauanan ja Mirandan seutuja, kauan ennen minkään kaupungin perustamista. He puhuvat arawakkilaiseen kieliperheeseen kuuluvaa terenaa ja ovat perinteisesti viljelleet maniokkia, riisiä, maissia ja papuja kylien verkostossa. Vuosina 1864-1870 käydyssä Paraguayn sodassa Terenat taistelivat Brasilian liittolaisina - sota päättyi vain kolme vuotta ennen isoisän matkaa. Sodan jälkeen monet Terenat menettivät maitaan karjatilallisille, jotka ottivat haltuunsa vailla virallista omistuskirjaa olleet alueet.
+AIEMPI KYSYMYS: Miksi harmaahylkeet synnyttävät poikasensa Slīteren rannikolla?
+AIEMPI VASTAUS (Livia):
+Kato, hylkeitä. Harmaahylkeet poikivat Itämerellä yleensä talven lopulla jäällä tai, jos jäätä ei ole, rauhallisilla rannoilla ja luodoilla. [[Slīteren]] rannikko on suojeltua aluetta, jossa ihmisten liikkuminen on rajallista, ja se tarjoaa poikasille tarvittavan rauhan. Tällä rannikolla sijaitsevat harmaahylkeiden poikashoitoloista eteläisimmät koko maailmassa, ja [[Itämeren]] harmaahylkeet ovat sopeutuneet elämään kylmässä, osin jäätyvässä merialueessa. Poikaset syntyvät paksussa, vaaleassa karvassa ja ovat aluksi emonsa maidon varassa. Itse viihdyn kuivalla maalla, mutta kunnioitan niitä.
+KYSYMYS: Kerro lisää: Slīteren
+
+### 228
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Ranta jatkuu kolmekymmentä kilometriä] Kesällä — Jūrmala on Riianlahden rannalla oleva kaupunki, joka on käytännössä yhtä pitkää hiekkarantaa: valkoista, matalaa ja niin loivaa, että vesi ulottuu kauas polviin asti. Rannan takana kasvaa mäntymetsä, ja metsän seassa on puisia huviloita 1800-luvun lopulta, jolloin paikasta tuli kylpyläkaupunki. Ranta on niin leveä, että tuuli kasaa siitä hiekkavalleja, ja talvella meri jäätyy paikoin rantaviivaan asti.
+AIEMPI KYSYMYS: Mitä Irben salmi yhdistää toisiinsa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Irben salmi yhdistää [[Riianlahden]] Itämeren varsinaiseen osaan. Se sijaitsee Kuurinmaan niemimaan pohjoiskärjen ja [[Saarenmaan]] Sõrven niemimaan välissä, ja sen kautta kulkee suuri osa Riianlahden veden vaihdosta. Salmen yli kulkee laivaliikennettä ja se on lintujen muuttoreitin tärkeä kohta, sillä linnut seuraavat usein rannikon muotoja. Kapea kohta kokoaa muuttolinnut tiiviiksi virraksi, joten salmen läheisyys selittää osan Slīteren linnuston runsaudesta. Tarkkoja mittoja en ole varma, joten jätän ne pois. Yläilmoista salmi näyttää kauniilta, ja sen voi todeta kaikessa rauhassa.
+KYSYMYS: Kerro lisää: Riianlahden
+
+### 229
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Slītere (meri)
+Tietoruudun teksti: Slītere on Latvian pienin kansallispuisto, joka sijaitsee Kuurinmaan länsirannikolla Kolkan niemen tuntumassa, missä Irben salmi päättyy. Virallisesti puisto perustettiin vuonna 2000, mutta se pohjautuu Slīteren luonnonsuojelualueeseen, joka on yksi Baltian vanhimmista. Tunnetuimpia piirteitä ovat Zilie Kalni eli "Siniset kukkulat", jotka olivat tuhansia vuosia sitten Baltian jääjärven muinaista rantaa, sekä lehtimetsät, dyynit ja niiden väliset suot. Puisto sijaitsee Itämeren lintujen muuttoreitin varrella, ja sen yli on havaittu jopa 60 000 lintua tunnissa. Rannikolla on lisäksi harmaahylkeiden eteläisimmät poikashoitolat maailmassa, ja myrskyjen jälkeen rannalta voi löytää meripihkaa.
+AIEMPI KYSYMYS: Mitä Irben salmi yhdistää toisiinsa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Irben salmi yhdistää [[Riianlahden]] Itämeren varsinaiseen osaan. Se sijaitsee Kuurinmaan niemimaan pohjoiskärjen ja [[Saarenmaan]] Sõrven niemimaan välissä, ja sen kautta kulkee suuri osa Riianlahden veden vaihdosta. Salmen yli kulkee laivaliikennettä ja se on lintujen muuttoreitin tärkeä kohta, sillä linnut seuraavat usein rannikon muotoja. Kapea kohta kokoaa muuttolinnut tiiviiksi virraksi, joten salmen läheisyys selittää osan Slīteren linnuston runsaudesta. Tarkkoja mittoja en ole varma, joten jätän ne pois. Yläilmoista salmi näyttää kauniilta, ja sen voi todeta kaikessa rauhassa.
+KYSYMYS: Kerro lisää: Saarenmaan
+
+### 230
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Sarvikuonon arkki] Puistoa kutsutaan joskus nimellä Kifaru Ark, sarvikuonon arkki. Se on yksi Kenian onnistuneimmista mustasarvikuonon turvapaikoista ja harvoja paikkoja, joissa kävijä näkee mustasarvikuonon luonnossa lähes varmasti. Puiston pääportin lähellä toimii 1963 perustettu turvakoti, joka hoitaa orpoja norsun- ja sarvikuononpoikasia ja palauttaa ne myöhemmin suojelualueille. Vuodesta 2005 alue on luokiteltu myös leijonien suojeluyksiköksi. Puiston pohjoisrajalla olevien tehtaiden jätevedet kuormittavat sen vesiä.
+- [Monterrey — kohdekartta / Kohdekartta: La Purísiman kirkko] 1939 Kirkon takana on tlaxcalteekkinainen. Antonia Teresa asettui Monterreyhin noin vuonna 1680 ja toi mukanaan neljänkymmenenkahden sentin korkuisen Purísima-veistoksen, jota alettiin kutsua nimellä Virgen Chiquita, pieni Neitsyt. Antonia oli suutarin leski, ja siitä tuli hänen liikanimensä la Zapatera. Perimätiedon mukaan noin vuonna 1700 satoi neljäkymmentä päivää putkeen ja Santa Catarina uhkasi tulvia yli äyräidensä. Antonia kantoi kuvan kulkueessa joen rantaan, ja vedet vetäytyivät. Fray Servando Teresa de Mier kirjasi tarinan 1700-luvulla mutta epäilevään sävyyn; arkistot vahvistavat Antonia Teresan olemassaolon ja sen, että hän toi veistoksen. Testamentissaan 20. lokakuuta 1719 hän …
+AIEMPI KYSYMYS: Miksi Dundagan linnan ympärillä on vettä kolmella sivulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin [[Dundagan]] lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.
+KYSYMYS: Kerro lisää: Riian arkkihiippakunta
+
+### 231
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+AIEMPI KYSYMYS: Miksi Dundagan linnan ympärillä on vettä kolmella sivulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Vesi oli keskiajalla tehokas puolustuskeino: lampi ja kostea maa vaikeuttivat piirittäjien pääsyä muurien juurelle sekä rynnäkkövälineiden, kuten tikkaiden ja piiritystornien, käyttöä. [[Riian arkkihiippakunta]] rakennutti linnan 1200-luvun lopulla, ja rakentajat hyödynsivät paikan luonnollista ympäristöä, jolloin [[Dundagan]] lammikko suojasi kolmea sivua. Tämä vähensi tarvetta rakentaa raskaita ja kalliita puolustusrakenteita kaikille sivuille. Veden äärellä sijainti oli tavallista myös siksi, että vesi oli käytännössä aina saatavilla. Lammikko on yhä paikallaan, vaikka linna ei enää ole sotilaskäytössä. Hyvä paikka, jos lentäjältä kysytään.
+KYSYMYS: Kerro lisää: Dundagan
+
+### 232
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+AIEMPI KYSYMYS: Miksi yhden aatelissuvun kartano kasvoi Kuurinmaan suurimmaksi yksityiseksi maatilaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. En ole varma, miten Dundagan maat täsmälleen kertyivät suvulle, joten sanon vain sen, minkä tiedän. [[Osten-Sacken]]-suku oli [[baltiansaksalainen]] aatelissuku, ja Dundagan linna oli sen kartanoalueen keskus 1500-luvulta vuoteen 1918. Alueella baltiansaksalainen aatelisto omisti suuria maaomaisuuksia, joita talonpoikaisväestö viljeli, ja kartanolla oli 1800-luvulla viisitoista sivukartanoa, jotka kuuluivat sen alaisuuteen. Suuret maa-alueet ja niiden tuotto pitivät kartanon asemansa vahvana vuosisatojen ajan. Tarkemmasta syntyhistoriasta kannattaa kysyä paikalliselta historioitsijalta.
+KYSYMYS: Kerro lisää: Osten-Sacken
+
+### 233
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+AIEMPI KYSYMYS: Miksi yhden aatelissuvun kartano kasvoi Kuurinmaan suurimmaksi yksityiseksi maatilaksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. En ole varma, miten Dundagan maat täsmälleen kertyivät suvulle, joten sanon vain sen, minkä tiedän. [[Osten-Sacken]]-suku oli [[baltiansaksalainen]] aatelissuku, ja Dundagan linna oli sen kartanoalueen keskus 1500-luvulta vuoteen 1918. Alueella baltiansaksalainen aatelisto omisti suuria maaomaisuuksia, joita talonpoikaisväestö viljeli, ja kartanolla oli 1800-luvulla viisitoista sivukartanoa, jotka kuuluivat sen alaisuuteen. Suuret maa-alueet ja niiden tuotto pitivät kartanon asemansa vahvana vuosisatojen ajan. Tarkemmasta syntyhistoriasta kannattaa kysyä paikalliselta historioitsijalta.
+KYSYMYS: Kerro lisää: baltiansaksalainen
+
+### 234
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bosnia ja Hertsegovina — maalehti / Kulttuuri: Festivaali joka avattiin kesken piirityksen] 1995 — Sarajevon elokuvafestivaali perustettiin vuonna 1995, kun kaupungin piiritys oli yhä käynnissä: ensimmäiset näytökset pidettiin ilman vakituista sähköä, osittain generaattoreiden ja kynttilöiden valossa, tietoisena vastarintana sodalle. Festivaali jatkui piirityksen päätyttyä ja on kasvanut Kaakkois-Euroopan suurimmaksi ja vaikutusvaltaisimmaksi elokuvatapahtumaksi, jonne saapuu vuosittain kymmeniä tuhansia katsojia ja kansainvälisiä elokuvantekijöitä. Festivaalia pidetään esimerkkinä siitä, miten kaupunki piti kulttuurin hengissä sodan keskellä.
+AIEMPI KYSYMYS: Miksi linnan sisäpihalla oli kaivo?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kaivo on linnoilla yhtä tärkeä kuin muuri. Linnan sisäpihan kaivo takasi asukkaille juomaveden myös [[piirityksen]] aikana, jolloin ulkopuolelta ei päässyt hakemaan vettä lähteestä tai joesta. Ilman omaa vedenhankintaa puolustajat olisivat joutuneet antautumaan jo muutamassa päivässä, sillä ihminen tarvitsee vettä ruokaa nopeammin. [[Dundagan]] linnassa kaivo on säilynyt sisäpihalla, ja sen ympäristössä linnaa ympäröivä Dundagan lammikko on tuonut lisäksi suojaa. Kaivo oli myös arkinen välttämättömyys rauhan aikana, kun linnassa asuivat henkilökunta ja hevoset. Vesi on lentäjän ystävä.
+KYSYMYS: Kerro lisää: piirityksen
+
+### 235
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Ruoka: Herneet jotka pitää maistaa joulun aikaan] Joulu — Harmaat herneet silavan kanssa kuuluvat Latvian jouluaterialle lähes pakollisena: kuivatut, isot ja harmaansävyiset herneet liotetaan ja keitetään, minkä jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa edes kourallinen, sillä pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: herneet, ohra ja pavut olivat maaseudun perusruokaa satoja vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään harmaita herneitä tarjoillaan myös ravintoloissa hienostuneempina versioina, pekonin ja retiisin kanssa.
+- [Latvia — maalehti / Historia: Nainen joka nostaa kolme tähteä] 1935 — Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan huipulla seisova naishahmo, jota kutsutaan lempinimellä Milda, kohottaa käsissään kolme kultaista tähteä — ne kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta ei purettu, mutta sen juurelle kukkien vieminen oli vaarallista ja saattoi johtaa kuulusteluihin. Jalustan reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, perhettä ja vapaustaistelua.
+AIEMPI KYSYMYS: Keitä baltiansaksalaiset olivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen [[Latvian]] ja [[Viron]] alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.
+KYSYMYS: Kerro lisää: Latvian
+
+### 236
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Olevisten kirkko] 1267 Olevisten kirkko on nimetty Norjan kuningas Olavin mukaan, joka oli merenkulkijoiden suojeluspyhimys. Kirkosta on maininta jo vuodelta 1267, jolloin sen perustivat alueelle asettuneet skandinaaviset kauppiaat. Kirkon torni puolestaan mainitaan asiakirjoissa ensimmäisen kerran vuonna 1364, ja vuosisatojen kuluessa kirkkoa laajennettiin useaan otteeseen goottilaiseen tyyliin. Torni on kokenut paljon: salamat ovat iskeneet siihen noin kymmenen kertaa, ja koko kirkko on palanut maan tasalle jopa kolme kertaa tunnetun historiansa aikana. Erään keskiaikaisen tarinan mukaan kirkon rakentaja kertoi tornin olevan 84 syltä korkea - jos hän tarkoitti Rein-joen seudun syltä, se tarkoittaisi lähes …
+- [Tallinna — kohdekartta / Kohdekartta: Paksu Margareeta] 1511–1530 Paksu Margareeta on tanakka, pyöreä torni Tallinnan vanhan kaupungin laidalla, aivan sataman kupeessa Pika kadun päässä. Se rakennettiin vuosien 1511 ja 1530 välillä osaksi kaupungin meren puoleista puolustusta, Suuren Rantaportin kylkeen. Torni on niin järeä, että sen läpimitta on 25 metriä ja seinät jopa 5 metriä paksut - se on koko kaupunginmuurin tukevin yksittäinen rakennelma. Sillä oli kaksi tehtävää: torjua hyökkääjät ja tehdä samalla vaikutuksen merta pitkin saapuviin vieraisiin. Vuosisatojen varrella torni sai monta erilaista käyttötarkoitusta. Ensin siellä säilytettiin ruutia ja aseita, myöhemmin siitä tehtiin vankila. Vuoden 1917 vallankumouksen aikaan tornissa tapahtui…
+AIEMPI KYSYMYS: Keitä baltiansaksalaiset olivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen [[Latvian]] ja [[Viron]] alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.
+KYSYMYS: Kerro lisää: Viron
+
+### 237
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Keitä baltiansaksalaiset olivat?
+AIEMPI VASTAUS (Livia):
+Ai se. Baltiansaksalaiset olivat saksankielinen väestöryhmä nykyisen [[Latvian]] ja [[Viron]] alueilla. Heidän juurensa ulottuvat 1200-luvun ristiretkiin ja [[Liivinmaan]] saksalaisten ritarikuntien aikaan, jolloin saksalaisia kauppiaita, papistoa ja aatelisia asettui alueelle. Vuosisatojen ajan he muodostivat monissa kaupungeissa kauppiaiden ja käsityöläisten sekä maaseudulla kartanonomistajien eliitin. Ensimmäisen maailmansodan jälkeen Latvian ja Viron itsenäistyessä maanomistus uudistettiin ja suuret kartanot siirtyivät pääosin valtiolle. Suuri osa baltiansaksalaisista muutti Saksaan 1930-luvun lopulla ja 1940-luvun alussa. Siinä on kokonainen kansanosa yhdessä kappaleessa.
+KYSYMYS: Kerro lisää: Liivinmaan
+
+### 238
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+AIEMPI KYSYMYS: Mitä eroa on linnalla ja kartanolla?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. [[Dundagassa]] linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.
+KYSYMYS: Kerro lisää: Dundagassa
+
+### 239
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dundagan linna (historia)
+Tietoruudun teksti: Dundaga on kylä Kuurinmaalla Latvian länsiosassa, nykyisin Talsin kunnan alueella. Sen tunnetuin nähtävyys on Dundagan linna, jonka Riian arkkihiippakunta rakennutti 1200-luvun lopulla. Linna on nelikulmainen, noin 48 x 69 metrin kokoinen, ja sitä ympäröi kolmelta puolelta Dundagan lammikko; sisäpihalla on yhä vanha kaivo. Linnaa muutettiin monta kertaa, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. 1500-luvulta vuoteen 1918 linna oli Kuurinmaan suurimman yksityisen kartanoalueen keskus, ja se kuului baltiansaksalaiselle Osten-Sacken-aatelissuvulle. Kartanon alaisuudessa oli 1800-luvulla viisitoista sivukartanoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Mitä eroa on linnalla ja kartanolla?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. Linna on ennen kaikkea puolustettava rakennus, jonka tehtävä oli suojella ja hallita aluetta: paksut muurit, vallihauta tai muu vesieste ja torni kuuluivat siihen. Kartano taas on maatalouden ja asumisen keskus, jonka omistaja on aatelinen tai muu suurmaanomistaja ja jonka ympärillä on peltoja, metsiä ja talousrakennuksia. [[Dundagassa]] linna rakennettiin 1200-luvun lopulla [[Riian arkkihiippakunnan]] käyttöön, ja 1600-luvulla siitä tehtiin kartanon herrasrakennus. Rakennus säilyi, mutta sen tehtävä muuttui sotilaallisesta hallinnollis-taloudelliseksi. Sama kivi, uusi tehtävä, kuten kyyhkyllä.
+KYSYMYS: Kerro lisää: Riian arkkihiippakunnan
+
+### 240
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Talsi (kulttuuri)
+Tietoruudun teksti: Talsi on Kuurinmaan kaupunki Latvian länsiosassa, ja sitä kutsutaan Kuurinmaan vihreäksi helmeksi. Se on rakentunut yhdeksän kukkulan ja kahden järven ympärille. Keskustan Pilskalns-kukkulalla on ollut kuurilaisten linnavuori vähintään 900-luvulta lähtien. Talsi mainitaan kirjallisissa lähteissä ensimmäisen kerran vuonna 1231, ja 1200-luvun lopulla paikalle rakennettiin linna. Nykyinen pääkirkko vihittiin käyttöön 1567, ja se on kaupungin vanhin kivirakennus. Kirkossa toimi pitkään pastori Karl Ferdinand Amenda, Ludwig van Beethovenin läheinen ystävä. Talsi liitettiin osaksi Venäjän keisarikuntaa vuonna 1795 Kuurinmaan mukana.
+AIEMPI KYSYMYS: Miksi Talsia kutsutaan Kuurinmaan vihreäksi helmeksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Ylhäältä katsottuna kaupunki on tosiaan vehreä. Talsi on rakentunut yhdeksän kukkulan ja kahden järven ympärille, ja kaupungin lempinimi viittaa tähän vehreään kukkula- ja järvimaisemaan. Maasto on erityinen, koska kukkulat ja vesistöt jakavat kaupunkitilan luontevasti osiin ja puistot sekä puut näkyvät keskustassakin. Nimitys on enemmän kaupungin oma tapa kuvata itseään kuin virallinen asema. Talsi on osa [[Kuurinmaan]] historiaa jo [[kuurilaisten]] linnavuoren ajoilta, ja luonto on ollut paikan edellytys alusta asti. Täällä leipoisin mielelläni jotain.
+KYSYMYS: Kerro lisää: Kuurinmaan

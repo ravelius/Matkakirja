@@ -1,0 +1,2558 @@
+[
+ {
+  "n": 1,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "Suur Munamäen",
+  "kysymys": "Kerro lisää: Suur Munamäen"
+ },
+ {
+  "n": 2,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "Gaiziņkalnsia",
+  "kysymys": "Kerro lisää: Gaiziņkalnsia"
+ },
+ {
+  "n": 3,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 4,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "Gaiziņkalns",
+  "kysymys": "Kerro lisää: Gaiziņkalns"
+ },
+ {
+  "n": 5,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "Gauja",
+  "kysymys": "Kerro lisää: Gauja"
+ },
+ {
+  "n": 6,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "Suur Munamägi",
+  "kysymys": "Kerro lisää: Suur Munamägi"
+ },
+ {
+  "n": 7,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "jääkaudesta",
+  "kysymys": "Kerro lisää: jääkaudesta"
+ },
+ {
+  "n": 8,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "liettua",
+  "kysymys": "Kerro lisää: liettua"
+ },
+ {
+  "n": 9,
+  "kohta": "kohde:gaizinkalns",
+  "kasite": "balttilaisten kielten",
+  "kysymys": "Kerro lisää: balttilaisten kielten"
+ },
+ {
+  "n": 10,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Tanskan salmien",
+  "kysymys": "Kerro lisää: Tanskan salmien"
+ },
+ {
+  "n": 11,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Väinäjoesta",
+  "kysymys": "Kerro lisää: Väinäjoesta"
+ },
+ {
+  "n": 12,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Vasan",
+  "kysymys": "Kerro lisää: Vasan"
+ },
+ {
+  "n": 13,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Saarenmaa",
+  "kysymys": "Kerro lisää: Saarenmaa"
+ },
+ {
+  "n": 14,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Kuurinmaan niemimaa",
+  "kysymys": "Kerro lisää: Kuurinmaan niemimaa"
+ },
+ {
+  "n": 15,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Irbenin salmen",
+  "kysymys": "Kerro lisää: Irbenin salmen"
+ },
+ {
+  "n": 16,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 17,
+  "kohta": "kohde:itameri~5",
+  "kasite": "murtoveden",
+  "kysymys": "Kerro lisää: murtoveden"
+ },
+ {
+  "n": 18,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Landsortin syvänne",
+  "kysymys": "Kerro lisää: Landsortin syvänne"
+ },
+ {
+  "n": 19,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Tukholman saaristo",
+  "kysymys": "Kerro lisää: Tukholman saaristo"
+ },
+ {
+  "n": 20,
+  "kohta": "kohde:itameri~5",
+  "kasite": "Suomenlahtea",
+  "kysymys": "Kerro lisää: Suomenlahtea"
+ },
+ {
+  "n": 21,
+  "kohta": "kohde:itameri~5",
+  "kasite": "jäänmurtajia",
+  "kysymys": "Kerro lisää: jäänmurtajia"
+ },
+ {
+  "n": 22,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Daugava",
+  "kysymys": "Kerro lisää: Daugava"
+ },
+ {
+  "n": 23,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Länsi-Dvina",
+  "kysymys": "Kerro lisää: Länsi-Dvina"
+ },
+ {
+  "n": 24,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Valdain kukkuloilla",
+  "kysymys": "Kerro lisää: Valdain kukkuloilla"
+ },
+ {
+  "n": 25,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Riianlahteen",
+  "kysymys": "Kerro lisää: Riianlahteen"
+ },
+ {
+  "n": 26,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Vitebsk",
+  "kysymys": "Kerro lisää: Vitebsk"
+ },
+ {
+  "n": 27,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Polotsk",
+  "kysymys": "Kerro lisää: Polotsk"
+ },
+ {
+  "n": 28,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Daugavpils",
+  "kysymys": "Kerro lisää: Daugavpils"
+ },
+ {
+  "n": 29,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Riika",
+  "kysymys": "Kerro lisää: Riika"
+ },
+ {
+  "n": 30,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Väinäjoella",
+  "kysymys": "Kerro lisää: Väinäjoella"
+ },
+ {
+  "n": 31,
+  "kohta": "kohde:vainajoki",
+  "kasite": "vesivoimalaitosta",
+  "kysymys": "Kerro lisää: vesivoimalaitosta"
+ },
+ {
+  "n": 32,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Albert von Buxhoeveden",
+  "kysymys": "Kerro lisää: Albert von Buxhoeveden"
+ },
+ {
+  "n": 33,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Miekkaveljien ritarikunnan",
+  "kysymys": "Kerro lisää: Miekkaveljien ritarikunnan"
+ },
+ {
+  "n": 34,
+  "kohta": "kohde:vainajoki",
+  "kasite": "Riian tuomiokirkon",
+  "kysymys": "Kerro lisää: Riian tuomiokirkon"
+ },
+ {
+  "n": 35,
+  "kohta": "kohde:rundale",
+  "kasite": "Bartolomeo Rastrelli",
+  "kysymys": "Kerro lisää: Bartolomeo Rastrelli"
+ },
+ {
+  "n": 36,
+  "kohta": "kohde:rundale",
+  "kasite": "Ernst Johann von Biron",
+  "kysymys": "Kerro lisää: Ernst Johann von Biron"
+ },
+ {
+  "n": 37,
+  "kohta": "kohde:rundale",
+  "kasite": "Johann Michael Graff",
+  "kysymys": "Kerro lisää: Johann Michael Graff"
+ },
+ {
+  "n": 38,
+  "kohta": "kohde:rundale",
+  "kasite": "Jelgavan palatsi",
+  "kysymys": "Kerro lisää: Jelgavan palatsi"
+ },
+ {
+  "n": 39,
+  "kohta": "kohde:rundale",
+  "kasite": "Napoleon",
+  "kysymys": "Kerro lisää: Napoleon"
+ },
+ {
+  "n": 40,
+  "kohta": "kohde:rundale",
+  "kasite": "Kuurinmaan herttuakunta",
+  "kysymys": "Kerro lisää: Kuurinmaan herttuakunta"
+ },
+ {
+  "n": 41,
+  "kohta": "kohde:rundale",
+  "kasite": "Kuurinmaan herttua",
+  "kysymys": "Kerro lisää: Kuurinmaan herttua"
+ },
+ {
+  "n": 42,
+  "kohta": "kohde:rundale",
+  "kasite": "Anna Ivanovnan",
+  "kysymys": "Kerro lisää: Anna Ivanovnan"
+ },
+ {
+  "n": 43,
+  "kohta": "kohde:rundale",
+  "kasite": "Puolan–Liettuan",
+  "kysymys": "Kerro lisää: Puolan–Liettuan"
+ },
+ {
+  "n": 44,
+  "kohta": "kohde:rundale",
+  "kasite": "Jelgava",
+  "kysymys": "Kerro lisää: Jelgava"
+ },
+ {
+  "n": 45,
+  "kohta": "kohde:rundale",
+  "kasite": "stukkokoristeita",
+  "kysymys": "Kerro lisää: stukkokoristeita"
+ },
+ {
+  "n": 46,
+  "kohta": "kohde:rundale",
+  "kasite": "rokokoo",
+  "kysymys": "Kerro lisää: rokokoo"
+ },
+ {
+  "n": 47,
+  "kohta": "kohde:cesis",
+  "kasite": "Cēsisin",
+  "kysymys": "Kerro lisää: Cēsisin"
+ },
+ {
+  "n": 48,
+  "kohta": "kohde:cesis",
+  "kasite": "Kalpaveljien ritarikunnan",
+  "kysymys": "Kerro lisää: Kalpaveljien ritarikunnan"
+ },
+ {
+  "n": 49,
+  "kohta": "kohde:cesis",
+  "kasite": "Henrik Liiviläisen kronikassa",
+  "kysymys": "Kerro lisää: Henrik Liiviläisen kronikassa"
+ },
+ {
+  "n": 50,
+  "kohta": "kohde:cesis",
+  "kasite": "Preussista",
+  "kysymys": "Kerro lisää: Preussista"
+ },
+ {
+  "n": 51,
+  "kohta": "kohde:cesis",
+  "kasite": "konventeille",
+  "kysymys": "Kerro lisää: konventeille"
+ },
+ {
+  "n": 52,
+  "kohta": "kohde:cesis",
+  "kasite": "Albert von Buxhoeveden",
+  "kysymys": "Kerro lisää: Albert von Buxhoeveden"
+ },
+ {
+  "n": 53,
+  "kohta": "kohde:cesis",
+  "kasite": "Saksalaiseen ritarikuntaan",
+  "kysymys": "Kerro lisää: Saksalaiseen ritarikuntaan"
+ },
+ {
+  "n": 54,
+  "kohta": "kohde:cesis",
+  "kasite": "Henrik Liiviläinen",
+  "kysymys": "Kerro lisää: Henrik Liiviläinen"
+ },
+ {
+  "n": 55,
+  "kohta": "kohde:cesis",
+  "kasite": "Liivinmaan",
+  "kysymys": "Kerro lisää: Liivinmaan"
+ },
+ {
+  "n": 56,
+  "kohta": "kohde:cesis",
+  "kasite": "Liivinmaa",
+  "kysymys": "Kerro lisää: Liivinmaa"
+ },
+ {
+  "n": 57,
+  "kohta": "kohde:cesis",
+  "kasite": "liiviläisistä",
+  "kysymys": "Kerro lisää: liiviläisistä"
+ },
+ {
+  "n": 58,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Turaidan linnaan",
+  "kysymys": "Kerro lisää: Turaidan linnaan"
+ },
+ {
+  "n": 59,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Siguldan",
+  "kysymys": "Kerro lisää: Siguldan"
+ },
+ {
+  "n": 60,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Gaujan",
+  "kysymys": "Kerro lisää: Gaujan"
+ },
+ {
+  "n": 61,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Gutmanin luola",
+  "kysymys": "Kerro lisää: Gutmanin luola"
+ },
+ {
+  "n": 62,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Turaidassa",
+  "kysymys": "Kerro lisää: Turaidassa"
+ },
+ {
+  "n": 63,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "hääperinnettä",
+  "kysymys": "Kerro lisää: hääperinnettä"
+ },
+ {
+  "n": 64,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Turaidan kirkon",
+  "kysymys": "Kerro lisää: Turaidan kirkon"
+ },
+ {
+  "n": 65,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Riian piispa",
+  "kysymys": "Kerro lisää: Riian piispa"
+ },
+ {
+  "n": 66,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Turaidan museoalue",
+  "kysymys": "Kerro lisää: Turaidan museoalue"
+ },
+ {
+  "n": 67,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "hiekkakivestä",
+  "kysymys": "Kerro lisää: hiekkakivestä"
+ },
+ {
+  "n": 68,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Siguldassa",
+  "kysymys": "Kerro lisää: Siguldassa"
+ },
+ {
+  "n": 69,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Gaujan kansallispuiston",
+  "kysymys": "Kerro lisää: Gaujan kansallispuiston"
+ },
+ {
+  "n": 70,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "Krimuldan",
+  "kysymys": "Kerro lisää: Krimuldan"
+ },
+ {
+  "n": 71,
+  "kohta": "kohde:turaidan-ruusu",
+  "kasite": "köysirata",
+  "kysymys": "Kerro lisää: köysirata"
+ },
+ {
+  "n": 72,
+  "kohta": "kohde:liepaja",
+  "kasite": "lehmusta",
+  "kysymys": "Kerro lisää: lehmusta"
+ },
+ {
+  "n": 73,
+  "kohta": "kohde:liepaja",
+  "kasite": "Libau",
+  "kysymys": "Kerro lisää: Libau"
+ },
+ {
+  "n": 74,
+  "kohta": "kohde:liepaja",
+  "kasite": "Paul Einhornin",
+  "kysymys": "Kerro lisää: Paul Einhornin"
+ },
+ {
+  "n": 75,
+  "kohta": "kohde:liepaja",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 76,
+  "kohta": "kohde:liepaja",
+  "kasite": "merituuli",
+  "kysymys": "Kerro lisää: merituuli"
+ },
+ {
+  "n": 77,
+  "kohta": "kohde:liepaja",
+  "kasite": "Latviassa",
+  "kysymys": "Kerro lisää: Latviassa"
+ },
+ {
+  "n": 78,
+  "kohta": "kohde:liepaja",
+  "kasite": "Riianlahden",
+  "kysymys": "Kerro lisää: Riianlahden"
+ },
+ {
+  "n": 79,
+  "kohta": "kohde:liepaja",
+  "kasite": "Kuurinmaan",
+  "kysymys": "Kerro lisää: Kuurinmaan"
+ },
+ {
+  "n": 80,
+  "kohta": "kohde:liepaja",
+  "kasite": "Aleksanteri III",
+  "kysymys": "Kerro lisää: Aleksanteri III"
+ },
+ {
+  "n": 81,
+  "kohta": "kohde:liepaja",
+  "kasite": "Neuvostoliiton",
+  "kysymys": "Kerro lisää: Neuvostoliiton"
+ },
+ {
+  "n": 82,
+  "kohta": "kohde:liepaja",
+  "kasite": "kuurien",
+  "kysymys": "Kerro lisää: kuurien"
+ },
+ {
+  "n": 83,
+  "kohta": "kohde:liepaja",
+  "kasite": "Kuurinmaan ja Semgallian herttuakuntaan",
+  "kysymys": "Kerro lisää: Kuurinmaan ja Semgallian herttuakuntaan"
+ },
+ {
+  "n": 84,
+  "kohta": "kohde:sabile",
+  "kasite": "Guinnessin ennätystenkirjaan",
+  "kysymys": "Kerro lisää: Guinnessin ennätystenkirjaan"
+ },
+ {
+  "n": 85,
+  "kohta": "kohde:sabile",
+  "kasite": "Liivinmaan",
+  "kysymys": "Kerro lisää: Liivinmaan"
+ },
+ {
+  "n": 86,
+  "kohta": "kohde:sabile",
+  "kasite": "Osvalds Rezebergsin",
+  "kysymys": "Kerro lisää: Osvalds Rezebergsin"
+ },
+ {
+  "n": 87,
+  "kohta": "kohde:sabile",
+  "kasite": "Osvalds Rezebergs",
+  "kysymys": "Kerro lisää: Osvalds Rezebergs"
+ },
+ {
+  "n": 88,
+  "kohta": "kohde:sabile",
+  "kasite": "kaupunkioikeudet",
+  "kysymys": "Kerro lisää: kaupunkioikeudet"
+ },
+ {
+  "n": 89,
+  "kohta": "kohde:sabile",
+  "kasite": "Kandavan",
+  "kysymys": "Kerro lisää: Kandavan"
+ },
+ {
+  "n": 90,
+  "kohta": "kohde:sabile",
+  "kasite": "Venta-jokeen",
+  "kysymys": "Kerro lisää: Venta-jokeen"
+ },
+ {
+  "n": 91,
+  "kohta": "kohde:sabile",
+  "kasite": "Abavan muinaislaakso",
+  "kysymys": "Kerro lisää: Abavan muinaislaakso"
+ },
+ {
+  "n": 92,
+  "kohta": "kohde:sabile",
+  "kasite": "saksalaisen ritarikunnan",
+  "kysymys": "Kerro lisää: saksalaisen ritarikunnan"
+ },
+ {
+  "n": 93,
+  "kohta": "kohde:sabile",
+  "kasite": "Liivinmaan sodan",
+  "kysymys": "Kerro lisää: Liivinmaan sodan"
+ },
+ {
+  "n": 94,
+  "kohta": "kohde:sabile",
+  "kasite": "marjaviinejä",
+  "kysymys": "Kerro lisää: marjaviinejä"
+ },
+ {
+  "n": 95,
+  "kohta": "kohde:sabile",
+  "kasite": "hedelmäviinejä",
+  "kysymys": "Kerro lisää: hedelmäviinejä"
+ },
+ {
+  "n": 96,
+  "kohta": "kohde:jelgava",
+  "kasite": "Mitte in der Aue",
+  "kysymys": "Kerro lisää: Mitte in der Aue"
+ },
+ {
+  "n": 97,
+  "kohta": "kohde:jelgava",
+  "kasite": "liivin kielen",
+  "kysymys": "Kerro lisää: liivin kielen"
+ },
+ {
+  "n": 98,
+  "kohta": "kohde:jelgava",
+  "kasite": "Semgallian",
+  "kysymys": "Kerro lisää: Semgallian"
+ },
+ {
+  "n": 99,
+  "kohta": "kohde:jelgava",
+  "kasite": "Lielupen",
+  "kysymys": "Kerro lisää: Lielupen"
+ },
+ {
+  "n": 100,
+  "kohta": "kohde:jelgava",
+  "kasite": "Rastrelli",
+  "kysymys": "Kerro lisää: Rastrelli"
+ },
+ {
+  "n": 101,
+  "kohta": "kohde:jelgava",
+  "kasite": "Ernst Johann Bironin",
+  "kysymys": "Kerro lisää: Ernst Johann Bironin"
+ },
+ {
+  "n": 102,
+  "kohta": "kohde:jelgava",
+  "kasite": "kryptassa",
+  "kysymys": "Kerro lisää: kryptassa"
+ },
+ {
+  "n": 103,
+  "kohta": "kohde:jelgava",
+  "kasite": "Gotthard Kettler",
+  "kysymys": "Kerro lisää: Gotthard Kettler"
+ },
+ {
+  "n": 104,
+  "kohta": "kohde:jelgava",
+  "kasite": "Liivinmaan ritarikunnan",
+  "kysymys": "Kerro lisää: Liivinmaan ritarikunnan"
+ },
+ {
+  "n": 105,
+  "kohta": "kohde:jelgava",
+  "kasite": "Puola-Liettuan",
+  "kysymys": "Kerro lisää: Puola-Liettuan"
+ },
+ {
+  "n": 106,
+  "kohta": "kohde:jelgava",
+  "kasite": "Riianlahteen",
+  "kysymys": "Kerro lisää: Riianlahteen"
+ },
+ {
+  "n": 107,
+  "kohta": "kohde:jelgava",
+  "kasite": "Bauskan",
+  "kysymys": "Kerro lisää: Bauskan"
+ },
+ {
+  "n": 108,
+  "kohta": "kohde:jelgava",
+  "kasite": "Jūrmalan",
+  "kysymys": "Kerro lisää: Jūrmalan"
+ },
+ {
+  "n": 109,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Aleksanteri I:n",
+  "kysymys": "Kerro lisää: Aleksanteri I:n"
+ },
+ {
+  "n": 110,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Napoleonin",
+  "kysymys": "Kerro lisää: Napoleonin"
+ },
+ {
+  "n": 111,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Pietarista",
+  "kysymys": "Kerro lisää: Pietarista"
+ },
+ {
+  "n": 112,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Aleksanteri I",
+  "kysymys": "Kerro lisää: Aleksanteri I"
+ },
+ {
+  "n": 113,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Daugavan",
+  "kysymys": "Kerro lisää: Daugavan"
+ },
+ {
+  "n": 114,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Dünaburg",
+  "kysymys": "Kerro lisää: Dünaburg"
+ },
+ {
+  "n": 115,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Dvinsk",
+  "kysymys": "Kerro lisää: Dvinsk"
+ },
+ {
+  "n": 116,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Daugavpilsin linnoitus",
+  "kysymys": "Kerro lisää: Daugavpilsin linnoitus"
+ },
+ {
+  "n": 117,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Latgalen",
+  "kysymys": "Kerro lisää: Latgalen"
+ },
+ {
+  "n": 118,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Valdain",
+  "kysymys": "Kerro lisää: Valdain"
+ },
+ {
+  "n": 119,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Valko-Venäjän",
+  "kysymys": "Kerro lisää: Valko-Venäjän"
+ },
+ {
+  "n": 120,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Riianlahteen",
+  "kysymys": "Kerro lisää: Riianlahteen"
+ },
+ {
+  "n": 121,
+  "kohta": "kohde:daugavpilsin-linnoitus",
+  "kasite": "Riika",
+  "kysymys": "Kerro lisää: Riika"
+ },
+ {
+  "n": 122,
+  "kohta": "kohde:engure",
+  "kasite": "Mērsragsin kanava",
+  "kysymys": "Kerro lisää: Mērsragsin kanava"
+ },
+ {
+  "n": 123,
+  "kohta": "kohde:engure",
+  "kasite": "Riianlahteen",
+  "kysymys": "Kerro lisää: Riianlahteen"
+ },
+ {
+  "n": 124,
+  "kohta": "kohde:engure",
+  "kasite": "suolapitoisuutta",
+  "kysymys": "Kerro lisää: suolapitoisuutta"
+ },
+ {
+  "n": 125,
+  "kohta": "kohde:engure",
+  "kasite": "näkinpartaislevät",
+  "kysymys": "Kerro lisää: näkinpartaislevät"
+ },
+ {
+  "n": 126,
+  "kohta": "kohde:engure",
+  "kasite": "fosforia",
+  "kysymys": "Kerro lisää: fosforia"
+ },
+ {
+  "n": 127,
+  "kohta": "kohde:engure",
+  "kasite": "leväkukinnat",
+  "kysymys": "Kerro lisää: leväkukinnat"
+ },
+ {
+  "n": 128,
+  "kohta": "kohde:engure",
+  "kasite": "Litorinameren",
+  "kysymys": "Kerro lisää: Litorinameren"
+ },
+ {
+  "n": 129,
+  "kohta": "kohde:engure",
+  "kasite": "Enguren niemi",
+  "kysymys": "Kerro lisää: Enguren niemi"
+ },
+ {
+  "n": 130,
+  "kohta": "kohde:engure",
+  "kasite": "Riianlahden",
+  "kysymys": "Kerro lisää: Riianlahden"
+ },
+ {
+  "n": 131,
+  "kohta": "kohde:engure",
+  "kasite": "järvi",
+  "kysymys": "Kerro lisää: järvi"
+ },
+ {
+  "n": 132,
+  "kohta": "kohde:engure",
+  "kasite": "vesilinnuille",
+  "kysymys": "Kerro lisää: vesilinnuille"
+ },
+ {
+  "n": 133,
+  "kohta": "kohde:engure",
+  "kasite": "muuttoreiteillä",
+  "kysymys": "Kerro lisää: muuttoreiteillä"
+ },
+ {
+  "n": 134,
+  "kohta": "kohde:engure",
+  "kasite": "lintututkijoilla",
+  "kysymys": "Kerro lisää: lintututkijoilla"
+ },
+ {
+  "n": 135,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "Putouksen",
+  "kysymys": "Kerro lisää: Putouksen"
+ },
+ {
+  "n": 136,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "dolomiitti",
+  "kysymys": "Kerro lisää: dolomiitti"
+ },
+ {
+  "n": 137,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "vimpa",
+  "kysymys": "Kerro lisää: vimpa"
+ },
+ {
+  "n": 138,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "lohet",
+  "kysymys": "Kerro lisää: lohet"
+ },
+ {
+  "n": 139,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "Putous",
+  "kysymys": "Kerro lisää: Putous"
+ },
+ {
+  "n": 140,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "Ventan",
+  "kysymys": "Kerro lisää: Ventan"
+ },
+ {
+  "n": 141,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "Jacob Kettler",
+  "kysymys": "Kerro lisää: Jacob Kettler"
+ },
+ {
+  "n": 142,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "dolomiitissa",
+  "kysymys": "Kerro lisää: dolomiitissa"
+ },
+ {
+  "n": 143,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "Kuurinmaata",
+  "kysymys": "Kerro lisää: Kuurinmaata"
+ },
+ {
+  "n": 144,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "kevättulvien",
+  "kysymys": "Kerro lisää: kevättulvien"
+ },
+ {
+  "n": 145,
+  "kohta": "kohde:ventas-rumba",
+  "kasite": "Venta-joessa",
+  "kysymys": "Kerro lisää: Venta-joessa"
+ },
+ {
+  "n": 146,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Irbensalmi",
+  "kysymys": "Kerro lisää: Irbensalmi"
+ },
+ {
+  "n": 147,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Riianlahtea",
+  "kysymys": "Kerro lisää: Riianlahtea"
+ },
+ {
+  "n": 148,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Ruhnun",
+  "kysymys": "Kerro lisää: Ruhnun"
+ },
+ {
+  "n": 149,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Slīteren kansallispuistoon",
+  "kysymys": "Kerro lisää: Slīteren kansallispuistoon"
+ },
+ {
+  "n": 150,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Liivinrannan",
+  "kysymys": "Kerro lisää: Liivinrannan"
+ },
+ {
+  "n": 151,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Kolkan majakka",
+  "kysymys": "Kerro lisää: Kolkan majakka"
+ },
+ {
+  "n": 152,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "liiviläiskyliä",
+  "kysymys": "Kerro lisää: liiviläiskyliä"
+ },
+ {
+  "n": 153,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "mäntyjen",
+  "kysymys": "Kerro lisää: mäntyjen"
+ },
+ {
+  "n": 154,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "vuosilustoissa",
+  "kysymys": "Kerro lisää: vuosilustoissa"
+ },
+ {
+  "n": 155,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Kolkasrags",
+  "kysymys": "Kerro lisää: Kolkasrags"
+ },
+ {
+  "n": 156,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Kūolka nanā",
+  "kysymys": "Kerro lisää: Kūolka nanā"
+ },
+ {
+  "n": 157,
+  "kohta": "kohde:kolkan-niemi",
+  "kasite": "Kuurinmaan",
+  "kysymys": "Kerro lisää: Kuurinmaan"
+ },
+ {
+  "n": 158,
+  "kohta": "kohde:aglona",
+  "kasite": "Dominikaanit",
+  "kysymys": "Kerro lisää: Dominikaanit"
+ },
+ {
+  "n": 159,
+  "kohta": "kohde:aglona",
+  "kasite": "Latgalessa",
+  "kysymys": "Kerro lisää: Latgalessa"
+ },
+ {
+  "n": 160,
+  "kohta": "kohde:aglona",
+  "kasite": "Neitsyt Marian taivaaseenottamisen",
+  "kysymys": "Kerro lisää: Neitsyt Marian taivaaseenottamisen"
+ },
+ {
+  "n": 161,
+  "kohta": "kohde:aglona",
+  "kasite": "ikoniin",
+  "kysymys": "Kerro lisää: ikoniin"
+ },
+ {
+  "n": 162,
+  "kohta": "kohde:aglona",
+  "kasite": "Aglonan Jumalanäidin ikoni",
+  "kysymys": "Kerro lisää: Aglonan Jumalanäidin ikoni"
+ },
+ {
+  "n": 163,
+  "kohta": "kohde:aglona",
+  "kasite": "basilika",
+  "kysymys": "Kerro lisää: basilika"
+ },
+ {
+  "n": 164,
+  "kohta": "kohde:aglona",
+  "kasite": "Daugavpilsista",
+  "kysymys": "Kerro lisää: Daugavpilsista"
+ },
+ {
+  "n": 165,
+  "kohta": "kohde:aglona",
+  "kasite": "Uhrisaari",
+  "kysymys": "Kerro lisää: Uhrisaari"
+ },
+ {
+  "n": 166,
+  "kohta": "kohde:aglona",
+  "kasite": "Madelanun linnavuori",
+  "kysymys": "Kerro lisää: Madelanun linnavuori"
+ },
+ {
+  "n": 167,
+  "kohta": "kohde:aglona",
+  "kasite": "Johannes Paavali II",
+  "kysymys": "Kerro lisää: Johannes Paavali II"
+ },
+ {
+  "n": 168,
+  "kohta": "kohde:aglona",
+  "kasite": "basilica minor",
+  "kysymys": "Kerro lisää: basilica minor"
+ },
+ {
+  "n": 169,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Johann Ernst Glück",
+  "kysymys": "Kerro lisää: Johann Ernst Glück"
+ },
+ {
+  "n": 170,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Marienburgissa",
+  "kysymys": "Kerro lisää: Marienburgissa"
+ },
+ {
+  "n": 171,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Alūksne",
+  "kysymys": "Kerro lisää: Alūksne"
+ },
+ {
+  "n": 172,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Marta Skowrońska",
+  "kysymys": "Kerro lisää: Marta Skowrońska"
+ },
+ {
+  "n": 173,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Pietari Suuren",
+  "kysymys": "Kerro lisää: Pietari Suuren"
+ },
+ {
+  "n": 174,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Katariina I",
+  "kysymys": "Kerro lisää: Katariina I"
+ },
+ {
+  "n": 175,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Wittenbergissä",
+  "kysymys": "Kerro lisää: Wittenbergissä"
+ },
+ {
+  "n": 176,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Jenassa",
+  "kysymys": "Kerro lisää: Jenassa"
+ },
+ {
+  "n": 177,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Liivinmaan",
+  "kysymys": "Kerro lisää: Liivinmaan"
+ },
+ {
+  "n": 178,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "luterilainen teologi",
+  "kysymys": "Kerro lisää: luterilainen teologi"
+ },
+ {
+  "n": 179,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Wettinissä",
+  "kysymys": "Kerro lisää: Wettinissä"
+ },
+ {
+  "n": 180,
+  "kohta": "kohde:gluckin-raamattumuseo",
+  "kasite": "Liivinmaalla",
+  "kysymys": "Kerro lisää: Liivinmaalla"
+ },
+ {
+  "n": 181,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Riian",
+  "kysymys": "Kerro lisää: Riian"
+ },
+ {
+  "n": 182,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "renessanssiyksityiskohtia",
+  "kysymys": "Kerro lisää: renessanssiyksityiskohtia"
+ },
+ {
+  "n": 183,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "veljeskunta",
+  "kysymys": "Kerro lisää: veljeskunta"
+ },
+ {
+  "n": 184,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Riiaan",
+  "kysymys": "Kerro lisää: Riiaan"
+ },
+ {
+  "n": 185,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Neuvostoliittoa",
+  "kysymys": "Kerro lisää: Neuvostoliittoa"
+ },
+ {
+  "n": 186,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Mustapäät",
+  "kysymys": "Kerro lisää: Mustapäät"
+ },
+ {
+  "n": 187,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Hansaliittoon",
+  "kysymys": "Kerro lisää: Hansaliittoon"
+ },
+ {
+  "n": 188,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Väinäjoen",
+  "kysymys": "Kerro lisää: Väinäjoen"
+ },
+ {
+  "n": 189,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Unescon",
+  "kysymys": "Kerro lisää: Unescon"
+ },
+ {
+  "n": 190,
+  "kohta": "kohde:hahmotelma-mustapaiden-talo",
+  "kasite": "Vanhakaupunki",
+  "kysymys": "Kerro lisää: Vanhakaupunki"
+ },
+ {
+  "n": 191,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Ventspilsissä",
+  "kysymys": "Kerro lisää: Ventspilsissä"
+ },
+ {
+  "n": 192,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Herttua Jaakobin",
+  "kysymys": "Kerro lisää: Herttua Jaakobin"
+ },
+ {
+  "n": 193,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Puolan kolmannen jaon",
+  "kysymys": "Kerro lisää: Puolan kolmannen jaon"
+ },
+ {
+  "n": 194,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Venäjän",
+  "kysymys": "Kerro lisää: Venäjän"
+ },
+ {
+  "n": 195,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Lyypekki",
+  "kysymys": "Kerro lisää: Lyypekki"
+ },
+ {
+  "n": 196,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Ventspils",
+  "kysymys": "Kerro lisää: Ventspils"
+ },
+ {
+  "n": 197,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "pohjoisessa",
+  "kysymys": "Kerro lisää: pohjoisessa"
+ },
+ {
+  "n": 198,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Ventspilsin",
+  "kysymys": "Kerro lisää: Ventspilsin"
+ },
+ {
+  "n": 199,
+  "kohta": "kohde:hahmotelma-ventspils",
+  "kasite": "Puola-Liettuan",
+  "kysymys": "Kerro lisää: Puola-Liettuan"
+ },
+ {
+  "n": 200,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "rautatie",
+  "kysymys": "Kerro lisää: rautatie"
+ },
+ {
+  "n": 201,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "Riiasta",
+  "kysymys": "Kerro lisää: Riiasta"
+ },
+ {
+  "n": 202,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 203,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "Jūrmalan",
+  "kysymys": "Kerro lisää: Jūrmalan"
+ },
+ {
+  "n": 204,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "Riian",
+  "kysymys": "Kerro lisää: Riian"
+ },
+ {
+  "n": 205,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "puutalot",
+  "kysymys": "Kerro lisää: puutalot"
+ },
+ {
+  "n": 206,
+  "kohta": "kohde:hahmotelma-jurmala",
+  "kasite": "Riianlahden",
+  "kysymys": "Kerro lisää: Riianlahden"
+ },
+ {
+  "n": 207,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "rikkilähteet",
+  "kysymys": "Kerro lisää: rikkilähteet"
+ },
+ {
+  "n": 208,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "Ķemerin kansallispuisto",
+  "kysymys": "Kerro lisää: Ķemerin kansallispuisto"
+ },
+ {
+  "n": 209,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "rahkasammalet",
+  "kysymys": "Kerro lisää: rahkasammalet"
+ },
+ {
+  "n": 210,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "Ķemerin",
+  "kysymys": "Kerro lisää: Ķemerin"
+ },
+ {
+  "n": 211,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "Rahkasammal",
+  "kysymys": "Kerro lisää: Rahkasammal"
+ },
+ {
+  "n": 212,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "Itämeri",
+  "kysymys": "Kerro lisää: Itämeri"
+ },
+ {
+  "n": 213,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "Pitkospolut",
+  "kysymys": "Kerro lisää: Pitkospolut"
+ },
+ {
+  "n": 214,
+  "kohta": "kohde:hahmotelma-kemeri",
+  "kasite": "Ķemerissä",
+  "kysymys": "Kerro lisää: Ķemerissä"
+ },
+ {
+  "n": 215,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "Jaunpilsin linna",
+  "kysymys": "Kerro lisää: Jaunpilsin linna"
+ },
+ {
+  "n": 216,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "Liivinmaan ritarikunnan",
+  "kysymys": "Kerro lisää: Liivinmaan ritarikunnan"
+ },
+ {
+  "n": 217,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "linnoja",
+  "kysymys": "Kerro lisää: linnoja"
+ },
+ {
+  "n": 218,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "Saksalaiseen ritarikuntaan",
+  "kysymys": "Kerro lisää: Saksalaiseen ritarikuntaan"
+ },
+ {
+  "n": 219,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "Komtuuri",
+  "kysymys": "Kerro lisää: Komtuuri"
+ },
+ {
+  "n": 220,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "Semgallia",
+  "kysymys": "Kerro lisää: Semgallia"
+ },
+ {
+  "n": 221,
+  "kohta": "kohde:hahmotelma-jaunpils",
+  "kasite": "Latvian",
+  "kysymys": "Kerro lisää: Latvian"
+ },
+ {
+  "n": 222,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 223,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Kuurinmaan",
+  "kysymys": "Kerro lisää: Kuurinmaan"
+ },
+ {
+  "n": 224,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Irben salmi",
+  "kysymys": "Kerro lisää: Irben salmi"
+ },
+ {
+  "n": 225,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Baltian jääjärvi",
+  "kysymys": "Kerro lisää: Baltian jääjärvi"
+ },
+ {
+  "n": 226,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Zilie Kalni",
+  "kysymys": "Kerro lisää: Zilie Kalni"
+ },
+ {
+  "n": 227,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Slīteren",
+  "kysymys": "Kerro lisää: Slīteren"
+ },
+ {
+  "n": 228,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Riianlahden",
+  "kysymys": "Kerro lisää: Riianlahden"
+ },
+ {
+  "n": 229,
+  "kohta": "kohde:hahmotelma-slitere",
+  "kasite": "Saarenmaan",
+  "kysymys": "Kerro lisää: Saarenmaan"
+ },
+ {
+  "n": 230,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Riian arkkihiippakunta",
+  "kysymys": "Kerro lisää: Riian arkkihiippakunta"
+ },
+ {
+  "n": 231,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Dundagan",
+  "kysymys": "Kerro lisää: Dundagan"
+ },
+ {
+  "n": 232,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Osten-Sacken",
+  "kysymys": "Kerro lisää: Osten-Sacken"
+ },
+ {
+  "n": 233,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "baltiansaksalainen",
+  "kysymys": "Kerro lisää: baltiansaksalainen"
+ },
+ {
+  "n": 234,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "piirityksen",
+  "kysymys": "Kerro lisää: piirityksen"
+ },
+ {
+  "n": 235,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Latvian",
+  "kysymys": "Kerro lisää: Latvian"
+ },
+ {
+  "n": 236,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Viron",
+  "kysymys": "Kerro lisää: Viron"
+ },
+ {
+  "n": 237,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Liivinmaan",
+  "kysymys": "Kerro lisää: Liivinmaan"
+ },
+ {
+  "n": 238,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Dundagassa",
+  "kysymys": "Kerro lisää: Dundagassa"
+ },
+ {
+  "n": 239,
+  "kohta": "kohde:hahmotelma-dundaga",
+  "kasite": "Riian arkkihiippakunnan",
+  "kysymys": "Kerro lisää: Riian arkkihiippakunnan"
+ },
+ {
+  "n": 240,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "Kuurinmaan",
+  "kysymys": "Kerro lisää: Kuurinmaan"
+ },
+ {
+  "n": 241,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "kuurilaisten",
+  "kysymys": "Kerro lisää: kuurilaisten"
+ },
+ {
+  "n": 242,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "Wienissä",
+  "kysymys": "Kerro lisää: Wienissä"
+ },
+ {
+  "n": 243,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "jousikvartetin",
+  "kysymys": "Kerro lisää: jousikvartetin"
+ },
+ {
+  "n": 244,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "Pilskalns",
+  "kysymys": "Kerro lisää: Pilskalns"
+ },
+ {
+  "n": 245,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "Talsin",
+  "kysymys": "Kerro lisää: Talsin"
+ },
+ {
+  "n": 246,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "Kuurinmaan ja Semgallian herttuakunta",
+  "kysymys": "Kerro lisää: Kuurinmaan ja Semgallian herttuakunta"
+ },
+ {
+  "n": 247,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "Puola-Liettuan",
+  "kysymys": "Kerro lisää: Puola-Liettuan"
+ },
+ {
+  "n": 248,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "moreenia",
+  "kysymys": "Kerro lisää: moreenia"
+ },
+ {
+  "n": 249,
+  "kohta": "kohde:hahmotelma-talsi",
+  "kasite": "jääkauden",
+  "kysymys": "Kerro lisää: jääkauden"
+ },
+ {
+  "n": 250,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Kuurinmaan herttuakunnan",
+  "kysymys": "Kerro lisää: Kuurinmaan herttuakunnan"
+ },
+ {
+  "n": 251,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "merkantilismin",
+  "kysymys": "Kerro lisää: merkantilismin"
+ },
+ {
+  "n": 252,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Riian",
+  "kysymys": "Kerro lisää: Riian"
+ },
+ {
+  "n": 253,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Jelgavan",
+  "kysymys": "Kerro lisää: Jelgavan"
+ },
+ {
+  "n": 254,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Ventspilsin",
+  "kysymys": "Kerro lisää: Ventspilsin"
+ },
+ {
+  "n": 255,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Saksalaisen ritarikunnan",
+  "kysymys": "Kerro lisää: Saksalaisen ritarikunnan"
+ },
+ {
+  "n": 256,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Liivinsodan",
+  "kysymys": "Kerro lisää: Liivinsodan"
+ },
+ {
+  "n": 257,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "kuurilaisista",
+  "kysymys": "Kerro lisää: kuurilaisista"
+ },
+ {
+  "n": 258,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Kuurinmaan ja Semgallian herttuakunta",
+  "kysymys": "Kerro lisää: Kuurinmaan ja Semgallian herttuakunta"
+ },
+ {
+  "n": 259,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Höyryveturien",
+  "kysymys": "Kerro lisää: Höyryveturien"
+ },
+ {
+  "n": 260,
+  "kohta": "kohde:hahmotelma-tukums",
+  "kasite": "Tukumsin",
+  "kysymys": "Kerro lisää: Tukumsin"
+ },
+ {
+  "n": 261,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Iivana Julma",
+  "kysymys": "Kerro lisää: Iivana Julma"
+ },
+ {
+  "n": 262,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Cesvainen",
+  "kysymys": "Kerro lisää: Cesvainen"
+ },
+ {
+  "n": 263,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Daugavan",
+  "kysymys": "Kerro lisää: Daugavan"
+ },
+ {
+  "n": 264,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Visvaldis Jersikalaisen",
+  "kysymys": "Kerro lisää: Visvaldis Jersikalaisen"
+ },
+ {
+  "n": 265,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Cesvainen palatsi",
+  "kysymys": "Kerro lisää: Cesvainen palatsi"
+ },
+ {
+  "n": 266,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "paroni von Wulfin",
+  "kysymys": "Kerro lisää: paroni von Wulfin"
+ },
+ {
+  "n": 267,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Riian",
+  "kysymys": "Kerro lisää: Riian"
+ },
+ {
+  "n": 268,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Miekkaveljeskunta",
+  "kysymys": "Kerro lisää: Miekkaveljeskunta"
+ },
+ {
+  "n": 269,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Gauja",
+  "kysymys": "Kerro lisää: Gauja"
+ },
+ {
+  "n": 270,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Cēsis",
+  "kysymys": "Kerro lisää: Cēsis"
+ },
+ {
+  "n": 271,
+  "kohta": "kohde:hahmotelma-cesvaine",
+  "kasite": "Liivinmaan",
+  "kysymys": "Kerro lisää: Liivinmaan"
+ },
+ {
+  "n": 272,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "rautatiet",
+  "kysymys": "Kerro lisää: rautatiet"
+ },
+ {
+  "n": 273,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Vitebskin kuvernementin",
+  "kysymys": "Kerro lisää: Vitebskin kuvernementin"
+ },
+ {
+  "n": 274,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Latgalen",
+  "kysymys": "Kerro lisää: Latgalen"
+ },
+ {
+  "n": 275,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Puola-Liettuan",
+  "kysymys": "Kerro lisää: Puola-Liettuan"
+ },
+ {
+  "n": 276,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Venäjän keisarikunnan",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnan"
+ },
+ {
+  "n": 277,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Jeesuksen Pyhän Sydämen katedraali",
+  "kysymys": "Kerro lisää: Jeesuksen Pyhän Sydämen katedraali"
+ },
+ {
+  "n": 278,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Riiasta",
+  "kysymys": "Kerro lisää: Riiasta"
+ },
+ {
+  "n": 279,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Latgale",
+  "kysymys": "Kerro lisää: Latgale"
+ },
+ {
+  "n": 280,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "latgalen kieltä",
+  "kysymys": "Kerro lisää: latgalen kieltä"
+ },
+ {
+  "n": 281,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Puola-Liettualle",
+  "kysymys": "Kerro lisää: Puola-Liettualle"
+ },
+ {
+  "n": 282,
+  "kohta": "kohde:hahmotelma-rezekne",
+  "kasite": "Venäjän keisarikunnalle",
+  "kysymys": "Kerro lisää: Venäjän keisarikunnalle"
+ },
+ {
+  "n": 283,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Jesuiitat",
+  "kysymys": "Kerro lisää: Jesuiitat"
+ },
+ {
+  "n": 284,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "protestanttisten",
+  "kysymys": "Kerro lisää: protestanttisten"
+ },
+ {
+  "n": 285,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "ortodoksisten",
+  "kysymys": "Kerro lisää: ortodoksisten"
+ },
+ {
+  "n": 286,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Kuurinmaalle",
+  "kysymys": "Kerro lisää: Kuurinmaalle"
+ },
+ {
+  "n": 287,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Puolaan",
+  "kysymys": "Kerro lisää: Puolaan"
+ },
+ {
+  "n": 288,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Saksaan",
+  "kysymys": "Kerro lisää: Saksaan"
+ },
+ {
+  "n": 289,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Väinäjoen",
+  "kysymys": "Kerro lisää: Väinäjoen"
+ },
+ {
+  "n": 290,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Daugavpilsin",
+  "kysymys": "Kerro lisää: Daugavpilsin"
+ },
+ {
+  "n": 291,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Dnepriä",
+  "kysymys": "Kerro lisää: Dnepriä"
+ },
+ {
+  "n": 292,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Konstantinopolia",
+  "kysymys": "Kerro lisää: Konstantinopolia"
+ },
+ {
+  "n": 293,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "Plater-suku",
+  "kysymys": "Kerro lisää: Plater-suku"
+ },
+ {
+  "n": 294,
+  "kohta": "kohde:hahmotelma-kraslava",
+  "kasite": "aatelissuku",
+  "kysymys": "Kerro lisää: aatelissuku"
+ },
+ {
+  "n": 295,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "kevättulvat",
+  "kysymys": "Kerro lisää: kevättulvat"
+ },
+ {
+  "n": 296,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "Itä-Latvian alangon",
+  "kysymys": "Kerro lisää: Itä-Latvian alangon"
+ },
+ {
+  "n": 297,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "Aiviekste-jokea",
+  "kysymys": "Kerro lisää: Aiviekste-jokea"
+ },
+ {
+  "n": 298,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "muuttolinnuille",
+  "kysymys": "Kerro lisää: muuttolinnuille"
+ },
+ {
+  "n": 299,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "tulvavettä",
+  "kysymys": "Kerro lisää: tulvavettä"
+ },
+ {
+  "n": 300,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "Väinäjokeen",
+  "kysymys": "Kerro lisää: Väinäjokeen"
+ },
+ {
+  "n": 301,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "Lubānsista",
+  "kysymys": "Kerro lisää: Lubānsista"
+ },
+ {
+  "n": 302,
+  "kohta": "kohde:hahmotelma-lubans",
+  "kasite": "patoja",
+  "kysymys": "Kerro lisää: patoja"
+ },
+ {
+  "n": 303,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Riian vesivoimala",
+  "kysymys": "Kerro lisää: Riian vesivoimala"
+ },
+ {
+  "n": 304,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "tekosaarella",
+  "kysymys": "Kerro lisää: tekosaarella"
+ },
+ {
+  "n": 305,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Albert",
+  "kysymys": "Kerro lisää: Albert"
+ },
+ {
+  "n": 306,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Väinäjoen suulta",
+  "kysymys": "Kerro lisää: Väinäjoen suulta"
+ },
+ {
+  "n": 307,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Väinäjoen",
+  "kysymys": "Kerro lisää: Väinäjoen"
+ },
+ {
+  "n": 308,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Liivinmaan",
+  "kysymys": "Kerro lisää: Liivinmaan"
+ },
+ {
+  "n": 309,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Meinhardin",
+  "kysymys": "Kerro lisää: Meinhardin"
+ },
+ {
+  "n": 310,
+  "kohta": "kohde:hahmotelma-ikskile",
+  "kasite": "Gotlantilaiset kivenhakkaajat",
+  "kysymys": "Kerro lisää: Gotlantilaiset kivenhakkaajat"
+ },
+ {
+  "n": 311,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Pļaviņasin vesivoimala",
+  "kysymys": "Kerro lisää: Pļaviņasin vesivoimala"
+ },
+ {
+  "n": 312,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Väinäjoki",
+  "kysymys": "Kerro lisää: Väinäjoki"
+ },
+ {
+  "n": 313,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 314,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Lyypekki",
+  "kysymys": "Kerro lisää: Lyypekki"
+ },
+ {
+  "n": 315,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Väinäjoen",
+  "kysymys": "Kerro lisää: Väinäjoen"
+ },
+ {
+  "n": 316,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Pērse-joen",
+  "kysymys": "Kerro lisää: Pērse-joen"
+ },
+ {
+  "n": 317,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Ruotsin",
+  "kysymys": "Kerro lisää: Ruotsin"
+ },
+ {
+  "n": 318,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Venäjän",
+  "kysymys": "Kerro lisää: Venäjän"
+ },
+ {
+  "n": 319,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Nystadin rauhan",
+  "kysymys": "Kerro lisää: Nystadin rauhan"
+ },
+ {
+  "n": 320,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "markkinoita",
+  "kysymys": "Kerro lisää: markkinoita"
+ },
+ {
+  "n": 321,
+  "kohta": "kohde:hahmotelma-koknese",
+  "kasite": "Hansaliiton",
+  "kysymys": "Kerro lisää: Hansaliiton"
+ },
+ {
+  "n": 322,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Livonian ritarikunta",
+  "kysymys": "Kerro lisää: Livonian ritarikunta"
+ },
+ {
+  "n": 323,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Beida-linna",
+  "kysymys": "Kerro lisää: Beida-linna"
+ },
+ {
+  "n": 324,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Magdeburgin oikeudet",
+  "kysymys": "Kerro lisää: Magdeburgin oikeudet"
+ },
+ {
+  "n": 325,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Aizpute",
+  "kysymys": "Kerro lisää: Aizpute"
+ },
+ {
+  "n": 326,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Saksalaisen ritarikunnan",
+  "kysymys": "Kerro lisää: Saksalaisen ritarikunnan"
+ },
+ {
+  "n": 327,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Liivinmaan sodan",
+  "kysymys": "Kerro lisää: Liivinmaan sodan"
+ },
+ {
+  "n": 328,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Länsi-Latviassa",
+  "kysymys": "Kerro lisää: Länsi-Latviassa"
+ },
+ {
+  "n": 329,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "kuurilaisista",
+  "kysymys": "Kerro lisää: kuurilaisista"
+ },
+ {
+  "n": 330,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Kuurinmaan herttuakunta",
+  "kysymys": "Kerro lisää: Kuurinmaan herttuakunta"
+ },
+ {
+  "n": 331,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Kuurilaiset",
+  "kysymys": "Kerro lisää: Kuurilaiset"
+ },
+ {
+  "n": 332,
+  "kohta": "kohde:hahmotelma-aizpute",
+  "kasite": "Kuurinmaassa",
+  "kysymys": "Kerro lisää: Kuurinmaassa"
+ },
+ {
+  "n": 333,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Hansaliitto",
+  "kysymys": "Kerro lisää: Hansaliitto"
+ },
+ {
+  "n": 334,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "maapäiviä",
+  "kysymys": "Kerro lisää: maapäiviä"
+ },
+ {
+  "n": 335,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "kronikassa",
+  "kysymys": "Kerro lisää: kronikassa"
+ },
+ {
+  "n": 336,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Liivinmaan miekkaveljet",
+  "kysymys": "Kerro lisää: Liivinmaan miekkaveljet"
+ },
+ {
+  "n": 337,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Valmieran",
+  "kysymys": "Kerro lisää: Valmieran"
+ },
+ {
+  "n": 338,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Lasikuitu",
+  "kysymys": "Kerro lisää: Lasikuitu"
+ },
+ {
+  "n": 339,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Vidzeme",
+  "kysymys": "Kerro lisää: Vidzeme"
+ },
+ {
+  "n": 340,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Gauja-joki",
+  "kysymys": "Kerro lisää: Gauja-joki"
+ },
+ {
+  "n": 341,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Valmierassa",
+  "kysymys": "Kerro lisää: Valmierassa"
+ },
+ {
+  "n": 342,
+  "kohta": "kohde:hahmotelma-valmiera",
+  "kasite": "Hansaliiton",
+  "kysymys": "Kerro lisää: Hansaliiton"
+ },
+ {
+  "n": 343,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Lielvārden vyö",
+  "kysymys": "Kerro lisää: Lielvārden vyö"
+ },
+ {
+  "n": 344,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "seteleissä",
+  "kysymys": "Kerro lisää: seteleissä"
+ },
+ {
+  "n": 345,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Henrikin Liivinmaan kronikka",
+  "kysymys": "Kerro lisää: Henrikin Liivinmaan kronikka"
+ },
+ {
+  "n": 346,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "linnavuoren",
+  "kysymys": "Kerro lisää: linnavuoren"
+ },
+ {
+  "n": 347,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Andrejs Pumpurs",
+  "kysymys": "Kerro lisää: Andrejs Pumpurs"
+ },
+ {
+  "n": 348,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Lāčplēsis",
+  "kysymys": "Kerro lisää: Lāčplēsis"
+ },
+ {
+  "n": 349,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Riian hiippakunta",
+  "kysymys": "Kerro lisää: Riian hiippakunta"
+ },
+ {
+  "n": 350,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "piispa Albert",
+  "kysymys": "Kerro lisää: piispa Albert"
+ },
+ {
+  "n": 351,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Liiviläiset",
+  "kysymys": "Kerro lisää: Liiviläiset"
+ },
+ {
+  "n": 352,
+  "kohta": "kohde:hahmotelma-lielvarde",
+  "kasite": "Liivin kieli",
+  "kysymys": "Kerro lisää: Liivin kieli"
+ },
+ {
+  "n": 353,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Nahkiainen",
+  "kysymys": "Kerro lisää: Nahkiainen"
+ },
+ {
+  "n": 354,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "EU:n suojattu maantieteellinen merkintä",
+  "kysymys": "Kerro lisää: EU:n suojattu maantieteellinen merkintä"
+ },
+ {
+  "n": 355,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Henrikin Liivinmaan kronikassa",
+  "kysymys": "Kerro lisää: Henrikin Liivinmaan kronikassa"
+ },
+ {
+  "n": 356,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Gauja-joen",
+  "kysymys": "Kerro lisää: Gauja-joen"
+ },
+ {
+  "n": 357,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Carnikavassa",
+  "kysymys": "Kerro lisää: Carnikavassa"
+ },
+ {
+  "n": 358,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Suojattu maantieteellinen merkintä",
+  "kysymys": "Kerro lisää: Suojattu maantieteellinen merkintä"
+ },
+ {
+  "n": 359,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Euroopan unionin",
+  "kysymys": "Kerro lisää: Euroopan unionin"
+ },
+ {
+  "n": 360,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Gauja",
+  "kysymys": "Kerro lisää: Gauja"
+ },
+ {
+  "n": 361,
+  "kohta": "kohde:hahmotelma-carnikava",
+  "kasite": "Vidzemen",
+  "kysymys": "Kerro lisää: Vidzemen"
+ },
+ {
+  "n": 362,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Vidzemen",
+  "kysymys": "Kerro lisää: Vidzemen"
+ },
+ {
+  "n": 363,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Kuurinmaan",
+  "kysymys": "Kerro lisää: Kuurinmaan"
+ },
+ {
+  "n": 364,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Ainažin merikoulu",
+  "kysymys": "Kerro lisää: Ainažin merikoulu"
+ },
+ {
+  "n": 365,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Ainažin",
+  "kysymys": "Kerro lisää: Ainažin"
+ },
+ {
+  "n": 366,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Heinaste",
+  "kysymys": "Kerro lisää: Heinaste"
+ },
+ {
+  "n": 367,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Krišjānis Valdemārs",
+  "kysymys": "Kerro lisää: Krišjānis Valdemārs"
+ },
+ {
+  "n": 368,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "nuorlatvialaisten",
+  "kysymys": "Kerro lisää: nuorlatvialaisten"
+ },
+ {
+  "n": 369,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Riianlahti",
+  "kysymys": "Kerro lisää: Riianlahti"
+ },
+ {
+  "n": 370,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Saaremaa",
+  "kysymys": "Kerro lisää: Saaremaa"
+ },
+ {
+  "n": 371,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Kuunari",
+  "kysymys": "Kerro lisää: Kuunari"
+ },
+ {
+  "n": 372,
+  "kohta": "kohde:hahmotelma-ainazi",
+  "kasite": "Briikki",
+  "kysymys": "Kerro lisää: Briikki"
+ },
+ {
+  "n": 373,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "Heck-nautoja",
+  "kysymys": "Kerro lisää: Heck-nautoja"
+ },
+ {
+  "n": 374,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "konikhevosia",
+  "kysymys": "Kerro lisää: konikhevosia"
+ },
+ {
+  "n": 375,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "visenttejä",
+  "kysymys": "Kerro lisää: visenttejä"
+ },
+ {
+  "n": 376,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 377,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "Papen järvi",
+  "kysymys": "Kerro lisää: Papen järvi"
+ },
+ {
+  "n": 378,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "muuttolintujen",
+  "kysymys": "Kerro lisää: muuttolintujen"
+ },
+ {
+  "n": 379,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "kanervaa",
+  "kysymys": "Kerro lisää: kanervaa"
+ },
+ {
+  "n": 380,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "Papen luonnonpuiston",
+  "kysymys": "Kerro lisää: Papen luonnonpuiston"
+ },
+ {
+  "n": 381,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "rannikkoluontoa",
+  "kysymys": "Kerro lisää: rannikkoluontoa"
+ },
+ {
+  "n": 382,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "turpeeksi",
+  "kysymys": "Kerro lisää: turpeeksi"
+ },
+ {
+  "n": 383,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "hiiltä",
+  "kysymys": "Kerro lisää: hiiltä"
+ },
+ {
+  "n": 384,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "Liepāja",
+  "kysymys": "Kerro lisää: Liepāja"
+ },
+ {
+  "n": 385,
+  "kohta": "kohde:hahmotelma-pape",
+  "kasite": "Karosta",
+  "kysymys": "Kerro lisää: Karosta"
+ },
+ {
+  "n": 386,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Mūsan",
+  "kysymys": "Kerro lisää: Mūsan"
+ },
+ {
+  "n": 387,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Mēmelen",
+  "kysymys": "Kerro lisää: Mēmelen"
+ },
+ {
+  "n": 388,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Liivinmaan ritarikunnan",
+  "kysymys": "Kerro lisää: Liivinmaan ritarikunnan"
+ },
+ {
+  "n": 389,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Kuurinmaan ja Semgallian herttuakunnan",
+  "kysymys": "Kerro lisää: Kuurinmaan ja Semgallian herttuakunnan"
+ },
+ {
+  "n": 390,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Restaurointia",
+  "kysymys": "Kerro lisää: Restaurointia"
+ },
+ {
+  "n": 391,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "balttilaisiin heimoihin",
+  "kysymys": "Kerro lisää: balttilaisiin heimoihin"
+ },
+ {
+  "n": 392,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Zemgale",
+  "kysymys": "Kerro lisää: Zemgale"
+ },
+ {
+  "n": 393,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Firenzessä",
+  "kysymys": "Kerro lisää: Firenzessä"
+ },
+ {
+  "n": 394,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "antiikin",
+  "kysymys": "Kerro lisää: antiikin"
+ },
+ {
+  "n": 395,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "gotiikan",
+  "kysymys": "Kerro lisää: gotiikan"
+ },
+ {
+  "n": 396,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Väinäjoen",
+  "kysymys": "Kerro lisää: Väinäjoen"
+ },
+ {
+  "n": 397,
+  "kohta": "kohde:hahmotelma-bauska",
+  "kasite": "Hansaliittoon",
+  "kysymys": "Kerro lisää: Hansaliittoon"
+ },
+ {
+  "n": 398,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Lohi",
+  "kysymys": "Kerro lisää: Lohi"
+ },
+ {
+  "n": 399,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Venta-joen",
+  "kysymys": "Kerro lisää: Venta-joen"
+ },
+ {
+  "n": 400,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Ventas rumba",
+  "kysymys": "Kerro lisää: Ventas rumba"
+ },
+ {
+  "n": 401,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "herttua Jaakobin",
+  "kysymys": "Kerro lisää: herttua Jaakobin"
+ },
+ {
+  "n": 402,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Kuurinmaan herttuakunnan",
+  "kysymys": "Kerro lisää: Kuurinmaan herttuakunnan"
+ },
+ {
+  "n": 403,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Venta-joki",
+  "kysymys": "Kerro lisää: Venta-joki"
+ },
+ {
+  "n": 404,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Itämerta",
+  "kysymys": "Kerro lisää: Itämerta"
+ },
+ {
+  "n": 405,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "kaarisilta",
+  "kysymys": "Kerro lisää: kaarisilta"
+ },
+ {
+  "n": 406,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "kalkkilaasti",
+  "kysymys": "Kerro lisää: kalkkilaasti"
+ },
+ {
+  "n": 407,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Vimpa",
+  "kysymys": "Kerro lisää: Vimpa"
+ },
+ {
+  "n": 408,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 409,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Dziesmu svētki",
+  "kysymys": "Kerro lisää: Dziesmu svētki"
+ },
+ {
+  "n": 410,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "Mežaparksin",
+  "kysymys": "Kerro lisää: Mežaparksin"
+ },
+ {
+  "n": 411,
+  "kohta": "nosto:ventas-rumba",
+  "kasite": "UNESCOn",
+  "kysymys": "Kerro lisää: UNESCOn"
+ },
+ {
+  "n": 412,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Itämeren",
+  "kysymys": "Kerro lisää: Itämeren"
+ },
+ {
+  "n": 413,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Riianlahden",
+  "kysymys": "Kerro lisää: Riianlahden"
+ },
+ {
+  "n": 414,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Slīteren kansallispuistossa",
+  "kysymys": "Kerro lisää: Slīteren kansallispuistossa"
+ },
+ {
+  "n": 415,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "uralilaisiin kieliin",
+  "kysymys": "Kerro lisää: uralilaisiin kieliin"
+ },
+ {
+  "n": 416,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "itämerensuomalaisten kielten",
+  "kysymys": "Kerro lisää: itämerensuomalaisten kielten"
+ },
+ {
+  "n": 417,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "viron",
+  "kysymys": "Kerro lisää: viron"
+ },
+ {
+  "n": 418,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "unkarin",
+  "kysymys": "Kerro lisää: unkarin"
+ },
+ {
+  "n": 419,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "kornin",
+  "kysymys": "Kerro lisää: kornin"
+ },
+ {
+  "n": 420,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "manxin",
+  "kysymys": "Kerro lisää: manxin"
+ },
+ {
+  "n": 421,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Liivin",
+  "kysymys": "Kerro lisää: Liivin"
+ },
+ {
+  "n": 422,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "hiekkasärkkiä",
+  "kysymys": "Kerro lisää: hiekkasärkkiä"
+ },
+ {
+  "n": 423,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "aallonmurtajat",
+  "kysymys": "Kerro lisää: aallonmurtajat"
+ },
+ {
+  "n": 424,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Itämereltä",
+  "kysymys": "Kerro lisää: Itämereltä"
+ },
+ {
+  "n": 425,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Riianlahdelta",
+  "kysymys": "Kerro lisää: Riianlahdelta"
+ },
+ {
+  "n": 426,
+  "kohta": "nosto:kolkasrags",
+  "kasite": "Liivinrannan",
+  "kysymys": "Kerro lisää: Liivinrannan"
+ }
+]
