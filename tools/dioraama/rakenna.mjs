@@ -448,7 +448,11 @@ export function lisaaBlender(rakennusJson, blender) {
   // ymparisto.mallit[] { id, huippu, kevyt }. Rantakivikko ja kalliojalusta, myöhemmin vene. Vanha natiivi ohittaa kentän.
   const mallit = [...on.keys()].filter((p) => /^ymparisto\/mallit\/[^/]+\.glb$/.test(p) && !p.endsWith('-kevyt.glb')).sort()
     .map((p) => { const id = p.slice('ymparisto/mallit/'.length, -4); const kevyt = `ymparisto/mallit/${id}-kevyt.glb`;
-      return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p), ...(rakennusJson.ymparistoMallit?.[id] ?? {}) }; });
+      // Hämäräkuva (10.10.2026): <id>-hamara.jpg (+ -4x4.astcm) korvaa hämärässä glb:n päiväkuvan; natiivi jättää silloin
+      // _HamaraKerroin 0,3:n pois (Siirtoseppä 71c2080c9). Ilman kuvaa kenttiä ei tule.
+      const hj = `ymparisto/mallit/${id}-hamara.jpg`, ha = `ymparisto/mallit/${id}-hamara-4x4.astcm`;
+      const ham = on.has(hj) ? { kuva_hamara: B(hj), ...(on.has(ha) ? { kuva_hamara_astc: B(ha) } : {}) } : {};
+      return { id, huippu: B(p), kevyt: B(on.has(kevyt) ? kevyt : p), ...ham, ...(rakennusJson.ymparistoMallit?.[id] ?? {}) }; });
   delete rakennusJson.ymparistoMallit; delete rakennusJson.lisaHenkilot; delete rakennusJson.lisaPinnat;   // rakennuskohtaiset lisäkentät malleille, esim. vene { maailmaan: false } (Siirtoseppä 7.10.)
   if (mallit.length) { rakennusJson.ymparisto = rakennusJson.ymparisto || {}; rakennusJson.ymparisto.mallit = mallit; }
   // Vapaa kävely (omistaja 7.10. 08.4x; Linnanrakentaja + Siirtoseppä): kavely/osat.json (osien glb:t, rajat, naapurit,

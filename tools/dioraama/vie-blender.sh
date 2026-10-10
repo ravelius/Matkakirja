@@ -95,6 +95,8 @@ fi
 # Staattiset ympäristömallit (ymparisto/mallit/*.glb, 7.10.2026: rantakivet, vene) ja vapaan kävelyn aineisto
 # (kavely/: osien glb:t, osat.json, merkit.json, esine-*.glb), jos lähteessä.
 for f in "$LAHDE"/ymparisto/mallit/*.glb(N); do lisaa "ymparisto/mallit/${f:t}" "ymparisto/mallit/${f:t}"; done
+# Mallien hämäräkuvat (10.10.2026, Siirtoseppä 71c2080c9): ymparisto/mallit/<id>-hamara.jpg ja -hamara-4x4.astcm, jos lähteessä.
+for f in "$LAHDE"/ymparisto/mallit/*-hamara.jpg(N) "$LAHDE"/ymparisto/mallit/*-hamara-4x4.astcm(N); do lisaa "ymparisto/mallit/${f:t}" "ymparisto/mallit/${f:t}"; done
 for f in "$LAHDE"/kavely/*.(glb|json)(N); do lisaa "kavely/${f:t}" "kavely/${f:t}"; done
 # Skinnatut hahmot (omistaja 2.10. 18.0x, Quaternius CC0; tools/dioraama/blender/hahmo_skin.py): hahmot/<henkilo>.glb, jos lähteessä.
 for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
