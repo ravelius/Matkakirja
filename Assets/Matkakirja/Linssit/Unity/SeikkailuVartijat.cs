@@ -210,6 +210,10 @@ namespace Matkakirja.Natiivi
                 ag.radius = 0.3f; ag.height = 1.8f; ag.baseOffset = 0f; ag.angularSpeed = 360f; ag.acceleration = 6f;
                 ag.stoppingDistance = 0.25f; ag.autoBraking = true; ag.speed = (float)Vartija.KavelyMs;
                 ag.obstacleAvoidanceType = ObstacleAvoidanceType.LowQualityObstacleAvoidance;
+                // Kapseli pelaajan kävelyä vasten (PT 11.10.: kamera hahmon sisällä): oletuskerros, joten näkölinjat, napautus ja kameran
+                // kattoraja (DioraamaNayttamo.Kerros) eivät osu siihen, mutta pelaajan CharacterController ei kulje hahmon läpi.
+                var kg = new GameObject("Kapseli") { layer = 0 }; kg.transform.SetParent(vg.transform, false);
+                var kc = kg.AddComponent<CapsuleCollider>(); kc.radius = HahmoSadeM; kc.height = 1.8f; kc.center = new Vector3(0f, 0.9f, 0f);
                 // kierto_y kääntää glTF:n +Z:aa; Unityssa z peilattu → katseen yaw = 180° − kierto_y (LS2 8.10.: −kierto_y katsoi väärään suuntaan).
                 double yaw0 = eka.KiertoY is double ky0 ? 180 - ky0 * 180 / Math.PI : 0;
                 var v = new V { Aivot = new Vartija(pisteet, yaw0) { Profiili = (seisoo || istuu) && eka.Profiili == null ? VartijaProfiili.Linnavaki : VartijaProfiili.Hae(eka.Profiili),
@@ -403,7 +407,15 @@ namespace Matkakirja.Natiivi
                 }
                 sydan = Math.Max(sydan, v.Aivot.SydanTempo);
                 var kohde = new Vector3((float)v.Aivot.KohdeX, vp.y, (float)v.Aivot.KohdeZ);
-                if (v.Aivot.Vauhti > 0)
+                // Ei pelaajan päälle (myös partioreitillä seisovan pelaajan kohdalla): alle LahinM ja menossa kohti → seisoo.
+                bool paalle = false;
+                if (p != null && v.Aivot.Vauhti > 0)
+                {
+                    var e = p.transform.position - vp; e.y = 0;
+                    var suunta = kohde - vp; suunta.y = 0;
+                    paalle = e.sqrMagnitude < LahinM * LahinM && Vector3.Dot(suunta, e) > 0f && Mathf.Abs(p.transform.position.y - vp.y) < 1.5f;
+                }
+                if (v.Aivot.Vauhti > 0 && !paalle)
                 {
                     ag.isStopped = false; ag.speed = (float)v.Aivot.Vauhti; ag.updateRotation = true;
                     if (float.IsNaN(v.Kohde.x) || (v.Kohde - kohde).sqrMagnitude > 0.09f) { ag.SetDestination(kohde); v.Kohde = kohde; }
@@ -585,7 +597,7 @@ namespace Matkakirja.Natiivi
         }
 
         Vector3? edellinenJalka; float askelMatka; AudioSource omatKerta;
-        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f;
+        const float PiiloM = 0.7f, HuutoM = 20f, LyhtyM = 4f, SoihtuM = 6f, LahinM = 0.9f, HahmoSadeM = 0.28f;
         readonly HashSet<string> henkilot = new HashSet<string>(StringComparer.Ordinal);
         static int Numero(string tunnus) { int vi = tunnus.LastIndexOf('-'); return vi > 0 && int.TryParse(tunnus.Substring(vi + 1), out int n) ? n : 0; }
         bool piiloPaljastui;

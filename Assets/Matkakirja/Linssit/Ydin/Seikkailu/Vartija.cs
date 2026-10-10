@@ -95,6 +95,9 @@ namespace Matkakirja.Linssit.Seikkailu
         // SeikkailuVartijat.VaroitusAlkoi) ja seisoo VaroitusSeisoS; vasta sitten jahti tai ote, jos pelaaja on yhä näkyvissä.
         // Turvallinen alku (TurvaS): mittari jää alle täyden ja kuultu ääni vain kääntää katseen (ei juoksua äänen luo).
         public const double VaroitusSeisoS = 2.0, TurvaS = 60, TurvaKatto = 0.95;
+        // PT 11.10. (simuajon kuvat): varoitus tapahtui kameran edessä ja vartija käveli pelaajan sisään. Varoitus alkaa viimeistään
+        // VaroitusM:n päässä (vartija näkee pelaajan, mittari ≥ raja), eikä vartija kävele PysahdysM:ää lähemmäs pelaajaa.
+        public const double VaroitusM = 3.5, PysahdysM = 1.0;
 
         public VartijaProfiili Profiili = VartijaProfiili.Vartija;
         /// <summary>Piilot ja varjot vaiheen 3 etsintään (sovitin antaa piilo:-merkeistä).</summary>
@@ -269,7 +272,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 varoitusTehty = true;
                 if (voima <= 0) { Tila = Profiili.JahtaaMs > 0 ? VartijanTila.Etsinta : VartijanTila.Epaily; katseluS = 0; return; }   // pelaaja ehti pois näkyvistä
             }
-            if (Mittari >= 1 && voima > 0 && Profiili.Ottaa && !varoitusTehty)
+            if (voima > 0 && Profiili.Ottaa && !varoitusTehty && Turva <= 0 && (Mittari >= 1 || dp <= VaroitusM && Mittari >= Raja))
             {
                 varoitusJaljella = VaroitusSeisoS; VaroitusPyydetty = true; merkki = true; Vauhti = 0;
                 if (Tila == VartijanTila.Partio || Tila == VartijanTila.Paluu) Tila = VartijanTila.Epaily;
@@ -299,7 +302,8 @@ namespace Matkakirja.Linssit.Seikkailu
                 case VartijanTila.Etsinta:
                     merkki = true;
                     var (ex, ez) = Rajaa(EpailyX, EpailyZ);
-                    if (Profiili.JahtaaMs > 0 && Etaisyys(s.VartijaX, s.VartijaZ, ex, ez) > PerillaM) { KohdeX = ex; KohdeZ = ez; Vauhti = KiireMs; }
+                    // Perillä myös PysahdysM:n päässä pelaajasta (ei kävele pelaajan sisään, kamera hahmon sisällä).
+                    if (Profiili.JahtaaMs > 0 && Etaisyys(s.VartijaX, s.VartijaZ, ex, ez) > PerillaM && dp >= PysahdysM) { KohdeX = ex; KohdeZ = ez; Vauhti = KiireMs; }
                     else
                     {
                         Vauhti = 0; katseluS += dt;
@@ -325,7 +329,7 @@ namespace Matkakirja.Linssit.Seikkailu
                 case VartijanTila.Halytys:
                     halytysS += dt;
                     var (hx, hz) = Rajaa(EpailyX, EpailyZ);
-                    if (Profiili.JahtaaMs > 0) { KohdeX = hx; KohdeZ = hz; Vauhti = Etaisyys(s.VartijaX, s.VartijaZ, hx, hz) > (dp <= KiinniM ? 0.0 : PerillaM) ? Profiili.JahtaaMs : 0; if (Vauhti <= 0) Kaanny(dt, Suunta(EpailyX - s.VartijaX, EpailyZ - s.VartijaZ)); }   // ulottuman reunalla katsoo pelaajaa
+                    if (Profiili.JahtaaMs > 0) { KohdeX = hx; KohdeZ = hz; Vauhti = Etaisyys(s.VartijaX, s.VartijaZ, hx, hz) > PerillaM && dp >= PysahdysM ? Profiili.JahtaaMs : 0; if (Vauhti <= 0) Kaanny(dt, Suunta(EpailyX - s.VartijaX, EpailyZ - s.VartijaZ)); }   // ulottuman reunalla katsoo pelaajaa
                     else { Vauhti = 0; Kaanny(dt, Suunta(EpailyX - s.VartijaX, EpailyZ - s.VartijaZ)); }
                     if (!huudettu && (eiNaeS > HuutoS || Profiili.JahtaaMs <= 0)) { Huuto = true; huudettu = true; }   // kokki huutaa heti
                     if (halytysS > HalytysS || eiNaeS > HuutoS + 2 && Etaisyys(s.VartijaX, s.VartijaZ, hx, hz) <= PerillaM)

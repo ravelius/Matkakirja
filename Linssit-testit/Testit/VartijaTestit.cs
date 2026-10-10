@@ -309,5 +309,27 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(kiinni, "lopulta kiinni");
             Oleta.Sama(2, varoituksia);
         }
+
+        [Testi] static void VaroitusEtaaltaEikaPelaajanSisaan()
+        {
+            // PT 11.10. (simuajon kuvat): vartija varoitti kameran edessä ja käveli pelaajan sisään. Askelääni 8 m:ssä kulman takaa
+            // → vartija tulee tutkimaan 2,2 m/s; pelaaja tulee näkyviin, kun vartija on 5 m:n päässä, eikä liiku.
+            var v = new Vartija(Reitti, yaw: 0); double x = 0, z = 0, varoitusD = -1, lahin = 99; bool kiinni = false;
+            for (double t = 0; t < 15 && !kiinni; t += 1 / 30.0)
+            {
+                double dp = Math.Sqrt(x * x + (8 - z) * (8 - z));
+                var s = new VartijanSyote { VartijaX = x, VartijaZ = z, PelaajaX = 0, PelaajaZ = 8, NakolinjaVapaa = dp < 5, Valoisuus = 0.7, PelaajaVauhti = 0,
+                    Aanet = t < 0.2 ? new List<Aanilahde> { new Aanilahde(0, 8, 9) } : null };
+                v.Paivita(1 / 30.0, s);
+                if (v.VaroitusPyydetty) { v.VaroitusPyydetty = false; if (varoitusD < 0) varoitusD = dp; }
+                kiinni = v.Tila == VartijanTila.Kiinni;
+                double dx = v.KohdeX - x, dz = v.KohdeZ - z, d = Math.Sqrt(dx * dx + dz * dz);
+                if (d > 1e-6 && v.Vauhti > 0) { double a = Math.Min(d, v.Vauhti / 30.0); x += dx / d * a; z += dz / d * a; v.Yaw = Math.Atan2(dx, dz) * 180 / Math.PI; }
+                lahin = Math.Min(lahin, Math.Sqrt(x * x + (8 - z) * (8 - z)));
+            }
+            Oleta.Tosi(varoitusD >= 3.0, $"varoitus etäältä ({varoitusD:F2} m)");
+            Oleta.Tosi(kiinni, "paikallaan pysynyt jää kiinni varoituksen jälkeen");
+            Oleta.Tosi(lahin >= Vartija.PysahdysM - 0.1, $"vartija ei pelaajan sisällä (lähin {lahin:F2} m)");
+        }
 }
 }
