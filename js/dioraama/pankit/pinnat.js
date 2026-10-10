@@ -47,6 +47,13 @@ export const PINNAT = {
     vari: '#8f8a7e', toisto_m: 4.0, lahde: 'pinnat/kallio.jpg',
     kuvio: { tyyppi: 'kallio', koko_m: [1.5, 1.5], vaihtelu: 0.4 },
   },
+  // Rantakivet (LR 10.10., Olavinlinna 1499: kallion sävyllä lähes valkoisina): kallion kuva × 0,66 (5e/8f; Siirtoseppä,
+  // pinnat/rantakivi(-puoli).jpg), koska natiivissa ladattu kuva korvaa värin (tila B). Natiivi lukee pinnat vain tästä
+  // pankista: tuntematon pintanimi = vaalea oletus 0,72/0,68/0,61.
+  rantakivi: {
+    vari: '#5e5a52', toisto_m: 4.0, lahde: 'pinnat/rantakivi.jpg',
+    kuvio: { tyyppi: 'kallio', koko_m: [1.5, 1.5], vaihtelu: 0.4 },
+  },
   vesi: {
     vari: '#465e68', toisto_m: 8.0, lahde: 'pinnat/vesi.jpg', virtaus: [0.04, 0.015],
     kuvio: { tyyppi: 'vesi', koko_m: [2.0, 2.0], vaihtelu: 0.15 },
