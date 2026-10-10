@@ -4,6 +4,8 @@
 //   Tasoramppi   lineaarinen ramppi (webin linearRampToValueAtTime nykyisestä arvosta) ruudun
 //                aika-askelin; askel rajataan (MaksimiAskelS), joten pääsäikeen jumi tai sovelluksen
 //                tauko ei hyppää rampin loppuun (§2.5: "ramppi alkaa ensimmäisestä ruudusta").
+//                Desibeliramppi (latausmusiikin jatko, PT 10.10. 21.0x: "≤ 1 dB:n askel"): tasainen dB:nä,
+//                kun alku ja kohde > 0 (lineaarinen 0,35 → 0,02 / 3 s pudotti viimeisellä 100 ms:lla ~4 dB).
 //   Silmukka     maiseman kierroksen vaihtohetki (duration − 2,6 s, §2.6).
 //   Aanilataus   levyvälimuistin nimi (sama kaava kuin Natiivi-UI:n Aanet.Levy ämpärin osoitteille),
 //                striimausraja (> 3 Mt, §5.2) ja latausvirheen luokitus (§2.7).
@@ -13,7 +15,7 @@ using System.Text;
 
 namespace Matkakirja.Peli
 {
-    /// <summary>Lineaarinen tasoramppi. Arvo on AudioSource.volume ennen leikkausta ykköseen (maisemalla MaisemaKompressorin taso, ei leikkausta).</summary>
+    /// <summary>Lineaarinen (tai desibeleissä tasainen) tasoramppi. Arvo on AudioSource.volume ennen leikkausta ykköseen (maisemalla MaisemaKompressorin taso, ei leikkausta).</summary>
     public sealed class Tasoramppi
     {
         /// <summary>Yhden ruudun suurin aika-askel: 2 s:n jumi etenee rampissa vain tämän verran.</summary>
@@ -22,14 +24,16 @@ namespace Matkakirja.Peli
         public double Arvo { get; private set; }
         public double Kohde { get; private set; }
         double jaljellaS;
+        bool desibeli;
 
         public Tasoramppi(double arvo = 0) { Arvo = Kohde = arvo; }
 
         public bool Kaynnissa => jaljellaS > 0;
 
-        /// <summary>Ramppi nykyisestä arvosta kohteeseen (ms). 0 tai negatiivinen = heti.</summary>
-        public void Aloita(double kohde, double kestoMs)
+        /// <summary>Ramppi nykyisestä arvosta kohteeseen (ms). 0 tai negatiivinen = heti. desibeli = tasainen dB:nä (alku ja kohde > 0).</summary>
+        public void Aloita(double kohde, double kestoMs, bool desibeli = false)
         {
+            this.desibeli = desibeli;
             if (double.IsNaN(kohde) || double.IsInfinity(kohde)) kohde = 0;
             Kohde = Math.Max(0, kohde);
             if (kestoMs <= 0 || double.IsNaN(kestoMs)) { Arvo = Kohde; jaljellaS = 0; return; }
@@ -46,7 +50,8 @@ namespace Matkakirja.Peli
             if (!(dt > 0)) return true;
             dt = Math.Min(dt, MaksimiAskelS);
             if (dt >= jaljellaS - 1e-9) { Arvo = Kohde; jaljellaS = 0; return false; }
-            Arvo += (Kohde - Arvo) * (dt / jaljellaS);
+            if (desibeli && Arvo > 0 && Kohde > 0) Arvo *= Math.Pow(Kohde / Arvo, dt / jaljellaS);
+            else Arvo += (Kohde - Arvo) * (dt / jaljellaS);
             jaljellaS -= dt;
             return true;
         }

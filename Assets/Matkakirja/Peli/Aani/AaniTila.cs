@@ -24,12 +24,23 @@
 //   - peilin katkaisijaa (VIRHERAJA 3) ei ole;
 //   - linssin pito on Raamatun mukainen (§3 loppu, §6 kohta 1): pohja pitoon, hiljennys 'linssi',
 //     maisema pois; purku käynnistää paikan uudelleen.
+//
+// LATAUSMUSIIKKI (omistaja 10.10.2026: "pelien ja linssien (jotka vaativat latausruudun) latausruudulla voisi kuulua musiikkia
+// (olavin linnassa voi soittaa sen lopetusmusiikin toistaiseksi)"; Päätoimittajan täsmennys): oma kanava Lataus, jota linssin
+// pito, väistö ja hiljennykset eivät koske (latausruutu on linssin sisällä, ja kuumailmapallon latauksen ajan muut äänet ovat
+// kuuntelijan tasolla hiljaa, AaniVaimennus). Raita nousee pehmeästi latauksen alussa (LatausNousuMs), ristihäivyttyy näkymän
+// omaan ääneen, kun näkymä aukeaa (LatausRistiMs), ja häipyy nopeasti ohitettaessa tai poistuttaessa (LatausPoisMs). Taso
+// annetaan valmiina: kohdenäkymän mikserin musiikkitaso (Aanisoitin, sama kaava kuin linnan loppumusiikilla). Se EI seuraa liu'un
+// käyrää (MusiikinKerroin), koska liuku vaihtuu mikserikontekstin mukana kesken latausruudun (simu 10.10. 20.57: linna 0,34 → 0,94
+// kesken nimiruudun); liuku 0, Musiikki-kytkin tai äänimaisema pois = ei soi. Silmukka: lataus voi kestää kappaleen yli.
+// Kuumailmapallo (Päätoimittaja 10.10. 20.2x): pallon mikseritasolla, varalla kartan alueraita, ja kierroksen alkaessa raita ei katkea vaan laskee tasorampilla kartan tasolle ja soi kerran läpi (LatausJatkuu);
+// pohjan muu raita ristihäivyttää sen pois, sama raita ei ala alusta (LatausKantaa).
 using System;
 using System.Collections.Generic;
 
 namespace Matkakirja.Peli
 {
-    public enum Kanava { Pohja, Maisema, Visa, Siirtyma, Aarre }
+    public enum Kanava { Pohja, Maisema, Visa, Siirtyma, Aarre, Lataus }
 
     /// <summary>Kanavan tila tapahtuman jälkeen (lineaarinen gain; ms).</summary>
     public sealed class Toive
@@ -41,6 +52,8 @@ namespace Matkakirja.Peli
         public double Tavoite;
         /// <summary>Tässä tapahtumassa alkanut ramppi (0 = asetetaan heti); null = taso ei muuttunut.</summary>
         public int? KestoMs;
+        /// <summary>Ramppi tasainen desibeleissä (Tasoramppi; latausmusiikin jatko kartan tasolle).</summary>
+        public bool Desibeli;
         /// <summary>Uusi soitin: lataa Url ja aloita kohdasta Alku (edellinen soitin, jos oli, häivytetään PoisMs:ssä).</summary>
         public bool Uusi;
         /// <summary>Edellinen soitin häivytetään nollaan ja vapautetaan (0 = heti); null = ei poistuvaa soitinta.</summary>
@@ -68,6 +81,7 @@ namespace Matkakirja.Peli
             public string Url;
             public double Taso;
             public int MuutosT = -1, MuutosMs;         // viimeisin tasomuutos (myös suora asetus)
+            public bool MuutosDb;                      // viimeisin ramppi desibeleissä tasainen
             public int RamppiT = -1, RamppiMs;         // viimeisin ramppi, jonka kesto > 0
             public double RamppiKohde;
             public int SyntyiT;
@@ -96,6 +110,7 @@ namespace Matkakirja.Peli
         readonly AaniTaulut t;
         readonly Musiikkivalitsin valitsin;
         readonly Func<double> arpa;
+        static readonly int Kanavia = Enum.GetValues(typeof(Kanava)).Length;
 
         public AaniTila(AaniTaulut taulut, Func<double> arpa)
         {
@@ -162,13 +177,19 @@ namespace Matkakirja.Peli
         double ajonHimmennys = 1, siirtymanVaisto = 1, vaistonPohja = 1;
         List<string> vaistonSyyt = new List<string>();
         Soitin aarre;
+        Soitin lataus;
+        string latausUrl, latausPolku;
+        double latausTasoPyydetty;
+        bool latausJatko, latausKantoi;
+        /// <summary>Latausraidat, joita ei saatu (404, purku): eivät yritä uudelleen (pallon ruutu kutsuu LatausKaupunkia kierrossa).</summary>
+        readonly HashSet<string> latausPuuttuvat = new HashSet<string>();
         readonly List<Soitin> vahdinPysayttamat = new List<Soitin>();
         readonly List<Soitin> elossa = new List<Soitin>();
 
         int tapahtuma = -1;
-        readonly int?[] pois = new int?[5];
+        readonly int?[] pois = new int?[Kanavia];
         readonly Queue<Action> jono = new Queue<Action>();
-        readonly Toive[] toiveet = new Toive[5];
+        readonly Toive[] toiveet = new Toive[Kanavia];
 
         public IReadOnlyList<Toive> Toiveet => toiveet;
         public Toive Toive(Kanava k) => toiveet[(int)k];
@@ -285,7 +306,10 @@ namespace Matkakirja.Peli
                 pito = false;
                 introPito = false;
                 Palauta(AaniVakiot.LinssinHiljennys);
+                latausKantoi = false;
                 SoitaPaikka();
+                // Kierroksen raita jatkuu kartalle vain, jos kartan pohja on sama raita (LatausKantaa); muuten ristiin pois.
+                if (LatausJatkuu && !latausKantoi) LopetaLataus(AaniVakiot.LatausRistiMs);
             }
         });
 
@@ -328,6 +352,7 @@ namespace Matkakirja.Peli
         {
             if (paalla) soinutPolku = null; // pelaajan oma kytkentä on uusi laukaisu
             if (paalla != Musiikki) { Musiikki = paalla; MusiikkitilaMuuttui(); }
+            KaynnistaLataus(AaniVakiot.SaadinMs);
             if (!paalla)
             {
                 LopetaPohja(); LopetaVisaSoitin(); LopetaSiirtyma(); PysaytaAarre();
@@ -343,6 +368,7 @@ namespace Matkakirja.Peli
         {
             Aanimaisema = paalla;
             if (paalla) soinutPolku = null;
+            KaynnistaLataus(AaniVakiot.SaadinMs);
             if (!paalla)
             {
                 LopetaMaisema(); LopetaVisaSoitin(); LopetaPohja(); LopetaSiirtyma(); PysaytaAarre();
@@ -362,6 +388,7 @@ namespace Matkakirja.Peli
             if (pohja != null) Ramppi(pohja, PohjaTaso(Voimassa), AaniVakiot.SaadinMs);
             if (siirtyma != null) Ramppi(siirtyma, RaidanTaso(siirtymaLaji), AaniVakiot.SaadinMs);
             if (aarre != null) Aseta(aarre, AarreTaso());
+            KaynnistaLataus(AaniVakiot.SaadinMs); // liuku 0 → latausmusiikki pois; nosto käynnistää sen uudelleen
         });
 
         /// <summary>Taustaäänen kerroin (web kehittäjän 'tausta', natiivissa Taso(Voima.Tausta)).</summary>
@@ -382,6 +409,7 @@ namespace Matkakirja.Peli
                 case Kanava.Visa: VisaPuuttuu(); break;
                 case Kanava.Siirtyma: SiirtymaPuuttuu(); break;
                 case Kanava.Aarre: if (aarre != null) { var a = aarre; Kuole(a); AarreOhi(a); } break;
+                case Kanava.Lataus: LatausPuuttuu(); break;
             }
         });
 
@@ -549,6 +577,184 @@ namespace Matkakirja.Peli
         public void TaustalleSiirto(bool taustalle) => Tee(() => { if (taustalle) MeneTaustalle(); else PalaaTaustalta(); });
 
         /// <summary>Uusi matka (main.js): maisema, visa, pohja ja siirtymäraita pois.</summary>
+        // --- latausmusiikki ---------------------------------------------------------
+
+        /// <summary>Latausruutu auki (Lataus tai LatausKaupunki kutsuttu, LatausOhi ei vielä).</summary>
+        public bool LatausAuki { get; private set; }
+
+        /// <summary>
+        /// Pallon latausraita jatkuu kierroksella kartan tasolla kerran läpi (Päätoimittaja 10.10. 20.2x: "musiikki ei katkea"),
+        /// kunnes pohja aloittaa muun raidan, linssi sulkeutuu toiseen raitaan tai raita loppuu (LatausLoppui).
+        /// </summary>
+        public bool LatausJatkuu { get; private set; }
+
+        /// <summary>
+        /// Latausruutu aukeaa (tai sen raita vaihtuu): url soi silmukkana tasolla taso (0–1, kohdenäkymän mikserin musiikkitaso),
+        /// nousten LatausNousuMs:ssä.
+        /// url null = latausruutu ilman musiikkia. Sama raita uudelleen ei ala alusta; eri raita ristiin (LatausRistiMs).
+        /// jatkuu = raita jatkaa näkymässä kartan tasolla (LatausOhi), muuten se ristihäivytetään näkymän omaan ääneen.
+        /// </summary>
+        public void Lataus(string url, double taso, bool jatkuu = false) => Tee(() => AloitaLataus(null, url, taso, jatkuu));
+
+        /// <summary>
+        /// Kuumailmapallon latausruutu (Päätoimittaja: "kaupungin oma kappale, sama kuin kartalla"; 20.2x: varalla alueraita) tasolla
+        /// taso (pallon mikserin musiikkitaso): raita jatkuu kierroksella kartan tasolla. Ei omaa eikä alueraitaa = hiljaa.
+        /// </summary>
+        public void LatausKaupunki(string kaupunki, double taso) => Tee(() =>
+        {
+            var polku = KaupunginPolku(kaupunki);
+            AloitaLataus(polku, polku == null ? null : AaniOsoite.Url(polku), taso, true);
+        });
+
+        /// <summary>Latausmusiikin taso muuttui latausruudun aikana (mikserin säädin): säätimen ramppi. Jatkuvaan raitaan ei koske.</summary>
+        public void AsetaLatausTaso(double taso) => Tee(() =>
+        {
+            if (!LatausAuki || LatausJatkuu) return;
+            latausTasoPyydetty = Puhdas(taso);
+            KaynnistaLataus(AaniVakiot.SaadinMs);
+        });
+
+        /// <summary>Pallon latausraita soittimen osoitteena (KaupunginPolku), tai null.</summary>
+        public string KaupunginKappale(string kaupunki)
+        {
+            var polku = KaupunginPolku(kaupunki);
+            return polku == null ? null : AaniOsoite.Url(polku);
+        }
+
+        /// <summary>
+        /// Kaupungin oma raita (ketju ilman tiloja); jos sitä ei ole, VARARAITA (Päätoimittaja 10.10. 20.2x, kunnes uudet
+        /// kaupunkikappaleet tulevat) on kartan alueraita samalla valinnalla (Musiikkivalitsin.Alueraita). Puuttuvat ohi.
+        /// </summary>
+        string KaupunginPolku(string kaupunki)
+        {
+            if (string.IsNullOrEmpty(kaupunki)) return null;
+            var maa = t.Maa(kaupunki);
+            var ketju = valitsin.Ketju(null, kaupunki, maa);
+            var alue = valitsin.Alueraita(kaupunki, maa);
+            if (alue != null && !ketju.Contains(alue)) ketju.Add(alue);
+            return Musiikkivalitsin.Valitse(ketju, puuttuvat);
+        }
+
+        /// <summary>
+        /// Latausruutu sulkeutuu. avautui = näkymä aukesi: jatkuva raita (pallo) laskee kartan tasolle tasorampilla LatausRistiMs:ssä
+        /// ilman katkoa, tai ristihäivyttyy, jos pohjalla soi jo muu raita; muu latausraita (Olavinlinna) ristihäivyttyy näkymän
+        /// omaan ääneen. Muuten ohitus tai poistuminen (LatausPoisMs).
+        /// </summary>
+        public void LatausOhi(bool avautui) => Tee(() =>
+        {
+            if (!LatausAuki) return;
+            LatausAuki = false;
+            latausUrl = null;
+            if (!avautui) { LopetaLataus(AaniVakiot.LatausPoisMs); return; }
+            if (!latausJatko || lataus == null || (pohja != null && pohjaPolku != lataus.Polku))
+            {
+                LopetaLataus(AaniVakiot.LatausRistiMs);
+                return;
+            }
+            // Sama raita jo pohjana (kaksi kopiota eri kohdissa): latausraita jatkaa, pohja pois.
+            if (pohja != null) LopetaPohja(AaniVakiot.LatausRistiMs);
+            LatausJatkuu = true;
+            lataus.Silmukka = false; // kierroksella kerran läpi kuten kartalla (KERRAN LÄPI)
+            // Desibeleissä tasainen (PT 21.0x: siirtymässä ≤ 1 dB:n askel; ~25 dB / 3 s ≈ 0,8 dB per 100 ms).
+            Ramppi(lataus, JatkoTaso(), AaniVakiot.LatausRistiMs, desibeli: true);
+        });
+
+        /// <summary>Jatkuva latausraita soi loppuun (Aanisoitin): kartta ei soita samaa raitaa heti uudelleen (KERRAN LÄPI).</summary>
+        public void LatausLoppui() => Tee(() =>
+        {
+            var s = lataus;
+            if (s == null || s.Silmukka) return;
+            if (s.Polku != null && pohja == null) soinutPolku = s.Polku;
+            lataus = null;
+            LatausJatkuu = false;
+            s.Tauko = true;
+            Vapauta(s);
+        });
+
+        double LatausTaso() => Liuku > 0 ? latausTasoPyydetty : 0;
+
+        static double Puhdas(double taso) => double.IsNaN(taso) || double.IsInfinity(taso) ? 0 : Math.Min(1, Math.Max(0, taso));
+
+        /// <summary>Kartan pohjaraidan taso (puheen, näytteen ja visan väistö mukana; linssin hiljennys ei, kuten introssa).</summary>
+        double JatkoTaso() => AaniVakiot.MusiikinPerustaso * pyydetty * MusiikinKerroin;
+
+        void AloitaLataus(string polku, string url, double taso, bool jatkuu)
+        {
+            LatausAuki = true;
+            LatausJatkuu = false;
+            latausJatko = jatkuu;
+            latausUrl = string.IsNullOrEmpty(url) || latausPuuttuvat.Contains(url) ? null : url;
+            latausPolku = latausUrl == null ? null : polku;
+            latausTasoPyydetty = Puhdas(taso);
+            KaynnistaLataus(AaniVakiot.SaadinMs);
+        }
+
+        /// <summary>Latausraita pyynnön ja asetusten mukaan: soi, vaihtaa raitaa, seuraa liukua ja väistöä (kestoMs) tai lopettaa.</summary>
+        void KaynnistaLataus(int kestoMs)
+        {
+            if (LatausJatkuu)
+            {
+                if (lataus == null) { LatausJatkuu = false; return; }
+                if (!Aanimaisema || !Musiikki || !(JatkoTaso() > 0)) { LopetaLataus(kestoMs); return; }
+                if (lataus.Taso != JatkoTaso()) Ramppi(lataus, JatkoTaso(), kestoMs);
+                return;
+            }
+            if (!LatausAuki || latausUrl == null || !Aanimaisema || !Musiikki || !(LatausTaso() > 0)) { LopetaLataus(kestoMs); return; }
+            if (lataus != null && lataus.Url == latausUrl)
+            {
+                // Kierrokselta uuteen latausruutuun samalla raidalla: silmukka takaisin ja pehmeä nousu latauksen tasolle.
+                if (!lataus.Silmukka) { lataus.Silmukka = true; kestoMs = AaniVakiot.LatausNousuMs; }
+                lataus.Polku = latausPolku;
+                if (lataus.Taso != LatausTaso()) Ramppi(lataus, LatausTaso(), kestoMs);
+                return;
+            }
+            var vaistyva = lataus;
+            lataus = null;
+            if (vaistyva != null) { Ramppi(vaistyva, 0, AaniVakiot.LatausRistiMs); Vapauta(vaistyva); }
+            var s = Uusi(Kanava.Lataus, latausUrl, true);
+            s.Polku = latausPolku;
+            lataus = s;
+            Soita(s, () =>
+            {
+                if (lataus != s) { s.Tauko = true; return; }
+                Ramppi(s, LatausTaso(), AaniVakiot.LatausNousuMs);
+            });
+        }
+
+        /// <summary>
+        /// Pohja aloittaa raidan polku, kun latausraita jatkuu: sama raita = latausraita kantaa sen (true, pohja ei ala alusta),
+        /// muu raita = latausraita ristiin pois (false).
+        /// </summary>
+        bool LatausKantaa(string polku)
+        {
+            if (!LatausJatkuu || lataus == null) return false;
+            if (polku != null && lataus.Polku == polku) { latausKantoi = true; return true; }
+            LopetaLataus(AaniVakiot.LatausRistiMs);
+            return false;
+        }
+
+        void LopetaLataus(int laskuMs)
+        {
+            var vanha = lataus;
+            lataus = null;
+            LatausJatkuu = false;
+            if (vanha == null) return;
+            Ramppi(vanha, 0, laskuMs);
+            Vapauta(vanha);
+        }
+
+        /// <summary>Raitaa ei saa (404, purku): latausruutu jatkuu hiljaa, eikä sama raita yritä uudelleen (kuten pohjan puuttuvat).</summary>
+        void LatausPuuttuu()
+        {
+            var s = lataus;
+            if (s == null) return;
+            lataus = null;
+            latausUrl = null;
+            LatausJatkuu = false;
+            latausPuuttuvat.Add(s.Url);
+            Vapauta(s);
+        }
+
         public void UusiMatka() => Tee(() =>
         {
             LopetaMaisema(); LopetaVisaSoitin(); LopetaPohja(); LopetaSiirtyma();
@@ -578,6 +784,7 @@ namespace Matkakirja.Peli
                 w.Url = s?.Url;
                 w.Tavoite = s?.Taso ?? 0;
                 w.KestoMs = s != null && s.MuutosT == tapahtuma ? s.MuutosMs : (int?)null;
+                w.Desibeli = s != null && s.MuutosT == tapahtuma && s.MuutosDb;
                 w.Uusi = s != null && s.SyntyiT == tapahtuma;
                 w.PoisMs = pois[i];
                 w.Tauko = s?.Tauko ?? false;
@@ -594,6 +801,7 @@ namespace Matkakirja.Peli
             Kanava.Maisema => nykyinen?.Audio,
             Kanava.Visa => visa,
             Kanava.Siirtyma => siirtyma,
+            Kanava.Lataus => lataus,
             _ => aarre,
         };
 
@@ -612,13 +820,14 @@ namespace Matkakirja.Peli
             if (alkoi != null) jono.Enqueue(alkoi);
         }
 
-        void Aseta(Soitin s, double arvo) { s.Taso = arvo; s.MuutosT = tapahtuma; s.MuutosMs = 0; }
+        void Aseta(Soitin s, double arvo) { s.Taso = arvo; s.MuutosT = tapahtuma; s.MuutosMs = 0; s.MuutosDb = false; }
 
-        void Ramppi(Soitin s, double kohde, int kesto)
+        void Ramppi(Soitin s, double kohde, int kesto, bool desibeli = false)
         {
             s.Taso = Math.Max(0, kohde);
             s.MuutosT = tapahtuma;
             s.MuutosMs = kesto;
+            s.MuutosDb = desibeli;
             if (kesto > 0) { s.RamppiT = tapahtuma; s.RamppiMs = kesto; s.RamppiKohde = s.Taso; }
         }
 
@@ -691,6 +900,7 @@ namespace Matkakirja.Peli
             if (siirtyma != null) Ramppi(siirtyma, RaidanTaso(siirtymaLaji), kesto != 0 ? kesto : t.Siirtyma(siirtymaLaji).NousuMs);
             if (visa != null && k < 1) Ramppi(visa, VisaTaso(k), kesto);
             if (pohja != null) Ramppi(pohja, PohjaTaso(k), kesto);
+            if (LatausJatkuu) KaynnistaLataus(kesto); // kierroksen latausraita väistää kuten pohja
             if (nykyinen == null) return;
             nykyinen.Vaimennus = LinssinVaimennus(nykyinen, k);
             if (nykyinen.Audio != null) Ramppi(nykyinen.Audio, MaisemaTaso(nykyinen), kesto);
@@ -746,6 +956,7 @@ namespace Matkakirja.Peli
             }
             if (pohja != null && pohjaPolku == polku) return;
             if (pohja == null && polku == soinutPolku) return; // soi jo kerran läpi tässä laukaisussa
+            if (LatausKantaa(polku)) { LopetaPohja(AaniVakiot.PohjaVaihtoMs); return; } // pallon raita jatkuu: ei alusta
             var vaistyva = pohja;
             pohja = null;
             pohjaPolku = null;
@@ -773,6 +984,8 @@ namespace Matkakirja.Peli
             while (polku != null && puuttuvat.Contains(polku) && jaksoVaihe < 3) { jaksoVaihe = jaksoVaihe == 0 ? 2 : 3; polku = Polku(jaksoVaihe); }
             if (polku == null || puuttuvat.Contains(polku)) { LopetaPohja(); return; }
             if (pohja != null && pohjaPolku == polku) return;
+            // Jakson vaihe tarvitsee oman soittimen (PohjaLoppui): jatkuva latausraita ristiin pois.
+            if (LatausJatkuu) LopetaLataus(AaniVakiot.LatausRistiMs);
             var vaistyva = pohja;
             pohja = null;
             pohjaPolku = null;
@@ -1060,7 +1273,7 @@ namespace Matkakirja.Peli
             // ambience-stream.js taukoaTaustanAjaksi: maisema (ja väistyvä), visa, pohja.
             var oma = nykyinen;
             if (oma?.Audio != null && !oma.Audio.Tauko) { oma.TaustaTauolla = true; oma.Audio.Tauko = true; }
-            foreach (var s in new[] { oma?.Vaistyva, visa, pohja })
+            foreach (var s in new[] { oma?.Vaistyva, visa, pohja, lataus })
                 if (s != null && !s.Tauko) { s.TaustaTauolla = true; s.Tauko = true; }
             // aani-tausta.js pysaytaLoput: kaikki muut soivat (siirtymä, aarre).
             foreach (var s in elossa)
@@ -1077,7 +1290,7 @@ namespace Matkakirja.Peli
                 oma.TaustaTauolla = false;
                 if (oma.Audio != null) SoitaMaisema(oma, oma.Audio, oma.Nouse);
             }
-            foreach (var s in new[] { oma?.Vaistyva, visa, pohja })
+            foreach (var s in new[] { oma?.Vaistyva, visa, pohja, lataus })
             {
                 if (s == null || !s.TaustaTauolla) continue;
                 s.TaustaTauolla = false;
