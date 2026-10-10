@@ -1,7 +1,7 @@
 {
  "versio": 1,
  "maa": "alankomaat",
- "huom": "LS1 10.10.: Sisältökirjurin aineistoraportin liite B1 (Rijksmuseum, PDM 1.0); kuva = null → paikkakuva, kunnes sisältöpaketti tuo kuvat",
+ "huom": "LS1 10.10.: Sisältökirjurin paketti taidemuseo-alankomaat-vienti-20261010 (kuvateksti_fi, seinäkuva 2048 px, Commons-lähde); kuva = polku kuvajuuren alla (MuseoSovitin.KuvaJuuri), juuri null → paikkakuva",
  "teokset": [
   {
    "id": "SK-C-251",
@@ -17,7 +17,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "RwfHG",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-251.jpg",
+   "kuvateksti": "Sinipukuinen nainen lukee kirjettä. Hiljainen sisätilakohtaus on tyypillistä Vermeeriä.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1715,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Brieflezende_vrouw,_SK-C-251.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-2860",
@@ -33,7 +41,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": null,
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-2860.jpg",
+   "kuvateksti": "Vermeerin harvoja kaupunkinäkymiä: Delftin talojen julkisivut ja kujan hiljainen arki.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1665,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Gezicht_op_huizen_in_Delft,_bekend_als_%E2%80%98Het_straatje%E2%80%99_Gezicht_op_huizen_in_Delft,_bekend_als_%27Het_straatje%27,_SK-A-2860.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "RP-P-OB-602",
@@ -49,7 +65,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "osuLP",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-rp-p-ob-602.jpg",
+   "kuvateksti": "Etsaus, jossa Kristus parantaa sairaita. Nimi Sadan guldenin vedos viittaa sen aikanaan korkeaan hintaan.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1487
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Hundred_Guilder_Print.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-4691",
@@ -65,7 +89,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "YfhED",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-4691.jpg",
+   "kuvateksti": "Rembrandtin nuoruuden omakuva. Maalaus on vain noin 23 cm korkea, joten se katsotaan lähietäisyydeltä.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1669,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Zelfportret_Rijksmuseum_SK-A-4691.jpeg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-354",
@@ -81,7 +113,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "sbaXO",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-354.jpg",
+   "kuvateksti": "Rachel Ruyschin kukka-asetelma lasimaljakossa. Ruysch oli kultaisen ajan tunnetuimpia kukkamaalareita.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1686,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Stilleven_met_bloemen_in_een_glazen_vaas,_SK-A-354.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-C-6",
@@ -97,7 +137,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "cWWQE",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-6.jpg",
+   "kuvateksti": "Amsterdamin verhoilijakillan tarkastajat eli staalmeesterit kokouksessa. Rembrandtin myöhäisiä ryhmämuotokuvia: jokainen mies katsoo suoraan katsojaan.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1348
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:De_waardijns_van_het_Amsterdamse_lakenbereidersgilde,_bekend_als_%E2%80%98De_staalmeesters%E2%80%99_Rijksmuseum_SK-C-6.jpeg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-C-216",
@@ -113,7 +161,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "uRWXq",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-216.jpg",
+   "kuvateksti": "Rembrandtin myöhäisteos, jossa pari esiintyy Vanhan testamentin Iisakina ja Rebekkana. Paksu maalipinta ja käsien hellä ele ovat teoksen tunnusmerkit.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1488
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Het_Joodse_bruidje.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-C-374",
@@ -129,7 +185,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "ZfDYa",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-374.jpg",
+   "kuvateksti": "Amsterdamin kaartilaiskomppania kapteeni Reynier Reaelin johdolla. Frans Hals ja Pieter Codde maalasivat teoksen; nimi Magere Compagnie viittaa sen laihaan ulkonäköön verrattuna Yövartioon.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    992
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Officieren_en_andere_schutters_van_wijk_XI_in_Amsterdam_onder_leiding_van_kapitein_Reijnier_Reael_en_luitenant_Cornelis,_SK-C-374.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-4",
@@ -145,7 +209,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "hZepb",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-4.jpg",
+   "kuvateksti": "Asselijnin dramaattinen eläinkuva: joutsen suojelee pesäänsä uhkaa vastaan.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1726
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:De_bedreigde_zwaan_Rijksmuseum_SK-A-4.jpeg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-44",
@@ -161,7 +233,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "PSUKG",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-44.jpg",
+   "kuvateksti": "Merisankari Michiel de Ruyter vara-amiraalina vuonna 1667.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1723,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Michiel_de_Ruyter_als_luitenant-admiraal_Portret_van_Michiel_Adriaenszoon_de_Ruyter_(1607-1676),_luitenant-admiraal,_SK-A-44.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-C-5",
@@ -177,7 +257,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "PJEZO",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-5.jpg",
+   "kuvateksti": "Rembrandtin suurikokoinen ryhmämuotokuva Amsterdamin kaartilaiskomppaniasta kapteeni Frans Banninck Cocqin johdolla. Valo ja liike tekevät siitä Alankomaiden kultaisen ajan tunnetuimman maalauksen.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1666
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:The_Nightwatch_by_Rembrandt_-_Rijksmuseum.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-2344",
@@ -193,7 +281,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "QkOGy",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-2344.jpg",
+   "kuvateksti": "Vermeerin arkinen kohtaus: piika kaataa maitoa. Valo ja tarkasti maalatut pinnat tekevät teoksesta Rijksmuseumin ikonin.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1822,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.png",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-1595",
@@ -209,7 +305,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": null,
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-1595.jpg",
+   "kuvateksti": "Vermeerin rakkauskirje: näkymä avautuu tumman oviaukon läpi kirjeen vastaanottavan naisen huoneeseen.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1768,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:De_liefdesbrief,_SK-A-1595.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-182",
@@ -225,7 +329,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "DSKRH",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-182.jpg",
+   "kuvateksti": "Pieter de Hoochin kotikohtaus: piika ja lapsi ruokakomerossa. Perspektiivi vie katseen sisemmäs taloon.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1914,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Een_vrouw_met_een_kind_in_een_kelderkamer,_SK-A-182.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "RP-P-OB-444",
@@ -241,7 +353,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "qOBRw",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-rp-p-ob-444.jpg",
+   "kuvateksti": "Rembrandtin etsaus vuodelta 1643. Rajuilmainen taivas hallitsee tasaista maisemaa.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1586
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:De_drie_bomen,_RP-P-OB-444.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-199",
@@ -257,7 +377,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "KOxfP",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-199.jpg",
+   "kuvateksti": "Willem Kalfin komea asetelma: hopeakannu ja posliinikulho tummaa taustaa vasten.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1834,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Stilleven_met_zilveren_schenkkan,_SK-A-199.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-135",
@@ -273,7 +401,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "CgrHr",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-135.jpg",
+   "kuvateksti": "Frans Halsin vilkas ja löyhä siveltimenjälki tavoittaa juojan ilmeen yhdellä vedolla.",
+   "havainnekuva": false,
+   "kuva_px": [
+    1744,
+    2048
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Een_schutter_die_een_berkenmeier_vasthoudt,_bekend_als_%E2%80%98De_vrolijke_drinker%E2%80%99,_SK-A-135.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-C-229",
@@ -289,7 +425,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "SbsFC",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-229.jpg",
+   "kuvateksti": "Jan Steenin vilkas kotikohtaus. Hollannissa sekavaa taloutta sanotaan Jan Steenin taloudeksi.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1588
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Het_vrolijke_huisgezin,_SK-C-229.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-A-1718",
@@ -305,7 +449,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "aXnzA",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-a-1718.jpg",
+   "kuvateksti": "Avercampin talvimaisema: kymmenet ihmiset luistelevat, leikkivät ja kävelevät jäällä pienen jääkauden aikaan.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1182
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:Avercamp,_Hendrick_-_Winterlandschap_met_schaatsers_-_SK-A-1718.jpg",
+   "krediitti": "Rijksmuseum"
   },
   {
    "id": "SK-C-211",
@@ -321,7 +473,15 @@
    "lahde": "Rijksmuseum, Amsterdam",
    "lisenssi": "Public Domain Mark 1.0",
    "iiif": "XWEFp",
-   "kuva": null
+   "kuva": "kuvat/seina/rijks-sk-c-211.jpg",
+   "kuvateksti": "Ruisdaelin tunnetuimpia maisemia: tuulimylly nousee joen rannalla avaran taivaan alla.",
+   "havainnekuva": false,
+   "kuva_px": [
+    2048,
+    1689
+   ],
+   "commons": "https://commons.wikimedia.org/wiki/File:De_molen_bij_Wijk_bij_Duurstede,_SK-C-211.jpg",
+   "krediitti": "Rijksmuseum"
   }
  ]
 }

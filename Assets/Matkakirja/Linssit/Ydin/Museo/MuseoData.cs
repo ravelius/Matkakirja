@@ -73,6 +73,12 @@ namespace Matkakirja.Linssit.Museo
     public sealed class Teos
     {
         public string Id, Otsikko, Alkuperainen, Taiteilija, Vuosi, Tekniikka, Lahde, Lisenssi, Iiif, Kuva;
+        /// <summary>Lyhyt kuvateksti (1–3 virkettä, Sisältökirjuri); null = ei riviä kortissa.</summary>
+        public string Kuvateksti;
+        /// <summary>Kuva on havainnekuva (ei teoksen valokuva): kortti merkitsee sen kuten nostot.</summary>
+        public bool Havainnekuva;
+        /// <summary>Seinäkuvan pikselit (leveys, korkeus); 0 = tuntematon.</summary>
+        public int KuvaLeveys, KuvaKorkeus;
         public double KorkeusCm, LeveysCm, Kuvasuhde;
         public bool Grafiikka;
         /// <summary>Kortin mittarivi: "45,5 × 41 cm".</summary>
@@ -229,6 +235,9 @@ namespace Matkakirja.Linssit.Museo
                     Lahde = MiniJson.Teksti(d, "lahde"), Lisenssi = MiniJson.Teksti(d, "lisenssi"), Iiif = MiniJson.Teksti(d, "iiif"), Kuva = MiniJson.Teksti(d, "kuva"),
                     KorkeusCm = MiniJson.Luku(d, "korkeus_cm") ?? 50, LeveysCm = MiniJson.Luku(d, "leveys_cm") ?? 40,
                     Kuvasuhde = MiniJson.Luku(d, "kuvasuhde") ?? 0, Grafiikka = MiniJson.Totuus(d, "grafiikka"),
+                    Kuvateksti = MiniJson.Teksti(d, "kuvateksti") is string kt && kt.Length > 0 ? kt : null, Havainnekuva = MiniJson.Totuus(d, "havainnekuva"),
+                    KuvaLeveys = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "kuva_px")) is { Count: 2 } px ? Convert.ToInt32(px[0], CultureInfo.InvariantCulture) : 0,
+                    KuvaKorkeus = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "kuva_px")) is { Count: 2 } py ? Convert.ToInt32(py[1], CultureInfo.InvariantCulture) : 0,
                 });
             }
             s.Ripusta();

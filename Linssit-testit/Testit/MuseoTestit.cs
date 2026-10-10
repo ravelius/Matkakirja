@@ -31,6 +31,12 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(!string.IsNullOrEmpty(r.Teos.Otsikko) && !string.IsNullOrEmpty(r.Teos.Taiteilija) && r.Teos.Lisenssi.StartsWith("Public Domain"), $"{r.Teos.Id}: kortin tiedot ja PD");
             }
             Oleta.Tosi(s.Teokset.Find(t => t.Id == "SK-A-2344").Mitat == "45,5 × 41 cm", "kortin mitat suomeksi");
+            foreach (var t in s.Teokset)
+            {
+                Oleta.Tosi(t.Kuvateksti != null && t.Kuvateksti.Length > 20 && !t.Havainnekuva, $"{t.Id}: kuvateksti (Sisältökirjuri), ei havainnekuva");
+                Oleta.Tosi(t.Kuva != null && t.Kuva.StartsWith("kuvat/seina/") && Math.Max(t.KuvaLeveys, t.KuvaKorkeus) == 2048, $"{t.Id}: seinäkuva 2048 px");
+                Oleta.Tosi(Math.Abs((double)t.KuvaLeveys / t.KuvaKorkeus - t.LeveysCm / t.KorkeusCm) / (t.LeveysCm / t.KorkeusCm) < 0.07, $"{t.Id}: kuvan ja mittojen suhde ≤ 7 %");
+            }
             foreach (var rp in s.Reitti) if (rp.Kohde != null) Oleta.Tosi(s.HaePaikka(rp.Kohde) != null || s.Veistospaikat.Contains(rp.Kohde), $"reitin kohde {rp.Kohde} on teos- tai veistospaikka");
         }
 

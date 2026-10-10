@@ -3,9 +3,11 @@
 // Kaikki MuseoValaistu-varjostimella kerroksessa MuseoNayttamo.Kerros. Teoksen kuva: teokset.json:n "kuva" (sisältöpaketti,
 // Natiivi.Kuvat.Hae) tai siihen asti paikkakuva (hillitty sävy teoksen tunnuksesta, oikea kuvasuhde, ei tekstiä).
 // Linnanrakentajan sali-lod{0,1}.glb korvaa hallin myöhemmin samoilla mitoilla; teokset, kehykset ja valot pysyvät tässä.
+using System.Collections;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Museo;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.Rendering;
 
 namespace Matkakirja.Natiivi
@@ -122,11 +124,6 @@ namespace Matkakirja.Natiivi
                     var kv = MuseoGeometria.Kehys(prof, ulkoW, ulkoH, (1, 1, 1));
                     Kappale("Kehys", kv, km, go.transform, true, kaannaZ: true);
                 }
-                if (!string.IsNullOrEmpty(r.Teos.Kuva))
-                {
-                    string id = r.Teos.Id;
-                    Kuvat.Hae(r.Teos.Kuva, t => { if (t != null && TeosMateriaalit.TryGetValue(id, out var m)) m.mainTexture = t; });
-                }
             }
             foreach (var t in s.Tekstitaulut)
             {
@@ -179,8 +176,46 @@ namespace Matkakirja.Natiivi
             return tex;
         }
 
+        /// <summary>Seinäkuvan pitkä sivu muistissa (px): 2048 px:n JPEG puretaan, pienennetään GPU:lla mippeineen tähän ja alkuperäinen
+        /// vapautetaan (20 teosta ≈ 90 Mt). Natiivisepän ASTC-seinätaso (MuseoTekstuurit) korvaa tämän.</summary>
+        public static int KuvaPitkaSivu = 1024;
+        readonly List<RenderTexture> kuvat = new List<RenderTexture>();
+        public int KuviaLadattu { get; private set; }
+
+        /// <summary>Teosten kuvat kuvajuuren alta (https:// tai file://; teokset.json "kuva" = suhteellinen polku), yksi kerrallaan,
+        /// jotta purettu alkuperäinen ei kasaudu muistiin. Epäonnistunut kuva jättää paikkakuvan.</summary>
+        public IEnumerator LataaKuvat(Sali s, string juuri, System.Action<string> kirjaa)
+        {
+            if (string.IsNullOrEmpty(juuri)) yield break;
+            if (!juuri.EndsWith("/")) juuri += "/";
+            float t0 = Time.realtimeSinceStartup; int virheita = 0;
+            foreach (var r in s.Ripustukset)
+            {
+                if (string.IsNullOrEmpty(r.Teos.Kuva) || !TeosMateriaalit.TryGetValue(r.Teos.Id, out var mat) || mat == null) continue;
+                using (var pyynto = UnityWebRequestTexture.GetTexture(juuri + r.Teos.Kuva, true))
+                {
+                    yield return pyynto.SendWebRequest();
+                    if (mat == null) yield break;   // linssi suljettiin latauksen aikana
+                    if (pyynto.result != UnityWebRequest.Result.Success) { virheita++; kirjaa?.Invoke($"museo: kuva {r.Teos.Id} ei latautunut ({pyynto.error})"); continue; }
+                    var alkup = DownloadHandlerTexture.GetContent(pyynto);
+                    float k = Mathf.Min(1f, (float)KuvaPitkaSivu / Mathf.Max(alkup.width, alkup.height));
+                    var rt = new RenderTexture(Mathf.Max(4, Mathf.RoundToInt(alkup.width * k)), Mathf.Max(4, Mathf.RoundToInt(alkup.height * k)), 0, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB)
+                    { name = "Teos " + r.Teos.Id, useMipMap = true, autoGenerateMips = true, wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear, anisoLevel = 4 };
+                    rt.Create();
+                    Graphics.Blit(alkup, rt);
+                    Object.Destroy(alkup);
+                    kuvat.Add(rt);
+                    mat.mainTexture = rt;
+                    KuviaLadattu++;
+                }
+            }
+            kirjaa?.Invoke($"museo: kuvat {KuviaLadattu}/{s.Ripustukset.Count} ladattu ({virheita} virhettä) {Time.realtimeSinceStartup - t0:F1} s, pitkä sivu {KuvaPitkaSivu} px");
+        }
+
         public void Tuhoa()
         {
+            foreach (var rt in kuvat) if (rt != null) { rt.Release(); Object.Destroy(rt); }
+            kuvat.Clear();
             foreach (var o in tuhottavat) if (o != null) Object.Destroy(o);
             tuhottavat.Clear(); TeosMateriaalit.Clear();
             if (juuri != null) Object.Destroy(juuri.gameObject);

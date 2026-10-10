@@ -32,6 +32,9 @@ namespace Matkakirja.Natiivi
         public static event Action Vaihtui;
         /// <summary>Esittelykortti auki (napista tai komennolla "museo esittele").</summary>
         public static bool EsittelyAuki { get; private set; }
+        /// <summary>Teosten kuvien juuri (teokset.json "kuva" sen alla); null = paikkakuvat. Ämpärin polku, kun Julkaisija on vienyt
+        /// Sisältökirjurin paketin; testissä "museo kuvajuuri file:///…/lahde/" (simulaattori lukee Macin levyä).</summary>
+        public static string KuvaJuuri;
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -82,6 +85,7 @@ namespace Matkakirja.Natiivi
             if (!rakennus.Varjostin) o.Kirjaa("museo: MuseoValaistu-varjostin puuttuu tai ei tuettu");
             rakennus.Rakenna(sali);
             nayttamo.AsetaKeilat(sali);
+            if (!string.IsNullOrEmpty(KuvaJuuri)) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
             Kierros = new MuseoKierros(sali);
             SeikkailuTapit.MuseoKavely = () => Auki && Kierros != null && Kierros.Vaihe == MuseoVaihe.Vapaa;
             EsittelyAuki = false;
@@ -166,6 +170,13 @@ namespace Matkakirja.Natiivi
         public void Komento(string[] osat)
         {
             string k = osat.Length > 1 ? osat[1] : "tila";
+            if (k == "kuvajuuri")
+            {
+                KuvaJuuri = osat.Length > 2 && osat[2] != "pois" ? osat[2] : null;
+                o.Kirjaa("museo: kuvajuuri " + (KuvaJuuri ?? "pois (paikkakuvat)"));
+                if (Auki && KuvaJuuri != null) o.StartCoroutine(rakennus.LataaKuvat(sali, KuvaJuuri, o.Kirjaa));
+                return;
+            }
             if (!Auki && k != "tila") { o.Kirjaa("museo: linssi ei ole auki (linssi taidemuseo)"); return; }
             switch (k)
             {
