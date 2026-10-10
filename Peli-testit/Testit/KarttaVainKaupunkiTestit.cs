@@ -56,6 +56,8 @@ namespace Matkakirja.Peli.Testit
             s.Siirtyma("keksinnot");
             Oleta.Tosi(s.Toive(Kanava.Siirtyma).Url?.Contains("linssi-keksinnot") == true, "linssin raita soi: " + s.Toive(Kanava.Siirtyma).Url);
             s.Siirtyma(null);
+            s.AloituslentoAlkoi();
+            Oleta.Sama(null, s.Toive(Kanava.Aarre).Url, "aloituslento ilman musiikkia (PT 11.4x)");
             s.MatkaLoppui();
             Oleta.Tosi(s.Toive(Kanava.Aarre).Url?.Contains("musa-loppu") == true, "matkan loppu ennallaan");
         }
