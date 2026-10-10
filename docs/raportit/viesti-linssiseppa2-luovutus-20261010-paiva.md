@@ -6,6 +6,26 @@ Skriptit `proto-3d/_tyo/linssiseppa2/skriptit-20261009/`. Tarkistukset 6.7: `MAT
 ./Linssit-testit/unity-tarkistus.sh` + `./Linssit-testit/kaanna.sh`. Simu vain Julkaisijan SIMULAATTORI NYT -vuorolla (A26BC7D0, 173pbr2-appi
 `lokit/linssiseppa2-app-173pbr2`), ilmoita "simu vapaa".
 
+## TAUKO 12.5x (PT/omistaja): vain bugikorjaukset build 177:ään ja tilinvaihto; muu työ jatkuu tauon jälkeen alla olevin päätöksin
+ATEENA VALMIS: ei 6.7-regressio (173pbr2 = 0e9893a11 samasta kulmasta; nauha = Googlen tasainen meri ilman ilmakehää/omaa vettä) → PT ja Natiiviseppä
+tiedotettu 12.5x. Kuvat proto-3d/lokit/linssiseppa2-ateena-173 | -ateena-67. Ateenan meri/ilmakehä Ateenan omaan vuoroon.
+PT:N PÄÄTÖKSET 12.4x (voimassa tauon jälkeen, järjestys: Peking → kupola ≤ 2 h → iPad-mittaus vain jos huone oikein simussa):
+- PEKING v1 hyväksytty jatkoon. Vesi KORJATTU (lokit/linssiseppa2-peking1b: "vesi ladattu 12+12"). SAUMA: pohjoisreunalla valkoinen nauha
+  OMAN alueen reunalla (y ≈ +1250); pohja/maatekstuurit/korkeudet tarkistettu kunnossa, aluskerros ei päällä → seuraavalla vuorolla ylhäältä
+  pohjoisreuna (39.92714, 116.3908) omilla malleilla ja ilman (Google yksin) → korjaus (maa sauman yli / liuku). Ennen omistajan paria oikeaa
+  vastaan: ylhäältä Karttasepän _tyo/karttaseppa/vertailu/peking/orto.jpg (meta.json: 2 m/px, x −1100…1100, y −1750…1250) + Jingshanilta etelään
+  Sisältökirjurin vertailu/peking-jingshan/kuvat 01 (CNHowey CC BY-SA 4.0, 39.923425 116.390397, klo 11.07, ~60 m) → vaatii kamera-vapaa (uusi .app,
+  KOMENNOT="opas kamera-vapaa 1;opas ajallinen pois;opas kori 0"). LR:lle: katot kylläisen oranssit (oikea kullankeltainen), Kansan suuri halli
+  ja museo litteitä harmaita laattoja.
+- ND EDESTÄ hyvä pari → LR:n v4c (julkisivu lämmin beige, portaalien syvyys, tornien aukot tummiksi); omistajalle vasta v4c:n parina.
+  Mittaa julkisivun valaistu kohta / parvis samassa kuvassa pelissä ja oikeassa (oikea: nd/kuvat/01 The wub, parvis näkyy; peli: f40 tai uusi kuva).
+  Kenttä kuvan mukaan, jos komennolla onnistuu (nyt ei komentoa: LinssiOhjain.Kenttakulma vain astronautilla).
+- KUPOLA: korjaa, aikaraja 2 h. PT:n vihje: huone maapallon mittakaavan koordinaateissa → float ~0,5 m → vääristyneet kolmiot; piirrä huone
+  päällyskameran omassa kehyksessä origossa. "Cubemap array" = simun raja → mittaus iPad Pro 13:lla (00008103, Natiiviseppä kääntää, GPU-aika ms).
+  Jos 2 h ei riitä: lyhyt raportti, nykyinen Cupola jää.
+- EIFFEL v2: EI kuvata eikä paketoida (omistaja perui 12.3x).
+- `opas kori 0` -vika TAA:ssa: PT välitti LS1:lle.
+
 ## TILA 12.5x (uusi sessio aloittaa tästä)
 VALMIS: v6k9 (v6k6 + ND v3h) VIETY, uusin-4 → v6k9 11.45. Arkit 1eacff13e (docs/raportit/kaappaukset/linssiseppa2-176-20261010/):
 nd-edesta-v3h.jpg, peking-v1-vs-google.jpg, iss-kupola-tila-koe.jpg (PT:lle 12.4x, vastaus odottaa). Skriptit proto-3d/_tyo/linssiseppa2/skriptit-20261009/
