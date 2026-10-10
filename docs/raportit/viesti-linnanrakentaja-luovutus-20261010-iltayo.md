@@ -63,3 +63,6 @@ Python-kuvatyökalut: `/Users/Shared/Claude/proto-3d/_tyo/venv-rembg/bin/python 
   −6,0-tasanne päättyi metrin jyrkänteeseen). **v47f VIETY (00.2x):** 1499 PALA b257fdf63e18f222 (blender d9e8157ba18d3b20), NYKY PALA
   695db038346095af (blender e1c6c2cd18dee278), v45k b9aacdf04 / ca0821cf6. Rantakivet v2b (jalusta täysleveä, 4–7 lohkopintaa; v2a tallessa
   glb-v2a/), portti loiva rantakallio (ranta1499_portti.py v47f; v47e-json ranta1499_v47e.json). Siirtosepän pelikuvapari odottaa.
+- (00.4x 11.10.) **ND v5g** (PT 23.5x: v5f ylikorjasi, LS2 IGN-mittaus aukio −28 %, katto −22 %): notre-dame-v1/tekoaly-v5g/ (LAHTEET "v5g",
+  kalibrointi_v5g.json, aja_tekseli_v5g.zsh). Katto v5d × 0,93, maa v5d:n maa_v9c, kalkkikivi 135/128/116. ktx2/reuna/kiviportti LÄPI,
+  ortoportti hylkää katot −19 % (tunnettu harha) → LS2 mittaa pelissä samalla maskilla → PT.
