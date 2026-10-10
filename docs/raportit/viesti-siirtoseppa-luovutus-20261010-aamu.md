@@ -1,56 +1,56 @@
-# Siirtosepän luovutus 10.10.2026 aamu (Opus 5.5, high; konteksti ~65 %)
+# Siirtosepän luovutus 10.10.2026 aamu (Opus 5.5, high; PT:n nollaus 06.0x, konteksti 69 %)
 
 ## ALOITUSVIESTI SEURAAJALLE
 
-Olet Siirtoseppä (Opus, high): johdat Olavinlinnan historiamoottoria (pelattava pala, historia, linnan äänet, Final IK, LR:n
-pakettien kytkentä). Lue tämä, CLAUDE.md ja Raamatun Ydinajatus kohta 2. Testaus vain automaattisin; simuajot vain kuva-arkkeihin ja
-PT:n pyytämiin äänikaappauksiin Julkaisijan KÄÄNNÖS NYT / SIMULAATTORI NYT -vuorolla, oma simu 8362879F-30B9-4625-9F42-57326EBC3439,
-ilmoita "lukko vapaa" heti käännöksen jälkeen ja "simu vapaa" lopuksi. Raskas simu yksin, muistivahti 16 Gt (PT).
+Olet Siirtoseppä (Opus, high): johdat Olavinlinnan historiamoottoria (pelattava pala, esittely, historia, linnan äänet, Final IK,
+LR:n pakettien kytkentä). Lue tämä, CLAUDE.md ja Raamatun Ydinajatus kohta 2. Testaus vain automaattisin; simuajot vain kuva-arkkeihin ja
+PT:n pyytämiin äänikaappauksiin Julkaisijan KÄÄNNÖS NYT / SIMULAATTORI NYT -vuorolla, oma simu 8362879F-30B9-4625-9F42-57326EBC3439.
+Ilmoita Julkaisijalle "lukko vapaa" heti käännöksen jälkeen ja "simu vapaa" lopuksi. Raskas simu yksin, muistivahti 16 Gt.
+Proto-worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello (haara nyt siirtoseppa/esittely-1499). Varmuuskopio natiivi-backup
+peili/proto/siirtoseppa-<haara>. Skenaariot: /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/skenaariot/.
 
-**Ensimmäinen tehtävä:** tarkista tilanne alla (AUKI 1–2). Jos 174-uusinta on jo ajettu (lokit/todistus-v46q-uusinta-* ja
-todistus-huoneaanet3-*), lähetä SHA Natiivisepälle ja rivi PT:lle; muuten pyydä Julkaisijalta vuoro.
+**Ensimmäinen tehtävä: junan 175 arkki.** Julkaisijan jonossa (LS1:n ajojen jälkeen, arvio ~06.30–07). Kun saat KÄÄNNÖS NYT:
+`PROTO_APP_KOPIO=<scratchpad>/app175 proto-3d/tyokalut/proto-kaanna.sh b99fb5dae 8362879F-…` (lopullinen; vanha käännös 308f4b021 = v46t on
+talteen kopioituna proto-3d/tyokalut/siirtoseppa-ajot/app175-308f4b021/, jos uutta ei ehditä). SIMULAATTORI NYT:ssa proto-worktreestä
+`tyokalut/todistusajo/todistusajo.sh --era v46u-175 --udid 8362879F-… --app <app> --sha <käännetty> --haara siirtoseppa/esittely-1499
+--skenaario …/skenaariot/v46u-kuvat.txt --nyt` ja perään `--era syke-175 … --skenaario …/skenaariot/syke.txt`. Tulokset PT:lle ja LR:lle
+(arkkien nimissä ladatun paketin hash). Syke: `ffmpeg -i aani/syke-halytys.wav -af ebur128=peak=true` (LUFS) + astats (huiput), lokista
+"seikkailu: syke nopea (hälytys)" ja "syke rauhallinen".
 
-## JUNA 174 (PT kuittasi ehdoin, proto-haarat; worktree /Users/Shared/Claude/wt/proto-siirtoseppa-kello)
+## JUNA 174 — VALMIS
 
-- Kuitattu ja Natiivisepällä: `siirtoseppa/juna174-soundly-v2` b4efe8e32 (d7dc17f07 + soundly-v2 + keittiö silmukat-korjaukset-v2).
-- **Kuitattu ehdoin**: `siirtoseppa/juna174-v46q` **ac0047bf0** (b4efe8e32:n muutokset + huoneäänet pelaajan huoneesta + LR v46q
-  4c01b13e623e0be1 + todistusajon kiertokorjaus + kappelissa vain oma äänimaisema). Ehdot: (1) uusinta-arkki, jossa 0°-kuva otetaan vasta
-  "kuori huippu valmis" -rivin jälkeen (skenaario scratchpad v46q-kuvat.txt), (2) huoneäänet ac0047bf0:lla: kappelissa EI massan ääniä
-  ("äänimaisema soi kappeli:" ilman massa:-rivejä; skenaario huoneaanet.txt). Käännös cd5e3a727 (app-kopio scratchpad/app). Puhtaana →
-  SHA ac0047bf0 Natiivisepälle ja rivi PT:lle (kuittaus voimassa ilman uutta kierrosta).
+`siirtoseppa/juna174-v46q` **ac0047bf0** lähetetty Natiivisepälle 04.4x (PT kuittasi). Sisältää b4efe8e32:n muutokset (soundly-v2, keittiö
+silmukat-korjaukset-v2), laatu-korvaajat-v1:n, huoneäänet pelaajan huoneesta (kappelissa vain oma äänimaisema), LR v46q 4c01b13e623e0be1 ja
+todistusajon kiertokorjauksen. VIE-ehto (v46q 0° päivä + hämärä) täytetty 05.18: todistus-v46q-0-20261010-0515. iPad-muistiportti:
+Laitetestaaja ajaa proto-3d/tyokalut/siirtoseppa-ajot/muistitarkka-olavinlinna-ipad.sh j174 420 (skriptiä ei ole ajettu → auta, jos ei etene).
 
-## JUNA 174: ac0047bf0 LÄHETETTY Natiivisepälle 10.10. 04.4x (PT). v46q 0° OK 05.18 (todistus-v46q-0-20261010-0515) → VIE-ehto täytetty.
+## JUNA 175 — `siirtoseppa/esittely-1499` **b99fb5dae** (ei kuitattu; Linssit 1264/1264, unity 0)
 
-## JUNA 175 (ei vielä kuitattu): `siirtoseppa/esittely-1499` b99fb5dae (v46u dcc0591e7f6a55ac, PT 05.3x). Käännös 308f4b021 (= 651c2d352, v46t) app175:ssä; arkki v46u:lla osoittimella (scratchpad v46u-kuvat.txt, 12 kuvaa) + syke.txt → PT. Lopullinen käännös b99fb5dae:stä.
+1. 600086317 Esittelyn 1499-asu: kun ulkokuori.asu = "1499", saapumisen jälkeen kävelydata osittain (ranta-1499 + porttikäytävä) ja
+   SeikkailuHistoria.Esittely1499: vuosileikkaukset kuten historiassa 1499 (bastionit, Kellobastioni, ponttonisilta, Paksu bastioni),
+   ranta-1499 tasaisella kalliosävyllä, muut kävelyosat piiloon, mustan korvaus. Lokirivi "seikkailu: esittely 1499".
+2. eca8dc339 Nopea syke hälytyksessä (SykeSekoitus, Ydin/Seikkailu/Vartija.cs): ristihäivytys 1,5 s tasatehoisesti, paluu rauhalliseen,
+   puheen aikana −6 dB. PT:n ehto: 30 s kaappaus + aani mittaa ennen kuittausta.
+3. 4dfd35f9f Esittely KIINNITETYSTÄ paketista (PelattavaPala.Hash, ei uusin.json; PT: vanhoja appeja ei rikota); kehittäjän osoitin/peili voittavat.
+4. e4fdb9ea9 Historia: Paksu bastioni 1791 osiin, K2-droneen 1788–1800-vaihe (K2 yhä 8 s).
+5. 8b6950f0b + 651c2d352 repliikit-lapi-v2 (Pelikoodari: tyrma-vesipoika-1 −2,3 dBTP).
+6. b99fb5dae LR v46u dcc0591e7f6a55ac (vain atlas: seinät 5 ja 7–10 tekoälypintoina; data sama kuin v46t 6a9023165fa72a12).
+   TUNNETTU (LR): s5:n pyöreän tornin kyljet viistosti (10°, 260°) kuoppaiset → korjaus v46v:ssä (~06.30, myös s11 v2t ja kalliorannan
+   kaistat s12/14/16) → kytke kuten v46u (rakennus/osat/merkit 200, vie-dioraama CI success, kultaiset v46v, PelattavaPala.Hash/Versio).
 
-1. 600086317 Esittelyn vuoden 1499 asu: kun ulkokuori.asu = "1499", saapumisen jälkeen kävelydata osittain (vain ranta-1499 ja
-   porttikäytävä; SeikkailuKavely.Lataa vainNakyvat, Osittainen) ja SeikkailuHistoria.Esittely1499(true): vuosileikkaukset kuten historia
-   1499 (bastionit 1602–03, Kellobastioni, ponttonisilta piiloon), ranta-1499 tasaisella kalliosävyllä, muut kävelyosat piiloon, mustan
-   korvaus. VarmistaKavelyData (pala/historia) ottaa leikkaukset; historian jälkeen palaa; Sulje nollaa. Lokirivi "seikkailu: esittely 1499".
-2. eca8dc339 Nopea syke hälytyksessä: sydan-nopea-01 ristihäivyttyy 1,5 s tasatehoisesti (SykeSekoitus, Ydin/Seikkailu/Vartija.cs),
-   paluu rauhalliseen, puheen aikana −6 dB (SeikkailuRepliikit.PuheSoi). Lokirivi "seikkailu: syke nopea/rauhallinen".
-   PT:n ehto ennen kuittausta: äänellinen 30 s kaappaus hälytyksessä + aani mittaa (LUFS, huiput); skenaario scratchpad syke.txt.
-3. 2210b802d LR v46s → 040890b30 v46t 6a9023165fa72a12 (Paksu bastioni 1791; historiaan ja K2:een 1788–1800, e4fdb9ea9); 4dfd35f9f esittely KIINNITETYSTÄ paketista (PelattavaPala.Hash, ei uusin.json — PT: vanhoja appeja ei rikota); 8b6950f0b repliikit-lapi-v2.
-   Aiemmin: 2210b802d LR v46s 8b0bdf3bad55c8df (tornien harjat omalla kivellä, Kijlin torni 16,5 m, Pyhän Eerikin torni, tulkinta).
-   Arkki: scratchpad esittely1499.txt (8 suuntaa + lounaispuoli lähempää). LR pyysi katsomaan Eerikin ja Kijlin tornien korkeudet ja
-   näkyvätkö bastionit 180°/225°/270°. Arkki PT:lle ja LR:lle.
+## AUKI
 
-## AUKI / SEURAAVAKSI
-
-1. 174-uusinta (Julkaisijan jonossa ~03.55) → SHA ac0047bf0 Natiivisepälle.
-2. 175-simu (~04.40): esittely1499.txt + syke.txt samalla app175-käännöksellä → arkki + kaappaus PT:lle.
-3. iPad-muistiportti: Laitetestaaja ajaa proto-3d/tyokalut/siirtoseppa-ajot/muistitarkka-olavinlinna-ipad.sh j174 420 junan 174
-   Release-laitekäännöksellä (raja: jetsam tai vapaa < 500 Mt → juna seis). Skripti ajamaton → auta, jos ei etene.
-4. Todistusajon kiertokorjaus (vaaka-UI:n stillit oikein päin) myös erillisenä: siirtoseppa/todistus-kierto 25fa87450 (master-pohja).
+1. 175-arkki + syke (yllä) → PT; LR:lle arkin polku (katsottavat: s5 315°, s7, s8–s10 45°, bastionien paikat 225° ja 90°).
+2. v46v kun LR ilmoittaa.
+3. Todistusajon kiertokorjaus erillisenä myös siirtoseppa/todistus-kierto 25fa87450 (master-pohja) → junaan, kun Julkaisija ottaa.
 
 ## OPITTUA
 
-- ESITTELY LATASI TUOTANNON (uusin.json), ei palan hashia: arkit ilman `poikki osoitin` olivat tuotantoa (v46o-arkki ja 174-uusinnan arkki). 175:stä alkaen esittely kiinnitetty; arkkien nimiin ladatun paketin hash (PT).
-
-- `Pelaa` latausruudun aikana katkaisi seikkailun äänet (nayttamo.Odota piilottaa uudet lapset → coroutinet kuolevat hiljaa): pala odottaa
-  SaapumisOdotuksen. Deaktivointi tappaa coroutinet ilman lokia.
-- `poikki tunnelma` rakentaa kuoren uudelleen (~9 + 4,5 s): skenaariossa `oleta 90 kuori huippu valmis` ennen kuvaa. Pelaajalle ei tapahdu.
-- simctl screenshot on aina pystykehys; linna on LandscapeLeft → raportti kääntää (todistus-kierto).
-- LR:n pakettihash on dioraama/olavinlinna/<hash>/rakennus.json (CI vie-dioraama.yml); blender-hash ei kelpaa palalle. Tarkista CI-ajon
-  tila (`gh run list --workflow vie-dioraama.yml`) ja tiedostot 200 ennen kytkentää.
-- Varmuuskopiot natiivi-backup peili/proto/siirtoseppa-<haara>.
+- ESITTELY LATASI ENNEN TUOTANNON (uusin.json): arkit ilman `poikki osoitin` olivat tuotantoa (v46o-arkki ja 174-uusinnan arkki väärin
+  nimetty). 175:stä esittely kiinnitetty. Arkkien nimiin ladatun paketin hash; tarkista lokista "Olavinlinna ladattu … juuri …/<hash>/".
+- `Pelaa` latausruudun aikana katkaisi seikkailun äänet (nayttamo.Odota piilotti uudet lapset → coroutinet kuolevat hiljaa): korjattu.
+- `poikki tunnelma` rakentaa kuoren uudelleen (~9 + 4,5 s): `oleta 90 kuori huippu valmis` ennen kuvaa. Pelaajalle ei tapahdu.
+- simctl screenshot on aina pystykehys; linna LandscapeLeft → raportti kääntää.
+- LR:n pakettihash = dioraama/olavinlinna/<hash>/rakennus.json (CI vie-dioraama.yml); blender-hash ei kelpaa. `gh run list --workflow
+  vie-dioraama.yml` ja tiedostot 200 ennen kytkentää. Uusi vain-1499-leikkaus vaatii myös Historiajana.OlavinlinnanOsat-rivin (testit).
+- Käännös asentaa simuun; pidä eri junien käännökset omissa PROTO_APP_KOPIO-kansioissa (todistusajo asentaa --app:n).
