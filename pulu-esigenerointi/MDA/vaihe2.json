@@ -105,8 +105,10 @@
   "kohde": "kohde:sorokan-linnoitus",
   "kasite": "Iacob",
   "kysymys": "Kerro lisää: Iacob",
-  "vastaus": "Iacob oli mestarimuurari, joka johti Transilvaniasta kutsuttuja muurareita Sorokan kivilinnoituksen rakennustyössä. Hän jätti linnoituksen seinään kaiverruksen, jonka mukaan tämän linnan rakensi Iacob. Työn tilaaja oli ruhtinas [[Petru Rareș]], mutta rakentajan nimi on säilynyt juuri tämän kaiverruksen ansiosta. Hänen elämästään en ole varma muista tiedoista, joten niitä ei kannata olettaa.",
+  "vastaus": "Iacob oli mestarimuurari, joka johti [[Transilvaniasta]] kutsuttuja muurareita [[Sorokan]] kivilinnoituksen rakennustyössä. Hän jätti linnoituksen seinään kaiverruksen, jonka mukaan tämän linnan rakensi Iacob. Työn tilaaja oli ruhtinas [[Petru Rareș]], mutta rakentajan nimi on säilynyt juuri tämän kaiverruksen ansiosta. Hänen elämästään en ole varma muista tiedoista, joten niitä ei kannata olettaa.",
   "linkit": [
+   "Transilvaniasta",
+   "Sorokan",
    "Petru Rareș"
   ],
   "jatkot": [
@@ -132,9 +134,10 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Guinnessin ennätyskirjaan",
   "kysymys": "Kerro lisää: Guinnessin ennätyskirjaan",
-  "vastaus": "Guinnessin ennätyskirja on vuosittain ilmestyvä kirja, johon kerätään todennettuja maailmanennätyksiä. Idea syntyi [[Dublinissa]] sijaitsevan Guinnessin panimon piirissä, ja ensimmäinen painos ilmestyi vuonna 1955. Ennätykset todennetaan ennen kirjaamista, ja nykyään ennätyksiä kirjataan kirjan lisäksi verkossa. Mileștii Micin viinikellari on kirjattu kirjaan maailman suurimmaksi viinikokoelmaksi, jossa on lähes kaksi miljoonaa pulloa.",
+  "vastaus": "Guinnessin ennätyskirja on vuosittain ilmestyvä kirja, johon kerätään todennettuja maailmanennätyksiä. Idea syntyi [[Dublinissa]] sijaitsevan Guinnessin panimon piirissä, ja ensimmäinen painos ilmestyi vuonna 1955. Ennätykset todennetaan ennen kirjaamista, ja nykyään ennätyksiä kirjataan kirjan lisäksi verkossa. [[Mileștii Micin]] viinikellari on kirjattu kirjaan maailman suurimmaksi viinikokoelmaksi, jossa on lähes kaksi miljoonaa pulloa.",
   "linkit": [
-   "Dublinissa"
+   "Dublinissa",
+   "Mileștii Micin"
   ],
   "jatkot": [
    "Miten ennätys todennetaan Guinnessin ennätyskirjassa?",
@@ -145,8 +148,9 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Neuvostoliiton",
   "kysymys": "Kerro lisää: Neuvostoliiton",
-  "vastaus": "Neuvostoliitto oli vuosina 1922–1991 olemassa ollut valtio, johon Moldovan alue kuului toisen maailmansodan jälkeen. Alue oli aiemmin ollut osa Romaniaa: [[Bessarabian]] kansanneuvosto äänesti liittymisestä Romaniaan vuonna 1918. Kesällä 1940 alue liitettiin Neuvostoliittoon, ja siitä muodostettiin Moldovan sosialistinen neuvostotasavalta. Moldova itsenäistyi elokuussa 1991 Neuvostoliiton hajotessa. Neuvostoaikana viininviljely säilyi tärkeänä elinkeinona, ja nykyisten suurten kellarien kehitys ajoittuu 1900-luvun puolivälin jälkeiseen aikaan.",
+  "vastaus": "[[Neuvostoliitto]] oli vuosina 1922–1991 olemassa ollut valtio, johon Moldovan alue kuului toisen maailmansodan jälkeen. Alue oli aiemmin ollut osa Romaniaa: [[Bessarabian]] kansanneuvosto äänesti liittymisestä Romaniaan vuonna 1918. Kesällä 1940 alue liitettiin Neuvostoliittoon, ja siitä muodostettiin Moldovan sosialistinen neuvostotasavalta. Moldova itsenäistyi elokuussa 1991 Neuvostoliiton hajotessa. Neuvostoaikana viininviljely säilyi tärkeänä elinkeinona, ja nykyisten suurten kellarien kehitys ajoittuu 1900-luvun puolivälin jälkeiseen aikaan.",
   "linkit": [
+   "Neuvostoliitto",
    "Bessarabian"
   ],
   "jatkot": [
@@ -202,8 +206,10 @@
   "kohde": "kohde:milestii-mici",
   "kasite": "Cricova",
   "kysymys": "Kerro lisää: Cricova",
-  "vastaus": "Cricova on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Chișinăusta. Sen luolasto käsittää noin 120 kilometriä käytäviä, ja lämpötila pysyy tasaisena noin 12–14 asteessa. Lähteiden mukaan puna-armeija takavarikoi Berliinin valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, joita esitellään sotahistorian todistajina.",
+  "vastaus": "[[Cricova]] on viinitehdas ja maanalainen kellarikaupunki, joka sijaitsee noin 15 kilometrin päässä Chișinăusta. Sen luolasto käsittää noin 120 kilometriä käytäviä, ja lämpötila pysyy tasaisena noin 12–14 asteessa. Lähteiden mukaan puna-armeija takavarikoi [[Berliinin]] valtauksen yhteydessä vuonna 1945 natsijohtaja [[Hermann Göringin]] yksityisen viinikellarin, ja osa saaliista päätyi Moskovan ja Krimin kautta Cricovaan. Siellä on yhä esillä 129 pulloa, joita esitellään sotahistorian todistajina.",
   "linkit": [
+   "Cricova",
+   "Berliinin",
    "Hermann Göringin"
   ],
   "jatkot": [
@@ -258,9 +264,10 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "Kalkkikiviluolan",
   "kysymys": "Kerro lisää: Kalkkikiviluolan",
-  "vastaus": "Kalkkikiviluola on luola, joka on syntynyt kalkkikiveen. Luonnolliset kalkkikiviluolat syntyvät, kun hieman hapan pohjavesi liuottaa kalkkikiveä vuosituhansien kuluessa, ja tällaisen liukenemisen muovaamaa maisemaa kutsutaan [[karstiksi]]. Cricovan tunnelit eivät kuitenkaan ole luonnonluolia vaan ihmisen louhimia käytäviä. Maan alla lämpötila pysyy lähellä vuoden keskilämpötilaa, joten kalkkikivitunneleissa se vaihtelee vain vähän, ja siksi viini säilyy niissä hyvin. Lähteestä riippuen Cricovan tasainen lämpötila ilmoitetaan 12 tai 12–14 asteeksi.",
+  "vastaus": "Kalkkikiviluola on luola, joka on syntynyt kalkkikiveen. Luonnolliset kalkkikiviluolat syntyvät, kun hieman hapan pohjavesi liuottaa kalkkikiveä vuosituhansien kuluessa, ja tällaisen liukenemisen muovaamaa maisemaa kutsutaan [[karstiksi]]. [[Cricovan]] tunnelit eivät kuitenkaan ole luonnonluolia vaan ihmisen louhimia käytäviä. Maan alla lämpötila pysyy lähellä vuoden keskilämpötilaa, joten kalkkikivitunneleissa se vaihtelee vain vähän, ja siksi viini säilyy niissä hyvin. Lähteestä riippuen Cricovan tasainen lämpötila ilmoitetaan 12 tai 12–14 asteeksi.",
   "linkit": [
-   "karstiksi"
+   "karstiksi",
+   "Cricovan"
   ],
   "jatkot": [
    "Miten tippukivet syntyvät kalkkikiviluolissa?",
@@ -271,9 +278,10 @@
   "kohde": "kohde:cricovan-viinikellarit",
   "kasite": "viinikartta",
   "kysymys": "Kerro lisää: viinikartta",
-  "vastaus": "Viinikartta on kuvaannollisesti käytävien nimistä muodostuva opaste, mutta varsinaisesti sanalla tarkoitetaan viinialueiden karttaa tai ravintolan viinilistaa. Cricovassa kadunnimet kertovat, minkä lajin pulloja kussakin tunnelissa säilytetään, joten kellarikaupungissa suunnistaminen on osin viinilajien mukaan suunnistamista. Moldovan viinialueita ovat muun muassa maan keskiosan [[Codru]] ja kaakossa sijaitseva Ștefan Vodă. Kellarikaupungin käytäviä on yhteensä noin 120 kilometriä, ja puolet tunneleista on varattu viinin säilytykseen.",
+  "vastaus": "Viinikartta on kuvaannollisesti käytävien nimistä muodostuva opaste, mutta varsinaisesti sanalla tarkoitetaan viinialueiden karttaa tai ravintolan viinilistaa. Cricovassa kadunnimet kertovat, minkä lajin pulloja kussakin tunnelissa säilytetään, joten kellarikaupungissa suunnistaminen on osin viinilajien mukaan suunnistamista. Moldovan viinialueita ovat muun muassa maan keskiosan [[Codru]] ja kaakossa sijaitseva [[Ștefan Vodă]]. Kellarikaupungin käytäviä on yhteensä noin 120 kilometriä, ja puolet tunneleista on varattu viinin säilytykseen.",
   "linkit": [
-   "Codru"
+   "Codru",
+   "Ștefan Vodă"
   ],
   "jatkot": [
    "Mitkä ovat Moldovan viinialueet?",
@@ -400,8 +408,9 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "kalkkikivikallioon",
   "kysymys": "Kerro lisää: kalkkikivikallioon",
-  "vastaus": "Kalkkikivi on pehmeähköä kiveä, jota on verraten helppo työstää, ja siksi sitä on käytetty sekä rakennuskivenä että luolien ja käytävien louhimiseen. Țipovan luostari on kaiverrettu suureen kalkkikivikallioon, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Rakentamisen ajoitus on lähteen mukaan 900–1100-luvuille, mutta tarkka ajoitus on epävarma. Samanlaiseen kalkkikivijyrkänteeseen on kaiverrettu myös [[Orheiul Vechin]] luolaluostari, joten tapa on yleinen tällä seudulla.",
+  "vastaus": "Kalkkikivi on pehmeähköä kiveä, jota on verraten helppo työstää, ja siksi sitä on käytetty sekä rakennuskivenä että luolien ja käytävien louhimiseen. [[Țipovan]] luostari on kaiverrettu suureen kalkkikivikallioon, ja siihen kuuluu 18 luolaa, joita yhdistävät sisäiset käytävät. Rakentamisen ajoitus on lähteen mukaan 900–1100-luvuille, mutta tarkka ajoitus on epävarma. Samanlaiseen kalkkikivijyrkänteeseen on kaiverrettu myös [[Orheiul Vechin]] luolaluostari, joten tapa on yleinen tällä seudulla.",
   "linkit": [
+   "Țipovan",
    "Orheiul Vechin"
   ],
   "jatkot": [
@@ -413,8 +422,10 @@
   "kohde": "kohde:tipovan-luostari",
   "kasite": "Ostrogin luostari",
   "kysymys": "Kerro lisää: Ostrogin luostari",
-  "vastaus": "Ostrogin luostari on Montenegrossa Ostroška-kallion seinämään veistetty ortodoksinen luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti vuonna 1665 Hertsegovinan metropoliitta [[Vasilije]], joka valitsi paikan osin suojaksi etenevää osmaneja vastaan. Samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu freskoin. Vasilije johti laajennustöitä kuolemaansa vuoteen 1671 asti, ja hänet julistettiin pyhimykseksi. Luostari on nykyään yksi Balkanin tunnetuimmista pyhiinvaelluskohteista.",
+  "vastaus": "[[Ostrogin luostari]] on [[Montenegrossa]] Ostroška-kallion seinämään veistetty ortodoksinen luostari, joka näyttää kasvaneen suoraan vuoresta. Sen perusti vuonna 1665 Hertsegovinan metropoliitta [[Vasilije]], joka valitsi paikan osin suojaksi etenevää osmaneja vastaan. Samoissa luolissa oli ennen häntä asunut erakkona pyhä Isaija Onogoštilainen. Ylempi kirkko on louhittu kahteen luolaan ja koristeltu freskoin. Vasilije johti laajennustöitä kuolemaansa vuoteen 1671 asti, ja hänet julistettiin pyhimykseksi. Luostari on nykyään yksi Balkanin tunnetuimmista pyhiinvaelluskohteista.",
   "linkit": [
+   "Ostrogin luostari",
+   "Montenegrossa",
    "Vasilije"
   ],
   "jatkot": [
@@ -455,8 +466,9 @@
   "kohde": "kohde:caprianan-luostari",
   "kasite": "Aleksanteri Hyvä",
   "kysymys": "Kerro lisää: Aleksanteri Hyvä",
-  "vastaus": "Aleksanteri Hyvä, romaniaksi Alexandru cel Bun, hallitsi Moldovan ruhtinaskuntaa vuosina 1400–1432. Hänen aikanaan ruhtinaskunta vakiintui ja sai oman kirkollisen organisaationsa, kun Konstantinopolin patriarkaatti tunnusti Moldovan metropoliitan noin vuonna 1401. Hän tuki luostareita, ja Căprianan luostari sai häneltä kuninkaallisen aseman vuonna 1429. Hän oli [[Tapani Suuren]] isoisä, ja Tapani Suuri jatkoi myöhemmin Moldovan vahvistamista.",
+  "vastaus": "Aleksanteri Hyvä, romaniaksi Alexandru cel Bun, hallitsi [[Moldovan ruhtinaskuntaa]] vuosina 1400–1432. Hänen aikanaan ruhtinaskunta vakiintui ja sai oman kirkollisen organisaationsa, kun Konstantinopolin patriarkaatti tunnusti Moldovan metropoliitan noin vuonna 1401. Hän tuki luostareita, ja Căprianan luostari sai häneltä kuninkaallisen aseman vuonna 1429. Hän oli [[Tapani Suuren]] isoisä, ja Tapani Suuri jatkoi myöhemmin Moldovan vahvistamista.",
   "linkit": [
+   "Moldovan ruhtinaskuntaa",
    "Tapani Suuren"
   ],
   "jatkot": [
@@ -483,8 +495,9 @@
   "kohde": "kohde:caprianan-luostari",
   "kasite": "Gavril Bănulescu-Bodoni",
   "kysymys": "Kerro lisää: Gavril Bănulescu-Bodoni",
-  "vastaus": "Gavril Bănulescu-Bodoni oli ortodoksinen metropoliitta, joka johti Bessarabian kirkkoa sen jälkeen, kun Venäjä liitti alueen itseensä vuonna 1812. Hänen tiedetään syntyneen 1700-luvun puolivälissä Transilvaniassa ja kuolleen vuonna 1821 Chișinăussa, mutta tarkoista vuosista en ole varma. Hän vaikutti Chișinăun kirkolliseen ja kulttuuriseen kehitykseen, ja hänet on haudattu Căprianan luostarin Neitsyt Marian kuolonuneen kirkkoon. Hänen hautansa tekee [[Căprianan]] pääkirkosta myös kirkkohistoriallisesti merkittävän paikan.",
+  "vastaus": "Gavril Bănulescu-Bodoni oli ortodoksinen metropoliitta, joka johti [[Bessarabian]] kirkkoa sen jälkeen, kun Venäjä liitti alueen itseensä vuonna 1812. Hänen tiedetään syntyneen 1700-luvun puolivälissä Transilvaniassa ja kuolleen vuonna 1821 Chișinăussa, mutta tarkoista vuosista en ole varma. Hän vaikutti Chișinăun kirkolliseen ja kulttuuriseen kehitykseen, ja hänet on haudattu Căprianan luostarin Neitsyt Marian kuolonuneen kirkkoon. Hänen hautansa tekee [[Căprianan]] pääkirkosta myös kirkkohistoriallisesti merkittävän paikan.",
   "linkit": [
+   "Bessarabian",
    "Căprianan"
   ],
   "jatkot": [
@@ -510,8 +523,9 @@
   "kohde": "kohde:caprianan-luostari",
   "kasite": "Strășenin",
   "kysymys": "Kerro lisää: Strășenin",
-  "vastaus": "Strășeni on piirikunta ja sen keskuskaupunki Moldovan keskiosassa, pääkaupunki Chișinăun luoteispuolella. Seutu kuuluu [[Codri]]-nimiseen kumpuilevaan metsäiseen ylänköön, jonka nimi tarkoittaa romaniaksi metsiä. Alue on tunnettu viininviljelystä, ja Moldovan keskiosan viinialue on nimeltään Codru. Piirissä sijaitsee Căprianan luostari, jonka ympäristö tunnettiin aiemmin nimellä Codrii Lăpușnei. Etäisyyksistä pääkaupunkiin en ole varma tarkasti, joten jätän luvun pois.",
+  "vastaus": "[[Strășeni]] on piirikunta ja sen keskuskaupunki Moldovan keskiosassa, pääkaupunki Chișinăun luoteispuolella. Seutu kuuluu [[Codri]]-nimiseen kumpuilevaan metsäiseen ylänköön, jonka nimi tarkoittaa romaniaksi metsiä. Alue on tunnettu viininviljelystä, ja Moldovan keskiosan viinialue on nimeltään Codru. Piirissä sijaitsee Căprianan luostari, jonka ympäristö tunnettiin aiemmin nimellä Codrii Lăpușnei. Etäisyyksistä pääkaupunkiin en ole varma tarkasti, joten jätän luvun pois.",
   "linkit": [
+   "Strășeni",
    "Codri"
   ],
   "jatkot": [
@@ -523,8 +537,9 @@
   "kohde": "kohde:castel-mimi",
   "kasite": "Constantin Mimi",
   "kysymys": "Kerro lisää: Constantin Mimi",
-  "vastaus": "Constantin Mimi oli bessarabialainen valtiomies ja viininviljelijä, joka rakennutti Castel Mimin viinitilan [[Bulboacan]] kylään Anenii Noin piirissä. Rakennus kohosi 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kaksikerroksisen uusklassisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta, ja kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Hänen muusta elämästään en ole varma, joten yksityiskohtia en esitä. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016, ja nykyään paikka toimii matkailukohteena.",
+  "vastaus": "Constantin Mimi oli bessarabialainen valtiomies ja viininviljelijä, joka rakennutti [[Castel Mimin]] viinitilan [[Bulboacan]] kylään Anenii Noin piirissä. Rakennus kohosi 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kaksikerroksisen uusklassisen rungon sanotaan tehdyn raudoitetusta betonista, mikä oli aikanaan uutta, ja kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Hänen muusta elämästään en ole varma, joten yksityiskohtia en esitä. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016, ja nykyään paikka toimii matkailukohteena.",
   "linkit": [
+   "Castel Mimin",
    "Bulboacan"
   ],
   "jatkot": [
@@ -536,8 +551,11 @@
   "kohde": "kohde:castel-mimi",
   "kasite": "Bulboacan",
   "kysymys": "Kerro lisää: Bulboacan",
-  "vastaus": "Bulboaca on kylä Anenii Noin piirissä Moldovassa. Kylän tunnetuin kohde on Castel Mimi, bessarabialaisen valtiomiehen ja viininviljelijän Constantin Mimin rakennuttama viinitila. Rakennus on uusklassinen ja kaksikerroksinen, ja sen työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus valmistui syyskuussa 2016, ja nykyään paikka on matkailukohde. Kylän muusta historiasta en ole varma.",
-  "linkit": [],
+  "vastaus": "[[Bulboaca]] on kylä Anenii Noin piirissä Moldovassa. Kylän tunnetuin kohde on [[Castel Mimi]],bessarabialaisen valtiomiehen ja viininviljelijän Constantin Mimin rakennuttama viinitila. Rakennus on uusklassinen ja kaksikerroksinen, ja sen työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus valmistui syyskuussa 2016, ja nykyään paikka on matkailukohde. Kylän muusta historiasta en ole varma.",
+  "linkit": [
+   "Bulboaca",
+   "Castel Mimi"
+  ],
   "jatkot": [
    "Mitä Castel Mimillä voi tehdä vieraana?",
    "Mikä on Anenii Noin piirikunta?"
@@ -562,8 +580,9 @@
   "kohde": "kohde:castel-mimi",
   "kasite": "Castel Mimi",
   "kysymys": "Kerro lisää: Castel Mimi",
-  "vastaus": "Castel Mimi on uusklassinen viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä [[Constantin Mimi]] rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, ja esikuvat olivat ranskalaisia. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016.",
+  "vastaus": "[[Castel Mimi]] on uusklassinen viinitila ja historiallinen rakennus Bulboacan kylässä Anenii Noin piirissä Moldovassa. Bessarabialainen valtiomies ja viininviljelijä [[Constantin Mimi]] rakennutti sen 1800-luvun lopulla, ja työ valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kaksikerroksisen rungon sanotaan tehdyn raudoitetusta betonista, ja esikuvat olivat ranskalaisia. Kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016.",
   "linkit": [
+   "Castel Mimi",
    "Constantin Mimi"
   ],
   "jatkot": [
@@ -604,8 +623,9 @@
   "kohde": "kohde:castel-mimi",
   "kasite": "Constantin Mimin",
   "kysymys": "Kerro lisää: Constantin Mimin",
-  "vastaus": "Constantin Mimi oli bessarabialainen valtiomies ja viininviljelijä, joka rakennutti Castel Mimin. Rakennus valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Hänen tilansa kellarissa oli tynnyreissä noin 300 000 litraa viiniä, joten viinintuotanto oli mittakaavaltaan merkittävää. Rakennus on uusklassinen, kaksikerroksinen ja ranskalaisista esikuvista ammentava. Hänen elämäntarinastaan en ole varma muuten kuin, että hän toimi [[Bessarabiassa]]. Tilan kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016.",
+  "vastaus": "Constantin Mimi oli bessarabialainen valtiomies ja viininviljelijä, joka rakennutti [[Castel Mimin]]. Rakennus valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Hänen tilansa kellarissa oli tynnyreissä noin 300 000 litraa viiniä, joten viinintuotanto oli mittakaavaltaan merkittävää. Rakennus on uusklassinen, kaksikerroksinen ja ranskalaisista esikuvista ammentava. Hänen elämäntarinastaan en ole varma muuten kuin, että hän toimi [[Bessarabiassa]]. Tilan kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016.",
   "linkit": [
+   "Castel Mimin",
    "Bessarabiassa"
   ],
   "jatkot": [
@@ -646,8 +666,9 @@
   "kohde": "kohde:castel-mimi",
   "kasite": "Constantin Mimille",
   "kysymys": "Kerro lisää: Constantin Mimille",
-  "vastaus": "Constantin Mimi oli bessarabialainen valtiomies ja viininviljelijä, jonka rakennuttama Castel Mimi on edelleen hänen nimensä tunnetuin muistomerkki. Viinitila sijaitsee [[Bulboacan]] kylässä Anenii Noin piirissä Moldovassa. Rakennus on uusklassinen, kaksikerroksinen ja ranskalaisista esikuvista ammentava, ja sen kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Rakennus valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016, ja nykyään tila toimii matkailukohteena. Hänen elämänvaiheistaan en ole varma.",
+  "vastaus": "Constantin Mimi oli bessarabialainen valtiomies ja viininviljelijä, jonka rakennuttama [[Castel Mimi]] on edelleen hänen nimensä tunnetuin muistomerkki. Viinitila sijaitsee [[Bulboacan]] kylässä Anenii Noin piirissä Moldovassa. Rakennus on uusklassinen, kaksikerroksinen ja ranskalaisista esikuvista ammentava, ja sen kellarissa oli tynnyreissä noin 300 000 litraa viiniä. Rakennus valmistui vuosina 1900–1901, vaikka jotkin lähteet mainitsevat jo vuoden 1893. Kunnostus alkoi vuonna 2011 ja valmistui syyskuussa 2016, ja nykyään tila toimii matkailukohteena. Hänen elämänvaiheistaan en ole varma.",
   "linkit": [
+   "Castel Mimi",
    "Bulboacan"
   ],
   "jatkot": [
@@ -659,8 +680,9 @@
   "kohde": "kohde:castel-mimi",
   "kasite": "uusklassinen",
   "kysymys": "Kerro lisää: uusklassinen",
-  "vastaus": "Uusklassismi on arkkitehtuurin ja taiteen tyylisuunta, joka syntyi 1700-luvun puolivälissä palaamalla antiikin Kreikan ja Rooman muotokieleen. Tyylille ovat ominaisia symmetria, pylväät, kolmiomaiset päädyt ja selkeät muodot, ja se oli vastareaktio barokin ja rokokoon runsaudelle. Kiinnostusta antiikkiin lisäsivät [[Pompeijin]] kaivaukset, jotka alkoivat 1700-luvulla. Castel Mimin tyyli on myöhäinen uusklassinen, sillä rakennus valmistui 1900-luvun alussa, ja sen esikuvina sanotaan olleen ranskalaiset rakennukset. Tyyli levisi laajalle Euroopassa, ja sitä käytettiin esimerkiksi hallintorakennuksissa ja kartanoissa.",
+  "vastaus": "[[Uusklassismi]] on arkkitehtuurin ja taiteen tyylisuunta, joka syntyi 1700-luvun puolivälissä palaamalla antiikin Kreikan ja Rooman muotokieleen. Tyylille ovat ominaisia symmetria, pylväät, kolmiomaiset päädyt ja selkeät muodot, ja se oli vastareaktio barokin ja rokokoon runsaudelle. Kiinnostusta antiikkiin lisäsivät [[Pompeijin]] kaivaukset, jotka alkoivat 1700-luvulla. Castel Mimin tyyli on myöhäinen uusklassinen, sillä rakennus valmistui 1900-luvun alussa, ja sen esikuvina sanotaan olleen ranskalaiset rakennukset. Tyyli levisi laajalle Euroopassa, ja sitä käytettiin esimerkiksi hallintorakennuksissa ja kartanoissa.",
   "linkit": [
+   "Uusklassismi",
    "Pompeijin"
   ],
   "jatkot": [
@@ -686,8 +708,10 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "Răutin",
   "kysymys": "Kerro lisää: Răutin",
-  "vastaus": "Răut on Moldovan joki, joka on Dnestrin vasemmanpuoleinen sivujoki. Se virtaa maan läpi pohjoisesta etelään ja kulkee muun muassa Bălțin ja Orhein seudun kautta, ja sen pituus on yli 250 kilometriä. Joen mutkassa kohoaa [[Orheiul Vechin]] kalkkikivijyrkänne, johon on kaiverrettu luolaluostari ja jonka alle on kerrostunut yli 2 000 vuotta historiaa. Joki on luonut maiseman, jossa jyrkänne ja laakso kohtaavat. Tarkkaa pituutta ja virtaamaa en ole varma.",
+  "vastaus": "[[Răut]] on Moldovan joki, joka on [[Dnestrin]] vasemmanpuoleinen sivujoki. Se virtaa maan läpi pohjoisesta etelään ja kulkee muun muassa Bălțin ja Orhein seudun kautta, ja sen pituus on yli 250 kilometriä. Joen mutkassa kohoaa [[Orheiul Vechin]] kalkkikivijyrkänne, johon on kaiverrettu luolaluostari ja jonka alle on kerrostunut yli 2 000 vuotta historiaa. Joki on luonut maiseman, jossa jyrkänne ja laakso kohtaavat. Tarkkaa pituutta ja virtaamaa en ole varma.",
   "linkit": [
+   "Răut",
+   "Dnestrin",
    "Orheiul Vechin"
   ],
   "jatkot": [
@@ -728,8 +752,9 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "luolaluostareita",
   "kysymys": "Kerro lisää: luolaluostareita",
-  "vastaus": "Luolaluostari on luostari, jonka tilat on kaiverrettu kallioon tai luonnonluoliin. Orheiul Vechin luolaluostarissa ortodoksimunkit kaivoivat kammiot kalkkikivijyrkänteeseen, ja lähteet ajoittavat sen vuosisadoista 1200-luvulle tai 1400-luvulle. Kammioissa asuttiin lähes 1700-luvun loppuun, minkä jälkeen paikka autioitui, ja munkit palasivat sinne vuonna 1996. Kallioluostareita on rakennettu myös muualle Itä-Euroopassa. Tunnettu esimerkki on [[Kiovan Petšerskin luostari]], joka perustettiin 1000-luvulla. Luola tarjosi sekä rauhaa rukoukselle että suojaa ryöstöretkiltä.",
+  "vastaus": "Luolaluostari on luostari, jonka tilat on kaiverrettu kallioon tai luonnonluoliin. [[Orheiul Vechin]] luolaluostarissa ortodoksimunkit kaivoivat kammiot kalkkikivijyrkänteeseen, ja lähteet ajoittavat sen vuosisadoista 1200-luvulle tai 1400-luvulle. Kammioissa asuttiin lähes 1700-luvun loppuun, minkä jälkeen paikka autioitui, ja munkit palasivat sinne vuonna 1996. Kallioluostareita on rakennettu myös muualle Itä-Euroopassa. Tunnettu esimerkki on [[Kiovan Petšerskin luostari]], joka perustettiin 1000-luvulla. Luola tarjosi sekä rauhaa rukoukselle että suojaa ryöstöretkiltä.",
   "linkit": [
+   "Orheiul Vechin",
    "Kiovan Petšerskin luostari"
   ],
   "jatkot": [
@@ -755,8 +780,9 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "Krimin tataarien",
   "kysymys": "Kerro lisää: Krimin tataarien",
-  "vastaus": "Krimin tataarit ovat turkkilaista kieltä puhuva kansa, jonka kotiseutu on Krimin niemimaa Mustanmeren pohjoisrannalla. Heidän valtionsa [[Krimin khaanikunta]] syntyi 1400-luvulla Kultaisen ordan hajotessa, ja se oli pitkään yksi alueen merkittävistä valtioista. Venäjä liitti khaanikunnan itseensä vuonna 1783. Vuonna 1944 Neuvostoliitto karkotti suuren osan Krimin tataareista Keski-Aasiaan, ja he alkoivat palata Krimille 1980-luvun lopulla. Tataarien ryöstöretket ulottuivat keskiajalla ja uuden ajan alussa Moldovaan asti.",
+  "vastaus": "[[Krimin tataarit]] ovat turkkilaista kieltä puhuva kansa, jonka kotiseutu on Krimin niemimaa Mustanmeren pohjoisrannalla. Heidän valtionsa [[Krimin khaanikunta]] syntyi 1400-luvulla Kultaisen ordan hajotessa, ja se oli pitkään yksi alueen merkittävistä valtioista. Venäjä liitti khaanikunnan itseensä vuonna 1783. Vuonna 1944 Neuvostoliitto karkotti suuren osan Krimin tataareista Keski-Aasiaan, ja he alkoivat palata Krimille 1980-luvun lopulla. Tataarien ryöstöretket ulottuivat keskiajalla ja uuden ajan alussa Moldovaan asti.",
   "linkit": [
+   "Krimin tataarit",
    "Krimin khaanikunta"
   ],
   "jatkot": [
@@ -768,9 +794,10 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "Krimin tataarit",
   "kysymys": "Kerro lisää: Krimin tataarit",
-  "vastaus": "Krimin tataarit puhuvat krimintataarin kieltä, joka kuuluu turkkilaisiin kieliin, ja he ovat perinteisesti sunnalaisia muslimeja. Heidän khaanikuntansa pääkaupunki oli [[Bahtšisarai]], jossa sijaitsee khaanin palatsi. Khaanikuntaa hallitsi Girayn hallitsijasuku, ja se oli 1470-luvulta osmanien vasallivaltio. Keskiajalla ja uuden ajan alussa heidän ratsujoukkonsa tekivät ryöstöretkiä Itä-Euroopan alueille, ja Venäjä liitti khaanikunnan itseensä vuonna 1783. Vuonna 1944 suuri osa kansasta karkotettiin Neuvostoliiton toimesta, ja paluu alkoi 1980-luvun lopulla.",
+  "vastaus": "Krimin tataarit puhuvat krimintataarin kieltä, joka kuuluu turkkilaisiin kieliin, ja he ovat perinteisesti sunnalaisia muslimeja. Heidän khaanikuntansa pääkaupunki oli [[Bahtšisarai]], jossa sijaitsee khaanin palatsi. Khaanikuntaa hallitsi [[Girayn]] hallitsijasuku, ja se oli 1470-luvulta osmanien vasallivaltio. Keskiajalla ja uuden ajan alussa heidän ratsujoukkonsa tekivät ryöstöretkiä Itä-Euroopan alueille, ja Venäjä liitti khaanikunnan itseensä vuonna 1783. Vuonna 1944 suuri osa kansasta karkotettiin Neuvostoliiton toimesta, ja paluu alkoi 1980-luvun lopulla.",
   "linkit": [
-   "Bahtšisarai"
+   "Bahtšisarai",
+   "Girayn"
   ],
   "jatkot": [
    "Millainen on Bahtšisarain khaanin palatsi?",
@@ -795,8 +822,9 @@
   "kohde": "kohde:hahmotelma-orheiul-vechi",
   "kasite": "Kultainen ordu",
   "kysymys": "Kerro lisää: Kultainen ordu",
-  "vastaus": "Kultainen ordu oli mongolien perustama valtio, joka syntyi 1200-luvulla Batu-kaanin valloitusretkien jälkeen. Sen keskus oli Volgan alajuoksulla sijaitseva [[Sarai]], ja valtakunta hallitsi laajoja alueita Itä-Euroopassa. Venäjän ruhtinaskunnat maksoivat sille veroa. Kaani Özbeg otti islamin valtionuskonnoksi 1300-luvun alussa. Valtakunta heikkeni 1300-luvun lopulla ja hajosi 1400-luvulla useiksi khaanikunniksi, joihin kuuluivat Kazanin, Astrakanin ja Krimin khaanikunnat. Orheiul Vechin alueella on ollut sen aikaista asutusta, mutta rajat ja ajat vaihtelevat lähteittäin. Mongolien postilaitos oli aikansa laaja viestiverkosto.",
+  "vastaus": "[[Kultainen ordu]] oli mongolien perustama valtio, joka syntyi 1200-luvulla Batu-kaanin valloitusretkien jälkeen. Sen keskus oli Volgan alajuoksulla sijaitseva [[Sarai]], ja valtakunta hallitsi laajoja alueita Itä-Euroopassa. Venäjän ruhtinaskunnat maksoivat sille veroa. Kaani Özbeg otti islamin valtionuskonnoksi 1300-luvun alussa. Valtakunta heikkeni 1300-luvun lopulla ja hajosi 1400-luvulla useiksi khaanikunniksi, joihin kuuluivat Kazanin, Astrakanin ja Krimin khaanikunnat. Orheiul Vechin alueella on ollut sen aikaista asutusta, mutta rajat ja ajat vaihtelevat lähteittäin. Mongolien postilaitos oli aikansa laaja viestiverkosto.",
   "linkit": [
+   "Kultainen ordu",
    "Sarai"
   ],
   "jatkot": [
