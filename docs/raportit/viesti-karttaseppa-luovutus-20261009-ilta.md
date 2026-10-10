@@ -38,6 +38,8 @@
 
 ## 4. Muut tämän päivän toimitukset
 
+- **MAANPINTA (04.4x, LS1:lle):** `_tyo/karttaseppa/maa-20261010/` (LUEMINUT.md): Pariisi IGN MNT 2 m (+ kauko), Tukholma GLO ilman rakennuksia (pieni hyöty, Lantmäteriet tunnuksen jälkeen). Työkalu T7 `vesimaski/korkeus-maa.mjs`. pp v1 ja co v2 on projisoitu (LR, portti 0) ja ovat LS2:lla.
+
 - **YÖVALOT VAIHE 2 (04.3x, LS1:lle):** `yovalot-20261010/yovalot-ikkunat-<id>.png` (LS1:n muoto: 1536², 8 m/px, R = osuus, G = K) + `yovalot-rakennukset-<id>.json`. Työkalut T7 `vesimaski/rakennusvalot.mjs` ja `.py`. LUEMINUT.md, vaihe 2.
 
 - **RH v3 (03.2x):** `rh-v3.py`: julkisivut v2 + katot ja kupolit katot_v2:n patinalla + spiira spiira_v2:sta (värinsiirto luokan 7 ja z:n mukaan). LR projisoi tekselitasolla, ja glb:t ovat LS2:lla. LR:n havainto: tiili tuli tummaksi (84/48/46 vs valokuvan 234/173/124), joten pidä sävyt lähempänä valokuvaa.
