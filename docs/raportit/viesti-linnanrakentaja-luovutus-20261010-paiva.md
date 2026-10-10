@@ -117,6 +117,9 @@ blender.json `linnanrakentaja-linna-v45e` (worktree `/Users/Shared/Claude/wt/lin
   portti 0 virhettä, LS2:lle; Eiffel v1d (maa 95/91/87, LS2: v1c pelissä 125/117/102); Kaupungintalo v2 (tornin kruunu: lyhty + kruunut,
   epäsäännölliset ikkunat, tiili 112/58/48, piha 158/154/146; aja_tekseli_v2.zsh) LS2:lle. LS2 nollattiin 11.4x: seuraava LS2 kuvaa Pekingin ensin
   (PT:n järjestys), vaakatanko-tieto tulee silloin. Seuraavaksi: maamerkit Sisältökirjurin mitoilla (_tyo/sisaltokirjuri/peking-mitat-20261010/).
+- (12.0x) Peking v2 LS2:lle: maamerkit Sisältökirjurin mitoilla (monumentit.py v2, monumentit_geom: pylväiköt aukiolle, mausoleumi,
+  nuolitornin aukot, stupa, pyöreät/8-kulmaiset Jingshanin paviljongit, uusi materiaali katto_sininen). Talteen glb-v1c/. Eiffel v1d (maa 95/91/87).
+  Odottaa: seuraavan LS2:n Peking-pari Googlea vasten → säätö.
 
 ## SEURAAVAN SESSION JÄRJESTYS (nollaus 10.1x)
 1) **PEKING** (omistaja 09.3x: koekaupunki ~2 × 2 km: Kielletty kaupunki, Jingshan, Beihai, Tian'anmen, hutongit; poikkeus ei avaa muuta
