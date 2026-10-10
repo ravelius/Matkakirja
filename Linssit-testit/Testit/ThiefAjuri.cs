@@ -16,6 +16,7 @@ namespace Matkakirja.Linssit.Testit
         // keskeytyy, jos joku alkaa epäillä. Syy: v46z:n kappeli-kavely alkaa y 8,6:sta (v46w 8,2), joten portaat-vartija tulee portailta
         // pelaajan osaan kirkkotorni-portaat jo y 8,5:ssä, näkee pisteessä 69 odottavan pelaajan ja etsii; vaaran aikana osarajan ylitys 69 → 70
         // ei tee tarkistuspistettä (peli toimii oikein), jolloin kiinni 70 palaisi Tott-kammioon eikä komeroon. Joukossa kohdeindeksit: 69 = reitti:pelaaja-70.
+        // v47a (palatsi-viipale pois) ei poista tarvetta: ilman ylitystä kiinni 70 → tarkistuspiste 5,0 m komerosta (Siirtoseppä 10.10.).
         static readonly HashSet<int> RauhallinenYlitys = new HashSet<int> { 69 };
 
         sealed class Suunnitelma { public KavelyMerkki Piilo, Esine; public (double X, double Y, double Z) Kohde; public double Odotus; public bool Hiipii; public Huonesimulaatio Tulos; public double Aika; }
