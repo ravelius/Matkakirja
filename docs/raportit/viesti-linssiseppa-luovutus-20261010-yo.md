@@ -76,3 +76,21 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
 - Todistusajon "uusi-peli <kaupunki>" Pariisissa ei soita luentaa (aloituslento) → intro alkaa heti saapuessa.
 - Pelin kaupunki-id:t: "lyon" ei ole pelin kaupunki (maailmahyppy), "marseille" on.
 - Kortti 2. käynnillä supistettuna (sama merkintä) — PT: ei muutosta.
+
+## PÄIVITYS 22.5x (nollauksen 2 jälkeinen työ)
+- **Linjaus 2 KUITATTU junaan 181: eca61364a** (linssiseppa/pariisi-kippi-180-l2, f65ed2a39:n päällä; L1315). Korjaukset: lyhyen lennon
+  kaarenpituuteen katseen kääntö (Venetsia 19 °/s → ≤ 10), esilatauksen avaimeen suunta + KaantoPidennys, KohdekaariSpiraali-raja 120°
+  (PT hyväksyi). Auki: kierto ei näy heti ~18 %:ssa → katsotaan junan 181 videosta. SHA lähetetty Natiivisepälle.
+- **KIIRE pakka 180 KUITATTU: 7c4fa279c** (linssiseppa/esittely-pakka-180, NUI:n 81a694496:n päällä, korvaa sen junassa 180): maailmahypyn
+  viivästynyt PaikanPuheVaiennettu ohitti juuri alkaneen uuden esittelyn (esittelyNro-vartija). Todistus lokit/todistus-pakka-180-lontoo-
+  {iphone-2221 (ennen), iphone-2238, ipad-2241}. Skenaario linssiseppa-ajot/sk-pakka-180-lontoo.txt. HUOM: todistusajon `maara
+  mk-kuvakortti` antaa 0, vaikka pakka näkyy kuvassa (häivytys/tarkka määrä) → älä käytä; NUI:n uusi-peli 5 pariisi tarkistaa intron jälkeen.
+- **PALLOKOMPASSI (omistaja 21.5x, juna 181): 89e2d373a** (linssiseppa/pallokompassi-181, eca61364a:n päällä, wt kaupunkiaanet). Oma
+  Blender-malli proto-3d/_valmiit/ilmapallo-v1/pallokompassi (lahde/pallokompassi.py + asteikko.py; asteikko luetaan ohjausviivalta,
+  merkintä H kortin kulmassa H+180°), ämpärissä kartta/ilmapallo/v2/pallokompassi.glb (Julkaisija vei). PalloKori.AsetaKompassinPaikka nostaa
+  tolpan varassa ja siirtää sisään, kunnes kaulus ≥ 3,5 % alareunasta. TODENTAMATTA: testikäännös linssiseppa/testi-181-kompassi-puut
+  c8ae74c84 (+ kaupunkipuut ef020d7a7) Julkaisijan jonossa → `zsh linssiseppa-ajot/simuvuoro-pallokompassi.zsh <SHA> <app-kansio>`
+  (uusi + vanha 6c9d434df iPad 00CF62C2 / iPhone D0D2CD1E, sk-pallokompassi-181.txt; lisäksi sk-puut-181.txt) → kuvapari nykyinen | uusi
+  (merkinnät kuvaan) PT:lle ennen kuittausta. Simuajossa ehto: enintään 1 muu simu käynnissä (Julkaisija; ks. simuvuoro-pakka-180.zsh odota_simu).
+- **Kipin Soundly-äänet (juna 182)**: Pelikoodarin paketti aanet/pallo-soundly-v2/ (37 + tuuli-tasainen-01; _valmiit/pallo-soundly-v2-vienti-20261010).
+  Kytkentä Opus-agentilla haarassa linssiseppa/soundly-kippi-182 (wt intro, pohja eca61364a) — tarkista agentin commit ja testit.

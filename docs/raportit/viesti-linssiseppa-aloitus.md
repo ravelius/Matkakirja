@@ -18,10 +18,6 @@ viestit Päätoimittajalle vain valmis erä, jumi tai kysymys, enintään 8 rivi
 TESTAUS VAIN AUTOMAATTISET (+ kuva-arkit); UI vain olemassa olevilla pohjilla (NUI omistaa museon esittelykortin);
 kaikki suomeksi, tiiviisti.
 
-ENSIMMÄINEN TEHTÄVÄ (juna 180, PT:n kippikorjaukset; PT lähettää myös aloitusviestin):
-1) Kippi: tarkista NUI:n yhdistetty käännös (proto-3d/lokit/natiivi-ui-app-yhdistetty-180; kompassi vasemmalla + metron hyppy)
-   iPadilla 00CF62C2 rinnakkain NUI:n kanssa; odota PT:n kuittausta f65ed2a39:lle (→ Natiivisepälle); jatka linjaus 2:ta
-   WIP-haaralta linssiseppa/pariisi-kippi-180-l2 99459eca5 vihreäksi (luovutuksen kaatuvat testit), sitten käännös + iPad-video
-   (Louvre, Concorde, Riemukaari, ääni; simuvuoro-kippi.zsh + ffmpeg-mux) → PT.
-2) Kaupunkipuut (juna 181): kaupunkipuut-181 ef020d7a7 valmis, todentamatta (varjostin kääntämättä); data jo ämpärissä; käännös + kuvaparit P+T katu/pallo (PT:n ehdot luovutuksessa).
-3) Museon iPad Pro 13 -mittaus on Natiivisepän muistiportissa (yön uudelleenkäynnistyksen jälkeen); vastaa, jos kysytään.
+ENSIMMÄINEN TEHTÄVÄ (päivitetty 22.5x): lue luovutuksen PÄIVITYS 22.5x. Jono: (1) pallokompassin kuvapari testikäännöksestä
+c8ae74c84 (Julkaisijan jono) → PT; (2) kaupunkipuiden 181 todennus samasta käännöksestä (sk-puut-181, PT:n ehdot); (3) Soundly-kytkentä
+linssiseppa/soundly-kippi-182 (agentin työ) → testit + käännös + kuuntelu → PT.
