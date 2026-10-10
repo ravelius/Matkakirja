@@ -12108,3 +12108,19 @@ LR:n projisoi_tekseli.py (oma UV-atlas 4096, ~12 px/m) poisti v3-pintojen sirpal
 ## YÖVALOT, STRÖMMEN JA SUOJATUT VALAISTUKSET (LS1, LS2, Karttaseppä ja PT 10.10.2026 klo 01.0x–03.3x) (10.10.2026 klo 03.59)
 
 OSM-katuvalot (Karttaseppä: Pariisi 69 842, Tukholma 16 675 ym.) LS1:n osm-yovalot-174 7bef9ef70: yhtenäiset valoketjut, ja maan ikkunakuvio (porrasreunojen normaali, myös vanhassa tilassa) korjattu; junaan 174. Strömmenin musta yövesi = Googlen vesipinta 0,5–1,5 m oman yllä → aluekohtainen nosto (Norrström 2,0 m, Strömmen 1,5 m, smoothstep 120 m). Maamerkkien yövalaistus (175) yleisellä valonheittimellä; Eiffel-tornin valaistusta ja tuntivälkettä ei jäljitellä, koska valaistussuunnitelmaa pidetään tekijänoikeuden suojaamana (Raamattu SUOJATUT VALAISTUKSET). Laattavarjokoe: klo 16 omien mallien varjopuoli ristiriidassa leivottujen laattojen kanssa → omien mallien aurinko leivotun suunnan lähelle (atsimuutit Tukholma ~145°, Pariisi ~300°), varjot oletuksena pois iPad-mittaukseen asti.
+
+## OLAVINLINNAN PAKSU BASTIONI JA TORNIT 1499-ASUSSA (LR ja PT 10.10.2026 klo 04.1x) (10.10.2026 klo 04.25)
+
+LR korjasi: Paksu torni räjähti 1791 (faktapohja r. 305), ja kuoressa on sen tilalla 1790-luvun Paksu bastioni (itäpää) → se piilotetaan 1499-asussa (peli ja esittely, juna 175) kuten muut bastionit; Siirtoseppä varmistaa leikkauksen (esittely-1499 2210b802d). Pyöreitä torneja on neljä (Kello, Kirkko, Kijl, Eerik). Pyhän Eerikin torni rekonstruoitiin raunion päälle TULKINTANA (v46s 8b0bdf3bad55c8df: Ø 11,7 m, harja z 20,0, korkeus tulkinta), ja Kijlin torni madallettiin kehämuurin kulmatorniksi 16,5 m:iin (v46r: harjat ja lattiat Kijlin seinäkivellä, kellotornin tiililaikut kiveksi).
+
+## TF 172 KAATUU YHÄ DATAKORJAUKSELLA, JUNA 173 HETI (Natiiviseppä ja PT 10.10.2026 klo 04.0x–04.2x) (10.10.2026 klo 04.25)
+
+Natiivisepän R21 (TF 172 + v6b3, iPad Pro 13, Pariisin B-polku): jetsam 41 s, vapaa muisti 0,01 Gt (proto-3d/lokit/natiiviseppa-muistitarkka-20261010-0405-r21-b172-v6b3-B). Osoitinvaihto v6b3:een ei yksin pelasta TF 172:ta; korjaus on junan 173 koodissa (A 0,66 / B 0,72 Gt). Juna 173 lukittiin 03.41 (BUILD 173 39bb69215, juna/b13 85436c355, muutosloki 279 merkkiä), ja aamun kortissa suositellaan sen julkaisua heti. Juna 174: runko 3191c3911 (16 haaraa + Siirtosepän juna174-v46q ac0047bf0; L1287/P458/K453, unity 0), muutosloki 276 merkkiä ja 3 lausetta kuitattu → v46q-uusinta → muistiajo iPadilla → VIE, kun 173 on TestFlightissa.
+
+## NOTRE-DAME V3C OMISTAJAN KORTTIIN, RIDDARHOLMEN V3:N TIILI, PRÉFECTURE JA CONCORDE (LS2, LR, Karttaseppä ja PT 10.10.2026 klo 04.2x–04.3x) (10.10.2026 klo 04.25)
+
+ND v3c (LS2 8a85f5207, parvis korjattu) on omistajan aamun kortin versio: pelikuva docs/raportit/kaappaukset/omistaja-20261010/nd-v3c-pelikuva-omistajalle.jpg (pelikuvat nyt, ehdokas, valokuva), paketti _tyo/linssiseppa2/nd3/v6hk3-nd3c, GPU 32 Mt; kyllä → LS2:n vienti ja uusi osoitin junan 174 muistiajon ehdoin (VANHOJA APPEJA EI RIKOTA). Riddarholmen v3:n tiili on oranssinkeltainen, vaikka sen pitää olla tummanpunainen ja spiiran tumma → LR korjaa matalalla prioriteetilla. Karttaseppä: Préfecture v1 (5 näkymää, kalkkikivi noin 200/188/168, LR hyväksyi sävyt) ja Concorden obeliski v2 (kultainen pyramidion ja hieroglyfit; v1 oli pinkki ja sileä) valmiit LR:lle projisoitaviksi.
+
+## PULU 13 MAATA ÄMPÄRISSÄ (PT 10.10.2026 klo 04.2x) (10.10.2026 klo 04.25)
+
+HRV, FIN ja PRT ovat ämpärissä Sisältökirjurin korjausten ja pistokokeiden jälkeen (PRT 343358425 viety 03.58; maat.json 13 maata) → Pelikoodari lisää ne kultaisiin vertailuihin yhdellä ajolla (testihaara, juna 175). CZE valmistui pilvessä (eba78153c) → Sisältökirjuri. POL käynnistettiin 04.23 sovelluksesta (tee-pulu-ohje.sh + GUI); BGR ja DNK ovat vaiheessa 2. Seuraavat EST ja HUN.
