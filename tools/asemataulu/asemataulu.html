@@ -186,7 +186,9 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
 .palkki .nimi .aika { text-transform: none; letter-spacing: 0; color: var(--himmea); font-variant-numeric: tabular-nums; }
 .palkki { justify-content: space-between; }
 .palkki .nimi.ei-versaali { text-transform: none; }
-@media (max-width: 479px) { .palkki:not(.koko) .paa { flex-direction: column; align-items: flex-start; gap: 0; } }
+/* Otsikkorivi aina yhdellä rivillä (omistaja 10.10. 15.5x: "5h otsikkorivi pitää mahtua yhdelle riville") */
+.palkki .paa { flex-wrap: nowrap; white-space: nowrap; }
+.palkki .paa .nimi { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 /* Työlistan kohteet ja väkäsen sisältö sisennettyinä (omistaja 10.10. 15.4x) */
 #tyolista details.juna { margin-left: 0.8em; }
 #tyolista details.juna .runko { padding-left: 2.1em; }
@@ -368,7 +370,7 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       var jaljella = l.nollautuu ? new Date(l.nollautuu).getTime() - Date.now() : NaN;
       if (jaljella > 0) {
         var min = Math.ceil(jaljella / 60000), tt = Math.floor(min / 60);
-        nimi.append(luo('span', 'aika', ' (' + (tt ? tt + ' h ' : '') + (min % 60) + ' min)'));
+        nimi.append(luo('span', 'aika', ' (' + tt + ':' + String(min % 60).padStart(2, '0') + ')'));
       }
       paa.append(nimi, arvo);
       var ura = luo('div', 'ura');
