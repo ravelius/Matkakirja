@@ -46,6 +46,18 @@ import { nostosymPaakategoria } from '../../js/fokusnosto-symbolit.js';
 import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
 
 const pyorista = (a) => (a ? { lat: Math.round(a.lat * 1e4) / 1e4, lon: Math.round(a.lon * 1e4) / 1e4 } : null);
+/*
+ * Karttavalon maa pisteen mukaan (kartan kokonaistarkistus 10.10.2026, A3).
+ * Kohde, jonka nimi on poltettu lehden kuvaan, ei voi siirtyä: piste pysyy
+ * siellä, minne nimi on latottu, ja maa vaihdetaan pisteen maaksi.
+ * Avain `<pakan maa>|<kohteen tunnus>`. Alkuperäinen maa säilyy liitettyjen
+ * täkynostojen liitoksessa (ALKU_ISO), jotta nostot löytävät kohteen.
+ */
+const MAA_PISTEEN_MUKAAN = new Map([
+  ['BGR|tonava', 'ROU'], // Tonavan suisto (45,22 N / 29,76 E) on Romaniassa, ei Bulgariassa
+]);
+const ALKU_ISO = new Map();
+
 const asteiksi = (lauta, x, y) => (Number.isFinite(x) && Number.isFinite(y) ? pyorista(laudaltaAsteiksi(lauta, x, y)) : null);
 
 /*
@@ -135,7 +147,9 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
     const [paikka, paikkaLahde] = rivi.paikka ? [rivi.paikka, rivi.lahde === 'napakohde' ? 'alue' : 'data']
       : kaupunkiNimet.has(rivi.kaupunkiAvain) ? [kaupunkiNimet.get(rivi.kaupunkiAvain), 'kaupunki']
         : maaNimi(rivi.maa) ? [maaNimi(rivi.maa), 'maa'] : [null, null];
-    rivit.push({ ankkuri: null, puoli: null, ...rivi, id, paikka, paikkaLahde });
+    const { _iso: alkuIso, ...loput } = rivi;
+    if (alkuIso && alkuIso !== rivi.maa) ALKU_ISO.set(id, alkuIso);
+    rivit.push({ ankkuri: null, puoli: null, ...loput, id, paikka, paikkaLahde });
   };
   const kaupunkiKohteelle = (k) => (tarkeydet.has(k?.kaupunki) ? k.kaupunki : (tarkeydet.has(k?.id) ? k.id : null));
   /*
@@ -174,7 +188,7 @@ export function karttavaloKokoelma(ns, hae, kaupungit, taulukko) {
       const lukko = lukittuAnkkuri(`nosto:${m.id}`, iso);
       lisaa({
         id, tunnus: m.id, aihe, kategoria: m.kategoria, laji: m.laji ?? null, nimi: kohde.nimi || m.nimi || m.id, nimio: m.nimi || null, ...oma,
-        ladottu: asteiksi(P.id, m.x, m.y), maa: iso, kaupunki, kaupunkiAvain: m.kaupunkiAvain ?? null,
+        ladottu: asteiksi(P.id, m.x, m.y), maa: MAA_PISTEEN_MUKAAN.get(`${iso}|${m.id}`) ?? iso, _iso: iso, kaupunki, kaupunkiAvain: m.kaupunkiAvain ?? null,
         ankkuri: lukko ? { lat: lukko.lat, lon: lukko.lng } : null, puoli: m.puoli ?? null,
         tarkeys: aihe === 'kaupungit' && kaupunki ? tarkeydet.get(kaupunki) : (kohde.taso ?? 1),
         taso: kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2,
@@ -349,7 +363,7 @@ export function takynostoKokoelma(ns, R, taulukko, karttavalot) {
   for (const v of karttavalot.alkiot) {
     const oma = v.tunnus?.startsWith('nosto-') ? v.tunnus.slice(6) : null;
     v.takynosto = oma && idt.has(oma) ? oma : null;
-    v.liitetytNostot = liitetyt.get(`${v.maa}|${v.tunnus}`) ?? [];
+    v.liitetytNostot = liitetyt.get(`${ALKU_ISO.get(v.id) ?? v.maa}|${v.tunnus}`) ?? [];
   }
   karttavalot.viittaukset.takynosto = 'takynostot';
   karttavalot.viittaukset.liitetytNostot = 'takynostot';

@@ -957,15 +957,15 @@ export const FOKUSKOHTEET_GRC = [
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Joki, jota purjehdittiin sisämaahan',
     /*
-     * 23,1655 E / 41,8012 N — piste, johon lehti latoi nimen
-     * "Strymónas". Kohta on Bulgarian puolella lähellä Kresnan
-     * solaa, koska siellä on uoman pisin yhtenäinen pätkä lehden
-     * laatikossa (ks. erän kommentti yllä). Lähin naapurikohde on
-     * Thessaloniki 46,8 lautayksikön päässä.
+     * 23,17 E / 41,21 N — Kerkinin tekojärven kohta Kreikan puolella.
+     * Karttavalon piste ei saa olla toisen maan alueella (kartan
+     * kokonaistarkistus 10.10.2026, kohta A3): aiempi piste 23,1655 E /
+     * 41,8012 N oli Bulgarian puolella lähellä Kresnan solaa, ja
+     * karttavalon maa oli GRC.
      */
     laudat: {
-      maailmankartta: { x: 6605.5, y: 1731.5 },
-      europe: { x: 656.0, y: 794.2 },
+      maailmankartta: { x: 6605.7, y: 1755.1 },
+      europe: { x: 656.1, y: 809.8 },
     },
     teksti: 'Strymónas saa alkunsa Vitošan vuorelta Bulgariasta ja laskee '
       + '415 kilometrin jälkeen Strymonin lahteen Amfipoliin kohdalla. Nimi '

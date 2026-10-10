@@ -30,7 +30,7 @@ export const NOSTOANKKURIT_BEL = {
   'nosto:hahmotelma-menin-gate': { lat: 50.852462, lng: 2.891000 },
   'nosto:hahmotelma-orval': { lat: 49.640301, lng: 5.348000 },
   'nosto:hahmotelma-oudenaarde': { lat: 50.850187, lng: 3.599000 },
-  'nosto:hahmotelma-semois': { lat: 49.879977, lng: 4.739000 },
+  'nosto:hahmotelma-semois': { lat: 49.808605, lng: 5.024000 },
   'nosto:hahmotelma-seraing': { lat: 50.583577, lng: 5.501000 },
   'nosto:hahmotelma-spa': { lat: 50.492234, lng: 5.864000 },
   'nosto:hahmotelma-tervuren': { lat: 50.831984, lng: 4.520000 },

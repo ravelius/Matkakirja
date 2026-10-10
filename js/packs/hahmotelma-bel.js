@@ -154,10 +154,12 @@ export const HAHMOTELMA_BEL = [
     ],
     korostukset: ['tupakka|tupakkalaji'],
     nappi: 'Ardennien joki, jonka rannoilla kasvatetaan omaa tupakkalajiaan',
-    // 4.73833333 E / 49.88055556 N — en-Wikipedia "Semois"
+    // 5.024 E / 49.808 N — Tombeau du Géant -näköalapaikka Belgian puolella
+    // (en-Wikipedia "Semois"). Aiempi piste 4.7383 E / 49.8806 N oli joen
+    // suulla Monthermén kohdalla Ranskassa (kartan tarkistus 10.10.2026, A3).
     laudat: {
-      maailmankartta: { x: 5991.3, y: 1395.4 },
-      europe: { x: 302.2, y: 581.7 },
+      maailmankartta: { x: 6000.8, y: 1398.5 },
+      europe: { x: 307.7, y: 583.6 },
     },
     teksti: 'Semois on 210 kilometriä pitkä joki, joka virtaa Ardennien ylängöiltä Belgiassa ja '
       + 'Ranskassa kohti Maasia; se on Maasin oikea sivujoki. Joen lähde on Arlonissa Belgian '
