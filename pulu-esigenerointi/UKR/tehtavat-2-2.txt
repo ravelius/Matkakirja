@@ -1,0 +1,1219 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+AIEMPI KYSYMYS: Miksi kaupungilla on monta nimeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaupungilla on monta nimeä, koska sen asukkaat ja hallitsijat ovat vaihtuneet eri aikoina. Ukrainaksi se on Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik. Kaupunki oli [[Galitsia-Volhynian]] kuningaskunnan pääkaupunki, sai kaupunkioikeudet Puolan Kasimir Suurelta vuonna 1356 ja kuului myöhemmin Habsburgien valtakuntaan. Vuosina 1918–1939 se oli [[Lwówin]] vojevodakunnan keskus Puolan tasavallassa. Jokainen valta antoi kaupungille oman nimensä, ja ne ovat jääneet käyttöön. Postiaikana nimien opettelu olisi kyllä ollut työlästä.
+KYSYMYS: Kerro lisää: Galitsia-Volhynian
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+AIEMPI KYSYMYS: Miksi kaupungilla on monta nimeä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaupungilla on monta nimeä, koska sen asukkaat ja hallitsijat ovat vaihtuneet eri aikoina. Ukrainaksi se on Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik. Kaupunki oli [[Galitsia-Volhynian]] kuningaskunnan pääkaupunki, sai kaupunkioikeudet Puolan Kasimir Suurelta vuonna 1356 ja kuului myöhemmin Habsburgien valtakuntaan. Vuosina 1918–1939 se oli [[Lwówin]] vojevodakunnan keskus Puolan tasavallassa. Jokainen valta antoi kaupungille oman nimensä, ja ne ovat jääneet käyttöön. Postiaikana nimien opettelu olisi kyllä ollut työlästä.
+KYSYMYS: Kerro lisää: Lwówin
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawelin linna] 1507–1536 Vistula-joen yllä kohoavalla kalkkikivikukkulalla sijaitseva Wawelin linna oli Puolan kuninkaiden koti ja kruunajaispaikka satojen vuosien ajan. Kuningas Kasimir Suuri rakennutti ensimmäisen kivilinnan 1300-luvulla, ja tulipalon jälkeen kuningas Sigismund I rakennutti sen uudelleen upeaksi renessanssilinnaksi vuosina 1507-1536. Linnan tornissa riippuu Sigismund-kello, joka painaa lähes 13 tonnia ja jota soittamaan tarvitaan 12 miestä - sitä kumautetaan vain aivan erityisinä hetkinä. Aarrekammiossa säilytetään muun muassa Szczerbiec-nimistä kruunajaismiekkaa, ja linnan alla piilee tunnettu lohikäärmeen luola. Linna on kokenut sekä loistoa että tuhoa: vuonna 1794 Preussi vei kruunun…
+- [Krakova — kohdekartta / Kohdekartta: Kazimierz] 1335 Vuonna 1335 kuningas Kasimir Suuri perusti Krakovan viereen aivan oman kaupungin ja nimesi sen itsensä mukaan Kazimierziksi. Sen keskusaukio Wolnica oli valtava, 195 x 195 metriä - lähes yhtä iso kuin Krakovan oma tori. Vuonna 1495 juutalaiset asukkaat käskettiin muuttamaan pois Krakovan vanhastakaupungista Kazimierziin, ja alueesta kasvoi vuosisatojen kuluessa vilkas juutalaiskortteli lukuisine synagogineen. Vanha synagoga on Puolan vanhin yhä pystyssä seisova synagogarakennus. Toisen maailmansodan aikana korttelin juutalaisväestöä kohtasi julma kohtalo, mutta nykyään Kazimierz on jälleen täynnä elämää: kahviloita, kirjakauppoja ja vuotuinen juutalaisen kulttuurin festivaali vuodesta …
+AIEMPI KYSYMYS: Milloin Lviv sai kaupunkioikeudet?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Lviv sai kaupunkioikeudet Puolan kuninkaalta [[Kasimir Suurelta]] vuonna 1356. Kaupunki oli noussut Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla, ja se oli ollut [[Galitsia-Volhynian]] kuningaskunnan pääkaupunki vuosina 1272–1340. Vuodesta 1434 se toimi Ruteenian vojevodakunnan pääkaupunkina. Oikeudet eivät ratkaisseet kaikkea, mutta paperi oli tärkeä.
+KYSYMYS: Kerro lisää: Kasimir Suurelta
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Italia — maalehti / Historia: Renessanssi syntyi kilpailusta] 1400-luku — 1400-luvun Firenzessä suvut ja killat kilpailivat siitä, kuka teettää kauneimman kirkon, patsaan tai kupolin. Kilpailusta syntyi renessanssi — "uudelleensyntyminen" — joka muutti koko Euroopan taiteen, tieteen ja rakentamisen. Brunelleschin tuomiokirkon kupoli oli valmistuessaan 1436 maailman suurin muuraamalla tehty kupoli, eikä kukaan tiennyt varmasti, pysyisikö se pystyssä: se rakennettiin ilman tukitelineitä tavalla, jota insinöörit ihmettelevät yhä.
+- [Mexico City — kohdekartta / Kohdekartta: Postipalatsi] 1902–1907 Vuonna 1901 postilaitoksesta tehtiin oma virastonsa, ja kun se käsitteli noin 130 miljoonaa lähetystä vuodessa, päätettiin että sillä pitää olla oma talo. Suunnittelijaksi valittiin italialainen arkkitehti Adamo Boari ja rakennustöiden valvojaksi sotilasinsinööri Gonzalo Garita y Frontera. Tontilla oli ollut fransiskaanien kolmannen sääntökunnan sairaala, joka purettiin 1902. Peruskivi laskettiin 14. syyskuuta 1902, ja työ kesti siitä viisi vuotta. Presidentti Porfirio Díaz vihki talon 1907 pudottamalla laatikkoon kaksi postikorttia: toinen oli osoitettu Mexico Cityyn, toinen muualle maahan. Perustus tehtiin uudella menetelmällä, jota kutsuttiin Chicagoksi: 70 senttiä paksu betoni…
+AIEMPI KYSYMYS: Millaista arkkitehtuuria Lvivin keskustassa on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kaunis aihe. Lvivin historiallinen keskusta on mukulakivikatuja ja sekoitus [[renessanssia]], [[barokkia]], uusklassismia ja jugendia. Keskusta kuuluu [[Unescon maailmanperintöluetteloon]]. Eri tyylit kertovat kaupungin pitkästä historiasta, jonka aikana sitä ovat hallinneet muun muassa Galitsia-Volhynian kuningaskunta, Puola ja Habsburgit. Ylhäältä katsottuna kattojen kirjo on kyllä mahtava näky.
+KYSYMYS: Kerro lisää: renessanssia
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: San Ildefonson kollegio] 1588 Jesuiitat saapuivat Meksikoon 1572, ja kun Keski-Meksikon lähetystyö oli enimmäkseen tehty, he ryhtyivät perustamaan kouluja. Niistä tärkein oli San Ildefonso, joka perustettiin 1588. Vuonna 1618 se yhdistettiin lähes raunioituneeseen San Pedro y San Pablon kollegioon ja sai kuninkaallisen sinetin Filip III:lta. Kollegio ei ollut korkeakoulu nykyisessä mielessä vaan asuntola ja koulu: nuorukaiset asuivat ja opiskelivat täällä mutta olivat samalla kirjoilla kuninkaallisessa ja paavillisessa yliopistossa. Talo kasvoi koulun mukana. Laajennus aloitettiin 1712 ja saatiin valmiiksi 1749; vanhempaa osaa kutsutaan siitä lähtien nimellä Colegio Grande ja uutta nimellä Colegio Chico, ja San Ild…
+- [Mexico City — kohdekartta / Kohdekartta: Postipalatsi] 1902–1907 Vuonna 1901 postilaitoksesta tehtiin oma virastonsa, ja kun se käsitteli noin 130 miljoonaa lähetystä vuodessa, päätettiin että sillä pitää olla oma talo. Suunnittelijaksi valittiin italialainen arkkitehti Adamo Boari ja rakennustöiden valvojaksi sotilasinsinööri Gonzalo Garita y Frontera. Tontilla oli ollut fransiskaanien kolmannen sääntökunnan sairaala, joka purettiin 1902. Peruskivi laskettiin 14. syyskuuta 1902, ja työ kesti siitä viisi vuotta. Presidentti Porfirio Díaz vihki talon 1907 pudottamalla laatikkoon kaksi postikorttia: toinen oli osoitettu Mexico Cityyn, toinen muualle maahan. Perustus tehtiin uudella menetelmällä, jota kutsuttiin Chicagoksi: 70 senttiä paksu betoni…
+AIEMPI KYSYMYS: Millaista arkkitehtuuria Lvivin keskustassa on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kaunis aihe. Lvivin historiallinen keskusta on mukulakivikatuja ja sekoitus [[renessanssia]], [[barokkia]], uusklassismia ja jugendia. Keskusta kuuluu [[Unescon maailmanperintöluetteloon]]. Eri tyylit kertovat kaupungin pitkästä historiasta, jonka aikana sitä ovat hallinneet muun muassa Galitsia-Volhynian kuningaskunta, Puola ja Habsburgit. Ylhäältä katsottuna kattojen kirjo on kyllä mahtava näky.
+KYSYMYS: Kerro lisää: barokkia
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Millaista arkkitehtuuria Lvivin keskustassa on?
+AIEMPI VASTAUS (Livia):
+Kato, tää on kaunis aihe. Lvivin historiallinen keskusta on mukulakivikatuja ja sekoitus [[renessanssia]], [[barokkia]], uusklassismia ja jugendia. Keskusta kuuluu [[Unescon maailmanperintöluetteloon]]. Eri tyylit kertovat kaupungin pitkästä historiasta, jonka aikana sitä ovat hallinneet muun muassa Galitsia-Volhynian kuningaskunta, Puola ja Habsburgit. Ylhäältä katsottuna kattojen kirjo on kyllä mahtava näky.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöluetteloon
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mikä Lviv oli Habsburgien vallan aikaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puolan ensimmäisen jaon jälkeen vuonna 1772 Lvivistä tuli [[Habsburgien]] [[Galitsian ja Lodomerian]] kuningaskunnan pääkaupunki. Kaupunki tunnettiin tuolloin saksalaisella nimellään Lemberg. Se oli osa Habsburgien valtakuntaa aina ensimmäisen maailmansodan loppuun saakka, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa. Siipieni mielestä Habsburgit rakensivat hyvät tiet, mutta tästä en ole kyllä aivan varma.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Krakova — kohdekartta / Kohdekartta: Wawel] Isoisäsi kirjasi, että kuninkaat nukkuvat kirkon lattian alla ja että kaupunki kuuluu nyt keisarille. Molemmat pitivät paikkansa yhtä aikaa, ja juuri se oli kukkulan kipeä kohta. Wawel on jurakautista kalkkikiveä, karstiutunut ja luolia täynnä — yksi niistä on lohikäärmeluola — ja linna seisoo 228 metrissä Veikselin rannalla. Katedraalissa kruunattiin ja haudattiin Puolan hallitsijat, vaikka pääkaupunki siirtyi Varsovaan jo 1596. Sitten kukkula vaihtoi omistajaa. Vuoden 1795 jaon jälkeen Wawel joutui Itävallalle, ja sotilaat muuttivat sen kasarmiksi: sisäpihan renessanssikaarikäytävät muurattiin umpeen, sisätiloja muutettiin ja rakennuksia purettiin, kahden kirkon verran. 1800-luvun jälkipu…
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mikä Lviv oli Habsburgien vallan aikaan?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Puolan ensimmäisen jaon jälkeen vuonna 1772 Lvivistä tuli [[Habsburgien]] [[Galitsian ja Lodomerian]] kuningaskunnan pääkaupunki. Kaupunki tunnettiin tuolloin saksalaisella nimellään Lemberg. Se oli osa Habsburgien valtakuntaa aina ensimmäisen maailmansodan loppuun saakka, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa. Siipieni mielestä Habsburgit rakensivat hyvät tiet, mutta tästä en ole kyllä aivan varma.
+KYSYMYS: Kerro lisää: Galitsian ja Lodomerian
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+AIEMPI KYSYMYS: Mitä nimi Zaporižžja tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tän tiedän. Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa [[Hortytsjan]] saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas [[Svjatoslav I]] kuoli juuri koskia ylittäessään vuonna 972. Nimessä on siis kokonainen maantiede sisällä.
+KYSYMYS: Kerro lisää: Hortytsjan
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+AIEMPI KYSYMYS: Mitä nimi Zaporižžja tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Mmm— tän tiedän. Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa [[Hortytsjan]] saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas [[Svjatoslav I]] kuoli juuri koskia ylittäessään vuonna 972. Nimessä on siis kokonainen maantiede sisällä.
+KYSYMYS: Kerro lisää: Svjatoslav I
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+AIEMPI KYSYMYS: Mihin Dneprin kosket katosivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dneprin kosket hukkuivat 1900-luvun alussa rakennetun voimalapadon tekemän tekojärven alle, eli ne eivät katoa mihinkään vaan ovat veden alla. Tarkkaa vuotta en ole varma, mutta kyse on [[Dniprohes]]-voimalan padosta, joka valmistui 1930-luvun alussa. Koskialueen mukaan nimensä saanut [[Zaporižžja]] on säilyttänyt nimensä, vaikka kosket eivät enää ole näkyvissä. Hortytsjan saari on yhä paikallaan [[Dneprin]] keskellä. Kosket eivät ole ainoa asia, jonka vesi on peittänyt.
+KYSYMYS: Kerro lisää: Dniprohes
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mihin Dneprin kosket katosivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dneprin kosket hukkuivat 1900-luvun alussa rakennetun voimalapadon tekemän tekojärven alle, eli ne eivät katoa mihinkään vaan ovat veden alla. Tarkkaa vuotta en ole varma, mutta kyse on [[Dniprohes]]-voimalan padosta, joka valmistui 1930-luvun alussa. Koskialueen mukaan nimensä saanut [[Zaporižžja]] on säilyttänyt nimensä, vaikka kosket eivät enää ole näkyvissä. Hortytsjan saari on yhä paikallaan [[Dneprin]] keskellä. Kosket eivät ole ainoa asia, jonka vesi on peittänyt.
+KYSYMYS: Kerro lisää: Zaporižžja
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Kilpi vaihdettiin kesken sodan] Dneprin rinteellä seisoo 62 metriä korkea teräksinen naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli silloin Neuvostoliiton vaakuna. Elokuussa 2023 vaakuna irrotettiin ja tilalle nostettiin Ukrainan kolmikärki. Työ tehtiin kovassa tuulessa ja sateessa ja keskeytyi ilmahälytyksiin, mutta kilpi oli valmis ennen itsenäisyyspäivää 24. elokuuta.
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+AIEMPI KYSYMYS: Mihin Dneprin kosket katosivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Dneprin kosket hukkuivat 1900-luvun alussa rakennetun voimalapadon tekemän tekojärven alle, eli ne eivät katoa mihinkään vaan ovat veden alla. Tarkkaa vuotta en ole varma, mutta kyse on [[Dniprohes]]-voimalan padosta, joka valmistui 1930-luvun alussa. Koskialueen mukaan nimensä saanut [[Zaporižžja]] on säilyttänyt nimensä, vaikka kosket eivät enää ole näkyvissä. Hortytsjan saari on yhä paikallaan [[Dneprin]] keskellä. Kosket eivät ole ainoa asia, jonka vesi on peittänyt.
+KYSYMYS: Kerro lisää: Dneprin
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Kuka oli ruhtinas Svjatoslav I?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä aiheesta riittää tarinaa. Svjatoslav I oli [[Kiovan Rusin]] ruhtinas, joka kuoli koskia ylittäessään vuonna 972. Paimentolaiset [[petšenegit]] vaanivat koskien ylittäjiä, ja siksi alue oli vaarallinen. Tapahtuma liittyy [[Hortytsjan]] saaren seutuun, jota keisari Konstantinos VII mainitsee jo noin vuonna 950 kirjoittamassaan teoksessa. Aihe on vakava, mutta onneksi siitä on kauan.
+KYSYMYS: Kerro lisää: Kiovan Rusin
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Kuka oli ruhtinas Svjatoslav I?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä aiheesta riittää tarinaa. Svjatoslav I oli [[Kiovan Rusin]] ruhtinas, joka kuoli koskia ylittäessään vuonna 972. Paimentolaiset [[petšenegit]] vaanivat koskien ylittäjiä, ja siksi alue oli vaarallinen. Tapahtuma liittyy [[Hortytsjan]] saaren seutuun, jota keisari Konstantinos VII mainitsee jo noin vuonna 950 kirjoittamassaan teoksessa. Aihe on vakava, mutta onneksi siitä on kauan.
+KYSYMYS: Kerro lisää: petšenegit
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+AIEMPI KYSYMYS: Millainen saari Hortytsja on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on mukava kysymys. Hortytsja on [[Dneprin]] suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, mutta eteläosa on matala ja jää usein tulvan alle. Saari kuuluu [[Hortytsjan kansallispuistoon]] ja sijaitsee [[Zaporižžjan]] kaupungin rajojen sisällä. Saarella on ollut asutusta viiden vuosituhannen ajan. Ylhäältä se näyttää pitkältä kaistaleelta vettä keskellä.
+KYSYMYS: Kerro lisää: Hortytsjan kansallispuistoon
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Millainen saari Hortytsja on?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tämä on mukava kysymys. Hortytsja on [[Dneprin]] suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, mutta eteläosa on matala ja jää usein tulvan alle. Saari kuuluu [[Hortytsjan kansallispuistoon]] ja sijaitsee [[Zaporižžjan]] kaupungin rajojen sisällä. Saarella on ollut asutusta viiden vuosituhannen ajan. Ylhäältä se näyttää pitkältä kaistaleelta vettä keskellä.
+KYSYMYS: Kerro lisää: Zaporižžjan
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hortytsja (historia)
+Tietoruudun teksti: Hortytsja on Dneprin suurin saari: 12,5 kilometriä pitkä ja enimmillään 2,5 kilometriä leveä. Se kuuluu Hortytsjan kansallispuistoon ja sijaitsee Zaporižžjan kaupungin rajojen sisällä. Saaren pohjoisosa on kallioinen ja kohoaa kolmisenkymmentä metriä joenuoman yläpuolelle, eteläosa taas on matala ja jää usein tulvan alle.
+
+Saarella on ollut asutusta viiden vuosituhannen ajan, ja sillä on oma osansa Zaporožjen kasakoiden historiassa. Nimen alkuperästä on useita selityksiä; todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta Horsista.
+
+Zaporižžjan nimi tarkoittaa koskien takaista maata. Keisari Konstantinos VII mainitsee noin vuonna 950 kirjoittamassaan teoksessa saaren heti koskien alapuolella ja kertoo, että koskia ylittävät Rusin miehet olivat helppoa saalista paimentolaisille petšenegeille. Kiovan Rusin ruhtinas Svjatoslav I kuoli juuri koskia ylittäessään vuonna 972.…
+AIEMPI KYSYMYS: Mistä Hortytsjan nimi tulee?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Nimen alkuperästä on useita selityksiä, ja todennäköisimpiä on, että se juontuu muinaisslaavilaisesta jumalasta [[Horsista]]. Varmaa vastausta ei siis ole. Saari on [[Dneprin]] suurin ja sijaitsee [[Zaporižžjan]] kaupungin rajojen sisällä, ja sillä on ollut oma osansa Zaporožjen kasakoiden historiassa. Nimen takana oleva jumala on kuitenkin vanha, ja minulle riittää, että saari on yhä paikallaan.
+KYSYMYS: Kerro lisää: Horsista
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+AIEMPI KYSYMYS: Kuka johti Ruotsin armeijaa Poltavassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ruotsalaisarmeijaa komensi Poltavassa [[Carl Gustaf Rehnskiöld]], ja venäläisten puolella joukkoja johti tsaari [[Pietari I]]. Kuningas [[Kaarle XII]] oli haavoittunut jo ennen taistelua, joten käytännön komento oli Rehnskiöldillä. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Carl Gustaf Rehnskiöld
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Pietari — kaupunkilehti / Historian hetki: Pietari 1869 — tyhjät paikat, joihin uskalletaan luottaa] 6.3.1869 — Paperilapulla lukee alkuaineen nimi, atomipaino ja muutama ominaisuus, ja pöydällä on kuusikymmentäkolme sellaista lappua. Dmitri Mendelejev, 35, kirjoittaa Pietarin yliopistossa kemian oppikirjaa ja tarvitsee järjestyksen, jossa alkuaineet voisi esittää opiskelijoille. Hän lajittelee niitä painon mukaan ja huomaa, että ominaisuudet toistuvat säännöllisin välein. Myöhemmin hän kertoo nähneensä valmiin taulukon unessa ja kirjoittaneensa sen herättyään paperille; arkistossa on kuitenkin luonnoksia, joissa rivejä on siirretty ja yliviivattu. Taulukko painetaan ja lähetetään kemisteille, ja 6. maaliskuuta 1869 Venäjän kemian seura kuulee esitelmän alkuaineiden ominaisuuksien riippuvu…
+AIEMPI KYSYMYS: Kuka johti Ruotsin armeijaa Poltavassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ruotsalaisarmeijaa komensi Poltavassa [[Carl Gustaf Rehnskiöld]], ja venäläisten puolella joukkoja johti tsaari [[Pietari I]]. Kuningas [[Kaarle XII]] oli haavoittunut jo ennen taistelua, joten käytännön komento oli Rehnskiöldillä. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Pietari I
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+- [Ruotsi — maalehti / Ruoka: Lihapullat ja punainen marja] Ruotsalaiselle lautaselle kuuluu kolme asiaa: lihapullat, perunamuusi ja lusikallinen puolukkahilloa. Makea marja hapan lihan vieressä hämmästyttää monta vierasta, mutta yhdistelmä on vanha keino: ennen jääkaappeja happamat ja sokeriset säilykkeet pitivät ruoan syömäkelpoisena talven yli. Ruotsin virallinen somekin on kertonut, että lihapullan resepti tuotiin maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun alussa — asiaa on sen jälkeen kiistelty innokkaasti.
+AIEMPI KYSYMYS: Kuka johti Ruotsin armeijaa Poltavassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ruotsalaisarmeijaa komensi Poltavassa [[Carl Gustaf Rehnskiöld]], ja venäläisten puolella joukkoja johti tsaari [[Pietari I]]. Kuningas [[Kaarle XII]] oli haavoittunut jo ennen taistelua, joten käytännön komento oli Rehnskiöldillä. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: Kaarle XII
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+AIEMPI KYSYMYS: Miksi Kaarle XII kääntyi etelään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaarle XII oli edennyt kohti Moskovaa syksystä 1707 alkaen, mutta eteneminen pysähtyi. Sää, venäläisten käyttämä [[poltetun maan taktiikka]] ja yllättävät hyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani [[Ivan Mazepa]]. Etelässä armeija oli lähempänä Mazepan tukea ja huoltoa, mutta talvi oli poikkeuksellisen ankara ja heikensi joukkoja entisestään. Kovin raskas kampanja se oli.
+KYSYMYS: Kerro lisää: poltetun maan taktiikka
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Miksi Kaarle XII kääntyi etelään?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Kaarle XII oli edennyt kohti Moskovaa syksystä 1707 alkaen, mutta eteneminen pysähtyi. Sää, venäläisten käyttämä [[poltetun maan taktiikka]] ja yllättävät hyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani [[Ivan Mazepa]]. Etelässä armeija oli lähempänä Mazepan tukea ja huoltoa, mutta talvi oli poikkeuksellisen ankara ja heikensi joukkoja entisestään. Kovin raskas kampanja se oli.
+KYSYMYS: Kerro lisää: Ivan Mazepa
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+AIEMPI KYSYMYS: Minne Kaarle XII pakeni Poltavan tappion jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— Kaarle XII ja Mazepa vetäytyivät taistelun jälkeen noin 1 500 miehen kanssa [[Dneprille]] ja pääsivät joen yli osmanien puolelle. Osa ruotsalaisista sotilaista päätyi myös Valakiaan, ja heidän kerrotaan auttaneen Bukarestin [[Colțean torni]]n rakentamisessa 1700-luvun alussa. Tappio oli ruotsalaisille raskas, ja kuningas viipyi pitkään poissa kotimaastaan. Onpas siitä onneksi kauan.
+KYSYMYS: Kerro lisää: Dneprille
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+AIEMPI KYSYMYS: Minne Kaarle XII pakeni Poltavan tappion jälkeen?
+AIEMPI VASTAUS (Livia):
+Mmm— Kaarle XII ja Mazepa vetäytyivät taistelun jälkeen noin 1 500 miehen kanssa [[Dneprille]] ja pääsivät joen yli osmanien puolelle. Osa ruotsalaisista sotilaista päätyi myös Valakiaan, ja heidän kerrotaan auttaneen Bukarestin [[Colțean torni]]n rakentamisessa 1700-luvun alussa. Tappio oli ruotsalaisille raskas, ja kuningas viipyi pitkään poissa kotimaastaan. Onpas siitä onneksi kauan.
+KYSYMYS: Kerro lisää: Colțean torni
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Tallinna — kaupunkilehti / Palatsi: Palatsi, joka rakennettiin sodan keskellä] Suuri Pohjan sota ei ollut vielä päättynyt, kun tsaari Pietari Suuri, jo varma valloittamiensa Itämeren alueiden pysyvyydestä, aloitti vuonna 1718 uuden kesäpalatsin rakentamisen Tallinnan liepeille. Italialainen arkkitehti Nicola Michetti suunnitteli barokkipalatsin, jonka rakennustyöt kestivät vuoteen 1725. Palatsi on yksi Pohjois-Euroopan komeimmista barokkirakennuksista, ja se nimettiin Kadriorgiksi, Katariinan laaksoksi, tsaarin vaimon Katariina I:n mukaan.
+AIEMPI KYSYMYS: Mitä Poltavan tappio merkitsi Ruotsille?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Poltavan tappio vei Ruotsilta suurvalta-aseman, sillä taistelu oli [[suuren Pohjan sodan]] ratkaiseva käänne. Samalla se aloitti Venäjän ylivallan Itä-Euroopassa, ja [[Pietari I]]:n armeija nousi alueen johtavaksi voimaksi. Ruotsin vanha asema Itämeren piirissä ei palannut entiselleen. Ei se ollut vähäinen päivä kenellekään.
+KYSYMYS: Kerro lisää: suuren Pohjan sodan
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ruotsi — maalehti / Ruoka: Lihapullat ja punainen marja] Ruotsalaiselle lautaselle kuuluu kolme asiaa: lihapullat, perunamuusi ja lusikallinen puolukkahilloa. Makea marja hapan lihan vieressä hämmästyttää monta vierasta, mutta yhdistelmä on vanha keino: ennen jääkaappeja happamat ja sokeriset säilykkeet pitivät ruoan syömäkelpoisena talven yli. Ruotsin virallinen somekin on kertonut, että lihapullan resepti tuotiin maahan Turkista kuningas Kaarle XII:n mukana 1700-luvun alussa — asiaa on sen jälkeen kiistelty innokkaasti.
+AIEMPI KYSYMYS: Toiko Kaarle XII lihapullan reseptin Ruotsiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on riidelty ihan kunnolla. Ruotsin virallinen sosiaalinen media on kertonut, että [[lihapullat]]n resepti tuotiin Turkista kuningas [[Kaarle XII]]:n mukana 1700-luvun alussa, mutta väitettä on sen jälkeen kiistelty innokkaasti. En ole varma, mikä on totuus, joten pidän tarinaa mieluummin kertomuksena kuin vahvistettuna tietona. Ruotsalaisella lautasella lihapullien vieressä on perinteisesti [[puolukkahillo]]a, ja makea marja hapan lihan seurassa on vanha säilytykseen perustuva yhdistelmä.
+
+Minä en ota kantaa, mutta kyllä kuningas voisi hyvin tuoda jotain evästä kotiin. Mut pullasta ei taaskaan kukaan kysy.
+KYSYMYS: Kerro lisää: lihapullat
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Poltavan taistelu (historia)
+Tietoruudun teksti: Poltavan taistelu käytiin 8. heinäkuuta 1709, ja se oli suuren Pohjan sodan ratkaiseva ja suurin taistelu. Pietari I:n johtama venäläisarmeija löi Carl Gustaf Rehnskiöldin komentaman ruotsalaisarmeijan. Tappio vei Ruotsilta suurvalta-aseman ja aloitti Venäjän ylivallan Itä-Euroopassa.
+
+Kaarle XII oli hyökännyt Venäjälle syksyllä 1707 ja marssinut kohti Moskovaa. Sää, venäläisten poltetun maan taktiikka ja yllätyshyökkäykset pakottivat hänet kääntymään etelään talvimajoihin, joita järjesti kasakkahetmani Ivan Mazepa. Euroopan kylmimmän mitatun talven jälkeen heikentynyt armeija piiritti keväällä 1709 Poltavan linnoitusta, joka oli tärkeä kauppapaikka ja varikko Vorsklan varrella.
+
+Pietarin 75 000–80 000 miehen armeija saapui purkamaan piirityksen. Ruotsalaiset lyötiin, ja he pakenivat kentältä. Kaarle ja Mazepa vetäytyivät 1 500 miehen kanssa Dneprille ja pääsivät sen yli osmanien puolel…
+AIEMPI KYSYMYS: Toiko Kaarle XII lihapullan reseptin Ruotsiin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: tästä on riidelty ihan kunnolla. Ruotsin virallinen sosiaalinen media on kertonut, että [[lihapullat]]n resepti tuotiin Turkista kuningas [[Kaarle XII]]:n mukana 1700-luvun alussa, mutta väitettä on sen jälkeen kiistelty innokkaasti. En ole varma, mikä on totuus, joten pidän tarinaa mieluummin kertomuksena kuin vahvistettuna tietona. Ruotsalaisella lautasella lihapullien vieressä on perinteisesti [[puolukkahillo]]a, ja makea marja hapan lihan seurassa on vanha säilytykseen perustuva yhdistelmä.
+
+Minä en ota kantaa, mutta kyllä kuningas voisi hyvin tuoda jotain evästä kotiin. Mut pullasta ei taaskaan kukaan kysy.
+KYSYMYS: Kerro lisää: puolukkahillo
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+AIEMPI KYSYMYS: Kenelle puisto oli syntymäpäivälahja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Puisto oli syntymäpäivälahja Sofialle, kreivi [[Stanisław Szczęsny Potocki]]n kreikkalaissyntyiselle vaimolle, ja puisto sai nimensä hänen mukaansa. Potocki perusti englantilaistyylisen puiston vuonna 1796 [[Umanin]] kaupungin pohjoisosaan. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya, mikä oli aikanaan omaisuus. Ei paha lahja, vaikka kirjekyyhky tuskin mahtuisi paketointiin.
+KYSYMYS: Kerro lisää: Stanisław Szczęsny Potocki
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+AIEMPI KYSYMYS: Kenelle puisto oli syntymäpäivälahja?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Puisto oli syntymäpäivälahja Sofialle, kreivi [[Stanisław Szczęsny Potocki]]n kreikkalaissyntyiselle vaimolle, ja puisto sai nimensä hänen mukaansa. Potocki perusti englantilaistyylisen puiston vuonna 1796 [[Umanin]] kaupungin pohjoisosaan. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya, mikä oli aikanaan omaisuus. Ei paha lahja, vaikka kirjekyyhky tuskin mahtuisi paketointiin.
+KYSYMYS: Kerro lisää: Umanin
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kohdekartta / Kohdekartta: Mandalay-kukkula] pyhä paikka, kaupungin nimen antaja Kaupunki on saanut nimensä kukkulasta eikä toisin päin. Nimen juurta ei tiedetä varmasti; arvauksia ovat palin maṇḍala, pyöreä tasanko, ja hindulaisen mytologian vuori Mandara. Korkeudesta en-Wikipedia antaa kolme eri lukua: kukkulan oman artikkelin infoboksi sanoo 224 metriä, sen leipäteksti 240 ja kaupungin artikkeli 230. Ylös vie neljä katettua porrasta eli saungdania — etelästä, kaakosta, lännestä ja pohjoisesta — ja niiden varrella on muurattuja penkkejä koko matkan. Eteläisen eli pääsisäänkäynnin vartijoina istuu kaksi jättimäistä chintheä, tyyliteltyä leijonahahmoa. Puolimatkassa on Shweyattaw, seisova Buddha-kuva, jonka oikea käsi osoittaa kaupunk…
+- [Panama — maalehti / Luonto: Vaakunalintu, joka saalistaa apinoita] Harpyijakotka on Panaman kansallislintu ja sen vaakunan lintu. Nimi tulee kreikan mytologian harpyijoista, tuulihengistä, joilla oli petolinnun jalat ja naisen pää. Naaras painaa tavallisesti 6–9 kiloa, ja laji on koko levinneisyysalueensa suurin petolintu. Se elää sademetsän ylimmässä latvuskerroksessa ja saalistaa etenkin apinoita ja laiskiaisia; kamerapyydysten ja kirjallisuuden perusteella saalislajeja tunnetaan 116. Elinympäristön häviäminen on hävittänyt lajin lähes koko Väli-Amerikasta.
+AIEMPI KYSYMYS: Mikä Acheron on tässä puistossa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Acheron on nimenä peräisin kreikkalaisen [[mytologian]] tuonelan joesta, ja Sofijivkan vesiaiheiden ja muiden rakennelmien nimet viittaavat antiikin maailmaan. Uskoakseni Acheron on puiston vesireitti, joka kulkee rosoisen maaston ja rotkojen läpi [[Kamjanka-joen]] varrella, mutta en ole varma sen tarkasta muodosta enkä luotettavasti tiedä, miten sillä voi liikkua. Maasto rakennettiin altaiden, lampien ja vesiputousten ympärille. Kannattaa tarkistaa puiston omista tiedoista, sillä en halua arvata.
+KYSYMYS: Kerro lisää: mytologian
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+AIEMPI KYSYMYS: Mikä Acheron on tässä puistossa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Acheron on nimenä peräisin kreikkalaisen [[mytologian]] tuonelan joesta, ja Sofijivkan vesiaiheiden ja muiden rakennelmien nimet viittaavat antiikin maailmaan. Uskoakseni Acheron on puiston vesireitti, joka kulkee rosoisen maaston ja rotkojen läpi [[Kamjanka-joen]] varrella, mutta en ole varma sen tarkasta muodosta enkä luotettavasti tiedä, miten sillä voi liikkua. Maasto rakennettiin altaiden, lampien ja vesiputousten ympärille. Kannattaa tarkistaa puiston omista tiedoista, sillä en halua arvata.
+KYSYMYS: Kerro lisää: Kamjanka-joen
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+AIEMPI KYSYMYS: Kuka johti puiston rakennustyötä?
+AIEMPI VASTAUS (Livia):
+No niin, tästä voin kertoa. Työtä johti puolalainen sotilasinsinööri [[Ludwik Metzel]], joka toi puistoon harvinaisia kasveja eri puolilta Eurooppaa. Työvoimana käytettiin paikallisia maaorjia, mikä kuului tuon ajan oloihin. Rakennuttajana oli kreivi [[Stanisław Szczęsny Potocki]], joka halusi puistosta lahjan vaimolleen. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Ludwik Metzel
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kohdekartta / Kohdekartta: Nairobin arboretum] 1907 Nairobin arboretum perustettiin 1907, kahdeksan vuotta sen jälkeen kun juna oli saapunut kaupunkiin. Perustaja oli Batiscombe, ja tarkoitus oli hyvin käytännöllinen: kokeilla, mitkä metsäpuulajit kasvavat Nairobin ylängöllä. Puisto oli siis alun perin koeasema, ei virkistysalue. Alue julistettiin luonnonsuojelualueeksi 1932, ja omistuskirja siirtyi valtiolle 1996. Kokeilu jätti jälkeensä poikkeuksellisen kokoelman: kolmenkymmenen hehtaarin alueella kasvaa yli 350 puulajia, sekä kotimaisia että tuotuja. Alue toimii yhä sekä tutkimuspaikkana että kaupunkilaisten ulkoilualueena. Arboretum on State House Roadin varrella Kilimanin kaupunginosassa, aivan presidentin virka-asunnon naapurissa.…
+AIEMPI KYSYMYS: Mitä puulajeja Sofijivkassa kasvaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, minkä vuoksi se toimii sekä [[arboretum]]ina että tutkimuslaitoksena. Tunnetuimpia lajeja ovat suokypressi, strobusmänty, [[tulppaanipuu]], plataani ja [[neidonhiuspuu]]. Kaikki nämä kasvavat Umanin pohjoisosassa Kamjanka-joen varrella. En tiedä, onko joukossa mitään syötävää, mut kyllä minä toivon.
+KYSYMYS: Kerro lisää: arboretum
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+AIEMPI KYSYMYS: Mitä puulajeja Sofijivkassa kasvaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, minkä vuoksi se toimii sekä [[arboretum]]ina että tutkimuslaitoksena. Tunnetuimpia lajeja ovat suokypressi, strobusmänty, [[tulppaanipuu]], plataani ja [[neidonhiuspuu]]. Kaikki nämä kasvavat Umanin pohjoisosassa Kamjanka-joen varrella. En tiedä, onko joukossa mitään syötävää, mut kyllä minä toivon.
+KYSYMYS: Kerro lisää: tulppaanipuu
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sofijivkan puisto (kulttuuri)
+Tietoruudun teksti: Sofijivkan puisto on arboretum ja tutkimuslaitos Umanin kaupungin pohjoisosassa Tšerkasyn alueella, Kamjanka-joen varrella. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, niiden joukossa suokypressi, strobusmänty, tulppaanipuu, plataani ja neidonhiuspuu. Vuosittain sen läpi kulkee noin 300 000 kävijää.
+
+Englantilaistyylisen puiston perusti vuonna 1796 kreivi Stanisław Szczęsny Potocki, puolalainen aatelismies, joka rakensi Umanin uudelleen talonpoikaiskapinan jälkeen. Puisto sai nimensä hänen kreikkalaissyntyisen vaimonsa Sofian mukaan ja oli tälle syntymäpäivälahja. Sen hinnaksi arvioitiin viisitoista miljoonaa zlotya — aikanaan omaisuus.
+
+Työtä johti puolalainen sotilasinsinööri Ludwik Metzel, joka toi harvinaisia kasveja eri puolilta Eurooppaa ja käytti työvoimana paikallisia maaorjia. Maasto oli rosoista ja rotkoista, ja siihen rakennettiin altaita ja lampia, vesiputouksia — korkei…
+AIEMPI KYSYMYS: Mitä puulajeja Sofijivkassa kasvaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Puistossa kasvaa yli 2 000 puu- ja pensaslajia, minkä vuoksi se toimii sekä [[arboretum]]ina että tutkimuslaitoksena. Tunnetuimpia lajeja ovat suokypressi, strobusmänty, [[tulppaanipuu]], plataani ja [[neidonhiuspuu]]. Kaikki nämä kasvavat Umanin pohjoisosassa Kamjanka-joen varrella. En tiedä, onko joukossa mitään syötävää, mut kyllä minä toivon.
+KYSYMYS: Kerro lisää: neidonhiuspuu
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Mitä nimi Derzhprom tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi Derzhprom on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta. Rakennus on toimistotalo Vapaudenaukion laidalla [[Harkovassa]], ja se valmistui vuonna 1928. Sitä pidetään yhtenä [[konstruktivismin]] pääteoksista. Pitkä nimi lyhyeksi leikattuna, niin kuin kirjeetkin.
+KYSYMYS: Kerro lisää: Harkovassa
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Mitä nimi Derzhprom tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Nimi Derzhprom on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta. Rakennus on toimistotalo Vapaudenaukion laidalla [[Harkovassa]], ja se valmistui vuonna 1928. Sitä pidetään yhtenä [[konstruktivismin]] pääteoksista. Pitkä nimi lyhyeksi leikattuna, niin kuin kirjeetkin.
+KYSYMYS: Kerro lisää: konstruktivismin
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Kapkaupunki: Bo-Kaap ja kieli, joka kirjoitettiin oikealta] Jan de Waal alkoi 1763 rakentaa Signal Hillin juurelle pieniä vuokrataloja, huurhuisjeja. Alueelle muutti kaakkoisaasialaisia muslimikäsityöläisiä, ja ensimmäinen moskeija avattiin 1794. Vuoden 1834 vapautumisen jälkeen taloja rakennettiin lisää. Korttelissa on Etelä-Afrikan suurin ennen vuotta 1850 rakennetun arkkitehtuurin keskittymä. Talojen kirkkaita värejä selitetään vapauden merkiksi, koska vuokralla ollessa ne oli maalattava valkoisiksi — mutta tapa maalata värikkäästi näyttää yleistyneen vasta 1900-luvun lopulla. Korttelin madrasoissa syntyi 1830-luvulla arabialainen afrikaans.
+AIEMPI KYSYMYS: Mistä kohtaa rakennuksen symmetrian näkee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Derzhpromin erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä, [[Vapaudenaukion]] keskeltä. Muualta katsottuna rakennus ei näytä samalla tavalla tasapainoiselta. Talo valmistui vuonna 1928, ja sen suunnittelivat arkkitehdit [[Sergei Serafimov]], Samuil Kravets ja Mark Felger. Ylhäältä katsottuna minulla on tietysti oma näkökulmani.
+KYSYMYS: Kerro lisää: Vapaudenaukion
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Mistä kohtaa rakennuksen symmetrian näkee?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Derzhpromin erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä, [[Vapaudenaukion]] keskeltä. Muualta katsottuna rakennus ei näytä samalla tavalla tasapainoiselta. Talo valmistui vuonna 1928, ja sen suunnittelivat arkkitehdit [[Sergei Serafimov]], Samuil Kravets ja Mark Felger. Ylhäältä katsottuna minulla on tietysti oma näkökulmani.
+KYSYMYS: Kerro lisää: Sergei Serafimov
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Keitä Derzhpromin arkkitehdit olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Derzhpromin arkkitehdit olivat [[Sergei Serafimov]], [[Samuil Kravets]] ja [[Mark Felger]]. He saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Rakennus on [[konstruktivismin]] pääteoksia. Hieno suoritus kolmelta miehelt, ja kyyhky vain katselee.
+KYSYMYS: Kerro lisää: Samuil Kravets
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Keitä Derzhpromin arkkitehdit olivat?
+AIEMPI VASTAUS (Livia):
+No jopas. Derzhpromin arkkitehdit olivat [[Sergei Serafimov]], [[Samuil Kravets]] ja [[Mark Felger]]. He saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Rakennus on [[konstruktivismin]] pääteoksia. Hieno suoritus kolmelta miehelt, ja kyyhky vain katselee.
+KYSYMYS: Kerro lisää: Mark Felger
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Rakennukset: Tuulitorni oli talon ilmastointi] Dubain Shindaghassa on 1890-luvulla rakennettu kauppiaan ja hallitsijan talo, joka on nykyään museo. Katolla on tuulitorneja: neliömäisiä hormeja, jotka on jaettu sisältä ristikkäisillä väliseinillä neljään osaan. Mistä suunnasta tuuli tuleekin, yksi osa ottaa ilman sisään ja muut imevät lämmintä ilmaa ulos, joten alla oleva huone pysyy viileämpänä. Seinät ovat korallikiveä ja kipsiä, ja kattopalkkeina on mangrovepuun runkoja, jotka kasvavat suoriksi mutta jäävät ohuiksi.
+AIEMPI KYSYMYS: Millainen Derzhprom oli sisältä valmistuessaan?
+AIEMPI VASTAUS (Livia):
+Kato, nyt päästään asiaan. Derzhpromin rakenne oli betonia, ja sen toisiinsa kytketyt tornit yhdistivät yläkulkusillat. Sisällä oli [[ilmastointi]], sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen [[jätekuilujärjestelmä]]. Arkkitehtuurikriitikko [[Reyner Banham]] piti taloa 1920-luvun merkittävimpien saavutusten joukossa. Aika moderni talo, eikä ihme.
+KYSYMYS: Kerro lisää: ilmastointi
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Millainen Derzhprom oli sisältä valmistuessaan?
+AIEMPI VASTAUS (Livia):
+Kato, nyt päästään asiaan. Derzhpromin rakenne oli betonia, ja sen toisiinsa kytketyt tornit yhdistivät yläkulkusillat. Sisällä oli [[ilmastointi]], sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen [[jätekuilujärjestelmä]]. Arkkitehtuurikriitikko [[Reyner Banham]] piti taloa 1920-luvun merkittävimpien saavutusten joukossa. Aika moderni talo, eikä ihme.
+KYSYMYS: Kerro lisää: jätekuilujärjestelmä
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Millainen Derzhprom oli sisältä valmistuessaan?
+AIEMPI VASTAUS (Livia):
+Kato, nyt päästään asiaan. Derzhpromin rakenne oli betonia, ja sen toisiinsa kytketyt tornit yhdistivät yläkulkusillat. Sisällä oli [[ilmastointi]], sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen [[jätekuilujärjestelmä]]. Arkkitehtuurikriitikko [[Reyner Banham]] piti taloa 1920-luvun merkittävimpien saavutusten joukossa. Aika moderni talo, eikä ihme.
+KYSYMYS: Kerro lisää: Reyner Banham
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Musiikki: Odessan ääni] 1895 — Leonid Utjosov syntyi Odessassa 1895 nimellä Lazar Vaisbein. Hän aloitti uransa sirkusakrobaattina ja perusti 1920-luvulla yhden Neuvostoliiton ensimmäisistä jazzorkestereista. Ohjelmistossa olivat satamakortteleiden laulut ja odessalainen sanailu — laulun ja vitsin väliä hän ei erotellut lainkaan. Vuonna 1965 hänestä tuli ensimmäinen kevyen musiikin laulaja, joka sai Neuvostoliiton kansantaiteilijan arvon. Kaupunginpuistossa hän istuu nykyään pronssisena penkillä, ja viereen on jätetty tilaa.
+- [Ukraina — maalehti / Musiikki] Odessassa syntyi yksi Neuvostoliiton ensimmäisistä jazzorkestereista — ja koulu, joka lähetti maailmalle viulisteja toisensa jälkeen.
+AIEMPI KYSYMYS: Mitä konstruktivismi tarkoittaa arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Konstruktivismi oli 1920-luvun [[Neuvostoliiton]] avantgardistinen suuntaus, jonka rakennukset tunnistaa geometrisista muodoista, teollisista materiaaleista ja koristeiden välttämisestä. Rakennuksen oli tarkoitus palvella uutta yhteiskuntaa ja heijastaa konetta ja tekniikkaa. [[Derzhpromin]] kaltaiset suuret toimistotalot kuuluvat suuntauksen tunnetuimpiin esimerkkeihin Ukrainassa. En ole varma, mikä on tarkka suuntauksen alkuvuosi, joten jätän sen sanomatta. Ei paha selitys kyyhkyltä.
+KYSYMYS: Kerro lisää: Neuvostoliiton
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Derzhprom (tekniikka)
+Tietoruudun teksti: Derzhprom on toimistorakennus Harkovan Vapaudenaukion laidalla. Se valmistui 1928 ja oli Neuvostoliiton ensimmäinen moderni pilvenpiirtäjä sekä konstruktivismin pääteoksia. Nimi on lyhenne kahdesta sanasta, jotka yhdessä tarkoittavat valtion teollisuutta.
+
+Arkkitehdit Sergei Serafimov, Samuil Kravets ja Mark Felger saivat rakennuksen pystyyn kolmessa vuodessa, ja avajaiset pidettiin 7. marraskuuta 1928. Valmistuessaan se oli maailman tilavin yksittäinen rakennus, eikä sitä ohitettu ennen 1930-lukua. Erikoisin piirre on symmetria, jonka näkee vain yhdestä pisteestä: aukion keskeltä.
+
+Betoni, toisiinsa kytketyt tornit ja niiden väliset yläkulkusillat tekivät talosta poikkeuksellisen. Sisällä oli ilmastointi, sähkövalot ja radiopisteet sekä Ukrainan ensimmäinen jätekuilujärjestelmä. Arkkitehtuurikriitikko Reyner Banham piti taloa 1920-luvun merkittävimpien saavutusten joukossa — mittakaava…
+AIEMPI KYSYMYS: Mitä konstruktivismi tarkoittaa arkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Konstruktivismi oli 1920-luvun [[Neuvostoliiton]] avantgardistinen suuntaus, jonka rakennukset tunnistaa geometrisista muodoista, teollisista materiaaleista ja koristeiden välttämisestä. Rakennuksen oli tarkoitus palvella uutta yhteiskuntaa ja heijastaa konetta ja tekniikkaa. [[Derzhpromin]] kaltaiset suuret toimistotalot kuuluvat suuntauksen tunnetuimpiin esimerkkeihin Ukrainassa. En ole varma, mikä on tarkka suuntauksen alkuvuosi, joten jätän sen sanomatta. Ei paha selitys kyyhkyltä.
+KYSYMYS: Kerro lisää: Derzhpromin
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Granada — kohdekartta / Kohdekartta: Alhambra] 1238–1391 Punertavalle kukkulalle Granadan laitaan alkoi vuonna 1238 nousta linnoituskaupunki, jonka arabiankielinen nimi Alhambra tarkoittaa suunnilleen punaista. Nimi juontuu paikallisesta savesta, jossa on niin paljon rautaa, että muurit hehkuvat punertavina auringonlaskussa. Rakentamisen aloitti Nasridien suvun perustaja Muhammad I, ja 1300-luvulla hallitsijat Yusuf I ja Muhammad V laajensivat linnoituksesta kokonaisen pikkukaupungin, jossa oli moskeijoita, kylpylöitä, työpajoja ja jopa oma vesijohtoverkosto. Alhambra on valtava - sen alueelle mahtuisi lähes kaksikymmentä jalkapallokenttää - ja sisällä on ainakin kuusi eri palatsia. Kuuluisin niistä on Leijonien palatsi, jonka pihalla m…
+- [Granada — kaupunkilehti / Granada: Palatsi, jota ei purettu] Alhambra oli Granadan emiirikunnan hallintokeskus ja Iberian niemimaan viimeisen muslimivaltion sydän. Kun se luovutettiin vuonna 1492, uudet hallitsijat eivät purkaneet palatsia vaan muuttivat siihen — siksi sen kipsikoristelu ja arabiankieliset kirjoitukset ovat yhä paikoillaan. Sama lause toistuu seinillä uudestaan ja uudestaan: se oli hallitsijasuvun tunnuslause, ja se kuuluu "ei ole voittajaa paitsi Jumala".
+- [Granada — kaupunkilehti / Musiikki: Säveltäjä, joka muutti Alhambran kylkeen] Manuel de Falla kirjoitti teoksensa "Öitä Espanjan puutarhoissa" vuosina 1909–1915, kun asui vielä Pariisissa ja Madridissa. Sen ensimmäinen osa on nimeltään "Generalifessa", ja se on puutarha Alhambran kukkulalla. Vasta myöhemmin Falla muutti Granadaan ja asettui pieneen puutarhataloon aivan saman kukkulan rinteeseen; talo on nyt museo ja piano yhä paikallaan. Vuonna 1922 hän järjesti Alhambran pihalla kilpailun, joka pelasti vanhan cante jondo -laulun unohdukselta.
+AIEMPI KYSYMYS: Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Esikuvana oli yhtenä muun muassa [[Alhambra]], mauritanialaistyylinen palatsi Espanjan Granadassa. Residenssin suunnitteli tsekkiläinen [[Josef Hlávka]], ja rakennuskompleksi valmistui vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen. Siitä on tullut [[Tšernivtsin yliopiston]] päärakennus. Kyllä tuo näyttää hienolta ylhäältäkin.
+KYSYMYS: Kerro lisää: Alhambra
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+AIEMPI KYSYMYS: Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Esikuvana oli yhtenä muun muassa [[Alhambra]], mauritanialaistyylinen palatsi Espanjan Granadassa. Residenssin suunnitteli tsekkiläinen [[Josef Hlávka]], ja rakennuskompleksi valmistui vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen. Siitä on tullut [[Tšernivtsin yliopiston]] päärakennus. Kyllä tuo näyttää hienolta ylhäältäkin.
+KYSYMYS: Kerro lisää: Josef Hlávka
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Kuvio kertoi kotiseudun] 1800-luku — Kirjottu paita eli vyšyvanka on osa ukrainalaista kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat punainen, musta ja valkoinen, ja jokaisella seudulla oli omat kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun kolmantena torstaina vietettävä kansainvälinen juhla, jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.
+AIEMPI KYSYMYS: Mikä ulkomainen rakennus toimi esikuvana Tšernivtsin residenssille?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Esikuvana oli yhtenä muun muassa [[Alhambra]], mauritanialaistyylinen palatsi Espanjan Granadassa. Residenssin suunnitteli tsekkiläinen [[Josef Hlávka]], ja rakennuskompleksi valmistui vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen. Siitä on tullut [[Tšernivtsin yliopiston]] päärakennus. Kyllä tuo näyttää hienolta ylhäältäkin.
+KYSYMYS: Kerro lisää: Tšernivtsin yliopiston
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Kuvio kertoi kotiseudun] 1800-luku — Kirjottu paita eli vyšyvanka on osa ukrainalaista kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat punainen, musta ja valkoinen, ja jokaisella seudulla oli omat kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun kolmantena torstaina vietettävä kansainvälinen juhla, jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.
+AIEMPI KYSYMYS: Kuka suunnitteli Bukovinan metropoliittojen residenssin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Residenssin suunnitteli tsekkiläinen [[Josef Hlávka]], ja rakennus valmistui vuosina 1864–1882. Se oli Bukovinan ja Dalmatian metropoliittojen asuinpaikka, ja nykyisin siinä toimii [[Tšernivtsin yliopisto]]. UNESCO kirjasi sen maailmanperintökohteeksi vuonna 2011. Tsekkiläinen se oli, ei kyyhky.
+KYSYMYS: Kerro lisää: Tšernivtsin yliopisto
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+AIEMPI KYSYMYS: Milloin Tšernivtsin yliopisto perustettiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Tšernivtsin yliopisto]] perustettiin vuonna 1875, ja se toimii nykyään entisen [[Bukovinan]] metropoliittojen residenssin tiloissa. Residenssikompleksi rakennettiin vuosina 1864–1882, joten yliopisto aloitti toimintansa rakennustöiden vielä jatkuessa. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. Sepä pitkä historia, mut kyllä minä sen muistin.
+KYSYMYS: Kerro lisää: Bukovinan
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Keidas: Kahvi kaadetaan kupin pohjalle] Arabialainen kahvi eli gahwa paahdetaan vaaleaksi ja maustetaan kardemummalla, joskus myös sahramilla. Se keitetään kupariseen tai teräksiseen kannuun, jota sanotaan dallaksi, ja kaadetaan pieniin korvattomiin kuppeihin vain pohjalle asti — jotta kuppi pysyy kädessä kuumana vain hetken ja jotta tarjoaja voi kaataa lisää. Vieras juo tavallisesti yhdestä kolmeen kuppia ja heiluttaa sitten kuppia kädessään, mikä tarkoittaa kiitos, riittää. Unesco lisäsi tavan aineettoman kulttuuriperinnön luetteloon vuonna 2015.
+AIEMPI KYSYMYS: Milloin residenssi tuli maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[UNESCO]] kirjasi Bukovinan metropoliittojen residenssin [[maailmanperintökohteeksi]] vuonna 2011. Kohde on [[Tšernivtsin yliopiston]] päärakennus, ja sen on suunnitellut tsekkiläinen Josef Hlávka. Rakennus yhdistää bysanttilaista ja mauritanialaista tyyliä. Onpas siitä ollut aikaa jo.
+KYSYMYS: Kerro lisää: UNESCO
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Milloin residenssi tuli maailmanperintökohteeksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[UNESCO]] kirjasi Bukovinan metropoliittojen residenssin [[maailmanperintökohteeksi]] vuonna 2011. Kohde on [[Tšernivtsin yliopiston]] päärakennus, ja sen on suunnitellut tsekkiläinen Josef Hlávka. Rakennus yhdistää bysanttilaista ja mauritanialaista tyyliä. Onpas siitä ollut aikaa jo.
+KYSYMYS: Kerro lisää: maailmanperintökohteeksi
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Kuvio kertoi kotiseudun] 1800-luku — Kirjottu paita eli vyšyvanka on osa ukrainalaista kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat punainen, musta ja valkoinen, ja jokaisella seudulla oli omat kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun kolmantena torstaina vietettävä kansainvälinen juhla, jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.
+AIEMPI KYSYMYS: Mikä on Vyšyvanka-päivä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vyšyvanka-päivä on kansainvälinen juhla, jota vietetään toukokuun kolmantena torstaina ja jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan. Juhlan perusti vuonna 2006 opiskelija [[Lesia Voroniuk]] [[Tšernivtsin yliopistossa]]. Kirjottu paita eli vyšyvanka on osa [[ukrainalaisen kansallispuvun]] perinnettä, ja jokaisella seudulla oli omat kuvionsa. Perinteisiä värejä ovat punainen, musta ja valkoinen.
+
+Kuvio kertoo kotiseudun, ja minä kerron vain sen, että pampuški olisi ihan paikallaan juhlapöydässä. Mut ei kukaan kysy.
+KYSYMYS: Kerro lisää: Lesia Voroniuk
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Kuvio kertoi kotiseudun] 1800-luku — Kirjottu paita eli vyšyvanka on osa ukrainalaista kansallispukua, ja kirjonnan juuret ulottuvat skyyttalaiseen taiteeseen 400-luvulle eaa. asti. Perinteisiä värejä ovat punainen, musta ja valkoinen, ja jokaisella seudulla oli omat kuvionsa ja ompelutekniikkansa: tuntija saattoi katsoa paidasta, mistä kylästä sen käyttäjä oli kotoisin. Langat värjättiin ennen kasvien kuorella, lehdillä ja marjoilla. Vuonna 2006 opiskelija Lesia Voroniuk perusti Tšernivtsin yliopistossa Vyšyvanka-päivän, josta on kasvanut toukokuun kolmantena torstaina vietettävä kansainvälinen juhla, jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan.
+AIEMPI KYSYMYS: Mikä on Vyšyvanka-päivä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vyšyvanka-päivä on kansainvälinen juhla, jota vietetään toukokuun kolmantena torstaina ja jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan. Juhlan perusti vuonna 2006 opiskelija [[Lesia Voroniuk]] [[Tšernivtsin yliopistossa]]. Kirjottu paita eli vyšyvanka on osa [[ukrainalaisen kansallispuvun]] perinnettä, ja jokaisella seudulla oli omat kuvionsa. Perinteisiä värejä ovat punainen, musta ja valkoinen.
+
+Kuvio kertoo kotiseudun, ja minä kerron vain sen, että pampuški olisi ihan paikallaan juhlapöydässä. Mut ei kukaan kysy.
+KYSYMYS: Kerro lisää: Tšernivtsin yliopistossa
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Bukovinan metropoliittojen residenssi (Tšernivtsin yliopisto) (kulttuuri)
+Tietoruudun teksti: Tšernivtsin yliopiston päärakennus on entinen Bukovinan ja Dalmatian metropoliittojen residenssi, jonka suunnitteli tsekkiläinen Josef Hlávka. Kompleksi rakennettiin vuosina 1864–1882 bysanttilaista ja mauritanialaista tyyliä yhdistellen, ja yhtenä esikuvana oli Alhambra. Rakennukset ryhmittyvät noin 100 × 70 metrin sisäpihan ympärille. UNESCO kirjasi residenssin maailmanperintökohteeksi vuonna 2011. Yliopisto on perustettu vuonna 1875, ja se toimii nykyään residenssin tiloissa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Ruoka: Borssi sai kiireellisen suojelun] 2022 — Borssi on punajuuresta keitetty hapan keitto, jonka päälle tulee lusikallinen smetanaa ja viereen valkosipulisämpylä. Unesco otti ukrainalaisen borssinkeiton kulttuurin kiireellistä suojelua vaativien luetteloon heinäkuussa 2022. Samalla se muistutti, että borssia keitetään monessa maassa eikä merkintä tee siitä kenenkään yksinomaista omaisuutta.
+AIEMPI KYSYMYS: Mikä on Vyšyvanka-päivä?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Vyšyvanka-päivä on kansainvälinen juhla, jota vietetään toukokuun kolmantena torstaina ja jolloin ukrainalaiset ympäri maailmaa pukevat ylleen kirjontapaidan. Juhlan perusti vuonna 2006 opiskelija [[Lesia Voroniuk]] [[Tšernivtsin yliopistossa]]. Kirjottu paita eli vyšyvanka on osa [[ukrainalaisen kansallispuvun]] perinnettä, ja jokaisella seudulla oli omat kuvionsa. Perinteisiä värejä ovat punainen, musta ja valkoinen.
+
+Kuvio kertoo kotiseudun, ja minä kerron vain sen, että pampuški olisi ihan paikallaan juhlapöydässä. Mut ei kukaan kysy.
+KYSYMYS: Kerro lisää: ukrainalaisen kansallispuvun
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+AIEMPI KYSYMYS: Minkä kaupungin kanssa rata yhdistää Klevanin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rata yhdistää Klevanin [[Orzhivin]] kaupunkiin Rivnen alueella Ukrainassa. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle, ja koko yksiraiteinen rata on noin 6,4 kilometriä pitkä. Metsän halki kulkeva osuus on noin 4,9 kilometriä, ja siellä [[Rivnen]] alueen puut kaartuvat raiteen ylle vihreäksi holviksi. Kyllä se näyttää ylhäältä kauniilta.
+KYSYMYS: Kerro lisää: Orzhivin
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+AIEMPI KYSYMYS: Minkä kaupungin kanssa rata yhdistää Klevanin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Rata yhdistää Klevanin [[Orzhivin]] kaupunkiin Rivnen alueella Ukrainassa. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle, ja koko yksiraiteinen rata on noin 6,4 kilometriä pitkä. Metsän halki kulkeva osuus on noin 4,9 kilometriä, ja siellä [[Rivnen]] alueen puut kaartuvat raiteen ylle vihreäksi holviksi. Kyllä se näyttää ylhäältä kauniilta.
+KYSYMYS: Kerro lisää: Rivnen
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Kuinka monta kertaa päivässä junat kulkevat radalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Junia kulkee radalla vain kolme päivässä, ja rataa liikennöi [[Ukrainan rautatieyhtiö UZ]]. Siksi metsäosuudella voivat kävellä myös pariskunnat ja valokuvaajat. Rata on yksiraiteinen [[teollisuusrata]], joka päättyy Orzhivin kuitulevytehtaalle. Aika rauhallinen liikenne, vaikka postikyyhky kyllä ehtisi väliin.
+KYSYMYS: Kerro lisää: Ukrainan rautatieyhtiö UZ
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+AIEMPI KYSYMYS: Kuinka monta kertaa päivässä junat kulkevat radalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Junia kulkee radalla vain kolme päivässä, ja rataa liikennöi [[Ukrainan rautatieyhtiö UZ]]. Siksi metsäosuudella voivat kävellä myös pariskunnat ja valokuvaajat. Rata on yksiraiteinen [[teollisuusrata]], joka päättyy Orzhivin kuitulevytehtaalle. Aika rauhallinen liikenne, vaikka postikyyhky kyllä ehtisi väliin.
+KYSYMYS: Kerro lisää: teollisuusrata
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Klevanin rakkaudentunneli (kulttuuri)
+Tietoruudun teksti: Klevanin rakkaudentunneli on teollisuusradan osuus Rivnen alueella Ukrainassa, ja rata yhdistää Klevanin Orzhivin kaupunkiin. Se päättyy Orzhivin pohjoisosan kuitulevytehtaalle. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Puut kaartuvat raiteen ylle vihreiksi holveiksi, jotka muodostavat luonnollisen tunnelin. Rata on Ukrainan rautatieyhtiö UZ:n liikennöimä, mutta junia kulkee vain kolme päivässä, joten radalla kävelevät myös pariskunnat ja valokuvaajat.
+AIEMPI KYSYMYS: Kuinka pitkä rakkaudentunneli on?
+AIEMPI VASTAUS (Livia):
+Katotaas. Koko yksiraiteinen rata on noin 6,4 kilometriä pitkä, ja metsän halki kulkeva osuus on noin 4,9 kilometriä. Rata on [[teollisuusradan]] osuus Rivnen alueella, ja se yhdistää Klevanin ja [[Orzhivin]] kaupungin. Puut kaartuvat raiteen ylle vihreiksi holveiksi. Kuuden kilometrin matkan minä lentäisin hetkessä.
+KYSYMYS: Kerro lisää: teollisuusradan
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+AIEMPI KYSYMYS: Milloin luostarin rakennustyöt valmistuivat?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Rakennustyöt valmistuivat vuonna 1642. Ne olivat alkaneet vuonna 1634, joten rakentaminen kesti kahdeksan vuotta. Paikan oli lahjoittanut karmeliitoille vuonna 1630 voivoda [[Janusz Tyszkiewicz Łohojski]], ja lahjoitukseen kuului [[Berdytšivin]] linnoitus, johon [[karmeliittaluostari]] rakennettiin. Ei paha, kahdeksan vuotta, ja minä muistin kaikki luvut.
+KYSYMYS: Kerro lisää: Janusz Tyszkiewicz Łohojski
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+AIEMPI KYSYMYS: Milloin luostarin rakennustyöt valmistuivat?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Rakennustyöt valmistuivat vuonna 1642. Ne olivat alkaneet vuonna 1634, joten rakentaminen kesti kahdeksan vuotta. Paikan oli lahjoittanut karmeliitoille vuonna 1630 voivoda [[Janusz Tyszkiewicz Łohojski]], ja lahjoitukseen kuului [[Berdytšivin]] linnoitus, johon [[karmeliittaluostari]] rakennettiin. Ei paha, kahdeksan vuotta, ja minä muistin kaikki luvut.
+KYSYMYS: Kerro lisää: Berdytšivin
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+AIEMPI KYSYMYS: Milloin luostarin rakennustyöt valmistuivat?
+AIEMPI VASTAUS (Livia):
+Kato, tää on helppo. Rakennustyöt valmistuivat vuonna 1642. Ne olivat alkaneet vuonna 1634, joten rakentaminen kesti kahdeksan vuotta. Paikan oli lahjoittanut karmeliitoille vuonna 1630 voivoda [[Janusz Tyszkiewicz Łohojski]], ja lahjoitukseen kuului [[Berdytšivin]] linnoitus, johon [[karmeliittaluostari]] rakennettiin. Ei paha, kahdeksan vuotta, ja minä muistin kaikki luvut.
+KYSYMYS: Kerro lisää: karmeliittaluostari
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bryssel — kohdekartta / Kohdekartta: Grand-Place] 1695–1699 Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen olleen leipätorin mukaan, vaikka yksikään kuningas ei ole siinä asunut. Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori — ironista kyll…
+AIEMPI KYSYMYS: Minkä ikonin ansiosta luostari tuli tunnetuksi?
+AIEMPI VASTAUS (Livia):
+No niin, ikoni. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista. Paavi [[Benedictus XIV]] antoi ikonille kultaiset kruunut vuonna 1756, ja ikoni veti puoleensa [[pyhiinvaeltajia]]. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991. Pyhiinvaeltajat ja minä, kyl me ollaan samaa sukua.
+KYSYMYS: Kerro lisää: Benedictus XIV
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suakin — kaupunkilehti / Karavaanit, kauppa ja pyhiinvaeltajat: Minareetti joka kutsui pyhiinvaeltajia] Kun pohjoisempana sijainnut pyhiinvaellussatama Aydhab hylättiin 1400-luvulla, Suakinista tuli tärkein lähtösatama muslimeille, jotka matkasivat Länsi- ja Keski-Afrikasta laivalla Punaisenmeren yli Mekkaan. Shafi'in moskeijan minareetista kuulutettiin rukoukset päivittäin, ja se opasti saapuvat pyhiinvaeltajat kaupungin sydämeen ennen laivaan nousua. Osa pyhiinvaeltajista jäi kaupunkiin viikoiksi tai kuukausiksi odottamaan suotuisia tuulia tai vapaata laivapaikkaa, mikä piti Suakinin majatalot ja torit jatkuvasti täynnä matkalaisia.
+AIEMPI KYSYMYS: Minkä ikonin ansiosta luostari tuli tunnetuksi?
+AIEMPI VASTAUS (Livia):
+No niin, ikoni. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista. Paavi [[Benedictus XIV]] antoi ikonille kultaiset kruunut vuonna 1756, ja ikoni veti puoleensa [[pyhiinvaeltajia]]. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991. Pyhiinvaeltajat ja minä, kyl me ollaan samaa sukua.
+KYSYMYS: Kerro lisää: pyhiinvaeltajia
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+AIEMPI KYSYMYS: Keitä paljasjalkaiset karmeliitat ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paljasjalkaiset karmeliitat ovat karmeliittaritarikunnan uudistushaara, joka syntyi 1500-luvun lopulla. Sen uudistajina pidetään [[Avilan Teresaa]] ja [[Ristin Johannesta]], jotka halusivat palauttaa luostarielämään yksinkertaisuuden, hiljaisuuden ja ankaran elämäntavan. Nimi viittaa tähän vaatimattomuuteen, sillä veljet ja sisaret käyttivät yksinkertaisia sandaaleja kenkien sijaan. Haara on levinnyt monen maan luostareihin ja toimii yhä tänä päivänä. Pitkä selitys, mut kyl tää pysyi päässä.
+KYSYMYS: Kerro lisää: Avilan Teresaa
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kohdekartta / Kohdekartta: Ristin ylentämisen kirkko] 1747–1758 Tämä on Siperian barokin omaperäisin rakennus. Nimitys syntyi vasta 1924, kun irkutskilainen kotiseuduntutkija D. A. Boldyrev-Kazarin otti sen käyttöön; tyylillä tarkoitetaan 1700-luvun Siperian kivikirkkoja, joita laskettiin vuonna 1803 kaikkiaan 115. Ne ovat venäläisen barokin maakunnallinen muunnos, johon tuli vaikutteita ukrainalaisesta barokista ja paikoin myös lamalaisesta kuvastosta. Parhaiten tyyli on säilynyt Irkutskissa, Tobolskissa ja Tomskissa. Ristin ylentämisen kirkko rakennettiin vuosina 1747–1758, ja sitä on kutsuttu tyylin parhaaksi esimerkiksi. Sen buddhalaisvaikutteiset koristeaiheet kiinnostivat tutkijoita jo ennen vallankumousta. Boldyrev-Kazarin arveli burjaa…
+- [Varsova — kohdekartta / Kohdekartta: Pyhän ristin kirkko] 1679–1696 Pyhän ristin kirkko rakennettiin Krakowskie Przedmieście -kadun varrelle vuosina 1679–1696 komeaan barokkityyliin, pääsuunnittelijanaan Józef Szymon Bellotti. Julkisivun koristeelliset huiput lisättiin vielä 1720- ja 1730-luvuilla. Kirkon pilariin muurattiin vuonna 1882 pieni uurna, jossa säilytetään säveltäjä Fryderyk Chopinin sydäntä. Chopinin sisar oli salakuljettanut sydämen Pariisista Varsovaan jo vuonna 1849 veljensä toiveen mukaisesti - vaikka ruumis haudattiin Ranskaan, sydän sai levätä kotimaassa. Sodan aikana vuonna 1944 saksalaiset joukot räjäyttivät kirkon pahoin, mutta Chopinin sydän ehdittiin siirtää turvaan ennen räjäytyksiä. Kirkko rakennettiin uudelleen vuosina 19…
+AIEMPI KYSYMYS: Keitä paljasjalkaiset karmeliitat ovat?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Paljasjalkaiset karmeliitat ovat karmeliittaritarikunnan uudistushaara, joka syntyi 1500-luvun lopulla. Sen uudistajina pidetään [[Avilan Teresaa]] ja [[Ristin Johannesta]], jotka halusivat palauttaa luostarielämään yksinkertaisuuden, hiljaisuuden ja ankaran elämäntavan. Nimi viittaa tähän vaatimattomuuteen, sillä veljet ja sisaret käyttivät yksinkertaisia sandaaleja kenkien sijaan. Haara on levinnyt monen maan luostareihin ja toimii yhä tänä päivänä. Pitkä selitys, mut kyl tää pysyi päässä.
+KYSYMYS: Kerro lisää: Ristin Johannesta
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+AIEMPI KYSYMYS: Mikä on voivoda?
+AIEMPI VASTAUS (Livia):
+Ai tota, vanha virkanimi. Voivoda on slaavilaisissa maissa käytetty arvonimi, joka tarkoitti alun perin sotapäällikköä ja myöhemmin alueen hallitsijaa tai korkeaa virkamiestä. [[Puola-Liettuan]] valtakunnassa voivoda johti oman alueensa eli voivodikunnan hallintoa ja sotaväkeä, ja hän kuului yleensä ylimystöön. [[Berdytšivin]] luostarin lahjoittanut Janusz Tyszkiewicz Łohojski oli tällainen [[aatelismies]]. Sana elää yhä esimerkiksi Puolan nykyisessä aluejaossa, jossa maakuntaa kutsutaan nimellä voivodikunta. Virkanimi on mielestäni komea, vaikka minä en ole koskaan saanut tittelistä mitään.
+KYSYMYS: Kerro lisää: Puola-Liettuan
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Irkutsk — kohdekartta / Kohdekartta: Znamenskin luostari] Innokenti Irkutskilainen 1680–1731 Luostari on Ušakovkan takana, siis vanhan kaupungin ulkopuolella pohjoisessa — matkalla sinne ylitetään joki, ja jo Irkutskin varhaisissa kuvauksissa luostari, linnoitus ja satama luetaan sen toiselle puolelle. Nimi tulee Jumalanäidin Merkin ikonista. Ulkonäöltään rakennukset ovat samaa sukua kuin kaupungin muut vanhat kirkot: valkoiset seinäpinnat, vihreät telttakatot ja siniset kupolit. Tärkein asia on kuitenkin se, kenen takia tänne tullaan. Innokenti Irkutskilainen — syntyjään Ivan Kultšitski, noin 1680 syntynyt aatelismies Tšernigovin hiippakunnasta — vihittiin vuonna 1721 piispaksi Kiovan luolaluostarissa valmistautuakseen Kiinan-lähetystyöhön. Kiina…
+- [Saint Helena — maalehti / Historia: Mies, joka jäi saarelle omasta tahdostaan] 1515–1545 — Portugalilainen aatelismies Fernão Lopes lähti 1510 Afonso de Albuquerquen mukana Goan valloitukseen ja jäi sinne varuskuntaan. Kun Albuquerque palasi lähes kahden vuoden kuluttua, osa miehistä oli siirtynyt vastapuolelle, ja Lopes silvottiin rangaistukseksi julkisella torilla. Hän purjehti 1515 kohti Portugalia kuninkaan armahdus taskussaan, mutta kun laiva pysähtyi Saint Helenalle vettä ja ruokaa hakemaan, hän jäi saarelle. Seuraava laiva tuli lähes vuoden kuluttua: miehistö löysi luolan ja olkivuoteen ja jätti korppuja, juustoa ja kirjeen, jossa pyydettiin ettei hän piiloutuisi. Lopes eli saarella yli kolmekymmentä vuotta.
+AIEMPI KYSYMYS: Mikä on voivoda?
+AIEMPI VASTAUS (Livia):
+Ai tota, vanha virkanimi. Voivoda on slaavilaisissa maissa käytetty arvonimi, joka tarkoitti alun perin sotapäällikköä ja myöhemmin alueen hallitsijaa tai korkeaa virkamiestä. [[Puola-Liettuan]] valtakunnassa voivoda johti oman alueensa eli voivodikunnan hallintoa ja sotaväkeä, ja hän kuului yleensä ylimystöön. [[Berdytšivin]] luostarin lahjoittanut Janusz Tyszkiewicz Łohojski oli tällainen [[aatelismies]]. Sana elää yhä esimerkiksi Puolan nykyisessä aluejaossa, jossa maakuntaa kutsutaan nimellä voivodikunta. Virkanimi on mielestäni komea, vaikka minä en ole koskaan saanut tittelistä mitään.
+KYSYMYS: Kerro lisää: aatelismies
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Röntgenkuva: Würzburg 1895 — käsi, joka ei saa liikkua] 22.12.1895 — Käsi ei saa liikkua. Anna Bertha Röntgen pitää sitä paikallaan minuutti toisensa jälkeen tietämättä, näkyykö levylle mitään. Kun kuva kehittyy, siinä ovat hänen sormiensa luut ja vihkisormuksen tumma rengas: aviopari katsoo ensimmäistä kertaa elävän ihmisen sisään ilman veistä. Kerrotaan, että vaimo katsoi kuvaa ja sanoi nähneensä oman kuolemansa. Wilhelm Conrad Röntgen oli huomannut oudon säteilyn marraskuun kahdeksantena päivänä ja kertonut siitä viikkoihin tuskin kenellekään; hän söi usein laboratoriossaan ja toisti kokeitaan, kunnes tulos kesti hänen oman epäilynsä. Säteet hän nimesi X-säteiksi, koska ei tiennyt mitä ne olivat. Vasta 22. joulukuuta 1895 hän pyysi Anna Berth…
+- [Bergen — kaupunkilehti / Musiikki: Teatteri, jossa puhuttiin norjaa] Ole Bull oli 1850 perustamassa Bergeniin Det Norske Theateria, ensimmäistä teatteria, jossa näyttelijät puhuivat norjaa tanskan sijaan; siitä tuli myöhemmin Den Nationale Scene. Kahtakymmentä vuotta myöhemmin, 1872, Bull osti Lysøenin saaren Bergenin eteläpuolelta ja palkkasi arkkitehti Conrad Fredrik von der Lippen (1833–1901) suunnittelemaan sinne asuinrakennuksen. Siellä hän myös kuoli 17. elokuuta 1880, samana vuonna kun oli sairaana pitänyt viimeisen konserttinsa Chicagossa. Ruumista kuljettanutta laivaa saattoi viisitoista höyrylaivaa ja joukko pienempiä aluksia.
+AIEMPI KYSYMYS: Mitä kuuluisia ihmisiä liittyy Berdytšiviin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minä osaan vastata. Kirjailija [[Joseph Conrad]] syntyi Berdytšivissä vuonna 1857, ja hänestä tuli myöhemmin englanninkielisen kirjallisuuden merkittävä kirjailija. Ranskalainen [[Honoré de Balzac]] meni siellä naimisiin puolalaissyntyisen Ewelina Hańskan kanssa vuonna 1850. Kaupunki oli pitkään tunnettu myös suuresta juutalaisesta väestöstään ja pyhiinvaelluskohteena, mutta tarkempia lukuja en uskalla sanoa. Berdytšivissä ehti siis käydä monta kuuluisaa nimeä, ja kyl minä ne kaikki muistin.
+KYSYMYS: Kerro lisää: Joseph Conrad
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Berdytšivin karmeliittaluostari (kulttuuri)
+Tietoruudun teksti: Berdytšivin karmeliittaluostari on paljasjalkaisten karmeliittojen luostari Zhytomyrin alueella Ukrainassa. Voivoda Janusz Tyszkiewicz Łohojski lahjoitti Berdytšivin linnoituksen karmeliitoille vuonna 1630, ja luostarin rakennustyöt alkoivat 1634 ja valmistuivat 1642. Luostari tuli tunnetuksi Berdyczówin Neitsyt Marian ikonista, jolle paavi Benedictus XIV antoi kultaiset kruunut vuonna 1756. Ikoni veti puoleensa pyhiinvaeltajia. Luostari palautettiin roomalaiskatoliselle kirkolle vuonna 1991.
+AIEMPI KYSYMYS: Mitä kuuluisia ihmisiä liittyy Berdytšiviin?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tähän minä osaan vastata. Kirjailija [[Joseph Conrad]] syntyi Berdytšivissä vuonna 1857, ja hänestä tuli myöhemmin englanninkielisen kirjallisuuden merkittävä kirjailija. Ranskalainen [[Honoré de Balzac]] meni siellä naimisiin puolalaissyntyisen Ewelina Hańskan kanssa vuonna 1850. Kaupunki oli pitkään tunnettu myös suuresta juutalaisesta väestöstään ja pyhiinvaelluskohteena, mutta tarkempia lukuja en uskalla sanoa. Berdytšivissä ehti siis käydä monta kuuluisaa nimeä, ja kyl minä ne kaikki muistin.
+KYSYMYS: Kerro lisää: Honoré de Balzac
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+AIEMPI KYSYMYS: Kuka aloitti puiston rakentamisen ja milloin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku katson. Puiston rakentamisen aloitti tilanomistaja [[Ivan Skoropadski]] (1804–1887) vuonna 1834. Paikka oli tuolloin tasaista ja puutonta [[aroa]] jokilaaksossa Tšernihivin alueella. Aluksi istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon alettiin tuoda ulkomaisia lajeja. Työt olivat pääosin valmiit vuoteen 1890 mennessä. Yli viisikymmentä vuotta istutusta, siin on kärsivällisyyttä.
+KYSYMYS: Kerro lisää: Ivan Skoropadski
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mongolia — maalehti / Musiikki] Mongolialainen musiikki on tehty aroa varten: ääni kantaa kauas, laulut ovat pitkiä ja jousisoittimen kaulassa on hevosen pää.
+AIEMPI KYSYMYS: Kuka aloitti puiston rakentamisen ja milloin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Annas ku katson. Puiston rakentamisen aloitti tilanomistaja [[Ivan Skoropadski]] (1804–1887) vuonna 1834. Paikka oli tuolloin tasaista ja puutonta [[aroa]] jokilaaksossa Tšernihivin alueella. Aluksi istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon alettiin tuoda ulkomaisia lajeja. Työt olivat pääosin valmiit vuoteen 1890 mennessä. Yli viisikymmentä vuotta istutusta, siin on kärsivällisyyttä.
+KYSYMYS: Kerro lisää: aroa
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+AIEMPI KYSYMYS: Kuinka monta lajia puistossa kasvaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, lajimäärä. [[Trostjanetsin dendropuistossa]] kasvaa noin 520 puu- ja kasvilajia 205 hehtaarin alueella. Osa lajeista on paikallisia, ja ulkomaisia lajeja alettiin tuoda puistoon vuodesta 1840 alkaen. Luku on arvio, sillä lajimäärät voivat vaihdella laskutavan ja ajankohdan mukaan. Puisto sijaitsee [[Tšernihivin]] alueella Ukrainassa. En minä tuota laskis lehti kerrallaan.
+KYSYMYS: Kerro lisää: Trostjanetsin dendropuistossa
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+AIEMPI KYSYMYS: Kuinka monta lajia puistossa kasvaa?
+AIEMPI VASTAUS (Livia):
+Ai tota, lajimäärä. [[Trostjanetsin dendropuistossa]] kasvaa noin 520 puu- ja kasvilajia 205 hehtaarin alueella. Osa lajeista on paikallisia, ja ulkomaisia lajeja alettiin tuoda puistoon vuodesta 1840 alkaen. Luku on arvio, sillä lajimäärät voivat vaihdella laskutavan ja ajankohdan mukaan. Puisto sijaitsee [[Tšernihivin]] alueella Ukrainassa. En minä tuota laskis lehti kerrallaan.
+KYSYMYS: Kerro lisää: Tšernihivin
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+AIEMPI KYSYMYS: Mikä on dendropuisto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dendropuisto on puisto, johon on kerätty ja istutettu runsaasti erilaisia puita ja pensaita tutkimista, suojelua ja katselua varten. Nimi tulee kreikan sanasta, joka tarkoittaa puuta. Se muistuttaa kasvitieteellistä puutarhaa, mutta kokoelma koostuu pääasiassa puuvartisista kasveista. Esimerkiksi [[Trostjanetsin]] puistossa kasvaa noin 520 puu- ja kasvilajia, ja sen perustaja halusi muuttaa tasaisen jokilaakson [[kasvitieteellisen puutarhan]] kaltaiseksi kokoelmaksi. Puita on kiva katsoa ylhäältä, kyl ne vaan kasvaa.
+KYSYMYS: Kerro lisää: Trostjanetsin
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Adelaide — kaupunkilehti / Luonto: Puutarha kaurnojen pyhällä maalla] Kasvitieteellisen puutarhan paikka hyväksyttiin lakiasäätävässä neuvostossa tammikuussa 1855. Maa oli kaurnoille pyhää punaisen kengurun unelma-aluetta eli Tarndanyanggaa, mutta sitä käytettiin tuolloin poliisin hevoslaitumena. Puutarha avattiin yleisölle 4. lokakuuta 1857, ja sen viktoriaaninen Palmuhuone valmistui 1877. Ensimmäisen johtajan George William Francisin kuoltua 1865 seuraajaksi tuli saksalaissyntyinen Moritz Richard Schomburgk, luonnontutkija Robert Hermann Schomburgkin veli, joka ajoi voimakkaasti metsänsuojelualueita yhä puuttomammaksi käyvään Etelä-Australiaan.
+- [Melbourne — kaupunkilehti / Luonto: Suosta tuli puutarha] Charles La Trobe valitsi 1846 kasvitieteellisen puutarhan paikaksi soisen rantakaistan joen eteläpuolelta, kuvernöörin talon ja observatorion vierestä. Aluksi maata oli kaksi hehtaaria. Alue laajeni tuntuvasti 1857, kun Ferdinand von Muellerista tuli ensimmäinen vakinainen johtaja: hän perusti Victorian kasvitieteellisen museon ja toi puutarhaan lajeja ympäri maailman. Nykyään Melbournen puutarha on 38 hehtaaria ja siinä kasvaa lähes 50 000 kasviyksilöä, 8 500 lajia kolmessakymmenessä kokoelmassa.
+AIEMPI KYSYMYS: Mikä on dendropuisto?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Dendropuisto on puisto, johon on kerätty ja istutettu runsaasti erilaisia puita ja pensaita tutkimista, suojelua ja katselua varten. Nimi tulee kreikan sanasta, joka tarkoittaa puuta. Se muistuttaa kasvitieteellistä puutarhaa, mutta kokoelma koostuu pääasiassa puuvartisista kasveista. Esimerkiksi [[Trostjanetsin]] puistossa kasvaa noin 520 puu- ja kasvilajia, ja sen perustaja halusi muuttaa tasaisen jokilaakson [[kasvitieteellisen puutarhan]] kaltaiseksi kokoelmaksi. Puita on kiva katsoa ylhäältä, kyl ne vaan kasvaa.
+KYSYMYS: Kerro lisää: kasvitieteellisen puutarhan
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Trostjanetsin dendropuisto (luonto · vuori)
+Tietoruudun teksti: Trostjanetsin dendropuisto on 205 hehtaarin puisto Tšernihivin alueella Ukrainassa. Tilanomistaja Ivan Skoropadski (1804–1887) aloitti sen rakentamisen vuonna 1834 tasaiselle ja puuttomalle aromaan jokilaaksolle. Ensin istutettiin paikallisia puita, ja vuodesta 1840 alkaen puistoon tuotiin ulkomaisia lajeja. Sveitsi-nimistä osaa varten kasattiin vuodesta 1858 tekokukkuloita, joiden korkeus on 20–30 metriä. Työt olivat pääosin valmiit vuoteen 1890 mennessä, ja puistossa kasvaa noin 520 puu- ja kasvilajia.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mikä on aro ja miksi siellä ei luontaisesti kasva metsää?
+AIEMPI VASTAUS (Livia):
+No niin, aro. Aro on laaja, lähes puuton ruohoalue, jossa sademäärä on niin vähäinen ja ilmasto niin vaihteleva, että puut eivät yleensä menesty. Ruohovaltaisen kasvillisuuden alla on usein hyvin viljavaa mustaa maata, ja kasvillisuutta ovat muokanneet myös laidunnus ja tulipalot. Aroa on laajalti esimerkiksi [[Ukrainan]] eteläosissa [[Mustanmeren]] pohjoispuolella. Siksi Trostjanetsin kaltaisen puiston perustaminen puuttomaan aromaan oli suuri työ. Minä tykkään aroista, kun sieltä näkee kauas.
+KYSYMYS: Kerro lisää: Ukrainan

@@ -1,0 +1,1119 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+AIEMPI KYSYMYS: Mikä polonyna on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Polonyna on Ukrainan Karpaattien subalpiininen niittyvyöhyke, joka sijaitsee metsänrajan yläpuolella. Hoverlan rinteillä pyökki- ja kuusimetsien yläpuolelle jää avoin, puuton ruohikkoalue, ja juuri sitä ukrainaksi kutsutaan [[polonynaksi]]. Tällaisia niittyjä on perinteisesti käytetty kesälaitumina, ja ne ovat tyypillinen osa [[Karpaattien]] maisemaa. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: polonynaksi
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mikä polonyna on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Polonyna on Ukrainan Karpaattien subalpiininen niittyvyöhyke, joka sijaitsee metsänrajan yläpuolella. Hoverlan rinteillä pyökki- ja kuusimetsien yläpuolelle jää avoin, puuton ruohikkoalue, ja juuri sitä ukrainaksi kutsutaan [[polonynaksi]]. Tällaisia niittyjä on perinteisesti käytetty kesälaitumina, ja ne ovat tyypillinen osa [[Karpaattien]] maisemaa. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+AIEMPI KYSYMYS: Mikä joki saa alkunsa Hoverlalta?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Hoverlan itärinteellä on [[Prut-joen]] päälähde. Prut on Tonavan sivujoki: se virtaa Ukrainasta Romanian ja Moldovan rajalle ja laskee lopulta [[Tonavaan]]. Joki kulkee siis vuoren juurelta aina Mustanmeren valuma-alueen eteläosiin asti. Kyl minä sen reitin ylhäältä tunnistan.
+KYSYMYS: Kerro lisää: Prut-joen
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä joki saa alkunsa Hoverlalta?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Hoverlan itärinteellä on [[Prut-joen]] päälähde. Prut on Tonavan sivujoki: se virtaa Ukrainasta Romanian ja Moldovan rajalle ja laskee lopulta [[Tonavaan]]. Joki kulkee siis vuoren juurelta aina Mustanmeren valuma-alueen eteläosiin asti. Kyl minä sen reitin ylhäältä tunnistan.
+KYSYMYS: Kerro lisää: Tonavaan
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+AIEMPI KYSYMYS: Mitä eläimiä Ukrainan Karpaateilla elää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Karpaattien metsissä elää [[ruskeakarhuja]], [[susia]] ja [[ilveksiä]], sekä lisäksi muun muassa saksanhirviä ja villisikoja. Vuoriston laajat metsäalueet tarjoavat näille suurille eläimille elinympäristön, ja [[Karpaatit]] ovatkin Euroopan tärkeitä luonnonvaraisen eläimistön alueita. Hoverlan korkeammilla rinteillä näkee harvemmin eläimiä kuin metsävyöhykkeessä. Tost minä en kyllä lennä lähelle.
+KYSYMYS: Kerro lisää: ruskeakarhuja
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Anchorage — kaupunkilehti / Eläimet kaupungissa: Susia, valkovalaita ja dallinlampaita] Hirvi ja karhu eivät ole ainoat. Anchoragen seudulla elää noin kolmekymmentä sisämaan alaskansutta, ja vuonna 2007 sudet tappoivat useita koiria lenkillä omistajiensa kanssa. Puroissa ja järvissä on majavanpatoja, ja keväisin kettuja poikasineen näkee metsien viereisillä parkkipaikoilla. Ilveksiäkin havaitaan. Sewardin valtatiellä Kenain suuntaan Turnagain Armissa nähdään usein valkovalaita, ja Windy Pointissa dallinlampaat seisovat toisinaan aivan tien vierellä. Kaupungin itäpuolella alkaa Chugach State Park, jonka korkein kohta Bashful Peak on 8 005 jalkaa.
+AIEMPI KYSYMYS: Mitä eläimiä Ukrainan Karpaateilla elää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Karpaattien metsissä elää [[ruskeakarhuja]], [[susia]] ja [[ilveksiä]], sekä lisäksi muun muassa saksanhirviä ja villisikoja. Vuoriston laajat metsäalueet tarjoavat näille suurille eläimille elinympäristön, ja [[Karpaatit]] ovatkin Euroopan tärkeitä luonnonvaraisen eläimistön alueita. Hoverlan korkeammilla rinteillä näkee harvemmin eläimiä kuin metsävyöhykkeessä. Tost minä en kyllä lennä lähelle.
+KYSYMYS: Kerro lisää: susia
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Skansen] 1891 Artur Hazelius perusti Skansenin 11. lokakuuta 1891. Se on Ruotsin vanhin ulkoilmamuseo, ja sinne koottiin taloja, myllyjä ja pihoja eri puolilta Ruotsia — lähes 150 rakennusta, joista vain kolme on jälkeenpäin rakennettuja jäljennöksiä. Skansenilla asuu myös eläimiä: karhuja, hirviä, ilveksiä, poroja ja hylkeitä pääsee katsomaan aivan läheltä. Alue on 30 hehtaarin kokoinen, ja sinne pääsee muun muassa pienellä köysiradalla. Nykyään Skansenissa käy yli 1,3 miljoonaa vierasta joka vuosi. Suosituin perinne on Allsång på Skansen eli yhteislaulutilaisuus, joka on jatkunut jo vuosikymmenten ajan.
+- [Espanja — maalehti / Luonto: Kissa, joka melkein hävisi] Iberianilves syö melkein pelkkiä kaneja, ja kun kanitauti kaatoi saaliskannan 1900-luvun lopulla, ilves seurasi perässä. Vuonna 2002 niitä laskettiin koko maailmassa alle sata yksilöä — se oli maailman uhanalaisin kissaeläin. Pelastus tehtiin kolmella asialla: kanikantoja hoidettiin, ilveksiä kasvatettiin tarhoissa ja päästettiin luontoon, ja teille rakennettiin alikulkuja. Nyt niitä on yli kaksituhatta, ja laji siirrettiin luokasta "äärimmäisen uhanalainen" luokkaan "vaarantunut".
+AIEMPI KYSYMYS: Mitä eläimiä Ukrainan Karpaateilla elää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Karpaattien metsissä elää [[ruskeakarhuja]], [[susia]] ja [[ilveksiä]], sekä lisäksi muun muassa saksanhirviä ja villisikoja. Vuoriston laajat metsäalueet tarjoavat näille suurille eläimille elinympäristön, ja [[Karpaatit]] ovatkin Euroopan tärkeitä luonnonvaraisen eläimistön alueita. Hoverlan korkeammilla rinteillä näkee harvemmin eläimiä kuin metsävyöhykkeessä. Tost minä en kyllä lennä lähelle.
+KYSYMYS: Kerro lisää: ilveksiä
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+AIEMPI KYSYMYS: Mitä eläimiä Ukrainan Karpaateilla elää?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Karpaattien metsissä elää [[ruskeakarhuja]], [[susia]] ja [[ilveksiä]], sekä lisäksi muun muassa saksanhirviä ja villisikoja. Vuoriston laajat metsäalueet tarjoavat näille suurille eläimille elinympäristön, ja [[Karpaatit]] ovatkin Euroopan tärkeitä luonnonvaraisen eläimistön alueita. Hoverlan korkeammilla rinteillä näkee harvemmin eläimiä kuin metsävyöhykkeessä. Tost minä en kyllä lennä lähelle.
+KYSYMYS: Kerro lisää: Karpaatit
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+AIEMPI KYSYMYS: Minkä maiden halki Karpaatit kulkevat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Karpaatit]] muodostavat suuren kaaren Keski- ja Itä-Euroopan halki. Vuoristo ulottuu muun muassa [[Slovakian]], [[Puolan]], Ukrainan ja [[Romanian]] alueelle, ja sen länsipäätä kutsutaan Länsi-Karpaateiksi ja eteläistä osaa Etelä-Karpaateiksi. Maiden tarkasta luettelosta lähteet vaihtelevat sen mukaan, lasketaanko vuoriston reunaosat mukaan. Siinä ne, ja hyvin muistin.
+KYSYMYS: Kerro lisää: Slovakian
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+AIEMPI KYSYMYS: Minkä maiden halki Karpaatit kulkevat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Karpaatit]] muodostavat suuren kaaren Keski- ja Itä-Euroopan halki. Vuoristo ulottuu muun muassa [[Slovakian]], [[Puolan]], Ukrainan ja [[Romanian]] alueelle, ja sen länsipäätä kutsutaan Länsi-Karpaateiksi ja eteläistä osaa Etelä-Karpaateiksi. Maiden tarkasta luettelosta lähteet vaihtelevat sen mukaan, lasketaanko vuoriston reunaosat mukaan. Siinä ne, ja hyvin muistin.
+KYSYMYS: Kerro lisää: Puolan
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Minkä maiden halki Karpaatit kulkevat?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. [[Karpaatit]] muodostavat suuren kaaren Keski- ja Itä-Euroopan halki. Vuoristo ulottuu muun muassa [[Slovakian]], [[Puolan]], Ukrainan ja [[Romanian]] alueelle, ja sen länsipäätä kutsutaan Länsi-Karpaateiksi ja eteläistä osaa Etelä-Karpaateiksi. Maiden tarkasta luettelosta lähteet vaihtelevat sen mukaan, lasketaanko vuoriston reunaosat mukaan. Siinä ne, ja hyvin muistin.
+KYSYMYS: Kerro lisää: Romanian
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hoverla (luonto · vuori)
+Tietoruudun teksti: Hoverla on 2 061 metriä korkea ja Ukrainan korkein vuori sekä osa Ukrainan Karpaatteja. Se sijaitsee Itä-Beskideilla Tšornohoran alueella. Rinteitä peittävät pyökki- ja kuusimetsät, joiden yläpuolelle jää subalpiinisten niittyjen vyöhyke, jota ukrainaksi kutsutaan nimellä polonyna. Prut-joen päälähde on vuoren itärinteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Karpaattien pyökkimetsissä on erikoista?
+AIEMPI VASTAUS (Livia):
+Ai se. Karpaattien alkuperäiset pyökkimetsät, joista osa sijaitsee Ukrainassa ja osa Slovakiassa, kuuluvat [[Unescon maailmanperintöön]]. Ne ovat harvoja paikkoja Euroopassa, joissa pyökkimetsä on kehittynyt lähes ihmisen koskemattomana, joten niistä voidaan tutkia luonnollista metsän kiertokulkua. Pyökki on myös yksi Euroopan vuoristometsien tärkeimpiä puulajeja, ja [[Slovakian]] puolella suojelualue jatkuu lähellä rajaa. Lehtien alta ei muuten löydy yhtään murua.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöön
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Miksi Mustameren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Mustameri]] on voimakkaasti kerrostunut: pinnalla on jokien tuomaa, vähäsuolaisempaa ja kevyempää vettä, ja [[Bosporinsalmen]] kautta [[Välimereltä]] tulee alle suolaisempaa ja raskaampaa vettä. Kerrokset eivät juuri sekoitu keskenään, joten happi ei pääse pinnalta syvemmälle. Orgaaninen aines vajoaa pohjaa kohti ja kuluttaa jäljellä olevan hapen, minkä jälkeen syvässä vedessä muodostuu rikkivetyä; hapettoman alueen yläraja on noin sadan–parinsadan metrin syvyydessä. Pitkä pläjäys tuli, kerrokset ja kaikki.
+KYSYMYS: Kerro lisää: Mustameri
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Miksi Mustameren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Mustameri]] on voimakkaasti kerrostunut: pinnalla on jokien tuomaa, vähäsuolaisempaa ja kevyempää vettä, ja [[Bosporinsalmen]] kautta [[Välimereltä]] tulee alle suolaisempaa ja raskaampaa vettä. Kerrokset eivät juuri sekoitu keskenään, joten happi ei pääse pinnalta syvemmälle. Orgaaninen aines vajoaa pohjaa kohti ja kuluttaa jäljellä olevan hapen, minkä jälkeen syvässä vedessä muodostuu rikkivetyä; hapettoman alueen yläraja on noin sadan–parinsadan metrin syvyydessä. Pitkä pläjäys tuli, kerrokset ja kaikki.
+KYSYMYS: Kerro lisää: Bosporinsalmen
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Libya — maalehti / Tiede: Vesi, joka satoi kolmekymmentäkahdeksantuhatta vuotta sitten] Kun Etelä-Libyassa etsittiin 1953 öljyä, hiekan alta löytyi jotain muuta: valtava määrä juomakelpoista pohjavettä. Nubian hiekkakiven esiintymä on maailman suurin tunnettu fossiilisen veden varasto. Se ulottuu runsaan kahden miljoonan neliökilometrin alalle neljän maan alle — Libyan, Egyptin, Sudanin ja Tšadin — ja siinä arvioidaan olevan 150 000 kuutiokilometriä vettä. Vesi on sadevettä, ja isotooppitutkimus osoittaa kaksi täydentymisjaksoa: toinen 38 000 vuotta sitten Välimereltä, toinen noin 361 000 vuotta sitten trooppiselta Atlantilta. Nykyisin esiintymää ei täydennä mikään, ja neljä maata on vuodesta 2006 sopinut sen tutkimisesta yhdessä.
+- [Marseille — kaupunkilehti / Historia: Kaupunki, jonka perustivat kreikkalaiset merenkulkijat] Kreikkalaiset siirtolaiset Vähän-Aasian Fokaian kaupungista perustivat Massalian noin vuonna 600 eaa. luonnonsatamaan, joka on nykyinen Vieux-Port. Massaliasta tuli nopeasti tärkeä kauppasatama, joka välitti viiniä, öljyä ja keramiikkaa Välimereltä sisämaahan päin — ja Ranskan vanhin kaupunki oli syntynyt. Kaupungin muinaiset satamamuurit ja rakennusten perustukset ovat säilyneet Jardin des Vestiges -puutarhassa keskellä nykyistä kaupunkia — kaivaukset paljastivat ne 1960-luvulla ostoskeskuksen rakennustöiden yhteydessä.
+AIEMPI KYSYMYS: Miksi Mustameren syvyys on hapeton?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. [[Mustameri]] on voimakkaasti kerrostunut: pinnalla on jokien tuomaa, vähäsuolaisempaa ja kevyempää vettä, ja [[Bosporinsalmen]] kautta [[Välimereltä]] tulee alle suolaisempaa ja raskaampaa vettä. Kerrokset eivät juuri sekoitu keskenään, joten happi ei pääse pinnalta syvemmälle. Orgaaninen aines vajoaa pohjaa kohti ja kuluttaa jäljellä olevan hapen, minkä jälkeen syvässä vedessä muodostuu rikkivetyä; hapettoman alueen yläraja on noin sadan–parinsadan metrin syvyydessä. Pitkä pläjäys tuli, kerrokset ja kaikki.
+KYSYMYS: Kerro lisää: Välimereltä
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ateena — kaupunkilehti / Tiede: Kreikan ensimmäinen tutkimuslaitos nousi kukkulalle] 1842 — Ateenan kansallinen observatorio perustettiin vuonna 1842 Nymfien kukkulalle, ja se on Kreikan vanhin tutkimuslaitos — vain vuosikymmen sen jälkeen, kun Kreikka oli tunnustettu itsenäiseksi kuningaskunnaksi. Rakennuksen suunnitteli tanskalainen arkkitehti Theophil Hansen, ja rahoituksen antoi kreikkalainen liikemies Georgios Sinas Wienistä. Observatorio teki tähtitieteen lisäksi meteorologisia ja seismologisia havaintoja, ja isoisän matkan aikaan se on toiminut jo yli kolmekymmentä vuotta.
+- [Ateena — kohdekartta / Kohdekartta: Antiikin agora] 500-luku eaa. Antiikin agora oli vanhan Ateenan sydän. Jo 500-luvulta eaa. lähtien tälle aukiolle kokoontuivat kauppiaat, poliitikot ja tavalliset kaupunkilaiset. Toreilla myytiin hedelmiä, kankaita, saviastioita ja tuoksuvia voiteita, ja yllättävän moni myyjä oli nainen, vaikka naiset viettivät muuten aikansa yleensä kotona. Agoran laidalla seisoo yhä pystyssä Hefaistoksen temppeli, yksi maailman parhaiten säilyneistä antiikin kreikkalaisista temppeleistä. Se on kestänyt lähes koskemattomana yli 2 400 vuotta, vaikka moni muu agoran rakennus on murentunut ajan saatossa. Arkeologit ovat kaivaneet agoraa esiin vuodesta 1931 lähtien: pelkästään vuoteen 1935 mennessä maasta nousi noin 600 patsa…
+AIEMPI KYSYMYS: Mistä meri sai nimensä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nimen alkuperää ei tiedetä varmasti, ja selityksiä on useita. Yhden mukaan nimi viittaa meren synkkiin myrskyihin ja vaikeaan purjehdittavuuteen, toisen mukaan se on peräisin muinaisesta ilmansuuntien värinimityksestä, jossa musta tarkoitti pohjoista. [[Antiikin Kreikan]] asukkaat kutsuivat merta ensin vieraanvaraa vailla olevaksi ja myöhemmin vieraanvaraiseksi, ja nimeksi on esitetty myös [[iranilaista]] sanaa, joka tarkoittaa tummaa. Tarkkaa vastausta ei siis ole, ja lähteet ovat tästä eri mieltä. Eikä minulle ole kerrottu kuka on oikeassa.
+KYSYMYS: Kerro lisää: Antiikin Kreikan
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Dar al-Fonun] 1851 Naser al-Din Shahin suurvisiiri Amir Kabir perusti Dar al-Fonunin vuonna 1851. Se oli Iranin ensimmäinen moderni korkeakoulu: polytekninen oppilaitos, jossa ylimystön nuoret koulutettiin lääketieteeseen, kirurgiaan, farmasiaan, matematiikkaan ja geologiaan. Opettajat olivat pääosin itävaltalaisia, ja heidät värväsi Wienistä Daʼud Khan; joukko saapui Teheraniin marraskuussa 1851. Myöhemmin opetettiin myös tykistöä, mineralogiaa, ranskaa ja musiikkia. Itävaltalaiset eivät osanneet persiaa, joten aluksi opetettiin tulkin välityksellä. Lääketieteen opettaja Jakob Eduard Polak luennoi ranskaksi, opetteli persian puolessa vuodessa ja jatkoi sillä; hän opetti täällä vuoteen 1860. Osa opettaji…
+- [Iran — maalehti / Puutarhat: Neljä osaa ja yksi kanava] Persialaisen puutarhan peruskaava on nimeltään chahar bagh eli neljä puutarhaa: muurien sisään jäävä suorakaide jaetaan vesikanavilla neljään osaan. Kashanin Finin puutarha on kaavan tunnetuin esimerkki, ja se on säilynyt 1500-luvulta. Vesi tulee puutarhaan Solaymaniyeh-lähteestä eikä sitä pumpata: koko puisto on rakennettu loivaan rinteeseen, joten painovoima riittää pitämään suihkut käynnissä. Yhdeksän iranilaista puutarhaa otettiin yhdessä maailmanperintöluetteloon vuonna 2011, ja Fin on niistä yksi.
+- [Iran — maalehti / Käsityö] Iranilaista käsityötä mitataan tiheytenä: solmuina rivissä, paloina kuutiosenttimetrissä, polttokerroksina emalin alla. Työ tehdään yhä samoissa kaupungeissa kuin satoja vuosia sitten — Kashanissa, Shirazissa, Isfahanissa ja Yazdissa.
+AIEMPI KYSYMYS: Mistä meri sai nimensä?
+AIEMPI VASTAUS (Livia):
+Katotaas. Nimen alkuperää ei tiedetä varmasti, ja selityksiä on useita. Yhden mukaan nimi viittaa meren synkkiin myrskyihin ja vaikeaan purjehdittavuuteen, toisen mukaan se on peräisin muinaisesta ilmansuuntien värinimityksestä, jossa musta tarkoitti pohjoista. [[Antiikin Kreikan]] asukkaat kutsuivat merta ensin vieraanvaraa vailla olevaksi ja myöhemmin vieraanvaraiseksi, ja nimeksi on esitetty myös [[iranilaista]] sanaa, joka tarkoittaa tummaa. Tarkkaa vastausta ei siis ole, ja lähteet ovat tästä eri mieltä. Eikä minulle ole kerrottu kuka on oikeassa.
+KYSYMYS: Kerro lisää: iranilaista
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Teheran — kohdekartta / Kohdekartta: Sepahsalarin moskeija] Rakennuttaja Mirza Hosein Khan Sepahsalar oli Naser al-Din Shaahin suurvisiiri 1871–1873 ja sitä ennen Iranin lähettiläs Konstantinopolissa. Työ alkoi hänen käskystään 1879 ja ensimmäinen vaihe valmistui 1884; Sepahsalar kuoli 1881, ja siitä eteenpäin rakennuttajaksi merkitään shaahi. Saman pihan ympärillä on moskeija ja madrasa eli koulu. Pihaa kiertää kaksikerroksinen kaarikäytävä, ja sen takana on oppilashuoneita, kaikkiaan noin 60. Minareetteja on kahdeksan, iranilaisessa moskeijassa poikkeuksellinen määrä, ja kukin on 37 metriä korkea. Rukoussalin kupoli on niin ikään 37 metriä korkea, ja sitä kannattaa 44 pylvästä. Pohjan mitat ovat 62 kertaa 61 metriä; pinta-alaksi lähde ilmoittaa 16…
+- [Istanbul — kohdekartta / Kohdekartta: Camondon portaat] Sinä vuonna, jona isoisäsi pakkasi matkalaukkunsa, tämä kaupunki hautasi rikkaimman pankkiirinsa. Kreivi Abraham Salomon Camondo oli Istanbulin juutalaisen yhteisön patriarkka ja ottomaanihallituksen pankkiiri jo ennen kuin Ottoman Bank oli olemassa. Vuonna 1858 hän perusti koulun Peri Paşaan, pääkaupungin köyhimpään ja tiheimmin asuttuun kaupunginosaan — ja osa rabbeista julisti hänet siitä hyvästä pannaan. Koulu toimi silti kolmekymmentäkaksi vuotta ja koulutti valtaosan valtakunnan juutalaisista virkamiehistä. Camondo kuoli 92-vuotiaana Pariisissa 30. maaliskuuta 1873, ja hänen toiveensa mukaan hänet tuotiin takaisin tänne: hautajaiset pidettiin 14. huhtikuuta Hasköyn juutalaisella hauta…
+AIEMPI KYSYMYS: Mikä Bosporinsalmi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bosporinsalmi on kapea salmi, joka yhdistää Mustanmeren Marmaranmereen ja sitä kautta Välimereen. Se halkoo [[Istanbulin]] kaupunkia Euroopan ja Aasian välillä, ja sen rannat ovat tiheästi asuttuja. Salmi on ollut kautta historian tärkeä kauppa- ja merireitti, ja sitä pitkin kulkee yhä paljon laivaliikennettä [[Mustaltamereltä]] Välimerelle. Tosi paljon laivoja, ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Istanbulin
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Mikä Bosporinsalmi on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Bosporinsalmi on kapea salmi, joka yhdistää Mustanmeren Marmaranmereen ja sitä kautta Välimereen. Se halkoo [[Istanbulin]] kaupunkia Euroopan ja Aasian välillä, ja sen rannat ovat tiheästi asuttuja. Salmi on ollut kautta historian tärkeä kauppa- ja merireitti, ja sitä pitkin kulkee yhä paljon laivaliikennettä [[Mustaltamereltä]] Välimerelle. Tosi paljon laivoja, ylhäältä katsottuna.
+KYSYMYS: Kerro lisää: Mustaltamereltä
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mikä Tonavan suisto on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se on Euroopan upeimpia vesilintujen paikkoja. Tonavan suisto on laaja kosteikkoalue, jossa joki jakautuu useaksi haaraksi ennen Mustaamerta, ja sen pinta-ala jakautuu Romanian ja Ukrainan kesken. Suisto kuuluu [[Unescon maailmanperintöön]] ja sen virta on peräisin [[Tonavasta]], ja sen kosteikot, ruovikot ja vesistöt tarjoavat elinympäristön monille linnuille ja kaloille. Tonavan suistossa on myös pitkäaikaisesti asuttuja kyliä, joissa kalastetaan. Aika hyvin tää sujui.
+KYSYMYS: Kerro lisää: Unescon maailmanperintöön
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Tonava kaunoinen] Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.
+AIEMPI KYSYMYS: Mikä Tonavan suisto on?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: se on Euroopan upeimpia vesilintujen paikkoja. Tonavan suisto on laaja kosteikkoalue, jossa joki jakautuu useaksi haaraksi ennen Mustaamerta, ja sen pinta-ala jakautuu Romanian ja Ukrainan kesken. Suisto kuuluu [[Unescon maailmanperintöön]] ja sen virta on peräisin [[Tonavasta]], ja sen kosteikot, ruovikot ja vesistöt tarjoavat elinympäristön monille linnuille ja kaloille. Tonavan suistossa on myös pitkäaikaisesti asuttuja kyliä, joissa kalastetaan. Aika hyvin tää sujui.
+KYSYMYS: Kerro lisää: Tonavasta
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Myanmar — maalehti / Luonto: Delfiini, joka ajaa kalat verkkoon] Iravadinjokidelfiini on tylppäpäinen valas, jolla ei ole lainkaan kuononokkaa, ja joen 370 kilometrin pituisella makean veden osuudella niitä arvioidaan olevan 58–72. Kalastajan ja delfiinin yhteistyö on vanha tapa: mies rummuttaa kanootin laitaa kartionmuotoisella puukapulalla, läiskii melalla veden pintaa, helistää verkkoaan tai päästää kalkkunamaisen huudon. Suostunut parvi ajaa kalat puolikaareen ja työntää ne venettä kohti, ja palkaksi se saa osan sivusaaliista. Vuoden 1879 raportin mukaan kalastajat haastoivat toisiaan paikallisiin oikeuksiin saadakseen osuuden naapurin verkosta — perusteena se, että saaliin oli ajanut heidän oma delfiininsä.
+- [Porto Velho — kaupunkilehti / Porto Velho: Vaaleanpunainen delfiini joen mutaisessa vedessä] Rio Madeirassa elää amazonindelfiini (Inia geoffrensis), maailman suurin jokidelfiinilaji ja ainoa, jonka iho voi värjäytyä vaaleanpunaiseksi aikuisena. Väri johtuu ihon alla olevasta arpikudoksesta ja verisuonista, jotka paljastuvat, kun ylempi ihokerros kuluu iän ja tappeluiden myötä - vanhimmat ja aktiivisimmat urokset ovat usein väriltään kirkkaimpia. Toisin kuin merten delfiinit, amazonindelfiinin kaularanka ei ole yhteen luutunut, joten se pystyy kääntämään päätään lähes 90 astetta sivulle etsiessään saalista tulvametsän puiden välistä. Paikallisessa tarustossa delfiinin uskotaan yöllä muuttuvan mieheksi, joka viettelee kyläjuhlien naisia.
+AIEMPI KYSYMYS: Elääkö Mustallamerellä delfiinejä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kyllä elää. Mustallamerellä tavataan kolmea valaslajia, jotka ovat [[tavallinen delfiini]], [[pullonokkadelfiini]] ja [[pyöriäinen]]. Ne ovat kehittyneet omiksi alalajeikseen tai paikallisiksi kannoikseen, ja ne ovat sopeutuneet meren vähäsuolaiseen veteen. Itse en ole vielä nähnyt yhtäkään.
+KYSYMYS: Kerro lisää: tavallinen delfiini
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Milford Sound — kaupunkilehti / Sade ja vuonon eläimet: Eteläisin pullonokkadelfiinilauma] Milford Soundissa elää pysyvästi pieni pullonokkadelfiiniryhmä, joka on maailman eteläisimpänä tunnettu villi pullonokkadelfiinilauma. Toisin kuin useimmat lajitoverinsa lämpimissä merissä, nämä delfiinit ovat sopeutuneet elämään Fiordlandin kylmässä vuonovedessä, jonka pintaa peittää sateiden tuoma makea vesikerros. Matkailuveneiden matkustajat näkevät niitä usein uimassa laivan vanaveden lähellä tai sukeltamassa juuri siinä kohtaa vuonoa, jossa vesiputousten sumu synnyttää sateenkaaria. Tutkijat seuraavat laumaa tarkasti, sillä sen pieni koko ja eristyneisyys tekevät siitä erityisen herkän häiriöille.
+AIEMPI KYSYMYS: Elääkö Mustallamerellä delfiinejä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kyllä elää. Mustallamerellä tavataan kolmea valaslajia, jotka ovat [[tavallinen delfiini]], [[pullonokkadelfiini]] ja [[pyöriäinen]]. Ne ovat kehittyneet omiksi alalajeikseen tai paikallisiksi kannoikseen, ja ne ovat sopeutuneet meren vähäsuolaiseen veteen. Itse en ole vielä nähnyt yhtäkään.
+KYSYMYS: Kerro lisää: pullonokkadelfiini
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Mustameri (meri)
+Tietoruudun teksti: Mustameri on Euroopan ja Aasian välinen reunameri Balkanin itäpuolella, Kaukasuksen länsipuolella ja Anatolian pohjoispuolella. Sen rannoilla on kuusi maata — Bulgaria, Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.
+AIEMPI KYSYMYS: Elääkö Mustallamerellä delfiinejä?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kyllä elää. Mustallamerellä tavataan kolmea valaslajia, jotka ovat [[tavallinen delfiini]], [[pullonokkadelfiini]] ja [[pyöriäinen]]. Ne ovat kehittyneet omiksi alalajeikseen tai paikallisiksi kannoikseen, ja ne ovat sopeutuneet meren vähäsuolaiseen veteen. Itse en ole vielä nähnyt yhtäkään.
+KYSYMYS: Kerro lisää: pyöriäinen
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Mikä Kertšinsalmi on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kertšinsalmi]] on kapea vesiväylä, joka yhdistää [[Asovanmeren]] Mustaanmereen. Se sijaitsee [[Krimin]] niemimaan itäosan ja Tamanin niemimaan välillä, ja sitä pitkin kulkee kaikki merenkulku näiden kahden meren välillä. Salmi on siis Asovanmeren ainoa yhteys avomerelle. Siinä kuuluu aina pieni lentäjän huokaus.
+KYSYMYS: Kerro lisää: Kertšinsalmi
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Mikä Kertšinsalmi on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kertšinsalmi]] on kapea vesiväylä, joka yhdistää [[Asovanmeren]] Mustaanmereen. Se sijaitsee [[Krimin]] niemimaan itäosan ja Tamanin niemimaan välillä, ja sitä pitkin kulkee kaikki merenkulku näiden kahden meren välillä. Salmi on siis Asovanmeren ainoa yhteys avomerelle. Siinä kuuluu aina pieni lentäjän huokaus.
+KYSYMYS: Kerro lisää: Asovanmeren
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Nairn Streetin mökki] 1858 Wellingtonin vanhin alkuperäinen mökki rakennettiin 1858 Mount Cookin rinteeseen. Rakentaja oli kirvesmies William Wallis, joka oli tullut Uuteen-Seelantiin syyskuussa 1857 vaimonsa Catherinen kanssa seitsemäntoista viikon merimatkan jälkeen. Wallis oli oppipoikana ollut mukana rakentamassa Lontoon Kristallipalatsia ja tehnyt sairaaloita Krimin sodassa; taidot ja säästöt riittivät muuttoon. Toisin kuin useimmat tulijat, Wallis osti tonttinsa vasta nähtyään sen. Hän valitsi paikan, jonka alalaidassa virtasi puro: vuoden 1855 maanjäristys oli synnyttänyt hyökyaallon, joka pilasi kaupungin vesihuollon, ja lavantauti oli tappanut ihmisiä. Mökki tehtiin käsin ja lähes kokonaan kotimaisesta …
+- [Bukarest — kohdekartta / Kohdekartta: Szathmárin studio] Se valokuva, jonka juuri näit isoisäsi merkinnän vieressä, on erään bukarestilaisen ottama. Carol Popp de Szathmari muutti kaupunkiin 18-vuotiaana ja avasi tänne kaupallisen valokuvausstudion vuonna 1850. Häntä pidetään romanialaisen valokuvauksen perustajana — ja maailman ensimmäisenä sotavalokuvaajana. Vuodesta 1853 hän kuvasi Tonavan rannoilla sekä turkkilaisia että venäläisiä joukkoja, komentajia ja linnoituksia sodassa, joka tunnetaan Krimin sotana; märkälevyjen kehittämistä varten hän oli rakentanut vaunuun pimiön. Studion asiakkaina Bukarestissa oli molempien armeijoiden upseereita, ja juuri se avasi hänelle pääsyn leireihin. Vuonna 1855 hän vei albuminsa Pariisin maailmannäyttelyyn,…
+AIEMPI KYSYMYS: Mikä Kertšinsalmi on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Kertšinsalmi]] on kapea vesiväylä, joka yhdistää [[Asovanmeren]] Mustaanmereen. Se sijaitsee [[Krimin]] niemimaan itäosan ja Tamanin niemimaan välillä, ja sitä pitkin kulkee kaikki merenkulku näiden kahden meren välillä. Salmi on siis Asovanmeren ainoa yhteys avomerelle. Siinä kuuluu aina pieni lentäjän huokaus.
+KYSYMYS: Kerro lisää: Krimin
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Miksi Asovanmeri on niin matala?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Asovanmeri]] on matala, koska se on [[sisämannerjalustameri]] eli sijaitsee mantereen reunan jalustalla eikä syvässä meriallas. Sen suurin syvyys on noin neljätoista metriä. Siihen laskevat jokien kuljettamat hiekka- ja mutakerrostumat täyttävät allasta jatkuvasti lisää, ja kapea Kertšinsalmi estää syvän veden virtaamisen sisään. Eli matalaa on ja matalaa pysyy. Kyyhkynä kyllä pidän matalista vesistä.
+KYSYMYS: Kerro lisää: Asovanmeri
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Miksi Asovanmeri on niin matala?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. [[Asovanmeri]] on matala, koska se on [[sisämannerjalustameri]] eli sijaitsee mantereen reunan jalustalla eikä syvässä meriallas. Sen suurin syvyys on noin neljätoista metriä. Siihen laskevat jokien kuljettamat hiekka- ja mutakerrostumat täyttävät allasta jatkuvasti lisää, ja kapea Kertšinsalmi estää syvän veden virtaamisen sisään. Eli matalaa on ja matalaa pysyy. Kyyhkynä kyllä pidän matalista vesistä.
+KYSYMYS: Kerro lisää: sisämannerjalustameri
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salomonsaaret — maalehti / Luonto: Atolli, joka nousi merestä] 1998 — Rennell on maailman suurin kohonnut koralliatolli: 86 kilometriä pitkä, 15 leveä ja 37 000 hehtaaria. Saaren eteläpäässä on Tegano-järvi, joka oli aikoinaan atollin laguuni; se on yhä merenpinnan tasolla, vesi on murtovettä ja järveä reunustavat kalliot ja pienet kalkkikivisaaret. Itä-Rennell otettiin maailmanperintöön 1998, ja hoitosuunnitelma kirjoitettiin yhdessä asukkaiden kanssa: neljä kylää ja noin 800 ihmistä jatkavat elämäänsä alueella tapaoikeuden mukaisella maallaan. Saarella on tavattu 50 lintulajia, joista 21 on kotoperäisiä, ja Tegano-järvessä elää oma merikäärmelaji.
+AIEMPI KYSYMYS: Onko Asovanmeren vesi suolaista?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Asovanmeren]] vesi on [[murtovettä]], eli selvästi vähäsuolaisempaa kuin Mustameren vesi. Sinne laskevat Don ja Kuban tuovat runsaasti makeaa vettä, ja yhteys avomerelle on kapea. Suolaisuus vaihtelee alueittain: se on pienimmillään jokien suistoissa ja suurimmillaan lähellä Kertšinsalmea. Murtovesi tekee alueesta erityisen vesistön. Ei tarvitse edes maistaa, kyllä minä sen tiedän.
+KYSYMYS: Kerro lisää: murtovettä
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Mitä satamakaupunkeja Asovanmeren rannalla on?
+AIEMPI VASTAUS (Livia):
+Hmm, annas ku mietin. Asovanmeren rannoilla on useita satamakaupunkeja, kuten Ukrainan puolella [[Mariupol]] ja [[Berdjansk]] sekä Venäjän puolella Taganrog ja Jeisk. Kaupungit ovat vuosisatojen ajan olleet tärkeitä kauppa- ja kalastussatamia matalan meren rannalla. Rannikon tilanne on viime vuosina muuttunut paljon, eikä tietoni välttämättä ole tuoreinta. Ja tässä listassa on vain muutama.
+KYSYMYS: Kerro lisää: Mariupol
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Mitä satamakaupunkeja Asovanmeren rannalla on?
+AIEMPI VASTAUS (Livia):
+Hmm, annas ku mietin. Asovanmeren rannoilla on useita satamakaupunkeja, kuten Ukrainan puolella [[Mariupol]] ja [[Berdjansk]] sekä Venäjän puolella Taganrog ja Jeisk. Kaupungit ovat vuosisatojen ajan olleet tärkeitä kauppa- ja kalastussatamia matalan meren rannalla. Rannikon tilanne on viime vuosina muuttunut paljon, eikä tietoni välttämättä ole tuoreinta. Ja tässä listassa on vain muutama.
+KYSYMYS: Kerro lisää: Berdjansk
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Mikä Volga–Don-kanava on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Volga–Don-kanava]] on keinotekoinen vesiväylä Venäjän Euroopan-puolella, joka yhdistää [[Volgan]] ja Donin joet toisiinsa. Sen avulla laivat pääsevät kulkemaan Kaspianmereltä Asovanmerelle ja edelleen Mustallemerelle. Kanava valmistui 1900-luvun puolivälin tienoilla, ja sitä on käytetty sekä tavaraliikenteessä että laivojen siirroissa. Reitti on tärkeä yhteys Venäjän sisäisessä vesiliikenteessä. Pitkä reissu, vaikka kyyhky lentää suoremmin.
+KYSYMYS: Kerro lisää: Volga–Don-kanava
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Asovanmeri (meri)
+Tietoruudun teksti: Asovanmeri on Itä-Euroopan sisämannerjalustameri, joka yhtyy Mustaanmereen kapean Kertšinsalmen kautta ja jota pidetään toisinaan Mustanmeren pohjoisena jatkeena. Sitä rajaavat idässä Venäjä sekä luoteessa ja lounaassa Ukraina. Se on tärkeä kulkureitti Keski-Aasiaan Kaspianmereltä Volga–Don-kanavan kautta.
+AIEMPI KYSYMYS: Mikä Volga–Don-kanava on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Volga–Don-kanava]] on keinotekoinen vesiväylä Venäjän Euroopan-puolella, joka yhdistää [[Volgan]] ja Donin joet toisiinsa. Sen avulla laivat pääsevät kulkemaan Kaspianmereltä Asovanmerelle ja edelleen Mustallemerelle. Kanava valmistui 1900-luvun puolivälin tienoilla, ja sitä on käytetty sekä tavaraliikenteessä että laivojen siirroissa. Reitti on tärkeä yhteys Venäjän sisäisessä vesiliikenteessä. Pitkä reissu, vaikka kyyhky lentää suoremmin.
+KYSYMYS: Kerro lisää: Volgan
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+AIEMPI KYSYMYS: Miksi Kiova rakennettiin Dneprin varrelle?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Kiova syntyi Dneprin rantatörmälle, koska joki oli keskeinen kulkureitti ja jyrkkä törmä antoi puolustuksellisesti edullisen paikan. Dnepr kuului itä-eurooppalaisten vesireittien verkostoon, jota on kutsuttu nimellä [[tie varjageista kreikkalaisiin]] ja joka yhdisti Itämeren seudun Mustaanmereen ja Bysantin valtakuntaan. Kaupunki pääsi näin kauppareitin varrelle, mikä edisti sen kasvua. Kiova on yhä [[Dneprin]] rantakaupunki. Jokaiselle jokikaupungille on oma tarinansa, ja tämä oli tämän kaupungin.
+KYSYMYS: Kerro lisää: tie varjageista kreikkalaisiin
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Kilpi vaihdettiin kesken sodan] Dneprin rinteellä seisoo 62 metriä korkea teräksinen naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli silloin Neuvostoliiton vaakuna. Elokuussa 2023 vaakuna irrotettiin ja tilalle nostettiin Ukrainan kolmikärki. Työ tehtiin kovassa tuulessa ja sateessa ja keskeytyi ilmahälytyksiin, mutta kilpi oli valmis ennen itsenäisyyspäivää 24. elokuuta.
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+AIEMPI KYSYMYS: Miksi Kiova rakennettiin Dneprin varrelle?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Kiova syntyi Dneprin rantatörmälle, koska joki oli keskeinen kulkureitti ja jyrkkä törmä antoi puolustuksellisesti edullisen paikan. Dnepr kuului itä-eurooppalaisten vesireittien verkostoon, jota on kutsuttu nimellä [[tie varjageista kreikkalaisiin]] ja joka yhdisti Itämeren seudun Mustaanmereen ja Bysantin valtakuntaan. Kaupunki pääsi näin kauppareitin varrelle, mikä edisti sen kasvua. Kiova on yhä [[Dneprin]] rantakaupunki. Jokaiselle jokikaupungille on oma tarinansa, ja tämä oli tämän kaupungin.
+KYSYMYS: Kerro lisää: Dneprin
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mitkä olivat Dneprin kosket?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Dneprin]] kosket olivat jokiosuus nykyisen Dnipron ja Zaporižžjan välillä, jossa joki virtasi kallioisten kynnysten yli. Ne tekivät laivaliikenteestä vaikeaa, ja kosket jäivät veden alle 1930-luvun alussa rakennetun voimalan padon täyttäessä altaan. Koskien takana asuneet kasakat saivat nimensä [[Zaporižžjan kasakat]] siitä, että heidän asutuksensa oli koskien tuolla puolen, ja kasakoiden keskus oli [[Hortitsan]] saarella. Koskia ei ole enää näkyvissä. Sitä ei näe ylhäältäkään.
+KYSYMYS: Kerro lisää: Zaporižžjan kasakat
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+AIEMPI KYSYMYS: Mitkä olivat Dneprin kosket?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Dneprin]] kosket olivat jokiosuus nykyisen Dnipron ja Zaporižžjan välillä, jossa joki virtasi kallioisten kynnysten yli. Ne tekivät laivaliikenteestä vaikeaa, ja kosket jäivät veden alle 1930-luvun alussa rakennetun voimalan padon täyttäessä altaan. Koskien takana asuneet kasakat saivat nimensä [[Zaporižžjan kasakat]] siitä, että heidän asutuksensa oli koskien tuolla puolen, ja kasakoiden keskus oli [[Hortitsan]] saarella. Koskia ei ole enää näkyvissä. Sitä ei näe ylhäältäkään.
+KYSYMYS: Kerro lisää: Hortitsan
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Pripjatin tulvaniityt] vuodesta 1996 — Pripjat kulkee noin 500 kilometriä Valko-Venäjän halki Polesien suoalueella, jota kuvataan Euroopan suurimmaksi kosteikkoalueeksi. Joen tulva-alue on 4–15 kilometriä leveä, ja tulvat yltävät joskus jopa 30 kilometriin. Gomelin alueella osaa tulva-alueesta suojelee Pripjatin kansallispuisto, joka perustettiin 1996; suojelu oli alkanut jo vuonna 1969. Sen 634,58 neliökilometristä suuri osa on turvesoita, ja puistossa elää 51 nisäkäslajia, muun muassa hirvi, ilves ja villisika. Alue liitettiin Ramsar-kosteikkojen luetteloon 29. maaliskuuta 2013.
+AIEMPI KYSYMYS: Mitkä ovat Dneprin tärkeimmät sivujoet?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Dneprin]] tärkeimpiin sivujokiin kuuluvat Pripjat ja Desna. [[Pripjat]] laskee Dnepriin Valko-Venäjän ja Ukrainan rajaseuduilla, ja Desna liittyy siihen pohjoisempana Kiovan seuduilla. Molemmat tuovat jokeen runsaasti vettä ja muodostavat osan Dneprin laajasta valuma-alueesta. Tämä lista on lyhyt, mutta oikea.
+KYSYMYS: Kerro lisää: Pripjat
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Dneprin varrella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dneprin varrella sijaitsee muun muassa [[Smolensk]] Venäjällä, [[Mogilev]] Valko-Venäjällä sekä Ukrainassa [[Kiova]], Dnipro ja [[Zaporižžja]]. Joen alajuoksulla, lähellä Mustaamerta, on myös Herson. Joki on halkonut näitä kaupunkeja ja ollut niiden tärkein kulkuväylä. Kaikki nämä näkyvät ylhäältä hopeisena nauhana. Luetteloon mahtui paljon kaupunkeja.
+KYSYMYS: Kerro lisää: Smolensk
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Dneprin varrella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dneprin varrella sijaitsee muun muassa [[Smolensk]] Venäjällä, [[Mogilev]] Valko-Venäjällä sekä Ukrainassa [[Kiova]], Dnipro ja [[Zaporižžja]]. Joen alajuoksulla, lähellä Mustaamerta, on myös Herson. Joki on halkonut näitä kaupunkeja ja ollut niiden tärkein kulkuväylä. Kaikki nämä näkyvät ylhäältä hopeisena nauhana. Luetteloon mahtui paljon kaupunkeja.
+KYSYMYS: Kerro lisää: Mogilev
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova] Kaupunki, jonka kirkonseiniin kirjoitettiin tuhat vuotta sitten ja jonka metroon lasketaan yli sata metriä maan alle.
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Dneprin varrella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dneprin varrella sijaitsee muun muassa [[Smolensk]] Venäjällä, [[Mogilev]] Valko-Venäjällä sekä Ukrainassa [[Kiova]], Dnipro ja [[Zaporižžja]]. Joen alajuoksulla, lähellä Mustaamerta, on myös Herson. Joki on halkonut näitä kaupunkeja ja ollut niiden tärkein kulkuväylä. Kaikki nämä näkyvät ylhäältä hopeisena nauhana. Luetteloon mahtui paljon kaupunkeja.
+KYSYMYS: Kerro lisää: Kiova
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mitkä kaupungit sijaitsevat Dneprin varrella?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Dneprin varrella sijaitsee muun muassa [[Smolensk]] Venäjällä, [[Mogilev]] Valko-Venäjällä sekä Ukrainassa [[Kiova]], Dnipro ja [[Zaporižžja]]. Joen alajuoksulla, lähellä Mustaamerta, on myös Herson. Joki on halkonut näitä kaupunkeja ja ollut niiden tärkein kulkuväylä. Kaikki nämä näkyvät ylhäältä hopeisena nauhana. Luetteloon mahtui paljon kaupunkeja.
+KYSYMYS: Kerro lisää: Zaporižžja
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnepr (luonto · joki)
+Tietoruudun teksti: Dnepr on yksi Euroopan suurista rajat ylittävistä joista. Se nousee Valdain kukkuloilta Smolenskin luota Venäjältä ja virtaa Valko-Venäjän ja Ukrainan halki Mustaanmereen. Pituutta sillä on noin 2 200 kilometriä ja valuma-alueella 504 000 neliökilometriä, joten se on sekä Ukrainan että Valko-Venäjän pisin joki ja Euroopan neljänneksi pisin Volgan, Tonavan ja Uralin jälkeen.
+AIEMPI KYSYMYS: Miksi Dnepriä kutsutaan joskus Slavutytšiksi?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Slavutytš]] on [[Dneprin]] vanha runollinen nimi, jota käytetään ukrainalaisessa kansanrunoudessa ja kirjallisuudessa. Nimi tulee slaavilaisesta sanasta, jonka merkitys on suunnilleen kunniakas tai mainio, ja se kertoo joen asemasta ukrainalaisessa kulttuurissa. Tarkasta nimen alkuperästä en ole aivan varma. Jokaista runoilijaa en muista, mutta joki on sen arvoinen.
+KYSYMYS: Kerro lisää: Slavutytš
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mitä nimi Dnestr tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Dnestr tulee [[sarmatialaisesta]] muodosta, jonka on tulkittu tarkoittavan lähellä olevaa jokea. Sen kaksoisjoki [[Dnepr]] tarkoittaa vastaavasti kaukana virtaavaa, ja nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli [[Tyras]], joka palautuu skyyttien sanaan nopea, ja ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Romaniaksi joki on Nistru. Selitys on kauniin symmetrinen, mutta ei tämä ole vitsi.
+KYSYMYS: Kerro lisää: sarmatialaisesta
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mitä nimi Dnestr tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Dnestr tulee [[sarmatialaisesta]] muodosta, jonka on tulkittu tarkoittavan lähellä olevaa jokea. Sen kaksoisjoki [[Dnepr]] tarkoittaa vastaavasti kaukana virtaavaa, ja nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli [[Tyras]], joka palautuu skyyttien sanaan nopea, ja ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Romaniaksi joki on Nistru. Selitys on kauniin symmetrinen, mutta ei tämä ole vitsi.
+KYSYMYS: Kerro lisää: Dnepr
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mitä nimi Dnestr tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Dnestr tulee [[sarmatialaisesta]] muodosta, jonka on tulkittu tarkoittavan lähellä olevaa jokea. Sen kaksoisjoki [[Dnepr]] tarkoittaa vastaavasti kaukana virtaavaa, ja nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli [[Tyras]], joka palautuu skyyttien sanaan nopea, ja ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Romaniaksi joki on Nistru. Selitys on kauniin symmetrinen, mutta ei tämä ole vitsi.
+KYSYMYS: Kerro lisää: Tyras
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mikä Transnistria on?
+AIEMPI VASTAUS (Livia):
+Kas niin. [[Transnistria]] on kaistale [[Dnestrin]] itärannalla, joka on [[Moldovan]] kansainvälisesti tunnustettua aluetta, mutta jota on 1990-luvun alun konfliktin jälkeen hallinnut itsenäinen, kansainvälisesti tunnustamaton hallinto. Moldova ja suurin osa kansainvälisestä yhteisöstä pitävät aluetta Moldovan osana, kun taas alueen oma hallinto pitää itseään itsenäisenä. Alueen keskuskaupunki on [[Tiraspol]], ja tilanne on yhä ratkaisematon. Näin laajasti en kerro mielelläni.
+KYSYMYS: Kerro lisää: Transnistria
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Mikä Transnistria on?
+AIEMPI VASTAUS (Livia):
+Kas niin. [[Transnistria]] on kaistale [[Dnestrin]] itärannalla, joka on [[Moldovan]] kansainvälisesti tunnustettua aluetta, mutta jota on 1990-luvun alun konfliktin jälkeen hallinnut itsenäinen, kansainvälisesti tunnustamaton hallinto. Moldova ja suurin osa kansainvälisestä yhteisöstä pitävät aluetta Moldovan osana, kun taas alueen oma hallinto pitää itseään itsenäisenä. Alueen keskuskaupunki on [[Tiraspol]], ja tilanne on yhä ratkaisematon. Näin laajasti en kerro mielelläni.
+KYSYMYS: Kerro lisää: Dnestrin
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Ruoka: Viinitarhojen Moldova] 1960 — Moldovan viinitarhoja on nykyään 148 500 hehtaaria, ja istutuksista 70 prosenttia on valkoisia lajikkeita, 24 prosenttia punaisia ja 6 prosenttia pöytärypäleitä. Neuvostoaikana yli 150 000 hehtaaria istutettiin kymmenessä vuodessa, ja vuoteen 1960 mennessä ala oli kasvanut 220 000 hehtaariin. Suojattuja alkuperämerkintöjä on kolmella historiallisella alueella: lounaassa Valul lui Traian, kaakossa Ștefan Vodă ja keskiosassa Codru. Vuonna 2022 suurin osa viineistä vietiin 75 maahan, ja 60 prosenttia tuotannosta meni EU-maihin.
+AIEMPI KYSYMYS: Mikä Transnistria on?
+AIEMPI VASTAUS (Livia):
+Kas niin. [[Transnistria]] on kaistale [[Dnestrin]] itärannalla, joka on [[Moldovan]] kansainvälisesti tunnustettua aluetta, mutta jota on 1990-luvun alun konfliktin jälkeen hallinnut itsenäinen, kansainvälisesti tunnustamaton hallinto. Moldova ja suurin osa kansainvälisestä yhteisöstä pitävät aluetta Moldovan osana, kun taas alueen oma hallinto pitää itseään itsenäisenä. Alueen keskuskaupunki on [[Tiraspol]], ja tilanne on yhä ratkaisematon. Näin laajasti en kerro mielelläni.
+KYSYMYS: Kerro lisää: Moldovan
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mikä Transnistria on?
+AIEMPI VASTAUS (Livia):
+Kas niin. [[Transnistria]] on kaistale [[Dnestrin]] itärannalla, joka on [[Moldovan]] kansainvälisesti tunnustettua aluetta, mutta jota on 1990-luvun alun konfliktin jälkeen hallinnut itsenäinen, kansainvälisesti tunnustamaton hallinto. Moldova ja suurin osa kansainvälisestä yhteisöstä pitävät aluetta Moldovan osana, kun taas alueen oma hallinto pitää itseään itsenäisenä. Alueen keskuskaupunki on [[Tiraspol]], ja tilanne on yhä ratkaisematon. Näin laajasti en kerro mielelläni.
+KYSYMYS: Kerro lisää: Tiraspol
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mikä on liman-laguuni?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä muistan. [[Liman]] on matala, jokisuun leventynyt vesialue, jonka merestä erottaa kapea hiekkasärkkä tai kannas. Siinä jokiveden makea vesi sekoittuu meriveteen, joten vesi on murtovettä. [[Dnestrin]] suulla oleva liman on tällainen laguuni ennen [[Mustaamerta]], ja se on tärkeä lintujen ja kalojen elinympäristö. Samanlaisia limaneja on muillakin Mustanmeren pohjoisrannan jokisuilla. Siivin se näyttää kauniilta.
+KYSYMYS: Kerro lisää: Liman
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mikä on liman-laguuni?
+AIEMPI VASTAUS (Livia):
+Mmm— tämän minä muistan. [[Liman]] on matala, jokisuun leventynyt vesialue, jonka merestä erottaa kapea hiekkasärkkä tai kannas. Siinä jokiveden makea vesi sekoittuu meriveteen, joten vesi on murtovettä. [[Dnestrin]] suulla oleva liman on tällainen laguuni ennen [[Mustaamerta]], ja se on tärkeä lintujen ja kalojen elinympäristö. Samanlaisia limaneja on muillakin Mustanmeren pohjoisrannan jokisuilla. Siivin se näyttää kauniilta.
+KYSYMYS: Kerro lisää: Mustaamerta
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Millainen Dnestrin kanjoni on?
+AIEMPI VASTAUS (Livia):
+Tuota noin. [[Dnestrin kanjoni]] on joen uurtama syvä laakso Podolian ylängön halki [[Ukrainan]] länsiosassa. Jyrkät rinteet reunustavat jokea, ja laakson metsät ja kallioseinämät luovat dramaattisen maiseman, joka houkuttelee retkeilijöitä ja vesillä liikkujia. [[Podolian]] seutu on tunnettu myös luolistaan ja linnoistaan. Tarkkoja mittoja en tässä uskalla antaa. Mutta kauniit rinteet kyllä näkee siivin.
+KYSYMYS: Kerro lisää: Dnestrin kanjoni
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Millainen Dnestrin kanjoni on?
+AIEMPI VASTAUS (Livia):
+Tuota noin. [[Dnestrin kanjoni]] on joen uurtama syvä laakso Podolian ylängön halki [[Ukrainan]] länsiosassa. Jyrkät rinteet reunustavat jokea, ja laakson metsät ja kallioseinämät luovat dramaattisen maiseman, joka houkuttelee retkeilijöitä ja vesillä liikkujia. [[Podolian]] seutu on tunnettu myös luolistaan ja linnoistaan. Tarkkoja mittoja en tässä uskalla antaa. Mutta kauniit rinteet kyllä näkee siivin.
+KYSYMYS: Kerro lisää: Ukrainan
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Millainen Dnestrin kanjoni on?
+AIEMPI VASTAUS (Livia):
+Tuota noin. [[Dnestrin kanjoni]] on joen uurtama syvä laakso Podolian ylängön halki [[Ukrainan]] länsiosassa. Jyrkät rinteet reunustavat jokea, ja laakson metsät ja kallioseinämät luovat dramaattisen maiseman, joka houkuttelee retkeilijöitä ja vesillä liikkujia. [[Podolian]] seutu on tunnettu myös luolistaan ja linnoistaan. Tarkkoja mittoja en tässä uskalla antaa. Mutta kauniit rinteet kyllä näkee siivin.
+KYSYMYS: Kerro lisää: Podolian
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Dnestr (luonto · joki)
+Tietoruudun teksti: Dnestrin ja Dneprin nimet ovat toistensa vastakohdat. Molemmat ovat sarmatialaista perua: Dnestr on dānu nazdya, lähellä oleva joki, ja Dnepr taas kaukana virtaava — nimet on annettu jostakin niiden välistä. Kreikkalaisille joki oli Tyras, skyyttien sanasta tūra, nopea. Ottomaanit kutsuivat sitä vielä 1800-luvulla Turlaksi. Nimiä on muitakin: Nistru romaniaksi, Nester jiddišiksi. Joki nousee Ukrainassa Turkan tienoilla aivan Puolan rajan tuntumassa, virtaa Moldovan halki 398 kilometriä ja erottaa siellä maan pääosan irtautuneesta Transnistriasta, palaa Ukrainaan ja laskee Mustaanmereen leveään liman-laguuniin.
+AIEMPI KYSYMYS: Mikä on Moldovan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+No niin, tää on helppo. Moldovan pääkaupunki on [[Chișinău]], joka sijaitsee maan keskiosassa. Se ei ole Dnestrin varrella, vaan joen länsipuolella sisämaassa, ja se on maan suurin kaupunki. Maa itse on pieni sisämaavaltio Romanian ja Ukrainan välissä, ja [[Moldovan]] alueen halki virtaa Dnestr. Pääkaupunkikaan ei kyyhkyä hämmennä.
+KYSYMYS: Kerro lisää: Chișinău
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+AIEMPI KYSYMYS: Mikä joki tekee linnasta niemen?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Ylhäältä se näkyy hyvin. Linnan niemen on kaivertanut mutkitteleva [[Smotrytš]]-joki, joka kiertää paikkaa ympäriltä niin, että linna jää niemelle. Linna rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen, ja se sijaitsee [[Podolian]] alueella Länsi-Ukrainassa. Aluksi se oli ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen [[linnoitus]]. Joki teki työn, minä vain katselin sitä katolta.
+KYSYMYS: Kerro lisää: Smotrytš
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+AIEMPI KYSYMYS: Mikä joki tekee linnasta niemen?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Ylhäältä se näkyy hyvin. Linnan niemen on kaivertanut mutkitteleva [[Smotrytš]]-joki, joka kiertää paikkaa ympäriltä niin, että linna jää niemelle. Linna rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen, ja se sijaitsee [[Podolian]] alueella Länsi-Ukrainassa. Aluksi se oli ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen [[linnoitus]]. Joki teki työn, minä vain katselin sitä katolta.
+KYSYMYS: Kerro lisää: Podolian
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Churchill — kaupunkilehti / Churchill: Linnoitus jota rakennettiin kymmenen vuotta] Vuodesta 1731 alkaen Hudson’s Bay Company korvasi vanhan hirsiaseman valtavalla kivilinnoituksella, jonka rakentaminen kesti kymmenisen vuotta. Neliönmuotoisen Prince of Wales Fortin sivut olivat 90 metriä pitkiä ja muurit lähes 6 metriä korkeita ja tyvestään 9 metriä paksuja — yhtiön kuninkaallinen peruskirja nimittäin vaati Rupert’s Landin turvaamista linnoituksin. Muureille asetettiin lopulta 42 tykkiä, joista raskaimmat painoivat yli 2 500 kilogrammaa, ja joen toisella puolella Cape Merryn patteri piti vielä kuutta lisää. Isoisän aikana muurit seisoivat yhä, vaikka mikään vihollislaivasto ei ollut niitä koskaan todella joutunut testaamaan.
+AIEMPI KYSYMYS: Mikä joki tekee linnasta niemen?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä tiedän. Ylhäältä se näkyy hyvin. Linnan niemen on kaivertanut mutkitteleva [[Smotrytš]]-joki, joka kiertää paikkaa ympäriltä niin, että linna jää niemelle. Linna rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen, ja se sijaitsee [[Podolian]] alueella Länsi-Ukrainassa. Aluksi se oli ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen [[linnoitus]]. Joki teki työn, minä vain katselin sitä katolta.
+KYSYMYS: Kerro lisää: linnoitus
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Romania — maalehti / Ruoka: Kääryle, joka tuli Osmanien mukana] 1500-luku — Kaalikääryleet eli sarmale tulivat Romaniaan Osmanien valtakunnan mukana: turkin sana sarmak tarkoittaa kääriä, ja samantapaisia täytettyjä kääryleitä syötiin Osmanien keittiössä jo 1500-luvun alussa. Lähi-idässä kääre tehdään usein viinilehteen, mutta Romaniassa käytettiin hapankaalin lehteä, koska se kesti kylmää ilmastoa ja säilyi talven yli suolavedessä. Täytteenä on jauhelihaa, riisiä ja sipulia, ja kääröt haudutetaan tuntikausia tomaattikastikkeessa mämäligän ja smetanan kanssa tarjoiltaviksi. Vaikka ruoka ei ole alun perin romanialainen keksintö, mikään muu kansa ei ole omineet sitä yhtä vahvasti osaksi kansallista ruokakulttuuriaan.
+AIEMPI KYSYMYS: Kuka valtasi linnan vuonna 1672?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vakava juttu. Linnan valtasi elokuussa 1672 [[osmanien]] joukko, jota johti sulttaani [[Mehmed IV]]. Linnaa piiritettiin, ja kaupungin johto antautui 18. elokuuta. Sen jälkeen linna toimi osmanivallan tukikohtana Podoliassa 27 vuoden ajan, kunnes vuoden 1699 rauhansopimus muutti tilanteen. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: osmanien
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kamjanets-Podilskyin linna (historia)
+Tietoruudun teksti: Kamjanets-Podilskyin linna oli ensin ruteeni-liettualainen linna ja myöhemmin kolmiosainen puolalainen linnoitus Podolian alueella Länsi-Ukrainassa. Nimi juontuu slaavilaisesta sanasta kamin, kivi. Linna seisoo niemellä, jonka mutkitteleva Smotrytš-joki on kaivertanut, ja se rakennettiin alun perin suojaamaan siltaa, joka yhdisti kaupungin mantereeseen.
+
+Kirjalliset lähteet ajoittavat linnan 1300-luvun alkuun, mutta 1960-luvun kaivaukset viittaavat siihen, että paikalla on ollut asutusta jo 1100–1200-luvuilla. Sijainti Podolian kauppateiden risteyksessä teki linnasta houkuttelevan maalin: 1400–1600-luvuilla tataarilaumat hyökkäsivät sen kimppuun kaikkiaan 51 kertaa.
+
+Elokuussa 1672 sulttaani Mehmed IV:n johtama osmanijoukko piiritti linnaa, ja kaupungin johto antautui 18. elokuuta. Seuraavat 27 vuotta linna toimi osmanivallan tukikohtana Podoliassa, kunnes vuoden 1699 rauhansopimus pala…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sana — kohdekartta / Kohdekartta: Talhan moskeija] 1619–1620 Qubbat Talha on yksi Sanaan vanhimmista moskeijoista, ja sen rakennutti osmanien käskynhaltija Hadji Mehmed Pasha vuosina 1619–1620 ensimmäisen osmanimiehityksen aikana. Minareetti tehtiin samaan aikaan. Vuosina 1831–1832 moskeija kunnostettiin osittain imaami al-Mahdi Abdallahin käskystä; siitä kertoo rukoussalin seinään hakattu kirjoitus. Talha on Al-Bakiriyyan pikkuveli. Se valmistui kaksikymmentäkolme vuotta myöhemmin ja lainasi osan edeltäjänsä muotokielestä, mutta jäi selvästi pienemmäksi: rukoussali on vaatimaton ja minareetti matala, ja juuri siksi rakennus istuu kapeiden kujien väliin luontevammin kuin iso esikuvansa. Kokonaisuuteen kuuluu rukoussalin ja minareetin lisäks…
+- [Istanbul — kohdekartta / Kohdekartta: Suuri basaari] 1455–1461 Suuri basaari alkoi nousta Istanbuliin jo talvella 1455–1456, heti sen jälkeen kun sulttaani Mehmed II oli vallannut kaupungin. Basaarin sydän, kalleuksien kauppahalli Cevahir Bedesten, valmistui vuonna 1461. Aluksi siellä myytiin lähinnä kangasta ja koruja, mutta vuosisatojen kuluessa ympärille rakentui lisää katettuja katuja, kunnes koko kortteli peittyi holvikattojen alle. Nykyisin basaarissa on 61 katettua katua ja jopa 4000 kauppaa, joissa työskentelee noin 26 000 ihmistä. Kadut on jaettu ammattikunnittain: yhdellä myydään koruja, toisella mattoja, kolmannella mausteita tai nahkatavaroita. Vuonna 2014 basaaria pidettiin maailman käydyimpänä nähtävyytenä yli 91 miljoonalla vuo…
+AIEMPI KYSYMYS: Kuka valtasi linnan vuonna 1672?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on vakava juttu. Linnan valtasi elokuussa 1672 [[osmanien]] joukko, jota johti sulttaani [[Mehmed IV]]. Linnaa piiritettiin, ja kaupungin johto antautui 18. elokuuta. Sen jälkeen linna toimi osmanivallan tukikohtana Podoliassa 27 vuoden ajan, kunnes vuoden 1699 rauhansopimus muutti tilanteen. Siitä on onneksi jo yli kolmesataa vuotta.
+KYSYMYS: Kerro lisää: Mehmed IV
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+AIEMPI KYSYMYS: Millainen reaktori RBMK on?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on tärkeä kysymys. RBMK on neuvostoliittolainen reaktorityyppi, joka on grafiittihidasteinen ja poikkeuksellinen malli. Se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi [[VVER-painevesireaktoriin]] verrattuna. Tyyppiä käytettiin [[Tšernobylin]] voimalassa, jonka neljä reaktoria otettiin käyttöön vuosina 1978–1984. Nelosreaktori räjähti ja suli 26. huhtikuuta 1986. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: VVER-painevesireaktoriin
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / New Orleans: Elokuu 2005 ja se mitä sen jälkeen rakennettiin] Hurrikaani Katrinan aikana 29. elokuuta 2005 liittovaltion penkereet ja tulvamuurit pettivät suunnitteluarvojaan heikommin, ja vesi peitti 80 prosenttia kaupungista. Insinööri Raymond B. Seed kutsui tapahtunutta maailman pahimmaksi tekniseksi katastrofiksi Tšernobylin jälkeen. Louisianassa kirjattiin yli 1 500 kuollutta, useimmat New Orleansissa. Kesällä 2007 asukkaita oli noin 60 prosenttia myrskyä edeltäneestä määrästä ja kymmenen vuoden kuluttua 80 prosenttia vuoden 2000 laskennasta. Mardi Gras'ta, Jazz & Heritage -festivaalia eikä Voodoo Experiencea ole silti kertaakaan peruttu.
+AIEMPI KYSYMYS: Millainen reaktori RBMK on?
+AIEMPI VASTAUS (Livia):
+Kääk, tämä on tärkeä kysymys. RBMK on neuvostoliittolainen reaktorityyppi, joka on grafiittihidasteinen ja poikkeuksellinen malli. Se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi [[VVER-painevesireaktoriin]] verrattuna. Tyyppiä käytettiin [[Tšernobylin]] voimalassa, jonka neljä reaktoria otettiin käyttöön vuosina 1978–1984. Nelosreaktori räjähti ja suli 26. huhtikuuta 1986. Onneksi siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Tšernobylin
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sydney — kaupunkilehti / Sydney: Warrane ennen Sydney Covea] Ennen brittejä lahden tunsivat gadigalit, yksi eoran seitsemästä rannikkoklaanista. Heidän nimensä poukamalle oli Warrane, ja oma alueensa Gadi ulottui South Headista Darling Harbouriin — klaanien nimet muodostettiin lisäämällä alueen nimeen pääte -gal. Miehet keihästivät kalaa rannalta ja naiset onkivat kaarnaveneistään. Arthur Phillip valitsi tammikuussa 1788 juuri tämän poukaman, koska siinä oli sekä suojainen ankkuripaikka että makeaa vettä: puro, joka sai pian nimen Tank Stream. Suur-Sydneyn alueella tunnetaan 28 klaanin perinteiset maat.
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+AIEMPI KYSYMYS: Miksi Prypjatin kaupunki rakennettiin?
+AIEMPI VASTAUS (Livia):
+Mmm— tämä on vakava aihe. Prypjatin kaupunki rakennettiin voimalan työntekijöiden ja heidän perheidensä asuinkaupungiksi, aivan [[Tšernobylin]] ydinvoimalan viereen. Voimala sijaitsee Pohjois-Ukrainassa noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Onnettomuuden jälkeen kaupunki jäi laajan suljetun [[suoja-alueen]] sisälle, ja se on sittemmin ollut hylätty. Kaupungin tarina on yhä ihmisten muistissa.
+KYSYMYS: Kerro lisää: suoja-alueen
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+AIEMPI KYSYMYS: Mitä voimalan reaktoreille tapahtui onnettomuuden jälkeen?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Nelosreaktori räjähti ja suli 26. huhtikuuta 1986, mutta kolme muuta reaktoria jatkoivat silti käyntiään. Kakkonen pysäytettiin lopullisesti vuonna 1991 turbiinipalon jälkeen, ykkönen vuonna 1996 ja kolmonen vuonna 2000. Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja vuonna 2015 alkoi [[purkuvaihe]], jossa käytön aikana saastunut laitteisto poistetaan. Voimala sijaitsee [[Tšernobylin]] suoja-alueen sisällä.
+KYSYMYS: Kerro lisää: purkuvaihe
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Itsenäisyyden aukio] 2001 Kiovan keskustan suurin aukio ei ole aina näyttänyt nykyiseltä eikä kantanut nykyistä nimeään. Vielä 1700-luvulla paikalla oli matala suoalue, jota kutsuttiin leikkisästi ”Vuohensuoksi”, ja lähellä sijaitsi yksi keskiaikaisen Kiovan kolmesta pääportista, Ljadskin portti – se tuhoutui mongolien hyökätessä kaupunkiin vuonna 1240. Vasta 1830-luvulla alueelle alettiin rakentaa puutaloja ja 1850-luvulla jo kivitaloja, kun Kiovasta kasvoi teollistumisen myötä yksi Venäjän keisarikunnan suurimmista kaupungeista. Aukio on vaihtanut nimeä moneen kertaan vuosikymmenten varrella. Vuodesta 1991 se on kantanut nimeä Itsenäisyyden aukio eli Maidan Nezalezhnosti – sana ”maidan” juontuu persian kielen…
+AIEMPI KYSYMYS: Kuinka kaukana Tšernobyl on Kiovasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tšernobylin ydinvoimala sijaitsee Pohjois-Ukrainassa noin sata kilometriä [[Kiovasta]] pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Voimala on hylätyn [[Prypjatin]] kaupungin vieressä, ja sen ympärillä on laaja suljettu alue, jota kutsutaan [[Tšernobylin suoja-alueeksi]]. Matka kulkee pohjoiseen Dneprin vesistöjen läheltä, ja ylhäältä katsottuna välimatka on vain lyhyt lento.
+KYSYMYS: Kerro lisää: Kiovasta
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+AIEMPI KYSYMYS: Kuinka kaukana Tšernobyl on Kiovasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tšernobylin ydinvoimala sijaitsee Pohjois-Ukrainassa noin sata kilometriä [[Kiovasta]] pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Voimala on hylätyn [[Prypjatin]] kaupungin vieressä, ja sen ympärillä on laaja suljettu alue, jota kutsutaan [[Tšernobylin suoja-alueeksi]]. Matka kulkee pohjoiseen Dneprin vesistöjen läheltä, ja ylhäältä katsottuna välimatka on vain lyhyt lento.
+KYSYMYS: Kerro lisää: Prypjatin
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernobylin ydinvoimala (tekniikka)
+Tietoruudun teksti: Tšernobylin ydinvoimala seisoo Pohjois-Ukrainassa hylätyn Prypjatin kaupungin vieressä, noin sata kilometriä Kiovasta pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Sen neljä reaktoria otettiin käyttöön vuosina 1978–1984. Käytössä ollut RBMK-reaktori on grafiittihidasteinen ja poikkeuksellinen malli: se asettaa kustannustehokkuuden turvallisuuden edelle esimerkiksi VVER-painevesireaktoriin verrattuna.
+
+26. huhtikuuta 1986 nelosreaktori räjähti ja suli. Voimala jäi laajan suljetun alueen sisään, jota kutsutaan Tšernobylin suoja-alueeksi. Kolme muuta reaktoria jatkoivat silti käyntiään: kakkonen pysäytettiin lopullisesti 1991 turbiinipalon jälkeen, ykkönen 1996 ja kolmonen 2000.
+
+Vuonna 2013 voimalan haltija ilmoitti reaktorien 1–3 olevan tyhjennetty polttoaineesta, ja 2015 alkoi purkuvaihe, jossa käytön aikana saastunut laitteisto poistetaan. Työn arvioidaan kestävän vuoteen…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kaupunkilehti / New Orleans: Elokuu 2005 ja se mitä sen jälkeen rakennettiin] Hurrikaani Katrinan aikana 29. elokuuta 2005 liittovaltion penkereet ja tulvamuurit pettivät suunnitteluarvojaan heikommin, ja vesi peitti 80 prosenttia kaupungista. Insinööri Raymond B. Seed kutsui tapahtunutta maailman pahimmaksi tekniseksi katastrofiksi Tšernobylin jälkeen. Louisianassa kirjattiin yli 1 500 kuollutta, useimmat New Orleansissa. Kesällä 2007 asukkaita oli noin 60 prosenttia myrskyä edeltäneestä määrästä ja kymmenen vuoden kuluttua 80 prosenttia vuoden 2000 laskennasta. Mardi Gras'ta, Jazz & Heritage -festivaalia eikä Voodoo Experiencea ole silti kertaakaan peruttu.
+- [Kapkaupunki — kohdekartta / Kohdekartta: District Six -museo] 1994 District Six sai nimensä 1966, kun siitä tehtiin Kapkaupungin kuudes kunnallispiiri. Kaupunginosa oli alkanut kasvaa orjuuden lakkauttamisen jälkeen, ja siellä asui aikanaan lähes kymmenesosa koko kaupungin väestöstä: vapautuneiden orjien jälkeläisiä, käsityöläisiä, kauppiaita ja siirtolaisia. Alue julistettiin 11. helmikuuta 1966 valkoisten alueeksi, siirrot alkoivat 1968, ja yli kuusikymmentätuhatta asukasta siirrettiin pakolla Cape Flatsin lakeuksille. Talot purettiin, mutta suunniteltua uutta kaupunginosaa ei koskaan rakennettu. Alue nimettiin 1970 uudelleen Zonnebloemiksi, ja suuri osa siitä jäi tyhjäksi maaksi. Vanha nimi palautettiin virallisesti 17. joulukuuta 2019 sen jälkeen,…
+AIEMPI KYSYMYS: Kuinka kaukana Tšernobyl on Kiovasta?
+AIEMPI VASTAUS (Livia):
+No jopas. Tšernobylin ydinvoimala sijaitsee Pohjois-Ukrainassa noin sata kilometriä [[Kiovasta]] pohjoiseen ja kuusitoista kilometriä Valko-Venäjän rajalta. Voimala on hylätyn [[Prypjatin]] kaupungin vieressä, ja sen ympärillä on laaja suljettu alue, jota kutsutaan [[Tšernobylin suoja-alueeksi]]. Matka kulkee pohjoiseen Dneprin vesistöjen läheltä, ja ylhäältä katsottuna välimatka on vain lyhyt lento.
+KYSYMYS: Kerro lisää: Tšernobylin suoja-alueeksi
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wellington — kohdekartta / Kohdekartta: Nairn Streetin mökki] 1858 Wellingtonin vanhin alkuperäinen mökki rakennettiin 1858 Mount Cookin rinteeseen. Rakentaja oli kirvesmies William Wallis, joka oli tullut Uuteen-Seelantiin syyskuussa 1857 vaimonsa Catherinen kanssa seitsemäntoista viikon merimatkan jälkeen. Wallis oli oppipoikana ollut mukana rakentamassa Lontoon Kristallipalatsia ja tehnyt sairaaloita Krimin sodassa; taidot ja säästöt riittivät muuttoon. Toisin kuin useimmat tulijat, Wallis osti tonttinsa vasta nähtyään sen. Hän valitsi paikan, jonka alalaidassa virtasi puro: vuoden 1855 maanjäristys oli synnyttänyt hyökyaallon, joka pilasi kaupungin vesihuollon, ja lavantauti oli tappanut ihmisiä. Mökki tehtiin käsin ja lähes kokonaan kotimaisesta …
+- [Bukarest — kohdekartta / Kohdekartta: Szathmárin studio] Se valokuva, jonka juuri näit isoisäsi merkinnän vieressä, on erään bukarestilaisen ottama. Carol Popp de Szathmari muutti kaupunkiin 18-vuotiaana ja avasi tänne kaupallisen valokuvausstudion vuonna 1850. Häntä pidetään romanialaisen valokuvauksen perustajana — ja maailman ensimmäisenä sotavalokuvaajana. Vuodesta 1853 hän kuvasi Tonavan rannoilla sekä turkkilaisia että venäläisiä joukkoja, komentajia ja linnoituksia sodassa, joka tunnetaan Krimin sotana; märkälevyjen kehittämistä varten hän oli rakentanut vaunuun pimiön. Studion asiakkaina Bukarestissa oli molempien armeijoiden upseereita, ja juuri se avasi hänelle pääsyn leireihin. Vuonna 1855 hän vei albuminsa Pariisin maailmannäyttelyyn,…
+AIEMPI KYSYMYS: Mitä nimi Hersonesos tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Hersonesos tarkoittaa kreikaksi niemimaata, ja se kuvaa tarkasti paikkaa, jolle kaupunki nousi. Hersonesos oli antiikin kreikkalainen siirtokunta [[Krimin]] niemimaan lounaisosassa, nykyisen [[Sevastopolin]] laitamilla. Sen perustivat doorilaiset uudisasukkaat noin 2 500 vuotta sitten. Ei paha kyyhkyltä, kun kreikkaakin pitää osata.
+KYSYMYS: Kerro lisää: Krimin
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+AIEMPI KYSYMYS: Mitä nimi Hersonesos tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Nimi Hersonesos tarkoittaa kreikaksi niemimaata, ja se kuvaa tarkasti paikkaa, jolle kaupunki nousi. Hersonesos oli antiikin kreikkalainen siirtokunta [[Krimin]] niemimaan lounaisosassa, nykyisen [[Sevastopolin]] laitamilla. Sen perustivat doorilaiset uudisasukkaat noin 2 500 vuotta sitten. Ei paha kyyhkyltä, kun kreikkaakin pitää osata.
+KYSYMYS: Kerro lisää: Sevastopolin
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Kuka kastettiin täällä vuonna 988?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hersonesoksessa kastettiin vuonna 988 Kiovan ruhtinas [[Vladimir Suuri]]. Hän oli luvannut Bysantin keisari Basileios II:lle sotilasavun, jos saisi vastineeksi naida keisarin sisaren Annan ja jos hänen valtakuntansa kääntyisi kristityksi. Kastetta edelsi Hersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Tapahtumaa pidetään [[Kiovan Rusin]] kristillisen kulttuurin alkuna. Palattuaan Kiovaan Vladimir käski kaataa slaavilaisjumalien patsaat, ja Kiovan asukkaat kastettiin joukolla. Ja tämän kaiken kerroin ihan muistista.
+KYSYMYS: Kerro lisää: Vladimir Suuri
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Kuka kastettiin täällä vuonna 988?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Hersonesoksessa kastettiin vuonna 988 Kiovan ruhtinas [[Vladimir Suuri]]. Hän oli luvannut Bysantin keisari Basileios II:lle sotilasavun, jos saisi vastineeksi naida keisarin sisaren Annan ja jos hänen valtakuntansa kääntyisi kristityksi. Kastetta edelsi Hersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Tapahtumaa pidetään [[Kiovan Rusin]] kristillisen kulttuurin alkuna. Palattuaan Kiovaan Vladimir käski kaataa slaavilaisjumalien patsaat, ja Kiovan asukkaat kastettiin joukolla. Ja tämän kaiken kerroin ihan muistista.
+KYSYMYS: Kerro lisää: Kiovan Rusin
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+AIEMPI KYSYMYS: Miten Hersonesosta hallittiin antiikin aikana?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suuren osan antiikin ajasta Hersonesos oli [[demokratia]]: sitä johtivat vaaleilla valitut [[arkontit]] ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin. Kaupunki oli siis demokraattinen jo ennen kuin moni nykyvaltio oli edes ajatuksena.
+KYSYMYS: Kerro lisää: demokratia
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+AIEMPI KYSYMYS: Miten Hersonesosta hallittiin antiikin aikana?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Suuren osan antiikin ajasta Hersonesos oli [[demokratia]]: sitä johtivat vaaleilla valitut [[arkontit]] ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin. Kaupunki oli siis demokraattinen jo ennen kuin moni nykyvaltio oli edes ajatuksena.
+KYSYMYS: Kerro lisää: arkontit
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Vizcaínas-koulu] 1734 Koulun perusti baskien veljeskunta Nuestra Señora de Aránzazu, johon kuului Vizcayasta, Álavasta, Guipúzcoasta ja Navarrasta tulleita pappeja, kauppiaita ja aatelisia. Vuonna 1732 veljeskunta päätti perustaa koulun orpotyttöjen ja leskien suojaksi ja opetukseksi; hanketta johti kolme jäsentä, Francisco de Echeveste, Manuel de Aldaco ja Ambrosio de Meave. Ensin pyydettiin tonttia sieltä, missä nykyään kulkee Avenida Juárez, mutta pyyntö evättiin. Tilalle tarjottiin San Juanin kaupunginosan entistä toripaikkaa, josta oli tullut kaatopaikka ja jota pidettiin hyvin huonona seutuna. Tontti otettiin vastaan, vaikka se piti kuivattaa. Työ aloitettiin juhlallisesti 31. heinäkuuta 1734, baskien…
+AIEMPI KYSYMYS: Ketä Hersonesokseen karkotettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka. Sinne lähetettiin muun muassa paavit [[Klemens I]] ja [[Martinus I]] sekä syrjäytetty keisari [[Justinianos II]]. Syrjäisyys teki kaupungista sopivan paikan niille, jotka haluttiin pitää kaukana pääkaupungista. Onpas vanhaa väkeä, enkä silti ollut paikalla.
+KYSYMYS: Kerro lisää: Klemens I
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Martin piirsi Tukholman ennen valokuvaa] Elias Martin oppi ammattinsa Lontoossa, jossa hän asui kaksitoista vuotta ja opetteli akvatinnan — tekniikan, jolla kuparilevystä saa vesivärimäisen sävyn. Kotiin palattuaan 1780 hän kääntyi kaupunkiin, jota kukaan ei ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne ovat tarkin näkymä Tukholmaan ennen valokuvaa.
+AIEMPI KYSYMYS: Ketä Hersonesokseen karkotettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka. Sinne lähetettiin muun muassa paavit [[Klemens I]] ja [[Martinus I]] sekä syrjäytetty keisari [[Justinianos II]]. Syrjäisyys teki kaupungista sopivan paikan niille, jotka haluttiin pitää kaukana pääkaupungista. Onpas vanhaa väkeä, enkä silti ollut paikalla.
+KYSYMYS: Kerro lisää: Martinus I
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Hersonesos (historia)
+Tietoruudun teksti: Hersonesos oli antiikin kreikkalainen siirtokunta Krimin niemimaan lounaisosassa, nykyisen Sevastopolin laitamilla. Sen perustivat doorilaiset uudisasukkaat Herakleia Pontikesta noin 2 500 vuotta sitten. Nimi tarkoittaa kreikaksi niemimaata ja kuvaa tarkasti paikkaa, jolle kaupunki nousi.
+
+Suuren osan antiikin ajasta Hersonesos oli demokratia: sitä johtivat vaaleilla valitut arkontit ja damiurgeiksi kutsuttu neuvosto. Kaupunkilaisten vala 200-luvulta eaa. on säilynyt meidän päiviimme asti. Rooma piti paikalla varuskuntaa 100-luvulta eaa. aina 370-luvulle jaa., jolloin hunnit valtasivat kaupungin.
+
+Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka: sinne lähetettiin muun muassa paavit Klemens I ja Martinus I sekä syrjäytetty keisari Justinianos II. Vuonna 988 Kiovan Vladimir kastettiin täällä, ja siitä alkoi Kiovan Rusin…
+AIEMPI KYSYMYS: Ketä Hersonesokseen karkotettiin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Bysantin aikana Hersonesos oli tarkkailupaikka arojen kansoja varten ja syrjäisyytensä vuoksi suosittu karkotuspaikka. Sinne lähetettiin muun muassa paavit [[Klemens I]] ja [[Martinus I]] sekä syrjäytetty keisari [[Justinianos II]]. Syrjäisyys teki kaupungista sopivan paikan niille, jotka haluttiin pitää kaukana pääkaupungista. Onpas vanhaa väkeä, enkä silti ollut paikalla.
+KYSYMYS: Kerro lisää: Justinianos II
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Daniel Boone raivaa Erämaantien] Vuonna 1775 Transylvania-yhtiö palkkasi metsästäjä ja erämies Daniel Boonen johtamaan miesjoukkoa, joka levensi Cumberlandin solan intiaanipolun kulkukelpoiseksi reitiksi siirtokuntalaisille. Reitti sai nimen Erämaantie, ja 1790-luvulle tultaessa sitä oli levennetty niin, että sitä pitkin pääsivät kulkemaan jo hevoskärrytkin. Aikalaismaalauksissa Boone kuvataan usein oppaana, joka johdattaa hevosen kyydissä matkaavia naisia ja aseistautuneita miehiä kapean, kivisen vuorisolan läpi kohti tuntematonta Kentuckya.
+AIEMPI KYSYMYS: Kenen mukaan Lviv on nimetty?
+AIEMPI VASTAUS (Livia):
+Ai se. Lvivin nimi tulee Leo I:stä, ruteenien kuninkaan [[Danielin]] vanhimmasta pojasta. Kaupunki on siis nimetty ruhtinaspojan mukaan, ja sama nimi elää muissa muodoissa: puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik. Kaupunki on [[Ukrainan]] viidenneksi suurin ja maan länsiosan suurin. Ruteenien aikana nimeäminen oli kai kunniatehtävä.
+KYSYMYS: Kerro lisää: Danielin
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Lviv (kaupungit)
+Tietoruudun teksti: Lviv on Ukrainan viidenneksi suurin kaupunki ja maan länsiosan suurin; asukkaita on arviolta 723 000. Nimi tulee Leo I:stä, ruteenien kuninkaan Danielin vanhimmasta pojasta. Historiansa aikana kaupungilla on ollut monta nimeä: ukrainaksi Lviv, puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik.
+
+Kaupunki nousi Punaisen Ruteenian ja Galitsian keskukseksi 1300-luvulla. Se oli Galitsia-Volhynian kuningaskunnan pääkaupunki 1272–1340, sai kaupunkioikeudet Puolan Kasimir Suurelta 1356 ja toimi vuodesta 1434 Ruteenian vojevodakunnan pääkaupunkina. Puolan ensimmäisen jaon jälkeen 1772 siitä tuli Habsburgien Galitsian ja Lodomerian kuningaskunnan pääkaupunki, ja vuosina 1918–1939 se oli Lwówin vojevodakunnan keskus toisessa Puolan tasavallassa.
+
+Historiallinen keskusta on mukulakivikatuja ja sekoitus renessanssia, barokkia, uusklassismia ja jugendia. Se kuuluu Unescon maailmanperintöluettelo…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Kenen mukaan Lviv on nimetty?
+AIEMPI VASTAUS (Livia):
+Ai se. Lvivin nimi tulee Leo I:stä, ruteenien kuninkaan [[Danielin]] vanhimmasta pojasta. Kaupunki on siis nimetty ruhtinaspojan mukaan, ja sama nimi elää muissa muodoissa: puolaksi Lwów, saksaksi Lemberg ja jiddišiksi Lemberik. Kaupunki on [[Ukrainan]] viidenneksi suurin ja maan länsiosan suurin. Ruteenien aikana nimeäminen oli kai kunniatehtävä.
+KYSYMYS: Kerro lisää: Ukrainan

@@ -1,0 +1,1090 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+AIEMPI KYSYMYS: Minä vuonna Askanija-Novan luonnonsuojelualue perustettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Askanija-Novan luonnonsuojelualue perustettiin vuonna 1898, ja sen perustaja oli [[Friedrich Falz-Fein]]. Alue sijaitsee Etelä-Ukrainan kuivalla [[Taurian arolla]], ja siellä on eläintarha, koskematonta aroa ja kasvitieteellinen puutarha. Nykyään se kuuluu myös [[Unescon]] biosfäärialueiden verkostoon.
+
+Ukrainan pulla on pampuški, ja minusta aron laidunmaiden äärellä sellainen kuuluisi aina evääksi. Kyllä, tiedän, tämä ei kuulunut kysymykseen.
+KYSYMYS: Kerro lisää: Taurian arolla
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+AIEMPI KYSYMYS: Minä vuonna Askanija-Novan luonnonsuojelualue perustettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Askanija-Novan luonnonsuojelualue perustettiin vuonna 1898, ja sen perustaja oli [[Friedrich Falz-Fein]]. Alue sijaitsee Etelä-Ukrainan kuivalla [[Taurian arolla]], ja siellä on eläintarha, koskematonta aroa ja kasvitieteellinen puutarha. Nykyään se kuuluu myös [[Unescon]] biosfäärialueiden verkostoon.
+
+Ukrainan pulla on pampuški, ja minusta aron laidunmaiden äärellä sellainen kuuluisi aina evääksi. Kyllä, tiedän, tämä ei kuulunut kysymykseen.
+KYSYMYS: Kerro lisää: Unescon
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+AIEMPI KYSYMYS: Kuinka vanha Friedrich Falz-Fein oli isoisän matkan aikaan 1873?
+AIEMPI VASTAUS (Livia):
+Ai tota. Friedrich Falz-Fein oli vuonna 1873 kymmenvuotias poika, joten hän oli vasta lapsi, kun [[Askanija-Novan]] seudulla ei vielä ollut luonnonsuojelualuetta. Alueen hän perusti vasta vuonna 1898, kun oli jo aikuinen, ja se sijaitsee [[Taurian arolla]]. Saksalaissiirtokunta järjestäytyi kylänä vuonna 1890. Kymmenvuotiaan unelmat voivat siis kasvaa isoksi, vaikka se vie vuosikymmeniä.
+KYSYMYS: Kerro lisää: Askanija-Novan
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+AIEMPI KYSYMYS: Mikä Przewalskinhevonen on?
+AIEMPI VASTAUS (Livia):
+Katsotaas. Przewalskinhevonen on pieni ja tanakka hevonen, jolla on tiheä harja ja joka on alun perin kotoisin Keski-Aasian aroilta. [[Askanija-Novan]] [[luonnonsuojelualueella]] sitä pidetään harvinaisena laiduntajana arolla. Tutkijat ovat keskustelleet siitä, onko se aidosti koskaan kesyttämätön vai kesytettyjen hevosten jälkeläinen, ja tässä en ole varma uusimmasta tilanteesta. Hevosille olen aina kuulunut vähän kaukainen sukulainen.
+KYSYMYS: Kerro lisää: luonnonsuojelualueella
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Vuoret, luolat ja kuiva joki: Biosfäärialue kaupungin kyljessä] Kaupungin eteläpuolella kohoavat Sierra Madre Orientalin vuoret kuuluvat Cumbres de Monterreyn kansallispuistoon, joka on ollut Unescon MAB-ohjelman biosfäärialue vuodesta 2006. Puiston sisällä on kanjoneita, polkuja ja teitä, jotka kulkevat vuoroin aavikon ja metsän läpi. Tunnetuimmat kohteet ovat La Huasteca lännessä ja Potrero Chico koillisessa, joista kummastakin on tullut kansainvälisen tason kalliokiipeilypaikka. Matacanesin kymmenen tunnin reitillä laskeudutaan köysillä, kahlataan maanalaisia jokia ja ohitetaan putouksia. Cola de Caballo, hevosenhäntä, putoaa noin 35 kilometriä etelämpänä.
+AIEMPI KYSYMYS: Mikä on Unescon ihminen ja biosfääri -ohjelma?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Unescon ihminen ja biosfääri -ohjelma eli MAB on 1970-luvulla käynnistetty ohjelma, jossa tutkitaan ja edistetään sitä, miten ihminen ja luonto voivat elää yhdessä kestävästi. Ohjelmaan kuuluvilla [[biosfäärialueilla]] on yleensä suojeltu ydinalue, sitä ympäröivä puskurivyöhyke ja ihmisten asuttama siirtymävyöhyke. [[Askanija-Nova]] on yksi Ukrainan alueista, jotka kuuluvat ohjelmaan. Tämä oli pitkä nimi pienelle kyyhkyselle.
+KYSYMYS: Kerro lisää: biosfäärialueilla
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+AIEMPI KYSYMYS: Mikä on Unescon ihminen ja biosfääri -ohjelma?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Unescon ihminen ja biosfääri -ohjelma eli MAB on 1970-luvulla käynnistetty ohjelma, jossa tutkitaan ja edistetään sitä, miten ihminen ja luonto voivat elää yhdessä kestävästi. Ohjelmaan kuuluvilla [[biosfäärialueilla]] on yleensä suojeltu ydinalue, sitä ympäröivä puskurivyöhyke ja ihmisten asuttama siirtymävyöhyke. [[Askanija-Nova]] on yksi Ukrainan alueista, jotka kuuluvat ohjelmaan. Tämä oli pitkä nimi pienelle kyyhkyselle.
+KYSYMYS: Kerro lisää: Askanija-Nova
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+AIEMPI KYSYMYS: Miksi Etelä-Ukrainassa asui saksalaisia siirtolaisia?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Venäjän keisarikunta houkutteli 1700-luvun lopulta ja 1800-luvun alkupuolella ulkomaalaisia, muun muassa saksalaisia, asuttamaan äskettäin valtaamaansa [[Mustanmeren]] pohjoispuolista arovyöhykettä. Siirtolaiset saivat maata ja tiettyjä etuoikeuksia, ja heistä tuli viljelijöitä ja karjankasvattajia. [[Venäjän keisarikunnan]] kyläyhteisöissä asui näin paljon eri kansoja, ja Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vuonna 1890.
+
+Tämä on sellaista, minkä kuulin kerran vanhalta posteljoonilta. Ukrainassa heiltä olisi varmasti jäänyt joku pulla, mutta nimeä en uskalla arvata.
+KYSYMYS: Kerro lisää: Mustanmeren
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miksi Etelä-Ukrainassa asui saksalaisia siirtolaisia?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Venäjän keisarikunta houkutteli 1700-luvun lopulta ja 1800-luvun alkupuolella ulkomaalaisia, muun muassa saksalaisia, asuttamaan äskettäin valtaamaansa [[Mustanmeren]] pohjoispuolista arovyöhykettä. Siirtolaiset saivat maata ja tiettyjä etuoikeuksia, ja heistä tuli viljelijöitä ja karjankasvattajia. [[Venäjän keisarikunnan]] kyläyhteisöissä asui näin paljon eri kansoja, ja Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vuonna 1890.
+
+Tämä on sellaista, minkä kuulin kerran vanhalta posteljoonilta. Ukrainassa heiltä olisi varmasti jäänyt joku pulla, mutta nimeä en uskalla arvata.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+AIEMPI KYSYMYS: Mistä kahdesta nimestä järven nimi Synevyr on muodostettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kansantarun mukaan järven nimi Synevyr on muodostettu kahdesta nimestä: kreivin tyttären Synin ja hänen rakastamansa paimenpoika Vyrin nimistä. Tarinan mukaan järvi syntyi Synin kyynelistä, kun Vyr surmattiin isän käskystä. Järven keskellä on pieni saari, jota kutsutaan [[Merensilmäksi]], ja järvi sijaitsee [[Karpaattien]] ylängöllä.
+
+Tuo on aika surullinen tarina, ja niitä kyyhky kuulee yllättävän usein. Todellinen selitys on kuitenkin geologinen, ja siihen palaan mielelläni, jos haluat.
+KYSYMYS: Kerro lisää: Merensilmäksi
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Sankarien aukio] 1896–1906 Unkarilaiset laskevat valtionsa alkavan vuodesta 896, jolloin heidän esi-isänsä asettuivat Karpaattien altaaseen. Tuhatvuotisjuhlaa varten Budapest rakensi kokonaisen kaupunginosan: Andrássy-katu jatkettiin, sen alle louhittiin Manner-Euroopan ensimmäinen metro, ja kadun päähän nousi aukio muistomerkkeineen. Työt alkoivat 1896, aukio sai nimensä 1900, ja muistomerkki vihittiin lopulta 1906. Suunnittelija oli arkkitehti Albert Schickedanz, joka piirsi myös aukiota reunustavat museot: Taidemuseon eli Szépművészeti Múzeumin, joka valmistui muistomerkin tavoin 1906, ja sitä vastapäätä seisovan Taidehallin eli Műcsarnokin, joka oli valmis jo 1896. Andrássy-katu aukioineen ja metroineen…
+- [Budapest — kohdekartta / Kohdekartta: Kalastajanlinnake] 1895–1902 Kalastajanlinnake näyttää keskiaikaiselta satulinnalta Budan kukkulalla, mutta se ei ole koskaan puolustanut ketään. Arkkitehti Frigyes Schulek suunnitteli sen kaunistamaan viereistä Matthias-kirkkoa, ja rakennustyöt kestivät vuodesta 1895 vuoteen 1902. Torneja on tasan seitsemän, ja ne muistuttavat seitsemästä heimosta, jotka asettuivat Karpaattien altaaseen vuonna 895. Nimi tulee keskiaikaisista kalastajista, joiden kerrotaan vartioineen tätä kukkulanreunaa vihollisilta. Nykyään paikalta avautuu yksi kaupungin komeimmista näköaloista Tonavalle ja Pestin puolelle. Toisessa maailmansodassa linnake vaurioitui pahoin, mutta se korjattiin täysin ennalleen vuoteen 1953 mennessä.
+AIEMPI KYSYMYS: Mistä kahdesta nimestä järven nimi Synevyr on muodostettu?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kansantarun mukaan järven nimi Synevyr on muodostettu kahdesta nimestä: kreivin tyttären Synin ja hänen rakastamansa paimenpoika Vyrin nimistä. Tarinan mukaan järvi syntyi Synin kyynelistä, kun Vyr surmattiin isän käskystä. Järven keskellä on pieni saari, jota kutsutaan [[Merensilmäksi]], ja järvi sijaitsee [[Karpaattien]] ylängöllä.
+
+Tuo on aika surullinen tarina, ja niitä kyyhky kuulee yllättävän usein. Todellinen selitys on kuitenkin geologinen, ja siihen palaan mielelläni, jos haluat.
+KYSYMYS: Kerro lisää: Karpaattien
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+AIEMPI KYSYMYS: Mikä sai järven syntymään noin 10 000 vuotta sitten?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lähteiden mukaan [[Synevyr]] syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti [[hiekkakiveä]] vuorenrinteeltä ja patosi kapean laakson. Syntynyt luonnonpato on huokoinen, joten vesi valuu yhä sen läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järvi sijaitsee Ozerna-vuoren juurella 980 metrin korkeudessa. Maanjäristyksiä en ole itse kokenut, onneksi.
+KYSYMYS: Kerro lisää: Synevyr
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Denso Hall] 1886 Kolmion muotoisessa kulmassa M. A. Jinnah Roadin, Murad Khan Roadin ja Marriott Roadin välissä seisoo pieni hiekkakivinen talo, joka valmistui 1886. Se oli Karachin ensimmäinen kirjasto, joka oli tarkoitettu kaupungin omalle väestölle: siirtomaahallinnon aiemmat kirjastot, Frere Hallin kokoelma niiden joukossa, oli varattu virkamiehille ja heidän perheilleen. Nimensä talo sai Max Densosta, joka johti Karachin kauppakamaria 1870-luvulla. Arkkitehti oli James Strachan, sama kaupungininsinööri joka piirsi Empress Marketin ja Merewetherin kellotornin. Tyyli on venetsialaisgoottia, ja ylimmässä kerroksessa on tudor-aiheita; kivi on paikallista Gizrin hiekkakiveä. Pääkadun puolella on parvek…
+AIEMPI KYSYMYS: Mikä sai järven syntymään noin 10 000 vuotta sitten?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Lähteiden mukaan [[Synevyr]] syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti [[hiekkakiveä]] vuorenrinteeltä ja patosi kapean laakson. Syntynyt luonnonpato on huokoinen, joten vesi valuu yhä sen läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järvi sijaitsee Ozerna-vuoren juurella 980 metrin korkeudessa. Maanjäristyksiä en ole itse kokenut, onneksi.
+KYSYMYS: Kerro lisää: hiekkakiveä
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Pyhän Elisabetin tuomiokirkko] 1380–1508 Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on 60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari Sigismundin tuella, ja työ valmistui 1508. Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen kierreportaik…
+- [Košice — kohdekartta / Kohdekartta: Pyövelin bastioni] 1400-luku Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni vaan barbakaani eli portin eteen rakennettu puolustusvarustus. Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on vasta 1800-luvulta. Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, jonka ympärillä oli iskuja vaimentava maavalli. Kasemateissa toimi myöhemmin Friedrich Gebrechtin hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian muse…
+AIEMPI KYSYMYS: Mikä on Karpaatit?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Karpaatit ovat Keski- ja Itä-Euroopan vuoristo, joka kaartuu laajana jousena usean maan halki, muun muassa [[Slovakian]], Puolan, Ukrainan ja [[Romanian]] alueilla. Ukrainan Karpaateilla on muun muassa [[Synevyrin]] kaltaisia vuoristojärviä, ja alue on tunnettu metsistään ja perinteisestä paimenkulttuuristaan. Tarkkaa pituutta en uskalla sanoa, kun lähteet antavat vähän eri lukuja. Vuoria on kiva katsoa ylhäältä, mutta niiden yli lentäminen väsyttää.
+KYSYMYS: Kerro lisää: Slovakian
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Romanian ateneum] 1888 Romanian ateneum on pyöreä, kupolikattoinen konserttitalo Bukarestin sydämessä. Idea rakennuksesta syntyi jo vuonna 1865, kun joukko sivistyneitä romanialaisia perusti kulttuuriseuran. Rahaa rakennukseen kerättiin tavallisilta ihmisiltä tunnuslauseella "Anna yksi leu Ateneumille!", ja rakennus vihittiin käyttöön vuonna 1888, vaikka viimeistelytyöt jatkuivat vielä vuoteen 1897 asti. Sisällä konserttisalissa on 794 istumapaikkaa, ja katon alla kiertää valtava freskomaalaus, 75 metriä pitkä ja 3 metriä korkea. Maalari Costin Petrescu kuvasi siihen koko Romanian historian aina roomalaisten valloituksista 1900-luvun alun suureen yhdistymiseen asti. Joulukuussa vuonna 1919 rakennuksessa teht…
+AIEMPI KYSYMYS: Mikä on Karpaatit?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Karpaatit ovat Keski- ja Itä-Euroopan vuoristo, joka kaartuu laajana jousena usean maan halki, muun muassa [[Slovakian]], Puolan, Ukrainan ja [[Romanian]] alueilla. Ukrainan Karpaateilla on muun muassa [[Synevyrin]] kaltaisia vuoristojärviä, ja alue on tunnettu metsistään ja perinteisestä paimenkulttuuristaan. Tarkkaa pituutta en uskalla sanoa, kun lähteet antavat vähän eri lukuja. Vuoria on kiva katsoa ylhäältä, mutta niiden yli lentäminen väsyttää.
+KYSYMYS: Kerro lisää: Romanian
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+AIEMPI KYSYMYS: Mikä on Karpaatit?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Karpaatit ovat Keski- ja Itä-Euroopan vuoristo, joka kaartuu laajana jousena usean maan halki, muun muassa [[Slovakian]], Puolan, Ukrainan ja [[Romanian]] alueilla. Ukrainan Karpaateilla on muun muassa [[Synevyrin]] kaltaisia vuoristojärviä, ja alue on tunnettu metsistään ja perinteisestä paimenkulttuuristaan. Tarkkaa pituutta en uskalla sanoa, kun lähteet antavat vähän eri lukuja. Vuoria on kiva katsoa ylhäältä, mutta niiden yli lentäminen väsyttää.
+KYSYMYS: Kerro lisää: Synevyrin
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä alue Zakarpattia on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Zakarpattia eli Transkarpatia on Ukrainan länsiosassa, Karpaattien takana, ja se rajoittuu Slovakiaan, Unkariin, Romaniaan ja Puolaan. Alueen historia on ollut vaihteleva: 1900-luvulla se kuului vuorotellen useisiin valtioihin, muun muassa [[Unkarin]] ja [[Tšekkoslovakian]] alaisuuteen, ja liitettiin sodan jälkeen [[Neuvostoliittoon]]. Siellä sijaitsee myös Synevyr-järvi.
+
+Yksityiskohdista en ole täysin varma, mutta suuri linja on tämä. Rajaseutu on kyyhkyn kannalta mukavaa, kun voi vilkaista kolmeen maahan samalla reissulla.
+KYSYMYS: Kerro lisää: Unkarin
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kohdekartta / Kohdekartta: Hlavná-katu] keskiaika Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. 1700-luvun kartoissa se on Platea principalis. Isoisän aikaan kadun nimi on saksaksi Haupt Gasse ja unkariksi Fő utcza. Slovakiksi käännetty nimi Hlavná ulica otettiin käyttöön vasta, kun kaupunki siirtyi Tšekkoslovakialle. Myöhemmin nimi vaihtui politiikan mukana: 1933 kadusta tuli kenraali Štefánikin katu, ja vuodesta 1949 se oli 41 vuotta Leninin katu. Vanha nimi palautettiin 1. heinäkuuta 1990. Vuonna 1984 Hlavnásta tuli koko Tšekkoslova…
+- [Praha — kohdekartta / Kohdekartta: Kansallismuseo] 1885–1891 Prahan kansallismuseo perustettiin jo vuonna 1818, mutta nykyinen komea rakennus Vaclavin aukion päässä valmistui vasta vuosina 1885–1891 arkkitehti Josef Schulzin suunnitelmien mukaan. Museon kokoelmissa on nykyään noin 14 miljoonaa esinettä — kivennäisistä ja eläimistä keskiaikaisiin käsikirjoituksiin. Elokuussa 1968, kun Varsovan liiton joukot miehittivät Tšekkoslovakian, museon julkisivuun ammuttiin lukuisia luoteja neuvostosotilaiden konekivääreistä. Reiät paikattiin, mutta koska korjauksiin käytettiin hieman vaaleampaa hiekkakiveä kuin alkuperäisessä julkisivussa, luodinreikien paikat erottuvat seinästä yhä tänäkin päivänä. Vuosina 2011–2018 koko museo remontoitiin perusteel…
+AIEMPI KYSYMYS: Mikä alue Zakarpattia on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Zakarpattia eli Transkarpatia on Ukrainan länsiosassa, Karpaattien takana, ja se rajoittuu Slovakiaan, Unkariin, Romaniaan ja Puolaan. Alueen historia on ollut vaihteleva: 1900-luvulla se kuului vuorotellen useisiin valtioihin, muun muassa [[Unkarin]] ja [[Tšekkoslovakian]] alaisuuteen, ja liitettiin sodan jälkeen [[Neuvostoliittoon]]. Siellä sijaitsee myös Synevyr-järvi.
+
+Yksityiskohdista en ole täysin varma, mutta suuri linja on tämä. Rajaseutu on kyyhkyn kannalta mukavaa, kun voi vilkaista kolmeen maahan samalla reissulla.
+KYSYMYS: Kerro lisää: Tšekkoslovakian
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Synevyr (luonto · järvi)
+Tietoruudun teksti: Synevyr on Ukrainan Karpaattien suurin järvi, joka sijaitsee Zakarpattian alueella 980 metrin korkeudessa Ozerna-vuoren juurella. Se syntyi jääkauden jälkeen noin kymmenen tuhatta vuotta sitten, kun voimakas maanjäristys irrotti hiekkakiveä vuorenrinteeltä ja patosi kapean laakson; vesi valuu yhä huokoisen luonnonpadon läpi ja nousee pintaan vasta 350 metrin päässä järvestä. Järven keskellä on pieni saari, jota kutsutaan Merensilmäksi, ja kansantarun mukaan koko järvi syntyi kreivin tyttären Synin kyynelistä, kun tämän rakastettu, paimenpoika Vyr, surmattiin isän käskystä – ja järven nimikin, Synevyr, on syntynyt näiden kahden nimen yhdistelmästä. Järvi julistettiin kansallispuistoksi 1989 ja valittiin 2008 yhdeksi Ukrainan seitsemästä luonnonihmeestä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Mikä alue Zakarpattia on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Zakarpattia eli Transkarpatia on Ukrainan länsiosassa, Karpaattien takana, ja se rajoittuu Slovakiaan, Unkariin, Romaniaan ja Puolaan. Alueen historia on ollut vaihteleva: 1900-luvulla se kuului vuorotellen useisiin valtioihin, muun muassa [[Unkarin]] ja [[Tšekkoslovakian]] alaisuuteen, ja liitettiin sodan jälkeen [[Neuvostoliittoon]]. Siellä sijaitsee myös Synevyr-järvi.
+
+Yksityiskohdista en ole täysin varma, mutta suuri linja on tämä. Rajaseutu on kyyhkyn kannalta mukavaa, kun voi vilkaista kolmeen maahan samalla reissulla.
+KYSYMYS: Kerro lisää: Neuvostoliittoon
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Kuka Kultaisen portin rakennutti ja miksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä muistan, vaikka Viisas Pöllö onkin yhä matkoilla ja virka jäi minulle. Portin rakennutti ruhtinas [[Jaroslav Viisas]], [[Kiovan Rusin]] hallitsija, ja sillä oli kaksinainen tehtävä: se oli kaupungin muurin pääportti ja puolustusrakenne, mutta myös juhlallinen riemuportti, jonka kautta ruhtinaat ratsastivat kaupunkiin. Ajoituksesta lähteet ovat eri mieltä, sillä osa sijoittaa rakentamisen 1010-luvun lopulle ja 1020-luvun alkuun, osa 1030-luvulle. Nimen kerrotaan tulleen joko [[Konstantinopolin]] Kultaisesta portista, jonka mallin mukaan portti rakennettiin, tai portin lähellä kohonneen kirkon kultaisista kupoleista. Portin päälle rakennettiin myös pieni kirkko suojelemaan kaupunkia. Pitkäksi venähti, vaikka kyl minä yritin tiivistää.
+KYSYMYS: Kerro lisää: Jaroslav Viisas
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Kuka Kultaisen portin rakennutti ja miksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä muistan, vaikka Viisas Pöllö onkin yhä matkoilla ja virka jäi minulle. Portin rakennutti ruhtinas [[Jaroslav Viisas]], [[Kiovan Rusin]] hallitsija, ja sillä oli kaksinainen tehtävä: se oli kaupungin muurin pääportti ja puolustusrakenne, mutta myös juhlallinen riemuportti, jonka kautta ruhtinaat ratsastivat kaupunkiin. Ajoituksesta lähteet ovat eri mieltä, sillä osa sijoittaa rakentamisen 1010-luvun lopulle ja 1020-luvun alkuun, osa 1030-luvulle. Nimen kerrotaan tulleen joko [[Konstantinopolin]] Kultaisesta portista, jonka mallin mukaan portti rakennettiin, tai portin lähellä kohonneen kirkon kultaisista kupoleista. Portin päälle rakennettiin myös pieni kirkko suojelemaan kaupunkia. Pitkäksi venähti, vaikka kyl minä yritin tiivistää.
+KYSYMYS: Kerro lisää: Kiovan Rusin
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Istanbul — kaupunkilehti / Historia: Kapalıçarşı — kuusikymmentäyksi katettua katua] Istanbulin katettu basaari eli Kapalıçarşı on maailman suurimpia ja vanhimpia katettuja kauppapaikkoja: 61 katettua katua ja yli 4 000 myymälää, joissa käy satojatuhansia ihmisiä päivässä. Sen ydin rakennettiin talvella 1455–56 pian Konstantinopolin valloituksen jälkeen, kun sulttaani Mehmed II pystytti kankaiden ja jalokivien kaupalle oman hallin. Isoisä kulki samojen holvien alla kuin nykypäivän kävijä — basaaria sanotaan usein yhdeksi maailman ensimmäisistä kauppakeskuksista.
+AIEMPI KYSYMYS: Kuka Kultaisen portin rakennutti ja miksi?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tän minä muistan, vaikka Viisas Pöllö onkin yhä matkoilla ja virka jäi minulle. Portin rakennutti ruhtinas [[Jaroslav Viisas]], [[Kiovan Rusin]] hallitsija, ja sillä oli kaksinainen tehtävä: se oli kaupungin muurin pääportti ja puolustusrakenne, mutta myös juhlallinen riemuportti, jonka kautta ruhtinaat ratsastivat kaupunkiin. Ajoituksesta lähteet ovat eri mieltä, sillä osa sijoittaa rakentamisen 1010-luvun lopulle ja 1020-luvun alkuun, osa 1030-luvulle. Nimen kerrotaan tulleen joko [[Konstantinopolin]] Kultaisesta portista, jonka mallin mukaan portti rakennettiin, tai portin lähellä kohonneen kirkon kultaisista kupoleista. Portin päälle rakennettiin myös pieni kirkko suojelemaan kaupunkia. Pitkäksi venähti, vaikka kyl minä yritin tiivistää.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Miten paljon alkuperäisestä portista on oikeasti jäljellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ei kovin paljon, ja sen kyllä kuulee heti. Alkuperäisestä portista on nykyään jäljellä kaksi 1000-luvun muurinpätkää, jotka ovat nähtävillä paviljongin sisällä. Muu nykyinen rakennelma on [[Kiovan]] 1500-vuotisjuhlaa varten vuonna 1982 rakennettu täysimittainen [[rekonstruktio]]. Koska alkuperäisestä portista ei ole säilynyt yhtään aikalaiskuvaa, rekonstruktion ulkonäkö perustuu osin arvailuun, ja osa historioitsijoista on vaatinut sen purkamista, jotta aidot muurinpätkät pääsisivät esiin. Portti oli vaurioitunut pahoin vuoden 1240 piirityksessä ja rapistui sen jälkeen raunioiksi, ja kaivaukset aloitettiin [[metropoliitta Eugenioksen]] käynnistämänä vuonna 1832.
+
+Katolta katsottuna rekonstruktio näyttää ihan oikealta portilta, ja siinä on sekä sen vika että ansio. Kyllä ne vanhat muurinpätkät vaan ovat ne oikeat.
+KYSYMYS: Kerro lisää: Kiovan
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Fidži — maalehti / Historia: Nainen, jonka kasvot rakennettiin luista] 2002 — Moturikin saarelta löydettiin vuonna 2002 kokonainen ihmisluuranko. Se oli lapitanaisen, joka eli viimeistään vuonna 800 eaa., ja hänet oli haudattu yli puolentoista metrin syvyyteen häiriintymättömien hiekka- ja lietekerrosten alle, joista löytyi myös lapitakeramiikkaa. Kaulan alle oli asetettu suuri simpukankuori ja toinen polvien väliin, ja haudassa oli lisäksi pienempiä kuoria. Luuranko sai nimen Mana. Kallosta tehtiin tietokonemallilla kasvojen rekonstruktio, ja piirteissä on yhtäläisyyksiä polynesialaisiin, fidžiläisiin ja aasialaisiin — mutta ne eivät osu selvästi yhteenkään näistä ryhmistä.
+AIEMPI KYSYMYS: Miten paljon alkuperäisestä portista on oikeasti jäljellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ei kovin paljon, ja sen kyllä kuulee heti. Alkuperäisestä portista on nykyään jäljellä kaksi 1000-luvun muurinpätkää, jotka ovat nähtävillä paviljongin sisällä. Muu nykyinen rakennelma on [[Kiovan]] 1500-vuotisjuhlaa varten vuonna 1982 rakennettu täysimittainen [[rekonstruktio]]. Koska alkuperäisestä portista ei ole säilynyt yhtään aikalaiskuvaa, rekonstruktion ulkonäkö perustuu osin arvailuun, ja osa historioitsijoista on vaatinut sen purkamista, jotta aidot muurinpätkät pääsisivät esiin. Portti oli vaurioitunut pahoin vuoden 1240 piirityksessä ja rapistui sen jälkeen raunioiksi, ja kaivaukset aloitettiin [[metropoliitta Eugenioksen]] käynnistämänä vuonna 1832.
+
+Katolta katsottuna rekonstruktio näyttää ihan oikealta portilta, ja siinä on sekä sen vika että ansio. Kyllä ne vanhat muurinpätkät vaan ovat ne oikeat.
+KYSYMYS: Kerro lisää: rekonstruktio
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+AIEMPI KYSYMYS: Miten paljon alkuperäisestä portista on oikeasti jäljellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Ei kovin paljon, ja sen kyllä kuulee heti. Alkuperäisestä portista on nykyään jäljellä kaksi 1000-luvun muurinpätkää, jotka ovat nähtävillä paviljongin sisällä. Muu nykyinen rakennelma on [[Kiovan]] 1500-vuotisjuhlaa varten vuonna 1982 rakennettu täysimittainen [[rekonstruktio]]. Koska alkuperäisestä portista ei ole säilynyt yhtään aikalaiskuvaa, rekonstruktion ulkonäkö perustuu osin arvailuun, ja osa historioitsijoista on vaatinut sen purkamista, jotta aidot muurinpätkät pääsisivät esiin. Portti oli vaurioitunut pahoin vuoden 1240 piirityksessä ja rapistui sen jälkeen raunioiksi, ja kaivaukset aloitettiin [[metropoliitta Eugenioksen]] käynnistämänä vuonna 1832.
+
+Katolta katsottuna rekonstruktio näyttää ihan oikealta portilta, ja siinä on sekä sen vika että ansio. Kyllä ne vanhat muurinpätkät vaan ovat ne oikeat.
+KYSYMYS: Kerro lisää: metropoliitta Eugenioksen
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Kiova — kaupunkilehti / Kiova: Seinät ovat täynnä tuhatvuotisia raapustuksia] Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen seinistä on löydetty yli 7000 piirrosta ja tekstiä, jotka kävijät ovat raapineet kiveen 1000–1700-luvuilla. Yksi merkitsi muistiin Jaroslav Viisaan kuoleman, toinen maakaupan, ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on kirjoitettu seitsemänsadan vuoden ajan.
+AIEMPI KYSYMYS: Kuka oli Jaroslav Viisas?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Jaroslav Viisas oli [[Kiovan Rusin]] ruhtinas, joka hallitsi Kiovaa vuodesta 1019 vuoteen 1054, jolloin hän kuoli. Häntä pidetään yhtenä Rusin tärkeimmistä hallitsijoista: hänen valtakaudellaan Kiovaan rakennettiin kivikirkkoja ja kaupungin puolustusrakenteita, ja [[Pyhän Sofian katedraalin]] rakentaminen liitetään hänen nimeensä. Hänen nimiinsä liitetään myös [[Russkaja Pravda]] -lakikokoelma, vaikka se karttui vasta myöhemmin. Tytärtensä avioliitoilla hän sitoi Rusin sukulaissuhteilla Ranskan, Norjan ja Unkarin hallitsijoihin, ja hänen puolisonsa Ingegerd oli ruotsalaisen kuninkaan tytär. Siinä oli sukua enemmän kuin kyyhkyjen sukukokouksessa, eikä se ole vähän.
+KYSYMYS: Kerro lisää: Pyhän Sofian katedraalin
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Kinoteatteri Gornjak] Leninin valtakatu 19 Gornjak tarkoittaa kaivosmiestä, ja se on Magadanin elokuvateatteri. Talo on vaaleanvihreä, sen julkisivua jäsentävät valkoiset pilasterit ja sen katolla lukee kolmessa osassa mainoskirjaimin sana elokuva, nimi Gornjak punaisella käsialakirjaimistolla ja sana teatteri. Sisäänkäynnin viereen on ripustettu elokuvajulisteita lasitettuihin kehyksiin. Elokuvateatteri kuuluu samaan sarjaan kuin kaupungin muut julkiset talot: se on kulttuurilaitos, joka rakennettiin, kun kaupunki oli vasta muutaman vuosikymmenen ikäinen, ja se sai saman klassisistisen asun. Magadanissa on lisäksi aluemuseo, geologinen museo, aluekirjasto ja yliopisto, ja kaupungin oma sanomalehti on Magadanska…
+- [Sahalin — kaupunkilehti / Historia: Kymmenentuhatta kortistokorttia] Anton Tšehov oli kolmenkymmenen ikäinen ja koulutukseltaan lääkäri, kun hän lähti Moskovasta Sahalinille keväällä 1890. Saarelle hän saapui 11. heinäkuuta ja viipyi kolme kuukautta. Hän painatti itselleen kortistokortteja ja kiersi asutuksesta toiseen kysymässä nimen, iän, säädyn ja ammatin; kortteja täyttyi noin kymmenentuhatta. Poliittisten vankien haastattelu oli häneltä kielletty, mutta hän rikkoi kieltoa. Matkasta syntyi kirja Sahalin, jonka luvut ilmestyivät Russkaja mysl -lehdessä 1893–1894 ja kokonaisena teoksena 1895.
+AIEMPI KYSYMYS: Kuka oli Jaroslav Viisas?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys tuo. Jaroslav Viisas oli [[Kiovan Rusin]] ruhtinas, joka hallitsi Kiovaa vuodesta 1019 vuoteen 1054, jolloin hän kuoli. Häntä pidetään yhtenä Rusin tärkeimmistä hallitsijoista: hänen valtakaudellaan Kiovaan rakennettiin kivikirkkoja ja kaupungin puolustusrakenteita, ja [[Pyhän Sofian katedraalin]] rakentaminen liitetään hänen nimeensä. Hänen nimiinsä liitetään myös [[Russkaja Pravda]] -lakikokoelma, vaikka se karttui vasta myöhemmin. Tytärtensä avioliitoilla hän sitoi Rusin sukulaissuhteilla Ranskan, Norjan ja Unkarin hallitsijoihin, ja hänen puolisonsa Ingegerd oli ruotsalaisen kuninkaan tytär. Siinä oli sukua enemmän kuin kyyhkyjen sukukokouksessa, eikä se ole vähän.
+KYSYMYS: Kerro lisää: Russkaja Pravda
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+AIEMPI KYSYMYS: Mikä Kiovan Rusi oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kiovan Rusi oli keskiajan itäslaavilainen valtioliitto, jonka keskuksena oli Kiova ja jota hallitsivat Rurikin suvun ruhtinaat. Kronikoiden mukaan se syntyi 800-luvun lopulla, ja [[varjagien]] eli skandinaavisten kauppiaiden ja sotajoukkojen osuudesta sen synnyssä on keskusteltu paljon. Ruhtinas [[Vladimir]] kastatti rusit kristinuskoon kronikan mukaan vuonna 988, ja yhteys [[Bysantin]] valtakuntaan muokkasi kirkkoa, kirjoitusta ja rakennustaidetta. Valtioliitto hajosi 1100-luvulta alkaen erillisiin ruhtinaskuntiin, ja 1200-luvun mongolivalloitus päätti sen. Sen perintöä pitävät nykyään omanaan useat valtiot, joten historiankirjoitus on osin tulkinnanvaraista. Aika monta vuosisataa mahtui yhteen vastaukseen.
+KYSYMYS: Kerro lisää: varjagien
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Astana — kohdekartta / Kohdekartta: Kansallismuseo] 2014 Museo avattiin vuonna 2014, ja se oli silloin Keski-Aasian suurin. Julkisivu on sinistä lasia ja valkoista marmoria. Suunnittelija oli Vladimir Laptev, joka on myös kaupungin pääkaavoittaja, ja hänen lähtökohtansa oli liehuva lippu. Talo koostuu seitsemästä lohkosta, joissa on yhdestä yhdeksään kerrosta. Näyttelytilaa on noin 14 000 neliömetriä yhdessätoista salissa: Astanan sali, itsenäisen Kazakstanin sali, Kultasali, muinaisen ja keskiajan historian sali, historian sali, kansatieteen sali ja nykytaiteen salit. Saman katon alla ovat myös lastenmuseo, lasten luova keskus, kaksi vaihtuvien näyttelyiden salia, konservointipajat, laboratoriot, tieteellinen kirjasto lukusaleineen ja kongr…
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+AIEMPI KYSYMYS: Mikä Kiovan Rusi oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kiovan Rusi oli keskiajan itäslaavilainen valtioliitto, jonka keskuksena oli Kiova ja jota hallitsivat Rurikin suvun ruhtinaat. Kronikoiden mukaan se syntyi 800-luvun lopulla, ja [[varjagien]] eli skandinaavisten kauppiaiden ja sotajoukkojen osuudesta sen synnyssä on keskusteltu paljon. Ruhtinas [[Vladimir]] kastatti rusit kristinuskoon kronikan mukaan vuonna 988, ja yhteys [[Bysantin]] valtakuntaan muokkasi kirkkoa, kirjoitusta ja rakennustaidetta. Valtioliitto hajosi 1100-luvulta alkaen erillisiin ruhtinaskuntiin, ja 1200-luvun mongolivalloitus päätti sen. Sen perintöä pitävät nykyään omanaan useat valtiot, joten historiankirjoitus on osin tulkinnanvaraista. Aika monta vuosisataa mahtui yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Vladimir
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Aleppo — kohdekartta / Kohdekartta: Antiokian portti] Vanhankaupungin läntisen muurin keskellä seisoo portti, jonka nimi kertoo suunnan: tie vei Antiokiaan, antiikin Syyrian pääkaupunkiin. Kaksi kuusikulmaista bastionia nousee rinnakkain, ja niiden välinen kulkuväylä mutkittelee sen sijaan että menisi suoraan läpi. Aukko on oikeanpuoleisen tornin alla, puolustussyistä: sisään tulija ei pääse vauhtiin eikä näe eteensä. Kivi on valkoista, ja lohkareet ovat noin 0,8 kertaa 1,0 metriä. Bysantin aikana tämä oli kaupungin pääportti, ja sen jälkeen merkitys hiipui. Ajjubidien Aleppon emiiri an-Nasir Yusuf, Saladinin pojanpojanpoika, rakennutti portin uudelleen 1000-luvulta periytyvän perustuksen päälle. Vuosiluvut ovat epätarkkoja: portin kohdalla hä…
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+AIEMPI KYSYMYS: Mikä Kiovan Rusi oli?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kiovan Rusi oli keskiajan itäslaavilainen valtioliitto, jonka keskuksena oli Kiova ja jota hallitsivat Rurikin suvun ruhtinaat. Kronikoiden mukaan se syntyi 800-luvun lopulla, ja [[varjagien]] eli skandinaavisten kauppiaiden ja sotajoukkojen osuudesta sen synnyssä on keskusteltu paljon. Ruhtinas [[Vladimir]] kastatti rusit kristinuskoon kronikan mukaan vuonna 988, ja yhteys [[Bysantin]] valtakuntaan muokkasi kirkkoa, kirjoitusta ja rakennustaidetta. Valtioliitto hajosi 1100-luvulta alkaen erillisiin ruhtinaskuntiin, ja 1200-luvun mongolivalloitus päätti sen. Sen perintöä pitävät nykyään omanaan useat valtiot, joten historiankirjoitus on osin tulkinnanvaraista. Aika monta vuosisataa mahtui yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Bysantin
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kiovan Kultainen portti (historia)
+Tietoruudun teksti: Kiovan Kultainen portti oli ruhtinas Jaroslav Viisaan 1030-luvulla rakennuttama Kiovan Rusin pääkaupungin pääpuolustusportti ja voittosaatoille tarkoitettu juhlaportti, joka sai nimensä lähellä kohonneen Neitsyt Marian ilmestyskirkon kultaisista kupoleista. Batu-kaanin joukot vaurioittivat sitä pahoin Kiovan piirityksessä 1240, ja seuraavien vuosisatojen aikana portti rapistui yhä pahemmin raunioiksi. Vuonna 1832 metropoliitta Eugenios käynnistytti raunioiden kaivaukset ja ensimmäiset säilytystoimet. Koska yhtään aikalaiskuvaa alkuperäisestä portista ei ole säilynyt, Kiovan 1500-vuotisjuhlaa varten 1982 rakennettu täysimittainen rekonstruktio jäi historioitsijoiden mielestä osin arvailuksi, ja osa heistä on vaatinut sen purkamista säilyneiden aitojen muurinpätkien esiin saamiseksi. Nykyään paviljongin sisällä on nähtävillä kaksi alkuperäistä 1000-luvun muurinpätkää, jotka ovat jälleenra…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mitä Kiovalle tapahtui mongolien hyökkäyksessä 1240?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tämä oli raskas hetki. Vuonna 1240 Batu-kaanin johtamat mongolijoukot piirittivät ja valtasivat Kiovan osana laajempaa sotaretkeä Itä-Euroopassa. Kaupunki ja sen rakennukset vaurioituivat pahoin, ja myös Kultainen portti sai tuolloin vakavia vaurioita. Hyökkäys oli iso isku [[Kiovan Rusin]] johtavalle keskukselle, ja kaupungin asema heikkeni pitkäksi aikaa, vaikka se ei kokonaan autioitunut. Siitä on kulunut yli seitsemänsataa vuotta, ja Kiova on sen jälkeen kasvanut [[Ukrainan]] pääkaupungiksi. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ukrainan
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miksi kokonainen kylä poltettiin parin sukupolven välein?
+AIEMPI VASTAUS (Livia):
+Kato, tästä on väitelty kauan. Varmaa vastausta ei ole. [[Trypillian kulttuurin]] asutuksia näyttää poltetun tarkoituksella noin kuudenkymmenen tai kahdeksankymmenen vuoden välein, mutta syystä tutkijat eivät ole yksimielisiä. Yhden selityksen mukaan kyse oli [[rituaalisesta uudistamisesta]], jossa talot ja koko kylä poltettiin elämänvaiheen päättyessä. Toisen mukaan syyt olivat käytännöllisiä: tuholaisten hävittäminen sekä lähimetsien ja peltojen ehtyminen, jolloin asutus siirtyi uuteen paikkaan. Osa tutkijoista on pohtinut myös ristiriitoja, mutta kaikista kylistä ei löydy merkkejä sodasta. Varmuutta ei ole, ja syitä on voinut olla useita. Kyyhkynä minä en kyllä polttaisi omaa pesää.
+KYSYMYS: Kerro lisää: Trypillian kulttuurin
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miksi kokonainen kylä poltettiin parin sukupolven välein?
+AIEMPI VASTAUS (Livia):
+Kato, tästä on väitelty kauan. Varmaa vastausta ei ole. [[Trypillian kulttuurin]] asutuksia näyttää poltetun tarkoituksella noin kuudenkymmenen tai kahdeksankymmenen vuoden välein, mutta syystä tutkijat eivät ole yksimielisiä. Yhden selityksen mukaan kyse oli [[rituaalisesta uudistamisesta]], jossa talot ja koko kylä poltettiin elämänvaiheen päättyessä. Toisen mukaan syyt olivat käytännöllisiä: tuholaisten hävittäminen sekä lähimetsien ja peltojen ehtyminen, jolloin asutus siirtyi uuteen paikkaan. Osa tutkijoista on pohtinut myös ristiriitoja, mutta kaikista kylistä ei löydy merkkejä sodasta. Varmuutta ei ole, ja syitä on voinut olla useita. Kyyhkynä minä en kyllä polttaisi omaa pesää.
+KYSYMYS: Kerro lisää: rituaalisesta uudistamisesta
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Voiko kuusituhatta vuotta vanhaa asutusta sanoa kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tutkijat jakautuvat, ja kaikki riippuu siitä, mitä kaupungilla tarkoitetaan. Koon puolesta suurimmat [[Trypillian]] asutukset olivat kaupunkien veroisia: niissä oli jopa kolmetuhatta rakennusta, ja asukasmääräksi on arvioitu kymmeniä tuhansia, joskin arviot ovat epävarmoja. Monet tutkijat eivät silti käytä sanaa kaupunki, koska asutuksista ei ole löytynyt selvää keskushallintoa, palatseja tai temppeleitä, ei kirjoitusta eikä muita merkkejä kaupunkimaisesta työnjaosta ja yhteiskunnallisesta hierarkiasta. Siksi englanninkielisessä tutkimuksessa niistä käytetään usein nimitystä [[megasite]], ja jotkut puhuvat kaupunkien esiasteesta. Minun mielestäni kaupunki on paikka, jossa on ainakin yksi kunnon leipomo.
+KYSYMYS: Kerro lisää: Trypillian
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Voiko kuusituhatta vuotta vanhaa asutusta sanoa kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tutkijat jakautuvat, ja kaikki riippuu siitä, mitä kaupungilla tarkoitetaan. Koon puolesta suurimmat [[Trypillian]] asutukset olivat kaupunkien veroisia: niissä oli jopa kolmetuhatta rakennusta, ja asukasmääräksi on arvioitu kymmeniä tuhansia, joskin arviot ovat epävarmoja. Monet tutkijat eivät silti käytä sanaa kaupunki, koska asutuksista ei ole löytynyt selvää keskushallintoa, palatseja tai temppeleitä, ei kirjoitusta eikä muita merkkejä kaupunkimaisesta työnjaosta ja yhteiskunnallisesta hierarkiasta. Siksi englanninkielisessä tutkimuksessa niistä käytetään usein nimitystä [[megasite]], ja jotkut puhuvat kaupunkien esiasteesta. Minun mielestäni kaupunki on paikka, jossa on ainakin yksi kunnon leipomo.
+KYSYMYS: Kerro lisää: megasite
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miten arkeologi löytää kylän, josta ei ole mitään maan päällä?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on nokkelampi keino kuin lapio. Nykyään suuri osa löydöistä tehdään ilman kaivamista, ja tärkein menetelmä on [[magneettikartoitus]]: poltettu savi, kuten palaneiden talojen rapaus, magnetoituu eri tavalla kuin ympäröivä maa, ja herkkä [[magnetometri]] piirtää tämän jäljen kartaksi. Siksi poltetut kylät ovat arkeologeille onnekkaita, sillä rakennusten pohjat erottuvat kartasta tarkasti. Apuna käytetään myös ilmakuvia ja satelliittikuvia, joissa peltojen kasvusto voi paljastaa maan alla olevia rakenteita, sekä koekaivauksia ja saviastioiden sirpaleita, joilla paikka ajoitetaan. Näin on saatu kokonaisia pohjakarttoja useista [[Trypillian]] kulttuurin asutuksista.
+
+Ylhäältä katsoen pelto kertoo joskus paljon: kasvusto kasvaa eri tavalla maan alla olevien rakenteiden päällä. Minä en ole koskaan huomannut sitä, mutta suvun maine on nyt pelastettu.
+KYSYMYS: Kerro lisää: magneettikartoitus
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miten arkeologi löytää kylän, josta ei ole mitään maan päällä?
+AIEMPI VASTAUS (Livia):
+Ai se. Siihen on nokkelampi keino kuin lapio. Nykyään suuri osa löydöistä tehdään ilman kaivamista, ja tärkein menetelmä on [[magneettikartoitus]]: poltettu savi, kuten palaneiden talojen rapaus, magnetoituu eri tavalla kuin ympäröivä maa, ja herkkä [[magnetometri]] piirtää tämän jäljen kartaksi. Siksi poltetut kylät ovat arkeologeille onnekkaita, sillä rakennusten pohjat erottuvat kartasta tarkasti. Apuna käytetään myös ilmakuvia ja satelliittikuvia, joissa peltojen kasvusto voi paljastaa maan alla olevia rakenteita, sekä koekaivauksia ja saviastioiden sirpaleita, joilla paikka ajoitetaan. Näin on saatu kokonaisia pohjakarttoja useista [[Trypillian]] kulttuurin asutuksista.
+
+Ylhäältä katsoen pelto kertoo joskus paljon: kasvusto kasvaa eri tavalla maan alla olevien rakenteiden päällä. Minä en ole koskaan huomannut sitä, mutta suvun maine on nyt pelastettu.
+KYSYMYS: Kerro lisää: magnetometri
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Keitä trypillialaiset olivat ja mihin he katosivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän ei ole yhtä varmaa vastausta. Trypillian kulttuuri kuuluu laajempaan [[Cucuteni–Trypillia-kulttuuriin]], joka levisi [[Karpaateilta]] Dnesterille ja Dneprille ja eli noin vuosina 5050–2950 eaa. Heidän omaa nimeään ei tunneta, koska kirjoitusta ei ollut, ja nimi tulee Trypillian kylän löytöpaikasta. He olivat maanviljelijöitä ja karjanhoitajia, joiden esi-isien arvellaan tulleen osin [[Balkanin]] suunnalta, mutta alkuperästä keskustellaan edelleen. Kulttuurin loppuun on esitetty useita syitä, kuten ilmaston ja maaperän muutokset sekä aroilta levinneet karjankasvattajaryhmät. Todennäköisesti syitä oli useita, ja ihmisten ajatellaan yleensä sulautuneen muihin ryhmiin eikä hävinneen kokonaan. Vaikka kirjoitusta ei ollut, jäljet kyllä ovat jääneet.
+KYSYMYS: Kerro lisää: Cucuteni–Trypillia-kulttuuriin
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Keitä trypillialaiset olivat ja mihin he katosivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän ei ole yhtä varmaa vastausta. Trypillian kulttuuri kuuluu laajempaan [[Cucuteni–Trypillia-kulttuuriin]], joka levisi [[Karpaateilta]] Dnesterille ja Dneprille ja eli noin vuosina 5050–2950 eaa. Heidän omaa nimeään ei tunneta, koska kirjoitusta ei ollut, ja nimi tulee Trypillian kylän löytöpaikasta. He olivat maanviljelijöitä ja karjanhoitajia, joiden esi-isien arvellaan tulleen osin [[Balkanin]] suunnalta, mutta alkuperästä keskustellaan edelleen. Kulttuurin loppuun on esitetty useita syitä, kuten ilmaston ja maaperän muutokset sekä aroilta levinneet karjankasvattajaryhmät. Todennäköisesti syitä oli useita, ja ihmisten ajatellaan yleensä sulautuneen muihin ryhmiin eikä hävinneen kokonaan. Vaikka kirjoitusta ei ollut, jäljet kyllä ovat jääneet.
+KYSYMYS: Kerro lisää: Karpaateilta
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pohjois-Makedonia — maalehti / Historia: Balkanin Jerusalem] 9.–13. vuosisata — Ohridin järvi on yksi Euroopan vanhimmista ja syvimmistä järvistä – sen pohjassa elää lajeja, joita ei tavata muualla maailmassa. Rannalla kohoava Ohridin kaupunki oli 800-luvun lopulla Pyhän Kliment Ohridilaisen koulun ansiosta slaavilaisen kirjallisuuden ja kyrillisen kirjaimiston tärkeimpiä keskuksia Euroopassa. Keskiajalla kaupungissa kerrottiin olleen 365 kirkkoa, yksi joka päivälle – legenda liioittelee, mutta kuuluisin jäljellä olevista on kalliolle Kaneon niemelle rakennettu Pyhän Johanneksen kirkko 1200-luvulta. Unesco liitti järven ja vanhankaupungin maailmanperintöluetteloon jo 1979.
+AIEMPI KYSYMYS: Keitä trypillialaiset olivat ja mihin he katosivat?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tähän ei ole yhtä varmaa vastausta. Trypillian kulttuuri kuuluu laajempaan [[Cucuteni–Trypillia-kulttuuriin]], joka levisi [[Karpaateilta]] Dnesterille ja Dneprille ja eli noin vuosina 5050–2950 eaa. Heidän omaa nimeään ei tunneta, koska kirjoitusta ei ollut, ja nimi tulee Trypillian kylän löytöpaikasta. He olivat maanviljelijöitä ja karjanhoitajia, joiden esi-isien arvellaan tulleen osin [[Balkanin]] suunnalta, mutta alkuperästä keskustellaan edelleen. Kulttuurin loppuun on esitetty useita syitä, kuten ilmaston ja maaperän muutokset sekä aroilta levinneet karjankasvattajaryhmät. Todennäköisesti syitä oli useita, ja ihmisten ajatellaan yleensä sulautuneen muihin ryhmiin eikä hävinneen kokonaan. Vaikka kirjoitusta ei ollut, jäljet kyllä ovat jääneet.
+KYSYMYS: Kerro lisää: Balkanin
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Mitä trypillialaiset viljelivät ja söivät?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on aihe, josta minäkin innostun. [[Trypillian kulttuuri]] perustui [[maanviljelyyn]] ja karjanhoitoon. Löytöjen perusteella pelloilla viljeltiin muun muassa vehnää, ohraa ja [[palkokasveja]], ja karjaa olivat esimerkiksi naudat, siat sekä lampaat ja vuohet. Ruokaa valmistettiin saviastioissa, joita poltettiin kehittyneissä uuneissa. Suurten asutusten ruokahuolto vaati paljon peltoa ja laidunmaata lähiympäristöltä, minkä arvellaan voineen osaltaan vaikuttaa siihen, että asutukset uusiutuivat ja siirtyivät uusiin paikkoihin. Pampuškia ei silloin vielä ollut, ikävä kyllä.
+KYSYMYS: Kerro lisää: Trypillian kulttuuri
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Mitä trypillialaiset viljelivät ja söivät?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on aihe, josta minäkin innostun. [[Trypillian kulttuuri]] perustui [[maanviljelyyn]] ja karjanhoitoon. Löytöjen perusteella pelloilla viljeltiin muun muassa vehnää, ohraa ja [[palkokasveja]], ja karjaa olivat esimerkiksi naudat, siat sekä lampaat ja vuohet. Ruokaa valmistettiin saviastioissa, joita poltettiin kehittyneissä uuneissa. Suurten asutusten ruokahuolto vaati paljon peltoa ja laidunmaata lähiympäristöltä, minkä arvellaan voineen osaltaan vaikuttaa siihen, että asutukset uusiutuivat ja siirtyivät uusiin paikkoihin. Pampuškia ei silloin vielä ollut, ikävä kyllä.
+KYSYMYS: Kerro lisää: maanviljelyyn
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Euroopan suurimmat kylät rakennettiin kuusituhatta vuotta sitten — ja poltettiin joka kolmas sukupolvi
+Tietoruudun teksti: Neljänkymmenen kilometrin päässä Kiovasta, Dneprin varrella, on kylä nimeltä Trypillia. Sen mukaan on nimetty kulttuuri, joka eli näillä main noin vuosina 5050–2950 ennen ajanlaskua ja levisi Karpaateilta Dnesterille ja Dneprille, noin 350 000 neliökilometrin alalle. Keskikaudellaan, runsaat neljätuhatta vuotta ennen ajanlaskua, sen asutukset olivat Euraasian suurimpia: isoimmissa oli jopa kolmetuhatta rakennusta ja arvioiden mukaan kahdestakymmenestä neljäänkymmeneenkuuteen tuhanteen asukasta. Se on kaupungin kokoinen luku aikana, jolta ei tunneta kaupunkeja. Saviastiat poltettiin kehittyneissä uuneissa, ja samalta alueelta on löytynyt maailman vanhin tunnettu savenvalajan pyörä ja vanhimmat pienoismallit pyörällisistä ajoneuvoista.
+
+Ja sitten se piirre, jota kukaan ei osaa selittää: kylät poltettiin. Yksi asuinvaihe kesti noin kuusikymmentä tai kahdeksankymmentä vuotta, minkä jälkeen …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kypros — maalehti / Ruoka: Mustaksi kullaksi sanottu palko] Johanneksenleipäpuun palkoja kutsuttiin Kyproksella mustaksi kullaksi. Puu kestää kuivuutta eikä vaadi kastelua, ja palkoja vietiin ennen kaikkea Englantiin ja Ranskaan. Viljely voimistui Limassolin seudulla vuodesta 1854. Sato korjattiin elokuun lopusta alkaen noin kolmen viikon aikana: miehet pudottivat palot kepeillä ja naiset keräsivät ne koreihin. Vuoden 1994 inventaarissa saarella laskettiin 265 000 puuta, ja määrä oli pudonnut 23 prosenttia vuodesta 1977. Vuonna 2012 viljelyala oli 1 709 hehtaaria ja sato 9 123 tonnia; vuoteen 2022 mennessä ala oli laskenut 1 340 hehtaariin. Paloista keitetään siirappia: niitä haudutetaan vedessä suuressa astiassa muutaman tunnin, minkä jälkeen neste…
+AIEMPI KYSYMYS: Mitä trypillialaiset viljelivät ja söivät?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on aihe, josta minäkin innostun. [[Trypillian kulttuuri]] perustui [[maanviljelyyn]] ja karjanhoitoon. Löytöjen perusteella pelloilla viljeltiin muun muassa vehnää, ohraa ja [[palkokasveja]], ja karjaa olivat esimerkiksi naudat, siat sekä lampaat ja vuohet. Ruokaa valmistettiin saviastioissa, joita poltettiin kehittyneissä uuneissa. Suurten asutusten ruokahuolto vaati paljon peltoa ja laidunmaata lähiympäristöltä, minkä arvellaan voineen osaltaan vaikuttaa siihen, että asutukset uusiutuivat ja siirtyivät uusiin paikkoihin. Pampuškia ei silloin vielä ollut, ikävä kyllä.
+KYSYMYS: Kerro lisää: palkokasveja
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Andreaksen kirkko] 1747–1754 Andreaksen kirkko kohoaa jyrkällä mäellä Kiovan Podilin yläpuolella, ja sen taustalla on vanha legenda. Tarinan mukaan apostoli Andreas nousi tälle samalle kukkulalle jo lähes kaksituhatta vuotta sitten, pystytti sinne ristin ja ennusti paikalle nousevan suuren kaupungin, jossa olisi paljon kirkkoja. Juuri tähän pyhäksi uskottuun paikkaan rakennettiin vuosina 1747–1754 kirkko, joka on saanut nimensä apostolin käynnin muistoksi. Kirkon suunnitteli italialainen arkkitehti Bartolomeo Rastrelli, joka piirsi myös komeita palatseja Pietariin, ja rakennustyötä valvoi paikan päällä Ivan Mitšurin. Kirkko seisoo 15 metriä korkealla kivijalustalla, minkä ansiosta se näyttää melkein leijuvan …
+AIEMPI KYSYMYS: Miten vene vietiin kosken ohi ennen kanavia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on sellainen asia, jossa lentäjällä on etulyöntiasema. Dneprin koskialueella vene ei päässyt kulkemaan, joten matkalaiset purkivat lastin, kantoivat tavarat rantaa pitkin ja vetivät tai kantoivat veneensä maitse kosken ohi. Tämä oli osa [[Nestorin kronikan]] reittiä varjageista kreikkalaisille, jota kauppiaat ja sotajoukot kulkivat Itämereltä Bysanttiin. Bysantin keisari [[Konstantinos Porfyrogennetos]] kuvasi koskia 900-luvun puolivälin tienoilla, ja hänen mukaansa kohta oli vaarallinen, koska [[petšenegit]] vaanivat matkalaisia juuri kosken ohituksen aikana. Kanna siinä sitten venettä, minä lensin aina yli.
+KYSYMYS: Kerro lisää: Nestorin kronikan
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miten vene vietiin kosken ohi ennen kanavia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on sellainen asia, jossa lentäjällä on etulyöntiasema. Dneprin koskialueella vene ei päässyt kulkemaan, joten matkalaiset purkivat lastin, kantoivat tavarat rantaa pitkin ja vetivät tai kantoivat veneensä maitse kosken ohi. Tämä oli osa [[Nestorin kronikan]] reittiä varjageista kreikkalaisille, jota kauppiaat ja sotajoukot kulkivat Itämereltä Bysanttiin. Bysantin keisari [[Konstantinos Porfyrogennetos]] kuvasi koskia 900-luvun puolivälin tienoilla, ja hänen mukaansa kohta oli vaarallinen, koska [[petšenegit]] vaanivat matkalaisia juuri kosken ohituksen aikana. Kanna siinä sitten venettä, minä lensin aina yli.
+KYSYMYS: Kerro lisää: Konstantinos Porfyrogennetos
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Miten vene vietiin kosken ohi ennen kanavia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Tää on sellainen asia, jossa lentäjällä on etulyöntiasema. Dneprin koskialueella vene ei päässyt kulkemaan, joten matkalaiset purkivat lastin, kantoivat tavarat rantaa pitkin ja vetivät tai kantoivat veneensä maitse kosken ohi. Tämä oli osa [[Nestorin kronikan]] reittiä varjageista kreikkalaisille, jota kauppiaat ja sotajoukot kulkivat Itämereltä Bysanttiin. Bysantin keisari [[Konstantinos Porfyrogennetos]] kuvasi koskia 900-luvun puolivälin tienoilla, ja hänen mukaansa kohta oli vaarallinen, koska [[petšenegit]] vaanivat matkalaisia juuri kosken ohituksen aikana. Kanna siinä sitten venettä, minä lensin aina yli.
+KYSYMYS: Kerro lisää: petšenegit
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Mitä tapahtuu maisemalle, kun tekoallas nousee sen päälle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Dnepr on tästä oiva esimerkki. Kun pato nostaa vedenpinnan, laakson alimmat osat jäävät veden alle: rannat, niityt, metsät, pellot ja asutukset peittyvät, ja uoma levenee järveksi. Koskien tapauksessa kallioinen kynnys ja sen putoukset hukkuvat, virta hidastuu, vesi syvenee ja laivat pääsevät kulkemaan, mutta alkuperäinen maisema, saaret ja kosken kohina häviävät. Eliöstö muuttuu, kun virtaava vesi vaihtuu seisovaksi, ja ihmisten asuinpaikkoja on usein siirrettävä. Dneprin kosket jäivät veden alle 1930-luvun alussa valmistuneen [[Dneprin vesivoimalaitoksen]] padon nostaman tekoaltaan alle lähellä [[Zaporižžjaa]]. Minun korvilleni se on kyllä rauhallisempaa.
+KYSYMYS: Kerro lisää: Dneprin vesivoimalaitoksen
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Kulttuuri: Sotatanssista tuli kansallistanssi] 1500-luku — Hopakin nimi tulee sanasta hopaty, hypätä, ja huudahduksesta "hop!". Tanssi syntyi 1500-luvulla Zaporižžjan kasakoiden juhlana: kun sotaretkeltä palattiin voittajina, miehet tanssivat improvisoiden akrobaattisia hyppyjä ja lavastivat taisteluliikkeitä oikeilla miekoilla. Alun perin vain miehet tanssivat hopakia, mutta myöhemmin siitä tuli pari- ja ryhmätanssi. 1900-luvulla koreografit, muun muassa Pavlo Virskyin nimeä kantava kansantanssiyhtye, muokkasivat siitä näyttämölle sovitetun esitystanssin, jota ukrainalaisyhteisöt esittävät nykyään ympäri maailmaa – myös maastamuuttajien juhlissa Kanadassa ja Yhdysvalloissa.
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mitä tapahtuu maisemalle, kun tekoallas nousee sen päälle?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Dnepr on tästä oiva esimerkki. Kun pato nostaa vedenpinnan, laakson alimmat osat jäävät veden alle: rannat, niityt, metsät, pellot ja asutukset peittyvät, ja uoma levenee järveksi. Koskien tapauksessa kallioinen kynnys ja sen putoukset hukkuvat, virta hidastuu, vesi syvenee ja laivat pääsevät kulkemaan, mutta alkuperäinen maisema, saaret ja kosken kohina häviävät. Eliöstö muuttuu, kun virtaava vesi vaihtuu seisovaksi, ja ihmisten asuinpaikkoja on usein siirrettävä. Dneprin kosket jäivät veden alle 1930-luvun alussa valmistuneen [[Dneprin vesivoimalaitoksen]] padon nostaman tekoaltaan alle lähellä [[Zaporižžjaa]]. Minun korvilleni se on kyllä rauhallisempaa.
+KYSYMYS: Kerro lisää: Zaporižžjaa
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+AIEMPI KYSYMYS: Miksi joki putoaa juuri tietyissä kohdissa jyrkästi?
+AIEMPI VASTAUS (Livia):
+Hei, tää on oikeasti pöllön alaa, mutta hän parantelee siipeään, joten hoidan minä. Joen pudotus keskittyy kohtiin, joissa uomassa on kovaa kalliota. Dneprin koskialueella [[Ukrainan kilven]] graniitti ja gneissi nousivat joen uomaan, ja kova kivi kuluu hitaammin kuin sen ympärillä ja alapuolella oleva pehmeämpi maa- ja kiviaines, joten joen on pudottava kynnyksen yli. Samaan tapaan syntyvät koskia ja putouksia muuallakin: jyrkkä kohta pysyy paikallaan, kunnes [[eroosio]] vähitellen kuluttaa sen pois. Dneprillä tällaista kovaa kalliota oli kuudenkymmenenkuuden kilometrin matkalla, ja vesi putosi siellä yhteensä viisikymmentä metriä. Kivi voittaa, jos vain jaksaa odottaa.
+KYSYMYS: Kerro lisää: Ukrainan kilven
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Odessa — kohdekartta / Kohdekartta: Potjomkin-portaat] Kun isoisäsi nousi rannasta kaupunkiin, portaikko oli kolmekymmentäkaksivuotias ja täysin tuntematon maailmalla. Se rakennettiin vuosina 1837–1841, ja sen teetti ruhtinas Mihail Vorontsov: virallisesti lahjaksi vaimolleen Elżbietalle, käytännössä myös siksi, että kaupungin varakkain väki asui törmän päällä ja pääsi satamaan vain kiemurtelevia polkuja ja karkeita puuportaita pitkin. Hinta oli kahdeksansataatuhatta ruplaa. Piirustukset teki Francesco Boffo kahden muun kanssa, ja työmaata valvoi englantilainen insinööri John Upton. Nimiä portaikolla oli isoisäsi aikaan kolme, eikä yksikään niistä ollut nykyinen: sitä sanottiin Bulevardin portaiksi, Richelieun portaiksi ja useimmiten yksinkerta…
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Kivi joka on lähes kaksi miljardia vuotta vanha] Kanjonin pohjalla, siellä missä Coloradojoki on kaivautunut syvimmälle, paljastuu tummaa, juovikasta kiveä nimeltä Vishnu-liuske. Se syntyi noin 1 745 miljoonaa vuotta sitten valtavien paineiden ja kuumuuden muokatessa alkuperäistä laavaa ja sedimenttiä syvällä maankuoressa – kauan ennen monisoluista elämää. Kivilajin ja sitä 270 miljoonaa vuotta nuoremman reunakerroksen, Kaibab-kalkkikiven, väliin jää niin sanottu Suuri epäjatkuvuus: yli 500 miljoonan vuoden aukko kerrostumissa, sillä eroosio on kuluttanut välissä olleen kiviaineksen pois. Geologit kutsuvatkin kanjonia paikaksi, jossa voi kävellä läpi suuren osan maapallon historiaa.
+AIEMPI KYSYMYS: Miksi joki putoaa juuri tietyissä kohdissa jyrkästi?
+AIEMPI VASTAUS (Livia):
+Hei, tää on oikeasti pöllön alaa, mutta hän parantelee siipeään, joten hoidan minä. Joen pudotus keskittyy kohtiin, joissa uomassa on kovaa kalliota. Dneprin koskialueella [[Ukrainan kilven]] graniitti ja gneissi nousivat joen uomaan, ja kova kivi kuluu hitaammin kuin sen ympärillä ja alapuolella oleva pehmeämpi maa- ja kiviaines, joten joen on pudottava kynnyksen yli. Samaan tapaan syntyvät koskia ja putouksia muuallakin: jyrkkä kohta pysyy paikallaan, kunnes [[eroosio]] vähitellen kuluttaa sen pois. Dneprillä tällaista kovaa kalliota oli kuudenkymmenenkuuden kilometrin matkalla, ja vesi putosi siellä yhteensä viisikymmentä metriä. Kivi voittaa, jos vain jaksaa odottaa.
+KYSYMYS: Kerro lisää: eroosio
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Keitä olivat koskien takana asuneet Zaporižžjan kasakat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi kertoo jo paljon. Zaporižžjan kasakat olivat ukrainalainen sotilaallinen vapaaehtoisyhteisö, joka muodostui Dneprin koskien takana 1500-luvulla. Heidän keskuksensa oli [[Sič]], linnoitettu leiri koskien alapuolisilla saarilla ja rannoilla, ja kosket suojasivat sitä, koska vieraiden oli vaikea päästä sinne. Kasakat valitsivat johtajansa itse, olivat ortodokseja ja osallistuivat [[Puolan-Liettuan]], Krimin khaanikunnan ja Venäjän välisiin kamppailuihin vaihtelevin liittoumin. Venäjän keisarinna [[Katariina II]] hajotti Sičin vuonna 1775. Hyvä muuri on sellainen, jonka joki tekee itse.
+KYSYMYS: Kerro lisää: Sič
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+AIEMPI KYSYMYS: Keitä olivat koskien takana asuneet Zaporižžjan kasakat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi kertoo jo paljon. Zaporižžjan kasakat olivat ukrainalainen sotilaallinen vapaaehtoisyhteisö, joka muodostui Dneprin koskien takana 1500-luvulla. Heidän keskuksensa oli [[Sič]], linnoitettu leiri koskien alapuolisilla saarilla ja rannoilla, ja kosket suojasivat sitä, koska vieraiden oli vaikea päästä sinne. Kasakat valitsivat johtajansa itse, olivat ortodokseja ja osallistuivat [[Puolan-Liettuan]], Krimin khaanikunnan ja Venäjän välisiin kamppailuihin vaihtelevin liittoumin. Venäjän keisarinna [[Katariina II]] hajotti Sičin vuonna 1775. Hyvä muuri on sellainen, jonka joki tekee itse.
+KYSYMYS: Kerro lisää: Puolan-Liettuan
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino] Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa siitä syntyi joen eteläpuolella, armenialaisten omassa kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi maailman vanhimmista ja suurimmista armenialaiskortteleista. Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. Vieraita tuli myös toiseen suuntaan: korttelissa as…
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+AIEMPI KYSYMYS: Keitä olivat koskien takana asuneet Zaporižžjan kasakat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nimi kertoo jo paljon. Zaporižžjan kasakat olivat ukrainalainen sotilaallinen vapaaehtoisyhteisö, joka muodostui Dneprin koskien takana 1500-luvulla. Heidän keskuksensa oli [[Sič]], linnoitettu leiri koskien alapuolisilla saarilla ja rannoilla, ja kosket suojasivat sitä, koska vieraiden oli vaikea päästä sinne. Kasakat valitsivat johtajansa itse, olivat ortodokseja ja osallistuivat [[Puolan-Liettuan]], Krimin khaanikunnan ja Venäjän välisiin kamppailuihin vaihtelevin liittoumin. Venäjän keisarinna [[Katariina II]] hajotti Sičin vuonna 1775. Hyvä muuri on sellainen, jonka joki tekee itse.
+KYSYMYS: Kerro lisää: Katariina II
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Mikä Nestorin kronikka on ja mitä se kertoo?
+AIEMPI VASTAUS (Livia):
+Mmm— sitä kysytään harvoin. Nestorin kronikka, toiselta nimeltään Menneiden vuosien kertomus, on keskeinen itäslaavilaisen historian lähde, joka koottiin Kiovassa noin vuoden 1113 tienoilla. Perinteisesti sen kirjoittajaksi mainitaan Kiovan luolaluostarin munkki Nestor, mutta nykytutkimus pitää teosta useamman kirjoittajan ja kopioijan työnä. Se kertoo [[Kiovan Rusin]] alkuvaiheista, ruhtinaiden hallituskausista ja kristinuskon tulosta, ja kronikan mukaan ruhtinas [[Vladimir]] kastatti rusit vuonna 988. Se kuvaa myös reitin varjageista kreikkalaisille, joka kulki Dneprin koskien kautta, ja kertoo [[Rurikin]] kutsumisesta hallitsemaan, joskin tarina on osin legendamainen. Kirjurit tekivät raskaan työn, ja minä kuljetan sen vain perille.
+KYSYMYS: Kerro lisää: Kiovan Rusin
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Seinät ovat täynnä tuhatvuotisia raapustuksia] Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen seinistä on löydetty yli 7000 piirrosta ja tekstiä, jotka kävijät ovat raapineet kiveen 1000–1700-luvuilla. Yksi merkitsi muistiin Jaroslav Viisaan kuoleman, toinen maakaupan, ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on kirjoitettu seitsemänsadan vuoden ajan.
+AIEMPI KYSYMYS: Mikä Nestorin kronikka on ja mitä se kertoo?
+AIEMPI VASTAUS (Livia):
+Mmm— sitä kysytään harvoin. Nestorin kronikka, toiselta nimeltään Menneiden vuosien kertomus, on keskeinen itäslaavilaisen historian lähde, joka koottiin Kiovassa noin vuoden 1113 tienoilla. Perinteisesti sen kirjoittajaksi mainitaan Kiovan luolaluostarin munkki Nestor, mutta nykytutkimus pitää teosta useamman kirjoittajan ja kopioijan työnä. Se kertoo [[Kiovan Rusin]] alkuvaiheista, ruhtinaiden hallituskausista ja kristinuskon tulosta, ja kronikan mukaan ruhtinas [[Vladimir]] kastatti rusit vuonna 988. Se kuvaa myös reitin varjageista kreikkalaisille, joka kulki Dneprin koskien kautta, ja kertoo [[Rurikin]] kutsumisesta hallitsemaan, joskin tarina on osin legendamainen. Kirjurit tekivät raskaan työn, ja minä kuljetan sen vain perille.
+KYSYMYS: Kerro lisää: Vladimir
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Yhdeksän koskea, joiden kohina kuului kilometrien päähän — ja jotka ovat nyt järven pohjassa
+Tietoruudun teksti: Kiovan alapuolella Dnepr näyttää leveältä ja rauhalliselta, ja niin se on — kolmesataa kilometriä. Sitten tuli kalliota. Ukrainan kilven graniitti ja gneissi työntyivät joen uomaan, ja kuudenkymmenenkuuden kilometrin matkalla vesi putosi viisikymmentä metriä. Suuria koskia oli yhdeksän, pienempiä kolmestakymmenestä neljäänkymmeneen ja saaria ja luotoja kuusikymmentä. Laivaliikenne loppui käytännössä siihen. Suurin niistä oli Nenasytets, Kyltymätön: kaksi ja puoli kilometriä pitkä, yli kilometrin levyinen, ja sen kohina kuului useiden kilometrien päähän. Paikalliset sanoivat sitä Helvetiksi. Alavirran kaupungin nimi Zaporižžja tarkoittaa yksinkertaisesti koskien takaista — nimi kertoo, kummalta puolen sitä katsottiin.
+
+Kosket näkyvät kirjoitetussa historiassa niin kauas kuin sitä on. Ne ovat Nestorin kronikan reitillä varjageilta kreikkalaisille, ja matkalaiset kantoivat veneensä maitse …
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Mikä Nestorin kronikka on ja mitä se kertoo?
+AIEMPI VASTAUS (Livia):
+Mmm— sitä kysytään harvoin. Nestorin kronikka, toiselta nimeltään Menneiden vuosien kertomus, on keskeinen itäslaavilaisen historian lähde, joka koottiin Kiovassa noin vuoden 1113 tienoilla. Perinteisesti sen kirjoittajaksi mainitaan Kiovan luolaluostarin munkki Nestor, mutta nykytutkimus pitää teosta useamman kirjoittajan ja kopioijan työnä. Se kertoo [[Kiovan Rusin]] alkuvaiheista, ruhtinaiden hallituskausista ja kristinuskon tulosta, ja kronikan mukaan ruhtinas [[Vladimir]] kastatti rusit vuonna 988. Se kuvaa myös reitin varjageista kreikkalaisille, joka kulki Dneprin koskien kautta, ja kertoo [[Rurikin]] kutsumisesta hallitsemaan, joskin tarina on osin legendamainen. Kirjurit tekivät raskaan työn, ja minä kuljetan sen vain perille.
+KYSYMYS: Kerro lisää: Rurikin
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Kiova — kaupunkilehti / Kiova: Seinät ovat täynnä tuhatvuotisia raapustuksia] Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen seinistä on löydetty yli 7000 piirrosta ja tekstiä, jotka kävijät ovat raapineet kiveen 1000–1700-luvuilla. Yksi merkitsi muistiin Jaroslav Viisaan kuoleman, toinen maakaupan, ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on kirjoitettu seitsemänsadan vuoden ajan.
+AIEMPI KYSYMYS: Miksi kirkon seinät kalkittiin umpeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Tarkasta syystä ei ole varmaa tietoa, mutta syitä voi päätellä katedraalin vaiheista. [[Pyhän Sofian katedraali]] kärsi keskiajan sodista ja rappeutui vuosisatojen ajan, jolloin kosteus ja ränsistyminen vahingoittivat seinäpintoja. Korjausten yhteydessä vauriot ja vanhat kuvat peitettiin rappaamalla ja kalkitsemalla, ja [[barokin]] aikana vanha bysanttilainen kuvakieli ei enää ollut muodissa. Viimeistään 1700-luvun alkuun mennessä sisustus oli kalkittu kokonaan umpeen. Kalkin alle jääminen on sittemmin osoittautunut osin onnenpotkuksi, sillä [[mosaiikkeja]] ja maalauksia säilyi siten tuleville sukupolville. Valkoinen seinä ei kerro, mitä sen alla on.
+KYSYMYS: Kerro lisää: Pyhän Sofian katedraali
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Miksi kirkon seinät kalkittiin umpeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Tarkasta syystä ei ole varmaa tietoa, mutta syitä voi päätellä katedraalin vaiheista. [[Pyhän Sofian katedraali]] kärsi keskiajan sodista ja rappeutui vuosisatojen ajan, jolloin kosteus ja ränsistyminen vahingoittivat seinäpintoja. Korjausten yhteydessä vauriot ja vanhat kuvat peitettiin rappaamalla ja kalkitsemalla, ja [[barokin]] aikana vanha bysanttilainen kuvakieli ei enää ollut muodissa. Viimeistään 1700-luvun alkuun mennessä sisustus oli kalkittu kokonaan umpeen. Kalkin alle jääminen on sittemmin osoittautunut osin onnenpotkuksi, sillä [[mosaiikkeja]] ja maalauksia säilyi siten tuleville sukupolville. Valkoinen seinä ei kerro, mitä sen alla on.
+KYSYMYS: Kerro lisää: barokin
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Mikaelin luostari] 1108–1113 Pyhän Mikaelin kultakupolinen luostari perustettiin Kiovan-Venäjän ruhtinas Svjatopolk II:n toimesta vuosina 1108–1113 arkkienkeli Mikaelin kunniaksi. Sen pääkirkon kupoli kullattiin ehkä ensimmäisenä koko Kiovan-Venäjällä, ja juuri siitä koko luostari sai lempinimensä ”kultakupolinen”. Vuonna 1108 luostariin tuotiin myös Konstantinopolista pyhän Barbaran pyhäinjäännökset, ja niistä tuli niin suosittu pyhiinvaellusaarre, että 1870-luvulla luostarissa kävi vuosittain jopa 100 000 vierailijaa. 1700-luvulla kirkkoa laajennettiin ukrainalaiseen barokkityyliin, ja alkuperäisestä yhdestä kupolista tuli lopulta seitsemän kupolin kokonaisuus. Sisäseiniltä löytyi myös upeita 1100-luvun bys…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Miksi kirkon seinät kalkittiin umpeen?
+AIEMPI VASTAUS (Livia):
+Tuota niin, hyvä kysymys. Tarkasta syystä ei ole varmaa tietoa, mutta syitä voi päätellä katedraalin vaiheista. [[Pyhän Sofian katedraali]] kärsi keskiajan sodista ja rappeutui vuosisatojen ajan, jolloin kosteus ja ränsistyminen vahingoittivat seinäpintoja. Korjausten yhteydessä vauriot ja vanhat kuvat peitettiin rappaamalla ja kalkitsemalla, ja [[barokin]] aikana vanha bysanttilainen kuvakieli ei enää ollut muodissa. Viimeistään 1700-luvun alkuun mennessä sisustus oli kalkittu kokonaan umpeen. Kalkin alle jääminen on sittemmin osoittautunut osin onnenpotkuksi, sillä [[mosaiikkeja]] ja maalauksia säilyi siten tuleville sukupolville. Valkoinen seinä ei kerro, mitä sen alla on.
+KYSYMYS: Kerro lisää: mosaiikkeja
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miten kalkin alle jäänyt mosaiikki saadaan esiin ehjänä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on hidasta ja tarkkaa työtä. Kalkkikerros poistetaan käsityönä ja kerros kerrallaan: [[restauraattorit]] käyttävät pieniä työkaluja, esimerkiksi skalpelleja, ja pehmentävät kovettunutta pintaa kosteudella ja varovaisella mekaanisella poistolla, jotta alkuperäinen pinta ei vahingoitu. Mosaiikki koostuu pienistä lasikuutioista eli [[smalteista]], jotka on painettu märkään kalkkilaastiin, joten irtoavat kappaleet kiinnitetään takaisin ja heikentynyt laasti vahvistetaan. Työtä edeltävät tutkimus ja dokumentointi valokuvin ja piirroksin. Täysin ehjänä kaikkea ei aina saada esiin: menetyksiä ja myöhempiä korjauksia on, ja ne pyritään merkitsemään niin, että alkuperäinen erottuu. Minä en tohtisi koskea mihinkään tuollaiseen, siivet ovat liian kömpelöt.
+KYSYMYS: Kerro lisää: restauraattorit
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miten kalkin alle jäänyt mosaiikki saadaan esiin ehjänä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Se on hidasta ja tarkkaa työtä. Kalkkikerros poistetaan käsityönä ja kerros kerrallaan: [[restauraattorit]] käyttävät pieniä työkaluja, esimerkiksi skalpelleja, ja pehmentävät kovettunutta pintaa kosteudella ja varovaisella mekaanisella poistolla, jotta alkuperäinen pinta ei vahingoitu. Mosaiikki koostuu pienistä lasikuutioista eli [[smalteista]], jotka on painettu märkään kalkkilaastiin, joten irtoavat kappaleet kiinnitetään takaisin ja heikentynyt laasti vahvistetaan. Työtä edeltävät tutkimus ja dokumentointi valokuvin ja piirroksin. Täysin ehjänä kaikkea ei aina saada esiin: menetyksiä ja myöhempiä korjauksia on, ja ne pyritään merkitsemään niin, että alkuperäinen erottuu. Minä en tohtisi koskea mihinkään tuollaiseen, siivet ovat liian kömpelöt.
+KYSYMYS: Kerro lisää: smalteista
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+AIEMPI KYSYMYS: Miksi nykytutkijat eivät osaa toistaa vanhoja lasivärejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tätäkin kysytään. Mosaiikin lasikuutiot eli [[smaltti]] on värjättyä lasia, jonka sävy riippuu lisätyistä metalliyhdisteistä, raaka-aineiden epäpuhtauksista, uunin lämpötilasta ja polttoilmakehästä. Vanhoja reseptejä ei ole säilynyt, ja raaka-aineet, polttoaineet ja uunit ovat nykyään toisenlaisia, joten täsmälleen samaa sävyä on vaikea saada, vaikka yksittäisiä sävyjä voidaan jäljitellä. Pyhän Sofian katedraalin mosaiikeissa sävyjä on poikkeuksellisen paljon, ja niiden sanotaan olevan nykykeinoin vaikeasti toistettavia. Kultainen pohja syntyy kultalehdestä, joka suojataan lasikerroksen alle, ja sekin on oma erikoisalansa. [[Kiovan]] mestarit osasivat tämän selvästi hyvin.
+
+Reseptit kadotetaan helposti, ja se tuntuu ihan suvun salaisuudelta: kukaan ei kirjoita muistiin sitä, minkä kaikki osaavat.
+KYSYMYS: Kerro lisää: smaltti
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Miksi nykytutkijat eivät osaa toistaa vanhoja lasivärejä?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tätäkin kysytään. Mosaiikin lasikuutiot eli [[smaltti]] on värjättyä lasia, jonka sävy riippuu lisätyistä metalliyhdisteistä, raaka-aineiden epäpuhtauksista, uunin lämpötilasta ja polttoilmakehästä. Vanhoja reseptejä ei ole säilynyt, ja raaka-aineet, polttoaineet ja uunit ovat nykyään toisenlaisia, joten täsmälleen samaa sävyä on vaikea saada, vaikka yksittäisiä sävyjä voidaan jäljitellä. Pyhän Sofian katedraalin mosaiikeissa sävyjä on poikkeuksellisen paljon, ja niiden sanotaan olevan nykykeinoin vaikeasti toistettavia. Kultainen pohja syntyy kultalehdestä, joka suojataan lasikerroksen alle, ja sekin on oma erikoisalansa. [[Kiovan]] mestarit osasivat tämän selvästi hyvin.
+
+Reseptit kadotetaan helposti, ja se tuntuu ihan suvun salaisuudelta: kukaan ei kirjoita muistiin sitä, minkä kaikki osaavat.
+KYSYMYS: Kerro lisää: Kiovan
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+- [Kiova — kaupunkilehti / Kiova: Seinät ovat täynnä tuhatvuotisia raapustuksia] Pyhän Sofian katedraali rakennettiin 1000-luvulla, ja sen seinistä on löydetty yli 7000 piirrosta ja tekstiä, jotka kävijät ovat raapineet kiveen 1000–1700-luvuilla. Yksi merkitsi muistiin Jaroslav Viisaan kuoleman, toinen maakaupan, ja ruhtinas Vladimir Monomah kirjoitti seinään oman nimensä. Tutkijat lukevat seiniä kuin ilmoitustaulua, jolle on kirjoitettu seitsemänsadan vuoden ajan.
+AIEMPI KYSYMYS: Mitä Orantaksi kutsuttu Neitsyt-mosaiikki esittää?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oranta, latinaksi orans eli rukoileva, tarkoittaa kuvatyyppiä, jossa hahmo seisoo kädet kohotettuina rukoukseen. [[Pyhän Sofian katedraalin]] keskusapsidin mosaiikissa [[Neitsyt Marian]] hahmo esiintyy tässä asennossa kultaisella pohjalla ja on noin kuuden metrin korkuinen. Kuvan tehtävänä oli esittää Maria esirukoilijana ihmisten puolesta. Ukrainassa kuvaa kutsutaan myös [[murtumattomaksi muuriksi]], ja nimi viittaa siihen, että kuva on kestänyt aikaa ja vaikeita vaiheita. Kädet ylhäällä, ihan kuin kyyhky pitelisi siipiä auki ennen laskeutumista.
+KYSYMYS: Kerro lisää: Pyhän Sofian katedraalin
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+- [Marseille — kaupunkilehti / Historia: Neitsyt, joka vahtii merenkulkijoita mäen laelta] Notre-Dame de la Garde -basilika kohoaa Marseillen korkeimmalla kalliolla, 149 metrin korkeudessa, ja sen kultainen Neitsyt Maria -patsas näkyy kauas merelle. Nykyinen basilika valmistui 1864, mutta paikalla on ollut pyhiinvaelluskohde jo 1200-luvulta, kun kukkulalle rakennettiin ensimmäinen pieni kappeli. Merenkulkijat ovat perinteisesti pitäneet basilikaa suojelijanaan ja jättäneet sinne kiitoslahjoja onnistuneista matkoista — kirkon seinillä riippuu yhä satoja pienoislaivoja ja muistolaattoja pelastuneista haaksirikoista. Marseillelaiset kutsuvat patsasta hellästi "La Bonne Mère", hyväksi äidiksi.
+AIEMPI KYSYMYS: Mitä Orantaksi kutsuttu Neitsyt-mosaiikki esittää?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oranta, latinaksi orans eli rukoileva, tarkoittaa kuvatyyppiä, jossa hahmo seisoo kädet kohotettuina rukoukseen. [[Pyhän Sofian katedraalin]] keskusapsidin mosaiikissa [[Neitsyt Marian]] hahmo esiintyy tässä asennossa kultaisella pohjalla ja on noin kuuden metrin korkuinen. Kuvan tehtävänä oli esittää Maria esirukoilijana ihmisten puolesta. Ukrainassa kuvaa kutsutaan myös [[murtumattomaksi muuriksi]], ja nimi viittaa siihen, että kuva on kestänyt aikaa ja vaikeita vaiheita. Kädet ylhäällä, ihan kuin kyyhky pitelisi siipiä auki ennen laskeutumista.
+KYSYMYS: Kerro lisää: Neitsyt Marian
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Machu Picchu — kaupunkilehti / Kiveen veistetty taito: Muuri ilman laastia] Machu Picchun muurit on ladottu ilman laastia: kivet on veistetty ja hiottu niin tarkasti toisiinsa sopiviksi, ettei ohuinkaan veitsenterä mahdu saumaan. Hienoimmat, kuninkaallisille rakennuksille varatut muurit koostuvat suorakulmaisista lohkoista, kun taas tavallisempien rakennusten seinät on karkeampaa kenttäkiveä. Vuonna 2019 julkaistu tutkimus huomasi, ettei kaupungin sijainti aktiivisten maanjäristysvyöhykkeiden päällä liene sattumaa: samat kallion murtumat, jotka tekevät seudusta järistysherkän, ovat tuottaneet runsaasti lohkeillutta kiveä rakennusaineeksi. Trapetsinmuotoiset aukot auttavat rakenteita kestämään tärinää murtumatta.
+AIEMPI KYSYMYS: Mitä Orantaksi kutsuttu Neitsyt-mosaiikki esittää?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Oranta, latinaksi orans eli rukoileva, tarkoittaa kuvatyyppiä, jossa hahmo seisoo kädet kohotettuina rukoukseen. [[Pyhän Sofian katedraalin]] keskusapsidin mosaiikissa [[Neitsyt Marian]] hahmo esiintyy tässä asennossa kultaisella pohjalla ja on noin kuuden metrin korkuinen. Kuvan tehtävänä oli esittää Maria esirukoilijana ihmisten puolesta. Ukrainassa kuvaa kutsutaan myös [[murtumattomaksi muuriksi]], ja nimi viittaa siihen, että kuva on kestänyt aikaa ja vaikeita vaiheita. Kädet ylhäällä, ihan kuin kyyhky pitelisi siipiä auki ennen laskeutumista.
+KYSYMYS: Kerro lisää: murtumattomaksi muuriksi
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Miksi katedraali on nimetty Pyhäksi Sofiaksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pieni yllätys. Nimi ei viittaa pyhimykseen nimeltä Sofia vaan kreikan sanaan sophia eli viisaus, ja kirkko on omistettu Jumalan viisaudelle. Nimi on peräisin [[Konstantinopolin]] Hagia Sofiasta, joka oli yksi itäisen kristikunnan keskeisimmistä kirkoista, ja Kiovan ruhtinaat halusivat omaan pääkaupunkiinsa vastaavan. Katedraalin rakennuttajaksi mainitaan perinteisesti ruhtinas [[Jaroslav Viisas]], ja vanhan kronikan mukaan työ aloitettiin 1030-luvun lopulla, mutta tutkijat ovat esittäneet myös aikaisempaa ajoitusta. Kirkko viisaudelle, ei yhtään hullumpi idea.
+KYSYMYS: Kerro lisää: Konstantinopolin
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Kiova
+Maa, jossa pelaaja on: Ukraina
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Kun isoisäsi kävi kaupungissa, maailman suurin varhainen mosaiikkikokoelma oli kalkittu piiloon
+Tietoruudun teksti: Pyhän Sofian katedraalin seinillä on jotain, mitä ei ole missään muualla samassa mitassa: 1000-luvun alkupuolen mosaiikkia 260 neliömetriä ja freskoa kolmetuhatta neliömetriä, samasta vuosisadasta kuin talo itse. Pohja on kultainen, päävärit sinistä, harmaanvalkoista ja purppuraa, ja sävyjä on niin monta, ettei niitä ole pystytty toistamaan nykykeinoin. Smaltin latomistavasta on päätelty, että seinät teki kahdeksan miehen ryhmä, ja jokaisen kuvan vieressä on selitys keskiaikaisella kreikalla. Keskusapsidia hallitsee kuusimetrinen rukoileva Neitsyt, jota sanotaan Orantaksi, ja kupolin laesta katsoo alas Kristus neljän arkkienkelin ympäröimänä.
+
+Isoisäsi ei nähnyt niistä yhtäkään. Koko sisustus oli kalkittu umpeen vuoteen 1701 mennessä, ja valkoista se oli vielä silloin kun hän seisoi kaupungissa. Freskot olivat kyllä tulleet esiin vuosien 1843–1853 korjauksissa, mutta ne maalattiin luvan…
+Isoisän matkakirjamerkintä: Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+- [Kiova — kohdekartta / Kohdekartta: Pyhän Sofian katedraali] 1037 Pyhän Sofian katedraali on Kiovan vanhin säilynyt suurkirkko. Ruhtinas Jaroslav Viisas rakennutti sen ilmeisesti vuonna 1037 samalle kentälle, jolla hänen joukkonsa olivat vuotta aiemmin voittaneet aroilta hyökänneet petšenegit. Kirkko oli 1000-luvulla yksi Euroopan suurimmista rakennuksista: sen keskiosa on neliö, jonka sivu on 30 metriä – täsmälleen sama mitta kuin Konstantinopolin Hagia Sofian pääkupolin alla olevalla neliöllä. Alun perin katedraalia peitti peräti 13 kupolia. Kirkon seinillä on Euroopan parhaiten säilynyt 1000-luvun mosaiikki- ja freskokokoelma: mosaiikkeja on 260 neliömetriä ja freskoja peräti 3 000 neliömetriä. Kahdeksan taitavaa käsityöläistä latoi kultataustaise…
+AIEMPI KYSYMYS: Miksi katedraali on nimetty Pyhäksi Sofiaksi?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tässä on pieni yllätys. Nimi ei viittaa pyhimykseen nimeltä Sofia vaan kreikan sanaan sophia eli viisaus, ja kirkko on omistettu Jumalan viisaudelle. Nimi on peräisin [[Konstantinopolin]] Hagia Sofiasta, joka oli yksi itäisen kristikunnan keskeisimmistä kirkoista, ja Kiovan ruhtinaat halusivat omaan pääkaupunkiinsa vastaavan. Katedraalin rakennuttajaksi mainitaan perinteisesti ruhtinas [[Jaroslav Viisas]], ja vanhan kronikan mukaan työ aloitettiin 1030-luvun lopulla, mutta tutkijat ovat esittäneet myös aikaisempaa ajoitusta. Kirkko viisaudelle, ei yhtään hullumpi idea.
+KYSYMYS: Kerro lisää: Jaroslav Viisas

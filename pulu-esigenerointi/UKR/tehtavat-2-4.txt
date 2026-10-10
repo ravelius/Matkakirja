@@ -1,0 +1,1021 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+AIEMPI KYSYMYS: Mikä teki Kryvyi Rihistä Euroopan pisimmän kaupungin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tää on hauska juttu. Kryvyi Rih venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti, ja kaupunki on rakentunut pitkänä nauhana [[Inhulets-joen]] ja Saksahan-joen yhtymäkohdan ympärille. Sitä kutsutaan usein Euroopan pisimmäksi kaupungiksi, mutta en ole varma, onko kyse vakiintuneesta mittaustuloksesta, sillä pituus riippuu siitä, miten kaupungin rajat ja rakennettu alue lasketaan. Kaupungin muotoa ovat ohjanneet [[rautamalmiesiintymän]] sijainti ja kaivokset. Minä olen lentänyt sen päästä päähän, ja hiki tuli.
+KYSYMYS: Kerro lisää: rautamalmiesiintymän
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Monterrey — kaupunkilehti / Monterrey: Masuuni jäi puistoon seisomaan] Fundidora Monterrey oli Latinalaisen Amerikan ensimmäinen rauta- ja terästehdas. Se meni konkurssiin 1986, alue pakkolunastettiin 1988 ja rakennustyöt alkoivat 1989 — ensin suojelemalla historiallisesti tärkeät rakennukset ja purkamalla muut. Puisto avattiin 24. helmikuuta 2001 sadanneljäntoista hehtaarin kokoisena, ja se sai lisänimen teollisen arkeologian museoalue. Vuonna 2010 mukaan tuli 2,35 kilometrin kanava, ja ala nousi 144 hehtaariin, josta 80 on vihreää. Paikallaan seisovat yhä 27 suurta teollisuusrakennelmaa ja 127 teräksentekokonetta.
+AIEMPI KYSYMYS: Miten rautamalmista tehdään terästä?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää juttua. Rautamalmi sulatetaan ensin [[masuunissa]] yhdessä [[koksin]] ja kalkkikiven kanssa, jolloin koksi toimii polttoaineena ja hapen poistajana. Tuloksena syntyy raakarautaa, jossa on paljon hiiltä. Teräkseksi raakarauta jalostetaan poistamalla hiiltä ja muita epäpuhtauksia muun muassa puhaltamalla siihen happea. Näin saadaan vahvaa ja muokattavaa metallia, jota käytetään esimerkiksi rakennuksissa ja koneissa. Pitkä prosessi, ja minä tykkään kevyestä matkasta.
+KYSYMYS: Kerro lisää: masuunissa
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+AIEMPI KYSYMYS: Miten rautamalmista tehdään terästä?
+AIEMPI VASTAUS (Livia):
+Mmm— tästä riittää juttua. Rautamalmi sulatetaan ensin [[masuunissa]] yhdessä [[koksin]] ja kalkkikiven kanssa, jolloin koksi toimii polttoaineena ja hapen poistajana. Tuloksena syntyy raakarautaa, jossa on paljon hiiltä. Teräkseksi raakarauta jalostetaan poistamalla hiiltä ja muita epäpuhtauksia muun muassa puhaltamalla siihen happea. Näin saadaan vahvaa ja muokattavaa metallia, jota käytetään esimerkiksi rakennuksissa ja koneissa. Pitkä prosessi, ja minä tykkään kevyestä matkasta.
+KYSYMYS: Kerro lisää: koksin
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dakar — kohdekartta / Kohdekartta: Riippumattomuuden aukio] 1902 ja 1960 Aukio on Dakar-Plateaun sydän, ja Plateau on kaupungin historiallinen ydin: siellä ovat ministeriöt ja suurin osa julkisesta hallinnosta. Aukio kantoi siirtomaa-ajalla toista nimeä. Vuonna 1902 Dakarista tuli Ranskan Länsi-Afrikan pääkaupunki Saint-Louis'n tilalle, ja kaupunki kasvoi imperiumin suurkaupungiksi, jota on verrattu Hanoihin ja Beirutiin. Ranskalaiset kauppahuoneet perustivat kaupunkiin sivukonttoreita, ja satama ja rautatie houkuttelivat teollisuutta: myllyjä, panimoita, jalostamoita ja säilyketehtaita. Kaupunki oli myös strategisesti tärkeä. Satamassa oli laivastotukikohta ja hiiliasema, ja kaupunki liitettiin varhaisiin lento- ja lentopostireitteihin — tunnetuimm…
+- [Kumasi — kaupunkilehti / Metsä ja järvi: Puolet maan sahoista] Metsä ei jää kaupungin ulkopuolelle vaan tulee sisään: puolet koko Ghanan puunjalostuksesta tapahtuu Kumasissa. Kaupungin varallisuus tulee kahdesta asiasta, siitä että se on maan pääteiden risteys ja siitä että sen takamaastossa viljellään kaakaota. Ashantin alue tuotti 2014 viidenneksen Ghanan tuotannosta, ja siitä lähes puolet syntyi tässä kaupungissa. Kasvulla on hintansa. Wiwi ja Subin, kaupungin läpi kulkevat joet, ovat uhattuina, ja 2024 julkaistun raportin mukaan niiden rannoilla oli enemmän teollisuutta, asumista ja liiketiloja kuin viheralaa; tutkijat esittivät kolmenkymmenen metrin suojavyöhykettä.
+AIEMPI KYSYMYS: Mikä oli Neuvostoliiton viisivuotissuunnitelma?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Neuvostoliitossa viisivuotissuunnitelmat olivat valtion talouden keskitettyjä kehitysohjelmia. Ensimmäinen aloitettiin vuonna 1928, ja se painotti [[raskasta teollisuutta]], kuten teräs-, kaivos- ja konetuotantoa. Ohjelmilla pyrittiin nopeaan teollistumiseen, mutta niihin liittyi myös raskaita inhimillisiä kustannuksia. [[Kryvorizhstal]] rakennettiin tällaisen teollistamisen aikana. Siitä on lähes sata vuotta, ja moni asia on sittemmin muuttunut.
+KYSYMYS: Kerro lisää: raskasta teollisuutta
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Karachi Cityn rautatieasema] 1861–1864 Scinde Railway -yhtiö perustettiin maaliskuussa 1855, ja työt Karachin pääteasemalla alkoivat huhtikuussa 1858. Rata vei Kotriin, 174 kilometrin päähän Induksen varteen, ja se avattiin yleisölle 13. toukokuuta 1861 — seudun ensimmäinen yleisölle avattu rautatie. Itse asemarakennus valmistui toukokuussa 1864. Asema oli aluksi nimeltään McLeod Station sen kadun mukaan, jonka eteläreunalle se rakennettiin; katu on nykyään I. I. Chundrigar Road. 1880-luvulla asemasta rakennettiin uusi versio hieman lännemmäksi, ja vuoteen 1905 mennessä brittihallinnon papereissa puhuttiin Karachi Cityn asemasta. Ratapihat järjestettiin uusiksi 1908. Nykyinen keltaisesta Gizrin hiekkakivestä muurattu a…
+- [Appalakit — kaupunkilehti / Cumberlandin sola ja vuorten kansa: Hiili nousee vuoren uumenista] Pienimuotoista hiilenlouhintaa harjoitettiin Appalakkien laaksoissa jo 1700-luvun lopulla lähinnä paikallisten seppien ja kotitalouksien tarpeisiin, mutta höyrykoneiden ja rautateiden yleistyminen 1800-luvun alkupuolella kasvatti kysynnän moninkertaiseksi. Sisällissodan jälkeen teollisuuspääoma löysi vuorten sisään kätkeytyneet hiilikerrostumat, ja kokonaisia laaksoja alkoi täyttyä kaivoskylistä, joissa sukupolvi toisensa jälkeen kulki päivittäin maan alle. Nokeen mustunut kasvo ja karbidilampullinen kypärä olivat vielä vuosikymmeniä myöhemminkin tuttu näky appalakialaisen kaivosmiehen arjessa.
+AIEMPI KYSYMYS: Miksi rautamalmi oli 1800-luvulla niin haluttua?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tää liittyy rautateihin. Rautaa ja terästä tarvittiin 1800-luvulla teollistuvassa Euroopassa koneisiin, siltoihin, [[rautateiden]] kiskoihin ja höyrylaivoihin, joten malmin kysyntä kasvoi voimakkaasti. Teräksen valmistus tuli myös halvemmaksi esimerkiksi [[Bessemerin]] menetelmän ansiosta 1800-luvun puolivälin tienoilla. Siksi uudet malmiesiintymät, kuten Kryvyi Rihin alue, kiinnostivat sijoittajia. Raskas aihe kevyelle linnulle.
+KYSYMYS: Kerro lisää: rautateiden
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kryvyi Rih (tekniikka)
+Tietoruudun teksti: Kryvyi Rih on Keski-Ukrainan teollisuuskaupunki Saksahan- ja Inhulets-jokien yhtymäkohdassa, ja sitä pidetään Euroopan pituudeltaan mittavimpana kaupunkina – se venyy kymmeniä kilometrejä rautamalmiesiintymän suuntaisesti. Paikka perustettiin alun perin 1775 sotilaalliseksi etuvartioksi, eikä sillä vielä 1870-luvulla ollut mitään tekemistä teollisuuden kanssa. Vasta 1880-luvulla belgialainen, ranskalainen ja brittiläinen pääoma löysi alueen rikkaat rautamalmivarat, ja niiden ympärille kasvoi nopeasti kaivos- ja teollisuuskaupunki. Stalinin teollistamiskaudella 1934 alueelle rakennettiin Kryvorizhstal, joka oli aikanaan koko Neuvostoliiton suurin integroitu metallurginen tehdaslaitos.
+AIEMPI KYSYMYS: Miksi rautamalmi oli 1800-luvulla niin haluttua?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tää liittyy rautateihin. Rautaa ja terästä tarvittiin 1800-luvulla teollistuvassa Euroopassa koneisiin, siltoihin, [[rautateiden]] kiskoihin ja höyrylaivoihin, joten malmin kysyntä kasvoi voimakkaasti. Teräksen valmistus tuli myös halvemmaksi esimerkiksi [[Bessemerin]] menetelmän ansiosta 1800-luvun puolivälin tienoilla. Siksi uudet malmiesiintymät, kuten Kryvyi Rihin alue, kiinnostivat sijoittajia. Raskas aihe kevyelle linnulle.
+KYSYMYS: Kerro lisää: Bessemerin
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova: Kilpi vaihdettiin kesken sodan] Dneprin rinteellä seisoo 62 metriä korkea teräksinen naispatsas, kädessään 16 metrin miekka ja 13 metriä leveä kilpi. Patsas paljastettiin vuonna 1981, ja kilvessä oli silloin Neuvostoliiton vaakuna. Elokuussa 2023 vaakuna irrotettiin ja tilalle nostettiin Ukrainan kolmikärki. Työ tehtiin kovassa tuulessa ja sateessa ja keskeytyi ilmahälytyksiin, mutta kilpi oli valmis ennen itsenäisyyspäivää 24. elokuuta.
+- [Kiova — kaupunkilehti / Kiova: Sata metriä alas ja takaisin] Kiovan Arsenalnan metroasema on 105,5 metriä maanpinnan alapuolella. Se oli maailman syvin asema vuoteen 2022 asti, jolloin Kiinan Chongqingiin avattiin 116 metrin syvyyteen ulottuva Hongyancunin asema. Liukuportaita on kaksi peräkkäin, 55,8 ja 46,6 metriä, ja niiden välissä on oma väliaula. Syvyys ei ole kikkailua: Kiova on Dneprin jyrkällä rantatörmällä, ja asema on kaivettu törmän sisään.
+AIEMPI KYSYMYS: Mitä KrAZ-tehdas valmisti ennen kuorma-autoja?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tehdas perustettiin vuonna 1945 siltarakennustehtaaksi, ja se valmisti aluksi satoja siltoja [[Dneprin]], [[Volgan]] ja muiden jokien yli. Vuonna 1958 se muutettiin raskaiden maastokuorma-autojen valmistajaksi. Siltoja tehnyt tehdas on siis kulkenut pitkän tien, mut minä pärjään ilman sillanrakennusta.
+KYSYMYS: Kerro lisää: Dneprin
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+AIEMPI KYSYMYS: Mitä KrAZ-tehdas valmisti ennen kuorma-autoja?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tehdas perustettiin vuonna 1945 siltarakennustehtaaksi, ja se valmisti aluksi satoja siltoja [[Dneprin]], [[Volgan]] ja muiden jokien yli. Vuonna 1958 se muutettiin raskaiden maastokuorma-autojen valmistajaksi. Siltoja tehnyt tehdas on siis kulkenut pitkän tien, mut minä pärjään ilman sillanrakennusta.
+KYSYMYS: Kerro lisää: Volgan
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+AIEMPI KYSYMYS: Mistä maasta Kremenchukin linnoituksen rakentanut insinööri oli kotoisin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnoituksen rakentanut insinööri [[Guillaume Le Vasseur de Beauplan]] oli ranskalainen. Hän rakensi [[Kremenchukiin]] pienen linnoituksen vuonna 1635, ja samana vuonna kaupunki sai [[Magdeburgin oikeudet]]. Ranskalaiset kyl pääsee kauas kotoa.
+KYSYMYS: Kerro lisää: Guillaume Le Vasseur de Beauplan
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+AIEMPI KYSYMYS: Mistä maasta Kremenchukin linnoituksen rakentanut insinööri oli kotoisin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnoituksen rakentanut insinööri [[Guillaume Le Vasseur de Beauplan]] oli ranskalainen. Hän rakensi [[Kremenchukiin]] pienen linnoituksen vuonna 1635, ja samana vuonna kaupunki sai [[Magdeburgin oikeudet]]. Ranskalaiset kyl pääsee kauas kotoa.
+KYSYMYS: Kerro lisää: Kremenchukiin
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+AIEMPI KYSYMYS: Mistä maasta Kremenchukin linnoituksen rakentanut insinööri oli kotoisin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Linnoituksen rakentanut insinööri [[Guillaume Le Vasseur de Beauplan]] oli ranskalainen. Hän rakensi [[Kremenchukiin]] pienen linnoituksen vuonna 1635, ja samana vuonna kaupunki sai [[Magdeburgin oikeudet]]. Ranskalaiset kyl pääsee kauas kotoa.
+KYSYMYS: Kerro lisää: Magdeburgin oikeudet
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bukarest — kohdekartta / Kohdekartta: Colțean torni] Isoisäsi kiipesi Bukarestin korkeimpaan rakennukseen: Colțean torni kohosi arviolta 54 metriin ja oli kaupungin korkein yli vuosisadan ajan. Sen rakentamisessa vuosina 1709–1714 auttoivat Ruotsin kuninkaan Kaarle XII:n sotilaat, jotka olivat paenneet Valakiaan Poltavan tappion jälkeen; ruhtinas Constantin Brâncoveanu majoitti heidät. Sisäänkäynnin molemmin puolin oli maalattuna kaksi ruotsalaista sotilasta, jalkaväkimies ja ratsumies, kiväärit olalla — juuri ne, jotka isoisäsi näki. Tornissa oli myös kirjoitus ruotsalaisten muuraustöiden muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, sen 1 700 kilon kello vietiin Si…
+AIEMPI KYSYMYS: Minkä joen varrella Kremenchuk sijaitsee?
+AIEMPI VASTAUS (Livia):
+No niin, tän minä tiedän. Kremenchuk sijaitsee [[Dneprin]] varrella [[Poltavan alueella]] Ukrainassa. Dnepr virtaa Ukrainan halki kohti Mustaamerta, ja joen varrella on kaupunkeja, joiden teollisuus on kasvanut nimenomaan veden äärellä. Jokivarsi on kyyhkyn silmin helppo reitti.
+KYSYMYS: Kerro lisää: Poltavan alueella
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mandalay — kaupunkilehti / Historia: Kuningas joka lähetti oppilaita Eurooppaan] Mindon Min hallitsi 18. helmikuuta 1853 alkaen kuolemaansa 1. lokakuuta 1878. Hän nousi valtaan velipuolensa Pagan Minin tilalle yhdessä nuoremman veljensä Kanaungin kanssa ja käytti hallituskautensa yrittäen yhtä aikaa puolustaa Ylä-Burmaa ja nykyaikaistaa sitä. Oppineita lähetettiin Ranskaan, Italiaan, Yhdysvaltoihin ja Britanniaan katsomaan teollistumista. Virkamiehille säädettiin palkka, oikeudenkäyntimaksut kiinnitettiin, verotus uudistettiin ja tullimuureja purettiin, ja palatsin rahapaja löi valtakunnan omaa hopearahaa. Kanaung kävi tehtailla varhain talviaamuina huopa harteillaan kyselemässä koneenkäyttäjiltä, miten laitteet toimivat.
+AIEMPI KYSYMYS: Mitä Magdeburgin oikeudet tarkoittivat kaupungille?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Magdeburgin oikeudet]] olivat saksalaisperäinen kaupunkioikeuden malli, joka levisi keskiajalla laajalti [[Keski-Eurooppaan]] ja Itä-Eurooppaan. Se antoi kaupungille yleensä oikeuden itsehallintoon, omaan tuomioistuimeen ja kaupankäynnin etuihin, mutta yksityiskohdat vaihtelivat paikkakunnittain. [[Kremenchuk]] sai oikeudet vuonna 1635. Toisin sanoen kaupunki sai kunnolliset pelisäännöt, kyl se ois kelvannut meikäläisillekin.
+KYSYMYS: Kerro lisää: Keski-Eurooppaan
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+AIEMPI KYSYMYS: Mitä Magdeburgin oikeudet tarkoittivat kaupungille?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Magdeburgin oikeudet]] olivat saksalaisperäinen kaupunkioikeuden malli, joka levisi keskiajalla laajalti [[Keski-Eurooppaan]] ja Itä-Eurooppaan. Se antoi kaupungille yleensä oikeuden itsehallintoon, omaan tuomioistuimeen ja kaupankäynnin etuihin, mutta yksityiskohdat vaihtelivat paikkakunnittain. [[Kremenchuk]] sai oikeudet vuonna 1635. Toisin sanoen kaupunki sai kunnolliset pelisäännöt, kyl se ois kelvannut meikäläisillekin.
+KYSYMYS: Kerro lisää: Kremenchuk
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+AIEMPI KYSYMYS: Mikä oli Novorossijan kuvernementti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Novorossijan kuvernementti]] oli [[Venäjän keisarikunnan]] hallintoalue Mustanmeren pohjoispuolisilla alueilla, jotka liitettiin Venäjään 1700-luvulla. En ole varma sen tarkoista vaiheista, mutta [[Kremenchuk]] toimi sen pääkaupunkina vain lyhyen aikaa. Alueen hallinnolliset rajat muuttuivat useasti, ja kuvernementit yhdistettiin ja jaettiin uudelleen. Ei kyl mikään helppo kartta ollut.
+KYSYMYS: Kerro lisää: Novorossijan kuvernementti
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kremenchuk (tekniikka)
+Tietoruudun teksti: Kremenchuk on Dneprin varrella sijaitseva teollisuuskaupunki Poltavan alueella. Ranskalainen insinööri Guillaume Le Vasseur de Beauplan rakensi sinne pienen linnoituksen 1635, ja samana vuonna kaupunki sai Magdeburgin oikeudet; myöhemmin se toimi hetkeksi Novorossijan kuvernementin pääkaupunkina Venäjän vallan alla. Kaupungin nykyinen maine perustuu kuitenkin raskaaseen ajoneuvoteollisuuteen: paikallinen tehdas, joka tunnetaan nimellä KrAZ, perustettiin 1945 siltarakennustehtaaksi ja valmisti aluksi satoja siltoja Dneprin, Volgan ja muiden jokien yli. Vuonna 1958 tehdas muutettiin raskaiden maastokuorma-autojen valmistajaksi, ja jo parin vuoden kuluttua sen autoja vietiin kymmeniin maihin ympäri maailmaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mikä oli Novorossijan kuvernementti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Novorossijan kuvernementti]] oli [[Venäjän keisarikunnan]] hallintoalue Mustanmeren pohjoispuolisilla alueilla, jotka liitettiin Venäjään 1700-luvulla. En ole varma sen tarkoista vaiheista, mutta [[Kremenchuk]] toimi sen pääkaupunkina vain lyhyen aikaa. Alueen hallinnolliset rajat muuttuivat useasti, ja kuvernementit yhdistettiin ja jaettiin uudelleen. Ei kyl mikään helppo kartta ollut.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+AIEMPI KYSYMYS: Minä vuonna Kovelin keihäänkärki löydettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kovelin keihäänkärki]] löydettiin vuonna 1858 Kovelin läheltä. Sen terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista, ja kirjoitus on goottia. Löytö teki pienestä [[Kovelista]] tunnetun arkeologien keskuudessa. Tuohon aikaan kyyhkyt ei vielä lukeneet kirjoituksia, vaikka minä kyl lukisin.
+KYSYMYS: Kerro lisää: Kovelin keihäänkärki
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+AIEMPI KYSYMYS: Minä vuonna Kovelin keihäänkärki löydettiin?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Kovelin keihäänkärki]] löydettiin vuonna 1858 Kovelin läheltä. Sen terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista, ja kirjoitus on goottia. Löytö teki pienestä [[Kovelista]] tunnetun arkeologien keskuudessa. Tuohon aikaan kyyhkyt ei vielä lukeneet kirjoituksia, vaikka minä kyl lukisin.
+KYSYMYS: Kerro lisää: Kovelista
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Zimbabwe — maalehti / Ruoka: Sama jauho, kaksi ateriaa] Maissijauhosta keitetään sadza, ndebeleksi isitshwala: jauho ja vesi sekoitetaan, ja kun seos on kiehunut muutaman minuutin, sekaan lisätään lisää jauhoa, kunnes taikina on paksua. Se syödään lounaaksi ja päivälliseksi kastikkeen, papujen, lehtivihannesten tai lihan kanssa, usein myös hapanmaidon eli lacton kera. Samasta jauhosta keitetään aamiaiseksi ohuempi bota, joka maustetaan maapähkinävoilla, maidolla, voilla tai hillolla. Siirtomaa-ajalta on jäänyt teetauko kello kymmenen ja toinen kello neljä.
+- [Asunción — kaupunkilehti / Arki ja perintö: Rantabulevardi, joka syntyi juhlavuodesta] Kun Paraguay vietti itsenäisyytensä kaksisataavuotisjuhlaa toukokuussa 2011, Asunción avasi samalla noin kolmentoista hehtaarin rantapuiston. Se yhdistää vanhan keskustan rakennukset joen rantaan: Palacio de los López, Cabildo ja katedraali ovat nyt kävelymatkan päässä vedestä. Hankkeen ensimmäinen vaihe valmistui loppuvuodesta 2019 pyöräkaistoineen, kulkureitteineen ja kuntoiluvälineineen; toinen vaihe lisää siltoja ja liikuntapaikkoja. Tieltä siirtyneille perheille rakennettiin 144 uutta asuntoa.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Mitä keihäänkärjelle tapahtui toisen maailmansodan aikana?
+AIEMPI VASTAUS (Livia):
+Mmm— Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana. Sen tarkemmista vaiheista en ole varma, mutta [[toinen maailmansota]] hävitti paljon esineitä, ja tieto kirjoituksesta on säilynyt tutkijoiden tekemien kuvausten ja jäljennösten kautta. Löytö nostatti aikanaan [[Kovelin]] tunnetuksi, vaikka itse esine on kadonnut. Harmi, ois ollut kiva nähdä se.
+KYSYMYS: Kerro lisää: toinen maailmansota
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+AIEMPI KYSYMYS: Mitä keihäänkärjelle tapahtui toisen maailmansodan aikana?
+AIEMPI VASTAUS (Livia):
+Mmm— Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana. Sen tarkemmista vaiheista en ole varma, mutta [[toinen maailmansota]] hävitti paljon esineitä, ja tieto kirjoituksesta on säilynyt tutkijoiden tekemien kuvausten ja jäljennösten kautta. Löytö nostatti aikanaan [[Kovelin]] tunnetuksi, vaikka itse esine on kadonnut. Harmi, ois ollut kiva nähdä se.
+KYSYMYS: Kerro lisää: Kovelin
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+AIEMPI KYSYMYS: Mikä on Kovelin ja Chełmin välisen radan erityispiirre?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rata on rakennettu sekä eurooppalaiselle 1435 millimetrin että venäläiselle 1520 millimetrin raideleveydelle. Se on nykyään pisin Ukrainan ja muun [[Euroopan]] yhdistävä normaaliraiteinen rautatie, ja se kulkee [[Chełmin]] ja [[Kovelin]] välillä. Kaksi raideleveyttä samalla radalla on junamiehen painajainen, mut minulle se on lentokelvoton kysymys.
+KYSYMYS: Kerro lisää: Euroopan
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Chennai — kohdekartta / Kohdekartta: Marina Beach] promenadi 1884 Marina on luonnollinen hiekkaranta Koromandelin rannikolla. Se alkaa Fort St. Georgen kupeesta ja jatkuu etelään Besant Nagariin asti. Hiekkaa on kolmetoista kilometriä ja promenadia kuusi; Marina Beach -artikkeli sanoo sitä Intian pisimmäksi luonnolliseksi kaupunkirannaksi ja Chennai-artikkeli maailman toiseksi pisimmäksi kaupunkirannaksi. Leveyttä on keskimäärin kolmesataa metriä ja leveimmillään 437. Ranta on vanhempi kuin kaupunki. Ennen 1500-lukua meri tulvi toistuvasti maalle, ja vetäytyessään se jätti jälkeensä hiekkaharjuja ja laguuneja. Yksi harju kulki Cooum-joen suulta nykyisen Presidency Collegen paikalle, ja juuri sen päällä ranta on. Promenadin valmistumisen 188…
+- [Denver — kohdekartta / Kohdekartta: Kasvitieteellinen puutarha] 1951 Denverin kasvitieteellinen puutarha perustettiin 1951 Cheesman Parkin naapuriin. Paikalla oli aiemmin Prospect Hillin hautausmaa: valtaosa vainajista siirrettiin pois 1893, mutta siirtoja tehtiin vielä 1950-luvulla, ja niin myöhään kuin 2008 kasteluputkia uusittaessa löytyi lisää hautoja. Puutarhan erikoisuus on Pohjois-Amerikan laajin kokoelma viileän lauhkean vyöhykkeen kasveja eri puolilta maailmaa. Sen lisäksi seitsemän puutarhaa esittelee Coloradon ja naapurivaltioiden omaa kasvillisuutta. Maailman ensimmäinen kuivapuutarhan mallialue avattiin täällä 1986, ja kahta vuotta myöhemmin se sai nimen Dryland Mesa. Boettcherin trooppinen kasvihuone oli Amerikan ensimmäinen kokonaan beton…
+AIEMPI KYSYMYS: Mikä on Kovelin ja Chełmin välisen radan erityispiirre?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rata on rakennettu sekä eurooppalaiselle 1435 millimetrin että venäläiselle 1520 millimetrin raideleveydelle. Se on nykyään pisin Ukrainan ja muun [[Euroopan]] yhdistävä normaaliraiteinen rautatie, ja se kulkee [[Chełmin]] ja [[Kovelin]] välillä. Kaksi raideleveyttä samalla radalla on junamiehen painajainen, mut minulle se on lentokelvoton kysymys.
+KYSYMYS: Kerro lisää: Chełmin
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kovel (tekniikka)
+Tietoruudun teksti: Kovel on rautatiekaupunki Luoteis-Ukrainan Volynin alueella. Sen läpi kulkeva Chełmin ja Kovelin välinen rata on nykyään pisin Ukrainan ja muun Euroopan yhdistävä normaaliraiteinen rautatie, ja se on rakennettu sekä eurooppalaiselle 1435 mm:n että venäläiselle 1520 mm:n raideleveydelle. Kaupungin läheltä löytyi 1858 niin sanottu Kovelin keihäänkärki, jonka terässä on yksi maailman vanhimmista tunnetuista riimukirjoituksista – goottia, joka hämmästytti aikansa tutkijoita. Alkuperäinen keihäänkärki katosi toisen maailmansodan aikana, mutta löytö teki pienestä Kovelista tunnetun arkeologien keskuudessa jo isoisän omana aikana.
+AIEMPI KYSYMYS: Millä kielellä Kovelin keihäänkärjen riimut kirjoitettiin?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Keihäänkärjen terässä oleva riimukirjoitus on goottia, joka hämmästytti aikansa tutkijoita. [[Gootit]] olivat germaaninen kansa, joka tutkijoiden mukaan asui kansainvaellusten aikaan nykyisen Ukrainan alueella; tarkoista vaiheista en ole aivan varma. Riimut olivat kirjoitusjärjestelmä, jota germaaniset kansat käyttivät, ja [[Kovelin keihäänkärki]] on yksi tunnetuimmista esimerkeistä. Pitkä vastaus, mut kyl se kannatti.
+KYSYMYS: Kerro lisää: Gootit
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+AIEMPI KYSYMYS: Millä nimellä Uzhhorodia kutsuttiin vuonna 1873?
+AIEMPI VASTAUS (Livia):
+No jopas. Vuonna 1873 kaupungin nimi oli Ungvár, vanha unkarilainen nimi. Nimi [[Uzhhorod]] on 1800-luvun alun slaavimielisten piirien kääntämä muoto siitä, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Kaupunki kuului silloin [[Unkarin kuningaskuntaan]]. Nimi vaihtui, mut kaupunki pysyi paikallaan.
+KYSYMYS: Kerro lisää: Uzhhorod
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Millä nimellä Uzhhorodia kutsuttiin vuonna 1873?
+AIEMPI VASTAUS (Livia):
+No jopas. Vuonna 1873 kaupungin nimi oli Ungvár, vanha unkarilainen nimi. Nimi [[Uzhhorod]] on 1800-luvun alun slaavimielisten piirien kääntämä muoto siitä, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Kaupunki kuului silloin [[Unkarin kuningaskuntaan]]. Nimi vaihtui, mut kaupunki pysyi paikallaan.
+KYSYMYS: Kerro lisää: Unkarin kuningaskuntaan
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Mihin valtioon Uzhhorod kuului 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Uzhhorod kuului 1800-luvulla [[Unkarin kuningaskuntaan]], joka oli osa Habsburgien monarkiaa. Vuodesta 1867 monarkia tunnettiin nimellä [[Itävalta-Unkari]], ja vuonna 1873 kaupunki oli siis osa sitä. Kaupunki oli [[Ung-läänin]] keskus, ja se sijaitsi kaukana Venäjän vallan alaisesta muusta Ukrainasta. Valtioiden rajat on kyl liikkuneet enemmän kuin kyyhkyt.
+KYSYMYS: Kerro lisää: Itävalta-Unkari
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jakutsk — kohdekartta / Kohdekartta: Vanhakaupunki] 1800-luvun tyyliin rakennettu kortteli Vanhakaupunki on aivan Jakutskin ytimessä, ja sitä rajaavat Ammosovin ja Aržakovin kadut sekä Kaatuneiden sotilaiden aukio. Se on rakennettu uudelleen 1800-luvun rakennustyyliin, ja kadut on suljettu liikenteeltä ja päällystetty puupölkyillä. Korttelissa on ruokapaikkoja ja myyntikojuja, ja se on kaupunkilaisten suosituin oleskelupaikka. Kohteita on korttelissa useita. Siellä ovat entisöity Preobraženskin kirkko, perustajien muistomerkki, kaatuneiden sotilaiden muistomerkki, Maksim Ammosovin museo sekä kivipylväs, joka pystytettiin Jakutian Venäjään liittämisen 375-vuotispäivänä. Lähistöllä ovat myös 1600-luvun paaluvarustuksen entisöidyt tornit ja 170…
+- [Slovakia — maalehti / Historia: Kuka sytytti Spišin linnan?] 1780 — Spišin linna kohoaa kalkkikivikukkulalla, ja sen vanhin kirjallinen maininta on vuodelta 1120. Aluksi se vartioi Unkarin pohjoisrajaa, myöhemmin siitä tuli koko Spišin läänin hallinnon ja kulttuurin keskus. Viimeiset omistajat, Csákyn suku, muuttivat pois 1700-luvun alussa, koska linna oli liian epämukava asua. Vuonna 1780 se paloi, eikä syytä tiedetä. Yksi tarina kertoo, että katetuista rakennuksista peritty lisävero houkutteli polttamaan katon, toinen väittää sotilaiden keittäneen salaa viinaa. Linna kuuluu Unescon maailmanperintöön vuodesta 1993.
+AIEMPI KYSYMYS: Mihin valtioon Uzhhorod kuului 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Uzhhorod kuului 1800-luvulla [[Unkarin kuningaskuntaan]], joka oli osa Habsburgien monarkiaa. Vuodesta 1867 monarkia tunnettiin nimellä [[Itävalta-Unkari]], ja vuonna 1873 kaupunki oli siis osa sitä. Kaupunki oli [[Ung-läänin]] keskus, ja se sijaitsi kaukana Venäjän vallan alaisesta muusta Ukrainasta. Valtioiden rajat on kyl liikkuneet enemmän kuin kyyhkyt.
+KYSYMYS: Kerro lisää: Ung-läänin
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+AIEMPI KYSYMYS: Miksi Uzhhorodia sanotaan alueensa sisämaisimmaksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Uzhhorod on Slovakian ja Unkarin rajojen lähellä sijaitseva kaupunki, josta on [[Itämerelle]], [[Aadrianmerelle]] ja [[Mustallemerelle]] kaikkiin suunnilleen sama matka, noin 650–690 kilometriä. Siksi se on tämän Euroopan kolkan sisämaisin kaupunki. Merelle ei siis pääse mistään suunnasta nopeasti. Kyyhky laskee tuon matkan nopeasti, mut ihmiselle se on ihan eri juttu.
+KYSYMYS: Kerro lisää: Itämerelle
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+AIEMPI KYSYMYS: Miksi Uzhhorodia sanotaan alueensa sisämaisimmaksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Uzhhorod on Slovakian ja Unkarin rajojen lähellä sijaitseva kaupunki, josta on [[Itämerelle]], [[Aadrianmerelle]] ja [[Mustallemerelle]] kaikkiin suunnilleen sama matka, noin 650–690 kilometriä. Siksi se on tämän Euroopan kolkan sisämaisin kaupunki. Merelle ei siis pääse mistään suunnasta nopeasti. Kyyhky laskee tuon matkan nopeasti, mut ihmiselle se on ihan eri juttu.
+KYSYMYS: Kerro lisää: Aadrianmerelle
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+AIEMPI KYSYMYS: Miksi Uzhhorodia sanotaan alueensa sisämaisimmaksi kaupungiksi?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Uzhhorod on Slovakian ja Unkarin rajojen lähellä sijaitseva kaupunki, josta on [[Itämerelle]], [[Aadrianmerelle]] ja [[Mustallemerelle]] kaikkiin suunnilleen sama matka, noin 650–690 kilometriä. Siksi se on tämän Euroopan kolkan sisämaisin kaupunki. Merelle ei siis pääse mistään suunnasta nopeasti. Kyyhky laskee tuon matkan nopeasti, mut ihmiselle se on ihan eri juttu.
+KYSYMYS: Kerro lisää: Mustallemerelle
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kaupunkilehti / Budapest: Patsas, jolle ei tehty kasvoja] Unkarin vanhimman kronikan Gesta Hungarorumin kirjoitti noin vuonna 1200 mies, joka kutsui itseään vain kirjaimella P. ja kuninkaan notaariksi. Nimeä ei tiedä kukaan, joten häntä sanotaan Anonymukseksi eli Nimettömäksi. Kun Miklós Ligeti teki hänestä pronssipatsaan vuonna 1903, hän jätti kasvot tahallaan hupun varjoon: salaisuus saa pysyä salaisuutena. Patsaan kynä on kulunut kiiltäväksi, sillä sitä käydään koskettamassa onnen toivossa.
+AIEMPI KYSYMYS: Mistä Gesta Hungarorum -kronikka kertoo?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Gesta Hungarorum]] on keskiaikainen kronikka, joka kertoo unkarilaisten heimojen tulosta Karpaattien altaalle ja alueen valtaamisesta. Sen mukaan unkarilaiset valloittivat myös [[Uzhhorodin]] seudun vuonna 895. Kronikan kirjoittajaa kutsutaan nimellä Anonymus, ja teoksen ajoitus ja luotettavuus ovat tutkijoiden keskuudessa kiistanalaisia, joten en ole varma tarkasta ikäarviosta. Ei paha kyyhkyltä, vaikka ajoitus jäikin auki.
+KYSYMYS: Kerro lisää: Gesta Hungarorum
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+AIEMPI KYSYMYS: Mistä Gesta Hungarorum -kronikka kertoo?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Gesta Hungarorum]] on keskiaikainen kronikka, joka kertoo unkarilaisten heimojen tulosta Karpaattien altaalle ja alueen valtaamisesta. Sen mukaan unkarilaiset valloittivat myös [[Uzhhorodin]] seudun vuonna 895. Kronikan kirjoittajaa kutsutaan nimellä Anonymus, ja teoksen ajoitus ja luotettavuus ovat tutkijoiden keskuudessa kiistanalaisia, joten en ole varma tarkasta ikäarviosta. Ei paha kyyhkyltä, vaikka ajoitus jäikin auki.
+KYSYMYS: Kerro lisää: Uzhhorodin
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Uzhhorod (historia)
+Tietoruudun teksti: Uzhhorod on Länsi-Ukrainan sisämaan kaupunki Uzh-joen varrella, niin lähellä Slovakian ja Unkarin rajoja, että se on tämän Euroopan kolkan sisämaisin kaupunki: Itämerelle, Aadrianmerelle ja Mustallemerelle on kaikkiin suunnilleen sama 650–690 kilometrin matka. Unkarilaiset valloittivat paikan jo vuonna 895 Gesta Hungarorum -kronikan mukaan, ja siitä lähtien kaupunki oli osa Unkarin kuningaskuntaa Ung-läänin keskuksena. Nimi Uzhhorod on 1800-luvun alun slaavimielisten piirien kääntämä muoto vanhasta unkarilaisesta nimestä Ungvár, mutta virallisesti se otettiin käyttöön vasta 1920-luvulla tšekkoslovakialaisen hallinnon aikana. Isoisän matkan aikaan 1873 kaupunki on siis vielä Ungvár, osa Unkarin kuningaskuntaa ja Itävalta-Unkarin keisarikuntaa – kaukana Venäjän vallan alaisesta muusta Ukrainasta.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Košice — kaupunkilehti / Historia: Jesuiittojen yliopisto ja Ylä-Unkarin museo] Vuonna 1657 jesuiitat perustivat Kassaan kirjapainon ja yliopiston, jota rahoitti keisari Leopold I. Universitas Cassoviensis toimi vuoteen 1921 asti vaihtaen välillä nimeä kuninkaalliseksi akatemiaksi ja oikeusakatemiaksi. Vanhan yliopiston perinteen jatkajana pidetään nykyistä Pavol Jozef Šafárikin yliopistoa. Kaupungin museo perustettiin 1872 nimellä Ylä-Unkarin museo, ja nykyään se on Itä-Slovakian museo, yksi Slovakian vanhimmista.
+AIEMPI KYSYMYS: Mikä Ung-lääni oli?
+AIEMPI VASTAUS (Livia):
+Kato, hyvä kysymys. Ung-lääni oli [[Unkarin kuningaskunnan]] hallinnollinen alue, jonka keskus oli [[Uzhhorod]], silloiselta nimeltään Ungvár. Lääni oli osa Unkarin kuningaskuntaa siitä lähtien, kun unkarilaiset valloittivat paikan, ja kaupunki toimi sen keskuksena. Alueen rajat ovat sittemmin muuttuneet useaan otteeseen. Kyl nämä läänit kuulostaa mutkikkailta, mut kartalta ne selviää.
+KYSYMYS: Kerro lisää: Unkarin kuningaskunnan
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Vapahtajan katedraali] 1839-1883 Kun Napoleonin joukot perääntyivät Moskovasta vuonna 1812, tsaari Aleksanteri I halusi rakentaa valtavan katedraalin kiitokseksi Venäjän pelastumisesta ja kaatuneiden sotilaiden muistoksi. Peruskivi muurattiin vuonna 1839, mutta katedraali valmistui vasta vuonna 1883 - rakentaminen kesti yli 40 vuotta. Säveltäjä Tšaikovski sävelsi juhlaan sopivan 1812-alkusoiton, joka kuultiin katedraalin pihalla jo elokuussa 1882, ennen kuin koko rakennus oli edes valmis. Vuonna 1931 katedraali räjäytettiin dynamiitilla, sillä sen paikalle oli tarkoitus rakentaa aivan uudenlainen jättimäinen rakennus. Sitä ei koskaan saatu valmiiksi, ja tyhjälle paikalle rakennettiin sen sijaan maailman suurin ul…
+- [Moskova — kaupunkilehti / Moskova: Kirkko, uimahalli ja taas kirkko] Kristus Vapahtajan katedraali räjäytettiin joulukuussa 1931. Tilalle piti nousta maailman korkein rakennus, Neuvostojen palatsi, mutta sitä ei koskaan saatu pystyyn: sota vei teräkset muualle. Valmiiseen perustuskuoppaan tehtiin sen sijaan ulkouima-allas, jonka vesiympyrän halkaisija oli 130 metriä. Vesi lämmitettiin, joten siellä uitiin pakkasellakin. Allas suljettiin 1994, ja kirkko rakennettiin samalle paikalle uudelleen.
+AIEMPI KYSYMYS: Mikä Tšernihivin vanhin säilynyt rakennus on?
+AIEMPI VASTAUS (Livia):
+Tuota, katotaas. Tšernihivin säilyneistä keskiaikaisista kirkoista vanhin on [[Vapahtajan katedraali]], yksi harvoista säilyneistä mongolivalloitusta edeltävistä [[Rusin]] rakennuksista. Kaupunki oli 1000–1200-luvuilla oman ruhtinaskuntansa ja piispanistuimensa keskus, ja useita kirkkoja on säilynyt tuolta ajalta. Kaupungissa on siis historiaa kuin kyyhkyn pesässä, ja minä vain käyn katolla.
+KYSYMYS: Kerro lisää: Vapahtajan katedraali
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mikä Tšernihivin vanhin säilynyt rakennus on?
+AIEMPI VASTAUS (Livia):
+Tuota, katotaas. Tšernihivin säilyneistä keskiaikaisista kirkoista vanhin on [[Vapahtajan katedraali]], yksi harvoista säilyneistä mongolivalloitusta edeltävistä [[Rusin]] rakennuksista. Kaupunki oli 1000–1200-luvuilla oman ruhtinaskuntansa ja piispanistuimensa keskus, ja useita kirkkoja on säilynyt tuolta ajalta. Kaupungissa on siis historiaa kuin kyyhkyn pesässä, ja minä vain käyn katolla.
+KYSYMYS: Kerro lisää: Rusin
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+AIEMPI KYSYMYS: Mikä liike toimi Tšernihivissä 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Hromada-liike]]. Tšernihivissä toimi 1800-luvulla ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Kaupunki oli [[Venäjän keisarikunnan]] kuvernementin pääkaupunki vuodesta 1782, ja Ukrainan kansallinen herääminen eli siellä oman vallan alla. Ukrainalaista identiteettiä siis rakennettiin, vaikka Venäjän hallinto oli vahvasti läsnä. Tuli tämäkin muistettua, mut ei kyl ilman vaivaa.
+KYSYMYS: Kerro lisää: Hromada-liike
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mikä liike toimi Tšernihivissä 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: [[Hromada-liike]]. Tšernihivissä toimi 1800-luvulla ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Kaupunki oli [[Venäjän keisarikunnan]] kuvernementin pääkaupunki vuodesta 1782, ja Ukrainan kansallinen herääminen eli siellä oman vallan alla. Ukrainalaista identiteettiä siis rakennettiin, vaikka Venäjän hallinto oli vahvasti läsnä. Tuli tämäkin muistettua, mut ei kyl ilman vaivaa.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+AIEMPI KYSYMYS: Keitä siiveriläiset olivat?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota. Siiveriläiset olivat itäslaavilainen heimo, jonka keskus Tšernihiv oli jo 800-luvulla. Heimon alue sijaitsi nykyisen Itä-Ukrainan ja Länsi-Venäjän tienoilla Desna-joen varrella, mutta tarkoista rajoista en ole varma. Pian sen jälkeen alue liittyi [[Kiovan Rusiin]], jossa [[Tšernihiv]] nousi toiseksi tärkeimmäksi kaupungiksi. Heimoista on jäänyt vähän, ja se on sääli.
+KYSYMYS: Kerro lisää: Kiovan Rusiin
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tšernihiv (historia)
+Tietoruudun teksti: Tšernihiv on Pohjois-Ukrainan kaupunki, joka oli jo 800-luvulla siiveriläisten heimon keskus ja liittyi pian sen jälkeen Kiovan Rusiin sen toiseksi tärkeimmäksi kaupungiksi Kiovan jälkeen. 1000–1200-luvuilla se oli oman ruhtinaskuntansa ja piispanistuimensa keskus, ja kaupungissa säilyy yhä useita tuolta ajalta peräisin olevia kirkkoja – niistä vanhin on Vapahtajan katedraali, yksi harvoista säilyneistä mongolivalloitusta edeltävistä Rusin rakennuksista. Puolan vallan ja kasakkahetmanaatin vuosien jälkeen Tšernihivistä tuli 1782 oman kuvernementtinsa pääkaupunki Venäjän keisarikunnassa, ja 1800-luvulla siellä toimi ukrainalainen itsehallintopiiri ja radikaali Hromada-liike. Isoisän matkan aikaan 1873 kaupunki on siis Venäjän hallinnon keskus, jossa Ukrainan kansallinen herääminen kytee siinä missä Lvivissäkin, vain toisen vallan alla.
+AIEMPI KYSYMYS: Keitä siiveriläiset olivat?
+AIEMPI VASTAUS (Livia):
+Hmm, tuota. Siiveriläiset olivat itäslaavilainen heimo, jonka keskus Tšernihiv oli jo 800-luvulla. Heimon alue sijaitsi nykyisen Itä-Ukrainan ja Länsi-Venäjän tienoilla Desna-joen varrella, mutta tarkoista rajoista en ole varma. Pian sen jälkeen alue liittyi [[Kiovan Rusiin]], jossa [[Tšernihiv]] nousi toiseksi tärkeimmäksi kaupungiksi. Heimoista on jäänyt vähän, ja se on sääli.
+KYSYMYS: Kerro lisää: Tšernihiv
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+AIEMPI KYSYMYS: Minä vuonna luostari palautettiin ortodoksiseksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Počajivin luostari]] palautettiin [[ortodoksiseksi]] vuonna 1831. Sitä ennen luostari oli ollut ortodoksinen vuoteen 1720, ja sitten kreikkalaiskatolinen vuoteen 1831. Kirkkokunta vaihtui siis vallanpitäjien mukana. Vuonna 1873 luostari oli ollut ortodoksinen jo neljä vuosikymmentä, mikä sopii hyvin pitkälle historialle. Pitkä historia, mut sain sen mahtumaan.
+KYSYMYS: Kerro lisää: Počajivin luostari
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+AIEMPI KYSYMYS: Minä vuonna luostari palautettiin ortodoksiseksi?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Počajivin luostari]] palautettiin [[ortodoksiseksi]] vuonna 1831. Sitä ennen luostari oli ollut ortodoksinen vuoteen 1720, ja sitten kreikkalaiskatolinen vuoteen 1831. Kirkkokunta vaihtui siis vallanpitäjien mukana. Vuonna 1873 luostari oli ollut ortodoksinen jo neljä vuosikymmentä, mikä sopii hyvin pitkälle historialle. Pitkä historia, mut sain sen mahtumaan.
+KYSYMYS: Kerro lisää: ortodoksiseksi
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Missä kuvernementissa Počajiv sijaitsi vuonna 1873?
+AIEMPI VASTAUS (Livia):
+No niin. Vuonna 1873 [[Počajivin luostari]] kuului [[Venäjän keisarikunnan]] Volynian kuvernementtiin. Alue oli aiemmin kuulunut [[Puola-Liettualle]], ja luostari oli ollut ortodoksinen jo neljä vuosikymmentä. Rajat olivat siis siirtyneet, vaikka luostari seisoi paikallaan kukkulalla. Ihmisten rajat on kyl joustavampia kuin kyyhkyn lentoreitit.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Missä kuvernementissa Počajiv sijaitsi vuonna 1873?
+AIEMPI VASTAUS (Livia):
+No niin. Vuonna 1873 [[Počajivin luostari]] kuului [[Venäjän keisarikunnan]] Volynian kuvernementtiin. Alue oli aiemmin kuulunut [[Puola-Liettualle]], ja luostari oli ollut ortodoksinen jo neljä vuosikymmentä. Rajat olivat siis siirtyneet, vaikka luostari seisoi paikallaan kukkulalla. Ihmisten rajat on kyl joustavampia kuin kyyhkyn lentoreitit.
+KYSYMYS: Kerro lisää: Puola-Liettualle
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+AIEMPI KYSYMYS: Mitä sana laavra tarkoittaa ortodoksisessa kirkossa?
+AIEMPI VASTAUS (Livia):
+Mmm— Laavra on ortodoksisessa kirkossa erityisen arvostetun, tärkeän luostarin nimitys. Počajivin luostari tunnetaan nimellä Pyhän Nukkumisen laavra, ja se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista. Luostari kohoaa kukkulalla [[Ternopilin alueella]], ja se on edelleen yksi vilkkaimmista pyhiinvaelluskohteista [[Ukrainassa]]. Kunnioitettava paikka, ja katolta se näyttää kullanhohtoiselta.
+KYSYMYS: Kerro lisää: Ternopilin alueella
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nälänhätä jota valtio yritti salata] 1932–1933 — Neuvostojohtaja Josif Stalinin vuonna 1929 käynnistämä maatalouden pakkokollektivisointi ajoi ukrainalaiset talonpojat luopumaan maastaan ja omaisuudestaan, ja vastarintaa yritettiin murtaa kiristämällä viljan pakko-otot äärimmilleen. Elokuussa 1932 Stalin kirjoitti, että "jos emme nyt toimi, voimme menettää Ukrainan" – ja syksyllä tehdyt päätökset syvensivät nälänhätää nimenomaan Ukrainassa. Arviot uhrien määrästä vaihtelevat muutamasta miljoonasta yli kymmeneen miljoonaan, eikä yksimielisyyttä ole saavutettu, mutta parikymmentä valtiota on tunnustanut tapahtuman kansanmurhaksi. Neuvostoliitossa nälänhädästä vaiettiin aina perestroikaan asti.
+AIEMPI KYSYMYS: Mitä sana laavra tarkoittaa ortodoksisessa kirkossa?
+AIEMPI VASTAUS (Livia):
+Mmm— Laavra on ortodoksisessa kirkossa erityisen arvostetun, tärkeän luostarin nimitys. Počajivin luostari tunnetaan nimellä Pyhän Nukkumisen laavra, ja se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista. Luostari kohoaa kukkulalla [[Ternopilin alueella]], ja se on edelleen yksi vilkkaimmista pyhiinvaelluskohteista [[Ukrainassa]]. Kunnioitettava paikka, ja katolta se näyttää kullanhohtoiselta.
+KYSYMYS: Kerro lisää: Ukrainassa
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+AIEMPI KYSYMYS: Mikä kreikkalaiskatolinen kirkko on?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Kreikkalaiskatolinen kirkko]] on itäisen kirkon perinteitä noudattava kirkko, joka on yhteydessä Rooman [[paaviin]]. Ukrainassa sen synty liittyy Brestin kirkkounioniin 1500-luvun lopulla, ja siksi sen jumalanpalvelukset muistuttavat ortodoksisia, mutta kirkko tunnustaa paavin johdon. [[Počajivin luostari]] oli kreikkalaiskatolinen vuosina 1720–1831. Moni asia vaihtuu, kun vallanpitäjät vaihtuvat, ja se on kyl tuttu juttu kyyhkyillekin.
+KYSYMYS: Kerro lisää: Kreikkalaiskatolinen kirkko
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Počajivin luostari (kulttuuri)
+Tietoruudun teksti: Počajivin luostari eli Pyhän Nukkumisen laavra kohoaa 60 metriä korkealla kukkulalla Ternopilin alueella, kahdeksantoista kilometriä lounaaseen Kremenetsistä. Se on ollut vuosisatojen ajan yksi itäisen kristikunnan tärkeimmistä hengellisistä keskuksista, mutta sen kirkkokunta on vaihdellut vallanpitäjien mukana: ortodoksinen vuoteen 1720 asti, sitten kreikkalaiskatolinen vuoteen 1831, jolloin se palautettiin jälleen ortodoksiseksi. Luostarin päärakennuksen kultaiset kupolit ja kellotorni näkyvät kauas ympäröivälle tasangolle, ja se on edelleen yksi Ukrainan vilkkaimmista pyhiinvaelluskohteista. Isoisän matkan aikaan 1873 luostari on siis ollut ortodoksinen jo neljä vuosikymmentä, osana Venäjän keisarikunnan Volynian kuvernementtia – samaa aluetta, joka aiemmin kuului Puola-Liettualle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+AIEMPI KYSYMYS: Mikä kreikkalaiskatolinen kirkko on?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Kreikkalaiskatolinen kirkko]] on itäisen kirkon perinteitä noudattava kirkko, joka on yhteydessä Rooman [[paaviin]]. Ukrainassa sen synty liittyy Brestin kirkkounioniin 1500-luvun lopulla, ja siksi sen jumalanpalvelukset muistuttavat ortodoksisia, mutta kirkko tunnustaa paavin johdon. [[Počajivin luostari]] oli kreikkalaiskatolinen vuosina 1720–1831. Moni asia vaihtuu, kun vallanpitäjät vaihtuvat, ja se on kyl tuttu juttu kyyhkyillekin.
+KYSYMYS: Kerro lisää: paaviin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+AIEMPI KYSYMYS: Kuka oli Baal Shem Tov?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Baal Shem Tov, oikealta nimeltään Israel ben Eliezer, oli 1700-luvun juutalainen mystikko ja parantaja, jota pidetään [[hasidismin]] perustajana. Hän asui [[Medzhybižissä]] vuodesta 1742 kuolemaansa vuoteen 1760 asti, ja hänen hautansa kaupungin vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Nimi Baal Shem Tov tarkoittaa suunnilleen "hyvän nimen mestaria". Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: hasidismin
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+AIEMPI KYSYMYS: Kuka oli Baal Shem Tov?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Baal Shem Tov, oikealta nimeltään Israel ben Eliezer, oli 1700-luvun juutalainen mystikko ja parantaja, jota pidetään [[hasidismin]] perustajana. Hän asui [[Medzhybižissä]] vuodesta 1742 kuolemaansa vuoteen 1760 asti, ja hänen hautansa kaupungin vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Nimi Baal Shem Tov tarkoittaa suunnilleen "hyvän nimen mestaria". Ja tän kaiken minä muistin ilman muistiinpanoja.
+KYSYMYS: Kerro lisää: Medzhybižissä
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+AIEMPI KYSYMYS: Missä hänen hautansa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hänen hautansa sijaitsee [[Medzhybižin]] kaupungin vanhalla juutalaisella hautausmaalla Länsi-Ukrainan Podoliassa, Etelä-Bug- ja Buzhok-jokien yhtymäkohdan tienoilla. Paikka on edelleen hasidijuutalaisten pyhiinvaelluskohde, jonne tullaan rukoilemaan [[Baal Shem Tovin]] haudalle.
+
+Minä katson sellaisia paikkoja mieluummin katolta kuin lähietäisyydeltä, koska hiljaisuus kantaa ylös asti. Pyhiinvaeltajia en ole ikinä kuljettanut, mutta heidän kirjeitään kyllä.
+KYSYMYS: Kerro lisää: Medzhybižin
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+AIEMPI KYSYMYS: Missä hänen hautansa sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hänen hautansa sijaitsee [[Medzhybižin]] kaupungin vanhalla juutalaisella hautausmaalla Länsi-Ukrainan Podoliassa, Etelä-Bug- ja Buzhok-jokien yhtymäkohdan tienoilla. Paikka on edelleen hasidijuutalaisten pyhiinvaelluskohde, jonne tullaan rukoilemaan [[Baal Shem Tovin]] haudalle.
+
+Minä katson sellaisia paikkoja mieluummin katolta kuin lähietäisyydeltä, koska hiljaisuus kantaa ylös asti. Pyhiinvaeltajia en ole ikinä kuljettanut, mutta heidän kirjeitään kyllä.
+KYSYMYS: Kerro lisää: Baal Shem Tovin
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanger — kaupunkilehti / Tanger: Tingi, suon kaupunki] Tanger perustettiin foinikialaiseksi siirtokunnaksi mahdollisesti jo 1000-luvulla eKr. ja lähes varmasti 700-luvulla eKr. Vanha berberinimi Tingi liittyy sanaan tingis, suo. Kreikkalaiset selittivät nimen toisin: heidän mukaansa Tinjis, titaani Atlaksen tytär, sai Herakleen kanssa pojan Syfaksin, joka perusti sataman ja nimesi sen äitinsä muistoksi. Karthagolaiset tekivät paikasta tärkeän sataman 400-luvulla eKr., ja foinikialaiset tavat pitivät pintansa pitkään: roomalaisajan rahoissa on etupuolella Augustus latinaksi ja kääntöpuolella kanaanilainen jumala Baal. Claudiuksen aikana Tingiksestä tuli roomalainen siirtokunta ja Mauretania Tingitanan pääkaupunki.
+AIEMPI KYSYMYS: Mikä on hasidismi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hasidismi on juutalaisuuden hengellinen liike, joka syntyi 1700-luvulla Itä-Euroopassa, ja sen perustajana pidetään [[Baal Shem Tovia]]. Liike korosti Jumalan palvelemista ilon, rukouksen ja yhteisön kautta oppineisuuden rinnalla, ja yhteisöt ryhmittyivät johtajiensa, [[zaddikien]], ympärille. Podolian seudulla liike levisi nopeasti, ja se on säilynyt elävänä tähän päivään. Voi sentään, tuli melkein saarna.
+KYSYMYS: Kerro lisää: Baal Shem Tovia
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+AIEMPI KYSYMYS: Mikä on hasidismi?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Hasidismi on juutalaisuuden hengellinen liike, joka syntyi 1700-luvulla Itä-Euroopassa, ja sen perustajana pidetään [[Baal Shem Tovia]]. Liike korosti Jumalan palvelemista ilon, rukouksen ja yhteisön kautta oppineisuuden rinnalla, ja yhteisöt ryhmittyivät johtajiensa, [[zaddikien]], ympärille. Podolian seudulla liike levisi nopeasti, ja se on säilynyt elävänä tähän päivään. Voi sentään, tuli melkein saarna.
+KYSYMYS: Kerro lisää: zaddikien
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kaupunkilehti / Kiova] Kaupunki, jonka kirkonseiniin kirjoitettiin tuhat vuotta sitten ja jonka metroon lasketaan yli sata metriä maan alle.
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Mikä oli Kiovan Rus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kiovan Rus oli keskiajan itäslaavilainen ruhtinaskuntien liitto, jonka keskuksena oli [[Kiova]] ja jonka valtaa piti käsissään Rurikin suku. Ruhtinas [[Vladimir Suuri]] käännytti alueen kristinuskoon noin 980-luvun lopulla, ja Kiovan Rusin perintöä pitävät omanaan sekä ukrainalaiset että venäläiset ja valkovenäläiset. Valtio hajosi 1200-luvulla, kun mongolien hyökkäys ja ruhtinaiden keskinäiset riidat heikensivät sitä. Medzhybižin ensimmäinen linnoitus mainitaan vuonna 1146 juuri sen ajan kronikoissa. Oli siinä taas ajanjaksoa mahdutettavaksi yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Kiova
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Historia: Ruhtinas heitti jumalankuvan jokeen] 988 — Ruhtinas Vladimir Suuri oli vuonna 987 luvannut Bysantin keisari Basileios II:lle sotilasavun kapinallista vastaan, jos saisi vastineeksi naida keisarin sisaren Annan ja valtakuntansa kääntyisi kristityksi. Ehtona oli myös Krimin Khersonesoksen valtaus, ja Vladimir kastettiin siellä ennen häitä. Palattuaan Kiovaan hän käski kaataa kahdeksan vuotta aiemmin pystyttämänsä slaavilaisjumalien patsaat: ylijumala Perunin kuva sidottiin hevosen häntään, raahattiin mäkeä alas ja upotettiin Dneprjoen aaltoihin. Kiovan asukkaat kastettiin joukolla joen vedessä vuonna 988, ja tapahtumaa pidetään Venäjän, Ukrainan ja Valko-Venäjän yhteisen kristillisen kulttuurin syntyhetkenä.
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Mikä oli Kiovan Rus?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Kiovan Rus oli keskiajan itäslaavilainen ruhtinaskuntien liitto, jonka keskuksena oli [[Kiova]] ja jonka valtaa piti käsissään Rurikin suku. Ruhtinas [[Vladimir Suuri]] käännytti alueen kristinuskoon noin 980-luvun lopulla, ja Kiovan Rusin perintöä pitävät omanaan sekä ukrainalaiset että venäläiset ja valkovenäläiset. Valtio hajosi 1200-luvulla, kun mongolien hyökkäys ja ruhtinaiden keskinäiset riidat heikensivät sitä. Medzhybižin ensimmäinen linnoitus mainitaan vuonna 1146 juuri sen ajan kronikoissa. Oli siinä taas ajanjaksoa mahdutettavaksi yhteen vastaukseen.
+KYSYMYS: Kerro lisää: Vladimir Suuri
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Muurari allekirjoitti työnsä] 1499/1546 — Vuonna 1499 Tsehi Suuri pystytti Dnestrin kahlaamon suojaksi puisen linnakkeen, joka pysäytti tataarien ratsujoukkoja. Puolen vuosisadan kuluttua Petru Rareș muurautti sen kivestä: ympyrän muotoinen linnoitus on halkaisijaltaan 37,5 metriä, ja sitä vartioi viisi bastionia, neljä pyöreää ja yksi suorakulmainen porttitorni. Muurit ovat yli kolme metriä paksut ja nousevat 21 metriin. Työn tekivät Transilvaniasta kutsutut muurarit mestari Iacobin johdolla, ja Iacob jätti seinään kaiverruksen, jossa hän muistuttaa jälkipolvia: tämän linnan rakensi Iacob.
+- [Moldova — maalehti / Historia] Prutin ja Dnestrin välissä oleva pieni maa on ollut kahlaamo, jota tataarit, ritarikunnat ja imperiumit ovat vuosisatoja vartioineet. Samoihin kalkkikivijyrkänteisiin on kaiverrettu sekä 1200-luvun luolaluostari että maailman suurimmat viinikellarit, ja vuonna 1918 maan oma kansanneuvosto äänesti sen liittymisestä Romaniaan.
+AIEMPI KYSYMYS: Mikä on Podolia?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä. Podolia on historiallinen alue Länsi- ja Lounais-Ukrainassa, suunnilleen [[Dnestrin]] ja [[Etelä-Bugin]] välissä. Se on laaja ylänkö, jonka maaperä on hedelmällistä mustamultaa, ja alue on ollut vuosisatojen ajan viljelyseutua ja rajamaata. Aluetta ovat hallinneet muun muassa Puola ja myöhemmin Venäjän keisarikunta. En ole varma, mihin kaikkiin rajoihin nykyiset kartat sen vetävät. Kyllä ylhäältä näyttää kaikki yhtä pellolta.
+KYSYMYS: Kerro lisää: Dnestrin
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Medzhybižin linnoitus (historia)
+Tietoruudun teksti: Medzhybižin linnoitus seisoo Etelä-Bug- ja Buzhok-jokien yhtymäkohdassa Länsi-Ukrainan Podoliassa, ja ensimmäinen linnoitus samalla niemekkeellä mainitaan jo Kiovan Rusin kronikoissa vuonna 1146. Nykyinen kivilinna nousi 1500-luvulla puolalaisten Sieniawski- ja myöhemmin Czartoryski-sukujen hallinnassa, ja siitä tuli yksi alueen vahvimmista linnoituksista osmanien ja Krimin tataarien hyökkäyksiä vastaan. Kaupunki tunnetaan myös juutalaisen hasidismin syntypaikkana: liikkeen perustaja, mystikko ja parantaja Israel ben Eliezer eli Baal Shem Tov, asui Medzhybižissä vuodesta 1742 kuolemaansa 1760 asti, ja hänen hautansa vanhalla juutalaisella hautausmaalla on yhä hasidijuutalaisten pyhiinvaelluskohde. Puolan jaon jälkeen 1793 kaupunki siirtyi Venäjän keisarikunnalle, mutta linna pysyi Czartoryskien omaisuutena aina vuoteen 1830 saakka.
+AIEMPI KYSYMYS: Mikä on Podolia?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on hyvä. Podolia on historiallinen alue Länsi- ja Lounais-Ukrainassa, suunnilleen [[Dnestrin]] ja [[Etelä-Bugin]] välissä. Se on laaja ylänkö, jonka maaperä on hedelmällistä mustamultaa, ja alue on ollut vuosisatojen ajan viljelyseutua ja rajamaata. Aluetta ovat hallinneet muun muassa Puola ja myöhemmin Venäjän keisarikunta. En ole varma, mihin kaikkiin rajoihin nykyiset kartat sen vetävät. Kyllä ylhäältä näyttää kaikki yhtä pellolta.
+KYSYMYS: Kerro lisää: Etelä-Bugin
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+AIEMPI KYSYMYS: Mistä nimestä Itävalta-Unkarin "Lodomerian kuningaskunta" on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi Lodomeria on peräisin [[Volodymyrin]] keskiaikaisesta latinankielisestä nimestä, ja se annettiin nimen toiseksi osaksi Galitsian ja Lodomerian kuningaskunnalle, joka oli [[Habsburgien]] monarkian kruununmaa. Lähteiden mukaan nimi perustui keskiajan unkarilaisten kuninkaiden vaatimukseen Halytsin ja Volhynian alueista. Itse kaupunki ei kuitenkaan koskaan kuulunut tähän kuningaskuntaan, vaan se jäi Venäjän keisarikunnan puolelle. Hauska nimi kyllä, ja sen oppii nyt sentään kerralla.
+KYSYMYS: Kerro lisää: Volodymyrin
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kohdekartta / Kohdekartta: Schönbrunn] 1696–1780 Schönbrunn tarkoittaa kaunista lähdettä — hovin juomavesi haettiin aikoinaan juuri täältä. Arkkitehti Johann Bernhard Fischer von Erlach aloitti palatsin rakentamisen vuonna 1696, mutta nykyisen asunsa se sai vasta keisarinna Maria Teresian aikana, kun Nicolò Pacassi rakensi siitä 1700-luvun puolivälissä hovin kesäpalatsin. Huoneita kertyi lopulta 1441. Kesällä 1752 Maria Teresian puoliso Frans Stefan esitteli puutarhassa eläintarhansa, joka toimii yhä — se on maailman vanhin. Kymmenen vuotta myöhemmin palatsissa soitti keisarinnalle kuusivuotias ihmelapsi Wolfgang Amadeus Mozart, jonka taidot Maria Teresia pani kokeeseen peittämällä koskettimet kankaalla. Napoleonkin majoittui pa…
+- [Wien — kohdekartta / Kohdekartta: Hofburg] noin 1200-luvulta 1913 Hofburg ei ole vain yksi linna, vaan kokonainen keisarillinen kaupunginosa, joka kasvoi vähitellen yli 600 vuoden aikana. Vanhin osa, niin sanottu Sveitsiläissiipi, rakennettiin jo 1200-luvulla, ja Habsburgien hallitsijat asuivat ja hallitsivat täältä käsin lähes koko keisarikunnan historian ajan. Linnan sisällä on outo ja hieman kammottavakin huone: Sydänten krypta, jossa säilytetään 54 Habsburg-suvun jäsenen sydäntä hopeisissa uurnissa. Nykyään Hofburgissa työskentelee Itävallan presidentti. Vuosina 1814–1815 Hofburgissa pidettiin Wienin kongressi, jossa Euroopan valtiot neuvottelivat sodan jälkeisistä rajoista. Neuvottelut venyivät niin pitkiksi ja juhlat niin lois…
+AIEMPI KYSYMYS: Mistä nimestä Itävalta-Unkarin "Lodomerian kuningaskunta" on peräisin?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi Lodomeria on peräisin [[Volodymyrin]] keskiaikaisesta latinankielisestä nimestä, ja se annettiin nimen toiseksi osaksi Galitsian ja Lodomerian kuningaskunnalle, joka oli [[Habsburgien]] monarkian kruununmaa. Lähteiden mukaan nimi perustui keskiajan unkarilaisten kuninkaiden vaatimukseen Halytsin ja Volhynian alueista. Itse kaupunki ei kuitenkaan koskaan kuulunut tähän kuningaskuntaan, vaan se jäi Venäjän keisarikunnan puolelle. Hauska nimi kyllä, ja sen oppii nyt sentään kerralla.
+KYSYMYS: Kerro lisää: Habsburgien
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Kuuluiko Volodymyrin kaupunki itse tähän kuningaskuntaan?
+AIEMPI VASTAUS (Livia):
+Jaa-a, tästä tulee vähän hassu vastaus. Ei kuulunut: Volodymyr jäi rajan väärälle puolelle ja kuului [[Venäjän keisarikuntaan]], vaikka sen keskiaikainen nimi Lodomeria antoi nimensä [[Itävalta-Unkarin]] kuningaskunnalle. Näin kaupungin nimi eli rajan toisella puolella naapurimaakunnan virallisessa nimessä, vaikka kaupunki itse oli toisen valtakunnan alamaisia.
+
+Raja jakoi siis nimen ja kaupungin eri puolille, ja kyyhky kyllä ylittäisi sellaisen ilman passia. Silti se on ihan oikeasti outo yksityiskohta.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Nuorisoseurasta syntyi armeijan siemen] 1914 — Galitsian ukrainalaiset olivat 1900-luvun alussa perustaneet satoja Sitš-nimisiä liikunta- ja palokuntaseuroja, jotka hakivat innoituksensa kasakoiden Zaporižžjan Sitšistä. Elokuussa 1914 näistä seuroista koottiin Itävalta-Unkarin armeijaan noin 5 000 miehen vapaaehtoislegioona, Ukrainalaiset sitšiläisampujat, joka taisteli Venäjää vastaan Karpaateilla ja Galitsiassa. Sodan päätyttyä legioonan sotilaat muodostivat Länsi-Ukrainan kansantasavallan armeijan ytimen ja taistelivat vielä Puolaa vastaan, kunnes yksikkö hajotettiin toukokuussa 1920. Lvivin Lytšakivin hautausmaalle pystytettiin heille muistomerkki.
+AIEMPI KYSYMYS: Kuuluiko Volodymyrin kaupunki itse tähän kuningaskuntaan?
+AIEMPI VASTAUS (Livia):
+Jaa-a, tästä tulee vähän hassu vastaus. Ei kuulunut: Volodymyr jäi rajan väärälle puolelle ja kuului [[Venäjän keisarikuntaan]], vaikka sen keskiaikainen nimi Lodomeria antoi nimensä [[Itävalta-Unkarin]] kuningaskunnalle. Näin kaupungin nimi eli rajan toisella puolella naapurimaakunnan virallisessa nimessä, vaikka kaupunki itse oli toisen valtakunnan alamaisia.
+
+Raja jakoi siis nimen ja kaupungin eri puolille, ja kyyhky kyllä ylittäisi sellaisen ilman passia. Silti se on ihan oikeasti outo yksityiskohta.
+KYSYMYS: Kerro lisää: Itävalta-Unkarin
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kiova — kohdekartta / Kohdekartta: Kiovan kultainen portti] 1017–1024 Ruhtinas Jaroslav Viisas rakennutti Kiovan kultaisen portin vuosina 1017–1024 kaupungin muurien pääsisäänkäynniksi. Portti sai nimensä ja mallinsa Konstantinopolin kuuluisasta Kultaisesta portista, ja se toimi lähes 500 vuoden ajan sekä puolustusrakenteena että voitokkaana riemuporttina, josta ruhtinaat ratsastivat kaupunkiin. Läpikulkuaukko oli noin 12 metriä korkea ja 6 metriä leveä, ja sen päälle rakennettiin pieni kirkko suojelemaan kaupunkia taivaallisin voimin. Vuonna 1240 Batu-kaanin mongolijoukot valloittivat Kiovan ja vaurioittivat porttia pahoin. Seuraavien vuosisatojen aikana rakennus rapistui hiljalleen lähes raunioksi: 1970-luvulle tultaessa maan päällä oli enää näkyv…
+AIEMPI KYSYMYS: Mikä oli Galitsia-Volhynian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Galitsia-Volhynian kuningaskunta oli keskiajan slaavilainen valtio nykyisen Länsi-Ukrainan alueella, ja se syntyi 1200-luvulla [[Kiovan Rusin]] heikennyttyä. Sen muodostivat Galitsian ja Volynian ruhtinaskunnat, ja [[Volodymyr]] oli yksi sen pääkaupungeista. Valtio hajosi 1300-luvulla, ja sen alueet joutuivat pääosin [[Puolan]] ja [[Liettuan]] hallintaan. Tarkkoja vuosilukuja en uskalla tähän kirjoittaa, kun en ole niistä aivan varma. Hurja määrä historiaa yhdessä kuningaskunnassa.
+KYSYMYS: Kerro lisää: Kiovan Rusin
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+AIEMPI KYSYMYS: Mikä oli Galitsia-Volhynian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Galitsia-Volhynian kuningaskunta oli keskiajan slaavilainen valtio nykyisen Länsi-Ukrainan alueella, ja se syntyi 1200-luvulla [[Kiovan Rusin]] heikennyttyä. Sen muodostivat Galitsian ja Volynian ruhtinaskunnat, ja [[Volodymyr]] oli yksi sen pääkaupungeista. Valtio hajosi 1300-luvulla, ja sen alueet joutuivat pääosin [[Puolan]] ja [[Liettuan]] hallintaan. Tarkkoja vuosilukuja en uskalla tähän kirjoittaa, kun en ole niistä aivan varma. Hurja määrä historiaa yhdessä kuningaskunnassa.
+KYSYMYS: Kerro lisää: Volodymyr
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+AIEMPI KYSYMYS: Mikä oli Galitsia-Volhynian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Galitsia-Volhynian kuningaskunta oli keskiajan slaavilainen valtio nykyisen Länsi-Ukrainan alueella, ja se syntyi 1200-luvulla [[Kiovan Rusin]] heikennyttyä. Sen muodostivat Galitsian ja Volynian ruhtinaskunnat, ja [[Volodymyr]] oli yksi sen pääkaupungeista. Valtio hajosi 1300-luvulla, ja sen alueet joutuivat pääosin [[Puolan]] ja [[Liettuan]] hallintaan. Tarkkoja vuosilukuja en uskalla tähän kirjoittaa, kun en ole niistä aivan varma. Hurja määrä historiaa yhdessä kuningaskunnassa.
+KYSYMYS: Kerro lisää: Puolan
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ukraina — maalehti / Historia: Hetmani valitsi tsaarin liittolaisekseen] 1654 — Hetmani Bohdan Hmelnytskyi nousi 1648 kapinaan Puolan–Liettuan valtakuntaa vastaan, ja vuoteen 1654 mennessä kasakkahetmanaatti tarvitsi vahvan suojelijan. Tammikuussa 1654 kasakat vannoivat Perejaslavin kaupungissa uskollisuudenvalan Venäjän tsaari Aleksille, ja Moskovasta saapunut lähettiläs Vasili Buturlin vahvisti sopimuksen. Vastineeksi sotilaallisesta avusta hetmanaatti sai laajan itsehallinnon niin sanotuissa maaliskuun artikloissa. Sopimus sytytti Venäjän ja Puolan välisen sodan, ja sen todellisesta luonteesta – liitosta vai alistumisesta – kiistellään historioitsijoiden kesken yhä.
+AIEMPI KYSYMYS: Mikä oli Galitsia-Volhynian kuningaskunta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Galitsia-Volhynian kuningaskunta oli keskiajan slaavilainen valtio nykyisen Länsi-Ukrainan alueella, ja se syntyi 1200-luvulla [[Kiovan Rusin]] heikennyttyä. Sen muodostivat Galitsian ja Volynian ruhtinaskunnat, ja [[Volodymyr]] oli yksi sen pääkaupungeista. Valtio hajosi 1300-luvulla, ja sen alueet joutuivat pääosin [[Puolan]] ja [[Liettuan]] hallintaan. Tarkkoja vuosilukuja en uskalla tähän kirjoittaa, kun en ole niistä aivan varma. Hurja määrä historiaa yhdessä kuningaskunnassa.
+KYSYMYS: Kerro lisää: Liettuan
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+AIEMPI KYSYMYS: Mikä Zymnen luostari on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Zymnen luostari sijaitsee noin viiden kilometrin päässä [[Volodymyrista]] etelään, ja sitä pidetään [[Volynian]] vanhimpana ortodoksiluostarina. Luostari kuuluu itäiseen kristinuskoon, ja se on vuosisatojen ajan ollut alueen hengellinen keskus. Tarkkaa perustamisvuotta en ole varma, joten jätän sen mainitsematta. Pyhiä paikkoja katsoo mielellään ylhäältä, kun siellä on rauhallista.
+KYSYMYS: Kerro lisää: Volodymyrista
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+AIEMPI KYSYMYS: Mikä Zymnen luostari on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Zymnen luostari sijaitsee noin viiden kilometrin päässä [[Volodymyrista]] etelään, ja sitä pidetään [[Volynian]] vanhimpana ortodoksiluostarina. Luostari kuuluu itäiseen kristinuskoon, ja se on vuosisatojen ajan ollut alueen hengellinen keskus. Tarkkaa perustamisvuotta en ole varma, joten jätän sen mainitsematta. Pyhiä paikkoja katsoo mielellään ylhäältä, kun siellä on rauhallista.
+KYSYMYS: Kerro lisää: Volynian
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Volodymyr (historia)
+Tietoruudun teksti: Volodymyr on yksi Ukrainan vanhimmista kaupungeista ja koko Volynian alueen historiallinen keskus: se oli Volynian ruhtinaskunnan pääkaupunki ja myöhemmin yksi Galitsia-Volhynian kuningaskunnan pääkaupungeista. Kaupungin keskiaikainen latinankielinen nimi Lodomeria antoi nimensä 1800-luvun Itävalta-Unkarin Galitsian ja Lodomerian kuningaskunnalle – mutta itse kaupunki ei koskaan kuulunut tähän kuningaskuntaan, vaan jäi rajan väärälle puolelle Venäjän keisarikuntaan. Viisi kilometriä kaupungista etelään sijaitsee Zymne, Volynian vanhin ortodoksiluostari. Isoisän matkan aikaan 1873 Volodymyr on siis vaatimaton Venäjän kuvernementin kaupunki, vaikka sen nimi elää yhä naapurimaakunnan virallisessa nimessä rajan toisella puolella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mitä Puolan jaot olivat?
+AIEMPI VASTAUS (Livia):
+Tuota niin, iso aihe. Puolan jaoissa Venäjä, Preussi ja Habsburgien Itävalta jakoivat Puolan–Liettuan valtion alueita kolmessa vaiheessa vuosina 1772, 1793 ja 1795. Viimeisen jaon jälkeen itsenäistä Puolan valtiota ei enää ollut Euroopan kartalla, ja alueet kuuluivat jaon voittajille aina ensimmäiseen maailmansotaan asti. [[Volodymyrin]] seutu päätyi [[Venäjän]] puolelle ja Galitsia [[Habsburgien]] puolelle. Aika paljon valtioita yhdessä vastauksessa.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä on Ukrainan pisin kokonaan maan sisällä virtaava joki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kyseessä on [[Etelä-Bug]], jonka pituus on lähteiden mukaan 806 kilometriä. Joki saa alkunsa Volynian–Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen [[Mustallemerelle]]. Sen varrella ovat muun muassa Hmelnytskyin, Vinnytsian ja [[Mykolaivin]] kaupungit. Dnepr on pidempi, mutta se virtaa useamman maan kautta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Etelä-Bug
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä on Ukrainan pisin kokonaan maan sisällä virtaava joki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kyseessä on [[Etelä-Bug]], jonka pituus on lähteiden mukaan 806 kilometriä. Joki saa alkunsa Volynian–Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen [[Mustallemerelle]]. Sen varrella ovat muun muassa Hmelnytskyin, Vinnytsian ja [[Mykolaivin]] kaupungit. Dnepr on pidempi, mutta se virtaa useamman maan kautta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Mustallemerelle
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä on Ukrainan pisin kokonaan maan sisällä virtaava joki?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Kyseessä on [[Etelä-Bug]], jonka pituus on lähteiden mukaan 806 kilometriä. Joki saa alkunsa Volynian–Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen [[Mustallemerelle]]. Sen varrella ovat muun muassa Hmelnytskyin, Vinnytsian ja [[Mykolaivin]] kaupungit. Dnepr on pidempi, mutta se virtaa useamman maan kautta. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: Mykolaivin
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Minkä kahden valtakunnan rajana Etelä-Bug toimi 1700-luvulla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Etelä-Bug oli 1700-luvun lopulla rajajoki Venäjän ja Osmanien valtakunnan välillä. Venäjän ja Osmanien välisten sotien jälkeen raja siirtyi vähitellen kauas etelään, ja 1800-luvun puolivälissä joki virtasi jo kokonaan [[Venäjän]] sisällä. Raja kulki siis siinä, missä nykyään on Ukrainan sisäisiä arolaajuuksia kohti [[Mustaamerta]]. Joen varren seutu oli siis aikoinaan melkoista rajamaata.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Minkä kahden valtakunnan rajana Etelä-Bug toimi 1700-luvulla?
+AIEMPI VASTAUS (Livia):
+Katotaas. Etelä-Bug oli 1700-luvun lopulla rajajoki Venäjän ja Osmanien valtakunnan välillä. Venäjän ja Osmanien välisten sotien jälkeen raja siirtyi vähitellen kauas etelään, ja 1800-luvun puolivälissä joki virtasi jo kokonaan [[Venäjän]] sisällä. Raja kulki siis siinä, missä nykyään on Ukrainan sisäisiä arolaajuuksia kohti [[Mustaamerta]]. Joen varren seutu oli siis aikoinaan melkoista rajamaata.
+KYSYMYS: Kerro lisää: Mustaamerta
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä on aro luontotyyppinä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aro on lähes puuton ruohoalue, jossa ilmasto on liian kuiva metsälle mutta riittävän kosteaa ruohoille; kesät ovat kuumia ja talvet kylmiä. Ukrainan eteläosassa aroa on paljon, ja sen maaperä on usein ravinteikasta [[mustamultaa]], joka on tehnyt alueesta tärkeää viljelyseutua. Alue on myös tunnettu [[Etelä-Bugin]] kaltaisista joista, jotka halkovat sen kohti merta. Aron laajuutta ei oikein ymmärrä ennen kuin lentää sen yli.
+KYSYMYS: Kerro lisää: mustamultaa
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä on aro luontotyyppinä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Aro on lähes puuton ruohoalue, jossa ilmasto on liian kuiva metsälle mutta riittävän kosteaa ruohoille; kesät ovat kuumia ja talvet kylmiä. Ukrainan eteläosassa aroa on paljon, ja sen maaperä on usein ravinteikasta [[mustamultaa]], joka on tehnyt alueesta tärkeää viljelyseutua. Alue on myös tunnettu [[Etelä-Bugin]] kaltaisista joista, jotka halkovat sen kohti merta. Aron laajuutta ei oikein ymmärrä ennen kuin lentää sen yli.
+KYSYMYS: Kerro lisää: Etelä-Bugin
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä ero on Etelä-Bugilla ja Länsi-Bugilla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kyseessä ovat kaksi eri jokea: Etelä-Bug virtaa Ukrainassa kaakkoon ja laskee Bugin lahteen Mustallemerelle, kun taas Länsi-Bug kulkee Puolan, Ukrainan ja Valko-Venäjän rajaseuduilla ja päätyy [[Narewin]] kautta [[Veikseliin]]. Joet eivät siis kohtaa, vaikka nimi on sama ja ne alkavat samoilta seuduilta. Sekaannusvaara on todellinen, eikä nimiä pidä sotkea [[Mustaanmereen]] laskevaan toiseen.
+
+Minä tiedän tämän, koska kyyhkyn pitää tietää, mihin jokeen laskeutuu. Pari kertaa on mennyt sekaisin, mutta ei sanota sitä ääneen.
+KYSYMYS: Kerro lisää: Narewin
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä ero on Etelä-Bugilla ja Länsi-Bugilla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kyseessä ovat kaksi eri jokea: Etelä-Bug virtaa Ukrainassa kaakkoon ja laskee Bugin lahteen Mustallemerelle, kun taas Länsi-Bug kulkee Puolan, Ukrainan ja Valko-Venäjän rajaseuduilla ja päätyy [[Narewin]] kautta [[Veikseliin]]. Joet eivät siis kohtaa, vaikka nimi on sama ja ne alkavat samoilta seuduilta. Sekaannusvaara on todellinen, eikä nimiä pidä sotkea [[Mustaanmereen]] laskevaan toiseen.
+
+Minä tiedän tämän, koska kyyhkyn pitää tietää, mihin jokeen laskeutuu. Pari kertaa on mennyt sekaisin, mutta ei sanota sitä ääneen.
+KYSYMYS: Kerro lisää: Veikseliin
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+AIEMPI KYSYMYS: Mikä ero on Etelä-Bugilla ja Länsi-Bugilla?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kyseessä ovat kaksi eri jokea: Etelä-Bug virtaa Ukrainassa kaakkoon ja laskee Bugin lahteen Mustallemerelle, kun taas Länsi-Bug kulkee Puolan, Ukrainan ja Valko-Venäjän rajaseuduilla ja päätyy [[Narewin]] kautta [[Veikseliin]]. Joet eivät siis kohtaa, vaikka nimi on sama ja ne alkavat samoilta seuduilta. Sekaannusvaara on todellinen, eikä nimiä pidä sotkea [[Mustaanmereen]] laskevaan toiseen.
+
+Minä tiedän tämän, koska kyyhkyn pitää tietää, mihin jokeen laskeutuu. Pari kertaa on mennyt sekaisin, mutta ei sanota sitä ääneen.
+KYSYMYS: Kerro lisää: Mustaanmereen
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Etelä-Bug (luonto · joki)
+Tietoruudun teksti: Etelä-Bug on Ukrainan pisin joki, joka virtaa kokonaan maan alueella lukuun ottamatta Dnepriä – sen pituus on 806 kilometriä ja valuma-alue lähes 64 000 neliökilometriä. Joki saa alkunsa Volynian-Podolian ylängöltä lähellä Puolan rajaa ja virtaa kaakkoon eteläisten arojen halki Bugin lahteen Mustallemerelle. Sen varrella sijaitsevat muun muassa Hmelnytskyin, Vinnytsian ja Mykolaivin kaupungit. Vielä 1700-luvun lopulla joki oli rajajoki Venäjän ja Osmanien valtakunnan välillä, mutta isoisän matkan aikaan 1873 se virtaa jo kokonaan Venäjän keisarikunnan sisällä, kun raja on siirtynyt kauas etelään.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+- [Sumatra — kaupunkilehti / Luonto: Metsä, joka kutistuu] Sumatra on menettänyt lähes puolet trooppisesta sademetsästään vuoden 1980 jälkeen, kun maata on raivattu viljelmiksi. Metsässä elää 201 nisäkäslajia, 580 lintulajia ja noin 300 makean veden kalalajia; yhdeksän nisäkäslajia esiintyy vain Sumatralla ja neljätoista lisää lähisaarilla Mentawaiden ryhmässä. Saarella on yli kymmenen kansallispuistoa, ja kolme niistä — Gunung Leuser, Kerinci Seblat ja Bukit Barisan Selatan — otettiin vuonna 2004 maailmanperintöön 25 000 neliökilometrin kokonaisuutena. Kohde on ollut vuodesta 2011 uhanalaisten listalla.
+AIEMPI KYSYMYS: Mitä valuma-alue tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Niin, niin. Valuma-alue tarkoittaa aluetta, jolta sade- ja sulamisvedet virtaavat tiettyyn jokeen tai järveen. Sitä rajaavat maaston korkeat kohdat eli [[vedenjakajat]], ja kaikki niiden sisäpuolelle tuleva vesi päätyy samaan vesistöön. [[Etelä-Bugin]] valuma-alue on lähes 64 000 neliökilometriä, joten se on todella laaja. Pienessäkin joessa on yllättävän monta puroa takana.
+KYSYMYS: Kerro lisää: vedenjakajat
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Askanija-Nova (eläimet)
+Tietoruudun teksti: Askanija-Nova on luonnonsuojelualue Etelä-Ukrainan kuivalla Taurian arolla lähellä Oleshkyn hiekka-aavikkoa, ja se on Unescon ihminen ja biosfääri -ohjelman jäsen. Alueella on sekä eläintarha että yli 33 000 hehtaaria koskematonta aroa laiduntavien sorkkaeläinten – muun muassa harvinaisten Przewalskinhevosten – elinympäristönä, sekä satoja kasvilajeja kasvava kasvitieteellinen puutarha. Isoisän matkan aikaan 1873 mitään tästä ei vielä ole olemassa: Askanija-Novan saksalaissiirtokunta järjestäytyi kylänä vasta 1890, ja koko luonnonsuojelualueen perusti vuonna 1898 Friedrich Falz-Fein, joka vuonna 1873 on vasta kymmenvuotias poika.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Shanghai — kaupunkilehti / Arki: Aamiainen kääritään riisiin] Shanghain aamiainen ostetaan kadunkulman luukulta. Cifantuan tehdään käsissä: tahmea riisi taputellaan levyksi, keskelle pannaan pätkä youtiaoa eli rapeaa uppopaistettua taikinatankoa ja suolakasvista tai sokeria, ja paketti kierretään tiukaksi pötköksi. Kylkeen otetaan kulhollinen soijamaitoa, makeana tai suolaisena. Youtiaoon liittyy tarina: tangot paistetaan pareittain, koska parin sanotaan esittävän 1100-luvun virkamiestä ja hänen vaimoaan, joiden juoni koitui kansallissankarina pidetyn kenraali Yue Fein tuhoksi. Kansa on siitä asti paistanut petturit öljyssä joka aamu uudelleen.
+AIEMPI KYSYMYS: Minä vuonna Askanija-Novan luonnonsuojelualue perustettiin?
+AIEMPI VASTAUS (Livia):
+No jopas. Askanija-Novan luonnonsuojelualue perustettiin vuonna 1898, ja sen perustaja oli [[Friedrich Falz-Fein]]. Alue sijaitsee Etelä-Ukrainan kuivalla [[Taurian arolla]], ja siellä on eläintarha, koskematonta aroa ja kasvitieteellinen puutarha. Nykyään se kuuluu myös [[Unescon]] biosfäärialueiden verkostoon.
+
+Ukrainan pulla on pampuški, ja minusta aron laidunmaiden äärellä sellainen kuuluisi aina evääksi. Kyllä, tiedän, tämä ei kuulunut kysymykseen.
+KYSYMYS: Kerro lisää: Friedrich Falz-Fein
