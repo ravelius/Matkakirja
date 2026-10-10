@@ -1260,6 +1260,11 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Hiljainen esilämmitys ennen uutta klippiä Bluetooth-reitillä (s).</summary>
         public const float Esilammitys = 0.5f;
+        /// <summary>
+        /// Viimeksi alkaneen klipin viive Play-ruudusta kuuluvaan alkuun (Bluetooth-esilämmitys, muuten 0). Saapumisesityksen musiikki
+        /// (Saapumistraileri → Aanisoitin.SaapumisPuheAlkoi) odottaa saman ajan, jotta se alkaa samaan aikaan kuin puhe.
+        /// </summary>
+        public float AlkuViive { get; private set; }
 
         /// <summary>Vaihtaa soivan klipin (vanha tuhotaan), käynnistää sen ja häivyttää sisään; Puhuu-tapahtuma uudelleen.</summary>
         void AloitaKlippi(AudioClip klippi, bool synteesi, bool jatko = false)
@@ -1285,6 +1290,7 @@ namespace Matkakirja.Natiivi
             // äänetön tila mykistää sen — ennen tätä luokka tarkistettiin vain sovelluksen ensimmäisestä puheesta.
             if (AaniIstunto.Varmista()) Debug.Log($"MATKAKIRJA puhe: istunto oli Ambient ennen soittoa, Playback palautettu ({klippi?.name})");
             bool esilammitys = !jatko && AaniIstunto.Bluetooth();
+            if (!jatko) AlkuViive = esilammitys ? Esilammitys : 0f;
             if (esilammitys) { lahde.PlayDelayed(Esilammitys); Debug.Log($"MATKAKIRJA puhe: Bluetooth-esilämmitys {Esilammitys:0.0} s {klippi?.name}"); }
             else lahde.Play();
             // LUENTA ALUSTA (omistaja 29.9.2026, laitteella: uusi luenta alkoi ensimmäisen virkkeen keskeltä edellisen

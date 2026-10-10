@@ -118,6 +118,12 @@ namespace Matkakirja.Natiivi
                 });
             };
             o.TilaMuuttui += TarkistaAarre;
+            // Omistaja KIIRE TF 180 (juna 181, "lisäkuvat putkeen"): trailerin loputtua saapuminen käsitellään heti eikä 300 ms:n
+            // tarkkailun vuorolla, jotta esittelyn C1 tulee trailerin kolmen kuvan perään ilman väliä.
+            o.TilaVaihtui += (vanha, uusi) =>
+            {
+                if (vanha == SilmukanTila.Traileri && uusi == SilmukanTila.Kartta) UiKerros.PaaSaikeessa(Tarkkaile);
+            };
             // Aloituslento alkaa: kortti ja luentakuvat pois lennon tieltä (web renderFact aloituslentoKesken).
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { kortti.Piilota(); kortti.Kuvat.Tyhjenna(false); });
             Ajastin.Execute(Tarkkaile).Every(300);
@@ -448,9 +454,10 @@ namespace Matkakirja.Natiivi
         int esittelyNro;
 
         /// <summary>
-        /// Nykyintron kuvat C1–C5 (KaupunkiIntro.Kuvasarja) saapumisesityksen pakkaan musiikin tahdissa: nopea kaupunkijakso
-        /// (Aanisoitin.KaupunkiIntro) alkaa heti, kuvat tulevat otostensa alussa kappaleen kohdasta (KaupunkiIntroAlkoi), luennan
-        /// viimeinen kuva näkyy C1:een asti. Ohita näkyy koko ajan (sama nappi kuin luennassa, PeliOhjain.OhitaLuento →
+        /// Nykyintron kuvat C1–C5 saapumisesityksen pakkaan musiikin tahdissa (KaupunkiIntro.SaapumisKuvasarja, omistaja KIIRE TF 180,
+        /// juna 181): nopea kaupunkijakso alkoi jo isoisän saapumispuheen kanssa (Saapumistraileri → AaniTila.JaksonNopeaAlkaa), joten
+        /// kello on kappaleen kohta (KaupunkiIntroAlkoi, KaupunkiIntro.KelloKappaleesta); C1 tulee heti trailerin kolmen kuvan perään ja
+        /// C2–C5 tahdin iskuilla ilman aukkoa. Ohita näkyy koko ajan (sama nappi kuin luennassa, PeliOhjain.OhitaLuento →
         /// VaiennaPaikanPuhe → LopetaIntro). Ilman musiikkia (MusiikkiOdotusS) kuvat tulevat samoin ajoin hiljaa. false = ei alkanut.
         /// </summary>
         bool NykyIntro(string k)
@@ -458,16 +465,19 @@ namespace Matkakirja.Natiivi
             var aani = Aanisoitin.Instanssi;
             if (aani == null) return false;
             LopetaIntro(false);
-            var sarja = KaupunkiIntro.Kuvasarja();
+            var sarja = KaupunkiIntro.SaapumisKuvasarja();
             bool soi = aani.KaupunkiIntro(k, KaupunkiIntro.MusiikinKatkoS, KaupunkiIntro.MusiikinHaivytysS, KaupunkiIntro.HidasAlkaaS);
             float alku = UnityEngine.Time.unscaledTime;
             float? musiikki = null;
-            // Kappale voi jo soida saapumisesta asti (kaupungin nopea jakso; iPad-simu 17.4x: kohta 31 s → kaikki kuvat kerralla):
-            // silloin kuvat kulkevat intron omalla kellolla luennan lopusta, muuten kappaleen kohdasta (tahti).
+            // Kello = kappaleen kohta, kun nopea alkoi trailerin puheen kanssa (AaniTila.EsitysKaupunki) tai juuri nyt. Muuten kappale soi
+            // jo pitkään (iPad-simu 17.4x: kohta 31 s → kaikki kuvat kerralla): kuvat kulkevat esittelyn omalla kellolla.
             Action<string, float> kuuntelija = (kk, kohta) =>
             {
                 if (!KaupunkiIntro.OnIntro(kk)) return;
-                musiikki = kohta < MusiikkiAlussaS ? UnityEngine.Time.unscaledTime - kohta : alku;
+                bool tahdistettu = Aanisoitin.Instanssi?.Tila?.EsitysKaupunki == kk;
+                bool kappaleesta = KaupunkiIntro.KelloKappaleesta(kohta, tahdistettu);
+                musiikki = kappaleesta ? UnityEngine.Time.unscaledTime - kohta : alku;
+                UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {kk} esittelyn kello {(kappaleesta ? "kappaleesta" : "esittelyn alusta")} (kohta {kohta:0.00} s, puheen kanssa {tahdistettu}, kello {UnityEngine.Time.unscaledTime:0.000})");
             };
             if (soi) Aanisoitin.KaupunkiIntroAlkoi += kuuntelija;
             introKaupunki = k;
@@ -493,7 +503,7 @@ namespace Matkakirja.Natiivi
                         Osoite = KaupunkiIntro.KuvaUrl(nro), Lyhyt = Kieli.T("ui.nosto.havainnekuva"),
                         Selite = Kieli.T("ui.nosto.havainnekuva"), Lahde = Kieli.T("ui.opas.lahde.havainnekuva"),
                     });
-                    UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro kuva c{nro} {t.Value:0.0} s");
+                    UnityEngine.Debug.Log($"MATKAKIRJA ui saapuminen: {k} nykyintro kuva c{nro} {t.Value:0.0} s (kello {nyt:0.000})");
                 }
                 if (t.Value >= KaupunkiIntro.KuvasarjaLoppuS)
                 {
@@ -507,8 +517,6 @@ namespace Matkakirja.Natiivi
         }
 
         Action introLopetus;
-        /// <summary>Kappaleen kohta, jota pienempi tarkoittaa, että intro käynnisti kappaleen (muuten se soi jo).</summary>
-        const float MusiikkiAlussaS = 2f;
 
         /// <summary>Intron ajastin ja musiikkikuuntelija pois; vaienna = Ohita tai lähtö (nopea jakso pois kuten oppaan ohituksessa).</summary>
         void LopetaIntro(bool vaienna)

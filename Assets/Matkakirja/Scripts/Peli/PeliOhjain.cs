@@ -1691,12 +1691,15 @@ namespace Matkakirja.Natiivi
                     {
                         if (valmis) return;
                         valmis = true;
+                        Aanisoitin.SaapumisMusiikkiVapaa(kaupunki); // traileri ilman puhetta / ei näytetty: musiikki ei jää odottamaan
                         TraileriValmis(kaupunki);
                     });
                 }
-                catch (Exception e) { Debug.LogException(e); TraileriValmis(kaupunki); }
+                catch (Exception e) { Debug.LogException(e); Aanisoitin.SaapumisMusiikkiVapaa(kaupunki); TraileriValmis(kaupunki); }
                 return;
             }
+            // Ei traileria (jatko hiljaa, jo nähty): lennolla odottamaan jäänyt nopea alkaa nyt tavallisesti.
+            if (kaupunki != null) Aanisoitin.SaapumisMusiikkiVapaa(kaupunki);
             SaavuLehteen(kaupunki);
             // Luento on jonossa (0,6 s viive): vaiennus samaa reittiä kuin Ohita-nappi (luentakuvat matkakirjakorttiin,
             // Pulun kommentti ei ala). Pelaaja voi aloittaa luennan itse kaiuttimesta.

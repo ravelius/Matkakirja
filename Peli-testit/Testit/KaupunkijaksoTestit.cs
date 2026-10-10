@@ -210,5 +210,93 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(Soi(w, "musa-kaupunki-pariisi") && !Soi(w, "musa-kaupunki-pariisi-nopea"), "web-tila (KerranLapi false): kaupunkiraita: " + Pohja(w));
             Oleta.Sama(null, w.Jakso);
         }
+
+        // --- SAAPUMISESITYKSEN MUSIIKKI (omistaja KIIRE TF 180, juna 181): nopea alkaa isoisän saapumispuheen kanssa ---------------
+
+        static AaniTila Esitys()
+        {
+            var s = Uusi();
+            s.NopeaOdottaaPuhetta = k => k == "pariisi";
+            return s;
+        }
+
+        [Testi] static void EsitysNopeaOdottaaPuhettaValmiiksiLadattuna()
+        {
+            var s = Esitys();
+            s.Paikka("lontoo", "kaupunki");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-lontoo") && !s.Toive(Kanava.Pohja).Tauko, "Lontoo kuten ennen");
+            s.Paikka("pariisi", "kaupunki"); // lento: kohdekaupunki jo nousussa
+            var w = s.Toive(Kanava.Pohja);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea"), "nopea latautuu valmiiksi: " + Pohja(s));
+            Oleta.Tosi(w.Uusi && w.Tauko, "tauolla: ei soi ennen puhetta");
+            Oleta.Sama("pariisi", s.OdottaaPuhetta);
+            Oleta.Sama(null, s.EsitysKaupunki);
+            s.Puhe(true); // puheväistö (Puhe.Puhuu) tulee ennen trailerin kuuntelijaa
+            w = s.Toive(Kanava.Pohja);
+            Oleta.Tosi(w.Tauko && w.KestoMs == null, "puheväistö ei rampata odottavaa (Aanisoitin ottaisi sen nousuksi)");
+            s.JaksonNopeaAlkaa("pariisi");
+            w = s.Toive(Kanava.Pohja);
+            Oleta.Tosi(!w.Tauko && !w.Uusi, "sama esiladattu soitin soimaan");
+            Oleta.Sama(AaniVakiot.EsitysNousuMs, w.KestoMs, "nousu");
+            Oleta.Tosi(AaniVakiot.EsitysNousuMs <= 150, "nousu ≤ 0,15 s");
+            Oleta.Sama("pariisi", s.EsitysKaupunki);
+            Oleta.Sama(null, s.OdottaaPuhetta);
+            double alla = w.Tavoite;
+            s.Puhe(false);
+            double tays = s.Toive(Kanava.Pohja).Tavoite;
+            Oleta.Tosi(System.Math.Abs(alla / tays - AaniVakiot.EsitysVaistoPuhe) < 1e-9, $"puheen alla {alla / tays:0.00} × täysi (ei 0,25)");
+            s.JaksonNopeaAlkaa("pariisi");
+            Oleta.Sama(null, s.Toive(Kanava.Pohja).KestoMs, "toinen kutsu ei tee mitään");
+            // Katko (esittelyn kello 31 s) päättää esityksen tilan: hidas tavallisella väistöllä.
+            s.JaksonIntroKatko(2000);
+            Oleta.Sama(null, s.EsitysKaupunki);
+        }
+
+        [Testi] static void EsitysPuheEnnenPaikkaa()
+        {
+            // Maitse saavuttaessa paikka lähtee ruudun lopussa; jos puhe ehtisi ensin, nopea alkaa heti paikan vaihtuessa.
+            var s = Esitys();
+            s.Paikka("lontoo", "kaupunki");
+            s.JaksonNopeaAlkaa("pariisi");
+            s.Paikka("pariisi", "kaupunki");
+            var w = s.Toive(Kanava.Pohja);
+            Oleta.Tosi(Soi(s, "musa-kaupunki-pariisi-nopea") && !w.Tauko, "soi heti: " + Pohja(s));
+            Oleta.Sama(AaniVakiot.EsitysNousuMs, w.KestoMs);
+            Oleta.Sama("pariisi", s.EsitysKaupunki);
+            Oleta.Sama(null, s.OdottaaPuhetta);
+        }
+
+        [Testi] static void EsitysOdotusPoisTavallisenaAlkuna()
+        {
+            var s = Esitys();
+            s.Paikka("pariisi", "kaupunki");
+            s.JaksonOdotusPois("lontoo");
+            Oleta.Tosi(s.Toive(Kanava.Pohja).Tauko, "toisen kaupungin vapautus ei koske");
+            s.JaksonOdotusPois("pariisi"); // traileri ohitettiin ennen puhetta
+            var w = s.Toive(Kanava.Pohja);
+            Oleta.Tosi(!w.Tauko && !w.Uusi, "esiladattu soimaan");
+            Oleta.Sama(AaniVakiot.PohjaNousuMs, w.KestoMs, "tavallinen nousu");
+            Oleta.Sama(null, s.EsitysKaupunki, "ei esityksen väistöä");
+        }
+
+        [Testi] static void EsitysOdotusEiJaaPaalle()
+        {
+            var s = Esitys();
+            s.Paikka("pariisi", "kaupunki");
+            s.Paikka("lontoo", "kaupunki");
+            Oleta.Sama(null, s.OdottaaPuhetta, "paikan vaihto purkaa odotuksen");
+            Oleta.Tosi(Soi(s, "musa-kaupunki-lontoo") && !s.Toive(Kanava.Pohja).Tauko, "Lontoo soi: " + Pohja(s));
+            s.Paikka("pariisi", "kaupunki");
+            s.UusiMatka();
+            Oleta.Sama(null, s.OdottaaPuhetta, "uusi matka purkaa odotuksen");
+            // Ehto false (traileri jo nähty, jatko hiljaa): nopea kuten ennen.
+            var e = Uusi();
+            e.NopeaOdottaaPuhetta = k => false;
+            e.Paikka("pariisi", "kaupunki");
+            Oleta.Tosi(!e.Toive(Kanava.Pohja).Tauko && e.Toive(Kanava.Pohja).KestoMs == AaniVakiot.PohjaNousuMs, "ilman odotusta tavallinen alku");
+            e.JaksonNopeaAlkaa("pariisi");
+            Oleta.Sama(null, e.Toive(Kanava.Pohja).KestoMs, "jo soivaan ei kosketa");
+            Oleta.Sama(null, e.EsitysKaupunki);
+        }
     }
 }

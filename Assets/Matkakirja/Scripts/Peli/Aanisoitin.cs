@@ -677,10 +677,57 @@ namespace Matkakirja.Natiivi
             l.Tauotettu = false;
             l.KaynnistysAika = Time.unscaledTime;
             l.AlkuNayte = a.timeSamples;
+            if (esitysLokiUrl != null && l.Kanava == Kanava.Pohja && l.Url == esitysLokiUrl)
+            {
+                esitysLokiUrl = null;
+                Debug.Log($"MATKAKIRJA ui saapuminen: musiikki alkaa {Time.unscaledTime:0.000} (dsp {AudioSettings.dspTime:0.000}, nousu {l.NousuMs} ms)");
+            }
         }
 
         int jaksoTaukoNahty;
         float jaksoTaukoLoppuu;
+
+        // --- SAAPUMISESITYKSEN MUSIIKKI (omistaja KIIRE TF 180, juna 181): nopea isoisän saapumispuheen kanssa ----------------------
+        /// <summary>Nopean osoite, jonka alku kirjataan ("MATKAKIRJA ui saapuminen: musiikki alkaa"), kun lähde käynnistyy.</summary>
+        string esitysLokiUrl;
+        string esitysViiveKaupunki;
+        float esitysViiveAika;
+
+        /// <summary>
+        /// Saapumistraileri: isoisän saapumispuhe alkoi soida (Puhe.Puhuu, sama ruutu kuin puheen Play) tai traileri alkoi ilman
+        /// puhetta. Odottava nopea (AaniTila.JaksonNopeaAlkaa, esiladattu tauolla) käynnistyy tässä ruudussa; viiveS = puheen
+        /// Bluetooth-esilämmitys (Puhe.AlkuViive), jolloin nopea odottaa saman ajan.
+        /// </summary>
+        public static void SaapumisPuheAlkoi(string kaupunki, float viiveS = 0f)
+        {
+            var s = Instanssi;
+            if (s == null || s.Tila == null || kaupunki == null) return;
+            if (viiveS > 0f) { s.esitysViiveKaupunki = kaupunki; s.esitysViiveAika = Time.unscaledTime + viiveS; return; }
+            s.AloitaEsitysMusiikki(kaupunki);
+        }
+
+        /// <summary>Traileri päättyi tai ohitettiin ennen puhetta (tai sitä ei näytetty): odottava nopea alkaa tavallisesti.</summary>
+        public static void SaapumisMusiikkiVapaa(string kaupunki)
+        {
+            var s = Instanssi;
+            if (s == null || s.Tila == null || s.Tila.OdottaaPuhetta == null) return;
+            if (s.esitysViiveKaupunki != null) { s.AloitaEsitysMusiikki(s.esitysViiveKaupunki); return; } // puhe jo alkamassa
+            s.esitysLokiUrl = AaniOsoite.Url(s.Tila.JaksonNopea(s.Tila.OdottaaPuhetta));
+            Debug.Log($"MATKAKIRJA aani: saapumisesityksen nopea {s.Tila.OdottaaPuhetta} ilman puhetta (odotus pois)");
+            s.Tila.JaksonOdotusPois(kaupunki);
+        }
+
+        void AloitaEsitysMusiikki(string kaupunki)
+        {
+            esitysViiveKaupunki = null;
+            var odotti = Tila.OdottaaPuhetta;
+            var polku = Tila.JaksonNopea(kaupunki);
+            if (polku != null) esitysLokiUrl = AaniOsoite.Url(polku);
+            Debug.Log($"MATKAKIRJA aani: saapumisesityksen nopea {kaupunki} puheen kanssa ({(odotti == kaupunki ? "esiladattu odotti" : odotti == null ? "ei odotusta" : "odotti " + odotti)})");
+            Tila.JaksonNopeaAlkaa(kaupunki);
+            // Nopea soi jo ilman odotusta (ehto oli false): ei alkukirjausta. Jakso ei vielä alkanut (maitse): kirjaus, kun se alkaa.
+            if (Tila.Jakso == kaupunki + ":nopea" && Tila.EsitysKaupunki != kaupunki) esitysLokiUrl = null;
+        }
 
         // --- KAUPUNKI-INTRO (Pariisin nykyintro, kohta 4): musiikin ajoitus intron kohtaukseen 1 ---------------------------
         /// <summary>
@@ -744,6 +791,7 @@ namespace Matkakirja.Natiivi
             if (Tila.JaksonTaukoNro != jaksoTaukoNahty) { jaksoTaukoNahty = Tila.JaksonTaukoNro; jaksoTaukoLoppuu = nyt + Tila.JaksonTaukoMs / 1000f; }
             if (jaksoTaukoLoppuu > 0 && nyt >= jaksoTaukoLoppuu) { jaksoTaukoLoppuu = 0; int nro = jaksoTaukoNahty; Tee(() => Tila.JaksonTaukoOhi(nro)); }
             PaivitaIntro(nyt, Tee);
+            if (esitysViiveKaupunki != null && nyt >= esitysViiveAika) { var k = esitysViiveKaupunki; Tee(() => AloitaEsitysMusiikki(k)); }
 
             // Takaperin ilman kopiota (ei roskaa joka ruudussa): Vapauta poistaa vain käsiteltävän.
             for (int i = elavat.Count - 1; i >= 0; i--)

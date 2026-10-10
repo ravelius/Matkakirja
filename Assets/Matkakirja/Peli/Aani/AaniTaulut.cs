@@ -31,6 +31,10 @@ namespace Matkakirja.Peli
         // --- pohjaraita (ambience-stream.js POHJA_*) ---
         public static int PohjaNousuMs => Asetus.Kokonais("aanet.PohjaNousuMs", 4000);
         public static int PohjaVaihtoMs => Asetus.Kokonais("aanet.PohjaVaihtoMs", 1500);
+        /// <summary>Saapumisesityksen nopea kappale alkaa isoisän saapumispuheen kanssa (omistaja KIIRE TF 180): nousu ≤ 0,15 s.</summary>
+        public static int EsitysNousuMs => Asetus.Kokonais("aanet.EsitysNousuMs", 150);
+        /// <summary>Saapumisesityksen nopean väistö puheen alla (tavallinen puheväistö 0,25 tuntui alkavan vasta puheen jälkeen).</summary>
+        public static double EsitysVaistoPuhe => Asetus.Luku("aanet.EsitysVaistoPuhe", 0.6);
 
         // --- visamusiikki (MUSIIKKI_VOIMA = perustaso × 1,3) ---
         public static double VisanKerroin => Asetus.Luku("aanet.VisanKerroin", 1.3);
