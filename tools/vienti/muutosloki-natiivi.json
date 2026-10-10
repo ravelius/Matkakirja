@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (180)",
+   "paiva": "2026-10-10",
+   "teksti": "Pariisi alkaa uudella esittelyllä nykykuvin ja musiikilla, kierroksella on kippikompassi ja maan kortissa pääkaupungin kuvia. Olavinlinnassa liikutaan kelluvalla tapilla ja vene on kuiva, ja taidemuseon lattia heijastaa. Latausruudulla soi musiikki, ja Pulu tuntee 40 maata."
+  },
+  {
    "versio": "1.1 (179)",
    "paiva": "2026-10-10",
    "teksti": "Pariisi alkaa esittelyllä nykykuvin ja omalla musiikilla, ja uusi taidemuseo näyttää Alankomaiden mestarit. Maan kortissa on pääkaupunki, latauspallo liikkuu tuulessa ja kaupungeissa on ilmaperspektiivi. Olavinlinna on viimeistelty, ja Pulu tuntee Norjan, Slovakian ja Slovenian."
