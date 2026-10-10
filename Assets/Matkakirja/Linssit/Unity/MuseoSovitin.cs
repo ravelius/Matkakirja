@@ -268,6 +268,12 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("museo: kuvajuuri " + (KuvaJuuri ?? "pois (paikkakuvat)") + (Auki ? " (voimaan seuraavassa avauksessa)" : ""));
                 return;
             }
+            if (k == "heijastus")
+            {
+                if (osat.Length > 2 && (osat[2] == "0" || osat[2] == "1")) MuseoNayttamo.HeijastusPaalla = osat[2] == "1";
+                o.Kirjaa("museo: " + (nayttamo != null ? nayttamo.HeijastusTila : $"heijastus {(MuseoNayttamo.HeijastusPaalla ? "päällä" : "pois")}"));
+                return;
+            }
             if (k == "sali")
             {
                 string a = osat.Length > 2 ? osat[2] : "";

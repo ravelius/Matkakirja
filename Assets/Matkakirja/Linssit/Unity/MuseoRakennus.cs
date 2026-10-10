@@ -328,6 +328,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>glTF-materiaali (pinnan nimi LR:n sali_blender.py:stä) MuseoValaistu-materiaaliksi: baseColorFactor lineaarisena,
         /// kiilto ja karheus nimen mukaan (glTF:n roughnessFactor ei ole GlbOsassa), lasi hehkuu kuten väliaikaishallin kattoikkuna.</summary>
+        const float LattiaHeijastusParketti = 0.3f, LattiaHeijastusMarmori = 0.5f;
+
         Material SaliMateriaali(GlbOsa o, Texture atlas)
         {
             var c = o.Vari != null && o.Vari.Length >= 3 ? new Color(o.Vari[0], o.Vari[1], o.Vari[2]) : Color.white;
@@ -343,6 +345,9 @@ namespace Matkakirja.Natiivi
             else if (p == "penkki_nahka") karheus = 0.5f;
             else if (p.StartsWith("damasti", StringComparison.Ordinal)) karheus = 0.6f;
             var m = Materiaali("Sali " + p, c, kiilto, karheus, metalli);
+            // Lattiaheijastus (juna 180): parketti hillitysti, kiillotettu marmori selvemmin (MuseoNayttamo.PaivitaHeijastus).
+            if (p.StartsWith("parketti", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusParketti);
+            else if (p.StartsWith("kivi_marmori", StringComparison.Ordinal)) m.SetFloat("_Heijastus", LattiaHeijastusMarmori);
             m.SetTexture("_Atlas", atlas);
             m.SetFloat("_AtlasLx", AtlasLx);
             if (p.StartsWith("lasi", StringComparison.Ordinal))

@@ -23,6 +23,18 @@ namespace Matkakirja.Natiivi
         public static readonly Color Tausta = new Color(0.06f, 0.055f, 0.05f, 1f);
         /// <summary>Kuva-arvon lisävalotus (EV) salin EV100:n päälle; QA-kytkin "museo valotus x".</summary>
         public static float ValotusKorjausEv = 0f;
+        /// <summary>
+        /// LATTIAHEIJASTUS (omistaja 10.10. 17.2x, PT:n kuittaama suunnitelma, juna 180): peilikamera piirtää salin lattian tason
+        /// (y = 0, kaikki osat) yli peilattuna puoliresoluutioiseen HDR-kuvaan (mipit karheuden sumeuteen), ja MuseoValaistu
+        /// sekoittaa sen lattiaan Fresnelin ja materiaalin _Heijastus-arvon mukaan. QA: "museo heijastus 0|1|tila".
+        /// </summary>
+        public static bool HeijastusPaalla = true;
+        const float HeijastusSkaala = 0.5f, LattiaY = 0f, LahitasoVara = 0.02f;
+        static readonly int IdHKuva = Shader.PropertyToID("_MuseoHeijastusKuva"), IdHMaara = Shader.PropertyToID("_MuseoHeijastusMaara"),
+            IdHMipit = Shader.PropertyToID("_MuseoHeijastusMipit");
+        Camera heijastusKamera;
+        RenderTexture heijastusKuva;
+        public string HeijastusTila => $"heijastus {(HeijastusPaalla ? "päällä" : "pois")}, kuva {(heijastusKuva != null ? $"{heijastusKuva.width}×{heijastusKuva.height}" : "-")}";
 
         static readonly int IdMaara = Shader.PropertyToID("_MuseoSpotMaara"), IdP = Shader.PropertyToID("_MuseoSpotP"),
             IdD = Shader.PropertyToID("_MuseoSpotD"), IdV = Shader.PropertyToID("_MuseoSpotV"),
@@ -73,6 +85,26 @@ namespace Matkakirja.Natiivi
             data.requiresDepthTexture = false;
             data.volumeLayerMask = 1 << Kerros;
             Laatutaso.KaytaAjallista(Kamera, Laatutaso.Ajallinen);
+
+            var hg = new GameObject("MuseoHeijastusKamera");
+            hg.transform.SetParent(transform, false);
+            heijastusKamera = hg.AddComponent<Camera>();
+            heijastusKamera.clearFlags = CameraClearFlags.SolidColor;
+            heijastusKamera.backgroundColor = Tausta;
+            heijastusKamera.cullingMask = 1 << Kerros;
+            heijastusKamera.nearClipPlane = Kamera.nearClipPlane;
+            heijastusKamera.farClipPlane = Kamera.farClipPlane;
+            heijastusKamera.fieldOfView = Kamera.fieldOfView;
+            heijastusKamera.depth = Kamera.depth - 0.5f;   // ennen salin kameraa
+            heijastusKamera.allowHDR = true;
+            heijastusKamera.enabled = false;
+            var hd = heijastusKamera.GetUniversalAdditionalCameraData();
+            hd.renderType = CameraRenderType.Base;
+            hd.renderPostProcessing = false;
+            hd.renderShadows = false;
+            hd.requiresDepthTexture = false;
+            hd.volumeLayerMask = 0;
+            RenderPipelineManager.beginCameraRendering += KameraAlkaa;
 
             var vg = new GameObject("MuseoVolume") { layer = Kerros };
             vg.transform.SetParent(transform, false);
@@ -125,6 +157,7 @@ namespace Matkakirja.Natiivi
             Kamera.transform.position = kp;
             var katse = U(a.Katse) - kp;
             if (katse.sqrMagnitude > 1e-6f) Kamera.transform.rotation = Quaternion.LookRotation(katse, Vector3.up);
+            PaivitaHeijastus();
 
             keilat.Sort((x, y) => (x.P - kp).sqrMagnitude.CompareTo((y.P - kp).sqrMagnitude));
             int n = Mathf.Min(Spotteja, keilat.Count);
@@ -164,6 +197,12 @@ namespace Matkakirja.Natiivi
             Kuva = new RenderTexture(w, h, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) { name = "MuseoKuva", antiAliasing = 1, useMipMap = false };
             Kuva.Create();
             Kamera.targetTexture = Kuva;
+            int hw = Mathf.Max(32, Mathf.RoundToInt(w * HeijastusSkaala)), hh = Mathf.Max(32, Mathf.RoundToInt(h * HeijastusSkaala));
+            heijastusKuva = new RenderTexture(hw, hh, 24, RenderTextureFormat.DefaultHDR) { name = "MuseoHeijastus", useMipMap = true, autoGenerateMips = true };
+            heijastusKuva.Create();
+            heijastusKamera.targetTexture = heijastusKuva;
+            Shader.SetGlobalTexture(IdHKuva, heijastusKuva);
+            Shader.SetGlobalFloat(IdHMipit, Mathf.Floor(Mathf.Log(Mathf.Min(hw, hh), 2f)));
             NykyinenKuva = Kuva;
             KuvaVaihtui?.Invoke(Kuva);
         }
@@ -173,10 +212,42 @@ namespace Matkakirja.Natiivi
             if (Kuva == null) return;
             if (Kamera != null) Kamera.targetTexture = null;
             Kuva.Release(); Destroy(Kuva); Kuva = null;
+            if (heijastusKamera != null) heijastusKamera.targetTexture = null;
+            if (heijastusKuva != null) { heijastusKuva.Release(); Destroy(heijastusKuva); heijastusKuva = null; }
         }
+
+        /// <summary>Peilikamera lattian tason yli: salin kameran näkymä peilimatriisilla, vino lähitaso lattiaan (alla oleva ei piirry).</summary>
+        void PaivitaHeijastus()
+        {
+            bool paalla = HeijastusPaalla && heijastusKuva != null;
+            if (heijastusKamera.enabled != paalla) heijastusKamera.enabled = paalla;
+            if (!paalla) return;
+            var kp = Kamera.transform.position;
+            heijastusKamera.transform.SetPositionAndRotation(new Vector3(kp.x, 2f * LattiaY - kp.y, kp.z), Kamera.transform.rotation);
+            var peili = Matrix4x4.identity;
+            peili.m11 = -1f; peili.m13 = 2f * LattiaY;
+            heijastusKamera.worldToCameraMatrix = Kamera.worldToCameraMatrix * peili;
+            heijastusKamera.projectionMatrix = Kamera.projectionMatrix;
+            // Lattian taso kameran avaruudessa (normaali ylös), ja vino lähitaso leikkaa kaiken lattian alle jäävän.
+            var m = heijastusKamera.worldToCameraMatrix;
+            var piste = m.MultiplyPoint(new Vector3(0f, LattiaY + LahitasoVara, 0f));
+            var normaali = m.MultiplyVector(Vector3.up).normalized;
+            heijastusKamera.projectionMatrix = heijastusKamera.CalculateObliqueMatrix(new Vector4(normaali.x, normaali.y, normaali.z, -Vector3.Dot(piste, normaali)));
+        }
+
+        /// <summary>Peilikameran omassa piirrossa lattia ei lue heijastusta (lukisi omaa kohdettaan); salin kamerassa lukee.</summary>
+        void KameraAlkaa(ScriptableRenderContext _, Camera c)
+        {
+            if (c == heijastusKamera) Shader.SetGlobalFloat(IdHMaara, 0f);
+            else if (c == Kamera) Shader.SetGlobalFloat(IdHMaara, HeijastusPaalla && heijastusKuva != null ? 1f : 0f);
+        }
+
+        void OnDestroy() => RenderPipelineManager.beginCameraRendering -= KameraAlkaa;
 
         public void Tuhoa()
         {
+            RenderPipelineManager.beginCameraRendering -= KameraAlkaa;
+            Shader.SetGlobalFloat(IdHMaara, 0f);
             VapautaKuva();
             NykyinenKuva = null;
             KuvaVaihtui?.Invoke(null);
