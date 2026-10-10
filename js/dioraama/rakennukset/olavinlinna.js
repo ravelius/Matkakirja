@@ -51,6 +51,7 @@ export const RAKENNUS = {
   ymparistoMallit: { vene: { maailmaan: false } },
   // Pystyleikkeen portinvartija (Siirtoseppä 7.10.): paikka ja reitti käsikirjoituksesta, kun kohtaus lukittu.
   lisaHenkilot: ['portinvartija-1500'],
+  lisaPinnat: ['rantakivi'],   // ranta-1499:n kivet (Blender-kävely), natiivi ottaa värin ja kuvan rakennus.jsonin pinnoista
   otsikko: 'Olavinlinna – elävä linna',
   versio: 1,
   lahteet: [{ nimi: 'Kansallismuseo: Olavinlinnan historiaa', osoite: 'https://www.kansallismuseo.fi/fi/olavinlinna/historiaa' }],
