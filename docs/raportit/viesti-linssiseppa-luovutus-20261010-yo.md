@@ -126,3 +126,9 @@ Ajoskriptit ja skenaariot: `proto-3d/tyokalut/linssiseppa-ajot/` (simuvuoro-*.zs
    (lokit/todistus-pallokompassi-uusi-ipad-20261010-2353: kompassi kokonaan näkyvissä). Loput: `zsh linssiseppa-ajot/simuvuoro-pallokompassi-ajo.zsh
    cb9dc2ed4 /Users/Shared/Claude/proto-3d/lokit/linssiseppa-app/testi-181` (poista ensin jo ajettu uusi-ipad-rivi) → kuvapari nykyinen | uusi PT:lle.
 4. Kaupunkipuut + Soundly samasta käännöksestä (sk-puut-181, sk-soundly-182 sisältyvät -ajo.zsh:iin).
+
+## 00.18 KETJU KÄYNNISSÄ (irrotettu): KIIRE e38a38dee käännös → iPhone-ajo
+`linssiseppa-ajot/ketju-esitys-korjaus.zsh`, loki **proto-3d/lokit/linssiseppa-ketju-esitys-korjaus-0018.log** (Julkaisijan NYT 00.17: käännös
+jonottaa Natiivisepän laite-181-lukon perään; simuajo D0D2CD1E odottaa, kunnes käynnissä ≤ 1 muu simu). Todistus tulee kansioon
+lokit/todistus-esitys-korjaus-iphone-*. ILMOITA Julkaisijalle "KÄÄNNETTY <SHA>" (lokin KÄÄNNÖS-rivi) ja "SIMU VAPAA" (SIMU ALAS -rivi).
+Sitten mittaus (ennen = todistus-esitys-toisto-iphone-20261010-2357) → PT.
