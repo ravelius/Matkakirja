@@ -67,6 +67,9 @@ namespace Matkakirja.Linssit.Museo
             }
         }
         public static long SeinaTavut(TeosPyramidi p, int ohita = 0) => AstcTavut(p.SeinaLeveys(ohita), p.SeinaKorkeus(ohita));
+        /// <summary>Patsaan GPU-muisti: kärjet (paikka + normaali + uv = 32 t), indeksit (uint, 12 t/kolmio) ja väritekstuuri (ASTC 6×6 + mipit).</summary>
+        public static long VeistosTavut(int karkia, int kolmioita, int tekstuuriLeveys, int tekstuuriKorkeus) =>
+            (long)karkia * 32 + (long)kolmioita * 12 + (tekstuuriLeveys > 0 ? AstcTavut(tekstuuriLeveys, tekstuuriKorkeus) : 0);
         /// <summary>Yksi 512² ruutu ilman mipejä (ruutu näytetään lähes 1:1, mipit eivät maksa itseään).</summary>
         public static readonly long RuutuTavut = AstcTavut(TeosPyramidi.Ruutu, TeosPyramidi.Ruutu, 6, false);
     }
@@ -195,6 +198,26 @@ namespace Matkakirja.Linssit.Museo
             long s = 0; int n = 0;
             foreach (var p in teokset) { s += MuseoMuisti.SeinaTavut(p, SeinaOhita); if (s > SeinatTavut) break; n++; }
             return n;
+        }
+    }
+
+    /// <summary>Patsaiden lataus (suunnitelma 6.4: veistokset ≤ 40 Mt/sali, vain näkyvä osa): lähimmät ensin, kunnes budjetti täyttyy;
+    /// kauempana kuin Raja m ei ladata. Palauttaa ladattavat tunnukset etäisyysjärjestyksessä (kutsuja purkaa muut).</summary>
+    public static class VeistosValinta
+    {
+        public const double Raja = 30;
+        public static List<string> Valitse(IList<(string id, double etaisyys, long tavut)> ehdokkaat, long budjetti = MuseoBudjetti.VeistoksetTavut)
+        {
+            var j = new List<(string id, double etaisyys, long tavut)>(ehdokkaat);
+            j.Sort((a, b) => a.etaisyys.CompareTo(b.etaisyys));
+            var t = new List<string>(); long s = 0;
+            foreach (var e in j)
+            {
+                if (e.etaisyys > Raja) break;
+                if (s + e.tavut > budjetti) continue;   // iso patsas ohi, pienempi kauempana voi mahtua
+                s += e.tavut; t.Add(e.id);
+            }
+            return t;
         }
     }
 

@@ -1,4 +1,5 @@
 // Taidemuseon kuvapyramidi, ruutuvalinta, LRU-paikat ja muistibudjetti (PT 10.10.2026, suunnitelma luvut 5 ja 6.4).
+using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Museo;
 
@@ -112,6 +113,22 @@ namespace Matkakirja.Linssit.Testit
             int n = b.SeiniaMahtuu(teokset);
             Oleta.Tosi(n >= 30 && n < 60, "30 teoksen sali mahtuu 60 Mt:iin: " + n);
             Oleta.Tosi(MuseoBudjetti.Yhteensa == 160L << 20);
+        }
+
+        [Testi] static void VeistoksetLahimmatBudjettiin()
+        {
+            long yksi = MuseoMuisti.VeistosTavut(80000, 150000, 2048, 2048);
+            Oleta.Tosi(yksi > 6_000_000 && yksi < 7_500_000, "150 k kolmion patsas: kärjet 2,6 + indeksit 1,8 + tekstuuri 2,5 ≈ 6,9 Mt: " + yksi);
+            var e = new List<(string, double, long)>();
+            for (int i = 0; i < 12; i++) e.Add(("p" + i, 2.0 + i, yksi));
+            e.Add(("kaukana", 40, 1));
+            e.Add(("iso", 1.0, 39L << 20));
+            var v = VeistosValinta.Valitse(e);
+            Oleta.Sama("iso", v[0], "lähin ensin");
+            Oleta.Tosi(!v.Contains("kaukana"), "yli 30 m ei");
+            Oleta.Tosi(!v.Contains("p0"), "iso vei budjetin");
+            var ilman = VeistosValinta.Valitse(e.GetRange(0, 12));
+            Oleta.Sama(Math.Min(12, (int)(MuseoBudjetti.VeistoksetTavut / yksi)), ilman.Count, "40 Mt / 6,9 Mt = 6");
         }
 
         [Testi] static void EsilatausKolmeEteenpain()
