@@ -1,0 +1,1089 @@
+### 401
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mistä Peipsijärven rannan asukkaat ovat perinteisesti eläneet?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. [[Peipsijärven]] rannoilla on perinteisesti eletty kalastuksella, ja Vasknarvan kalastajakylä rakennettiin linnan kivistä. Lähteiden mukaan alueen rannoilla tunnetaan myös [[sipulinviljelystä]], jota harjoittavat perinteisesti erityisesti vanhauskoiset. Sipuli ei ole ihan kyyhkyn herkkua.
+KYSYMYS: Kerro lisää: sipulinviljelystä
+
+### 402
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Musiikki: Kahdeksan ääntä kylvöjuhlassa] Bunun-kansan pasibutbut lauletaan kylvöjuhlassa. Se on moniäänistä laulua, jossa on tavallisesti viidestä kahteentoista ääntä, ja äänet nousevat hitaasti yhdessä ylöspäin ilman sanoja. Japanilainen musiikintutkija Takatomo Kurosawa äänitti bununlaulajia vuonna 1943. Kansan oma soitin on latuk, jousen näköinen suujousi, jonka runko tehdään bambusta: soittaja asettaa suunsa jousen päähän, näppäilee kieltä ja muotoilee melodian yläsävelistä hengityksellä ja suun asennolla. Soitinta soitetaan yksin pimeän tultua, ja se on merkitty muistiin jo vuoden 1776 kuvateoksessa.
+AIEMPI KYSYMYS: Miksi setojen laulutapa leelo on niin erityinen, että UNESCO otti sen aineettoman kulttuuriperinnön luetteloonsa?
+AIEMPI VASTAUS (Livia):
+Mmm— selvä juttu. Setojen laulutapa on monikuoroista, [[moniäänistä]] kansanlaulua, jossa laulu rakentuu yhteislaulun varaan. Lähteiden mukaan yksi laulaja johdattelee laulun ja kuoro vastaa siihen. Tämä elävä perinne on säilynyt [[Setomaalla]] sukupolvelta toiselle, ja siksi UNESCO merkitsi sen vuonna 2009 aineettoman kulttuuriperinnön luetteloon.
+
+Minä olen kuullut aika monta kuoroa katoilta, ja kyyhkyjen aamukurnutus ei kyllä yllä samalle tasolle. Se on tosin ihan oma taiteenlajinsa.
+KYSYMYS: Kerro lisää: moniäänistä
+
+### 403
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+AIEMPI KYSYMYS: Miksi setojen laulutapa leelo on niin erityinen, että UNESCO otti sen aineettoman kulttuuriperinnön luetteloonsa?
+AIEMPI VASTAUS (Livia):
+Mmm— selvä juttu. Setojen laulutapa on monikuoroista, [[moniäänistä]] kansanlaulua, jossa laulu rakentuu yhteislaulun varaan. Lähteiden mukaan yksi laulaja johdattelee laulun ja kuoro vastaa siihen. Tämä elävä perinne on säilynyt [[Setomaalla]] sukupolvelta toiselle, ja siksi UNESCO merkitsi sen vuonna 2009 aineettoman kulttuuriperinnön luetteloon.
+
+Minä olen kuullut aika monta kuoroa katoilta, ja kyyhkyjen aamukurnutus ei kyllä yllä samalle tasolle. Se on tosin ihan oma taiteenlajinsa.
+KYSYMYS: Kerro lisää: Setomaalla
+
+### 404
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Mitä ihmettä on Setomaan "kuningaskunta", ja kuka on kuningas Peko?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kuningaskunta ei ole valtio vaan setojen kulttuurinen ja perinteinen yhteisö, jonka merkitystä vaalitaan vuosittain [[Kuningaskunnan päivässä]]. Perimätiedon mukaan Peko on setojen perinteisessä uskomusmaailmassa hedelmällisyyden ja viljasadon jumala eikä tavallinen hallitsija, ja siinä näkyy vanhemman [[kansanuskon]] perintöä. Kuningaskunnan päivänä setot valitsevat Pekon kuningaskunnalle seremoniallisen hoitajan. Kuningaskunta ilman rajoja kuulostaa kyyhkyn mielestä hyvältä.
+KYSYMYS: Kerro lisää: Kuningaskunnan päivässä
+
+### 405
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mitä ihmettä on Setomaan "kuningaskunta", ja kuka on kuningas Peko?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: kuningaskunta ei ole valtio vaan setojen kulttuurinen ja perinteinen yhteisö, jonka merkitystä vaalitaan vuosittain [[Kuningaskunnan päivässä]]. Perimätiedon mukaan Peko on setojen perinteisessä uskomusmaailmassa hedelmällisyyden ja viljasadon jumala eikä tavallinen hallitsija, ja siinä näkyy vanhemman [[kansanuskon]] perintöä. Kuningaskunnan päivänä setot valitsevat Pekon kuningaskunnalle seremoniallisen hoitajan. Kuningaskunta ilman rajoja kuulostaa kyyhkyn mielestä hyvältä.
+KYSYMYS: Kerro lisää: kansanuskon
+
+### 406
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Luola kaiverrettiin kallioon] 1200-luvulta — Räutin joen mutkassa kohoaa kalkkikivijyrkänne, johon ortodoksimunkit kaivoivat luolaluostarin 1200-luvulla. Kammioissa asuttiin lähes 1700-luvun loppuun, kunnes paikka autioitui vuosisadoiksi. Samaan jyrkänteeseen ja sen alle kerrostuu yli 2000 vuotta historiaa: geto-daakialainen linnavuori, Kultaisen ordan aikainen kaupunki ja Tsehi Suuren 1400-luvulla rakennuttama linnoitus. Moldovan itsenäistyttyä 1991 munkit palasivat luoliin vuonna 1996 ensi kertaa vuosikymmeniin, siivosivat kammiot ja aloittivat rukoukset uudelleen samoissa kallioon hakatuissa seinissä.
+- [Kiina — maalehti / Historia: Luola muurattiin umpeen tuhanneksi vuodeksi] 366 — Mogaon luolat on hakattu jyrkänteeseen 25 kilometriä Dunhuangin keidaskaupungista kaakkoon, keskelle Silkkitien risteystä. Ensimmäinen luola kaivettiin vuonna 366 mietiskelypaikaksi, ja työ jatkui 1300-luvulle asti: luolatemppeleitä on noin viisisataa ja maalauksia tuhannen vuoden ajalta. Vuonna 1900 löytyi luola, joka oli muurattu umpeen 1000-luvulla. Sen sisältä tuli esiin valtava määrä kirjakääröjä ja asiakirjoja. Kokoelma hajosi ympäri maailmaa, ja suurimmat osat ovat nyt Pekingissä, Lontoossa, Pariisissa ja Berliinissä.
+AIEMPI KYSYMYS: Mikä Petserin luostari on ja miksi se on setoille tärkeä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Petserin luostari on vanha ortodoksinen luostari, joka on ollut setojen historiallinen ja hengellinen keskus. Se tunnetaan myös [[luolaluostarina]], ja se sijaitsee nykyisin Venäjän puolella [[Pihkovan]] alueella lähellä Viron rajaa, sillä Setomaa on jaettu Viron ja Venäjän kesken. Luolissa ei kyyhkyn siivet oikein mahtuisi.
+KYSYMYS: Kerro lisää: luolaluostarina
+
+### 407
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+AIEMPI KYSYMYS: Mikä Petserin luostari on ja miksi se on setoille tärkeä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Petserin luostari on vanha ortodoksinen luostari, joka on ollut setojen historiallinen ja hengellinen keskus. Se tunnetaan myös [[luolaluostarina]], ja se sijaitsee nykyisin Venäjän puolella [[Pihkovan]] alueella lähellä Viron rajaa, sillä Setomaa on jaettu Viron ja Venäjän kesken. Luolissa ei kyyhkyn siivet oikein mahtuisi.
+KYSYMYS: Kerro lisää: Pihkovan
+
+### 408
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+AIEMPI KYSYMYS: Miten eteläviron kieli eroaa tavallisesta viron kielestä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Eteläviro on viron kielen eteläinen murre- tai kieliryhmä, johon kuuluvat [[võron]] kieli ja setojen kieli. Se on kehittynyt erillään pohjoisviroon pohjautuvasta [[kirjaviron]] kielestä, ja sen sanasto ja ääntäminen poikkeavat siitä selvästi. Asiantuntijat suhtautuvat sen asemaan eri tavoin: osa pitää sitä omana kielenään, osa viron murteena. Kielet ovat kyyhkylle mysteeri, kunhan kirje on suomeksi.
+KYSYMYS: Kerro lisää: võron
+
+### 409
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dublin — kohdekartta / Kohdekartta: Kellsin kirja] Se kirja, jota isoisäsi katseli, tehtiin noin vuonna 800 kolumbalaisessa luostarissa — Ionan saarella, Kellsissä tai osittain molemmissa, siitä kiistellään yhä. Siinä on 340 lehteä vasikannahkaa ja kymmenen kokosivun kuvaa. Vuonna 1007 Ulsterin annaaleihin kirjattiin, että "Columkillen suuri evankeliumikirja, läntisen maailman päämuistoesine" varastettiin yöllä kivikirkon läntisestä sakaristosta — ja syy sanotaan merkinnässä suoraan: sen taotun kotelon tähden. Kirja löytyi muutamaa kuukautta myöhemmin turpeen alta. Kotelo oli poissa, kulta ja jalokivet sen mukana, ja noin kolmekymmentä lehteä puuttuu yhä — ne saattoivat repeytyä irti, kun kirja kiskottiin kansistaan. Varkaat veivät siis sen…
+- [Mongolia — maalehti / Kirjallisuus: Kirja, joka säilyi kiinalaisiksi merkeiksi puettuna] 1228 → — Mongolien salainen historia on vanhin säilynyt mongolinkielinen kirjateos. Sen kirjoitti tuntematon tekijä Tšingis-kaanin kuoleman jälkeen, ja loppusanojen mukaan työ valmistui Rotan vuonna Kerulen-joen rannalla. Kirja alkaa taruna: siniharmaa susi ja vaalea naaraskauris saivat ensimmäisen mongolin, ja yhdentoista sukupolven päästä leski Alan Gua sai kolme poikaa hohtavasta miehestä, joka tuli sisään gerin savuaukosta. Alkuperäistä käsikirjoitusta ei ole jäljellä. Teksti säilyi, koska Ming-kauden tulkkikoulu kirjoitti sen ääntämisen kiinalaisin merkein oppikirjaksi. Käännöksiä on yli neljälläkymmenellä kielellä.
+AIEMPI KYSYMYS: Miten eteläviron kieli eroaa tavallisesta viron kielestä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Eteläviro on viron kielen eteläinen murre- tai kieliryhmä, johon kuuluvat [[võron]] kieli ja setojen kieli. Se on kehittynyt erillään pohjoisviroon pohjautuvasta [[kirjaviron]] kielestä, ja sen sanasto ja ääntäminen poikkeavat siitä selvästi. Asiantuntijat suhtautuvat sen asemaan eri tavoin: osa pitää sitä omana kielenään, osa viron murteena. Kielet ovat kyyhkylle mysteeri, kunhan kirje on suomeksi.
+KYSYMYS: Kerro lisää: kirjaviron
+
+### 410
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ras Hafun — kaupunkilehti / Antiikin suitsukekauppa: Yhtä arvokasta kuin hopea] Kerätty pihka lajiteltiin väriltään ja puhtaudeltaan ja myytiin painon mukaan – parhaat palat saattoivat maksaa yhtä paljon kuin hopea. Suitsuketta poltettiin temppeleissä ja kotialttareilla ympäri antiikin maailmaa Egyptistä Roomaan ja Intiaan asti, mutta sitä käytettiin myös mausteena, lääkkeenä ja balsamointiin. Afrikan sarvi ja Etelä-Arabia olivat lähes ainoat alueet, joilla suitsukepuita kasvoi luonnossa, joten koko tuotanto kulki näiden rannikkojen satamien, kuten Oponen, kautta ennen kuin se jatkoi matkaa laivoilla ja karavaaneilla kohti Välimerta.
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+AIEMPI KYSYMYS: Millainen on setojen perinteinen juhlapuku ja koristeet?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Setonaiset ovat tunnettuja runsaista [[hopeakoruistaan]], joista näkyvin on suuri [[rintasolki]]. Juhla-asu eroaa arkivaatteesta, ja koristeet ovat yleensä juhlissa runsaampia. Tarkempia yksityiskohtia, kuten värejä ja kuvioiden merkityksiä, en ole varma, joten jätän ne arvailematta. Kiiltävää tavaraa, kyl se kyyhkyn silmää miellyttää.
+KYSYMYS: Kerro lisää: hopeakoruistaan
+
+### 411
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Setomaa (kulttuuri)
+Tietoruudun teksti: Setomaa on Peipsijärven eteläpuolinen alue, jossa asuvat setot, itämerensuomalainen alkuperäiskansa ja kielellinen vähemmistö. Setojen kieli on eteläviron muoto, ja he ovat perinteisesti kuuluneet ortodoksiseen kirkkoon, johon on sekoittunut piirteitä vanhemmasta kansanuskosta. Alueen historiallinen ja hengellinen keskus on ollut Petserin luostari. Setojen monikuoroinen laulutapa leelo merkittiin UNESCOn aineettoman kulttuuriperinnön luetteloon vuonna 2009. Nykyisin Setomaa on jaettu Viron ja Venäjän kesken, ja setot valitsevat vuosittaisessa Kuningaskunnan päivässä Pekon kuningaskunnalle seremoniallisen hoitajan.
+AIEMPI KYSYMYS: Millainen on setojen perinteinen juhlapuku ja koristeet?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Setonaiset ovat tunnettuja runsaista [[hopeakoruistaan]], joista näkyvin on suuri [[rintasolki]]. Juhla-asu eroaa arkivaatteesta, ja koristeet ovat yleensä juhlissa runsaampia. Tarkempia yksityiskohtia, kuten värejä ja kuvioiden merkityksiä, en ole varma, joten jätän ne arvailematta. Kiiltävää tavaraa, kyl se kyyhkyn silmää miellyttää.
+KYSYMYS: Kerro lisää: rintasolki
+
+### 412
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Miksi vironkielinen kansalliseepos syntyi juuri pienessä Võrun kaupungissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ja vastaus on kyl aika arkinen. Vironkielinen kansalliseepos [[Kalevipoeg]] syntyi Võrussa, koska sen kirjoittaja, lääkäri [[Friedrich Reinhold Kreutzwald]], asui ja työskenteli kaupungissa vuosina 1833–1877. Kaupunki ei siis ollut eepoksen aihe vaan sen tekijän kotipaikka. Võru on Kaakkois-Virossa [[Tamula-järven]] rannalla sijaitseva Võrumaan maakunnan keskus, ja Kreutzwaldin muistoa vaalii nykyään kaupungin muistomuseo. Pieni kaupunki, iso kirja, ja ylhäältä se näyttää ihan reilulta diililtä.
+KYSYMYS: Kerro lisää: Kalevipoeg
+
+### 413
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Miksi vironkielinen kansalliseepos syntyi juuri pienessä Võrun kaupungissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ja vastaus on kyl aika arkinen. Vironkielinen kansalliseepos [[Kalevipoeg]] syntyi Võrussa, koska sen kirjoittaja, lääkäri [[Friedrich Reinhold Kreutzwald]], asui ja työskenteli kaupungissa vuosina 1833–1877. Kaupunki ei siis ollut eepoksen aihe vaan sen tekijän kotipaikka. Võru on Kaakkois-Virossa [[Tamula-järven]] rannalla sijaitseva Võrumaan maakunnan keskus, ja Kreutzwaldin muistoa vaalii nykyään kaupungin muistomuseo. Pieni kaupunki, iso kirja, ja ylhäältä se näyttää ihan reilulta diililtä.
+KYSYMYS: Kerro lisää: Friedrich Reinhold Kreutzwald
+
+### 414
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+AIEMPI KYSYMYS: Miksi vironkielinen kansalliseepos syntyi juuri pienessä Võrun kaupungissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Ja vastaus on kyl aika arkinen. Vironkielinen kansalliseepos [[Kalevipoeg]] syntyi Võrussa, koska sen kirjoittaja, lääkäri [[Friedrich Reinhold Kreutzwald]], asui ja työskenteli kaupungissa vuosina 1833–1877. Kaupunki ei siis ollut eepoksen aihe vaan sen tekijän kotipaikka. Võru on Kaakkois-Virossa [[Tamula-järven]] rannalla sijaitseva Võrumaan maakunnan keskus, ja Kreutzwaldin muistoa vaalii nykyään kaupungin muistomuseo. Pieni kaupunki, iso kirja, ja ylhäältä se näyttää ihan reilulta diililtä.
+KYSYMYS: Kerro lisää: Tamula-järven
+
+### 415
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino] Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa siitä syntyi joen eteläpuolella, armenialaisten omassa kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi maailman vanhimmista ja suurimmista armenialaiskortteleista. Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. Vieraita tuli myös toiseen suuntaan: korttelissa as…
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+AIEMPI KYSYMYS: Miksi Võru perustettiin vasta vuonna 1784, ja kenen käskystä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Siinä on oikeastaan kaksi kysymystä yhdessä. Võru perustettiin elokuussa 1784 keisarinna [[Katariina II:n]] pyynnöstä uuden piirikunnan keskukseksi, joten kyse oli pyynnöstä eikä varsinaisesta käskystä. Viro kuului tuolloin [[Venäjän keisarikuntaan]], ja uudelle piirikunnalle tarvittiin hallinnollinen keskus. Vuodesta 1797 lähtien kaupunki on ollut ympäristönsä hallintokeskus.
+
+Kaupunki tilauksesta kuulostaa minun korvaani oudolta, mutta ylhäältä katsoen jokaisen kaupungin on kai joku joskus päättänyt aloittaa. Kyyhkyntornissakin on aina joku, joka sanoi, että tähän.
+KYSYMYS: Kerro lisää: Katariina II:n
+
+### 416
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miksi Võru perustettiin vasta vuonna 1784, ja kenen käskystä?
+AIEMPI VASTAUS (Livia):
+Ai tota. Siinä on oikeastaan kaksi kysymystä yhdessä. Võru perustettiin elokuussa 1784 keisarinna [[Katariina II:n]] pyynnöstä uuden piirikunnan keskukseksi, joten kyse oli pyynnöstä eikä varsinaisesta käskystä. Viro kuului tuolloin [[Venäjän keisarikuntaan]], ja uudelle piirikunnalle tarvittiin hallinnollinen keskus. Vuodesta 1797 lähtien kaupunki on ollut ympäristönsä hallintokeskus.
+
+Kaupunki tilauksesta kuulostaa minun korvaani oudolta, mutta ylhäältä katsoen jokaisen kaupungin on kai joku joskus päättänyt aloittaa. Kyyhkyntornissakin on aina joku, joka sanoi, että tähän.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 417
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+AIEMPI KYSYMYS: Onko võro oma kieli vai viron kielen murre?
+AIEMPI VASTAUS (Livia):
+No niin, tästä kiistellään vähän. Võro on Kaakkois-Virossa, [[Võrumaan]] maakunnassa, puhuttu kielimuoto, joka kuuluu viron kielen eteläiseen ryhmään. Asiasta esitetään kaksi vakiintunutta kantaa: toisten mukaan võro on oma kielensä, toisten mukaan se on viron kielen murre. Kaupungin nimi on võron kielellä Võro, ja kielen asemaa tukee Võrussa toimiva [[Võro-instituutti]]. Minä en ota kantaa, minä vain kuherran.
+KYSYMYS: Kerro lisää: Võrumaan
+
+### 418
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+AIEMPI KYSYMYS: Onko võro oma kieli vai viron kielen murre?
+AIEMPI VASTAUS (Livia):
+No niin, tästä kiistellään vähän. Võro on Kaakkois-Virossa, [[Võrumaan]] maakunnassa, puhuttu kielimuoto, joka kuuluu viron kielen eteläiseen ryhmään. Asiasta esitetään kaksi vakiintunutta kantaa: toisten mukaan võro on oma kielensä, toisten mukaan se on viron kielen murre. Kaupungin nimi on võron kielellä Võro, ja kielen asemaa tukee Võrussa toimiva [[Võro-instituutti]]. Minä en ota kantaa, minä vain kuherran.
+KYSYMYS: Kerro lisää: Võro-instituutti
+
+### 419
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Mistä Kalevipoeg-eepos kertoo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän pitäis löytyä päästä. [[Kalevipoeg]] on Viron kansalliseepos, jonka [[Kreutzwald]] kokosi ja kirjoitti 1800-luvun puolivälin tienoilla vironkielisen kansanperinteen pohjalta. Päähenkilö on jättiläissankari, Kalevin poika, ja runo kertoo hänen seikkailuistaan ja taisteluistaan; tarina on lähellä kansansatuja ja myyttejä. Teos syntyi aikana, jolloin virolaiset alkoivat rakentaa omaa kirjallista kulttuuriaan, ja sen esikuvana pidetään usein suomalaista [[Kalevalaa]]. Ja tämän minä muistin ilman yhtään lunttilappua.
+KYSYMYS: Kerro lisää: Kreutzwald
+
+### 420
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Mistä Kalevipoeg-eepos kertoo?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän pitäis löytyä päästä. [[Kalevipoeg]] on Viron kansalliseepos, jonka [[Kreutzwald]] kokosi ja kirjoitti 1800-luvun puolivälin tienoilla vironkielisen kansanperinteen pohjalta. Päähenkilö on jättiläissankari, Kalevin poika, ja runo kertoo hänen seikkailuistaan ja taisteluistaan; tarina on lähellä kansansatuja ja myyttejä. Teos syntyi aikana, jolloin virolaiset alkoivat rakentaa omaa kirjallista kulttuuriaan, ja sen esikuvana pidetään usein suomalaista [[Kalevalaa]]. Ja tämän minä muistin ilman yhtään lunttilappua.
+KYSYMYS: Kerro lisää: Kalevalaa
+
+### 421
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Kuka Katariina II oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tässä pitää olla tarkkana. Katariina II, jota kutsutaan myös Katariina Suureksi, oli [[Venäjän]] keisarinna 1700-luvun jälkipuoliskolla. Hän syntyi saksalaiseen ruhtinassukuun ja nousi valtaan vuonna 1762 miehensä [[Pietari III:n]] syrjäytyksen jälkeen; hän hallitsi kuolemaansa saakka vuoteen 1796. Hänen aikanaan Venäjän alue laajeni ja hallintoa uudistettiin, ja hän kävi kirjeenvaihtoa valistusajan ajattelijoiden, kuten [[Voltairen]], kanssa. Tähän uudistusten aikaan liittyy myös Võrun perustaminen uuden piirikunnan keskukseksi. No olipa tuhti paketti yhdestä keisarinnasta.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 422
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kohdekartta / Kohdekartta: Pietari-Paavalin linnoitus] 1703–1733 Pietari Suuri perusti linnoituksen vuonna 1703 pienelle Jänissaarelle Nevajoen suulle – tästä paikasta koko Pietarin kaupunki sai alkunsa. Sveitsiläissyntyinen arkkitehti Domenico Trezzini suunnitteli tähdenmuotoiset muurit ja bastionit, ja saaren keskelle nousi Pietari-Paavalin katedraali, jonka 122,5 metriä korkeaa kellotornia kruunaa kultainen enkeli tuulen mukana kääntyvän viirin päällä. Saaren nimi juontuu vanhasta tarinasta: kun Pietari Suuri astui maihin, tulvavesi ajoi säikähtäneen jäniksen suoraan hänen saappaansa suojaan. Tapahtumaa muistaa nykyään pieni pronssinen jänispatsas sillan vieressä olevan pylvään päällä, ja pylvääseen on merkitty vanhojen tulvien korkeudet. Vu…
+- [Persepolis — kohdekartta / Kohdekartta: Artakserkses III:n hauta] n. 358–338 eKr. Terassin takana vuoren kyljessä on kolme kallioon louhittua hautaa. Kaksi on valmiita ja kolmas jäi kesken kilometrin päähän. Kenen haudat ovat, ei lue missään, vaan nimet päätellään: Ktesias kertoo, että kuningas valmistutti hautansa eläessään, ja Naqsh-e Rustamin neljä hautaa on tavallisesti luettu Dareios I:lle, Xerxes I:lle, Artakserkses I:lle ja Dareios II:lle. Jäljelle jäävät Artakserkses II ja Artakserkses III, ja heille nämä kaksi valmista hautaa annetaan. Artakserkses III rakensi Persepolikseen myöhään: hän pystytti oman palatsinsa, louhi hautansa isänsä haudan viereen ja aloitti pitkiä hankkeita, jotka jäivät kesken — keskeneräisen portin ja kolmenkymmenenkahden py…
+AIEMPI KYSYMYS: Kuka Katariina II oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tässä pitää olla tarkkana. Katariina II, jota kutsutaan myös Katariina Suureksi, oli [[Venäjän]] keisarinna 1700-luvun jälkipuoliskolla. Hän syntyi saksalaiseen ruhtinassukuun ja nousi valtaan vuonna 1762 miehensä [[Pietari III:n]] syrjäytyksen jälkeen; hän hallitsi kuolemaansa saakka vuoteen 1796. Hänen aikanaan Venäjän alue laajeni ja hallintoa uudistettiin, ja hän kävi kirjeenvaihtoa valistusajan ajattelijoiden, kuten [[Voltairen]], kanssa. Tähän uudistusten aikaan liittyy myös Võrun perustaminen uuden piirikunnan keskukseksi. No olipa tuhti paketti yhdestä keisarinnasta.
+KYSYMYS: Kerro lisää: Pietari III:n
+
+### 423
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võru (kulttuuri)
+Tietoruudun teksti: Võru on kaupunki Kaakkois-Virossa Tamula-järven rannalla, ja se on Võrumaan maakunnan keskus. Kaupunki perustettiin 21. elokuuta 1784 keisarinna Katariina II:n pyynnöstä uuden piirikunnan keskukseksi, ja vuodesta 1797 lähtien se on ollut ympäristön hallintokeskus. Lääkäri Friedrich Reinhold Kreutzwald asui ja työskenteli Võrussa vuosina 1833–1877, ja täällä hän kirjoitti Viron kansalliseepoksen Kalevipoegin. Kaupungin nimi on võron kielellä Võro, ja siellä toimivat Kreutzwaldin muistomuseo sekä Võro-instituutti. Võrun kansanperinnefestivaali on järjestetty joka heinäkuu vuodesta 1995.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Panthéon] 1758–1790 Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon perustukset laskettiin 1758. Rahapula venytti työtä vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä. Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 kansalliskokous määräsi sen suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun…
+AIEMPI KYSYMYS: Kuka Katariina II oli?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tässä pitää olla tarkkana. Katariina II, jota kutsutaan myös Katariina Suureksi, oli [[Venäjän]] keisarinna 1700-luvun jälkipuoliskolla. Hän syntyi saksalaiseen ruhtinassukuun ja nousi valtaan vuonna 1762 miehensä [[Pietari III:n]] syrjäytyksen jälkeen; hän hallitsi kuolemaansa saakka vuoteen 1796. Hänen aikanaan Venäjän alue laajeni ja hallintoa uudistettiin, ja hän kävi kirjeenvaihtoa valistusajan ajattelijoiden, kuten [[Voltairen]], kanssa. Tähän uudistusten aikaan liittyy myös Võrun perustaminen uuden piirikunnan keskukseksi. No olipa tuhti paketti yhdestä keisarinnasta.
+KYSYMYS: Kerro lisää: Voltairen
+
+### 424
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+AIEMPI KYSYMYS: Miksi pieni Suure-Jaani tunnetaan musiikista?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Suure-Jaanin musiikkiperinne liittyy 1800-luvun kansallisen heräämisen aikaan, jolloin pitäjä oli kulttuurin ja sivistyksen keskus. Keskeinen hahmo oli koulumestari ja muusikko [[Joosep Kappin]] ansiosta, hänen työnsä nosti pienen paikkakunnan merkittäväksi. Paikkakunnalta oli kotoisin myös Viron ensimmäinen ammattimaalari [[Johann Köler]]. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku [[Kappien]] muistolle. Pienessä paikassa voi olla suuri sävel, sen minä sanon.
+KYSYMYS: Kerro lisää: Joosep Kappin
+
+### 425
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+AIEMPI KYSYMYS: Miksi pieni Suure-Jaani tunnetaan musiikista?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Suure-Jaanin musiikkiperinne liittyy 1800-luvun kansallisen heräämisen aikaan, jolloin pitäjä oli kulttuurin ja sivistyksen keskus. Keskeinen hahmo oli koulumestari ja muusikko [[Joosep Kappin]] ansiosta, hänen työnsä nosti pienen paikkakunnan merkittäväksi. Paikkakunnalta oli kotoisin myös Viron ensimmäinen ammattimaalari [[Johann Köler]]. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku [[Kappien]] muistolle. Pienessä paikassa voi olla suuri sävel, sen minä sanon.
+KYSYMYS: Kerro lisää: Johann Köler
+
+### 426
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+AIEMPI KYSYMYS: Miksi pieni Suure-Jaani tunnetaan musiikista?
+AIEMPI VASTAUS (Livia):
+Mmm— tost minä osaan kertoo. Suure-Jaanin musiikkiperinne liittyy 1800-luvun kansallisen heräämisen aikaan, jolloin pitäjä oli kulttuurin ja sivistyksen keskus. Keskeinen hahmo oli koulumestari ja muusikko [[Joosep Kappin]] ansiosta, hänen työnsä nosti pienen paikkakunnan merkittäväksi. Paikkakunnalta oli kotoisin myös Viron ensimmäinen ammattimaalari [[Johann Köler]]. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku [[Kappien]] muistolle. Pienessä paikassa voi olla suuri sävel, sen minä sanon.
+KYSYMYS: Kerro lisää: Kappien
+
+### 427
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+AIEMPI KYSYMYS: Mistä nimi Suure-Jaani tulee, ja miksi se vakiintui koko asutukselle vasta 1880-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi on peräisin paikan kirkosta. Suure-Jaani tarkoittaa suunnilleen Suuren Juhanan paikkaa, ja asutus kasvoi [[Suuren Johanneksen evankeliumin kirkon]] ympärille. Kirkko on rakennettu ennen vuotta 1300, ja se paloi [[Pohjan sodassa]] vuonna 1703; sen korjaus valmistui vasta vuonna 1767. Nimi vakiintui koko asutukselle vasta 1880-luvulla, mutta tarkkaa syytä juuri siihen ajankohtaan en tiedä.
+
+Nimet vakiintuvat harvoin päätöksellä, useammin sillä, että kaikki alkavat käyttää samaa sanaa. Niin on käynyt monelle pullannimellekin, uskoisin.
+KYSYMYS: Kerro lisää: Suuren Johanneksen evankeliumin kirkon
+
+### 428
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+- [Venäjä — maalehti / Historia: Tsaari perusti pääkaupungin suolle] 1703 — Suuressa Pohjan sodassa Ruotsia vastaan Pietari Suuri valtasi Nevajoen suistoalueen ja käski 27. toukokuuta 1703 perustaa linnoituksen pienelle Jänissaarelle suojaamaan uutta aluetta. Rakennustyöhön komennettiin kymmeniätuhansia talonpoikia ja sotavankeja kaivamaan maata paljain käsin suoperäisellä rannalla, ja moni heistä kuoli raskaissa oloissa. Linnoituksen ympärille nousi kaupunki, josta tuli vuonna 1712 Venäjän uusi pääkaupunki ja jota Pietari kutsui itse "ikkunaksi Eurooppaan". Pietari valvoi rakennustöitä usein itse paikan päällä eurooppalaiseen tapaan pukeutuneena, mikä hämmensi hoviväkeä tottuneempaa tsaarin perinteiseen asuun ja etäisyyteen.
+AIEMPI KYSYMYS: Mistä nimi Suure-Jaani tulee, ja miksi se vakiintui koko asutukselle vasta 1880-luvulla?
+AIEMPI VASTAUS (Livia):
+Ai se. Nimi on peräisin paikan kirkosta. Suure-Jaani tarkoittaa suunnilleen Suuren Juhanan paikkaa, ja asutus kasvoi [[Suuren Johanneksen evankeliumin kirkon]] ympärille. Kirkko on rakennettu ennen vuotta 1300, ja se paloi [[Pohjan sodassa]] vuonna 1703; sen korjaus valmistui vasta vuonna 1767. Nimi vakiintui koko asutukselle vasta 1880-luvulla, mutta tarkkaa syytä juuri siihen ajankohtaan en tiedä.
+
+Nimet vakiintuvat harvoin päätöksellä, useammin sillä, että kaikki alkavat käyttää samaa sanaa. Niin on käynyt monelle pullannimellekin, uskoisin.
+KYSYMYS: Kerro lisää: Pohjan sodassa
+
+### 429
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Mikä Pohjan sota oli ja miten se vaikutti Viroon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on raskaampi aihe, mutta kerron sen. Pohjan sota käytiin vuosina 1700–1721, ja sen osapuolina olivat yhtäältä [[Ruotsin]] valtakunta ja toisaalta Venäjä liittolaisineen; kyse oli herruudesta [[Itämeren]] alueella. Viro oli tuolloin Ruotsin vallan alla, joten sotatoimet ulottuivat myös sinne. Venäjän joukot valtasivat alueen vuonna 1710, ja sodan päättänyt [[Uudenkaupungin rauha]] vuonna 1721 vahvisti alueen siirtymisen Venäjälle. Sodan aikana alueella koettiin tuhoa, nälkää ja tauteja, ja esimerkiksi Suure-Jaanin kirkko paloi vuonna 1703. Tapahtumista on yli kolmesataa vuotta. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 430
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mikä Pohjan sota oli ja miten se vaikutti Viroon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on raskaampi aihe, mutta kerron sen. Pohjan sota käytiin vuosina 1700–1721, ja sen osapuolina olivat yhtäältä [[Ruotsin]] valtakunta ja toisaalta Venäjä liittolaisineen; kyse oli herruudesta [[Itämeren]] alueella. Viro oli tuolloin Ruotsin vallan alla, joten sotatoimet ulottuivat myös sinne. Venäjän joukot valtasivat alueen vuonna 1710, ja sodan päättänyt [[Uudenkaupungin rauha]] vuonna 1721 vahvisti alueen siirtymisen Venäjälle. Sodan aikana alueella koettiin tuhoa, nälkää ja tauteja, ja esimerkiksi Suure-Jaanin kirkko paloi vuonna 1703. Tapahtumista on yli kolmesataa vuotta. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 431
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+AIEMPI KYSYMYS: Mikä Pohjan sota oli ja miten se vaikutti Viroon?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Tämä on raskaampi aihe, mutta kerron sen. Pohjan sota käytiin vuosina 1700–1721, ja sen osapuolina olivat yhtäältä [[Ruotsin]] valtakunta ja toisaalta Venäjä liittolaisineen; kyse oli herruudesta [[Itämeren]] alueella. Viro oli tuolloin Ruotsin vallan alla, joten sotatoimet ulottuivat myös sinne. Venäjän joukot valtasivat alueen vuonna 1710, ja sodan päättänyt [[Uudenkaupungin rauha]] vuonna 1721 vahvisti alueen siirtymisen Venäjälle. Sodan aikana alueella koettiin tuhoa, nälkää ja tauteja, ja esimerkiksi Suure-Jaanin kirkko paloi vuonna 1703. Tapahtumista on yli kolmesataa vuotta. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Uudenkaupungin rauha
+
+### 432
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+AIEMPI KYSYMYS: Mikä oli Viron kansallinen herääminen 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viron kansallinen herääminen oli noin 1800-luvun puolivälistä alkanut ajanjakso, jolloin virolaiset alkoivat entistä enemmän arvostaa omaa kieltään ja kulttuuriaan ja järjestäytyä sen ympärille. Sen merkkejä olivat vironkielinen kirjallisuus ja lehdistö, koulut ja seurat sekä yhteislaulu. Runoilija [[Lydia Koidula]] ja eepos [[Kalevipoeg]] kuuluvat ajan tunnetuimpiin nimiin, ja ensimmäiset yleiset [[laulujuhlat]] pidettiin Tartossa vuonna 1869. Suure-Jaanin pitäjä oli yksi tämän liikkeen kulttuurikeskuksista. Kyyhky kuhertaa yksin, mut ymmärrän kyl ajatuksen yhteislaulusta.
+KYSYMYS: Kerro lisää: Lydia Koidula
+
+### 433
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Mikä oli Viron kansallinen herääminen 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viron kansallinen herääminen oli noin 1800-luvun puolivälistä alkanut ajanjakso, jolloin virolaiset alkoivat entistä enemmän arvostaa omaa kieltään ja kulttuuriaan ja järjestäytyä sen ympärille. Sen merkkejä olivat vironkielinen kirjallisuus ja lehdistö, koulut ja seurat sekä yhteislaulu. Runoilija [[Lydia Koidula]] ja eepos [[Kalevipoeg]] kuuluvat ajan tunnetuimpiin nimiin, ja ensimmäiset yleiset [[laulujuhlat]] pidettiin Tartossa vuonna 1869. Suure-Jaanin pitäjä oli yksi tämän liikkeen kulttuurikeskuksista. Kyyhky kuhertaa yksin, mut ymmärrän kyl ajatuksen yhteislaulusta.
+KYSYMYS: Kerro lisää: Kalevipoeg
+
+### 434
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Kuoro, joka lauloi maan vapaaksi] 1869 — Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja 1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä isänmaallisia lauluja niin sanotussa laulavassa vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+- [Viro — maalehti / Kulttuuri] Virolainen kulttuuri elää yhteislaulussa ja käsityössä: laulujuhlat jotka alkoivat 1869, kirjava rahvaspuku joka kertoo pitäjän, kanteleen sukulaissoitin ja kansalliseepos jonka sankari on jättiläinen.
+AIEMPI KYSYMYS: Mikä oli Viron kansallinen herääminen 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viron kansallinen herääminen oli noin 1800-luvun puolivälistä alkanut ajanjakso, jolloin virolaiset alkoivat entistä enemmän arvostaa omaa kieltään ja kulttuuriaan ja järjestäytyä sen ympärille. Sen merkkejä olivat vironkielinen kirjallisuus ja lehdistö, koulut ja seurat sekä yhteislaulu. Runoilija [[Lydia Koidula]] ja eepos [[Kalevipoeg]] kuuluvat ajan tunnetuimpiin nimiin, ja ensimmäiset yleiset [[laulujuhlat]] pidettiin Tartossa vuonna 1869. Suure-Jaanin pitäjä oli yksi tämän liikkeen kulttuurikeskuksista. Kyyhky kuhertaa yksin, mut ymmärrän kyl ajatuksen yhteislaulusta.
+KYSYMYS: Kerro lisää: laulujuhlat
+
+### 435
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mitä nähtävää Viljandissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viljandi on lähellä, noin 25 kilometriä Suure-Jaanista etelään. Viljandi on Viljandimaan keskus, ja sen nähtävyyksiin kuuluvat järven rannalla olevat [[Liivinmaan ritarikunnan linnan rauniot]] sekä kesäisin järjestettävä [[kansanmusiikkifestivaali]]. Kaupungin maisemaa leimaavat järvi ja kukkulat, ja sen vanha linnan paikka on suosittu kävelykohde. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunnan linnan rauniot
+
+### 436
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suure-Jaani (kulttuuri)
+Tietoruudun teksti: Suure-Jaani on pikkukaupunki Viljandimaan pohjoisosassa, noin 25 kilometriä Viljandista pohjoiseen. Se kasvoi Suuren Johanneksen evankeliumin kirkon ympärille; kirkko on rakennettu ennen vuotta 1300, se paloi Pohjan sodassa vuonna 1703, ja sen korjaus valmistui vasta vuonna 1767. Nimi tarkoittaa suunnilleen "Suuren Juhanan" paikkaa, ja se vakiintui koko asutukselle vasta 1880-luvulla. 1800-luvun kansallisen heräämisen aikana pitäjä oli kulttuurin ja sivistyksen keskus koulumestari ja muusikko Joosep Kappin ansiosta, ja sieltä oli kotoisin myös Viron ensimmäinen ammattimaalari Johann Köler. Nykyään Suure-Jaanissa järjestetään kesäisin klassisen musiikin festivaali, joka on omistettu säveltäjäsuku Kappien muistolle.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mitä nähtävää Viljandissa on?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viljandi on lähellä, noin 25 kilometriä Suure-Jaanista etelään. Viljandi on Viljandimaan keskus, ja sen nähtävyyksiin kuuluvat järven rannalla olevat [[Liivinmaan ritarikunnan linnan rauniot]] sekä kesäisin järjestettävä [[kansanmusiikkifestivaali]]. Kaupungin maisemaa leimaavat järvi ja kukkulat, ja sen vanha linnan paikka on suosittu kävelykohde. Täällä on varmasti oma pullansa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: kansanmusiikkifestivaali
+
+### 437
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Miksi Vormsin saarella asui vuosisatoja ruotsinkielisiä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tost saaresta minä olen kuullut. Vormsin asukkaat olivat suurimman osan tunnetusta historiasta [[rannikkoruotsalaisia]], ja saaren asutus tunnetaan asiakirjoista 1200-luvulta lähtien. En ole varma, milloin ja miten ensimmäiset ruotsinkieliset asukkaat saapuivat saarelle, mutta kieli säilyi vuosisatoja todennäköisesti siksi, että saari sijaitsee [[Itämerellä]] erillään mantereesta ja yhteisö pysyi tiiviinä. Saaren ruotsinkielinen nimi on [[Ormsö]]. Merellä kaikki kulkee vähän hitaammin, sen olen huomannut.
+KYSYMYS: Kerro lisää: rannikkoruotsalaisia
+
+### 438
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kaupunkilehti / Historia: Laiva jonka kapteenin nimi jäi kartalle] HMS Basilisk laskettiin vesille Woolwichissa elokuussa 1848, ja se oli ensimmäisen luokan siipiratassluuppi: kaksisylinterinen höyrykone pyöritti laivan kylkien rattaita, ja purjeet olivat parkin takila. Laiva palveli Krimin sodan aikana Itämerellä 1854–1855 ja siirtyi sitten Pohjois-Amerikan, Kiinan ja Japanin asemille. Maaliskuussa 1871 se komennettiin Australian asemalle kapteeni John Moresbyn johtoon, ja siitä alkoivat Uuden-Guinean rannikon merenmittaukset. Myöhemmin Basiliskia käytettiin pakkotyövoiman kuljetuksia vastaan Tyynellämerellä. Laiva palasi Englantiin 1874 ja purettiin romuksi Chathamissa 1882.
+AIEMPI KYSYMYS: Miksi Vormsin saarella asui vuosisatoja ruotsinkielisiä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tost saaresta minä olen kuullut. Vormsin asukkaat olivat suurimman osan tunnetusta historiasta [[rannikkoruotsalaisia]], ja saaren asutus tunnetaan asiakirjoista 1200-luvulta lähtien. En ole varma, milloin ja miten ensimmäiset ruotsinkieliset asukkaat saapuivat saarelle, mutta kieli säilyi vuosisatoja todennäköisesti siksi, että saari sijaitsee [[Itämerellä]] erillään mantereesta ja yhteisö pysyi tiiviinä. Saaren ruotsinkielinen nimi on [[Ormsö]]. Merellä kaikki kulkee vähän hitaammin, sen olen huomannut.
+KYSYMYS: Kerro lisää: Itämerellä
+
+### 439
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+AIEMPI KYSYMYS: Miksi Vormsin saarella asui vuosisatoja ruotsinkielisiä?
+AIEMPI VASTAUS (Livia):
+Nyt muistan. Tost saaresta minä olen kuullut. Vormsin asukkaat olivat suurimman osan tunnetusta historiasta [[rannikkoruotsalaisia]], ja saaren asutus tunnetaan asiakirjoista 1200-luvulta lähtien. En ole varma, milloin ja miten ensimmäiset ruotsinkieliset asukkaat saapuivat saarelle, mutta kieli säilyi vuosisatoja todennäköisesti siksi, että saari sijaitsee [[Itämerellä]] erillään mantereesta ja yhteisö pysyi tiiviinä. Saaren ruotsinkielinen nimi on [[Ormsö]]. Merellä kaikki kulkee vähän hitaammin, sen olen huomannut.
+KYSYMYS: Kerro lisää: Ormsö
+
+### 440
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Mitä tapahtui saaren ruotsinkieliselle väestölle toisen maailmansodan lopulla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tämä on vakava asia. [[Toisen maailmansodan]] loppuvaiheessa lähes koko saaren väestö evakuoitiin tai pakeni [[Ruotsiin]]; asukasluku oli noussut noin kolmeentuhanteen ennen sotaa. Tapahtumista on yli kahdeksankymmentä vuotta. Sodan jälkeen Viro oli osa [[Neuvostoliittoa]], eikä ruotsinkielinen asutus palannut saarelle entiselleen. Nykyisin Vormsilla asuu noin 400 rekisteröityä asukasta. Hyvä, että siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Toisen maailmansodan
+
+### 441
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+AIEMPI KYSYMYS: Mitä tapahtui saaren ruotsinkieliselle väestölle toisen maailmansodan lopulla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tämä on vakava asia. [[Toisen maailmansodan]] loppuvaiheessa lähes koko saaren väestö evakuoitiin tai pakeni [[Ruotsiin]]; asukasluku oli noussut noin kolmeentuhanteen ennen sotaa. Tapahtumista on yli kahdeksankymmentä vuotta. Sodan jälkeen Viro oli osa [[Neuvostoliittoa]], eikä ruotsinkielinen asutus palannut saarelle entiselleen. Nykyisin Vormsilla asuu noin 400 rekisteröityä asukasta. Hyvä, että siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Ruotsiin
+
+### 442
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historia: Helsinki näytteli Neuvostoliittoa] Kylmän sodan aikana länsimaisia kuvausryhmiä ei päästetty kuvaamaan Moskovaan, joten Neuvostoliitto piti kuvata muualla. Helsinki kelpasi sijaiseksi: keskusta on Carl Ludvig Engelin piirtämää empireä ja Katajanokalla kohoaa ortodoksinen katedraali. Rikoselokuva Gorky Park (1983) kuvattiin pääosin Helsingissä, ja Kaisaniemen puisto sai esittää Moskovan nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä lunta.
+AIEMPI KYSYMYS: Mitä tapahtui saaren ruotsinkieliselle väestölle toisen maailmansodan lopulla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tämä on vakava asia. [[Toisen maailmansodan]] loppuvaiheessa lähes koko saaren väestö evakuoitiin tai pakeni [[Ruotsiin]]; asukasluku oli noussut noin kolmeentuhanteen ennen sotaa. Tapahtumista on yli kahdeksankymmentä vuotta. Sodan jälkeen Viro oli osa [[Neuvostoliittoa]], eikä ruotsinkielinen asutus palannut saarelle entiselleen. Nykyisin Vormsilla asuu noin 400 rekisteröityä asukasta. Hyvä, että siitä on jo pitkä aika.
+KYSYMYS: Kerro lisää: Neuvostoliittoa
+
+### 443
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+AIEMPI KYSYMYS: Mitä saaren nimi Ormsö tarkoittaa ja mistä se tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ruotsinkielinen nimi Ormsö tarkoittaa Ormin saarta tai käärmesaarta, sillä ruotsin sana orm voi tarkoittaa käärmettä. Siitä on johdettu sekä vironkielinen nimi [[Vormsi]] että saksankielinen nimi. Nimi on siis peräisin [[rannikkoruotsalaisten]] pitkään puhumasta ruotsin kielestä eikä viron kielestä. Käärmesaari kuulostaa pelottavammalta kuin kyyhkyn silmin katsottuna.
+KYSYMYS: Kerro lisää: Vormsi
+
+### 444
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mitä saaren nimi Ormsö tarkoittaa ja mistä se tulee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Ruotsinkielinen nimi Ormsö tarkoittaa Ormin saarta tai käärmesaarta, sillä ruotsin sana orm voi tarkoittaa käärmettä. Siitä on johdettu sekä vironkielinen nimi [[Vormsi]] että saksankielinen nimi. Nimi on siis peräisin [[rannikkoruotsalaisten]] pitkään puhumasta ruotsin kielestä eikä viron kielestä. Käärmesaari kuulostaa pelottavammalta kuin kyyhkyn silmin katsottuna.
+KYSYMYS: Kerro lisää: rannikkoruotsalaisten
+
+### 445
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+AIEMPI KYSYMYS: Keitä rannikkoruotsalaiset ovat?
+AIEMPI VASTAUS (Livia):
+Sepä sattui, tost minä tiedän jotain. Rannikkoruotsalaiset ovat ruotsinkielinen väestö, joka on asunut Viron länsirannikolla ja saarilla, esimerkiksi [[Vormsilla]], vuosisatojen ajan. Heidän asutuksensa ulottuu ainakin keskiajalle, ja he säilyttivät oman kielensä ja tapansa, vaikka ympärillä puhuttiin pääosin viroa. Suurin osa heistä lähti Ruotsiin [[toisen maailmansodan]] lopulla, ja nykyään yhteisö on pieni. Vormsilla asuu nykyisin noin 400 rekisteröityä asukasta. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Vormsilla
+
+### 446
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+AIEMPI KYSYMYS: Mitä muita saaria Länsi-Viron saaristoon kuuluu?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän osaan vastata. Länsi-Viron saaristoon kuuluvat muun muassa [[Saarenmaa]], [[Hiidenmaa]], [[Muhu]] ja Vormsi. Saarenmaa on Viron suurin saari ja Hiidenmaa toiseksi suurin, ja Vormsi on neljänneksi suurin. Lisäksi Riianlahden puolella ovat pienemmät [[Kihnu]] ja Ruhnu, jotka lasketaan usein samaan saaristoon.
+
+Ylhäältä katsoen saaret näyttävät pullilta pellillä, ja se on kyllä kiistaton asiantuntijahavainto.
+KYSYMYS: Kerro lisää: Saarenmaa
+
+### 447
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+AIEMPI KYSYMYS: Mitä muita saaria Länsi-Viron saaristoon kuuluu?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän osaan vastata. Länsi-Viron saaristoon kuuluvat muun muassa [[Saarenmaa]], [[Hiidenmaa]], [[Muhu]] ja Vormsi. Saarenmaa on Viron suurin saari ja Hiidenmaa toiseksi suurin, ja Vormsi on neljänneksi suurin. Lisäksi Riianlahden puolella ovat pienemmät [[Kihnu]] ja Ruhnu, jotka lasketaan usein samaan saaristoon.
+
+Ylhäältä katsoen saaret näyttävät pullilta pellillä, ja se on kyllä kiistaton asiantuntijahavainto.
+KYSYMYS: Kerro lisää: Hiidenmaa
+
+### 448
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Mitä muita saaria Länsi-Viron saaristoon kuuluu?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän osaan vastata. Länsi-Viron saaristoon kuuluvat muun muassa [[Saarenmaa]], [[Hiidenmaa]], [[Muhu]] ja Vormsi. Saarenmaa on Viron suurin saari ja Hiidenmaa toiseksi suurin, ja Vormsi on neljänneksi suurin. Lisäksi Riianlahden puolella ovat pienemmät [[Kihnu]] ja Ruhnu, jotka lasketaan usein samaan saaristoon.
+
+Ylhäältä katsoen saaret näyttävät pullilta pellillä, ja se on kyllä kiistaton asiantuntijahavainto.
+KYSYMYS: Kerro lisää: Muhu
+
+### 449
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vormsi (kulttuuri)
+Tietoruudun teksti: Vormsi on Viron neljänneksi suurin saari, pinta-alaltaan noin 92 neliökilometriä, ja se sijaitsee Itämerellä Hiidenmaan itäpuolella Länsi-Viron saaristossa. Saaren asiakirjoin todettu historia ulottuu 1200-luvulle, ja suurimman osan ajasta siellä ovat asuneet rannikkoruotsalaiset. Ruotsinkielinen nimi Ormsö tarkoittaa "Ormin saarta" tai "käärmesaarta", ja siitä ovat johdettuja sekä viron- että saksankielinen nimi. Asukasluku nousi noin 3000:een ennen toista maailmansotaa, jolloin lähes kaikki saaren väestö evakuoitiin tai pakeni Ruotsiin. Nykyisin saarella asuu noin 400 rekisteröityä asukasta, Hullo on hallinnollinen keskus ja Sviby pääsatama.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Mitä muita saaria Länsi-Viron saaristoon kuuluu?
+AIEMPI VASTAUS (Livia):
+No jopas. Tähän osaan vastata. Länsi-Viron saaristoon kuuluvat muun muassa [[Saarenmaa]], [[Hiidenmaa]], [[Muhu]] ja Vormsi. Saarenmaa on Viron suurin saari ja Hiidenmaa toiseksi suurin, ja Vormsi on neljänneksi suurin. Lisäksi Riianlahden puolella ovat pienemmät [[Kihnu]] ja Ruhnu, jotka lasketaan usein samaan saaristoon.
+
+Ylhäältä katsoen saaret näyttävät pullilta pellillä, ja se on kyllä kiistaton asiantuntijahavainto.
+KYSYMYS: Kerro lisää: Kihnu
+
+### 450
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Miksi Põltsamaasta tuli 1500-luvulla hetkeksi kuningaskunnan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Põltsamaa oli vuosina 1570–1578 Liivinmaan kuningaskunnan pääkaupunki [[Liivinmaan sodan]] aikana. Kuningaskunta oli lyhytikäinen vasallivaltio: herttua [[Magnus]], [[Tanskan]] kuninkaan veli, hallitsi sitä Põltsamaasta käsin Venäjän tsaarin suojeluksessa. Tapahtumista on yli neljäsataa vuotta. Onpas siitä aikaa.
+KYSYMYS: Kerro lisää: Liivinmaan sodan
+
+### 451
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Oslo — kohdekartta / Kohdekartta: Kaupungintalo] 1931–1950 Oslon punatiilinen kaupungintalo on kaupungin hallinnon koti, ja siinä on kaksi neliömäistä tornia, jotka näkyvät pitkälle satamaan. Rakennus on 66 metriä korkea, ja sitä rakennettiin arkkitehtien Arnstein Arnebergin ja Magnus Poulssonin suunnitelmien mukaan vuosina 1931–1950. Rakentaminen keskeytyi kesken toisen maailmansodan, joten talo valmistui lopulta vasta vuonna 1950 – juuri sopivasti Oslon 900-vuotisjuhliin. Sisällä seiniä koristavat isot maalaukset, jotka kertovat Norjan historiasta ja miehityksen ajasta; niitä maalasi kahdeksan taiteilijaa, ja lisäksi 17 kuvanveistäjää teki patsaita. Joka vuosi 10. joulukuuta salissa jaetaan Nobelin rauhanpalkinto, ja marmoripintainen ju…
+- [Tampere — kohdekartta / Kohdekartta: Tampereen tuomiokirkko] 1902–1907 Kirkko rakennettiin vuosina 1902–1907 arkkitehti Lars Sonckin suunnitelmien mukaan. Se tunnettiin aluksi Johanneksen kirkkona ja siitä tuli Tampereen hiippakunnan tuomiokirkko vasta 1923. Rakennusaine on Uudenkaupungin harmaa graniitti, jota louhittiin muun muassa Lepäisten saaresta, ja tyyli on kansallisromantiikkaa: karkeaksi jätetty kivi, jyrkät katot ja paksu nelisivuinen torni. Kuuluisin osa on sisällä. Hugo Simberg maalasi holveihin ja lehtereille freskot vuosina 1904–1906, ja niistä tunnetuin on Haavoittunut enkeli. Kaariholvin ympäri kiertää siivekäs käärme — aihe, josta seurakunnassa käytiin kiivas kiista ennen kuin se sai jäädä. Alttaritaulun maalasi Magnus Enckell. Kirk…
+AIEMPI KYSYMYS: Miksi Põltsamaasta tuli 1500-luvulla hetkeksi kuningaskunnan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Põltsamaa oli vuosina 1570–1578 Liivinmaan kuningaskunnan pääkaupunki [[Liivinmaan sodan]] aikana. Kuningaskunta oli lyhytikäinen vasallivaltio: herttua [[Magnus]], [[Tanskan]] kuninkaan veli, hallitsi sitä Põltsamaasta käsin Venäjän tsaarin suojeluksessa. Tapahtumista on yli neljäsataa vuotta. Onpas siitä aikaa.
+KYSYMYS: Kerro lisää: Magnus
+
+### 452
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+AIEMPI KYSYMYS: Miksi Põltsamaasta tuli 1500-luvulla hetkeksi kuningaskunnan pääkaupunki?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Põltsamaa oli vuosina 1570–1578 Liivinmaan kuningaskunnan pääkaupunki [[Liivinmaan sodan]] aikana. Kuningaskunta oli lyhytikäinen vasallivaltio: herttua [[Magnus]], [[Tanskan]] kuninkaan veli, hallitsi sitä Põltsamaasta käsin Venäjän tsaarin suojeluksessa. Tapahtumista on yli neljäsataa vuotta. Onpas siitä aikaa.
+KYSYMYS: Kerro lisää: Tanskan
+
+### 453
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+AIEMPI KYSYMYS: Miten ensimmäinen vironkielinen aikakauslehti syntyi pienellä paikkakunnalla?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Põltsamaasta tuli 1700-luvun jälkipuoliskolla Pohjois-Liivinmaan [[valistusliikkeen]] keskus, ja lähelle perustettiin ensimmäinen yksityinen [[kirjapaino]] Venäjän keisarikunnassa. Kun painokone oli lähellä, vironkielistä luettavaa saattoi julkaista paikan päällä, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä [[Lühhike öppetus]]. Nimi tarkoittaa suunnilleen lyhyttä opetusta, mikä kertoo lehden valistavasta luonteesta. Tarkemmin siitä, kuka lehden takana oli, en ole varma.
+
+Sukuni on aina kunnioittanut kaikkea, mikä kuljettaa sanoja eteenpäin, vaikka painokone veikin meiltä osan töistä. Kunnioitus on silti aitoa.
+KYSYMYS: Kerro lisää: valistusliikkeen
+
+### 454
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino] Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa siitä syntyi joen eteläpuolella, armenialaisten omassa kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi maailman vanhimmista ja suurimmista armenialaiskortteleista. Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. Vieraita tuli myös toiseen suuntaan: korttelissa as…
+- [Fès — kaupunkilehti / Kirjat ja kirjoitus: Kirjapaino, joka takavarikoitiin satamassa] Arabiankielinen kirjapaino tuli Marokkoon oppineen ja tuomarin ar-Rudanin mukana. Hän osti sen Kairosta 1864 palatessaan pyhiinvaellukselta ja palkkasi mukaan egyptiläisen koneenkäyttäjän. Viranomaiset takavarikoivat koneen satamassa ja lähettivät sen Meknèsiin, jossa sulttaani Muhammad IV oleskeli, ja maan ensimmäinen arabiankielinen kirja painettiin siellä kesäkuussa 1865. Samana vuonna paino siirrettiin Fèsiin, jossa se toimi 1940-luvulle asti. Vuoteen 1908 mennessä kaupungissa oli vähintään neljä kirjapainoa.
+AIEMPI KYSYMYS: Miten ensimmäinen vironkielinen aikakauslehti syntyi pienellä paikkakunnalla?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Põltsamaasta tuli 1700-luvun jälkipuoliskolla Pohjois-Liivinmaan [[valistusliikkeen]] keskus, ja lähelle perustettiin ensimmäinen yksityinen [[kirjapaino]] Venäjän keisarikunnassa. Kun painokone oli lähellä, vironkielistä luettavaa saattoi julkaista paikan päällä, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä [[Lühhike öppetus]]. Nimi tarkoittaa suunnilleen lyhyttä opetusta, mikä kertoo lehden valistavasta luonteesta. Tarkemmin siitä, kuka lehden takana oli, en ole varma.
+
+Sukuni on aina kunnioittanut kaikkea, mikä kuljettaa sanoja eteenpäin, vaikka painokone veikin meiltä osan töistä. Kunnioitus on silti aitoa.
+KYSYMYS: Kerro lisää: kirjapaino
+
+### 455
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+AIEMPI KYSYMYS: Miten ensimmäinen vironkielinen aikakauslehti syntyi pienellä paikkakunnalla?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Põltsamaasta tuli 1700-luvun jälkipuoliskolla Pohjois-Liivinmaan [[valistusliikkeen]] keskus, ja lähelle perustettiin ensimmäinen yksityinen [[kirjapaino]] Venäjän keisarikunnassa. Kun painokone oli lähellä, vironkielistä luettavaa saattoi julkaista paikan päällä, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä [[Lühhike öppetus]]. Nimi tarkoittaa suunnilleen lyhyttä opetusta, mikä kertoo lehden valistavasta luonteesta. Tarkemmin siitä, kuka lehden takana oli, en ole varma.
+
+Sukuni on aina kunnioittanut kaikkea, mikä kuljettaa sanoja eteenpäin, vaikka painokone veikin meiltä osan töistä. Kunnioitus on silti aitoa.
+KYSYMYS: Kerro lisää: Lühhike öppetus
+
+### 456
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pariisi — kohdekartta / Kohdekartta: Panthéon] 1758–1790 Kuningas Ludvig XV sairastui vakavasti sotaretkellä 1744 ja lupasi, että jos hän toipuu, Pariisin suojeluspyhimys Geneviève saa rappeutuneen kirkkonsa tilalle uuden. Kuningas toipui, ja Jacques-Germain Soufflot’n suunnitteleman kirkon perustukset laskettiin 1758. Rahapula venytti työtä vuosikymmeniä: Soufflot kuoli 1780, ja hänen oppilaansa Jean-Baptiste Rondelet sai rakennuksen valmiiksi vasta 1790. Kumpikaan, ei kuningas eikä arkkitehti, ehtinyt nähdä sitä. Kirkko valmistui juuri kun vallankumous oli alkanut, ja 1791 kansalliskokous määräsi sen suurmiesten hautapaikaksi. Ensimmäisenä kryptaan kannettiin kreivi Mirabeau — ja muutamaa kuukautta myöhemmin hänet kannettiin ulos, kun…
+AIEMPI KYSYMYS: Mitä valistusaika tarkoittaa ja mistä se levisi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on tuttu juttu. Valistusaika oli 1700-luvun Euroopassa vaikuttanut aate- ja kulttuurisuuntaus, joka korosti järkeä, tiedettä ja kasvatusta. Sen ajattelijat, kuten [[Voltaire]] ja [[Immanuel Kant]], kehottivat ihmisiä käyttämään omaa ymmärrystään. Aate levisi kirjojen, lehtien ja kirjeenvaihdon kautta, ja sen vaikutus ulottui myös hallitsijoihin: keisarinna [[Katariina II]] kävi kirjeenvaihtoa valistusajattelijoiden kanssa. Põltsamaalla se näkyi kirjapainona ja ensimmäisenä vironkielisenä aikakauslehtenä. Viesti on kyllä aina ollut tärkeämpi kuin viestinviejä, sen olen oppinut.
+KYSYMYS: Kerro lisää: Voltaire
+
+### 457
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Damaskos — kohdekartta / Kohdekartta: Hamidiyyan suuki] Suuki alkaa vanhankaupungin länsilaidalta linnoituksen kupeelta ja kulkee suoraan itään. Kuja on noin 600 metriä pitkä ja 15 metriä leveä, ja sen yllä kaartuu kymmenen metrin korkuinen metalliholvi. Kuja noudattaa roomalaisen kadun akselia, joka vei Jupiterin temppelille. Itäpäässä kuja päättyy temppelin porttirakennelmaan, jonka pylväät ja kaari seisovat yhä kadun päässä. Niiden takana avautuu Umaijadien moskeijan aukio. Roomalaiset alkoivat rakentaa temppeliä ensimmäisellä vuosisadalla jaa., ja portti on sen läntisen sisäänkäynnin säilynyt osa. Basaarikuja itse on paljon nuorempi ja ottomaanien aikaa. Se on nimetty sulttaani Abdülhamidin mukaan: rakentaminen alkoi noin vuonna 1780 Abdülha…
+AIEMPI KYSYMYS: Mitä valistusaika tarkoittaa ja mistä se levisi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on tuttu juttu. Valistusaika oli 1700-luvun Euroopassa vaikuttanut aate- ja kulttuurisuuntaus, joka korosti järkeä, tiedettä ja kasvatusta. Sen ajattelijat, kuten [[Voltaire]] ja [[Immanuel Kant]], kehottivat ihmisiä käyttämään omaa ymmärrystään. Aate levisi kirjojen, lehtien ja kirjeenvaihdon kautta, ja sen vaikutus ulottui myös hallitsijoihin: keisarinna [[Katariina II]] kävi kirjeenvaihtoa valistusajattelijoiden kanssa. Põltsamaalla se näkyi kirjapainona ja ensimmäisenä vironkielisenä aikakauslehtenä. Viesti on kyllä aina ollut tärkeämpi kuin viestinviejä, sen olen oppinut.
+KYSYMYS: Kerro lisää: Immanuel Kant
+
+### 458
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino] Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa siitä syntyi joen eteläpuolella, armenialaisten omassa kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi maailman vanhimmista ja suurimmista armenialaiskortteleista. Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. Vieraita tuli myös toiseen suuntaan: korttelissa as…
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+AIEMPI KYSYMYS: Mitä valistusaika tarkoittaa ja mistä se levisi?
+AIEMPI VASTAUS (Livia):
+Kato, tää on tuttu juttu. Valistusaika oli 1700-luvun Euroopassa vaikuttanut aate- ja kulttuurisuuntaus, joka korosti järkeä, tiedettä ja kasvatusta. Sen ajattelijat, kuten [[Voltaire]] ja [[Immanuel Kant]], kehottivat ihmisiä käyttämään omaa ymmärrystään. Aate levisi kirjojen, lehtien ja kirjeenvaihdon kautta, ja sen vaikutus ulottui myös hallitsijoihin: keisarinna [[Katariina II]] kävi kirjeenvaihtoa valistusajattelijoiden kanssa. Põltsamaalla se näkyi kirjapainona ja ensimmäisenä vironkielisenä aikakauslehtenä. Viesti on kyllä aina ollut tärkeämpi kuin viestinviejä, sen olen oppinut.
+KYSYMYS: Kerro lisää: Katariina II
+
+### 459
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Vapaudenpatsas] 1935 Riian keskustassa kohoaa 42 metriä korkea Vapaudenpatsas, joka pystytettiin vuonna 1935 muistoksi Latvian itsenäisyyssodassa 1918–1920 kaatuneille sotilaille. Patsaan huipulla seisoo Vapaus-niminen naishahmo, jota latvialaiset kutsuvat hellästi Mildaksi. Hän pitelee käsissään kolmea kultaista tähteä, jotka kuvaavat Latvian kolmea vanhaa maakuntaa: Vidzemeä, Latgalea ja Kuurinmaata. Patsaan kivi- ja graniittiosien veistämiseen kului yli 300 000 työtuntia – yhdeltä kivenveistäjältä olisi mennyt siihen yli sata vuotta! Patsas seisoo paikalla, jossa aiemmin oli Venäjän tsaari Pietari Suuren ratsastajapatsas. Kun Neuvostoliitto miehitti Latvian, monet pelkäsivät patsaan tuhoamista, mutta se…
+- [Riika — kohdekartta / Kohdekartta: Kolme veljestä] 1400-luvun loppu–1746 Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt asuinrakennusten rivi. Vanhin veljeksistä on peräisin 1400-luvun lopulta, ja alun perin siellä oli vain yksi suuri huone sekä ullakko tavaroiden säilytystä varten. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, mutta sen koristeellinen kivinen ovensuu lisättiin vasta sata vuotta myöhemmin, vuonna 1746. Nuorin veljeksistä rakennettiin 1600-luvun lopulla, ja se on kapea, koristeellinen barokkitalo. Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne kunnostettiin 1950-luvulla. Vuonna 2020 Kol…
+AIEMPI KYSYMYS: Mikä Liivinmaa oli historiassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liivinmaa oli historiallinen alue Itämeren itärannalla, joka kattoi karkeasti nykyisen [[Latvian]] ja Etelä-Viron alueita. Keskiajalla aluetta hallitsivat Saksalaisen ritarikunnan haara ja piispat, ja 1500-luvulla [[Liivinmaan sodassa]] alueesta kilpailivat monet vallat. Myöhemmin alue oli Puola-Liettuan, [[Ruotsin]] ja lopulta Venäjän vallan alla. Rajat ovat kyllä liikkuneet enemmän kuin yksikään kyyhky.
+KYSYMYS: Kerro lisää: Latvian
+
+### 460
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mikä Liivinmaa oli historiassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liivinmaa oli historiallinen alue Itämeren itärannalla, joka kattoi karkeasti nykyisen [[Latvian]] ja Etelä-Viron alueita. Keskiajalla aluetta hallitsivat Saksalaisen ritarikunnan haara ja piispat, ja 1500-luvulla [[Liivinmaan sodassa]] alueesta kilpailivat monet vallat. Myöhemmin alue oli Puola-Liettuan, [[Ruotsin]] ja lopulta Venäjän vallan alla. Rajat ovat kyllä liikkuneet enemmän kuin yksikään kyyhky.
+KYSYMYS: Kerro lisää: Liivinmaan sodassa
+
+### 461
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Mikä Liivinmaa oli historiassa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Liivinmaa oli historiallinen alue Itämeren itärannalla, joka kattoi karkeasti nykyisen [[Latvian]] ja Etelä-Viron alueita. Keskiajalla aluetta hallitsivat Saksalaisen ritarikunnan haara ja piispat, ja 1500-luvulla [[Liivinmaan sodassa]] alueesta kilpailivat monet vallat. Myöhemmin alue oli Puola-Liettuan, [[Ruotsin]] ja lopulta Venäjän vallan alla. Rajat ovat kyllä liikkuneet enemmän kuin yksikään kyyhky.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 462
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Korea — maalehti / Historia: Kirja, joka ehti Gutenbergin edelle] 1377 — Jikji painettiin Heungdeokin temppelissä vuonna 1377, ja se on maailman vanhin säilynyt metallikirjakkeilla painettu kirja — seitsemänkymmentäkahdeksan vuotta ennen kuin Johannes Gutenbergin 42-rivinen raamattu valmistui. Alkuperäisestä kaksiosaisesta teoksesta on jäljellä vain jälkimmäinen osa, ja se on Ranskan kansalliskirjastossa Pariisissa. Unesco vahvisti kirjan aseman vuonna 2001 ja merkitsi sen Maailman muisti -rekisteriin. Sisältö on kokoelma buddhalaisten mestareiden opetuksia.
+- [Saksa — maalehti / Kirjapaino: Mainz 1454 — sivu syntyy metallista] 1454 — Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin ja peilikuvana; sivu on valmis vasta, kun rivejä on neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita arkk…
+AIEMPI KYSYMYS: Miten kirjapaino muutti tiedon leviämistä Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on tärkeä. Saksalainen [[Johannes Gutenberg]] kehitti [[Mainzissa]] 1400-luvun puolivälissä irtokirjaimiin perustuvan painotekniikan Euroopassa. Kirjojen valmistaminen nopeutui ja halpeni, kun käsin kopioinnin sijaan voitiin painaa monta samanlaista kappaletta. Tieto, uskonnolliset kirjoitukset ja myöhemmin [[sanomalehdet]] levisivät laajemmalle lukijakunnalle, ja lukutaito yleistyi vähitellen. Põltsamaan 1700-luvun kirjapaino on tästä kehityksestä pieni mutta tärkeä esimerkki Virossa. Ja minä kuljetan yhä vain yhden kirjeen kerrallaan.
+KYSYMYS: Kerro lisää: Johannes Gutenberg
+
+### 463
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino: Mainz 1454 — sivu syntyy metallista] 1454 — Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin ja peilikuvana; sivu on valmis vasta, kun rivejä on neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita arkk…
+AIEMPI KYSYMYS: Miten kirjapaino muutti tiedon leviämistä Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on tärkeä. Saksalainen [[Johannes Gutenberg]] kehitti [[Mainzissa]] 1400-luvun puolivälissä irtokirjaimiin perustuvan painotekniikan Euroopassa. Kirjojen valmistaminen nopeutui ja halpeni, kun käsin kopioinnin sijaan voitiin painaa monta samanlaista kappaletta. Tieto, uskonnolliset kirjoitukset ja myöhemmin [[sanomalehdet]] levisivät laajemmalle lukijakunnalle, ja lukutaito yleistyi vähitellen. Põltsamaan 1700-luvun kirjapaino on tästä kehityksestä pieni mutta tärkeä esimerkki Virossa. Ja minä kuljetan yhä vain yhden kirjeen kerrallaan.
+KYSYMYS: Kerro lisää: Mainzissa
+
+### 464
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Põltsamaa (kulttuuri)
+Tietoruudun teksti: Põltsamaa on kaupunki Keski-Virossa Põltsamaa-joen varrella, ja sen tunnetuin nähtävyys on 1200-luvulla aloitettu linnus. Ensimmäiset merkinnät paikasta ovat vuodelta 1234. Vuosina 1570–1578 Põltsamaa oli Liivinmaan kuningaskunnan pääkaupunki, jossa hallitsi herttua Magnus. 1700-luvun jälkipuoliskolla siitä tuli Pohjois-Liivinmaan valistusliikkeen keskus: lähelle perustettiin ensimmäinen yksityinen kirjapaino Venäjän keisarikunnassa, ja vuonna 1766 siellä alettiin julkaista ensimmäistä vironkielistä aikakauslehteä nimeltä Lühhike öppetus. 1800-luvun jälkipuoliskolla paikka oli kansallisen heräämisen keskuksia, ja toisessa maailmansodassa noin 75 prosenttia kaupungin rakennuksista tuhoutui.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+- [Alankomaat — maalehti / Menovinkit] Alankomaat on skannannut itsensä verkkoon: maalaukset pikselintarkkoina, salainen takahuoneisto kolmiulotteisena, sanomalehdet vuodesta 1618 ja museo, jossa tyrannosaurus odottaa ilman pääsylippua.
+- [Latvia — maalehti / Menovinkit] Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa museoesinettä, sanomalehdet vuodesta 1822, ensimmäisten laulujuhlien jäljet vuodelta 1873 ja kolmetoista kameraa lintujen pesissä.
+AIEMPI KYSYMYS: Miten kirjapaino muutti tiedon leviämistä Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tämä on tärkeä. Saksalainen [[Johannes Gutenberg]] kehitti [[Mainzissa]] 1400-luvun puolivälissä irtokirjaimiin perustuvan painotekniikan Euroopassa. Kirjojen valmistaminen nopeutui ja halpeni, kun käsin kopioinnin sijaan voitiin painaa monta samanlaista kappaletta. Tieto, uskonnolliset kirjoitukset ja myöhemmin [[sanomalehdet]] levisivät laajemmalle lukijakunnalle, ja lukutaito yleistyi vähitellen. Põltsamaan 1700-luvun kirjapaino on tästä kehityksestä pieni mutta tärkeä esimerkki Virossa. Ja minä kuljetan yhä vain yhden kirjeen kerrallaan.
+KYSYMYS: Kerro lisää: sanomalehdet
+
+### 465
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+AIEMPI KYSYMYS: Miksi kokonainen asutus syntyi juuri yhden tehtaan ympärille?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kokonainen asutus syntyi tehtaan ympärille, koska tehdas toi mukanaan työpaikkoja ja työntekijät tarvitsivat asuntoja läheltä. Sindissä tehdas oli vuonna 1833 kartanon maille perustettu [[tekstiilitehdas]], jonka perusti riikalainen kauppias ja teollisuudenharjoittaja [[Johann Christoph Wöhrmann]]. Tehdas rakennettiin [[Pärnun joen]] rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Tehtaasta tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Yksi tehdas ja pian kokonainen kylä, ylhäältä sen näkee heti.
+KYSYMYS: Kerro lisää: tekstiilitehdas
+
+### 466
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+AIEMPI KYSYMYS: Miksi kokonainen asutus syntyi juuri yhden tehtaan ympärille?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kokonainen asutus syntyi tehtaan ympärille, koska tehdas toi mukanaan työpaikkoja ja työntekijät tarvitsivat asuntoja läheltä. Sindissä tehdas oli vuonna 1833 kartanon maille perustettu [[tekstiilitehdas]], jonka perusti riikalainen kauppias ja teollisuudenharjoittaja [[Johann Christoph Wöhrmann]]. Tehdas rakennettiin [[Pärnun joen]] rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Tehtaasta tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Yksi tehdas ja pian kokonainen kylä, ylhäältä sen näkee heti.
+KYSYMYS: Kerro lisää: Johann Christoph Wöhrmann
+
+### 467
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Miksi kokonainen asutus syntyi juuri yhden tehtaan ympärille?
+AIEMPI VASTAUS (Livia):
+Katotaas. Kokonainen asutus syntyi tehtaan ympärille, koska tehdas toi mukanaan työpaikkoja ja työntekijät tarvitsivat asuntoja läheltä. Sindissä tehdas oli vuonna 1833 kartanon maille perustettu [[tekstiilitehdas]], jonka perusti riikalainen kauppias ja teollisuudenharjoittaja [[Johann Christoph Wöhrmann]]. Tehdas rakennettiin [[Pärnun joen]] rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Tehtaasta tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Yksi tehdas ja pian kokonainen kylä, ylhäältä sen näkee heti.
+KYSYMYS: Kerro lisää: Pärnun joen
+
+### 468
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Miksi pato haittasi kalojen nousua joessa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tässä on kalojen kannalta tärkeä asia. Pato haittasi kalojen nousua [[Pärnun joessa]], koska monet joen kalalajit vaeltavat lisääntymisaikaan ylävirtaan kutupaikoilleen. Betoninen pato sulki tämän reitin, joten kalat eivät päässeet joen yläjuoksulle. Tällaisia [[vaelluskaloja]] ovat esimerkiksi [[lohikalat]]. Sindin pato purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella, jotta kalat pääsevät taas nousemaan. Kalat eivät ainakaan valita.
+KYSYMYS: Kerro lisää: Pärnun joessa
+
+### 469
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+AIEMPI KYSYMYS: Miksi pato haittasi kalojen nousua joessa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tässä on kalojen kannalta tärkeä asia. Pato haittasi kalojen nousua [[Pärnun joessa]], koska monet joen kalalajit vaeltavat lisääntymisaikaan ylävirtaan kutupaikoilleen. Betoninen pato sulki tämän reitin, joten kalat eivät päässeet joen yläjuoksulle. Tällaisia [[vaelluskaloja]] ovat esimerkiksi [[lohikalat]]. Sindin pato purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella, jotta kalat pääsevät taas nousemaan. Kalat eivät ainakaan valita.
+KYSYMYS: Kerro lisää: vaelluskaloja
+
+### 470
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+AIEMPI KYSYMYS: Miksi pato haittasi kalojen nousua joessa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tässä on kalojen kannalta tärkeä asia. Pato haittasi kalojen nousua [[Pärnun joessa]], koska monet joen kalalajit vaeltavat lisääntymisaikaan ylävirtaan kutupaikoilleen. Betoninen pato sulki tämän reitin, joten kalat eivät päässeet joen yläjuoksulle. Tällaisia [[vaelluskaloja]] ovat esimerkiksi [[lohikalat]]. Sindin pato purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella, jotta kalat pääsevät taas nousemaan. Kalat eivät ainakaan valita.
+KYSYMYS: Kerro lisää: lohikalat
+
+### 471
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Permanenten] 1887 Länsi-Norjan taideteollisuusmuseo perustettiin 1887 Johan Bøghin aloitteesta. Vuonna 1896 se sai pysyvän näyttelytalon — Henry Bucherin suunnitteleman uusrenessanssitalon — ja juuri siitä tulee koko museon lempinimi Permanenten. Talo syttyi palamaan Bergenin suurpalossa 1916, mutta se saatiin pelastettua. Kokoelmien ydin on vanha länsinorjalainen hopea, huonekalut, lasi, posliini ja tekstiili; avajaisiin kauppias Christian Sundt lahjoitti suuren erän esineitä. Ensimmäisinä vuosina ylimmässä kerroksessa oli Bergenin taidegalleria ja pohjakerroksessa kalastusmuseo. Talon kuuluisin kokoelma on kiinalainen, ja se on Johan Wilhelm Normann Munthen testamenttilahjoitus; Munthe asui Kiinassa k…
+- [Bosnia ja Hertsegovina — maalehti / Historia: Kirje joka on vanhin säilynyt suomalaisittain luettava teksti] 1189 — Bosnian ensimmäinen tunnettu hallitsija, ban Kulin, kirjoitutti 29. elokuuta 1189 kauppasopimuksen Dubrovnikin kaupungin kanssa: Dubrovnikin kauppiaat saivat liikkua ja käydä kauppaa Bosniassa vapaasti ja turvallisesti. Asiakirja on kirjoitettu bosančica-nimisellä kyrillisellä kirjaimistolla tavallisella puhekielellä, ei kirkkoslaavilla, minkä vuoksi sitä pidetään vanhimpana säilyneenä eteläslaavilaisen puhekielen valtiollisena asiakirjana. Alkuperäiskappaleesta on säilynyt keskiaikaisia jäljennöksiä, ja teksti tunnetaan kokonaisuudessaan niiden ansiosta. Kulinin aikaa pidetään Bosnian ensimmäisenä rauhan ja vaurauden kautena.
+AIEMPI KYSYMYS: Millaista oli työ tekstiilitehtaassa 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tämä oli kovaa työtä. [[Tekstiilitehtaassa]] kehrättiin lankaa ja kudottiin kangasta, usein koneilla, joita käytettiin [[vesivoimalla]] tai myöhemmin höyryllä. Työpäivät olivat yleensä pitkiä, palkat pieniä ja olosuhteet usein kovat, ja työntekijöinä oli myös lapsia. Työläiset asuivat tavallisesti tehtaan lähellä, kuten Sindissä, jossa työläisten talot rakennettiin tehtaan itäpuolelle. Euroopassa tällaiset tehtaat olivat osa [[teollisen vallankumouksen]] muutosta, joka siirsi työtä kodeista ja pelloilta tehtaisiin. Kyl minä kunnioitan ketä tahansa, joka tekee töitä vaikka sataa.
+KYSYMYS: Kerro lisää: Tekstiilitehtaassa
+
+### 472
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Salvador — kaupunkilehti / Historia: Hissi joka nosti kaupungin 1873] Elevador Lacerda rakennettiin 1869–1873 ja avattiin liikenteelle 1873 – samana vuonna, jolta isoisän matkapäiväkirja on. Se oli Brasilian ensimmäinen hissi ja se kulkee 72 metrin korkeuseron Alakaupungin ja Yläkaupungin väliä. Nimi tulee liikemies Antônio de Lacerdalta, joka johti Bahian kauppayhdistystä. Alun perin hissi toimi vesivoimalla, sähköistettiin 1906 ja sai nykyiset art déco -torninsa 1930. Kansallisperinnöksi se listattiin vasta 7. joulukuuta 2006, ja vuonna 2019 sillä kulki yli 33 000 matkustajaa vuorokaudessa.
+AIEMPI KYSYMYS: Millaista oli työ tekstiilitehtaassa 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tämä oli kovaa työtä. [[Tekstiilitehtaassa]] kehrättiin lankaa ja kudottiin kangasta, usein koneilla, joita käytettiin [[vesivoimalla]] tai myöhemmin höyryllä. Työpäivät olivat yleensä pitkiä, palkat pieniä ja olosuhteet usein kovat, ja työntekijöinä oli myös lapsia. Työläiset asuivat tavallisesti tehtaan lähellä, kuten Sindissä, jossa työläisten talot rakennettiin tehtaan itäpuolelle. Euroopassa tällaiset tehtaat olivat osa [[teollisen vallankumouksen]] muutosta, joka siirsi työtä kodeista ja pelloilta tehtaisiin. Kyl minä kunnioitan ketä tahansa, joka tekee töitä vaikka sataa.
+KYSYMYS: Kerro lisää: vesivoimalla
+
+### 473
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Medina — kohdekartta / Kohdekartta: Hidžaz-radan asema] 1908 Tämä oli radan pääte, viimeinen asema ennen kuin kiskot loppuvat. Asema rakennettiin Anbariyan kaupunginosaan lähelle Profeetan moskeijaa, ja siihen kuului useita rakennuksia: halli, sivurakennuksia ja oma raiteistonsa. Ensimmäinen juna kaartoi laiturille 1. syyskuuta 1908, ja kortteli oli kaupungille aivan uudenlainen — mitään vastaavaa teollisen ajan rakennusryhmää täällä ei ollut ennen nähty. Junat lakkasivat tulemasta vuoden 1920 tienoilla, mutta rakennukset jäivät. Entisöityyn asemakortteliin avattiin vuonna 2006 Hidžaz-radan museo: siellä on pätkä alkuperäistä rataa, vaunuhalli, vetureita ja liikkuvaa kalustoa sekä aseman omia työkaluja. Osa esineistä on tuotu muualta radan varre…
+- [Taiwan — maalehti / Tekniikka: Kamferi ja suomalainen kemisti] 1903 — Kamferipuun suuret metsiköt olivat 1800-luvun alkuun mennessä kaadettu lähes kaikkialta muualta, ja jäljellä olivat Japani ja Taiwan — Taiwan selvästi suurempana. Kamferista tuli teollisuuden raaka-aine, koska juuri se pehmitti nitroselluloosan selluloidiksi: elokuvafilmin ja varhaisen muovin ainekseksi. Kysyntä nosti hinnan, ja hallinnot pitivät kauppaa monopolissaan. Sitten suomalainen kemisti Gustaf Komppa julkaisi 1903 ensimmäisen täydellisen synteesin kamferihaposta ja aloitti 1907 teollisen valmistuksen Tainionkoskella. Formosan kamferi maksoi tavallisesti noin 50 senttiä naulalta, vuonna 1918 jo 3,75 dollaria.
+AIEMPI KYSYMYS: Millaista oli työ tekstiilitehtaassa 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tämä oli kovaa työtä. [[Tekstiilitehtaassa]] kehrättiin lankaa ja kudottiin kangasta, usein koneilla, joita käytettiin [[vesivoimalla]] tai myöhemmin höyryllä. Työpäivät olivat yleensä pitkiä, palkat pieniä ja olosuhteet usein kovat, ja työntekijöinä oli myös lapsia. Työläiset asuivat tavallisesti tehtaan lähellä, kuten Sindissä, jossa työläisten talot rakennettiin tehtaan itäpuolelle. Euroopassa tällaiset tehtaat olivat osa [[teollisen vallankumouksen]] muutosta, joka siirsi työtä kodeista ja pelloilta tehtaisiin. Kyl minä kunnioitan ketä tahansa, joka tekee töitä vaikka sataa.
+KYSYMYS: Kerro lisää: teollisen vallankumouksen
+
+### 474
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Miksi Pärnu on tunnettu kylpyläkaupunkina?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä saan kasaan. Pärnu on Lounais-Viron rannikkokaupunki, joka sijaitsee [[Riianlahden]] rannalla [[Pärnun joen]] suulla. Se tunnetaan kylpyläkaupunkina: sinne perustettiin kylpylätoimintaa 1800-luvulla, ja laaja hiekkaranta sekä hoitomuodot, kuten [[mutakylpylät]], ovat vetäneet vieraita kesäisin. Sindin tehdaskylä sijaitsee noin 14 kilometrin päässä Pärnusta. Hiekkaranta kuulostaa kyyhkyn korvaan hyvältä, jalat kiittävät.
+KYSYMYS: Kerro lisää: Riianlahden
+
+### 475
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+AIEMPI KYSYMYS: Miksi Pärnu on tunnettu kylpyläkaupunkina?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tän minä saan kasaan. Pärnu on Lounais-Viron rannikkokaupunki, joka sijaitsee [[Riianlahden]] rannalla [[Pärnun joen]] suulla. Se tunnetaan kylpyläkaupunkina: sinne perustettiin kylpylätoimintaa 1800-luvulla, ja laaja hiekkaranta sekä hoitomuodot, kuten [[mutakylpylät]], ovat vetäneet vieraita kesäisin. Sindin tehdaskylä sijaitsee noin 14 kilometrin päässä Pärnusta. Hiekkaranta kuulostaa kyyhkyn korvaan hyvältä, jalat kiittävät.
+KYSYMYS: Kerro lisää: mutakylpylät
+
+### 476
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+AIEMPI KYSYMYS: Miksi jokien patoja puretaan nykyään Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Jokien patoja puretaan nykyään monessa Euroopan maassa, koska ne katkaisevat joen luonnollisen virtauksen ja sulkevat [[vaelluskaloilta]] reitin kutupaikoille. Monet padot ovat myös vanhentuneita: ne on rakennettu aikoinaan esimerkiksi myllyjen ja tehtaiden käyttövoimaksi, eivätkä ne enää palvele alkuperäistä tarkoitustaan. Kun pato puretaan ja jokeen palautetaan [[koskia]] ja luonnollisia uomia, joen eliöstö voi elpyä. [[Sindin]] patokin purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella. Kyyhky lentää padon yli, joten minä en ole koskaan huomannut koko asiaa.
+KYSYMYS: Kerro lisää: vaelluskaloilta
+
+### 477
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Montreal — kaupunkilehti / Montreal: Illallisseura, joka laski koskia pöydältä lattialle] Turkiskaupasta rikastuneet skotlantilaiskauppiaat perustivat 1785 Beaver-klubin kunnioittamaan miehiä, jotka olivat viettäneet parhaat vuotensa villissä maassa. Illalliset alkoivat kello neljältä, jäsenet pukeutuivat röyhelöihin ja kultanauhaan, ja ilta päättyi vanhoihin voyageur-lauluihin ja pöydillä tanssimiseen. Lopuksi miehet asettuivat riviin lattialle kuin kanoottiin, meloivat hiilihangoilla ja jäljittelivät koskenlaskua pöydältä lattialle. Klubin miehiä pidetään Kultaisen neliömailin liikemiesten edeltäjinä.
+AIEMPI KYSYMYS: Miksi jokien patoja puretaan nykyään Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Jokien patoja puretaan nykyään monessa Euroopan maassa, koska ne katkaisevat joen luonnollisen virtauksen ja sulkevat [[vaelluskaloilta]] reitin kutupaikoille. Monet padot ovat myös vanhentuneita: ne on rakennettu aikoinaan esimerkiksi myllyjen ja tehtaiden käyttövoimaksi, eivätkä ne enää palvele alkuperäistä tarkoitustaan. Kun pato puretaan ja jokeen palautetaan [[koskia]] ja luonnollisia uomia, joen eliöstö voi elpyä. [[Sindin]] patokin purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella. Kyyhky lentää padon yli, joten minä en ole koskaan huomannut koko asiaa.
+KYSYMYS: Kerro lisää: koskia
+
+### 478
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Sindi (tekniikka)
+Tietoruudun teksti: Sindi on nykyään pieni kaupunki Pärnun joen vasemmalla rannalla, noin 14 kilometrin päässä Pärnusta. Asutus syntyi vuonna 1833 kartanon maille perustetun tekstiilitehtaan ympärille. Tehtaan perusti riikalainen kauppias ja teollisuudenharjoittaja Johann Christoph Wöhrmann, ja siitä tuli yksi Liivinmaan ja Viron kuvernementtien suurimmista. Tehdas rakennettiin joen rannalle, työläisten talot sen itäpuolelle ja työnjohtajien talot etelään, ja vuoteen 1841 mennessä alueelle oli valmistunut 57 taloa. Joessa oli pitkään betoninen pato, joka esti kaloja nousemasta joen yläjuoksulle; se purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Karachi — kohdekartta / Kohdekartta: Merewetherin kellotorni] 1884–1892 Torni seisoo siinä kohdassa, jossa Karachin kaksi tärkeintä katua, M. A. Jinnah Road ja I. I. Chundrigar Road, päättyvät samaan risteykseen. Se merkitsi ennen kahta rajaa: kaupungin eteläistä laitaa, kun satamasta Keamarista saavuttiin Napier Mole Roadia pitkin, ja rajaa vanhankaupungin ja sen itäpuolelle rakennetun eurooppalaisen Serai-korttelin välillä. Nykyään risteys on yksi kaupungin vilkkaimmista bussipysäkeistä. Torni pystytettiin kansalaiskeräyksellä sir William Lockyer Merewetherin muistoksi; hän oli Sindin komissaari 1867–1877. Suunnittelija oli kaupungininsinööri James Strachan, peruskiven laski 1884 Bombayn kuvernööri sir James Fergusson ja yleisölle rakennuksen avasi …
+- [Karachi — kohdekartta / Kohdekartta: Mohatta Palace] 1927 Cliftonin meren puoleiseen kaupunginosaan rakennettiin 1927 kesäasunto Shivratan Chandraratan Mohattalle, marwarilaiselle liikemiehelle. Suvun juuret olivat Bikanerissa Rajasthanissa, ja sen ensimmäinen jäsen muutti Karachiin 1883; Shivratan rikastui palmuöljysaippuan valmistuksesta. Suunnittelija oli Ahmed Hussain Agha. Talo jatkaa Rajasthanin kivipalatsien perinnettä: julkisivussa on Jodhpurin vaaleanpunaista kiveä yhdistettynä läheisen Gizrin keltaiseen. Pinta-alaa on 18 500 neliöjalkaa. Kupoleita on yhdeksän, keskimmäinen muita suurempi, ja jokaisessa kulmassa kohoaa kahdeksankulmainen torni chhatri-katoksen kruunaamana. Kivityössä toistuvat riikinkukot, kehäkukat ja hibiskukat, ja…
+AIEMPI KYSYMYS: Miksi jokien patoja puretaan nykyään Euroopassa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Jokien patoja puretaan nykyään monessa Euroopan maassa, koska ne katkaisevat joen luonnollisen virtauksen ja sulkevat [[vaelluskaloilta]] reitin kutupaikoille. Monet padot ovat myös vanhentuneita: ne on rakennettu aikoinaan esimerkiksi myllyjen ja tehtaiden käyttövoimaksi, eivätkä ne enää palvele alkuperäistä tarkoitustaan. Kun pato puretaan ja jokeen palautetaan [[koskia]] ja luonnollisia uomia, joen eliöstö voi elpyä. [[Sindin]] patokin purettiin vuosina 2018–2020 ja korvattiin luonnonmukaisella koskella. Kyyhky lentää padon yli, joten minä en ole koskaan huomannut koko asiaa.
+KYSYMYS: Kerro lisää: Sindin
+
+### 479
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+AIEMPI KYSYMYS: Miksi sementtitehdas rakennettiin juuri meren rannalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo jotain. Sementti on painavaa ja tilaa vievää tavaraa, joten sen kuljettaminen maitse oli 1800-luvulla hidasta ja kallista, kun laivalla suuria määriä sai liikkumaan edullisemmin. Rannalla sijaitseva tehdas pääsi lastaamaan tuotteensa suoraan satamaan, ja Kundassa sataman rakennuslupa oli myönnetty jo vuonna 1805, kauan ennen tehtaan perustamista vuonna 1870. Sementin raaka-aineita ovat kalkkikivi ja savi, joita Pohjois-Viron maaperässä on, mutta en ole varma, mistä Kundan tehdas ne tarkalleen sai. Näin tehdas, satama ja kaupunki kasvoivat yhdessä [[Suomenlahden]] rannalle ja [[kalkkikiveä]] hyödyntävä teollisuus sai oman väylänsä merelle. Minä kuljen kyl mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: Suomenlahden
+
+### 480
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Miksi sementtitehdas rakennettiin juuri meren rannalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo jotain. Sementti on painavaa ja tilaa vievää tavaraa, joten sen kuljettaminen maitse oli 1800-luvulla hidasta ja kallista, kun laivalla suuria määriä sai liikkumaan edullisemmin. Rannalla sijaitseva tehdas pääsi lastaamaan tuotteensa suoraan satamaan, ja Kundassa sataman rakennuslupa oli myönnetty jo vuonna 1805, kauan ennen tehtaan perustamista vuonna 1870. Sementin raaka-aineita ovat kalkkikivi ja savi, joita Pohjois-Viron maaperässä on, mutta en ole varma, mistä Kundan tehdas ne tarkalleen sai. Näin tehdas, satama ja kaupunki kasvoivat yhdessä [[Suomenlahden]] rannalle ja [[kalkkikiveä]] hyödyntävä teollisuus sai oman väylänsä merelle. Minä kuljen kyl mieluummin ilmateitse.
+KYSYMYS: Kerro lisää: kalkkikiveä

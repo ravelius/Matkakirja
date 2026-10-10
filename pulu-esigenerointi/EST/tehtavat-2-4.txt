@@ -1,0 +1,1024 @@
+### 241
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+AIEMPI KYSYMYS: Miksi alueen suojelu aloitettiin jo vuonna 1910 lintujen suojelualueena?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa syytä siihen, miksi suojelu aloitettiin juuri vuonna 1910, en ole varma, ja sellaista en rupea arvaamaan. Tiedossa on, että nykyinen [[Vilsandin]] kansallispuisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta ja että sitä pidetään Baltian vanhimpana suojelualueena. Alue on lintujen kannalta poikkeuksellinen: siellä on havaittu yli 250 lintulajia, yleisin pesijä on [[haahka]], ja [[muuttolinnut]] levähtävät sen vesillä. Yleensä tällaisen rannikon suojelun taustalla on huoli pesivistä linnuista ja niiden rauhasta, mutta tämän paikan tarkkaa historiaa en osaa kertoa. Parempi myöntää kuin keksiä, sanoo kyyhky.
+KYSYMYS: Kerro lisää: Vilsandin
+
+### 242
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Miksi alueen suojelu aloitettiin jo vuonna 1910 lintujen suojelualueena?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tarkkaa syytä siihen, miksi suojelu aloitettiin juuri vuonna 1910, en ole varma, ja sellaista en rupea arvaamaan. Tiedossa on, että nykyinen [[Vilsandin]] kansallispuisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta ja että sitä pidetään Baltian vanhimpana suojelualueena. Alue on lintujen kannalta poikkeuksellinen: siellä on havaittu yli 250 lintulajia, yleisin pesijä on [[haahka]], ja [[muuttolinnut]] levähtävät sen vesillä. Yleensä tällaisen rannikon suojelun taustalla on huoli pesivistä linnuista ja niiden rauhasta, mutta tämän paikan tarkkaa historiaa en osaa kertoa. Parempi myöntää kuin keksiä, sanoo kyyhky.
+KYSYMYS: Kerro lisää: muuttolinnut
+
+### 243
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+AIEMPI KYSYMYS: Mikä lintu haahka on ja miksi se pesii luodoilla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Haahka on suurikokoinen merellä elävä ankkalintu, joka viettää suuren osan elämästään rannikon ja avomeren tuntumassa. Se pesii mielellään pienillä saarilla ja luodoilla, koska niillä pesä on yleensä turvassa maalla liikkuvilta pedoilta ja häiriöiltä. [[Vilsandin]] kansallispuistossa haahka on yleisin pesijä, ja puiston noin sata pienempää saarta ja luotoa tarjoavat sille runsaasti sopivia paikkoja. Naaras tunnetaan siitä, että se vuoraa pesänsä omalla pehmeällä [[untuvallaan]], jota on perinteisesti kerätty myös ihmisten käyttöön.
+
+Minun sukuni kantaa kirjeitä ja haahkan suku tekee tyynyjä, ja eipä siinä, kumpikin on hyödyllistä. Minä silti pidän omaa työtäni vähän jännittävämpänä.
+KYSYMYS: Kerro lisää: untuvallaan
+
+### 244
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mistä ja minne valkoposkihanhet muuttavat Viron kautta?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Valkoposkihanhet ovat arktisilla alueilla pesiviä hanhia, ja lähteiden mukaan ne talvehtivat Pohjanmeren rannikon seuduilla, esimerkiksi Alankomaissa ja Saksassa. Keväällä ja syksyllä niiden reitti kulkee Itämeren yli ja rannikoita pitkin, ja [[Länsi-Viron]] saaristo on niille tärkeä pysähdyspaikka. [[Vilsandin]] kansallispuiston vesillä hanhet pysähtyvät levähtämään ennen matkan jatkumista, ja metsästyskielto tekee levosta rauhallisempaa. Tarkkoja reittejä ja päivämääriä en lähde luettelemaan, koska ne vaihtelevat vuodesta toiseen. Reitti on pitkä, ja minä olen kyllä sen verran kateellinen, että tuntuu.
+KYSYMYS: Kerro lisää: Länsi-Viron
+
+### 245
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vilsandin kansallispuisto (luonto · saari)
+Tietoruudun teksti: Vilsandin kansallispuisto on merellinen suojelualue Saarenmaan länsirannikolla Virossa. Se kattaa osan Vilsandin saaresta, noin sata pienempää saarta ja luotoa sekä Saarenmaan länsiosan rannikkoa Harilaidin niemimaa mukaan lukien; Vilsandi on puiston ainoa asuttu saari. Puisto on kasvanut vuonna 1910 perustetusta lintujen suojelualueesta, ja sitä pidetään Baltian vanhimpana suojelualueena. Alueella on havaittu yli 250 lintulajia, ja yleisin pesijä on haahka. Muuttolinnut, kuten valkoposkihanhet, pysähtyvät alueen vesillä levähtämään, ja kolmannes Viron suojelluista kasvilajeista kasvaa puistossa. Metsästys on siellä kokonaan kielletty.
+AIEMPI KYSYMYS: Miksi Saarenmaan rannikolla on niin paljon pieniä luotoja?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Yksi tärkeä syy on [[maankohoaminen]]: viimeisen jääkauden jälkeen maankuori on noussut, ja Itämeren rannoilla matalat merenpohjan kohdat ovat vähitellen paljastuneet saariksi ja luodoiksi. Länsi-Virossa tämä kohoaminen jatkuu edelleen, joten rannikon muoto muuttuu hitaasti. Saarenmaan länsiosan rannikko on matala ja sen edustalla on paljon pieniä saaria, mikä näkyy myös [[Vilsandin]] kansallispuiston noin sadassa pienemmässä saaressa ja luodossa. Tarkkaa selitystä jokaiselle yksittäiselle luodolle en osaa antaa, sillä siihen vaikuttavat myös kallioperä ja aallokko. Ylhäältä katsottuna ne näyttävät kyllä ihan kuin joku olisi sirotellut leivänmuruja.
+KYSYMYS: Kerro lisää: maankohoaminen
+
+### 246
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Miksi suot ja lähteet ovat tärkeitä Põltsamaa-joen vesille?
+AIEMPI VASTAUS (Livia):
+Mmm— Endlan luonnonsuojelualue sijaitsee Keski-Virossa [[Pandiveren]] ylängön eteläosassa, ja se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja. Alueella on tärkeä osa [[Põltsamaa-joen]] vesien uusiutumisessa. Suot toimivat hyvin pitkälti vesivarastoina: turvekerros pidättää sade- ja sulamisvettä ja luovuttaa sitä vähitellen puroihin, kun taas lähteet tuovat pohjavettä pintaan. Näin vesi pysyy liikkeessä ja joen vedenkorkeus tasaantuu eri vuodenaikoina. Tarkkoja virtaamalukuja en tunne, mutta periaate on tämä.
+
+Ylhäältä suo näyttää tummalta läiskältä, jonka ympärillä kaikki muu on kuivaa. Minä pidän siitä, että läiskä tekee työtä ja pitää joen hengissä.
+KYSYMYS: Kerro lisää: Pandiveren
+
+### 247
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Miksi suot ja lähteet ovat tärkeitä Põltsamaa-joen vesille?
+AIEMPI VASTAUS (Livia):
+Mmm— Endlan luonnonsuojelualue sijaitsee Keski-Virossa [[Pandiveren]] ylängön eteläosassa, ja se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja. Alueella on tärkeä osa [[Põltsamaa-joen]] vesien uusiutumisessa. Suot toimivat hyvin pitkälti vesivarastoina: turvekerros pidättää sade- ja sulamisvettä ja luovuttaa sitä vähitellen puroihin, kun taas lähteet tuovat pohjavettä pintaan. Näin vesi pysyy liikkeessä ja joen vedenkorkeus tasaantuu eri vuodenaikoina. Tarkkoja virtaamalukuja en tunne, mutta periaate on tämä.
+
+Ylhäältä suo näyttää tummalta läiskältä, jonka ympärillä kaikki muu on kuivaa. Minä pidän siitä, että läiskä tekee työtä ja pitää joen hengissä.
+KYSYMYS: Kerro lisää: Põltsamaa-joen
+
+### 248
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Luonto: Turvetta kaivaessa löytyi kokonainen kivikausi] 1875 — Kaksi vuotta isoisän matkan jälkeen, vuonna 1875, suomologi Karel Dežman löysi Ljubljanan suolta ensimmäiset merkit paalukylistä turvetta kaivaessaan. Myöhemmät kaivaukset paljastivat, että ihmiset olivat asuttaneet suon reunoja jo noin 4600–2000 eaa.: he rakensivat mökkinsä puupaalujen varaan veden ja kosteuden yläpuolelle. Ljubljanan suon paalukylät kuuluvat nykyään Unescon Alppien ympäristön esihistoriallisten paalukylien maailmanperintökohteeseen yhdessä satojen muiden löytöpaikkojen kanssa kuudessa maassa.
+AIEMPI KYSYMYS: Mitä suon paksu turvekerros kertoo alueen historiasta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Endlan soiden turvekerros voi olla jopa kahdeksan metriä paksu, ja se kertoo pitkästä, hitaasta kehityksestä. [[Turve]] syntyy, kun kuolleet kasvit eivät happivajeisessa ja märässä ympäristössä lahoa kokonaan vaan kerrostuvat vähitellen toistensa päälle. Kasvu on yleensä hyvin hidasta, suunnilleen millimetrin vuodessa, joten kahdeksan metriä viittaa ainakin useisiin tuhansiin vuosiin, vaikka tarkka luku riippuu suosta. Alueella on myös monia [[jäännejärviä]], ja niiden perusteella vesistöt ovat muuttuneet ajan mittaan. Monin paikoin suot ovat syntyneet järvien umpeenkasvun tai maan soistumisen kautta. Tarkkaa ajoitusta Endlan turpeelle en tiedä. Hitaus on minulle henkilökohtaisesti vierasta, mutta kunnioitan sitä.
+KYSYMYS: Kerro lisää: Turve
+
+### 249
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Mitä suon paksu turvekerros kertoo alueen historiasta?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Endlan soiden turvekerros voi olla jopa kahdeksan metriä paksu, ja se kertoo pitkästä, hitaasta kehityksestä. [[Turve]] syntyy, kun kuolleet kasvit eivät happivajeisessa ja märässä ympäristössä lahoa kokonaan vaan kerrostuvat vähitellen toistensa päälle. Kasvu on yleensä hyvin hidasta, suunnilleen millimetrin vuodessa, joten kahdeksan metriä viittaa ainakin useisiin tuhansiin vuosiin, vaikka tarkka luku riippuu suosta. Alueella on myös monia [[jäännejärviä]], ja niiden perusteella vesistöt ovat muuttuneet ajan mittaan. Monin paikoin suot ovat syntyneet järvien umpeenkasvun tai maan soistumisen kautta. Tarkkaa ajoitusta Endlan turpeelle en tiedä. Hitaus on minulle henkilökohtaisesti vierasta, mutta kunnioitan sitä.
+KYSYMYS: Kerro lisää: jäännejärviä
+
+### 250
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Miksi kämmekät ovat usein uhanalaisia soilla ja niityillä?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Kämmekät]] ovat [[orkideoihin]] kuuluva kasviryhmä, ja monet lajit ovat hyvin vaativia kasvupaikkansa suhteen. Endlan alueella on useita uhanalaisia kämmekkälajeja, ja kasveja on alueella löydetty noin 450. Kämmekät kasvavat usein vain tietynlaisessa maaperässä, kosteudessa ja ravinteisuudessa, ja ne ovat riippuvaisia maaperän sienistä, joiden avulla siemenet itävät. Kuivatus, ojitus, metsätalous, rakentaminen ja kasvupaikan umpeenkasvu voivat kaikki heikentää niiden elinympäristöä. Siksi suojelualueet ovat niille tärkeitä, vaikka tarkkoja lajikohtaisia syitä Endlassa en osaa luetella. Kukkia minä en syö, mutta nämä kyllä ihailen ylhäältä.
+KYSYMYS: Kerro lisää: Kämmekät
+
+### 251
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Miksi kämmekät ovat usein uhanalaisia soilla ja niityillä?
+AIEMPI VASTAUS (Livia):
+Ai se. [[Kämmekät]] ovat [[orkideoihin]] kuuluva kasviryhmä, ja monet lajit ovat hyvin vaativia kasvupaikkansa suhteen. Endlan alueella on useita uhanalaisia kämmekkälajeja, ja kasveja on alueella löydetty noin 450. Kämmekät kasvavat usein vain tietynlaisessa maaperässä, kosteudessa ja ravinteisuudessa, ja ne ovat riippuvaisia maaperän sienistä, joiden avulla siemenet itävät. Kuivatus, ojitus, metsätalous, rakentaminen ja kasvupaikan umpeenkasvu voivat kaikki heikentää niiden elinympäristöä. Siksi suojelualueet ovat niille tärkeitä, vaikka tarkkoja lajikohtaisia syitä Endlassa en osaa luetella. Kukkia minä en syö, mutta nämä kyllä ihailen ylhäältä.
+KYSYMYS: Kerro lisää: orkideoihin
+
+### 252
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Millaiset linnut viihtyvät soilla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suot ovat monille linnuille tärkeitä pesimä- ja ruokailupaikkoja, koska ne ovat laajoja, märkiä ja ihmisten kulkemia vähän. [[Endlan alueella]] pesii noin 180 lintulajia, ja suojelualueella on [[näkötorneja]] ja luontopolkuja, joilta lintuja voi tarkkailla. Yleisesti soilla viihtyvät esimerkiksi [[kurjet]] ja muut kosteikkojen lajit, mutta tarkkaa luetteloa Endlan lajeista en ole varma antamaan. Linnuille suot tarjoavat suojaa maapedoilta, hyönteisiä ja marjoja ruoaksi sekä rauhaa pesimiseen. Pitkä lista lajeja olisi ollut hauska, mutta kyyhky ei osaa kaikkea ulkoa.
+KYSYMYS: Kerro lisää: Endlan alueella
+
+### 253
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Millaiset linnut viihtyvät soilla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suot ovat monille linnuille tärkeitä pesimä- ja ruokailupaikkoja, koska ne ovat laajoja, märkiä ja ihmisten kulkemia vähän. [[Endlan alueella]] pesii noin 180 lintulajia, ja suojelualueella on [[näkötorneja]] ja luontopolkuja, joilta lintuja voi tarkkailla. Yleisesti soilla viihtyvät esimerkiksi [[kurjet]] ja muut kosteikkojen lajit, mutta tarkkaa luetteloa Endlan lajeista en ole varma antamaan. Linnuille suot tarjoavat suojaa maapedoilta, hyönteisiä ja marjoja ruoaksi sekä rauhaa pesimiseen. Pitkä lista lajeja olisi ollut hauska, mutta kyyhky ei osaa kaikkea ulkoa.
+KYSYMYS: Kerro lisää: näkötorneja
+
+### 254
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Japani — maalehti / Luonto: Kurki, joka ei muuta minnekään] Japaninkurki on maailman harvinaisimpia kurkia. Mantereen linnut muuttavat Siperiasta ja Koillis-Kiinasta talveksi Korean niemimaalle, mutta Itä-Hokkaidon kanta pysyy paikallaan ja siirtyy talvehtimaan vain noin 150 kilometrin päähän. Vuoden 2020 talvilaskennassa Japanissa oli noin 1 900 lintua. Koiras painaa keskimäärin 8,2 kiloa. Hokkaidon alkuperäiskansa ainu kutsui lintua nimellä Sarurun Kamuy, suon jumala. Japani rauhoitti lajin ja sen pesimäalueet vuonna 1935, ja Kushiron kurjet nimettiin erityiseksi luonnonmuistomerkiksi vuonna 1952.
+- [Etelä-Korea — maalehti / Kuvataide: Väri suojaa puuta] Dancheong on korealaisten temppelien ja palatsien räystäiden ja palkkien värikuviointi. Se perustuu viiteen väriin, joilla on kullakin ilmansuunta: sininen on itä, valkoinen länsi, punainen etelä, musta pohjoinen ja keltainen keskusta. Kuvioissa toistuvat lohikäärmeet, kurjet ja lootuskukat. Maalaus ei ole pelkkää koristetta: paksu mineraalipohjainen väri suojaa puuta kosteudelta, auringolta ja hyönteisiltä, ja peittää samalla puun epätasaisuudet. Työn tekee erikoistunut maalari, ja kuviot noudattavat vakiintuneita malleja.
+AIEMPI KYSYMYS: Millaiset linnut viihtyvät soilla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Suot ovat monille linnuille tärkeitä pesimä- ja ruokailupaikkoja, koska ne ovat laajoja, märkiä ja ihmisten kulkemia vähän. [[Endlan alueella]] pesii noin 180 lintulajia, ja suojelualueella on [[näkötorneja]] ja luontopolkuja, joilta lintuja voi tarkkailla. Yleisesti soilla viihtyvät esimerkiksi [[kurjet]] ja muut kosteikkojen lajit, mutta tarkkaa luetteloa Endlan lajeista en ole varma antamaan. Linnuille suot tarjoavat suojaa maapedoilta, hyönteisiä ja marjoja ruoaksi sekä rauhaa pesimiseen. Pitkä lista lajeja olisi ollut hauska, mutta kyyhky ei osaa kaikkea ulkoa.
+KYSYMYS: Kerro lisää: kurjet
+
+### 255
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Mitä eroa on suolla, rämeellä ja lähteellä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Suo]] on yleisnimi märälle, turvetta muodostavalle alueelle. [[Räme]] on suotyyppi, jossa kasvaa puita, tavallisesti mäntyjä, ja se on yleensä ravinteista köyhä. [[Lähde]] taas on paikka, jossa pohjavesi nousee maan pinnalle ja muodostaa usein puron alun. Endlan alueen makean veden järjestelmään kuuluvat kaikki nämä: suot, rämeet, lähteet ja puro. Ne ovat osa samaa kokonaisuutta, jossa vesi kulkee maan alla, suon läpi ja puroina kohti jokea. Tarkat suotyyppien rajat voivat vaihdella luokittelun mukaan. Minä muistan nämä parhaiten siitä, että kastuu.
+KYSYMYS: Kerro lisää: Suo
+
+### 256
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+AIEMPI KYSYMYS: Mitä eroa on suolla, rämeellä ja lähteellä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Suo]] on yleisnimi märälle, turvetta muodostavalle alueelle. [[Räme]] on suotyyppi, jossa kasvaa puita, tavallisesti mäntyjä, ja se on yleensä ravinteista köyhä. [[Lähde]] taas on paikka, jossa pohjavesi nousee maan pinnalle ja muodostaa usein puron alun. Endlan alueen makean veden järjestelmään kuuluvat kaikki nämä: suot, rämeet, lähteet ja puro. Ne ovat osa samaa kokonaisuutta, jossa vesi kulkee maan alla, suon läpi ja puroina kohti jokea. Tarkat suotyyppien rajat voivat vaihdella luokittelun mukaan. Minä muistan nämä parhaiten siitä, että kastuu.
+KYSYMYS: Kerro lisää: Räme
+
+### 257
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Endlan luonnonsuojelualue (luonto · järvi)
+Tietoruudun teksti: Endlan luonnonsuojelualue on Keski-Virossa Pandiveren ylängön eteläosassa. Se suojelee makean veden järjestelmää, johon kuuluu soita, rämeitä, lähteitä ja puroja, ja alueella on tärkeä osa Põltsamaa-joen vesien uusiutumisessa. Alueella on monia jäännejärviä, joista suurin on Endla Sinijärv, ja soiden turvekerros voi olla jopa kahdeksan metriä paksu. Suojelu alkoi 1980-luvulla, ja valtiollinen luonnonsuojelualue perustettiin vuonna 1985. Alueella pesii noin 180 lintulajia ja kasveja on löydetty noin 450, muun muassa useita uhanalaisia kämmekkälajeja. Vierailijoille on näkötorneja ja luontopolkuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Intiaanittaren lähde] 1837 Suihkulähde syntyi Villanuevan kreivin Claudio Martínez de Pinillosin aloitteesta. Se tuotiin Italiasta 1837, ja sen muotoili Carraran marmorista italialainen Giuseppe Gaggini. Kolmimetrinen valkoinen marmoriveistos seisoo suorakulmaisella jalustalla, jonka joka kulmassa on delfiini; delfiinien kielistä valuu vesi suuriin simpukan kuoriin, jotka muodostavat lähteen altaan. Hahmo esittää intiaaninaista nimeltä Habana, jonka mukaan kaupunki on nimetty. Nainen istuu kalliolla ja katsoo itään. Kasvot ovat intiaanin, mutta profiili on kreikkalainen — juuri se on ollut voimakkain kritiikki veistäjää kohtaan, sillä kreikkalainen profiili oli aikansa käsitys naisellisesta täydellisyydestä. Vas…
+- [Yellowstone — kaupunkilehti / Geysirit ja erämaa: Grand Prismatic Spring — sateenkaaren lähde] Grand Prismatic Spring on Yhdysvaltain suurin ja maailman kolmanneksi suurin kuuma lähde: halkaisijaltaan noin 110 metriä ja syvimmiltä kohdiltaan noin 50 metriä syvä. Keskellä vesi on niin kuumaa ja steriiliä, ettei siellä elä juuri mitään — siksi keskiosa näyttää syvän siniseltä, kun pelkkä vesi imee itseensä muut värit paitsi sinisen. Reunoilla vesi jäähtyy, ja siellä viihtyvät lämpöä sietävät bakteerit ja arkeonit muodostavat mattoja, joiden klorofylli ja karotenoidipigmentit värjäävät renkaat keltaisiksi, oransseiksi ja punaisiksi. Värit vaihtuvat vuodenajan mukaan: kesällä reunat hehkuvat oranssinpunaisina, talvella ne tummuvat lähes vihreiksi.
+AIEMPI KYSYMYS: Mitä eroa on suolla, rämeellä ja lähteellä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Suo]] on yleisnimi märälle, turvetta muodostavalle alueelle. [[Räme]] on suotyyppi, jossa kasvaa puita, tavallisesti mäntyjä, ja se on yleensä ravinteista köyhä. [[Lähde]] taas on paikka, jossa pohjavesi nousee maan pinnalle ja muodostaa usein puron alun. Endlan alueen makean veden järjestelmään kuuluvat kaikki nämä: suot, rämeet, lähteet ja puro. Ne ovat osa samaa kokonaisuutta, jossa vesi kulkee maan alla, suon läpi ja puroina kohti jokea. Tarkat suotyyppien rajat voivat vaihdella luokittelun mukaan. Minä muistan nämä parhaiten siitä, että kastuu.
+KYSYMYS: Kerro lisää: Lähde
+
+### 258
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Luonto: Jyrkänne, jonka voi raapia kynnellä] 1973 — Gaujan laaksossa joki on kuluttanut rantaan punertavia jyrkänteitä, jotka ovat devonikautista hiekkakiveä — niin pehmeää, että siihen voi piirtää kynnellä. Korkeimmat seinämät kohoavat parikymmentä metriä, ja niiden juurella on luolia. Tunnetuimman luolan seinissä on nimikirjaimia jo 1600-luvulta, joten turistien tapa kaivertaa nimensä kiveen on paljon vanhempi kuin luulisi. Gaujan kansallispuisto perustettiin 1973, ja se on Latvian suurin.
+AIEMPI KYSYMYS: Miksi Ahja-joen rannoilla kohoaa korkeita punertavia hiekkakivikallioita?
+AIEMPI VASTAUS (Livia):
+No niin, kivi on tässä pääosassa. Taevaskojan kalliot ovat [[devonikautista]] hiekkakiveä, joka on kerrostunut satoja miljoonia vuosia sitten, kun alueella oli vettä ja hiekkaa kerääntyi kerroksiksi. Punertava väri tulee yleensä hiekkakiven sisältämistä rautayhdisteistä, vaikka tarkkaa kemiaa tämän paikan kivestä en ole varma. [[Ahja-joki]] on kaivanut ikivanhaan jokilaaksoonsa niin, että kalliot ovat tulleet esiin, ja kallioita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat [[Suur Taevaskoda]] ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Ylhäältä ne näyttävät kyllä enemmän punaiselta haavalta kuin kivilöydöltä.
+KYSYMYS: Kerro lisää: devonikautista
+
+### 259
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Miksi Ahja-joen rannoilla kohoaa korkeita punertavia hiekkakivikallioita?
+AIEMPI VASTAUS (Livia):
+No niin, kivi on tässä pääosassa. Taevaskojan kalliot ovat [[devonikautista]] hiekkakiveä, joka on kerrostunut satoja miljoonia vuosia sitten, kun alueella oli vettä ja hiekkaa kerääntyi kerroksiksi. Punertava väri tulee yleensä hiekkakiven sisältämistä rautayhdisteistä, vaikka tarkkaa kemiaa tämän paikan kivestä en ole varma. [[Ahja-joki]] on kaivanut ikivanhaan jokilaaksoonsa niin, että kalliot ovat tulleet esiin, ja kallioita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat [[Suur Taevaskoda]] ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Ylhäältä ne näyttävät kyllä enemmän punaiselta haavalta kuin kivilöydöltä.
+KYSYMYS: Kerro lisää: Ahja-joki
+
+### 260
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Miksi Ahja-joen rannoilla kohoaa korkeita punertavia hiekkakivikallioita?
+AIEMPI VASTAUS (Livia):
+No niin, kivi on tässä pääosassa. Taevaskojan kalliot ovat [[devonikautista]] hiekkakiveä, joka on kerrostunut satoja miljoonia vuosia sitten, kun alueella oli vettä ja hiekkaa kerääntyi kerroksiksi. Punertava väri tulee yleensä hiekkakiven sisältämistä rautayhdisteistä, vaikka tarkkaa kemiaa tämän paikan kivestä en ole varma. [[Ahja-joki]] on kaivanut ikivanhaan jokilaaksoonsa niin, että kalliot ovat tulleet esiin, ja kallioita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat [[Suur Taevaskoda]] ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Ylhäältä ne näyttävät kyllä enemmän punaiselta haavalta kuin kivilöydöltä.
+KYSYMYS: Kerro lisää: Suur Taevaskoda
+
+### 261
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Mikä sai Taevaskojan kylän syntymään vasta 1930-luvulla?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nykyinen kylä syntyi vasta 1930-luvulla [[Tartto–Petseri-rautatien]] rakentamisen jälkeen. Sitä ennen kylän pohjoisosa kuului [[Ahjan kartanolle]] ja eteläosa Vana-Koiolan kartanolle. Ahjan kartanon vuoden 1873 metsäkartalla mainitaan jo paikannimi Taiwaskodda pallo, joten paikka tunnettiin nimeltä, vaikka varsinaista kylää ei vielä ollut. Rautatie toi alueelle liikennettä ja rakentamista, ja sen mukana syntyi asutus. Tarkempia yksityiskohtia kylän perustamisesta en tiedä.
+
+Rautatie vei kyyhkyiltä leivän monessa paikassa, mutta tässä se sentään sai kokonaisen kylän syntymään. Sen minä myönnän.
+KYSYMYS: Kerro lisää: Tartto–Petseri-rautatien
+
+### 262
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Mikä sai Taevaskojan kylän syntymään vasta 1930-luvulla?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: nykyinen kylä syntyi vasta 1930-luvulla [[Tartto–Petseri-rautatien]] rakentamisen jälkeen. Sitä ennen kylän pohjoisosa kuului [[Ahjan kartanolle]] ja eteläosa Vana-Koiolan kartanolle. Ahjan kartanon vuoden 1873 metsäkartalla mainitaan jo paikannimi Taiwaskodda pallo, joten paikka tunnettiin nimeltä, vaikka varsinaista kylää ei vielä ollut. Rautatie toi alueelle liikennettä ja rakentamista, ja sen mukana syntyi asutus. Tarkempia yksityiskohtia kylän perustamisesta en tiedä.
+
+Rautatie vei kyyhkyiltä leivän monessa paikassa, mutta tässä se sentään sai kokonaisen kylän syntymään. Sen minä myönnän.
+KYSYMYS: Kerro lisää: Ahjan kartanolle
+
+### 263
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Mitä Taevaskojan nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viron kielessä sana taevas tarkoittaa taivasta, ja nimen jälkiosa koda viittaa suunnilleen kotiin, kammioon tai majaan, joten nimen voi tulkita karkeasti taivaan kodiksi. Tarkasta etymologiasta en ole varma, ja nimen merkitystä voi selittää muillakin tavoilla. Kylä on saanut nimensä [[Ahja-joen]] ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Kallioita on kaksi tunnetuinta, [[Suur Taevaskoda]] ja [[Väike Taevaskoda]]. Vuoden 1873 metsäkartalla nimi esiintyy muodossa Taiwaskodda pallo. Nimeä on hyvä katsoa kahdelta puolelta, ja minä katson sitä taivaan puolelta, ihan ammatillisista syistä.
+KYSYMYS: Kerro lisää: Ahja-joen
+
+### 264
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Mitä Taevaskojan nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viron kielessä sana taevas tarkoittaa taivasta, ja nimen jälkiosa koda viittaa suunnilleen kotiin, kammioon tai majaan, joten nimen voi tulkita karkeasti taivaan kodiksi. Tarkasta etymologiasta en ole varma, ja nimen merkitystä voi selittää muillakin tavoilla. Kylä on saanut nimensä [[Ahja-joen]] ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Kallioita on kaksi tunnetuinta, [[Suur Taevaskoda]] ja [[Väike Taevaskoda]]. Vuoden 1873 metsäkartalla nimi esiintyy muodossa Taiwaskodda pallo. Nimeä on hyvä katsoa kahdelta puolelta, ja minä katson sitä taivaan puolelta, ihan ammatillisista syistä.
+KYSYMYS: Kerro lisää: Väike Taevaskoda
+
+### 265
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saudi-Arabia — maalehti / Luonto: Hiekkakivi on veistetty tuulella] Pohjois-Saudi-Arabiassa Hailin seudulla kohoaa hiekkakivimuodostumia, joiden väliin jää kapeita laaksoja. Kivi on kerroksellista, ja tuuli ja harvat rankkasateet ovat kuluttaneet pehmeämmät kerrokset nopeammin kuin kovat: siitä syntyvät ulokkeet, kielekkeet ja onkalot. Alue kuuluu Kuningas Salmanin suojelualueeseen, ja sen halki on kuljettu vanhoja karavaanireittejä. Aamulla ja illalla kivi hehkuu oranssina, koska matala aurinko korostaa hiekkakiven rautapitoista pintaa.
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+AIEMPI KYSYMYS: Miten hiekkakivi syntyy ja miksi se murenee helposti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Hiekkakivi]] syntyy, kun hiekkajyvät kerrostuvat esimerkiksi meren, joen tai järven pohjaan ja liittyvät ajan mittaan toisiinsa paineen ja sementoivien aineiden vaikutuksesta. [[Taevaskojan kalliot]] ovat [[devonikautista]] hiekkakiveä. Hiekkakivi voi murentua helposti, koska jyvät ovat sidottu toisiinsa vain löyhästi ja vesi, jää ja tuuli irrottavat niitä vähitellen. Joen läheisyys, sulamis- ja jäätymiskierto sekä kosteus nopeuttavat rapautumista. Murenemisen vauhti vaihtelee kivestä toiseen, ja tästä paikasta en tunne tarkkoja lukuja. Vierailijan kannattaa pitäytyä merkityillä poluilla. Itse pysyn ilmassa, enkä murene.
+KYSYMYS: Kerro lisää: Hiekkakivi
+
+### 266
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Miten hiekkakivi syntyy ja miksi se murenee helposti?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Hiekkakivi]] syntyy, kun hiekkajyvät kerrostuvat esimerkiksi meren, joen tai järven pohjaan ja liittyvät ajan mittaan toisiinsa paineen ja sementoivien aineiden vaikutuksesta. [[Taevaskojan kalliot]] ovat [[devonikautista]] hiekkakiveä. Hiekkakivi voi murentua helposti, koska jyvät ovat sidottu toisiinsa vain löyhästi ja vesi, jää ja tuuli irrottavat niitä vähitellen. Joen läheisyys, sulamis- ja jäätymiskierto sekä kosteus nopeuttavat rapautumista. Murenemisen vauhti vaihtelee kivestä toiseen, ja tästä paikasta en tunne tarkkoja lukuja. Vierailijan kannattaa pitäytyä merkityillä poluilla. Itse pysyn ilmassa, enkä murene.
+KYSYMYS: Kerro lisää: Taevaskojan kalliot
+
+### 267
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Mitä devonikausi tarkoittaa ja millainen maailma silloin oli?
+AIEMPI VASTAUS (Livia):
+Just niin, devonikausi. [[Devonikausi]] on geologinen kausi, joka sijoittuu noin 420–360 miljoonan vuoden taakse. Sitä kutsutaan usein kalojen ajaksi, koska kalat monipuolistuivat silloin voimakkaasti, ja samaan aikaan kasvit ja eläimet alkoivat vallata maata. Nykyisen Viron seudulla oli matalia meriä ja rannikoita, joihin kerrostui hiekkaa ja savea; niistä ovat peräisin esimerkiksi [[Taevaskojan]] hiekkakivet. Tarkkoja ajankohtia ja paikallisia olosuhteita on tutkittu paljon, mutta yksityiskohdat minulta ovat epävarmoja. Pitkältä kuulostaa, mutta kauan se oli kuitenkin kestänyt.
+KYSYMYS: Kerro lisää: Devonikausi
+
+### 268
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Taevaskoja (luonto · joki)
+Tietoruudun teksti: Taevaskoja on kylä Kaakkois-Virossa Põlvan kunnassa, ja se tunnetaan Ahja-joen rannoilla kohoavista devonikautisista hiekkakivipaljastumista. Kylä on saanut nimensä Ahja-joen ikivanhan jokilaakson hiekkakivikallioista, joita kutsutaan taevaskodiksi. Jokilaakson maisemansuojelualueella sijaitsevat Suur Taevaskoda ja Väike Taevaskoda ovat Etelä-Viron vierailluimpia matkailukohteita. Kylän pohjoisosa kuului aiemmin Ahjan kartanolle ja eteläosa Vana-Koiolan kartanolle, ja Ahjan kartanon vuoden 1873 metsäkartalla mainitaan paikannimi Taiwaskodda pallo. Nykyinen kylä syntyi vasta 1930-luvulla Tartto–Petseri-rautatien rakentamisen jälkeen.
+AIEMPI KYSYMYS: Mitä devonikausi tarkoittaa ja millainen maailma silloin oli?
+AIEMPI VASTAUS (Livia):
+Just niin, devonikausi. [[Devonikausi]] on geologinen kausi, joka sijoittuu noin 420–360 miljoonan vuoden taakse. Sitä kutsutaan usein kalojen ajaksi, koska kalat monipuolistuivat silloin voimakkaasti, ja samaan aikaan kasvit ja eläimet alkoivat vallata maata. Nykyisen Viron seudulla oli matalia meriä ja rannikoita, joihin kerrostui hiekkaa ja savea; niistä ovat peräisin esimerkiksi [[Taevaskojan]] hiekkakivet. Tarkkoja ajankohtia ja paikallisia olosuhteita on tutkittu paljon, mutta yksityiskohdat minulta ovat epävarmoja. Pitkältä kuulostaa, mutta kauan se oli kuitenkin kestänyt.
+KYSYMYS: Kerro lisää: Taevaskojan
+
+### 269
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Miksi Võrtsjärven vedenpinta nousee ja laskee joka vuosi näin paljon?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Võrtsjärv]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä eli noin puolet järven keskisyvyydestä. Kun järvi on matala ja laaja, jo suhteellisen pieni vesimäärän muutos näkyy selvästi pinnan korkeudessa. Vedenkorkeuteen vaikuttavat tulvat, sateet ja haihdunta sekä virtaaminen järvestä [[Emajõgi-jokeen]], mutta kaikkia tekijöitä en ole varma pystyväni erottamaan. Järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun, ja kevät tuo sulamisvedet.
+
+Ylhäältä katsottuna vedenpinnan vaihtelu on minulle mukavaa kuin kellonaika: kun järvi on korkealla, rannat ovat lähempänä. Matala järvi kuulostaa kyyhkyn korvaan oikeastaan hyvältä ajatukselta, sillä uimaan en silti lähtisi.
+KYSYMYS: Kerro lisää: Võrtsjärv
+
+### 270
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Miksi Võrtsjärven vedenpinta nousee ja laskee joka vuosi näin paljon?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Võrtsjärv]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä eli noin puolet järven keskisyvyydestä. Kun järvi on matala ja laaja, jo suhteellisen pieni vesimäärän muutos näkyy selvästi pinnan korkeudessa. Vedenkorkeuteen vaikuttavat tulvat, sateet ja haihdunta sekä virtaaminen järvestä [[Emajõgi-jokeen]], mutta kaikkia tekijöitä en ole varma pystyväni erottamaan. Järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun, ja kevät tuo sulamisvedet.
+
+Ylhäältä katsottuna vedenpinnan vaihtelu on minulle mukavaa kuin kellonaika: kun järvi on korkealla, rannat ovat lähempänä. Matala järvi kuulostaa kyyhkyn korvaan oikeastaan hyvältä ajatukselta, sillä uimaan en silti lähtisi.
+KYSYMYS: Kerro lisää: Emajõgi-jokeen
+
+### 271
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kohdekartta / Kohdekartta: Katedraaliaukio] 1748–1777 Aukio oli alun perin suo, ja sen nimi oli Plaza de la Ciénaga eli Suoaukio. Se kuivattiin ja otettiin laivaston telakaksi. Santiago de Cuban piispa Diego Evelino Hurtado de Compostela osti aukion laidalta tontin, ja vuonna 1727 hyväksyttiin suunnitelma kirkosta, luostarista ja kollegiosta. Kun katedraali valmistui, aukion ympärille nousivat kaupungin komeimmat kartanot; niistä yhdessä, kreivi Lombillon palatsissa, toimii nykyään siirtomaataiteen museo. Jesuiitat aloittivat katedraalin rakentamisen 1748 vanhemman kirkon paikalle, ja työ valmistui 1777 — siis kymmenen vuotta sen jälkeen, kun kuningas Kaarle III oli karkottanut jesuiitat saarelta 1767. Kirkko vihittiin 1782. Se on 30…
+- [Kapkaupunki — kohdekartta / Kohdekartta: Iziko Etelä-Afrikan museo] 1825 Iziko Etelä-Afrikan museo perustettiin 1825, ja se on maan ensimmäinen museo. Perustaja oli Kapin siirtomaan kuvernööri lordi Charles Somerset, joka hoiti virkaa vuosina 1814–1826. Nykyisellä paikallaan Company's Gardenin eteläpäässä museo on ollut vuodesta 1897. Sana Iziko on xhosaa ja tarkoittaa tulisijaa; nimi otettiin käyttöön syyskuussa 2012, kun museo liitettiin Iziko-museoiden joukkoon. Museo alkoi yleismuseona, jossa oli sekä luonnonhistoriaa että esineistöä lähialueilta ja kauempaa. Vähitellen kokoelmat järjestettiin samaan tapaan kuin Euroopan ja Amerikan museoissa 1800-luvun lopulla ja 1900-luvun alussa. Nykyään museossa on yli puolitoista miljoonaa tieteellistä näytettä: fo…
+AIEMPI KYSYMYS: Miten devonikauden kalojen fossiileja päätyi järven rannan jyrkänteisiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Devonikaudella, joka oli noin 420–360 miljoonaa vuotta sitten, nykyisen Viron seudulla oli matalia vesialueita, joissa eli kaloja. Kun kalat kuolivat, niiden jäänteet saattoivat hautautua hiekkaan tai saveen. Kerrokset muuttuivat ajan kuluessa kiveksi ja säilyttivät [[fossiileja]]. Myöhemmin virtaava vesi, jää ja rapautuminen ovat paljastaneet kerrostumia, ja niin kalojen jäänteitä on löytynyt Võrtsjärven itärannalla [[Tammen]] kylän lähellä olevista jyrkänteistä. Tarkkaa tietoa yksittäisten löytöjen syntytavasta tai ikävuosista en ole varma antamaan. Kala kivessä on kyyhkyn mielestä vähän kuvottava, mutta tiede on tiedettä.
+KYSYMYS: Kerro lisää: fossiileja
+
+### 272
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Espanja — maalehti / Ruoka: Sika, joka syö vain tammenterhoja] Espanjan kalleimman kinkun salaisuus on kolme viimeistä kuukautta. Mustasorkkainen iberiansika päästetään lokakuussa dehesaan, harvaan tammimetsälaitumeen, ja se saa syödä siellä vain tammenterhoja ja ruohoa. Terhojen rasva imeytyy lihaan ja tekee siitä pehmeän ja pähkinäisen. Yksi sika tarvitsee useamman hehtaarin laidunta, ja kinkkua kuivataan sen jälkeen kolmesta neljään vuotta. Dehesa on ihmisen tekemä maisema, joka on säilynyt satoja vuosia juuri siksi, että se kannattaa.
+- [Japani — maalehti / Ruoka: Kala kovetetaan kuukausissa] Katsuobushin raaka-aine on boniitti, tonnikalan sukuinen kala. Se perataan ja fileoidaan, rasvainen vatsapuoli leikataan pois ja fileet haudutetaan tunnin verran kiehumispisteen alapuolella. Sitten ne savustetaan tammen tai kastanjan puulla viisi tai kuusi tuntia kerrallaan, jäähdytetään vuorokaudeksi ja savustetaan taas — kaikkiaan kaksitoista tai viisitoista kertaa. Lopuksi kappaleen annetaan homehtua tarkoituksella: pinnalle kylvetään Aspergillus glaucus -hometta, joka imee lopunkin kosteuden. Hiutaleet syntyvät höyläämällä, ja merilevän kanssa niistä uutetaan dashi-liemi.
+- [Winnipeg — kaupunkilehti / Winnipeg: Kaksi yhtiötä ja seitsemän tammea] North West Company rakensi Fort Gibraltarin 1809 ja Hudson's Bay Company Fort Douglasin 1812, ja yhtiöt kilpailivat kiivaasti samasta turkiskaupasta. Lord Selkirk osti maata ja perusti ensimmäisen pysyvän siirtokunnan, Red River Colonyn, ja mittautti jokitontit. Métisit ja Selkirkin uudisasukkaat ottivat yhteen Seitsemän tammen taistelussa 1816. Kilpailu päättyi vasta 1821, kun yhtiöt yhdistyivät. Fort Gibraltar nimettiin Fort Garryksi 1822; tulva tuhosi sen 1826, ja se rakennettiin uudelleen vasta 1835.
+AIEMPI KYSYMYS: Miten devonikauden kalojen fossiileja päätyi järven rannan jyrkänteisiin?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Devonikaudella, joka oli noin 420–360 miljoonaa vuotta sitten, nykyisen Viron seudulla oli matalia vesialueita, joissa eli kaloja. Kun kalat kuolivat, niiden jäänteet saattoivat hautautua hiekkaan tai saveen. Kerrokset muuttuivat ajan kuluessa kiveksi ja säilyttivät [[fossiileja]]. Myöhemmin virtaava vesi, jää ja rapautuminen ovat paljastaneet kerrostumia, ja niin kalojen jäänteitä on löytynyt Võrtsjärven itärannalla [[Tammen]] kylän lähellä olevista jyrkänteistä. Tarkkaa tietoa yksittäisten löytöjen syntytavasta tai ikävuosista en ole varma antamaan. Kala kivessä on kyyhkyn mielestä vähän kuvottava, mutta tiede on tiedettä.
+KYSYMYS: Kerro lisää: Tammen
+
+### 273
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Mikä on Emajõgi ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Emajõgi]] on joki, joka laskee Etelä-Virossa [[Võrtsjärvestä]] [[Peipsijärveen]]. Nimen voi suomentaa äidiksi jokea, sillä ema tarkoittaa viroksi äitiä ja jõgi jokea. Joen varrella sijaitsee lähteiden mukaan [[Tartto]], Viron suuria kaupunkeja. Joen pituuden ja virtaaman tarkat luvut jätän sanomatta, koska en ole niistä varma. Emajõgi yhdistää kaksi Viron suurta järveä, ja Võrtsjärven vedenpinnan vaihtelu näkyy myös joessa. Äiti-joki on kyllä kaunis nimi, ja minä viihdyn sen yllä.
+KYSYMYS: Kerro lisää: Emajõgi
+
+### 274
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Mikä on Emajõgi ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Emajõgi]] on joki, joka laskee Etelä-Virossa [[Võrtsjärvestä]] [[Peipsijärveen]]. Nimen voi suomentaa äidiksi jokea, sillä ema tarkoittaa viroksi äitiä ja jõgi jokea. Joen varrella sijaitsee lähteiden mukaan [[Tartto]], Viron suuria kaupunkeja. Joen pituuden ja virtaaman tarkat luvut jätän sanomatta, koska en ole niistä varma. Emajõgi yhdistää kaksi Viron suurta järveä, ja Võrtsjärven vedenpinnan vaihtelu näkyy myös joessa. Äiti-joki on kyllä kaunis nimi, ja minä viihdyn sen yllä.
+KYSYMYS: Kerro lisää: Võrtsjärvestä
+
+### 275
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Mikä on Emajõgi ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Emajõgi]] on joki, joka laskee Etelä-Virossa [[Võrtsjärvestä]] [[Peipsijärveen]]. Nimen voi suomentaa äidiksi jokea, sillä ema tarkoittaa viroksi äitiä ja jõgi jokea. Joen varrella sijaitsee lähteiden mukaan [[Tartto]], Viron suuria kaupunkeja. Joen pituuden ja virtaaman tarkat luvut jätän sanomatta, koska en ole niistä varma. Emajõgi yhdistää kaksi Viron suurta järveä, ja Võrtsjärven vedenpinnan vaihtelu näkyy myös joessa. Äiti-joki on kyllä kaunis nimi, ja minä viihdyn sen yllä.
+KYSYMYS: Kerro lisää: Peipsijärveen
+
+### 276
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Mikä on Emajõgi ja minne se virtaa?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. [[Emajõgi]] on joki, joka laskee Etelä-Virossa [[Võrtsjärvestä]] [[Peipsijärveen]]. Nimen voi suomentaa äidiksi jokea, sillä ema tarkoittaa viroksi äitiä ja jõgi jokea. Joen varrella sijaitsee lähteiden mukaan [[Tartto]], Viron suuria kaupunkeja. Joen pituuden ja virtaaman tarkat luvut jätän sanomatta, koska en ole niistä varma. Emajõgi yhdistää kaksi Viron suurta järveä, ja Võrtsjärven vedenpinnan vaihtelu näkyy myös joessa. Äiti-joki on kyllä kaunis nimi, ja minä viihdyn sen yllä.
+KYSYMYS: Kerro lisää: Tartto
+
+### 277
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tanganjika — kaupunkilehti / Tanganjikan kirjoahvenet: Sadat lajit, jotka syntyivät samassa järvessä] Tanganjikajärvessä elää ainakin 250 kirjoahvenlajia, ja niistä lähes kaikki, noin 98 prosenttia, ovat endeemisiä eli löytyvät vain tästä yhdestä järvestä. Miljoonien vuosien eristyksissä lajit ovat erikoistuneet kukin omaan koloonsa, ruokavalioonsa ja käyttäytymiseensä niin voimakkaasti, että tutkijat pitävät järveä yhtenä maailman merkittävimmistä paikoista lajiutumisen tutkimiseen. Osa lajeista elää kallioisilla rannoilla levää kaapien, osa avovedessä saalistaen ja osa jopa toistensa suomuja syöden.
+AIEMPI KYSYMYS: Miksi matala järvi lämpenee ja jäätyy nopeasti?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Matalassa järvessä]] [[vettä]] on vähän verrattuna pinta-alaan, joten aurinko lämmittää sen nopeasti ja vastaavasti kylmä ilma jäähdyttää sen nopeasti. Syvässä järvessä suuri vesimassa varastoi lämpöä ja hidastaa muutosta. [[Võrtsjärvi]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja se on jään peitossa suunnilleen marraskuusta huhtikuuhun. Tuuli sekoittaa vettä, mikä auttaa lämpöä leviämään pohjaa myöten. Tarkkoja veden lämpötiloja en tässä yhteydessä väitä, koska ne vaihtelevat vuodesta toiseen.
+
+Kesällä matala järvi lämpiää kuin lämmin kylpyvesi, mutta jos minulta kysytään, se on silti liian märkä. Talvella taas ylhäältä katsottuna koko järvi on yksi iso valkoinen levy.
+KYSYMYS: Kerro lisää: Matalassa järvessä
+
+### 278
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nicaragua — maalehti / Luonto: Kraatterijärvi, joka teki omat kalalajinsa] 2008–2010 — Laguna de Apoyo on sammuneen tulivuoren kalderaan syntynyt järvi Masayan ja Granadan välissä. Se on lähes pyöreä, halkaisijaltaan 6,6 kilometriä, 175 metriä syvä ja noin 23 000 vuotta vanha; vettä ei virtaa ulos, vaan tasapaino syntyy pohjaveden liikkeestä. Eristys on tuottanut kuusi kirjoahvenlajia, joita ei ole missään muualla maailmassa: ensimmäinen kuvattiin 1976, kolme lisää 2008 ja kaksi viimeistä vasta 2010. Järvi on ollut suojelualue 1991, ja siitä on kirjattu yli 230 lintulajia.
+- [Arabiemiirikunnat — maalehti / Ranta ja rata: Metsä, joka kasvaa suolavedessä] Emiraattien matalilla rannoilla kasvaa mangrovemetsää. Harmaamangrove on ainoa puu, joka kestää täällä suolaista vettä: se erittää ylimääräisen suolan lehtiensä läpi, ja sen juuret työntävät mudasta ylös ohuita hengitysputkia, jotta puu saa happea vuoroveden alla. Mangrovikot ovat kalojen kutupaikkoja ja lintujen suojaa, ja ne pitävät rantaa kasassa myrskyssä. Maa on istuttanut niitä miljoonia lisää, ja Abu Dhabin rannalle on rakennettu puisia kävelysiltoja, joilta metsää voi katsella.
+AIEMPI KYSYMYS: Miksi matala järvi lämpenee ja jäätyy nopeasti?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Matalassa järvessä]] [[vettä]] on vähän verrattuna pinta-alaan, joten aurinko lämmittää sen nopeasti ja vastaavasti kylmä ilma jäähdyttää sen nopeasti. Syvässä järvessä suuri vesimassa varastoi lämpöä ja hidastaa muutosta. [[Võrtsjärvi]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja se on jään peitossa suunnilleen marraskuusta huhtikuuhun. Tuuli sekoittaa vettä, mikä auttaa lämpöä leviämään pohjaa myöten. Tarkkoja veden lämpötiloja en tässä yhteydessä väitä, koska ne vaihtelevat vuodesta toiseen.
+
+Kesällä matala järvi lämpiää kuin lämmin kylpyvesi, mutta jos minulta kysytään, se on silti liian märkä. Talvella taas ylhäältä katsottuna koko järvi on yksi iso valkoinen levy.
+KYSYMYS: Kerro lisää: vettä
+
+### 279
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Miksi matala järvi lämpenee ja jäätyy nopeasti?
+AIEMPI VASTAUS (Livia):
+No jopas. [[Matalassa järvessä]] [[vettä]] on vähän verrattuna pinta-alaan, joten aurinko lämmittää sen nopeasti ja vastaavasti kylmä ilma jäähdyttää sen nopeasti. Syvässä järvessä suuri vesimassa varastoi lämpöä ja hidastaa muutosta. [[Võrtsjärvi]] on matala järvi, jonka pinta-ala on 270 neliökilometriä, ja se on jään peitossa suunnilleen marraskuusta huhtikuuhun. Tuuli sekoittaa vettä, mikä auttaa lämpöä leviämään pohjaa myöten. Tarkkoja veden lämpötiloja en tässä yhteydessä väitä, koska ne vaihtelevat vuodesta toiseen.
+
+Kesällä matala järvi lämpiää kuin lämmin kylpyvesi, mutta jos minulta kysytään, se on silti liian märkä. Talvella taas ylhäältä katsottuna koko järvi on yksi iso valkoinen levy.
+KYSYMYS: Kerro lisää: Võrtsjärvi
+
+### 280
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+AIEMPI KYSYMYS: Mitä kaloja Võrtsjärvessä elää?
+AIEMPI VASTAUS (Livia):
+Mmm, kalat. Tarkkaa lajiluetteloa [[Võrtsjärven]] kalastosta en ole varma antamaan. Yleisesti matalissa ja ravinteisissa järvissä Itämeren maissa viihtyvät esimerkiksi [[ahven]], [[hauki]] ja lahna, ja järvi voi olla tärkeä myös kalastukselle. Võrtsjärv on Etelä-Viron matala järvi, josta laskee Emajõgi-joki Peipsijärveen, ja veden korkeuden vaihtelu sekä matala vesi vaikuttavat kaloihin. Lintuja järven rannoilla pesii ja levähtää runsaasti, joten kaloilla on todennäköisesti paljon seuraa. Kalastajalta saisi parempaa tietoa kuin kyyhkyltä. Minä olen enemmän jyvän ja leivänmurun ystävä.
+KYSYMYS: Kerro lisää: Võrtsjärven
+
+### 281
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viktoria Nyanza — kaupunkilehti / Evoluution laboratorio: Kalasääski, järven ilmavartija] Viktorianjärven taivaalla kiertelee usein kalasääski, tumma ja valkorintainen petolintu, jonka kimeä huuto kantaa kauas veden yli. Se istuu mielellään rantapuiden latvoissa ja syöksyy äkkiä alaspäin havaitessaan kalan lähellä pintaa — terävät kynnet lävistävät saaliin, jota linnun karheat, piikikkäät varpaat pitävät tiukasti kiinni liukkaastakin pinnasta. Kalasääski on yksi Afrikan suurten järvien tunnetuimmista symboleista, ja sen kuva löytyy useiden alueen valtioiden vaakunoista ja seteleistä. Se pärjää hyvin myös nykyisessä, niiliahvenen muokkaamassa järvessä, sillä sekä ahven että jäljellä olevat kirjoahvenet kelpaavat sille ravinnoksi.
+AIEMPI KYSYMYS: Mitä kaloja Võrtsjärvessä elää?
+AIEMPI VASTAUS (Livia):
+Mmm, kalat. Tarkkaa lajiluetteloa [[Võrtsjärven]] kalastosta en ole varma antamaan. Yleisesti matalissa ja ravinteisissa järvissä Itämeren maissa viihtyvät esimerkiksi [[ahven]], [[hauki]] ja lahna, ja järvi voi olla tärkeä myös kalastukselle. Võrtsjärv on Etelä-Viron matala järvi, josta laskee Emajõgi-joki Peipsijärveen, ja veden korkeuden vaihtelu sekä matala vesi vaikuttavat kaloihin. Lintuja järven rannoilla pesii ja levähtää runsaasti, joten kaloilla on todennäköisesti paljon seuraa. Kalastajalta saisi parempaa tietoa kuin kyyhkyltä. Minä olen enemmän jyvän ja leivänmurun ystävä.
+KYSYMYS: Kerro lisää: ahven
+
+### 282
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Võrtsjärv (luonto · järvi)
+Tietoruudun teksti: Võrtsjärv on Etelä-Viron matala järvi, jonka pinta-ala on 270 neliökilometriä. Se on Viron toiseksi suurin järvi Peipsijärven jälkeen ja suurin kokonaan Viron rajojen sisällä oleva. Veden korkeus vaihtelee vuosittain keskimäärin 1,4 metriä, mikä on noin puolet järven keskisyvyydestä, ja järvi on jään peitossa suunnilleen marraskuusta huhtikuuhun. Järvestä laskee Emajõgi-joki Peipsijärveen. Itärannalla Tammen kylän lähellä olevista jyrkänteistä on löytynyt devonikautisten kalojen fossiileja, ja järven rannoilla pesii ja levähtää runsaasti lintuja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Luonto: Narach, maan suurin järvi] vuodesta 1999 — Narach on Valko-Venäjän suurin järvi: sen pinta-ala on 79,6 neliökilometriä ja pituus 12,8 kilometriä. Suurin syvyys on 24,8 metriä, keskisyvyys 8,9 metriä ja rantaviivaa kertyy 41 kilometriä. Järvi syntyi noin 11 000 vuotta sitten jääkauden jälkeen, ja sitä ympäröivät mäntymetsät. Vuonna 1999 sen ympärille perustettiin Narachin kansallispuisto, joka kattaa yli 87 000 hehtaaria. Puiston lintuja ovat esimerkiksi kaulushaikara, kalasääski ja kurki, ja rannoilla sekä saarekkeilla pesii kyhmyjoutsenia, kun taas järven kalastoon kuuluvat muun muassa ankerias, hauki ja made.
+AIEMPI KYSYMYS: Mitä kaloja Võrtsjärvessä elää?
+AIEMPI VASTAUS (Livia):
+Mmm, kalat. Tarkkaa lajiluetteloa [[Võrtsjärven]] kalastosta en ole varma antamaan. Yleisesti matalissa ja ravinteisissa järvissä Itämeren maissa viihtyvät esimerkiksi [[ahven]], [[hauki]] ja lahna, ja järvi voi olla tärkeä myös kalastukselle. Võrtsjärv on Etelä-Viron matala järvi, josta laskee Emajõgi-joki Peipsijärveen, ja veden korkeuden vaihtelu sekä matala vesi vaikuttavat kaloihin. Lintuja järven rannoilla pesii ja levähtää runsaasti, joten kaloilla on todennäköisesti paljon seuraa. Kalastajalta saisi parempaa tietoa kuin kyyhkyltä. Minä olen enemmän jyvän ja leivänmurun ystävä.
+KYSYMYS: Kerro lisää: hauki
+
+### 283
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+AIEMPI KYSYMYS: Miksi Muhun Mona-linnakkeen antautuminen päätti Viron ristiretken?
+AIEMPI VASTAUS (Livia):
+Mmm— Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin [[Saarenmaalle]], ja viimeiset pakanalliset virolaiset antautuivat [[Muhussa]] Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saarenmaa oli yksi viimeisistä alueista, joita ei ollut vielä alistettu, joten antautumista pidetään yleensä Viron valloituksen ja kristillistämisen loppuvaiheena. Tarkat yksityiskohdat tapahtumista ja sen merkityksestä historioitsijat tulkitsevat eri tavoin, enkä lähde väittämään enempää. Tapahtumasta on yli seitsemänsataa vuotta, ja Viron alue on sen jälkeen kuulunut monille eri vallanpitäjille. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: Saarenmaalle
+
+### 284
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+AIEMPI KYSYMYS: Miksi Muhun Mona-linnakkeen antautuminen päätti Viron ristiretken?
+AIEMPI VASTAUS (Livia):
+Mmm— Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin [[Saarenmaalle]], ja viimeiset pakanalliset virolaiset antautuivat [[Muhussa]] Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saarenmaa oli yksi viimeisistä alueista, joita ei ollut vielä alistettu, joten antautumista pidetään yleensä Viron valloituksen ja kristillistämisen loppuvaiheena. Tarkat yksityiskohdat tapahtumista ja sen merkityksestä historioitsijat tulkitsevat eri tavoin, enkä lähde väittämään enempää. Tapahtumasta on yli seitsemänsataa vuotta, ja Viron alue on sen jälkeen kuulunut monille eri vallanpitäjille. Onneksi siitä on jo kauan.
+KYSYMYS: Kerro lisää: Muhussa
+
+### 285
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Miten Muhusta pääsi Saarenmaalle ja mantereelle ennen kuin Väinatamm-pengertie valmistui?
+AIEMPI VASTAUS (Livia):
+Kato, lauttoja ja jäätä. [[Muhu]] on saari, jonka erottavat mantereesta [[Suuri väin]] ja Saarenmaasta [[Pieni väin]], joten ennen pengertietä liikuttiin veneillä ja laivoilla sekä talvella jäätä pitkin. Jääreitti oli tuttu jo 1200-luvulla, jolloin ritarikunnan joukot ylittivät jäätä Saarenmaalle. Nykyään Muhun ja mantereen välillä kulkevat lautat. Tarkkaa tietoa vanhoista reiteistä, aikatauluista ja kuljetusvälineistä en ole varma antamaan, ja ne ovat vaihdelleet aikakausittain. Tienä pengertie on tietysti helpompi, mutta minulle ilma on aina auki. Siinä on oma etunsa.
+KYSYMYS: Kerro lisää: Muhu
+
+### 286
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+AIEMPI KYSYMYS: Miten Muhusta pääsi Saarenmaalle ja mantereelle ennen kuin Väinatamm-pengertie valmistui?
+AIEMPI VASTAUS (Livia):
+Kato, lauttoja ja jäätä. [[Muhu]] on saari, jonka erottavat mantereesta [[Suuri väin]] ja Saarenmaasta [[Pieni väin]], joten ennen pengertietä liikuttiin veneillä ja laivoilla sekä talvella jäätä pitkin. Jääreitti oli tuttu jo 1200-luvulla, jolloin ritarikunnan joukot ylittivät jäätä Saarenmaalle. Nykyään Muhun ja mantereen välillä kulkevat lautat. Tarkkaa tietoa vanhoista reiteistä, aikatauluista ja kuljetusvälineistä en ole varma antamaan, ja ne ovat vaihdelleet aikakausittain. Tienä pengertie on tietysti helpompi, mutta minulle ilma on aina auki. Siinä on oma etunsa.
+KYSYMYS: Kerro lisää: Suuri väin
+
+### 287
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+AIEMPI KYSYMYS: Miten Muhusta pääsi Saarenmaalle ja mantereelle ennen kuin Väinatamm-pengertie valmistui?
+AIEMPI VASTAUS (Livia):
+Kato, lauttoja ja jäätä. [[Muhu]] on saari, jonka erottavat mantereesta [[Suuri väin]] ja Saarenmaasta [[Pieni väin]], joten ennen pengertietä liikuttiin veneillä ja laivoilla sekä talvella jäätä pitkin. Jääreitti oli tuttu jo 1200-luvulla, jolloin ritarikunnan joukot ylittivät jäätä Saarenmaalle. Nykyään Muhun ja mantereen välillä kulkevat lautat. Tarkkaa tietoa vanhoista reiteistä, aikatauluista ja kuljetusvälineistä en ole varma antamaan, ja ne ovat vaihdelleet aikakausittain. Tienä pengertie on tietysti helpompi, mutta minulle ilma on aina auki. Siinä on oma etunsa.
+KYSYMYS: Kerro lisää: Pieni väin
+
+### 288
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Uusi-Seelanti — maalehti / Talous: Laiva, joka muutti maan suunnan] 1882 — Vuonna 1873 kukaan ei vielä tiedä, että purjelaiva nimeltä Dunedin kääntää koko maan talouden. Laivaan asennettiin 1881 Bell–Colemanin jäähdytyskone, joka söi kolme tonnia hiiltä päivässä, ja 15. helmikuuta 1882 se lähti Port Chalmersista Lontooseen lastinaan 4 331 lampaan, 598 karitsan ja 22 sian ruhoa. Päiväntasaajalla tuuli tyyntyi eikä kylmä ilma kiertänyt ruumassa; kapteeni John Whitson ryömi itse sisään sahaamaan lisää ilma-aukkoja ja vedettiin ulos köydellä puolikuolleena. Lasti myytiin Lontoossa 98 päivän matkan jälkeen, ja vain yksi ruho hylättiin.
+AIEMPI KYSYMYS: Miten tuulimylly toimii ja miksi niitä rakennettiin saarille?
+AIEMPI VASTAUS (Livia):
+Joo, tuulimylly on mukavan yksinkertainen kone. [[Tuulimylly]] muuttaa tuulen voiman pyöriviksi lavoiksi, jotka siirtävät liikkeen akselin ja hammaspyörien kautta myllykivelle, ja siinä jauhetaan viljaa jauhoiksi. Saarilla on usein tuulista ja virtaavaa vettä on vähän, joten tuulivoima sopi hyvin viljan jauhamiseen. [[Muhu]] tunnetaan toimivista perinteisistä tuulimyllyistään, jotka kertovat saaren elinkeinoista. Tarkkaa myllyjen määrää tai ikää en ole varma, joten jätän ne mainitsematta.
+
+Mylly pyörii vain, kun tuuli sitä työntää, ja se on minusta kunnioitettavaa. Minun sukuni ei ole koskaan tarvinnut tuulta, ja minulla on siitä sekä helpotus että pieni kateus.
+KYSYMYS: Kerro lisää: Tuulimylly
+
+### 289
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [FLK — maalehti / Arki: Villa pakataan paaleiksi] nykyään — Kerintäkauden jälkeen villa lajitellaan ja puristetaan suuriksi paaleiksi tilojen omissa villavajoissa, kuten West Point Islandin kuvassa näkyvässä rakennuksessa. Paalit kuljetetaan pienillä aluksilla tai lentäen Port Stanleyhin ja sieltä laivalla eteenpäin, sillä Falklandeilla ei ole omaa villatehdasta. Monilla syrjäisillä tiloilla koko perhe osallistuu kerintään ja pakkaamiseen muutaman viikon ajan vuodessa, ja työ on säilynyt lähes samanlaisena jo 1800-luvun lopulta asti. Villavaja on usein tilan suurin rakennus asuinrakennuksen jälkeen.
+- [Geraldton — kaupunkilehti / Geraldton: Lyijyä ja lahden satama] Geraldtonin tarina alkoi lyijystä: vuonna 1848 Murchison-joen uomasta löytyi lyijymalmia, ja jo seuraavana vuonna avattiin Geraldine-niminen kaivos. Malmin vientiä varten tarvittiin satama, ja valinta osui suojaisaan Champion Bayhin, jonne kuvernööri Charles Fitzgerald antoi vuonna 1850 mitata ensimmäiset tonttilinjat. Uusi siirtokunta sai nimensä kuvernöörin mukaan. 1850-luvun puolivälissä avattiin lisää kaivoksia, ja Geraldtonista kasvoi nopeasti koko sisämaan kaivos- ja maatalousalueen elintärkeä vientisatama, josta lyijy ja myöhemmin myös kupari ja villa lähtivät laivoihin kohti maailmaa.
+AIEMPI KYSYMYS: Miksi villa ja neulotut sukat olivat tärkeitä pohjoisilla saarilla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pohjoisilla saarilla on usein kosteaa, tuulista ja viileää, joten lämpimät [[villavaatteet]] ovat olleet arkea. Villa eristää hyvin myös kosteana, ja siksi se on sopinut merenläheiseen ilmastoon. [[Muhu]] tunnetaan neulotuista sukistaan, ja virolaisessa [[kansanpuvussa]] pitäjät erottuvat omilla raidoillaan, väriyhdistelmillään ja koruillaan niin, että tunteva silmä näkee kantajan kotipitäjän. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja yksityiskohdat periytyivät äidiltä tyttärelle. Tarkkoja Muhun kuvioita tai värejä en ole varma luettelemaan. Kuvailen vain, en arvostele, ja tämä on kauniisti tehty perinne.
+KYSYMYS: Kerro lisää: villavaatteet
+
+### 290
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Miksi villa ja neulotut sukat olivat tärkeitä pohjoisilla saarilla?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pohjoisilla saarilla on usein kosteaa, tuulista ja viileää, joten lämpimät [[villavaatteet]] ovat olleet arkea. Villa eristää hyvin myös kosteana, ja siksi se on sopinut merenläheiseen ilmastoon. [[Muhu]] tunnetaan neulotuista sukistaan, ja virolaisessa [[kansanpuvussa]] pitäjät erottuvat omilla raidoillaan, väriyhdistelmillään ja koruillaan niin, että tunteva silmä näkee kantajan kotipitäjän. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja yksityiskohdat periytyivät äidiltä tyttärelle. Tarkkoja Muhun kuvioita tai värejä en ole varma luettelemaan. Kuvailen vain, en arvostele, ja tämä on kauniisti tehty perinne.
+KYSYMYS: Kerro lisää: kansanpuvussa
+
+### 291
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+AIEMPI KYSYMYS: Mitä sana väin tarkoittaa ja miten väinä on syntynyt?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sana väin tarkoittaa viroksi salmea, kapeaa vesiväylää saarten tai saaren ja mantereen välillä. [[Muhun]] ympärillä on kaksi väintä: Suuri väin erottaa saaren mantereesta ja Pieni väin Saarenmaasta. Väinät ovat syntyneet merenpinnan, maankohoamisen ja jääkauden jälkeisen kehityksen yhteisvaikutuksesta, mutta kunkin yksittäisen väinän tarkkaa historiaa en ole varma. [[Itämeren]] vesi virtaa niissä, ja väinät ovat olleet tärkeitä kulkureittejä veneille, laivoille ja talvella jäälle.
+
+Salmi on kyyhkyn mielestä helppo asia: se on vain paikka, jossa lentää pitää vähän matalammalla. Minä kunnioitan sitä, että vesi on kuitenkin vielä leveä, vaikka se onkin kapea.
+KYSYMYS: Kerro lisää: Muhun
+
+### 292
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Muhu (luonto · saari)
+Tietoruudun teksti: Muhu on Viron kolmanneksi suurin saari, ja sen pinta-ala on 208 neliökilometriä. Suuri väin erottaa sen mantereesta ja Pieni väin Saarenmaasta, ja saksaksi saarta kutsutaan nimillä Mohn ja Moon. Vuonna 1227 Liivinmaan Kalparitarikunnan joukot ylittivät jäätä pitkin Saarenmaalle, ja viimeiset pakanalliset virolaiset antautuivat Muhussa Mona-nimisessä pyöreässä linnakkeessa, jonka valleja on yhä jäljellä. Saaren länsikärjessä on Koguvan kylä, jossa on vuosisatoja vanhoja rakennuksia ja Muhun museo; kylässä syntyi kirjailija Juhan Smuul. Muhu tunnetaan myös toimivista perinteisistä tuulimyllyistään ja neulotuista sukistaan.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mitä sana väin tarkoittaa ja miten väinä on syntynyt?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Sana väin tarkoittaa viroksi salmea, kapeaa vesiväylää saarten tai saaren ja mantereen välillä. [[Muhun]] ympärillä on kaksi väintä: Suuri väin erottaa saaren mantereesta ja Pieni väin Saarenmaasta. Väinät ovat syntyneet merenpinnan, maankohoamisen ja jääkauden jälkeisen kehityksen yhteisvaikutuksesta, mutta kunkin yksittäisen väinän tarkkaa historiaa en ole varma. [[Itämeren]] vesi virtaa niissä, ja väinät ovat olleet tärkeitä kulkureittejä veneille, laivoille ja talvella jäälle.
+
+Salmi on kyyhkyn mielestä helppo asia: se on vain paikka, jossa lentää pitää vähän matalammalla. Minä kunnioitan sitä, että vesi on kuitenkin vielä leveä, vaikka se onkin kapea.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 293
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi Otepään linnan raunioista löytynyt tuliase on niin merkittävä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Löytöä pidetään lähteiden mukaan Euroopan vanhimpana säilyneenä [[tuliaseena]], ja sen ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Merkitys on siinä, että niin varhaisia tuliaseita on säilynyt hyvin vähän, ja esine osoittaa ruutiaseiden ehtineen Liivinmaan linnoihin jo keskiajalla. Paikalla oli aiemmin muinaislinnake, jonka [[ristiretkeläiset]] valloittivat vuonna 1224, ja [[piispa Hermann]] rakennutti sinne Viron ensimmäisen kivilinnan. Aseen tarkasta tyypistä en ole varma, joten sen yksityiskohdat kannattaa tarkistaa museosta. Siinä oli sentään aika paljon vuosilukuja yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: tuliaseena
+
+### 294
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Miksi Otepään linnan raunioista löytynyt tuliase on niin merkittävä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Löytöä pidetään lähteiden mukaan Euroopan vanhimpana säilyneenä [[tuliaseena]], ja sen ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Merkitys on siinä, että niin varhaisia tuliaseita on säilynyt hyvin vähän, ja esine osoittaa ruutiaseiden ehtineen Liivinmaan linnoihin jo keskiajalla. Paikalla oli aiemmin muinaislinnake, jonka [[ristiretkeläiset]] valloittivat vuonna 1224, ja [[piispa Hermann]] rakennutti sinne Viron ensimmäisen kivilinnan. Aseen tarkasta tyypistä en ole varma, joten sen yksityiskohdat kannattaa tarkistaa museosta. Siinä oli sentään aika paljon vuosilukuja yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: ristiretkeläiset
+
+### 295
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New Orleans — kohdekartta / Kohdekartta: Hermann-Griman talo] 1831 Talo on Ranskan Korttelin varhaisimpia esimerkkejä amerikkalaisesta arkkitehtuurista. Samuel Hermann osti tontin St. Louis Streetiltä 1831 ja palkkasi rakentajaksi William Brandin, joka piirsi federal- eli yrjöläistyylisen talon — tyyli oli 1800-luvun alun New Orleansissa harvinainen. Julkisivu on symmetrinen ja keskellä kulkee leveä halli, mutta Brand lisäsi ilmastoon sopivat parvekkeet ja gallerian: sisällä ei ole käytäviä lainkaan, vaan huoneesta toiseen kuljetaan parvekkeiden kautta. Pihalla on Korttelin ainoa säilynyt hevostalli ja 1830-luvun avotulikeittiö. Talossa on asunut kaksi sukua. Samuel Hermann syntyi 1777 Rödelheimissa Saksassa, muutti Louisianaan 1804 ja teki työtä plan…
+- [Houston — kohdekartta / Kohdekartta: Hermann Park] 1914 Hermann Park on 445 eekkerin eli noin 180 hehtaarin kaupunkipuisto museokorttelin eteläpäässä. Se syntyi 1914, kun George H. Hermann — joka omisti suuren osan alueesta ja istui kaupungin puistolautakunnassa — testamenttasi maansa Houstonille julkiseksi viheralueeksi. Puiston suunnitteli maisema-arkkitehti George Kessler. Puistossa käy noin kuusi miljoonaa ihmistä vuodessa. Sen sisällä ovat Houstonin eläintarha ja luonnontieteen museo, ulkoilmateatteri, japanilainen puutarha ja pitkä heijastusallas, jonka päässä kohoaa pioneerien muistomerkin obeliski. Obeliski vihittiin 30. elokuuta 1936 San Jacinton satavuotisjuhlien yhteydessä. Puiston pohjoispäässä ratsastaa Sam Houstonin pronssipat…
+AIEMPI KYSYMYS: Miksi Otepään linnan raunioista löytynyt tuliase on niin merkittävä?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Löytöä pidetään lähteiden mukaan Euroopan vanhimpana säilyneenä [[tuliaseena]], ja sen ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Merkitys on siinä, että niin varhaisia tuliaseita on säilynyt hyvin vähän, ja esine osoittaa ruutiaseiden ehtineen Liivinmaan linnoihin jo keskiajalla. Paikalla oli aiemmin muinaislinnake, jonka [[ristiretkeläiset]] valloittivat vuonna 1224, ja [[piispa Hermann]] rakennutti sinne Viron ensimmäisen kivilinnan. Aseen tarkasta tyypistä en ole varma, joten sen yksityiskohdat kannattaa tarkistaa museosta. Siinä oli sentään aika paljon vuosilukuja yhdelle kyyhkylle.
+KYSYMYS: Kerro lisää: piispa Hermann
+
+### 296
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi Otepäätä kutsutaan Viron talvipääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Joo, tän minä tiedän. Otepäätä kutsutaan Viron talvipääkaupungiksi, koska se on maan tunnetuimpia hiihdon ja talviurheilun keskuksia. Kumpuileva [[Otepään ylänkö]] saa talvisin lunta, ja alueella toimii urheilukeskus [[Tehvandi]], jossa on järjestetty muun muassa maastohiihdon kansainvälisiä kilpailuja. Lisäksi [[Pühajärven]] ja muiden järvien maisemissa on talvella latuja ja laskettelumahdollisuuksia. Tarkoista kisavuosista en ole varma.
+
+Minä katson talvea kyl mieluummin lämpimältä ikkunalaudalta, pulla kädessä, jos joku sellaisen jättää.
+KYSYMYS: Kerro lisää: Otepään ylänkö
+
+### 297
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi Otepäätä kutsutaan Viron talvipääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Joo, tän minä tiedän. Otepäätä kutsutaan Viron talvipääkaupungiksi, koska se on maan tunnetuimpia hiihdon ja talviurheilun keskuksia. Kumpuileva [[Otepään ylänkö]] saa talvisin lunta, ja alueella toimii urheilukeskus [[Tehvandi]], jossa on järjestetty muun muassa maastohiihdon kansainvälisiä kilpailuja. Lisäksi [[Pühajärven]] ja muiden järvien maisemissa on talvella latuja ja laskettelumahdollisuuksia. Tarkoista kisavuosista en ole varma.
+
+Minä katson talvea kyl mieluummin lämpimältä ikkunalaudalta, pulla kädessä, jos joku sellaisen jättää.
+KYSYMYS: Kerro lisää: Tehvandi
+
+### 298
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi Otepäätä kutsutaan Viron talvipääkaupungiksi?
+AIEMPI VASTAUS (Livia):
+Mmm— Joo, tän minä tiedän. Otepäätä kutsutaan Viron talvipääkaupungiksi, koska se on maan tunnetuimpia hiihdon ja talviurheilun keskuksia. Kumpuileva [[Otepään ylänkö]] saa talvisin lunta, ja alueella toimii urheilukeskus [[Tehvandi]], jossa on järjestetty muun muassa maastohiihdon kansainvälisiä kilpailuja. Lisäksi [[Pühajärven]] ja muiden järvien maisemissa on talvella latuja ja laskettelumahdollisuuksia. Tarkoista kisavuosista en ole varma.
+
+Minä katson talvea kyl mieluummin lämpimältä ikkunalaudalta, pulla kädessä, jos joku sellaisen jättää.
+KYSYMYS: Kerro lisää: Pühajärven
+
+### 299
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi karhua kutsuttiin kiertoilmauksella eikä oikealla nimellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Karhun oikeaa nimeä ei haluttu sanoa ääneen, koska uskottiin, että nimen mainitseminen houkuttelisi eläimen paikalle tai tuottaisi onnettomuutta. Siksi syntyi kiertoilmauksia, joilla karhusta puhuttiin ilman sen varsinaista nimeä. Suomessa tunnetaan esimerkiksi [[otso]] ja [[mesikämmen]], ja ilmiö on tuttu muissakin kielissä: venäjän [[medved]] tarkoittaa hunajan syöjää, ja englannin bear tulkitaan tarkoittavan ruskeaa. Sanojen alkuperistä tutkijat ovat osin eri mieltä, joten en ole varma kaikista yksityiskohdista. Ja tuo oli kyl kunnon kielitieteellinen lento.
+KYSYMYS: Kerro lisää: otso
+
+### 300
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi karhua kutsuttiin kiertoilmauksella eikä oikealla nimellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Karhun oikeaa nimeä ei haluttu sanoa ääneen, koska uskottiin, että nimen mainitseminen houkuttelisi eläimen paikalle tai tuottaisi onnettomuutta. Siksi syntyi kiertoilmauksia, joilla karhusta puhuttiin ilman sen varsinaista nimeä. Suomessa tunnetaan esimerkiksi [[otso]] ja [[mesikämmen]], ja ilmiö on tuttu muissakin kielissä: venäjän [[medved]] tarkoittaa hunajan syöjää, ja englannin bear tulkitaan tarkoittavan ruskeaa. Sanojen alkuperistä tutkijat ovat osin eri mieltä, joten en ole varma kaikista yksityiskohdista. Ja tuo oli kyl kunnon kielitieteellinen lento.
+KYSYMYS: Kerro lisää: mesikämmen
+
+### 301
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Miksi karhua kutsuttiin kiertoilmauksella eikä oikealla nimellä?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Karhun oikeaa nimeä ei haluttu sanoa ääneen, koska uskottiin, että nimen mainitseminen houkuttelisi eläimen paikalle tai tuottaisi onnettomuutta. Siksi syntyi kiertoilmauksia, joilla karhusta puhuttiin ilman sen varsinaista nimeä. Suomessa tunnetaan esimerkiksi [[otso]] ja [[mesikämmen]], ja ilmiö on tuttu muissakin kielissä: venäjän [[medved]] tarkoittaa hunajan syöjää, ja englannin bear tulkitaan tarkoittavan ruskeaa. Sanojen alkuperistä tutkijat ovat osin eri mieltä, joten en ole varma kaikista yksityiskohdista. Ja tuo oli kyl kunnon kielitieteellinen lento.
+KYSYMYS: Kerro lisää: medved
+
+### 302
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mitä Pühajärven nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys tuo. Pühajärv on nimi, jonka osat ovat tuttuja suomesta: püha tarkoittaa pyhää ja järv järveä, eli nimi on suomeksi Pyhäjärvi. [[Viron kielessä]] ja suomessa on paljon yhteisiä sukukielen sanoja, vaikka ne lausutaan eri tavoin. Järvi sijaitsee [[Otepään ylängön]] kumpuilevassa maastossa, jossa on lukuisia muitakin järviä. Siitä, miksi järvi on saanut pyhän nimen, en ole varma. Pyhä järvi, sehän kuulostaa melkein kotoisalta.
+KYSYMYS: Kerro lisää: Viron kielessä
+
+### 303
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Mitä Pühajärven nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai se. Hyvä kysymys tuo. Pühajärv on nimi, jonka osat ovat tuttuja suomesta: püha tarkoittaa pyhää ja järv järveä, eli nimi on suomeksi Pyhäjärvi. [[Viron kielessä]] ja suomessa on paljon yhteisiä sukukielen sanoja, vaikka ne lausutaan eri tavoin. Järvi sijaitsee [[Otepään ylängön]] kumpuilevassa maastossa, jossa on lukuisia muitakin järviä. Siitä, miksi järvi on saanut pyhän nimen, en ole varma. Pyhä järvi, sehän kuulostaa melkein kotoisalta.
+KYSYMYS: Kerro lisää: Otepään ylängön
+
+### 304
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Mistä sinimustavalkoinen Viron lippu sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viron sinimustavalkoinen lippu vihittiin vuonna 1884 [[Nuustakun kirkossa]], joka sijaitsi nykyisen Otepään kohdalla, ja siitä tuli myöhemmin Viron kansallislippu. Lippu liittyy mikäli muistan oikein [[opiskelijaseuraan]], joka toimi [[Tartossa]], mutta tarkemmista vaiheista en ole varma. Värien merkitykset tulkitaan eri tavoin: sinisen on usein sanottu viittaavan taivaaseen ja järviin, mustan maahan ja valkoisen pyrkimykseen kohti valoa. Asutus sai nimen Nuustaku vuonna 1862 ja nykyisen nimensä Otepää vasta 1922. Sinä, musta ja valkoinen, mutta harmaa pulu ei mahtunut mukaan.
+KYSYMYS: Kerro lisää: Nuustakun kirkossa
+
+### 305
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+AIEMPI KYSYMYS: Mistä sinimustavalkoinen Viron lippu sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viron sinimustavalkoinen lippu vihittiin vuonna 1884 [[Nuustakun kirkossa]], joka sijaitsi nykyisen Otepään kohdalla, ja siitä tuli myöhemmin Viron kansallislippu. Lippu liittyy mikäli muistan oikein [[opiskelijaseuraan]], joka toimi [[Tartossa]], mutta tarkemmista vaiheista en ole varma. Värien merkitykset tulkitaan eri tavoin: sinisen on usein sanottu viittaavan taivaaseen ja järviin, mustan maahan ja valkoisen pyrkimykseen kohti valoa. Asutus sai nimen Nuustaku vuonna 1862 ja nykyisen nimensä Otepää vasta 1922. Sinä, musta ja valkoinen, mutta harmaa pulu ei mahtunut mukaan.
+KYSYMYS: Kerro lisää: opiskelijaseuraan
+
+### 306
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Otepää (luonto · järvi)
+Tietoruudun teksti: Otepää on kaupunki Etelä-Virossa Otepään ylängöllä, jonka kumpuilevassa maastossa on lukuisia järviä, kuten Pühajärv. Nimi tarkoittaa etelävirossa "Otin päätä", ja ott on kiertoilmaus karhulle. Paikalla oli muinaislinnake, jonka saksalaiset ristiretkeläiset valloittivat vuonna 1224, ja piispa Hermann rakennutti sinne Viron ensimmäisen kivilinnan. Linnan raunioista on löydetty Euroopan vanhin säilynyt tuliase, jonka ajoitetaan vuoteen 1396 tai sitä aiemmaksi. Asutus sai nimen Nuustaku vuonna 1862, ja nykyisen nimensä se sai vasta 1922. Nuustakun kirkossa vihittiin vuonna 1884 lippu, josta tuli Viron kansallislippu.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Kuoro, joka lauloi maan vapaaksi] 1869 — Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja 1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä isänmaallisia lauluja niin sanotussa laulavassa vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Mistä sinimustavalkoinen Viron lippu sai alkunsa?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Viron sinimustavalkoinen lippu vihittiin vuonna 1884 [[Nuustakun kirkossa]], joka sijaitsi nykyisen Otepään kohdalla, ja siitä tuli myöhemmin Viron kansallislippu. Lippu liittyy mikäli muistan oikein [[opiskelijaseuraan]], joka toimi [[Tartossa]], mutta tarkemmista vaiheista en ole varma. Värien merkitykset tulkitaan eri tavoin: sinisen on usein sanottu viittaavan taivaaseen ja järviin, mustan maahan ja valkoisen pyrkimykseen kohti valoa. Asutus sai nimen Nuustaku vuonna 1862 ja nykyisen nimensä Otepää vasta 1922. Sinä, musta ja valkoinen, mutta harmaa pulu ei mahtunut mukaan.
+KYSYMYS: Kerro lisää: Tartossa
+
+### 307
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Millaiset sodat jättivät Viljandin suuren linnan raunioiksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linna ja kaupunki tuhoutuivat sodissa, joten asiaa ei voi sitoa yhteen ainoaan sotaan. Tietojeni mukaan alue koki vuosisatojen aikana useita sotia: [[Liivinmaan sota]] 1500-luvulla, sitä seuranneet Ruotsin, Puolan ja Venäjän väliset taistelut sekä [[Pohjan sota]] 1700-luvun alussa koettelivat koko seutua. En ole varma, mikä niistä lopulta jätti ritarikunnan rakentaman linnan raunioiksi. Nykyään raunioissa toimii [[perinnemusiikin keskus]], eli paikka on saanut uuden elämän. Onpa se aika kaukana jo.
+KYSYMYS: Kerro lisää: Liivinmaan sota
+
+### 308
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Dubai — kohdekartta / Kohdekartta: Tekstiilisuuk] 1890-luku Bur Dubain puolella creekiä, vastapäätä Deiran kulta- ja maustesuukia, on kankaiden suuk. Sen syntyaikana Dubaita hallitsi Maktoum bin Hashar, joka nousi valtaan 1894 ja suosi kauppaa avokätisesti. Vuonna 1902 kaupunkiin muutti suuri joukko iranilaiskauppiaita, ja Dubai saattoi ylpeillä Arabian suurimmilla suukeilla. Katto on tässä osa arkkitehtuuria eikä vain varjo. Kujat ovat perinteisiä sikkoja, ja niiden yllä kaartuu korkea puukaarikäytävä, joka on suunniteltu tuulettamaan kuumuutta: kuuma ilma nousee kaarien rakojen kautta ulos ja veto pääsee kujalle tilalle. Kaarissa roikkuvat perinteiset arabialaislamput; teräspilarit ovat myöhempi lisä, kun alkuperäinen rakenne heikkeni. K…
+AIEMPI KYSYMYS: Millaiset sodat jättivät Viljandin suuren linnan raunioiksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linna ja kaupunki tuhoutuivat sodissa, joten asiaa ei voi sitoa yhteen ainoaan sotaan. Tietojeni mukaan alue koki vuosisatojen aikana useita sotia: [[Liivinmaan sota]] 1500-luvulla, sitä seuranneet Ruotsin, Puolan ja Venäjän väliset taistelut sekä [[Pohjan sota]] 1700-luvun alussa koettelivat koko seutua. En ole varma, mikä niistä lopulta jätti ritarikunnan rakentaman linnan raunioiksi. Nykyään raunioissa toimii [[perinnemusiikin keskus]], eli paikka on saanut uuden elämän. Onpa se aika kaukana jo.
+KYSYMYS: Kerro lisää: Pohjan sota
+
+### 309
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kohdekartta / Kohdekartta: Isfahanin basaari] Basaari on käytävä kahden eri-ikäisen kaupungin välillä. Eteläpää aukeaa Naqsh-e Jahanille, joka rakennettiin vuosina 1598–1629, ja pohjoispää vie Kohneh- eli Vanhalle aukiolle vanhan kaupungin ytimeen. Väliin jää holvattua, katettua katua noin kaksi kilometriä. Se on Lähi-idän vanhimpia ja suurimpia basaareja. Osat ovat eri-ikäisiä. Nykyinen rakennus on safavidien ajalta, ja rakennusvuodeksi Naqsh-e Jahanin pohjoislaidalle merkitään 1620. Vanhin osa on 1000-luvulta, seldžukkien ajalta: se syntyi Jameh-moskeijan lounaiskyljelle ja Kohneh-aukion laitaan, ja kaarikäytäviä ja huoneita liitettiin siihen myöhemmin lisää. Tarkkoja vuosia näille osille ei anneta, vain se, että ne ovat yli tuhat vu…
+AIEMPI KYSYMYS: Millaiset sodat jättivät Viljandin suuren linnan raunioiksi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Linna ja kaupunki tuhoutuivat sodissa, joten asiaa ei voi sitoa yhteen ainoaan sotaan. Tietojeni mukaan alue koki vuosisatojen aikana useita sotia: [[Liivinmaan sota]] 1500-luvulla, sitä seuranneet Ruotsin, Puolan ja Venäjän väliset taistelut sekä [[Pohjan sota]] 1700-luvun alussa koettelivat koko seutua. En ole varma, mikä niistä lopulta jätti ritarikunnan rakentaman linnan raunioiksi. Nykyään raunioissa toimii [[perinnemusiikin keskus]], eli paikka on saanut uuden elämän. Onpa se aika kaukana jo.
+KYSYMYS: Kerro lisää: perinnemusiikin keskus
+
+### 310
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi Viljandi oli pitkään ilman kaupunkioikeuksia, ja mikä muuttui vuonna 1783?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Täysin vailla kaupunkiasemaa Viljandi ei ollut, sillä se liittyi jo 1300-luvulla [[Hansaliittoon]] ja oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat kuitenkin sodissa. En ole varma, millaisia kaupunkioikeuksia sillä kulloinkin oli tai milloin ne olivat voimassa. Vuonna 1783 [[Katariina II:n]] uudistusten myötä Viljandista tuli [[piirikuntakaupunki]], eli oman piirikuntansa hallinnollinen keskus. Papereita ja leimoja, kyl kyyhky olisi hoitanut asian nopeammin.
+KYSYMYS: Kerro lisää: Hansaliittoon
+
+### 311
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Isfahan — kaupunkilehti / Taide ja kirjapaino] Isfahanin taide ei ole pelkkää shaahin hovin työtä: osa siitä syntyi joen eteläpuolella, armenialaisten omassa kaupunginosassa. Uusi Julfa perustettiin Zayandeh-joen etelärannalle 1600-luvun alussa, ja nimensä se sai vanhasta Julfan kaupungista, josta asukkaat tulivat. Se on yhä yksi maailman vanhimmista ja suurimmista armenialaiskortteleista. Kortteli eli silkkikaupasta, ja siitä kasvoi yhden varhaisen uuden ajan suurimman kauppaverkoston keskus. Aluetta hallitsi pitkään armenialainen Lazarjanien aatelissuku, joka siirtyi Venäjälle Nader-shaahin kuoleman jälkeen vuonna 1747; suvun jäsenistä tuli muun muassa Katariina Suuren hovipankkiiri. Vieraita tuli myös toiseen suuntaan: korttelissa as…
+- [Pietari — kohdekartta / Kohdekartta: Talvipalatsi] 1754–1762 Keisarinna Anna tilasi upean talvipalatsin, ja italialainen arkkitehti Bartolomeo Rastrelli sai vihreä-valkoisen barokkilinnan valmiiksi vuonna 1762. Palatsissa on peräti 1500 huonetta, 1945 ikkunaa ja 117 porrasta, ja sen pääjulkisivu venyy 215 metrin pituudelta. Suurimpaan juhlasaliin mahtui seisomaan jopa 10 000 ihmistä, ja ruokapöytään voitiin kerralla kattaa tuhannelle vieraalle. Palatsi oli Venäjän hallitsijoiden koti lähes 150 vuoden ajan. Palvelijat pitivät jopa lehmää ullakolla, jotta keittiöön riitti tuoretta maitoa joka aamu! Katariina Suuri alkoi keräillä palatsin viereen niin paljon taideteoksia, että kokoelmasta kasvoi Eremitaasi – nykyään yksi maailman suurimmista t…
+AIEMPI KYSYMYS: Miksi Viljandi oli pitkään ilman kaupunkioikeuksia, ja mikä muuttui vuonna 1783?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Täysin vailla kaupunkiasemaa Viljandi ei ollut, sillä se liittyi jo 1300-luvulla [[Hansaliittoon]] ja oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat kuitenkin sodissa. En ole varma, millaisia kaupunkioikeuksia sillä kulloinkin oli tai milloin ne olivat voimassa. Vuonna 1783 [[Katariina II:n]] uudistusten myötä Viljandista tuli [[piirikuntakaupunki]], eli oman piirikuntansa hallinnollinen keskus. Papereita ja leimoja, kyl kyyhky olisi hoitanut asian nopeammin.
+KYSYMYS: Kerro lisää: Katariina II:n
+
+### 312
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Afganistan — maalehti / Musiikki: Piiri, joka kiihtyy tuntikausia] Attan on Afganistanin kansallistanssi. Tanssijat asettuvat piiriin rummuttajan ympärille, ja askel alkaa hitaana ja kiihtyy vähitellen niin, että piiri voi pyöriä kaksi tai kolme tuntia ilman muuta taukoa kuin tempon lasku. Tahdin lyö dohol, kaksipäinen tynnyrirumpu. Tyylejä on kymmeniä, ja jokainen tunnistaa omansa: kabuli, wardaki, logari, paktia, khosti, kandahari ja herati. Naisten juhlapuvuissa on pieniä peilejä, joiden sanotaan tarkoittavan valoa, ja miesten turbaanin sitomistapa kertoo heimon. Tanssin juuret johdetaan zarathustralaisiin menoihin lähes kolmentuhannen vuoden takaa.
+AIEMPI KYSYMYS: Miksi Viljandi oli pitkään ilman kaupunkioikeuksia, ja mikä muuttui vuonna 1783?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Täysin vailla kaupunkiasemaa Viljandi ei ollut, sillä se liittyi jo 1300-luvulla [[Hansaliittoon]] ja oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat kuitenkin sodissa. En ole varma, millaisia kaupunkioikeuksia sillä kulloinkin oli tai milloin ne olivat voimassa. Vuonna 1783 [[Katariina II:n]] uudistusten myötä Viljandista tuli [[piirikuntakaupunki]], eli oman piirikuntansa hallinnollinen keskus. Papereita ja leimoja, kyl kyyhky olisi hoitanut asian nopeammin.
+KYSYMYS: Kerro lisää: piirikuntakaupunki
+
+### 313
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+AIEMPI KYSYMYS: Mikä on Viljandin perinnemusiikkifestivaali?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Viljandissa järjestetään vuosittain, yleensä heinäkuussa, perinnemusiikkifestivaali, jolla esiintyy virolaisia ja kansainvälisiä muusikoita. [[Viljandin linnan]] raunioissa toimii [[perinnemusiikin]] keskus, joten kaupungilla on vahva yhteys aiheeseen myös ympäri vuoden. Tarkoista esityspaikoista ja vuosiluvuista en ole varma.
+
+Suvussani on aina arvostettu hyvää viestiä, ja musiikki on kyllä viesti sekin. Pulla sopisi tosin väliajalle.
+KYSYMYS: Kerro lisää: Viljandin linnan
+
+### 314
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+AIEMPI KYSYMYS: Mikä on Viljandin perinnemusiikkifestivaali?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Viljandissa järjestetään vuosittain, yleensä heinäkuussa, perinnemusiikkifestivaali, jolla esiintyy virolaisia ja kansainvälisiä muusikoita. [[Viljandin linnan]] raunioissa toimii [[perinnemusiikin]] keskus, joten kaupungilla on vahva yhteys aiheeseen myös ympäri vuoden. Tarkoista esityspaikoista ja vuosiluvuista en ole varma.
+
+Suvussani on aina arvostettu hyvää viestiä, ja musiikki on kyllä viesti sekin. Pulla sopisi tosin väliajalle.
+KYSYMYS: Kerro lisää: perinnemusiikin
+
+### 315
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+AIEMPI KYSYMYS: Missä päin Viroa Viljandi sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viljandi sijaitsee Etelä-Virossa [[Viljandi-järven]] luoteisrannalla, [[Pärnun]] ja [[Tartun]] välissä. Se on siis sisämaan kaupunki, jolla ei ole omaa merirantaa. Tarkkoja etäisyyksiä muihin kaupunkeihin en ole varma kertomaan. Lyhyt vastaus, mut ei kaikkea tarvii venyttää.
+KYSYMYS: Kerro lisää: Viljandi-järven
+
+### 316
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Missä päin Viroa Viljandi sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viljandi sijaitsee Etelä-Virossa [[Viljandi-järven]] luoteisrannalla, [[Pärnun]] ja [[Tartun]] välissä. Se on siis sisämaan kaupunki, jolla ei ole omaa merirantaa. Tarkkoja etäisyyksiä muihin kaupunkeihin en ole varma kertomaan. Lyhyt vastaus, mut ei kaikkea tarvii venyttää.
+KYSYMYS: Kerro lisää: Pärnun
+
+### 317
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+AIEMPI KYSYMYS: Missä päin Viroa Viljandi sijaitsee?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Viljandi sijaitsee Etelä-Virossa [[Viljandi-järven]] luoteisrannalla, [[Pärnun]] ja [[Tartun]] välissä. Se on siis sisämaan kaupunki, jolla ei ole omaa merirantaa. Tarkkoja etäisyyksiä muihin kaupunkeihin en ole varma kertomaan. Lyhyt vastaus, mut ei kaikkea tarvii venyttää.
+KYSYMYS: Kerro lisää: Tartun
+
+### 318
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+AIEMPI KYSYMYS: Mitä saksankielinen nimi Fellin kertoo Viljandin historiasta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Fellin on Viljandin saksankielinen nimi, ja se on peruja ajalta, jolloin alueen hallinto, kauppa ja kirkko olivat pitkälti saksankielisten käsissä. [[Kalparitarikunta]] valtasi muinaislinnakkeen vuonna 1223, ja sen paikalle rakennettiin linna, josta tuli ritarikunnan tärkeä tukikohta. Myöhemmin [[baltiansaksalaiset]] pysyivät vaikutusvaltaisina vuosisatoja. Samoin Tallinnalla oli saksankielinen nimi Reval, Tartolla Dorpat ja Pärnulla Pernau. Nimien tarkasta syntyhistoriasta en ole varma. Ja tällaisia nimiä minä muistan loputtomasti.
+KYSYMYS: Kerro lisää: Kalparitarikunta
+
+### 319
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Viljandi (historia)
+Tietoruudun teksti: Viljandi on Etelä-Viron kaupunki Viljandi-järven luoteisrannalla Pärnun ja Tartun välissä. Paikan muinaislinnakkeen ensimmäinen kirjallinen maininta on vuodelta 1154, ja Kalparitarikunta valtasi linnakkeen vuonna 1223. Sen paikalle rakennettiin Viljandin (saksaksi Fellin) linna, joka oli yksi Baltian suurimmista ja ritarikunnan tärkeä tukikohta. Kaupunki liittyi 1300-luvulla Hansaliittoon, sillä se oli kauppiaiden pysähdyspaikka matkalla Venäjälle. Linna ja kaupunki tuhoutuivat sodissa, ja Viljandista tuli Katariina II:n uudistusten myötä piirikuntakaupunki vuonna 1783. Nykyään linnan raunioissa toimii perinnemusiikin keskus.
+AIEMPI KYSYMYS: Mitä saksankielinen nimi Fellin kertoo Viljandin historiasta?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Fellin on Viljandin saksankielinen nimi, ja se on peruja ajalta, jolloin alueen hallinto, kauppa ja kirkko olivat pitkälti saksankielisten käsissä. [[Kalparitarikunta]] valtasi muinaislinnakkeen vuonna 1223, ja sen paikalle rakennettiin linna, josta tuli ritarikunnan tärkeä tukikohta. Myöhemmin [[baltiansaksalaiset]] pysyivät vaikutusvaltaisina vuosisatoja. Samoin Tallinnalla oli saksankielinen nimi Reval, Tartolla Dorpat ja Pärnulla Pernau. Nimien tarkasta syntyhistoriasta en ole varma. Ja tällaisia nimiä minä muistan loputtomasti.
+KYSYMYS: Kerro lisää: baltiansaksalaiset
+
+### 320
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Geraldton — kaupunkilehti / Geraldton: Kaupunki jota tuuli ei jätä rauhaan] Geraldtonia kutsutaan usein Australian tuulisimmaksi kaupungiksi, ja nimitys on ansaittu: iltapäivisin lokakuusta huhtikuuhun mereltä puhaltaa lähes joka päivä voimakas ja tasainen etelätuuli. Paikalliset kutsuvat sitä luotettavaksi iltatuuleksi, ja se on tehnyt kaupungista yhden Australian suosituimmista purjelautailu- ja leijalautailukohteista. Lähistön Coronation Beach on tunnettu jopa kansainvälisistä kilpailuista, joihin osallistujia saapuu ympäri maailmaa nauttimaan aalloista ja tasaisesta tuulesta. Sama tuuli, joka nykyään houkuttelee lautailijoita, oli 1800-luvulla purjelaivoille sekä siunaus että riski.
+- [Bolivia — maalehti / Ruoka: Siemen, jonka linnut jättävät rauhaan] Kinua kesytettiin Titicacajärven ympäristössä, ja se kasvaa yli neljän kilometrin korkeudessa. Siementen pinnalla on kitkerää saponiinia, joka karkottaa linnut, joten peltoa ei juuri tarvitse vartioida; kauppaan tuleva kinua on huuhdeltu kerroksesta puhtaaksi. YK:n yleiskokous julisti vuoden 2013 kansainväliseksi kinuavuodeksi andilaisten viljelijöiden perinteen kunniaksi. Vuonna 2023 maailmassa tuotettiin 112 251 tonnia kinuaa, ja siitä Perun osuus oli 62 ja Bolivian 37 prosenttia. Hintanousu 2004–2011 toi ylängölle rahaa mutta myös yksipuolisti viljelyä.
+AIEMPI KYSYMYS: Miksi Paldiskin linnoitus ja satama jäivät kesken Pietari Suuren kuoleman jälkeen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tarkkaa syytä en ole varma, mutta hanke oli Pietari Suuren oma hanke, ja työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä. Keisari kuoli vuonna 1725, ja suuri Pohjan sota oli päättynyt jo vuonna 1721 [[Uudenkaupungin rauhaan]], joten kiire uuden [[sotalaivastosataman]] rakentamiseen oli luultavasti vähentynyt. Raha ja huomio siirtyivät todennäköisesti muualle. Satama sai myöhemmin Katariina Suuren aikana nimen [[Baltiiski Port]]. Kyl minä ymmärrän: kaikkea ei ehdi valmiiksi.
+KYSYMYS: Kerro lisää: Uudenkaupungin rauhaan

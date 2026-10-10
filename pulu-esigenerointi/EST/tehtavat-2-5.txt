@@ -1,0 +1,1045 @@
+### 321
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tromssa — kaupunkilehti / Historia: Sotalaiva, joka kaatui Tromssan edustalla] Saksan laivaston Tirpitz oli sisarlaivansa Bismarckin ohella Euroopan suurin ja pelätyin sotalaiva, ja se oli sijoitettu Norjan rannikolle uhkaamaan liittoutuneiden arktisia saattueita. Marraskuussa 1944 brittiläiset pommikoneet upottivat sen Tromssan edustalla räjähtävillä Tallboy-erikoispommeilla, jotka lävistivät laivan kannen. Laiva kaatui kyljelleen minuuteissa, ja arviolta yli tuhat merimiestä kuoli. Hylky makasi Tromssan vuonossa vuoteen 1957 asti, jolloin se lopulta romutettiin — mutta osia siitä ja sieltä löydettyjä esineitä säilytetään yhä museoissa Norjassa.
+AIEMPI KYSYMYS: Miksi Paldiskin linnoitus ja satama jäivät kesken Pietari Suuren kuoleman jälkeen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tarkkaa syytä en ole varma, mutta hanke oli Pietari Suuren oma hanke, ja työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä. Keisari kuoli vuonna 1725, ja suuri Pohjan sota oli päättynyt jo vuonna 1721 [[Uudenkaupungin rauhaan]], joten kiire uuden [[sotalaivastosataman]] rakentamiseen oli luultavasti vähentynyt. Raha ja huomio siirtyivät todennäköisesti muualle. Satama sai myöhemmin Katariina Suuren aikana nimen [[Baltiiski Port]]. Kyl minä ymmärrän: kaikkea ei ehdi valmiiksi.
+KYSYMYS: Kerro lisää: sotalaivastosataman
+
+### 322
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Miksi Paldiskin linnoitus ja satama jäivät kesken Pietari Suuren kuoleman jälkeen?
+AIEMPI VASTAUS (Livia):
+No jopas. Tarkkaa syytä en ole varma, mutta hanke oli Pietari Suuren oma hanke, ja työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä. Keisari kuoli vuonna 1725, ja suuri Pohjan sota oli päättynyt jo vuonna 1721 [[Uudenkaupungin rauhaan]], joten kiire uuden [[sotalaivastosataman]] rakentamiseen oli luultavasti vähentynyt. Raha ja huomio siirtyivät todennäköisesti muualle. Satama sai myöhemmin Katariina Suuren aikana nimen [[Baltiiski Port]]. Kyl minä ymmärrän: kaikkea ei ehdi valmiiksi.
+KYSYMYS: Kerro lisää: Baltiiski Port
+
+### 323
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Miksi Pietari Suuri valitsi uuden sotasatamansa paikaksi juuri Rågervikin lahden?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Varmaa syytä en tiedä, mutta sijainti puhuu puolestaan: lahti on [[Suomenlahden]] rannalla [[Pakrin niemimaan]] tuntumassa, ja sieltä on suora yhteys Itämerelle. Myöhemmin satama tunnettiin siitä, että se pysyi talvella sulana, minkä vuoksi vuonna 1870 valmistui rautatie tavaroiden kuljetukseen Pietariin. Lahden suojaisuus ja syvyys ovat tavallisia syitä satamapaikan valintaan, mutta en ole varma, mitkä tekijät juuri Pietarin päätökseen vaikuttivat. Sijainti, sijainti, sijainti, sen minä tiedän ylhäältäkin.
+KYSYMYS: Kerro lisää: Suomenlahden
+
+### 324
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Miksi Pietari Suuri valitsi uuden sotasatamansa paikaksi juuri Rågervikin lahden?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Varmaa syytä en tiedä, mutta sijainti puhuu puolestaan: lahti on [[Suomenlahden]] rannalla [[Pakrin niemimaan]] tuntumassa, ja sieltä on suora yhteys Itämerelle. Myöhemmin satama tunnettiin siitä, että se pysyi talvella sulana, minkä vuoksi vuonna 1870 valmistui rautatie tavaroiden kuljetukseen Pietariin. Lahden suojaisuus ja syvyys ovat tavallisia syitä satamapaikan valintaan, mutta en ole varma, mitkä tekijät juuri Pietarin päätökseen vaikuttivat. Sijainti, sijainti, sijainti, sen minä tiedän ylhäältäkin.
+KYSYMYS: Kerro lisää: Pakrin niemimaan
+
+### 325
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Mihin Ruotsin satamaan Paldiskista lähtee lauttoja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tietääkseni Paldiskin satamasta kulkee lauttayhteys [[Kapellskäriin]], joka sijaitsee [[Tukholman]] pohjoispuolella, mutta en ole varma, mitkä reitit ovat nykyään liikenteessä. Aikataulu ja varustamo kannattaa siksi tarkistaa ennen matkaa. Satamista lähtee lauttoja Ruotsiin, joten yhteys on olemassa.
+
+Minä en ole ikinä ottanut lauttaa, koska oma siipi tuntuu halvemmalta. Lautan kahvilan pulla kiinnostaisi silti.
+KYSYMYS: Kerro lisää: Kapellskäriin
+
+### 326
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Martin piirsi Tukholman ennen valokuvaa] Elias Martin oppi ammattinsa Lontoossa, jossa hän asui kaksitoista vuotta ja opetteli akvatinnan — tekniikan, jolla kuparilevystä saa vesivärimäisen sävyn. Kotiin palattuaan 1780 hän kääntyi kaupunkiin, jota kukaan ei ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne ovat tarkin näkymä Tukholmaan ennen valokuvaa.
+AIEMPI KYSYMYS: Mihin Ruotsin satamaan Paldiskista lähtee lauttoja?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tietääkseni Paldiskin satamasta kulkee lauttayhteys [[Kapellskäriin]], joka sijaitsee [[Tukholman]] pohjoispuolella, mutta en ole varma, mitkä reitit ovat nykyään liikenteessä. Aikataulu ja varustamo kannattaa siksi tarkistaa ennen matkaa. Satamista lähtee lauttoja Ruotsiin, joten yhteys on olemassa.
+
+Minä en ole ikinä ottanut lauttaa, koska oma siipi tuntuu halvemmalta. Lautan kahvilan pulla kiinnostaisi silti.
+KYSYMYS: Kerro lisää: Tukholman
+
+### 327
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moldova — maalehti / Historia: Neuvosto äänesti maan kohtalosta] 27.3.1918 — Maaliskuun 27. päivänä 1918 Sfatul Tării, Bessarabian kansanvaltainen neuvosto, kokoontui entisen poikien lyseon juhlasaliin Chișinăussa äänestämään maansa kohtalosta. 86 edustajaa äänesti liittymisen puolesta, 3 vastaan ja 36 pidättäytyi. Puheenjohtaja Ion Inculeț ja neuvosto liittivät Bessarabian Romaniaan sillä ehdolla, että maareformi ja alueellinen itsehallinto säilyisivät. Ehdot pyyhittiin pois vasta saman vuoden marraskuun lopulla, kun neuvosto äänesti Bucureștissa uudelleen ja julisti liittymisen ehdottomaksi. Rakennus tunnetaan nykyään Sfatul Tării -palatsina.
+AIEMPI KYSYMYS: Miksi Paldiski oli neuvostoaikana suljettu kaupunki?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo vähän. Neuvostoaikana Paldiski oli [[Neuvostoliiton]] merivoimien tukikohta, ja kaupunki suljettiin ulkopuolisilta; siellä toimi muun muassa [[ydinsukellusveneiden]] miehistöjen koulutuskeskus. Venäjän joukot poistuivat Virosta 1990-luvun alkupuoliskolla, ja Paldiski palasi siviilikäyttöön. Tarkoista yksityiskohdista, esimerkiksi ydinlaitteiston purkamisesta, en ole varma. Onpas siit onneksi jo aikaa.
+KYSYMYS: Kerro lisää: Neuvostoliiton
+
+### 328
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Miksi Paldiski oli neuvostoaikana suljettu kaupunki?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo vähän. Neuvostoaikana Paldiski oli [[Neuvostoliiton]] merivoimien tukikohta, ja kaupunki suljettiin ulkopuolisilta; siellä toimi muun muassa [[ydinsukellusveneiden]] miehistöjen koulutuskeskus. Venäjän joukot poistuivat Virosta 1990-luvun alkupuoliskolla, ja Paldiski palasi siviilikäyttöön. Tarkoista yksityiskohdista, esimerkiksi ydinlaitteiston purkamisesta, en ole varma. Onpas siit onneksi jo aikaa.
+KYSYMYS: Kerro lisää: ydinsukellusveneiden
+
+### 329
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Mikä on Pohjois-Viron klintti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pohjois-Viron [[klintti]] on pitkä, kalkkikivestä ja sen kaltaisista kivilajeista muodostunut jyrkänne, joka kulkee Suomenlahden eteläpuolella. Tietääkseni se näkyy hyvin [[Pakrin niemimaalla]] Paldiskin lähellä, ja sen uskotaan jatkuvan idässä kohti Venäjää ja lännessä Ruotsin suuntaan, mutta en ole varma sen koko pituudesta enkä korkeuksista. [[Kalkkikivi]] on sedimenttikivi, joka syntyy pääosin meren pohjalle kerrostuneesta aineksesta. Ylhäältä se näyttää kyl aika komealta reunalta.
+KYSYMYS: Kerro lisää: klintti
+
+### 330
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+AIEMPI KYSYMYS: Mikä on Pohjois-Viron klintti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pohjois-Viron [[klintti]] on pitkä, kalkkikivestä ja sen kaltaisista kivilajeista muodostunut jyrkänne, joka kulkee Suomenlahden eteläpuolella. Tietääkseni se näkyy hyvin [[Pakrin niemimaalla]] Paldiskin lähellä, ja sen uskotaan jatkuvan idässä kohti Venäjää ja lännessä Ruotsin suuntaan, mutta en ole varma sen koko pituudesta enkä korkeuksista. [[Kalkkikivi]] on sedimenttikivi, joka syntyy pääosin meren pohjalle kerrostuneesta aineksesta. Ylhäältä se näyttää kyl aika komealta reunalta.
+KYSYMYS: Kerro lisää: Pakrin niemimaalla
+
+### 331
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Paldiski (historia)
+Tietoruudun teksti: Paldiski on rannikkokaupunki Luoteis-Virossa Pakrin niemimaalla Suomenlahden rannalla. Alueen ensimmäinen tunnettu nimi oli ruotsalainen Rågervik, "ruissaarten lahti". Pietari Suuri päätti vuonna 1715 rakentaa lahden rannalle uuden sotalaivastosataman, ja työt aloitettiin seremonialla 1718; suunnitelmaan kuuluivat linnoitus, aallonmurtaja ja majakka. Työt hidastuivat keisarin kuoleman jälkeen ja pysähtyivät 1730-luvun alkuun mennessä, ja Katariina Suuri antoi satamalle vuonna 1762 nimen Baltiiski Port, "Itämeren satama". Kaupunki sai kaupunkioikeudet 1783. Vuonna 1870 valmistui rautatie Pietarista Tallinnan kautta Paldiskiin, jotta sataman jäätömyyttä voitiin hyödyntää tavaroiden kuljetuksessa Pietariin. Nykyään satamista lähtee lauttoja Ruotsiin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kamerun — maalehti / Ruoka: Keitto, jonka värin tekee kalkkikivi] Achu on tikarien ja ngembojen perusruoka Kamerunin luoteis- ja länsiosissa: kokojamssi ja raa'at banaanit keitetään, kuoritaan ja survotaan huhmaressa sileäksi taikinaksi, joka muotoillaan lautaselle oman kuoppansa kanssa. Kuoppaan kaadetaan keltainen keitto, joka valmistetaan erikseen palmuöljystä, mausteista ja lihaliemestä — ja kanwa- eli niki-vedestä, jossa on liuotettua kalkkikiveä. Juuri se kääntää punaisen palmuöljyn keltaiseksi ja antaa ruoalle sen toisen nimen, keltainen keitto. Seurana on naudanlihaa, sisäelimiä tai naudannahkaa. Luoteessa ruoka on achu, lännessä taro.
+- [Kiina — maalehti / Luonto: Kalkkikivipylväitä joen mutkissa] Li-joki kiemurtelee Guilinista Yangshuohon kalkkikiven läpi. Maisema on kuuluisaa karstia: sadetta hitaasti liuottama kalkkikivi on jättänyt jäljelle kymmenien metrien korkuisia jyrkkäseinäisiä kukkuloita, jotka nousevat tasangolta yksi kerrallaan. Muoto syntyy siitä, että vesi syövyttää kiveä ennen kaikkea rakojen kohdalta, ja väliin jää liukenematonta kiveä. Kiinalaiset maisemamaalarit ovat piirtäneet näitä kukkuloita vuosisatoja, ja monessa maalauksessa väitetty liioittelu onkin lähempänä totuutta kuin luulisi.
+- [Nullarbor — kaupunkilehti / Kalkkikivitasanko elää maan alla] Nullarborin tasainen pinta kätkee alleen toisen maailman: kauan sitten merenpohjasta noussut kalkkikivi on täynnä luolia, pystykuiluja ja käytäviä, joissa muinaiset ihmiset ja aavikon eläimet ovat molemmat oppineet elämään.
+AIEMPI KYSYMYS: Mikä on Pohjois-Viron klintti?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Pohjois-Viron [[klintti]] on pitkä, kalkkikivestä ja sen kaltaisista kivilajeista muodostunut jyrkänne, joka kulkee Suomenlahden eteläpuolella. Tietääkseni se näkyy hyvin [[Pakrin niemimaalla]] Paldiskin lähellä, ja sen uskotaan jatkuvan idässä kohti Venäjää ja lännessä Ruotsin suuntaan, mutta en ole varma sen koko pituudesta enkä korkeuksista. [[Kalkkikivi]] on sedimenttikivi, joka syntyy pääosin meren pohjalle kerrostuneesta aineksesta. Ylhäältä se näyttää kyl aika komealta reunalta.
+KYSYMYS: Kerro lisää: Kalkkikivi
+
+### 332
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Miksi Padisen luostari muutettiin linnoitukseksi vuonna 1559?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syy oli pelko: [[Liivinmaan sodan]] aikana ritarikunnan mestari [[Gotthard Kettler]] lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi, koska hän pelkäsi [[ruotsalaisten]] valtaavan sen. Sota oli alkanut edellisenä vuonna, ja luostarin vahvat kivirakennukset sopivat luultavasti hyvin puolustukseen. Rakennusten muuttaminen oli todennäköisesti nopeampaa kuin uuden linnan rakentaminen. Onpa se aika kaukana jo.
+KYSYMYS: Kerro lisää: Liivinmaan sodan
+
+### 333
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Sveitsi — maalehti / Historian hetki: Gotthard 1880 — valokuva kulkee kalliossa] 29.2.1880 — Pieni valokuva kulkee käsistä käsiin viimeisen kivikerroksen läpi ennen kuin kukaan ehtii sanoa mitään. Se esittää Louis Favrea, insinööriä, joka johti Gotthardin rautatietunnelin louhintaa vuodesta 1872, mutta joka kuoli sydänkohtaukseen tunnelissa heinäkuussa 1879 — kahdeksan kuukautta ennen tätä hetkeä. Sunnuntaina 29. helmikuuta 1880 pohjoisesta Göschenenistä ja etelästä Airolosta louhitut käytävät kohtaavat vihdoin syvällä Gotthard-massiivin sisällä, lähes 1 700 metrin kiven alla, ja saksankielinen ja italiankielinen työryhmä puhkaisevat viimeisen ohuen kivimuurin toistensa väliltä. Ensimmäinen kättely tapahtuu reiän läpi, ennen kuin kukaan pääsee kokonaan toiselle puolelle…
+AIEMPI KYSYMYS: Miksi Padisen luostari muutettiin linnoitukseksi vuonna 1559?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syy oli pelko: [[Liivinmaan sodan]] aikana ritarikunnan mestari [[Gotthard Kettler]] lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi, koska hän pelkäsi [[ruotsalaisten]] valtaavan sen. Sota oli alkanut edellisenä vuonna, ja luostarin vahvat kivirakennukset sopivat luultavasti hyvin puolustukseen. Rakennusten muuttaminen oli todennäköisesti nopeampaa kuin uuden linnan rakentaminen. Onpa se aika kaukana jo.
+KYSYMYS: Kerro lisää: Gotthard Kettler
+
+### 334
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kööpenhamina — kohdekartta / Kohdekartta: Kastellet] 1660-luku Kastellet on tähtilinnoitus kaupungin pohjoisreunalla ja yksi Pohjois-Euroopan parhaiten säilyneistä linnoituksista. Se on viisikulmio, jonka jokaisessa kärjessä on bastioni: Kuninkaan, Kuningattaren, Kreivin, Prinsessan ja Prinssin bastioni. Vallit ja vallihaudat olivat aikanaan osa koko kaupungin kiertänyttä bastionirengasta, josta on muuten jäljellä vain Christianshavnin vallit. Alku oli vaatimattomampi. Christian IV perusti paikalle Sankt Annæn skanssin 1624 vahtimaan sataman suuta. Työ jäi hänen aikanaan kesken, ja vasta ruotsalaisten piiritettyä Kööpenhaminaa vuosina 1658–1660 Fredrik III kutsui paikalle hollantilaisen insinöörin Henrik Rusen. Hän rakensi skanssista kunnolli…
+- [Pietari — kaupunkilehti / Historian hetki: Jänissaari 1703 — kuusi bastionia suohon] 27.5.1703 — Mittakeppi ja kartta ovat ainoat kuivat esineet Jänissaarella. Vartiosotilas pitää kartan kulmasta kiinni, kun tsaari Pietari, yli kaksimetrinen mies, kävelee saaren märkää rantaa ja näyttää, mihin kuusi bastionia tulevat. On 27. toukokuuta 1703, ja kaksi viikkoa aiemmin venäläiset valtasivat ylempänä Nevalla ruotsalaisten Nyenskansin linnoituksen. Suuri Pohjan sota on käynnissä, ja Ruotsin laivasto voi ilmestyä Suomenlahdelle milloin tahansa; siksi linnake pitää saada saarelle jokisuuhun ennen talvea, ensin maasta ja puusta. Kivi tulee myöhemmin, Domenico Trezzinin piirustuksin vuodesta 1706. Sotilaille ja pakkotyöhön käsketyille talonpojille paikka on suo, jossa on hyttysiä ja…
+AIEMPI KYSYMYS: Miksi Padisen luostari muutettiin linnoitukseksi vuonna 1559?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syy oli pelko: [[Liivinmaan sodan]] aikana ritarikunnan mestari [[Gotthard Kettler]] lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi, koska hän pelkäsi [[ruotsalaisten]] valtaavan sen. Sota oli alkanut edellisenä vuonna, ja luostarin vahvat kivirakennukset sopivat luultavasti hyvin puolustukseen. Rakennusten muuttaminen oli todennäköisesti nopeampaa kuin uuden linnan rakentaminen. Onpa se aika kaukana jo.
+KYSYMYS: Kerro lisää: ruotsalaisten
+
+### 335
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+AIEMPI KYSYMYS: Miksi Padisen munkit muuttivat Latviasta Viroon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: munkit eivät lähteneet vapaaehtoisesti. Heidän aiempi luostarinsa [[Dünamündessä]] Latviassa joutui vuonna 1305 [[Saksalaisen ritarikunnan]] haltuun, ja munkit menettivät sen. He asettuivat Padiseen vuonna 1310 [[Tanskan kuninkaan]] luvalla. Kivirakennusten työt alkoivat vasta vuonna 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista. Syistä, miksi ritarikunta otti luostarin haltuunsa, en ole varma. Kotia ei aina saa pitää, sen tietää kyyhkykin.
+KYSYMYS: Kerro lisää: Dünamündessä
+
+### 336
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Miksi Padisen munkit muuttivat Latviasta Viroon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: munkit eivät lähteneet vapaaehtoisesti. Heidän aiempi luostarinsa [[Dünamündessä]] Latviassa joutui vuonna 1305 [[Saksalaisen ritarikunnan]] haltuun, ja munkit menettivät sen. He asettuivat Padiseen vuonna 1310 [[Tanskan kuninkaan]] luvalla. Kivirakennusten työt alkoivat vasta vuonna 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista. Syistä, miksi ritarikunta otti luostarin haltuunsa, en ole varma. Kotia ei aina saa pitää, sen tietää kyyhkykin.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 337
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Kuningas toi perustuslain vuosi isoisän jälkeen] 1874 — Vuonna 1874 Islanti juhli tuhatta vuotta asutusta, ja juhlaan saapui ensimmäistä kertaa historiassa hallitseva Tanskan kuningas: Kristian IX nousi maihin Reykjavíkissa heinäkuussa. Elokuun 2. päivänä hän toi mukanaan uuden perustuslain, joka antoi Islannille oman lainsäädäntövallan sisäisissä asioissa ensimmäistä kertaa satoihin vuosiin — vaikka Tanska piti yhä ulkopolitiikan ja rahat. Þingvellirillä islantilaiset ojensivat kuninkaalle oman vetoomuksensa lisää itsehallintoa varten. Isoisän matka Islantiin oli tapahtunut vain vuotta aiemmin, samaan tuhatvuotisjuhlan aikaan.
+- [Kööpenhamina — kohdekartta / Kohdekartta: Rosenborgin linna] 1606–1633 Rosenborgin linna alkoi huvilana kaupungin ulkopuolella. Christian IV osti vuonna 1606 joukon tontteja silloisen Nørrevoldin takaa: sinne mahtui hänen lystilinnansa lisäksi puutarha ja kyökkimaa, joka ruokki hovia. Rakennus lähti liikkeelle vaatimattomana erakkomajana, mutta se laajeni 28 vuoden aikana neljässä vaiheessa ja seisoi 1633 valmiina sellaisena kuin se on yhä: hollantilaista renessanssia, punatiiltä ja hiekkakiveä, tornit patinoituneen vihreinä. Linna oli kuninkaan lempipaikka, ja se näkyi loppuun asti. Kuolemansairaana Frederiksborgissa Christian IV käski kuljettaa itsensä reellä Rosenborgiin päättääkseen päivänsä siellä. Hän kuoli linnassa helmikuussa 1648. Kuninkaanl…
+AIEMPI KYSYMYS: Miksi Padisen munkit muuttivat Latviasta Viroon?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: munkit eivät lähteneet vapaaehtoisesti. Heidän aiempi luostarinsa [[Dünamündessä]] Latviassa joutui vuonna 1305 [[Saksalaisen ritarikunnan]] haltuun, ja munkit menettivät sen. He asettuivat Padiseen vuonna 1310 [[Tanskan kuninkaan]] luvalla. Kivirakennusten työt alkoivat vasta vuonna 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista. Syistä, miksi ritarikunta otti luostarin haltuunsa, en ole varma. Kotia ei aina saa pitää, sen tietää kyyhkykin.
+KYSYMYS: Kerro lisää: Tanskan kuninkaan
+
+### 338
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+AIEMPI KYSYMYS: Mitä kistersiläismunkit tekivät luostareissaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kistersiläiset]] noudattivat [[Benedictuksen]] sääntöä, jonka tunnetuin periaate on [[ora et labora]], eli rukoile ja tee työtä. Munkit viljelivät maata, hoitivat tiloja ja rakensivat luostareita usein syrjäisille paikoille. Padisen luostarilla oli maita myös Etelä-Suomessa. Päivä rakentui rukoushetkien ympärille, mutta tarkasta päivärytmistä en ole varma. Minä olisin kyl valinnut vain ne leivonta-aamut.
+KYSYMYS: Kerro lisää: Kistersiläiset
+
+### 339
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rio de Janeiro — kohdekartta / Kohdekartta: São Benton luostari] 1590–1671 Luostarin historia alkoi 1590, kun Manoel de Brito ja hänen poikansa Diogo lahjoittivat maata kahdelle Bahiasta tulleelle benediktiinimunkille, Pedro Ferrazille ja João Porcalholle. Munkit asuivat siihen asti vaatimattomassa majatalossa Nossa Senhora da Conceiçãon kappelin vieressä sillä kukkulalla, joka tunnetaan nyt São Benton mäkenä. Luostari sai 1596 lisäpyhimyksekseen Pyhän Benedictuksen ja 1602 uuden nimen Montserratin Neitsyen mukaan. Kirkon piirsi portugalilainen sotilasinsinööri Francisco Frias de Mesquita, työ alkoi 1633 ja valmistui 1671; rakennusaikana Bernardo de São Bento Correia de Souza muutti pohjan kolmilaivaiseksi, ja viereinen konventti valmistui vasta 1755 Jos…
+AIEMPI KYSYMYS: Mitä kistersiläismunkit tekivät luostareissaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kistersiläiset]] noudattivat [[Benedictuksen]] sääntöä, jonka tunnetuin periaate on [[ora et labora]], eli rukoile ja tee työtä. Munkit viljelivät maata, hoitivat tiloja ja rakensivat luostareita usein syrjäisille paikoille. Padisen luostarilla oli maita myös Etelä-Suomessa. Päivä rakentui rukoushetkien ympärille, mutta tarkasta päivärytmistä en ole varma. Minä olisin kyl valinnut vain ne leivonta-aamut.
+KYSYMYS: Kerro lisää: Benedictuksen
+
+### 340
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Grand Canyon — kaupunkilehti / Kivi, joki ja eliöt: Orava jonka kanjoni erotti serkuistaan] Kaibab-orava elää vain yhdessä paikassa maailmassa: Grand Canyonin pohjoisreunan mäntymetsissä. Se on läheistä sukua etelärannan Abert-oravalle, mutta kanjoni on erottanut kannat toisistaan niin kauan – luultavasti tuhansia vuosia – että niistä on kehittynyt eri näköisiä: Kaibab-oravalla on tumma, lähes musta vatsanpuoli ja täysin valkoinen, tuuhea häntä, kun taas Abert-oravan häntä on kaksivärinen. Syvä rotko ja sen pohjalla polttava kuumuus ovat este puissa liikkuvalle jyrsijälle, joten kannat eivät ole koskaan sekoittuneet keskenään – kanjonista on tullut elävä esimerkki siitä, miten maantiede voi ohjata lajien kehitystä erilleen.
+- [Etelä-Sudan — maalehti / Tarinat ja uskomukset: Kolme oraakkelia, joilla oli eri hinta] Azandet käyttivät kolmea oraakkelia, ja niillä oli selvä arvojärjestys. Arvostetuin oli benge, myrkkyoraakkeli, jota vain miehet saivat käyttää ja jonka päätöstä ei kyseenalaistettu. Sitä halvempi ja kaikille avoin oli termiittioraakkeli, jonka vastausta naiset, miehet ja lapset saivat kysyä. Halvin ja epäluotettavimpana pidetty oli hankausoraakkeli, kahdesta puupalasta tehty väline, joka kulki mukana ja jolta saattoi kysyä missä ja milloin tahansa. Pitkään oraakkelit olivat myös oikeuslaitos: ne osoittivat, kuka oli aiheuttanut onnettomuuden.
+AIEMPI KYSYMYS: Mitä kistersiläismunkit tekivät luostareissaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. [[Kistersiläiset]] noudattivat [[Benedictuksen]] sääntöä, jonka tunnetuin periaate on [[ora et labora]], eli rukoile ja tee työtä. Munkit viljelivät maata, hoitivat tiloja ja rakensivat luostareita usein syrjäisille paikoille. Padisen luostarilla oli maita myös Etelä-Suomessa. Päivä rakentui rukoushetkien ympärille, mutta tarkasta päivärytmistä en ole varma. Minä olisin kyl valinnut vain ne leivonta-aamut.
+KYSYMYS: Kerro lisää: ora et labora
+
+### 341
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+AIEMPI KYSYMYS: Mikä on Harjumaa, jossa Padise sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Harjumaa on Pohjois-Viron maakunta, joka ulottuu [[Suomenlahden]] rannalle. [[Tallinna]] sijaitsee Harjumaalla, ja maakunta on Viron suurimpia asukasmäärältään, koska pääkaupunki on sen alueella. Padise sijaitsee maakunnan länsiosassa, mutta tarkkaa etäisyyttä Tallinnasta en ole varma. Harjumaa on siis lähellä Suomea, vain Suomenlahden toisella puolella. Lyhyt matka lentäen, vaikka laiva on tietysti mukavampi.
+KYSYMYS: Kerro lisää: Suomenlahden
+
+### 342
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kaupunkilehti / Tallinna] Kaupunki, jonka apteekissa myytiin poltettuja siilejä ja jonka tornin huipulla sama sotilas on kääntynyt tuulen mukana vuodesta 1530.
+AIEMPI KYSYMYS: Mikä on Harjumaa, jossa Padise sijaitsee?
+AIEMPI VASTAUS (Livia):
+Ai tota. Harjumaa on Pohjois-Viron maakunta, joka ulottuu [[Suomenlahden]] rannalle. [[Tallinna]] sijaitsee Harjumaalla, ja maakunta on Viron suurimpia asukasmäärältään, koska pääkaupunki on sen alueella. Padise sijaitsee maakunnan länsiosassa, mutta tarkkaa etäisyyttä Tallinnasta en ole varma. Harjumaa on siis lähellä Suomea, vain Suomenlahden toisella puolella. Lyhyt matka lentäen, vaikka laiva on tietysti mukavampi.
+KYSYMYS: Kerro lisää: Tallinna
+
+### 343
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Padisen luostari (historia)
+Tietoruudun teksti: Padisen luostari oli kistersiläisluostari Harjumaalla Pohjois-Virossa. Sen munkit menettivät aiemman luostarinsa Dünamündessä Latviassa, kun Saksalainen ritarikunta otti sen haltuunsa vuonna 1305, ja he asettuivat Padiseen vuonna 1310 Tanskan kuninkaan luvalla. Kivirakennusten työt alkoivat vasta 1317, ja luostarista tuli 1400-luvulla yksi Viron tärkeimmistä hengellisistä keskuksista, jolla oli maita myös Etelä-Suomessa. Liivinmaan sodassa ritarikunnan mestari Gotthard Kettler lakkautti luostarin vuonna 1559 ja muutti sen linnoitukseksi peläten ruotsalaisten valtaavan sen. Vuodesta 1622 alue oli Ramm-suvun hallussa; suku rakensi luostarin tiloihin barokkikartanon, joka paloi salaman iskusta 1766. Rauniot avattiin uudelleen museona vuonna 2020 kunnostuksen jälkeen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mitä Liivinmaa tarkoitti keskiajalla?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Liivinmaa oli keskiajalla nimitys alueelle, joka kattoi suurelta osin nykyisen Viron ja Latvian. Aluetta hallitsivat yhdessä ja usein kilpaillen [[Liivinmaan ritarikunta]], piispat ja Hansa-kaupungit. Ritarikunta oli [[Saksalaisen ritarikunnan]] haara. Tanskalla oli aikanaan hallussaan Pohjois-Viroa, kuten Padisen luostarin perustaminen Tanskan kuninkaan luvalla osoittaa. Tarkkoja rajoja ja vuosilukuja en ole varma kertomaan. Aika iso alue yhdelle nimelle.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunta
+
+### 344
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Piispa perusti kaupungin joen suulle] 1201 — Saksalainen piispa Albert von Buxhoeveden perusti Riian vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen balttilaiset ja liiviläiset heimot käännytettiin kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on laajennettu vuosisatojen kuluessa, joten sen sisätiloissa näkyy sekä varhaista goottia että myöhempiä tyylikausia.
+AIEMPI KYSYMYS: Miksi Koluveren linna on rakennettu tekosaarelle joen keskelle?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Varmaa syytä en tiedä, mutta ratkaisu on puolustuksellisesti järkevä: ympäröivä vesi teki linnaan pääsemisen vaikeaksi. Linna rakennettiin tekosaarelle, joka syntyi [[Liivi-joen]] padotun osan keskelle, ja vesi toimi luultavasti samalla vallihautana. Paikalla on ollut linnoitus jo 1200-luvulta, ja vuonna 1439 se siirtyi [[Saare-Läänen piispalle]]. Tarkemmista rakennusvaiheista en ole varma. Siipiä ei tarvitse kastella, jos pysyy ilmassa.
+KYSYMYS: Kerro lisää: Liivi-joen
+
+### 345
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+AIEMPI KYSYMYS: Miksi Koluveren linna on rakennettu tekosaarelle joen keskelle?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Varmaa syytä en tiedä, mutta ratkaisu on puolustuksellisesti järkevä: ympäröivä vesi teki linnaan pääsemisen vaikeaksi. Linna rakennettiin tekosaarelle, joka syntyi [[Liivi-joen]] padotun osan keskelle, ja vesi toimi luultavasti samalla vallihautana. Paikalla on ollut linnoitus jo 1200-luvulta, ja vuonna 1439 se siirtyi [[Saare-Läänen piispalle]]. Tarkemmista rakennusvaiheista en ole varma. Siipiä ei tarvitse kastella, jos pysyy ilmassa.
+KYSYMYS: Kerro lisää: Saare-Läänen piispalle
+
+### 346
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+AIEMPI KYSYMYS: Miksi linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni vanhan tornin viereen?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Tuliaseiden]] yleistyttyä vanhat korkeat ja nelikulmaiset tornit eivät enää riittäneet, koska tykinkuulat voivat murtaa suorat seinät ja kulmat. Pyöreä ja paksu [[tykkitorni]] kestää tulta paremmin, koska kuulat osuvat kaarevaan pintaan viistosti, ja sieltä voitiin myös ampua tykeillä lähestyviä hyökkääjiä. Vanha [[nelikulmainen torni]] on luultavasti 1200-luvun alusta, joten linna sai uuden osan eikä vanhaa korvattu. Linnan vaiheiden tarkoista vuosista en ole varma. Kyl se vanha torni sentään seisoo yhä.
+KYSYMYS: Kerro lisää: Tuliaseiden
+
+### 347
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Havanna — kaupunkilehti / Linnoitukset: Vaakunan kolme linnaa] Havannan vaakunassa on kolme linnaa: Real Fuerza, Morro ja Punta, kaupunkia puolustanut kolmikko. Keskellä oleva avain kertoo, että Havanna oli portti Uuteen maailmaan, ja kilpeä kannattelevat tammenoksa ja laakeriseppele – edellinen voimana, jälkimmäinen kunniana ja maineena. Nuorin kolmesta on Punta: vartiomiehiä asetettiin paikalle 1559, mutta muurien rakentaminen alkoi vasta 1590 ja edistyi hitaasti. Vuoden 1595 hirmumyrsky repi liian ohuet muurit niin pahoin, että ne tehtiin uudestaan paksummiksi, ja 1602 mennessä työ oli niin myöhässä, että linnasta tehtiin pelkkä tykkitorni.
+AIEMPI KYSYMYS: Miksi linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni vanhan tornin viereen?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Tuliaseiden]] yleistyttyä vanhat korkeat ja nelikulmaiset tornit eivät enää riittäneet, koska tykinkuulat voivat murtaa suorat seinät ja kulmat. Pyöreä ja paksu [[tykkitorni]] kestää tulta paremmin, koska kuulat osuvat kaarevaan pintaan viistosti, ja sieltä voitiin myös ampua tykeillä lähestyviä hyökkääjiä. Vanha [[nelikulmainen torni]] on luultavasti 1200-luvun alusta, joten linna sai uuden osan eikä vanhaa korvattu. Linnan vaiheiden tarkoista vuosista en ole varma. Kyl se vanha torni sentään seisoo yhä.
+KYSYMYS: Kerro lisää: tykkitorni
+
+### 348
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Dubrovnik — kohdekartta / Kohdekartta: Minčetan torni] 1463–1464 Minčetan torni ei ollut alun perin kovin vaikuttava: vuonna 1319 samalla paikalla seisoi vaatimaton nelikulmainen linnoitus, joka sai nimensä sen maat omistaneelta Menčetićin suvulta. Kaikki muuttui 1400-luvulla, kun Osmanien valtakunta alkoi uhata Dubrovnikia. Paavi Pius II lähetti kaupunkiin italialaisia insinöörejä, ja he suunnittelivat yhdessä paikallisen rakentajan Nicifor Ranjinan kanssa tornille kokonaan uuden muodon. Työtä johti kuuluisa firenzeläinen arkkitehti Michelozzo, ja korkean, pyöreän tornin lopullisen piirustuksen teki kuvanveistäjä Giorgio da Sebenico. Torni valmistui vuonna 1464, ja sen muurit ovat paikoin jopa kuusi metriä paksut! Muurien sisään rakennettiin s…
+- [Dubrovnik — kaupunkilehti / Muurit: Torni, jonka rakennutti paavi] Muurin vaikuttavin torni on pyöreä Minčeta, joka nousee kaupungin korkeimmalta kohdalta maan puolelta. Paavi Pius II lähetti sen rakentajat Dubrovnikiin vuonna 1463, juuri kun Ottomaanien uhka Balkanilla oli suurimmillaan — Konstantinopoli oli kaatunut vain kymmenen vuotta aiemmin. Alun perin nelikulmainen linnake muutettiin myöhemmin pyöreäksi, koska pyöreä muoto kesti tykkitulta paremmin kuin terävät kulmat. Torni ei koskaan joutunut todelliseen taisteluun — se riitti, että se näytti vahvalta.
+AIEMPI KYSYMYS: Miksi linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni vanhan tornin viereen?
+AIEMPI VASTAUS (Livia):
+Katotaas. [[Tuliaseiden]] yleistyttyä vanhat korkeat ja nelikulmaiset tornit eivät enää riittäneet, koska tykinkuulat voivat murtaa suorat seinät ja kulmat. Pyöreä ja paksu [[tykkitorni]] kestää tulta paremmin, koska kuulat osuvat kaarevaan pintaan viistosti, ja sieltä voitiin myös ampua tykeillä lähestyviä hyökkääjiä. Vanha [[nelikulmainen torni]] on luultavasti 1200-luvun alusta, joten linna sai uuden osan eikä vanhaa korvattu. Linnan vaiheiden tarkoista vuosista en ole varma. Kyl se vanha torni sentään seisoo yhä.
+KYSYMYS: Kerro lisää: nelikulmainen torni
+
+### 349
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: Voto Nacionalin basilika] 1892– Ajatus oli isä Julio Matovellen 1883: Ecuadorille pitää rakentaa monumentti, joka muistuttaa ikuisesti maan vihkimisestä Jeesuksen pyhälle sydämelle. Presidentti Luis Cordero antoi asetuksen 23. heinäkuuta 1883, ja kongressi varasi työhön 12 000 pesoa eli tuhat pesoa kuukaudessa. Kun rahat loppuivat, keinoja keksittiin lisää: uskovat saivat ostaa kivilohkareita ja kaiverruttaa niihin nimensä, ja vuonna 1895 valtio sääti rakennustyötä varten suolaveron. Piirustukset teki arkkitehti Emilio Tarlier, ja hän otti esikuvakseen Bourgesin katedraalin Ranskassa. Palkkio oli 40 000 frangia. Peruskivi laskettiin 10. heinäkuuta 1892. Rakennus on 140 metriä pitkä, 35 leveä ja kohoaa korkeimmillaan…
+AIEMPI KYSYMYS: Mikä on rokokoo-tyyli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rokokoo on 1700-luvun koristeellinen ja kevyt tyyli, joka syntyi [[Ranskassa]] ja kehittyi [[barokin]] jälkeen. Sille ovat tyypillisiä kaarevat linjat, pastellivärit, kullatut koristeet ja leikkisät yksityiskohdat, usein yläluokan sisätiloissa. Koluveren linnan sisätilat sisustettiin rokokoo-tyyliin noin vuonna 1770, kun linnasta tehtiin mukava aatelisasunto. Tarkoista yksityiskohdista en ole varma.
+
+Minä pidän tyylistä, jossa on kaarta ja kevyyttä, vähän kuin lennossa. Pastellisävyt sopivat sitä paitsi hyvin pullataikinan väriin.
+KYSYMYS: Kerro lisää: Ranskassa
+
+### 350
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Quito — kohdekartta / Kohdekartta: El Sagrarion kirkko] 1617–1715 Sagrario tarkoittaa tabernaakkelia, ja tällaiset kirkot rakennettiin katedraalin kylkeen sen sakramenttikappeliksi — ja samalla ympäröivän kaupunginosan omaksi seurakuntakirkoksi. Malli on peräisin Sevillan katedraalista, ja sieltä espanjalaiset veivät sen kaikkialle Uuteen maailmaan. Quiton El Sagrario näyttää kokonsa ja taiteellisen painoarvonsa takia enemmän itsenäiseltä kirkolta kuin katedraalin sivukappelilta. Perustustyöt aloitettiin 1617 Pyhän Sakramentin veljeskunnan varoilla, ja ne olivat vaativat: kirkko seisoo holvirakenteella, joka sulkee vanhan Zanguñan rotkon. Perustukset ulottuvat eteläsivulla neljäntoista metrin ja pohjoissivulla kolmen metrin syvyyteen — rotko vie…
+- [Aleppo — kohdekartta / Kohdekartta: Beit Ajiqbash] 1757 Jdeideh tarkoittaa uutta kaupunkia. Kortteli kasvoi Aleppon pohjoisen muurin ulkopuolelle mamelukkien ajan lopulla, ja siitä tuli kristittyjen kauppiassukujen alue; armenialaiset kävivät täältä kauppaa Persiaan ja Intiaan. Beit Ajiqbash valmistui kujien keskelle vuonna 1757; rakennuttaja oli varakas kauppias Qarah Ali. Talo ei silti kanna hänen nimeään: kun suku muutti Alexandrettaan, sen osti mies nimeltä Ashiqbash. Itälaidan huoneet purettiin myöhemmin, kun talon eteen vedettiin katu. Talossa toimii kansanperinteen museo. Ydin on sisäpiha. Sitä kiertää kaksi kerrosta ikkunoita, ja aukkojen ylle on veistetty kiveen leveitä koristenauhoja ja pyöreitä ruusukkeita. Tyyli yhdistää mameluk…
+AIEMPI KYSYMYS: Mikä on rokokoo-tyyli?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Rokokoo on 1700-luvun koristeellinen ja kevyt tyyli, joka syntyi [[Ranskassa]] ja kehittyi [[barokin]] jälkeen. Sille ovat tyypillisiä kaarevat linjat, pastellivärit, kullatut koristeet ja leikkisät yksityiskohdat, usein yläluokan sisätiloissa. Koluveren linnan sisätilat sisustettiin rokokoo-tyyliin noin vuonna 1770, kun linnasta tehtiin mukava aatelisasunto. Tarkoista yksityiskohdista en ole varma.
+
+Minä pidän tyylistä, jossa on kaarta ja kevyyttä, vähän kuin lennossa. Pastellisävyt sopivat sitä paitsi hyvin pullataikinan väriin.
+KYSYMYS: Kerro lisää: barokin
+
+### 351
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+AIEMPI KYSYMYS: Miksi uusgoottilainen tyyli oli suosittu 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. 1800-luvulla keskiajasta kiinnostuttiin uudella tavalla, ja se liittyi [[romantiikkaan]]: menneisyyttä ihailtiin, ja sen tunnelmaa haluttiin tuoda arkeen ja rakennuksiin. Kansallistunto lisäsi kiinnostusta omaan historiaan, ja goottilaiset muodot, kuten suippokaaret ja koristeelliset yksityiskohdat, tuntuivat arvokkailta. Aatelissukujen kartanoissa ja linnoissa tyyliä käytettiin, kun vanhaa asuntoa haluttiin uudistaa muodikkaaseen asuun. [[Lontoon parlamenttitalo]] on tunnettu esimerkki samasta tyylistä. En ole varma, mitkä tekijät vaikuttivat juuri Koluveren sisustukseen. Keskiaika oli siis taas muotia, ja vanhat kyyhkyt hymyilevät.
+KYSYMYS: Kerro lisää: romantiikkaan
+
+### 352
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Budapest — kohdekartta / Kohdekartta: Parlamenttitalo] 1885–1904 Unkarin parlamenttitalo on niin valtava, että siinä on 691 huonetta, 29 porrashuonetta ja peräti 13 hissiä. Arkkitehti Imre Steindl otti mallia Lontoon parlamenttitalosta ja suunnitteli rakennuksen 96 metrin korkuiseksi — luku viittaa vuoteen 896, jolloin unkarilaiset asettuivat nykyiselle alueelleen. Rakentamiseen käytettiin 40 miljoonaa tiiltä ja lähes 40 kiloa kultaa koristeisiin. Työt alkoivat vuonna 1885 ja valmistuivat vuonna 1904, mutta Steindl itse ei ehtinyt nähdä lopputulosta: hän sokeutui ja kuoli juuri ennen valmistumista. Rakennuksen keskeisessä kuusitoistakulmaisessa salissa säilytetään nykyään Unkarin pyhää kruunua, jota vartioi aina kaksi sotilasta.
+AIEMPI KYSYMYS: Miksi uusgoottilainen tyyli oli suosittu 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+Kas vaan. 1800-luvulla keskiajasta kiinnostuttiin uudella tavalla, ja se liittyi [[romantiikkaan]]: menneisyyttä ihailtiin, ja sen tunnelmaa haluttiin tuoda arkeen ja rakennuksiin. Kansallistunto lisäsi kiinnostusta omaan historiaan, ja goottilaiset muodot, kuten suippokaaret ja koristeelliset yksityiskohdat, tuntuivat arvokkailta. Aatelissukujen kartanoissa ja linnoissa tyyliä käytettiin, kun vanhaa asuntoa haluttiin uudistaa muodikkaaseen asuun. [[Lontoon parlamenttitalo]] on tunnettu esimerkki samasta tyylistä. En ole varma, mitkä tekijät vaikuttivat juuri Koluveren sisustukseen. Keskiaika oli siis taas muotia, ja vanhat kyyhkyt hymyilevät.
+KYSYMYS: Kerro lisää: Lontoon parlamenttitalo
+
+### 353
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+AIEMPI KYSYMYS: Missä Saare-Läänen piispa asui?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tietääkseni Saare-Läänen piispan pääasuinpaikka oli [[Haapsalun]] piispanlinna Länsi-Virossa. Koluvere oli yksi hänen pääasunnoistaan sen jälkeen, kun linna siirtyi piispalle vuonna 1439. Piispa hallitsi hiippakuntaa, johon kuuluivat muun muassa [[Saarenmaa]] ja Läänemaa, ja hänellä oli sekä hengellistä että maallista valtaa omalla alueellaan. Tarkoista rajoista ja vuosiluvuista en ole varma.
+
+Pari asuntoa on hyvä juttu, sen minä tiedän: minullakin on useampi kaide, jolla pidän taukoa.
+KYSYMYS: Kerro lisää: Haapsalun
+
+### 354
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Koluveren linna (historia)
+Tietoruudun teksti: Koluveren linna sijaitsee Länsi-Virossa Läänemaalla, ja paikalla on ollut linnoitus jo 1200-luvulta. Vuonna 1439 se siirtyi Saare-Läänen piispalle ja oli yksi hänen pääasunnoistaan. Linna on rakennettu tekosaarelle, joka syntyi Liivi-joen padotun osan keskelle, ja sen korkea nelikulmainen torni on luultavasti peräisin 1200-luvun alusta, joten se on yksi Viron vanhimmista linnantorneista. Tuliaseiden yleistyttyä linnaan lisättiin 1500-luvulla suuri pyöreä tykkitorni. Kun linna menetti sotilaallisen merkityksensä, siitä tehtiin mukava aatelisasunto: sisätilat sisustettiin 1770 tienoilla rokokoo-tyyliin ja 1800-luvulla uusgoottilaisiksi.
+AIEMPI KYSYMYS: Missä Saare-Läänen piispa asui?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tietääkseni Saare-Läänen piispan pääasuinpaikka oli [[Haapsalun]] piispanlinna Länsi-Virossa. Koluvere oli yksi hänen pääasunnoistaan sen jälkeen, kun linna siirtyi piispalle vuonna 1439. Piispa hallitsi hiippakuntaa, johon kuuluivat muun muassa [[Saarenmaa]] ja Läänemaa, ja hänellä oli sekä hengellistä että maallista valtaa omalla alueellaan. Tarkoista rajoista ja vuosiluvuista en ole varma.
+
+Pari asuntoa on hyvä juttu, sen minä tiedän: minullakin on useampi kaide, jolla pidän taukoa.
+KYSYMYS: Kerro lisää: Saarenmaa
+
+### 355
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Miksi baltiansaksalainen paroni rakennutti virolaiseen kartanoon linnan Skotlannin Balmoralin mallin mukaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän ainakin puoliksi. Paroni [[Arved von Nolcken]] kävi Skotlannissa vuonna 1875 ja rakennutti kartanon linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin [[Balmoralin]] linnan tyyliin. Tarkkaa syytä siihen, miksi hän valitsi juuri sen esikuvakseen, en tiedä varmasti. Tiedossa on, että aikakauden [[uusgoottilainen]] rakennustyyli ihaili keskiaikaisia linnoja, ja Alatskivin rakennus onkin epäsymmetrinen: siinä on torneja ja liuskekatto. Ei paha kyyhkyltä, vaikka loppu jäi arvailuksi.
+KYSYMYS: Kerro lisää: Arved von Nolcken
+
+### 356
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Miksi baltiansaksalainen paroni rakennutti virolaiseen kartanoon linnan Skotlannin Balmoralin mallin mukaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän ainakin puoliksi. Paroni [[Arved von Nolcken]] kävi Skotlannissa vuonna 1875 ja rakennutti kartanon linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin [[Balmoralin]] linnan tyyliin. Tarkkaa syytä siihen, miksi hän valitsi juuri sen esikuvakseen, en tiedä varmasti. Tiedossa on, että aikakauden [[uusgoottilainen]] rakennustyyli ihaili keskiaikaisia linnoja, ja Alatskivin rakennus onkin epäsymmetrinen: siinä on torneja ja liuskekatto. Ei paha kyyhkyltä, vaikka loppu jäi arvailuksi.
+KYSYMYS: Kerro lisää: Balmoralin
+
+### 357
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valparaíso — kohdekartta / Kohdekartta: Pyhien sydänten kirkko] 1874 Laiva Sylphide saapui Bordeaux’sta Valparaísoon 13. toukokuuta 1834, ja sen matkustajina oli neljä Jeesuksen ja Marian pyhien sydänten sääntökunnan pappia, joiden määränpää oli Gambiersaaret Ranskan Polynesiassa. Heistä Chrysostome Liausu jäi kaupunkiin ja perusti sääntökunnan ensimmäisen yhteisön eteläamerikkalaiseen satamaan. Vuonna 1837 kaupungin cabildo antoi hänelle luvan perustaa koulun — itsenäisen Chilen ensimmäisen yksityiskoulun. Koulu muutti 1840 Independencia-kadulle nykyiselle paikalleen, jota laajennettiin ostamalla viereisiä tontteja, ja sinne rakennettiin kappeli. Vuoden 1860 lopulla isä Oliver määräsi rakennettavaksi uuden kirkon, jonka suunnittelivat arkkitehdit Lucie…
+- [New York — kohdekartta / Kohdekartta: Pyhän Patrickin katedraali] 1858–1879 Arkkipiispa John Hughes päätti jo 1850, että kasvava hiippakunta tarvitsee vanhan Mulberry Streetin katedraalin tilalle suuremman. Paikka Viidennen Avenuen varrella 50. ja 51. kadun välissä oli tuolloin lähes maaseutua: ympärillä oli kallioita ja avaamattomia katuja, mutta Hughes uskoi kaupungin kasvavan sinne. Suunnittelijaksi hän palkkasi 1853 James Renwick nuoremman, joka haki mallia muun muassa keskeneräisestä Kölnin tuomiokirkosta. Peruskivi laskettiin 15. elokuuta 1858 satatuhatpäisen yleisön edessä. Rahat loppuivat kahdessa vuodessa. Elokuussa 1860 työ keskeytettiin, kun muurit olivat keskimäärin kahdentoista jalan korkuiset, ja sisällissota piti työmaan hiljaisena vuosia; …
+AIEMPI KYSYMYS: Miksi baltiansaksalainen paroni rakennutti virolaiseen kartanoon linnan Skotlannin Balmoralin mallin mukaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tän minä tiedän ainakin puoliksi. Paroni [[Arved von Nolcken]] kävi Skotlannissa vuonna 1875 ja rakennutti kartanon linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin [[Balmoralin]] linnan tyyliin. Tarkkaa syytä siihen, miksi hän valitsi juuri sen esikuvakseen, en tiedä varmasti. Tiedossa on, että aikakauden [[uusgoottilainen]] rakennustyyli ihaili keskiaikaisia linnoja, ja Alatskivin rakennus onkin epäsymmetrinen: siinä on torneja ja liuskekatto. Ei paha kyyhkyltä, vaikka loppu jäi arvailuksi.
+KYSYMYS: Kerro lisää: uusgoottilainen
+
+### 358
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Mitä kaikkea suuren kartanon alueella oli linnan lisäksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kartanoalue oli 1800-luvulla laaja: siellä oli 57 rakennusta, joista 41 on säilynyt nykypäivään. Linnaa ympäröi 130 hehtaarin [[puisto]], ja kartano sijaitsee [[Alatskivi-järven]] korkealla rannalla. Millaisia kaikki rakennukset olivat, en tiedä varmasti, mutta kartanoalueella oli yleensä asuin- ja talousrakennuksia. Linnan ensimmäisessä kerroksessa toimii nykyisin säveltäjä [[Eduard Tubinin]] museo.
+
+Sataankolmeenkymmeneen hehtaariin mahtuu minun silmääni monta hyvää kaidetta. Jos siellä vielä tarjoiltaisiin pullaa, jäisin sinne vuodeksi.
+KYSYMYS: Kerro lisää: puisto
+
+### 359
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Mitä kaikkea suuren kartanon alueella oli linnan lisäksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kartanoalue oli 1800-luvulla laaja: siellä oli 57 rakennusta, joista 41 on säilynyt nykypäivään. Linnaa ympäröi 130 hehtaarin [[puisto]], ja kartano sijaitsee [[Alatskivi-järven]] korkealla rannalla. Millaisia kaikki rakennukset olivat, en tiedä varmasti, mutta kartanoalueella oli yleensä asuin- ja talousrakennuksia. Linnan ensimmäisessä kerroksessa toimii nykyisin säveltäjä [[Eduard Tubinin]] museo.
+
+Sataankolmeenkymmeneen hehtaariin mahtuu minun silmääni monta hyvää kaidetta. Jos siellä vielä tarjoiltaisiin pullaa, jäisin sinne vuodeksi.
+KYSYMYS: Kerro lisää: Alatskivi-järven
+
+### 360
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Mitä kaikkea suuren kartanon alueella oli linnan lisäksi?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kartanoalue oli 1800-luvulla laaja: siellä oli 57 rakennusta, joista 41 on säilynyt nykypäivään. Linnaa ympäröi 130 hehtaarin [[puisto]], ja kartano sijaitsee [[Alatskivi-järven]] korkealla rannalla. Millaisia kaikki rakennukset olivat, en tiedä varmasti, mutta kartanoalueella oli yleensä asuin- ja talousrakennuksia. Linnan ensimmäisessä kerroksessa toimii nykyisin säveltäjä [[Eduard Tubinin]] museo.
+
+Sataankolmeenkymmeneen hehtaariin mahtuu minun silmääni monta hyvää kaidetta. Jos siellä vielä tarjoiltaisiin pullaa, jäisin sinne vuodeksi.
+KYSYMYS: Kerro lisää: Eduard Tubinin
+
+### 361
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Eduard Tubin, jonka museo linnassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. [[Eduard Tubin]] oli virolainen säveltäjä, joka tunnetaan erityisesti [[sinfonioistaan]]. Toisen maailmansodan lopulla hän lähti [[Ruotsiin]] ja asui siellä loppuelämänsä. Alatskivin linnan ensimmäisessä kerroksessa on hänelle omistettu museo. Ihan hyvin muistin, vaikka nuotteja en lue.
+KYSYMYS: Kerro lisää: Eduard Tubin
+
+### 362
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Eduard Tubin, jonka museo linnassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. [[Eduard Tubin]] oli virolainen säveltäjä, joka tunnetaan erityisesti [[sinfonioistaan]]. Toisen maailmansodan lopulla hän lähti [[Ruotsiin]] ja asui siellä loppuelämänsä. Alatskivin linnan ensimmäisessä kerroksessa on hänelle omistettu museo. Ihan hyvin muistin, vaikka nuotteja en lue.
+KYSYMYS: Kerro lisää: sinfonioistaan
+
+### 363
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Kuka oli säveltäjä Eduard Tubin, jonka museo linnassa on?
+AIEMPI VASTAUS (Livia):
+Mmm— hyvä kysymys tuo. [[Eduard Tubin]] oli virolainen säveltäjä, joka tunnetaan erityisesti [[sinfonioistaan]]. Toisen maailmansodan lopulla hän lähti [[Ruotsiin]] ja asui siellä loppuelämänsä. Alatskivin linnan ensimmäisessä kerroksessa on hänelle omistettu museo. Ihan hyvin muistin, vaikka nuotteja en lue.
+KYSYMYS: Kerro lisää: Ruotsiin
+
+### 364
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Millainen kaupunki Tartto on, jonka lähellä linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tartto on Viron toiseksi suurin kaupunki ja tunnettu yliopistokaupunki. Se sijaitsee [[Emajoen]] varrella, ja [[Alatskivin linna]] on noin 40 kilometrin päässä kaupungista pohjoiseen. [[Tarton yliopisto]] perustettiin vuonna 1632, ja yliopisto on pitkään ollut kaupungin tärkeimpiä tunnusmerkkejä. Onpas tässä jo kuljettu pitkä matka.
+KYSYMYS: Kerro lisää: Emajoen
+
+### 365
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Millainen kaupunki Tartto on, jonka lähellä linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tartto on Viron toiseksi suurin kaupunki ja tunnettu yliopistokaupunki. Se sijaitsee [[Emajoen]] varrella, ja [[Alatskivin linna]] on noin 40 kilometrin päässä kaupungista pohjoiseen. [[Tarton yliopisto]] perustettiin vuonna 1632, ja yliopisto on pitkään ollut kaupungin tärkeimpiä tunnusmerkkejä. Onpas tässä jo kuljettu pitkä matka.
+KYSYMYS: Kerro lisää: Alatskivin linna
+
+### 366
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Millainen kaupunki Tartto on, jonka lähellä linna sijaitsee?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tartto on Viron toiseksi suurin kaupunki ja tunnettu yliopistokaupunki. Se sijaitsee [[Emajoen]] varrella, ja [[Alatskivin linna]] on noin 40 kilometrin päässä kaupungista pohjoiseen. [[Tarton yliopisto]] perustettiin vuonna 1632, ja yliopisto on pitkään ollut kaupungin tärkeimpiä tunnusmerkkejä. Onpas tässä jo kuljettu pitkä matka.
+KYSYMYS: Kerro lisää: Tarton yliopisto
+
+### 367
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Keitä baltiansaksalaiset olivat ja miksi heillä oli kartanoita?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Baltiansaksalaiset olivat saksankielinen yläluokka, jonka juuret ulottuvat keskiaikaan [[Liivinmaan ritarikunnan]] aikaan. Vuosisatojen ajan he omistivat suuren osan Viron ja Latvian maaomaisuudesta, ja kartanot olivat heidän taloutensa ja vaikutusvaltansa keskuksia. Itsenäinen Viro toteutti vuonna 1919 [[maareformin]], jossa kartanomaata otettiin valtiolle, ja toisen maailmansodan alla suuri osa baltiansaksalaisista siirtyi Saksaan. Historiaa riittää, ja tää oli vasta pintaa.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunnan
+
+### 368
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Alatskivin linna (historia)
+Tietoruudun teksti: Alatskivin linna on uusgoottilainen kartanolinna Tartumaalla, noin 40 kilometriä Tartosta pohjoiseen Alatskivi-järven korkealla rannalla. Kartano mainitaan ensimmäisen kerran vuonna 1601, ja Nolckenin suku peri sen 1870. Paroni Arved von Nolcken rakennutti linnan uudelleen vuosina 1876–1885 omien suunnitelmiensa mukaan Skotlannin Balmoral-linnan tyyliin, jossa hän oli käynyt vuonna 1875. Rakennus on epäsymmetrinen, ja siinä on torneja ja liuskekatto. Kartanossa oli 1800-luvulla 57 rakennusta, joista 41 on säilynyt, ja linnaa ympäröi 130 hehtaarin puisto. Ensimmäisessä kerroksessa on säveltäjä Eduard Tubinin museo.
+AIEMPI KYSYMYS: Keitä baltiansaksalaiset olivat ja miksi heillä oli kartanoita?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Baltiansaksalaiset olivat saksankielinen yläluokka, jonka juuret ulottuvat keskiaikaan [[Liivinmaan ritarikunnan]] aikaan. Vuosisatojen ajan he omistivat suuren osan Viron ja Latvian maaomaisuudesta, ja kartanot olivat heidän taloutensa ja vaikutusvaltansa keskuksia. Itsenäinen Viro toteutti vuonna 1919 [[maareformin]], jossa kartanomaata otettiin valtiolle, ja toisen maailmansodan alla suuri osa baltiansaksalaisista siirtyi Saksaan. Historiaa riittää, ja tää oli vasta pintaa.
+KYSYMYS: Kerro lisää: maareformin
+
+### 369
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Perth — kaupunkilehti / Perth: Kaupunki lähteen ympärillä] Kun kuvernööri James Stirling etsi 1829 paikkaa uudelle siirtokunnalle, ratkaisu oli yksinkertainen: Mount Elizan etelärinteen juurella pulppusi seudun ainoa ympärivuotinen makean veden lähde, ja kaupunki perustettiin sen viereen. Whadjuk-noongarit olivat käyttäneet lähdettä sukupolvien ajan ja tunsivat sen nimellä Goonininup; siirtolaisten kartoissa se on Kennedy Spring. Sama vesi oli täydentänyt jo hollantilaisen Willem de Vlaminghin retkikunnan varastot 11. tammikuuta 1697. Kummun Stirling nimesi Eliza Darlingin mukaan.
+- [Ateena — kaupunkilehti / Ateena: Puu voitti suolaisen lähteen] Tarun mukaan Athene ja Poseidon kiistelivät siitä, kumman nimeä kaupunki kantaisi, ja kumpikin antoi lahjansa Akropoliin kalliolla. Poseidon iski kolmikärjellään kallioon, ja siitä pulppusi suolainen lähde — vettä, jota ei voinut juoda. Athene kasvatti oliivipuun, joka antoi öljyä, ruokaa ja puuta. Kuningas Kekrops valitsi puun, ja kaupunki sai voittajan nimen. Erekhtheionin länsiseinustalla kasvaa yhä oliivipuu, mutta se on nuori: sen istutti viime vuosisadalla kuningatar Sofia sinne, missä pyhän puun uskotaan kasvaneen.
+- [BHR — maalehti / Muinaisuus: Temppeli rakennettiin lähteen päälle] Barbarin kylässä on kolme temppeliä päällekkäin. Vanhin on noin vuodelta 3000 eaa., toinen rakennettiin viitisensataa vuotta myöhemmin ja kolmas 2100–2000 eaa. Keskellä on luonnonlähde ja sen ympärillä pyöreä allas, johon johdettiin vettä kivikanavia pitkin. Temppelin arvellaan olleen omistettu Enkille, makean veden ja viisauden jumalalle. Kalkkikivilohkot tuotiin veneillä Jiddan saarelta ja hiottiin tarkoiksi palikoiksi. Tanskalainen tutkimusryhmä löysi paikan vuonna 1954; kuuluisin löytö on kuparinen häränpää.
+AIEMPI KYSYMYS: Miksi paikkaa kutsutaan nimellä Pühitsetud eli siunattu?
+AIEMPI VASTAUS (Livia):
+Ai se, siunattu paikka. Nimi Pühitsetud tarkoittaa siunattua tai pyhitettyä. Legendan mukaan kuremäkeläinen paimen näki [[lähteen]] luona jumalallisen ilmestyksen, mikä selittää paikan pyhän maineen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta [[Jumalanäidin]] kuolonuneen kuvaavan [[ikonin]], joka on yhä luostarin hallussa. Paikalle perustettiin vuonna 1891 [[Pühtitsan luostari]]. Hyvä nimi, sanon minä kyyhkynä.
+KYSYMYS: Kerro lisää: lähteen
+
+### 370
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Miksi paikkaa kutsutaan nimellä Pühitsetud eli siunattu?
+AIEMPI VASTAUS (Livia):
+Ai se, siunattu paikka. Nimi Pühitsetud tarkoittaa siunattua tai pyhitettyä. Legendan mukaan kuremäkeläinen paimen näki [[lähteen]] luona jumalallisen ilmestyksen, mikä selittää paikan pyhän maineen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta [[Jumalanäidin]] kuolonuneen kuvaavan [[ikonin]], joka on yhä luostarin hallussa. Paikalle perustettiin vuonna 1891 [[Pühtitsan luostari]]. Hyvä nimi, sanon minä kyyhkynä.
+KYSYMYS: Kerro lisää: Jumalanäidin
+
+### 371
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Moskova — kohdekartta / Kohdekartta: Tretjakovin galleria] 1856-1893 Moskovalainen kauppias Pavel Tretjakov aloitti taidekokoelmansa vuonna 1856 ostamalla kaksi venäläistä maalausta. Vuosikymmenten aikana hän osti satoja teoksia lisää, kunnes kokoelmassa oli jo lähes 2000 taideteosta - yli 1300 maalausta, satoja piirustuksia ja muutama veistos. Elokuussa 1892 Tretjakov lahjoitti koko kokoelmansa Moskovan kaupungille, ja galleria avattiin yleisölle 15. elokuuta 1893. Nykyään museossa on esillä yli 130 000 teosta, muun muassa Andrei Rublevin kuuluisa ikoni Kolminaisuus. Museon satumaisen näköisen punatiilisen julkisivun suunnitteli taiteilija Viktor Vasnetsov vuosina 1902-1904, ja se muistuttaa suoraan venäläisestä kansantarinasta poimittua linnaa. T…
+AIEMPI KYSYMYS: Miksi paikkaa kutsutaan nimellä Pühitsetud eli siunattu?
+AIEMPI VASTAUS (Livia):
+Ai se, siunattu paikka. Nimi Pühitsetud tarkoittaa siunattua tai pyhitettyä. Legendan mukaan kuremäkeläinen paimen näki [[lähteen]] luona jumalallisen ilmestyksen, mikä selittää paikan pyhän maineen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta [[Jumalanäidin]] kuolonuneen kuvaavan [[ikonin]], joka on yhä luostarin hallussa. Paikalle perustettiin vuonna 1891 [[Pühtitsan luostari]]. Hyvä nimi, sanon minä kyyhkynä.
+KYSYMYS: Kerro lisää: ikonin
+
+### 372
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+AIEMPI KYSYMYS: Miksi paikkaa kutsutaan nimellä Pühitsetud eli siunattu?
+AIEMPI VASTAUS (Livia):
+Ai se, siunattu paikka. Nimi Pühitsetud tarkoittaa siunattua tai pyhitettyä. Legendan mukaan kuremäkeläinen paimen näki [[lähteen]] luona jumalallisen ilmestyksen, mikä selittää paikan pyhän maineen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta [[Jumalanäidin]] kuolonuneen kuvaavan [[ikonin]], joka on yhä luostarin hallussa. Paikalle perustettiin vuonna 1891 [[Pühtitsan luostari]]. Hyvä nimi, sanon minä kyyhkynä.
+KYSYMYS: Kerro lisää: Pühtitsan luostari
+
+### 373
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Miksi Kostroman luostarista lähetettiin nunna perustamaan luostaria Viroon?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syytä tähän en tiedä varmasti, mutta tausta on selvä: vuonna 1888 Viro kuului [[Venäjän keisarikuntaan]], ja Venäjän ortodoksinen kirkko lähetti nunnan Kostroman [[Ipatjevin luostarista]] perustamaan luostaria. Tällaisessa perustamisessa on tavallista, että vakiintuneen luostarin kokenut nunna johtaa uuden yhteisön alkuvaiheita. Luostari perustettiin vuonna 1891, ja siinä on nykyään kuusi kirkkoa. Jäi syy vähän auki, sen myönnän.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 374
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+AIEMPI KYSYMYS: Miksi Kostroman luostarista lähetettiin nunna perustamaan luostaria Viroon?
+AIEMPI VASTAUS (Livia):
+Katotaas. Syytä tähän en tiedä varmasti, mutta tausta on selvä: vuonna 1888 Viro kuului [[Venäjän keisarikuntaan]], ja Venäjän ortodoksinen kirkko lähetti nunnan Kostroman [[Ipatjevin luostarista]] perustamaan luostaria. Tällaisessa perustamisessa on tavallista, että vakiintuneen luostarin kokenut nunna johtaa uuden yhteisön alkuvaiheita. Luostari perustettiin vuonna 1891, ja siinä on nykyään kuusi kirkkoa. Jäi syy vähän auki, sen myönnän.
+KYSYMYS: Kerro lisää: Ipatjevin luostarista
+
+### 375
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+AIEMPI KYSYMYS: Millaista on venäläinen herätystyyli kirkkoarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Venäläinen herätystyyli oli 1800-luvun rakennustaiteen suuntaus, joka haki esikuvansa keskiaikaisesta venäläisestä ja bysanttilaisesta perinteestä. Tyypillisiä piirteitä ovat yleensä [[sipulikupolit]], runsaat koristeet ja värikkäät pinnat. Pühtitsan pääkirkko rakennettiin arkkitehti [[Mihail Preobraženskin]] piirustusten mukaan tähän tyyliin ja vihittiin vuonna 1910. Kupolit näyttävät ylhäältä ihan hyviltä.
+KYSYMYS: Kerro lisää: sipulikupolit
+
+### 376
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: Nevskin katedraali] 1894–1900 Aleksanteri Nevskin katedraali kohoaa komeana Tallinnan linnamäellä Toompealla, ja se on kaupungin suurin kupolikirkko. Se rakennettiin vuosina 1894-1900 Venäjän keisarikunnan aikana arkkitehti Mihail Preobraženskin suunnitelmien mukaan ja vihittiin käyttöön vuonna 1900. Katedraalin viisi sipulikupolia kimaltavat kullatuin ristein, ja koko rakennuksen perustukset on tehty suomalaisesta graniitista. Katedraalin sisällä on kolme kullattua puista ikonikuvastoa, joiden ikonit on maalattu kuparille ja sinkille. Tornissa soi yksitoista Pietarissa valettua kelloa - suurin niistä painaa noin 16 tonnia, enemmän kuin kaikki muut kymmenen kelloa yhteensä! Katedraalin kohtalo ei ole aina ollu…
+AIEMPI KYSYMYS: Millaista on venäläinen herätystyyli kirkkoarkkitehtuurissa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Venäläinen herätystyyli oli 1800-luvun rakennustaiteen suuntaus, joka haki esikuvansa keskiaikaisesta venäläisestä ja bysanttilaisesta perinteestä. Tyypillisiä piirteitä ovat yleensä [[sipulikupolit]], runsaat koristeet ja värikkäät pinnat. Pühtitsan pääkirkko rakennettiin arkkitehti [[Mihail Preobraženskin]] piirustusten mukaan tähän tyyliin ja vihittiin vuonna 1910. Kupolit näyttävät ylhäältä ihan hyviltä.
+KYSYMYS: Kerro lisää: Mihail Preobraženskin
+
+### 377
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lalibela — kohdekartta / Kohdekartta: Biete Lehem] 1100–1200-luku Biete Lehem on maanalainen monoliittikirkko Jordan-puron eteläisessä ryhmässä, ja se on kirkoista pienimpiä. Nimi tulee Betlehemistä: heprean bet lehem tarkoittaa leivän taloa, ja amharaksi kirkkoa kutsutaan Pyhän leivän taloksi. Nimi ei ole sattumaa vaan osa suunnitelmaa. Lalibelan rakennusten nimet ja sijoittelu toistavat Jerusalemin ja Pyhän maan paikkoja niin, että pyhiinvaeltaja voi kiertää ne kävellen: kaupungin läpi kulkee Jordan, kirkkojen joukossa on Golgata ja Betlehem, ja ryhmien on tulkittu esittävän maallista ja taivaallista Jerusalemia. Nimen käytännöllinen puoli on sekin uskottava: leivän talo on ollut myös leivän talo. Naapurikirkko Biete Gabriel-Rufael on läh…
+- [Pietari — kohdekartta / Kohdekartta: Kazanin katedraali] 1801–1811 Arkkitehti Andrei Voronihin sai tehtäväkseen suunnitella katedraalin, joka kunnioittaisi ihmeitä tekevää Kazanin Jumalanäidin ikonia. Ortodoksisessa kirkossa pääsisäänkäynnin tulisi olla lännessä, mutta tontti sijaitsi Nevski-bulevardin varrella pohjoisessa – niinpä Voronihin ratkaisi pulman rakentamalla sivulle mahtavan puolikaaren muotoisen pylväikön, jossa on 96 korinttilaista pylvästä neljässä rivissä. Katedraali valmistui vuonna 1811 ja kohoaa korkeimmillaan 71,6 metriin. Vuonna 1812 Napoleonin sotajoukot hyökkäsivät Venäjälle, ja voiton jälkeen katedraalista tuli sodan muistomerkki. Sotamarsalkka Mihail Kutuzov, joka johti Venäjän armeijaa Napoleonia vastaan, haudattiin kate…
+AIEMPI KYSYMYS: Mikä ikoni on ja miksi ortodoksit kunnioittavat sitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ikoni on pyhää henkilöä tai tapahtumaa esittävä kuva, joka maalataan perinteisesti puutaululle ja jolla on [[ortodoksisessa kirkossa]] tärkeä asema. Sitä ei pidetä pelkkänä taideteoksena vaan rukouksen apuna: kunnioitus kohdistuu kuvattuun henkilöön, ei esineeseen itseensä. Ikoneja pidetään kirkoissa ja kodeissa, ja kirkossa [[ikonostaasi]] erottaa alttaritilan muusta kirkkosalista. Pühtitsan luostarissa säilytetään 1500-luvulla löydettyä [[Jumalanäidin]] ikonia. Ei ne mitään seinäkoristeita ole, sen minä tiedän.
+KYSYMYS: Kerro lisää: ortodoksisessa kirkossa
+
+### 378
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nikosia — kohdekartta / Kohdekartta: Faneromenin kirkko] 1872 Kirkon muurikivistä suuri osa on vanhempaa perua. Pääosa tuotiin La Cavan linnasta, joka pystytettiin noin 1385 Arona-kukkulalle ja joka sai nimensä kallioon louhitusta vesisäiliöstä. Venetsialaiset räjäyttivät linnan 1520-luvulla, mutta vielä 1870 siitä oli pystyssä holvisali, kehämuurit ja kaksi tornia. Sinä vuonna jäljellä ollut purettiin lähes kokonaan ja kivet ajettiin kirkon työmaalle. Loput otettiin samalla paikalla aiemmin toimineesta nunnaluostarista. Nykyinen kirkko valmistui 1872 vanhemman kirkon paikalle, ja se on vanhankaupungin suurin kirkko. Se on omistettu Neitsyt Marialle, ja nimi Faneromeni tarkoittaa ilmestynyttä. Tyylejä on kolme päällekkäin: uusklassinen, bysanttil…
+AIEMPI KYSYMYS: Mikä ikoni on ja miksi ortodoksit kunnioittavat sitä?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Ikoni on pyhää henkilöä tai tapahtumaa esittävä kuva, joka maalataan perinteisesti puutaululle ja jolla on [[ortodoksisessa kirkossa]] tärkeä asema. Sitä ei pidetä pelkkänä taideteoksena vaan rukouksen apuna: kunnioitus kohdistuu kuvattuun henkilöön, ei esineeseen itseensä. Ikoneja pidetään kirkoissa ja kodeissa, ja kirkossa [[ikonostaasi]] erottaa alttaritilan muusta kirkkosalista. Pühtitsan luostarissa säilytetään 1500-luvulla löydettyä [[Jumalanäidin]] ikonia. Ei ne mitään seinäkoristeita ole, sen minä tiedän.
+KYSYMYS: Kerro lisää: ikonostaasi
+
+### 379
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Doha — kohdekartta / Kohdekartta: Al Koot -linnake] Al Koot -linnake tunnetaan myös nimellä Dohan linnake, ja se seisoo Al Biddan kaupunginosassa Souq Waqifin laidalla. Pohjakaava on neliö, muurit on rapattu valkoisiksi ja niiden harjalla kiertää rivi kolmiomaisia sakaroita. Kulmatorneja on neljä, mutta ne eivät ole keskenään samanlaisia: kolme on pyöreää ja yksi nelikulmainen. Muurissa on kapeita pystysuoria aukkoja, ja sisään mennään vaatimattomasta puuovesta keskellä seinää. Vuosiluvuista on eri tietoja, mutta useimmin toistettu kulku menee näin: paikalle rakennettiin poliisiasema vuonna 1880, tilat otettiin vankilakäyttöön 1906, ja kun osmanit olivat jättäneet linnakkeen, sheikki Abdullah bin Jassim Al Thani rakennutti sen uudelleen vuon…
+- [Medina — kohdekartta / Kohdekartta: Qiblatayn-moskeija] 623 (2 AH) Qiblatayn tarkoittaa kahta rukoussuuntaa, ja nimi on peräisin moskeijan omalta rakennusvuodelta. Sawad ibn Ghanam ibn Ka'ab rakensi sen hidžran toisena vuotena, ja samana vuonna kaupungissa tapahtui käänne, joka näkyy yhä jokaisessa maailman moskeijassa: rukoussuunta siirtyi Jerusalemista Mekan Kaabaan. Muslimien perimätiedon mukaan Muhammad sai käskyn juuri täällä kesken keskipäivän rukouksen. Moskeija on vajaan neljän kilometrin päässä Profeetan moskeijasta luoteeseen. Siitä tuli yksi maailman kahdesta moskeijasta, joissa on ollut kaksi mihrabia eli rukoussuunnan osoittavaa syvennystä eri suuntiin — toinen on Mombasan Mandhry-moskeija Keniassa. Kun rakennus purettiin ja rakenne…
+AIEMPI KYSYMYS: Millaista elämä on ortodoksisessa naisluostarissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ortodoksisessa naisluostarissa elämä rytmittyy yhteisen [[rukouksen]] ja [[jumalanpalvelusten]] ympärille, ja niiden lomassa nunnat tekevät luostarin töitä. Luostariin liittyvä nunna antaa [[luostarilupaukset]] ja sitoutuu yhteisön elämään. Pühtitsan luostarin tarkkaa päiväjärjestystä en tiedä, mutta luostarissa on kuusi kirkkoa. Rauhallista se kuulostaa, mutta minä en pysyisi paikallani.
+KYSYMYS: Kerro lisää: rukouksen
+
+### 380
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namib — kaupunkilehti / Namib: Maa jonka Jumala teki vihassaan] Namibin pohjoista rannikkoa kutsutaan nykyään Skeleton Coastiksi eli Luurankorannikoksi, mutta vanhemmat kuvaukset ovat vielä synkempiä. San-kansa kutsui aluetta nimellä "maa, jonka Jumala teki vihassaan", ja portugalilaiset puhuivat "helvetin porteista". Molemmat nimet syntyivät samasta syystä: kylmä Benguela-virta nostaa rannikolle sakeaa sumua yli 180 päivänä vuodessa, ja hyökyaalto sekä maalta merelle puhaltava tuuli tekivät purjelaivan pakenemisesta lähes mahdotonta. Vasta 1944 kirjailija John Henry Marsh antoi alueelle nykyisen nimen kirjassaan haaksirikkoutuneesta laivasta – nimen taustalla olivat sekä valaanpyytäjien että merimiesten jäänteet.
+- [Irak — maalehti / Muinaisuus: Kolme portaikkoa kuun jumalan luo] Urin ziggurat on porrastettu torni, jonka Ur-Nammu aloitti noin 2100-luvulla eaa. ja jonka hänen seuraajansa Shulgi sai valmiiksi noin vuonna 2000 eaa. Pohja on noin 64 metriä pitkä ja 45 metriä leveä, ja korkeutta oli yli 30 metriä. Sisus on kuivattua savitiiltä, mutta ulkokuori on poltettua tiiltä — siksi rinteet ovat yhä pystyssä. Huipulla oli kuun jumalan Nannan pyhäkkö. Uusbabylonialainen kuningas Nabonidus korjasi tornin 500-luvulla eaa., ja julkisivu ja portaikko muurattiin uudelleen 1980-luvulla.
+AIEMPI KYSYMYS: Millaista elämä on ortodoksisessa naisluostarissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ortodoksisessa naisluostarissa elämä rytmittyy yhteisen [[rukouksen]] ja [[jumalanpalvelusten]] ympärille, ja niiden lomassa nunnat tekevät luostarin töitä. Luostariin liittyvä nunna antaa [[luostarilupaukset]] ja sitoutuu yhteisön elämään. Pühtitsan luostarin tarkkaa päiväjärjestystä en tiedä, mutta luostarissa on kuusi kirkkoa. Rauhallista se kuulostaa, mutta minä en pysyisi paikallani.
+KYSYMYS: Kerro lisää: jumalanpalvelusten
+
+### 381
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuremäen Pühtitsan luostari (historia)
+Tietoruudun teksti: Pühtitsan eli Kuremäen luostari on venäläisortodoksinen naisluostari Itä-Virossa Ida-Virumaalla, Peipsijärven ja Suomenlahden välissä. Paikka tunnetaan nimellä Pühitsetud, siunattu, ja legendan mukaan kuremäkeläinen paimen näki lähteen luona jumalallisen ilmestyksen. Myöhemmin 1500-luvulla paikalliset löysivät valtavan tammen alta Jumalanäidin kuolonuneen kuvaavan ikonin, joka on yhä luostarin hallussa. Vuonna 1888 Venäjän ortodoksinen kirkko lähetti nunnan Kostroman Ipatjevin luostarista perustamaan luostaria, ja se perustettiin vuonna 1891. Pääkirkko rakennettiin Mihail Preobraženskin piirustusten mukaan venäläiseen herätystyyliin ja vihittiin 1910, ja luostarissa on kuusi kirkkoa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Millaista elämä on ortodoksisessa naisluostarissa?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Ortodoksisessa naisluostarissa elämä rytmittyy yhteisen [[rukouksen]] ja [[jumalanpalvelusten]] ympärille, ja niiden lomassa nunnat tekevät luostarin töitä. Luostariin liittyvä nunna antaa [[luostarilupaukset]] ja sitoutuu yhteisön elämään. Pühtitsan luostarin tarkkaa päiväjärjestystä en tiedä, mutta luostarissa on kuusi kirkkoa. Rauhallista se kuulostaa, mutta minä en pysyisi paikallani.
+KYSYMYS: Kerro lisää: luostarilupaukset
+
+### 382
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iso-Britannia — maalehti / Luonto: Markkinat jäätyneellä joella] 1814 — Ennen Thames jäätyi. Vuosien 1400 ja 1831 välillä joki jähmettyi Lontoon kohdalla 24 talvena, ja jäälle nousi telttakylä: keilapelejä, veneenmuotoisia keinuja ja painokoneita, jotka myivät muistoksi jäällä painettuja säkeitä. Viimeiset markkinat alkoivat 1. helmikuuta 1814 ja kestivät neljä päivää, ja norsu talutettiin joen yli Blackfriarsin sillan alapuolelta. Sitten purettiin vanha Lontoon silta, jonka yhdeksäntoista pilaria olivat padonneet virran hitaaksi. Nyt joki juoksee liian nopeasti jäätyäkseen.
+AIEMPI KYSYMYS: Miksi pieni kylä on saanut nimensä Keilan putouksen mukaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Joo, tän minä tiedän. Nimi on syntynyt suoraan paikan luonnosta: Keila-Joa tarkoittaa kirjaimellisesti Keilan putousta. [[Keila-joen]] putous on Viron kolmanneksi voimakkain vesiputous, ja sen äärellä on ollut kartano 1600-luvulta lähtien; saksaksi paikkaa kutsuttiin nimellä Schloss Fall. Kartano oli [[Benckendorffin]] perheen, ja putouksen vieressä on myös pieni [[vesivoimala]]. Putous kuulostaa hyvältä paikalta kaiteelle.
+KYSYMYS: Kerro lisää: Keila-joen
+
+### 383
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+AIEMPI KYSYMYS: Miksi pieni kylä on saanut nimensä Keilan putouksen mukaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Joo, tän minä tiedän. Nimi on syntynyt suoraan paikan luonnosta: Keila-Joa tarkoittaa kirjaimellisesti Keilan putousta. [[Keila-joen]] putous on Viron kolmanneksi voimakkain vesiputous, ja sen äärellä on ollut kartano 1600-luvulta lähtien; saksaksi paikkaa kutsuttiin nimellä Schloss Fall. Kartano oli [[Benckendorffin]] perheen, ja putouksen vieressä on myös pieni [[vesivoimala]]. Putous kuulostaa hyvältä paikalta kaiteelle.
+KYSYMYS: Kerro lisää: Benckendorffin
+
+### 384
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+AIEMPI KYSYMYS: Miksi pieni kylä on saanut nimensä Keilan putouksen mukaan?
+AIEMPI VASTAUS (Livia):
+Ai tota. Joo, tän minä tiedän. Nimi on syntynyt suoraan paikan luonnosta: Keila-Joa tarkoittaa kirjaimellisesti Keilan putousta. [[Keila-joen]] putous on Viron kolmanneksi voimakkain vesiputous, ja sen äärellä on ollut kartano 1600-luvulta lähtien; saksaksi paikkaa kutsuttiin nimellä Schloss Fall. Kartano oli [[Benckendorffin]] perheen, ja putouksen vieressä on myös pieni [[vesivoimala]]. Putous kuulostaa hyvältä paikalta kaiteelle.
+KYSYMYS: Kerro lisää: vesivoimala
+
+### 385
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kohdekartta / Kohdekartta: Grace Cathedral] 1849–1964 Seurakunta perustettiin 1849 kultaryntäyksen vuosina. Sen kolmas kirkko rakennettiin California Streetin ja Stockton Streetin kulmaan ja vihittiin 3. toukokuuta 1868 — se on se Grace Church, jonka isoisä olisi voinut nähdä. Jäsenistöön kuului kaupungin varakkainta väkeä, muiden muassa rautatiemies Leland Stanford ja pankkiiri William Henry Crocker. Vuoden 1906 järistystä seurannut palo tuhosi kirkon, ja seurakunta sai väliaikaisen tilan 1907. Crockerin suku lahjoitti hiippakunnalle oman raunioituneen tonttinsa Nob Hillin laelta, ja peruskivi laskettiin 1910. Piirustukset teki englantilainen goottilaisen tyylin mestari George Frederick Bodley, joka kuoli 1907, ja työn saattoi loppu…
+- [Irkutsk — kohdekartta / Kohdekartta: Taivaaseenastumisen kirkko] 1825, kivikirkko 1880-luvulla Puolalainen kirkko on Irkutskin karkotushistorian näkyvin rakennus. Katolinen seurakunta perustettiin kaupunkiin vuonna 1820, ja suurin osa seurakuntalaisista oli puolalaisia, liettualaisia ja valkovenäläisiä — mutta joukossa oli väkeä kaikkialta keisarikunnasta. Katolinen siirtokunta rakensi ensimmäisen pienen puukirkon vuonna 1825 ja laajensi sen 1855. Puukirkko paloi heinäkuun 1879 suurpalossa. Tilalle nousi tiilikirkko, ja sen valmistumisvuodesta on kaksi eri tietoa: Taivaaseenastumisen kirkon oma artikkeli ajoittaa rakennustyön vuosiin 1881–1883, ja hiippakunnan katedraalin artikkeli sanoo uuden goottilaisen kirkon vihityn vuonna 1886. Ero on kolme vuotta,…
+AIEMPI KYSYMYS: Mitä uusgoottilainen tyyli tarkoittaa ja miksi se oli 1830-luvulla uutta Virossa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Uusgoottilainen tyyli oli 1700-luvulla Englannissa syntynyt ja 1800-luvulla Euroopassa levinnyt suuntaus, joka elvytti keskiaikaisen [[goottilaisen]] arkkitehtuurin muotoja, kuten suippokaaria, torneja ja jyrkkiä katonlinjoja. Keila-Joan päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin [[Andrei Stackenschneiderin]] piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Uutuus johtui siitä, että tyyli oli vasta leviämässä, ja kartanoita rakennettiin tuohon aikaan yleensä [[klassismin]] tyyliin. Tuli taas vähän luennoitua.
+KYSYMYS: Kerro lisää: goottilaisen
+
+### 386
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+AIEMPI KYSYMYS: Mitä uusgoottilainen tyyli tarkoittaa ja miksi se oli 1830-luvulla uutta Virossa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Uusgoottilainen tyyli oli 1700-luvulla Englannissa syntynyt ja 1800-luvulla Euroopassa levinnyt suuntaus, joka elvytti keskiaikaisen [[goottilaisen]] arkkitehtuurin muotoja, kuten suippokaaria, torneja ja jyrkkiä katonlinjoja. Keila-Joan päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin [[Andrei Stackenschneiderin]] piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Uutuus johtui siitä, että tyyli oli vasta leviämässä, ja kartanoita rakennettiin tuohon aikaan yleensä [[klassismin]] tyyliin. Tuli taas vähän luennoitua.
+KYSYMYS: Kerro lisää: Andrei Stackenschneiderin
+
+### 387
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [São Luís — kaupunkilehti / São Luís: Voiton Neitsyt tuomiokirkossa] Tuomiokirkon rakentaminen alkoi jo 1619, ja se vihittiin käyttöön 1622 – siis vain muutama vuosi sen jälkeen, kun portugalilaiset olivat karkottaneet ranskalaiset saarelta. Kirkko sai nimen Nossa Senhora da Vitória, Voiton Neitsyt, Guaxenduban taistelun kunniaksi: portugalilaisten vuonna 1615 käymä voitto kiihdytti ranskalaisten lopullista häätöä Maranhãosta. Nykyinen vaalean keltainen julkisivu kellotorneineen syntyi myöhemmin, kun kirkkoa laajennettiin 1700-luvun lopulla klassismin hengessä – lopputulos on portugalilaisen siirtomaabarokin ja uusklassismin yhdistelmä keskellä Praça Dom Pedro II:ta.
+- [Tampere — kaupunkilehti / Tampere: Neljä patsasta sillan kaiteella] Hämeensilta vie kaupungin pääkadun kosken yli. Sen kaiteilla seisoo neljä Wäinö Aaltosen pronssiveistosta vuodelta 1929: metsästäjä, erämies, kauppias ja verontuoja. Patsaat ovat 1920-luvun klassismin tunnetuimpia töitä Suomessa, ja ne kuvaavat neljää elinkeinoa, joilla seudulla on eletty. Silta itse uusittiin vuonna 2019, mutta se rakennettiin vanhan kivisillan näköiseksi ja verhoiltiin samalla punertavalla graniitilla — patsaat nostettiin takaisin paikoilleen.
+AIEMPI KYSYMYS: Mitä uusgoottilainen tyyli tarkoittaa ja miksi se oli 1830-luvulla uutta Virossa?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Uusgoottilainen tyyli oli 1700-luvulla Englannissa syntynyt ja 1800-luvulla Euroopassa levinnyt suuntaus, joka elvytti keskiaikaisen [[goottilaisen]] arkkitehtuurin muotoja, kuten suippokaaria, torneja ja jyrkkiä katonlinjoja. Keila-Joan päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin [[Andrei Stackenschneiderin]] piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Uutuus johtui siitä, että tyyli oli vasta leviämässä, ja kartanoita rakennettiin tuohon aikaan yleensä [[klassismin]] tyyliin. Tuli taas vähän luennoitua.
+KYSYMYS: Kerro lisää: klassismin
+
+### 388
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Samarkand — kohdekartta / Kohdekartta: Afrasiyabin rauniokumpu] n. 500 eaa. – 1220 Afrasiyab on vanha Samarkand. Kumpua asutettiin noin vuodesta 500 eaa. mongolivalloitukseen 1220 asti, ja vanhimmat kerrokset ovat ensimmäisen vuosituhannen puolivälistä ennen ajanlaskun alkua. Aluetta on 220 hehtaaria ja arkeologisten kerrostumien paksuus on 8–12 metriä. Kaupunki oli tasakylkisen kolmion muotoinen, leveimmillään puolitoista kilometriä, ja sitä ympäröivät korkeat savimuurit torneineen. Vesi tuotiin kanavia, saviputkia ja kaivoja pitkin, ja eteläisen muurin lähellä oli allas, johon mahtui miljoona gallonaa eli noin neljätuhatta kuutiometriä vettä. Nimi ei ole alun perin sadun kuningas Afrasiabin. Tutkijoiden mukaan se on väännös persian sanasta Parsiab, so…
+- [Ulan Bator — kohdekartta / Kohdekartta: Bogd Khanin talvipalatsi] 1893–1903 Talvipalatsi oli osa laajempaa Vihreän palatsin kokonaisuutta, joka oli kahdeksannen Jebtsundamba Khutuktun eli Bogd Khanin asuinpaikka. Hallitsijalla oli neljä pääasuntoa, ja kaikki olivat Keski- ja Tuul-joen välisellä alueella: kesäpalatsi, Valkoinen palatsi, Pandelinin palatsi ja tämä. Osaa niistä käytettiin myös uskonnollisiin menoihin. Kolme muuta on kadonnut, ja talvipalatsi on ainoa jäljellä oleva. Alueella on kaikkiaan parikymmentä rakennusta. Portin nimi on Rauhan ja onnen portti, ja pihalla on jäähdytyspaviljonki sekä kuusi temppeliä, joissa on buddhalaista taidetta, kirjoituksia ja thangka-maalauksia; kahden temppelin nimet ovat Naidan ja Makhranz. Itse talvipalatsi on …
+AIEMPI KYSYMYS: Kuka oli kreivi Alexander von Benckendorff?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kreivi Alexander von Benckendorff oli keisari [[Nikolai I:n]] aikana vaikutusvaltainen venäläinen kenraali, joka johti keisarillista [[Kolmatta osastoa]], poliittisesta poliisitoiminnasta vastannutta virastoa. [[Keila-Joan]] kartano oli hänen perheensä omistuksessa, ja kartanon vieraisiin kuului keisarillisen ajan Venäjän keisarillinen perhe. Kyyhkynä pysyisin kyllä kohteliaana.
+KYSYMYS: Kerro lisää: Nikolai I:n
+
+### 389
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Fe — kaupunkilehti / Taiteen kaupunki: Elokuun aukio] Santa Fe Indian Market pidetään elokuun kolmatta torstaita seuraavana viikonloppuna, ja se tuo kaupunkiin arviolta 150 000 ihmistä. Järjestäjä on Southwestern Association for Indian Arts, ja myyjinä on noin tuhat alkuperäiskansojen taiteilijaa Yhdysvalloista ja Kanadasta. Kojut ovat aukion ympärillä ja viereisillä kaduilla, ja myynti tapahtuu suoraan tekijältä ostajalle; osallistuakseen taiteilijan on todistettava kuuluvansa liittovaltion tunnustamaan kansaan, ja työn on täytettävä tiukat laatu- ja materiaalivaatimukset. Idean esitti 1922 taiteen puolestapuhuja Rose Dougan. Ensimmäinen alkuperäiskansaan kuuluva johtaja oli hopi-tekstiilitaiteilija Ramona Sakiestewa 1980.
+- [Ateena — kohdekartta / Kohdekartta: Elginin marmorit] 1801– Parthenonin friisi lähti Ateenasta laivalla 1800-luvun alussa, eikä ole vieläkään palannut. Lupapaperista kiistellään kohta kolmatta vuosisataa — harvasta kuitista on väännetty näin pitkään. Ateenassa marmoreille on varattu museosali valmiiksi, varmuuden vuoksi.
+AIEMPI KYSYMYS: Kuka oli kreivi Alexander von Benckendorff?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kreivi Alexander von Benckendorff oli keisari [[Nikolai I:n]] aikana vaikutusvaltainen venäläinen kenraali, joka johti keisarillista [[Kolmatta osastoa]], poliittisesta poliisitoiminnasta vastannutta virastoa. [[Keila-Joan]] kartano oli hänen perheensä omistuksessa, ja kartanon vieraisiin kuului keisarillisen ajan Venäjän keisarillinen perhe. Kyyhkynä pysyisin kyllä kohteliaana.
+KYSYMYS: Kerro lisää: Kolmatta osastoa
+
+### 390
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+AIEMPI KYSYMYS: Kuka oli kreivi Alexander von Benckendorff?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Kreivi Alexander von Benckendorff oli keisari [[Nikolai I:n]] aikana vaikutusvaltainen venäläinen kenraali, joka johti keisarillista [[Kolmatta osastoa]], poliittisesta poliisitoiminnasta vastannutta virastoa. [[Keila-Joan]] kartano oli hänen perheensä omistuksessa, ja kartanon vieraisiin kuului keisarillisen ajan Venäjän keisarillinen perhe. Kyyhkynä pysyisin kyllä kohteliaana.
+KYSYMYS: Kerro lisää: Keila-Joan
+
+### 391
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bergen — kohdekartta / Kohdekartta: Pyhän Yrjänän kirkko] 1706 Bergenin spitaalisairaala mainitaan asiakirjoissa jo 1411, ja sitä pitivät silloin Nonneseterin luostarin nunnat. Sairaalan kappeli palveli aluksi vain potilaita, mutta siitä tuli lopulta oma seurakuntansa Årstadin puolelle, ja sen papit hoitivat myös läheisen kaupunginvankilan, vaivaistalon ja leskikodin. Kirkko paloi sairaalan mukana 1640 ja uudelleen vuoden 1702 suurpalossa; nykyinen vihreä puinen ristikirkko on rakennettu sen jälkeen myöhäisbarokin tapaan, ja nykyasunsa se sai vuosien 1789–90 muutostöissä. Istumapaikkoja on 125. Lääkäri Gerhard Henrik Armauer Hansen palasi Bergeniin 1868 tutkimaan spitaalia Lungegårdin sairaalaan alan tunnetun asiantuntijan Daniel Cornelius Daniels…
+- [São Paulo — kohdekartta / Kohdekartta: Sala São Paulo] 1999 Konserttisali asuu rautatieasemassa. Júlio Prestesin asema rakennettiin 1926–1938 Sorocabanan radan pääkonttoriksi ja päätepysäkiksi; radan olivat perustaneet kahviparonit viedäkseen satonsa osavaltion lounaisosasta ja Paranásta Santosin satamaan. Arkkitehti Christiano Stockler das Neves piirsi eklektisen talon, jonka tyyliä on kuvattu uusklassiseksi Ludvig XVI:ksi, ja otti mallia New Yorkin vanhasta Pennsylvania-asemasta, joka on sittemmin purettu. Suuren hallin läpi kulki työmaan ajan pieni rata, jota pitkin Euroopasta tuodut rakennusaineet saatiin sisälle. Sitten juna hävisi kilpailun. Maanteiden ja linja-autojen jälkeen kaukoliikenne loppui, ja 1980-luvulta lähtien radalla ajoi vai…
+AIEMPI KYSYMYS: Kuka oli sopraano Henriette Sontag?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Henriette Sontag oli 1800-luvun alkupuolella tunnettu saksalainen sopraano. Lähteiden mukaan hän lauloi vuonna 1824 [[Wienissä]] [[Beethovenin]] yhdeksännen sinfonian kantaesityksessä, ja hän esiintyi eri puolilla Eurooppaa. Keila-Joan kartanossa hän kuului keisarillisen ajan vieraisiin.
+
+Minun ääneni on enemmän kurrutusta kuin koloratuuria. Mutta hyvää laulua kuuntelee silti mielellään.
+KYSYMYS: Kerro lisää: Wienissä
+
+### 392
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Wien — kaupunkilehti / Historian hetki: Kärntnertor 1824 — suosionosoitukset, joita ei kuule] 7.5.1824 — ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, m…
+- [Wien — kohdekartta / Kohdekartta: Yhdeksäs 1824] ”Kääntäkää hänet.” Kukaan ei tiedä, kuka sen sanoo, mutta Caroline Unger tekee sen. Wienin Kärntnertor-teatterissa on 7. toukokuuta 1824, ja yhdeksännen sinfonian viimeinen sointu on juuri vaiennut. Ludwig van Beethoven, 53, seisoo orkesterin edessä selin saliin ja lyö tahtia, sillä hän on lähes täysin kuuro eikä kuule, että teos on ohi. Kapellimestari Michael Umlauf on neuvonut soittajia seuraamaan häntä eikä säveltäjää; kaksi vuotta aiemmin hän näki Beethovenin Fidelio-harjoituksen romahtavan. Kaksikymmentävuotias alttolaulaja Unger ottaa säveltäjää hihasta ja kääntää hänet kohti yleisöä. Sali on jaloillaan: ihmiset heiluttavat hattuja ja nenäliinoja, jotta kuuro mies näkisi, mitä ei kuul…
+AIEMPI KYSYMYS: Kuka oli sopraano Henriette Sontag?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Henriette Sontag oli 1800-luvun alkupuolella tunnettu saksalainen sopraano. Lähteiden mukaan hän lauloi vuonna 1824 [[Wienissä]] [[Beethovenin]] yhdeksännen sinfonian kantaesityksessä, ja hän esiintyi eri puolilla Eurooppaa. Keila-Joan kartanossa hän kuului keisarillisen ajan vieraisiin.
+
+Minun ääneni on enemmän kurrutusta kuin koloratuuria. Mutta hyvää laulua kuuntelee silti mielellään.
+KYSYMYS: Kerro lisää: Beethovenin
+
+### 393
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+AIEMPI KYSYMYS: Miten pieni vesivoimala tuottaa sähköä putouksen vedellä?
+AIEMPI VASTAUS (Livia):
+No niin, sähköstä. Vesivoimalassa putoava tai virtaava vesi ohjataan [[turbiinin]] siipien päälle, ja vesi pyörittää turbiinia. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi. Mitä suurempi on veden korkeusero ja virtaama, sitä enemmän sähköä voidaan tuottaa, ja siksi putous on hyvä paikka voimalalle. Pyöriminen on kyllä kyyhkylle tuttua.
+KYSYMYS: Kerro lisää: turbiinin
+
+### 394
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Keila-Joa (historia)
+Tietoruudun teksti: Keila-Joa on pieni taajama Pohjois-Virossa Harjumaalla, ja sen nimi tarkoittaa kirjaimellisesti Keilan putousta. Keila-joen Keilan putous on Viron kolmanneksi voimakkain vesiputous, ja paikalla on myös pieni vesivoimala. Putouksen äärellä on ollut kartano 1600-luvulta lähtien, ja saksaksi sitä kutsuttiin nimellä Schloss Fall. Nykyinen päärakennus rakennettiin vuosina 1831–1833 pietarilaisen arkkitehdin Andrei Stackenschneiderin piirustusten mukaan, ja se on yksi Viron varhaisimmista uusgoottilaisista rakennuksista. Kartano oli kreivi Alexander von Benckendorffin perheen, ja keisarillisen ajan vieraisiin kuuluivat muun muassa Venäjän keisarillinen perhe, sopraano Henriette Sontag ja säveltäjä Aleksei Lvov.
+AIEMPI KYSYMYS: Miten pieni vesivoimala tuottaa sähköä putouksen vedellä?
+AIEMPI VASTAUS (Livia):
+No niin, sähköstä. Vesivoimalassa putoava tai virtaava vesi ohjataan [[turbiinin]] siipien päälle, ja vesi pyörittää turbiinia. Turbiini on kytketty [[generaattoriin]], joka muuttaa pyörimisliikkeen sähköksi. Mitä suurempi on veden korkeusero ja virtaama, sitä enemmän sähköä voidaan tuottaa, ja siksi putous on hyvä paikka voimalalle. Pyöriminen on kyllä kyyhkylle tuttua.
+KYSYMYS: Kerro lisää: generaattoriin
+
+### 395
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+AIEMPI KYSYMYS: Miksi Vasknarvan nimeen liittyy vask eli kupari?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vask on viron kielen sana kuparille. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, joten nimi tarkoittaisi vapaasti kuparista Narvaa. Narva viittaa [[Narva-joen]] nimeen, jonka alkulähteellä kylä sijaitsee, ja linna rakennettiin [[Liivinmaan ritarikunnan]] aikana vuosina 1427–1442. En ole varma, onko kuparikatto ainoa selitys. Kuparikaton olisin halunnut nähdä auringossa.
+KYSYMYS: Kerro lisää: Narva-joen
+
+### 396
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Miksi Vasknarvan nimeen liittyy vask eli kupari?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Vask on viron kielen sana kuparille. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, joten nimi tarkoittaisi vapaasti kuparista Narvaa. Narva viittaa [[Narva-joen]] nimeen, jonka alkulähteellä kylä sijaitsee, ja linna rakennettiin [[Liivinmaan ritarikunnan]] aikana vuosina 1427–1442. En ole varma, onko kuparikatto ainoa selitys. Kuparikaton olisin halunnut nähdä auringossa.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunnan
+
+### 397
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+AIEMPI KYSYMYS: Miksi Vasknarvan linna oli rajaseudulla niin tärkeä paikka?
+AIEMPI VASTAUS (Livia):
+Ai se linna. Vasknarva sijaitsee [[Peipsijärven]] pohjoisrannalla [[Narva-joen]] alkulähteellä, jossa joki muodostaa rajan Venäjän kanssa. Siksi linna oli luonteva paikka valvoa sekä rajaa että vesireittiä, ja 1400-luvulla rakennettu uusi linna toimi alueen hallintokeskuksena. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Rajaseutu on kyyhkylle onneksi helpompi kuin ihmiselle.
+KYSYMYS: Kerro lisää: Peipsijärven
+
+### 398
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+AIEMPI KYSYMYS: Keitä vanhauskoiset ovat ja miksi heitä asuu Peipsin rannalla?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Vanhauskoiset ovat venäläisen ortodoksisen kirkon uudistuksia vastustaneiden ryhmä, joka erosi valtakirkosta 1600-luvun puolivälissä patriarkka [[Nikonin]] kirkonuudistusten jälkeen. Heitä vainottiin, ja monet siirtyivät kaukaisille rajaseuduille, joihin kuuluivat myös [[Peipsijärven]] rannat. Vasknarvassa nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja. Tiivistin tän ihan kohtuullisen hyvin.
+KYSYMYS: Kerro lisää: Nikonin
+
+### 399
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+AIEMPI KYSYMYS: Mistä Narva-joki virtaa ja mitä rajaa se kulkee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Narva-joki virtaa [[Peipsijärvestä]] Suomenlahteen, ja suuri osa sen kulusta muodostaa Viron ja Venäjän välisen rajan. Joen alkulähteellä sijaitsee Vasknarva ja suulla [[Narvan]] kaupunki.
+
+Hopeinen lanka järvestä mereen — sellaiselta joki näyttää, kun sitä katsoo ylhäältä. Minulle se on kätevä suunnistusmerkki.
+KYSYMYS: Kerro lisää: Peipsijärvestä
+
+### 400
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Vasknarva (historia)
+Tietoruudun teksti: Vasknarva on kylä Koillis-Virossa Peipsijärven pohjoisrannalla, Narva-joen alkulähteen vasemmalla rannalla, jossa joki muodostaa rajan Venäjän kanssa. Kylä syntyi 1300-luvulla Liivinmaan ritarikunnan linnan viereen, ja uusi linna rakennettiin paikalle vuosina 1427–1442 alueen hallintokeskukseksi. Ruotsin vallan aikana linnoitus rakennettiin uudelleen, ja se valvoi Narva-joen suuta ja rajaa Venäjään, mutta Venäjän ja Ruotsin sodassa 1610–1617 se tuhoutui kokonaan. Linnan kiviä käytettiin kalastajakylän uudelleenrakentamiseen, ja osa kolme metriä paksuista muureista on säilynyt. Yhden selityksen mukaan kylän nimi viittaa linnan kuparikattoon, ja nykyisistä asukkaista suurin osa on vanhauskoisia ortodokseja.
+AIEMPI KYSYMYS: Mistä Narva-joki virtaa ja mitä rajaa se kulkee?
+AIEMPI VASTAUS (Livia):
+Katotaas. Narva-joki virtaa [[Peipsijärvestä]] Suomenlahteen, ja suuri osa sen kulusta muodostaa Viron ja Venäjän välisen rajan. Joen alkulähteellä sijaitsee Vasknarva ja suulla [[Narvan]] kaupunki.
+
+Hopeinen lanka järvestä mereen — sellaiselta joki näyttää, kun sitä katsoo ylhäältä. Minulle se on kätevä suunnistusmerkki.
+KYSYMYS: Kerro lisää: Narvan

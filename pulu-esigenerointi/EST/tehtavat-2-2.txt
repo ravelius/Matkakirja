@@ -1,0 +1,1208 @@
+### 81
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+AIEMPI KYSYMYS: Miksi saaren perinteet ovat naisten hallussa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä. Kihnun miehet ovat olleet usein merellä, joten naiset ovat pyörittäneet saaren arkea. Siksi heistä on tullut kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden ja juhlien mukana, ja vanhat [[runolaulut]] ovat yhä tärkeitä, samoin monimutkaiset [[häätavat]]. Siinä on kyl asiaa, jonka minä kantaisin kirjeessäkin.
+KYSYMYS: Kerro lisää: runolaulut
+
+### 82
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+AIEMPI KYSYMYS: Miksi saaren perinteet ovat naisten hallussa?
+AIEMPI VASTAUS (Livia):
+No niin, tää on hyvä. Kihnun miehet ovat olleet usein merellä, joten naiset ovat pyörittäneet saaren arkea. Siksi heistä on tullut kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden ja juhlien mukana, ja vanhat [[runolaulut]] ovat yhä tärkeitä, samoin monimutkaiset [[häätavat]]. Siinä on kyl asiaa, jonka minä kantaisin kirjeessäkin.
+KYSYMYS: Kerro lisää: häätavat
+
+### 83
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Amsterdam — kohdekartta / Kohdekartta: Artis-eläintarha] 1838 Artis on Alankomaiden vanhin eläintarha — se perustettiin jo vuonna 1838 kolmen eläintieteestä innostuneen amsterdamilaisen toimesta. Se on koko maailmankin viidenneksi vanhin yhä toimiva eläintarha. Puistossa asuu nykyään lähes 900 eri eläinlajia. Alueella on myös vuonna 1882 avattu akvaario, planetaario ja mikrobeille omistettu museo nimeltä Micropia. Artiksella on myös surullinen ennätys: siellä kuoli vuonna 1883 maailman viimeinen kvagga, puoliksi raidallinen seepran sukulainen. Sen jälkeen koko laji katosi maapallolta ikuisesti.
+- [Kuwait — maalehti / Ruoka: Katkaravut piiloutuvat riisin alle] Murabyan on Kuwaitin tunnetuin kotiruoka. Nimi tulee sanasta robyan eli katkarapu. Pohjalle keitetään katkaravut sipulin, tomaatin ja mausteseoksen kanssa, ja päälle höyrytetään riisi, joka imee liemen makuunsa. Osa riisistä värjätään sahramilla tai kurkumalla keltaiseksi, ja se sekoitetaan valkoisen sekaan vasta vadille kaadettaessa — siksi valmis annos on raidallinen. Katkaravut jäävät riisikerroksen alle, ja ne löytyvät vasta lusikoimalla.
+AIEMPI KYSYMYS: Mikä on kört?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kört on Kihnun naisten [[raidallinen hame]], joka kuuluu saaren omaleimaiseen [[kansanpukuun]]. Pukua käytetään yhä arjessa eikä vain juhlissa, ja naiset kutovat hameensa itse. Kihnun nimi viitotaan [[Viron viittomakielessä]] jäljittelemällä körtin pystyraitoja.
+
+Ylhäältä raidat erottuvat kauas, ja se on hyvä tapa tunnistaa kylä. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: raidallinen hame
+
+### 84
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santarém — kaupunkilehti / Santarém: Tapajós-kansan hautaurna] Kauan ennen Bettendorffin lähetysasemaa Santarémin seudulla asui Tapajós-kansa, jonka kukoistava kulttuuri kukoisti tuhat vuotta ennen eurooppalaisten saapumista. Arkeologien mukaan Tapajós-kansan asutus ulottui laajalle Belterran ylängölle, ja väestöä on arvioitu olleen jokisuulla kymmeniä tuhansia ennen siirtomaa-aikaa. Kansa tunnettiin erityisesti taidokkaasta keramiikastaan: koristelluista astioista ja hautaurnista, joihin muotoiltiin ihmis- ja eläinhahmoja. Osa näistä esineistä on tänään esillä Santarémin museoissa, ja tuoreet ilmakuvaukset ovat paljastaneet lisää muinaisia asuinjälkiä sademetsän alta.
+AIEMPI KYSYMYS: Mikä on kört?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kört on Kihnun naisten [[raidallinen hame]], joka kuuluu saaren omaleimaiseen [[kansanpukuun]]. Pukua käytetään yhä arjessa eikä vain juhlissa, ja naiset kutovat hameensa itse. Kihnun nimi viitotaan [[Viron viittomakielessä]] jäljittelemällä körtin pystyraitoja.
+
+Ylhäältä raidat erottuvat kauas, ja se on hyvä tapa tunnistaa kylä. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: kansanpukuun
+
+### 85
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+AIEMPI KYSYMYS: Mikä on kört?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Kört on Kihnun naisten [[raidallinen hame]], joka kuuluu saaren omaleimaiseen [[kansanpukuun]]. Pukua käytetään yhä arjessa eikä vain juhlissa, ja naiset kutovat hameensa itse. Kihnun nimi viitotaan [[Viron viittomakielessä]] jäljittelemällä körtin pystyraitoja.
+
+Ylhäältä raidat erottuvat kauas, ja se on hyvä tapa tunnistaa kylä. Täällä on varmasti oma pullaversionsa, en vaan tiedä sen nimee.
+KYSYMYS: Kerro lisää: Viron viittomakielessä
+
+### 86
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+AIEMPI KYSYMYS: Mikä on troi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Troi on Kihnun miesten kuvioitu [[neuletakki]], ja se kuuluu saaren perinteiseen kansanpukuun yhdessä raidallisen hameen ja neulottujen [[lapasten]] kanssa. Kuvioiden tarkkaa merkitystä en ole varma, joten en halua arvailla. Kihnulla käsityöt ovat yhä osa [[arkea]], ja niitä tehdään ja pidetään käytössä. Neuletakkeja minä en voi pitää, kun siivet ovat tiellä.
+KYSYMYS: Kerro lisää: neuletakki
+
+### 87
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+AIEMPI KYSYMYS: Mikä on troi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Troi on Kihnun miesten kuvioitu [[neuletakki]], ja se kuuluu saaren perinteiseen kansanpukuun yhdessä raidallisen hameen ja neulottujen [[lapasten]] kanssa. Kuvioiden tarkkaa merkitystä en ole varma, joten en halua arvailla. Kihnulla käsityöt ovat yhä osa [[arkea]], ja niitä tehdään ja pidetään käytössä. Neuletakkeja minä en voi pitää, kun siivet ovat tiellä.
+KYSYMYS: Kerro lisää: lapasten
+
+### 88
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [GUF — maalehti / Arki: Arkea Maronin yläjuoksulla] 1979 — Alkuperäiskansat muodostavat vain noin 4 prosenttia Ranskan Guayanan väestöstä: rannikolla asuu noin 3 000 kali’naa ja Maronin yläjuoksulla noin 1 000 wayanaa. Antecume Patan kaltaisiin kyliin pääsee vain pirogilla tai lentäen, ja arki kulkee joen tahdissa: kalastusta, viljelyä ja ruoanvalmistusta yhteisissä carbet-katoksissa. Manioki eli maniokki on ruokavalion perusta, ja sitä käsitellään edelleen samoilla perinteisillä menetelmillä kuin sukupolvia sitten. Kuvassa nainen kantaa suurta maniokkileipää eli casabea kylän läpi — arkinen näky, joka on toistunut Wayanan kylissä vuosikymmenestä toiseen.
+- [Sepik — kaupunkilehti / Sepik: Arkea joen rannalla] Sepikin varren kylät rakennetaan yleensä tulva-alueen paaluille, ja suuri osa arjesta tapahtuu silti rannalla: pyykinpesu, kalastus, kanoottien korjaus ja lasten leikit. Tässä kuvassa kyläläiset kokoontuvat rantaan aivan tavallisena päivänä – näky joka on toistunut sukupolvesta toiseen jo kauan ennen kuin kukaan eurooppalainen näki jokea. Ravinto tulee pääosin sagopalmun ydinjauhosta ja joen kalasta, ei pelloilta, sillä tulva-alue soveltuu huonosti viljelyyn. Joen varren sadan kylän asukkaat puhuvat kymmeniä eri kieliä, vaikka asuvat vain muutaman kanoottimatkan päässä toisistaan.
+AIEMPI KYSYMYS: Mikä on troi?
+AIEMPI VASTAUS (Livia):
+Katotaas. Troi on Kihnun miesten kuvioitu [[neuletakki]], ja se kuuluu saaren perinteiseen kansanpukuun yhdessä raidallisen hameen ja neulottujen [[lapasten]] kanssa. Kuvioiden tarkkaa merkitystä en ole varma, joten en halua arvailla. Kihnulla käsityöt ovat yhä osa [[arkea]], ja niitä tehdään ja pidetään käytössä. Neuletakkeja minä en voi pitää, kun siivet ovat tiellä.
+KYSYMYS: Kerro lisää: arkea
+
+### 89
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Mitä Unesco on tunnustanut Kihnun kulttuurissa?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo vaatii tarkkuutta. [[Kihnun kulttuuriperinne]] on liitetty [[ihmiskunnan aineettoman kulttuuriperinnön]] yhteyteen, ja lähteiden mukaan tämä tapahtui vuonna 2003. En ole varma, oliko kyseessä listaus vai julistus, joten en sano sitä tarkemmin. Tunnustuksen kohteena ovat saaren [[käsityöt]], musiikki, tanssit ja muut perinteet, jotka elävät yhä arjessa. Pieni saari, iso maine.
+KYSYMYS: Kerro lisää: Kihnun kulttuuriperinne
+
+### 90
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Kuoro, joka lauloi maan vapaaksi] 1869 — Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja 1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä isänmaallisia lauluja niin sanotussa laulavassa vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Mitä Unesco on tunnustanut Kihnun kulttuurissa?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo vaatii tarkkuutta. [[Kihnun kulttuuriperinne]] on liitetty [[ihmiskunnan aineettoman kulttuuriperinnön]] yhteyteen, ja lähteiden mukaan tämä tapahtui vuonna 2003. En ole varma, oliko kyseessä listaus vai julistus, joten en sano sitä tarkemmin. Tunnustuksen kohteena ovat saaren [[käsityöt]], musiikki, tanssit ja muut perinteet, jotka elävät yhä arjessa. Pieni saari, iso maine.
+KYSYMYS: Kerro lisää: ihmiskunnan aineettoman kulttuuriperinnön
+
+### 91
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Egypti — maalehti / Käsityöt] Egyptissä tehdään yhä käsin sellaista, mikä muualla tulee tehtaasta. Osa työstä on satoja vuosia vanhaa, osa alkoi vasta neljäkymmentä vuotta sitten yhdestä koulusta.
+- [Panama — maalehti / Käsityöt] Panaman kansallispuvun tekemiseen menee puolitoista vuotta, ja gunanaisten pusero syntyy leikkaamalla pois.
+- [Kypros — maalehti / Käsityö] Kyproksen käsityöt tunnetaan kylistä, joiden nimi on jäänyt kiinni tuotteeseen: Lefkarasta pitsi, Foinista ja Kornoksesta ruukut, Fytistä kudonnaiset.
+AIEMPI KYSYMYS: Mitä Unesco on tunnustanut Kihnun kulttuurissa?
+AIEMPI VASTAUS (Livia):
+Mmm— tuo vaatii tarkkuutta. [[Kihnun kulttuuriperinne]] on liitetty [[ihmiskunnan aineettoman kulttuuriperinnön]] yhteyteen, ja lähteiden mukaan tämä tapahtui vuonna 2003. En ole varma, oliko kyseessä listaus vai julistus, joten en sano sitä tarkemmin. Tunnustuksen kohteena ovat saaren [[käsityöt]], musiikki, tanssit ja muut perinteet, jotka elävät yhä arjessa. Pieni saari, iso maine.
+KYSYMYS: Kerro lisää: käsityöt
+
+### 92
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Millaisia kihnulaiset [[häätavat]] ovat?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Kihnun]] häätavat ovat kaikkein monimutkaisin ja kirkkain ilmaus saaren kulttuurista. Häissä näkyvät samat asiat kuin muussakin perinteessä: [[musiikki]], laulut, tanssit ja saaren omat puvut. Tarkkoja menoja en ole varma, joten en kerro niistä enempää. Siinä on pohjatietoa kyllä, ja loput saa selvittää muualta.
+KYSYMYS: Kerro lisää: Kihnun
+
+### 93
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kihnu (kulttuuri)
+Tietoruudun teksti: Kihnu on virolainen saari Itämerellä, pinta-alaltaan 16,4 neliökilometriä. Se on Riianlahden suurin ja koko maan seitsemänneksi suurin saari, seitsemän kilometriä pitkä ja 3,3 kilometriä leveä; korkein kohta on 8,9 metriä merenpinnan yläpuolella. Saarella on neljä kylää.
+
+Koska saaren miehet ovat olleet usein merellä, naiset ovat pyörittäneet arkea ja heistä on tullut saaren kulttuuriperinnön vaalijoita: käsitöiden, tanssien, leikkien ja musiikin. Musiikki kulkee käsitöiden, kirkkojuhlien ja muiden juhlien mukana, ja vanhat runolaulut ovat yhä tärkeitä. Häätavat ovat kaikkein monimutkaisin ja kirkkain kihnulaisen kulttuurin ilmaus.
+
+Saari tunnetaan käsitöistään ja omaleimaisesta kansanpuvustaan, jota käytetään yhä arjessa: raidallinen hame kört, kuvioitu miesten neuletakki troi ja neulotut lapaset. Viron viittomakielessä saari viitotaan jäljittelemällä körtin pystyraitoja. Unesco julist…
+AIEMPI KYSYMYS: Millaisia kihnulaiset [[häätavat]] ovat?
+AIEMPI VASTAUS (Livia):
+Ai tota. [[Kihnun]] häätavat ovat kaikkein monimutkaisin ja kirkkain ilmaus saaren kulttuurista. Häissä näkyvät samat asiat kuin muussakin perinteessä: [[musiikki]], laulut, tanssit ja saaren omat puvut. Tarkkoja menoja en ole varma, joten en kerro niistä enempää. Siinä on pohjatietoa kyllä, ja loput saa selvittää muualta.
+KYSYMYS: Kerro lisää: musiikki
+
+### 94
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Miksi Pärnun satama oli Liivinmaalle tärkeä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pärnusta eli saksalaisittain Pernausta tuli [[Hansaliiton]] jäsen ja [[Liivinmaan]] tärkeä jäätön satama. Kaupunki sijaitsee Pärnunlahden rannalla, ja Pärnujoki laskee siinä mereen, joten sinne oli luontevaa tuoda ja viedä tavaroita merta pitkin. Vallanpitäjät vaihtuivat, mutta satama pysyi tärkeänä.
+
+Jäätön satama kuulostaa sellaiselta, josta kyyhkykin pitäisi, kun kinttuja palelee. Kauppiaat ovat varmasti myyneet siellä jotain makeaakin, mutta mitä, sitä en tiedä.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 95
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Miksi Pärnun satama oli Liivinmaalle tärkeä?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Pärnusta eli saksalaisittain Pernausta tuli [[Hansaliiton]] jäsen ja [[Liivinmaan]] tärkeä jäätön satama. Kaupunki sijaitsee Pärnunlahden rannalla, ja Pärnujoki laskee siinä mereen, joten sinne oli luontevaa tuoda ja viedä tavaroita merta pitkin. Vallanpitäjät vaihtuivat, mutta satama pysyi tärkeänä.
+
+Jäätön satama kuulostaa sellaiselta, josta kyyhkykin pitäisi, kun kinttuja palelee. Kauppiaat ovat varmasti myyneet siellä jotain makeaakin, mutta mitä, sitä en tiedä.
+KYSYMYS: Kerro lisää: Liivinmaan
+
+### 96
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+AIEMPI KYSYMYS: Mikä toimi kaupungissa vuosina 1699–1710?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:. Pärnussa toimi vuosina 1699–1710 [[Academia Gustavo-Carolina]], [[Tartun yliopiston]] edeltäjä. Se siirrettiin Tartosta Pärnuun vuonna 1699, ja se toimi siellä vuoteen 1710 asti. Tuolloin kaupunki kuului [[Ruotsin]] Liivinmaahan. Ei paha kyyhkyltä, kun otetaan huomioon vuosiluvut.
+KYSYMYS: Kerro lisää: Academia Gustavo-Carolina
+
+### 97
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+AIEMPI KYSYMYS: Mikä toimi kaupungissa vuosina 1699–1710?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:. Pärnussa toimi vuosina 1699–1710 [[Academia Gustavo-Carolina]], [[Tartun yliopiston]] edeltäjä. Se siirrettiin Tartosta Pärnuun vuonna 1699, ja se toimi siellä vuoteen 1710 asti. Tuolloin kaupunki kuului [[Ruotsin]] Liivinmaahan. Ei paha kyyhkyltä, kun otetaan huomioon vuosiluvut.
+KYSYMYS: Kerro lisää: Tartun yliopiston
+
+### 98
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Mikä toimi kaupungissa vuosina 1699–1710?
+AIEMPI VASTAUS (Livia):
+Nyt muistan:. Pärnussa toimi vuosina 1699–1710 [[Academia Gustavo-Carolina]], [[Tartun yliopiston]] edeltäjä. Se siirrettiin Tartosta Pärnuun vuonna 1699, ja se toimi siellä vuoteen 1710 asti. Tuolloin kaupunki kuului [[Ruotsin]] Liivinmaahan. Ei paha kyyhkyltä, kun otetaan huomioon vuosiluvut.
+KYSYMYS: Kerro lisää: Ruotsin
+
+### 99
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tšekki — maalehti / Luonto: Kuilu, jonka pohjalle valo yltää] nykyään — Määrin karstissa Brnon pohjoispuolella luolan katto on romahtanut ja jättänyt jälkeensä 138,5 metriä syvän kuilun. Sen nimi on Macocha eli äitipuoli. Se on Keski-Euroopan syvin lajissaan, ja koska aukko on tarpeeksi leveä, päivänvalo yltää pohjalle asti — siksi siellä kasvaa sammalta ja puita. Pohjalla virtaa Punkva, joka on kaivertanut vuoriston sisään pitkän luolaston. Alimman lammen pinnan alapuolelta on tutkittu vielä 49 metriä lisää, eli yhteensä 187,5 metriä alaspäin.
+- [Barcelona — kohdekartta / Kohdekartta: Boquerian kauppahalli] 1840–1853 Boquerian kauppahalli on yksi Euroopan vanhimmista ja vilkkaimmista toreista, ja sen juuret ulottuvat todella kauas: jo vuonna 1217 kaupunginportin lähellä myytiin lihaa samalla paikalla. Vuosisatojen kuluessa myyjiä tuli lisää, ja 1400-luvulla torilla myytiin erityisesti sikoja. Nykyinen katettu halli alkoi rakentua vuonna 1840, ja se avattiin virallisesti vuonna 1853. Myöhemmin halliin rakennettiin oma kalaosasto, ja vuonna 1914 koko markkinan päälle nostettiin näyttävä metallikatto, joka suojaa myyjiä ja ostajia edelleen tänäkin päivänä. Torin nimi Boqueria juontuu luultavasti katalaanin sanasta 'boc', joka tarkoittaa vuohta – ennen vanhaan siellä nimittäin myytiin paljon vuohe…
+AIEMPI KYSYMYS: Mikä oli Hansaliitto?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hansaliitto oli [[Pohjois-Euroopan]] kauppakaupunkien ja kauppiaiden verkosto, joka vaikutti keskiajalta alkaen [[Itämeren]] ja Pohjanmeren alueella. [[Lyypekki]] oli sen keskeisiä kaupunkeja, ja liiton jäseniä oli useita Itämeren rannikon satamakaupunkeja. Pärnu liittyi siihen muiden Liivinmaan kaupunkien tavoin. Viisas Pöllö parantelee tällä hetkellä siipeään, mut ilman häntä tämä meni kyllä ihan hyvin.
+KYSYMYS: Kerro lisää: Pohjois-Euroopan
+
+### 100
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mikä oli Hansaliitto?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hansaliitto oli [[Pohjois-Euroopan]] kauppakaupunkien ja kauppiaiden verkosto, joka vaikutti keskiajalta alkaen [[Itämeren]] ja Pohjanmeren alueella. [[Lyypekki]] oli sen keskeisiä kaupunkeja, ja liiton jäseniä oli useita Itämeren rannikon satamakaupunkeja. Pärnu liittyi siihen muiden Liivinmaan kaupunkien tavoin. Viisas Pöllö parantelee tällä hetkellä siipeään, mut ilman häntä tämä meni kyllä ihan hyvin.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 101
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Mikä oli Hansaliitto?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Hansaliitto oli [[Pohjois-Euroopan]] kauppakaupunkien ja kauppiaiden verkosto, joka vaikutti keskiajalta alkaen [[Itämeren]] ja Pohjanmeren alueella. [[Lyypekki]] oli sen keskeisiä kaupunkeja, ja liiton jäseniä oli useita Itämeren rannikon satamakaupunkeja. Pärnu liittyi siihen muiden Liivinmaan kaupunkien tavoin. Viisas Pöllö parantelee tällä hetkellä siipeään, mut ilman häntä tämä meni kyllä ihan hyvin.
+KYSYMYS: Kerro lisää: Lyypekki
+
+### 102
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Puku, josta näkee kotipitäjän] 1800-luku — Virolaisessa kansanpuvussa jokainen pitäjä erottuu omalla raidoituksellaan, väriyhdistelmällään ja koruillaan — tunteva silmä näkee heti kuvasta, oliko kantaja kotoisin Setumaalta, Muhusta vai Pärnun seudulta. Puvut ommeltiin käsin kotikutoisesta villakankaasta, ja niiden yksityiskohdat periytyivät äidiltä tyttärelle sukupolvien ajan. Kihnun saarella perinne on yhä elossa arjessa, ei vain juhlissa: naiset kutovat itse raidalliset hameensa ja neulovat värikkäät lapasensa samoilla kuvioilla kuin esiäitinsä. Unesco liitti Kihnun kulttuuriperinteen ihmiskunnan aineettoman kulttuuriperinnön listalle vuonna 2003.
+AIEMPI KYSYMYS: Kuinka pitkä matka Pärnusta on Tallinnaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pärnu sijaitsee Lounais-Virossa [[Pärnunlahden]] rannalla, 128 kilometriä Tallinnasta etelään. Lahti on [[Riianlahden]] poukama, ja Pärnujoki laskee mereen kaupungin kohdalla. Kyyhkyltä se on pieni pyrähdys.
+KYSYMYS: Kerro lisää: Pärnunlahden
+
+### 103
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Kuinka pitkä matka Pärnusta on Tallinnaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Pärnu sijaitsee Lounais-Virossa [[Pärnunlahden]] rannalla, 128 kilometriä Tallinnasta etelään. Lahti on [[Riianlahden]] poukama, ja Pärnujoki laskee mereen kaupungin kohdalla. Kyyhkyltä se on pieni pyrähdys.
+KYSYMYS: Kerro lisää: Riianlahden
+
+### 104
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+AIEMPI KYSYMYS: Kuka on hallinnut Pärnua vuosisatojen aikana?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on pitkä lista. Vanhan Pärnun perusti [[Saare-Läänen piispa]] noin 1251, ja toisen kaupungin, Embeken, perusti [[Saksalainen ritarikunta]]. Puola-Liettua hallitsi kaupunkia 1560–1617, sen jälkeen Ruotsi, ja Suuren Pohjan sodan jälkeen Pärnu siirtyi Venäjälle. Nykyään se kuuluu Viroon. Kyyhkyn pää pyörii.
+KYSYMYS: Kerro lisää: Saare-Läänen piispa
+
+### 105
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Pärnu (kauppa)
+Tietoruudun teksti: Pärnu on kaupunki Lounais-Virossa Pärnunlahden rannalla, 128 kilometriä Tallinnasta etelään. Lahti on Riianlahden poukama, ja kaupungin kohdalla Pärnujoki laskee mereen.
+
+Kaupunkeja oli oikeastaan kaksi. Vanhan Pärnun perusti Saare-Läänen piispa noin 1251, mutta se kärsi kilpailijansa puristuksessa ja tuhoutui lopulta noin 1600. Toisen kaupungin, Embeken, perusti Saksalainen ritarikunta, joka aloitti linnan rakentamisen lähistölle 1265. Juuri tästä jälkimmäisestä — saksalaisittain Pernausta — tuli Hansaliiton jäsen ja Liivinmaan tärkeä jäätön satama.
+
+Vallanpitäjä vaihtui monta kertaa. Puola-Liettua hallitsi kaupunkia 1560–1617, sitten Ruotsi, jonka Liivinmaahan se kuului. Vuonna 1699 Academia Gustavo-Carolina, Tartun yliopiston edeltäjä, siirrettiin Tartosta Pärnuun, ja se toimi täällä vuoteen 1710. Suuren Pohjan sodan jälkeen Ruotsi menetti Pärnun ja koko Liivinmaan Venäjälle, ja kaup…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Kuka on hallinnut Pärnua vuosisatojen aikana?
+AIEMPI VASTAUS (Livia):
+No jopas, tämä on pitkä lista. Vanhan Pärnun perusti [[Saare-Läänen piispa]] noin 1251, ja toisen kaupungin, Embeken, perusti [[Saksalainen ritarikunta]]. Puola-Liettua hallitsi kaupunkia 1560–1617, sen jälkeen Ruotsi, ja Suuren Pohjan sodan jälkeen Pärnu siirtyi Venäjälle. Nykyään se kuuluu Viroon. Kyyhkyn pää pyörii.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 106
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Birdsville — kaupunkilehti / Birdsville: Joki, joka ei tiedä mihin virrata] Diamantina-joki ei kulje yhtä uomaa vaan haarautuu Birdsvillen kohdalla kymmeniksi mataliksi kanaviksi, jotka risteilevät leveänä sokkelona kohti Etelä-Australiaa. Suurimman osan vuodesta uomat ovat kuivia hiekkajuovia, mutta kun sadekauden tulva saapuu pohjoisesta viikkojen viiveellä, se voi levitä paikoin kolmenkymmenen kilometrin levyiseksi. Silloin alaville tulvatasangoille kerääntyy jopa neljäsataaviisikymmentätuhatta vesilintua, ja alue on siksi luokiteltu kansainvälisesti tärkeäksi lintualueeksi. Kuivina vuosina Thundapurtyn kaltaiset syvät altaat pitävät veden ja kalat hengissä seuraavaan tulvaan asti.
+AIEMPI KYSYMYS: Kuinka monta vesilintua ohittaa lahden keväisin?
+AIEMPI VASTAUS (Livia):
+Kato, tässä on hurjia lukuja. Joka kevät Matsalunlahden ohi kulkee yli kaksi miljoonaa [[vesilintua]], joista noin 1,6 miljoonaa on [[alleja]]. Tämä johtuu siitä, että lahti sijaitsee Itä-Atlantin muuttoreitillä. Alue on yksi Euroopan tärkeimmistä kosteikkolintualueista.
+
+Kaksi miljoonaa lintua samalla lahdella on ruuhkaa jopa minulle, ja minä olen kaupunkikyyhky. Silti haluaisin nähdä sen yhden kerran ylhäältä.
+KYSYMYS: Kerro lisää: vesilintua
+
+### 107
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Kuinka monta vesilintua ohittaa lahden keväisin?
+AIEMPI VASTAUS (Livia):
+Kato, tässä on hurjia lukuja. Joka kevät Matsalunlahden ohi kulkee yli kaksi miljoonaa [[vesilintua]], joista noin 1,6 miljoonaa on [[alleja]]. Tämä johtuu siitä, että lahti sijaitsee Itä-Atlantin muuttoreitillä. Alue on yksi Euroopan tärkeimmistä kosteikkolintualueista.
+
+Kaksi miljoonaa lintua samalla lahdella on ruuhkaa jopa minulle, ja minä olen kaupunkikyyhky. Silti haluaisin nähdä sen yhden kerran ylhäältä.
+KYSYMYS: Kerro lisää: alleja
+
+### 108
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Miksi juuri tämä lahti on linnuille tärkeä?
+AIEMPI VASTAUS (Livia):
+Tuota niin. [[Matsalunlahti]] sijaitsee Itä-Atlantin muuttoreitillä, joten sen kautta kulkee joka kevät yli kaksi miljoonaa [[vesilintua]]. Lahti on matala, vähäsuolainen ja ravinteikas, ja sitä ympäröivät tulvaniityt, rantaniityt ja ruovikot sekä yli viisikymmentä saarta lahden suulla. Nämä tarjoavat linnuille ruokaa ja suojaa. Hyvä ravintola on hyvä ravintola, olipa vieras kyyhky tai alli.
+KYSYMYS: Kerro lisää: Matsalunlahti
+
+### 109
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Millainen lintu alli on?
+AIEMPI VASTAUS (Livia):
+Ai se. Alli on pieni [[sorsalintu]], joka pesii pohjoisilla alueilla ja talvehtii merellä. Koiraalla on erottuvan pitkä pyrstö. [[Matsalunlahdella]] alleja kulkee keväisin noin 1,6 miljoonaa, mikä tekee siitä [[muuttolinnuille]] tärkeän levähdyspaikan. Yksityiskohdat värityksestä en ole varma, joten jätän ne sikseen.
+KYSYMYS: Kerro lisää: sorsalintu
+
+### 110
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Millainen lintu alli on?
+AIEMPI VASTAUS (Livia):
+Ai se. Alli on pieni [[sorsalintu]], joka pesii pohjoisilla alueilla ja talvehtii merellä. Koiraalla on erottuvan pitkä pyrstö. [[Matsalunlahdella]] alleja kulkee keväisin noin 1,6 miljoonaa, mikä tekee siitä [[muuttolinnuille]] tärkeän levähdyspaikan. Yksityiskohdat värityksestä en ole varma, joten jätän ne sikseen.
+KYSYMYS: Kerro lisää: Matsalunlahdella
+
+### 111
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Millainen lintu alli on?
+AIEMPI VASTAUS (Livia):
+Ai se. Alli on pieni [[sorsalintu]], joka pesii pohjoisilla alueilla ja talvehtii merellä. Koiraalla on erottuvan pitkä pyrstö. [[Matsalunlahdella]] alleja kulkee keväisin noin 1,6 miljoonaa, mikä tekee siitä [[muuttolinnuille]] tärkeän levähdyspaikan. Yksityiskohdat värityksestä en ole varma, joten jätän ne sikseen.
+KYSYMYS: Kerro lisää: muuttolinnuille
+
+### 112
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Millainen lintu on merikotka?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Merikotka on yksi Euroopan suurimmista [[petolinnuista]], ja sen siipiväli on yli kaksi metriä. Se saalistaa [[kalaa]] ja vesilintuja, ja siksi se viihtyy rannikoilla ja kosteikoilla. Matsalun alueella merikotka on korkeimmassa [[suojeluluokassa]]. Viisas Pöllö tuntisi sen lähisuvusta, mut hän on tällä hetkellä poissa.
+KYSYMYS: Kerro lisää: petolinnuista
+
+### 113
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Iqaluit: Paikka, jossa on paljon kalaa] Ennen kuin täällä oli kaupunkia, täällä oli kalapaikka. Inuiitit ja heidän edeltäjänsä — dorset-kulttuurin paleoeskimot ja thule-kansa — ovat kalastaneet Koojesse Inletin pohjukassa tuhansia vuosia, ja siitä tulee nimi: inuktitutin ᐃᖃᓗᐃᑦ, Iqaluit, tarkoittaa paikkaa, jossa on paljon kalaa. Kala on nieriä, joka nousee Sylvia Grinnellin jokeen. Nimi oli vähällä menettää katteensa 1900-luvulla, kun Apexin pieni säilyketehdas kalasti kannan lähes tyhjiin; vasta noin 2008 joessa nähtiin merkkejä siitä, että kanta on palaamassa. Kaupunkilaiset ovat iqalummiut.
+- [Ghana — maalehti / Ruoka: Musta pippuri, joka on oikeasti kalaa] Shito tarkoittaa gan kielellä mustapippuria, mutta kyseessä on paksu kastike: kuivattua kalaa ja katkarapua, inkivääriä, valkosipulia, sipulia ja chiliä jauhetaan yhteen ja haudutetaan öljyssä runsas tunti, kunnes seos on lähes mustaa. Jokaisella seudulla ja kylällä on oma sekoituksensa, mutta alkuperäinen resepti on ga-kansan. Ghanassa shitoa käytetään kuin ketsuppia: sen kanssa syödään kenkeytä, riisiä, garria, waakyeta ja bankua, ja sitä levitetään myös leivälle. Kiinalaisravintoloissa se on korvannut chiliöljyn.
+- [Panama — maalehti / Ruoka: Kaksi merta, kaksi kalaa] Kahden valtameren välissä oleva maa syö luonnollisesti kalaa. Panaman ceviche tehdään useimmiten corvinasta tai tilapiasta. Keittiön perusta on kuitenkin maalla: riisi, maissi ja jukka. Yleisimpiä pääruokia ovat arroz con pollo ja sancocho, ja aamiaispöydän vakiovieras on hojaldre, taikinasta paistettu litteä leipä. Jouluateriaan kuuluvat kanatamaalit, arroz con pollo, paistettu porsas, kalkkuna ja täyte, ja pöydässä on hedelmiä ja hedelmäkakkua. Juhlajuoma on ron ponche, rommilla terästetty munatoti.
+AIEMPI KYSYMYS: Millainen lintu on merikotka?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Merikotka on yksi Euroopan suurimmista [[petolinnuista]], ja sen siipiväli on yli kaksi metriä. Se saalistaa [[kalaa]] ja vesilintuja, ja siksi se viihtyy rannikoilla ja kosteikoilla. Matsalun alueella merikotka on korkeimmassa [[suojeluluokassa]]. Viisas Pöllö tuntisi sen lähisuvusta, mut hän on tällä hetkellä poissa.
+KYSYMYS: Kerro lisää: kalaa
+
+### 114
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Millainen lintu on merikotka?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Merikotka on yksi Euroopan suurimmista [[petolinnuista]], ja sen siipiväli on yli kaksi metriä. Se saalistaa [[kalaa]] ja vesilintuja, ja siksi se viihtyy rannikoilla ja kosteikoilla. Matsalun alueella merikotka on korkeimmassa [[suojeluluokassa]]. Viisas Pöllö tuntisi sen lähisuvusta, mut hän on tällä hetkellä poissa.
+KYSYMYS: Kerro lisää: suojeluluokassa
+
+### 115
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Matsalu (eläimet)
+Tietoruudun teksti: Matsalun kansallispuisto on 486 neliökilometrin suojelualue Länsi- ja Pärnunmaalla. Siihen kuuluvat Matsalunlahti, Kasarijoen suisto, Matsalun kylä ja ympäröivät alueet: tulvaniityt, rantaniityt, ruovikot, metsät ja yli viisikymmentä saarta lahden suulla.
+
+Matsalunlahti on yksi Euroopan tärkeimmistä kosteikkolintualueista, koska se sijaitsee Itä-Atlantin muuttoreitillä. Joka kevät lahden ohi kulkee yli kaksi miljoonaa vesilintua, joista noin 1,6 miljoonaa on alleja. Alue on koti monelle uhanalaiselle lajille: merikotka on korkeimmassa suojeluluokassa, ja lisäksi suojeltuja ovat 22 kasvilajia, juovakonna ja kymmenen nisäkäslajia.
+
+Lahti on matala, vähäsuolainen ja ravinteikas: kahdeksantoista kilometriä pitkä ja kuusi leveä, mutta keskisyvyydeltään vain puolitoista metriä. Rantaviivaa on noin 165 kilometriä. Kasarijoen suiston tulvaniitty, neljäkymmentä neliökilometriä, on yksi Euroopan …
+AIEMPI KYSYMYS: Kuinka syvä [[Matsalunlahti on]]?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. [[Matsalunlahti]] on hyvin matala: sen keskisyvyys on vain puolitoista metriä. Lahti on kahdeksantoista kilometriä pitkä ja kuusi kilometriä leveä, vähäsuolainen ja ravinteikas. Rantaviivaa on noin 165 kilometriä, ja lahti kuuluu [[Matsalun kansallispuistoon]]. Matalassa vedessä minäkin kastelisin pelkät varpaat.
+KYSYMYS: Kerro lisää: Matsalun kansallispuistoon
+
+### 116
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Mitä Struven kaarella mitattiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Struven kaarella mitattiin maapallon tarkkaa kokoa ja muotoa. Kaari on [[kolmiomittausten]] ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle, ja se tuotti tietojen mukaan ensimmäisen tarkan [[meridiaanikaaren]] mittauksen. Kun tiedetään, kuinka pitkä matka vastaa yhtä leveysastetta eri kohdissa, voidaan päätellä, kuinka pallomainen Maa on. Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies [[Friedrich Georg Wilhelm von Struve]] vuosina 1816–1855. No olipa pitkä matka, onneks lentäen se sujuu.
+KYSYMYS: Kerro lisää: kolmiomittausten
+
+### 117
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Kiviröykkiö, joka oikaisi maapallon] Vuoren korkein kohta on 1 086 metriä, ja siellä on Sir Thomas Maclearin 1865 rakennuttama kiviröykkiö. Taustalla oli mittausvirhe: vuonna 1750 Nicolas Louis de Lacaille oli mitannut meridiaanikaaren Kapkaupungista pohjoiseen ja päätellyt, että maapallon kaarevuus on eteläisillä leveysasteilla pienempi kuin pohjoisilla — pallo olisi siis päärynän muotoinen. Vuonna 1820 Sir George Everest kävi paikalla ja ehdotti, että Pöytävuoren oma massa oli vetänyt luotilankaa vinoon. Kun se otettiin huomioon, kaarevuus osoittautui samaksi molemmilla pallonpuoliskoilla.
+AIEMPI KYSYMYS: Mitä Struven kaarella mitattiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Struven kaarella mitattiin maapallon tarkkaa kokoa ja muotoa. Kaari on [[kolmiomittausten]] ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle, ja se tuotti tietojen mukaan ensimmäisen tarkan [[meridiaanikaaren]] mittauksen. Kun tiedetään, kuinka pitkä matka vastaa yhtä leveysastetta eri kohdissa, voidaan päätellä, kuinka pallomainen Maa on. Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies [[Friedrich Georg Wilhelm von Struve]] vuosina 1816–1855. No olipa pitkä matka, onneks lentäen se sujuu.
+KYSYMYS: Kerro lisää: meridiaanikaaren
+
+### 118
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Mitä Struven kaarella mitattiin?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Struven kaarella mitattiin maapallon tarkkaa kokoa ja muotoa. Kaari on [[kolmiomittausten]] ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle, ja se tuotti tietojen mukaan ensimmäisen tarkan [[meridiaanikaaren]] mittauksen. Kun tiedetään, kuinka pitkä matka vastaa yhtä leveysastetta eri kohdissa, voidaan päätellä, kuinka pallomainen Maa on. Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies [[Friedrich Georg Wilhelm von Struve]] vuosina 1816–1855. No olipa pitkä matka, onneks lentäen se sujuu.
+KYSYMYS: Kerro lisää: Friedrich Georg Wilhelm von Struve
+
+### 119
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+- [Kolumbia — maalehti / Luonto: Palmu, joka lisääntyy vasta 80-vuotiaana] 1860 — Vahapalmu kasvaa Andien kosteissa vuorimetsissä 2 000–3 100 metrin korkeudessa Kolumbiassa ja Pohjois-Perussa. Se on maailman korkein yksisirkkainen kasvi: yleensä 45 metriä, harvoin jopa kuusikymmentä. Runko on paksun valkoisen vahan peitossa, ja siitä tulee sukunimi Ceroxylon — kreikan sanoista kērós, vaha, ja xýlon, puu. Hermann Karsten kuvasi lajin 1860. Palmu saavuttaa lisääntymisiän vasta noin 80-vuotiaana, ja sen latvoissa pesii uhanalainen keltakorvainen aratti.
+AIEMPI KYSYMYS: Miten mittauspisteet on merkitty maastoon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mittauspisteet on merkitty maastoon vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Ketjussa on 265 mittauspistettä ja 258 päämittauskolmiota. Vuonna 2005 ketju otettiin [[maailmanperintöluetteloon]] geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena, ja luetteloon on valittu 34 pistettä. Merkinnät ovat siis yksinkertaisia, mutta [[geodesian]] historiassa niillä on suuri paino.
+
+Reikä kalliossa. Minä olisin merkinnyt pisteet leivoksilla, mutta ne eivät olisi kestäneet yli kahtasataa vuotta, koska kyyhkyt ovat ahneita.
+KYSYMYS: Kerro lisää: maailmanperintöluetteloon
+
+### 120
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Miten mittauspisteet on merkitty maastoon?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Mittauspisteet on merkitty maastoon vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Ketjussa on 265 mittauspistettä ja 258 päämittauskolmiota. Vuonna 2005 ketju otettiin [[maailmanperintöluetteloon]] geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena, ja luetteloon on valittu 34 pistettä. Merkinnät ovat siis yksinkertaisia, mutta [[geodesian]] historiassa niillä on suuri paino.
+
+Reikä kalliossa. Minä olisin merkinnyt pisteet leivoksilla, mutta ne eivät olisi kestäneet yli kahtasataa vuotta, koska kyyhkyt ovat ahneita.
+KYSYMYS: Kerro lisää: geodesian
+
+### 121
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Kuinka pitkä Struven kaari on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Struven kaari on yli 2 820 kilometriä pitkä ja ulottuu Norjan [[Hammerfestista]] Mustallemerelle. Nykyisin ketju kulkee kymmenen maan halki, mutta Struven aikaan se kulki vain kolmen maan: Norjan, Ruotsin ja Venäjän keisarikunnan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä, ja kaaren ensimmäinen piste on [[Tartossa]] observatoriolla. Ja minä kun valitan viiden kilometrin lennoista.
+KYSYMYS: Kerro lisää: Hammerfestista
+
+### 122
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Kuoro, joka lauloi maan vapaaksi] 1869 — Ensimmäiset yleiset laulujuhlat pidettiin Tartossa kesäkuussa 1869 kustantaja Johann Voldemar Jannsenin aloitteesta, ja lavalla lauloi lähes 900 miestä. Juhla oli osa kansallista heräämistä Venäjän vallan alla, ja siitä tuli nopeasti koko kansan yhteinen tapahtuma: vuodesta 1896 juhlat on pidetty Tallinnassa joka viides vuosi. Neuvostoaikana laulujuhlat muuttuivat hiljaiseksi vastarinnaksi, ja 1988–1991 kymmenettuhannet lauloivat yhdessä kiellettyjä isänmaallisia lauluja niin sanotussa laulavassa vallankumouksessa, joka johti lopulta itsenäisyyteen. Unesco lisäsi juhlat ihmiskunnan aineettoman kulttuuriperinnön luetteloon.
+AIEMPI KYSYMYS: Kuinka pitkä Struven kaari on?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Struven kaari on yli 2 820 kilometriä pitkä ja ulottuu Norjan [[Hammerfestista]] Mustallemerelle. Nykyisin ketju kulkee kymmenen maan halki, mutta Struven aikaan se kulki vain kolmen maan: Norjan, Ruotsin ja Venäjän keisarikunnan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä, ja kaaren ensimmäinen piste on [[Tartossa]] observatoriolla. Ja minä kun valitan viiden kilometrin lennoista.
+KYSYMYS: Kerro lisää: Tartossa
+
+### 123
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Kuka Struve oli?
+AIEMPI VASTAUS (Livia):
+Kas, tuttu nimi. Friedrich Georg Wilhelm von Struve oli saksalaissyntyinen venäläinen tiedemies, tähtitieteilijä ja geodeetti. Hän rakensi ja mittasi kolmiomittausten ketjun vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Kaaren ensimmäinen piste on [[Tartossa]] observatoriolla, jossa hän teki suuren osan tutkimuksistaan, ja myöhemmin hän johti [[Pulkovon]] observatoriota. Kyllä minä ton nimen osaan, vaikka se on pitkä.
+KYSYMYS: Kerro lisää: Pulkovon
+
+### 124
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Miten kolmiomittaus toimii?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kolmiomittauksessa mitataan ensin yksi matka, [[perusviiva]], maastossa mahdollisimman tarkasti. Sen päistä tähdätään kaukaiseen kolmanteen pisteeseen ja mitataan kulmat. Kun yhden sivun pituus ja kulmat tunnetaan, kolmion muut sivut voidaan laskea [[trigonometrialla]], ja siitä edetään kolmio kerrallaan. Näin pitkä ketju saadaan laskettua ilman, että jokaista väliä tarvitsee kulkea, ja [[Struven kaaressa]] päämittauskolmioita on 258.
+
+Minä mittaan matkat omalla tavallani, yhdellä siiveniskulla kerrallaan. Se ei ole yhtä tarkka, mutta se pääsee perille.
+KYSYMYS: Kerro lisää: perusviiva
+
+### 125
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Miten kolmiomittaus toimii?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kolmiomittauksessa mitataan ensin yksi matka, [[perusviiva]], maastossa mahdollisimman tarkasti. Sen päistä tähdätään kaukaiseen kolmanteen pisteeseen ja mitataan kulmat. Kun yhden sivun pituus ja kulmat tunnetaan, kolmion muut sivut voidaan laskea [[trigonometrialla]], ja siitä edetään kolmio kerrallaan. Näin pitkä ketju saadaan laskettua ilman, että jokaista väliä tarvitsee kulkea, ja [[Struven kaaressa]] päämittauskolmioita on 258.
+
+Minä mittaan matkat omalla tavallani, yhdellä siiveniskulla kerrallaan. Se ei ole yhtä tarkka, mutta se pääsee perille.
+KYSYMYS: Kerro lisää: trigonometrialla
+
+### 126
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Struven kaari (tekniikka)
+Tietoruudun teksti: Struven kaari on kolmiomittausten ketju, joka ulottuu Norjan Hammerfestista Mustallemerelle: kymmenen maan halki ja yli 2 820 kilometriä. Se tuotti ensimmäisen tarkan meridiaanikaaren mittauksen.
+
+Ketjun rakensi ja mittasi saksalaissyntyinen venäläinen tiedemies Friedrich Georg Wilhelm von Struve vuosina 1816–1855 selvittääkseen maapallon tarkan koon ja muodon. Silloin ketju kulki vain kolmen maan halki: Norjan, Ruotsin ja Venäjän keisarikunnan. Kaaren ensimmäinen piste on Tartossa observatoriolla, jossa Struve teki suuren osan tutkimuksistaan. Ketjussa on 258 päämittauskolmiota ja 265 mittauspistettä.
+
+Maastossa pisteet on merkitty vaatimattomasti: kallioon porattuina reikinä, rautaristeinä ja kivikasoina. Vuonna 2005 ketju otettiin maailmanperintöluetteloon geodesian merkityksensä ja kansainvälisen tieteellisen yhteistyön todistuskappaleena; luetteloon kuuluu 34 muistolaattaa tai obel…
+AIEMPI KYSYMYS: Miten kolmiomittaus toimii?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Kolmiomittauksessa mitataan ensin yksi matka, [[perusviiva]], maastossa mahdollisimman tarkasti. Sen päistä tähdätään kaukaiseen kolmanteen pisteeseen ja mitataan kulmat. Kun yhden sivun pituus ja kulmat tunnetaan, kolmion muut sivut voidaan laskea [[trigonometrialla]], ja siitä edetään kolmio kerrallaan. Näin pitkä ketju saadaan laskettua ilman, että jokaista väliä tarvitsee kulkea, ja [[Struven kaaressa]] päämittauskolmioita on 258.
+
+Minä mittaan matkat omalla tavallani, yhdellä siiveniskulla kerrallaan. Se ei ole yhtä tarkka, mutta se pääsee perille.
+KYSYMYS: Kerro lisää: Struven kaaressa
+
+### 127
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mitä järven jäällä tapahtui vuonna 1242?
+AIEMPI VASTAUS (Livia):
+No niin. [[Peipsijärven jäällä]] käytiin 5. huhtikuuta 1242 jäätaistelu [[Novgorodin tasavallan]] ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Peipsijärven jäällä
+
+### 128
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valko-Venäjä — maalehti / Historia: Velhoruhtinaan kivikirkko] 1044-1066 — Polotskin ruhtinaskunta on yksi vanhimmista itäslaavilaisista valtioista, ja sen varhaishistoriaan kuuluu synkkä tarina: kun Vladimir Suuri surmasi ruhtinas Rogvolodin ja tämän pojat vuonna 978, hän otti väkisin vaimokseen Rogvolodin tyttären Rognedan. Sata vuotta myöhemmin heidän jälkeläisensä, "velhoruhtinas" Vseslav, rakennutti kaupunkiin Pyhän Sofian kirkon vuosina 1044-1066 - Kiovan ja Novgorodin Sofia-kirkkojen sisarrakennuksen, jossa kohosi alun perin seitsemän kupolia. Se on Valko-Venäjän vanhin kivirakennus, vaikka nykyinen barokkijulkisivu on 1700-luvulta.
+AIEMPI KYSYMYS: Mitä järven jäällä tapahtui vuonna 1242?
+AIEMPI VASTAUS (Livia):
+No niin. [[Peipsijärven jäällä]] käytiin 5. huhtikuuta 1242 jäätaistelu [[Novgorodin tasavallan]] ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Novgorodin tasavallan
+
+### 129
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Novosibirsk — kohdekartta / Kohdekartta: Aleksanteri Nevskin katedraali] 1896–1899 Katedraali on kaupungin ensimmäisiä kivirakennuksia. Se rakennettiin vuosina 1896–1899, siis samaan aikaan kuin rautatiesilta ja sen ympärille kasvava taajama, ja vihittiin käyttöön 29. joulukuuta 1899. Katedraalin aseman se sai vuonna 1915. Tyyli on uusbysanttilainen: massiivinen keskuskupoli, punatiiliset seinät ja kaari-ikkunoiden rivistöt. Mallina oli Pietarissa muutamaa vuotta aiemmin rakennettu Armollisen Jumalanäidin kirkko. Tiili on täällä poikkeuksellisen näkyvässä osassa — sitä ei ole rapattu lainkaan, ja koristeaiheet on ladottu itse muurauksesta. Kirkko on myös muistomerkki. Se pystytettiin keisari Aleksanteri III:n muistolle: hän oli pannut alulle Transsiperian radan,…
+AIEMPI KYSYMYS: Mitä järven jäällä tapahtui vuonna 1242?
+AIEMPI VASTAUS (Livia):
+No niin. [[Peipsijärven jäällä]] käytiin 5. huhtikuuta 1242 jäätaistelu [[Novgorodin tasavallan]] ja Saksalaisen ritarikunnan välillä. Novgorodin joukkoja johti ruhtinas [[Aleksanteri Nevski]], ja taistelun voittivat novgorodilaiset. Kuuluisa kertomus siitä, että ritarit olisivat vajonneet jään läpi, on elänyt vahvana, mutta historiantutkijat suhtautuvat siihen varauksellisesti. Tapahtumasta on yli seitsemänsataa vuotta, ja alue kuului silloin aivan toisenlaisiin valtapiireihin kuin nykyisin, jolloin järven halki kulkee Viron ja Venäjän välinen raja. Onpas siit onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Aleksanteri Nevski
+
+### 130
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mihin Peipsin vedet lopulta laskevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Peipsin vedet lähtevät [[Narvajokea]] myöten Suomenlahteen. Järveen laskee noin kolmekymmentä jokea, joista suurimmat ovat [[Velikaja]] ja [[Emajoki]], ja ne kaikki päätyvät Narvajoen kautta [[Suomenlahteen]], Itämeren itäiseen lahteen. Narvajoki kulkee suurelta osin Viron ja Venäjän rajana. No, vesi ei ainakaan eksy, toisin kuin minä joskus.
+KYSYMYS: Kerro lisää: Narvajokea
+
+### 131
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mihin Peipsin vedet lopulta laskevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Peipsin vedet lähtevät [[Narvajokea]] myöten Suomenlahteen. Järveen laskee noin kolmekymmentä jokea, joista suurimmat ovat [[Velikaja]] ja [[Emajoki]], ja ne kaikki päätyvät Narvajoen kautta [[Suomenlahteen]], Itämeren itäiseen lahteen. Narvajoki kulkee suurelta osin Viron ja Venäjän rajana. No, vesi ei ainakaan eksy, toisin kuin minä joskus.
+KYSYMYS: Kerro lisää: Velikaja
+
+### 132
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mihin Peipsin vedet lopulta laskevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Peipsin vedet lähtevät [[Narvajokea]] myöten Suomenlahteen. Järveen laskee noin kolmekymmentä jokea, joista suurimmat ovat [[Velikaja]] ja [[Emajoki]], ja ne kaikki päätyvät Narvajoen kautta [[Suomenlahteen]], Itämeren itäiseen lahteen. Narvajoki kulkee suurelta osin Viron ja Venäjän rajana. No, vesi ei ainakaan eksy, toisin kuin minä joskus.
+KYSYMYS: Kerro lisää: Emajoki
+
+### 133
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mihin Peipsin vedet lopulta laskevat?
+AIEMPI VASTAUS (Livia):
+Katotaas. Peipsin vedet lähtevät [[Narvajokea]] myöten Suomenlahteen. Järveen laskee noin kolmekymmentä jokea, joista suurimmat ovat [[Velikaja]] ja [[Emajoki]], ja ne kaikki päätyvät Narvajoen kautta [[Suomenlahteen]], Itämeren itäiseen lahteen. Narvajoki kulkee suurelta osin Viron ja Venäjän rajana. No, vesi ei ainakaan eksy, toisin kuin minä joskus.
+KYSYMYS: Kerro lisää: Suomenlahteen
+
+### 134
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Kuinka syvä Peipsijärvi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Peipsijärven keskisyvyys on vain 7,1 metriä ja syvin kohta 15 metriä, vaikka pinta-ala on 3 555 neliökilometriä. Järvi on siis valtava mutta matala. Se sijaitsee [[Viron]] ja [[Venäjän]] välisellä rajalla. Matala järvi, mut kyl kyyhky uisi siinä silti huonosti.
+KYSYMYS: Kerro lisää: Viron
+
+### 135
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Kuinka syvä Peipsijärvi on?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Peipsijärven keskisyvyys on vain 7,1 metriä ja syvin kohta 15 metriä, vaikka pinta-ala on 3 555 neliökilometriä. Järvi on siis valtava mutta matala. Se sijaitsee [[Viron]] ja [[Venäjän]] välisellä rajalla. Matala järvi, mut kyl kyyhky uisi siinä silti huonosti.
+KYSYMYS: Kerro lisää: Venäjän
+
+### 136
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mitä tšuudi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tšuudi on vanha nimitys näillä mailla asuneille itämerensuomalaisille kansoille. Venäjänkielinen nimi [[Tšudskoje ozero]] tarkoittaa tšuudien järveä, ja se viittaa siis [[itämerensuomalaisiin]] kansoihin, joihin kuuluvat esimerkiksi [[virolaiset]] ja suomalaiset. Pitkä nimi, lyhyt selitys, minulle sopii.
+KYSYMYS: Kerro lisää: Tšudskoje ozero
+
+### 137
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mitä tšuudi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tšuudi on vanha nimitys näillä mailla asuneille itämerensuomalaisille kansoille. Venäjänkielinen nimi [[Tšudskoje ozero]] tarkoittaa tšuudien järveä, ja se viittaa siis [[itämerensuomalaisiin]] kansoihin, joihin kuuluvat esimerkiksi [[virolaiset]] ja suomalaiset. Pitkä nimi, lyhyt selitys, minulle sopii.
+KYSYMYS: Kerro lisää: itämerensuomalaisiin
+
+### 138
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mitä tšuudi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Tšuudi on vanha nimitys näillä mailla asuneille itämerensuomalaisille kansoille. Venäjänkielinen nimi [[Tšudskoje ozero]] tarkoittaa tšuudien järveä, ja se viittaa siis [[itämerensuomalaisiin]] kansoihin, joihin kuuluvat esimerkiksi [[virolaiset]] ja suomalaiset. Pitkä nimi, lyhyt selitys, minulle sopii.
+KYSYMYS: Kerro lisää: virolaiset
+
+### 139
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mistä osista [[Peipsijärvi]] koostuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen [[Pihkvan järvi]], jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.
+
+Kolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.
+KYSYMYS: Kerro lisää: Pihkvan järvi
+
+### 140
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Peipsijärvi (meri)
+Tietoruudun teksti: Peipsijärvi on Euroopan suurin rajajärvi: se makaa Viron ja Venäjän välisellä valtakunnanrajalla ja on koko maanosan viidenneksi suurin heti Laatokan, Äänisen, Vänernin ja Saimaan jälkeen. Pinta-alaa on 3 555 neliökilometriä, mutta keskisyvyys vain 7,1 metriä ja syvin kohta 15 — se on siis valtava mutta matala. Järvi on oikeastaan kolme: pohjoinen Peipsi (2 611 km²), eteläinen Pihkvan järvi (708 km²) ja niitä yhdistävä Lämmijärvi (236 km²). Siihen laskee noin kolmekymmentä jokea, joista suurimmat ovat Velikaja ja Emajoki, ja vedet lähtevät Narvajokea myöten Suomenlahteen. 5. huhtikuuta 1242 järven jäällä käytiin jäätaistelu Novgorodin tasavallan ja Saksalaisen ritarikunnan välillä. Venäjänkielinen nimi Tšudskoje ozero tarkoittaa "tšuudien järveä" — tšuudi oli vanha nimitys näillä mailla asuneille itämerensuomalaisille.
+AIEMPI KYSYMYS: Mistä osista [[Peipsijärvi]] koostuu?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Peipsijärvi on oikeastaan kolme järveä: pohjoinen Peipsi, jonka pinta-ala on 2 611 neliökilometriä, eteläinen [[Pihkvan järvi]], jonka pinta-ala on 708 neliökilometriä, ja niitä yhdistävä [[Lämmijärvi]], joka on 236 neliökilometriä. Yhteensä pinta-ala on 3 555 neliökilometriä. Pohjoinen osa on siis selvästi suurin, ja Pihkvan järvi on sen eteläpuolella oleva toinen suuri osa. Mukaan tulee vielä noin kolmekymmentä jokea, joiden vedet kerääntyvät yhteen.
+
+Kolme järveä yhden nimen alla. Minä olisin antanut jokaiselle oman pullan.
+KYSYMYS: Kerro lisää: Lämmijärvi
+
+### 141
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Miksi Tartto syntyi juuri tähän kohtaan?
+AIEMPI VASTAUS (Livia):
+Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. [[Jokilaakson soisuus]] teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli [[Tarton kohdalla]], ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.
+KYSYMYS: Kerro lisää: Jokilaakson soisuus
+
+### 142
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Miksi Tartto syntyi juuri tähän kohtaan?
+AIEMPI VASTAUS (Livia):
+Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. [[Jokilaakson soisuus]] teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli [[Tarton kohdalla]], ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.
+KYSYMYS: Kerro lisää: Emajoesta
+
+### 143
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Miksi Tartto syntyi juuri tähän kohtaan?
+AIEMPI VASTAUS (Livia):
+Mmm— Viisas Pöllö olisi kertonut tämän paremmin, mut hän parantelee siipirikkoa. [[Jokilaakson soisuus]] teki [[Emajoesta]] esteen, sillä Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja. Paras niistä oli [[Tarton kohdalla]], ja siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Risteyskaupunki, siis ihan kyyhkyn makuun.
+KYSYMYS: Kerro lisää: Tarton kohdalla
+
+### 144
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Mikä lodi oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Lodi oli pieni [[jokiproomu]] tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon [[polttopuuta]], hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.
+KYSYMYS: Kerro lisää: jokiproomu
+
+### 145
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Mikä lodi oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Lodi oli pieni [[jokiproomu]] tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon [[polttopuuta]], hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.
+KYSYMYS: Kerro lisää: Emajokea
+
+### 146
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Singapore — kohdekartta / Kohdekartta: Clarke Quay] laituri 1800-luvulta, kävelyalue 1993 Clarke Quay on Singapore-joen laituri Boat Quayn yläpuolella. Se on nimetty Sir Andrew Clarken mukaan, joka oli Straitsin siirtokuntien kuvernööri vuosina 1873–1875 ja jonka aikana Singaporesta tuli Malakan niemimaan valtioiden — Perakin, Selangorin ja Sungei Ujongin — pääsatama. Viereinen Clarke Street sai virallisen nimensä 1896; sitä ennen se oli kaksi katua, East Street ja West Street. Työnjako joella oli selvä. Boat Quayssa isot laivat purettiin lastiveneisiin, ja veneet kuljettivat tavaran ylävirtaan Clarke Quayn varastoihin. Eteläisen rannan hokkieninkielinen nimi Chhâ-chûn-thâu tarkoittaa polttopuulaituria: Indonesiasta tulleet pienet tongkangit…
+AIEMPI KYSYMYS: Mikä lodi oli?
+AIEMPI VASTAUS (Livia):
+Ai se. Lodi oli pieni [[jokiproomu]] tai purjealus, joka kesti myös Peipsin aallot. Isoisän aikaan, 1800-luvulla, jokea käytettiin ahkerasti tavaraliikenteeseen, ja lodit toivat [[Emajokea]] pitkin Tarttoon [[polttopuuta]], hirsiä, heinää ja kalaa. Tietojen mukaan Emajoki on ainoa koko matkaltaan purjehduskelpoinen joki Virossa, joten vesiliikenteelle oli hyvä paikka. Pieni laiva, iso työ, kuten kyyhkyllä.
+KYSYMYS: Kerro lisää: polttopuuta
+
+### 147
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Kuinka pitkä Emajoki on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Emajoki on sata kilometriä pitkä, ja Tarton läpi sitä kulkee kymmenen kilometriä. Joki virtaa [[Võrtsjärvestä]] [[Tarton]] kautta [[Peipsijärveen]]. Yläjuoksulla se mutkittelee laajojen soiden ja tulvamaiden halki, joten sillä ei ole selvää tulvatasannetta lainkaan.
+
+Sata kilometriä on minulle yksi aamupäivä lentäen. Joki tekee saman matkan mutkitellen, ja siinä on kyllä oma viehätyksensä.
+KYSYMYS: Kerro lisää: Võrtsjärvestä
+
+### 148
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Kuinka pitkä Emajoki on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Emajoki on sata kilometriä pitkä, ja Tarton läpi sitä kulkee kymmenen kilometriä. Joki virtaa [[Võrtsjärvestä]] [[Tarton]] kautta [[Peipsijärveen]]. Yläjuoksulla se mutkittelee laajojen soiden ja tulvamaiden halki, joten sillä ei ole selvää tulvatasannetta lainkaan.
+
+Sata kilometriä on minulle yksi aamupäivä lentäen. Joki tekee saman matkan mutkitellen, ja siinä on kyllä oma viehätyksensä.
+KYSYMYS: Kerro lisää: Tarton
+
+### 149
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Kuinka pitkä Emajoki on?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Emajoki on sata kilometriä pitkä, ja Tarton läpi sitä kulkee kymmenen kilometriä. Joki virtaa [[Võrtsjärvestä]] [[Tarton]] kautta [[Peipsijärveen]]. Yläjuoksulla se mutkittelee laajojen soiden ja tulvamaiden halki, joten sillä ei ole selvää tulvatasannetta lainkaan.
+
+Sata kilometriä on minulle yksi aamupäivä lentäen. Joki tekee saman matkan mutkitellen, ja siinä on kyllä oma viehätyksensä.
+KYSYMYS: Kerro lisää: Peipsijärveen
+
+### 150
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Mitä Emajoen nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Emajoki tarkoittaa äitijokea: viron kielessä ema on äiti ja jõgi joki. Se on Virossa toiseksi suurin joki virtaamaltaan, ja alajuoksulla se laskee [[Peipsiin]] [[Praagassa]]. Äitijoki, joten ehkä se pitää huolta myös kyyhkyistä.
+KYSYMYS: Kerro lisää: Peipsiin
+
+### 151
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Mitä Emajoen nimi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Ai tota. Emajoki tarkoittaa äitijokea: viron kielessä ema on äiti ja jõgi joki. Se on Virossa toiseksi suurin joki virtaamaltaan, ja alajuoksulla se laskee [[Peipsiin]] [[Praagassa]]. Äitijoki, joten ehkä se pitää huolta myös kyyhkyistä.
+KYSYMYS: Kerro lisää: Praagassa
+
+### 152
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Emajoki (luonto · joki)
+Tietoruudun teksti: Emajoki — nimi tarkoittaa äitijokea — virtaa Võrtsjärvestä Tarton halki Peipsijärveen. Pituutta on sata kilometriä, ja Tarton läpi sitä kulkee kymmenen. Se on Virossa toiseksi suurin virtaamaltaan ja ainoa koko matkaltaan purjehduskelpoinen joki. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki niin, ettei sillä ole selvää tulvatasannetta lainkaan, ja alajuoksulla se kulkee Emajõe Suursoon läpi ennen kuin laskee Peipsiin Praagassa. Juuri jokilaakson soisuus teki siitä myös esteen: Pohjois- ja Etelä-Viron välillä oli vain harvoja kelvollisia ylityspaikkoja, ja paras niistä oli Tarton kohdalla — siksi kaupunki syntyi juuri siihen, maa- ja vesireittien risteykseen. Isoisäsi aikaan jokea käytettiin ahkerasti tavaraliikenteeseen: Tarttoon tuotiin polttopuuta, hirsiä, heinää ja kalaa, ja työn teki lodi, pieni jokiproomu tai purjealus, joka kesti myös Peipsin.
+AIEMPI KYSYMYS: Mistä Emajoki alkaa ja mihin se laskee?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Emajoki alkaa [[Võrtsjärvestä]], virtaa [[Tarton]] halki ja laskee [[Peipsijärveen]] Praagassa. Yläjuoksulla joki mutkittelee laajojen soiden ja tulvamaiden halki, ja alajuoksulla se kulkee [[Emajõe Suursoon]] läpi ennen Peipsiä. Ja koko matkan minä olisin lentänyt suoraan.
+KYSYMYS: Kerro lisää: Emajõe Suursoon
+
+### 153
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+AIEMPI KYSYMYS: Kuka todisti kraatterin syntytavan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Meteoriittialkuperän osoitti [[Ivan Reinvald]] tutkimuksillaan vuosina 1928, 1933 ja 1937. Ennen 1930-lukua kraatterien syntytavasta oli monta selitystä, esimerkiksi [[tulivuorenpurkauksesta]] ja [[karstista]] lähtevät. Vasta tutkimukset osoittivat, että kyseessä olivat meteoriitin tekemät kuopat. Tiede on hidasta, mut kyl se perille lentää.
+KYSYMYS: Kerro lisää: Ivan Reinvald
+
+### 154
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bali — kaupunkilehti / Riisipellot ja jumalten temppelit: Äititemppeli tulivuoren kupeessa] Yli tuhannen metrin korkeudessa Agung-tulivuoren rinteellä kohoaa Pura Besakih, yli kahdeksankymmenen temppelin kokonaisuus, jota balilaiset kutsuvat äititempeliksi. Vanhin maininta paikasta on kivipiirtoon kirjoitettu vuodelta 1007, ja legendan mukaan paikka valittiin, kun tietäjä Rsi Markandeya näki unessa käskyn rakentaa sinne temppeli. 1400-luvulta lähtien Besakihia on pidetty Balin hindulaisuuden keskuksena, ja sen kerroksittaiset meru-tornit näkyvät kauas: mitä useampi kerros, sitä korkea-arvoisempi jumaluus tornissa asuu. Temppeli selvisi myös Agungin purkauksesta vuonna 1963, jolloin laava pysähtyi ihmeenomaisesti porttien viereen.
+- [Aden — kaupunkilehti / Aden: Kaupunki tulivuoren pohjalla] Adenin vanhin kaupunginosa on nimeltään Crater, ja nimi on kirjaimellinen: korttelit ovat sammuneen tulivuoren kraatterin pohjalla. Nimen antoivat britit, ja virallinen nimi on Seera. Kraatteria ympäröi Jabal Shamsanin vuoristo, jonka korkeimmat huiput ylittävät 500 metriä, ja koko Adenin kallioperä on tulivuoriperäistä. Vuoden 2003 laskennassa kaupunginosassa asui 76 723 ihmistä. Kaupunki muodostuu kahdesta niemestä, ja meri molemmin puolin tasoittaa lämpötilaa: vuoden keskilämpötila on 29,1 astetta ja ilma on kostea ympäri vuoden.
+AIEMPI KYSYMYS: Kuka todisti kraatterin syntytavan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Meteoriittialkuperän osoitti [[Ivan Reinvald]] tutkimuksillaan vuosina 1928, 1933 ja 1937. Ennen 1930-lukua kraatterien syntytavasta oli monta selitystä, esimerkiksi [[tulivuorenpurkauksesta]] ja [[karstista]] lähtevät. Vasta tutkimukset osoittivat, että kyseessä olivat meteoriitin tekemät kuopat. Tiede on hidasta, mut kyl se perille lentää.
+KYSYMYS: Kerro lisää: tulivuorenpurkauksesta
+
+### 155
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+AIEMPI KYSYMYS: Kuka todisti kraatterin syntytavan?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Meteoriittialkuperän osoitti [[Ivan Reinvald]] tutkimuksillaan vuosina 1928, 1933 ja 1937. Ennen 1930-lukua kraatterien syntytavasta oli monta selitystä, esimerkiksi [[tulivuorenpurkauksesta]] ja [[karstista]] lähtevät. Vasta tutkimukset osoittivat, että kyseessä olivat meteoriitin tekemät kuopat. Tiede on hidasta, mut kyl se perille lentää.
+KYSYMYS: Kerro lisää: karstista
+
+### 156
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+AIEMPI KYSYMYS: Kuinka kova isku oli?
+AIEMPI VASTAUS (Livia):
+No jopas. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran. [[Meteoriitti]] hajosi viiden ja kymmenen kilometrin korkeuden välillä, ja metsä paloi kuuden kilometrin säteellä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä ja jonka pohjalla on nyt [[Kaalin järvi]]. Onneksi siitä on jo tuhansia vuosia.
+KYSYMYS: Kerro lisää: Meteoriitti
+
+### 157
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puola — maalehti / Ruoka: Metsästäjän pata joka paranee odottaessa] nykyään — Bigos eli metsästäjän pata on hidas muhennos, jossa erilaiset lihat haudutetaan yhdessä hapankaalin ja tuoreen kaalin kanssa. Ruokaan lisätään usein makkaraa, sieniä, luumuja ja viiniä, ja mausteet vaihtelevat perheittäin. Bigosin erikoisuus on, että se paranee uudelleenlämmittäessä: monet väittävät parhaan bigosin olevan se, joka on saanut seistä ja maustua useita päiviä, jopa viikon. Ruoka levisi alkuperäisestä Puolasta laajalle koko Puolan–Liettuan unionin alueelle.
+AIEMPI KYSYMYS: Kuinka kova isku oli?
+AIEMPI VASTAUS (Livia):
+No jopas. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran. [[Meteoriitti]] hajosi viiden ja kymmenen kilometrin korkeuden välillä, ja metsä paloi kuuden kilometrin säteellä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22 metriä ja jonka pohjalla on nyt [[Kaalin järvi]]. Onneksi siitä on jo tuhansia vuosia.
+KYSYMYS: Kerro lisää: Kaalin järvi
+
+### 158
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+AIEMPI KYSYMYS: Kuinka suuri Kaalin pääkraatteri on?
+AIEMPI VASTAUS (Livia):
+Kas, siitä minä tiedän. [[Kaalin pääkraatterin]] halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.
+KYSYMYS: Kerro lisää: Kaalin pääkraatterin
+
+### 159
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+AIEMPI KYSYMYS: Kuinka suuri Kaalin pääkraatteri on?
+AIEMPI VASTAUS (Livia):
+Kas, siitä minä tiedän. [[Kaalin pääkraatterin]] halkaisija on 110 metriä ja syvyys 22 metriä, ja sen pohjalla on nyt [[Kaalin järvi]]. Kahdeksan pienempää kraatteria, joiden halkaisija on 12–40 metriä, sijaitsee kilometrin säteellä, joten kraattereita on yhteensä yhdeksän. Ne sijaitsevat [[Saarenmaalla]] Kaalin kylässä. Pieniä kuoppia, mut kyl ne kyyhkyn silmään erottuu.
+KYSYMYS: Kerro lisää: Saarenmaalla
+
+### 160
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kaalin kraatterit (historia)
+Tietoruudun teksti: Kaalin kylässä Saarenmaalla on yhdeksän kraatteria, ja ne ovat meteoriitin tekemiä. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen — ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia — ja se on yksi harvoista tunnetuista törmäyksistä, jotka ovat osuneet asuttuun seutuun. Ennen 1930-lukua syntytavasta oli monta selitystä, tulivuorenpurkauksesta karstiin, kunnes Ivan Reinvald osoitti meteoriittialkuperän tutkimuksillaan 1928, 1933 ja 1937. Kappale hajosi viiden ja kymmenen kilometrin korkeuden välillä. Suurin pala teki kraatterin, jonka halkaisija on 110 metriä ja syvyys 22; sen pohjalla on nyt Kaalin järvi. Kahdeksan pienempää kraatteria, halkaisijaltaan 12–40 metriä, ovat kilometrin säteellä. Iskun energia oli noin 80 terajoulea eli suunnilleen Hiroshiman pommin verran, ja metsä paloi kuuden kilometrin säteellä.
+AIEMPI KYSYMYS: Milloin Kaalin meteoriitti iski?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Tuoreimpien arvioiden mukaan isku tapahtui pian vuosien 1530–1450 eaa. jälkeen, mutta ajoitukset vaihtelevat tutkijasta toiseen tuhansia vuosia, joten tarkkaa vuotta ei voi antaa. Se on yksi harvoista tunnetuista [[meteoriittitörmäyksistä]], jotka ovat osuneet asuttuun seutuun. Meteoriittialkuperän osoitti vasta [[Ivan Reinvald]] 1900-luvun alkupuolella.
+
+Tuhansien vuosien heitto ajoituksessa on aika paljon, kun minä itse muistan vain eilisen aamupalan. Mutta tiedemiehet pääsevät kyllä tarkemmaksi, kun ehtivät.
+KYSYMYS: Kerro lisää: meteoriittitörmäyksistä

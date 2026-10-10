@@ -1,0 +1,834 @@
+### 481
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Mitä ihmiset elivät täällä noin 6500 eaa. ja mistä se tiedetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost on aikaa melko lailla. Kundan lähistöltä löydetyt jäänteet kertovat metsästäjä-kalastajayhteisöistä, jotka elivät alueella noin vuonna 6500 eaa., siis [[jääkauden]] jälkeisellä kivikaudella. Heidän elämänsä perustui luonnosta saatavaan ravintoon: he metsästivät ja kalastivat ja luultavasti keräsivät myös kasveja, ja asuinpaikat sijaitsivat vesistöjen lähellä. Tieto perustuu arkeologisiin löytöihin, esimerkiksi asuinpaikoilta kaivettuihin työkaluihin ja muihin esineisiin, ja niiden mukaan on nimetty [[Kundan kulttuuri]], joka kuuluu Viron vanhimpiin tunnettuihin esihistoriallisiin yhteisöihin.
+
+Joku istui silloin tällä rannalla odottamassa kalaa, ihan niin kuin ihmiset istuvat satamalaitureilla vieläkin. Minä ymmärrän kärsivällisyyden, vaikka lokit eivät sitä osaa.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 482
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+AIEMPI KYSYMYS: Mitä ihmiset elivät täällä noin 6500 eaa. ja mistä se tiedetään?
+AIEMPI VASTAUS (Livia):
+Ai tota. Tost on aikaa melko lailla. Kundan lähistöltä löydetyt jäänteet kertovat metsästäjä-kalastajayhteisöistä, jotka elivät alueella noin vuonna 6500 eaa., siis [[jääkauden]] jälkeisellä kivikaudella. Heidän elämänsä perustui luonnosta saatavaan ravintoon: he metsästivät ja kalastivat ja luultavasti keräsivät myös kasveja, ja asuinpaikat sijaitsivat vesistöjen lähellä. Tieto perustuu arkeologisiin löytöihin, esimerkiksi asuinpaikoilta kaivettuihin työkaluihin ja muihin esineisiin, ja niiden mukaan on nimetty [[Kundan kulttuuri]], joka kuuluu Viron vanhimpiin tunnettuihin esihistoriallisiin yhteisöihin.
+
+Joku istui silloin tällä rannalla odottamassa kalaa, ihan niin kuin ihmiset istuvat satamalaitureilla vieläkin. Minä ymmärrän kärsivällisyyden, vaikka lokit eivät sitä osaa.
+KYSYMYS: Kerro lisää: Kundan kulttuuri
+
+### 483
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Bermuda — kaupunkilehti / Cahow, riutat ja luolat: Kalkkikivestä syntyneet luolat] Bermudan saaret ovat pohjimmiltaan vanhaa merenpohjan hiekkaa, joka on vuosituhansien saatossa kovettunut kalkkikiveksi. Sadevesi on liuottanut kiveen onkaloita, joiden sisään on hitaasti kasvanut tippukiviä: kattoa kohti riippuvia stalaktiitteja ja lattiasta kohoavia stalagmiitteja. Tunnetuimman luolaston, Crystal Cavesin, löysivät sattumalta kaksi poikaa 1907, kun heidän krikettipallonsa vierähti koloon ja paljasti allaan avautuvan luolan. Luolan pohjalla on kirkasvetinen suolainen järvi, jonka pinta nousee ja laskee meren vuoroveden tahdissa maan alla kulkevia rakoja pitkin – todiste siitä, että luolat ovat yhteydessä ympäröivään mereen.
+AIEMPI KYSYMYS: Miten sementti eroaa betonista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kyl kemiaa. Sementti on sideaine, joka toimii betonin liimana, kun taas betoni on valmis rakennusmateriaali, joka syntyy sekoittamalla sementtiä, vettä, hiekkaa ja sorakiviainesta. Sementti valmistetaan polttamalla [[kalkkikivestä]] ja savesta koostuvaa seosta erittäin korkeassa lämpötilassa, jolloin syntyy [[klinkkeriä]]. Klinkkeri jauhetaan hienoksi jauheeksi, ja siihen lisätään tavallisesti [[kipsiä]], joka hidastaa kovettumista. Kun sementti sekoitetaan veteen, se alkaa kemiallisesti sitoutua ja kovettua, ja kiviaines tekee betonista lujan ja edullisen. Kuiva aihe, mut hyvä tietää.
+KYSYMYS: Kerro lisää: kalkkikivestä
+
+### 484
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+AIEMPI KYSYMYS: Miten sementti eroaa betonista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kyl kemiaa. Sementti on sideaine, joka toimii betonin liimana, kun taas betoni on valmis rakennusmateriaali, joka syntyy sekoittamalla sementtiä, vettä, hiekkaa ja sorakiviainesta. Sementti valmistetaan polttamalla [[kalkkikivestä]] ja savesta koostuvaa seosta erittäin korkeassa lämpötilassa, jolloin syntyy [[klinkkeriä]]. Klinkkeri jauhetaan hienoksi jauheeksi, ja siihen lisätään tavallisesti [[kipsiä]], joka hidastaa kovettumista. Kun sementti sekoitetaan veteen, se alkaa kemiallisesti sitoutua ja kovettua, ja kiviaines tekee betonista lujan ja edullisen. Kuiva aihe, mut hyvä tietää.
+KYSYMYS: Kerro lisää: klinkkeriä
+
+### 485
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Rub al-Khali — kaupunkilehti / Luonto: Järvien pohjat hiekan seassa] Aavikon keskivaiheilla on koholla olevia kovettuneita laikkuja, joissa on kalsiumkarbonaattia, kipsiä, liejusavea ja savea. Ne ovat matalien järvien pohjia. Järviä syntyi kahdesti, 6 000–5 000 ja 3 000–2 000 vuotta sitten, kun sadetta tuli monsuunin tapaan rajusti; useimmat kuivuivat parissa vuodessa, mutta lounaassa Mundafanin alueella vesi säilyi jopa kahdeksansataa vuotta, koska Tuwaiqin jyrkänteeltä valui lisää. Kerrostumista on löytynyt virtahevon, vesipuhvelin ja pitkäsarvisen naudan luita, etanoita ja makean veden simpukoita — ja piikivityökaluja, mutta ei yhtään ihmisen luuta.
+AIEMPI KYSYMYS: Miten sementti eroaa betonista?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Tää on kyl kemiaa. Sementti on sideaine, joka toimii betonin liimana, kun taas betoni on valmis rakennusmateriaali, joka syntyy sekoittamalla sementtiä, vettä, hiekkaa ja sorakiviainesta. Sementti valmistetaan polttamalla [[kalkkikivestä]] ja savesta koostuvaa seosta erittäin korkeassa lämpötilassa, jolloin syntyy [[klinkkeriä]]. Klinkkeri jauhetaan hienoksi jauheeksi, ja siihen lisätään tavallisesti [[kipsiä]], joka hidastaa kovettumista. Kun sementti sekoitetaan veteen, se alkaa kemiallisesti sitoutua ja kovettua, ja kiviaines tekee betonista lujan ja edullisen. Kuiva aihe, mut hyvä tietää.
+KYSYMYS: Kerro lisää: kipsiä
+
+### 486
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mikä on Suomenlahti ja minkä maiden rannat sen ympäröivät?
+AIEMPI VASTAUS (Livia):
+No niin, Suomenlahti. Se näkyy ylhäältä kyl hyvin. Suomenlahti on [[Itämeren]] itäinen, pitkä ja kapea lahti, jota rajaavat pohjoisessa ja idässä Suomi, etelässä Viro ja itäpäässä Venäjä. Lahden poikki kulkee vilkas laivaliikenne, ja esimerkiksi [[Helsingin]] ja Tallinnan välillä liikennöi lauttoja tiheään. Itäpäässä lahti avautuu kohti [[Pietarin]] seutua. Kundan satama on yksi lahden monista rannoista, ja niin on moni muukin Pohjois-Viron kaupunki. Siivin lahden ylittää nopeammin kuin lautalla, ainakin minun kokemukseni mukaan.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 487
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Linnanmäki] 1950 Kuusi lastensuojelujärjestöä vuokrasi vuonna 1950 Alppiharjun kallioisen mäen — aluksi vain kolmeksi vuodeksi — ja perusti sinne huvipuiston kerätäkseen rahaa työhönsä. Mäki oli saanut nimensä kahdesta vesitornista eli vesilinnasta, ja Vesilinnanmäestä lyheni Linnanmäki. Tornit seisovat paikallaan yhä: vanhemmassa on varasto, uudemman sisään on rakennettu vuoristorata Linnunrata. Puiston tunnetuimman laitteen piti olla väliaikainen. Puinen Vuoristorata rakennettiin talvella 1950 puiston omin voimin tanskalaisen Valdemar Lebechin piirustusten mukaan, ja se avattiin 13. heinäkuuta 1951 osaksi siksi, että se houkuttelisi väkeä Helsingin olympialaisiin 1952. Käyttöiäksi arvioitiin viisitoi…
+- [Helsinki — kohdekartta / Kohdekartta: Kallion kirkko] 1908–1912 Kallion kirkko nousee jyrkän mäen päälle keskelle vanhaa työväen kaupunginosaa. Lars Sonck suunnitteli sen kansallisromantiikan hengessä: kantavat seinät muurattiin punatiilestä ja verhoiltiin karkeaksi jätetyllä suomalaisella graniitilla, jota louhittiin Uudenkaupungin seudulta. Peruskivi laskettiin 13. heinäkuuta 1908, ja kirkko vihittiin käyttöön 1. syyskuuta 1912. Torni on 65 metriä korkea ja ristin huippu 94 metriä merenpinnan yläpuolella. Kirkko sulkee 2,5 kilometrin pituisen suoran katulinjan, joka kulkee etelästä Unioninkatua ja Siltasaarenkatua pitkin suoraan kirkon ovelle. Torni on ollut muutakin kuin kellotapuli: itsenäistymisen aikoihin tolstoilaiset ottivat kirkon tuk…
+AIEMPI KYSYMYS: Mikä on Suomenlahti ja minkä maiden rannat sen ympäröivät?
+AIEMPI VASTAUS (Livia):
+No niin, Suomenlahti. Se näkyy ylhäältä kyl hyvin. Suomenlahti on [[Itämeren]] itäinen, pitkä ja kapea lahti, jota rajaavat pohjoisessa ja idässä Suomi, etelässä Viro ja itäpäässä Venäjä. Lahden poikki kulkee vilkas laivaliikenne, ja esimerkiksi [[Helsingin]] ja Tallinnan välillä liikennöi lauttoja tiheään. Itäpäässä lahti avautuu kohti [[Pietarin]] seutua. Kundan satama on yksi lahden monista rannoista, ja niin on moni muukin Pohjois-Viron kaupunki. Siivin lahden ylittää nopeammin kuin lautalla, ainakin minun kokemukseni mukaan.
+KYSYMYS: Kerro lisää: Helsingin
+
+### 488
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Pyhän Pietarin kirkko] 1209–1746 Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja se on yksi kaupungin vanhimmista rakennuksista. Sen torni on ollut vuosisatojen ajan Riian korkein rakennelma – mutta myös yksi onnettomimmista: torni on romahtanut ja palanut useita kertoja historian aikana. Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja se oli 148 metriä korkea – tuolloin koko Euroopan korkein puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja seuraava, matalampi torni valmistui vasta 1746. Toisessa maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja nykyinen torni valmistui jälleenrakennettuna vasta 1970-luvulla.…
+AIEMPI KYSYMYS: Mikä on Suomenlahti ja minkä maiden rannat sen ympäröivät?
+AIEMPI VASTAUS (Livia):
+No niin, Suomenlahti. Se näkyy ylhäältä kyl hyvin. Suomenlahti on [[Itämeren]] itäinen, pitkä ja kapea lahti, jota rajaavat pohjoisessa ja idässä Suomi, etelässä Viro ja itäpäässä Venäjä. Lahden poikki kulkee vilkas laivaliikenne, ja esimerkiksi [[Helsingin]] ja Tallinnan välillä liikennöi lauttoja tiheään. Itäpäässä lahti avautuu kohti [[Pietarin]] seutua. Kundan satama on yksi lahden monista rannoista, ja niin on moni muukin Pohjois-Viron kaupunki. Siivin lahden ylittää nopeammin kuin lautalla, ainakin minun kokemukseni mukaan.
+KYSYMYS: Kerro lisää: Pietarin
+
+### 489
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mitä tulli on ja miksi satamissa kerättiin tulleja?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tullia. Siitä kyl riittää juttua. Tulli on maksu, jota valtio perii tavaroista, kun ne tuodaan maahan tai viedään maasta. Satamat olivat luonteva paikka valvoa tavaraliikennettä, koska suuret tavaramäärät saapuivat laivoilla ja ne oli helppo tarkastaa yhdessä paikassa. Tullien tuotoilla rahoitettiin valtion menoja, ja niillä saatettiin myös suojata kotimaista tuotantoa ulkomaiselta kilpailulta. Kundan tullipiste avattiin vuonna 1812, jolloin Viro kuului [[Venäjän keisarikuntaan]]. Tullipisteet liittyivät usein myös [[salakuljetuksen]] torjuntaan. Tästä riittäisi juttua vielä pitkäksi aikaa, mut tähän se jäi.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaan
+
+### 490
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kunda (tekniikka)
+Tietoruudun teksti: Kunda on Suomenlahden rannalla Pohjois-Virossa sijaitseva kaupunki, joka tunnetaan sementtitehtaastaan, satamastaan ja arkeologisesta perinnöstään. Kundan lähistöltä on löydetty Viron vanhimpiin kuuluvia esihistoriallisia metsästäjä-kalastajayhteisöjä noin vuodelta 6500 eaa., ja niiden mukaan on nimetty Kundan kulttuuri. Paikka mainitaan kirjallisissa lähteissä ensi kerran vuonna 1241 kylänä ja vuonna 1443 kartanona. Nykyinen kaupunki kasvoi kartanon omistajan John Karl Girard de Soucantonin vuonna 1870 perustaman sementtitehtaan ympärille. Satamalle oli myönnetty rakennuslupa jo vuonna 1805, ja tullipiste avattiin siellä 1812.
+AIEMPI KYSYMYS: Mitä tulli on ja miksi satamissa kerättiin tulleja?
+AIEMPI VASTAUS (Livia):
+Kas vaan, tullia. Siitä kyl riittää juttua. Tulli on maksu, jota valtio perii tavaroista, kun ne tuodaan maahan tai viedään maasta. Satamat olivat luonteva paikka valvoa tavaraliikennettä, koska suuret tavaramäärät saapuivat laivoilla ja ne oli helppo tarkastaa yhdessä paikassa. Tullien tuotoilla rahoitettiin valtion menoja, ja niillä saatettiin myös suojata kotimaista tuotantoa ulkomaiselta kilpailulta. Kundan tullipiste avattiin vuonna 1812, jolloin Viro kuului [[Venäjän keisarikuntaan]]. Tullipisteet liittyivät usein myös [[salakuljetuksen]] torjuntaan. Tästä riittäisi juttua vielä pitkäksi aikaa, mut tähän se jäi.
+KYSYMYS: Kerro lisää: salakuljetuksen
+
+### 491
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+AIEMPI KYSYMYS: Miksi paperitehtaat rakennettiin yleensä jokien varrelle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joki oli tehtaalle kyl ykkösjuttu. Paperin valmistus vaati paljon puhdasta vettä: [[lumput]] ja muu raaka-aine liotettiin, murskattiin ja huuhdeltiin vedessä, ja massa laimennettiin vedellä ennen arkkien muotoilua. Lisäksi joen virtaus tarjosi voimaa, sillä [[vesipyörä]] käytti vanhoissa tehtaissa jauhavia vasaroita ja muita koneita. Joki toimi myös kuljetusreittinä raaka-aineille ja valmiille tuotteille. Räpinassa paperitehdas on toiminut [[Võhandu-joen]] varrella vuodesta 1734, ja se on toiminnassa edelleen. Onpas tästä tullu pitkä vesijuttu.
+KYSYMYS: Kerro lisää: lumput
+
+### 492
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+AIEMPI KYSYMYS: Miksi paperitehtaat rakennettiin yleensä jokien varrelle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joki oli tehtaalle kyl ykkösjuttu. Paperin valmistus vaati paljon puhdasta vettä: [[lumput]] ja muu raaka-aine liotettiin, murskattiin ja huuhdeltiin vedessä, ja massa laimennettiin vedellä ennen arkkien muotoilua. Lisäksi joen virtaus tarjosi voimaa, sillä [[vesipyörä]] käytti vanhoissa tehtaissa jauhavia vasaroita ja muita koneita. Joki toimi myös kuljetusreittinä raaka-aineille ja valmiille tuotteille. Räpinassa paperitehdas on toiminut [[Võhandu-joen]] varrella vuodesta 1734, ja se on toiminnassa edelleen. Onpas tästä tullu pitkä vesijuttu.
+KYSYMYS: Kerro lisää: vesipyörä
+
+### 493
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+AIEMPI KYSYMYS: Miksi paperitehtaat rakennettiin yleensä jokien varrelle?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Joki oli tehtaalle kyl ykkösjuttu. Paperin valmistus vaati paljon puhdasta vettä: [[lumput]] ja muu raaka-aine liotettiin, murskattiin ja huuhdeltiin vedessä, ja massa laimennettiin vedellä ennen arkkien muotoilua. Lisäksi joen virtaus tarjosi voimaa, sillä [[vesipyörä]] käytti vanhoissa tehtaissa jauhavia vasaroita ja muita koneita. Joki toimi myös kuljetusreittinä raaka-aineille ja valmiille tuotteille. Räpinassa paperitehdas on toiminut [[Võhandu-joen]] varrella vuodesta 1734, ja se on toiminnassa edelleen. Onpas tästä tullu pitkä vesijuttu.
+KYSYMYS: Kerro lisää: Võhandu-joen
+
+### 494
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+AIEMPI KYSYMYS: Millä tavalla paperia valmistettiin ennen nykyaikaisia koneita?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kyl käsityötä. Ennen koneellista valmistusta paperi tehtiin käsin arkki kerrallaan. Raaka-aineena käytettiin Euroopassa pääasiassa hamppu- ja [[pellavalumppuja]], jotka lahotettiin ja jauhettiin vedessä massaksi. Työntekijä upotti massakaukaloon kehikon, jonka pohjana oli seula, ja nosti siitä ohuen kerroksen massaa; vesi valui pois ja jäljelle jäi kostea kuitukerros. Arkit siirrettiin huopien väliin, puristettiin ja kuivatettiin, ja usein ne vielä liimattiin, jotta muste ei levinnyt. Paperi tuli Euroopassa vähitellen [[pergamentin]] rinnalle, koska se oli edullisempaa. Ja minä kun luulin, että paperi vain kasvaa postilaatikkoon.
+KYSYMYS: Kerro lisää: pellavalumppuja
+
+### 495
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Luxemburg — kaupunkilehti / Historian hetki: Luxemburg 963 — kallio, josta tuli kaupunki] 963 — Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan y…
+- [Luxemburg — kohdekartta / Kohdekartta: Bockin kauppa 963] Kreivi Siegfried Ardennelainen seisoo jyrkän hiekkakivikallion laella Alzette-joen mutkan yllä ja kuvittelee, mitä sen sisään voisi louhia. Kallio on luonnostaan lähes valloittamaton — kolmelta sivulta jyrkänne, yhdeltä kapea kannas — ja vain munkkien pieni luostarirakennus seisoo sen päällä. Siegfried on juuri vaihtanut Trierin luostarille maita ja muuta omaisuutta saadakseen kallion itselleen, ja kauppakirja on allekirjoitettu vuonna 963. Hän ei vielä tiedä rakentavansa jotain, joka kasvaa kaupungiksi: hänen mielessään on vain linna, Lucilinburhuc, "pieni linna", josta hän voi hallita jokilaaksoa. Vuosisatojen kuluessa kallion sisään louhitaan kilometrikaupalla käytäviä, ja linnan ympäril…
+AIEMPI KYSYMYS: Millä tavalla paperia valmistettiin ennen nykyaikaisia koneita?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on kyl käsityötä. Ennen koneellista valmistusta paperi tehtiin käsin arkki kerrallaan. Raaka-aineena käytettiin Euroopassa pääasiassa hamppu- ja [[pellavalumppuja]], jotka lahotettiin ja jauhettiin vedessä massaksi. Työntekijä upotti massakaukaloon kehikon, jonka pohjana oli seula, ja nosti siitä ohuen kerroksen massaa; vesi valui pois ja jäljelle jäi kostea kuitukerros. Arkit siirrettiin huopien väliin, puristettiin ja kuivatettiin, ja usein ne vielä liimattiin, jotta muste ei levinnyt. Paperi tuli Euroopassa vähitellen [[pergamentin]] rinnalle, koska se oli edullisempaa. Ja minä kun luulin, että paperi vain kasvaa postilaatikkoon.
+KYSYMYS: Kerro lisää: pergamentin
+
+### 496
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Etelä-Korea — maalehti / Historia: Kirja, joka ehti Gutenbergin edelle] 1377 — Jikji painettiin Heungdeokin temppelissä vuonna 1377, ja se on maailman vanhin säilynyt metallikirjakkeilla painettu kirja — seitsemänkymmentäkahdeksan vuotta ennen kuin Johannes Gutenbergin 42-rivinen raamattu valmistui. Alkuperäisestä kaksiosaisesta teoksesta on jäljellä vain jälkimmäinen osa, ja se on Ranskan kansalliskirjastossa Pariisissa. Unesco vahvisti kirjan aseman vuonna 2001 ja merkitsi sen Maailman muisti -rekisteriin. Sisältö on kokoelma buddhalaisten mestareiden opetuksia.
+- [Saksa — maalehti / Kirjapaino: Mainz 1454 — sivu syntyy metallista] 1454 — Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin ja peilikuvana; sivu on valmis vasta, kun rivejä on neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita arkk…
+AIEMPI KYSYMYS: Miten kirjapaino muutti paperin käyttöä Euroopassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tost alkoi iso käänne. Painotaito, jota [[Johannes Gutenberg]] kehitti [[Mainzissa]] noin 1450-luvulla, teki kirjojen monistamisesta paljon nopeampaa kuin käsin kopioiminen. Kun painokoneet tuottivat suuria määriä sivuja, tarvittiin runsaasti paperia, ja se oli [[pergamenttia]] huomattavasti edullisempaa, joten kysyntä kasvoi voimakkaasti. Paperitehtaita perustettiin lisää, ja kirjojen, esitteiden ja lentokirjasten määrä kasvoi, mikä nopeutti tiedon leviämistä Euroopassa.
+
+Painettu sana kulkee kyllä nopeammin kuin kyyhky, sen myönnän ilman katkeruutta. Silti käsin kirjoitettu kirje on minusta aina lämpimämpi.
+KYSYMYS: Kerro lisää: Johannes Gutenberg
+
+### 497
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Kirjapaino: Mainz 1454 — sivu syntyy metallista] 1454 — Sormenpäät ovat mustat ja pysyvät sellaisina. Latoja poimii kirjasimen kerrallaan lokerikosta ja asettaa sen riville nurinpäin ja peilikuvana; sivu on valmis vasta, kun rivejä on neljäkymmentäkaksi ja jokainen niistä yhtä leveä. Mainzin Humbrechthofissa painetaan latinankielistä Raamattua, ja työtä on tehty vuodesta 1452. Johannes Gutenberg on lainannut siihen rahanlainaaja Johann Fustilta kahdesti 800 guldenia, ja hänen pajassaan on jo painettu kirkolle tuhansia anekirjeitä. Kostutettu paperi painetaan viinipuristimesta muokatussa ruuviprässissä, ja yhden sivun latomiseen kuluu ehkä puoli päivää. Maaliskuussa 1455 tuleva paavi Pius II kirjoittaa nähneensä Frankfurtissa valmiita arkk…
+AIEMPI KYSYMYS: Miten kirjapaino muutti paperin käyttöä Euroopassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tost alkoi iso käänne. Painotaito, jota [[Johannes Gutenberg]] kehitti [[Mainzissa]] noin 1450-luvulla, teki kirjojen monistamisesta paljon nopeampaa kuin käsin kopioiminen. Kun painokoneet tuottivat suuria määriä sivuja, tarvittiin runsaasti paperia, ja se oli [[pergamenttia]] huomattavasti edullisempaa, joten kysyntä kasvoi voimakkaasti. Paperitehtaita perustettiin lisää, ja kirjojen, esitteiden ja lentokirjasten määrä kasvoi, mikä nopeutti tiedon leviämistä Euroopassa.
+
+Painettu sana kulkee kyllä nopeammin kuin kyyhky, sen myönnän ilman katkeruutta. Silti käsin kirjoitettu kirje on minusta aina lämpimämpi.
+KYSYMYS: Kerro lisää: Mainzissa
+
+### 498
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Lima — kohdekartta / Kohdekartta: San Franciscon luostari] 1672 Franciskaanit saivat tonttinsa jo silloin, kun Liman ruutukaava jaettiin 1535, mutta ensimmäinen kappeli jäätyi autioksi, kun laaksosta loppuivat munkit. Vasta 1546 saapunut Francisco de Santa Ana sai maan takaisin ja rakensi vaatimattoman kirkon. Seuraavan vuosisadan aikana luostarista kasvoi taideaarre — ja 4. helmikuuta 1655 maanjäristys kaatoi sen kokonaan ja vei mennessään koko vuosisadan työn. Uuden luostarin piirsi portugalilainen arkkitehti Constantino de Vasconcellos, ja rakennusmestarina toimi limalainen Manuel Escobar. Peruskiven laski varakuningas, Alba de Listen kreivi, 8. toukokuuta 1657, ja valmis talo vihittiin suurin menoin 3. lokakuuta 1672; sisätöitä jatkettiin vuote…
+AIEMPI KYSYMYS: Miten kirjapaino muutti paperin käyttöä Euroopassa?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Tost alkoi iso käänne. Painotaito, jota [[Johannes Gutenberg]] kehitti [[Mainzissa]] noin 1450-luvulla, teki kirjojen monistamisesta paljon nopeampaa kuin käsin kopioiminen. Kun painokoneet tuottivat suuria määriä sivuja, tarvittiin runsaasti paperia, ja se oli [[pergamenttia]] huomattavasti edullisempaa, joten kysyntä kasvoi voimakkaasti. Paperitehtaita perustettiin lisää, ja kirjojen, esitteiden ja lentokirjasten määrä kasvoi, mikä nopeutti tiedon leviämistä Euroopassa.
+
+Painettu sana kulkee kyllä nopeammin kuin kyyhky, sen myönnän ilman katkeruutta. Silti käsin kirjoitettu kirje on minusta aina lämpimämpi.
+KYSYMYS: Kerro lisää: pergamenttia
+
+### 499
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mikä on võron kieli ja missä sitä puhutaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Siit voisi puhua pitkäänkin. Võron kieli on itämerensuomalainen kieli, joka on läheistä sukua [[viron kielen]] kanssa. Sitä on perinteisesti puhuttu Kaakkois-Virossa, erityisesti [[Võrumaalla]], ja Räpinan seutu sijaitsee lähellä tätä aluetta, vaikka en ole varma, kuinka vahvasti kieli siellä nykyään kuuluu. Kielen asemasta on kaksi vakiintunutta näkemystä: toisten mukaan võro on oma kielensä, toisten mukaan se on viron kielen murre tai murreryhmä. Puhujamäärä on pieni, ja kieltä on pyritty vaalimaan koulutuksen ja kulttuurityön avulla. Minä kun en osaa sitä lausua, joten siivet vain heiluvat.
+KYSYMYS: Kerro lisää: viron kielen
+
+### 500
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+AIEMPI KYSYMYS: Mikä on võron kieli ja missä sitä puhutaan?
+AIEMPI VASTAUS (Livia):
+Ai se. Siit voisi puhua pitkäänkin. Võron kieli on itämerensuomalainen kieli, joka on läheistä sukua [[viron kielen]] kanssa. Sitä on perinteisesti puhuttu Kaakkois-Virossa, erityisesti [[Võrumaalla]], ja Räpinan seutu sijaitsee lähellä tätä aluetta, vaikka en ole varma, kuinka vahvasti kieli siellä nykyään kuuluu. Kielen asemasta on kaksi vakiintunutta näkemystä: toisten mukaan võro on oma kielensä, toisten mukaan se on viron kielen murre tai murreryhmä. Puhujamäärä on pieni, ja kieltä on pyritty vaalimaan koulutuksen ja kulttuurityön avulla. Minä kun en osaa sitä lausua, joten siivet vain heiluvat.
+KYSYMYS: Kerro lisää: Võrumaalla
+
+### 501
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [St. John’s — kohdekartta / Kohdekartta: Pyhän Johannes Kastajan basilika] 1839–1855 Basilika on Newfoundlandin siihenastisen historian suurin rakennushanke. Kaivutyöt alkoivat toukokuussa 1839, peruskivi laskettiin toukokuussa 1841, ja kirkko vihittiin 9. syyskuuta 1855. Valmistuessaan se oli Pohjois-Amerikan suurin kirkkorakennus, ja se on yhä Kanadan suurin katedraalikirkko ja maan toiseksi suurin kirkko. Se on myös yksi harvoista rakennuksista, jotka selvisivät vuoden 1892 suurpalosta. Kirkko ei ole suunnattu tavalliseen tapaan itä–länsi- akselille eikä se katso satamansuulle. Sen julkisivu on käännetty talvipäivänseisauksen nousevan ja kesäpäivänseisauksen laskevan auringon linjaan — samalla periaatteella kuin keskiaikainen Chartresin katedraali. Piispa Micha…
+AIEMPI KYSYMYS: Keitä olivat Sakarias ja Elisabet, joiden mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Raamattu on tosin pöllön tontti. Luukkaan evankeliumin mukaan Sakarias oli pappi ja Elisabet hänen vaimonsa, ja heille syntyi vanhoilla päivillä poika, [[Johannes Kastaja]]. Elisabet kuvataan [[Marian]] sukulaiseksi, ja hänen ja Marian kohtaaminen on yksi evankeliumin tunnetuista kohtauksista. Kristillisessä perinteessä Sakarias ja Elisabet ovat arvostettuja hahmoja, joten kirkko voidaan nimetä heidän mukaansa. Kirkkojen nimet kertovat usein, millaista pyhimys- tai Raamattu-perinnettä seudulla on arvostettu. Hyvin meni, vaikka raamattu ei oo ihan minun alaani.
+KYSYMYS: Kerro lisää: Johannes Kastaja
+
+### 502
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Räpina (tekniikka)
+Tietoruudun teksti: Räpina on kaupunki Põlvan maakunnassa Võhandu-joen alajuoksun varrella. Sen vanhin kaupallinen yritys on paperitehdas, joka avattiin vuonna 1734 ja joka toimii Räpinassa edelleen. Tehtaan lisäksi kaupungissa toimivat muun muassa puutarhakoulu ja lukio, ja kaupungissa on myös Pyhän Sakariaan ja Elisabetin kirkko. Asukkaita Räpinassa oli vuonna 1881 vain 709, mutta vuonna 1922 jo 2100. Räpina sai taajaman aseman vuonna 1945 ja kaupunkioikeudet vuonna 1993. Vuonna 2002 kaupunki ja maalaiskunta yhdistettiin Räpinan kunnaksi.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Port Moresby — kohdekartta / Kohdekartta: Pyhän Marian katedraali] 1889 alkaen Pyhän Marian katedraali on Port Moresbyn arkkihiippakunnan pääkirkko ja omistettu Neitsyt Marialle. Ulkoseinät ovat vaaleansiniset, ja pääsisäänkäynnin toisella puolen kohoaa valkoinen torni. Hiippakunta on kirkkoa vanhempi, ja sen nimi on vaihtunut kolmesti. Se perustettiin 10. toukokuuta 1889 Uuden-Guinean apostoliseksi vikariaatiksi, sai 1922 nimen Papuan vikariaatti ja 1946 Port Moresbyn vikariaatti; arkkihiippakunnaksi se korotettiin 15. marraskuuta 1966. Vuonna 2023 alueella oli 22 seurakuntaa ja noin 233 000 katolista eli 29 prosenttia väestöstä. Paavi Johannes Paavali II vieraili katedraalissa toukokuussa 1984 ja palasi hiippakuntaan tammikuussa 1995. Paavi Franciscus vi…
+AIEMPI KYSYMYS: Keitä olivat Sakarias ja Elisabet, joiden mukaan kirkko on nimetty?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Raamattu on tosin pöllön tontti. Luukkaan evankeliumin mukaan Sakarias oli pappi ja Elisabet hänen vaimonsa, ja heille syntyi vanhoilla päivillä poika, [[Johannes Kastaja]]. Elisabet kuvataan [[Marian]] sukulaiseksi, ja hänen ja Marian kohtaaminen on yksi evankeliumin tunnetuista kohtauksista. Kristillisessä perinteessä Sakarias ja Elisabet ovat arvostettuja hahmoja, joten kirkko voidaan nimetä heidän mukaansa. Kirkkojen nimet kertovat usein, millaista pyhimys- tai Raamattu-perinnettä seudulla on arvostettu. Hyvin meni, vaikka raamattu ei oo ihan minun alaani.
+KYSYMYS: Kerro lisää: Marian
+
+### 503
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nullarbor — kaupunkilehti / Nullarbor: Mies joka uskoi rantaan lännessä] Edward John Eyre oli jo mainetta niittänyt tutkimusmatkailija, kun hän marraskuussa 1840 lähti Fowlers Bayltä länteen kohti Länsi-Australiaa – matkalle, jota kukaan ei ollut aiemmin kävellyt loppuun asti. Mukana kulkivat ylimestari John Baxter ja kolme aboriginaalimiestä. Ensimmäinen yritys päättyi lyhyeen, kun hevoset kuolivat janoon, ja Eyre palasi hakemaan lisää vesitynnyreitä. Helmikuussa 1841 hän lähti uudelleen, päättäväisenä todistamaan, että Etelä-Australiasta oli olemassa maayhteys länteen – vaikka koko rannikko tunnettiin tuolloin vain purjelaivoista käsin nähtynä siluettina.
+AIEMPI KYSYMYS: Mistä ruotsalaiset päätyivät Hiidenmaalle jo 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Mmm— ai että. Hiidenmaan ruotsinkielinen asutus kuuluu laajempaan [[rannikkoruotsalaiseen]] asutukseen, jota Viron länsirannikolla ja saarilla on ollut keskiajalta lähtien. Asukkaat saapuivat meritse Ruotsin suunnalta, mutta tarkasta lähtöalueesta ja saapumisajasta en ole varma. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä, ja sen ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. [[Itämeren]] rannikot ovat pitkään olleet kielten ja kulttuurien sekoittumisen aluetta, ja Hiidenmaa on yksi esimerkki siitä. Meriä pitkin sinnekin, vaikka siivet ois ollu nopeammat.
+KYSYMYS: Kerro lisää: rannikkoruotsalaiseen
+
+### 504
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mistä ruotsalaiset päätyivät Hiidenmaalle jo 1500-luvulla?
+AIEMPI VASTAUS (Livia):
+Mmm— ai että. Hiidenmaan ruotsinkielinen asutus kuuluu laajempaan [[rannikkoruotsalaiseen]] asutukseen, jota Viron länsirannikolla ja saarilla on ollut keskiajalta lähtien. Asukkaat saapuivat meritse Ruotsin suunnalta, mutta tarkasta lähtöalueesta ja saapumisajasta en ole varma. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä, ja sen ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. [[Itämeren]] rannikot ovat pitkään olleet kielten ja kulttuurien sekoittumisen aluetta, ja Hiidenmaa on yksi esimerkki siitä. Meriä pitkin sinnekin, vaikka siivet ois ollu nopeammat.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 505
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Miksi 455 miljoonaa vuotta vanha kraatteri ei näy maisemassa selvästi?
+AIEMPI VASTAUS (Livia):
+Kato, ikää on kyl riittävästi. Kraatteri syntyi [[ordovikikaudella]], kun alue oli matalan meren peitossa, ja sen jälkeen kuluneiden noin 455 miljoonan vuoden aikana se on peittynyt ja täyttynyt [[sedimenttikerroksiin]]. Myöhemmin [[jääkausien]] mannerjäätiköt ja eroosio ovat muokanneet maanpintaa, joten kraatterin reuna erottuu nykyään maisemassa vain heikosti. Rakenne tunnetaan ennen kaikkea geologisten tutkimusten ja porausten avulla, eikä se näy tavallisena selvänä kuoppana. Tämä kuvaus on yleispiirteinen, ja tarkat vaiheet tutkijat tuntevat paremmin kuin minä. Hiljainen maisema on kyllä minulle mieleen.
+KYSYMYS: Kerro lisää: ordovikikaudella
+
+### 506
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Miksi 455 miljoonaa vuotta vanha kraatteri ei näy maisemassa selvästi?
+AIEMPI VASTAUS (Livia):
+Kato, ikää on kyl riittävästi. Kraatteri syntyi [[ordovikikaudella]], kun alue oli matalan meren peitossa, ja sen jälkeen kuluneiden noin 455 miljoonan vuoden aikana se on peittynyt ja täyttynyt [[sedimenttikerroksiin]]. Myöhemmin [[jääkausien]] mannerjäätiköt ja eroosio ovat muokanneet maanpintaa, joten kraatterin reuna erottuu nykyään maisemassa vain heikosti. Rakenne tunnetaan ennen kaikkea geologisten tutkimusten ja porausten avulla, eikä se näy tavallisena selvänä kuoppana. Tämä kuvaus on yleispiirteinen, ja tarkat vaiheet tutkijat tuntevat paremmin kuin minä. Hiljainen maisema on kyllä minulle mieleen.
+KYSYMYS: Kerro lisää: sedimenttikerroksiin
+
+### 507
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Taiwan — maalehti / Luonto: Peura katosi ja palasi] Formosanpeura tuli saarelle jääkausien aikana, kun matala merenpinta yhdisti Taiwanin mantereeseen. Sen paras elinalue oli juuri se länsirannikon alava tasanko, jolle ihmiset sittemmin rakensivat. Hollantilaisten kuutena vuosikymmenenä saarelta vietiin kahdesta neljään miljoonaa peurannahkaa, ja metsästys jatkui sen jälkeenkin. Viimeinen tiedossa oleva luonnonvarainen yksilö tapettiin 1969. Laji säilyi tarhoissa, ja 1984 aloitettiin palautus: Taipein eläintarhasta vietiin 22 peuraa Kentingin kansallispuistoon, aitauksissa odotettiin kymmenen vuotta ja 1994 ne päästettiin vapaaksi. Nyt niitä on yli tuhat.
+- [Serbia — maalehti / Tiede: Milankovićin tähtitorni Zvezdaralla] 1887 — Belgradin observatorio perustettiin 7. huhtikuuta 1887 Zvezdaran metsäalueelle, ja sen ensimmäinen johtaja oli Milan Nedeljković. Milutin Milanković johti laitosta kahdesti, vuosina 1925–1926 ja 1948–1951. Hän laski, miten Maan radan muoto, akselin kallistus ja prekessio muuttavat auringonsäteilyn saantia, ja tulokset selittävät jääkausien rytmiä. Pääteoksensa Kanon der Erdbestrahlung, 626 sivua, hän julkaisi saksaksi 1941. Observatorio julistettiin kulttuurimonumentiksi 2001, ja Vidojevican vuoren 1,4 metrin robottiteleskooppi kantaa Milankovićin nimeä.
+AIEMPI KYSYMYS: Miksi 455 miljoonaa vuotta vanha kraatteri ei näy maisemassa selvästi?
+AIEMPI VASTAUS (Livia):
+Kato, ikää on kyl riittävästi. Kraatteri syntyi [[ordovikikaudella]], kun alue oli matalan meren peitossa, ja sen jälkeen kuluneiden noin 455 miljoonan vuoden aikana se on peittynyt ja täyttynyt [[sedimenttikerroksiin]]. Myöhemmin [[jääkausien]] mannerjäätiköt ja eroosio ovat muokanneet maanpintaa, joten kraatterin reuna erottuu nykyään maisemassa vain heikosti. Rakenne tunnetaan ennen kaikkea geologisten tutkimusten ja porausten avulla, eikä se näy tavallisena selvänä kuoppana. Tämä kuvaus on yleispiirteinen, ja tarkat vaiheet tutkijat tuntevat paremmin kuin minä. Hiljainen maisema on kyllä minulle mieleen.
+KYSYMYS: Kerro lisää: jääkausien
+
+### 508
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Miten Hiidenmaalle pääsee mantereelta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Minä lennän, mut muut menevät lautalla. Hiidenmaa on Viron toiseksi suurin saari [[Saarenmaan]] jälkeen. Mantereelta saarelle pääsee lautalla, joka kulkee [[Rohukülasta]] [[Heltermaahan]] [[Väinameren]] yli. Aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa, ja ruuhka-aikoina kannattaa varata paikka ajoissa. Toivottavasti lautalla on pullaa, mut en tiedä sen nimee.
+KYSYMYS: Kerro lisää: Saarenmaan
+
+### 509
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Miten Hiidenmaalle pääsee mantereelta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Minä lennän, mut muut menevät lautalla. Hiidenmaa on Viron toiseksi suurin saari [[Saarenmaan]] jälkeen. Mantereelta saarelle pääsee lautalla, joka kulkee [[Rohukülasta]] [[Heltermaahan]] [[Väinameren]] yli. Aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa, ja ruuhka-aikoina kannattaa varata paikka ajoissa. Toivottavasti lautalla on pullaa, mut en tiedä sen nimee.
+KYSYMYS: Kerro lisää: Rohukülasta
+
+### 510
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Miten Hiidenmaalle pääsee mantereelta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Minä lennän, mut muut menevät lautalla. Hiidenmaa on Viron toiseksi suurin saari [[Saarenmaan]] jälkeen. Mantereelta saarelle pääsee lautalla, joka kulkee [[Rohukülasta]] [[Heltermaahan]] [[Väinameren]] yli. Aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa, ja ruuhka-aikoina kannattaa varata paikka ajoissa. Toivottavasti lautalla on pullaa, mut en tiedä sen nimee.
+KYSYMYS: Kerro lisää: Heltermaahan
+
+### 511
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Miten Hiidenmaalle pääsee mantereelta?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Minä lennän, mut muut menevät lautalla. Hiidenmaa on Viron toiseksi suurin saari [[Saarenmaan]] jälkeen. Mantereelta saarelle pääsee lautalla, joka kulkee [[Rohukülasta]] [[Heltermaahan]] [[Väinameren]] yli. Aikataulut vaihtelevat vuodenajan mukaan, joten ne kannattaa tarkistaa ennen matkaa, ja ruuhka-aikoina kannattaa varata paikka ajoissa. Toivottavasti lautalla on pullaa, mut en tiedä sen nimee.
+KYSYMYS: Kerro lisää: Väinameren
+
+### 512
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Namibia — maalehti / Tiede: Viisi peiliä ylängöllä] 2002– — Khomasin ylängöllä Gamsbergin kupeessa seisoo viisi peiliä, jotka eivät katso tähtiä vaan hetken välähdystä. Kun gammasäde törmää ilmakehään, syntyy hiukkasryöppy, jonka heikko valo kuvataan maasta; kun useampi teleskooppi näkee saman ryöpyn eri kulmasta, säteen suunta voidaan laskea. Laitteisto sai nimekseen H.E.S.S. Victor Hessin mukaan, joka osoitti kosmisen säteilyn tulevan avaruudesta. Neljä lähes 12-metristä peiliä muodostaa 120 metrin neliön, ja keskelle nousi 2012 lisäksi 28-metrinen. Havainnot alkoivat 2002, ja 2016 ryhmä raportoi Linnunradan keskustan mustan aukon kiihdyttävän protoneja.
+- [Sumatra — kaupunkilehti / Sumatra: Kovin ääni, joka on mitattu] Sumatran ja Jaavan välisessä Sundan salmessa purkautui elokuussa 1883 Krakatau. Päivän kolmas ja suurin räjähdys kello 10.02 kuului 3 110 kilometrin päähän Perthiin ja 4 800 kilometrin päähän Rodriguesin saarelle Intian valtamerellä: se on kovin ääni, joka on koskaan mitattu. Aallot nousivat Sumatran etelärannikolla 24 metriin. Paineaalto piirtyi barografeihin ympäri maailman ja kiersi maapallon kolme ja puoli kertaa. Tuhka jäi ilmakehään vuosiksi: illat paloivat punaisina, ja kun sään seuraajat kartoittivat tuhkan kulkeman virran, syntyi ensimmäinen havainto suihkuvirtauksesta.
+AIEMPI KYSYMYS: Miten meteoriitti eroaa meteorista ja meteoroidista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sekava kolmikko. Meteoroidi on avaruudessa liikkuva pieni kivi- tai metallikappale. Kun se törmää [[ilmakehään]] ja alkaa hehkua kitkan ja kuumenemisen vuoksi, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale ei pala kokonaan loppuun vaan putoaa maahan, sitä kutsutaan meteoriitiksi. Useimmat taivaalla nähtävät tähdenlennot ovat usein hiekanjyvän kokoisten hiukkasten aiheuttamia.
+
+Katolta katsoen taivas on minulle työpaikka, mutta tähdenlento saa silti aina vilkaisemaan ylös. Onneksi ne ovat yleensä paljon vaaratonta näytöstä.
+KYSYMYS: Kerro lisää: ilmakehään
+
+### 513
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Miten meteoriitti eroaa meteorista ja meteoroidista?
+AIEMPI VASTAUS (Livia):
+Tuota niin, sekava kolmikko. Meteoroidi on avaruudessa liikkuva pieni kivi- tai metallikappale. Kun se törmää [[ilmakehään]] ja alkaa hehkua kitkan ja kuumenemisen vuoksi, ilmiötä kutsutaan meteoriksi eli [[tähdenlennoksi]]. Jos kappale ei pala kokonaan loppuun vaan putoaa maahan, sitä kutsutaan meteoriitiksi. Useimmat taivaalla nähtävät tähdenlennot ovat usein hiekanjyvän kokoisten hiukkasten aiheuttamia.
+
+Katolta katsoen taivas on minulle työpaikka, mutta tähdenlento saa silti aina vilkaisemaan ylös. Onneksi ne ovat yleensä paljon vaaratonta näytöstä.
+KYSYMYS: Kerro lisää: tähdenlennoksi
+
+### 514
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+AIEMPI KYSYMYS: Mikä on Väinameri ja miksi se on tärkeä linnuille?
+AIEMPI VASTAUS (Livia):
+Just niin, Väinameri. Siellä ne linnut kyl viihtyvät. Väinameri on Viron länsirannikon sekä [[Hiidenmaan]] ja Saarenmaan välinen matala merialue, jonka rannat ovat monin paikoin lintuvettä. Alue on tärkeä erityisesti [[muuttolinnuille]], jotka käyttävät sitä levähdys- ja ruokailupaikkana muuttomatkallaan, ja aluetta on suojeltu luontoarvojensa vuoksi. Matala vesi, rantaniityt ja saaret tarjoavat ravintoa ja suojaa monille lajeille, mutta tarkkoja lajimääriä en ole varma.
+
+Katolta katsoen muuttoaika näyttää kaupunkiliikenteeltä, vain äänekkäämpää ja ilman liikennevaloja. Linnut tietävät kyllä, missä on hyvä levähdyspaikka, ja sen taidon jaan heidän kanssaan.
+KYSYMYS: Kerro lisää: Hiidenmaan
+
+### 515
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kärdla (tekniikka)
+Tietoruudun teksti: Kärdla on Hiidenmaan ainoa kaupunki ja Hiiun maakunnan pääkaupunki. Se sijaitsee saaren koillisrannalla Tareste-lahden äärellä, ja sen kaakkoispuolella on 455 miljoonaa vuotta vanha Kärdlan meteoriittikraatteri. Kärdla mainitaan ensi kertaa vuonna 1564 ruotsalaisten asuttamana kylänä. Sen kasvuun vaikutti erityisesti vuonna 1830 perustettu kangastehdas, ja satama rakennettiin vuonna 1849. Kirkko valmistui vuonna 1863 pääasiassa lahjoitusvaroin. Ruotsinkielinen nimi Kärrdal tarkoittaa suolaaksoa, sillä kaupunki sijaitsee matalassa laaksossa. Kärdla sai kaupunkioikeudet vuonna 1938.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Nairobi — kaupunkilehti / Puisto kaupungin rajalla: Muutto, joka päättyi kaupunkiin] Ennen kaupunkia laumat seurasivat sateita ja liikkuivat tasangoilla Kilimanjarolta Kenia-vuorelle. Muutto oli lähteen mukaan yhtä suuri kuin Serengetin muutto. Kun kaupunki kasvoi, puistosta tuli muuton pohjoisin raja. Gnuut ja seeprat käyttävät yhä Kitengelan käytävää: sadekaudella ne hajaantuvat Athi-Kapitin tasangoille ja kuivalla kaudella palaavat puistoon, jossa Mbagathi-joen padot pitävät veden saatavilla. Kitengelan entiset maasaiden ryhmätilat on yksityistetty, ja maanomistajat ovat perustaneet yhdistyksen, joka etsii riistaviranomaisen kanssa ratkaisuja sekä eläimille että ihmisille.
+AIEMPI KYSYMYS: Mikä on Väinameri ja miksi se on tärkeä linnuille?
+AIEMPI VASTAUS (Livia):
+Just niin, Väinameri. Siellä ne linnut kyl viihtyvät. Väinameri on Viron länsirannikon sekä [[Hiidenmaan]] ja Saarenmaan välinen matala merialue, jonka rannat ovat monin paikoin lintuvettä. Alue on tärkeä erityisesti [[muuttolinnuille]], jotka käyttävät sitä levähdys- ja ruokailupaikkana muuttomatkallaan, ja aluetta on suojeltu luontoarvojensa vuoksi. Matala vesi, rantaniityt ja saaret tarjoavat ravintoa ja suojaa monille lajeille, mutta tarkkoja lajimääriä en ole varma.
+
+Katolta katsoen muuttoaika näyttää kaupunkiliikenteeltä, vain äänekkäämpää ja ilman liikennevaloja. Linnut tietävät kyllä, missä on hyvä levähdyspaikka, ja sen taidon jaan heidän kanssaan.
+KYSYMYS: Kerro lisää: muuttolinnuille
+
+### 516
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Brisbane — kohdekartta / Kohdekartta: St Johnin katedraali] 1906–2009 Brisbanen katedraalihanke lähti liikkeelle 1887 kuningatar Victorian hallitsijajuhlan kunniaksi. Piispa William Webber tilasi piirustukset englantilaiselta John Loughborough Pearsonilta, ja ne hyväksyttiin 1889. Rahat oli tarkoitus kerätä yleisöltä, mutta koko kirkon rakentaminen yhdellä kertaa osoittautui mahdottomaksi. Siksi talo tehtiin kolmessa vaiheessa kahden vuosisadan aikana: 1906–1910 kuori, poikkilaivat ja ensimmäinen pilarivälin pätkä, 1965–1969 kaksi lisää ja 1989–2009 länsipääty sekä kolme tornia. Kolmas vaihe maksoi neljäkymmentä miljoonaa Australian dollaria, ja työtä johti Peter Dare, Englannin Exeterin katedraalin kivenhakkaajamestari. Kupariset länsihuiput nostet…
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mille vuosisadoille luostarin maine oppineisuuden keskuksena ajoittui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on aika pitkä jakso. Tallinnan dominikaaniluostari toimi vanhassakaupungissa ainakin vuodesta 1246 ja oli koko [[keskiajan]] ajan kaupungin tärkein oppineisuuden keskus. Maine ajoittui siis 1200-luvulta 1500-luvun alkuun, ja vuoden 1524 tapahtumat [[uskonpuhdistuksen]] myllerryksessä vaikuttivat luostariin raskaasti. Tarkkaa vuosikymmentä, jolloin oppineisuus oli korkeimmillaan, en ole varma. Luostari sijaitsi [[Tallinnan]] vanhassakaupungissa, jossa sen jäänteitä on yhä nähtävissä. Aika monta sataa vuotta, ja minä kun jaksan muistaa vain eilisen reitin.
+KYSYMYS: Kerro lisää: keskiajan
+
+### 517
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Riddarholmenin kirkko] 1835 Riddarholmenin kirkko on yksi Tukholman vanhimmista rakennuksista — se rakennettiin fransiskaanimunkkien luostariksi jo 1200-luvun lopulla. Uskonpuhdistuksen jälkeen munkit lähtivät, ja kirkosta tuli vähitellen kuninkaallisten hautakirkko. Melkein kaikki Ruotsin kuninkaat Kustaa II Aadolfista Kustaa V:een lepäävät kirkon holveissa, samoin kaksi keskiaikaista kuningasta. Vain kuningatar Kristiina on haudattu muualle, Roomaan. Alkuperäisen tornin huipun suunnitteli flaamilainen arkkitehti Willem Boy 1500-luvulla, mutta salama tuhosi sen 28. heinäkuuta 1835. Nykyinen valurautahuippu on rakennettu sen tilalle. Seurakunta lakkautettiin jo 1807, joten kirkkoa käytetään enää hautajaisiin ja m…
+AIEMPI KYSYMYS: Mille vuosisadoille luostarin maine oppineisuuden keskuksena ajoittui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on aika pitkä jakso. Tallinnan dominikaaniluostari toimi vanhassakaupungissa ainakin vuodesta 1246 ja oli koko [[keskiajan]] ajan kaupungin tärkein oppineisuuden keskus. Maine ajoittui siis 1200-luvulta 1500-luvun alkuun, ja vuoden 1524 tapahtumat [[uskonpuhdistuksen]] myllerryksessä vaikuttivat luostariin raskaasti. Tarkkaa vuosikymmentä, jolloin oppineisuus oli korkeimmillaan, en ole varma. Luostari sijaitsi [[Tallinnan]] vanhassakaupungissa, jossa sen jäänteitä on yhä nähtävissä. Aika monta sataa vuotta, ja minä kun jaksan muistaa vain eilisen reitin.
+KYSYMYS: Kerro lisää: uskonpuhdistuksen
+
+### 518
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Mille vuosisadoille luostarin maine oppineisuuden keskuksena ajoittui?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tämä on aika pitkä jakso. Tallinnan dominikaaniluostari toimi vanhassakaupungissa ainakin vuodesta 1246 ja oli koko [[keskiajan]] ajan kaupungin tärkein oppineisuuden keskus. Maine ajoittui siis 1200-luvulta 1500-luvun alkuun, ja vuoden 1524 tapahtumat [[uskonpuhdistuksen]] myllerryksessä vaikuttivat luostariin raskaasti. Tarkkaa vuosikymmentä, jolloin oppineisuus oli korkeimmillaan, en ole varma. Luostari sijaitsi [[Tallinnan]] vanhassakaupungissa, jossa sen jäänteitä on yhä nähtävissä. Aika monta sataa vuotta, ja minä kun jaksan muistaa vain eilisen reitin.
+KYSYMYS: Kerro lisää: Tallinnan
+
+### 519
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus] Elben rannan yliopistokaupungista lähti lokakuussa 1517 kohtelias kirje arkkipiispalle, ja sen liitteenä olleet 95 latinankielistä väitettä levisivät painettuina nopeammin kuin kukaan osasi odottaa.
+AIEMPI KYSYMYS: Mikä kuvainraastona tunnettu tapahtuma tuhosi kirkon sisustuksen 1524?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Kyse oli uskonpuhdistuksen aikaisesta kuvainraastosta eli ikonoklasmista. [[Uskonpuhdistus]] oli alkanut Saksassa vuonna 1517 [[Martti Lutherin]] vaikutuksesta, ja 1520-luvulla se oli levinnyt myös [[Itämeren]] alueen kaupunkeihin. Tallinnassa vuonna 1524 protestanttinen väkijoukko teki luostarin kirkossa kuvainraastoa, ja tuho levisi pian luostarin muihinkin osiin. Tapahtumasta on yli viisisataa vuotta, ja se kuuluu Euroopan laajempaan murrokseen, jossa kirkon ja kaupunkien suhteet muuttuivat. Siit on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Uskonpuhdistus
+
+### 520
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Uskonpuhdistus: Wittenberg 1517 — kuka tämän oikein lukee?] 31.10.1517 — Kuka tämän oikein lukee? Martti Luther, 33, Wittenbergin yliopiston teologian professori, taittaa 31. lokakuuta 1517 kirjeen Mainzin arkkipiispa Albrechtille ja liittää mukaan 95 väitettä — teesiä — anekaupasta. Johann Tetzel myy lähikaupungeissa aneita, joilla rahoitetaan Rooman Pietarinkirkkoa ja Albrechtin omaa virkavelkaa, ja Lutherin seurakuntalaiset palaavat ostoksilta uskoen, ettei heidän tarvitse enää katua. Kirje on kohtelias; se olettaa arkkipiispan olevan tietämätön saarnaajiensa puheista. Teesit on kirjoitettu latinaksi, oppineiden väittelyä varten. Se, naulasiko Luther ne samana päivänä linnankirkon oveen, on Philipp Melanchthonin myöhempi kertomus, ja Luther itse …
+AIEMPI KYSYMYS: Mikä kuvainraastona tunnettu tapahtuma tuhosi kirkon sisustuksen 1524?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Kyse oli uskonpuhdistuksen aikaisesta kuvainraastosta eli ikonoklasmista. [[Uskonpuhdistus]] oli alkanut Saksassa vuonna 1517 [[Martti Lutherin]] vaikutuksesta, ja 1520-luvulla se oli levinnyt myös [[Itämeren]] alueen kaupunkeihin. Tallinnassa vuonna 1524 protestanttinen väkijoukko teki luostarin kirkossa kuvainraastoa, ja tuho levisi pian luostarin muihinkin osiin. Tapahtumasta on yli viisisataa vuotta, ja se kuuluu Euroopan laajempaan murrokseen, jossa kirkon ja kaupunkien suhteet muuttuivat. Siit on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Martti Lutherin
+
+### 521
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mikä kuvainraastona tunnettu tapahtuma tuhosi kirkon sisustuksen 1524?
+AIEMPI VASTAUS (Livia):
+Hetkinen. Kyse oli uskonpuhdistuksen aikaisesta kuvainraastosta eli ikonoklasmista. [[Uskonpuhdistus]] oli alkanut Saksassa vuonna 1517 [[Martti Lutherin]] vaikutuksesta, ja 1520-luvulla se oli levinnyt myös [[Itämeren]] alueen kaupunkeihin. Tallinnassa vuonna 1524 protestanttinen väkijoukko teki luostarin kirkossa kuvainraastoa, ja tuho levisi pian luostarin muihinkin osiin. Tapahtumasta on yli viisisataa vuotta, ja se kuuluu Euroopan laajempaan murrokseen, jossa kirkon ja kaupunkien suhteet muuttuivat. Siit on onneksi jo pitkä aika.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 522
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Mexico City — kohdekartta / Kohdekartta: Santo Domingon aukio] 1590 Kolme korttelia katedraalista pohjoiseen on aukio ja sen kirkko, ja kirkko on kaikki mitä on jäljellä yhdestä Uuden Espanjan ensimmäisistä luostareista. Dominikaanit saapuivat 1526 ja muuttivat Guerreron suvun lahjoittamiin taloihin — samalle tontille, jolle myöhemmin rakennettiin inkvisition palatsi. Talojen tilalle tuli kirkko, asuintilat ja vankila. Paikan ensimmäinen kirkko vihittiin 1590, ja Filip II rahoitti sen ympärille luostarin, jossa oli neljä sisäpihaa, sali, ruokala, kirjasto ja sairastupa. Huono rakennustyö, pehmeä maa ja maanjäristykset pakottivat rakentamaan uudelleen. Nykyinen kirkko luetaan tyylinsä perusteella Pedro de Arrietan työksi. Julkisivu on verhoiltu tezontle…
+- [Havanna — kohdekartta / Kohdekartta: San Franciscon basilika] 1548–1591 Fransiskaanien luostarikirkon rakentaminen alkoi 1548 ja kesti vuoteen 1591, vaikka kirkko vihittiin käyttöön jo 1575. Myrskyt vaurioittivat sitä 1680 ja 1692, ja hirmumyrsky katkaisi tornin 1694. Nykyinen muoto on aloitettu 1716, ja rakenteita uusittiin 1731–1738. Pikkubasilikan arvon kirkko sai 1739. Julkisivu on Oficios-kadun puolella, ja siinä on kolme kivipatsasta: Neitsyt Marian tahraton sikiäminen, Franciscus Assisilainen ja pyhä Dominicus. Kirkon edessä oleva Plaza de San Francisco perustettiin 2. kesäkuuta 1628, ja se on Havannan vanhimpia aukioita. Vuonna 1761 kaupungin pormestari José Martín Félix de Arrate piti sitä kaupungin parhaana paikkana, ja siihen aikaan aukioll…
+AIEMPI KYSYMYS: Keitä dominikaanit olivat ja mitä he tekivät?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vähän taustaa tarvitaan. Dominikaanit eli saarnaajaveljet muodostavat katolisen kirkon kerjäläisveljestön, jonka espanjalainen [[Dominicus]] perusti 1200-luvun alussa. Heidän tehtävänsä oli saarnaaminen ja opetus, ja he panostivat vahvasti koulutukseen ja [[teologiaan]], minkä vuoksi heidän luostareistaan tuli usein oppineisuuden keskuksia. Veljet eivät asuneet eristäytyneinä maaseudulla vaan kaupungeissa, joissa he saarnasivat ja opettivat. Tallinnan luostari on tästä esimerkki. Meikäläiset kantoivat vain kirjeitä, ei saarnoja.
+KYSYMYS: Kerro lisää: Dominicus
+
+### 523
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Santa Cruz — kohdekartta / Kohdekartta: Gabriel René Moreno -yliopisto] 1880 Bolivian idän suurin julkinen korkeakoulu perustettiin 11. tammikuuta 1880 nimellä Santa Cruzin yliopisto. Perustamisen taustalla oli valtion asetus 15. joulukuuta 1879, jolla haluttiin vastata kaupungin nuorten tarpeeseen: siihen asti tutkintoa oli pitänyt hakea Sucresta tai La Pazista asti. Aloite tuli tohtori Felipe Leonor Riberalta ja cruceño-piispalta, joka toimi myös ensimmäisenä rehtorina. Aluksi tarjolla oli kolme alaa: teologia, lääketiede ja oikeustiede. Niin pysyi lähes viisikymmentä vuotta. Yliopisto sai nimekseen Pyhän Tuomas Akvinolaisen yliopisto 1898 ja nykyisen nimensä 1911 cruceño-kirjailijan ja historioitsijan Gabriel René Morenon mukaan. Keskusrakennus nousi 1940 Ju…
+AIEMPI KYSYMYS: Keitä dominikaanit olivat ja mitä he tekivät?
+AIEMPI VASTAUS (Livia):
+Katotaas. Vähän taustaa tarvitaan. Dominikaanit eli saarnaajaveljet muodostavat katolisen kirkon kerjäläisveljestön, jonka espanjalainen [[Dominicus]] perusti 1200-luvun alussa. Heidän tehtävänsä oli saarnaaminen ja opetus, ja he panostivat vahvasti koulutukseen ja [[teologiaan]], minkä vuoksi heidän luostareistaan tuli usein oppineisuuden keskuksia. Veljet eivät asuneet eristäytyneinä maaseudulla vaan kaupungeissa, joissa he saarnasivat ja opettivat. Tallinnan luostari on tästä esimerkki. Meikäläiset kantoivat vain kirjeitä, ei saarnoja.
+KYSYMYS: Kerro lisää: teologiaan
+
+### 524
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Marokko — maalehti / Ruoka: Keitto, joka katkaisee paaston] Harira on koko Pohjois-Afrikan keitto, mutta jokainen maa tekee sen omalla tavallaan. Marokkolainen versio nojaa tomaattiin, linsseihin ja kikherneisiin, ja se maustetaan inkiväärillä, kanelilla ja korianterilla. Suuruste on tadouira, jauhon ja veden seos, joka kaadetaan pataan vasta lopuksi ja tekee keitosta samettisen. Talvella harira syödään illallisena, mutta ramadanin aikana se on se lautanen, joka odottaa auringonlaskua: keitto, leipää ja taateleita. Samaan vuodenaikaan kuuluu myös bissara, härkäpavuista keitetty sakea sose.
+AIEMPI KYSYMYS: Miksi luostarit pitivät keskiajalla panimoita?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Olut ja luostari kuuluvat yhteen. Keskiajalla olut oli yleinen päivittäinen juoma, ja sen valmistuksessa vesi keitettiin, mikä saattoi tehdä siitä juomavettä turvallisemman. Luostarissa tarvittiin ruokaa ja juomaa veljille ja vieraille, ja olut oli ravitsevaa myös [[paaston]] aikana. Ylijäämää voitiin myydä, joten panimo toi tuloja. Tallinnan dominikaaniluostarin panimo valmisti useita oluttyyppejä, ja veljet kävivät myös kalakauppaa. Tallinna kuului keskiajalla [[Hansaliittoon]], joten kauppa oli seudulla vilkasta. Olut ei oo kyyhkyn ala, mut pulla olisi.
+KYSYMYS: Kerro lisää: paaston
+
+### 525
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi luostarit pitivät keskiajalla panimoita?
+AIEMPI VASTAUS (Livia):
+Sepä sattui. Olut ja luostari kuuluvat yhteen. Keskiajalla olut oli yleinen päivittäinen juoma, ja sen valmistuksessa vesi keitettiin, mikä saattoi tehdä siitä juomavettä turvallisemman. Luostarissa tarvittiin ruokaa ja juomaa veljille ja vieraille, ja olut oli ravitsevaa myös [[paaston]] aikana. Ylijäämää voitiin myydä, joten panimo toi tuloja. Tallinnan dominikaaniluostarin panimo valmisti useita oluttyyppejä, ja veljet kävivät myös kalakauppaa. Tallinna kuului keskiajalla [[Hansaliittoon]], joten kauppa oli seudulla vilkasta. Olut ei oo kyyhkyn ala, mut pulla olisi.
+KYSYMYS: Kerro lisää: Hansaliittoon
+
+### 526
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+AIEMPI KYSYMYS: Miksi Tallinnan vanhakaupunki kuuluu UNESCOn maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Ai että, vanhakaupunki. Katolta se näyttää hienolta. Tallinnan vanhakaupunki kuuluu UNESCOn maailmanperintöluetteloon, koska sitä pidetään yhtenä Pohjois-Euroopan parhaiten säilyneistä keskiaikaisista kauppakaupungeista. Siellä on säilynyt keskiaikainen katuverkko, kaupunginmuuria torneineen sekä [[Toompean]] ylä- ja alakaupungin kokonaisuus. Kaupunki kuului keskiajalla [[Hansaliiton]] kauppaverkostoon, ja se näkyy yhä rakennuksissa ja kaduissa. Luetteloon kaupunki otettiin 1990-luvun lopulla.
+
+Ylhäältä Toompea ja alakaupunki erottuvat kuin kaksi eri kaupunkia, ja sellaisia ne keskiajalla olivatkin. Se on aika hieno näky siivekkäälle.
+KYSYMYS: Kerro lisää: Toompean
+
+### 527
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tallinnan dominikaaniluostari (historia)
+Tietoruudun teksti: Dominikaaniveljien luostari toimi Tallinnan vanhassakaupungissa ainakin vuodesta 1246 lähtien, ja koko keskiajan ajan se oli kaupungin tärkein oppineisuuden keskus. Munkit harjoittivat myös kauppaa: he kävivät kalakauppaa ja pitivät panimoa, joka valmisti useita oluttyyppejä. Uskonpuhdistuksen myllerryksessä vuonna 1524 protestanttinen väkijoukko teki luostarin kirkkoon kuvainraastonta, ja tuho levisi pian muihinkin luostarin osiin. Suuri osa alkuperäisistä rakennuksista on kadonnut, mutta jäänteitä, kuten hienosti veistetty portaali, on säilynyt näkyvissä Katariina käik -käytävällä, joka kulkee kirkon entisen eteläisen sivulaivan muurin vierellä ja yhdistää kaksi vanhankaupungin katua.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Latvia — maalehti / Historia: Kolme taloa, kolme eri vuosisataa] 1490 — Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna 1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta 1600-luvun lopulla — niin rivissä seisoo kolme eri vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään taloissa toimii Latvian arkkitehtuurimuseo.
+- [Bergen — kaupunkilehti / Bergen: Varasto, joka palveli kahteen suuntaan] Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.
+AIEMPI KYSYMYS: Miksi Tallinnan vanhakaupunki kuuluu UNESCOn maailmanperintöön?
+AIEMPI VASTAUS (Livia):
+Ai että, vanhakaupunki. Katolta se näyttää hienolta. Tallinnan vanhakaupunki kuuluu UNESCOn maailmanperintöluetteloon, koska sitä pidetään yhtenä Pohjois-Euroopan parhaiten säilyneistä keskiaikaisista kauppakaupungeista. Siellä on säilynyt keskiaikainen katuverkko, kaupunginmuuria torneineen sekä [[Toompean]] ylä- ja alakaupungin kokonaisuus. Kaupunki kuului keskiajalla [[Hansaliiton]] kauppaverkostoon, ja se näkyy yhä rakennuksissa ja kaduissa. Luetteloon kaupunki otettiin 1990-luvun lopulla.
+
+Ylhäältä Toompea ja alakaupunki erottuvat kuin kaksi eri kaupunkia, ja sellaisia ne keskiajalla olivatkin. Se on aika hieno näky siivekkäälle.
+KYSYMYS: Kerro lisää: Hansaliiton
+
+### 528
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Miksi Kaalin kraatteri on poikkeuksellinen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaalin erikoisuus ei ole pelkästään kraatterin koko, vaan se, että meteoriitti iski alueelle, jossa asuttiin. Useimmat [[törmäykset]] osuvat aavikolle, merelle tai jäätikölle, joten niistä ei ole jäänyt silminnäkijöitä, mutta [[Saarenmaalla]] iskun aikaan seudulla oli asukkaita, ja osa heistä selvisi. Pääkraatteri on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää kraatteria kilometrin säteellä. Ne syntyivät samalla hetkellä, kun meteori hajosi ilmassa. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten tarkkaa vuotta ei voi sanoa, mutta paikka on ollut pitkään pyhä. Onpas siit pitkä aika, onneksi.
+KYSYMYS: Kerro lisää: törmäykset
+
+### 529
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Miksi Kaalin kraatteri on poikkeuksellinen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Kaalin erikoisuus ei ole pelkästään kraatterin koko, vaan se, että meteoriitti iski alueelle, jossa asuttiin. Useimmat [[törmäykset]] osuvat aavikolle, merelle tai jäätikölle, joten niistä ei ole jäänyt silminnäkijöitä, mutta [[Saarenmaalla]] iskun aikaan seudulla oli asukkaita, ja osa heistä selvisi. Pääkraatteri on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää kraatteria kilometrin säteellä. Ne syntyivät samalla hetkellä, kun meteori hajosi ilmassa. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten tarkkaa vuotta ei voi sanoa, mutta paikka on ollut pitkään pyhä. Onpas siit pitkä aika, onneksi.
+KYSYMYS: Kerro lisää: Saarenmaalla
+
+### 530
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Miten meteoriitin törmäys voidaan tunnistaa jälkeenpäin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Törmäyskraatterin tunnistaa useista merkeistä. Muoto on tyypillisesti pyöreä, ja ympäristössä voi olla äärimmäisen paineen ja kuumuuden muuttamia kiviaineksia, kuten [[sulaneita kivilajeja]] ja erityisellä tavalla vaurioituneita [[kvartsirakeita]], jotka eivät synny tavallisissa maanpäällisissä prosesseissa. Joskus löytyy myös itse meteoriitin kappaleita, ja pienten kraatterien joukko samalla alueella voi viitata siihen, että kappale hajosi ennen iskua. Tunnistamiseen tarvitaan yleensä sekä maastotutkimuksia että laboratoriotutkimuksia. Siis ihan oikeaa salapoliisityötä, ja minä pidän siitä.
+KYSYMYS: Kerro lisää: sulaneita kivilajeja
+
+### 531
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Miten meteoriitin törmäys voidaan tunnistaa jälkeenpäin?
+AIEMPI VASTAUS (Livia):
+Katotaas. Törmäyskraatterin tunnistaa useista merkeistä. Muoto on tyypillisesti pyöreä, ja ympäristössä voi olla äärimmäisen paineen ja kuumuuden muuttamia kiviaineksia, kuten [[sulaneita kivilajeja]] ja erityisellä tavalla vaurioituneita [[kvartsirakeita]], jotka eivät synny tavallisissa maanpäällisissä prosesseissa. Joskus löytyy myös itse meteoriitin kappaleita, ja pienten kraatterien joukko samalla alueella voi viitata siihen, että kappale hajosi ennen iskua. Tunnistamiseen tarvitaan yleensä sekä maastotutkimuksia että laboratoriotutkimuksia. Siis ihan oikeaa salapoliisityötä, ja minä pidän siitä.
+KYSYMYS: Kerro lisää: kvartsirakeita
+
+### 532
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Miksi kraatterin ikää ei tiedetä tarkasti?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost on arvioitu eri tavoin. Ikä on vaikea määrittää, koska iskusta ei ole suoraa kirjallista tietoa, joten ajoitus perustuu epäsuoriin jälkiin. Tutkijat ovat käyttäneet esimerkiksi [[radiohiiliajoitusta]] hiiltyneestä puusta tai muusta orgaanisesta aineksesta sekä [[sedimenttikerrosten]] ja arkeologisten löytöjen tutkimista, mutta tulokset vaihtelevat ja virhemarginaalit ovat suuria. Siksi arviot eroavat toisistaan tuhansia vuosia, eikä tarkkaa vuosilukua kannata antaa. Tarkka vuosi jäi arvoitukseksi, ja arvoituksista minä kyl pidän.
+KYSYMYS: Kerro lisää: radiohiiliajoitusta
+
+### 533
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Miksi kraatterin ikää ei tiedetä tarkasti?
+AIEMPI VASTAUS (Livia):
+Ai se. Tost on arvioitu eri tavoin. Ikä on vaikea määrittää, koska iskusta ei ole suoraa kirjallista tietoa, joten ajoitus perustuu epäsuoriin jälkiin. Tutkijat ovat käyttäneet esimerkiksi [[radiohiiliajoitusta]] hiiltyneestä puusta tai muusta orgaanisesta aineksesta sekä [[sedimenttikerrosten]] ja arkeologisten löytöjen tutkimista, mutta tulokset vaihtelevat ja virhemarginaalit ovat suuria. Siksi arviot eroavat toisistaan tuhansia vuosia, eikä tarkkaa vuosilukua kannata antaa. Tarkka vuosi jäi arvoitukseksi, ja arvoituksista minä kyl pidän.
+KYSYMYS: Kerro lisää: sedimenttikerrosten
+
+### 534
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Kuinka usein meteoriitit osuvat Maahan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, taivas on vilkkaampi kuin luulisi. Avaruudesta putoaa Maahan jatkuvasti pientä ainesta: pölyä ja hiekanjyvän kokoisia hiukkasia, jotka palavat [[ilmakehässä]] ja näkyvät [[tähdenlentoina]]. Suurempia kappaleita, jotka selviävät maahan asti meteoriitteina, löydetään harvemmin, ja kraatterin muodostavia suuria iskuja tapahtuu paljon harvemmin vielä. Tarkkaa lukua en ole varma, eikä sellaista kannata arvailla. Taivas on siis vilkkaampi kuin miltä alhaalta näyttää.
+KYSYMYS: Kerro lisää: ilmakehässä
+
+### 535
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Elmon linnake] 1552 (rakennus), 1565 (piiritys) Linnake rakennettiin 1552 vartioimaan kahden sataman, Grand Harbourin ja Marsamxettin, suuta samalta kapealta niemenkärjeltä, jolle Valletta myöhemmin nousi. Tähden muotoinen muuri oli aikanaan uutta linnoitustekniikkaa, mutta osmanien saapuessa 1565 moni piti sitä silti liian pienenä kestämään pitkää piiritystä. Se piti pintansa lähes kuukauden, 18. toukokuuta – 23. kesäkuuta, vaikka miehistö oli moninkertaisesti alivoimainen. Yöllä veneet toivat Birgusta lisää puolustajia ja veivät haavoittuneita pois, ja monet pahoin haavoittuneet ritarit kieltäytyivät poistumasta: he pyysivät kantaa itsensä tuoleilla muurille jatkaakseen taistelua istualtaan viimeiseen a…
+AIEMPI KYSYMYS: Kuinka usein meteoriitit osuvat Maahan?
+AIEMPI VASTAUS (Livia):
+Tuota niin, taivas on vilkkaampi kuin luulisi. Avaruudesta putoaa Maahan jatkuvasti pientä ainesta: pölyä ja hiekanjyvän kokoisia hiukkasia, jotka palavat [[ilmakehässä]] ja näkyvät [[tähdenlentoina]]. Suurempia kappaleita, jotka selviävät maahan asti meteoriitteina, löydetään harvemmin, ja kraatterin muodostavia suuria iskuja tapahtuu paljon harvemmin vielä. Tarkkaa lukua en ole varma, eikä sellaista kannata arvailla. Taivas on siis vilkkaampi kuin miltä alhaalta näyttää.
+KYSYMYS: Kerro lisää: tähdenlentoina
+
+### 536
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+AIEMPI KYSYMYS: Mistä marsipaani tehdään ja mistä se on lähtöisin?
+AIEMPI VASTAUS (Livia):
+Joo, makeaa asiaa. Marsipaani valmistetaan pääasiassa jauhetuista [[manteleista]] ja sokerista, joskus munanvalkuaisen tai sokerisiirapin kanssa. Alkuperästä ei olla yksimielisiä: [[Lyypekin]], [[Italian]] ja Espanjan on kaikkien esitetty olleen marsipaanin syntysija, eikä asiaa ole varmasti ratkaistu. Tallinnassa kerrotaan marsipaanin syntyneen vanhassa apteekissa, mutta se on pikemminkin paikallinen tarina kuin vahvistettu tieto.
+
+Marsipaani ei ole pulla, mutta minä en ole tässä niin tarkka. Tallinnan apteekeissa sitä on kuulemma myyty lääkkeeksi, ja parempaa reseptiä minä en tunne.
+KYSYMYS: Kerro lisää: manteleista
+
+### 537
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka] Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä joka on jokaisen aterian pohja, makea marsipaani jonka synnystä kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja joulun verinen makkara.
+AIEMPI KYSYMYS: Mistä marsipaani tehdään ja mistä se on lähtöisin?
+AIEMPI VASTAUS (Livia):
+Joo, makeaa asiaa. Marsipaani valmistetaan pääasiassa jauhetuista [[manteleista]] ja sokerista, joskus munanvalkuaisen tai sokerisiirapin kanssa. Alkuperästä ei olla yksimielisiä: [[Lyypekin]], [[Italian]] ja Espanjan on kaikkien esitetty olleen marsipaanin syntysija, eikä asiaa ole varmasti ratkaistu. Tallinnassa kerrotaan marsipaanin syntyneen vanhassa apteekissa, mutta se on pikemminkin paikallinen tarina kuin vahvistettu tieto.
+
+Marsipaani ei ole pulla, mutta minä en ole tässä niin tarkka. Tallinnan apteekeissa sitä on kuulemma myyty lääkkeeksi, ja parempaa reseptiä minä en tunne.
+KYSYMYS: Kerro lisää: Lyypekin
+
+### 538
+KONTEKSTI:
+Lauta: Maailmankartta
+Kaupunki, jossa pelaaja on: Tallinna
+Maa, jossa pelaaja on: Viro
+Näkymä: kartta
+Kortti, josta pelaaja kysyy: Taivaalta tuli kivi asutun kylän päälle, ja kesti kaksisataa vuotta ennen kuin kukaan uskoi sen
+Tietoruudun teksti: Saarenmaan Kaalissa on kuoppa, joka on täynnä vettä. Se on 110 metriä leveä ja 22 metriä syvä, ja sen ympärillä on kahdeksan pienempää, halkaisijaltaan kahdestatoista neljäänkymmeneen metriin — kaikki kilometrin säteellä. Ne syntyivät samana hetkenä. Meteori hajosi viiden ja kymmenen kilometrin korkeudella ja putosi palasina, ja törmäysenergia oli noin kahdeksankymmentä terajoulea eli suunnilleen sitä luokkaa kuin Hiroshiman pommi. Metsä paloi kuuden kilometrin säteellä.
+
+Poikkeuksellista ei ole kraatteri vaan yleisö. Useimmat törmäykset osuvat aavikolle, merelle tai jäätikölle; tämä osui alueelle, jolla asuttiin. Joku näki sen, ja jotkut selvisivät. Ajankohdan arviot vaihtelevat tuhansia vuosia, joten sitä ei kannata sanoa vuosilukuna — mutta paikka on ollut pitkään pyhä, ja kraatterin ympäriltä on kaivettu merkkejä siitä, että sinne tultiin. Tiede tuli perässä hitaasti: vielä 1900-luv…
+Isoisän matkakirjamerkintä: Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Murzuk — kaupunkilehti / Murzuk: Italian lippu nousee, ja jälleen laskee] Italia miehitti ottomaanien luovuttaman Tripolitanian 1912 ja ulotti valtansa Fezzaniin ja Murzukiin vuoteen 1914 mennessä; vanha ottomaanilinnoitus sai uuden varuskunnan italialaisen siirtomaahallinnon alle. Toinen maailmansota toi Murzukiin vielä yhden käänteen: 11. tammikuuta 1941 brittiläisen Long Range Desert Groupin ja Tšadista tulleiden vapaan Ranskan joukkojen isku-osasto hyökkäsi kaupungin italialaiselle lentotukikohdalle. Vanhaan linnaan linnoittautunut pieni italialaisvaruskunta antautui hyökkääjille, jotka tuhosivat lentokoneet ja tukikohdan ennen vetäytymistään aavikon yli takaisin liittoutuneiden linjoille.
+- [Libya — maalehti / Luonto: Tuuli, joka värjää Italian sateen] Libyan aavikolta puhaltaa tuuli, jota sanotaan täällä qibliyyksi, qiblan suunnasta tulevaksi, ja Euroopassa sirokoksi. Se yltää Pohjois-Afrikassa ja Etelä-Euroopassa hirmumyrskyn nopeuksiin, ja satakilometriset puuskat ovat tavallisimpia keväällä ja syksyllä, huipussaan maaliskuussa ja marraskuussa. Matkalla Välimeren yli tuuli kerää kosteutta, ja Etelä-Italiassa sataa niin sanottua veresadetta: pisaroiden mukana tulee alas Libyan punainen hiekka. Kun sirokko osuu nousuveden kanssa yksiin, Venetsian laguuniin nousee acqua alta. Pöly hankaa koneita ja tunkeutuu talojen sisään.
+AIEMPI KYSYMYS: Mistä marsipaani tehdään ja mistä se on lähtöisin?
+AIEMPI VASTAUS (Livia):
+Joo, makeaa asiaa. Marsipaani valmistetaan pääasiassa jauhetuista [[manteleista]] ja sokerista, joskus munanvalkuaisen tai sokerisiirapin kanssa. Alkuperästä ei olla yksimielisiä: [[Lyypekin]], [[Italian]] ja Espanjan on kaikkien esitetty olleen marsipaanin syntysija, eikä asiaa ole varmasti ratkaistu. Tallinnassa kerrotaan marsipaanin syntyneen vanhassa apteekissa, mutta se on pikemminkin paikallinen tarina kuin vahvistettu tieto.
+
+Marsipaani ei ole pulla, mutta minä en ole tässä niin tarkka. Tallinnan apteekeissa sitä on kuulemma myyty lääkkeeksi, ja parempaa reseptiä minä en tunne.
+KYSYMYS: Kerro lisää: Italian

@@ -1,0 +1,1277 @@
+### 1
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mitä nimi Suur Munamägi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Nimi tarkoittaa suomeksi suurta munamäkeä: viron kielessä suur on suuri, muna on muna ja mägi on mäki. Se on [[Viron]] ja koko [[Baltian]] korkein kohta, 318 metriä merenpinnasta, ja se sijaitsee [[Haanjan]] kylän lähellä Võrumaalla Viron kaakkoiskolkassa. Siitä, miksi juuri muna on päätynyt mäen nimeen, en ole varma. Mut onhan se hauska nimi.
+KYSYMYS: Kerro lisää: Viron
+
+### 2
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Helsinki — kohdekartta / Kohdekartta: Kantele] Kantele on Suomen vanhin oma soitin: puinen kaikukoppa, jonka yli on pingotettu kieliä, ja jota soitetaan sormin näppäillen. Kalevalan mukaan Väinämöinen teki ensimmäisen kanteleen hauen leukaluusta ja kielet hevosen jouhista — se on runoa eikä arkeologiaa, mutta se kertoo, mitä soittimesta ajateltiin: että se on tehty siitä, mitä on. Vanhimmissa kanteleissa oli viisi kieltä ja ne veistettiin yhdestä puukappaleesta. Nykyisessä konserttikanteleessa on 39 kieltä ja vipuja, joilla sävelkorkeutta muutetaan kesken soiton, ja pienintä viisikielistä opetellaan kouluissa. Soitin ei myöskään ole yksin: se kuuluu Baltian psalttereiden perheeseen yhdessä viron kandlen, latvian kokleen ja liettuan kank…
+AIEMPI KYSYMYS: Mitä nimi Suur Munamägi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Nimi tarkoittaa suomeksi suurta munamäkeä: viron kielessä suur on suuri, muna on muna ja mägi on mäki. Se on [[Viron]] ja koko [[Baltian]] korkein kohta, 318 metriä merenpinnasta, ja se sijaitsee [[Haanjan]] kylän lähellä Võrumaalla Viron kaakkoiskolkassa. Siitä, miksi juuri muna on päätynyt mäen nimeen, en ole varma. Mut onhan se hauska nimi.
+KYSYMYS: Kerro lisää: Baltian
+
+### 3
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+AIEMPI KYSYMYS: Mitä nimi Suur Munamägi tarkoittaa?
+AIEMPI VASTAUS (Livia):
+Kato, tän minä osaan. Nimi tarkoittaa suomeksi suurta munamäkeä: viron kielessä suur on suuri, muna on muna ja mägi on mäki. Se on [[Viron]] ja koko [[Baltian]] korkein kohta, 318 metriä merenpinnasta, ja se sijaitsee [[Haanjan]] kylän lähellä Võrumaalla Viron kaakkoiskolkassa. Siitä, miksi juuri muna on päätynyt mäen nimeen, en ole varma. Mut onhan se hauska nimi.
+KYSYMYS: Kerro lisää: Haanjan
+
+### 4
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+AIEMPI KYSYMYS: Millainen on Haanjan ylänkö?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Haanjan ylänkö on loivasti kumpuilevaa maastoa Viron kaakkoisosassa, ja sen korkeimpana kohtana kohoaa [[Suur Munamägi]]. Seutu on mäkistä, metsäistä ja järvistä, ja se poikkeaa selvästi suuresta osasta maata, joka on tasaista tai matalaa. Tarkkoja lukuja alueen koosta en ole varma, joten jätän ne mainitsematta; [[Võrumaan]] ja [[Latvian]] rajan tuntumassa maisema on kuitenkin juuri tällaista. Ylhäältä katsottuna se näyttää lähinnä vähän rypistyneeltä peitolta.
+KYSYMYS: Kerro lisää: Suur Munamägi
+
+### 5
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+AIEMPI KYSYMYS: Millainen on Haanjan ylänkö?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Haanjan ylänkö on loivasti kumpuilevaa maastoa Viron kaakkoisosassa, ja sen korkeimpana kohtana kohoaa [[Suur Munamägi]]. Seutu on mäkistä, metsäistä ja järvistä, ja se poikkeaa selvästi suuresta osasta maata, joka on tasaista tai matalaa. Tarkkoja lukuja alueen koosta en ole varma, joten jätän ne mainitsematta; [[Võrumaan]] ja [[Latvian]] rajan tuntumassa maisema on kuitenkin juuri tällaista. Ylhäältä katsottuna se näyttää lähinnä vähän rypistyneeltä peitolta.
+KYSYMYS: Kerro lisää: Võrumaan
+
+### 6
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Vapaudenpatsas] 1935 Riian keskustassa kohoaa 42 metriä korkea Vapaudenpatsas, joka pystytettiin vuonna 1935 muistoksi Latvian itsenäisyyssodassa 1918–1920 kaatuneille sotilaille. Patsaan huipulla seisoo Vapaus-niminen naishahmo, jota latvialaiset kutsuvat hellästi Mildaksi. Hän pitelee käsissään kolmea kultaista tähteä, jotka kuvaavat Latvian kolmea vanhaa maakuntaa: Vidzemeä, Latgalea ja Kuurinmaata. Patsaan kivi- ja graniittiosien veistämiseen kului yli 300 000 työtuntia – yhdeltä kivenveistäjältä olisi mennyt siihen yli sata vuotta! Patsas seisoo paikalla, jossa aiemmin oli Venäjän tsaari Pietari Suuren ratsastajapatsas. Kun Neuvostoliitto miehitti Latvian, monet pelkäsivät patsaan tuhoamista, mutta se…
+- [Riika — kohdekartta / Kohdekartta: Kolme veljestä] 1400-luvun loppu–1746 Riian vanhassa kaupungissa, kapealla Mazā Pils -kadulla, seisoo vierekkäin kolme erinäköistä taloa, joita kutsutaan Kolmeksi veljeksi. Ne ovat koko Riian vanhin säilynyt asuinrakennusten rivi. Vanhin veljeksistä on peräisin 1400-luvun lopulta, ja alun perin siellä oli vain yksi suuri huone sekä ullakko tavaroiden säilytystä varten. Keskimmäinen talo sai nykyisen ulkoasunsa vuonna 1646, mutta sen koristeellinen kivinen ovensuu lisättiin vasta sata vuotta myöhemmin, vuonna 1746. Nuorin veljeksistä rakennettiin 1600-luvun lopulla, ja se on kapea, koristeellinen barokkitalo. Sodan jälkeen talot olivat pahoin rapistuneet, mutta ne kunnostettiin 1950-luvulla. Vuonna 2020 Kol…
+AIEMPI KYSYMYS: Millainen on Haanjan ylänkö?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Haanjan ylänkö on loivasti kumpuilevaa maastoa Viron kaakkoisosassa, ja sen korkeimpana kohtana kohoaa [[Suur Munamägi]]. Seutu on mäkistä, metsäistä ja järvistä, ja se poikkeaa selvästi suuresta osasta maata, joka on tasaista tai matalaa. Tarkkoja lukuja alueen koosta en ole varma, joten jätän ne mainitsematta; [[Võrumaan]] ja [[Latvian]] rajan tuntumassa maisema on kuitenkin juuri tällaista. Ylhäältä katsottuna se näyttää lähinnä vähän rypistyneeltä peitolta.
+KYSYMYS: Kerro lisää: Latvian
+
+### 7
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Praha — kohdekartta / Kohdekartta: Petřínin näkötorni] 1891 Kun prahalaiset turistiseuran jäsenet kävivät Pariisin maailmannäyttelyssä vuonna 1889 ja näkivät vastavalmistuneen Eiffel-tornin, he innostuivat niin, että päättivät rakentaa Prahaan oman pienoisversion. Rahat kerättiin nopeasti, ja torni nousi Petřínin kukkulalle vain neljässä kuukaudessa vuonna 1891 suurta juhlanäyttelyä varten. Petřínin torni on 63,5 metriä korkea, mutta toisin kuin Eiffel-torni, sen jalusta on kahdeksankulmainen eikä neliönmuotoinen. Torniin nousee 299 porrasaskelmaa, jotka on rakennettu kaksoiskierteeksi: yksi kierre vie ylös ja toinen alas, joten kiipeäjät eivät koskaan törmää vastaantulijoihin. Alun perin tornissa oli kaasukäyttöinen hissi kuudelle hengelle, mu…
+- [Tampere — kohdekartta / Kohdekartta: Pyynikin näkötorni] 1929 Torni valmistui Pyynikinharjun laelle vuonna 1929 apulaiskaupunginarkkitehti Vilho Kolhon suunnitelmien mukaan. Se on 26 metriä korkea ja tehty Ahvenanmaalta louhitusta punagraniitista. Harjun laki on 152 metriä merenpinnasta, joten tornin tasanteelta näkyvät molemmat kaupungin järvet yhtä aikaa. Pyynikinharju on maailman korkein pitkittäisharju: se kohoaa 160 metriin merenpinnasta ja 80 metriä Pyhäjärven pintaa ylemmäs. Harju on soraa ja hiekkaa, ja sen rinteillä kasvaa vanhoja petäjiä, joiden juuret jäävät osittain ilmaan, kun hiekka vierii vuosien mittaan alaspäin. Tornin juurella toimii munkkikahvila, joka on ainakin yhtä kuuluisa kuin näköala. Sokerissa kieritetyt munkit paistetaa…
+AIEMPI KYSYMYS: Voiko Suur Munamäen huipulle nousta näkötorniin?
+AIEMPI VASTAUS (Livia):
+Ai tota. Kyllä, huipulla on [[näkötorni]], jonka ylätasanteelta avautuu näkymä ympäröivän [[Haanjan]] ylängön metsien ja järvien yli. Torni sopii kävijälle, joka haluaa nähdä Viron kaakkoiskolkan ylhäältä. Aukioloajoista ja pääsymaksusta en ole varma, joten ne kannattaa tarkistaa ennen matkaa.
+
+Minä en tornia tarvitse, mutta ymmärrän kyllä niitä, joilla ei ole siipiä. Aika pitkälle sieltä silti näkee, sanotaan.
+KYSYMYS: Kerro lisää: näkötorni
+
+### 8
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+AIEMPI KYSYMYS: Mitä kieltä Võrumaalla puhutaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Võrumaalla puhutaan viroa, kuten muuallakin Virossa, mutta alueella on myös oma kielensä: [[võron kieli]] on etelävirolainen kieli tai kielimuoto, joka eroaa selvästi [[yleisvirosta]]. Sitä käytetään edelleen Etelä-Virossa, ja siitä on julkaistu kirjoja ja lehtiä. Puhujien tarkasta määrästä en ole varma. Minä osaan vaan kuhertaa, joten muut kielet jää asiantuntijoille.
+KYSYMYS: Kerro lisää: võron kieli
+
+### 9
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+AIEMPI KYSYMYS: Mitä kieltä Võrumaalla puhutaan?
+AIEMPI VASTAUS (Livia):
+Joo, tän minä tiedän. Võrumaalla puhutaan viroa, kuten muuallakin Virossa, mutta alueella on myös oma kielensä: [[võron kieli]] on etelävirolainen kieli tai kielimuoto, joka eroaa selvästi [[yleisvirosta]]. Sitä käytetään edelleen Etelä-Virossa, ja siitä on julkaistu kirjoja ja lehtiä. Puhujien tarkasta määrästä en ole varma. Minä osaan vaan kuhertaa, joten muut kielet jää asiantuntijoille.
+KYSYMYS: Kerro lisää: yleisvirosta
+
+### 10
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kaupunkilehti / Musiikki: Kuoro, johon kuka tahansa voi liittyä] Laulujuhlaan ei tarvitse olla ammattilaulaja osallistuakseen: mukaan pääsevät koulujen, yliopistojen, työpaikkojen ja harrastuskuorojen jäsenet ympäri Latviaa, kunhan he läpäisevät paikallisen karsinnan ja harjoittelevat yhteisen ohjelmiston. Latvian nykyisessä, alle kahden miljoonan asukkaan maassa tuhannet ihmiset osallistuvat samaan juhlaan joka kerta. Moni osallistuja kuvailee kokemusta elämänsä vahvimmaksi yhteisöllisyyden hetkeksi: kun kolmekymmentätuhatta ääntä laulaa saman kansallislaulun yhtä aikaa Mežaparksin lavalla, ero yleisön ja esiintyjien välillä hämärtyy.
+- [Liettua — maalehti / Historia: Valtakunta ulottui mereltä merelle] 1430 — Liettuan suuriruhtinaskunta oli 1400-luvun alussa Euroopan suurin valtio. Suuriruhtinas Vytautas Suuri hallitsi aluetta, joka ulottui Itämereltä lähelle Mustaamerta ja kattoi nykyisen Valko-Venäjän, suuren osan Ukrainaa sekä palasia Puolaa, Latviaa ja Venäjää. Vuonna 1386 suuriruhtinas Jogaila meni naimisiin Puolan kuningattaren kanssa ja otti kasteen, ja maat liittyivät henkilöunioniin, joka näkyy tässä kartassa vierekkäisinä valtakuntina. Liettuasta tuli näin viimeinen pakanallinen valtio, joka kääntyi kristinuskoon Euroopassa.
+AIEMPI KYSYMYS: Mitkä kolme maata muodostavat Baltian?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Baltiaksi kutsutaan yleensä kolmea Itämeren itärannan maata: Viroa, [[Latviaa]] ja [[Liettuaa]]. Ne ovat naapureita pohjoisesta etelään siinä järjestyksessä, ja Viron korkein kohta Suur Munamägi on aivan Latvian rajan tuntumassa. Kaikki kolme maata kuuluvat [[Euroopan unioniin]]. Kolme maata, ja minä olen lentänyt niiden kaikkien yli.
+KYSYMYS: Kerro lisää: Latviaa
+
+### 11
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Kirjankantajat] Isoisäsi kuuli tässä kaupungissa neljää kieltä, ja yksi niistä oli sinä kesänä kielletty painokoneesta. Vuonna 1864 keisarikunta määräsi, että liettuaa ei saa painaa latinalaisin kirjaimin — kyrillisin sai, ja siihen jopa kannustettiin. Lähteet aloittavat kiellon vuodesta 1864 tai 1865 sen mukaan, lasketaanko alku hallinnollisesta määräyksestä vai sitä seuranneesta täydestä kiellosta; sitä ei kannata pyöristää, koska kyse oli juuri siitä, ettei kieltoa koskaan säädetty laiksi. Se ei toiminut. Kirjoja alettiin painaa rajan takana Itä-Preussissa ja aina Amerikassa asti, ja niitä kannettiin takaisin. Kantajia sanottiin knygnešiai, kirjankantajat: he kulkivat öisin metsäpolkuja säkit selässä, j…
+- [Vilna — kohdekartta / Kohdekartta: Boratynka] 1659–1668 Kun kassa on tyhjä, voi aina lyödä lisää rahaa — kunhan ei kysy, mitä raha sen jälkeen on arvoltaan. Puola-Liettua kokeili tätä 1600-luvulla kuparilla, ja kansa antoi kolikolle pilkkanimen, joka on kestänyt pidempään kuin kolikon ostovoima.
+AIEMPI KYSYMYS: Mitkä kolme maata muodostavat Baltian?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Baltiaksi kutsutaan yleensä kolmea Itämeren itärannan maata: Viroa, [[Latviaa]] ja [[Liettuaa]]. Ne ovat naapureita pohjoisesta etelään siinä järjestyksessä, ja Viron korkein kohta Suur Munamägi on aivan Latvian rajan tuntumassa. Kaikki kolme maata kuuluvat [[Euroopan unioniin]]. Kolme maata, ja minä olen lentänyt niiden kaikkien yli.
+KYSYMYS: Kerro lisää: Liettuaa
+
+### 12
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suur Munamägi (luonto · vuori)
+Tietoruudun teksti: Suur Munamägi on Viron ja koko Baltian korkein kohta, 318 metriä merenpinnasta. Se on Haanjan kylän lähellä Võrumaalla Viron kaakkoiskolkassa, aivan Latvian ja Venäjän rajojen tuntumassa. Nimi tarkoittaa suomeksi suurta munamäkeä, ja ympäröivä Haanjan ylänkö on loivasti kumpuilevaa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Winnipeg — kohdekartta / Kohdekartta: Union Station] 1911 Main Streetin varrella oleva Union Station avattiin 1911, ja sen suunnitteli newyorkilainen toimisto Warren and Wetmore. Beaux-arts-tyylisessä talossa on kolme laituria ja kahdeksan raidetta, ja siitä lähtevät yhä Kanadan halki kulkevat kaukojunat. Asemalla, raiteilla yksi ja kaksi, on rautatiemuseo, ja sen tunnetuin kappale on Countess of Dufferin — ensimmäinen höyryveturi, joka on kulkenut Kanadan preeriamaakunnissa. Baldwin Locomotive Works rakensi sen 1872 Northern Pacific Railwaylle, ja 1877 se myytiin 9 700 dollarilla rautatieurakoitsija Joseph Whiteheadille. Veturi lastattiin proomulle Minnesotassa ja hinattiin Punaistajokea pohjoiseen; se saapui St. Bonifaceen 9. lokakuuta 1877…
+- [Latvia — maalehti / Ruoka: Piirakka jota kutsuttiin maailman rumimmaksi] 1600-luku — Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, täytetään ohuella perunasoseella ja päälle levitetään paksu kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti leiponeet suitit, pieni katolinen kansanryhmä muutoin luterilaisessa Kuurinmaassa. Euroopan unioni myönsi sklandrausiselle aidon perinteisen tuotteen suojan vuonna 2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman huonoiten arvostelluista ruoista, vaikka suitit itse ovat siitä edelleen ylpeitä.
+AIEMPI KYSYMYS: Mitkä kolme maata muodostavat Baltian?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Baltiaksi kutsutaan yleensä kolmea Itämeren itärannan maata: Viroa, [[Latviaa]] ja [[Liettuaa]]. Ne ovat naapureita pohjoisesta etelään siinä järjestyksessä, ja Viron korkein kohta Suur Munamägi on aivan Latvian rajan tuntumassa. Kaikki kolme maata kuuluvat [[Euroopan unioniin]]. Kolme maata, ja minä olen lentänyt niiden kaikkien yli.
+KYSYMYS: Kerro lisää: Euroopan unioniin
+
+### 13
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iqaluit — kaupunkilehti / Iqaluit: Vuosi 1873: lahti, joka ei ollutkaan salmi] Kaksisataa kahdeksankymmentä vuotta Frobisherin jälkeen amerikkalainen Charles Francis Hall talvehti valaanpyytäjän mukana Baffininsaarella. Paikalliset inuiitit kertoivat hänelle, missä Frobisherin kaivosyrityksen jäännökset olivat — tieto oli kulkenut suullisena perimätietona koko sen ajan. Oppaikseen Hall sai aviopari Ipirvikin ja Taqulittuqin, ja 1861 hänestä tuli ensimmäinen ei-alkuperäinen ihminen, joka tajusi, ettei Frobisherin salmi ole salmi vaan umpilahti. Kartta korjattiin. Hall itse kuoli marraskuussa 1871 Grönlannissa oudoissa oloissa, joten isoisän matkavuonna kartta oli kaksi vuotta vanha ja sen tekijä kaksi vuotta kuollut.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Mmm— Itämeri on lähes suljettu allas, joka yhdistyy valtamereen vain kapeiden ja matalien [[Tanskan salmien]] kautta [[Pohjanmereen]], joten suolaista vettä virtaa sisään vähän. Samaan aikaan joet ja sadevesi tuovat mereen runsaasti makeaa vettä, ja siksi suolapitoisuus on selvästi valtamerten arvoa pienempi. Suolaisuus laskee yleensä mentäessä pohjoiseen ja itään, ja Itämeri on yksi maailman suurimmista murtovesialtaista. Meri, joka ei osaa päättää, kumpaa se on.
+KYSYMYS: Kerro lisää: Tanskan salmien
+
+### 14
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+AIEMPI KYSYMYS: Miksi Itämeren vesi on murtovettä?
+AIEMPI VASTAUS (Livia):
+Mmm— Itämeri on lähes suljettu allas, joka yhdistyy valtamereen vain kapeiden ja matalien [[Tanskan salmien]] kautta [[Pohjanmereen]], joten suolaista vettä virtaa sisään vähän. Samaan aikaan joet ja sadevesi tuovat mereen runsaasti makeaa vettä, ja siksi suolapitoisuus on selvästi valtamerten arvoa pienempi. Suolaisuus laskee yleensä mentäessä pohjoiseen ja itään, ja Itämeri on yksi maailman suurimmista murtovesialtaista. Meri, joka ei osaa päättää, kumpaa se on.
+KYSYMYS: Kerro lisää: Pohjanmereen
+
+### 15
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+AIEMPI KYSYMYS: Miksi Viron saaret ovat niin matalia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viron länsipuolisen saariston, esimerkiksi [[Saaremaan]] ja [[Hiiumaan]], mataluus johtuu pitkälti siitä, että maa on jääkauden jälkeen kohonnut ja nousee yhä. [[Maannousu]] on Virossa lähteiden mukaan muutaman millimetrin vuodessa, mutta tarkasta luvusta en ole varma. Pohjana on loivasti kaltevaa kalkkikiveä, joten maasto ei kohoa jyrkiksi mäiksi, ja matala vesi jäätyy tavallisenakin talvena helposti. Saaret ovat siis tavallaan yhä nousemassa merestä [[jääkauden]] jäljiltä.
+
+Saaret ovat siis yhä nousemassa merestä, ja se on minusta rohkaisevaa. Joskus pitää vain odottaa.
+KYSYMYS: Kerro lisää: Saaremaan
+
+### 16
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+AIEMPI KYSYMYS: Miksi Viron saaret ovat niin matalia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viron länsipuolisen saariston, esimerkiksi [[Saaremaan]] ja [[Hiiumaan]], mataluus johtuu pitkälti siitä, että maa on jääkauden jälkeen kohonnut ja nousee yhä. [[Maannousu]] on Virossa lähteiden mukaan muutaman millimetrin vuodessa, mutta tarkasta luvusta en ole varma. Pohjana on loivasti kaltevaa kalkkikiveä, joten maasto ei kohoa jyrkiksi mäiksi, ja matala vesi jäätyy tavallisenakin talvena helposti. Saaret ovat siis tavallaan yhä nousemassa merestä [[jääkauden]] jäljiltä.
+
+Saaret ovat siis yhä nousemassa merestä, ja se on minusta rohkaisevaa. Joskus pitää vain odottaa.
+KYSYMYS: Kerro lisää: Hiiumaan
+
+### 17
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+AIEMPI KYSYMYS: Miksi Viron saaret ovat niin matalia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viron länsipuolisen saariston, esimerkiksi [[Saaremaan]] ja [[Hiiumaan]], mataluus johtuu pitkälti siitä, että maa on jääkauden jälkeen kohonnut ja nousee yhä. [[Maannousu]] on Virossa lähteiden mukaan muutaman millimetrin vuodessa, mutta tarkasta luvusta en ole varma. Pohjana on loivasti kaltevaa kalkkikiveä, joten maasto ei kohoa jyrkiksi mäiksi, ja matala vesi jäätyy tavallisenakin talvena helposti. Saaret ovat siis tavallaan yhä nousemassa merestä [[jääkauden]] jäljiltä.
+
+Saaret ovat siis yhä nousemassa merestä, ja se on minusta rohkaisevaa. Joskus pitää vain odottaa.
+KYSYMYS: Kerro lisää: Maannousu
+
+### 18
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vladivostok — kohdekartta / Kohdekartta: Arsenjevin museo] perustettu 1884 Kaukoidän ensimmäinen kotiseutumuseo sai alkunsa 18. huhtikuuta 1884, kun Amurinmaan tutkimusseuran säännöt vahvistettiin, ja ovet avautuivat yleisölle lokakuussa 1890. Vuonna 1945 museo nimettiin Vladimir Arsenjevin, Ussurinmaan tutkijan ja Dersu Uzalan kirjoittajan mukaan — hänen tarinansa on lehden taigasivulla. Kokoelmissa on seudun tutkijoiden, muun muassa Prževalskin, aineistoja, jääkauden fossiileja, 1100-luvun ylimyshauta ja Bohain valtakunnan hallitsijan peili; täytetyt tiikeri ja karhu ovat museon kuuluisin näky. Vuonna 2015 se oli Venäjän katsotuin aluemuseo, yli 421 000 kävijää, ja vuonna 2019 siitä tehtiin liittovaltion museo. Rakennus on tarina itsessään: kaupp…
+- [Whitehorse — kohdekartta / Kohdekartta: Beringia-keskus] 1997 Keskus avattiin 1997 Alaska Highwayn kilometrillä 1423 ja kertoo Beringiasta — 3 200 kilometrin levyisestä maa-alueesta, joka ulottui Siperian Kolyma-joelta Kanadan Mackenzie-joelle. Alue säilyi jääkaudella jäätiköitymättä, koska ilmasto oli kuiva ja lunta satoi vähän. Juuri siksi Beringia kiinnostaa arkeologeja ja paleontologeja: se oli eläinten ja ihmisten kulkureitti Aasian ja Amerikan välillä. Liikennettä oli molempiin suuntiin. Idän suuntaan tulivat mastodontit, mammutit, hirvieläimet, biisonit, lampaat ja myskihärät; länteen menivät hevoseläimet ja kamelit. Sanan Beringia keksi ruotsalainen kasvitieteilijä Eric Hultén vuonna 1937. Keskus on myös tutkimuslaitos. Sen aineistossa on…
+AIEMPI KYSYMYS: Miksi Viron saaret ovat niin matalia?
+AIEMPI VASTAUS (Livia):
+Katotaas. Viron länsipuolisen saariston, esimerkiksi [[Saaremaan]] ja [[Hiiumaan]], mataluus johtuu pitkälti siitä, että maa on jääkauden jälkeen kohonnut ja nousee yhä. [[Maannousu]] on Virossa lähteiden mukaan muutaman millimetrin vuodessa, mutta tarkasta luvusta en ole varma. Pohjana on loivasti kaltevaa kalkkikiveä, joten maasto ei kohoa jyrkiksi mäiksi, ja matala vesi jäätyy tavallisenakin talvena helposti. Saaret ovat siis tavallaan yhä nousemassa merestä [[jääkauden]] jäljiltä.
+
+Saaret ovat siis yhä nousemassa merestä, ja se on minusta rohkaisevaa. Joskus pitää vain odottaa.
+KYSYMYS: Kerro lisää: jääkauden
+
+### 19
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+AIEMPI KYSYMYS: Mikä on laivamato?
+AIEMPI VASTAUS (Livia):
+Ai se. Laivamato on nimestään huolimatta simpukka, ei mato. Se porautuu puuhun ja syö sitä, ja se on tuhonnut puulaivoja ja satamarakenteita yleensä suolaisemmissa vesissä. Itämeren vähäsuolainen vesi ei sovi sille, ja se on yksi syy siihen, että vanhat [[puuhylyt]] säilyvät meren pohjassa paremmin kuin valtamerissä. Harhaanjohtava nimi, mut onneksi laivamato pysyy poissa [[Itämeren]] kylmistä vesistä.
+KYSYMYS: Kerro lisää: puuhylyt
+
+### 20
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mikä on laivamato?
+AIEMPI VASTAUS (Livia):
+Ai se. Laivamato on nimestään huolimatta simpukka, ei mato. Se porautuu puuhun ja syö sitä, ja se on tuhonnut puulaivoja ja satamarakenteita yleensä suolaisemmissa vesissä. Itämeren vähäsuolainen vesi ei sovi sille, ja se on yksi syy siihen, että vanhat [[puuhylyt]] säilyvät meren pohjassa paremmin kuin valtamerissä. Harhaanjohtava nimi, mut onneksi laivamato pysyy poissa [[Itämeren]] kylmistä vesistä.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 21
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kohdekartta / Kohdekartta: Vasa-museo] 1628 Vasa oli komea, 64-tykkinen sotalaiva, mutta se kaatui ja upposi jo neitsytmatkallaan 10. elokuuta 1628 — vain 1 300 metrin päässä satamasta. Tuulenpuuska kallisti laivan kyljelleen, vesi tulvi sisään avoimista tykkiluukuista, ja noin 30 ihmistä hukkui. Laiva oli liian epävakaa: yläosat olivat liian raskaita, ja kannen palkit oli tehty liian isoiksi. Laiva nostettiin vedestä vasta 1961, yli 330 vuotta myöhemmin, lähes ehjänä. Vasan runkoa koristaa lähes 500 puuveistosta. Museo avattiin 15. kesäkuuta 1990, ja siitä lähtien laivaa on käynyt katsomassa jo yli 45 miljoonaa ihmistä.
+AIEMPI KYSYMYS: Miksi Vasa kaatui neitsytmatkallaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Vasa]] kaatui 10. elokuuta 1628 Tukholman edustalla vain reilun kilometrin purjehduksen jälkeen. Lähteiden mukaan laiva oli liian kapea ja yläpainoinen: runko oli korkea, tykkikansia oli kaksi ja painolastia liian vähän, joten tuulenpuuska kallisti sen vaaraan. Tapahtuma oli yli nelisataa vuotta sitten, ja laiva nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä [[Tukholman]] satamassa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Vasa
+
+### 22
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tukholma — kaupunkilehti / Tukholma: Martin piirsi Tukholman ennen valokuvaa] Elias Martin oppi ammattinsa Lontoossa, jossa hän asui kaksitoista vuotta ja opetteli akvatinnan — tekniikan, jolla kuparilevystä saa vesivärimäisen sävyn. Kotiin palattuaan 1780 hän kääntyi kaupunkiin, jota kukaan ei ollut piirtänyt sellaisenaan: satamaan, toreille ja työn ääreen. Veli Johan Fredrik kaiversi kuvat levyiksi, ja niitä myytiin sarjoina. Ne ovat tarkin näkymä Tukholmaan ennen valokuvaa.
+AIEMPI KYSYMYS: Miksi Vasa kaatui neitsytmatkallaan?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. [[Vasa]] kaatui 10. elokuuta 1628 Tukholman edustalla vain reilun kilometrin purjehduksen jälkeen. Lähteiden mukaan laiva oli liian kapea ja yläpainoinen: runko oli korkea, tykkikansia oli kaksi ja painolastia liian vähän, joten tuulenpuuska kallisti sen vaaraan. Tapahtuma oli yli nelisataa vuotta sitten, ja laiva nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä [[Tukholman]] satamassa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Tukholman
+
+### 23
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Kuka oli Kalevipoeg?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kalevipoeg on Viron kansalliseepoksen jättiläiskuningas. Lääkäri ja kansanrunouden kerääjä [[Friedrich Reinhold Kreutzwald]] kokosi eepoksen kansantarinoista ja julkaisi sen jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittaisessa runoelmassa sankari kyntää, taistelee ja joutuu lopulta manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen [[Kalevala]] ja samasta kansallisen heräämisen hengestä. Jättiläisen kanssa en kilpaile edes siivenkärjissä.
+KYSYMYS: Kerro lisää: Friedrich Reinhold Kreutzwald
+
+### 24
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Itämeri (meri)
+Tietoruudun teksti: Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja Ruotsi, ja se on maailman suurin murtovesiallas. Viron rannikko on kahden lahden välissä: pohjoisessa Suomenlahti, etelässä Riianlahti. Maan länsipuolinen matala saaristo kuuluu siihen noin 45 prosenttiin merestä, joka on tavallisenakin talvena jään peitossa.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Kulttuuri: Eepos, jonka sankari on jättiläinen] 1857–1861 — Kalevipoeg on Viron kansalliseepos, jonka lääkäri ja kansanrunouden kerääjä Friedrich Reinhold Kreutzwald kokosi kansantarinoista ja julkaisi jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittainen runoelma kertoo jättiläiskuningas Kalevipojasta, joka kyntää, taistelee ja lopulta joutuu manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen Kalevala ja samasta kansallisen heräämisen hengestä, ja siitä tuli nopeasti koko kansan yhteinen tarina koulukirjoista taidemaalauksiin. Kalevipojan hahmo elää yhä: hänen nimeään kantavat niin jäätä murtava jäänmurtaja kuin lukuisat patsaat ja kadunnimet ympäri Viroa.
+AIEMPI KYSYMYS: Kuka oli Kalevipoeg?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: Kalevipoeg on Viron kansalliseepoksen jättiläiskuningas. Lääkäri ja kansanrunouden kerääjä [[Friedrich Reinhold Kreutzwald]] kokosi eepoksen kansantarinoista ja julkaisi sen jaksoina vuosina 1857–1861. Yli 19 000 säkeen mittaisessa runoelmassa sankari kyntää, taistelee ja joutuu lopulta manalan portille kätensä juuttuessa kiveen. Teos syntyi samaan aikaan kuin Suomen [[Kalevala]] ja samasta kansallisen heräämisen hengestä. Jättiläisen kanssa en kilpaile edes siivenkärjissä.
+KYSYMYS: Kerro lisää: Kalevala
+
+### 25
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Tallinna — kohdekartta / Kohdekartta: E-valtio] Viro oli vuonna 2005 maailman ensimmäinen maa, jossa sai äänestää vaaleissa internetissä. Äänestäjä tunnistautuu sirullisella henkilökortilla, joka on pakollinen jokaiselle virolaiselle viidestätoista ikävuodesta alkaen. Vuoden 2023 parlamenttivaaleissa yli puolet äänistä annettiin verkossa. Sama kortti ei ole vain äänestyskortti: sillä haetaan resepti apteekista, allekirjoitetaan sopimus ja perustetaan yritys. Ja sitten on vielä yksi kerros. Joulukuun ensimmäisenä päivänä 2014 alkoi e-residenttiohjelma, joka antaa saman sirukortin myös ulkomaalaiselle, joka ei asu maassa lainkaan — hän voi allekirjoittaa asiakirjoja ja perustaa yrityksen käymättä koskaan paikalla. Se on sama vanha hansa-aj…
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi Tallinnasta tuli hansakaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tallinna sijaitsee Suomenlahden etelärannalla hyvän sataman äärellä, kauppareitin varrella Länsi-Euroopan ja Venäjän kaupunkien välillä. [[Hansa]] oli pohjoissaksalaisten kauppakaupunkien ja kauppiaiden verkosto, ja Tallinna toimi sen välittäjänä: länsimaisia tavaroita vaihdettiin itäisiin tuotteisiin, kuten turkiksiin ja vahaan, ja kauppiaat tulivat muun muassa [[Lyypekistä]] ja [[Novgorodista]]. Kaupunki käytti Lyypekin kaupunkioikeutta, ja tarkasta Hansaan liittymisen ajankohdasta en ole varma. Ylhäältä katsoen sijainti on kyllä hyvä, sen minä myönnän.
+KYSYMYS: Kerro lisää: Hansa
+
+### 26
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Saksa — maalehti / Historia: Kauppiaiden liitto hallitsi Itämerta] keskiaika — Keskiajalla Itämerta ei hallinnut kuningas vaan kauppiaiden kerho. Hansaliittoon kuului parhaimmillaan lähes kaksisataa kaupunkia Lontoosta Novgorodiin, ja sitä johdettiin Lyypekistä. Hansan laiva oli koggi: pyöreämahainen puualus, joka kuljetti suolaa, silliä, viljaa ja kankaita. Liitolla oli omat lait ja omat kauppatalot vieraissa satamissa, ja kun joku kuningas kiusasi kauppiaita, Hansa saattoi julistaa koko maan saartoon — ja voitti kerran Tanskan sodassakin. Moni Pohjois-Saksan kaupunki kutsuu itseään hansakaupungiksi vielä tänäänkin.
+AIEMPI KYSYMYS: Miksi Tallinnasta tuli hansakaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tallinna sijaitsee Suomenlahden etelärannalla hyvän sataman äärellä, kauppareitin varrella Länsi-Euroopan ja Venäjän kaupunkien välillä. [[Hansa]] oli pohjoissaksalaisten kauppakaupunkien ja kauppiaiden verkosto, ja Tallinna toimi sen välittäjänä: länsimaisia tavaroita vaihdettiin itäisiin tuotteisiin, kuten turkiksiin ja vahaan, ja kauppiaat tulivat muun muassa [[Lyypekistä]] ja [[Novgorodista]]. Kaupunki käytti Lyypekin kaupunkioikeutta, ja tarkasta Hansaan liittymisen ajankohdasta en ole varma. Ylhäältä katsoen sijainti on kyllä hyvä, sen minä myönnän.
+KYSYMYS: Kerro lisää: Lyypekistä
+
+### 27
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Miksi Tallinnasta tuli hansakaupunki?
+AIEMPI VASTAUS (Livia):
+Annas ku mietin. Tallinna sijaitsee Suomenlahden etelärannalla hyvän sataman äärellä, kauppareitin varrella Länsi-Euroopan ja Venäjän kaupunkien välillä. [[Hansa]] oli pohjoissaksalaisten kauppakaupunkien ja kauppiaiden verkosto, ja Tallinna toimi sen välittäjänä: länsimaisia tavaroita vaihdettiin itäisiin tuotteisiin, kuten turkiksiin ja vahaan, ja kauppiaat tulivat muun muassa [[Lyypekistä]] ja [[Novgorodista]]. Kaupunki käytti Lyypekin kaupunkioikeutta, ja tarkasta Hansaan liittymisen ajankohdasta en ole varma. Ylhäältä katsoen sijainti on kyllä hyvä, sen minä myönnän.
+KYSYMYS: Kerro lisää: Novgorodista
+
+### 28
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Kuinka syvä Suomenlahti on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Suomenlahti on [[Itämeren]] muihin osiin verrattuna matala: keskisyvyys on lähteiden mukaan noin neljäkymmentä metriä, ja itäosa [[Nevan]] suun lähellä on selvästi matalampi kuin läntinen osa. Tarkasta syvimmästä kohdasta en ole varma. Matalan lahden vesi vaihtuu hitaasti, ja siksi Itämeren ympäristöongelmat näkyvät siinä erityisen selvästi. Syvyyksiin minä en oo koskaan sukeltanut, ylhäältä näkee kyl riittävästi.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 29
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Pietari — kaupunkilehti / Pietari: Kaupunki rakennettiin suolle] Vuonna 1703 Nevan suistossa ei ollut kaupunkia, vain matalia soisia saaria ja hävitetyn ruotsalaislinnoituksen paikka. Pietari Suuri aloitti rakentamisen linnoituksesta ja antoi paikalle hollanninkielisen nimen Sankt Pieterburg — ei itsensä vaan apostoli Pietarin mukaan. Vuonna 1712 hän julisti keskeneräisen kaupungin pääkaupungiksi ja käski aatelisten ja kauppiaiden muuttaa Moskovasta tänne rakentamaan uudet talonsa. Nimi on vaihtunut sen jälkeen kolmesti: Petrograd 1914, Leningrad 1924, Pietari taas 1991.
+- [Pietari — kaupunkilehti / Historian hetki] Nevan suiston soisella saarella mitattiin toukokuussa 1703 kuuden bastionin linnoitusta ruotsalaisia vastaan — kukaan lapiomiehistä ei tiennyt seisovansa tulevan pääkaupungin keskustassa.
+- [Pietari — kaupunkilehti / Pietari] Kaupunkia ei ollut vielä vuonna 1703: se rakennettiin tyhjästä Nevan soisille saarille, vaihtoi nimeä kolme kertaa ja pitää yhä kuuttakymmentä kissaa töissä.
+AIEMPI KYSYMYS: Kuinka syvä Suomenlahti on?
+AIEMPI VASTAUS (Livia):
+Tuota niin. Suomenlahti on [[Itämeren]] muihin osiin verrattuna matala: keskisyvyys on lähteiden mukaan noin neljäkymmentä metriä, ja itäosa [[Nevan]] suun lähellä on selvästi matalampi kuin läntinen osa. Tarkasta syvimmästä kohdasta en ole varma. Matalan lahden vesi vaihtuu hitaasti, ja siksi Itämeren ympäristöongelmat näkyvät siinä erityisen selvästi. Syvyyksiin minä en oo koskaan sukeltanut, ylhäältä näkee kyl riittävästi.
+KYSYMYS: Kerro lisää: Nevan
+
+### 30
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Riian tuomiokirkko] 1211 Riian tuomiokirkko on Baltian maiden suurin keskiaikainen kirkko. Sen ensimmäinen kivi muurattiin jo vuonna 1211 piispa Albertin toimesta, lähelle Väinäjoen rantaa. Tiilistä muurattu punertava kirkko näkyy kauas, ja sen tornin huipulla pyörii viiri, jota riikalaiset ovat vuosisatoja käyttäneet tuulen – ja tarinoiden mukaan onnenkin – tarkkailuun. Kirkon sisällä soi yksi Euroopan suurimmista urkuista: yli 6700 pilliä käsittävä soitin valmistui vuonna 1883, ja sitä soitettiin ensi kertaa tammikuussa 1884. Urkuja voi soittaa neljällä eri näppäimistöllä yhtä aikaa. Neuvostoaikana kirkossa ei saanut pitää jumalanpalveluksia viiteenkymmeneen vuoteen – tilassa toimi sen sijaan konserttisali j…
+- [Riika — kaupunkilehti / Vanhakaupunki: Kolme veljestä kolmelta vuosisadalta] Mazā Pils -kadulla seisoo vierekkäin kolme kapeaa taloa, joita sanotaan Kolmeksi veljekseksi. Ne ovat Riian vanhin säilynyt asuintalojen ryhmä. Valkoinen veli on rakennettu 1400-luvun lopulla, keltaisen julkisivussa lukee vuosiluku 1646, ja kolmas valmistui vasta 1700-luvun alussa. Kaikkien päätyseinä on kadulle päin, kuten Itämeren kauppakaupungeissa oli tapana. Talot korjattiin 1950-luvulla, ja nykyään niissä toimii arkkitehtuurimuseo.
+- [Riika — kaupunkilehti / Riika: Torikatot olivat ilmalaivojen halleja] Riian keskustorin viisi hallia rakennettiin 1924–1930 saksalaisten zeppelin-ilmalaivojen hallien teräsrungoista. Rungot tuotiin Vaiņodesta ja pystytettiin joen rantaan. Toria on 72 300 neliömetriä ja myyntipisteitä yli 3 000 — se on yhä Euroopan suurimpia.
+- [Riika — kaupunkilehti / Vanhakaupunki] Riian vanhassakaupungissa kannattaa katsoa ylös. Julkisivut ja katonharjat kertovat, ketkä talon rakensivat ja kenen kanssa he olivat riidoissa.
+AIEMPI KYSYMYS: Mikä oli Baltian ketju?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tärkeä. Baltian ketju oli rauhanomainen mielenilmaus 23. elokuuta 1989, jossa noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä Tallinnasta [[Riian]] kautta Vilnaan, yli kuudensadan kilometrin matkalla. Se järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun [[Neuvostoliitto]] ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Ketju vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi televisiossa kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä. Rauhanomainen mielenilmaus, siinä serkkuni olisi ollut kotonaan — kaukainen serkku, mut silti.
+KYSYMYS: Kerro lisää: Riian
+
+### 31
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kaupunkilehti / Historia: Helsinki näytteli Neuvostoliittoa] Kylmän sodan aikana länsimaisia kuvausryhmiä ei päästetty kuvaamaan Moskovaan, joten Neuvostoliitto piti kuvata muualla. Helsinki kelpasi sijaiseksi: keskusta on Carl Ludvig Engelin piirtämää empireä ja Katajanokalla kohoaa ortodoksinen katedraali. Rikoselokuva Gorky Park (1983) kuvattiin pääosin Helsingissä, ja Kaisaniemen puisto sai esittää Moskovan nimikkopuistoa. Reds-elokuvan ryhmä taas odotti Helsingissä lunta.
+AIEMPI KYSYMYS: Mikä oli Baltian ketju?
+AIEMPI VASTAUS (Livia):
+No niin, tämä on tärkeä. Baltian ketju oli rauhanomainen mielenilmaus 23. elokuuta 1989, jossa noin kaksi miljoonaa ihmistä tarttui toisiaan käsistä Tallinnasta [[Riian]] kautta Vilnaan, yli kuudensadan kilometrin matkalla. Se järjestettiin täsmälleen viisikymmentä vuotta sen jälkeen, kun [[Neuvostoliitto]] ja natsi-Saksa olivat salaisessa sopimuksessa jakaneet Baltian maat keskenään. Ketju vaati Viron, Latvian ja Liettuan miehitysten päättämistä, ja tapahtuma näkyi televisiossa kaikkialla maailmassa. Kaksi vuotta myöhemmin kaikki kolme maata olivat jälleen itsenäisiä. Rauhanomainen mielenilmaus, siinä serkkuni olisi ollut kotonaan — kaukainen serkku, mut silti.
+KYSYMYS: Kerro lisää: Neuvostoliitto
+
+### 32
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Magadan — kohdekartta / Kohdekartta: Nagajevanlahti] Jeannette Harbour 1852–1869 Nagajevanlahti on Tauinlahden osa Ohotanmeren pohjoisosassa. Se on 14,5 kilometriä pitkä ja suultaan 6,4 kilometriä leveä, ja sitä on kutsuttu koko Ohotanmeren parhaaksi ankkuripaikaksi. Jäätä lahdella on marraskuun lopulta kesäkuun puoliväliin. Kaupunki ja sen satama ovat lahden perukassa Staritskin niemimaan kannaksella. Lahdella on kaksi nimeä ja kaksi tarinaa. Virallinen nimi tulee amiraali Aleksei Nagajevilta (1704–1781), joka oli hydrografi ja kartantekijä ja jonka Beringinmeren ja Itämeren kartastot ilmestyivät vuonna 1752; niitä käytettiin vielä viisikymmentä vuotta myöhemmin, vaikka niissä ei ollut astekoordinaatistoa lainkaan. Toinen nimi on amerikkalai…
+AIEMPI KYSYMYS: Jäätyykö Suomenlahti talvisin?
+AIEMPI VASTAUS (Livia):
+Kas vaan. Suomenlahti jäätyy talvisin ainakin osittain: rannikon edustat ja matalat lahdenperukat jäätyvät lähes joka talvi, ja ankarina talvina jää voi peittää suuren osan lahdesta. Jään määrä vaihtelee paljon vuodesta toiseen, ja leutoina talvina avovettä on enemmän. Talviliikenne pidetään käynnissä [[jäänmurtajien]] avulla, ja jäätä esiintyy myös muualla [[Itämeren]] pohjoisilla ja itäisillä osilla.
+
+Jäällä kävely on ihmisten laji, minä lennän mieluummin. Pakkasella siivet kyllä jäätyvät, mutta lämmin pulla auttaa aika pitkälle.
+KYSYMYS: Kerro lisää: jäänmurtajien
+
+### 33
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+AIEMPI KYSYMYS: Mistä Neva-joki virtaa Suomenlahteen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Neva virtaa [[Laatokasta]] Suomenlahteen ja laskee lahden itäpäähän [[Pietarin]] kohdalla. Joki on lyhyt mutta vesirikas, koska Laatoka kerää vetensä laajalta alueelta. Pietari perustettiin Nevan suistoon 1700-luvun alussa, ja kaupunki on yhä lahden itäisin suurkaupunki. Pöllö on matkoilla, mut lyhyen joen minä kyllä kerron.
+KYSYMYS: Kerro lisää: Laatokasta
+
+### 34
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Suomenlahti (meri)
+Tietoruudun teksti: Suomenlahti on Itämeren itäisin haara. Se ulottuu Suomen ja Viron välissä itään Pietariin asti, jonne Neva laskee. Lahden rannoilla ovat myös Helsinki ja Tallinna, ja koska lahti on matala, Itämeren ympäristöongelmat näkyvät siinä kaikkein selvimmin.
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Riika — kohdekartta / Kohdekartta: Pyhän Pietarin kirkko] 1209–1746 Pyhän Pietarin kirkko mainitaan Riian asiakirjoissa jo vuonna 1209, ja se on yksi kaupungin vanhimmista rakennuksista. Sen torni on ollut vuosisatojen ajan Riian korkein rakennelma – mutta myös yksi onnettomimmista: torni on romahtanut ja palanut useita kertoja historian aikana. Vuonna 1666 aiempi 136 metriä korkea puutorni romahti ja surmasi kahdeksan ihmistä. Uusi torni valmistui 1690, ja se oli 148 metriä korkea – tuolloin koko Euroopan korkein puurakennelma! Salama tuhosi tornin taas vuonna 1721, ja seuraava, matalampi torni valmistui vasta 1746. Toisessa maailmansodassa vuonna 1941 tykistö tuhosi koko kirkon, ja nykyinen torni valmistui jälleenrakennettuna vasta 1970-luvulla.…
+AIEMPI KYSYMYS: Mistä Neva-joki virtaa Suomenlahteen?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Neva virtaa [[Laatokasta]] Suomenlahteen ja laskee lahden itäpäähän [[Pietarin]] kohdalla. Joki on lyhyt mutta vesirikas, koska Laatoka kerää vetensä laajalta alueelta. Pietari perustettiin Nevan suistoon 1700-luvun alussa, ja kaupunki on yhä lahden itäisin suurkaupunki. Pöllö on matkoilla, mut lyhyen joen minä kyllä kerron.
+KYSYMYS: Kerro lisää: Pietarin
+
+### 35
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Kuka perusti yliopiston ja milloin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Tartun yliopiston perusti Ruotsin kuningas [[Kustaa II Aadolf]], joka allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken kolmikymmenvuotisen sodan. Ensimmäinen kansleri oli vapaaherra [[Johan Skytte]]. Ensimmäiset ylioppilaat kirjoittautuivat huhtikuussa ja avajaisia vietettiin saman vuoden lokakuussa, ja yliopisto tunnettiin myös nimellä [[Academia Gustaviana]]. Kirjeitä minä kannan, en yliopistoja, mutta tuo on kyllä vaikuttava allekirjoitus.
+KYSYMYS: Kerro lisää: Kustaa II Aadolf
+
+### 36
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+AIEMPI KYSYMYS: Kuka perusti yliopiston ja milloin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Tartun yliopiston perusti Ruotsin kuningas [[Kustaa II Aadolf]], joka allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken kolmikymmenvuotisen sodan. Ensimmäinen kansleri oli vapaaherra [[Johan Skytte]]. Ensimmäiset ylioppilaat kirjoittautuivat huhtikuussa ja avajaisia vietettiin saman vuoden lokakuussa, ja yliopisto tunnettiin myös nimellä [[Academia Gustaviana]]. Kirjeitä minä kannan, en yliopistoja, mutta tuo on kyllä vaikuttava allekirjoitus.
+KYSYMYS: Kerro lisää: Johan Skytte
+
+### 37
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+AIEMPI KYSYMYS: Kuka perusti yliopiston ja milloin?
+AIEMPI VASTAUS (Livia):
+Sepä sattui: Tartun yliopiston perusti Ruotsin kuningas [[Kustaa II Aadolf]], joka allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken kolmikymmenvuotisen sodan. Ensimmäinen kansleri oli vapaaherra [[Johan Skytte]]. Ensimmäiset ylioppilaat kirjoittautuivat huhtikuussa ja avajaisia vietettiin saman vuoden lokakuussa, ja yliopisto tunnettiin myös nimellä [[Academia Gustaviana]]. Kirjeitä minä kannan, en yliopistoja, mutta tuo on kyllä vaikuttava allekirjoitus.
+KYSYMYS: Kerro lisää: Academia Gustaviana
+
+### 38
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+- [Viro — maalehti / Ruoka: Makeisen syntytarina, josta kiistellään] 1422 — Legendan mukaan marsipaani keksittiin Tallinnan raatihuoneen apteekissa vuonna 1422, kun apteekkarin oppipoika Mart jauhoi mantelia ja sokeria sairaalle raatimiehelle lääkkeen sijaan — tuloksena syntyi makeus, jota alettiin kutsua nimellä maiasmokk, makea suu. Saksalainen Lyypekki väittää keksineensä saman herkun, eikä kiistaa ole koskaan ratkaistu. Vuonna 1864 Tallinnaan avattu kahvila Maiasmokk jatkaa perinnettä yhä samassa talossa Pikk-kadulla, ja sen marsipaanihuoneessa on esillä yli kaksisataa vuosikymmenten takaisilla muoteilla tehtyä marsipaanihahmoa.
+AIEMPI KYSYMYS: Miksi yliopisto siirrettiin Tallinnaan?
+AIEMPI VASTAUS (Livia):
+Annas ku muistelen. Venäjää vastaan käyty sota pakotti yliopiston siirtymään välillä [[Tallinnaan]], ja toiminta pysähtyi kokonaan vuosiksi. Tarkoista vuosista en ole varma. Nykyinen pylväikköinen päärakennus valmistui vasta vuonna 1809 arkkitehti [[Johann Wilhelm Krausen]] piirustuksin, ja yliopisto on yhä Viron vanhin. Onneksi opiskelu pääsi sentään jatkumaan.
+KYSYMYS: Kerro lisää: Tallinnaan
+
+### 39
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Akatemia, jonka kuningas perusti sodan keskellä] 1632 — Ruotsin kuningas Kustaa II Aadolf allekirjoitti Tarton yliopiston perustamiskirjan kesäkuussa 1632, kolmikymmenvuotisen sodan riehuessa. Ensimmäiset opiskelijat kirjoitettiin sisään huhtikuussa, ja avajaisia vietettiin lokakuussa neljän tiedekunnan voimin: filosofian, oikeustieteen, teologian ja lääketieteen. Sota Venäjää vastaan pakotti yliopiston siirtymään välillä Tallinnaan, ja toiminta pysähtyi kokonaan vuosiksi. Nykyinen, pylväikköinen päärakennus valmistui vasta 1809 arkkitehti Johann Wilhelm Krausen piirustuksin, ja yliopisto on yhä Viron vanhin ja arvostetuin.
+AIEMPI KYSYMYS: Miksi yliopisto siirrettiin Tallinnaan?
+AIEMPI VASTAUS (Livia):
+Annas ku muistelen. Venäjää vastaan käyty sota pakotti yliopiston siirtymään välillä [[Tallinnaan]], ja toiminta pysähtyi kokonaan vuosiksi. Tarkoista vuosista en ole varma. Nykyinen pylväikköinen päärakennus valmistui vasta vuonna 1809 arkkitehti [[Johann Wilhelm Krausen]] piirustuksin, ja yliopisto on yhä Viron vanhin. Onneksi opiskelu pääsi sentään jatkumaan.
+KYSYMYS: Kerro lisää: Johann Wilhelm Krausen
+
+### 40
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iguazú — kaupunkilehti / Iguazú: Jesuiittojen kivikylä viidakossa] Sata kilometriä putouksilta etelään seisovat San Ignacio Minín rauniot, yksi 1600-luvulla perustetuista jesuiittalähetysasemista, joissa espanjalaiset munkit ja guaraníalkuperäiskansa rakensivat yhdessä omavaraisia kivikaupunkeja viidakon keskelle. Asemalla asui parhaimmillaan yli 3000 asukasta, joilla oli oma verstas, kirkko ja hallinto – kokeilu, jossa alkuperäiskansa sai oman asemansa siirtomaa-ajan pakkotyön rinnalla. Jesuiitat karkotettiin 1767, minkä jälkeen kylä autioitui ja viidakko valtasi sen vuosikymmeniksi. Rauniot kaivettiin esiin vasta 1900-luvulla, ja ne ovat nykyään UNESCOn maailmanperintökohde.
+- [Montreal — kaupunkilehti / Historia: Kaupungintalo jesuiittojen puutarhamaalla] Sulpitiaanimunkit toimivat Montrealin saaren seigneureina vuodesta 1663, ja François Dollier de Casson veti siirtokunnan ensimmäisen katuverkon. Hän saapui Uuteen Ranskaan 1666 ja nousi sulpitiaanien esimieheksi 1671; hänen katusuunnitelmansa on päivätty vuoteen 1672. Rue Notre-Dame, Rue Saint-Paul ja Rue Saint-Jacques ohjaavat Vanhan Montrealin liikennettä yhä. Kaksisataa vuotta myöhemmin, samana vuonna kun isoisä matkusti, kaupunki rakensi oman kaupungintalonsa vanhalle jesuiittapuutarhan paikalle 1873 — viereen, entisen jesuiittakirkon tontille, jäi Place Vauquelin.
+AIEMPI KYSYMYS: Mitä Gymnasium Dorpatense oli?
+AIEMPI VASTAUS (Livia):
+Just niin, siitä kannattaa kysyä. Gymnasium Dorpatense oli [[jesuiittojen]] latinakoulu, jonka Puola-Liettuan kuningas [[Stefan Batory]] perusti vuonna 1583 ja joka toimi vuoteen 1601. Sitä pidetään Tartun yliopiston edeltäjänä. Varsinainen yliopisto perustettiin vasta vuonna 1632 Ruotsin vallan aikana. Pitkä nimi, lyhyt ura.
+KYSYMYS: Kerro lisää: jesuiittojen
+
+### 41
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Vilna — kohdekartta / Kohdekartta: Vilnan yliopisto] 1579 Vilnan yliopisto on yksi Itä-Euroopan vanhimmista yliopistoista: kuningas Stefan Batory perusti sen huhtikuun 1. päivänä 1579, ja paavi vahvisti sen viralliseksi yliopistoksi samana vuonna. Ensimmäisenä lukuvuonna opiskelijoita oli 160, mutta jo seitsemän vuotta myöhemmin heitä oli lähes 700. Yliopiston kirjasto perustettiin jo vuonna 1570, ja siellä on nykyään yli viisi miljoonaa kirjaa ja käsikirjoitusta. Pihapiiriin rakennettiin vuonna 1753 tähtitorni, joka oli tuolloin vasta neljäs koko Euroopassa – sieltä tähtitieteilijät tarkkailivat taivasta aikansa parhailla kaukoputkilla. Yliopiston tunnuslause 'Hinc itur ad astra' tarkoittaa 'täältä tie vie tähtiin', ja se sopii hyvin paikkaa…
+AIEMPI KYSYMYS: Mitä Gymnasium Dorpatense oli?
+AIEMPI VASTAUS (Livia):
+Just niin, siitä kannattaa kysyä. Gymnasium Dorpatense oli [[jesuiittojen]] latinakoulu, jonka Puola-Liettuan kuningas [[Stefan Batory]] perusti vuonna 1583 ja joka toimi vuoteen 1601. Sitä pidetään Tartun yliopiston edeltäjänä. Varsinainen yliopisto perustettiin vasta vuonna 1632 Ruotsin vallan aikana. Pitkä nimi, lyhyt ura.
+KYSYMYS: Kerro lisää: Stefan Batory
+
+### 42
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+AIEMPI KYSYMYS: Kuka oli Kustaa II Aadolf?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kustaa II Aadolf oli Ruotsin kuningas 1600-luvun alusta kuolemaansa vuonna 1632 saakka, ja hän johti Ruotsin mukaan [[kolmikymmenvuotiseen sotaan]]. Hän kaatui Lützenin taistelussa muutama kuukausi sen jälkeen, kun oli allekirjoittanut Tartun yliopiston perustamiskirjan. Hänen armeijassaan palveli myös suomalaisia ratsumiehiä, joita kutsuttiin [[hakkapeliitoiksi]]. Hänen aikanaan Ruotsista kehittyi suurvalta, ja kuninkaan perintö näkyy yhä Tartossa. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: kolmikymmenvuotiseen sotaan
+
+### 43
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+AIEMPI KYSYMYS: Kuka oli Kustaa II Aadolf?
+AIEMPI VASTAUS (Livia):
+Tost minä osaan kertoo. Kustaa II Aadolf oli Ruotsin kuningas 1600-luvun alusta kuolemaansa vuonna 1632 saakka, ja hän johti Ruotsin mukaan [[kolmikymmenvuotiseen sotaan]]. Hän kaatui Lützenin taistelussa muutama kuukausi sen jälkeen, kun oli allekirjoittanut Tartun yliopiston perustamiskirjan. Hänen armeijassaan palveli myös suomalaisia ratsumiehiä, joita kutsuttiin [[hakkapeliitoiksi]]. Hänen aikanaan Ruotsista kehittyi suurvalta, ja kuninkaan perintö näkyy yhä Tartossa. Onpas siitä jo pitkä aika.
+KYSYMYS: Kerro lisää: hakkapeliitoiksi
+
+### 44
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+AIEMPI KYSYMYS: Millainen kaupunki Tarto on?
+AIEMPI VASTAUS (Livia):
+No jopas. Tarto on Etelä-Viron yliopistokaupunki [[Emajoen]] varrella, ja lähteiden mukaan se on Viron toiseksi suurin kaupunki. Yliopisto on kaupungin tunnetuin laitos ja iso osa sen elämää, ja pylväikköinen päärakennus valmistui vuonna 1809. Saksaksi kaupunkia on kutsuttu nimellä [[Dorpat]].
+
+Yliopistokaupungeissa tuoksuu usein kahvi ja keskiyön kirjat, ja se on minusta hyvä yhdistelmä. Tartossa on varmasti oma pullansa, en vain tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Emajoen
+
+### 45
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Tartun yliopisto (sana)
+Tietoruudun teksti: Tartun yliopisto on Viron kansallinen yliopisto sekä maan vanhin ja suurin. Ruotsin kuningas Kustaa II Aadolf allekirjoitti perustamiskirjan 30. kesäkuuta 1632 kesken Saksan-sotaretkeään, muutama kuukausi ennen kuolemaansa Lützenin taistelussa. Ensimmäinen kansleri oli vapaaherra Johan Skytte, Liivinmaan, Inkerin ja Karjalan kenraalikuvernööri.
+
+Yliopisto sai kaksi nimeä: Academia Dorpatensis sijaintinsa ja Academia Gustaviana perustajakuninkaansa mukaan. Se oli tuolloin Ruotsin valtakunnan kolmanneksi vanhin yliopisto Greifswaldin ja Uppsalan jälkeen ja Turun akatemiaa vanhempi. Edeltäjä oli jesuiittojen latinakoulu Gymnasium Dorpatense, jonka Puola-Liettuan kuningas Stefan Batory perusti 1583 ja joka toimi vuoteen 1601.
+
+Ensimmäiset ylioppilaat kirjoittautuivat 20.–21. huhtikuuta 1632, ja avajaiset pidettiin saman vuoden lokakuun 15. päivänä. Akatemiassa oli filosofian, oikeustieteen,…
+AIEMPI KYSYMYS: Millainen kaupunki Tarto on?
+AIEMPI VASTAUS (Livia):
+No jopas. Tarto on Etelä-Viron yliopistokaupunki [[Emajoen]] varrella, ja lähteiden mukaan se on Viron toiseksi suurin kaupunki. Yliopisto on kaupungin tunnetuin laitos ja iso osa sen elämää, ja pylväikköinen päärakennus valmistui vuonna 1809. Saksaksi kaupunkia on kutsuttu nimellä [[Dorpat]].
+
+Yliopistokaupungeissa tuoksuu usein kahvi ja keskiyön kirjat, ja se on minusta hyvä yhdistelmä. Tartossa on varmasti oma pullansa, en vain tiedä sen nimeä.
+KYSYMYS: Kerro lisää: Dorpat
+
+### 46
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Miksi Hermannin torni rakennettiin valmiiksi?
+AIEMPI VASTAUS (Livia):
+Joo, katotaan. Hermannin tornin viimeisteli [[ritarikunta]], ja syy oli vastarannalla: [[Moskovan Venäjä]] oli perustanut oman linnoituksensa [[Narvajoen]] toiselle puolelle 1400-luvun lopulla. Joki oli rajalinja, jossa kumpikin puoli halusi näyttää vahvuutensa, ja linna sai tornin myötä nykyisen ilmeensä. Tornin tarkasta valmistumisvuodesta en ole varma. Linnat ovat kyyhkyn silmin ihan hyviä katseluasemia.
+KYSYMYS: Kerro lisää: ritarikunta
+
+### 47
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Venäjä — maalehti / Ruoka: Kokin resepti syntyi Moskovan hienoimmassa ravintolassa] 1860-luku — Ranskalais-belgialainen kokki Lucien Olivier loi 1860-luvulla Moskovan Hermitage-ravintolan tunnusruoan: majoneesilla sidotun salaatin, jossa oli pyytä, rapujen pyrstöjä, kaviaaria, kapriksia ja oliiveja. Olivier piti tarkan reseptin salassa eikä paljastanut sitä edes keittiöhenkilökunnalleen, ja vasta hänen kuolemansa jälkeen vuonna 1894 julkaistiin versio ohjeesta. Vallankumouksen jälkeen kalliit ja harvinaiset aineet vaihtuivat halvempiin: pyystä tuli kanaa tai keittomakkaraa, rapujen pyrstöistä keitettyjä kananmunia ja oliiveista suolakurkkua ja herneitä. Tästä yksinkertaistetusta versiosta tuli neuvostoajan uudenvuodenpöydän vakioruoka, jota ilman juhla ei ollut täydellinen.
+- [Izmir — kaupunkilehti / İzmir: Puisto sai alkunsa Moskovan-matkasta] Apulaispormestari Suat Yurtkoru esitti pormestari Behçet Uzille, että İzmir tarvitsee Moskovan Gorki-puiston kaltaisen alueen. Kaupunginvaltuusto hyväksyi esityksen 14. toukokuuta 1934. Uz matkusti Moskovaan 1935, ja kaksi arkkitehtia laati suunnitelman. Perustus laskettiin 1. tammikuuta 1936, ja Kültürpark avattiin yleisölle 1. syyskuuta 1936. Alaa oli 360 000 neliömetriä, ja vuonna 1939 se kasvoi 420 000:een. Puistoon nousi laskuvarjotorni 1937 ja eläintarha 1938; eläimet siirrettiin muualle 2008. Nykyään siellä pidetään İzmirin kansainväliset messut ja kirjamessut.
+AIEMPI KYSYMYS: Miksi Hermannin torni rakennettiin valmiiksi?
+AIEMPI VASTAUS (Livia):
+Joo, katotaan. Hermannin tornin viimeisteli [[ritarikunta]], ja syy oli vastarannalla: [[Moskovan Venäjä]] oli perustanut oman linnoituksensa [[Narvajoen]] toiselle puolelle 1400-luvun lopulla. Joki oli rajalinja, jossa kumpikin puoli halusi näyttää vahvuutensa, ja linna sai tornin myötä nykyisen ilmeensä. Tornin tarkasta valmistumisvuodesta en ole varma. Linnat ovat kyyhkyn silmin ihan hyviä katseluasemia.
+KYSYMYS: Kerro lisää: Moskovan Venäjä
+
+### 48
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+AIEMPI KYSYMYS: Miksi Hermannin torni rakennettiin valmiiksi?
+AIEMPI VASTAUS (Livia):
+Joo, katotaan. Hermannin tornin viimeisteli [[ritarikunta]], ja syy oli vastarannalla: [[Moskovan Venäjä]] oli perustanut oman linnoituksensa [[Narvajoen]] toiselle puolelle 1400-luvun lopulla. Joki oli rajalinja, jossa kumpikin puoli halusi näyttää vahvuutensa, ja linna sai tornin myötä nykyisen ilmeensä. Tornin tarkasta valmistumisvuodesta en ole varma. Linnat ovat kyyhkyn silmin ihan hyviä katseluasemia.
+KYSYMYS: Kerro lisää: Narvajoen
+
+### 49
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Linnanmäki] 1950 Kuusi lastensuojelujärjestöä vuokrasi vuonna 1950 Alppiharjun kallioisen mäen — aluksi vain kolmeksi vuodeksi — ja perusti sinne huvipuiston kerätäkseen rahaa työhönsä. Mäki oli saanut nimensä kahdesta vesitornista eli vesilinnasta, ja Vesilinnanmäestä lyheni Linnanmäki. Tornit seisovat paikallaan yhä: vanhemmassa on varasto, uudemman sisään on rakennettu vuoristorata Linnunrata. Puiston tunnetuimman laitteen piti olla väliaikainen. Puinen Vuoristorata rakennettiin talvella 1950 puiston omin voimin tanskalaisen Valdemar Lebechin piirustusten mukaan, ja se avattiin 13. heinäkuuta 1951 osaksi siksi, että se houkuttelisi väkeä Helsingin olympialaisiin 1952. Käyttöiäksi arvioitiin viisitoi…
+AIEMPI KYSYMYS: Kuka myi Narvan Liivinmaan ritarikunnalle?
+AIEMPI VASTAUS (Livia):
+Ai niin, se. Pohjois-Viron ja sen mukana Narvan myi Liivinmaan ritarikunnalle Tanskan kuningas [[Valdemar IV]] vuonna 1346. Tanskalaiset olivat valloittaneet [[Pohjois-Viron]] 1200-luvulla, ja Narvan linna oli ollut Tanskan rajalinnoitus. Ritarikunta rakensi linnasta konventtitalon omiin tarpeisiinsa. Myynnin tarkoista syistä en ole varma. Tuollainen kauppakirja olisi mennyt perille nopeammin kyyhkyn kanssa.
+KYSYMYS: Kerro lisää: Valdemar IV
+
+### 50
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia] Viron historia näkyy kivessä: keskiajan kauppiaiden killan talo Tallinnassa, Pohjois-Euroopan vanhin raatihuone, akatemia jonka kuningas perusti sotien keskellä, ja luostari jonka venäläisjoukot polttivat.
+AIEMPI KYSYMYS: Kuka myi Narvan Liivinmaan ritarikunnalle?
+AIEMPI VASTAUS (Livia):
+Ai niin, se. Pohjois-Viron ja sen mukana Narvan myi Liivinmaan ritarikunnalle Tanskan kuningas [[Valdemar IV]] vuonna 1346. Tanskalaiset olivat valloittaneet [[Pohjois-Viron]] 1200-luvulla, ja Narvan linna oli ollut Tanskan rajalinnoitus. Ritarikunta rakensi linnasta konventtitalon omiin tarpeisiinsa. Myynnin tarkoista syistä en ole varma. Tuollainen kauppakirja olisi mennyt perille nopeammin kyyhkyn kanssa.
+KYSYMYS: Kerro lisää: Pohjois-Viron
+
+### 51
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+AIEMPI KYSYMYS: Mikä on Narvajoki?
+AIEMPI VASTAUS (Livia):
+Aijaa. Narvajoki virtaa [[Peipsijärvestä]] Suomenlahteen, ja se on pitkälti Viron ja Venäjän välinen rajajoki. Narvan kaupunki on joen länsirannalla, ja vastarannalla on venäläinen [[Ivangorodin]] linnoitus. Joki on aina ollut tärkeä kulkureitti ja rajalinja, ja sen ylityskohdan äärelle syntyi jo 1200-luvulla Tanskan rajalinnoitus. Kaksi linnaa vastakkain, ja minä lennän yli kuin ei mitään.
+KYSYMYS: Kerro lisää: Peipsijärvestä
+
+### 52
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+AIEMPI KYSYMYS: Mikä on Narvajoki?
+AIEMPI VASTAUS (Livia):
+Aijaa. Narvajoki virtaa [[Peipsijärvestä]] Suomenlahteen, ja se on pitkälti Viron ja Venäjän välinen rajajoki. Narvan kaupunki on joen länsirannalla, ja vastarannalla on venäläinen [[Ivangorodin]] linnoitus. Joki on aina ollut tärkeä kulkureitti ja rajalinja, ja sen ylityskohdan äärelle syntyi jo 1200-luvulla Tanskan rajalinnoitus. Kaksi linnaa vastakkain, ja minä lennän yli kuin ei mitään.
+KYSYMYS: Kerro lisää: Ivangorodin
+
+### 53
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Ljubljana — kaupunkilehti / Plečnikin ja Secessionin Ljubljana: Ritarikunnan luostarista kesäteatteriksi] Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina 1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät sgraffitot.
+AIEMPI KYSYMYS: Mikä oli Liivinmaan ritarikunta?
+AIEMPI VASTAUS (Livia):
+Kato vaan, historiaa. Liivinmaan ritarikunta oli keskiajalla [[Saksalaisen ritarikunnan]] haara, joka hallitsi suurta osaa nykyisen Latvian ja Viron alueesta. Se osti Pohjois-Viron Tanskan kuninkaalta vuonna 1346 ja sai samalla haltuunsa Narvan linnan. Ritarikunnan valta päättyi 1500-luvulla [[Liivinmaan sodan]] seurauksena, mutta tarkasta ajankohdasta en ole varma.
+
+Ritarit ovat ilmeisesti rakastaneet muureja, ja minä rakastan muureja, joilla on hyvä näköala. Siinä suhteessa meillä on jotain yhteistä.
+KYSYMYS: Kerro lisää: Saksalaisen ritarikunnan
+
+### 54
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mikä oli Liivinmaan ritarikunta?
+AIEMPI VASTAUS (Livia):
+Kato vaan, historiaa. Liivinmaan ritarikunta oli keskiajalla [[Saksalaisen ritarikunnan]] haara, joka hallitsi suurta osaa nykyisen Latvian ja Viron alueesta. Se osti Pohjois-Viron Tanskan kuninkaalta vuonna 1346 ja sai samalla haltuunsa Narvan linnan. Ritarikunnan valta päättyi 1500-luvulla [[Liivinmaan sodan]] seurauksena, mutta tarkasta ajankohdasta en ole varma.
+
+Ritarit ovat ilmeisesti rakastaneet muureja, ja minä rakastan muureja, joilla on hyvä näköala. Siinä suhteessa meillä on jotain yhteistä.
+KYSYMYS: Kerro lisää: Liivinmaan sodan
+
+### 55
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka] Virolainen ruokapöytä on tumma ja suolainen: hapan ruisleipä joka on jokaisen aterian pohja, makea marsipaani jonka synnystä kiistellään Lyypekin kanssa, kansalliskala pienessä leivässä ja joulun verinen makkara.
+AIEMPI KYSYMYS: Mitä Lyypekin kaupunkioikeus tarkoitti?
+AIEMPI VASTAUS (Livia):
+Hei, tota minä tiedän. Lyypekin kaupunkioikeus oli [[Lyypekin]] kaupungista lähtenyt kaupunkilaki, jonka monet Itämeren rannan kauppakaupungit omaksuivat. Se säänteli kaupunkien itsehallintoa, kauppaa ja oikeudenkäyttöä. Narva sai Lyypekin oikeudet 1300-luvun alkupuolella, ja sama laki yhdisti sen muihin [[Itämeren]] kauppakaupunkeihin. Tarkasta sisällöstä yksityiskohtia en ole varma. Kaupungilla on lakinsa, minulla vain sukuni perinteet.
+KYSYMYS: Kerro lisää: Lyypekin
+
+### 56
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Narvan linnus (historia)
+Tietoruudun teksti: Narvan linnus eli Hermannin linna on keskiaikainen linna Koillis-Virossa. Se perustettiin noin vuonna 1256, kun alue kuului Tanskan valtakuntaan. Tanskalaiset olivat valloittaneet Pohjois-Viron 1200-luvulla ja pystyttivät aluksi puisen rajalinnoituksen kohtaan, jossa vanha tie ylitti Narvajoen. Sen suojassa asutus kasvoi Narvan kaupungiksi, joka sai Lyypekin kaupunkioikeudet 1300-luvun alkupuolella.
+
+Kun kahnaukset Novgorodin ja Pihkovan kanssa jatkuivat, tanskalaiset aloittivat 1300-luvun alussa kivilinnoituksen: pienen linnakkeen, jonka sivut olivat neljäkymmentä metriä ja jonka luoteiskulmassa seisoi nykyisen Hermannin tornin edeltäjä. Vuonna 1346 kuningas Valdemar IV myi Pohjois-Viron ja sen mukana Narvan Liivinmaan ritarikunnalle, joka rakensi linnasta konventtitalon omiin tarpeisiinsa.
+
+Hermannin tornin viimeisteli ritarikunta, ja syy oli vastarannalla: Moskovan Venäjä perusti 149…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Ruoka: Kansalliskala, joka mahtuu leivän päälle] 2007 — Räim eli itämeren silakka valittiin Viron kansalliskalaksi vuonna 2007 kansanäänestyksellä, joka herätti keskustelua jopa parlamentissa. Kyseessä on tavallista silakkaa pienempi Itämeren alalaji, jota on syöty rannikolla vuosisatoja: suolattuna, savustettuna, marinoituna ja etenkin kiluna eli mausteliemessä säilöttynä pikkukalana. Kiluvõileib eli kilulla ja munalla katettu ruisleipäviipale on yksi maan tunnetuimmista väliaterioista, ja sitä myydään kojuilta toreilla ympäri vuoden. Räimeä juhlitaan omalla päivällään, jolloin rannikkokaupungeissa järjestetään markkinoita ja kalastuskilpailuja.
+AIEMPI KYSYMYS: Mitä Lyypekin kaupunkioikeus tarkoitti?
+AIEMPI VASTAUS (Livia):
+Hei, tota minä tiedän. Lyypekin kaupunkioikeus oli [[Lyypekin]] kaupungista lähtenyt kaupunkilaki, jonka monet Itämeren rannan kauppakaupungit omaksuivat. Se säänteli kaupunkien itsehallintoa, kauppaa ja oikeudenkäyttöä. Narva sai Lyypekin oikeudet 1300-luvun alkupuolella, ja sama laki yhdisti sen muihin [[Itämeren]] kauppakaupunkeihin. Tarkasta sisällöstä yksityiskohtia en ole varma. Kaupungilla on lakinsa, minulla vain sukuni perinteet.
+KYSYMYS: Kerro lisää: Itämeren
+
+### 57
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Valletta — kohdekartta / Kohdekartta: Pyhän Johanneksen ko-katedraali] 1572–1577 (rakennus), 1608 (Caravaggion maalaus) Arkkitehti Girolamo Cassar suunnitteli kirkon ritarikunnan omaksi konventtikirkoksi vuosina 1572–1577, ja ulkoa se on yhä vaatimaton: paksut kalkkikivimuurit ja kaksi kapeaa tornia näyttävät pikemmin linnoitukselta kuin katedraalilta. Sisällä on toisin — 1660-luvulla Mattia Preti maalasi koko katon ja seinät kultaisiksi barokkiveistoksiksi, ja lattia on yhtenäinen mosaiikki kahdeksastasadasta ritarin hautalaatasta. Caravaggio pakeni Roomasta 1607 tapettuaan miehen kaksintaistelussa, ja Maltalla hänet otettiin heinäkuussa 1608 ritarikunnan jäseneksi. Kiitokseksi hän maalasi oratorioon "Johannes Kastajan mestauksen" — ainoan teoksensa, jonka hä…
+- [Malta — maalehti / Historia: Kaupunki piirrettiin viivaimella] 1566 — Maaliskuun 28. päivänä 1566 suurmestari Jean de Valette laski peruskiven uudelle kaupungille Sciberras-niemellä. Suuren piirityksen jälkeen ritarikunta halusi rakentaa linnoitetun pääkaupungin, ja paavi lähetti suunnittelijaksi Francesco Laparellin. Hän hylkäsi mutkittelevat kujat ja piirsi suorakulmaisen ruutukaavan, jossa leveät kadut kulkevat kaupunginportilta kohti Fort St. Elmoa. Laparellin kuoltua työtä johti maltalainen Girolamo Cassar. Valletta valmistui pääosin 1570-luvun alkuun mennessä, ja siitä tuli pääkaupunki vuonna 1571.
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri Saarenmaalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Kuressaaren linnan rakennutti [[Saksalainen ritarikunta]] Saare-Läänen piispoille, ja se kuului ristiretkeläisten laajempaan yritykseen saada [[Saarenmaa]] haltuunsa. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, joten linnaa tarvittiin piispan tukikohdaksi, ja se pysyi yhtenä hiippakunnan tärkeimmistä linnoista aina [[Liivinmaan sotaan]] asti. Pitkä tarina tuli, mut tiivistin sen kyllä hyvin.
+KYSYMYS: Kerro lisää: Saksalainen ritarikunta
+
+### 58
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri Saarenmaalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Kuressaaren linnan rakennutti [[Saksalainen ritarikunta]] Saare-Läänen piispoille, ja se kuului ristiretkeläisten laajempaan yritykseen saada [[Saarenmaa]] haltuunsa. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, joten linnaa tarvittiin piispan tukikohdaksi, ja se pysyi yhtenä hiippakunnan tärkeimmistä linnoista aina [[Liivinmaan sotaan]] asti. Pitkä tarina tuli, mut tiivistin sen kyllä hyvin.
+KYSYMYS: Kerro lisää: Saarenmaa
+
+### 59
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Miksi linna rakennettiin juuri Saarenmaalle?
+AIEMPI VASTAUS (Livia):
+Hetkinen ny. Tost minä osaan kertoo. Kuressaaren linnan rakennutti [[Saksalainen ritarikunta]] Saare-Läänen piispoille, ja se kuului ristiretkeläisten laajempaan yritykseen saada [[Saarenmaa]] haltuunsa. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, joten linnaa tarvittiin piispan tukikohdaksi, ja se pysyi yhtenä hiippakunnan tärkeimmistä linnoista aina [[Liivinmaan sotaan]] asti. Pitkä tarina tuli, mut tiivistin sen kyllä hyvin.
+KYSYMYS: Kerro lisää: Liivinmaan sotaan
+
+### 60
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Uspenskin katedraali] 1862–1868 Katajanokan kalliolla kohoava Uspenskin katedraali on Pohjois- ja Länsi-Euroopan suurin ortodoksinen kirkko. Sen suunnitteli venäläinen arkkitehti Aleksei Gornostajev, mutta hän ehti kuolla ennen rakennustöiden alkua — rakentamista johti lopulta insinööri Ivan Varnek vuosina 1862–1868. Kirkko muurattiin lähes 700 000 tiilestä, jotka purettiin Bomarsundin linnoituksesta Ahvenanmaalta ja kuljetettiin proomuilla Helsinkiin asti. Katedraali vihittiin käyttöön 25. lokakuuta 1868. Kirkon sisällä kultaiset ikonit ja kuvakaiteen eli ikonostaasin maalasi Pavel Shiltsov. Nykyään katedraalissa käy noin puoli miljoonaa vierailijaa vuodessa ihailemassa sen punatiilistä ulkoasua ja kultaisia ku…
+AIEMPI KYSYMYS: Mihin linnaa käytettiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tähän pitää vastata varovasti. Annas ku mietin. Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaaren linna menetti sotilaallisen merkityksensä: Ahvenanmaalle oli rakennettu [[Bomarsundin]] linnoitus, ja vuonna 1836 venäläinen varuskunta vetäytyi Kuressaaresta, kun saari oli jo osa [[Venäjän keisarikuntaa]]. Mihin linnaa sen jälkeen tarkalleen käytettiin, en ole varma, enkä halua arvata. Sotilaasta tuli siis vanha muuri, ja minä pidän muureista, niillä on hyvä istua.
+KYSYMYS: Kerro lisää: Bomarsundin
+
+### 61
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mihin linnaa käytettiin 1800-luvulla?
+AIEMPI VASTAUS (Livia):
+No niin, tähän pitää vastata varovasti. Annas ku mietin. Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaaren linna menetti sotilaallisen merkityksensä: Ahvenanmaalle oli rakennettu [[Bomarsundin]] linnoitus, ja vuonna 1836 venäläinen varuskunta vetäytyi Kuressaaresta, kun saari oli jo osa [[Venäjän keisarikuntaa]]. Mihin linnaa sen jälkeen tarkalleen käytettiin, en ole varma, enkä halua arvata. Sotilaasta tuli siis vanha muuri, ja minä pidän muureista, niillä on hyvä istua.
+KYSYMYS: Kerro lisää: Venäjän keisarikuntaa
+
+### 62
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Puerto Montt — kaupunkilehti / Puerto Montt: Risti saaren laella] Kapean, vain muutaman sadan metrin levyisen salmen takana kohoaa Isla Tenglo, pieni saari jonka harjanteella seisoo valkoinen risti - kaupungin tunnetuimpia maamerkkejä, joka näkyy laajalle Reloncavín selälle. Saarella asuu enää harvoja kalastajaperheitä, sillä maaperä on niukkaa eikä sähköverkko yllä joka taloon. Vene kuljettaa matkan minuutissa, ja saarelaiset tunnetaan erityisesti curanto-perinteestään: samaa ruokaa kuin Angelmón torillakin, mutta täällä valmistettuna vanhalla tavalla kuumennettujen kivien päällä maakuopassa. Rannalla siintävät kaupungin kerrostalot muistuttavat, miten lähellä saari todellisuudessa on.
+- [Lalibela — kaupunkilehti / Kivi ja kuva: Risti, joka kävi Belgiassa] Lalibelan risti on suuri koristeltu kulkueristi ja yksi Etiopian arvokkaimmista perintöesineistä. Sitä säilytetään Biete Medhane Alemissa. Risti on arviolta 1100-luvulta, noin kuusikymmentä senttiä pitkä ja seitsemän kilon painoinen, ja se on tehty yhdestä metallikappaleesta — joko kullasta tai pronssista ja kullasta. Alaosaa kannattavat Aadamin kädet, aihe joka toistuu etiopialaisissa kulkueristeissä; juhlapäivinä ne verhotaan kirkkaanvärisin kankain. Pappi voi hangata uskovia rististillä siunatakseen heidät.
+- [Unkari — maalehti / Historia: Kruunu, jonka risti on vinossa] 1000 — Unkarin pyhä kruunu on kahdesta osasta: alempi vanne on tehty Bysantissa ja ylempi kaariosa lännessä, ja ne on liitetty yhteen. Kruunua kiertää rivi emalikuvia pyhimyksistä, ja reunasta riippuu ketjuja. Huipulla oleva risti on kallellaan, ja arvellaan että se vääntyi, kun kruunua tungettiin liian pieneen arkkuun. Sitä ei ole suoristettu. Kruunulla oli erikoinen asema: kuningasta ei pidetty oikeana kuninkaana, ellei häntä kruunattu juuri tällä esineellä.
+AIEMPI KYSYMYS: Mikä oli Saksalainen ritarikunta?
+AIEMPI VASTAUS (Livia):
+Ai se. Joo, tän minä tiedän. Saksalainen ritarikunta oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa [[ristiretkien]] aikana. Se toimi laajasti Itämeren alueella, rakensi linnoja ja osallistui alueen valtaamiseen ja käännyttämiseen. Liivinmaalla sen haara tunnetaan nimellä [[Liivinmaan ritarikunta]].
+
+Linnat näkyvät ylhäältä kauas, ja siksi ne ovat kyyhkylle hyviä maamerkkejä. Ritarien tarkoituksia en kommentoi, mutta rakentajia he olivat.
+KYSYMYS: Kerro lisää: ristiretkien
+
+### 63
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mikä oli Saksalainen ritarikunta?
+AIEMPI VASTAUS (Livia):
+Ai se. Joo, tän minä tiedän. Saksalainen ritarikunta oli keskiaikainen sotilaallinen ja uskonnollinen ritarikunta, joka sai alkunsa [[ristiretkien]] aikana. Se toimi laajasti Itämeren alueella, rakensi linnoja ja osallistui alueen valtaamiseen ja käännyttämiseen. Liivinmaalla sen haara tunnetaan nimellä [[Liivinmaan ritarikunta]].
+
+Linnat näkyvät ylhäältä kauas, ja siksi ne ovat kyyhkylle hyviä maamerkkejä. Ritarien tarkoituksia en kommentoi, mutta rakentajia he olivat.
+KYSYMYS: Kerro lisää: Liivinmaan ritarikunta
+
+### 64
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Suomi — maalehti / Luonto: Meri jossa on 50 000 saarta] nykyään — Saaristomeri Turun ja Ahvenanmaan välissä on joidenkin määritelmien mukaan maailman saarirunsain saaristo: sillä on arviolta 50 000 saarta, joskin suuri osa niistä on aivan pieniä ja tiiviisti toistensa lähellä. Suurimmat saaret ovat asuttuja ja niille pääsee lautoilla ja silloilla, kun taas ulompi saaristo koostuu enimmäkseen asumattomista luodoista ja karikoista. Ahvenanmaa, alueen suurin saariryhmä, on Suomen itsehallinnollinen, ruotsinkielinen maakunta. Saaristomeri on suosittu purjehdus- ja veneilykohde kesäisin, ja sen rikas saaristolintukanta ja poikkeuksellinen kasvillisuus tekevät siitä myös merkittävän luontokohteen.
+AIEMPI KYSYMYS: Mikä on Bomarsundin linnoitus?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Ahvenanmaan linnoitus]], jaa. Bomarsund oli [[Venäjän keisarikunnan]] Ahvenanmaalle rakentama linnoitus, jonka rakennustyöt tehtiin 1800-luvun alkupuolella. Se tuhoutui [[Krimin sodan]] aikana, kun brittiläiset ja ranskalaiset joukot hyökkäsivät sitä vastaan, eikä sitä rakennettu uudelleen. Tarkat vuodet en ole varma, mutta tapahtumat ovat yli sadan vuoden takaa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Ahvenanmaan linnoitus
+
+### 65
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Jekaterinburg — kaupunkilehti / Historia: Ikkuna Aasiaan ja Venäjän ainoa vuorikaupunki] Siperian valtatie avautui 1763 ja kulki kaupungin läpi. Jekaterinburgista tuli idän ja lännen välisen kaupan solmukohta, ja sitä alettiin kutsua ikkunaksi Aasiaan. Katariina Suuri antoi sille kaupunkioikeudet 1781, ja vuonna 1807 se sai Venäjän ainoana nimityksen vuorikaupunki: se oli vuoriruukkien päällikön, valtiovarainministerin ja keisarin alainen ja pitkälti vapaa kuvernöörin vallasta — näin vuoteen 1863. Kaupan myötä ruukki jäi vähitellen sivuosaan, ja komeimmat talot alettiin muurata kivestä puun sijaan.
+AIEMPI KYSYMYS: Mikä on Bomarsundin linnoitus?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Ahvenanmaan linnoitus]], jaa. Bomarsund oli [[Venäjän keisarikunnan]] Ahvenanmaalle rakentama linnoitus, jonka rakennustyöt tehtiin 1800-luvun alkupuolella. Se tuhoutui [[Krimin sodan]] aikana, kun brittiläiset ja ranskalaiset joukot hyökkäsivät sitä vastaan, eikä sitä rakennettu uudelleen. Tarkat vuodet en ole varma, mutta tapahtumat ovat yli sadan vuoden takaa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Venäjän keisarikunnan
+
+### 66
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Helsinki — kohdekartta / Kohdekartta: Suomenlinna] 1748 Merilinnoitus Suomenlinna alkoi nousta kahdeksalle saarelle Helsingin edustalla vuonna 1748, kun Ruotsin kruunu halusi vahvan tukikohdan Venäjää vastaan. Työmaalla riitti väkeä: parhaimmillaan vuonna 1755 linnoitusta rakensi yhtä aikaa noin 7000 työntekijää. Alun perin linnoitus tunnettiin nimellä Sveaborg. Maineestaan huolimatta — sitä kutsuttiin "Pohjolan Gibraltariksi" — linnoitus antautui venäläisille jo vuonna 1808, vain parin kuukauden piirityksen jälkeen. Vuonna 1855 Krimin sodan aikana Englannin ja Ranskan laivastot pommittivat saaria voimakkaasti. Linnoitus sai suomenkielisen nimensä Suomenlinna vasta vuonna 1918, ja vuonna 1991 siitä tuli Unescon maailmanperintökohde. Nykyään…
+- [Turkki — maalehti / Historia: Valtio ilmoitti maksavansa vain puolet] 1875 — Osmanien valtakunta otti ensimmäisen ulkomaisen lainansa Krimin sodan aikana 1854, ja parikymmentä vuotta myöhemmin velanhoito söi valtaosan valtion tuloista. Lokakuun 6. päivänä 1875 hallitus julkaisi ramazan-asetuksen: seuraavat viisi vuotta velasta maksettaisiin vain puolet käteisenä ja loput uusina viiden prosentin obligaatioina. Seuraavana vuonna maksut loppuivat kokonaan. Sopu syntyi vasta 1881 muharrem-asetuksella, joka perusti eurooppalaisten velkojien johtaman velkahallinnon; se keräsi suoraan itselleen muun muassa suola-, tupakka-, leimavero- ja alkoholitulot. Virasto jäi Istanbuliin vuosikymmeniksi, ja sen talossa toimii nykyään Istanbul Erkek Lisesi -lukio.
+AIEMPI KYSYMYS: Mikä on Bomarsundin linnoitus?
+AIEMPI VASTAUS (Livia):
+Kas vaan. [[Ahvenanmaan linnoitus]], jaa. Bomarsund oli [[Venäjän keisarikunnan]] Ahvenanmaalle rakentama linnoitus, jonka rakennustyöt tehtiin 1800-luvun alkupuolella. Se tuhoutui [[Krimin sodan]] aikana, kun brittiläiset ja ranskalaiset joukot hyökkäsivät sitä vastaan, eikä sitä rakennettu uudelleen. Tarkat vuodet en ole varma, mutta tapahtumat ovat yli sadan vuoden takaa. Onpas siitä onneksi pitkä aika.
+KYSYMYS: Kerro lisää: Krimin sodan
+
+### 67
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+AIEMPI KYSYMYS: Mikä oli Suuri Pohjan sota?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on iso asia. Suuri Pohjan sota käytiin vuosina 1700–1721, ja siinä Ruotsi taisteli Venäjän johtamaa liittoumaa vastaan. Sota päättyi [[Nystadin rauhaan]], jossa Ruotsi menetti Venäjälle muun muassa Viron ja [[Liivinmaan]]. Saarenmaa ja sen linna siirtyivät samalla osaksi Venäjän keisarikuntaa. Siitä on nyt yli kolmesataa vuotta, ja onneksi tilanne on aivan toinen.
+KYSYMYS: Kerro lisää: Nystadin rauhaan
+
+### 68
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kuressaaren linna (historia)
+Tietoruudun teksti: Kuressaaren piispanlinna seisoo Saarenmaalla Länsi-Virossa. Vanhin kirjallinen maininta on 1380-luvulta, kun Saksalainen ritarikunta aloitti sen rakentamisen Saare-Läänen piispoille. Saarenmaan asukkaat vastustivat käännytystä sitkeästi, ja linna kuului ristiretkeläisten laajempaan yritykseen saada saari haltuunsa. Alusta asti se oli piispan tukikohta ja yksi hiippakunnan tärkeimmistä linnoista aina Liivinmaan sotaan asti.
+
+Vuonna 1559 Tanska-Norja otti Saarenmaan ja linnan haltuunsa ja uudisti linnoitukset. Brömsebron rauhan jälkeen saari siirtyi Ruotsille, joka jatkoi uudistustyötä vuoteen 1706. Suuren Pohjan sodan jälkeen Saarenmaa ja linna tulivat osaksi Venäjän keisarikuntaa.
+
+Kun valtakunnan raja siirtyi vähitellen länteen, Kuressaare menetti sotilaallisen merkityksensä. Vuonna 1836, kun Ahvenanmaalle oli rakennettu Bomarsundin linnoitus, venäläinen varuskunta vetäytyi Kuressaares…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Viro — maalehti / Historia: Luostari, jonka Iivana Julma poltti] 1436–1577 — Pirita luostari rakennettiin Tallinnan kauppiaiden rahoilla 1400-luvun alussa, ja sen kirkko vihittiin käyttöön 1436. Birgittalaisluostarissa asuivat sekä munkit että nunnat saman katon alla, miesten ja naisten puolet erotettuina kahdella pihalla — poikkeuksellinen järjestely keskiajan Euroopassa. Luostarista tuli Liivinmaan suurin, kunnes Iivana Julman joukot polttivat ja ryöstivät sen Liivinmaan sodassa vuonna 1577. Kiviset holvikaaret ja päätykolmio ovat seisoneet raunioina siitä lähtien, ja nykyään niiden keskellä järjestetään kesäisin konsertteja ja luostaripäivän juhlia.
+AIEMPI KYSYMYS: Mikä oli Suuri Pohjan sota?
+AIEMPI VASTAUS (Livia):
+Kääk, tuo on iso asia. Suuri Pohjan sota käytiin vuosina 1700–1721, ja siinä Ruotsi taisteli Venäjän johtamaa liittoumaa vastaan. Sota päättyi [[Nystadin rauhaan]], jossa Ruotsi menetti Venäjälle muun muassa Viron ja [[Liivinmaan]]. Saarenmaa ja sen linna siirtyivät samalla osaksi Venäjän keisarikuntaa. Siitä on nyt yli kolmesataa vuotta, ja onneksi tilanne on aivan toinen.
+KYSYMYS: Kerro lisää: Liivinmaan
+
+### 69
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+AIEMPI KYSYMYS: Miksi torni oli aluksi umpinainen kiviröykkiö?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost kannattaa kertoo tarkasti. Kõpun majakan alaosa on yhä massiivista kiveä: kahdenkymmenenneljän metrin korkeuteen asti torni on pelkkää kiveä, ulkopinta on sidottu kalkkilaastilla ja runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa noin 12 000 tonnia. Tarkkaa syytä rakennustavalle en ole varma, mutta paksu umpinainen alaosa antoi keskiaikaiselle [[maamerkille]] todennäköisesti vakaan perustan [[Hiidenmaan]] kukkulalla. Kivikasa, jolla on suuret suunnitelmat, ja siitä minä tykkään.
+KYSYMYS: Kerro lisää: maamerkille
+
+### 70
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+AIEMPI KYSYMYS: Miksi torni oli aluksi umpinainen kiviröykkiö?
+AIEMPI VASTAUS (Livia):
+Odotas vähän. Tost kannattaa kertoo tarkasti. Kõpun majakan alaosa on yhä massiivista kiveä: kahdenkymmenenneljän metrin korkeuteen asti torni on pelkkää kiveä, ulkopinta on sidottu kalkkilaastilla ja runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa noin 12 000 tonnia. Tarkkaa syytä rakennustavalle en ole varma, mutta paksu umpinainen alaosa antoi keskiaikaiselle [[maamerkille]] todennäköisesti vakaan perustan [[Hiidenmaan]] kukkulalla. Kivikasa, jolla on suuret suunnitelmat, ja siitä minä tykkään.
+KYSYMYS: Kerro lisää: Hiidenmaan
+
+### 71
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Islanti — maalehti / Historia: Sota jota käytiin verkonleikkureilla, ei ammuksilla] 1958–1976 — Kun Islanti laajensi kalastusrajaansa 1958, 1972 ja 1975 aina kauemmas rannikolta, Britannian troolarit eivät suostuneet väistymään — eikä Britannian laivasto liioin. Kolmessa niin sanotussa turskasodassa Islannin rannikkovartioston pienet alukset, kuten Óðinn, ajoivat troolareiden perässä ja leikkasivat niiden verkkoketjut irti erityisillä leikkureilla; brittilaivat puolestaan yrittivät väistellä ja jopa törmäillä vastaan. Ainuttakaan ammusta ei ammuttu vihaisessa mielessä, mutta aluksia vaurioitui kymmeniä. Lopulta Islanti voitti: vuonna 1976 Britannia hyväksyi 200 meripeninkulman rajan, ja se levisi pian koko maailmaan.
+- [Bermuda — kaupunkilehti / Bermuda: Paholaisten saaret] Bermudaa ympäröivät koralliriutat upottivat vuosisatojen aikana satoja purjelaivoja, ja merenkulkijat alkoivat kutsua saaria pelokkaasti Paholaisten saariksi. Öisin riutoilta kuului kummallisia ääniä, joiden uskottiin todistavan pahojen henkien läsnäolosta – todellisuudessa äänet syntyivät merilinnuista ja saarille tuoduista villisioista. Vaara oli silti aito: matalat riutat ulottuvat kilometrien päähän rannasta ja ovat yhä nykyaikaisillekin aluksille uhka. Vuonna 1846 kukkulalle valmistui Gibbs Hillin majakka opastamaan laivoja turvallisesti riuttojen ohi; sen valo näkyy parhaimmillaan yli 40 meripeninkulman päähän.
+AIEMPI KYSYMYS: Kuinka kaukaa majakan valo näkyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen lukenut. Kõpun majakan valo näkyy navigointiin asti 26 [[meripeninkulman]] päähän, mikä on noin 48 kilometriä. Valo on 103,6 metriä merenpinnan yläpuolella, koska torni seisoo [[Tornimägin]] kukkulalla, ja se on Itämeren korkeimmalla oleva rannikkovalo. Tornin oma korkeus on 37,7 metriä.
+
+Korkealta katsominen on kyyhkyn erikoisalaa, ja tämä paikka on minulle sympaattinen. Toivottavasti kukaan ei kuitenkaan lähde sieltä jalan mittaamaan matkaa.
+KYSYMYS: Kerro lisää: meripeninkulman
+
+### 72
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Iran — maalehti / Rakennukset: Torni, joka jäähdyttää ilman koneetta] Badgir eli tuulitorni on Yazdin kaupunkikuvan tunnusmerkki. Se on savitiilestä muurattu torni, jonka kyljissä on pystyaukkoja ja sisällä pystysuoria kanavia. Torni ottaa kiinni yläilman viileämmän tuulen ja johtaa sen alas huoneisiin; samalla lämmin ilma nousee toista kanavaa pitkin ulos, joten ilma vaihtuu myös tyynellä säällä. Jos kanava kulkee vesialtaan tai maanalaisen vesikanavan yli, ilma viilenee lisää haihtumisen ansiosta. Yazdin vanha kaupunki otettiin maailmanperintöluetteloon vuonna 2017.
+AIEMPI KYSYMYS: Kuinka kaukaa majakan valo näkyy?
+AIEMPI VASTAUS (Livia):
+Nyt muistan: tän minä olen lukenut. Kõpun majakan valo näkyy navigointiin asti 26 [[meripeninkulman]] päähän, mikä on noin 48 kilometriä. Valo on 103,6 metriä merenpinnan yläpuolella, koska torni seisoo [[Tornimägin]] kukkulalla, ja se on Itämeren korkeimmalla oleva rannikkovalo. Tornin oma korkeus on 37,7 metriä.
+
+Korkealta katsominen on kyyhkyn erikoisalaa, ja tämä paikka on minulle sympaattinen. Toivottavasti kukaan ei kuitenkaan lähde sieltä jalan mittaamaan matkaa.
+KYSYMYS: Kerro lisää: Tornimägin
+
+### 73
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+AIEMPI KYSYMYS: Mikä on meripeninkulma?
+AIEMPI VASTAUS (Livia):
+Ai tota. No tähän vastaan mielelläni. Meripeninkulma on merenkulussa ja ilmailussa käytetty [[pituusyksikkö]], jonka pituus on 1 852 metriä. Se perustuu alun perin yhteen [[kaariminuuttiin]] pitkin maapallon pintaa, minkä vuoksi se sopii hyvin [[merikarttojen]] käyttöön. Kõpun valon kantama ilmoitetaan juuri tällä yksiköllä. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: pituusyksikkö
+
+### 74
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [New York — kohdekartta / Kohdekartta: Washington Squaren riemukaari] 1889–1895 Vuonna 1889 tuli kuluneeksi sata vuotta George Washingtonin virkaanastujaisista, ja liikemies William Rhinelander Stewart pystytti juhlan kunniaksi Viidennelle Avenuelle puusta ja kipsistä tehdyn muistokaaren. Stewart asui aukion pohjoislaidalla, ja hänen ystävänsä keräsivät hankkeeseen 2 765 dollaria. Vapaamuurarit kulkivat juhlakulkueessa kaaren ali Washingtonin virkaanastujaisraamattu mukanaan. Väliaikainen kaari oli niin suosittu, että rahaa kerättiin lisää ja kivinen kaari tilattiin arkkitehti Stanford Whiteltä. White otti mallin roomalaisesta riemukaaresta ja päätyi lähelle ensimmäisellä vuosisadalla rakennettua Tituksen kaarta. Rakennusaine on valkoista Tuckahoen marmoria. …
+- [Kuwait — kohdekartta / Kohdekartta: Seifin palatsi] 1904 Tunnusmerkki on kellotorni. Ylimpänä on sipulin muotoinen kupoli, joka on päällystetty kullalla, ja sen laella ohut piikki. Kupolin alla on avoin lyhtykerros: kapeita kaari-ikkunoita ja niiden yläpuolella rivi sinisiä tähtimedaljonkeja. Sen alla on neliömäinen kellokerros, jossa vaaleaa kellotaulua kehystää leveä nauha turkoosinsinistä laattaa. Torni nousee muurin takaa, jonka harjalla ovat porrastetut sakarat. Nykyisen koneiston teki englantilainen Smith of Derby — sama vuonna 1856 perustettu paja, joka rakensi Lontoon Pyhän Paavalin katedraalin tornikellon 1893. Vuonna 1904 päätettiin rakentaa palatsi aivan rantaan, ja siitä tuli myös nimi: sif tarkoittaa arabiaksi merenrantaa. Raken…
+AIEMPI KYSYMYS: Mikä on meripeninkulma?
+AIEMPI VASTAUS (Livia):
+Ai tota. No tähän vastaan mielelläni. Meripeninkulma on merenkulussa ja ilmailussa käytetty [[pituusyksikkö]], jonka pituus on 1 852 metriä. Se perustuu alun perin yhteen [[kaariminuuttiin]] pitkin maapallon pintaa, minkä vuoksi se sopii hyvin [[merikarttojen]] käyttöön. Kõpun valon kantama ilmoitetaan juuri tällä yksiköllä. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: kaariminuuttiin
+
+### 75
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Filippiinit — maalehti / Historia: Kaikkien karttojen äiti] 1734 — Jesuiitta Pedro Murillo Velarde laati vuonna 1734 kartan, jota kutsutaan kaikkien Filippiinien karttojen äidiksi. Kaiverruksen teki tagalogilainen Nicolás de la Cruz Bagay, joka merkitsi nimensä viereen sanat "Indio Tagalo". Reunoilla on kaksitoista kuvaa: kaupunkien ja saarten karttoja sekä saarilla asuvia väkiä sangleyeistä aetoihin. Kuparilaatat vietiin Manilasta Britanniaan 1762, ja niistä lyötiin lisää vedoksia ennen kuin metalli sulatettiin merikarttojen tarpeisiin. Alkuperäispainoksia tunnetaan alle viisikymmentä.
+AIEMPI KYSYMYS: Mikä on meripeninkulma?
+AIEMPI VASTAUS (Livia):
+Ai tota. No tähän vastaan mielelläni. Meripeninkulma on merenkulussa ja ilmailussa käytetty [[pituusyksikkö]], jonka pituus on 1 852 metriä. Se perustuu alun perin yhteen [[kaariminuuttiin]] pitkin maapallon pintaa, minkä vuoksi se sopii hyvin [[merikarttojen]] käyttöön. Kõpun valon kantama ilmoitetaan juuri tällä yksiköllä. Ei paha kyyhkyltä.
+KYSYMYS: Kerro lisää: merikarttojen
+
+### 76
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Kapkaupunki — kaupunkilehti / Pöytävuori: Kiviröykkiö, joka oikaisi maapallon] Vuoren korkein kohta on 1 086 metriä, ja siellä on Sir Thomas Maclearin 1865 rakennuttama kiviröykkiö. Taustalla oli mittausvirhe: vuonna 1750 Nicolas Louis de Lacaille oli mitannut meridiaanikaaren Kapkaupungista pohjoiseen ja päätellyt, että maapallon kaarevuus on eteläisillä leveysasteilla pienempi kuin pohjoisilla — pallo olisi siis päärynän muotoinen. Vuonna 1820 Sir George Everest kävi paikalla ja ehdotti, että Pöytävuoren oma massa oli vetänyt luotilankaa vinoon. Kun se otettiin huomioon, kaarevuus osoittautui samaksi molemmilla pallonpuoliskoilla.
+AIEMPI KYSYMYS: Miksi majakat rakennettiin korkeille paikoille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valo näkyy sitä kauemmas, mitä korkeammalla se on, koska [[maapallon kaarevuus]] ja [[horisontti]] rajoittavat näkyvyyttä matalalla. Siksi majakat rakennettiin [[kukkuloille]] tai korkeiksi torneiksi. Kõpussa torni seisoo Hiidenmaan korkeimman kukkulan laella, ja valo on yli sata metriä merenpinnan yläpuolella. Korkealta katsominen on kyllä kyyhkyn erikoisalaa.
+KYSYMYS: Kerro lisää: maapallon kaarevuus
+
+### 77
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+AIEMPI KYSYMYS: Miksi majakat rakennettiin korkeille paikoille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valo näkyy sitä kauemmas, mitä korkeammalla se on, koska [[maapallon kaarevuus]] ja [[horisontti]] rajoittavat näkyvyyttä matalalla. Siksi majakat rakennettiin [[kukkuloille]] tai korkeiksi torneiksi. Kõpussa torni seisoo Hiidenmaan korkeimman kukkulan laella, ja valo on yli sata metriä merenpinnan yläpuolella. Korkealta katsominen on kyllä kyyhkyn erikoisalaa.
+KYSYMYS: Kerro lisää: horisontti
+
+### 78
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Yangon — kohdekartta / Kohdekartta: Yangonin keskusasema] nykyinen rakennus 1954 Ensimmäinen asema rakennettiin tähän vuonna 1877 Burman ensimmäistä rautatietä varten, joka kulki Yangonista Pyayhin. Se seisoi Phayre Streetin — nykyisen Pansodan Streetin — yläkorttelissa keskustassa, oli tyyliltään brittiläistä viktoriaanista ja sen tuloteitä reunustivat nurmikentät. Kaupunkilaiset ihastuivat rakennukseen niin, että sitä kutsuttiin keijuasemaksi. Vanhaa asemaa ei ole enää. Se tuhoutui vuonna 1943 toisen maailmansodan aikana. Uuden rakennuksen piirsi insinööri Hla Thwin, ja se tehtiin tarkoituksella burmalaisen perinnearkkitehtuurin mukaan: valkoiset tornit kantavat kullattuja monikerroksisia kattoja kuin pagodit. Piirustukset hyväksyttiin 7. toukok…
+- [Kairo — kohdekartta / Kohdekartta: Al-Azhar-puisto] 2005 Viisisataa vuotta kairolaiset kärräsivät roskansa ja rakennusjätteensä muurin taakse Darassan kukkuloille. Jätettä kertyi paikoin neljänkymmenen metrin paksuudelta, eikä kukaan rakentanut mäille mitään — maa ei kantanut. Vuonna 1984 Aga Khan päätti lahjoittaa Kairolle puiston, ja paikaksi valittiin juuri tämä jätemäki vanhan kaupungin kupeessa. Työmaasta tuli kaivaus: täyttömaata vietiin pois yli miljoona kuutiometriä, ja kesken kaiken suunnitelmaan jouduttiin sovittamaan kolme kaupungin juomavesisäiliötä. Roskien alta paljastui yllätys — Saladinin ajan 1100-luvun kaupunginmuuri torneineen, puolentoista kilometrin matkalta. Muuri kunnostettiin, ja työhön palkattiin väkeä viereisestä Da…
+AIEMPI KYSYMYS: Miksi majakat rakennettiin korkeille paikoille?
+AIEMPI VASTAUS (Livia):
+Hyvä kysymys tuo. Valo näkyy sitä kauemmas, mitä korkeammalla se on, koska [[maapallon kaarevuus]] ja [[horisontti]] rajoittavat näkyvyyttä matalalla. Siksi majakat rakennettiin [[kukkuloille]] tai korkeiksi torneiksi. Kõpussa torni seisoo Hiidenmaan korkeimman kukkulan laella, ja valo on yli sata metriä merenpinnan yläpuolella. Korkealta katsominen on kyllä kyyhkyn erikoisalaa.
+KYSYMYS: Kerro lisää: kukkuloille
+
+### 79
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [Varanasi — kohdekartta / Kohdekartta: Dashashwamedh Ghat] nykyinen ghat 1748 Dashashwamedh on Varanasin pääghat ja luultavasti sen vanhin. Nimi tulee tarinasta, jonka mukaan Brahma uhrasi täällä kymmenen hevosta — dasa-ashwamedha — ottaakseen Shivan vastaan; toisen version mukaan Brahma loi koko ghatin Shivan tervetuliaisiksi. Portaat ovat aivan Kashi Vishwanath -temppelin alapuolella, ja niiden yläpuolella on rivi pyhäkköjä. Kivet ovat useammasta kädestä. Rakentamisen aloitti vuonna 1569 Dhaudharhin raja Dushasan Shah, nykyisen ghatin muurautti peshwa Balaji Baji Rao 1748, ja muutamaa vuosikymmentä myöhemmin, 1774, Indoren kuningatar Ahilyabai Holkar rakennutti sen uudelleen. Aivan naapurissa, Man Mandir -ghatin päällä, on vuoden 1737 tähtitorni.…
+- [Varanasi — kohdekartta / Kohdekartta: Assi Ghat] kaupungin eteläisin ghat Assi on Varanasin eteläisin ja samalla suurimpia ghateja. Se on siinä kohdassa, missä Assi-puro yhtyy Gangesiin, ja juuri tästä alkaa se noin neljän kilometrin rantakaista, joka päättyy pohjoisessa Varunan suulle. Kaupungin nimi tulee näistä kahdesta uomasta, ja väli on pyhiinvaeltajien perinteinen kiertoreitti. Ghatilla on kirjallinen maine. Perinteen mukaan täältä runoilija Tulsidas lähti viimeiselle matkalleen; hän kirjoitti Varanasissa suuren osan Ramcharitmanasistaan, awadhinkielisestä Ramayanasta, jota Ramnagarin Ramlila yhä näyttelee. Kashinath Singhin romaani Kashi Ka Assi kertoo juuri tämän ghatin korttelista. Assi on nykyään opiskelijoiden ja matkailijoide…
+AIEMPI KYSYMYS: Miten majakoiden valo tuotettiin ennen sähköä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ennen sähköä majakan valo tuotettiin avotulella, ja myöhemmin otettiin käyttöön [[öljylamppuja]], joiden valoa vahvistettiin heijastimilla ja linsseillä. Tunnetuin linssityyppi on [[Fresnelin linssi]], jolla valo saatiin suunnattua kauas merelle. Kõpun majakan tarkkoja vaiheita en ole varma, mutta se on kulkenut keskiaikaisesta maamerkistä sähkömajakaksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: öljylamppuja
+
+### 80
+KONTEKSTI:
+Lauta: Maailmankartta
+Näkymä: kartta
+Kartalla auki oleva kohdetietoruutu: Kõpun majakka (merenkulku)
+Tietoruudun teksti: Kõpun majakka Hiidenmaalla on yksi maailman vanhimmista majakoista: se on ollut yhtäjaksoisessa käytössä valmistumisestaan vuodesta 1531 asti. Se on poikkeuksellinen myös siksi, että se on kulkenut kaikki vaiheet keskiaikaisesta maamerkistä nykyaikaiseen sähkömajakkaan.
+
+Majakka merkitsee Hiiun matalikon ja varoittaa laivoja rantautumasta. Torni seisoo Hiidenmaan korkeimman kukkulan Tornimägin laella; rakennus itse on 37,7 metriä korkea, mutta valo on 103,6 metriä merenpinnan yläpuolella, mikä tekee siitä Itämeren korkeimmalla olevan rannikkovalon. Valo näkyy navigointiin asti 26 meripeninkulman päähän.
+
+Torni on neliömäinen prisma, jonka neljällä ilmansuunnalla on massiiviset tukipilarit. Kahdenkymmenenneljän metrin korkeuteen asti se on pelkkää kiveä: ulkopinta on sidottu kalkkilaastilla, mutta runko on ladottu ilman laastia. Kiveä on noin 5 000 kuutiometriä ja painoa 12 000 tonnia. A…
+
+PELIN TARKISTETTUA AINEISTOA (käytä ensisijaisesti tätä):
+- [San Francisco — kaupunkilehti / Alcatrazin saari: Pelikaanien saari ja lännen ensimmäinen majakka] Espanjalainen merenkulkija Juan Manuel de Ayala kartoitti lahden 1775 ja antoi nykyiselle Yerba Buena Islandille nimen La Isla de los Alcatraces; nimen siirsi myöhemmin tälle kalliolle englantilainen kapteeni Frederick W. Beechey. Nimi tarkoittanee pelikaanien saarta, ja ranskalainen kapteeni Auguste Duhaut-Cilly kirjoitti elokuussa 1827, että laukaus nosti saaren linnut pilveksi hurrikaanin äänellä. Kultaryntäyksen vilkastuttama merenkulku sai kongressin tilaamaan 1851–1852 seitsemän majakkaa länsirannikolle, ja Alcatrazin majakka valmistui niistä ensimmäisenä. Ranskalainen Fresnel-linssi tuotiin laivalla Etelä-Amerikan ympäri, ja vartija Michael Cassin sytytti valon 1. kesäkuuta 1854 — en…
+- [Dakar — kaupunkilehti / Dakar: Kaksi kukkulaa] Ouakamin kaksoiskukkulat ovat kaupungin ainoa korkea maasto, ja niiltä näkee koko niemen. Ensimmäisen laella on Mamellesin majakka, joka valmistui 1864 ja jota on kuvattu yhdeksi maailman suurista majakoista. Sen Fresnel-linssi kelluu elohopeakylvyssä, valo välähtää viiden sekunnin välein 120 metrin korkeudelta ja kantaa 31 meripeninkulmaa — se on yksi Afrikan voimakkaimmista. Majakkaa ei ole automatisoitu, joten siellä on yhä vartija, ja se on avoinna yleisölle. Toisen kukkulan päällä seisoo Afrikan korkein patsas, viisikymmenmetrinen pronssiveistos, joka vihittiin 4. huhtikuuta 2010.
+AIEMPI KYSYMYS: Miten majakoiden valo tuotettiin ennen sähköä?
+AIEMPI VASTAUS (Livia):
+Selvä juttu. Ennen sähköä majakan valo tuotettiin avotulella, ja myöhemmin otettiin käyttöön [[öljylamppuja]], joiden valoa vahvistettiin heijastimilla ja linsseillä. Tunnetuin linssityyppi on [[Fresnelin linssi]], jolla valo saatiin suunnattua kauas merelle. Kõpun majakan tarkkoja vaiheita en ole varma, mutta se on kulkenut keskiaikaisesta maamerkistä sähkömajakaksi. Ja tän kaiken minä kannoin päässäni.
+KYSYMYS: Kerro lisää: Fresnelin linssi
