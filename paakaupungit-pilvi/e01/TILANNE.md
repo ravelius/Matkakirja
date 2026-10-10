@@ -8,7 +8,7 @@ Vaihe 0 tehty (konteksti, säädata Open-Meteo OK, malli).
 | zagreb | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | kohteita 5 (kuvapula) | | |
 | belgrad | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 2 varoitusta: lisenssi CC BY-SA 3.0 rs |
 | tirana | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | 5 varoitusta (lisenssi CC BY 3.0 pl, pyöreä luku) |
-| skopje | ✓ | ✓ | ✓ | | | | | |
+| skopje | ✓ | ✓ | ✓ | ✓ | | | | | |
 | podgorica | ✓ | | | | | | |
 | chisinau | ✓ | | | | | | kysymykset ja yksi kohde ohuita |
 | minsk | ✓ | | | | | | kohde 3 ohut (5 faktaa), Gorki 7 |
