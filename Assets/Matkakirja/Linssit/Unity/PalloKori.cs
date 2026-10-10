@@ -52,12 +52,18 @@ namespace Matkakirja.Natiivi
         public static float KatseYlos;
         /// <summary>Kompassin merkki (OpasSovitin): suunta seuraavaan kohteeseen (°, 0 = pohjoinen, myötäpäivään), null = ei kohdetta.</summary>
         public static double? SeuraavaSuunta;
-        // KORIN KOMPASSI (omistaja 9.10. "teetä", PT 00.45; Ydin KoriKompassi): messinkinen nestekompassi korin reunalla oikealla.
+        // KORIN KOMPASSI (omistaja 9.10. "teetä", PT 00.45; Ydin KoriKompassi): messinkinen nestekompassi korin vasemmalla reunalla (19.0x).
         // Runko keinuu korin mukana, kardaani kompensoi keinunnan, ruusu osoittaa pohjoiseen ja merkki seuraavaan kohteeseen.
         // Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_runko, _kardaani, _ruusu, _merkki, _lasi) korvaa väliaikaisen mallin.
         readonly KoriKompassi kompassi = new KoriKompassi();
         Transform kompassiJuuri, kompassiKardaani, kompassiRuusu, kompassiMerkki;
-        static readonly Vector3 KompassiPaikka = new Vector3(0.30f, 1.122f, 0.84f);   // korin reunalla oikealla (mallin koordinaatit)
+        // OMISTAJA 10.10. 19.0x (PT, juna 180): "kiinnitä kompassi korin vasempaan reunaan, nyt se leijuu luonnottomasti ilmassa".
+        // Ennen: mallin juuressa (0,30; 1,122; 0,84) eli 8 cm pajun ja 5 cm nahkareunuksen yläpuolella eikä keinunut korin mukana.
+        // Nyt korin solmun (kori_etureuna) lapsi: nahkareunuksen ylin kohta kompassin x:ssä (ReunanPaalla, korin omista kärjistä),
+        // x vasemmalla köyden sisäpuolella ruudun leveyden mukaan (KompassiX); keinunta tulee korin solmulta.
+        const float KompassiXMax = 0.40f, KompassiXOsuus = 0.62f, KompassiRunkoAla = 0.006f;
+        static readonly Vector3 KompassiPaikkaVara = new Vector3(-0.30f, 0.02f, 0.085f);   // korin solmussa, jos reunusta ei löydy
+        float kompassiX = -0.30f;
         public const string KompassiOsoite = "https://media.matkakirja.app/kartta/ilmapallo/v1/kompassi_nakyma.glb";
         static GlbMalli kompassiMalli; static bool kompassiHaussa;
         static readonly System.Collections.Generic.Dictionary<int, Texture2D> kompassiTekstuurit = new System.Collections.Generic.Dictionary<int, Texture2D>();
@@ -366,7 +372,7 @@ namespace Matkakirja.Natiivi
             {
                 if (malliJuuri == null) RakennaMalli();
                 if (kupuMalli != null && kupuJuuri == null) RakennaKupu();
-                if (kompassiMalli != null && !kompassiGlb && malliJuuri != null) RakennaKompassi(malliJuuri);
+                if (kompassiMalli != null && !kompassiGlb && malliJuuri != null) RakennaKompassi(malliKori != null ? malliKori : malliJuuri);
                 return;
             }
             if (!malliHaussa && ohjain != null) ohjain.StartCoroutine(HaeGlb("kori_nakyma.glb", "pallokori-v1.glb", MalliOsoite, h => malliHaussa = h, m => malli = m));
@@ -427,7 +433,28 @@ namespace Matkakirja.Natiivi
             }
             RakennaKoysiVerkot();
             MerkitseOsat();   // ennen kompassia: kompassi jää ilman korin tummennusta
-            RakennaKompassi(malliJuuri);
+            RakennaKompassi(malliKori != null ? malliKori : malliJuuri);
+        }
+
+        /// <summary>Kompassi nahkareunuksen päälle kohtaan x = kompassiX (korin solmun koordinaatit): reunuksen kärkien ylin piste
+        /// ±5 cm:n kaistalla; runko lepää sen päällä. Kutsutaan rakennettaessa ja ruudun muodon muuttuessa (SovitaMalli).</summary>
+        void AsetaKompassinPaikka()
+        {
+            if (kompassiJuuri == null) return;
+            var p = new Vector3(kompassiX, KompassiPaikkaVara.y, KompassiPaikkaVara.z);
+            float yMax = float.NegativeInfinity;
+            if (malliKori != null && kompassiJuuri.parent == malliKori)
+                foreach (var mf in malliKori.GetComponentsInChildren<MeshFilter>(true))
+                {
+                    if (!mf.name.Contains("nahka") || mf.sharedMesh == null) continue;
+                    var ms = mf.sharedMesh.vertices; var tr = mf.transform;
+                    for (int i = 0; i < ms.Length; i++)
+                    {
+                        var q = malliKori.InverseTransformPoint(tr.TransformPoint(ms[i]));
+                        if (Mathf.Abs(q.x - kompassiX) < 0.05f && q.y > yMax) { yMax = q.y; p = new Vector3(kompassiX, q.y, q.z); }
+                    }
+                }
+            kompassiJuuri.localPosition = p + new Vector3(0, KompassiRunkoAla, 0);
         }
 
         /// <summary>Kompassi korin reunalle: Linnanrakentajan kompassi_nakyma.glb (solmut kompassi_kardaani → kompassi_ruusu,
@@ -438,7 +465,7 @@ namespace Matkakirja.Natiivi
             if (kompassiMalli != null)
             {
                 kompassiJuuri = new GameObject("kompassi") { layer = Kerros }.transform;
-                kompassiJuuri.SetParent(v, false); kompassiJuuri.localPosition = KompassiPaikka;
+                kompassiJuuri.SetParent(v, false); AsetaKompassinPaikka();
                 var solmut = Solmut(kompassiMalli, kompassiJuuri, kompassiTekstuurit);
                 kompassiKardaani = kompassiRuusu = kompassiMerkki = null;
                 for (int i = 0; i < solmut.Length; i++)
@@ -463,7 +490,7 @@ namespace Matkakirja.Natiivi
             }
             Transform Tyhja(string nimi, Transform vh) { var g = new GameObject(nimi) { layer = Kerros }; g.transform.SetParent(vh, false); return g.transform; }
             var messinki = M(new Color(0.72f, 0.55f, 0.24f)); var kerma = M(new Color(0.93f, 0.89f, 0.78f)); var pun = M(new Color(0.65f, 0.12f, 0.1f)); var tumma = M(new Color(0.15f, 0.13f, 0.1f));
-            kompassiJuuri = Tyhja("kompassi", v); kompassiJuuri.localPosition = KompassiPaikka;
+            kompassiJuuri = Tyhja("kompassi", v); AsetaKompassinPaikka();
             Osa("kompassi_runko", kompassiJuuri, PrimitiveType.Cylinder, new Vector3(0, 0.012f, 0), new Vector3(0.11f, 0.012f, 0.11f), messinki);
             kompassiKardaani = Tyhja("kompassi_kardaani", kompassiJuuri); kompassiKardaani.localPosition = new Vector3(0, 0.03f, 0);
             kompassiRuusu = Tyhja("kompassi_ruusu", kompassiKardaani);
@@ -480,7 +507,8 @@ namespace Matkakirja.Natiivi
             var f = perus.transform.forward; f.y = 0;
             double suuntima = f.sqrMagnitude > 1e-6f ? Mathf.Atan2(f.x, f.z) * Mathf.Rad2Deg : 0;
             kompassi.Paivita(dt, suuntima, SeuraavaSuunta, liike.Nyokkays, -liike.Kallistus);
-            kompassiJuuri.localRotation = Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);   // runko korin mukana
+            // Runko korin mukana: korin solmun lapsena keinunta tulee solmulta; varamallissa (juuren alla) käännetään itse.
+            kompassiJuuri.localRotation = kompassiJuuri.parent == malliKori ? Quaternion.identity : Quaternion.Euler((float)liike.Nyokkays, 0, -(float)liike.Kallistus);
             kompassiKardaani.localRotation = Quaternion.Euler((float)kompassi.KardaaniX, 0, (float)kompassi.KardaaniZ);
             kompassiRuusu.localRotation = Quaternion.Euler(0, (float)kompassi.Ruusu, 0);
             kompassiMerkki.localRotation = Quaternion.Euler(0, (float)kompassi.Merkki, 0);
@@ -594,6 +622,9 @@ namespace Matkakirja.Natiivi
                 float x = Mathf.Sign(k.localPosition.x) * Mathf.Min(KoysiX, 0.85f * puoliLeveys);
                 if (!Mathf.Approximately(k.localPosition.x, x)) k.localPosition = new Vector3(x, k.localPosition.y, k.localPosition.z);
             }
+            // Kompassi vasemmalle köyden sisäpuolelle (iPhone pysty: köydet pois, kompassi silti kuvassa).
+            float kx = -Mathf.Min(KompassiXMax, KompassiXOsuus * puoliLeveys);
+            if (!Mathf.Approximately(kx, kompassiX)) { kompassiX = kx; AsetaKompassinPaikka(); }
         }
 
         void Osa(Transform v, GlbOsa osa, System.Collections.Generic.Dictionary<int, Texture2D> tekstuurit, GlbMalli malli)

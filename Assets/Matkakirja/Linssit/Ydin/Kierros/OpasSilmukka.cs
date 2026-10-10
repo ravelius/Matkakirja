@@ -859,6 +859,28 @@ namespace Matkakirja.Linssit.Kierros
             return true;
         }
 
+        /// <summary>
+        /// Hyppy kierroksen kohteeseen i (Natiivi-UI:n metrolinjan asema, PT 19.0x juna 180): kesken oleva kerronta ja odottava pyyntö
+        /// jäävät, lento kohteeseen i kuten kierroksen oma siirto, ja kierros jatkuu siitä (i + 1, …). Keskeytetty kierros jatkuu
+        /// samalla. false: ei kierrosjonoa, vapaa lento, i jonon ulkopuolella, i on nykyinen tai siirtoruutu kesken.
+        /// </summary>
+        public bool KierrosKohteeseen(int i)
+        {
+            // Kierroksen viimeisellä kohteella KierrosKaynnissa on jo false (esihaku päätti jonon), mutta jono on tallessa: hyppy käy.
+            if (Vaihe == OpasVaihe.Valmis || VapaaTila || kierrosJono.Count == 0) return false;
+            if (i < 0 || i >= kierrosJono.Count || i == KierrosNykyinen || siirto || Siirtymassa || avausViive > 0) return false;
+            Seuraava = null; odotettu = 0; OdottaaVastausta = false; kysymysAika = -1; lykattyKysymys = null; esihakuPuheenJalkeen = false;
+            jatkoKohde = null; KierrosKeskeytetty = false; toiveesta = false;
+            if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
+            aaniLoppui = true; hiljaS = double.MaxValue;
+            KierrosKaynnissa = true;
+            kierrosIndeksi = i;
+            var e = kierrosJono[kierrosIndeksi++];
+            KierrosTieto = (kierrosIndeksi, kierrosJono.Count);
+            LiikuSisainen(e.nimi, e.lat, e.lon);
+            return true;
+        }
+
         // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10.: "saisi olla se vapaa lento nappi ja sitten kun se on kytketty päälle
         // olisi palaa kierrokselle tms nappi, joka palauttaisi pelaajan takaisin siihen missä hän keskeytti opaskierroksen ja kierros
         // jatkuisi siitä eteenpäin"; Päätoimittaja juna 170, napit Natiivi-UI) ----

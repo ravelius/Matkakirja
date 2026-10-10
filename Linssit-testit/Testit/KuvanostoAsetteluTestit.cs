@@ -22,6 +22,23 @@ namespace Matkakirja.Linssit.Testit
                 }
         }
 
+        [Testi] static void KertomuskuvaLisakuvienKokoisenaJaVasemmalla()
+        {
+            // Omistaja 10.10. 19.0x: kertomuskuvat lisäkuvien (kuvanappi 40 / 56 pt) kokoisina niiden vasemmalle puolelle.
+            foreach (var (n, w, h) in Ruudut)
+                foreach (float s in new[] { 0.5f, 1.0f, 2.0f })
+                {
+                    float koko = w > 700 && h > 700 ? 56f : 40f, oikea = 20f, ala = 90f, rako = 8f;
+                    var k = KuvanostoAsettelu.Kulmaan(w, h, s, koko, oikea, ala, rako);
+                    Oleta.Tosi(k.Kork == koko && k.Lev <= koko * KuvanostoAsettelu.SuhdeMax + 0.01f, $"{n} {s}: napin korkuinen {k}");
+                    Oleta.Tosi(System.Math.Abs(k.X + k.Lev - (w - oikea - koko - rako)) < 0.01f, $"{n} {s}: napin vasemmalla raon päässä {k}");
+                    Oleta.Tosi(System.Math.Abs(k.Y + k.Kork - (h - ala)) < 0.01f, $"{n} {s}: alareuna napin linjassa {k}");
+                    Oleta.Tosi(k.X >= 0 && k.Ala / (w * h) <= 0.02f, $"{n} {s}: ruudulla ja pieni {k.Ala / (w * h):P1}");
+                    var p = KuvanostoAsettelu.Kulmaan(w, h, s, koko, oikea, ala, rako, vieressa: false);
+                    Oleta.Tosi(System.Math.Abs(p.X + p.Lev - (w - oikea)) < 0.01f, $"{n} {s}: ilman nappia sen paikalla {p}");
+                }
+        }
+
         [Testi] static void IsoNykyistaSuurempiJaPeittoEnintaan45()
         {
             foreach (var (n, w, h) in Ruudut)

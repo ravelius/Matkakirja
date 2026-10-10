@@ -428,6 +428,9 @@ namespace Matkakirja.Natiivi
             kerros.JokaRuutu += PaivitaSaaVihje;
             // METROLINJA (omistaja 7.10. 10.2x): kierroksen eteneminen vasemmassa reunassa keskellä (OpasMetrolinja).
             metro = new OpasMetrolinja(Juuri);
+            // Aseman napautus (omistaja 10.10. 19.0x): kierroshyppy kohteeseen i (LS1 50204e0f2): lento, kerronta siellä ja kierros
+            // jatkuu siitä; metrolinja päivittyy KierrosLahtee-tapahtumasta.
+            metro.AsemaValittu = OpasSovitin.KierrosKohteeseen;
             kerros.JokaRuutu += PaivitaMetro;
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
@@ -1196,6 +1199,7 @@ namespace Matkakirja.Natiivi
         public VisualElement TestiJuuri => Juuri;
         public VisualElement TestiValikko => valikko;
         public VisualElement TestiMetro => metro?.TestiJuuri;
+        public OpasMetrolinja TestiMetrolinja => metro;
         /// <summary>Asettelutesti: pallon kierroksen ohjaimet (tapit, Mikä tämä on, kuvakortti).</summary>
         public IEnumerable<(string Nimi, VisualElement E)> TestiPallonOhjaimet()
         {
@@ -1736,18 +1740,20 @@ namespace Matkakirja.Natiivi
                     });
                 }
             }
-            if (!kuvaNakyy) return;
             // Vapaassa tilassa havainnekuvan paikalla on Mikä tämä on? -nappi.
             var kd = mikaRivi.style.display == DisplayStyle.Flex ? DisplayStyle.None : DisplayStyle.Flex;
-            if (kuvaKortti.style.display != kd) kuvaKortti.style.display = kd;
             float koko = KuvaKoko;
-            if (kuvaKortti.style.width.value.value != koko) { kuvaKortti.style.width = koko; kuvaKortti.style.height = koko; kuvaKortti.style.minHeight = koko; }
             // Oikean tapin keskilinjalle (iPhonella), iPadilla reunaan; pohja nappirivin nappien alareunaan.
             float oikea = Mathf.Max(OpasTapit.Reuna, OpasTapit.Reuna + (OpasTapit.Halkaisija - koko) * 0.5f);
-            if (kuvaKortti.style.right.value.value != oikea) kuvaKortti.style.right = oikea;
             float ala = OikeaAla(koko);
             float h = Juuri.resolvedStyle.height;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
+            // Kertomuskuvat (kuvanosto) lisäkuvien kokoisina niiden vasemmalle puolelle (omistaja 10.10. 19.0x); ilman nappia sen paikalle.
+            kuvanosto.AsetaKulma(koko, oikea, ala, KuvaRako, kuvaNakyy && kd == DisplayStyle.Flex);
+            if (!kuvaNakyy) return;
+            if (kuvaKortti.style.display != kd) kuvaKortti.style.display = kd;
+            if (kuvaKortti.style.width.value.value != koko) { kuvaKortti.style.width = koko; kuvaKortti.style.height = koko; kuvaKortti.style.minHeight = koko; }
+            if (kuvaKortti.style.right.value.value != oikea) kuvaKortti.style.right = oikea;
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
 
@@ -2721,6 +2727,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "teksti": NaytaTeksti(); return "opas: teksti auki";
                 case "kuvatesti":
+                    if (o.Length > 1 && o[1] == "pois") { testiKuva = null; naytettyKuva = null; return "opas: testikuva pois"; }
                     testiKuva = new OpasKuva
                     {
                         Url = o.Length > 1 && o[1].StartsWith("http") ? o[1]
@@ -2866,6 +2873,14 @@ namespace Matkakirja.Natiivi
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
                 case "metro":
+                    // `ui opasvalikko metro selite <teksti>|selite`: testiselite nykyisen aseman alle (tyhjä = pois).
+                    // Komento jakaa rivin kahteen osaan (komento, loput): selitteen teksti on loppujen toinen osa.
+                    if (o.Length > 1 && (o[1] == "selite" || o[1].StartsWith("selite ")))
+                    {
+                        var st = o[1].Split(new[] { ' ' }, 2, StringSplitOptions.RemoveEmptyEntries);
+                        metro.TestiSelite = st.Length > 1 ? st[1] : null;
+                        return "opas: " + metro.Kuvaus();
+                    }
                     // `ui opasvalikko metro <i>|auto`: testilinja Pariisin kohteilla ilman kierrosta.
                     metro.Testi = o.Length > 1 && o[1] != "auto";
                     if (metro.Testi && int.TryParse(o[1], out int mi)) metro.TestiIndeksi = mi;

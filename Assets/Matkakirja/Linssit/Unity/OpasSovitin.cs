@@ -1281,6 +1281,25 @@ namespace Matkakirja.Natiivi
             return ok;
         }
 
+        /// <summary>Metrolinjan aseman napautus (Natiivi-UI, PT 19.0x juna 180): lento kierroksen kohteeseen i (KierrosKohteet), kerronta
+        /// siellä ja kierros jatkuu siitä; KierrosIndeksi ja KierrosLahtee(nykyinen, i, kesto) päivittyvät. false: ei kierrosta, vapaa lento,
+        /// i == nykyinen tai siirto kesken.</summary>
+        public static bool KierrosKohteeseen(int i)
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            int nyk = KierrosIndeksi;
+            if (v.tauolla && !v.silmukka.VapaaTila) Tauko(false);
+            v.puhuttu = null;
+            v.hyppyLahto = nyk;
+            bool ok = v.silmukka.KierrosKohteeseen(i);
+            if (!ok) v.hyppyLahto = int.MinValue;
+            else { if (v.silta != null && v.silta.isPlaying) v.silta.Stop(); v.Silta(OpasSiltalauseet.Valinta, true); }
+            v.o.Kirjaa(ok ? $"opas: kierros hyppää {nyk} → {i} ({(i < KierrosKohteet.Count ? KierrosKohteet[i].nimi : "-")})" : $"opas: kierroshyppy {i} ei käy");
+            return ok;
+        }
+        int hyppyLahto = int.MinValue;
+
         // ---- VAPAA LENTO JA PALUU KIERROKSELLE (omistaja 9.10., Päätoimittaja juna 170; napit Natiivi-UI heijastuksella,
         // natiivi-ui/vapaa-lento) ----
         /// <summary>Vapaan lennon nopeusvipu (Natiivi-UI kirjoittaa; 1 = oletus, OpasVapaaLento.VipuMin…VipuMax).</summary>
@@ -2264,7 +2283,7 @@ namespace Matkakirja.Natiivi
                 var jono = silmukka.KierrosJono; int seur = -1;
                 for (int i = 0; i < jono.Count; i++)
                     if (string.Equals(jono[i].nimi, k.Nimi, StringComparison.OrdinalIgnoreCase) || KierrosLento.EtaisyysM(jono[i].lat, jono[i].lon, k.Lat, k.Lon) < 80) { seur = i; break; }
-                if (seur >= 0) { int nyk = seur - 1; o.Kirjaa($"opas: kierros lähtee {nyk} → {seur}"); KierrosLahtee?.Invoke(nyk, seur, (float)silmukka.LentoKestoS); }
+                if (seur >= 0) { int nyk = hyppyLahto != int.MinValue ? hyppyLahto : seur - 1; hyppyLahto = int.MinValue; o.Kirjaa($"opas: kierros lähtee {nyk} → {seur}"); KierrosLahtee?.Invoke(nyk, seur, (float)silmukka.LentoKestoS); }
                 if (seur == 1) pallolauseet.Nollaa();   // kierroksen ensimmäinen lähtö
             }
             kaupunki.Karkeaksi();   // kaksivaiheinen tarkkuus (juna 153): lento ja saapuminen karkealla valinnalla
