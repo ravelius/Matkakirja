@@ -35,6 +35,9 @@ IPAD = re.compile(r'devicectl|00008103|[\w-]*ipad[\w-]*\.(?:sh|zsh|py)', re.I)
 BLENDER = re.compile(r'Blender\.app/Contents/MacOS/Blender\b')
 UNITY = re.compile(r'Unity\.app/Contents/MacOS/Unity\b.*-batchmode|/usr/bin/xcodebuild\b|\bxcodebuild\s')
 SKRIPTI = re.compile(r'([\w.-]+)\.(?:sh|zsh|py)\b')
+# Mac Studion hiiri (omistaja 10.10.2026 klo 20.3x): GUI-automaatio omistajan näytöllä, hiiri ja näppäimistö liikkuvat itsestään.
+HIIRI = re.compile(r'soundly-erat/aja\.zsh\b|\bmac-cpu\.sh\b|\bcliclick\b|osascript\b.*System Events.*(?:click|keystroke|key code)', re.I)
+HIIRI_AJOT = (('soundly-erat/aja.zsh', 'Pelikoodari', 'Soundly-äänihaku'), ('mac-cpu.sh', 'Natiiviseppä', 'Mac-sovelluksen mittaus'))
 SIMU = re.compile(r'^\s+(.+?) \(([0-9A-F-]{36})\) \(Booted\)')
 
 
@@ -131,6 +134,7 @@ def laite(nimi, kuvio, P, oma):
 def unity(P, oma):
     """Unityn eräajot ja Xcode-käännökset roolin mukaan; Actions-ajurin ajo = TestFlight-käännös (CI)."""
     ryhmat = {}
+    juuret = {}
     for pid, v in osumat(UNITY, P, oma):
         ketju = esivanhemmat(pid, P)
         teksti = ' '.join(ketju)
@@ -148,8 +152,22 @@ def unity(P, oma):
                 mita = 'käännös'
         g = ryhmat.setdefault(avain, {'mita': mita, 'cpu': 0.0})
         g['cpu'] += v[3]
+        juuret[pid] = g
         if mita == 'Xcode-käännös' and g['mita'] != 'Xcode-käännös':
             g['mita'] = mita
+    # Käännöksen varsinainen työ (clang, swift-frontend, ld, Unityn apuprosessit) tehdään lapsiprosesseissa
+    # (omistaja 10.10. 21.2x: Unity näytti 0 % Xcode-käännöksen aikana) → lähimmän osuman ryhmään.
+    for pid, v in P.items():
+        if pid in juuret:
+            continue
+        p = v[0]
+        for _ in range(40):
+            if p in juuret:
+                juuret[p]['cpu'] += v[3]
+                break
+            if p not in P or p <= 1:
+                break
+            p = P[p][0]
     if not ryhmat:
         return {'nimi': 'Unity', 'tila': 'vapaa'}
     cpu = prosentti(sum(g['cpu'] for g in ryhmat.values()))
@@ -252,10 +270,25 @@ def codex():
     return {'nimi': 'Codex', 'tila': 'vapaa'}
 
 
+def hiiri(P, oma):
+    """Mac Studion hiiri: tunnetut GUI-ajot (Soundly-haku, Mac-mittaus) ja yleiset hiiri-/näppäinohjaukset (cliclick,
+    osascript System Events). setsid-ajoilla ei ole Claude-vanhempaa, joten rooli tunnetusta ajosta."""
+    o = [(pid, v) for pid, v in osumat(HIIRI, P, oma) if 'MacOS/claude' not in v[2]]
+    if not o:
+        return {'nimi': 'Mac Studion hiiri', 'tila': 'vapaa'}
+    pid, (_pp, etime, _cmd, _c) = max(o, key=lambda x: kesto_min(x[1][1]))
+    for avain, r, kuvaus in HIIRI_AJOT:
+        if any(avain in v[2] for _p, v in o):
+            return {'nimi': 'Mac Studion hiiri', 'tila': 'käytössä', 'rooli': rooli(pid, P) or r, 'kuvaus': kuvaus,
+                    'tunnettu': True, 'kesto_min': kesto_min(etime)}
+    return {'nimi': 'Mac Studion hiiri', 'tila': 'käytössä', 'rooli': rooli(pid, P), 'kuvaus': 'hiiriohjaus',
+            'tunnettu': False, 'kesto_min': kesto_min(etime)}
+
+
 def main():
     P = prosessit()
     oma = os.getpid()
-    rivit = [laite('iPad', IPAD, P, oma), laite('Blender', BLENDER, P, oma), unity(P, oma), simulaattorit(P),
+    rivit = [hiiri(P, oma), laite('iPad', IPAD, P, oma), laite('Blender', BLENDER, P, oma), unity(P, oma), simulaattorit(P),
              pilviajot(), codex()]
     data = {'ts': int(time.time() * 1000), 'rivit': rivit}
     kohde = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'laitteet.json')

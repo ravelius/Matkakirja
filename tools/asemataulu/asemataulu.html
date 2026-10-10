@@ -314,9 +314,10 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       su.append(luo('span', 'otsikko', d.dataset.nimi));
       var sy = tilaSymboli(r.tila);
       if (sy) { var e = luo('span', 'symboli ' + sy[1], sy[0]); e.title = sy[2]; e.setAttribute('aria-label', sy[2]); su.append(e); kaytetyt[sy[1]] = sy; }
-      if (typeof r.edistys === 'number') {
+      var edArvo = edistysTilanteesta(r);
+      if (typeof edArvo === 'number') {
         var ed = luo('span', 'edistys');
-        var n = Math.max(0, Math.min(5, Math.round(r.edistys)));
+        var n = Math.max(0, Math.min(5, Math.round(edArvo)));
         ed.setAttribute('aria-label', 'edistys ' + n + '/5');
         for (var q = 1; q <= 5; q++) ed.append(luo('i', q <= n ? 'on' : ''));
         su.append(ed);
@@ -335,6 +336,16 @@ details.juna .runko-tl .vastuut { justify-content: flex-end; margin-left: 0; }
       d.append(runko);
       sailio.append(d);
     });
+  }
+  // Edistys lasketaan tilanteen "Korjatut:"- ja "Työn alla"-luetteloista, kun ne ovat mukana
+  // (omistaja 10.10. 21.4x: bugikorjausten palkki ei edennyt); muuten kenttä edistys sellaisenaan.
+  function edistysTilanteesta(r) {
+    var t = String(r.tilanne || '');
+    var ik = t.indexOf('Korjatut:'), it = t.indexOf('Työn alla');
+    if (ik < 0 || it <= ik) return r.edistys;
+    var laske = function (s) { return (s.match(/^\s*[–-]\s/gm) || []).length; };
+    var k = laske(t.slice(ik, it)), ty = laske(t.slice(it));
+    return k + ty > 0 ? 5 * k / (k + ty) : r.edistys;
   }
   function tilaSymboli(t) {
     t = String(t || '').toLowerCase();
