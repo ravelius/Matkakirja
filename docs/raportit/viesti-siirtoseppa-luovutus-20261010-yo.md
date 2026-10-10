@@ -53,3 +53,15 @@ Aja kosketustesti jokaisen junan Olavinlinna-todisteessa.
 - SeikkailuHistoria kytkee ranta-1499:n renderin joka ruutu (r.enabled = ranta); piilotuskokeisiin forceRenderingOff.
 - Valkoiset rantakivet = ympäristön rantakivet.glb päiväkuvalla hämärässä (kokeet 1–7, todistus-kivet-diag*).
 - Natiivi piirsi tilasta vain glb:n ensimmäisen mesh-solmun; LR:n kävelyosat ovat solmu per pinta.
+
+## PÄIVITYS 22.3x (nollauksen jälkeinen sessio)
+
+- KUITATTU 180: siirtoseppa/v47d b51f3aefb (LR v47d: pala 8f0bba9b0f80d3fd, esittely 0df8a41e9b4ecec4; Linssit 1344/1344, laaja 2/2)
+  ja siirtoseppa/lapipeluu-vahdit 25fe0ce70 (vene-kuivan päällä: Kuuntele-nappi piiloon pelaajan ajaksi, laatu-korvaajat-pankin
+  suorat klipit äänivahdin rekisteriin; simulla vahdit OK, todistus-olavinlinna-vahdit-20261010-2224). SHA:t Natiivisepällä.
+- Läpipeluu: todistus-olavinlinna-lapipeluu-20261010-2205 (kuva-arkki). Laiturin sininen möykkypinta = ympäristön rantakivet.glb
+  hämäräkuvalla (ei v47d:n vika); LR teki rantakivet v2 (juna 181) → LR pyytää pelikuvan samasta laiturin kulmasta viennin jälkeen.
+- KOSKETUSKOORDINAATIT: simu pystyssä, peli vaakana → tap/veto x = 1032 − y_vaaka, y = x_vaaka. Vanhat kosketusskenaariot osuivat
+  vasemmalle puoliskolle (katsetta ei todennettu). Korjatut: skenaariot/olavinlinna-kosketus.txt, -lapipeluu.txt, -vahdit.txt.
+- Botti: pelaaja-15+ siirtää ilman kävelyä ja kamera jää kappelin näkymään (vanha, ei junaa). SEURAAVA (PT): huoneiden 3–10 kuvat
+  tarkistuspisteistä (tallennuksesta jatko) Julkaisijan simuvuorolla junan 180 jälkeen → mallivirheet LR:lle erinä (sijainti, mitä, kuva).
