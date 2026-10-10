@@ -1,0 +1,2228 @@
+[
+ {
+  "kohde": "kohde:hahmotelma-high-fens",
+  "kysymys": "Mikä Hautes Fagnesin kohta on koko Belgian korkein?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Belgian korkein kohta on [[Signal de Botrange]], joka kohoaa 694 metrin korkeuteen Hautes Fagnesin ylängöllä [[Ardennien]] ja [[Eifelin]] välissä. Huipulle rakennettu torni nostaa katselupisteen noin 700 metriin. Ei kovin kova vuori, mut katolta on kyl hyvä näkymä.",
+  "linkit": [
+   "Signal de Botrange",
+   "Ardennien",
+   "Eifelin"
+  ],
+  "jatkot": [
+   "Millainen sää ylängöllä on tavallisesti?",
+   "Miten Belgian korkeus vaihtelee rannikolta Ardenneille?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-high-fens",
+  "kysymys": "Mistä vedestä alueen rahkasuot saavat kosteutensa?",
+  "uusi": false,
+  "vastaus": "Kato, sadetta vaan. Rahkasuot saavat kosteutensa ainoastaan sadevedestä, joten niiden vesitalous riippuu kokonaan ylängön sateista. Tällaisissa oloissa [[turvekerrokset]] ovat ehtineet kasvaa yli 10 000 vuoden aikana. Alue suojeltiin vuonna 1957, ja [[Euroopan neuvosto]] myönsi sille suojelun kunniakirjan vuonna 1966. Märkää hommaa, mut suo tykkää.",
+  "linkit": [
+   "turvekerrokset",
+   "Euroopan neuvosto"
+  ],
+  "jatkot": [
+   "Miten turve syntyy rahkasammalista?",
+   "Miksi sadevesisuot ovat ravinteista niukkoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-high-fens",
+  "kysymys": "Miksi Hautes Fagnesin metsissä on kesällä tulipalovaara?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Kesällä metsäalueilla maa ja kasvillisuus kuivuvat helposti, ja kuivuuden vallitessa tuli voi syttyä ja levitä nopeasti. Alue on Belgian suurin [[luonnonsuojelualue]], ja herkkien [[rahkasoiden]] vuoksi kävijöiden on syytä olla kesällä erityisen varovaisia tulen kanssa. Minä pysyttelen mieluummin kaukana liekeistä, siivet on arvokkaat.",
+  "linkit": [
+   "luonnonsuojelualue",
+   "rahkasoiden"
+  ],
+  "jatkot": [
+   "Miten metsäpalo sammutetaan ylänköalueella?",
+   "Mitkä kasvit viihtyvät rahkasoilla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-high-fens",
+  "kysymys": "Miksi turve kertyy rahkasoissa tuhansien vuosien aikana?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Rahkasammal]] kasvaa pinnalta ylöspäin samalla, kun sen alaosat kuolevat, ja kosteassa, happamassa ja hapettomassa ympäristössä kuolleet osat hajoavat hyvin hitaasti. Hajoamattomat jäänteet painuvat kerros kerrokselta turpeeksi, ja kerros paksunee vuosituhansien kuluessa. [[Hautes Fagnesin]] soissa turvekerrokset ovat yli 10 000 vuotta vanhoja.\n\nAjatella, että sammal on tehnyt tuota kymmenentuhatta vuotta, enkä minä jaksa pesääkään rakentaa viikossa. Mut onhan sillä aikaa, kun ei ole kiire minnekään.",
+  "linkit": [
+   "Rahkasammal",
+   "Hautes Fagnesin"
+  ],
+  "jatkot": [
+   "Mihin turvetta käytetään?",
+   "Miten rahkasammal eroaa muista sammalista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-high-fens",
+  "kysymys": "Mikä lintu teeri on ja miksi se on uhanalainen?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Teeri on kanalintu, jonka koiras on kiiltävänmusta ja tunnettu näyttävästä soidinmenosta. Sen kanta on taantunut monin paikoin Euroopassa, ja syynä pidetään etenkin avointen elinympäristöjen, kuten [[nummien]] ja [[soiden]], vähenemistä. Siksi osa [[Hautes Fagnesin]] suojelualueesta on keväisin pesimäaikana suljettu. Pesimärauha on pyhä, sen minäkin ymmärrän.",
+  "linkit": [
+   "nummien",
+   "soiden",
+   "Hautes Fagnesin"
+  ],
+  "jatkot": [
+   "Miten teeri soi keväällä?",
+   "Missä muualla Euroopassa teeriä tavataan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-semois",
+  "kysymys": "Mihin jokeen Semois laskee?",
+  "uusi": false,
+  "vastaus": "Ai tota. Semois laskee [[Maasiin]] [[Monthermén]] kohdalla Ranskassa, ja se on Maasin oikea sivujoki. Joki saa alkunsa [[Arlonin]] seudulta Belgian Luxemburgin maakunnasta ja virtaa länteen, kunnes ylittää rajan Ranskaan. Noin 210 kilometrin matka päättyy siis Maasiin. Joki jokeen, kuin kirje kuoreen.",
+  "linkit": [
+   "Maasiin",
+   "Monthermén",
+   "Arlonin"
+  ],
+  "jatkot": [
+   "Missä Maas virtaa ja mihin se laskee?",
+   "Mikä on Semoisin laakson kansallispuisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-semois",
+  "kysymys": "Minkä kasvin lajike on saanut nimensä Semois-joesta?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Joesta nimensä saanut kasvi on [[tupakka]]: alueella kasvatettu tupakkalaji kantaa joen nimeä. Joki virtaa [[Ardennien]] ylängöiltä Belgiasta Ranskaan, ja suuri osa sen varresta kuuluu [[Semoisin laakson kansallispuistoon]]. Minä pysyn mieluummin siemenissä ja leivänmurussa.",
+  "linkit": [
+   "tupakka",
+   "Ardennien",
+   "Semoisin laakson kansallispuistoon"
+  ],
+  "jatkot": [
+   "Miten tupakkaa on kasvatettu Euroopassa?",
+   "Mitä kansallispuisto tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-semois",
+  "kysymys": "Kuinka pitkän matkan Semois muodostaa Belgian ja Ranskan rajaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. [[Bohan-sur-Semois'n]] kylän jälkeen joki siirtyy Ranskaan, jossa se muodostaa noin kaksi kilometriä Belgian ja Ranskan rajaa. Sen jälkeen se jatkaa Ranskan puolella ja laskee [[Maasiin]] [[Monthermén]] kohdalla. Joen koko pituus on noin 210 kilometriä. Viisas Pöllö on matkoilla, joten raja-asiat jäivät minulle.",
+  "linkit": [
+   "Bohan-sur-Semois'n",
+   "Maasiin",
+   "Monthermén"
+  ],
+  "jatkot": [
+   "Miten Belgian ja Ranskan raja kulkee yleisesti?",
+   "Mikä paikka Monthermé on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-semois",
+  "kysymys": "Mikä Maas on joena ja mihin se päätyy?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Maas on noin 900 kilometriä pitkä joki, joka saa alkunsa Ranskasta ja virtaa Belgian ja Alankomaiden kautta. Ranskaksi sen nimi on Meuse. Se laskee [[Pohjanmereen]] [[Reinin]] suiston kanssa jaetulla alueella, ja Semois on yksi sen oikeanpuoleisista sivujoista. Pitkä joki, ja minä muistan vain sen mutkat.",
+  "linkit": [
+   "Pohjanmereen",
+   "Reinin"
+  ],
+  "jatkot": [
+   "Mitkä kaupungit sijaitsevat Maasin varrella?",
+   "Mikä on Reinin suisto?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-semois",
+  "kysymys": "Millainen alue Ardennit ovat?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Ardennit ovat ylänköalue ja metsäinen mäkimaa, joka ulottuu [[Belgian]], [[Luxemburgin]] ja Ranskan alueille. Aluetta luonnehtivat syvät jokilaaksot ja laajat metsät, ja Semois on yksi sen tunnetuista joista. Koillisessa Ardennien ja [[Eifelin]] välissä sijaitsee Hautes Fagnesin ylänkö. Metsiä riittää, eikä kaikkiin ole ehtinyt laskeutua.",
+  "linkit": [
+   "Belgian",
+   "Luxemburgin",
+   "Eifelin"
+  ],
+  "jatkot": [
+   "Mitä eläimiä Ardenneilla elää?",
+   "Mikä on Luxemburgin pääkaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-han-sur-lesse",
+  "kysymys": "Mikä joki on uurtanut Han-sur-Lessen luolakompleksin kukkulan alle?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Luolakompleksin on uurtanut Lesse-joki. Joki mutkittelee [[Ardenneilla]] rauhallisena, mutta Han-sur-Lessen luona se putoaa sortumakuoppaan nimeltä [[Belvaux'n kuilu]] ja virtaa yli kilometrin matkan kalkkikivikukkulan sisällä. Luolaston suurin sali, [[Salle du Dôme]], on noin 150 metriä leveä. Joki katoaa kukkulaan, enkä pääse perässä.",
+  "linkit": [
+   "Ardenneilla",
+   "Belvaux'n kuilu",
+   "Salle du Dôme"
+  ],
+  "jatkot": [
+   "Kuinka kauan opastettu kierros kestää?",
+   "Mitä tarkoittaa sortumakuoppa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-han-sur-lesse",
+  "kysymys": "Millä kulkuneuvolla turistit pääsevät luolille?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Turistit pääsevät luolille [[raitiovaunulla]], joka on jäänne Belgian vanhasta seutuvaunuverkosta. Metrin raideleveyden linja avattiin vuonna 1906, ja se palvelee yhä [[Grottes de Han-sur-Lesse]] -luolille matkaavia kävijöitä. Opastettu kierros luolissa kestää tunnista puoleentoista. Kyyhky ei tarvitse kyytiä, mutta penkiltä ottaisin kyllä pullan.",
+  "linkit": [
+   "raitiovaunulla",
+   "Grottes de Han-sur-Lesse"
+  ],
+  "jatkot": [
+   "Kuinka kauan luolakierros kestää?",
+   "Mikä on Rochefort?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-han-sur-lesse",
+  "kysymys": "Kuinka lämmin Han-sur-Lessen luolissa on?",
+  "uusi": true,
+  "vastaus": "Katotaas. Luolissa on aina noin 13 astetta, ja ilma on kosteaa. Maanalaisissa tiloissa lämpötila ei seuraa vuodenaikoja, joten [[Lesse-joen]] uurtamissa luolissa on sama lämpötila läpi vuoden. Kesälläkin kannattaa varata mukaan jotakin lämmintä päälle, ja kävijät kulkevat opastettuina kierroksina [[Salle du Dôme]] -salin kaltaisiin tiloihin. Sisällä on viileää, ja minun sulkani kiittävät.",
+  "linkit": [
+   "Lesse-joen",
+   "Salle du Dôme"
+  ],
+  "jatkot": [
+   "Millaisia tippukiviä luolissa on?",
+   "Kuinka suuri Salle du Dôme on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-han-sur-lesse",
+  "kysymys": "Miten luolat syntyvät kalkkikiveen?",
+  "uusi": true,
+  "vastaus": "Mmm— Sadevesi ja jokivesi sisältävät liuennutta hiilidioksidia, mikä tekee vedestä lievästi happamaa. Happamuus liuottaa kalkkikiveä rakoja pitkin, ja halkeamat laajenevat vähitellen käytäviksi ja saleiksi. Ilmiötä kutsutaan [[karstiutumiseksi]]. Han-sur-Lessen luolissa [[Lesse-joki]] virtaa kukkulan sisällä yli kilometrin matkan.\n\nVesi on siis hidas kaivaja. Minä ainakin pitäisin tuollaista urakkaa kohtuuttomana, vaikka olen kantanut kirjeitä Pariisiin asti.",
+  "linkit": [
+   "karstiutumiseksi",
+   "Lesse-joki"
+  ],
+  "jatkot": [
+   "Mitä ovat tippukivet ja miten ne kasvavat?",
+   "Missä muualla Euroopassa on tunnettuja luolia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-han-sur-lesse",
+  "kysymys": "Mikä on Belvaux'n kuilu?",
+  "uusi": true,
+  "vastaus": "Ai se. Belvaux'n kuilu on sortumakuoppa [[Han-sur-Lessen]] luona, johon [[Lesse-joki]] putoaa yhtäkkiä. Sieltä vesi virtaa yli kilometrin matkan kalkkikivikukkulan sisällä ja on kaivertanut sinne luolaston. Luolaston suurin sali, [[Salle du Dôme]], on noin 150 metriä leveä. Maan alle minä en lennä, katto on aina tiellä.",
+  "linkit": [
+   "Han-sur-Lessen",
+   "Lesse-joki",
+   "Salle du Dôme"
+  ],
+  "jatkot": [
+   "Miten sortumakuoppa syntyy?",
+   "Millainen luolasto on sisältä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zwin",
+  "kysymys": "Mikä sai Bruggen nousemaan Euroopan merkittäviin satamakaupunkeihin?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Bruggen nousun mahdollisti meriyhteys: vuonna 1134 myrsky puhkaisi [[Flanderin]] rannikon ja synnytti vuorovesikanavan nimeltä [[Zwin]], joka ulottui noin 15 kilometriä sisämaahan. Sen ansiosta kaupunki sai yhteyden mereen ja kasvoi yhdeksi keskiajan tärkeimmistä satamakaupungeista. Kaupunki rikastui myös [[flanderilaisella kankaalla]]. Kaiken alussa oli yksi myrsky, ja siitä on tullut kokonainen kaupunki.",
+  "linkit": [
+   "Flanderin",
+   "Zwin",
+   "flanderilaisella kankaalla"
+  ],
+  "jatkot": [
+   "Miksi Brugge on nykyään suosittu matkailukohde?",
+   "Mitä tarkoittaa vuorovesikanava?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zwin",
+  "kysymys": "Miksi Zwin-väylä muuttui käyttökelvottomaksi?",
+  "uusi": false,
+  "vastaus": "No niin, sepä sattui. Väylä alkoi liettyä 1200-luvun lopulta, ja noin vuodesta 1500 se oli käyttökelvoton. Prosessia kutsutaan [[liettymiseksi]]: virtaukset kerryttävät väylään hiekkaa ja mutaa, kunnes syvyys ei enää riitä laivoille. Näin [[Bruggen]] satama katkesi merestä. Satama ilman merta on aika surullinen juttu.",
+  "linkit": [
+   "liettymiseksi",
+   "Bruggen"
+  ],
+  "jatkot": [
+   "Miten Bruggen asema muuttui sataman menetyksen jälkeen?",
+   "Mitä muita satamia Flanderissa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zwin",
+  "kysymys": "Millainen lintu kattohaikara on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Kattohaikara on suuri, pääosin valkoinen lintu, jolla on mustat siipien reunat sekä punainen nokka ja punaiset jalat. Se on [[muuttolintu]], joka talvehtii etelämpänä, ja se pesii usein rakennusten katoilla ja korkeilla pylväillä. [[Zwinin]] suojelualue on yksi harvoista paikoista Belgiassa, joissa pesii kattohaikaroita, ja alue sijaitsee [[Pohjanmeren]] rannikolla.\n\nHaikara kantaa kansantarun mukaan vauvoja, minä kirjeitä, ja kummallakin on huonommin maksettu ammatti kuin luulisi. Saman alan väkeä, siis.",
+  "linkit": [
+   "muuttolintu",
+   "Zwinin",
+   "Pohjanmeren"
+  ],
+  "jatkot": [
+   "Minne kattohaikarat muuttavat talveksi?",
+   "Miten haikarat löytävät reittinsä muuton aikana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zwin",
+  "kysymys": "Mitä on suolaa sietävä kasvillisuus?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Suolaa sietävät kasvit eli [[suolakasvit]] kasvavat paikoissa, joissa maaperä tai vesi sisältää paljon suolaa, esimerkiksi [[merenrantaniityillä]]. Ne ovat sopeutuneet suolaisuuteen niin, että ne selviävät oloissa, joissa useimmat kasvit kuolisivat. [[Zwinin]] suojelualue tunnetaan juuri tällaisesta kasvillisuudestaan. Minä kyllä valitsen pullan, sokerisen.",
+  "linkit": [
+   "suolakasvit",
+   "merenrantaniityillä",
+   "Zwinin"
+  ],
+  "jatkot": [
+   "Miten kasvit sopeutuvat suolaiseen maaperään?",
+   "Mikä on murtovesi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-zwin",
+  "kysymys": "Kuinka monta porrasta Bruggen kellotorniin johtaa?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Huipulle johtaa 366 porrasta. Torni nousi [[Torille]] noin vuonna 1240, kun kaupunki rikastui [[flanderilaisella kankaalla]], ja nykyisin se on 83 metriä korkea. Aiemmin torni oli 102 metriä, mutta puinen huippu paloi vuonna 1741 eikä sitä enää rakennettu. Torni kallistuu itään 87 senttiä. Minä ottaisin mieluummin siivet kuin portaat.",
+  "linkit": [
+   "Torille",
+   "flanderilaisella kankaalla"
+  ],
+  "jatkot": [
+   "Miksi Bruggen kellotorni on palanut useita kertoja?",
+   "Mitä muuta Bruggen Torilla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hoge-kempen",
+  "kysymys": "Minkä kahden vesistön vedenjakajalla Hoge Kempenin ylänkö sijaitsee?",
+  "uusi": false,
+  "vastaus": "Katotaas. Ylänkö toimii [[Maasin]] ja [[Demer-joen]] vedenjakajana, eli alueen sateet ja valumavedet suuntautuvat joko toiseen tai toiseen jokeen. Alue sijaitsee [[Limburgin]] itäosassa [[Genkin]] ja Maasin laakson välissä. Vedenjakaja on sellainen paikka, jossa sade joutuu valitsemaan.",
+  "linkit": [
+   "Maasin",
+   "Demer-joen",
+   "Limburgin",
+   "Genkin"
+  ],
+  "jatkot": [
+   "Mikä on vedenjakaja ja miten se muodostuu?",
+   "Mistä Limburgin maakunta tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hoge-kempen",
+  "kysymys": "Minkä pyöräilyverkoston idea syntyi Hoge Kempenin alueella?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: Hoge Kempenin alueella 1990-luvulla syntyi solmupisteisiin numeroitu pyöräilyreittiverkosto, jonka suunnitteli [[Hugo Bollen]]. Verkostossa pyöräilijä valitsee reittinsä solmupisteiden numeroiden mukaan, ja järjestelmä on sittemmin levinnyt laajalle. Puisto on [[Flanderin]] ensimmäinen kansallispuisto ja sijaitsee [[Limburgin]] itäosassa.\n\nSolmupisteet ovat nerokas keksintö, mutta minulla ei ole koskaan ollut tarvetta numeroida mitään. Minä seuraan jokia ja kirkontorneja, siinä on kaikki merkinnät.",
+  "linkit": [
+   "Hugo Bollen",
+   "Flanderin",
+   "Limburgin"
+  ],
+  "jatkot": [
+   "Miten solmupisteverkosto toimii pyöräilijälle?",
+   "Missä muualla Euroopassa verkosto on käytössä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hoge-kempen",
+  "kysymys": "Milloin Hoge Kempen avattiin kansallispuistona?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Hoge Kempen avattiin [[Flanderin]] ensimmäisenä kansallispuistona 29. maaliskuuta 2006. Se sijaitsee [[Limburgin]] itäosassa, kattaa 67 neliökilometriä ja on enimmäkseen [[nummea]] ja mäntymetsää. Yli kaksikymmentä vuotta jo, aika menee kuin siivillä.",
+  "linkit": [
+   "Flanderin",
+   "Limburgin",
+   "nummea"
+  ],
+  "jatkot": [
+   "Mikä ero on kansallispuistolla ja luonnonpuistolla?",
+   "Mitä nummi on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hoge-kempen",
+  "kysymys": "Mitä tarkoittaa, että kohde on ehdolla Unescon maailmanperintöön?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Unescon [[maailmanperintöluettelo]] sisältää kohteita, joilla katsotaan olevan poikkeuksellinen yleismaailmallinen arvo. Kun kohde on ehdolla, sitä valmistellaan tai arvioidaan luetteloon otettavaksi, mutta päätös tehdään erikseen. [[Hoge Kempen]] on tietojeni mukaan ehdolla. Ehdokkuus on pitkä prosessi, ja kirjeiden kantajalle odotus on tuttua.",
+  "linkit": [
+   "maailmanperintöluettelo",
+   "Hoge Kempen"
+  ],
+  "jatkot": [
+   "Mitä Belgian maailmanperintökohteita on olemassa?",
+   "Miten kohde pääsee maailmanperintöluetteloon?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hoge-kempen",
+  "kysymys": "Miten jääkausi muokkasi Hoge Kempenin maisemaa?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. [[Maas]] kuljetti jääkaudella [[Ardenneilta]] kivimurskaa Hoge Kempenin alueelle, ja merituulet toivat lisäksi hiekkaa. Näin syntyi ylänkö, jonka karu hiekka- ja sorapohja sopii [[nummelle]] ja mäntymetsälle. Tuuli on minulle tuttu, mut hiekka menee nokkaan.",
+  "linkit": [
+   "Maas",
+   "Ardenneilta",
+   "nummelle"
+  ],
+  "jatkot": [
+   "Mitä jääkausi muutti muualla Flanderissa?",
+   "Millaisia kasveja nummella kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalmthout",
+  "kysymys": "Millainen metsä alueella oli alun perin?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Tost minä osaan kertoo. Alueella kasvoi alun perin Keski-Euroopalle tyypillistä [[lehtimetsää]], ei nummea. Vuosisatainen karjan ja lampaiden laiduntaminen, turpeen otto ja soiden ojittaminen muuttivat maiseman [[nummeksi]], jota Belgian ja [[Alankomaiden]] rajalla sijaitsevassa puistossa on yhä suuri osa. Metsä katos, kyl se kyyhkyä vähän ihmetyttää.",
+  "linkit": [
+   "lehtimetsää",
+   "nummeksi",
+   "Alankomaiden"
+  ],
+  "jatkot": [
+   "Millainen eläimistö nummella elää?",
+   "Miten nummi pysyy avoimena nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalmthout",
+  "kysymys": "Mikä maankäyttö muutti maiseman nummeksi?",
+  "uusi": false,
+  "vastaus": "Ai tota. Tän minä muistan. Maiseman muutti nummeksi ennen kaikkea vuosisatainen karjan ja lampaiden [[laiduntaminen]]. Lisäksi alueella otettiin turvetta ja suota ojitettiin turpeen saamiseksi, ja yhdessä nämä tekivät alkuperäisestä lehtimetsästä avoimen [[nummen]]. Ei tää kovin pitkä ollu.",
+  "linkit": [
+   "laiduntaminen",
+   "nummen"
+  ],
+  "jatkot": [
+   "Mikä on nummi ja miten se eroaa suosta?",
+   "Mitä kasveja nummella kasvaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalmthout",
+  "kysymys": "Kuinka suuri De Zoom–Kalmthoutse Heide on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Katotaas. Rajat ylittävä puisto kattaa noin 37,5 neliökilometriä. Se syntyi Belgian [[Kalmthoutse Heiden]] ja Alankomaiden [[De Zoomin]] yhdistämisestä, ja suuri osa alueesta on nummea.\n\nKyyhky ylittää tuollaisen rajan huomaamatta, eikä kukaan pyydä papereita. Siinä minä olen ihmisiä selvästi edellä.",
+  "linkit": [
+   "Kalmthoutse Heiden",
+   "De Zoomin"
+  ],
+  "jatkot": [
+   "Mitä rajat ylittävä puisto tarkoittaa?",
+   "Missä muualla Euroopassa on rajat ylittäviä puistoja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalmthout",
+  "kysymys": "Milloin Belgian puoli sai suojelun?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Vuosiluvut kyl pysyy päässä. Belgian puoli julistettiin [[maisemansuojelualueeksi]] jo vuonna 1941. Koko rajapuisto perustettiin vasta vuonna 2001, kun Belgian [[Kalmthoutse Heide]] ja Alankomaiden De Zoom yhdistettiin yhdeksi alueeksi. Ensin yks puoli, sitten koko roska, sanon minä.",
+  "linkit": [
+   "maisemansuojelualueeksi",
+   "Kalmthoutse Heide"
+  ],
+  "jatkot": [
+   "Mitä maisemansuojelualue tarkoittaa?",
+   "Mitä muita luonnonsuojelualueita Belgiassa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kalmthout",
+  "kysymys": "Mistä kahdesta puistosta rajapuisto syntyi?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Tän vastauksen minä tiedän. Rajapuisto syntyi Belgian [[Kalmthoutse Heiden]] ja Alankomaiden [[De Zoomin]] yhdistämisestä. Molemmat olivat alun perin omia puistojaan, ja yhdistetty alue perustettiin vuonna 2001 rajat ylittäväksi puistoksi. Kaksi nimeä, yks puisto, helppo muistaa.",
+  "linkit": [
+   "Kalmthoutse Heiden",
+   "De Zoomin"
+  ],
+  "jatkot": [
+   "Miksi rajat ylittäviä puistoja perustetaan?",
+   "Millaista luontoa Belgiassa on rajan tuntumassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lions-mound",
+  "kysymys": "Kuka määräsi Leijonakumpu rakennettavaksi?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Alankomaiden kuningas [[Vilhelm I]] määräsi kummun rakennettavaksi vuonna 1820, ja se valmistui vuonna 1826. Kumpu muistuttaa vuoden 1815 [[Waterloon]] taistelusta. Kuusi vuotta sai urakka kestää, ei ihme.",
+  "linkit": [
+   "Vilhelm I",
+   "Waterloon"
+  ],
+  "jatkot": [
+   "Mikä oli Waterloon taistelu?",
+   "Kuka oli Alankomaiden kuningas Vilhelm I?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lions-mound",
+  "kysymys": "Miksi kumpu rakennettiin juuri tähän paikkaan?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Kumpu rakennettiin kohtaan, jossa kuninkaan vanhemman pojan, [[Vilhelm Oranialaisen]], arvellaan haavoittuneen 18. kesäkuuta 1815. Se muistuttaa myös kaksi päivää aiemmin käydystä [[Quatre Brasin]] taistelusta. Insinööri Vifquain halusi sen olevan liittoutuneiden voiton symboli eikä yhden ihmisen ylistys, ja nykyisin kumpu on kävijöiden näköalapaikka. Hyvä, että siit on jo yli kaksisataa vuotta.",
+  "linkit": [
+   "Vilhelm Oranialaisen",
+   "Quatre Brasin"
+  ],
+  "jatkot": [
+   "Kuka oli Vilhelm Oranialainen?",
+   "Mikä oli Quatre Brasin taistelu?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lions-mound",
+  "kysymys": "Montako askelmaa Leijonakumpuun johtaa?",
+  "uusi": true,
+  "vastaus": "Katotaas. Kumpuun johtaa 226 askelmaa. Se sijaitsee Braine-l'Alleudin kunnassa Belgiassa, ja portaat nousevat huipulle, jossa on [[leijonapatsas]]. Minä otan yleensä lyhyemmän reitin, siivillä.",
+  "linkit": [
+   "leijonapatsas"
+  ],
+  "jatkot": [
+   "Millainen kunta Braine-l'Alleud on?",
+   "Miten Waterloon taistelukentälle pääsee Brysselistä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lions-mound",
+  "kysymys": "Mitä Vifquain halusi Leijonakummun symboloivan?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Insinööri [[Vifquain]] halusi kummun olevan liittoutuneiden voiton symboli eikä yhden ihmisen ylistys. Kumpu muistuttaa Waterloon taistelukentän tapahtumista vuodelta 1815 sekä kaksi päivää aiemmin käydystä taistelusta, ja Alankomaiden kuningas [[Vilhelm I]] määräsi sen rakennettavaksi vuonna 1820. Aika viisas ajatus, sanon minä.",
+  "linkit": [
+   "Vifquain",
+   "Vilhelm I"
+  ],
+  "jatkot": [
+   "Mitä muita Waterloon taistelun muistomerkkejä on?",
+   "Miten Waterloon taistelu muutti Euroopan kartan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-lions-mound",
+  "kysymys": "Mitä Leijonakummun huipulla on?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Huipulla seisoo [[leijonapatsas]], jonka ympärillä on näköalapaikka [[Waterloon]] taistelutantereelle. Sinne noustaan 226 askelmaa, ja kumpu valmistui vuonna 1826. Ylhäältä näkee kauas, sen minä tiedän.",
+  "linkit": [
+   "leijonapatsas",
+   "Waterloon"
+  ],
+  "jatkot": [
+   "Miksi muistomerkin huipulla on leijona?",
+   "Mitä taistelutantereella on nykyisin nähtävänä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-menin-gate",
+  "kysymys": "Keitä Menin Gate muistaa?",
+  "uusi": false,
+  "vastaus": "Ai se. Menin Gate muistaa [[ensimmäisessä maailmansodassa]] Ypresin kaarrossa kaatuneita brittiläisiä ja [[Kansainyhteisön]] sotilaita, joiden hautoja ei tunneta. Kunniasalin kivitauluissa on 54 395 tunnistamattoman kaatuneen nimeä. Muistomerkki paljastettiin 24. heinäkuuta 1927, lähes sata vuotta sitten. Hyvä, että heidän nimensä on kirjattu.",
+  "linkit": [
+   "ensimmäisessä maailmansodassa",
+   "Kansainyhteisön"
+  ],
+  "jatkot": [
+   "Mikä oli Ypresin kaari?",
+   "Mitä Kansainyhteisö tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-menin-gate",
+  "kysymys": "Miksi portti sai nimekseen Menin Gate?",
+  "uusi": false,
+  "vastaus": "Mmm— Portti sai nimensä siitä, että sen läpi lähtevä tie johti [[Meneniin]]. Se sijaitsee [[Ypresin]] itäisessä uloskäynnissä, ja nykyisin siinä on sotamuistomerkki kaatuneille, joiden hautoja ei tunneta. Nimi on arkinen, mutta paikka ei ole.",
+  "linkit": [
+   "Meneniin",
+   "Ypresin"
+  ],
+  "jatkot": [
+   "Millainen kaupunki Ypres on nykyään?",
+   "Miten Ypres rakennettiin uudelleen sodan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-menin-gate",
+  "kysymys": "Milloin Menin Gate paljastettiin?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: Menin Gate paljastettiin 24. heinäkuuta 1927. Sen suunnitteli Sir [[Reginald Blomfield]], ja se on omistettu [[Ypresin]] kaarrossa kaatuneille brittiläisille ja Kansainyhteisön sotilaille, joiden hautoja ei tunneta. Kauan sitten, mutta ei unohdettu.",
+  "linkit": [
+   "Reginald Blomfield",
+   "Ypresin"
+  ],
+  "jatkot": [
+   "Kuka Reginald Blomfield oli?",
+   "Mitä muita sotamuistomerkkejä Ypresin ympärillä on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-menin-gate",
+  "kysymys": "Mitä Menin Gatella tapahtuu joka ilta?",
+  "uusi": true,
+  "vastaus": "No niin, tämä on kaunis perinne. Joka ilta kello 20 torvensoittajat sulkevat portin läpi kulkevan tien ja soittavat [[Last Post]] -merkin. Portti sijaitsee [[Ypresin]] itäisessä uloskäynnissä ja muistaa kaatuneita, joiden hautoja ei tunneta. Hiljainen hetki, sanon minä.",
+  "linkit": [
+   "Last Post",
+   "Ypresin"
+  ],
+  "jatkot": [
+   "Kuinka kauan Last Post on soitettu Menin Gatella?",
+   "Voiko seremoniaan osallistua yleisönä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-menin-gate",
+  "kysymys": "Mitä Last Post -merkki on?",
+  "uusi": true,
+  "vastaus": "Just niin, tän tunnistaa heti. [[Last Post]] on brittiläisen sotilasperinteen torvisignaali, joka on alun perin merkinnyt sotilasleirin päivän päättymistä. Nykyisin sitä soitetaan muistotilaisuuksissa kaatuneiden kunniaksi, ja [[Menin Gatella]] se kuuluu joka ilta kello 20. Se on hiljaisuuden merkki, ei muuta.",
+  "linkit": [
+   "Last Post",
+   "Menin Gatella"
+  ],
+  "jatkot": [
+   "Mitä muita torvisignaaleja armeijoissa käytetään?",
+   "Missä muissa tilaisuuksissa Last Post soitetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bastogne",
+  "kysymys": "Minkä muotoinen Bastognen muistomerkki on?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Muistomerkki on suunniteltu viisisakaraisen amerikkalaisen tähden muotoon. Belgialainen arkkitehti [[Georges Dedoyard]] antoi sille 12 metrin korkeuden ja 31 metrin sivut, ja se kunnioittaa [[Ardennien taistelussa]] haavoittuneita ja kaatuneita amerikkalaissotilaita. Ylhäältä sen muoto kai näkyy parhaiten.",
+  "linkit": [
+   "Georges Dedoyard",
+   "Ardennien taistelussa"
+  ],
+  "jatkot": [
+   "Mikä Ardennien taistelu oli?",
+   "Mitä muuta Bastognen alueella on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bastogne",
+  "kysymys": "Ketä Bastognen lähellä oleva muistomerkki kunnioittaa?",
+  "uusi": false,
+  "vastaus": "Ai tota. Muistomerkki kunnioittaa [[Ardennien taistelussa]] haavoittuneita ja kaatuneita amerikkalaissotilaita. Taistelu käytiin toisen maailmansodan loppuvaiheessa, yli kahdeksankymmentä vuotta sitten, ja muistomerkki, aiemmin nimeltään [[Mardasson-muistomerkki]], vihittiin 16. heinäkuuta 1950. Hyvä, että on paikka muistaa.",
+  "linkit": [
+   "Ardennien taistelussa",
+   "Mardasson-muistomerkki"
+  ],
+  "jatkot": [
+   "Milloin Ardennien taistelu käytiin?",
+   "Miksi Bastogne on tunnettu Ardennien taistelusta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bastogne",
+  "kysymys": "Milloin Bastognen muistomerkki vihittiin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Muistomerkki vihittiin 16. heinäkuuta 1950. Ensimmäinen askel otettiin jo 4. heinäkuuta 1946, kun paikalta lahjoitettiin maata Yhdysvaltain presidentille, ja kunnioituksen kohteena ovat [[Ardennien taistelun]] amerikkalaiset kaatuneet ja haavoittuneet. Kärsivällisyyttä se vaati.",
+  "linkit": [
+   "Ardennien taistelun"
+  ],
+  "jatkot": [
+   "Miten muistomerkin rakentaminen rahoitettiin?",
+   "Voiko muistomerkkiin tutustua sisältä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bastogne",
+  "kysymys": "Mitä nimiä muistomerkin reunuksessa on?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Muistomerkin reunuksessa ovat Yhdysvaltain 48 osavaltion nimet. Sisäseinille on lisäksi kaiverrettu kymmenen kivitekstiä [[Ardennien taistelusta]], ja muistomerkki sijaitsee [[Bastognen]] lähellä. Kiveen kaiverrettu pysyy.",
+  "linkit": [
+   "Ardennien taistelusta",
+   "Bastognen"
+  ],
+  "jatkot": [
+   "Miksi nimiä on juuri 48?",
+   "Mitä kymmenen kivitekstiä kertovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bastogne",
+  "kysymys": "Mihin muistomerkin alla oleva krypta on tarkoitettu?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Muistomerkin alla oleva krypta on tarkoitettu protestanttisiin, katolisiin ja juutalaisiin jumalanpalveluksiin. Muistomerkin suunnitteli belgialainen arkkitehti [[Georges Dedoyard]], ja se sijaitsee [[Bastognen]] lähellä. Hiljainen paikka sekin.",
+  "linkit": [
+   "Georges Dedoyard",
+   "Bastognen"
+  ],
+  "jatkot": [
+   "Mikä on krypta?",
+   "Millainen museo Bastognessa on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bouillon",
+  "kysymys": "Miksi Bouillonin Gotfrid myi linnan?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Gotfrid myi linnan Liègen piispa [[Otbertille]] rahoittaakseen [[ensimmäisen ristiretken]]. Linna oli periytynyt hänelle vuonna 1082. Meikäläisten muistiinpanojen mukaan ristiretki ei ollut halpa.",
+  "linkit": [
+   "Otbertille",
+   "ensimmäisen ristiretken"
+  ],
+  "jatkot": [
+   "Mikä oli ensimmäinen ristiretki?",
+   "Kuka oli Liègen piispa Otbert?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bouillon",
+  "kysymys": "Kuka varusti linnan raskaalle tykistölle?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: tämän tiedän. Ranskan [[Ludvig XIV:n]] sotilasarkkitehti [[Vauban]] varusti linnan raskaalle tykistölle 1600-luvun lopulla. Linna kohoaa kallioisella kielekkeellä [[Semois-joen]] jyrkässä mutkassa.\n\nMinun sukuni kantoi kirjeitä linnoituksiin, mutta tykkejä ei kukaan antanut meidän kannettavaksi. Se oli varmasti viisasta, sillä en minäkään olisi sitä halunnut.",
+  "linkit": [
+   "Ludvig XIV:n",
+   "Vauban",
+   "Semois-joen"
+  ],
+  "jatkot": [
+   "Kuka oli Vauban?",
+   "Mitä linnoitusarkkitehti tekee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bouillon",
+  "kysymys": "Minkä joen mutkassa Bouillonin linna kohoaa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Linna kohoaa kallioisella kielekkeellä [[Semois-joen]] jyrkässä mutkassa [[Bouillonin]] kaupungissa. Se sijaitsee Wallonian Belgian Luxemburgin maakunnassa. Joen mutkat näkyy ylhäältä aivan erityisen hyvin.",
+  "linkit": [
+   "Semois-joen",
+   "Bouillonin"
+  ],
+  "jatkot": [
+   "Millainen joki Semois on?",
+   "Mitä Bouillonin linnassa on nähtävää nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bouillon",
+  "kysymys": "Milloin Bouillonin linna mainitaan ensimmäisen kerran?",
+  "uusi": true,
+  "vastaus": "Nyt muistan: linna mainitaan ensimmäisen kerran vuonna 988, mutta samalla paikalla oli linna jo paljon aiemmin. Vuonna 1082 se periytyi [[Bouillonin Gotfridille]], ja se sijaitsee [[Wallonian]] Luxemburgin maakunnassa. Tuhat vuotta, siinä on kyyhkyllekin pähkäiltävää.",
+  "linkit": [
+   "Bouillonin Gotfridille",
+   "Wallonian"
+  ],
+  "jatkot": [
+   "Miten keskiaikaiset linnat rakennettiin kielekkeelle?",
+   "Mihin linnaa on käytetty keskiajan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bouillon",
+  "kysymys": "Kuka oli Bouillonin Gotfrid?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Gotfrid oli yksi [[ensimmäisen ristiretken]] johtajista. Hän peri Bouillonin linnan vuonna 1082 ja myi sen Liègen piispalle rahoittaakseen retkensä, ja ristiretken jälkeen hän jäi hallitsemaan Jerusalemia mutta kuoli jo vuonna 1100. Melkoinen ura linnanherralle.",
+  "linkit": [
+   "ensimmäisen ristiretken"
+  ],
+  "jatkot": [
+   "Miten ensimmäinen ristiretki päättyi?",
+   "Mikä Liègen piispakunta oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tournai",
+  "kysymys": "Kuinka monta kellotornia Tournain tuomiokirkon poikkilaivassa on?",
+  "uusi": false,
+  "vastaus": "No niin, tornit kiinnostaa kyyhkyä aina. Tournain Neitsyt Marian tuomiokirkon poikkilaivassa on viiden kellotornin ryhmä, joka on rakennuksen erottuvin osa. Sitä reunustavat tornit nousevat 83 metrin korkeuteen. Kirkon rakentaminen alkoi 1100-luvulla, ja se on ollut [[Wallonian]] merkittävä perintökohde vuodesta 1936 ja [[Unescon]] maailmanperintökohde vuodesta 2000. Viis tornia, siit on kyyhkyn hyvä katsella kaupunkia.",
+  "linkit": [
+   "Wallonian",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Mitä eroa romaanisella ja goottilaisella tyylillä on?",
+   "Mikä on Unescon maailmanperintöluettelo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tournai",
+  "kysymys": "Minkä kolmen rakennuskauden tyylejä kirkossa yhdistyy?",
+  "uusi": false,
+  "vastaus": "Ai tota, se on kirkon oikea erikoisuus. Kirkossa yhdistyvät kolmen rakennuskauden tyylit: laivan [[romaaninen]] tyyli on raskas ja ankara, poikkilaivat edustavat siirtymävaihetta ja kuori on täysin kehittynyttä [[goottilaista]] tyyliä. Rakentaminen alkoi 1100-luvulla, ja goottilainen kuori rakennettiin vuosina 1242–1255. Kolme tyyliä yhdessä kirkossa, ja minä vaan istun kaiteella ihmettelemässä.",
+  "linkit": [
+   "romaaninen",
+   "goottilaista"
+  ],
+  "jatkot": [
+   "Miten gootiikka syntyi Euroopassa?",
+   "Mikä on kirkon kuori?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tournai",
+  "kysymys": "Minkä katedraalin mukaan Tournain goottilainen kuori rakennettiin?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Tournain goottilainen kuori rakennettiin vuosina 1242–1255 [[Amiensin]] katedraalin esikuvan mukaan. Amiensin katedraali on Ranskassa, ja se on yksi goottilaisen rakennustaiteen tunnetuimmista kirkoista. Tournain kirkko yhdistää tämän goottilaisen kuorin raskaaseen [[romaaniseen]] laivaan. Kyl kirkotkin matkustaa, ainakin niiden mallit.",
+  "linkit": [
+   "Amiensin",
+   "romaaniseen"
+  ],
+  "jatkot": [
+   "Missä Amiensin katedraali sijaitsee?",
+   "Mitkä ovat goottilaisen katedraalin tunnuspiirteet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tournai",
+  "kysymys": "Kuka teki Tournain kirkon renessanssin lehterin ja milloin?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Tournain tuomiokirkon [[renessanssin]] lehterin teki flaamilainen kuvanveistäjä [[Cornelis Floris]] vuonna 1573. Lehteri on nuorempi kuin kirkon romaaninen laiva ja goottilainen kuori, joten se kuuluu rakennuksen myöhäisempiin kerrostumiin.\n\nFloris veisti, minä kuljetan kirjeitä, ja molemmissa pitää olla kärsivällinen.",
+  "linkit": [
+   "renessanssin",
+   "Cornelis Floris"
+  ],
+  "jatkot": [
+   "Mitä renessanssi tarkoittaa taiteessa?",
+   "Mikä on lehteri kirkossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tournai",
+  "kysymys": "Milloin Tournain tuomiokirkko pääsi Unescon maailmanperintöön?",
+  "uusi": true,
+  "vastaus": "Mmm— tän muistan hyvin. Tournain tuomiokirkko on ollut [[Unescon]] maailmanperintökohde vuodesta 2000. Jo aiemmin, vuodesta 1936, se on ollut [[Wallonian]] merkittävä perintökohde. Ei paha ura kirkolle, melkein yhtä pitkä ku sukuni.",
+  "linkit": [
+   "Unescon",
+   "Wallonian"
+  ],
+  "jatkot": [
+   "Millä perusteella kohde valitaan maailmanperintöluetteloon?",
+   "Missä Tournai sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-eben-emael",
+  "kysymys": "Millä tavoin saksalaiset ottivat Ében-Émaelin linnakkeen toukokuussa 1940?",
+  "uusi": false,
+  "vastaus": "Tuota niin, tää on vakavampaa historiaa. Saksalaiset ottivat linnakkeen haltuunsa 10.–11. toukokuuta 1940 [[purjelentokoneilla]] laskeutuneilla joukoilla, joita oli noin 85 miestä. Lähteiden mukaan kyseessä oli ensimmäinen strateginen [[ilmalaskuoperaatio]], joka on sotahistoriassa yritetty, ja se avasi saksalaisille tien Belgiaan ilman linnakkeen tulitusta. Linnaketta oli pidetty läpipääsemättömänä, ja tapahtumista on nyt yli kahdeksankymmentä vuotta. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "purjelentokoneilla",
+   "ilmalaskuoperaatio"
+  ],
+  "jatkot": [
+   "Mitä toinen maailmansota Belgiassa tarkoitti?",
+   "Miten purjelentokone toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-eben-emael",
+  "kysymys": "Minkä kanavan varrella linnake sijaitsee?",
+  "uusi": false,
+  "vastaus": "Katotaas. Ében-Émaelin linnake sijaitsee lähellä [[Albert-kanavaa]], [[Liègen]] ja [[Maastrichtin]] välissä Belgian ja Alankomaiden rajalla. Kanava on tärkeä vesiväylä, joka yhdistää Liègen alueen Antwerpeniin. Linnake rakennettiin vuosina 1931–1935. Linnake kanavan vieressä, siit näkee ylhäältä hyvin.",
+  "linkit": [
+   "Albert-kanavaa",
+   "Liègen",
+   "Maastrichtin"
+  ],
+  "jatkot": [
+   "Mihin Albert-kanava johtaa?",
+   "Miksi Liège on ollut tärkeä kaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-eben-emael",
+  "kysymys": "Milloin Ében-Émaelin linnake rakennettiin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Ében-Émaelin linnake rakennettiin vuosina 1931–1935. Sitä pidettiin valmistuttuaan läpipääsemättömänä ja aikansa maailman suurimpana linnakkeena, mutta vuonna 1940 se vallattiin silti nopeasti. Linnake sijaitsee [[Belgian]] itäosassa, lähellä [[Maastrichtin]] kaupunkia. Nykyään sinne voi vain tutustua museovierailulla, ja se on hyvä.",
+  "linkit": [
+   "Belgian",
+   "Maastrichtin"
+  ],
+  "jatkot": [
+   "Miksi Belgia rakensi linnakkeita rajalleen?",
+   "Millainen on Maastrichtin kaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-eben-emael",
+  "kysymys": "Kuinka monta miestä saksalaisilla oli linnakkeen valtauksessa?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. Valtausjoukkoja oli noin 85 miestä, ja he laskeutuivat linnakkeelle [[purjelentokoneilla]]. Pieni joukko sai haltuunsa linnakkeen, jota oli pidetty läpipääsemättömänä, ja lähteiden mukaan kyseessä oli ensimmäinen strateginen [[ilmalaskuoperaatio]] sotahistoriassa. Operaatio oli 10.–11. toukokuuta 1940. Se on tosi kaukana nykyajasta, onneksi.",
+  "linkit": [
+   "purjelentokoneilla",
+   "ilmalaskuoperaatio"
+  ],
+  "jatkot": [
+   "Mitä ilmalaskuoperaatio tarkoittaa?",
+   "Miten sotilaat koulutettiin purjelentoihin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-eben-emael",
+  "kysymys": "Voiko Ében-Émaelin linnakkeeseen vierailla nykyään?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Kyllä voi: linnake on toimeton eli ei enää sotilaskäytössä, ja se on säilytetty museona, johon voi tutustua. Se sijaitsee [[Liègen]] ja [[Maastrichtin]] välissä lähellä Belgian ja Alankomaiden rajaa. Kyl minä mieluummin katson sitä ylhäältä.",
+  "linkit": [
+   "Liègen",
+   "Maastrichtin"
+  ],
+  "jatkot": [
+   "Mitä linnakkeen museossa yleensä esitellään?",
+   "Miten Liègestä pääsee Maastrichtiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kortrijk",
+  "kysymys": "Mikä taistelulle antoi nimen?",
+  "uusi": false,
+  "vastaus": "Just niin, kannukset ne siinä ratkaisivat nimen. Kultaisten kannusten taistelun nimi tulee noin 500 [[kannusparista]], jotka flaamilaiset saivat saaliiksi ranskalaisilta ratsumiehiltä. Taistelu käytiin 11. heinäkuuta 1302 [[Kortrijkin]] lähellä. Viis sataa paria on kyl aika kasa.",
+  "linkit": [
+   "kannusparista",
+   "Kortrijkin"
+  ],
+  "jatkot": [
+   "Mihin kannuksia ratsastuksessa käytetään?",
+   "Missä Kortrijk sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kortrijk",
+  "kysymys": "Millä tavoin flaamilainen jalkaväki voitti ranskalaisen ratsuväen?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Flaamilaisten kaupunkimiliisin jalkaväki muodosti tiiviin keihäsmuodostelman, jota ranskalaisen [[ratsuväen]] rynnäköt eivät murtaneet. Ranskalaiset aateliset kärsivät raskaita tappioita, ja flaamilaiset voittivat yllättäen. Taistelusta on yli seitsemänsataa vuotta, ja se muistetaan [[Flanderissa]] yhä. Tosi kaukana nykyajasta se onneksi on.",
+  "linkit": [
+   "ratsuväen",
+   "Flanderissa"
+  ],
+  "jatkot": [
+   "Millaisia keihäitä keskiajalla käytettiin?",
+   "Miten keskiajan ratsuväki taisteli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kortrijk",
+  "kysymys": "Ketkä taistelivat Kultaisten kannusten taistelussa ja milloin?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Taistelu käytiin 11. heinäkuuta 1302 Ranskan kuninkaan armeijan ja kapinallisen [[Flanderin kreivikunnan]] joukkojen välillä Kortrijkin lähellä. Taustalla oli flaamilaiskaupunkien [[kansannousu]] ranskalaista valtaa vastaan toukokuussa 1302. Flaamilaiset voittivat yllättäen. Onpa siit jo pitkä aika.",
+  "linkit": [
+   "Flanderin kreivikunnan",
+   "kansannousu"
+  ],
+  "jatkot": [
+   "Millainen oli Flanderin kreivikunta keskiajalla?",
+   "Miksi flaamilaiskaupungit olivat keskiajalla rikkaita?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kortrijk",
+  "kysymys": "Kuka voitti sodan, vaikka flaamilaiset voittivat taistelun?",
+  "uusi": true,
+  "vastaus": "Ai se. Sodan voitti Ranska, vaikka flaamilaiset voittivat taistelun. Taistelusta tuli silti tärkeä kulttuurinen tukipiste [[flaamilaisliikkeelle]] 1800- ja 1900-luvuilla. Tarkkoja rauhanehtoja en muista varmasti, joten jätän ne mainitsematta. Yli seitsemänsataa vuotta ja yhä siit puhutaan.",
+  "linkit": [
+   "flaamilaisliikkeelle"
+  ],
+  "jatkot": [
+   "Mikä on flaamilaisliike?",
+   "Mitä eroa on Flanderilla ja Walloniella?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-kortrijk",
+  "kysymys": "Minä päivänä Flanderin yhteisö viettää juhlapäiväänsä?",
+  "uusi": true,
+  "vastaus": "Sepä sattui. [[Flanderin yhteisö]] viettää virallista juhlapäiväänsä 11. heinäkuuta eli Kultaisten kannusten taistelun vuosipäivänä. Päivämäärä valittiin juhlapäiväksi vuonna 1973, koska taistelusta oli tullut tärkeä kulttuurinen tukipiste [[flaamilaisliikkeelle]]. Heinäkuinen päivä, yleensä hyvä lentokeli.",
+  "linkit": [
+   "Flanderin yhteisö",
+   "flaamilaisliikkeelle"
+  ],
+  "jatkot": [
+   "Miten Flanderin juhlapäivää vietetään?",
+   "Mitä kieltä Flanderissa puhutaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-orval",
+  "kysymys": "Mikä tuhosi Orvalin luostarin vuonna 1793?",
+  "uusi": false,
+  "vastaus": "No niin, se oli rankka aika. Orvalin luostarin polttivat kokonaan maan tasalle ranskalaiset joukot vuonna 1793 [[vallankumouksen]] aikana kostoksi siitä, että luostari oli majoittanut itävaltalaisia joukkoja. Maa ja rauniot ostettiin vuonna 1887 ja lahjoitettiin [[sistersiläisille]] vuonna 1926, jolloin luostarielämä pääsi jatkumaan ja rakennukset nousivat uudelleen. Tapahtumasta on yli kaksisataa vuotta. Onneks se nousi sieltä uudestaan.",
+  "linkit": [
+   "vallankumouksen",
+   "sistersiläisille"
+  ],
+  "jatkot": [
+   "Mikä oli Ranskan vallankumous?",
+   "Keitä sistersiläiset munkit ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-orval",
+  "kysymys": "Mitä luostari valmistaa myyntiin?",
+  "uusi": false,
+  "vastaus": "Tost minä osaan kertoo. Orvalin luostari valmistaa [[trappistiolutta]] ja erityistä juustoa. Oluen panemisen keskiaikainen perinne elvytettiin vuonna 1931 rahoittamaan luostarin jälleenrakennusta, ja nykyään luostari on tunnettu juuri oluestaan ja juustostaan. Olut ja juusto, ja pullasta ei kukaan edes mainitse mitään.",
+  "linkit": [
+   "trappistiolutta"
+  ],
+  "jatkot": [
+   "Millaista juustoa luostareissa valmistetaan?",
+   "Mistä trappistiolut saa nimensä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-orval",
+  "kysymys": "Milloin Orvalin luostari perustettiin ja kenen toimesta?",
+  "uusi": true,
+  "vastaus": "Kas vaan, vanha paikka. Orvalin luostari perustettiin vuonna 1132, kun [[Champagnen]] Trois-Fontainesin luostarin sistersiläismunkit saapuivat paikalle. Luostari sijaitsee Gaumen alueella Belgian Luxemburgin maakunnassa [[Florenvillen]] kunnassa. Melkein yheksänsataa vuotta, kyl se on pitkä ura.",
+  "linkit": [
+   "Champagnen",
+   "Florenvillen"
+  ],
+  "jatkot": [
+   "Mitä sistersiläisluostareiden elämään kuuluu?",
+   "Missä Champagnen alue sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-orval",
+  "kysymys": "Miksi olutta alettiin panna Orvalissa uudelleen vuonna 1931?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. Keskiaikainen perinne oluen panemisesta elvytettiin Orvalissa vuonna 1931 rahoittamaan luostarin jälleenrakennusta. Luostari oli poltettu vuonna 1793, maa ja rauniot oli ostettu vuonna 1887 ja lahjoitettu [[sistersiläisille]] vuonna 1926. Nykyään luostari on tunnettu [[trappistioluestaan]]. Hyvä idea munkeilta, oluella kun saa rakennettua kirkkoja.",
+  "linkit": [
+   "sistersiläisille",
+   "trappistioluestaan"
+  ],
+  "jatkot": [
+   "Miten olutta valmistetaan?",
+   "Miten luostarit ovat aikanaan rahoittaneet toimintaansa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-orval",
+  "kysymys": "Mikä tekee oluesta trappistioluen?",
+  "uusi": true,
+  "vastaus": "Mmm— munkit ja olut. Aito [[trappistiolut]] valmistetaan luostarin muurien sisällä munkkien valvonnassa, ja panimon tuotto käytetään luostarin ylläpitoon ja hyväntekeväisyyteen. Belgiassa trappistiolutta panee kuusi luostaria, esimerkiksi [[Chimay]], Orval ja [[Westmalle]]. Vuonna 2016 Unesco nosti belgialaisen [[olutkulttuurin]] ihmiskunnan aineettoman kulttuuriperinnön luetteloon. Munkit panee olutta, minä ottaisin kyl mieluummin pullaa.",
+  "linkit": [
+   "trappistiolut",
+   "Chimay",
+   "Westmalle",
+   "olutkulttuurin"
+  ],
+  "jatkot": [
+   "Mitä tarkoittaa aineeton kulttuuriperintö?",
+   "Miten belgialaiset oluet eroavat toisistaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chimay",
+  "kysymys": "Minkä joen lähde on Chimayssa?",
+  "uusi": false,
+  "vastaus": "Selvä, katotaas. Chimayn kaupunki on [[Oise-joen]] lähde. Oise virtaa Belgiasta Ranskan puolelle ja yhtyy lopulta [[Seineen]]. Kaupunki sijaitsee [[Hainautin]] maakunnassa Walloniassa.\n\nJoen seuraaminen on aina ollut hyvä tapa löytää suunta, sen tietävät kyllä sukuni viestinviejät.",
+  "linkit": [
+   "Oise-joen",
+   "Seineen",
+   "Hainautin"
+  ],
+  "jatkot": [
+   "Mistä Seine-joki saa alkunsa?",
+   "Mikä on Hainautin maakunta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chimay",
+  "kysymys": "Mitä tuotteita Scourmontin luostarin munkit valmistavat?",
+  "uusi": false,
+  "vastaus": "Ai ne munkit. Scourmontin trappistiluostarin munkit pitävät [[Chimayn]] panimoa, ja Chimayn [[trappistioluet]] ja juustot ovat kansainvälisesti tunnettuja. Belgiassa trappistiolutta panee kuusi luostaria, ja Chimay on yksi niistä. Juusto ja olut, aika hyvä kombo munkeilta.",
+  "linkit": [
+   "Chimayn",
+   "trappistioluet"
+  ],
+  "jatkot": [
+   "Millä tavalla trappistiluostareiden elämä eroaa muista luostareista?",
+   "Mitä muita tunnettuja belgialaisia juustoja on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chimay",
+  "kysymys": "Milloin Chimayn nykyinen kunta syntyi?",
+  "uusi": true,
+  "vastaus": "Tuota niin, lukuja. Chimayn nykyinen kunta muodostettiin vuonna 1977 neljästätoista kunnasta. Se sijaitsee [[Walloniassa]] [[Hainautin]] maakunnassa, ja siellä asui vuonna 2006 noin 9 800 ihmistä. Neljätoista kuntaa yhdeksi, siinä ois riittänyt kirjeenvientiä.",
+  "linkit": [
+   "Walloniassa",
+   "Hainautin"
+  ],
+  "jatkot": [
+   "Miksi Euroopassa yhdistettiin kuntia 1970-luvulla?",
+   "Mikä on Wallonia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chimay",
+  "kysymys": "Mitä nähtävää Chimayssa on?",
+  "uusi": true,
+  "vastaus": "No jopas, paljon nähtävää. Chimayn nähtävyyksiin kuuluvat [[Chimayn ruhtinaiden linna]], [[Virellesin järvi]] ja Oisen lähde. Kaupungissa on myös perinteisesti ajettu kilpa-ajoja katuradalla, ja Chimayn trappistioluet ja juustot ovat kansainvälisesti tunnettuja. Linna ja järvi, kyl siel kelpaa laskeutua.",
+  "linkit": [
+   "Chimayn ruhtinaiden linna",
+   "Virellesin järvi"
+  ],
+  "jatkot": [
+   "Mikä on ruhtinaan ja prinssin ero?",
+   "Miten järvet syntyvät?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-chimay",
+  "kysymys": "Millaisia kilpa-ajoja Chimayssa on ajettu?",
+  "uusi": true,
+  "vastaus": "Kato, kilpa-ajot. Chimayn kaupungissa on perinteisesti ajettu vuotuisia kilpa-ajoja [[katuradalla]]. Kilpailuja on ajettu [[Grand Prix]] -luokissa 1920-luvulta 1960-luvulle. Itse kuljen kyl mieluummin ilmaa pitkin.",
+  "linkit": [
+   "katuradalla",
+   "Grand Prix"
+  ],
+  "jatkot": [
+   "Mikä on Grand Prix -kilpailu?",
+   "Miksi katuradat ovat vaarallisempia kuin tavalliset radat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dinant",
+  "kysymys": "Minkä soittimen keksijä Adolphe Sax oli?",
+  "uusi": false,
+  "vastaus": "No niin, tän minä tiedän. Sävelkorvaa on kyyhkyllä. Adolphe Sax keksi [[saksofonin]], jonka hän patentoi 28. kesäkuuta 1846. Hän syntyi [[Dinantissa]] vuonna 1814, kasvoi isänsä soitinverstaassa [[Brysselissä]] ja muutti vuonna 1842 [[Pariisiin]]. Soitin yhdisti puupuhaltimen taipuisuuden ja vaskisoittimen voiman, mutta keksinnöstä huolimatta Sax ajautui konkurssiin kolme kertaa. Ei paha kyyhkyltä.",
+  "linkit": [
+   "saksofonin",
+   "Dinantissa",
+   "Brysselissä",
+   "Pariisiin"
+  ],
+  "jatkot": [
+   "Kuuluuko saksofoni puu- vai vaskipuhaltimiin?",
+   "Mitä muuta Adolphe Sax keksi tai kehitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dinant",
+  "kysymys": "Miksi Dinant on pitkä ja kapea kaupunki?",
+  "uusi": false,
+  "vastaus": "Annas ku mietin. Dinant on kasvanut jyrkän kalliojyrkänteen ja [[Maas-joen]] väliin, joten sille ei ole jäänyt tilaa levitä sivuille. Asutus on siksi venynyt pitkäksi ja kapeaksi pohjois-eteläsuuntaiseksi kaistaksi joen rantaan. Kaupungin tunnusmerkki, [[Notre Damen kollegiaattikirkko]], seisoo samassa ahtaassa raossa kallion juurella, ja kalliolla sen yläpuolella kohoaa 1000-luvulta peräisin oleva linnoitettu [[kaupunginlinnake]].\n\nYlhäältä katsottuna kaupunki on kuin joen viereen ladottu nauha. Minulle se on helppo navigoida, kun riittää seurata vettä.",
+  "linkit": [
+   "Maas-joen",
+   "Notre Damen kollegiaattikirkko",
+   "kaupunginlinnake"
+  ],
+  "jatkot": [
+   "Mikä on Maas-joki ja minne se virtaa?",
+   "Millainen kaupunginlinnake Dinantin kalliolla on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dinant",
+  "kysymys": "Millainen keksi Dinantin couque on?",
+  "uusi": true,
+  "vastaus": "Joo, tost minä osaan kertoo. Maistaa en kyl ole päässyt, nokka ei kestäisi. Couque on perinteinen leivonnainen, jota kutsutaan usein Euroopan kovimmaksi keksiksi. Lähteiden mukaan se valmistetaan pääosin hunajasta ja jauhoista, mutta en ole varma tarkasta reseptistä. Dinantin perinteisiin kuuluvat sen lisäksi [[messinkiesineiden]] valmistus ja kalkkikiven louhinta [[Ardennien]] kupeessa. Pullaksi tää on kyl liian kova, harmi.",
+  "linkit": [
+   "messinkiesineiden",
+   "Ardennien"
+  ],
+  "jatkot": [
+   "Miten couque syödään, kun se on näin kovaa?",
+   "Mistä Dinantin messinkityöt tunnetaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dinant",
+  "kysymys": "Mikä tuhosi Dinantin vanhan romaanisen kirkon?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Kallio oli siinä liian lähellä. Kalliosta pudonneet lohkareet tuhosivat Dinantin vanhan romaanisen kirkon vuonna 1227. Sen jälkeen kirkko rakennettiin uudelleen [[goottilaiseen tyyliin]], ja siitä tuli [[Notre Damen kollegiaattikirkko]], kaupungin tunnusmerkki. Kirkon yläpuolella kalliolla kohoaa edelleen 1000-luvulta peräisin oleva linnoitettu [[kaupunginlinnake]]. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "goottilaiseen tyyliin",
+   "Notre Damen kollegiaattikirkko",
+   "kaupunginlinnake"
+  ],
+  "jatkot": [
+   "Mikä on kollegiaattikirkko?",
+   "Mitä goottilaisella tyylillä tarkoitetaan arkkitehtuurissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-dinant",
+  "kysymys": "Missä päin Belgiaa Dinant sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kato, tän näkee ylhäältä kerralla. Joen mutka tekee paikan löytämisestä helppoa. Dinant sijaitsee Belgian eteläosassa Wallonian puolella [[Namurin]] maakunnassa. Kaupunki on [[Maas-joen]] varrella [[Ardennien]] alueella, jyrkän kalliojyrkänteen ja joen välissä. Pöllö parantelee vielä siipeään, joten kartta jäi minun vastuulleni.",
+  "linkit": [
+   "Namurin",
+   "Maas-joen",
+   "Ardennien"
+  ],
+  "jatkot": [
+   "Mikä on Namurin maakunnan pääkaupunki?",
+   "Kuinka pitkä Maas-joki on?"
+  ],
+  "paikka": {
+   "nimi": "Dinant",
+   "lat": 50.26,
+   "lon": 4.91,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-spa",
+  "kysymys": "Mikä oli Spa-kaupungin roomalainen nimi?",
+  "uusi": false,
+  "vastaus": "Odotas vähän. Paikka tunnettiin jo roomalaisaikana nimellä [[Aquae Spadanae]]. [[Plinius vanhempi]] kertoi seudun kuplivasta lähteestä, ja nykyään kaupunki sijaitsee Wallonian [[Liègen]] maakunnassa Ardenneilla. Latina on kyl sukuni kieli, joten tää tuntui kotoisalta.",
+  "linkit": [
+   "Aquae Spadanae",
+   "Plinius vanhempi",
+   "Liègen"
+  ],
+  "jatkot": [
+   "Mitä Plinius vanhempi tunnetaan kirjoittaneensa?",
+   "Mitä aquae tarkoittaa latinaksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-spa",
+  "kysymys": "Mikä yleisnimi on saanut alkunsa Spa-kaupungin nimestä?",
+  "uusi": false,
+  "vastaus": "Ai se. Kaupungin nimestä on tullut yleisnimi kylpylälle eli paikalle, jonka [[kivennäisvesillä]] uskotaan olevan parantavia vaikutuksia. Kaupunki sijaitsee [[Liègen]] maakunnassa [[Ardenneilla]], ja sen ympäristössä on yli 300 kylmää kivennäislähdettä. Spa on tunnettu myös maailmalle viedystä mineraalivedestään.\n\nMinulle kylpy tarkoittaa lätäkköä, mutta myönnän, että nimi on tehnyt uran. Kun joku sanoo spa, harva ajattelee pientä belgialaista kaupunkia.",
+  "linkit": [
+   "kivennäisvesillä",
+   "Liègen",
+   "Ardenneilla"
+  ],
+  "jatkot": [
+   "Onko kivennäisvesien parantavista vaikutuksista tieteellistä näyttöä?",
+   "Missä muualla Euroopassa on tunnettuja kylpyläkaupunkeja?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-spa",
+  "kysymys": "Kuka antiikin kirjoittaja mainitsi Span kuplivan lähteen?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Seudun kuplivasta lähteestä kertoi [[Plinius vanhempi]], roomalainen kirjoittaja ja luonnontutkija. Hän eli ensimmäisellä vuosisadalla jKr. ja kirjoitti laajan luonnonhistoriaa käsittelevän teoksen [[Naturalis historia]]. Spa tunnettiin tuolloin nimellä [[Aquae Spadanae]]. Suku kantoi, hän kirjoitti, työnjako oli selvä.",
+  "linkit": [
+   "Plinius vanhempi",
+   "Naturalis historia",
+   "Aquae Spadanae"
+  ],
+  "jatkot": [
+   "Mitä Naturalis historia -teos käsittelee?",
+   "Milloin Plinius vanhempi eli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-spa",
+  "kysymys": "Mihin Unescon maailmanperintökohteeseen Spa kuuluu?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Vuonna 2021 Spa liitettiin osaksi Unescon maailmanperintökohdetta [[Euroopan suuret kylpyläkaupungit]]. Kohde kokoaa yhteen useiden maiden kylpyläkaupunkeja, jotka kasvoivat muodikkaiksi lomakohteiksi 1700- ja 1800-luvuilla. Spassa on ollut [[kasinoita]] 1700-luvulta lähtien, ja [[Leopold II:n]] aikana kaupunkiin rakennettiin vuonna 1868 Thermal Baths -kylpylä. Viisi vuotta sitten, ja tuntuu eilispäivältä.",
+  "linkit": [
+   "Euroopan suuret kylpyläkaupungit",
+   "kasinoita",
+   "Leopold II:n"
+  ],
+  "jatkot": [
+   "Mitä muita kaupunkeja kuuluu samaan maailmanperintökohteeseen?",
+   "Mikä on Unescon maailmanperintöluettelo?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-spa",
+  "kysymys": "Missä päin Belgiaa Spa sijaitsee?",
+  "uusi": true,
+  "vastaus": "Ai tota. Kartalta tämä löytyy helposti. Spa sijaitsee Belgian itäosassa, Wallonian [[Liègen]] maakunnassa [[Ardenneilla]]. Kaupunki on metsäisellä ylängöllä Liègen kaupungista kaakkoon. Kartta riitti, siipiä ei tarvittu.",
+  "linkit": [
+   "Liègen",
+   "Ardenneilla"
+  ],
+  "jatkot": [
+   "Mikä on Liègen kaupungin tunnetuin nähtävyys?",
+   "Mitä Ardennit ovat maantieteellisesti?"
+  ],
+  "paikka": {
+   "nimi": "Spa",
+   "lat": 50.49,
+   "lon": 5.86,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-brugge-belfry",
+  "kysymys": "Mitä Bruggen kellotornissa säilytettiin?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tän muistan hyvin. Bruggen kellotornissa säilytettiin kaupungin arkistoa ja aarteita. Torni nousi [[Markt-torille]] noin vuonna 1240, kun [[Brugge]] rikastui [[flaamilaisella kankaalla]]. Tornista tähyilivät myös vartijat, jotka valvoivat tulipaloja. Vuonna 1280 tuli tuhosi arkiston, ja torni sai sen jälkeen uuden yläosan. Korkealla paikalla, aivan kuin kotonani.",
+  "linkit": [
+   "Markt-torille",
+   "Brugge",
+   "flaamilaisella kankaalla"
+  ],
+  "jatkot": [
+   "Mikä on belfort-torni, ja missä niitä on?",
+   "Millaista verkaa Flanderissa keskiajalla tuotettiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brugge-belfry",
+  "kysymys": "Miksi torni on nykyään 83 metriä eikä 102 metriä korkea?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: ylhäältä puuttuu pala. Tornin huippu on kärsinyt tulipaloista. Salama poltti sen huipun vuonna 1493, ja kun seuraavakin puuhuippu paloi vuonna 1741, sitä ei enää rakennettu. Siksi [[Belfort]] jäi 83 metriä korkeaksi sen alun perin 102 metrin korkeuden sijaan. Se on yhä yksi [[Bruggen]] tunnetuimmista symboleista. Jäihän siitä silti tarpeeksi korkea kyyhkyn mittapuulla.",
+  "linkit": [
+   "Belfort",
+   "Bruggen"
+  ],
+  "jatkot": [
+   "Miten Bruggen kellotornin kellopeli toimii?",
+   "Miksi torni kallistuu itään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brugge-belfry",
+  "kysymys": "Kuinka paljon Bruggen kellotorni kallistuu?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Mittanauhaa ei ole kyyhkyllä mukana. Bruggen kellotorni kallistuu 87 senttimetriä itään. Torni on 83 metriä korkea, ja sen huipulle johtaa 366 askelmaa. Vertailun vuoksi [[Pisan torni]] kallistuu paljon enemmän, mutta [[Belfort]] on silti kuuluisa symboli [[Markt-torilla]]. Itään siis, mut minä lennän silti suoraan.",
+  "linkit": [
+   "Pisan torni",
+   "Belfort",
+   "Markt-torilla"
+  ],
+  "jatkot": [
+   "Miksi Pisan torni kallistuu?",
+   "Miten vanhoja torneja tuetaan kallistumisen estämiseksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brugge-belfry",
+  "kysymys": "Mihin kellotornin vartijoita tarvittiin?",
+  "uusi": true,
+  "vastaus": "Mmm— tähystys on tuttua hommaa. Kellotornin vartijat tähyilivät tornista tulipaloja ja muita vaaroja. Korkealta näki yli kaupungin kattojen, joten palon sai havaittua ennen kuin se levisi laajalle. Torni oli [[Bruggen]] keskustassa [[Markt-torilla]], ja siellä säilytettiin myös kaupungin arkistoa ja aarteita. Tehtävä oli tärkeä [[keskiajalla]], jolloin kaupunki oli rikas flaamilaisen verkateollisuuden ansiosta. Itse olisin hoitanut homman ilman portaita.",
+  "linkit": [
+   "Bruggen",
+   "Markt-torilla",
+   "keskiajalla"
+  ],
+  "jatkot": [
+   "Miten keskiajan kaupungeissa varauduttiin tulipaloihin?",
+   "Mitä kaupunkien kellotorneilla muuten tehtiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-brugge-belfry",
+  "kysymys": "Missä Bruggen kellotorni sijaitsee?",
+  "uusi": true,
+  "vastaus": "Katotaas. Bruggen Belfry eli Belfort sijaitsee Bruggen keskustassa [[Markt-torin]] laidalla. Brugge on [[Länsi-Flanderin]] kaupunki Belgian luoteisosassa, lähellä [[Pohjanmeren]] rannikkoa. Torni näkyy kauas, joten pelkkä katse riittää.",
+  "linkit": [
+   "Markt-torin",
+   "Länsi-Flanderin",
+   "Pohjanmeren"
+  ],
+  "jatkot": [
+   "Miksi Brugge on kutsuttu Pohjolan Venetsiaksi?",
+   "Milloin Bruggen vanhakaupunki liitettiin maailmanperintöluetteloon?"
+  ],
+  "paikka": {
+   "nimi": "Bruggen kellotorni",
+   "lat": 51.21,
+   "lon": 3.22,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-tervuren",
+  "kysymys": "Mitä varten Tervurenin museorakennus alun perin rakennettiin?",
+  "uusi": false,
+  "vastaus": "Tuota niin. Tää on vakava aihe, joten kerron sen suoraan. Rakennus tehtiin alun perin esittelemään kuningas [[Leopold II:n]] Kongon vapaavaltiota vuoden 1897 [[maailmannäyttelyssä]]. Vuonna 1898 perustettu pysyvä Kongon museo toimi sittemmin siirtomaapropagandan välineenä ja Belgian siirtomaatoiminnan tukena. Siitä on yli sata vuotta, ja tuolloin siirtomaavaltaa pidettiin monessa Euroopan maassa itsestäänselvyytenä. Nykyään laitos tunnetaan nimellä [[AfricaMuseum]], ja sen painopiste on muualla. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Leopold II:n",
+   "maailmannäyttelyssä",
+   "AfricaMuseum"
+  ],
+  "jatkot": [
+   "Mitä maailmannäyttelyt olivat 1800-luvun lopulla?",
+   "Milloin Tervurenin museo avattiin yleisölle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tervuren",
+  "kysymys": "Mitä tapahtui näyttelyn puistossa asuneelle 60 kongolaiselle?",
+  "uusi": false,
+  "vastaus": "Tää on raskas aihe, mut kerron sen suoraan. Vuoden 1897 näyttelyn puistoon rakennettiin väliaikainen afrikkalaisen kylän jäljitelmä, jossa asui näyttelyn ajan 60 kongolaista. Heidät oli tuotu Belgiaan, ja seitsemän heistä kuoli pakkomajoituksensa aikana. Siitä on yli sata vuotta. Tuohon aikaan [[ihmistarhoja]] järjestettiin useissa Euroopan maissa, ja nykyään niitä pidetään alentavina ja vääränä. Nykyinen [[AfricaMuseum]] on käsitellyt asiaa siirtomaahistorian kriittisessä uudelleenarvioinnissa. Hyvä, että siitä puhutaan nykyään avoimesti.",
+  "linkit": [
+   "ihmistarhoja",
+   "AfricaMuseum"
+  ],
+  "jatkot": [
+   "Miten ihmistarhat vaikuttivat 1800-luvun käsityksiin ihmisistä?",
+   "Milloin ihmistarhat Euroopassa loppuivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tervuren",
+  "kysymys": "Mitä Tervurenin museolle tehtiin vuosina 2013–2018?",
+  "uusi": true,
+  "vastaus": "No jopas. Museo uudistettiin perusteellisesti vuosina 2013–2018. Uudistuksessa korjattiin myös näyttelyn aiempaa vähäistä kriittisyyttä siirtomaahistoriaa kohtaan. Jo vuodesta 1960 museon painopiste oli siirtynyt kohti [[etnografiaa]] ja [[antropologiaa]], kun Kongo itsenäistyi. Hyvä, että museotkin oppivat.",
+  "linkit": [
+   "etnografiaa",
+   "antropologiaa"
+  ],
+  "jatkot": [
+   "Mitä etnografia tutkii?",
+   "Mitä siirtomaavalta tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-tervuren",
+  "kysymys": "Missä Tervuren sijaitsee suhteessa Brysseliin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Tervuren sijaitsee [[Flaamilaisessa Brabantissa]] aivan Brysselin ulkopuolella, kaupungin itäpuolella. Siellä on [[AfricaMuseum]], joka on etnografinen ja luonnonhistoriallinen museo. Lyhyt lento minulle, ei tarvita karttaakaan.",
+  "linkit": [
+   "Flaamilaisessa Brabantissa",
+   "AfricaMuseum"
+  ],
+  "jatkot": [
+   "Miten Brysselistä pääsee Tervureniin?",
+   "Mitä muuta Tervurenin puistossa on?"
+  ],
+  "paikka": {
+   "nimi": "Tervuren",
+   "lat": 50.82,
+   "lon": 4.51,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-tervuren",
+  "kysymys": "Millaisia kokoelmia Tervurenin museossa on?",
+  "uusi": true,
+  "vastaus": "Mmm— tähän liittyy lintutarina. [[AfricaMuseum]] on sekä [[etnografinen]] että [[luonnonhistoriallinen]] museo, joten siellä on sekä kulttuuriesineitä että luonnonkokoelmia. Yhdysvaltalainen lintutieteilijä James Chapin näki museossa vuonna 1934 kaksi täytettyä lintua, joiden kyltissä luki intialainen riikinkukko. Ne olivat kuitenkin tuntematonta lajia, ja myöhemmin ne tunnistettiin kongonriikinkukoksi.\n\nTäytetty lintu kyltin kera ei ole minun suosikkini, mutta ymmärrän, miksi kaukaa tulleen höyhenen arvoitus kiehtoi. Onneksi minua ei ole koskaan luultu riikinkukoksi.",
+  "linkit": [
+   "AfricaMuseum",
+   "etnografinen",
+   "luonnonhistoriallinen"
+  ],
+  "jatkot": [
+   "Mikä lintu kongonriikinkukko on?",
+   "Miten uusia eläinlajeja tunnistetaan museokokoelmista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durbuy",
+  "kysymys": "Minkä tittelin Durbuy mainostaa itselleen?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Mainoslauseet on aina kiva tarkistaa. Durbuy mainostaa itseään kaupallisista syistä maailman pienimpänä kaupunkina. Titteli ei kuitenkaan ole virallinen, sillä Belgian virallisesti pienin kaupunki on vuodesta 2006 lähtien [[Mesen]]. Keskiajalla Durbuy oli tärkeä kaupan ja teollisuuden keskus, ja [[Böömin kuningas Juhana]] korotti sen kaupungiksi vuonna 1331. Nykyään pääelinkeinoja ovat matkailu ja virkistys. Pieni kaupunki, iso mainos.",
+  "linkit": [
+   "Mesen",
+   "Böömin kuningas Juhana"
+  ],
+  "jatkot": [
+   "Kuinka kaupunki saa kaupunkioikeudet Belgiassa?",
+   "Miksi Mesen on niin pieni?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durbuy",
+  "kysymys": "Mikä on Belgian virallisesti pienin kaupunki?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Viisas Pöllö osaisi tän ulkoa, mut hän on matkoilla. Belgian virallisesti pienin kaupunki on vuodesta 2006 lähtien [[Mesen]], joka sijaitsee [[Länsi-Flanderissa]] [[Ypresin]] lähistöllä. Durbuy puolestaan mainostaa itseään kaupallisista syistä maailman pienimpänä kaupunkina. Pieni kaupunki, iso mainos.",
+  "linkit": [
+   "Mesen",
+   "Länsi-Flanderissa",
+   "Ypresin"
+  ],
+  "jatkot": [
+   "Miksi Mesen on niin pieni?",
+   "Mitä Ypresin ympäristössä on nähtävää?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durbuy",
+  "kysymys": "Kuka korotti Durbuyn kaupungiksi?",
+  "uusi": true,
+  "vastaus": "Ai tota. Durbuyn korotti kaupungiksi vuonna 1331 [[Luxemburgin kreivi]] ja [[Böömin kuningas]] Juhana, joka tunnetaan myös nimellä [[Juhana Sokea]]. Keskiajalla Durbuy oli tärkeä kaupan ja teollisuuden keskus. Meikäläiset kantoivat kyl monen kuninkaan kirjeitä.",
+  "linkit": [
+   "Luxemburgin kreivi",
+   "Böömin kuningas",
+   "Juhana Sokea"
+  ],
+  "jatkot": [
+   "Miksi Juhanaa kutsuttiin Sokeaksi?",
+   "Mitä kaupunkioikeudet merkitsivät keskiajalla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-durbuy",
+  "kysymys": "Missä Durbuy sijaitsee?",
+  "uusi": true,
+  "vastaus": "No niin, katsotaan karttaa. Durbuy sijaitsee Belgian eteläosassa Wallonian puolella, Belgian Luxemburgin maakunnassa [[Ourthe-joen]] varrella. Seutu kuuluu [[Ardennien]] metsäiseen ylänköön. Joen mutka kertoo paikan.",
+  "linkit": [
+   "Ourthe-joen",
+   "Ardennien"
+  ],
+  "jatkot": [
+   "Miten Ourthe-joki virtaa Ardenneilla?",
+   "Mitä Belgian Luxemburgin maakunnassa on nähtävää?"
+  ],
+  "paikka": {
+   "nimi": "Durbuy",
+   "lat": 50.35,
+   "lon": 5.46,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-durbuy",
+  "kysymys": "Kuka asuu Durbuyn nykyisessä linnassa?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Nykyinen linna on rakennettu vuonna 1880, ja siellä asuu [[Urselin suku]]. Kaupunki oli [[keskiajalla]] kaupan ja teollisuuden keskus, mutta nykyään sen pääelinkeinoja ovat matkailu ja virkistys.\n\nLinnassa asuminen kuulostaa minun korvaani hienolta, mutta ylhäältä katsottuna se on vain iso katto, jossa on kiva istua. Sukuni ei ole koskaan omistanut linnaa, vain kymmeniä kattoja.",
+  "linkit": [
+   "Urselin suku",
+   "keskiajalla"
+  ],
+  "jatkot": [
+   "Kuinka vanhoja linnoja Belgiassa on?",
+   "Mitä Durbuyssa voi tehdä matkailijana?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oudenaarde",
+  "kysymys": "Minkä tuotteen valmistuskeskuksena Oudenaarde oli tunnettu?",
+  "uusi": false,
+  "vastaus": "Ai se, tän minä tiedän. Oudenaarde oli tunnettu [[kuvakudosten]] valmistuskeskuksena. Tuotanto kesti 1400-luvulta 1700-luvulle, ja huippukausi osui erityisesti 1500-luvulle. Kaupungintalossa on nykyään kokoelma Oudenaarden kuvakudoksia, joten perinne on yhä nähtävillä. Kyl kirje on silti kevyempi kantaa.",
+  "linkit": [
+   "kuvakudosten"
+  ],
+  "jatkot": [
+   "Miten kuvakudokset valmistettiin?",
+   "Milloin Oudenaarde antautui piirityksen jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oudenaarde",
+  "kysymys": "Milloin Oudenaarden kaupungintalo rakennettiin?",
+  "uusi": false,
+  "vastaus": "No niin, tähän on selvä vastaus. Kaupungintalo rakennettiin vuosina 1526–1537 [[goottilaiseen]] tyyliin. Rakennuttajana oli kaupunki itse. Talo ja sen kellotorni ovat kuuluneet [[Unescon]] maailmanperintökohteisiin vuodesta 1999, ja talossa säilytetään myös [[kuvakudosten]] kokoelmaa. Yksitoista vuotta rakentamista, siinä ehtii kyyhky vanheta.",
+  "linkit": [
+   "goottilaiseen",
+   "Unescon",
+   "kuvakudosten"
+  ],
+  "jatkot": [
+   "Mikä tekee goottilaisesta tyylistä goottilaisen?",
+   "Mitä Unescon maailmanperintöluettelo tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oudenaarde",
+  "kysymys": "Kuka johti Oudenaarden piiritystä vuonna 1582?",
+  "uusi": true,
+  "vastaus": "Mmm— selvä, tämä on historiaa. Piiritystä johti [[Alexander Farnese]], joka oli Espanjan Alankomaiden kenraalikuvernööri. Kaupunki antautui pitkän piirityksen jälkeen, ja sen seurauksena useimmat kauppiaat, työläiset ja jopa aateliset pakenivat. Entinen loisto ei koskaan palannut. Onpas siitä onneksi pitkä aika.",
+  "linkit": [
+   "Alexander Farnese"
+  ],
+  "jatkot": [
+   "Millainen mies Alexander Farnese oli?",
+   "Miksi Alankomaissa käytiin sotaa Espanjaa vastaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oudenaarde",
+  "kysymys": "Mihin Scheldt-joki virtaa?",
+  "uusi": true,
+  "vastaus": "Kas vaan, jokikysymys, ja katolta ne näkyvät parhaiten. Scheldt saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Oudenaarde sijaitsee joen varrella Itä-Flanderissa, ja joki on ollut alueen kaupungeille tärkeä kulkuväylä. Kaupunkien rakentajat ovat aina tienneet, missä vesi on.\n\nMinä seuraan jokia mielelläni, koska niitä pitkin ei eksy, vaikka sumu tulisi. Tosin sumussa sekin on kyl haaste.",
+  "linkit": [],
+  "jatkot": [
+   "Mitkä kaupungit sijaitsevat Scheldtin varrella?",
+   "Mikä on Pohjanmeri ja mitkä maat sen rannoilla ovat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oudenaarde",
+  "kysymys": "Miten kuvakudos valmistetaan?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny, tää vaatii tarkkuutta. Kuvakudos on käsin kudottu kuvallinen tekstiili, jossa kuvio syntyy itse kankaaseen. Kutoja pingottaa pystysuorat [[loimilangat]] kehykseen ja kutoo niiden väliin värillisiä kudelankoja, jolloin kuva muodostuu pala palalta. Työ on hidasta, ja suuri kuvakudos saattoi viedä kutojilta kuukausia tai jopa vuosia. Lankoina käytettiin yleensä [[villaa]] ja joskus silkkiä. Pitkä sepustus, mutta pysyin hereillä.",
+  "linkit": [
+   "loimilangat",
+   "villaa"
+  ],
+  "jatkot": [
+   "Mihin kuvakudoksia käytettiin keskiajalla?",
+   "Miten kuvakudos eroaa kirjotusta kankaasta?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-canal-du-centre",
+  "kysymys": "Miksi Thieun ja Houdeng-Gœgnies'n välillä ei voitu käyttää sulkuja?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä osaan selittää. Osuudella kanava nousee 66 metriä vain 6 790 metrin matkalla, ja se oli liian jyrkkä nousu perinteisille [[sulkuportaille]]. Siksi alueelle rakennettiin neljä hydraulista [[laivanostinta]] vuosina 1888–1917. Ne ovat nykyään osa [[Canal du Centre]] -kanavan Unescon maailmanperintökohdetta. Ei ole helppoa nostaa laivaa mäkeen, ei kyyhkyltäkään.",
+  "linkit": [
+   "sulkuportaille",
+   "laivanostinta",
+   "Canal du Centre"
+  ],
+  "jatkot": [
+   "Miten hydraulinen laivanostin toimii?",
+   "Kuinka monta sulkua tavallisessa sulkuportaassa tarvitaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-canal-du-centre",
+  "kysymys": "Kuka suunnitteli laivanostimet?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Laivanostimet suunnitteli brittiläisen Clark, Stansfield & Clarkin insinööri [[Edwin Clark]]. Hän ehdotti ratkaisua Belgian yleisten töiden ministeriölle vuonna 1879. Ensimmäisen laivanostimen avasi kuningas [[Leopold II]] 4. kesäkuuta 1888, ja kolme muuta valmistuivat vasta vuonna 1917. Siinä ehti suunnittelijakin jo unohtua.",
+  "linkit": [
+   "Edwin Clark",
+   "Leopold II"
+  ],
+  "jatkot": [
+   "Miksi kolme muuta laivanostinta valmistui vasta vuonna 1917?",
+   "Mitä muita rakennuksia Edwin Clark suunnitteli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-canal-du-centre",
+  "kysymys": "Miten hydraulinen laivanostin toimii?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Laivanostimessa on kaksi vedellä täytettyä allasta, joihin laiva ajetaan, ja ne on yhdistetty toisiinsa [[hydraulisilla]] mäntäjärjestelmillä. Kun ylempään altaaseen lisätään hieman vettä, se muuttuu raskaammaksi ja laskeutuu samalla, kun alempi allas nousee. Laiva syrjäyttää oman painonsa verran vettä, joten laivalla varustettu allas painaa saman verran kuin tyhjä. Siksi vähäinenkin lisäpaino riittää liikuttamaan koko rakennelmaa. Canal du Centren neljä laivanostinta toimivat tällä periaatteella. Ja tän kaiken minä muistin ilman pulla-taukoa.",
+  "linkit": [
+   "hydraulisilla"
+  ],
+  "jatkot": [
+   "Mitä hydrauliikka tarkoittaa?",
+   "Kuka keksi laivanostimen periaatteen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-canal-du-centre",
+  "kysymys": "Minkä maiden läpi Maas-joki kulkee?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Maas saa alkunsa Ranskassa, virtaa Belgian halki ja päätyy Alankomaiden kautta Pohjanmereen. Se on tärkeä kulkuväylä, ja Canal du Centre yhdistää Maasin ja [[Scheldtin]] vesistöt Walloniassa. Joki on ollut kauppareittinä merkittävä jo vuosisatojen ajan. Joet ovat kyl kyyhkyn parhaita ystäviä, ne näyttävät suunnan.",
+  "linkit": [
+   "Scheldtin"
+  ],
+  "jatkot": [
+   "Mitkä kaupungit sijaitsevat Maasin varrella?",
+   "Miten Maas ja Scheldt liittyvät toisiinsa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-canal-du-centre",
+  "kysymys": "Mikä on Unescon maailmanperintöluettelo?",
+  "uusi": true,
+  "vastaus": "Hyvä kysymys tuo. Unescon maailmanperintöluettelo on luettelo kulttuuri- ja luontokohteista, joiden katsotaan olevan koko ihmiskunnan yhteistä perintöä. Se perustuu vuonna 1972 hyväksyttyyn yleissopimukseen. Luetteloon hyväksyttävän kohteen on täytettävä tietyt arvoperusteet, ja jäsenvaltiot sitoutuvat suojelemaan kohteitaan. Canal du Centren laivanostimet ovat yksi esimerkki teknisestä kohteesta, joka on luettelossa. Jopas tuli virallinen vastaus kyyhkyltä.",
+  "linkit": [],
+  "jatkot": [
+   "Kuinka kohde pääsee maailmanperintöluetteloon?",
+   "Mitkä muut Belgian kohteet ovat maailmanperintöluettelossa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hornu",
+  "kysymys": "Kuka rakensi Grand-Hornun hiilikaivoskompleksin ja työläiskylän?",
+  "uusi": false,
+  "vastaus": "Kas vaan, tän tiedän. Kompleksin rakennutti [[Henri De Gorge]] vuosina 1810–1830. Sitä pidetään ainutlaatuisena esimerkkinä toiminnallisesta [[kaupunkisuunnittelusta]], sillä kaivoksen rinnalle rakennettiin kokonainen työläiskylä. Nykyään kohde on yksi neljästä Wallonian teollisuuskohteesta, jotka merkittiin [[Unescon]] maailmanperintöluetteloon vuonna 2012. Aika pitkä lista yhdelle miehelle, mutta hyvin hän ehti.",
+  "linkit": [
+   "Henri De Gorge",
+   "kaupunkisuunnittelusta",
+   "Unescon"
+  ],
+  "jatkot": [
+   "Millaista elämä työläiskylässä oli?",
+   "Mitkä ovat Wallonian muut maailmanperintökohteet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hornu",
+  "kysymys": "Mitä Grand-Hornun rakennuksissa on nykyään?",
+  "uusi": false,
+  "vastaus": "Joo, siitä voin kertoa. Nykyään Grand-Hornun omistaa [[Hainautin]] maakunta, ja rakennuksissa järjestetään vaihtuvia näyttelyitä. Entinen teollisuusalue toimii siis kulttuurikäytössä. Kohde on myös osa Wallonian maailmanperintökohteita. Sillon siinä oli kaivos, nyt siinä on näyttely.",
+  "linkit": [
+   "Hainautin"
+  ],
+  "jatkot": [
+   "Millaisia näyttelyitä Grand-Hornussa on järjestetty?",
+   "Mikä Hainaut on ja missä se sijaitsee?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hornu",
+  "kysymys": "Missä Mons sijaitsee?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny, katotaas karttaa. [[Mons]] on Hainautin maakunnan pääkaupunki Belgian Walloniassa, lähellä Ranskan rajaa. Grand-Hornun kaivoskompleksi sijaitsee Monsin lähellä Hornun alueella Boussun kunnassa. Kaupunki on kulttuurikaupunkina tunnettu, ja se oli Euroopan kulttuuripääkaupunki vuonna 2015. Ylhäältä katsottuna Wallonia on yllättävän vihreää seutua.",
+  "linkit": [
+   "Mons"
+  ],
+  "jatkot": [
+   "Mitä Monsissa voi nähdä?",
+   "Mitä Euroopan kulttuuripääkaupunki tarkoittaa?"
+  ],
+  "paikka": {
+   "nimi": "Mons",
+   "lat": 50.45,
+   "lon": 3.95,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hornu",
+  "kysymys": "Miksi Wallonia oli teollisuuden keskus?",
+  "uusi": true,
+  "vastaus": "Ai tota. Waloniassa on kivihiiliesiintymiä, joita louhittiin jo varhain, ja hiili antoi energiaa raudan- ja teräksenvalmistukselle. Belgia oli yksi ensimmäisistä [[teollistuneista]] maista Euroopan mantereella, ja Wallonian hiili- ja terästeollisuus oli keskeisessä asemassa. Alueen kaivoskaupungit, kuten Grand-Hornu, ovat tämän kauden todisteita. Teollisuus on sittemmin vähentynyt, ja monet entiset tehdasalueet ovat nykyään museoita tai kulttuurikohteita. Minä muistan, että savu oli joskus vahvempaa kuin sumu.",
+  "linkit": [
+   "teollistuneista"
+  ],
+  "jatkot": [
+   "Miksi Wallonian raskas teollisuus on vähentynyt?",
+   "Mitä ensimmäinen teollinen vallankumous tarkoitti?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-grand-hornu",
+  "kysymys": "Miten kivihiili syntyy?",
+  "uusi": true,
+  "vastaus": "Nyt muistan. [[Kivihiili]] syntyy kasvijäänteistä, jotka ovat kerääntyneet muinaisiin soihin ja peittyneet maakerrosten alle. Paine ja lämpö muuttavat jäänteet hitaasti hiileksi miljoonien vuosien kuluessa. Suuri osa Euroopan kivihiilestä on peräisin [[hiilikaudelta]], jolloin maapallolla kasvoi laajoja suometsiä. Siksi hiilikaivokset louhivat käytännössä muinaista metsää. Tyhmä lintu, joka luuli hiiltä pelkäksi kiveksi.",
+  "linkit": [
+   "Kivihiili",
+   "hiilikaudelta"
+  ],
+  "jatkot": [
+   "Mikä oli hiilikausi?",
+   "Mihin kivihiiltä käytetään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bois-du-cazier",
+  "kysymys": "Mitä Bois du Cazierin kaivoksessa tapahtui 8. elokuuta 1956?",
+  "uusi": false,
+  "vastaus": "Kääk. Hissikoneisto käynnistettiin ennen kuin kaivosvaunu oli kokonaan lastattu, jolloin sähkökaapelit repesivät ja kuiluun syttyi tulipalo. Savu ja hiilimonoksidi tappoivat maan alle jääneet. Onnettomuudessa kuoli 262 työntekijää 12 eri kansallisuudesta, ja vain 13 selvisi, joten se on [[Belgian]] pahin kaivosonnettomuus. Monet uhreista olivat [[Italiasta]] tulleita siirtolaistyöläisiä. Onnettomuudesta on kulunut yli seitsemänkymmentä vuotta, ja kohde on nykyään säilytetty teollisuusperintökohteena. Se on hyvä, että siitä muistetaan.",
+  "linkit": [
+   "Belgian",
+   "Italiasta"
+  ],
+  "jatkot": [
+   "Miksi italialaisia työläisiä oli Belgiassa?",
+   "Miten kaivosturvallisuus muuttui onnettomuuden jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bois-du-cazier",
+  "kysymys": "Mitä onnettomuuden jälkeen muuttui Euroopassa?",
+  "uusi": false,
+  "vastaus": "Hmm. Onnettomuuden jälkeen italialaisten siirtolaisuus Belgiaan loppui, ja [[kaivosturvallisuuden]] säännöt uusittiin kaikkialla Euroopassa. Tapahtuma vaikutti siten sekä työvoiman liikkumiseen että työolojen valvontaan. Se tapahtui vuonna 1956 [[Marcinellessa]], lähellä Charleroita. Ajat ovat onneksi muuttuneet.",
+  "linkit": [
+   "kaivosturvallisuuden",
+   "Marcinellessa"
+  ],
+  "jatkot": [
+   "Miten kaivosturvallisuutta valvotaan nykyään?",
+   "Mitä Marcinellen onnettomuus merkitsee Italiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bois-du-cazier",
+  "kysymys": "Miksi hiilimonoksidi on niin vaarallista?",
+  "uusi": true,
+  "vastaus": "Ai se. [[Hiilimonoksidi]] on väritön ja hajuton kaasu, jota ihminen ei huomaa aistein. Se sitoutuu veren [[hemoglobiiniin]] huomattavasti hapen tavoin, mutta tiukemmin, jolloin elimistön hapensaanti heikkenee. Siksi jo pieni pitoisuus voi aiheuttaa vakavan myrkytyksen. Kaasua syntyy epätäydellisessä palamisessa, ja se oli osa kaivosonnettomuuden vaaraa. Tästä syystä kaivoksissa ja kodeissa käytetään nykyään varoittimia. Asia on tärkeä tietää.",
+  "linkit": [
+   "Hiilimonoksidi",
+   "hemoglobiiniin"
+  ],
+  "jatkot": [
+   "Miten hiilimonoksidimyrkytys todetaan?",
+   "Missä muualla hiilimonoksidia syntyy?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bois-du-cazier",
+  "kysymys": "Miksi Italiasta tuli työläisiä Belgian kaivoksiin?",
+  "uusi": true,
+  "vastaus": "Ai tota. Toisen maailmansodan jälkeen Belgia tarvitsi kipeästi työvoimaa hiilikaivoksiinsa, ja Italiassa oli työttömyyttä. Maiden välillä sovittiin siirtolaisten tulosta, ja tuhannet [[italialaiset]] muuttivat Belgiaan kaivostyöhön. Työ oli raskasta ja vaarallista, ja monet asuivat aluksi kaivosalueiden parakeissa. Marcinellen onnettomuudessa kuolleiden joukossa oli useita italialaisia. Kaivosvuosien perintö on yhä osa Belgian ja Italian yhteistä historiaa.",
+  "linkit": [
+   "italialaiset"
+  ],
+  "jatkot": [
+   "Millaisissa oloissa siirtolaiset asuivat?",
+   "Miksi Italiassa oli työttömyyttä sodan jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-bois-du-cazier",
+  "kysymys": "Milloin Belgian hiilikaivokset suljettiin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Belgian viimeiset [[hiilikaivokset]] suljettiin lähteiden mukaan 1990-luvun alussa, joten kaivosteollisuus päättyi maassa jo pari vuosikymmentä ennen nykyhetkeä. Sulkeminen oli seurausta halvemmasta tuontihiilestä ja kaivosten kannattamattomuudesta. Monet entiset kaivosalueet on sittemmin muutettu museoiksi tai kulttuurikohteiksi, kuten Bois du Cazier. En ole aivan varma tarkasta vuodesta. Onpas siitä aikaa.",
+  "linkit": [
+   "hiilikaivokset"
+  ],
+  "jatkot": [
+   "Mitä entisille kaivosalueille on tehty?",
+   "Mistä Belgia saa nykyään energiansa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-seraing",
+  "kysymys": "Kuka perusti Seraingiin yhtiön vuonna 1817?",
+  "uusi": false,
+  "vastaus": "Joo, tän minä tiedän. Yhtiön, John Cockerill & Cie, perusti [[John Cockerill]]. Hän ja hänen veljensä James mullistivat teräsalan käyttämällä [[masuuneja]] ja koksia perinteisen puuhiilen sijaan. Näiden keksintöjen pohjalta yhtiö perustettiin Seraingiin vuonna 1817. Seraing kuuluu nykyään Liègen noin 600 000 asukkaan kaupunkialueeseen. Hyvä nimi yritykselle, kantaa yhä miehen mukaan.",
+  "linkit": [
+   "John Cockerill",
+   "masuuneja"
+  ],
+  "jatkot": [
+   "Mitä John Cockerill muuten rakennutti?",
+   "Miten masuuni toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-seraing",
+  "kysymys": "Mitä polttoainetta koksi korvasi Cockerillin masuuneissa?",
+  "uusi": false,
+  "vastaus": "Selvä juttu. Koksi korvasi [[puuhiilen]]. John Cockerill ja hänen veljensä James mullistivat teräsalan käyttämällä masuuneissa [[koksia]] perinteisen puuhiilen sijaan. Muutos oli merkittävä, koska se mahdollisti tuotannon kasvattamisen. Puuhiilen tuotanto olisi vaatinut valtavasti metsää. Pienestä polttoainevalinnasta syntyi suuri teollisuus.",
+  "linkit": [
+   "puuhiilen",
+   "koksia"
+  ],
+  "jatkot": [
+   "Miten koksia valmistetaan?",
+   "Miksi puuhiili ei riittänyt teollisuuden tarpeisiin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-seraing",
+  "kysymys": "Mikä masuuni on?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. [[Masuuni]] on suuri pystysuora uuni, jossa rautamalmista valmistetaan raakarautaa. Uuniin syötetään ylhäältä malmia, koksia ja kalkkikiveä, ja alhaalta puhalletaan kuumaa ilmaa, joka pitää palamisen käynnissä. Korkeassa lämpötilassa malmista irtoaa happi, ja sula rauta valuu uunin pohjalle. Raakaraudasta jalostetaan sen jälkeen [[terästä]]. Masuuni on ollut teräsalan perusta Seraingin kaltaisissa kaupungeissa. Ja minä sanoin sen ilman yhtään sivuhuomiota.",
+  "linkit": [
+   "Masuuni",
+   "terästä"
+  ],
+  "jatkot": [
+   "Miten raakaraudasta tehdään terästä?",
+   "Mihin masuunia käytetään nykyään?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-seraing",
+  "kysymys": "Missä Liège sijaitsee?",
+  "uusi": true,
+  "vastaus": "Kas vaan, katotaas ylhäältä. [[Liège]] sijaitsee Itä-Belgiassa Walloniassa, Maas-joen varrella, ja se on Liègen maakunnan pääkaupunki. Seraing kuuluu Liègen kaupunkialueeseen, jonka asukasluku on noin 600 000. Kaupunki on ollut pitkään teollisuuden ja kaupan keskus. Ylhäältä Liègen joet ja mäet erottuvat selvästi.",
+  "linkit": [
+   "Liège"
+  ],
+  "jatkot": [
+   "Mitä Liègessä voi nähdä?",
+   "Miten Maas-joki on vaikuttanut Liègen kehitykseen?"
+  ],
+  "paikka": {
+   "nimi": "Liège",
+   "lat": 50.63,
+   "lon": 5.57,
+   "tarkkuus": "kaupunki"
+  }
+ },
+ {
+  "kohde": "kohde:hahmotelma-seraing",
+  "kysymys": "Mitä eroa teräksellä ja raudalla on?",
+  "uusi": true,
+  "vastaus": "No niin, hyvä kysymys. [[Teräs]] on raudan ja pienen hiilimäärän seos, ja se on ominaisuuksiltaan käyttökelpoisempaa kuin puhdas [[rauta]]. Terästä voidaan valmistaa joustavaksi ja lujaksi, kun taas raakarauta on hauraampaa. Hiilipitoisuuden ja muiden aineiden mukaan teräksen ominaisuuksia voidaan säädellä. Siksi terästä käytetään rakennuksissa, koneissa ja kulkuneuvoissa. Seraingin tehtaat olivat yksi tämän alan edelläkävijöistä. Ei mikään pieni ero, vaikka sanat kuulostavat sukulaisilta.",
+  "linkit": [
+   "Teräs",
+   "rauta"
+  ],
+  "jatkot": [
+   "Miten teräksen hiilipitoisuus vaikuttaa sen ominaisuuksiin?",
+   "Mitä ruostumaton teräs on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turnhout",
+  "kysymys": "Minkä tuotteen teollisuudesta Turnhout on tunnettu?",
+  "uusi": false,
+  "vastaus": "Kato, tän minä muistan. Turnhout tunnetaan [[pelikorttiteollisuudestaan]], ja kaupungissa sijaitsee maailman suurimman pelikorttien valmistajan [[Cartamundin]] pääkonttori. Kaupunki on [[Antwerpenin]] maakunnan kaupunki Flanderissa, ja siellä asui vuonna 2021 noin 46 000 ihmistä. Ei paha, kyyhky tunnistaa kortin kun sen näkee.",
+  "linkit": [
+   "pelikorttiteollisuudestaan",
+   "Cartamundin",
+   "Antwerpenin"
+  ],
+  "jatkot": [
+   "Milloin pelikortit keksittiin Euroopassa?",
+   "Millainen kaupunki Turnhout on nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turnhout",
+  "kysymys": "Mikä teollisuus korvasi vuodevaatteiden kudonnan 1800-luvun alussa?",
+  "uusi": false,
+  "vastaus": "No niin, tost minä osaan kertoo. Myöhäiskeskiajalla Turnhout oli tunnettu vuodevaatteiden kutomisesta ja [[pellavakauppa]]sta, mutta 1800-luvun alussa nämä korvautuivat paperiin perustuvilla teollisuudenaloilla. Näiden alojen perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Paperia minä oon kantanut enemmän ku mikään.",
+  "linkit": [
+   "pellavakauppa",
+   "Pieter Corbeelsia",
+   "Philippus Jacobus Brepolsia"
+  ],
+  "jatkot": [
+   "Miten paperia valmistettiin 1800-luvun alussa?",
+   "Mihin pellavaa käytettiin ennen vanhaan?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turnhout",
+  "kysymys": "Milloin Turnhoutin kanava kaivettiin?",
+  "uusi": true,
+  "vastaus": "Annas ku mietin. Turnhoutin kanava kaivettiin vuonna 1846, ja rautatie kaupunkiin rakennettiin vuonna 1855. Molemmat helpottivat kaupungin teollisuuden tavaroiden kuljetusta, sillä kaupunki oli syntynyt jo keskiajalla kahden tärkeän [[kauppareitin]] risteykseen. Sinne tuli siis vettä ja raiteita, vaikka minä olen aina tullut ilmojen kautta.",
+  "linkit": [
+   "kauppareitin"
+  ],
+  "jatkot": [
+   "Miten kanavat vaikuttivat Euroopan teollistumiseen?",
+   "Milloin ensimmäiset rautatiet rakennettiin Belgiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turnhout",
+  "kysymys": "Milloin Turnhout sai vapaakaupungin oikeudet?",
+  "uusi": true,
+  "vastaus": "Hetkinen ny. Turnhout sai vapaakaupungin oikeudet noin vuonna 1212. Kaupunki oli syntynyt kahden tärkeän kauppareitin risteykseen [[Brabantin herttuoiden]] metsästyslinnan suojaan, ja kaupunkioikeudet vahvistivat sen asemaa kauppapaikkana.\n\nTällaisen reitin risteys on kyyhkyllekin tuttu paikka: siinä näkee ylhäältä kerralla, ketkä tulevat ja ketkä menevät. Kauppiaat eivät kyllä koskaan nosta katsettaan.",
+  "linkit": [
+   "Brabantin herttuoiden"
+  ],
+  "jatkot": [
+   "Mitä vapaakaupungin oikeudet tarkoittivat keskiajalla?",
+   "Keitä Brabantin herttuat olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-turnhout",
+  "kysymys": "Keitä pidetään Turnhoutin paperiteollisuuden perustajina?",
+  "uusi": true,
+  "vastaus": "Joo, tän minä tiedän. Turnhoutin paperiin perustuvien teollisuudenalojen perustajina pidetään [[Pieter Corbeelsia]] ja [[Philippus Jacobus Brepolsia]]. Heidän alansa korvasivat 1800-luvun alussa kaupungin aiemmat elinkeinot, vuodevaatteiden kudonnan ja [[pellavakauppa]]n. Nimet kannattaa muistaa, minä muistin ne ihan ensi yrittämällä.",
+  "linkit": [
+   "Pieter Corbeelsia",
+   "Philippus Jacobus Brepolsia",
+   "pellavakauppa"
+  ],
+  "jatkot": [
+   "Mitä paperiin perustuvat teollisuudenalat valmistavat?",
+   "Miten Turnhout eroaa muista Flanderin kaupungeista?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-coudenberg",
+  "kysymys": "Minä vuonna tulipalo tuhosi koko palatsin?",
+  "uusi": false,
+  "vastaus": "Mmm— Tulipalo tuhosi [[Coudenbergin palatsin]] vuonna 1731, tarkemmin yöllä 3.2.1731. Palo syttyi keittiöstä ja levisi pakkasessa hallitsemattomasti, koska sammutusvettä ei saatu ajoissa paikalle. Koko palatsi tuhoutui, ja rauniot jäivät vuosikymmeniksi paikoilleen, kunnes ne haudattiin uuden aukion alle 1770-luvulla. Onpas siit onneksi pitkä aika.",
+  "linkit": [
+   "Coudenbergin palatsin"
+  ],
+  "jatkot": [
+   "Miksi pakkanen vaikeutti sammutustyötä?",
+   "Mitä palatsin tilalle rakennettiin tulipalon jälkeen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-coudenberg",
+  "kysymys": "Minkä aukion alle rauniot haudattiin 1770-luvulla?",
+  "uusi": false,
+  "vastaus": "Nyt muistan: rauniot haudattiin uuden, uusklassisen [[Place Royale]] -aukion ja Kuninkaankadun alle vuosina 1775-1782. Päätös tehtiin 1770-luvulla, sillä rauniot olivat jääneet vuosikymmeniksi paikoilleen tulipalon jälkeen. Maan alle säilyneet kellarit ja salit kaivettiin esiin vasta 1900-luvun lopulla. Ylhäältä katsoen aukio näyttää ihan tavalliselta, eikä kukaan arvaa mitä sen alla on.",
+  "linkit": [
+   "Place Royale"
+  ],
+  "jatkot": [
+   "Miten uusklassinen tyyli erosi barokista?",
+   "Voiko Brysselin palatsin kellareihin tutustua nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-coudenberg",
+  "kysymys": "Kuka luopui valtaistuimestaan Coudenbergin palatsin salissa?",
+  "uusi": true,
+  "vastaus": "Ai se. Keisari [[Kaarle V]] luopui valtaistuimestaan palatsin suuressa salissa vuonna 1555 poikansa [[Filip II:n]] hyväksi. Palatsi oli silloin Habsburgien hallitsijoiden komea residenssi, joka oli kasvanut Brabantin herttuoiden päälinnasta Burgundin herttaiden aikojen kautta. Tapahtuma oli aikansa suuria hallitsijanvaihdoksia, enkä väitä muistavani sen jokaista yksityiskohtaa.",
+  "linkit": [
+   "Kaarle V",
+   "Filip II:n"
+  ],
+  "jatkot": [
+   "Miksi Kaarle V päätti luopua vallasta?",
+   "Millainen hallitsija Filip II oli?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-coudenberg",
+  "kysymys": "Mistä palatsin tulipalo sai alkunsa?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Tulipalo sai alkunsa palatsin keittiöstä yöllä 3.2.1731. Pakkanen ja sammutusveden hidas saapuminen paikalle johtivat siihen, että tuli levisi hallitsemattomasti ja koko [[palatsi]] tuhoutui. Rauniot haudattiin myöhemmin 1700-luvun lopulla uuden aukion alle. Onpas siit hyvä että kellarit säilyivät.",
+  "linkit": [
+   "palatsi"
+  ],
+  "jatkot": [
+   "Miten tulipaloja sammutettiin 1700-luvun kaupungeissa?",
+   "Miten rauniot kaivettiin esiin 1900-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-coudenberg",
+  "kysymys": "Miten Coudenbergin raunioille pääsee tutustumaan nykyisin?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Maan alle säilyneet kellarit ja salit avattiin yleisölle [[Coudenbergin museona]], jonne kulku on nykyisin [[BELvue-museon]] kautta. Rauniot kaivettiin esiin 1900-luvun lopulla, vaikka ne olivat olleet haudattuna uuden aukion alla jo 1700-luvun lopulta lähtien. Kellarit ovat siis nykyään käveltävissä.\n\nMinä olen tottunut katselemaan Brysseliä ylhäältä, mutta tämä on harvinainen tapaus: tärkein osa kaupunkia on kyllä maan alla.",
+  "linkit": [
+   "Coudenbergin museona",
+   "BELvue-museon"
+  ],
+  "jatkot": [
+   "Mitä BELvue-museossa esitellään?",
+   "Miten arkeologit kaivavat esiin hautautuneita rakennuksia?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antwerpen-beurs",
+  "kysymys": "Minä vuonna Antwerpenin ensimmäinen pörssitalo valmistui?",
+  "uusi": false,
+  "vastaus": "Sepä sattui: [[Antwerpenin pörssitalon]] alkuperäinen rakennus valmistui vuonna 1531. Se oli maailman ensimmäinen tätä tarkoitusta varten rakennettu kauppapörssi, ja sen sisäpihaa ympäröivät katetut pylväskäytävät. Mallia kopioitiin muun muassa Lontoon myöhempään [[Royal Exchangeen]]. Tän minä tiesin ilman kenenkään apua.",
+  "linkit": [
+   "Antwerpenin pörssitalon",
+   "Royal Exchangeen"
+  ],
+  "jatkot": [
+   "Mitä kauppapörssissä tarkalleen tehtiin?",
+   "Miksi Antwerpen oli 1500-luvulla niin tärkeä kauppakaupunki?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antwerpen-beurs",
+  "kysymys": "Kuka arkkitehti suunnitteli nykyisen pörssitalon uudisrakennuksen?",
+  "uusi": false,
+  "vastaus": "Hyvä kysymys tuo. Nykyisen pörssitalon suunnitteli [[Joseph Schadde]], joka voitti tulipalon jälkeen järjestetyn arkkitehtikilpailun. Hän sai työn valmiiksi vuonna 1872, ja uusgoottilainen rakennus hyödynsi rohkeasti rautarakenteita sisäpihan kattamisessa. Rakennus palveli kauppiaita ja pörssinvälittäjiä vuoteen 1997 asti.\n\nRautakatto on muuten juuri sellainen asia, jota minä kunnioitan: se pitää sateen poissa mutta päästää valon läpi. Pidän sellaisesta viisaudesta, vaikka se onkin rakennettu ihmisten käsin.",
+  "linkit": [
+   "Joseph Schadde"
+  ],
+  "jatkot": [
+   "Miksi rauta yleistyi rakennusmateriaalina 1800-luvulla?",
+   "Mitä uusgotiikka tarkoittaa arkkitehtuurissa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antwerpen-beurs",
+  "kysymys": "Milloin tulipalo tuhosi vanhan pörssitalon?",
+  "uusi": true,
+  "vastaus": "Kas vaan. Tulipalo tuhosi vanhan pörssitalon elokuun 2. päivänä 1858, ja koko rakennus tuhoutui. Palon jälkeen kaupunki järjesti arkkitehtikilpailun uudisrakennuksesta, jonka voittaja [[Joseph Schadde]] sai työn valmiiksi vuonna 1872. Vanhan rakennuksen paikalle nousi siis uusgoottilainen [[pörssitalo]] noin neljätoista vuotta palon jälkeen. Onpas siit kauan.",
+  "linkit": [
+   "Joseph Schadde",
+   "pörssitalo"
+  ],
+  "jatkot": [
+   "Miten arkkitehtikilpailut toimivat 1800-luvulla?",
+   "Miten kaupungit rakensivat palojensa jälkeen uudelleen?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antwerpen-beurs",
+  "kysymys": "Mihin pörssirakennusta käytettiin Antwerpenin kaupan hiivuttua?",
+  "uusi": true,
+  "vastaus": "Ai tota. Antwerpenin kauppa hiipui Espanjan vallan ja [[Amsterdamin]] nousun myötä 1500-luvun lopulla. Rakennus toimi sen jälkeen vuosisatoja muun muassa piirustusakatemiana, kunnes tulipalo tuhosi sen vuonna 1858. Pörssi ei siis kadonnut kaupungin elämästä heti, vaan sai uuden tehtävän. Minä olisin valinnut kyyhkyslaudan.",
+  "linkit": [
+   "Amsterdamin"
+  ],
+  "jatkot": [
+   "Miksi Amsterdam nousi Antwerpenin tilalle?",
+   "Millaisia piirustusakatemiat olivat?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-antwerpen-beurs",
+  "kysymys": "Mihin pörssiin Antwerpenin pörssi sulautui vuonna 1997?",
+  "uusi": true,
+  "vastaus": "Just niin, Antwerpenin pörssi sulautui vuonna 1997 [[Brysselin pörssiin]]. Uusgoottilainen pörssitalo oli palvellut kauppiaita ja pörssinvälittäjiä siihen asti. Rakennus oli valmistunut vuonna 1872, joten se ehti toimia pörssinä yli sata vuotta. Pitkä ura rakennukselle, ei valittamista.",
+  "linkit": [
+   "Brysselin pörssiin"
+  ],
+  "jatkot": [
+   "Miksi pörssejä on yhdistetty Euroopassa?",
+   "Mitä pörssitalossa on nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hasselt-jenever",
+  "kysymys": "Minkä vuosikymmenen kiellon Hasselt vältti jenever-viinan valmistukselta ja myynniltä?",
+  "uusi": false,
+  "vastaus": "No jopas. Hasselt vältti vuoden 1601 valmistus- ja myyntikiellon, eli 1600-luvun alussa annetun kiellon. Kaupunki on profiloitunut [[jenever]]-viinan tislauksen keskukseksi vuosisatojen ajan. Sitä vähän hämmästelen, että kiellosta selvittiin näinkin hyvin.",
+  "linkit": [
+   "jenever"
+  ],
+  "jatkot": [
+   "Mistä jenever tehdään ja miten se eroaa ginistä?",
+   "Miksi viinaa kiellettiin 1600-luvulla?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hasselt-jenever",
+  "kysymys": "Minkä maan sotilaat toivat 1670-luvulla makuja hasseltilaiseen jeneveriin?",
+  "uusi": false,
+  "vastaus": "Katotaas. Makuja toivat mukanaan 1670-luvulla Hasseltissa majailleet [[hollantilaiset]] sotilaat. Näiden makujen vuoksi hasseltilaiseen jeneveriin lisätään yhä muita belgialaisia enemmän yrttejä ja marjoja. Jenever on siis Hasseltissa maultaan erilaista kuin muualla Belgiassa. Sotilaat toivat siis mukanaan muutakin kuin sotamelua.",
+  "linkit": [
+   "hollantilaiset"
+  ],
+  "jatkot": [
+   "Mitä yrttejä jeneveriin yleensä lisätään?",
+   "Miksi hollantilaissotilaat majailivat Belgiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hasselt-jenever",
+  "kysymys": "Mistä raaka-aineesta halpaa jeneveriä tislattiin?",
+  "uusi": true,
+  "vastaus": "Odotas vähän. Halpaa jeneveriä tislattiin [[sokerijuurikasmelassista]], ja teollistumisen myötä se levisi työväestön keskuuteen. Vuosisadan lopulla belgialainen kulutti keskimäärin 9,5 litraa 50-prosenttista jeneveriä vuodessa. Juoman halpuus teki siitä työväestön suosikin.\n\nMinä pysyn mieluummin jyvissä, ja kyllä sokerijuurikas kuulostaa pehmeämmältä tavalta aloittaa. Mut en tiedä, kuinka paljon se maistuisi.",
+  "linkit": [
+   "sokerijuurikasmelassista"
+  ],
+  "jatkot": [
+   "Miten sokerijuurikkaasta saadaan sokeria?",
+   "Miten teollistuminen muutti työväestön elämää Belgiassa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hasselt-jenever",
+  "kysymys": "Milloin Hasseltin vanhin tislaamo perustettiin?",
+  "uusi": true,
+  "vastaus": "Ai se. Hasseltin vanhin säilynyt [[tislaamo]] perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle. Omistajaperhe [[Stellingwerff]] antoi rakennukselle uusklassisen julkisivun vuonna 1850. Nykyisin rakennuksessa toimii jenevermuseo. Kovasti kestävä talo, ei ihme että se on yhä pystyssä.",
+  "linkit": [
+   "tislaamo",
+   "Stellingwerff"
+  ],
+  "jatkot": [
+   "Miten tislaus toimii?",
+   "Mitä jenevermuseossa voi nähdä?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-hasselt-jenever",
+  "kysymys": "Mitä Hasseltin vanhimmassa tislaamossa on nykyisin?",
+  "uusi": true,
+  "vastaus": "Mmm— Nykyisin Hasseltin vanhimmassa tislaamossa toimii [[jenevermuseo]]. Rakennus perustettiin vuonna 1803 entiselle nunnaluostarin maatilalle, ja omistajaperhe antoi sille uusklassisen julkisivun vuonna 1850. Vanha tislaamo on siis säilynyt käyttöön museona. Minä pidän siitä, että vanhat talot saavat uuden tehtävän.",
+  "linkit": [
+   "jenevermuseo"
+  ],
+  "jatkot": [
+   "Millaisia museoita Limburgin maakunnassa on?",
+   "Miten vanhoja teollisuusrakennuksia on muutettu museoiksi?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oostende",
+  "kysymys": "Minä vuonna lauttayhteys Oostendesta Doveriin avattiin?",
+  "uusi": false,
+  "vastaus": "Kato, tän muistan: lauttayhteys [[Doveriin]] avattiin vuonna 1846. Rautatie Brysseliin oli valmistunut vuonna 1838, ja yhdessä ne tekivät [[Oostendesta]] Englannin-liikenteen kauttakulkusataman. Matkustajat siirtyivät junasta laivaan ja jatkoivat kanaalin yli. Ylhäältä se näytti varmasti vilkkaalta.",
+  "linkit": [
+   "Doveriin",
+   "Oostendesta"
+  ],
+  "jatkot": [
+   "Kuinka kauan Doverin ylitys kestää nykyisin?",
+   "Miten Englannin kanaali on ylitetty eri aikoina?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oostende",
+  "kysymys": "Ketkä kaksi Belgian kuningasta suosivat Oostendea lomapaikkanaan?",
+  "uusi": false,
+  "vastaus": "No niin, Oostendea suosivat lomapaikkanaan kuningas [[Leopold I]] ja hänen poikansa [[Leopold II]]. Heidän suosionsa houkutteli aatelistoa rakentamaan kaupunkiin muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat. Siksi Oostendea alettiin kutsua Belgian merikylpylöiden kuningattareksi. Kuninkaat osaavat valita lomapaikkansa.",
+  "linkit": [
+   "Leopold I",
+   "Leopold II"
+  ],
+  "jatkot": [
+   "Millainen kuningas Leopold II oli?",
+   "Mitä merikylpylä tarkoittaa?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oostende",
+  "kysymys": "Millä nimellä Oostendea on kutsuttu?",
+  "uusi": true,
+  "vastaus": "Tuota niin. Oostendea alettiin kutsua Belgian merikylpylöiden kuningattareksi. Nimi liittyy kuningas Leopold I:n ja hänen poikansa Leopold II:n lomiin kaupungissa, sillä heidän suosionsa houkutteli [[aatelistoa]] rakentamaan sinne muun muassa Wellingtonin raviradan ja Kuninkaalliset galleriat. Oostende oli alun perin vaatimaton kalastajakylä, mutta kuninkaallinen suosio nosti sen merikylpylöiden joukossa aivan eri tasolle. Viisas Pöllö olisi lisännyt tähän jotain syvällistä, mutta hän on kuulemma pitämässä esitelmää jossain.",
+  "linkit": [
+   "aatelistoa"
+  ],
+  "jatkot": [
+   "Millaisia merikylpylät olivat 1800-luvulla?",
+   "Miksi aateliset rakensivat huviloita rannikolle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oostende",
+  "kysymys": "Milloin rautatie Oostendesta Brysseliin valmistui?",
+  "uusi": true,
+  "vastaus": "Selvä juttu. Rautatie [[Brysseliin]] valmistui vuonna 1838. Lauttayhteys Doveriin avattiin vuonna 1846, ja yhdessä ne tekivät Oostendesta Englannin-liikenteen kauttakulkusataman. Junamatka Oostendesta pääkaupunkiin kulki jo silloin, kun höyryveturit olivat vielä uutuus. Minä tosin lensin sen aina nopeammin.",
+  "linkit": [
+   "Brysseliin"
+  ],
+  "jatkot": [
+   "Milloin ensimmäinen rautatie avattiin Belgiassa?",
+   "Miten höyryveturi toimii?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-oostende",
+  "kysymys": "Miksi Oostende kasvoi tärkeäksi satamaksi 1700-luvulla?",
+  "uusi": true,
+  "vastaus": "Just niin, tähän on selvä syy. Oostendesta tuli 1700-luvulla Belgian tärkein vaihtoehtoinen satama, kun [[Hollanti]] sulki Antwerpenin meriyhteyden. Aiemmin se oli ollut vaatimaton kalastajakylä, joka oli saanut markkinaoikeudet jo 1200-luvulla. Nykyisin se on Belgian rannikon suurin kaupunki, jossa asuu noin 72 000 ihmistä, ja tärkeä [[Pohjanmeren]] satama.\n\nMerellä ei kannata luottaa siihen, että reitti pysyy auki: yhden sataman sulkeminen nosti toisen. Minä olen oppinut, että jos yksi lentoreitti menee kiinni, otetaan toinen.",
+  "linkit": [
+   "Hollanti",
+   "Pohjanmeren"
+  ],
+  "jatkot": [
+   "Miksi Hollanti sulki Antwerpenin meriyhteyden?",
+   "Millainen Oostenden satama on nykyisin?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geraardsbergen",
+  "kysymys": "Miltä vuodelta on peräisin vanhin säilynyt maininta Tonnekensbrand-juhlan menoista?",
+  "uusi": false,
+  "vastaus": "Hetkinen ny. Joo, tän minä tiedän. Vanhin säilynyt maininta on vuodelta 1393, jolloin kaupungin vanhin säilynyt tilikirja kirjasi jo Tonnekensbrandin kulut. Juhlaa on siis vietetty [[Geraardsbergenin]] [[Oudenberg]]-kukkulalla ainakin siitä asti, ja perinne yhdistää esikristillisiä aineksia, kuten tulen, leivän ja kalan, kristillisiin aineksiin. Juhlaan kuuluu myös [[Krakelingen]]-leivosten heittäminen yleisölle kukkulan huipulta. Vuosiluku on siis varmin tieto siitä, kuinka kauan juhla on ainakin ollut olemassa, ei välttämättä sen varsinainen alku. Neljäsataa vuotta pitempi muisti kuin minulla, ja minä muistan paljon.",
+  "linkit": [
+   "Geraardsbergenin",
+   "Oudenberg",
+   "Krakelingen"
+  ],
+  "jatkot": [
+   "Mitä Krakelingen-juhlassa heitetään kukkulalta yleisölle?",
+   "Miksi juhlassa poltetaan olkinukke?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geraardsbergen",
+  "kysymys": "Mistä esineestä dekaani, pormestari ja valtuutetut juovat viiniä elävän kalan kanssa?",
+  "uusi": false,
+  "vastaus": "Kas vaan. Tost minä osaan kertoo. Viini juodaan hopeamaljasta, joka on noin nelisataa vuotta vanha. Siemauksen ottavat juhlan aikana dekaani, pormestari ja kaupunginvaltuutetut, ja viinin kanssa nautitaan elävä kala. Tapa kuuluu [[Geraardsbergenin]] vuosittaiseen [[Tonnekensbrand]]-juhlaan, jossa on yhdistetty esikristillisiä ja kristillisiä aineksia, ja kala on yksi niistä aineksista, joita perinne on pitänyt mukana. Juhla järjestetään [[Oudenberg]]-kukkulalla, jonka huipulta heitetään myös leivonnaisia yleisölle. Ei hullumpi tapa, vaikka kalan kanta ei varmaan ole yhtä innostunut.",
+  "linkit": [
+   "Geraardsbergenin",
+   "Tonnekensbrand",
+   "Oudenberg"
+  ],
+  "jatkot": [
+   "Mitä Krakelingen-juhlassa heitetään kukkulalta yleisölle?",
+   "Milloin Geraardsbergen sai kaupunkioikeudet?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geraardsbergen",
+  "kysymys": "Mitä kukkulan huipulta heitetään yleisölle juhlassa?",
+  "uusi": true,
+  "vastaus": "Mmm— no tähän minä osaan vastata. Oudenbergin kukkulan huipulta heitetään yleisölle noin 10 000 rinkilänmuotoista [[krakelinkia]], jotka ovat leivonnaisia, ja juuri niistä juhla on saanut toisen nimensä. Heittäminen kuuluu osaksi [[Geraardsbergenin]] vanhaa kevätjuhlaa, jota on vietetty kukkulalla ainakin vuodesta 1393. Samaan juhlaan kuuluvat myös viinin ja elävän kalan siemaus sekä illalla poltettava [[olkinukke]]. Lukua on syytä pitää suuntaa-antavana, sillä todellinen määrä voi vaihdella vuosittain. Leivonnaisia taivaalta, ja minä en saanut yhtäkään.",
+  "linkit": [
+   "krakelinkia",
+   "Geraardsbergenin",
+   "olkinukke"
+  ],
+  "jatkot": [
+   "Miksi juhlassa poltetaan olkinukke?",
+   "Miltä vuodelta vanhin maininta juhlasta on?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geraardsbergen",
+  "kysymys": "Milloin Geraardsbergen sai kaupunkioikeudet?",
+  "uusi": true,
+  "vastaus": "Ai tota. Joo, tän minä muistan hyvin. Geraardsbergen sai kaupunkioikeudet vuonna 1068, mikä on yksi Länsi-Euroopan varhaisimmista. Se tekee kaupungista yhden [[Belgian]] vanhimmista kaupungeista, ja sen perinteinen kukkulajuhla on vanhimman säilyneen tilikirjamaininnan mukaan jo 1390-luvulta. Kaupunki sijaitsee Flanderissa, ja sen tunnetuin nähtävyys on [[Oudenberg]]-kukkula juhlineen. Tuhat vuotta kaupunkina, ja silti kyyhkyjä kohdellaan siellä kuin tavallisia vieraita.",
+  "linkit": [
+   "Belgian",
+   "Oudenberg"
+  ],
+  "jatkot": [
+   "Mikä on Oudenberg-kukkulan merkitys kaupungille?",
+   "Mitä Krakelingen-juhlassa heitetään kukkulalta yleisölle?"
+  ]
+ },
+ {
+  "kohde": "kohde:hahmotelma-geraardsbergen",
+  "kysymys": "Mitä olkinukelle tehdään juhlan illalla ja miksi?",
+  "uusi": true,
+  "vastaus": "Joo, hyvä kysymys tuo. Illalla olkinukke poltetaan, ja sen tarkoitus on karkottaa talvi. Tuli kannetaan sen jälkeen soihtuina kukkulalta alas kaupungin torille. Tapa kuuluu [[Geraardsbergenin]] [[Tonnekensbrand]]-juhlaan, jossa tulella on ollut paikkansa jo esikristillisistä ajoista lähtien, ja perinne yhdistää sen leipään, kalaan ja kristillisiin aineksiin. Soihtukulkue päättää päivän, joka alkaa [[Oudenberg]]-kukkulalla viinin, elävän kalan ja leivonnaisten heiton merkeissä. Pitkä päivä, ja minä istuin katolla koko ajan.",
+  "linkit": [
+   "Geraardsbergenin",
+   "Tonnekensbrand",
+   "Oudenberg"
+  ],
+  "jatkot": [
+   "Miltä vuodelta vanhin maininta juhlasta on?",
+   "Mistä esineestä viiniä juodaan elävän kalan kanssa?"
+  ]
+ }
+]
