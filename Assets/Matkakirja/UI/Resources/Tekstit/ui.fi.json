@@ -1320,5 +1320,13 @@
  "ui.lukija.aani-tyylikas-brittinainen": "Tyylikäs brittinainen",
  "ui.lukija.aani-salaperainen-naiskertoja": "Salaperäinen naiskertoja",
  "ui.lukija.aani-rauhoittava-etelan-nainen": "Rauhoittava etelän nainen",
- "ui.lukija.aani-pehmea-brittinainen": "Pehmeä brittinainen"
+ "ui.lukija.aani-pehmea-brittinainen": "Pehmeä brittinainen",
+ "ui.museo.edellinen": "Edellinen teos",
+ "ui.museo.tauko": "Tauko",
+ "ui.museo.jatka": "Jatka",
+ "ui.museo.seuraava": "Seuraava teos",
+ "ui.museo.vapaa-kulku": "Vapaa kulku",
+ "ui.museo.kierros": "Esittelykierros",
+ "ui.museo.takaisin-kierrokselle": "Takaisin kierrokselle",
+ "ui.museo.esittele": "Esittele teos"
 }

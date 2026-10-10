@@ -64,6 +64,8 @@ namespace Matkakirja.Natiivi
         public readonly SeikkailuTapit Seikkailu;
         /// <summary>Kaupunkikierroksen näkymä (Linssiseppä 5.10.2026): avausruutu, pysähdyksen nimi ja kertojan teksti.</summary>
         public readonly KierrosTaulu Kierros;
+        /// <summary>Taidemuseo (Linssiseppä 10.10.2026): salin kuva, teoksen nimi, ohjausnapit ja esittelykortti.</summary>
+        public readonly MuseoTaulu Museo;
         /// <summary>Ajattelijat-linssin valinta, kuvanäkymä, lappu ja Pulu (AjattelijatSovitin.Muuttui).</summary>
         public readonly AjattelijaNakyma Ajattelija;
         /// <summary>Kehittäjän mikseripaneeli (linnan ja Cupolan kaiut, MikseriPaneeli.Lahde = Pelikoodari).</summary>
@@ -102,6 +104,7 @@ namespace Matkakirja.Natiivi
             Lento = new LentopeliNakyma(kerros);
             Dioraama = new DioraamaTaulu(kerros);
             Kierros = new KierrosTaulu(kerros);
+            Museo = new MuseoTaulu(kerros);
             Ajattelija = new AjattelijaNakyma(kerros);
             Mikseri = new MikseriPaneeli(kerros);
             // Seikkailun kävelytapit (Siirtoseppä, Olavinlinna 7.10.): näkyvät SeikkailuPelaajan ajan.
@@ -458,7 +461,9 @@ namespace Matkakirja.Natiivi
             bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki && !ajattelijaPeittaa
                          && !(Dioraama != null && Dioraama.Kytketty)
                          // Elävä opas (Päätoimittaja 5.10.: EI TURHIA ✕-NAPPEJA): poistuminen valikon Poistu linssistä -rivillä.
-                         && !OpasValikko.Nakyy;
+                         && !OpasValikko.Nakyy
+                         // Taidemuseo (PT 10.10. museo2, EI TURHIA ✕-NAPPEJA): oma Poistu-nappi kuten Myllyssä ja latausruudussa.
+                         && !(Museo != null && Museo.Auki);
             var id = Auki?.Tiedot?.Id;
             bool kartta = id != null && karttaValikot.ContainsKey(id);
             foreach (var kv in karttaValikot)
