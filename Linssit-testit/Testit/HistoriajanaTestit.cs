@@ -311,15 +311,22 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void EsittelynVaiheet()
         {
             var h = Historiajana.Esittely;
-            Oleta.Tosi(h.Kesto >= 40 && h.Kesto <= 60, $"kesto {h.Kesto:F0} s");
+            Oleta.Tosi(h.Kesto >= 65 && h.Kesto <= 85, $"kesto {h.Kesto:F0} s");
             Oleta.Sama("esittely", h.Nimi);
             foreach (var v in h.Vaiheet)
             {
                 Oleta.Tosi(!v.Kertoja, $"{v.Vuosi}: ei kertojaa ilman omistajan lupaa");
                 if (v.Avain != null) Oleta.Tosi(!string.IsNullOrEmpty(v.VuosiTeksti) && !string.IsNullOrEmpty(v.Sanat), $"{v.Avain}: tarkistettu teksti");
             }
-            Oleta.Tosi(h.Vaiheet[0].Vuosi < Historiajana.KivilinnaVuosi && Math.Abs(h.RakennusValmisT - Historiajana.RakennusS) < 1e-9,
-                "kivilinna nousee esittelyn alusta RakennusS:ssä");
+            int i1475 = 0; while (h.Vaiheet[i1475].Vuosi < 1475) i1475++;
+            Oleta.Tosi(Math.Abs(h.RakennusValmisT - Historiajana.RakennusS - h.VaiheenAlku(i1475)) < 1e-9, "kivilinna nousee puuvarustuksen kohtauksessa RakennusS:ssä");
+            for (int i = 0; i < i1475; i++)
+            {
+                double a = h.VaiheenAlku(i), b = a + h.Vaiheet[i].KestoS - 0.6;
+                Oleta.Tosi(!h.LinnaNakyyT(b) && h.MaaNakyy(b), $"esihistoria {h.Vaiheet[i].Avain}: tyhjä saari, ei linnaa");
+                Oleta.Tosi(h.Vuosi(b) - h.Vuosi(a + 0.1) <= 1000, $"esihistoria {h.Vaiheet[i].Avain}: vuosi pysyy aikakaudessa");
+            }
+            Oleta.Tosi(h.Vuosi(h.VaiheenAlku(i1475 - 1) + 1) is >= 1323 and < 1400, "1323 näkyy vuotena");
             Oleta.Tosi(h.Vuosi(h.Kesto - 0.01) >= 1976, "lopussa nykyasu");
             double Kesto(HistoriaOsa o) { double a = -1, b = -1; for (double t = 0; t < h.Kesto; t += 0.05) { double k = Historiajana.Kasvu(h.Vuosi(t), o); if (k > 0 && a < 0) a = t; if (k >= 1 && b < 0) b = t; } return b - a; }
             Oleta.Tosi(Kesto(Historiajana.Osa("b1499-paksu-bastioni")) >= 1.0, $"Paksu bastioni kasvaa näkyvästi ({Kesto(Historiajana.Osa("b1499-paksu-bastioni")):F1} s)");
