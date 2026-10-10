@@ -135,6 +135,34 @@ namespace Matkakirja.Natiivi
         /// <summary>Sydän lyö (jonkin hahmon vaara, kohta 3.4).</summary>
         public bool SydanLyo => sydanPaalla;
         public Vector3 Tarkistus => tarkistus;
+
+        /// <summary>Tarkistuspiste avainesineestä (pelattavuusmalli 4.3: T6b naamio, T6c avaimet, T8a köysi; Siirtoseppä 10.10., PT):
+        /// pelaajan paikka, kun kukaan ei epäile pelaajaa (harhautuksen tutkiminen muualla sallitaan: avaimet otetaan voudin kiistan
+        /// aikana). Tarjotin (T3c) ei, koska se putoaa kiinnijäännissä.</summary>
+        /// <summary>Joku epäilee tai etsii pelaajaa (mittari ≥ 0,15, epäily, hälytys, kiinni tai etsintä alle 3 m pelaajasta); vrt. Vaara,
+        /// joka laskee myös harhautuksen tutkimisen muualla.</summary>
+        static bool EpaileePelaajaa(Vector3 pp)
+        {
+            var a = Aktiivinen; if (a == null) return false;
+            foreach (var v in a.vartijat)
+            {
+                if (v.Agentti == null || !v.Agentti.gameObject.activeInHierarchy) continue;
+                var t = v.Aivot.Tila;
+                if (v.Aivot.Mittari >= 0.15 || t == VartijanTila.Epaily || t == VartijanTila.Halytys || t == VartijanTila.Kiinni) return true;
+                float dx = (float)v.Aivot.EpailyX - pp.x, dz = (float)v.Aivot.EpailyZ - pp.z;
+                if ((t == VartijanTila.Etsinta || t == VartijanTila.Etsii) && dx * dx + dz * dz < 9f) return true;
+            }
+            return false;
+        }
+
+        public static void EsineTarkistuspiste(string esine)
+        {
+            var a = Aktiivinen; var p = SeikkailuPelaaja.Aktiivinen; if (a == null || p == null || p.Otteessa) return;
+            var pp = p.transform.position; if (EpaileePelaajaa(pp)) return;
+            a.tarkistus = pp; TarkistusOsa = Askelaani.Osa(SeikkailuKavely.Data, pp.x, pp.y, -pp.z) ?? TarkistusOsa;
+            a.kirjaa?.Invoke($"seikkailu: tarkistuspiste {esine} ({pp})");
+            Tarkistuspiste?.Invoke(TarkistusOsa, pp);
+        }
         float armoAsti = -1f; const float ArmoS = 4f;
         double sykliMs = 0.955;
 
