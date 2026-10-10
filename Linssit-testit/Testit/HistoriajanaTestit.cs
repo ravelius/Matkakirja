@@ -312,8 +312,8 @@ namespace Matkakirja.Linssit.Testit
         {
             var h = Historiajana.Esittely;
             Oleta.Tosi(h.Kesto >= 80 && h.Kesto <= 95, $"kesto {h.Kesto:F0} s");
-            // Kertojan rivit (Pelikoodari vaihe-esittely-v1) mahtuvat ennen seuraavaa riviä: KertojaViiveS + kesto ≤ seuraavan rivin alku.
-            var kestot = new Dictionary<string, double> { ["esi-saimaa"] = 17.56, ["esi-1323"] = 15.52, ["vaihe-1475"] = 11.84, ["vaihe-nyky"] = 6.36 };
+            // Kertojan rivit (Pelikoodari vaihe-esittely-v2) mahtuvat ennen seuraavaa riviä: KertojaViiveS + kesto ≤ seuraavan rivin alku.
+            var kestot = new Dictionary<string, double> { ["esi-saimaa"] = 16.64, ["esi-1323"] = 15.12, ["vaihe-1475"] = 11.62, ["vaihe-nyky"] = 6.14 };
             double edLoppu = 0;
             for (int i = 0; i < h.Vaiheet.Count; i++)
             {
