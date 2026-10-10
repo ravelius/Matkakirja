@@ -11,7 +11,7 @@ PT local_593b89a1-2514-4d74-b956-2a73db862382, Julkaisija local_22b29f10-7af8-43
 |---|---|---|---|---|
 | 173 | 39bb6921561fda7dcce7d11205adc90e6d315a51 | 85436c355 | be06cd054 | omistaja hyväksyi, TF 38022048008 käynnissä 06.5x (kiinteä SHA) |
 | 174 | **c47bded2c643b619f3b8ced9cb434f6d0e7c427a** (uudelleenlukitus 06.14; ensimmäinen 5f84c3594) | **3ca7ab1ba** | de2b23c05 | omistaja hyväksyi, TF 173:n jälkeen (Julkaisija) |
-| 175 | – | – | – | runko natiiviseppa/juna-175 **63fc300e3** (wt/proto-natiiviseppa-j175) |
+| 175 | – | – | – | runko natiiviseppa/juna-175 **b7df7c444** (wt/proto-natiiviseppa-j175; + pulu-maat-23 078f8e8a4) |
 
 - Portti 173 (iPad Pro 13, v6h3): A 0,66 / B 0,72 Gt. Muistiajo 174: A 0,68 / B 0,75 / A v6hk3 0,75 Gt. v6k4 (ND v3d + KL v6j, KTX2):
   A 0,74 Gt → uusin-4 → v6k4 (Julkaisija). 172 kaatuu yhä v6b3:lla (jetsam 41 s), rivi PT:lle annettu.
@@ -35,6 +35,14 @@ Lukitus kuten 173/174: Julkaisijan NYT → `PROTO_APP_KOPIO=… proto-kaanna.sh 
    --era pieni-muisti-175 --udid A2A6FEF2-4779-4EA6-BC99-28C33C54F7E9 --laite ipad --app <app> --sha bd8cc2db2 --skenaario <sk> --nyt`.
    Kuvaparin jälkeen merge junan 175 runkoon.
 2. Minimilaite-selvitys docs/raportit/minimilaite-20261010.md (PT:llä; omistajan myöhempi päätös).
+
+3. **Unity 6.7 -laite-ABAB (PT 07.4x, omistajan kysymys; vie PT omistajalle heti)**: T7-kopio natiiviseppa/unity-67 = cb8f87f31
+   (6.7-uudelleensarjallistus 44 tiedostoa + juna 174 3ca7ab1ba). B: 6.7-laitekäännös käynnissä 07.4x (vanha scratchpad
+   32830f79…/unity67-laite.sh → lokit/natiiviseppa-app-ab67-laite/Matkakirja3D.app; loki natiiviseppa-unity67-laite.out ja
+   T7 tulokset/laite-vahti.log). A: 6.3-laitekäännös samasta 3ca7ab1ba:sta kopiona `laite-sha-kopio.sh 3ca7ab1ba` (→ lokit/laite-rel-3ca7ab1ba,
+   Julkaisijan vuoro). Sitten iPad-vuoro → `ipad-ab-ajo.sh <A.app> <B.app> <outdir>` (32830f79…/ab67/, JARJESTYS="A1 B1 A2 B2"; Pariisi +
+   Olavinlinna: kehys, GPU ms, vapaa muisti, lämpö) → ab-analyysi.py → jatkoksi docs/raportit/unity67-tuonti-20261009.md + rivi PT:lle.
+   Pulu-maat-23 078f8e8a4 on 175-rungossa (b7df7c444).
 
 ## Työkalut (uudet)
 - proto-3d/tyokalut/natiiviseppa-ajot/portti-yhteenveto.py <ajokansio> → yksi rivi: jetsam, min vapaa, hätä, PORTTI OK/EI.
