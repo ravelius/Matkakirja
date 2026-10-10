@@ -38,5 +38,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1f, VesiVari.Tunniste("peking", -800, 67, 34.8), "Zhongnanhai");
             Oleta.Sama(1f, VesiVari.Tunniste("peking", -460, 1200, 34.8), "Beihai itäranta");
         }
+
+        [Testi] static void KanavakorjausPekingissa()
+        {
+            // Pekingin vallihauta ja järvet ortokuvan vihertävään harmaaseen: vihreä ja punainen nousevat sinistä enemmän; muualla 1.
+            var v = VesiVari.Korjaus("peking", 0); var j = VesiVari.Korjaus("peking", 1);
+            Oleta.Tosi(v.R > v.G && v.G > v.B && v.B > 1, $"vallihauta {v}");
+            Oleta.Tosi(j.G > j.R && j.R > j.B && j.B > 1, $"järvet {j}");
+            Oleta.Tosi(VesiVari.Korjaus("pariisi", 0) == (1, 1, 1) && VesiVari.Korjaus("tukholma", 1) == (1, 1, 1), "Pariisi ja Tukholma ennallaan");
+        }
     }
 }

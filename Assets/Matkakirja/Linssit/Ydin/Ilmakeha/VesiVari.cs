@@ -42,6 +42,16 @@ namespace Matkakirja.Linssit.Ilmakeha
         /// <summary>Pekingin järvien raja (ENU m Taihedianista): vallihauta x −473…467, y −485…663; Beihai x −1035…−456, y 572…1747.</summary>
         public const double PekingJarvetX = -480, PekingJarvetPohjoinenX = -440, PekingVallihautaPohjoinenY = 680;
 
+        /// <summary>Kaupungin vesistön kanavakorjaus mitatun värin päälle (lineaarinen kerroin R, G, B; muualla 1). PEKING (PT 10.10. 18.4x):
+        /// ilmakehän kanssa vallihauta piirtyi 25/45/58 ja järvet 38/55/68 (klo 13, syksy, ylhäältä 400 m), S2-ortokuvassa
+        /// (Copernicus 2024-10-28) vallihauta 54/80/68 ja Beihai/Zhonghai 78/106/91 ja 63/98/69 (vihertävä harmaa). Kertoimet
+        /// kalibroitu junan 179 .appilla kertoimilla 1 / 2,5 / 5 (paloittain lineaarinen sovitus kanavittain).</summary>
+        public static (double R, double G, double B) Korjaus(string kaupunki, int vesi) => kaupunki switch
+        {
+            "peking" => vesi == 0 ? (6.25, 4.32, 2.5) : (3.24, 3.96, 1.9),
+            _ => (1, 1, 1),
+        };
+
         public static Vesi? Hae(string json, string kaupunki, string vesi, string kausi)
         {
             if (string.IsNullOrEmpty(json) || kaupunki == null || vesi == null || kausi == null) return null;
