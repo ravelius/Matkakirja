@@ -84,6 +84,12 @@ def tarkista(maa, d, kohteet):
                 if avain(a) not in lisaa:
                     viat.append(f'{kid}: linkillä ei valmista vastausta: {a}')
         linkatut = {avain(a) for q in kys for a in linkit(q.get('vastaus') or '')}
+        # Toisen tason linkit saman kohdan Kerro lisää -vastauksista (= PuluValmiitMaatTestit, p.Vastaa ratkaisee molemmat).
+        lisaa_v = {avain(v.get('kasite') or a): v for a, v in ko.get('lisaa', {}).items()}
+        jono = list(linkatut)
+        while jono:
+            for a in linkit((lisaa_v.get(jono.pop()) or {}).get('vastaus') or ''):
+                if avain(a) not in linkatut: linkatut.add(avain(a)); jono.append(avain(a))
         orvot += [f'"{kid} / {l}",' for l in sorted(lisaa - linkatut)]
     return viat, orvot
 

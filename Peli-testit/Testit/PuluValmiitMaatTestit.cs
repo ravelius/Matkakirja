@@ -38,6 +38,11 @@ namespace Matkakirja.Peli.Testit
             "kohde:kjerag / lysefjordiin",                                                           // NOR (linkki [[Lysefjord]])
             "kohde:hahmotelma-strbske-pleso / hammasratasradan",
             "kohde:hahmotelma-strbske-pleso / jozef szentiványiin",                                  // SVK (linkit perusmuodossa)
+            "kohde:hahmotelma-turnhout / pellavakauppa",                                             // BEL (ei linkkiä missään vastauksessa)
+            "kohde:dettifoss / urriðafossin",                                                        // ISL (linkki vain kohteen jorsa vastauksessa)
+            "kohde:sutjeska / perućica-aarniometsä",                                                 // BIH (linkki muodossa [[Perućican]])
+            "kohde:travnik / dinaaristen alppien",                                                   // BIH (linkki vain Neretvan kohteissa)
+            "kohde:hahmotelma-altmunster / rudolfin",                                                // LUX (ei linkkiä missään vastauksessa)
         };
 
         static void Maa(string maa, int kohtia, int kysymyksia, int lisaa)
@@ -88,9 +93,14 @@ namespace Matkakirja.Peli.Testit
                         if (kysymykset.Contains(j)) jatkoValmiiseen++;
                     }
                 }
-                // Jokaiselle Kerro lisää -vastaukselle on linkki jostain kohdan kysymysvastauksesta (muuten se on saavuttamaton).
-                // Sallitut = pistokoekorjauksissa puretut linkit, joiden vastaus jäi pakettiin (haitaton, vain turha data).
+                // Jokainen Kerro lisää -vastaus on saavutettavissa kohdan kysymysvastauksista linkkiketjua pitkin: suoraan tai toisen
+                // tason linkillä toisesta saman kohdan Kerro lisää -vastauksesta (p.Vastaa ratkaisee molemmat, ISL 10.10.: Hornstrandir
+                // hornbjarg-vastauksesta). Sallitut = pistokoekorjauksissa puretut linkit, joiden vastaus jäi pakettiin (haitaton data).
                 var linkatut = new HashSet<string>(k.Kysymykset.SelectMany(v => Linkit(v.Teksti)).Select(PuluValmiit.Avain));
+                for (var jono = new Queue<string>(linkatut); jono.Count > 0;)
+                    if (k.Lisaa.TryGetValue(jono.Dequeue(), out var lv))
+                        foreach (string a in Linkit(lv.Teksti).Select(PuluValmiit.Avain))
+                            if (linkatut.Add(a)) jono.Enqueue(a);
                 foreach (var l in k.Lisaa.Keys.Where(l => !linkatut.Contains(l)))
                     Oleta.Tosi(PurettujenJaanteet.Contains(id + " / " + l), id + ": saavuttamaton Kerro lisää: " + l);
             }
