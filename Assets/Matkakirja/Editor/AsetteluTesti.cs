@@ -120,8 +120,9 @@ namespace Matkakirja.Editori
         {
             var dokut = Dokumentit();
             if (dokut.Count == 0) { Kirjaa($"-- kuva {nimi}: ei kerroksia"); return; }
-            var rt0 = dokut[0].panelSettings.targetTexture;
-            int w = rt0.width, h = rt0.height;
+            // Koko testattavasta laitteesta (alimman kerroksen tekstuuri ei aina ollut laitteen kokoinen: ajo 07.43, piirtyneitä 0).
+            int w = UiRuutu.Leveys, h = UiRuutu.Korkeus;
+            var ohitetut = new List<string>();
             var tausta = new Color(0.33f, 0.37f, 0.42f, 1f);
             var pikselit = Enumerable.Repeat(tausta, w * h).ToArray();
             var luku = new Texture2D(w, h, TextureFormat.RGBA32, false, true);
@@ -130,7 +131,8 @@ namespace Matkakirja.Editori
             foreach (var d in dokut)
             {
                 var rt = d.panelSettings.targetTexture;
-                if (rt.width != w || rt.height != h || d.rootVisualElement.resolvedStyle.display == DisplayStyle.None) continue;
+                if (rt.width != w || rt.height != h) { ohitetut.Add($"{d.panelSettings.sortingOrder}:{rt.width}×{rt.height}"); continue; }
+                if (d.rootVisualElement.resolvedStyle.display == DisplayStyle.None) continue;
                 RenderTexture.active = rt;
                 luku.ReadPixels(new Rect(0, 0, w, h), 0, 0, false);
                 luku.Apply(false);
@@ -155,7 +157,7 @@ namespace Matkakirja.Editori
             File.WriteAllBytes(tiedosto, kuva.EncodeToPNG());
             UnityEngine.Object.DestroyImmediate(luku);
             UnityEngine.Object.DestroyImmediate(kuva);
-            Kirjaa($"-- kuva {tiedosto} (kerroksia {dokut.Count}, piirtyneitä {piirtyneet})");
+            Kirjaa($"-- kuva {tiedosto} (kerroksia {dokut.Count}, piirtyneitä {piirtyneet}{(ohitetut.Count > 0 ? ", eri kokoiset " + string.Join(" ", ohitetut) : "")})");
         }
 
         static bool OsaanKuuluu(string nimi) => Osa.Length == 0 || LinnanNakymat.Contains(nimi) == (Osa == "linna");
