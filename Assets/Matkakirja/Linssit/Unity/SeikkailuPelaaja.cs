@@ -261,11 +261,11 @@ namespace Matkakirja.Natiivi
         void NapautusSyote(ref KavelySyote s, float dt)
         {
             if (napautusReitti.Count == 0) return;
-            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); ReittiLoppui = $"oma ohjaus ({s.LiikeX:F2}, {s.LiikeY:F2})"; return; }   // oma ohjaus
+            if (Math.Abs(s.LiikeX) > Kavely.KuolleAlue || Math.Abs(s.LiikeY) > Kavely.KuolleAlue) { napautusReitti.Clear(); ReittiLoppui = $"oma ohjaus ({s.LiikeX:F2}, {s.LiikeY:F2})"; return; }   // oma ohjaus; kieli: ei (tekninen)
             var d = napautusReitti[0] - transform.position; d.y = 0;
             while (d.magnitude < PerillaM) { napautusReitti.RemoveAt(0); if (napautusReitti.Count == 0) return; d = napautusReitti[0] - transform.position; d.y = 0; }
             jumiAika += dt;
-            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); ReittiLoppui = "jumi (ei liikettä " + JumiS + " s)"; return; } jumiAika = 0; jumiPaikka = transform.position; }
+            if (jumiAika > JumiS) { if ((transform.position - jumiPaikka).magnitude < 0.1f) { napautusReitti.Clear(); ReittiLoppui = "jumi (ei liikettä " + JumiS + " s)"; return; } jumiAika = 0; jumiPaikka = transform.position; }   // kieli: ei (tekninen)
             d.Normalize();
             double y = kavely.KameraYaw * Math.PI / 180, sy = Math.Sin(y), cy = Math.Cos(y);
             s.LiikeY = d.x * sy + d.z * cy; s.LiikeX = d.x * cy - d.z * sy;
