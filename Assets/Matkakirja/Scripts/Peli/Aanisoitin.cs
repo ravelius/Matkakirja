@@ -500,7 +500,7 @@ namespace Matkakirja.Natiivi
             nyk.Tauko = w.Tauko;
             if (w.KestoMs.HasValue)
             {
-                if (nyk.Soi) nyk.Taso.Aloita(w.Tavoite, w.KestoMs.Value);
+                if (nyk.Soi) nyk.Taso.Aloita(w.Tavoite, w.KestoMs.Value, w.Desibeli);
                 else if (nyk.NousuMs == 0 && w.KestoMs.Value > 0) nyk.NousuMs = w.KestoMs.Value;
             }
             PaivitaSoitto(nyk);

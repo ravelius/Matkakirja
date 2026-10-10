@@ -52,6 +52,8 @@ namespace Matkakirja.Peli
         public double Tavoite;
         /// <summary>Tässä tapahtumassa alkanut ramppi (0 = asetetaan heti); null = taso ei muuttunut.</summary>
         public int? KestoMs;
+        /// <summary>Ramppi tasainen desibeleissä (Tasoramppi; latausmusiikin jatko kartan tasolle).</summary>
+        public bool Desibeli;
         /// <summary>Uusi soitin: lataa Url ja aloita kohdasta Alku (edellinen soitin, jos oli, häivytetään PoisMs:ssä).</summary>
         public bool Uusi;
         /// <summary>Edellinen soitin häivytetään nollaan ja vapautetaan (0 = heti); null = ei poistuvaa soitinta.</summary>
@@ -79,6 +81,7 @@ namespace Matkakirja.Peli
             public string Url;
             public double Taso;
             public int MuutosT = -1, MuutosMs;         // viimeisin tasomuutos (myös suora asetus)
+            public bool MuutosDb;                      // viimeisin ramppi desibeleissä tasainen
             public int RamppiT = -1, RamppiMs;         // viimeisin ramppi, jonka kesto > 0
             public double RamppiKohde;
             public int SyntyiT;
@@ -652,7 +655,8 @@ namespace Matkakirja.Peli
             if (pohja != null) LopetaPohja(AaniVakiot.LatausRistiMs);
             LatausJatkuu = true;
             lataus.Silmukka = false; // kierroksella kerran läpi kuten kartalla (KERRAN LÄPI)
-            Ramppi(lataus, JatkoTaso(), AaniVakiot.LatausRistiMs);
+            // Desibeleissä tasainen (PT 21.0x: siirtymässä ≤ 1 dB:n askel; ~25 dB / 3 s ≈ 0,8 dB per 100 ms).
+            Ramppi(lataus, JatkoTaso(), AaniVakiot.LatausRistiMs, desibeli: true);
         });
 
         /// <summary>Jatkuva latausraita soi loppuun (Aanisoitin): kartta ei soita samaa raitaa heti uudelleen (KERRAN LÄPI).</summary>
@@ -780,6 +784,7 @@ namespace Matkakirja.Peli
                 w.Url = s?.Url;
                 w.Tavoite = s?.Taso ?? 0;
                 w.KestoMs = s != null && s.MuutosT == tapahtuma ? s.MuutosMs : (int?)null;
+                w.Desibeli = s != null && s.MuutosT == tapahtuma && s.MuutosDb;
                 w.Uusi = s != null && s.SyntyiT == tapahtuma;
                 w.PoisMs = pois[i];
                 w.Tauko = s?.Tauko ?? false;
@@ -815,13 +820,14 @@ namespace Matkakirja.Peli
             if (alkoi != null) jono.Enqueue(alkoi);
         }
 
-        void Aseta(Soitin s, double arvo) { s.Taso = arvo; s.MuutosT = tapahtuma; s.MuutosMs = 0; }
+        void Aseta(Soitin s, double arvo) { s.Taso = arvo; s.MuutosT = tapahtuma; s.MuutosMs = 0; s.MuutosDb = false; }
 
-        void Ramppi(Soitin s, double kohde, int kesto)
+        void Ramppi(Soitin s, double kohde, int kesto, bool desibeli = false)
         {
             s.Taso = Math.Max(0, kohde);
             s.MuutosT = tapahtuma;
             s.MuutosMs = kesto;
+            s.MuutosDb = desibeli;
             if (kesto > 0) { s.RamppiT = tapahtuma; s.RamppiMs = kesto; s.RamppiKohde = s.Taso; }
         }
 

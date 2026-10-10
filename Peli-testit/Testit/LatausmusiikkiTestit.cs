@@ -166,13 +166,22 @@ namespace Matkakirja.Peli.Testit
             double kartta = AaniVakiot.MusiikinPerustaso * tila.MusiikinKerroin;
             Lahella(kartta, w.Tavoite, "kartan taso");
             Oleta.Tosi(!w.Silmukka && tila.LatausJatkuu, "kierroksella kerran läpi");
-            // Ei hyppyä: soittimen lineaarinen ramppi 30 fps:llä, jokainen askel ≤ kokonaispudotus / 90.
+            // Ei hyppyä (PT 21.0x: ≤ 1 dB:n askel): desibeleissä tasainen ramppi, 100 ms:n välein ≤ 1 dB.
+            Oleta.Tosi(w.Desibeli, "desibeliramppi");
             var r = new Tasoramppi(alku);
-            r.Aloita(w.Tavoite, w.KestoMs.Value);
+            r.Aloita(w.Tavoite, w.KestoMs.Value, w.Desibeli);
             double edellinen = alku, suurin = 0;
-            for (int i = 0; i < 120; i++) { r.Askel(1 / 30.0); suurin = Math.Max(suurin, edellinen - r.Arvo); edellinen = r.Arvo; }
+            for (int i = 0; i < 40; i++)
+            {
+                for (int j = 0; j < 3; j++) r.Askel(1 / 30.0);
+                suurin = Math.Max(suurin, 20 * Math.Log10(edellinen / r.Arvo)); edellinen = r.Arvo;
+            }
             Lahella(kartta, r.Arvo, "perillä");
-            Oleta.Tosi(suurin <= (alku - kartta) / 90 + 1e-9, "ei äkillistä pudotusta: " + suurin);
+            Oleta.Tosi(suurin <= 1.0, $"100 ms:n askel ≤ 1 dB: {suurin:0.00} dB");
+            var lin = new Tasoramppi(alku); lin.Aloita(kartta, w.KestoMs.Value);
+            for (int i = 0; i < 87; i++) lin.Askel(1 / 30.0);
+            double ennen = lin.Arvo; for (int i = 0; i < 3; i++) lin.Askel(1 / 30.0);
+            Oleta.Tosi(20 * Math.Log10(ennen / lin.Arvo) > 1.0, "lineaarinen ramppi rikkoisi ehdon (vertailu)");
             // Raita soi loppuun: kartta ei soita samaa heti uudelleen.
             tila.LatausLoppui();
             Oleta.Sama(null, L(tila).Url, "loppui");
