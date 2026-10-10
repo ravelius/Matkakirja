@@ -214,5 +214,64 @@ namespace Matkakirja.Linssit.Testit
             pito = SykeSekoitus.Pito(pito, false, false, 0.2); Oleta.Sama(0.0, pito);
             Oleta.Sama(0.0, SykeSekoitus.Pito(0, false, true, 0.1));
         }
-    }
+    
+        // A1 (PT:n yösuunnitelma 11.10., Laitetestaaja TF 180): ensikertalainen kävelee laiturilta suoraan portinvartijaa kohti (puulaituri,
+        // kävelyn ääni 3,5 m). Simulointi: pelaaja liikkuu kohteeseen 1,4 m/s, vartija kuten Aja.
+        static (bool Kiinni, double KiinniT, double VaroitusT, double SeisoiS) Laituri(Vartija v, double px, double pz, Func<double, (double X, double Z, bool Nakyy)> pelaaja, double sekuntia)
+        {
+            double x = 0, z = 0, varoitusT = -1, seisoi = 0; const double dt = 1 / 30.0;
+            for (double t = 0; t < sekuntia; t += dt)
+            {
+                var (tx, tz, nakyy) = pelaaja(t);
+                double ex = tx - px, ez = tz - pz, ed = Math.Sqrt(ex * ex + ez * ez);
+                bool liikkuu = ed > 0.05; if (liikkuu) { double a = Math.Min(ed, 1.4 * dt); px += ex / ed * a; pz += ez / ed * a; }
+                var s = new VartijanSyote { VartijaX = x, VartijaZ = z, PelaajaX = px, PelaajaZ = pz, NakolinjaVapaa = nakyy, Valoisuus = 0.7, PelaajaVauhti = liikkuu ? 1.4 : 0,
+                    Aanet = liikkuu ? new List<Aanilahde> { new Aanilahde(px, pz, 3.5) } : null };
+                v.Paivita(dt, s);
+                if (v.VaroitusPyydetty) { v.VaroitusPyydetty = false; if (varoitusT < 0) varoitusT = t; }
+                if (v.Varoittaa) { seisoi += dt; Oleta.Sama(0.0, v.Vauhti); }
+                if (v.Tila == VartijanTila.Kiinni) return (true, t, varoitusT, seisoi);
+                double dx = v.KohdeX - x, dz = v.KohdeZ - z, d = Math.Sqrt(dx * dx + dz * dz);
+                if (d > 1e-6 && v.Vauhti > 0) { double a = Math.Min(d, v.Vauhti * dt); x += dx / d * a; z += dz / d * a; v.Yaw = Math.Atan2(dx, dz) * 180 / Math.PI; }
+            }
+            return (false, -1, varoitusT, seisoi);
+        }
+
+        [Testi] static void LaiturinAlkuOnTurvallinen60s()
+        {
+            // Portinvartija katsoo laiturille (yaw 0 = +z), pelaaja 11 m edessä kävelee 1 m:n päähän ja jää siihen.
+            var v = new Vartija(new List<(double, double, double)> { (0, 0, 8.0) }, yaw: 0) { Profiili = VartijaProfiili.Portinvartija, Turva = Vartija.TurvaS };
+            var r = Laituri(v, 0, 11, t => (0, 1.0, true), 59);
+            Oleta.Tosi(!r.Kiinni, "turvallisen alun aikana ei kiinniottoa");
+            Oleta.Tosi(v.Tila != VartijanTila.Halytys, $"ei jahtia turvassa ({v.Tila})");
+            Oleta.Tosi(v.Mittari < 1, $"mittari jää alle täyden ({v.Mittari:F2})");
+            // Turvan jälkeen: varoitus ensin (seisoo ≥ 2 s), vasta sitten ote, kun pelaaja ei reagoi.
+            var r2 = Laituri(v, 0, 1.0, t => (0, 1.0, true), 10);
+            Oleta.Tosi(r2.Kiinni, "pelaaja jätti varoituksen huomiotta → kiinni");
+            Oleta.Tosi(r2.VaroitusT >= 0 && r2.KiinniT - r2.VaroitusT >= Vartija.VaroitusSeisoS - 1e-6, $"varoitus {r2.VaroitusT:F2} s, kiinni {r2.KiinniT:F2} s");
+            Oleta.Tosi(r2.SeisoiS >= Vartija.VaroitusSeisoS - 0.05, $"vartija seisoi varoittaessa {r2.SeisoiS:F2} s");
+        }
+
+        [Testi] static void AskelaaniTurvassaVainKaantaaKatseen()
+        {
+            // Pelaaja kävelee vartijan selän takana 2,5 m:n päässä: kuuluu, mutta turvassa vartija ei lähde äänen luo.
+            var v = new Vartija(new List<(double, double, double)> { (0, 0, 8.0) }, yaw: 0) { Profiili = VartijaProfiili.Portinvartija, Turva = Vartija.TurvaS };
+            var r = Laituri(v, -3, -2.5, t => (t < 3 ? 3 : -3, -2.5, false), 6);
+            Oleta.Tosi(!r.Kiinni, "ei kiinni");
+            Oleta.Tosi(v.Tila == VartijanTila.Epaily || v.Tila == VartijanTila.Paluu || v.Tila == VartijanTila.Partio, $"ei lähtenyt etsimään ({v.Tila})");
+        }
+
+        [Testi] static void VaroitusAinaEnnenKiinniottoaJaPakoOnnistuu()
+        {
+            // Ilman turvaa: pelaaja 3 m edessä paikallaan → varoitus, seisoo 2 s, sitten ote.
+            var v = new Vartija(Reitti, yaw: 0);
+            var r = Laituri(v, 0, 3, t => (0, 3, true), 8);
+            Oleta.Tosi(r.Kiinni && r.VaroitusT >= 0 && r.KiinniT - r.VaroitusT >= Vartija.VaroitusSeisoS - 1e-6, $"varoitus {r.VaroitusT:F2} s → kiinni {r.KiinniT:F2} s");
+            // Varoituksen alettua pelaaja vetäytyy näkyvistä (piiloon kulman taa): ei kiinniottoa.
+            var v2 = new Vartija(Reitti, yaw: 0); double alku = -1;
+            var r2 = Laituri(v2, 0, 3, t => { if (alku < 0 && v2.Varoittaa) alku = t; return alku < 0 ? (0, 3, true) : (6, 3, t - alku < 0.8); }, 8);
+            Oleta.Tosi(alku >= 0, "varoitus alkoi");
+            Oleta.Tosi(!r2.Kiinni, $"pakeni varoituksen aikana ({v2.Tila})");
+        }
+}
 }

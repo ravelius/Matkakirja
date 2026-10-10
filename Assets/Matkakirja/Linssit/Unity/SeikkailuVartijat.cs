@@ -38,7 +38,7 @@ namespace Matkakirja.Natiivi
             public double KavelyAika; public bool Kavelee; public Vector3 Kohde = new Vector3(float.NaN, 0, 0);
             public VartijanTila EdellinenTila;
             public AudioSource Askeleet;
-            public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti, VaroitusAsti;
+            public float RepliikkiAsti; public int RepliikkiLaskuri; public float TyoAsti, VaroitusAsti, PuhuiS = -99f;
             /// <summary>Kannetun valon säde (lyhty 4 m, soihtu 6 m), 0 = ei kanna.</summary>
             public float ValoM;
             public bool Tunnisti;
@@ -279,6 +279,14 @@ namespace Matkakirja.Natiivi
             if (ote != null) return;   // kiinnijäänti käynnissä (Ote-kulku)
             if (p != null && !riitaKaynnissa && (riitaAsti -= dt) <= 0) { riitaAsti = RiitaValiS; StartCoroutine(Riita(p)); }
             if (p != null && p != tarkistusPelaaja) { tarkistus = p.transform.position; tarkistusPelaaja = p; }   // uusi pelaaja = uusi tarkistuspiste
+            // Turvallinen alku (A1, PT 11.10.): ensimmäiset 60 s pelaajan saatua ohjauksen kukaan ei jahtaa eikä ota kiinni; huomaaminen ja
+            // kääntyminen äänen suuntaan opettavat. Kerran per peli (ei tyrmän tai tarkistuspisteen jälkeen).
+            if (p != null && !turvaAnnettu)
+            {
+                turvaAnnettu = true;
+                foreach (var x in vartijat) x.Aivot.Turva = Vartija.TurvaS;
+                kirjaa?.Invoke($"seikkailu: turvallinen alku {Vartija.TurvaS:F0} s");
+            }
             // Tarkistuspisteet portaaleista (pelattavuusmalli 4.3): kynnyksen ylitys uuteen kävelyosaan, kun kukaan ei epäile.
             if (p != null && Time.unscaledTime > osaTarkistus)
             {
@@ -377,10 +385,9 @@ namespace Matkakirja.Natiivi
                 {
                     kirjaa?.Invoke($"seikkailu: vartija {v.Osa} {v.EdellinenTila} → {v.Aivot.Tila} (mittari {v.Aivot.Mittari:F2})");
                     Repliikki(v, v.EdellinenTila, v.Aivot.Tila, s.NakolinjaVapaa && v.Aivot.Mittari > 0);
-                    if (Havahtui(v.Aivot.Profiili, v.EdellinenTila, v.Aivot.Tila) && Time.unscaledTime >= v.VaroitusAsti)
-                    { v.VaroitusAsti = Time.unscaledTime + VaroitusValiS; VaroitusAlkoi?.Invoke(ag.transform.position); }
                     v.EdellinenTila = v.Aivot.Tila;
                 }
+                if (v.Aivot.VaroitusPyydetty) { v.Aivot.VaroitusPyydetty = false; Varoita(v); }
                 if (v.Aivot.Tila == VartijanTila.Kiinni) { if (SeikkailuPelaaja.Ensimmainen && p != null) StartCoroutine(Ote(v, p)); else Kiinni(v); break; }
                 if (v.Aivot.Huuto)
                 {
@@ -512,7 +519,7 @@ namespace Matkakirja.Natiivi
                     : nyt == VartijanTila.Kiinni ? "muuri-vartija-kiinni-1" : palasi ? (n % 2 == 0 ? "muuri-vartija-paluu-2" : "muuri-vartija-paluu-1") : null;
                 if (m != null && r.On(m)) t = m;
             }
-            double kesto = r.Soita(t, v.Agentti.transform);
+            double kesto = r.Soita(t, v.Agentti.transform); v.PuhuiS = Time.unscaledTime;
             v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, kesto + 0.5);
         }
 
@@ -853,15 +860,29 @@ namespace Matkakirja.Natiivi
             StartCoroutine(Vie(lahin, p));
         }
 
+        /// <summary>Näkyvä varoitus (A1): hahmo seisoo VaroitusSeisoS ja katsoo pelaajaa; huudahdus profiilin epäilyrepliikillä
+        /// (4 s:n repliikkitauosta välittämättä, koska varoitus on pelaajan ainoa merkki) ja suunnallinen varoitusääni (VaroitusAlkoi).</summary>
+        void Varoita(V v)
+        {
+            var vp = v.Agentti.transform.position;
+            kirjaa?.Invoke($"seikkailu: vartija {v.Osa} varoittaa ({Vartija.VaroitusSeisoS:F1} s, mittari {v.Aivot.Mittari:F2})");
+            var r = SeikkailuRepliikit.Aktiivinen;
+            var pr = v.Aivot.Profiili;
+            string t = pr == VartijaProfiili.Portinvartija ? "portinvartija-epaily-3"
+                : pr == VartijaProfiili.Vartija && v.Osa == "muurikaytava" ? "muuri-vartija-epaily-1" : "vartija-epaily-1";
+            // Sama kehys tai juuri puhuttu tilarepliikki (Partio → Epäily) on jo huudahdus: ei toista päälle.
+            if (r != null && r.Valmis && r.On(t) && Time.unscaledTime - v.PuhuiS > 2f) { v.PuhuiS = Time.unscaledTime; double k = r.Soita(t, v.Agentti.transform); v.RepliikkiAsti = Time.unscaledTime + (float)Math.Max(4.0, k + 0.5); }
+            if (Time.unscaledTime >= v.VaroitusAsti) { v.VaroitusAsti = Time.unscaledTime + VaroitusValiS; VaroitusAlkoi?.Invoke(vp); }
+        }
+
+        bool turvaAnnettu;
+
         // VAROITUSÄÄNI (PT B3, Laitetestaaja TF 180: "ääni ei kerro, mistä vartija tulee", vain sydän 1 s ennen kiinniottoa): kun
         // kiinni ottava hahmo havahtuu partiosta, sen suunnasta kuuluu varusteiden kalahdus ja terän sihahdus (repliikin lisäksi).
-        // Siirtosepän A1 (näkyvä varoitus) kutsuu samaa tapahtumaa omasta varoitushetkestään; siihen asti havahtuminen laukaisee sen.
+        // Siirtosepän A1: laukaisee näkyvä varoitus (Varoita), ei enää havahtuminen partiosta.
         public static event Action<Vector3> VaroitusAlkoi;
         const float VaroitusValiS = 6f;
         static SeikkailuVartijat() { VaroitusAlkoi += VaroitusAani; }
-        static bool Havahtui(VartijaProfiili pr, VartijanTila oli, VartijanTila nyt) => pr.Ottaa
-            && (oli == VartijanTila.Partio || oli == VartijanTila.Paluu)
-            && (nyt == VartijanTila.Epaily || nyt == VartijanTila.Etsinta || nyt == VartijanTila.Etsii || nyt == VartijanTila.Halytys);
         /// <summary>Suunnallinen varoitus vartijan paikasta (Soundly varuste-01…06 ja raapaisu; 3D kuulokehyksessä).</summary>
         public static void VaroitusAani(Vector3 vartija)
         {

@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
             if (kohti.sqrMagnitude > 1e-4f) t.katse = Mathf.Atan2(kohti.x, kohti.z) * Mathf.Rad2Deg;
             p.Siirra(t.istuin + Vector3.up * 0.05f); p.Tila.KameraYaw = p.Tila.HahmoYaw = t.katse; p.Tila.KameraPitch = 4;
             p.LiikeEstettyAsti = Time.unscaledTime + 2.5f;   // kiinniotossa pidetty tappi ei vie heränneenä seinään (tyrmä-pako 11.10. 00.46)
-            DioraamaTaulu.NaytaSeikkailunNimi(Kieli.T("ui.linna.tyrma"));   // tyrmän nimi kerran ~3 s (Raamattu NIMIKYLTIT HETKEN)
+            DioraamaTaulu.NaytaSeikkailunNimi(Kieli.T("olavinlinna.seikkailu.tyrma.nimi"));   // tyrmän nimi kerran ~3 s (Raamattu NIMIKYLTIT HETKEN)
             SeikkailuNakyvyys.Himmennys = 0f;
             if (SeikkailuVihjeet.Aktiivinen != null) SeikkailuVihjeet.Aktiivinen.Ydin.Tyrmassa = true;
             SeikkailuRepliikit.SoitaTaiVara("tyrma-vartija-vienti-1", null, t.ovi + Vector3.up * 1.6f);   // vartija sulkee oven (repliikit-lapi-v1)
