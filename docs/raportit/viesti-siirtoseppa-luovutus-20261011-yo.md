@@ -19,11 +19,18 @@ lukko jäi roikkumaan). Käännös: `PROTO_APP_KOPIO=… zsh proto-3d/tyokalut/p
 | siirtoseppa/v47d | b51f3aefb | KUITATTU 180 (laiturin vedenalaiset kolmiot, LR v47d) |
 | siirtoseppa/lapipeluu-vahdit | 25fe0ce70 | KUITATTU 180 (Kuuntele-nappi piiloon, pankin suorat klipit äänivahtiin) |
 | siirtoseppa/tyrma-kiire | 2e77de4ce | ⊂ botti-kavely: dioraaman syöte pois pelissä (Keittiö-kyltti + leikkausikkuna), katse ovelle/avaimiin, "Tyrmä"-nimi kerran, minikartta (levossa oleva vasen tappi) pois |
-| siirtoseppa/botti-kavely | 9c59fcf3b | YÖN KÄRKI: + botin reittisyy-loki ja tauko pisteissä, liike lukossa 2,5 s tyrmän herätyksessä, lattiaesineet valitsimeen vaakasuunnasta. TYRMÄ-PAKO OK simulla 2f23c9db7 (ulos 41 s avaimilla, video todistus-tyrma-pako-20261011-0110). PT:lle ilmoitettu |
+| siirtoseppa/botti-kavely | 9c59fcf3b | KUITATTU 181 (PT 01.2x, video katsottu). YÖN KÄRKI: + botin reittisyy-loki ja tauko pisteissä, liike lukossa 2,5 s tyrmän herätyksessä, lattiaesineet valitsimeen vaakasuunnasta. TYRMÄ-PAKO OK simulla 2f23c9db7 (ulos 41 s avaimilla, video todistus-tyrma-pako-20261011-0110). PT:lle ilmoitettu |
 | siirtoseppa/v47e | f1c029b27 | EI kuitattu (rantakivet v2 paljasti natiivin vesilaatan, porttiaukon jyrkänne) |
 | siirtoseppa/v47f | 09c6d28eb | Linssit OK, KUVAPARI LR:LLE OTTAMATTA (laituri + portti samoista kulmista kuin v47e: skenaario olavinlinna-v47f.txt = kuvapari + huonekuvat tarkistuspisteistä) |
 
-## SEURAAVAT (PT:n yösuunnitelma A1–A7)
+## SEURAAVAT (PT:n yösuunnitelma A1–A7; PT 01.2x: A1 ENSIN, sitten A2, A4, B1)
+
+PT:n painotukset: A1 laiturin kiinniotto ensimmäisenä (ensikertalainen jäi kiinni 2–5 s:ssa 3/3), A2 lattiaan lukittu liike, A4 vihjeet ruudulle,
+B1 tyrmä on yhä isoilta osin täysmusta → LR v47g + kirkkausraja. Kirkkausrajan alitukset 32/94 listana LR:lle:
+proto-3d/lokit/todistus-botti-kavely-20261011-0052/kirkkaus.tsv (sarakkeet: kuva, keskikirkkaus, 10 %-raja, MUSTA/ok, piste ja osa; kuvat
+samassa kansiossa kuvat/bNNN.png) → lähetä LR:lle erinä sijainnin (reitti:pelaaja-N, osa) ja kuvan kanssa.
+Minikartta = levossa ollut vasen tappi (iPhonella väärässä, yläkulmassa); nyt piilossa levossa, näkyy vain sormen alla (2e77de4ce).
+
 
 - A1 laiturin kiinniotto ensin: 60 s turvassa, varoitus ennen kiinniottoa ≥ 2 s. Lisää `SeikkailuVartijat.VaroitusAlkoi` (public static
   event Action<Vector3>, vartijan paikka) — Pelikoodari kytkee siihen äänen (lupasin nimen). Riita()-korutiinin äänirivit ovat Pelikoodarin.
