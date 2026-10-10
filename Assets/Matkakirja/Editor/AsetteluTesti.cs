@@ -576,7 +576,19 @@ namespace Matkakirja.Editori
                 }, () => { UiNakymat.Hae().Matkakirja.Piilota(); SuljeKaikki(); }, 3.0),
             ("oppaan teksti", () => { var o = OpasValikko.Hae(); o.Komento("sulje"); o.Komento("teksti"); },
                 () => { UiNakymat.Hae().Chat.Sulje(); OpasValikko.Hae().Komento("sulje"); SuljeKaikki(); }, 1.0),
+            // Astronautin kuvanäkymä ja minipulun kortti (Natiivi-UI 10.10.2026) kuten `ui linssi kuva` / `ui linssi kuva pulu`:
+            // avautuvat ilman linssin sovitinta, aineisto paketista (puuttuessa Kuvanakyma.Esimerkki).
+            ("astronautin kuva", () => Linssi("kuva"), SuljeKuva, 3.0),
+            ("minipulun kortti", () => Linssi("kuva pulu"), SuljeKuva, 3.0),
         };
+
+        static void SuljeKuva()
+        {
+            var kuva = UiNakymat.Hae().Linssit.Astronautti.Kuva;
+            kuva.SuljePulukortti();
+            kuva.Sulje(false);
+            SuljeLinssi();
+        }
 
         const string PuluLyhyt = "Minä olen Livia. Kirjekyyhky, en mikään pulu.";
         const string PuluPitka = "Tangerin satamassa kauppiaat huusivat hintojaan kolmella kielellä, ja isoisäsi kirjoitti muistiin jokaisen, "
