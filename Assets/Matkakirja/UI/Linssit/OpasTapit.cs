@@ -223,6 +223,7 @@ namespace Matkakirja.Natiivi
                 if (!(puoli > 0f)) puoli = Halkaisija * 0.5f;
                 kelluvaKeski = paneeli; kelluvaSade = puoli;
                 Juuri.style.left = p.x - puoli; Juuri.style.top = p.y - puoli; Juuri.style.bottom = StyleKeyword.Auto;
+                if (PiiloLevossa) Juuri.style.visibility = StyleKeyword.Null;
                 Juuri.AddToClassList("mk-tappi--kosketus");
                 Nuppi.RemoveFromClassList("mk-tappi__nuppi--palaa");
             }
@@ -247,7 +248,12 @@ namespace Matkakirja.Natiivi
                 Nuppi.style.translate = new Translate(0, 0);
                 asetaArvo?.Invoke(Vector2.zero);
                 Juuri.style.left = StyleKeyword.Null; Juuri.style.top = StyleKeyword.Null; Juuri.style.bottom = alkuAla;
+                if (PiiloLevossa) Juuri.style.visibility = Visibility.Hidden;
             }
+
+            /// <summary>Levossa piilossa, näkyy vain kosketuksen ajan sormen kohdalla (omistaja 11.10. 00.4x linnan seikkailusta:
+            /// "Ota linnan vasen yläkulman mini kartta pois" = levossa oleva tappi, iPhonessa yläkulmassa). SeikkailuTapit asettaa.</summary>
+            public bool PiiloLevossa;
 
             public bool Kelluu => osoitin == KelluvaId;
             const int KelluvaId = 1 << 20;
