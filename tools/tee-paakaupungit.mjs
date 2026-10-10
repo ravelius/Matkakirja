@@ -48,7 +48,8 @@ const lahde = (a) => (a && typeof a === 'object' ? { arvo: a.arvo ?? null, vuosi
  * tehdä pistettä. Maakortti näyttää sen Israelin "hallinnon paikkana"
  * (tools/vienti/kokoelmat.mjs HALLINNON_PAIKAT, PT 10.10.2026).
  */
-const ASEMA = { PSE: 'hallinnon paikka' };
+// Bolivia: perustuslain pääkaupunki on Sucre, La Paz on hallituksen ja kongressin paikka.
+const ASEMA = { PSE: 'hallinnon paikka', BOL: 'hallinnon paikka' };
 // Pelin maatunnus poikkeaa ISO-koodista vain Etelä-Sudanissa (kartta-aineiston SDS).
 const PELIN_TUNNUS = { SSD: 'SDS' };
 const LAUDAN_KAUPUNKI_EI_PISTETTA = { ISR: 'jerusalem' };

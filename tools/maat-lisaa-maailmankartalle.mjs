@@ -113,6 +113,26 @@ const MAAT = {
   // Lähi-itä (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026). Bahrain
   // ja Gazan kaista ovat alle MIN_KOKOn, joten pienin rengas kuten Maltalla.
   // Palestiina on NE:ssä ADM0_A3 PSX / ISO_A3 PSE (_swe-näkökulma).
+  // Amerikat (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
+  // liput Sisältökirjurin faktoista). Karibian saarivaltiot pienin rengas.
+  ATG: ['Antigua ja Barbuda', 'Antigua ja Barbuda', 'Flag of Antigua and Barbuda.svg', { minKoko: 0, sieto: 0.3 }],
+  BHS: ['Bahama', 'Bahama', 'Flag of the Bahamas.svg', { minKoko: 3, sieto: 0.5 }],
+  BLZ: ['Belize', 'Belize', 'Flag of Belize.svg'],
+  BRB: ['Barbados', 'Barbados', 'Flag of Barbados.svg', { minKoko: 0, sieto: 0.3 }],
+  CRI: ['Costa Rica', 'Costa Rica', 'Flag of Costa Rica.svg'],
+  DMA: ['Dominica', 'Dominica', 'Flag of Dominica.svg', { minKoko: 0, sieto: 0.3 }],
+  DOM: ['Dominikaaninen tasavalta', 'Dominikaaninen tasavalta', 'Flag of the Dominican Republic.svg'],
+  GRD: ['Grenada', 'Grenada', 'Flag of Grenada.svg', { minKoko: 0, sieto: 0.3 }],
+  GUY: ['Guyana', 'Guyana', 'Flag of Guyana.svg'],
+  HND: ['Honduras', 'Honduras', 'Flag of Honduras (1949–2022, 2026–present).svg'],
+  HTI: ['Haiti', 'Haiti', 'Flag of Haiti.svg'],
+  JAM: ['Jamaika', 'Jamaika', 'Flag of Jamaica.svg'],
+  KNA: ['Saint Kitts ja Nevis', 'Saint Kitts ja Nevis', 'Flag of Saint Kitts and Nevis.svg', { minKoko: 0, sieto: 0.3 }],
+  LCA: ['Saint Lucia', 'Saint Lucia', 'Flag of Saint Lucia.svg', { minKoko: 0, sieto: 0.3 }],
+  SLV: ['El Salvador', 'El Salvador', 'Flag of El Salvador.svg'],
+  SUR: ['Suriname', 'Suriname', 'Flag of Suriname.svg'],
+  TTO: ['Trinidad ja Tobago', 'Trinidad ja Tobago', 'Flag of Trinidad and Tobago.svg', { minKoko: 0, sieto: 0.3 }],
+  VCT: ['Saint Vincent ja Grenadiinit', 'Saint Vincent ja Grenadiinit', 'Flag of Saint Vincent and the Grenadines.svg', { minKoko: 0, sieto: 0.3 }],
   // Afrikka (kaikki maat -projekti, omistaja PT:n kautta 10.10.2026; nimet ja
   // liput Sisältökirjurin faktoista). Saarivaltiot pienin rengas kuten Maltalla.
   BDI: ['Burundi', 'Burundi', 'Flag of Burundi.svg'],
@@ -207,6 +227,7 @@ const ANKKURIT = [
   ['SYR', ['BHR', 'ISR', 'LBN', 'PSE']],
   ['TKM', ['ARG', 'BOL', 'BRA', 'CAN', 'CHL', 'COL', 'CUB', 'ECU', 'GRL', 'GTM', 'MEX', 'NIC', 'PAN', 'PER', 'PRY', 'URY', 'USA', 'VEN']],
   ['VEN', ['AUS', 'FJI', 'NZL', 'PNG', 'SLB', 'VUT']],
+  ['VEN', ['ATG', 'BHS', 'BLZ', 'BRB', 'CRI', 'DMA', 'DOM', 'GRD', 'GUY', 'HND', 'HTI', 'JAM', 'KNA', 'LCA', 'SLV', 'SUR', 'TTO', 'VCT']],
 ];
 
 const { MAAILMANKARTTA } = await import(`file://${join(JUURI, 'js/packs/maailmankartta.js')}`);
