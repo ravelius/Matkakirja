@@ -1,6 +1,6 @@
 # Musiikit pelissä 10.10.2026 (BUILD 175 ja juna 176)
 
-Pelikoodari 10.10.2026 klo 10.0x, PT:n pikaerä (omistajan kysymys "mitä uusia musiikkeja on pelissä?").
+Pelikoodari 10.10.2026 klo 09.4x, PT:n pikaerä (omistajan kysymys "mitä uusia musiikkeja on pelissä?").
 
 Lähteet: proton koodi BUILD 175:ssä (86ef3b3e6) ja natiiviseppa/juna-176:ssa (AaniTaulut.Oletus, Musiikkivalitsin,
 AaniOsoite.Musiikkiversio, Paljastus, SeikkailuLoppumusiikki, KaupunkiIntro, Resources/Ajattelijat/*.json), paketin
