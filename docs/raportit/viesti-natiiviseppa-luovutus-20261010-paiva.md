@@ -9,6 +9,8 @@ LS1 local_45a869de…, LS2 local_fc4fcc54…, NUI local_33ba1387…, Pelikoodari
 - **BUILD 177 = 3d0c8c4a74ee7abbe2c4b492c43e49973f2fe4c2** (proton master; juna/b13 3bb291169 = 2900f8e39 + Siirtoseppä historia-kamera 04915cace;
   puu identtinen; L1307/P456/K454, unity 0). Omistaja 13.3x: ilman LS1:n KIIRE 2:ta (kohdemerkit + kaupunkivalinta → seuraava juna). Simukäännöstä ei
   ajettu (TF heti). Peilattu natiivi-backup peili/proto/{master,juna/b13}. SHA Julkaisijalle, muutosloki (302 merkkiä) PT:lle 13.4x.
+- Mac 177 käännetty 13.40 (mac-kaanna.sh 3d0c8c4a7 1.1 177, APPSTORE=1, BUNDLE_ID fi.matkakirja.peli; phonon-tunnisteet ok) → kopio
+  lokit/natiiviseppa-mac-tf-177-3d0c8c4a. Muutosloki 177 julkaisija-tyokalut/muutosloki-177.txt (PT kuittasi). Taustalla EI omia ajoja.
 - Seuraavaksi: TF 177 iOS + Mac (Julkaisija), LS1 KIIRE 2 → juna 178, taidemuseo (KÄRKI 3), linnan sulun laitetodennus 178:n muistiajossa.
 
 ## TILA 13.2x
