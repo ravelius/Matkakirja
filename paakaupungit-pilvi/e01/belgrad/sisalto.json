@@ -1,0 +1,549 @@
+{
+ "$skeema": "matkakirja-paakaupunki/1",
+ "id": "belgrad",
+ "maa": "SRB",
+ "era": "e01",
+ "kaupunki": {
+  "id": "belgrad",
+  "name": "Belgrad",
+  "wiki": "Belgrad",
+  "ambience": "kaupunki",
+  "pallo": {
+   "lat": 44.818,
+   "lon": 20.457
+  }
+ },
+ "artikkeli": {
+  "intro": "Belgrad on Serbian pääkaupunki ja maan suurin kaupunki, joka sijaitsee **Savan ja Tonavan yhtymäkohdassa**. Serbiankielinen nimi Beograd tarkoittaa kirjaimellisesti valkoista kaupunkia. Lähteen mukaan se on yksi Euroopan vanhimmista yhtäjaksoisesti asutuista kaupungeista, ja jo antiikissa paikalla oli linnoitus nimeltä Singidunum.\n\nHistoriallinen ydin on Kalemegdanin harjanteella, jonka päässä seisoo **Belgradin linnoitus**. Vuoden 2022 väestölaskennan mukaan Belgradin alueella asui 1 681 405 ihmistä. Isoisän matkavuonna 1873 kaupunki oli Serbian ruhtinaskunnan pääkaupunki, joka oli autonominen mutta ei vielä täysin itsenäinen. Ottomaanien varuskunta oli lähtenyt linnoituksesta vuonna 1867, ja mutkaisten katujen tilalle suunniteltiin Wienin mallin mukaista ruutukaavaa ja bulevardeja.\n\nKnez Mihailovan katua rakennettiin parhaillaan, mutta **Pyhän Savan temppeli**, nykyisen kaupunkikuvan tunnusrakennus, odotti vielä aloitustaan: sen rakennustyöt alkoivat vasta vuonna 1935. Nykyään Belgrad on Serbian poliittinen, taloudellinen ja kulttuurinen keskus.",
+  "teksti": "Belgradin alueella asuttiin jo Vinča-kulttuurin aikana 5500–4500 eaa. Kelttiläinen skordiski-heimo antoi paikalle nimen Singidūn 279 eaa. jälkeen, ja roomalaiset tulivat alueelle 34–33 eaa. alkaen. Nimi Belograd mainitaan ensimmäisen kerran 16. huhtikuuta 878 paavin kirjeessä Bulgarian hallitsijalle.\n\nRuhtinas Mihailo Obrenović siirsi Serbian pääkaupungin Kragujevacista Belgradiin vuonna 1841. Ottomaanien varuskunta lähti Kalemegdanin linnoituksesta 18. huhtikuuta 1867, ja samana vuonna kaupunkisuunnittelija Emilijan Josimović laati suunnitelman, jossa mutkaiset kadut korvattiin ruutukaavalla. Täysi itsenäisyys tuli vuonna 1878 ja kuningaskunta syntyi vuonna 1882.\n\nKaupungin keskusta on kukkulaista maastoa Savan oikealla rannalla, ja Uusi Belgrad rakennettiin vasemmalle rannalle toisen maailmansodan jälkeen. Belgrad oli Jugoslavian pääkaupunki sen synnystä hajoamiseen asti. Zemun, keskustan oma Keski-Euroopan tyylinen osa, kuului vuoteen 1918 Itävalta-Unkariin."
+ },
+ "kysymykset": [
+  {
+   "q": "Minkä kahden joen yhtymäkohdassa Belgrad sijaitsee?",
+   "options": [
+    "Savan ja Tonavan",
+    "Moravan ja Tisan",
+    "Drinan ja Ibarin",
+    "Tonavan ja Drinan"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Kaupungin historiallinen ydin on molempien jokien oikealla rannalla.",
+   "fact": "Belgrad sijaitsee kahden joen yhtymäkohdassa Pannonian tasangon ja Balkanin niemimaan risteyksessä.",
+   "source": "https://en.wikipedia.org/wiki/Belgrade"
+  },
+  {
+   "q": "Mitä Belgradin serbiankielinen nimi Beograd tarkoittaa?",
+   "options": [
+    "Valkoinen kaupunki",
+    "Kultainen kaupunki",
+    "Kivinen linnoitus",
+    "Kahden joen portti"
+   ],
+   "correct": 0,
+   "level": 1,
+   "hint": "Nimi koostuu kahdesta slaavilaisesta sanasta, joista jälkimmäinen tarkoittaa kaupunkia tai linnoitusta.",
+   "fact": "Nimen ensimmäinen maininta Belograd on vuodelta 878. Samaa tarkoittavat myös saksan, unkarin ja latinan vanhat nimet.",
+   "source": "https://en.wikipedia.org/wiki/Belgrade"
+  },
+  {
+   "q": "Millä nimellä roomalaiset tunsivat Belgradin?",
+   "options": [
+    "Singidunum",
+    "Sirmium",
+    "Aquincum",
+    "Viminacium"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Nimi periytyy kelttiläiseltä skordiski-heimolta.",
+   "fact": "Roomalaisaikana paikalla oli IV Flavia Felix -legioonan asemapaikka vuodesta 86 jaa. 400-luvun puoliväliin.",
+   "source": "https://en.wikipedia.org/wiki/Belgrade_Fortress"
+  },
+  {
+   "q": "Minkä Belgradin kirkon rakennustyöt alkoivat Vračarin kukkulalla vuonna 1935 ja jonka kupoli painaa 4 000 tonnia?",
+   "options": [
+    "Pyhän Savan temppeli",
+    "Pyhän Mikaelin katedraali",
+    "Pyhän Georgin kirkko",
+    "Pyhän Ristin kirkko"
+   ],
+   "correct": 0,
+   "level": 2,
+   "hint": "Julkisivussa on kreikkalaista marmoria ja suomalaista graniittia.",
+   "fact": "Temppeli on lähteen mukaan neljänneksi suurin omassa perinteessään. Se rakennettiin paikalle, jossa ottomaanien kerrotaan polttaneen pyhän pyhäinjäännökset vuonna 1594.",
+   "source": "https://en.wikipedia.org/wiki/Church_of_Saint_Sava"
+  },
+  {
+   "q": "Minkä Belgradin alueella nimensä saaneen kulttuurin yhteydessä puhutaan esikirjoituksesta, joka ajoitetaan noin vuoteen 5300 eaa.?",
+   "options": [
+    "Vinča",
+    "Starčevo",
+    "Lepenski Vir",
+    "Hallstatt"
+   ],
+   "correct": 0,
+   "level": 3,
+   "hint": "Kulttuuri tunnetaan hyvin suurista asutuksistaan ja Euroopan varhaisimmasta kuparimetallurgiasta.",
+   "fact": "Vinča-kulttuuri ajoitetaan vuosiin 5500–4500 eaa., ja lähteen mukaan sen esikirjoitus on vanhempi kuin sumerien ja minolaisten.",
+   "source": "https://en.wikipedia.org/wiki/Belgrade"
+  }
+ ],
+ "tiedot": [
+  "Roomalainen kaivo ei ole roomalainen eikä varsinainen kaivo: itävaltalaiset rakensivat sen vuosina 1717–1731 vesisäiliöksi, ja kaksoisportaikossa on 212 askelmaa.",
+  "Serbian ensimmäinen jalkapallo-ottelu pelattiin Nebojšan tornin edessä 19.5.1896. Katsojia oli 50, ja maalit merkittiin tiilillä.",
+  "Skadarlijan panimon rakennustöissä löytyi vuonna 1892 mammutin luita ja kallo, jota lehdistö kutsui ensimmäiseksi belgradilaiseksi."
+ ],
+ "valokuva": {
+  "tiedosto": "Belgrade – Kalemegdan (2021) 02.jpg",
+  "vuosi": "2021",
+  "lahde": "Imeao, Commons (CC0)",
+  "lyhyt": "Belgradin linnoitus on lähteen mukaan kaupungin vanhin osa.",
+  "selite": "Linnoituksen edustan kentältä alettiin muotoilla Kalemegdanin puistoa vuonna 1869, ja sen näköalat avautuvat Savan ja Tonavan yhtymäkohtaan."
+ },
+ "kaupunkilehti": [
+  {
+   "id": "kaupunki",
+   "nimi": "Belgrad",
+   "johdanto": "Belgrad on Savan ja Tonavan kulmauksessa kohoavan kalliorinteen \"valkoinen kaupunki\". Isoisän matkavuonna 1873 se oli Serbian ruhtinaskunnan pääkaupunki, jonka vanha ottomaaniasu oli väistymässä Wienin mallisten katujen tieltä.",
+   "kansikuvat": [
+    {
+     "tiedosto": "Confluence of the Danube and Sava rivers - Belgrade Fortress (13808328374).jpg",
+     "lyhyt": "Savan ja Tonavan yhtymäkohta on Belgradin historiallisen ytimen maisema.",
+     "selite": "Belgradin linnoitus kohoaa harjanteella, jonka juurella Sava laskee Tonaviin.",
+     "lahde": "Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+     "tiedosto": "Veliko ratno ostrvo.jpg",
+     "lyhyt": "Suuri sotasaari on Savan ja Tonavan yhtymäkohdan luonnonsuojelualue.",
+     "selite": "Saari kuuluu Belgradin kaupunkiin, ja sen pinta-ala on 2,11 neliökilometriä.",
+     "lahde": "Sone85, Wikimedia Commons (CC0)"
+    },
+    {
+     "tiedosto": "Church of Saint Sava 4.jpg",
+     "lyhyt": "Pyhän Savan temppelin kupoli painaa 4 000 tonnia ja nostettiin paikalleen 20 päivässä.",
+     "selite": "Rakennustyöt alkoivat vuonna 1935, ja temppelin ulkopuoli valmistui vuonna 2004.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "nostot": [
+    {
+     "otsikko": "Kaupunki kahden joen kulmassa",
+     "teksti": "Belgrad sijaitsee Savan ja Tonavan yhtymäkohdassa, missä Pannonian tasanko kohtaa Balkanin niemimaan. Linnoitus seisoo noin 125 metrin korkeudessa harjanteen päässä, ja harjanne on Šumadijan geologisen harjanteen päätepiste. Kaupungin keskusta on kukkulaista maastoa Savan oikealla rannalla, kun taas Uusi Belgrad rakennettiin vasemmalle rannalle toisen maailmansodan jälkeen. Joilla on lähteen mukaan 11 siltaa. Rinteet ovat myös liikkeessä: lähteen mukaan alueella on kirjattu 1 155 maanvyörymäkohtaa, ja Terazijen rinteen hidas liike näkyy Pobednik-patsaan ja katedraalin tornin kallistumisena.",
+     "tiedosto": "Veliko ratno ostrvo 22.jpg",
+     "lyhyt": "Linnoituksen harjanne päättää Šumadijan geologisen harjanteen.",
+     "selite": "Harjanne kohoaa Suuren sotasaaren ja Savan Tonaviin laskupaikan yllä.",
+     "lahde": "Stasa 1234, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Belgrade"
+    },
+    {
+     "otsikko": "Valkoinen kaupunki, monta nimeä",
+     "teksti": "Belgradin nimi on vanha ja monikielinen. Kelttiläinen skordiski-heimo antoi paikalle nimen Singidūn, jossa osa dūn tarkoittaa linnoitusta, ja roomalaisaikana siitä tuli Singidunum. Siellä oli IV Flavia Felix -legioonan asemapaikka vuodesta 86 jaa. 400-luvun puoliväliin. Nimi Belograd mainitaan ensimmäisen kerran 16. huhtikuuta 878 paavin kirjeessä. Muunnelmia tunnetaan monin kielin: latinaksi Alba Bulgarica, saksaksi Griechisch Weissenburg, unkariksi Nándorfehérvár ja venetsiaksi Castelbianco. Linnoituksen edustan kentän nimi Kalemegdan tulee turkin sanoista kale, linnoitus, ja meydan, kenttä.",
+     "tiedosto": "Zindan kapija i most.jpg",
+     "lyhyt": "Belgradin linnoituksen paikalla oli roomalaisaikana Singidunumin legioonan asema.",
+     "selite": "IV Flavia Felix -legioona oli sijoitettuna Singidunumiin vuodesta 86 jaa. aina 400-luvun puoliväliin.",
+     "lahde": "Magyshadow, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Belgrade"
+    },
+    {
+     "otsikko": "Vinča, esihistoriallinen suurkylä",
+     "teksti": "Vinča-kulttuuri, ajoitukseltaan 5500–4500 eaa., on nimetty Vinča-Belo Brdon paikan mukaan Belgradin alueella. Lähteen mukaan se tunnetaan hyvin suurista asutuksistaan, jotka olivat esihistoriallisen Euroopan suurimpia. Siihen liitetään Vinčan neito -veistokset, Euroopan varhaisin tunnettu kuparimetallurgia ja esikirjoitus, jota kutsutaan nimellä Old European script ja joka ajoitetaan noin vuoteen 5300 eaa. Lähteen mukaan se on vanhempi kuin sumerien ja minolaisten kirjoitus. Edeltäjä oli Starčevo-kulttuuri, 6200–5200 eaa., joka on nimetty myös Belgradin läheisen paikan mukaan.",
+     "tiedosto": "Винча — Бело брдо 1.jpg",
+     "lyhyt": "Vinča-Belo Brdon asuinpaikka Belgradin alueella antoi nimen koko Vinča-kulttuurille.",
+     "selite": "Kulttuuri ajoitetaan vuosiin 5500–4500 eaa., ja siihen liitetään Euroopan varhaisin tunnettu kuparimetallurgia.",
+     "lahde": "Sanja2509, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Vinča culture"
+    },
+    {
+     "otsikko": "Kaupunki rakennetaan uusiksi",
+     "teksti": "Isoisän matkavuonna 1873 Belgrad oli keskellä muutosta. Ottomaanien varuskunta oli määrätty pois Kalemegdanin linnoituksesta 18. huhtikuuta 1867, ja kaupunkisuunnittelija Emilijan Josimović laati samana vuonna suunnitelman, jossa mutkaiset kadut korvattiin ruutukaavalla. Knez Mihailovan katua alettiin rakentaa keväällä 1869. Sitä ennen paikalla oli vain lyhyt Delijska-katu, joka on lähteen mukaan ainoa ottomaanikaudelta nimensä säilyttänyt Belgradin katu. Kansallisteatteri nousi Stambolin portin paikalle, ja portti oli purettu vuonna 1866.",
+     "tiedosto": "National Theatre in Belgrade (DSC04616).jpg",
+     "lyhyt": "Kansallisteatteri rakennettiin Stambolin portin paikalle, ja sen peruskivi muurattiin vuonna 1868.",
+     "selite": "Teatteri oli Tasavallan aukion ensimmäinen suuri rakennus, ja muutto uusiin tiloihin tehtiin vuonna 1869.",
+     "lahde": "Simon Legner ( User:simon04 ), Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Knez Mihailova Street"
+    }
+   ],
+   "matkailijalle": {
+    "kuva": {
+     "tiedosto": "Pobednik kalemegdan 06.jpg",
+     "lyhyt": "Pobednik-patsas on yksi linnoituksen yläkaupungin nähtävyyksistä.",
+     "selite": "Patsaan alla näkyy linnoituksen hiekkaharjun profiili, joka on suojeltu luonnonmuistomerkkinä.",
+     "lahde": "Zvezdazvezdica, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    "kappale": "Belgradiin saapuu lentäen Nikola Tesla -lentoasemalle (BEG), joka on Surčinin lähellä. Lentoasemalta kulkevat bussit ja pikavuoro keskustaan. Lähteiden mukaan kaupungin joukkoliikenne on ilmaista, mutta ajantasainen tilanne kannattaa tarkistaa. Useimmat kohteet ovat lähteen mukaan noin kahden kilometrin säteellä Kalemegdanista, joten keskustassa pärjää hyvin jalan. Valuutta on serbian dinaari (RSD), ja englantia ja saksaa ymmärretään laajalti. Kafanoissa soitetaan usein elävää musiikkia, ja tunnetuin keskittymä on Skadarlijassa.",
+    "artikkeli": {
+     "nimi": "Matkailijan Belgrad",
+     "taitto": "opas",
+     "teksti": "Belgrad on kaupunki, jossa kaksi jokea, vanha linnoitus ja 1800-luvun ruutukaavan kadut kohtaavat.",
+     "nosto": "Kävele Kalemegdanilta Knez Mihailovaa pitkin Tasavallan aukiolle ja jatka Skadarlijan kafanoihin. Joet ja saaret ovat lähellä, kun kaipaat luontoa.",
+     "jaksot": [
+      {
+       "otsikko": "Perille ja liikkeelle",
+       "teksti": "Belgradin Nikola Tesla -lentoasema (BEG) on lähteiden mukaan noin 12–18 kilometriä keskustasta länteen. Lentoasemalta kulkee busseja ja pikavuoro keskustaan, ja kaksi bussilinjaa on lähteen mukaan maksuttomia. Kaupungin bussit, ratikat ja johdinautot ovat lähteiden mukaan ilmaisia, mutta tarkista ajantasainen tilanne. Metroa ei ole, mutta sellainen on rakenteilla, ja ensimmäisen linjan arvioidaan valmistuvan vuonna 2028. Rautatieasema Belgrade Centre on kansallisten ja kansainvälisten junien solmu. Taksi kannattaa tilata sovelluksella tai puhelimella eikä ottaa saapumisaulan odottavaa taksia.",
+       "kuva": {
+        "tiedosto": "Belgrade Nikola Tesla Airport 4.jpg",
+        "lyhyt": "Nikola Tesla -lentoasema (BEG) on Belgradin pääkenttä Surčinin lähellä.",
+        "selite": "Keskustaan kulkevat bussit ja pikavuoro, ja taksin voi tilata sovelluksella tai puhelimella.",
+        "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Linnoitus ja puisto",
+       "teksti": "Kalemegdan on lähteen mukaan Belgradin eniten käytetty ja vierailtu kohde. Linnoitus jakautuu ylä- ja alakaupunkiin, ja sen alueella ovat muun muassa Pobednik-patsas, Nebojšan torni, Roomalainen kaivo ja Damad Ali -pašan türbe. Roomalainen kaivo ei ole roomalainen: itävaltalaiset rakensivat sen vuosina 1717–1731, ja sen 212 askelman kaksoisportaikko johtaa 35 metriä alas. Pohjoispuolen näköalat avautuvat Tonavan ja Savan yhtymäkohtaan. Linnoituksesta alkaa Knez Mihailova, noin kilometrin pituinen jalankulkukatu, joka johtaa Terazijelle.",
+       "kuva": {
+        "tiedosto": "Belgrade Fortress (13808277505).jpg",
+        "lyhyt": "Yläkaupunki ja alakaupunki muodostavat yhdessä Belgradin linnoituksen.",
+        "selite": "Kalemegdan on lähteen mukaan Belgradin eniten käytetty ja vierailtu kohde.",
+        "lahde": "Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)"
+       }
+      },
+      {
+       "otsikko": "Kaupunginosat ja joet",
+       "teksti": "Skadarlija on boheemikortteli, joka suojeltiin vuonna 1967 ja joka on lähteen mukaan Belgradin toiseksi vierailluin kohde Kalemegdanin jälkeen. Pyhän Savan temppelin rakennustyöt alkoivat vuonna 1935, ulkopuoli valmistui vuonna 2004 ja sisätyöt vuonna 2020. Ada Ciganlija ja Suuri sotasaari tarjoavat luontoa lähellä keskustaa. Zemun on keskustan oma Keski-Euroopan tyylinen osa, ja se kuului vuoteen 1918 Itävalta-Unkariin.",
+       "kuva": {
+        "tiedosto": "Skadarska street 2016.jpg",
+        "lyhyt": "Skadarlija on boheemikortteli, joka suojeltiin vuonna 1967.",
+        "selite": "Alueella on kolme vanhaa kafanaa, joista Tri šešira perustettiin vuonna 1864.",
+        "lahde": "Skelanard (Aleksandr Petukhov), Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      },
+      {
+       "otsikko": "Mitä täällä syödään",
+       "teksti": "Keittiö on raskas ja lihapainotteinen: ćevapi, pljeskavica, karađorđeva šnicla, sarma ja podvarak, lisukkeina kajmak, ajvar ja leipä. Aamupalaksi sopii burek jogurtin kanssa, ja leipomoita eli pekareita on tiheässä. Jokikalaa tarjoavat kalakeitto riblja čorba ja riblji paprikaš, ja kelluvissa ravintoloissa, splavoveissa, syödään joen päällä. Jälkiruokina ovat krempita, šampita, baklava ja tulumbe. Perinteisessä kafanassa on tunnelmaa ja live-musiikkia.",
+       "kuva": {
+        "tiedosto": "Serbian Ćevapi.jpg",
+        "lyhyt": "Ćevapi kuuluvat serbialaisen keittiön lihapainotteisiin perinneruokiin.",
+        "selite": "Lisukkeina tarjotaan perinteisesti kajmakia, ajvaria ja leipää.",
+        "lahde": "young shanahan, Wikimedia Commons (CC BY 2.0)"
+       }
+      },
+      {
+       "otsikko": "Milloin kannattaa tulla",
+       "teksti": "Lähteen mukaan Belgradin ilmasto on kosteaa subtrooppista ilmastoa lähellä mannerilmastoa, ja vuodenajat ovat selvästi erillään. Kuukausilukujen mukaan tammikuun keskilämpötila on 0,2 astetta ja elokuun 24,2 astetta, ja sadetta tulee 598 millimetriä vuodessa, eniten kesäkuussa. Kesä ja alkusyksy sopivat kävelyyn ja jokirantoihin, mutta talvellakin Kalemegdan on lumisena kaunis. Lähteen mukaan kova košava-tuuli on tuhonnut sateenvarjoja ja piknikkejä.",
+       "kuva": {
+        "tiedosto": "Kalemegdanski park 2021 1.jpg",
+        "lyhyt": "Kalemegdanin puisto on lähteen mukaan Belgradin suurin ja kattoi 53 hehtaaria vuonna 2013.",
+        "selite": "Puistossa kasvoi vuonna 2013 yhteensä 3 424 puuta 80 lajista.",
+        "lahde": "Vacant0, Wikimedia Commons (CC BY-SA 4.0)"
+       }
+      }
+     ],
+     "matkailu": {
+      "parasta": [
+       {
+        "mita": "Kalemegdan ja linnoitus",
+        "tahdet": 3,
+        "selite": "Kaupungin vanhin osa ja sen suosituin kävelykohde."
+       },
+       {
+        "mita": "Kävely Knez Mihailovaa pitkin",
+        "tahdet": 2,
+        "selite": "Noin kilometrin pituinen jalankulkukatu Terazijelta Kalemegdanille."
+       },
+       {
+        "mita": "Skadarlijan kafanat",
+        "tahdet": 2,
+        "selite": "Boheemikorttelin mukulakivikatu ja vanhat kafanat."
+       },
+       {
+        "mita": "Pyhän Savan temppelin mosaiikit",
+        "tahdet": 3,
+        "selite": "Lähteen mukaan temppelin sisällä on laaja mosaiikkipinta."
+       },
+       {
+        "mita": "Ada Ciganlija tai Suuri sotasaari",
+        "tahdet": 2,
+        "selite": "Järvi, rantoja ja luonnonsuojelualue lähellä keskustaa."
+       }
+      ],
+      "hyvaTietaa": [
+       {
+        "otsikko": "Taskuvarkaat",
+        "teksti": "Lähteen mukaan taskuvarkaita liikkuu julkisessa liikenteessä ja ruuhkaisissa paikoissa, joten pidä arvotavarat lähelläsi."
+       },
+       {
+        "otsikko": "Taksit",
+        "teksti": "Tilaa taksi sovelluksella tai puhelimella äläkä ota lentokentän saapumisaulassa odottavaa autoa."
+       },
+       {
+        "otsikko": "Raha ja kieli",
+        "teksti": "Valuutta on serbian dinaari (RSD). Englanti ja saksa ymmärretään laajalti, ja kortit käyvät lähteen mukaan."
+       },
+       {
+        "otsikko": "Ilmainen joukkoliikenne",
+        "teksti": "Lähteiden mukaan paikallisliikenne on ilmaista, mutta pikavuorot voivat olla poikkeus. Tarkista ajantasainen tilanne."
+       }
+      ]
+     },
+     "lahde": "Wikipedia"
+    }
+   }
+  },
+  {
+   "id": "luonto",
+   "nimi": "Saaret ja hiekkaharju",
+   "johdanto": "Savan ja Tonavan yhtymäkohta on antanut kaupungille harjanteen, saaria ja puistoja. Lähes ydinkeskustassa pesii merikotkapari, ja linnoituksen alla on jäänne vanhasta meren rannasta.",
+   "tehtava": {
+    "kysymys": "Minkä lajin pari pesii Suurella sotasaarella vain muutaman kilometrin päässä Belgradin keskustasta?",
+    "vaihtoehdot": [
+     "Merikotka",
+     "Kuningaskalastaja",
+     "Harmaahaikara",
+     "Kaakkuri"
+    ],
+    "oikea": 0,
+    "fakta": "Pari asettui saarelle vuonna 2010, ja kaupunki asensi pesään kameran huhtikuussa 2016."
+   },
+   "nostot": [
+    {
+     "otsikko": "Suuri sotasaari",
+     "teksti": "Suuri sotasaari on Tonavan ja Savan yhtymäkohdassa sijaitseva kolmionmuotoinen, matala ja usein tulviva saari, jonka pinta-ala on 2,11 neliökilometriä. Se kuuluu Belgradin kaupunkiin Zemunin kunnassa. Noin kaksi kolmasosaa saaresta on luonnonsuojelualuetta, ja siellä on todettu yli 190 lintulajia. Saaren tunnetuimpia asukkaita on merikotkapari, joka asettui sinne vuonna 2010. Pesä on noin 20 metrin korkeudessa, vain 2,5 kilometrin päässä keskustasta, ja ensimmäinen poikanen kuoriutui vuonna 2013. Nimi sotasaari kertoo saaren aiemmasta käytöstä hyökkäys- ja puolustuspisteenä.",
+     "tiedosto": "Veliko ratno ostrvo 52.jpg",
+     "lyhyt": "Suuren sotasaaren luonnonsuojelualue kattaa noin kaksi kolmasosaa saaresta.",
+     "selite": "Saarella on todettu yli 190 lintulajia.",
+     "lahde": "Stasa 1234, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Great War Island"
+    },
+    {
+     "otsikko": "Kalemegdanin hiekkaharju",
+     "teksti": "Belgradin linnoitus seisoo noin 125 metrin korkeudessa Šumadijan geologisen harjanteen päässä. Lähteen mukaan harjanteen muodostaa mioseenikaudelta peräisin oleva meriharjanne Pannonianmeren varhaisimmasta vaiheesta. Vuonna 1968 suojeltiin kaksi aluetta, joista toisen profiili on Pobednik-patsaan alla, ja helmikuussa 2021 ne yhdistettiin 14,07 hehtaarin luonnonmuistomerkiksi. Lähteen mukaan alue on Serbiassa ainutlaatuinen geologinen kohde. Kalemegdanin linnoituksen profiili on myös yksi Belgradin kahdeksasta geoperintökohteesta.",
+     "tiedosto": "Morski neogeni sprud na Kalemegdanu (1).jpg",
+     "lyhyt": "Kalemegdanin hiekkaharju sai luonnonmuistomerkin aseman helmikuussa 2021.",
+     "selite": "Alue on lähteen mukaan Serbian mittakaavassa ainutlaatuinen geologinen kohde.",
+     "lahde": "BrankaVV, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Belgrade Fortress"
+    },
+    {
+     "otsikko": "Kalemegdanin puisto",
+     "teksti": "Kalemegdanin alue oli ottomaanien harjoituskenttä ja armeijan kokoontumispaikka. Böömiläinen kirjailija Siegfried Kapper kuvasi kenttää vuonna 1850: puita ei ollut, ruoho oli kuivaa ja hevosten ja nautojen luita oli hajallaan, mutta näköala oli hieno. Puiston järjestelytyöt alkoivat vuonna 1869, ja ensimmäinen istutusvaihe kesti vuoteen 1875. Ruhtinas Milan sai innoituksen Ranskan puistoista. Vuonna 2013 puisto oli 53 hehtaarin laajuinen ja siinä kasvoi 3 424 puuta 80 lajista, ja syyskuussa 2020 sinne istutettiin lähteen mukaan Belgradin julkisen viheralueen ensimmäiset kiinanpalmut.",
+     "tiedosto": "Belgrade. Forts above the Sava River.jpg",
+     "lyhyt": "Kalemegdanin puiston järjestelytyöt alkoivat vuonna 1869.",
+     "selite": "Ensimmäinen istutusvaihe kesti vuoteen 1875, ja ruhtinas Milan haki mallia Ranskan puistoista.",
+     "lahde": "Алексей Белобородов, Wikimedia Commons (CC BY-SA 4.0)",
+     "wiki": "Kalemegdan Park"
+    },
+    {
+     "otsikko": "Ada Ciganlija, joesta tullut järvi",
+     "teksti": "Ada Ciganlija oli ennen saari Savassa, mutta nykyisin se on lähteen mukaan noin kuuden kilometrin pituinen niemi. Pinta-ala on 2,7 neliökilometriä, ja leveimmillään niemi on 700 metriä. Penger rakennettiin mantereeseen kiinni vuoteen 1974 mennessä, jolloin joen haarasta syntyi Sava-järvi. Ada on lähteen mukaan kaupunkilaisten suosituin kesäkohde. Belgradissa on lähteen mukaan 16 jokisaarta, joista monet ovat käyttämättömiä, ja kaupungin alueella on 37 suojeltua luonnonkohdetta, joista kahdeksan on geoperintökohteita.",
+     "tiedosto": "Ada Ciganlija lake.jpg",
+     "lyhyt": "Sava-järvi syntyi, kun Ada Ciganlijan penger yhdistettiin mantereeseen.",
+     "selite": "Entinen saari on nykyään noin kuuden kilometrin pituinen niemi.",
+     "lahde": "Gmihail at Serbian Wikipedia, Wikimedia Commons (CC BY-SA 3.0)",
+     "wiki": "Ada Ciganlija"
+    }
+   ]
+  }
+ ],
+ "kohdekartta": {
+  "numeroympyrat": true,
+  "esittely": "Belgradin ydin on kahden joen yhtymäkohdan kalliolla. Kohteet kulkevat linnoituksesta ja sen puistosta pääkaupungin 1800-luvun keskustaan, Vračarin kukkulalle ja joen saarelle.",
+  "rajat": {
+   "pohjoinen": 44.8343,
+   "etela": 44.7953,
+   "lansi": 20.432,
+   "ita": 20.4723
+  },
+  "kohteet": [
+   {
+    "nimi": "Belgradin linnoitus",
+    "lat": 44.82333,
+    "lon": 20.45028
+   },
+   {
+    "nimi": "Kalemegdanin puisto",
+    "tyyppi": "luonto",
+    "lat": 44.82259,
+    "lon": 20.45307
+   },
+   {
+    "nimi": "Nebojšan torni",
+    "lat": 44.82737,
+    "lon": 20.44788
+   },
+   {
+    "nimi": "Pyhän arkkienkeli Mikaelin katedraali",
+    "lat": 44.81806,
+    "lon": 20.45216
+   },
+   {
+    "nimi": "Tasavallan aukio",
+    "tyyppi": "aukio",
+    "lat": 44.81644,
+    "lon": 20.46011
+   },
+   {
+    "nimi": "Skadarlija",
+    "tyyppi": "aukio",
+    "lat": 44.8178,
+    "lon": 20.4643
+   },
+   {
+    "nimi": "Pyhän Savan temppeli",
+    "lat": 44.79806,
+    "lon": 20.46854
+   },
+   {
+    "nimi": "Suuri sotasaari",
+    "tyyppi": "luonto",
+    "lat": 44.83163,
+    "lon": 20.4358
+   }
+  ]
+ },
+ "nahtavyydet": {
+  "Belgradin linnoitus": {
+   "aika": "keltit 200-luvulta eaa., nykyasu 1700-luvulta",
+   "teksti": "Belgradin linnoitus on lähteen mukaan kaupungin vanhin osa, ja asukkaat asuivat vuosisatoja vain sen muurien sisällä. Linnoitus muodostuu ylä- ja alakaupungista, ja sen edustalla ovat Suuri ja Pieni Kalemegdan -puistot. Rooman aikana paikalla oli neliskulmainen castrum, jonka 570 × 330 metrin muurit rakennettiin valkoisesta Tašmajdanin kalkkikivestä.\n\nItävaltalaiset rakensivat linnoituksen uudelleen vuosina 1718–1738. Ottomaanit lähtivät sieltä vuonna 1867, kun ensimmäinen serbialaisjoukko korvasi vartiot 18. huhtikuuta. Kulttuurimuistomerkiksi linnoitus julistettiin vuonna 1979.\n\nIsoisän matkavuonna 1873 linnoitusta vartioivat serbialaiset joukot, mutta Itävalta-Unkari ei tunnustanut Serbiaa sen omistajaksi. Muurien sisällä kaupunki oli siis jo siirtynyt uuteen aikaan, vaikka maiden välinen tilanne oli yhä avoin.",
+   "kuvat": [
+    {
+     "tiedosto": "Belgrade Fortress (13806788265).jpg",
+     "lyhyt": "Belgradin linnoitus on lähteen mukaan kaupungin vanhin osa.",
+     "selite": "Linnoitus koostuu ylä- ja alakaupungista.",
+     "lahde": "Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Kalemegdanin puisto": {
+   "aika": "1869–",
+   "teksti": "Kalemegdan on Belgradin suurin puisto: vuonna 2013 se oli 53 hehtaaria ja siinä kasvoi 3 424 puuta. Nimi tulee turkin sanoista kale, linnoitus, ja meydan, kenttä, sillä alue oli ottomaanien harjoituskenttä. Böömiläinen kirjailija Siegfried Kapper kuvasi kenttää vuonna 1850 puuttomaksi ja kuivaksi, mutta näköalaltaan hienoksi.\n\nPuiston järjestelytyöt alkoivat vuonna 1869, ja ensimmäinen istutusvaihe kesti vuoteen 1875. Ruhtinas Milan sai innoituksen Ranskan puistoista. Pieni portaikko valmistui vuonna 1903 Jelisaveta Načićin suunnitelman mukaan, ja hän oli lähteen mukaan Serbian ensimmäinen naisarkkitehti. Suuri portaikko valmistui vuonna 1928.\n\nIsoisän matkavuonna 1873 istutukset olivat kesken ja puisto vasta muotoutumassa. Puuston varjoa ja siistejä polkuja ei vielä ollut, vaikka kenttä oli jo muuttumassa kaupunkilaisten kävelypaikaksi.",
+   "kuvat": [
+    {
+     "tiedosto": "Belgrade Fortress (13807712985).jpg",
+     "lyhyt": "Kalemegdanin puisto syntyi ottomaanien harjoituskentän paikalle.",
+     "selite": "Puiston järjestelytyöt alkoivat vuonna 1869.",
+     "lahde": "Jorge Láscar from Melbourne, Australia, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Nebojšan torni": {
+   "aika": "noin 1460",
+   "teksti": "Nebojšan torni on linnoituksen ainoa säilynyt keskiaikainen torni. Unkarilaiset rakensivat sen noin vuonna 1460. Nimi Nebojša tarkoittaa pelotonta, ja alkuperäinen torni, jonka despootti Stefan Lazarević rakennutti 1400-luvun alussa, tuhoutui vuonna 1690. Tornia on sanottu myös Valkoiseksi torniksi, joka mainitaan vuonna 1572, ja Temišvarin torniksi.\n\nOttomaanien aikana torni toimi vankilana, ja kreikkalainen vallankumouksellinen Rigas Feraios kuoli siellä vuonna 1798. Tornin edessä pelattiin Serbian ensimmäinen jalkapallo-ottelu 19. toukokuuta 1896. Torni kunnostettiin vuonna 1963, ja siitä tuli museo vuonna 2010.\n\nIsoisän matkavuonna 1873 torni oli ottomaanien rakentama vanha vankila, jonka ympäristö kuului Serbian valvomaan linnoitukseen.",
+   "kuvat": [
+    {
+     "tiedosto": "Nebojša Tower, February 2022.jpg",
+     "lyhyt": "Nebojšan torni on linnoituksen ainoa säilynyt keskiaikainen torni.",
+     "selite": "Unkarilaiset rakensivat sen noin vuonna 1460, ja nykyään siinä toimii museo.",
+     "lahde": "Imeao, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Pyhän arkkienkeli Mikaelin katedraali": {
+   "aika": "1837–1840",
+   "teksti": "Pyhän arkkienkeli Mikaelin katedraali on Belgradin katedraalikirkko ja yksi harvoista säilyneistä 1800-luvun alkupuoliskon rakennuksista Belgradissa. Se rakennettiin vuosina 1837–1840 ruhtinas Milošin määräyksestä, ja vanha kirkko purettiin vuonna 1836.\n\nIkonostaasin veisti Dimitrije Petrović, ja seinämaalaukset teki Dimitrije Avramović vuosina 1841–1845. Rakennus edustaa klassismia, johon on yhdistetty barokkityylinen torni itävaltalaisten kirkkojen tapaan. Vuonna 1853 kirkossa perustettiin ensimmäinen Belgradin laulajaseura.\n\nIsoisän matkavuonna 1873 katedraali oli ollut käytössä lähes kolme vuosikymmentä, ja se kuului kaupungin vakiintuneeseen vanhaan ytimeen uusien ruutukaavakatujen vierellä.",
+   "kuvat": [
+    {
+     "tiedosto": "Beograd Saborna crkva 1.JPG",
+     "lyhyt": "Mikaelin katedraali rakennettiin vuosina 1837–1840 ruhtinas Milošin määräyksestä.",
+     "selite": "Se on yksi harvoista säilyneistä 1800-luvun alkupuoliskon rakennuksista Belgradissa.",
+     "lahde": "Nemezis, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Tasavallan aukio": {
+   "aika": "1860-luvulta; nykyasu 1882–",
+   "teksti": "Tasavallan aukion paikalla oli Stambolin portti, joka purettiin vuonna 1866. Portti oli kaupungin kauneimpana pidetty, ja sen nimi tuli Istanbulin tieltä. Kansallisteatteri valmistui vuonna 1869, ja se oli yli 30 vuotta aukion ainoa suuri rakennus. Aukio tunnettiin nimellä Pozorišni trg, teatteriaukio, kommunistiaikaan asti, ja siellä pidettiin myös maalaismarkkinoita, joilla myytiin sian- ja lampaanlihaa, pekonia ja kajmakia.\n\nRuhtinas Mihailon ratsastajapatsas, jonka teki Enrico Pazzi, pystytettiin 19. joulukuuta 1882. Josimovićin vuoden 1867 vihreän vyöhykkeen suunnitelmasta toteutui aukion osalta vain osa.\n\nIsoisän matkavuonna 1873 aukiota ei vielä ollut kaupunkitilana. Teatteri seisoi suon ja rotkojen reunalla, ja patsas ja ympäröivät rakennukset tulivat vasta myöhemmin.",
+   "kuvat": [
+    {
+     "tiedosto": "Republic Square (27420599076).jpg",
+     "lyhyt": "Tasavallan aukion keskellä on ruhtinas Mihailon ratsastajapatsas.",
+     "selite": "Patsas pystytettiin 19. joulukuuta 1882 Enrico Pazzin veistämänä.",
+     "lahde": "Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Skadarlija": {
+   "aika": "1800-luku, boheemi vuodesta 1901",
+   "teksti": "Skadarlija on Belgradin boheemikortteli. Alue oli romaniasutusta vuoteen 1870, ja jo vuoden 1854 kaupunkisuunnitelmassa majat oli korvattu tiilirakennuksilla. Skadarska-katu nimettiin vuonna 1872 akveduktin suurimman kaaren mukaan.\n\nBoheemi luonne vahvistui vuoden 1901 jälkeen, kun Dardaneli-krouvin vieraat, kirjailijat ja näyttelijät, siirtyivät tänne. Vuosisadan alussa kafanoita oli 15, ja Tri šešira, joka perustettiin vuonna 1864, on lähteen mukaan yksi vanhimmista yhä toimivista. Alue suojeltiin vuonna 1967 ja kunnostus alkoi vuonna 1968. Vuonna 1892 pienpanimon rakennustöissä löytyi mammutin luita.\n\nIsoisän matkavuonna 1873 katu oli vasta saanut nimensä, eikä kafanakulttuuri ollut vielä boheemia. Lähteen mukaan alue on nykyään Belgradin toiseksi vierailluin kohde Kalemegdanin jälkeen.",
+   "kuvat": [
+    {
+     "tiedosto": "Skadarska street, Belgrade.jpg",
+     "lyhyt": "Skadarska-katu nimettiin vuonna 1872 akveduktin suurimman kaaren mukaan.",
+     "selite": "Alueen boheemi kafanakulttuuri vahvistui vasta 1900-luvun alussa.",
+     "lahde": "Imeao, Wikimedia Commons (CC0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Pyhän Savan temppeli": {
+   "aika": "1935–2020",
+   "teksti": "Pyhän Savan temppeli on lähteen mukaan neljänneksi suurin kirkko omassa perinteessään maailmassa. Se pystytettiin paikalle, jossa ottomaanien kerrotaan polttaneen Pyhän Savan pyhäinjäännökset vuonna 1594. Hanke sai alkunsa vuonna 1894, kolmensadan vuoden kuluttua tapahtumasta, ja rakennustyöt alkoivat 10. toukokuuta 1935. Työt keskeytyivät, ja ne jatkuivat 12. elokuuta 1985.\n\nKupoli painaa 4 000 tonnia, ja se nostettiin paikalleen 20 päivässä. Julkisivu on valkoista Volakas-marmoria Kreikasta, ja reunalistat ovat punaista Balmoral-graniittia Suomesta. Pohjapiirros on risti, jonka mitat ovat 91 × 81 metriä. Ulkopuoli valmistui vuonna 2004 ja sisätyöt vuonna 2020.\n\nIsoisän matkavuonna 1873 Vračarin kukkulalla ei ollut temppeliä, ja sen suunnittelu alkoi vasta vuonna 1894.",
+   "kuvat": [
+    {
+     "tiedosto": "Church of Saint Sava (Belgrade, Serbia).jpg",
+     "lyhyt": "Pyhän Savan temppelin julkisivu on valkoista Volakas-marmoria Kreikasta.",
+     "selite": "Reunalistat ovat punaista Balmoral-graniittia Suomesta.",
+     "lahde": "Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+     "tiedosto": "Church of Saint Sava 2.jpg",
+     "lyhyt": "Temppelin sisätyöt valmistuivat vuonna 2020.",
+     "selite": "Rakennustyöt alkoivat vuonna 1935 ja jatkuivat vuosikymmeniä.",
+     "lahde": "kallerna, Wikimedia Commons (CC BY-SA 4.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  },
+  "Suuri sotasaari": {
+   "aika": "1400-luvulta, luonnonsuojelualue",
+   "teksti": "Suuri sotasaari on 2,11 neliökilometrin kokoinen, matala ja tulvaherkkä saari Savan suulla Tonavassa. Se muodostui täydeksi saareksi 1400-luvun jälkipuoliskolla hiekkasärkästä. Ottomaanien vuoden 1521 hyökkäykset linnoitusta vastaan tehtiin pääosin saarelta, ja vuonna 1741 Itävalta ja Turkki jakoivat saaren hyökkäysten varalta.\n\nNykyään saari on suojelualue 196 lintulajille, ja muuttokaudella siellä on yli 100 lajia. Saaren vesissä on 53 kalalajia, ja metsää on 120 hehtaaria eli 57 prosenttia saaresta. Merikotkapari pesii saarella vuodesta 2010.\n\nIsoisän matkavuonna 1873 saarta kutsuttiin yhä ottomaanien nimellä Babalık. Nykyinen nimi vakiintui vasta ensimmäisen maailmansodan jälkeen.",
+   "kuvat": [
+    {
+     "tiedosto": "Lido veliko ratno ostrvo.jpg",
+     "lyhyt": "Suuri sotasaari on Savan suulla Tonavassa sijaitseva matala ja tulvaherkkä saari.",
+     "selite": "Saari muodostui täydeksi saareksi 1400-luvun jälkipuoliskolla hiekkasärkästä.",
+     "lahde": "Gmihail at Serbian Wikipedia, Wikimedia Commons (CC BY-SA 3.0)"
+    }
+   ],
+   "lahde": "Wikipedia"
+  }
+ },
+ "saatiedot": {
+  "lat": 44.82,
+  "lon": 20.46,
+  "keskilampo": [
+   0.2,
+   3.7,
+   7,
+   12.9,
+   16.9,
+   20.2,
+   23.2,
+   24.2,
+   19.3,
+   14,
+   7.5,
+   3.2
+  ],
+  "sade": [
+   19,
+   49,
+   47,
+   51,
+   57,
+   107,
+   44,
+   60,
+   30,
+   56,
+   31,
+   47
+  ],
+  "luonnehdinta": "Tammikuun keskilämpötila on 0,2 astetta ja heinäkuun 23,2 astetta, ja elokuu on vuoden lämpimin kuukausi 24,2 asteella. Sadetta kertyy kuukausilukujen mukaan yhteensä 598 millimetriä vuodessa. Eniten sataa kesäkuussa, 107 millimetriä, ja vähiten tammikuussa, 19 millimetriä."
+ },
+ "ehdotukset": {
+  "lentoasema": "Nikola Tesla (BEG)",
+  "huomiot": [
+   "Kevyen pisteen kuvauksen lähinosto sanoo linnoituksen alaksi noin 66 hehtaaria; lähteen (Belgrade Fortress) 66 ha on vuoden 2021 laajennetun jokivarsipuiston hankkeen ala, ei linnoituksen. Lukua ei käytetty.",
+   "Sääluvut (saa.json) eivät täsmää en-Wikipedian ilmastotaulukkoon (tammikuu 1,9 vs 0,2 astetta, heinäkuu 23,8 vs 23,2). Luonnehdinta ja opas käyttävät vain saa.json-lukuja.",
+   "um.fi:n matkustustiedote ei ollut luettavissa, joten oppaassa ei ole matkustusturvallisuuslausetta. Päätoimittaja voi varmistaa ja lisätä.",
+   "Skadarlija on katu ja kortteli, ei aukio; tyyppi aukio on lähin sallittu. Pyhän Savan temppeli on kohteista kaukaisin (noin 2,7 km Tasavallan aukiolta); mahdollinen karttapoisto.",
+   "Nostolle K3 (Vinča) ei löytynyt Belgradin kuvaa (Vinča-esineet ovat Kosovon museon esine), joten nosto on ilman kuvaa. Lentoaseman etäisyydestä lähteet ovat ristiriidassa (12 vs 18 km), ilmaisu on noin 12–18 km."
+  ]
+ }
+}

@@ -41,3 +41,10 @@ Kaikki katsottu esikatselulla. Tekijä haku-komennon tekijäsarakkeesta; "CC BY-
 - National theater in Belgrade.jpg (1900) — kuvan päälle painettu teksti ja valokuvaajan nimi.
 - Ada Ciganlija 2.JPG — rannan rakennuksessa mainosjuliste, vaalea ylivalottunut suihku; korvattu ilmakuvalla.
 - Vinča-esineet (Goddess on the Throne -kuvat) — Kosovon museon esine, ei Belgradin kuva; nostoa K3 ei kuvitettu.
+
+## Kirjaukset sisalto.json-vaiheessa
+
+- Nosto K3 (Vinča): lisätty kuva "Винча — Бело брдо 1.jpg" (Sanja2509, CC BY-SA 3.0, 4608×3072), Vinča-Belo Brdon asuinpaikka Belgradin alueella; kuvateksti kertoo paikasta, ei kuvasta.
+- Kohde 8 (Lido veliko ratno ostrvo.jpg): tekijäksi lähderiville "Gmihail at Serbian Wikipedia" (Artist-kenttä; "The original uploader was" jätetty pois). Sama tekijä nostossa L4.
+- Gmihail-kuvien Commons-lisenssi on "CC BY-SA 3.0 rs"; työkalu hyväksyy lähderivillä vain muodon "CC BY-SA 3.0", joten `--verkko`-ajossa on kaksi varoitusta (lisenssi ≠ "CC BY-SA 3.0 rs").
+- Valokuva: Belgrade – Kalemegdan (2021) 02.jpg, nykykuva (isoisän aikaista PD-vedosta ei etsitty); ennenNyt-paria ei ole. Käyttämätön varakuva: ei jäänyt.
